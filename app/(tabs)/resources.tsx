@@ -1,9 +1,9 @@
 import { View, Text } from 'react-native';
 
-export default function Home() {
+export default function Resources() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home Tab</Text>
+      <Text>Resources Tab</Text>
     </View>
   );
 }
