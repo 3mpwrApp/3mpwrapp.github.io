@@ -1,12 +1,21 @@
-import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
 
 export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        headerShown: true,
-        tabBarActiveTintColor: "#007AFF",
+        headerShown: false,
+        tabBarActiveTintColor: "#007AFF", // iOS blue
+        tabBarInactiveTintColor: "#8e8e93", // gray
+        tabBarStyle: {
+          backgroundColor: "#fff",
+          borderTopWidth: 1,
+          borderTopColor: "#e6e6e6",
+          height: 60,
+          paddingBottom: 5,
+        },
+        tabBarLabelStyle: { fontSize: 12 },
       }}
     >
       <Tabs.Screen
@@ -50,7 +59,7 @@ export default function TabsLayout() {
         options={{
           title: "Wellness",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="heart-outline" size={size} color={color} />
+            <Ionicons name="leaf-outline" size={size} color={color} />
           ),
         }}
       />
