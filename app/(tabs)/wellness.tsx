@@ -1,9 +1,14 @@
-import { Text, View } from 'react-native';
+import { View, Text, StyleSheet } from "react-native";
 
-export default function Wellness() {
+export default function wellnessTab() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Wellness Tab</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Welcome to wellness Tab</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  text: { fontSize: 20, fontWeight: 'bold' },
+});
