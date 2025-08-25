@@ -1,14 +1,9 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text } from "react-native";
 
-export default function resourcesTab() {
+export default function ResourcesScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Welcome to resources Tab</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text style={{ fontSize: 24 }}>Resources Tab</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  text: { fontSize: 20, fontWeight: 'bold' },
-});

@@ -6,43 +6,44 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "#007AFF",
-        tabBarInactiveTintColor: "#8e8e93",
+        tabBarActiveTintColor: "#6200ee",
+        tabBarInactiveTintColor: "gray",
+        tabBarStyle: { backgroundColor: "#fff" },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: "home",
+          title: "Home",
           tabBarIcon: ({ color, size }) => <Ionicons name="home" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="campaigns"
         options={{
-          title: "campaigns",
+          title: "Campaigns",
           tabBarIcon: ({ color, size }) => <Ionicons name="megaphone" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="community"
         options={{
-          title: "community",
+          title: "Community",
           tabBarIcon: ({ color, size }) => <Ionicons name="people" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="resources"
         options={{
-          title: "resources",
+          title: "Resources",
           tabBarIcon: ({ color, size }) => <Ionicons name="book" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="wellness"
         options={{
-          title: "wellness",
-          tabBarIcon: ({ color, size }) => <Ionicons name="fitness" color={color} size={size} />,
+          title: "Wellness",
+          tabBarIcon: ({ color, size }) => <Ionicons name="heart" color={color} size={size} />,
         }}
       />
     </Tabs>

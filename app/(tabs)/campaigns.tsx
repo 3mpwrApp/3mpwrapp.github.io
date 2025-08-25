@@ -1,14 +1,9 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text } from "react-native";
 
-export default function campaignsTab() {
+export default function CampaignsScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Welcome to campaigns Tab</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text style={{ fontSize: 24 }}>Campaigns Tab</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  text: { fontSize: 20, fontWeight: 'bold' },
-});

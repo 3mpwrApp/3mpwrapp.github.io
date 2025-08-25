@@ -1,14 +1,12 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, Button } from "react-native";
+import { useRouter } from "expo-router";
 
 export default function NotFound() {
+  const router = useRouter();
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Page Not Found</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Oops! Page not found.</Text>
+      <Button title="Go Home" onPress={() => router.push("/")} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  text: { fontSize: 20, fontWeight: 'bold' },
-});
