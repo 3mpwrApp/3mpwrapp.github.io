@@ -10,11 +10,9 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   container: {
-    height: 60,
-    backgroundColor: "#0077b6", // teal/blue header
+    padding: 15,
+    backgroundColor: "#0077b6",
     alignItems: "center",
-    justifyContent: "center",
-    paddingTop: 10,
   },
   title: {
     color: "#fff",

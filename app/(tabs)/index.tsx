@@ -1,18 +1,21 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import Colors from "../../constants/Colors";
+import Typography from "../../constants/Typography";
 
-export default function HomeScreen() {
+export default function Home() {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Welcome to Empowr App 👋</Text>
-      <Text style={styles.subtitle}>
-        Your one-stop hub for campaigns, community, resources, and wellness.
+    <View style={styles.container}>
+      <Text style={[Typography.h1, { color: Colors.primary }]}>
+        Welcome to Empowr
       </Text>
-    </ScrollView>
+      <Text style={[Typography.body, styles.subtitle]}>
+        Empowering Injured Workers & Persons with Disabilities across Canada.
+      </Text>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flexGrow: 1, justifyContent: "center", alignItems: "center", padding: 20 },
-  title: { fontSize: 24, fontWeight: "bold", marginBottom: 10 },
-  subtitle: { fontSize: 16, textAlign: "center", color: "#555" },
+  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
+  subtitle: { marginTop: 10, textAlign: "center", color: Colors.textDark },
 });

@@ -1,31 +1,19 @@
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import Colors from "../../constants/Colors";
+import Typography from "../../constants/Typography";
 
-const campaigns = [
-  { id: "1", title: "Workplace Safety Awareness" },
-  { id: "2", title: "Fair Compensation Advocacy" },
-  { id: "3", title: "Mental Health Support" },
-];
-
-export default function CampaignsScreen() {
+export default function Campaigns() {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>📢 Campaigns</Text>
-      <FlatList
-        data={campaigns}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <View style={styles.card}>
-            <Text style={styles.title}>{item.title}</Text>
-          </View>
-        )}
-      />
+      <Text style={[Typography.h2, { color: Colors.primary }]}>Campaigns</Text>
+      <Text style={[Typography.body, styles.subtitle]}>
+        Stay updated on advocacy campaigns and join movements for change.
+      </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
-  header: { fontSize: 22, fontWeight: "bold", marginBottom: 15 },
-  card: { backgroundColor: "#f2f2f2", padding: 15, borderRadius: 8, marginBottom: 10 },
-  title: { fontSize: 16 },
+  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
+  subtitle: { marginTop: 8, textAlign: "center", color: Colors.textDark },
 });
