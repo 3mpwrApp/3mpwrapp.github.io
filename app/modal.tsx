@@ -1,20 +1,49 @@
-import { View, Text, Button, Modal } from "react-native";
-import { useState } from "react";
+import { View, Text, StyleSheet, Button } from "react-native";
+import { useRouter } from "expo-router";
 
-export default function AppModal() {
-  const [visible, setVisible] = useState(false);
+export default function ModalScreen() {
+  const router = useRouter();
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Button title="Open Modal" onPress={() => setVisible(true)} />
-      <Modal visible={visible} animationType="slide" transparent>
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#000000aa" }}>
-          <View style={{ width: 300, padding: 20, backgroundColor: "white", borderRadius: 10 }}>
-            <Text style={{ fontSize: 18, marginBottom: 10 }}>Hello from Modal!</Text>
-            <Button title="Close" onPress={() => setVisible(false)} />
-          </View>
-        </View>
-      </Modal>
+    <View style={styles.overlay}>
+      <View style={styles.modalBox}>
+        <Text style={styles.title}>✨ Modal</Text>
+        <Text style={styles.message}>
+          This is a modal screen. You can use it for alerts, forms, or extra info.
+        </Text>
+
+        <Button title="Close" onPress={() => router.back()} />
+      </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  overlay: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.5)", // dimmed background
+    padding: 20,
+  },
+  modalBox: {
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    padding: 20,
+    width: "100%",
+    maxWidth: 400,
+    elevation: 5,
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: "bold",
+    marginBottom: 10,
+    textAlign: "center",
+  },
+  message: {
+    fontSize: 16,
+    color: "#555",
+    marginBottom: 20,
+    textAlign: "center",
+  },
+});
