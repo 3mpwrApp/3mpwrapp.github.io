@@ -3,19 +3,26 @@ import { useEffect, useState } from "react";
 import { AccessibilityInfo } from "react-native";
 
 export default function useReducedMotion() {
-  const [reduceMotionEnabled, setReduceMotionEnabled] = useState(false);
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    AccessibilityInfo.isReduceMotionEnabled().then(setReduceMotionEnabled);
-    const subscription = AccessibilityInfo.addEventListener(
-      "reduceMotionChanged",
-      setReduceMotionEnabled
-    );
+    let mounted = true;
+
+    AccessibilityInfo.isReduceMotionEnabled().then((v) => {
+      if (mounted) setEnabled(v);
+    });
+
+    const sub = AccessibilityInfo.addEventListener("reduceMotionChanged", (v) => {
+      if (mounted) setEnabled(v);
+    });
 
     return () => {
-      subscription.remove();
+      mounted = false;
+      // newer RN returns subscription with remove; older might not
+      // @ts-ignore
+      sub?.remove?.();
     };
   }, []);
 
-  return reduceMotionEnabled;
+  return enabled;
 }

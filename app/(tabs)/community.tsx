@@ -1,27 +1,27 @@
-import { View, Text, StyleSheet } from "react-native";
+// app/(tabs)/community.tsx
+import { SafeAreaView, ScrollView, StyleSheet, Text } from "react-native";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import useAnnounceScreen from "../../hooks/useAnnounceScreen";
 
 export default function CommunityScreen() {
+  useAnnounceScreen("Community screen");
+
   return (
-    <View
-      style={styles.container}
-      accessible={true}
-      accessibilityLabel="Community screen for connecting with fellow persons with disabilities"
-    >
-      <Text style={styles.title} accessibilityRole="header">
-        Community
-      </Text>
-      <Text
-        style={styles.subtitle}
-        accessibilityLabel="Connect with fellow persons with disabilities community, share experiences, and support each other."
-      >
-        Connect with fellow Persons with Disabilities (PWDs), share experiences, and support each other.
-      </Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Header title="🤝 Community" subtitle="Connect • Share • Support" />
+      <ScrollView contentContainerStyle={styles.content}>
+        <Text style={styles.body}>
+          Connect with fellow Persons with Disabilities (PWDs), share experiences, and support each other.
+        </Text>
+      </ScrollView>
+      <Footer />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
-  title: { fontSize: 24, fontWeight: "bold" },
-  subtitle: { fontSize: 16, marginTop: 8, textAlign: "center" },
+  container: { flex: 1, backgroundColor: "#fff" },
+  content: { padding: 20 },
+  body: { fontSize: 16, color: "#333" },
 });

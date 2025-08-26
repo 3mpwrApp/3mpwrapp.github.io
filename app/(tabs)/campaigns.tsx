@@ -1,27 +1,27 @@
-import { View, Text, StyleSheet } from "react-native";
+// app/(tabs)/campaigns.tsx
+import { SafeAreaView, ScrollView, StyleSheet, Text } from "react-native";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import useAnnounceScreen from "../../hooks/useAnnounceScreen";
 
 export default function CampaignsScreen() {
+  useAnnounceScreen("Campaigns screen");
+
   return (
-    <View
-      style={styles.container}
-      accessible={true}
-      accessibilityLabel="Campaigns screen with advocacy and action information"
-    >
-      <Text style={styles.title} accessibilityRole="header">
-        Campaigns
-      </Text>
-      <Text
-        style={styles.subtitle}
-        accessibilityLabel="Explore campaigns to raise awareness, promote advocacy, and create change for disability and injured worker rights."
-      >
-        Explore campaigns to raise awareness, promote advocacy, and create change.
-      </Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Header title="📢 Campaigns" subtitle="Advocacy & petitions" />
+      <ScrollView contentContainerStyle={styles.content}>
+        <Text style={styles.body}>
+          Stay updated with advocacy efforts, petitions, and initiatives for disability rights.
+        </Text>
+      </ScrollView>
+      <Footer />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
-  title: { fontSize: 24, fontWeight: "bold" },
-  subtitle: { fontSize: 16, marginTop: 8, textAlign: "center" },
+  container: { flex: 1, backgroundColor: "#fff" },
+  content: { padding: 20 },
+  body: { fontSize: 16, color: "#333" },
 });

@@ -1,41 +1,26 @@
 // components/Header.tsx
 import { View, Text, StyleSheet } from "react-native";
-import Colors from "../constants/Colors";
 
-export default function Header() {
+type Props = { title: string; subtitle?: string };
+
+export default function Header({ title, subtitle }: Props) {
   return (
-    <View
-      style={styles.header}
-      accessible
-      accessibilityRole="header"
-      accessibilityLabel="Empowr App. Connecting voices, empowering change."
-    >
-      <Text style={styles.title} allowFontScaling>
-        Empowr App
-      </Text>
-      <Text style={styles.tagline} allowFontScaling>
-        Connecting voices, empowering change
-      </Text>
+    <View style={styles.container} accessible accessibilityLabel={subtitle ? `${title}. ${subtitle}` : title}>
+      <Text style={styles.title}>{title}</Text>
+      {subtitle ? <Text style={styles.subtitle}>{subtitle}</Text> : null}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: Colors.primary,
-    paddingVertical: 14,
-    alignItems: "center",
-    justifyContent: "center",
-    elevation: 2,
+  container: {
+    paddingTop: 12,
+    paddingBottom: 12,
+    paddingHorizontal: 20,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: "#e5e5e5",
+    backgroundColor: "#ffffff",
   },
-  title: {
-    color: Colors.white,
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  tagline: {
-    color: Colors.textLight,
-    fontSize: 12,
-    marginTop: 2,
-  },
+  title: { fontSize: 22, fontWeight: "700" },
+  subtitle: { marginTop: 2, fontSize: 14, color: "#666" },
 });

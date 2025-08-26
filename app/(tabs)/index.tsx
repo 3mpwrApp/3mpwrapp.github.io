@@ -1,27 +1,27 @@
-import { View, Text, StyleSheet } from "react-native";
+// app/(tabs)/index.tsx
+import { SafeAreaView, ScrollView, StyleSheet, Text } from "react-native";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import useAnnounceScreen from "../../hooks/useAnnounceScreen";
 
 export default function HomeScreen() {
+  useAnnounceScreen("Home screen");
+
   return (
-    <View
-      style={styles.container}
-      accessible={true}
-      accessibilityLabel="Home screen with welcome message"
-    >
-      <Text style={styles.title} accessibilityRole="header">
-        Welcome to Empowr
-      </Text>
-      <Text
-        style={styles.subtitle}
-        accessibilityLabel="This app helps persons with disabilities and injured workers across Canada."
-      >
-        Connecting Persons with Disabilities and Injured Workers across Canada.
-      </Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Header title="Welcome to Empowr App" subtitle="Inclusive tools for PWDs & Injured Workers" />
+      <ScrollView contentContainerStyle={styles.content}>
+        <Text style={styles.body}>
+          Explore resources, connect with community members, join campaigns, and access wellness tools.
+        </Text>
+      </ScrollView>
+      <Footer />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
-  title: { fontSize: 24, fontWeight: "bold" },
-  subtitle: { fontSize: 16, marginTop: 8, textAlign: "center" },
+  container: { flex: 1, backgroundColor: "#fff" },
+  content: { padding: 20 },
+  body: { fontSize: 16, color: "#333" },
 });
