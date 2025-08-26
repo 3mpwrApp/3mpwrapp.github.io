@@ -1,49 +1,36 @@
-import { View, Text, StyleSheet, Button } from "react-native";
-import { useRouter } from "expo-router";
+// app/modal.tsx
+import { useEffect, useRef } from "react";
+import { Animated, StyleSheet, Text } from "react-native";
+import useReducedMotion from "../hooks/useReducedMotion";
 
-export default function ModalScreen() {
-  const router = useRouter();
+export default function GlobalModal() {
+  const reduceMotion = useReducedMotion();
+  const opacity = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (reduceMotion) {
+      opacity.setValue(1); // Skip animations if user prefers reduced motion
+    } else {
+      Animated.timing(opacity, {
+        toValue: 1,
+        duration: 400,
+        useNativeDriver: true,
+      }).start();
+    }
+  }, [reduceMotion]);
 
   return (
-    <View style={styles.overlay}>
-      <View style={styles.modalBox}>
-        <Text style={styles.title}>✨ Modal</Text>
-        <Text style={styles.message}>
-          This is a modal screen. You can use it for alerts, forms, or extra info.
-        </Text>
-
-        <Button title="Close" onPress={() => router.back()} />
-      </View>
-    </View>
+    <Animated.View style={[styles.container, { opacity }]}>
+      <Text style={styles.title}>Modal Content</Text>
+      <Text style={styles.subtitle}>
+        This modal respects “Reduce Motion” accessibility settings.
+      </Text>
+    </Animated.View>
   );
 }
 
 const styles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "rgba(0,0,0,0.5)", // dimmed background
-    padding: 20,
-  },
-  modalBox: {
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    padding: 20,
-    width: "100%",
-    maxWidth: 400,
-    elevation: 5,
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: "bold",
-    marginBottom: 10,
-    textAlign: "center",
-  },
-  message: {
-    fontSize: 16,
-    color: "#555",
-    marginBottom: 20,
-    textAlign: "center",
-  },
+  container: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#fff" },
+  title: { fontSize: 22, fontWeight: "bold", marginBottom: 8 },
+  subtitle: { fontSize: 16, textAlign: "center", color: "#555" },
 });
