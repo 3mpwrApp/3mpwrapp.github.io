@@ -4,9 +4,15 @@ import Typography from "../../constants/Typography";
 
 export default function Wellness() {
   return (
-    <View style={styles.container}>
-      <Text style={[Typography.h2, { color: Colors.primary }]}>Wellness</Text>
-      <Text style={[Typography.body, styles.subtitle]}>
+    <View style={styles.container} accessible accessibilityLabel="Wellness screen">
+      <Text
+        style={[Typography.h2, styles.title, { color: Colors.primary }]}
+        accessibilityRole="header"
+        allowFontScaling
+      >
+        Wellness
+      </Text>
+      <Text style={[Typography.body, styles.subtitle]} allowFontScaling>
         Access wellness tips, self-care strategies, and mental health support.
       </Text>
     </View>
@@ -14,6 +20,7 @@ export default function Wellness() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
-  subtitle: { marginTop: 8, textAlign: "center", color: Colors.textDark },
+  container: { flex: 1, alignItems: "center", justifyContent: "center", padding: 16 },
+  title: { marginBottom: 8 },
+  subtitle: { textAlign: "center", color: Colors.textDark, lineHeight: 22 },
 });

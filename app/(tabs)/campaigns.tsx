@@ -4,16 +4,23 @@ import Typography from "../../constants/Typography";
 
 export default function Campaigns() {
   return (
-    <View style={styles.container}>
-      <Text style={[Typography.h2, { color: Colors.primary }]}>Campaigns</Text>
-      <Text style={[Typography.body, styles.subtitle]}>
-        Stay updated on advocacy campaigns and join movements for change.
+    <View style={styles.container} accessible accessibilityLabel="Campaigns screen">
+      <Text
+        style={[Typography.h2, styles.title, { color: Colors.primary }]}
+        accessibilityRole="header"
+        allowFontScaling
+      >
+        Campaigns
+      </Text>
+      <Text style={[Typography.body, styles.subtitle]} allowFontScaling>
+        Explore and participate in advocacy campaigns that drive awareness and change.
       </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
-  subtitle: { marginTop: 8, textAlign: "center", color: Colors.textDark },
+  container: { flex: 1, alignItems: "center", justifyContent: "center", padding: 16 },
+  title: { marginBottom: 8 },
+  subtitle: { textAlign: "center", color: Colors.textDark, lineHeight: 22 },
 });

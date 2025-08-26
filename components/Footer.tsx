@@ -1,21 +1,31 @@
+// components/Footer.tsx
 import { View, Text, StyleSheet } from "react-native";
+import Colors from "../constants/Colors";
 
 export default function Footer() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>© 2025 Empowr App - All Rights Reserved</Text>
+    <View
+      style={styles.footer}
+      accessible
+      accessibilityRole="summary"
+      accessibilityLabel={`Copyright ${new Date().getFullYear()} Empowr App. All rights reserved.`}
+    >
+      <Text style={styles.text} allowFontScaling>
+        © {new Date().getFullYear()} Empowr App · All rights reserved
+      </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 10,
-    backgroundColor: "#f1f1f1",
+  footer: {
+    backgroundColor: Colors.primaryDark,
     alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 10,
   },
   text: {
-    color: "#333",
+    color: Colors.textLight,
     fontSize: 12,
   },
 });
