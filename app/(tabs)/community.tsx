@@ -1,18 +1,19 @@
 import { View, Text, StyleSheet } from "react-native";
-import Colors from "../../constants/Colors";
-import Typography from "../../constants/Typography";
 
-export default function Community() {
+export default function CommunityScreen() {
   return (
-    <View style={styles.container} accessible accessibilityLabel="Community screen">
-      <Text
-        style={[Typography.h2, styles.title, { color: Colors.primary }]}
-        accessibilityRole="header"
-        allowFontScaling
-      >
+    <View
+      style={styles.container}
+      accessible={true}
+      accessibilityLabel="Community screen for connecting with fellow persons with disabilities"
+    >
+      <Text style={styles.title} accessibilityRole="header">
         Community
       </Text>
-      <Text style={[Typography.body, styles.subtitle]} allowFontScaling>
+      <Text
+        style={styles.subtitle}
+        accessibilityLabel="Connect with fellow persons with disabilities community, share experiences, and support each other."
+      >
         Connect with fellow Persons with Disabilities (PWDs), share experiences, and support each other.
       </Text>
     </View>
@@ -20,7 +21,7 @@ export default function Community() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: "center", justifyContent: "center", padding: 16 },
-  title: { marginBottom: 8 },
-  subtitle: { textAlign: "center", color: Colors.textDark, lineHeight: 22 },
+  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
+  title: { fontSize: 24, fontWeight: "bold" },
+  subtitle: { fontSize: 16, marginTop: 8, textAlign: "center" },
 });

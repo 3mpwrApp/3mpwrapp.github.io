@@ -1,26 +1,27 @@
-import { StyleSheet, Text, View } from "react-native";
-import Colors from "../../constants/Colors";
-import Typography from "../../constants/Typography";
+import { View, Text, StyleSheet } from "react-native";
 
-export default function Home() {
+export default function HomeScreen() {
   return (
-    <View style={styles.container} accessible accessibilityLabel="Home screen">
-      <Text
-        style={[Typography.h2, styles.title, { color: Colors.primary }]}
-        accessibilityRole="header"
-        allowFontScaling
-      >
+    <View
+      style={styles.container}
+      accessible={true}
+      accessibilityLabel="Home screen with welcome message"
+    >
+      <Text style={styles.title} accessibilityRole="header">
         Welcome to Empowr
       </Text>
-      <Text style={[Typography.body, styles.subtitle]} allowFontScaling>
-        Empowering Injured Workers & Persons with Disabilities across Canada.
+      <Text
+        style={styles.subtitle}
+        accessibilityLabel="This app helps persons with disabilities and injured workers across Canada."
+      >
+        Connecting Persons with Disabilities and Injured Workers across Canada.
       </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: "center", justifyContent: "center", padding: 16 },
-  title: { marginBottom: 8 },
-  subtitle: { textAlign: "center", color: Colors.textDark, lineHeight: 22 },
+  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 16 },
+  title: { fontSize: 24, fontWeight: "bold" },
+  subtitle: { fontSize: 16, marginTop: 8, textAlign: "center" },
 });
