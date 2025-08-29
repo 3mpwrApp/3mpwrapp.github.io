@@ -8,11 +8,13 @@ type Props = {
   subtitle?: string;
   onPress?: () => void;
   rightIcon?: keyof typeof Ionicons.glyphMap;
+  onPressRight?: () => void;
+  rightA11yLabel?: string;
   testID?: string;
   accessibilityLabel?: string;
 };
 
-export default function Card({ title, subtitle, onPress, rightIcon = "chevron-forward", testID, accessibilityLabel }: Props) {
+export default function Card({ title, subtitle, onPress, rightIcon = "chevron-forward", onPressRight, rightA11yLabel, testID, accessibilityLabel }: Props) {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = React.useMemo(() => createStyles(palette), [palette]);
@@ -30,7 +32,19 @@ export default function Card({ title, subtitle, onPress, rightIcon = "chevron-fo
         <Text style={styles.title}>{title}</Text>
         {!!subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
       </View>
-      <Ionicons name={rightIcon} size={20} color={palette.muted} />
+      {onPressRight ? (
+        <Pressable
+          onPress={onPressRight}
+          accessibilityRole="button"
+          accessibilityLabel={rightA11yLabel ?? "Actions"}
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          style={({ pressed }) => [styles.rightAction, pressed && { opacity: 0.8 }]}
+        >
+          <Ionicons name={rightIcon} size={20} color={palette.muted} />
+        </Pressable>
+      ) : (
+          <Ionicons name={rightIcon} size={20} color={palette.muted} />
+      )}
     </Pressable>
   );
 }
@@ -51,6 +65,6 @@ function createStyles(palette: typeof colors.light) {
     textWrap: { flex: 1, paddingRight: 12 },
     title: { color: palette.text, fontSize: 16, fontWeight: "600" },
     subtitle: { color: palette.muted, fontSize: 13, marginTop: 2 },
+    rightAction: { paddingLeft: 8 },
   });
 }
-

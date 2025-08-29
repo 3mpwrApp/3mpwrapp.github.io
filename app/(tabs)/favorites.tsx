@@ -7,13 +7,15 @@ import { resources } from "../../data/resources";
 import { advocates } from "../../data/advocates";
 import { podcasts } from "../../data/podcasts";
 import Card from "../../components/Card";
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
+
 
 export default function FavoritesScreen() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
-  const { has } = useFavorites();
+  const { has, toggle } = useFavorites();
+  const router = useRouter();
 
   const favCampaigns = React.useMemo(() => campaigns.filter(c => has("campaign", c.id)), [has]);
   const favResources = React.useMemo(() => resources.filter(r => has("resource", r.id)), [has]);
@@ -26,16 +28,22 @@ export default function FavoritesScreen() {
     <ScrollView style={styles.container} contentContainerStyle={styles.content} accessibilityLabel="Favorites screen" accessible>
       <Text accessibilityRole="header" style={styles.title}>Favorites</Text>
       {isEmpty && (
-        <Text style={styles.empty}>You haven’t saved any items yet.</Text>
+        <Text style={styles.empty}>You haven't saved any items yet.</Text>
       )}
 
       {!!favCampaigns.length && (
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Campaigns</Text>
           {favCampaigns.map(item => (
-            <Link key={item.id} href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
-              <Card title={item.title} subtitle={item.summary} />
-            </Link>
+            <Card
+              key={item.id}
+              title={item.title}
+              subtitle={item.summary}
+              onPress={() => router.push({ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } })}
+              rightIcon="trash-outline"
+              onPressRight={() => toggle("campaign", item.id)}
+              rightA11yLabel={`Remove ${item.title} from favorites`}
+            />
           ))}
         </View>
       )}
@@ -44,9 +52,15 @@ export default function FavoritesScreen() {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Resources</Text>
           {favResources.map(item => (
-            <Link key={item.id} href={{ pathname: "/(tabs)/resources/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
-              <Card title={item.title} subtitle={item.description} />
-            </Link>
+            <Card
+              key={item.id}
+              title={item.title}
+              subtitle={item.description}
+              onPress={() => router.push({ pathname: "/(tabs)/resources/[id]", params: { id: item.id } })}
+              rightIcon="trash-outline"
+              onPressRight={() => toggle("resource", item.id)}
+              rightA11yLabel={`Remove ${item.title} from favorites`}
+            />
           ))}
         </View>
       )}
@@ -55,9 +69,15 @@ export default function FavoritesScreen() {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Advocates</Text>
           {favAdvocates.map(item => (
-            <Link key={item.id} href={{ pathname: "/(tabs)/advocates/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.name}`}>
-              <Card title={item.name} subtitle={item.bio} />
-            </Link>
+            <Card
+              key={item.id}
+              title={item.name}
+              subtitle={item.bio}
+              onPress={() => router.push({ pathname: "/(tabs)/advocates/[id]", params: { id: item.id } })}
+              rightIcon="trash-outline"
+              onPressRight={() => toggle("advocate", item.id)}
+              rightA11yLabel={`Remove ${item.name} from favorites`}
+            />
           ))}
         </View>
       )}
@@ -66,9 +86,15 @@ export default function FavoritesScreen() {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Podcasts</Text>
           {favPodcasts.map(item => (
-            <Link key={item.id} href={{ pathname: "/(tabs)/podcasts/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
-              <Card title={item.title} subtitle={`${item.description} • ${item.duration}`} />
-            </Link>
+            <Card
+              key={item.id}
+              title={item.title}
+              subtitle={`${item.description} • ${item.duration}`}
+              onPress={() => router.push({ pathname: "/(tabs)/podcasts/[id]", params: { id: item.id } })}
+              rightIcon="trash-outline"
+              onPressRight={() => toggle("podcast", item.id)}
+              rightA11yLabel={`Remove ${item.title} from favorites`}
+            />
           ))}
         </View>
       )}
@@ -86,4 +112,3 @@ function createStyles(palette: typeof colors.light) {
     sectionTitle: { color: palette.muted, fontSize: 14, textTransform: "uppercase", letterSpacing: 0.6, marginBottom: 6 },
   });
 }
-

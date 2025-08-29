@@ -4,6 +4,7 @@ import { useLocalSearchParams, Stack } from "expo-router";
 import { colors } from "../../../theme/colors";
 import { podcasts } from "../../../data/podcasts";
 import { useFavorites } from "../../../store/favorites";
+import { Audio, AVPlaybackStatusSuccess } from "expo-av";
 
 export default function PodcastDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -13,6 +14,50 @@ export default function PodcastDetail() {
   const podcast = podcasts.find((p) => p.id === id);
   const { has, toggle } = useFavorites();
   const saved = podcast ? has("podcast", podcast.id) : false;
+
+  const soundRef = React.useRef<Audio.Sound | null>(null);
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const [pos, setPos] = React.useState(0);
+  const [dur, setDur] = React.useState(0);
+
+  React.useEffect(() => {
+    return () => {
+      if (soundRef.current) {
+        soundRef.current.unloadAsync().catch(() => {});
+        soundRef.current = null;
+      }
+    };
+  }, []);
+
+  const ensureLoaded = React.useCallback(async () => {
+    if (!podcast?.audioUrl) return null;
+    if (soundRef.current) return soundRef.current;
+    const { sound } = await Audio.Sound.createAsync(
+      { uri: podcast.audioUrl },
+      { shouldPlay: false },
+      (status) => {
+        if (!status.isLoaded) return;
+        const s = status as AVPlaybackStatusSuccess;
+        setPos(s.positionMillis);
+        setDur(s.durationMillis ?? 0);
+        setIsPlaying(s.isPlaying);
+      }
+    );
+    soundRef.current = sound;
+    return sound;
+  }, [podcast?.audioUrl]);
+
+  const togglePlay = React.useCallback(async () => {
+    if (!podcast?.audioUrl) return;
+    const snd = await ensureLoaded();
+    if (!snd) return;
+    const status = await snd.getStatusAsync();
+    if (status.isLoaded && status.isPlaying) {
+      await snd.pauseAsync();
+    } else {
+      await snd.playAsync();
+    }
+  }, [ensureLoaded, podcast?.audioUrl]);
 
   return (
     <>
@@ -30,6 +75,28 @@ export default function PodcastDetail() {
             <Text style={styles.buttonText}>{saved ? "Remove from Favorites" : "Save to Favorites"}</Text>
           </Pressable>
         )}
+
+        {podcast?.audioUrl ? (
+          <View style={{ height: 12 }} />
+        ) : null}
+
+        {podcast?.audioUrl ? (
+          <View accessibilityLabel="Audio player" accessible>
+            <Pressable
+              style={({ pressed }) => [styles.button, pressed && { opacity: 0.8 }]}
+              onPress={togglePlay}
+              accessibilityRole="button"
+              accessibilityLabel={isPlaying ? "Pause" : "Play"}
+            >
+              <Text style={styles.buttonText}>{isPlaying ? "Pause" : "Play"}</Text>
+            </Pressable>
+            <Text style={styles.text} accessibilityLabel={`Progress ${formatTime(pos)} of ${formatTime(dur)}`}>
+              {formatTime(pos)} / {formatTime(dur)}
+            </Text>
+          </View>
+        ) : (
+          <Text style={styles.text}>No audio available.</Text>
+        )}
       </View>
     </>
   );
@@ -45,3 +112,10 @@ function createStyles(palette: typeof colors.light) {
   });
 }
 
+function formatTime(ms: number) {
+  if (!ms || ms < 0) return "0:00";
+  const total = Math.floor(ms / 1000);
+  const m = Math.floor(total / 60);
+  const s = total % 60;
+  return `${m}:${s.toString().padStart(2, "0")}`;
+}
