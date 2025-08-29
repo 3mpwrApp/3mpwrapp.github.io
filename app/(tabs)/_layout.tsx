@@ -117,6 +117,18 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="favorites"
+        options={{
+          title: "Favorites",
+          tabBarLabel: "Favorites",
+          tabBarAccessibilityLabel: "Favorites tab",
+          tabBarTestID: "tab-favorites",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons name={focused ? "bookmark" : "bookmark-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="podcasts"
         options={{
           title: "Podcasts",
