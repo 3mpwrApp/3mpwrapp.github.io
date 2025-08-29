@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import Card from "../../components/Card";
@@ -9,6 +9,7 @@ import { Link } from "expo-router";
 import SearchBar from "../../components/SearchBar";
 import { useCounts } from "../../store/counts";
 import { useAnnounceOnChange } from "../../hooks/useA11y";
+import SkeletonRow from "../../components/SkeletonRow";
 
 export default function CampaignsScreen() {
   const scheme = useColorScheme();
@@ -23,23 +24,22 @@ export default function CampaignsScreen() {
   const [error, setError] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
-  React.useEffect(() => {
-    let mounted = true;
-    (async () => {
-      try {
-        setLoading(true);
-        const data = await fetchCampaigns();
-        if (mounted) setItems(data);
-      } catch (e: any) {
-        if (mounted) setError("Failed to load campaigns");
-      } finally {
-        if (mounted) setLoading(false);
-      }
-    })();
-    return () => {
-      mounted = false;
-    };
+  const reload = React.useCallback(async () => {
+    try {
+      setError(null);
+      setLoading(true);
+      const data = await fetchCampaigns();
+      setItems(data);
+    } catch (e) {
+      setError("Failed to load campaigns");
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  React.useEffect(() => {
+    reload();
+  }, [reload]);
 
   React.useEffect(() => {
     setCount("campaigns", items.length);
@@ -59,7 +59,13 @@ export default function CampaignsScreen() {
       </Text>
       <Text style={styles.subtitle}>Browse and support active campaigns.</Text>
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search campaigns" accessibilityLabel="Search campaigns" />
-      {loading && <Text style={styles.subtitle}>Loading…</Text>}
+      {loading && (
+        <View>
+          <SkeletonRow testID="skeleton-campaign-1" />
+          <SkeletonRow testID="skeleton-campaign-2" />
+          <SkeletonRow testID="skeleton-campaign-3" />
+        </View>
+      )}
       {error && (
         <Text style={styles.subtitle} accessibilityRole="alert">
           {error}
@@ -103,6 +109,7 @@ export default function CampaignsScreen() {
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
+        refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
       />
     </View>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import Card from "../../components/Card";
@@ -9,6 +9,7 @@ import { Link } from "expo-router";
 import SearchBar from "../../components/SearchBar";
 import { useCounts } from "../../store/counts";
 import { useAnnounceOnChange } from "../../hooks/useA11y";
+import SkeletonRow from "../../components/SkeletonRow";
 
 export default function ResourcesScreen() {
   const scheme = useColorScheme();
@@ -23,23 +24,22 @@ export default function ResourcesScreen() {
   const [error, setError] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
-  React.useEffect(() => {
-    let mounted = true;
-    (async () => {
-      try {
-        setLoading(true);
-        const data = await fetchResources();
-        if (mounted) setItems(data);
-      } catch (e: any) {
-        if (mounted) setError("Failed to load resources");
-      } finally {
-        if (mounted) setLoading(false);
-      }
-    })();
-    return () => {
-      mounted = false;
-    };
+  const reload = React.useCallback(async () => {
+    try {
+      setError(null);
+      setLoading(true);
+      const data = await fetchResources();
+      setItems(data);
+    } catch (e) {
+      setError("Failed to load resources");
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  React.useEffect(() => {
+    reload();
+  }, [reload]);
 
   React.useEffect(() => {
     setCount("resources", items.length);
@@ -59,7 +59,13 @@ export default function ResourcesScreen() {
       </Text>
       <Text style={styles.subtitle}>Find helpful guides and materials.</Text>
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search resources" accessibilityLabel="Search resources" />
-      {loading && <Text style={styles.subtitle}>Loading…</Text>}
+      {loading && (
+        <View>
+          <SkeletonRow testID="skeleton-resource-1" />
+          <SkeletonRow testID="skeleton-resource-2" />
+          <SkeletonRow testID="skeleton-resource-3" />
+        </View>
+      )}
       {error && (
         <Text style={styles.subtitle} accessibilityRole="alert">
           {error}
@@ -102,6 +108,7 @@ export default function ResourcesScreen() {
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
+        refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
       />
     </View>
   );

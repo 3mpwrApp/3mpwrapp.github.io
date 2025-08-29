@@ -1,13 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../hooks/useA11y";
 import { podcasts as localPodcasts } from "../../data/podcasts";
 import { fetchPodcasts } from "../../services/podcasts";
 import { useCounts } from "../../store/counts";
-import { useAnnounceOnChange } from "../../hooks/useA11y";
 import Card from "../../components/Card";
 import { Link } from "expo-router";
+import SkeletonRow from "../../components/SkeletonRow";
 
 export default function PodcastsScreen() {
   const scheme = useColorScheme();
@@ -21,23 +21,22 @@ export default function PodcastsScreen() {
   const [error, setError] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
-  React.useEffect(() => {
-    let mounted = true;
-    (async () => {
-      try {
-        setLoading(true);
-        const data = await fetchPodcasts();
-        if (mounted) setItems(data);
-      } catch (e: any) {
-        if (mounted) setError("Failed to load podcasts");
-      } finally {
-        if (mounted) setLoading(false);
-      }
-    })();
-    return () => {
-      mounted = false;
-    };
+  const reload = React.useCallback(async () => {
+    try {
+      setError(null);
+      setLoading(true);
+      const data = await fetchPodcasts();
+      setItems(data);
+    } catch (e) {
+      setError("Failed to load podcasts");
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  React.useEffect(() => {
+    reload();
+  }, [reload]);
 
   React.useEffect(() => {
     setCount("podcasts", items.length);
@@ -51,32 +50,20 @@ export default function PodcastsScreen() {
         Podcasts
       </Text>
       <Text style={styles.subtitle}>Listen to community stories and insights.</Text>
-      {loading && <Text style={styles.subtitle}>Loading…</Text>}
+      {loading && (
+        <View>
+          <SkeletonRow testID="skeleton-podcast-1" />
+          <SkeletonRow testID="skeleton-podcast-2" />
+          <SkeletonRow testID="skeleton-podcast-3" />
+        </View>
+      )}
       {error && (
         <Text style={styles.subtitle} accessibilityRole="alert">
           {error}
         </Text>
       )}
       {error && (
-        <Text
-          onPress={() => {
-            setError(null);
-            (async () => {
-              try {
-                setLoading(true);
-                const data = await fetchPodcasts();
-                setItems(data);
-              } catch (e) {
-                setError("Failed to load podcasts");
-              } finally {
-                setLoading(false);
-              }
-            })();
-          }}
-          accessibilityRole="button"
-          accessibilityLabel="Try again"
-          style={styles.subtitle}
-        >
+        <Text onPress={reload} accessibilityRole="button" accessibilityLabel="Try again" style={styles.subtitle}>
           Try again
         </Text>
       )}
@@ -89,6 +76,7 @@ export default function PodcastsScreen() {
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
+        refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
       />
     </View>
   );
@@ -101,3 +89,4 @@ function createStyles(palette: Palette) {
     subtitle: { fontSize: 16, color: palette.muted, marginBottom: 8 },
   });
 }
+

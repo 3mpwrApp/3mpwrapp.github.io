@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import { advocates as localAdvocates } from "../../data/advocates";
@@ -9,6 +9,7 @@ import { Link } from "expo-router";
 import SearchBar from "../../components/SearchBar";
 import { useCounts } from "../../store/counts";
 import { useAnnounceOnChange } from "../../hooks/useA11y";
+import SkeletonRow from "../../components/SkeletonRow";
 
 export default function AdvocatesScreen() {
   const scheme = useColorScheme();
@@ -23,23 +24,22 @@ export default function AdvocatesScreen() {
   const [error, setError] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
-  React.useEffect(() => {
-    let mounted = true;
-    (async () => {
-      try {
-        setLoading(true);
-        const data = await fetchAdvocates();
-        if (mounted) setItems(data);
-      } catch (e: any) {
-        if (mounted) setError("Failed to load advocates");
-      } finally {
-        if (mounted) setLoading(false);
-      }
-    })();
-    return () => {
-      mounted = false;
-    };
+  const reload = React.useCallback(async () => {
+    try {
+      setError(null);
+      setLoading(true);
+      const data = await fetchAdvocates();
+      setItems(data);
+    } catch (e) {
+      setError("Failed to load advocates");
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  React.useEffect(() => {
+    reload();
+  }, [reload]);
 
   React.useEffect(() => {
     setCount("advocates", items.length);
@@ -59,7 +59,13 @@ export default function AdvocatesScreen() {
       </Text>
       <Text style={styles.subtitle}>Connect with community advocates.</Text>
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search advocates" accessibilityLabel="Search advocates" />
-      {loading && <Text style={styles.subtitle}>Loading…</Text>}
+      {loading && (
+        <View>
+          <SkeletonRow testID="skeleton-advocate-1" />
+          <SkeletonRow testID="skeleton-advocate-2" />
+          <SkeletonRow testID="skeleton-advocate-3" />
+        </View>
+      )}
       {error && (
         <Text style={styles.subtitle} accessibilityRole="alert">
           {error}
@@ -102,6 +108,7 @@ export default function AdvocatesScreen() {
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
+        refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
       />
     </View>
   );
