@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, useColorScheme, FlatList } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import Card from "../../components/Card";
-import { resources } from "../../data/resources";
+import { resources as localResources } from "../../data/resources";
+import { fetchResources } from "../../services/resources";
 import { Link } from "expo-router";
 import SearchBar from "../../components/SearchBar";
 
@@ -15,11 +16,32 @@ export default function ResourcesScreen() {
   useAnnounceOnMount("Resources");
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState("");
+  const [items, setItems] = React.useState(localResources);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        setLoading(true);
+        const data = await fetchResources();
+        if (mounted) setItems(data);
+      } catch (e: any) {
+        if (mounted) setError("Failed to load resources");
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
+  }, []);
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return resources;
-    return resources.filter((r) => r.title.toLowerCase().includes(q) || r.description.toLowerCase().includes(q));
-  }, [query]);
+    if (!q) return items;
+    return items.filter((r) => r.title.toLowerCase().includes(q) || r.description.toLowerCase().includes(q));
+  }, [query, items]);
 
   return (
     <View style={styles.container} accessibilityLabel="Resources screen" accessible>
@@ -28,6 +50,8 @@ export default function ResourcesScreen() {
       </Text>
       <Text style={styles.subtitle}>Find helpful guides and materials.</Text>
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search resources" accessibilityLabel="Search resources" />
+      {loading && <Text style={styles.subtitle}>Loading…</Text>}
+      {error && <Text style={styles.subtitle}>{error}</Text>}
       <FlatList
         data={filtered}
         keyExtractor={(item) => item.id}

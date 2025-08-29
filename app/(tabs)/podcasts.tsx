@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
-import { podcasts } from "../../data/podcasts";
+import { podcasts as localPodcasts } from "../../data/podcasts";
+import { fetchPodcasts } from "../../services/podcasts";
 import Card from "../../components/Card";
 import { Link } from "expo-router";
 
@@ -13,14 +14,38 @@ export default function PodcastsScreen() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Podcasts");
   useFocusOnRefOnMount(titleRef);
+  const [items, setItems] = React.useState(localPodcasts);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        setLoading(true);
+        const data = await fetchPodcasts();
+        if (mounted) setItems(data);
+      } catch (e: any) {
+        if (mounted) setError("Failed to load podcasts");
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   return (
     <View style={styles.container} accessibilityLabel="Podcasts screen" accessible>
       <Text ref={titleRef} nativeID="podcasts-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Podcasts
       </Text>
       <Text style={styles.subtitle}>Listen to community stories and insights.</Text>
+      {loading && <Text style={styles.subtitle}>Loading…</Text>}
+      {error && <Text style={styles.subtitle}>{error}</Text>}
       <FlatList
-        data={podcasts}
+        data={items}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Link href={{ pathname: "/(tabs)/podcasts/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>

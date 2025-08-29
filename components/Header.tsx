@@ -1,7 +1,11 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
+import { Linking, Pressable, StyleSheet, Text, View, useColorScheme, SafeAreaView } from "react-native";
+import { colors, type Palette } from "../theme/colors";
 
 export default function Header() {
+  const scheme = useColorScheme();
+  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const styles = createStyles(palette);
   // Helper to open external links safely
   const openLink = async (url: string) => {
     const supported = await Linking.canOpenURL(url);
@@ -13,7 +17,7 @@ export default function Header() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} accessibilityRole="header">
       <Text style={styles.title} accessibilityRole="header" accessibilityLabel="Empowr App Header">
         Empowr App
       </Text>
@@ -69,27 +73,31 @@ export default function Header() {
           <Ionicons name="mail" size={22} color="#D44638" />
         </Pressable>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: 40,
-    paddingBottom: 10,
-    paddingHorizontal: 20,
-    backgroundColor: "#007AFF",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "white",
-  },
-  icons: {
-    flexDirection: "row",
-    gap: 15,
-  },
-});
+function createStyles(palette: Palette) {
+  return StyleSheet.create({
+    container: {
+      paddingTop: 8,
+      paddingBottom: 10,
+      paddingHorizontal: 20,
+      backgroundColor: palette.background,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderBottomColor: palette.muted,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    title: {
+      fontSize: 20,
+      fontWeight: "bold",
+      color: palette.text,
+    },
+    icons: {
+      flexDirection: "row",
+      gap: 15,
+    },
+  });
+}

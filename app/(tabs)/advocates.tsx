@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
-import { advocates } from "../../data/advocates";
+import { advocates as localAdvocates } from "../../data/advocates";
+import { fetchAdvocates } from "../../services/advocates";
 import Card from "../../components/Card";
 import { Link } from "expo-router";
 import SearchBar from "../../components/SearchBar";
@@ -15,11 +16,32 @@ export default function AdvocatesScreen() {
   useAnnounceOnMount("Advocates");
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState("");
+  const [items, setItems] = React.useState(localAdvocates);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        setLoading(true);
+        const data = await fetchAdvocates();
+        if (mounted) setItems(data);
+      } catch (e: any) {
+        if (mounted) setError("Failed to load advocates");
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
+  }, []);
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return advocates;
-    return advocates.filter((a) => a.name.toLowerCase().includes(q) || a.bio.toLowerCase().includes(q));
-  }, [query]);
+    if (!q) return items;
+    return items.filter((a) => a.name.toLowerCase().includes(q) || a.bio.toLowerCase().includes(q));
+  }, [query, items]);
 
   return (
     <View style={styles.container} accessibilityLabel="Advocates screen" accessible>
@@ -28,6 +50,8 @@ export default function AdvocatesScreen() {
       </Text>
       <Text style={styles.subtitle}>Connect with community advocates.</Text>
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search advocates" accessibilityLabel="Search advocates" />
+      {loading && <Text style={styles.subtitle}>Loading…</Text>}
+      {error && <Text style={styles.subtitle}>{error}</Text>}
       <FlatList
         data={filtered}
         keyExtractor={(item) => item.id}

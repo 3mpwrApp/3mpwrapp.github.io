@@ -1,6 +1,7 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useColorScheme } from "react-native";
+import { useFavorites } from "../../store/favorites";
 import { colors } from "../../theme/colors";
 
 export default function TabsLayout() {
@@ -8,6 +9,10 @@ export default function TabsLayout() {
   const palette = colorScheme === "dark" ? colors.dark : colors.light;
   const activeTint = palette.primary;
   const inactiveTint = palette.muted;
+  const { state } = useFavorites();
+  const favCount = state
+    ? state.campaign.size + state.resource.size + state.advocate.size + state.podcast.size
+    : 0;
 
   return (
     <Tabs
@@ -116,6 +121,7 @@ export default function TabsLayout() {
           title: "Favorites",
           tabBarLabel: "Favorites",
           tabBarAccessibilityLabel: "Favorites tab",
+          tabBarBadge: favCount > 0 ? favCount : undefined,
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons name={focused ? "bookmark" : "bookmark-outline"} color={color} size={size} />
           ),
@@ -127,7 +133,7 @@ export default function TabsLayout() {
           title: "Podcasts",
           tabBarLabel: "Podcasts",
           tabBarAccessibilityLabel: "Podcasts tab",
-          tabBarIcon: ({ color, size, focused }) => (
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size} />
           ),
         }}
