@@ -1,6 +1,7 @@
 import { Stack, usePathname } from "expo-router";
 import React from "react";
 import { AccessibilityInfo } from "react-native";
+import { FavoritesProvider } from "../store/favorites";
 import Header from "../components/ThemedHeader";
 import Footer from "../components/ThemedFooter";
 
@@ -35,10 +36,12 @@ export default function RootLayout() {
   return (
     <>
       <Header />
-      <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-      </Stack>
+      <FavoritesProvider>
+        <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+        </Stack>
+      </FavoritesProvider>
       <Footer />
     </>
   );
