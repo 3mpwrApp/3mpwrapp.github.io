@@ -4,6 +4,8 @@ import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import { podcasts as localPodcasts } from "../../data/podcasts";
 import { fetchPodcasts } from "../../services/podcasts";
+import { useCounts } from "../../store/counts";
+import { useAnnounceOnChange } from "../../hooks/useA11y";
 import Card from "../../components/Card";
 import { Link } from "expo-router";
 
@@ -18,6 +20,7 @@ export default function PodcastsScreen() {
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
+  const { setCount } = useCounts();
   React.useEffect(() => {
     let mounted = true;
     (async () => {
@@ -36,6 +39,12 @@ export default function PodcastsScreen() {
     };
   }, []);
 
+  React.useEffect(() => {
+    setCount("podcasts", items.length);
+  }, [items, setCount]);
+
+  useAnnounceOnChange(items.length, (n) => `${n} podcasts loaded`);
+
   return (
     <View style={styles.container} accessibilityLabel="Podcasts screen" accessible>
       <Text ref={titleRef} nativeID="podcasts-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
@@ -43,7 +52,34 @@ export default function PodcastsScreen() {
       </Text>
       <Text style={styles.subtitle}>Listen to community stories and insights.</Text>
       {loading && <Text style={styles.subtitle}>Loading…</Text>}
-      {error && <Text style={styles.subtitle}>{error}</Text>}
+      {error && (
+        <Text style={styles.subtitle} accessibilityRole="alert">
+          {error}
+        </Text>
+      )}
+      {error && (
+        <Text
+          onPress={() => {
+            setError(null);
+            (async () => {
+              try {
+                setLoading(true);
+                const data = await fetchPodcasts();
+                setItems(data);
+              } catch (e) {
+                setError("Failed to load podcasts");
+              } finally {
+                setLoading(false);
+              }
+            })();
+          }}
+          accessibilityRole="button"
+          accessibilityLabel="Try again"
+          style={styles.subtitle}
+        >
+          Try again
+        </Text>
+      )}
       <FlatList
         data={items}
         keyExtractor={(item) => item.id}

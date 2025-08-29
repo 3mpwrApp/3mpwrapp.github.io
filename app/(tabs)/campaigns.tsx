@@ -7,6 +7,8 @@ import { campaigns as localCampaigns } from "../../data/campaigns";
 import { fetchCampaigns } from "../../services/campaigns";
 import { Link } from "expo-router";
 import SearchBar from "../../components/SearchBar";
+import { useCounts } from "../../store/counts";
+import { useAnnounceOnChange } from "../../hooks/useA11y";
 
 export default function CampaignsScreen() {
   const scheme = useColorScheme();
@@ -20,6 +22,7 @@ export default function CampaignsScreen() {
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
+  const { setCount } = useCounts();
   React.useEffect(() => {
     let mounted = true;
     (async () => {
@@ -37,6 +40,12 @@ export default function CampaignsScreen() {
       mounted = false;
     };
   }, []);
+
+  React.useEffect(() => {
+    setCount("campaigns", items.length);
+  }, [items, setCount]);
+
+  useAnnounceOnChange(items.length, (n) => `${n} campaigns loaded`);
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return items;
@@ -51,7 +60,35 @@ export default function CampaignsScreen() {
       <Text style={styles.subtitle}>Browse and support active campaigns.</Text>
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search campaigns" accessibilityLabel="Search campaigns" />
       {loading && <Text style={styles.subtitle}>Loading…</Text>}
-      {error && <Text style={styles.subtitle}>{error}</Text>}
+      {error && (
+        <Text style={styles.subtitle} accessibilityRole="alert">
+          {error}
+        </Text>
+      )}
+      {error && (
+        <Text
+          onPress={() => {
+            // retry
+            setError(null);
+            (async () => {
+              try {
+                setLoading(true);
+                const data = await fetchCampaigns();
+                setItems(data);
+              } catch (e) {
+                setError("Failed to load campaigns");
+              } finally {
+                setLoading(false);
+              }
+            })();
+          }}
+          accessibilityRole="button"
+          accessibilityLabel="Try again"
+          style={styles.subtitle}
+        >
+          Try again
+        </Text>
+      )}
       <FlatList
         data={filtered}
         keyExtractor={(item) => item.id}

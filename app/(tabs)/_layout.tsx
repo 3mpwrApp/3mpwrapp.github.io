@@ -3,12 +3,14 @@ import { Ionicons } from "@expo/vector-icons";
 import { useColorScheme } from "react-native";
 import { useFavorites } from "../../store/favorites";
 import { colors } from "../../theme/colors";
+import { useCounts } from "../../store/counts";
 
 export default function TabsLayout() {
   const colorScheme = useColorScheme();
   const palette = colorScheme === "dark" ? colors.dark : colors.light;
   const activeTint = palette.primary;
   const inactiveTint = palette.muted;
+  const { counts } = useCounts();
   const { state } = useFavorites();
   const favCount = state
     ? state.campaign.size + state.resource.size + state.advocate.size + state.podcast.size
@@ -46,6 +48,7 @@ export default function TabsLayout() {
           title: "Campaigns",
           tabBarLabel: "Campaigns",
           tabBarAccessibilityLabel: "Campaigns tab",
+          tabBarBadge: counts.campaigns || undefined,
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "megaphone" : "megaphone-outline"}
@@ -61,6 +64,7 @@ export default function TabsLayout() {
           title: "Resources",
           tabBarLabel: "Resources",
           tabBarAccessibilityLabel: "Resources tab",
+          tabBarBadge: counts.resources || undefined,
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "book" : "book-outline"}
@@ -91,6 +95,7 @@ export default function TabsLayout() {
           title: "Advocates",
           tabBarLabel: "Advocates",
           tabBarAccessibilityLabel: "Advocates tab",
+          tabBarBadge: counts.advocates || undefined,
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "people" : "people-outline"}
@@ -133,6 +138,7 @@ export default function TabsLayout() {
           title: "Podcasts",
           tabBarLabel: "Podcasts",
           tabBarAccessibilityLabel: "Podcasts tab",
+          tabBarBadge: counts.podcasts || undefined,
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size} />
           ),
