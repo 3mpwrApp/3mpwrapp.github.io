@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empowr App</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: #f9fafb;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #0d9488, #2563eb);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #38bdf8;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #0d9488;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .cta a {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta a:hover {
+      background: #1e40af;
+    }
+    footer {
+      background: #0f172a;
+      color: #f1f5f9;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Empowr App</h1>
+    <p>Connecting voices, empowering change.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#involved">Get Involved</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Empowr</h2>
+    <p>Empowr is a community-driven app built for Injured Workers and Persons with Disabilities across Canada. 
+    We’re creating a safe, inclusive space where people can connect, share experiences, and advocate for change.</p>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Community Support</h3>
+        <p>Connect with others, share stories, and build solidarity.</p>
+      </div>
+      <div class="card">
+        <h3>Advocacy Tools</h3>
+        <p>Campaign resources to help drive change in policies and workplaces.</p>
+      </div>
+      <div class="card">
+        <h3>Educational Resources</h3>
+        <p>Learn your rights, access guides, and stay informed.</p>
+      </div>
+      <div class="card">
+        <h3>Podcasts & Updates</h3>
+        <p>Listen to stories, insights, and conversations from the community.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="involved">
+    <h2>Get Involved</h2>
+    <p>Join us in making a difference! Follow Empowr on social media and be part of the movement.</p>
+    <div class="cta">
+      <a href="#">Follow on Facebook</a>
+      <a href="#">Follow on X (Twitter)</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email us at: <a href="mailto:contact@empowr.ca">contact@empowr.ca</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Empowr App. All rights reserved.</p>
+  </footer>
+</body>
+</html>
