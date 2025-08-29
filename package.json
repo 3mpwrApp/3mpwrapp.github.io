@@ -9,6 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
+    "lint:ci": "eslint . --max-warnings=0",
     "typecheck:strict": "tsc -p tsconfig.strict.json --noEmit",
     "a11y:scan": "node scripts/a11y-scan.js"
   },

@@ -22,9 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Lint (no warnings)
+        run: npm run lint:ci
+
       - name: Typecheck (strict)
         run: npm run typecheck:strict
 
       - name: Accessibility scan
         run: npm run a11y:scan
-
