@@ -16,6 +16,18 @@ export default function WellnessScreen() {
         Wellness
       </Text>
       <Text style={styles.subtitle}>Tools and tips for wellbeing.</Text>
+      <View style={styles.tip} accessible accessibilityLabel="Tip one">
+        <Text style={styles.tipTitle}>Daily breathing</Text>
+        <Text style={styles.tipText}>Try 4-7-8 breathing for 1 minute.</Text>
+      </View>
+      <View style={styles.tip} accessible accessibilityLabel="Tip two">
+        <Text style={styles.tipTitle}>Short walk</Text>
+        <Text style={styles.tipText}>Take a 10 minute walk outside.</Text>
+      </View>
+      <View style={styles.tip} accessible accessibilityLabel="Tip three">
+        <Text style={styles.tipTitle}>Gratitude</Text>
+        <Text style={styles.tipText}>Write down one thing you’re grateful for.</Text>
+      </View>
     </View>
   );
 }
@@ -24,6 +36,9 @@ function createStyles(palette: typeof colors.light) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 16, color: palette.muted },
+    subtitle: { fontSize: 16, color: palette.muted, marginBottom: 12 },
+    tip: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
+    tipTitle: { color: palette.text, fontWeight: "600", marginBottom: 4 },
+    tipText: { color: palette.muted },
   });
 }

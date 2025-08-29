@@ -116,6 +116,18 @@ export default function TabsLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="podcasts"
+        options={{
+          title: "Podcasts",
+          tabBarLabel: "Podcasts",
+          tabBarAccessibilityLabel: "Podcasts tab",
+          tabBarTestID: "tab-podcasts",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

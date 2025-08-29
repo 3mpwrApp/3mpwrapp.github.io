@@ -1,0 +1,56 @@
+import React from "react";
+import { Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { colors } from "../theme/colors";
+
+type Props = {
+  title: string;
+  subtitle?: string;
+  onPress?: () => void;
+  rightIcon?: keyof typeof Ionicons.glyphMap;
+  testID?: string;
+  accessibilityLabel?: string;
+};
+
+export default function Card({ title, subtitle, onPress, rightIcon = "chevron-forward", testID, accessibilityLabel }: Props) {
+  const scheme = useColorScheme();
+  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const styles = React.useMemo(() => createStyles(palette), [palette]);
+
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [styles.container, pressed && { opacity: 0.85 }]}
+      accessibilityRole="button"
+      accessibilityLabel={accessibilityLabel ?? title}
+      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+      testID={testID}
+    >
+      <View style={styles.textWrap}>
+        <Text style={styles.title}>{title}</Text>
+        {!!subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+      </View>
+      <Ionicons name={rightIcon} size={20} color={palette.muted} />
+    </Pressable>
+  );
+}
+
+function createStyles(palette: typeof colors.light) {
+  return StyleSheet.create({
+    container: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      backgroundColor: palette.background,
+      paddingHorizontal: 16,
+      paddingVertical: 14,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderBottomColor: palette.muted,
+      minHeight: 56,
+    },
+    textWrap: { flex: 1, paddingRight: 12 },
+    title: { color: palette.text, fontSize: 16, fontWeight: "600" },
+    subtitle: { color: palette.muted, fontSize: 13, marginTop: 2 },
+  });
+}
+
