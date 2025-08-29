@@ -1,5 +1,5 @@
 import { SafeAreaView, Text, StyleSheet, useColorScheme } from "react-native";
-import { colors } from "../theme/colors";
+import { colors, type Palette } from "../theme/colors";
 
 export default function ThemedHeader() {
   const scheme = useColorScheme();
@@ -13,7 +13,7 @@ export default function ThemedHeader() {
   );
 }
 
-function createStyles(palette: typeof colors.light) {
+function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: {
       backgroundColor: palette.background,

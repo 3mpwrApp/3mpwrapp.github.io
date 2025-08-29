@@ -1,4 +1,3 @@
-import React from "react";
 import { View, Text, StyleSheet, useColorScheme } from "react-native";
 
 export default function Footer() {

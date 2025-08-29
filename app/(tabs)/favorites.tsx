@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, ScrollView } from "react-native";
-import { colors } from "../../theme/colors";
+import { colors, type Palette } from "../../theme/colors";
 import { useFavorites } from "../../store/favorites";
 import { campaigns } from "../../data/campaigns";
 import { resources } from "../../data/resources";
@@ -99,7 +99,7 @@ export default function FavoritesScreen() {
   );
 }
 
-function createStyles(palette: typeof colors.light) {
+function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
     content: { padding: 20 },
@@ -109,4 +109,3 @@ function createStyles(palette: typeof colors.light) {
     sectionTitle: { color: palette.muted, fontSize: 14, textTransform: "uppercase", letterSpacing: 0.6, marginBottom: 6 },
   });
 }
-

@@ -1,7 +1,7 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { colors } from "../theme/colors";
+import { colors, type Palette } from "../theme/colors";
 
 type Props = {
   title: string;
@@ -49,7 +49,7 @@ export default function Card({ title, subtitle, onPress, rightIcon = "chevron-fo
   );
 }
 
-function createStyles(palette: typeof colors.light) {
+function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: {
       flexDirection: "row",

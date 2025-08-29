@@ -15,3 +15,11 @@ export const colors = {
     onPrimary: "#FFFFFF",
   },
 } as const;
+
+export type Palette = {
+  primary: string;
+  background: string;
+  text: string;
+  muted: string;
+  onPrimary: string;
+};

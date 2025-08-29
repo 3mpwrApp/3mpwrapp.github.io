@@ -1,7 +1,7 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
 import { Stack, useRouter } from "expo-router";
-import { colors } from "../theme/colors";
+import { colors, type Palette } from "../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../hooks/useA11y";
 
 export default function Modal() {
@@ -36,7 +36,7 @@ export default function Modal() {
   );
 }
 
-function createStyles(palette: typeof colors.light) {
+function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: {
       flex: 1,

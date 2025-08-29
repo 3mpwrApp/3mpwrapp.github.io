@@ -1,7 +1,7 @@
 import React from "react";
 import { View, TextInput, StyleSheet, Pressable, useColorScheme } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { colors } from "../theme/colors";
+import { colors, type Palette } from "../theme/colors";
 
 type Props = {
   value: string;
@@ -43,7 +43,7 @@ export default function SearchBar({ value, onChangeText, placeholder = "Search",
   );
 }
 
-function createStyles(palette: typeof colors.light) {
+function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: {
       flexDirection: "row",
@@ -62,4 +62,3 @@ function createStyles(palette: typeof colors.light) {
     },
   });
 }
-

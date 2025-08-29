@@ -26,8 +26,7 @@ export default function TabsLayout() {
           title: "Home",
           tabBarLabel: "Home",
           tabBarAccessibilityLabel: "Home tab",
-          tabBarTestID: "tab-home",
-          tabBarIcon: ({ color, size, focused }) => (
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "home" : "home-outline"}
               color={color}
@@ -42,8 +41,7 @@ export default function TabsLayout() {
           title: "Campaigns",
           tabBarLabel: "Campaigns",
           tabBarAccessibilityLabel: "Campaigns tab",
-          tabBarTestID: "tab-campaigns",
-          tabBarIcon: ({ color, size, focused }) => (
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "megaphone" : "megaphone-outline"}
               color={color}
@@ -58,8 +56,7 @@ export default function TabsLayout() {
           title: "Resources",
           tabBarLabel: "Resources",
           tabBarAccessibilityLabel: "Resources tab",
-          tabBarTestID: "tab-resources",
-          tabBarIcon: ({ color, size, focused }) => (
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "book" : "book-outline"}
               color={color}
@@ -74,8 +71,7 @@ export default function TabsLayout() {
           title: "Wellness",
           tabBarLabel: "Wellness",
           tabBarAccessibilityLabel: "Wellness tab",
-          tabBarTestID: "tab-wellness",
-          tabBarIcon: ({ color, size, focused }) => (
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "heart" : "heart-outline"}
               color={color}
@@ -90,8 +86,7 @@ export default function TabsLayout() {
           title: "Advocates",
           tabBarLabel: "Advocates",
           tabBarAccessibilityLabel: "Advocates tab",
-          tabBarTestID: "tab-advocates",
-          tabBarIcon: ({ color, size, focused }) => (
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "people" : "people-outline"}
               color={color}
@@ -106,8 +101,7 @@ export default function TabsLayout() {
           title: "Community",
           tabBarLabel: "Community",
           tabBarAccessibilityLabel: "Community tab",
-          tabBarTestID: "tab-community",
-          tabBarIcon: ({ color, size, focused }) => (
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "chatbubbles" : "chatbubbles-outline"}
               color={color}
@@ -122,8 +116,7 @@ export default function TabsLayout() {
           title: "Favorites",
           tabBarLabel: "Favorites",
           tabBarAccessibilityLabel: "Favorites tab",
-          tabBarTestID: "tab-favorites",
-          tabBarIcon: ({ color, size, focused }) => (
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons name={focused ? "bookmark" : "bookmark-outline"} color={color} size={size} />
           ),
         }}
@@ -134,7 +127,6 @@ export default function TabsLayout() {
           title: "Podcasts",
           tabBarLabel: "Podcasts",
           tabBarAccessibilityLabel: "Podcasts tab",
-          tabBarTestID: "tab-podcasts",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size} />
           ),

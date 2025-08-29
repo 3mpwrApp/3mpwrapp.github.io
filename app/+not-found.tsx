@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Pressable, useColorScheme } from "react-native";
 import { Link, Stack, useRouter } from "expo-router";
-import { colors } from "../theme/colors";
+import { colors, type Palette } from "../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../hooks/useA11y";
 
 export default function NotFoundScreen() {
@@ -50,7 +50,7 @@ export default function NotFoundScreen() {
   );
 }
 
-function createStyles(palette: typeof colors.light) {
+function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: {
       flex: 1,

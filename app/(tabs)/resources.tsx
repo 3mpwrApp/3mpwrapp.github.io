@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList } from "react-native";
-import { colors } from "../../theme/colors";
+import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import Card from "../../components/Card";
 import { resources } from "../../data/resources";
@@ -47,7 +47,7 @@ export default function ResourcesScreen() {
   );
 }
 
-function createStyles(palette: typeof colors.light) {
+function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },

@@ -27,14 +27,16 @@ export function useFocusOnRefOnMount(ref: React.RefObject<unknown>, delayMs: num
 export function useAnnounceOnChange<T>(value: T, format: (v: T) => string, delayMs: number = 0) {
   const prev = React.useRef<T>(value);
   React.useEffect(() => {
+    let id: ReturnType<typeof setTimeout> | undefined;
     if (prev.current !== value) {
       const msg = format(value);
-      const id = setTimeout(() => {
+      id = setTimeout(() => {
         AccessibilityInfo.announceForAccessibility?.(msg);
       }, delayMs);
       prev.current = value;
-      return () => clearTimeout(id);
     }
+    return () => {
+      if (id) clearTimeout(id);
+    };
   }, [value, format, delayMs]);
 }
-

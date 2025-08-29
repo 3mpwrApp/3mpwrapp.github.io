@@ -1,5 +1,5 @@
 import { SafeAreaView, Text, StyleSheet, useColorScheme } from "react-native";
-import { colors } from "../theme/colors";
+import { colors, type Palette } from "../theme/colors";
 
 export default function ThemedFooter() {
   const scheme = useColorScheme();
@@ -7,13 +7,13 @@ export default function ThemedFooter() {
   const styles = createStyles(palette);
 
   return (
-    <SafeAreaView style={styles.container} accessibilityRole="contentinfo">
+    <SafeAreaView style={styles.container} accessibilityRole="text">
       <Text style={styles.text}>Empowr</Text>
     </SafeAreaView>
   );
 }
 
-function createStyles(palette: typeof colors.light) {
+function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: {
       backgroundColor: palette.background,
