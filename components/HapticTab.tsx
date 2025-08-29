@@ -1,16 +1,15 @@
-import { BottomTabBarButtonProps } from "@react-navigation/bottom-tabs";
-import { PlatformPressable } from "@react-navigation/elements";
-import { GestureResponderEvent } from "react-native";
+import React from "react";
+import { Pressable, GestureResponderEvent } from "react-native";
 
-export default function HapticTab(props: BottomTabBarButtonProps) {
+type Props = React.ComponentProps<typeof Pressable>;
+
+export default function HapticTab(props: Props) {
   return (
-    <PlatformPressable
+    <Pressable
       {...props}
       onPressIn={(ev: GestureResponderEvent) => {
         // Haptic feedback could go here if you use expo-haptics
-        if (props.onPress) {
-          props.onPress(ev);
-        }
+        if (props.onPress) props.onPress(ev);
       }}
     />
   );

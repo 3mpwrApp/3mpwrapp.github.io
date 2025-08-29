@@ -4,7 +4,10 @@ import { useLocalSearchParams, Stack } from "expo-router";
 import { colors } from "../../../theme/colors";
 import { podcasts } from "../../../data/podcasts";
 import { useFavorites } from "../../../store/favorites";
-import { Audio, AVPlaybackStatusSuccess } from "expo-av";
+// Lazily import expo-av to avoid bundling errors if it's not installed
+// and provide a graceful fallback when unavailable.
+let Audio: any; // assigned at runtime via dynamic import
+type AVPlaybackStatusSuccess = any;
 
 export default function PodcastDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -15,10 +18,11 @@ export default function PodcastDetail() {
   const { has, toggle } = useFavorites();
   const saved = podcast ? has("podcast", podcast.id) : false;
 
-  const soundRef = React.useRef<Audio.Sound | null>(null);
+  const soundRef = React.useRef<any | null>(null);
   const [isPlaying, setIsPlaying] = React.useState(false);
   const [pos, setPos] = React.useState(0);
   const [dur, setDur] = React.useState(0);
+  const [audioSupported, setAudioSupported] = React.useState(true);
 
   React.useEffect(() => {
     return () => {
@@ -32,6 +36,15 @@ export default function PodcastDetail() {
   const ensureLoaded = React.useCallback(async () => {
     if (!podcast?.audioUrl) return null;
     if (soundRef.current) return soundRef.current;
+    if (!Audio) {
+      try {
+        const mod = await import("expo-av");
+        Audio = mod.Audio;
+      } catch (e) {
+        setAudioSupported(false);
+        return null;
+      }
+    }
     const { sound } = await Audio.Sound.createAsync(
       { uri: podcast.audioUrl },
       { shouldPlay: false },
@@ -96,6 +109,12 @@ export default function PodcastDetail() {
           </View>
         ) : (
           <Text style={styles.text}>No audio available.</Text>
+        )}
+
+        {!audioSupported && (
+          <Text style={styles.text}>
+            Audio playback not available. Install expo-av to enable podcasts.
+          </Text>
         )}
       </View>
     </>
