@@ -10,6 +10,8 @@ import SearchBar from "../../components/SearchBar";
 import { useCounts } from "../../store/counts";
 import { useAnnounceOnChange } from "../../hooks/useA11y";
 import SkeletonRow from "../../components/SkeletonRow";
+import { useRefresh } from "../../store/refresh";
+import { useNetwork } from "../../store/network";
 
 export default function CampaignsScreen() {
   const scheme = useColorScheme();
@@ -24,22 +26,26 @@ export default function CampaignsScreen() {
   const [error, setError] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
+  const { setOffline } = useNetwork();
   const reload = React.useCallback(async () => {
     try {
       setError(null);
       setLoading(true);
       const data = await fetchCampaigns();
       setItems(data);
+      setOffline(false);
     } catch (e) {
       setError("Failed to load campaigns");
+      setOffline(true);
     } finally {
       setLoading(false);
     }
   }, []);
 
+  const { tick } = useRefresh();
   React.useEffect(() => {
     reload();
-  }, [reload]);
+  }, [reload, tick]);
 
   React.useEffect(() => {
     setCount("campaigns", items.length);

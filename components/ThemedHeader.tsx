@@ -1,7 +1,9 @@
-import { SafeAreaView, Text, StyleSheet, useColorScheme, View } from "react-native";
+import { SafeAreaView, Text, StyleSheet, useColorScheme, View, Pressable } from "react-native";
 import { colors, type Palette } from "../theme/colors";
 import { useFavorites } from "../store/favorites";
 import { useCounts } from "../store/counts";
+import { useRefresh } from "../store/refresh";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function ThemedHeader() {
   const scheme = useColorScheme();
@@ -9,6 +11,7 @@ export default function ThemedHeader() {
   const styles = createStyles(palette);
   const { state } = useFavorites();
   const { counts } = useCounts();
+  const { refreshAll } = useRefresh();
 
   const favTotal = state
     ? state.campaign.size + state.resource.size + state.advocate.size + state.podcast.size
@@ -24,6 +27,15 @@ export default function ThemedHeader() {
         <Text style={styles.countText} testID="header-items-count" accessibilityLabel={`Items ${counts.campaigns + counts.resources + counts.advocates + counts.podcasts}`}>
           Items: {counts.campaigns + counts.resources + counts.advocates + counts.podcasts}
         </Text>
+        <Pressable
+          onPress={refreshAll}
+          accessibilityRole="button"
+          accessibilityLabel="Refresh all"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+        >
+          <Ionicons name="refresh" size={18} color={palette.muted} />
+        </Pressable>
       </View>
     </SafeAreaView>
   );

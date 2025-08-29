@@ -10,6 +10,8 @@ import SearchBar from "../../components/SearchBar";
 import { useCounts } from "../../store/counts";
 import { useAnnounceOnChange } from "../../hooks/useA11y";
 import SkeletonRow from "../../components/SkeletonRow";
+import { useRefresh } from "../../store/refresh";
+import { useNetwork } from "../../store/network";
 
 export default function ResourcesScreen() {
   const scheme = useColorScheme();
@@ -24,22 +26,26 @@ export default function ResourcesScreen() {
   const [error, setError] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
+  const { setOffline } = useNetwork();
   const reload = React.useCallback(async () => {
     try {
       setError(null);
       setLoading(true);
       const data = await fetchResources();
       setItems(data);
+      setOffline(false);
     } catch (e) {
       setError("Failed to load resources");
+      setOffline(true);
     } finally {
       setLoading(false);
     }
   }, []);
 
+  const { tick } = useRefresh();
   React.useEffect(() => {
     reload();
-  }, [reload]);
+  }, [reload, tick]);
 
   React.useEffect(() => {
     setCount("resources", items.length);

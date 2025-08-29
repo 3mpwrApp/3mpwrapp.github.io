@@ -8,6 +8,8 @@ import { useCounts } from "../../store/counts";
 import Card from "../../components/Card";
 import { Link } from "expo-router";
 import SkeletonRow from "../../components/SkeletonRow";
+import { useRefresh } from "../../store/refresh";
+import { useNetwork } from "../../store/network";
 
 export default function PodcastsScreen() {
   const scheme = useColorScheme();
@@ -21,22 +23,26 @@ export default function PodcastsScreen() {
   const [error, setError] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
+  const { setOffline } = useNetwork();
   const reload = React.useCallback(async () => {
     try {
       setError(null);
       setLoading(true);
       const data = await fetchPodcasts();
       setItems(data);
+      setOffline(false);
     } catch (e) {
       setError("Failed to load podcasts");
+      setOffline(true);
     } finally {
       setLoading(false);
     }
   }, []);
 
+  const { tick } = useRefresh();
   React.useEffect(() => {
     reload();
-  }, [reload]);
+  }, [reload, tick]);
 
   React.useEffect(() => {
     setCount("podcasts", items.length);
@@ -89,4 +95,3 @@ function createStyles(palette: Palette) {
     subtitle: { fontSize: 16, color: palette.muted, marginBottom: 8 },
   });
 }
-

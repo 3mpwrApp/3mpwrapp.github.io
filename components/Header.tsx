@@ -1,20 +1,14 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Linking, Pressable, StyleSheet, Text, View, useColorScheme, SafeAreaView } from "react-native";
+import { Pressable, StyleSheet, Text, View, useColorScheme, SafeAreaView } from "react-native";
 import { colors, type Palette } from "../theme/colors";
+import { openExternalUrl } from "../utils/linking";
 
 export default function Header() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
   // Helper to open external links safely
-  const openLink = async (url: string) => {
-    const supported = await Linking.canOpenURL(url);
-    if (supported) {
-      await Linking.openURL(url);
-    } else {
-      console.warn("Cannot open URL:", url);
-    }
-  };
+  const openLink = openExternalUrl;
 
   return (
     <SafeAreaView style={styles.container} accessibilityRole="header">

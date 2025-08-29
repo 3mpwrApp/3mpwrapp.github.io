@@ -3,6 +3,8 @@ import React from "react";
 import { AccessibilityInfo } from "react-native";
 import { FavoritesProvider } from "../store/favorites";
 import { CountsProvider } from "../store/counts";
+import { RefreshProvider } from "../store/refresh";
+import { NetworkProvider } from "../store/network";
 import Header from "../components/ThemedHeader";
 import Footer from "../components/ThemedFooter";
 
@@ -39,10 +41,14 @@ export default function RootLayout() {
       <Header />
       <FavoritesProvider>
         <CountsProvider>
-          <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-          </Stack>
+          <NetworkProvider>
+            <RefreshProvider>
+              <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
+                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+              </Stack>
+            </RefreshProvider>
+          </NetworkProvider>
         </CountsProvider>
       </FavoritesProvider>
       <Footer />

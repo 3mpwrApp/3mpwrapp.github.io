@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme } from "react-native";
+import { ScrollView, View, Text, StyleSheet, useColorScheme, RefreshControl } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import { Link } from "expo-router";
@@ -7,6 +7,7 @@ import Card from "../../components/Card";
 import { campaigns } from "../../data/campaigns";
 import { resources } from "../../data/resources";
 import { podcasts } from "../../data/podcasts";
+import { useRefresh } from "../../store/refresh";
 export default function HomeScreen() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
@@ -14,8 +15,20 @@ export default function HomeScreen() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Home");
   useFocusOnRefOnMount(titleRef);
+  const { refreshAll, tick } = useRefresh();
+  const [refreshing, setRefreshing] = React.useState(false);
+  React.useEffect(() => {
+    let t: ReturnType<typeof setTimeout> | undefined;
+    if (refreshing) {
+      t = setTimeout(() => setRefreshing(false), 600);
+    }
+    return () => {
+      if (t) clearTimeout(t);
+    };
+  }, [tick, refreshing]);
+
   return (
-    <View style={styles.container} accessibilityLabel="Home screen" accessible>
+    <ScrollView style={styles.container} accessibilityLabel="Home screen" accessible refreshControl={<RefreshControl refreshing={refreshing} onRefresh={() => { setRefreshing(true); refreshAll(); }} />}>
       <Text ref={titleRef} nativeID="home-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Welcome to Empowr
       </Text>
@@ -48,7 +61,7 @@ export default function HomeScreen() {
       <Link href={{ pathname: "/(tabs)/podcasts/[id]", params: { id: podcasts[0].id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${podcasts[0].title}`}>
         <Card title={podcasts[0].title} subtitle={`${podcasts[0].description} • ${podcasts[0].duration}`} />
       </Link>
-    </View>
+    </ScrollView>
   );
 }
 function createStyles(palette: Palette) {
