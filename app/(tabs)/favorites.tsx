@@ -9,7 +9,6 @@ import { podcasts } from "../../data/podcasts";
 import Card from "../../components/Card";
 import { useRouter } from "expo-router";
 
-
 export default function FavoritesScreen() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
@@ -17,24 +16,22 @@ export default function FavoritesScreen() {
   const { has, toggle } = useFavorites();
   const router = useRouter();
 
-  const favCampaigns = React.useMemo(() => campaigns.filter(c => has("campaign", c.id)), [has]);
-  const favResources = React.useMemo(() => resources.filter(r => has("resource", r.id)), [has]);
-  const favAdvocates = React.useMemo(() => advocates.filter(a => has("advocate", a.id)), [has]);
-  const favPodcasts = React.useMemo(() => podcasts.filter(p => has("podcast", p.id)), [has]);
+  const favCampaigns = React.useMemo(() => campaigns.filter((c) => has("campaign", c.id)), [has]);
+  const favResources = React.useMemo(() => resources.filter((r) => has("resource", r.id)), [has]);
+  const favAdvocates = React.useMemo(() => advocates.filter((a) => has("advocate", a.id)), [has]);
+  const favPodcasts = React.useMemo(() => podcasts.filter((p) => has("podcast", p.id)), [has]);
 
   const isEmpty = !favCampaigns.length && !favResources.length && !favAdvocates.length && !favPodcasts.length;
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content} accessibilityLabel="Favorites screen" accessible>
       <Text accessibilityRole="header" style={styles.title}>Favorites</Text>
-      {isEmpty && (
-        <Text style={styles.empty}>You haven't saved any items yet.</Text>
-      )}
+      {isEmpty && <Text style={styles.empty}>You haven't saved any items yet.</Text>}
 
       {!!favCampaigns.length && (
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Campaigns</Text>
-          {favCampaigns.map(item => (
+          {favCampaigns.map((item) => (
             <Card
               key={item.id}
               title={item.title}
@@ -51,7 +48,7 @@ export default function FavoritesScreen() {
       {!!favResources.length && (
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Resources</Text>
-          {favResources.map(item => (
+          {favResources.map((item) => (
             <Card
               key={item.id}
               title={item.title}
@@ -68,7 +65,7 @@ export default function FavoritesScreen() {
       {!!favAdvocates.length && (
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Advocates</Text>
-          {favAdvocates.map(item => (
+          {favAdvocates.map((item) => (
             <Card
               key={item.id}
               title={item.name}
@@ -85,7 +82,7 @@ export default function FavoritesScreen() {
       {!!favPodcasts.length && (
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Podcasts</Text>
-          {favPodcasts.map(item => (
+          {favPodcasts.map((item) => (
             <Card
               key={item.id}
               title={item.title}
@@ -112,3 +109,4 @@ function createStyles(palette: typeof colors.light) {
     sectionTitle: { color: palette.muted, fontSize: 14, textTransform: "uppercase", letterSpacing: 0.6, marginBottom: 6 },
   });
 }
+
