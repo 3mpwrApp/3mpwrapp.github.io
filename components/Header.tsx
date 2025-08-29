@@ -1,26 +1,95 @@
-// components/Header.tsx
-import { View, Text, StyleSheet } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
 
-type Props = { title: string; subtitle?: string };
+export default function Header() {
+  // Helper to open external links safely
+  const openLink = async (url: string) => {
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      await Linking.openURL(url);
+    } else {
+      console.warn("Cannot open URL:", url);
+    }
+  };
 
-export default function Header({ title, subtitle }: Props) {
   return (
-    <View style={styles.container} accessible accessibilityLabel={subtitle ? `${title}. ${subtitle}` : title}>
-      <Text style={styles.title}>{title}</Text>
-      {subtitle ? <Text style={styles.subtitle}>{subtitle}</Text> : null}
+    <View style={styles.container}>
+      <Text style={styles.title} accessibilityRole="header" accessibilityLabel="Empowr App Header">
+        Empowr App
+      </Text>
+
+      <View style={styles.icons}>
+        {/* Facebook */}
+        <Pressable
+          onPress={() =>
+            openLink("https://www.facebook.com/profile.php?id=61579428783083")
+          }
+          accessibilityRole="link"
+          accessibilityLabel="Visit Empowr on Facebook"
+          style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
+        >
+          <Ionicons name="logo-facebook" size={22} color="#1877F2" />
+        </Pressable>
+
+        {/* Instagram */}
+        <Pressable
+          onPress={() =>
+            openLink(
+              "https://www.instagram.com/empowrapp/?fbclid=IwY2xjawMcTXBleHRuA2FlbQIxMABicmlkETFrQ2NrdUVNRkkyZEwyQzl3AR4lSOSuKqDtqxWcYKFa_3oOsmQyl7LNaTzPYefvej5zbV6OLIiocWi2g-jWJg_aem_czDWuUGxec3CmgrTZCy1Ng#"
+            )
+          }
+          accessibilityRole="link"
+          accessibilityLabel="Visit Empowr on Instagram"
+          style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
+        >
+          <Ionicons name="logo-instagram" size={22} color="#E1306C" />
+        </Pressable>
+
+        {/* X / Twitter */}
+        <Pressable
+          onPress={() =>
+            openLink(
+              "https://x.com/empowrapp0816?fbclid=IwY2xjawMcTXZleHRuA2FlbQIxMABicmlkETFrQ2NrdUVNRkkyZEwyQzl3AR61C332JUq1rDfsHDqrSzlKvJCynRvFEsD3UkM5ChPwJnRrPC6ChjgkAmqKGQ_aem_zrX0dQO1QeE3I6yquzlCeA"
+            )
+          }
+          accessibilityRole="link"
+          accessibilityLabel="Visit Empowr on X"
+          style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
+        >
+          <Ionicons name="logo-twitter" size={22} color="#000000" />
+        </Pressable>
+
+        {/* Email */}
+        <Pressable
+          onPress={() => openLink("mailto:empowrapp08162025@gmail.com")}
+          accessibilityRole="link"
+          accessibilityLabel="Email Empowr at empowrapp08162025@gmail.com"
+          style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
+        >
+          <Ionicons name="mail" size={22} color="#D44638" />
+        </Pressable>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 12,
-    paddingBottom: 12,
+    paddingTop: 40,
+    paddingBottom: 10,
     paddingHorizontal: 20,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#e5e5e5",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#007AFF",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
-  title: { fontSize: 22, fontWeight: "700" },
-  subtitle: { marginTop: 2, fontSize: 14, color: "#666" },
+  title: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "white",
+  },
+  icons: {
+    flexDirection: "row",
+    gap: 15,
+  },
 });

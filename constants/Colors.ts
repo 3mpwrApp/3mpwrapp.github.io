@@ -1,15 +1,17 @@
-// constants/Colors.ts
-
 const Colors = {
-  primary: "#008080", // teal (main brand color)
-  primaryDark: "#006666", // darker teal
-  secondary: "#00b4d8", // accent aqua-blue
-  background: "#f5f5f5", // light gray background
-  white: "#ffffff",
-  textDark: "#333333",
-  textLight: "#e0f7f7",
-  error: "#d9534f",
-  success: "#28a745",
-};
-
+  light: {
+    text: "#11181C",
+    background: "#FFFFFF",
+    tint: "#007AFF",
+    tabIconDefault: "#687076",
+    tabIconSelected: "#007AFF",
+  },
+  dark: {
+    text: "#ECEDEE",
+    background: "#000000",
+    tint: "#0A84FF",
+    tabIconDefault: "#9BA1A6",
+    tabIconSelected: "#0A84FF",
+  },
+} as const;
 export default Colors;

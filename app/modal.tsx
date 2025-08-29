@@ -1,36 +1,58 @@
-// app/modal.tsx
-import { View, Text, StyleSheet, Pressable } from "react-native";
-import { useRouter } from "expo-router";
+import React from "react";
+import { Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
+import { Stack, useRouter } from "expo-router";
+import { colors } from "../theme/colors";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../hooks/useA11y";
 
-export default function ModalScreen() {
+export default function Modal() {
   const router = useRouter();
+  const scheme = useColorScheme();
+  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const styles = createStyles(palette);
+  const titleRef = React.useRef<Text>(null);
+
+  useAnnounceOnMount("Modal opened");
+  useFocusOnRefOnMount(titleRef);
 
   return (
-    <View style={styles.overlay} accessibilityRole="dialog" accessibilityLabel="Information modal">
-      <View style={styles.card}>
-        <Text style={styles.title}>Information</Text>
-        <Text style={styles.body}>
-          This is a global modal. It’s keyboard and screen-reader friendly and uses large touch targets.
+    <>
+      <Stack.Screen options={{ title: "Modal" }} />
+      <View style={styles.container} accessibilityViewIsModal>
+        <Text ref={titleRef} nativeID="modal-title" accessibilityRole="header" style={styles.text} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          This is a modal screen
         </Text>
-
         <Pressable
           onPress={() => router.back()}
-          style={styles.button}
           accessibilityRole="button"
-          accessibilityLabel="Close modal and return to previous screen"
+          accessibilityLabel="Close modal"
+          accessibilityHint="Dismisses the modal and returns to the previous screen"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          style={({ pressed }) => [styles.button, pressed && { opacity: 0.7 }]}
         >
-          <Text style={styles.buttonText}>Close</Text>
+          <Text style={styles.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>Close</Text>
         </Pressable>
       </View>
-    </View>
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  overlay: { flex: 1, backgroundColor: "rgba(0,0,0,0.4)", justifyContent: "center", alignItems: "center", padding: 20 },
-  card: { width: "100%", maxWidth: 380, backgroundColor: "#fff", borderRadius: 12, padding: 20 },
-  title: { fontSize: 22, fontWeight: "700", color: "#007AFF", marginBottom: 8 },
-  body: { fontSize: 16, color: "#333", lineHeight: 22, marginBottom: 20 },
-  button: { backgroundColor: "#007AFF", paddingVertical: 12, borderRadius: 8, alignItems: "center" },
-  buttonText: { color: "#fff", fontSize: 16, fontWeight: "600" },
-});
+function createStyles(palette: typeof colors.light) {
+  return StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: palette.background,
+      justifyContent: "center",
+      alignItems: "center",
+      padding: 20,
+    },
+    text: { fontSize: 20, marginBottom: 16, color: palette.text },
+    button: {
+      padding: 10,
+      backgroundColor: palette.primary,
+      borderRadius: 6,
+      minHeight: 44,
+      minWidth: 44,
+    },
+    buttonText: { color: palette.onPrimary, fontSize: 16 },
+  });
+}

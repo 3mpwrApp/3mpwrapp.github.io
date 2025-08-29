@@ -1,27 +1,29 @@
-// app/(tabs)/resources.tsx
-import { SafeAreaView, ScrollView, StyleSheet, Text } from "react-native";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import useAnnounceScreen from "../../hooks/useAnnounceScreen";
+import React from "react";
+import { View, Text, StyleSheet, useColorScheme } from "react-native";
+import { colors } from "../../theme/colors";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 
 export default function ResourcesScreen() {
-  useAnnounceScreen("Resources screen");
-
+  const scheme = useColorScheme();
+  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const styles = createStyles(palette);
+  const titleRef = React.useRef<Text>(null);
+  useAnnounceOnMount("Resources");
+  useFocusOnRefOnMount(titleRef);
   return (
-    <SafeAreaView style={styles.container}>
-      <Header title="📚 Resources" subtitle="Guides • Rights • Services" />
-      <ScrollView contentContainerStyle={styles.content}>
-        <Text style={styles.body}>
-          Access guides, educational materials, and information on workplace rights and disability services.
-        </Text>
-      </ScrollView>
-      <Footer />
-    </SafeAreaView>
+    <View style={styles.container} accessibilityLabel="Resources screen" accessible>
+      <Text ref={titleRef} nativeID="resources-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        Resources
+      </Text>
+      <Text style={styles.subtitle}>Find helpful guides and materials.</Text>
+    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#fff" },
-  content: { padding: 20 },
-  body: { fontSize: 16, color: "#333" },
-});
+function createStyles(palette: typeof colors.light) {
+  return StyleSheet.create({
+    container: { flex: 1, padding: 20, backgroundColor: palette.background },
+    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
+    subtitle: { fontSize: 16, color: palette.muted },
+  });
+}

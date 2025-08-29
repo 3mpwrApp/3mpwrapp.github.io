@@ -1,24 +1,46 @@
-import { Href, Link } from 'expo-router';
-import { openBrowserAsync } from 'expo-web-browser';
-import { type ComponentProps } from 'react';
-import { Platform } from 'react-native';
+import React from "react";
+import { Linking, Pressable, Text, StyleSheet } from "react-native";
 
-type Props = Omit<ComponentProps<typeof Link>, 'href'> & { href: Href & string };
+interface ExternalLinkProps {
+  href: string;
+  children: React.ReactNode;
+}
 
-export function ExternalLink({ href, ...rest }: Props) {
+export default function ExternalLink({ href, children }: ExternalLinkProps) {
+  const handlePress = async () => {
+    const supported = await Linking.canOpenURL(href);
+    if (supported) {
+      await Linking.openURL(href);
+    } else {
+      console.warn(`Don't know how to open URI: ${href}`);
+    }
+  };
+
   return (
-    <Link
-      target="_blank"
-      {...rest}
-      href={href}
-      onPress={async (event) => {
-        if (Platform.OS !== 'web') {
-          // Prevent the default behavior of linking to the default browser on native.
-          event.preventDefault();
-          // Open the link in an in-app browser.
-          await openBrowserAsync(href);
-        }
-      }}
-    />
+    <Pressable
+      onPress={handlePress}
+      accessibilityRole="link"
+      accessibilityLabel={`Open external link: ${href}`}
+      style={({ pressed }) => [
+        styles.link,
+        pressed && styles.linkPressed
+      ]}
+    >
+      <Text style={styles.linkText}>{children}</Text>
+    </Pressable>
   );
 }
+
+const styles = StyleSheet.create({
+  link: {
+    paddingVertical: 4,
+  },
+  linkPressed: {
+    opacity: 0.6,
+  },
+  linkText: {
+    color: "#007AFF",
+    fontWeight: "500",
+    textDecorationLine: "underline",
+  },
+});

@@ -1,53 +1,119 @@
-// app/(tabs)/_layout.tsx
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { useColorScheme } from "react-native";
+import { colors } from "../../theme/colors";
 
 export default function TabsLayout() {
+  const colorScheme = useColorScheme();
+  const palette = colorScheme === "dark" ? colors.dark : colors.light;
+  const activeTint = palette.primary;
+  const inactiveTint = palette.muted;
+
   return (
     <Tabs
       screenOptions={{
-        headerShown: true,
-        headerStyle: { backgroundColor: "#fff" },
-        headerTitleStyle: { fontWeight: "700" },
-        tabBarActiveTintColor: "#007AFF",
-        tabBarInactiveTintColor: "gray",
+        headerShown: false,
+        tabBarActiveTintColor: activeTint,
+        tabBarInactiveTintColor: inactiveTint,
+        tabBarItemStyle: { minHeight: 48, paddingVertical: 6 },
         tabBarLabelStyle: { fontSize: 12 },
-        tabBarStyle: { height: 64, paddingBottom: 8 },
+        tabBarAllowFontScaling: true,
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color, size }) => <Ionicons name="home-outline" size={size} color={color} />,
+          tabBarLabel: "Home",
+          tabBarAccessibilityLabel: "Home tab",
+          tabBarTestID: "tab-home",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "home" : "home-outline"}
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
       <Tabs.Screen
         name="campaigns"
         options={{
           title: "Campaigns",
-          tabBarIcon: ({ color, size }) => <Ionicons name="megaphone-outline" size={size} color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="community"
-        options={{
-          title: "Community",
-          tabBarIcon: ({ color, size }) => <Ionicons name="people-outline" size={size} color={color} />,
+          tabBarLabel: "Campaigns",
+          tabBarAccessibilityLabel: "Campaigns tab",
+          tabBarTestID: "tab-campaigns",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "megaphone" : "megaphone-outline"}
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
       <Tabs.Screen
         name="resources"
         options={{
           title: "Resources",
-          tabBarIcon: ({ color, size }) => <Ionicons name="book-outline" size={size} color={color} />,
+          tabBarLabel: "Resources",
+          tabBarAccessibilityLabel: "Resources tab",
+          tabBarTestID: "tab-resources",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "book" : "book-outline"}
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
       <Tabs.Screen
         name="wellness"
         options={{
           title: "Wellness",
-          tabBarIcon: ({ color, size }) => <Ionicons name="heart-outline" size={size} color={color} />,
+          tabBarLabel: "Wellness",
+          tabBarAccessibilityLabel: "Wellness tab",
+          tabBarTestID: "tab-wellness",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "heart" : "heart-outline"}
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="advocates"
+        options={{
+          title: "Advocates",
+          tabBarLabel: "Advocates",
+          tabBarAccessibilityLabel: "Advocates tab",
+          tabBarTestID: "tab-advocates",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "people" : "people-outline"}
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="community"
+        options={{
+          title: "Community",
+          tabBarLabel: "Community",
+          tabBarAccessibilityLabel: "Community tab",
+          tabBarTestID: "tab-community",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "chatbubbles" : "chatbubbles-outline"}
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
     </Tabs>

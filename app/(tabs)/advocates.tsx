@@ -3,19 +3,19 @@ import { View, Text, StyleSheet, useColorScheme } from "react-native";
 import { colors } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 
-export default function WellnessScreen() {
+export default function AdvocatesScreen() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Wellness");
+  useAnnounceOnMount("Advocates");
   useFocusOnRefOnMount(titleRef);
   return (
-    <View style={styles.container} accessibilityLabel="Wellness screen" accessible>
-      <Text ref={titleRef} nativeID="wellness-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        Wellness
+    <View style={styles.container} accessibilityLabel="Advocates screen" accessible>
+      <Text ref={titleRef} nativeID="advocates-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        Advocates
       </Text>
-      <Text style={styles.subtitle}>Tools and tips for wellbeing.</Text>
+      <Text style={styles.subtitle}>Connect with community advocates.</Text>
     </View>
   );
 }
