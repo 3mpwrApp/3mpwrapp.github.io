@@ -4,8 +4,6 @@ import { colors, type Palette } from "../theme/colors";
 import { useAuth } from "../store/auth";
 import { router } from "expo-router";
 import { useTranslation, Lang } from "../i18n";
-import * as Notifier from "../services/notifications";
-import { sendExpoPush } from "../services/expoPush";
 
 export default function Profile() {
   const scheme = useColorScheme();
@@ -14,14 +12,6 @@ export default function Profile() {
   const { state, signIn, continueAnonymously, signOut } = useAuth();
   const { lang, setLanguage } = useTranslation();
   const [name, setName] = React.useState(state.user?.name ?? "");
-  const [pushToken, setPushToken] = React.useState<string | null>(null);
-  const [pushTitle, setPushTitle] = React.useState("Hello from Empowr");
-  const [pushBody, setPushBody] = React.useState("This is a remote push test via Expo API.");
-  const [pushStatus, setPushStatus] = React.useState<string | null>(null);
-
-  React.useEffect(() => {
-    Notifier.getExpoPushToken().then(setPushToken).catch(() => setPushToken(null));
-  }, []);
 
   return (
     <View style={styles.container} accessibilityLabel="Profile screen" accessible>
@@ -33,54 +23,7 @@ export default function Profile() {
         <Row label="User" value={state.user?.name ?? "Guest"} />
       </View>
 
-      <View style={styles.card}>
-        <Text style={{ fontWeight: "700", marginBottom: 8 }}>Notifications</Text>
-        <Text style={{ color: palette.muted, marginBottom: 8 }}>Expo Push Token:</Text>
-        <Text selectable style={{ color: palette.text, marginBottom: 8 }} numberOfLines={1} ellipsizeMode="middle">
-          {pushToken ?? "Unavailable"}
-        </Text>
-        <Pressable style={[styles.cta, styles.primary]} onPress={Notifier.sendTestLocal} accessibilityRole="button" accessibilityLabel="Send test notification">
-          <Text style={styles.primaryText}>Send Test Notification</Text>
-        </Pressable>
-        {!!pushToken && (
-          <>
-            <Text style={{ marginTop: 12, color: palette.muted }}>Send remote push (Expo API):</Text>
-            <TextInput
-              style={styles.input}
-              value={pushTitle}
-              onChangeText={setPushTitle}
-              placeholder="Title"
-              placeholderTextColor={palette.muted}
-              accessibilityLabel="Push title"
-            />
-            <TextInput
-              style={styles.input}
-              value={pushBody}
-              onChangeText={setPushBody}
-              placeholder="Body"
-              placeholderTextColor={palette.muted}
-              accessibilityLabel="Push body"
-            />
-            <Pressable
-              style={[styles.cta, styles.ghost]}
-              onPress={async () => {
-                try {
-                  setPushStatus("Sending...");
-                  await sendExpoPush(pushToken, pushTitle, pushBody);
-                  setPushStatus("Sent ✅");
-                } catch {
-                  setPushStatus("Failed to send ❌");
-                }
-              }}
-              accessibilityRole="button"
-              accessibilityLabel="Send remote push"
-            >
-              <Text style={styles.ghostText}>Send Remote Push</Text>
-            </Pressable>
-            {pushStatus && <Text style={{ color: palette.muted, marginTop: 6 }}>{pushStatus}</Text>}
-          </>
-        )}
-      </View>
+      {/* Notifications test removed at user's request */}
 
       <View style={styles.card}>
         <Text style={{ fontWeight: "700", marginBottom: 8 }}>Language</Text>

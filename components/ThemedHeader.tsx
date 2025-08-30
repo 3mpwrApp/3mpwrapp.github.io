@@ -142,12 +142,12 @@ function createStyles(palette: Palette) {
     logo: { height: 24, width: 24, resizeMode: "contain" },
     title: {
       color: palette.text,
-      fontSize: 20,
+      fontSize: 22,
       fontWeight: "700",
       fontFamily: "Poppins",
     },
-    right: { flexDirection: "row", gap: 12, alignItems: "center" },
+    right: { flexDirection: "row", gap: 12, alignItems: "center", flexShrink: 1, flexWrap: "wrap" },
     social: { flexDirection: "row", gap: 12, marginEnd: 8 },
-    countText: { color: palette.muted, fontSize: 12 },
+    countText: { color: palette.text, opacity: 0.9, fontSize: 14 },
   });
 }

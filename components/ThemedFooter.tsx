@@ -21,13 +21,15 @@ function createStyles(palette: Palette) {
       borderTopWidth: StyleSheet.hairlineWidth,
       borderTopColor: palette.muted,
       paddingHorizontal: 16,
-      paddingVertical: 12,
+      paddingVertical: 10,
     },
     text: {
-      color: palette.muted,
-      fontSize: 12,
+      color: palette.text,
+      opacity: 0.88,
+      fontSize: 14,
       fontFamily: "Roboto",
       textAlign: "center",
     },
   });
 }
+
