@@ -1,6 +1,7 @@
 import React from "react";
 import type { CommunityChannel, CommunityThread, CommunityComment, ID } from "../types/models";
 import { scheduleLocal } from "../services/notifications";
+import { fsAddThread, fsAddComment } from "../services/firestore";
 
 let AsyncStorage: any;
 try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
@@ -71,6 +72,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       ...prev,
       threads: [...prev.threads, { id, channelId, title, author, createdAt: Date.now() }],
     }));
+    fsAddThread({ id, channelId, title, author, createdAt: Date.now() });
     return true;
   };
 
@@ -82,6 +84,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       ...prev,
       comments: [...prev.comments, { id, threadId, author, content, createdAt: Date.now() }],
     }));
+    fsAddComment({ id, threadId, author, content, createdAt: Date.now() });
     // Notify thread author locally if different from commenter
     const thread = state.threads.find((t) => t.id === threadId);
     if (thread && thread.author && thread.author !== author) {

@@ -5,6 +5,7 @@ import { campaigns } from "../../../data/campaigns";
 import { useFavorites } from "../../../store/favorites";
 import { useCampaignsLocal, CampaignsLocalProvider } from "../../../store/campaignsLocal";
 import { logEvent } from "../../../services/analytics";
+import { fsIncrementCampaignMembers } from "../../../services/firestore";
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -41,8 +42,8 @@ function CampaignDetailInner() {
           <Pressable
             style={({ pressed }) => [styles.secondary, pressed && { opacity: 0.8 }]}
             onPress={() => {
-              if (joined) { leave(campaign.id); logEvent("campaign_leave", { id: campaign.id }); }
-              else { join(campaign.id); logEvent("campaign_join", { id: campaign.id }); }
+              if (joined) { leave(campaign.id); logEvent("campaign_leave", { id: campaign.id }); fsIncrementCampaignMembers(campaign.id, -1); }
+              else { join(campaign.id); logEvent("campaign_join", { id: campaign.id }); fsIncrementCampaignMembers(campaign.id, 1); }
             }}
             accessibilityRole="button"
             accessibilityLabel={joined ? "Leave campaign" : "Join campaign"}
