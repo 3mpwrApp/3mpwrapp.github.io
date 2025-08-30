@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="hero">
+    <img class="logo" src="{{ '/assets/img/empowr-logo.png' | relative_url }}" alt="Empowr logo">
+    <h1>{{ site.title }}</h1>
+    <p class="tagline">{{ site.tagline }}</p>
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/features/' | relative_url }}">Features</a>
+      <a href="{{ '/community/' | relative_url }}">Community</a>
+      <a href="{{ '/resources/' | relative_url }}">Resources</a>
+      <a href="{{ '/wellness/' | relative_url }}">Wellness</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <p>&copy; {{ site.time | date: '%Y' }} Empowr App. All rights reserved.</p>
+  </footer>
+</body>
+</html>
