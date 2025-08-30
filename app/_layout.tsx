@@ -9,6 +9,7 @@ import { AuthProvider } from "../store/auth";
 import Header from "../components/ThemedHeader";
 import Footer from "../components/ThemedFooter";
 import { I18nProvider } from "../i18n";
+import * as Notifier from "../services/notifications";
 
 export default function RootLayout() {
   const [reduceMotion, setReduceMotion] = React.useState(false);
@@ -28,6 +29,11 @@ export default function RootLayout() {
       // @ts-ignore
       sub?.remove?.();
     };
+  }, []);
+
+  React.useEffect(() => {
+    // best-effort notification permission
+    Notifier.setupAsync();
   }, []);
 
   // Announce route changes to screen readers

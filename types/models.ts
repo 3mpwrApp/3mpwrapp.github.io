@@ -43,6 +43,8 @@ export interface CommunityThread {
   title: string;
   author: string | null; // null for anonymous
   createdAt: number;
+  pinned?: boolean;
+  categories?: string[];
 }
 
 export interface CommunityComment {

@@ -32,7 +32,7 @@ function ChannelInner() {
           onChangeText={setTitle}
         />
         <Pressable
-          onPress={() => { if (!title.trim()) return; createThread(channel.id, title.trim(), auth.user?.name ?? null); setTitle(""); }}
+          onPress={() => { if (!title.trim()) return; const ok = createThread(channel.id, title.trim(), auth.user?.name ?? null); if (ok) setTitle(""); }}
           accessibilityRole="button"
           accessibilityLabel="Create thread"
           hitSlop={HIT_SLOP_8}
@@ -43,7 +43,7 @@ function ChannelInner() {
       </View>
 
       <FlatList
-        data={threads}
+        data={[...threads].sort((a,b)=> (b.pinned?1:0)-(a.pinned?1:0) || b.createdAt-a.createdAt)}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable
@@ -85,4 +85,3 @@ function createStyles(palette: Palette) {
     threadMeta: { color: palette.muted, marginTop: 2 },
   });
 }
-

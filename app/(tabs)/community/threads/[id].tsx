@@ -57,7 +57,7 @@ function ThreadInner() {
           onChangeText={setText}
         />
         <Pressable
-          onPress={() => { if (!text.trim()) return; addComment(thread.id, text.trim(), auth.user?.name ?? null); setText(""); }}
+          onPress={() => { if (!text.trim()) return; const ok = addComment(thread.id, text.trim(), auth.user?.name ?? null); if (ok) setText(""); }}
           accessibilityRole="button"
           accessibilityLabel="Post comment"
           hitSlop={HIT_SLOP_8}
@@ -93,4 +93,3 @@ function createStyles(palette: Palette) {
     ctaText: { color: palette.onPrimary, fontWeight: "700" },
   });
 }
-

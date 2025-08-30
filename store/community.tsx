@@ -1,5 +1,6 @@
 import React from "react";
 import type { CommunityChannel, CommunityThread, CommunityComment, ID } from "../types/models";
+import { scheduleLocal } from "../services/notifications";
 
 let AsyncStorage: any;
 try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
@@ -17,11 +18,11 @@ const KEY = "empowr.community.v1";
 type Ctx = {
   state: State;
   seed: (s: Partial<State>) => void;
-  createThread: (channelId: ID, title: string, author: string | null) => void;
-  addComment: (threadId: ID, content: string, author: string | null) => void;
+  createThread: (channelId: ID, title: string, author: string | null) => boolean;
+  addComment: (threadId: ID, content: string, author: string | null) => boolean;
   reportComment: (commentId: ID) => void;
   deleteComment: (commentId: ID) => void;
-};
+  };
 
 const Ctx = React.createContext<Ctx | undefined>(undefined);
 
@@ -49,20 +50,44 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
     comments: s.comments ?? prev.comments,
   }));
 
+  // basic rate limit: at most 1 action per 5s per author
+  const lastActionRef = React.useRef<Record<string, number>>({});
+  const canAct = (authorKey: string) => {
+    const now = Date.now();
+    const last = lastActionRef.current[authorKey] ?? 0;
+    if (now - last < 5000) return false;
+    lastActionRef.current[authorKey] = now;
+    return true;
+  };
+
+  const banned = ["spam", "scam", "fraud", "hate"];
+  const hasBanned = (text: string) => banned.some((w) => text.toLowerCase().includes(w));
+
   const createThread = (channelId: ID, title: string, author: string | null) => {
+    if (!canAct(author ?? "guest")) return false;
+    if (hasBanned(title)) return false;
     const id = `t_${Date.now()}`;
     setState((prev) => ({
       ...prev,
       threads: [...prev.threads, { id, channelId, title, author, createdAt: Date.now() }],
     }));
+    return true;
   };
 
   const addComment = (threadId: ID, content: string, author: string | null) => {
+    if (!canAct(author ?? "guest")) return false;
+    if (hasBanned(content)) return false;
     const id = `c_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
     setState((prev) => ({
       ...prev,
       comments: [...prev.comments, { id, threadId, author, content, createdAt: Date.now() }],
     }));
+    // Notify thread author locally if different from commenter
+    const thread = state.threads.find((t) => t.id === threadId);
+    if (thread && thread.author && thread.author !== author) {
+      scheduleLocal?.("New reply", thread.title);
+    }
+    return true;
   };
 
   const reportComment = (commentId: ID) => {
@@ -88,4 +113,3 @@ export function useCommunity() {
   if (!ctx) throw new Error("useCommunity must be used within CommunityProvider");
   return ctx;
 }
-

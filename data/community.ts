@@ -22,6 +22,10 @@ export const channels: CommunityChannel[] = [
   { id: "ch_topic_education", type: "topic", slug: "topic-education", title: "Education" },
   { id: "ch_topic_health", type: "topic", slug: "topic-health", title: "Health" },
   { id: "ch_topic_legal", type: "topic", slug: "topic-legal", title: "Legal" },
+  { id: "ch_topic_housing", type: "topic", slug: "topic-housing", title: "Housing" },
+  { id: "ch_topic_transport", type: "topic", slug: "topic-transport", title: "Transportation" },
+  { id: "ch_topic_family", type: "topic", slug: "topic-family", title: "Family" },
+  { id: "ch_topic_mental", type: "topic", slug: "topic-mental", title: "Mental Health" },
 ];
 
 export const seedThreads: CommunityThread[] = [
