@@ -25,7 +25,17 @@ export function A11ySettingsProvider({ children }: { children: React.ReactNode }
     (async () => {
       if (!AsyncStorage) return;
       const raw = await AsyncStorage.getItem(KEY);
-      if (raw) setState(JSON.parse(raw));
+      if (raw) {
+        setState(JSON.parse(raw));
+      } else {
+        // No saved preference: infer a sensible default from system settings if possible
+        try {
+          const AccessibilityInfo = require('react-native').AccessibilityInfo;
+          // iOS exposes bold text as an accessibility aid; use as high-contrast hint
+          const bold = await AccessibilityInfo.isBoldTextEnabled?.();
+          if (bold) setState({ highContrast: true });
+        } catch {}
+      }
     })();
   }, []);
 
@@ -51,4 +61,3 @@ export function useA11ySettings() {
   if (!ctx) throw new Error("useA11ySettings must be used within A11ySettingsProvider");
   return ctx;
 }
-

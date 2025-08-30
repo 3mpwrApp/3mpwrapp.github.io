@@ -34,7 +34,8 @@ export default function SearchBar({ value, onChangeText, placeholder = "Search",
           accessibilityRole="button"
           accessibilityLabel="Clear search"
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          style={({ pressed }) => [{ padding: 6 }, pressed && { opacity: 0.7 }]}
+          focusable
+          style={({ pressed }) => [{ padding: 6, outlineStyle: 'auto', outlineColor: palette.primary }, pressed && { opacity: 0.7 }]}
         >
           <Ionicons name="close-circle" size={18} color={palette.text} style={{ opacity: 0.8 }} />
         </Pressable>

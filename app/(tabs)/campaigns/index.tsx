@@ -173,7 +173,8 @@ function CreateCampaignBox({ onCreate, palette }: { onCreate: (title: string, su
       <Pressable
         onPress={() => { if (!canCreate) return; onCreate(title.trim(), summary.trim()); setTitle(""); setSummary(""); }}
         disabled={!canCreate}
-        style={({ pressed }) => [{ backgroundColor: palette.primary, borderRadius: 10, paddingVertical: 10, alignItems: "center" }, (!canCreate || pressed) && { opacity: 0.7 }]}
+        focusable
+        style={({ pressed }) => [{ backgroundColor: palette.primary, borderRadius: 10, paddingVertical: 10, alignItems: "center", outlineStyle: 'auto', outlineColor: palette.onPrimary }, (!canCreate || pressed) && { opacity: 0.7 }]}
         accessibilityRole="button"
         accessibilityLabel="Create campaign"
       >

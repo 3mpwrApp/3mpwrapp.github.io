@@ -43,7 +43,8 @@ export default function ThemedHeader() {
             accessibilityLabel="Open Empowr on X (formerly Twitter)"
             hitSlop={HIT_SLOP_8}
             testID="link-social-x"
-            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            focusable
+            style={({ pressed }) => [touchTarget.min, { outlineStyle: 'auto', outlineColor: palette.primary }, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="logo-twitter" size={20} color={palette.text} />
           </Pressable>
@@ -53,7 +54,8 @@ export default function ThemedHeader() {
             accessibilityLabel="Open Empowr on Instagram"
             hitSlop={HIT_SLOP_8}
             testID="link-social-instagram"
-            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            focusable
+            style={({ pressed }) => [touchTarget.min, { outlineStyle: 'auto', outlineColor: palette.primary }, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="logo-instagram" size={20} color={palette.text} />
           </Pressable>
@@ -63,7 +65,8 @@ export default function ThemedHeader() {
             accessibilityLabel="Open Empowr on Facebook"
             hitSlop={HIT_SLOP_8}
             testID="link-social-facebook"
-            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            focusable
+            style={({ pressed }) => [touchTarget.min, { outlineStyle: 'auto', outlineColor: palette.primary }, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="logo-facebook" size={20} color={palette.text} />
           </Pressable>
@@ -85,7 +88,8 @@ export default function ThemedHeader() {
           accessibilityRole="button"
           accessibilityLabel={t("header.refresh")}
           hitSlop={HIT_SLOP_8}
-          style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+          focusable
+          style={({ pressed }) => [touchTarget.min, { outlineStyle: 'auto', outlineColor: palette.primary }, { opacity: pressed ? 0.7 : 1 }]}
         >
           <Ionicons name="refresh" size={20} color={palette.text} />
         </Pressable>
@@ -95,7 +99,8 @@ export default function ThemedHeader() {
           accessibilityRole="button"
           accessibilityLabel={t("header.openProfile")}
           hitSlop={HIT_SLOP_8}
-          style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+          focusable
+          style={({ pressed }) => [touchTarget.min, { outlineStyle: 'auto', outlineColor: palette.primary }, { opacity: pressed ? 0.7 : 1 }]}
         >
           <Ionicons name="person-circle-outline" size={22} color={palette.text} />
         </Pressable>
@@ -106,7 +111,8 @@ export default function ThemedHeader() {
             accessibilityRole="button"
             accessibilityLabel={t("header.signOut")}
             hitSlop={HIT_SLOP_8}
-            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            focusable
+            style={({ pressed }) => [touchTarget.min, { outlineStyle: 'auto', outlineColor: palette.primary }, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="log-out" size={20} color={palette.text} />
           </Pressable>
@@ -116,7 +122,8 @@ export default function ThemedHeader() {
             accessibilityRole="button"
             accessibilityLabel={t("header.signIn")}
             hitSlop={HIT_SLOP_8}
-            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            focusable
+            style={({ pressed }) => [touchTarget.min, { outlineStyle: 'auto', outlineColor: palette.primary }, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="log-in" size={20} color={palette.text} />
           </Pressable>
