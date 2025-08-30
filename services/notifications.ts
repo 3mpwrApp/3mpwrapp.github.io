@@ -1,5 +1,6 @@
 // Optional notification helper. Uses expo-notifications if available, else no-ops.
 import { Platform } from "react-native";
+import Constants from "expo-constants";
 let Notifications: any;
 try {
   Notifications = require("expo-notifications");
@@ -41,6 +42,8 @@ export async function scheduleLocal(title: string, body: string) {
 // Get an Expo push token (web/native if available). Returns null if unsupported.
 export async function getExpoPushToken(): Promise<string | null> {
   if (!Notifications) return null;
+  // Skip in Expo Go where remote push isn't supported as of SDK 53
+  if (Constants?.appOwnership === "expo") return null;
   try {
     const token = await Notifications.getExpoPushTokenAsync();
     return token?.data ?? null;
@@ -53,3 +56,10 @@ export async function getExpoPushToken(): Promise<string | null> {
 export async function sendTestLocal() {
   await scheduleLocal("Empowr", "This is a test notification");
 }
+
+// Ensure alerts show while app is foregrounded
+try {
+  Notifications?.setNotificationHandler?.({
+    handleNotification: async () => ({ shouldShowAlert: true, shouldPlaySound: true, shouldSetBadge: false }),
+  });
+} catch {}

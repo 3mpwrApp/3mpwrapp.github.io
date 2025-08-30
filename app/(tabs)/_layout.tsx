@@ -44,6 +44,8 @@ export default function TabsLayout() {
       <Tabs.Screen name="advocacy/[id]" options={{ href: null }} />
       <Tabs.Screen name="podcasts/[id]" options={{ href: null }} />
       <Tabs.Screen name="podcasts/stories/[id]" options={{ href: null }} />
+      <Tabs.Screen name="community/[slug]" options={{ href: null }} />
+      <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />
       <Tabs.Screen
         name="campaigns/index"
         options={{
@@ -141,5 +143,3 @@ export default function TabsLayout() {
     </Tabs>
   );
 }
-      <Tabs.Screen name="community/[slug]" options={{ href: null }} />
-      <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />

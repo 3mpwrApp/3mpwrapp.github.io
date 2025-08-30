@@ -1,7 +1,8 @@
 import React from "react";
 import type { CommunityChannel, CommunityThread, CommunityComment, ID } from "../types/models";
 import { scheduleLocal } from "../services/notifications";
-import { fsAddThread, fsAddComment } from "../services/firestore";
+import { fsAddThread, fsAddComment, getDB } from "../services/firestore";
+import { Platform } from "react-native";
 
 let AsyncStorage: any;
 try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
@@ -36,6 +37,34 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       const raw = await AsyncStorage.getItem(KEY);
       if (raw) setState(JSON.parse(raw));
     })();
+  }, []);
+
+  // Optional realtime sync on web
+  React.useEffect(() => {
+    let unsubThreads: any = null;
+    let unsubComments: any = null;
+    (async () => {
+      if (Platform.OS !== 'web') return;
+      try {
+        const m = await import('firebase/firestore');
+        const db = await getDB();
+        if (!db) return;
+        unsubThreads = m.onSnapshot(m.query(m.collection(db, 'threads')), (snap) => {
+          const list: CommunityThread[] = [] as any;
+          snap.forEach((d) => list.push(d.data() as any));
+          setState((prev) => ({ ...prev, threads: mergeById(prev.threads, list) }));
+        });
+        unsubComments = m.onSnapshot(m.query(m.collection(db, 'comments')), (snap) => {
+          const list: CommunityComment[] = [] as any;
+          snap.forEach((d) => list.push(d.data() as any));
+          setState((prev) => ({ ...prev, comments: mergeById(prev.comments, list) }));
+        });
+      } catch {}
+    })();
+    return () => {
+      unsubThreads?.();
+      unsubComments?.();
+    };
   }, []);
 
   React.useEffect(() => {
@@ -115,4 +144,10 @@ export function useCommunity() {
   const ctx = React.useContext(Ctx);
   if (!ctx) throw new Error("useCommunity must be used within CommunityProvider");
   return ctx;
+}
+
+function mergeById<T extends { id: string }>(prev: T[], next: T[]) {
+  const map = new Map<string, T>();
+  [...prev, ...next].forEach((item) => map.set(item.id, item));
+  return Array.from(map.values());
 }
