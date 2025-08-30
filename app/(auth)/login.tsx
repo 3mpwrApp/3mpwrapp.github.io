@@ -2,13 +2,20 @@ import React from "react";
 import { View, Text, StyleSheet, TextInput, Pressable, useColorScheme } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
 import { useAuth } from "../../store/auth";
+import { router } from "expo-router";
 
 export default function Login() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
-  const { signIn, continueAnonymously } = useAuth();
+  const { signIn, continueAnonymously, state } = useAuth();
   const [name, setName] = React.useState("");
+
+  React.useEffect(() => {
+    if (state.status === "signedIn" || state.status === "anonymous") {
+      router.replace("/(tabs)");
+    }
+  }, [state.status]);
 
   return (
     <View style={styles.container} accessibilityLabel="Login screen" accessible>
@@ -25,11 +32,11 @@ export default function Login() {
         returnKeyType="done"
       />
 
-      <Pressable onPress={() => signIn(name || undefined)} style={[styles.cta, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityLabel="Sign in">
+      <Pressable onPress={async () => { await signIn(name || undefined); router.replace("/(tabs)"); }} style={[styles.cta, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityLabel="Sign in">
         <Text style={[styles.ctaText, { color: palette.onPrimary }]}>Sign in</Text>
       </Pressable>
 
-      <Pressable onPress={continueAnonymously} style={[styles.cta, styles.ghost]} accessibilityRole="button" accessibilityLabel="Continue as guest">
+      <Pressable onPress={async () => { await continueAnonymously(); router.replace("/(tabs)"); }} style={[styles.cta, styles.ghost]} accessibilityRole="button" accessibilityLabel="Continue as guest">
         <Text style={[styles.ctaText, { color: palette.text }]}>Continue as Guest</Text>
       </Pressable>
     </View>
@@ -47,4 +54,3 @@ function createStyles(palette: Palette) {
     ctaText: { fontWeight: "700", fontSize: 16 },
   });
 }
-

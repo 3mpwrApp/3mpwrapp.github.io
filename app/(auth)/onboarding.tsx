@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, useColorScheme, Pressable, ScrollView } from "r
 import { colors, type Palette } from "../../theme/colors";
 import { useAuth } from "../../store/auth";
 import type { ProvinceCode } from "../../types/models";
+import { router } from "expo-router";
 
 export default function Onboarding() {
   const scheme = useColorScheme();
@@ -25,7 +26,7 @@ export default function Onboarding() {
       </ScrollView>
 
       <View style={styles.actions}>
-        <Pressable onPress={async ()=>{ if(selected){ await setProvince(selected);} await completeOnboarding(); }} disabled={!selected} style={[styles.cta, !selected && { opacity: 0.5 }]} accessibilityRole="button" accessibilityLabel="Get started">
+        <Pressable onPress={async ()=>{ if(selected){ await setProvince(selected);} await completeOnboarding(); router.replace("/(auth)/login"); }} disabled={!selected} style={[styles.cta, !selected && { opacity: 0.5 }]} accessibilityRole="button" accessibilityLabel="Get started">
           <Text style={styles.ctaText}>Get Started</Text>
         </Pressable>
       </View>
