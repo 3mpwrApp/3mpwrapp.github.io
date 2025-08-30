@@ -56,7 +56,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="community"
+        name="community/index"
         options={{
           title: t("nav.community"),
           tabBarLabel: t("nav.community"),
@@ -141,3 +141,5 @@ export default function TabsLayout() {
     </Tabs>
   );
 }
+      <Tabs.Screen name="community/[slug]" options={{ href: null }} />
+      <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />
