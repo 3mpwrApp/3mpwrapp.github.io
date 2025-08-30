@@ -1,27 +1,27 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
-import { colors, type Palette } from "../../theme/colors";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
-import Card from "../../components/Card";
-import { campaigns as localCampaigns } from "../../data/campaigns";
-import { fetchCampaigns } from "../../services/campaigns";
+import { colors, type Palette } from "../../../theme/colors";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { advocates as localAdvocates } from "../../../data/advocates";
+import { fetchAdvocates } from "../../../services/advocates";
+import Card from "../../../components/Card";
 import { Link } from "expo-router";
-import SearchBar from "../../components/SearchBar";
-import { useCounts } from "../../store/counts";
-import { useAnnounceOnChange } from "../../hooks/useA11y";
-import SkeletonRow from "../../components/SkeletonRow";
-import { useRefresh } from "../../store/refresh";
-import { useNetwork } from "../../store/network";
+import SearchBar from "../../../components/SearchBar";
+import { useCounts } from "../../../store/counts";
+import { useAnnounceOnChange } from "../../../hooks/useA11y";
+import SkeletonRow from "../../../components/SkeletonRow";
+import { useRefresh } from "../../../store/refresh";
+import { useNetwork } from "../../../store/network";
 
-export default function CampaignsScreen() {
+export default function AdvocacyScreen() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Campaigns");
+  useAnnounceOnMount("Advocacy");
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState("");
-  const [items, setItems] = React.useState(localCampaigns);
+  const [items, setItems] = React.useState(localAdvocates);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -31,11 +31,11 @@ export default function CampaignsScreen() {
     try {
       setError(null);
       setLoading(true);
-      const data = await fetchCampaigns();
+      const data = await fetchAdvocates();
       setItems(data);
       setOffline(false);
     } catch (e) {
-      setError("Failed to load campaigns");
+      setError("Failed to load advocates");
       setOffline(true);
     } finally {
       setLoading(false);
@@ -48,28 +48,28 @@ export default function CampaignsScreen() {
   }, [reload, tick]);
 
   React.useEffect(() => {
-    setCount("campaigns", items.length);
+    setCount("advocates", items.length);
   }, [items, setCount]);
 
-  useAnnounceOnChange(items.length, (n) => `${n} campaigns loaded`);
+  useAnnounceOnChange(items.length, (n) => `${n} advocates loaded`);
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return items;
-    return items.filter((c) => c.title.toLowerCase().includes(q) || c.summary.toLowerCase().includes(q));
+    return items.filter((a) => a.name.toLowerCase().includes(q) || a.bio.toLowerCase().includes(q));
   }, [query, items]);
 
   return (
-    <View style={styles.container} accessibilityLabel="Campaigns screen" accessible>
-      <Text ref={titleRef} nativeID="campaigns-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        Campaigns
+    <View style={styles.container} accessibilityLabel="Advocacy screen" accessible>
+      <Text ref={titleRef} nativeID="advocacy-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        Advocacy
       </Text>
-      <Text style={styles.subtitle}>Browse and support active campaigns.</Text>
-      <SearchBar value={query} onChangeText={setQuery} placeholder="Search campaigns" accessibilityLabel="Search campaigns" />
+      <Text style={styles.subtitle}>Connect with community advocates.</Text>
+      <SearchBar value={query} onChangeText={setQuery} placeholder="Search advocates" accessibilityLabel="Search advocates" />
       {loading && (
         <View>
-          <SkeletonRow testID="skeleton-campaign-1" />
-          <SkeletonRow testID="skeleton-campaign-2" />
-          <SkeletonRow testID="skeleton-campaign-3" />
+          <SkeletonRow testID="skeleton-advocate-1" />
+          <SkeletonRow testID="skeleton-advocate-2" />
+          <SkeletonRow testID="skeleton-advocate-3" />
         </View>
       )}
       {error && (
@@ -80,15 +80,14 @@ export default function CampaignsScreen() {
       {error && (
         <Text
           onPress={() => {
-            // retry
             setError(null);
             (async () => {
               try {
                 setLoading(true);
-                const data = await fetchCampaigns();
+                const data = await fetchAdvocates();
                 setItems(data);
               } catch (e) {
-                setError("Failed to load campaigns");
+                setError("Failed to load advocates");
               } finally {
                 setLoading(false);
               }
@@ -106,12 +105,12 @@ export default function CampaignsScreen() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Link
-            href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } }}
+            href={{ pathname: "/(tabs)/advocacy/[id]", params: { id: item.id } }}
             asChild
             accessibilityRole="link"
-            accessibilityLabel={`Open ${item.title}`}
+            accessibilityLabel={`Open ${item.name}`}
           >
-            <Card title={item.title} subtitle={item.summary} testID={`campaign-${item.id}`} />
+            <Card title={item.name} subtitle={item.bio} testID={`advocate-${item.id}`} />
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}

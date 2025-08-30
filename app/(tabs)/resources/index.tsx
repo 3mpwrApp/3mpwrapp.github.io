@@ -1,27 +1,27 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
-import { colors, type Palette } from "../../theme/colors";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
-import { advocates as localAdvocates } from "../../data/advocates";
-import { fetchAdvocates } from "../../services/advocates";
-import Card from "../../components/Card";
+import { colors, type Palette } from "../../../theme/colors";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import Card from "../../../components/Card";
+import { resources as localResources } from "../../../data/resources";
+import { fetchResources } from "../../../services/resources";
 import { Link } from "expo-router";
-import SearchBar from "../../components/SearchBar";
-import { useCounts } from "../../store/counts";
-import { useAnnounceOnChange } from "../../hooks/useA11y";
-import SkeletonRow from "../../components/SkeletonRow";
-import { useRefresh } from "../../store/refresh";
-import { useNetwork } from "../../store/network";
+import SearchBar from "../../../components/SearchBar";
+import { useCounts } from "../../../store/counts";
+import { useAnnounceOnChange } from "../../../hooks/useA11y";
+import SkeletonRow from "../../../components/SkeletonRow";
+import { useRefresh } from "../../../store/refresh";
+import { useNetwork } from "../../../store/network";
 
-export default function AdvocatesScreen() {
+export default function ResourcesScreen() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Advocates");
+  useAnnounceOnMount("Resources");
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState("");
-  const [items, setItems] = React.useState(localAdvocates);
+  const [items, setItems] = React.useState(localResources);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -31,11 +31,11 @@ export default function AdvocatesScreen() {
     try {
       setError(null);
       setLoading(true);
-      const data = await fetchAdvocates();
+      const data = await fetchResources();
       setItems(data);
       setOffline(false);
     } catch (e) {
-      setError("Failed to load advocates");
+      setError("Failed to load resources");
       setOffline(true);
     } finally {
       setLoading(false);
@@ -48,28 +48,28 @@ export default function AdvocatesScreen() {
   }, [reload, tick]);
 
   React.useEffect(() => {
-    setCount("advocates", items.length);
+    setCount("resources", items.length);
   }, [items, setCount]);
 
-  useAnnounceOnChange(items.length, (n) => `${n} advocates loaded`);
+  useAnnounceOnChange(items.length, (n) => `${n} resources loaded`);
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return items;
-    return items.filter((a) => a.name.toLowerCase().includes(q) || a.bio.toLowerCase().includes(q));
+    return items.filter((r) => r.title.toLowerCase().includes(q) || r.description.toLowerCase().includes(q));
   }, [query, items]);
 
   return (
-    <View style={styles.container} accessibilityLabel="Advocates screen" accessible>
-      <Text ref={titleRef} nativeID="advocates-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        Advocates
+    <View style={styles.container} accessibilityLabel="Resources screen" accessible>
+      <Text ref={titleRef} nativeID="resources-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        Resources
       </Text>
-      <Text style={styles.subtitle}>Connect with community advocates.</Text>
-      <SearchBar value={query} onChangeText={setQuery} placeholder="Search advocates" accessibilityLabel="Search advocates" />
+      <Text style={styles.subtitle}>Find helpful guides and materials.</Text>
+      <SearchBar value={query} onChangeText={setQuery} placeholder="Search resources" accessibilityLabel="Search resources" />
       {loading && (
         <View>
-          <SkeletonRow testID="skeleton-advocate-1" />
-          <SkeletonRow testID="skeleton-advocate-2" />
-          <SkeletonRow testID="skeleton-advocate-3" />
+          <SkeletonRow testID="skeleton-resource-1" />
+          <SkeletonRow testID="skeleton-resource-2" />
+          <SkeletonRow testID="skeleton-resource-3" />
         </View>
       )}
       {error && (
@@ -84,10 +84,10 @@ export default function AdvocatesScreen() {
             (async () => {
               try {
                 setLoading(true);
-                const data = await fetchAdvocates();
+                const data = await fetchResources();
                 setItems(data);
               } catch (e) {
-                setError("Failed to load advocates");
+                setError("Failed to load resources");
               } finally {
                 setLoading(false);
               }
@@ -105,12 +105,12 @@ export default function AdvocatesScreen() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Link
-            href={{ pathname: "/(tabs)/advocates/[id]", params: { id: item.id } }}
+            href={{ pathname: "/(tabs)/resources/[id]", params: { id: item.id } }}
             asChild
             accessibilityRole="link"
-            accessibilityLabel={`Open ${item.name}`}
+            accessibilityLabel={`Open ${item.title}`}
           >
-            <Card title={item.name} subtitle={item.bio} testID={`advocate-${item.id}`} />
+            <Card title={item.title} subtitle={item.description} testID={`resource-${item.id}`} />
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}

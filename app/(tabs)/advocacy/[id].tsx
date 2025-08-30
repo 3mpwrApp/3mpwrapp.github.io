@@ -4,7 +4,7 @@ import { colors, type Palette } from "../../../theme/colors";
 import { advocates } from "../../../data/advocates";
 import { useFavorites } from "../../../store/favorites";
 
-export default function AdvocateDetail() {
+export default function AdvocacyDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
@@ -44,3 +44,4 @@ function createStyles(palette: Palette) {
     buttonText: { color: palette.onPrimary, fontSize: 16 },
   });
 }
+

@@ -38,20 +38,20 @@ export default function RootLayout() {
 
   return (
     <>
-      <Header />
       <FavoritesProvider>
         <CountsProvider>
           <NetworkProvider>
             <RefreshProvider>
-              <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
+              <Header />
+              <Stack initialRouteName="(tabs)" screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
                 <Stack.Screen name="modal" options={{ presentation: "modal" }} />
               </Stack>
+              <Footer />
             </RefreshProvider>
           </NetworkProvider>
         </CountsProvider>
       </FavoritesProvider>
-      <Footer />
     </>
   );
 }

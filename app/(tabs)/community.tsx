@@ -9,12 +9,12 @@ export default function CommunityScreen() {
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Community");
+  useAnnounceOnMount("Community Hub");
   useFocusOnRefOnMount(titleRef);
   return (
-    <View style={styles.container} accessibilityLabel="Community screen" accessible>
+    <View style={styles.container} accessibilityLabel="Community Hub screen" accessible>
       <Text ref={titleRef} nativeID="community-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        Community
+        Community Hub
       </Text>
       <Text style={styles.subtitle}>Hear from community voices.</Text>
       <FlatList

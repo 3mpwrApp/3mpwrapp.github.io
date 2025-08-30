@@ -1,24 +1,27 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
-import { colors, type Palette } from "../../theme/colors";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../hooks/useA11y";
-import { podcasts as localPodcasts } from "../../data/podcasts";
-import { fetchPodcasts } from "../../services/podcasts";
-import { useCounts } from "../../store/counts";
-import Card from "../../components/Card";
+import { colors, type Palette } from "../../../theme/colors";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
+import { podcasts as localPodcasts } from "../../../data/podcasts";
+import { stories as localStories } from "../../../data/stories";
+import { fetchPodcasts } from "../../../services/podcasts";
+import { fetchStories } from "../../../services/stories";
+import { useCounts } from "../../../store/counts";
+import Card from "../../../components/Card";
 import { Link } from "expo-router";
-import SkeletonRow from "../../components/SkeletonRow";
-import { useRefresh } from "../../store/refresh";
-import { useNetwork } from "../../store/network";
+import SkeletonRow from "../../../components/SkeletonRow";
+import { useRefresh } from "../../../store/refresh";
+import { useNetwork } from "../../../store/network";
 
 export default function PodcastsScreen() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Podcasts");
+  useAnnounceOnMount("Podcasts and Stories");
   useFocusOnRefOnMount(titleRef);
   const [items, setItems] = React.useState(localPodcasts);
+  const [stories, setStories] = React.useState(localStories);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -28,8 +31,12 @@ export default function PodcastsScreen() {
     try {
       setError(null);
       setLoading(true);
-      const data = await fetchPodcasts();
-      setItems(data);
+      const [podData, storyData] = await Promise.all([
+        fetchPodcasts(),
+        fetchStories(),
+      ]);
+      setItems(podData);
+      setStories(storyData);
       setOffline(false);
     } catch (e) {
       setError("Failed to load podcasts");
@@ -51,9 +58,9 @@ export default function PodcastsScreen() {
   useAnnounceOnChange(items.length, (n) => `${n} podcasts loaded`);
 
   return (
-    <View style={styles.container} accessibilityLabel="Podcasts screen" accessible>
+    <View style={styles.container} accessibilityLabel="Podcasts and Stories screen" accessible>
       <Text ref={titleRef} nativeID="podcasts-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        Podcasts
+        Podcasts & Stories
       </Text>
       <Text style={styles.subtitle}>Listen to community stories and insights.</Text>
       {loading && (
@@ -78,11 +85,22 @@ export default function PodcastsScreen() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Link href={{ pathname: "/(tabs)/podcasts/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
-            <Card title={item.title} subtitle={`${item.description} • ${item.duration}`} testID={`podcast-${item.id}`} />
+            <Card title={item.title} subtitle={`${item.description} \u2022 ${item.duration}`} testID={`podcast-${item.id}`} />
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
         refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
+      />
+      <Text style={[styles.title, { marginTop: 16 }]}>Stories</Text>
+      <FlatList
+        data={stories}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <Link href={{ pathname: "/(tabs)/podcasts/stories/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
+            <Card title={item.title} subtitle={item.description} testID={`story-${item.id}`} />
+          </Link>
+        )}
+        contentContainerStyle={{ paddingTop: 12 }}
       />
     </View>
   );
@@ -95,3 +113,4 @@ function createStyles(palette: Palette) {
     subtitle: { fontSize: 16, color: palette.muted, marginBottom: 8 },
   });
 }
+

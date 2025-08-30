@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, StyleSheet, useColorScheme, View, Pressable } from "react-native";
+import { SafeAreaView, Text, StyleSheet, useColorScheme, View, Pressable, Linking } from "react-native";
 import { colors, type Palette } from "../theme/colors";
 import { useFavorites } from "../store/favorites";
 import { useCounts } from "../store/counts";
@@ -19,13 +19,52 @@ export default function ThemedHeader() {
 
   return (
     <SafeAreaView style={styles.container} accessibilityRole="header">
-      <Text style={styles.title}>Empowr</Text>
+      <Text style={styles.title} accessibilityLabel="Empowr app header">Empowr</Text>
       <View style={styles.right}>
+        {/* Social media links */}
+        <View style={styles.social} accessibilityLabel="Social media links" accessible>
+          <Pressable
+            onPress={() => Linking.openURL("https://x.com/empowrapp0816?fbclid=IwY2xjawMfJvRleHRuA2FlbQIxMABicmlkETFmTzUwSUVDOFM3N2JlNjRMAR5N-V-9SV42Io93BvOCfSWc6g6mmXNfCAx5RzeznffITIWwGf9zXPY1WN-mmg_aem_CH3LxzsfYeUEwnmKyuGbOQ")}
+            accessibilityRole="link"
+            accessibilityLabel="Open Empowr on X (formerly Twitter)"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            testID="link-social-x"
+            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+          >
+            <Ionicons name="logo-twitter" size={20} color={palette.text} />
+          </Pressable>
+          <Pressable
+            onPress={() => Linking.openURL("https://www.instagram.com/empowrapp/?fbclid=IwY2xjawMfJvBleHRuA2FlbQIxMABicmlkETFmTzUwSUVDOFM3N2JlNjRMAR5N-V-9SV42Io93BvOCfSWc6g6mmXNfCAx5RzeznffITIWwGf9zXPY1WN-mmg_aem_CH3LxzsfYeUEwnmKyuGbOQ")}
+            accessibilityRole="link"
+            accessibilityLabel="Open Empowr on Instagram"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            testID="link-social-instagram"
+            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+          >
+            <Ionicons name="logo-instagram" size={20} color={palette.text} />
+          </Pressable>
+          <Pressable
+            onPress={() => Linking.openURL("https://www.facebook.com/profile.php?id=61579428783083")}
+            accessibilityRole="link"
+            accessibilityLabel="Open Empowr on Facebook"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            testID="link-social-facebook"
+            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+          >
+            <Ionicons name="logo-facebook" size={20} color={palette.text} />
+          </Pressable>
+        </View>
+
+        {/* Counts and refresh */}
         <Text style={styles.countText} testID="header-favorites-count" accessibilityLabel={`Favorites ${favTotal}`}>
           Favs: {favTotal}
         </Text>
-        <Text style={styles.countText} testID="header-items-count" accessibilityLabel={`Items ${counts.campaigns + counts.resources + counts.advocates + counts.podcasts}`}>
-          Items: {counts.campaigns + counts.resources + counts.advocates + counts.podcasts}
+        <Text
+          style={styles.countText}
+          testID="header-items-count"
+          accessibilityLabel={`Items ${counts.campaigns + counts.resources + counts.advocates + counts.podcasts + counts.events}`}
+        >
+          Items: {counts.campaigns + counts.resources + counts.advocates + counts.podcasts + counts.events}
         </Text>
         <Pressable
           onPress={refreshAll}
@@ -34,7 +73,7 @@ export default function ThemedHeader() {
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
         >
-          <Ionicons name="refresh" size={18} color={palette.muted} />
+          <Ionicons name="refresh" size={20} color={palette.text} />
         </Pressable>
       </View>
     </SafeAreaView>
@@ -58,7 +97,8 @@ function createStyles(palette: Palette) {
       fontSize: 20,
       fontWeight: "700",
     },
-    right: { flexDirection: "row", gap: 12 },
+    right: { flexDirection: "row", gap: 12, alignItems: "center" },
+    social: { flexDirection: "row", gap: 12, marginRight: 8 },
     countText: { color: palette.muted, fontSize: 12 },
   });
 }

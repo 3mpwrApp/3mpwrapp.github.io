@@ -1,6 +1,6 @@
 import React from "react";
 
-type Key = "campaigns" | "resources" | "advocates" | "podcasts";
+type Key = "campaigns" | "resources" | "advocates" | "podcasts" | "events";
 
 type CountsState = Record<Key, number>;
 
@@ -17,6 +17,7 @@ export function CountsProvider({ children }: { children: React.ReactNode }) {
     resources: 0,
     advocates: 0,
     podcasts: 0,
+    events: 0,
   });
 
   const setCount = React.useCallback((key: Key, value: number) => {
@@ -35,4 +36,3 @@ export function useCounts() {
   if (!ctx) throw new Error("useCounts must be used within CountsProvider");
   return ctx;
 }
-

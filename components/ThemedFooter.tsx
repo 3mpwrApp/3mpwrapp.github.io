@@ -6,9 +6,10 @@ export default function ThemedFooter() {
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
 
+  const year = new Date().getFullYear();
   return (
-    <SafeAreaView style={styles.container} accessibilityRole="text">
-      <Text style={styles.text}>Empowr</Text>
+    <SafeAreaView style={styles.container} accessibilityRole="text" accessibilityLabel={`Footer. Empowr, ${year}`}>
+      <Text style={styles.text}>© {year} Empowr</Text>
     </SafeAreaView>
   );
 }

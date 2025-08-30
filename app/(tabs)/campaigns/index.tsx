@@ -1,27 +1,27 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
-import { colors, type Palette } from "../../theme/colors";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
-import Card from "../../components/Card";
-import { resources as localResources } from "../../data/resources";
-import { fetchResources } from "../../services/resources";
+import { colors, type Palette } from "../../../theme/colors";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import Card from "../../../components/Card";
+import { campaigns as localCampaigns } from "../../../data/campaigns";
+import { fetchCampaigns } from "../../../services/campaigns";
 import { Link } from "expo-router";
-import SearchBar from "../../components/SearchBar";
-import { useCounts } from "../../store/counts";
-import { useAnnounceOnChange } from "../../hooks/useA11y";
-import SkeletonRow from "../../components/SkeletonRow";
-import { useRefresh } from "../../store/refresh";
-import { useNetwork } from "../../store/network";
+import SearchBar from "../../../components/SearchBar";
+import { useCounts } from "../../../store/counts";
+import { useAnnounceOnChange } from "../../../hooks/useA11y";
+import SkeletonRow from "../../../components/SkeletonRow";
+import { useRefresh } from "../../../store/refresh";
+import { useNetwork } from "../../../store/network";
 
-export default function ResourcesScreen() {
+export default function CampaignsScreen() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Resources");
+  useAnnounceOnMount("Campaigns");
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState("");
-  const [items, setItems] = React.useState(localResources);
+  const [items, setItems] = React.useState(localCampaigns);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -31,11 +31,11 @@ export default function ResourcesScreen() {
     try {
       setError(null);
       setLoading(true);
-      const data = await fetchResources();
+      const data = await fetchCampaigns();
       setItems(data);
       setOffline(false);
     } catch (e) {
-      setError("Failed to load resources");
+      setError("Failed to load campaigns");
       setOffline(true);
     } finally {
       setLoading(false);
@@ -48,28 +48,28 @@ export default function ResourcesScreen() {
   }, [reload, tick]);
 
   React.useEffect(() => {
-    setCount("resources", items.length);
+    setCount("campaigns", items.length);
   }, [items, setCount]);
 
-  useAnnounceOnChange(items.length, (n) => `${n} resources loaded`);
+  useAnnounceOnChange(items.length, (n) => `${n} campaigns loaded`);
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return items;
-    return items.filter((r) => r.title.toLowerCase().includes(q) || r.description.toLowerCase().includes(q));
+    return items.filter((c) => c.title.toLowerCase().includes(q) || c.summary.toLowerCase().includes(q));
   }, [query, items]);
 
   return (
-    <View style={styles.container} accessibilityLabel="Resources screen" accessible>
-      <Text ref={titleRef} nativeID="resources-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        Resources
+    <View style={styles.container} accessibilityLabel="Campaigns screen" accessible>
+      <Text ref={titleRef} nativeID="campaigns-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        Campaigns
       </Text>
-      <Text style={styles.subtitle}>Find helpful guides and materials.</Text>
-      <SearchBar value={query} onChangeText={setQuery} placeholder="Search resources" accessibilityLabel="Search resources" />
+      <Text style={styles.subtitle}>Browse and support active campaigns.</Text>
+      <SearchBar value={query} onChangeText={setQuery} placeholder="Search campaigns" accessibilityLabel="Search campaigns" />
       {loading && (
         <View>
-          <SkeletonRow testID="skeleton-resource-1" />
-          <SkeletonRow testID="skeleton-resource-2" />
-          <SkeletonRow testID="skeleton-resource-3" />
+          <SkeletonRow testID="skeleton-campaign-1" />
+          <SkeletonRow testID="skeleton-campaign-2" />
+          <SkeletonRow testID="skeleton-campaign-3" />
         </View>
       )}
       {error && (
@@ -84,10 +84,10 @@ export default function ResourcesScreen() {
             (async () => {
               try {
                 setLoading(true);
-                const data = await fetchResources();
+                const data = await fetchCampaigns();
                 setItems(data);
               } catch (e) {
-                setError("Failed to load resources");
+                setError("Failed to load campaigns");
               } finally {
                 setLoading(false);
               }
@@ -105,12 +105,12 @@ export default function ResourcesScreen() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Link
-            href={{ pathname: "/(tabs)/resources/[id]", params: { id: item.id } }}
+            href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } }}
             asChild
             accessibilityRole="link"
             accessibilityLabel={`Open ${item.title}`}
           >
-            <Card title={item.title} subtitle={item.description} testID={`resource-${item.id}`} />
+            <Card title={item.title} subtitle={item.summary} testID={`campaign-${item.id}`} />
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}

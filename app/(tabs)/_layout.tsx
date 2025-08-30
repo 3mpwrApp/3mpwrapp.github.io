@@ -1,7 +1,6 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useColorScheme } from "react-native";
-import { useFavorites } from "../../store/favorites";
 import { colors } from "../../theme/colors";
 import { useCounts } from "../../store/counts";
 
@@ -11,10 +10,6 @@ export default function TabsLayout() {
   const activeTint = palette.primary;
   const inactiveTint = palette.muted;
   const { counts } = useCounts();
-  const { state } = useFavorites();
-  const favCount = state
-    ? state.campaign.size + state.resource.size + state.advocate.size + state.podcast.size
-    : 0;
 
   return (
     <Tabs
@@ -27,6 +22,7 @@ export default function TabsLayout() {
         tabBarAllowFontScaling: true,
       }}
     >
+      {/* Ensure initial route is index and show Home tab */}
       <Tabs.Screen
         name="index"
         options={{
@@ -34,24 +30,51 @@ export default function TabsLayout() {
           tabBarLabel: "Home",
           tabBarAccessibilityLabel: "Home tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons
-              name={focused ? "home" : "home-outline"}
-              color={color}
-              size={size}
-            />
+            <Ionicons name={focused ? "home" : "home-outline"} color={color} size={size} />
           ),
         }}
       />
+
+      {/* Hide detail routes from the tab bar to avoid duplicates */}
+      <Tabs.Screen name="campaigns/[id]" options={{ href: null }} />
+      <Tabs.Screen name="resources/[id]" options={{ href: null }} />
+      <Tabs.Screen name="events/[id]" options={{ href: null }} />
+      <Tabs.Screen name="advocacy/[id]" options={{ href: null }} />
+      <Tabs.Screen name="podcasts/[id]" options={{ href: null }} />
+      <Tabs.Screen name="podcasts/stories/[id]" options={{ href: null }} />
       <Tabs.Screen
-        name="campaigns"
+        name="campaigns/index"
         options={{
           title: "Campaigns",
           tabBarLabel: "Campaigns",
           tabBarAccessibilityLabel: "Campaigns tab",
-          tabBarBadge: counts.campaigns || undefined,
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "megaphone" : "megaphone-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="community"
+        options={{
+          title: "Community Hub",
+          tabBarLabel: "Community Hub",
+          tabBarAccessibilityLabel: "Community Hub tab",
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+      {/* Removed Campaigns and Community Hub tabs per request */}
+      <Tabs.Screen
+        name="advocacy/index"
+        options={{
+          title: "Advocacy",
+          tabBarLabel: "Advocacy",
+          tabBarAccessibilityLabel: "Advocacy tab",
+          // no badge
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
-              name={focused ? "megaphone" : "megaphone-outline"}
+              name={focused ? "people" : "people-outline"}
               color={color}
               size={size}
             />
@@ -59,18 +82,42 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="resources"
+        name="podcasts/index"
+        options={{
+          title: "Podcasts & Stories",
+          tabBarLabel: "Podcasts & Stories",
+          tabBarAccessibilityLabel: "Podcasts and Stories tab",
+          // no badge
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="resources/index"
         options={{
           title: "Resources",
           tabBarLabel: "Resources",
           tabBarAccessibilityLabel: "Resources tab",
-          tabBarBadge: counts.resources || undefined,
+          // no badge
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "book" : "book-outline"}
               color={color}
               size={size}
             />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="events/index"
+        options={{
+          title: "Events",
+          tabBarLabel: "Events",
+          tabBarAccessibilityLabel: "Events tab",
+          // no badge
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "calendar" : "calendar-outline"} color={color} size={size} />
           ),
         }}
       />
@@ -86,61 +133,6 @@ export default function TabsLayout() {
               color={color}
               size={size}
             />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="advocates"
-        options={{
-          title: "Advocates",
-          tabBarLabel: "Advocates",
-          tabBarAccessibilityLabel: "Advocates tab",
-          tabBarBadge: counts.advocates || undefined,
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons
-              name={focused ? "people" : "people-outline"}
-              color={color}
-              size={size}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="community"
-        options={{
-          title: "Community",
-          tabBarLabel: "Community",
-          tabBarAccessibilityLabel: "Community tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons
-              name={focused ? "chatbubbles" : "chatbubbles-outline"}
-              color={color}
-              size={size}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="favorites"
-        options={{
-          title: "Favorites",
-          tabBarLabel: "Favorites",
-          tabBarAccessibilityLabel: "Favorites tab",
-          tabBarBadge: favCount > 0 ? favCount : undefined,
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "bookmark" : "bookmark-outline"} color={color} size={size} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="podcasts"
-        options={{
-          title: "Podcasts",
-          tabBarLabel: "Podcasts",
-          tabBarAccessibilityLabel: "Podcasts tab",
-          tabBarBadge: counts.podcasts || undefined,
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size} />
           ),
         }}
       />
