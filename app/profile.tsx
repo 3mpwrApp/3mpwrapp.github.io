@@ -1,17 +1,19 @@
 import React from "react";
 import { View, Text, StyleSheet, Pressable, TextInput, useColorScheme } from "react-native";
-import { colors, type Palette } from "../theme/colors";
+import { type Palette } from "../theme/colors";
+import { usePalette } from "../theme/usePalette";
+import { useA11ySettings } from "../store/a11ySettings";
 import { useAuth } from "../store/auth";
 import { router } from "expo-router";
 import { useTranslation, Lang } from "../i18n";
 
 export default function Profile() {
-  const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = usePalette();
   const styles = createStyles(palette);
   const { state, signIn, continueAnonymously, signOut } = useAuth();
   const { lang, setLanguage } = useTranslation();
   const [name, setName] = React.useState(state.user?.name ?? "");
+  const { state: a11y, toggleHighContrast } = useA11ySettings();
 
   return (
     <View style={styles.container} accessibilityLabel="Profile screen" accessible>
@@ -21,6 +23,18 @@ export default function Profile() {
         <Row label="Status" value={state.status} />
         <Row label="Onboarded" value={state.isOnboarded ? "Yes" : "No"} />
         <Row label="User" value={state.user?.name ?? "Guest"} />
+      </View>
+
+      <View style={styles.card}>
+        <Text style={{ fontWeight: "700", marginBottom: 8 }}>Accessibility</Text>
+        <Pressable
+          onPress={toggleHighContrast}
+          accessibilityRole="button"
+          accessibilityLabel="Toggle high contrast mode"
+          style={({ pressed }) => [styles.cta, styles.ghost, pressed && { opacity: 0.7 }]}
+        >
+          <Text style={styles.ghostText}>{a11y.highContrast ? "Disable High Contrast" : "Enable High Contrast"}</Text>
+        </Pressable>
       </View>
 
       {/* Notifications test removed at user's request */}

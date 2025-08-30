@@ -11,6 +11,7 @@ import Footer from "../components/ThemedFooter";
 import { I18nProvider } from "../i18n";
 import * as Notifier from "../services/notifications";
 import { initAnalytics } from "../services/analytics";
+import { A11ySettingsProvider } from "../store/a11ySettings";
 
 export default function RootLayout() {
   const [reduceMotion, setReduceMotion] = React.useState(false);
@@ -57,25 +58,27 @@ export default function RootLayout() {
   return (
     <>
       <I18nProvider>
-        <AuthProvider>
-          <FavoritesProvider>
-            <CountsProvider>
-              <NetworkProvider>
-                <RefreshProvider>
-                  <Header />
-                  <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
-                    <Stack.Screen name="profile" options={{ headerShown: false }} />
-                    <Stack.Screen name="index" options={{ headerShown: false }} />
-                    <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-                    <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                    <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-                  </Stack>
-                  <Footer />
-                </RefreshProvider>
-              </NetworkProvider>
-            </CountsProvider>
-          </FavoritesProvider>
-        </AuthProvider>
+        <A11ySettingsProvider>
+          <AuthProvider>
+            <FavoritesProvider>
+              <CountsProvider>
+                <NetworkProvider>
+                  <RefreshProvider>
+                    <Header />
+                    <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
+                      <Stack.Screen name="profile" options={{ headerShown: false }} />
+                      <Stack.Screen name="index" options={{ headerShown: false }} />
+                      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                      <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+                    </Stack>
+                    <Footer />
+                  </RefreshProvider>
+                </NetworkProvider>
+              </CountsProvider>
+            </FavoritesProvider>
+          </AuthProvider>
+        </A11ySettingsProvider>
       </I18nProvider>
     </>
   );

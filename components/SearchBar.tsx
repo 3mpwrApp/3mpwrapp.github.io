@@ -1,7 +1,8 @@
 import React from "react";
 import { View, TextInput, StyleSheet, Pressable, useColorScheme } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { colors, type Palette } from "../theme/colors";
+import { type Palette } from "../theme/colors";
+import { usePalette } from "../theme/usePalette";
 
 type Props = {
   value: string;
@@ -12,8 +13,7 @@ type Props = {
 };
 
 export default function SearchBar({ value, onChangeText, placeholder = "Search", accessibilityLabel = "Search", testID }: Props) {
-  const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = usePalette();
   const styles = React.useMemo(() => createStyles(palette), [palette]);
   return (
     <View style={styles.container} accessibilityRole="search" testID={testID}>

@@ -1,9 +1,9 @@
 import { SafeAreaView, Text, StyleSheet, useColorScheme } from "react-native";
-import { colors, type Palette } from "../theme/colors";
+import { type Palette } from "../theme/colors";
+import { usePalette } from "../theme/usePalette";
 
 export default function ThemedFooter() {
-  const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = usePalette();
   const styles = createStyles(palette);
 
   const year = new Date().getFullYear();
@@ -32,4 +32,3 @@ function createStyles(palette: Palette) {
     },
   });
 }
-
