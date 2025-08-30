@@ -26,6 +26,7 @@ function createStyles(palette: Palette) {
     text: {
       color: palette.muted,
       fontSize: 12,
+      fontFamily: "Roboto",
       textAlign: "center",
     },
   });

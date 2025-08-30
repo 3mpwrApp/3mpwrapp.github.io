@@ -18,7 +18,7 @@ export default function TabsLayout() {
         tabBarActiveTintColor: activeTint,
         tabBarInactiveTintColor: inactiveTint,
         tabBarItemStyle: { minHeight: 48, paddingVertical: 6 },
-        tabBarLabelStyle: { fontSize: 12 },
+        tabBarLabelStyle: { fontSize: 12, fontFamily: "Poppins" },
         tabBarAllowFontScaling: true,
       }}
     >

@@ -5,5 +5,6 @@ export type ThemedTextProps = TextProps & {
 };
 export function ThemedText({ style, lightColor, darkColor, ...rest }: ThemedTextProps) {
   const color = useThemeColor({ light: lightColor, dark: darkColor }, "text");
-  return <Text style={[{ color }, style]} {...rest} />;
+  // Default to brand body font with platform fallback
+  return <Text style={[{ color, fontFamily: "Roboto" }, style]} {...rest} />;
 }

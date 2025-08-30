@@ -96,8 +96,8 @@ export default function EventsScreen() {
 function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 16, color: palette.muted, marginBottom: 8 },
+    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text, fontFamily: "Poppins" },
+    subtitle: { fontSize: 16, color: palette.muted, marginBottom: 8, fontFamily: "Roboto" },
     button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44 },
     buttonText: { color: palette.onPrimary, fontSize: 16 },
   });
