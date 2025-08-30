@@ -46,6 +46,7 @@ export default function RootLayout() {
               <RefreshProvider>
                 <Header />
                 <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
+                  <Stack.Screen name="profile" options={{ headerShown: false }} />
                   <Stack.Screen name="index" options={{ headerShown: false }} />
                   <Stack.Screen name="(auth)" options={{ headerShown: false }} />
                   <Stack.Screen name="(tabs)" options={{ headerShown: false }} />

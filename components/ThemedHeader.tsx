@@ -86,6 +86,16 @@ export default function ThemedHeader() {
         >
           <Ionicons name="refresh" size={20} color={palette.text} />
         </Pressable>
+        {/* Profile */}
+        <Pressable
+          onPress={() => router.push("/profile")}
+          accessibilityRole="button"
+          accessibilityLabel="Open profile"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+        >
+          <Ionicons name="person-circle-outline" size={22} color={palette.text} />
+        </Pressable>
         {/* Auth control */}
         {auth.status === "signedIn" ? (
           <Pressable
