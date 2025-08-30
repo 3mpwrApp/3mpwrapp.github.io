@@ -82,6 +82,6 @@ function createStyles(palette: Palette) {
     ctaText: { color: palette.onPrimary, fontWeight: "700" },
     threadRow: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
     threadTitle: { color: palette.text, fontSize: 16, fontWeight: "600" },
-    threadMeta: { color: palette.muted, marginTop: 2 },
+    threadMeta: { color: palette.text, opacity: 0.8, marginTop: 2 },
   });
 }

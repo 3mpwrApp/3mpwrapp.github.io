@@ -36,9 +36,9 @@ function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 16, color: palette.muted, marginBottom: 12 },
+    subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, marginBottom: 12 },
     tip: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
     tipTitle: { color: palette.text, fontWeight: "600", marginBottom: 4 },
-    tipText: { color: palette.muted },
+    tipText: { color: palette.text, opacity: 0.9 },
   });
 }

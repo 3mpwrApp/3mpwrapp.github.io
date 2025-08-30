@@ -56,7 +56,7 @@ function createStyles(palette: Palette) {
     container: { flex: 1, padding: 24, backgroundColor: palette.background, justifyContent: "center", alignItems: "center" },
     logo: { width: 96, height: 96, marginBottom: 12, resizeMode: "contain" },
     title: { fontSize: 28, fontWeight: "800", marginBottom: 8, color: palette.text, textAlign: "center" },
-    subtitle: { fontSize: 16, color: palette.muted, textAlign: "center" },
+    subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, textAlign: "center" },
     description: { fontSize: 16, color: palette.text, textAlign: "center", marginTop: 8, lineHeight: 22 },
     row: { flexDirection: "row", gap: 12, justifyContent: "center", marginTop: 8 },
     chip: { backgroundColor: palette.primary, paddingHorizontal: 14, paddingVertical: 10, borderRadius: 999, minHeight: 44, alignItems: "center", justifyContent: "center" },

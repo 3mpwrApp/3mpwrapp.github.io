@@ -60,6 +60,14 @@ export async function sendTestLocal() {
 // Ensure alerts show while app is foregrounded
 try {
   Notifications?.setNotificationHandler?.({
-    handleNotification: async () => ({ shouldShowAlert: true, shouldPlaySound: true, shouldSetBadge: false }),
+    handleNotification: async () => ({
+      // New fields (SDK 53+)
+      shouldShowBanner: true,
+      shouldShowList: true,
+      // Back-compat (pre-53)
+      shouldShowAlert: true,
+      shouldPlaySound: true,
+      shouldSetBadge: false,
+    } as any),
   });
 } catch {}

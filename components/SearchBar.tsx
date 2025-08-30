@@ -17,13 +17,13 @@ export default function SearchBar({ value, onChangeText, placeholder = "Search",
   const styles = React.useMemo(() => createStyles(palette), [palette]);
   return (
     <View style={styles.container} accessibilityRole="search" testID={testID}>
-      <Ionicons name="search" size={18} color={palette.muted} style={{ marginHorizontal: 8 }} />
+      <Ionicons name="search" size={18} color={palette.text} style={{ marginHorizontal: 8, opacity: 0.8 }} />
       <TextInput
         style={styles.input}
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        placeholderTextColor={palette.muted}
+        placeholderTextColor={palette.text}
         accessibilityLabel={accessibilityLabel}
         returnKeyType="search"
         clearButtonMode="never"
@@ -36,7 +36,7 @@ export default function SearchBar({ value, onChangeText, placeholder = "Search",
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           style={({ pressed }) => [{ padding: 6 }, pressed && { opacity: 0.7 }]}
         >
-          <Ionicons name="close-circle" size={18} color={palette.muted} />
+          <Ionicons name="close-circle" size={18} color={palette.text} style={{ opacity: 0.8 }} />
         </Pressable>
       )}
     </View>

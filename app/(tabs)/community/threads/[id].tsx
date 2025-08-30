@@ -84,7 +84,7 @@ function createStyles(palette: Palette) {
     title: { fontSize: 20, fontWeight: "700", color: palette.text },
     comment: { paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
     commentAuthor: { color: palette.text, fontWeight: "600", marginBottom: 4 },
-    commentText: { color: palette.muted },
+    commentText: { color: palette.text, opacity: 0.9 },
     actionsRow: { flexDirection: "row", gap: 12, marginTop: 6 },
     actionLink: { color: palette.primary, fontWeight: "700" },
     newBox: { flexDirection: "row", gap: 8, alignItems: "center", marginTop: 12, paddingVertical: 8 },

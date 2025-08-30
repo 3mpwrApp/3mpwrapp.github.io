@@ -20,7 +20,8 @@
         "foregroundImage": "./assets/images/empowr-logo.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.empowrapp2.empowrapp"
     },
     "web": {
       "bundler": "metro",

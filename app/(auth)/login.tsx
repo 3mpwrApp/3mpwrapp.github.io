@@ -48,7 +48,7 @@ function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 24, backgroundColor: palette.background, alignItems: "center", justifyContent: "center" },
     title: { fontSize: 24, fontWeight: "800", marginBottom: 6, color: palette.text },
-    subtitle: { fontSize: 14, color: palette.muted, textAlign: "center", marginBottom: 12 },
+    subtitle: { fontSize: 15, color: palette.text, opacity: 0.9, textAlign: "center", marginBottom: 12 },
     input: { width: "90%", maxWidth: 420, borderWidth: 1, borderColor: palette.muted, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, color: palette.text, marginBottom: 12 },
     cta: { width: "90%", maxWidth: 420, paddingVertical: 12, borderRadius: 12, alignItems: "center", marginTop: 8 },
     ghost: { backgroundColor: "transparent", borderWidth: 1, borderColor: palette.muted },

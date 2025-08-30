@@ -38,7 +38,7 @@ function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 24, backgroundColor: palette.background, alignItems: "center", justifyContent: "center" },
     title: { fontSize: 28, fontWeight: "800", marginBottom: 8, color: palette.text, textAlign: "center" },
-    subtitle: { fontSize: 16, color: palette.muted, textAlign: "center", marginBottom: 24 },
+    subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, textAlign: "center", marginBottom: 24 },
     actions: { flexDirection: "row", gap: 12, marginTop: 12 },
     cta: { backgroundColor: palette.primary, paddingHorizontal: 18, paddingVertical: 12, borderRadius: 12 },
     ctaText: { color: palette.onPrimary, fontWeight: "700", fontSize: 16 },

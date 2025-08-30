@@ -70,10 +70,9 @@ function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 16, color: palette.muted, marginBottom: 8 },
+    subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, marginBottom: 8 },
     section: { marginTop: 12, marginBottom: 6, fontWeight: "700", color: palette.text },
     row: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
     rowText: { color: palette.text, fontSize: 16 },
   });
 }
-

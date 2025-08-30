@@ -64,7 +64,7 @@ function createStyles(palette: Palette) {
     },
     textWrap: { flex: 1, paddingEnd: 12 },
     title: { color: palette.text, fontSize: 16, fontWeight: "600" },
-    subtitle: { color: palette.muted, fontSize: 13, marginTop: 2 },
+    subtitle: { color: palette.text, opacity: 0.9, fontSize: 14, marginTop: 2 },
     rightAction: { paddingStart: 8 },
   });
 }
