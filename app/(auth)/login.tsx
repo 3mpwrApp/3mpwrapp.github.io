@@ -21,6 +21,7 @@ export default function Login() {
     <View style={styles.container} accessibilityLabel="Login screen" accessible>
       <Text style={styles.title}>Sign in</Text>
       <Text style={styles.subtitle}>Use your name for a quick demo sign-in, or continue as a guest.</Text>
+      <Text style={[styles.subtitle, { marginBottom: 16 }]}>Enable notifications in system settings for updates.</Text>
 
       <TextInput
         placeholder="Your name"

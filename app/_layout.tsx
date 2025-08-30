@@ -35,6 +35,10 @@ export default function RootLayout() {
   React.useEffect(() => {
     // best-effort notification permission
     Notifier.setupAsync();
+    // Try to obtain an Expo push token (no-op if unsupported)
+    Notifier.getExpoPushToken().then((t) => {
+      if (t && __DEV__) console.log("Expo push token:", t);
+    });
   }, []);
 
   React.useEffect(() => {

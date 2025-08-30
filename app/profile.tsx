@@ -4,6 +4,7 @@ import { colors, type Palette } from "../theme/colors";
 import { useAuth } from "../store/auth";
 import { router } from "expo-router";
 import { useTranslation, Lang } from "../i18n";
+import * as Notifier from "../services/notifications";
 
 export default function Profile() {
   const scheme = useColorScheme();
@@ -12,6 +13,11 @@ export default function Profile() {
   const { state, signIn, continueAnonymously, signOut } = useAuth();
   const { lang, setLanguage } = useTranslation();
   const [name, setName] = React.useState(state.user?.name ?? "");
+  const [pushToken, setPushToken] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    Notifier.getExpoPushToken().then(setPushToken).catch(() => setPushToken(null));
+  }, []);
 
   return (
     <View style={styles.container} accessibilityLabel="Profile screen" accessible>
@@ -21,6 +27,17 @@ export default function Profile() {
         <Row label="Status" value={state.status} />
         <Row label="Onboarded" value={state.isOnboarded ? "Yes" : "No"} />
         <Row label="User" value={state.user?.name ?? "Guest"} />
+      </View>
+
+      <View style={styles.card}>
+        <Text style={{ fontWeight: "700", marginBottom: 8 }}>Notifications</Text>
+        <Text style={{ color: palette.muted, marginBottom: 8 }}>Expo Push Token:</Text>
+        <Text selectable style={{ color: palette.text, marginBottom: 8 }} numberOfLines={1} ellipsizeMode="middle">
+          {pushToken ?? "Unavailable"}
+        </Text>
+        <Pressable style={[styles.cta, styles.primary]} onPress={Notifier.sendTestLocal} accessibilityRole="button" accessibilityLabel="Send test notification">
+          <Text style={styles.primaryText}>Send Test Notification</Text>
+        </Pressable>
       </View>
 
       <View style={styles.card}>
