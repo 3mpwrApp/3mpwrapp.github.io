@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, StyleSheet, useColorScheme, View, Pressable, Linking } from "react-native";
+import { SafeAreaView, Text, StyleSheet, useColorScheme, View, Pressable, Linking, Image } from "react-native";
 import { colors, type Palette } from "../theme/colors";
 import { useFavorites } from "../store/favorites";
 import { useCounts } from "../store/counts";
@@ -19,7 +19,15 @@ export default function ThemedHeader() {
 
   return (
     <SafeAreaView style={styles.container} accessibilityRole="header">
-      <Text style={styles.title} accessibilityLabel="Empowr app header">Empowr</Text>
+      <View style={styles.brand}>
+        <Image
+          source={require("../assets/images/empowr-logo.png")}
+          style={styles.logo}
+          accessible
+          accessibilityLabel="Empowr logo"
+        />
+        <Text style={styles.title} accessibilityLabel="Empowr app header">Empowr</Text>
+      </View>
       <View style={styles.right}>
         {/* Social media links */}
         <View style={styles.social} accessibilityLabel="Social media links" accessible>
@@ -92,10 +100,13 @@ function createStyles(palette: Palette) {
       justifyContent: "space-between",
       alignItems: "center",
     },
+    brand: { flexDirection: "row", alignItems: "center", gap: 8 },
+    logo: { height: 24, width: 24, resizeMode: "contain" },
     title: {
       color: palette.text,
       fontSize: 20,
       fontWeight: "700",
+      fontFamily: "Poppins",
     },
     right: { flexDirection: "row", gap: 12, alignItems: "center" },
     social: { flexDirection: "row", gap: 12, marginRight: 8 },

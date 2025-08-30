@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, Pressable } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, Pressable, Image, useWindowDimensions } from "react-native";
 import { Link } from "expo-router";
 import { colors, type Palette } from "../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
@@ -8,13 +8,36 @@ export default function TabsHome() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
+  const { width } = useWindowDimensions();
+  const isTablet = width >= 768;
+  const contentPadding = isTablet ? 32 : 20;
+  const logoSize = isTablet ? 120 : 88;
+  const titleSize = isTablet ? 32 : 28;
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Home");
   useFocusOnRefOnMount(titleRef);
 
   return (
-    <View style={styles.container} accessibilityLabel="Home screen" accessible>
-      <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+    <View
+      style={[
+        styles.container,
+        { paddingHorizontal: contentPadding, paddingVertical: contentPadding },
+      ]}
+      accessibilityLabel="Home screen"
+      accessible
+    >
+      <Image
+        source={require("../../assets/images/empowr-logo.png")}
+        style={[styles.logo, { width: logoSize, height: logoSize, marginBottom: isTablet ? 16 : 12 }]}
+        accessible
+        accessibilityLabel="Empowr logo"
+      />
+      <Text
+        ref={titleRef}
+        accessibilityRole="header"
+        style={[styles.title, { fontSize: titleSize }]}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
         Welcome to Empowr
       </Text>
       <Text style={styles.subtitle}>Support. Advocacy. Empowerment.</Text>
@@ -25,7 +48,8 @@ export default function TabsHome() {
 
 function createStyles(palette: Palette) {
   return StyleSheet.create({
-    container: { flex: 1, padding: 24, backgroundColor: palette.background, justifyContent: "center" },
+    container: { flex: 1, padding: 24, backgroundColor: palette.background, justifyContent: "center", alignItems: "center" },
+    logo: { width: 96, height: 96, marginBottom: 12, resizeMode: "contain" },
     title: { fontSize: 28, fontWeight: "800", marginBottom: 8, color: palette.text, textAlign: "center" },
     subtitle: { fontSize: 16, color: palette.muted, textAlign: "center" },
     row: { flexDirection: "row", gap: 12, justifyContent: "center", marginTop: 8 },
