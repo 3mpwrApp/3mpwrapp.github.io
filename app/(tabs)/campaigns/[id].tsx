@@ -1,10 +1,11 @@
-import { View, Text, StyleSheet, useColorScheme, Pressable } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, Pressable, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { colors, type Palette } from "../../../theme/colors";
 import { campaigns } from "../../../data/campaigns";
 import { useFavorites } from "../../../store/favorites";
+import { useCampaignsLocal, CampaignsLocalProvider } from "../../../store/campaignsLocal";
 
-export default function CampaignDetail() {
+function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
@@ -13,6 +14,8 @@ export default function CampaignDetail() {
   const campaign = campaigns.find((c) => c.id === id);
   const { has, toggle } = useFavorites();
   const saved = campaign ? has("campaign", campaign.id) : false;
+  const { isJoined, join, leave } = useCampaignsLocal();
+  const joined = campaign ? isJoined(campaign.id) : false;
 
   return (
     <>
@@ -30,7 +33,50 @@ export default function CampaignDetail() {
             <Text style={styles.buttonText}>{saved ? "Remove from Favorites" : "Save to Favorites"}</Text>
           </Pressable>
         )}
+        {!!campaign && (
+          <View style={{ height: 8 }} />
+        )}
+        {!!campaign && (
+          <Pressable
+            style={({ pressed }) => [styles.secondary, pressed && { opacity: 0.8 }]}
+            onPress={() => (joined ? leave(campaign.id) : join(campaign.id))}
+            accessibilityRole="button"
+            accessibilityLabel={joined ? "Leave campaign" : "Join campaign"}
+          >
+            <Text style={styles.secondaryText}>{joined ? "Leave Campaign" : "Join Campaign"}</Text>
+          </Pressable>
+        )}
+        {!!campaign && (
+          <View style={{ height: 8 }} />
+        )}
+        {!!campaign && (
+          <Pressable
+            style={({ pressed }) => [styles.ghost, pressed && { opacity: 0.8 }]}
+            onPress={async () => {
+              try {
+                const msg = `${campaign.title} — ${campaign.summary}`;
+                await Share.share({ title: campaign.title, message: msg, url: `https://empowr.app/campaigns/${campaign.id}` });
+              } catch {}
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Share campaign"
+          >
+            <Text style={styles.linkText}>Share</Text>
+          </Pressable>
+        )}
       </View>
+    </>
+  );
+}
+
+export default function CampaignDetail() {
+  const scheme = useColorScheme();
+  // reuse theme but just wrap in provider
+  return (
+    <>
+      <CampaignsLocalProvider>
+        <CampaignDetailInner />
+      </CampaignsLocalProvider>
     </>
   );
 }
@@ -42,5 +88,9 @@ function createStyles(palette: Palette) {
     text: { fontSize: 16, color: palette.muted, marginBottom: 16 },
     button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44 },
     buttonText: { color: palette.onPrimary, fontSize: 16 },
+    secondary: { backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44 },
+    secondaryText: { color: palette.text, fontSize: 16, fontWeight: "700" },
+    ghost: { backgroundColor: "transparent", paddingVertical: 8, paddingHorizontal: 12 },
+    linkText: { color: palette.primary, fontWeight: "700", fontSize: 16 },
   });
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, TextInput, Pressable } from "react-native";
 import { colors, type Palette } from "../../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
@@ -12,8 +12,9 @@ import { useAnnounceOnChange } from "../../../hooks/useA11y";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
+import { CampaignsLocalProvider, useCampaignsLocal } from "../../../store/campaignsLocal";
 
-export default function CampaignsScreen() {
+function ScreenInner() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
@@ -27,6 +28,7 @@ export default function CampaignsScreen() {
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
+  const { state: local, createCampaign } = useCampaignsLocal();
   const reload = React.useCallback(async () => {
     try {
       setError(null);
@@ -52,18 +54,26 @@ export default function CampaignsScreen() {
   }, [items, setCount]);
 
   useAnnounceOnChange(items.length, (n) => `${n} campaigns loaded`);
+  const allItems = React.useMemo(() => {
+    // Merge user-created campaigns with fetched ones (user-created first)
+    const merged = [...local.myCampaigns, ...items];
+    return merged;
+  }, [local.myCampaigns, items]);
+
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return items;
-    return items.filter((c) => c.title.toLowerCase().includes(q) || c.summary.toLowerCase().includes(q));
-  }, [query, items]);
+    if (!q) return allItems;
+    return allItems.filter((c) => c.title.toLowerCase().includes(q) || c.summary.toLowerCase().includes(q));
+  }, [query, allItems]);
 
   return (
     <View style={styles.container} accessibilityLabel="Campaigns screen" accessible>
       <Text ref={titleRef} nativeID="campaigns-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Campaigns
       </Text>
-      <Text style={styles.subtitle}>Browse and support active campaigns.</Text>
+      <Text style={styles.subtitle}>Browse, create, and join campaigns.</Text>
+      {/* Create campaign */}
+      <CreateCampaignBox onCreate={(title, summary) => createCampaign(title, summary)} palette={palette} />
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search campaigns" accessibilityLabel="Search campaigns" />
       {loading && (
         <View>
@@ -120,10 +130,53 @@ export default function CampaignsScreen() {
   );
 }
 
+export default function CampaignsScreen() {
+  return (
+    <CampaignsLocalProvider>
+      <ScreenInner />
+    </CampaignsLocalProvider>
+  );
+}
+
 function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text, fontFamily: "Poppins" },
     subtitle: { fontSize: 16, color: palette.muted, marginBottom: 8, fontFamily: "Roboto" },
   });
+}
+
+function CreateCampaignBox({ onCreate, palette }: { onCreate: (title: string, summary: string) => void; palette: Palette }) {
+  const [title, setTitle] = React.useState("");
+  const [summary, setSummary] = React.useState("");
+  const canCreate = title.trim().length > 2 && summary.trim().length > 4;
+  return (
+    <View style={{ marginBottom: 12 }} accessibilityLabel="Create a campaign" accessible>
+      <TextInput
+        placeholder="Campaign title"
+        placeholderTextColor={palette.muted}
+        value={title}
+        onChangeText={setTitle}
+        style={{ borderWidth: 1, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, color: palette.text, marginBottom: 6 }}
+        accessibilityLabel="Campaign title"
+      />
+      <TextInput
+        placeholder="Brief summary"
+        placeholderTextColor={palette.muted}
+        value={summary}
+        onChangeText={setSummary}
+        style={{ borderWidth: 1, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, color: palette.text, marginBottom: 6 }}
+        accessibilityLabel="Campaign summary"
+      />
+      <Pressable
+        onPress={() => { if (!canCreate) return; onCreate(title.trim(), summary.trim()); setTitle(""); setSummary(""); }}
+        disabled={!canCreate}
+        style={({ pressed }) => [{ backgroundColor: palette.primary, borderRadius: 10, paddingVertical: 10, alignItems: "center" }, (!canCreate || pressed) && { opacity: 0.7 }]}
+        accessibilityRole="button"
+        accessibilityLabel="Create campaign"
+      >
+        <Text style={{ color: palette.onPrimary, fontWeight: "700" }}>Create Campaign</Text>
+      </Pressable>
+    </View>
+  );
 }
