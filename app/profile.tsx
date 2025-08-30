@@ -3,12 +3,14 @@ import { View, Text, StyleSheet, Pressable, TextInput, useColorScheme } from "re
 import { colors, type Palette } from "../theme/colors";
 import { useAuth } from "../store/auth";
 import { router } from "expo-router";
+import { useTranslation, Lang } from "../i18n";
 
 export default function Profile() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
   const { state, signIn, continueAnonymously, signOut } = useAuth();
+  const { lang, setLanguage } = useTranslation();
   const [name, setName] = React.useState(state.user?.name ?? "");
 
   return (
@@ -19,6 +21,23 @@ export default function Profile() {
         <Row label="Status" value={state.status} />
         <Row label="Onboarded" value={state.isOnboarded ? "Yes" : "No"} />
         <Row label="User" value={state.user?.name ?? "Guest"} />
+      </View>
+
+      <View style={styles.card}>
+        <Text style={{ fontWeight: "700", marginBottom: 8 }}>Language</Text>
+        <View style={{ flexDirection: "row", gap: 8 }}>
+          {(["en", "fr", "es"] as Lang[]).map((code) => (
+            <Pressable
+              key={code}
+              onPress={() => setLanguage(code)}
+              style={[styles.langChip, lang === code && styles.langChipActive]}
+              accessibilityRole="button"
+              accessibilityLabel={`Switch language to ${code}`}
+            >
+              <Text style={[styles.langChipText, lang === code && styles.langChipTextActive]}>{code.toUpperCase()}</Text>
+            </Pressable>
+          ))}
+        </View>
       </View>
 
       {state.status === "signedIn" ? (
@@ -75,6 +94,9 @@ function createStyles(palette: Palette) {
     primaryText: { color: palette.onPrimary, fontWeight: "700" },
     ghost: { backgroundColor: "transparent", borderWidth: 1, borderColor: palette.muted },
     ghostText: { color: palette.text, fontWeight: "700" },
+    langChip: { borderWidth: 1, borderColor: palette.muted, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 8 },
+    langChipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
+    langChipText: { color: palette.text, fontWeight: "700" },
+    langChipTextActive: { color: palette.onPrimary },
   });
 }
-

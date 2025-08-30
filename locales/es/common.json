@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "campaigns": "Campañas",
+    "community": "Comunidad",
+    "advocacy": "Defensa",
+    "podcasts": "Podcasts y relatos",
+    "resources": "Recursos",
+    "events": "Eventos",
+    "wellness": "Bienestar",
+    "profile": "Perfil"
+  },
+  "home": {
+    "title": "Bienvenido a Empowr",
+    "subtitle": "Apoyo. Defensa. Empoderamiento.",
+    "welcome": "¡Bienvenido! Este es tu centro para comunidad, educación, herramientas de defensa y podcasts — ¡todo en un solo lugar!"
+  },
+  "header": {
+    "favorites": "Favs",
+    "items": "Elementos",
+    "openProfile": "Abrir perfil",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "refresh": "Actualizar todo"
+  }
+}
+

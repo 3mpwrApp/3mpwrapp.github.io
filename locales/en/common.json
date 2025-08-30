@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "Home",
+    "campaigns": "Campaigns",
+    "community": "Community Hub",
+    "advocacy": "Advocacy",
+    "podcasts": "Podcasts & Stories",
+    "resources": "Resources",
+    "events": "Events",
+    "wellness": "Wellness",
+    "profile": "Profile"
+  },
+  "home": {
+    "title": "Welcome to Empowr",
+    "subtitle": "Support. Advocacy. Empowerment.",
+    "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!"
+  },
+  "header": {
+    "favorites": "Favs",
+    "items": "Items",
+    "openProfile": "Open profile",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "refresh": "Refresh all"
+  }
+}
+

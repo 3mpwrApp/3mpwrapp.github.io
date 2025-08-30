@@ -33,3 +33,15 @@ You can start developing by editing the files inside the `app` directory. This p
 Notes
 - AsyncStorage is optional. If not installed, auth state persists for the current session only.
 
+## Localization (i18n)
+
+- Provider: `i18n/index.tsx` with lightweight runtime translations (no external deps).
+- Languages: English (`en`), French (`fr`), Spanish (`es`). Files in `locales/<lang>/common.json`.
+- Usage: `const { t } = useTranslation();` then `t('home.title')`.
+- Change language: Profile screen provides quick EN/FR/ES toggle.
+
+## Accessibility Enhancements
+
+- Consistent touch targets: `constants/a11y.ts` exports `HIT_SLOP_8` and `touchTarget.min` (44×44dp). Applied to header buttons.
+- RTL readiness: replaced left/right paddings with start/end where present.
+- Static scan: `npm run a11y:scan` to flag missing roles/hitSlop in TSX.

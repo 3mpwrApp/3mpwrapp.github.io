@@ -6,6 +6,8 @@ import { useRefresh } from "../store/refresh";
 import { Ionicons } from "@expo/vector-icons";
 import { useAuth } from "../store/auth";
 import { router } from "expo-router";
+import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
+import { useTranslation } from "../i18n";
 
 export default function ThemedHeader() {
   const scheme = useColorScheme();
@@ -15,6 +17,7 @@ export default function ThemedHeader() {
   const { counts } = useCounts();
   const { refreshAll } = useRefresh();
   const { state: auth, signOut } = useAuth();
+  const { t } = useTranslation();
 
   const favTotal = state
     ? state.campaign.size + state.resource.size + state.advocate.size + state.podcast.size
@@ -38,9 +41,9 @@ export default function ThemedHeader() {
             onPress={() => Linking.openURL("https://x.com/empowrapp0816?fbclid=IwY2xjawMfJvRleHRuA2FlbQIxMABicmlkETFmTzUwSUVDOFM3N2JlNjRMAR5N-V-9SV42Io93BvOCfSWc6g6mmXNfCAx5RzeznffITIWwGf9zXPY1WN-mmg_aem_CH3LxzsfYeUEwnmKyuGbOQ")}
             accessibilityRole="link"
             accessibilityLabel="Open Empowr on X (formerly Twitter)"
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            hitSlop={HIT_SLOP_8}
             testID="link-social-x"
-            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="logo-twitter" size={20} color={palette.text} />
           </Pressable>
@@ -48,9 +51,9 @@ export default function ThemedHeader() {
             onPress={() => Linking.openURL("https://www.instagram.com/empowrapp/?fbclid=IwY2xjawMfJvBleHRuA2FlbQIxMABicmlkETFmTzUwSUVDOFM3N2JlNjRMAR5N-V-9SV42Io93BvOCfSWc6g6mmXNfCAx5RzeznffITIWwGf9zXPY1WN-mmg_aem_CH3LxzsfYeUEwnmKyuGbOQ")}
             accessibilityRole="link"
             accessibilityLabel="Open Empowr on Instagram"
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            hitSlop={HIT_SLOP_8}
             testID="link-social-instagram"
-            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="logo-instagram" size={20} color={palette.text} />
           </Pressable>
@@ -58,31 +61,31 @@ export default function ThemedHeader() {
             onPress={() => Linking.openURL("https://www.facebook.com/profile.php?id=61579428783083")}
             accessibilityRole="link"
             accessibilityLabel="Open Empowr on Facebook"
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            hitSlop={HIT_SLOP_8}
             testID="link-social-facebook"
-            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="logo-facebook" size={20} color={palette.text} />
           </Pressable>
         </View>
 
         {/* Counts and refresh */}
-        <Text style={styles.countText} testID="header-favorites-count" accessibilityLabel={`Favorites ${favTotal}`}>
-          Favs: {favTotal}
+        <Text style={styles.countText} testID="header-favorites-count" accessibilityLabel={`${t("header.favorites")} ${favTotal}`}>
+          {t("header.favorites")}: {favTotal}
         </Text>
         <Text
           style={styles.countText}
           testID="header-items-count"
-          accessibilityLabel={`Items ${counts.campaigns + counts.resources + counts.advocates + counts.podcasts + counts.events}`}
+          accessibilityLabel={`${t("header.items")} ${counts.campaigns + counts.resources + counts.advocates + counts.podcasts + counts.events}`}
         >
-          Items: {counts.campaigns + counts.resources + counts.advocates + counts.podcasts + counts.events}
+          {t("header.items")}: {counts.campaigns + counts.resources + counts.advocates + counts.podcasts + counts.events}
         </Text>
         <Pressable
           onPress={refreshAll}
           accessibilityRole="button"
-          accessibilityLabel="Refresh all"
-          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+          accessibilityLabel={t("header.refresh")}
+          hitSlop={HIT_SLOP_8}
+          style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
         >
           <Ionicons name="refresh" size={20} color={palette.text} />
         </Pressable>
@@ -90,9 +93,9 @@ export default function ThemedHeader() {
         <Pressable
           onPress={() => router.push("/profile")}
           accessibilityRole="button"
-          accessibilityLabel="Open profile"
-          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+          accessibilityLabel={t("header.openProfile")}
+          hitSlop={HIT_SLOP_8}
+          style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
         >
           <Ionicons name="person-circle-outline" size={22} color={palette.text} />
         </Pressable>
@@ -101,9 +104,9 @@ export default function ThemedHeader() {
           <Pressable
             onPress={signOut}
             accessibilityRole="button"
-            accessibilityLabel="Sign out"
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+            accessibilityLabel={t("header.signOut")}
+            hitSlop={HIT_SLOP_8}
+            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="log-out" size={20} color={palette.text} />
           </Pressable>
@@ -111,9 +114,9 @@ export default function ThemedHeader() {
           <Pressable
             onPress={() => router.push("/(auth)/login")}
             accessibilityRole="button"
-            accessibilityLabel={auth.status === "anonymous" ? "Sign in" : "Open login"}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+            accessibilityLabel={t("header.signIn")}
+            hitSlop={HIT_SLOP_8}
+            style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Ionicons name="log-in" size={20} color={palette.text} />
           </Pressable>
@@ -144,7 +147,7 @@ function createStyles(palette: Palette) {
       fontFamily: "Poppins",
     },
     right: { flexDirection: "row", gap: 12, alignItems: "center" },
-    social: { flexDirection: "row", gap: 12, marginRight: 8 },
+    social: { flexDirection: "row", gap: 12, marginEnd: 8 },
     countText: { color: palette.muted, fontSize: 12 },
   });
 }

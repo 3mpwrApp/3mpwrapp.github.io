@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useColorScheme } from "react-native";
 import { colors } from "../../theme/colors";
 import { useCounts } from "../../store/counts";
+import { useTranslation } from "../../i18n";
 
 export default function TabsLayout() {
   const colorScheme = useColorScheme();
@@ -10,6 +11,7 @@ export default function TabsLayout() {
   const activeTint = palette.primary;
   const inactiveTint = palette.muted;
   const { counts } = useCounts();
+  const { t } = useTranslation();
 
   return (
     <Tabs
@@ -26,9 +28,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
-          tabBarLabel: "Home",
-          tabBarAccessibilityLabel: "Home tab",
+          title: t("nav.home"),
+          tabBarLabel: t("nav.home"),
+          tabBarAccessibilityLabel: t("nav.home") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons name={focused ? "home" : "home-outline"} color={color} size={size} />
           ),
@@ -45,9 +47,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="campaigns/index"
         options={{
-          title: "Campaigns",
-          tabBarLabel: "Campaigns",
-          tabBarAccessibilityLabel: "Campaigns tab",
+          title: t("nav.campaigns"),
+          tabBarLabel: t("nav.campaigns"),
+          tabBarAccessibilityLabel: t("nav.campaigns") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons name={focused ? "megaphone" : "megaphone-outline"} color={color} size={size} />
           ),
@@ -56,9 +58,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="community"
         options={{
-          title: "Community Hub",
-          tabBarLabel: "Community Hub",
-          tabBarAccessibilityLabel: "Community Hub tab",
+          title: t("nav.community"),
+          tabBarLabel: t("nav.community"),
+          tabBarAccessibilityLabel: t("nav.community") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} color={color} size={size} />
           ),
@@ -68,9 +70,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="advocacy/index"
         options={{
-          title: "Advocacy",
-          tabBarLabel: "Advocacy",
-          tabBarAccessibilityLabel: "Advocacy tab",
+          title: t("nav.advocacy"),
+          tabBarLabel: t("nav.advocacy"),
+          tabBarAccessibilityLabel: t("nav.advocacy") + " tab",
           // no badge
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
@@ -84,9 +86,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="podcasts/index"
         options={{
-          title: "Podcasts & Stories",
-          tabBarLabel: "Podcasts & Stories",
-          tabBarAccessibilityLabel: "Podcasts and Stories tab",
+          title: t("nav.podcasts"),
+          tabBarLabel: t("nav.podcasts"),
+          tabBarAccessibilityLabel: t("nav.podcasts") + " tab",
           // no badge
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size} />
@@ -96,9 +98,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="resources/index"
         options={{
-          title: "Resources",
-          tabBarLabel: "Resources",
-          tabBarAccessibilityLabel: "Resources tab",
+          title: t("nav.resources"),
+          tabBarLabel: t("nav.resources"),
+          tabBarAccessibilityLabel: t("nav.resources") + " tab",
           // no badge
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
@@ -112,9 +114,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="events/index"
         options={{
-          title: "Events",
-          tabBarLabel: "Events",
-          tabBarAccessibilityLabel: "Events tab",
+          title: t("nav.events"),
+          tabBarLabel: t("nav.events"),
+          tabBarAccessibilityLabel: t("nav.events") + " tab",
           // no badge
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons name={focused ? "calendar" : "calendar-outline"} color={color} size={size} />
@@ -124,9 +126,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="wellness"
         options={{
-          title: "Wellness",
-          tabBarLabel: "Wellness",
-          tabBarAccessibilityLabel: "Wellness tab",
+          title: t("nav.wellness"),
+          tabBarLabel: t("nav.wellness"),
+          tabBarAccessibilityLabel: t("nav.wellness") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
             <Ionicons
               name={focused ? "heart" : "heart-outline"}

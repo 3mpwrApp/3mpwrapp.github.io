@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "campaigns": "Campagnes",
+    "community": "Communauté",
+    "advocacy": "Défense des droits",
+    "podcasts": "Balados et récits",
+    "resources": "Ressources",
+    "events": "Événements",
+    "wellness": "Bien‑être",
+    "profile": "Profil"
+  },
+  "home": {
+    "title": "Bienvenue sur Empowr",
+    "subtitle": "Soutien. Défense. Autonomisation.",
+    "welcome": "Bienvenue! Votre carrefour pour la communauté, l’éducation, les outils de défense des droits et les balados — tout au même endroit!"
+  },
+  "header": {
+    "favorites": "Favs",
+    "items": "Éléments",
+    "openProfile": "Ouvrir le profil",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "refresh": "Tout actualiser"
+  }
+}
+

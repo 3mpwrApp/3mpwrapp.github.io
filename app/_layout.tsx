@@ -8,6 +8,7 @@ import { NetworkProvider } from "../store/network";
 import { AuthProvider } from "../store/auth";
 import Header from "../components/ThemedHeader";
 import Footer from "../components/ThemedFooter";
+import { I18nProvider } from "../i18n";
 
 export default function RootLayout() {
   const [reduceMotion, setReduceMotion] = React.useState(false);
@@ -39,25 +40,27 @@ export default function RootLayout() {
 
   return (
     <>
-      <AuthProvider>
-        <FavoritesProvider>
-          <CountsProvider>
-            <NetworkProvider>
-              <RefreshProvider>
-                <Header />
-                <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
-                  <Stack.Screen name="profile" options={{ headerShown: false }} />
-                  <Stack.Screen name="index" options={{ headerShown: false }} />
-                  <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-                  <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                  <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-                </Stack>
-                <Footer />
-              </RefreshProvider>
-            </NetworkProvider>
-          </CountsProvider>
-        </FavoritesProvider>
-      </AuthProvider>
+      <I18nProvider>
+        <AuthProvider>
+          <FavoritesProvider>
+            <CountsProvider>
+              <NetworkProvider>
+                <RefreshProvider>
+                  <Header />
+                  <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
+                    <Stack.Screen name="profile" options={{ headerShown: false }} />
+                    <Stack.Screen name="index" options={{ headerShown: false }} />
+                    <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                    <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                    <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+                  </Stack>
+                  <Footer />
+                </RefreshProvider>
+              </NetworkProvider>
+            </CountsProvider>
+          </FavoritesProvider>
+        </AuthProvider>
+      </I18nProvider>
     </>
   );
 }

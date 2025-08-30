@@ -52,7 +52,7 @@ function createStyles(palette: Palette) {
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
       borderRadius: 8,
-      paddingRight: 6,
+      paddingEnd: 6,
       marginTop: 8,
     },
     input: {
