@@ -1,0 +1,10 @@
+title: Empowr App
+tagline: Connecting voices, empowering change.
+description: Empowr is a community-driven platform for Injured Workers and Persons with Disabilities across Canada.
+# For a user site, leave baseurl empty. For a project site, set baseurl: "/empowr-site"
+baseurl: ""       # change to "/empowr-site" if this is a project site
+url: "https://YOURUSERNAME.github.io"  # change YOURUSERNAME
+
+# Build settings
+markdown: kramdown
+theme: null       # we’ll use our own layout/CSS
