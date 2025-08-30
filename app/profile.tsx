@@ -5,6 +5,7 @@ import { useAuth } from "../store/auth";
 import { router } from "expo-router";
 import { useTranslation, Lang } from "../i18n";
 import * as Notifier from "../services/notifications";
+import { sendExpoPush } from "../services/expoPush";
 
 export default function Profile() {
   const scheme = useColorScheme();
@@ -14,6 +15,9 @@ export default function Profile() {
   const { lang, setLanguage } = useTranslation();
   const [name, setName] = React.useState(state.user?.name ?? "");
   const [pushToken, setPushToken] = React.useState<string | null>(null);
+  const [pushTitle, setPushTitle] = React.useState("Hello from Empowr");
+  const [pushBody, setPushBody] = React.useState("This is a remote push test via Expo API.");
+  const [pushStatus, setPushStatus] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     Notifier.getExpoPushToken().then(setPushToken).catch(() => setPushToken(null));
@@ -38,6 +42,44 @@ export default function Profile() {
         <Pressable style={[styles.cta, styles.primary]} onPress={Notifier.sendTestLocal} accessibilityRole="button" accessibilityLabel="Send test notification">
           <Text style={styles.primaryText}>Send Test Notification</Text>
         </Pressable>
+        {!!pushToken && (
+          <>
+            <Text style={{ marginTop: 12, color: palette.muted }}>Send remote push (Expo API):</Text>
+            <TextInput
+              style={styles.input}
+              value={pushTitle}
+              onChangeText={setPushTitle}
+              placeholder="Title"
+              placeholderTextColor={palette.muted}
+              accessibilityLabel="Push title"
+            />
+            <TextInput
+              style={styles.input}
+              value={pushBody}
+              onChangeText={setPushBody}
+              placeholder="Body"
+              placeholderTextColor={palette.muted}
+              accessibilityLabel="Push body"
+            />
+            <Pressable
+              style={[styles.cta, styles.ghost]}
+              onPress={async () => {
+                try {
+                  setPushStatus("Sending...");
+                  await sendExpoPush(pushToken, pushTitle, pushBody);
+                  setPushStatus("Sent ✅");
+                } catch {
+                  setPushStatus("Failed to send ❌");
+                }
+              }}
+              accessibilityRole="button"
+              accessibilityLabel="Send remote push"
+            >
+              <Text style={styles.ghostText}>Send Remote Push</Text>
+            </Pressable>
+            {pushStatus && <Text style={{ color: palette.muted, marginTop: 6 }}>{pushStatus}</Text>}
+          </>
+        )}
       </View>
 
       <View style={styles.card}>
