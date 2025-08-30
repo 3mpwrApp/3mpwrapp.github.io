@@ -5,6 +5,7 @@ import { FavoritesProvider } from "../store/favorites";
 import { CountsProvider } from "../store/counts";
 import { RefreshProvider } from "../store/refresh";
 import { NetworkProvider } from "../store/network";
+import { AuthProvider } from "../store/auth";
 import Header from "../components/ThemedHeader";
 import Footer from "../components/ThemedFooter";
 
@@ -38,20 +39,24 @@ export default function RootLayout() {
 
   return (
     <>
-      <FavoritesProvider>
-        <CountsProvider>
-          <NetworkProvider>
-            <RefreshProvider>
-              <Header />
-              <Stack initialRouteName="(tabs)" screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-              </Stack>
-              <Footer />
-            </RefreshProvider>
-          </NetworkProvider>
-        </CountsProvider>
-      </FavoritesProvider>
+      <AuthProvider>
+        <FavoritesProvider>
+          <CountsProvider>
+            <NetworkProvider>
+              <RefreshProvider>
+                <Header />
+                <Stack screenOptions={{ animation: reduceMotion ? "none" : "default" }}>
+                  <Stack.Screen name="index" options={{ headerShown: false }} />
+                  <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                  <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                  <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+                </Stack>
+                <Footer />
+              </RefreshProvider>
+            </NetworkProvider>
+          </CountsProvider>
+        </FavoritesProvider>
+      </AuthProvider>
     </>
   );
 }

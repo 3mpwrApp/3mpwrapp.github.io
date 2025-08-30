@@ -4,6 +4,8 @@ import { useFavorites } from "../store/favorites";
 import { useCounts } from "../store/counts";
 import { useRefresh } from "../store/refresh";
 import { Ionicons } from "@expo/vector-icons";
+import { useAuth } from "../store/auth";
+import { router } from "expo-router";
 
 export default function ThemedHeader() {
   const scheme = useColorScheme();
@@ -12,6 +14,7 @@ export default function ThemedHeader() {
   const { state } = useFavorites();
   const { counts } = useCounts();
   const { refreshAll } = useRefresh();
+  const { state: auth, signOut } = useAuth();
 
   const favTotal = state
     ? state.campaign.size + state.resource.size + state.advocate.size + state.podcast.size
@@ -83,6 +86,28 @@ export default function ThemedHeader() {
         >
           <Ionicons name="refresh" size={20} color={palette.text} />
         </Pressable>
+        {/* Auth control */}
+        {auth.status === "signedIn" ? (
+          <Pressable
+            onPress={signOut}
+            accessibilityRole="button"
+            accessibilityLabel="Sign out"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+          >
+            <Ionicons name="log-out" size={20} color={palette.text} />
+          </Pressable>
+        ) : (
+          <Pressable
+            onPress={() => router.push("/(auth)/login")}
+            accessibilityRole="button"
+            accessibilityLabel={auth.status === "anonymous" ? "Sign in" : "Open login"}
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1 }]}
+          >
+            <Ionicons name="log-in" size={20} color={palette.text} />
+          </Pressable>
+        )}
       </View>
     </SafeAreaView>
   );
