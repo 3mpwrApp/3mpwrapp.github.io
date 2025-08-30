@@ -10,6 +10,7 @@ import Header from "../components/ThemedHeader";
 import Footer from "../components/ThemedFooter";
 import { I18nProvider } from "../i18n";
 import * as Notifier from "../services/notifications";
+import { initAnalytics } from "../services/analytics";
 
 export default function RootLayout() {
   const [reduceMotion, setReduceMotion] = React.useState(false);
@@ -34,6 +35,11 @@ export default function RootLayout() {
   React.useEffect(() => {
     // best-effort notification permission
     Notifier.setupAsync();
+  }, []);
+
+  React.useEffect(() => {
+    // Initialize Firebase and analytics (web only)
+    initAnalytics();
   }, []);
 
   // Announce route changes to screen readers

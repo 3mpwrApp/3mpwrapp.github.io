@@ -4,6 +4,7 @@ import { colors, type Palette } from "../../../theme/colors";
 import { campaigns } from "../../../data/campaigns";
 import { useFavorites } from "../../../store/favorites";
 import { useCampaignsLocal, CampaignsLocalProvider } from "../../../store/campaignsLocal";
+import { logEvent } from "../../../services/analytics";
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -39,7 +40,10 @@ function CampaignDetailInner() {
         {!!campaign && (
           <Pressable
             style={({ pressed }) => [styles.secondary, pressed && { opacity: 0.8 }]}
-            onPress={() => (joined ? leave(campaign.id) : join(campaign.id))}
+            onPress={() => {
+              if (joined) { leave(campaign.id); logEvent("campaign_leave", { id: campaign.id }); }
+              else { join(campaign.id); logEvent("campaign_join", { id: campaign.id }); }
+            }}
             accessibilityRole="button"
             accessibilityLabel={joined ? "Leave campaign" : "Join campaign"}
           >
@@ -56,6 +60,7 @@ function CampaignDetailInner() {
               try {
                 const msg = `${campaign.title} — ${campaign.summary}`;
                 await Share.share({ title: campaign.title, message: msg, url: `https://empowr.app/campaigns/${campaign.id}` });
+                logEvent("campaign_share", { id: campaign.id });
               } catch {}
             }}
             accessibilityRole="button"

@@ -13,6 +13,7 @@ import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
 import { CampaignsLocalProvider, useCampaignsLocal } from "../../../store/campaignsLocal";
+import { logEvent } from "../../../services/analytics";
 
 function ScreenInner() {
   const scheme = useColorScheme();
@@ -73,7 +74,7 @@ function ScreenInner() {
       </Text>
       <Text style={styles.subtitle}>Browse, create, and join campaigns.</Text>
       {/* Create campaign */}
-      <CreateCampaignBox onCreate={(title, summary) => createCampaign(title, summary)} palette={palette} />
+      <CreateCampaignBox onCreate={(title, summary) => { const c = createCampaign(title, summary); logEvent("campaign_create", { id: c.id }); }} palette={palette} />
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search campaigns" accessibilityLabel="Search campaigns" />
       {loading && (
         <View>
