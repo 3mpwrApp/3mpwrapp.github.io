@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Image } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
+import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import { podcasts as localPodcasts } from "../../../data/podcasts";
 import { stories as localStories } from "../../../data/stories";
@@ -16,7 +17,8 @@ import { useNetwork } from "../../../store/network";
 export default function PodcastsScreen() {
   const scheme = useColorScheme();
   const palette = useAppPalette();
-  const styles = createStyles(palette);
+  const { factor } = useTextScale();
+  const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Podcasts and Stories");
   useFocusOnRefOnMount(titleRef);
@@ -127,10 +129,10 @@ export default function PodcastsScreen() {
   );
 }
 
-function createStyles(palette: Palette) {
+function createStyles(palette: Palette, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, marginBottom: 8 },
+    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
+    subtitle: { fontSize: Math.round(17 * factor), color: palette.text, opacity: 0.9, marginBottom: 8 },
   });
 }

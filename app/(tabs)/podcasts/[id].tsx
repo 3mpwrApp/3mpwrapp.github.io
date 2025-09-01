@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
+import { useTextScale } from "../../../theme/typography";
 import { podcasts } from "../../../data/podcasts";
 import { useFavorites } from "../../../store/favorites";
 // Lazily import expo-av to avoid bundling errors if it's not installed
@@ -12,7 +13,8 @@ type AVPlaybackStatusSuccess = any;
 export default function PodcastDetail() {
   const { id, title: t, description: d, duration: du } = useLocalSearchParams<{ id: string; title?: string; description?: string; duration?: string }>();
   const palette = useAppPalette();
-  const styles = createStyles(palette);
+  const { factor } = useTextScale();
+  const styles = createStyles(palette, factor);
   const podcast = podcasts.find((p) => p.id === id) || (t ? { id: String(id), title: String(t), description: String(d || ""), duration: String(du || ""), audioUrl: "" } : undefined);
   const { has, toggle } = useFavorites();
   const saved = podcast ? has("podcast", podcast.id) : false;
@@ -151,11 +153,12 @@ export default function PodcastDetail() {
   );
 }
 
-function createStyles(palette: Palette) {
+type Palette = ReturnType<typeof useAppPalette>;
+function createStyles(palette: Palette, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: 22, fontWeight: "700", marginBottom: 8, color: palette.text },
-    text: { fontSize: 16, color: palette.text, opacity: 0.95, marginBottom: 16 },
+    title: { fontSize: Math.round(22 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
+    text: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.95, marginBottom: 16 },
     button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44 },
     buttonText: { color: palette.onPrimary, fontSize: 16 },
   });

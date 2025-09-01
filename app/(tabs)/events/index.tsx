@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Pressable } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
+import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import { events as localEvents } from "../../../data/events";
 import { fetchEvents } from "../../../services/events";
@@ -13,7 +14,8 @@ import { useNetwork } from "../../../store/network";
 
 export default function EventsScreen() {
   const palette = useAppPalette();
-  const styles = createStyles(palette);
+  const { factor } = useTextScale();
+  const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Events");
   useFocusOnRefOnMount(titleRef);
@@ -136,11 +138,11 @@ export default function EventsScreen() {
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>) {
+function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text, fontFamily: "Poppins" },
-    subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, marginBottom: 8, fontFamily: "Roboto" },
+    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text, fontFamily: "Poppins" },
+    subtitle: { fontSize: Math.round(17 * factor), color: palette.text, opacity: 0.9, marginBottom: 8, fontFamily: "Roboto" },
     button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44 },
     
     calHeader: { marginTop: 8, marginBottom: 8, flexDirection: ""row"", alignItems: ""center"", justifyContent: ""space-between"" },

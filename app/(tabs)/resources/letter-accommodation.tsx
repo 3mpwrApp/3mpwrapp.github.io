@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TextInput, StyleSheet, ScrollView, Pressable, Share } from "react-native";
+import { View, Text, TextInput, StyleSheet, ScrollView, Pressable, Share, Alert } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
@@ -45,6 +45,23 @@ export default function AccommodationLetter() {
       <Pressable style={({ pressed }) => [styles.button, pressed && { opacity: 0.9 }]} onPress={() => Share.share({ message: preview, title: "Accommodation Request" }).catch(() => {})} accessibilityRole="button" accessibilityLabel="Share letter">
         <Text style={styles.buttonText}>Share</Text>
       </Pressable>
+      <Pressable
+        style={({ pressed }) => [styles.button, { marginTop: 8 }, pressed && { opacity: 0.9 }]}
+        accessibilityRole="button"
+        accessibilityLabel="Export as PDF"
+        onPress={async () => {
+          try {
+            const mod = await import("expo-print");
+            const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">${preview.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</pre>`;
+            const { uri } = await mod.printToFileAsync({ html });
+            await Share.share({ url: uri, title: "Accommodation Request" });
+          } catch (e) {
+            Alert.alert("PDF not available", "Install expo-print in a dev build to export PDFs.");
+          }
+        }}
+      >
+        <Text style={styles.buttonText}>Export as PDF</Text>
+      </Pressable>
     </ScrollView>
   );
 }
@@ -81,4 +98,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     placeholderColor: placeholderColor as unknown as any,
   });
 }
-

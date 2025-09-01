@@ -2,6 +2,7 @@ import React from "react";
 import { Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { colors, type Palette } from "../theme/colors";
+import { useTextScale } from "../theme/typography";
 
 type Props = {
   title: string;
@@ -18,7 +19,8 @@ type Props = {
 export default function Card({ title, subtitle, onPress, rightIcon = "chevron-forward", onPressRight, rightA11yLabel, testID, accessibilityLabel, left }: Props) {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
-  const styles = React.useMemo(() => createStyles(palette), [palette]);
+  const { factor } = useTextScale();
+  const styles = React.useMemo(() => createStyles(palette, factor), [palette, factor]);
 
   return (
     <Pressable
@@ -51,7 +53,7 @@ export default function Card({ title, subtitle, onPress, rightIcon = "chevron-fo
   );
 }
 
-function createStyles(palette: Palette) {
+function createStyles(palette: Palette, factor: number) {
   return StyleSheet.create({
     container: {
       flexDirection: "row",
@@ -66,8 +68,8 @@ function createStyles(palette: Palette) {
     },
     textWrap: { flex: 1, paddingEnd: 12 },
     leftWrap: { marginEnd: 12 },
-    title: { color: palette.text, fontSize: 16, fontWeight: "600" },
-    subtitle: { color: palette.text, opacity: 0.9, fontSize: 14, marginTop: 2 },
+    title: { color: palette.text, fontSize: Math.round(16 * factor), fontWeight: "600" },
+    subtitle: { color: palette.text, opacity: 0.9, fontSize: Math.round(14 * factor), marginTop: 2 },
     rightAction: { paddingStart: 8 },
   });
 }
