@@ -97,7 +97,7 @@ export default function ResourcesScreen() {
     if (region !== "all") {
       return [
         {
-          title: region === "canada" ? "Canada" : `${region} — ${PROVINCE_NAMES[region]}`,
+          title: region === "canada" ? "Canada" : `${region} - ${PROVINCE_NAMES[region]}`,
           data: filtered,
         },
       ];
@@ -112,7 +112,7 @@ export default function ResourcesScreen() {
     }
     const provSections = Array.from(byProv.entries())
       .sort((a, b) => a[0].localeCompare(b[0]))
-      .map(([code, list]) => ({ title: `${code} — ${PROVINCE_NAMES[code]}`, data: list }));
+      .map(([code, list]) => ({ title: `${code} - ${PROVINCE_NAMES[code]}`, data: list }));
     const result = [] as { title: string; data: Resource[] }[];
     if (canada.length) result.push({ title: "Canada", data: canada });
     return result.concat(provSections);
@@ -123,7 +123,7 @@ export default function ResourcesScreen() {
       <Text ref={titleRef} nativeID="resources-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Resources
       </Text>
-      <Text style={styles.subtitle}>Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.</Text>
+      <Text style={styles.subtitle}>Here you'll find practical tools, guides, and supports - everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.</Text>
       <View style={styles.filters} accessibilityLabel="Category filters" accessible>
         {(["all", "work_financial", "tools_downloads", "emergency_crisis"] as CategoryFilter[]).map((key) => (
           <Pressable
@@ -281,3 +281,6 @@ function createStyles(palette: Palette) {
     toggleText: { color: palette.primary },
   });
 }
+
+
+
