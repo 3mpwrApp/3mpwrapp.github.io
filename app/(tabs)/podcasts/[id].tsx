@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
-import { colors, type Palette } from "../../../theme/colors";
+import { useAppPalette } from "../../../theme/usePalette";
 import { podcasts } from "../../../data/podcasts";
 import { useFavorites } from "../../../store/favorites";
 // Lazily import expo-av to avoid bundling errors if it's not installed
@@ -11,8 +11,7 @@ type AVPlaybackStatusSuccess = any;
 
 export default function PodcastDetail() {
   const { id, title: t, description: d, duration: du } = useLocalSearchParams<{ id: string; title?: string; description?: string; duration?: string }>();
-  const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = useAppPalette();
   const styles = createStyles(palette);
   const podcast = podcasts.find((p) => p.id === id) || (t ? { id: String(id), title: String(t), description: String(d || ""), duration: String(du || ""), audioUrl: "" } : undefined);
   const { has, toggle } = useFavorites();

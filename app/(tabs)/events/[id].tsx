@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Platform } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
-import { colors, type Palette } from "../../../theme/colors";
+import { useAppPalette } from "../../../theme/usePalette";
 import { events } from "../../../data/events";
 
 function createICS(title: string, start: string, description?: string, location?: string) {
@@ -13,7 +13,7 @@ function createICS(title: string, start: string, description?: string, location?
 export default function EventDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = useAppPalette();
   const styles = createStyles(palette);
 
   const event = events.find((e) => e.id === id);
@@ -49,7 +49,7 @@ export default function EventDetail() {
   );
 }
 
-function createStyles(palette: Palette) {
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: "700", marginBottom: 8, color: palette.text },

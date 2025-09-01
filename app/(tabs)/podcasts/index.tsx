@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Image } from "react-native";
-import { colors, type Palette } from "../../../theme/colors";
+import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import { podcasts as localPodcasts } from "../../../data/podcasts";
 import { stories as localStories } from "../../../data/stories";
@@ -15,7 +15,7 @@ import { useNetwork } from "../../../store/network";
 
 export default function PodcastsScreen() {
   const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Podcasts and Stories");

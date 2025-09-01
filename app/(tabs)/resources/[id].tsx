@@ -1,15 +1,14 @@
 import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Share } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useLocalSearchParams, Stack } from "expo-router";
-import { colors, type Palette } from "../../../theme/colors";
+import { useAppPalette } from "../../../theme/usePalette";
 import { resources } from "../../../data/resources";
 import type { Resource } from "../../../types/models";
 import { useFavorites } from "../../../store/favorites";
 
 export default function ResourceDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = useAppPalette();
   const styles = createStyles(palette);
 
   const resource = resources.find((r) => r.id === id);

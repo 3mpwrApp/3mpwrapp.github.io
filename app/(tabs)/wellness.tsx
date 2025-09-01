@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, Pressable, Linking } from "react-native";
-import { colors, type Palette } from "../../theme/colors";
+import { useAppPalette } from "../../theme/usePalette";
 import { useTranslation } from "../../i18n";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 
 export default function WellnessScreen() {
   const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Wellness");
@@ -96,7 +96,7 @@ export default function WellnessScreen() {
   );
 }
 
-function createStyles(palette: Palette) {
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },

@@ -2,6 +2,7 @@ import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useColorScheme } from "react-native";
 import { colors } from "../../theme/colors";
+import { SettingsProvider } from "../../store/settings";
 import { useCounts } from "../../store/counts";
 import { useTranslation } from "../../i18n";
 
@@ -14,6 +15,7 @@ export default function TabsLayout() {
   const { t } = useTranslation();
 
   return (
+    <SettingsProvider>
     <Tabs
       screenOptions={{
         headerShown: false,
@@ -141,6 +143,17 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="settings"
+        options={{
+          title: t("nav.profile") + " • Settings",
+          tabBarLabel: "Settings",
+          tabBarAccessibilityLabel: "Settings tab",
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "settings" : "settings-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="saved"
         options={{
           title: t("nav.saved") ?? "Saved",
@@ -152,5 +165,6 @@ export default function TabsLayout() {
         }}
       />
     </Tabs>
+    </SettingsProvider>
   );
 }

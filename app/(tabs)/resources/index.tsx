@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, SectionList, RefreshControl, Pressable } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { colors, type Palette } from "../../../theme/colors";
+import { useAppPalette } from "../../../theme/usePalette";
 import { useTranslation } from "../../../i18n";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
@@ -16,6 +16,7 @@ import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
 
 import type { Resource, ResourceCategory } from "../../../types/models";
+import { useSettings } from "../../../store/settings";
 import { filterResources, groupByRegion, presentProvinceCodes } from "../../../utils/resources";
 
 const PROVINCE_NAMES: Record<string, string> = {
@@ -38,8 +39,7 @@ type RegionFilter = "all" | "canada" | keyof typeof PROVINCE_NAMES;
 type CategoryFilter = "all" | ResourceCategory;
 
 export default function ResourcesScreen() {
-  const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = useAppPalette();
   const styles = createStyles(palette);
   const { t } = useTranslation();
   const titleRef = React.useRef<Text>(null);
@@ -50,6 +50,7 @@ export default function ResourcesScreen() {
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [region, setRegion] = React.useState<RegionFilter>("all");
+  const { province } = useSettings();
   const [showAllRegions, setShowAllRegions] = React.useState(false);
   const [category, setCategory] = React.useState<CategoryFilter>("all");
 
@@ -79,6 +80,10 @@ export default function ResourcesScreen() {
     setCount("resources", items.length);
   }, [items, setCount]);
 
+  React.useEffect(() => {
+    if (province && region === "all") setRegion(province as any);
+  }, [province]);
+
   useAnnounceOnChange(items.length, (n) => `${n} resources loaded`);
   const filtered = React.useMemo(() => filterResources(items, { region, category, query }), [items, region, category, query]);
 
@@ -106,6 +111,15 @@ export default function ResourcesScreen() {
         Resources
       </Text>
       <Text style={styles.subtitle}>{t("resources.intro", "Find helpful guides and materials.")}</Text>
+      <Pressable
+        accessibilityRole="link"
+        accessibilityLabel="Create accommodation letter"
+        onPress={() => { /* Using Link via asChild simplifies semantics; inline for brevity */ }}
+      >
+        <Link href="/(tabs)/resources/letter-accommodation" asChild>
+          <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Accommodation Letter</Text>
+        </Link>
+      </Pressable>
       <View style={styles.filters} accessibilityLabel="Category filters" accessible>
         {(["all", "work_financial", "tools_downloads", "emergency_crisis"] as CategoryFilter[]).map((key) => (
           <Pressable

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Pressable } from "react-native";
-import { colors, type Palette } from "../../../theme/colors";
+import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import { events as localEvents } from "../../../data/events";
 import { fetchEvents } from "../../../services/events";
@@ -12,8 +12,7 @@ import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
 
 export default function EventsScreen() {
-  const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+  const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Events");
@@ -137,7 +136,7 @@ export default function EventsScreen() {
   );
 }
 
-function createStyles(palette: Palette) {
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text, fontFamily: "Poppins" },
