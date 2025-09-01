@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, SectionList, RefreshControl, Pressable } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { colors, type Palette } from "../../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
@@ -141,9 +142,17 @@ export default function ResourcesScreen() {
               accessibilityLabel={`Filter ${key === "canada" ? "Canada" : key === "all" ? "All" : PROVINCE_NAMES[key]}`}
               style={[styles.chip, region === key && styles.chipActive]}
             >
-              <Text style={[styles.chipText, region === key && styles.chipTextActive]}>
-                {key === "all" ? "All" : key === "canada" ? "Canada" : PROVINCE_NAMES[key]}
-              </Text>
+              <View style={styles.chipInner}>
+                <MaterialCommunityIcons
+                  name={key === "all" ? "view-list" : key === "canada" ? "flag-variant" : "map-marker-outline"}
+                  size={14}
+                  color={region === key ? styles.chipTextActive.color : styles.chipText.color}
+                  style={{ marginRight: 6 }}
+                />
+                <Text style={[styles.chipText, region === key && styles.chipTextActive]}>
+                  {key === "all" ? "All" : key === "canada" ? "Canada" : PROVINCE_NAMES[key]}
+                </Text>
+              </View>
             </Pressable>
           ));
         })()}
@@ -195,9 +204,20 @@ export default function ResourcesScreen() {
       <SectionList
         sections={sections}
         keyExtractor={(item) => item.id}
-        renderSectionHeader={({ section }) => (
-          <Text style={styles.sectionHeader}>{section.title}</Text>
-        )}
+        renderSectionHeader={({ section }) => {
+          const isCanada = section.title === "Canada";
+          return (
+            <View style={styles.sectionHeaderRow} accessibilityLabel={`${section.title} section`} accessible>
+              <MaterialCommunityIcons
+                name={isCanada ? "flag-variant" : "map-marker-outline"}
+                size={18}
+                color={palette.text}
+                style={{ marginRight: 6 }}
+              />
+              <Text style={styles.sectionHeader}>{section.title}</Text>
+            </View>
+          );
+        }}
         renderItem={({ item }) => (
           <Link
             href={{ pathname: "/(tabs)/resources/[id]", params: { id: item.id } }}
@@ -222,10 +242,12 @@ function createStyles(palette: Palette) {
     subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, marginBottom: 8, fontFamily: "Roboto" },
     filters: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 8 },
     chip: { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
+    chipInner: { flexDirection: "row", alignItems: "center" },
     chipActive: { backgroundColor: palette.primary },
     chipText: { color: palette.text },
     chipTextActive: { color: palette.onPrimary },
-    sectionHeader: { marginTop: 12, marginBottom: 6, fontWeight: "700", color: palette.text },
+    sectionHeaderRow: { flexDirection: "row", alignItems: "center", marginTop: 12, marginBottom: 6 },
+    sectionHeader: { fontWeight: "700", color: palette.text },
     toggleRow: { marginBottom: 8 },
     toggleText: { color: palette.primary },
   });
