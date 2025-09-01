@@ -128,6 +128,17 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="research/index"
+        options={{
+          title: "Research",
+          tabBarLabel: "Research",
+          tabBarAccessibilityLabel: "Research tab",
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "document-text" : "document-text-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="whatsnew/index"
         options={{
           title: "What's New",
