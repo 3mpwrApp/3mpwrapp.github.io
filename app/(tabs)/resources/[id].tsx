@@ -94,10 +94,11 @@ function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: "700", marginBottom: 8, color: palette.text },
-    text: { fontSize: 16, color: palette.muted, marginBottom: 16 },
+    text: { fontSize: 16, color: palette.text, opacity: 0.95, marginBottom: 16 },
     button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44 },
     buttonText: { color: palette.onPrimary, fontSize: 16 },
     metaChip: { flexDirection: "row", alignItems: "center", backgroundColor: palette.primary, paddingVertical: 4, paddingHorizontal: 8, borderRadius: 12 },
     metaChipText: { color: palette.onPrimary, fontSize: 12 },
   });
 }
+

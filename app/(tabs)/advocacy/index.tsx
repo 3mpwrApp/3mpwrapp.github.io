@@ -124,6 +124,7 @@ function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 16, color: palette.muted, marginBottom: 8 },
+    subtitle: { fontSize: 16, color: palette.text, opacity: 0.95, marginBottom: 8 },
   });
 }
+
