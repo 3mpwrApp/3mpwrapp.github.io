@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, useColorScheme, Pressable } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, Pressable, Linking } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { colors, type Palette } from "../../../theme/colors";
 import { resources } from "../../../data/resources";
@@ -28,6 +28,16 @@ export default function ResourceDetail() {
             accessibilityLabel={saved ? "Remove from favorites" : "Save to favorites"}
           >
             <Text style={styles.buttonText}>{saved ? "Remove from Favorites" : "Save to Favorites"}</Text>
+          </Pressable>
+        )}
+        {!!resource?.url && (
+          <Pressable
+            style={({ pressed }) => [styles.button, { marginTop: 8 }, pressed && { opacity: 0.8 }]}
+            onPress={() => Linking.openURL(resource.url!).catch(() => {})}
+            accessibilityRole="button"
+            accessibilityLabel="Open website"
+          >
+            <Text style={styles.buttonText}>Open Website</Text>
           </Pressable>
         )}
       </View>
