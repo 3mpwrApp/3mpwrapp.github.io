@@ -84,7 +84,20 @@ export default function PodcastsScreen() {
         data={items}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Link href={{ pathname: "/(tabs)/podcasts/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
+          <Link
+            href={{
+              pathname: "/(tabs)/podcasts/[id]",
+              params: {
+                id: item.id,
+                title: item.title,
+                description: item.description,
+                duration: item.duration,
+              },
+            }}
+            asChild
+            accessibilityRole="link"
+            accessibilityLabel={`Open ${item.title}`}
+          >
             <Card title={item.title} subtitle={`${item.description} \u2022 ${item.duration}`} testID={`podcast-${item.id}`} />
           </Link>
         )}

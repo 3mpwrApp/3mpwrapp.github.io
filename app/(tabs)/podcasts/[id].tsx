@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, Pressable } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, Pressable, Linking } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { colors, type Palette } from "../../../theme/colors";
 import { podcasts } from "../../../data/podcasts";
@@ -10,11 +10,11 @@ let Audio: any; // assigned at runtime via dynamic import
 type AVPlaybackStatusSuccess = any;
 
 export default function PodcastDetail() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id, title: t, description: d, duration: du } = useLocalSearchParams<{ id: string; title?: string; description?: string; duration?: string }>();
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
-  const podcast = podcasts.find((p) => p.id === id);
+  const podcast = podcasts.find((p) => p.id === id) || (t ? { id: String(id), title: String(t), description: String(d || ""), duration: String(du || ""), audioUrl: "" } : undefined);
   const { has, toggle } = useFavorites();
   const saved = podcast ? has("podcast", podcast.id) : false;
 
@@ -107,9 +107,26 @@ export default function PodcastDetail() {
               {formatTime(pos)} / {formatTime(dur)}
             </Text>
           </View>
-        ) : (
+        ) : null}
+
+        {!podcast?.audioUrl && String(id || "").startsWith("yt:") ? (
+          <Pressable
+            style={({ pressed }) => [styles.button, pressed && { opacity: 0.8 }]}
+            onPress={() => {
+              const vid = String(id).slice(3);
+              const url = `https://www.youtube.com/watch?v=${vid}`;
+              Linking.openURL(url).catch(() => {});
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Open on YouTube"
+          >
+            <Text style={styles.buttonText}>Open on YouTube</Text>
+          </Pressable>
+        ) : null}
+
+        {!podcast?.audioUrl && !String(id || "").startsWith("yt:") ? (
           <Text style={styles.text}>No audio available.</Text>
-        )}
+        ) : null}
 
         {!audioSupported && (
           <Text style={styles.text}>

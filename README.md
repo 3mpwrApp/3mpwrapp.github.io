@@ -56,3 +56,15 @@ Notes
 - Dev build quickstart:
   - Android: `npx expo run:android` or EAS Dev build.
   - iOS: `npx expo run:ios` or EAS Dev build (requires Mac).
+
+## Podcasts (YouTube Integration)
+
+- Configure `EXPO_PUBLIC_YT_API_KEY` in your environment to auto-populate the Podcasts tab with Canadian injured worker videos (WSIB/WCB/workers' compensation) from YouTube.
+- Priority order for podcast data:
+  - `EXPO_PUBLIC_API_BASE` → fetches from `GET ${EXPO_PUBLIC_API_BASE}/podcasts` if set
+  - `EXPO_PUBLIC_YT_API_KEY` → fetches curated YouTube search results
+  - Local mock data → `data/podcasts.ts`
+- Opening YouTube videos: On a podcast whose `id` starts with `yt:`, the detail view shows an "Open on YouTube" button.
+
+Notes
+- The app does not download or extract audio from YouTube to respect YouTube Terms of Service. It links out to YouTube for playback.
