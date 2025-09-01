@@ -14,7 +14,7 @@ import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
 
-import type { Resource } from "../../../types/models";
+import type { Resource, ResourceCategory } from "../../../types/models";
 
 const PROVINCE_NAMES: Record<string, string> = {
   AB: "Alberta",
@@ -33,6 +33,7 @@ const PROVINCE_NAMES: Record<string, string> = {
 };
 
 type RegionFilter = "all" | "canada" | keyof typeof PROVINCE_NAMES;
+type CategoryFilter = "all" | ResourceCategory;
 
 export default function ResourcesScreen() {
   const scheme = useColorScheme();
@@ -47,6 +48,7 @@ export default function ResourcesScreen() {
   const [error, setError] = React.useState<string | null>(null);
   const [region, setRegion] = React.useState<RegionFilter>("all");
   const [showAllRegions, setShowAllRegions] = React.useState(false);
+  const [category, setCategory] = React.useState<CategoryFilter>("all");
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
@@ -78,6 +80,9 @@ export default function ResourcesScreen() {
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
     let base = items;
+    if (category !== "all") {
+      base = base.filter((r) => r.category === category);
+    }
     // Region filter
     if (region === "canada") {
       base = base.filter((r) => r.scope === "canada");
@@ -86,7 +91,7 @@ export default function ResourcesScreen() {
     }
     if (!q) return base;
     return base.filter((r) => r.title.toLowerCase().includes(q) || r.description.toLowerCase().includes(q));
-  }, [query, items, region]);
+  }, [query, items, region, category]);
 
   const sections = React.useMemo(() => {
     if (region !== "all") {
@@ -118,6 +123,30 @@ export default function ResourcesScreen() {
       <Text ref={titleRef} nativeID="resources-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Resources
       </Text>
+      <Text style={styles.subtitle}>Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.</Text>
+      <View style={styles.filters} accessibilityLabel="Category filters" accessible>
+        {(["all", "work_financial", "tools_downloads", "emergency_crisis"] as CategoryFilter[]).map((key) => (
+          <Pressable
+            key={key}
+            onPress={() => setCategory(key)}
+            accessibilityRole="button"
+            accessibilityLabel={`Filter ${key}`}
+            style={[styles.chip, category === key && styles.chipActive]}
+          >
+            <View style={styles.chipInner}>
+              <MaterialCommunityIcons
+                name={key === "work_financial" ? "briefcase-outline" : key === "tools_downloads" ? "download" : key === "emergency_crisis" ? "lifebuoy" : "filter-variant"}
+                size={14}
+                color={category === key ? styles.chipTextActive.color : styles.chipText.color}
+                style={{ marginRight: 6 }}
+              />
+              <Text style={[styles.chipText, category === key && styles.chipTextActive]}>
+                {key === "all" ? "All" : key === "work_financial" ? "Work & Financial" : key === "tools_downloads" ? "Tools & Downloads" : "Emergency & Crisis"}
+              </Text>
+            </View>
+          </Pressable>
+        ))}
+      </View>
       <Text style={styles.subtitle}>Find helpful guides and materials. Browse by Canada or province.</Text>
       <View style={styles.filters} accessibilityLabel="Region filters" accessible>
         {(() => {

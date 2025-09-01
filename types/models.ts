@@ -16,6 +16,8 @@ export interface Resource {
   scope?: "canada" | "province";
   // Province code when scope === "province"
   province?: ProvinceCode;
+  // High-level category for filtering/grouping in UI
+  category?: ResourceCategory;
 }
 
 export interface Advocate {
@@ -32,6 +34,11 @@ export interface CommunityPost {
 
 export type ProvinceCode =
   | "AB" | "BC" | "MB" | "NB" | "NL" | "NS" | "NT" | "NU" | "ON" | "PE" | "QC" | "SK" | "YT";
+
+export type ResourceCategory =
+  | "work_financial" // Work & Financial Support
+  | "tools_downloads" // Tools & Downloads
+  | "emergency_crisis"; // Emergency & Crisis Support
 
 export type ChannelType = "province" | "topic";
 
