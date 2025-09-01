@@ -9,6 +9,13 @@ type YTSearchItem = {
     description: string;
     channelTitle?: string;
     publishedAt?: string;
+    thumbnails?: {
+      default?: { url: string };
+      medium?: { url: string };
+      high?: { url: string };
+      standard?: { url: string };
+      maxres?: { url: string };
+    };
   };
 };
 
@@ -137,15 +144,17 @@ export async function fetchInjuredWorkerVideos(limit = 30): Promise<Podcast[]> {
     const channel = s?.channelTitle ? ` • ${s.channelTitle}` : "";
     const desc = (s?.description || "").replace(/\s+/g, " ").trim();
     const description = `${desc.slice(0, 140)}${channel}`.trim();
+    const thumb = s?.thumbnails?.medium?.url || s?.thumbnails?.high?.url || s?.thumbnails?.default?.url;
     return {
       id: `yt:${vid}`,
       title,
       description,
       duration: durations.get(vid) || "",
       audioUrl: "",
+      thumbnailUrl: thumb,
+      channel: s?.channelTitle,
     };
   });
 
   return episodes;
 }
-

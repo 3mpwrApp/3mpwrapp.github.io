@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, Pressable, Linking } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { colors, type Palette } from "../../../theme/colors";
 import { podcasts } from "../../../data/podcasts";
@@ -123,6 +123,20 @@ export default function PodcastDetail() {
             <Text style={styles.buttonText}>Open on YouTube</Text>
           </Pressable>
         ) : null}
+
+        <View style={{ height: 8 }} />
+        <Pressable
+          style={({ pressed }) => [styles.button, pressed && { opacity: 0.8 }]}
+          onPress={() => {
+            const vid = String(id).startsWith("yt:") ? String(id).slice(3) : null;
+            const url = vid ? `https://www.youtube.com/watch?v=${vid}` : podcast?.audioUrl;
+            Share.share({ title: podcast?.title ?? "Podcast", message: url || podcast?.title || "" }).catch(() => {});
+          }}
+          accessibilityRole="button"
+          accessibilityLabel="Share"
+        >
+          <Text style={styles.buttonText}>Share</Text>
+        </Pressable>
 
         {!podcast?.audioUrl && !String(id || "").startsWith("yt:") ? (
           <Text style={styles.text}>No audio available.</Text>

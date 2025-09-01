@@ -4,6 +4,8 @@ export type Podcast = {
   description: string;
   duration: string;
   audioUrl?: string;
+  thumbnailUrl?: string;
+  channel?: string;
 };
 
 export const podcasts: Podcast[] = [

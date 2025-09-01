@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, useColorScheme, SectionList, RefreshControl, Pressable } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { colors, type Palette } from "../../../theme/colors";
+import { useTranslation } from "../../../i18n";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
 import { resources as localResources } from "../../../data/resources";
@@ -39,6 +40,7 @@ export default function ResourcesScreen() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
+  const { t } = useTranslation();
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Resources");
   useFocusOnRefOnMount(titleRef);
@@ -123,7 +125,7 @@ export default function ResourcesScreen() {
       <Text ref={titleRef} nativeID="resources-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Resources
       </Text>
-      <Text style={styles.subtitle}>Here you'll find practical tools, guides, and supports - everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.</Text>
+      <Text style={styles.subtitle}>{t("resources.intro", "Find helpful guides and materials.")}</Text>
       <View style={styles.filters} accessibilityLabel="Category filters" accessible>
         {(["all", "work_financial", "tools_downloads", "emergency_crisis"] as CategoryFilter[]).map((key) => (
           <Pressable
@@ -140,14 +142,20 @@ export default function ResourcesScreen() {
                 color={category === key ? styles.chipTextActive.color : styles.chipText.color}
                 style={{ marginRight: 6 }}
               />
-              <Text style={[styles.chipText, category === key && styles.chipTextActive]}>
-                {key === "all" ? "All" : key === "work_financial" ? "Work & Financial" : key === "tools_downloads" ? "Tools & Downloads" : "Emergency & Crisis"}
-              </Text>
+              <Text style={[styles.chipText, category === key && styles.chipTextActive]}>{
+                key === "all"
+                  ? t("resources.filters.all", "All")
+                  : key === "work_financial"
+                  ? t("resources.filters.work_financial", "Work & Financial")
+                  : key === "tools_downloads"
+                  ? t("resources.filters.tools_downloads", "Tools & Downloads")
+                  : t("resources.filters.emergency_crisis", "Emergency & Crisis")
+              }</Text>
             </View>
           </Pressable>
         ))}
       </View>
-      <Text style={styles.subtitle}>Find helpful guides and materials. Browse by Canada or province.</Text>
+      <Text style={styles.subtitle}>{t("resources.filters.canada", "Canada")} / provinces</Text>
       <View style={styles.filters} accessibilityLabel="Region filters" accessible>
         {(() => {
           const allProvCodes = Object.keys(PROVINCE_NAMES) as (keyof typeof PROVINCE_NAMES)[];
@@ -281,6 +289,7 @@ function createStyles(palette: Palette) {
     toggleText: { color: palette.primary },
   });
 }
+
 
 
 

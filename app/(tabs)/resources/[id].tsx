@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, useColorScheme, Pressable, Linking } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Share } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { colors, type Palette } from "../../../theme/colors";
@@ -77,6 +77,14 @@ export default function ResourceDetail() {
             <Text style={styles.buttonText}>Open Website</Text>
           </Pressable>
         )}
+        <Pressable
+          style={({ pressed }) => [styles.button, { marginTop: 8 }, pressed && { opacity: 0.8 }]}
+          onPress={() => Share.share({ title: resource?.title ?? "Resource", message: resource?.url || resource?.title || "" }).catch(() => {})}
+          accessibilityRole="button"
+          accessibilityLabel="Share"
+        >
+          <Text style={styles.buttonText}>Share</Text>
+        </Pressable>
       </View>
     </>
   );

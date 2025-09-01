@@ -8,7 +8,21 @@
     "resources": "Resources",
     "events": "Events",
     "wellness": "Wellness",
-    "profile": "Profile"
+    "profile": "Profile",
+    "saved": "Saved"
+  },
+  "wellness": {
+    "intro": "Your wellbeing matters. This page is a safe, inclusive space for Injured Workers and the Disability Community. Here you’ll find guidance on physical, mental, emotional, and social wellness — designed to be supportive, accessible, and empowering."
+  },
+  "resources": {
+    "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
+    "filters": {
+      "all": "All",
+      "canada": "Canada",
+      "work_financial": "Work & Financial",
+      "tools_downloads": "Tools & Downloads",
+      "emergency_crisis": "Emergency & Crisis"
+    }
   },
   "home": {
     "title": "Welcome to Empowr",
@@ -24,4 +38,3 @@
     "refresh": "Refresh all"
   }
 }
-

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, Pressable, Linking } from "react-native";
 import { colors, type Palette } from "../../theme/colors";
+import { useTranslation } from "../../i18n";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 
 export default function WellnessScreen() {
@@ -10,6 +11,7 @@ export default function WellnessScreen() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Wellness");
   useFocusOnRefOnMount(titleRef);
+  const { t } = useTranslation();
 
   const onOpen = React.useCallback((url: string) => {
     Linking.openURL(url).catch(() => {});
@@ -55,9 +57,7 @@ export default function WellnessScreen() {
       >
         Wellness
       </Text>
-      <Text style={styles.subtitle}>
-        Your wellbeing matters. This page is a safe, inclusive space for Injured Workers and the Disability Community. Here you’ll find guidance on physical, mental, emotional, and social wellness — designed to be supportive, accessible, and empowering.
-      </Text>
+      <Text style={styles.subtitle}>{t("wellness.intro", "Wellness resources and guidance.")}</Text>
 
       {sections.map((sec) => (
         <View key={sec.title} style={styles.section} accessibilityLabel={`${sec.title} section`} accessible>

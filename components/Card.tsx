@@ -12,9 +12,10 @@ type Props = {
   rightA11yLabel?: string;
   testID?: string;
   accessibilityLabel?: string;
+  left?: React.ReactNode;
 };
 
-export default function Card({ title, subtitle, onPress, rightIcon = "chevron-forward", onPressRight, rightA11yLabel, testID, accessibilityLabel }: Props) {
+export default function Card({ title, subtitle, onPress, rightIcon = "chevron-forward", onPressRight, rightA11yLabel, testID, accessibilityLabel, left }: Props) {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = React.useMemo(() => createStyles(palette), [palette]);
@@ -28,6 +29,7 @@ export default function Card({ title, subtitle, onPress, rightIcon = "chevron-fo
       hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
       testID={testID}
     >
+      {!!left && <View style={styles.leftWrap}>{left}</View>}
       <View style={styles.textWrap}>
         <Text style={styles.title}>{title}</Text>
         {!!subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
@@ -63,6 +65,7 @@ function createStyles(palette: Palette) {
       minHeight: 56,
     },
     textWrap: { flex: 1, paddingEnd: 12 },
+    leftWrap: { marginEnd: 12 },
     title: { color: palette.text, fontSize: 16, fontWeight: "600" },
     subtitle: { color: palette.text, opacity: 0.9, fontSize: 14, marginTop: 2 },
     rightAction: { paddingStart: 8 },

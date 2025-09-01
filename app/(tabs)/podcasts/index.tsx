@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Image } from "react-native";
 import { colors, type Palette } from "../../../theme/colors";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import { podcasts as localPodcasts } from "../../../data/podcasts";
@@ -98,7 +98,15 @@ export default function PodcastsScreen() {
             accessibilityRole="link"
             accessibilityLabel={`Open ${item.title}`}
           >
-            <Card title={item.title} subtitle={`${item.description} \u2022 ${item.duration}`} testID={`podcast-${item.id}`} />
+            <Card
+              title={item.title}
+              subtitle={`${item.description} \u2022 ${item.duration}`}
+              testID={`podcast-${item.id}`}
+              rightIcon={String(item.id).startsWith("yt:") ? "logo-youtube" : "chevron-forward"}
+              left={item.thumbnailUrl ? (
+                <Image source={{ uri: item.thumbnailUrl }} style={{ width: 48, height: 48, borderRadius: 4, backgroundColor: palette.muted }} />
+              ) : undefined}
+            />
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
