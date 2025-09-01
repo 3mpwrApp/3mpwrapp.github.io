@@ -128,6 +128,50 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="whatsnew/index"
+        options={{
+          title: "What's New",
+          tabBarLabel: "What's New",
+          tabBarAccessibilityLabel: "What's New tab",
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "sparkles" : "sparkles-outline" as any} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="archive/index"
+        options={{
+          title: "Archive",
+          tabBarLabel: "Archive",
+          tabBarAccessibilityLabel: "Archive tab",
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "time" : "time-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="faqs"
+        options={{
+          title: "FAQs",
+          tabBarLabel: "FAQs",
+          tabBarAccessibilityLabel: "FAQs tab",
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "help-circle" : "help-circle-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="about"
+        options={{
+          title: "About & Contact",
+          tabBarLabel: "About",
+          tabBarAccessibilityLabel: "About tab",
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "information-circle" : "information-circle-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="wellness"
         options={{
           title: t("nav.wellness"),

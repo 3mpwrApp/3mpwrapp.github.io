@@ -16,17 +16,17 @@ export default function AppealLetter() {
   const [claim, setClaim] = React.useState("");
   const [decisionDate, setDecisionDate] = React.useState("");
   const [reasons, setReasons] = React.useState("");
-  const [arguments, setArguments] = React.useState("");
+  const [appealArgs, setAppealArgs] = React.useState("");
   const [contact, setContact] = React.useState("");
 
   const preview = React.useMemo(() => {
     return `Re: Appeal of Decision (Claim ${claim || "[number]"})\n\n` +
       `Dear Appeals Officer,\n\n` +
       `I am appealing the decision dated ${decisionDate || "[date]"} regarding my workers' compensation/disability claim. ` +
-      `The decision states: ${reasons || "[summarize reasons]"}. I believe this is incorrect because: ${arguments || "[state key arguments and evidence]"}.\n\n` +
+      `The decision states: ${reasons || "[summarize reasons]"}. I believe this is incorrect because: ${appealArgs || "[state key arguments and evidence]"}.\n\n` +
       `I request that this decision be reconsidered and overturned. I can provide any additional documentation required. Please confirm receipt of this appeal and advise of next steps.\n\n` +
       `Sincerely,\n${name || "[Your Name]"}\n${contact || "[Phone/Email]"}`;
-  }, [name, claim, decisionDate, reasons, arguments, contact]);
+  }, [name, claim, decisionDate, reasons, appealArgs, contact]);
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 20 }}>
@@ -36,7 +36,7 @@ export default function AppealLetter() {
       <Field label="Claim Number" value={claim} onChangeText={setClaim} styles={styles} />
       <Field label="Decision Date" value={decisionDate} onChangeText={setDecisionDate} styles={styles} />
       <Field label="Decision Summary" value={reasons} onChangeText={setReasons} styles={styles} multiline />
-      <Field label="Your Arguments/Evidence" value={arguments} onChangeText={setArguments} styles={styles} multiline />
+      <Field label="Your Arguments/Evidence" value={appealArgs} onChangeText={setAppealArgs} styles={styles} multiline />
       <Field label="Contact (email/phone)" value={contact} onChangeText={setContact} styles={styles} />
 
       <Text style={[styles.sectionTitle, { marginTop: 12 }]}>Preview</Text>
@@ -99,4 +99,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     placeholderColor: placeholderColor as unknown as any,
   });
 }
-
