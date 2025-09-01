@@ -1,9 +1,9 @@
 import { SafeAreaView, Text, StyleSheet, useColorScheme } from "react-native";
 import { type Palette } from "../theme/colors";
-import { usePalette } from "../theme/usePalette";
+import { useAppPalette } from "../theme/usePalette";
 
 export default function ThemedFooter() {
-  const palette = usePalette();
+  const palette = useAppPalette();
   const styles = createStyles(palette);
 
   const year = new Date().getFullYear();

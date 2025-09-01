@@ -1,10 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl } from "react-native";
-import { colors, type Palette } from "../../../theme/colors";
+import { View, Text, StyleSheet, FlatList, RefreshControl } from "react-native";
+import { useAppPalette } from "../../../theme/usePalette";
+import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { advocates as localAdvocates } from "../../../data/advocates";
 import { fetchAdvocates } from "../../../services/advocates";
 import Card from "../../../components/Card";
+import SettingsLink from "../../../components/SettingsLink";
+import ContrastToggle from "../../../components/ContrastToggle";
 import { Link } from "expo-router";
 import SearchBar from "../../../components/SearchBar";
 import { useCounts } from "../../../store/counts";
@@ -14,9 +17,9 @@ import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
 
 export default function AdvocacyScreen() {
-  const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
-  const styles = createStyles(palette);
+  const palette = useAppPalette();
+  const { factor } = useTextScale();
+  const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Advocacy");
   useFocusOnRefOnMount(titleRef);
@@ -63,6 +66,8 @@ export default function AdvocacyScreen() {
       <Text ref={titleRef} nativeID="advocacy-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Advocacy
       </Text>
+      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
+      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.subtitle}>Connect with community advocates.</Text>
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search advocates" accessibilityLabel="Search advocates" />
       {loading && (
@@ -120,11 +125,11 @@ export default function AdvocacyScreen() {
   );
 }
 
-function createStyles(palette: Palette) {
+function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 16, color: palette.text, opacity: 0.95, marginBottom: 8 },
+    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
+    subtitle: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.95, marginBottom: 8 },
   });
 }
 

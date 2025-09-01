@@ -1,6 +1,6 @@
 import { SafeAreaView, Text, StyleSheet, useColorScheme, View, Pressable, Linking, Image } from "react-native";
 import { type Palette } from "../theme/colors";
-import { usePalette } from "../theme/usePalette";
+import { useAppPalette } from "../theme/usePalette";
 import { useFavorites } from "../store/favorites";
 import { useCounts } from "../store/counts";
 import { useRefresh } from "../store/refresh";
@@ -11,7 +11,7 @@ import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
 import { useTranslation } from "../i18n";
 
 export default function ThemedHeader() {
-  const palette = usePalette();
+  const palette = useAppPalette();
   const styles = createStyles(palette);
   const { state } = useFavorites();
   const { counts } = useCounts();

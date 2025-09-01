@@ -12,6 +12,8 @@ import Card from "../../components/Card";
 import type { Podcast } from "../../data/podcasts";
 import type { Resource, Campaign } from "../../types/models";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import SettingsLink from "../../components/SettingsLink";
+import ContrastToggle from "../../components/ContrastToggle";
 
 type SectionItem = (Podcast & { kind: "podcast" }) | (Resource & { kind: "resource" }) | (Campaign & { kind: "campaign" });
 
@@ -65,6 +67,8 @@ export default function SavedScreen() {
 
   return (
     <View style={styles.container} accessibilityLabel="Saved screen" accessible>
+      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
+      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text ref={titleRef} nativeID="saved-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Saved
       </Text>

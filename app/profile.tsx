@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, Pressable, TextInput, useColorScheme } from "react-native";
 import { type Palette } from "../theme/colors";
-import { usePalette } from "../theme/usePalette";
+import { useAppPalette } from "../theme/usePalette";
 import { useA11ySettings } from "../store/a11ySettings";
 import { useAuth } from "../store/auth";
 import { router } from "expo-router";
 import { useTranslation, Lang } from "../i18n";
 
 export default function Profile() {
-  const palette = usePalette();
+  const palette = useAppPalette();
   const styles = createStyles(palette);
   const { state, signIn, continueAnonymously, signOut } = useAuth();
   const { lang, setLanguage } = useTranslation();
