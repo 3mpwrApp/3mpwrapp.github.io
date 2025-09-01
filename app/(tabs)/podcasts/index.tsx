@@ -13,6 +13,8 @@ import { Link } from "expo-router";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
+import SettingsLink from "../../../components/SettingsLink";
+import ContrastToggle from "../../../components/ContrastToggle";
 
 export default function PodcastsScreen() {
   const scheme = useColorScheme();
@@ -64,6 +66,8 @@ export default function PodcastsScreen() {
       <Text ref={titleRef} nativeID="podcasts-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Podcasts & Stories
       </Text>
+      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
+      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.subtitle}>Listen to community stories and insights.</Text>
       {loading && (
         <View>

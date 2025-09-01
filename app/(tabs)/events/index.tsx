@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Pressable } from "react-native";
+import { View, Text, StyleSheet, FlatList, RefreshControl, Pressable } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
@@ -11,6 +11,8 @@ import { Link } from "expo-router";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
+import SettingsLink from "../../../components/SettingsLink";
+import ContrastToggle from "../../../components/ContrastToggle";
 
 export default function EventsScreen() {
   const palette = useAppPalette();
@@ -61,15 +63,18 @@ export default function EventsScreen() {
     return `${date} • ${place}`;
   };
 
-  const monthLabel = React.useMemo(() => month.toLocaleString(undefined, { month: 'long', year: 'numeric' }), [month]);
+  const monthLabel = React.useMemo(() => month.toLocaleString(undefined, { month: "long", year: "numeric" }), [month]);
   const daysMatrix = React.useMemo(() => buildMonthMatrix(month), [month]);
   const eventsByDay = React.useMemo(() => mapEventsByDay(items), [items]);
   const filtered = React.useMemo(() => (selectedDay ? items.filter((e) => toDayKey(e.date) === selectedDay) : items), [items, selectedDay]);
+
   return (
     <View style={styles.container} accessibilityLabel="Events screen" accessible>
       <Text ref={titleRef} nativeID="events-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Events
       </Text>
+      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
+      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.subtitle}>Community events, workshops, and meetups. Add reminders from details.</Text>
       {loading && (
         <View>
@@ -88,7 +93,7 @@ export default function EventsScreen() {
           Try again
         </Text>
       )}
-      {/* Calendar */}
+
       <View style={styles.calHeader}>
         <Pressable accessibilityRole="button" accessibilityLabel="Previous month" onPress={() => setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))}>
           <Text style={styles.calNav}>{"<"}</Text>
@@ -99,7 +104,7 @@ export default function EventsScreen() {
         </Pressable>
       </View>
       <View style={styles.weekRow}>
-        {["S","M","T","W","T","F","S"].map((d) => (
+        {["S", "M", "T", "W", "T", "F", "S"].map((d) => (
           <Text key={d} style={styles.weekHdr}>{d}</Text>
         ))}
       </View>
@@ -111,11 +116,11 @@ export default function EventsScreen() {
             const isSel = !!key && selectedDay === key;
             return (
               <Pressable
-                key={di}
+                key={`${wi}-${di}`}
                 style={[styles.dayCell, isSel && { backgroundColor: palette.primary }, has && { borderColor: palette.primary }]}
                 onPress={() => key && setSelectedDay((cur) => (cur === key ? null : key))}
                 accessibilityRole="button"
-                accessibilityLabel={key ? Select  : "Empty"}
+                accessibilityLabel={key ? `Select ${key}${has ? ", has events" : ""}` : "Empty"}
                 disabled={!key}
               >
                 <Text style={[styles.dayText, isSel && { color: palette.onPrimary }]}>{d ?? ""}</Text>
@@ -123,7 +128,9 @@ export default function EventsScreen() {
             );
           })}
         </View>
-      ))}      <FlatList
+      ))}
+
+      <FlatList
         data={filtered}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
@@ -144,23 +151,23 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text, fontFamily: "Poppins" },
     subtitle: { fontSize: Math.round(17 * factor), color: palette.text, opacity: 0.9, marginBottom: 8, fontFamily: "Roboto" },
     button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44 },
-    
-    calHeader: { marginTop: 8, marginBottom: 8, flexDirection: ""row"", alignItems: ""center"", justifyContent: ""space-between"" },
-    calTitle: { color: palette.text, fontWeight: ""700"" },
-    calNav: { color: palette.text, fontSize: 18, width: 24, textAlign: ""center"" },
-    weekRow: { flexDirection: ""row"", justifyContent: ""space-between"", marginBottom: 4 },
-    weekHdr: { width: 36, textAlign: ""center"", color: palette.text, opacity: 0.7 },
-    dayCell: { width: 36, height: 36, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems: ""center"", justifyContent: ""center"" },
-    dayText: { color: palette.text },  }););
+    calHeader: { marginTop: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+    calTitle: { color: palette.text, fontWeight: "700" },
+    calNav: { color: palette.text, fontSize: 18, width: 24, textAlign: "center" },
+    weekRow: { flexDirection: "row", justifyContent: "space-between", marginBottom: 4 },
+    weekHdr: { width: 36, textAlign: "center", color: palette.text, opacity: 0.7 },
+    dayCell: { width: 36, height: 36, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems: "center", justifyContent: "center" },
+    dayText: { color: palette.text },
+  });
 }
 
 // Calendar helpers
 function toDayKey(input: string): string {
   const d = new Date(input);
   const y = d.getFullYear();
-  const m = ${d.getMonth() + 1}.padStart(2, "0");
-  const day = ${d.getDate()}.padStart(2, "0");
-  return ${y}--;
+  const m = `${d.getMonth() + 1}`.padStart(2, "0");
+  const day = `${d.getDate()}`.padStart(2, "0");
+  return `${y}-${m}-${day}`;
 }
 
 function mapEventsByDay(items: { date: string }[]) {
@@ -196,7 +203,7 @@ function buildMonthMatrix(firstOfMonth: Date): (number | null)[][] {
 function dayKeyFromMatrix(baseMonth: Date, day: number | null) {
   if (!day) return "";
   const y = baseMonth.getFullYear();
-  const m = ${baseMonth.getMonth() + 1}.padStart(2, "0");
-  const dd = ${day}.padStart(2, "0");
-  return ${y}--;
+  const m = `${baseMonth.getMonth() + 1}`.padStart(2, "0");
+  const dd = `${day}`.padStart(2, "0");
+  return `${y}-${m}-${dd}`;
 }

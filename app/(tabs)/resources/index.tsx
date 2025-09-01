@@ -6,6 +6,8 @@ import { useTranslation } from "../../../i18n";
 import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
+import SettingsLink from "../../../components/SettingsLink";
+import ContrastToggle from "../../../components/ContrastToggle";
 import { resources as localResources } from "../../../data/resources";
 import { fetchResources } from "../../../services/resources";
 import { Link } from "expo-router";
@@ -112,7 +114,12 @@ export default function ResourcesScreen() {
       <Text ref={titleRef} nativeID="resources-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Resources
       </Text>
+      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
+      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.subtitle}>{t("resources.intro", "Find helpful guides and materials.")}</Text>
+      {region === "all" && !province && (
+        <Text style={[styles.subtitle, { opacity: 0.75 }]}>Tip: Set your province in Settings to filter resources.</Text>
+      )}
       <Pressable
         accessibilityRole="link"
         accessibilityLabel="Create accommodation letter"
@@ -120,6 +127,15 @@ export default function ResourcesScreen() {
       >
         <Link href="/(tabs)/resources/letter-accommodation" asChild>
           <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Accommodation Letter</Text>
+        </Link>
+      </Pressable>
+      <Pressable
+        accessibilityRole="link"
+        accessibilityLabel="Create appeal letter"
+        onPress={() => { /* inline */ }}
+      >
+        <Link href="/(tabs)/resources/letter-appeal" asChild>
+          <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Appeal Letter</Text>
         </Link>
       </Pressable>
       <View style={styles.filters} accessibilityLabel="Category filters" accessible>
@@ -275,7 +291,7 @@ export default function ResourcesScreen() {
   );
 }
 
-function createStyles(palette: Palette, factor: number) {
+function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text, fontFamily: "Poppins" },
@@ -292,6 +308,8 @@ function createStyles(palette: Palette, factor: number) {
     toggleText: { color: palette.primary },
   });
 }
+
+
 
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, SectionList } from "react-native";
-import { colors, type Palette } from "../../theme/colors";
+import { useAppPalette } from "../../theme/usePalette";
+import { useTextScale } from "../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import { useFavorites } from "../../store/favorites";
 import { fetchPodcasts } from "../../services/podcasts";
@@ -16,8 +17,9 @@ type SectionItem = (Podcast & { kind: "podcast" }) | (Resource & { kind: "resour
 
 export default function SavedScreen() {
   const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
-  const styles = createStyles(palette);
+  const palette = useAppPalette();
+  const { factor } = useTextScale();
+  const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Saved");
   useFocusOnRefOnMount(titleRef);
@@ -119,11 +121,12 @@ export default function SavedScreen() {
   );
 }
 
-function createStyles(palette: Palette) {
+type Palette = ReturnType<typeof useAppPalette>;
+function createStyles(palette: Palette, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, marginBottom: 8 },
+    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
+    subtitle: { fontSize: Math.round(17 * factor), color: palette.text, opacity: 0.9, marginBottom: 8 },
     sectionHeaderRow: { flexDirection: "row", alignItems: "center", marginTop: 12, marginBottom: 6 },
     sectionHeader: { fontWeight: "700", color: palette.text },
   });

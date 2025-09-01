@@ -1,12 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, Pressable, Linking } from "react-native";
+import { View, Text, StyleSheet, Pressable, Linking } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
 import { useTranslation } from "../../i18n";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
+import SettingsLink from "../../components/SettingsLink";
+import ContrastToggle from "../../components/ContrastToggle";
 
 export default function WellnessScreen() {
-  const scheme = useColorScheme();
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
@@ -28,20 +29,20 @@ export default function WellnessScreen() {
         { label: "Aquatic Therapy — Overview", url: "https://www.mayoclinic.org/healthy-lifestyle/fitness/expert-answers/water-exercise/faq-20057974", description: "Hydrotherapy basics for recovery." },
         { label: "Manage My Pain", url: "https://www.managemypain.com/", description: "Log pain to find patterns." },
         { label: "Flaredown", url: "https://www.flaredown.com/", description: "Track symptoms and triggers." },
-        { label: "UnlockFood (Canada)", url: "https://www.unlockfood.ca/en/Home.aspx", description: "Evidence‑based nutrition tips." },
-        { label: "Budget Bytes", url: "https://www.budgetbytes.com/", description: "Low‑cost, simple meals." },
+        { label: "UnlockFood (Canada)", url: "https://www.unlockfood.ca/en/Home.aspx", description: "Evidence-based nutrition tips." },
+        { label: "Budget Bytes", url: "https://www.budgetbytes.com/", description: "Low-cost, simple meals." },
         { label: "Insight Timer", url: "https://insighttimer.com/", description: "Free meditations and sleep." },
-        { label: "CBT‑i Coach", url: "https://mobile.va.gov/app/cbt-i-coach", description: "CBT‑I support; not a replacement for care." },
+        { label: "CBT-i Coach", url: "https://mobile.va.gov/app/cbt-i-coach", description: "CBT-I support; not a replacement for care." },
       ],
     },
     {
       title: "Mental & Emotional Wellness",
       items: [
-        { label: "Moodflow", url: "https://moodflow.co/", description: "Ad‑free mood tracker." },
+        { label: "Moodflow", url: "https://moodflow.co/", description: "Ad-free mood tracker." },
         { label: "MindShift CBT", url: "https://www.anxietycanada.com/resources/mindshift-cbt/", description: "Anxiety tools by Anxiety Canada." },
         { label: "Headspace", url: "https://www.headspace.com/", description: "Mindfulness practice." },
         { label: "Breathwrk", url: "https://www.breathwrk.com/", description: "Breathing for stress relief." },
-        { label: "Daylio", url: "https://daylio.net/", description: "Tap‑based journaling." },
+        { label: "Daylio", url: "https://daylio.net/", description: "Tap-based journaling." },
         { label: "Reflectly", url: "https://reflectly.app/", description: "Guided reflections." },
       ],
     },
@@ -59,7 +60,9 @@ export default function WellnessScreen() {
       >
         Wellness
       </Text>
+      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <Text style={styles.subtitle}>{t("wellness.intro", "Wellness resources and guidance.")}</Text>
+      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
 
       {sections.map((sec) => (
         <View key={sec.title} style={styles.section} accessibilityLabel={`${sec.title} section`} accessible>

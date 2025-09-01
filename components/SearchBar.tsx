@@ -2,7 +2,8 @@ import React from "react";
 import { View, TextInput, StyleSheet, Pressable, useColorScheme } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { type Palette } from "../theme/colors";
-import { usePalette } from "../theme/usePalette";
+import { useAppPalette } from "../theme/usePalette";
+import { useTextScale } from "../theme/typography";
 
 type Props = {
   value: string;
@@ -13,8 +14,9 @@ type Props = {
 };
 
 export default function SearchBar({ value, onChangeText, placeholder = "Search", accessibilityLabel = "Search", testID }: Props) {
-  const palette = usePalette();
-  const styles = React.useMemo(() => createStyles(palette), [palette]);
+  const palette = useAppPalette();
+  const { factor } = useTextScale();
+  const styles = React.useMemo(() => createStyles(palette, factor), [palette, factor]);
   return (
     <View style={styles.container} accessibilityRole="search" testID={testID}>
       <Ionicons name="search" size={18} color={palette.text} style={{ marginHorizontal: 8, opacity: 0.8 }} />
@@ -44,7 +46,7 @@ export default function SearchBar({ value, onChangeText, placeholder = "Search",
   );
 }
 
-function createStyles(palette: Palette) {
+function createStyles(palette: Palette, factor: number) {
   return StyleSheet.create({
     container: {
       flexDirection: "row",
@@ -58,7 +60,7 @@ function createStyles(palette: Palette) {
     },
     input: {
       flex: 1,
-      paddingVertical: 8,
+      paddingVertical: Math.round(8 * factor),
       color: palette.text,
     },
   });

@@ -6,6 +6,7 @@ import { useTextScale } from "../../../theme/typography";
 import { resources } from "../../../data/resources";
 import type { Resource } from "../../../types/models";
 import { useFavorites } from "../../../store/favorites";
+import SettingsLink from "../../../components/SettingsLink";
 
 export default function ResourceDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -41,6 +42,7 @@ export default function ResourceDetail() {
     <>
       <Stack.Screen options={{ title: resource?.title ?? "Resource" }} />
       <View style={styles.container}>
+        <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
         <Text style={styles.title}>{resource?.title ?? "Resource"}</Text>
         {/* Meta chips */}
         <View style={{ flexDirection: "row", gap: 8, marginBottom: 8 }}>

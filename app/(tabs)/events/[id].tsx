@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Platform } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Platform, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
+import SettingsLink from "../../../components/SettingsLink";
 import { events } from "../../../data/events";
 
 function createICS(title: string, start: string, description?: string, location?: string) {
@@ -20,16 +21,28 @@ export default function EventDetail() {
 
   const addToCalendar = async () => {
     if (!event) return;
-    const ics = createICS(event.title, event.date, event.description, event.location);
-    const blob = new Blob([ics], { type: "text/calendar" });
-    const url = URL.createObjectURL(blob);
-    await Linking.openURL(url);
+    try {
+      // Open Google Calendar template as a simple cross-platform path
+      const start = new Date(event.date);
+      const toCalTime = (d: Date) =>
+        `${d.getUTCFullYear()}${String(d.getUTCMonth() + 1).padStart(2, "0")}${String(d.getUTCDate()).padStart(2, "0")}T${String(d.getUTCHours()).padStart(2, "0")}${String(d.getUTCMinutes()).padStart(2, "0")}00Z`;
+      const end = new Date(start.getTime() + 60 * 60 * 1000);
+      const dates = `${toCalTime(start)}/${toCalTime(end)}`;
+      const params = new URLSearchParams({ action: "TEMPLATE", text: event.title, details: event.description ?? "", location: event.isVirtual ? "Virtual" : (event.location ?? ""), dates });
+      const url = `https://calendar.google.com/calendar/render?${params.toString()}`;
+      const supported = await Linking.canOpenURL(url);
+      if (supported) await Linking.openURL(url);
+      else await Share.share({ message: createICS(event.title, event.date, event.description, event.location), title: "Event" });
+    } catch {
+      await Share.share({ message: createICS(event.title, event.date, event.description, event.location), title: "Event" });
+    }
   };
 
   return (
     <>
       <Stack.Screen options={{ title: event?.title ?? "Event" }} />
       <View style={styles.container}>
+        <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
         <Text style={styles.title}>{event?.title ?? "Event"}</Text>
         <Text style={styles.text}>{event?.description ?? "Details unavailable."}</Text>
         <Text style={styles.text}>When: {event?.date}</Text>

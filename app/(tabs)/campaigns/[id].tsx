@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet, useColorScheme, Pressable, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { colors, type Palette } from "../../../theme/colors";
+import SettingsLink from "../../../components/SettingsLink";
+import { useTextScale } from "../../../theme/typography";
 import { campaigns } from "../../../data/campaigns";
 import { useFavorites } from "../../../store/favorites";
 import { useCampaignsLocal, CampaignsLocalProvider } from "../../../store/campaignsLocal";
@@ -11,7 +13,8 @@ function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
-  const styles = createStyles(palette);
+  const { factor } = useTextScale();
+  const styles = createStyles(palette, factor);
 
   const campaign = campaigns.find((c) => c.id === id);
   const { has, toggle } = useFavorites();
@@ -23,6 +26,7 @@ function CampaignDetailInner() {
     <>
       <Stack.Screen options={{ title: campaign?.title ?? "Campaign" }} />
       <View style={styles.container}>
+        <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
         <Text style={styles.title}>{campaign?.title ?? "Campaign"}</Text>
         <Text style={styles.text}>{campaign?.summary ?? "Details unavailable."}</Text>
         {!!campaign && (
@@ -90,11 +94,11 @@ export default function CampaignDetail() {
   );
 }
 
-function createStyles(palette: Palette) {
+function createStyles(palette: Palette, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: 22, fontWeight: "700", marginBottom: 8, color: palette.text },
-    text: { fontSize: 16, color: palette.text, opacity: 0.95, marginBottom: 16 },
+    title: { fontSize: Math.round(22 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
+    text: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.95, marginBottom: 16 },
     button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44, outlineStyle: 'auto', outlineColor: palette.primary },
     buttonText: { color: palette.onPrimary, fontSize: 16 },
     secondary: { backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, outlineStyle: 'auto', outlineColor: palette.primary },

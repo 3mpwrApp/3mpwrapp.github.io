@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Share } fro
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
+import SettingsLink from "../../../components/SettingsLink";
 import { podcasts } from "../../../data/podcasts";
 import { useFavorites } from "../../../store/favorites";
 // Lazily import expo-av to avoid bundling errors if it's not installed
@@ -77,6 +78,7 @@ export default function PodcastDetail() {
     <>
       <Stack.Screen options={{ title: podcast?.title ?? "Podcast" }} />
       <View style={styles.container}>
+        <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
         <Text style={styles.title}>{podcast?.title ?? "Podcast"}</Text>
         <Text style={styles.text}>{podcast ? `${podcast.description} • ${podcast.duration}` : "Details unavailable."}</Text>
         {!!podcast && (
