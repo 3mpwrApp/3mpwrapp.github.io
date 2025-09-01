@@ -5,13 +5,14 @@ import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../
 import { useFavorites } from "../../store/favorites";
 import { fetchPodcasts } from "../../services/podcasts";
 import { fetchResources } from "../../services/resources";
+import { fetchCampaigns } from "../../services/campaigns";
 import { Link } from "expo-router";
 import Card from "../../components/Card";
 import type { Podcast } from "../../data/podcasts";
-import type { Resource } from "../../types/models";
+import type { Resource, Campaign } from "../../types/models";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-type SectionItem = (Podcast & { kind: "podcast" }) | (Resource & { kind: "resource" });
+type SectionItem = (Podcast & { kind: "podcast" }) | (Resource & { kind: "resource" }) | (Campaign & { kind: "campaign" });
 
 export default function SavedScreen() {
   const scheme = useColorScheme();
@@ -24,13 +25,15 @@ export default function SavedScreen() {
   const { state } = useFavorites();
   const [pods, setPods] = React.useState<Podcast[]>([]);
   const [res, setRes] = React.useState<Resource[]>([]);
+  const [camps, setCamps] = React.useState<Campaign[]>([]);
 
   React.useEffect(() => {
     (async () => {
       try {
-        const [p, r] = await Promise.all([fetchPodcasts(), fetchResources()]);
+        const [p, r, c] = await Promise.all([fetchPodcasts(), fetchResources(), fetchCampaigns()]);
         setPods(p);
         setRes(r);
+        setCamps(c);
       } catch {}
     })();
   }, []);
@@ -45,12 +48,18 @@ export default function SavedScreen() {
     return res.filter((r) => savedIds.has(r.id)).map((r) => ({ ...r, kind: "resource" as const }));
   }, [res, state.resource]);
 
+  const campItems: SectionItem[] = React.useMemo(() => {
+    const savedIds = state.campaign;
+    return camps.filter((c) => savedIds.has(c.id)).map((c) => ({ ...c, kind: "campaign" as const }));
+  }, [camps, state.campaign]);
+
   const sections = React.useMemo(() => {
     const s: { title: string; data: SectionItem[] }[] = [];
     if (podItems.length) s.push({ title: "Podcasts", data: podItems });
     if (resItems.length) s.push({ title: "Resources", data: resItems });
+    if (campItems.length) s.push({ title: "Campaigns", data: campItems });
     return s.length ? s : [{ title: "Saved", data: [] }];
-  }, [podItems, resItems]);
+  }, [podItems, resItems, campItems]);
 
   return (
     <View style={styles.container} accessibilityLabel="Saved screen" accessible>
@@ -91,6 +100,13 @@ export default function SavedScreen() {
               </Link>
             );
           }
+          if (item.kind === "campaign") {
+            return (
+              <Link href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } }} asChild>
+                <Card title={item.title} subtitle={item.summary} rightIcon="megaphone-outline" />
+              </Link>
+            );
+          }
           return (
             <Link href={{ pathname: "/(tabs)/resources/[id]", params: { id: item.id } }} asChild>
               <Card title={item.title} subtitle={item.description} />
@@ -112,4 +128,3 @@ function createStyles(palette: Palette) {
     sectionHeader: { fontWeight: "700", color: palette.text },
   });
 }
-

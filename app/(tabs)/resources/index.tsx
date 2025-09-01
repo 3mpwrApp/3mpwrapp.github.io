@@ -16,6 +16,7 @@ import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
 
 import type { Resource, ResourceCategory } from "../../../types/models";
+import { filterResources, groupByRegion, presentProvinceCodes } from "../../../utils/resources";
 
 const PROVINCE_NAMES: Record<string, string> = {
   AB: "Alberta",
@@ -79,21 +80,7 @@ export default function ResourcesScreen() {
   }, [items, setCount]);
 
   useAnnounceOnChange(items.length, (n) => `${n} resources loaded`);
-  const filtered = React.useMemo(() => {
-    const q = query.trim().toLowerCase();
-    let base = items;
-    if (category !== "all") {
-      base = base.filter((r) => r.category === category);
-    }
-    // Region filter
-    if (region === "canada") {
-      base = base.filter((r) => r.scope === "canada");
-    } else if (region !== "all") {
-      base = base.filter((r) => r.scope === "province" && r.province === region);
-    }
-    if (!q) return base;
-    return base.filter((r) => r.title.toLowerCase().includes(q) || r.description.toLowerCase().includes(q));
-  }, [query, items, region, category]);
+  const filtered = React.useMemo(() => filterResources(items, { region, category, query }), [items, region, category, query]);
 
   const sections = React.useMemo(() => {
     if (region !== "all") {
@@ -104,14 +91,7 @@ export default function ResourcesScreen() {
         },
       ];
     }
-    const canada = filtered.filter((r) => r.scope === "canada");
-    const byProv = new Map<string, Resource[]>();
-    for (const r of filtered) {
-      if (r.scope === "province" && r.province) {
-        if (!byProv.has(r.province)) byProv.set(r.province, []);
-        byProv.get(r.province)!.push(r);
-      }
-    }
+    const { canada, byProv } = groupByRegion(filtered);
     const provSections = Array.from(byProv.entries())
       .sort((a, b) => a[0].localeCompare(b[0]))
       .map(([code, list]) => ({ title: `${code} - ${PROVINCE_NAMES[code]}`, data: list }));
@@ -159,11 +139,7 @@ export default function ResourcesScreen() {
       <View style={styles.filters} accessibilityLabel="Region filters" accessible>
         {(() => {
           const allProvCodes = Object.keys(PROVINCE_NAMES) as (keyof typeof PROVINCE_NAMES)[];
-          const presentProvSet = new Set(
-            items
-              .filter((r) => r.scope === "province" && !!r.province)
-              .map((r) => r.province as keyof typeof PROVINCE_NAMES)
-          );
+          const presentProvSet = new Set(presentProvinceCodes(items) as (keyof typeof PROVINCE_NAMES)[]);
           const provinces = (showAllRegions ? allProvCodes : Array.from(presentProvSet)).sort((a, b) =>
             PROVINCE_NAMES[a].localeCompare(PROVINCE_NAMES[b])
           );
@@ -262,7 +238,18 @@ export default function ResourcesScreen() {
             accessibilityRole="link"
             accessibilityLabel={`Open ${item.title}`}
           >
-            <Card title={item.title} subtitle={item.description} testID={`resource-${item.id}`} />
+            <Card
+              title={item.title}
+              subtitle={item.description}
+              testID={`resource-${item.id}`}
+              left={
+                <View style={{ backgroundColor: palette.primary, paddingHorizontal: 8, paddingVertical: 4, borderRadius: 12 }}>
+                  <Text style={{ color: palette.onPrimary, fontSize: 12 }}>
+                    {item.scope === "canada" ? "CA" : item.province}
+                  </Text>
+                </View>
+              }
+            />
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
