@@ -8,7 +8,8 @@
     "scheme": "empowrapp",
     "userInterfaceStyle": "automatic",
     "jsEngine": "hermes",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
+    "entryPoint": "./node_modules/expo-router/entry",
     "updates": {
       "checkAutomatically": "ON_ERROR_RECOVERY"
     },
@@ -48,6 +49,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6dd0264f-d796-4f63-9590-f82284a48354"
+      }
     }
   }
 }

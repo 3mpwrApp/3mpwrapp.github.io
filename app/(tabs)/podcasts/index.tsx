@@ -1,8 +1,21 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  useColorScheme,
+  FlatList,
+  RefreshControl,
+  Image,
+} from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+  useAnnounceOnChange,
+} from "../../../hooks/useA11y";
 import { podcasts as localPodcasts } from "../../../data/podcasts";
 import { stories as localStories } from "../../../data/stories";
 import { fetchPodcasts } from "../../../services/podcasts";
@@ -17,13 +30,14 @@ import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
 
 export default function PodcastsScreen() {
-  const scheme = useColorScheme();
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
+
   useAnnounceOnMount("Podcasts and Stories");
   useFocusOnRefOnMount(titleRef);
+
   const [items, setItems] = React.useState(localPodcasts);
   const [stories, setStories] = React.useState(localStories);
   const [loading, setLoading] = React.useState(false);
@@ -31,6 +45,8 @@ export default function PodcastsScreen() {
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
+  const { tick } = useRefresh();
+
   const reload = React.useCallback(async () => {
     try {
       setError(null);
@@ -43,14 +59,14 @@ export default function PodcastsScreen() {
       setStories(storyData);
       setOffline(false);
     } catch (e) {
+      console.warn("Failed to fetch podcasts", e);
       setError("Failed to load podcasts");
       setOffline(true);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [setOffline]);
 
-  const { tick } = useRefresh();
   React.useEffect(() => {
     reload();
   }, [reload, tick]);
@@ -62,13 +78,30 @@ export default function PodcastsScreen() {
   useAnnounceOnChange(items.length, (n) => `${n} podcasts loaded`);
 
   return (
-    <View style={styles.container} accessibilityLabel="Podcasts and Stories screen" accessible>
-      <Text ref={titleRef} nativeID="podcasts-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+    <View
+      style={styles.container}
+      accessibilityLabel="Podcasts and Stories screen"
+      accessible
+    >
+      <Text
+        ref={titleRef}
+        nativeID="podcasts-title"
+        accessibilityRole="header"
+        style={styles.title}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
         Podcasts & Stories
       </Text>
+
+      {/* Quick settings buttons */}
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
-      <Text style={styles.subtitle}>Listen to community stories and insights.</Text>
+
+      <Text style={styles.subtitle}>
+        Listen to community stories and insights.
+      </Text>
+
+      {/* Loading skeletons */}
       {loading && (
         <View>
           <SkeletonRow testID="skeleton-podcast-1" />
@@ -76,16 +109,25 @@ export default function PodcastsScreen() {
           <SkeletonRow testID="skeleton-podcast-3" />
         </View>
       )}
+
+      {/* Error state */}
       {error && (
-        <Text style={styles.subtitle} accessibilityRole="alert">
-          {error}
-        </Text>
+        <>
+          <Text style={styles.subtitle} accessibilityRole="alert">
+            {error}
+          </Text>
+          <Text
+            onPress={reload}
+            accessibilityRole="button"
+            accessibilityLabel="Try again"
+            style={[styles.subtitle, { textDecorationLine: "underline" }]}
+          >
+            Try again
+          </Text>
+        </>
       )}
-      {error && (
-        <Text onPress={reload} accessibilityRole="button" accessibilityLabel="Try again" style={styles.subtitle}>
-          Try again
-        </Text>
-      )}
+
+      {/* Podcasts List */}
       <FlatList
         data={items}
         keyExtractor={(item) => item.id}
@@ -108,23 +150,53 @@ export default function PodcastsScreen() {
               title={item.title}
               subtitle={`${item.description} \u2022 ${item.duration}`}
               testID={`podcast-${item.id}`}
-              rightIcon={String(item.id).startsWith("yt:") ? "logo-youtube" : "chevron-forward"}
-              left={item.thumbnailUrl ? (
-                <Image source={{ uri: item.thumbnailUrl }} style={{ width: 48, height: 48, borderRadius: 4, backgroundColor: palette.muted }} />
-              ) : undefined}
+              rightIcon={
+                String(item.id).startsWith("yt:")
+                  ? "logo-youtube"
+                  : "chevron-forward"
+              }
+              left={
+                item.thumbnailUrl ? (
+                  <Image
+                    source={{ uri: item.thumbnailUrl }}
+                    style={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 4,
+                      backgroundColor: palette.muted,
+                    }}
+                  />
+                ) : undefined
+              }
             />
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
-        refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
+        refreshControl={
+          <RefreshControl refreshing={loading} onRefresh={reload} />
+        }
       />
+
+      {/* Stories Section */}
       <Text style={[styles.title, { marginTop: 16 }]}>Stories</Text>
       <FlatList
         data={stories}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Link href={{ pathname: "/(tabs)/podcasts/stories/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
-            <Card title={item.title} subtitle={item.description} testID={`story-${item.id}`} />
+          <Link
+            href={{
+              pathname: "/(tabs)/podcasts/stories/[id]",
+              params: { id: item.id },
+            }}
+            asChild
+            accessibilityRole="link"
+            accessibilityLabel={`Open ${item.title}`}
+          >
+            <Card
+              title={item.title}
+              subtitle={item.description}
+              testID={`story-${item.id}`}
+            />
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
@@ -133,10 +205,24 @@ export default function PodcastsScreen() {
   );
 }
 
-function createStyles(palette: Palette, factor: number) {
+function createStyles(palette: any, factor: number) {
   return StyleSheet.create({
-    container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: Math.round(17 * factor), color: palette.text, opacity: 0.9, marginBottom: 8 },
+    container: {
+      flex: 1,
+      padding: 20,
+      backgroundColor: palette.background,
+    },
+    title: {
+      fontSize: Math.round(24 * factor),
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    subtitle: {
+      fontSize: Math.round(17 * factor),
+      color: palette.text,
+      opacity: 0.9,
+      marginBottom: 8,
+    },
   });
 }

@@ -47,7 +47,7 @@ function ChannelInner() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable
-            onPress={() => router.push(`/ (tabs)/community/threads/${item.id}`.replace(/\s/g, ""))}
+          onPress={() => router.push(`/(tabs)/community/threads/${item.id}`)}
             accessibilityRole="button"
             accessibilityLabel={`Open thread ${item.title}`}
             hitSlop={HIT_SLOP_8}

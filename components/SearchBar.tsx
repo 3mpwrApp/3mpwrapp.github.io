@@ -1,5 +1,10 @@
 import React from "react";
-import { View, TextInput, StyleSheet, Pressable, useColorScheme } from "react-native";
+import {
+  View,
+  TextInput,
+  StyleSheet,
+  Pressable,
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
@@ -13,13 +18,28 @@ type Props = {
   testID?: string;
 };
 
-export default function SearchBar({ value, onChangeText, placeholder = "Search", accessibilityLabel = "Search", testID }: Props) {
+export default function SearchBar({
+  value,
+  onChangeText,
+  placeholder = "Search",
+  accessibilityLabel = "Search",
+  testID,
+}: Props) {
   const palette = useAppPalette();
   const { factor } = useTextScale();
-  const styles = React.useMemo(() => createStyles(palette, factor), [palette, factor]);
+  const styles = React.useMemo(
+    () => createStyles(palette, factor),
+    [palette, factor]
+  );
+
   return (
     <View style={styles.container} accessibilityRole="search" testID={testID}>
-      <Ionicons name="search" size={18} color={palette.text} style={{ marginHorizontal: 8, opacity: 0.8 }} />
+      <Ionicons
+        name="search"
+        size={18}
+        color={palette.text}
+        style={{ marginHorizontal: 8, opacity: 0.8 }}
+      />
       <TextInput
         style={styles.input}
         value={value}
@@ -28,7 +48,6 @@ export default function SearchBar({ value, onChangeText, placeholder = "Search",
         placeholderTextColor={palette.text}
         accessibilityLabel={accessibilityLabel}
         returnKeyType="search"
-        clearButtonMode="never"
       />
       {!!value && (
         <Pressable
@@ -37,9 +56,17 @@ export default function SearchBar({ value, onChangeText, placeholder = "Search",
           accessibilityLabel="Clear search"
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           focusable
-          style={({ pressed }) => [{ padding: 6, outlineStyle: 'auto', outlineColor: palette.primary }, pressed && { opacity: 0.7 }]}
+          style={({ pressed }) => [
+            { padding: 6 },
+            pressed && { opacity: 0.7 },
+          ]}
         >
-          <Ionicons name="close-circle" size={18} color={palette.text} style={{ opacity: 0.8 }} />
+          <Ionicons
+            name="close-circle"
+            size={18}
+            color={palette.text}
+            style={{ opacity: 0.8 }}
+          />
         </Pressable>
       )}
     </View>

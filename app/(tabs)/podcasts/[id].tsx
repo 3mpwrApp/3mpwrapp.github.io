@@ -1,175 +1,156 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Share } from "react-native";
-import { useLocalSearchParams, Stack } from "expo-router";
-import { useAppPalette } from "../../../theme/usePalette";
+import {
+  View,
+  Text,
+  StyleSheet,
+  useColorScheme,
+  Pressable,
+  Share,
+  Image,
+  ScrollView,
+} from "react-native";
+import { Stack, useLocalSearchParams } from "expo-router";
+import { colors, type Palette } from "../../../theme/colors";
 import { useTextScale } from "../../../theme/typography";
-import SettingsLink from "../../../components/SettingsLink";
-import { podcasts } from "../../../data/podcasts";
 import { useFavorites } from "../../../store/favorites";
-// Lazily import expo-av to avoid bundling errors if it's not installed
-// and provide a graceful fallback when unavailable.
-let Audio: any; // assigned at runtime via dynamic import
-type AVPlaybackStatusSuccess = any;
+import { logEvent } from "../../../services/analytics";
 
 export default function PodcastDetail() {
-  const { id, title: t, description: d, duration: du } = useLocalSearchParams<{ id: string; title?: string; description?: string; duration?: string }>();
-  const palette = useAppPalette();
+  const { id, title, description, duration } = useLocalSearchParams<{
+    id: string;
+    title: string;
+    description: string;
+    duration: string;
+  }>();
+
+  const scheme = useColorScheme();
+  const palette: Palette = scheme === "dark" ? colors.dark : colors.light;
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
-  const podcast = podcasts.find((p) => p.id === id) || (t ? { id: String(id), title: String(t), description: String(d || ""), duration: String(du || ""), audioUrl: "" } : undefined);
+
   const { has, toggle } = useFavorites();
-  const saved = podcast ? has("podcast", podcast.id) : false;
-
-  const soundRef = React.useRef<any | null>(null);
-  const [isPlaying, setIsPlaying] = React.useState(false);
-  const [pos, setPos] = React.useState(0);
-  const [dur, setDur] = React.useState(0);
-  const [audioSupported, setAudioSupported] = React.useState(true);
-
-  React.useEffect(() => {
-    return () => {
-      if (soundRef.current) {
-        soundRef.current.unloadAsync().catch(() => {});
-        soundRef.current = null;
-      }
-    };
-  }, []);
-
-  const ensureLoaded = React.useCallback(async () => {
-    if (!podcast?.audioUrl) return null;
-    if (soundRef.current) return soundRef.current;
-    if (!Audio) {
-      try {
-        const mod = await import("expo-av");
-        Audio = mod.Audio;
-      } catch (e) {
-        setAudioSupported(false);
-        return null;
-      }
-    }
-    const { sound } = await Audio.Sound.createAsync(
-      { uri: podcast.audioUrl },
-      { shouldPlay: false },
-      (status: any) => {
-        if (!status.isLoaded) return;
-        const s = status as AVPlaybackStatusSuccess;
-        setPos(s.positionMillis);
-        setDur(s.durationMillis ?? 0);
-        setIsPlaying(s.isPlaying);
-      }
-    );
-    soundRef.current = sound;
-    return sound;
-  }, [podcast?.audioUrl]);
-
-  const togglePlay = React.useCallback(async () => {
-    if (!podcast?.audioUrl) return;
-    const snd = await ensureLoaded();
-    if (!snd) return;
-    const status = await snd.getStatusAsync();
-    if (status.isLoaded && status.isPlaying) {
-      await snd.pauseAsync();
-    } else {
-      await snd.playAsync();
-    }
-  }, [ensureLoaded, podcast?.audioUrl]);
+  const saved = id ? has("podcast", id) : false;
 
   return (
     <>
-      <Stack.Screen options={{ title: podcast?.title ?? "Podcast" }} />
-      <View style={styles.container}>
-        <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
-        <Text style={styles.title}>{podcast?.title ?? "Podcast"}</Text>
-        <Text style={styles.text}>{podcast ? `${podcast.description} • ${podcast.duration}` : "Details unavailable."}</Text>
-        {!!podcast && (
+      <Stack.Screen options={{ title: title ?? "Podcast" }} />
+      <ScrollView style={styles.container} contentContainerStyle={{ padding: 20 }}>
+        {/* Thumbnail placeholder */}
+        <Image
+          source={{
+            uri:
+              "https://placehold.co/400x200?text=Podcast" + (title ? `: ${title}` : ""),
+          }}
+          style={styles.thumbnail}
+        />
+
+        <Text style={styles.title}>{title ?? "Podcast"}</Text>
+        <Text style={styles.meta}>{duration ? `Duration: ${duration}` : ""}</Text>
+        <Text style={styles.description}>
+          {description ?? "No description available."}
+        </Text>
+
+        {/* Save / Unsave */}
+        {id && (
           <Pressable
             style={({ pressed }) => [styles.button, pressed && { opacity: 0.8 }]}
-            onPress={() => toggle("podcast", podcast.id)}
+            onPress={() => toggle("podcast", id)}
             accessibilityRole="button"
             accessibilityLabel={saved ? "Remove from favorites" : "Save to favorites"}
           >
-            <Text style={styles.buttonText}>{saved ? "Remove from Favorites" : "Save to Favorites"}</Text>
+            <Text style={styles.buttonText}>
+              {saved ? "Remove from Favorites" : "Save to Favorites"}
+            </Text>
           </Pressable>
         )}
 
-        {podcast?.audioUrl ? (
-          <View style={{ height: 12 }} />
-        ) : null}
-
-        {podcast?.audioUrl ? (
-          <View accessibilityLabel="Audio player" accessible>
-            <Pressable
-              style={({ pressed }) => [styles.button, pressed && { opacity: 0.8 }]}
-              onPress={togglePlay}
-              accessibilityRole="button"
-              accessibilityLabel={isPlaying ? "Pause" : "Play"}
-            >
-              <Text style={styles.buttonText}>{isPlaying ? "Pause" : "Play"}</Text>
-            </Pressable>
-            <Text style={styles.text} accessibilityLabel={`Progress ${formatTime(pos)} of ${formatTime(dur)}`}>
-              {formatTime(pos)} / {formatTime(dur)}
-            </Text>
-          </View>
-        ) : null}
-
-        {!podcast?.audioUrl && String(id || "").startsWith("yt:") ? (
+        {/* Share */}
+        {id && (
           <Pressable
-            style={({ pressed }) => [styles.button, pressed && { opacity: 0.8 }]}
-            onPress={() => {
-              const vid = String(id).slice(3);
-              const url = `https://www.youtube.com/watch?v=${vid}`;
-              Linking.openURL(url).catch(() => {});
+            style={({ pressed }) => [
+              styles.secondary,
+              pressed && { opacity: 0.8 },
+            ]}
+            onPress={async () => {
+              try {
+                const msg = `${title ?? "Podcast"} — ${description ?? ""}`;
+                await Share.share({
+                  title: title ?? "Podcast",
+                  message: msg,
+                  url: `https://empowr.app/podcasts/${id}`,
+                });
+                logEvent("podcast_share", { id });
+              } catch (e) {
+                console.warn("Share failed", e);
+              }
             }}
             accessibilityRole="button"
-            accessibilityLabel="Open on YouTube"
+            accessibilityLabel="Share podcast"
           >
-            <Text style={styles.buttonText}>Open on YouTube</Text>
+            <Text style={styles.secondaryText}>Share</Text>
           </Pressable>
-        ) : null}
-
-        <View style={{ height: 8 }} />
-        <Pressable
-          style={({ pressed }) => [styles.button, pressed && { opacity: 0.8 }]}
-          onPress={() => {
-            const vid = String(id).startsWith("yt:") ? String(id).slice(3) : null;
-            const url = vid ? `https://www.youtube.com/watch?v=${vid}` : podcast?.audioUrl;
-            Share.share({ title: podcast?.title ?? "Podcast", message: url || podcast?.title || "" }).catch(() => {});
-          }}
-          accessibilityRole="button"
-          accessibilityLabel="Share"
-        >
-          <Text style={styles.buttonText}>Share</Text>
-        </Pressable>
-
-        {!podcast?.audioUrl && !String(id || "").startsWith("yt:") ? (
-          <Text style={styles.text}>No audio available.</Text>
-        ) : null}
-
-        {!audioSupported && (
-          <Text style={styles.text}>
-            Audio playback not available. Install expo-av to enable podcasts.
-          </Text>
         )}
-      </View>
+      </ScrollView>
     </>
   );
 }
 
-type Palette = ReturnType<typeof useAppPalette>;
 function createStyles(palette: Palette, factor: number) {
   return StyleSheet.create({
-    container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: Math.round(22 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
-    text: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.95, marginBottom: 16 },
-    button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44 },
-    buttonText: { color: palette.onPrimary, fontSize: 16 },
+    container: {
+      flex: 1,
+      backgroundColor: palette.background,
+    },
+    thumbnail: {
+      width: "100%",
+      height: 200,
+      borderRadius: 8,
+      backgroundColor: palette.muted,
+      marginBottom: 16,
+    },
+    title: {
+      fontSize: Math.round(22 * factor),
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    meta: {
+      fontSize: Math.round(14 * factor),
+      color: palette.text,
+      opacity: 0.8,
+      marginBottom: 12,
+    },
+    description: {
+      fontSize: Math.round(16 * factor),
+      color: palette.text,
+      opacity: 0.95,
+      marginBottom: 16,
+    },
+    button: {
+      backgroundColor: palette.primary,
+      paddingVertical: 10,
+      paddingHorizontal: 16,
+      borderRadius: 6,
+      minHeight: 44,
+      marginBottom: 8,
+    },
+    buttonText: {
+      color: palette.onPrimary,
+      fontSize: 16,
+      fontWeight: "700",
+    },
+    secondary: {
+      backgroundColor: "transparent",
+      paddingVertical: 8,
+      paddingHorizontal: 12,
+      borderWidth: 1,
+      borderColor: palette.muted,
+      borderRadius: 6,
+    },
+    secondaryText: {
+      color: palette.text,
+      fontSize: 16,
+      fontWeight: "700",
+    },
   });
-}
-
-function formatTime(ms: number) {
-  if (!ms || ms < 0) return "0:00";
-  const total = Math.floor(ms / 1000);
-  const m = Math.floor(total / 60);
-  const s = total % 60;
-  return `${m}:${s.toString().padStart(2, "0")}`;
 }

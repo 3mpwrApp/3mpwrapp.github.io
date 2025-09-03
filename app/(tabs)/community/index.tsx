@@ -43,7 +43,7 @@ function ScreenInner() {
         )}
         renderItem={({ item }) => (
           <Pressable
-            onPress={() => router.push(`/ (tabs)/community/${item.slug}`.replace(/\s/g, ""))}
+          onPress={() => router.push(`/(tabs)/community/${item.slug}`)}
             accessibilityRole="button"
             accessibilityLabel={`Open channel ${item.title}`}
             hitSlop={HIT_SLOP_8}
