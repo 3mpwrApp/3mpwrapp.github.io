@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Alert } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Alert, Pressable } from "react-native";
 import * as Linking from "expo-linking";
 import { Image as ExpoImage } from "expo-image";
+import { Ionicons } from "@expo/vector-icons";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import {
@@ -16,14 +17,13 @@ import { fetchPodcasts } from "../../../services/podcasts";
 import { fetchStories } from "../../../services/stories";
 import { useCounts } from "../../../store/counts";
 import Card from "../../../components/Card";
-import { Ionicons } from "@expo/vector-icons";
 // Link not needed; we open externally via Linking
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
-import { Ionicons } from "@expo/vector-icons";
+import { useFavorites } from "../../../store/favorites";
 
 export default function PodcastsScreen() {
   const palette = useAppPalette();
@@ -41,6 +41,7 @@ export default function PodcastsScreen() {
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
   const { tick } = useRefresh();
+  const { has, toggle } = useFavorites();
 
   const openYouTubeDirect = React.useCallback(async (idOrUrl: string) => {
     const id = idOrUrl.startsWith("yt:") ? idOrUrl.replace("yt:", "") : idOrUrl;
@@ -68,7 +69,7 @@ export default function PodcastsScreen() {
     );
   }, [openYouTubeDirect]);
 
-  function RowThumbnail({ videoId, tint }: { videoId: string; tint: string }) {
+  function RowThumbnail({ videoId, tint, saved, onToggle }: { videoId: string; tint: string; saved: boolean; onToggle: () => void }) {
     const id = videoId.replace("yt:", "");
     const [loaded, setLoaded] = React.useState(false);
     return (
@@ -85,6 +86,16 @@ export default function PodcastsScreen() {
         <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" }}>
           <Ionicons name="play-circle" size={22} color="#ffffff" />
         </View>
+        <Pressable
+          onPress={onToggle}
+          accessibilityRole="button"
+          accessibilityState={{ selected: saved }}
+          accessibilityLabel={saved ? "Remove from favorites" : "Save to favorites"}
+          hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+          style={({ pressed }) => [{ position: "absolute", top: 2, right: 2, padding: 2 }, pressed && { opacity: 0.7 }]}
+        >
+          <Ionicons name={saved ? "bookmark" : "bookmark-outline"} size={16} color="#fff" />
+        </Pressable>
       </View>
     );
   }
@@ -173,6 +184,7 @@ export default function PodcastsScreen() {
         keyExtractor={(item) => `thread-${item.id}`}
         renderItem={({ item }) => {
           const isYT = String(item.id).startsWith("yt:");
+          const saved = has("podcast", item.id);
           return (
             <Card
               title={item.title}
@@ -181,7 +193,7 @@ export default function PodcastsScreen() {
               rightIcon={isYT ? "logo-youtube" : "chevron-forward"}
               onPress={isYT ? () => openYouTubeChooser(String(item.id), item.title) : undefined}
               accessibilityLabel={`Open ${item.title} on YouTube`}
-              left={isYT ? <RowThumbnail videoId={String(item.id)} tint={palette.muted} /> : undefined}
+              left={isYT ? <RowThumbnail videoId={String(item.id)} tint={palette.muted} saved={saved} onToggle={() => toggle("podcast", item.id)} /> : undefined}
               onPressRight={isYT ? () => openYouTubeDirect(String(item.id)) : undefined}
               rightA11yLabel="Open on YouTube"
             />

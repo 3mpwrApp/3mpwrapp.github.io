@@ -17,6 +17,10 @@ export default function WhatsNewScreen() {
   useFocusOnRefOnMount(titleRef);
 
   const now = React.useMemo(() => new Date(), []);
+  // Track last-seen timestamp to badge unread items
+  const [lastSeen, setLastSeen] = React.useState<string | null>(null);
+  let AsyncStorage: any;
+  try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
   const [items, setItems] = React.useState(defaultWN);
   const [title, setTitle] = React.useState("");
   const [summary, setSummary] = React.useState("");
@@ -24,11 +28,18 @@ export default function WhatsNewScreen() {
     (async () => {
       const local = await getLocalWhatsNew();
       if (local.length) setItems([...local, ...defaultWN]);
+      if (AsyncStorage) {
+        try {
+          const seen = await AsyncStorage.getItem("whatsnew:lastSeen:v1");
+          if (seen) setLastSeen(seen);
+        } catch {}
+      }
     })();
   }, []);
-  const isNew = (d: string) => (now.getTime() - new Date(d).getTime()) / (1000*60*60*24) <= 30;
-  const recent = items.filter((i) => isNew(i.date));
-  const older = items.filter((i) => !isNew(i.date));
+  const isWithin30Days = (d: string) => (now.getTime() - new Date(d).getTime()) / (1000*60*60*24) <= 30;
+  const isUnread = (d: string) => (lastSeen ? new Date(d).getTime() > new Date(lastSeen).getTime() : true);
+  const recent = items.filter((i) => isWithin30Days(i.date));
+  const older = items.filter((i) => !isWithin30Days(i.date));
   const sections = [
     ...(recent.length ? [{ title: "New", data: recent }] : []),
     ...(older.length ? [{ title: "Archive", data: older }] : []),
@@ -58,18 +69,44 @@ export default function WhatsNewScreen() {
           <Text style={styles.buttonText}>Add</Text>
         </Pressable>
       </View>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel="Mark all as read"
+        onPress={async () => {
+          const newest = items.reduce((acc, cur) => Math.max(acc, new Date(cur.date).getTime()), 0);
+          if (AsyncStorage && newest) {
+            await AsyncStorage.setItem("whatsnew:lastSeen:v1", new Date(newest).toISOString());
+            setLastSeen(new Date(newest).toISOString());
+          }
+        }}
+        style={({ pressed }) => [styles.button, pressed && { opacity: 0.7 }]}
+      >
+        <Text style={styles.buttonText}>Mark all as read</Text>
+      </Pressable>
+
       <SectionList
         sections={sections}
         keyExtractor={(item) => item.id}
         renderSectionHeader={({ section }) => (
           <Text style={styles.section}>{section.title}</Text>
         )}
-        renderItem={({ item }) => (
-          <View style={styles.item}>
-            <Text style={styles.itemTitle}>{item.title}</Text>
-            <Text style={styles.itemText}>{item.summary}</Text>
-          </View>
-        )}
+        renderItem={({ item }) => {
+          const unread = isUnread(item.date);
+          return (
+            <View style={styles.item}>
+              <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                <Text style={styles.itemTitle}>{item.title}</Text>
+                <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+                  <Text style={[styles.itemDate]}>{new Date(item.date).toLocaleDateString()}</Text>
+                  {unread && (
+                    <Text style={{ backgroundColor: palette.primary, color: palette.onPrimary, borderRadius: 8, paddingHorizontal: 8, paddingVertical: 2, fontWeight: "700" }}>New</Text>
+                  )}
+                </View>
+              </View>
+              <Text style={styles.itemText}>{item.summary}</Text>
+            </View>
+          );
+        }}
         contentContainerStyle={{ paddingTop: 8 }}
       />
     </View>
@@ -85,6 +122,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     item: { paddingVertical: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
     itemTitle: { color: palette.text, fontWeight: "600" },
     itemText: { color: palette.text, opacity: 0.9 },
+    itemDate: { color: palette.text, opacity: 0.7, fontSize: Math.round(12 * factor) },
     input: { borderWidth: 1, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, color: palette.text, marginBottom: 6 },
     button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, alignItems: "center" },
     buttonText: { color: palette.onPrimary, fontSize: 16, fontWeight: "700" },
