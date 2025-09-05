@@ -230,31 +230,76 @@ export default function ThemedHeader() {
 
       {menuOpen && (
         <>
-        <Pressable
-          accessibilityRole="button"
-          accessibilityLabel="Close menu"
-          onPress={() => setMenuOpen(false)}
-          style={styles.menuBackdrop}
-        />
-        <View accessibilityLabel="Main menu" accessible accessibilityViewIsModal style={styles.menuWrap}>
-          {[
-            { label: "Resources", path: "/(tabs)/resources/index" },
-            { label: "FAQs", path: "/(tabs)/faqs" },
-            { label: "Wellness", path: "/(tabs)/wellness" },
-            { label: "Saved", path: "/(tabs)/saved" },
-            { label: "About & Contact", path: "/(tabs)/about" },
-          ].map((item) => (
-            <Pressable
-              key={item.path}
-              onPress={() => { setMenuOpen(false); router.push(item.path); }}
-              accessibilityRole="button"
-              accessibilityLabel={`Go to ${item.label}`}
-              style={({ pressed }) => [{ paddingVertical: 10, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
-            >
-              <Text style={{ color: palette.text, fontWeight: "700" }}>{item.label}</Text>
-            </Pressable>
-          ))}
-        </View>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="Close menu"
+            onPress={() => setMenuOpen(false)}
+            style={styles.menuBackdrop}
+          />
+          <View accessibilityLabel="Main menu" accessible accessibilityViewIsModal style={styles.menuWrap}>
+            <Text style={styles.menuSection}>Essentials</Text>
+            {[{ label: "Resources", path: "/(tabs)/resources/index" }].map((item) => (
+              <Pressable
+                key={item.path}
+                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                accessibilityRole="button"
+                accessibilityLabel={`Go to ${item.label}`}
+                style={({ pressed }) => [{ paddingVertical: 10, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+              >
+                <Text style={{ color: palette.text, fontWeight: "700" }}>{item.label}</Text>
+              </Pressable>
+            ))}
+            <Text style={styles.menuSection}>Tools</Text>
+            {[
+              { label: "Claims Navigator", path: "/(tabs)/resources/claims-navigator" },
+              { label: "Evidence Locker", path: "/(tabs)/resources/evidence-locker" },
+              { label: "Support Directory", path: "/(tabs)/resources/support-directory" },
+              { label: "Letters", path: "/(tabs)/resources/index" },
+            ].map((item) => (
+              <Pressable
+                key={item.path}
+                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                accessibilityRole="button"
+                accessibilityLabel={`Go to ${item.label}`}
+                style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+              >
+                <Text style={{ color: palette.text }}>{item.label}</Text>
+              </Pressable>
+            ))}
+            <Text style={styles.menuSection}>Info</Text>
+            {[
+              { label: "Research", path: "/(tabs)/research/index" },
+              { label: "What's New", path: "/(tabs)/whatsnew/index" },
+              { label: "FAQs", path: "/(tabs)/faqs" },
+              { label: "Wellness", path: "/(tabs)/wellness" },
+              { label: "About & Contact", path: "/(tabs)/about" },
+            ].map((item) => (
+              <Pressable
+                key={item.path}
+                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                accessibilityRole="button"
+                accessibilityLabel={`Go to ${item.label}`}
+                style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+              >
+                <Text style={{ color: palette.text }}>{item.label}</Text>
+              </Pressable>
+            ))}
+            <Text style={styles.menuSection}>Profile</Text>
+            {[
+              { label: "Saved", path: "/(tabs)/saved" },
+              { label: "Settings", path: "/(tabs)/settings" },
+            ].map((item) => (
+              <Pressable
+                key={item.path}
+                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                accessibilityRole="button"
+                accessibilityLabel={`Go to ${item.label}`}
+                style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+              >
+                <Text style={{ color: palette.text }}>{item.label}</Text>
+              </Pressable>
+            ))}
+          </View>
         </>
       )}
     </SafeAreaView>
@@ -300,6 +345,7 @@ function createStyles(palette: Palette) {
       minWidth: 180,
       zIndex: 999,
     },
+    menuSection: { color: palette.text, opacity: 0.7, paddingHorizontal: 14, paddingTop: 8, paddingBottom: 4, fontWeight: '700' },
     menuBackdrop: {
       position: "absolute",
       left: 0,
