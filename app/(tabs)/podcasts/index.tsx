@@ -130,7 +130,7 @@ export default function PodcastsScreen() {
       {/* Podcasts List */}
       <FlatList
         data={items}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => `thread-${item.id}`}
         renderItem={({ item }) => (
           <Link
             href={{

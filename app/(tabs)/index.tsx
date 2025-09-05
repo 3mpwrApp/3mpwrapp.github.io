@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, Pressable, Image, useWindowDimensions } from "react-native";
-import { Link } from "expo-router";
+import { View, Text, StyleSheet, useColorScheme, Image, useWindowDimensions } from "react-native";
+// Removed unused Link import
 import { colors, type Palette } from "../../theme/colors";
 import { useTranslation } from "../../i18n";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";

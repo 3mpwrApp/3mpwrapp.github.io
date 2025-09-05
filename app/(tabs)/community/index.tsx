@@ -37,13 +37,13 @@ function ScreenInner() {
           { title: "Provinces & Territories", data: prov },
           { title: "Topics", data: topics },
         ]}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => `channel-${item.id}`}
         renderSectionHeader={({ section }) => (
           <Text style={styles.section}>{section.title}</Text>
         )}
         renderItem={({ item }) => (
           <Pressable
-          onPress={() => router.push(`/(tabs)/community/${item.slug}`)}
+            onPress={() => router.push(`/(tabs)/community/${item.slug}`)}
             accessibilityRole="button"
             accessibilityLabel={`Open channel ${item.title}`}
             hitSlop={HIT_SLOP_8}

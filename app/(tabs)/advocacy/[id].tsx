@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
+export const options = { href: null };
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";

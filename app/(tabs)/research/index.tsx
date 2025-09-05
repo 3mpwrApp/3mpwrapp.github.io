@@ -104,4 +104,4 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     chipTextActive: { color: palette.onPrimary },
   });
 }
-
+export const options = { href: null };

@@ -3,7 +3,6 @@ import {
   SafeAreaView,
   Text,
   StyleSheet,
-  useColorScheme,
   View,
   Pressable,
   Linking,

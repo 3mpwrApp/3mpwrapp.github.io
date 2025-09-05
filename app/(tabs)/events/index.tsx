@@ -4,6 +4,9 @@ import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import { events as localEvents } from "../../../data/events";
+import { generateCanadianHolidays, generateProvincialHolidays } from "../../../data/holidays-ca";
+import { useSettings } from "../../../store/settings";
+import { generateDisabilityObservances } from "../../../data/disability-observances";
 import { fetchEvents } from "../../../services/events";
 import { useCounts } from "../../../store/counts";
 import Card from "../../../components/Card";
@@ -21,7 +24,23 @@ export default function EventsScreen() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Events");
   useFocusOnRefOnMount(titleRef);
-  const [items, setItems] = React.useState(localEvents);
+
+  const [baseItems, setBaseItems] = React.useState(localEvents);
+  const [systemItems, setSystemItems] = React.useState(() => {
+    const y = new Date().getFullYear();
+    return [
+      ...generateCanadianHolidays(y),
+      ...generateDisabilityObservances(y),
+    ];
+  });
+  const { includeProvincialHolidays, province } = useSettings();
+  type FilterMode = "all" | "community" | "observances";
+  const [mode, setMode] = React.useState<FilterMode>("all");
+  const items = React.useMemo(() => {
+    if (mode === "community") return baseItems;
+    if (mode === "observances") return systemItems;
+    return [...baseItems, ...systemItems];
+  }, [baseItems, systemItems, mode]);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [month, setMonth] = React.useState(() => {
@@ -37,7 +56,7 @@ export default function EventsScreen() {
       setError(null);
       setLoading(true);
       const data = await fetchEvents();
-      setItems(data);
+      setBaseItems(data);
       setOffline(false);
     } catch (e) {
       setError("Failed to load events");
@@ -45,7 +64,7 @@ export default function EventsScreen() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [setOffline]);
 
   const { tick } = useRefresh();
   React.useEffect(() => {
@@ -64,6 +83,20 @@ export default function EventsScreen() {
   };
 
   const monthLabel = React.useMemo(() => month.toLocaleString(undefined, { month: "long", year: "numeric" }), [month]);
+  // Regenerate system observances/holidays when the displayed month crosses a year boundary
+  React.useEffect(() => {
+    const y = month.getFullYear();
+    const national = generateCanadianHolidays(y);
+    const provincials = includeProvincialHolidays ? generateProvincialHolidays(y, province) : [];
+    // If a province has a named February holiday, drop the generic Family Day from national list to avoid duplicates.
+    const hasNamedFeb = provincials.some((e) => /prov-\d{4}-02-\d{2}-/.test(e.id));
+    const filteredNational = hasNamedFeb ? national.filter((e) => !/-family$/.test(e.id)) : national;
+    setSystemItems([
+      ...filteredNational,
+      ...generateDisabilityObservances(y),
+      ...provincials,
+    ]);
+  }, [month, includeProvincialHolidays, province]);
   const daysMatrix = React.useMemo(() => buildMonthMatrix(month), [month]);
   const eventsByDay = React.useMemo(() => mapEventsByDay(items), [items]);
   const filtered = React.useMemo(() => (selectedDay ? items.filter((e) => toDayKey(e.date) === selectedDay) : items), [items, selectedDay]);
@@ -73,9 +106,36 @@ export default function EventsScreen() {
       <Text ref={titleRef} nativeID="events-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Events
       </Text>
+
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
+
       <Text style={styles.subtitle}>Community events, workshops, and meetups. Add reminders from details.</Text>
+
+      <View style={{ flexDirection: "row", gap: 8, marginVertical: 6 }}>
+        {([
+          { key: "all", label: "All" },
+          { key: "community", label: "Community" },
+          { key: "observances", label: "Observances" },
+        ] as { key: FilterMode; label: string }[]).map((f) => (
+          <Pressable
+            key={f.key}
+            onPress={() => setMode(f.key)}
+            accessibilityRole="button"
+            accessibilityLabel={`Show ${f.label}`}
+            style={({ pressed }) => [
+              { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
+              mode === f.key && { backgroundColor: palette.primary },
+              { opacity: pressed ? 0.7 : 1 },
+            ]}
+          >
+            <Text style={[{ color: palette.text }, mode === f.key && { color: palette.onPrimary, fontWeight: "700" }]}>
+              {f.label}
+            </Text>
+          </Pressable>
+        ))}
+      </View>
+
       {loading && (
         <View>
           <SkeletonRow testID="skeleton-event-1" />
@@ -83,15 +143,14 @@ export default function EventsScreen() {
           <SkeletonRow testID="skeleton-event-3" />
         </View>
       )}
+
       {error && (
-        <Text style={styles.subtitle} accessibilityRole="alert">
-          {error}
-        </Text>
-      )}
-      {error && (
-        <Text onPress={reload} accessibilityRole="button" accessibilityLabel="Try again" style={styles.subtitle}>
-          Try again
-        </Text>
+        <>
+          <Text style={styles.subtitle} accessibilityRole="alert">{error}</Text>
+          <Text onPress={reload} accessibilityRole="button" accessibilityLabel="Try again" style={styles.subtitle}>
+            Try again
+          </Text>
+        </>
       )}
 
       <View style={styles.calHeader}>
@@ -103,11 +162,13 @@ export default function EventsScreen() {
           <Text style={styles.calNav}>{">"}</Text>
         </Pressable>
       </View>
+
       <View style={styles.weekRow}>
-        {["S", "M", "T", "W", "T", "F", "S"].map((d) => (
-          <Text key={d} style={styles.weekHdr}>{d}</Text>
+        {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
+          <Text key={`dow-${i}`} style={styles.weekHdr}>{d}</Text>
         ))}
       </View>
+
       {daysMatrix.map((week, wi) => (
         <View key={wi} style={styles.weekRow}>
           {week.map((d, di) => {
@@ -135,7 +196,26 @@ export default function EventsScreen() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Link href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
-            <Card title={item.title} subtitle={formatMeta(item.date, item.isVirtual, item.location)} testID={`event-${item.id}`} />
+            <Card
+              title={item.title}
+              subtitle={formatMeta(item.date, item.isVirtual, item.location)}
+              left={(() => {
+                const label = item.id.startsWith("holiday-")
+                  ? "Holiday"
+                  : item.id.startsWith("prov-")
+                  ? "Provincial"
+                  : item.id.startsWith("obs-")
+                  ? "Observance"
+                  : null;
+                if (!label) return null;
+                return (
+                  <View style={{ backgroundColor: palette.primary, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 }}>
+                    <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: "700" }}>{label}</Text>
+                  </View>
+                );
+              })()}
+              testID={`event-${item.id}`}
+            />
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}

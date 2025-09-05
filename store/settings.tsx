@@ -14,6 +14,7 @@ export type SettingsState = {
   highContrast: boolean;
   textScale: TextScale;
   province: import("../types/models").ProvinceCode | null;
+  includeProvincialHolidays: boolean;
 };
 
 /** Context type including setters */
@@ -21,6 +22,7 @@ type Ctx = SettingsState & {
   setHighContrast: (v: boolean) => void;
   setTextScale: (v: TextScale) => void;
   setProvince: (p: SettingsState["province"]) => void;
+  setIncludeProvincialHolidays: (v: boolean) => void;
 };
 
 /** Default values if nothing stored */
@@ -28,6 +30,7 @@ const DEFAULTS: SettingsState = {
   highContrast: false,
   textScale: "normal",
   province: null,
+  includeProvincialHolidays: false,
 };
 
 const STORAGE_KEY = "settings:v1";
@@ -74,8 +77,10 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setState((s) => ({ ...s, textScale: v }));
   const setProvince = (p: SettingsState["province"]) =>
     setState((s) => ({ ...s, province: p }));
+  const setIncludeProvincialHolidays = (v: boolean) =>
+    setState((s) => ({ ...s, includeProvincialHolidays: v }));
 
-  const value: Ctx = { ...state, setHighContrast, setTextScale, setProvince };
+  const value: Ctx = { ...state, setHighContrast, setTextScale, setProvince, setIncludeProvincialHolidays };
 
   return (
     <SettingsContext.Provider value={value}>

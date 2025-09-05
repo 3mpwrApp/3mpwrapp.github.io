@@ -1,3 +1,4 @@
+export const options = { href: null };
 import {
   View,
   Text,

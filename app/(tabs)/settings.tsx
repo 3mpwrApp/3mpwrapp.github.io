@@ -14,13 +14,13 @@ export default function SettingsScreen() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Settings");
   useFocusOnRefOnMount(titleRef);
-  const { t, setLanguage } = useTranslation();
-  const { highContrast, setHighContrast, textScale, setTextScale, province, setProvince } = useSettings();
+  const { setLanguage } = useTranslation();
+  const { highContrast, setHighContrast, textScale, setTextScale, province, setProvince, includeProvincialHolidays, setIncludeProvincialHolidays } = useSettings();
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 20 }} accessibilityLabel="Settings screen" accessible>
       <Text ref={titleRef} nativeID="settings-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        {t("nav.profile", "Profile")} • Settings
+        Settings
       </Text>
 
       <Section title="Display" styles={styles}>
@@ -51,10 +51,15 @@ export default function SettingsScreen() {
             <Chip key={p} selected={province === p} onPress={() => setProvince(p)} styles={styles}>{p}</Chip>
           ))}
         </Row>
+        <Row label="Provincial Holidays" styles={styles}>
+          <Chip selected={includeProvincialHolidays} onPress={() => setIncludeProvincialHolidays(!includeProvincialHolidays)} styles={styles}>
+            {includeProvincialHolidays ? "On" : "Off"}
+          </Chip>
+        </Row>
       </Section>
 
       <Text style={styles.note}>
-        Province selection influences default Resources filtering. High contrast increases color contrast for better readability.
+        Province selection influences default Resources filtering and provincial holidays in Events when enabled. High contrast increases color contrast for better readability.
       </Text>
     </ScrollView>
   );

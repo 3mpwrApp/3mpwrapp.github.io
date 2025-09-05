@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, TextInput, useColorScheme } from "react-native";
+import { View, Text, StyleSheet, Pressable, TextInput } from "react-native";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 import { useA11ySettings } from "../store/a11ySettings";

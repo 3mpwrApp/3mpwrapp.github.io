@@ -46,4 +46,4 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     itemText: { color: palette.text, opacity: 0.9 },
   });
 }
-
+export const options = { href: null };

@@ -1,4 +1,5 @@
 import React from "react";
+export const options = { href: null };
 import { View, Text, StyleSheet, useColorScheme, FlatList, Pressable, TextInput } from "react-native";
 import { colors, type Palette } from "../../../theme/colors";
 import { useLocalSearchParams, router } from "expo-router";

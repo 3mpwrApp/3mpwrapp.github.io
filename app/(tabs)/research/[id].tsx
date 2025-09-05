@@ -1,4 +1,5 @@
 import React from "react";
+export const options = { href: null };
 import { View, Text, StyleSheet, Pressable, Linking, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -55,4 +56,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     buttonText: { color: palette.onPrimary, fontSize: 16 },
   });
 }
-

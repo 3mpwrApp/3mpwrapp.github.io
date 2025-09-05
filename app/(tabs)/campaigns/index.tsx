@@ -142,7 +142,7 @@ function ScreenInner() {
 
       <FlatList
         data={filtered}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => `thread-${item.id}`}
         renderItem={({ item }) => (
           <Link
             href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } }}
