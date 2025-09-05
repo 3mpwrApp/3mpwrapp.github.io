@@ -1,6 +1,7 @@
 import React from "react";
 export const options = { href: null };
 import { View, Text, StyleSheet, TextInput, Pressable, ScrollView } from "react-native";
+import * as Print from "expo-print";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
@@ -42,6 +43,12 @@ export default function ClaimsNavigator() {
           {nextSteps.map((s, i) => (
             <Text key={i} style={styles.step}>• {s}</Text>
           ))}
+          <Pressable accessibilityRole="button" accessibilityLabel="Export to PDF" onPress={async () => {
+            const html = `<!DOCTYPE html><html><body><h1>Guided Claims Navigator</h1><p><b>Incident:</b> ${incident}</p><p><b>Employer:</b> ${employer}</p><p><b>Limitations:</b> ${limitations}</p><h2>Steps</h2><ol>${nextSteps.map(s=>`<li>${s}</li>`).join('')}</ol></body></html>`;
+            try { await Print.printAsync({ html }); } catch {}
+          }} style={[styles.button, { marginTop: 8 }]}>
+            <Text style={styles.buttonText}>Export PDF</Text>
+          </Pressable>
         </View>
       )}
     </ScrollView>
@@ -60,4 +67,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     step: { color: palette.text, marginBottom: 4 },
   });
 }
-

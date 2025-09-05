@@ -15,7 +15,7 @@ export default function SettingsScreen() {
   useAnnounceOnMount("Settings");
   useFocusOnRefOnMount(titleRef);
   const { setLanguage } = useTranslation();
-  const { highContrast, setHighContrast, textScale, setTextScale, province, setProvince, includeProvincialHolidays, setIncludeProvincialHolidays } = useSettings();
+  const { highContrast, setHighContrast, textScale, setTextScale, province, setProvince, includeProvincialHolidays, setIncludeProvincialHolidays, youtubeOpenPreference, setYoutubeOpenPreference } = useSettings();
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 20 }} accessibilityLabel="Settings screen" accessible>
@@ -55,6 +55,14 @@ export default function SettingsScreen() {
           <Chip selected={includeProvincialHolidays} onPress={() => setIncludeProvincialHolidays(!includeProvincialHolidays)} styles={styles}>
             {includeProvincialHolidays ? "On" : "Off"}
           </Chip>
+        </Row>
+      </Section>
+
+      <Section title="Links" styles={styles}>
+        <Row label="Open YouTube" styles={styles}>
+          <Chip selected={youtubeOpenPreference === "ask"} onPress={() => setYoutubeOpenPreference("ask")} styles={styles}>Ask</Chip>
+          <Chip selected={youtubeOpenPreference === "app"} onPress={() => setYoutubeOpenPreference("app")} styles={styles}>App</Chip>
+          <Chip selected={youtubeOpenPreference === "browser"} onPress={() => setYoutubeOpenPreference("browser")} styles={styles}>Browser</Chip>
         </Row>
       </Section>
 

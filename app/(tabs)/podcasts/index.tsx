@@ -24,6 +24,7 @@ import { useNetwork } from "../../../store/network";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
 import { useFavorites } from "../../../store/favorites";
+import { useSettings } from "../../../store/settings";
 
 export default function PodcastsScreen() {
   const palette = useAppPalette();
@@ -42,6 +43,7 @@ export default function PodcastsScreen() {
   const { setOffline } = useNetwork();
   const { tick } = useRefresh();
   const { has, toggle } = useFavorites();
+  const { youtubeOpenPreference } = useSettings();
 
   const openYouTubeDirect = React.useCallback(async (idOrUrl: string) => {
     const id = idOrUrl.startsWith("yt:") ? idOrUrl.replace("yt:", "") : idOrUrl;
@@ -191,7 +193,13 @@ export default function PodcastsScreen() {
               subtitle={`${item.description}`}
               testID={`video-${item.id}`}
               rightIcon={isYT ? "logo-youtube" : "chevron-forward"}
-              onPress={isYT ? () => openYouTubeChooser(String(item.id), item.title) : undefined}
+              onPress={isYT ? () => {
+                const id = String(item.id);
+                if (youtubeOpenPreference === "app") return openYouTubeDirect(id);
+                if (youtubeOpenPreference === "browser") return Linking.openURL(`https://youtu.be/${id.replace('yt:','')}`);
+                return openYouTubeChooser(id, item.title);
+              } : undefined}
+              onLongPress={isYT ? () => openYouTubeChooser(String(item.id), item.title) : undefined}
               accessibilityLabel={`Open ${item.title} on YouTube`}
               left={isYT ? <RowThumbnail videoId={String(item.id)} tint={palette.muted} saved={saved} onToggle={() => toggle("podcast", item.id)} /> : undefined}
               onPressRight={isYT ? () => openYouTubeDirect(String(item.id)) : undefined}

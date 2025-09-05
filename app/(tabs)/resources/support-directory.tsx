@@ -1,6 +1,6 @@
 import React from "react";
 export const options = { href: null };
-import { View, Text, StyleSheet, FlatList, Pressable, Linking } from "react-native";
+import { View, Text, StyleSheet, FlatList, Pressable, Linking, TextInput } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { supportOrgs } from "../../../data/support";
@@ -14,6 +14,9 @@ export default function SupportDirectory() {
   useFocusOnRefOnMount(titleRef);
   const { province } = useSettings();
   const filtered = React.useMemo(() => province ? supportOrgs.filter(o => o.province === province) : supportOrgs, [province]);
+  const [suggestion, setSuggestion] = React.useState("");
+  let AsyncStorage: any;
+  try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
   return (
     <View style={styles.container} accessibilityLabel="Support directory screen" accessible>
       <Text ref={titleRef} style={styles.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Support Directory</Text>
@@ -35,6 +38,23 @@ export default function SupportDirectory() {
         )}
         contentContainerStyle={{ paddingTop: 8 }}
       />
+      <View style={{ marginTop: 12 }}>
+        <Text style={styles.subtitle}>Suggest a correction</Text>
+        <TextInput value={suggestion} onChangeText={setSuggestion} placeholder="Org ID and your suggestion" placeholderTextColor={palette.text+"77"} style={styles.input} />
+        <Pressable accessibilityRole="button" accessibilityLabel="Submit suggestion" onPress={async () => {
+          if (!suggestion.trim() || !AsyncStorage) return;
+          try {
+            const key = 'support:suggestions:v1';
+            const cur = await AsyncStorage.getItem(key);
+            const list = cur ? JSON.parse(cur) : [];
+            list.push({ ts: Date.now(), suggestion: suggestion.trim(), province });
+            await AsyncStorage.setItem(key, JSON.stringify(list));
+            setSuggestion("");
+          } catch {}
+        }} style={({ pressed }) => [{ backgroundColor: palette.primary, borderRadius: 8, paddingVertical: 10, alignItems: 'center' }, pressed && { opacity: 0.7 }]}>
+          <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Submit</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -49,4 +69,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     meta: { color: palette.text, opacity: 0.85 },
   });
 }
-

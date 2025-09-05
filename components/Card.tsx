@@ -8,6 +8,7 @@ type Props = {
   title: string;
   subtitle?: string;
   onPress?: () => void;
+  onLongPress?: () => void;
   rightIcon?: keyof typeof Ionicons.glyphMap;
   onPressRight?: () => void;
   rightA11yLabel?: string;
@@ -16,7 +17,7 @@ type Props = {
   left?: React.ReactNode;
 };
 
-export default function Card({ title, subtitle, onPress, rightIcon = "chevron-forward", onPressRight, rightA11yLabel, testID, accessibilityLabel, left }: Props) {
+export default function Card({ title, subtitle, onPress, onLongPress, rightIcon = "chevron-forward", onPressRight, rightA11yLabel, testID, accessibilityLabel, left }: Props) {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const { factor } = useTextScale();
@@ -25,6 +26,7 @@ export default function Card({ title, subtitle, onPress, rightIcon = "chevron-fo
   return (
     <Pressable
       onPress={onPress}
+      onLongPress={onLongPress}
       style={({ pressed }) => [styles.container, pressed && { opacity: 0.85 }]}
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel ?? title}

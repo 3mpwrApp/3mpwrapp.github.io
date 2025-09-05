@@ -15,6 +15,7 @@ export type SettingsState = {
   textScale: TextScale;
   province: import("../types/models").ProvinceCode | null;
   includeProvincialHolidays: boolean;
+  youtubeOpenPreference: "ask" | "app" | "browser";
 };
 
 /** Context type including setters */
@@ -23,6 +24,7 @@ type Ctx = SettingsState & {
   setTextScale: (v: TextScale) => void;
   setProvince: (p: SettingsState["province"]) => void;
   setIncludeProvincialHolidays: (v: boolean) => void;
+  setYoutubeOpenPreference: (v: SettingsState["youtubeOpenPreference"]) => void;
 };
 
 /** Default values if nothing stored */
@@ -31,6 +33,7 @@ const DEFAULTS: SettingsState = {
   textScale: "normal",
   province: null,
   includeProvincialHolidays: false,
+  youtubeOpenPreference: "ask",
 };
 
 const STORAGE_KEY = "settings:v1";
@@ -79,8 +82,10 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setState((s) => ({ ...s, province: p }));
   const setIncludeProvincialHolidays = (v: boolean) =>
     setState((s) => ({ ...s, includeProvincialHolidays: v }));
+  const setYoutubeOpenPreference = (v: SettingsState["youtubeOpenPreference"]) =>
+    setState((s) => ({ ...s, youtubeOpenPreference: v }));
 
-  const value: Ctx = { ...state, setHighContrast, setTextScale, setProvince, setIncludeProvincialHolidays };
+  const value: Ctx = { ...state, setHighContrast, setTextScale, setProvince, setIncludeProvincialHolidays, setYoutubeOpenPreference };
 
   return (
     <SettingsContext.Provider value={value}>
