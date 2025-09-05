@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  SafeAreaView,
-  Text,
-  StyleSheet,
-  View,
-  Pressable,
-  Linking,
-  Image,
-} from "react-native";
+import { SafeAreaView, Text, StyleSheet, View, Pressable, Image } from "react-native";
+import * as Linking from "expo-linking";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 import { useFavorites } from "../store/favorites";
@@ -35,6 +28,7 @@ export default function ThemedHeader() {
       state?.advocate.size +
       state?.podcast.size || 0;
 
+  const [menuOpen, setMenuOpen] = React.useState(false);
   return (
     <SafeAreaView style={styles.container} accessibilityRole="header">
       {/* Brand */}
@@ -155,6 +149,30 @@ export default function ThemedHeader() {
           <Ionicons name="refresh" size={20} color={palette.text} />
         </Pressable>
 
+        {/* Menu */}
+        <Pressable
+          onPress={() => setMenuOpen((v) => !v)}
+          accessibilityRole="button"
+          accessibilityLabel={menuOpen ? "Close menu" : "Open menu"}
+          hitSlop={HIT_SLOP_8}
+          focusable
+          style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+        >
+          <Ionicons name="menu" size={22} color={palette.text} />
+        </Pressable>
+
+        {/* Settings */}
+        <Pressable
+          onPress={() => router.push("/(tabs)/settings")}
+          accessibilityRole="button"
+          accessibilityLabel="Open settings"
+          hitSlop={HIT_SLOP_8}
+          focusable
+          style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+        >
+          <Ionicons name="settings-outline" size={20} color={palette.text} />
+        </Pressable>
+
         {/* Settings (moved from tab bar) */}
         <SettingsLink />
 
@@ -204,6 +222,36 @@ export default function ThemedHeader() {
           </Pressable>
         )}
       </View>
+
+      {menuOpen && (
+        <>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Close menu"
+          onPress={() => setMenuOpen(false)}
+          style={styles.menuBackdrop}
+        />
+        <View accessibilityLabel="Main menu" accessible accessibilityViewIsModal style={styles.menuWrap}>
+          {[
+            { label: "Resources", path: "/(tabs)/resources/index" },
+            { label: "FAQs", path: "/(tabs)/faqs" },
+            { label: "Wellness", path: "/(tabs)/wellness" },
+            { label: "Saved", path: "/(tabs)/saved" },
+            { label: "About & Contact", path: "/(tabs)/about" },
+          ].map((item) => (
+            <Pressable
+              key={item.path}
+              onPress={() => { setMenuOpen(false); router.push(item.path); }}
+              accessibilityRole="button"
+              accessibilityLabel={`Go to ${item.label}`}
+              style={({ pressed }) => [{ paddingVertical: 10, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+            >
+              <Text style={{ color: palette.text, fontWeight: "700" }}>{item.label}</Text>
+            </Pressable>
+          ))}
+        </View>
+        </>
+      )}
     </SafeAreaView>
   );
 }
@@ -234,6 +282,27 @@ function createStyles(palette: Palette) {
       alignItems: "center",
       flexShrink: 1,
       flexWrap: "wrap",
+    },
+    menuWrap: {
+      position: "absolute",
+      right: 12,
+      top: 52,
+      backgroundColor: palette.surface ?? palette.background,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 10,
+      paddingVertical: 6,
+      minWidth: 180,
+      zIndex: 999,
+    },
+    menuBackdrop: {
+      position: "absolute",
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      backgroundColor: "rgba(0,0,0,0.2)",
+      zIndex: 998,
     },
     social: { flexDirection: "row", gap: 12, marginEnd: 8 },
     countText: { color: palette.text, opacity: 0.9, fontSize: 14 },

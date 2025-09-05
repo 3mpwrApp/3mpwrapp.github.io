@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Linking } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Image } from "react-native";
+import * as Linking from "expo-linking";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import {
@@ -14,6 +15,7 @@ import { fetchPodcasts } from "../../../services/podcasts";
 import { fetchStories } from "../../../services/stories";
 import { useCounts } from "../../../store/counts";
 import Card from "../../../components/Card";
+import { Ionicons } from "@expo/vector-icons";
 // Link not needed; we open externally via Linking
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
@@ -37,6 +39,19 @@ export default function PodcastsScreen() {
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
   const { tick } = useRefresh();
+
+  const openYouTube = React.useCallback((idOrUrl: string) => {
+    const id = idOrUrl.startsWith("yt:") ? idOrUrl.replace("yt:", "") : idOrUrl;
+    const appUrl = `vnd.youtube:${id}`;
+    const webUrl = idOrUrl.startsWith("http") ? idOrUrl : `https://youtu.be/${id}`;
+    (async () => {
+      try {
+        await Linking.openURL(appUrl);
+      } catch {
+        await Linking.openURL(webUrl);
+      }
+    })();
+  }, []);
 
   const reload = React.useCallback(async () => {
     try {
@@ -129,9 +144,23 @@ export default function PodcastsScreen() {
               subtitle={`${item.description}`}
               testID={`video-${item.id}`}
               rightIcon={isYT ? "logo-youtube" : "chevron-forward"}
-              onPress={isYT && url ? () => Linking.openURL(url) : undefined}
+              onPress={isYT ? () => openYouTube(String(item.id)) : undefined}
               accessibilityLabel={`Open ${item.title} on YouTube`}
-              left={undefined}
+              left={
+                isYT ? (
+                  <View style={{ position: "relative" }}>
+                    <Image
+                      source={{ uri: `https://img.youtube.com/vi/${String(item.id).replace('yt:','')}/hqdefault.jpg` }}
+                      style={{ width: 48, height: 48, borderRadius: 4 }}
+                    />
+                    <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" }}>
+                      <Ionicons name="play-circle" size={22} color={palette.onPrimary ?? "#fff"} />
+                    </View>
+                  </View>
+                ) : undefined
+              }
+              onPressRight={isYT ? () => openYouTube(String(item.id)) : undefined}
+              rightA11yLabel="Open on YouTube"
             />
           );
         }}

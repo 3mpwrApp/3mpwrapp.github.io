@@ -31,7 +31,7 @@ export const podcasts: Podcast[] = [
     description: "Watch on YouTube",
     duration: "—",
     audioUrl: `https://youtu.be/${id}`,
-    thumbnailUrl: undefined,
+    thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
     channel: "YouTube",
   })),
 ];

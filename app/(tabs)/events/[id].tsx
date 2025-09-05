@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet, useColorScheme, Pressable, Linking, Platform, Share } from "react-native";
+import { View, Text, StyleSheet, useColorScheme, Pressable, Platform, Share } from "react-native";
+import * as Linking from "expo-linking";
 export const options = { href: null };
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
