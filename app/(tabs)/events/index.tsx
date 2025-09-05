@@ -26,6 +26,11 @@ export default function EventsScreen() {
   useFocusOnRefOnMount(titleRef);
 
   const [baseItems, setBaseItems] = React.useState(localEvents);
+  const [month, setMonth] = React.useState(() => {
+    const d = new Date();
+    return new Date(d.getFullYear(), d.getMonth(), 1);
+  });
+  const [selectedDay, setSelectedDay] = React.useState<string | null>(null);
   const [systemItems, setSystemItems] = React.useState(() => {
     const y = new Date().getFullYear();
     return [
@@ -52,11 +57,6 @@ export default function EventsScreen() {
   }, [baseItems, systemForMonth, mode]);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
-  const [month, setMonth] = React.useState(() => {
-    const d = new Date();
-    return new Date(d.getFullYear(), d.getMonth(), 1);
-  });
-  const [selectedDay, setSelectedDay] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
@@ -88,7 +88,7 @@ export default function EventsScreen() {
 
   const formatMeta = (date: string, isVirtual?: boolean, location?: string) => {
     const place = isVirtual ? "Virtual" : (location ?? "TBD");
-    return `${date} â€¢ ${place}`;
+    return `${date} • ${place}`;
   };
 
   const monthLabel = React.useMemo(() => month.toLocaleString(undefined, { month: "long", year: "numeric" }), [month]);

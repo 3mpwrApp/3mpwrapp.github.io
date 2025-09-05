@@ -23,6 +23,12 @@ export default function TabsLayout() {
       }}
     >
       {/* Hide all non-tab routes to avoid auto-adding them as tabs */}
+      <Tabs.Screen name="resources/letter-reconsideration" options={{ href: null }} />
+      <Tabs.Screen name="resources/letter-rtw-plan" options={{ href: null }} />
+      <Tabs.Screen name="resources/claims-navigator" options={{ href: null }} />
+      <Tabs.Screen name="resources/evidence-locker" options={{ href: null }} />
+      <Tabs.Screen name="resources/support-directory" options={{ href: null }} />
+      <Tabs.Screen name="advocacy/support-directory" options={{ href: null }} />
       <Tabs.Screen name="archive/index" options={{ href: null }} />
       <Tabs.Screen name="campaigns/[id]" options={{ href: null }} />
       <Tabs.Screen name="resources/[id]" options={{ href: null }} />

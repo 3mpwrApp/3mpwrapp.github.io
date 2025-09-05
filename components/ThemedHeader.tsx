@@ -253,8 +253,22 @@ export default function ThemedHeader() {
             {[
               { label: "Claims Navigator", path: "/(tabs)/resources/claims-navigator" },
               { label: "Evidence Locker", path: "/(tabs)/resources/evidence-locker" },
-              { label: "Support Directory", path: "/(tabs)/resources/support-directory" },
               { label: "Letters", path: "/(tabs)/resources/index" },
+            ].map((item) => (
+              <Pressable
+                key={item.path}
+                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                accessibilityRole="button"
+                accessibilityLabel={`Go to ${item.label}`}
+                style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+              >
+                <Text style={{ color: palette.text }}>{item.label}</Text>
+              </Pressable>
+            ))}
+            <Text style={styles.menuSection}>Advocacy</Text>
+            {[
+              { label: "Advocacy Hub", path: "/(tabs)/advocacy/index" },
+              { label: "Support Directory", path: "/(tabs)/advocacy/support-directory" },
             ].map((item) => (
               <Pressable
                 key={item.path}
