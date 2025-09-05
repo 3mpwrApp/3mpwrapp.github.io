@@ -36,11 +36,20 @@ export default function EventsScreen() {
   const { includeProvincialHolidays, province } = useSettings();
   type FilterMode = "all" | "community" | "observances";
   const [mode, setMode] = React.useState<FilterMode>("all");
+  const systemForMonth = React.useMemo(() => {
+    const y = month.getFullYear();
+    const m = month.getMonth();
+    return systemItems.filter((it) => {
+      const d = new Date(it.date);
+      return d.getFullYear() === y && d.getMonth() === m;
+    });
+  }, [systemItems, month]);
+
   const items = React.useMemo(() => {
     if (mode === "community") return baseItems;
-    if (mode === "observances") return systemItems;
-    return [...baseItems, ...systemItems];
-  }, [baseItems, systemItems, mode]);
+    if (mode === "observances") return systemForMonth;
+    return [...baseItems, ...systemForMonth];
+  }, [baseItems, systemForMonth, mode]);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [month, setMonth] = React.useState(() => {

@@ -121,6 +121,18 @@ export default function TabsLayout() {
         }}
       />
 
+      <Tabs.Screen
+        name="research/index"
+        options={{
+          title: "Research",
+          tabBarLabel: "Research",
+          tabBarAccessibilityLabel: "Research tab",
+          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
+            <Ionicons name={focused ? "document-text" : "document-text-outline"} color={color} size={size} />
+          ),
+        }}
+      />
+
 
       <Tabs.Screen
         name="whatsnew/index"
@@ -172,17 +184,8 @@ export default function TabsLayout() {
         }}
       />
 
-      <Tabs.Screen
-        name="settings"
-        options={{
-          title: "Settings",
-          tabBarLabel: "Settings",
-          tabBarAccessibilityLabel: "Settings tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "settings" : "settings-outline"} color={color} size={size} />
-          ),
-        }}
-      />
+      {/* Settings is accessible from header, not as a tab */}
+      <Tabs.Screen name="settings" options={{ href: null }} />
 
       <Tabs.Screen
         name="about"

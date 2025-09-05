@@ -18,6 +18,7 @@ import { useAuth } from "../store/auth";
 import { router } from "expo-router"; // ✅ works with expo-router v2+
 import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
 import { useTranslation } from "../i18n";
+import SettingsLink from "./SettingsLink";
 
 export default function ThemedHeader() {
   const palette = useAppPalette();
@@ -153,6 +154,9 @@ export default function ThemedHeader() {
         >
           <Ionicons name="refresh" size={20} color={palette.text} />
         </Pressable>
+
+        {/* Settings (moved from tab bar) */}
+        <SettingsLink />
 
         {/* Profile */}
         <Pressable
