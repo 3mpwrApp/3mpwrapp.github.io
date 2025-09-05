@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, Text, StyleSheet, View, Pressable, Image } from "react-native";
 import * as Linking from "expo-linking";
+import { usePathname } from "expo-router";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 import { useFavorites } from "../store/favorites";
@@ -29,6 +30,10 @@ export default function ThemedHeader() {
       state?.podcast.size || 0;
 
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const pathname = usePathname();
+  React.useEffect(() => {
+    if (menuOpen) setMenuOpen(false);
+  }, [pathname]);
   return (
     <SafeAreaView style={styles.container} accessibilityRole="header">
       {/* Brand */}
