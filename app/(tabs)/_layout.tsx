@@ -72,17 +72,7 @@ export default function TabsLayout() {
         }}
       />
 
-      <Tabs.Screen
-        name="advocacy/index"
-        options={{
-          title: t("nav.advocacy"),
-          tabBarLabel: t("nav.advocacy"),
-          tabBarAccessibilityLabel: t("nav.advocacy") + " tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "people" : "people-outline"} color={color} size={size + 2} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="advocacy/index" options={{ href: null }} />
 
       <Tabs.Screen
         name="podcasts/index"
@@ -96,17 +86,7 @@ export default function TabsLayout() {
         }}
       />
 
-      <Tabs.Screen
-        name="resources/index"
-        options={{
-          title: t("nav.resources"),
-          tabBarLabel: t("nav.resources"),
-          tabBarAccessibilityLabel: t("nav.resources") + " tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "book" : "book-outline"} color={color} size={size + 2} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="resources/index" options={{ href: null }} />
 
 
       <Tabs.Screen
@@ -121,56 +101,16 @@ export default function TabsLayout() {
         }}
       />
 
-      <Tabs.Screen
-        name="research/index"
-        options={{
-          title: "Research",
-          tabBarLabel: "Research",
-          tabBarAccessibilityLabel: "Research tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "document-text" : "document-text-outline"} color={color} size={size + 2} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="research/index" options={{ href: null }} />
 
 
-      <Tabs.Screen
-        name="whatsnew/index"
-        options={{
-          title: "What's New",
-          tabBarLabel: "What's New",
-          tabBarAccessibilityLabel: "What's New tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "sparkles" : "sparkles-outline" as any} color={color} size={size + 2} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="whatsnew/index" options={{ href: null }} />
 
 
       {/* Simple pages */}
-      <Tabs.Screen
-        name="faqs"
-        options={{
-          title: "FAQs",
-          tabBarLabel: "FAQs",
-          tabBarAccessibilityLabel: "FAQs tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "help-circle" : "help-circle-outline"} color={color} size={size + 2} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="faqs" options={{ href: null }} />
 
-      <Tabs.Screen
-        name="wellness"
-        options={{
-          title: t("nav.wellness"),
-          tabBarLabel: t("nav.wellness"),
-          tabBarAccessibilityLabel: t("nav.wellness") + " tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "heart" : "heart-outline"} color={color} size={size + 2} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="wellness" options={{ href: null }} />
 
       {/* Saved is now accessible from the header menu, not as a tab */}
       <Tabs.Screen name="saved" options={{ href: null }} />
@@ -178,17 +118,7 @@ export default function TabsLayout() {
       {/* Settings is accessible from header, not as a tab */}
       <Tabs.Screen name="settings" options={{ href: null }} />
 
-      <Tabs.Screen
-        name="about"
-        options={{
-          title: "About & Contact",
-          tabBarLabel: "About",
-          tabBarAccessibilityLabel: "About tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "information-circle" : "information-circle-outline"} color={color} size={size + 2} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="about" options={{ href: null }} />
     </Tabs>
   );
 }
