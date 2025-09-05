@@ -1,65 +1,196 @@
-import React from "react";
-import { View, Text, StyleSheet, useColorScheme, Image, useWindowDimensions } from "react-native";
-// Removed unused Link import
-import { colors, type Palette } from "../../theme/colors";
+import React, { useState, useEffect } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+  ScrollView,
+  TextInput,
+  Button,
+  Alert,
+  Image,
+} from "react-native";
+import * as ImagePicker from "expo-image-picker"; // 🔹 new
+import { useAppPalette } from "../../theme/usePalette";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
+import { useSettings } from "../../store/settings";
+import type { ProvinceCode } from "../../types/models";
 
-export default function TabsHome() {
-  const scheme = useColorScheme();
-  const palette = scheme === "dark" ? colors.dark : colors.light;
+import { useAuth } from "../context/AuthContext";
+import { db, storage } from "../firebase/config"; // 🔹 storage import
+import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // 🔹 for file upload
+
+const PROVINCES: ProvinceCode[] = [
+  "AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT",
+];
+
+export default function SettingsScreen() {
+  const palette = useAppPalette();
   const styles = createStyles(palette);
-  const { width } = useWindowDimensions();
-  const isTablet = width >= 768;
-  const contentPadding = isTablet ? 32 : 20;
-  const logoSize = isTablet ? 120 : 88;
-  const titleSize = isTablet ? 32 : 28;
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Home");
+  useAnnounceOnMount("Settings");
   useFocusOnRefOnMount(titleRef);
-  const { t } = useTranslation();
+
+  const { setLanguage } = useTranslation();
+  const {
+    highContrast, setHighContrast,
+    textScale, setTextScale,
+    province, setProvince,
+    includeProvincialHolidays, setIncludeProvincialHolidays,
+    youtubeOpenPreference, setYoutubeOpenPreference,
+  } = useSettings();
+
+  // 🔹 Profile state
+  const { user } = useAuth();
+  const [displayName, setDisplayName] = useState("");
+  const [photoURL, setPhotoURL] = useState<string | null>(null);
+  const [loadingProfile, setLoadingProfile] = useState(true);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      if (!user) return;
+      try {
+        const docRef = doc(db, "users", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const profile = docSnap.data();
+          setDisplayName(profile.displayName || "");
+          setPhotoURL(profile.photoURL || null);
+        }
+      } catch (err: any) {
+        console.error("Error fetching profile:", err.message);
+      } finally {
+        setLoadingProfile(false);
+      }
+    };
+    fetchProfile();
+  }, [user]);
+
+  const handleUpdateDisplayName = async () => {
+    if (!user) return;
+    try {
+      const docRef = doc(db, "users", user.uid);
+      await updateDoc(docRef, { displayName });
+      Alert.alert("Success", "Your display name has been updated!");
+    } catch (err: any) {
+      Alert.alert("Error", err.message);
+    }
+  };
+
+  // 🔹 Upload new profile picture
+  const handleUploadPhoto = async () => {
+    if (!user) return;
+
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [1, 1],
+      quality: 0.7,
+    });
+
+    if (result.canceled) return;
+
+    try {
+      const img = await fetch(result.assets[0].uri);
+      const blob = await img.blob();
+
+      const storageRef = ref(storage, `profilePictures/${user.uid}.jpg`);
+      await uploadBytes(storageRef, blob);
+
+      const downloadURL = await getDownloadURL(storageRef);
+
+      const docRef = doc(db, "users", user.uid);
+      await updateDoc(docRef, { photoURL: downloadURL });
+
+      setPhotoURL(downloadURL);
+      Alert.alert("Success", "Profile picture updated!");
+    } catch (err: any) {
+      Alert.alert("Error uploading photo", err.message);
+    }
+  };
 
   return (
-    <View
-      style={[
-        styles.container,
-        { paddingHorizontal: contentPadding, paddingVertical: contentPadding },
-      ]}
-      accessibilityLabel="Home screen"
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={{ padding: 20 }}
+      accessibilityLabel="Settings screen"
       accessible
     >
-      <Image
-        source={require("../../assets/images/empowr-logo.png")}
-        style={[styles.logo, { width: logoSize, height: logoSize, marginBottom: isTablet ? 16 : 12 }]}
-        accessible
-        accessibilityLabel="Empowr logo"
-      />
       <Text
         ref={titleRef}
+        nativeID="settings-title"
         accessibilityRole="header"
-        style={[styles.title, { fontSize: titleSize }]}
+        style={styles.title}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        {t("home.title")}
+        Settings
       </Text>
-      <Text style={styles.subtitle}>{t("home.subtitle")}</Text>
-      <Text style={styles.description}>
-        {t("home.welcome")}
-      </Text>
-      {/* Keep Home minimal; tabs below handle navigation */}
+
+      {/* 🔹 Profile section */}
+      <Section title="Profile" styles={styles}>
+        {photoURL ? (
+          <Image
+            source={{ uri: photoURL }}
+            style={styles.avatar}
+            accessibilityLabel="Profile picture"
+          />
+        ) : (
+          <Text>No profile picture</Text>
+        )}
+        <Button title="Change Profile Picture" onPress={handleUploadPhoto} />
+
+        <Text style={styles.rowLabel}>Display Name</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Enter display name"
+          value={displayName}
+          onChangeText={setDisplayName}
+        />
+        <Button title="Update Name" onPress={handleUpdateDisplayName} />
+      </Section>
+
+      {/* 🔹 Keep rest of your settings */}
+      {/* ... existing Display, Language, Region, Links sections ... */}
+    </ScrollView>
+  );
+}
+
+function Section({ title, children, styles }: { title: string; children: React.ReactNode; styles: ReturnType<typeof createStyles> }) {
+  return (
+    <View style={styles.section}>
+      <Text style={styles.sectionTitle}>{title}</Text>
+      {children}
     </View>
   );
 }
 
-function createStyles(palette: Palette) {
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    container: { flex: 1, padding: 24, backgroundColor: palette.background, justifyContent: "center", alignItems: "center" },
-    logo: { width: 96, height: 96, marginBottom: 12, resizeMode: "contain" },
-    title: { fontSize: 28, fontWeight: "800", marginBottom: 8, color: palette.text, textAlign: "center" },
-    subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, textAlign: "center" },
-    description: { fontSize: 16, color: palette.text, textAlign: "center", marginTop: 8, lineHeight: 22 },
-    row: { flexDirection: "row", gap: 12, justifyContent: "center", marginTop: 8 },
-    chip: { backgroundColor: palette.primary, paddingHorizontal: 14, paddingVertical: 10, borderRadius: 999, minHeight: 44, alignItems: "center", justifyContent: "center" },
-    chipText: { color: palette.onPrimary, fontSize: 14, fontWeight: "700" },
+    container: { flex: 1, backgroundColor: palette.background },
+    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
+    section: { paddingVertical: 12, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted },
+    sectionTitle: { color: palette.text, fontWeight: "700", marginBottom: 8 },
+    rowLabel: { color: palette.text, opacity: 0.9, marginTop: 10, marginBottom: 6 },
+    input: {
+      borderWidth: 1,
+      borderColor: palette.muted,
+      padding: 10,
+      borderRadius: 6,
+      marginBottom: 10,
+      color: palette.text,
+    },
+    avatar: {
+      width: 100,
+      height: 100,
+      borderRadius: 50,
+      marginBottom: 10,
+      alignSelf: "center",
+    },
   });
 }

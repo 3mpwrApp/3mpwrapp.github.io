@@ -22,7 +22,7 @@ export default function TabsLayout() {
         tabBarAllowFontScaling: true,
       }}
     >
-      {/* Hide all non-tab routes to avoid auto-adding them as tabs */}
+      {/* Hide all nested / detail routes to prevent auto-tabs */}
       <Tabs.Screen name="resources/letter-reconsideration" options={{ href: null }} />
       <Tabs.Screen name="resources/letter-rtw-plan" options={{ href: null }} />
       <Tabs.Screen name="resources/claims-navigator" options={{ href: null }} />
@@ -40,91 +40,102 @@ export default function TabsLayout() {
       <Tabs.Screen name="podcasts/stories/[id]" options={{ href: null }} />
       <Tabs.Screen name="community/[slug]" options={{ href: null }} />
       <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />
-      {/* Home tab */}
+      <Tabs.Screen name="advocacy/index" options={{ href: null }} />
+      <Tabs.Screen name="resources/index" options={{ href: null }} />
+      <Tabs.Screen name="research/index" options={{ href: null }} />
+      <Tabs.Screen name="whatsnew/index" options={{ href: null }} />
+      <Tabs.Screen name="faqs" options={{ href: null }} />
+      <Tabs.Screen name="wellness" options={{ href: null }} />
+      <Tabs.Screen name="saved" options={{ href: null }} />
+      <Tabs.Screen name="settings" options={{ href: null }} />
+      <Tabs.Screen name="about" options={{ href: null }} />
+
+      {/* ✅ Main visible tabs */}
+
+      {/* Home */}
       <Tabs.Screen
         name="index"
         options={{
           title: t("nav.home"),
           tabBarLabel: t("nav.home"),
-          tabBarAccessibilityLabel: t("nav.home") + " tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "home" : "home-outline"} color={color} size={size + 2} />
+          tabBarAccessibilityLabel: `${t("nav.home")} tab`,
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "home" : "home-outline"}
+              color={color}
+              size={size + 2}
+            />
           ),
         }}
       />
 
-      {/* Main tabs */}
+      {/* Campaigns */}
       <Tabs.Screen
         name="campaigns/index"
         options={{
           title: t("nav.campaigns"),
           tabBarLabel: t("nav.campaigns"),
-          tabBarAccessibilityLabel: t("nav.campaigns") + " tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "megaphone" : "megaphone-outline"} color={color} size={size + 2} />
+          tabBarAccessibilityLabel: `${t("nav.campaigns")} tab`,
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "megaphone" : "megaphone-outline"}
+              color={color}
+              size={size + 2}
+            />
           ),
         }}
       />
 
+      {/* Community */}
       <Tabs.Screen
         name="community/index"
         options={{
-          title: "Community Hub",
-          tabBarLabel: "Community",
-          tabBarAccessibilityLabel: "Community Hub tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} color={color} size={size + 2} />
+          title: t("nav.community"),
+          tabBarLabel: t("nav.community"),
+          tabBarAccessibilityLabel: `${t("nav.community")} tab`,
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "chatbubbles" : "chatbubbles-outline"}
+              color={color}
+              size={size + 2}
+            />
           ),
         }}
       />
 
-      <Tabs.Screen name="advocacy/index" options={{ href: null }} />
-
+      {/* Podcasts */}
       <Tabs.Screen
         name="podcasts/index"
         options={{
-          title: "Podcasts & Stories",
-          tabBarLabel: "Podcasts",
-          tabBarAccessibilityLabel: "Podcasts and Stories tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size + 2} />
+          title: t("nav.podcasts"),
+          tabBarLabel: t("nav.podcasts"),
+          tabBarAccessibilityLabel: `${t("nav.podcasts")} tab`,
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "mic" : "mic-outline"}
+              color={color}
+              size={size + 2}
+            />
           ),
         }}
       />
 
-      <Tabs.Screen name="resources/index" options={{ href: null }} />
-
-
+      {/* Events */}
       <Tabs.Screen
         name="events/index"
         options={{
           title: t("nav.events"),
           tabBarLabel: t("nav.events"),
-          tabBarAccessibilityLabel: t("nav.events") + " tab",
-          tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "calendar" : "calendar-outline"} color={color} size={size + 2} />
+          tabBarAccessibilityLabel: `${t("nav.events")} tab`,
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "calendar" : "calendar-outline"}
+              color={color}
+              size={size + 2}
+            />
           ),
         }}
       />
-
-      <Tabs.Screen name="research/index" options={{ href: null }} />
-
-
-      <Tabs.Screen name="whatsnew/index" options={{ href: null }} />
-
-
-      {/* Simple pages */}
-      <Tabs.Screen name="faqs" options={{ href: null }} />
-
-      <Tabs.Screen name="wellness" options={{ href: null }} />
-
-      {/* Saved is now accessible from the header menu, not as a tab */}
-      <Tabs.Screen name="saved" options={{ href: null }} />
-
-      {/* Settings is accessible from header, not as a tab */}
-      <Tabs.Screen name="settings" options={{ href: null }} />
-
-      <Tabs.Screen name="about" options={{ href: null }} />
     </Tabs>
   );
 }

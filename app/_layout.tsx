@@ -9,13 +9,15 @@ import { FavoritesProvider } from "../store/favorites";
 import { CountsProvider } from "../store/counts";
 import { RefreshProvider } from "../store/refresh";
 import { NetworkProvider } from "../store/network";
-import { AuthProvider } from "../store/auth";
+// 🔹 Replace old AuthProvider with Firebase AuthProvider
+import { AuthProvider } from "../context/AuthContext";  
 import { SettingsProvider } from "../store/settings";
 import { A11ySettingsProvider } from "../store/a11ySettings";
 import { I18nProvider } from "../i18n";
 
 import * as Notifier from "../services/notifications";
-import { initAnalytics } from "../services/analytics";
+// 🔹 Use Firebase analytics init instead of custom
+import { getFirebaseAnalytics } from "./firebase/config";
 
 export default function RootLayout() {
   const [reduceMotion, setReduceMotion] = React.useState(false);
@@ -46,9 +48,13 @@ export default function RootLayout() {
     });
   }, []);
 
-  // Analytics init (web only)
+  // 🔹 Firebase Analytics (web only)
   React.useEffect(() => {
-    initAnalytics();
+    getFirebaseAnalytics().then((analytics) => {
+      if (analytics && __DEV__) {
+        console.log("Firebase Analytics initialized");
+      }
+    });
   }, []);
 
   // Announce route changes for screen readers
@@ -64,6 +70,7 @@ export default function RootLayout() {
     <I18nProvider>
       <A11ySettingsProvider>
         <SettingsProvider>
+          {/* 🔹 Firebase Auth Provider wraps the app */}
           <AuthProvider>
             <FavoritesProvider>
               <CountsProvider>

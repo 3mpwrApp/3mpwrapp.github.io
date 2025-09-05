@@ -5,8 +5,8 @@ import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import { events as localEvents } from "../../../data/events";
 import { generateCanadianHolidays, generateProvincialHolidays } from "../../../data/holidays-ca";
-import { useSettings } from "../../../store/settings";
 import { generateDisabilityObservances } from "../../../data/disability-observances";
+import { useSettings } from "../../../store/settings";
 import { fetchEvents } from "../../../services/events";
 import { useCounts } from "../../../store/counts";
 import Card from "../../../components/Card";
@@ -39,8 +39,10 @@ export default function EventsScreen() {
     ];
   });
   const { includeProvincialHolidays, province } = useSettings();
+
   type FilterMode = "all" | "community" | "observances";
   const [mode, setMode] = React.useState<FilterMode>("all");
+
   const systemForMonth = React.useMemo(() => {
     const y = month.getFullYear();
     const m = month.getMonth();
@@ -55,11 +57,13 @@ export default function EventsScreen() {
     if (mode === "observances") return systemForMonth;
     return [...baseItems, ...systemForMonth];
   }, [baseItems, systemForMonth, mode]);
+
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
+
   const reload = React.useCallback(async () => {
     try {
       setError(null);
@@ -76,9 +80,7 @@ export default function EventsScreen() {
   }, [setOffline]);
 
   const { tick } = useRefresh();
-  React.useEffect(() => {
-    reload();
-  }, [reload, tick]);
+  React.useEffect(() => { reload(); }, [reload, tick]);
 
   React.useEffect(() => {
     setCount("events", items.length);
@@ -88,16 +90,18 @@ export default function EventsScreen() {
 
   const formatMeta = (date: string, isVirtual?: boolean, location?: string) => {
     const place = isVirtual ? "Virtual" : (location ?? "TBD");
-    return `${date} • ${place}`;
+    return `${date} â€¢ ${place}`;
   };
 
-  const monthLabel = React.useMemo(() => month.toLocaleString(undefined, { month: "long", year: "numeric" }), [month]);
-  // Regenerate system observances/holidays when the displayed month crosses a year boundary
+  const monthLabel = React.useMemo(
+    () => month.toLocaleString(undefined, { month: "long", year: "numeric" }),
+    [month]
+  );
+
   React.useEffect(() => {
     const y = month.getFullYear();
     const national = generateCanadianHolidays(y);
     const provincials = includeProvincialHolidays ? generateProvincialHolidays(y, province) : [];
-    // If a province has a named February holiday, drop the generic Family Day from national list to avoid duplicates.
     const hasNamedFeb = provincials.some((e) => /prov-\d{4}-02-\d{2}-/.test(e.id));
     const filteredNational = hasNamedFeb ? national.filter((e) => !/-family$/.test(e.id)) : national;
     setSystemItems([
@@ -106,9 +110,13 @@ export default function EventsScreen() {
       ...provincials,
     ]);
   }, [month, includeProvincialHolidays, province]);
+
   const daysMatrix = React.useMemo(() => buildMonthMatrix(month), [month]);
   const eventsByDay = React.useMemo(() => mapEventsByDay(items), [items]);
-  const filtered = React.useMemo(() => (selectedDay ? items.filter((e) => toDayKey(e.date) === selectedDay) : items), [items, selectedDay]);
+  const filtered = React.useMemo(
+    () => (selectedDay ? items.filter((e) => toDayKey(e.date) === selectedDay) : items),
+    [items, selectedDay]
+  );
 
   return (
     <View style={styles.container} accessibilityLabel="Events screen" accessible>
@@ -119,32 +127,7 @@ export default function EventsScreen() {
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
 
-      <Text style={styles.subtitle}>Community events, workshops, and meetups. Add reminders from details.</Text>
-
-      <View style={{ flexDirection: "row", gap: 8, marginVertical: 6 }}>
-        {([ 
-          { key: "all", label: "All" },
-          { key: "community", label: "Community" },
-          { key: "observances", label: "Observances" },
-        ] as { key: FilterMode; label: string }[]).map((f) => (
-          <Pressable
-            key={f.key}
-            onPress={() => setMode(f.key)}
-            accessibilityRole="button"
-            accessibilityState={{ selected: mode === f.key }}
-            accessibilityLabel={`Show ${f.label}`}
-            style={({ pressed }) => [
-              { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
-              mode === f.key && { backgroundColor: palette.primary },
-              { opacity: pressed ? 0.7 : 1 },
-            ]}
-          >
-            <Text style={[{ color: palette.text }, mode === f.key && { color: palette.onPrimary, fontWeight: "700" }]}>
-              {f.label}
-            </Text>
-          </Pressable>
-        ))}
-      </View>
+      <Text style={styles.subtitle}>Community events, workshops, and meetups.</Text>
 
       {loading && (
         <View>
@@ -157,9 +140,7 @@ export default function EventsScreen() {
       {error && (
         <>
           <Text style={styles.subtitle} accessibilityRole="alert">{error}</Text>
-          <Text onPress={reload} accessibilityRole="button" accessibilityLabel="Try again" style={styles.subtitle}>
-            Try again
-          </Text>
+          <Text onPress={reload} accessibilityRole="button" accessibilityLabel="Try again" style={styles.subtitle}>Try again</Text>
         </>
       )}
 
@@ -238,8 +219,8 @@ export default function EventsScreen() {
 function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text, fontFamily: "Poppins" },
-    subtitle: { fontSize: Math.round(17 * factor), color: palette.text, opacity: 0.9, marginBottom: 8, fontFamily: "Roboto" },
+    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
+    subtitle: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.9, marginBottom: 8 },
     button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44 },
     calHeader: { marginTop: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
     calTitle: { color: palette.text, fontWeight: "700" },
@@ -297,3 +278,4 @@ function dayKeyFromMatrix(baseMonth: Date, day: number | null) {
   const dd = `${day}`.padStart(2, "0");
   return `${y}-${m}-${dd}`;
 }
+

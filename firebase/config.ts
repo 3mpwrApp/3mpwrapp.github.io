@@ -1,7 +1,13 @@
-// Firebase initialization for Expo (web-safe)
-// On native, we initialize the core app but skip web-only analytics.
 import { Platform } from "react-native";
-import { initializeApp, getApp, getApps, type FirebaseApp } from "firebase/app";
+import {
+  initializeApp,
+  getApp,
+  getApps,
+  type FirebaseApp,
+} from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBv4rtD3it2yoIIFpxckCEXC9haKIbVjA8",
@@ -13,19 +19,23 @@ const firebaseConfig = {
   measurementId: "G-LKEKHG4GQ6",
 };
 
+// Ensure only one app is initialized
 export function getFirebaseApp(): FirebaseApp {
   return getApps().length ? getApp() : initializeApp(firebaseConfig);
 }
 
-// Lazy web analytics init to avoid bundling issues on native
+const app = getFirebaseApp();
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
+
+// Lazy load Analytics only on web
 export async function getFirebaseAnalytics(): Promise<any | null> {
   if (Platform.OS !== "web") return null;
   try {
     const { getAnalytics } = await import("firebase/analytics");
-    const app = getFirebaseApp();
     return getAnalytics(app);
   } catch {
     return null;
   }
 }
-
