@@ -120,24 +120,27 @@ export default function ResourcesScreen() {
       {region === "all" && !province && (
         <Text style={[styles.subtitle, { opacity: 0.75 }]}>Tip: Set your province in Settings to filter resources.</Text>
       )}
-      <Pressable
-        accessibilityRole="link"
-        accessibilityLabel="Create accommodation letter"
-        onPress={() => { /* Using Link via asChild simplifies semantics; inline for brevity */ }}
-      >
-        <Link href="/(tabs)/resources/letter-accommodation" asChild>
-          <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Accommodation Letter</Text>
-        </Link>
-      </Pressable>
-      <Pressable
-        accessibilityRole="link"
-        accessibilityLabel="Create appeal letter"
-        onPress={() => { /* inline */ }}
-      >
-        <Link href="/(tabs)/resources/letter-appeal" asChild>
-          <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Appeal Letter</Text>
-        </Link>
-      </Pressable>
+      <Link href="/(tabs)/resources/letter-accommodation" asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Accommodation Letter</Text>
+      </Link>
+      <Link href="/(tabs)/resources/letter-appeal" asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Appeal Letter</Text>
+      </Link>
+      <Link href="/(tabs)/resources/letter-reconsideration" asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Reconsideration Letter</Text>
+      </Link>
+      <Link href="/(tabs)/resources/letter-rtw-plan" asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Return-to-Work Plan</Text>
+      </Link>
+      <Link href="/(tabs)/resources/claims-navigator" asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Guided Claims Navigator</Text>
+      </Link>
+      <Link href="/(tabs)/resources/evidence-locker" asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Evidence Locker</Text>
+      </Link>
+      <Link href="/(tabs)/resources/support-directory" asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Support Directory</Text>
+      </Link>
       <View style={styles.filters} accessibilityLabel="Category filters" accessible>
         {(["all", "work_financial", "tools_downloads", "emergency_crisis"] as CategoryFilter[]).map((key) => (
           <Pressable
