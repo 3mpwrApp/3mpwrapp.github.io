@@ -122,7 +122,7 @@ export default function EventsScreen() {
       <Text style={styles.subtitle}>Community events, workshops, and meetups. Add reminders from details.</Text>
 
       <View style={{ flexDirection: "row", gap: 8, marginVertical: 6 }}>
-        {([
+        {([ 
           { key: "all", label: "All" },
           { key: "community", label: "Community" },
           { key: "observances", label: "Observances" },
@@ -131,6 +131,7 @@ export default function EventsScreen() {
             key={f.key}
             onPress={() => setMode(f.key)}
             accessibilityRole="button"
+            accessibilityState={{ selected: mode === f.key }}
             accessibilityLabel={`Show ${f.label}`}
             style={({ pressed }) => [
               { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },

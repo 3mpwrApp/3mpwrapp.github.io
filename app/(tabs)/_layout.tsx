@@ -42,7 +42,7 @@ export default function TabsLayout() {
           tabBarLabel: t("nav.home"),
           tabBarAccessibilityLabel: t("nav.home") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "home" : "home-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "home" : "home-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -55,7 +55,7 @@ export default function TabsLayout() {
           tabBarLabel: t("nav.campaigns"),
           tabBarAccessibilityLabel: t("nav.campaigns") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "megaphone" : "megaphone-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "megaphone" : "megaphone-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -67,7 +67,7 @@ export default function TabsLayout() {
           tabBarLabel: "Community",
           tabBarAccessibilityLabel: "Community Hub tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -79,7 +79,7 @@ export default function TabsLayout() {
           tabBarLabel: t("nav.advocacy"),
           tabBarAccessibilityLabel: t("nav.advocacy") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "people" : "people-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "people" : "people-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -91,7 +91,7 @@ export default function TabsLayout() {
           tabBarLabel: "Podcasts",
           tabBarAccessibilityLabel: "Podcasts and Stories tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -103,7 +103,7 @@ export default function TabsLayout() {
           tabBarLabel: t("nav.resources"),
           tabBarAccessibilityLabel: t("nav.resources") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "book" : "book-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "book" : "book-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -116,7 +116,7 @@ export default function TabsLayout() {
           tabBarLabel: t("nav.events"),
           tabBarAccessibilityLabel: t("nav.events") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "calendar" : "calendar-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "calendar" : "calendar-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -128,7 +128,7 @@ export default function TabsLayout() {
           tabBarLabel: "Research",
           tabBarAccessibilityLabel: "Research tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "document-text" : "document-text-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "document-text" : "document-text-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -141,7 +141,7 @@ export default function TabsLayout() {
           tabBarLabel: "What's New",
           tabBarAccessibilityLabel: "What's New tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "sparkles" : "sparkles-outline" as any} color={color} size={size} />
+            <Ionicons name={focused ? "sparkles" : "sparkles-outline" as any} color={color} size={size + 2} />
           ),
         }}
       />
@@ -155,7 +155,7 @@ export default function TabsLayout() {
           tabBarLabel: "FAQs",
           tabBarAccessibilityLabel: "FAQs tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "help-circle" : "help-circle-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "help-circle" : "help-circle-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -167,7 +167,7 @@ export default function TabsLayout() {
           tabBarLabel: t("nav.wellness"),
           tabBarAccessibilityLabel: t("nav.wellness") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "heart" : "heart-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "heart" : "heart-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -179,7 +179,7 @@ export default function TabsLayout() {
           tabBarLabel: t("nav.saved") ?? "Saved",
           tabBarAccessibilityLabel: (t("nav.saved") ?? "Saved") + " tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "bookmark" : "bookmark-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "bookmark" : "bookmark-outline"} color={color} size={size + 2} />
           ),
         }}
       />
@@ -194,7 +194,7 @@ export default function TabsLayout() {
           tabBarLabel: "About",
           tabBarAccessibilityLabel: "About tab",
           tabBarIcon: ({ color, size, focused }: { color: string; size: number; focused: boolean }) => (
-            <Ionicons name={focused ? "information-circle" : "information-circle-outline"} color={color} size={size} />
+            <Ionicons name={focused ? "information-circle" : "information-circle-outline"} color={color} size={size + 2} />
           ),
         }}
       />

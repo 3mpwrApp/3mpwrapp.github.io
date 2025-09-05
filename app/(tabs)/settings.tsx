@@ -85,7 +85,7 @@ function Row({ label, children, styles }: { label: string; children: React.React
 
 function Chip({ children, onPress, selected, styles }: { children: React.ReactNode; onPress?: () => void; selected?: boolean; styles: ReturnType<typeof createStyles> }) {
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={String(children)} style={[styles.chip, selected && styles.chipActive]}>
+    <Pressable onPress={onPress} accessibilityRole="button" accessibilityState={{ selected: !!selected }} accessibilityLabel={String(children)} style={[styles.chip, selected && styles.chipActive]}>
       <Text style={[styles.chipText, selected && styles.chipTextActive]}>{children}</Text>
     </Pressable>
   );
@@ -107,4 +107,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     note: { color: palette.text, opacity: 0.8, marginTop: 16, fontSize: 13 },
   });
 }
-

@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  useColorScheme,
-  FlatList,
-  RefreshControl,
-  Image,
-} from "react-native";
+import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Linking } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import {
@@ -17,12 +9,12 @@ import {
   useAnnounceOnChange,
 } from "../../../hooks/useA11y";
 import { podcasts as localPodcasts } from "../../../data/podcasts";
-import { stories as localStories } from "../../../data/stories";
+// Stories mirror YouTube list; we render a single combined list (podcasts only)
 import { fetchPodcasts } from "../../../services/podcasts";
 import { fetchStories } from "../../../services/stories";
 import { useCounts } from "../../../store/counts";
 import Card from "../../../components/Card";
-import { Link } from "expo-router";
+// Link not needed; we open externally via Linking
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
@@ -39,7 +31,6 @@ export default function PodcastsScreen() {
   useFocusOnRefOnMount(titleRef);
 
   const [items, setItems] = React.useState(localPodcasts);
-  const [stories, setStories] = React.useState(localStories);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -51,12 +42,10 @@ export default function PodcastsScreen() {
     try {
       setError(null);
       setLoading(true);
-      const [podData, storyData] = await Promise.all([
+      const [podData] = await Promise.all([
         fetchPodcasts(),
-        fetchStories(),
       ]);
       setItems(podData);
-      setStories(storyData);
       setOffline(false);
     } catch (e) {
       console.warn("Failed to fetch podcasts", e);
@@ -75,7 +64,7 @@ export default function PodcastsScreen() {
     setCount("podcasts", items.length);
   }, [items, setCount]);
 
-  useAnnounceOnChange(items.length, (n) => `${n} podcasts loaded`);
+  useAnnounceOnChange(items.length, (n) => `${n} videos loaded`);
 
   return (
     <View
@@ -127,79 +116,29 @@ export default function PodcastsScreen() {
         </>
       )}
 
-      {/* Podcasts List */}
+      {/* Videos List (YouTube) */}
       <FlatList
         data={items}
         keyExtractor={(item) => `thread-${item.id}`}
-        renderItem={({ item }) => (
-          <Link
-            href={{
-              pathname: "/(tabs)/podcasts/[id]",
-              params: {
-                id: item.id,
-                title: item.title,
-                description: item.description,
-                duration: item.duration,
-              },
-            }}
-            asChild
-            accessibilityRole="link"
-            accessibilityLabel={`Open ${item.title}`}
-          >
+        renderItem={({ item }) => {
+          const isYT = String(item.id).startsWith("yt:");
+          const url = item.audioUrl ?? undefined;
+          return (
             <Card
               title={item.title}
-              subtitle={`${item.description} \u2022 ${item.duration}`}
-              testID={`podcast-${item.id}`}
-              rightIcon={
-                String(item.id).startsWith("yt:")
-                  ? "logo-youtube"
-                  : "chevron-forward"
-              }
-              left={
-                item.thumbnailUrl ? (
-                  <Image
-                    source={{ uri: item.thumbnailUrl }}
-                    style={{
-                      width: 48,
-                      height: 48,
-                      borderRadius: 4,
-                      backgroundColor: palette.muted,
-                    }}
-                  />
-                ) : undefined
-              }
+              subtitle={`${item.description}`}
+              testID={`video-${item.id}`}
+              rightIcon={isYT ? "logo-youtube" : "chevron-forward"}
+              onPress={isYT && url ? () => Linking.openURL(url) : undefined}
+              accessibilityLabel={`Open ${item.title} on YouTube`}
+              left={undefined}
             />
-          </Link>
-        )}
+          );
+        }}
         contentContainerStyle={{ paddingTop: 12 }}
         refreshControl={
           <RefreshControl refreshing={loading} onRefresh={reload} />
         }
-      />
-
-      {/* Stories Section */}
-      <Text style={[styles.title, { marginTop: 16 }]}>Stories</Text>
-      <FlatList
-        data={stories}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <Link
-            href={{
-              pathname: "/(tabs)/podcasts/stories/[id]",
-              params: { id: item.id },
-            }}
-            asChild
-            accessibilityRole="link"
-            accessibilityLabel={`Open ${item.title}`}
-          >
-            <Card
-              title={item.title}
-              subtitle={item.description}
-              testID={`story-${item.id}`}
-            />
-          </Link>
-        )}
-        contentContainerStyle={{ paddingTop: 12 }}
       />
     </View>
   );
