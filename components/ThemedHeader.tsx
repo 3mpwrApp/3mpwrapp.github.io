@@ -9,7 +9,7 @@ import { useFavorites } from "../store/favorites";
 import { useCounts } from "../store/counts";
 import { useRefresh } from "../store/refresh";
 import { Ionicons } from "@expo/vector-icons";
-import { useAuth } from "../store/auth";
+import { useAuth } from "../context/AuthContext";
 import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
 import { useTranslation } from "../i18n";
 import SettingsLink from "./SettingsLink";
@@ -20,7 +20,7 @@ export default function ThemedHeader() {
   const { state } = useFavorites();
   const { counts } = useCounts();
   const { refreshAll } = useRefresh();
-  const { state: auth, signOut } = useAuth();
+  const { user, signOut } = useAuth();
   const { t } = useTranslation();
 
   const favTotal =
@@ -190,7 +190,7 @@ export default function ThemedHeader() {
         </Pressable>
 
         {/* Auth control */}
-        {auth.status === "signedIn" ? (
+        {user ? (
           <Pressable
             onPress={signOut}
             accessibilityRole="button"

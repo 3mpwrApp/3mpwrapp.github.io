@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Pressable, TextInput } from "react-native";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 import { useA11ySettings } from "../store/a11ySettings";
-import { useAuth } from "../store/auth";
+import { useAuth } from "../context/AuthContext";
 import { router } from "expo-router";
 import type { Href } from "expo-router";
 import { useTranslation, Lang } from "../i18n";
@@ -11,9 +11,9 @@ import { useTranslation, Lang } from "../i18n";
 export default function Profile() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
-  const { state, signIn, continueAnonymously, signOut } = useAuth();
+  const { user, signOut } = useAuth();
   const { lang, setLanguage } = useTranslation();
-  const [name, setName] = React.useState(state.user?.name ?? "");
+  const [name, setName] = React.useState(user?.displayName ?? "");
   const { state: a11y, toggleHighContrast } = useA11ySettings();
 
   return (
@@ -21,9 +21,7 @@ export default function Profile() {
       <Text style={styles.title}>Profile</Text>
 
       <View style={styles.card}>
-        <Row label="Status" value={state.status} />
-        <Row label="Onboarded" value={state.isOnboarded ? "Yes" : "No"} />
-        <Row label="User" value={state.user?.name ?? "Guest"} />
+        <Row label="User" value={user?.email ?? user?.displayName ?? "Guest"} />
       </View>
 
       <View style={styles.card}>
@@ -57,7 +55,7 @@ export default function Profile() {
         </View>
       </View>
 
-      {state.status === "signedIn" ? (
+      {user ? (
         <>
           <Text style={styles.label}>Update name</Text>
           <TextInput
@@ -68,10 +66,6 @@ export default function Profile() {
             placeholderTextColor={palette.muted}
             accessibilityLabel="Name"
           />
-          <Pressable style={[styles.cta, styles.primary]} onPress={() => signIn(name || undefined)} accessibilityRole="button" accessibilityLabel="Save name">
-            <Text style={styles.primaryText}>Save</Text>
-          </Pressable>
-
           <Pressable style={[styles.cta, styles.ghost]} onPress={signOut} accessibilityRole="button" accessibilityLabel="Sign out">
             <Text style={styles.ghostText}>Sign out</Text>
           </Pressable>
@@ -80,9 +74,6 @@ export default function Profile() {
         <>
           <Pressable style={[styles.cta, styles.primary]} onPress={() => router.push("/(auth)/login" as Href)} accessibilityRole="button" accessibilityLabel="Go to login">
             <Text style={styles.primaryText}>Sign in</Text>
-          </Pressable>
-          <Pressable style={[styles.cta, styles.ghost]} onPress={continueAnonymously} accessibilityRole="button" accessibilityLabel="Continue as guest">
-            <Text style={styles.ghostText}>Continue as Guest</Text>
           </Pressable>
         </>
       )}
