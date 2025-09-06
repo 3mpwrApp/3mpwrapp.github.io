@@ -3,6 +3,7 @@ import type { CommunityChannel, CommunityThread, CommunityComment, ID } from "..
 import { scheduleLocal } from "../services/notifications";
 import { fsAddThread, fsAddComment, getDB } from "../services/firestore";
 import { Platform } from "react-native";
+import { useNetwork } from "./network";
 
 let AsyncStorage: any;
 try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
@@ -16,6 +17,10 @@ type State = {
 const DEFAULT_STATE: State = { channels: [], threads: [], comments: [] };
 
 const KEY = "empowr.community.v1";
+const QUEUE_KEY = "empowr.community.queue.v1";
+type QueueItem =
+  | { kind: "thread"; data: { id: ID; channelId: ID; title: string; author: string | null; createdAt: number } }
+  | { kind: "comment"; data: { id: ID; threadId: ID; author: string | null; content: string; createdAt: number } };
 
 type Ctx = {
   state: State;
@@ -30,12 +35,16 @@ const Ctx = React.createContext<Ctx | undefined>(undefined);
 
 export function CommunityProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<State>(DEFAULT_STATE);
+  const { setOffline } = useNetwork();
+  const flushingRef = React.useRef(false);
 
   React.useEffect(() => {
     (async () => {
       if (!AsyncStorage) return;
       const raw = await AsyncStorage.getItem(KEY);
       if (raw) setState(JSON.parse(raw));
+      // try flush any queued writes on startup
+      flushQueue();
     })();
   }, []);
 
@@ -48,16 +57,30 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
         const m = await import('firebase/firestore');
         const db = await getDB();
         if (!db) return;
-        unsubThreads = m.onSnapshot(m.query(m.collection(db, 'threads')), (snap) => {
-          const list: CommunityThread[] = [] as any;
-          snap.forEach((d) => list.push(d.data() as any));
-          setState((prev) => ({ ...prev, threads: mergeById(prev.threads, list) }));
-        });
-        unsubComments = m.onSnapshot(m.query(m.collection(db, 'comments')), (snap) => {
-          const list: CommunityComment[] = [] as any;
-          snap.forEach((d) => list.push(d.data() as any));
-          setState((prev) => ({ ...prev, comments: mergeById(prev.comments, list) }));
-        });
+        unsubThreads = m.onSnapshot(
+          m.query(m.collection(db, 'threads')),
+          (snap) => {
+            const list: CommunityThread[] = [] as any;
+            snap.forEach((d) => list.push(d.data() as any));
+            setState((prev) => ({ ...prev, threads: mergeById(prev.threads, list) }));
+            setOffline(false);
+          },
+          (err) => {
+            setOffline(true);
+          }
+        );
+        unsubComments = m.onSnapshot(
+          m.query(m.collection(db, 'comments')),
+          (snap) => {
+            const list: CommunityComment[] = [] as any;
+            snap.forEach((d) => list.push(d.data() as any));
+            setState((prev) => ({ ...prev, comments: mergeById(prev.comments, list) }));
+            setOffline(false);
+          },
+          (err) => {
+            setOffline(true);
+          }
+        );
       } catch {}
     })();
     return () => {
@@ -72,6 +95,48 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       await AsyncStorage.setItem(KEY, JSON.stringify(state));
     })();
   }, [state]);
+
+  async function enqueue(item: QueueItem) {
+    if (!AsyncStorage) return;
+    try {
+      const cur = await AsyncStorage.getItem(QUEUE_KEY);
+      const arr: QueueItem[] = cur ? JSON.parse(cur) : [];
+      arr.push(item);
+      await AsyncStorage.setItem(QUEUE_KEY, JSON.stringify(arr));
+    } catch {}
+  }
+
+  async function flushQueue() {
+    if (flushingRef.current) return;
+    flushingRef.current = true;
+    try {
+      if (!AsyncStorage) return;
+      const cur = await AsyncStorage.getItem(QUEUE_KEY);
+      const arr: QueueItem[] = cur ? JSON.parse(cur) : [];
+      if (!arr.length) return;
+      const m = await import('firebase/firestore');
+      const db = await getDB();
+      if (!db) return;
+      for (const item of arr) {
+        try {
+          if (item.kind === 'thread') {
+            await m.setDoc(m.doc(db, 'threads', item.data.id), item.data as any);
+          } else {
+            await m.setDoc(m.doc(db, 'comments', item.data.id), item.data as any);
+          }
+        } catch {}
+      }
+      await AsyncStorage.setItem(QUEUE_KEY, JSON.stringify([]));
+    } finally {
+      flushingRef.current = false;
+    }
+  }
+
+  // When connection is restored, try to flush the queue
+  React.useEffect(() => {
+    const id = setInterval(() => { flushQueue(); }, 5000);
+    return () => clearInterval(id);
+  }, []);
 
   const seed = (s: Partial<State>) => setState((prev) => ({
     channels: s.channels ?? prev.channels,
@@ -101,6 +166,8 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       threads: [...prev.threads, { id, channelId, title, author, createdAt: Date.now() }],
     }));
     fsAddThread({ id, channelId, title, author, createdAt: Date.now() });
+    // queue for retry if offline
+    enqueue({ kind: 'thread', data: { id, channelId, title, author, createdAt: Date.now() } });
     return true;
   };
 
@@ -113,6 +180,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       comments: [...prev.comments, { id, threadId, author, content, createdAt: Date.now() }],
     }));
     fsAddComment({ id, threadId, author, content, createdAt: Date.now() });
+    enqueue({ kind: 'comment', data: { id, threadId, author, content, createdAt: Date.now() } });
     // Notify thread author locally if different from commenter
     const thread = state.threads.find((t) => t.id === threadId);
     if (thread && thread.author && thread.author !== author) {

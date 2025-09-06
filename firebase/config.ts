@@ -7,7 +7,7 @@ import {
 } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, initializeFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
@@ -26,7 +26,7 @@ export function getFirebaseApp(): FirebaseApp {
 }
 
 const app = getFirebaseApp();
-// Ensure persistence on native by initializing before getAuth
+// Ensure Auth persistence on native by initializing before getAuth
 if (Platform.OS !== "web") {
   try {
     // Dynamically import RN-only APIs to avoid type mismatch on web
@@ -40,7 +40,14 @@ if (Platform.OS !== "web") {
   }
 }
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+// Firestore: use long-polling on native to avoid WebChannel transport issues
+export const db = Platform.OS === "web"
+  ? getFirestore(app)
+  : initializeFirestore(app, {
+      experimentalAutoDetectLongPolling: true,
+      // useFetchStreams can be flaky on some RN environments
+      useFetchStreams: false,
+    });
 export const storage = getStorage(app);
 
 // Lazy load Analytics only on web

@@ -4,6 +4,12 @@ export interface Campaign {
   id: ID;
   title: string;
   summary: string;
+  // Optional campaign builder enhancements
+  target?: string; // who the campaign addresses (e.g., Ministry of Labour)
+  goalCount?: number; // desired number of supporters
+  membersCount?: number; // current number of supporters
+  contactEmail?: string; // organizer contact
+  createdAt?: number;
 }
 
 export interface Resource {

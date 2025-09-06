@@ -1,5 +1,5 @@
-import React from "react";
-import { AccessibilityInfo } from "react-native";
+﻿import React from "react";
+import { AccessibilityInfo, View, Text, StyleSheet } from "react-native";
 import { Stack, usePathname } from "expo-router";
 
 import Header from "../components/ThemedHeader";
@@ -8,15 +8,15 @@ import Footer from "../components/ThemedFooter";
 import { FavoritesProvider } from "../store/favorites";
 import { CountsProvider } from "../store/counts";
 import { RefreshProvider } from "../store/refresh";
-import { NetworkProvider } from "../store/network";
-// ðŸ”¹ Replace old AuthProvider with Firebase AuthProvider
+import { NetworkProvider, useNetwork } from "../store/network";
+// Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
 import { SettingsProvider } from "../store/settings";
 import { A11ySettingsProvider } from "../store/a11ySettings";
 import { I18nProvider } from "../i18n";
 
 import * as Notifier from "../services/notifications";
-// ðŸ”¹ Use Firebase analytics init instead of custom
+// Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
 import { getFirebaseAnalytics } from "../firebase/config";
 
 export default function RootLayout() {
@@ -48,7 +48,7 @@ export default function RootLayout() {
     });
   }, []);
 
-  // ðŸ”¹ Firebase Analytics (web only)
+  // Ã°Å¸â€Â¹ Firebase Analytics (web only)
   React.useEffect(() => {
     getFirebaseAnalytics().then((analytics) => {
       if (analytics && __DEV__) {
@@ -70,13 +70,16 @@ export default function RootLayout() {
     <I18nProvider>
       <A11ySettingsProvider>
         <SettingsProvider>
-          {/* ðŸ”¹ Firebase Auth Provider wraps the app */}
+          {/* Ã°Å¸â€Â¹ Firebase Auth Provider wraps the app */}
           <AuthProvider>
             <FavoritesProvider>
               <CountsProvider>
                 <NetworkProvider>
                   <RefreshProvider>
-                    <Header />
+                    <View>
+                      <OfflineBanner />
+                      <Header />
+                    </View>
                     <Stack
                       screenOptions={{
                         animation: reduceMotion ? "none" : "default",
@@ -110,6 +113,23 @@ export default function RootLayout() {
     </I18nProvider>
   );
 }
+
+function OfflineBanner() {
+  const { offline } = useNetwork();
+  if (!offline) return null;
+  return (
+    <View style={bannerStyles.wrap} accessibilityRole="alert" accessibilityLabel="Offline notice">
+      <Text style={bannerStyles.text}>Offline: showing cached content</Text>
+    </View>
+  );
+}
+
+const bannerStyles = StyleSheet.create({
+  wrap: { backgroundColor: "#b00020", paddingVertical: 6, paddingHorizontal: 12 },
+  text: { color: "#fff", textAlign: "center", fontWeight: "700" },
+});
+
+
 
 
 

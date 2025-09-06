@@ -7,6 +7,7 @@ import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 import { useFavorites } from "../store/favorites";
 import { useCounts } from "../store/counts";
+import { useNetwork } from "../store/network";
 import { useRefresh } from "../store/refresh";
 import { Ionicons } from "@expo/vector-icons";
 import { useAuth } from "../context/AuthContext";
@@ -20,6 +21,7 @@ export default function ThemedHeader() {
   const { state } = useFavorites();
   const { counts } = useCounts();
   const { refreshAll } = useRefresh();
+  const { offline } = useNetwork();
   const { user, signOut } = useAuth();
   const { t } = useTranslation();
 
@@ -130,6 +132,7 @@ export default function ThemedHeader() {
             counts.advocates +
             counts.podcasts +
             counts.events}
+          {offline ? " • Offline" : ""}
         </Text>
 
         {/* Refresh */}

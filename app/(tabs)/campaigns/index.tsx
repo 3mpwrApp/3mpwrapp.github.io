@@ -30,7 +30,7 @@ import {
   useCampaignsLocal,
 } from "../../../store/campaignsLocal";
 import { logEvent } from "../../../services/analytics";
-import { fsAddCampaign } from "../../../services/firestore";
+import { fsAddCampaign, fsIncrementCampaignMembers } from "../../../services/firestore";
 
 function ScreenInner() {
   const scheme = useColorScheme();
@@ -105,13 +105,17 @@ function ScreenInner() {
       <Text style={styles.subtitle}>Browse, create, and join campaigns.</Text>
 
       <CreateCampaignBox
-        onCreate={async (title, summary) => {
-          const c = createCampaign(title, summary);
+        onCreate={async (data) => {
+          const c = createCampaign(data.title, data.summary);
           logEvent("campaign_create", { id: c.id });
           await fsAddCampaign({
             id: c.id,
-            title: c.title,
-            summary: c.summary,
+            title: data.title,
+            summary: data.summary,
+            target: data.target || undefined,
+            goalCount: data.goalCount || undefined,
+            contactEmail: data.contactEmail || undefined,
+            createdAt: Date.now(),
           });
         }}
         palette={palette}
@@ -144,12 +148,22 @@ function ScreenInner() {
         data={filtered}
         keyExtractor={(item) => `thread-${item.id}`}
         renderItem={({ item }) => (
-          <Link
-            href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any}
-            asChild
-          >
-            <Card title={item.title} subtitle={item.summary} />
-          </Link>
+          <View>
+            <Link
+              href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any}
+              asChild
+            >
+              <Card title={item.title} subtitle={`${item.summary}${item.membersCount ? ` • ${item.membersCount} supporters` : ''}`} />
+            </Link>
+            <Pressable
+              onPress={async () => { try { await fsIncrementCampaignMembers(item.id, 1); } catch {} }}
+              accessibilityRole="button"
+              accessibilityLabel="Support this campaign"
+              style={{ alignSelf: 'flex-start', marginTop: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 }}
+            >
+              <Text style={{ color: palette.text, fontWeight: '700' }}>Support</Text>
+            </Pressable>
+          </View>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
         refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
@@ -188,51 +202,46 @@ function CreateCampaignBox({
   onCreate,
   palette,
 }: {
-  onCreate: (title: string, summary: string) => void;
+  onCreate: (data: { title: string; summary: string; target?: string; goalCount?: number; contactEmail?: string }) => void;
   palette: Palette;
 }) {
   const [title, setTitle] = React.useState("");
   const [summary, setSummary] = React.useState("");
+  const [target, setTarget] = React.useState("");
+  const [goalCount, setGoalCount] = React.useState("");
+  const [contactEmail, setContactEmail] = React.useState("");
   const canCreate = title.trim().length > 2 && summary.trim().length > 4;
+
+  const field = (ph: string, val: string, set: (v: string) => void) => (
+    <TextInput
+      placeholder={ph}
+      placeholderTextColor={palette.muted}
+      value={val}
+      onChangeText={set}
+      style={{
+        borderWidth: 1,
+        borderColor: palette.muted,
+        borderRadius: 8,
+        paddingHorizontal: 12,
+        paddingVertical: 10,
+        color: palette.text,
+        marginBottom: 6,
+      }}
+    />
+  );
 
   return (
     <View style={{ marginBottom: 12 }}>
-      <TextInput
-        placeholder="Campaign title"
-        placeholderTextColor={palette.muted}
-        value={title}
-        onChangeText={setTitle}
-        style={{
-          borderWidth: 1,
-          borderColor: palette.muted,
-          borderRadius: 8,
-          paddingHorizontal: 12,
-          paddingVertical: 10,
-          color: palette.text,
-          marginBottom: 6,
-        }}
-      />
-      <TextInput
-        placeholder="Brief summary"
-        placeholderTextColor={palette.muted}
-        value={summary}
-        onChangeText={setSummary}
-        style={{
-          borderWidth: 1,
-          borderColor: palette.muted,
-          borderRadius: 8,
-          paddingHorizontal: 12,
-          paddingVertical: 10,
-          color: palette.text,
-          marginBottom: 6,
-        }}
-      />
+      {field("Campaign title", title, setTitle)}
+      {field("Brief summary", summary, setSummary)}
+      {field("Target (e.g., Ministry of Labour)", target, setTarget)}
+      {field("Goal (supporters count)", goalCount, setGoalCount)}
+      {field("Contact email (optional)", contactEmail, setContactEmail)}
       <Pressable
         onPress={() => {
           if (!canCreate) return;
-          onCreate(title.trim(), summary.trim());
-          setTitle("");
-          setSummary("");
+          onCreate({ title: title.trim(), summary: summary.trim(), target: target.trim() || undefined, goalCount: goalCount ? Number(goalCount) : undefined, contactEmail: contactEmail.trim() || undefined });
+          setTitle(""); setSummary(""); setTarget(""); setGoalCount(""); setContactEmail("");
         }}
         disabled={!canCreate}
         style={{
