@@ -6,7 +6,7 @@ import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { usePrivacy } from "../../../store/privacy";
 
-type Entry = { id: string; date: string; sleepHours: string; sleepQuality: string; energy: string; notes: string };
+type Entry = { id: string; date: string; sleepHours: string; sleepQuality: string; energy: string; notes: string; tags?: string };
 
 export const options = { href: null };
 
@@ -23,17 +23,19 @@ export default function SleepEnergyTracker() {
   const [sleepQuality, setSleepQuality] = React.useState<string>(""); // 1-5
   const [energy, setEnergy] = React.useState<string>(""); // 1-5
   const [notes, setNotes] = React.useState<string>("");
+  const [tags, setTags] = React.useState<string>("");
   const [editingId, setEditingId] = React.useState<string | null>(null);
   const [filterStart, setFilterStart] = React.useState<string>("");
   const [filterEnd, setFilterEnd] = React.useState<string>("");
   const [filterMinHours, setFilterMinHours] = React.useState<string>("");
+  const [filterTag, setFilterTag] = React.useState<string>("");
 
   const add = React.useCallback(() => {
-    const e: Entry = { id: String(Date.now()), date, sleepHours, sleepQuality, energy, notes };
+    const e: Entry = { id: String(Date.now()), date, sleepHours, sleepQuality, energy, notes, tags };
     setEntries((prev) => [e, ...prev]);
     try { require("../../../services/analytics").logEvent?.('tracker_add_entry', { kind: 'sleep' }); } catch {}
-    setSleepHours(""); setSleepQuality(""); setEnergy(""); setNotes("");
-  }, [date, sleepHours, sleepQuality, energy, notes]);
+    setSleepHours(""); setSleepQuality(""); setEnergy(""); setNotes(""); setTags("");
+  }, [date, sleepHours, sleepQuality, energy, notes, tags]);
 
   const startEdit = React.useCallback((e: Entry) => {
     setEditingId(e.id);
@@ -42,18 +44,19 @@ export default function SleepEnergyTracker() {
     setSleepQuality(e.sleepQuality || "");
     setEnergy(e.energy || "");
     setNotes(e.notes || "");
+    setTags(e.tags || "");
   }, []);
 
   const saveEdit = React.useCallback(() => {
     if (!editingId) return;
-    setEntries((prev) => prev.map((x) => (x.id === editingId ? { ...x, date, sleepHours, sleepQuality, energy, notes } : x)));
+    setEntries((prev) => prev.map((x) => (x.id === editingId ? { ...x, date, sleepHours, sleepQuality, energy, notes, tags } : x)));
     setEditingId(null);
-    setSleepHours(""); setSleepQuality(""); setEnergy(""); setNotes("");
-  }, [editingId, date, sleepHours, sleepQuality, energy, notes]);
+    setSleepHours(""); setSleepQuality(""); setEnergy(""); setNotes(""); setTags("");
+  }, [editingId, date, sleepHours, sleepQuality, energy, notes, tags]);
 
   const cancelEdit = React.useCallback(() => {
     setEditingId(null);
-    setSleepHours(""); setSleepQuality(""); setEnergy(""); setNotes("");
+    setSleepHours(""); setSleepQuality(""); setEnergy(""); setNotes(""); setTags("");
   }, []);
 
   const remove = React.useCallback((id: string) => {
@@ -77,9 +80,10 @@ export default function SleepEnergyTracker() {
       if (filterEnd && e.date > filterEnd) return false;
       const h = parseFloat(e.sleepHours || "0");
       if (minH !== null && !isNaN(minH) && (isNaN(h) || h < minH)) return false;
+      if (filterTag && !(e.tags || "").toLowerCase().includes(filterTag.toLowerCase())) return false;
       return true;
     });
-  }, [entries, filterStart, filterEnd, filterMinHours]);
+  }, [entries, filterStart, filterEnd, filterMinHours, filterTag]);
 
   const summary = React.useMemo(() => {
     if (filtered.length === 0) return "No entries (check filters).";
@@ -116,6 +120,7 @@ export default function SleepEnergyTracker() {
       <Field label="Sleep quality (1–5)" value={sleepQuality} onChangeText={setSleepQuality} keyboardType="numeric" />
       <Field label="Energy (1–5)" value={energy} onChangeText={setEnergy} keyboardType="numeric" />
       <Field label="Notes (insomnia, naps, pain, etc.)" value={notes} onChangeText={setNotes} multiline />
+      <Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} />
       {editingId ? (
         <View style={{ flexDirection: 'row', gap: 8 }}>
           <Pressable style={[styles.button, { flex: 1 }]} onPress={saveEdit} accessibilityRole="button" accessibilityLabel="Save edits">
@@ -194,8 +199,8 @@ export default function SleepEnergyTracker() {
       </Pressable>
       <Pressable style={[styles.button, { marginTop: 8 }]} onPress={() => {
         const rows = [
-          ["date","sleep_hours","sleep_quality","energy","notes"],
-          ...filtered.map(e => [e.date, e.sleepHours, e.sleepQuality, e.energy, e.notes])
+          ["date","sleep_hours","sleep_quality","energy","notes","tags"],
+          ...filtered.map(e => [e.date, e.sleepHours, e.sleepQuality, e.energy, e.notes, e.tags || ""]) 
         ];
         const csv = rows.map(r => r.map(x => `"${(x||"").replace(/"/g,'""')}"`).join(",")).join("\n");
         Share.share({ message: csv, title: "Sleep & Energy CSV" }).catch(() => {});
@@ -224,6 +229,7 @@ export default function SleepEnergyTracker() {
       <Field label="Start date (YYYY-MM-DD)" value={filterStart} onChangeText={setFilterStart} />
       <Field label="End date (YYYY-MM-DD)" value={filterEnd} onChangeText={setFilterEnd} />
       <Field label="Min sleep hours" value={filterMinHours} onChangeText={setFilterMinHours} keyboardType="numeric" />
+      <Field label="Tag contains" value={filterTag} onChangeText={setFilterTag} />
       <Pressable style={[styles.button, { marginTop: 8 }]} onPress={async () => {
         try { const mod = await import("expo-print"); const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">${summary.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</pre>`; const { uri } = await mod.printToFileAsync({ html }); await Share.share({ url: uri, title: "Sleep & Energy Summary" }); }
         catch { Alert.alert("PDF not available", "Install expo-print in a dev build to export PDFs."); }

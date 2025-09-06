@@ -23,6 +23,23 @@
       "tools_downloads": "Tools & Downloads",
       "emergency_crisis": "Emergency & Crisis"
     }
+  ,
+    "tools": {
+      "deadlines": "Deadline Calculator + Reminders",
+      "evidence": "Evidence Checklist Generator",
+      "voice_notes": "Voice-to-Case Notes Tool",
+      "templates": "Template Gallery"
+    }
+  },
+  "wellness": {
+    "tools": {
+      "symptom": "Symptom & Pain Tracker (exportable report)",
+      "sleep": "Sleep & Energy Tracker (legal/medical summary)",
+      "selfcare": "Accessible Self‑Care Library",
+      "work_balance": "Wellness + Work Balance AI",
+      "grief": "Grief + Identity Support Hub",
+      "adaptive_meditation": "Adaptive Meditation & Relaxation"
+    }
   },
   "home": {
     "title": "Welcome to Empowr",

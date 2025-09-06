@@ -13,6 +13,7 @@ type Entry = {
   symptoms: string;
   impact: string; // work/daily function impact
   meds: string;
+  tags?: string;
 };
 
 export const options = { href: null };
@@ -31,16 +32,18 @@ export default function SymptomTracker() {
   const [impact, setImpact] = React.useState<string>("");
   const [meds, setMeds] = React.useState<string>("");
   const [editingId, setEditingId] = React.useState<string | null>(null);
+  const [tags, setTags] = React.useState<string>("");
   const [filterStart, setFilterStart] = React.useState<string>("");
   const [filterEnd, setFilterEnd] = React.useState<string>("");
   const [filterMinPain, setFilterMinPain] = React.useState<string>("");
+  const [filterTag, setFilterTag] = React.useState<string>("");
 
   const add = React.useCallback(() => {
-    const e: Entry = { id: String(Date.now()), date, pain, symptoms, impact, meds };
+    const e: Entry = { id: String(Date.now()), date, pain, symptoms, impact, meds, tags };
     setEntries((prev) => [e, ...prev]);
     try { require("../../../services/analytics").logEvent?.('tracker_add_entry', { kind: 'symptom' }); } catch {}
-    setPain(""); setSymptoms(""); setImpact(""); setMeds("");
-  }, [date, pain, symptoms, impact, meds]);
+    setPain(""); setSymptoms(""); setImpact(""); setMeds(""); setTags("");
+  }, [date, pain, symptoms, impact, meds, tags]);
 
   const startEdit = React.useCallback((e: Entry) => {
     setEditingId(e.id);
@@ -49,18 +52,19 @@ export default function SymptomTracker() {
     setSymptoms(e.symptoms || "");
     setImpact(e.impact || "");
     setMeds(e.meds || "");
+    setTags(e.tags || "");
   }, []);
 
   const saveEdit = React.useCallback(() => {
     if (!editingId) return;
-    setEntries((prev) => prev.map((x) => (x.id === editingId ? { ...x, date, pain, symptoms, impact, meds } : x)));
+    setEntries((prev) => prev.map((x) => (x.id === editingId ? { ...x, date, pain, symptoms, impact, meds, tags } : x)));
     setEditingId(null);
-    setPain(""); setSymptoms(""); setImpact(""); setMeds("");
-  }, [editingId, date, pain, symptoms, impact, meds]);
+    setPain(""); setSymptoms(""); setImpact(""); setMeds(""); setTags("");
+  }, [editingId, date, pain, symptoms, impact, meds, tags]);
 
   const cancelEdit = React.useCallback(() => {
     setEditingId(null);
-    setPain(""); setSymptoms(""); setImpact(""); setMeds("");
+    setPain(""); setSymptoms(""); setImpact(""); setMeds(""); setTags("");
   }, []);
 
   const remove = React.useCallback((id: string) => {
@@ -84,9 +88,10 @@ export default function SymptomTracker() {
       if (filterEnd && e.date > filterEnd) return false;
       const p = parseFloat(e.pain || "0");
       if (min !== null && !isNaN(min) && (!e.pain || isNaN(p) || p < min)) return false;
+      if (filterTag && !(e.tags || "").toLowerCase().includes(filterTag.toLowerCase())) return false;
       return true;
     });
-  }, [entries, filterStart, filterEnd, filterMinPain]);
+  }, [entries, filterStart, filterEnd, filterMinPain, filterTag]);
 
   const report = React.useMemo(() => {
     if (filtered.length === 0) return "No entries (check filters).";
@@ -121,6 +126,7 @@ export default function SymptomTracker() {
       <Field label="Symptoms" value={symptoms} onChangeText={setSymptoms} multiline />
       <Field label="Impact on work/daily life" value={impact} onChangeText={setImpact} multiline />
       <Field label="Meds taken / changes" value={meds} onChangeText={setMeds} multiline />
+      <Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} />
 
       {editingId ? (
         <View style={{ flexDirection: 'row', gap: 8 }}>
@@ -145,6 +151,7 @@ export default function SymptomTracker() {
           <View key={e.id} style={styles.entryRow}>
             <Text style={styles.entryText}>{`${e.date} — pain ${e.pain || "?"}`}</Text>
             {!!e.symptoms && <Text style={styles.entryNote}>• {e.symptoms}</Text>}
+            {!!e.tags && <Text style={styles.entryNote}>tags: {e.tags}</Text>}
             <View style={{ flexDirection: 'row', gap: 8, marginTop: 6 }}>
               <Pressable onPress={() => startEdit(e)} accessibilityRole="button" style={[styles.smallBtn, { backgroundColor: palette.surface, borderColor: palette.muted, borderWidth: StyleSheet.hairlineWidth }]}>
                 <Text style={[styles.smallBtnText, { color: palette.text }]}>Edit</Text>
@@ -201,8 +208,8 @@ export default function SymptomTracker() {
       </Pressable>
       <Pressable style={[styles.button, { marginTop: 8 }]} onPress={() => {
         const rows = [
-          ["date","pain","symptoms","impact","meds"],
-          ...filtered.map(e => [e.date, e.pain, e.symptoms, e.impact, e.meds])
+          ["date","pain","symptoms","impact","meds","tags"],
+          ...filtered.map(e => [e.date, e.pain, e.symptoms, e.impact, e.meds, e.tags || ""]) 
         ];
         const csv = rows.map(r => r.map(x => `"${(x||"").replace(/"/g,'""')}"`).join(",")).join("\n");
         Share.share({ message: csv, title: "Symptom & Pain CSV" }).catch(() => {});
@@ -231,6 +238,7 @@ export default function SymptomTracker() {
       <Field label="Start date (YYYY-MM-DD)" value={filterStart} onChangeText={setFilterStart} />
       <Field label="End date (YYYY-MM-DD)" value={filterEnd} onChangeText={setFilterEnd} />
       <Field label="Min pain (0–10)" value={filterMinPain} onChangeText={setFilterMinPain} keyboardType="numeric" />
+      <Field label="Tag contains" value={filterTag} onChangeText={setFilterTag} />
       <Pressable style={[styles.button, { marginTop: 8 }]} onPress={async () => {
         try { const mod = await import("expo-print"); const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">${report.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</pre>`; const { uri } = await mod.printToFileAsync({ html }); await Share.share({ url: uri, title: "Symptom & Pain Report" }); }
         catch { Alert.alert("PDF not available", "Install expo-print in a dev build to export PDFs."); }

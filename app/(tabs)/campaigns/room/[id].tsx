@@ -1,8 +1,9 @@
 export const options = { href: null };
 import React from "react";
-import { View, Text, StyleSheet, Pressable, TextInput, Share } from "react-native";
+import { View, Text, StyleSheet, Pressable, TextInput, Share, Alert, ScrollView } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../../theme/usePalette";
+import { getCachedJSON, setCachedJSON } from "../../../../services/cache";
 
 type Task = { id: string; kind: 'petition' | 'social' | 'letters'; title: string; done?: boolean };
 
@@ -16,6 +17,18 @@ export default function CampaignRoom() {
     { id: 'l1', kind: 'letters', title: 'Letter-writing kit (targets + template)' },
   ]);
   const [newTask, setNewTask] = React.useState('');
+  const [notes, setNotes] = React.useState('');
+
+  React.useEffect(() => {
+    (async () => {
+      const savedTasks = await getCachedJSON<Task[]>(`campaign_room_${id}_tasks`);
+      if (savedTasks) setTasks(savedTasks);
+      const savedNotes = await getCachedJSON<string>(`campaign_room_${id}_notes`);
+      if (savedNotes) setNotes(savedNotes);
+    })();
+  }, [id]);
+  React.useEffect(() => { setCachedJSON(`campaign_room_${id}_tasks`, tasks); }, [id, tasks]);
+  React.useEffect(() => { setCachedJSON(`campaign_room_${id}_notes`, notes); }, [id, notes]);
 
   const toggle = (tid: string) => setTasks((prev) => prev.map(t => t.id===tid ? { ...t, done: !t.done } : t));
   const add = () => { if (!newTask.trim()) return; setTasks((prev) => [{ id: String(Date.now()), kind: 'social', title: newTask.trim() }, ...prev]); setNewTask(''); };
@@ -26,7 +39,7 @@ export default function CampaignRoom() {
   };
 
   return (
-    <View style={s.container}>
+    <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Stack.Screen options={{ title: `Campaign Room ${id ?? ''}` }} />
       <Text style={s.title}>Digital Protest & Campaign Room</Text>
       <Text style={s.subtitle}>Collaborate on petitions, social pushes, and letter drives.</Text>
@@ -40,13 +53,18 @@ export default function CampaignRoom() {
       ))}
       <View style={{ height: 8 }} />
       <Pressable onPress={exportCSV} style={s.button}><Text style={s.buttonText}>Export Tasks (CSV)</Text></Pressable>
-    </View>
+      <View style={{ height: 12 }} />
+      <Text style={s.title}>Shared Notes</Text>
+      <TextInput style={[s.input,{ minHeight: 120 }]} value={notes} onChangeText={setNotes} multiline placeholder="Shared notes: announce dates, media contacts, progress, links" />
+      <Pressable onPress={async () => { try { const mod = await import('expo-clipboard'); await mod.setStringAsync(notes); Alert.alert('Copied','Notes copied.'); } catch {} }} style={s.button}><Text style={s.buttonText}>Copy Notes</Text></Pressable>
+      <Pressable onPress={() => Share.share({ message: notes, title: 'Campaign Room Notes' }).catch(()=>{})} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Share Notes</Text></Pressable>
+    </ScrollView>
   );
 }
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    container: { flex: 1, backgroundColor: palette.background, padding: 16 },
+    container: { flex: 1, backgroundColor: palette.background },
     title: { color: palette.text, fontWeight: '700', fontSize: 20 },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
     input: { borderWidth: 1, borderColor: palette.muted, borderRadius: 8, padding: 10, color: palette.text, marginBottom: 8 },
@@ -56,4 +74,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     taskText: { color: palette.text },
   });
 }
-

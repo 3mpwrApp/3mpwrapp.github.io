@@ -14,16 +14,14 @@ export default function AdaptiveMeditation() {
 
   const play = async (kind: "breath" | "body" | "calm") => {
     try {
-      const { Audio } = await import("expo-av");
-      await Audio.requestPermissionsAsync();
-      const sound = new Audio.Sound();
-      // Simple built-in tone guidance (placeholder); ideally load bundled/audio assets
-      await sound.loadAsync(require("../../../assets/sounds/meditation-bell.mp3"));
-      await sound.playAsync();
-      Alert.alert("Tip", kind === 'breath' ? "Box breathing: 4-4-4-4" : kind === 'body' ? "Gentle scan toes to head" : "Soften eyes, lengthen exhale");
-    } catch {
-      Alert.alert("Audio unavailable", "Add audio assets or connect to streaming in a dev build.");
-    }
+      // Optional: add expo-av playback of bundled audio in a dev build
+      Alert.alert(
+        kind === 'breath' ? 'Breathing' : kind === 'body' ? 'Body Scan' : 'Calm Reset',
+        kind === 'breath' ? 'Box breathing: inhale 4, hold 4, exhale 4, hold 4 (x4).' :
+        kind === 'body' ? 'Gentle scan toes to head. Stop if discomfort rises.' :
+        'Soften eyes, lengthen exhale, relax jaw/shoulders.'
+      );
+    } catch {}
   };
 
   return (
@@ -47,4 +45,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
   });
 }
-

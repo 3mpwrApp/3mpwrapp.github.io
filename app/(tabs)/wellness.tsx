@@ -68,28 +68,22 @@ export default function WellnessScreen() {
 
       <Text accessibilityRole="header" style={[styles.sectionTitle, { marginTop: 8 }]}>Tools</Text>
       <Link href={"/(tabs)/wellness/symptom-tracker" as Href} asChild>
-        <Text style={[styles.linkLabel, { marginBottom: 6 }]}>
-          {t("wellness.tools.symptom", "Symptom & Pain Tracker (exportable report)")}
-        </Text>
+        <Text style={[styles.linkLabel, { marginBottom: 6 }]}>{t("wellness.tools.symptom", "Symptom & Pain Tracker (exportable report)")}</Text>
       </Link>
       <Link href={"/(tabs)/wellness/sleep-energy-tracker" as Href} asChild>
-        <Text style={[styles.linkLabel, { marginBottom: 6 }]}>
-          {t("wellness.tools.sleep", "Sleep & Energy Tracker (legal/medical summary)")}
-        </Text>
+        <Text style={[styles.linkLabel, { marginBottom: 6 }]}>{t("wellness.tools.sleep", "Sleep & Energy Tracker (legal/medical summary)")}</Text>
       </Link>
       <Link href={"/(tabs)/wellness/self-care-library" as Href} asChild>
-        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>
-          {t("wellness.tools.selfcare", "Accessible Self‑Care Library")}
-        </Text>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>{t("wellness.tools.selfcare", "Accessible Self‑Care Library")}</Text>
       </Link>
       <Link href={"/(tabs)/wellness/work-balance-ai" as Href} asChild>
-        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>Wellness + Work Balance AI</Text>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>{t("wellness.tools.work_balance", "Wellness + Work Balance AI")}</Text>
       </Link>
       <Link href={"/(tabs)/wellness/grief-support" as Href} asChild>
-        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>Grief + Identity Support Hub</Text>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>{t("wellness.tools.grief", "Grief + Identity Support Hub")}</Text>
       </Link>
       <Link href={"/(tabs)/wellness/adaptive-meditation" as Href} asChild>
-        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>Adaptive Meditation & Relaxation</Text>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>{t("wellness.tools.adaptive_meditation", "Adaptive Meditation & Relaxation")}</Text>
       </Link>
 
       {sections.map((sec) => (

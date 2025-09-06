@@ -6,6 +6,7 @@ import * as Notifier from "../../../services/notifications";
 import { buildICS } from "../../../services/ics";
 import * as Sharing from "expo-sharing";
 import * as FileSystem from "expo-file-system";
+import { addEvent } from "../../../services/calendar";
 
 export const options = { href: null };
 
@@ -81,6 +82,13 @@ export default function Deadlines() {
         <View style={styles.box}>
           <Text style={{ color: palette.text }}>{result}</Text>
           <Pressable onPress={remind} style={[styles.button, { marginTop: 8 }]}><Text style={styles.buttonText}>Set reminder</Text></Pressable>
+          <Pressable onPress={async () => {
+            const d = new Date(decisionDate);
+            const map: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
+            const due = new Date(d.getTime() + map[benefit]*86400000);
+            const ok = await addEvent({ title: `Appeal deadline — ${benefit}`, notes: result, startISO: due.toISOString(), durationMinutes: 30 });
+            Alert.alert(ok ? 'Added' : 'Not added', ok ? 'Event added to your calendar.' : 'Unable to add calendar event.');
+          }} style={[styles.button, { marginTop: 8 }]}><Text style={styles.buttonText}>Add to calendar</Text></Pressable>
           <Pressable onPress={exportICS} style={[styles.button, { marginTop: 8 }]}><Text style={styles.buttonText}>Export ICS</Text></Pressable>
         </View>
       )}

@@ -133,16 +133,16 @@ export default function ResourcesScreen() {
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>AI “Appeal Coach”</Text>
       </Link>
       <Link href={"/(tabs)/resources/deadlines" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Deadline Calculator + Reminders</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.deadlines','Deadline Calculator + Reminders')}</Text>
       </Link>
       <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Evidence Checklist Generator</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.evidence','Evidence Checklist Generator')}</Text>
       </Link>
       <Link href={"/(tabs)/resources/voice-notes" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Voice‑to‑Case Notes Tool</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.voice_notes','Voice‑to‑Case Notes Tool')}</Text>
       </Link>
       <Link href={"/(tabs)/resources/templates-gallery" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Template Gallery</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.templates','Template Gallery')}</Text>
       </Link>
       <Text accessibilityRole="header" style={[styles.sectionTitle, { marginTop: 10 }]}>AI-Generated Letter Templates</Text>
       <Link href={"/(tabs)/resources/letter-accommodation" as Href} asChild>
