@@ -34,10 +34,15 @@ export default function TabsLayout() {
       <Tabs.Screen name="resources/appeal-coach" options={{ href: null }} />
       <Tabs.Screen name="resources/deadlines" options={{ href: null }} />
       <Tabs.Screen name="resources/evidence-checklist" options={{ href: null }} />
+      <Tabs.Screen name="resources/voice-notes" options={{ href: null }} />
       <Tabs.Screen name="resources/templates-gallery" options={{ href: null }} />
+      <Tabs.Screen name="wellness/work-balance-ai" options={{ href: null }} />
+      <Tabs.Screen name="wellness/grief-support" options={{ href: null }} />
+      <Tabs.Screen name="wellness/adaptive-meditation" options={{ href: null }} />
       <Tabs.Screen name="advocacy/support-directory" options={{ href: null }} />
       <Tabs.Screen name="archive/index" options={{ href: null }} />
       <Tabs.Screen name="campaigns/[id]" options={{ href: null }} />
+      <Tabs.Screen name="campaigns/room/[id]" options={{ href: null }} />
       <Tabs.Screen name="resources/[id]" options={{ href: null }} />
       <Tabs.Screen name="resources/letter-accommodation" options={{ href: null }} />
       <Tabs.Screen name="resources/letter-appeal" options={{ href: null }} />

@@ -82,6 +82,15 @@ export default function WellnessScreen() {
           {t("wellness.tools.selfcare", "Accessible Self‑Care Library")}
         </Text>
       </Link>
+      <Link href={"/(tabs)/wellness/work-balance-ai" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>Wellness + Work Balance AI</Text>
+      </Link>
+      <Link href={"/(tabs)/wellness/grief-support" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>Grief + Identity Support Hub</Text>
+      </Link>
+      <Link href={"/(tabs)/wellness/adaptive-meditation" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>Adaptive Meditation & Relaxation</Text>
+      </Link>
 
       {sections.map((sec) => (
         <View key={sec.title} style={styles.section} accessibilityLabel={`${sec.title} section`} accessible>

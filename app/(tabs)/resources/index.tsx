@@ -138,6 +138,9 @@ export default function ResourcesScreen() {
       <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>Evidence Checklist Generator</Text>
       </Link>
+      <Link href={"/(tabs)/resources/voice-notes" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Voice‑to‑Case Notes Tool</Text>
+      </Link>
       <Link href={"/(tabs)/resources/templates-gallery" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>Template Gallery</Text>
       </Link>

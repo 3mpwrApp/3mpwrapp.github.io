@@ -100,9 +100,28 @@ function CampaignDetailInner() {
               styles.ghost,
               pressed && { opacity: 0.8 },
             ]}
+            onPress={() => {
+              // open campaign room
+              const { router } = require("expo-router");
+              router.push(`/(tabs)/campaigns/room/${campaign.id}`);
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Open campaign room"
+            focusable
+          >
+            <Text style={styles.linkText}>Open Campaign Room</Text>
+          </Pressable>
+        )}
+
+        {!!campaign && (
+          <Pressable
+            style={({ pressed }) => [
+              styles.ghost,
+              pressed && { opacity: 0.8 },
+            ]}
             onPress={async () => {
               try {
-                const msg = `${campaign.title} — ${campaign.summary}`;
+                const msg = `${campaign.title} - ${campaign.summary}`;
                 await Share.share({
                   title: campaign.title,
                   message: msg,
