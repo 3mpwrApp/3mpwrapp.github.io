@@ -1,34 +1,18 @@
-﻿import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  ScrollView,
-  TextInput,
-  Button,
-  Alert,
-  Image,
-} from "react-native";
-import * as ImagePicker from "expo-image-picker"; // dY"1 new
+import React, { useState, useEffect } from "react";
+import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
-import { useTranslation } from "../../i18n";
-import { useSettings } from "../../store/settings";
-import type { ProvinceCode } from "../../types/models";
+// import { useTranslation } from "../../i18n";
+// import { useSettings } from "../../store/settings";
 
 import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
-
-const PROVINCES: ProvinceCode[] = [
-  "AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT",
-];
 
 export default function SettingsScreen() {
   const palette = useAppPalette();
@@ -37,20 +21,14 @@ export default function SettingsScreen() {
   useAnnounceOnMount("Settings");
   useFocusOnRefOnMount(titleRef);
 
-  const { setLanguage } = useTranslation();
-  const {
-    highContrast, setHighContrast,
-    textScale, setTextScale,
-    province, setProvince,
-    includeProvincialHolidays, setIncludeProvincialHolidays,
-    youtubeOpenPreference, setYoutubeOpenPreference,
-  } = useSettings();
+  // const { setLanguage } = useTranslation();
+  // const settings = useSettings();
 
   // dY"1 Profile state
   const { user } = useAuth();
   const [displayName, setDisplayName] = useState("");
   const [photoURL, setPhotoURL] = useState<string | null>(null);
-  const [loadingProfile, setLoadingProfile] = useState(true);
+  // const [loadingProfile, setLoadingProfile] = useState(true);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -66,7 +44,7 @@ export default function SettingsScreen() {
       } catch (err: any) {
         console.error("Error fetching profile:", err.message);
       } finally {
-        setLoadingProfile(false);
+        // no-op
       }
     };
     fetchProfile();
@@ -86,13 +64,22 @@ export default function SettingsScreen() {
   // dY"1 Upload new profile picture
   const handleUploadPhoto = async () => {
     if (!user) return;
-
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 0.7,
-    });
+    let result: any;
+    try {
+      const ImagePicker = await import("expo-image-picker");
+      result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.Images,
+        allowsEditing: true,
+        aspect: [1, 1],
+        quality: 0.7,
+      });
+    } catch (e) {
+      Alert.alert(
+        "Image Picker Unavailable",
+        "Please rebuild the Android app to include expo-image-picker (npx expo run:android)."
+      );
+      return;
+    }
 
     if (result.canceled) return;
 
