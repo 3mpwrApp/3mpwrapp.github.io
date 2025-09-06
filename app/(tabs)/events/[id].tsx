@@ -1,10 +1,11 @@
 import { View, Text, StyleSheet, useColorScheme, Pressable, Platform, Share } from "react-native";
 import * as Linking from "expo-linking";
-export const options = { href: null };
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
 import SettingsLink from "../../../components/SettingsLink";
 import { events } from "../../../data/events";
+
+export const options = { href: null };
 
 function createICS(title: string, start: string, description?: string, location?: string) {
   // Minimal ICS text (UTC naive for demo). Real apps should format correctly.

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { View, Text, StyleSheet, FlatList, RefreshControl } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
@@ -9,7 +9,6 @@ import Card from "../../../components/Card";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
 import { Link } from "expo-router";
-import type { Href } from "expo-router";
 import SearchBar from "../../../components/SearchBar";
 import { useCounts } from "../../../store/counts";
 import SkeletonRow from "../../../components/SkeletonRow";
@@ -132,4 +131,5 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     subtitle: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.95, marginBottom: 8 },
   });
 }
+
 

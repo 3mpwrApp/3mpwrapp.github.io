@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { View, Text, StyleSheet, useColorScheme, SectionList } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
@@ -8,7 +8,6 @@ import { fetchPodcasts } from "../../services/podcasts";
 import { fetchResources } from "../../services/resources";
 import { fetchCampaigns } from "../../services/campaigns";
 import { Link } from "expo-router";
-import type { Href } from "expo-router";
 import Card from "../../components/Card";
 import type { Podcast } from "../../data/podcasts";
 import type { Resource, Campaign } from "../../types/models";
@@ -74,7 +73,7 @@ export default function SavedScreen() {
         Saved
       </Text>
       {sections.length === 1 && sections[0].data.length === 0 ? (
-        <Text style={styles.subtitle}>You haven’t saved anything yet.</Text>
+        <Text style={styles.subtitle}>You havenâ€™t saved anything yet.</Text>
       ) : null}
       <SectionList
         sections={sections}
@@ -100,7 +99,7 @@ export default function SavedScreen() {
               >
                 <Card
                   title={item.title}
-                  subtitle={`${item.description} • ${item.duration}`}
+                  subtitle={`${item.description} â€¢ ${item.duration}`}
                   rightIcon={yt ? "logo-youtube" : "chevron-forward"}
                   left={item.thumbnailUrl ? <View style={{ width: 44, height: 44, borderRadius: 4, overflow: "hidden", backgroundColor: palette.muted }} /> : undefined}
                 />
@@ -136,3 +135,4 @@ function createStyles(palette: Palette, factor: number) {
     sectionHeader: { fontWeight: "700", color: palette.text },
   });
 }
+

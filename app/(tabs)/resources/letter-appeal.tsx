@@ -1,5 +1,4 @@
 import React from "react";
-export const options = { href: null };
 import {
   View,
   Text,
@@ -17,6 +16,8 @@ import {
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+
+export const options = { href: null };
 
 export default function AppealLetter() {
   const palette = useAppPalette();

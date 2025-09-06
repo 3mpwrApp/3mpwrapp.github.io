@@ -1,11 +1,12 @@
 import React from "react";
-export const options = { href: null };
 import { View, Text, StyleSheet, useColorScheme, FlatList, TextInput, Pressable } from "react-native";
 import { colors, type Palette } from "../../../../theme/colors";
 import { useLocalSearchParams } from "expo-router";
 import { useCommunity, CommunityProvider } from "../../../../store/community";
 import { HIT_SLOP_8, touchTarget } from "../../../../constants/a11y";
 import { useAuth } from "../../../../store/auth";
+
+export const options = { href: null };
 
 function ThreadInner() {
   const { id } = useLocalSearchParams<{ id: string }>();

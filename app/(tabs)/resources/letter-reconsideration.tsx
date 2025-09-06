@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 export const options = { href: null };
 import { View, Text, StyleSheet, TextInput, ScrollView, Pressable, Share } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -40,4 +40,5 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     buttonText: { color: palette.onPrimary, fontWeight: "700" },
   });
 }
+
 

@@ -1,10 +1,11 @@
 import React from "react";
-export const options = { href: null };
 import { View, Text, StyleSheet, FlatList, Pressable, Linking, TextInput } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { supportOrgs } from "../../../data/support";
 import { useSettings } from "../../../store/settings";
+
+export const options = { href: null };
 
 export default function SupportDirectory() {
   const palette = useAppPalette();
@@ -15,8 +16,15 @@ export default function SupportDirectory() {
   const { province } = useSettings();
   const filtered = React.useMemo(() => province ? supportOrgs.filter(o => o.province === province) : supportOrgs, [province]);
   const [suggestion, setSuggestion] = React.useState("");
-  let AsyncStorage: any;
-  try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
+  const AsyncStorageRef = React.useRef<any>(null);
+  React.useEffect(() => {
+    (async () => {
+      try {
+        const mod = await import("@react-native-async-storage/async-storage");
+        AsyncStorageRef.current = mod.default;
+      } catch {}
+    })();
+  }, []);
   return (
     <View style={styles.container} accessibilityLabel="Support directory screen" accessible>
       <Text ref={titleRef} style={styles.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Support Directory</Text>
@@ -42,6 +50,7 @@ export default function SupportDirectory() {
         <Text style={styles.subtitle}>Suggest a correction</Text>
         <TextInput value={suggestion} onChangeText={setSuggestion} placeholder="Org ID and your suggestion" placeholderTextColor={palette.text+"77"} style={styles.input} />
         <Pressable accessibilityRole="button" accessibilityLabel="Submit suggestion" onPress={async () => {
+          const AsyncStorage = AsyncStorageRef.current;
           if (!suggestion.trim() || !AsyncStorage) return;
           try {
             const key = 'support:suggestions:v1';

@@ -63,7 +63,7 @@ function ScreenInner() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [setOffline]);
 
   const { tick } = useRefresh();
   React.useEffect(() => {

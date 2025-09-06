@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { View, Text, StyleSheet, FlatList, RefreshControl, Pressable } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
@@ -11,7 +11,6 @@ import { fetchEvents } from "../../../services/events";
 import { useCounts } from "../../../store/counts";
 import Card from "../../../components/Card";
 import { Link } from "expo-router";
-import type { Href } from "expo-router";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
@@ -91,7 +90,7 @@ export default function EventsScreen() {
 
   const formatMeta = (date: string, isVirtual?: boolean, location?: string) => {
     const place = isVirtual ? "Virtual" : (location ?? "TBD");
-    return `${date} • ${place}`;
+    return `${date} â€¢ ${place}`;
   };
 
   const monthLabel = React.useMemo(
@@ -279,3 +278,4 @@ function dayKeyFromMatrix(baseMonth: Date, day: number | null) {
   const dd = `${day}`.padStart(2, "0");
   return `${y}-${m}-${dd}`;
 }
+

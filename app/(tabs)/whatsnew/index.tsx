@@ -19,15 +19,19 @@ export default function WhatsNewScreen() {
   const now = React.useMemo(() => new Date(), []);
   // Track last-seen timestamp to badge unread items
   const [lastSeen, setLastSeen] = React.useState<string | null>(null);
-  let AsyncStorage: any;
-  try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
+  const AsyncStorageRef = React.useRef<any>(null);
   const [items, setItems] = React.useState(defaultWN);
   const [title, setTitle] = React.useState("");
   const [summary, setSummary] = React.useState("");
   React.useEffect(() => {
     (async () => {
+      try {
+        const mod = await import("@react-native-async-storage/async-storage");
+        AsyncStorageRef.current = mod.default;
+      } catch {}
       const local = await getLocalWhatsNew();
       if (local.length) setItems([...local, ...defaultWN]);
+      const AsyncStorage = AsyncStorageRef.current;
       if (AsyncStorage) {
         try {
           const seen = await AsyncStorage.getItem("whatsnew:lastSeen:v1");
@@ -74,6 +78,7 @@ export default function WhatsNewScreen() {
         accessibilityLabel="Mark all as read"
         onPress={async () => {
           const newest = items.reduce((acc, cur) => Math.max(acc, new Date(cur.date).getTime()), 0);
+          const AsyncStorage = AsyncStorageRef.current;
           if (AsyncStorage && newest) {
             await AsyncStorage.setItem("whatsnew:lastSeen:v1", new Date(newest).toISOString());
             setLastSeen(new Date(newest).toISOString());
