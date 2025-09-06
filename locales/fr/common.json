@@ -41,5 +41,15 @@
       "grief": "Deuil et identité — soutien",
       "adaptive_meditation": "Méditation et relaxation adaptées"
     }
+  },
+  "advocacy": {
+    "tools": {
+      "self_coach": "Coach d'auto-defense (micro-lecons)",
+      "policy_simple": "Politiques simplifiees",
+      "ai_translator": "Traducteur administratif (langage clair)",
+      "ai_case": "Interprete de cas (resume)",
+      "collective": "Pole d'action juridique collective",
+      "ai_gov": "Navigateur gouvernemental IA"
+    }
   }
 }

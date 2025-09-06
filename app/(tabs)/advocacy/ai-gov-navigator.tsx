@@ -62,6 +62,10 @@ export default function AiGovNavigator() {
         </View>
         <View style={{ height: 8 }} />
         <Pressable onPress={() => Share.share({ title: `Navigator ${flow}`, message: `Flow: ${flow}\nStep ${step+1}/${list.length}: ${list[step]}\n\nAll steps:\n${list.map((x,i)=> `${i+1}. ${x}`).join('\n')}` }).catch(()=>{})} style={s.button}><Text style={s.buttonText}>Share progress</Text></Pressable>
+        <View style={{ height: 8 }} />
+        <Pressable onPress={async () => { try { const mod = await import('expo-print'); const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">Flow: ${flow}\nStep ${step+1}/${list.length}: ${list[step]}\n\nAll steps:\n${list.map((x,i)=> `${i+1}. ${x}`).join('\n')}</pre>`; const { uri } = await mod.printToFileAsync({ html }); await Share.share({ url: uri, title: `Navigator ${flow}` }); } catch { Alert.alert('PDF not available','Install expo-print in a dev build to export PDFs.'); } }} style={s.button}><Text style={s.buttonText}>Export as PDF</Text></Pressable>
+        <View style={{ height: 8 }} />
+        <Pressable onPress={async () => { try { const FS = await import('expo-file-system'); const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">Flow: ${flow}\nStep ${step+1}/${list.length}: ${list[step]}\n\nAll steps:\n${list.map((x,i)=> `${i+1}. ${x}`).join('\n')}</pre></body></html>`; const path = FS.cacheDirectory + `gov_nav_${Date.now()}.doc`; await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 }); await Share.share({ url: path, title: `Navigator ${flow} (.doc)` }); } catch { Alert.alert('Export failed','Could not create .doc file.'); } }} style={s.button}><Text style={s.buttonText}>Export as .doc</Text></Pressable>
       </View>
       <Text style={[s.subtitle,{ marginTop: 8 }]}>Tip: Save copies of all forms and keep a timeline of key dates.</Text>
     </ScrollView>
