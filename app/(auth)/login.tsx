@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
 import type { Href } from "expo-router";
 import { signInWithEmailAndPassword } from "firebase/auth";
-// eslint-disable-next-line import/no-unresolved
 import { auth } from "../../firebase/config";
 
 export default function LoginScreen() {
@@ -61,3 +60,4 @@ const styles = StyleSheet.create({
   },
   error: { color: "red", marginBottom: 10 },
 });
+

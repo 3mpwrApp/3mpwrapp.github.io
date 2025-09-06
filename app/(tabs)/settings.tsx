@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -10,7 +10,6 @@ import {
   Alert,
   Image,
 } from "react-native";
-// eslint-disable-next-line import/no-unresolved
 import * as ImagePicker from "expo-image-picker"; // dY"1 new
 import { useAppPalette } from "../../theme/usePalette";
 import {
@@ -23,7 +22,6 @@ import { useSettings } from "../../store/settings";
 import type { ProvinceCode } from "../../types/models";
 
 import { useAuth } from "../../context/AuthContext";
-// eslint-disable-next-line import/no-unresolved
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
@@ -196,3 +194,4 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
   });
 }
+

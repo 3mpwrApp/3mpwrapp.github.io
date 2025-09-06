@@ -17,7 +17,6 @@ import { I18nProvider } from "../i18n";
 
 import * as Notifier from "../services/notifications";
 // ðŸ”¹ Use Firebase analytics init instead of custom
-// eslint-disable-next-line import/no-unresolved
 import { getFirebaseAnalytics } from "../firebase/config";
 
 export default function RootLayout() {
@@ -111,5 +110,6 @@ export default function RootLayout() {
     </I18nProvider>
   );
 }
+
 
 
