@@ -1,57 +1,63 @@
 {
-  "nav": {
-    "home": "Home",
-    "campaigns": "Campaigns",
-    "community": "Community Hub",
-    "advocacy": "Advocacy",
-    "podcasts": "Podcasts & Stories",
-    "resources": "Resources",
-    "events": "Events",
-    "wellness": "Wellness",
-    "profile": "Profile",
-    "saved": "Saved"
-  },
-  "wellness": {
-    "intro": "Your wellbeing matters. This page is a safe, inclusive space for Injured Workers and the Disability Community. Here you’ll find guidance on physical, mental, emotional, and social wellness — designed to be supportive, accessible, and empowering."
-  },
-  "resources": {
-    "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
-    "filters": {
-      "all": "All",
-      "canada": "Canada",
-      "work_financial": "Work & Financial",
-      "tools_downloads": "Tools & Downloads",
-      "emergency_crisis": "Emergency & Crisis"
-    }
-  ,
-    "tools": {
-      "deadlines": "Deadline Calculator + Reminders",
-      "evidence": "Evidence Checklist Generator",
-      "voice_notes": "Voice-to-Case Notes Tool",
-      "templates": "Template Gallery"
-    }
-  },
-  "wellness": {
-    "tools": {
-      "symptom": "Symptom & Pain Tracker (exportable report)",
-      "sleep": "Sleep & Energy Tracker (legal/medical summary)",
-      "selfcare": "Accessible Self‑Care Library",
-      "work_balance": "Wellness + Work Balance AI",
-      "grief": "Grief + Identity Support Hub",
-      "adaptive_meditation": "Adaptive Meditation & Relaxation"
-    }
-  },
-  "home": {
-    "title": "Welcome to Empowr",
-    "subtitle": "Support. Advocacy. Empowerment.",
-    "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!"
-  },
-  "header": {
-    "favorites": "Favs",
-    "items": "Items",
-    "openProfile": "Open profile",
-    "signIn": "Sign in",
-    "signOut": "Sign out",
-    "refresh": "Refresh all"
-  }
+    "nav":  {
+                "home":  "Home",
+                "campaigns":  "Campaigns",
+                "community":  "Community Hub",
+                "advocacy":  "Advocacy",
+                "podcasts":  "Podcasts \u0026 Stories",
+                "resources":  "Resources",
+                "events":  "Events",
+                "wellness":  "Wellness",
+                "profile":  "Profile",
+                "saved":  "Saved"
+            },
+    "wellness":  {
+                     "tools":  {
+                                   "symptom":  "Symptom \u0026 Pain Tracker (exportable report)",
+                                   "sleep":  "Sleep \u0026 Energy Tracker (legal/medical summary)",
+                                   "selfcare":  "Accessible Self‑Care Library",
+                                   "work_balance":  "Wellness + Work Balance AI",
+                                   "grief":  "Grief + Identity Support Hub",
+                                   "adaptive_meditation":  "Adaptive Meditation \u0026 Relaxation"
+                               }
+                 },
+    "resources":  {
+                      "intro":  "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
+                      "filters":  {
+                                      "all":  "All",
+                                      "canada":  "Canada",
+                                      "work_financial":  "Work \u0026 Financial",
+                                      "tools_downloads":  "Tools \u0026 Downloads",
+                                      "emergency_crisis":  "Emergency \u0026 Crisis"
+                                  },
+                      "tools":  {
+                                    "deadlines":  "Deadline Calculator + Reminders",
+                                    "evidence":  "Evidence Checklist Generator",
+                                    "voice_notes":  "Voice-to-Case Notes Tool",
+                                    "templates":  "Template Gallery"
+                                }
+                  },
+    "home":  {
+                 "title":  "Welcome to Empowr",
+                 "subtitle":  "Support. Advocacy. Empowerment.",
+                 "welcome":  "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!"
+             },
+    "header":  {
+                   "favorites":  "Favs",
+                   "items":  "Items",
+                   "openProfile":  "Open profile",
+                   "signIn":  "Sign in",
+                   "signOut":  "Sign out",
+                   "refresh":  "Refresh all"
+               },
+    "advocacy":  {
+                     "tools":  {
+                                   "self_coach":  "Self-Advocacy Coach (micro-lessons)",
+                                   "ai_translator":  "AI Advocate Translator",
+                                   "collective":  "Collective Legal Action Hub",
+                                   "policy_simple":  "Policy Made Simple",
+                                   "ai_gov":  "AI Government Navigator",
+                                   "ai_case":  "AI Case Interpreter"
+                               }
+                 }
 }

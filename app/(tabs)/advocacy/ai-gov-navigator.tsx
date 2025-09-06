@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Pressable, ScrollView, Share, Alert } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 
 export const options = { href: null };
 
@@ -36,6 +37,8 @@ export default function AiGovNavigator() {
   useFocusOnRefOnMount(titleRef);
   const [flow, setFlow] = React.useState<Flow>('CPP-D');
   const [step, setStep] = React.useState(0);
+  React.useEffect(() => { (async () => { const s = await getCachedJSON<{flow: Flow; step: number}>("gov_nav_state"); if (s) { setFlow(s.flow); setStep(s.step||0);} })(); }, []);
+  React.useEffect(() => { setCachedJSON("gov_nav_state", { flow, step }); }, [flow, step]);
   const list = STEPS[flow];
   const next = () => setStep((prev) => Math.min(prev+1, list.length-1));
   const prev = () => setStep((prev) => Math.max(prev-1, 0));
@@ -57,6 +60,8 @@ export default function AiGovNavigator() {
           <Pressable onPress={prev} style={[s.button,{ opacity: step===0?0.6:1 }]} disabled={step===0}><Text style={s.buttonText}>Back</Text></Pressable>
           <Pressable onPress={next} style={[s.button,{ opacity: step===list.length-1?0.6:1 }]} disabled={step===list.length-1}><Text style={s.buttonText}>Next</Text></Pressable>
         </View>
+        <View style={{ height: 8 }} />
+        <Pressable onPress={() => Share.share({ title: `Navigator ${flow}`, message: `Flow: ${flow}\nStep ${step+1}/${list.length}: ${list[step]}\n\nAll steps:\n${list.map((x,i)=> `${i+1}. ${x}`).join('\n')}` }).catch(()=>{})} style={s.button}><Text style={s.buttonText}>Share progress</Text></Pressable>
       </View>
       <Text style={[s.subtitle,{ marginTop: 8 }]}>Tip: Save copies of all forms and keep a timeline of key dates.</Text>
     </ScrollView>
@@ -75,4 +80,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
   });
 }
-
