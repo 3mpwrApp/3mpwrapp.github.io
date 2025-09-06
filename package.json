@@ -3,9 +3,9 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
-    "prestart": "set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js",
-    "start:devclient": "set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js && expo start --dev-client -c",
+    "start": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
+    "prestart": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js",
+    "start:devclient": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js && expo start --dev-client -c",
     "validate": "node ./scripts/validate-configs.js",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo run:android",
