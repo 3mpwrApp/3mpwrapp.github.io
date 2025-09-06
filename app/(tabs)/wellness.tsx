@@ -85,6 +85,12 @@ export default function WellnessScreen() {
       <Link href={"/(tabs)/wellness/adaptive-meditation" as Href} asChild>
         <Text style={[styles.linkLabel, { marginBottom: 12 }]}>{t("wellness.tools.adaptive_meditation", "Adaptive Meditation & Relaxation")}</Text>
       </Link>
+      <Link href={"/(tabs)/wellness/rehab-games" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>{t("wellness.tools.rehab_games", "Virtual Rehab Games (gentle movement)")}</Text>
+      </Link>
+      <Link href={"/(tabs)/wellness/daily-planner" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>{t("wellness.tools.daily_planner", "Adaptive Daily Planner")}</Text>
+      </Link>
 
       {sections.map((sec) => (
         <View key={sec.title} style={styles.section} accessibilityLabel={`${sec.title} section`} accessible>

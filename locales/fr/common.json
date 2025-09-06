@@ -1,54 +1,56 @@
 {
-  "nav": {
-    "home": "Accueil",
-    "campaigns": "Campagnes",
-    "community": "Communauté",
-    "advocacy": "Défense des droits",
-    "podcasts": "Balados et récits",
-    "resources": "Ressources",
-    "events": "Événements",
-    "wellness": "Bien-être",
-    "profile": "Profil"
-  },
-  "home": {
-    "title": "Bienvenue sur Empowr",
-    "subtitle": "Soutien. Défense. Autonomisation.",
-    "welcome": "Bienvenue! Carrefour pour la communauté, l’éducation, les outils de défense et les balados — tout au même endroit!"
-  },
-  "header": {
-    "favorites": "Favs",
-    "items": "Éléments",
-    "openProfile": "Ouvrir le profil",
-    "signIn": "Se connecter",
-    "signOut": "Se déconnecter",
-    "refresh": "Tout actualiser"
-  },
-  "resources": {
-    "tools": {
-      "deadlines": "Calculateur d’échéances + rappels",
-      "evidence": "Générateur de liste de preuves",
-      "voice_notes": "Notes vocales ? compte rendu",
-      "templates": "Galerie de modèles"
-    }
-  },
-  "wellness": {
-    "tools": {
-      "symptom": "Suivi symptômes et douleur (rapport)",
-      "sleep": "Suivi sommeil et énergie (résumé médical)",
-      "selfcare": "Bibliothèque d’auto-soin accessible",
-      "work_balance": "Bien-être + équilibre travail (IA)",
-      "grief": "Deuil et identité — soutien",
-      "adaptive_meditation": "Méditation et relaxation adaptées"
-    }
-  },
-  "advocacy": {
-    "tools": {
-      "self_coach": "Coach d’auto-défense (micro-leçons)",
-      "policy_simple": "Politiques simplifiées",
-      "ai_translator": "Traducteur administratif (langage clair)",
-      "ai_case": "Interprète de cas (résumé)",
-      "collective": "Pôle d’action juridique collective",
-      "ai_gov": "Navigateur gouvernemental IA"
-    }
-  }
+    "nav":  {
+                "home":  "Accueil",
+                "campaigns":  "Campagnes",
+                "community":  "Communauté",
+                "advocacy":  "Défense des droits",
+                "podcasts":  "Balados et récits",
+                "resources":  "Ressources",
+                "events":  "Événements",
+                "wellness":  "Bien-être",
+                "profile":  "Profil"
+            },
+    "home":  {
+                 "title":  "Bienvenue sur Empowr",
+                 "subtitle":  "Soutien. Défense. Autonomisation.",
+                 "welcome":  "Bienvenue! Carrefour pour la communauté, l’éducation, les outils de défense et les balados — tout au même endroit!"
+             },
+    "header":  {
+                   "favorites":  "Favs",
+                   "items":  "Éléments",
+                   "openProfile":  "Ouvrir le profil",
+                   "signIn":  "Se connecter",
+                   "signOut":  "Se déconnecter",
+                   "refresh":  "Tout actualiser"
+               },
+    "resources":  {
+                      "tools":  {
+                                    "deadlines":  "Calculateur d’échéances + rappels",
+                                    "evidence":  "Générateur de liste de preuves",
+                                    "voice_notes":  "Notes vocales ? compte rendu",
+                                    "templates":  "Galerie de modèles"
+                                }
+                  },
+    "wellness":  {
+                     "tools":  {
+                                   "symptom":  "Suivi symptômes et douleur (rapport)",
+                                   "sleep":  "Suivi sommeil et énergie (résumé médical)",
+                                   "selfcare":  "Bibliothèque d’auto-soin accessible",
+                                   "work_balance":  "Bien-être + équilibre travail (IA)",
+                                   "grief":  "Deuil et identité — soutien",
+                                   "adaptive_meditation":  "Méditation et relaxation adaptées",
+                                   "rehab_games":  "Jeux de rééducation virtuels (mouvements doux)",
+                                   "daily_planner":  "Planificateur quotidien adaptatif"
+                               }
+                 },
+    "advocacy":  {
+                     "tools":  {
+                                   "self_coach":  "Coach d’auto-défense (micro-leçons)",
+                                   "policy_simple":  "Politiques simplifiées",
+                                   "ai_translator":  "Traducteur administratif (langage clair)",
+                                   "ai_case":  "Interprète de cas (résumé)",
+                                   "collective":  "Pôle d’action juridique collective",
+                                   "ai_gov":  "Navigateur gouvernemental IA"
+                               }
+                 }
 }
