@@ -60,7 +60,10 @@ export default function SleepEnergyTracker() {
   }, []);
 
   const remove = React.useCallback((id: string) => {
-    setEntries((prev) => prev.filter((x) => x.id !== id));
+    Alert.alert('Delete entry', 'Are you sure you want to delete this entry?', [
+      { text: 'Cancel', style: 'cancel' },
+      { text: 'Delete', style: 'destructive', onPress: () => setEntries((prev) => prev.filter((x) => x.id !== id)) },
+    ]);
   }, []);
 
   // Load persisted entries
@@ -243,6 +246,9 @@ export default function SleepEnergyTracker() {
       <Field label="End date (YYYY-MM-DD)" value={filterEnd} onChangeText={setFilterEnd} />
       <Field label="Min sleep hours" value={filterMinHours} onChangeText={setFilterMinHours} keyboardType="numeric" />
       <Field label="Tag contains" value={filterTag} onChangeText={setFilterTag} />
+      <Pressable style={[styles.button, { marginTop: 8 }]} onPress={() => { setFilterStart(''); setFilterEnd(''); setFilterMinHours(''); setFilterTag(''); }}>
+        <Text style={styles.buttonText}>Clear filters</Text>
+      </Pressable>
       <Pressable style={[styles.button, { marginTop: 8 }]} onPress={async () => {
         try { const mod = await import("expo-print"); const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">${summary.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</pre>`; const { uri } = await mod.printToFileAsync({ html }); await Share.share({ url: uri, title: "Sleep & Energy Summary" }); }
         catch { Alert.alert("PDF not available", "Install expo-print in a dev build to export PDFs."); }

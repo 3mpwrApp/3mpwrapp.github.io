@@ -56,6 +56,12 @@ export default function TabsLayout() {
       <Tabs.Screen name="community/[slug]" options={{ href: null }} />
       <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />
       <Tabs.Screen name="advocacy/index" options={{ href: null }} />
+      <Tabs.Screen name="advocacy/self-advocacy-coach" options={{ href: null }} />
+      <Tabs.Screen name="advocacy/policy-simple" options={{ href: null }} />
+      <Tabs.Screen name="advocacy/ai-advocate-translator" options={{ href: null }} />
+      <Tabs.Screen name="advocacy/ai-case-interpreter" options={{ href: null }} />
+      <Tabs.Screen name="advocacy/collective-legal" options={{ href: null }} />
+      <Tabs.Screen name="advocacy/ai-gov-navigator" options={{ href: null }} />
       <Tabs.Screen name="advocacy/ask" options={{ href: null }} />
       <Tabs.Screen name="resources/index" options={{ href: null }} />
       <Tabs.Screen name="research/index" options={{ href: null }} />

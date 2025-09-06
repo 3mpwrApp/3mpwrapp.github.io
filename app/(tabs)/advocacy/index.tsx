@@ -69,6 +69,24 @@ export default function AdvocacyScreen() {
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.subtitle}>Connect with community advocates.</Text>
+      <Link href={"/(tabs)/advocacy/self-advocacy-coach" as any} asChild>
+        <Text style={[styles.subtitle, { color: palette.primary, textDecorationLine: 'underline' }]}>Self‑Advocacy Coach (micro‑lessons)</Text>
+      </Link>
+      <Link href={"/(tabs)/advocacy/policy-simple" as any} asChild>
+        <Text style={[styles.subtitle, { color: palette.primary, textDecorationLine: 'underline' }]}>Policy Made Simple</Text>
+      </Link>
+      <Link href={"/(tabs)/advocacy/ai-advocate-translator" as any} asChild>
+        <Text style={[styles.subtitle, { color: palette.primary, textDecorationLine: 'underline' }]}>AI Advocate Translator</Text>
+      </Link>
+      <Link href={"/(tabs)/advocacy/ai-case-interpreter" as any} asChild>
+        <Text style={[styles.subtitle, { color: palette.primary, textDecorationLine: 'underline' }]}>AI Case Interpreter</Text>
+      </Link>
+      <Link href={"/(tabs)/advocacy/collective-legal" as any} asChild>
+        <Text style={[styles.subtitle, { color: palette.primary, textDecorationLine: 'underline' }]}>Collective Legal Action Hub</Text>
+      </Link>
+      <Link href={"/(tabs)/advocacy/ai-gov-navigator" as any} asChild>
+        <Text style={[styles.subtitle, { color: palette.primary, textDecorationLine: 'underline' }]}>AI Government Navigator</Text>
+      </Link>
       <Link href={"/(tabs)/advocacy/ask" as Href} asChild>
         <Text style={[styles.subtitle, { color: palette.primary, textDecorationLine: 'underline' }]}>Ask an Advocate (intake form)</Text>
       </Link>

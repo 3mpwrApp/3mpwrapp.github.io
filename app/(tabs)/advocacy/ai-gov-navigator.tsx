@@ -1,0 +1,78 @@
+import React from "react";
+import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
+import { useAppPalette } from "../../../theme/usePalette";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+
+export const options = { href: null };
+
+type Flow = 'CPP-D' | 'WCB' | 'EI-Sickness';
+
+const STEPS: Record<Flow, string[]> = {
+  'CPP-D': [
+    'Confirm CPP contributions and severe/prolonged disability criteria',
+    'Gather medical letters with functional limits',
+    'Complete forms: Applicant + Medical Report',
+    'Create timeline of work history and daily impact',
+  ],
+  'WCB': [
+    'Report injury/illness and notify employer',
+    'Medical documentation: diagnosis and functional restrictions',
+    'Request modified duties; track responses',
+    'Submit claim; note deadlines for appeal/reconsideration',
+  ],
+  'EI-Sickness': [
+    'Confirm insurable hours and records of employment',
+    'Obtain medical certificate',
+    'Apply online; create CRA account access',
+    'Track payments and report changes',
+  ],
+};
+
+export default function AiGovNavigator() {
+  const palette = useAppPalette();
+  const s = styles(palette);
+  const titleRef = React.useRef<Text>(null);
+  useAnnounceOnMount('AI Government Navigator');
+  useFocusOnRefOnMount(titleRef);
+  const [flow, setFlow] = React.useState<Flow>('CPP-D');
+  const [step, setStep] = React.useState(0);
+  const list = STEPS[flow];
+  const next = () => setStep((prev) => Math.min(prev+1, list.length-1));
+  const prev = () => setStep((prev) => Math.max(prev-1, 0));
+  return (
+    <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
+      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>AI Government Navigator</Text>
+      <Text style={s.subtitle}>Conversational, step‑by‑step guidance through forms with accessibility in mind.</Text>
+      <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
+        {(Object.keys(STEPS) as Flow[]).map(f => (
+          <Pressable key={f} onPress={() => { setFlow(f); setStep(0); }} style={{ borderWidth: 1, borderColor: palette.muted, borderRadius: 16, paddingHorizontal: 12, paddingVertical: 6, backgroundColor: flow===f?palette.primary:'transparent' }}>
+            <Text style={{ color: flow===f?palette.onPrimary:palette.text }}>{f}</Text>
+          </Pressable>
+        ))}
+      </View>
+      <View style={s.card}>
+        <Text style={s.cardTitle}>Step {step+1} of {list.length}</Text>
+        <Text style={s.cardText}>{list[step]}</Text>
+        <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
+          <Pressable onPress={prev} style={[s.button,{ opacity: step===0?0.6:1 }]} disabled={step===0}><Text style={s.buttonText}>Back</Text></Pressable>
+          <Pressable onPress={next} style={[s.button,{ opacity: step===list.length-1?0.6:1 }]} disabled={step===list.length-1}><Text style={s.buttonText}>Next</Text></Pressable>
+        </View>
+      </View>
+      <Text style={[s.subtitle,{ marginTop: 8 }]}>Tip: Save copies of all forms and keep a timeline of key dates.</Text>
+    </ScrollView>
+  );
+}
+
+function styles(palette: ReturnType<typeof useAppPalette>) {
+  return StyleSheet.create({
+    container: { flex: 1, backgroundColor: palette.background },
+    title: { fontSize: 22, fontWeight: '700', color: palette.text },
+    subtitle: { color: palette.text, opacity: 0.9 },
+    card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, backgroundColor: palette.surface, marginTop: 8 },
+    cardTitle: { color: palette.text, fontWeight: '700', marginBottom: 6 },
+    cardText: { color: palette.text, opacity: 0.95 },
+    button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center', minWidth: 100 },
+    buttonText: { color: palette.onPrimary, fontWeight: '700' },
+  });
+}
+
