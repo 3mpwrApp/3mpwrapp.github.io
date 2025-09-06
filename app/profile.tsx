@@ -5,6 +5,7 @@ import { useAppPalette } from "../theme/usePalette";
 import { useA11ySettings } from "../store/a11ySettings";
 import { useAuth } from "../store/auth";
 import { router } from "expo-router";
+import type { Href } from "expo-router";
 import { useTranslation, Lang } from "../i18n";
 
 export default function Profile() {
@@ -77,7 +78,7 @@ export default function Profile() {
         </>
       ) : (
         <>
-          <Pressable style={[styles.cta, styles.primary]} onPress={() => router.push("/(auth)/login")} accessibilityRole="button" accessibilityLabel="Go to login">
+          <Pressable style={[styles.cta, styles.primary]} onPress={() => router.push("/(auth)/login" as Href)} accessibilityRole="button" accessibilityLabel="Go to login">
             <Text style={styles.primaryText}>Sign in</Text>
           </Pressable>
           <Pressable style={[styles.cta, styles.ghost]} onPress={continueAnonymously} accessibilityRole="button" accessibilityLabel="Continue as guest">

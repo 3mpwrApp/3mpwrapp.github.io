@@ -1,4 +1,3 @@
-import { Platform } from "react-native";
 import { getFirebaseApp } from "../firebase/config";
 
 type Fire = typeof import("firebase/firestore");
@@ -6,7 +5,6 @@ type Fire = typeof import("firebase/firestore");
 let mod: Fire | null = null;
 
 async function ensure(): Promise<Fire | null> {
-  if (Platform.OS !== "web") return null; // keep native simple for now
   if (mod) return mod;
   try {
     mod = await import("firebase/firestore");
@@ -72,4 +70,3 @@ export async function fsAddComment(data: { id: string; threadId: string; author:
     return false;
   }
 }
-

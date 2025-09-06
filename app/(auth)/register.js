@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../firebase/config";
+// eslint-disable-next-line import/no-unresolved
+import { auth, db } from "../../firebase/config";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 
 export default function RegisterScreen() {
@@ -14,11 +15,11 @@ export default function RegisterScreen() {
 
   const handleRegister = async () => {
     try {
-      // 🔹 Create user in Firebase Auth
+      // ðŸ”¹ Create user in Firebase Auth
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // 🔹 Create Firestore profile with displayName
+      // ðŸ”¹ Create Firestore profile with displayName
       await setDoc(doc(db, "users", user.uid), {
         uid: user.uid,
         email: user.email,
@@ -26,8 +27,8 @@ export default function RegisterScreen() {
         createdAt: serverTimestamp(),
       });
 
-      // ✅ Redirect to Home tab
-      router.replace("/(tabs)/index");
+      // âœ… Redirect to Home tab
+      router.replace("/(tabs)");
     } catch (err) {
       setError(err.message);
     }
@@ -81,3 +82,4 @@ const styles = StyleSheet.create({
   },
   error: { color: "red", marginBottom: 10 },
 });
+

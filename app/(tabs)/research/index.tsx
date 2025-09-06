@@ -7,6 +7,7 @@ import { researchItems } from "../../../data/research";
 import SearchBar from "../../../components/SearchBar";
 import Card from "../../../components/Card";
 import { Link } from "expo-router";
+import type { Href } from "expo-router";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
 
@@ -74,7 +75,7 @@ export default function ResearchScreen() {
         data={filtered}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Link href={{ pathname: "/(tabs)/research/[id]", params: { id: item.id } }} asChild>
+          <Link href={{ pathname: "/(tabs)/research/[id]", params: { id: item.id } } as any} asChild>
             <Card
               title={item.title}
               subtitle={`${item.source} • ${item.year}`}

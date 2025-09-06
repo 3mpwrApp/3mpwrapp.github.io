@@ -10,7 +10,8 @@ import {
   Alert,
   Image,
 } from "react-native";
-import * as ImagePicker from "expo-image-picker"; // 🔹 new
+// eslint-disable-next-line import/no-unresolved
+import * as ImagePicker from "expo-image-picker"; // dY"1 new
 import { useAppPalette } from "../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -21,10 +22,11 @@ import { useTranslation } from "../../i18n";
 import { useSettings } from "../../store/settings";
 import type { ProvinceCode } from "../../types/models";
 
-import { useAuth } from "../context/AuthContext";
-import { db, storage } from "../firebase/config"; // 🔹 storage import
+import { useAuth } from "../../context/AuthContext";
+// eslint-disable-next-line import/no-unresolved
+import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // 🔹 for file upload
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
 
 const PROVINCES: ProvinceCode[] = [
   "AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT",
@@ -46,7 +48,7 @@ export default function SettingsScreen() {
     youtubeOpenPreference, setYoutubeOpenPreference,
   } = useSettings();
 
-  // 🔹 Profile state
+  // dY"1 Profile state
   const { user } = useAuth();
   const [displayName, setDisplayName] = useState("");
   const [photoURL, setPhotoURL] = useState<string | null>(null);
@@ -83,7 +85,7 @@ export default function SettingsScreen() {
     }
   };
 
-  // 🔹 Upload new profile picture
+  // dY"1 Upload new profile picture
   const handleUploadPhoto = async () => {
     if (!user) return;
 
@@ -132,7 +134,7 @@ export default function SettingsScreen() {
         Settings
       </Text>
 
-      {/* 🔹 Profile section */}
+      {/* dY"1 Profile section */}
       <Section title="Profile" styles={styles}>
         {photoURL ? (
           <Image
@@ -155,7 +157,7 @@ export default function SettingsScreen() {
         <Button title="Update Name" onPress={handleUpdateDisplayName} />
       </Section>
 
-      {/* 🔹 Keep rest of your settings */}
+      {/* dY"1 Keep rest of your settings */}
       {/* ... existing Display, Language, Region, Links sections ... */}
     </ScrollView>
   );

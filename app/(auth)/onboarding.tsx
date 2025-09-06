@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
+import type { Href } from "expo-router";
 
 export default function OnboardingScreen() {
   const router = useRouter();
@@ -12,9 +13,9 @@ export default function OnboardingScreen() {
         Empowering injured workers & persons with disabilities.
       </Text>
 
-      <Button title="Login" onPress={() => router.push("/(auth)/login")} />
+      <Button title="Login" onPress={() => router.push("/(auth)/login" as Href)} />
       <View style={{ marginVertical: 10 }} />
-      <Button title="Register" onPress={() => router.push("/(auth)/register")} />
+      <Button title="Register" onPress={() => router.push("/(auth)/register" as Href)} />
     </View>
   );
 }

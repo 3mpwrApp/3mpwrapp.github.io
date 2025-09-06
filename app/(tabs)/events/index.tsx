@@ -11,6 +11,7 @@ import { fetchEvents } from "../../../services/events";
 import { useCounts } from "../../../store/counts";
 import Card from "../../../components/Card";
 import { Link } from "expo-router";
+import type { Href } from "expo-router";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
@@ -186,7 +187,7 @@ export default function EventsScreen() {
         data={filtered}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Link href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } }} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
+          <Link href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
             <Card
               title={item.title}
               subtitle={formatMeta(item.date, item.isVirtual, item.location)}
@@ -278,4 +279,3 @@ function dayKeyFromMatrix(baseMonth: Date, day: number | null) {
   const dd = `${day}`.padStart(2, "0");
   return `${y}-${m}-${dd}`;
 }
-

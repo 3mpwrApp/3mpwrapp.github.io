@@ -67,5 +67,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     row: { paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
     name: { color: palette.text, fontWeight: '600' },
     meta: { color: palette.text, opacity: 0.85 },
+    input: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 10, color: palette.text },
   });
 }

@@ -8,6 +8,7 @@ import { fetchPodcasts } from "../../services/podcasts";
 import { fetchResources } from "../../services/resources";
 import { fetchCampaigns } from "../../services/campaigns";
 import { Link } from "expo-router";
+import type { Href } from "expo-router";
 import Card from "../../components/Card";
 import type { Podcast } from "../../data/podcasts";
 import type { Resource, Campaign } from "../../types/models";
@@ -73,7 +74,7 @@ export default function SavedScreen() {
         Saved
       </Text>
       {sections.length === 1 && sections[0].data.length === 0 ? (
-        <Text style={styles.subtitle}>You haven't saved anything yet.</Text>
+        <Text style={styles.subtitle}>You haven’t saved anything yet.</Text>
       ) : null}
       <SectionList
         sections={sections}
@@ -94,7 +95,7 @@ export default function SavedScreen() {
             const yt = String(item.id).startsWith("yt:");
             return (
               <Link
-                href={{ pathname: "/(tabs)/podcasts/[id]", params: { id: item.id, title: item.title, description: item.description, duration: item.duration } }}
+                href={{ pathname: "/(tabs)/podcasts/[id]", params: { id: item.id, title: item.title, description: item.description, duration: item.duration } } as any}
                 asChild
               >
                 <Card
@@ -108,13 +109,13 @@ export default function SavedScreen() {
           }
           if (item.kind === "campaign") {
             return (
-              <Link href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } }} asChild>
+              <Link href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any} asChild>
                 <Card title={item.title} subtitle={item.summary} rightIcon="megaphone-outline" />
               </Link>
             );
           }
           return (
-            <Link href={{ pathname: "/(tabs)/resources/[id]", params: { id: item.id } }} asChild>
+            <Link href={{ pathname: "/(tabs)/resources/[id]", params: { id: item.id } } as any} asChild>
               <Card title={item.title} subtitle={item.description} />
             </Link>
           );

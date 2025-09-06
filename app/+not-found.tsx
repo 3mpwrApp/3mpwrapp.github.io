@@ -33,7 +33,7 @@ export default function NotFoundScreen() {
           <Text style={styles.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>Go Back</Text>
         </Pressable>
 
-        <Link href="/" replace asChild accessibilityRole="link" accessibilityLabel="Go to home" accessibilityHint="Navigates to the home tab">
+        <Link href={"/" as any} replace asChild accessibilityRole="link" accessibilityLabel="Go to home" accessibilityHint="Navigates to the home tab">
           <Pressable
             hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={({ pressed }) => [

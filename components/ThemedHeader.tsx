@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { SafeAreaView, Text, StyleSheet, View, Pressable, Image } from "react-native";
 import * as Linking from "expo-linking";
 import { usePathname } from "expo-router";
@@ -9,7 +9,7 @@ import { useCounts } from "../store/counts";
 import { useRefresh } from "../store/refresh";
 import { Ionicons } from "@expo/vector-icons";
 import { useAuth } from "../store/auth";
-import { router } from "expo-router"; // ✅ works with expo-router v2+
+import { router } from "expo-router"; // âœ… works with expo-router v2+
 import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
 import { useTranslation } from "../i18n";
 import SettingsLink from "./SettingsLink";
@@ -168,7 +168,7 @@ export default function ThemedHeader() {
 
         {/* Settings */}
         <Pressable
-          onPress={() => router.push("/(tabs)/settings")}
+          onPress={() => router.push("/(tabs)/settings" as import("expo-router").Href)}
           accessibilityRole="button"
           accessibilityLabel="Open settings"
           hitSlop={HIT_SLOP_8}
@@ -183,7 +183,7 @@ export default function ThemedHeader() {
 
         {/* Profile */}
         <Pressable
-          onPress={() => router.push("/profile")}
+          onPress={() => router.push("/profile" as import("expo-router").Href)}
           accessibilityRole="button"
           accessibilityLabel={t("header.openProfile")}
           hitSlop={HIT_SLOP_8}
@@ -213,7 +213,7 @@ export default function ThemedHeader() {
           </Pressable>
         ) : (
           <Pressable
-            onPress={() => router.push("/(auth)/login")}
+            onPress={() => router.push("/(auth)/login" as import("expo-router").Href)}
             accessibilityRole="button"
             accessibilityLabel={t("header.signIn")}
             hitSlop={HIT_SLOP_8}
@@ -238,10 +238,10 @@ export default function ThemedHeader() {
           />
           <View accessibilityLabel="Main menu" accessible accessibilityViewIsModal style={styles.menuWrap}>
             <Text style={styles.menuSection}>Essentials</Text>
-            {[{ label: "Resources", path: "/(tabs)/resources/index" }].map((item) => (
+            {[{ label: "Resources", path: "/(tabs)/resources" }].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                onPress={() => { setMenuOpen(false); router.push(item.path as any); }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
                 style={({ pressed }) => [{ paddingVertical: 10, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
@@ -253,11 +253,11 @@ export default function ThemedHeader() {
             {[
               { label: "Claims Navigator", path: "/(tabs)/resources/claims-navigator" },
               { label: "Evidence Locker", path: "/(tabs)/resources/evidence-locker" },
-              { label: "Letters", path: "/(tabs)/resources/index" },
+              { label: "Letters", path: "/(tabs)/resources" },
             ].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                onPress={() => { setMenuOpen(false); router.push(item.path as any); }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
                 style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
@@ -267,12 +267,12 @@ export default function ThemedHeader() {
             ))}
             <Text style={styles.menuSection}>Advocacy</Text>
             {[
-              { label: "Advocacy Hub", path: "/(tabs)/advocacy/index" },
+              { label: "Advocacy Hub", path: "/(tabs)/advocacy" },
               { label: "Support Directory", path: "/(tabs)/advocacy/support-directory" },
             ].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                onPress={() => { setMenuOpen(false); router.push(item.path as any); }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
                 style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
@@ -282,15 +282,15 @@ export default function ThemedHeader() {
             ))}
             <Text style={styles.menuSection}>Info</Text>
             {[
-              { label: "Research", path: "/(tabs)/research/index" },
-              { label: "What's New", path: "/(tabs)/whatsnew/index" },
+              { label: "Research", path: "/(tabs)/research" },
+              { label: "What's New", path: "/(tabs)/whatsnew" },
               { label: "FAQs", path: "/(tabs)/faqs" },
               { label: "Wellness", path: "/(tabs)/wellness" },
               { label: "About & Contact", path: "/(tabs)/about" },
             ].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                onPress={() => { setMenuOpen(false); router.push(item.path as any); }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
                 style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
@@ -305,7 +305,7 @@ export default function ThemedHeader() {
             ].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path); }}
+                onPress={() => { setMenuOpen(false); router.push(item.path as any); }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
                 style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
@@ -373,3 +373,5 @@ function createStyles(palette: Palette) {
     countText: { color: palette.text, opacity: 0.9, fontSize: 14 },
   });
 }
+
+

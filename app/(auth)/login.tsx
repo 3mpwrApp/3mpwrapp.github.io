@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
+import type { Href } from "expo-router";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/config";
+// eslint-disable-next-line import/no-unresolved
+import { auth } from "../../firebase/config";
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -13,7 +15,7 @@ export default function LoginScreen() {
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.replace("/(tabs)/index"); // ✅ Redirect to Home tab
+      router.replace("/(tabs)" as Href);
     } catch (err: any) {
       setError(err.message);
     }

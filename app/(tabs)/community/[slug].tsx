@@ -3,6 +3,7 @@ export const options = { href: null };
 import { View, Text, StyleSheet, useColorScheme, FlatList, Pressable, TextInput } from "react-native";
 import { colors, type Palette } from "../../../theme/colors";
 import { useLocalSearchParams, router } from "expo-router";
+import type { Href } from "expo-router";
 import { useCommunity, CommunityProvider } from "../../../store/community";
 import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
 import { useAuth } from "../../../store/auth";
@@ -48,7 +49,7 @@ function ChannelInner() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable
-          onPress={() => router.push(`/(tabs)/community/threads/${item.id}`)}
+          onPress={() => router.push(`/(tabs)/community/threads/${item.id}` as Href)}
             accessibilityRole="button"
             accessibilityLabel={`Open thread ${item.title}`}
             hitSlop={HIT_SLOP_8}

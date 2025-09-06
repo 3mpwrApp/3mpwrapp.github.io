@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
-export const options = { href: null };
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import { advocates } from "../../../data/advocates";
 import { useFavorites } from "../../../store/favorites";
 import SettingsLink from "../../../components/SettingsLink";
+
+export const options = { href: null };
 
 export default function AdvocacyDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();

@@ -5,6 +5,7 @@ import { useAnnounceOnMount, useFocusOnRefOnMount, MAX_FONT_SCALE } from "../../
 import { channels, seedThreads, seedComments } from "../../../data/community";
 import { useCommunity, CommunityProvider } from "../../../store/community";
 import { router } from "expo-router";
+import type { Href } from "expo-router";
 import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
 
 function ScreenInner() {
@@ -43,7 +44,7 @@ function ScreenInner() {
         )}
         renderItem={({ item }) => (
           <Pressable
-            onPress={() => router.push(`/(tabs)/community/${item.slug}`)}
+            onPress={() => router.push(`/(tabs)/community/${item.slug}` as Href)}
             accessibilityRole="button"
             accessibilityLabel={`Open channel ${item.title}`}
             hitSlop={HIT_SLOP_8}

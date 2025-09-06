@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { AccessibilityInfo } from "react-native";
 import { Stack, usePathname } from "expo-router";
 
@@ -9,15 +9,16 @@ import { FavoritesProvider } from "../store/favorites";
 import { CountsProvider } from "../store/counts";
 import { RefreshProvider } from "../store/refresh";
 import { NetworkProvider } from "../store/network";
-// 🔹 Replace old AuthProvider with Firebase AuthProvider
-import { AuthProvider } from "../context/AuthContext";  
+// ðŸ”¹ Replace old AuthProvider with Firebase AuthProvider
+import { AuthProvider } from "../context/AuthContext";
 import { SettingsProvider } from "../store/settings";
 import { A11ySettingsProvider } from "../store/a11ySettings";
 import { I18nProvider } from "../i18n";
 
 import * as Notifier from "../services/notifications";
-// 🔹 Use Firebase analytics init instead of custom
-import { getFirebaseAnalytics } from "./firebase/config";
+// ðŸ”¹ Use Firebase analytics init instead of custom
+// eslint-disable-next-line import/no-unresolved
+import { getFirebaseAnalytics } from "../firebase/config";
 
 export default function RootLayout() {
   const [reduceMotion, setReduceMotion] = React.useState(false);
@@ -48,7 +49,7 @@ export default function RootLayout() {
     });
   }, []);
 
-  // 🔹 Firebase Analytics (web only)
+  // ðŸ”¹ Firebase Analytics (web only)
   React.useEffect(() => {
     getFirebaseAnalytics().then((analytics) => {
       if (analytics && __DEV__) {
@@ -70,7 +71,7 @@ export default function RootLayout() {
     <I18nProvider>
       <A11ySettingsProvider>
         <SettingsProvider>
-          {/* 🔹 Firebase Auth Provider wraps the app */}
+          {/* ðŸ”¹ Firebase Auth Provider wraps the app */}
           <AuthProvider>
             <FavoritesProvider>
               <CountsProvider>
@@ -110,3 +111,5 @@ export default function RootLayout() {
     </I18nProvider>
   );
 }
+
+

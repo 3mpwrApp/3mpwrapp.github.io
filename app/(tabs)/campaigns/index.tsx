@@ -145,7 +145,7 @@ function ScreenInner() {
         keyExtractor={(item) => `thread-${item.id}`}
         renderItem={({ item }) => (
           <Link
-            href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } }}
+            href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any}
             asChild
           >
             <Card title={item.title} subtitle={item.summary} />

@@ -39,12 +39,11 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
     })();
   }, []);
 
-  // Optional realtime sync on web
+  // Realtime sync via Firestore on all platforms
   React.useEffect(() => {
     let unsubThreads: any = null;
     let unsubComments: any = null;
     (async () => {
-      if (Platform.OS !== 'web') return;
       try {
         const m = await import('firebase/firestore');
         const db = await getDB();

@@ -2,16 +2,16 @@ import React from "react";
 import { View, Text, StyleSheet, FlatList, RefreshControl } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import { advocates as localAdvocates } from "../../../data/advocates";
 import { fetchAdvocates } from "../../../services/advocates";
 import Card from "../../../components/Card";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
 import { Link } from "expo-router";
+import type { Href } from "expo-router";
 import SearchBar from "../../../components/SearchBar";
 import { useCounts } from "../../../store/counts";
-import { useAnnounceOnChange } from "../../../hooks/useA11y";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
@@ -37,13 +37,13 @@ export default function AdvocacyScreen() {
       const data = await fetchAdvocates();
       setItems(data);
       setOffline(false);
-    } catch (e) {
+    } catch {
       setError("Failed to load advocates");
       setOffline(true);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [setOffline]);
 
   const { tick } = useRefresh();
   React.useEffect(() => {
@@ -110,7 +110,7 @@ export default function AdvocacyScreen() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Link
-            href={{ pathname: "/(tabs)/advocacy/[id]", params: { id: item.id } }}
+            href={{ pathname: "/(tabs)/advocacy/[id]", params: { id: item.id } } as any}
             asChild
             accessibilityRole="link"
             accessibilityLabel={`Open ${item.name}`}
