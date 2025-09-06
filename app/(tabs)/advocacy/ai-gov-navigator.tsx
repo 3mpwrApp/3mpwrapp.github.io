@@ -45,6 +45,7 @@ export default function AiGovNavigator() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>AI Government Navigator</Text>
+      <Text style={[s.subtitle,{ textDecorationLine: 'underline', color: palette.primary }]} onPress={() => Alert.alert('Tips','Keep copies of all forms, note deadlines, and request accommodations for accessibility (extended time, alternate formats).')}>Help & tips</Text>
       <Text style={s.subtitle}>Conversational, step‑by‑step guidance through forms with accessibility in mind.</Text>
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
         {(Object.keys(STEPS) as Flow[]).map(f => (

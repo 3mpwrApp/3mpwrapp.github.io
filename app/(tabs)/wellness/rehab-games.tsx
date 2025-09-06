@@ -28,6 +28,31 @@ export default function RehabGames() {
   const [taps, setTaps] = React.useState(0);
   const [breaths, setBreaths] = React.useState(0);
   const [round, setRound] = React.useState(0);
+  const [streak, setStreak] = React.useState(0);
+
+  React.useEffect(() => {
+    (async () => {
+      try {
+        const s = await AsyncStorage?.getItem?.('rehab_streak');
+        if (s) setStreak(Number(s)||0);
+      } catch {}
+    })();
+  }, []);
+
+  const markPlayedToday = async () => {
+    try {
+      const today = new Date().toISOString().slice(0,10);
+      const last = await AsyncStorage?.getItem?.('rehab_last');
+      if (last === today) return; // already counted
+      const dLast = last ? new Date(last) : null;
+      const dPrev = new Date(); dPrev.setDate(dPrev.getDate()-1);
+      const isConsecutive = dLast && dLast.toISOString().slice(0,10) === dPrev.toISOString().slice(0,10);
+      const next = isConsecutive ? streak + 1 : 1;
+      setStreak(next);
+      await AsyncStorage?.multiSet?.([[ 'rehab_last', today ], [ 'rehab_streak', String(next) ]]);
+      if (next === 7) await AsyncStorage?.setItem?.('achieve_streak_7','1');
+    } catch {}
+  };
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
@@ -39,21 +64,21 @@ export default function RehabGames() {
         <Text style={s.cardTitle}>Reach & Tap</Text>
         <Text style={s.cardText}>Gently raise your arm and tap the button. Aim for 10 slow taps.</Text>
         <Text style={s.cardText}>Taps: {taps}</Text>
-        <Pressable onPress={async () => { const np = taps+1; setTaps(np); add(1); if (np === 10) { Alert.alert('Great job','You completed 10 taps!'); try { await AsyncStorage?.setItem?.('achieve_first_steps','1'); } catch {} } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Tap</Text></Pressable>
+        <Pressable onPress={async () => { const np = taps+1; setTaps(np); add(1); markPlayedToday(); if (np === 10) { Alert.alert('Great job','You completed 10 taps!'); try { await AsyncStorage?.setItem?.('achieve_first_steps','1'); } catch {} } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Tap</Text></Pressable>
       </View>
 
       <View style={s.card}>
         <Text style={s.cardTitle}>Breath Pacing</Text>
         <Text style={s.cardText}>Box breathing: inhale 4, hold 4, exhale 4, hold 4. Do 3 cycles.</Text>
         <Text style={s.cardText}>Cycles: {breaths}</Text>
-        <Pressable onPress={async () => { const nb = breaths+1; setBreaths(nb); add(2); if (nb === 3) { Alert.alert('Nice pacing','Three breathing cycles complete.'); try { await AsyncStorage?.setItem?.('achieve_calm_breather','1'); } catch {} } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Complete cycle</Text></Pressable>
+        <Pressable onPress={async () => { const nb = breaths+1; setBreaths(nb); add(2); markPlayedToday(); if (nb === 3) { Alert.alert('Nice pacing','Three breathing cycles complete.'); try { await AsyncStorage?.setItem?.('achieve_calm_breather','1'); } catch {} } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Complete cycle</Text></Pressable>
       </View>
 
       <View style={s.card}>
         <Text style={s.cardTitle}>Gentle Sit‑to‑Stand</Text>
         <Text style={s.cardText}>Stand up from a chair slowly and sit back down. 5 repetitions. Use supports as needed.</Text>
         <Text style={s.cardText}>Round: {round}/5</Text>
-        <Pressable onPress={async () => { if (round<5) { const nr = round+1; setRound(nr); add(3); if (nr===5) { Alert.alert('Milestone','Completed 5 sit‑to‑stand reps!'); try { await AsyncStorage?.setItem?.('achieve_chair_hero','1'); } catch {} } } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Mark rep</Text></Pressable>
+        <Pressable onPress={async () => { if (round<5) { const nr = round+1; setRound(nr); add(3); markPlayedToday(); if (nr===5) { Alert.alert('Milestone','Completed 5 sit‑to‑stand reps!'); try { await AsyncStorage?.setItem?.('achieve_chair_hero','1'); } catch {} } } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Mark rep</Text></Pressable>
       </View>
 
       <Pressable onPress={() => { reset(); setTaps(0); setBreaths(0); setRound(0); }} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Reset</Text></Pressable>

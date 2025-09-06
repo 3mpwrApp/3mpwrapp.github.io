@@ -28,6 +28,7 @@ export default function AiCaseInterpreter() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>AI Case Interpreter</Text>
+      <Text style={[s.subtitle,{ textDecorationLine: 'underline', color: palette.primary }]} onPress={() => Alert.alert('Tips','Summaries are for guidance only. Confirm deadlines in original documents and seek advice when needed. Avoid sharing personal identifiers in pasted text.')}>Help & tips</Text>
       <Text style={s.subtitle}>Paste tribunal/insurance/government letter text. Get a plain‑language summary and next steps. ASL video/easy‑read requires server integration.</Text>
       <TextInput style={[s.input,{ minHeight: 120 }]} value={input} onChangeText={setInput} placeholder="Paste text here" multiline />
       <Pressable onPress={async () => { const remote = await llmInterpret(input); setOut(remote ?? interpret(input)); }} style={s.button}><Text style={s.buttonText}>Interpret</Text></Pressable>
