@@ -14,6 +14,7 @@ import { useCounts } from "../../../store/counts";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
+import type { Href } from "expo-router";
 
 export default function AdvocacyScreen() {
   const palette = useAppPalette();
@@ -68,6 +69,9 @@ export default function AdvocacyScreen() {
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.subtitle}>Connect with community advocates.</Text>
+      <Link href={"/(tabs)/advocacy/ask" as Href} asChild>
+        <Text style={[styles.subtitle, { color: palette.primary, textDecorationLine: 'underline' }]}>Ask an Advocate (intake form)</Text>
+      </Link>
       <SearchBar value={query} onChangeText={setQuery} placeholder="Search advocates" accessibilityLabel="Search advocates" />
       {loading && (
         <View>

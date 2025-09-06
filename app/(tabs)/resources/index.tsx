@@ -125,11 +125,31 @@ export default function ResourcesScreen() {
         <Text style={[styles.subtitle, { opacity: 0.75 }]}>Tip: Set your province in Settings to filter resources.</Text>
       )}
 
+      <Text accessibilityRole="header" style={[styles.sectionTitle, { marginTop: 4 }]}>AI Tools</Text>
+      <Link href={"/(tabs)/resources/rights-checker" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Automated Rights Checker</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/appeal-coach" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>AI “Appeal Coach”</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/deadlines" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Deadline Calculator + Reminders</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Evidence Checklist Generator</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/templates-gallery" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Template Gallery</Text>
+      </Link>
+      <Text accessibilityRole="header" style={[styles.sectionTitle, { marginTop: 10 }]}>AI-Generated Letter Templates</Text>
       <Link href={"/(tabs)/resources/letter-accommodation" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Accommodation Letter</Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-appeal" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Appeal Letter</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/letter-union-request" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Union Representation/Request Letter</Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-reconsideration" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Reconsideration Letter</Text>

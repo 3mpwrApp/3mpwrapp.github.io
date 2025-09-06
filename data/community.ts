@@ -26,6 +26,7 @@ export const channels: CommunityChannel[] = [
   { id: "ch_topic_transport", type: "topic", slug: "topic-transport", title: "Transportation" },
   { id: "ch_topic_family", type: "topic", slug: "topic-family", title: "Family" },
   { id: "ch_topic_mental", type: "topic", slug: "topic-mental", title: "Mental Health" },
+  { id: "ch_topic_ask", type: "topic", slug: "topic-ask-advocate", title: "Ask an Advocate" },
 ];
 
 export const seedThreads: CommunityThread[] = [

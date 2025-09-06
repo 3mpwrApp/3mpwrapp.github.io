@@ -6,6 +6,8 @@ import { useTranslation } from "../../i18n";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import SettingsLink from "../../components/SettingsLink";
 import ContrastToggle from "../../components/ContrastToggle";
+import { Link } from "expo-router";
+import type { Href } from "expo-router";
 
 export default function WellnessScreen() {
   const palette = useAppPalette();
@@ -63,6 +65,23 @@ export default function WellnessScreen() {
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <Text style={styles.subtitle}>{t("wellness.intro", "Wellness resources and guidance.")}</Text>
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
+
+      <Text accessibilityRole="header" style={[styles.sectionTitle, { marginTop: 8 }]}>Tools</Text>
+      <Link href={"/(tabs)/wellness/symptom-tracker" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 6 }]}>
+          {t("wellness.tools.symptom", "Symptom & Pain Tracker (exportable report)")}
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/wellness/sleep-energy-tracker" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 6 }]}>
+          {t("wellness.tools.sleep", "Sleep & Energy Tracker (legal/medical summary)")}
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/wellness/self-care-library" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>
+          {t("wellness.tools.selfcare", "Accessible Self‑Care Library")}
+        </Text>
+      </Link>
 
       {sections.map((sec) => (
         <View key={sec.title} style={styles.section} accessibilityLabel={`${sec.title} section`} accessible>

@@ -35,7 +35,7 @@ const Ctx = React.createContext<Ctx | undefined>(undefined);
 
 export function CommunityProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<State>(DEFAULT_STATE);
-  const { setOffline } = useNetwork();
+  const { setOffline, setSyncing } = useNetwork();
   const flushingRef = React.useRef(false);
 
   React.useEffect(() => {
@@ -111,6 +111,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
     flushingRef.current = true;
     try {
       if (!AsyncStorage) return;
+      setSyncing(true);
       const cur = await AsyncStorage.getItem(QUEUE_KEY);
       const arr: QueueItem[] = cur ? JSON.parse(cur) : [];
       if (!arr.length) return;
@@ -129,6 +130,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       await AsyncStorage.setItem(QUEUE_KEY, JSON.stringify([]));
     } finally {
       flushingRef.current = false;
+      setSyncing(false);
     }
   }
 

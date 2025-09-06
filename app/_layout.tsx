@@ -14,6 +14,8 @@ import { AuthProvider } from "../context/AuthContext";
 import { SettingsProvider } from "../store/settings";
 import { A11ySettingsProvider } from "../store/a11ySettings";
 import { I18nProvider } from "../i18n";
+import { ProfileLocalProvider } from "../store/profileLocal";
+import { PrivacyProvider } from "../store/privacy";
 
 import * as Notifier from "../services/notifications";
 // Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
@@ -70,6 +72,8 @@ export default function RootLayout() {
     <I18nProvider>
       <A11ySettingsProvider>
         <SettingsProvider>
+          <ProfileLocalProvider>
+            <PrivacyProvider>
           {/* Ã°Å¸â€Â¹ Firebase Auth Provider wraps the app */}
           <AuthProvider>
             <FavoritesProvider>
@@ -108,6 +112,8 @@ export default function RootLayout() {
               </CountsProvider>
             </FavoritesProvider>
           </AuthProvider>
+            </PrivacyProvider>
+          </ProfileLocalProvider>
         </SettingsProvider>
       </A11ySettingsProvider>
     </I18nProvider>

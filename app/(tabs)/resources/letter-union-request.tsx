@@ -1,58 +1,48 @@
 import React from "react";
-export const options = { href: null };
-import {
-  View,
-  Text,
-  TextInput,
-  StyleSheet,
-  ScrollView,
-  Pressable,
-  Share,
-  Alert,
-} from "react-native";
+import { View, Text, TextInput, StyleSheet, ScrollView, Pressable, Share, Alert } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-} from "../../../hooks/useA11y";
+import { useTextScale } from "../../../theme/typography";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useProfileLocal } from "../../../store/profileLocal";
 import { buildSymptomSummary } from "../../../services/insights";
 import { logEvent } from "../../../services/analytics";
 
-export default function AccommodationLetter() {
+export const options = { href: null };
+
+export default function UnionRequestLetter() {
   const palette = useAppPalette();
-  const styles = createStyles(palette);
+  const { factor } = useTextScale();
+  const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
 
-  useAnnounceOnMount("Accommodation letter");
+  useAnnounceOnMount("Union request letter");
   useFocusOnRefOnMount(titleRef);
 
   const { profile } = useProfileLocal();
   const [name, setName] = React.useState(profile.name ?? "");
-  const [employer, setEmployer] = React.useState("");
-  const [jobTitle, setJobTitle] = React.useState("");
-  const [limitations, setLimitations] = React.useState("");
-  const [accommodations, setAccommodations] = React.useState("");
-  const [date, setDate] = React.useState("");
+  const [position, setPosition] = React.useState("");
+  const [workplace, setWorkplace] = React.useState("");
+  const [issue, setIssue] = React.useState("");
+  const [accommodation, setAccommodation] = React.useState("");
+  const [evidence, setEvidence] = React.useState("");
+  const [contact, setContact] = React.useState(profile.contact ?? "");
 
   const preview = React.useMemo(() => {
     return (
-      `Date: ${date || new Date().toLocaleDateString()}\n\n` +
-      `${employer || "[Employer Name]"}\n` +
-      `Re: Workplace Accommodation Request\n\n` +
-      `Dear ${employer || "Employer"},\n\n` +
-      `I am writing to request reasonable workplace accommodations under applicable human rights and accessibility laws. I am employed as ${
-        jobTitle || "[Job Title]"
-      }. Due to disability-related limitations (${
-        limitations || "[briefly describe limitations]"
-      }), I am requesting the following accommodations: ${
-        accommodations || "[list requested accommodations]"
-      }.\n\n` +
-      `These accommodations will help me perform the essential duties of my role. I would welcome a discussion to explore options and provide any supporting documentation if needed.\n\n` +
-      `Sincerely,\n${name || "[Your Name]"}`
+      `Re: Request for Union Support and Representation\n\n` +
+      `Dear Union Representative/Steward,\n\n` +
+      `My name is ${name || "[Your Name]"}, employed as ${position || "[Position]"} at ${workplace || "[Workplace]"}. ` +
+      `I am requesting union support and representation regarding the following issue: ${issue || "[briefly describe issue]"}.\n\n` +
+      (accommodation
+        ? `I am requesting the following accommodations or remedies: ${accommodation}.\n\n`
+        : "") +
+      (evidence
+        ? `I can provide supporting documentation, including: ${evidence}.\n\n`
+        : "") +
+      `Please advise next steps and any information you require.\n\n` +
+      `Sincerely,\n${name || "[Your Name]"}\n${contact || "[Phone/Email]"}`
     );
-  }, [name, employer, jobTitle, limitations, accommodations, date]);
+  }, [name, position, workplace, issue, accommodation, evidence, contact]);
 
   const placeholderColor = palette.text + "88";
 
@@ -64,18 +54,17 @@ export default function AccommodationLetter() {
         accessibilityRole="header"
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Accommodation Request
+        Union Representation/Request Letter
       </Text>
-      <Text style={styles.subtitle}>
-        Fill in your details, review the preview, then share or copy.
-      </Text>
+      <Text style={styles.subtitle}>Fill in details, review the preview, then share or export.</Text>
 
       <Field label="Your Name" value={name} onChangeText={setName} placeholderColor={placeholderColor} />
-      <Field label="Employer" value={employer} onChangeText={setEmployer} placeholderColor={placeholderColor} />
-      <Field label="Job Title" value={jobTitle} onChangeText={setJobTitle} placeholderColor={placeholderColor} />
-      <Field label="Date (optional)" value={date} onChangeText={setDate} placeholderColor={placeholderColor} />
-      <Field label="Limitations (brief)" value={limitations} onChangeText={setLimitations} multiline placeholderColor={placeholderColor} />
-      <Field label="Requested Accommodations" value={accommodations} onChangeText={setAccommodations} multiline placeholderColor={placeholderColor} />
+      <Field label="Position/Role" value={position} onChangeText={setPosition} placeholderColor={placeholderColor} />
+      <Field label="Workplace/Department" value={workplace} onChangeText={setWorkplace} placeholderColor={placeholderColor} />
+      <Field label="Issue Summary" value={issue} onChangeText={setIssue} multiline placeholderColor={placeholderColor} />
+      <Field label="Requested Accommodation/Remedy" value={accommodation} onChangeText={setAccommodation} multiline placeholderColor={placeholderColor} />
+      <Field label="Evidence/Docs (optional)" value={evidence} onChangeText={setEvidence} multiline placeholderColor={placeholderColor} />
+      <Field label="Contact (email/phone)" value={contact} onChangeText={setContact} placeholderColor={placeholderColor} />
 
       <Text style={[styles.sectionTitle, { marginTop: 12 }]}>Preview</Text>
       <View style={styles.previewBox}>
@@ -84,21 +73,16 @@ export default function AccommodationLetter() {
 
       <Pressable
         style={styles.button}
-        onPress={() => {
-          logEvent('letter_share', { type: 'accommodation' });
-          Share.share({ message: preview, title: "Accommodation Request" }).catch(() => {});
-        }}
+        onPress={() => { logEvent('letter_share', { type: 'union' }); Share.share({ message: preview, title: "Union Request" }).catch(() => {}); }}
       >
         <Text style={styles.buttonText}>Share</Text>
       </Pressable>
-
       <Pressable
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           const ins = await buildSymptomSummary();
-          logEvent('letter_insert_from_trackers', { type: 'accommodation' });
-          setLimitations((prev) => (prev ? prev + "\n\n" : "") + ins);
-          Alert.alert("Inserted", "Added symptom summary to limitations.");
+          logEvent('letter_insert_from_trackers', { type: 'union' });
+          setEvidence((prev) => (prev ? prev + "\n\n" : "") + ins);
         }}
       >
         <Text style={styles.buttonText}>Insert from trackers</Text>
@@ -128,13 +112,9 @@ export default function AccommodationLetter() {
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")}</pre>`;
             const { uri } = await mod.printToFileAsync({ html });
-            logEvent('letter_export_pdf', { type: 'accommodation' });
-            await Share.share({ url: uri, title: "Accommodation Request" });
+            await Share.share({ url: uri, title: "Union Request" });
           } catch {
-            Alert.alert(
-              "PDF not available",
-              "Install expo-print in a dev build to export PDFs."
-            );
+            Alert.alert("PDF not available", "Install expo-print in a dev build to export PDFs.");
           }
         }}
       >
@@ -148,9 +128,9 @@ export default function AccommodationLetter() {
             const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${preview
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")}</pre></body></html>`;
-            const path = FS.cacheDirectory + `accommodation_${Date.now()}.doc`;
+            const path = FS.cacheDirectory + `union_request_${Date.now()}.doc`;
             await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 });
-            await Share.share({ url: path, title: "Accommodation Request (.doc)" });
+            await Share.share({ url: path, title: "Union Request (.doc)" });
           } catch {
             Alert.alert("Export failed", "Could not create .doc file.");
           }
@@ -162,13 +142,7 @@ export default function AccommodationLetter() {
   );
 }
 
-function Field({
-  label,
-  value,
-  onChangeText,
-  placeholderColor,
-  multiline = false,
-}: {
+function Field({ label, value, onChangeText, placeholderColor, multiline = false }: {
   label: string;
   value: string;
   onChangeText: (t: string) => void;
@@ -198,28 +172,15 @@ function Field({
   );
 }
 
-function createStyles(palette: any) {
+function createStyles(palette: any, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
+    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
     sectionTitle: { color: palette.text, fontWeight: "700" },
-    previewBox: {
-      borderWidth: 1,
-      borderColor: palette.muted,
-      borderRadius: 8,
-      padding: 12,
-      backgroundColor: palette.surface,
-      marginBottom: 12,
-    },
+    previewBox: { borderWidth: 1, borderColor: palette.muted, borderRadius: 8, padding: 12, backgroundColor: palette.surface, marginBottom: 12 },
     previewText: { color: palette.text, opacity: 0.95, lineHeight: 20 },
-    button: {
-      backgroundColor: palette.primary,
-      paddingVertical: 10,
-      paddingHorizontal: 16,
-      borderRadius: 6,
-      alignItems: "center",
-    },
+    button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, alignItems: "center" },
     buttonText: { color: palette.onPrimary, fontSize: 16, fontWeight: "700" },
   });
 }

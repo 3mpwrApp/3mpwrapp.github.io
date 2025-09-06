@@ -8,8 +8,9 @@ export const resources: Resource[] = [
   { id: "tl-checklists", title: "Doctor Visit Checklist", description: "Prep questions and key info for appointments.", url: "https://choosingwiselycanada.org/patient-resources/4-questions/", scope: "canada", category: "tools_downloads" },
   { id: "tl-medlog", title: "Medication Log (Printable)", description: "Track medications, doses, and changes.", url: "https://www.heartandstroke.ca/-/media/pdf-files/canada/2020-lists/medication-list_en.ashx", scope: "canada", category: "tools_downloads" },
   { id: "tl-paintracker", title: "Pain Tracker (Apps)", description: "Manage My Pain, Flaredown.", url: "https://www.managemypain.com/", scope: "canada", category: "tools_downloads" },
-  { id: "tl-accommodation-letter", title: "Workplace Accommodation Request", description: "Template and tips (coming soon).", scope: "canada", category: "tools_downloads" },
-  { id: "tl-appeal-letter", title: "Appeal Letter (Denied Benefits)", description: "Template and guidance (coming soon).", scope: "canada", category: "tools_downloads" },
+  { id: "tl-accommodation-letter", title: "Workplace Accommodation Request", description: "In‑app template and guidance.", scope: "canada", category: "tools_downloads" },
+  { id: "tl-appeal-letter", title: "Appeal Letter (Denied Benefits)", description: "In‑app template and guidance.", scope: "canada", category: "tools_downloads" },
+  { id: "tl-union-letter", title: "Union Representation/Request Letter", description: "In‑app template to request support from your union.", scope: "canada", category: "tools_downloads" },
 
   // Work & Financial Support — Canada-wide
   { id: "wf-employment-rights-fed", title: "Employment Rights (Federal)", description: "Federal labour standards and workplace rights.", url: "https://www.canada.ca/en/services/jobs/workplace/federal-labour-standards.html", scope: "canada", category: "work_financial" },

@@ -21,7 +21,7 @@ export default function ThemedHeader() {
   const { state } = useFavorites();
   const { counts } = useCounts();
   const { refreshAll } = useRefresh();
-  const { offline } = useNetwork();
+  const { offline, syncing } = useNetwork();
   const { user, signOut } = useAuth();
   const { t } = useTranslation();
 
@@ -133,6 +133,7 @@ export default function ThemedHeader() {
             counts.podcasts +
             counts.events}
           {offline ? " • Offline" : ""}
+          {syncing ? " • Syncing…" : ""}
         </Text>
 
         {/* Refresh */}
