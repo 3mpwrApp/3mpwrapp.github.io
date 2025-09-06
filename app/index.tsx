@@ -2,12 +2,12 @@ import { Redirect } from "expo-router";
 import type { Href } from "expo-router";
 import React from "react";
 import { ActivityIndicator, View } from "react-native";
-import { useAuth } from "../store/auth";
+import { useAuth } from "../context/AuthContext";
 
 export default function Index() {
-  const { state } = useAuth();
+  const { user, loading } = useAuth();
 
-  if (state.status === "loading") {
+  if (loading) {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <ActivityIndicator />
@@ -15,8 +15,6 @@ export default function Index() {
     );
   }
 
-  if (state.status === "needsOnboarding") return <Redirect href={"/(auth)/onboarding" as Href} />;
-  if (state.status === "signedOut") return <Redirect href={"/(auth)/login" as Href} />;
-  // anonymous and signedIn both land in tabs
+  if (!user) return <Redirect href={"/(auth)/login" as Href} />;
   return <Redirect href={"/(tabs)" as Href} />;
 }

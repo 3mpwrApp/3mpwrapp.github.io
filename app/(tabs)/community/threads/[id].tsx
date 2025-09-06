@@ -4,7 +4,7 @@ import { colors, type Palette } from "../../../../theme/colors";
 import { useLocalSearchParams } from "expo-router";
 import { useCommunity, CommunityProvider } from "../../../../store/community";
 import { HIT_SLOP_8, touchTarget } from "../../../../constants/a11y";
-import { useAuth } from "../../../../store/auth";
+import { useAuth } from "../../../../context/AuthContext";
 
 export const options = { href: null };
 
@@ -17,7 +17,7 @@ function ThreadInner() {
   const thread = state.threads.find((t) => t.id === id);
   const comments = state.comments.filter((c) => c.threadId === id).sort((a,b)=>a.createdAt-b.createdAt);
   const [text, setText] = React.useState("");
-  const { state: auth } = useAuth();
+  const { user } = useAuth();
 
   if (!thread) return <View style={styles.container}><Text style={styles.title}>Thread not found</Text></View>;
 
@@ -38,7 +38,7 @@ function ThreadInner() {
                   <Text style={styles.actionLink}>Report</Text>
                 </Pressable>
               )}
-              {auth.status === "signedIn" && (
+              {user && (
                 <Pressable onPress={() => deleteComment(item.id)} accessibilityRole="button" accessibilityLabel="Delete comment" hitSlop={HIT_SLOP_8} style={({pressed})=>[touchTarget.min,{opacity:pressed?0.7:1}]}> 
                   <Text style={[styles.actionLink,{color:"#d00"}]}>Delete</Text>
                 </Pressable>
@@ -59,7 +59,7 @@ function ThreadInner() {
           onChangeText={setText}
         />
         <Pressable
-          onPress={() => { if (!text.trim()) return; const ok = addComment(thread.id, text.trim(), auth.user?.name ?? null); if (ok) setText(""); }}
+          onPress={() => { if (!text.trim()) return; const ok = addComment(thread.id, text.trim(), user?.displayName ?? user?.email ?? null); if (ok) setText(""); }}
           accessibilityRole="button"
           accessibilityLabel="Post comment"
           hitSlop={HIT_SLOP_8}

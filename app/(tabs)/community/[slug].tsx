@@ -6,7 +6,7 @@ import { useLocalSearchParams, router } from "expo-router";
 import type { Href } from "expo-router";
 import { useCommunity, CommunityProvider } from "../../../store/community";
 import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
-import { useAuth } from "../../../store/auth";
+import { useAuth } from "../../../context/AuthContext";
 
 function ChannelInner() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
@@ -17,7 +17,7 @@ function ChannelInner() {
   const channel = state.channels.find((c) => c.slug === slug);
   const threads = state.threads.filter((t) => t.channelId === channel?.id);
   const [title, setTitle] = React.useState("");
-  const { state: auth } = useAuth();
+  const { user } = useAuth();
 
   if (!channel) return <View style={styles.container}><Text style={styles.title}>Channel not found</Text></View>;
 
@@ -34,7 +34,7 @@ function ChannelInner() {
           onChangeText={setTitle}
         />
         <Pressable
-          onPress={() => { if (!title.trim()) return; const ok = createThread(channel.id, title.trim(), auth.user?.name ?? null); if (ok) setTitle(""); }}
+          onPress={() => { if (!title.trim()) return; const ok = createThread(channel.id, title.trim(), user?.displayName ?? user?.email ?? null); if (ok) setTitle(""); }}
           accessibilityRole="button"
           accessibilityLabel="Create thread"
           hitSlop={HIT_SLOP_8}
