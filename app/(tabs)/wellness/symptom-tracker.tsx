@@ -144,6 +144,19 @@ export default function SymptomTracker() {
       )}
 
       <Text style={[styles.sectionTitle, { marginTop: 12 }]}>Recent entries</Text>
+      <Text style={[styles.sectionTitle, { marginTop: 12 }]}>Quick tags</Text>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 8 }}>
+        {['flare','med-change','work','sleep','stress'].map((tg) => (
+          <Pressable key={tg} onPress={() => {
+            const arr = (tags || '').split(',').map(s=>s.trim()).filter(Boolean);
+            const has = arr.includes(tg);
+            const next = has ? arr.filter(x=>x!==tg) : [...arr, tg];
+            setTags(next.join(', '));
+          }} style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 16, paddingHorizontal: 10, paddingVertical: 6, backgroundColor: (tags||'').includes(tg) ? palette.primary : 'transparent' }}>
+            <Text style={{ color: (tags||'').includes(tg) ? palette.onPrimary : palette.text }}>{tg}</Text>
+          </Pressable>
+        ))}
+      </View>
       {filtered.length === 0 ? (
         <Text style={styles.empty}>No entries yet.</Text>
       ) : (
@@ -279,3 +292,4 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     smallBtnText: { fontWeight: '700' },
   });
 }
+

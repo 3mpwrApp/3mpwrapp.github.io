@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Pressable, TextInput, Share, Alert, ScrollView 
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../../theme/usePalette";
 import { getCachedJSON, setCachedJSON } from "../../../../services/cache";
+import { fsRoomAddTask, fsRoomToggleTask, fsRoomSetNotes, fsRoomSubscribe } from "../../../../services/firestore";
 
 type Task = { id: string; kind: 'petition' | 'social' | 'letters'; title: string; done?: boolean };
 
@@ -28,10 +29,34 @@ export default function CampaignRoom() {
     })();
   }, [id]);
   React.useEffect(() => { setCachedJSON(`campaign_room_${id}_tasks`, tasks); }, [id, tasks]);
-  React.useEffect(() => { setCachedJSON(`campaign_room_${id}_notes`, notes); }, [id, notes]);
+  React.useEffect(() => { setCachedJSON(`campaign_room_${id}_notes`, notes); fsRoomSetNotes(String(id||''), notes); }, [id, notes]);
 
-  const toggle = (tid: string) => setTasks((prev) => prev.map(t => t.id===tid ? { ...t, done: !t.done } : t));
-  const add = () => { if (!newTask.trim()) return; setTasks((prev) => [{ id: String(Date.now()), kind: 'social', title: newTask.trim() }, ...prev]); setNewTask(''); };
+  const toggle = async (tid: string) => {
+    setTasks((prev) => prev.map(t => t.id===tid ? { ...t, done: !t.done } : t));
+    const t = tasks.find(x=>x.id===tid);
+    if (t) fsRoomToggleTask(String(id||''), tid, !t.done);
+  };
+  const add = async () => {
+    if (!newTask.trim()) return;
+    const task = { id: String(Date.now()), kind: 'social' as const, title: newTask.trim() };
+    setTasks((prev) => [task as any, ...prev]);
+    setNewTask('');
+    fsRoomAddTask(String(id||''), task);
+  };
+
+  React.useEffect(() => {
+    let unsub: any = null;
+    (async () => {
+      try {
+        const sub = await fsRoomSubscribe(String(id||''), {
+          onTasks: (list) => setTasks(list as any),
+          onNotes: (txt) => setNotes((prev) => (prev === txt ? prev : txt)),
+        });
+        unsub = sub.unsubscribe;
+      } catch {}
+    })();
+    return () => { try { unsub?.(); } catch {} };
+  }, [id]);
   const exportCSV = () => {
     const rows = [["kind","title","done"], ...tasks.map(t => [t.kind, t.title, t.done ? 'yes' : 'no'])];
     const csv = rows.map(r => r.map(x => `"${(x||'').replace(/"/g,'""')}"`).join(',')).join('\n');

@@ -12,23 +12,42 @@ export default function AdaptiveMeditation() {
   useAnnounceOnMount("Adaptive Meditation & Relaxation");
   useFocusOnRefOnMount(titleRef);
 
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const soundRef = React.useRef<any>(null);
   const play = async (kind: "breath" | "body" | "calm") => {
     try {
-      // Optional: add expo-av playback of bundled audio in a dev build
-      Alert.alert(
-        kind === 'breath' ? 'Breathing' : kind === 'body' ? 'Body Scan' : 'Calm Reset',
-        kind === 'breath' ? 'Box breathing: inhale 4, hold 4, exhale 4, hold 4 (x4).' :
-        kind === 'body' ? 'Gentle scan toes to head. Stop if discomfort rises.' :
-        'Soften eyes, lengthen exhale, relax jaw/shoulders.'
-      );
-    } catch {}
+      const { Audio } = await import("expo-av");
+      const urls: Record<string,string> = {
+        breath: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+        body: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+        calm: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+      };
+      if (soundRef.current) {
+        await soundRef.current.stopAsync().catch(()=>{});
+        await soundRef.current.unloadAsync().catch(()=>{});
+        soundRef.current = null;
+        setIsPlaying(false);
+      }
+      const { sound } = await Audio.Sound.createAsync({ uri: urls[kind] }, { shouldPlay: true });
+      soundRef.current = sound;
+      setIsPlaying(true);
+      sound.setOnPlaybackStatusUpdate((status: any) => {
+        if (status.didJustFinish) {
+          setIsPlaying(false);
+          sound.unloadAsync().catch(()=>{});
+          soundRef.current = null;
+        }
+      });
+    } catch {
+      Alert.alert('Audio unavailable', 'Streaming not available in this build.');
+    }
   };
 
   return (
     <View style={s.container}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Adaptive Meditation & Relaxation</Text>
       <Text style={s.subtitle}>Gentle guidance for chronic pain and limited mobility.</Text>
-      <Pressable onPress={() => play('breath')} style={s.button}><Text style={s.buttonText}>Breathing – 1 min</Text></Pressable>
+      <Pressable onPress={() => play('breath')} style={s.button}><Text style={s.buttonText}>Breathing – 1 min {isPlaying ? '▶︎' : ''}</Text></Pressable>
       <Pressable onPress={() => play('body')} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Body Scan – 2 min</Text></Pressable>
       <Pressable onPress={() => play('calm')} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Calm Reset – 30 sec</Text></Pressable>
       <Text style={[s.subtitle,{ marginTop: 12 }]}>Note: For full audio programs, curate links in Self‑Care Library.</Text>
