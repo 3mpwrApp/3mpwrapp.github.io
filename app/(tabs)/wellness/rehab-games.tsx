@@ -37,21 +37,21 @@ export default function RehabGames() {
         <Text style={s.cardTitle}>Reach & Tap</Text>
         <Text style={s.cardText}>Gently raise your arm and tap the button. Aim for 10 slow taps.</Text>
         <Text style={s.cardText}>Taps: {taps}</Text>
-        <Pressable onPress={() => { setTaps(taps+1); add(1); }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Tap</Text></Pressable>
+        <Pressable onPress={() => { const np = taps+1; setTaps(np); add(1); if (np === 10) Alert.alert('Great job','You completed 10 taps!'); }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Tap</Text></Pressable>
       </View>
 
       <View style={s.card}>
         <Text style={s.cardTitle}>Breath Pacing</Text>
         <Text style={s.cardText}>Box breathing: inhale 4, hold 4, exhale 4, hold 4. Do 3 cycles.</Text>
         <Text style={s.cardText}>Cycles: {breaths}</Text>
-        <Pressable onPress={() => { setBreaths(breaths+1); add(2); }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Complete cycle</Text></Pressable>
+        <Pressable onPress={() => { const nb = breaths+1; setBreaths(nb); add(2); if (nb === 3) Alert.alert('Nice pacing','Three breathing cycles complete.'); }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Complete cycle</Text></Pressable>
       </View>
 
       <View style={s.card}>
         <Text style={s.cardTitle}>Gentle Sit‑to‑Stand</Text>
         <Text style={s.cardText}>Stand up from a chair slowly and sit back down. 5 repetitions. Use supports as needed.</Text>
         <Text style={s.cardText}>Round: {round}/5</Text>
-        <Pressable onPress={() => { if (round<5) { setRound(round+1); add(3);} }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Mark rep</Text></Pressable>
+        <Pressable onPress={() => { if (round<5) { const nr = round+1; setRound(nr); add(3); if (nr===5) Alert.alert('Milestone','Completed 5 sit‑to‑stand reps!'); } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Mark rep</Text></Pressable>
       </View>
 
       <Pressable onPress={() => { reset(); setTaps(0); setBreaths(0); setRound(0); }} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Reset</Text></Pressable>
@@ -74,4 +74,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     tip: { color: palette.text, opacity: 0.9 },
   });
 }
-

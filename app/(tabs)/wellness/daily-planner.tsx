@@ -72,6 +72,15 @@ export default function DailyPlanner() {
       Alert.alert(ok ? 'Added' : 'Not added', ok ? 'Rest break added to calendar.' : 'Unable to add event.');
     } catch { Alert.alert('Not available','Calendar permission or module missing.'); }
   };
+  const addAllRests = async () => {
+    try {
+      const d1 = new Date(date + 'T11:00:00');
+      const d2 = new Date(date + 'T14:30:00');
+      const ok1 = await addEvent({ title: 'Rest break', notes: 'Adaptive Daily Planner', startISO: d1.toISOString(), durationMinutes: 15 });
+      const ok2 = await addEvent({ title: 'Rest break', notes: 'Adaptive Daily Planner', startISO: d2.toISOString(), durationMinutes: 15 });
+      Alert.alert((ok1&&ok2)?'Added':'Partial', (ok1&&ok2)?'Rest breaks added.': 'Some events could not be added.');
+    } catch { Alert.alert('Not available','Calendar permission or module missing.'); }
+  };
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
@@ -97,6 +106,7 @@ export default function DailyPlanner() {
           <Text style={s.cardText}>{plan}</Text>
           <Pressable onPress={sharePlan} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Share</Text></Pressable>
           <Pressable onPress={addRestToCalendar} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Add rest to calendar</Text></Pressable>
+          <Pressable onPress={addAllRests} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Add all suggested rests</Text></Pressable>
         </View>
       )}
     </ScrollView>
@@ -120,4 +130,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     cardText: { color: palette.text, opacity: 0.95 },
   });
 }
-

@@ -38,6 +38,11 @@ export default function AiCaseInterpreter() {
           <Text style={[s.cardTitle,{ marginTop: 8 }]}>Next steps</Text>
           {out.next.map((n,i)=>(<Text key={i} style={s.cardText}>• {n}</Text>))}
           <Pressable onPress={() => Share.share({ message: `${out.summary}\n\nNext steps:\n${out.next.map(n=>'- '+n).join('\n')}`, title: 'Case Summary' }).catch(()=>{})} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Share</Text></Pressable>
+          <View style={{ flexDirection: 'row', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
+            <Pressable onPress={async () => { try { const mod = await import('expo-clipboard'); await mod.setStringAsync(`${out.summary}\n\nNext steps:\n${out.next.map(n=>'- '+n).join('\n')}`); Alert.alert('Copied','Summary copied.'); } catch {} }} style={s.button}><Text style={s.buttonText}>Copy</Text></Pressable>
+            <Pressable onPress={async () => { try { const mod = await import('expo-print'); const text = `${out.summary}\n\nNext steps:\n${out.next.map(n=>'- '+n).join('\n')}`; const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">${text.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</pre>`; const { uri } = await mod.printToFileAsync({ html }); await Share.share({ url: uri, title: 'Case Summary' }); } catch { Alert.alert('PDF not available','Install expo-print in a dev build.'); } }} style={s.button}><Text style={s.buttonText}>PDF</Text></Pressable>
+            <Pressable onPress={async () => { try { const FS = await import('expo-file-system'); const text = `${out.summary}\n\nNext steps:\n${out.next.map(n=>'- '+n).join('\n')}`; const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${text.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</pre></body></html>`; const path = FS.cacheDirectory + `case_${Date.now()}.doc`; await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 }); await Share.share({ url: path, title: 'Case Summary (.doc)' }); } catch { Alert.alert('Export failed','Could not create .doc file.'); } }} style={s.button}><Text style={s.buttonText}>DOC</Text></Pressable>
+          </View>
         </View>
       )}
     </ScrollView>
