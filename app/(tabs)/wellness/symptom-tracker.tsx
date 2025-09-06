@@ -67,12 +67,14 @@ export default function SymptomTracker() {
     setPain(""); setSymptoms(""); setImpact(""); setMeds(""); setTags("");
   }, []);
 
+  const [undo, setUndo] = React.useState<{ entry: Entry } | null>(null);
   const remove = React.useCallback((id: string) => {
+    const deleted = entries.find(e => e.id === id);
     Alert.alert('Delete entry', 'Are you sure you want to delete this entry?', [
       { text: 'Cancel', style: 'cancel' },
-      { text: 'Delete', style: 'destructive', onPress: () => setEntries((prev) => prev.filter((x) => x.id !== id)) },
+      { text: 'Delete', style: 'destructive', onPress: () => { setEntries((prev) => prev.filter((x) => x.id !== id)); if (deleted) setUndo({ entry: deleted }); setTimeout(() => setUndo(null), 8000); } },
     ]);
-  }, []);
+  }, [entries]);
 
   // Load persisted entries
   React.useEffect(() => {
@@ -264,6 +266,12 @@ export default function SymptomTracker() {
       }}>
         <Text style={styles.buttonText}>Export as PDF</Text>
       </Pressable>
+      {!!undo && (
+        <View style={{ position: 'absolute', left: 16, right: 16, bottom: 16, backgroundColor: palette.surface, borderRadius: 10, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, padding: 10 }}>
+          <Text style={{ color: palette.text, marginBottom: 6 }}>Entry deleted</Text>
+          <Pressable onPress={() => { setEntries(prev => [undo.entry, ...prev]); setUndo(null); }} style={styles.button}><Text style={styles.buttonText}>Undo</Text></Pressable>
+        </View>
+      )}
     </ScrollView>
   );
   return state.lockWellness ? <PrivacyGate>{body}</PrivacyGate> : body;

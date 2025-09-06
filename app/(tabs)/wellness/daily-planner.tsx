@@ -4,6 +4,7 @@ import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { addEvent } from "../../../services/calendar";
+import { buildICSMany } from "../../../services/ics";
 
 type Appt = { id: string; time: string; title: string };
 
@@ -82,6 +83,28 @@ export default function DailyPlanner() {
     } catch { Alert.alert('Not available','Calendar permission or module missing.'); }
   };
 
+  const morningTemplate = () => {
+    setTime('09:00'); setTitle('Stretch + hydration'); addAppt();
+    setTime('11:00'); setTitle('Rest break'); addAppt();
+  };
+  const afternoonTemplate = () => {
+    setTime('13:30'); setTitle('Admin task (15m)'); addAppt();
+    setTime('14:30'); setTitle('Rest break'); addAppt();
+  };
+
+  const exportRestsICS = async () => {
+    try {
+      const events = ['11:00','14:30'].map(t => ({ title: 'Rest break', startISO: new Date(date + 'T' + t + ':00').toISOString(), durationMinutes: 15 }));
+      const ics = buildICSMany(events);
+      const FS = await import('expo-file-system');
+      const path = FS.cacheDirectory + `rests_${date}.ics`;
+      await FS.writeAsStringAsync(path, ics, { encoding: FS.EncodingType.UTF8 });
+      const Sharing = await import('expo-sharing');
+      if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path);
+      else Alert.alert('Exported','ICS saved to cache.');
+    } catch { Alert.alert('Export failed','Could not create ICS.'); }
+  };
+
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Adaptive Daily Planner</Text>
@@ -100,6 +123,11 @@ export default function DailyPlanner() {
       ))}
       <View style={{ height: 8 }} />
       <Pressable onPress={build} style={s.button}><Text style={s.buttonText}>Build plan</Text></Pressable>
+      <View style={{ height: 8 }} />
+      <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
+        <Pressable onPress={morningTemplate} style={s.button}><Text style={s.buttonText}>Morning template</Text></Pressable>
+        <Pressable onPress={afternoonTemplate} style={s.button}><Text style={s.buttonText}>Afternoon template</Text></Pressable>
+      </View>
       {!!plan && (
         <View style={s.card}>
           <Text style={s.cardTitle}>Plan</Text>
@@ -107,6 +135,7 @@ export default function DailyPlanner() {
           <Pressable onPress={sharePlan} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Share</Text></Pressable>
           <Pressable onPress={addRestToCalendar} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Add rest to calendar</Text></Pressable>
           <Pressable onPress={addAllRests} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Add all suggested rests</Text></Pressable>
+          <Pressable onPress={exportRestsICS} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Export rests (ICS)</Text></Pressable>
         </View>
       )}
     </ScrollView>

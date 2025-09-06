@@ -91,6 +91,9 @@ export default function WellnessScreen() {
       <Link href={"/(tabs)/wellness/daily-planner" as Href} asChild>
         <Text style={[styles.linkLabel, { marginBottom: 12 }]}>{t("wellness.tools.daily_planner", "Adaptive Daily Planner")}</Text>
       </Link>
+      <Link href={"/(tabs)/wellness/achievements" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>{t("wellness.achievements.title", "Achievements")}</Text>
+      </Link>
 
       {sections.map((sec) => (
         <View key={sec.title} style={styles.section} accessibilityLabel={`${sec.title} section`} accessible>

@@ -41,7 +41,15 @@
                                    "adaptive_meditation":  "Méditation et relaxation adaptées",
                                    "rehab_games":  "Jeux de rééducation virtuels (mouvements doux)",
                                    "daily_planner":  "Planificateur quotidien adaptatif"
-                               }
+                               },
+                     "rehab":  {
+                                   "subtitle":  "Mini-jeux accessibles pour encourager des mouvements doux et exercices de physio. Adaptez et arrêtez si la douleur augmente.",
+                                   "title":  "Jeux de rééducation virtuels"
+                               },
+                     "achievements":  {
+                                          "subtitle":  "Gagnez des badges en bâtissant des habitudes saines.",
+                                          "title":  "Réussites"
+                                      }
                  },
     "advocacy":  {
                      "tools":  {

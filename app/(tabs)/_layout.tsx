@@ -51,6 +51,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="wellness/self-care-library" options={{ href: null }} />
       <Tabs.Screen name="wellness/rehab-games" options={{ href: null }} />
       <Tabs.Screen name="wellness/daily-planner" options={{ href: null }} />
+      <Tabs.Screen name="wellness/achievements" options={{ href: null }} />
       <Tabs.Screen name="events/[id]" options={{ href: null }} />
       <Tabs.Screen name="advocacy/[id]" options={{ href: null }} />
       <Tabs.Screen name="podcasts/[id]" options={{ href: null }} />

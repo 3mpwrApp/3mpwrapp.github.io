@@ -21,7 +21,15 @@
                                    "adaptive_meditation":  "Adaptive Meditation \u0026 Relaxation",
                                    "rehab_games":  "Virtual Rehab Games (gentle movement)",
                                    "daily_planner":  "Adaptive Daily Planner"
-                               }
+                               },
+                     "rehab":  {
+                                   "subtitle":  "Fun, accessible mini-games to encourage gentle movement and physio-style exercises. Always adapt to comfort and stop if pain increases.",
+                                   "title":  "Virtual Rehab Games"
+                               },
+                     "achievements":  {
+                                          "subtitle":  "Earn badges as you build healthy routines.",
+                                          "title":  "Achievements"
+                                      }
                  },
     "resources":  {
                       "intro":  "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",

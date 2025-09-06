@@ -62,6 +62,10 @@ export default function CampaignRoom() {
     const csv = rows.map(r => r.map(x => `"${(x||'').replace(/"/g,'""')}"`).join(',')).join('\n');
     Share.share({ message: csv, title: 'Campaign Room Tasks' }).catch(()=>{});
   };
+  const shareRoom = () => {
+    const url = `https://empowr.app/campaigns/room/${id}`;
+    Share.share({ title: 'Campaign Room', message: `Join our campaign room: ${url}`, url }).catch(()=>{});
+  };
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
@@ -78,6 +82,8 @@ export default function CampaignRoom() {
       ))}
       <View style={{ height: 8 }} />
       <Pressable onPress={exportCSV} style={s.button}><Text style={s.buttonText}>Export Tasks (CSV)</Text></Pressable>
+      <View style={{ height: 8 }} />
+      <Pressable onPress={shareRoom} style={s.button}><Text style={s.buttonText}>Share Room Link</Text></Pressable>
       <View style={{ height: 12 }} />
       <Text style={s.title}>Shared Notes</Text>
       <TextInput style={[s.input,{ minHeight: 120 }]} value={notes} onChangeText={setNotes} multiline placeholder="Shared notes: announce dates, media contacts, progress, links" />

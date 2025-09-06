@@ -41,7 +41,15 @@
                                    "adaptive_meditation":  "MeditaciÃ³n y relajaciÃ³n adaptadas",
                                    "rehab_games":  "Juegos de rehabilitación virtual (movimiento suave)",
                                    "daily_planner":  "Planificador diario adaptativo"
-                               }
+                               },
+                     "rehab":  {
+                                   "subtitle":  "Mini-juegos accesibles para movimiento suave y ejercicios tipo fisio. Adapta y detente si aumenta el dolor.",
+                                   "title":  "Juegos de rehabilitación virtuales"
+                               },
+                     "achievements":  {
+                                          "subtitle":  "Gana insignias mientras construyes rutinas saludables.",
+                                          "title":  "Logros"
+                                      }
                  },
     "advocacy":  {
                      "tools":  {
