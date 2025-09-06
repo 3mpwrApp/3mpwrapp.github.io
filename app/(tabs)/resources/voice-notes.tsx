@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, TextInput, Alert, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Pressable, TextInput, Alert, ScrollView, Share } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
@@ -82,9 +82,11 @@ export default function VoiceNotes() {
         <View key={n.id} style={s.card}>
           <Text style={s.cardTitle}>{n.date} — {n.topic || 'Note'}</Text>
           <Text style={s.cardText}>{caseLog(n)}</Text>
-          <View style={{ flexDirection: 'row', gap: 8 }}>
+          <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
             <Pressable onPress={async () => { try { const mod = await import('expo-clipboard'); await mod.setStringAsync(caseLog(n)); Alert.alert('Copied','Log copied to clipboard.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Copy</Text></Pressable>
-            <Pressable onPress={async () => { try { const Share = await import('expo-share'); await Share.share({ message: caseLog(n), title: 'Case Log' } as any); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Share</Text></Pressable>
+            <Pressable onPress={() => Share.share({ message: caseLog(n), title: 'Case Log' }).catch(()=>{})} style={s.smallBtn}><Text style={s.smallBtnText}>Share</Text></Pressable>
+            <Pressable onPress={async () => { try { const mod = await import('expo-print'); const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">${caseLog(n).replace(/&/g,'&amp;').replace(/</g,'&lt;')}</pre>`; const { uri } = await mod.printToFileAsync({ html }); await Share.share({ url: uri, title: 'Case Log' }); } catch { Alert.alert('PDF not available','Install expo-print in a dev build.'); } }} style={s.smallBtn}><Text style={s.smallBtnText}>PDF</Text></Pressable>
+            <Pressable onPress={async () => { try { const FS = await import('expo-file-system'); const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${caseLog(n).replace(/&/g,'&amp;').replace(/</g,'&lt;')}</pre></body></html>`; const path = FS.cacheDirectory + `case_log_${n.id}.doc`; await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 }); await Share.share({ url: path, title: 'Case Log (.doc)' }); } catch { Alert.alert('Export failed','Could not create .doc file.'); } }} style={s.smallBtn}><Text style={s.smallBtnText}>DOC</Text></Pressable>
           </View>
         </View>
       ))}
@@ -109,4 +111,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     smallBtnText: { color: palette.text, fontWeight: '700' },
   });
 }
-

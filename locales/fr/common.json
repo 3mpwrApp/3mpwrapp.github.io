@@ -2,53 +2,52 @@
   "nav": {
     "home": "Accueil",
     "campaigns": "Campagnes",
-    "community": "CommunautÃ©",
-    "advocacy": "DÃ©fense des droits",
-    "podcasts": "Balados et rÃ©cits",
+    "community": "Communauté",
+    "advocacy": "Défense des droits",
+    "podcasts": "Balados et récits",
     "resources": "Ressources",
-    "events": "Ã‰vÃ©nements",
-    "wellness": "Bienâ€‘Ãªtre",
+    "events": "Événements",
+    "wellness": "Bien-être",
     "profile": "Profil"
   },
   "home": {
     "title": "Bienvenue sur Empowr",
-    "subtitle": "Soutien. DÃ©fense. Autonomisation.",
-    "welcome": "Bienvenue! Votre carrefour pour la communautÃ©, lâ€™Ã©ducation, les outils de dÃ©fense des droits et les balados â€” tout au mÃªme endroit!"
+    "subtitle": "Soutien. Défense. Autonomisation.",
+    "welcome": "Bienvenue! Carrefour pour la communauté, l’éducation, les outils de défense et les balados — tout au même endroit!"
   },
   "header": {
     "favorites": "Favs",
-    "items": "Ã‰lÃ©ments",
+    "items": "Éléments",
     "openProfile": "Ouvrir le profil",
     "signIn": "Se connecter",
-    "signOut": "Se dÃ©connecter",
+    "signOut": "Se déconnecter",
     "refresh": "Tout actualiser"
-  }
-  ,
+  },
   "resources": {
     "tools": {
-      "deadlines": "Calculateur dâ€™Ã©chÃ©ances + rappels",
-      "evidence": "GÃ©nÃ©rateur de liste de preuves",
-      "voice_notes": "Notes vocales vers compte rendu",
-      "templates": "Galerie de modÃ¨les"
+      "deadlines": "Calculateur d’échéances + rappels",
+      "evidence": "Générateur de liste de preuves",
+      "voice_notes": "Notes vocales ? compte rendu",
+      "templates": "Galerie de modèles"
     }
   },
   "wellness": {
     "tools": {
-      "symptom": "Suivi symptÃ´mes et douleur (rapport)",
-      "sleep": "Suivi sommeil et Ã©nergie (rÃ©sumÃ© mÃ©dical)",
-      "selfcare": "BibliothÃ¨que dâ€™autoâ€‘soin accessible",
-      "work_balance": "Bienâ€‘Ãªtre + Ã©quilibre travail (IA)",
-      "grief": "Deuil et identitÃ© â€” soutien",
-      "adaptive_meditation": "MÃ©ditation et relaxation adaptÃ©es"
+      "symptom": "Suivi symptômes et douleur (rapport)",
+      "sleep": "Suivi sommeil et énergie (résumé médical)",
+      "selfcare": "Bibliothèque d’auto-soin accessible",
+      "work_balance": "Bien-être + équilibre travail (IA)",
+      "grief": "Deuil et identité — soutien",
+      "adaptive_meditation": "Méditation et relaxation adaptées"
     }
   },
   "advocacy": {
     "tools": {
-      "self_coach": "Coach d'auto-defense (micro-lecons)",
-      "policy_simple": "Politiques simplifiees",
+      "self_coach": "Coach d’auto-défense (micro-leçons)",
+      "policy_simple": "Politiques simplifiées",
       "ai_translator": "Traducteur administratif (langage clair)",
-      "ai_case": "Interprete de cas (resume)",
-      "collective": "Pole d'action juridique collective",
+      "ai_case": "Interprète de cas (résumé)",
+      "collective": "Pôle d’action juridique collective",
       "ai_gov": "Navigateur gouvernemental IA"
     }
   }

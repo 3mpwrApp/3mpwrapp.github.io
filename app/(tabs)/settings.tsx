@@ -16,6 +16,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for
 import { useProfileLocal } from "../../store/profileLocal";
 import { exportBackup, importBackup, clearAllData } from "../../services/backup";
 import { usePrivacy } from "../../store/privacy";
+import TermsGate from "../../components/TermsGate";
 
 export default function SettingsScreen() {
   const palette = useAppPalette();
@@ -154,6 +155,10 @@ export default function SettingsScreen() {
       <Section title="Privacy & Backups" styles={styles}>
         <PrivacyBackupSection />
       </Section>
+
+      <Section title="Terms & Policies" styles={styles}>
+        <TermsSection />
+      </Section>
     </ScrollView>
   );
 }
@@ -226,6 +231,27 @@ function PrivacyBackupSection() {
       <Button title="Import backup" onPress={onImport} />
       <View style={{ height: 8 }} />
       <Button title="Clear all local data" onPress={onClear} />
+    </View>
+  );
+}
+
+function TermsSection() {
+  const openTerms = () => {
+    const { Linking } = require('react-native');
+    Linking.openURL('https://empowr.app/terms').catch(() => {});
+  };
+  const reset = async () => {
+    try {
+      const AsyncStorage = require('@react-native-async-storage/async-storage').default;
+      await AsyncStorage.removeItem('empowr.terms.accepted.v1');
+      Alert.alert('Reset', 'You will be asked to accept Terms on next launch.');
+    } catch {}
+  };
+  return (
+    <View>
+      <Button title="View Terms" onPress={openTerms} />
+      <View style={{ height: 8 }} />
+      <Button title="Require re‑acceptance" onPress={reset} />
     </View>
   );
 }
