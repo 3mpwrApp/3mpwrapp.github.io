@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, Pressable, Alert, ScrollView } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
+import { llmSimplify } from "../../../services/llm";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
 export const options = { href: null };
@@ -33,7 +34,7 @@ export default function AiAdvocateTranslator() {
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>AI Advocate Translator</Text>
       <Text style={s.subtitle}>Paste a bureaucratic letter to simplify into plain language. ASL video summary requires server integration.</Text>
       <TextInput style={[s.input,{ minHeight: 120 }]} value={input} onChangeText={setInput} placeholder="Paste text here" multiline />
-      <Pressable onPress={() => setOutput(simplify(input))} style={s.button}><Text style={s.buttonText}>Simplify</Text></Pressable>
+      <Pressable onPress={async () => { const remote = await llmSimplify(input); setOutput(remote ?? simplify(input)); }} style={s.button}><Text style={s.buttonText}>Simplify</Text></Pressable>
       {!!output && <View style={s.card}><Text style={{ color: palette.text }}>{output}</Text></View>}
     </ScrollView>
   );
@@ -50,4 +51,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, backgroundColor: palette.surface, marginTop: 8 },
   });
 }
-

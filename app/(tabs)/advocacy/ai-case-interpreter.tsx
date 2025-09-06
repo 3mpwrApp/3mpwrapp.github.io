@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, Pressable, Alert, ScrollView, Share } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
+import { llmInterpret } from "../../../services/llm";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
 export const options = { href: null };
@@ -29,7 +30,7 @@ export default function AiCaseInterpreter() {
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>AI Case Interpreter</Text>
       <Text style={s.subtitle}>Paste tribunal/insurance/government letter text. Get a plain‑language summary and next steps. ASL video/easy‑read requires server integration.</Text>
       <TextInput style={[s.input,{ minHeight: 120 }]} value={input} onChangeText={setInput} placeholder="Paste text here" multiline />
-      <Pressable onPress={() => setOut(interpret(input))} style={s.button}><Text style={s.buttonText}>Interpret</Text></Pressable>
+      <Pressable onPress={async () => { const remote = await llmInterpret(input); setOut(remote ?? interpret(input)); }} style={s.button}><Text style={s.buttonText}>Interpret</Text></Pressable>
       {out && (
         <View style={s.card}>
           <Text style={s.cardTitle}>Summary</Text>
@@ -56,4 +57,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     cardText: { color: palette.text, opacity: 0.95 },
   });
 }
-

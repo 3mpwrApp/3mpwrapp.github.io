@@ -4,6 +4,7 @@ import { Stack, usePathname } from "expo-router";
 
 import Header from "../components/ThemedHeader";
 import Footer from "../components/ThemedFooter";
+import TermsGate from "../components/TermsGate";
 
 import { FavoritesProvider } from "../store/favorites";
 import { CountsProvider } from "../store/counts";
@@ -84,6 +85,7 @@ export default function RootLayout() {
                       <OfflineBanner />
                       <Header />
                     </View>
+                    <TermsGate>
                     <Stack
                       screenOptions={{
                         animation: reduceMotion ? "none" : "default",
@@ -106,6 +108,7 @@ export default function RootLayout() {
                         options={{ presentation: "modal" }}
                       />
                     </Stack>
+                    </TermsGate>
                     <Footer />
                   </RefreshProvider>
                 </NetworkProvider>
