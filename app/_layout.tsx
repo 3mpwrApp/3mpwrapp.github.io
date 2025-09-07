@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { AccessibilityInfo, View, Text, StyleSheet } from "react-native";
 import { Stack, usePathname } from "expo-router";
 

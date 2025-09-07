@@ -6,6 +6,7 @@ import { advocates } from "../../../data/advocates";
 import { useFavorites } from "../../../store/favorites";
 import SettingsLink from "../../../components/SettingsLink";
 
+
 export const options = { href: null };
 
 export default function AdvocacyDetail() {

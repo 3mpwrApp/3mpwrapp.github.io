@@ -3,15 +3,17 @@ import { View, Text, StyleSheet, Pressable, Linking, ScrollView } from "react-na
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
-export const options = { href: null };
+
 
 type Item = { label: string; url: string; description?: string };
+
+export const options = { href: null };
 
 export default function SelfCareLibrary() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Self‑Care Library");
+  useAnnounceOnMount("SelfÃ¢â‚¬â€˜Care Library");
   useFocusOnRefOnMount(titleRef);
 
   const open = (url: string) => Linking.openURL(url).catch(() => {});
@@ -20,24 +22,24 @@ export default function SelfCareLibrary() {
     {
       title: "Audio & Guided Practices",
       items: [
-        { label: "Insight Timer – Sleep & Calm", url: "https://insighttimer.com/", description: "Audio meditations, sleep stories." },
+        { label: "Insight Timer Ã¢â‚¬â€œ Sleep & Calm", url: "https://insighttimer.com/", description: "Audio meditations, sleep stories." },
         { label: "NHS Breathing Exercises (Audio)", url: "https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/", description: "Accessible breathing guide." },
-        { label: "Box Breathing (1‑min)", url: "https://www.youtube.com/results?search_query=box+breathing+1+minute", description: "Quick calming practice." },
+        { label: "Box Breathing (1Ã¢â‚¬â€˜min)", url: "https://www.youtube.com/results?search_query=box+breathing+1+minute", description: "Quick calming practice." },
       ],
     },
     {
       title: "Gentle & Adaptive Movement",
       items: [
         { label: "Chair Yoga Basics (Video)", url: "https://www.youtube.com/results?search_query=chair+yoga+beginner", description: "Seated options; adapt to comfort." },
-        { label: "Aquatic Exercise – Arthritis.ca", url: "https://arthritis.ca/living-well/exercise/aquatic-exercise", description: "Low-impact hydrotherapy ideas." },
-        { label: "Bed/Seated Mobility", url: "https://www.youtube.com/results?search_query=bed+exercises+gentle", description: "Very low‑impact options." },
+        { label: "Aquatic Exercise Ã¢â‚¬â€œ Arthritis.ca", url: "https://arthritis.ca/living-well/exercise/aquatic-exercise", description: "Low-impact hydrotherapy ideas." },
+        { label: "Bed/Seated Mobility", url: "https://www.youtube.com/results?search_query=bed+exercises+gentle", description: "Very lowÃ¢â‚¬â€˜impact options." },
       ],
     },
     {
-      title: "Easy‑Read Guides",
+      title: "EasyÃ¢â‚¬â€˜Read Guides",
       items: [
         { label: "Gentle Pacing & Energy", url: "https://www.mssociety.ca/resources/energy-conservation-and-pacing", description: "Activity pacing basics." },
-        { label: "Sleep Hygiene – Simple Tips", url: "https://www.camh.ca/en/health-info/mental-illness-and-addiction-index/sleep-problems", description: "Plain‑language sleep guide." },
+        { label: "Sleep Hygiene Ã¢â‚¬â€œ Simple Tips", url: "https://www.camh.ca/en/health-info/mental-illness-and-addiction-index/sleep-problems", description: "PlainÃ¢â‚¬â€˜language sleep guide." },
         { label: "Pain Flare Planning", url: "https://painbc.ca/resources/self-management/pain-flares", description: "Plan for flare days." },
       ],
     },
@@ -45,8 +47,8 @@ export default function SelfCareLibrary() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 16 }}>
-      <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Accessible Self‑Care Library</Text>
-      <Text style={styles.subtitle}>Audio, video, and easy‑read guides curated for accessibility.</Text>
+      <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Accessible SelfÃ¢â‚¬â€˜Care Library</Text>
+      <Text style={styles.subtitle}>Audio, video, and easyÃ¢â‚¬â€˜read guides curated for accessibility.</Text>
       {sections.map((sec) => (
         <View key={sec.title} style={styles.section} accessibilityLabel={`${sec.title} section`} accessible>
           <Text style={styles.sectionTitle}>{sec.title}</Text>

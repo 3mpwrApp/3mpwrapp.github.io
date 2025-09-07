@@ -1,11 +1,10 @@
-import { View, Text, StyleSheet, useColorScheme, Pressable, Platform, Share } from "react-native";
+import { View, Text, StyleSheet, Pressable, Share } from "react-native";
 import * as Linking from "expo-linking";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
 import SettingsLink from "../../../components/SettingsLink";
 import { events } from "../../../data/events";
 
-export const options = { href: null };
 
 function createICS(title: string, start: string, description?: string, location?: string) {
   // Minimal ICS text (UTC naive for demo). Real apps should format correctly.
@@ -14,9 +13,10 @@ function createICS(title: string, start: string, description?: string, location?
   return `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nUID:${uid}\nDTSTART:${dt}\nSUMMARY:${title}\nDESCRIPTION:${description ?? ""}\nLOCATION:${location ?? ""}\nEND:VEVENT\nEND:VCALENDAR`;
 }
 
+export const options = { href: null };
+
 export default function EventDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const scheme = useColorScheme();
   const palette = useAppPalette();
   const styles = createStyles(palette);
 

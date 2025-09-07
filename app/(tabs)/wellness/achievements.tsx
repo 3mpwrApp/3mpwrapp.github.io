@@ -4,8 +4,10 @@ import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 
+
 let AsyncStorage: any;
 try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
+
 
 export const options = { href: null };
 
@@ -40,7 +42,7 @@ export default function Achievements() {
   const items = [
     { id: 'achieve_first_steps', title: 'First Steps', desc: 'Complete 10 reach & tap reps' },
     { id: 'achieve_calm_breather', title: 'Calm Breather', desc: 'Finish 3 breathing cycles' },
-    { id: 'achieve_chair_hero', title: 'Chair Hero', desc: 'Do 5 sit‑to‑stand reps' },
+    { id: 'achieve_chair_hero', title: 'Chair Hero', desc: 'Do 5 sitÃ¢â‚¬â€˜toÃ¢â‚¬â€˜stand reps' },
     { id: 'achieve_consistency', title: 'Consistency', desc: 'Reach 50 total points' },
     { id: 'achieve_streak_7', title: 'Streak', desc: 'Complete any exercise 7 days in a row' },
   ];
@@ -49,10 +51,10 @@ export default function Achievements() {
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('wellness.achievements.title','Achievements')}</Text>
       <Text style={s.subtitle}>{t('wellness.achievements.subtitle','Earn badges as you build healthy routines.')}</Text>
-      <Text style={s.points}>Points: {points} • Streak: {streak} days</Text>
+      <Text style={s.points}>Points: {points} Ã¢â‚¬Â¢ Streak: {streak} days</Text>
       {items.map(it => (
         <View key={it.id} style={[s.card, !flags[it.id] && { opacity: 0.5 }]}>
-          <Text style={s.cardTitle}>{flags[it.id] ? '🏅 ' : '🔲 '} {it.title}</Text>
+          <Text style={s.cardTitle}>{flags[it.id] ? 'Ã°Å¸Ââ€¦ ' : 'Ã°Å¸â€Â² '} {it.title}</Text>
           <Text style={s.cardText}>{it.desc}</Text>
         </View>
       ))}

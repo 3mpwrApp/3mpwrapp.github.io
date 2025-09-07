@@ -20,7 +20,6 @@ export async function logEvent(name: string, params?: Record<string, any>) {
     } else {
       // No-op on native for now
       if (__DEV__) {
-        // eslint-disable-next-line no-console
         console.log("analytics:", name, params);
       }
     }
@@ -28,4 +27,3 @@ export async function logEvent(name: string, params?: Record<string, any>) {
     // ignore
   }
 }
-

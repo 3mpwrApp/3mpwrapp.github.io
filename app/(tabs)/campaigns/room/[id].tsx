@@ -1,4 +1,3 @@
-export const options = { href: null };
 import React from "react";
 import { View, Text, StyleSheet, Pressable, TextInput, Share, Alert, ScrollView } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
@@ -7,6 +6,8 @@ import { getCachedJSON, setCachedJSON } from "../../../../services/cache";
 import { fsRoomAddTask, fsRoomToggleTask, fsRoomSetNotes, fsRoomSubscribe } from "../../../../services/firestore";
 
 type Task = { id: string; kind: 'petition' | 'social' | 'letters'; title: string; done?: boolean };
+
+export const options = { href: null };
 
 export default function CampaignRoom() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -77,7 +78,7 @@ export default function CampaignRoom() {
       <View style={{ height: 8 }} />
       {tasks.map((t) => (
         <Pressable key={t.id} onPress={() => toggle(t.id)} accessibilityRole="button" style={[s.task, t.done && { opacity: 0.6 }]}> 
-          <Text style={s.taskText}>{t.done ? '✓ ' : '• '}{t.title} <Text style={{ opacity: 0.7 }}>({t.kind})</Text></Text>
+          <Text style={s.taskText}>{t.done ? 'âœ“ ' : 'â€¢ '}{t.title} <Text style={{ opacity: 0.7 }}>({t.kind})</Text></Text>
         </Pressable>
       ))}
       <View style={{ height: 8 }} />

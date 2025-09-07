@@ -3,9 +3,11 @@ import { View, Text, StyleSheet, Pressable, Linking, ScrollView } from "react-na
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
-export const options = { href: null };
+
 
 type Item = { label: string; url: string; description?: string };
+
+export const options = { href: null };
 
 export default function GriefSupport() {
   const palette = useAppPalette();
@@ -27,7 +29,7 @@ export default function GriefSupport() {
     ]},
     { title: "Gentle Practices", items: [
       { label: "Writing Prompts for Loss", url: "https://grief.com/grief-the-6th-stage/", description: "Journal prompts for grief." },
-      { label: "Compassionate Self‑Talk", url: "https://self-compassion.org/", description: "Self‑kindness basics." },
+      { label: "Compassionate SelfÃ¢â‚¬â€˜Talk", url: "https://self-compassion.org/", description: "SelfÃ¢â‚¬â€˜kindness basics." },
     ]},
   ];
 

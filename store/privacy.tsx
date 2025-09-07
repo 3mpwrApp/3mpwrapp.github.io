@@ -10,13 +10,13 @@ type State = {
 
 const KEY = "empowr.privacy.v1";
 
-type Ctx = {
+type PrivacyCtx = {
   state: State;
   setPasscode: (p: string | undefined) => Promise<void>;
   setLockWellness: (b: boolean) => Promise<void>;
 };
 
-const Ctx = React.createContext<Ctx | undefined>(undefined);
+const Ctx = React.createContext<PrivacyCtx | undefined>(undefined);
 
 export function PrivacyProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<State>({});
@@ -34,4 +34,3 @@ export function usePrivacy() {
   if (!ctx) throw new Error("usePrivacy must be used within PrivacyProvider");
   return ctx;
 }
-

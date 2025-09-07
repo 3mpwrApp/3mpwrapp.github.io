@@ -4,7 +4,7 @@ import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 
-export const options = { href: null };
+
 
 type Flow = 'CPP-D' | 'WCB' | 'EI-Sickness';
 
@@ -29,6 +29,8 @@ const STEPS: Record<Flow, string[]> = {
   ],
 };
 
+export const options = { href: null };
+
 export default function AiGovNavigator() {
   const palette = useAppPalette();
   const s = styles(palette);
@@ -46,7 +48,7 @@ export default function AiGovNavigator() {
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>AI Government Navigator</Text>
       <Text style={[s.subtitle,{ textDecorationLine: 'underline', color: palette.primary }]} onPress={() => Alert.alert('Tips','Keep copies of all forms, note deadlines, and request accommodations for accessibility (extended time, alternate formats).')}>Help & tips</Text>
-      <Text style={s.subtitle}>Conversational, step‑by‑step guidance through forms with accessibility in mind.</Text>
+      <Text style={s.subtitle}>Conversational, stepÃ¢â‚¬â€˜byÃ¢â‚¬â€˜step guidance through forms with accessibility in mind.</Text>
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
         {(Object.keys(STEPS) as Flow[]).map(f => (
           <Pressable key={f} onPress={() => { setFlow(f); setStep(0); }} style={{ borderWidth: 1, borderColor: palette.muted, borderRadius: 16, paddingHorizontal: 12, paddingVertical: 6, backgroundColor: flow===f?palette.primary:'transparent' }}>

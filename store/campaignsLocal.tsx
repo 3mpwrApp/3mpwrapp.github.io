@@ -12,7 +12,7 @@ type State = {
 const KEY = "empowr.campaigns.local.v1";
 const DEFAULT: State = { myCampaigns: [], joined: {} };
 
-type Ctx = {
+type CampaignsCtx = {
   state: State;
   createCampaign: (title: string, summary: string) => Campaign;
   join: (id: ID) => void;
@@ -20,7 +20,7 @@ type Ctx = {
   isJoined: (id: ID) => boolean;
 };
 
-const Ctx = React.createContext<Ctx | undefined>(undefined);
+const Ctx = React.createContext<CampaignsCtx | undefined>(undefined);
 
 export function CampaignsLocalProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<State>(DEFAULT);
@@ -51,7 +51,7 @@ export function CampaignsLocalProvider({ children }: { children: React.ReactNode
   const leave = (id: ID) => setState((s) => { const { [id]: _, ...rest } = s.joined; return { ...s, joined: rest }; });
   const isJoined = (id: ID) => !!state.joined[id];
 
-  const value: Ctx = { state, createCampaign, join, leave, isJoined };
+  const value: CampaignsCtx = { state, createCampaign, join, leave, isJoined };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 
@@ -60,4 +60,3 @@ export function useCampaignsLocal() {
   if (!ctx) throw new Error("useCampaignsLocal must be used within CampaignsLocalProvider");
   return ctx;
 }
-

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Pressable, Linking } from "react-na
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
-export const options = { href: null };
+
 
 const SECTIONS = [
   { title: 'Human Rights & Duty to Accommodate', items: [
@@ -15,10 +15,12 @@ const SECTIONS = [
     { label: 'AODA (Ontario)', url: 'https://www.ontario.ca/page/accessibility-laws' },
   ]},
   { title: 'Disability Benefits', items: [
-    { label: 'CPP‑D', url: 'https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-disability-benefit.html' },
+    { label: 'CPPÃ¢â‚¬â€˜D', url: 'https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-disability-benefit.html' },
     { label: 'Employment Standards (ON)', url: 'https://www.ontario.ca/document/your-guide-employment-standards-act-0' },
   ]},
 ];
+
+export const options = { href: null };
 
 export default function PolicySimple() {
   const palette = useAppPalette();
@@ -30,7 +32,7 @@ export default function PolicySimple() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Policy Made Simple</Text>
-      <Text style={s.subtitle}>Easy‑read guides to accessibility, human rights, and benefits.</Text>
+      <Text style={s.subtitle}>EasyÃ¢â‚¬â€˜read guides to accessibility, human rights, and benefits.</Text>
       {SECTIONS.map(sec => (
         <View key={sec.title} style={s.card}>
           <Text style={s.cardTitle}>{sec.title}</Text>

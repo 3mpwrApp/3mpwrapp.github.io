@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { View, Text, StyleSheet, FlatList, RefreshControl } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
@@ -114,7 +114,7 @@ export default function AdvocacyScreen() {
                 setLoading(true);
                 const data = await fetchAdvocates();
                 setItems(data);
-              } catch (e) {
+              } catch {
                 setError("Failed to load advocates");
               } finally {
                 setLoading(false);

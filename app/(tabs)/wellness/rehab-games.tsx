@@ -4,10 +4,10 @@ import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 
+
 let AsyncStorage: any;
 try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
 
-export const options = { href: null };
 
 function usePoints() {
   const [points, setPoints] = React.useState(0);
@@ -15,6 +15,8 @@ function usePoints() {
   React.useEffect(() => { AsyncStorage?.setItem?.('rehab_points', String(points)); }, [points]);
   return { points, add: (n: number) => setPoints((p)=>p+n), reset: () => setPoints(0) };
 }
+
+export const options = { href: null };
 
 export default function RehabGames() {
   const palette = useAppPalette();
@@ -57,7 +59,7 @@ export default function RehabGames() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('wellness.rehab.title','Virtual Rehab Games')}</Text>
-      <Text style={s.subtitle}>{t('wellness.rehab.subtitle','Fun, accessible mini‑games to encourage gentle movement and physio‑style exercises. Always adapt to comfort and stop if pain increases.')}</Text>
+      <Text style={s.subtitle}>{t('wellness.rehab.subtitle','Fun, accessible miniÃ¢â‚¬â€˜games to encourage gentle movement and physioÃ¢â‚¬â€˜style exercises. Always adapt to comfort and stop if pain increases.')}</Text>
       <Text style={s.points}>Points: {points}</Text>
 
       <View style={s.card}>
@@ -75,10 +77,10 @@ export default function RehabGames() {
       </View>
 
       <View style={s.card}>
-        <Text style={s.cardTitle}>Gentle Sit‑to‑Stand</Text>
+        <Text style={s.cardTitle}>Gentle SitÃ¢â‚¬â€˜toÃ¢â‚¬â€˜Stand</Text>
         <Text style={s.cardText}>Stand up from a chair slowly and sit back down. 5 repetitions. Use supports as needed.</Text>
         <Text style={s.cardText}>Round: {round}/5</Text>
-        <Pressable onPress={async () => { if (round<5) { const nr = round+1; setRound(nr); add(3); markPlayedToday(); if (nr===5) { Alert.alert('Milestone','Completed 5 sit‑to‑stand reps!'); try { await AsyncStorage?.setItem?.('achieve_chair_hero','1'); } catch {} } } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Mark rep</Text></Pressable>
+        <Pressable onPress={async () => { if (round<5) { const nr = round+1; setRound(nr); add(3); markPlayedToday(); if (nr===5) { Alert.alert('Milestone','Completed 5 sitÃ¢â‚¬â€˜toÃ¢â‚¬â€˜stand reps!'); try { await AsyncStorage?.setItem?.('achieve_chair_hero','1'); } catch {} } } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Mark rep</Text></Pressable>
       </View>
 
       <Pressable onPress={() => { reset(); setTaps(0); setBreaths(0); setRound(0); }} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Reset</Text></Pressable>

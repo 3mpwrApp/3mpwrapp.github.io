@@ -3,28 +3,30 @@ import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
-export const options = { href: null };
+
 
 const LESSONS = [
   { id: 'conf-1', title: 'Confidence Basics', bullets: ['Breathe low and slow (4-4-4-4)', 'Stand/sit grounded; soften shoulders', 'Prepare one sentence purpose statement'] },
   { id: 'speak-1', title: 'Speak Clearly', bullets: ['Short sentences; one point at a time', 'Ask to repeat/clarify questions', 'Pause before answering'] },
-  { id: 'assert-1', title: 'Assertiveness in Medical/Work', bullets: ['Name your need: “I need…”', 'Explain impact briefly', 'Offer options, ask for collaboration'] },
+  { id: 'assert-1', title: 'Assertiveness in Medical/Work', bullets: ['Name your need: Ã¢â‚¬Å“I needÃ¢â‚¬Â¦Ã¢â‚¬Â', 'Explain impact briefly', 'Offer options, ask for collaboration'] },
   { id: 'docs-1', title: 'Documentation', bullets: ['Summarize call/meeting in email', 'Attach key evidence only', 'Track dates and deadlines'] },
 ];
+
+export const options = { href: null };
 
 export default function SelfAdvocacyCoach() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('Self‑Advocacy Coach');
+  useAnnounceOnMount('SelfÃ¢â‚¬â€˜Advocacy Coach');
   useFocusOnRefOnMount(titleRef);
 
   const [active, setActive] = React.useState<string | null>(LESSONS[0].id);
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
-      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Self‑Advocacy Coach</Text>
-      <Text style={s.subtitle}>Micro‑lessons for confidence, public speaking, and assertiveness.</Text>
+      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>SelfÃ¢â‚¬â€˜Advocacy Coach</Text>
+      <Text style={s.subtitle}>MicroÃ¢â‚¬â€˜lessons for confidence, public speaking, and assertiveness.</Text>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 8 }}>
         {LESSONS.map(l => (
           <Pressable key={l.id} onPress={() => setActive(l.id)} style={[s.chip, active===l.id && s.chipActive]} accessibilityRole="button">
@@ -35,10 +37,10 @@ export default function SelfAdvocacyCoach() {
       {LESSONS.filter(l=>l.id===active).map(l => (
         <View key={l.id} style={s.card}>
           <Text style={s.cardTitle}>{l.title}</Text>
-          {l.bullets.map((b,i)=>(<Text key={i} style={s.cardText}>• {b}</Text>))}
+          {l.bullets.map((b,i)=>(<Text key={i} style={s.cardText}>Ã¢â‚¬Â¢ {b}</Text>))}
         </View>
       ))}
-      <Text style={[s.subtitle,{ marginTop: 12 }]}>Practice prompt: Explain your need in one sentence. Example: “I need a 10‑minute break every hour due to pain.”</Text>
+      <Text style={[s.subtitle,{ marginTop: 12 }]}>Practice prompt: Explain your need in one sentence. Example: Ã¢â‚¬Å“I need a 10Ã¢â‚¬â€˜minute break every hour due to pain.Ã¢â‚¬Â</Text>
     </ScrollView>
   );
 }

@@ -1,11 +1,12 @@
 import React from "react";
-export const options = { href: null };
 import { View, Text, StyleSheet, Pressable, Linking, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import { researchItems } from "../../../data/research";
 import SettingsLink from "../../../components/SettingsLink";
+
+export const options = { href: null };
 
 export default function ResearchDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -20,7 +21,7 @@ export default function ResearchDetail() {
       <View style={styles.container}>
         <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
         <Text style={styles.title}>{item?.title ?? "Research"}</Text>
-        <Text style={styles.text}>{item ? `${item.source} • ${item.year}` : ""}</Text>
+        <Text style={styles.text}>{item ? `${item.source} â€¢ ${item.year}` : ""}</Text>
         <Text style={styles.text}>{item?.summary ?? "Details unavailable."}</Text>
         {item?.url ? (
           <Pressable

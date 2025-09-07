@@ -4,7 +4,9 @@ import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { getCachedJSON } from "../../../services/cache";
 
+
 type Mood = "low" | "ok" | "high";
+
 
 export const options = { href: null };
 
@@ -29,11 +31,11 @@ export default function WorkBalanceAI() {
     })();
     const fatigue = slp[0] ? parseFloat(slp[0].energy || "0") : 3;
     const parts: string[] = [];
-    parts.push("Today’s balance plan:");
+    parts.push("TodayÃ¢â‚¬â„¢s balance plan:");
     // Heuristics
     if (lastPain >= 7 || avgSleep < 5 || fatigue <= 2 || mood === 'low') {
-      parts.push("- Prioritize REST blocks (20–30 min) every 2–3 hours.");
-      parts.push("- Keep work to low‑cognitive tasks if needed.");
+      parts.push("- Prioritize REST blocks (20Ã¢â‚¬â€œ30 min) every 2Ã¢â‚¬â€œ3 hours.");
+      parts.push("- Keep work to lowÃ¢â‚¬â€˜cognitive tasks if needed.");
     } else if (lastPain >= 4 || avgSleep < 6 || fatigue <= 3 || mood === 'ok') {
       parts.push("- Alternate 50 min work / 10 min rest (pacing).");
       parts.push("- One focused admin or work task in the morning.");
@@ -44,7 +46,7 @@ export default function WorkBalanceAI() {
     if (sym.length >= 3 && lastPain >= 6) {
       parts.push("- Consider ADVOCACY: log a symptom flare and request accommodations if needed.");
     }
-    parts.push("- Self‑check at midday: if pain rises >2 points, reduce workload.");
+    parts.push("- SelfÃ¢â‚¬â€˜check at midday: if pain rises >2 points, reduce workload.");
     if (notes.trim()) parts.push(`- Personal note: ${notes.trim()}`);
     setPlan(parts.join("\n"));
   };

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, RefreshControl, Alert, Pressable } from "react-native";
+import { View, Text, StyleSheet, FlatList, RefreshControl, Alert, Pressable } from "react-native";
 import * as Linking from "expo-linking";
 import { Image as ExpoImage } from "expo-image";
 import { Ionicons } from "@expo/vector-icons";
@@ -14,7 +14,6 @@ import {
 import { podcasts as localPodcasts } from "../../../data/podcasts";
 // Stories mirror YouTube list; we render a single combined list (podcasts only)
 import { fetchPodcasts } from "../../../services/podcasts";
-import { fetchStories } from "../../../services/stories";
 import { useCounts } from "../../../store/counts";
 import Card from "../../../components/Card";
 // Link not needed; we open externally via Linking

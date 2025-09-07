@@ -3,9 +3,9 @@ import { View, Text, StyleSheet, TextInput, Pressable, FlatList, KeyboardAvoidin
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
+
 type Msg = { id: string; role: "bot" | "user"; text: string };
 
-export const options = { href: null };
 
 const SEED: Msg[] = [
   {
@@ -15,6 +15,8 @@ const SEED: Msg[] = [
       "I'm your Appeal Coach. I can:\n\n- Explain what to expect at hearings\n- Help rehearse testimony with prompts\n- Share stress-management tips\n\nAsk a question, or try: 'what to expect', 'rehearse', or 'stress tips'.",
   },
 ];
+
+export const options = { href: null };
 
 export default function AppealCoach() {
   const palette = useAppPalette();
@@ -46,7 +48,7 @@ export default function AppealCoach() {
         "3) What accommodations or supports did you request, and what was the response?\n" +
         "4) What evidence supports your position (medical notes, emails, policies)?\n" +
         "5) If denied: why do you disagree with the decision?\n\n" +
-        "Answer these out loud. I can ask follow‑ups if you paste your draft."
+        "Answer these out loud. I can ask followÃ¢â‚¬â€˜ups if you paste your draft."
       );
     }
     if (/(stress|anx|nervous|panic|calm|breath)/.test(s)) {

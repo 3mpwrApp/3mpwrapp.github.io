@@ -1,11 +1,13 @@
-﻿import React from "react";
-export const options = { href: null };
+import React from "react";
 import { View, Text, StyleSheet, TextInput, ScrollView, Pressable, Share, Alert } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useProfileLocal } from "../../../store/profileLocal";
 import { buildSymptomSummary } from "../../../services/insights";
 import { logEvent } from "../../../services/analytics";
+
+
+export const options = { href: null };
 
 export default function RTWPlanLetter() {
   const palette = useAppPalette();

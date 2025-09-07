@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
+
+
 export const options = { href: null };
 
 export default function AdaptiveMeditation() {
@@ -47,10 +49,10 @@ export default function AdaptiveMeditation() {
     <View style={s.container}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Adaptive Meditation & Relaxation</Text>
       <Text style={s.subtitle}>Gentle guidance for chronic pain and limited mobility.</Text>
-      <Pressable onPress={() => play('breath')} style={s.button}><Text style={s.buttonText}>Breathing – 1 min {isPlaying ? '▶︎' : ''}</Text></Pressable>
-      <Pressable onPress={() => play('body')} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Body Scan – 2 min</Text></Pressable>
-      <Pressable onPress={() => play('calm')} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Calm Reset – 30 sec</Text></Pressable>
-      <Text style={[s.subtitle,{ marginTop: 12 }]}>Note: For full audio programs, curate links in Self‑Care Library.</Text>
+      <Pressable onPress={() => play('breath')} style={s.button}><Text style={s.buttonText}>Breathing Ã¢â‚¬â€œ 1 min {isPlaying ? 'Ã¢â€“Â¶Ã¯Â¸Å½' : ''}</Text></Pressable>
+      <Pressable onPress={() => play('body')} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Body Scan Ã¢â‚¬â€œ 2 min</Text></Pressable>
+      <Pressable onPress={() => play('calm')} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Calm Reset Ã¢â‚¬â€œ 30 sec</Text></Pressable>
+      <Text style={[s.subtitle,{ marginTop: 12 }]}>Note: For full audio programs, curate links in SelfÃ¢â‚¬â€˜Care Library.</Text>
     </View>
   );
 }

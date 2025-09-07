@@ -73,7 +73,7 @@ export default function SettingsScreen() {
         aspect: [1, 1],
         quality: 0.7,
       });
-    } catch (e) {
+    } catch {
       Alert.alert(
         "Image Picker Unavailable",
         "Please rebuild the Android app to include expo-image-picker (npx expo run:android)."

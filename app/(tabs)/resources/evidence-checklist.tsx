@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Pressable } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
-export const options = { href: null };
+
 
 type Kind = "WCB" | "LTD" | "CPP-D" | "Accommodation";
 
@@ -38,6 +38,8 @@ const ITEMS: Record<Kind, string[]> = {
   ],
 };
 
+export const options = { href: null };
+
 export default function EvidenceChecklist() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
@@ -59,7 +61,7 @@ export default function EvidenceChecklist() {
         ))}
       </View>
       {ITEMS[kind].map((line, idx) => (
-        <Text key={idx} style={styles.item}>• {line}</Text>
+        <Text key={idx} style={styles.item}>Ã¢â‚¬Â¢ {line}</Text>
       ))}
       <Text style={[styles.subtitle, { marginTop: 12 }]}>Tip: Summaries from Wellness trackers can support your evidence.</Text>
     </View>

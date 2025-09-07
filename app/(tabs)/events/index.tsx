@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { View, Text, StyleSheet, FlatList, RefreshControl, Pressable } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
@@ -41,7 +41,7 @@ export default function EventsScreen() {
   const { includeProvincialHolidays, province } = useSettings();
 
   type FilterMode = "all" | "community" | "observances";
-  const [mode, setMode] = React.useState<FilterMode>("all");
+  const mode: FilterMode = "all";
 
   const systemForMonth = React.useMemo(() => {
     const y = month.getFullYear();
@@ -71,7 +71,7 @@ export default function EventsScreen() {
       const data = await fetchEvents();
       setBaseItems(data);
       setOffline(false);
-    } catch (e) {
+    } catch {
       setError("Failed to load events");
       setOffline(true);
     } finally {

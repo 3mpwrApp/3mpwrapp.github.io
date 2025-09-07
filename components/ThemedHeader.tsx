@@ -35,8 +35,7 @@ export default function ThemedHeader() {
   const pathname = usePathname();
   React.useEffect(() => {
     if (menuOpen) setMenuOpen(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname]);
+  }, [pathname, menuOpen]);
   return (
     <SafeAreaView style={styles.container} accessibilityRole="header">
       {/* Brand */}

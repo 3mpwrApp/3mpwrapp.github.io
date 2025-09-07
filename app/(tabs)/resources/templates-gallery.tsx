@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Pressable } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
-export const options = { href: null };
+
 
 const EXAMPLES = [
   { title: 'Accommodation Request (Sample)', body: 'Re: Workplace Accommodation Request\n\nDear Employer,\n\nI am requesting reasonable accommodations...' },
@@ -11,6 +11,8 @@ const EXAMPLES = [
   { title: 'Reconsideration Letter (Sample)', body: 'Re: Request for Reconsideration (Claim [ID])\n\nDear Claims Officer,\n\nI am requesting reconsideration...' },
   { title: 'Union Request (Sample)', body: 'Re: Request for Union Support and Representation\n\nDear Union Representative/Steward,\n\nMy name is [Your Name], employed as...' },
 ];
+
+export const options = { href: null };
 
 export default function TemplatesGallery() {
   const palette = useAppPalette();

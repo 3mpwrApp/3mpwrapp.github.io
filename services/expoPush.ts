@@ -1,4 +1,3 @@
-import { Platform } from "react-native";
 
 type ExpoResponse = {
   data?: { status: string; id?: string; message?: string } | { error: string; message?: string };
@@ -24,4 +23,3 @@ export async function sendExpoPush(to: string, title: string, body: string) {
     throw e;
   }
 }
-

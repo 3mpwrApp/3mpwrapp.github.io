@@ -6,7 +6,9 @@ import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { usePrivacy } from "../../../store/privacy";
 
+
 type Entry = { id: string; date: string; sleepHours: string; sleepQuality: string; energy: string; notes: string; tags?: string };
+
 
 export const options = { href: null };
 
@@ -101,16 +103,16 @@ export default function SleepEnergyTracker() {
     lines.push("");
     lines.push(`Entries: ${filtered.length}`);
     lines.push(`Sleep hours/day (avg): ${avg(hours)}`);
-    lines.push(`Sleep quality 1–5 (avg): ${avg(q)}`);
-    lines.push(`Energy 1–5 (avg): ${avg(en)}`);
+    lines.push(`Sleep quality 1Ã¢â‚¬â€œ5 (avg): ${avg(q)}`);
+    lines.push(`Energy 1Ã¢â‚¬â€œ5 (avg): ${avg(en)}`);
     lines.push("");
     filtered.slice(0, 30).forEach((e) => {
-      lines.push(`• ${e.date}: ${e.sleepHours || "?"}h; quality ${e.sleepQuality || "?"}; energy ${e.energy || "?"}${e.notes ? "; notes: " + e.notes : ""}`);
+      lines.push(`Ã¢â‚¬Â¢ ${e.date}: ${e.sleepHours || "?"}h; quality ${e.sleepQuality || "?"}; energy ${e.energy || "?"}${e.notes ? "; notes: " + e.notes : ""}`);
     });
     lines.push("");
     lines.push("Summary for medical/legal use:");
     lines.push("- Persistent fatigue/insomnia patterns may affect work capacity and attendance.");
-    lines.push("- Consider accommodations (flexible hours, rest breaks) and clinical follow‑up for sleep issues.");
+    lines.push("- Consider accommodations (flexible hours, rest breaks) and clinical followÃ¢â‚¬â€˜up for sleep issues.");
     return lines.join("\n");
   }, [filtered]);
 
@@ -122,8 +124,8 @@ export default function SleepEnergyTracker() {
 
       <Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} />
       <Field label="Sleep hours" value={sleepHours} onChangeText={setSleepHours} keyboardType="numeric" />
-      <Field label="Sleep quality (1–5)" value={sleepQuality} onChangeText={setSleepQuality} keyboardType="numeric" />
-      <Field label="Energy (1–5)" value={energy} onChangeText={setEnergy} keyboardType="numeric" />
+      <Field label="Sleep quality (1Ã¢â‚¬â€œ5)" value={sleepQuality} onChangeText={setSleepQuality} keyboardType="numeric" />
+      <Field label="Energy (1Ã¢â‚¬â€œ5)" value={energy} onChangeText={setEnergy} keyboardType="numeric" />
       <Field label="Notes (insomnia, naps, pain, etc.)" value={notes} onChangeText={setNotes} multiline />
       <Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} />
       {editingId ? (
@@ -160,7 +162,7 @@ export default function SleepEnergyTracker() {
       ) : (
         filtered.map((e) => (
           <View key={e.id} style={styles.entryRow}>
-            <Text style={styles.entryText}>{`${e.date} — ${e.sleepHours || "?"}h, q${e.sleepQuality || "?"}, e${e.energy || "?"}`}</Text>
+            <Text style={styles.entryText}>{`${e.date} Ã¢â‚¬â€ ${e.sleepHours || "?"}h, q${e.sleepQuality || "?"}, e${e.energy || "?"}`}</Text>
             <View style={{ flexDirection: 'row', gap: 8, marginTop: 6 }}>
               <Pressable onPress={() => startEdit(e)} accessibilityRole="button" style={[styles.smallBtn, { backgroundColor: palette.surface, borderColor: palette.muted, borderWidth: StyleSheet.hairlineWidth }]}>
                 <Text style={[styles.smallBtnText, { color: palette.text }]}>Edit</Text>

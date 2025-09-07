@@ -6,7 +6,7 @@ import { CommunityProvider, useCommunity } from "../../../store/community";
 import { channels as seedChannels } from "../../../data/community";
 import { router } from "expo-router";
 
-export const options = { href: null };
+
 
 function Inner() {
   const palette = useAppPalette();
@@ -22,7 +22,7 @@ function Inner() {
   const [channelId, setChannelId] = React.useState<string>("ch_topic_ask");
 
   const submit = () => {
-    const ok = createThread(channelId, `${title} — ${details.slice(0, 120)}`, null);
+    const ok = createThread(channelId, `${title} Ã¢â‚¬â€ ${details.slice(0, 120)}`, null);
     if (ok) {
       Alert.alert("Submitted", "Your request has been posted. Community advocates may respond.");
       router.push("/(tabs)/community/topic-ask-advocate");
@@ -55,6 +55,8 @@ function Inner() {
     </View>
   );
 }
+
+export const options = { href: null };
 
 export default function AskAdvocate() {
   return (

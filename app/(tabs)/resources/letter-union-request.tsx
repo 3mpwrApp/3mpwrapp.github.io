@@ -7,6 +7,8 @@ import { useProfileLocal } from "../../../store/profileLocal";
 import { buildSymptomSummary } from "../../../services/insights";
 import { logEvent } from "../../../services/analytics";
 
+
+
 export const options = { href: null };
 
 export default function UnionRequestLetter() {

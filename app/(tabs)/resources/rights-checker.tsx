@@ -3,7 +3,9 @@ import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
+
 type Answer = "yes" | "no" | null;
+
 
 export const options = { href: null };
 

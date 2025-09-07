@@ -1,11 +1,11 @@
+import type { WhatsNewItem } from "../data/whatsnew";
+import type { Faq } from "../data/faqs";
+import type { Research } from "../data/research";
+
 let AsyncStorage: any;
 try {
   AsyncStorage = require("@react-native-async-storage/async-storage").default;
 } catch {}
-
-import type { WhatsNewItem } from "../data/whatsnew";
-import type { Faq } from "../data/faqs";
-import type { Research } from "../data/research";
 
 const KEY_WHATS_NEW = "local:whatsnew:v1";
 const KEY_FAQS = "local:faqs:v1";

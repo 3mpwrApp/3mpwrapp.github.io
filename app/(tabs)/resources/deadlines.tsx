@@ -8,9 +8,11 @@ import * as Sharing from "expo-sharing";
 import * as FileSystem from "expo-file-system";
 import { addEvent } from "../../../services/calendar";
 
-export const options = { href: null };
+
 
 type Benefit = "WCB" | "LTD" | "CPP-D";
+
+export const options = { href: null };
 
 export default function Deadlines() {
   const palette = useAppPalette();
@@ -37,7 +39,7 @@ export default function Deadlines() {
     try {
       const ok = await Notifier.setupAsync();
       if (!ok) throw new Error("perm");
-      await Notifier.scheduleLocal(`Appeal deadline — ${benefit}`, `Check requirements before deadline.`);
+      await Notifier.scheduleLocal(`Appeal deadline Ã¢â‚¬â€ ${benefit}`, `Check requirements before deadline.`);
       Alert.alert("Reminder set", Platform.OS === 'android' ? "See notification channel 'Default'." : "A local reminder was scheduled.");
     } catch {
       Alert.alert("Reminder unavailable", "Enable notifications or add to your calendar.");
@@ -50,7 +52,7 @@ export default function Deadlines() {
       const d = new Date(decisionDate);
       const map: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
       const due = new Date(d.getTime() + map[benefit]*86400000);
-      const ics = buildICS({ title: `Appeal deadline — ${benefit}`, description: result, startISO: due.toISOString(), durationMinutes: 30 });
+      const ics = buildICS({ title: `Appeal deadline Ã¢â‚¬â€ ${benefit}`, description: result, startISO: due.toISOString(), durationMinutes: 30 });
       const path = FileSystem.cacheDirectory + `deadline_${Date.now()}.ics`;
       await FileSystem.writeAsStringAsync(path, ics, { encoding: FileSystem.EncodingType.UTF8 });
       if (await Sharing.isAvailableAsync()) {
@@ -86,7 +88,7 @@ export default function Deadlines() {
             const d = new Date(decisionDate);
             const map: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
             const due = new Date(d.getTime() + map[benefit]*86400000);
-            const ok = await addEvent({ title: `Appeal deadline — ${benefit}`, notes: result, startISO: due.toISOString(), durationMinutes: 30 });
+            const ok = await addEvent({ title: `Appeal deadline Ã¢â‚¬â€ ${benefit}`, notes: result, startISO: due.toISOString(), durationMinutes: 30 });
             Alert.alert(ok ? 'Added' : 'Not added', ok ? 'Event added to your calendar.' : 'Unable to add calendar event.');
           }} style={[styles.button, { marginTop: 8 }]}><Text style={styles.buttonText}>Add to calendar</Text></Pressable>
           <Pressable onPress={exportICS} style={[styles.button, { marginTop: 8 }]}><Text style={styles.buttonText}>Export ICS</Text></Pressable>

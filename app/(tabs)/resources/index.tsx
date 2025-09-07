@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { View, Text, StyleSheet, SectionList, RefreshControl, Pressable, Linking } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -66,20 +66,20 @@ export default function ResourcesScreen() {
       const data = await fetchResources();
       setItems(data);
       setOffline(false);
-    } catch (e) {
+    } catch {
       setError("Failed to load resources");
       setOffline(true);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [setOffline]);
 
   const { tick } = useRefresh();
   React.useEffect(() => { reload(); }, [reload, tick]);
 
   React.useEffect(() => { setCount("resources", items.length); }, [items, setCount]);
 
-  React.useEffect(() => { if (province && region === "all") setRegion(province as any); }, [province]);
+  React.useEffect(() => { if (province && region === "all") setRegion(province as any); }, [province, region]);
 
   useAnnounceOnChange(items.length, (n) => `${n} resources loaded`);
 

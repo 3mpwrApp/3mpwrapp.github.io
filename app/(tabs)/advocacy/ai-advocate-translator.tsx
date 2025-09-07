@@ -4,7 +4,7 @@ import { useAppPalette } from "../../../theme/usePalette";
 import { llmSimplify } from "../../../services/llm";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 
-export const options = { href: null };
+
 
 function simplify(text: string): string {
   const rules: [RegExp, string][] = [
@@ -20,6 +20,8 @@ function simplify(text: string): string {
   out = out.replace(/([.;:])(\s+)/g, '$1\n');
   return out.trim();
 }
+
+export const options = { href: null };
 
 export default function AiAdvocateTranslator() {
   const palette = useAppPalette();

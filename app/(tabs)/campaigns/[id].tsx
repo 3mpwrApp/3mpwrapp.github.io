@@ -1,4 +1,3 @@
-export const options = { href: null };
 import {
   View,
   Text,
@@ -7,7 +6,7 @@ import {
   Pressable,
   Share,
 } from "react-native";
-import { useLocalSearchParams, Stack } from "expo-router";
+import { useLocalSearchParams, Stack, router } from "expo-router";
 import { colors, type Palette } from "../../../theme/colors";
 import SettingsLink from "../../../components/SettingsLink";
 import { useTextScale } from "../../../theme/typography";
@@ -19,6 +18,7 @@ import {
 } from "../../../store/campaignsLocal";
 import { logEvent } from "../../../services/analytics";
 import { fsIncrementCampaignMembers } from "../../../services/firestore";
+
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -102,7 +102,6 @@ function CampaignDetailInner() {
             ]}
             onPress={() => {
               // open campaign room
-              const { router } = require("expo-router");
               router.push(`/(tabs)/campaigns/room/${campaign.id}`);
             }}
             accessibilityRole="button"
@@ -142,8 +141,9 @@ function CampaignDetailInner() {
   );
 }
 
+export const options = { href: null };
+
 export default function CampaignDetail() {
-  const scheme = useColorScheme();
   return (
     <CampaignsLocalProvider>
       <CampaignDetailInner />

@@ -24,7 +24,6 @@ function createInitial(): FavoritesState {
 let AsyncStorage: any;
 try {
   // Optional persistence if AsyncStorage is installed
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
   AsyncStorage = require("@react-native-async-storage/async-storage").default;
 } catch {}
 
@@ -95,4 +94,3 @@ export function useFavorites() {
   if (!ctx) throw new Error("useFavorites must be used within FavoritesProvider");
   return ctx;
 }
-

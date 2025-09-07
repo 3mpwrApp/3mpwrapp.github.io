@@ -4,9 +4,11 @@ import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 
-export const options = { href: null };
+
 
 type Note = { id: string; date: string; who?: string; topic?: string; summary?: string; audioUri?: string };
+
+export const options = { href: null };
 
 export default function VoiceNotes() {
   const palette = useAppPalette();
@@ -60,7 +62,7 @@ export default function VoiceNotes() {
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
-      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Voice‑to‑Case Notes</Text>
+      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>VoiceÃ¢â‚¬â€˜toÃ¢â‚¬â€˜Case Notes</Text>
       <Text style={s.subtitle}>Record audio notes and convert them into formatted case logs for doctors or tribunals.</Text>
       <Text style={s.label}>Date</Text>
       <TextInput style={s.input} value={date} onChangeText={setDate} />
@@ -80,7 +82,7 @@ export default function VoiceNotes() {
       <Text style={[s.subtitle,{ marginTop: 12 }]}>Saved notes</Text>
       {notes.length === 0 ? <Text style={s.tip}>No notes yet.</Text> : notes.map((n) => (
         <View key={n.id} style={s.card}>
-          <Text style={s.cardTitle}>{n.date} — {n.topic || 'Note'}</Text>
+          <Text style={s.cardTitle}>{n.date} Ã¢â‚¬â€ {n.topic || 'Note'}</Text>
           <Text style={s.cardText}>{caseLog(n)}</Text>
           <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
             <Pressable onPress={async () => { try { const mod = await import('expo-clipboard'); await mod.setStringAsync(caseLog(n)); Alert.alert('Copied','Log copied to clipboard.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Copy</Text></Pressable>

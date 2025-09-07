@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image, Linking } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -16,7 +16,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for
 import { useProfileLocal } from "../../store/profileLocal";
 import { exportBackup, importBackup, clearAllData } from "../../services/backup";
 import { usePrivacy } from "../../store/privacy";
-import TermsGate from "../../components/TermsGate";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function SettingsScreen() {
   const palette = useAppPalette();
@@ -77,7 +77,7 @@ export default function SettingsScreen() {
         aspect: [1, 1],
         quality: 0.7,
       });
-    } catch (e) {
+    } catch {
       Alert.alert(
         "Image Picker Unavailable",
         "Please rebuild the Android app to include expo-image-picker (npx expo run:android)."
@@ -237,12 +237,10 @@ function PrivacyBackupSection() {
 
 function TermsSection() {
   const openTerms = () => {
-    const { Linking } = require('react-native');
     Linking.openURL('https://empowr.app/terms').catch(() => {});
   };
   const reset = async () => {
     try {
-      const AsyncStorage = require('@react-native-async-storage/async-storage').default;
       await AsyncStorage.removeItem('empowr.terms.accepted.v1');
       Alert.alert('Reset', 'You will be asked to accept Terms on next launch.');
     } catch {}
@@ -251,7 +249,7 @@ function TermsSection() {
     <View>
       <Button title="View Terms" onPress={openTerms} />
       <View style={{ height: 8 }} />
-      <Button title="Require re‑acceptance" onPress={reset} />
+      <Button title="Require re-acceptance" onPress={reset} />
     </View>
   );
 }

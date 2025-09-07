@@ -6,9 +6,9 @@ import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { addEvent } from "../../../services/calendar";
 import { buildICSMany } from "../../../services/ics";
 
+
 type Appt = { id: string; time: string; title: string };
 
-export const options = { href: null };
 
 function makePlan(date: string, painAvg: number, energyAvg: number, appts: Appt[]) {
   const lines: string[] = [];
@@ -17,11 +17,13 @@ function makePlan(date: string, painAvg: number, energyAvg: number, appts: Appt[
   lines.push(`Pacing: work/rest ${pace}`);
   lines.push('Rest after appointments and before tasks that require focus.');
   lines.push('');
-  appts.sort((a,b)=>a.time.localeCompare(b.time)).forEach(a=>lines.push(`• ${a.time} — ${a.title}`));
+  appts.sort((a,b)=>a.time.localeCompare(b.time)).forEach(a=>lines.push(`Ã¢â‚¬Â¢ ${a.time} Ã¢â‚¬â€ ${a.title}`));
   lines.push('');
   lines.push('Suggested rest blocks: 11:00, 14:30');
   return lines.join('\n');
 }
+
+export const options = { href: null };
 
 export default function DailyPlanner() {
   const palette = useAppPalette();
@@ -109,9 +111,9 @@ export default function DailyPlanner() {
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Adaptive Daily Planner</Text>
       <Text style={s.subtitle}>Smart scheduling that factors in fatigue, pain flares, and appointments, with suggested rest breaks.</Text>
-      <Text style={s.label}>Date (YYYY‑MM‑DD)</Text>
+      <Text style={s.label}>Date (YYYYÃ¢â‚¬â€˜MMÃ¢â‚¬â€˜DD)</Text>
       <TextInput style={s.input} value={date} onChangeText={setDate} />
-      <Text style={s.tip}>Recent averages — Pain: {painAvg.toFixed(1)} / 10; Energy: {energyAvg.toFixed(1)} / 5</Text>
+      <Text style={s.tip}>Recent averages Ã¢â‚¬â€ Pain: {painAvg.toFixed(1)} / 10; Energy: {energyAvg.toFixed(1)} / 5</Text>
       <View style={{ height: 8 }} />
       <Text style={s.label}>Add appointment</Text>
       <TextInput style={s.input} value={time} onChangeText={setTime} placeholder="09:00" />
@@ -119,7 +121,7 @@ export default function DailyPlanner() {
       <Pressable onPress={addAppt} style={s.button}><Text style={s.buttonText}>Add</Text></Pressable>
       <View style={{ height: 8 }} />
       {appts.sort((a,b)=>a.time.localeCompare(b.time)).map(a => (
-        <View key={a.id} style={s.row}><Text style={s.rowText}>{a.time} — {a.title}</Text></View>
+        <View key={a.id} style={s.row}><Text style={s.rowText}>{a.time} Ã¢â‚¬â€ {a.title}</Text></View>
       ))}
       <View style={{ height: 8 }} />
       <Pressable onPress={build} style={s.button}><Text style={s.buttonText}>Build plan</Text></Pressable>

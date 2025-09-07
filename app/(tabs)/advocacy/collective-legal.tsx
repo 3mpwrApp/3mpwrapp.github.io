@@ -5,10 +5,12 @@ import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { fsAddViolationReport } from "../../../services/violations";
 
-export const options = { href: null };
+
 
 type Report = { id: string; type: string; province?: string; details?: string; createdAt: number };
 const TYPES = ['denied modified duties','refused accommodation','retaliation','benefit denial'];
+
+export const options = { href: null };
 
 export default function CollectiveLegal() {
   const palette = useAppPalette();
@@ -37,7 +39,7 @@ export default function CollectiveLegal() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Collective Legal Action Hub</Text>
-      <Text style={s.subtitle}>If multiple users report the same violation, Empowr groups cases for union/class‑action leverage.</Text>
+      <Text style={s.subtitle}>If multiple users report the same violation, Empowr groups cases for union/classÃ¢â‚¬â€˜action leverage.</Text>
       <Text style={s.label}>Violation type</Text>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 8 }}>
         {TYPES.map(t => (
@@ -52,7 +54,7 @@ export default function CollectiveLegal() {
 
       <Text style={[s.subtitle,{ marginTop: 12 }]}>Aggregated reports</Text>
       {Object.keys(byType).length===0 ? <Text style={s.tip}>No reports yet.</Text> : (
-        Object.entries(byType).map(([k,v]) => (<Text key={k} style={s.tip}>• {k}: {v}</Text>))
+        Object.entries(byType).map(([k,v]) => (<Text key={k} style={s.tip}>Ã¢â‚¬Â¢ {k}: {v}</Text>))
       )}
       <Text style={[s.tip,{ marginTop: 8 }]}>Note: Submissions are anonymous; contact details are not collected.</Text>
     </ScrollView>

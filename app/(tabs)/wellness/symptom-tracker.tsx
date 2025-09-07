@@ -6,6 +6,7 @@ import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { usePrivacy } from "../../../store/privacy";
 
+
 type Entry = {
   id: string;
   date: string; // ISO date
@@ -15,6 +16,7 @@ type Entry = {
   meds: string;
   tags?: string;
 };
+
 
 export const options = { href: null };
 
@@ -108,10 +110,10 @@ export default function SymptomTracker() {
     lines.push("Symptom & Pain Report");
     lines.push("");
     lines.push(`Entries: ${filtered.length}`);
-    lines.push(`Pain (0–10): avg ${avg}, range ${min}–${max}`);
+    lines.push(`Pain (0Ã¢â‚¬â€œ10): avg ${avg}, range ${min}Ã¢â‚¬â€œ${max}`);
     lines.push("");
     filtered.slice(0, 30).forEach((e) => {
-      lines.push(`• ${e.date}: pain ${e.pain || "?"}; symptoms: ${e.symptoms || "-"}; impact: ${e.impact || "-"}; meds: ${e.meds || "-"}`);
+      lines.push(`Ã¢â‚¬Â¢ ${e.date}: pain ${e.pain || "?"}; symptoms: ${e.symptoms || "-"}; impact: ${e.impact || "-"}; meds: ${e.meds || "-"}`);
     });
     lines.push("");
     lines.push("Advocacy summary:");
@@ -124,10 +126,10 @@ export default function SymptomTracker() {
   const body = (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Symptom & Pain Tracker</Text>
-      <Text style={styles.subtitle}>Log entries and generate an exportable, advocacy‑oriented report.</Text>
+      <Text style={styles.subtitle}>Log entries and generate an exportable, advocacyÃ¢â‚¬â€˜oriented report.</Text>
 
       <Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} />
-      <Field label="Pain (0–10)" value={pain} onChangeText={setPain} keyboardType="numeric" />
+      <Field label="Pain (0Ã¢â‚¬â€œ10)" value={pain} onChangeText={setPain} keyboardType="numeric" />
       <Field label="Symptoms" value={symptoms} onChangeText={setSymptoms} multiline />
       <Field label="Impact on work/daily life" value={impact} onChangeText={setImpact} multiline />
       <Field label="Meds taken / changes" value={meds} onChangeText={setMeds} multiline />
@@ -167,8 +169,8 @@ export default function SymptomTracker() {
       ) : (
         filtered.map((e) => (
           <View key={e.id} style={styles.entryRow}>
-            <Text style={styles.entryText}>{`${e.date} — pain ${e.pain || "?"}`}</Text>
-            {!!e.symptoms && <Text style={styles.entryNote}>• {e.symptoms}</Text>}
+            <Text style={styles.entryText}>{`${e.date} Ã¢â‚¬â€ pain ${e.pain || "?"}`}</Text>
+            {!!e.symptoms && <Text style={styles.entryNote}>Ã¢â‚¬Â¢ {e.symptoms}</Text>}
             {!!e.tags && <Text style={styles.entryNote}>tags: {e.tags}</Text>}
             <View style={{ flexDirection: 'row', gap: 8, marginTop: 6 }}>
               <Pressable onPress={() => startEdit(e)} accessibilityRole="button" style={[styles.smallBtn, { backgroundColor: palette.surface, borderColor: palette.muted, borderWidth: StyleSheet.hairlineWidth }]}>
@@ -255,7 +257,7 @@ export default function SymptomTracker() {
       <Text style={[styles.sectionTitle, { marginTop: 16 }]}>Filters (optional)</Text>
       <Field label="Start date (YYYY-MM-DD)" value={filterStart} onChangeText={setFilterStart} />
       <Field label="End date (YYYY-MM-DD)" value={filterEnd} onChangeText={setFilterEnd} />
-      <Field label="Min pain (0–10)" value={filterMinPain} onChangeText={setFilterMinPain} keyboardType="numeric" />
+      <Field label="Min pain (0Ã¢â‚¬â€œ10)" value={filterMinPain} onChangeText={setFilterMinPain} keyboardType="numeric" />
       <Field label="Tag contains" value={filterTag} onChangeText={setFilterTag} />
       <Pressable style={[styles.button, { marginTop: 8 }]} onPress={() => { setFilterStart(''); setFilterEnd(''); setFilterMinPain(''); setFilterTag(''); }}>
         <Text style={styles.buttonText}>Clear filters</Text>

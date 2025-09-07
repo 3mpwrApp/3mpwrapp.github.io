@@ -5,6 +5,8 @@ import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../
 import { supportOrgs } from "../../../data/support";
 import { useSettings } from "../../../store/settings";
 
+
+
 export const options = { href: null };
 
 export default function SupportDirectory() {
@@ -35,8 +37,8 @@ export default function SupportDirectory() {
         renderItem={({ item }) => (
           <View style={styles.row}>
             <Text style={styles.name}>{item.name}</Text>
-            <Text style={styles.meta}>{item.province}{item.accessible ? ' • Accessible' : ''}</Text>
-            {!!item.phone && <Text style={styles.meta}>☎ {item.phone}</Text>}
+            <Text style={styles.meta}>{item.province}{item.accessible ? ' Ã¢â‚¬Â¢ Accessible' : ''}</Text>
+            {!!item.phone && <Text style={styles.meta}>Ã¢ËœÅ½ {item.phone}</Text>}
             {!!item.url && (
               <Pressable accessibilityRole="link" accessibilityLabel={`Open ${item.name} website`} onPress={() => Linking.openURL(item.url!)}>
                 <Text style={[styles.meta, { textDecorationLine: 'underline' }]}>Website</Text>

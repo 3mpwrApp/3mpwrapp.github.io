@@ -11,12 +11,12 @@ export type ProfileLocal = {
 
 const KEY = "empowr.profile.local.v1";
 
-type Ctx = {
+type ProfileCtx = {
   profile: ProfileLocal;
   setProfile: (p: ProfileLocal) => Promise<void>;
 };
 
-const Ctx = React.createContext<Ctx | undefined>(undefined);
+const Ctx = React.createContext<ProfileCtx | undefined>(undefined);
 
 export function ProfileLocalProvider({ children }: { children: React.ReactNode }) {
   const [profile, setProfileState] = React.useState<ProfileLocal>({});
@@ -43,4 +43,3 @@ export function useProfileLocal() {
   if (!ctx) throw new Error("useProfileLocal must be used within ProfileLocalProvider");
   return ctx;
 }
-
