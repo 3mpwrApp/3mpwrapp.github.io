@@ -2,7 +2,7 @@ import { Platform } from "react-native";
 import { initializeApp, getApp, getApps, type FirebaseApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
-import { getFirestore, initializeFirestore } from "firebase/firestore";
+import { getFirestore, initializeFirestore, setLogLevel } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
@@ -58,3 +58,8 @@ export async function getFirebaseAnalytics(): Promise<any | null> {
     return null;
   }
 }
+
+// Reduce noisy Firestore warnings in development
+try {
+  setLogLevel("error");
+} catch {}

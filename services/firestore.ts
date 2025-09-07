@@ -1,4 +1,4 @@
-import { getFirebaseApp } from "../firebase/config";
+import { getFirebaseApp, db as sharedDb } from "../firebase/config";
 
 type Fire = typeof import("firebase/firestore");
 
@@ -15,10 +15,8 @@ async function ensure(): Promise<Fire | null> {
 }
 
 export async function getDB() {
-  const m = await ensure();
-  if (!m) return null;
-  const app = getFirebaseApp();
-  return m.getFirestore(app);
+  // Always reuse the singleton Firestore instance configured in firebase/config
+  return sharedDb ?? null;
 }
 
 // Campaigns
