@@ -51,6 +51,11 @@ export default function TabsLayout() {
         name="resources/templates-gallery"
         options={{ href: null }}
       />
+      <Tabs.Screen name="resources/justice-as-a-service" options={{ href: null }} />
+      <Tabs.Screen name="resources/impact-simulator" options={{ href: null }} />
+      <Tabs.Screen name="resources/myth-busting-hub" options={{ href: null }} />
+      <Tabs.Screen name="resources/case-timeline" options={{ href: null }} />
+      <Tabs.Screen name="resources/ai-decision-simplifier" options={{ href: null }} />
       <Tabs.Screen name="wellness/work-balance-ai" options={{ href: null }} />
       <Tabs.Screen name="wellness/grief-support" options={{ href: null }} />
       <Tabs.Screen

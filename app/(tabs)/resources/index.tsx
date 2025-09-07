@@ -360,6 +360,43 @@ export default function ResourcesScreen() {
         placeholder={t("resources.search", "Search resources...")}
       />
 
+      {/* Tools & Simulators */}
+      <View accessibilityLabel="Tools and simulators" accessible>
+        <Text accessibilityRole="header" style={styles.sectionTitle}>
+          Tools & Simulators
+        </Text>
+        <Link href={("/(tabs)/resources/justice-as-a-service" as any)} asChild>
+          <Card
+            title="Justice-as-a-Service"
+            subtitle="Generate anonymized struggle reports for advocacy, unions, or media"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/impact-simulator" as any)} asChild>
+          <Card
+            title="Impact Simulator"
+            subtitle="Model how policy or workplace changes affect disabled/injured people"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/myth-busting-hub" as any)} asChild>
+          <Card
+            title="Myth-Busting Knowledge Hub"
+            subtitle="Plain-language explainers for CPP-D, EI Sickness, Workers' Comp, and more"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/case-timeline" as any)} asChild>
+          <Card
+            title="Case Timeline Tracker"
+            subtitle="Organize documents, deadlines, hearings, and reminders"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/ai-decision-simplifier" as any)} asChild>
+          <Card
+            title="AI Decision Simplifier"
+            subtitle="Upload a decision letter and get a plain-language summary and next steps"
+          />
+        </Link>
+      </View>
+
       <SectionList<Resource>
         sections={sections}
         keyExtractor={(item) => item.id}
