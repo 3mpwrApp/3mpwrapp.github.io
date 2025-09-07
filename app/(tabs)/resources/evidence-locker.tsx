@@ -1,13 +1,15 @@
 import React from "react";
-export const options = { href: null };
 import { View, Text, StyleSheet, TextInput, Pressable, FlatList } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+
 
 let AsyncStorage: any;
 try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
 
 type Note = { id: string; text: string; date: string };
+
+export const options = { href: null };
 
 export default function EvidenceLocker() {
   const palette = useAppPalette();
@@ -36,7 +38,7 @@ export default function EvidenceLocker() {
         <Text style={styles.buttonText}>Add</Text>
       </Pressable>
       <FlatList data={notes} keyExtractor={(n) => n.id} renderItem={({ item }) => (
-        <View style={styles.noteRow}><Text style={styles.noteText}>{new Date(item.date).toLocaleString()} — {item.text}</Text></View>
+        <View style={styles.noteRow}><Text style={styles.noteText}>{new Date(item.date).toLocaleString()} Ã¢â‚¬â€ {item.text}</Text></View>
       )} contentContainerStyle={{ paddingTop: 12 }} />
     </View>
   );

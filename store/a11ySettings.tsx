@@ -9,14 +9,14 @@ type State = {
 
 const KEY = "empowr.a11y.settings.v1";
 
-type Ctx = {
+type A11yCtx = {
   state: State;
   toggleHighContrast: () => Promise<void>;
   setHighContrast: (val: boolean) => Promise<void>;
 };
 
 const DEFAULT: State = { highContrast: false };
-const Ctx = React.createContext<Ctx | undefined>(undefined);
+const Ctx = React.createContext<A11yCtx | undefined>(undefined);
 
 export function A11ySettingsProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<State>(DEFAULT);
@@ -52,7 +52,7 @@ export function A11ySettingsProvider({ children }: { children: React.ReactNode }
 
   const toggleHighContrast = async () => setHighContrast(!state.highContrast);
 
-  const value: Ctx = { state, toggleHighContrast, setHighContrast };
+  const value: A11yCtx = { state, toggleHighContrast, setHighContrast };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 

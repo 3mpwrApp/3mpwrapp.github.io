@@ -1,4 +1,3 @@
-export const options = { href: null };
 import {
   View,
   Text,
@@ -7,7 +6,7 @@ import {
   Pressable,
   Share,
 } from "react-native";
-import { useLocalSearchParams, Stack } from "expo-router";
+import { useLocalSearchParams, Stack, router } from "expo-router";
 import { colors, type Palette } from "../../../theme/colors";
 import SettingsLink from "../../../components/SettingsLink";
 import { useTextScale } from "../../../theme/typography";
@@ -19,6 +18,7 @@ import {
 } from "../../../store/campaignsLocal";
 import { logEvent } from "../../../services/analytics";
 import { fsIncrementCampaignMembers } from "../../../services/firestore";
+
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -100,9 +100,27 @@ function CampaignDetailInner() {
               styles.ghost,
               pressed && { opacity: 0.8 },
             ]}
+            onPress={() => {
+              // open campaign room
+              router.push(`/(tabs)/campaigns/room/${campaign.id}`);
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Open campaign room"
+            focusable
+          >
+            <Text style={styles.linkText}>Open Campaign Room</Text>
+          </Pressable>
+        )}
+
+        {!!campaign && (
+          <Pressable
+            style={({ pressed }) => [
+              styles.ghost,
+              pressed && { opacity: 0.8 },
+            ]}
             onPress={async () => {
               try {
-                const msg = `${campaign.title} — ${campaign.summary}`;
+                const msg = `${campaign.title} - ${campaign.summary}`;
                 await Share.share({
                   title: campaign.title,
                   message: msg,
@@ -123,8 +141,9 @@ function CampaignDetailInner() {
   );
 }
 
+export const options = { href: null };
+
 export default function CampaignDetail() {
-  const scheme = useColorScheme();
   return (
     <CampaignsLocalProvider>
       <CampaignDetailInner />

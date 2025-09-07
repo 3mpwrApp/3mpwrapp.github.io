@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public read collections (optional): campaigns
+    match /campaigns/{id} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Community threads and comments
+    match /threads/{id} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update, delete: if false; // restrict updates server-side
+    }
+    match /comments/{id} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update, delete: if false;
+    }
+
+    // Campaign rooms (collab): tasks subcollection and notes doc
+    match /campaign_rooms/{roomId} {
+      allow read: if true;
+      allow write: if request.auth != null; // or restrict by membership
+      match /tasks/{taskId} {
+        allow read: if true;
+        allow write: if request.auth != null;
+      }
+      match /{docId} {
+        allow read: if true;
+        allow write: if request.auth != null;
+      }
+    }
+
+    // Violation reports (anonymous aggregation)
+    match /violations/{id} {
+      allow read: if false; // keep private by default
+      allow create: if request.auth != null; // or allow if true for anon
+    }
+    match /violation_counts/{type} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
+

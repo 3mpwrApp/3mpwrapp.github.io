@@ -68,3 +68,27 @@ Notes
 
 Notes
 - The app does not download or extract audio from YouTube to respect YouTube Terms of Service. It links out to YouTube for playback.
+
+## Firestore Rules
+
+A sample rules file is included at `firebase/firestore.rules`. To deploy:
+
+1. Install Firebase CLI and login: `npm i -g firebase-tools && firebase login`
+2. Initialize in this project (once): `firebase init firestore` (choose existing project, skip overwriting rules if desired)
+3. Deploy rules: `firebase deploy --only firestore:rules`
+
+Use `firebase emulators:start` during development to test reads/writes locally.
+
+## LLM Backend (optional)
+
+Some advocacy tools can call a server for improved summaries if `EXPO_PUBLIC_LLM_BASE` is set.
+
+- Expected endpoints:
+  - `POST /simplify` -> `{ summary: string }`
+  - `POST /interpret` -> `{ summary: string, next: string[] }`
+
+Without this var, the app uses offline deterministic fallbacks.
+
+## Mandatory Terms Gate
+
+On first open, users must accept Terms to proceed. See `components/TermsGate.tsx`. Host your Terms at `https://empowr.app/terms` or update the URL inside the component.

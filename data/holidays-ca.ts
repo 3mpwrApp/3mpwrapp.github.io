@@ -1,4 +1,5 @@
 import type { Event } from "./events";
+import type { ProvinceCode } from "../types/models";
 
 function pad2(n: number) {
   return String(n).padStart(2, "0");
@@ -71,7 +72,6 @@ export function generateCanadianHolidays(year: number): Event[] {
   return events;
 }
 
-import type { ProvinceCode } from "../types/models";
 
 export function generateProvincialHolidays(year: number, province: ProvinceCode | null): Event[] {
   const events: Event[] = [];

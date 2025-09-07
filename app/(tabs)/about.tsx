@@ -32,6 +32,7 @@ export default function AboutScreen() {
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.text}>Empowr supports injured workers, the disability community, advocates and allies with tools, resources, and updates.</Text>
+      <Text style={styles.text}>Vision: a full life‑cycle empowerment hub — starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.</Text>
       <Text style={styles.text}>Questions, suggestions, or requests? Reach out anytime.</Text>
       <Text style={styles.text}>Email: {EMAIL}</Text>
       <TextInput style={styles.input} value={subject} onChangeText={setSubject} placeholder="Subject" placeholderTextColor={palette.text} accessibilityLabel="Subject" />
@@ -53,4 +54,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     buttonText: { color: palette.onPrimary, fontSize: 16, fontWeight: "700" },
   });
 }
-

@@ -1,27 +1,64 @@
 {
-  "nav": {
-    "home": "Inicio",
-    "campaigns": "Campañas",
-    "community": "Comunidad",
-    "advocacy": "Defensa",
-    "podcasts": "Podcasts y relatos",
-    "resources": "Recursos",
-    "events": "Eventos",
-    "wellness": "Bienestar",
-    "profile": "Perfil"
-  },
-  "home": {
-    "title": "Bienvenido a Empowr",
-    "subtitle": "Apoyo. Defensa. Empoderamiento.",
-    "welcome": "¡Bienvenido! Este es tu centro para comunidad, educación, herramientas de defensa y podcasts — ¡todo en un solo lugar!"
-  },
-  "header": {
-    "favorites": "Favs",
-    "items": "Elementos",
-    "openProfile": "Abrir perfil",
-    "signIn": "Iniciar sesión",
-    "signOut": "Cerrar sesión",
-    "refresh": "Actualizar todo"
-  }
+    "nav":  {
+                "home":  "Inicio",
+                "campaigns":  "Campañas",
+                "community":  "Comunidad",
+                "advocacy":  "Defensa",
+                "podcasts":  "Podcasts y relatos",
+                "resources":  "Recursos",
+                "events":  "Eventos",
+                "wellness":  "Bienestar",
+                "profile":  "Perfil"
+            },
+    "home":  {
+                 "title":  "Bienvenido a Empowr",
+                 "subtitle":  "Apoyo. Defensa. Empoderamiento.",
+                 "welcome":  "¡Bienvenido! Este es tu centro para comunidad, educación, herramientas de defensa y podcasts — ¡todo en un solo lugar!"
+             },
+    "header":  {
+                   "favorites":  "Favs",
+                   "items":  "Elementos",
+                   "openProfile":  "Abrir perfil",
+                   "signIn":  "Iniciar sesión",
+                   "signOut":  "Cerrar sesión",
+                   "refresh":  "Actualizar todo"
+               },
+    "resources":  {
+                      "tools":  {
+                                    "deadlines":  "Calculadora de plazos + recordatorios",
+                                    "evidence":  "Generador de lista de evidencias",
+                                    "voice_notes":  "Notas de voz a registro de caso",
+                                    "templates":  "Galería de plantillas"
+                                }
+                  },
+    "wellness":  {
+                     "tools":  {
+                                   "symptom":  "Seguimiento de síntomas y dolor (reporte)",
+                                   "sleep":  "Seguimiento de sueño y energía (resumen médico)",
+                                   "selfcare":  "Biblioteca de autocuidado accesible",
+                                   "work_balance":  "Bienestar + equilibrio laboral (IA)",
+                                   "grief":  "Duelo e identidad — apoyo",
+                                   "adaptive_meditation":  "Meditación y relajación adaptadas",
+                                   "rehab_games":  "Juegos de rehabilitaci�n virtual (movimiento suave)",
+                                   "daily_planner":  "Planificador diario adaptativo"
+                               },
+                     "rehab":  {
+                                   "subtitle":  "Mini-juegos accesibles para movimiento suave y ejercicios tipo fisio. Adapta y detente si aumenta el dolor.",
+                                   "title":  "Juegos de rehabilitaci�n virtuales"
+                               },
+                     "achievements":  {
+                                          "subtitle":  "Gana insignias mientras construyes rutinas saludables.",
+                                          "title":  "Logros"
+                                      }
+                 },
+    "advocacy":  {
+                     "tools":  {
+                                   "self_coach":  "Entrenador de auto-defensa (microlecciones)",
+                                   "policy_simple":  "Políticas simplificadas",
+                                   "ai_translator":  "Traductor administrativo (lenguaje claro)",
+                                   "ai_case":  "Intérprete de casos (resumen)",
+                                   "collective":  "Centro de acción legal colectiva",
+                                   "ai_gov":  "Navegador gubernamental IA"
+                               }
+                 }
 }
-

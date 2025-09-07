@@ -1,7 +1,4 @@
-import React from "react";
-export const options = { href: null };
 import {
-  View,
   Text,
   StyleSheet,
   useColorScheme,
@@ -15,6 +12,8 @@ import { colors, type Palette } from "../../../theme/colors";
 import { useTextScale } from "../../../theme/typography";
 import { useFavorites } from "../../../store/favorites";
 import { logEvent } from "../../../services/analytics";
+
+export const options = { href: null };
 
 export default function PodcastDetail() {
   const { id, title, description, duration } = useLocalSearchParams<{
@@ -74,7 +73,7 @@ export default function PodcastDetail() {
             ]}
             onPress={async () => {
               try {
-                const msg = `${title ?? "Podcast"} — ${description ?? ""}`;
+                const msg = `${title ?? "Podcast"} â€” ${description ?? ""}`;
                 await Share.share({
                   title: title ?? "Podcast",
                   message: msg,

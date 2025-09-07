@@ -1,3 +1,4 @@
+/* eslint import/no-named-as-default: off */
 import { ReactNode } from "react";import { ScrollView, View, StyleSheet } from "react-native";import { ThemedView } from "./ThemedView";import useColorScheme from "../hooks/useColorScheme";
 export default function ParallaxScrollView({
   children,

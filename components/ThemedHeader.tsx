@@ -21,7 +21,7 @@ export default function ThemedHeader() {
   const { state } = useFavorites();
   const { counts } = useCounts();
   const { refreshAll } = useRefresh();
-  const { offline } = useNetwork();
+  const { offline, syncing } = useNetwork();
   const { user, signOut } = useAuth();
   const { t } = useTranslation();
 
@@ -35,8 +35,7 @@ export default function ThemedHeader() {
   const pathname = usePathname();
   React.useEffect(() => {
     if (menuOpen) setMenuOpen(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname]);
+  }, [pathname, menuOpen]);
   return (
     <SafeAreaView style={styles.container} accessibilityRole="header">
       {/* Brand */}
@@ -133,6 +132,7 @@ export default function ThemedHeader() {
             counts.podcasts +
             counts.events}
           {offline ? " • Offline" : ""}
+          {syncing ? " • Syncing…" : ""}
         </Text>
 
         {/* Refresh */}

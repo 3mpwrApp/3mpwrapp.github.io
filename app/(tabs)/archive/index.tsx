@@ -7,6 +7,9 @@ import { whatsnew } from "../../../data/whatsnew";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
 
+
+export const options = { href: null };
+
 export default function ArchiveScreen() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
@@ -46,4 +49,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     itemText: { color: palette.text, opacity: 0.9 },
   });
 }
-export const options = { href: null };

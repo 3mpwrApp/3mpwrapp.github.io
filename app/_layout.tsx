@@ -1,9 +1,11 @@
-﻿import React from "react";
+import React from "react";
 import { AccessibilityInfo, View, Text, StyleSheet } from "react-native";
 import { Stack, usePathname } from "expo-router";
 
 import Header from "../components/ThemedHeader";
 import Footer from "../components/ThemedFooter";
+import TermsGate from "../components/TermsGate";
+import ChangelogGate from "../components/ChangelogGate";
 
 import { FavoritesProvider } from "../store/favorites";
 import { CountsProvider } from "../store/counts";
@@ -14,6 +16,8 @@ import { AuthProvider } from "../context/AuthContext";
 import { SettingsProvider } from "../store/settings";
 import { A11ySettingsProvider } from "../store/a11ySettings";
 import { I18nProvider } from "../i18n";
+import { ProfileLocalProvider } from "../store/profileLocal";
+import { PrivacyProvider } from "../store/privacy";
 
 import * as Notifier from "../services/notifications";
 // Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
@@ -70,6 +74,8 @@ export default function RootLayout() {
     <I18nProvider>
       <A11ySettingsProvider>
         <SettingsProvider>
+          <ProfileLocalProvider>
+            <PrivacyProvider>
           {/* Ã°Å¸â€Â¹ Firebase Auth Provider wraps the app */}
           <AuthProvider>
             <FavoritesProvider>
@@ -80,6 +86,8 @@ export default function RootLayout() {
                       <OfflineBanner />
                       <Header />
                     </View>
+                    <TermsGate>
+                    <ChangelogGate>
                     <Stack
                       screenOptions={{
                         animation: reduceMotion ? "none" : "default",
@@ -102,12 +110,16 @@ export default function RootLayout() {
                         options={{ presentation: "modal" }}
                       />
                     </Stack>
+                    </ChangelogGate>
+                    </TermsGate>
                     <Footer />
                   </RefreshProvider>
                 </NetworkProvider>
               </CountsProvider>
             </FavoritesProvider>
           </AuthProvider>
+            </PrivacyProvider>
+          </ProfileLocalProvider>
         </SettingsProvider>
       </A11ySettingsProvider>
     </I18nProvider>

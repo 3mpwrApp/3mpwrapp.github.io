@@ -16,6 +16,11 @@ import {
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useProfileLocal } from "../../../store/profileLocal";
+import { buildCombinedEvidenceSummary } from "../../../services/insights";
+import { logEvent } from "../../../services/analytics";
+
+
 
 export const options = { href: null };
 
@@ -27,13 +32,14 @@ export default function AppealLetter() {
 
   useAnnounceOnMount("Appeal letter");
   useFocusOnRefOnMount(titleRef);
+  const { profile } = useProfileLocal();
 
-  const [name, setName] = React.useState("");
+  const [name, setName] = React.useState(profile.name ?? "");
   const [claim, setClaim] = React.useState("");
   const [decisionDate, setDecisionDate] = React.useState("");
   const [reasons, setReasons] = React.useState("");
   const [appealArgs, setAppealArgs] = React.useState("");
-  const [contact, setContact] = React.useState("");
+  const [contact, setContact] = React.useState(profile.contact ?? "");
 
   const preview = React.useMemo(() => {
     return (
@@ -82,11 +88,39 @@ export default function AppealLetter() {
 
       <Pressable
         style={styles.button}
-        onPress={() =>
-          Share.share({ message: preview, title: "Appeal Letter" }).catch(() => {})
-        }
+        onPress={() => {
+          logEvent('letter_share', { type: 'appeal' });
+          Share.share({ message: preview, title: "Appeal Letter" }).catch(() => {});
+        }}
       >
         <Text style={styles.buttonText}>Share</Text>
+      </Pressable>
+
+      <Pressable
+        style={[styles.button, { marginTop: 8 }]}
+        onPress={async () => {
+          const ins = await buildCombinedEvidenceSummary();
+          logEvent('letter_insert_from_trackers', { type: 'appeal' });
+          setAppealArgs((prev) => (prev ? prev + "\n\n" : "") + ins);
+          Alert.alert("Inserted", "Added tracker summary to your arguments.");
+        }}
+      >
+        <Text style={styles.buttonText}>Insert from trackers</Text>
+      </Pressable>
+
+      <Pressable
+        style={[styles.button, { marginTop: 8 }]}
+        onPress={async () => {
+          try {
+            const mod = await import("expo-clipboard");
+            await mod.setStringAsync(preview);
+            Alert.alert("Copied", "Letter copied to clipboard.");
+          } catch {
+            Alert.alert("Clipboard not available", "Install expo-clipboard in a dev build to enable copy.");
+          }
+        }}
+      >
+        <Text style={styles.buttonText}>Copy to clipboard</Text>
       </Pressable>
 
       <Pressable
@@ -98,6 +132,7 @@ export default function AppealLetter() {
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")}</pre>`;
             const { uri } = await mod.printToFileAsync({ html });
+            logEvent('letter_export_pdf', { type: 'appeal' });
             await Share.share({ url: uri, title: "Appeal Letter" });
           } catch {
             Alert.alert(
@@ -108,6 +143,24 @@ export default function AppealLetter() {
         }}
       >
         <Text style={styles.buttonText}>Export as PDF</Text>
+      </Pressable>
+      <Pressable
+        style={[styles.button, { marginTop: 8 }]}
+        onPress={async () => {
+          try {
+            const FS = await import("expo-file-system");
+            const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${preview
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")}</pre></body></html>`;
+            const path = FS.cacheDirectory + `appeal_${Date.now()}.doc`;
+            await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 });
+            await Share.share({ url: path, title: "Appeal Letter (.doc)" });
+          } catch {
+            Alert.alert("Export failed", "Could not create .doc file.");
+          }
+        }}
+      >
+        <Text style={styles.buttonText}>Export as .doc</Text>
       </Pressable>
     </ScrollView>
   );

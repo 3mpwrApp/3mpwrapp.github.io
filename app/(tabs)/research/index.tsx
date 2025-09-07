@@ -7,9 +7,11 @@ import { researchItems } from "../../../data/research";
 import SearchBar from "../../../components/SearchBar";
 import Card from "../../../components/Card";
 import { Link } from "expo-router";
-import type { Href } from "expo-router";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
+
+
+export const options = { href: null };
 
 export default function ResearchScreen() {
   const palette = useAppPalette();
@@ -78,7 +80,7 @@ export default function ResearchScreen() {
           <Link href={{ pathname: "/(tabs)/research/[id]", params: { id: item.id } } as any} asChild>
             <Card
               title={item.title}
-              subtitle={`${item.source} • ${item.year}`}
+              subtitle={`${item.source} Ã¢â‚¬Â¢ ${item.year}`}
               left={
                 <View style={{ backgroundColor: palette.primary, paddingHorizontal: 8, paddingVertical: 4, borderRadius: 12 }}>
                   <Text style={{ color: palette.onPrimary, fontSize: 12 }}>{item.topics[0]}</Text>
@@ -105,4 +107,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     chipTextActive: { color: palette.onPrimary },
   });
 }
-export const options = { href: null };

@@ -6,7 +6,6 @@ import { useCommunity, CommunityProvider } from "../../../../store/community";
 import { HIT_SLOP_8, touchTarget } from "../../../../constants/a11y";
 import { useAuth } from "../../../../context/AuthContext";
 
-export const options = { href: null };
 
 function ThreadInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -71,6 +70,8 @@ function ThreadInner() {
     </View>
   );
 }
+
+export const options = { href: null };
 
 export default function ThreadScreen() {
   return (

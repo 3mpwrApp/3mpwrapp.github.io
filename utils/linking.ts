@@ -24,8 +24,7 @@ export async function openExternalUrl(url: string) {
     const supported = await Linking.canOpenURL(url);
     if (!supported) throw new Error("Cannot open URL");
     await Linking.openURL(url);
-  } catch (e) {
+  } catch {
     console.warn("openExternalUrl blocked:", url);
   }
 }
-

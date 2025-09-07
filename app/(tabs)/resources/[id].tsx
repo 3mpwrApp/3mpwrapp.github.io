@@ -1,5 +1,4 @@
 import React from "react";
-export const options = { href: null };
 import {
   View,
   Text,
@@ -13,9 +12,10 @@ import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import { resources } from "../../../data/resources";
-import type { Resource } from "../../../types/models";
 import { useFavorites } from "../../../store/favorites";
 import SettingsLink from "../../../components/SettingsLink";
+
+export const options = { href: null };
 
 export default function ResourceDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();

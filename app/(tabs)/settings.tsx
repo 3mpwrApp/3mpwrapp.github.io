@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image, Linking } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -13,6 +13,10 @@ import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
+import { useProfileLocal } from "../../store/profileLocal";
+import { exportBackup, importBackup, clearAllData } from "../../services/backup";
+import { usePrivacy } from "../../store/privacy";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function SettingsScreen() {
   const palette = useAppPalette();
@@ -73,7 +77,7 @@ export default function SettingsScreen() {
         aspect: [1, 1],
         quality: 0.7,
       });
-    } catch (e) {
+    } catch {
       Alert.alert(
         "Image Picker Unavailable",
         "Please rebuild the Android app to include expo-image-picker (npx expo run:android)."
@@ -142,9 +146,114 @@ export default function SettingsScreen() {
         <Button title="Update Name" onPress={handleUpdateDisplayName} />
       </Section>
 
-      {/* dY"1 Keep rest of your settings */}
-      {/* ... existing Display, Language, Region, Links sections ... */}
+      {/* Local profile for templates */}
+      <Section title="Local Profile (for templates)" styles={styles}>
+        <LocalProfileSection />
+      </Section>
+
+      {/* Privacy & Backups */}
+      <Section title="Privacy & Backups" styles={styles}>
+        <PrivacyBackupSection />
+      </Section>
+
+      <Section title="Terms & Policies" styles={styles}>
+        <TermsSection />
+      </Section>
     </ScrollView>
+  );
+}
+
+function LocalProfileSection() {
+  const palette = useAppPalette();
+  const s = createStyles(palette);
+  const { profile, setProfile } = useProfileLocal();
+  const [name, setName] = useState(profile.name ?? "");
+  const [contact, setContact] = useState(profile.contact ?? "");
+  const [province, setProvince] = useState(profile.province ?? "");
+  return (
+    <View>
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Name</Text>
+      <TextInput style={s.input} value={name} onChangeText={setName} placeholder="Your name" />
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Contact (email/phone)</Text>
+      <TextInput style={s.input} value={contact} onChangeText={setContact} placeholder="you@example.com" />
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Province (e.g., ON, QC)</Text>
+      <TextInput style={s.input} value={province} onChangeText={setProvince} placeholder="ON" autoCapitalize="characters" maxLength={2} />
+      <Button title="Save" onPress={() => setProfile({ name, contact, province })} />
+    </View>
+  );
+}
+
+function PrivacyBackupSection() {
+  const palette = useAppPalette();
+  const s = createStyles(palette);
+  const { state, setPasscode, setLockWellness } = usePrivacy();
+  const onExport = async () => {
+    const bundle = await exportBackup();
+    if (!bundle) return Alert.alert("Export failed", "Storage unavailable.");
+    try {
+      const FS = await import("expo-file-system");
+      const path = FS.cacheDirectory + `empowr_backup_${Date.now()}.json`;
+      await FS.writeAsStringAsync(path, JSON.stringify(bundle, null, 2));
+      const Share = await import("expo-sharing");
+      if (Share?.isAvailableAsync && (await Share.isAvailableAsync())) {
+        await Share.shareAsync(path);
+      } else {
+        Alert.alert("Backup ready", "Backup file saved to cache.");
+      }
+    } catch {
+      Alert.alert("Export failed", "Could not create file.");
+    }
+  };
+  const onImport = async () => {
+    try {
+      const Doc = await import("expo-document-picker");
+      const res = await Doc.getDocumentAsync({ type: "application/json" });
+      if (res.canceled || !res.assets?.length) return;
+      const uri = res.assets[0].uri;
+      const FS = await import("expo-file-system");
+      const raw = await FS.readAsStringAsync(uri);
+      const ok = await importBackup(JSON.parse(raw));
+      Alert.alert(ok ? "Imported" : "Import failed", ok ? "Backup restored." : "Could not restore backup.");
+    } catch {
+      Alert.alert("Import failed", "Unable to read backup file.");
+    }
+  };
+  const onClear = async () => {
+    const ok = await clearAllData();
+    Alert.alert(ok ? "Cleared" : "Failed", ok ? "Local app data cleared." : "Unable to clear data.");
+  };
+  return (
+    <View>
+      <Text style={s.rowLabel}>Set/Change Passcode</Text>
+      <TextInput style={s.input} placeholder="New passcode" secureTextEntry onSubmitEditing={(e) => setPasscode(e.nativeEvent.text || undefined)} />
+      <View style={{ height: 8 }} />
+      <Button title={state.lockWellness ? "Disable Wellness Lock" : "Enable Wellness Lock"} onPress={() => setLockWellness(!state.lockWellness)} />
+      <View style={{ height: 12 }} />
+      <Button title="Export backup" onPress={onExport} />
+      <View style={{ height: 8 }} />
+      <Button title="Import backup" onPress={onImport} />
+      <View style={{ height: 8 }} />
+      <Button title="Clear all local data" onPress={onClear} />
+    </View>
+  );
+}
+
+function TermsSection() {
+  const openTerms = () => {
+    Linking.openURL('https://empowr.app/terms').catch(() => {});
+  };
+  const reset = async () => {
+    try {
+      await AsyncStorage.removeItem('empowr.terms.accepted.v1');
+      Alert.alert('Reset', 'You will be asked to accept Terms on next launch.');
+    } catch {}
+  };
+  return (
+    <View>
+      <Button title="View Terms" onPress={openTerms} />
+      <View style={{ height: 8 }} />
+      <Button title="Require re-acceptance" onPress={reset} />
+    </View>
   );
 }
 

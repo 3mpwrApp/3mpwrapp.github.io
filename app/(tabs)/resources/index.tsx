@@ -1,9 +1,8 @@
-﻿import React from "react";
+import React from "react";
 import { View, Text, StyleSheet, SectionList, RefreshControl, Pressable, Linking } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTranslation } from "../../../i18n";
-import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
 import SettingsLink from "../../../components/SettingsLink";
@@ -42,8 +41,7 @@ type CategoryFilter = "all" | ResourceCategory;
 
 export default function ResourcesScreen() {
   const palette = useAppPalette();
-  const { factor } = useTextScale();
-  const styles = createStyles(palette, factor);
+  const styles = createStyles(palette);
   const { t } = useTranslation();
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Resources");
@@ -66,20 +64,20 @@ export default function ResourcesScreen() {
       const data = await fetchResources();
       setItems(data);
       setOffline(false);
-    } catch (e) {
+    } catch {
       setError("Failed to load resources");
       setOffline(true);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [setOffline]);
 
   const { tick } = useRefresh();
   React.useEffect(() => { reload(); }, [reload, tick]);
 
   React.useEffect(() => { setCount("resources", items.length); }, [items, setCount]);
 
-  React.useEffect(() => { if (province && region === "all") setRegion(province as any); }, [province]);
+  React.useEffect(() => { if (province && region === "all") setRegion(province as any); }, [province, region]);
 
   useAnnounceOnChange(items.length, (n) => `${n} resources loaded`);
 
@@ -125,11 +123,34 @@ export default function ResourcesScreen() {
         <Text style={[styles.subtitle, { opacity: 0.75 }]}>Tip: Set your province in Settings to filter resources.</Text>
       )}
 
+      <Text accessibilityRole="header" style={[styles.sectionTitle, { marginTop: 4 }]}>AI Tools</Text>
+      <Link href={"/(tabs)/resources/rights-checker" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Automated Rights Checker</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/appeal-coach" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>AI “Appeal Coach”</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/deadlines" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.deadlines','Deadline Calculator + Reminders')}</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.evidence','Evidence Checklist Generator')}</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/voice-notes" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.voice_notes','Voice‑to‑Case Notes Tool')}</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/templates-gallery" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.templates','Template Gallery')}</Text>
+      </Link>
+      <Text accessibilityRole="header" style={[styles.sectionTitle, { marginTop: 10 }]}>AI-Generated Letter Templates</Text>
       <Link href={"/(tabs)/resources/letter-accommodation" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Accommodation Letter</Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-appeal" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Appeal Letter</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/letter-union-request" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Union Representation/Request Letter</Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-reconsideration" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Reconsideration Letter</Text>
@@ -222,7 +243,7 @@ export default function ResourcesScreen() {
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background, padding: 16 },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },

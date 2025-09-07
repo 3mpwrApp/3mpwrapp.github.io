@@ -1,5 +1,4 @@
 import React from "react";
-export const options = { href: null };
 import {
   View,
   Text,
@@ -16,6 +15,12 @@ import {
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useProfileLocal } from "../../../store/profileLocal";
+import { buildSymptomSummary } from "../../../services/insights";
+import { logEvent } from "../../../services/analytics";
+
+
+export const options = { href: null };
 
 export default function AccommodationLetter() {
   const palette = useAppPalette();
@@ -25,7 +30,8 @@ export default function AccommodationLetter() {
   useAnnounceOnMount("Accommodation letter");
   useFocusOnRefOnMount(titleRef);
 
-  const [name, setName] = React.useState("");
+  const { profile } = useProfileLocal();
+  const [name, setName] = React.useState(profile.name ?? "");
   const [employer, setEmployer] = React.useState("");
   const [jobTitle, setJobTitle] = React.useState("");
   const [limitations, setLimitations] = React.useState("");
@@ -80,11 +86,39 @@ export default function AccommodationLetter() {
 
       <Pressable
         style={styles.button}
-        onPress={() =>
-          Share.share({ message: preview, title: "Accommodation Request" }).catch(() => {})
-        }
+        onPress={() => {
+          logEvent('letter_share', { type: 'accommodation' });
+          Share.share({ message: preview, title: "Accommodation Request" }).catch(() => {});
+        }}
       >
         <Text style={styles.buttonText}>Share</Text>
+      </Pressable>
+
+      <Pressable
+        style={[styles.button, { marginTop: 8 }]}
+        onPress={async () => {
+          const ins = await buildSymptomSummary();
+          logEvent('letter_insert_from_trackers', { type: 'accommodation' });
+          setLimitations((prev) => (prev ? prev + "\n\n" : "") + ins);
+          Alert.alert("Inserted", "Added symptom summary to limitations.");
+        }}
+      >
+        <Text style={styles.buttonText}>Insert from trackers</Text>
+      </Pressable>
+
+      <Pressable
+        style={[styles.button, { marginTop: 8 }]}
+        onPress={async () => {
+          try {
+            const mod = await import("expo-clipboard");
+            await mod.setStringAsync(preview);
+            Alert.alert("Copied", "Letter copied to clipboard.");
+          } catch {
+            Alert.alert("Clipboard not available", "Install expo-clipboard in a dev build to enable copy.");
+          }
+        }}
+      >
+        <Text style={styles.buttonText}>Copy to clipboard</Text>
       </Pressable>
 
       <Pressable
@@ -96,6 +130,7 @@ export default function AccommodationLetter() {
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")}</pre>`;
             const { uri } = await mod.printToFileAsync({ html });
+            logEvent('letter_export_pdf', { type: 'accommodation' });
             await Share.share({ url: uri, title: "Accommodation Request" });
           } catch {
             Alert.alert(
@@ -106,6 +141,24 @@ export default function AccommodationLetter() {
         }}
       >
         <Text style={styles.buttonText}>Export as PDF</Text>
+      </Pressable>
+      <Pressable
+        style={[styles.button, { marginTop: 8 }]}
+        onPress={async () => {
+          try {
+            const FS = await import("expo-file-system");
+            const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${preview
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")}</pre></body></html>`;
+            const path = FS.cacheDirectory + `accommodation_${Date.now()}.doc`;
+            await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 });
+            await Share.share({ url: path, title: "Accommodation Request (.doc)" });
+          } catch {
+            Alert.alert("Export failed", "Could not create .doc file.");
+          }
+        }}
+      >
+        <Text style={styles.buttonText}>Export as .doc</Text>
       </Pressable>
     </ScrollView>
   );

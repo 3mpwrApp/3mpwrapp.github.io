@@ -1,4 +1,3 @@
-import React from "react";
 import { Pressable, ViewStyle } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useSettings } from "../store/settings";
@@ -18,4 +17,3 @@ export default function ContrastToggle({ style }: { style?: ViewStyle }) {
     </Pressable>
   );
 }
-

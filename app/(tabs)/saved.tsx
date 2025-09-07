@@ -1,5 +1,5 @@
-﻿import React from "react";
-import { View, Text, StyleSheet, useColorScheme, SectionList } from "react-native";
+import React from "react";
+import { View, Text, StyleSheet, SectionList } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
@@ -18,7 +18,6 @@ import ContrastToggle from "../../components/ContrastToggle";
 type SectionItem = (Podcast & { kind: "podcast" }) | (Resource & { kind: "resource" }) | (Campaign & { kind: "campaign" });
 
 export default function SavedScreen() {
-  const scheme = useColorScheme();
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);

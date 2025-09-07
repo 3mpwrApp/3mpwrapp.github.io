@@ -2,7 +2,6 @@ import React from "react";
 import type { CommunityChannel, CommunityThread, CommunityComment, ID } from "../types/models";
 import { scheduleLocal } from "../services/notifications";
 import { fsAddThread, fsAddComment, getDB } from "../services/firestore";
-import { Platform } from "react-native";
 import { useNetwork } from "./network";
 
 let AsyncStorage: any;
@@ -22,7 +21,7 @@ type QueueItem =
   | { kind: "thread"; data: { id: ID; channelId: ID; title: string; author: string | null; createdAt: number } }
   | { kind: "comment"; data: { id: ID; threadId: ID; author: string | null; content: string; createdAt: number } };
 
-type Ctx = {
+type CommunityCtx = {
   state: State;
   seed: (s: Partial<State>) => void;
   createThread: (channelId: ID, title: string, author: string | null) => boolean;
@@ -31,11 +30,11 @@ type Ctx = {
   deleteComment: (commentId: ID) => void;
   };
 
-const Ctx = React.createContext<Ctx | undefined>(undefined);
+const Ctx = React.createContext<CommunityCtx | undefined>(undefined);
 
 export function CommunityProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<State>(DEFAULT_STATE);
-  const { setOffline } = useNetwork();
+  const { setOffline, setSyncing } = useNetwork();
   const flushingRef = React.useRef(false);
 
   React.useEffect(() => {
@@ -65,7 +64,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
             setState((prev) => ({ ...prev, threads: mergeById(prev.threads, list) }));
             setOffline(false);
           },
-          (err) => {
+          () => {
             setOffline(true);
           }
         );
@@ -77,7 +76,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
             setState((prev) => ({ ...prev, comments: mergeById(prev.comments, list) }));
             setOffline(false);
           },
-          (err) => {
+          () => {
             setOffline(true);
           }
         );
@@ -111,6 +110,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
     flushingRef.current = true;
     try {
       if (!AsyncStorage) return;
+      setSyncing(true);
       const cur = await AsyncStorage.getItem(QUEUE_KEY);
       const arr: QueueItem[] = cur ? JSON.parse(cur) : [];
       if (!arr.length) return;
@@ -129,6 +129,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       await AsyncStorage.setItem(QUEUE_KEY, JSON.stringify([]));
     } finally {
       flushingRef.current = false;
+      setSyncing(false);
     }
   }
 
@@ -203,7 +204,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
     }));
   };
 
-  const value: Ctx = { state, seed, createThread, addComment, reportComment, deleteComment };
+  const value: CommunityCtx = { state, seed, createThread, addComment, reportComment, deleteComment };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 
