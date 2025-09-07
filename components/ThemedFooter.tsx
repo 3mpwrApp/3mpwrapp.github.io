@@ -8,8 +8,14 @@ export default function ThemedFooter() {
 
   const year = new Date().getFullYear();
   return (
-    <SafeAreaView style={styles.container} accessibilityRole="text" accessibilityLabel={`Footer. Empowr, ${year}`}>
-      <Text style={styles.text} numberOfLines={1}>© {year} Empowr</Text>
+    <SafeAreaView
+      style={styles.container}
+      accessibilityRole="text"
+      accessibilityLabel={`Footer. Empowr, ${year}`}
+    >
+      <Text style={styles.text} numberOfLines={1}>
+        © {year} Empowr
+      </Text>
     </SafeAreaView>
   );
 }

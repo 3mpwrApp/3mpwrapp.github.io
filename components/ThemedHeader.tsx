@@ -1,6 +1,12 @@
-
 import React from "react";
-import { SafeAreaView, Text, StyleSheet, View, Pressable, Image } from "react-native";
+import {
+  SafeAreaView,
+  Text,
+  StyleSheet,
+  View,
+  Pressable,
+  Image,
+} from "react-native";
 import * as Linking from "expo-linking";
 import { usePathname, router } from "expo-router";
 import { type Palette } from "../theme/colors";
@@ -75,7 +81,9 @@ export default function ThemedHeader() {
           </Pressable>
 
           <Pressable
-            onPress={() => Linking.openURL("https://www.instagram.com/empowrapp/")}
+            onPress={() =>
+              Linking.openURL("https://www.instagram.com/empowrapp/")
+            }
             accessibilityRole="link"
             accessibilityLabel="Open Empowr on Instagram"
             hitSlop={HIT_SLOP_8}
@@ -90,7 +98,11 @@ export default function ThemedHeader() {
           </Pressable>
 
           <Pressable
-            onPress={() => Linking.openURL("https://www.facebook.com/profile.php?id=61579428783083")}
+            onPress={() =>
+              Linking.openURL(
+                "https://www.facebook.com/profile.php?id=61579428783083",
+              )
+            }
             accessibilityRole="link"
             accessibilityLabel="Open Empowr on Facebook"
             hitSlop={HIT_SLOP_8}
@@ -157,19 +169,27 @@ export default function ThemedHeader() {
           accessibilityLabel={menuOpen ? "Close menu" : "Open menu"}
           hitSlop={HIT_SLOP_8}
           focusable
-          style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+          style={({ pressed }) => [
+            touchTarget.min,
+            { opacity: pressed ? 0.7 : 1 },
+          ]}
         >
           <Ionicons name="menu" size={22} color={palette.text} />
         </Pressable>
 
         {/* Settings */}
         <Pressable
-          onPress={() => router.push("/(tabs)/settings" as import("expo-router").Href)}
+          onPress={() =>
+            router.push("/(tabs)/settings" as import("expo-router").Href)
+          }
           accessibilityRole="button"
           accessibilityLabel="Open settings"
           hitSlop={HIT_SLOP_8}
           focusable
-          style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+          style={({ pressed }) => [
+            touchTarget.min,
+            { opacity: pressed ? 0.7 : 1 },
+          ]}
         >
           <Ionicons name="settings-outline" size={20} color={palette.text} />
         </Pressable>
@@ -189,7 +209,11 @@ export default function ThemedHeader() {
             { opacity: pressed ? 0.7 : 1 },
           ]}
         >
-          <Ionicons name="person-circle-outline" size={22} color={palette.text} />
+          <Ionicons
+            name="person-circle-outline"
+            size={22}
+            color={palette.text}
+          />
         </Pressable>
 
         {/* Auth control */}
@@ -209,7 +233,9 @@ export default function ThemedHeader() {
           </Pressable>
         ) : (
           <Pressable
-            onPress={() => router.push("/(auth)/login" as import("expo-router").Href)}
+            onPress={() =>
+              router.push("/(auth)/login" as import("expo-router").Href)
+            }
             accessibilityRole="button"
             accessibilityLabel={t("header.signIn")}
             hitSlop={HIT_SLOP_8}
@@ -232,31 +258,56 @@ export default function ThemedHeader() {
             onPress={() => setMenuOpen(false)}
             style={styles.menuBackdrop}
           />
-          <View accessibilityLabel="Main menu" accessible accessibilityViewIsModal style={styles.menuWrap}>
+          <View
+            accessibilityLabel="Main menu"
+            accessible
+            accessibilityViewIsModal
+            style={styles.menuWrap}
+          >
             <Text style={styles.menuSection}>Essentials</Text>
             {[{ label: "Resources", path: "/(tabs)/resources" }].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path as import("expo-router").Href); }}
+                onPress={() => {
+                  setMenuOpen(false);
+                  router.push(item.path as import("expo-router").Href);
+                }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
-                style={({ pressed }) => [{ paddingVertical: 10, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+                style={({ pressed }) => [
+                  { paddingVertical: 10, paddingHorizontal: 14 },
+                  pressed && { opacity: 0.7 },
+                ]}
               >
-                <Text style={{ color: palette.text, fontWeight: "700" }}>{item.label}</Text>
+                <Text style={{ color: palette.text, fontWeight: "700" }}>
+                  {item.label}
+                </Text>
               </Pressable>
             ))}
             <Text style={styles.menuSection}>Tools</Text>
             {[
-              { label: "Claims Navigator", path: "/(tabs)/resources/claims-navigator" },
-              { label: "Evidence Locker", path: "/(tabs)/resources/evidence-locker" },
+              {
+                label: "Claims Navigator",
+                path: "/(tabs)/resources/claims-navigator",
+              },
+              {
+                label: "Evidence Locker",
+                path: "/(tabs)/resources/evidence-locker",
+              },
               { label: "Letters", path: "/(tabs)/resources" },
             ].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path as import("expo-router").Href); }}
+                onPress={() => {
+                  setMenuOpen(false);
+                  router.push(item.path as import("expo-router").Href);
+                }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
-                style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+                style={({ pressed }) => [
+                  { paddingVertical: 8, paddingHorizontal: 14 },
+                  pressed && { opacity: 0.7 },
+                ]}
               >
                 <Text style={{ color: palette.text }}>{item.label}</Text>
               </Pressable>
@@ -264,14 +315,23 @@ export default function ThemedHeader() {
             <Text style={styles.menuSection}>Advocacy</Text>
             {[
               { label: "Advocacy Hub", path: "/(tabs)/advocacy" },
-              { label: "Support Directory", path: "/(tabs)/advocacy/support-directory" },
+              {
+                label: "Support Directory",
+                path: "/(tabs)/advocacy/support-directory",
+              },
             ].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path as import("expo-router").Href); }}
+                onPress={() => {
+                  setMenuOpen(false);
+                  router.push(item.path as import("expo-router").Href);
+                }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
-                style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+                style={({ pressed }) => [
+                  { paddingVertical: 8, paddingHorizontal: 14 },
+                  pressed && { opacity: 0.7 },
+                ]}
               >
                 <Text style={{ color: palette.text }}>{item.label}</Text>
               </Pressable>
@@ -286,10 +346,16 @@ export default function ThemedHeader() {
             ].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path as import("expo-router").Href); }}
+                onPress={() => {
+                  setMenuOpen(false);
+                  router.push(item.path as import("expo-router").Href);
+                }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
-                style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+                style={({ pressed }) => [
+                  { paddingVertical: 8, paddingHorizontal: 14 },
+                  pressed && { opacity: 0.7 },
+                ]}
               >
                 <Text style={{ color: palette.text }}>{item.label}</Text>
               </Pressable>
@@ -301,10 +367,16 @@ export default function ThemedHeader() {
             ].map((item) => (
               <Pressable
                 key={item.path}
-                onPress={() => { setMenuOpen(false); router.push(item.path as import("expo-router").Href); }}
+                onPress={() => {
+                  setMenuOpen(false);
+                  router.push(item.path as import("expo-router").Href);
+                }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
-                style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 14 }, pressed && { opacity: 0.7 }]}
+                style={({ pressed }) => [
+                  { paddingVertical: 8, paddingHorizontal: 14 },
+                  pressed && { opacity: 0.7 },
+                ]}
               >
                 <Text style={{ color: palette.text }}>{item.label}</Text>
               </Pressable>
@@ -355,7 +427,14 @@ function createStyles(palette: Palette) {
       minWidth: 180,
       zIndex: 999,
     },
-    menuSection: { color: palette.text, opacity: 0.7, paddingHorizontal: 14, paddingTop: 8, paddingBottom: 4, fontWeight: '700' },
+    menuSection: {
+      color: palette.text,
+      opacity: 0.7,
+      paddingHorizontal: 14,
+      paddingTop: 8,
+      paddingBottom: 4,
+      fontWeight: "700",
+    },
     menuBackdrop: {
       position: "absolute",
       left: 0,

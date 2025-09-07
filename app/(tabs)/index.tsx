@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TextInput,
+  Button,
+  Alert,
+  Image,
+} from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -76,7 +85,7 @@ export default function SettingsScreen() {
     } catch {
       Alert.alert(
         "Image Picker Unavailable",
-        "Please rebuild the Android app to include expo-image-picker (npx expo run:android)."
+        "Please rebuild the Android app to include expo-image-picker (npx expo run:android).",
       );
       return;
     }
@@ -148,7 +157,15 @@ export default function SettingsScreen() {
   );
 }
 
-function Section({ title, children, styles }: { title: string; children: React.ReactNode; styles: ReturnType<typeof createStyles> }) {
+function Section({
+  title,
+  children,
+  styles,
+}: {
+  title: string;
+  children: React.ReactNode;
+  styles: ReturnType<typeof createStyles>;
+}) {
   return (
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>{title}</Text>
@@ -160,10 +177,24 @@ function Section({ title, children, styles }: { title: string; children: React.R
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    section: { paddingVertical: 12, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted },
+    title: {
+      fontSize: 24,
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    section: {
+      paddingVertical: 12,
+      borderTopWidth: StyleSheet.hairlineWidth,
+      borderTopColor: palette.muted,
+    },
     sectionTitle: { color: palette.text, fontWeight: "700", marginBottom: 8 },
-    rowLabel: { color: palette.text, opacity: 0.9, marginTop: 10, marginBottom: 6 },
+    rowLabel: {
+      color: palette.text,
+      opacity: 0.9,
+      marginTop: 10,
+      marginBottom: 6,
+    },
     input: {
       borderWidth: 1,
       borderColor: palette.muted,
@@ -181,4 +212,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
   });
 }
-

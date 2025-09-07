@@ -30,7 +30,10 @@ import {
   useCampaignsLocal,
 } from "../../../store/campaignsLocal";
 import { logEvent } from "../../../services/analytics";
-import { fsAddCampaign, fsIncrementCampaignMembers } from "../../../services/firestore";
+import {
+  fsAddCampaign,
+  fsIncrementCampaignMembers,
+} from "../../../services/firestore";
 
 function ScreenInner() {
   const scheme = useColorScheme();
@@ -78,7 +81,7 @@ function ScreenInner() {
 
   const allItems = React.useMemo(
     () => [...local.myCampaigns, ...items],
-    [local.myCampaigns, items]
+    [local.myCampaigns, items],
   );
 
   const filtered = React.useMemo(() => {
@@ -87,7 +90,7 @@ function ScreenInner() {
     return allItems.filter(
       (c) =>
         c.title.toLowerCase().includes(q) ||
-        c.summary.toLowerCase().includes(q)
+        c.summary.toLowerCase().includes(q),
     );
   }, [query, allItems]);
 
@@ -150,23 +153,47 @@ function ScreenInner() {
         renderItem={({ item }) => (
           <View>
             <Link
-              href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any}
+              href={
+                {
+                  pathname: "/(tabs)/campaigns/[id]",
+                  params: { id: item.id },
+                } as any
+              }
               asChild
             >
-              <Card title={item.title} subtitle={`${item.summary}${item.membersCount ? ` • ${item.membersCount} supporters` : ''}`} />
+              <Card
+                title={item.title}
+                subtitle={`${item.summary}${item.membersCount ? ` • ${item.membersCount} supporters` : ""}`}
+              />
             </Link>
             <Pressable
-              onPress={async () => { try { await fsIncrementCampaignMembers(item.id, 1); } catch {} }}
+              onPress={async () => {
+                try {
+                  await fsIncrementCampaignMembers(item.id, 1);
+                } catch {}
+              }}
               accessibilityRole="button"
               accessibilityLabel="Support this campaign"
-              style={{ alignSelf: 'flex-start', marginTop: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 }}
+              style={{
+                alignSelf: "flex-start",
+                marginTop: 6,
+                borderWidth: StyleSheet.hairlineWidth,
+                borderColor: palette.muted,
+                borderRadius: 8,
+                paddingHorizontal: 10,
+                paddingVertical: 6,
+              }}
             >
-              <Text style={{ color: palette.text, fontWeight: '700' }}>Support</Text>
+              <Text style={{ color: palette.text, fontWeight: "700" }}>
+                Support
+              </Text>
             </Pressable>
           </View>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
-        refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
+        refreshControl={
+          <RefreshControl refreshing={loading} onRefresh={reload} />
+        }
       />
     </View>
   );
@@ -202,7 +229,13 @@ function CreateCampaignBox({
   onCreate,
   palette,
 }: {
-  onCreate: (data: { title: string; summary: string; target?: string; goalCount?: number; contactEmail?: string }) => void;
+  onCreate: (data: {
+    title: string;
+    summary: string;
+    target?: string;
+    goalCount?: number;
+    contactEmail?: string;
+  }) => void;
   palette: Palette;
 }) {
   const [title, setTitle] = React.useState("");
@@ -240,8 +273,18 @@ function CreateCampaignBox({
       <Pressable
         onPress={() => {
           if (!canCreate) return;
-          onCreate({ title: title.trim(), summary: summary.trim(), target: target.trim() || undefined, goalCount: goalCount ? Number(goalCount) : undefined, contactEmail: contactEmail.trim() || undefined });
-          setTitle(""); setSummary(""); setTarget(""); setGoalCount(""); setContactEmail("");
+          onCreate({
+            title: title.trim(),
+            summary: summary.trim(),
+            target: target.trim() || undefined,
+            goalCount: goalCount ? Number(goalCount) : undefined,
+            contactEmail: contactEmail.trim() || undefined,
+          });
+          setTitle("");
+          setSummary("");
+          setTarget("");
+          setGoalCount("");
+          setContactEmail("");
         }}
         disabled={!canCreate}
         style={{

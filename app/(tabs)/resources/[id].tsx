@@ -82,7 +82,9 @@ export default function ResourceDetail() {
             >
               <MaterialCommunityIcons
                 name={
-                  regionLabel === "Canada" ? "flag-variant" : "map-marker-outline"
+                  regionLabel === "Canada"
+                    ? "flag-variant"
+                    : "map-marker-outline"
                 }
                 size={12}
                 color={palette.onPrimary}
@@ -99,7 +101,10 @@ export default function ResourceDetail() {
 
         {!!resource && (
           <Pressable
-            style={({ pressed }) => [styles.button, pressed && { opacity: 0.8 }]}
+            style={({ pressed }) => [
+              styles.button,
+              pressed && { opacity: 0.8 },
+            ]}
             onPress={() => toggle("resource", resource.id)}
             accessibilityRole="button"
             accessibilityLabel={
@@ -151,7 +156,10 @@ export default function ResourceDetail() {
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
+function createStyles(
+  palette: ReturnType<typeof useAppPalette>,
+  factor: number,
+) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: {

@@ -17,7 +17,11 @@ export default function Profile() {
   const { state: a11y, toggleHighContrast } = useA11ySettings();
 
   return (
-    <View style={styles.container} accessibilityLabel="Profile screen" accessible>
+    <View
+      style={styles.container}
+      accessibilityLabel="Profile screen"
+      accessible
+    >
       <Text style={styles.title}>Profile</Text>
 
       <View style={styles.card}>
@@ -25,14 +29,24 @@ export default function Profile() {
       </View>
 
       <View style={styles.card}>
-        <Text style={{ fontWeight: "700", marginBottom: 8 }}>Accessibility</Text>
+        <Text style={{ fontWeight: "700", marginBottom: 8 }}>
+          Accessibility
+        </Text>
         <Pressable
           onPress={toggleHighContrast}
           accessibilityRole="button"
           accessibilityLabel="Toggle high contrast mode"
-          style={({ pressed }) => [styles.cta, styles.ghost, pressed && { opacity: 0.7 }]}
+          style={({ pressed }) => [
+            styles.cta,
+            styles.ghost,
+            pressed && { opacity: 0.7 },
+          ]}
         >
-          <Text style={styles.ghostText}>{a11y.highContrast ? "Disable High Contrast" : "Enable High Contrast"}</Text>
+          <Text style={styles.ghostText}>
+            {a11y.highContrast
+              ? "Disable High Contrast"
+              : "Enable High Contrast"}
+          </Text>
         </Pressable>
       </View>
 
@@ -49,7 +63,14 @@ export default function Profile() {
               accessibilityRole="button"
               accessibilityLabel={`Switch language to ${code}`}
             >
-              <Text style={[styles.langChipText, lang === code && styles.langChipTextActive]}>{code.toUpperCase()}</Text>
+              <Text
+                style={[
+                  styles.langChipText,
+                  lang === code && styles.langChipTextActive,
+                ]}
+              >
+                {code.toUpperCase()}
+              </Text>
             </Pressable>
           ))}
         </View>
@@ -66,13 +87,23 @@ export default function Profile() {
             placeholderTextColor={palette.muted}
             accessibilityLabel="Name"
           />
-          <Pressable style={[styles.cta, styles.ghost]} onPress={signOut} accessibilityRole="button" accessibilityLabel="Sign out">
+          <Pressable
+            style={[styles.cta, styles.ghost]}
+            onPress={signOut}
+            accessibilityRole="button"
+            accessibilityLabel="Sign out"
+          >
             <Text style={styles.ghostText}>Sign out</Text>
           </Pressable>
         </>
       ) : (
         <>
-          <Pressable style={[styles.cta, styles.primary]} onPress={() => router.push("/(auth)/login" as Href)} accessibilityRole="button" accessibilityLabel="Go to login">
+          <Pressable
+            style={[styles.cta, styles.primary]}
+            onPress={() => router.push("/(auth)/login" as Href)}
+            accessibilityRole="button"
+            accessibilityLabel="Go to login"
+          >
             <Text style={styles.primaryText}>Sign in</Text>
           </Pressable>
         </>
@@ -83,7 +114,13 @@ export default function Profile() {
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }}>
+    <View
+      style={{
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginBottom: 8,
+      }}
+    >
       <Text style={{ fontWeight: "600" }}>{label}</Text>
       <Text>{value}</Text>
     </View>
@@ -93,17 +130,55 @@ function Row({ label, value }: { label: string; value: string }) {
 function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 24, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "800", color: palette.text, marginBottom: 16 },
-    card: { backgroundColor: palette.surface, borderColor: palette.muted, borderWidth: StyleSheet.hairlineWidth, borderRadius: 12, padding: 16, marginBottom: 16 },
+    title: {
+      fontSize: 24,
+      fontWeight: "800",
+      color: palette.text,
+      marginBottom: 16,
+    },
+    card: {
+      backgroundColor: palette.surface,
+      borderColor: palette.muted,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderRadius: 12,
+      padding: 16,
+      marginBottom: 16,
+    },
     label: { color: palette.muted, marginBottom: 6 },
-    input: { borderWidth: 1, borderColor: palette.muted, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, color: palette.text, marginBottom: 12 },
-    cta: { paddingVertical: 12, borderRadius: 12, alignItems: "center", marginTop: 8 },
+    input: {
+      borderWidth: 1,
+      borderColor: palette.muted,
+      borderRadius: 10,
+      paddingHorizontal: 12,
+      paddingVertical: 10,
+      color: palette.text,
+      marginBottom: 12,
+    },
+    cta: {
+      paddingVertical: 12,
+      borderRadius: 12,
+      alignItems: "center",
+      marginTop: 8,
+    },
     primary: { backgroundColor: palette.primary },
     primaryText: { color: palette.onPrimary, fontWeight: "700" },
-    ghost: { backgroundColor: "transparent", borderWidth: 1, borderColor: palette.muted },
+    ghost: {
+      backgroundColor: "transparent",
+      borderWidth: 1,
+      borderColor: palette.muted,
+    },
     ghostText: { color: palette.text, fontWeight: "700" },
-    langChip: { borderWidth: 1, borderColor: palette.muted, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 8 },
-    langChipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
+    langChip: {
+      borderWidth: 1,
+      borderColor: palette.muted,
+      borderRadius: 999,
+      paddingHorizontal: 12,
+      paddingVertical: 8,
+    },
+    langChipActive: {
+      backgroundColor: palette.primary,
+      borderColor: palette.primary,
+    },
     langChipText: { color: palette.text, fontWeight: "700" },
     langChipTextActive: { color: palette.onPrimary },
   });

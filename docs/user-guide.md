@@ -179,19 +179,18 @@ Add PNG/JPG screenshots to `docs/images/` with these filenames or update the ima
 
 Choose one of the following:
 
-1) VS Code extension
+1. VS Code extension
 
 - Install “Markdown PDF” by yzane.
 - Open this file → Command Palette → “Markdown PDF: Export (pdf)”.
 
-2) Print to PDF (browser)
+2. Print to PDF (browser)
 
 - Use a Markdown preview (VS Code or web), then File → Print → Save as PDF.
 
-3) CLI (Node)
+3. CLI (Node)
 
 - `npm i -g md-to-pdf`
 - `md-to-pdf docs/user-guide.md`
 
 > Tip: Set paper size to Letter or A4; enable background graphics for the header line.
-

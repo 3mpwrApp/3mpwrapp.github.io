@@ -1,5 +1,12 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Pressable, StyleSheet, Text, View, useColorScheme, SafeAreaView } from "react-native";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  useColorScheme,
+  SafeAreaView,
+} from "react-native";
 import { colors, type Palette } from "../theme/colors";
 import { openExternalUrl } from "../utils/linking";
 
@@ -12,7 +19,11 @@ export default function Header() {
 
   return (
     <SafeAreaView style={styles.container} accessibilityRole="header">
-      <Text style={styles.title} accessibilityRole="header" accessibilityLabel="Empowr App Header">
+      <Text
+        style={styles.title}
+        accessibilityRole="header"
+        accessibilityLabel="Empowr App Header"
+      >
         Empowr App
       </Text>
 
@@ -33,7 +44,7 @@ export default function Header() {
         <Pressable
           onPress={() =>
             openLink(
-              "https://www.instagram.com/empowrapp/?fbclid=IwY2xjawMcTXBleHRuA2FlbQIxMABicmlkETFrQ2NrdUVNRkkyZEwyQzl3AR4lSOSuKqDtqxWcYKFa_3oOsmQyl7LNaTzPYefvej5zbV6OLIiocWi2g-jWJg_aem_czDWuUGxec3CmgrTZCy1Ng#"
+              "https://www.instagram.com/empowrapp/?fbclid=IwY2xjawMcTXBleHRuA2FlbQIxMABicmlkETFrQ2NrdUVNRkkyZEwyQzl3AR4lSOSuKqDtqxWcYKFa_3oOsmQyl7LNaTzPYefvej5zbV6OLIiocWi2g-jWJg_aem_czDWuUGxec3CmgrTZCy1Ng#",
             )
           }
           accessibilityRole="link"
@@ -47,7 +58,7 @@ export default function Header() {
         <Pressable
           onPress={() =>
             openLink(
-              "https://x.com/empowrapp0816?fbclid=IwY2xjawMcTXZleHRuA2FlbQIxMABicmlkETFrQ2NrdUVNRkkyZEwyQzl3AR61C332JUq1rDfsHDqrSzlKvJCynRvFEsD3UkM5ChPwJnRrPC6ChjgkAmqKGQ_aem_zrX0dQO1QeE3I6yquzlCeA"
+              "https://x.com/empowrapp0816?fbclid=IwY2xjawMcTXZleHRuA2FlbQIxMABicmlkETFrQ2NrdUVNRkkyZEwyQzl3AR61C332JUq1rDfsHDqrSzlKvJCynRvFEsD3UkM5ChPwJnRrPC6ChjgkAmqKGQ_aem_zrX0dQO1QeE3I6yquzlCeA",
             )
           }
           accessibilityRole="link"

@@ -39,7 +39,19 @@ export interface CommunityPost {
 }
 
 export type ProvinceCode =
-  | "AB" | "BC" | "MB" | "NB" | "NL" | "NS" | "NT" | "NU" | "ON" | "PE" | "QC" | "SK" | "YT";
+  | "AB"
+  | "BC"
+  | "MB"
+  | "NB"
+  | "NL"
+  | "NS"
+  | "NT"
+  | "NU"
+  | "ON"
+  | "PE"
+  | "QC"
+  | "SK"
+  | "YT";
 
 export type ResourceCategory =
   | "work_financial" // Work & Financial Support

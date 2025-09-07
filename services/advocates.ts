@@ -9,5 +9,5 @@ export const fetchAdvocates = withFallback<Advocate[]>(
     if (!BASE) throw new Error("No API base");
     return await retry(async () => (await fetch(`${BASE}/advocates`)).json());
   },
-  () => local
+  () => local,
 );

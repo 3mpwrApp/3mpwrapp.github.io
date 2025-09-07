@@ -76,10 +76,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const status: AuthStatus = !onboarded
           ? "needsOnboarding"
           : mode === "anonymous"
-          ? "anonymous"
-          : user
-          ? "signedIn"
-          : "signedOut";
+            ? "anonymous"
+            : user
+              ? "signedIn"
+              : "signedOut";
         if (!mounted) return;
         setState((s) => ({ ...s, status, isOnboarded: onboarded, user }));
       } catch {

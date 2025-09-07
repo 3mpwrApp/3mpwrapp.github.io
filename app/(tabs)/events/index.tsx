@@ -1,10 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList, RefreshControl, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  RefreshControl,
+  Pressable,
+} from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+  useAnnounceOnChange,
+} from "../../../hooks/useA11y";
 import { events as localEvents } from "../../../data/events";
-import { generateCanadianHolidays, generateProvincialHolidays } from "../../../data/holidays-ca";
+import {
+  generateCanadianHolidays,
+  generateProvincialHolidays,
+} from "../../../data/holidays-ca";
 import { generateDisabilityObservances } from "../../../data/disability-observances";
 import { useSettings } from "../../../store/settings";
 import { fetchEvents } from "../../../services/events";
@@ -80,7 +95,9 @@ export default function EventsScreen() {
   }, [setOffline]);
 
   const { tick } = useRefresh();
-  React.useEffect(() => { reload(); }, [reload, tick]);
+  React.useEffect(() => {
+    reload();
+  }, [reload, tick]);
 
   React.useEffect(() => {
     setCount("events", items.length);
@@ -95,15 +112,21 @@ export default function EventsScreen() {
 
   const monthLabel = React.useMemo(
     () => month.toLocaleString(undefined, { month: "long", year: "numeric" }),
-    [month]
+    [month],
   );
 
   React.useEffect(() => {
     const y = month.getFullYear();
     const national = generateCanadianHolidays(y);
-    const provincials = includeProvincialHolidays ? generateProvincialHolidays(y, province) : [];
-    const hasNamedFeb = provincials.some((e) => /prov-\d{4}-02-\d{2}-/.test(e.id));
-    const filteredNational = hasNamedFeb ? national.filter((e) => !/-family$/.test(e.id)) : national;
+    const provincials = includeProvincialHolidays
+      ? generateProvincialHolidays(y, province)
+      : [];
+    const hasNamedFeb = provincials.some((e) =>
+      /prov-\d{4}-02-\d{2}-/.test(e.id),
+    );
+    const filteredNational = hasNamedFeb
+      ? national.filter((e) => !/-family$/.test(e.id))
+      : national;
     setSystemItems([
       ...filteredNational,
       ...generateDisabilityObservances(y),
@@ -114,20 +137,35 @@ export default function EventsScreen() {
   const daysMatrix = React.useMemo(() => buildMonthMatrix(month), [month]);
   const eventsByDay = React.useMemo(() => mapEventsByDay(items), [items]);
   const filtered = React.useMemo(
-    () => (selectedDay ? items.filter((e) => toDayKey(e.date) === selectedDay) : items),
-    [items, selectedDay]
+    () =>
+      selectedDay
+        ? items.filter((e) => toDayKey(e.date) === selectedDay)
+        : items,
+    [items, selectedDay],
   );
 
   return (
-    <View style={styles.container} accessibilityLabel="Events screen" accessible>
-      <Text ref={titleRef} nativeID="events-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+    <View
+      style={styles.container}
+      accessibilityLabel="Events screen"
+      accessible
+    >
+      <Text
+        ref={titleRef}
+        nativeID="events-title"
+        accessibilityRole="header"
+        style={styles.title}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
         Events
       </Text>
 
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
 
-      <Text style={styles.subtitle}>Community events, workshops, and meetups.</Text>
+      <Text style={styles.subtitle}>
+        Community events, workshops, and meetups.
+      </Text>
 
       {loading && (
         <View>
@@ -139,24 +177,47 @@ export default function EventsScreen() {
 
       {error && (
         <>
-          <Text style={styles.subtitle} accessibilityRole="alert">{error}</Text>
-          <Text onPress={reload} accessibilityRole="button" accessibilityLabel="Try again" style={styles.subtitle}>Try again</Text>
+          <Text style={styles.subtitle} accessibilityRole="alert">
+            {error}
+          </Text>
+          <Text
+            onPress={reload}
+            accessibilityRole="button"
+            accessibilityLabel="Try again"
+            style={styles.subtitle}
+          >
+            Try again
+          </Text>
         </>
       )}
 
       <View style={styles.calHeader}>
-        <Pressable accessibilityRole="button" accessibilityLabel="Previous month" onPress={() => setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Previous month"
+          onPress={() =>
+            setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))
+          }
+        >
           <Text style={styles.calNav}>{"<"}</Text>
         </Pressable>
         <Text style={styles.calTitle}>{monthLabel}</Text>
-        <Pressable accessibilityRole="button" accessibilityLabel="Next month" onPress={() => setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Next month"
+          onPress={() =>
+            setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))
+          }
+        >
           <Text style={styles.calNav}>{">"}</Text>
         </Pressable>
       </View>
 
       <View style={styles.weekRow}>
         {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
-          <Text key={`dow-${i}`} style={styles.weekHdr}>{d}</Text>
+          <Text key={`dow-${i}`} style={styles.weekHdr}>
+            {d}
+          </Text>
         ))}
       </View>
 
@@ -169,13 +230,28 @@ export default function EventsScreen() {
             return (
               <Pressable
                 key={`${wi}-${di}`}
-                style={[styles.dayCell, isSel && { backgroundColor: palette.primary }, has && { borderColor: palette.primary }]}
-                onPress={() => key && setSelectedDay((cur) => (cur === key ? null : key))}
+                style={[
+                  styles.dayCell,
+                  isSel && { backgroundColor: palette.primary },
+                  has && { borderColor: palette.primary },
+                ]}
+                onPress={() =>
+                  key && setSelectedDay((cur) => (cur === key ? null : key))
+                }
                 accessibilityRole="button"
-                accessibilityLabel={key ? `Select ${key}${has ? ", has events" : ""}` : "Empty"}
+                accessibilityLabel={
+                  key ? `Select ${key}${has ? ", has events" : ""}` : "Empty"
+                }
                 disabled={!key}
               >
-                <Text style={[styles.dayText, isSel && { color: palette.onPrimary }]}>{d ?? ""}</Text>
+                <Text
+                  style={[
+                    styles.dayText,
+                    isSel && { color: palette.onPrimary },
+                  ]}
+                >
+                  {d ?? ""}
+                </Text>
               </Pressable>
             );
           })}
@@ -186,7 +262,17 @@ export default function EventsScreen() {
         data={filtered}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Link href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any} asChild accessibilityRole="link" accessibilityLabel={`Open ${item.title}`}>
+          <Link
+            href={
+              {
+                pathname: "/(tabs)/events/[id]",
+                params: { id: item.id },
+              } as any
+            }
+            asChild
+            accessibilityRole="link"
+            accessibilityLabel={`Open ${item.title}`}
+          >
             <Card
               title={item.title}
               subtitle={formatMeta(item.date, item.isVirtual, item.location)}
@@ -194,14 +280,29 @@ export default function EventsScreen() {
                 const label = item.id.startsWith("holiday-")
                   ? "Holiday"
                   : item.id.startsWith("prov-")
-                  ? "Provincial"
-                  : item.id.startsWith("obs-")
-                  ? "Observance"
-                  : null;
+                    ? "Provincial"
+                    : item.id.startsWith("obs-")
+                      ? "Observance"
+                      : null;
                 if (!label) return null;
                 return (
-                  <View style={{ backgroundColor: palette.primary, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 }}>
-                    <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: "700" }}>{label}</Text>
+                  <View
+                    style={{
+                      backgroundColor: palette.primary,
+                      borderRadius: 6,
+                      paddingHorizontal: 6,
+                      paddingVertical: 2,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        color: palette.onPrimary,
+                        fontSize: 11,
+                        fontWeight: "700",
+                      }}
+                    >
+                      {label}
+                    </Text>
                   </View>
                 );
               })()}
@@ -210,24 +311,74 @@ export default function EventsScreen() {
           </Link>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
-        refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
+        refreshControl={
+          <RefreshControl refreshing={loading} onRefresh={reload} />
+        }
       />
     </View>
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
+function createStyles(
+  palette: ReturnType<typeof useAppPalette>,
+  factor: number,
+) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.9, marginBottom: 8 },
-    button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, minHeight: 44, minWidth: 44 },
-    calHeader: { marginTop: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+    title: {
+      fontSize: Math.round(24 * factor),
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    subtitle: {
+      fontSize: Math.round(16 * factor),
+      color: palette.text,
+      opacity: 0.9,
+      marginBottom: 8,
+    },
+    button: {
+      backgroundColor: palette.primary,
+      paddingVertical: 10,
+      paddingHorizontal: 16,
+      borderRadius: 6,
+      minHeight: 44,
+      minWidth: 44,
+    },
+    calHeader: {
+      marginTop: 8,
+      marginBottom: 8,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
     calTitle: { color: palette.text, fontWeight: "700" },
-    calNav: { color: palette.text, fontSize: 18, width: 24, textAlign: "center" },
-    weekRow: { flexDirection: "row", justifyContent: "space-between", marginBottom: 4 },
-    weekHdr: { width: 36, textAlign: "center", color: palette.text, opacity: 0.7 },
-    dayCell: { width: 36, height: 36, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems: "center", justifyContent: "center" },
+    calNav: {
+      color: palette.text,
+      fontSize: 18,
+      width: 24,
+      textAlign: "center",
+    },
+    weekRow: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      marginBottom: 4,
+    },
+    weekHdr: {
+      width: 36,
+      textAlign: "center",
+      color: palette.text,
+      opacity: 0.7,
+    },
+    dayCell: {
+      width: 36,
+      height: 36,
+      borderRadius: 8,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      alignItems: "center",
+      justifyContent: "center",
+    },
     dayText: { color: palette.text },
   });
 }
@@ -278,4 +429,3 @@ function dayKeyFromMatrix(baseMonth: Date, day: number | null) {
   const dd = `${day}`.padStart(2, "0");
   return `${y}-${m}-${dd}`;
 }
-

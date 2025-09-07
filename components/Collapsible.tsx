@@ -1,4 +1,5 @@
-import { useState } from "react";import { View, Text, Pressable, StyleSheet } from "react-native";
+import { useState } from "react";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 export default function Collapsible({
   title,
   children,
@@ -26,8 +27,23 @@ export default function Collapsible({
   );
 }
 const styles = StyleSheet.create({
-  wrapper: { borderWidth: StyleSheet.hairlineWidth, borderColor: "#ddd", borderRadius: 8, marginVertical: 8 },
-  header: { padding: 12, backgroundColor: "#F7F8FA", borderTopLeftRadius: 8, borderTopRightRadius: 8 },
+  wrapper: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: "#ddd",
+    borderRadius: 8,
+    marginVertical: 8,
+  },
+  header: {
+    padding: 12,
+    backgroundColor: "#F7F8FA",
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+  },
   headerText: { fontSize: 16, fontWeight: "600" },
-  content: { padding: 12, backgroundColor: "#fff", borderBottomLeftRadius: 8, borderBottomRightRadius: 8 },
+  content: {
+    padding: 12,
+    backgroundColor: "#fff",
+    borderBottomLeftRadius: 8,
+    borderBottomRightRadius: 8,
+  },
 });

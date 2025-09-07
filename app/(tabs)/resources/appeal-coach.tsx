@@ -1,18 +1,29 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, Pressable, FlatList, KeyboardAvoidingView, Platform, Alert } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  Pressable,
+  FlatList,
+  KeyboardAvoidingView,
+  Platform,
+  Alert,
+} from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
-
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
 
 type Msg = { id: string; role: "bot" | "user"; text: string };
-
 
 const SEED: Msg[] = [
   {
     id: "m0",
     role: "bot",
-    text:
-      "I'm your Appeal Coach. I can:\n\n- Explain what to expect at hearings\n- Help rehearse testimony with prompts\n- Share stress-management tips\n\nAsk a question, or try: 'what to expect', 'rehearse', or 'stress tips'.",
+    text: "I'm your Appeal Coach. I can:\n\n- Explain what to expect at hearings\n- Help rehearse testimony with prompts\n- Share stress-management tips\n\nAsk a question, or try: 'what to expect', 'rehearse', or 'stress tips'.",
   },
 ];
 
@@ -78,16 +89,18 @@ export default function AppealCoach() {
         "- Any prior decisions and reasons for denial."
       );
     }
-    return (
-      "I didn't fully catch that. Try keywords like 'what to expect', 'rehearse', 'stress tips', 'evidence', or 'opening statement'."
-    );
+    return "I didn't fully catch that. Try keywords like 'what to expect', 'rehearse', 'stress tips', 'evidence', or 'opening statement'.";
   }, []);
 
   const send = React.useCallback(() => {
     const trimmed = input.trim();
     if (!trimmed) return;
     const u: Msg = { id: String(Date.now()), role: "user", text: trimmed };
-    const a: Msg = { id: String(Date.now() + 1), role: "bot", text: respond(trimmed) };
+    const a: Msg = {
+      id: String(Date.now() + 1),
+      role: "bot",
+      text: respond(trimmed),
+    };
     setMsgs((m) => [...m, u, a]);
     setInput("");
   }, [input, respond]);
@@ -112,35 +125,62 @@ export default function AppealCoach() {
           keyExtractor={(m) => m.id}
           contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 12 }}
           renderItem={({ item }) => (
-            <View style={[styles.bubble, item.role === "user" ? styles.userBubble : styles.botBubble]}>
-              <Text style={item.role === "user" ? styles.userText : styles.botText}>{item.text}</Text>
+            <View
+              style={[
+                styles.bubble,
+                item.role === "user" ? styles.userBubble : styles.botBubble,
+              ]}
+            >
+              <Text
+                style={item.role === "user" ? styles.userText : styles.botText}
+              >
+                {item.text}
+              </Text>
             </View>
           )}
         />
-        <View style={{ flexDirection: 'row', gap: 8, paddingHorizontal: 16 }}>
+        <View style={{ flexDirection: "row", gap: 8, paddingHorizontal: 16 }}>
           <Pressable
             onPress={async () => {
-              const lastBot = [...msgs].reverse().find((m) => m.role === 'bot');
+              const lastBot = [...msgs].reverse().find((m) => m.role === "bot");
               if (!lastBot) return;
-              try { const mod = await import('expo-clipboard'); await mod.setStringAsync(lastBot.text); Alert.alert('Copied', 'Last response copied to clipboard.'); }
-              catch { Alert.alert('Clipboard not available', 'Install expo-clipboard in a dev build to enable copy.'); }
+              try {
+                const mod = await import("expo-clipboard");
+                await mod.setStringAsync(lastBot.text);
+                Alert.alert("Copied", "Last response copied to clipboard.");
+              } catch {
+                Alert.alert(
+                  "Clipboard not available",
+                  "Install expo-clipboard in a dev build to enable copy.",
+                );
+              }
             }}
             accessibilityRole="button"
             accessibilityLabel="Copy last response"
-            style={[styles.sendBtn, { alignSelf: 'flex-start' }]}
+            style={[styles.sendBtn, { alignSelf: "flex-start" }]}
           >
             <Text style={styles.sendText}>Copy last</Text>
           </Pressable>
           <Pressable
             onPress={async () => {
               if (!msgs.length) return;
-              const transcript = msgs.map(m => `${m.role === 'user' ? 'You' : 'Coach'}: ${m.text}`).join('\n\n');
-              try { const mod = await import('expo-clipboard'); await mod.setStringAsync(transcript); Alert.alert('Copied', 'Conversation copied to clipboard.'); }
-              catch { Alert.alert('Clipboard not available', 'Install expo-clipboard in a dev build to enable copy.'); }
+              const transcript = msgs
+                .map((m) => `${m.role === "user" ? "You" : "Coach"}: ${m.text}`)
+                .join("\n\n");
+              try {
+                const mod = await import("expo-clipboard");
+                await mod.setStringAsync(transcript);
+                Alert.alert("Copied", "Conversation copied to clipboard.");
+              } catch {
+                Alert.alert(
+                  "Clipboard not available",
+                  "Install expo-clipboard in a dev build to enable copy.",
+                );
+              }
             }}
             accessibilityRole="button"
             accessibilityLabel="Copy conversation"
-            style={[styles.sendBtn, { alignSelf: 'flex-start' }]}
+            style={[styles.sendBtn, { alignSelf: "flex-start" }]}
           >
             <Text style={styles.sendText}>Copy chat</Text>
           </Pressable>
@@ -155,7 +195,12 @@ export default function AppealCoach() {
             onSubmitEditing={send}
             returnKeyType="send"
           />
-          <Pressable onPress={send} style={styles.sendBtn} accessibilityRole="button" accessibilityLabel="Send">
+          <Pressable
+            onPress={send}
+            style={styles.sendBtn}
+            accessibilityRole="button"
+            accessibilityLabel="Send"
+          >
             <Text style={styles.sendText}>Send</Text>
           </Pressable>
         </View>
@@ -167,15 +212,50 @@ export default function AppealCoach() {
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 22, fontWeight: "700", color: palette.text, paddingHorizontal: 16, paddingTop: 12, paddingBottom: 8 },
-    bubble: { borderRadius: 12, padding: 10, marginVertical: 6, maxWidth: "92%" },
+    title: {
+      fontSize: 22,
+      fontWeight: "700",
+      color: palette.text,
+      paddingHorizontal: 16,
+      paddingTop: 12,
+      paddingBottom: 8,
+    },
+    bubble: {
+      borderRadius: 12,
+      padding: 10,
+      marginVertical: 6,
+      maxWidth: "92%",
+    },
     userBubble: { alignSelf: "flex-end", backgroundColor: palette.primary },
-    botBubble: { alignSelf: "flex-start", backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
+    botBubble: {
+      alignSelf: "flex-start",
+      backgroundColor: palette.surface,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+    },
     userText: { color: palette.onPrimary },
     botText: { color: palette.text },
-    inputRow: { flexDirection: "row", alignItems: "center", padding: 12, gap: 8 },
-    input: { flex: 1, borderWidth: 1, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, color: palette.text },
-    sendBtn: { backgroundColor: palette.primary, paddingHorizontal: 14, paddingVertical: 10, borderRadius: 8 },
+    inputRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      padding: 12,
+      gap: 8,
+    },
+    input: {
+      flex: 1,
+      borderWidth: 1,
+      borderColor: palette.muted,
+      borderRadius: 8,
+      paddingHorizontal: 12,
+      paddingVertical: 10,
+      color: palette.text,
+    },
+    sendBtn: {
+      backgroundColor: palette.primary,
+      paddingHorizontal: 14,
+      paddingVertical: 10,
+      borderRadius: 8,
+    },
     sendText: { color: palette.onPrimary, fontWeight: "700" },
   });
 }

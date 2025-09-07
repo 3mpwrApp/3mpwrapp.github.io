@@ -9,7 +9,6 @@
     "userInterfaceStyle": "automatic",
     "jsEngine": "hermes",
     "newArchEnabled": false,
-    "entryPoint": "./node_modules/expo-router/entry",
     "updates": {
       "checkAutomatically": "ON_ERROR_RECOVERY"
     },

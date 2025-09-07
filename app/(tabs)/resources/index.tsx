@@ -1,9 +1,22 @@
 import React from "react";
-import { View, Text, StyleSheet, SectionList, RefreshControl, Pressable, Linking } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  SectionList,
+  RefreshControl,
+  Pressable,
+  Linking,
+} from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTranslation } from "../../../i18n";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+  useAnnounceOnChange,
+} from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
@@ -18,7 +31,11 @@ import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
 import type { Resource, ResourceCategory } from "../../../types/models";
 import { useSettings } from "../../../store/settings";
-import { filterResources, groupByRegion, presentProvinceCodes } from "../../../utils/resources";
+import {
+  filterResources,
+  groupByRegion,
+  presentProvinceCodes,
+} from "../../../utils/resources";
 
 const PROVINCE_NAMES: Record<string, string> = {
   AB: "Alberta",
@@ -73,24 +90,33 @@ export default function ResourcesScreen() {
   }, [setOffline]);
 
   const { tick } = useRefresh();
-  React.useEffect(() => { reload(); }, [reload, tick]);
+  React.useEffect(() => {
+    reload();
+  }, [reload, tick]);
 
-  React.useEffect(() => { setCount("resources", items.length); }, [items, setCount]);
+  React.useEffect(() => {
+    setCount("resources", items.length);
+  }, [items, setCount]);
 
-  React.useEffect(() => { if (province && region === "all") setRegion(province as any); }, [province, region]);
+  React.useEffect(() => {
+    if (province && region === "all") setRegion(province as any);
+  }, [province, region]);
 
   useAnnounceOnChange(items.length, (n) => `${n} resources loaded`);
 
   const filtered = React.useMemo(
     () => filterResources(items, { region, category, query }),
-    [items, region, category, query]
+    [items, region, category, query],
   );
 
   const sections = React.useMemo(() => {
     if (region !== "all") {
       return [
         {
-          title: region === "canada" ? "Canada" : `${region} - ${PROVINCE_NAMES[region]}`,
+          title:
+            region === "canada"
+              ? "Canada"
+              : `${region} - ${PROVINCE_NAMES[region]}`,
           data: filtered,
         },
       ];
@@ -98,14 +124,21 @@ export default function ResourcesScreen() {
     const { canada, byProv } = groupByRegion(filtered);
     const provSections = Array.from(byProv.entries())
       .sort((a, b) => a[0].localeCompare(b[0]))
-      .map(([code, list]) => ({ title: `${code} - ${PROVINCE_NAMES[code]}`, data: list }));
+      .map(([code, list]) => ({
+        title: `${code} - ${PROVINCE_NAMES[code]}`,
+        data: list,
+      }));
     const result: { title: string; data: Resource[] }[] = [];
     if (canada.length) result.push({ title: "Canada", data: canada });
     return result.concat(provSections);
   }, [filtered, region]);
 
   return (
-    <View style={styles.container} accessibilityLabel="Resources screen" accessible>
+    <View
+      style={styles.container}
+      accessibilityLabel="Resources screen"
+      accessible
+    >
       <Text
         ref={titleRef}
         nativeID="resources-title"
@@ -118,55 +151,106 @@ export default function ResourcesScreen() {
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
 
-      <Text style={styles.subtitle}>{t("resources.intro", "Find helpful guides and materials.")}</Text>
+      <Text style={styles.subtitle}>
+        {t("resources.intro", "Find helpful guides and materials.")}
+      </Text>
       {region === "all" && !province && (
-        <Text style={[styles.subtitle, { opacity: 0.75 }]}>Tip: Set your province in Settings to filter resources.</Text>
+        <Text style={[styles.subtitle, { opacity: 0.75 }]}>
+          Tip: Set your province in Settings to filter resources.
+        </Text>
       )}
 
-      <Text accessibilityRole="header" style={[styles.sectionTitle, { marginTop: 4 }]}>AI Tools</Text>
+      <Text
+        accessibilityRole="header"
+        style={[styles.sectionTitle, { marginTop: 4 }]}
+      >
+        AI Tools
+      </Text>
       <Link href={"/(tabs)/resources/rights-checker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Automated Rights Checker</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Automated Rights Checker
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/appeal-coach" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>AI “Appeal Coach”</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          AI “Appeal Coach”
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/deadlines" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.deadlines','Deadline Calculator + Reminders')}</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          {t("resources.tools.deadlines", "Deadline Calculator + Reminders")}
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.evidence','Evidence Checklist Generator')}</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          {t("resources.tools.evidence", "Evidence Checklist Generator")}
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/voice-notes" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.voice_notes','Voice‑to‑Case Notes Tool')}</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          {t("resources.tools.voice_notes", "Voice‑to‑Case Notes Tool")}
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/templates-gallery" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>{t('resources.tools.templates','Template Gallery')}</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          {t("resources.tools.templates", "Template Gallery")}
+        </Text>
       </Link>
-      <Text accessibilityRole="header" style={[styles.sectionTitle, { marginTop: 10 }]}>AI-Generated Letter Templates</Text>
+      <Text
+        accessibilityRole="header"
+        style={[styles.sectionTitle, { marginTop: 10 }]}
+      >
+        AI-Generated Letter Templates
+      </Text>
       <Link href={"/(tabs)/resources/letter-accommodation" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Accommodation Letter</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Create Accommodation Letter
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-appeal" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Appeal Letter</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Create Appeal Letter
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-union-request" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Union Representation/Request Letter</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Create Union Representation/Request Letter
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-reconsideration" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Reconsideration Letter</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Create Reconsideration Letter
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-rtw-plan" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Create Return-to-Work Plan</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Create Return-to-Work Plan
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/claims-navigator" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Guided Claims Navigator</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Guided Claims Navigator
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/evidence-locker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Evidence Locker</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Evidence Locker
+        </Text>
       </Link>
 
-      <View style={styles.filters} accessibilityLabel="Category filters" accessible>
-        {(["all", "work_financial", "tools_downloads", "emergency_crisis"] as CategoryFilter[]).map((key) => (
+      <View
+        style={styles.filters}
+        accessibilityLabel="Category filters"
+        accessible
+      >
+        {(
+          [
+            "all",
+            "work_financial",
+            "tools_downloads",
+            "emergency_crisis",
+          ] as CategoryFilter[]
+        ).map((key) => (
           <Pressable
             key={key}
             onPress={() => setCategory(key)}
@@ -176,47 +260,113 @@ export default function ResourcesScreen() {
           >
             <View style={styles.chipInner}>
               <MaterialCommunityIcons
-                name={key === "work_financial" ? "briefcase-outline" : key === "tools_downloads" ? "download" : key === "emergency_crisis" ? "lifebuoy" : "filter-variant"}
+                name={
+                  key === "work_financial"
+                    ? "briefcase-outline"
+                    : key === "tools_downloads"
+                      ? "download"
+                      : key === "emergency_crisis"
+                        ? "lifebuoy"
+                        : "filter-variant"
+                }
                 size={14}
-                color={category === key ? styles.chipTextActive.color : styles.chipText.color}
+                color={
+                  category === key
+                    ? styles.chipTextActive.color
+                    : styles.chipText.color
+                }
                 style={{ marginRight: 6 }}
               />
-              <Text style={[styles.chipText, category === key && styles.chipTextActive]}>
+              <Text
+                style={[
+                  styles.chipText,
+                  category === key && styles.chipTextActive,
+                ]}
+              >
                 {key === "all"
                   ? t("resources.filters.all", "All")
                   : key === "work_financial"
-                  ? t("resources.filters.work_financial", "Work & Financial")
-                  : key === "tools_downloads"
-                  ? t("resources.filters.tools_downloads", "Tools & Downloads")
-                  : t("resources.filters.emergency_crisis", "Emergency & Crisis")}
+                    ? t("resources.filters.work_financial", "Work & Financial")
+                    : key === "tools_downloads"
+                      ? t(
+                          "resources.filters.tools_downloads",
+                          "Tools & Downloads",
+                        )
+                      : t(
+                          "resources.filters.emergency_crisis",
+                          "Emergency & Crisis",
+                        )}
               </Text>
             </View>
           </Pressable>
         ))}
       </View>
 
-      <Text style={styles.subtitle}>{t("resources.filters.canada", "Canada")} / provinces</Text>
-      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 8 }}>
-        <Pressable style={[styles.chip, region === "all" && styles.chipActive]} onPress={() => setRegion("all")}>
-          <Text style={[styles.chipText, region === "all" && styles.chipTextActive]}>{t("resources.filters.all", "All")}</Text>
+      <Text style={styles.subtitle}>
+        {t("resources.filters.canada", "Canada")} / provinces
+      </Text>
+      <View
+        style={{
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: 8,
+          marginBottom: 8,
+        }}
+      >
+        <Pressable
+          style={[styles.chip, region === "all" && styles.chipActive]}
+          onPress={() => setRegion("all")}
+        >
+          <Text
+            style={[styles.chipText, region === "all" && styles.chipTextActive]}
+          >
+            {t("resources.filters.all", "All")}
+          </Text>
         </Pressable>
-        <Pressable style={[styles.chip, region === "canada" && styles.chipActive]} onPress={() => setRegion("canada")}>
-          <Text style={[styles.chipText, region === "canada" && styles.chipTextActive]}>Canada</Text>
+        <Pressable
+          style={[styles.chip, region === "canada" && styles.chipActive]}
+          onPress={() => setRegion("canada")}
+        >
+          <Text
+            style={[
+              styles.chipText,
+              region === "canada" && styles.chipTextActive,
+            ]}
+          >
+            Canada
+          </Text>
         </Pressable>
         {presentProvinceCodes(items).map((code) => (
-          <Pressable key={code} style={[styles.chip, region === code && styles.chipActive]} onPress={() => setRegion(code as any)}>
-            <Text style={[styles.chipText, region === code && styles.chipTextActive]}>{code}</Text>
+          <Pressable
+            key={code}
+            style={[styles.chip, region === code && styles.chipActive]}
+            onPress={() => setRegion(code as any)}
+          >
+            <Text
+              style={[
+                styles.chipText,
+                region === code && styles.chipTextActive,
+              ]}
+            >
+              {code}
+            </Text>
           </Pressable>
         ))}
       </View>
 
-      <SearchBar value={query} onChangeText={setQuery} placeholder={t("resources.search", "Search resources...")} />
+      <SearchBar
+        value={query}
+        onChangeText={setQuery}
+        placeholder={t("resources.search", "Search resources...")}
+      />
 
       <SectionList<Resource>
         sections={sections}
         keyExtractor={(item) => item.id}
         renderSectionHeader={({ section }) => (
-          <Text accessibilityRole="header" style={styles.sectionTitle}>{section.title}</Text>
+          <Text accessibilityRole="header" style={styles.sectionTitle}>
+            {section.title}
+          </Text>
         )}
         renderItem={({ item }) => (
           <Card
@@ -225,18 +375,22 @@ export default function ResourcesScreen() {
             onPress={() => item.url && Linking.openURL(item.url)}
           />
         )}
-        ListEmptyComponent={loading ? (
-          <View>
-            {Array.from({ length: 6 }).map((_, i) => (
-              <SkeletonRow key={i} />
-            ))}
-          </View>
-        ) : error ? (
-          <Text style={styles.error}>{error}</Text>
-        ) : (
-          <Text style={styles.empty}>No resources found</Text>
-        )}
-        refreshControl={<RefreshControl refreshing={loading} onRefresh={reload} />}
+        ListEmptyComponent={
+          loading ? (
+            <View>
+              {Array.from({ length: 6 }).map((_, i) => (
+                <SkeletonRow key={i} />
+              ))}
+            </View>
+          ) : error ? (
+            <Text style={styles.error}>{error}</Text>
+          ) : (
+            <Text style={styles.empty}>No resources found</Text>
+          )
+        }
+        refreshControl={
+          <RefreshControl refreshing={loading} onRefresh={reload} />
+        }
         contentContainerStyle={{ paddingBottom: 40 }}
       />
     </View>
@@ -246,13 +400,38 @@ export default function ResourcesScreen() {
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background, padding: 16 },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
+    title: {
+      fontSize: 24,
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 12 },
-    sectionTitle: { marginTop: 16, marginBottom: 8, color: palette.text, fontWeight: "700" },
+    sectionTitle: {
+      marginTop: 16,
+      marginBottom: 8,
+      color: palette.text,
+      fontWeight: "700",
+    },
     toggleText: { color: palette.primary, textDecorationLine: "underline" },
-    filters: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: 8, marginBottom: 8 },
-    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 16, paddingVertical: 6, paddingHorizontal: 10 },
-    chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
+    filters: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: 8,
+      marginTop: 8,
+      marginBottom: 8,
+    },
+    chip: {
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 16,
+      paddingVertical: 6,
+      paddingHorizontal: 10,
+    },
+    chipActive: {
+      backgroundColor: palette.primary,
+      borderColor: palette.primary,
+    },
     chipInner: { flexDirection: "row", alignItems: "center" },
     chipText: { color: palette.text },
     chipTextActive: { color: palette.onPrimary },
@@ -260,4 +439,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     empty: { color: palette.text, opacity: 0.7, marginTop: 12 },
   });
 }
-

@@ -2,7 +2,9 @@ import React from "react";
 import type { Campaign, ID } from "../types/models";
 
 let AsyncStorage: any;
-try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
+try {
+  AsyncStorage = require("@react-native-async-storage/async-storage").default;
+} catch {}
 
 type State = {
   myCampaigns: Campaign[];
@@ -22,7 +24,11 @@ type CampaignsCtx = {
 
 const Ctx = React.createContext<CampaignsCtx | undefined>(undefined);
 
-export function CampaignsLocalProvider({ children }: { children: React.ReactNode }) {
+export function CampaignsLocalProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [state, setState] = React.useState<State>(DEFAULT);
 
   React.useEffect(() => {
@@ -43,12 +49,21 @@ export function CampaignsLocalProvider({ children }: { children: React.ReactNode
   const createCampaign = (title: string, summary: string) => {
     const id = `uc_${Date.now()}`;
     const campaign: Campaign = { id, title, summary };
-    setState((s) => ({ ...s, myCampaigns: [campaign, ...s.myCampaigns], joined: { ...s.joined, [id]: true } }));
+    setState((s) => ({
+      ...s,
+      myCampaigns: [campaign, ...s.myCampaigns],
+      joined: { ...s.joined, [id]: true },
+    }));
     return campaign;
   };
 
-  const join = (id: ID) => setState((s) => ({ ...s, joined: { ...s.joined, [id]: true } }));
-  const leave = (id: ID) => setState((s) => { const { [id]: _, ...rest } = s.joined; return { ...s, joined: rest }; });
+  const join = (id: ID) =>
+    setState((s) => ({ ...s, joined: { ...s.joined, [id]: true } }));
+  const leave = (id: ID) =>
+    setState((s) => {
+      const { [id]: _, ...rest } = s.joined;
+      return { ...s, joined: rest };
+    });
   const isJoined = (id: ID) => !!state.joined[id];
 
   const value: CampaignsCtx = { state, createCampaign, join, leave, isJoined };
@@ -57,6 +72,9 @@ export function CampaignsLocalProvider({ children }: { children: React.ReactNode
 
 export function useCampaignsLocal() {
   const ctx = React.useContext(Ctx);
-  if (!ctx) throw new Error("useCampaignsLocal must be used within CampaignsLocalProvider");
+  if (!ctx)
+    throw new Error(
+      "useCampaignsLocal must be used within CampaignsLocalProvider",
+    );
   return ctx;
 }

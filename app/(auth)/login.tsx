@@ -60,4 +60,3 @@ const styles = StyleSheet.create({
   },
   error: { color: "red", marginBottom: 10 },
 });
-

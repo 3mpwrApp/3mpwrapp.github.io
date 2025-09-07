@@ -24,30 +24,54 @@ export default function TabsLayout() {
     >
       {/* Local profile provider can be wrapped at app root in the future */}
       {/* Hide all nested / detail routes to prevent auto-tabs */}
-      <Tabs.Screen name="resources/letter-reconsideration" options={{ href: null }} />
+      <Tabs.Screen
+        name="resources/letter-reconsideration"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="resources/letter-rtw-plan" options={{ href: null }} />
-      <Tabs.Screen name="resources/letter-union-request" options={{ href: null }} />
+      <Tabs.Screen
+        name="resources/letter-union-request"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="resources/claims-navigator" options={{ href: null }} />
       <Tabs.Screen name="resources/evidence-locker" options={{ href: null }} />
-      <Tabs.Screen name="resources/support-directory" options={{ href: null }} />
+      <Tabs.Screen
+        name="resources/support-directory"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="resources/rights-checker" options={{ href: null }} />
       <Tabs.Screen name="resources/appeal-coach" options={{ href: null }} />
       <Tabs.Screen name="resources/deadlines" options={{ href: null }} />
-      <Tabs.Screen name="resources/evidence-checklist" options={{ href: null }} />
+      <Tabs.Screen
+        name="resources/evidence-checklist"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="resources/voice-notes" options={{ href: null }} />
-      <Tabs.Screen name="resources/templates-gallery" options={{ href: null }} />
+      <Tabs.Screen
+        name="resources/templates-gallery"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="wellness/work-balance-ai" options={{ href: null }} />
       <Tabs.Screen name="wellness/grief-support" options={{ href: null }} />
-      <Tabs.Screen name="wellness/adaptive-meditation" options={{ href: null }} />
+      <Tabs.Screen
+        name="wellness/adaptive-meditation"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="advocacy/support-directory" options={{ href: null }} />
       <Tabs.Screen name="archive/index" options={{ href: null }} />
       <Tabs.Screen name="campaigns/[id]" options={{ href: null }} />
       <Tabs.Screen name="campaigns/room/[id]" options={{ href: null }} />
       <Tabs.Screen name="resources/[id]" options={{ href: null }} />
-      <Tabs.Screen name="resources/letter-accommodation" options={{ href: null }} />
+      <Tabs.Screen
+        name="resources/letter-accommodation"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="resources/letter-appeal" options={{ href: null }} />
       <Tabs.Screen name="wellness/symptom-tracker" options={{ href: null }} />
-      <Tabs.Screen name="wellness/sleep-energy-tracker" options={{ href: null }} />
+      <Tabs.Screen
+        name="wellness/sleep-energy-tracker"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="wellness/self-care-library" options={{ href: null }} />
       <Tabs.Screen name="wellness/rehab-games" options={{ href: null }} />
       <Tabs.Screen name="wellness/daily-planner" options={{ href: null }} />
@@ -59,10 +83,19 @@ export default function TabsLayout() {
       <Tabs.Screen name="community/[slug]" options={{ href: null }} />
       <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />
       <Tabs.Screen name="advocacy/index" options={{ href: null }} />
-      <Tabs.Screen name="advocacy/self-advocacy-coach" options={{ href: null }} />
+      <Tabs.Screen
+        name="advocacy/self-advocacy-coach"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="advocacy/policy-simple" options={{ href: null }} />
-      <Tabs.Screen name="advocacy/ai-advocate-translator" options={{ href: null }} />
-      <Tabs.Screen name="advocacy/ai-case-interpreter" options={{ href: null }} />
+      <Tabs.Screen
+        name="advocacy/ai-advocate-translator"
+        options={{ href: null }}
+      />
+      <Tabs.Screen
+        name="advocacy/ai-case-interpreter"
+        options={{ href: null }}
+      />
       <Tabs.Screen name="advocacy/collective-legal" options={{ href: null }} />
       <Tabs.Screen name="advocacy/ai-gov-navigator" options={{ href: null }} />
       <Tabs.Screen name="advocacy/ask" options={{ href: null }} />

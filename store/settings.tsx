@@ -82,10 +82,18 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setState((s) => ({ ...s, province: p }));
   const setIncludeProvincialHolidays = (v: boolean) =>
     setState((s) => ({ ...s, includeProvincialHolidays: v }));
-  const setYoutubeOpenPreference = (v: SettingsState["youtubeOpenPreference"]) =>
-    setState((s) => ({ ...s, youtubeOpenPreference: v }));
+  const setYoutubeOpenPreference = (
+    v: SettingsState["youtubeOpenPreference"],
+  ) => setState((s) => ({ ...s, youtubeOpenPreference: v }));
 
-  const value: Ctx = { ...state, setHighContrast, setTextScale, setProvince, setIncludeProvincialHolidays, setYoutubeOpenPreference };
+  const value: Ctx = {
+    ...state,
+    setHighContrast,
+    setTextScale,
+    setProvince,
+    setIncludeProvincialHolidays,
+    setYoutubeOpenPreference,
+  };
 
   return (
     <SettingsContext.Provider value={value}>

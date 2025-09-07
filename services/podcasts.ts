@@ -13,7 +13,9 @@ export const fetchPodcasts = async (): Promise<Podcast[]> => {
   // 1) Try remote API if provided
   if (BASE) {
     try {
-      const data = await retry(async () => (await fetch(`${BASE}/podcasts`)).json());
+      const data = await retry(async () =>
+        (await fetch(`${BASE}/podcasts`)).json(),
+      );
       if (Array.isArray(data) && data.length) {
         setCachedJSON(CACHE_KEY, data).catch(() => {});
         return data as Podcast[];

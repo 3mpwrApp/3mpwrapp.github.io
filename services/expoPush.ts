@@ -1,6 +1,7 @@
-
 type ExpoResponse = {
-  data?: { status: string; id?: string; message?: string } | { error: string; message?: string };
+  data?:
+    | { status: string; id?: string; message?: string }
+    | { error: string; message?: string };
   errors?: any[];
 };
 

@@ -14,7 +14,14 @@ const dictionaries: Record<Lang, Dictionary> = {
 };
 
 function get(obj: any, path: string, fallback: string) {
-  return path.split(".").reduce((acc, key) => (acc && acc[key] != null ? acc[key] : undefined), obj) ?? fallback;
+  return (
+    path
+      .split(".")
+      .reduce(
+        (acc, key) => (acc && acc[key] != null ? acc[key] : undefined),
+        obj,
+      ) ?? fallback
+  );
 }
 
 type I18nContextType = {
@@ -29,7 +36,8 @@ const I18nContext = React.createContext<I18nContextType | undefined>(undefined);
 function detectLanguage(): Lang {
   try {
     // Use Intl to detect locale; prefer 'en' if unknown
-    const l = Intl.DateTimeFormat().resolvedOptions().locale?.toLowerCase() || "en";
+    const l =
+      Intl.DateTimeFormat().resolvedOptions().locale?.toLowerCase() || "en";
     if (l.startsWith("fr")) return "fr";
     if (l.startsWith("es")) return "es";
     return "en";
@@ -56,7 +64,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       const v = get(dict, key, fallback);
       return typeof v === "string" ? v : fallback;
     },
-    [lang]
+    [lang],
   );
 
   const value: I18nContextType = { lang, t, setLanguage, isRTL };
@@ -68,4 +76,3 @@ export function useTranslation() {
   if (!ctx) throw new Error("useTranslation must be used within I18nProvider");
   return ctx;
 }
-

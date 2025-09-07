@@ -63,7 +63,10 @@ function parseISO8601ToClock(iso?: string): string {
   return hh > 0 ? `${hh}:${mm}:${ss}` : `${mm}:${ss}`;
 }
 
-async function ytFetch<T>(path: string, params: Record<string, string>): Promise<T> {
+async function ytFetch<T>(
+  path: string,
+  params: Record<string, string>,
+): Promise<T> {
   const key = process.env.EXPO_PUBLIC_YT_API_KEY;
   if (!key) throw new Error("Missing EXPO_PUBLIC_YT_API_KEY");
   const search = new URLSearchParams({ ...params, key });
@@ -144,7 +147,10 @@ export async function fetchInjuredWorkerVideos(limit = 30): Promise<Podcast[]> {
     const channel = s?.channelTitle ? ` • ${s.channelTitle}` : "";
     const desc = (s?.description || "").replace(/\s+/g, " ").trim();
     const description = `${desc.slice(0, 140)}${channel}`.trim();
-    const thumb = s?.thumbnails?.medium?.url || s?.thumbnails?.high?.url || s?.thumbnails?.default?.url;
+    const thumb =
+      s?.thumbnails?.medium?.url ||
+      s?.thumbnails?.high?.url ||
+      s?.thumbnails?.default?.url;
     return {
       id: `yt:${vid}`,
       title,

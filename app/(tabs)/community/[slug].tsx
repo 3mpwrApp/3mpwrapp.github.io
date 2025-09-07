@@ -1,5 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, Pressable, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  useColorScheme,
+  FlatList,
+  Pressable,
+  TextInput,
+} from "react-native";
 import { colors, type Palette } from "../../../theme/colors";
 import { useLocalSearchParams, router } from "expo-router";
 import type { Href } from "expo-router";
@@ -18,13 +26,26 @@ function ChannelInner() {
   const [title, setTitle] = React.useState("");
   const { user } = useAuth();
 
-  if (!channel) return <View style={styles.container}><Text style={styles.title}>Channel not found</Text></View>;
+  if (!channel)
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>Channel not found</Text>
+      </View>
+    );
 
   return (
-    <View style={styles.container} accessibilityLabel={`Channel ${channel.title}`} accessible>
+    <View
+      style={styles.container}
+      accessibilityLabel={`Channel ${channel.title}`}
+      accessible
+    >
       <Text style={styles.title}>{channel.title}</Text>
 
-      <View style={styles.newBox} accessible accessibilityLabel="Create a new thread">
+      <View
+        style={styles.newBox}
+        accessible
+        accessibilityLabel="Create a new thread"
+      >
         <TextInput
           style={styles.input}
           placeholder="Start a new thread"
@@ -33,32 +54,58 @@ function ChannelInner() {
           onChangeText={setTitle}
         />
         <Pressable
-          onPress={() => { if (!title.trim()) return; const ok = createThread(channel.id, title.trim(), user?.displayName ?? user?.email ?? null); if (ok) setTitle(""); }}
+          onPress={() => {
+            if (!title.trim()) return;
+            const ok = createThread(
+              channel.id,
+              title.trim(),
+              user?.displayName ?? user?.email ?? null,
+            );
+            if (ok) setTitle("");
+          }}
           accessibilityRole="button"
           accessibilityLabel="Create thread"
           hitSlop={HIT_SLOP_8}
-          style={({ pressed }) => [styles.cta, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+          style={({ pressed }) => [
+            styles.cta,
+            touchTarget.min,
+            { opacity: pressed ? 0.7 : 1 },
+          ]}
         >
           <Text style={styles.ctaText}>Post</Text>
         </Pressable>
       </View>
 
       <FlatList
-        data={[...threads].sort((a,b)=> (b.pinned?1:0)-(a.pinned?1:0) || b.createdAt-a.createdAt)}
+        data={[...threads].sort(
+          (a, b) =>
+            (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0) ||
+            b.createdAt - a.createdAt,
+        )}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable
-          onPress={() => router.push(`/(tabs)/community/threads/${item.id}` as Href)}
+            onPress={() =>
+              router.push(`/(tabs)/community/threads/${item.id}` as Href)
+            }
             accessibilityRole="button"
             accessibilityLabel={`Open thread ${item.title}`}
             hitSlop={HIT_SLOP_8}
-            style={({ pressed }) => [styles.threadRow, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            style={({ pressed }) => [
+              styles.threadRow,
+              touchTarget.min,
+              { opacity: pressed ? 0.7 : 1 },
+            ]}
           >
             <Text style={styles.threadTitle}>{item.title}</Text>
-            <Text style={styles.threadMeta}>{new Date(item.createdAt).toLocaleString()}</Text>
+            <Text style={styles.threadMeta}>
+              {new Date(item.createdAt).toLocaleString()}
+            </Text>
           </Pressable>
         )}
-        ListEmptyComponent={<Text style={styles.threadMeta}>No threads yet.</Text>}
+        ListEmptyComponent={
+          <Text style={styles.threadMeta}>No threads yet.</Text>
+        }
         contentContainerStyle={{ paddingTop: 8 }}
       />
     </View>
@@ -79,11 +126,34 @@ function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: "700", color: palette.text },
-    newBox: { flexDirection: "row", gap: 8, alignItems: "center", marginTop: 12, paddingVertical: 8 },
-    input: { flex: 1, borderWidth: 1, borderColor: palette.muted, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, color: palette.text },
-    cta: { backgroundColor: palette.primary, borderRadius: 10, paddingHorizontal: 16, paddingVertical: 10 },
+    newBox: {
+      flexDirection: "row",
+      gap: 8,
+      alignItems: "center",
+      marginTop: 12,
+      paddingVertical: 8,
+    },
+    input: {
+      flex: 1,
+      borderWidth: 1,
+      borderColor: palette.muted,
+      borderRadius: 10,
+      paddingHorizontal: 12,
+      paddingVertical: 10,
+      color: palette.text,
+    },
+    cta: {
+      backgroundColor: palette.primary,
+      borderRadius: 10,
+      paddingHorizontal: 16,
+      paddingVertical: 10,
+    },
     ctaText: { color: palette.onPrimary, fontWeight: "700" },
-    threadRow: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
+    threadRow: {
+      paddingVertical: 12,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderBottomColor: palette.muted,
+    },
     threadTitle: { color: palette.text, fontSize: 16, fontWeight: "600" },
     threadMeta: { color: palette.text, opacity: 0.8, marginTop: 2 },
   });

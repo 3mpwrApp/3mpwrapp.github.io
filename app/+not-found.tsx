@@ -1,8 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, useColorScheme } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+  useColorScheme,
+} from "react-native";
 import { Link, Stack, useRouter } from "expo-router";
 import { colors, type Palette } from "../theme/colors";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../hooks/useA11y";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../hooks/useA11y";
 
 export default function NotFoundScreen() {
   const router = useRouter();
@@ -18,7 +28,13 @@ export default function NotFoundScreen() {
     <>
       <Stack.Screen options={{ title: "Not Found" }} />
       <View style={styles.container}>
-        <Text ref={titleRef} nativeID="notfound-title" accessibilityRole="header" style={styles.text} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        <Text
+          ref={titleRef}
+          nativeID="notfound-title"
+          accessibilityRole="header"
+          style={styles.text}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
           404 - Page Not Found
         </Text>
 
@@ -30,10 +46,22 @@ export default function NotFoundScreen() {
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           style={({ pressed }) => [styles.button, pressed && { opacity: 0.7 }]}
         >
-          <Text style={styles.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>Go Back</Text>
+          <Text
+            style={styles.buttonText}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            Go Back
+          </Text>
         </Pressable>
 
-        <Link href={"/" as any} replace asChild accessibilityRole="link" accessibilityLabel="Go to home" accessibilityHint="Navigates to the home tab">
+        <Link
+          href={"/" as any}
+          replace
+          asChild
+          accessibilityRole="link"
+          accessibilityLabel="Go to home"
+          accessibilityHint="Navigates to the home tab"
+        >
           <Pressable
             hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={({ pressed }) => [
@@ -42,7 +70,12 @@ export default function NotFoundScreen() {
               pressed && { opacity: 0.7 },
             ]}
           >
-            <Text style={styles.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>Go Home</Text>
+            <Text
+              style={styles.buttonText}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              Go Home
+            </Text>
           </Pressable>
         </Link>
       </View>

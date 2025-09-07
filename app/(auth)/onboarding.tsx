@@ -12,15 +12,26 @@ export default function OnboardingScreen() {
         Empowering injured workers & persons with disabilities.
       </Text>
 
-      <Button title="Login" onPress={() => router.push("/(auth)/login" as Href)} />
+      <Button
+        title="Login"
+        onPress={() => router.push("/(auth)/login" as Href)}
+      />
       <View style={{ marginVertical: 10 }} />
-      <Button title="Register" onPress={() => router.push("/(auth)/register" as Href)} />
+      <Button
+        title="Register"
+        onPress={() => router.push("/(auth)/register" as Href)}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 20 },
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
   title: { fontSize: 26, fontWeight: "bold", marginBottom: 10 },
   subtitle: { fontSize: 16, textAlign: "center", marginBottom: 30 },
 });

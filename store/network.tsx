@@ -13,7 +13,9 @@ export function NetworkProvider({ children }: { children: React.ReactNode }) {
   const [offline, setOffline] = React.useState(false);
   const [syncing, setSyncing] = React.useState(false);
   return (
-    <NetworkContext.Provider value={{ offline, setOffline, syncing, setSyncing }}>
+    <NetworkContext.Provider
+      value={{ offline, setOffline, syncing, setSyncing }}
+    >
       {children}
     </NetworkContext.Provider>
   );

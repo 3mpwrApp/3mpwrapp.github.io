@@ -4,7 +4,10 @@ import { AccessibilityInfo } from "react-native";
 
 export default function useAnnounceScreen(message: string) {
   useEffect(() => {
-    if (message && typeof AccessibilityInfo.announceForAccessibility === "function") {
+    if (
+      message &&
+      typeof AccessibilityInfo.announceForAccessibility === "function"
+    ) {
       AccessibilityInfo.announceForAccessibility(message);
     }
   }, [message]);

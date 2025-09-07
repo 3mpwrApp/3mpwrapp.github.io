@@ -9,7 +9,9 @@ export default function ContrastToggle({ style }: { style?: ViewStyle }) {
   return (
     <Pressable
       accessibilityRole="button"
-      accessibilityLabel={highContrast ? "Disable high contrast" : "Enable high contrast"}
+      accessibilityLabel={
+        highContrast ? "Disable high contrast" : "Enable high contrast"
+      }
       onPress={() => setHighContrast(!highContrast)}
       style={({ pressed }) => [style, pressed && { opacity: 0.8 }]}
     >

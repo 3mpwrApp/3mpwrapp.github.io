@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image, Linking } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TextInput,
+  Button,
+  Alert,
+  Image,
+  Linking,
+} from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -14,7 +24,11 @@ import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
 import { useProfileLocal } from "../../store/profileLocal";
-import { exportBackup, importBackup, clearAllData } from "../../services/backup";
+import {
+  exportBackup,
+  importBackup,
+  clearAllData,
+} from "../../services/backup";
 import { usePrivacy } from "../../store/privacy";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -80,7 +94,7 @@ export default function SettingsScreen() {
     } catch {
       Alert.alert(
         "Image Picker Unavailable",
-        "Please rebuild the Android app to include expo-image-picker (npx expo run:android)."
+        "Please rebuild the Android app to include expo-image-picker (npx expo run:android).",
       );
       return;
     }
@@ -172,13 +186,39 @@ function LocalProfileSection() {
   const [province, setProvince] = useState(profile.province ?? "");
   return (
     <View>
-      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Name</Text>
-      <TextInput style={s.input} value={name} onChangeText={setName} placeholder="Your name" />
-      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Contact (email/phone)</Text>
-      <TextInput style={s.input} value={contact} onChangeText={setContact} placeholder="you@example.com" />
-      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Province (e.g., ON, QC)</Text>
-      <TextInput style={s.input} value={province} onChangeText={setProvince} placeholder="ON" autoCapitalize="characters" maxLength={2} />
-      <Button title="Save" onPress={() => setProfile({ name, contact, province })} />
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>
+        Name
+      </Text>
+      <TextInput
+        style={s.input}
+        value={name}
+        onChangeText={setName}
+        placeholder="Your name"
+      />
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>
+        Contact (email/phone)
+      </Text>
+      <TextInput
+        style={s.input}
+        value={contact}
+        onChangeText={setContact}
+        placeholder="you@example.com"
+      />
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>
+        Province (e.g., ON, QC)
+      </Text>
+      <TextInput
+        style={s.input}
+        value={province}
+        onChangeText={setProvince}
+        placeholder="ON"
+        autoCapitalize="characters"
+        maxLength={2}
+      />
+      <Button
+        title="Save"
+        onPress={() => setProfile({ name, contact, province })}
+      />
     </View>
   );
 }
@@ -213,21 +253,37 @@ function PrivacyBackupSection() {
       const FS = await import("expo-file-system");
       const raw = await FS.readAsStringAsync(uri);
       const ok = await importBackup(JSON.parse(raw));
-      Alert.alert(ok ? "Imported" : "Import failed", ok ? "Backup restored." : "Could not restore backup.");
+      Alert.alert(
+        ok ? "Imported" : "Import failed",
+        ok ? "Backup restored." : "Could not restore backup.",
+      );
     } catch {
       Alert.alert("Import failed", "Unable to read backup file.");
     }
   };
   const onClear = async () => {
     const ok = await clearAllData();
-    Alert.alert(ok ? "Cleared" : "Failed", ok ? "Local app data cleared." : "Unable to clear data.");
+    Alert.alert(
+      ok ? "Cleared" : "Failed",
+      ok ? "Local app data cleared." : "Unable to clear data.",
+    );
   };
   return (
     <View>
       <Text style={s.rowLabel}>Set/Change Passcode</Text>
-      <TextInput style={s.input} placeholder="New passcode" secureTextEntry onSubmitEditing={(e) => setPasscode(e.nativeEvent.text || undefined)} />
+      <TextInput
+        style={s.input}
+        placeholder="New passcode"
+        secureTextEntry
+        onSubmitEditing={(e) => setPasscode(e.nativeEvent.text || undefined)}
+      />
       <View style={{ height: 8 }} />
-      <Button title={state.lockWellness ? "Disable Wellness Lock" : "Enable Wellness Lock"} onPress={() => setLockWellness(!state.lockWellness)} />
+      <Button
+        title={
+          state.lockWellness ? "Disable Wellness Lock" : "Enable Wellness Lock"
+        }
+        onPress={() => setLockWellness(!state.lockWellness)}
+      />
       <View style={{ height: 12 }} />
       <Button title="Export backup" onPress={onExport} />
       <View style={{ height: 8 }} />
@@ -240,12 +296,12 @@ function PrivacyBackupSection() {
 
 function TermsSection() {
   const openTerms = () => {
-    Linking.openURL('https://empowr.app/terms').catch(() => {});
+    Linking.openURL("https://empowr.app/terms").catch(() => {});
   };
   const reset = async () => {
     try {
-      await AsyncStorage.removeItem('empowr.terms.accepted.v1');
-      Alert.alert('Reset', 'You will be asked to accept Terms on next launch.');
+      await AsyncStorage.removeItem("empowr.terms.accepted.v1");
+      Alert.alert("Reset", "You will be asked to accept Terms on next launch.");
     } catch {}
   };
   return (
@@ -257,7 +313,15 @@ function TermsSection() {
   );
 }
 
-function Section({ title, children, styles }: { title: string; children: React.ReactNode; styles: ReturnType<typeof createStyles> }) {
+function Section({
+  title,
+  children,
+  styles,
+}: {
+  title: string;
+  children: React.ReactNode;
+  styles: ReturnType<typeof createStyles>;
+}) {
   return (
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>{title}</Text>
@@ -269,10 +333,24 @@ function Section({ title, children, styles }: { title: string; children: React.R
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    section: { paddingVertical: 12, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted },
+    title: {
+      fontSize: 24,
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    section: {
+      paddingVertical: 12,
+      borderTopWidth: StyleSheet.hairlineWidth,
+      borderTopColor: palette.muted,
+    },
     sectionTitle: { color: palette.text, fontWeight: "700", marginBottom: 8 },
-    rowLabel: { color: palette.text, opacity: 0.9, marginTop: 10, marginBottom: 6 },
+    rowLabel: {
+      color: palette.text,
+      opacity: 0.9,
+      marginTop: 10,
+      marginBottom: 6,
+    },
     input: {
       borderWidth: 1,
       borderColor: palette.muted,
@@ -290,4 +368,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
   });
 }
-

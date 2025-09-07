@@ -1,64 +1,64 @@
 {
-    "nav":  {
-                "home":  "Accueil",
-                "campaigns":  "Campagnes",
-                "community":  "Communauté",
-                "advocacy":  "Défense des droits",
-                "podcasts":  "Balados et récits",
-                "resources":  "Ressources",
-                "events":  "Événements",
-                "wellness":  "Bien-être",
-                "profile":  "Profil"
-            },
-    "home":  {
-                 "title":  "Bienvenue sur Empowr",
-                 "subtitle":  "Soutien. Défense. Autonomisation.",
-                 "welcome":  "Bienvenue! Carrefour pour la communauté, l’éducation, les outils de défense et les balados — tout au même endroit!"
-             },
-    "header":  {
-                   "favorites":  "Favs",
-                   "items":  "Éléments",
-                   "openProfile":  "Ouvrir le profil",
-                   "signIn":  "Se connecter",
-                   "signOut":  "Se déconnecter",
-                   "refresh":  "Tout actualiser"
-               },
-    "resources":  {
-                      "tools":  {
-                                    "deadlines":  "Calculateur d’échéances + rappels",
-                                    "evidence":  "Générateur de liste de preuves",
-                                    "voice_notes":  "Notes vocales ? compte rendu",
-                                    "templates":  "Galerie de modèles"
-                                }
-                  },
-    "wellness":  {
-                     "tools":  {
-                                   "symptom":  "Suivi symptômes et douleur (rapport)",
-                                   "sleep":  "Suivi sommeil et énergie (résumé médical)",
-                                   "selfcare":  "Bibliothèque d’auto-soin accessible",
-                                   "work_balance":  "Bien-être + équilibre travail (IA)",
-                                   "grief":  "Deuil et identité — soutien",
-                                   "adaptive_meditation":  "Méditation et relaxation adaptées",
-                                   "rehab_games":  "Jeux de rééducation virtuels (mouvements doux)",
-                                   "daily_planner":  "Planificateur quotidien adaptatif"
-                               },
-                     "rehab":  {
-                                   "subtitle":  "Mini-jeux accessibles pour encourager des mouvements doux et exercices de physio. Adaptez et arrêtez si la douleur augmente.",
-                                   "title":  "Jeux de rééducation virtuels"
-                               },
-                     "achievements":  {
-                                          "subtitle":  "Gagnez des badges en bâtissant des habitudes saines.",
-                                          "title":  "Réussites"
-                                      }
-                 },
-    "advocacy":  {
-                     "tools":  {
-                                   "self_coach":  "Coach d’auto-défense (micro-leçons)",
-                                   "policy_simple":  "Politiques simplifiées",
-                                   "ai_translator":  "Traducteur administratif (langage clair)",
-                                   "ai_case":  "Interprète de cas (résumé)",
-                                   "collective":  "Pôle d’action juridique collective",
-                                   "ai_gov":  "Navigateur gouvernemental IA"
-                               }
-                 }
+  "nav": {
+    "home": "Accueil",
+    "campaigns": "Campagnes",
+    "community": "Communautï¿½",
+    "advocacy": "Dï¿½fense des droits",
+    "podcasts": "Balados et rï¿½cits",
+    "resources": "Ressources",
+    "events": "ï¿½vï¿½nements",
+    "wellness": "Bien-ï¿½tre",
+    "profile": "Profil"
+  },
+  "home": {
+    "title": "Bienvenue sur Empowr",
+    "subtitle": "Soutien. Dï¿½fense. Autonomisation.",
+    "welcome": "Bienvenue! Carrefour pour la communautï¿½, lï¿½ï¿½ducation, les outils de dï¿½fense et les balados ï¿½ tout au mï¿½me endroit!"
+  },
+  "header": {
+    "favorites": "Favs",
+    "items": "ï¿½lï¿½ments",
+    "openProfile": "Ouvrir le profil",
+    "signIn": "Se connecter",
+    "signOut": "Se dï¿½connecter",
+    "refresh": "Tout actualiser"
+  },
+  "resources": {
+    "tools": {
+      "deadlines": "Calculateur dï¿½ï¿½chï¿½ances + rappels",
+      "evidence": "Gï¿½nï¿½rateur de liste de preuves",
+      "voice_notes": "Notes vocales ? compte rendu",
+      "templates": "Galerie de modï¿½les"
+    }
+  },
+  "wellness": {
+    "tools": {
+      "symptom": "Suivi symptï¿½mes et douleur (rapport)",
+      "sleep": "Suivi sommeil et ï¿½nergie (rï¿½sumï¿½ mï¿½dical)",
+      "selfcare": "Bibliothï¿½que dï¿½auto-soin accessible",
+      "work_balance": "Bien-ï¿½tre + ï¿½quilibre travail (IA)",
+      "grief": "Deuil et identitï¿½ ï¿½ soutien",
+      "adaptive_meditation": "Mï¿½ditation et relaxation adaptï¿½es",
+      "rehab_games": "Jeux de rï¿½ï¿½ducation virtuels (mouvements doux)",
+      "daily_planner": "Planificateur quotidien adaptatif"
+    },
+    "rehab": {
+      "subtitle": "Mini-jeux accessibles pour encourager des mouvements doux et exercices de physio. Adaptez et arrï¿½tez si la douleur augmente.",
+      "title": "Jeux de rï¿½ï¿½ducation virtuels"
+    },
+    "achievements": {
+      "subtitle": "Gagnez des badges en bï¿½tissant des habitudes saines.",
+      "title": "Rï¿½ussites"
+    }
+  },
+  "advocacy": {
+    "tools": {
+      "self_coach": "Coach dï¿½auto-dï¿½fense (micro-leï¿½ons)",
+      "policy_simple": "Politiques simplifiï¿½es",
+      "ai_translator": "Traducteur administratif (langage clair)",
+      "ai_case": "Interprï¿½te de cas (rï¿½sumï¿½)",
+      "collective": "Pï¿½le dï¿½action juridique collective",
+      "ai_gov": "Navigateur gouvernemental IA"
+    }
+  }
 }

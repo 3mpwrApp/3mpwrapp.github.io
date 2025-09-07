@@ -1,11 +1,30 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, TextInput, Share, Alert, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+  TextInput,
+  Share,
+  Alert,
+  ScrollView,
+} from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../../theme/usePalette";
 import { getCachedJSON, setCachedJSON } from "../../../../services/cache";
-import { fsRoomAddTask, fsRoomToggleTask, fsRoomSetNotes, fsRoomSubscribe } from "../../../../services/firestore";
+import {
+  fsRoomAddTask,
+  fsRoomToggleTask,
+  fsRoomSetNotes,
+  fsRoomSubscribe,
+} from "../../../../services/firestore";
 
-type Task = { id: string; kind: 'petition' | 'social' | 'letters'; title: string; done?: boolean };
+type Task = {
+  id: string;
+  kind: "petition" | "social" | "letters";
+  title: string;
+  done?: boolean;
+};
 
 export const options = { href: null };
 
@@ -14,82 +33,161 @@ export default function CampaignRoom() {
   const palette = useAppPalette();
   const s = styles(palette);
   const [tasks, setTasks] = React.useState<Task[]>([
-    { id: 'p1', kind: 'petition', title: 'Create petition + share link' },
-    { id: 's1', kind: 'social', title: 'Hashtags + sample tweet/thread' },
-    { id: 'l1', kind: 'letters', title: 'Letter-writing kit (targets + template)' },
+    { id: "p1", kind: "petition", title: "Create petition + share link" },
+    { id: "s1", kind: "social", title: "Hashtags + sample tweet/thread" },
+    {
+      id: "l1",
+      kind: "letters",
+      title: "Letter-writing kit (targets + template)",
+    },
   ]);
-  const [newTask, setNewTask] = React.useState('');
-  const [notes, setNotes] = React.useState('');
+  const [newTask, setNewTask] = React.useState("");
+  const [notes, setNotes] = React.useState("");
 
   React.useEffect(() => {
     (async () => {
-      const savedTasks = await getCachedJSON<Task[]>(`campaign_room_${id}_tasks`);
+      const savedTasks = await getCachedJSON<Task[]>(
+        `campaign_room_${id}_tasks`,
+      );
       if (savedTasks) setTasks(savedTasks);
-      const savedNotes = await getCachedJSON<string>(`campaign_room_${id}_notes`);
+      const savedNotes = await getCachedJSON<string>(
+        `campaign_room_${id}_notes`,
+      );
       if (savedNotes) setNotes(savedNotes);
     })();
   }, [id]);
-  React.useEffect(() => { setCachedJSON(`campaign_room_${id}_tasks`, tasks); }, [id, tasks]);
-  React.useEffect(() => { setCachedJSON(`campaign_room_${id}_notes`, notes); fsRoomSetNotes(String(id||''), notes); }, [id, notes]);
+  React.useEffect(() => {
+    setCachedJSON(`campaign_room_${id}_tasks`, tasks);
+  }, [id, tasks]);
+  React.useEffect(() => {
+    setCachedJSON(`campaign_room_${id}_notes`, notes);
+    fsRoomSetNotes(String(id || ""), notes);
+  }, [id, notes]);
 
   const toggle = async (tid: string) => {
-    setTasks((prev) => prev.map(t => t.id===tid ? { ...t, done: !t.done } : t));
-    const t = tasks.find(x=>x.id===tid);
-    if (t) fsRoomToggleTask(String(id||''), tid, !t.done);
+    setTasks((prev) =>
+      prev.map((t) => (t.id === tid ? { ...t, done: !t.done } : t)),
+    );
+    const t = tasks.find((x) => x.id === tid);
+    if (t) fsRoomToggleTask(String(id || ""), tid, !t.done);
   };
   const add = async () => {
     if (!newTask.trim()) return;
-    const task = { id: String(Date.now()), kind: 'social' as const, title: newTask.trim() };
+    const task = {
+      id: String(Date.now()),
+      kind: "social" as const,
+      title: newTask.trim(),
+    };
     setTasks((prev) => [task as any, ...prev]);
-    setNewTask('');
-    fsRoomAddTask(String(id||''), task);
+    setNewTask("");
+    fsRoomAddTask(String(id || ""), task);
   };
 
   React.useEffect(() => {
     let unsub: any = null;
     (async () => {
       try {
-        const sub = await fsRoomSubscribe(String(id||''), {
+        const sub = await fsRoomSubscribe(String(id || ""), {
           onTasks: (list) => setTasks(list as any),
           onNotes: (txt) => setNotes((prev) => (prev === txt ? prev : txt)),
         });
         unsub = sub.unsubscribe;
       } catch {}
     })();
-    return () => { try { unsub?.(); } catch {} };
+    return () => {
+      try {
+        unsub?.();
+      } catch {}
+    };
   }, [id]);
   const exportCSV = () => {
-    const rows = [["kind","title","done"], ...tasks.map(t => [t.kind, t.title, t.done ? 'yes' : 'no'])];
-    const csv = rows.map(r => r.map(x => `"${(x||'').replace(/"/g,'""')}"`).join(',')).join('\n');
-    Share.share({ message: csv, title: 'Campaign Room Tasks' }).catch(()=>{});
+    const rows = [
+      ["kind", "title", "done"],
+      ...tasks.map((t) => [t.kind, t.title, t.done ? "yes" : "no"]),
+    ];
+    const csv = rows
+      .map((r) => r.map((x) => `"${(x || "").replace(/"/g, '""')}"`).join(","))
+      .join("\n");
+    Share.share({ message: csv, title: "Campaign Room Tasks" }).catch(() => {});
   };
   const shareRoom = () => {
     const url = `https://empowr.app/campaigns/room/${id}`;
-    Share.share({ title: 'Campaign Room', message: `Join our campaign room: ${url}`, url }).catch(()=>{});
+    Share.share({
+      title: "Campaign Room",
+      message: `Join our campaign room: ${url}`,
+      url,
+    }).catch(() => {});
   };
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
-      <Stack.Screen options={{ title: `Campaign Room ${id ?? ''}` }} />
+      <Stack.Screen options={{ title: `Campaign Room ${id ?? ""}` }} />
       <Text style={s.title}>Digital Protest & Campaign Room</Text>
-      <Text style={s.subtitle}>Collaborate on petitions, social pushes, and letter drives.</Text>
-      <TextInput style={s.input} value={newTask} onChangeText={setNewTask} placeholder="Add a task (e.g., contact media list)" />
-      <Pressable onPress={add} style={s.button}><Text style={s.buttonText}>Add Task</Text></Pressable>
+      <Text style={s.subtitle}>
+        Collaborate on petitions, social pushes, and letter drives.
+      </Text>
+      <TextInput
+        style={s.input}
+        value={newTask}
+        onChangeText={setNewTask}
+        placeholder="Add a task (e.g., contact media list)"
+      />
+      <Pressable onPress={add} style={s.button}>
+        <Text style={s.buttonText}>Add Task</Text>
+      </Pressable>
       <View style={{ height: 8 }} />
       {tasks.map((t) => (
-        <Pressable key={t.id} onPress={() => toggle(t.id)} accessibilityRole="button" style={[s.task, t.done && { opacity: 0.6 }]}> 
-          <Text style={s.taskText}>{t.done ? 'âœ“ ' : 'â€¢ '}{t.title} <Text style={{ opacity: 0.7 }}>({t.kind})</Text></Text>
+        <Pressable
+          key={t.id}
+          onPress={() => toggle(t.id)}
+          accessibilityRole="button"
+          style={[s.task, t.done && { opacity: 0.6 }]}
+        >
+          <Text style={s.taskText}>
+            {t.done ? "âœ“ " : "â€¢ "}
+            {t.title} <Text style={{ opacity: 0.7 }}>({t.kind})</Text>
+          </Text>
         </Pressable>
       ))}
       <View style={{ height: 8 }} />
-      <Pressable onPress={exportCSV} style={s.button}><Text style={s.buttonText}>Export Tasks (CSV)</Text></Pressable>
+      <Pressable onPress={exportCSV} style={s.button}>
+        <Text style={s.buttonText}>Export Tasks (CSV)</Text>
+      </Pressable>
       <View style={{ height: 8 }} />
-      <Pressable onPress={shareRoom} style={s.button}><Text style={s.buttonText}>Share Room Link</Text></Pressable>
+      <Pressable onPress={shareRoom} style={s.button}>
+        <Text style={s.buttonText}>Share Room Link</Text>
+      </Pressable>
       <View style={{ height: 12 }} />
       <Text style={s.title}>Shared Notes</Text>
-      <TextInput style={[s.input,{ minHeight: 120 }]} value={notes} onChangeText={setNotes} multiline placeholder="Shared notes: announce dates, media contacts, progress, links" />
-      <Pressable onPress={async () => { try { const mod = await import('expo-clipboard'); await mod.setStringAsync(notes); Alert.alert('Copied','Notes copied.'); } catch {} }} style={s.button}><Text style={s.buttonText}>Copy Notes</Text></Pressable>
-      <Pressable onPress={() => Share.share({ message: notes, title: 'Campaign Room Notes' }).catch(()=>{})} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Share Notes</Text></Pressable>
+      <TextInput
+        style={[s.input, { minHeight: 120 }]}
+        value={notes}
+        onChangeText={setNotes}
+        multiline
+        placeholder="Shared notes: announce dates, media contacts, progress, links"
+      />
+      <Pressable
+        onPress={async () => {
+          try {
+            const mod = await import("expo-clipboard");
+            await mod.setStringAsync(notes);
+            Alert.alert("Copied", "Notes copied.");
+          } catch {}
+        }}
+        style={s.button}
+      >
+        <Text style={s.buttonText}>Copy Notes</Text>
+      </Pressable>
+      <Pressable
+        onPress={() =>
+          Share.share({ message: notes, title: "Campaign Room Notes" }).catch(
+            () => {},
+          )
+        }
+        style={[s.button, { marginTop: 8 }]}
+      >
+        <Text style={s.buttonText}>Share Notes</Text>
+      </Pressable>
     </ScrollView>
   );
 }
@@ -97,12 +195,28 @@ export default function CampaignRoom() {
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { color: palette.text, fontWeight: '700', fontSize: 20 },
+    title: { color: palette.text, fontWeight: "700", fontSize: 20 },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
-    input: { borderWidth: 1, borderColor: palette.muted, borderRadius: 8, padding: 10, color: palette.text, marginBottom: 8 },
-    button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center' },
-    buttonText: { color: palette.onPrimary, fontWeight: '700' },
-    task: { paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
+    input: {
+      borderWidth: 1,
+      borderColor: palette.muted,
+      borderRadius: 8,
+      padding: 10,
+      color: palette.text,
+      marginBottom: 8,
+    },
+    button: {
+      backgroundColor: palette.primary,
+      paddingVertical: 10,
+      borderRadius: 8,
+      alignItems: "center",
+    },
+    buttonText: { color: palette.onPrimary, fontWeight: "700" },
+    task: {
+      paddingVertical: 10,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderBottomColor: palette.muted,
+    },
     taskText: { color: palette.text },
   });
 }

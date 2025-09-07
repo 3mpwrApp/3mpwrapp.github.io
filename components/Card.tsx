@@ -1,5 +1,11 @@
 import React from "react";
-import { Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  useColorScheme,
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { colors, type Palette } from "../theme/colors";
 import { useTextScale } from "../theme/typography";
@@ -17,11 +23,25 @@ type Props = {
   left?: React.ReactNode;
 };
 
-export default function Card({ title, subtitle, onPress, onLongPress, rightIcon = "chevron-forward", onPressRight, rightA11yLabel, testID, accessibilityLabel, left }: Props) {
+export default function Card({
+  title,
+  subtitle,
+  onPress,
+  onLongPress,
+  rightIcon = "chevron-forward",
+  onPressRight,
+  rightA11yLabel,
+  testID,
+  accessibilityLabel,
+  left,
+}: Props) {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const { factor } = useTextScale();
-  const styles = React.useMemo(() => createStyles(palette, factor), [palette, factor]);
+  const styles = React.useMemo(
+    () => createStyles(palette, factor),
+    [palette, factor],
+  );
 
   return (
     <Pressable
@@ -44,12 +64,15 @@ export default function Card({ title, subtitle, onPress, onLongPress, rightIcon 
           accessibilityRole="button"
           accessibilityLabel={rightA11yLabel ?? "Actions"}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          style={({ pressed }) => [styles.rightAction, pressed && { opacity: 0.8 }]}
+          style={({ pressed }) => [
+            styles.rightAction,
+            pressed && { opacity: 0.8 },
+          ]}
         >
           <Ionicons name={rightIcon} size={20} color={palette.muted} />
         </Pressable>
       ) : (
-          <Ionicons name={rightIcon} size={20} color={palette.muted} />
+        <Ionicons name={rightIcon} size={20} color={palette.muted} />
       )}
     </Pressable>
   );
@@ -70,8 +93,17 @@ function createStyles(palette: Palette, factor: number) {
     },
     textWrap: { flex: 1, paddingEnd: 12 },
     leftWrap: { marginEnd: 12 },
-    title: { color: palette.text, fontSize: Math.round(16 * factor), fontWeight: "600" },
-    subtitle: { color: palette.text, opacity: 0.9, fontSize: Math.round(14 * factor), marginTop: 2 },
+    title: {
+      color: palette.text,
+      fontSize: Math.round(16 * factor),
+      fontWeight: "600",
+    },
+    subtitle: {
+      color: palette.text,
+      opacity: 0.9,
+      fontSize: Math.round(14 * factor),
+      marginTop: 2,
+    },
     rightAction: { paddingStart: 8 },
   });
 }

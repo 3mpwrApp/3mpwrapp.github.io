@@ -34,7 +34,7 @@ export default function RootLayout() {
     });
     const sub = AccessibilityInfo.addEventListener(
       "reduceMotionChanged",
-      (enabled) => setReduceMotion(enabled)
+      (enabled) => setReduceMotion(enabled),
     );
     return () => {
       mounted = false;
@@ -76,48 +76,48 @@ export default function RootLayout() {
         <SettingsProvider>
           <ProfileLocalProvider>
             <PrivacyProvider>
-          {/* Ã°Å¸â€Â¹ Firebase Auth Provider wraps the app */}
-          <AuthProvider>
-            <FavoritesProvider>
-              <CountsProvider>
-                <NetworkProvider>
-                  <RefreshProvider>
-                    <View>
-                      <OfflineBanner />
-                      <Header />
-                    </View>
-                    <TermsGate>
-                    <ChangelogGate>
-                    <Stack
-                      screenOptions={{
-                        animation: reduceMotion ? "none" : "default",
-                      }}
-                    >
-                      <Stack.Screen
-                        name="profile"
-                        options={{ headerShown: false }}
-                      />
-                      <Stack.Screen
-                        name="(auth)"
-                        options={{ headerShown: false }}
-                      />
-                      <Stack.Screen
-                        name="(tabs)"
-                        options={{ headerShown: false }}
-                      />
-                      <Stack.Screen
-                        name="modal"
-                        options={{ presentation: "modal" }}
-                      />
-                    </Stack>
-                    </ChangelogGate>
-                    </TermsGate>
-                    <Footer />
-                  </RefreshProvider>
-                </NetworkProvider>
-              </CountsProvider>
-            </FavoritesProvider>
-          </AuthProvider>
+              {/* Ã°Å¸â€Â¹ Firebase Auth Provider wraps the app */}
+              <AuthProvider>
+                <FavoritesProvider>
+                  <CountsProvider>
+                    <NetworkProvider>
+                      <RefreshProvider>
+                        <View>
+                          <OfflineBanner />
+                          <Header />
+                        </View>
+                        <TermsGate>
+                          <ChangelogGate>
+                            <Stack
+                              screenOptions={{
+                                animation: reduceMotion ? "none" : "default",
+                              }}
+                            >
+                              <Stack.Screen
+                                name="profile"
+                                options={{ headerShown: false }}
+                              />
+                              <Stack.Screen
+                                name="(auth)"
+                                options={{ headerShown: false }}
+                              />
+                              <Stack.Screen
+                                name="(tabs)"
+                                options={{ headerShown: false }}
+                              />
+                              <Stack.Screen
+                                name="modal"
+                                options={{ presentation: "modal" }}
+                              />
+                            </Stack>
+                          </ChangelogGate>
+                        </TermsGate>
+                        <Footer />
+                      </RefreshProvider>
+                    </NetworkProvider>
+                  </CountsProvider>
+                </FavoritesProvider>
+              </AuthProvider>
             </PrivacyProvider>
           </ProfileLocalProvider>
         </SettingsProvider>
@@ -130,18 +130,21 @@ function OfflineBanner() {
   const { offline } = useNetwork();
   if (!offline) return null;
   return (
-    <View style={bannerStyles.wrap} accessibilityRole="alert" accessibilityLabel="Offline notice">
+    <View
+      style={bannerStyles.wrap}
+      accessibilityRole="alert"
+      accessibilityLabel="Offline notice"
+    >
       <Text style={bannerStyles.text}>Offline: showing cached content</Text>
     </View>
   );
 }
 
 const bannerStyles = StyleSheet.create({
-  wrap: { backgroundColor: "#b00020", paddingVertical: 6, paddingHorizontal: 12 },
+  wrap: {
+    backgroundColor: "#b00020",
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+  },
   text: { color: "#fff", textAlign: "center", fontWeight: "700" },
 });
-
-
-
-
-

@@ -20,8 +20,6 @@ import { useProfileLocal } from "../../../store/profileLocal";
 import { buildCombinedEvidenceSummary } from "../../../services/insights";
 import { logEvent } from "../../../services/analytics";
 
-
-
 export const options = { href: null };
 
 export default function AppealLetter() {
@@ -61,7 +59,10 @@ export default function AppealLetter() {
   const placeholderColor = palette.text + "88";
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ padding: 20 }}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={{ padding: 20 }}
+    >
       <Text
         ref={titleRef}
         style={styles.title}
@@ -74,12 +75,44 @@ export default function AppealLetter() {
         Fill in your details, review the preview, then share or export.
       </Text>
 
-      <Field label="Your Name" value={name} onChangeText={setName} placeholderColor={placeholderColor} />
-      <Field label="Claim Number" value={claim} onChangeText={setClaim} placeholderColor={placeholderColor} />
-      <Field label="Decision Date" value={decisionDate} onChangeText={setDecisionDate} placeholderColor={placeholderColor} />
-      <Field label="Decision Summary" value={reasons} onChangeText={setReasons} multiline placeholderColor={placeholderColor} />
-      <Field label="Your Arguments/Evidence" value={appealArgs} onChangeText={setAppealArgs} multiline placeholderColor={placeholderColor} />
-      <Field label="Contact (email/phone)" value={contact} onChangeText={setContact} placeholderColor={placeholderColor} />
+      <Field
+        label="Your Name"
+        value={name}
+        onChangeText={setName}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Claim Number"
+        value={claim}
+        onChangeText={setClaim}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Decision Date"
+        value={decisionDate}
+        onChangeText={setDecisionDate}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Decision Summary"
+        value={reasons}
+        onChangeText={setReasons}
+        multiline
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Your Arguments/Evidence"
+        value={appealArgs}
+        onChangeText={setAppealArgs}
+        multiline
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Contact (email/phone)"
+        value={contact}
+        onChangeText={setContact}
+        placeholderColor={placeholderColor}
+      />
 
       <Text style={[styles.sectionTitle, { marginTop: 12 }]}>Preview</Text>
       <View style={styles.previewBox}>
@@ -89,8 +122,10 @@ export default function AppealLetter() {
       <Pressable
         style={styles.button}
         onPress={() => {
-          logEvent('letter_share', { type: 'appeal' });
-          Share.share({ message: preview, title: "Appeal Letter" }).catch(() => {});
+          logEvent("letter_share", { type: "appeal" });
+          Share.share({ message: preview, title: "Appeal Letter" }).catch(
+            () => {},
+          );
         }}
       >
         <Text style={styles.buttonText}>Share</Text>
@@ -100,7 +135,7 @@ export default function AppealLetter() {
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           const ins = await buildCombinedEvidenceSummary();
-          logEvent('letter_insert_from_trackers', { type: 'appeal' });
+          logEvent("letter_insert_from_trackers", { type: "appeal" });
           setAppealArgs((prev) => (prev ? prev + "\n\n" : "") + ins);
           Alert.alert("Inserted", "Added tracker summary to your arguments.");
         }}
@@ -116,7 +151,10 @@ export default function AppealLetter() {
             await mod.setStringAsync(preview);
             Alert.alert("Copied", "Letter copied to clipboard.");
           } catch {
-            Alert.alert("Clipboard not available", "Install expo-clipboard in a dev build to enable copy.");
+            Alert.alert(
+              "Clipboard not available",
+              "Install expo-clipboard in a dev build to enable copy.",
+            );
           }
         }}
       >
@@ -132,12 +170,12 @@ export default function AppealLetter() {
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")}</pre>`;
             const { uri } = await mod.printToFileAsync({ html });
-            logEvent('letter_export_pdf', { type: 'appeal' });
+            logEvent("letter_export_pdf", { type: "appeal" });
             await Share.share({ url: uri, title: "Appeal Letter" });
           } catch {
             Alert.alert(
               "PDF not available",
-              "Install expo-print in a dev build to export PDFs."
+              "Install expo-print in a dev build to export PDFs.",
             );
           }
         }}
@@ -153,7 +191,9 @@ export default function AppealLetter() {
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")}</pre></body></html>`;
             const path = FS.cacheDirectory + `appeal_${Date.now()}.doc`;
-            await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 });
+            await FS.writeAsStringAsync(path, html, {
+              encoding: FS.EncodingType.UTF8,
+            });
             await Share.share({ url: path, title: "Appeal Letter (.doc)" });
           } catch {
             Alert.alert("Export failed", "Could not create .doc file.");
@@ -181,7 +221,9 @@ function Field({
 }) {
   return (
     <View style={{ marginBottom: 10 }}>
-      <Text style={{ color: "#000", opacity: 0.9, marginBottom: 4 }}>{label}</Text>
+      <Text style={{ color: "#000", opacity: 0.9, marginBottom: 4 }}>
+        {label}
+      </Text>
       <TextInput
         value={value}
         onChangeText={onChangeText}

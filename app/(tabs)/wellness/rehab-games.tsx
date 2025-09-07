@@ -1,19 +1,41 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, Alert, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+  Alert,
+  ScrollView,
+} from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 
-
 let AsyncStorage: any;
-try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
-
+try {
+  AsyncStorage = require("@react-native-async-storage/async-storage").default;
+} catch {}
 
 function usePoints() {
   const [points, setPoints] = React.useState(0);
-  React.useEffect(() => { (async () => { const raw = await AsyncStorage?.getItem?.('rehab_points'); if (raw) setPoints(Number(raw)||0); })(); }, []);
-  React.useEffect(() => { AsyncStorage?.setItem?.('rehab_points', String(points)); }, [points]);
-  return { points, add: (n: number) => setPoints((p)=>p+n), reset: () => setPoints(0) };
+  React.useEffect(() => {
+    (async () => {
+      const raw = await AsyncStorage?.getItem?.("rehab_points");
+      if (raw) setPoints(Number(raw) || 0);
+    })();
+  }, []);
+  React.useEffect(() => {
+    AsyncStorage?.setItem?.("rehab_points", String(points));
+  }, [points]);
+  return {
+    points,
+    add: (n: number) => setPoints((p) => p + n),
+    reset: () => setPoints(0),
+  };
 }
 
 export const options = { href: null };
@@ -22,7 +44,7 @@ export default function RehabGames() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('Virtual Rehab Games');
+  useAnnounceOnMount("Virtual Rehab Games");
   useFocusOnRefOnMount(titleRef);
   const { t } = useTranslation();
   const { points, add, reset } = usePoints();
@@ -35,56 +57,156 @@ export default function RehabGames() {
   React.useEffect(() => {
     (async () => {
       try {
-        const s = await AsyncStorage?.getItem?.('rehab_streak');
-        if (s) setStreak(Number(s)||0);
+        const s = await AsyncStorage?.getItem?.("rehab_streak");
+        if (s) setStreak(Number(s) || 0);
       } catch {}
     })();
   }, []);
 
   const markPlayedToday = async () => {
     try {
-      const today = new Date().toISOString().slice(0,10);
-      const last = await AsyncStorage?.getItem?.('rehab_last');
+      const today = new Date().toISOString().slice(0, 10);
+      const last = await AsyncStorage?.getItem?.("rehab_last");
       if (last === today) return; // already counted
       const dLast = last ? new Date(last) : null;
-      const dPrev = new Date(); dPrev.setDate(dPrev.getDate()-1);
-      const isConsecutive = dLast && dLast.toISOString().slice(0,10) === dPrev.toISOString().slice(0,10);
+      const dPrev = new Date();
+      dPrev.setDate(dPrev.getDate() - 1);
+      const isConsecutive =
+        dLast &&
+        dLast.toISOString().slice(0, 10) === dPrev.toISOString().slice(0, 10);
       const next = isConsecutive ? streak + 1 : 1;
       setStreak(next);
-      await AsyncStorage?.multiSet?.([[ 'rehab_last', today ], [ 'rehab_streak', String(next) ]]);
-      if (next === 7) await AsyncStorage?.setItem?.('achieve_streak_7','1');
+      await AsyncStorage?.multiSet?.([
+        ["rehab_last", today],
+        ["rehab_streak", String(next)],
+      ]);
+      if (next === 7) await AsyncStorage?.setItem?.("achieve_streak_7", "1");
     } catch {}
   };
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
-      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('wellness.rehab.title','Virtual Rehab Games')}</Text>
-      <Text style={s.subtitle}>{t('wellness.rehab.subtitle','Fun, accessible miniÃ¢â‚¬â€˜games to encourage gentle movement and physioÃ¢â‚¬â€˜style exercises. Always adapt to comfort and stop if pain increases.')}</Text>
+      <Text
+        ref={titleRef}
+        accessibilityRole="header"
+        style={s.title}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
+        {t("wellness.rehab.title", "Virtual Rehab Games")}
+      </Text>
+      <Text style={s.subtitle}>
+        {t(
+          "wellness.rehab.subtitle",
+          "Fun, accessible miniÃ¢â‚¬â€˜games to encourage gentle movement and physioÃ¢â‚¬â€˜style exercises. Always adapt to comfort and stop if pain increases.",
+        )}
+      </Text>
       <Text style={s.points}>Points: {points}</Text>
 
       <View style={s.card}>
         <Text style={s.cardTitle}>Reach & Tap</Text>
-        <Text style={s.cardText}>Gently raise your arm and tap the button. Aim for 10 slow taps.</Text>
+        <Text style={s.cardText}>
+          Gently raise your arm and tap the button. Aim for 10 slow taps.
+        </Text>
         <Text style={s.cardText}>Taps: {taps}</Text>
-        <Pressable onPress={async () => { const np = taps+1; setTaps(np); add(1); markPlayedToday(); if (np === 10) { Alert.alert('Great job','You completed 10 taps!'); try { await AsyncStorage?.setItem?.('achieve_first_steps','1'); } catch {} } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Tap</Text></Pressable>
+        <Pressable
+          onPress={async () => {
+            const np = taps + 1;
+            setTaps(np);
+            add(1);
+            markPlayedToday();
+            if (np === 10) {
+              Alert.alert("Great job", "You completed 10 taps!");
+              try {
+                await AsyncStorage?.setItem?.("achieve_first_steps", "1");
+              } catch {}
+            }
+          }}
+          accessibilityRole="button"
+          style={s.button}
+        >
+          <Text style={s.buttonText}>Tap</Text>
+        </Pressable>
       </View>
 
       <View style={s.card}>
         <Text style={s.cardTitle}>Breath Pacing</Text>
-        <Text style={s.cardText}>Box breathing: inhale 4, hold 4, exhale 4, hold 4. Do 3 cycles.</Text>
+        <Text style={s.cardText}>
+          Box breathing: inhale 4, hold 4, exhale 4, hold 4. Do 3 cycles.
+        </Text>
         <Text style={s.cardText}>Cycles: {breaths}</Text>
-        <Pressable onPress={async () => { const nb = breaths+1; setBreaths(nb); add(2); markPlayedToday(); if (nb === 3) { Alert.alert('Nice pacing','Three breathing cycles complete.'); try { await AsyncStorage?.setItem?.('achieve_calm_breather','1'); } catch {} } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Complete cycle</Text></Pressable>
+        <Pressable
+          onPress={async () => {
+            const nb = breaths + 1;
+            setBreaths(nb);
+            add(2);
+            markPlayedToday();
+            if (nb === 3) {
+              Alert.alert("Nice pacing", "Three breathing cycles complete.");
+              try {
+                await AsyncStorage?.setItem?.("achieve_calm_breather", "1");
+              } catch {}
+            }
+          }}
+          accessibilityRole="button"
+          style={s.button}
+        >
+          <Text style={s.buttonText}>Complete cycle</Text>
+        </Pressable>
       </View>
 
       <View style={s.card}>
         <Text style={s.cardTitle}>Gentle SitÃ¢â‚¬â€˜toÃ¢â‚¬â€˜Stand</Text>
-        <Text style={s.cardText}>Stand up from a chair slowly and sit back down. 5 repetitions. Use supports as needed.</Text>
+        <Text style={s.cardText}>
+          Stand up from a chair slowly and sit back down. 5 repetitions. Use
+          supports as needed.
+        </Text>
         <Text style={s.cardText}>Round: {round}/5</Text>
-        <Pressable onPress={async () => { if (round<5) { const nr = round+1; setRound(nr); add(3); markPlayedToday(); if (nr===5) { Alert.alert('Milestone','Completed 5 sitÃ¢â‚¬â€˜toÃ¢â‚¬â€˜stand reps!'); try { await AsyncStorage?.setItem?.('achieve_chair_hero','1'); } catch {} } } }} accessibilityRole="button" style={s.button}><Text style={s.buttonText}>Mark rep</Text></Pressable>
+        <Pressable
+          onPress={async () => {
+            if (round < 5) {
+              const nr = round + 1;
+              setRound(nr);
+              add(3);
+              markPlayedToday();
+              if (nr === 5) {
+                Alert.alert(
+                  "Milestone",
+                  "Completed 5 sitÃ¢â‚¬â€˜toÃ¢â‚¬â€˜stand reps!",
+                );
+                try {
+                  await AsyncStorage?.setItem?.("achieve_chair_hero", "1");
+                } catch {}
+              }
+            }
+          }}
+          accessibilityRole="button"
+          style={s.button}
+        >
+          <Text style={s.buttonText}>Mark rep</Text>
+        </Pressable>
       </View>
 
-      <Pressable onPress={() => { reset(); setTaps(0); setBreaths(0); setRound(0); }} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Reset</Text></Pressable>
-      <Text style={[s.tip,{ marginTop: 8 }]}>Tip: Celebrate small wins. Consistency beats intensity.</Text>
+      <Pressable
+        onPress={() => {
+          reset();
+          setTaps(0);
+          setBreaths(0);
+          setRound(0);
+        }}
+        style={[
+          s.button,
+          {
+            backgroundColor: palette.surface,
+            borderWidth: StyleSheet.hairlineWidth,
+            borderColor: palette.muted,
+          },
+        ]}
+      >
+        <Text style={[s.buttonText, { color: palette.text }]}>Reset</Text>
+      </Pressable>
+      <Text style={[s.tip, { marginTop: 8 }]}>
+        Tip: Celebrate small wins. Consistency beats intensity.
+      </Text>
     </ScrollView>
   );
 }
@@ -92,14 +214,26 @@ export default function RehabGames() {
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 22, fontWeight: '700', color: palette.text },
+    title: { fontSize: 22, fontWeight: "700", color: palette.text },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
-    points: { color: palette.text, fontWeight: '700', marginBottom: 8 },
-    card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, backgroundColor: palette.surface, marginBottom: 10 },
-    cardTitle: { color: palette.text, fontWeight: '700', marginBottom: 4 },
+    points: { color: palette.text, fontWeight: "700", marginBottom: 8 },
+    card: {
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 8,
+      padding: 12,
+      backgroundColor: palette.surface,
+      marginBottom: 10,
+    },
+    cardTitle: { color: palette.text, fontWeight: "700", marginBottom: 4 },
     cardText: { color: palette.text, opacity: 0.95, marginBottom: 6 },
-    button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center' },
-    buttonText: { color: palette.onPrimary, fontWeight: '700' },
+    button: {
+      backgroundColor: palette.primary,
+      paddingVertical: 10,
+      borderRadius: 8,
+      alignItems: "center",
+    },
+    buttonText: { color: palette.onPrimary, fontWeight: "700" },
     tip: { color: palette.text, opacity: 0.9 },
   });
 }

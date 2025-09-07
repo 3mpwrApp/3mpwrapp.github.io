@@ -22,12 +22,24 @@ export async function getDB() {
 }
 
 // Campaigns
-export async function fsAddCampaign(c: { id: string; title: string; summary: string; createdAt?: number; target?: string; goalCount?: number; contactEmail?: string }) {
+export async function fsAddCampaign(c: {
+  id: string;
+  title: string;
+  summary: string;
+  createdAt?: number;
+  target?: string;
+  goalCount?: number;
+  contactEmail?: string;
+}) {
   const m = await ensure();
   const db = await getDB();
   if (!m || !db) return false;
   try {
-    await m.setDoc(m.doc(db, "campaigns", c.id), { ...c, createdAt: c.createdAt ?? Date.now(), membersCount: 0 });
+    await m.setDoc(m.doc(db, "campaigns", c.id), {
+      ...c,
+      createdAt: c.createdAt ?? Date.now(),
+      membersCount: 0,
+    });
     return true;
   } catch {
     return false;
@@ -39,7 +51,11 @@ export async function fsIncrementCampaignMembers(id: string, delta: number) {
   const db = await getDB();
   if (!m || !db) return false;
   try {
-    await m.setDoc(m.doc(db, "campaigns", id), { membersCount: m.increment(delta) }, { merge: true });
+    await m.setDoc(
+      m.doc(db, "campaigns", id),
+      { membersCount: m.increment(delta) },
+      { merge: true },
+    );
     return true;
   } catch {
     return false;
@@ -47,7 +63,13 @@ export async function fsIncrementCampaignMembers(id: string, delta: number) {
 }
 
 // Community
-export async function fsAddThread(data: { id: string; channelId: string; title: string; author: string | null; createdAt: number }) {
+export async function fsAddThread(data: {
+  id: string;
+  channelId: string;
+  title: string;
+  author: string | null;
+  createdAt: number;
+}) {
   const m = await ensure();
   const db = await getDB();
   if (!m || !db) return false;
@@ -59,7 +81,13 @@ export async function fsAddThread(data: { id: string; channelId: string; title: 
   }
 }
 
-export async function fsAddComment(data: { id: string; threadId: string; author: string | null; content: string; createdAt: number }) {
+export async function fsAddComment(data: {
+  id: string;
+  threadId: string;
+  author: string | null;
+  content: string;
+  createdAt: number;
+}) {
   const m = await ensure();
   const db = await getDB();
   if (!m || !db) return false;
@@ -72,26 +100,43 @@ export async function fsAddComment(data: { id: string; threadId: string; author:
 }
 
 // Campaign Rooms (collab)
-export async function fsRoomAddTask(roomId: string, task: { id: string; kind: string; title: string; done?: boolean }) {
+export async function fsRoomAddTask(
+  roomId: string,
+  task: { id: string; kind: string; title: string; done?: boolean },
+) {
   const m = await ensure();
   const db = await getDB();
   if (!m || !db) return false;
   try {
-    await m.setDoc(m.doc(db, `campaign_rooms/${roomId}/tasks`, task.id), task as any, { merge: true });
+    await m.setDoc(
+      m.doc(db, `campaign_rooms/${roomId}/tasks`, task.id),
+      task as any,
+      { merge: true },
+    );
     return true;
   } catch {
     return false;
   }
 }
 
-export async function fsRoomToggleTask(roomId: string, taskId: string, done: boolean) {
+export async function fsRoomToggleTask(
+  roomId: string,
+  taskId: string,
+  done: boolean,
+) {
   const m = await ensure();
   const db = await getDB();
   if (!m || !db) return false;
   try {
-    await m.setDoc(m.doc(db, `campaign_rooms/${roomId}/tasks`, taskId), { done } as any, { merge: true });
+    await m.setDoc(
+      m.doc(db, `campaign_rooms/${roomId}/tasks`, taskId),
+      { done } as any,
+      { merge: true },
+    );
     return true;
-  } catch { return false; }
+  } catch {
+    return false;
+  }
 }
 
 export async function fsRoomSetNotes(roomId: string, notes: string) {
@@ -99,22 +144,44 @@ export async function fsRoomSetNotes(roomId: string, notes: string) {
   const db = await getDB();
   if (!m || !db) return false;
   try {
-    await m.setDoc(m.doc(db, `campaign_rooms/${roomId}`, 'notes'), { id: 'notes', text: notes } as any, { merge: true });
+    await m.setDoc(
+      m.doc(db, `campaign_rooms/${roomId}`, "notes"),
+      { id: "notes", text: notes } as any,
+      { merge: true },
+    );
     return true;
-  } catch { return false; }
+  } catch {
+    return false;
+  }
 }
 
-export async function fsRoomSubscribe(roomId: string, handlers: { onTasks: (list: any[]) => void; onNotes: (txt: string) => void }) {
+export async function fsRoomSubscribe(
+  roomId: string,
+  handlers: { onTasks: (list: any[]) => void; onNotes: (txt: string) => void },
+) {
   const m = await ensure();
   const db = await getDB();
   if (!m || !db) return { unsubscribe: () => {} };
-  const unsubTasks = m.onSnapshot(m.collection(db, `campaign_rooms/${roomId}/tasks`), (snap) => {
-    const list: any[] = [];
-    snap.forEach((d) => list.push(d.data()));
-    handlers.onTasks(list);
-  });
-  const unsubNotes = m.onSnapshot(m.doc(db, `campaign_rooms/${roomId}`, 'notes'), (doc) => {
-    handlers.onNotes((doc.data() as any)?.text ?? '');
-  });
-  return { unsubscribe: () => { try { (unsubTasks as any)(); (unsubNotes as any)(); } catch {} } };
+  const unsubTasks = m.onSnapshot(
+    m.collection(db, `campaign_rooms/${roomId}/tasks`),
+    (snap) => {
+      const list: any[] = [];
+      snap.forEach((d) => list.push(d.data()));
+      handlers.onTasks(list);
+    },
+  );
+  const unsubNotes = m.onSnapshot(
+    m.doc(db, `campaign_rooms/${roomId}`, "notes"),
+    (doc) => {
+      handlers.onNotes((doc.data() as any)?.text ?? "");
+    },
+  );
+  return {
+    unsubscribe: () => {
+      try {
+        (unsubTasks as any)();
+        (unsubNotes as any)();
+      } catch {}
+    },
+  };
 }

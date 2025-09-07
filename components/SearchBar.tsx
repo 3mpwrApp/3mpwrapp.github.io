@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  View,
-  TextInput,
-  StyleSheet,
-  Pressable,
-} from "react-native";
+import { View, TextInput, StyleSheet, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
@@ -29,7 +24,7 @@ export default function SearchBar({
   const { factor } = useTextScale();
   const styles = React.useMemo(
     () => createStyles(palette, factor),
-    [palette, factor]
+    [palette, factor],
   );
 
   return (
@@ -56,10 +51,7 @@ export default function SearchBar({
           accessibilityLabel="Clear search"
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           focusable
-          style={({ pressed }) => [
-            { padding: 6 },
-            pressed && { opacity: 0.7 },
-          ]}
+          style={({ pressed }) => [{ padding: 6 }, pressed && { opacity: 0.7 }]}
         >
           <Ionicons
             name="close-circle"

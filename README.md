@@ -31,6 +31,7 @@ You can start developing by editing the files inside the `app` directory. This p
 - `anonymous` or `signedIn` → routes to `/(tabs)`
 
 Notes
+
 - AsyncStorage is optional. If not installed, auth state persists for the current session only.
 
 ## Localization (i18n)
@@ -67,6 +68,7 @@ Notes
 - Opening YouTube videos: On a podcast whose `id` starts with `yt:`, the detail view shows an "Open on YouTube" button.
 
 Notes
+
 - The app does not download or extract audio from YouTube to respect YouTube Terms of Service. It links out to YouTube for playback.
 
 ## Firestore Rules
