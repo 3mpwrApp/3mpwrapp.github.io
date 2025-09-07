@@ -105,7 +105,6 @@ export default function TabsLayout() {
       <Tabs.Screen name="faqs" options={{ href: null }} />
       <Tabs.Screen name="wellness" options={{ href: null }} />
       <Tabs.Screen name="saved" options={{ href: null }} />
-      <Tabs.Screen name="settings" options={{ href: null }} />
       <Tabs.Screen name="about" options={{ href: null }} />
 
       {/* ✅ Main visible tabs */}
@@ -188,6 +187,23 @@ export default function TabsLayout() {
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "calendar" : "calendar-outline"}
+              color={color}
+              size={size + 2}
+            />
+          ),
+        }}
+      />
+
+      {/* Settings */}
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: "Settings",
+          tabBarLabel: "Settings",
+          tabBarAccessibilityLabel: `Settings tab`,
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "settings" : "settings-outline"}
               color={color}
               size={size + 2}
             />
