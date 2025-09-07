@@ -20,6 +20,7 @@ import { useAuth } from "../context/AuthContext";
 import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
 import { useTranslation } from "../i18n";
 import SettingsLink from "./SettingsLink";
+import A11yQuickSettings from "./A11yQuickSettings";
 
 export default function ThemedHeader() {
   const palette = useAppPalette();
@@ -168,6 +169,9 @@ export default function ThemedHeader() {
         >
           <Ionicons name="refresh" size={20} color={palette.text} />
         </Pressable>
+
+        {/* A11y quick settings */}
+        <A11yQuickSettings />
 
         {/* Menu */}
         <Pressable

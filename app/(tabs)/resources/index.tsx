@@ -69,7 +69,7 @@ export default function ResourcesScreen() {
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [region, setRegion] = React.useState<RegionFilter>("all");
-  const { province } = useSettings();
+  const { province, plainLanguage, resourcePreferredFormat } = useSettings();
   const [category, setCategory] = React.useState<CategoryFilter>("all");
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
@@ -360,6 +360,10 @@ export default function ResourcesScreen() {
         placeholder={t("resources.search", "Search resources...")}
       />
 
+      <Text style={{ color: palette.text, opacity: 0.8, marginVertical: 8 }}>
+        Tip: Use the Accessibility button in the header to choose plain language and your preferred format (Text, Audio, ASL, Easy-Read).
+      </Text>
+
       {/* Tools & Simulators */}
       <View accessibilityLabel="Tools and simulators" accessible>
         <Text accessibilityRole="header" style={styles.sectionTitle}>
@@ -405,13 +409,13 @@ export default function ResourcesScreen() {
             {section.title}
           </Text>
         )}
-        renderItem={({ item }) => (
-          <Card
-            title={item.title}
-            subtitle={item.description}
-            onPress={() => item.url && Linking.openURL(item.url)}
-          />
-        )}
+        renderItem={({ item }) => {
+          const subtitle = plainLanguage
+            ? simplify(item.description)
+            : item.description;
+          const onOpen = () => openResource(item, resourcePreferredFormat);
+          return <Card title={item.title} subtitle={subtitle} onPress={onOpen} />;
+        }}
         ListEmptyComponent={
           loading ? (
             <View>
@@ -475,4 +479,25 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     error: { color: "red", marginTop: 12 },
     empty: { color: palette.text, opacity: 0.7, marginTop: 12 },
   });
+}
+
+function simplify(text: string) {
+  if (!text) return text;
+  const end = text.indexOf(".");
+  const firstSentence = end > 0 ? text.slice(0, end + 1) : text;
+  return firstSentence.length > 120 ? firstSentence.slice(0, 117) + "..." : firstSentence;
+}
+
+function openResource(item: Resource, pref: import("../../../store/settings").ResourceFormat) {
+  // Prefer specific format URLs when present; fall back to default url
+  const url =
+    (pref === "audio" && (item as any).audioUrl) ||
+    (pref === "asl" && (item as any).aslUrl) ||
+    (pref === "easy" && (item as any).easyReadUrl) ||
+    item.url;
+  if (url) {
+    try {
+      Linking.openURL(url);
+    } catch {}
+  }
 }

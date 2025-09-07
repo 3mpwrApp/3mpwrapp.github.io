@@ -9,6 +9,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { colors, type Palette } from "../theme/colors";
 import { useTextScale } from "../theme/typography";
+import { useSettings } from "../store/settings";
 
 type Props = {
   title: string;
@@ -38,9 +39,10 @@ export default function Card({
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const { factor } = useTextScale();
+  const { dyslexiaFriendly } = useSettings();
   const styles = React.useMemo(
-    () => createStyles(palette, factor),
-    [palette, factor],
+    () => createStyles(palette, factor, dyslexiaFriendly),
+    [palette, factor, dyslexiaFriendly],
   );
 
   return (
@@ -78,7 +80,7 @@ export default function Card({
   );
 }
 
-function createStyles(palette: Palette, factor: number) {
+function createStyles(palette: Palette, factor: number, dyslexia: boolean) {
   return StyleSheet.create({
     container: {
       flexDirection: "row",
@@ -97,12 +99,16 @@ function createStyles(palette: Palette, factor: number) {
       color: palette.text,
       fontSize: Math.round(16 * factor),
       fontWeight: "600",
+      letterSpacing: dyslexia ? 0.5 : 0,
+      lineHeight: Math.round(20 * factor),
     },
     subtitle: {
       color: palette.text,
       opacity: 0.9,
       fontSize: Math.round(14 * factor),
       marginTop: 2,
+      letterSpacing: dyslexia ? 0.25 : 0,
+      lineHeight: Math.round(18 * factor),
     },
     rightAction: { paddingStart: 8 },
   });

@@ -18,6 +18,10 @@ export interface Resource {
   description: string;
   // Optional URL to the external site
   url?: string;
+  // Optional alternate formats
+  audioUrl?: string; // narrated audio
+  aslUrl?: string; // ASL video
+  easyReadUrl?: string; // easy-read version
   // Scope helps organize resources by Canada vs province
   scope?: "canada" | "province";
   // Province code when scope === "province"
