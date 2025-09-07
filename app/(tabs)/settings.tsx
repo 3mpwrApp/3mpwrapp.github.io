@@ -16,8 +16,7 @@ import {
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
-// import { useTranslation } from "../../i18n";
-// import { useSettings } from "../../store/settings";
+import { useSettings, TextScale, ResourceFormat } from "../../store/settings";
 
 import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
@@ -160,6 +159,11 @@ export default function SettingsScreen() {
         <Button title="Update Name" onPress={handleUpdateDisplayName} />
       </Section>
 
+      {/* Accessibility Preferences */}
+      <Section title="Accessibility Preferences" styles={styles}>
+        <A11ySettingsSection />
+      </Section>
+
       {/* Local profile for templates */}
       <Section title="Local Profile (for templates)" styles={styles}>
         <LocalProfileSection />
@@ -174,6 +178,80 @@ export default function SettingsScreen() {
         <TermsSection />
       </Section>
     </ScrollView>
+  );
+}
+
+function A11ySettingsSection() {
+  const palette = useAppPalette();
+  const s = createStyles(palette);
+  const {
+    highContrast,
+    setHighContrast,
+    textScale,
+    setTextScale,
+    dyslexiaFriendly,
+    setDyslexiaFriendly,
+    plainLanguage,
+    setPlainLanguage,
+    captionsPreferred,
+    setCaptionsPreferred,
+    resourcePreferredFormat,
+    setResourcePreferredFormat,
+  } = useSettings();
+
+  const ScaleButton = ({ label, value }: { label: string; value: TextScale }) => (
+    <Button title={label} onPress={() => setTextScale(value)} />
+  );
+  const FormatButton = ({ label, value }: { label: string; value: ResourceFormat }) => (
+    <Button title={label} onPress={() => setResourcePreferredFormat(value)} />
+  );
+
+  return (
+    <View>
+      <Text style={s.rowLabel}>High Contrast</Text>
+      <Button
+        title={highContrast ? "Disable High Contrast" : "Enable High Contrast"}
+        onPress={() => setHighContrast(!highContrast)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Text Size</Text>
+      <View style={{ flexDirection: "row", gap: 8 }}>
+        <ScaleButton label="Normal" value="normal" />
+        <ScaleButton label="Large" value="large" />
+        <ScaleButton label="X-Large" value="xlarge" />
+      </View>
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Dyslexia-Friendly Font Spacing</Text>
+      <Button
+        title={dyslexiaFriendly ? "Disable Dyslexia Spacing" : "Enable Dyslexia Spacing"}
+        onPress={() => setDyslexiaFriendly(!dyslexiaFriendly)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Plain-Language Summaries</Text>
+      <Button
+        title={plainLanguage ? "Disable Plain Language" : "Enable Plain Language"}
+        onPress={() => setPlainLanguage(!plainLanguage)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Captions Preferred</Text>
+      <Button
+        title={captionsPreferred ? "Captions On" : "Captions Off"}
+        onPress={() => setCaptionsPreferred(!captionsPreferred)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Preferred Resource Format</Text>
+      <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
+        <FormatButton label="Text" value="text" />
+        <FormatButton label="Audio" value="audio" />
+        <FormatButton label="ASL" value="asl" />
+        <FormatButton label="Easy-Read" value="easy" />
+      </View>
+    </View>
   );
 }
 

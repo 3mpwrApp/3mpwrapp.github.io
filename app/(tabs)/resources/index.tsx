@@ -369,6 +369,12 @@ export default function ResourcesScreen() {
         <Text accessibilityRole="header" style={styles.sectionTitle}>
           Tools & Simulators
         </Text>
+        <Link href={("/(tabs)/resources/financial-safety-net" as any)} asChild>
+          <Card
+            title="Financial Safety Net Navigator"
+            subtitle="Step-by-step guide to combining CPP-D, EI, ODSP, Workers’ Comp without overlap"
+          />
+        </Link>
         <Link href={("/(tabs)/resources/justice-as-a-service" as any)} asChild>
           <Card
             title="Justice-as-a-Service"
@@ -379,6 +385,12 @@ export default function ResourcesScreen() {
           <Card
             title="Impact Simulator"
             subtitle="Model how policy or workplace changes affect disabled/injured people"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/adaptive-tech-library" as any)} asChild>
+          <Card
+            title="Adaptive Tech Library"
+            subtitle="Tutorials and reviews: screen readers, speech-to-text, mobility aids, apps"
           />
         </Link>
         <Link href={("/(tabs)/resources/myth-busting-hub" as any)} asChild>
