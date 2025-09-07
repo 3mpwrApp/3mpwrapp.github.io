@@ -44,8 +44,6 @@ export const db = Platform.OS === "web"
   ? getFirestore(app)
   : initializeFirestore(app, {
       experimentalAutoDetectLongPolling: true,
-      // useFetchStreams can be flaky on some RN environments
-      useFetchStreams: false,
     });
 export const storage = getStorage(app);
 

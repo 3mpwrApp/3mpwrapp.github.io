@@ -34,7 +34,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <View style={styles.overlay} accessibilityRole="dialog" accessibilityLabel="Terms and Conditions">
+    <View style={styles.overlay} accessibilityLabel="Terms and Conditions">
       <View style={styles.card}>
         <Text style={styles.title}>Terms and Conditions</Text>
         <ScrollView style={{ maxHeight: 260 }} contentContainerStyle={{ paddingBottom: 12 }}>
@@ -64,4 +64,3 @@ const styles = StyleSheet.create({
   button: { marginTop: 8, backgroundColor: '#0066cc', borderRadius: 8, paddingVertical: 10, alignItems: 'center' },
   buttonText: { color: '#fff', fontWeight: '700' },
 });
-

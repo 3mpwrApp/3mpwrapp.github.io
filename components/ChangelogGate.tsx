@@ -28,6 +28,7 @@ export default function ChangelogGate({ children }: { children: React.ReactNode 
   };
 
   return (
+    // @ts-expect-error RN types lack 'dialog' role; used for semantics only
     <View style={styles.overlay} accessibilityRole="dialog" accessibilityLabel="What’s new">
       <View style={styles.card}>
         <Text style={styles.title}>What’s new</Text>
@@ -55,4 +56,3 @@ const styles = StyleSheet.create({
   button: { marginTop: 10, backgroundColor: '#0066cc', borderRadius: 8, paddingVertical: 10, alignItems: 'center' },
   buttonText: { color: '#fff', fontWeight: '700' },
 });
-

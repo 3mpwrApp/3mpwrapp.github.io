@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, SectionList, RefreshControl, Pressable, Linking
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTranslation } from "../../../i18n";
-import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount, useAnnounceOnChange } from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
 import SettingsLink from "../../../components/SettingsLink";
@@ -42,8 +41,7 @@ type CategoryFilter = "all" | ResourceCategory;
 
 export default function ResourcesScreen() {
   const palette = useAppPalette();
-  const { factor } = useTextScale();
-  const styles = createStyles(palette, factor);
+  const styles = createStyles(palette);
   const { t } = useTranslation();
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Resources");
@@ -245,7 +243,7 @@ export default function ResourcesScreen() {
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background, padding: 16 },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },

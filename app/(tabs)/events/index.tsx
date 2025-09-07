@@ -41,7 +41,7 @@ export default function EventsScreen() {
   const { includeProvincialHolidays, province } = useSettings();
 
   type FilterMode = "all" | "community" | "observances";
-  const mode: FilterMode = "all";
+  const [mode] = React.useState<FilterMode>("all");
 
   const systemForMonth = React.useMemo(() => {
     const y = month.getFullYear();

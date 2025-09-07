@@ -15,7 +15,7 @@ export async function exportBackup(): Promise<BackupBundle | null> {
     const wanted = keys.filter((k) => PREFIXES.some((p) => k.startsWith(p)));
     const pairs = await AsyncStorage.multiGet(wanted);
     const items: Record<string, string> = {};
-    pairs.forEach(([k, v]) => { if (k && v != null) items[k] = v; });
+    pairs.forEach(([k, v]: [string, string | null]) => { if (k && v != null) items[k] = v; });
     return { version: 1, date: new Date().toISOString(), items };
   } catch {
     return null;
@@ -44,4 +44,3 @@ export async function clearAllData(): Promise<boolean> {
     return false;
   }
 }
-

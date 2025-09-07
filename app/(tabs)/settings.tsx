@@ -165,6 +165,7 @@ export default function SettingsScreen() {
 
 function LocalProfileSection() {
   const palette = useAppPalette();
+  const s = createStyles(palette);
   const { profile, setProfile } = useProfileLocal();
   const [name, setName] = useState(profile.name ?? "");
   const [contact, setContact] = useState(profile.contact ?? "");
@@ -172,17 +173,19 @@ function LocalProfileSection() {
   return (
     <View>
       <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Name</Text>
-      <TextInput style={styles.input} value={name} onChangeText={setName} placeholder="Your name" />
+      <TextInput style={s.input} value={name} onChangeText={setName} placeholder="Your name" />
       <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Contact (email/phone)</Text>
-      <TextInput style={styles.input} value={contact} onChangeText={setContact} placeholder="you@example.com" />
+      <TextInput style={s.input} value={contact} onChangeText={setContact} placeholder="you@example.com" />
       <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Province (e.g., ON, QC)</Text>
-      <TextInput style={styles.input} value={province} onChangeText={setProvince} placeholder="ON" autoCapitalize="characters" maxLength={2} />
+      <TextInput style={s.input} value={province} onChangeText={setProvince} placeholder="ON" autoCapitalize="characters" maxLength={2} />
       <Button title="Save" onPress={() => setProfile({ name, contact, province })} />
     </View>
   );
 }
 
 function PrivacyBackupSection() {
+  const palette = useAppPalette();
+  const s = createStyles(palette);
   const { state, setPasscode, setLockWellness } = usePrivacy();
   const onExport = async () => {
     const bundle = await exportBackup();
@@ -221,8 +224,8 @@ function PrivacyBackupSection() {
   };
   return (
     <View>
-      <Text style={styles.rowLabel}>Set/Change Passcode</Text>
-      <TextInput style={styles.input} placeholder="New passcode" secureTextEntry onSubmitEditing={(e) => setPasscode(e.nativeEvent.text || undefined)} />
+      <Text style={s.rowLabel}>Set/Change Passcode</Text>
+      <TextInput style={s.input} placeholder="New passcode" secureTextEntry onSubmitEditing={(e) => setPasscode(e.nativeEvent.text || undefined)} />
       <View style={{ height: 8 }} />
       <Button title={state.lockWellness ? "Disable Wellness Lock" : "Enable Wellness Lock"} onPress={() => setLockWellness(!state.lockWellness)} />
       <View style={{ height: 12 }} />

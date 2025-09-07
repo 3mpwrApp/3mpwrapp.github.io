@@ -1,4 +1,3 @@
-import React from "react";
 import { View, Text, StyleSheet, Pressable, Linking, Share } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";

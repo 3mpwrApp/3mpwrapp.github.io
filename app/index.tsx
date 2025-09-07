@@ -1,6 +1,5 @@
 import { Redirect } from "expo-router";
 import type { Href } from "expo-router";
-import React from "react";
 import { ActivityIndicator, View } from "react-native";
 import { useAuth } from "../context/AuthContext";
 

@@ -64,7 +64,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
             setState((prev) => ({ ...prev, threads: mergeById(prev.threads, list) }));
             setOffline(false);
           },
-          (err) => {
+          () => {
             setOffline(true);
           }
         );
@@ -76,7 +76,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
             setState((prev) => ({ ...prev, comments: mergeById(prev.comments, list) }));
             setOffline(false);
           },
-          (err) => {
+          () => {
             setOffline(true);
           }
         );

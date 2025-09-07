@@ -22,7 +22,7 @@ export async function getDB() {
 }
 
 // Campaigns
-export async function fsAddCampaign(c: { id: string; title: string; summary: string; createdAt?: number }) {
+export async function fsAddCampaign(c: { id: string; title: string; summary: string; createdAt?: number; target?: string; goalCount?: number; contactEmail?: string }) {
   const m = await ensure();
   const db = await getDB();
   if (!m || !db) return false;
