@@ -6,6 +6,8 @@
     "start": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
     "prestart": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js",
     "start:devclient": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js && expo start --dev-client -c",
+    "start:lan": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --lan -c",
+    "start:localhost": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --localhost -c",
     "validate": "node ./scripts/validate-configs.js",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo run:android",

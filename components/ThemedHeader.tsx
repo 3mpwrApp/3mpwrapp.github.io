@@ -39,13 +39,20 @@ export default function ThemedHeader() {
 
   const [menuOpen, setMenuOpen] = React.useState(false);
   const pathname = usePathname();
+  // Close menu when route changes, but don't close immediately after opening
   React.useEffect(() => {
-    if (menuOpen) setMenuOpen(false);
-  }, [pathname, menuOpen]);
+    setMenuOpen(false);
+  }, [pathname]);
   return (
     <SafeAreaView style={styles.container} accessibilityRole="header">
       {/* Brand */}
-      <View style={styles.brand}>
+      <Pressable
+        style={styles.brand}
+        onPress={() => router.replace("/")}
+        accessibilityRole="link"
+        accessibilityLabel="Go to Home"
+        hitSlop={HIT_SLOP_8}
+      >
         <Image
           source={require("../assets/images/empowr-logo.png")}
           style={styles.logo}
@@ -55,7 +62,7 @@ export default function ThemedHeader() {
         <Text style={styles.title} accessibilityLabel="Empowr app header">
           Empowr
         </Text>
-      </View>
+      </Pressable>
 
       {/* Right side controls */}
       <View style={styles.right}>

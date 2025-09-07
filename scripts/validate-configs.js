@@ -193,7 +193,8 @@ try {
     if (!exists(file)) return;
     const json = readJSON(file);
     required.forEach((r) => {
-      const ok = r.split(".").reduce((acc, k) => acc && acc[k] != null, json);
+      const val = r.split(".").reduce((acc, k) => (acc == null ? undefined : acc[k]), json);
+      const ok = val !== undefined;
       if (!ok) warns.push(`Locale ${lng} missing key: ${r}`);
     });
   });

@@ -36,31 +36,25 @@ export default function ChangelogGate({
   };
 
   return (
-    // @ts-expect-error RN types lack 'dialog' role; used for semantics only
     <View
       style={styles.overlay}
-      accessibilityRole="dialog"
-      accessibilityLabel="Whatâ€™s new"
+      accessibilityViewIsModal
+      accessibilityLabel="What's new"
     >
       <View style={styles.card}>
-        <Text style={styles.title}>Whatâ€™s new</Text>
+        <Text style={styles.title}>What's new</Text>
         <ScrollView style={{ maxHeight: 280 }}>
           <Text style={styles.text}>
-            â€¢ New Advocacy tools: Selfâ€‘Advocacy Coach, Policy Made Simple,
-            AI Translator, AI Case Interpreter, Collective Legal Hub, and AI
-            Government Navigator. â€¢ Wellness: Workâ€‘Balance AI, Grief &
-            Identity Hub, Adaptive Meditation, trackers with exports and privacy
-            lock. â€¢ Resources: Voiceâ€‘toâ€‘Case Notes, Deadlines with
-            reminders/ICS/calendar, Evidence Checklist, Template Gallery. â€¢
-            Campaign Rooms: shared tasks and notes with realtime sync. â€¢ Terms
-            gate and optional LLM backend hooks.
+            New Advocacy tools: Self-Advocacy Coach, Policy Made Simple, AI
+            Translator, AI Case Interpreter, Collective Legal Hub, and AI
+            Government Navigator. Wellness: Work-Balance AI, Grief & Identity
+            Hub, Adaptive Meditation, trackers with exports and privacy lock.
+            Resources: Voice-to-Case Notes, Deadlines with reminders/ICS/calendar,
+            Evidence Checklist, Template Gallery. Campaign Rooms: shared tasks and
+            notes with realtime sync. Terms gate and optional LLM backend hooks.
           </Text>
         </ScrollView>
-        <Pressable
-          onPress={onDismiss}
-          accessibilityRole="button"
-          style={styles.button}
-        >
+        <Pressable onPress={onDismiss} accessibilityRole="button" style={styles.button}>
           <Text style={styles.buttonText}>Got it</Text>
         </Pressable>
       </View>
@@ -99,3 +93,4 @@ const styles = StyleSheet.create({
   },
   buttonText: { color: "#fff", fontWeight: "700" },
 });
+
