@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useColorScheme } from "react-native";
 import { colors } from "../../theme/colors";
 import { useTranslation } from "../../i18n";
+import { useWhatsNewBadge } from "../../hooks/useWhatsNewBadge";
 
 export default function TabsLayout() {
   const colorScheme = useColorScheme();
@@ -10,6 +11,7 @@ export default function TabsLayout() {
   const activeTint = palette.primary;
   const inactiveTint = palette.muted;
   const { t } = useTranslation();
+  const wnBadge = useWhatsNewBadge();
 
   return (
     <Tabs
@@ -42,6 +44,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="resources/rights-checker" options={{ href: null }} />
       <Tabs.Screen name="resources/appeal-coach" options={{ href: null }} />
       <Tabs.Screen name="resources/deadlines" options={{ href: null }} />
+      <Tabs.Screen name="resources/deadlines-list" options={{ href: null }} />
       <Tabs.Screen
         name="resources/evidence-checklist"
         options={{ href: null }}
@@ -208,6 +211,7 @@ export default function TabsLayout() {
           title: "What’s New",
           tabBarLabel: "What’s New",
           tabBarAccessibilityLabel: `What’s New tab`,
+          tabBarBadge: wnBadge,
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "star" : "star-outline"}

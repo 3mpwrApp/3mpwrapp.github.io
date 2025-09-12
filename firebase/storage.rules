@@ -1,0 +1,18 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isSignedIn() { return request.auth != null; }
+    function isOwnerPath(uid) { return request.resource.name.matches('/evidence/' + uid + '/[^#?]+' ); }
+
+    // Users can read/write only their own evidence files under evidence/{uid}/...
+    match /evidence/{uid}/{allPaths=**} {
+      allow read, write: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Default: deny
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
+

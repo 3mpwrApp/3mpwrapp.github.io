@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, FlatList, Alert } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
+import { useAuth } from "../../../context/AuthContext";
+import { addEvidenceNote, uploadEvidenceFile, listEvidence, deleteEvidenceDoc, type EvidenceFile } from "../../../services/evidence";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -27,6 +29,8 @@ export default function EvidenceLocker() {
   const [text, setText] = React.useState("");
   const [tag, setTag] = React.useState("");
   const [notes, setNotes] = React.useState<Note[]>([]);
+  const [cloudItems, setCloudItems] = React.useState<any[]>([]);
+  const { user } = useAuth();
 
   React.useEffect(() => {
     (async () => {
@@ -102,6 +106,42 @@ export default function EvidenceLocker() {
         >
           <Text style={styles.buttonText}>Add</Text>
         </A11yPressable>
+        {user && (
+          <A11yPressable
+            accessibilityLabel="Save to Cloud"
+            onPress={async () => {
+              try {
+                const current = notes[0];
+                if (!current) return;
+                let uploaded: EvidenceFile[] = [];
+                if (current.files?.length) {
+                  for (const f of current.files) {
+                    uploaded.push(await uploadEvidenceFile(f.uri, f.name));
+                  }
+                }
+                await addEvidenceNote({ text: current.text, tags: current.tags, files: uploaded });
+                Alert.alert('Saved', 'Note saved to your cloud locker.');
+              } catch (e: any) {
+                Alert.alert('Save failed', e?.message || 'Unable to save');
+              }
+            }}
+            style={styles.button}
+          >
+            <Text style={styles.buttonText}>Save to Cloud</Text>
+          </A11yPressable>
+        )}
+        {user && (
+          <A11yPressable
+            accessibilityLabel="Load Cloud"
+            onPress={async () => {
+              try { const rows = await listEvidence(); Alert.alert('Cloud', `${rows.length} items in your locker.`); }
+              catch { Alert.alert('Load failed', 'Unable to load cloud items'); }
+            }}
+            style={styles.secondary}
+          >
+            <Text style={styles.buttonText}>Load Cloud</Text>
+          </A11yPressable>
+        )}
         <A11yPressable
           accessibilityLabel="Export CSV"
           onPress={async () => {
@@ -132,6 +172,27 @@ export default function EvidenceLocker() {
         )}
         contentContainerStyle={{ paddingTop: 12 }}
       />
+      {!!user && cloudItems.length > 0 && (
+        <View style={{ marginTop: 12 }}>
+          <Text style={styles.title}>Cloud items</Text>
+          {cloudItems.map((c: any) => (
+            <View key={c.id} style={styles.noteRow}>
+              <Text style={styles.noteText}>
+                {(c.createdAt?.toDate?.() || new Date()).toLocaleString()} — {c.text || '(no text)'}
+              </Text>
+              <A11yPressable
+                onPress={async () => {
+                  const ok = await deleteEvidenceDoc(c.id);
+                  if (ok) setCloudItems((prev) => prev.filter((x) => x.id !== c.id));
+                }}
+                style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
+              >
+                <Text style={styles.buttonText}>Delete</Text>
+              </A11yPressable>
+            </View>
+          ))}
+        </View>
+      )}
     </View>
   );
 }

@@ -11,6 +11,9 @@ import * as Notifier from "../../../services/notifications";
 import { buildICS } from "../../../services/ics";
 // Note: expo-sharing and expo-file-system are loaded lazily when used
 import { addEvent } from "../../../services/calendar";
+import { addDeadline, listDeadlines } from "../../../services/deadlines";
+import { router } from "expo-router";
+import { useAuth } from "../../../context/AuthContext";
 
 type Benefit = "WCB" | "LTD" | "CPP-D";
 type Province = "" | "ON" | "BC" | "AB" | "SK" | "MB" | "QC" | "NB" | "NS" | "PE" | "NL" | "YT" | "NT" | "NU";
@@ -30,6 +33,8 @@ export default function Deadlines() {
     new Date().toISOString().slice(0, 10),
   );
   const [result, setResult] = React.useState<string>("");
+  const [saved, setSaved] = React.useState<any[]>([]);
+  const { user } = useAuth();
 
   const calc = () => {
     // Optional provincial presets (illustrative; verify locally)
@@ -110,6 +115,31 @@ export default function Deadlines() {
       }
     } catch {
       Alert.alert("Export failed", "Could not create ICS file.");
+    }
+  };
+
+  const saveDeadline = async () => {
+    if (!user) {
+      Alert.alert('Sign in required', 'Please sign in to save deadlines.');
+      return;
+    }
+    const d = new Date(decisionDate);
+    const base: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
+    const PROV_PRESETS: Partial<Record<Province, Partial<Record<Benefit, number>>>> = {
+      ON: { WCB: 30 }, BC: { WCB: 90 }, AB: { WCB: 30 }, QC: { WCB: 30 },
+    };
+    const override = (province && PROV_PRESETS[province]?.[benefit]) || undefined;
+    const days = override ?? base[benefit];
+    const due = new Date(d.getTime() + days * 86400000);
+    try {
+      await addDeadline({
+        title: `Appeal deadline – ${benefit}`,
+        dueAt: due.toISOString(),
+        notes: result,
+      });
+      Alert.alert('Saved', 'Deadline saved to your account.');
+    } catch (e: any) {
+      Alert.alert('Save failed', e?.message || 'Unable to save deadline.');
     }
   };
 
@@ -202,6 +232,34 @@ export default function Deadlines() {
           <A11yPressable onPress={exportICS} style={[styles.button, { marginTop: 8 }]}> 
             <Text style={styles.buttonText}>Export ICS</Text>
           </A11yPressable>
+          {user && (
+            <A11yPressable onPress={() => router.push('/(tabs)/resources/deadlines-list' as any)} style={[styles.button, { marginTop: 8 }]}>
+              <Text style={styles.buttonText}>Open my deadlines list</Text>
+            </A11yPressable>
+          )}
+          {user && (
+            <>
+              <A11yPressable onPress={saveDeadline} style={[styles.button, { marginTop: 8 }]}> 
+                <Text style={styles.buttonText}>Save deadline</Text>
+              </A11yPressable>
+              <A11yPressable
+                onPress={async () => {
+                  try { const rows = await listDeadlines(); setSaved(rows); }
+                  catch { Alert.alert('Load failed', 'Unable to load deadlines'); }
+                }}
+                style={[styles.button, { marginTop: 8 }]}
+              >
+                <Text style={styles.buttonText}>Load my deadlines</Text>
+              </A11yPressable>
+              {saved.map((d) => (
+                <View key={d.id} style={{ marginTop: 8 }}>
+                  <Text style={{ color: palette.text }}>
+                    {new Date(d.dueAt).toLocaleString()} — {d.title}
+                  </Text>
+                </View>
+              ))}
+            </>
+          )}
         </View>
       )}
     </View>

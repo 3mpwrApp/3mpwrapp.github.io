@@ -42,5 +42,24 @@ service cloud.firestore {
       allow read: if true;
       allow write, update, delete: if isSignedIn();
     }
+
+    // Users collection
+    match /users/{uid} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow create: if isSignedIn() && request.auth.uid == uid;
+      allow update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Evidence items under a user
+    match /users/{uid}/evidence/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Deadlines under a user
+    match /users/{uid}/deadlines/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
   }
 }

@@ -43,6 +43,20 @@ export async function scheduleLocal(title: string, body: string) {
   }
 }
 
+// Schedule a notification at a specific Date
+export async function scheduleAt(when: Date, title: string, body: string) {
+  if (!Notifications) return false;
+  try {
+    await Notifications.scheduleNotificationAsync({
+      content: { title, body },
+      trigger: when,
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 // Get an Expo push token (web/native if available). Returns null if unsupported.
 export async function getExpoPushToken(): Promise<string | null> {
   if (!Notifications) return null;
