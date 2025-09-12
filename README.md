@@ -116,6 +116,17 @@ Revoke admin: `npm run admin:set -- <uid> false`
 - Admin Panel: filters (verified/banned), contains search, client-side sort, CSV export/copy, and Export All (batched).
 - Deadlines: import events from an ICS file, snooze 7 days, bulk mark done/not-done, and quick-add weekly/monthly templates.
 - Evidence Locker: queue progress indicator and bulk delete of cloud items.
+- New Tools and Hubs:
+  - Lawyer & Advocate Finder: `/(tabs)/advocacy/lawyer-finder`
+  - Return-to-Work Planner: `/(tabs)/resources/rtw-planner`
+  - Medication & Treatment Tracker: `/(tabs)/resources/meds-tracker`
+  - Chronic Condition Tracker: `/(tabs)/resources/chronic-tracker`
+  - AI Body Mechanics Advisor (video tips): `/(tabs)/resources/body-mechanics-advisor`
+  - Interactive Policy Simulator: `/(tabs)/resources/policy-simulator`
+  - Accessible Exercise Hub: `/(tabs)/wellness/exercise-hub`
+  - Diet & Nutrition Guides: `/(tabs)/wellness/nutrition-guides`
+  - Accessible Event Finder: `/(tabs)/events/finder`
+  - Accommodation Request Builder: `/(tabs)/resources/accommodation-request` (redirects to improved letter builder)
 
 ## Firestore security rules
 

@@ -322,6 +322,7 @@ export default function ThemedHeader() {
             <Text style={styles.menuSection}>Advocacy</Text>
             {[
               { label: "Advocacy Hub", path: "/(tabs)/advocacy" },
+              { label: "Lawyer/Advocate Finder", path: "/(tabs)/advocacy/lawyer-finder" },
               {
                 label: "Support Directory",
                 path: "/(tabs)/advocacy/support-directory",
@@ -349,6 +350,9 @@ export default function ThemedHeader() {
               { label: "What's New", path: "/(tabs)/whatsnew" },
               { label: "FAQs", path: "/(tabs)/faqs" },
               { label: "Wellness", path: "/(tabs)/wellness" },
+              { label: "Exercise Hub", path: "/(tabs)/wellness/exercise-hub" },
+              { label: "Nutrition Guides", path: "/(tabs)/wellness/nutrition-guides" },
+              { label: "Accessible Events", path: "/(tabs)/events/finder" },
               { label: "About & Contact", path: "/(tabs)/about" },
             ].map((item) => (
               <Pressable

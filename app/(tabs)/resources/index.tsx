@@ -167,9 +167,12 @@ export default function ResourcesScreen() {
         AI Tools
       </Text>
       <Link href={"/(tabs)/resources/rights-checker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
           Automated Rights Checker
         </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/body-mechanics-advisor" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>AI Body Mechanics Advisor</Text>
       </Link>
       <Link href={"/(tabs)/resources/appeal-coach" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
@@ -203,9 +206,12 @@ export default function ResourcesScreen() {
         AI-Generated Letter Templates
       </Text>
       <Link href={"/(tabs)/resources/letter-accommodation" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
           Create Accommodation Letter
         </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/accommodation-request" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Accommodation Request Builder</Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-appeal" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
@@ -233,9 +239,21 @@ export default function ResourcesScreen() {
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/evidence-locker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
           Evidence Locker
         </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/rtw-planner" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Return-to-Work Planner</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/meds-tracker" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Medication & Treatment Tracker</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/chronic-tracker" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Chronic Condition Tracker</Text>
+      </Link>
+      <Link href={"/(tabs)/resources/policy-simulator" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Interactive Policy Simulator</Text>
       </Link>
 
       <View

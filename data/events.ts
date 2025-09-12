@@ -5,6 +5,10 @@ export type Event = {
   date: string; // ISO or friendly
   location?: string;
   isVirtual?: boolean;
+  asl?: boolean;
+  captions?: boolean;
+  stepFree?: boolean;
+  sensorySpace?: boolean;
 };
 
 export const events: Event[] = [
