@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import { View, Text, StyleSheet, TextInput, FlatList, Alert, Pressable } from "react-native";
+import { View, Text, StyleSheet, TextInput, FlatList, Alert, Pressable, Modal } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar";
 import { useAuth } from "../../../context/AuthContext";
@@ -39,6 +39,7 @@ export default function EvidenceLocker() {
   const [query, setQuery] = React.useState<string>("");
   const [processing, setProcessing] = React.useState(false);
   const [progressPct, setProgressPct] = React.useState(0);
+  const [preview, setPreview] = React.useState<{ url: string; name?: string } | null>(null);
   // Immediate upload progress (non-queue)
   const [immUploading, setImmUploading] = React.useState(false);
   const [immPct, setImmPct] = React.useState(0);
@@ -398,7 +399,9 @@ export default function EvidenceLocker() {
                 {Array.isArray(c.files) && c.files[0]?.url && /\.(png|jpe?g|gif|webp)$/i.test(c.files[0].url) ? (
                   <View style={{ marginTop: 6 }}>
                     {(() => { try { const { Image } = require('expo-image'); return (
-                      <Image source={{ uri: c.files[0].url }} style={{ width: 100, height: 60, borderRadius: 6 }} />
+                      <Pressable onPress={() => setPreview({ url: c.files[0].url, name: c.files[0].name })}>
+                        <Image source={{ uri: c.files[0].url }} style={{ width: 100, height: 60, borderRadius: 6 }} />
+                      </Pressable>
                     ); } catch { return null; } })()}
                   </View>
                 ) : null}
@@ -424,6 +427,23 @@ export default function EvidenceLocker() {
             </View>
           ))}
         </View>
+      )}
+      {/* Preview Modal */}
+      {preview && (
+        <Modal transparent animationType="fade" onRequestClose={() => setPreview(null)}>
+          <Pressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)}>
+            <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '90%', maxHeight: '90%' }}>
+              {(() => { try { const { Image } = require('expo-image'); return (
+                <Image source={{ uri: preview.url }} style={{ width: 320, height: 200, borderRadius: 6 }} contentFit="contain" />
+              ); } catch { return (<Text style={{ color: palette.text }}>Preview unavailable</Text>); } })()}
+              <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
+                <A11yPressable onPress={async()=>{ try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(preview.url); } catch {} }} style={styles.secondary}><Text style={styles.buttonText}>Share</Text></A11yPressable>
+                <A11yPressable onPress={async()=>{ try { const Web = await import('expo-web-browser'); await Web.openBrowserAsync(preview.url); } catch {} }} style={styles.secondary}><Text style={styles.buttonText}>Open</Text></A11yPressable>
+                <A11yPressable onPress={()=> setPreview(null)} style={styles.secondary}><Text style={styles.buttonText}>Close</Text></A11yPressable>
+              </View>
+            </View>
+          </Pressable>
+        </Modal>
       )}
     </View>
   );

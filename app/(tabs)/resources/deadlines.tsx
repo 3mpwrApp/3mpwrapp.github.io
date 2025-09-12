@@ -23,6 +23,19 @@ export default function DeadlinesScreen() {
       </View>
       {tab==='calendar'? <DeadlinesCalendar/> : <DeadlinesList/>}
       {tab==='calendar' && <RecurringBuilder/>}
+      <Pressable onPress={async()=>{
+        try {
+          const DP = await import('expo-document-picker');
+          const res = await DP.getDocumentAsync({ type: 'text/calendar' });
+          const asset = res?.assets?.[0]; if (!asset?.uri) return;
+          const FS = await import('expo-file-system');
+          const text = await FS.readAsStringAsync(asset.uri, { encoding: FS.EncodingType.UTF8 });
+          const { parseICS } = await import('../../../services/ics');
+          const events = parseICS(text).slice(0, 100);
+          await Promise.all(events.map(ev => addDeadline({ title: ev.title, dueAt: ev.startISO, notes: ev.description || '' })));
+          Alert.alert('Imported', `Added ${events.length} deadlines.`);
+        } catch { Alert.alert('Import failed','Could not import ICS'); }
+      }} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Import ICS to Calendar</Text></Pressable>
     </View>
   );
 }
