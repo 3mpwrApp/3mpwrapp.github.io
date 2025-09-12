@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Text, StyleSheet, ScrollView, View, TextInput, Pressable, Alert } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
@@ -29,6 +29,15 @@ export default function AdminPanel() {
         return s.includes(term);
       });
   }, [users, contains, onlyVerified, onlyBanned]);
+  const [sortKey, setSortKey] = React.useState<'email' | 'name' | 'id'>('email');
+  const [sortDir, setSortDir] = React.useState<'asc' | 'desc'>('asc');
+  const sortedUsers = React.useMemo(() => {
+    const arr = [...filteredUsers];
+    const keyFn = (u: any) => sortKey === 'email' ? (u.email || '') : sortKey === 'name' ? (u.displayName || '') : (u.id || '');
+    arr.sort((a, b) => String(keyFn(a)).localeCompare(String(keyFn(b))));
+    if (sortDir === 'desc') arr.reverse();
+    return arr;
+  }, [filteredUsers, sortKey, sortDir]);
   React.useEffect(() => {
     (async () => {
       try {
@@ -53,7 +62,7 @@ export default function AdminPanel() {
         <Text style={s.text}>Use this area for admin-only tools and metrics.</Text>
         <Text style={s.text}>To grant admin: set Firebase custom claim admin=true for your UID.</Text>
         <View style={{ marginTop: 8 }}>
-          <Text style={s.text}>Counts — Users: {counts.users ?? '-'} | Campaigns: {counts.campaigns ?? '-'} | Resources: {counts.resources ?? '-'}</Text>
+          <Text style={s.text}>Counts â€” Users: {counts.users ?? '-'} | Campaigns: {counts.campaigns ?? '-'} | Resources: {counts.resources ?? '-'}</Text>
         </View>
         <View style={{ marginTop: 8 }}>
           <Text style={[s.text, { fontWeight: '700' }]}>Filters</Text>
@@ -170,13 +179,11 @@ export default function AdminPanel() {
             onPress={async () => {
               try {
                 const term = (contains || '').toLowerCase().trim();
-                const filtered = users
-                  .filter((u) => (onlyVerified ? u.verified === true : true) && (onlyBanned ? u.banned === true : true))
-                  .filter((u) => {
-                    if (!term) return true;
-                    const s = `${u.email || ''} ${u.displayName || ''}`.toLowerCase();
-                    return s.includes(term);
-                  });
+                const filtered = sortedUsers.filter((u) => {
+                  if (!term) return true;
+                  const s = `${u.email || ''} ${u.displayName || ''}`.toLowerCase();
+                  return s.includes(term);
+                });
                 const rows = [['uid','email','name','banned','verified']].concat(
                   filtered.map((u) => [u.id, u.email || '', u.displayName || '', String(!!u.banned), String(!!u.verified)])
                 );
@@ -194,12 +201,75 @@ export default function AdminPanel() {
           >
             <Text style={{ color: palette.text, fontWeight: '700' }}>Export CSV</Text>
           </Pressable>
+          <Pressable
+            onPress={async () => {
+              try {
+                const rows = [['uid','email','name','banned','verified']].concat(
+                  sortedUsers.map((u) => [u.id, u.email || '', u.displayName || '', String(!!u.banned), String(!!u.verified)])
+                );
+                const csv = rows.map(r => r.map(x => '"' + String(x).replace(/"/g,'""') + '"').join(',')).join('\n');
+                const Clipboard = await import('expo-clipboard');
+                await Clipboard.setStringAsync(csv);
+                Alert.alert('Copied', 'CSV copied to clipboard');
+              } catch (e: any) {
+                Alert.alert('Copy failed', e?.message || 'Unable to copy CSV');
+              }
+            }}
+            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+          >
+            <Text style={{ color: palette.text, fontWeight: '700' }}>Copy CSV</Text>
+          </Pressable>
+          <Pressable
+            onPress={async () => {
+              try {
+                const col = collection(db, 'users');
+                let acc: any[] = [];
+                let cur = null as any;
+                for (let i = 0; i < 20; i++) { // up to ~1000 users at 50/page
+                  const pageQ = cur ? query(col, limit(50), startAfter(cur)) : query(col, limit(50));
+                  const snap = await getDocs(pageQ);
+                  if (!snap.docs.length) break;
+                  acc = acc.concat(snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) })));
+                  cur = snap.docs[snap.docs.length - 1];
+                  if (acc.length >= 1000) break;
+                }
+                const rows = [['uid','email','name','banned','verified']].concat(
+                  acc.map((u) => [u.id, u.email || '', u.displayName || '', String(!!u.banned), String(!!u.verified)])
+                );
+                const csv = rows.map(r => r.map(x => '"' + String(x).replace(/"/g,'""') + '"').join(',')).join('\n');
+                const FS = await import('expo-file-system');
+                const path = FS.cacheDirectory + `users_all_${Date.now()}.csv`;
+                await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 });
+                try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','CSV saved to cache.'); }
+                catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
+              } catch (e: any) {
+                Alert.alert('Export failed', e?.message || 'Error exporting all');
+              }
+            }}
+            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+          >
+            <Text style={{ color: palette.text, fontWeight: '700' }}>Export All CSV</Text>
+          </Pressable>
         </View>
-        {users.map((u) => (
-          <View key={u.id} style={{ marginBottom: 6 }}>
-            <Text style={s.text}>{u.email || u.id} — {u.displayName || '-'}</Text>
-          </View>
-        ))}
+        <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8 }}>
+  <Pressable onPress={() => setSortKey('email')} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: sortKey==='email'? palette.primary: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+    <Text style={{ color: sortKey==='email'? palette.onPrimary: palette.text, fontWeight: '700' }}>Sort: Email</Text>
+  </Pressable>
+  <Pressable onPress={() => setSortKey('name')} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: sortKey==='name'? palette.primary: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+    <Text style={{ color: sortKey==='name'? palette.onPrimary: palette.text, fontWeight: '700' }}>Sort: Name</Text>
+  </Pressable>
+  <Pressable onPress={() => setSortKey('id')} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: sortKey==='id'? palette.primary: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+    <Text style={{ color: sortKey==='id'? palette.onPrimary: palette.text, fontWeight: '700' }}>Sort: ID</Text>
+  </Pressable>
+  <Pressable onPress={() => setSortDir(d => d==='asc' ? 'desc' : 'asc')} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+    <Text style={{ color: palette.text, fontWeight: '700' }}>{sortDir === 'asc' ? 'Asc' : 'Desc'}</Text>
+  </Pressable>
+</View>
+{sortedUsers.map((u) => (
+  <View key={u.id} style={{ marginBottom: 6 }}>
+    <Text style={s.text}>{u.email || u.id} — {u.displayName || '-'}</Text>
+  </View>
+))}
       </ScrollView>
     </AdminGuard>
   );
@@ -212,3 +282,4 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     text: { color: palette.text, opacity: 0.95, marginBottom: 6 },
   });
 }
+

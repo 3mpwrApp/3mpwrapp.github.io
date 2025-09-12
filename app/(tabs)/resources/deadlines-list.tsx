@@ -111,6 +111,73 @@ export default function DeadlinesList() {
           <Text style={s.buttonText}>Export all as ICS</Text>
         </A11yPressable>
       )}
+      {items.length > 0 && (
+        <View style={{ flexDirection: 'row', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
+          <A11yPressable
+            onPress={async () => {
+              try {
+                const { updateDeadline } = await import('../../../services/deadlines');
+                await Promise.all(items.map((d) => updateDeadline(d.id!, { done: true })));
+                load();
+              } catch { Alert.alert('Bulk update failed','Unable to mark all done.'); }
+            }}
+            style={s.button}
+          >
+            <Text style={s.buttonText}>Mark all done</Text>
+          </A11yPressable>
+          <A11yPressable
+            onPress={async () => {
+              try {
+                const { updateDeadline } = await import('../../../services/deadlines');
+                await Promise.all(items.map((d) => updateDeadline(d.id!, { done: false })));
+                load();
+              } catch { Alert.alert('Bulk update failed','Unable to mark all not-done.'); }
+            }}
+            style={s.button}
+          >
+            <Text style={s.buttonText}>Mark all not-done</Text>
+          </A11yPressable>
+        </View>
+      )}
+      <View style={{ flexDirection: 'row', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
+        <A11yPressable
+          onPress={async () => {
+            try {
+              const { addDeadline } = await import('../../../services/deadlines');
+              const base = 'Follow-up';
+              const now = new Date();
+              const adds = Array.from({ length: 4 }, (_, i) => {
+                const dt = new Date(now.getTime() + (i+1) * 7 * 86400000);
+                return addDeadline({ title: `${base} (Week ${i+1})`, dueAt: dt.toISOString(), notes: '' });
+              });
+              await Promise.all(adds);
+              load();
+            } catch { Alert.alert('Add failed','Could not add weekly reminders.'); }
+          }}
+          style={s.button}
+        >
+          <Text style={s.buttonText}>Add weekly x4</Text>
+        </A11yPressable>
+        <A11yPressable
+          onPress={async () => {
+            try {
+              const { addDeadline } = await import('../../../services/deadlines');
+              const base = 'Follow-up';
+              const now = new Date();
+              const adds = Array.from({ length: 6 }, (_, i) => {
+                const dt = new Date(now);
+                dt.setMonth(dt.getMonth() + (i+1));
+                return addDeadline({ title: `${base} (Month ${i+1})`, dueAt: dt.toISOString(), notes: '' });
+              });
+              await Promise.all(adds);
+              load();
+            } catch { Alert.alert('Add failed','Could not add monthly reminders.'); }
+          }}
+          style={s.button}
+        >
+          <Text style={s.buttonText}>Add monthly x6</Text>
+        </A11yPressable>
+      </View>
       {items.length === 0 ? (
         <Text style={{ color: palette.text, marginTop: 8 }}>No deadlines saved.</Text>
       ) : (

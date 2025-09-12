@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { View, Text, StyleSheet, TextInput, FlatList, Alert } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import { useAuth } from "../../../context/AuthContext";
@@ -35,6 +35,14 @@ export default function EvidenceLocker() {
   const [cloudItems, setCloudItems] = React.useState<any[]>([]);
   const [filter, setFilter] = React.useState<string>("");
   const [query, setQuery] = React.useState<string>("");
+  const [processing, setProcessing] = React.useState(false);
+  const [progressPct, setProgressPct] = React.useState(0);
+  // Immediate upload progress (non-queue)
+  const [immUploading, setImmUploading] = React.useState(false);
+  const [immPct, setImmPct] = React.useState(0);
+  const [immLabel, setImmLabel] = React.useState<string>("");
+  // Selection for cloud items
+  const [selectedCloud, setSelectedCloud] = React.useState<Record<string, boolean>>({});
   // Upload progress state can be surfaced later
   const { user } = useAuth();
 
@@ -66,13 +74,15 @@ export default function EvidenceLocker() {
 
   const processQueue = async () => {
     try {
+      setProcessing(true);
+      setProgressPct(0);
       const raw = (await AsyncStorage?.getItem?.(QUEUE_KEY)) || "[]";
       const arr: QueueItem[] = JSON.parse(raw);
       if (!arr.length) {
         Alert.alert("Queue", "No pending items.");
         return;
       }
-      
+
       for (let i = 0; i < arr.length; i++) {
         
         const n = arr[i];
@@ -83,18 +93,21 @@ export default function EvidenceLocker() {
               await uploadEvidenceFileWithProgress(
                 f.uri,
                 f.name,
-                undefined,
+                (pct) => setProgressPct(Math.round(((i + pct / 100) / arr.length) * 100)),
               ),
             );
           }
         }
         await addEvidenceNote({ text: n.text, tags: n.tags, files: uploaded });
+        setProgressPct(Math.round(((i + 1) / arr.length) * 100));
       }
       await AsyncStorage?.setItem?.(QUEUE_KEY, JSON.stringify([]));
       Alert.alert("Queue", "Processed all queued items.");
     } catch {
       Alert.alert("Queue", "Some items could not be processed.");
-    } finally {   }
+    } finally {
+      setProcessing(false);
+    }
   };
 
   return (
@@ -180,8 +193,21 @@ export default function EvidenceLocker() {
                 if (!current) return;
                 let uploaded: EvidenceFile[] = [];
                 if (current.files?.length) {
+                  setImmUploading(true); setImmPct(0);
+                  let idx = 0;
                   for (const f of current.files) {
-                    uploaded.push(await uploadEvidenceFileWithProgress(f.uri, f.name, undefined));
+                    setImmLabel(f.name);
+                    uploaded.push(
+                      await uploadEvidenceFileWithProgress(
+                        f.uri,
+                        f.name,
+                        (pct) => {
+                          const total = current.files?.length || 1;
+                          setImmPct(Math.round(((idx + pct/100) / total) * 100));
+                        },
+                      ),
+                    );
+                    idx++;
                   }
                 }
                 await addEvidenceNote({ text: current.text, tags: current.tags, files: uploaded });
@@ -190,7 +216,7 @@ export default function EvidenceLocker() {
                 if (snapshot) await enqueueFailed({ text: snapshot.text, tags: snapshot.tags, files: snapshot.files });
                 Alert.alert('Save failed', 'Queued to upload later.');
               } finally {
-                
+                setImmUploading(false); setImmPct(0); setImmLabel("");
               }
             }}
             style={styles.button}
@@ -204,7 +230,9 @@ export default function EvidenceLocker() {
             onPress={async () => {
               try {
                 if (!notes.length) return;
-                
+                const totalFiles = notes.reduce((s,n) => s + (n.files?.length || 0), 0) || 1;
+                let fileCursor = 0;
+                setImmUploading(true); setImmPct(0); setImmLabel('');
                 for (let i=0;i<notes.length;i++) {
                   
                   const n = notes[i];
@@ -212,7 +240,18 @@ export default function EvidenceLocker() {
                   if (n.files?.length) {
                     for (const f of n.files) {
                       try {
-                        uploaded.push(await uploadEvidenceFileWithProgress(f.uri, f.name, undefined));
+                        setImmLabel(f.name);
+                        uploaded.push(
+                          await uploadEvidenceFileWithProgress(
+                            f.uri,
+                            f.name,
+                            (pct) => {
+                              const overall = (fileCursor + pct/100) / totalFiles;
+                              setImmPct(Math.round(overall * 100));
+                            },
+                          ),
+                        );
+                        fileCursor++;
                       } catch {
                         await enqueueFailed({ text: n.text, tags: n.tags, files: n.files });
                       }
@@ -227,12 +266,15 @@ export default function EvidenceLocker() {
                 Alert.alert('Saved', 'Finished saving notes (failures queued).');
               } catch {
                 Alert.alert('Save failed', 'Could not save some items.');
-              } finally {   }
+              } finally { setImmUploading(false); setImmPct(0); setImmLabel(''); }
             }}
             style={styles.secondary}
           >
             <Text style={styles.buttonText}>Save all to Cloud</Text>
           </A11yPressable>
+        )}
+        {processing && (
+          <Text style={[styles.buttonText, { alignSelf: 'center', marginTop: 6, color: palette.text }]}>Processing queue: {progressPct}%</Text>
         )}
         {user && (
           <A11yPressable
@@ -273,13 +315,18 @@ export default function EvidenceLocker() {
           <Text style={styles.buttonText}>Export CSV</Text>
         </A11yPressable>
       </View>
+      {(immUploading || processing) && (
+        <Text style={{ color: palette.text, marginTop: 6 }}>
+          {processing ? `Processing queue: ${progressPct}%` : immLabel ? `Uploading ${immLabel}: ${immPct}%` : `Uploading: ${immPct}%`}
+        </Text>
+      )}
       <FlatList
         data={notes.filter(n => (!filter || n.tags?.includes(filter)) && (!query || n.text.toLowerCase().includes(query.toLowerCase())))}
         keyExtractor={(n) => n.id}
         renderItem={({ item }) => (
           <View style={styles.noteRow}>
             <Text style={styles.noteText}>
-              {new Date(item.date).toLocaleString()} � {item.text}
+              {new Date(item.date).toLocaleString()} — {item.text}
             </Text>
           </View>
         )}
@@ -288,10 +335,45 @@ export default function EvidenceLocker() {
       {!!user && cloudItems.length > 0 && (
         <View style={{ marginTop: 12 }}>
           <Text style={styles.title}>Cloud items</Text>
+          <A11yPressable
+            onPress={async () => {
+              try {
+                Alert.alert('Delete all?', 'This will delete all cloud items in your Evidence Locker.', [
+                  { text: 'Cancel', style: 'cancel' },
+                  { text: 'Delete', style: 'destructive', onPress: async () => {
+                    try {
+                      for (const c of cloudItems) { await deleteEvidenceDoc(c.id); }
+                      setCloudItems([]);
+                      Alert.alert('Deleted', 'All cloud items deleted.');
+                    } catch { Alert.alert('Delete failed','Unable to delete all items.'); }
+                  }}
+                ]);
+              } catch {}
+            }}
+            style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
+          >
+            <Text style={styles.buttonText}>Delete all</Text>
+          </A11yPressable>
+          {Object.values(selectedCloud).some(Boolean) && (
+            <A11yPressable
+              onPress={async () => {
+                try {
+                  const ids = Object.keys(selectedCloud).filter((k) => selectedCloud[k]);
+                  for (const id of ids) { await deleteEvidenceDoc(id); }
+                  setCloudItems((prev) => prev.filter((x) => !selectedCloud[x.id]));
+                  setSelectedCloud({});
+                  Alert.alert('Deleted', 'Selected items deleted.');
+                } catch { Alert.alert('Delete failed','Unable to delete selected items.'); }
+              }}
+              style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
+            >
+              <Text style={styles.buttonText}>Delete selected</Text>
+            </A11yPressable>
+          )}
           {cloudItems.map((c: any) => (
             <View key={c.id} style={styles.noteRow}>
-              <Text style={styles.noteText}>
-                {(c.createdAt?.toDate?.() || new Date()).toLocaleString()} — {c.text || '(no text)'}
+              <Text style={[styles.noteText, selectedCloud[c.id] ? { fontWeight: '700' } : null]}>
+                {(c.createdAt?.toDate?.() || new Date()).toLocaleString()} - {c.text || '(no text)'}
               </Text>
               <A11yPressable
                 onPress={async () => {
@@ -301,6 +383,12 @@ export default function EvidenceLocker() {
                 style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
               >
                 <Text style={styles.buttonText}>Delete</Text>
+              </A11yPressable>
+              <A11yPressable
+                onPress={() => setSelectedCloud((prev) => ({ ...prev, [c.id]: !prev[c.id] }))}
+                style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
+              >
+                <Text style={styles.buttonText}>{selectedCloud[c.id] ? 'Unselect' : 'Select'}</Text>
               </A11yPressable>
             </View>
           ))}
@@ -360,3 +448,4 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     chipTextActive: { color: palette.onPrimary, fontWeight: "700" },
   });
 }
+

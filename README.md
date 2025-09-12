@@ -113,8 +113,9 @@ Revoke admin: `npm run admin:set -- <uid> false`
 
 ## New Features
 
-- Admin Panel: filters (verified/banned), contains search, and CSV export of the current user list.
-- Deadlines: import events from an ICS file and snooze by 7 days in addition to 24 hours.
+- Admin Panel: filters (verified/banned), contains search, client-side sort, CSV export/copy, and Export All (batched).
+- Deadlines: import events from an ICS file, snooze 7 days, bulk mark done/not-done, and quick-add weekly/monthly templates.
+- Evidence Locker: queue progress indicator and bulk delete of cloud items.
 
 ## Firestore security rules
 
