@@ -1,14 +1,6 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  TextInput,
-  Share,
-  Alert,
-  ScrollView,
-} from "react-native";
+import { View, Text, StyleSheet, TextInput, Share, Alert, ScrollView } from "react-native";
+import A11yPressable from "../../../../components/A11yPressable";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../../theme/usePalette";
 import { getCachedJSON, setCachedJSON } from "../../../../services/cache";
@@ -132,31 +124,30 @@ export default function CampaignRoom() {
         onChangeText={setNewTask}
         placeholder="Add a task (e.g., contact media list)"
       />
-      <Pressable onPress={add} style={s.button}>
+      <A11yPressable onPress={add} style={s.button}>
         <Text style={s.buttonText}>Add Task</Text>
-      </Pressable>
+      </A11yPressable>
       <View style={{ height: 8 }} />
       {tasks.map((t) => (
-        <Pressable
+        <A11yPressable
           key={t.id}
           onPress={() => toggle(t.id)}
-          accessibilityRole="button"
           style={[s.task, t.done && { opacity: 0.6 }]}
         >
           <Text style={s.taskText}>
             {t.done ? "âœ“ " : "â€¢ "}
             {t.title} <Text style={{ opacity: 0.7 }}>({t.kind})</Text>
           </Text>
-        </Pressable>
+        </A11yPressable>
       ))}
       <View style={{ height: 8 }} />
-      <Pressable onPress={exportCSV} style={s.button}>
+      <A11yPressable onPress={exportCSV} style={s.button}>
         <Text style={s.buttonText}>Export Tasks (CSV)</Text>
-      </Pressable>
+      </A11yPressable>
       <View style={{ height: 8 }} />
-      <Pressable onPress={shareRoom} style={s.button}>
+      <A11yPressable onPress={shareRoom} style={s.button}>
         <Text style={s.buttonText}>Share Room Link</Text>
-      </Pressable>
+      </A11yPressable>
       <View style={{ height: 12 }} />
       <Text style={s.title}>Shared Notes</Text>
       <TextInput
@@ -166,7 +157,7 @@ export default function CampaignRoom() {
         multiline
         placeholder="Shared notes: announce dates, media contacts, progress, links"
       />
-      <Pressable
+      <A11yPressable
         onPress={async () => {
           try {
             const mod = await import("expo-clipboard");
@@ -177,8 +168,8 @@ export default function CampaignRoom() {
         style={s.button}
       >
         <Text style={s.buttonText}>Copy Notes</Text>
-      </Pressable>
-      <Pressable
+      </A11yPressable>
+      <A11yPressable
         onPress={() =>
           Share.share({ message: notes, title: "Campaign Room Notes" }).catch(
             () => {},
@@ -187,7 +178,7 @@ export default function CampaignRoom() {
         style={[s.button, { marginTop: 8 }]}
       >
         <Text style={s.buttonText}>Share Notes</Text>
-      </Pressable>
+      </A11yPressable>
     </ScrollView>
   );
 }

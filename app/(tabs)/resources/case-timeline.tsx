@@ -1,5 +1,6 @@
 import React from "react";
-import { ScrollView, View, Text, StyleSheet, Pressable } from "react-native";
+import { ScrollView, View, Text, StyleSheet } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { Link } from "expo-router";
@@ -22,13 +23,13 @@ export default function CaseTimelineTracker() {
       </Text>
       <View style={{ gap: 8 }}>
         <Link href={("/(tabs)/resources/deadlines" as any)} asChild>
-          <Pressable style={styles.cta} accessibilityRole="button" accessibilityLabel="Open Deadline Calculator">
+          <A11yPressable style={styles.cta} accessibilityLabel="Open Deadline Calculator">
             <Text style={styles.ctaText}>Open Deadline Calculator</Text>
-          </Pressable>
+          </A11yPressable>
         </Link>
-        <Pressable style={styles.ctaSecondary} accessibilityRole="button" accessibilityLabel="Add documents (coming soon)">
+        <A11yPressable style={styles.ctaSecondary} accessibilityLabel="Add documents (coming soon)">
           <Text style={styles.ctaSecondaryText}>Add Documents (coming soon)</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
     </ScrollView>
   );
@@ -58,4 +59,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     ctaSecondaryText: { color: palette.text, fontWeight: "600" },
   });
 }
-

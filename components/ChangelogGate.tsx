@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
+import A11yPressable from "./A11yPressable";
 
 let AsyncStorage: any;
 try {
@@ -54,9 +55,9 @@ export default function ChangelogGate({
             notes with realtime sync. Terms gate and optional LLM backend hooks.
           </Text>
         </ScrollView>
-        <Pressable onPress={onDismiss} accessibilityRole="button" style={styles.button}>
+        <A11yPressable onPress={onDismiss} style={styles.button}>
           <Text style={styles.buttonText}>Got it</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
     </View>
   );
@@ -93,4 +94,3 @@ const styles = StyleSheet.create({
   },
   buttonText: { color: "#fff", fontWeight: "700" },
 });
-

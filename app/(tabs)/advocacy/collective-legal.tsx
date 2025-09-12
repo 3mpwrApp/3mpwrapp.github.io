@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  Alert,
-  ScrollView,
-} from "react-native";
+import { View, Text, StyleSheet, TextInput, Alert, ScrollView } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -100,7 +93,7 @@ export default function CollectiveLegal() {
         }}
       >
         {TYPES.map((t) => (
-          <Pressable
+          <A11yPressable
             key={t}
             onPress={() => setType(t)}
             style={{
@@ -117,7 +110,7 @@ export default function CollectiveLegal() {
             >
               {t}
             </Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
       <Text style={s.label}>Province (optional)</Text>
@@ -135,9 +128,9 @@ export default function CollectiveLegal() {
         multiline
         placeholder="Short summary; do not include identifiers."
       />
-      <Pressable onPress={submit} style={s.button}>
+      <A11yPressable onPress={submit} style={s.button}>
         <Text style={s.buttonText}>Submit report</Text>
-      </Pressable>
+      </A11yPressable>
 
       <Text style={[s.subtitle, { marginTop: 12 }]}>Aggregated reports</Text>
       {Object.keys(byType).length === 0 ? (

@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  Alert,
-  ScrollView,
-} from "react-native";
+import { View, Text, StyleSheet, TextInput, Alert, ScrollView } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -87,16 +80,15 @@ export default function WorkBalanceAI() {
       <Text style={s.label}>Mood</Text>
       <View style={{ flexDirection: "row", gap: 8, marginBottom: 8 }}>
         {(["low", "ok", "high"] as Mood[]).map((m) => (
-          <Pressable
+          <A11yPressable
             key={m}
             onPress={() => setMood(m)}
             style={[s.chip, mood === m && s.chipActive]}
-            accessibilityRole="button"
           >
             <Text style={[s.chipText, mood === m && s.chipTextActive]}>
               {m}
             </Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
       <Text style={s.label}>Notes (optional)</Text>
@@ -106,14 +98,14 @@ export default function WorkBalanceAI() {
         onChangeText={setNotes}
         placeholder="Important errands, appointments, deadlines"
       />
-      <Pressable onPress={generate} style={s.button}>
+      <A11yPressable onPress={generate} style={s.button}>
         <Text style={s.buttonText}>Plan my day</Text>
-      </Pressable>
+      </A11yPressable>
       {!!plan && (
         <View style={s.box}>
           <Text style={{ color: palette.text }}>{plan}</Text>
           <View style={{ height: 8 }} />
-          <Pressable
+          <A11yPressable
             onPress={async () => {
               try {
                 const mod = await import("expo-clipboard");
@@ -124,7 +116,7 @@ export default function WorkBalanceAI() {
             style={s.button}
           >
             <Text style={s.buttonText}>Copy</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       )}
     </ScrollView>

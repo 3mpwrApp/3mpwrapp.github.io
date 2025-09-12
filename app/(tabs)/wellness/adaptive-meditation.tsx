@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
+import { View, Text, StyleSheet, Alert } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -66,23 +67,23 @@ export default function AdaptiveMeditation() {
       <Text style={s.subtitle}>
         Gentle guidance for chronic pain and limited mobility.
       </Text>
-      <Pressable onPress={() => play("breath")} style={s.button}>
+      <A11yPressable onPress={() => play("breath")} style={s.button}>
         <Text style={s.buttonText}>
           Breathing Ã¢â‚¬â€œ 1 min {isPlaying ? "Ã¢â€“Â¶Ã¯Â¸Å½" : ""}
         </Text>
-      </Pressable>
-      <Pressable
+      </A11yPressable>
+      <A11yPressable
         onPress={() => play("body")}
         style={[s.button, { marginTop: 8 }]}
       >
         <Text style={s.buttonText}>Body Scan Ã¢â‚¬â€œ 2 min</Text>
-      </Pressable>
-      <Pressable
+      </A11yPressable>
+      <A11yPressable
         onPress={() => play("calm")}
         style={[s.button, { marginTop: 8 }]}
       >
         <Text style={s.buttonText}>Calm Reset Ã¢â‚¬â€œ 30 sec</Text>
-      </Pressable>
+      </A11yPressable>
       <Text style={[s.subtitle, { marginTop: 12 }]}>
         Note: For full audio programs, curate links in SelfÃ¢â‚¬â€˜Care Library.
       </Text>
@@ -104,3 +105,6 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     buttonText: { color: palette.onPrimary, fontWeight: "700" },
   });
 }
+
+
+

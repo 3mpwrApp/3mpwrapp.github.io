@@ -1,14 +1,6 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  TextInput,
-  Alert,
-  ScrollView,
-  Share,
-} from "react-native";
+import { View, Text, StyleSheet, TextInput, Alert, ScrollView, Share } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -129,20 +121,20 @@ export default function VoiceNotes() {
         multiline
       />
       {!recording ? (
-        <Pressable onPress={start} style={s.button}>
+        <A11yPressable onPress={start} style={s.button}>
           <Text style={s.buttonText}>Record audio</Text>
-        </Pressable>
+        </A11yPressable>
       ) : (
-        <Pressable
+        <A11yPressable
           onPress={stop}
           style={[s.button, { backgroundColor: "#b00020" }]}
         >
           <Text style={s.buttonText}>Stop recording</Text>
-        </Pressable>
+        </A11yPressable>
       )}
-      <Pressable onPress={save} style={[s.button, { marginTop: 8 }]}>
+      <A11yPressable onPress={save} style={[s.button, { marginTop: 8 }]}>
         <Text style={s.buttonText}>Save Note</Text>
-      </Pressable>
+      </A11yPressable>
 
       <Text style={[s.subtitle, { marginTop: 12 }]}>Saved notes</Text>
       {notes.length === 0 ? (
@@ -155,7 +147,7 @@ export default function VoiceNotes() {
             </Text>
             <Text style={s.cardText}>{caseLog(n)}</Text>
             <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
-              <Pressable
+              <A11yPressable
                 onPress={async () => {
                   try {
                     const mod = await import("expo-clipboard");
@@ -166,8 +158,8 @@ export default function VoiceNotes() {
                 style={s.smallBtn}
               >
                 <Text style={s.smallBtnText}>Copy</Text>
-              </Pressable>
-              <Pressable
+              </A11yPressable>
+              <A11yPressable
                 onPress={() =>
                   Share.share({ message: caseLog(n), title: "Case Log" }).catch(
                     () => {},
@@ -176,8 +168,8 @@ export default function VoiceNotes() {
                 style={s.smallBtn}
               >
                 <Text style={s.smallBtnText}>Share</Text>
-              </Pressable>
-              <Pressable
+              </A11yPressable>
+              <A11yPressable
                 onPress={async () => {
                   try {
                     const mod = await import("expo-print");
@@ -194,8 +186,8 @@ export default function VoiceNotes() {
                 style={s.smallBtn}
               >
                 <Text style={s.smallBtnText}>PDF</Text>
-              </Pressable>
-              <Pressable
+              </A11yPressable>
+              <A11yPressable
                 onPress={async () => {
                   try {
                     const FS = await import("expo-file-system");
@@ -212,7 +204,7 @@ export default function VoiceNotes() {
                 style={s.smallBtn}
               >
                 <Text style={s.smallBtnText}>DOC</Text>
-              </Pressable>
+              </A11yPressable>
             </View>
           </View>
         ))

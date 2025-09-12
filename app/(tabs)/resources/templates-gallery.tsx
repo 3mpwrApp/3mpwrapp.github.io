@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, Pressable } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -57,9 +58,9 @@ export default function TemplatesGallery() {
         <View key={ex.title} style={s.card}>
           <Text style={s.cardTitle}>{ex.title}</Text>
           <Text style={s.cardText}>{ex.body}</Text>
-          <Pressable onPress={() => copy(ex.body)} style={s.button}>
+          <A11yPressable onPress={() => copy(ex.body)} style={s.button}>
             <Text style={s.buttonText}>Copy example</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       ))}
     </ScrollView>

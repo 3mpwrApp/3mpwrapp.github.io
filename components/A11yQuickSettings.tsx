@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import A11yPressable from "./A11yPressable";
 import { Ionicons } from "@expo/vector-icons";
 import { useAppPalette } from "../theme/usePalette";
 import { useSettings, TextScale, ResourceFormat } from "../store/settings";
-import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
+import { touchTarget } from "../constants/a11y";
 
 export default function A11yQuickSettings() {
   const palette = useAppPalette();
@@ -38,15 +39,13 @@ export default function A11yQuickSettings() {
 
   return (
     <View>
-      <Pressable
+      <A11yPressable
         onPress={() => setOpen((v) => !v)}
-        accessibilityRole="button"
         accessibilityLabel={open ? "Close accessibility settings" : "Open accessibility settings"}
-        hitSlop={HIT_SLOP_8}
         style={({ pressed }) => [touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
       >
         <Ionicons name="accessibility-outline" size={20} color={iconColor} />
-      </Pressable>
+      </A11yPressable>
 
       {open && (
         <View style={styles.panel} accessibilityLabel="Accessibility settings" accessible>
@@ -84,12 +83,12 @@ export default function A11yQuickSettings() {
 function Row({ icon, label, onPress }: { icon: keyof typeof Ionicons.glyphMap; label: string; onPress: () => void }) {
   const palette = useAppPalette();
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={label} style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 10 }, pressed && { opacity: 0.7 }]}>
+    <A11yPressable onPress={onPress} accessibilityLabel={label} style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 10 }, pressed && { opacity: 0.7 }]}>
       <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
         <Ionicons name={icon} size={18} color={palette.text} />
         <Text style={{ color: palette.text }}>{label}</Text>
       </View>
-    </Pressable>
+    </A11yPressable>
   );
 }
 
@@ -101,10 +100,9 @@ function FormatRow({ value, onChange }: { value: ResourceFormat; onChange: (v: R
       <Text style={{ color: palette.text, fontWeight: "700", marginBottom: 6 }}>Preferred format</Text>
       <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
         {opts.map((opt) => (
-          <Pressable
+          <A11yPressable
             key={opt}
             onPress={() => onChange(opt)}
-            accessibilityRole="button"
             accessibilityLabel={`Set format to ${opt}`}
             style={({ pressed }) => [
               {
@@ -121,7 +119,7 @@ function FormatRow({ value, onChange }: { value: ResourceFormat; onChange: (v: R
             <Text style={{ color: value === opt ? palette.onPrimary : palette.text }}>
               {opt.toUpperCase()}
             </Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
     </View>

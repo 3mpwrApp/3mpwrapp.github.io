@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "empowrapp",
+    "name": "3mpowrApp",
     "slug": "empowrapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/empowr-logo.png",
+    "icon": "./assets/images/brand-logo.png",
     "scheme": "empowrapp",
     "userInterfaceStyle": "automatic",
     "jsEngine": "hermes",
@@ -20,7 +20,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/empowr-logo.png",
+        "foregroundImage": "./assets/images/brand-adaptive.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
@@ -31,14 +31,14 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/empowr-logo.png"
+      "favicon": "./assets/images/brand-logo.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/empowr-logo.png",
+          "image": "./assets/images/brand-logo.png",
           "imageWidth": 220,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"

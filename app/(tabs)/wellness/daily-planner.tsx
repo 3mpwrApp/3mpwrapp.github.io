@@ -1,14 +1,6 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  ScrollView,
-  Share,
-  Alert,
-} from "react-native";
+import { View, Text, StyleSheet, TextInput, ScrollView, Share, Alert } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -223,9 +215,9 @@ export default function DailyPlanner() {
         onChangeText={setTitle}
         placeholder="Physio / meeting / call"
       />
-      <Pressable onPress={addAppt} style={s.button}>
+      <A11yPressable onPress={addAppt} style={s.button}>
         <Text style={s.buttonText}>Add</Text>
-      </Pressable>
+      </A11yPressable>
       <View style={{ height: 8 }} />
       {appts
         .sort((a, b) => a.time.localeCompare(b.time))
@@ -237,40 +229,40 @@ export default function DailyPlanner() {
           </View>
         ))}
       <View style={{ height: 8 }} />
-      <Pressable onPress={build} style={s.button}>
+      <A11yPressable onPress={build} style={s.button}>
         <Text style={s.buttonText}>Build plan</Text>
-      </Pressable>
+      </A11yPressable>
       <View style={{ height: 8 }} />
       <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
-        <Pressable onPress={morningTemplate} style={s.button}>
+        <A11yPressable onPress={morningTemplate} style={s.button}>
           <Text style={s.buttonText}>Morning template</Text>
-        </Pressable>
-        <Pressable onPress={afternoonTemplate} style={s.button}>
+        </A11yPressable>
+        <A11yPressable onPress={afternoonTemplate} style={s.button}>
           <Text style={s.buttonText}>Afternoon template</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       {!!plan && (
         <View style={s.card}>
           <Text style={s.cardTitle}>Plan</Text>
           <Text style={s.cardText}>{plan}</Text>
-          <Pressable onPress={sharePlan} style={[s.button, { marginTop: 8 }]}>
+          <A11yPressable onPress={sharePlan} style={[s.button, { marginTop: 8 }]}>
             <Text style={s.buttonText}>Share</Text>
-          </Pressable>
-          <Pressable
+          </A11yPressable>
+          <A11yPressable
             onPress={addRestToCalendar}
             style={[s.button, { marginTop: 8 }]}
           >
             <Text style={s.buttonText}>Add rest to calendar</Text>
-          </Pressable>
-          <Pressable onPress={addAllRests} style={[s.button, { marginTop: 8 }]}>
+          </A11yPressable>
+          <A11yPressable onPress={addAllRests} style={[s.button, { marginTop: 8 }]}>
             <Text style={s.buttonText}>Add all suggested rests</Text>
-          </Pressable>
-          <Pressable
+          </A11yPressable>
+          <A11yPressable
             onPress={exportRestsICS}
             style={[s.button, { marginTop: 8 }]}
           >
             <Text style={s.buttonText}>Export rests (ICS)</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       )}
     </ScrollView>
