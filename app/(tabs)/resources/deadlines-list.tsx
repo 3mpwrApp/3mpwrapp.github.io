@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Alert, ScrollView } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
 import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { listDeadlines, deleteDeadline, type Deadline } from '../../../services/deadlines';
+import { listDeadlines, deleteDeadline, updateDeadline, type Deadline } from '../../../services/deadlines';
 import { buildICSMany, buildICS } from '../../../services/ics';
 import * as Notifier from '../../../services/notifications';
 import { addEvent } from '../../../services/calendar';
@@ -18,6 +18,9 @@ export default function DeadlinesList() {
   useFocusOnRefOnMount(titleRef);
   const [items, setItems] = React.useState<Deadline[]>([]);
   const [loading, setLoading] = React.useState(false);
+  const [editingId, setEditingId] = React.useState<string | null>(null);
+  const [editTitle, setEditTitle] = React.useState<string>("");
+  const [editDate, setEditDate] = React.useState<string>("");
 
   const load = React.useCallback(async () => {
     try {
@@ -99,6 +102,32 @@ export default function DeadlinesList() {
               <View key={d.id} style={s.card}>
                 <Text style={[s.cardTitle, statusStyle(d.dueAt)]}>{new Date(d.dueAt).toLocaleString()} — {d.title}</Text>
                 {d.notes ? <Text style={s.cardText}>{d.notes}</Text> : null}
+                {editingId === d.id ? (
+                  <View style={{ marginVertical: 8 }}>
+                    <Text style={s.cardText}>Edit title</Text>
+                    <View style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
+                      <Text style={{ color: palette.text, padding: 6 }}>{editTitle}</Text>
+                    </View>
+                    <Text style={s.cardText}>Edit date (YYYY-MM-DD)</Text>
+                    <View style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 6 }}>
+                      <Text style={{ color: palette.text, padding: 6 }}>{editDate}</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row', gap: 8 }}>
+                      <A11yPressable
+                        onPress={async () => {
+                          try { await updateDeadline(d.id!, { title: editTitle, dueAt: new Date(editDate).toISOString() }); setEditingId(null); load(); }
+                          catch { Alert.alert('Update failed', 'Check your inputs.'); }
+                        }}
+                        style={s.smallBtn}
+                      >
+                        <Text style={s.smallBtnText}>Save</Text>
+                      </A11yPressable>
+                      <A11yPressable onPress={() => setEditingId(null)} style={s.smallBtn}>
+                        <Text style={s.smallBtnText}>Cancel</Text>
+                      </A11yPressable>
+                    </View>
+                  </View>
+                ) : null}
                 <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
                   <A11yPressable
                     onPress={async () => {
@@ -108,6 +137,21 @@ export default function DeadlinesList() {
                     style={s.smallBtn}
                   >
                     <Text style={s.smallBtnText}>Snooze 24h</Text>
+                  </A11yPressable>
+                  <A11yPressable
+                    onPress={async () => {
+                      try { await updateDeadline(d.id!, { done: !d.done }); load(); }
+                      catch { Alert.alert('Update failed', 'Unable to update.'); }
+                    }}
+                    style={s.smallBtn}
+                  >
+                    <Text style={s.smallBtnText}>{d.done ? 'Mark undone' : 'Mark done'}</Text>
+                  </A11yPressable>
+                  <A11yPressable
+                    onPress={() => { setEditingId(d.id!); setEditTitle(d.title); setEditDate(d.dueAt.slice(0,10)); }}
+                    style={s.smallBtn}
+                  >
+                    <Text style={s.smallBtnText}>Edit</Text>
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {

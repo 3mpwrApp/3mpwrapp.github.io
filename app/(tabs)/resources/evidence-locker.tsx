@@ -18,6 +18,8 @@ try {
 
 type Attachment = { name: string; uri: string };
 type Note = { id: string; text: string; date: string; tags?: string[]; files?: Attachment[] };
+type QueueItem = { text: string; tags?: string[]; files?: Attachment[] };
+const QUEUE_KEY = "evidence:uploadQueue:v1";
 
 export const options = { href: null };
 
@@ -33,6 +35,7 @@ export default function EvidenceLocker() {
   const [cloudItems, setCloudItems] = React.useState<any[]>([]);
   const [filter, setFilter] = React.useState<string>("");
   const [query, setQuery] = React.useState<string>("");
+  // Upload progress state can be surfaced later
   const { user } = useAuth();
 
   React.useEffect(() => {
@@ -50,6 +53,49 @@ export default function EvidenceLocker() {
         await AsyncStorage.setItem("evidence:notes:v1", JSON.stringify(notes));
     })();
   }, [notes]);
+
+  // Offline upload queue helpers
+  const enqueueFailed = async (item: QueueItem) => {
+    try {
+      const raw = (await AsyncStorage?.getItem?.(QUEUE_KEY)) || "[]";
+      const arr = JSON.parse(raw);
+      arr.push(item);
+      await AsyncStorage?.setItem?.(QUEUE_KEY, JSON.stringify(arr));
+    } catch {}
+  };
+
+  const processQueue = async () => {
+    try {
+      const raw = (await AsyncStorage?.getItem?.(QUEUE_KEY)) || "[]";
+      const arr: QueueItem[] = JSON.parse(raw);
+      if (!arr.length) {
+        Alert.alert("Queue", "No pending items.");
+        return;
+      }
+      
+      for (let i = 0; i < arr.length; i++) {
+        
+        const n = arr[i];
+        let uploaded: EvidenceFile[] = [];
+        if (n.files?.length) {
+          for (const f of n.files) {
+            uploaded.push(
+              await uploadEvidenceFileWithProgress(
+                f.uri,
+                f.name,
+                undefined,
+              ),
+            );
+          }
+        }
+        await addEvidenceNote({ text: n.text, tags: n.tags, files: uploaded });
+      }
+      await AsyncStorage?.setItem?.(QUEUE_KEY, JSON.stringify([]));
+      Alert.alert("Queue", "Processed all queued items.");
+    } catch {
+      Alert.alert("Queue", "Some items could not be processed.");
+    } finally {   }
+  };
 
   return (
     <View
@@ -128,19 +174,21 @@ export default function EvidenceLocker() {
           <A11yPressable
             accessibilityLabel="Save to Cloud"
             onPress={async () => {
+              const snapshot = notes[0];
               try {
-                const current = notes[0];
+                const current = snapshot;
                 if (!current) return;
                 let uploaded: EvidenceFile[] = [];
                 if (current.files?.length) {
                   for (const f of current.files) {
-                    uploaded.push(await uploadEvidenceFileWithProgress(f.uri, f.name));
+                    uploaded.push(await uploadEvidenceFileWithProgress(f.uri, f.name, undefined));
                   }
                 }
                 await addEvidenceNote({ text: current.text, tags: current.tags, files: uploaded });
                 Alert.alert('Saved', 'Note saved to your cloud locker.');
               } catch (e: any) {
-                Alert.alert('Save failed', e?.message || 'Unable to save');
+                if (snapshot) await enqueueFailed({ text: snapshot.text, tags: snapshot.tags, files: snapshot.files });
+                Alert.alert('Save failed', 'Queued to upload later.');
               } finally {
                 
               }
@@ -148,6 +196,51 @@ export default function EvidenceLocker() {
             style={styles.button}
           >
             <Text style={styles.buttonText}>Save to Cloud</Text>
+          </A11yPressable>
+        )}
+        {user && (
+          <A11yPressable
+            accessibilityLabel="Save all to Cloud"
+            onPress={async () => {
+              try {
+                if (!notes.length) return;
+                
+                for (let i=0;i<notes.length;i++) {
+                  
+                  const n = notes[i];
+                  let uploaded: EvidenceFile[] = [];
+                  if (n.files?.length) {
+                    for (const f of n.files) {
+                      try {
+                        uploaded.push(await uploadEvidenceFileWithProgress(f.uri, f.name, undefined));
+                      } catch {
+                        await enqueueFailed({ text: n.text, tags: n.tags, files: n.files });
+                      }
+                    }
+                  }
+                  try {
+                    await addEvidenceNote({ text: n.text, tags: n.tags, files: uploaded });
+                  } catch {
+                    await enqueueFailed({ text: n.text, tags: n.tags, files: n.files });
+                  }
+                }
+                Alert.alert('Saved', 'Finished saving notes (failures queued).');
+              } catch {
+                Alert.alert('Save failed', 'Could not save some items.');
+              } finally {   }
+            }}
+            style={styles.secondary}
+          >
+            <Text style={styles.buttonText}>Save all to Cloud</Text>
+          </A11yPressable>
+        )}
+        {user && (
+          <A11yPressable
+            accessibilityLabel="Process queue"
+            onPress={processQueue}
+            style={styles.secondary}
+          >
+            <Text style={styles.buttonText}>Process queue</Text>
           </A11yPressable>
         )}
         {user && (
@@ -181,12 +274,12 @@ export default function EvidenceLocker() {
         </A11yPressable>
       </View>
       <FlatList
-        data={notes}
+        data={notes.filter(n => (!filter || n.tags?.includes(filter)) && (!query || n.text.toLowerCase().includes(query.toLowerCase())))}
         keyExtractor={(n) => n.id}
         renderItem={({ item }) => (
           <View style={styles.noteRow}>
             <Text style={styles.noteText}>
-              {new Date(item.date).toLocaleString()} Ã¢â‚¬â€ {item.text}
+              {new Date(item.date).toLocaleString()} � {item.text}
             </Text>
           </View>
         )}
@@ -267,5 +360,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     chipTextActive: { color: palette.onPrimary, fontWeight: "700" },
   });
 }
-
-

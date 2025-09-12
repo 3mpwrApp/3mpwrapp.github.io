@@ -6,6 +6,7 @@ export type Deadline = {
   title: string;
   dueAt: string; // ISO string
   notes?: string;
+  done?: boolean;
   createdAt?: any;
 };
 
@@ -31,3 +32,10 @@ export async function deleteDeadline(id: string) {
   await deleteDoc(doc(db, 'users', uid, 'deadlines', id));
 }
 
+export async function updateDeadline(id: string, patch: Partial<Deadline>) {
+  const uid = auth.currentUser?.uid;
+  if (!uid) throw new Error('Not signed in');
+  const ref = doc(db, 'users', uid, 'deadlines', id);
+  const { updateDoc } = await import('firebase/firestore');
+  await updateDoc(ref, patch);
+}
