@@ -301,38 +301,56 @@ export default function AdminPanel() {
               } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Sanction users</Text></Pressable>
             </View>
           {flags.map((f) => (
-          <View key={f.id} style={{ marginBottom: 6 }}>
-            <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
-              <Pressable onPress={()=> setSelectedFlags(prev=> ({ ...prev, [f.id]: !prev[f.id] }))} style={{ width: 18, height: 18, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems:'center', justifyContent:'center', backgroundColor: selectedFlags[f.id]? palette.primary: 'transparent' }}>
-                {selectedFlags[f.id] ? <View style={{ width: 10, height: 10, backgroundColor: palette.onPrimary, borderRadius: 2 }} /> : null}
-              </Pressable>
+            <View key={f.id} style={{ marginBottom: 6 }}>
+              <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
+                <Pressable onPress={()=> setSelectedFlags(prev=> ({ ...prev, [f.id]: !prev[f.id] }))} style={{ width: 18, height: 18, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems:'center', justifyContent:'center', backgroundColor: selectedFlags[f.id]? palette.primary: 'transparent' }}>
+                  {selectedFlags[f.id] ? <View style={{ width: 10, height: 10, backgroundColor: palette.onPrimary, borderRadius: 2 }} /> : null}
+                </Pressable>
               <Text style={s.text}>[{f.type}] {f.targetId} — {f.reason}</Text>
+              </View>
+              {/* Inline preview */}
+              <View style={{ marginLeft: 26 }}>
+                {(() => {
+                  if (f.type === 'mutual') {
+                    const React = require('react');
+                    const [p, setP] = React.useState<any | null>(null);
+                    React.useEffect(()=>{ (async()=>{ try { const { db } = await import('../../../firebase/config'); const { getDoc, doc } = await import('firebase/firestore'); const snap = await getDoc(doc(db,'mutual_aid_posts', f.targetId)); setP(snap.data()); } catch {} })(); },[]);
+                    return p ? (<Text style={[s.text,{ opacity: 0.8 }]}>post: {p.type} • {p.city || '-'} — {p.description}</Text>) : null;
+                  }
+                  if (f.type === 'rating') {
+                    const React = require('react');
+                    const [r, setR] = React.useState<any | null>(null);
+                    React.useEffect(()=>{ (async()=>{ try { const { db } = await import('../../../firebase/config'); const { getDoc, doc } = await import('firebase/firestore'); const snap = await getDoc(doc(db,'ratings', f.targetId)); setR(snap.data()); } catch {} })(); },[]);
+                    return r ? (<Text style={[s.text,{ opacity: 0.8 }]}>rating: {r.target} • {r.score}★ — {r.comment || '-'}</Text>) : null;
+                  }
+                  return null;
+                })()}
+              </View>
+              <View style={{ flexDirection: 'row', gap: 8 }}>
+                <Pressable
+                  onPress={async () => {
+                    try { const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags(); }
+                    catch {}
+                  }}
+                  style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
+                >
+                  <Text style={{ color: palette.text, fontWeight: '700' }}>Resolve</Text>
+                </Pressable>
+                <Pressable
+                  onPress={async () => {
+                    try {
+                      if (f.type === 'mutual') { const { deletePost } = await import('../../../services/mutual'); await deletePost(f.targetId); }
+                      if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { deleteDoc, doc } = await import('firebase/firestore'); await deleteDoc(doc(db,'ratings', f.targetId)); }
+                      const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags();
+                    } catch {}
+                  }}
+                  style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
+                >
+                  <Text style={{ color: palette.text, fontWeight: '700' }}>Delete Item</Text>
+                </Pressable>
+              </View>
             </View>
-            <View style={{ flexDirection: 'row', gap: 8 }}>
-              <Pressable
-                onPress={async () => {
-                  try { const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags(); }
-                  catch {}
-                }}
-                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
-              >
-                <Text style={{ color: palette.text, fontWeight: '700' }}>Resolve</Text>
-              </Pressable>
-              <Pressable
-                onPress={async () => {
-                  try {
-                    if (f.type === 'mutual') { const { deletePost } = await import('../../../services/mutual'); await deletePost(f.targetId); }
-                    if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { deleteDoc, doc } = await import('firebase/firestore'); await deleteDoc(doc(db,'ratings', f.targetId)); }
-                    const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags();
-                  } catch {}
-                }}
-                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
-              >
-                <Text style={{ color: palette.text, fontWeight: '700' }}>Delete Item</Text>
-              </Pressable>
-            </View>
-          </View>
-        ))}
+          ))}
         </>) }
       </ScrollView>
     </AdminGuard>

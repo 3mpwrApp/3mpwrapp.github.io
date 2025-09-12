@@ -19,6 +19,8 @@ export default function Ratings() {
   const [sort, setSort] = React.useState<'latest'|'score'>('latest');
   const [page, setPage] = React.useState(1);
   const pageSize = 20;
+  const [suggestions, setSuggestions] = React.useState<string[]>([]);
+  const [showSug, setShowSug] = React.useState(false);
   const load = React.useCallback(async()=>{ try{ setItems(await listRatings(target)); } catch{} },[target]);
   React.useEffect(()=>{ load(); },[load]);
   const avg = items.length ? (items.reduce((s,i)=>s+(i.score||0),0)/items.length).toFixed(1) : '-';
@@ -26,7 +28,24 @@ export default function Ratings() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Disability Justice Ratings</Text>
-      <TextInput placeholder="Target (name)" placeholderTextColor={palette.text+'77'} value={target} onChangeText={setTarget} style={s.input} />
+      <View>
+        <TextInput
+          placeholder="Target (name)"
+          placeholderTextColor={palette.text+'77'}
+          value={target}
+          onChangeText={async (t)=>{ setTarget(t); try { const recents = await listRatings(t || ''); const uniq = Array.from(new Set(recents.map(r=> r.target))).filter(x=> x.toLowerCase().includes((t||'').toLowerCase())); setSuggestions(uniq.slice(0,8)); setShowSug(!!t); } catch {} }}
+          style={s.input}
+        />
+        {showSug && suggestions.length>0 && (
+          <View style={s.suggestBox}>
+            {suggestions.map(sug => (
+              <Pressable key={sug} onPress={()=> { setTarget(sug); setShowSug(false); }} style={s.suggestRow}>
+                <Text style={{ color: palette.text }}>{sug}</Text>
+              </Pressable>
+            ))}
+          </View>
+        )}
+      </View>
       <TextInput placeholder="Type (hospital, clinic, law, employer, union)" placeholderTextColor={palette.text+'77'} value={kind} onChangeText={setKind} style={s.input} />
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         <Pressable onPress={()=>setSort('latest')} style={[s.chip, sort==='latest'&&s.chipActive]}><Text style={{ color: sort==='latest'? palette.onPrimary: palette.text, fontWeight:'700' }}>Latest</Text></Pressable>
@@ -62,5 +81,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     buttonText: { color: palette.onPrimary, fontWeight:'700' },
     card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginTop: 8, backgroundColor: palette.surface },
     cardTitle: { color: palette.text, fontWeight:'700' },
+    suggestBox: { position:'absolute', left: 0, right: 0, top: 46, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, zIndex: 10 },
+    suggestRow: { padding: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
   });
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
 import MapEmbed from '../../../components/MapEmbed';
+import { fetchWorldItems } from '../../../services/worlddata';
 
 type MapItem = { id: string; title: string; country: string; city?: string; kind: 'law'|'protest'|'update'; lat: number; lng: number };
 const seed: MapItem[] = [
@@ -18,7 +19,9 @@ export default function WorldMap() {
   const palette = useAppPalette();
   const s = styles(palette);
   const [kind, setKind] = React.useState<'all'|'law'|'protest'|'update'>('all');
-  const items = kind==='all' ? seed : seed.filter(i => i.kind === kind);
+  const [remote, setRemote] = React.useState(seed);
+  React.useEffect(()=>{ (async()=>{ try { const rows = await fetchWorldItems(); if (rows?.length) setRemote(rows as any); } catch {} })(); },[]);
+  const items = kind==='all' ? remote : remote.filter(i => i.kind === kind);
   return (
     <View style={s.container}>
       <Text style={s.title}>World Disability Map</Text>
@@ -28,7 +31,7 @@ export default function WorldMap() {
         ))}
       </View>
       <View style={{ marginTop: 8 }}>
-        <MapEmbed points={items.map(i => ({ id: i.id, title: i.title, lat: i.lat, lng: i.lng }))} />
+        <MapEmbed points={items.map(i => ({ id: i.id, title: i.title, lat: i.lat, lng: i.lng, kind: i.kind }))} />
       </View>
       <Text style={[s.text,{ marginTop: 8 }]}>Tap a card to open Google Maps</Text>
       {items.map(i => (
