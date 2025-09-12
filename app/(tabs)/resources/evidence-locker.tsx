@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, TextInput, FlatList, Alert } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import { useAuth } from "../../../context/AuthContext";
-import { addEvidenceNote, uploadEvidenceFile, listEvidence, deleteEvidenceDoc, type EvidenceFile } from "../../../services/evidence";
+import { addEvidenceNote, uploadEvidenceFileWithProgress, listEvidence, deleteEvidenceDoc, type EvidenceFile } from "../../../services/evidence";
+// Linking added when preview links are active; safe to lazy import when needed
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -30,6 +31,8 @@ export default function EvidenceLocker() {
   const [tag, setTag] = React.useState("");
   const [notes, setNotes] = React.useState<Note[]>([]);
   const [cloudItems, setCloudItems] = React.useState<any[]>([]);
+  const [filter, setFilter] = React.useState<string>("");
+  const [query, setQuery] = React.useState<string>("");
   const { user } = useAuth();
 
   React.useEffect(() => {
@@ -76,6 +79,21 @@ export default function EvidenceLocker() {
           </A11yPressable>
         ))}
       </View>
+      {/* Filters */}
+      <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
+        {['','call','letter','medical','decision','payment','email'].map((t) => (
+          <A11yPressable key={`f-${t||'all'}`} onPress={() => setFilter(t)} style={[styles.chip, filter===t && styles.chipActive]}>
+            <Text style={[styles.chipText, filter===t && styles.chipTextActive]}>{(t||'all').toUpperCase()}</Text>
+          </A11yPressable>
+        ))}
+      </View>
+      <TextInput
+        value={query}
+        onChangeText={setQuery}
+        placeholder="Search text"
+        placeholderTextColor={palette.text + '77'}
+        style={[styles.input, { marginTop: 8 }]}
+      />
       <View style={{ flexDirection: 'row', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
         <A11yPressable
           accessibilityLabel="Attach file"
@@ -116,13 +134,15 @@ export default function EvidenceLocker() {
                 let uploaded: EvidenceFile[] = [];
                 if (current.files?.length) {
                   for (const f of current.files) {
-                    uploaded.push(await uploadEvidenceFile(f.uri, f.name));
+                    uploaded.push(await uploadEvidenceFileWithProgress(f.uri, f.name));
                   }
                 }
                 await addEvidenceNote({ text: current.text, tags: current.tags, files: uploaded });
                 Alert.alert('Saved', 'Note saved to your cloud locker.');
               } catch (e: any) {
                 Alert.alert('Save failed', e?.message || 'Unable to save');
+              } finally {
+                
               }
             }}
             style={styles.button}

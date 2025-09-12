@@ -76,6 +76,32 @@ export default function AdminPanel() {
             <Text style={s.text}>UID: {result.id}</Text>
             <Text style={s.text}>Email: {result.email || '-'}</Text>
             <Text style={s.text}>Name: {result.displayName || '-'}</Text>
+            <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
+              <Pressable
+                onPress={async () => {
+                  try {
+                    const { doc, updateDoc } = await import('firebase/firestore');
+                    await updateDoc(doc(db, 'users', result.id), { banned: !(result.banned === true) });
+                    setResult({ ...result, banned: !(result.banned === true) });
+                  } catch (e: any) { Alert.alert('Update failed', e?.message || 'Error'); }
+                }}
+                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
+              >
+                <Text style={{ color: palette.text, fontWeight: '700' }}>{result.banned ? 'Unban' : 'Ban'}</Text>
+              </Pressable>
+              <Pressable
+                onPress={async () => {
+                  try {
+                    const { doc, updateDoc } = await import('firebase/firestore');
+                    await updateDoc(doc(db, 'users', result.id), { verified: !(result.verified === true) });
+                    setResult({ ...result, verified: !(result.verified === true) });
+                  } catch (e: any) { Alert.alert('Update failed', e?.message || 'Error'); }
+                }}
+                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
+              >
+                <Text style={{ color: palette.text, fontWeight: '700' }}>{result.verified ? 'Unverify' : 'Verify'}</Text>
+              </Pressable>
+            </View>
           </View>
         )}
 

@@ -47,7 +47,7 @@ service cloud.firestore {
     match /users/{uid} {
       allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow create: if isSignedIn() && request.auth.uid == uid;
-      allow update, delete: if isSignedIn() && request.auth.uid == uid;
+      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
     }
 
     // Evidence items under a user

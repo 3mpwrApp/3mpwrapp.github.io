@@ -1,6 +1,6 @@
 import { auth, db, storage } from '../firebase/config';
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { ref, uploadBytes, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 
 export type EvidenceFile = {
   name: string;
@@ -21,6 +21,43 @@ export async function uploadEvidenceFile(uri: string, name: string): Promise<Evi
   await uploadBytes(r, blob as any);
   const url = await getDownloadURL(r);
   return { name, url, path, size };
+}
+
+export async function uploadEvidenceFileWithProgress(
+  uri: string,
+  name: string,
+  onProgress?: (pct: number) => void,
+): Promise<EvidenceFile> {
+  try {
+    const uid = auth.currentUser?.uid;
+    if (!uid) throw new Error('Not signed in');
+    const path = `evidence/${uid}/${Date.now()}_${name.replace(/[^a-zA-Z0-9._-]/g,'_')}`;
+    const r = ref(storage, path);
+    const resp = await fetch(uri);
+    const blob = await resp.blob();
+    const size = (blob as any).size as number | undefined;
+    const task = uploadBytesResumable(r, blob as any);
+    await new Promise<void>((resolve, reject) => {
+      task.on(
+        'state_changed',
+        (snap) => {
+          if (onProgress) {
+            const pct = Math.round((snap.bytesTransferred / snap.totalBytes) * 100);
+            onProgress(pct);
+          }
+        },
+        (err) => reject(err),
+        () => resolve(),
+      );
+    });
+    const url = await getDownloadURL(r);
+    return { name, url, path, size };
+  } catch (e) {
+    // Fallback to non-resumable
+    const f = await uploadEvidenceFile(uri, name);
+    if (onProgress) onProgress(100);
+    return f;
+  }
 }
 
 export async function addEvidenceNote({

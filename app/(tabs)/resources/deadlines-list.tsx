@@ -59,6 +59,25 @@ export default function DeadlinesList() {
     }
   };
 
+  const grouped = React.useMemo(() => {
+    const map = new Map<string, Deadline[]>();
+    items.forEach((d) => {
+      const dt = new Date(d.dueAt);
+      const key = dt.toLocaleString(undefined, { month: 'long', year: 'numeric' });
+      if (!map.has(key)) map.set(key, []);
+      map.get(key)!.push(d);
+    });
+    return Array.from(map.entries());
+  }, [items]);
+
+  const statusStyle = (dueISO: string) => {
+    const now = Date.now();
+    const due = new Date(dueISO).getTime();
+    if (due < now) return { color: '#b00020' };
+    if (due - now < 7 * 86400000) return { color: palette.primary };
+    return { color: palette.text };
+  };
+
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
@@ -73,55 +92,60 @@ export default function DeadlinesList() {
       {items.length === 0 ? (
         <Text style={{ color: palette.text, marginTop: 8 }}>No deadlines saved.</Text>
       ) : (
-        items.map((d) => (
-          <View key={d.id} style={s.card}>
-            <Text style={s.cardTitle}>{new Date(d.dueAt).toLocaleString()} — {d.title}</Text>
-            {d.notes ? <Text style={s.cardText}>{d.notes}</Text> : null}
-            <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
-              <A11yPressable
-                onPress={async () => {
-                  const ok = await Notifier.scheduleAt(new Date(d.dueAt), 'Deadline reminder', d.title);
-                  Alert.alert(ok ? 'Scheduled' : 'Not scheduled', ok ? 'Reminder scheduled.' : 'Unable to schedule.');
-                }}
-                style={s.smallBtn}
-              >
-                <Text style={s.smallBtnText}>Reminder</Text>
-              </A11yPressable>
-              <A11yPressable
-                onPress={async () => {
-                  const ok = await addEvent({ title: d.title, notes: d.notes, startISO: d.dueAt, durationMinutes: 30 });
-                  Alert.alert(ok ? 'Added' : 'Not added', ok ? 'Event added to calendar.' : 'Unable to add event.');
-                }}
-                style={s.smallBtn}
-              >
-                <Text style={s.smallBtnText}>Calendar</Text>
-              </A11yPressable>
-              <A11yPressable
-                onPress={async () => {
-                  try {
-                    const ics = buildICS({ title: d.title, description: d.notes, startISO: d.dueAt, durationMinutes: 30 });
-                    const FS = await import('expo-file-system');
-                    const path = FS.cacheDirectory + `deadline_${d.id}.ics`;
-                    await FS.writeAsStringAsync(path, ics, { encoding: FS.EncodingType.UTF8 });
-                    const Sharing = await import('expo-sharing');
-                    if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path);
-                    else Alert.alert('Saved', 'ICS saved to cache.');
-                  } catch { Alert.alert('Export failed', 'Could not create ICS.'); }
-                }}
-                style={s.smallBtn}
-              >
-                <Text style={s.smallBtnText}>ICS</Text>
-              </A11yPressable>
-              <A11yPressable
-                onPress={async () => {
-                  try { await deleteDeadline(d.id!); setItems((prev) => prev.filter((x) => x.id !== d.id)); }
-                  catch { Alert.alert('Delete failed', 'Unable to delete.'); }
-                }}
-                style={s.smallBtn}
-              >
-                <Text style={s.smallBtnText}>Delete</Text>
-              </A11yPressable>
-            </View>
+        grouped.map(([month, ds]) => (
+          <View key={month}>
+            <Text style={[s.cardTitle, { marginTop: 12 }]}>{month}</Text>
+            {ds.map((d) => (
+              <View key={d.id} style={s.card}>
+                <Text style={[s.cardTitle, statusStyle(d.dueAt)]}>{new Date(d.dueAt).toLocaleString()} — {d.title}</Text>
+                {d.notes ? <Text style={s.cardText}>{d.notes}</Text> : null}
+                <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
+                  <A11yPressable
+                    onPress={async () => {
+                      const ok = await Notifier.scheduleAt(new Date(Date.now() + 24*60*60*1000), 'Snoozed deadline', d.title);
+                      Alert.alert(ok ? 'Snoozed' : 'Not scheduled', ok ? 'Reminder in 24 hours.' : 'Unable to schedule.');
+                    }}
+                    style={s.smallBtn}
+                  >
+                    <Text style={s.smallBtnText}>Snooze 24h</Text>
+                  </A11yPressable>
+                  <A11yPressable
+                    onPress={async () => {
+                      const ok = await addEvent({ title: d.title, notes: d.notes, startISO: d.dueAt, durationMinutes: 30 });
+                      Alert.alert(ok ? 'Added' : 'Not added', ok ? 'Event added to calendar.' : 'Unable to add event.');
+                    }}
+                    style={s.smallBtn}
+                  >
+                    <Text style={s.smallBtnText}>Calendar</Text>
+                  </A11yPressable>
+                  <A11yPressable
+                    onPress={async () => {
+                      try {
+                        const ics = buildICS({ title: d.title, description: d.notes, startISO: d.dueAt, durationMinutes: 30 });
+                        const FS = await import('expo-file-system');
+                        const path = FS.cacheDirectory + `deadline_${d.id}.ics`;
+                        await FS.writeAsStringAsync(path, ics, { encoding: FS.EncodingType.UTF8 });
+                        const Sharing = await import('expo-sharing');
+                        if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path);
+                        else Alert.alert('Saved', 'ICS saved to cache.');
+                      } catch { Alert.alert('Export failed', 'Could not create ICS.'); }
+                    }}
+                    style={s.smallBtn}
+                  >
+                    <Text style={s.smallBtnText}>ICS</Text>
+                  </A11yPressable>
+                  <A11yPressable
+                    onPress={async () => {
+                      try { await deleteDeadline(d.id!); setItems((prev) => prev.filter((x) => x.id !== d.id)); }
+                      catch { Alert.alert('Delete failed', 'Unable to delete.'); }
+                    }}
+                    style={s.smallBtn}
+                  >
+                    <Text style={s.smallBtnText}>Delete</Text>
+                  </A11yPressable>
+                </View>
+              </View>
+            ))}
           </View>
         ))
       )}
@@ -142,4 +166,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     smallBtnText: { color: palette.text, fontWeight: '700' },
   });
 }
-
