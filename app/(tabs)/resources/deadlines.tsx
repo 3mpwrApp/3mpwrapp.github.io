@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  Alert,
-  Platform,
-} from "react-native";
+import { View, Text, StyleSheet, TextInput, Alert, Platform } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -129,18 +122,17 @@ export default function Deadlines() {
         }}
       >
         {(["WCB", "LTD", "CPP-D"] as Benefit[]).map((b) => (
-          <Pressable
+          <A11yPressable
             key={b}
             onPress={() => setBenefit(b)}
             style={[styles.chip, benefit === b && styles.chipActive]}
-            accessibilityRole="button"
           >
             <Text
               style={[styles.chipText, benefit === b && styles.chipTextActive]}
             >
               {b}
             </Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
       <Text style={styles.label}>Decision date (YYYY-MM-DD)</Text>
@@ -149,16 +141,16 @@ export default function Deadlines() {
         value={decisionDate}
         onChangeText={setDecisionDate}
       />
-      <Pressable onPress={calc} style={styles.button}>
+      <A11yPressable onPress={calc} style={styles.button}>
         <Text style={styles.buttonText}>Calculate</Text>
-      </Pressable>
+      </A11yPressable>
       {!!result && (
         <View style={styles.box}>
           <Text style={{ color: palette.text }}>{result}</Text>
-          <Pressable onPress={remind} style={[styles.button, { marginTop: 8 }]}>
+          <A11yPressable onPress={remind} style={[styles.button, { marginTop: 8 }]}>
             <Text style={styles.buttonText}>Set reminder</Text>
-          </Pressable>
-          <Pressable
+          </A11yPressable>
+          <A11yPressable
             onPress={async () => {
               const d = new Date(decisionDate);
               const map: Record<Benefit, number> = {
@@ -183,13 +175,10 @@ export default function Deadlines() {
             style={[styles.button, { marginTop: 8 }]}
           >
             <Text style={styles.buttonText}>Add to calendar</Text>
-          </Pressable>
-          <Pressable
-            onPress={exportICS}
-            style={[styles.button, { marginTop: 8 }]}
-          >
+          </A11yPressable>
+          <A11yPressable onPress={exportICS} style={[styles.button, { marginTop: 8 }]}> 
             <Text style={styles.buttonText}>Export ICS</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       )}
     </View>

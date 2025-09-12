@@ -1,5 +1,6 @@
 import React from "react";
-import { ScrollView, View, Text, StyleSheet, Pressable, Alert, TextInput } from "react-native";
+import { ScrollView, View, Text, StyleSheet, Alert, TextInput } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
  
@@ -89,9 +90,9 @@ export default function AIDecisionSimplifier() {
         Upload a decision letter to get a plain-language summary of what it means, the next steps, and deadlines.
         Your document stays on your device unless you explicitly opt in to share.
       </Text>
-      <Pressable onPress={onPick} accessibilityRole="button" accessibilityLabel="Upload decision letter" style={styles.cta}>
+      <A11yPressable onPress={onPick} accessibilityLabel="Upload decision letter" style={styles.cta}>
         <Text style={styles.ctaText}>Upload Decision Letter</Text>
-      </Pressable>
+      </A11yPressable>
       <Text style={{ color: palette.text, opacity: 0.8, marginTop: 8 }}>
         Or paste the text of a decision letter below for a quick, plain-language summary preview.
       </Text>
@@ -104,18 +105,18 @@ export default function AIDecisionSimplifier() {
         numberOfLines={6}
         onChangeText={(t) => setText(t)}
       />
-      <Pressable onPress={() => pasteFromClipboard().then(setText)} accessibilityRole="button" style={styles.secondary}>
+      <A11yPressable onPress={() => pasteFromClipboard().then(setText)} style={styles.secondary}>
         <Text style={{ color: palette.text, fontWeight: "700" }}>Paste from clipboard</Text>
-      </Pressable>
+      </A11yPressable>
 
       {!!summary && (
         <View style={{ marginTop: 12 }}>
           <Text style={[styles.subtitle, { fontWeight: "700" }]}>Summary & deadlines</Text>
           <Text style={{ color: palette.text }}>{summary}</Text>
           <View style={{ height: 8 }} />
-          <Pressable onPress={() => copyToClipboard(summary)} accessibilityRole="button" style={styles.secondary}>
+          <A11yPressable onPress={() => copyToClipboard(summary)} style={styles.secondary}>
             <Text style={{ color: palette.text, fontWeight: "700" }}>Copy summary</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       )}
     </ScrollView>

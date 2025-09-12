@@ -1,5 +1,6 @@
 import React from "react";
-import { ScrollView, View, Text, StyleSheet, Pressable, TextInput } from "react-native";
+import { ScrollView, View, Text, StyleSheet, TextInput } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { Alert } from "react-native";
@@ -103,17 +104,17 @@ export default function FinancialSafetyNetNavigator() {
       {step === 2 && (
         <Step n={2} title="Plan & dates">
           <Text style={styles.text}>We’ll draft a suggested order and dates from your info.</Text>
-          <Pressable onPress={computePlan} accessibilityRole="button" accessibilityLabel="Compute plan" style={styles.cta}>
+          <A11yPressable onPress={computePlan} accessibilityLabel="Compute plan" style={styles.cta}>
             <Text style={styles.ctaText}>Compute Plan</Text>
-          </Pressable>
+          </A11yPressable>
           {!!summary && (
             <View style={{ marginTop: 10 }}>
               <Text style={[styles.text, { fontWeight: "700" }]}>Draft plan</Text>
               <Text style={styles.text}>{summary}</Text>
               <View style={{ height: 8 }} />
-              <Pressable onPress={() => copyToClipboard(summary)} accessibilityRole="button" accessibilityLabel="Copy to clipboard" style={styles.secondary}>
+              <A11yPressable onPress={() => copyToClipboard(summary)} accessibilityLabel="Copy to clipboard" style={styles.secondary}>
                 <Text style={{ color: palette.text, fontWeight: "700" }}>Copy to clipboard</Text>
-              </Pressable>
+              </A11yPressable>
             </View>
           )}
           <NavButtons onBack={() => setStep(1)} />
@@ -174,7 +175,7 @@ function RowChips({ value, onChange, options }: { value: string; onChange: (v: a
       {options.map((opt) => {
         const active = value === opt;
         return (
-          <Pressable
+          <A11yPressable
             key={opt}
             onPress={() => onChange(opt as any)}
             style={{
@@ -187,7 +188,7 @@ function RowChips({ value, onChange, options }: { value: string; onChange: (v: a
             }}
           >
             <Text style={{ color: active ? palette.onPrimary : palette.text }}>{opt.toUpperCase()}</Text>
-          </Pressable>
+          </A11yPressable>
         );
       })}
     </View>
@@ -198,14 +199,14 @@ function NavButtons({ onBack, onNext }: { onBack?: () => void; onNext?: () => vo
   return (
     <View style={{ flexDirection: "row", gap: 10, marginTop: 8 }}>
       {onBack && (
-        <Pressable accessibilityRole="button" onPress={onBack} style={{ paddingVertical: 10, paddingHorizontal: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: "#aaa", borderRadius: 8 }}>
+        <A11yPressable onPress={onBack} style={{ paddingVertical: 10, paddingHorizontal: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: "#aaa", borderRadius: 8 }}>
           <Text>Back</Text>
-        </Pressable>
+        </A11yPressable>
       )}
       {onNext && (
-        <Pressable accessibilityRole="button" onPress={onNext} style={{ paddingVertical: 10, paddingHorizontal: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: "#aaa", borderRadius: 8 }}>
+        <A11yPressable onPress={onNext} style={{ paddingVertical: 10, paddingHorizontal: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: "#aaa", borderRadius: 8 }}>
           <Text>Next</Text>
-        </Pressable>
+        </A11yPressable>
       )}
     </View>
   );
