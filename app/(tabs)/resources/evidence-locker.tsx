@@ -290,7 +290,7 @@ export default function EvidenceLocker() {
           <A11yPressable
             accessibilityLabel="Load Cloud"
             onPress={async () => {
-              try { const rows = await listEvidence(); Alert.alert('Cloud', `${rows.length} items in your locker.`); }
+              try { const rows = await listEvidence(); setCloudItems(rows); Alert.alert('Cloud', `${rows.length} items in your locker.`); }
               catch { Alert.alert('Load failed', 'Unable to load cloud items'); }
             }}
             style={styles.secondary}
