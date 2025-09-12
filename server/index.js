@@ -27,6 +27,27 @@ app.post('/analyze-body', upload.single('file'), async (req, res) => {
   }
 });
 
+// Decode denial letters; accepts optional province for jurisdictional template
+app.post('/decode-denial', upload.single('file'), async (req, res) => {
+  try {
+    if (!req.file) return res.status(400).json({ error: 'file required' });
+    const province = req.body.province || 'GEN';
+    const summary = 'This letter outlines a denied claim. Common reasons include insufficient medical evidence, missed deadlines, or non‑work‑related determination.';
+    const next = [
+      'Request your full claim file',
+      'Gather medical notes addressing the listed reasons',
+      `File a reconsideration/appeal within the deadline (${province})`,
+    ];
+    const templates = {
+      ON: 'Dear WSIB, I request reconsideration of my claim decision (Claim #[ID]). I attach updated medical evidence addressing the stated reasons. Please review and provide reasons. Sincerely, [Name] ',
+      BC: 'Dear WorkSafeBC, I request a review of my claim decision. I attach medical documentation addressing the denial. Please confirm timelines and next steps. Sincerely, [Name]',
+      GEN: 'Dear Claims Officer, I request reconsideration of my claim decision. Key points: [facts/evidence]. Sincerely, [Name]',
+    };
+    return res.json({ summary, next, template: templates[province] || templates.GEN });
+  } catch (e) {
+    return res.status(500).json({ error: 'decode failed' });
+  }
+});
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Server listening on ${port}`));
-

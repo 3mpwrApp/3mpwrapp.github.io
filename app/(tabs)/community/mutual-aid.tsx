@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
 import { addAidPost, listAidPosts, respondToPost, deletePost } from '../../../services/mutual';
+import { flagItem } from '../../../services/moderation';
+import { Link } from 'expo-router';
 
 export const options = { href: null };
 
@@ -34,6 +36,10 @@ export default function MutualAid() {
             <TextInput placeholder="Reply..." placeholderTextColor={palette.text+'77'} value={reply} onChangeText={setReply} style={[s.input,{ flex:1 }]} />
             <Pressable onPress={async()=>{ try{ await respondToPost(p.id, reply); setReply(''); Alert.alert('Sent','Your response was sent.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Send</Text></Pressable>
             <Pressable onPress={async()=>{ try{ await deletePost(p.id); setItems(prev=>prev.filter(x=>x.id!==p.id)); } catch{} }} style={s.smallBtn}><Text style={s.smallBtnText}>Delete</Text></Pressable>
+            <Pressable onPress={async()=>{ try { await flagItem('mutual', p.id, 'inappropriate'); Alert.alert('Flagged','Thanks for reporting.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Flag</Text></Pressable>
+            <Link href={{ pathname: '/(tabs)/community/mutual-chat', params: { id: p.id } }} asChild>
+              <Pressable style={s.smallBtn}><Text style={s.smallBtnText}>Open chat</Text></Pressable>
+            </Link>
           </View>
         </View>
       ))}
@@ -55,4 +61,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     smallBtnText: { color: palette.text, fontWeight:'700' },
   });
 }
-

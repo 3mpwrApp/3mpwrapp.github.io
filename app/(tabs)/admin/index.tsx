@@ -19,6 +19,11 @@ export default function AdminPanel() {
   const [counts, setCounts] = React.useState<{ users?: number; campaigns?: number; resources?: number }>({});
   const [users, setUsers] = React.useState<any[]>([]);
   const [cursor, setCursor] = React.useState<any | null>(null);
+  const [flags, setFlags] = React.useState<any[]>([]);
+  const loadFlags = async () => {
+    try { const { listFlags } = await import('../../../services/moderation'); const rows = await listFlags(); setFlags(rows); } catch {}
+  };
+  React.useEffect(() => { loadFlags(); }, []);
   const filteredUsers = React.useMemo(() => {
     const term = (contains || '').toLowerCase().trim();
     return users
@@ -269,7 +274,24 @@ export default function AdminPanel() {
   <View key={u.id} style={{ marginBottom: 6 }}>
     <Text style={s.text}>{u.email || u.id} — {u.displayName || '-'}</Text>
   </View>
-))}
+        ))}
+        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Moderation Flags</Text>
+        {flags.length === 0 ? <Text style={s.text}>No flags.</Text> : flags.map((f) => (
+          <View key={f.id} style={{ marginBottom: 6 }}>
+            <Text style={s.text}>[{f.type}] {f.targetId} — {f.reason}</Text>
+            <View style={{ flexDirection: 'row', gap: 8 }}>
+              <Pressable
+                onPress={async () => {
+                  try { const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags(); }
+                  catch {}
+                }}
+                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
+              >
+                <Text style={{ color: palette.text, fontWeight: '700' }}>Resolve</Text>
+              </Pressable>
+            </View>
+          </View>
+        ))}
       </ScrollView>
     </AdminGuard>
   );

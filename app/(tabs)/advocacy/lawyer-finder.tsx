@@ -5,6 +5,7 @@ import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../
 import { advocates } from '../../../data/lawyers';
 import { fetchAdvocates } from '../../../services/advocates';
 import { useFavorites } from '../../../store/favorites';
+import MapEmbed from '../../../components/MapEmbed';
 
 export const options = { href: null };
 
@@ -84,13 +85,9 @@ export default function LawyerFinder() {
       }
       />) : (
         <View style={s.mapWrap}>
-          <Text style={s.cardTitle}>Map Preview</Text>
-          <Text style={s.cardText}>Tap an item below to open in Maps.</Text>
-          {filtered.map((item)=> (
-            <Pressable key={item.id} onPress={()=> Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`)} style={s.mapRow}>
-              <Text style={{ color: palette.text }}>{item.name} — {[item.city, item.province].filter(Boolean).join(', ')}</Text>
-            </Pressable>
-          ))}
+          <Text style={s.cardTitle}>Map</Text>
+          <MapEmbed points={filtered.slice(0,20).map((item)=> ({ id: item.id, title: item.name, ...placeToCoords(item.city, item.province) }))} />
+          <Text style={s.cardText}>Tap a listing in List mode to open maps.</Text>
         </View>
       )}
     </View>
@@ -112,4 +109,29 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     mapWrap: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, backgroundColor: palette.surface, marginTop: 8 },
     mapRow: { paddingVertical: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
   });
+}
+
+function placeToCoords(city?: string, province?: string) {
+  // Very rough centroids; extend as needed
+  const prov: Record<string, { lat: number; lng: number }> = {
+    ON: { lat: 43.653, lng: -79.383 },
+    BC: { lat: 49.2827, lng: -123.1207 },
+    AB: { lat: 51.0447, lng: -114.0719 },
+    QC: { lat: 45.5017, lng: -73.5673 },
+    MB: { lat: 49.8951, lng: -97.1384 },
+    NS: { lat: 44.6488, lng: -63.5752 },
+    SK: { lat: 52.1332, lng: -106.6700 },
+    NB: { lat: 45.9636, lng: -66.6431 },
+    NL: { lat: 47.5615, lng: -52.7126 },
+    PE: { lat: 46.2382, lng: -63.1311 },
+    YT: { lat: 60.7212, lng: -135.0568 },
+    NT: { lat: 62.4540, lng: -114.3718 },
+    NU: { lat: 63.7467, lng: -68.5167 },
+  };
+  const base = (province && prov[province]) || prov.ON;
+  // Small jitter based on city hash to spread markers a bit
+  const h = (city || 'x').split('').reduce((s, c) => s + c.charCodeAt(0), 0);
+  const lat = base.lat + ((h % 100) - 50) / 5000; // ~ +/-0.01 deg
+  const lng = base.lng + (((h / 3) % 100) - 50) / 5000;
+  return { lat, lng };
 }

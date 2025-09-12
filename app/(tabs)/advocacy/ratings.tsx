@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
 import { addRating, listRatings } from '../../../services/ratings';
+import { flagItem } from '../../../services/moderation';
 
 export const options = { href: null };
 
@@ -29,6 +30,7 @@ export default function Ratings() {
         <View key={i.id} style={s.card}>
           <Text style={s.cardTitle}>{i.score} ★</Text>
           {!!i.comment && <Text style={s.text}>{i.comment}</Text>}
+          <Pressable onPress={async()=>{ try{ await flagItem('rating', i.id, 'inaccurate'); Alert.alert('Flagged','Thanks for reporting.'); } catch {} }} style={s.button}><Text style={s.buttonText}>Flag</Text></Pressable>
         </View>
       ))}
     </View>
@@ -47,4 +49,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     cardTitle: { color: palette.text, fontWeight:'700' },
   });
 }
-

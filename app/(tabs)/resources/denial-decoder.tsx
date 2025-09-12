@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable, Alert } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
+import { useSettings } from '../../../store/settings';
 
 export const options = { href: null };
 
@@ -8,6 +9,7 @@ export default function DenialDecoder() {
   const palette = useAppPalette();
   const s = styles(palette);
   const [result, setResult] = React.useState<{ summary: string; next: string[]; template?: string } | null>(null);
+  const { province } = useSettings();
   const analyze = async () => {
     try {
       const DP = await import('expo-document-picker');
@@ -19,6 +21,7 @@ export default function DenialDecoder() {
         const file: any = { uri: f.uri, name: f.name || 'file', type: f.mimeType || 'application/octet-stream' };
         // @ts-ignore
         fd.append('file', file);
+        fd.append('province', String(province || 'GEN'));
         const r = await fetch(`${base.replace(/\/$/,'')}/decode-denial`, { method:'POST', body: fd as any });
         if (r.ok) { const data = await r.json(); setResult(data); return; }
       }
@@ -57,4 +60,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     cardTitle: { color: palette.text, fontWeight:'700', marginTop: 8 },
   });
 }
-

@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Pressable, Alert, ScrollView } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
 import { addEntry, listEntries } from '../../../services/timeline';
+import SimpleBarChart from '../../../components/SimpleBarChart';
 
 export const options = { href: null };
 
@@ -14,9 +15,19 @@ export default function HistoryTimeline() {
   const [items, setItems] = React.useState<any[]>([]);
   const load = React.useCallback(async()=>{ try{ setItems(await listEntries()); } catch{} },[]);
   React.useEffect(()=>{ load(); },[load]);
+  const perYear = React.useMemo(()=>{
+    const m = new Map<string, number>();
+    items.forEach(i=>{ const y = String(new Date(i.date).getFullYear()); m.set(y, (m.get(y)||0)+1); });
+    return Array.from(m.entries()).map(([year,count])=>({ year, count })).sort((a,b)=> a.year.localeCompare(b.year));
+  },[items]);
   return (
-    <View style={s.container}>
+    <ScrollView style={s.container} contentContainerStyle={{ paddingBottom: 24 }}>
       <Text style={s.title}>Living Disability History Timeline</Text>
+      {!!perYear.length && (
+        <View style={{ marginTop: 8 }}>
+          <SimpleBarChart data={perYear} labelKey="year" valueKey="count" />
+        </View>
+      )}
       <TextInput placeholder="Title" placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
       <TextInput placeholder="Date YYYY-MM-DD" placeholderTextColor={palette.text+'77'} value={date} onChangeText={setDate} style={s.input} />
       <TextInput placeholder="Description" placeholderTextColor={palette.text+'77'} value={description} onChangeText={setDescription} style={s.input} />
@@ -27,7 +38,7 @@ export default function HistoryTimeline() {
           {!!i.description && <Text style={s.text}>{i.description}</Text>}
         </View>
       ))}
-    </View>
+    </ScrollView>
   );
 }
 
@@ -43,4 +54,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     text: { color: palette.text, opacity: 0.95 },
   });
 }
-
