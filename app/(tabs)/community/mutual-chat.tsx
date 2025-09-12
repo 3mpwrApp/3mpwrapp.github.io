@@ -14,6 +14,7 @@ export default function MutualChat() {
   const s = styles(palette);
   const [msg, setMsg] = React.useState('');
   const [items, setItems] = React.useState<any[]>([]);
+  const [roster, setRoster] = React.useState<any[]>([]);
   React.useEffect(()=>{
     try {
       const q = query(collection(db,'mutual_aid_posts', String(id), 'chat'), orderBy('createdAt','asc'));
@@ -29,9 +30,24 @@ export default function MutualChat() {
     const i = setInterval(async()=>{ try { await setDoc(ref, { lastSeen: serverTimestamp() }, { merge: true }); } catch {} }, 30000);
     return () => { clearInterval(i); };
   }, [id]);
+  // Roster snapshot
+  React.useEffect(() => {
+    try {
+      const q = collection(db, 'mutual_aid_posts', String(id), 'presence');
+      const unsub = onSnapshot(q, (snap) => {
+        const now = Date.now();
+        setRoster(snap.docs.map(d=>({ id: d.id, ...(d.data() as any) })).filter(u => (now - (u.lastSeen?.toDate?.()?.getTime?.()||0)) < 2*60*1000));
+      });
+      return () => unsub();
+    } catch {}
+  }, [id]);
   return (
     <View style={s.container}>
       <Text style={s.title}>Mutual Aid Chat</Text>
+      <View style={{ marginBottom: 8 }}>
+        <Text style={s.text}>Present: {roster.map(r => r.id).join(', ') || '—'}</Text>
+        {!!roster.some(r => r.typing) && <Text style={s.text}>Someone is typing…</Text>}
+      </View>
       {items.map(i => (<Text key={i.id} style={s.text}>• {new Date(i.createdAt?.toDate?.()||Date.now()).toLocaleTimeString()} — {i.message}</Text>))}
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         <TextInput placeholder="Message" placeholderTextColor={palette.text+'77'} value={msg} onChangeText={async (t)=>{ setMsg(t); try { const uid = auth.currentUser?.uid || 'anon'; await setDoc(doc(db,'mutual_aid_posts', String(id), 'presence', uid), { typing: !!t }, { merge: true }); } catch {} }} style={[s.input,{ flex:1 }]} />

@@ -32,7 +32,10 @@ app.post('/decode-denial', upload.single('file'), async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ error: 'file required' });
     const province = req.body.province || 'GEN';
-    const summary = 'This letter outlines a denied claim. Common reasons include insufficient medical evidence, missed deadlines, or non‑work‑related determination.';
+    const text = await extractTextFromBuffer(req.file.buffer, req.file.mimetype || 'application/octet-stream');
+    const summary = text
+      ? `Summary (OCR): ${text.slice(0, 280)}...`
+      : 'This letter outlines a denied claim. Common reasons include insufficient medical evidence, missed deadlines, or non‑work‑related determination.';
     const next = [
       'Request your full claim file',
       'Gather medical notes addressing the listed reasons',
@@ -48,6 +51,17 @@ app.post('/decode-denial', upload.single('file'), async (req, res) => {
     return res.status(500).json({ error: 'decode failed' });
   }
 });
+async function extractTextFromBuffer(buf, mime) {
+  // Try PDF first
+  if (/pdf/i.test(mime)) {
+    try { const pdf = await import('pdf-parse'); const data = await pdf.default(buf); return String(data.text || ''); } catch {}
+  }
+  // Try OCR with tesseract for images
+  if (/image\//i.test(mime)) {
+    try { const T = await import('tesseract.js'); const { createWorker } = T; const worker = await createWorker(); await worker.loadLanguage('eng'); await worker.initialize('eng'); const { data } = await worker.recognize(buf); await worker.terminate(); return String(data?.text || ''); } catch {}
+  }
+  return '';
+}
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Server listening on ${port}`));
