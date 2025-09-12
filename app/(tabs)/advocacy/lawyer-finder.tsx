@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TextInput, Pressable, Linking, FlatList } from 
 import { useAppPalette } from '../../../theme/usePalette';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { advocates } from '../../../data/lawyers';
+import { fetchAdvocates } from '../../../services/advocates';
 
 export const options = { href: null };
 
@@ -17,16 +18,22 @@ export default function LawyerFinder() {
   const [province, setProvince] = React.useState('');
   const [proBono, setProBono] = React.useState(false);
 
-  const filtered = React.useMemo(() => {
-    const q = query.toLowerCase();
-    return advocates.filter(a => {
-      const text = `${a.name} ${a.org ?? ''} ${a.city ?? ''} ${a.province ?? ''} ${a.issues.join(' ')}`.toLowerCase();
-      return (!q || text.includes(q))
-        && (!issue || a.issues.includes(issue))
-        && (!province || a.province === province)
-        && (!proBono || a.proBono === true);
-    });
-  }, [query, issue, province, proBono]);
+  const [page, setPage] = React.useState(1);
+  const pageSize = 20;
+  const [remoteItems, setRemoteItems] = React.useState<any[]>([]);
+  const [total, setTotal] = React.useState(0);
+  const [loading, setLoading] = React.useState(false);
+  const load = React.useCallback(async (reset = true) => {
+    setLoading(true);
+    try {
+      const data = await fetchAdvocates(reset ? 1 : page + 1, pageSize, { query, issue, province, proBono });
+      setTotal(data.total || 0);
+      if (reset) { setRemoteItems(data.items || []); setPage(1); }
+      else { setRemoteItems((prev) => prev.concat(data.items || [])); setPage((p)=>p+1); }
+    } finally { setLoading(false); }
+  }, [query, issue, province, proBono, page]);
+  React.useEffect(() => { load(true); }, [query, issue, province, proBono]);
+  const filtered = remoteItems.length ? remoteItems : advocates;
 
   return (
     <View style={s.container}>
@@ -53,7 +60,15 @@ export default function LawyerFinder() {
             <Pressable onPress={() => Linking.openURL(`mailto:${item.email}`)} style={s.btn}><Text style={s.btnText}>Email</Text></Pressable>
           )}
         </View>
-      )} />
+      )}
+      ListFooterComponent={
+        total > filtered.length ? (
+          <A11yPressable onPress={() => load(false)} style={[s.btn,{ alignSelf:'center', marginVertical: 12 }]}>
+            <Text style={s.btnText}>{loading? 'Loading…':'Load more'}</Text>
+          </A11yPressable>
+        ) : null
+      }
+      />
     </View>
   );
 }
@@ -72,4 +87,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     btnText: { color: palette.text, fontWeight: '700' },
   });
 }
-

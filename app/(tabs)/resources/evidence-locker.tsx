@@ -1,6 +1,7 @@
 ﻿import React from "react";
-import { View, Text, StyleSheet, TextInput, FlatList, Alert } from "react-native";
+import { View, Text, StyleSheet, TextInput, FlatList, Alert, Pressable } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
+import ProgressBar from "../../../components/ProgressBar";
 import { useAuth } from "../../../context/AuthContext";
 import { addEvidenceNote, uploadEvidenceFileWithProgress, listEvidence, deleteEvidenceDoc, type EvidenceFile } from "../../../services/evidence";
 // Linking added when preview links are active; safe to lazy import when needed
@@ -316,9 +317,14 @@ export default function EvidenceLocker() {
         </A11yPressable>
       </View>
       {(immUploading || processing) && (
-        <Text style={{ color: palette.text, marginTop: 6 }}>
-          {processing ? `Processing queue: ${progressPct}%` : immLabel ? `Uploading ${immLabel}: ${immPct}%` : `Uploading: ${immPct}%`}
-        </Text>
+        <View style={{ marginTop: 6 }}>
+          <Text style={{ color: palette.text }}>
+            {processing ? `Processing queue: ${progressPct}%` : immLabel ? `Uploading ${immLabel}: ${immPct}%` : `Uploading: ${immPct}%`}
+          </Text>
+          <View style={{ marginTop: 6 }}>
+            <ProgressBar value={processing ? progressPct : immPct} />
+          </View>
+        </View>
       )}
       <FlatList
         data={notes.filter(n => (!filter || n.tags?.includes(filter)) && (!query || n.text.toLowerCase().includes(query.toLowerCase())))}
@@ -371,24 +377,29 @@ export default function EvidenceLocker() {
             </A11yPressable>
           )}
           {cloudItems.map((c: any) => (
-            <View key={c.id} style={styles.noteRow}>
-              <Text style={[styles.noteText, selectedCloud[c.id] ? { fontWeight: '700' } : null]}>
-                {(c.createdAt?.toDate?.() || new Date()).toLocaleString()} - {c.text || '(no text)'}
-              </Text>
+            <View key={c.id} style={[styles.noteRow, { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 }] }>
+              <View style={{ flex: 1 }}>
+                <Text style={[styles.noteText, selectedCloud[c.id] ? { fontWeight: '700' } : null]}>
+                  {(c.createdAt?.toDate?.() || new Date()).toLocaleString()} - {c.text || '(no text)'}
+                </Text>
+              </View>
+              <Pressable
+                accessibilityRole="checkbox"
+                accessibilityLabel={selectedCloud[c.id] ? 'Unselect item' : 'Select item'}
+                accessibilityState={{ checked: !!selectedCloud[c.id] }}
+                onPress={() => setSelectedCloud((prev) => ({ ...prev, [c.id]: !prev[c.id] }))}
+                style={{ width: 22, height: 22, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems: 'center', justifyContent: 'center', backgroundColor: selectedCloud[c.id] ? palette.primary : 'transparent' }}
+              >
+                {selectedCloud[c.id] ? (<View style={{ width: 12, height: 12, backgroundColor: palette.onPrimary, borderRadius: 2 }} />) : null}
+              </Pressable>
               <A11yPressable
                 onPress={async () => {
                   const ok = await deleteEvidenceDoc(c.id);
                   if (ok) setCloudItems((prev) => prev.filter((x) => x.id !== c.id));
                 }}
-                style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
+                style={[styles.secondary, { paddingHorizontal: 10 }]}
               >
                 <Text style={styles.buttonText}>Delete</Text>
-              </A11yPressable>
-              <A11yPressable
-                onPress={() => setSelectedCloud((prev) => ({ ...prev, [c.id]: !prev[c.id] }))}
-                style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
-              >
-                <Text style={styles.buttonText}>{selectedCloud[c.id] ? 'Unselect' : 'Select'}</Text>
               </A11yPressable>
             </View>
           ))}

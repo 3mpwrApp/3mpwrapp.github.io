@@ -18,8 +18,11 @@ export default function ExerciseHub() {
   React.useEffect(() => {
     (async () => {
       try {
-        const q = aud==='wheelchair'? 'wheelchair exercise': aud==='limited-mobility'? 'chair exercise': 'sensory friendly stretching';
-        const vids = await fetchExercisePlaylist(q, 6);
+        const envQ = aud==='wheelchair' ? process.env.EXPO_PUBLIC_EXERCISE_WHEELCHAIR_QUERY
+                    : aud==='limited-mobility' ? process.env.EXPO_PUBLIC_EXERCISE_LIMITED_QUERY
+                    : process.env.EXPO_PUBLIC_EXERCISE_SENSORY_QUERY;
+        const q = envQ || (aud==='wheelchair'? 'wheelchair exercise': aud==='limited-mobility'? 'chair exercise': 'sensory friendly stretching');
+        const vids = await fetchExercisePlaylist(q, Number(process.env.EXPO_PUBLIC_EXERCISE_MAX || 6));
         setRemote(vids);
       } catch { setRemote([]); }
     })();

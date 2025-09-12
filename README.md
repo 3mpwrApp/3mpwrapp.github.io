@@ -125,8 +125,26 @@ Revoke admin: `npm run admin:set -- <uid> false`
   - Interactive Policy Simulator: `/(tabs)/resources/policy-simulator`
   - Accessible Exercise Hub: `/(tabs)/wellness/exercise-hub`
   - Diet & Nutrition Guides: `/(tabs)/wellness/nutrition-guides`
-  - Accessible Event Finder: `/(tabs)/events/finder`
-  - Accommodation Request Builder: `/(tabs)/resources/accommodation-request` (redirects to improved letter builder)
+- Accessible Event Finder: `/(tabs)/events/finder`
+- Accommodation Request Builder: `/(tabs)/resources/accommodation-request` (redirects to improved letter builder)
+
+## Remote Integrations
+
+- YouTube Exercises
+  - Set `EXPO_PUBLIC_YT_API_KEY` to enable remote playlists in Exercise Hub.
+  - Optional audience queries (fallbacks provided):
+    - `EXPO_PUBLIC_EXERCISE_WHEELCHAIR_QUERY`
+    - `EXPO_PUBLIC_EXERCISE_LIMITED_QUERY`
+    - `EXPO_PUBLIC_EXERCISE_SENSORY_QUERY`
+    - `EXPO_PUBLIC_EXERCISE_MAX` (default 6)
+- Lawyer/Advocate Directory
+  - If you have a public API, set `EXPO_PUBLIC_ADVOCATE_API` (expects `GET /advocates?page=&pageSize=&q=&issue=&province=&proBono=` → `{ items, total }`).
+  - Local seed is used as a fallback.
+- Body Mechanics Analysis
+  - App optionally calls `POST ${EXPO_PUBLIC_LLM_BASE}/analyze-body` with multipart `file`.
+  - A local stub server is provided at `server/` (Express + Multer). Usage:
+    - `cd server && npm install && npm start`
+    - Set `EXPO_PUBLIC_LLM_BASE=http://localhost:8080`
 
 ## Firestore security rules
 

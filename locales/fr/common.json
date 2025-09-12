@@ -2,63 +2,41 @@
   "nav": {
     "home": "Accueil",
     "campaigns": "Campagnes",
-    "community": "Communaut�",
-    "advocacy": "D�fense des droits",
-    "podcasts": "Balados et r�cits",
+    "community": "Communauté",
+    "advocacy": "Défense des droits",
+    "podcasts": "Balados et récits",
     "resources": "Ressources",
-    "events": "�v�nements",
-    "wellness": "Bien-�tre",
-    "profile": "Profil"
-  },
-  "home": {
-    "title": "Bienvenue sur Empowr",
-    "subtitle": "Soutien. D�fense. Autonomisation.",
-    "welcome": "Bienvenue! Carrefour pour la communaut�, l��ducation, les outils de d�fense et les balados � tout au m�me endroit!"
+    "events": "Événements",
+    "wellness": "Bien-être",
+    "profile": "Profil",
+    "saved": "Enregistré"
   },
   "header": {
     "favorites": "Favs",
-    "items": "�l�ments",
+    "items": "Éléments",
     "openProfile": "Ouvrir le profil",
     "signIn": "Se connecter",
-    "signOut": "Se d�connecter",
+    "signOut": "Se déconnecter",
     "refresh": "Tout actualiser"
+  },
+  "home": {
+    "title": "Bienvenue sur Empowr",
+    "subtitle": "Soutien. Défense. Autonomisation.",
+    "welcome": "Bienvenue ! Votre hub pour communauté, éducation, outils de défense et balados — tout au même endroit !"
   },
   "resources": {
     "tools": {
-      "deadlines": "Calculateur d��ch�ances + rappels",
-      "evidence": "G�n�rateur de liste de preuves",
-      "voice_notes": "Notes vocales ? compte rendu",
-      "templates": "Galerie de mod�les"
-    }
-  },
-  "wellness": {
-    "tools": {
-      "symptom": "Suivi sympt�mes et douleur (rapport)",
-      "sleep": "Suivi sommeil et �nergie (r�sum� m�dical)",
-      "selfcare": "Biblioth�que d�auto-soin accessible",
-      "work_balance": "Bien-�tre + �quilibre travail (IA)",
-      "grief": "Deuil et identit� � soutien",
-      "adaptive_meditation": "M�ditation et relaxation adapt�es",
-      "rehab_games": "Jeux de r��ducation virtuels (mouvements doux)",
-      "daily_planner": "Planificateur quotidien adaptatif"
-    },
-    "rehab": {
-      "subtitle": "Mini-jeux accessibles pour encourager des mouvements doux et exercices de physio. Adaptez et arr�tez si la douleur augmente.",
-      "title": "Jeux de r��ducation virtuels"
-    },
-    "achievements": {
-      "subtitle": "Gagnez des badges en b�tissant des habitudes saines.",
-      "title": "R�ussites"
-    }
-  },
-  "advocacy": {
-    "tools": {
-      "self_coach": "Coach d�auto-d�fense (micro-le�ons)",
-      "policy_simple": "Politiques simplifi�es",
-      "ai_translator": "Traducteur administratif (langage clair)",
-      "ai_case": "Interpr�te de cas (r�sum�)",
-      "collective": "P�le d�action juridique collective",
-      "ai_gov": "Navigateur gouvernemental IA"
+      "deadlines": "Calculateur d'échéances + rappels",
+      "evidence": "Générateur de liste de preuves",
+      "voice_notes": "Notes vocales vers notes de dossier",
+      "templates": "Galerie de modèles",
+      "rtw": "Plan de retour au travail",
+      "meds": "Suivi des médicaments et traitements",
+      "chronic": "Suivi des affections chroniques",
+      "body_mech": "Conseiller en biomécanique (IA)",
+      "policy_sim": "Simulateur de politiques interactif",
+      "accommodation": "Demande d'aménagements"
     }
   }
 }
+
