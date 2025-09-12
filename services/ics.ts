@@ -75,3 +75,41 @@ function escapeICS(s: string) {
     .replace(/,/g, "\\,")
     .replace(/;/g, "\\;");
 }
+
+// Minimal ICS parser for DTSTART, SUMMARY, DESCRIPTION inside VEVENT blocks
+export function parseICS(text: string): { title: string; description?: string; startISO: string }[] {
+  // Handle folded lines (continuation lines start with a space)
+  const normalized = text.replace(/\r\n[ ]/g, '');
+  const lines = normalized.split(/\r?\n/);
+  const events: any[] = [];
+  let cur: any = null;
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (line === 'BEGIN:VEVENT') { cur = {}; continue; }
+    if (line === 'END:VEVENT') { if (cur) events.push(cur); cur = null; continue; }
+    if (!cur) continue;
+    if (line.startsWith('DTSTART')) {
+      const parts = line.split(':');
+      const val = parts[1] || '';
+      cur.startISO = icsDateToISO(val);
+    } else if (line.startsWith('SUMMARY:')) {
+      cur.title = unescapeICS(line.slice('SUMMARY:'.length));
+    } else if (line.startsWith('DESCRIPTION:')) {
+      cur.description = unescapeICS(line.slice('DESCRIPTION:'.length));
+    }
+  }
+  return events.filter((e) => e.startISO && e.title);
+}
+
+function icsDateToISO(v: string): string {
+  // Examples: 20250131T140000Z or 20250131
+  const m = v.match(/^(\d{4})(\d{2})(\d{2})(?:T(\d{2})(\d{2})(\d{2})Z?)?$/);
+  if (!m) return new Date(v).toISOString();
+  const [_, y, mo, d, hh, mm, ss] = m;
+  const date = new Date(Date.UTC(Number(y), Number(mo) - 1, Number(d), Number(hh || '0'), Number(mm || '0'), Number(ss || '0')));
+  return date.toISOString();
+}
+
+function unescapeICS(s: string) {
+  return s.replace(/\\n/g, '\n').replace(/\\,/g, ',').replace(/\\;/g, ';').replace(/\\\\/g, '\\');
+}

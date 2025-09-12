@@ -4,7 +4,7 @@ import { useAppPalette } from '../../../theme/usePalette';
 import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { listDeadlines, deleteDeadline, updateDeadline, type Deadline } from '../../../services/deadlines';
-import { buildICSMany, buildICS } from '../../../services/ics';
+import { buildICSMany, buildICS, parseICS } from '../../../services/ics';
 import * as Notifier from '../../../services/notifications';
 import { addEvent } from '../../../services/calendar';
 
@@ -87,8 +87,27 @@ export default function DeadlinesList() {
         My Deadlines {loading ? '(loading...)' : ''}
       </Text>
       <A11yPressable onPress={load} style={s.button}><Text style={s.buttonText}>Reload</Text></A11yPressable>
+      <A11yPressable onPress={async () => {
+        try {
+          const DP = await import('expo-document-picker');
+          const result = await DP.getDocumentAsync({ type: 'text/calendar' });
+          if (result?.assets?.[0]?.uri) {
+            const { uri } = result.assets[0];
+            const FS = await import('expo-file-system');
+            const text = await FS.readAsStringAsync(uri, { encoding: FS.EncodingType.UTF8 });
+            const events = parseICS(text).slice(0, 50);
+            for (const ev of events) {
+              await (await import('../../../services/deadlines')).addDeadline({ title: ev.title, dueAt: ev.startISO, notes: ev.description || '' });
+            }
+            Alert.alert('Imported', `Added ${events.length} deadlines from ICS`);
+            load();
+          }
+        } catch { Alert.alert('Import failed','Could not import ICS file.'); }
+      }} style={[s.button, { marginTop: 8 }]}>
+        <Text style={s.buttonText}>Import ICS</Text>
+      </A11yPressable>
       {items.length > 0 && (
-        <A11yPressable onPress={exportAll} style={[s.button, { marginTop: 8 }]}>
+        <A11yPressable onPress={exportAll} style={[s.button, { marginTop: 8 }]}> 
           <Text style={s.buttonText}>Export all as ICS</Text>
         </A11yPressable>
       )}
@@ -137,6 +156,15 @@ export default function DeadlinesList() {
                     style={s.smallBtn}
                   >
                     <Text style={s.smallBtnText}>Snooze 24h</Text>
+                  </A11yPressable>
+                  <A11yPressable
+                    onPress={async () => {
+                      const ok = await Notifier.scheduleAt(new Date(Date.now() + 7*24*60*60*1000), 'Snoozed deadline', d.title);
+                      Alert.alert(ok ? 'Snoozed' : 'Not scheduled', ok ? 'Reminder in 7 days.' : 'Unable to schedule.');
+                    }}
+                    style={s.smallBtn}
+                  >
+                    <Text style={s.smallBtnText}>Snooze 7d</Text>
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {

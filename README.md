@@ -111,6 +111,11 @@ Revoke admin: `npm run admin:set -- <uid> false`
 - `npm run admin:fcm -- --token <fcmToken> --title "Hi" --body "Message"` — Send FCM via Admin SDK (or `--topic <topic>`)
 - `npm run admin:export -- <collection> [--out file.json]` — Export a Firestore collection
 
+## New Features
+
+- Admin Panel: filters (verified/banned), contains search, and CSV export of the current user list.
+- Deadlines: import events from an ICS file and snooze by 7 days in addition to 24 hours.
+
 ## Firestore security rules
 
 Rules live at `firebase/firestore.rules`. Deploy with:

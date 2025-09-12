@@ -12,10 +12,23 @@ export default function AdminPanel() {
   const palette = useAppPalette();
   const s = styles(palette);
   const [email, setEmail] = React.useState("");
+  const [contains, setContains] = React.useState("");
+  const [onlyVerified, setOnlyVerified] = React.useState(false);
+  const [onlyBanned, setOnlyBanned] = React.useState(false);
   const [result, setResult] = React.useState<any | null>(null);
   const [counts, setCounts] = React.useState<{ users?: number; campaigns?: number; resources?: number }>({});
   const [users, setUsers] = React.useState<any[]>([]);
   const [cursor, setCursor] = React.useState<any | null>(null);
+  const filteredUsers = React.useMemo(() => {
+    const term = (contains || '').toLowerCase().trim();
+    return users
+      .filter((u) => (onlyVerified ? u.verified === true : true) && (onlyBanned ? u.banned === true : true))
+      .filter((u) => {
+        if (!term) return true;
+        const s = `${u.email || ''} ${u.displayName || ''}`.toLowerCase();
+        return s.includes(term);
+      });
+  }, [users, contains, onlyVerified, onlyBanned]);
   React.useEffect(() => {
     (async () => {
       try {
@@ -41,6 +54,30 @@ export default function AdminPanel() {
         <Text style={s.text}>To grant admin: set Firebase custom claim admin=true for your UID.</Text>
         <View style={{ marginTop: 8 }}>
           <Text style={s.text}>Counts — Users: {counts.users ?? '-'} | Campaigns: {counts.campaigns ?? '-'} | Resources: {counts.resources ?? '-'}</Text>
+        </View>
+        <View style={{ marginTop: 8 }}>
+          <Text style={[s.text, { fontWeight: '700' }]}>Filters</Text>
+          <View style={{ flexDirection: 'row', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+            <Pressable
+              onPress={() => setOnlyVerified(v => !v)}
+              style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: onlyVerified ? palette.primary : palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+            >
+              <Text style={{ color: onlyVerified ? palette.onPrimary : palette.text, fontWeight: '700' }}>{onlyVerified ? 'Verified only' : 'Include unverified'}</Text>
+            </Pressable>
+            <Pressable
+              onPress={() => setOnlyBanned(v => !v)}
+              style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: onlyBanned ? palette.primary : palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+            >
+              <Text style={{ color: onlyBanned ? palette.onPrimary : palette.text, fontWeight: '700' }}>{onlyBanned ? 'Banned only' : 'Include not-banned'}</Text>
+            </Pressable>
+            <TextInput
+              value={contains}
+              onChangeText={setContains}
+              placeholder="contains... (email/name)"
+              style={{ minWidth: 160, flexGrow: 1, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding: 8, borderRadius: 6 }}
+              autoCapitalize="none"
+            />
+          </View>
         </View>
 
         <Text style={[s.text, { marginTop: 10, fontWeight: '700' }]}>User Lookup</Text>
@@ -106,7 +143,7 @@ export default function AdminPanel() {
         )}
 
         <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Users (first 20)</Text>
-        <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8 }}>
+        <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
           <Pressable
             onPress={async () => {
               try {
@@ -122,6 +159,40 @@ export default function AdminPanel() {
             style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.primary, borderRadius: 6 }}
           >
             <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Load / Next</Text>
+          </Pressable>
+          <Pressable
+            onPress={() => { setCursor(null); setUsers([]); }}
+            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+          >
+            <Text style={{ color: palette.text, fontWeight: '700' }}>Reset</Text>
+          </Pressable>
+          <Pressable
+            onPress={async () => {
+              try {
+                const term = (contains || '').toLowerCase().trim();
+                const filtered = users
+                  .filter((u) => (onlyVerified ? u.verified === true : true) && (onlyBanned ? u.banned === true : true))
+                  .filter((u) => {
+                    if (!term) return true;
+                    const s = `${u.email || ''} ${u.displayName || ''}`.toLowerCase();
+                    return s.includes(term);
+                  });
+                const rows = [['uid','email','name','banned','verified']].concat(
+                  filtered.map((u) => [u.id, u.email || '', u.displayName || '', String(!!u.banned), String(!!u.verified)])
+                );
+                const csv = rows.map(r => r.map(x => '"' + String(x).replace(/"/g,'""') + '"').join(',')).join('\n');
+                const FS = await import('expo-file-system');
+                const path = FS.cacheDirectory + `users_${Date.now()}.csv`;
+                await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 });
+                try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','CSV saved to cache.'); }
+                catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
+              } catch (e: any) {
+                Alert.alert('Export failed', e?.message || 'Error creating CSV');
+              }
+            }}
+            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+          >
+            <Text style={{ color: palette.text, fontWeight: '700' }}>Export CSV</Text>
           </Pressable>
         </View>
         {users.map((u) => (
