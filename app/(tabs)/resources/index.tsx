@@ -191,8 +191,11 @@ export default function ResourcesScreen() {
       </Link>
       <Link href={"/(tabs)/resources/voice-notes" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          {t("resources.tools.voice_notes", "Voice‑to‑Case Notes Tool")}
+          {t("resources.tools.voice_notes", "Voice-to-Case Notes Tool")}
         </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/denial-decoder" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>AI Claim Denial Decoder</Text>
       </Link>
       <Link href={"/(tabs)/resources/templates-gallery" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>

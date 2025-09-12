@@ -323,6 +323,9 @@ export default function ThemedHeader() {
             {[
               { label: "Advocacy Hub", path: "/(tabs)/advocacy" },
               { label: "Lawyer/Advocate Finder", path: "/(tabs)/advocacy/lawyer-finder" },
+              { label: "Ally Hub", path: "/(tabs)/advocacy/ally-hub" },
+              { label: "World Disability Map", path: "/(tabs)/advocacy/world-map" },
+              { label: "Ratings", path: "/(tabs)/advocacy/ratings" },
               {
                 label: "Support Directory",
                 path: "/(tabs)/advocacy/support-directory",
@@ -347,11 +350,15 @@ export default function ThemedHeader() {
             <Text style={styles.menuSection}>Info</Text>
             {[
               { label: "Research", path: "/(tabs)/research" },
+              { label: "Wait Times", path: "/(tabs)/research/wait-times" },
+              { label: "History Timeline", path: "/(tabs)/research/history-timeline" },
               { label: "What's New", path: "/(tabs)/whatsnew" },
               { label: "FAQs", path: "/(tabs)/faqs" },
               { label: "Wellness", path: "/(tabs)/wellness" },
               { label: "Exercise Hub", path: "/(tabs)/wellness/exercise-hub" },
               { label: "Nutrition Guides", path: "/(tabs)/wellness/nutrition-guides" },
+              { label: "AI Companion", path: "/(tabs)/wellness/ai-companion" },
+              { label: "Pacing Partner", path: "/(tabs)/wellness/pacing-partner" },
               { label: "Accessible Events", path: "/(tabs)/events/finder" },
               { label: "About & Contact", path: "/(tabs)/about" },
             ].map((item) => (
@@ -375,6 +382,8 @@ export default function ThemedHeader() {
             {[
               { label: "Saved", path: "/(tabs)/saved" },
               { label: "Settings", path: "/(tabs)/settings" },
+              { label: "Mutual Aid", path: "/(tabs)/community/mutual-aid" },
+              { label: "Media Studio", path: "/(tabs)/community/media-studio" },
             ].map((item) => (
               <Pressable
                 key={item.path}
