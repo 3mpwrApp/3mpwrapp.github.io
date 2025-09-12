@@ -20,6 +20,7 @@ import {
   addLocalWhatsNew,
 } from "../../../services/localContent";
 import SettingsLink from "../../../components/SettingsLink";
+import { useFocusEffect } from "@react-navigation/native";
 import ContrastToggle from "../../../components/ContrastToggle";
 
 export default function WhatsNewScreen() {
@@ -54,6 +55,19 @@ export default function WhatsNewScreen() {
       }
     })();
   }, []);
+
+  // Mark as seen when visiting this tab
+  useFocusEffect(
+    React.useCallback(() => {
+      (async () => {
+        try {
+          const mod = await import("@react-native-async-storage/async-storage");
+          const AsyncStorage = mod.default;
+          await AsyncStorage.setItem("whatsnew:lastSeen:v1", new Date().toISOString());
+        } catch {}
+      })();
+    }, []),
+  );
   const isWithin30Days = (d: string) =>
     (now.getTime() - new Date(d).getTime()) / (1000 * 60 * 60 * 24) <= 30;
   const isUnread = (d: string) =>

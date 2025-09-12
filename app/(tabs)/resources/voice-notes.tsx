@@ -102,7 +102,7 @@ export default function VoiceNotes() {
         style={s.title}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        VoiceÃ¢â‚¬â€˜toÃ¢â‚¬â€˜Case Notes
+        Voice-to-Case Notes
       </Text>
       <Text style={s.subtitle}>
         Record audio notes and convert them into formatted case logs for doctors
