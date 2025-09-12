@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable, Linking } from 'react-native';
 import { exercises } from '../../../data/exercises';
+import { fetchExercisePlaylist } from '../../../services/youtube';
 import { useAppPalette } from '../../../theme/usePalette';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 
@@ -13,6 +14,16 @@ export default function ExerciseHub() {
   useAnnounceOnMount('Accessible Exercise Hub');
   useFocusOnRefOnMount(titleRef);
   const [aud, setAud] = React.useState<'all'|'wheelchair'|'limited-mobility'|'sensory-friendly'>('all');
+  const [remote, setRemote] = React.useState([] as { id: string; title: string; url: string }[]);
+  React.useEffect(() => {
+    (async () => {
+      try {
+        const q = aud==='wheelchair'? 'wheelchair exercise': aud==='limited-mobility'? 'chair exercise': 'sensory friendly stretching';
+        const vids = await fetchExercisePlaylist(q, 6);
+        setRemote(vids);
+      } catch { setRemote([]); }
+    })();
+  }, [aud]);
   const filtered = exercises.filter(e => aud==='all' || e.audience===aud);
   return (
     <View style={s.container}>
@@ -22,7 +33,7 @@ export default function ExerciseHub() {
           <Pressable key={k} onPress={()=>setAud(k)} style={[s.chip, aud===k && s.chipActive]}><Text style={{ color: aud===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{k}</Text></Pressable>
         ))}
       </View>
-      {filtered.map(e => (
+      {(remote.length? remote: filtered).map((e: any) => (
         <View key={e.id} style={s.card}>
           <Text style={s.cardTitle}>{e.title} • {e.minutes} min</Text>
           <Pressable onPress={()=>Linking.openURL(e.url)} style={s.btn}><Text style={s.btnText}>Open Video</Text></Pressable>
@@ -44,4 +55,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     btnText: { color: palette.text, fontWeight: '700' },
   });
 }
-

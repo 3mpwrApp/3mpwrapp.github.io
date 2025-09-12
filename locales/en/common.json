@@ -44,7 +44,13 @@
       "deadlines": "Deadline Calculator + Reminders",
       "evidence": "Evidence Checklist Generator",
       "voice_notes": "Voice-to-Case Notes Tool",
-      "templates": "Template Gallery"
+      "templates": "Template Gallery",
+      "rtw": "Return-to-Work Planner",
+      "meds": "Medication & Treatment Tracker",
+      "chronic": "Chronic Condition Tracker",
+      "body_mech": "AI Body Mechanics Advisor",
+      "policy_sim": "Interactive Policy Simulator",
+      "accommodation": "Accommodation Request Builder"
     }
   },
   "home": {

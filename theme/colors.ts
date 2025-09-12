@@ -3,22 +3,22 @@ export const colors = {
   // Deep Teal (#00796B), Cyan (#00BFA5), Coral (#FF7043),
   // Charcoal (#212121), Soft Gray (#F5F5F5)
   light: {
-    primary: "#00796B", // Deep Teal
-    background: "#F5F5F5", // Soft Gray
-    text: "#212121", // Charcoal
-    // Muted text with stronger contrast for WCAG AA on Soft Gray
-    muted: "#424242",
+    primary: "#00695C", // Slightly darker for better contrast
+    background: "#FFFFFF", // Pure white for max contrast
+    text: "#111111", // Near-black for high readability
+    // Muted with strong contrast against white
+    muted: "#333333",
     onPrimary: "#FFFFFF",
     surface: "#FFFFFF",
   },
   dark: {
-    primary: "#00BFA5", // Cyan for better pop on dark
-    background: "#212121", // Charcoal
-    text: "#F5F5F5", // Soft Gray
-    // Higher-contrast muted on dark backgrounds
-    muted: "#E0E0E0",
+    primary: "#00E5CF", // Brighter accent for dark
+    background: "#000000", // Pure black
+    text: "#FFFFFF", // White text
+    // High-contrast muted on black
+    muted: "#CCCCCC",
     onPrimary: "#000000",
-    surface: "#1A1A1A",
+    surface: "#0A0A0A",
   },
 } as const;
 

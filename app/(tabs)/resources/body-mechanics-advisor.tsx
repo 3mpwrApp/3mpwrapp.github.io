@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Alert } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
 import { useAppPalette } from '../../../theme/usePalette';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { analyzeBodyVideo } from '../../../services/body';
 
 export const options = { href: null };
 
@@ -16,7 +17,9 @@ export default function BodyMechanicsAdvisor() {
   const [advice, setAdvice] = React.useState<string[]>([]);
 
   const analyze = async (uri: string, name?: string) => {
-    // Local heuristic stub. For production, send to backend set by EXPO_PUBLIC_LLM_BASE.
+    // Try backend if configured, else local heuristics
+    const backend = await analyzeBodyVideo(uri, name || 'video.mp4');
+    if (backend?.suggestions?.length) { setAdvice(backend.suggestions); return; }
     setAdvice([
       'Keep wrists neutral; avoid prolonged flexion when typing.',
       'Use hip hinge and keep load close when lifting.',
@@ -61,4 +64,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     cardTitle: { color: palette.text, fontWeight: '700', marginBottom: 6 },
   });
 }
-
