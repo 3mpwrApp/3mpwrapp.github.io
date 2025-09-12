@@ -1,13 +1,19 @@
-import * as Sentry from 'sentry-expo';
 import { Platform } from 'react-native';
 
 let initialized = false;
 
-export function initSentry(dsn?: string) {
+export async function initSentry(dsn?: string) {
   if (initialized) return;
   if (!dsn) return;
-  Sentry.init({ dsn });
-  initialized = true;
+  try {
+    // Lazy-load sentry-expo to avoid loading native modules when unavailable
+    const Sentry = await import('sentry-expo');
+    Sentry.init({ dsn });
+    initialized = true;
+  } catch (e) {
+    // If native module isn't available in this build/dev client, safely skip
+    if (__DEV__) console.warn('Sentry init skipped:', (e as Error)?.message);
+  }
 }
 
 export async function initAnalytics() {

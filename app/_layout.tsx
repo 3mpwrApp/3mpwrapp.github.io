@@ -74,37 +74,41 @@ export default function RootLayout() {
                   <CountsProvider>
                     <NetworkProvider>
                       <RefreshProvider>
-                        <View>
-                          <OfflineBanner />
-                          <Header />
+                        {/* Ensure a single root element (avoid Fragment) */}
+                        <View style={{ flex: 1 }}>
+                          <View>
+                            <OfflineBanner />
+                            <Header />
+                          </View>
+                          <TermsGate>
+                            <ChangelogGate>
+                              <TelemetryInit />
+                              <Stack
+                                screenOptions={{
+                                  animation: reduceMotion ? "none" : "default",
+                                }}
+                              >
+                                <Stack.Screen
+                                  name="profile"
+                                  options={{ headerShown: false }}
+                                />
+                                <Stack.Screen
+                                  name="(auth)"
+                                  options={{ headerShown: false }}
+                                />
+                                <Stack.Screen
+                                  name="(tabs)"
+                                  options={{ headerShown: false }}
+                                />
+                                <Stack.Screen
+                                  name="modal"
+                                  options={{ presentation: "modal" }}
+                                />
+                              </Stack>
+                            </ChangelogGate>
+                          </TermsGate>
+                          <Footer />
                         </View>
-                        <TermsGate>
-                          <ChangelogGate>\n                            <TelemetryInit />
-                            <Stack
-                              screenOptions={{
-                                animation: reduceMotion ? "none" : "default",
-                              }}
-                            >
-                              <Stack.Screen
-                                name="profile"
-                                options={{ headerShown: false }}
-                              />
-                              <Stack.Screen
-                                name="(auth)"
-                                options={{ headerShown: false }}
-                              />
-                              <Stack.Screen
-                                name="(tabs)"
-                                options={{ headerShown: false }}
-                              />
-                              <Stack.Screen
-                                name="modal"
-                                options={{ presentation: "modal" }}
-                              />
-                            </Stack>
-                          </ChangelogGate>
-                        </TermsGate>
-                        <Footer />
                       </RefreshProvider>
                     </NetworkProvider>
                   </CountsProvider>

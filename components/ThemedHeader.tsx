@@ -19,7 +19,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { useAuth } from "../context/AuthContext";
 import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
 import { useTranslation } from "../i18n";
-import SettingsLink from "./SettingsLink";
 import A11yQuickSettings from "./A11yQuickSettings";
 
 export default function ThemedHeader() {
@@ -29,7 +28,7 @@ export default function ThemedHeader() {
   const { counts } = useCounts();
   const { refreshAll } = useRefresh();
   const { offline, syncing } = useNetwork();
-  const { user, signOut } = useAuth();
+  const { user, signOut, isAdmin, refreshClaims } = useAuth();
   const { t } = useTranslation();
 
   const favTotal =
@@ -55,13 +54,13 @@ export default function ThemedHeader() {
         hitSlop={HIT_SLOP_8}
       >
         <Image
-          source={require("../assets/images/empowr-logo.png")}
+          source={require("../assets/images/brand-logo.png")}
           style={styles.logo}
           accessible
-          accessibilityLabel="Empowr logo"
+          accessibilityLabel="3mpowrApp logo"
         />
-        <Text style={styles.title} accessibilityLabel="Empowr app header">
-          Empowr
+        <Text style={styles.title} accessibilityLabel="3mpowrApp header">
+          3mpowrApp
         </Text>
       </Pressable>
 
@@ -204,9 +203,6 @@ export default function ThemedHeader() {
         >
           <Ionicons name="settings-outline" size={20} color={palette.text} />
         </Pressable>
-
-        {/* Settings (moved from tab bar) */}
-        <SettingsLink />
 
         {/* Profile */}
         <Pressable
@@ -392,6 +388,38 @@ export default function ThemedHeader() {
                 <Text style={{ color: palette.text }}>{item.label}</Text>
               </Pressable>
             ))}
+            {/* Admin controls */}
+            <Text style={styles.menuSection}>Admin</Text>
+            <Pressable
+              onPress={() => {
+                setMenuOpen(false);
+                refreshClaims();
+              }}
+              accessibilityRole="button"
+              accessibilityLabel={`Refresh admin status`}
+              style={({ pressed }) => [
+                { paddingVertical: 8, paddingHorizontal: 14 },
+                pressed && { opacity: 0.7 },
+              ]}
+            >
+              <Text style={{ color: palette.text }}>Refresh admin status</Text>
+            </Pressable>
+            {isAdmin && (
+              <Pressable
+                onPress={() => {
+                  setMenuOpen(false);
+                  router.push('/(tabs)/admin' as import('expo-router').Href);
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={`Go to Admin Panel`}
+                style={({ pressed }) => [
+                  { paddingVertical: 8, paddingHorizontal: 14 },
+                  pressed && { opacity: 0.7 },
+                ]}
+              >
+                <Text style={{ color: palette.text }}>Admin Panel</Text>
+              </Pressable>
+            )}
           </View>
         </>
       )}

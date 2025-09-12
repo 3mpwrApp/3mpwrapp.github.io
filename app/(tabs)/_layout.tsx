@@ -108,7 +108,6 @@ export default function TabsLayout() {
       <Tabs.Screen name="advocacy/ask" options={{ href: null }} />
       <Tabs.Screen name="resources/index" options={{ href: null }} />
       <Tabs.Screen name="research/index" options={{ href: null }} />
-      <Tabs.Screen name="whatsnew/index" options={{ href: null }} />
       <Tabs.Screen name="faqs" options={{ href: null }} />
       <Tabs.Screen name="wellness" options={{ href: null }} />
       <Tabs.Screen name="saved" options={{ href: null }} />
@@ -202,16 +201,16 @@ export default function TabsLayout() {
         }}
       />
 
-      {/* Settings */}
+      {/* What's New */}
       <Tabs.Screen
-        name="settings"
+        name="whatsnew/index"
         options={{
-          title: "Settings",
-          tabBarLabel: "Settings",
-          tabBarAccessibilityLabel: `Settings tab`,
+          title: "What’s New",
+          tabBarLabel: "What’s New",
+          tabBarAccessibilityLabel: `What’s New tab`,
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
-              name={focused ? "settings" : "settings-outline"}
+              name={focused ? "star" : "star-outline"}
               color={color}
               size={size + 2}
             />

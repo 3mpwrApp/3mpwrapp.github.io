@@ -32,7 +32,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/brand-logo.png"
+      "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       "expo-router",
@@ -59,8 +59,7 @@
         {
           "mode": "production"
         }
-      ],
-      "sentry-expo"
+      ]
     ],
     "experiments": {
       "typedRoutes": true

@@ -40,10 +40,10 @@ export default function ChangelogGate({
     <View
       style={styles.overlay}
       accessibilityViewIsModal
-      accessibilityLabel="What's new"
+      accessibilityLabel="What’s new"
     >
       <View style={styles.card}>
-        <Text style={styles.title}>What's new</Text>
+        <Text style={styles.title}>What’s new</Text>
         <ScrollView style={{ maxHeight: 280 }}>
           <Text style={styles.text}>
             New Advocacy tools: Self-Advocacy Coach, Policy Made Simple, AI
