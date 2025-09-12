@@ -21,6 +21,9 @@
     "metro:clear": "set EXPO_NO_METRO_CACHE=1&& npx expo start -c",
     "align:expo": "npx expo install && npx expo install react-native@0.79.5",
     "admin:set": "node ./scripts/set-admin-claim.js",
+    "admin:users": "node ./scripts/list-users.js",
+    "admin:fcm": "node ./scripts/send-fcm.js",
+    "admin:export": "node ./scripts/export-collection.js",
     "rules:deploy": "firebase deploy --only firestore:rules"
   },
   "dependencies": {

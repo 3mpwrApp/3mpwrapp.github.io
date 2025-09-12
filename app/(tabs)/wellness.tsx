@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, Linking } from "react-native";
+import { View, Text, StyleSheet, Pressable, Linking, TextInput, Alert } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
 import { useTranslation } from "../../i18n";
@@ -12,6 +12,8 @@ import SettingsLink from "../../components/SettingsLink";
 import ContrastToggle from "../../components/ContrastToggle";
 import { Link } from "expo-router";
 import type { Href } from "expo-router";
+import { useAuth } from "../../context/AuthContext";
+import { addReflection, listReflections, type Reflection } from "../../services/wellness";
 
 export default function WellnessScreen() {
   const palette = useAppPalette();
@@ -21,6 +23,17 @@ export default function WellnessScreen() {
   useAnnounceOnMount("Wellness");
   useFocusOnRefOnMount(titleRef);
   const { t } = useTranslation();
+  const { user } = useAuth();
+  const [mood, setMood] = React.useState<Reflection['mood']>('ok');
+  const [note, setNote] = React.useState('');
+  const [recent, setRecent] = React.useState<Reflection[]>([]);
+
+  React.useEffect(() => {
+    (async () => {
+      if (!user) return;
+      try { setRecent(await listReflections(10)); } catch {}
+    })();
+  }, [user]);
 
   const onOpen = React.useCallback((url: string) => {
     Linking.openURL(url).catch(() => {});
@@ -202,6 +215,62 @@ export default function WellnessScreen() {
           {t("wellness.achievements.title", "Achievements")}
         </Text>
       </Link>
+
+      {/* Daily reflection composer */}
+      <View style={{ paddingVertical: 8 }} accessibilityLabel="Daily reflection" accessible>
+        <Text style={styles.sectionTitle}>Daily Reflection</Text>
+        {!user ? (
+          <Text style={styles.tipText}>Sign in to save reflections.</Text>
+        ) : (
+          <>
+            <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
+              {(['bad','ok','good','great'] as Reflection['mood'][]).map((m) => (
+                <Pressable key={m} onPress={() => setMood(m)} accessibilityRole="button"
+                  style={({ pressed }) => [
+                    { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
+                    mood === m && { backgroundColor: palette.primary, borderColor: palette.primary },
+                    pressed && { opacity: 0.8 },
+                  ]}
+                >
+                  <Text style={[{ color: palette.text }, mood === m && { color: palette.onPrimary, fontWeight: '700' }]}>{m.toUpperCase()}</Text>
+                </Pressable>
+              ))}
+            </View>
+            <TextInput
+              value={note}
+              onChangeText={setNote}
+              placeholder="Optional note"
+              placeholderTextColor={palette.text}
+              style={{ borderWidth: 1, borderColor: palette.muted, borderRadius: 8, padding: 10, color: palette.text, marginBottom: 8 }}
+              multiline
+            />
+            <Pressable
+              onPress={async () => {
+                try {
+                  await addReflection(mood, note.trim());
+                  setNote('');
+                  setRecent(await listReflections(10));
+                  Alert.alert('Saved', 'Reflection saved.');
+                } catch { Alert.alert('Not saved', 'Sign in to save reflections.'); }
+              }}
+              accessibilityRole="button"
+              style={({ pressed }) => [{ backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center' }, pressed && { opacity: 0.9 }]}
+            >
+              <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Save Reflection</Text>
+            </Pressable>
+            {recent.length > 0 && (
+              <View style={{ marginTop: 8 }}>
+                <Text style={styles.sectionTitle}>Recent</Text>
+                {recent.map((r) => (
+                  <Text key={r.id} style={styles.tipText}>
+                    {new Date(r.createdAt?.toDate?.() || Date.now()).toLocaleString()} — {r.mood.toUpperCase()}{r.note ? `: ${r.note}` : ''}
+                  </Text>
+                ))}
+              </View>
+            )}
+          </>
+        )}
+      </View>
 
       {sections.map((sec) => (
         <View

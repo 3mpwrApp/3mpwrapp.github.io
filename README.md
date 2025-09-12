@@ -105,6 +105,12 @@ Grant yourself admin once using Firebase Admin SDK:
 
 Revoke admin: `npm run admin:set -- <uid> false`
 
+### Admin scripts
+
+- `npm run admin:users` — List all users as JSON (add `-- --format csv` for CSV)
+- `npm run admin:fcm -- --token <fcmToken> --title "Hi" --body "Message"` — Send FCM via Admin SDK (or `--topic <topic>`)
+- `npm run admin:export -- <collection> [--out file.json]` — Export a Firestore collection
+
 ## Firestore security rules
 
 Rules live at `firebase/firestore.rules`. Deploy with:

@@ -43,6 +43,14 @@ function ScreenInner() {
       accessibilityLabel="Community Hub screen"
       accessible
     >
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel="Compose a post"
+        style={({ pressed }) => [{ alignSelf: 'flex-end', marginBottom: 8, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }, pressed && { opacity: 0.7 }]}
+        onPress={() => router.push('/(tabs)/community/compose' as Href)}
+      >
+        <Text style={{ color: palette.text, fontWeight: '700' }}>Compose</Text>
+      </Pressable>
       <Text
         ref={titleRef}
         accessibilityRole="header"

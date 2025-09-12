@@ -61,5 +61,11 @@ service cloud.firestore {
       allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
+
+    // Wellness reflections under a user
+    match /users/{uid}/wellness_reflections/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
   }
 }

@@ -91,6 +91,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="podcasts/[id]" options={{ href: null }} />
       <Tabs.Screen name="podcasts/stories/[id]" options={{ href: null }} />
       <Tabs.Screen name="community/[slug]" options={{ href: null }} />
+      <Tabs.Screen name="community/compose" options={{ href: null }} />
       <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />
       <Tabs.Screen name="advocacy/index" options={{ href: null }} />
       <Tabs.Screen
