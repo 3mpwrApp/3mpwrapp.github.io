@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-nativ
 import { useLocalSearchParams } from 'expo-router';
 import { useAppPalette } from '../../../theme/usePalette';
 import { db } from '../../../firebase/config';
-import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, getDocs, orderBy, query, serverTimestamp, onSnapshot, setDoc, doc } from 'firebase/firestore';
+import { auth } from '../../../firebase/config';
 
 export const options = { href: null };
 
@@ -13,15 +14,28 @@ export default function MutualChat() {
   const s = styles(palette);
   const [msg, setMsg] = React.useState('');
   const [items, setItems] = React.useState<any[]>([]);
-  const load = React.useCallback(async()=>{ try{ const snap = await getDocs(query(collection(db,'mutual_aid_posts', String(id), 'chat'), orderBy('createdAt','asc'))); setItems(snap.docs.map(d=>({ id:d.id, ...(d.data() as any) }))); } catch{} },[id]);
-  React.useEffect(()=>{ load(); },[load]);
+  React.useEffect(()=>{
+    try {
+      const q = query(collection(db,'mutual_aid_posts', String(id), 'chat'), orderBy('createdAt','asc'));
+      const unsub = onSnapshot(q, (snap) => { setItems(snap.docs.map(d=>({ id:d.id, ...(d.data() as any) }))); });
+      return () => unsub();
+    } catch {}
+  },[id]);
+  // Presence + typing
+  React.useEffect(() => {
+    const uid = auth.currentUser?.uid || 'anon';
+    const ref = doc(db, 'mutual_aid_posts', String(id), 'presence', uid);
+    (async () => { try { await setDoc(ref, { lastSeen: serverTimestamp(), typing: false }, { merge: true }); } catch {} })();
+    const i = setInterval(async()=>{ try { await setDoc(ref, { lastSeen: serverTimestamp() }, { merge: true }); } catch {} }, 30000);
+    return () => { clearInterval(i); };
+  }, [id]);
   return (
     <View style={s.container}>
       <Text style={s.title}>Mutual Aid Chat</Text>
       {items.map(i => (<Text key={i.id} style={s.text}>• {new Date(i.createdAt?.toDate?.()||Date.now()).toLocaleTimeString()} — {i.message}</Text>))}
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
-        <TextInput placeholder="Message" placeholderTextColor={palette.text+'77'} value={msg} onChangeText={setMsg} style={[s.input,{ flex:1 }]} />
-        <Pressable onPress={async()=>{ try{ await addDoc(collection(db,'mutual_aid_posts', String(id), 'chat'), { message: msg, createdAt: serverTimestamp() }); setMsg(''); load(); } catch { Alert.alert('Failed','Could not send'); } }} style={s.button}><Text style={s.buttonText}>Send</Text></Pressable>
+        <TextInput placeholder="Message" placeholderTextColor={palette.text+'77'} value={msg} onChangeText={async (t)=>{ setMsg(t); try { const uid = auth.currentUser?.uid || 'anon'; await setDoc(doc(db,'mutual_aid_posts', String(id), 'presence', uid), { typing: !!t }, { merge: true }); } catch {} }} style={[s.input,{ flex:1 }]} />
+        <Pressable onPress={async()=>{ try{ await addDoc(collection(db,'mutual_aid_posts', String(id), 'chat'), { message: msg, createdAt: serverTimestamp() }); setMsg(''); } catch { Alert.alert('Failed','Could not send'); } }} style={s.button}><Text style={s.buttonText}>Send</Text></Pressable>
       </View>
     </View>
   );
@@ -37,4 +51,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     buttonText: { color: palette.onPrimary, fontWeight:'700' },
   });
 }
-

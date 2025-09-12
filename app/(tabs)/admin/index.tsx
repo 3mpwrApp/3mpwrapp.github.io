@@ -289,6 +289,18 @@ export default function AdminPanel() {
               >
                 <Text style={{ color: palette.text, fontWeight: '700' }}>Resolve</Text>
               </Pressable>
+              <Pressable
+                onPress={async () => {
+                  try {
+                    if (f.type === 'mutual') { const { deletePost } = await import('../../../services/mutual'); await deletePost(f.targetId); }
+                    if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { deleteDoc, doc } = await import('firebase/firestore'); await deleteDoc(doc(db,'ratings', f.targetId)); }
+                    const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags();
+                  } catch {}
+                }}
+                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
+              >
+                <Text style={{ color: palette.text, fontWeight: '700' }}>Delete Item</Text>
+              </Pressable>
             </View>
           </View>
         ))}
