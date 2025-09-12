@@ -19,6 +19,7 @@ import {
 import { useSettings, TextScale, ResourceFormat } from "../../store/settings";
 
 import { useAuth } from "../../context/AuthContext";
+import { Link } from "expo-router";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
@@ -177,6 +178,12 @@ export default function SettingsScreen() {
       <Section title="Terms & Policies" styles={styles}>
         <TermsSection />
       </Section>
+
+      {user && (
+        <Section title="Admin" styles={styles}>
+          <AdminSection />
+        </Section>
+      )}
     </ScrollView>
   );
 }
@@ -385,6 +392,26 @@ function TermsSection() {
       <Button title="View Terms" onPress={openTerms} />
       <View style={{ height: 8 }} />
       <Button title="Require re-acceptance" onPress={reset} />
+    </View>
+  );
+}
+
+function AdminSection() {
+  const { isAdmin, refreshClaims } = useAuth();
+  const palette = useAppPalette();
+  return (
+    <View>
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>
+        Status: {isAdmin ? "Admin" : "Standard user"}
+      </Text>
+      <Button title="Refresh admin status" onPress={refreshClaims} />
+      {isAdmin && (
+        <View style={{ marginTop: 8 }}>
+          <Link href={"/(tabs)/admin" as any}>
+            <Text style={{ color: palette.primary, fontWeight: "700" }}>Open Admin Panel</Text>
+          </Link>
+        </View>
+      )}
     </View>
   );
 }

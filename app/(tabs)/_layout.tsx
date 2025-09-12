@@ -113,6 +113,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="wellness" options={{ href: null }} />
       <Tabs.Screen name="saved" options={{ href: null }} />
       <Tabs.Screen name="about" options={{ href: null }} />
+      <Tabs.Screen name="admin/index" options={{ href: null }} />
 
       {/* ✅ Main visible tabs */}
 
