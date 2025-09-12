@@ -5,6 +5,7 @@ import { useAppPalette } from '../../../theme/usePalette';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { addMedication, listMedications, deleteMedication, addMedLog, listLogs, updateMedication, type Medication, type MedLog } from '../../../services/meds';
 import * as Notifier from '../../../services/notifications';
+import DateTimeField from '../../../components/DateTimeField';
 
 export const options = { href: null };
 
@@ -49,8 +50,8 @@ export default function MedsTracker() {
       <TextInput placeholder="Medication name" placeholderTextColor={palette.text+"77"} value={name} onChangeText={setName} style={s.input} />
       <TextInput placeholder="Dose (e.g., 10mg)" placeholderTextColor={palette.text+"77"} value={dose} onChangeText={setDose} style={s.input} />
       <TextInput placeholder="Schedule (e.g., 2x daily)" placeholderTextColor={palette.text+"77"} value={schedule} onChangeText={setSchedule} style={s.input} />
-      <TextInput placeholder="Reminder time HH:MM (optional)" placeholderTextColor={palette.text+"77"} value={remind} onChangeText={setRemind} style={s.input} />
-      <TextInput placeholder="Refill date YYYY-MM-DD (optional)" placeholderTextColor={palette.text+"77"} value={refill} onChangeText={setRefill} style={s.input} />
+      <DateTimeField label="Reminder time (optional)" mode="time" value={remind} onChange={setRemind} />
+      <DateTimeField label="Refill date (optional)" mode="date" value={refill} onChange={setRefill} />
       <A11yPressable onPress={async()=>{ try { await addMedication({ name: name.trim(), dose, schedule, reminderTime: remind || undefined, refillAt: refill || undefined }); setName(''); setDose(''); setSchedule(''); setRemind(''); setRefill(''); load(); } catch { Alert.alert('Add failed','Unable to add med'); } }} style={s.button}><Text style={s.buttonText}>Add Medication</Text></A11yPressable>
 
       <FlatList data={items} keyExtractor={m=>m.id!} renderItem={({item}) => (

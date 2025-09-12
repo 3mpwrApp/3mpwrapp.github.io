@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Alert, Pressable, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Alert, Pressable } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import DeadlinesList from './deadlines-list';
@@ -33,6 +33,7 @@ function DeadlinesCalendar() {
   const [month, setMonth] = React.useState(() => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), 1); });
   const [items, setItems] = React.useState<Deadline[]>([]);
   const [selectedDay, setSelectedDay] = React.useState<string | null>(null);
+  const [view, setView] = React.useState<'month'|'week'>('month');
   React.useEffect(() => { (async () => { try { setItems(await listDeadlines()); } catch {} })(); }, []);
   const monthLabel = React.useMemo(() => month.toLocaleString(undefined, { month:'long', year:'numeric' }), [month]);
   const matrix = React.useMemo(()=> buildMonthMatrix(month), [month]);
@@ -44,12 +45,16 @@ function DeadlinesCalendar() {
         <Text style={{ color: palette.text, fontWeight:'700' }}>{monthLabel}</Text>
         <Pressable onPress={()=> setMonth(prev => new Date(prev.getFullYear(), prev.getMonth()+1, 1))}><Text style={{ color: palette.text }}>{'>'}</Text></Pressable>
       </View>
-      {matrix.map((week, wi) => (
+      <View style={{ flexDirection:'row', gap:8, marginBottom: 6 }}>
+        <Pressable onPress={()=>setView('month')} style={[s.chip, view==='month'&&s.chipActive]}><Text style={{ color: view==='month'? palette.onPrimary: palette.text, fontWeight:'700' }}>Month</Text></Pressable>
+        <Pressable onPress={()=>setView('week')} style={[s.chip, view==='week'&&s.chipActive]}><Text style={{ color: view==='week'? palette.onPrimary: palette.text, fontWeight:'700' }}>Week</Text></Pressable>
+      </View>
+      {(view==='month'? matrix : [currentWeekFromMatrix(matrix)]).map((week, wi) => (
         <View key={wi} style={{ flexDirection:'row', justifyContent:'space-between', marginBottom: 4 }}>
           {week.map((day, di) => (
             <Pressable key={di} onPress={()=> day && setSelectedDay(dayKeyFromMatrix(month, day))} style={{ width: 40, height: 40, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems:'center', justifyContent:'center', backgroundColor: selectedDay===dayKeyFromMatrix(month, day) ? palette.primary : palette.surface }}>
               <Text style={{ color: selectedDay===dayKeyFromMatrix(month, day) ? palette.onPrimary : palette.text }}>{day ?? ''}</Text>
-              {!!day && !!byDay.get(dayKeyFromMatrix(month, day)) && <View style={{ width: 6, height: 6, borderRadius:3, backgroundColor: palette.primary, position:'absolute', bottom: 4 }} />}
+              {!!day && !!byDay.get(dayKeyFromMatrix(month, day)) && <View style={{ width: 6, height: 6, borderRadius:3, backgroundColor: dotColor(dayKeyFromMatrix(month, day), items, palette), position:'absolute', bottom: 4 }} />}
             </Pressable>
           ))}
         </View>
@@ -119,4 +124,5 @@ function toDayKey(input: string): string { const d = new Date(input); return `${
 function dayKeyFromMatrix(baseMonth: Date, day: number | null) { if (!day) return ''; const y=baseMonth.getFullYear(); const m=`${baseMonth.getMonth()+1}`.padStart(2,'0'); const dd=`${day}`.padStart(2,'0'); return `${y}-${m}-${dd}`; }
 function buildMonthMatrix(firstOfMonth: Date): (number | null)[][] { const y = firstOfMonth.getFullYear(); const m = firstOfMonth.getMonth(); const first = new Date(y,m,1); const startDay = first.getDay(); const daysInMonth = new Date(y,m+1,0).getDate(); const matrix: (number|null)[][]=[]; let current = 1 - startDay; for (let w=0; w<6; w++){ const week:(number|null)[]=[]; for(let d=0; d<7; d++){ if(current<1||current>daysInMonth) week.push(null); else week.push(current); current++; } matrix.push(week); if (current>daysInMonth) break; } return matrix; }
 function mapDeadlinesByDay(items: { dueAt: string }[]) { const m = new Map<string, number>(); for (const e of items) { const k = toDayKey(e.dueAt); m.set(k, (m.get(k)||0)+1); } return m; }
-
+function currentWeekFromMatrix(matrix: (number|null)[][]) { const today = new Date().getDate(); for (const w of matrix) { if (w.includes(today)) return w; } return matrix[0]; }
+function dotColor(dayKey: string, items: { dueAt: string }[], palette: any) { const d = new Date(dayKey + 'T00:00:00'); const now = new Date(); const dayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime(); const ts = d.getTime(); if (ts < dayStart && items.some(x => toDayKey(x.dueAt)===dayKey)) return '#b00020'; if (ts - dayStart < 7*86400000) return '#f0a500'; return palette.primary; }
