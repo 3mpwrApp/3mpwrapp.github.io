@@ -6,6 +6,8 @@ export type Medication = {
   name: string;
   dose?: string;
   schedule?: string; // e.g., 2x daily
+  reminderTime?: string; // HH:MM local
+  refillAt?: string; // ISO date for refill reminder
   startedAt?: string; // ISO
   notes?: string;
   createdAt?: any;
@@ -49,4 +51,3 @@ export async function listLogs(medId?: string): Promise<MedLog[]> {
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...(d.data() as any) }));
 }
-

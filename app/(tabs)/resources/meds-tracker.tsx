@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, TextInput, Alert, FlatList } from 'react-native
 import A11yPressable from '../../../components/A11yPressable';
 import { useAppPalette } from '../../../theme/usePalette';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { addMedication, listMedications, deleteMedication, addMedLog, listLogs, type Medication, type MedLog } from '../../../services/meds';
+import { addMedication, listMedications, deleteMedication, addMedLog, listLogs, updateMedication, type Medication, type MedLog } from '../../../services/meds';
+import * as Notifier from '../../../services/notifications';
 
 export const options = { href: null };
 
@@ -21,6 +22,8 @@ export default function MedsTracker() {
   const [sideEffects, setSideEffects] = React.useState('');
   const [eff, setEff] = React.useState('');
   const [logs, setLogs] = React.useState<MedLog[]>([]);
+  const [remind, setRemind] = React.useState('');
+  const [refill, setRefill] = React.useState('');
 
   const load = React.useCallback(async () => {
     try { setItems(await listMedications()); } catch {}
@@ -46,15 +49,37 @@ export default function MedsTracker() {
       <TextInput placeholder="Medication name" placeholderTextColor={palette.text+"77"} value={name} onChangeText={setName} style={s.input} />
       <TextInput placeholder="Dose (e.g., 10mg)" placeholderTextColor={palette.text+"77"} value={dose} onChangeText={setDose} style={s.input} />
       <TextInput placeholder="Schedule (e.g., 2x daily)" placeholderTextColor={palette.text+"77"} value={schedule} onChangeText={setSchedule} style={s.input} />
-      <A11yPressable onPress={async()=>{ try { await addMedication({ name: name.trim(), dose, schedule }); setName(''); setDose(''); setSchedule(''); load(); } catch { Alert.alert('Add failed','Unable to add med'); } }} style={s.button}><Text style={s.buttonText}>Add Medication</Text></A11yPressable>
+      <TextInput placeholder="Reminder time HH:MM (optional)" placeholderTextColor={palette.text+"77"} value={remind} onChangeText={setRemind} style={s.input} />
+      <TextInput placeholder="Refill date YYYY-MM-DD (optional)" placeholderTextColor={palette.text+"77"} value={refill} onChangeText={setRefill} style={s.input} />
+      <A11yPressable onPress={async()=>{ try { await addMedication({ name: name.trim(), dose, schedule, reminderTime: remind || undefined, refillAt: refill || undefined }); setName(''); setDose(''); setSchedule(''); setRemind(''); setRefill(''); load(); } catch { Alert.alert('Add failed','Unable to add med'); } }} style={s.button}><Text style={s.buttonText}>Add Medication</Text></A11yPressable>
 
       <FlatList data={items} keyExtractor={m=>m.id!} renderItem={({item}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{item.name}</Text>
           <Text style={s.cardText}>Dose: {item.dose || '-'}</Text>
           <Text style={s.cardText}>Schedule: {item.schedule || '-'}</Text>
+          <Text style={s.cardText}>Reminder: {item.reminderTime || '-'}</Text>
+          <Text style={s.cardText}>Refill: {item.refillAt ? new Date(item.refillAt).toLocaleDateString() : '-'}</Text>
           <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
             <A11yPressable onPress={()=> setSelectedMed(item.id!)} style={s.smallBtn}><Text style={s.smallBtnText}>Logs</Text></A11yPressable>
+            <A11yPressable onPress={async()=>{
+              // Schedule 7 days of daily reminders at given HH:MM
+              try {
+                const [hh,mm] = (item.reminderTime || '09:00').split(':').map(x=>Number(x));
+                for (let i=0;i<7;i++) {
+                  const d = new Date(); d.setHours(hh, mm, 0, 0); d.setDate(d.getDate()+i);
+                  await Notifier.scheduleAt(d, 'Medication', `Time to take ${item.name}`);
+                }
+                Alert.alert('Scheduled','Reminders for the next 7 days.');
+              } catch { Alert.alert('Failed','Could not schedule reminders'); }
+            }} style={s.smallBtn}><Text style={s.smallBtnText}>Remind daily</Text></A11yPressable>
+            <A11yPressable onPress={async()=>{
+              try {
+                if (!item.refillAt) { Alert.alert('Set refill','No refill date set.'); return; }
+                await Notifier.scheduleAt(new Date(item.refillAt), 'Refill reminder', `Refill ${item.name}`);
+                Alert.alert('Scheduled','Refill reminder set.');
+              } catch { Alert.alert('Failed','Could not schedule refill'); }
+            }} style={s.smallBtn}><Text style={s.smallBtnText}>Refill alert</Text></A11yPressable>
             <A11yPressable onPress={async()=>{ try { await deleteMedication(item.id!); setItems(prev=>prev.filter(x=>x.id!==item.id)); if (selectedMed===item.id) setSelectedMed(''); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Delete</Text></A11yPressable>
           </View>
         </View>
@@ -90,4 +115,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     smallBtnText: { color: palette.text, fontWeight: '700' },
   });
 }
-

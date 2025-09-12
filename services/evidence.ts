@@ -1,5 +1,5 @@
 import { auth, db, storage } from '../firebase/config';
-import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, getDocs, orderBy, query, serverTimestamp, limit as fsLimit, startAfter as fsStartAfter } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 
 export type EvidenceFile = {
@@ -87,6 +87,18 @@ export async function listEvidence(): Promise<any[]> {
   const q = query(col, orderBy('createdAt', 'desc'));
   const snap = await getDocs(q);
   return snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) }));
+}
+
+export async function listEvidencePage(pageSize = 10, cursor?: any): Promise<{ items: any[]; cursor: any | null }> {
+  const uid = auth.currentUser?.uid;
+  if (!uid) throw new Error('Not signed in');
+  const col = collection(db, 'users', uid, 'evidence');
+  const base = query(col, orderBy('createdAt', 'desc'), fsLimit(pageSize));
+  const q = cursor ? query(base, fsStartAfter(cursor)) : base;
+  const snap = await getDocs(q);
+  const items = snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) }));
+  const next = snap.docs[snap.docs.length - 1] || null;
+  return { items, cursor: next };
 }
 
 export async function deleteEvidenceDoc(id: string): Promise<boolean> {

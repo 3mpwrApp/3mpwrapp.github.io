@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, FlatList, Alert, Pressable } from "r
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar";
 import { useAuth } from "../../../context/AuthContext";
-import { addEvidenceNote, uploadEvidenceFileWithProgress, listEvidence, deleteEvidenceDoc, type EvidenceFile } from "../../../services/evidence";
+import { addEvidenceNote, uploadEvidenceFileWithProgress, listEvidence, deleteEvidenceDoc, listEvidencePage, type EvidenceFile } from "../../../services/evidence";
 // Linking added when preview links are active; safe to lazy import when needed
 import { useAppPalette } from "../../../theme/usePalette";
 import {
@@ -34,6 +34,7 @@ export default function EvidenceLocker() {
   const [tag, setTag] = React.useState("");
   const [notes, setNotes] = React.useState<Note[]>([]);
   const [cloudItems, setCloudItems] = React.useState<any[]>([]);
+  const [cloudCursor, setCloudCursor] = React.useState<any | null>(null);
   const [filter, setFilter] = React.useState<string>("");
   const [query, setQuery] = React.useState<string>("");
   const [processing, setProcessing] = React.useState(false);
@@ -290,12 +291,24 @@ export default function EvidenceLocker() {
           <A11yPressable
             accessibilityLabel="Load Cloud"
             onPress={async () => {
-              try { const rows = await listEvidence(); setCloudItems(rows); Alert.alert('Cloud', `${rows.length} items in your locker.`); }
+              try { const { items, cursor } = await listEvidencePage(10, null); setCloudItems(items); setCloudCursor(cursor); Alert.alert('Cloud', `${items.length} items loaded.`); }
               catch { Alert.alert('Load failed', 'Unable to load cloud items'); }
             }}
             style={styles.secondary}
           >
             <Text style={styles.buttonText}>Load Cloud</Text>
+          </A11yPressable>
+        )}
+        {user && cloudCursor && (
+          <A11yPressable
+            accessibilityLabel="Load more Cloud"
+            onPress={async () => {
+              try { const { items, cursor } = await listEvidencePage(10, cloudCursor); setCloudItems(prev => prev.concat(items)); setCloudCursor(cursor); }
+              catch { Alert.alert('Load failed', 'Unable to load more'); }
+            }}
+            style={styles.secondary}
+          >
+            <Text style={styles.buttonText}>Load more</Text>
           </A11yPressable>
         )}
         <A11yPressable
@@ -382,6 +395,13 @@ export default function EvidenceLocker() {
                 <Text style={[styles.noteText, selectedCloud[c.id] ? { fontWeight: '700' } : null]}>
                   {(c.createdAt?.toDate?.() || new Date()).toLocaleString()} - {c.text || '(no text)'}
                 </Text>
+                {Array.isArray(c.files) && c.files[0]?.url && /\.(png|jpe?g|gif|webp)$/i.test(c.files[0].url) ? (
+                  <View style={{ marginTop: 6 }}>
+                    {(() => { try { const { Image } = require('expo-image'); return (
+                      <Image source={{ uri: c.files[0].url }} style={{ width: 100, height: 60, borderRadius: 6 }} />
+                    ); } catch { return null; } })()}
+                  </View>
+                ) : null}
               </View>
               <Pressable
                 accessibilityRole="checkbox"
