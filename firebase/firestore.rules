@@ -126,6 +126,12 @@ service cloud.firestore {
       allow create, update: if isSignedIn() && docId.matches('^' + request.auth.uid + '_.*$');
     }
 
+    // Rating targets (public read; write signed-in)
+    match /rating_targets/{docId} {
+      allow read: if true;
+      allow create, update: if isSignedIn();
+    }
+
     // Wellness reflections under a user
     match /users/{uid}/wellness_reflections/{docId} {
       allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);

@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, Pressable, Alert, FlatList } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
-import { addRating, listRatings, upsertRating } from '../../../services/ratings';
+import { useAuth } from '../../../context/AuthContext';
+import { addRating, listRatings, upsertRating, ensureTarget, listTargets } from '../../../services/ratings';
 import { flagItem } from '../../../services/moderation';
 import SimpleBarChart from '../../../components/SimpleBarChart';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -11,6 +12,7 @@ export const options = { href: null };
 export default function Ratings() {
   const palette = useAppPalette();
   const s = styles(palette);
+  const { isAdmin } = useAuth();
   const [target, setTarget] = React.useState('Hospital X');
   const [kind, setKind] = React.useState('hospital');
   const [score, setScore] = React.useState('5');
@@ -24,6 +26,7 @@ export default function Ratings() {
   const load = React.useCallback(async()=>{ try{ setItems(await listRatings(target)); } catch{} },[target]);
   React.useEffect(()=>{ load(); },[load]);
   const avg = items.length ? (items.reduce((s,i)=>s+(i.score||0),0)/items.length).toFixed(1) : '-';
+  const visible = items.filter(i => isAdmin ? true : (i.approved === true));
   const dist = [1,2,3,4,5].map(n => ({ n, c: items.filter(i => i.score===n).length }));
   return (
     <View style={s.container}>
@@ -33,7 +36,7 @@ export default function Ratings() {
           placeholder="Target (name)"
           placeholderTextColor={palette.text+'77'}
           value={target}
-          onChangeText={async (t)=>{ setTarget(t); try { const recents = await listRatings(t || ''); const uniq = Array.from(new Set(recents.map(r=> r.target))).filter(x=> x.toLowerCase().includes((t||'').toLowerCase())); setSuggestions(uniq.slice(0,8)); setShowSug(!!t); } catch {} }}
+          onChangeText={async (t)=>{ setTarget(t); try { const sug = await listTargets(t || ''); setSuggestions(sug); setShowSug(!!t); } catch {} }}
           style={s.input}
         />
         {showSug && suggestions.length>0 && (
@@ -57,8 +60,8 @@ export default function Ratings() {
       </View>
       <TextInput placeholder="Score 1-5" placeholderTextColor={palette.text+'77'} value={score} onChangeText={setScore} style={s.input} />
       <TextInput placeholder="Comment (optional)" placeholderTextColor={palette.text+'77'} value={comment} onChangeText={setComment} style={s.input} />
-      <Pressable onPress={async()=>{ try{ const key = `rate:${target}`; const last = await AsyncStorage.getItem(key); if (last && (Date.now() - Number(last) < 5*60*1000)) { Alert.alert('Slow down','Please wait before submitting again.'); return; } await upsertRating({ target, kind: kind as any, score: Number(score)||0, comment }); await AsyncStorage.setItem(key, String(Date.now())); setComment(''); setScore('5'); load(); } catch (e:any) { Alert.alert('Failed', e?.message || 'Could not submit'); } }} style={s.button}><Text style={s.buttonText}>Submit Rating</Text></Pressable>
-      <FlatList data={[...items].sort((a,b)=> sort==='latest'? ((b.createdAt?.toDate?.()?.getTime?.()||0) - (a.createdAt?.toDate?.()?.getTime?.()||0)) : ((b.score||0)-(a.score||0)))} keyExtractor={i=>i.id} renderItem={({item:i}) => (
+      <Pressable onPress={async()=>{ try{ const key = `rate:${target}`; const last = await AsyncStorage.getItem(key); if (last && (Date.now() - Number(last) < 5*60*1000)) { Alert.alert('Slow down','Please wait before submitting again.'); return; } await ensureTarget(target); await upsertRating({ target, kind: kind as any, score: Number(score)||0, comment }); await AsyncStorage.setItem(key, String(Date.now())); setComment(''); setScore('5'); load(); } catch (e:any) { Alert.alert('Failed', e?.message || 'Could not submit'); } }} style={s.button}><Text style={s.buttonText}>Submit Rating</Text></Pressable>
+      <FlatList data={[...visible].sort((a,b)=> sort==='latest'? ((b.createdAt?.toDate?.()?.getTime?.()||0) - (a.createdAt?.toDate?.()?.getTime?.()||0)) : ((b.score||0)-(a.score||0)))} keyExtractor={i=>i.id} renderItem={({item:i}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{i.score} ★</Text>
           {!!i.comment && <Text style={s.text}>{i.comment}</Text>}

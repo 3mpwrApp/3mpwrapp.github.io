@@ -4,6 +4,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { useAppPalette } from '../../../theme/usePalette';
 import { db } from '../../../firebase/config';
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp, onSnapshot, setDoc, doc } from 'firebase/firestore';
+import { registerExpoPushToken } from '../../../services/tokens';
 import { auth } from '../../../firebase/config';
 
 export const options = { href: null };
@@ -15,10 +16,21 @@ export default function MutualChat() {
   const [msg, setMsg] = React.useState('');
   const [items, setItems] = React.useState<any[]>([]);
   const [roster, setRoster] = React.useState<any[]>([]);
+  const lastRef = React.useRef<number>(0);
   React.useEffect(()=>{
     try {
       const q = query(collection(db,'mutual_aid_posts', String(id), 'chat'), orderBy('createdAt','asc'));
-      const unsub = onSnapshot(q, (snap) => { setItems(snap.docs.map(d=>({ id:d.id, ...(d.data() as any) }))); });
+      const unsub = onSnapshot(q, async (snap) => {
+        const rows = snap.docs.map(d=>({ id:d.id, ...(d.data() as any) }));
+        setItems(rows);
+        const me = auth.currentUser?.uid || 'anon';
+        const latest = rows[rows.length-1];
+        const ts = latest?.createdAt?.toDate?.()?.getTime?.() || 0;
+        if (latest && ts && ts > lastRef.current && latest.author && latest.author !== me) {
+          try { const Notifications = await import('expo-notifications'); await Notifications.scheduleNotificationAsync({ content: { title: 'New message', body: String(latest.message||'') }, trigger: null }); } catch {}
+        }
+        if (ts) lastRef.current = ts;
+      });
       return () => unsub();
     } catch {}
   },[id]);
@@ -28,6 +40,8 @@ export default function MutualChat() {
     const ref = doc(db, 'mutual_aid_posts', String(id), 'presence', uid);
     (async () => { try { await setDoc(ref, { lastSeen: serverTimestamp(), typing: false }, { merge: true }); } catch {} })();
     const i = setInterval(async()=>{ try { await setDoc(ref, { lastSeen: serverTimestamp() }, { merge: true }); } catch {} }, 30000);
+    // Register device token for server-based push (Expo token)
+    registerExpoPushToken();
     return () => { clearInterval(i); };
   }, [id]);
   // Roster snapshot
@@ -51,7 +65,7 @@ export default function MutualChat() {
       {items.map(i => (<Text key={i.id} style={s.text}>• {new Date(i.createdAt?.toDate?.()||Date.now()).toLocaleTimeString()} — {i.message}</Text>))}
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         <TextInput placeholder="Message" placeholderTextColor={palette.text+'77'} value={msg} onChangeText={async (t)=>{ setMsg(t); try { const uid = auth.currentUser?.uid || 'anon'; await setDoc(doc(db,'mutual_aid_posts', String(id), 'presence', uid), { typing: !!t }, { merge: true }); } catch {} }} style={[s.input,{ flex:1 }]} />
-        <Pressable onPress={async()=>{ try{ await addDoc(collection(db,'mutual_aid_posts', String(id), 'chat'), { message: msg, createdAt: serverTimestamp() }); setMsg(''); } catch { Alert.alert('Failed','Could not send'); } }} style={s.button}><Text style={s.buttonText}>Send</Text></Pressable>
+        <Pressable onPress={async()=>{ try{ await addDoc(collection(db,'mutual_aid_posts', String(id), 'chat'), { message: msg, createdAt: serverTimestamp(), author: auth.currentUser?.uid || 'anon' }); setMsg(''); } catch { Alert.alert('Failed','Could not send'); } }} style={s.button}><Text style={s.buttonText}>Send</Text></Pressable>
       </View>
     </View>
   );

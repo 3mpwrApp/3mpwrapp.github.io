@@ -285,9 +285,19 @@ export default function AdminPanel() {
               <Pressable onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(Object.keys(selectedFlags).filter(id=>selectedFlags[id]).map(id=> resolveFlag(id))); setSelectedFlags({}); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Resolve selected</Text></Pressable>
               <Pressable onPress={async()=>{ try {
                 const sel = flags.filter(f=> selectedFlags[f.id]);
+                const { db } = await import('../../../firebase/config');
+                const { updateDoc, doc } = await import('firebase/firestore');
                 for (const f of sel) {
-                  if (f.type === 'mutual') { const { deletePost } = await import('../../../services/mutual'); await deletePost(f.targetId); }
-                  if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { deleteDoc, doc } = await import('firebase/firestore'); await deleteDoc(doc(db,'ratings', f.targetId)); }
+                  if (f.type === 'rating') await updateDoc(doc(db,'ratings', f.targetId), { approved: true });
+                  if (f.type === 'mutual') await updateDoc(doc(db,'mutual_aid_posts', f.targetId), { approved: true });
+                }
+                const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map(f=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags();
+              } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Approve selected</Text></Pressable>
+              <Pressable onPress={async()=>{ try {
+                const sel = flags.filter(f=> selectedFlags[f.id]);
+                for (const f of sel) {
+                  if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); }
+                  if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { updateDoc, doc } = await import('firebase/firestore'); await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); }
                 }
                 const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map(f=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags();
               } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Delete items</Text></Pressable>
@@ -336,16 +346,16 @@ export default function AdminPanel() {
                 >
                   <Text style={{ color: palette.text, fontWeight: '700' }}>Resolve</Text>
                 </Pressable>
-                <Pressable
-                  onPress={async () => {
-                    try {
-                      if (f.type === 'mutual') { const { deletePost } = await import('../../../services/mutual'); await deletePost(f.targetId); }
-                      if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { deleteDoc, doc } = await import('firebase/firestore'); await deleteDoc(doc(db,'ratings', f.targetId)); }
-                      const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags();
-                    } catch {}
-                  }}
-                  style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
-                >
+              <Pressable
+                onPress={async () => {
+                  try {
+                    if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); }
+                    if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { updateDoc, doc } = await import('firebase/firestore'); await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); }
+                    const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags();
+                  } catch {}
+                }}
+                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
+              >
                   <Text style={{ color: palette.text, fontWeight: '700' }}>Delete Item</Text>
                 </Pressable>
               </View>

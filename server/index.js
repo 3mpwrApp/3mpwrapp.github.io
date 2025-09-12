@@ -9,6 +9,24 @@ const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 20 
 
 app.get('/', (_req, res) => res.send('EmpowrApp server ok'));
 
+// Simple web crawler: fetch URL and extract title + meta description + links
+app.get('/crawl', async (req, res) => {
+  try {
+    const url = String(req.query.url || '');
+    if (!/^https?:\/\//i.test(url)) return res.status(400).json({ error: 'invalid url' });
+    const html = await (await fetch(url)).text();
+    const cheerio = (await import('cheerio')).default;
+    const $ = cheerio.load(html);
+    const title = $('title').first().text().trim();
+    const desc = $('meta[name="description"]').attr('content') || $('meta[property="og:description"]').attr('content') || '';
+    const links = [];
+    $('a[href]').slice(0, 50).each((_, a) => { const href = $(a).attr('href'); if (href) links.push(href); });
+    res.json({ title, description: desc, links });
+  } catch (e) {
+    res.status(500).json({ error: 'crawl failed' });
+  }
+});
+
 // Simple analyzer stub: returns generic ergonomic suggestions
 app.post('/analyze-body', upload.single('file'), async (req, res) => {
   try {
@@ -65,3 +83,28 @@ async function extractTextFromBuffer(buf, mime) {
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Server listening on ${port}`));
+
+// Optional: FCM webhook for server-based notifications
+try {
+  // Initialize admin only if service account available
+  let admin;
+  if (process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+    admin = await import('firebase-admin');
+    if (!admin.apps?.length) {
+      admin.initializeApp({
+        credential: admin.credential.applicationDefault(),
+      });
+    }
+  }
+  app.post('/notify-chat', express.json(), async (req, res) => {
+    try {
+      if (!admin) return res.status(200).json({ status: 'noop' });
+      const { token, title, body, data } = req.body || {};
+      if (!token) return res.status(400).json({ error: 'token required' });
+      const id = await admin.messaging().send({ token, notification: { title, body }, data: data || {} });
+      res.json({ id });
+    } catch (e) {
+      res.status(500).json({ error: 'notify failed' });
+    }
+  });
+} catch {}

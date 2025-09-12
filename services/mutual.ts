@@ -1,5 +1,5 @@
 import { auth, db } from '../firebase/config';
-import { addDoc, collection, deleteDoc, doc, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, deleteDoc, doc, getDocs, orderBy, query, serverTimestamp, updateDoc } from 'firebase/firestore';
 
 export type AidPost = { id?: string; type: string; description: string; city?: string; contact?: string; createdAt?: any };
 export type AidResponse = { id?: string; message: string; createdAt?: any };
@@ -18,4 +18,6 @@ export async function respondToPost(postId: string, message: string) {
 export async function deletePost(id: string) {
   await deleteDoc(doc(db, 'mutual_aid_posts', id));
 }
-
+export async function softDeletePost(id: string) {
+  await updateDoc(doc(db,'mutual_aid_posts', id), { deleted: true });
+}
