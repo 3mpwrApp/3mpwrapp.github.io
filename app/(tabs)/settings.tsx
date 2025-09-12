@@ -187,7 +187,6 @@ function A11ySettingsSection() {
   const {
     highContrast,
     setHighContrast,
-    textScale,
     setTextScale,
     dyslexiaFriendly,
     setDyslexiaFriendly,
@@ -195,7 +194,6 @@ function A11ySettingsSection() {
     setPlainLanguage,
     captionsPreferred,
     setCaptionsPreferred,
-    resourcePreferredFormat,
     setResourcePreferredFormat,
   } = useSettings();
 

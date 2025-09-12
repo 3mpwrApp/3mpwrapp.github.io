@@ -7,7 +7,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import * as Print from "expo-print";
+// Lazy-load Printing when needed to avoid dev-client crashes
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -105,6 +105,7 @@ export default function ClaimsNavigator() {
             onPress={async () => {
               const html = `<!DOCTYPE html><html><body><h1>Guided Claims Navigator</h1><p><b>Incident:</b> ${incident}</p><p><b>Employer:</b> ${employer}</p><p><b>Limitations:</b> ${limitations}</p><h2>Steps</h2><ol>${nextSteps.map((s) => `<li>${s}</li>`).join("")}</ol></body></html>`;
               try {
+                const Print = await import("expo-print");
                 await Print.printAsync({ html });
               } catch {}
             }}

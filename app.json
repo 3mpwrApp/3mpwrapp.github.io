@@ -12,6 +12,9 @@
     "updates": {
       "checkAutomatically": "ON_ERROR_RECOVERY"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },

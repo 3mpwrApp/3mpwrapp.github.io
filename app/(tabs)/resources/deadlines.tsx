@@ -16,8 +16,7 @@ import {
 } from "../../../hooks/useA11y";
 import * as Notifier from "../../../services/notifications";
 import { buildICS } from "../../../services/ics";
-import * as Sharing from "expo-sharing";
-import * as FileSystem from "expo-file-system";
+// Note: expo-sharing and expo-file-system are loaded lazily when used
 import { addEvent } from "../../../services/calendar";
 
 type Benefit = "WCB" | "LTD" | "CPP-D";
@@ -77,6 +76,7 @@ export default function Deadlines() {
   const exportICS = async () => {
     if (!result) return;
     try {
+      const FileSystem = await import("expo-file-system");
       const d = new Date(decisionDate);
       const map: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
       const due = new Date(d.getTime() + map[benefit] * 86400000);
@@ -90,10 +90,15 @@ export default function Deadlines() {
       await FileSystem.writeAsStringAsync(path, ics, {
         encoding: FileSystem.EncodingType.UTF8,
       });
-      if (await Sharing.isAvailableAsync()) {
-        await Sharing.shareAsync(path);
-      } else {
-        Alert.alert("Saved", "ICS file saved to cache.");
+      try {
+        const Sharing = await import("expo-sharing");
+        if (await Sharing.isAvailableAsync()) {
+          await Sharing.shareAsync(path);
+        } else {
+          Alert.alert("Saved", "ICS file saved to cache.");
+        }
+      } catch {
+        Alert.alert("Saved", "ICS file saved to cache (sharing unavailable).");
       }
     } catch {
       Alert.alert("Export failed", "Could not create ICS file.");

@@ -1,4 +1,4 @@
-import { getFirebaseApp, db as sharedDb } from "../firebase/config";
+import { db as sharedDb } from "../firebase/config";
 
 type Fire = typeof import("firebase/firestore");
 

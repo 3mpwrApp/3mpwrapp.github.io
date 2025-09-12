@@ -107,10 +107,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="advocacy/ai-gov-navigator" options={{ href: null }} />
       <Tabs.Screen name="advocacy/ask" options={{ href: null }} />
       <Tabs.Screen name="resources/index" options={{ href: null }} />
-      <Tabs.Screen
-        name="research/index"
-        options={{ href: null, tabBarButton: () => null }}
-      />
+      <Tabs.Screen name="research/index" options={{ href: null }} />
       <Tabs.Screen name="whatsnew/index" options={{ href: null }} />
       <Tabs.Screen name="faqs" options={{ href: null }} />
       <Tabs.Screen name="wellness" options={{ href: null }} />

@@ -44,7 +44,6 @@ export const db =
     : initializeFirestore(app, {
         // Force long polling on native to avoid WebChannel transport issues
         experimentalForceLongPolling: true,
-        useFetchStreams: false,
       });
 export const storage = getStorage(app);
 
