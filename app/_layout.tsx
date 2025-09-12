@@ -17,11 +17,12 @@ import { SettingsProvider } from "../store/settings";
 import { A11ySettingsProvider } from "../store/a11ySettings";
 import { I18nProvider } from "../i18n";
 import { ProfileLocalProvider } from "../store/profileLocal";
-import { PrivacyProvider } from "../store/privacy";
+import { PrivacyProvider, usePrivacy } from "../store/privacy";
 
 import * as Notifier from "../services/notifications";
+import { initSentry, initAnalytics } from "../services/telemetry";
 // Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
-import { getFirebaseAnalytics } from "../firebase/config";
+// removed getFirebaseAnalytics direct import (handled via telemetry module)
 
 export default function RootLayout() {
   const [reduceMotion, setReduceMotion] = React.useState(false);
@@ -52,15 +53,6 @@ export default function RootLayout() {
     });
   }, []);
 
-  // Ã°Å¸â€Â¹ Firebase Analytics (web only)
-  React.useEffect(() => {
-    getFirebaseAnalytics().then((analytics) => {
-      if (analytics && __DEV__) {
-        console.log("Firebase Analytics initialized");
-      }
-    });
-  }, []);
-
   // Announce route changes for screen readers
   const pathname = usePathname();
   React.useEffect(() => {
@@ -87,7 +79,7 @@ export default function RootLayout() {
                           <Header />
                         </View>
                         <TermsGate>
-                          <ChangelogGate>
+                          <ChangelogGate>\n                            <TelemetryInit />
                             <Stack
                               screenOptions={{
                                 animation: reduceMotion ? "none" : "default",
@@ -126,6 +118,22 @@ export default function RootLayout() {
   );
 }
 
+function TelemetryInit() {
+  const { state } = usePrivacy();
+  React.useEffect(() => {
+    if (state.errorReportingEnabled) {
+      const dsn = process.env.EXPO_PUBLIC_SENTRY_DSN as string | undefined;
+      if (dsn) initSentry(dsn);
+    }
+  }, [state.errorReportingEnabled]);
+  React.useEffect(() => {
+    if (state.analyticsEnabled) {
+      initAnalytics();
+    }
+  }, [state.analyticsEnabled]);
+  return null;
+}
+
 function OfflineBanner() {
   const { offline } = useNetwork();
   if (!offline) return null;
@@ -148,3 +156,7 @@ const bannerStyles = StyleSheet.create({
   },
   text: { color: "#fff", textAlign: "center", fontWeight: "700" },
 });
+
+
+
+

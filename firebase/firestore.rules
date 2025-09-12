@@ -10,10 +10,21 @@ service cloud.firestore {
       allow write, update, delete: if isAdmin();
     }
 
-    // Campaign rooms: allow read to signed-in users; writes only by signed-in users.
+    // Campaign rooms metadata: owner/moderator control
+    function isRoomStaff(roomId) {
+      return exists(/databases/$(database)/documents/campaign_rooms/$(roomId)) &&
+        (get(/databases/$(database)/documents/campaign_rooms/$(roomId)).data.ownerUid == request.auth.uid ||
+         request.auth.uid in (get(/databases/$(database)/documents/campaign_rooms/$(roomId)).data.mods));
+    }
+    match /campaign_rooms/{roomId} {
+      allow read: if isSignedIn();
+      // anyone signed-in can create a new room doc as owner
+      allow create: if isSignedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow update, delete: if isRoomStaff(roomId);
+    }
     match /campaign_rooms/{roomId}/{collectionId=**}/{docId} {
       allow read: if isSignedIn();
-      allow write, update, delete: if isSignedIn();
+      allow write, update, delete: if isRoomStaff(roomId);
     }
 
     // Public data collections (adjust as needed)
@@ -33,4 +44,3 @@ service cloud.firestore {
     }
   }
 }
-

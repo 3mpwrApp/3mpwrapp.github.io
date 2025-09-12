@@ -1,6 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TextInput, Alert } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
+let AsyncStorage: any;
+try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -43,6 +45,31 @@ export default function TemplatesGallery() {
     } catch {}
   };
 
+  const [vars, setVars] = React.useState({ name: "", claim: "", date: "" });
+  const applyVars = (body: string) =>
+    body
+      .replaceAll("[Your Name]", vars.name || "[Your Name]")
+      .replaceAll("[Claim ID]", vars.claim || "[Claim ID]")
+      .replaceAll("[date]", vars.date || "[date]");
+
+  const saveDraft = async (title: string, body: string) => {
+    try {
+      const key = "templates:drafts";
+      const raw = (await AsyncStorage?.getItem?.(key)) || "[]";
+      const arr = JSON.parse(raw);
+      arr.unshift({ id: String(Date.now()), title, body, vars });
+      await AsyncStorage?.setItem?.(key, JSON.stringify(arr));
+      Alert.alert("Saved", "Draft saved locally");
+    } catch {}
+  };
+
+  const [drafts, setDrafts] = React.useState<any[]>([]);
+  React.useEffect(() => {
+    (async () => {
+      try { const raw = await AsyncStorage?.getItem?.("templates:drafts"); if (raw) setDrafts(JSON.parse(raw)); } catch {}
+    })();
+  }, []);
+
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text
@@ -54,15 +81,34 @@ export default function TemplatesGallery() {
         Template Gallery
       </Text>
       <Text style={s.subtitle}>Example outputs to help you get started.</Text>
+      <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap", marginBottom: 8 }}>
+        <TextInput style={s.input} placeholder="Your name" value={vars.name} onChangeText={(v)=>setVars({ ...vars, name: v })} />
+        <TextInput style={s.input} placeholder="Claim ID" value={vars.claim} onChangeText={(v)=>setVars({ ...vars, claim: v })} />
+        <TextInput style={s.input} placeholder="date (YYYY-MM-DD)" value={vars.date} onChangeText={(v)=>setVars({ ...vars, date: v })} />
+      </View>
       {EXAMPLES.map((ex) => (
         <View key={ex.title} style={s.card}>
           <Text style={s.cardTitle}>{ex.title}</Text>
-          <Text style={s.cardText}>{ex.body}</Text>
-          <A11yPressable onPress={() => copy(ex.body)} style={s.button}>
+          <Text style={s.cardText}>{applyVars(ex.body)}</Text>
+          <A11yPressable onPress={() => copy(applyVars(ex.body))} style={s.button}>
             <Text style={s.buttonText}>Copy example</Text>
+          </A11yPressable>
+          <A11yPressable onPress={() => saveDraft(ex.title, applyVars(ex.body))} style={[s.button,{ marginTop: 8 }]}>
+            <Text style={s.buttonText}>Save draft</Text>
           </A11yPressable>
         </View>
       ))}
+      {drafts.length > 0 && (
+        <View style={s.card}>
+          <Text style={s.cardTitle}>Drafts</Text>
+          {drafts.map((d)=> (
+            <View key={d.id} style={{ marginBottom: 6 }}>
+              <Text style={s.cardTitle}>{d.title}</Text>
+              <Text style={s.cardText}>{d.body}</Text>
+            </View>
+          ))}
+        </View>
+      )}
     </ScrollView>
   );
 }
@@ -82,6 +128,15 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     },
     cardTitle: { color: palette.text, fontWeight: "700", marginBottom: 6 },
     cardText: { color: palette.text, opacity: 0.95, marginBottom: 8 },
+    input: {
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 6,
+      paddingHorizontal: 10,
+      paddingVertical: 6,
+      color: palette.text,
+      minWidth: 120,
+    },
     button: {
       backgroundColor: palette.primary,
       paddingVertical: 8,

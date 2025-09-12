@@ -8,6 +8,8 @@ try {
 type State = {
   passcode?: string; // stored as plain for demo; prefer SecureStore in prod
   lockWellness?: boolean;
+  analyticsEnabled?: boolean;
+  errorReportingEnabled?: boolean;
 };
 
 const KEY = "empowr.privacy.v1";
@@ -16,6 +18,8 @@ type PrivacyCtx = {
   state: State;
   setPasscode: (p: string | undefined) => Promise<void>;
   setLockWellness: (b: boolean) => Promise<void>;
+  setAnalyticsEnabled: (b: boolean) => Promise<void>;
+  setErrorReportingEnabled: (b: boolean) => Promise<void>;
 };
 
 const Ctx = React.createContext<PrivacyCtx | undefined>(undefined);
@@ -45,8 +49,18 @@ export function PrivacyProvider({ children }: { children: React.ReactNode }) {
     setState(next);
     await persist(next);
   };
+  const setAnalyticsEnabled = async (b: boolean) => {
+    const next = { ...state, analyticsEnabled: b };
+    setState(next);
+    await persist(next);
+  };
+  const setErrorReportingEnabled = async (b: boolean) => {
+    const next = { ...state, errorReportingEnabled: b };
+    setState(next);
+    await persist(next);
+  };
   return (
-    <Ctx.Provider value={{ state, setPasscode, setLockWellness }}>
+    <Ctx.Provider value={{ state, setPasscode, setLockWellness, setAnalyticsEnabled, setErrorReportingEnabled }}>
       {children}
     </Ctx.Provider>
   );

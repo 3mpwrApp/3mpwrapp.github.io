@@ -309,7 +309,7 @@ function LocalProfileSection() {
 function PrivacyBackupSection() {
   const palette = useAppPalette();
   const s = createStyles(palette);
-  const { state, setPasscode, setLockWellness } = usePrivacy();
+  const { state, setPasscode, setLockWellness, setAnalyticsEnabled, setErrorReportingEnabled } = usePrivacy();
   const onExport = async () => {
     const bundle = await exportBackup();
     if (!bundle) return Alert.alert("Export failed", "Storage unavailable.");
@@ -353,6 +353,17 @@ function PrivacyBackupSection() {
   };
   return (
     <View>
+      <Text style={s.rowLabel}>Privacy</Text>
+      <Button
+        title={`Analytics: ${state.analyticsEnabled ? 'On' : 'Off'}`}
+        onPress={() => setAnalyticsEnabled(!state.analyticsEnabled)}
+      />
+      <View style={{ height: 8 }} />
+      <Button
+        title={`Error reporting: ${state.errorReportingEnabled ? 'On' : 'Off'}`}
+        onPress={() => setErrorReportingEnabled(!state.errorReportingEnabled)}
+      />
+      <View style={{ height: 12 }} />
       <Text style={s.rowLabel}>Set/Change Passcode</Text>
       <TextInput
         style={s.input}

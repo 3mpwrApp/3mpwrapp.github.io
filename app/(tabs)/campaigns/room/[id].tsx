@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, Share, Alert, ScrollView } from "react-native";
 import A11yPressable from "../../../../components/A11yPressable";
+import { useAuth } from "../../../../context/AuthContext";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../../theme/usePalette";
 import { getCachedJSON, setCachedJSON } from "../../../../services/cache";
@@ -9,6 +10,9 @@ import {
   fsRoomToggleTask,
   fsRoomSetNotes,
   fsRoomSubscribe,
+  fsRoomEnsureMeta,
+  fsRoomCreateInvite,
+  fsRoomAcceptInvite,
 } from "../../../../services/firestore";
 
 type Task = {
@@ -22,6 +26,7 @@ export const options = { href: null };
 
 export default function CampaignRoom() {
   const { id } = useLocalSearchParams<{ id: string }>();
+  const { user } = useAuth();
   const palette = useAppPalette();
   const s = styles(palette);
   const [tasks, setTasks] = React.useState<Task[]>([
@@ -37,6 +42,7 @@ export default function CampaignRoom() {
   const [notes, setNotes] = React.useState("");
 
   React.useEffect(() => {
+    if (user?.uid && id) fsRoomEnsureMeta(String(id), user.uid);
     (async () => {
       const savedTasks = await getCachedJSON<Task[]>(
         `campaign_room_${id}_tasks`,
@@ -48,6 +54,17 @@ export default function CampaignRoom() {
       if (savedNotes) setNotes(savedNotes);
     })();
   }, [id]);
+  React.useEffect(() => {
+    try {
+      const params = new URLSearchParams((globalThis as any)?.location?.search ?? "");
+      const token = params.get("token");
+      if (token && user?.uid && id) {
+        fsRoomAcceptInvite(String(id), token, user.uid).then((ok) => {
+          if (ok) Alert.alert("Joined", "You are now a moderator for this room.");
+        });
+      }
+    } catch {}
+  }, [user?.uid, id]);
   React.useEffect(() => {
     setCachedJSON(`campaign_room_${id}_tasks`, tasks);
   }, [id, tasks]);
@@ -145,9 +162,20 @@ export default function CampaignRoom() {
         <Text style={s.buttonText}>Export Tasks (CSV)</Text>
       </A11yPressable>
       <View style={{ height: 8 }} />
-      <A11yPressable onPress={shareRoom} style={s.button}>
-        <Text style={s.buttonText}>Share Room Link</Text>
-      </A11yPressable>
+  <A11yPressable onPress={shareRoom} style={s.button}>
+    <Text style={s.buttonText}>Share Room Link</Text>
+  </A11yPressable>
+  <A11yPressable
+    onPress={async () => {
+      const token = await fsRoomCreateInvite(String(id || ""));
+      if (!token) return Alert.alert("Invite", "Unable to create invite.");
+      const url = `${String((globalThis as any)?.location?.origin || "https://empowr.app")}/campaigns/room/${id}?token=${token}`;
+      Share.share({ message: `Join as moderator: ${url}`, url, title: "Invite" }).catch(() => {});
+    }}
+    style={[s.button, { marginTop: 8 }]}
+  >
+    <Text style={s.buttonText}>Invite Moderator</Text>
+  </A11yPressable>
       <View style={{ height: 12 }} />
       <Text style={s.title}>Shared Notes</Text>
       <TextInput

@@ -94,3 +94,54 @@ Without this var, the app uses offline deterministic fallbacks.
 ## Mandatory Terms Gate
 
 On first open, users must accept Terms to proceed. See `components/TermsGate.tsx`. Host your Terms at `https://empowr.app/terms` or update the URL inside the component.
+## Admin setup
+
+Grant yourself admin once using Firebase Admin SDK:
+
+1. Download a Firebase service account JSON for your project.
+2. Place it at `firebase/serviceAccount.json` or set env `GOOGLE_APPLICATION_CREDENTIALS` to the file path.
+3. Run: `npm run admin:set -- <your-uid>`
+4. In the app (Settings), tap "Refresh admin status".
+
+Revoke admin: `npm run admin:set -- <uid> false`
+
+## Firestore security rules
+
+Rules live at `firebase/firestore.rules`. Deploy with:
+
+```
+npm i -g firebase-tools
+firebase login
+firebase deploy --only firestore:rules
+```
+
+## Branding assets
+
+Replace placeholder brand assets with your final files:
+
+- `assets/images/brand-logo.png` (512–1024px square PNG)
+- `assets/images/brand-adaptive.png` (Android adaptive icon foreground, transparent)
+
+Then restart Metro: `npm run metro:clear`.
+
+## Error monitoring (Sentry)
+
+This app integrates `sentry-expo` via the config plugin. To enable reporting:
+
+- Create a Sentry project and organization
+- Set env variables for EAS Build:
+  - `SENTRY_AUTH_TOKEN` (scoped token)
+  - Optional: `EXPO_PUBLIC_SENTRY_DSN` if you prefer DSN-based manual init
+- Update `app.json` plugin options `organization` and `project`
+- Build with EAS: `eas build --profile production --platform android`
+
+During local dev, Sentry only reports if you configure a DSN. You can add `EXPO_PUBLIC_SENTRY_DSN` to a `.env` and load it via Expo env support.
+
+## OTA updates (EAS Update)
+
+- Use EAS Update channels (production/preview/development) and consider enabling Code Signing for tamper resistance.
+- Quick start:
+  - `eas update:configure`
+  - Create channels: `eas channel:create production`, `eas channel:create preview`
+  - Publish: `eas update --channel production`
+- Code signing requires generating keys and setting `EXPO_UPDATE_CODE_SIGNING_CERTIFICATE` etc. See Expo docs.

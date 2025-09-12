@@ -13,6 +13,7 @@ import { buildICS } from "../../../services/ics";
 import { addEvent } from "../../../services/calendar";
 
 type Benefit = "WCB" | "LTD" | "CPP-D";
+type Province = "" | "ON" | "BC" | "AB" | "SK" | "MB" | "QC" | "NB" | "NS" | "PE" | "NL" | "YT" | "NT" | "NU";
 
 export const options = { href: null };
 
@@ -24,19 +25,28 @@ export default function Deadlines() {
   useFocusOnRefOnMount(titleRef);
 
   const [benefit, setBenefit] = React.useState<Benefit>("WCB");
+  const [province, setProvince] = React.useState<Province>("");
   const [decisionDate, setDecisionDate] = React.useState<string>(
     new Date().toISOString().slice(0, 10),
   );
   const [result, setResult] = React.useState<string>("");
 
   const calc = () => {
+    // Optional provincial presets (illustrative; verify locally)
+    const PROV_PRESETS: Partial<Record<Province, Partial<Record<Benefit, number>>>> = {
+      ON: { WCB: 30 },
+      BC: { WCB: 90 },
+      AB: { WCB: 30 },
+      QC: { WCB: 30 },
+    };
     const d = new Date(decisionDate);
     if (isNaN(d.getTime())) {
       Alert.alert("Invalid date", "Enter as YYYY-MM-DD.");
       return;
     }
-    const map: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
-    const days = map[benefit];
+    const base: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
+    const override = (province && PROV_PRESETS[province]?.[benefit]) || undefined;
+    const days = override ?? base[benefit];
     const due = new Date(d.getTime() + days * 24 * 60 * 60 * 1000);
     setResult(
       `Benefit: ${benefit}\nDecision date: ${decisionDate}\nEstimated deadline: ${due.toISOString().slice(0, 10)} (${days} days)\n\nDisclaimer: Deadlines vary by jurisdiction/plan. Confirm with your board/insurer and policy.\nConsider submitting earlier to allow for delays.`,
@@ -71,8 +81,13 @@ export default function Deadlines() {
     try {
       const FileSystem = await import("expo-file-system");
       const d = new Date(decisionDate);
-      const map: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
-      const due = new Date(d.getTime() + map[benefit] * 86400000);
+      const base: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
+      const PROV_PRESETS: Partial<Record<Province, Partial<Record<Benefit, number>>>> = {
+        ON: { WCB: 30 }, BC: { WCB: 90 }, AB: { WCB: 30 }, QC: { WCB: 30 },
+      };
+      const override = (province && PROV_PRESETS[province]?.[benefit]) || undefined;
+      const days = override ?? base[benefit];
+      const due = new Date(d.getTime() + days * 86400000);
       const ics = buildICS({
         title: `Appeal deadline Ã¢â‚¬â€ ${benefit}`,
         description: result,
@@ -112,6 +127,14 @@ export default function Deadlines() {
         Estimate reconsideration/appeal deadlines. Always verify with your
         board/insurer.
       </Text>
+      <Text style={styles.label}>Province/Territory (optional)</Text>
+      <View style={{ flexDirection: "row", gap: 8, marginBottom: 8, flexWrap: "wrap" }}>
+        {(["", "ON", "BC", "AB", "QC", "MB", "SK", "NS", "NB", "PE", "NL", "YT", "NT", "NU"] as Province[]).map((p) => (
+          <A11yPressable key={p || 'ANY'} onPress={() => setProvince(p)} style={[styles.chip, province === p && styles.chipActive]}>
+            <Text style={[styles.chipText, province === p && styles.chipTextActive]}>{p || 'ANY'}</Text>
+          </A11yPressable>
+        ))}
+      </View>
 
       <View
         style={{

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, Alert, ScrollView, Share } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
+import { transcribeAudio } from "../../../services/stt";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -130,6 +131,17 @@ export default function VoiceNotes() {
           style={[s.button, { backgroundColor: "#b00020" }]}
         >
           <Text style={s.buttonText}>Stop recording</Text>
+        </A11yPressable>
+      )}
+      {!!audioUri && (
+        <A11yPressable
+          onPress={async () => {
+            const text = await transcribeAudio(audioUri!);
+            if (text) setSummary((summary ? summary + "\n\n" : "") + text);
+          }}
+          style={[s.button, { marginTop: 8 }]}
+        >
+          <Text style={s.buttonText}>Transcribe</Text>
         </A11yPressable>
       )}
       <A11yPressable onPress={save} style={[s.button, { marginTop: 8 }]}>

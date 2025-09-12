@@ -153,6 +153,53 @@ export async function fsRoomSetNotes(roomId: string, notes: string) {
   }
 }
 
+// Room meta helpers
+export async function fsRoomEnsureMeta(roomId: string, ownerUid: string) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    const ref = m.doc(db, `campaign_rooms/${roomId}`);
+    const snap = await m.getDoc(ref as any);
+    if (!snap.exists()) {
+      await m.setDoc(ref, { ownerUid, mods: [] } as any, { merge: true });
+    }
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export async function fsRoomCreateInvite(roomId: string) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return null;
+  try {
+    const token = String(Date.now());
+    await m.setDoc(m.doc(db, `campaign_rooms/${roomId}/invites`, token), { id: token, createdAt: Date.now() } as any);
+    return token;
+  } catch {
+    return null;
+  }
+}
+
+export async function fsRoomAcceptInvite(roomId: string, token: string, uid: string) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    const invRef = m.doc(db, `campaign_rooms/${roomId}/invites`, token);
+    const inv = await m.getDoc(invRef as any);
+    if (!inv.exists()) return false;
+    const roomRef = m.doc(db, `campaign_rooms/${roomId}`);
+    await m.setDoc(roomRef, { mods: m.arrayUnion(uid) } as any, { merge: true });
+    await m.deleteDoc(invRef as any);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export async function fsRoomSubscribe(
   roomId: string,
   handlers: { onTasks: (list: any[]) => void; onNotes: (txt: string) => void },

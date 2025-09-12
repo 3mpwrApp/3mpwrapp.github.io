@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  FlatList,
-} from "react-native";
+import { View, Text, StyleSheet, TextInput, FlatList, Alert } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -19,7 +13,8 @@ try {
   AsyncStorage = require("@react-native-async-storage/async-storage").default;
 } catch {}
 
-type Note = { id: string; text: string; date: string };
+type Attachment = { name: string; uri: string };
+type Note = { id: string; text: string; date: string; tags?: string[]; files?: Attachment[] };
 
 export const options = { href: null };
 
@@ -30,6 +25,7 @@ export default function EvidenceLocker() {
   useAnnounceOnMount("Evidence Locker");
   useFocusOnRefOnMount(titleRef);
   const [text, setText] = React.useState("");
+  const [tag, setTag] = React.useState("");
   const [notes, setNotes] = React.useState<Note[]>([]);
 
   React.useEffect(() => {
@@ -69,28 +65,61 @@ export default function EvidenceLocker() {
         placeholderTextColor={palette.text + "77"}
         style={styles.input}
       />
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel="Add note"
-        disabled={!text.trim()}
-        onPress={() => {
-          setNotes([
-            {
-              id: String(Date.now()),
-              text: text.trim(),
-              date: new Date().toISOString(),
-            },
-            ...notes,
-          ]);
-          setText("");
-        }}
-        style={({ pressed }) => [
-          styles.button,
-          (!text.trim() || pressed) && { opacity: 0.7 },
-        ]}
-      >
-        <Text style={styles.buttonText}>Add</Text>
-      </Pressable>
+      <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
+        {['call','letter','medical','decision','payment','email'].map((t) => (
+          <A11yPressable key={t} onPress={() => setTag(t)} style={[styles.chip, tag===t && styles.chipActive]}>
+            <Text style={[styles.chipText, tag===t && styles.chipTextActive]}>{t.toUpperCase()}</Text>
+          </A11yPressable>
+        ))}
+      </View>
+      <View style={{ flexDirection: 'row', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
+        <A11yPressable
+          accessibilityLabel="Attach file"
+          onPress={async () => {
+            try {
+              const Doc = await import('expo-document-picker');
+              const res = await Doc.getDocumentAsync({ multiple: false });
+              if (res.canceled || !res.assets?.length) return;
+              const file = res.assets[0];
+              setNotes([{ id: String(Date.now()), text: text.trim() || file.name || 'Attachment', date: new Date().toISOString(), tags: tag? [tag]: [], files: [{ name: file.name || 'file', uri: file.uri }] }, ...notes]);
+              setText(''); setTag('');
+            } catch {
+              Alert.alert('Attach unavailable', 'Document picker not available in this build.');
+            }
+          }}
+          style={styles.secondary}
+        >
+          <Text style={styles.buttonText}>Attach file</Text>
+        </A11yPressable>
+        <A11yPressable
+          accessibilityLabel="Add note"
+          onPress={() => {
+            if (!text.trim()) return;
+            setNotes([{ id: String(Date.now()), text: text.trim(), date: new Date().toISOString(), tags: tag? [tag]: [] }, ...notes]);
+            setText(''); setTag('');
+          }}
+          style={styles.button}
+        >
+          <Text style={styles.buttonText}>Add</Text>
+        </A11yPressable>
+        <A11yPressable
+          accessibilityLabel="Export CSV"
+          onPress={async () => {
+            try {
+              const rows = [['date','tags','text','files'], ...notes.map(n => [n.date, (n.tags||[]).join('|'), n.text.replace(/\n/g,' '), String((n.files||[]).length)])];
+              const csv = rows.map(r=> r.map(x=>`"${(x||'').replace(/"/g,'""')}"`).join(',')).join('\n');
+              const FS = await import('expo-file-system');
+              const path = FS.cacheDirectory + `evidence_${Date.now()}.csv`;
+              await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 });
+              try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) { await Sharing.shareAsync(path); } else { Alert.alert('Saved','CSV saved to cache.'); } }
+              catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
+            } catch { Alert.alert('Export failed','Could not create CSV.'); }
+          }}
+          style={styles.secondary}
+        >
+          <Text style={styles.buttonText}>Export CSV</Text>
+        </A11yPressable>
+      </View>
       <FlatList
         data={notes}
         keyExtractor={(n) => n.id}
@@ -127,6 +156,14 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       alignItems: "center",
       marginTop: 8,
     },
+    secondary: {
+      backgroundColor: palette.surface,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      paddingVertical: 10,
+      borderRadius: 8,
+      alignItems: "center",
+    },
     buttonText: { color: palette.onPrimary, fontWeight: "700" },
     noteRow: {
       paddingVertical: 8,
@@ -134,5 +171,20 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderBottomColor: palette.muted,
     },
     noteText: { color: palette.text },
+    chip: {
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 14,
+      paddingHorizontal: 12,
+      paddingVertical: 6,
+    },
+    chipActive: {
+      backgroundColor: palette.primary,
+      borderColor: palette.primary,
+    },
+    chipText: { color: palette.text },
+    chipTextActive: { color: palette.onPrimary, fontWeight: "700" },
   });
 }
+
+

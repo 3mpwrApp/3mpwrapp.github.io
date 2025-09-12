@@ -12,6 +12,7 @@
     "updates": {
       "checkAutomatically": "ON_ERROR_RECOVERY"
     },
+    "runtimeVersion": { "policy": "sdkVersion" },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -36,6 +37,15 @@
     "plugins": [
       "expo-router",
       [
+        "sentry-expo",
+        {
+          "project": "YOUR_SENTRY_PROJECT",
+          "organization": "YOUR_ORG",
+          "url": "https://sentry.io/",
+          "autoInit": false
+        }
+      ],
+      [
         "expo-splash-screen",
         {
           "image": "./assets/images/brand-logo.png",
@@ -49,7 +59,8 @@
         {
           "mode": "production"
         }
-      ]
+      ],
+      "sentry-expo"
     ],
     "experiments": {
       "typedRoutes": true
