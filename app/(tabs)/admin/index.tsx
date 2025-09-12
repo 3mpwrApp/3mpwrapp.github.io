@@ -20,6 +20,7 @@ export default function AdminPanel() {
   const [users, setUsers] = React.useState<any[]>([]);
   const [cursor, setCursor] = React.useState<any | null>(null);
   const [flags, setFlags] = React.useState<any[]>([]);
+  const [selectedFlags, setSelectedFlags] = React.useState<Record<string, boolean>>({});
   const loadFlags = async () => {
     try { const { listFlags } = await import('../../../services/moderation'); const rows = await listFlags(); setFlags(rows); } catch {}
   };
@@ -276,9 +277,37 @@ export default function AdminPanel() {
   </View>
         ))}
         <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Moderation Flags</Text>
-        {flags.length === 0 ? <Text style={s.text}>No flags.</Text> : flags.map((f) => (
+        {flags.length === 0 ? <Text style={s.text}>No flags.</Text> : (
+          <>
+            <View style={{ flexDirection:'row', gap:8, marginBottom: 8, flexWrap:'wrap' }}>
+              <Pressable onPress={()=> setSelectedFlags(Object.fromEntries(flags.map(f=>[f.id,true])))} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Select all</Text></Pressable>
+              <Pressable onPress={()=> setSelectedFlags({})} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Clear</Text></Pressable>
+              <Pressable onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(Object.keys(selectedFlags).filter(id=>selectedFlags[id]).map(id=> resolveFlag(id))); setSelectedFlags({}); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Resolve selected</Text></Pressable>
+              <Pressable onPress={async()=>{ try {
+                const sel = flags.filter(f=> selectedFlags[f.id]);
+                for (const f of sel) {
+                  if (f.type === 'mutual') { const { deletePost } = await import('../../../services/mutual'); await deletePost(f.targetId); }
+                  if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { deleteDoc, doc } = await import('firebase/firestore'); await deleteDoc(doc(db,'ratings', f.targetId)); }
+                }
+                const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map(f=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags();
+              } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Delete items</Text></Pressable>
+              <Pressable onPress={async()=>{ try {
+                const sel = flags.filter(f=> selectedFlags[f.id]);
+                for (const f of sel) {
+                  if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { getDoc, doc, addDoc, collection } = await import('firebase/firestore'); const r = await getDoc(doc(db,'ratings', f.targetId)); const u = (r.data() as any)?.uid; if (u) await addDoc(collection(db,'sanctions'), { uid: u, reason: 'ratings abuse', createdAt: new Date() }); }
+                  if (f.type === 'mutual') { const { db } = await import('../../../firebase/config'); const { getDoc, doc, addDoc, collection } = await import('firebase/firestore'); const p = await getDoc(doc(db,'mutual_aid_posts', f.targetId)); const u = (p.data() as any)?.uid; if (u) await addDoc(collection(db,'sanctions'), { uid: u, reason: 'mutual aid abuse', createdAt: new Date() }); }
+                }
+                const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map(f=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags();
+              } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Sanction users</Text></Pressable>
+            </View>
+          {flags.map((f) => (
           <View key={f.id} style={{ marginBottom: 6 }}>
-            <Text style={s.text}>[{f.type}] {f.targetId} — {f.reason}</Text>
+            <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
+              <Pressable onPress={()=> setSelectedFlags(prev=> ({ ...prev, [f.id]: !prev[f.id] }))} style={{ width: 18, height: 18, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems:'center', justifyContent:'center', backgroundColor: selectedFlags[f.id]? palette.primary: 'transparent' }}>
+                {selectedFlags[f.id] ? <View style={{ width: 10, height: 10, backgroundColor: palette.onPrimary, borderRadius: 2 }} /> : null}
+              </Pressable>
+              <Text style={s.text}>[{f.type}] {f.targetId} — {f.reason}</Text>
+            </View>
             <View style={{ flexDirection: 'row', gap: 8 }}>
               <Pressable
                 onPress={async () => {
@@ -304,6 +333,7 @@ export default function AdminPanel() {
             </View>
           </View>
         ))}
+        </>) }
       </ScrollView>
     </AdminGuard>
   );

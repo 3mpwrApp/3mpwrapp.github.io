@@ -9,9 +9,12 @@ export default function MapEmbed({ points, cluster = true }: { points: Point[]; 
   let MapView: any = null;
   let Marker: any = null;
   try {
-    const maps = require('react-native-maps');
-    MapView = maps.default;
-    Marker = maps.Marker;
+    // Prefer clustering map if installed
+    let maps;
+    try { maps = require('react-native-map-clustering'); MapView = maps.default; }
+    catch { maps = require('react-native-maps'); MapView = maps.default; }
+    const base = require('react-native-maps');
+    Marker = base.Marker;
   } catch {}
   if (!MapView) {
     return (

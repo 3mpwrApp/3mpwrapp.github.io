@@ -120,10 +120,10 @@ service cloud.firestore {
       allow create: if isSignedIn();
     }
 
-    // Ratings (public read; create signed-in or anon)
+    // Ratings (public read; one-per-user-per-target via doc id)
     match /ratings/{docId} {
       allow read: if true;
-      allow create: if true;
+      allow create, update: if isSignedIn() && docId.matches('^' + request.auth.uid + '_.*$');
     }
 
     // Wellness reflections under a user
