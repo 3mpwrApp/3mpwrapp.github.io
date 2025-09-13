@@ -171,16 +171,16 @@ export default function TabsLayout() {
         }}
       />
 
-      {/* Podcasts */}
+      {/* Resources (promote into main tabs) */}
       <Tabs.Screen
-        name="podcasts/index"
+        name="resources/index"
         options={{
-          title: t("nav.podcasts"),
-          tabBarLabel: t("nav.podcasts"),
-          tabBarAccessibilityLabel: `${t("nav.podcasts")} tab`,
+          title: t("nav.resources"),
+          tabBarLabel: t("nav.resources"),
+          tabBarAccessibilityLabel: `${t("nav.resources")} tab`,
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
-              name={focused ? "mic" : "mic-outline"}
+              name={focused ? "book" : "book-outline"}
               color={color}
               size={size + 2}
             />
@@ -188,16 +188,16 @@ export default function TabsLayout() {
         }}
       />
 
-      {/* Events */}
+      {/* Wellness (promote into main tabs) */}
       <Tabs.Screen
-        name="events/index"
+        name="wellness"
         options={{
-          title: t("nav.events"),
-          tabBarLabel: t("nav.events"),
-          tabBarAccessibilityLabel: `${t("nav.events")} tab`,
+          title: t("nav.wellness"),
+          tabBarLabel: t("nav.wellness"),
+          tabBarAccessibilityLabel: `${t("nav.wellness")} tab`,
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
-              name={focused ? "calendar" : "calendar-outline"}
+              name={focused ? "heart" : "heart-outline"}
               color={color}
               size={size + 2}
             />

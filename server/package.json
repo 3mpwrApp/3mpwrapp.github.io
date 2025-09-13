@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "cron": "node cron.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
