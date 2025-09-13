@@ -4,12 +4,15 @@ import { useAppPalette } from '../../../theme/usePalette';
 import { auth, db, storage } from '../../../firebase/config';
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { useAuth } from '../../../context/AuthContext';
+import { router } from 'expo-router';
 
 export const options = { href: null };
 
 export default function MediaStudio() {
   const palette = useAppPalette();
   const s = styles(palette);
+  const { isAdmin } = useAuth();
   const [title, setTitle] = React.useState('');
   const [text, setText] = React.useState('');
   const [items, setItems] = React.useState<any[]>([]);
@@ -35,6 +38,12 @@ export default function MediaStudio() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Disability + Worker Media Studio</Text>
+      {isAdmin && (
+        <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+          <Pressable onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.chip}><Text style={s.chipText}>Pending</Text></Pressable>
+          <Pressable onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.chip}><Text style={s.chipText}>Trash</Text></Pressable>
+        </View>
+      )}
       <TextInput placeholder="Title" placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
       <TextInput placeholder="Caption / text" placeholderTextColor={palette.text+'77'} value={text} onChangeText={setText} style={s.input} />
       <Pressable onPress={upload} style={s.button}><Text style={s.buttonText}>Upload media</Text></Pressable>
@@ -59,6 +68,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginTop: 8, backgroundColor: palette.surface },
     cardTitle: { color: palette.text, fontWeight:'700', marginBottom: 4 },
     cardText: { color: palette.text, opacity: 0.95, marginBottom: 4 },
+    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
+    chipText: { color: palette.text, fontWeight:'700' },
   });
 }
-

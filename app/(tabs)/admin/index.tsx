@@ -5,6 +5,7 @@ import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
 import AdminGuard from "../../../components/AdminGuard";
 import { db } from "../../../firebase/config";
 import { collection, getDocs, limit, query, where, getCountFromServer, startAfter } from "firebase/firestore";
+import { useLocalSearchParams } from "expo-router";
 
 export const options = { href: null };
 
@@ -23,10 +24,19 @@ export default function AdminPanel() {
   const [selectedFlags, setSelectedFlags] = React.useState<Record<string, boolean>>({});
   const [reviewTab, setReviewTab] = React.useState<'pending'|'approved'|'trash'>('pending');
   const [reviewItems, setReviewItems] = React.useState<any[]>([]);
+  const params = useLocalSearchParams<{ tab?: string }>();
   const loadFlags = async () => {
     try { const { listFlags } = await import('../../../services/moderation'); const rows = await listFlags(); setFlags(rows); } catch {}
   };
   React.useEffect(() => { loadFlags(); }, []);
+  React.useEffect(() => {
+    const t = String(params?.tab || '').toLowerCase();
+    if (t === 'pending' || t === 'approved' || t === 'trash') {
+      setReviewTab(t as any);
+      loadReview();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params?.tab]);
 
   async function loadReview() {
     try {

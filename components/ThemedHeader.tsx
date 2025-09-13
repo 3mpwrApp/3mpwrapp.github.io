@@ -6,6 +6,7 @@ import {
   View,
   Pressable,
   Image,
+  ScrollView,
 } from "react-native";
 import * as Linking from "expo-linking";
 import { usePathname, router } from "expo-router";
@@ -271,6 +272,7 @@ export default function ThemedHeader() {
             accessibilityViewIsModal
             style={styles.menuWrap}
           >
+            <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>
             <Text style={styles.menuSection}>Essentials</Text>
             {[{ label: "Resources", path: "/(tabs)/resources" }].map((item) => (
               <Pressable
@@ -433,6 +435,7 @@ export default function ThemedHeader() {
                 <Text style={{ color: palette.text }}>Admin Panel</Text>
               </Pressable>
             )}
+            </ScrollView>
           </View>
         </>
       )}

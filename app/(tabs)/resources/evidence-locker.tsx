@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, TextInput, FlatList, Alert, Pressable, Modal } 
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar";
 import { useAuth } from "../../../context/AuthContext";
+import { router } from "expo-router";
+import { useAuth } from "../../../context/AuthContext";
 import { addEvidenceNote, uploadEvidenceFileWithProgress, listEvidence, deleteEvidenceDoc, listEvidencePage, type EvidenceFile } from "../../../services/evidence";
 // Linking added when preview links are active; safe to lazy import when needed
 import { useAppPalette } from "../../../theme/usePalette";
@@ -30,11 +32,13 @@ export default function EvidenceLocker() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Evidence Locker");
   useFocusOnRefOnMount(titleRef);
+  const { isAdmin } = useAuth();
   const [text, setText] = React.useState("");
   const [tag, setTag] = React.useState("");
   const [notes, setNotes] = React.useState<Note[]>([]);
   const [cloudItems, setCloudItems] = React.useState<any[]>([]);
   const [cloudCursor, setCloudCursor] = React.useState<any | null>(null);
+  const [showDeleted, setShowDeleted] = React.useState(false);
   const [filter, setFilter] = React.useState<string>("");
   const [query, setQuery] = React.useState<string>("");
   const [processing, setProcessing] = React.useState(false);
@@ -127,6 +131,12 @@ export default function EvidenceLocker() {
       >
         Evidence Locker
       </Text>
+      {isAdmin && (
+        <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
+          <A11yPressable onPress={()=> router.push('/(tabs)/admin' as any)} style={styles.secondary}><Text style={styles.buttonText}>Admin Pending</Text></A11yPressable>
+          <A11yPressable onPress={()=> router.push('/(tabs)/admin' as any)} style={styles.secondary}><Text style={styles.buttonText}>Admin Trash</Text></A11yPressable>
+        </View>
+      )}
       <TextInput
         value={text}
         onChangeText={setText}
@@ -134,6 +144,11 @@ export default function EvidenceLocker() {
         placeholderTextColor={palette.text + "77"}
         style={styles.input}
       />
+      {isAdmin && (
+        <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
+          <A11yPressable onPress={()=> setShowDeleted(v=>!v)} style={styles.secondary}><Text style={styles.buttonText}>{showDeleted? 'Showing Trash':'Show Trash'}</Text></A11yPressable>
+        </View>
+      )}
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
         {['call','letter','medical','decision','payment','email'].map((t) => (
           <A11yPressable key={t} onPress={() => setTag(t)} style={[styles.chip, tag===t && styles.chipActive]}>
@@ -390,7 +405,7 @@ export default function EvidenceLocker() {
               <Text style={styles.buttonText}>Delete selected</Text>
             </A11yPressable>
           )}
-          {cloudItems.map((c: any) => (
+          {cloudItems.filter((c:any)=> showDeleted? c?.deleted===true : !c?.deleted).map((c: any) => (
             <View key={c.id} style={[styles.noteRow, { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 }] }>
               <View style={{ flex: 1 }}>
                 <Text style={[styles.noteText, selectedCloud[c.id] ? { fontWeight: '700' } : null]}>

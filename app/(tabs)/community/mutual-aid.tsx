@@ -19,16 +19,25 @@ export default function MutualAid() {
   const [contact, setContact] = React.useState('');
   const [items, setItems] = React.useState<any[]>([]);
   const [reply, setReply] = React.useState('');
-  const [showAll, setShowAll] = React.useState(false);
+  const [filter, setFilter] = React.useState<'all'|'approved'|'pending'|'trash'>(isAdmin? 'all':'approved');
   const load = React.useCallback(async()=>{ try{ setItems(await listAidPosts()); } catch{} },[]);
   React.useEffect(()=>{ load(); },[load]);
   return (
     <View style={s.container}>
       <Text style={s.title}>Mutual Aid Engine</Text>
       {isAdmin && (
-        <View style={{ flexDirection:'row', gap:8 }}>
-          <Pressable onPress={()=> setShowAll(v=>!v)} style={s.button}><Text style={s.buttonText}>{showAll? 'Showing all (incl. unapproved)':'Showing approved only'}</Text></Pressable>
-          <Pressable onPress={()=> router.push('/(tabs)/admin' as any)} style={s.button}><Text style={s.buttonText}>Open Admin Review</Text></Pressable>
+        <View style={{ gap:8 }}>
+          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+            <Pressable onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></Pressable>
+            <Pressable onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>Approved</Text></Pressable>
+            <Pressable onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>Pending</Text></Pressable>
+            <Pressable onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>Trash</Text></Pressable>
+          </View>
+          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>Admin Pending</Text></Pressable>
+            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>Admin Approved</Text></Pressable>
+            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>Admin Trash</Text></Pressable>
+          </View>
         </View>
       )}
       <TextInput placeholder="Type (rides, groceries, tutoring...)" placeholderTextColor={palette.text+'77'} value={type} onChangeText={setType} style={s.input} />
@@ -37,7 +46,16 @@ export default function MutualAid() {
       <TextInput placeholder="Contact (email/phone) (optional)" placeholderTextColor={palette.text+'77'} value={contact} onChangeText={setContact} style={s.input} />
       <Pressable onPress={async()=>{ try{ await addAidPost({ type, description: desc, city, contact }); setType('rides'); setDesc(''); setCity(''); setContact(''); load(); } catch { Alert.alert('Failed','Could not post'); } }} style={s.button}><Text style={s.buttonText}>Post Need</Text></Pressable>
       <Text style={[s.title,{ fontSize: 18, marginTop: 12 }]}>Recent posts</Text>
-      {items.filter(p => isAdmin ? (showAll || p.approved) : !!p.approved).map(p => (
+      {items.filter(p => {
+        const approved = p.approved === true;
+        const pending = p.approved === false && p.deleted !== true;
+        const trash = p.deleted === true;
+        if (!isAdmin) return approved;
+        if (filter === 'approved') return approved && !trash;
+        if (filter === 'pending') return pending;
+        if (filter === 'trash') return trash;
+        return !trash;
+      }).map(p => (
         <View key={p.id} style={s.card}>
           <Text style={s.cardTitle}>{p.type} {p.city? `• ${p.city}`:''}</Text>
           <Text style={s.cardText}>{p.description}</Text>
@@ -69,5 +87,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     cardText: { color: palette.text, opacity: 0.95, marginBottom: 4 },
     smallBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
     smallBtnText: { color: palette.text, fontWeight:'700' },
+    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
+    chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
   });
 }

@@ -22,6 +22,59 @@ async function crawl(url) {
   try { const res = await fetch(`${base.replace(/\/$/,'')}/crawl?url=${encodeURIComponent(url)}`); if (!res.ok) throw new Error('bad'); return await res.json(); } catch { return {}; }
 }
 
+async function fetchWorld() {
+  const url = process.env.WORLD_MAP_URL;
+  if (!url) return;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return;
+    const items = await res.json();
+    if (!Array.isArray(items)) return;
+    for (const it of items) {
+      const id = String(it.id || `${it.lat}_${it.lng}`);
+      await db.collection('world_items').doc(id).set({ ...it, refreshedAt: new Date() }, { merge: true });
+    }
+    console.log(`[cron] world map refreshed: ${items.length} items`);
+  } catch (e) { console.error('[cron] world map fetch failed', e?.message); }
+}
+
+async function fetchTargets() {
+  const url = process.env.TARGETS_URL;
+  if (!url) return;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return;
+    const arr = await res.json();
+    if (!Array.isArray(arr)) return;
+    for (const t of arr) {
+      const target = String(t);
+      const lower = target.toLowerCase();
+      await db.collection('rating_targets').doc(lower.replace(/[^a-z0-9._-]/g,'_')).set({ target, lower, updatedAt: new Date() }, { merge: true });
+    }
+    console.log(`[cron] rating targets refreshed: ${arr.length}`);
+  } catch (e) { console.error('[cron] targets fetch failed', e?.message); }
+}
+
+async function fetchResources() {
+  const url = process.env.RESOURCES_URL;
+  if (!url) return;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return;
+    const items = await res.json();
+    if (!Array.isArray(items)) return;
+    for (const it of items) {
+      const rawId = String(it.url || `${it.province||''}|${it.category||''}|${it.title||''}`);
+      const id = rawId.toLowerCase().replace(/[^a-z0-9._-]/g, '_');
+      await db
+        .collection('resource_links')
+        .doc(id)
+        .set({ province: it.province, category: it.category, title: it.title, url: it.url, refreshedAt: new Date() }, { merge: true });
+    }
+    console.log(`[cron] resource links refreshed (upsert): ${items.length}`);
+  } catch (e) { console.error('[cron] resources fetch failed', e?.message); }
+}
+
 async function once() {
   console.log('[cron] recrawl tick');
   try {
@@ -32,8 +85,10 @@ async function once() {
       await doc.ref.set({ ...v, title: meta.title || v.title || '', description: meta.description || v.description || '', links: meta.links || v.links || [], refreshedAt: new Date() }, { merge: true });
     }
   } catch (e) { console.error('[cron] error', e?.message); }
+  await fetchWorld();
+  await fetchTargets();
+  await fetchResources();
 }
 
 setInterval(once, interval);
 once();
-

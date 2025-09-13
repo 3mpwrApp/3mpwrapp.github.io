@@ -21,20 +21,40 @@ export default function Ratings() {
   const [items, setItems] = React.useState<any[]>([]);
   const [sort, setSort] = React.useState<'latest'|'score'>('latest');
   const [page, setPage] = React.useState(1);
+  const [filter, setFilter] = React.useState<'all'|'approved'|'pending'|'trash'>(isAdmin? 'all':'approved');
   const pageSize = 20;
   const [suggestions, setSuggestions] = React.useState<string[]>([]);
   const [showSug, setShowSug] = React.useState(false);
   const load = React.useCallback(async()=>{ try{ setItems(await listRatings(target)); } catch{} },[target]);
   React.useEffect(()=>{ load(); },[load]);
   const avg = items.length ? (items.reduce((s,i)=>s+(i.score||0),0)/items.length).toFixed(1) : '-';
-  const visible = items.filter(i => isAdmin ? true : (i.approved === true));
+  const visible = items.filter(i => {
+    const approved = i.approved === true;
+    const pending = i.approved === false && i.deleted !== true;
+    const trash = i.deleted === true;
+    if (!isAdmin) return approved;
+    if (filter === 'approved') return approved && !trash;
+    if (filter === 'pending') return pending;
+    if (filter === 'trash') return trash;
+    return !trash; // all non-deleted
+  });
   const dist = [1,2,3,4,5].map(n => ({ n, c: items.filter(i => i.score===n).length }));
   return (
     <View style={s.container}>
       <Text style={s.title}>Disability Justice Ratings</Text>
       {isAdmin && (
-        <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
-          <Pressable onPress={()=> router.push('/(tabs)/admin' as any)} style={s.button}><Text style={s.buttonText}>Open Admin Review</Text></Pressable>
+        <View style={{ gap:8, marginBottom: 8 }}>
+          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+            <Pressable onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></Pressable>
+            <Pressable onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>Approved</Text></Pressable>
+            <Pressable onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>Pending</Text></Pressable>
+            <Pressable onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>Trash</Text></Pressable>
+          </View>
+          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>Admin Pending</Text></Pressable>
+            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>Admin Approved</Text></Pressable>
+            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>Admin Trash</Text></Pressable>
+          </View>
         </View>
       )}
       <View>
