@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, Pressable, Alert, FlatList } from 'r
 import { router } from 'expo-router';
 import { useAppPalette } from '../../../theme/usePalette';
 import { useAuth } from '../../../context/AuthContext';
-import { addRating, listRatings, upsertRating, ensureTarget, listTargets } from '../../../services/ratings';
+import { listRatings, upsertRating, ensureTarget, listTargets } from '../../../services/ratings';
 import { flagItem } from '../../../services/moderation';
 import SimpleBarChart from '../../../components/SimpleBarChart';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -20,9 +20,7 @@ export default function Ratings() {
   const [comment, setComment] = React.useState('');
   const [items, setItems] = React.useState<any[]>([]);
   const [sort, setSort] = React.useState<'latest'|'score'>('latest');
-  const [page, setPage] = React.useState(1);
   const [filter, setFilter] = React.useState<'all'|'approved'|'pending'|'trash'>(isAdmin? 'all':'approved');
-  const pageSize = 20;
   const [suggestions, setSuggestions] = React.useState<string[]>([]);
   const [showSug, setShowSug] = React.useState(false);
   const load = React.useCallback(async()=>{ try{ setItems(await listRatings(target)); } catch{} },[target]);

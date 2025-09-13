@@ -390,6 +390,9 @@ export default function ResourcesScreen() {
         <Text accessibilityRole="header" style={styles.sectionTitle}>
           Tools & Simulators
         </Text>
+        <Pressable onPress={reload} style={{ alignSelf:'flex-start', paddingHorizontal:10, paddingVertical:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 8 }}>
+          <Text style={{ color: palette.text }}>Download key resources for offline use</Text>
+        </Pressable>
         <Link href={("/(tabs)/resources/financial-safety-net" as any)} asChild>
           <Card
             title="Financial Safety Net Navigator"
@@ -430,6 +433,48 @@ export default function ResourcesScreen() {
           <Card
             title="AI Decision Simplifier"
             subtitle="Upload a decision letter and get a plain-language summary and next steps"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/rights-explainer" as any)} asChild>
+          <Card
+            title="Multi-Language Rights Explainer"
+            subtitle="Plain-language rights by province, Canada, and world in EN/FR/ES"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/doctor-visit-prep" as any)} asChild>
+          <Card
+            title="Doctor Visit Prep"
+            subtitle="One-page summary: condition, medications, and key questions"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/rehab-tracker" as any)} asChild>
+          <Card
+            title="Rehab Progress Tracker"
+            subtitle="Track walking distance, grip strength, and reduced-pain days"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/accessibility-log" as any)} asChild>
+          <Card
+            title="Workplace Accessibility Log"
+            subtitle="Log barriers with timestamps as future evidence"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/solidarity-toolkit" as any)} asChild>
+          <Card
+            title="Union & Solidarity Toolkit"
+            subtitle="Step-by-step guides for accommodation campaigns and support"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/allyship-playbook" as any)} asChild>
+          <Card
+            title="Allyship Playbook"
+            subtitle="Mini-guides for supporters: language, accessibility, solidarity"
+          />
+        </Link>
+        <Link href={("/(tabs)/resources/emergency-wallet-card" as any)} asChild>
+          <Card
+            title="Emergency Info Wallet Card"
+            subtitle="Generate a printable card with conditions, meds, and contacts"
           />
         </Link>
       </View>

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-nativ
 import { useAppPalette } from '../../../theme/usePalette';
 import { useAuth } from '../../../context/AuthContext';
 import { router } from 'expo-router';
-import { addAidPost, listAidPosts, respondToPost, deletePost, softDeletePost } from '../../../services/mutual';
+import { addAidPost, listAidPosts, respondToPost, softDeletePost } from '../../../services/mutual';
 import { flagItem } from '../../../services/moderation';
 import { Link } from 'expo-router';
 

@@ -63,15 +63,24 @@ async function fetchResources() {
     if (!res.ok) return;
     const items = await res.json();
     if (!Array.isArray(items)) return;
+    const keepIds = new Set();
     for (const it of items) {
       const rawId = String(it.url || `${it.province||''}|${it.category||''}|${it.title||''}`);
       const id = rawId.toLowerCase().replace(/[^a-z0-9._-]/g, '_');
+      keepIds.add(id);
       await db
         .collection('resource_links')
         .doc(id)
-        .set({ province: it.province, category: it.category, title: it.title, url: it.url, refreshedAt: new Date() }, { merge: true });
+        .set({ source: 'feed', province: it.province, category: it.category, title: it.title, url: it.url, refreshedAt: new Date() }, { merge: true });
     }
-    console.log(`[cron] resource links refreshed (upsert): ${items.length}`);
+    // deletion handling: remove any resource_links not present in the fetched list
+    try {
+      const snap = await db.collection('resource_links').where('source','==','feed').get();
+      for (const d of snap.docs) {
+        if (!keepIds.has(d.id)) await d.ref.delete();
+      }
+    } catch (e) { console.warn('[cron] resource links cleanup skipped', e?.message); }
+    console.log(`[cron] resource links refreshed (upsert+cleanup): ${items.length}`);
   } catch (e) { console.error('[cron] resources fetch failed', e?.message); }
 }
 
