@@ -26,7 +26,7 @@
     "admin:export": "node ./scripts/export-collection.js",
     "rules:deploy": "firebase deploy --only firestore:rules"
   },
-  "dependencies": {\n    "expo-audio": "~13.0.0",
+  "dependencies": {
     "@expo/vector-icons": "^14.1.0",
     "@react-native-async-storage/async-storage": "2.1.2",
     "cheerio": "^1.1.2",
@@ -84,4 +84,9 @@
   },
   "private": true
 }
+
+
+
+
+
 

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, Pressable, FlatList, Alert } from 'r
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAppPalette } from '../../../theme/usePalette';
 import { auth, db } from '../../../firebase/config';
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp, getDocs, query, where, orderBy, limit as ql, startAfter as fsStartAfter } from 'firebase/firestore';
 
 export const options = { href: null };
 
@@ -19,6 +19,9 @@ export default function RehabTracker() {
   const [painFree, setPainFree] = React.useState('');
   const [note, setNote] = React.useState('');
   const [items, setItems] = React.useState<Entry[]>([]);
+  const [view, setView] = React.useState<'local'|'cloud'>('local');
+  const [cloud, setCloud] = React.useState<any[]>([]);
+  const [cursor, setCursor] = React.useState<any | null>(null);
 
   React.useEffect(()=>{ (async()=>{ try{ const raw = await AsyncStorage.getItem(KEY); if (raw) setItems(JSON.parse(raw)); } catch{} })(); },[]);
   const save = async (next: Entry[]) => { setItems(next); try { await AsyncStorage.setItem(KEY, JSON.stringify(next)); } catch{} };
@@ -43,10 +46,28 @@ export default function RehabTracker() {
   };
   const remove = async (id: string) => { await save(items.filter(i=>i.id!==id)); };
 
+  const loadCloud = async (more = false) => {
+    try {
+      const uid = auth.currentUser?.uid;
+      if (!uid) { Alert.alert('Sign in required','Login to view cloud.'); return; }
+      const base = query(collection(db,'rehab_progress'), where('uid','==', uid), orderBy('createdAt','desc'), ql(20));
+      const q = more && cursor ? query(base, fsStartAfter(cursor)) : base;
+      const snap = await getDocs(q);
+      setCloud(more ? cloud.concat(snap.docs.map(d=>({ id: d.id, ...(d.data() as any) }))) : snap.docs.map(d=>({ id: d.id, ...(d.data() as any) })));
+      setCursor(snap.docs[snap.docs.length-1] || null);
+    } catch { Alert.alert('Load failed','Could not load cloud logs.'); }
+  };
+
   return (
     <View style={s.container}>
       <Text style={s.title}>Rehab Progress Tracker</Text>
       <Text style={s.text}>Log small wins to boost morale and share with providers.</Text>
+      <View style={{ flexDirection:'row', gap:8, marginBottom: 6 }}>
+        <Pressable onPress={()=> setView('local')} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></Pressable>
+        <Pressable onPress={()=> { setView('cloud'); loadCloud(false); }} style={[s.chip, view==='cloud' && s.chipActive]}><Text style={{ color: view==='cloud'? palette.onPrimary: palette.text, fontWeight:'700' }}>Cloud</Text></Pressable>
+      </View>
+      {view==='local' && (
+      <>
       <TextInput placeholder="Walking distance (e.g., 300m)" placeholderTextColor={palette.text+'77'} value={walk} onChangeText={setWalk} style={s.input} />
       <TextInput placeholder="Grip strength (e.g., 20kg)" placeholderTextColor={palette.text+'77'} value={grip} onChangeText={setGrip} style={s.input} />
       <TextInput placeholder="Pain‑reduced days this week" placeholderTextColor={palette.text+'77'} value={painFree} onChangeText={setPainFree} style={s.input} />
@@ -55,6 +76,9 @@ export default function RehabTracker() {
         <Pressable onPress={add} style={[s.button,{ flex:1 }]}><Text style={s.buttonText}>Log Progress</Text></Pressable>
         <Pressable onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Sync</Text></Pressable>
       </View>
+      </>
+      )}
+      {view==='local' ? (
       <FlatList data={items} keyExtractor={i=>i.id} renderItem={({item:i})=> (
         <View style={s.card}>
           <Text style={s.cardTitle}>{i.date}</Text>
@@ -67,6 +91,22 @@ export default function RehabTracker() {
           </Pressable>
         </View>
       )} />
+      ) : (
+        <>
+          {cloud.map(c => (
+            <View key={c.id} style={s.card}>
+              <Text style={s.cardTitle}>{c.createdAt?.toDate?.()?.toLocaleString?.() || '-'}</Text>
+              {!!c.walk && <Text style={s.text}>Walk: {c.walk}</Text>}
+              {!!c.grip && <Text style={s.text}>Grip: {c.grip}</Text>}
+              {!!c.painFree && <Text style={s.text}>Reduced pain days: {c.painFree}</Text>}
+              {!!c.note && <Text style={s.text}>{c.note}</Text>}
+            </View>
+          ))}
+          <Pressable onPress={()=> loadCloud(true)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+            <Text style={[s.buttonText,{ color: palette.text }]}>Load more</Text>
+          </Pressable>
+        </>
+      )}
     </View>
   );
 }
@@ -81,5 +121,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     buttonText: { color: palette.onPrimary, fontWeight:'700' },
     card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginTop: 8, backgroundColor: palette.surface },
     cardTitle: { color: palette.text, fontWeight:'700' },
+    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
+    chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
   });
 }

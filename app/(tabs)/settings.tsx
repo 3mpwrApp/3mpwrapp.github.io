@@ -222,6 +222,11 @@ function A11ySettingsSection() {
       />
 
       <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Voice Help</Text>
+      <Link href={("/(tabs)/voice-help" as any)}>
+        <Text style={{ color: palette.primary, fontWeight: "700" }}>Open Voice Help</Text>
+      </Link>
+      <View style={{ height: 10 }} />
       <Text style={s.rowLabel}>Voice Mode (beta)</Text>
       <Button
         title={voiceMode ? "Disable Voice Mode" : "Enable Voice Mode"}
