@@ -12,7 +12,9 @@
     "updates": {
       "checkAutomatically": "ON_ERROR_RECOVERY"
     },
-    "runtimeVersion": { "policy": "sdkVersion" },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -59,7 +61,8 @@
         {
           "mode": "production"
         }
-      ]
+      ],
+      "expo-audio"
     ],
     "experiments": {
       "typedRoutes": true
