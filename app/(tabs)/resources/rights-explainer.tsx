@@ -64,16 +64,22 @@ function RightsContent({ lang, region, province, palette }:{ lang:Lang; region:R
       '1. You have the right to reasonable accommodations at work and services (undue hardship applies to employers/service providers).',
       '2. You have the right to access medical records and request corrections.',
       '3. You can appeal benefit denials (e.g., Workers’ Comp, EI, CPP‑D) — strict deadlines apply.',
+      '4. You have the right to be free from discrimination based on disability (human rights codes).',
+      '5. You can request plain‑language communications and accessible formats (where feasible).',
     ],
     fr: [
       '1. Vous avez droit à des mesures d’adaptation raisonnables au travail et dans les services (contrainte excessive pour l’employeur/fournisseur).',
       '2. Vous avez le droit d’accéder à vos dossiers médicaux et de demander des corrections.',
       '3. Vous pouvez contester les refus de prestations (ex. CNESST, AE, RPC‑I) — respectez les délais.',
+      '4. Droit à l’égalité sans discrimination liée au handicap (codes des droits de la personne).',
+      '5. Droit à des communications en langage clair et formats accessibles (dans la mesure du possible).',
     ],
     es: [
       '1. Tiene derecho a adaptaciones razonables en el trabajo y en servicios (carga excesiva para empleadores/proveedores).',
       '2. Tiene derecho a acceder a sus registros médicos y solicitar correcciones.',
       '3. Puede apelar rechazos de beneficios (p. ej., Compensación laboral, EI, CPP‑D) — hay plazos estrictos.',
+      '4. Derecho a la igualdad sin discriminación por discapacidad (códigos de derechos humanos).',
+      '5. Puede solicitar lenguaje sencillo y formatos accesibles (cuando sea posible).',
     ],
   };
   return (
@@ -95,4 +101,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
   });
 }
-

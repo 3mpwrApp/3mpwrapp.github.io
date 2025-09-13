@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, FlatList } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Pressable, FlatList, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAppPalette } from '../../../theme/usePalette';
+import { auth, db } from '../../../firebase/config';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 
 export const options = { href: null };
 
@@ -21,8 +23,23 @@ export default function AccessibilityLog() {
   const add = async () => {
     const e: Entry = { id: String(Date.now()), ts: Date.now(), description, location };
     await save([e, ...items]); setDescription(''); setLocation('');
+    try {
+      const uid = auth.currentUser?.uid;
+      if (uid) await addDoc(collection(db,'work_access_logs'), { uid, ts: serverTimestamp(), description: e.description, location: e.location||null });
+    } catch {}
   };
   const remove = async (id: string) => save(items.filter(i=>i.id!==id));
+
+  const syncAll = async () => {
+    try {
+      const uid = auth.currentUser?.uid;
+      if (!uid) { Alert.alert('Sign in required','Login to sync.'); return; }
+      for (const e of items) {
+        await addDoc(collection(db,'work_access_logs'), { uid, ts: serverTimestamp(), description: e.description, location: e.location||null });
+      }
+      Alert.alert('Synced','Uploaded your log entries.');
+    } catch { Alert.alert('Sync failed','Could not sync to cloud.'); }
+  };
 
   return (
     <View style={s.container}>
@@ -30,7 +47,10 @@ export default function AccessibilityLog() {
       <Text style={s.text}>Log daily barriers with timestamps for future evidence.</Text>
       <TextInput placeholder="Barrier or incident (e.g., no breaks, stairs)" placeholderTextColor={palette.text+'77'} value={description} onChangeText={setDescription} style={s.input} />
       <TextInput placeholder="Location / context (optional)" placeholderTextColor={palette.text+'77'} value={location} onChangeText={setLocation} style={s.input} />
-      <Pressable onPress={add} style={s.button}><Text style={s.buttonText}>Add Entry</Text></Pressable>
+      <View style={{ flexDirection:'row', gap:8 }}>
+        <Pressable onPress={add} style={[s.button,{ flex:1 }]}><Text style={s.buttonText}>Add Entry</Text></Pressable>
+        <Pressable onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Sync</Text></Pressable>
+      </View>
       <FlatList data={items} keyExtractor={i=>i.id} renderItem={({item:i})=> (
         <View style={s.card}>
           <Text style={s.cardTitle}>{new Date(i.ts).toLocaleString()}</Text>
@@ -57,4 +77,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     cardTitle: { color: palette.text, fontWeight:'700' },
   });
 }
-

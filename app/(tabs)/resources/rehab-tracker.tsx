@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, FlatList } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Pressable, FlatList, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAppPalette } from '../../../theme/usePalette';
+import { auth, db } from '../../../firebase/config';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 
 export const options = { href: null };
 
@@ -24,6 +26,20 @@ export default function RehabTracker() {
   const add = async () => {
     const e: Entry = { id: String(Date.now()), date: new Date().toISOString().slice(0,10), walk, grip, painFree, note };
     await save([e, ...items]); setWalk(''); setGrip(''); setPainFree(''); setNote('');
+    try {
+      const uid = auth.currentUser?.uid;
+      if (uid) await addDoc(collection(db,'rehab_progress'), { uid, createdAt: serverTimestamp(), ...e });
+    } catch {}
+  };
+  const syncAll = async () => {
+    try {
+      const uid = auth.currentUser?.uid;
+      if (!uid) { Alert.alert('Sign in required','Login to sync.'); return; }
+      for (const e of items) {
+        await addDoc(collection(db,'rehab_progress'), { uid, createdAt: serverTimestamp(), ...e });
+      }
+      Alert.alert('Synced','Uploaded your progress logs.');
+    } catch { Alert.alert('Sync failed','Could not sync to cloud.'); }
   };
   const remove = async (id: string) => { await save(items.filter(i=>i.id!==id)); };
 
@@ -35,7 +51,10 @@ export default function RehabTracker() {
       <TextInput placeholder="Grip strength (e.g., 20kg)" placeholderTextColor={palette.text+'77'} value={grip} onChangeText={setGrip} style={s.input} />
       <TextInput placeholder="Pain‑reduced days this week" placeholderTextColor={palette.text+'77'} value={painFree} onChangeText={setPainFree} style={s.input} />
       <TextInput placeholder="Notes" placeholderTextColor={palette.text+'77'} value={note} onChangeText={setNote} style={s.input} />
-      <Pressable onPress={add} style={s.button}><Text style={s.buttonText}>Log Progress</Text></Pressable>
+      <View style={{ flexDirection:'row', gap:8 }}>
+        <Pressable onPress={add} style={[s.button,{ flex:1 }]}><Text style={s.buttonText}>Log Progress</Text></Pressable>
+        <Pressable onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Sync</Text></Pressable>
+      </View>
       <FlatList data={items} keyExtractor={i=>i.id} renderItem={({item:i})=> (
         <View style={s.card}>
           <Text style={s.cardTitle}>{i.date}</Text>

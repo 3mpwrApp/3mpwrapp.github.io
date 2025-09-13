@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { View, Pressable, Text, StyleSheet, Platform } from 'react-native';
-import { Audio } from 'expo-av';
 import { useAppPalette } from '../theme/usePalette';
 import { useVoiceCommands } from '../hooks/useVoiceMode';
 import { transcribeAudio } from '../services/stt';
@@ -9,12 +8,13 @@ export default function VoiceController() {
   const palette = useAppPalette();
   const s = styles(palette);
   const { voiceMode, handleVoiceCommand } = useVoiceCommands();
-  const [recording, setRecording] = React.useState<Audio.Recording | null>(null);
+  const [recording, setRecording] = React.useState<any | null>(null);
   const [busy, setBusy] = React.useState(false);
   const [toast, setToast] = React.useState<string | null>(null);
+  const [showHelp, setShowHelp] = React.useState(false);
 
   React.useEffect(() => {
-    return () => { if (recording) { try { recording.stopAndUnloadAsync(); } catch {} } };
+    return () => { if (recording) { try { recording.stopAndUnloadAsync?.(); } catch {} } };
   }, [recording]);
 
   const onPress = async () => {
@@ -38,15 +38,19 @@ export default function VoiceController() {
           }
         }
       } else {
-        const { granted } = await Audio.requestPermissionsAsync();
+        // Prefer expo-audio, fallback to expo-av for SDK 53
+        let AudioMod: any;
+        try { AudioMod = require('expo-audio')?.Audio; } catch { try { AudioMod = require('expo-av')?.Audio; } catch {} }
+        if (!AudioMod) { setToast('Voice unavailable'); setTimeout(()=>setToast(null),1500); return; }
+        const { granted } = await AudioMod.requestPermissionsAsync();
         if (!granted) return;
-        await Audio.setAudioModeAsync({ allowsRecordingIOS: true, playsInSilentModeIOS: true });
-        const rec = new Audio.Recording();
+        await AudioMod.setAudioModeAsync({ allowsRecordingIOS: true, playsInSilentModeIOS: true });
+        const rec = new AudioMod.Recording();
         await rec.prepareToRecordAsync(
           Platform.select({
-            ios: Audio.RecordingOptionsPresets.HIGH_QUALITY,
-            android: Audio.RecordingOptionsPresets.HIGH_QUALITY,
-            default: Audio.RecordingOptionsPresets.HIGH_QUALITY,
+            ios: AudioMod.RecordingOptionsPresets?.HIGH_QUALITY,
+            android: AudioMod.RecordingOptionsPresets?.HIGH_QUALITY,
+            default: AudioMod.RecordingOptionsPresets?.HIGH_QUALITY,
           }) as any
         );
         await rec.startAsync();
@@ -65,7 +69,23 @@ export default function VoiceController() {
       {toast && (
         <View style={s.toast}><Text style={s.toastText}>{toast}</Text></View>
       )}
-      <Pressable accessibilityLabel="Voice control" onPress={onPress} style={[s.mic, recording && s.micRec]}>
+      {showHelp && (
+        <View style={s.helpBox}>
+          <Text style={s.helpTitle}>Voice commands</Text>
+          {[
+            'Open resources',
+            'Open ratings',
+            'Open advocacy',
+            'Open community',
+            'Open settings',
+            'Open admin pending / approved / trash',
+            'Open rights explainer',
+            'Open doctor visit prep',
+            'Back',
+          ].map((c)=> (<Text key={c} style={s.helpText}>• {c}</Text>))}
+        </View>
+      )}
+      <Pressable accessibilityLabel="Voice control" onPress={onPress} onLongPress={()=> setShowHelp(v=>!v)} style={[s.mic, recording && s.micRec]}>
         <Text style={s.micText}>{busy ? '…' : (recording ? 'Stop' : 'Mic')}</Text>
       </Pressable>
     </View>
@@ -80,5 +100,8 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     micText: { color: palette.text, fontWeight: '700' },
     toast: { position: 'absolute', right: 0, bottom: 56, backgroundColor: palette.surface, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 10, paddingVertical: 6 },
     toastText: { color: palette.text, fontWeight: '700' },
+    helpBox: { position: 'absolute', right: 0, bottom: 100, backgroundColor: palette.surface, borderRadius: 10, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, padding: 10, width: 260 },
+    helpTitle: { color: palette.text, fontWeight: '700', marginBottom: 6 },
+    helpText: { color: palette.text, opacity: 0.9 },
   });
 }

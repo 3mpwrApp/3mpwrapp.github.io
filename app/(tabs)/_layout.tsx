@@ -112,10 +112,10 @@ export default function TabsLayout() {
       <Tabs.Screen name="advocacy/collective-legal" options={{ href: null }} />
       <Tabs.Screen name="advocacy/ai-gov-navigator" options={{ href: null }} />
       <Tabs.Screen name="advocacy/ask" options={{ href: null }} />
-      <Tabs.Screen name="resources/index" options={{ href: null }} />
+      {/* removed to avoid duplicate with visible tab */}
       <Tabs.Screen name="research/index" options={{ href: null }} />
       <Tabs.Screen name="faqs" options={{ href: null }} />
-      <Tabs.Screen name="wellness" options={{ href: null }} />
+      {/* removed to avoid duplicate with visible tab */}
       <Tabs.Screen name="saved" options={{ href: null }} />
       <Tabs.Screen name="about" options={{ href: null }} />
       <Tabs.Screen name="admin/index" options={{ href: null }} />
