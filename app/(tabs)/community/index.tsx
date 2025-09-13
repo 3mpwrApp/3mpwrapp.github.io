@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   View,
   Text,
@@ -113,7 +113,7 @@ function createStyles(palette: Palette) {
     subtitle: {
       fontSize: 17,
       color: palette.text,
-      opacity: 0.9,
+      opacity: 1,
       marginBottom: 8,
     },
     section: {
@@ -127,6 +127,7 @@ function createStyles(palette: Palette) {
       borderBottomWidth: StyleSheet.hairlineWidth,
       borderBottomColor: palette.muted,
     },
-    rowText: { color: palette.text, fontSize: 16 },
-  });
+    rowText: { color: palette.text, fontSize: 16 },\n    empty: { color: palette.text, opacity: 0.7, marginTop: 12 },\n  }););
 }
+
+

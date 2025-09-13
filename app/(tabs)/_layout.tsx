@@ -1,6 +1,6 @@
-import { Tabs } from "expo-router";
+﻿import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { useColorScheme } from "react-native";
+import { useColorScheme, StyleSheet } from "react-native";
 import { colors } from "../../theme/colors";
 import { useTranslation } from "../../i18n";
 import { useWhatsNewBadge } from "../../hooks/useWhatsNewBadge";
@@ -21,8 +21,14 @@ export default function TabsLayout() {
         headerShown: false,
         tabBarActiveTintColor: activeTint,
         tabBarInactiveTintColor: inactiveTint,
+        tabBarStyle: {
+          backgroundColor: palette.surface,
+          borderTopColor: palette.muted,
+          borderTopWidth: StyleSheet.hairlineWidth,
+          minHeight: 54,
+        },
         tabBarItemStyle: { minHeight: 48, paddingVertical: 6 },
-        tabBarLabelStyle: { fontSize: 12, fontFamily: "Poppins" },
+        tabBarLabelStyle: { fontSize: 13, fontWeight: "600" },
         tabBarAllowFontScaling: true,
       }}
     >
@@ -120,7 +126,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="about" options={{ href: null }} />
       <Tabs.Screen name="admin/index" options={{ href: null }} />
 
-      {/* ✅ Main visible tabs */}
+      {/* âœ… Main visible tabs */}
 
       {/* Home */}
       <Tabs.Screen
@@ -211,9 +217,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="whatsnew/index"
         options={{
-          title: "What’s New",
-          tabBarLabel: "What’s New",
-          tabBarAccessibilityLabel: `What’s New tab`,
+          title: "What's New",
+          tabBarLabel: "What's New",
+          tabBarAccessibilityLabel: `What's New tab`,
           tabBarBadge: wnBadge,
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
@@ -229,4 +235,8 @@ export default function TabsLayout() {
     </>
   );
 }
+
+
+
+
 

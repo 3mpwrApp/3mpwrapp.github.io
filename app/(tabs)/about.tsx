@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   View,
   Text,
@@ -8,6 +8,7 @@ import {
   Linking,
   Alert,
 } from "react-native";
+import { HIT_SLOP_8 } from "../../constants/a11y";
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
 import {
@@ -56,11 +57,7 @@ export default function AboutScreen() {
         allies with tools, resources, and updates.
       </Text>
       <Text style={styles.text}>
-        Vision: a full life‑cycle empowerment hub — starting with Health
-        (tracking, medical resources), moving into Claims/Appeals (legal +
-        advocacy tools), into Recovery (wellness + return to work), and ending
-        in Collective Action (campaigns, systemic change). One home for both
-        survival and transformation.
+        Vision: a full lifecycle empowerment hub - starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.
       </Text>
       <Text style={styles.text}>
         Questions, suggestions, or requests? Reach out anytime.
@@ -88,6 +85,7 @@ export default function AboutScreen() {
         onPress={sendEmail}
         accessibilityRole="button"
         accessibilityLabel="Send email"
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={styles.buttonText}>Send</Text>
       </Pressable>
@@ -127,3 +125,4 @@ function createStyles(
     buttonText: { color: palette.onPrimary, fontSize: 16, fontWeight: "700" },
   });
 }
+

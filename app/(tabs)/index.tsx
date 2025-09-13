@@ -21,6 +21,7 @@ import {
 import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { useNetwork } from "../../store/network";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
 
 export default function SettingsScreen() {
@@ -39,6 +40,9 @@ export default function SettingsScreen() {
   const [photoURL, setPhotoURL] = useState<string | null>(null);
   // const [loadingProfile, setLoadingProfile] = useState(true);
 
+  // Track offline state when profile fetch fails
+  const { setOffline } = useNetwork();
+
   useEffect(() => {
     const fetchProfile = async () => {
       if (!user) return;
@@ -51,7 +55,12 @@ export default function SettingsScreen() {
           setPhotoURL(profile.photoURL || null);
         }
       } catch (err: any) {
-        console.error("Error fetching profile:", err.message);
+        const msg = String(err?.message ?? "");
+        if (msg.toLowerCase().includes("offline")) {
+          setOffline(true);
+        } else {
+          console.error("Error fetching profile:", msg);
+        }
       } finally {
         // no-op
       }

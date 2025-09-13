@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   View,
   Text,
@@ -28,7 +28,7 @@ export default function WhatsNewScreen() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("What’s New");
+  useAnnounceOnMount("Whatâ€™s New");
   useFocusOnRefOnMount(titleRef);
 
   const now = React.useMemo(() => new Date(), []);
@@ -82,7 +82,7 @@ export default function WhatsNewScreen() {
   return (
     <View
       style={styles.container}
-      accessibilityLabel="What’s New screen"
+      accessibilityLabel="What's New screen"
       accessible
     >
       <Text
@@ -91,7 +91,7 @@ export default function WhatsNewScreen() {
         accessibilityRole="header"
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        What’s New
+        Whatâ€™s New
       </Text>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
@@ -128,7 +128,7 @@ export default function WhatsNewScreen() {
             setSummary("");
           }}
           accessibilityRole="button"
-          accessibilityLabel="Add what’s new"
+          accessibilityLabel="Add whatâ€™s new"
           style={({ pressed }) => [
             styles.button,
             (!title.trim() || !summary.trim() || pressed) && { opacity: 0.7 },
@@ -224,7 +224,7 @@ function createStyles(
     subtitle: {
       fontSize: Math.round(16 * factor),
       color: palette.text,
-      opacity: 0.9,
+      opacity: 1,
       marginBottom: 8,
     },
     section: {
@@ -239,7 +239,7 @@ function createStyles(
       borderBottomColor: palette.muted,
     },
     itemTitle: { color: palette.text, fontWeight: "600" },
-    itemText: { color: palette.text, opacity: 0.9 },
+    itemText: { color: palette.text, opacity: 1 },
     itemDate: {
       color: palette.text,
       opacity: 0.7,
@@ -264,3 +264,6 @@ function createStyles(
     buttonText: { color: palette.onPrimary, fontSize: 16, fontWeight: "700" },
   });
 }
+
+
+

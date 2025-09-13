@@ -1,6 +1,9 @@
 import React from "react";
-import { AccessibilityInfo, View, Text, StyleSheet } from "react-native";
+import { AccessibilityInfo, View, Text, StyleSheet, AppState } from "react-native";
 import { Stack, usePathname } from "expo-router";
+import { useFonts } from "expo-font";
+import { Ionicons } from "@expo/vector-icons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 import Header from "../components/ThemedHeader";
 import Footer from "../components/ThemedFooter";
@@ -21,10 +24,20 @@ import { PrivacyProvider, usePrivacy } from "../store/privacy";
 
 import * as Notifier from "../services/notifications";
 import { initSentry, initAnalytics } from "../services/telemetry";
+import { fetchPodcasts } from "../services/podcasts";
+import { fetchResources } from "../services/resources";
+import { fetchCampaigns } from "../services/campaigns";
+import { fetchEvents } from "../services/events";
 // Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
 // removed getFirebaseAnalytics direct import (handled via telemetry module)
 
 export default function RootLayout() {
+  // Ensure vector icon fonts are loaded before rendering UI
+  const [fontsLoaded] = useFonts({
+    ...Ionicons.font,
+    ...MaterialCommunityIcons.font,
+  });
+
   const [reduceMotion, setReduceMotion] = React.useState(false);
 
   // Track reduce motion preference
@@ -62,7 +75,33 @@ export default function RootLayout() {
     AccessibilityInfo.announceForAccessibility?.(`${readable}`);
   }, [pathname]);
 
+  // Light prefetch: warm common data caches shortly after mount and on app foreground
+  React.useEffect(() => {
+    let mounted = true;
+    const prefetch = () => {
+      // Fire & forget; each service manages its own cache/fallback
+      Promise.allSettled([
+        fetchPodcasts(),
+        fetchResources(),
+        fetchCampaigns(),
+        fetchEvents(),
+      ]).catch(() => {});
+    };
+    const t = setTimeout(() => mounted && prefetch(), 1200);
+    const sub = AppState.addEventListener("change", (s) => {
+      if (s === "active") prefetch();
+    });
+    return () => {
+      mounted = false;
+      clearTimeout(t);
+      // @ts-ignore RN versions return different shapes
+      sub?.remove?.();
+    };
+  }, []);
+
   return (
+    // Avoid rendering until fonts are available to prevent missing glyphs (X boxes)
+    fontsLoaded ? (
     <I18nProvider>
       <A11ySettingsProvider>
         <SettingsProvider>
@@ -119,6 +158,7 @@ export default function RootLayout() {
         </SettingsProvider>
       </A11ySettingsProvider>
     </I18nProvider>
+  ) : null
   );
 }
 

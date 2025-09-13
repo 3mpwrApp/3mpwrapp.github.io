@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   View,
   Text,
@@ -149,7 +149,7 @@ function createStyles(palette: Palette) {
       borderBottomColor: palette.muted,
     },
     commentAuthor: { color: palette.text, fontWeight: "600", marginBottom: 4 },
-    commentText: { color: palette.text, opacity: 0.9 },
+    commentText: { color: palette.text, opacity: 1 },
     actionsRow: { flexDirection: "row", gap: 12, marginTop: 6 },
     actionLink: { color: palette.primary, fontWeight: "700" },
     newBox: {
@@ -177,3 +177,4 @@ function createStyles(palette: Palette) {
     ctaText: { color: palette.onPrimary, fontWeight: "700" },
   });
 }
+

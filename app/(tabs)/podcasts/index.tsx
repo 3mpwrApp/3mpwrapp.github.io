@@ -294,7 +294,7 @@ export default function PodcastsScreen() {
             />
           );
         }}
-        contentContainerStyle={{ paddingTop: 12 }}
+        contentContainerStyle={{ paddingVertical: 12 }}
         refreshControl={
           <RefreshControl refreshing={loading} onRefresh={reload} />
         }
@@ -319,7 +319,7 @@ function createStyles(palette: any, factor: number) {
     subtitle: {
       fontSize: Math.round(17 * factor),
       color: palette.text,
-      opacity: 0.9,
+      opacity: 1,
       marginBottom: 8,
     },
   });

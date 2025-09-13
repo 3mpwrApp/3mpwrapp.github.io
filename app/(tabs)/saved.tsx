@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { View, Text, StyleSheet, SectionList } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
@@ -94,9 +94,6 @@ export default function SavedScreen() {
       >
         Saved
       </Text>
-      {sections.length === 1 && sections[0].data.length === 0 ? (
-        <Text style={styles.subtitle}>You havenâ€™t saved anything yet.</Text>
-      ) : null}
       <SectionList
         sections={sections}
         keyExtractor={(item) => item.id}
@@ -133,7 +130,7 @@ export default function SavedScreen() {
               >
                 <Card
                   title={item.title}
-                  subtitle={`${item.description} â€¢ ${item.duration}`}
+                  subtitle={`${item.description} - ${item.duration}`}
                   rightIcon={yt ? "logo-youtube" : "chevron-forward"}
                   left={
                     item.thumbnailUrl ? (
@@ -185,7 +182,10 @@ export default function SavedScreen() {
             </Link>
           );
         }}
-        contentContainerStyle={{ paddingTop: 12 }}
+        ListEmptyComponent={
+          <Text style={styles.subtitle}>You haven't saved anything yet.</Text>
+        }
+        contentContainerStyle={{ paddingVertical: 12 }}
       />
     </View>
   );
@@ -204,7 +204,7 @@ function createStyles(palette: Palette, factor: number) {
     subtitle: {
       fontSize: Math.round(17 * factor),
       color: palette.text,
-      opacity: 0.9,
+      opacity: 1,
       marginBottom: 8,
     },
     sectionHeaderRow: {
@@ -216,3 +216,5 @@ function createStyles(palette: Palette, factor: number) {
     sectionHeader: { fontWeight: "700", color: palette.text },
   });
 }
+
+

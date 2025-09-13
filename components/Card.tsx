@@ -91,7 +91,7 @@ function createStyles(palette: Palette, factor: number, dyslexia: boolean) {
       paddingVertical: 14,
       borderBottomWidth: StyleSheet.hairlineWidth,
       borderBottomColor: palette.muted,
-      minHeight: 56,
+      minHeight: 60,
     },
     textWrap: { flex: 1, paddingEnd: 12 },
     leftWrap: { marginEnd: 12 },
@@ -104,7 +104,7 @@ function createStyles(palette: Palette, factor: number, dyslexia: boolean) {
     },
     subtitle: {
       color: palette.text,
-      opacity: 0.9,
+      opacity: 1,
       fontSize: Math.round(14 * factor),
       marginTop: 2,
       letterSpacing: dyslexia ? 0.25 : 0,

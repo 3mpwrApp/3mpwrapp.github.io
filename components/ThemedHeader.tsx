@@ -85,7 +85,7 @@ export default function ThemedHeader() {
               { opacity: pressed ? 0.7 : 1 },
             ]}
           >
-            <Ionicons name="logo-twitter" size={20} color={palette.text} />
+            <Ionicons name="logo-x" size={20} color={palette.text} />
           </Pressable>
 
           <Pressable
@@ -500,6 +500,6 @@ function createStyles(palette: Palette) {
       zIndex: 998,
     },
     social: { flexDirection: "row", gap: 12, marginEnd: 8 },
-    countText: { color: palette.text, opacity: 0.9, fontSize: 14 },
+    countText: { color: palette.text, opacity: 1, fontSize: 14 },
   });
 }

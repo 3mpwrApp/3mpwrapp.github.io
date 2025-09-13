@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   View,
   Text,
@@ -48,7 +48,7 @@ const PROVINCE_NAMES: Record<string, string> = {
   NU: "Nunavut",
   ON: "Ontario",
   PE: "Prince Edward Island",
-  QC: "Québec",
+  QC: "Quebec",
   SK: "Saskatchewan",
   YT: "Yukon",
 };
@@ -176,7 +176,7 @@ export default function ResourcesScreen() {
       </Link>
       <Link href={"/(tabs)/resources/appeal-coach" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          AI “Appeal Coach”
+          AI Appeal Coach
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/deadlines" as Href} asChild>
@@ -396,7 +396,7 @@ export default function ResourcesScreen() {
         <Link href={("/(tabs)/resources/financial-safety-net" as any)} asChild>
           <Card
             title="Financial Safety Net Navigator"
-            subtitle="Step-by-step guide to combining CPP-D, EI, ODSP, Workers’ Comp without overlap"
+            subtitle="Step-by-step guide to combining CPP-D, EI, ODSP, Workersâ€™ Comp without overlap"
           />
         </Link>
         <Link href={("/(tabs)/resources/justice-as-a-service" as any)} asChild>
@@ -502,7 +502,9 @@ export default function ResourcesScreen() {
               ))}
             </View>
           ) : error ? (
-            <Text style={styles.error}>{error}</Text>
+            <Text accessibilityRole="alert" style={styles.error}>
+              {error}
+            </Text>
           ) : (
             <Text style={styles.empty}>No resources found</Text>
           )
@@ -525,7 +527,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       marginBottom: 8,
       color: palette.text,
     },
-    subtitle: { color: palette.text, opacity: 0.9, marginBottom: 12 },
+    subtitle: { color: palette.text, opacity: 1, marginBottom: 12 },
     sectionTitle: {
       marginTop: 16,
       marginBottom: 8,
@@ -579,3 +581,4 @@ function openResource(item: Resource, pref: import("../../../store/settings").Re
     } catch {}
   }
 }
+

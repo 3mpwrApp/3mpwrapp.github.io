@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
@@ -71,6 +71,7 @@ function createStyles(
       borderBottomColor: palette.muted,
     },
     itemTitle: { color: palette.text, fontWeight: "600" },
-    itemText: { color: palette.text, opacity: 0.9 },
+    itemText: { color: palette.text, opacity: 1 },
   });
 }
+

@@ -65,7 +65,7 @@ export default function Header() {
           accessibilityLabel="Visit Empowr on X"
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
-          <Ionicons name="logo-twitter" size={22} color="#000000" />
+          <Ionicons name="logo-x" size={22} color="#000000" />
         </Pressable>
 
         {/* Email */}

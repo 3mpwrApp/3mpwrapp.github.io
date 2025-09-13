@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   View,
   Text,
@@ -31,6 +31,7 @@ import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 
 export default function EventsScreen() {
   const palette = useAppPalette();
@@ -107,7 +108,7 @@ export default function EventsScreen() {
 
   const formatMeta = (date: string, isVirtual?: boolean, location?: string) => {
     const place = isVirtual ? "Virtual" : (location ?? "TBD");
-    return `${date} â€¢ ${place}`;
+    return `${date} Ã¢â‚¬Â¢ ${place}`;
   };
 
   const monthLabel = React.useMemo(
@@ -195,6 +196,7 @@ export default function EventsScreen() {
         <Pressable
           accessibilityRole="button"
           accessibilityLabel="Previous month"
+          hitSlop={HIT_SLOP_8}
           onPress={() =>
             setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))
           }
@@ -205,6 +207,7 @@ export default function EventsScreen() {
         <Pressable
           accessibilityRole="button"
           accessibilityLabel="Next month"
+          hitSlop={HIT_SLOP_8}
           onPress={() =>
             setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))
           }
@@ -429,3 +432,4 @@ function dayKeyFromMatrix(baseMonth: Date, day: number | null) {
   const dd = `${day}`.padStart(2, "0");
   return `${y}-${m}-${dd}`;
 }
+

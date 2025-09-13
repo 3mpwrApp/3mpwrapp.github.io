@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   View,
   Text,
@@ -158,3 +158,4 @@ function createStyles(palette: Palette) {
     threadMeta: { color: palette.text, opacity: 0.8, marginTop: 2 },
   });
 }
+

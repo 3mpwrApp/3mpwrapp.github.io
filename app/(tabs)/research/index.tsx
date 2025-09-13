@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { View, Text, StyleSheet, FlatList, Pressable } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
@@ -149,7 +149,7 @@ export default function ResearchScreen() {
           >
             <Card
               title={item.title}
-              subtitle={`${item.source} Ã¢â‚¬Â¢ ${item.year}`}
+              subtitle={`${item.source} - ${item.year}`}
               left={
                 <View
                   style={{
@@ -167,7 +167,7 @@ export default function ResearchScreen() {
             />
           </Link>
         )}
-        contentContainerStyle={{ paddingTop: 12 }}
+        ListEmptyComponent={<Text style={[styles.subtitle, { opacity: 0.7 }]}>No research found</Text>}\n        contentContainerStyle={{ paddingVertical: 12 }}
       />
     </View>
   );
@@ -209,3 +209,5 @@ function createStyles(
     chipTextActive: { color: palette.onPrimary },
   });
 }
+
+

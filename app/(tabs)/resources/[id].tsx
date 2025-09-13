@@ -7,6 +7,7 @@ import {
   Linking,
   Share,
 } from "react-native";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -110,6 +111,7 @@ export default function ResourceDetail() {
             accessibilityLabel={
               saved ? "Remove from favorites" : "Save to favorites"
             }
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={styles.buttonText}>
               {saved ? "Remove from Favorites" : "Save to Favorites"}
@@ -129,6 +131,7 @@ export default function ResourceDetail() {
             }
             accessibilityRole="button"
             accessibilityLabel="Open website"
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={styles.buttonText}>Open Website</Text>
           </Pressable>
@@ -148,6 +151,7 @@ export default function ResourceDetail() {
           }
           accessibilityRole="button"
           accessibilityLabel="Share"
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={styles.buttonText}>Share</Text>
         </Pressable>

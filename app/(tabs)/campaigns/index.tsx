@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   View,
   Text,
@@ -140,8 +140,15 @@ function ScreenInner() {
 
       {error && (
         <>
-          <Text style={styles.subtitle}>{error}</Text>
-          <Text onPress={reload} style={styles.subtitle}>
+          <Text accessibilityRole="alert" style={styles.subtitle}>
+            {error}
+          </Text>
+          <Text
+            onPress={reload}
+            style={[styles.subtitle, { textDecorationLine: "underline" }]}
+            accessibilityRole="button"
+            accessibilityLabel="Try again"
+          >
             Try again
           </Text>
         </>
@@ -163,7 +170,7 @@ function ScreenInner() {
             >
               <Card
                 title={item.title}
-                subtitle={`${item.summary}${item.membersCount ? ` • ${item.membersCount} supporters` : ""}`}
+                subtitle={`${item.summary}${item.membersCount ? ` - ${item.membersCount} supporters` : ""}`}
               />
             </Link>
             <Pressable
@@ -190,7 +197,12 @@ function ScreenInner() {
             </Pressable>
           </View>
         )}
-        contentContainerStyle={{ paddingTop: 12 }}
+        ListEmptyComponent={!loading && !error ? (
+          <Text style={{ color: palette.text, opacity: 0.7, marginTop: 12 }}>
+            No campaigns found
+          </Text>
+        ) : null}
+        contentContainerStyle={{ paddingVertical: 12 }}
         refreshControl={
           <RefreshControl refreshing={loading} onRefresh={reload} />
         }
@@ -219,7 +231,7 @@ function createStyles(palette: Palette) {
     subtitle: {
       fontSize: 17,
       color: palette.text,
-      opacity: 0.9,
+      opacity: 1,
       marginBottom: 8,
     },
   });
@@ -302,3 +314,8 @@ function CreateCampaignBox({
     </View>
   );
 }
+
+
+
+
+

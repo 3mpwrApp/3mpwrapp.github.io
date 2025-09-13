@@ -1,7 +1,7 @@
 {
   "name": "empowrapp",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.1",
   "scripts": {
     "start": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
     "prestart": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js",

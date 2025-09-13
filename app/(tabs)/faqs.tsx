@@ -112,7 +112,8 @@ export default function FaqsScreen() {
             <Text style={styles.a}>{item.a}</Text>
           </View>
         )}
-        contentContainerStyle={{ paddingTop: 8 }}
+        ListEmptyComponent={<Text style={styles.a}>No FAQs found</Text>}
+        contentContainerStyle={{ paddingVertical: 12 }}
       />
     </View>
   );
@@ -145,7 +146,7 @@ function createStyles(
       borderBottomColor: palette.muted,
     },
     q: { color: palette.text, fontWeight: "700" },
-    a: { color: palette.text, opacity: 0.9, marginTop: 4 },
+    a: { color: palette.text, opacity: 1, marginTop: 4 },
     button: {
       backgroundColor: palette.primary,
       paddingVertical: 10,
