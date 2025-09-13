@@ -38,7 +38,13 @@ export default function MutualChat() {
   React.useEffect(() => {
     const uid = auth.currentUser?.uid || 'anon';
     const ref = doc(db, 'mutual_aid_posts', String(id), 'presence', uid);
-    (async () => { try { await setDoc(ref, { lastSeen: serverTimestamp(), typing: false }, { merge: true }); } catch {} })();
+    (async () => {
+      try {
+        await setDoc(ref, { lastSeen: serverTimestamp(), typing: false }, { merge: true });
+        // add to participants index for server-based push notifications
+        await setDoc(doc(db, 'mutual_aid_posts', String(id), 'participants', uid), { joinedAt: serverTimestamp(), lastSeen: serverTimestamp() }, { merge: true });
+      } catch {}
+    })();
     const i = setInterval(async()=>{ try { await setDoc(ref, { lastSeen: serverTimestamp() }, { merge: true }); } catch {} }, 30000);
     // Register device token for server-based push (Expo token)
     registerExpoPushToken();
@@ -65,7 +71,7 @@ export default function MutualChat() {
       {items.map(i => (<Text key={i.id} style={s.text}>• {new Date(i.createdAt?.toDate?.()||Date.now()).toLocaleTimeString()} — {i.message}</Text>))}
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         <TextInput placeholder="Message" placeholderTextColor={palette.text+'77'} value={msg} onChangeText={async (t)=>{ setMsg(t); try { const uid = auth.currentUser?.uid || 'anon'; await setDoc(doc(db,'mutual_aid_posts', String(id), 'presence', uid), { typing: !!t }, { merge: true }); } catch {} }} style={[s.input,{ flex:1 }]} />
-        <Pressable onPress={async()=>{ try{ await addDoc(collection(db,'mutual_aid_posts', String(id), 'chat'), { message: msg, createdAt: serverTimestamp(), author: auth.currentUser?.uid || 'anon' }); setMsg(''); } catch { Alert.alert('Failed','Could not send'); } }} style={s.button}><Text style={s.buttonText}>Send</Text></Pressable>
+        <Pressable onPress={async()=>{ try{ const postId = String(id); const author = auth.currentUser?.uid || 'anon'; await setDoc(doc(db,'mutual_aid_posts', postId, 'participants', author), { joinedAt: serverTimestamp(), lastSeen: serverTimestamp() }, { merge: true }); await addDoc(collection(db,'mutual_aid_posts', postId, 'chat'), { message: msg, createdAt: serverTimestamp(), author }); setMsg(''); try { const base = process.env.EXPO_PUBLIC_LLM_BASE; if (base) { await fetch(`${base.replace(/\/$/,'')}/notify-chat-post`, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ postId, fromUid: author, message: msg }) }); } } catch {} } catch { Alert.alert('Failed','Could not send'); } }} style={s.button}><Text style={s.buttonText}>Send</Text></Pressable>
       </View>
     </View>
   );

@@ -21,10 +21,33 @@ export default function AdminPanel() {
   const [cursor, setCursor] = React.useState<any | null>(null);
   const [flags, setFlags] = React.useState<any[]>([]);
   const [selectedFlags, setSelectedFlags] = React.useState<Record<string, boolean>>({});
+  const [reviewTab, setReviewTab] = React.useState<'pending'|'approved'|'trash'>('pending');
+  const [reviewItems, setReviewItems] = React.useState<any[]>([]);
   const loadFlags = async () => {
     try { const { listFlags } = await import('../../../services/moderation'); const rows = await listFlags(); setFlags(rows); } catch {}
   };
   React.useEffect(() => { loadFlags(); }, []);
+
+  async function loadReview() {
+    try {
+      const { db } = await import('../../../firebase/config');
+      const { collection, getDocs, where, query, limit: ql } = await import('firebase/firestore');
+      let cond;
+      if (reviewTab === 'pending') cond = where('approved','!=', true);
+      if (reviewTab === 'approved') cond = where('approved','==', true);
+      if (reviewTab === 'trash') cond = where('deleted','==', true);
+      const cols = [
+        query(collection(db,'mutual_aid_posts'), cond, ql(50)),
+        query(collection(db,'ratings'), cond, ql(50)),
+      ];
+      const [mutSnap, ratSnap] = await Promise.all(cols.map(getDocs));
+      const items = [
+        ...mutSnap.docs.map(d=>({ id:d.id, type:'mutual', ...(d.data() as any) })),
+        ...ratSnap.docs.map(d=>({ id:d.id, type:'rating', ...(d.data() as any) })),
+      ];
+      setReviewItems(items);
+    } catch {}
+  }
   const filteredUsers = React.useMemo(() => {
     const term = (contains || '').toLowerCase().trim();
     return users
@@ -362,6 +385,34 @@ export default function AdminPanel() {
             </View>
           ))}
         </>) }
+
+        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Content Review</Text>
+        <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
+          {(['pending','approved','trash'] as const).map(k => (
+            <Pressable key={k} onPress={()=> { setReviewTab(k); loadReview(); }} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: k===reviewTab? palette.primary: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+              <Text style={{ color: k===reviewTab? palette.onPrimary: palette.text, fontWeight: '700' }}>{k}</Text>
+            </Pressable>
+          ))}
+          <Pressable onPress={loadReview} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+            <Text style={{ color: palette.text, fontWeight: '700' }}>Refresh</Text>
+          </Pressable>
+        </View>
+        {reviewItems.map((x) => (
+          <View key={`${x.type}:${x.id}`} style={{ marginBottom: 8, paddingBottom: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted }}>
+            <Text style={s.text}>[{x.type}] {x.type==='mutual' ? `${x.type} • ${x.city||''} — ${x.description||''}` : `${x.target||''} • ${x.score||''}★ — ${x.comment||''}`}</Text>
+            <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
+              <Pressable onPress={async()=>{ try { const { db } = await import('../../../firebase/config'); const { updateDoc, doc } = await import('firebase/firestore'); await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { approved: true, deleted: false }); loadReview(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
+                <Text style={{ color: palette.text, fontWeight:'700' }}>Approve</Text>
+              </Pressable>
+              <Pressable onPress={async()=>{ try { const { db } = await import('../../../firebase/config'); const { updateDoc, doc } = await import('firebase/firestore'); await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { approved: false, deleted: false }); loadReview(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
+                <Text style={{ color: palette.text, fontWeight:'700' }}>Restore</Text>
+              </Pressable>
+              <Pressable onPress={async()=>{ try { const { db } = await import('../../../firebase/config'); const { updateDoc, deleteDoc, doc } = await import('firebase/firestore'); if (reviewTab==='trash') { await deleteDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id)); } else { await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { deleted: true }); } loadReview(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
+                <Text style={{ color: palette.text, fontWeight:'700' }}>{reviewTab==='trash' ? 'Purge' : 'Trash'}</Text>
+              </Pressable>
+            </View>
+          </View>
+        ))}
       </ScrollView>
     </AdminGuard>
   );

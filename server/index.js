@@ -107,4 +107,58 @@ try {
       res.status(500).json({ error: 'notify failed' });
     }
   });
+
+  // Expo push helper
+  let expo = null;
+  try { expo = (await import('expo-server-sdk')).Expo; } catch {}
+  app.post('/notify-expo', express.json(), async (req, res) => {
+    try {
+      if (!expo) return res.status(200).json({ status: 'noop' });
+      const { tokens = [], title, body, data } = req.body || {};
+      const ex = new expo();
+      const messages = tokens.map((token) => ({ to: token, sound: 'default', title, body, data }));
+      const chunks = ex.chunkPushNotifications(messages);
+      const tickets = [];
+      for (const chunk of chunks) { tickets.push(await ex.sendPushNotificationsAsync(chunk)); }
+      res.json({ tickets });
+    } catch (e) { res.status(500).json({ error: 'expo notify failed' }); }
+  });
+
+  // Notify all participants of a mutual-aid chat (except author)
+  app.post('/notify-chat-post', express.json(), async (req, res) => {
+    try {
+      const { postId, fromUid, message } = req.body || {};
+      if (!postId) return res.status(400).json({ error: 'postId required' });
+      // Read presence to find participants
+      const firestore = (await admin?.firestore?.()) || null;
+      if (!firestore) return res.status(200).json({ status: 'noop' });
+      const docRef = firestore.collection('mutual_aid_posts').doc(String(postId));
+      const [presSnap, partSnap] = await Promise.all([
+        docRef.collection('presence').get(),
+        docRef.collection('participants').get(),
+      ]);
+      const uidSet = new Set();
+      presSnap.docs.forEach((d)=> uidSet.add(d.id));
+      partSnap.docs.forEach((d)=> uidSet.add(d.id));
+      const uids = Array.from(uidSet).filter((uid) => uid && uid !== fromUid);
+      // Load tokens
+      const tokensSnap = await firestore.getAll(...uids.map((uid) => firestore.collection('user_tokens').doc(uid)));
+      const expoTokens = [], fcmTokens = [];
+      tokensSnap.forEach((doc) => { const v = doc.data() || {}; if (v.expo) expoTokens.push(v.expo); if (v.fcm) fcmTokens.push(v.fcm); });
+      // Send expo
+      if (expo && expoTokens.length) {
+        const Ex = (await import('expo-server-sdk')).Expo; const ex = new Ex();
+        const messages = expoTokens.map((t) => ({ to: t, sound: 'default', title: 'New message', body: String(message||'New chat message'), data: { postId } }));
+        const chunks = ex.chunkPushNotifications(messages);
+        for (const chunk of chunks) { await ex.sendPushNotificationsAsync(chunk); }
+      }
+      // Send FCM
+      if (admin && fcmTokens.length) {
+        await admin.messaging().sendEachForMulticast({ tokens: fcmTokens, notification: { title: 'New message', body: String(message||'New chat message') }, data: { postId: String(postId) } });
+      }
+      res.json({ ok: true, expo: expoTokens.length, fcm: fcmTokens.length });
+    } catch (e) {
+      res.status(500).json({ error: 'notify-chat-post failed' });
+    }
+  });
 } catch {}
