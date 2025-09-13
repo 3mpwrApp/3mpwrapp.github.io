@@ -58,10 +58,10 @@ export default function ThemedHeader() {
           source={require("../assets/images/brand-logo.png")}
           style={styles.logo}
           accessible
-          accessibilityLabel="3mpowrApp logo"
+          accessibilityLabel="3mpwrApp logo"
         />
-        <Text style={styles.title} accessibilityLabel="3mpowrApp header">
-          3mpowrApp
+        <Text style={styles.title} accessibilityLabel="3mpwrApp header">
+          3mpwrApp
         </Text>
       </Pressable>
 
