@@ -29,6 +29,7 @@
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
     "@react-native-async-storage/async-storage": "2.1.2",
+    "cheerio": "^1.1.2",
     "expo": "~53.0.22",
     "expo-av": "~15.1.7",
     "expo-blur": "~14.1.5",
@@ -44,6 +45,7 @@
     "expo-notifications": "~0.31.4",
     "expo-print": "~14.1.4",
     "expo-router": "~5.1.6",
+    "expo-server-sdk": "^4.0.0",
     "expo-sharing": "~13.1.5",
     "expo-splash-screen": "~0.30.10",
     "expo-status-bar": "~2.2.3",
@@ -51,6 +53,7 @@
     "expo-system-ui": "~5.0.11",
     "expo-web-browser": "~14.2.0",
     "firebase": "^12.2.1",
+    "pdf-parse": "^1.1.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-native": "0.79.5",
@@ -63,7 +66,8 @@
     "react-native-svg": "15.11.2",
     "react-native-web": "~0.20.0",
     "react-native-webview": "13.13.5",
-    "sentry-expo": "~7.1.1"
+    "sentry-expo": "~7.1.1",
+    "tesseract.js": "^6.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

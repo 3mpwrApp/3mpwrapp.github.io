@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, Pressable, Alert, FlatList } from 'react-native';
+import { router } from 'expo-router';
 import { useAppPalette } from '../../../theme/usePalette';
 import { useAuth } from '../../../context/AuthContext';
 import { addRating, listRatings, upsertRating, ensureTarget, listTargets } from '../../../services/ratings';
@@ -31,6 +32,11 @@ export default function Ratings() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Disability Justice Ratings</Text>
+      {isAdmin && (
+        <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
+          <Pressable onPress={()=> router.push('/(tabs)/admin' as any)} style={s.button}><Text style={s.buttonText}>Open Admin Review</Text></Pressable>
+        </View>
+      )}
       <View>
         <TextInput
           placeholder="Target (name)"

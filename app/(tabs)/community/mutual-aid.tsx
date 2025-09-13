@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
 import { useAuth } from '../../../context/AuthContext';
+import { router } from 'expo-router';
 import { addAidPost, listAidPosts, respondToPost, deletePost, softDeletePost } from '../../../services/mutual';
 import { flagItem } from '../../../services/moderation';
 import { Link } from 'expo-router';
@@ -25,7 +26,10 @@ export default function MutualAid() {
     <View style={s.container}>
       <Text style={s.title}>Mutual Aid Engine</Text>
       {isAdmin && (
-        <Pressable onPress={()=> setShowAll(v=>!v)} style={s.button}><Text style={s.buttonText}>{showAll? 'Showing all (incl. unapproved)':'Showing approved only'}</Text></Pressable>
+        <View style={{ flexDirection:'row', gap:8 }}>
+          <Pressable onPress={()=> setShowAll(v=>!v)} style={s.button}><Text style={s.buttonText}>{showAll? 'Showing all (incl. unapproved)':'Showing approved only'}</Text></Pressable>
+          <Pressable onPress={()=> router.push('/(tabs)/admin' as any)} style={s.button}><Text style={s.buttonText}>Open Admin Review</Text></Pressable>
+        </View>
       )}
       <TextInput placeholder="Type (rides, groceries, tutoring...)" placeholderTextColor={palette.text+'77'} value={type} onChangeText={setType} style={s.input} />
       <TextInput placeholder="Description" placeholderTextColor={palette.text+'77'} value={desc} onChangeText={setDesc} style={s.input} />
