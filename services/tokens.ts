@@ -1,7 +1,7 @@
 import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 import { auth, db } from '../firebase/config';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 
 export async function registerExpoPushToken() {
   try {
@@ -28,4 +28,3 @@ export async function saveFcmToken(token: string) {
   if (!uid) return;
   await setDoc(doc(db, 'user_tokens', uid), { fcm: token, updatedAt: new Date().toISOString() }, { merge: true });
 }
-

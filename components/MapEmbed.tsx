@@ -6,6 +6,17 @@ type Point = { id: string; title: string; lat: number; lng: number; kind?: 'law'
 
 export default function MapEmbed({ points, cluster = true }: { points: Point[]; cluster?: boolean }) {
   const palette = useAppPalette();
+  const center = points[0] || ({ lat: 43.653, lng: -79.383, id: 'c', title: 'Center' } as any);
+  const clusters = React.useMemo(() => {
+    if (!cluster || points.length < 15) return points.map(p => ({ ...p, size: 1 }));
+    const grid = new Map<string, { id: string; title: string; lat: number; lng: number; size: number }>();
+    points.forEach((p) => {
+      const key = `${Math.round(p.lat*20)}_${Math.round(p.lng*20)}`;
+      if (!grid.has(key)) grid.set(key, { id: key, title: 'Cluster', lat: p.lat, lng: p.lng, size: 0 });
+      const g = grid.get(key)!; g.size += 1; g.lat = (g.lat + p.lat)/2; g.lng = (g.lng + p.lng)/2;
+    });
+    return Array.from(grid.values());
+  }, [points, cluster]);
   let MapView: any = null;
   let Marker: any = null;
   try {
@@ -27,18 +38,6 @@ export default function MapEmbed({ points, cluster = true }: { points: Point[]; 
       </View>
     );
   }
-  const center = points[0] || { lat: 43.653, lng: -79.383, id: 'c', title: 'Center' } as any;
-  // Simple grid clustering (very naive)
-  const clusters = React.useMemo(() => {
-    if (!cluster || points.length < 15) return points.map(p => ({ ...p, size: 1 }));
-    const grid = new Map<string, { id: string; title: string; lat: number; lng: number; size: number }>();
-    points.forEach((p) => {
-      const key = `${Math.round(p.lat*20)}_${Math.round(p.lng*20)}`;
-      if (!grid.has(key)) grid.set(key, { id: key, title: 'Cluster', lat: p.lat, lng: p.lng, size: 0 });
-      const g = grid.get(key)!; g.size += 1; g.lat = (g.lat + p.lat)/2; g.lng = (g.lng + p.lng)/2;
-    });
-    return Array.from(grid.values());
-  }, [points, cluster]);
   const pinColor = (k?: string) => k==='law'? '#0066cc' : k==='protest'? '#cc0000' : '#00a85a';
   return (
     <View style={{ height: 240, borderWidth: 1, borderColor: palette.muted, borderRadius: 8, overflow: 'hidden' }}>

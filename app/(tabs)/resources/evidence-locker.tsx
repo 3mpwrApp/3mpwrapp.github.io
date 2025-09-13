@@ -4,8 +4,7 @@ import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar";
 import { useAuth } from "../../../context/AuthContext";
 import { router } from "expo-router";
-import { useAuth } from "../../../context/AuthContext";
-import { addEvidenceNote, uploadEvidenceFileWithProgress, listEvidence, deleteEvidenceDoc, listEvidencePage, type EvidenceFile } from "../../../services/evidence";
+import { addEvidenceNote, uploadEvidenceFileWithProgress, deleteEvidenceDoc, listEvidencePage, type EvidenceFile } from "../../../services/evidence";
 // Linking added when preview links are active; safe to lazy import when needed
 import { useAppPalette } from "../../../theme/usePalette";
 import {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -36,4 +35,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     cardTitle: { color: palette.text, fontWeight:'700' },
   });
 }
-

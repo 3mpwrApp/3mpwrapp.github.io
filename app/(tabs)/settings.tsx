@@ -202,6 +202,8 @@ function A11ySettingsSection() {
     captionsPreferred,
     setCaptionsPreferred,
     setResourcePreferredFormat,
+    voiceMode,
+    setVoiceMode,
   } = useSettings();
 
   const ScaleButton = ({ label, value }: { label: string; value: TextScale }) => (
@@ -217,6 +219,13 @@ function A11ySettingsSection() {
       <Button
         title={highContrast ? "Disable High Contrast" : "Enable High Contrast"}
         onPress={() => setHighContrast(!highContrast)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Voice Mode (beta)</Text>
+      <Button
+        title={voiceMode ? "Disable Voice Mode" : "Enable Voice Mode"}
+        onPress={() => setVoiceMode(!voiceMode)}
       />
 
       <View style={{ height: 10 }} />

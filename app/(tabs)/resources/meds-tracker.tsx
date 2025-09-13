@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, Alert, FlatList } from 'react-native
 import A11yPressable from '../../../components/A11yPressable';
 import { useAppPalette } from '../../../theme/usePalette';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { addMedication, listMedications, deleteMedication, addMedLog, listLogs, updateMedication, type Medication, type MedLog } from '../../../services/meds';
+import { addMedication, listMedications, deleteMedication, addMedLog, listLogs, type Medication, type MedLog } from '../../../services/meds';
 import * as Notifier from '../../../services/notifications';
 import DateTimeField from '../../../components/DateTimeField';
 

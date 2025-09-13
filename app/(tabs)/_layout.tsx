@@ -4,6 +4,7 @@ import { useColorScheme } from "react-native";
 import { colors } from "../../theme/colors";
 import { useTranslation } from "../../i18n";
 import { useWhatsNewBadge } from "../../hooks/useWhatsNewBadge";
+import VoiceController from "../../components/VoiceController";
 
 export default function TabsLayout() {
   const colorScheme = useColorScheme();
@@ -14,6 +15,7 @@ export default function TabsLayout() {
   const wnBadge = useWhatsNewBadge();
 
   return (
+    <>
     <Tabs
       screenOptions={{
         headerShown: false,
@@ -223,5 +225,8 @@ export default function TabsLayout() {
         }}
       />
     </Tabs>
+    <VoiceController />
+    </>
   );
 }
+

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-nativ
 import { useLocalSearchParams } from 'expo-router';
 import { useAppPalette } from '../../../theme/usePalette';
 import { db } from '../../../firebase/config';
-import { addDoc, collection, getDocs, orderBy, query, serverTimestamp, onSnapshot, setDoc, doc } from 'firebase/firestore';
+import { addDoc, collection, orderBy, query, serverTimestamp, onSnapshot, setDoc, doc } from 'firebase/firestore';
 import { registerExpoPushToken } from '../../../services/tokens';
 import { auth } from '../../../firebase/config';
 
@@ -18,6 +18,7 @@ export default function MutualChat() {
   const [roster, setRoster] = React.useState<any[]>([]);
   const lastRef = React.useRef<number>(0);
   React.useEffect(()=>{
+    let cleanup: (()=>void) | undefined;
     try {
       const q = query(collection(db,'mutual_aid_posts', String(id), 'chat'), orderBy('createdAt','asc'));
       const unsub = onSnapshot(q, async (snap) => {
@@ -31,8 +32,9 @@ export default function MutualChat() {
         }
         if (ts) lastRef.current = ts;
       });
-      return () => unsub();
+      cleanup = () => unsub();
     } catch {}
+    return () => { if (cleanup) cleanup(); };
   },[id]);
   // Presence + typing
   React.useEffect(() => {
@@ -52,14 +54,16 @@ export default function MutualChat() {
   }, [id]);
   // Roster snapshot
   React.useEffect(() => {
+    let cleanup: (()=>void) | undefined;
     try {
       const q = collection(db, 'mutual_aid_posts', String(id), 'presence');
       const unsub = onSnapshot(q, (snap) => {
         const now = Date.now();
         setRoster(snap.docs.map(d=>({ id: d.id, ...(d.data() as any) })).filter(u => (now - (u.lastSeen?.toDate?.()?.getTime?.()||0)) < 2*60*1000));
       });
-      return () => unsub();
+      cleanup = () => unsub();
     } catch {}
+    return () => { if (cleanup) cleanup(); };
   }, [id]);
   return (
     <View style={s.container}>

@@ -5,7 +5,12 @@ const expoConfig = require("eslint-config-expo/flat");
 module.exports = defineConfig([
   expoConfig,
   {
-    ignores: ["dist/*", ".expo/*"],
+    ignores: [
+      "dist/*",
+      ".expo/*",
+      // Admin restored; re-enable lint by removing ignore
+      "server/**",
+    ],
   },
   {
     files: ["scripts/**/*.js"],

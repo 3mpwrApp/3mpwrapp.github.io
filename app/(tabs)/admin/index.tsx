@@ -1,97 +1,167 @@
-﻿import React from "react";
-import { Text, StyleSheet, ScrollView, View, TextInput, Pressable, Alert } from "react-native";
+import React from "react";
+import {
+  Text,
+  StyleSheet,
+  ScrollView,
+  View,
+  TextInput,
+  Pressable,
+  Alert,
+} from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
 import AdminGuard from "../../../components/AdminGuard";
 import { db } from "../../../firebase/config";
-import { collection, getDocs, limit, query, where, getCountFromServer, startAfter } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  limit,
+  query,
+  where,
+  getCountFromServer,
+  startAfter,
+  updateDoc,
+  deleteDoc,
+  doc,
+} from "firebase/firestore";
 import { useLocalSearchParams } from "expo-router";
 
 export const options = { href: null };
 
+type ReviewKind = "pending" | "approved" | "trash";
+type ReviewItem = { id: string; type: "mutual" | "rating" } & Record<string, any>;
+
 export default function AdminPanel() {
   const palette = useAppPalette();
   const s = styles(palette);
+
+  const params = useLocalSearchParams<{ tab?: ReviewKind }>();
+
+  const [counts, setCounts] = React.useState<{
+    users?: number;
+    campaigns?: number;
+    resources?: number;
+  }>({});
+
   const [email, setEmail] = React.useState("");
-  const [contains, setContains] = React.useState("");
-  const [onlyVerified, setOnlyVerified] = React.useState(false);
-  const [onlyBanned, setOnlyBanned] = React.useState(false);
   const [result, setResult] = React.useState<any | null>(null);
-  const [counts, setCounts] = React.useState<{ users?: number; campaigns?: number; resources?: number }>({});
+
   const [users, setUsers] = React.useState<any[]>([]);
   const [cursor, setCursor] = React.useState<any | null>(null);
-  const [flags, setFlags] = React.useState<any[]>([]);
-  const [selectedFlags, setSelectedFlags] = React.useState<Record<string, boolean>>({});
-  const [reviewTab, setReviewTab] = React.useState<'pending'|'approved'|'trash'>('pending');
-  const [reviewItems, setReviewItems] = React.useState<any[]>([]);
-  const params = useLocalSearchParams<{ tab?: string }>();
-  const loadFlags = async () => {
-    try { const { listFlags } = await import('../../../services/moderation'); const rows = await listFlags(); setFlags(rows); } catch {}
-  };
-  React.useEffect(() => { loadFlags(); }, []);
-  React.useEffect(() => {
-    const t = String(params?.tab || '').toLowerCase();
-    if (t === 'pending' || t === 'approved' || t === 'trash') {
-      setReviewTab(t as any);
-      loadReview();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [params?.tab]);
+  const [contains] = React.useState("");
+  const [onlyVerified] = React.useState(false);
+  const [onlyBanned] = React.useState(false);
+  const [sortKey] = React.useState<"email" | "name" | "id">("email");
+  const [sortDir] = React.useState<"asc" | "desc">("asc");
 
-  async function loadReview() {
-    try {
-      const { db } = await import('../../../firebase/config');
-      const { collection, getDocs, where, query, limit: ql } = await import('firebase/firestore');
-      let cond;
-      if (reviewTab === 'pending') cond = where('approved','!=', true);
-      if (reviewTab === 'approved') cond = where('approved','==', true);
-      if (reviewTab === 'trash') cond = where('deleted','==', true);
-      const cols = [
-        query(collection(db,'mutual_aid_posts'), cond, ql(50)),
-        query(collection(db,'ratings'), cond, ql(50)),
-      ];
-      const [mutSnap, ratSnap] = await Promise.all(cols.map(getDocs));
-      const items = [
-        ...mutSnap.docs.map(d=>({ id:d.id, type:'mutual', ...(d.data() as any) })),
-        ...ratSnap.docs.map(d=>({ id:d.id, type:'rating', ...(d.data() as any) })),
-      ];
-      setReviewItems(items);
-    } catch {}
-  }
-  const filteredUsers = React.useMemo(() => {
-    const term = (contains || '').toLowerCase().trim();
-    return users
-      .filter((u) => (onlyVerified ? u.verified === true : true) && (onlyBanned ? u.banned === true : true))
-      .filter((u) => {
-        if (!term) return true;
-        const s = `${u.email || ''} ${u.displayName || ''}`.toLowerCase();
-        return s.includes(term);
-      });
-  }, [users, contains, onlyVerified, onlyBanned]);
-  const [sortKey, setSortKey] = React.useState<'email' | 'name' | 'id'>('email');
-  const [sortDir, setSortDir] = React.useState<'asc' | 'desc'>('asc');
-  const sortedUsers = React.useMemo(() => {
-    const arr = [...filteredUsers];
-    const keyFn = (u: any) => sortKey === 'email' ? (u.email || '') : sortKey === 'name' ? (u.displayName || '') : (u.id || '');
-    arr.sort((a, b) => String(keyFn(a)).localeCompare(String(keyFn(b))));
-    if (sortDir === 'desc') arr.reverse();
-    return arr;
-  }, [filteredUsers, sortKey, sortDir]);
+  const [flags, setFlags] = React.useState<any[]>([]);
+  const [selectedFlags, setSelectedFlags] = React.useState<Record<string, boolean>>(
+    {},
+  );
+
+  const [reviewTab, setReviewTab] = React.useState<ReviewKind>(
+    (params?.tab as ReviewKind) || "pending",
+  );
+  const [reviewItems, setReviewItems] = React.useState<ReviewItem[]>([]);
+
   React.useEffect(() => {
     (async () => {
       try {
-        const usersCol = collection(db, 'users');
-        const campaignsCol = collection(db, 'campaigns');
-        const resourcesCol = collection(db, 'resources');
+        const usersCol = collection(db, "users");
+        const campaignsCol = collection(db, "campaigns");
+        const resourcesCol = collection(db, "resources");
         const [uc, cc, rc] = await Promise.all([
-          getCountFromServer(usersCol).then((s) => s.data().count).catch(() => undefined),
-          getCountFromServer(campaignsCol).then((s) => s.data().count).catch(() => undefined),
-          getCountFromServer(resourcesCol).then((s) => s.data().count).catch(() => undefined),
+          getCountFromServer(usersCol)
+            .then((s) => s.data().count)
+            .catch(() => undefined),
+          getCountFromServer(campaignsCol)
+            .then((s) => s.data().count)
+            .catch(() => undefined),
+          getCountFromServer(resourcesCol)
+            .then((s) => s.data().count)
+            .catch(() => undefined),
         ]);
         setCounts({ users: uc, campaigns: cc, resources: rc });
       } catch {}
     })();
   }, []);
+
+  const loadFlags = React.useCallback(async () => {
+    try {
+      const { listFlags } = await import("../../../services/moderation");
+      const rows = await listFlags(100);
+      setFlags(rows);
+    } catch {}
+  }, []);
+  React.useEffect(() => {
+    loadFlags();
+  }, [loadFlags]);
+
+  React.useEffect(() => {
+    const t = String(params?.tab || "").toLowerCase();
+    if (t === "pending" || t === "approved" || t === "trash") {
+      setReviewTab(t as ReviewKind);
+    }
+  }, [params?.tab]);
+
+  const loadReview = React.useCallback(async () => {
+    try {
+      const condPending = where("approved", "!=", true);
+      const condApproved = where("approved", "==", true);
+      const condTrash = where("deleted", "==", true);
+      const cond =
+        reviewTab === "approved"
+          ? condApproved
+          : reviewTab === "trash"
+          ? condTrash
+          : condPending;
+
+      const qMut = query(collection(db, "mutual_aid_posts"), cond, limit(50));
+      const qRat = query(collection(db, "ratings"), cond, limit(50));
+      const [mutSnap, ratSnap] = await Promise.all([
+        getDocs(qMut),
+        getDocs(qRat),
+      ]);
+      const items: ReviewItem[] = [
+        ...mutSnap.docs.map((d) => ({
+          id: d.id,
+          type: "mutual",
+          ...(d.data() as any),
+        })),
+        ...ratSnap.docs.map((d) => ({
+          id: d.id,
+          type: "rating",
+          ...(d.data() as any),
+        })),
+      ];
+      setReviewItems(items);
+    } catch {}
+  }, [reviewTab]);
+  React.useEffect(() => {
+    loadReview();
+  }, [loadReview]);
+
+  const filteredUsers = React.useMemo(() => {
+    const term = (contains || "").toLowerCase().trim();
+    const match = (u: any) =>
+      (onlyVerified ? u.verified === true : true) &&
+      (onlyBanned ? u.banned === true : true) &&
+      (!term || `${u.email || ""} ${u.displayName || ""}`.toLowerCase().includes(term));
+    return users.filter(match);
+  }, [users, contains, onlyVerified, onlyBanned]);
+  const sortedUsers = React.useMemo(() => {
+    const arr = [...filteredUsers];
+    const keyFn = (u: any) =>
+      sortKey === "email"
+        ? u.email || ""
+        : sortKey === "name"
+        ? u.displayName || ""
+        : u.id || "";
+    arr.sort((a, b) => String(keyFn(a)).localeCompare(String(keyFn(b))));
+    if (sortDir === "desc") arr.reverse();
+    return arr;
+  }, [filteredUsers, sortKey, sortDir]);
+
   return (
     <AdminGuard>
       <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
@@ -100,37 +170,14 @@ export default function AdminPanel() {
         </Text>
         <Text style={s.text}>Use this area for admin-only tools and metrics.</Text>
         <Text style={s.text}>To grant admin: set Firebase custom claim admin=true for your UID.</Text>
+
         <View style={{ marginTop: 8 }}>
-          <Text style={s.text}>Counts â€” Users: {counts.users ?? '-'} | Campaigns: {counts.campaigns ?? '-'} | Resources: {counts.resources ?? '-'}</Text>
-        </View>
-        <View style={{ marginTop: 8 }}>
-          <Text style={[s.text, { fontWeight: '700' }]}>Filters</Text>
-          <View style={{ flexDirection: 'row', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
-            <Pressable
-              onPress={() => setOnlyVerified(v => !v)}
-              style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: onlyVerified ? palette.primary : palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-            >
-              <Text style={{ color: onlyVerified ? palette.onPrimary : palette.text, fontWeight: '700' }}>{onlyVerified ? 'Verified only' : 'Include unverified'}</Text>
-            </Pressable>
-            <Pressable
-              onPress={() => setOnlyBanned(v => !v)}
-              style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: onlyBanned ? palette.primary : palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-            >
-              <Text style={{ color: onlyBanned ? palette.onPrimary : palette.text, fontWeight: '700' }}>{onlyBanned ? 'Banned only' : 'Include not-banned'}</Text>
-            </Pressable>
-            <TextInput
-              value={contains}
-              onChangeText={setContains}
-              placeholder="contains... (email/name)"
-              style={{ minWidth: 160, flexGrow: 1, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding: 8, borderRadius: 6 }}
-              autoCapitalize="none"
-            />
-          </View>
+          <Text style={s.text}>Counts — Users: {counts.users ?? "-"} | Campaigns: {counts.campaigns ?? "-"} | Resources: {counts.resources ?? "-"}</Text>
         </View>
 
-        <Text style={[s.text, { marginTop: 10, fontWeight: '700' }]}>User Lookup</Text>
-        <Text style={s.text}>Search users collection by email (exact match).</Text>
-        <View style={{ flexDirection: 'row', gap: 8, alignItems: 'center' }}>
+        {/* User Lookup */}
+        <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>User Lookup</Text>
+        <View style={{ flexDirection: "row", gap: 8, alignItems: "center" }}>
           <TextInput
             value={email}
             onChangeText={setEmail}
@@ -142,263 +189,126 @@ export default function AdminPanel() {
           <Pressable
             onPress={async () => {
               try {
-                const col = collection(db, 'users');
-                const q = query(col, where('email','==', email.trim()), limit(1));
+                const col = collection(db, "users");
+                const q = query(col, where("email", "==", email.trim()), limit(1));
                 const snap = await getDocs(q);
                 setResult(snap.docs[0] ? { id: snap.docs[0].id, ...(snap.docs[0].data() as any) } : null);
-                if (!snap.docs[0]) Alert.alert('Not found','No user with that email.');
+                if (!snap.docs[0]) Alert.alert("Not found", "No user with that email.");
               } catch (e: any) {
-                Alert.alert('Lookup failed', e?.message || 'Error');
+                Alert.alert("Lookup failed", e?.message || "Error");
               }
             }}
             style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.primary, borderRadius: 6 }}
           >
-            <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Search</Text>
+            <Text style={{ color: palette.onPrimary, fontWeight: "700" }}>Search</Text>
           </Pressable>
         </View>
         {!!result && (
           <View style={{ marginTop: 10, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 10 }}>
             <Text style={s.text}>UID: {result.id}</Text>
-            <Text style={s.text}>Email: {result.email || '-'}</Text>
-            <Text style={s.text}>Name: {result.displayName || '-'}</Text>
-            <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
+            <Text style={s.text}>Email: {result.email || "-"}</Text>
+            <Text style={s.text}>Name: {result.displayName || "-"}</Text>
+            <View style={{ flexDirection: "row", gap: 8, marginTop: 8 }}>
               <Pressable
                 onPress={async () => {
                   try {
-                    const { doc, updateDoc } = await import('firebase/firestore');
-                    await updateDoc(doc(db, 'users', result.id), { banned: !(result.banned === true) });
+                    await updateDoc(doc(db, "users", result.id), { banned: !(result.banned === true) });
                     setResult({ ...result, banned: !(result.banned === true) });
-                  } catch (e: any) { Alert.alert('Update failed', e?.message || 'Error'); }
+                  } catch (e: any) { Alert.alert("Update failed", e?.message || "Error"); }
                 }}
                 style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
               >
-                <Text style={{ color: palette.text, fontWeight: '700' }}>{result.banned ? 'Unban' : 'Ban'}</Text>
+                <Text style={{ color: palette.text, fontWeight: "700" }}>{result.banned ? "Unban" : "Ban"}</Text>
               </Pressable>
               <Pressable
                 onPress={async () => {
                   try {
-                    const { doc, updateDoc } = await import('firebase/firestore');
-                    await updateDoc(doc(db, 'users', result.id), { verified: !(result.verified === true) });
+                    await updateDoc(doc(db, "users", result.id), { verified: !(result.verified === true) });
                     setResult({ ...result, verified: !(result.verified === true) });
-                  } catch (e: any) { Alert.alert('Update failed', e?.message || 'Error'); }
+                  } catch (e: any) { Alert.alert("Update failed", e?.message || "Error"); }
                 }}
                 style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
               >
-                <Text style={{ color: palette.text, fontWeight: '700' }}>{result.verified ? 'Unverify' : 'Verify'}</Text>
+                <Text style={{ color: palette.text, fontWeight: "700" }}>{result.verified ? "Unverify" : "Verify"}</Text>
               </Pressable>
             </View>
           </View>
         )}
 
-        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Users (first 20)</Text>
-        <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
+        {/* Users list */}
+        <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>Users</Text>
+        <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
           <Pressable
             onPress={async () => {
               try {
-                const col = collection(db, 'users');
+                const col = collection(db, "users");
                 const q = cursor ? query(col, limit(20), startAfter(cursor)) : query(col, limit(20));
                 const snap = await getDocs(q);
                 setUsers(snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) })));
                 setCursor(snap.docs[snap.docs.length - 1] || null);
-              } catch (e: any) {
-                Alert.alert('Load failed', e?.message || 'Error');
-              }
+              } catch (e: any) { Alert.alert("Load failed", e?.message || "Error"); }
             }}
             style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.primary, borderRadius: 6 }}
           >
-            <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Load / Next</Text>
+            <Text style={{ color: palette.onPrimary, fontWeight: "700" }}>Load / Next</Text>
           </Pressable>
           <Pressable
             onPress={() => { setCursor(null); setUsers([]); }}
             style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
           >
-            <Text style={{ color: palette.text, fontWeight: '700' }}>Reset</Text>
-          </Pressable>
-          <Pressable
-            onPress={async () => {
-              try {
-                const term = (contains || '').toLowerCase().trim();
-                const filtered = sortedUsers.filter((u) => {
-                  if (!term) return true;
-                  const s = `${u.email || ''} ${u.displayName || ''}`.toLowerCase();
-                  return s.includes(term);
-                });
-                const rows = [['uid','email','name','banned','verified']].concat(
-                  filtered.map((u) => [u.id, u.email || '', u.displayName || '', String(!!u.banned), String(!!u.verified)])
-                );
-                const csv = rows.map(r => r.map(x => '"' + String(x).replace(/"/g,'""') + '"').join(',')).join('\n');
-                const FS = await import('expo-file-system');
-                const path = FS.cacheDirectory + `users_${Date.now()}.csv`;
-                await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 });
-                try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','CSV saved to cache.'); }
-                catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
-              } catch (e: any) {
-                Alert.alert('Export failed', e?.message || 'Error creating CSV');
-              }
-            }}
-            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-          >
-            <Text style={{ color: palette.text, fontWeight: '700' }}>Export CSV</Text>
-          </Pressable>
-          <Pressable
-            onPress={async () => {
-              try {
-                const rows = [['uid','email','name','banned','verified']].concat(
-                  sortedUsers.map((u) => [u.id, u.email || '', u.displayName || '', String(!!u.banned), String(!!u.verified)])
-                );
-                const csv = rows.map(r => r.map(x => '"' + String(x).replace(/"/g,'""') + '"').join(',')).join('\n');
-                const Clipboard = await import('expo-clipboard');
-                await Clipboard.setStringAsync(csv);
-                Alert.alert('Copied', 'CSV copied to clipboard');
-              } catch (e: any) {
-                Alert.alert('Copy failed', e?.message || 'Unable to copy CSV');
-              }
-            }}
-            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-          >
-            <Text style={{ color: palette.text, fontWeight: '700' }}>Copy CSV</Text>
-          </Pressable>
-          <Pressable
-            onPress={async () => {
-              try {
-                const col = collection(db, 'users');
-                let acc: any[] = [];
-                let cur = null as any;
-                for (let i = 0; i < 20; i++) { // up to ~1000 users at 50/page
-                  const pageQ = cur ? query(col, limit(50), startAfter(cur)) : query(col, limit(50));
-                  const snap = await getDocs(pageQ);
-                  if (!snap.docs.length) break;
-                  acc = acc.concat(snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) })));
-                  cur = snap.docs[snap.docs.length - 1];
-                  if (acc.length >= 1000) break;
-                }
-                const rows = [['uid','email','name','banned','verified']].concat(
-                  acc.map((u) => [u.id, u.email || '', u.displayName || '', String(!!u.banned), String(!!u.verified)])
-                );
-                const csv = rows.map(r => r.map(x => '"' + String(x).replace(/"/g,'""') + '"').join(',')).join('\n');
-                const FS = await import('expo-file-system');
-                const path = FS.cacheDirectory + `users_all_${Date.now()}.csv`;
-                await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 });
-                try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','CSV saved to cache.'); }
-                catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
-              } catch (e: any) {
-                Alert.alert('Export failed', e?.message || 'Error exporting all');
-              }
-            }}
-            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-          >
-            <Text style={{ color: palette.text, fontWeight: '700' }}>Export All CSV</Text>
+            <Text style={{ color: palette.text, fontWeight: "700" }}>Reset</Text>
           </Pressable>
         </View>
-        <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8 }}>
-  <Pressable onPress={() => setSortKey('email')} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: sortKey==='email'? palette.primary: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
-    <Text style={{ color: sortKey==='email'? palette.onPrimary: palette.text, fontWeight: '700' }}>Sort: Email</Text>
-  </Pressable>
-  <Pressable onPress={() => setSortKey('name')} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: sortKey==='name'? palette.primary: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
-    <Text style={{ color: sortKey==='name'? palette.onPrimary: palette.text, fontWeight: '700' }}>Sort: Name</Text>
-  </Pressable>
-  <Pressable onPress={() => setSortKey('id')} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: sortKey==='id'? palette.primary: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
-    <Text style={{ color: sortKey==='id'? palette.onPrimary: palette.text, fontWeight: '700' }}>Sort: ID</Text>
-  </Pressable>
-  <Pressable onPress={() => setSortDir(d => d==='asc' ? 'desc' : 'asc')} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
-    <Text style={{ color: palette.text, fontWeight: '700' }}>{sortDir === 'asc' ? 'Asc' : 'Desc'}</Text>
-  </Pressable>
-</View>
-{sortedUsers.map((u) => (
-  <View key={u.id} style={{ marginBottom: 6 }}>
-    <Text style={s.text}>{u.email || u.id} — {u.displayName || '-'}</Text>
-  </View>
+        {sortedUsers.map((u) => (
+          <View key={u.id} style={{ marginBottom: 6 }}>
+            <Text style={s.text}>{u.email || u.id} - {u.displayName || '-'}</Text>
+          </View>
         ))}
-        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Moderation Flags</Text>
-        {flags.length === 0 ? <Text style={s.text}>No flags.</Text> : (
-          <>
-            <View style={{ flexDirection:'row', gap:8, marginBottom: 8, flexWrap:'wrap' }}>
-              <Pressable onPress={()=> setSelectedFlags(Object.fromEntries(flags.map(f=>[f.id,true])))} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Select all</Text></Pressable>
-              <Pressable onPress={()=> setSelectedFlags({})} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Clear</Text></Pressable>
-              <Pressable onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(Object.keys(selectedFlags).filter(id=>selectedFlags[id]).map(id=> resolveFlag(id))); setSelectedFlags({}); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Resolve selected</Text></Pressable>
-              <Pressable onPress={async()=>{ try {
-                const sel = flags.filter(f=> selectedFlags[f.id]);
-                const { db } = await import('../../../firebase/config');
-                const { updateDoc, doc } = await import('firebase/firestore');
-                for (const f of sel) {
-                  if (f.type === 'rating') await updateDoc(doc(db,'ratings', f.targetId), { approved: true });
-                  if (f.type === 'mutual') await updateDoc(doc(db,'mutual_aid_posts', f.targetId), { approved: true });
-                }
-                const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map(f=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags();
-              } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Approve selected</Text></Pressable>
-              <Pressable onPress={async()=>{ try {
-                const sel = flags.filter(f=> selectedFlags[f.id]);
-                for (const f of sel) {
-                  if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); }
-                  if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { updateDoc, doc } = await import('firebase/firestore'); await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); }
-                }
-                const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map(f=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags();
-              } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Delete items</Text></Pressable>
-              <Pressable onPress={async()=>{ try {
-                const sel = flags.filter(f=> selectedFlags[f.id]);
-                for (const f of sel) {
-                  if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { getDoc, doc, addDoc, collection } = await import('firebase/firestore'); const r = await getDoc(doc(db,'ratings', f.targetId)); const u = (r.data() as any)?.uid; if (u) await addDoc(collection(db,'sanctions'), { uid: u, reason: 'ratings abuse', createdAt: new Date() }); }
-                  if (f.type === 'mutual') { const { db } = await import('../../../firebase/config'); const { getDoc, doc, addDoc, collection } = await import('firebase/firestore'); const p = await getDoc(doc(db,'mutual_aid_posts', f.targetId)); const u = (p.data() as any)?.uid; if (u) await addDoc(collection(db,'sanctions'), { uid: u, reason: 'mutual aid abuse', createdAt: new Date() }); }
-                }
-                const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map(f=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags();
-              } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Sanction users</Text></Pressable>
-            </View>
-          {flags.map((f) => (
-            <View key={f.id} style={{ marginBottom: 6 }}>
-              <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
-                <Pressable onPress={()=> setSelectedFlags(prev=> ({ ...prev, [f.id]: !prev[f.id] }))} style={{ width: 18, height: 18, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems:'center', justifyContent:'center', backgroundColor: selectedFlags[f.id]? palette.primary: 'transparent' }}>
-                  {selectedFlags[f.id] ? <View style={{ width: 10, height: 10, backgroundColor: palette.onPrimary, borderRadius: 2 }} /> : null}
-                </Pressable>
-              <Text style={s.text}>[{f.type}] {f.targetId} — {f.reason}</Text>
-              </View>
-              {/* Inline preview */}
-              <View style={{ marginLeft: 26 }}>
-                {(() => {
-                  if (f.type === 'mutual') {
-                    const React = require('react');
-                    const [p, setP] = React.useState<any | null>(null);
-                    React.useEffect(()=>{ (async()=>{ try { const { db } = await import('../../../firebase/config'); const { getDoc, doc } = await import('firebase/firestore'); const snap = await getDoc(doc(db,'mutual_aid_posts', f.targetId)); setP(snap.data()); } catch {} })(); },[]);
-                    return p ? (<Text style={[s.text,{ opacity: 0.8 }]}>post: {p.type} • {p.city || '-'} — {p.description}</Text>) : null;
-                  }
-                  if (f.type === 'rating') {
-                    const React = require('react');
-                    const [r, setR] = React.useState<any | null>(null);
-                    React.useEffect(()=>{ (async()=>{ try { const { db } = await import('../../../firebase/config'); const { getDoc, doc } = await import('firebase/firestore'); const snap = await getDoc(doc(db,'ratings', f.targetId)); setR(snap.data()); } catch {} })(); },[]);
-                    return r ? (<Text style={[s.text,{ opacity: 0.8 }]}>rating: {r.target} • {r.score}★ — {r.comment || '-'}</Text>) : null;
-                  }
-                  return null;
-                })()}
-              </View>
-              <View style={{ flexDirection: 'row', gap: 8 }}>
-                <Pressable
-                  onPress={async () => {
-                    try { const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags(); }
-                    catch {}
-                  }}
-                  style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
-                >
-                  <Text style={{ color: palette.text, fontWeight: '700' }}>Resolve</Text>
-                </Pressable>
-              <Pressable
-                onPress={async () => {
-                  try {
-                    if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); }
-                    if (f.type === 'rating') { const { db } = await import('../../../firebase/config'); const { updateDoc, doc } = await import('firebase/firestore'); await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); }
-                    const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags();
-                  } catch {}
-                }}
-                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
-              >
-                  <Text style={{ color: palette.text, fontWeight: '700' }}>Delete Item</Text>
-                </Pressable>
-              </View>
-            </View>
-          ))}
-        </>) }
 
+        {/* Moderation Flags */}
+        <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>Moderation Flags</Text>
+        {flags.length === 0 ? (
+          <Text style={s.text}>No flags.</Text>
+        ) : (
+          <>
+            <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
+              <Pressable onPress={() => setSelectedFlags(Object.fromEntries(flags.map((f: any) => [f.id, true])))} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Select all</Text></Pressable>
+              <Pressable onPress={() => setSelectedFlags({})} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Clear</Text></Pressable>
+              <Pressable onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(Object.keys(selectedFlags).filter(id=>selectedFlags[id]).map(id=> resolveFlag(id))); setSelectedFlags({}); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Resolve selected</Text></Pressable>
+              <Pressable onPress={async()=>{ try { const sel = flags.filter((f: any)=> selectedFlags[f.id]); for (const f of sel) { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } } const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map((f: any)=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Delete items</Text></Pressable>
+            </View>
+            {flags.map((f: any) => (
+              <View key={f.id} style={{ marginBottom: 6 }}>
+                <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
+                  <Pressable onPress={()=> setSelectedFlags(prev=> ({ ...prev, [f.id]: !prev[f.id] }))} style={{ width: 18, height: 18, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems:'center', justifyContent:'center', backgroundColor: selectedFlags[f.id]? palette.primary: 'transparent' }}>
+                    {selectedFlags[f.id] ? <View style={{ width: 10, height: 10, backgroundColor: palette.onPrimary, borderRadius: 2 }} /> : null}
+                  </Pressable>
+                  <Text style={s.text}>[{f.type}] {f.targetId} - {f.reason}</Text>
+                </View>
+                <View style={{ marginLeft: 26 }}>
+                  {f.type === 'mutual' ? (
+                    <FlagPreviewMutual targetId={f.targetId} />
+                  ) : f.type === 'rating' ? (
+                    <FlagPreviewRating targetId={f.targetId} />
+                  ) : null}
+                </View>
+                <View style={{ flexDirection: 'row', gap: 8 }}>
+                  <Pressable onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
+                    <Text style={{ color: palette.text, fontWeight: '700' }}>Resolve</Text>
+                  </Pressable>
+                  <Pressable onPress={async()=>{ try { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
+                    <Text style={{ color: palette.text, fontWeight: '700' }}>Delete Item</Text>
+                  </Pressable>
+                </View>
+              </View>
+            ))}
+          </>
+        )}
+
+        {/* Content Review */}
         <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Content Review</Text>
         <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
-          {(['pending','approved','trash'] as const).map(k => (
+          {(['pending','approved','trash'] as ReviewKind[]).map(k => (
             <Pressable key={k} onPress={()=> { setReviewTab(k); loadReview(); }} style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: k===reviewTab? palette.primary: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
               <Text style={{ color: k===reviewTab? palette.onPrimary: palette.text, fontWeight: '700' }}>{k}</Text>
             </Pressable>
@@ -411,13 +321,13 @@ export default function AdminPanel() {
           <View key={`${x.type}:${x.id}`} style={{ marginBottom: 8, paddingBottom: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted }}>
             <Text style={s.text}>[{x.type}] {x.type==='mutual' ? `${x.type} • ${x.city||''} — ${x.description||''}` : `${x.target||''} • ${x.score||''}★ — ${x.comment||''}`}</Text>
             <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
-              <Pressable onPress={async()=>{ try { const { db } = await import('../../../firebase/config'); const { updateDoc, doc } = await import('firebase/firestore'); await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { approved: true, deleted: false }); loadReview(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
+              <Pressable onPress={async()=>{ try { await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { approved: true, deleted: false }); loadReview(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
                 <Text style={{ color: palette.text, fontWeight:'700' }}>Approve</Text>
               </Pressable>
-              <Pressable onPress={async()=>{ try { const { db } = await import('../../../firebase/config'); const { updateDoc, doc } = await import('firebase/firestore'); await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { approved: false, deleted: false }); loadReview(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
+              <Pressable onPress={async()=>{ try { await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { approved: false, deleted: false }); loadReview(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
                 <Text style={{ color: palette.text, fontWeight:'700' }}>Restore</Text>
               </Pressable>
-              <Pressable onPress={async()=>{ try { const { db } = await import('../../../firebase/config'); const { updateDoc, deleteDoc, doc } = await import('firebase/firestore'); if (reviewTab==='trash') { await deleteDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id)); } else { await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { deleted: true }); } loadReview(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
+              <Pressable onPress={async()=>{ try { if (reviewTab==='trash') { await deleteDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id)); } else { await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { deleted: true }); } loadReview(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
                 <Text style={{ color: palette.text, fontWeight:'700' }}>{reviewTab==='trash' ? 'Purge' : 'Trash'}</Text>
               </Pressable>
             </View>
@@ -425,6 +335,42 @@ export default function AdminPanel() {
         ))}
       </ScrollView>
     </AdminGuard>
+  );
+}
+
+function FlagPreviewMutual({ targetId }: { targetId: string }) {
+  const palette = useAppPalette();
+  const [p, setP] = React.useState<any | null>(null);
+  React.useEffect(() => {
+    (async () => {
+      try {
+        const { getDoc, doc } = await import('firebase/firestore');
+        const snap = await getDoc(doc(db,'mutual_aid_posts', targetId));
+        setP(snap.data());
+      } catch {}
+    })();
+  }, [targetId]);
+  if (!p) return null;
+  return (
+    <Text style={{ color: palette.text, opacity: 0.8 }}>post: {p.type} • {p.city || '-'} - {p.description}</Text>
+  );
+}
+
+function FlagPreviewRating({ targetId }: { targetId: string }) {
+  const palette = useAppPalette();
+  const [r, setR] = React.useState<any | null>(null);
+  React.useEffect(() => {
+    (async () => {
+      try {
+        const { getDoc, doc } = await import('firebase/firestore');
+        const snap = await getDoc(doc(db,'ratings', targetId));
+        setR(snap.data());
+      } catch {}
+    })();
+  }, [targetId]);
+  if (!r) return null;
+  return (
+    <Text style={{ color: palette.text, opacity: 0.8 }}>rating: {r.target} • {r.score}★ - {r.comment || '-'}</Text>
   );
 }
 

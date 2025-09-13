@@ -70,7 +70,7 @@ export default function LawyerFinder() {
           )}
           <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
             <Pressable onPress={()=> Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`)} style={s.btn}><Text style={s.btnText}>Open on Map</Text></Pressable>
-            <Pressable onPress={()=> toggle('advocate', item.id, { name: item.name, city: item.city, province: item.province })} style={s.btn}>
+            <Pressable onPress={()=> toggle('advocate', item.id)} style={s.btn}>
               <Text style={s.btnText}>{state.advocate.has(item.id) ? '★ Saved' : '☆ Save'}</Text>
             </Pressable>
           </View>
@@ -78,9 +78,9 @@ export default function LawyerFinder() {
       )}
       ListFooterComponent={
         total > filtered.length ? (
-          <A11yPressable onPress={() => load(false)} style={[s.btn,{ alignSelf:'center', marginVertical: 12 }]}>
+          <Pressable onPress={() => load(false)} style={[s.btn,{ alignSelf:'center', marginVertical: 12 }]}> 
             <Text style={s.btnText}>{loading? 'Loading…':'Load more'}</Text>
-          </A11yPressable>
+          </Pressable>
         ) : null
       }
       />) : (
