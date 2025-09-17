@@ -344,6 +344,10 @@ export default function EvidenceLocker() {
           <Text style={styles.buttonText}>Export CSV</Text>
         </A11yPressable>
       </View>
+      {/* Queue screen */}
+      <A11yPressable onPress={() => (require('expo-router').router.push('/(tabs)/resources/evidence-queue'))} style={[styles.button, { marginTop: 8 }]}>
+        <Text style={styles.buttonText}>Open Upload Queue</Text>
+      </A11yPressable>
       {(immUploading || processing) && (
         <View style={{ marginTop: 6 }}>
           <Text style={{ color: palette.text }}>

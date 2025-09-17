@@ -5,6 +5,7 @@ import { useAppPalette } from '../../../theme/usePalette';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { db, auth } from '../../../firebase/config';
 import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
+import { setTyping, touchPresence, setLastRead } from '../../../services/community';
 
 export const options = { href: null };
 
@@ -26,6 +27,16 @@ export default function TestersChat() {
       setItems(snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) })) as Message[]);
     });
     return unsub;
+  }, []);
+
+  // Presence heartbeat and mark as read when opening
+  React.useEffect(() => {
+    let mounted = true;
+    const beat = async () => { if (mounted) await touchPresence('testers'); };
+    beat();
+    const id = setInterval(beat, 30000);
+    setLastRead('testers');
+    return () => { mounted = false; clearInterval(id); };
   }, []);
 
   const send = async () => {
@@ -64,6 +75,9 @@ export default function TestersChat() {
           placeholder="Message"
           placeholderTextColor={palette.text}
           style={s.input}
+          onFocus={() => setTyping('testers', true)}
+          onBlur={() => setTyping('testers', false)}
+          onChange={() => setTyping('testers', text.length > 0)}
         />
         <A11yPressable onPress={send} style={s.sendBtn}>
           <Text style={s.sendText}>Send</Text>
@@ -86,4 +100,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     sendText: { color: palette.onPrimary, fontWeight: '700' },
   });
 }
-

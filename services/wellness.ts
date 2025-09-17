@@ -24,3 +24,14 @@ export async function listReflections(max: number = 10): Promise<Reflection[]> {
   return snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) }));
 }
 
+export async function updateReflection(id: string, patch: Partial<Reflection>) {
+  const uid = auth.currentUser?.uid; if (!uid) throw new Error('Not signed in');
+  const { doc, updateDoc } = await import('firebase/firestore');
+  await updateDoc(doc(db, 'users', uid, 'wellness_reflections', id), patch);
+}
+
+export async function deleteReflection(id: string) {
+  const uid = auth.currentUser?.uid; if (!uid) throw new Error('Not signed in');
+  const { doc, deleteDoc } = await import('firebase/firestore');
+  await deleteDoc(doc(db, 'users', uid, 'wellness_reflections', id));
+}

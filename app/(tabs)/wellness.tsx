@@ -13,7 +13,7 @@ import ContrastToggle from "../../components/ContrastToggle";
 import { Link } from "expo-router";
 import type { Href } from "expo-router";
 import { useAuth } from "../../context/AuthContext";
-import { addReflection, listReflections, type Reflection } from "../../services/wellness";
+import { addReflection, listReflections, updateReflection, deleteReflection, type Reflection } from "../../services/wellness";
 import * as Notifier from "../../services/notifications";
 
 export default function WellnessScreen() {
@@ -274,13 +274,45 @@ export default function WellnessScreen() {
               <Text style={{ color: palette.text }}>Remind me daily</Text>
             </Pressable>
 
+            {/* 7-day trend */}
+            {recent.length > 0 && (
+              <View style={{ marginTop: 8 }}>
+                <Text style={styles.sectionTitle}>7-day mood trend</Text>
+                <Text style={styles.tipText}>
+                  {Array.from({ length: 7 }).map((_, i) => {
+                    const day = new Date(); day.setDate(day.getDate() - (6 - i));
+                    const iso = day.toDateString();
+                    const entry = recent.find(r => new Date(r.createdAt?.toDate?.() || 0).toDateString() === iso);
+                    const map: Record<string,string> = { bad:'😞', ok:'😐', good:'🙂', great:'😄' };
+                    return entry ? map[entry.mood] : '·';
+                  }).join(' ')}
+                </Text>
+              </View>
+            )}
+
             {recent.length > 0 && (
               <View style={{ marginTop: 8 }}>
                 <Text style={styles.sectionTitle}>Recent</Text>
                 {recent.map((r) => (
-                  <Text key={r.id} style={styles.tipText}>
-                    {new Date(r.createdAt?.toDate?.() || Date.now()).toLocaleString()} — {r.mood.toUpperCase()}{r.note ? `: ${r.note}` : ''}
-                  </Text>
+                  <View key={r.id} style={{ marginBottom: 6 }}>
+                    <Text style={styles.tipText}>
+                      {new Date(r.createdAt?.toDate?.() || Date.now()).toLocaleString()} — {r.mood.toUpperCase()}{r.note ? `: ${r.note}` : ''}
+                    </Text>
+                    <View style={{ flexDirection: 'row', gap: 8 }}>
+                      <Pressable onPress={async () => {
+                        try { await deleteReflection(r.id!); setRecent(await listReflections(10)); }
+                        catch {}
+                      }} style={({ pressed }) => [{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 10, paddingVertical: 6, borderRadius: 6 }, pressed && { opacity: 0.8 }]}>
+                        <Text style={{ color: palette.text }}>Delete</Text>
+                      </Pressable>
+                      <Pressable onPress={async () => {
+                        try { await updateReflection(r.id!, { note: prompt('Edit note', r.note || '') || r.note }); setRecent(await listReflections(10)); }
+                        catch {}
+                      }} style={({ pressed }) => [{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 10, paddingVertical: 6, borderRadius: 6 }, pressed && { opacity: 0.8 }]}>
+                        <Text style={{ color: palette.text }}>Edit</Text>
+                      </Pressable>
+                    </View>
+                  </View>
                 ))}
               </View>
             )}

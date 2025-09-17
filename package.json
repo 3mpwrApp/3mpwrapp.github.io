@@ -24,7 +24,8 @@
     "admin:users": "node ./scripts/list-users.js",
     "admin:fcm": "node ./scripts/send-fcm.js",
     "admin:export": "node ./scripts/export-collection.js",
-    "rules:deploy": "firebase deploy --only firestore:rules"
+    "rules:deploy": "firebase deploy --only firestore:rules",
+    "rules:deploy:storage": "firebase deploy --only storage"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
