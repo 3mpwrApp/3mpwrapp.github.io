@@ -1,15 +1,32 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, Pressable } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TextInput, Alert } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
+let AsyncStorage: any;
+try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
 import { useAppPalette } from "../../../theme/usePalette";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
-
-
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
 
 const EXAMPLES = [
-  { title: 'Accommodation Request (Sample)', body: 'Re: Workplace Accommodation Request\n\nDear Employer,\n\nI am requesting reasonable accommodations...' },
-  { title: 'Appeal Letter (Sample)', body: 'Re: Appeal of Decision (Claim [number])\n\nDear Appeals Officer,\n\nI am appealing the decision dated [date]...' },
-  { title: 'Reconsideration Letter (Sample)', body: 'Re: Request for Reconsideration (Claim [ID])\n\nDear Claims Officer,\n\nI am requesting reconsideration...' },
-  { title: 'Union Request (Sample)', body: 'Re: Request for Union Support and Representation\n\nDear Union Representative/Steward,\n\nMy name is [Your Name], employed as...' },
+  {
+    title: "Accommodation Request (Sample)",
+    body: "Re: Workplace Accommodation Request\n\nDear Employer,\n\nI am requesting reasonable accommodations...",
+  },
+  {
+    title: "Appeal Letter (Sample)",
+    body: "Re: Appeal of Decision (Claim [number])\n\nDear Appeals Officer,\n\nI am appealing the decision dated [date]...",
+  },
+  {
+    title: "Reconsideration Letter (Sample)",
+    body: "Re: Request for Reconsideration (Claim [ID])\n\nDear Claims Officer,\n\nI am requesting reconsideration...",
+  },
+  {
+    title: "Union Request (Sample)",
+    body: "Re: Request for Union Support and Representation\n\nDear Union Representative/Steward,\n\nMy name is [Your Name], employed as...",
+  },
 ];
 
 export const options = { href: null };
@@ -18,24 +35,80 @@ export default function TemplatesGallery() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('Template Gallery');
+  useAnnounceOnMount("Template Gallery");
   useFocusOnRefOnMount(titleRef);
 
   const copy = async (text: string) => {
-    try { const mod = await import('expo-clipboard'); await mod.setStringAsync(text); } catch {}
+    try {
+      const mod = await import("expo-clipboard");
+      await mod.setStringAsync(text);
+    } catch {}
   };
+
+  const [vars, setVars] = React.useState({ name: "", claim: "", date: "" });
+  const applyVars = (body: string) =>
+    body
+      .replaceAll("[Your Name]", vars.name || "[Your Name]")
+      .replaceAll("[Claim ID]", vars.claim || "[Claim ID]")
+      .replaceAll("[date]", vars.date || "[date]");
+
+  const saveDraft = async (title: string, body: string) => {
+    try {
+      const key = "templates:drafts";
+      const raw = (await AsyncStorage?.getItem?.(key)) || "[]";
+      const arr = JSON.parse(raw);
+      arr.unshift({ id: String(Date.now()), title, body, vars });
+      await AsyncStorage?.setItem?.(key, JSON.stringify(arr));
+      Alert.alert("Saved", "Draft saved locally");
+    } catch {}
+  };
+
+  const [drafts, setDrafts] = React.useState<any[]>([]);
+  React.useEffect(() => {
+    (async () => {
+      try { const raw = await AsyncStorage?.getItem?.("templates:drafts"); if (raw) setDrafts(JSON.parse(raw)); } catch {}
+    })();
+  }, []);
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
-      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Template Gallery</Text>
+      <Text
+        ref={titleRef}
+        accessibilityRole="header"
+        style={s.title}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
+        Template Gallery
+      </Text>
       <Text style={s.subtitle}>Example outputs to help you get started.</Text>
+      <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap", marginBottom: 8 }}>
+        <TextInput style={s.input} placeholder="Your name" value={vars.name} onChangeText={(v)=>setVars({ ...vars, name: v })} />
+        <TextInput style={s.input} placeholder="Claim ID" value={vars.claim} onChangeText={(v)=>setVars({ ...vars, claim: v })} />
+        <TextInput style={s.input} placeholder="date (YYYY-MM-DD)" value={vars.date} onChangeText={(v)=>setVars({ ...vars, date: v })} />
+      </View>
       {EXAMPLES.map((ex) => (
         <View key={ex.title} style={s.card}>
           <Text style={s.cardTitle}>{ex.title}</Text>
-          <Text style={s.cardText}>{ex.body}</Text>
-          <Pressable onPress={() => copy(ex.body)} style={s.button}><Text style={s.buttonText}>Copy example</Text></Pressable>
+          <Text style={s.cardText}>{applyVars(ex.body)}</Text>
+          <A11yPressable onPress={() => copy(applyVars(ex.body))} style={s.button}>
+            <Text style={s.buttonText}>Copy example</Text>
+          </A11yPressable>
+          <A11yPressable onPress={() => saveDraft(ex.title, applyVars(ex.body))} style={[s.button,{ marginTop: 8 }]}>
+            <Text style={s.buttonText}>Save draft</Text>
+          </A11yPressable>
         </View>
       ))}
+      {drafts.length > 0 && (
+        <View style={s.card}>
+          <Text style={s.cardTitle}>Drafts</Text>
+          {drafts.map((d)=> (
+            <View key={d.id} style={{ marginBottom: 6 }}>
+              <Text style={s.cardTitle}>{d.title}</Text>
+              <Text style={s.cardText}>{d.body}</Text>
+            </View>
+          ))}
+        </View>
+      )}
     </ScrollView>
   );
 }
@@ -43,13 +116,33 @@ export default function TemplatesGallery() {
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 22, fontWeight: '700', color: palette.text },
+    title: { fontSize: 22, fontWeight: "700", color: palette.text },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
-    card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginBottom: 12, backgroundColor: palette.surface },
-    cardTitle: { color: palette.text, fontWeight: '700', marginBottom: 6 },
+    card: {
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 8,
+      padding: 12,
+      marginBottom: 12,
+      backgroundColor: palette.surface,
+    },
+    cardTitle: { color: palette.text, fontWeight: "700", marginBottom: 6 },
     cardText: { color: palette.text, opacity: 0.95, marginBottom: 8 },
-    button: { backgroundColor: palette.primary, paddingVertical: 8, borderRadius: 8, alignItems: 'center' },
-    buttonText: { color: palette.onPrimary, fontWeight: '700' },
+    input: {
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 6,
+      paddingHorizontal: 10,
+      paddingVertical: 6,
+      color: palette.text,
+      minWidth: 120,
+    },
+    button: {
+      backgroundColor: palette.primary,
+      paddingVertical: 8,
+      borderRadius: 8,
+      alignItems: "center",
+    },
+    buttonText: { color: palette.onPrimary, fontWeight: "700" },
   });
 }
-

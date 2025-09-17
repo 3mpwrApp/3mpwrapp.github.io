@@ -1,7 +1,9 @@
 import React from "react";
 
 let AsyncStorage: any;
-try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
+try {
+  AsyncStorage = require("@react-native-async-storage/async-storage").default;
+} catch {}
 
 export type ProfileLocal = {
   name?: string;
@@ -18,7 +20,11 @@ type ProfileCtx = {
 
 const Ctx = React.createContext<ProfileCtx | undefined>(undefined);
 
-export function ProfileLocalProvider({ children }: { children: React.ReactNode }) {
+export function ProfileLocalProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [profile, setProfileState] = React.useState<ProfileLocal>({});
 
   React.useEffect(() => {
@@ -32,14 +38,19 @@ export function ProfileLocalProvider({ children }: { children: React.ReactNode }
 
   const setProfile = async (p: ProfileLocal) => {
     setProfileState(p);
-    try { await AsyncStorage?.setItem?.(KEY, JSON.stringify(p)); } catch {}
+    try {
+      await AsyncStorage?.setItem?.(KEY, JSON.stringify(p));
+    } catch {}
   };
 
-  return <Ctx.Provider value={{ profile, setProfile }}>{children}</Ctx.Provider>;
+  return (
+    <Ctx.Provider value={{ profile, setProfile }}>{children}</Ctx.Provider>
+  );
 }
 
 export function useProfileLocal() {
   const ctx = React.useContext(Ctx);
-  if (!ctx) throw new Error("useProfileLocal must be used within ProfileLocalProvider");
+  if (!ctx)
+    throw new Error("useProfileLocal must be used within ProfileLocalProvider");
   return ctx;
 }

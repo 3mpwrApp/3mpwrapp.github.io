@@ -20,4 +20,3 @@ export async function setCachedJSON<T>(key: string, value: T): Promise<void> {
     await AsyncStorage.setItem(key, JSON.stringify(value));
   } catch {}
 }
-

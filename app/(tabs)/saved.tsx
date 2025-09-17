@@ -1,8 +1,12 @@
-import React from "react";
+﻿import React from "react";
 import { View, Text, StyleSheet, SectionList } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../../hooks/useA11y";
 import { useFavorites } from "../../store/favorites";
 import { fetchPodcasts } from "../../services/podcasts";
 import { fetchResources } from "../../services/resources";
@@ -15,7 +19,10 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import SettingsLink from "../../components/SettingsLink";
 import ContrastToggle from "../../components/ContrastToggle";
 
-type SectionItem = (Podcast & { kind: "podcast" }) | (Resource & { kind: "resource" }) | (Campaign & { kind: "campaign" });
+type SectionItem =
+  | (Podcast & { kind: "podcast" })
+  | (Resource & { kind: "resource" })
+  | (Campaign & { kind: "campaign" });
 
 export default function SavedScreen() {
   const palette = useAppPalette();
@@ -33,7 +40,11 @@ export default function SavedScreen() {
   React.useEffect(() => {
     (async () => {
       try {
-        const [p, r, c] = await Promise.all([fetchPodcasts(), fetchResources(), fetchCampaigns()]);
+        const [p, r, c] = await Promise.all([
+          fetchPodcasts(),
+          fetchResources(),
+          fetchCampaigns(),
+        ]);
         setPods(p);
         setRes(r);
         setCamps(c);
@@ -43,17 +54,23 @@ export default function SavedScreen() {
 
   const podItems: SectionItem[] = React.useMemo(() => {
     const savedIds = state.podcast;
-    return pods.filter((p) => savedIds.has(p.id)).map((p) => ({ ...p, kind: "podcast" as const }));
+    return pods
+      .filter((p) => savedIds.has(p.id))
+      .map((p) => ({ ...p, kind: "podcast" as const }));
   }, [pods, state.podcast]);
 
   const resItems: SectionItem[] = React.useMemo(() => {
     const savedIds = state.resource;
-    return res.filter((r) => savedIds.has(r.id)).map((r) => ({ ...r, kind: "resource" as const }));
+    return res
+      .filter((r) => savedIds.has(r.id))
+      .map((r) => ({ ...r, kind: "resource" as const }));
   }, [res, state.resource]);
 
   const campItems: SectionItem[] = React.useMemo(() => {
     const savedIds = state.campaign;
-    return camps.filter((c) => savedIds.has(c.id)).map((c) => ({ ...c, kind: "campaign" as const }));
+    return camps
+      .filter((c) => savedIds.has(c.id))
+      .map((c) => ({ ...c, kind: "campaign" as const }));
   }, [camps, state.campaign]);
 
   const sections = React.useMemo(() => {
@@ -68,19 +85,24 @@ export default function SavedScreen() {
     <View style={styles.container} accessibilityLabel="Saved screen" accessible>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
-      <Text ref={titleRef} nativeID="saved-title" accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+      <Text
+        ref={titleRef}
+        nativeID="saved-title"
+        accessibilityRole="header"
+        style={styles.title}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
         Saved
       </Text>
-      {sections.length === 1 && sections[0].data.length === 0 ? (
-        <Text style={styles.subtitle}>You havenâ€™t saved anything yet.</Text>
-      ) : null}
       <SectionList
         sections={sections}
         keyExtractor={(item) => item.id}
         renderSectionHeader={({ section }) => (
           <View style={styles.sectionHeaderRow}>
             <MaterialCommunityIcons
-              name={section.title === "Podcasts" ? "microphone" : "book-outline"}
+              name={
+                section.title === "Podcasts" ? "microphone" : "book-outline"
+              }
               size={18}
               color={palette.text}
               style={{ marginRight: 6 }}
@@ -93,32 +115,77 @@ export default function SavedScreen() {
             const yt = String(item.id).startsWith("yt:");
             return (
               <Link
-                href={{ pathname: "/(tabs)/podcasts/[id]", params: { id: item.id, title: item.title, description: item.description, duration: item.duration } } as any}
+                href={
+                  {
+                    pathname: "/(tabs)/podcasts/[id]",
+                    params: {
+                      id: item.id,
+                      title: item.title,
+                      description: item.description,
+                      duration: item.duration,
+                    },
+                  } as any
+                }
                 asChild
               >
                 <Card
                   title={item.title}
-                  subtitle={`${item.description} â€¢ ${item.duration}`}
+                  subtitle={`${item.description} - ${item.duration}`}
                   rightIcon={yt ? "logo-youtube" : "chevron-forward"}
-                  left={item.thumbnailUrl ? <View style={{ width: 44, height: 44, borderRadius: 4, overflow: "hidden", backgroundColor: palette.muted }} /> : undefined}
+                  left={
+                    item.thumbnailUrl ? (
+                      <View
+                        style={{
+                          width: 44,
+                          height: 44,
+                          borderRadius: 4,
+                          overflow: "hidden",
+                          backgroundColor: palette.muted,
+                        }}
+                      />
+                    ) : undefined
+                  }
                 />
               </Link>
             );
           }
           if (item.kind === "campaign") {
             return (
-              <Link href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any} asChild>
-                <Card title={item.title} subtitle={item.summary} rightIcon="megaphone-outline" />
+              <Link
+                href={
+                  {
+                    pathname: "/(tabs)/campaigns/[id]",
+                    params: { id: item.id },
+                  } as any
+                }
+                asChild
+              >
+                <Card
+                  title={item.title}
+                  subtitle={item.summary}
+                  rightIcon="megaphone-outline"
+                />
               </Link>
             );
           }
           return (
-            <Link href={{ pathname: "/(tabs)/resources/[id]", params: { id: item.id } } as any} asChild>
+            <Link
+              href={
+                {
+                  pathname: "/(tabs)/resources/[id]",
+                  params: { id: item.id },
+                } as any
+              }
+              asChild
+            >
               <Card title={item.title} subtitle={item.description} />
             </Link>
           );
         }}
-        contentContainerStyle={{ paddingTop: 12 }}
+        ListEmptyComponent={
+          <Text style={styles.subtitle}>You haven't saved anything yet.</Text>
+        }
+        contentContainerStyle={{ paddingVertical: 12 }}
       />
     </View>
   );
@@ -128,10 +195,26 @@ type Palette = ReturnType<typeof useAppPalette>;
 function createStyles(palette: Palette, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: Math.round(17 * factor), color: palette.text, opacity: 0.9, marginBottom: 8 },
-    sectionHeaderRow: { flexDirection: "row", alignItems: "center", marginTop: 12, marginBottom: 6 },
+    title: {
+      fontSize: Math.round(24 * factor),
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    subtitle: {
+      fontSize: Math.round(17 * factor),
+      color: palette.text,
+      opacity: 1,
+      marginBottom: 8,
+    },
+    sectionHeaderRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      marginTop: 12,
+      marginBottom: 6,
+    },
     sectionHeader: { fontWeight: "700", color: palette.text },
   });
 }
+
 

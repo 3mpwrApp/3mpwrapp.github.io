@@ -1,7 +1,18 @@
-import React from "react";
-import { View, Text, StyleSheet, useColorScheme, SectionList, Pressable } from "react-native";
+﻿import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  useColorScheme,
+  SectionList,
+  Pressable,
+} from "react-native";
 import { colors, type Palette } from "../../../theme/colors";
-import { useAnnounceOnMount, useFocusOnRefOnMount, MAX_FONT_SCALE } from "../../../hooks/useA11y";
+import {
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+} from "../../../hooks/useA11y";
 import { channels, seedThreads, seedComments } from "../../../data/community";
 import { useCommunity, CommunityProvider } from "../../../store/community";
 import { router } from "expo-router";
@@ -27,8 +38,25 @@ function ScreenInner() {
   const topics = state.channels.filter((c) => c.type === "topic");
 
   return (
-    <View style={styles.container} accessibilityLabel="Community Hub screen" accessible>
-      <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+    <View
+      style={styles.container}
+      accessibilityLabel="Community Hub screen"
+      accessible
+    >
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel="Compose a post"
+        style={({ pressed }) => [{ alignSelf: 'flex-end', marginBottom: 8, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }, pressed && { opacity: 0.7 }]}
+        onPress={() => router.push('/(tabs)/community/compose' as Href)}
+      >
+        <Text style={{ color: palette.text, fontWeight: '700' }}>Compose</Text>
+      </Pressable>
+      <Text
+        ref={titleRef}
+        accessibilityRole="header"
+        style={styles.title}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
         Community Hub
       </Text>
       <Text style={styles.subtitle}>Join a province or topic channel.</Text>
@@ -44,11 +72,17 @@ function ScreenInner() {
         )}
         renderItem={({ item }) => (
           <Pressable
-            onPress={() => router.push(`/(tabs)/community/${item.slug}` as Href)}
+            onPress={() =>
+              router.push(`/(tabs)/community/${item.slug}` as Href)
+            }
             accessibilityRole="button"
             accessibilityLabel={`Open channel ${item.title}`}
             hitSlop={HIT_SLOP_8}
-            style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            style={({ pressed }) => [
+              styles.row,
+              touchTarget.min,
+              { opacity: pressed ? 0.7 : 1 },
+            ]}
           >
             <Text style={styles.rowText}>{item.title}</Text>
           </Pressable>
@@ -70,10 +104,30 @@ export default function CommunityIndex() {
 function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 17, color: palette.text, opacity: 0.9, marginBottom: 8 },
-    section: { marginTop: 12, marginBottom: 6, fontWeight: "700", color: palette.text },
-    row: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
-    rowText: { color: palette.text, fontSize: 16 },
-  });
+    title: {
+      fontSize: 24,
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    subtitle: {
+      fontSize: 17,
+      color: palette.text,
+      opacity: 1,
+      marginBottom: 8,
+    },
+    section: {
+      marginTop: 12,
+      marginBottom: 6,
+      fontWeight: "700",
+      color: palette.text,
+    },
+    row: {
+      paddingVertical: 12,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderBottomColor: palette.muted,
+    },
+    rowText: { color: palette.text, fontSize: 16 },\n    empty: { color: palette.text, opacity: 0.7, marginTop: 12 },\n  }););
 }
+
+

@@ -1,0 +1,39 @@
+# Normalize line endings and mark binaries
+
+# Auto-detect text files and normalize to LF in repo
+* text=auto
+
+# Force LF for source/text files (Windows will still check out using core.autocrlf if enabled)
+*.js   text eol=lf
+*.jsx  text eol=lf
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.css  text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.mjs  text eol=lf
+*.cjs  text eol=lf
+*.gradle text eol=lf
+*.xml  text eol=lf
+*.properties text eol=lf
+
+# Binary assets
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.svg  binary
+*.ico  binary
+*.ttf  binary
+*.otf  binary
+*.woff binary
+*.woff2 binary
+*.mp3  binary
+*.mp4  binary
+*.zip  binary
+*.jar  binary

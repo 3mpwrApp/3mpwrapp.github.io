@@ -1,9 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
-
-
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
 
 type Kind = "WCB" | "LTD" | "CPP-D" | "Accommodation";
 
@@ -51,19 +53,48 @@ export default function EvidenceChecklist() {
 
   return (
     <View style={styles.container}>
-      <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Evidence Checklist</Text>
-      <Text style={styles.subtitle}>Pick a process to view a tailored checklist.</Text>
-      <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
-        {(["WCB","LTD","CPP-D","Accommodation"] as Kind[]).map((k) => (
-          <Pressable key={k} onPress={() => setKind(k)} style={[styles.chip, kind===k && styles.chipActive]} accessibilityRole="button">
-            <Text style={[styles.chipText, kind===k && styles.chipTextActive]}>{k}</Text>
+      <Text
+        ref={titleRef}
+        accessibilityRole="header"
+        style={styles.title}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
+        Evidence Checklist
+      </Text>
+      <Text style={styles.subtitle}>
+        Pick a process to view a tailored checklist.
+      </Text>
+      <View
+        style={{
+          flexDirection: "row",
+          gap: 8,
+          flexWrap: "wrap",
+          marginBottom: 8,
+        }}
+      >
+        {(["WCB", "LTD", "CPP-D", "Accommodation"] as Kind[]).map((k) => (
+          <Pressable
+            key={k}
+            onPress={() => setKind(k)}
+            style={[styles.chip, kind === k && styles.chipActive]}
+            accessibilityRole="button"
+          >
+            <Text
+              style={[styles.chipText, kind === k && styles.chipTextActive]}
+            >
+              {k}
+            </Text>
           </Pressable>
         ))}
       </View>
       {ITEMS[kind].map((line, idx) => (
-        <Text key={idx} style={styles.item}>Ã¢â‚¬Â¢ {line}</Text>
+        <Text key={idx} style={styles.item}>
+          Ã¢â‚¬Â¢ {line}
+        </Text>
       ))}
-      <Text style={[styles.subtitle, { marginTop: 12 }]}>Tip: Summaries from Wellness trackers can support your evidence.</Text>
+      <Text style={[styles.subtitle, { marginTop: 12 }]}>
+        Tip: Summaries from Wellness trackers can support your evidence.
+      </Text>
     </View>
   );
 }
@@ -71,13 +102,21 @@ export default function EvidenceChecklist() {
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background, padding: 16 },
-    title: { fontSize: 22, fontWeight: '700', color: palette.text },
+    title: { fontSize: 22, fontWeight: "700", color: palette.text },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
-    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 16, paddingHorizontal: 12, paddingVertical: 6 },
-    chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
+    chip: {
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 16,
+      paddingHorizontal: 12,
+      paddingVertical: 6,
+    },
+    chipActive: {
+      backgroundColor: palette.primary,
+      borderColor: palette.primary,
+    },
     chipText: { color: palette.text },
-    chipTextActive: { color: palette.onPrimary, fontWeight: '700' },
+    chipTextActive: { color: palette.onPrimary, fontWeight: "700" },
     item: { color: palette.text, marginBottom: 6 },
   });
 }
-

@@ -82,15 +82,21 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
-  const has = React.useCallback((kind: Kind, id: string) => state[kind].has(id), [state]);
+  const has = React.useCallback(
+    (kind: Kind, id: string) => state[kind].has(id),
+    [state],
+  );
 
   return (
-    <FavoritesContext.Provider value={{ state, toggle, has }}>{children}</FavoritesContext.Provider>
+    <FavoritesContext.Provider value={{ state, toggle, has }}>
+      {children}
+    </FavoritesContext.Provider>
   );
 }
 
 export function useFavorites() {
   const ctx = React.useContext(FavoritesContext);
-  if (!ctx) throw new Error("useFavorites must be used within FavoritesProvider");
+  if (!ctx)
+    throw new Error("useFavorites must be used within FavoritesProvider");
   return ctx;
 }

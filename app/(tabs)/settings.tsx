@@ -1,20 +1,35 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image, Linking } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TextInput,
+  Button,
+  Alert,
+  Image,
+  Linking,
+} from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
-// import { useTranslation } from "../../i18n";
-// import { useSettings } from "../../store/settings";
+import { useSettings, TextScale, ResourceFormat } from "../../store/settings";
 
 import { useAuth } from "../../context/AuthContext";
+import { Link } from "expo-router";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { useNetwork } from "../../store/network";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
 import { useProfileLocal } from "../../store/profileLocal";
-import { exportBackup, importBackup, clearAllData } from "../../services/backup";
+import {
+  exportBackup,
+  importBackup,
+  clearAllData,
+} from "../../services/backup";
 import { usePrivacy } from "../../store/privacy";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -34,6 +49,9 @@ export default function SettingsScreen() {
   const [photoURL, setPhotoURL] = useState<string | null>(null);
   // const [loadingProfile, setLoadingProfile] = useState(true);
 
+  // Track offline state when profile fetch fails (for banner)
+  const { setOffline } = useNetwork();
+
   useEffect(() => {
     const fetchProfile = async () => {
       if (!user) return;
@@ -46,7 +64,12 @@ export default function SettingsScreen() {
           setPhotoURL(profile.photoURL || null);
         }
       } catch (err: any) {
-        console.error("Error fetching profile:", err.message);
+        const msg = String(err?.message ?? "");
+        if (msg.toLowerCase().includes("offline")) {
+          setOffline(true);
+        } else {
+          console.error("Error fetching profile:", msg);
+        }
       } finally {
         // no-op
       }
@@ -80,7 +103,7 @@ export default function SettingsScreen() {
     } catch {
       Alert.alert(
         "Image Picker Unavailable",
-        "Please rebuild the Android app to include expo-image-picker (npx expo run:android)."
+        "Please rebuild the Android app to include expo-image-picker (npx expo run:android).",
       );
       return;
     }
@@ -146,6 +169,11 @@ export default function SettingsScreen() {
         <Button title="Update Name" onPress={handleUpdateDisplayName} />
       </Section>
 
+      {/* Accessibility Preferences */}
+      <Section title="Accessibility Preferences" styles={styles}>
+        <A11ySettingsSection />
+      </Section>
+
       {/* Local profile for templates */}
       <Section title="Local Profile (for templates)" styles={styles}>
         <LocalProfileSection />
@@ -159,7 +187,99 @@ export default function SettingsScreen() {
       <Section title="Terms & Policies" styles={styles}>
         <TermsSection />
       </Section>
+
+      {user && (
+        <Section title="Admin" styles={styles}>
+          <AdminSection />
+        </Section>
+      )}
     </ScrollView>
+  );
+}
+
+function A11ySettingsSection() {
+  const palette = useAppPalette();
+  const s = createStyles(palette);
+  const {
+    highContrast,
+    setHighContrast,
+    setTextScale,
+    dyslexiaFriendly,
+    setDyslexiaFriendly,
+    plainLanguage,
+    setPlainLanguage,
+    captionsPreferred,
+    setCaptionsPreferred,
+    setResourcePreferredFormat,
+    voiceMode,
+    setVoiceMode,
+  } = useSettings();
+
+  const ScaleButton = ({ label, value }: { label: string; value: TextScale }) => (
+    <Button title={label} onPress={() => setTextScale(value)} />
+  );
+  const FormatButton = ({ label, value }: { label: string; value: ResourceFormat }) => (
+    <Button title={label} onPress={() => setResourcePreferredFormat(value)} />
+  );
+
+  return (
+    <View>
+      <Text style={s.rowLabel}>High Contrast</Text>
+      <Button
+        title={highContrast ? "Disable High Contrast" : "Enable High Contrast"}
+        onPress={() => setHighContrast(!highContrast)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Voice Help</Text>
+      <Link href={("/(tabs)/voice-help" as any)}>
+        <Text style={{ color: palette.primary, fontWeight: "700" }}>Open Voice Help</Text>
+      </Link>
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Voice Mode (beta)</Text>
+      <Button
+        title={voiceMode ? "Disable Voice Mode" : "Enable Voice Mode"}
+        onPress={() => setVoiceMode(!voiceMode)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Text Size</Text>
+      <View style={{ flexDirection: "row", gap: 8 }}>
+        <ScaleButton label="Normal" value="normal" />
+        <ScaleButton label="Large" value="large" />
+        <ScaleButton label="X-Large" value="xlarge" />
+      </View>
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Dyslexia-Friendly Font Spacing</Text>
+      <Button
+        title={dyslexiaFriendly ? "Disable Dyslexia Spacing" : "Enable Dyslexia Spacing"}
+        onPress={() => setDyslexiaFriendly(!dyslexiaFriendly)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Plain-Language Summaries</Text>
+      <Button
+        title={plainLanguage ? "Disable Plain Language" : "Enable Plain Language"}
+        onPress={() => setPlainLanguage(!plainLanguage)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Captions Preferred</Text>
+      <Button
+        title={captionsPreferred ? "Captions On" : "Captions Off"}
+        onPress={() => setCaptionsPreferred(!captionsPreferred)}
+      />
+
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Preferred Resource Format</Text>
+      <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
+        <FormatButton label="Text" value="text" />
+        <FormatButton label="Audio" value="audio" />
+        <FormatButton label="ASL" value="asl" />
+        <FormatButton label="Easy-Read" value="easy" />
+      </View>
+    </View>
   );
 }
 
@@ -172,13 +292,39 @@ function LocalProfileSection() {
   const [province, setProvince] = useState(profile.province ?? "");
   return (
     <View>
-      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Name</Text>
-      <TextInput style={s.input} value={name} onChangeText={setName} placeholder="Your name" />
-      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Contact (email/phone)</Text>
-      <TextInput style={s.input} value={contact} onChangeText={setContact} placeholder="you@example.com" />
-      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>Province (e.g., ON, QC)</Text>
-      <TextInput style={s.input} value={province} onChangeText={setProvince} placeholder="ON" autoCapitalize="characters" maxLength={2} />
-      <Button title="Save" onPress={() => setProfile({ name, contact, province })} />
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>
+        Name
+      </Text>
+      <TextInput
+        style={s.input}
+        value={name}
+        onChangeText={setName}
+        placeholder="Your name"
+      />
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>
+        Contact (email/phone)
+      </Text>
+      <TextInput
+        style={s.input}
+        value={contact}
+        onChangeText={setContact}
+        placeholder="you@example.com"
+      />
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>
+        Province (e.g., ON, QC)
+      </Text>
+      <TextInput
+        style={s.input}
+        value={province}
+        onChangeText={setProvince}
+        placeholder="ON"
+        autoCapitalize="characters"
+        maxLength={2}
+      />
+      <Button
+        title="Save"
+        onPress={() => setProfile({ name, contact, province })}
+      />
     </View>
   );
 }
@@ -186,7 +332,7 @@ function LocalProfileSection() {
 function PrivacyBackupSection() {
   const palette = useAppPalette();
   const s = createStyles(palette);
-  const { state, setPasscode, setLockWellness } = usePrivacy();
+  const { state, setPasscode, setLockWellness, setAnalyticsEnabled, setErrorReportingEnabled } = usePrivacy();
   const onExport = async () => {
     const bundle = await exportBackup();
     if (!bundle) return Alert.alert("Export failed", "Storage unavailable.");
@@ -213,21 +359,48 @@ function PrivacyBackupSection() {
       const FS = await import("expo-file-system");
       const raw = await FS.readAsStringAsync(uri);
       const ok = await importBackup(JSON.parse(raw));
-      Alert.alert(ok ? "Imported" : "Import failed", ok ? "Backup restored." : "Could not restore backup.");
+      Alert.alert(
+        ok ? "Imported" : "Import failed",
+        ok ? "Backup restored." : "Could not restore backup.",
+      );
     } catch {
       Alert.alert("Import failed", "Unable to read backup file.");
     }
   };
   const onClear = async () => {
     const ok = await clearAllData();
-    Alert.alert(ok ? "Cleared" : "Failed", ok ? "Local app data cleared." : "Unable to clear data.");
+    Alert.alert(
+      ok ? "Cleared" : "Failed",
+      ok ? "Local app data cleared." : "Unable to clear data.",
+    );
   };
   return (
     <View>
-      <Text style={s.rowLabel}>Set/Change Passcode</Text>
-      <TextInput style={s.input} placeholder="New passcode" secureTextEntry onSubmitEditing={(e) => setPasscode(e.nativeEvent.text || undefined)} />
+      <Text style={s.rowLabel}>Privacy</Text>
+      <Button
+        title={`Analytics: ${state.analyticsEnabled ? 'On' : 'Off'}`}
+        onPress={() => setAnalyticsEnabled(!state.analyticsEnabled)}
+      />
       <View style={{ height: 8 }} />
-      <Button title={state.lockWellness ? "Disable Wellness Lock" : "Enable Wellness Lock"} onPress={() => setLockWellness(!state.lockWellness)} />
+      <Button
+        title={`Error reporting: ${state.errorReportingEnabled ? 'On' : 'Off'}`}
+        onPress={() => setErrorReportingEnabled(!state.errorReportingEnabled)}
+      />
+      <View style={{ height: 12 }} />
+      <Text style={s.rowLabel}>Set/Change Passcode</Text>
+      <TextInput
+        style={s.input}
+        placeholder="New passcode"
+        secureTextEntry
+        onSubmitEditing={(e) => setPasscode(e.nativeEvent.text || undefined)}
+      />
+      <View style={{ height: 8 }} />
+      <Button
+        title={
+          state.lockWellness ? "Disable Wellness Lock" : "Enable Wellness Lock"
+        }
+        onPress={() => setLockWellness(!state.lockWellness)}
+      />
       <View style={{ height: 12 }} />
       <Button title="Export backup" onPress={onExport} />
       <View style={{ height: 8 }} />
@@ -240,12 +413,12 @@ function PrivacyBackupSection() {
 
 function TermsSection() {
   const openTerms = () => {
-    Linking.openURL('https://empowr.app/terms').catch(() => {});
+    Linking.openURL("https://empowr.app/terms").catch(() => {});
   };
   const reset = async () => {
     try {
-      await AsyncStorage.removeItem('empowr.terms.accepted.v1');
-      Alert.alert('Reset', 'You will be asked to accept Terms on next launch.');
+      await AsyncStorage.removeItem("empowr.terms.accepted.v1");
+      Alert.alert("Reset", "You will be asked to accept Terms on next launch.");
     } catch {}
   };
   return (
@@ -257,7 +430,35 @@ function TermsSection() {
   );
 }
 
-function Section({ title, children, styles }: { title: string; children: React.ReactNode; styles: ReturnType<typeof createStyles> }) {
+function AdminSection() {
+  const { isAdmin, refreshClaims } = useAuth();
+  const palette = useAppPalette();
+  return (
+    <View>
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 6 }}>
+        Status: {isAdmin ? "Admin" : "Standard user"}
+      </Text>
+      <Button title="Refresh admin status" onPress={refreshClaims} />
+      {isAdmin && (
+        <View style={{ marginTop: 8 }}>
+          <Link href={"/(tabs)/admin" as any}>
+            <Text style={{ color: palette.primary, fontWeight: "700" }}>Open Admin Panel</Text>
+          </Link>
+        </View>
+      )}
+    </View>
+  );
+}
+
+function Section({
+  title,
+  children,
+  styles,
+}: {
+  title: string;
+  children: React.ReactNode;
+  styles: ReturnType<typeof createStyles>;
+}) {
   return (
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>{title}</Text>
@@ -269,10 +470,24 @@ function Section({ title, children, styles }: { title: string; children: React.R
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    section: { paddingVertical: 12, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted },
+    title: {
+      fontSize: 24,
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    section: {
+      paddingVertical: 12,
+      borderTopWidth: StyleSheet.hairlineWidth,
+      borderTopColor: palette.muted,
+    },
     sectionTitle: { color: palette.text, fontWeight: "700", marginBottom: 8 },
-    rowLabel: { color: palette.text, opacity: 0.9, marginTop: 10, marginBottom: 6 },
+    rowLabel: {
+      color: palette.text,
+      opacity: 0.9,
+      marginTop: 10,
+      marginBottom: 6,
+    },
     input: {
       borderWidth: 1,
       borderColor: palette.muted,
@@ -290,4 +505,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
   });
 }
-

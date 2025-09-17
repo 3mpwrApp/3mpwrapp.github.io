@@ -1,5 +1,8 @@
 /* eslint import/no-named-as-default: off */
-import { ReactNode } from "react";import { ScrollView, View, StyleSheet } from "react-native";import { ThemedView } from "./ThemedView";import useColorScheme from "../hooks/useColorScheme";
+import { ReactNode } from "react";
+import { ScrollView, View, StyleSheet } from "react-native";
+import { ThemedView } from "./ThemedView";
+import useColorScheme from "../hooks/useColorScheme";
 export default function ParallaxScrollView({
   children,
   headerBackgroundColor = { light: "#e6f0ff", dark: "#1a1a1a" },
@@ -11,7 +14,12 @@ export default function ParallaxScrollView({
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
-      <ThemedView style={[styles.header, { backgroundColor: headerBackgroundColor[colorScheme] }]} />
+      <ThemedView
+        style={[
+          styles.header,
+          { backgroundColor: headerBackgroundColor[colorScheme] },
+        ]}
+      />
       <View style={styles.inner}>{children}</View>
     </ScrollView>
   );

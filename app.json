@@ -1,40 +1,56 @@
 {
   "expo": {
-    "name": "empowrapp",
+    "name": "3mpowrApp",
     "slug": "empowrapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/empowr-logo.png",
+    "icon": "./assets/images/brand-logo.png",
     "scheme": "empowrapp",
     "userInterfaceStyle": "automatic",
     "jsEngine": "hermes",
     "newArchEnabled": false,
-    "entryPoint": "./node_modules/expo-router/entry",
     "updates": {
       "checkAutomatically": "ON_ERROR_RECOVERY"
     },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/empowr-logo.png",
+        "foregroundImage": "./assets/images/brand-adaptive.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.empowrapp2.empowrapp"
+      "package": "com.empowrapp2.empowrapp",
+      "blockScreenshots": true,
+      "allowBackup": false
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/empowr-logo.png"
+      "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       "expo-router",
       [
+        "sentry-expo",
+        {
+          "project": "YOUR_SENTRY_PROJECT",
+          "organization": "YOUR_ORG",
+          "url": "https://sentry.io/",
+          "autoInit": false
+        }
+      ],
+      [
         "expo-splash-screen",
         {
-          "image": "./assets/images/empowr-logo.png",
+          "image": "./assets/images/brand-logo.png",
           "imageWidth": 220,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
@@ -45,7 +61,8 @@
         {
           "mode": "production"
         }
-      ]
+      ],
+      "expo-audio"
     ],
     "experiments": {
       "typedRoutes": true

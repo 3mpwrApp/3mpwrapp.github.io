@@ -1,47 +1,141 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Public read collections (optional): campaigns
-    match /campaigns/{id} {
-      allow read: if true;
-      allow write: if request.auth != null;
+    function isSignedIn() { return request.auth != null; }
+    function isAdmin() { return request.auth.token.admin == true; }
+
+    // Admin namespace for privileged data
+    match /admin/{docId} {
+      allow read: if isSignedIn();
+      allow write, update, delete: if isAdmin();
     }
 
-    // Community threads and comments
-    match /threads/{id} {
-      allow read: if true;
-      allow create: if request.auth != null;
-      allow update, delete: if false; // restrict updates server-side
+    // Campaign rooms metadata: owner/moderator control
+    function isRoomStaff(roomId) {
+      return exists(/databases/$(database)/documents/campaign_rooms/$(roomId)) &&
+        (get(/databases/$(database)/documents/campaign_rooms/$(roomId)).data.ownerUid == request.auth.uid ||
+         request.auth.uid in (get(/databases/$(database)/documents/campaign_rooms/$(roomId)).data.mods));
     }
-    match /comments/{id} {
-      allow read: if true;
-      allow create: if request.auth != null;
-      allow update, delete: if false;
-    }
-
-    // Campaign rooms (collab): tasks subcollection and notes doc
     match /campaign_rooms/{roomId} {
-      allow read: if true;
-      allow write: if request.auth != null; // or restrict by membership
-      match /tasks/{taskId} {
-        allow read: if true;
-        allow write: if request.auth != null;
-      }
-      match /{docId} {
-        allow read: if true;
-        allow write: if request.auth != null;
-      }
+      allow read: if isSignedIn();
+      // anyone signed-in can create a new room doc as owner
+      allow create: if isSignedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow update, delete: if isRoomStaff(roomId);
+    }
+    match /campaign_rooms/{roomId}/{collectionId=**}/{docId} {
+      allow read: if isSignedIn();
+      allow write, update, delete: if isRoomStaff(roomId);
     }
 
-    // Violation reports (anonymous aggregation)
-    match /violations/{id} {
-      allow read: if false; // keep private by default
-      allow create: if request.auth != null; // or allow if true for anon
-    }
-    match /violation_counts/{type} {
+    // Public data collections (adjust as needed)
+    match /campaigns/{docId} {
       allow read: if true;
-      allow write: if request.auth != null;
+      allow write, update, delete: if isSignedIn();
+    }
+
+    match /threads/{docId} {
+      allow read: if true;
+      allow write, update, delete: if isSignedIn();
+    }
+
+    match /comments/{docId} {
+      allow read: if true;
+      allow write, update, delete: if isSignedIn();
+    }
+
+    // Users collection
+    match /users/{uid} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow create: if isSignedIn() && request.auth.uid == uid;
+      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+    }
+
+    // Evidence items under a user
+    match /users/{uid}/evidence/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Deadlines under a user
+    match /users/{uid}/deadlines/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // RTW goals under a user
+    match /users/{uid}/rtw_goals/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Medications and logs under a user
+    match /users/{uid}/medications/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+    match /users/{uid}/med_logs/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Chronic condition tracker entries
+    match /users/{uid}/chronic_entries/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Adaptive AI Companion moods (allow anon + signed-in read/write to their namespace)
+    match /users/{uid}/moods/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid) || (request.auth == null && uid == 'anon');
+      allow write, update, delete: if (isSignedIn() && request.auth.uid == uid) || (request.auth == null && uid == 'anon');
+    }
+
+    // Mutual aid posts (public list; write if signed-in)
+    match /mutual_aid_posts/{docId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin();
+    }
+    match /mutual_aid_posts/{docId}/responses/{rid} {
+      allow read: if true;
+      allow create: if isSignedIn();
+    }
+
+    // Public wait time submissions (read public; create any)
+    match /public_wait_times/{docId} {
+      allow read: if true;
+      allow create: if true;
+    }
+
+    // Media Studio posts (read public; create signed-in)
+    match /media_posts/{docId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow delete: if isAdmin();
+    }
+
+    // Timeline entries (public read; create signed-in)
+    match /timeline_entries/{docId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+    }
+
+    // Ratings (public read; one-per-user-per-target via doc id)
+    match /ratings/{docId} {
+      allow read: if true;
+      allow create, update: if isSignedIn() && docId.matches('^' + request.auth.uid + '_.*$');
+    }
+
+    // Rating targets (public read; write signed-in)
+    match /rating_targets/{docId} {
+      allow read: if true;
+      allow create, update: if isSignedIn();
+    }
+
+    // Wellness reflections under a user
+    match /users/{uid}/wellness_reflections/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
   }
 }
-

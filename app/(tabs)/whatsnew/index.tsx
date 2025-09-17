@@ -1,11 +1,26 @@
-import React from "react";
-import { View, Text, StyleSheet, SectionList, TextInput, Pressable } from "react-native";
+﻿import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  SectionList,
+  TextInput,
+  Pressable,
+} from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
 import { whatsnew as defaultWN } from "../../../data/whatsnew";
-import { getLocalWhatsNew, addLocalWhatsNew } from "../../../services/localContent";
+import {
+  getLocalWhatsNew,
+  addLocalWhatsNew,
+} from "../../../services/localContent";
 import SettingsLink from "../../../components/SettingsLink";
+import { useFocusEffect } from "@react-navigation/native";
 import ContrastToggle from "../../../components/ContrastToggle";
 
 export default function WhatsNewScreen() {
@@ -13,7 +28,7 @@ export default function WhatsNewScreen() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("What’s New");
+  useAnnounceOnMount("Whatâ€™s New");
   useFocusOnRefOnMount(titleRef);
 
   const now = React.useMemo(() => new Date(), []);
@@ -40,8 +55,23 @@ export default function WhatsNewScreen() {
       }
     })();
   }, []);
-  const isWithin30Days = (d: string) => (now.getTime() - new Date(d).getTime()) / (1000*60*60*24) <= 30;
-  const isUnread = (d: string) => (lastSeen ? new Date(d).getTime() > new Date(lastSeen).getTime() : true);
+
+  // Mark as seen when visiting this tab
+  useFocusEffect(
+    React.useCallback(() => {
+      (async () => {
+        try {
+          const mod = await import("@react-native-async-storage/async-storage");
+          const AsyncStorage = mod.default;
+          await AsyncStorage.setItem("whatsnew:lastSeen:v1", new Date().toISOString());
+        } catch {}
+      })();
+    }, []),
+  );
+  const isWithin30Days = (d: string) =>
+    (now.getTime() - new Date(d).getTime()) / (1000 * 60 * 60 * 24) <= 30;
+  const isUnread = (d: string) =>
+    lastSeen ? new Date(d).getTime() > new Date(lastSeen).getTime() : true;
   const recent = items.filter((i) => isWithin30Days(i.date));
   const older = items.filter((i) => !isWithin30Days(i.date));
   const sections = [
@@ -50,25 +80,59 @@ export default function WhatsNewScreen() {
   ];
 
   return (
-    <View style={styles.container} accessibilityLabel="What’s New screen" accessible>
-      <Text ref={titleRef} style={styles.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>What’s New</Text>
+    <View
+      style={styles.container}
+      accessibilityLabel="What's New screen"
+      accessible
+    >
+      <Text
+        ref={titleRef}
+        style={styles.title}
+        accessibilityRole="header"
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
+        Whatâ€™s New
+      </Text>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
-      <Text style={styles.subtitle}>Latest updates. Items older than 30 days move to Archive.</Text>
+      <Text style={styles.subtitle}>
+        Latest updates. Items older than 30 days move to Archive.
+      </Text>
       <View style={{ marginBottom: 8 }}>
-        <TextInput value={title} onChangeText={setTitle} style={styles.input} placeholder="Add title" placeholderTextColor={palette.text} />
-        <TextInput value={summary} onChangeText={setSummary} style={styles.input} placeholder="Add summary" placeholderTextColor={palette.text} />
+        <TextInput
+          value={title}
+          onChangeText={setTitle}
+          style={styles.input}
+          placeholder="Add title"
+          placeholderTextColor={palette.text}
+        />
+        <TextInput
+          value={summary}
+          onChangeText={setSummary}
+          style={styles.input}
+          placeholder="Add summary"
+          placeholderTextColor={palette.text}
+        />
         <Pressable
           disabled={!title.trim() || !summary.trim()}
           onPress={async () => {
-            const item = { id: `wn-${Date.now()}`, title: title.trim(), summary: summary.trim(), date: new Date().toISOString() };
+            const item = {
+              id: `wn-${Date.now()}`,
+              title: title.trim(),
+              summary: summary.trim(),
+              date: new Date().toISOString(),
+            };
             await addLocalWhatsNew(item);
             setItems((prev) => [item, ...prev]);
-            setTitle(""); setSummary("");
+            setTitle("");
+            setSummary("");
           }}
           accessibilityRole="button"
-          accessibilityLabel="Add what’s new"
-          style={({ pressed }) => [styles.button, (!title.trim() || !summary.trim() || pressed) && { opacity: 0.7 }]}
+          accessibilityLabel="Add whatâ€™s new"
+          style={({ pressed }) => [
+            styles.button,
+            (!title.trim() || !summary.trim() || pressed) && { opacity: 0.7 },
+          ]}
         >
           <Text style={styles.buttonText}>Add</Text>
         </Pressable>
@@ -77,10 +141,16 @@ export default function WhatsNewScreen() {
         accessibilityRole="button"
         accessibilityLabel="Mark all as read"
         onPress={async () => {
-          const newest = items.reduce((acc, cur) => Math.max(acc, new Date(cur.date).getTime()), 0);
+          const newest = items.reduce(
+            (acc, cur) => Math.max(acc, new Date(cur.date).getTime()),
+            0,
+          );
           const AsyncStorage = AsyncStorageRef.current;
           if (AsyncStorage && newest) {
-            await AsyncStorage.setItem("whatsnew:lastSeen:v1", new Date(newest).toISOString());
+            await AsyncStorage.setItem(
+              "whatsnew:lastSeen:v1",
+              new Date(newest).toISOString(),
+            );
             setLastSeen(new Date(newest).toISOString());
           }
         }}
@@ -99,12 +169,33 @@ export default function WhatsNewScreen() {
           const unread = isUnread(item.date);
           return (
             <View style={styles.item}>
-              <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+              <View
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
                 <Text style={styles.itemTitle}>{item.title}</Text>
-                <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-                  <Text style={[styles.itemDate]}>{new Date(item.date).toLocaleDateString()}</Text>
+                <View
+                  style={{ flexDirection: "row", alignItems: "center", gap: 8 }}
+                >
+                  <Text style={[styles.itemDate]}>
+                    {new Date(item.date).toLocaleDateString()}
+                  </Text>
                   {unread && (
-                    <Text style={{ backgroundColor: palette.primary, color: palette.onPrimary, borderRadius: 8, paddingHorizontal: 8, paddingVertical: 2, fontWeight: "700" }}>New</Text>
+                    <Text
+                      style={{
+                        backgroundColor: palette.primary,
+                        color: palette.onPrimary,
+                        borderRadius: 8,
+                        paddingHorizontal: 8,
+                        paddingVertical: 2,
+                        fontWeight: "700",
+                      }}
+                    >
+                      New
+                    </Text>
                   )}
                 </View>
               </View>
@@ -118,18 +209,61 @@ export default function WhatsNewScreen() {
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
+function createStyles(
+  palette: ReturnType<typeof useAppPalette>,
+  factor: number,
+) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: Math.round(24 * factor), fontWeight: "700", color: palette.text, marginBottom: 8 },
-    subtitle: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.9, marginBottom: 8 },
-    section: { color: palette.text, fontWeight: "700", marginTop: 12, marginBottom: 6 },
-    item: { paddingVertical: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
+    title: {
+      fontSize: Math.round(24 * factor),
+      fontWeight: "700",
+      color: palette.text,
+      marginBottom: 8,
+    },
+    subtitle: {
+      fontSize: Math.round(16 * factor),
+      color: palette.text,
+      opacity: 1,
+      marginBottom: 8,
+    },
+    section: {
+      color: palette.text,
+      fontWeight: "700",
+      marginTop: 12,
+      marginBottom: 6,
+    },
+    item: {
+      paddingVertical: 8,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderBottomColor: palette.muted,
+    },
     itemTitle: { color: palette.text, fontWeight: "600" },
-    itemText: { color: palette.text, opacity: 0.9 },
-    itemDate: { color: palette.text, opacity: 0.7, fontSize: Math.round(12 * factor) },
-    input: { borderWidth: 1, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, color: palette.text, marginBottom: 6 },
-    button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, alignItems: "center" },
+    itemText: { color: palette.text, opacity: 1 },
+    itemDate: {
+      color: palette.text,
+      opacity: 0.7,
+      fontSize: Math.round(12 * factor),
+    },
+    input: {
+      borderWidth: 1,
+      borderColor: palette.muted,
+      borderRadius: 8,
+      paddingHorizontal: 12,
+      paddingVertical: 10,
+      color: palette.text,
+      marginBottom: 6,
+    },
+    button: {
+      backgroundColor: palette.primary,
+      paddingVertical: 10,
+      paddingHorizontal: 16,
+      borderRadius: 6,
+      alignItems: "center",
+    },
     buttonText: { color: palette.onPrimary, fontSize: 16, fontWeight: "700" },
   });
 }
+
+
+

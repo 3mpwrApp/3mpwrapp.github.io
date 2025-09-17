@@ -19,7 +19,6 @@ import {
 import { logEvent } from "../../../services/analytics";
 import { fsIncrementCampaignMembers } from "../../../services/firestore";
 
-
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const scheme = useColorScheme();
@@ -96,10 +95,7 @@ function CampaignDetailInner() {
 
         {!!campaign && (
           <Pressable
-            style={({ pressed }) => [
-              styles.ghost,
-              pressed && { opacity: 0.8 },
-            ]}
+            style={({ pressed }) => [styles.ghost, pressed && { opacity: 0.8 }]}
             onPress={() => {
               // open campaign room
               router.push(`/(tabs)/campaigns/room/${campaign.id}`);
@@ -114,10 +110,7 @@ function CampaignDetailInner() {
 
         {!!campaign && (
           <Pressable
-            style={({ pressed }) => [
-              styles.ghost,
-              pressed && { opacity: 0.8 },
-            ]}
+            style={({ pressed }) => [styles.ghost, pressed && { opacity: 0.8 }]}
             onPress={async () => {
               try {
                 const msg = `${campaign.title} - ${campaign.summary}`;

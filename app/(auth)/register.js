@@ -15,7 +15,11 @@ export default function RegisterScreen() {
   const handleRegister = async () => {
     try {
       // ðŸ”¹ Create user in Firebase Auth
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
       const user = userCredential.user;
 
       // ðŸ”¹ Create Firestore profile with displayName
@@ -81,5 +85,3 @@ const styles = StyleSheet.create({
   },
   error: { color: "red", marginBottom: 10 },
 });
-
-

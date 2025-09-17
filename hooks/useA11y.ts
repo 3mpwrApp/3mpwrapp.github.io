@@ -12,7 +12,10 @@ export function useAnnounceOnMount(message: string, delayMs: number = 300) {
   }, [message, delayMs]);
 }
 
-export function useFocusOnRefOnMount(ref: React.RefObject<unknown>, delayMs: number = 200) {
+export function useFocusOnRefOnMount(
+  ref: React.RefObject<unknown>,
+  delayMs: number = 200,
+) {
   React.useEffect(() => {
     const id = setTimeout(() => {
       const handle = findNodeHandle((ref as any).current);
@@ -24,7 +27,11 @@ export function useFocusOnRefOnMount(ref: React.RefObject<unknown>, delayMs: num
   }, [ref, delayMs]);
 }
 
-export function useAnnounceOnChange<T>(value: T, format: (v: T) => string, delayMs: number = 0) {
+export function useAnnounceOnChange<T>(
+  value: T,
+  format: (v: T) => string,
+  delayMs: number = 0,
+) {
   const prev = React.useRef<T>(value);
   React.useEffect(() => {
     let id: ReturnType<typeof setTimeout> | undefined;

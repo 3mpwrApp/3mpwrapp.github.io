@@ -34,18 +34,24 @@ export default function PodcastDetail() {
   return (
     <>
       <Stack.Screen options={{ title: title ?? "Podcast" }} />
-      <ScrollView style={styles.container} contentContainerStyle={{ padding: 20 }}>
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={{ padding: 20 }}
+      >
         {/* Thumbnail placeholder */}
         <Image
           source={{
             uri:
-              "https://placehold.co/400x200?text=Podcast" + (title ? `: ${title}` : ""),
+              "https://placehold.co/400x200?text=Podcast" +
+              (title ? `: ${title}` : ""),
           }}
           style={styles.thumbnail}
         />
 
         <Text style={styles.title}>{title ?? "Podcast"}</Text>
-        <Text style={styles.meta}>{duration ? `Duration: ${duration}` : ""}</Text>
+        <Text style={styles.meta}>
+          {duration ? `Duration: ${duration}` : ""}
+        </Text>
         <Text style={styles.description}>
           {description ?? "No description available."}
         </Text>
@@ -53,10 +59,15 @@ export default function PodcastDetail() {
         {/* Save / Unsave */}
         {id && (
           <Pressable
-            style={({ pressed }) => [styles.button, pressed && { opacity: 0.8 }]}
+            style={({ pressed }) => [
+              styles.button,
+              pressed && { opacity: 0.8 },
+            ]}
             onPress={() => toggle("podcast", id)}
             accessibilityRole="button"
-            accessibilityLabel={saved ? "Remove from favorites" : "Save to favorites"}
+            accessibilityLabel={
+              saved ? "Remove from favorites" : "Save to favorites"
+            }
           >
             <Text style={styles.buttonText}>
               {saved ? "Remove from Favorites" : "Save to Favorites"}

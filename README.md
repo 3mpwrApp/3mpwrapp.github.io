@@ -31,6 +31,7 @@ You can start developing by editing the files inside the `app` directory. This p
 - `anonymous` or `signedIn` → routes to `/(tabs)`
 
 Notes
+
 - AsyncStorage is optional. If not installed, auth state persists for the current session only.
 
 ## Localization (i18n)
@@ -67,6 +68,7 @@ Notes
 - Opening YouTube videos: On a podcast whose `id` starts with `yt:`, the detail view shows an "Open on YouTube" button.
 
 Notes
+
 - The app does not download or extract audio from YouTube to respect YouTube Terms of Service. It links out to YouTube for playback.
 
 ## Firestore Rules
@@ -92,3 +94,95 @@ Without this var, the app uses offline deterministic fallbacks.
 ## Mandatory Terms Gate
 
 On first open, users must accept Terms to proceed. See `components/TermsGate.tsx`. Host your Terms at `https://empowr.app/terms` or update the URL inside the component.
+## Admin setup
+
+Grant yourself admin once using Firebase Admin SDK:
+
+1. Download a Firebase service account JSON for your project.
+2. Place it at `firebase/serviceAccount.json` or set env `GOOGLE_APPLICATION_CREDENTIALS` to the file path.
+3. Run: `npm run admin:set -- <your-uid>`
+4. In the app (Settings), tap "Refresh admin status".
+
+Revoke admin: `npm run admin:set -- <uid> false`
+
+### Admin scripts
+
+- `npm run admin:users` — List all users as JSON (add `-- --format csv` for CSV)
+- `npm run admin:fcm -- --token <fcmToken> --title "Hi" --body "Message"` — Send FCM via Admin SDK (or `--topic <topic>`)
+- `npm run admin:export -- <collection> [--out file.json]` — Export a Firestore collection
+
+## New Features
+
+- Admin Panel: filters (verified/banned), contains search, client-side sort, CSV export/copy, and Export All (batched).
+- Deadlines: import events from an ICS file, snooze 7 days, bulk mark done/not-done, and quick-add weekly/monthly templates.
+- Evidence Locker: queue progress indicator and bulk delete of cloud items.
+- New Tools and Hubs:
+  - Lawyer & Advocate Finder: `/(tabs)/advocacy/lawyer-finder`
+  - Return-to-Work Planner: `/(tabs)/resources/rtw-planner`
+  - Medication & Treatment Tracker: `/(tabs)/resources/meds-tracker`
+  - Chronic Condition Tracker: `/(tabs)/resources/chronic-tracker`
+  - AI Body Mechanics Advisor (video tips): `/(tabs)/resources/body-mechanics-advisor`
+  - Interactive Policy Simulator: `/(tabs)/resources/policy-simulator`
+  - Accessible Exercise Hub: `/(tabs)/wellness/exercise-hub`
+  - Diet & Nutrition Guides: `/(tabs)/wellness/nutrition-guides`
+- Accessible Event Finder: `/(tabs)/events/finder`
+- Accommodation Request Builder: `/(tabs)/resources/accommodation-request` (redirects to improved letter builder)
+
+## Remote Integrations
+
+- YouTube Exercises
+  - Set `EXPO_PUBLIC_YT_API_KEY` to enable remote playlists in Exercise Hub.
+  - Optional audience queries (fallbacks provided):
+    - `EXPO_PUBLIC_EXERCISE_WHEELCHAIR_QUERY`
+    - `EXPO_PUBLIC_EXERCISE_LIMITED_QUERY`
+    - `EXPO_PUBLIC_EXERCISE_SENSORY_QUERY`
+    - `EXPO_PUBLIC_EXERCISE_MAX` (default 6)
+- Lawyer/Advocate Directory
+  - If you have a public API, set `EXPO_PUBLIC_ADVOCATE_API` (expects `GET /advocates?page=&pageSize=&q=&issue=&province=&proBono=` → `{ items, total }`).
+  - Local seed is used as a fallback.
+- Body Mechanics Analysis
+  - App optionally calls `POST ${EXPO_PUBLIC_LLM_BASE}/analyze-body` with multipart `file`.
+  - A local stub server is provided at `server/` (Express + Multer). Usage:
+    - `cd server && npm install && npm start`
+    - Set `EXPO_PUBLIC_LLM_BASE=http://localhost:8080`
+
+## Firestore security rules
+
+Rules live at `firebase/firestore.rules`. Deploy with:
+
+```
+npm i -g firebase-tools
+firebase login
+firebase deploy --only firestore:rules
+```
+
+## Branding assets
+
+Replace placeholder brand assets with your final files:
+
+- `assets/images/brand-logo.png` (512–1024px square PNG)
+- `assets/images/brand-adaptive.png` (Android adaptive icon foreground, transparent)
+
+Then restart Metro: `npm run metro:clear`.
+
+## Error monitoring (Sentry)
+
+This app integrates `sentry-expo` via the config plugin. To enable reporting:
+
+- Create a Sentry project and organization
+- Set env variables for EAS Build:
+  - `SENTRY_AUTH_TOKEN` (scoped token)
+  - Optional: `EXPO_PUBLIC_SENTRY_DSN` if you prefer DSN-based manual init
+- Update `app.json` plugin options `organization` and `project`
+- Build with EAS: `eas build --profile production --platform android`
+
+During local dev, Sentry only reports if you configure a DSN. You can add `EXPO_PUBLIC_SENTRY_DSN` to a `.env` and load it via Expo env support.
+
+## OTA updates (EAS Update)
+
+- Use EAS Update channels (production/preview/development) and consider enabling Code Signing for tamper resistance.
+- Quick start:
+  - `eas update:configure`
+  - Create channels: `eas channel:create production`, `eas channel:create preview`
+  - Publish: `eas update --channel production`
+- Code signing requires generating keys and setting `EXPO_UPDATE_CODE_SIGNING_CERTIFICATE` etc. See Expo docs.

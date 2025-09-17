@@ -7,7 +7,12 @@ export default function SkeletonRow({ testID }: { testID?: string }) {
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = React.useMemo(() => createStyles(palette), [palette]);
   return (
-    <View style={styles.container} testID={testID} accessibilityLabel="Loading item" accessible>
+    <View
+      style={styles.container}
+      testID={testID}
+      accessibilityLabel="Loading item"
+      accessible
+    >
       <View style={styles.title} />
       <View style={styles.subtitle} />
     </View>
@@ -39,4 +44,3 @@ function createStyles(palette: Palette) {
     },
   });
 }
-

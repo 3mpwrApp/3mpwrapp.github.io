@@ -21,10 +21,7 @@ export default function ExternalLink({ href, children }: ExternalLinkProps) {
       onPress={handlePress}
       accessibilityRole="link"
       accessibilityLabel={`Open external link: ${href}`}
-      style={({ pressed }) => [
-        styles.link,
-        pressed && styles.linkPressed
-      ]}
+      style={({ pressed }) => [styles.link, pressed && styles.linkPressed]}
     >
       <Text style={styles.linkText}>{children}</Text>
     </Pressable>

@@ -1,13 +1,8 @@
 import { Platform } from "react-native";
-import {
-  initializeApp,
-  getApp,
-  getApps,
-  type FirebaseApp,
-} from "firebase/app";
+import { initializeApp, getApp, getApps, type FirebaseApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
-import { getFirestore, initializeFirestore } from "firebase/firestore";
+import { getFirestore, initializeFirestore, setLogLevel } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
@@ -30,7 +25,10 @@ const app = getFirebaseApp();
 if (Platform.OS !== "web") {
   try {
     // Dynamically import RN-only APIs to avoid type mismatch on web
-    const { initializeAuth, getReactNativePersistence } = require("firebase/auth");
+    const {
+      initializeAuth,
+      getReactNativePersistence,
+    } = require("firebase/auth");
     initializeAuth(app, {
       persistence: getReactNativePersistence(ReactNativeAsyncStorage),
     });
@@ -40,11 +38,13 @@ if (Platform.OS !== "web") {
 }
 export const auth = getAuth(app);
 // Firestore: use long-polling on native to avoid WebChannel transport issues
-export const db = Platform.OS === "web"
-  ? getFirestore(app)
-  : initializeFirestore(app, {
-      experimentalAutoDetectLongPolling: true,
-    });
+export const db =
+  Platform.OS === "web"
+    ? getFirestore(app)
+    : initializeFirestore(app, {
+        // Force long polling on native to avoid WebChannel transport issues
+        experimentalForceLongPolling: true,
+      });
 export const storage = getStorage(app);
 
 // Lazy load Analytics only on web
@@ -57,3 +57,8 @@ export async function getFirebaseAnalytics(): Promise<any | null> {
     return null;
   }
 }
+
+// Reduce noisy Firestore warnings in development
+try {
+  setLogLevel("error");
+} catch {}

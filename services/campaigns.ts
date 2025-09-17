@@ -9,5 +9,5 @@ export const fetchCampaigns = withFallback<Campaign[]>(
     if (!BASE) throw new Error("No API base");
     return await retry(async () => (await fetch(`${BASE}/campaigns`)).json());
   },
-  () => local
+  () => local,
 );

@@ -1,7 +1,9 @@
 import React from "react";
 
 let AsyncStorage: any;
-try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
+try {
+  AsyncStorage = require("@react-native-async-storage/async-storage").default;
+} catch {}
 
 type State = {
   highContrast: boolean;
@@ -18,7 +20,11 @@ type A11yCtx = {
 const DEFAULT: State = { highContrast: false };
 const Ctx = React.createContext<A11yCtx | undefined>(undefined);
 
-export function A11ySettingsProvider({ children }: { children: React.ReactNode }) {
+export function A11ySettingsProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [state, setState] = React.useState<State>(DEFAULT);
 
   React.useEffect(() => {
@@ -30,7 +36,7 @@ export function A11ySettingsProvider({ children }: { children: React.ReactNode }
       } else {
         // No saved preference: infer a sensible default from system settings if possible
         try {
-          const AccessibilityInfo = require('react-native').AccessibilityInfo;
+          const AccessibilityInfo = require("react-native").AccessibilityInfo;
           // iOS exposes bold text as an accessibility aid; use as high-contrast hint
           const bold = await AccessibilityInfo.isBoldTextEnabled?.();
           if (bold) setState({ highContrast: true });
@@ -58,6 +64,7 @@ export function A11ySettingsProvider({ children }: { children: React.ReactNode }
 
 export function useA11ySettings() {
   const ctx = React.useContext(Ctx);
-  if (!ctx) throw new Error("useA11ySettings must be used within A11ySettingsProvider");
+  if (!ctx)
+    throw new Error("useA11ySettings must be used within A11ySettingsProvider");
   return ctx;
 }

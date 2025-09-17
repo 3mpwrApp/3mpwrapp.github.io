@@ -1,5 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList, RefreshControl, Alert, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  RefreshControl,
+  Alert,
+  Pressable,
+} from "react-native";
 import * as Linking from "expo-linking";
 import { Image as ExpoImage } from "expo-image";
 import { Ionicons } from "@expo/vector-icons";
@@ -47,7 +55,9 @@ export default function PodcastsScreen() {
   const openYouTubeDirect = React.useCallback(async (idOrUrl: string) => {
     const id = idOrUrl.startsWith("yt:") ? idOrUrl.replace("yt:", "") : idOrUrl;
     const appUrl = `vnd.youtube:${id}`;
-    const webUrl = idOrUrl.startsWith("http") ? idOrUrl : `https://youtu.be/${id}`;
+    const webUrl = idOrUrl.startsWith("http")
+      ? idOrUrl
+      : `https://youtu.be/${id}`;
     try {
       await Linking.openURL(appUrl);
     } catch {
@@ -55,26 +65,52 @@ export default function PodcastsScreen() {
     }
   }, []);
 
-  const openYouTubeChooser = React.useCallback((idOrUrl: string, title: string) => {
-    const id = idOrUrl.startsWith("yt:") ? idOrUrl.replace("yt:", "") : idOrUrl;
-    const webUrl = idOrUrl.startsWith("http") ? idOrUrl : `https://youtu.be/${id}`;
-    Alert.alert(
-      title,
-      "Open in:",
-      [
-        { text: "YouTube App", onPress: () => openYouTubeDirect(idOrUrl) },
-        { text: "Browser", onPress: () => Linking.openURL(webUrl) },
-        { text: "Cancel", style: "cancel" },
-      ],
-      { cancelable: true }
-    );
-  }, [openYouTubeDirect]);
+  const openYouTubeChooser = React.useCallback(
+    (idOrUrl: string, title: string) => {
+      const id = idOrUrl.startsWith("yt:")
+        ? idOrUrl.replace("yt:", "")
+        : idOrUrl;
+      const webUrl = idOrUrl.startsWith("http")
+        ? idOrUrl
+        : `https://youtu.be/${id}`;
+      Alert.alert(
+        title,
+        "Open in:",
+        [
+          { text: "YouTube App", onPress: () => openYouTubeDirect(idOrUrl) },
+          { text: "Browser", onPress: () => Linking.openURL(webUrl) },
+          { text: "Cancel", style: "cancel" },
+        ],
+        { cancelable: true },
+      );
+    },
+    [openYouTubeDirect],
+  );
 
-  function RowThumbnail({ videoId, tint, saved, onToggle }: { videoId: string; tint: string; saved: boolean; onToggle: () => void }) {
+  function RowThumbnail({
+    videoId,
+    tint,
+    saved,
+    onToggle,
+  }: {
+    videoId: string;
+    tint: string;
+    saved: boolean;
+    onToggle: () => void;
+  }) {
     const id = videoId.replace("yt:", "");
     const [loaded, setLoaded] = React.useState(false);
     return (
-      <View style={{ position: "relative", width: 48, height: 48, borderRadius: 4, overflow: "hidden", backgroundColor: tint }}>
+      <View
+        style={{
+          position: "relative",
+          width: 48,
+          height: 48,
+          borderRadius: 4,
+          overflow: "hidden",
+          backgroundColor: tint,
+        }}
+      >
         <ExpoImage
           source={{ uri: `https://img.youtube.com/vi/${id}/hqdefault.jpg` }}
           style={{ width: 48, height: 48 }}
@@ -83,19 +119,50 @@ export default function PodcastsScreen() {
           transition={200}
           onLoadEnd={() => setLoaded(true)}
         />
-        {!loaded && <View style={{ position: "absolute", left: 0, top: 0, right: 0, bottom: 0, backgroundColor: tint, opacity: 0.3 }} />}
-        <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" }}>
+        {!loaded && (
+          <View
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: tint,
+              opacity: 0.3,
+            }}
+          />
+        )}
+        <View
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Ionicons name="play-circle" size={22} color="#ffffff" />
         </View>
         <Pressable
           onPress={onToggle}
           accessibilityRole="button"
           accessibilityState={{ selected: saved }}
-          accessibilityLabel={saved ? "Remove from favorites" : "Save to favorites"}
+          accessibilityLabel={
+            saved ? "Remove from favorites" : "Save to favorites"
+          }
           hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
-          style={({ pressed }) => [{ position: "absolute", top: 2, right: 2, padding: 2 }, pressed && { opacity: 0.7 }]}
+          style={({ pressed }) => [
+            { position: "absolute", top: 2, right: 2, padding: 2 },
+            pressed && { opacity: 0.7 },
+          ]}
         >
-          <Ionicons name={saved ? "bookmark" : "bookmark-outline"} size={16} color="#fff" />
+          <Ionicons
+            name={saved ? "bookmark" : "bookmark-outline"}
+            size={16}
+            color="#fff"
+          />
         </Pressable>
       </View>
     );
@@ -105,9 +172,7 @@ export default function PodcastsScreen() {
     try {
       setError(null);
       setLoading(true);
-      const [podData] = await Promise.all([
-        fetchPodcasts(),
-      ]);
+      const [podData] = await Promise.all([fetchPodcasts()]);
       setItems(podData);
       setOffline(false);
     } catch (e) {
@@ -192,21 +257,44 @@ export default function PodcastsScreen() {
               subtitle={`${item.description}`}
               testID={`video-${item.id}`}
               rightIcon={isYT ? "logo-youtube" : "chevron-forward"}
-              onPress={isYT ? () => {
-                const id = String(item.id);
-                if (youtubeOpenPreference === "app") return openYouTubeDirect(id);
-                if (youtubeOpenPreference === "browser") return Linking.openURL(`https://youtu.be/${id.replace('yt:','')}`);
-                return openYouTubeChooser(id, item.title);
-              } : undefined}
-              onLongPress={isYT ? () => openYouTubeChooser(String(item.id), item.title) : undefined}
+              onPress={
+                isYT
+                  ? () => {
+                      const id = String(item.id);
+                      if (youtubeOpenPreference === "app")
+                        return openYouTubeDirect(id);
+                      if (youtubeOpenPreference === "browser")
+                        return Linking.openURL(
+                          `https://youtu.be/${id.replace("yt:", "")}`,
+                        );
+                      return openYouTubeChooser(id, item.title);
+                    }
+                  : undefined
+              }
+              onLongPress={
+                isYT
+                  ? () => openYouTubeChooser(String(item.id), item.title)
+                  : undefined
+              }
               accessibilityLabel={`Open ${item.title} on YouTube`}
-              left={isYT ? <RowThumbnail videoId={String(item.id)} tint={palette.muted} saved={saved} onToggle={() => toggle("podcast", item.id)} /> : undefined}
-              onPressRight={isYT ? () => openYouTubeDirect(String(item.id)) : undefined}
+              left={
+                isYT ? (
+                  <RowThumbnail
+                    videoId={String(item.id)}
+                    tint={palette.muted}
+                    saved={saved}
+                    onToggle={() => toggle("podcast", item.id)}
+                  />
+                ) : undefined
+              }
+              onPressRight={
+                isYT ? () => openYouTubeDirect(String(item.id)) : undefined
+              }
               rightA11yLabel="Open on YouTube"
             />
           );
         }}
-        contentContainerStyle={{ paddingTop: 12 }}
+        contentContainerStyle={{ paddingVertical: 12 }}
         refreshControl={
           <RefreshControl refreshing={loading} onRefresh={reload} />
         }
@@ -231,7 +319,7 @@ function createStyles(palette: any, factor: number) {
     subtitle: {
       fontSize: Math.round(17 * factor),
       color: palette.text,
-      opacity: 0.9,
+      opacity: 1,
       marginBottom: 8,
     },
   });

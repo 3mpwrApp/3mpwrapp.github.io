@@ -19,7 +19,6 @@ import { useProfileLocal } from "../../../store/profileLocal";
 import { buildSymptomSummary } from "../../../services/insights";
 import { logEvent } from "../../../services/analytics";
 
-
 export const options = { href: null };
 
 export default function AccommodationLetter() {
@@ -59,7 +58,10 @@ export default function AccommodationLetter() {
   const placeholderColor = palette.text + "88";
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ padding: 20 }}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={{ padding: 20 }}
+    >
       <Text
         ref={titleRef}
         style={styles.title}
@@ -72,12 +74,44 @@ export default function AccommodationLetter() {
         Fill in your details, review the preview, then share or copy.
       </Text>
 
-      <Field label="Your Name" value={name} onChangeText={setName} placeholderColor={placeholderColor} />
-      <Field label="Employer" value={employer} onChangeText={setEmployer} placeholderColor={placeholderColor} />
-      <Field label="Job Title" value={jobTitle} onChangeText={setJobTitle} placeholderColor={placeholderColor} />
-      <Field label="Date (optional)" value={date} onChangeText={setDate} placeholderColor={placeholderColor} />
-      <Field label="Limitations (brief)" value={limitations} onChangeText={setLimitations} multiline placeholderColor={placeholderColor} />
-      <Field label="Requested Accommodations" value={accommodations} onChangeText={setAccommodations} multiline placeholderColor={placeholderColor} />
+      <Field
+        label="Your Name"
+        value={name}
+        onChangeText={setName}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Employer"
+        value={employer}
+        onChangeText={setEmployer}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Job Title"
+        value={jobTitle}
+        onChangeText={setJobTitle}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Date (optional)"
+        value={date}
+        onChangeText={setDate}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Limitations (brief)"
+        value={limitations}
+        onChangeText={setLimitations}
+        multiline
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Requested Accommodations"
+        value={accommodations}
+        onChangeText={setAccommodations}
+        multiline
+        placeholderColor={placeholderColor}
+      />
 
       <Text style={[styles.sectionTitle, { marginTop: 12 }]}>Preview</Text>
       <View style={styles.previewBox}>
@@ -87,8 +121,11 @@ export default function AccommodationLetter() {
       <Pressable
         style={styles.button}
         onPress={() => {
-          logEvent('letter_share', { type: 'accommodation' });
-          Share.share({ message: preview, title: "Accommodation Request" }).catch(() => {});
+          logEvent("letter_share", { type: "accommodation" });
+          Share.share({
+            message: preview,
+            title: "Accommodation Request",
+          }).catch(() => {});
         }}
       >
         <Text style={styles.buttonText}>Share</Text>
@@ -98,7 +135,7 @@ export default function AccommodationLetter() {
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           const ins = await buildSymptomSummary();
-          logEvent('letter_insert_from_trackers', { type: 'accommodation' });
+          logEvent("letter_insert_from_trackers", { type: "accommodation" });
           setLimitations((prev) => (prev ? prev + "\n\n" : "") + ins);
           Alert.alert("Inserted", "Added symptom summary to limitations.");
         }}
@@ -114,7 +151,10 @@ export default function AccommodationLetter() {
             await mod.setStringAsync(preview);
             Alert.alert("Copied", "Letter copied to clipboard.");
           } catch {
-            Alert.alert("Clipboard not available", "Install expo-clipboard in a dev build to enable copy.");
+            Alert.alert(
+              "Clipboard not available",
+              "Install expo-clipboard in a dev build to enable copy.",
+            );
           }
         }}
       >
@@ -130,12 +170,12 @@ export default function AccommodationLetter() {
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")}</pre>`;
             const { uri } = await mod.printToFileAsync({ html });
-            logEvent('letter_export_pdf', { type: 'accommodation' });
+            logEvent("letter_export_pdf", { type: "accommodation" });
             await Share.share({ url: uri, title: "Accommodation Request" });
           } catch {
             Alert.alert(
               "PDF not available",
-              "Install expo-print in a dev build to export PDFs."
+              "Install expo-print in a dev build to export PDFs.",
             );
           }
         }}
@@ -151,8 +191,13 @@ export default function AccommodationLetter() {
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")}</pre></body></html>`;
             const path = FS.cacheDirectory + `accommodation_${Date.now()}.doc`;
-            await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 });
-            await Share.share({ url: path, title: "Accommodation Request (.doc)" });
+            await FS.writeAsStringAsync(path, html, {
+              encoding: FS.EncodingType.UTF8,
+            });
+            await Share.share({
+              url: path,
+              title: "Accommodation Request (.doc)",
+            });
           } catch {
             Alert.alert("Export failed", "Could not create .doc file.");
           }
@@ -179,7 +224,9 @@ function Field({
 }) {
   return (
     <View style={{ marginBottom: 10 }}>
-      <Text style={{ color: "#000", opacity: 0.9, marginBottom: 4 }}>{label}</Text>
+      <Text style={{ color: "#000", opacity: 0.9, marginBottom: 4 }}>
+        {label}
+      </Text>
       <TextInput
         value={value}
         onChangeText={onChangeText}
@@ -203,7 +250,12 @@ function Field({
 function createStyles(palette: any) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
+    title: {
+      fontSize: 24,
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
     sectionTitle: { color: palette.text, fontWeight: "700" },
     previewBox: {

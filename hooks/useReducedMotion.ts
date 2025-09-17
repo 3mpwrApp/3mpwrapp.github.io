@@ -12,9 +12,12 @@ export default function useReducedMotion() {
       if (mounted) setEnabled(v);
     });
 
-    const sub = AccessibilityInfo.addEventListener("reduceMotionChanged", (v) => {
-      if (mounted) setEnabled(v);
-    });
+    const sub = AccessibilityInfo.addEventListener(
+      "reduceMotionChanged",
+      (v) => {
+        if (mounted) setEnabled(v);
+      },
+    );
 
     return () => {
       mounted = false;

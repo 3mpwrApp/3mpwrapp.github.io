@@ -1,8 +1,18 @@
 import React from "react";
-import { Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  useColorScheme,
+} from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { colors, type Palette } from "../theme/colors";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../hooks/useA11y";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../hooks/useA11y";
 
 export default function Modal() {
   const router = useRouter();
@@ -18,7 +28,13 @@ export default function Modal() {
     <>
       <Stack.Screen options={{ title: "Modal" }} />
       <View style={styles.container} accessibilityViewIsModal>
-        <Text ref={titleRef} nativeID="modal-title" accessibilityRole="header" style={styles.text} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        <Text
+          ref={titleRef}
+          nativeID="modal-title"
+          accessibilityRole="header"
+          style={styles.text}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
           This is a modal screen
         </Text>
         <Pressable
@@ -29,7 +45,12 @@ export default function Modal() {
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           style={({ pressed }) => [styles.button, pressed && { opacity: 0.7 }]}
         >
-          <Text style={styles.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>Close</Text>
+          <Text
+            style={styles.buttonText}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            Close
+          </Text>
         </Pressable>
       </View>
     </>

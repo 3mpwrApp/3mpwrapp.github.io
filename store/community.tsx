@@ -1,11 +1,18 @@
 import React from "react";
-import type { CommunityChannel, CommunityThread, CommunityComment, ID } from "../types/models";
+import type {
+  CommunityChannel,
+  CommunityThread,
+  CommunityComment,
+  ID,
+} from "../types/models";
 import { scheduleLocal } from "../services/notifications";
 import { fsAddThread, fsAddComment, getDB } from "../services/firestore";
 import { useNetwork } from "./network";
 
 let AsyncStorage: any;
-try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
+try {
+  AsyncStorage = require("@react-native-async-storage/async-storage").default;
+} catch {}
 
 type State = {
   channels: CommunityChannel[];
@@ -18,17 +25,39 @@ const DEFAULT_STATE: State = { channels: [], threads: [], comments: [] };
 const KEY = "empowr.community.v1";
 const QUEUE_KEY = "empowr.community.queue.v1";
 type QueueItem =
-  | { kind: "thread"; data: { id: ID; channelId: ID; title: string; author: string | null; createdAt: number } }
-  | { kind: "comment"; data: { id: ID; threadId: ID; author: string | null; content: string; createdAt: number } };
+  | {
+      kind: "thread";
+      data: {
+        id: ID;
+        channelId: ID;
+        title: string;
+        author: string | null;
+        createdAt: number;
+      };
+    }
+  | {
+      kind: "comment";
+      data: {
+        id: ID;
+        threadId: ID;
+        author: string | null;
+        content: string;
+        createdAt: number;
+      };
+    };
 
 type CommunityCtx = {
   state: State;
   seed: (s: Partial<State>) => void;
-  createThread: (channelId: ID, title: string, author: string | null) => boolean;
+  createThread: (
+    channelId: ID,
+    title: string,
+    author: string | null,
+  ) => boolean;
   addComment: (threadId: ID, content: string, author: string | null) => boolean;
   reportComment: (commentId: ID) => void;
   deleteComment: (commentId: ID) => void;
-  };
+};
 
 const Ctx = React.createContext<CommunityCtx | undefined>(undefined);
 
@@ -53,32 +82,38 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
     let unsubComments: any = null;
     (async () => {
       try {
-        const m = await import('firebase/firestore');
+        const m = await import("firebase/firestore");
         const db = await getDB();
         if (!db) return;
         unsubThreads = m.onSnapshot(
-          m.query(m.collection(db, 'threads')),
+          m.query(m.collection(db, "threads")),
           (snap) => {
             const list: CommunityThread[] = [] as any;
             snap.forEach((d) => list.push(d.data() as any));
-            setState((prev) => ({ ...prev, threads: mergeById(prev.threads, list) }));
+            setState((prev) => ({
+              ...prev,
+              threads: mergeById(prev.threads, list),
+            }));
             setOffline(false);
           },
           () => {
             setOffline(true);
-          }
+          },
         );
         unsubComments = m.onSnapshot(
-          m.query(m.collection(db, 'comments')),
+          m.query(m.collection(db, "comments")),
           (snap) => {
             const list: CommunityComment[] = [] as any;
             snap.forEach((d) => list.push(d.data() as any));
-            setState((prev) => ({ ...prev, comments: mergeById(prev.comments, list) }));
+            setState((prev) => ({
+              ...prev,
+              comments: mergeById(prev.comments, list),
+            }));
             setOffline(false);
           },
           () => {
             setOffline(true);
-          }
+          },
         );
       } catch {}
     })();
@@ -114,15 +149,21 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       const cur = await AsyncStorage.getItem(QUEUE_KEY);
       const arr: QueueItem[] = cur ? JSON.parse(cur) : [];
       if (!arr.length) return;
-      const m = await import('firebase/firestore');
+      const m = await import("firebase/firestore");
       const db = await getDB();
       if (!db) return;
       for (const item of arr) {
         try {
-          if (item.kind === 'thread') {
-            await m.setDoc(m.doc(db, 'threads', item.data.id), item.data as any);
+          if (item.kind === "thread") {
+            await m.setDoc(
+              m.doc(db, "threads", item.data.id),
+              item.data as any,
+            );
           } else {
-            await m.setDoc(m.doc(db, 'comments', item.data.id), item.data as any);
+            await m.setDoc(
+              m.doc(db, "comments", item.data.id),
+              item.data as any,
+            );
           }
         } catch {}
       }
@@ -135,15 +176,18 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
 
   // When connection is restored, try to flush the queue
   React.useEffect(() => {
-    const id = setInterval(() => { flushQueue(); }, 5000);
+    const id = setInterval(() => {
+      flushQueue();
+    }, 5000);
     return () => clearInterval(id);
   }, []);
 
-  const seed = (s: Partial<State>) => setState((prev) => ({
-    channels: s.channels ?? prev.channels,
-    threads: s.threads ?? prev.threads,
-    comments: s.comments ?? prev.comments,
-  }));
+  const seed = (s: Partial<State>) =>
+    setState((prev) => ({
+      channels: s.channels ?? prev.channels,
+      threads: s.threads ?? prev.threads,
+      comments: s.comments ?? prev.comments,
+    }));
 
   // basic rate limit: at most 1 action per 5s per author
   const lastActionRef = React.useRef<Record<string, number>>({});
@@ -156,19 +200,30 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
   };
 
   const banned = ["spam", "scam", "fraud", "hate"];
-  const hasBanned = (text: string) => banned.some((w) => text.toLowerCase().includes(w));
+  const hasBanned = (text: string) =>
+    banned.some((w) => text.toLowerCase().includes(w));
 
-  const createThread = (channelId: ID, title: string, author: string | null) => {
+  const createThread = (
+    channelId: ID,
+    title: string,
+    author: string | null,
+  ) => {
     if (!canAct(author ?? "guest")) return false;
     if (hasBanned(title)) return false;
     const id = `t_${Date.now()}`;
     setState((prev) => ({
       ...prev,
-      threads: [...prev.threads, { id, channelId, title, author, createdAt: Date.now() }],
+      threads: [
+        ...prev.threads,
+        { id, channelId, title, author, createdAt: Date.now() },
+      ],
     }));
     fsAddThread({ id, channelId, title, author, createdAt: Date.now() });
     // queue for retry if offline
-    enqueue({ kind: 'thread', data: { id, channelId, title, author, createdAt: Date.now() } });
+    enqueue({
+      kind: "thread",
+      data: { id, channelId, title, author, createdAt: Date.now() },
+    });
     return true;
   };
 
@@ -178,10 +233,16 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
     const id = `c_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
     setState((prev) => ({
       ...prev,
-      comments: [...prev.comments, { id, threadId, author, content, createdAt: Date.now() }],
+      comments: [
+        ...prev.comments,
+        { id, threadId, author, content, createdAt: Date.now() },
+      ],
     }));
     fsAddComment({ id, threadId, author, content, createdAt: Date.now() });
-    enqueue({ kind: 'comment', data: { id, threadId, author, content, createdAt: Date.now() } });
+    enqueue({
+      kind: "comment",
+      data: { id, threadId, author, content, createdAt: Date.now() },
+    });
     // Notify thread author locally if different from commenter
     const thread = state.threads.find((t) => t.id === threadId);
     if (thread && thread.author && thread.author !== author) {
@@ -193,7 +254,9 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
   const reportComment = (commentId: ID) => {
     setState((prev) => ({
       ...prev,
-      comments: prev.comments.map((c) => (c.id === commentId ? { ...c, reported: true } : c)),
+      comments: prev.comments.map((c) =>
+        c.id === commentId ? { ...c, reported: true } : c,
+      ),
     }));
   };
 
@@ -204,13 +267,21 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
     }));
   };
 
-  const value: CommunityCtx = { state, seed, createThread, addComment, reportComment, deleteComment };
+  const value: CommunityCtx = {
+    state,
+    seed,
+    createThread,
+    addComment,
+    reportComment,
+    deleteComment,
+  };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 
 export function useCommunity() {
   const ctx = React.useContext(Ctx);
-  if (!ctx) throw new Error("useCommunity must be used within CommunityProvider");
+  if (!ctx)
+    throw new Error("useCommunity must be used within CommunityProvider");
   return ctx;
 }
 

@@ -1,13 +1,24 @@
 import React from "react";
-import { View, Text, TextInput, StyleSheet, ScrollView, Pressable, Share, Alert } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  ScrollView,
+  Pressable,
+  Share,
+  Alert,
+} from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import {
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
 import { useProfileLocal } from "../../../store/profileLocal";
 import { buildSymptomSummary } from "../../../services/insights";
 import { logEvent } from "../../../services/analytics";
-
-
 
 export const options = { href: null };
 
@@ -49,7 +60,10 @@ export default function UnionRequestLetter() {
   const placeholderColor = palette.text + "88";
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ padding: 20 }}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={{ padding: 20 }}
+    >
       <Text
         ref={titleRef}
         style={styles.title}
@@ -58,15 +72,55 @@ export default function UnionRequestLetter() {
       >
         Union Representation/Request Letter
       </Text>
-      <Text style={styles.subtitle}>Fill in details, review the preview, then share or export.</Text>
+      <Text style={styles.subtitle}>
+        Fill in details, review the preview, then share or export.
+      </Text>
 
-      <Field label="Your Name" value={name} onChangeText={setName} placeholderColor={placeholderColor} />
-      <Field label="Position/Role" value={position} onChangeText={setPosition} placeholderColor={placeholderColor} />
-      <Field label="Workplace/Department" value={workplace} onChangeText={setWorkplace} placeholderColor={placeholderColor} />
-      <Field label="Issue Summary" value={issue} onChangeText={setIssue} multiline placeholderColor={placeholderColor} />
-      <Field label="Requested Accommodation/Remedy" value={accommodation} onChangeText={setAccommodation} multiline placeholderColor={placeholderColor} />
-      <Field label="Evidence/Docs (optional)" value={evidence} onChangeText={setEvidence} multiline placeholderColor={placeholderColor} />
-      <Field label="Contact (email/phone)" value={contact} onChangeText={setContact} placeholderColor={placeholderColor} />
+      <Field
+        label="Your Name"
+        value={name}
+        onChangeText={setName}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Position/Role"
+        value={position}
+        onChangeText={setPosition}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Workplace/Department"
+        value={workplace}
+        onChangeText={setWorkplace}
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Issue Summary"
+        value={issue}
+        onChangeText={setIssue}
+        multiline
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Requested Accommodation/Remedy"
+        value={accommodation}
+        onChangeText={setAccommodation}
+        multiline
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Evidence/Docs (optional)"
+        value={evidence}
+        onChangeText={setEvidence}
+        multiline
+        placeholderColor={placeholderColor}
+      />
+      <Field
+        label="Contact (email/phone)"
+        value={contact}
+        onChangeText={setContact}
+        placeholderColor={placeholderColor}
+      />
 
       <Text style={[styles.sectionTitle, { marginTop: 12 }]}>Preview</Text>
       <View style={styles.previewBox}>
@@ -75,7 +129,12 @@ export default function UnionRequestLetter() {
 
       <Pressable
         style={styles.button}
-        onPress={() => { logEvent('letter_share', { type: 'union' }); Share.share({ message: preview, title: "Union Request" }).catch(() => {}); }}
+        onPress={() => {
+          logEvent("letter_share", { type: "union" });
+          Share.share({ message: preview, title: "Union Request" }).catch(
+            () => {},
+          );
+        }}
       >
         <Text style={styles.buttonText}>Share</Text>
       </Pressable>
@@ -83,7 +142,7 @@ export default function UnionRequestLetter() {
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           const ins = await buildSymptomSummary();
-          logEvent('letter_insert_from_trackers', { type: 'union' });
+          logEvent("letter_insert_from_trackers", { type: "union" });
           setEvidence((prev) => (prev ? prev + "\n\n" : "") + ins);
         }}
       >
@@ -98,7 +157,10 @@ export default function UnionRequestLetter() {
             await mod.setStringAsync(preview);
             Alert.alert("Copied", "Letter copied to clipboard.");
           } catch {
-            Alert.alert("Clipboard not available", "Install expo-clipboard in a dev build to enable copy.");
+            Alert.alert(
+              "Clipboard not available",
+              "Install expo-clipboard in a dev build to enable copy.",
+            );
           }
         }}
       >
@@ -116,7 +178,10 @@ export default function UnionRequestLetter() {
             const { uri } = await mod.printToFileAsync({ html });
             await Share.share({ url: uri, title: "Union Request" });
           } catch {
-            Alert.alert("PDF not available", "Install expo-print in a dev build to export PDFs.");
+            Alert.alert(
+              "PDF not available",
+              "Install expo-print in a dev build to export PDFs.",
+            );
           }
         }}
       >
@@ -131,7 +196,9 @@ export default function UnionRequestLetter() {
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")}</pre></body></html>`;
             const path = FS.cacheDirectory + `union_request_${Date.now()}.doc`;
-            await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 });
+            await FS.writeAsStringAsync(path, html, {
+              encoding: FS.EncodingType.UTF8,
+            });
             await Share.share({ url: path, title: "Union Request (.doc)" });
           } catch {
             Alert.alert("Export failed", "Could not create .doc file.");
@@ -144,7 +211,13 @@ export default function UnionRequestLetter() {
   );
 }
 
-function Field({ label, value, onChangeText, placeholderColor, multiline = false }: {
+function Field({
+  label,
+  value,
+  onChangeText,
+  placeholderColor,
+  multiline = false,
+}: {
   label: string;
   value: string;
   onChangeText: (t: string) => void;
@@ -153,7 +226,9 @@ function Field({ label, value, onChangeText, placeholderColor, multiline = false
 }) {
   return (
     <View style={{ marginBottom: 10 }}>
-      <Text style={{ color: "#000", opacity: 0.9, marginBottom: 4 }}>{label}</Text>
+      <Text style={{ color: "#000", opacity: 0.9, marginBottom: 4 }}>
+        {label}
+      </Text>
       <TextInput
         value={value}
         onChangeText={onChangeText}
@@ -177,12 +252,30 @@ function Field({ label, value, onChangeText, placeholderColor, multiline = false
 function createStyles(palette: any, factor: number) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: Math.round(24 * factor), fontWeight: "700", marginBottom: 8, color: palette.text },
+    title: {
+      fontSize: Math.round(24 * factor),
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
     sectionTitle: { color: palette.text, fontWeight: "700" },
-    previewBox: { borderWidth: 1, borderColor: palette.muted, borderRadius: 8, padding: 12, backgroundColor: palette.surface, marginBottom: 12 },
+    previewBox: {
+      borderWidth: 1,
+      borderColor: palette.muted,
+      borderRadius: 8,
+      padding: 12,
+      backgroundColor: palette.surface,
+      marginBottom: 12,
+    },
     previewText: { color: palette.text, opacity: 0.95, lineHeight: 20 },
-    button: { backgroundColor: palette.primary, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 6, alignItems: "center" },
+    button: {
+      backgroundColor: palette.primary,
+      paddingVertical: 10,
+      paddingHorizontal: 16,
+      borderRadius: 6,
+      alignItems: "center",
+    },
     buttonText: { color: palette.onPrimary, fontSize: 16, fontWeight: "700" },
   });
 }

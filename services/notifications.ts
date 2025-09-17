@@ -15,7 +15,8 @@ export async function setupAsync() {
         name: "Default",
         importance: Notifications.AndroidImportance.MAX,
         vibrationPattern: [0, 250, 250, 250],
-        lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
+        lockscreenVisibility:
+          Notifications.AndroidNotificationVisibility.PUBLIC,
         sound: true,
         enableVibrate: true,
         enableLights: true,
@@ -32,7 +33,24 @@ export async function setupAsync() {
 export async function scheduleLocal(title: string, body: string) {
   if (!Notifications) return false;
   try {
-    await Notifications.scheduleNotificationAsync({ content: { title, body }, trigger: null });
+    await Notifications.scheduleNotificationAsync({
+      content: { title, body },
+      trigger: null,
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// Schedule a notification at a specific Date
+export async function scheduleAt(when: Date, title: string, body: string) {
+  if (!Notifications) return false;
+  try {
+    await Notifications.scheduleNotificationAsync({
+      content: { title, body },
+      trigger: when,
+    });
     return true;
   } catch {
     return false;
@@ -60,14 +78,15 @@ export async function sendTestLocal() {
 // Ensure alerts show while app is foregrounded
 try {
   Notifications?.setNotificationHandler?.({
-    handleNotification: async () => ({
-      // New fields (SDK 53+)
-      shouldShowBanner: true,
-      shouldShowList: true,
-      // Back-compat (pre-53)
-      shouldShowAlert: true,
-      shouldPlaySound: true,
-      shouldSetBadge: false,
-    } as any),
+    handleNotification: async () =>
+      ({
+        // New fields (SDK 53+)
+        shouldShowBanner: true,
+        shouldShowList: true,
+        // Back-compat (pre-53)
+        shouldShowAlert: true,
+        shouldPlaySound: true,
+        shouldSetBadge: false,
+      }) as any,
   });
 } catch {}

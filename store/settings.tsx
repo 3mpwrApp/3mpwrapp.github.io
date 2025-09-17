@@ -10,30 +10,47 @@ try {
 export type TextScale = "normal" | "large" | "xlarge";
 
 /** Shape of the settings state */
+export type ResourceFormat = "text" | "audio" | "asl" | "easy";
+
 export type SettingsState = {
   highContrast: boolean;
   textScale: TextScale;
+  dyslexiaFriendly: boolean;
+  plainLanguage: boolean;
+  captionsPreferred: boolean;
+  resourcePreferredFormat: ResourceFormat;
   province: import("../types/models").ProvinceCode | null;
   includeProvincialHolidays: boolean;
   youtubeOpenPreference: "ask" | "app" | "browser";
+  voiceMode: boolean;
 };
 
 /** Context type including setters */
 type Ctx = SettingsState & {
   setHighContrast: (v: boolean) => void;
   setTextScale: (v: TextScale) => void;
+  setDyslexiaFriendly: (v: boolean) => void;
+  setPlainLanguage: (v: boolean) => void;
+  setCaptionsPreferred: (v: boolean) => void;
+  setResourcePreferredFormat: (v: ResourceFormat) => void;
   setProvince: (p: SettingsState["province"]) => void;
   setIncludeProvincialHolidays: (v: boolean) => void;
   setYoutubeOpenPreference: (v: SettingsState["youtubeOpenPreference"]) => void;
+  setVoiceMode: (v: boolean) => void;
 };
 
 /** Default values if nothing stored */
 const DEFAULTS: SettingsState = {
   highContrast: false,
   textScale: "normal",
+  dyslexiaFriendly: false,
+  plainLanguage: false,
+  captionsPreferred: true,
+  resourcePreferredFormat: "text",
   province: null,
   includeProvincialHolidays: false,
   youtubeOpenPreference: "ask",
+  voiceMode: false,
 };
 
 const STORAGE_KEY = "settings:v1";
@@ -78,14 +95,37 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setState((s) => ({ ...s, highContrast: v }));
   const setTextScale = (v: TextScale) =>
     setState((s) => ({ ...s, textScale: v }));
+  const setDyslexiaFriendly = (v: boolean) =>
+    setState((s) => ({ ...s, dyslexiaFriendly: v }));
+  const setPlainLanguage = (v: boolean) =>
+    setState((s) => ({ ...s, plainLanguage: v }));
+  const setCaptionsPreferred = (v: boolean) =>
+    setState((s) => ({ ...s, captionsPreferred: v }));
+  const setResourcePreferredFormat = (v: ResourceFormat) =>
+    setState((s) => ({ ...s, resourcePreferredFormat: v }));
   const setProvince = (p: SettingsState["province"]) =>
     setState((s) => ({ ...s, province: p }));
   const setIncludeProvincialHolidays = (v: boolean) =>
     setState((s) => ({ ...s, includeProvincialHolidays: v }));
-  const setYoutubeOpenPreference = (v: SettingsState["youtubeOpenPreference"]) =>
-    setState((s) => ({ ...s, youtubeOpenPreference: v }));
+  const setYoutubeOpenPreference = (
+    v: SettingsState["youtubeOpenPreference"],
+  ) => setState((s) => ({ ...s, youtubeOpenPreference: v }));
+  const setVoiceMode = (v: boolean) =>
+    setState((s) => ({ ...s, voiceMode: v }));
 
-  const value: Ctx = { ...state, setHighContrast, setTextScale, setProvince, setIncludeProvincialHolidays, setYoutubeOpenPreference };
+  const value: Ctx = {
+    ...state,
+    setHighContrast,
+    setTextScale,
+    setDyslexiaFriendly,
+    setPlainLanguage,
+    setCaptionsPreferred,
+    setResourcePreferredFormat,
+    setProvince,
+    setIncludeProvincialHolidays,
+    setYoutubeOpenPreference,
+    setVoiceMode,
+  };
 
   return (
     <SettingsContext.Provider value={value}>

@@ -1,116 +1,141 @@
-import React from "react";
-import { View, Text, StyleSheet, TextInput, Pressable, Alert, Platform } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
-import * as Notifier from "../../../services/notifications";
-import { buildICS } from "../../../services/ics";
-import * as Sharing from "expo-sharing";
-import * as FileSystem from "expo-file-system";
-import { addEvent } from "../../../services/calendar";
-
-
-
-type Benefit = "WCB" | "LTD" | "CPP-D";
+import React from 'react';
+import { View, Text, StyleSheet, TextInput, Alert, Pressable } from 'react-native';
+import { useAppPalette } from '../../../theme/usePalette';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import DeadlinesList from './deadlines-list';
+import { addDeadline, listDeadlines, type Deadline } from '../../../services/deadlines';
 
 export const options = { href: null };
 
-export default function Deadlines() {
+export default function DeadlinesScreen() {
   const palette = useAppPalette();
-  const styles = createStyles(palette);
+  const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Deadline Calculator");
+  useAnnounceOnMount('Deadlines');
   useFocusOnRefOnMount(titleRef);
-
-  const [benefit, setBenefit] = React.useState<Benefit>("WCB");
-  const [decisionDate, setDecisionDate] = React.useState<string>(new Date().toISOString().slice(0,10));
-  const [result, setResult] = React.useState<string>("");
-
-  const calc = () => {
-    const d = new Date(decisionDate);
-    if (isNaN(d.getTime())) { Alert.alert("Invalid date", "Enter as YYYY-MM-DD."); return; }
-    const map: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
-    const days = map[benefit];
-    const due = new Date(d.getTime() + days*24*60*60*1000);
-    setResult(`Benefit: ${benefit}\nDecision date: ${decisionDate}\nEstimated deadline: ${due.toISOString().slice(0,10)} (${days} days)\n\nDisclaimer: Deadlines vary by jurisdiction/plan. Confirm with your board/insurer and policy.\nConsider submitting earlier to allow for delays.`);
-  };
-
-  const remind = async () => {
-    if (!result) return;
-    try {
-      const ok = await Notifier.setupAsync();
-      if (!ok) throw new Error("perm");
-      await Notifier.scheduleLocal(`Appeal deadline Ã¢â‚¬â€ ${benefit}`, `Check requirements before deadline.`);
-      Alert.alert("Reminder set", Platform.OS === 'android' ? "See notification channel 'Default'." : "A local reminder was scheduled.");
-    } catch {
-      Alert.alert("Reminder unavailable", "Enable notifications or add to your calendar.");
-    }
-  };
-
-  const exportICS = async () => {
-    if (!result) return;
-    try {
-      const d = new Date(decisionDate);
-      const map: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
-      const due = new Date(d.getTime() + map[benefit]*86400000);
-      const ics = buildICS({ title: `Appeal deadline Ã¢â‚¬â€ ${benefit}`, description: result, startISO: due.toISOString(), durationMinutes: 30 });
-      const path = FileSystem.cacheDirectory + `deadline_${Date.now()}.ics`;
-      await FileSystem.writeAsStringAsync(path, ics, { encoding: FileSystem.EncodingType.UTF8 });
-      if (await Sharing.isAvailableAsync()) {
-        await Sharing.shareAsync(path);
-      } else {
-        Alert.alert('Saved', 'ICS file saved to cache.');
-      }
-    } catch {
-      Alert.alert('Export failed', 'Could not create ICS file.');
-    }
-  };
-
+  const [tab, setTab] = React.useState<'calendar'|'list'>('calendar');
   return (
-    <View style={styles.container}>
-      <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Deadline Calculator</Text>
-      <Text style={styles.subtitle}>Estimate reconsideration/appeal deadlines. Always verify with your board/insurer.</Text>
-
-      <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
-        {(["WCB","LTD","CPP-D"] as Benefit[]).map((b) => (
-          <Pressable key={b} onPress={() => setBenefit(b)} style={[styles.chip, benefit===b && styles.chipActive]} accessibilityRole="button">
-            <Text style={[styles.chipText, benefit===b && styles.chipTextActive]}>{b}</Text>
-          </Pressable>
-        ))}
+    <View style={s.container}>
+      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Deadlines</Text>
+      <View style={{ flexDirection:'row', gap:8 }}>
+        <Pressable onPress={()=>setTab('calendar')} style={[s.chip, tab==='calendar'&&s.chipActive]}><Text style={{ color: tab==='calendar'? palette.onPrimary: palette.text, fontWeight:'700' }}>Calendar</Text></Pressable>
+        <Pressable onPress={()=>setTab('list')} style={[s.chip, tab==='list'&&s.chipActive]}><Text style={{ color: tab==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>List</Text></Pressable>
       </View>
-      <Text style={styles.label}>Decision date (YYYY-MM-DD)</Text>
-      <TextInput style={styles.input} value={decisionDate} onChangeText={setDecisionDate} />
-      <Pressable onPress={calc} style={styles.button}><Text style={styles.buttonText}>Calculate</Text></Pressable>
-      {!!result && (
-        <View style={styles.box}>
-          <Text style={{ color: palette.text }}>{result}</Text>
-          <Pressable onPress={remind} style={[styles.button, { marginTop: 8 }]}><Text style={styles.buttonText}>Set reminder</Text></Pressable>
-          <Pressable onPress={async () => {
-            const d = new Date(decisionDate);
-            const map: Record<Benefit, number> = { WCB: 30, LTD: 60, "CPP-D": 90 };
-            const due = new Date(d.getTime() + map[benefit]*86400000);
-            const ok = await addEvent({ title: `Appeal deadline Ã¢â‚¬â€ ${benefit}`, notes: result, startISO: due.toISOString(), durationMinutes: 30 });
-            Alert.alert(ok ? 'Added' : 'Not added', ok ? 'Event added to your calendar.' : 'Unable to add calendar event.');
-          }} style={[styles.button, { marginTop: 8 }]}><Text style={styles.buttonText}>Add to calendar</Text></Pressable>
-          <Pressable onPress={exportICS} style={[styles.button, { marginTop: 8 }]}><Text style={styles.buttonText}>Export ICS</Text></Pressable>
+      {tab==='calendar'? <DeadlinesCalendar/> : <DeadlinesList/>}
+      {tab==='calendar' && <RecurringBuilder/>}
+      <Pressable onPress={async()=>{
+        try {
+          const DP = await import('expo-document-picker');
+          const res = await DP.getDocumentAsync({ type: 'text/calendar' });
+          const asset = res?.assets?.[0]; if (!asset?.uri) return;
+          const FS = await import('expo-file-system');
+          const text = await FS.readAsStringAsync(asset.uri, { encoding: FS.EncodingType.UTF8 });
+          const { parseICS } = await import('../../../services/ics');
+          const events = parseICS(text).slice(0, 100);
+          await Promise.all(events.map(ev => addDeadline({ title: ev.title, dueAt: ev.startISO, notes: ev.description || '' })));
+          Alert.alert('Imported', `Added ${events.length} deadlines.`);
+        } catch { Alert.alert('Import failed','Could not import ICS'); }
+      }} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Import ICS to Calendar</Text></Pressable>
+    </View>
+  );
+}
+
+function DeadlinesCalendar() {
+  const palette = useAppPalette();
+  const s = styles(palette);
+  const [month, setMonth] = React.useState(() => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), 1); });
+  const [items, setItems] = React.useState<Deadline[]>([]);
+  const [selectedDay, setSelectedDay] = React.useState<string | null>(null);
+  const [view, setView] = React.useState<'month'|'week'>('month');
+  React.useEffect(() => { (async () => { try { setItems(await listDeadlines()); } catch {} })(); }, []);
+  const monthLabel = React.useMemo(() => month.toLocaleString(undefined, { month:'long', year:'numeric' }), [month]);
+  const matrix = React.useMemo(()=> buildMonthMatrix(month), [month]);
+  const byDay = React.useMemo(()=> mapDeadlinesByDay(items), [items]);
+  return (
+    <View style={{ marginTop: 8 }}>
+      <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginBottom: 6 }}>
+        <Pressable onPress={()=> setMonth(prev => new Date(prev.getFullYear(), prev.getMonth()-1, 1))}><Text style={{ color: palette.text }}>{'<'}</Text></Pressable>
+        <Text style={{ color: palette.text, fontWeight:'700' }}>{monthLabel}</Text>
+        <Pressable onPress={()=> setMonth(prev => new Date(prev.getFullYear(), prev.getMonth()+1, 1))}><Text style={{ color: palette.text }}>{'>'}</Text></Pressable>
+      </View>
+      <View style={{ flexDirection:'row', gap:8, marginBottom: 6 }}>
+        <Pressable onPress={()=>setView('month')} style={[s.chip, view==='month'&&s.chipActive]}><Text style={{ color: view==='month'? palette.onPrimary: palette.text, fontWeight:'700' }}>Month</Text></Pressable>
+        <Pressable onPress={()=>setView('week')} style={[s.chip, view==='week'&&s.chipActive]}><Text style={{ color: view==='week'? palette.onPrimary: palette.text, fontWeight:'700' }}>Week</Text></Pressable>
+      </View>
+      {(view==='month'? matrix : [currentWeekFromMatrix(matrix)]).map((week, wi) => (
+        <View key={wi} style={{ flexDirection:'row', justifyContent:'space-between', marginBottom: 4 }}>
+          {week.map((day, di) => (
+            <Pressable key={di} onPress={()=> day && setSelectedDay(dayKeyFromMatrix(month, day))} style={{ width: 40, height: 40, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems:'center', justifyContent:'center', backgroundColor: selectedDay===dayKeyFromMatrix(month, day) ? palette.primary : palette.surface }}>
+              <Text style={{ color: selectedDay===dayKeyFromMatrix(month, day) ? palette.onPrimary : palette.text }}>{day ?? ''}</Text>
+              {!!day && !!byDay.get(dayKeyFromMatrix(month, day)) && <View style={{ width: 6, height: 6, borderRadius:3, backgroundColor: dotColor(dayKeyFromMatrix(month, day), items, palette), position:'absolute', bottom: 4 }} />}
+            </Pressable>
+          ))}
+        </View>
+      ))}
+      {!!selectedDay && (
+        <View style={{ marginTop: 8 }}>
+          <Text style={{ color: palette.text, fontWeight:'700' }}>Selected: {new Date(selectedDay).toLocaleDateString()}</Text>
+          {items.filter(d => toDayKey(d.dueAt)===selectedDay).map(d => (
+            <Text key={d.id} style={{ color: palette.text }}>• {new Date(d.dueAt).toLocaleTimeString()} — {d.title}</Text>
+          ))}
         </View>
       )}
     </View>
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>) {
+function RecurringBuilder() {
+  const palette = useAppPalette();
+  const s = styles(palette);
+  const [title, setTitle] = React.useState('Follow-up');
+  const [start, setStart] = React.useState(new Date().toISOString().slice(0,10));
+  const [freq, setFreq] = React.useState<'weekly'|'monthly'>('weekly');
+  const [count, setCount] = React.useState('4');
+  return (
+    <View style={{ marginTop: 12 }}>
+      <Text style={s.cardTitle}>Add Recurring</Text>
+      <TextInput placeholder="Title prefix" placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
+      <TextInput placeholder="Start date (YYYY-MM-DD)" placeholderTextColor={palette.text+'77'} value={start} onChangeText={setStart} style={s.input} />
+      <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
+        <Pressable onPress={()=>setFreq('weekly')} style={[s.chip, freq==='weekly'&&s.chipActive]}><Text style={{ color: freq==='weekly'? palette.onPrimary: palette.text, fontWeight:'700' }}>Weekly</Text></Pressable>
+        <Pressable onPress={()=>setFreq('monthly')} style={[s.chip, freq==='monthly'&&s.chipActive]}><Text style={{ color: freq==='monthly'? palette.onPrimary: palette.text, fontWeight:'700' }}>Monthly</Text></Pressable>
+      </View>
+      <TextInput placeholder="Count" placeholderTextColor={palette.text+'77'} value={count} onChangeText={setCount} style={s.input} />
+      <Pressable onPress={async()=>{
+        try {
+          const n = Math.max(1, Math.min(52, Number(count)||1));
+          const base = new Date(start);
+          const ops: Promise<any>[] = [];
+          for (let i=0;i<n;i++) {
+            const dt = new Date(base);
+            if (freq==='weekly') dt.setDate(dt.getDate() + i*7);
+            else dt.setMonth(dt.getMonth() + i);
+            ops.push(addDeadline({ title: `${title} ${freq==='weekly'? `Week ${i+1}` : `Month ${i+1}`}`, dueAt: dt.toISOString(), notes: '' }));
+          }
+          await Promise.all(ops);
+          Alert.alert('Added', `${n} recurring deadlines added.`);
+        } catch { Alert.alert('Failed','Could not add recurring deadlines'); }
+      }} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Create</Text></Pressable>
+    </View>
+  );
+}
+
+function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background, padding: 16 },
     title: { fontSize: 22, fontWeight: '700', color: palette.text },
-    subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
-    label: { color: palette.text, opacity: 0.95, marginBottom: 4 },
-    input: { borderWidth: 1, borderColor: palette.muted, borderRadius: 8, padding: 10, color: palette.text, marginBottom: 8 },
-    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 16, paddingHorizontal: 12, paddingVertical: 6 },
+    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
     chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
-    chipText: { color: palette.text },
-    chipTextActive: { color: palette.onPrimary, fontWeight: '700' },
-    button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center' },
-    buttonText: { color: palette.onPrimary, fontWeight: '700' },
-    box: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginTop: 12 },
+    input: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding: 8, borderRadius: 6, marginTop: 8 },
+    button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems:'center' },
+    buttonText: { color: palette.onPrimary, fontWeight:'700' },
+    cardTitle: { color: palette.text, fontWeight: '700', marginTop: 10 },
   });
 }
+
+function toDayKey(input: string): string { const d = new Date(input); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+function dayKeyFromMatrix(baseMonth: Date, day: number | null) { if (!day) return ''; const y=baseMonth.getFullYear(); const m=`${baseMonth.getMonth()+1}`.padStart(2,'0'); const dd=`${day}`.padStart(2,'0'); return `${y}-${m}-${dd}`; }
+function buildMonthMatrix(firstOfMonth: Date): (number | null)[][] { const y = firstOfMonth.getFullYear(); const m = firstOfMonth.getMonth(); const first = new Date(y,m,1); const startDay = first.getDay(); const daysInMonth = new Date(y,m+1,0).getDate(); const matrix: (number|null)[][]=[]; let current = 1 - startDay; for (let w=0; w<6; w++){ const week:(number|null)[]=[]; for(let d=0; d<7; d++){ if(current<1||current>daysInMonth) week.push(null); else week.push(current); current++; } matrix.push(week); if (current>daysInMonth) break; } return matrix; }
+function mapDeadlinesByDay(items: { dueAt: string }[]) { const m = new Map<string, number>(); for (const e of items) { const k = toDayKey(e.dueAt); m.set(k, (m.get(k)||0)+1); } return m; }
+function currentWeekFromMatrix(matrix: (number|null)[][]) { const today = new Date().getDate(); for (const w of matrix) { if (w.includes(today)) return w; } return matrix[0]; }
+function dotColor(dayKey: string, items: { dueAt: string }[], palette: any) { const d = new Date(dayKey + 'T00:00:00'); const now = new Date(); const dayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime(); const ts = d.getTime(); if (ts < dayStart && items.some(x => toDayKey(x.dueAt)===dayKey)) return '#b00020'; if (ts - dayStart < 7*86400000) return '#f0a500'; return palette.primary; }

@@ -6,16 +6,18 @@
   - Pressable without hitSlop
   - Link without accessibilityRole or asChild
 */
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 const ROOT = process.cwd();
-const TARGET_DIRS = [path.join(ROOT, 'app'), path.join(ROOT, 'components')];
+const TARGET_DIRS = [path.join(ROOT, "app"), path.join(ROOT, "components")];
 const TSX_RE = /\.tsx$/i;
 
 /** @param {string} dir */
 function* walk(dir) {
-  const entries = fs.existsSync(dir) ? fs.readdirSync(dir, { withFileTypes: true }) : [];
+  const entries = fs.existsSync(dir)
+    ? fs.readdirSync(dir, { withFileTypes: true })
+    : [];
   for (const e of entries) {
     const p = path.join(dir, e.name);
     if (e.isDirectory()) yield* walk(p);
@@ -24,7 +26,7 @@ function* walk(dir) {
 }
 
 function scanFile(file) {
-  const src = fs.readFileSync(file, 'utf8');
+  const src = fs.readFileSync(file, "utf8");
   const lines = src.split(/\r?\n/);
   const issues = [];
 
@@ -35,17 +37,26 @@ function scanFile(file) {
     // Pressable opening tag
     if (/\<Pressable(\s|>)/.test(line)) {
       if (!/accessibilityRole\s*=/.test(line)) {
-        issues.push({ ln, msg: 'Pressable missing accessibilityRole (e.g., "button")' });
+        issues.push({
+          ln,
+          msg: 'Pressable missing accessibilityRole (e.g., "button")',
+        });
       }
       if (!/hitSlop\s*=/.test(line)) {
-        issues.push({ ln, msg: 'Pressable missing hitSlop to increase touch target' });
+        issues.push({
+          ln,
+          msg: "Pressable missing hitSlop to increase touch target",
+        });
       }
     }
 
     // expo-router Link
     if (/\<Link(\s|>)/.test(line)) {
       if (!/accessibilityRole\s*=/.test(line) && !/asChild/.test(line)) {
-        issues.push({ ln, msg: 'Link missing accessibilityRole="link" or asChild wrapper' });
+        issues.push({
+          ln,
+          msg: 'Link missing accessibilityRole="link" or asChild wrapper',
+        });
       }
     }
   });
@@ -68,9 +79,8 @@ for (const dir of TARGET_DIRS) {
 }
 
 if (!total) {
-  console.log('No accessibility issues detected by static scan.');
+  console.log("No accessibility issues detected by static scan.");
 } else {
   console.log(`\nFound ${total} potential accessibility issue(s).`);
   process.exitCode = 1;
 }
-

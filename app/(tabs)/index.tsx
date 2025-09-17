@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TextInput,
+  Button,
+  Alert,
+  Image,
+} from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -12,6 +21,7 @@ import {
 import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { useNetwork } from "../../store/network";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
 
 export default function SettingsScreen() {
@@ -30,6 +40,9 @@ export default function SettingsScreen() {
   const [photoURL, setPhotoURL] = useState<string | null>(null);
   // const [loadingProfile, setLoadingProfile] = useState(true);
 
+  // Track offline state when profile fetch fails
+  const { setOffline } = useNetwork();
+
   useEffect(() => {
     const fetchProfile = async () => {
       if (!user) return;
@@ -42,7 +55,12 @@ export default function SettingsScreen() {
           setPhotoURL(profile.photoURL || null);
         }
       } catch (err: any) {
-        console.error("Error fetching profile:", err.message);
+        const msg = String(err?.message ?? "");
+        if (msg.toLowerCase().includes("offline")) {
+          setOffline(true);
+        } else {
+          console.error("Error fetching profile:", msg);
+        }
       } finally {
         // no-op
       }
@@ -76,7 +94,7 @@ export default function SettingsScreen() {
     } catch {
       Alert.alert(
         "Image Picker Unavailable",
-        "Please rebuild the Android app to include expo-image-picker (npx expo run:android)."
+        "Please rebuild the Android app to include expo-image-picker (npx expo run:android).",
       );
       return;
     }
@@ -148,7 +166,15 @@ export default function SettingsScreen() {
   );
 }
 
-function Section({ title, children, styles }: { title: string; children: React.ReactNode; styles: ReturnType<typeof createStyles> }) {
+function Section({
+  title,
+  children,
+  styles,
+}: {
+  title: string;
+  children: React.ReactNode;
+  styles: ReturnType<typeof createStyles>;
+}) {
   return (
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>{title}</Text>
@@ -160,10 +186,24 @@ function Section({ title, children, styles }: { title: string; children: React.R
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    section: { paddingVertical: 12, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted },
+    title: {
+      fontSize: 24,
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    section: {
+      paddingVertical: 12,
+      borderTopWidth: StyleSheet.hairlineWidth,
+      borderTopColor: palette.muted,
+    },
     sectionTitle: { color: palette.text, fontWeight: "700", marginBottom: 8 },
-    rowLabel: { color: palette.text, opacity: 0.9, marginTop: 10, marginBottom: 6 },
+    rowLabel: {
+      color: palette.text,
+      opacity: 0.9,
+      marginTop: 10,
+      marginBottom: 6,
+    },
     input: {
       borderWidth: 1,
       borderColor: palette.muted,
@@ -181,4 +221,3 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
   });
 }
-
