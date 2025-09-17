@@ -167,7 +167,8 @@ export default function ResearchScreen() {
             />
           </Link>
         )}
-        ListEmptyComponent={<Text style={[styles.subtitle, { opacity: 0.7 }]}>No research found</Text>}\n        contentContainerStyle={{ paddingVertical: 12 }}
+        ListEmptyComponent={<Text style={[styles.subtitle, { opacity: 0.7 }]}>No research found</Text>}
+        contentContainerStyle={{ paddingVertical: 12 }}
       />
     </View>
   );

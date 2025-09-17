@@ -14,6 +14,7 @@ import { Link } from "expo-router";
 import type { Href } from "expo-router";
 import { useAuth } from "../../context/AuthContext";
 import { addReflection, listReflections, type Reflection } from "../../services/wellness";
+import * as Notifier from "../../services/notifications";
 
 export default function WellnessScreen() {
   const palette = useAppPalette();
@@ -258,6 +259,21 @@ export default function WellnessScreen() {
             >
               <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Save Reflection</Text>
             </Pressable>
+            <Pressable
+              onPress={async () => {
+                try {
+                  const ok = await Notifier.setupAsync();
+                  if (!ok) throw new Error('perm');
+                  const scheduled = await Notifier.scheduleDailyAt(9, 0, 'Daily reflection', 'Take 1 minute to log your mood today.');
+                  Alert.alert(scheduled ? 'Scheduled' : 'Not scheduled', scheduled ? 'Daily 9:00 reminder set.' : 'Unable to schedule.');
+                } catch { Alert.alert('Not scheduled', 'Notifications unavailable.'); }
+              }}
+              accessibilityRole="button"
+              style={({ pressed }) => [{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingVertical: 10, borderRadius: 8, alignItems: 'center', marginTop: 8 }, pressed && { opacity: 0.8 }]}
+            >
+              <Text style={{ color: palette.text }}>Remind me daily</Text>
+            </Pressable>
+
             {recent.length > 0 && (
               <View style={{ marginTop: 8 }}>
                 <Text style={styles.sectionTitle}>Recent</Text>

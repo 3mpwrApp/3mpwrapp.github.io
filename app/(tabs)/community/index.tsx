@@ -51,6 +51,14 @@ function ScreenInner() {
       >
         <Text style={{ color: palette.text, fontWeight: '700' }}>Compose</Text>
       </Pressable>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel="Open Testers Chat"
+        style={({ pressed }) => [{ alignSelf: 'flex-end', marginBottom: 8, marginLeft: 8, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }, pressed && { opacity: 0.7 }]}
+        onPress={() => router.push('/(tabs)/community/testers-chat' as Href)}
+      >
+        <Text style={{ color: palette.text }}>Testers Chat</Text>
+      </Pressable>
       <Text
         ref={titleRef}
         accessibilityRole="header"
@@ -127,7 +135,8 @@ function createStyles(palette: Palette) {
       borderBottomWidth: StyleSheet.hairlineWidth,
       borderBottomColor: palette.muted,
     },
-    rowText: { color: palette.text, fontSize: 16 },\n    empty: { color: palette.text, opacity: 0.7, marginTop: 12 },\n  }););
+    rowText: { color: palette.text, fontSize: 16 },
+  });
 }
 
 

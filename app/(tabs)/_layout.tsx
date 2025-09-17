@@ -45,6 +45,7 @@ export default function TabsLayout() {
       />
       <Tabs.Screen name="resources/claims-navigator" options={{ href: null }} />
       <Tabs.Screen name="resources/evidence-locker" options={{ href: null }} />
+      <Tabs.Screen name="resources/evidence-queue" options={{ href: null }} />
       <Tabs.Screen
         name="resources/support-directory"
         options={{ href: null }}

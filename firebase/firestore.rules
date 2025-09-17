@@ -137,5 +137,11 @@ service cloud.firestore {
       allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
+
+    // Testers chat room (signed-in users)
+    match /chats/{room}/messages/{msgId} {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn();
+    }
   }
 }

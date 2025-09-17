@@ -43,6 +43,24 @@ export async function scheduleLocal(title: string, body: string) {
   }
 }
 
+// Schedule a daily notification at local time hour:minute
+export async function scheduleDailyAt(hour: number, minute: number, title: string, body: string) {
+  if (!Notifications) return false;
+  try {
+    const now = new Date();
+    const first = new Date();
+    first.setHours(hour, minute, 0, 0);
+    if (first.getTime() <= now.getTime()) first.setDate(first.getDate() + 1);
+    await Notifications.scheduleNotificationAsync({
+      content: { title, body },
+      trigger: { hour, minute, repeats: true } as any,
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 // Schedule a notification at a specific Date
 export async function scheduleAt(when: Date, title: string, body: string) {
   if (!Notifications) return false;
