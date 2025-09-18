@@ -9,6 +9,25 @@ const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 20 
 
 app.get('/', (_req, res) => res.send('EmpowrApp server ok'));
 
+// Derive a video thumbnail if possible (YouTube only); otherwise return 204
+app.get('/video-thumb', async (req, res) => {
+  try {
+    const url = String(req.query.url || '');
+    if (/youtu\.be\//i.test(url)) {
+      const id = url.split('/').pop().split('?')[0];
+      return res.json({ thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg` });
+    }
+    if (/youtube\.com\/watch\?v=/i.test(url)) {
+      const u = new URL(url);
+      const id = u.searchParams.get('v');
+      if (id) return res.json({ thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg` });
+    }
+    return res.status(204).end();
+  } catch {
+    return res.status(204).end();
+  }
+});
+
 // Simple web crawler: fetch URL and extract title + meta description + links
 app.get('/crawl', async (req, res) => {
   try {

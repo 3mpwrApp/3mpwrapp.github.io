@@ -34,6 +34,13 @@ export default function ReflectionsCalendar() {
   const [exportOpts, setExportOpts] = React.useState<{ includeMood: boolean; includeText: boolean }>({ includeMood: true, includeText: true });
   const [quickKey, setQuickKey] = React.useState<string | null>(null);
   const [tapAction, setTapAction] = React.useState<'details'|'editor'>('details');
+  React.useEffect(() => {
+    try {
+      const A = require('@react-native-async-storage/async-storage').default;
+      (async () => { const val = await A.getItem('reflections.tapAction'); if (val==='editor' || val==='details') setTapAction(val); })();
+    } catch {}
+  }, []);
+  const saveTapPref = async (next: 'details'|'editor') => { setTapAction(next); try { const A = require('@react-native-async-storage/async-storage').default; await A.setItem('reflections.tapAction', next); } catch {} };
 
   const load = React.useCallback(async (nDays: number) => {
     try {
@@ -214,7 +221,7 @@ export default function ReflectionsCalendar() {
             <Text style={[s.chipText, rangeDays===n && s.chipTextActive]}>{n}d</Text>
           </Pressable>
         ))}
-        <Pressable onPress={()=> setTapAction(a=> a==='details'?'editor':'details')} accessibilityRole="button" style={[s.chip, s.chipActive]}> 
+        <Pressable onPress={()=> saveTapPref(tapAction==='details'?'editor':'details')} accessibilityRole="button" style={[s.chip, s.chipActive]}> 
           <Text style={[s.chipText, s.chipTextActive]}>Tap: {tapAction==='details'? 'Details':'Editor'}</Text>
         </Pressable>
       </View>
@@ -377,6 +384,17 @@ export default function ReflectionsCalendar() {
         <Pressable style={{ flex:1, backgroundColor:'#0008', alignItems:'center', justifyContent:'center' }} onPress={()=> setDetails({ open:false, date:null })}>
           <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '94%', maxWidth: 560, maxHeight: '80%' }}>
             <Text style={{ color: palette.text, fontWeight:'700', marginBottom: 8 }}>{details.date?.toDateString()}</Text>
+            {/* Day summary */}
+            <View style={{ marginBottom: 8 }}>
+              {(() => {
+                const vals = entries.filter(r => { const d = new Date(r.createdAt?.toDate?.() || Date.now()); return details.date && d.toDateString() === details.date.toDateString(); });
+                const mapVal: Record<NonNullable<Reflection['mood']>, number> = { bad:1, ok:2, good:3, great:4 };
+                const avg = vals.length ? (vals.reduce((s,r)=> s + mapVal[r.mood], 0) / vals.length) : 0;
+                return (
+                  <Text style={{ color: palette.text }}>Entries: {vals.length}  •  Avg mood: {avg ? avg.toFixed(2) : '-'} (1–4)</Text>
+                );
+              })()}
+            </View>
             <FlatList
               data={entries.filter(r => { const d = new Date(r.createdAt?.toDate?.() || Date.now()); return details.date && d.toDateString() === details.date.toDateString(); })}
               keyExtractor={(r:any)=> r.id}

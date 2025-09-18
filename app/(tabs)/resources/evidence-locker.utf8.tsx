@@ -45,6 +45,24 @@ export default function EvidenceLocker() {
   const [preview, setPreview] = React.useState<{ url: string; name?: string } | null>(null);
   const [video, setVideo] = React.useState<{ uri: string } | null>(null);
   const [gallery, setGallery] = React.useState(false);
+  const [thumbs, setThumbs] = React.useState<Record<string,string>>({});
+  const getVideoThumb = React.useCallback(async (url: string) => {
+    if (thumbs[url]) return thumbs[url];
+    // Try YouTube derivation on client
+    try {
+      if (/youtu\.be\//i.test(url)) { const id = url.split('/').pop()?.split('?')[0] || ''; if (id) { const t = `https://img.youtube.com/vi/${id}/hqdefault.jpg`; setThumbs(prev=>({ ...prev, [url]: t })); return t; } }
+      if (/youtube\.com\/watch\?v=/i.test(url)) { const u = new URL(url); const id = u.searchParams.get('v'); if (id) { const t = `https://img.youtube.com/vi/${id}/hqdefault.jpg`; setThumbs(prev=>({ ...prev, [url]: t })); return t; } }
+    } catch {}
+    // Ask server for help if configured
+    try {
+      const base = process.env.EXPO_PUBLIC_LLM_BASE || process.env.EXPO_PUBLIC_API_BASE;
+      if (base) {
+        const res = await fetch(`${String(base).replace(/\/$/,'')}/video-thumb?url=${encodeURIComponent(url)}`);
+        if (res.ok) { const j = await res.json(); if (j?.thumbnailUrl) { setThumbs(prev=>({ ...prev, [url]: j.thumbnailUrl })); return j.thumbnailUrl; } }
+      }
+    } catch {}
+    return '';
+  }, [thumbs]);
   // Immediate upload progress (non-queue)
   const [immUploading, setImmUploading] = React.useState(false);
   const [immPct, setImmPct] = React.useState(0);
@@ -543,7 +561,7 @@ export default function EvidenceLocker() {
                   </View>
                 ) : Array.isArray(c.files) && c.files[0]?.url && (/\.(mp4|mov|m4v|webm)$/i.test(c.files[0].url) || String(c.files[0]?.type||'').startsWith('video')) ? (
                   <View style={{ marginTop: 6, flexDirection:'row', alignItems:'center', gap:8 }}>
-                    {(() => { const thumb = c.files[0]?.thumbnailUrl || c.files[0]?.thumb || c.files[0]?.preview; if (thumb) { try { const { Image } = require('expo-image'); return (<Image source={{ uri: thumb }} style={{ width: 100, height: 60, borderRadius: 6 }} />); } catch { return null; } } return null; })()}
+                    {(() => { const local = c.files[0]?.thumbnailUrl || c.files[0]?.thumb || c.files[0]?.preview || thumbs[c.files[0].url]; if (local) { try { const { Image } = require('expo-image'); return (<Image source={{ uri: local }} style={{ width: 100, height: 60, borderRadius: 6 }} />); } catch { return null; } } getVideoThumb(c.files[0].url); return null; })()}
                     <A11yPressable onPress={()=> setVideo({ uri: c.files[0].url })} style={styles.secondary}><Text style={styles.buttonText}>Play</Text></A11yPressable>
                   </View>
                 ) : null}
