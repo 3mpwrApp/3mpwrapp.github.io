@@ -180,6 +180,11 @@ export default function WellnessScreen() {
           {t("wellness.tools.selfcare", "Accessible Self‑Care Library")}
         </Text>
       </Link>
+      <Link href={"/(tabs)/wellness/reflections-calendar" as Href} asChild>
+        <Text style={[styles.linkLabel, { marginBottom: 12 }]}>
+          Reflections Calendar + Export
+        </Text>
+      </Link>
       <Link href={"/(tabs)/wellness/work-balance-ai" as Href} asChild>
         <Text style={[styles.linkLabel, { marginBottom: 12 }]}>
           {t("wellness.tools.work_balance", "Wellness + Work Balance AI")}

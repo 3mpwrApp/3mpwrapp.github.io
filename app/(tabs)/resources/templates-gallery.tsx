@@ -37,6 +37,8 @@ export default function TemplatesGallery() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Template Gallery");
   useFocusOnRefOnMount(titleRef);
+  const { useProfileLocal } = require("../../../store/profileLocal");
+  const { profile } = useProfileLocal();
 
   const copy = async (text: string) => {
     try {
@@ -45,10 +47,21 @@ export default function TemplatesGallery() {
     } catch {}
   };
 
-  const [vars, setVars] = React.useState({ name: "", claim: "", date: "" });
+  const [vars, setVars] = React.useState({ name: "", contact: "", province: "", claim: "", date: "" });
+  React.useEffect(() => {
+    setVars((v) => ({
+      ...v,
+      name: profile?.name || v.name,
+      contact: profile?.contact || v.contact,
+      province: profile?.province || v.province,
+    }));
+  }, [profile?.name, profile?.contact, profile?.province]);
   const applyVars = (body: string) =>
     body
       .replaceAll("[Your Name]", vars.name || "[Your Name]")
+      .replaceAll("[Name]", vars.name || "[Name]")
+      .replaceAll("[Contact]", vars.contact || "[Contact]")
+      .replaceAll("[Province]", vars.province || "[Province]")
       .replaceAll("[Claim ID]", vars.claim || "[Claim ID]")
       .replaceAll("[date]", vars.date || "[date]");
 
@@ -83,6 +96,8 @@ export default function TemplatesGallery() {
       <Text style={s.subtitle}>Example outputs to help you get started.</Text>
       <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap", marginBottom: 8 }}>
         <TextInput style={s.input} placeholder="Your name" value={vars.name} onChangeText={(v)=>setVars({ ...vars, name: v })} />
+        <TextInput style={s.input} placeholder="Contact" value={vars.contact} onChangeText={(v)=>setVars({ ...vars, contact: v })} />
+        <TextInput style={s.input} placeholder="Province (e.g., ON)" value={vars.province} onChangeText={(v)=>setVars({ ...vars, province: v })} />
         <TextInput style={s.input} placeholder="Claim ID" value={vars.claim} onChangeText={(v)=>setVars({ ...vars, claim: v })} />
         <TextInput style={s.input} placeholder="date (YYYY-MM-DD)" value={vars.date} onChangeText={(v)=>setVars({ ...vars, date: v })} />
       </View>
@@ -96,15 +111,49 @@ export default function TemplatesGallery() {
           <A11yPressable onPress={() => saveDraft(ex.title, applyVars(ex.body))} style={[s.button,{ marginTop: 8 }]}>
             <Text style={s.buttonText}>Save draft</Text>
           </A11yPressable>
+          <A11yPressable
+            onPress={async () => {
+              try {
+                const body = applyVars(ex.body);
+                const FS = await import("expo-file-system");
+                const p = FS.cacheDirectory + `letter_${Date.now()}.txt`;
+                await FS.writeAsStringAsync(p, body);
+                try { const Share = await import("expo-sharing"); if (await Share.isAvailableAsync()) await Share.shareAsync(p); else Alert.alert('Saved','File saved to cache.'); } catch { Alert.alert('Saved','File saved to cache.'); }
+              } catch { Alert.alert('Share failed','Unable to create file.'); }
+            }}
+            style={[s.secondary,{ marginTop: 8 }]}
+          >
+            <Text style={s.secondaryText}>Share</Text>
+          </A11yPressable>
+          <A11yPressable
+            onPress={async () => {
+              try {
+                const note = { id: String(Date.now()), text: applyVars(ex.body), date: new Date().toISOString(), tags: ['letter'] };
+                const raw = (await AsyncStorage?.getItem?.('evidence:notes:v1')) || '[]';
+                const arr = JSON.parse(raw);
+                arr.unshift(note);
+                await AsyncStorage?.setItem?.('evidence:notes:v1', JSON.stringify(arr));
+                Alert.alert('Added', 'Inserted into Evidence Locker.');
+              } catch { Alert.alert('Not added','Unable to add to Evidence Locker.'); }
+            }}
+            style={[s.secondary,{ marginTop: 8 }]}
+          >
+            <Text style={s.secondaryText}>Insert into Evidence Locker</Text>
+          </A11yPressable>
         </View>
       ))}
       {drafts.length > 0 && (
         <View style={s.card}>
           <Text style={s.cardTitle}>Drafts</Text>
           {drafts.map((d)=> (
-            <View key={d.id} style={{ marginBottom: 6 }}>
+            <View key={d.id} style={{ marginBottom: 10 }}>
               <Text style={s.cardTitle}>{d.title}</Text>
               <Text style={s.cardText}>{d.body}</Text>
+              <View style={{ flexDirection:'row', gap:8 }}>
+                <A11yPressable onPress={async()=>{ try { const arr = drafts.filter(x=>x.id!==d.id); setDrafts(arr); await AsyncStorage?.setItem?.('templates:drafts', JSON.stringify(arr)); } catch {} }} style={s.secondary}><Text style={s.secondaryText}>Delete</Text></A11yPressable>
+                <A11yPressable onPress={async()=>{ try { const body = d.body; const FS = await import('expo-file-system'); const p = FS.cacheDirectory + `draft_${Date.now()}.txt`; await FS.writeAsStringAsync(p, body); const Share = await import('expo-sharing'); if (await Share.isAvailableAsync()) await Share.shareAsync(p); else Alert.alert('Saved','Draft saved to cache.'); } catch {} }} style={s.secondary}><Text style={s.secondaryText}>Share</Text></A11yPressable>
+                <A11yPressable onPress={async()=>{ try { const note = { id: String(Date.now()), text: d.body, date: new Date().toISOString(), tags: ['letter'] }; const raw = (await AsyncStorage?.getItem?.('evidence:notes:v1')) || '[]'; const arr = JSON.parse(raw); arr.unshift(note); await AsyncStorage?.setItem?.('evidence:notes:v1', JSON.stringify(arr)); Alert.alert('Added','Inserted into Evidence Locker.'); } catch {} }} style={s.secondary}><Text style={s.secondaryText}>To Locker</Text></A11yPressable>
+              </View>
             </View>
           ))}
         </View>
@@ -144,5 +193,15 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       alignItems: "center",
     },
     buttonText: { color: palette.onPrimary, fontWeight: "700" },
+    secondary: {
+      backgroundColor: palette.surface,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      paddingVertical: 8,
+      borderRadius: 8,
+      alignItems: 'center',
+      paddingHorizontal: 10,
+    },
+    secondaryText: { color: palette.text, fontWeight: '700' },
   });
 }

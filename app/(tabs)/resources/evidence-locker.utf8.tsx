@@ -190,6 +190,46 @@ export default function EvidenceLocker() {
           <Text style={styles.buttonText}>Attach file</Text>
         </A11yPressable>
         <A11yPressable
+          accessibilityLabel="Take a photo"
+          onPress={async () => {
+            try {
+              const P = await import('expo-image-picker');
+              const perm = await P.requestCameraPermissionsAsync();
+              if (perm.status !== 'granted') { Alert.alert('Permission denied','Camera permission required.'); return; }
+              const res = await P.launchCameraAsync({ mediaTypes: P.MediaTypeOptions.Images, quality: 0.9 });
+              if (res.canceled || !res.assets?.length) return;
+              const a = res.assets[0];
+              const files = [{ name: a.fileName || `photo_${Date.now()}.jpg`, uri: a.uri }];
+              const defaultText = text.trim() || 'Photo';
+              setNotes([{ id: String(Date.now()), text: defaultText, date: new Date().toISOString(), tags: ['photo', ...(tag? [tag]: [])], files }, ...notes]);
+              setText(''); setTag('');
+            } catch { Alert.alert('Camera unavailable', 'Unable to open camera.'); }
+          }}
+          style={styles.secondary}
+        >
+          <Text style={styles.buttonText}>Take photo</Text>
+        </A11yPressable>
+        <A11yPressable
+          accessibilityLabel="Record a video"
+          onPress={async () => {
+            try {
+              const P = await import('expo-image-picker');
+              const perm = await P.requestCameraPermissionsAsync();
+              if (perm.status !== 'granted') { Alert.alert('Permission denied','Camera permission required.'); return; }
+              const res = await P.launchCameraAsync({ mediaTypes: P.MediaTypeOptions.Videos, videoQuality: 1 });
+              if (res.canceled || !res.assets?.length) return;
+              const a = res.assets[0];
+              const files = [{ name: a.fileName || `video_${Date.now()}.mp4`, uri: a.uri }];
+              const defaultText = text.trim() || 'Video';
+              setNotes([{ id: String(Date.now()), text: defaultText, date: new Date().toISOString(), tags: ['video', ...(tag? [tag]: [])], files }, ...notes]);
+              setText(''); setTag('');
+            } catch { Alert.alert('Camera unavailable', 'Unable to record video.'); }
+          }}
+          style={styles.secondary}
+        >
+          <Text style={styles.buttonText}>Record video</Text>
+        </A11yPressable>
+        <A11yPressable
           accessibilityLabel="Attach files"
           onPress={async () => {
             try {
