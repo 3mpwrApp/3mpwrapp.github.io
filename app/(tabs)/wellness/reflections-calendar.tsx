@@ -33,6 +33,7 @@ export default function ReflectionsCalendar() {
   const [details, setDetails] = React.useState<{ open: boolean; date: Date | null }>(()=> ({ open:false, date: null }));
   const [exportOpts, setExportOpts] = React.useState<{ includeMood: boolean; includeText: boolean }>({ includeMood: true, includeText: true });
   const [quickKey, setQuickKey] = React.useState<string | null>(null);
+  const [tapAction, setTapAction] = React.useState<'details'|'editor'>('details');
 
   const load = React.useCallback(async (nDays: number) => {
     try {
@@ -213,6 +214,9 @@ export default function ReflectionsCalendar() {
             <Text style={[s.chipText, rangeDays===n && s.chipTextActive]}>{n}d</Text>
           </Pressable>
         ))}
+        <Pressable onPress={()=> setTapAction(a=> a==='details'?'editor':'details')} accessibilityRole="button" style={[s.chip, s.chipActive]}> 
+          <Text style={[s.chipText, s.chipTextActive]}>Tap: {tapAction==='details'? 'Details':'Editor'}</Text>
+        </Pressable>
       </View>
       <View style={{ flexDirection:'row', gap:8, marginTop:8, flexWrap:'wrap' }}>
         <Pressable onPress={exportCSV} accessibilityRole="button" style={[s.button]}>
@@ -258,13 +262,17 @@ export default function ReflectionsCalendar() {
                     const key = `${it.date.getFullYear()}-${it.date.getMonth()}-${it.date.getDate()}`;
                     return (
                       <Pressable key={`c-${r+i}`} onPress={()=>{
-                        setEditor({
-                          open: true,
-                          date: it.date,
-                          entry: it.entry,
-                          mood: it.entry?.mood || 'ok',
-                          note: it.entry?.note || '',
-                        });
+                        if (tapAction==='details') {
+                          setDetails({ open:true, date: it.date });
+                        } else {
+                          setEditor({
+                            open: true,
+                            date: it.date,
+                            entry: it.entry,
+                            mood: it.entry?.mood || 'ok',
+                            note: it.entry?.note || '',
+                          });
+                        }
                       }} onLongPress={()=> setQuickKey(key)} style={[s.cell,{ borderColor }]} accessibilityRole="button" accessibilityLabel={`${it.date.toDateString()} ${it.entry? it.entry.mood: 'no entry'}`}> 
                         <View style={[s.dot, { backgroundColor: bg, opacity: it.entry? 1 : 0 }]} />
                         <Text style={[s.cellText, !inMonth && { opacity: 0.4 }]}>{it.date.getDate()}</Text>
