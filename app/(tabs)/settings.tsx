@@ -179,6 +179,11 @@ export default function SettingsScreen() {
         <LocalProfileSection />
       </Section>
 
+      {/* Wellness Preferences */}
+      <Section title="Wellness Preferences" styles={styles}>
+        <WellnessPrefsSection />
+      </Section>
+
       {/* Privacy & Backups */}
       <Section title="Privacy & Backups" styles={styles}>
         <PrivacyBackupSection />
@@ -325,6 +330,28 @@ function LocalProfileSection() {
         title="Save"
         onPress={() => setProfile({ name, contact, province })}
       />
+    </View>
+  );
+}
+
+function WellnessPrefsSection() {
+  const palette = useAppPalette();
+  const s = createStyles(palette);
+  const [tap, setTap] = React.useState<'details'|'editor'>('details');
+  React.useEffect(() => {
+    (async () => {
+      try { const val = await AsyncStorage.getItem('reflections.tapAction'); if (val==='details'||val==='editor') setTap(val); } catch {}
+    })();
+  }, []);
+  const save = async (next: 'details'|'editor') => { setTap(next); try { await AsyncStorage.setItem('reflections.tapAction', next); } catch {} };
+  return (
+    <View>
+      <Text style={s.rowLabel}>Reflections Calendar: default tap action</Text>
+      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+        <Button title={`Details ${tap==='details'?'✓':''}`} onPress={()=> save('details')} />
+        <Button title={`Editor ${tap==='editor'?'✓':''}`} onPress={()=> save('editor')} />
+      </View>
+      <Text style={{ color: palette.text, opacity: 0.8, marginTop: 6 }}>Tip: You can still change this from inside the calendar.</Text>
     </View>
   );
 }

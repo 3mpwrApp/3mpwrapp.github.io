@@ -22,6 +22,24 @@ app.get('/video-thumb', async (req, res) => {
       const id = u.searchParams.get('v');
       if (id) return res.json({ thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg` });
     }
+    // Fallback: try ffmpeg to capture a frame as data URL
+    try {
+      const { spawn } = await import('node:child_process');
+      const args = ['-ss','00:00:01','-i', url, '-frames:v','1','-f','mjpeg','-'];
+      const ff = spawn('ffmpeg', args, { stdio: ['ignore','pipe','ignore'] });
+      const chunks = [];
+      ff.stdout.on('data', (c) => chunks.push(c));
+      ff.on('error', () => res.status(204).end());
+      ff.on('close', (code) => {
+        if (code === 0 && chunks.length) {
+          const buf = Buffer.concat(chunks);
+          const dataUrl = `data:image/jpeg;base64,${buf.toString('base64')}`;
+          return res.json({ thumbnailUrl: dataUrl });
+        }
+        return res.status(204).end();
+      });
+      return;
+    } catch {}
     return res.status(204).end();
   } catch {
     return res.status(204).end();

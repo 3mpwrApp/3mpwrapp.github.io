@@ -131,6 +131,7 @@ lastUpdated: 2025-09-07
 - Quick‑Add: Long‑press a day (grid or list) to show inline mood chips; tap to add instantly. If connected to the optional server, past days are backdated server‑side.
 - Details: Tap a day to open a modal with that day’s entries (edit/delete/add) and a quick summary (count + average mood).
 - Exports: CSV/JSON with field filters (Mood/Text). One‑tap “Export Week” and “Export Month” CSV.
+ - Default setting: Change the default tap behavior under Settings → Wellness Preferences.
 
 ## Saved
 
