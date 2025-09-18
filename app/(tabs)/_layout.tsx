@@ -214,6 +214,40 @@ export default function TabsLayout() {
         }}
       />
 
+      {/* Advocacy */}
+      <Tabs.Screen
+        name="advocacy/index"
+        options={{
+          title: t("nav.advocacy") || "Advocacy",
+          tabBarLabel: t("nav.advocacy") || "Advocacy",
+          tabBarAccessibilityLabel: `Advocacy tab`,
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "ribbon" : "ribbon-outline"}
+              color={color}
+              size={size + 2}
+            />
+          ),
+        }}
+      />
+
+      {/* Settings */}
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: t("nav.settings") || "Settings",
+          tabBarLabel: t("nav.settings") || "Settings",
+          tabBarAccessibilityLabel: `Settings tab`,
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons
+              name={focused ? "settings" : "settings-outline"}
+              color={color}
+              size={size + 2}
+            />
+          ),
+        }}
+      />
+
       {/* What's New */}
       <Tabs.Screen
         name="whatsnew/index"

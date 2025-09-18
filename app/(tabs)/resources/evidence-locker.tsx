@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { View, Text, StyleSheet, TextInput, FlatList, Alert, Pressable, Modal } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar";
@@ -240,7 +240,7 @@ export default function EvidenceLocker() {
           >
             <Text style={styles.buttonText}>Save to Cloud</Text>
           </A11yPressable>
-        )}
+        )}\n        {immUploading && (<><Text style={{ color: palette.text, marginTop: 6 }}>{immLabel || "Uploading"} {immPct}%</Text><ProgressBar value={immPct} /></>)}
         {user && (
           <A11yPressable
             accessibilityLabel="Save all to Cloud"
@@ -291,7 +291,10 @@ export default function EvidenceLocker() {
           </A11yPressable>
         )}
         {processing && (
-          <Text style={[styles.buttonText, { alignSelf: 'center', marginTop: 6, color: palette.text }]}>Processing queue: {progressPct}%</Text>
+          <View style={{ marginTop: 8 }}>
+            <Text style={{ color: palette.text, marginBottom: 4 }}>Processing queue: {progressPct}%</Text>
+            <ProgressBar value={progressPct} />
+          </View>
         )}
         {user && (
           <A11yPressable
@@ -364,7 +367,7 @@ export default function EvidenceLocker() {
         renderItem={({ item }) => (
           <View style={styles.noteRow}>
             <Text style={styles.noteText}>
-              {new Date(item.date).toLocaleString()} — {item.text}
+              {new Date(item.date).toLocaleString()} � {item.text}
             </Text>
           </View>
         )}

@@ -1,5 +1,5 @@
 import { db, auth } from '../firebase/config';
-import { addDoc, collection, doc, getDocs, limit, orderBy, query, serverTimestamp, setDoc } from 'firebase/firestore';
+import { addDoc, collection, doc, getDocs, limit, orderBy, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
 
 export type Thread = { id?: string; channel: string; title: string; body: string; authorUid: string; createdAt?: any; flagged?: boolean; hidden?: boolean };
 export type Comment = { id?: string; threadId: string; text: string; authorUid: string; createdAt?: any; flagged?: boolean; hidden?: boolean };
@@ -35,4 +35,27 @@ export async function touchPresence(room: string) {
 export async function setLastRead(room: string) {
   const uid = auth.currentUser?.uid; if (!uid) return;
   await setDoc(doc(db, 'chats', room, 'last_read', uid), { ts: serverTimestamp() }, { merge: true });
+}
+
+// Channel unread helpers (per-user lastRead stored in chats/channel_<slug>/last_read/{uid})
+export async function setChannelLastRead(slug: string) {
+  const uid = auth.currentUser?.uid; if (!uid) return;
+  await setDoc(doc(db, 'chats', `channel_${slug}`, 'last_read', uid), { ts: serverTimestamp() }, { merge: true });
+}
+
+export async function getChannelUnread(slug: string, max: number = 50): Promise<number> {
+  try {
+    const uid = auth.currentUser?.uid; if (!uid) return 0;
+    const lr = await getDocs(query(collection(db, 'chats', `channel_${slug}`, 'last_read')));
+    let lastTs = 0;
+    lr.forEach(d => { if (d.id === uid) { const t = (d.data() as any)?.ts?.toDate?.()?.getTime?.() || 0; if (t) lastTs = t; } });
+    // Fetch recent threads after lastTs
+    const col = collection(db, 'threads');
+    const q = lastTs
+      ? query(col, where('channel','==', slug), where('createdAt','>', new Date(lastTs)), orderBy('createdAt','desc'), limit(max))
+      : query(col, where('channel','==', slug), orderBy('createdAt','desc'), limit(max));
+    const snap = await getDocs(q);
+    if (!lastTs) return snap.size; // best effort
+    return snap.docs.filter(d => ((d.data() as any)?.createdAt?.toDate?.()?.getTime?.() || 0) > lastTs).length;
+  } catch { return 0; }
 }

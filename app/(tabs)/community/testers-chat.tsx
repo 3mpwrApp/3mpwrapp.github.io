@@ -4,7 +4,7 @@ import A11yPressable from '../../../components/A11yPressable';
 import { useAppPalette } from '../../../theme/usePalette';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { db, auth } from '../../../firebase/config';
-import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import { setTyping, touchPresence, setLastRead } from '../../../services/community';
 
 export const options = { href: null };
@@ -19,14 +19,49 @@ export default function TestersChat() {
   useFocusOnRefOnMount(titleRef);
   const [items, setItems] = React.useState<Message[]>([]);
   const [text, setText] = React.useState('');
+  const [present, setPresent] = React.useState<number>(0);
+  const [typing, setTypingUsers] = React.useState<number>(0);
+  const [unread, setUnread] = React.useState<number>(0);
+  const roomId = 'testers';
 
   React.useEffect(() => {
-    const col = collection(db, 'chats', 'testers', 'messages');
+    const col = collection(db, 'chats', roomId, 'messages');
     const q = query(col, orderBy('createdAt', 'desc'));
-    const unsub = onSnapshot(q, (snap) => {
-      setItems(snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) })) as Message[]);
+    let lastReadTs = 0;
+    const loadLastRead = async () => {
+      try {
+        const uid = auth.currentUser?.uid;
+        if (!uid) return 0;
+        const d = await getDoc(doc(db, 'chats', roomId, 'last_read', uid));
+        const ts = (d.data() as any)?.ts?.toDate?.()?.getTime?.() || 0;
+        return ts as number;
+      } catch { return 0; }
+    };
+    let unsubMessages: any;
+    loadLastRead().then((ts) => {
+      lastReadTs = ts;
+      unsubMessages = onSnapshot(q, (snap) => {
+        setItems(snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) })) as Message[]);
+        // compute unread
+        try {
+          const count = snap.docs.filter((d) => {
+            const t = (d.data() as any)?.createdAt?.toDate?.()?.getTime?.() || 0;
+            return t > lastReadTs;
+          }).length;
+          setUnread(count);
+        } catch {}
+      });
     });
-    return unsub;
+    // presence/typing listeners
+    const unsubPresence = onSnapshot(collection(db, 'chats', roomId, 'presence'), (snap) => setPresent(snap.size));
+    const unsubTyping = onSnapshot(collection(db, 'chats', roomId, 'typing'), (snap) => {
+      try {
+        const me = auth.currentUser?.uid;
+        const n = snap.docs.filter((d) => (d.data() as any)?.typing && d.id !== me).length;
+        setTypingUsers(n);
+      } catch { setTypingUsers(0); }
+    });
+    return () => { unsubMessages?.(); unsubPresence(); unsubTyping(); };
   }, []);
 
   // Presence heartbeat and mark as read when opening
@@ -54,7 +89,10 @@ export default function TestersChat() {
 
   return (
     <View style={s.container} accessibilityLabel="Testers chat" accessible>
-      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Testers Chat</Text>
+      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        Testers Chat {unread > 0 ? `(${unread} new)` : ''}
+      </Text>
+      <Text style={s.meta}>Online: {present}{typing > 0 ? ` — typing…` : ''}</Text>
       <FlatList
         inverted
         data={items}
@@ -94,6 +132,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     msgRow: { paddingHorizontal: 16, paddingVertical: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
     msgText: { color: palette.text },
     msgMeta: { color: palette.text, opacity: 0.6, fontSize: 12 },
+    meta: { color: palette.text, opacity: 0.7, paddingHorizontal: 16, marginBottom: 4 },
     inputRow: { flexDirection: 'row', padding: 12, alignItems: 'center', gap: 8 },
     input: { flex: 1, borderWidth: 1, borderColor: palette.muted, borderRadius: 999, paddingHorizontal: 12, color: palette.text },
     sendBtn: { backgroundColor: palette.primary, borderRadius: 999, paddingHorizontal: 16, paddingVertical: 10 },

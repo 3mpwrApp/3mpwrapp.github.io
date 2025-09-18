@@ -11,35 +11,48 @@ import {
 import { colors, type Palette } from "../../../theme/colors";
 import { useLocalSearchParams, router } from "expo-router";
 import type { Href } from "expo-router";
-import { useCommunity, CommunityProvider } from "../../../store/community";
+import { CommunityProvider } from "../../../store/community";
+import { db } from "../../../firebase/config";
+import { collection, query, where, orderBy, limit, getDocs, startAfter, updateDoc, doc } from "firebase/firestore";
 import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
 import { useAuth } from "../../../context/AuthContext";
 
 function ChannelInner() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
-  const { state, createThread } = useCommunity();
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
-  const channel = state.channels.find((c) => c.slug === slug);
-  const threads = state.threads.filter((t) => t.channelId === channel?.id);
   const [title, setTitle] = React.useState("");
-  const { user } = useAuth();
+  const { isAdmin } = useAuth();
+  const [items, setItems] = React.useState<any[]>([]);
+  const [cursor, setCursor] = React.useState<any>(null);
+  const [refreshing, setRefreshing] = React.useState(false);
+  const pageSize = 10;
 
-  if (!channel)
-    return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Channel not found</Text>
-      </View>
-    );
+  const loadPage = React.useCallback(async (reset = false) => {
+    if (!slug) return;
+    try {
+      const col = collection(db, 'threads');
+      let q = query(col, where('channel','==', String(slug)), orderBy('createdAt','desc'), limit(pageSize));
+      if (!reset && cursor) q = query(col, where('channel','==', String(slug)), orderBy('createdAt','desc'), startAfter(cursor), limit(pageSize));
+      const snap = await getDocs(q);
+      const newItems = snap.docs.map(d => ({ id: d.id, ...(d.data() as any) }));
+      setItems(reset ? newItems : [...items, ...newItems]);
+      setCursor(snap.docs[snap.docs.length-1] || null);
+    } catch {}
+  }, [slug, cursor, items]);
+
+  React.useEffect(() => { setItems([]); setCursor(null); loadPage(true); }, [slug]);
+
+  const onRefresh = React.useCallback(async () => { setRefreshing(true); await loadPage(true); setRefreshing(false); }, [loadPage]);
 
   return (
     <View
       style={styles.container}
-      accessibilityLabel={`Channel ${channel.title}`}
+      accessibilityLabel={`Channel ${slug}`}
       accessible
     >
-      <Text style={styles.title}>{channel.title}</Text>
+      <Text style={styles.title}>{String(slug)}</Text>
 
       <View
         style={styles.newBox}
@@ -56,12 +69,8 @@ function ChannelInner() {
         <Pressable
           onPress={() => {
             if (!title.trim()) return;
-            const ok = createThread(
-              channel.id,
-              title.trim(),
-              user?.displayName ?? user?.email ?? null,
-            );
-            if (ok) setTitle("");
+            // Compose navigates to composer to ensure consistent logic
+            router.push('/(tabs)/community/compose' as Href);
           }}
           accessibilityRole="button"
           accessibilityLabel="Create thread"
@@ -77,11 +86,7 @@ function ChannelInner() {
       </View>
 
       <FlatList
-        data={[...threads].sort(
-          (a, b) =>
-            (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0) ||
-            b.createdAt - a.createdAt,
-        )}
+        data={items}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable
@@ -99,10 +104,24 @@ function ChannelInner() {
           >
             <Text style={styles.threadTitle}>{item.title}</Text>
             <Text style={styles.threadMeta}>
-              {new Date(item.createdAt).toLocaleString()}
+              {new Date(item.createdAt?.toDate?.() || Date.now()).toLocaleString()}
             </Text>
+            {isAdmin && (
+              <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+                <Pressable onPress={async () => { try { await updateDoc(doc(db,'threads', item.id), { flagged: !(item.flagged===true) }); } catch {} }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}>
+                  <Text style={{ color: palette.text }}>{item.flagged ? 'Unflag' : 'Flag'}</Text>
+                </Pressable>
+                <Pressable onPress={async () => { try { await updateDoc(doc(db,'threads', item.id), { hidden: !(item.hidden===true) }); } catch {} }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}>
+                  <Text style={{ color: palette.text }}>{item.hidden ? 'Unhide' : 'Hide'}</Text>
+                </Pressable>
+              </View>
+            )}
           </Pressable>
         )}
+        onEndReached={() => loadPage(false)}
+        onEndReachedThreshold={0.6}
+        refreshing={refreshing}
+        onRefresh={onRefresh}
         ListEmptyComponent={
           <Text style={styles.threadMeta}>No threads yet.</Text>
         }
