@@ -1,4 +1,4 @@
-ï»¿import React from "react";
+import React from "react";
 import { View, Text, StyleSheet, SectionList } from "react-native";
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
@@ -183,7 +183,7 @@ export default function SavedScreen() {
           );
         }}
         ListEmptyComponent={
-          <Text style={styles.subtitle}>You haven't saved anything yet.</Text>
+          <Text style={styles.subtitle}>You haven’t saved anything yet.</Text>
         }
         contentContainerStyle={{ paddingVertical: 12 }}
       />
@@ -216,5 +216,6 @@ function createStyles(palette: Palette, factor: number) {
     sectionHeader: { fontWeight: "700", color: palette.text },
   });
 }
+
 
 
