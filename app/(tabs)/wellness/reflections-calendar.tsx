@@ -34,10 +34,14 @@ export default function ReflectionsCalendar() {
   const [exportOpts, setExportOpts] = React.useState<{ includeMood: boolean; includeText: boolean }>({ includeMood: true, includeText: true });
   const [quickKey, setQuickKey] = React.useState<string | null>(null);
   const [tapAction, setTapAction] = React.useState<'details'|'editor'>('details');
+  const [useServerBackdate, setUseServerBackdate] = React.useState(true);
   React.useEffect(() => {
     try {
       const A = require('@react-native-async-storage/async-storage').default;
-      (async () => { const val = await A.getItem('reflections.tapAction'); if (val==='editor' || val==='details') setTapAction(val); })();
+      (async () => {
+        const val = await A.getItem('reflections.tapAction'); if (val==='editor' || val==='details') setTapAction(val as any);
+        const b = await A.getItem('reflections.useServerBackdate'); if (b==='0') setUseServerBackdate(false);
+      })();
     } catch {}
   }, []);
   const saveTapPref = async (next: 'details'|'editor') => { setTapAction(next); try { const A = require('@react-native-async-storage/async-storage').default; await A.setItem('reflections.tapAction', next); } catch {} };
@@ -286,7 +290,7 @@ export default function ReflectionsCalendar() {
                         {quickKey===key && (
                           <View style={s.quickRow}>
                             {(['bad','ok','good','great'] as const).map(m => (
-                              <Pressable key={m} onPress={async(e)=>{ e.stopPropagation?.(); try { const { addReflectionAt } = await import('../../../services/wellness'); const iso = new Date(it.date.getFullYear(), it.date.getMonth(), it.date.getDate(), 12, 0, 0).toISOString(); await addReflectionAt(iso, m); setQuickKey(null); load(rangeDays); } catch {} }} style={[s.quickChip,{ backgroundColor: moodColors[m] }]}>
+                              <Pressable key={m} onPress={async(e)=>{ e.stopPropagation?.(); try { const { addReflectionAt, addReflection } = await import('../../../services/wellness'); const iso = new Date(it.date.getFullYear(), it.date.getMonth(), it.date.getDate(), 12, 0, 0).toISOString(); const today = new Date(); today.setHours(0,0,0,0); const isPast = new Date(iso).getTime() < today.getTime(); if (isPast && useServerBackdate) { await addReflectionAt(iso, m); } else { await addReflection(m); } setQuickKey(null); load(rangeDays); } catch {} }} style={[s.quickChip,{ backgroundColor: moodColors[m] }]}>
                                 <Text style={{ color: '#fff', fontSize: 10, fontWeight:'700' }}>{m.toUpperCase()}</Text>
                               </Pressable>
                             ))}
@@ -360,8 +364,16 @@ export default function ReflectionsCalendar() {
                     const { updateReflection } = await import('../../../services/wellness');
                     await updateReflection(editor.entry.id, { mood: editor.mood, note: editor.note });
                   } else {
-                    const { addReflection } = await import('../../../services/wellness');
-                    await addReflection(editor.mood, editor.note);
+                    const { addReflection, addReflectionAt } = await import('../../../services/wellness');
+                    if (editor.date) {
+                      const base = new Date(editor.date.getFullYear(), editor.date.getMonth(), editor.date.getDate(), 12, 0, 0).toISOString();
+                      const today = new Date(); today.setHours(0,0,0,0);
+                      const isPast = new Date(base).getTime() < today.getTime();
+                      if (isPast && useServerBackdate) await addReflectionAt(base, editor.mood, editor.note);
+                      else await addReflection(editor.mood, editor.note);
+                    } else {
+                      await addReflection(editor.mood, editor.note);
+                    }
                   }
                   setEditor({ open:false, date:null, entry: undefined, mood:'ok', note:'' });
                   // reload

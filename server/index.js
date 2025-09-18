@@ -46,6 +46,21 @@ app.get('/video-thumb', async (req, res) => {
   }
 });
 
+// Simple health endpoint (reports ffmpeg availability if possible)
+app.get('/health', async (_req, res) => {
+  try {
+    let ffmpeg = false;
+    try {
+      const { spawnSync } = await import('node:child_process');
+      const r = spawnSync('ffmpeg', ['-version'], { stdio: 'ignore' });
+      ffmpeg = r.status === 0;
+    } catch {}
+    res.json({ ok: true, ffmpeg });
+  } catch {
+    res.status(200).json({ ok: true, ffmpeg: false });
+  }
+});
+
 // Simple web crawler: fetch URL and extract title + meta description + links
 app.get('/crawl', async (req, res) => {
   try {

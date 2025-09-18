@@ -46,6 +46,10 @@ export default function EvidenceLocker() {
   const [video, setVideo] = React.useState<{ uri: string } | null>(null);
   const [gallery, setGallery] = React.useState(false);
   const [thumbs, setThumbs] = React.useState<Record<string,string>>({});
+  const [thumbEnabled, setThumbEnabled] = React.useState(true);
+  const [ffmpegReady, setFfmpegReady] = React.useState<boolean | null>(null);
+  React.useEffect(()=>{ (async()=>{ try { const A = require('@react-native-async-storage/async-storage').default; const v = await A.getItem('locker.videoThumbnails'); if (v==='0') setThumbEnabled(false); } catch {} })(); },[]);
+  React.useEffect(()=>{ (async()=>{ if (!thumbEnabled) return; try { const base = process.env.EXPO_PUBLIC_LLM_BASE || process.env.EXPO_PUBLIC_API_BASE; if (!base) return; const res = await fetch(`${String(base).replace(/\/$/,'')}/health`); if (res.ok) { const j = await res.json(); setFfmpegReady(!!j?.ffmpeg); } } catch { setFfmpegReady(null); } })(); },[thumbEnabled]);
   const getVideoThumb = React.useCallback(async (url: string) => {
     if (thumbs[url]) return thumbs[url];
     // Try YouTube derivation on client
@@ -452,6 +456,9 @@ export default function EvidenceLocker() {
           <Text style={styles.buttonText}>Export CSV</Text>
         </A11yPressable>
       </View>
+      {thumbEnabled && (
+        <Text style={{ color: palette.text, opacity: 0.7, marginTop: 4 }}>Video thumbnails: {ffmpegReady===null? 'checking…' : ffmpegReady? 'server ready' : 'server n/a'}</Text>
+      )}
       {/* Queue screen */}
       <A11yPressable onPress={() => (require('expo-router').router.push('/(tabs)/resources/evidence-queue'))} style={[styles.button, { marginTop: 8 }]}>
         <Text style={styles.buttonText}>Open Upload Queue</Text>
@@ -561,7 +568,7 @@ export default function EvidenceLocker() {
                   </View>
                 ) : Array.isArray(c.files) && c.files[0]?.url && (/\.(mp4|mov|m4v|webm)$/i.test(c.files[0].url) || String(c.files[0]?.type||'').startsWith('video')) ? (
                   <View style={{ marginTop: 6, flexDirection:'row', alignItems:'center', gap:8 }}>
-                    {(() => { const local = c.files[0]?.thumbnailUrl || c.files[0]?.thumb || c.files[0]?.preview || thumbs[c.files[0].url]; if (local) { try { const { Image } = require('expo-image'); return (<Image source={{ uri: local }} style={{ width: 100, height: 60, borderRadius: 6 }} />); } catch { return null; } } getVideoThumb(c.files[0].url); return null; })()}
+                    {thumbEnabled ? (() => { const local = c.files[0]?.thumbnailUrl || c.files[0]?.thumb || c.files[0]?.preview || thumbs[c.files[0].url]; if (local) { try { const { Image } = require('expo-image'); return (<Image source={{ uri: local }} style={{ width: 100, height: 60, borderRadius: 6 }} />); } catch { return null; } } getVideoThumb(c.files[0].url); return null; })() : null}
                     <A11yPressable onPress={()=> setVideo({ uri: c.files[0].url })} style={styles.secondary}><Text style={styles.buttonText}>Play</Text></A11yPressable>
                   </View>
                 ) : null}
