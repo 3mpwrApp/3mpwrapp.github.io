@@ -161,5 +161,21 @@ try {
       res.status(500).json({ error: 'notify-chat-post failed' });
     }
   });
+
+  // Backdate wellness reflection for a user (admin SDK)
+  app.post('/wellness/add-reflection', express.json(), async (req, res) => {
+    try {
+      if (!admin) return res.status(200).json({ status: 'noop' });
+      const { uid, mood, note = '', createdAtISO } = req.body || {};
+      if (!uid || !mood) return res.status(400).json({ error: 'uid and mood required' });
+      const firestore = (await admin?.firestore?.()) || null;
+      if (!firestore) return res.status(200).json({ status: 'noop' });
+      const ts = createdAtISO ? admin.firestore.Timestamp.fromDate(new Date(createdAtISO)) : admin.firestore.FieldValue.serverTimestamp();
+      const ref = await firestore.collection('users').doc(String(uid)).collection('wellness_reflections').add({ mood, note: String(note||''), createdAt: ts });
+      return res.json({ ok: true, id: ref.id });
+    } catch (e) {
+      return res.status(500).json({ error: 'add-reflection failed' });
+    }
+  });
 } catch {}
 /* eslint-disable import/no-unresolved */

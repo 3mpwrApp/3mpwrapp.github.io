@@ -30,6 +30,9 @@ export default function ReflectionsCalendar() {
     mood: Reflection['mood'];
     note: string;
   }>({ open: false, date: null, entry: undefined, mood: 'ok', note: '' });
+  const [details, setDetails] = React.useState<{ open: boolean; date: Date | null }>(()=> ({ open:false, date: null }));
+  const [exportOpts, setExportOpts] = React.useState<{ includeMood: boolean; includeText: boolean }>({ includeMood: true, includeText: true });
+  const [quickKey, setQuickKey] = React.useState<string | null>(null);
 
   const load = React.useCallback(async (nDays: number) => {
     try {
@@ -62,9 +65,13 @@ export default function ReflectionsCalendar() {
 
   const exportCSV = async () => {
     try {
-      const rows = [["date","mood","note"], ...days
+      const header = ["date"].concat(exportOpts.includeMood? ["mood"]: []).concat(exportOpts.includeText? ["note"]: []);
+      const rows = [header, ...computeActiveDates()
         .filter(d => !!d.entry)
-        .map(d => [d.date.toISOString().slice(0,10), String(d.entry!.mood), (d.entry!.note||"").replace(/\n/g,' ')])];
+        .map(d => [d.date.toISOString().slice(0,10)]
+          .concat(exportOpts.includeMood? [String(d.entry!.mood)]: [])
+          .concat(exportOpts.includeText? [(d.entry!.note||"").replace(/\n/g,' ')]: [])
+        )];
       const csv = rows.map(r=> r.map(x=>`"${String(x||'').replace(/"/g,'""')}"`).join(',')).join('\n');
       const FS = await import('expo-file-system');
       const p = FS.cacheDirectory + `reflections_${Date.now()}.csv`;
@@ -77,13 +84,32 @@ export default function ReflectionsCalendar() {
   const exportJSON = async () => {
     try {
       const active = computeActiveDates();
-      const payload = active.filter(d=>!!d.entry).map(d=> ({ date: d.date.toISOString(), mood: d.entry!.mood, note: d.entry!.note||'' }));
+      const payload = active.filter(d=>!!d.entry).map(d=> ({
+        date: d.date.toISOString(),
+        ...(exportOpts.includeMood ? { mood: d.entry!.mood } : {}),
+        ...(exportOpts.includeText ? { note: d.entry!.note || '' } : {}),
+      }));
       const FS = await import('expo-file-system');
       const p = FS.cacheDirectory + `reflections_${Date.now()}.json`;
       await FS.writeAsStringAsync(p, JSON.stringify(payload, null, 2));
       try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) { await Sharing.shareAsync(p); } else { Alert.alert('Saved', 'JSON saved to cache.'); } }
       catch { Alert.alert('Saved', 'JSON saved to cache (sharing unavailable).'); }
     } catch { Alert.alert('Export failed','Could not create JSON.'); }
+  };
+  const exportRangeCSV = async (daysBack: number) => {
+    try {
+      const today = new Date(); today.setHours(0,0,0,0);
+      const minTs = today.getTime() - (daysBack-1)*86400000;
+      const byDate = new Map<string, Reflection>();
+      entries.forEach(r => { const d = new Date(r.createdAt?.toDate?.() || Date.now()); const floor = new Date(d.getFullYear(), d.getMonth(), d.getDate()); if (floor.getTime() >= minTs) { const key = floor.toISOString().slice(0,10); if (!byDate.has(key)) byDate.set(key, r); } });
+      const header = ["date"].concat(exportOpts.includeMood? ["mood"]: []).concat(exportOpts.includeText? ["note"]: []);
+      const rows = [header, ...Array.from(byDate.entries()).sort((a,b)=> a[0].localeCompare(b[0])).map(([k, r]) => [k].concat(exportOpts.includeMood? [String(r.mood)]: []).concat(exportOpts.includeText? [String((r.note||'').replace(/\n/g,' '))]: []))];
+      const csv = rows.map(r=> r.map(x=>`"${String(x||'').replace(/"/g,'""')}"`).join(',')).join('\n');
+      const FS = await import('expo-file-system');
+      const p = FS.cacheDirectory + `reflections_${daysBack}d_${Date.now()}.csv`;
+      await FS.writeAsStringAsync(p, csv, { encoding: FS.EncodingType.UTF8 });
+      try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(p); } catch {}
+    } catch {}
   };
 
   const moods: Record<NonNullable<Reflection['mood']>, string> = {
@@ -195,6 +221,12 @@ export default function ReflectionsCalendar() {
         <Pressable onPress={exportJSON} accessibilityRole="button" style={[s.secondary]}>
           <Text style={s.secondaryText}>Export JSON</Text>
         </Pressable>
+        <Pressable onPress={()=> setExportOpts(o=> ({ ...o, includeMood: !o.includeMood }))} style={[s.secondary]}>
+          <Text style={s.secondaryText}>{exportOpts.includeMood? 'Mood: ON':'Mood: OFF'}</Text>
+        </Pressable>
+        <Pressable onPress={()=> setExportOpts(o=> ({ ...o, includeText: !o.includeText }))} style={[s.secondary]}>
+          <Text style={s.secondaryText}>{exportOpts.includeText? 'Text: ON':'Text: OFF'}</Text>
+        </Pressable>
       </View>
 
       <View style={{ flexDirection:'row', gap:8, alignItems:'center', marginTop: 8 }}>
@@ -223,6 +255,7 @@ export default function ReflectionsCalendar() {
                     const inMonth = it.date.getMonth() === monthAnchor.getMonth();
                     const bg = it.entry ? moodColors[it.entry.mood] : 'transparent';
                     const borderColor = inMonth ? palette.muted : palette.muted + '55';
+                    const key = `${it.date.getFullYear()}-${it.date.getMonth()}-${it.date.getDate()}`;
                     return (
                       <Pressable key={`c-${r+i}`} onPress={()=>{
                         setEditor({
@@ -232,9 +265,21 @@ export default function ReflectionsCalendar() {
                           mood: it.entry?.mood || 'ok',
                           note: it.entry?.note || '',
                         });
-                      }} style={[s.cell,{ borderColor }]} accessibilityRole="button" accessibilityLabel={`${it.date.toDateString()} ${it.entry? it.entry.mood: 'no entry'}`}> 
+                      }} onLongPress={()=> setQuickKey(key)} style={[s.cell,{ borderColor }]} accessibilityRole="button" accessibilityLabel={`${it.date.toDateString()} ${it.entry? it.entry.mood: 'no entry'}`}> 
                         <View style={[s.dot, { backgroundColor: bg, opacity: it.entry? 1 : 0 }]} />
                         <Text style={[s.cellText, !inMonth && { opacity: 0.4 }]}>{it.date.getDate()}</Text>
+                        {quickKey===key && (
+                          <View style={s.quickRow}>
+                            {(['bad','ok','good','great'] as const).map(m => (
+                              <Pressable key={m} onPress={async(e)=>{ e.stopPropagation?.(); try { const { addReflectionAt } = await import('../../../services/wellness'); const iso = new Date(it.date.getFullYear(), it.date.getMonth(), it.date.getDate(), 12, 0, 0).toISOString(); await addReflectionAt(iso, m); setQuickKey(null); load(rangeDays); } catch {} }} style={[s.quickChip,{ backgroundColor: moodColors[m] }]}>
+                                <Text style={{ color: '#fff', fontSize: 10, fontWeight:'700' }}>{m.toUpperCase()}</Text>
+                              </Pressable>
+                            ))}
+                            <Pressable onPress={(e)=> { e.stopPropagation?.(); setQuickKey(null); }} style={[s.quickChip,{ backgroundColor: palette.muted }]}>
+                              <Text style={{ color: '#000', fontSize: 10, fontWeight:'700' }}>X</Text>
+                            </Pressable>
+                          </View>
+                        )}
                       </Pressable>
                     );
                   })}
@@ -269,11 +314,11 @@ export default function ReflectionsCalendar() {
           data={computeActiveDates()}
           keyExtractor={(d)=> d.date.toISOString()}
           renderItem={({ item }) => (
-            <View style={s.dayRow}>
+            <Pressable style={s.dayRow} onPress={()=> setDetails({ open:true, date: item.date })} onLongPress={()=> setQuickKey(`${item.date.getFullYear()}-${item.date.getMonth()}-${item.date.getDate()}`)}>
               <Text style={s.dayDate}>{item.date.toDateString()}</Text>
               <Text style={s.dayMood}>{item.entry ? moods[item.entry.mood] : '—'}</Text>
               <Text style={s.dayNote} numberOfLines={1}>{item.entry?.note || ''}</Text>
-            </View>
+            </Pressable>
           )}
           ListEmptyComponent={<Text style={{ color: palette.text, opacity: 0.8 }}>{loading? 'Loading…' : 'No reflections yet.'}</Text>}
         />
@@ -318,6 +363,43 @@ export default function ReflectionsCalendar() {
         </Pressable>
       </Modal>
     )}
+    {/* Details Modal */}
+    {details.open && (
+      <Modal transparent animationType="fade" onRequestClose={()=> setDetails({ open:false, date:null })}>
+        <Pressable style={{ flex:1, backgroundColor:'#0008', alignItems:'center', justifyContent:'center' }} onPress={()=> setDetails({ open:false, date:null })}>
+          <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '94%', maxWidth: 560, maxHeight: '80%' }}>
+            <Text style={{ color: palette.text, fontWeight:'700', marginBottom: 8 }}>{details.date?.toDateString()}</Text>
+            <FlatList
+              data={entries.filter(r => { const d = new Date(r.createdAt?.toDate?.() || Date.now()); return details.date && d.toDateString() === details.date.toDateString(); })}
+              keyExtractor={(r:any)=> r.id}
+              renderItem={({ item:r }) => (
+                <View style={{ paddingVertical: 6, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted }}>
+                  <Text style={{ color: palette.text, fontWeight:'700' }}>{r.mood.toUpperCase()}</Text>
+                  {!!r.note && <Text style={{ color: palette.text }}>{r.note}</Text>}
+                  <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
+                    <Pressable onPress={async()=>{ try { const { deleteReflection } = await import('../../../services/wellness'); await deleteReflection(r.id!); load(rangeDays); } catch {} }} style={[s.secondary,{ paddingHorizontal: 12 }]}><Text style={s.secondaryText}>Delete</Text></Pressable>
+                    <Pressable onPress={()=> setEditor({ open:true, date: details.date!, entry: r, mood: r.mood, note: r.note||'' })} style={[s.secondary,{ paddingHorizontal: 12 }]}><Text style={s.secondaryText}>Edit</Text></Pressable>
+                  </View>
+                </View>
+              )}
+              ListEmptyComponent={<Text style={{ color: palette.text, opacity: 0.9 }}>No entries this day.</Text>}
+              style={{ maxHeight: 320 }}
+            />
+            <View style={{ flexDirection:'row', gap:8, marginTop: 10 }}>
+              <Pressable onPress={()=> setEditor({ open:true, date: details.date!, entry: undefined, mood:'ok', note:'' })} style={[s.button,{ flex:1 }]}><Text style={s.buttonText}>Add Reflection</Text></Pressable>
+              <Pressable onPress={()=> setDetails({ open:false, date:null })} style={[s.secondary,{ flex:1 }]}><Text style={s.secondaryText}>Close</Text></Pressable>
+            </View>
+          </View>
+        </Pressable>
+      </Modal>
+    )}
+    {/* Week/Month quick export */}
+    <View style={{ paddingHorizontal: 16, paddingBottom: 8 }}>
+      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+        <Pressable onPress={async()=>{ await exportRangeCSV(7); }} style={[s.secondary,{ paddingHorizontal:12 }]}><Text style={s.secondaryText}>Export Week CSV</Text></Pressable>
+        <Pressable onPress={async()=>{ await exportRangeCSV(30); }} style={[s.secondary,{ paddingHorizontal:12 }]}><Text style={s.secondaryText}>Export Month CSV</Text></Pressable>
+      </View>
+    </View>
   );
 }
 
@@ -349,5 +431,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     cellText: { color: palette.text },
     dot: { width: 14, height: 14, borderRadius: 7, marginBottom: 2 },
     legendSwatch: { width: 12, height: 12, borderRadius: 2 },
+    quickRow: { position:'absolute', left: 2, right: 2, bottom: 2, flexDirection:'row', gap:4, flexWrap:'wrap' },
+    quickChip: { borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 },
   });
 }

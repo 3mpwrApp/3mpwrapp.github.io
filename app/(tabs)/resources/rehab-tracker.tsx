@@ -45,6 +45,12 @@ export default function RehabTracker() {
     } catch { Alert.alert('Sync failed','Could not sync to cloud.'); }
   };
   const remove = async (id: string) => { await save(items.filter(i=>i.id!==id)); };
+  const exportJSON = async () => {
+    try { const FS = await import('expo-file-system'); const p = FS.cacheDirectory + `rehab_${Date.now()}.json`; await FS.writeAsStringAsync(p, JSON.stringify(items, null, 2)); const Share = await import('expo-sharing'); if (await Share.isAvailableAsync()) await Share.shareAsync(p); else Alert.alert('Saved','JSON saved to cache.'); } catch { Alert.alert('Export failed','Could not create JSON.'); }
+  };
+  const importTemplate = async () => {
+    try { const DP = await import('expo-document-picker'); const res = await DP.getDocumentAsync({ type:'application/json' }); const a = res?.assets?.[0]; if (!a?.uri) return; const FS = await import('expo-file-system'); const raw = await FS.readAsStringAsync(a.uri); const arr = JSON.parse(raw) as Entry[]; await save(arr.concat(items).slice(0, 200)); Alert.alert('Imported','Template imported.'); } catch { Alert.alert('Import failed','Could not import.'); }
+  };
 
   const loadCloud = async (more = false) => {
     try {
@@ -79,6 +85,11 @@ export default function RehabTracker() {
       </>
       )}
       {view==='local' ? (
+      <View>
+      <View style={{ flexDirection:'row', gap:8 }}>
+        <Pressable onPress={exportJSON} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Export JSON</Text></Pressable>
+        <Pressable onPress={importTemplate} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Import Template</Text></Pressable>
+      </View>
       <FlatList data={items} keyExtractor={i=>i.id} renderItem={({item:i})=> (
         <View style={s.card}>
           <Text style={s.cardTitle}>{i.date}</Text>
@@ -91,6 +102,7 @@ export default function RehabTracker() {
           </Pressable>
         </View>
       )} />
+      </View>
       ) : (
         <>
           {cloud.map(c => (
