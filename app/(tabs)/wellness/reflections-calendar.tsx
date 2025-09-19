@@ -21,8 +21,8 @@ export default function ReflectionsCalendar() {
   const [entries, setEntries] = React.useState<Reflection[]>([]);
   const [view, setView] = React.useState<'list'|'grid'>('grid');
   const [monthAnchor, setMonthAnchor] = React.useState<Date>(() => { const d=new Date(); return new Date(d.getFullYear(), d.getMonth(), 1); });
-  const [fromDate, setFromDate] = React.useState<Date | null>(null);
-  const [toDate, setToDate] = React.useState<Date | null>(null);
+  const [fromDate, setFromDate] = React.useState<string | null>(null);
+  const [toDate, setToDate] = React.useState<string | null>(null);
   const [editor, setEditor] = React.useState<{
     open: boolean;
     date: Date | null;
@@ -136,11 +136,13 @@ export default function ReflectionsCalendar() {
   } as const;
 
   function computeActiveDates(): Array<{ date: Date; entry?: Reflection }>{
+    const startTs = fromDate ? new Date(fromDate).setHours(0,0,0,0) : null;
+    const endTs = toDate ? new Date(toDate).setHours(23,59,59,999) : null;
     if (view === 'list') {
       const within = days.filter(d => {
         const t = d.date.getTime();
-        if (fromDate && t < new Date(fromDate.getFullYear(),fromDate.getMonth(),fromDate.getDate()).getTime()) return false;
-        if (toDate && t > new Date(toDate.getFullYear(),toDate.getMonth(),toDate.getDate(),23,59,59,999).getTime()) return false;
+        if (startTs !== null && t < startTs) return false;
+        if (endTs !== null && t > endTs) return false;
         return true;
       });
       return within;
@@ -165,8 +167,8 @@ export default function ReflectionsCalendar() {
       const entry = byKey.get(key);
       // filter by from/to if set
       const t = d.getTime();
-      if (fromDate && t < new Date(fromDate.getFullYear(),fromDate.getMonth(),fromDate.getDate()).getTime()) { cells.push({ date: d, entry: undefined }); continue; }
-      if (toDate && t > new Date(toDate.getFullYear(),toDate.getMonth(),toDate.getDate(),23,59,59,999).getTime()) { cells.push({ date: d, entry: undefined }); continue; }
+      if (startTs !== null && t < startTs) { cells.push({ date: d, entry: undefined }); continue; }
+      if (endTs !== null && t > endTs) { cells.push({ date: d, entry: undefined }); continue; }
       cells.push({ date: d, entry });
     }
     return cells;
@@ -262,7 +264,7 @@ export default function ReflectionsCalendar() {
           </View>
           {(() => {
             const cells = computeActiveDates();
-            const rows = [] as JSX.Element[];
+            const rows: React.ReactNode[] = [];
             for (let r=0; r<cells.length; r+=7) {
               const slice = cells.slice(r, r+7);
               rows.push(

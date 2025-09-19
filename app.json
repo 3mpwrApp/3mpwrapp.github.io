@@ -28,7 +28,7 @@
       },
       "edgeToEdgeEnabled": true,
       "package": "com.empowrapp2.empowrapp",
-      "blockScreenshots": true,
+      
       "allowBackup": false
     },
     "web": {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, Linking, Alert } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Linking } from 'react-native';
 import { exercises } from '../../../data/exercises';
 import { fetchExercisePlaylist } from '../../../services/youtube';
 import { useAppPalette } from '../../../theme/usePalette';

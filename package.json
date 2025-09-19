@@ -13,6 +13,7 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
+    "doctor": "expo doctor",
     "lint": "expo lint",
     "lint:ci": "eslint . --quiet",
     "typecheck:strict": "tsc -p tsconfig.strict.json --noEmit",
@@ -67,9 +68,11 @@
     "react-native-svg": "15.11.2",
     "react-native-web": "~0.20.0",
     "react-native-webview": "13.13.5",
-    "sentry-expo": "~7.1.1",
+    "sentry-expo": "~7.0.0",
     "tesseract.js": "^6.0.1",
-    "expo-audio": "~0.4.9"
+    "expo-audio": "~0.4.9",
+    "expo-application": "~6.1.5",
+    "expo-device": "~7.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

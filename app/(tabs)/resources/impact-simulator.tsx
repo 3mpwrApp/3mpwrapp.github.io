@@ -111,5 +111,8 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       marginTop: 8,
     },
     ctaText: { color: palette.onPrimary, fontWeight: "700" },
+    tiny: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, paddingHorizontal: 8, paddingVertical: 2, backgroundColor: palette.surface },
+    tinyText: { color: palette.text, fontWeight: '700' },
+    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
   });
 }
