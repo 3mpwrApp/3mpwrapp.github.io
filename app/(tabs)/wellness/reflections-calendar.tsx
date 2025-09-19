@@ -210,6 +210,7 @@ export default function ReflectionsCalendar() {
   }
 
   return (
+    <>
     <View style={s.container} accessibilityLabel="Reflections Calendar" accessible>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Reflections Calendar
@@ -438,6 +439,7 @@ export default function ReflectionsCalendar() {
         <Pressable onPress={async()=>{ await exportRangeCSV(30); }} style={[s.secondary,{ paddingHorizontal:12 }]}><Text style={s.secondaryText}>Export Month CSV</Text></Pressable>
       </View>
     </View>
+    </>
   );
 }
 
