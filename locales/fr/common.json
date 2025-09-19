@@ -24,6 +24,78 @@
     "subtitle": "Soutien. Défense. Autonomisation.",
     "welcome": "Bienvenue ! Votre hub pour communauté, éducation, outils de défense et balados — tout au même endroit !"
   },
+  "settings": {
+    "title": "Paramètres",
+    "accessibility": {
+      "title": "Accessibilité",
+      "subtitle": "Faites en sorte que l'application fonctionne mieux pour vous",
+      "highContrast": "Contraste élevé",
+      "highContrastDesc": "Augmente le contraste pour une meilleure lisibilité",
+      "textSize": "Taille du texte",
+      "textSizeDesc": "Ajustez la taille du texte dans toute l'application",
+      "screenReader": "Optimisé pour lecteur d'écran",
+      "screenReaderDesc": "Optimise le contenu pour les lecteurs d'écran",
+      "reduceMotion": "Réduire les mouvements",
+      "reduceMotionDesc": "Minimise les animations et transitions",
+      "focusIndicator": "Indicateurs de focus améliorés",
+      "focusIndicatorDesc": "Rend la navigation au clavier plus visible",
+      "tapTarget": "Taille minimale de zone tactile",
+      "tapTargetDesc": "Assure que les boutons sont faciles à toucher",
+      "dyslexiaFriendly": "Police adaptée à la dyslexie",
+      "dyslexiaFriendlyDesc": "Améliore l'espacement des lettres et la lisibilité",
+      "plainLanguage": "Langage simple",
+      "plainLanguageDesc": "Utilise un texte plus simple et plus clair",
+      "captions": "Sous-titres préférés",
+      "captionsDesc": "Affiche les sous-titres quand disponibles",
+      "voiceMode": "Mode vocal",
+      "voiceModeDesc": "Active la navigation vocale (bêta)"
+    },
+    "language": {
+      "title": "Langue",
+      "subtitle": "Choisissez votre langue préférée",
+      "english": "Anglais",
+      "french": "Français",
+      "spanish": "Espagnol"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Choisissez les alertes que vous recevez",
+      "enabled": "Activer les notifications",
+      "enabledDesc": "Recevoir les notifications de l'application",
+      "sound": "Son de notification",
+      "soundDesc": "Jouer un son avec les notifications",
+      "vibration": "Vibration",
+      "vibrationDesc": "Vibrer pour les notifications",
+      "emergency": "Alertes d'urgence",
+      "emergencyDesc": "Notifications de sécurité critiques",
+      "wellness": "Rappels de bien-être",
+      "wellnessDesc": "Vérifications quotidiennes de bien-être",
+      "events": "Rappels d'événements",
+      "eventsDesc": "Notifications d'événements à venir"
+    },
+    "emergency": {
+      "title": "Carte d'urgence portefeuille",
+      "subtitle": "Accès rapide aux informations importantes",
+      "description": "Créez une carte d'urgence numérique avec vos informations clés pour un accès rapide en cas de besoin"
+    },
+    "privacy": {
+      "title": "Confidentialité et sécurité",
+      "subtitle": "Contrôlez vos données et votre sécurité",
+      "passcode": "Exiger un code d'accès",
+      "passcodeDesc": "Verrouiller l'application avec un code d'accès",
+      "autoLock": "Délai de verrouillage automatique",
+      "autoLockDesc": "Minutes avant le verrouillage de l'application",
+      "analytics": "Refuser les analyses",
+      "analyticsDesc": "Ne pas partager les données d'utilisation"
+    },
+    "account": {
+      "title": "Gestion du compte",
+      "subtitle": "Gérez votre profil et vos préférences",
+      "displayName": "Nom d'affichage",
+      "password": "Changer le mot de passe",
+      "preferences": "Préférences"
+    }
+  },
   "wellness": {
     "tools": "Outils de bien-être"
   },
