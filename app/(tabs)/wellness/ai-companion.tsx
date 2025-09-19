@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, TextInput, Alert } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
+import { Alert, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import * as Notifier from '../../../services/notifications';
 import { addMood, listMoods } from '../../../services/companion';
+import * as Notifier from '../../../services/notifications';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -27,25 +27,77 @@ export default function AICompanion() {
     } catch { Alert.alert('Failed','Unable to schedule.'); }
   };
 
+  const exportMoods = async () => {
+    try {
+      const rows = [
+        ["date", "mood", "notes"],
+        ...moods.map((m) => [
+          new Date(m.createdAt?.toDate?.() || Date.now()).toLocaleString(),
+          m.mood,
+          m.notes || "",
+        ]),
+      ];
+      const csv = rows.map(r => r.map(x => `"${(x || "").replace(/"/g, '""')}"`).join(",")).join("\n");
+      await require("react-native-share").default.open({ message: csv, title: "Mood Log CSV" });
+    } catch {
+      Alert.alert("Export failed", "Could not share mood log.");
+    }
+  };
+
   return (
     <View style={s.container}>
-      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Adaptive AI Companion</Text>
-      <Text style={s.text}>Quick check-in: How are you today?</Text>
+      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Adaptive AI Companion screen">Adaptive AI Companion</Text>
+      <Text style={s.text} accessibilityLabel="Quick check-in prompt">Quick check-in: How are you today?</Text>
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         {[['good','😊'],['ok','😐'],['bad','😔']].map(([m, emoji]) => (
-          <Pressable key={m} onPress={async()=>{ try { await addMood(m as any, notes); setNotes(''); setMoods(await listMoods()); } catch {} }} style={[s.chip]}> 
+          <Pressable
+            key={m}
+            onPress={async()=>{ try { await addMood(m as any, notes); setNotes(''); setMoods(await listMoods()); } catch {} }}
+            style={[s.chip]}
+            accessibilityRole="button"
+            accessibilityLabel={`Log mood: ${m}`}
+          >
             <Text style={{ color: palette.text, fontWeight:'700' }}>{emoji} {m}</Text>
           </Pressable>
         ))}
       </View>
-      <TextInput placeholder="Notes (optional)" placeholderTextColor={palette.text+'77'} value={notes} onChangeText={setNotes} style={s.input} />
+      <TextInput
+        placeholder="Notes (optional)"
+        placeholderTextColor={palette.text+'77'}
+        value={notes}
+        onChangeText={setNotes}
+        style={s.input}
+        accessibilityLabel="Mood notes input"
+      />
       <View style={{ flexDirection:'row', gap:8, marginTop: 8, flexWrap:'wrap' }}>
-        <Pressable onPress={scheduleChecks} style={s.button}><Text style={s.buttonText}>Schedule daily check-ins</Text></Pressable>
-        <Pressable onPress={async()=>{ try { const d=new Date(); d.setMinutes(d.getMinutes()+1); await Notifier.scheduleAt(d, 'Hydrate', 'Sip water and stretch.'); Alert.alert('Scheduled','Hydration reminder in 1 min.'); } catch {} }} style={s.secondary}><Text style={{ color: palette.text, fontWeight:'700' }}>Hydration in 1 min</Text></Pressable>
+        <Pressable
+          onPress={scheduleChecks}
+          style={s.button}
+          accessibilityRole="button"
+          accessibilityLabel="Schedule daily check-ins"
+        >
+          <Text style={s.buttonText}>Schedule daily check-ins</Text>
+        </Pressable>
+        <Pressable
+          onPress={async()=>{ try { const d=new Date(); d.setMinutes(d.getMinutes()+1); await Notifier.scheduleAt(d, 'Hydrate', 'Sip water and stretch.'); Alert.alert('Scheduled','Hydration reminder in 1 min.'); } catch {} }}
+          style={s.secondary}
+          accessibilityRole="button"
+          accessibilityLabel="Schedule hydration reminder"
+        >
+          <Text style={{ color: palette.text, fontWeight:'700' }}>Hydration in 1 min</Text>
+        </Pressable>
+        <Pressable
+          onPress={exportMoods}
+          style={s.secondary}
+          accessibilityRole="button"
+          accessibilityLabel="Export mood log as CSV"
+        >
+          <Text style={{ color: palette.text, fontWeight:'700' }}>Export moods (CSV)</Text>
+        </Pressable>
       </View>
-      <Text style={[s.text,{ marginTop: 12, fontWeight:'700' }]}>Recent moods</Text>
+      <Text style={[s.text,{ marginTop: 12, fontWeight:'700' }]} accessibilityLabel="Recent moods">Recent moods</Text>
       {moods.slice(0,10).map(m => (
-        <Text key={m.id} style={s.text}>• {new Date(m.createdAt?.toDate?.()||Date.now()).toLocaleString()} — {m.mood}{m.notes? `: ${m.notes}`:''}</Text>
+        <Text key={m.id} style={s.text} accessibilityLabel={`Mood entry: ${m.mood}${m.notes? `, notes: ${m.notes}`:''}`}>• {new Date(m.createdAt?.toDate?.()||Date.now()).toLocaleString()} — {m.mood}{m.notes? `: ${m.notes}`:''}</Text>
       ))}
     </View>
   );

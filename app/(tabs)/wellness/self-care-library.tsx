@@ -1,24 +1,41 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  Linking,
-  ScrollView,
+    Linking,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Item = { label: string; url: string; description?: string };
 
 export const options = { href: null };
 
 export default function SelfCareLibrary() {
+  // Info card for discoverability
+  const openSuggestResource = () => {
+    Linking.openURL('mailto:hello@empowrapp.com?subject=Suggest%20Self-Care%20Resource');
+  };
+  // Export/share resources
+  const exportResources = async () => {
+    try {
+      const rows = [
+        ["Section", "Label", "URL", "Description"],
+        ...sections.flatMap(sec => sec.items.map(it => [sec.title, it.label, it.url, it.description || ""])),
+      ];
+      const csv = rows.map(r => r.map(x => `"${(x || "").replace(/"/g, '""')}"`).join(",")).join("\n");
+      await require("react-native-share").default.open({ message: csv, title: "Self-Care Resources CSV" });
+    } catch {
+      // Optionally show error
+    }
+  };
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
@@ -95,6 +112,30 @@ export default function SelfCareLibrary() {
       style={styles.container}
       contentContainerStyle={{ padding: 16 }}
     >
+      <View style={[styles.section, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12, padding: 12 }]}> 
+        <Text style={[styles.title, { color: palette.primary }]}>How to Use the Self-Care Library</Text>
+        <Text style={styles.tipText}>
+          Explore curated audio, video, and easy-read guides for accessible self-care. Tap any link to open. You can export the full list or suggest new resources.
+        </Text>
+        <Pressable
+          onPress={exportResources}
+          style={[styles.linkRow, { backgroundColor: palette.primary, borderRadius: 6, padding: 8, marginBottom: 6 }]}
+          accessibilityRole="button"
+          accessibilityLabel="Export self-care resources as CSV"
+          accessibilityHint="Shares the full list of resources as a CSV file for tracking or sharing."
+        >
+          <Text style={[styles.linkLabel, { color: palette.onPrimary }]}>Export Resources (CSV)</Text>
+        </Pressable>
+        <Pressable
+          onPress={openSuggestResource}
+          style={[styles.linkRow, { backgroundColor: palette.surface, borderRadius: 6, padding: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
+          accessibilityRole="button"
+          accessibilityLabel="Suggest a new self-care resource"
+          accessibilityHint="Opens email to suggest a new resource for the library."
+        >
+          <Text style={[styles.linkLabel, { color: palette.primary }]}>Suggest a Resource</Text>
+        </Pressable>
+      </View>
       <Text
         ref={titleRef}
         accessibilityRole="header"
@@ -119,6 +160,8 @@ export default function SelfCareLibrary() {
               key={it.label}
               onPress={() => open(it.url)}
               accessibilityRole="link"
+              accessibilityLabel={it.label}
+              accessibilityHint={it.description ? it.description : `Opens ${it.label}`}
               style={({ pressed }) => [
                 styles.linkRow,
                 pressed && { opacity: 0.85 },

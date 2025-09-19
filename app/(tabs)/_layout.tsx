@@ -1,10 +1,10 @@
-import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { useColorScheme, StyleSheet } from "react-native";
-import { colors } from "../../theme/colors";
-import { useTranslation } from "../../i18n";
-import { useWhatsNewBadge } from "../../hooks/useWhatsNewBadge";
+import { Tabs } from "expo-router";
+import { StyleSheet, useColorScheme } from "react-native";
 import VoiceController from "../../components/VoiceController";
+import { useWhatsNewBadge } from "../../hooks/useWhatsNewBadge";
+import { useTranslation } from "../../i18n";
+import { colors } from "../../theme/colors";
 
 export default function TabsLayout() {
   const colorScheme = useColorScheme();
@@ -148,17 +148,7 @@ export default function TabsLayout() {
         <Tabs.Screen name="resources/ai-decision-simplifier" options={{ href: null }} />
         <Tabs.Screen name="resources/[id]" options={{ href: null }} />
 
-        {/* Wellness */}
-        <Tabs.Screen name="wellness/work-balance-ai" options={{ href: null }} />
-        <Tabs.Screen name="wellness/grief-support" options={{ href: null }} />
-        <Tabs.Screen name="wellness/adaptive-meditation" options={{ href: null }} />
-        <Tabs.Screen name="wellness/symptom-tracker" options={{ href: null }} />
-        <Tabs.Screen name="wellness/sleep-energy-tracker" options={{ href: null }} />
-        <Tabs.Screen name="wellness/self-care-library" options={{ href: null }} />
-        <Tabs.Screen name="wellness/rehab-games" options={{ href: null }} />
-        <Tabs.Screen name="wellness/exercise-favorites" options={{ href: null }} />
-        <Tabs.Screen name="wellness/daily-planner" options={{ href: null }} />
-        <Tabs.Screen name="wellness/achievements" options={{ href: null }} />
+  // ...existing code...
 
         {/* Advocacy */}
         <Tabs.Screen name="advocacy/[id]" options={{ href: null }} />

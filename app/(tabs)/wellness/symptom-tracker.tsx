@@ -1,23 +1,23 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  ScrollView,
-  Pressable,
-  Share,
-  Alert,
+    Alert,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
+import PrivacyGate from "../../../components/PrivacyGate";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
-import PrivacyGate from "../../../components/PrivacyGate";
 import { usePrivacy } from "../../../store/privacy";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Entry = {
   id: string;
@@ -203,6 +203,21 @@ export default function SymptomTracker() {
       style={styles.container}
       contentContainerStyle={{ padding: 16 }}
     >
+      <View style={[styles.preview, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
+        <Text style={[styles.title, { color: palette.primary }]}>How to Use Symptom Tracker</Text>
+        <Text style={styles.previewText}>
+          Log your symptoms, pain, and impact on daily life. Export reports for advocacy or clinical use, and learn more about symptom tracking.
+        </Text>
+        <Pressable
+          onPress={() => require('react-native').Linking.openURL('https://empowrapp.com/symptom-tracker-info')}
+          style={[styles.button, { backgroundColor: palette.primary, marginBottom: 6 }]}
+          accessibilityRole="link"
+          accessibilityLabel="Learn more about symptom tracking"
+          accessibilityHint="Opens a page with more information about symptom tracking."
+        >
+          <Text style={[styles.buttonText, { color: palette.onPrimary }]}>Learn More</Text>
+        </Pressable>
+      </View>
       <Text
         ref={titleRef}
         accessibilityRole="header"
@@ -212,39 +227,15 @@ export default function SymptomTracker() {
         Symptom & Pain Tracker
       </Text>
       <Text style={styles.subtitle}>
-        Log entries and generate an exportable, advocacyÃ¢â‚¬â€˜oriented report.
+        Log entries and generate an exportable, advocacy-oriented report.
       </Text>
 
-      <Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} />
-      <Field
-        label="Pain (0Ã¢â‚¬â€œ10)"
-        value={pain}
-        onChangeText={setPain}
-        keyboardType="numeric"
-      />
-      <Field
-        label="Symptoms"
-        value={symptoms}
-        onChangeText={setSymptoms}
-        multiline
-      />
-      <Field
-        label="Impact on work/daily life"
-        value={impact}
-        onChangeText={setImpact}
-        multiline
-      />
-      <Field
-        label="Meds taken / changes"
-        value={meds}
-        onChangeText={setMeds}
-        multiline
-      />
-      <Field
-        label="Tags (comma-separated)"
-        value={tags}
-        onChangeText={setTags}
-      />
+      <Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} accessibilityLabel="Date input" accessibilityHint="Enter the date for your symptom entry." />
+      <Field label="Pain (0-10)" value={pain} onChangeText={setPain} keyboardType="numeric" accessibilityLabel="Pain input" accessibilityHint="Enter your pain level from 0 to 10." />
+      <Field label="Symptoms" value={symptoms} onChangeText={setSymptoms} multiline accessibilityLabel="Symptoms input" accessibilityHint="Describe your symptoms for this entry." />
+      <Field label="Impact on work/daily life" value={impact} onChangeText={setImpact} multiline accessibilityLabel="Impact input" accessibilityHint="Describe how symptoms affected your work or daily life." />
+      <Field label="Meds taken / changes" value={meds} onChangeText={setMeds} multiline accessibilityLabel="Meds input" accessibilityHint="List any medications taken or changes." />
+      <Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} accessibilityLabel="Tags input" accessibilityHint="Add tags to help categorize your entry." />
 
       {editingId ? (
         <View style={{ flexDirection: "row", gap: 8 }}>
@@ -466,7 +457,7 @@ export default function SymptomTracker() {
           }
         }}
       >
-        <Text style={styles.buttonText}>Export as .doc</Text>
+          <Text style={styles.buttonText}>Export as .doc</Text>
       </Pressable>
       <Pressable
         style={[styles.button, { marginTop: 8 }]}
@@ -492,7 +483,7 @@ export default function SymptomTracker() {
           );
         }}
       >
-        <Text style={styles.buttonText}>Export CSV</Text>
+          <Text style={styles.buttonText}>Export CSV</Text>
       </Pressable>
       <Pressable
         style={[styles.button, { marginTop: 8 }]}
@@ -527,7 +518,7 @@ export default function SymptomTracker() {
           }
         }}
       >
-        <Text style={styles.buttonText}>Export CSV File</Text>
+          <Text style={styles.buttonText}>Export CSV File</Text>
       </Pressable>
 
       <Text style={[styles.sectionTitle, { marginTop: 16 }]}>
@@ -616,19 +607,25 @@ export default function SymptomTracker() {
   return state.lockWellness ? <PrivacyGate>{body}</PrivacyGate> : body;
 }
 
+interface FieldProps {
+  label: string;
+  value: string;
+  onChangeText: (t: string) => void;
+  multiline?: boolean;
+  keyboardType?: any;
+  accessibilityLabel?: string;
+  accessibilityHint?: string;
+}
+
 function Field({
   label,
   value,
   onChangeText,
   multiline = false,
   keyboardType,
-}: {
-  label: string;
-  value: string;
-  onChangeText: (t: string) => void;
-  multiline?: boolean;
-  keyboardType?: any;
-}) {
+  accessibilityLabel,
+  accessibilityHint,
+}: FieldProps) {
   const palette = useAppPalette();
   return (
     <View style={{ marginBottom: 10 }}>
@@ -649,6 +646,8 @@ function Field({
           minHeight: 44,
         }}
         multiline={multiline}
+        accessibilityLabel={accessibilityLabel}
+        accessibilityHint={accessibilityHint}
       />
     </View>
   );

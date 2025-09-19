@@ -1,13 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, Linking } from 'react-native';
+import { Alert, Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import { exercises } from '../../../data/exercises';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { fetchExercisePlaylist } from '../../../services/youtube';
 import { useAppPalette } from '../../../theme/usePalette';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 
 export const options = { href: null };
 
 export default function ExerciseHub() {
+  const exportFavorites = async () => {
+    try {
+      const favList = combined.filter(e => favs.has(e.id));
+      const rows = [["title", "minutes", "url"], ...favList.map(e => [e.title, e.minutes, e.url])];
+      const csv = rows.map(r => r.map(x => `"${(x || "").replace(/"/g, '""')}"`).join(",")).join("\n");
+      await require("react-native-share").default.open({ message: csv, title: "Exercise Favorites CSV" });
+    } catch {
+      Alert.alert("Export failed", "Could not share favorites.");
+    }
+  };
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
@@ -40,20 +50,62 @@ export default function ExerciseHub() {
   const combined = (remote.length? remote: filtered).map((e:any)=> ({ ...e, id: e.id || e.title }));
   return (
     <View style={s.container}>
-      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Accessible Exercise Hub</Text>
-      <Pressable onPress={()=>{ try { const { router } = require('expo-router'); router.push('/(tabs)/wellness/exercise-favorites'); } catch {} }} style={[s.btn,{ alignSelf:'flex-start', marginTop: 6 }]}>
+      <View style={[s.card, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
+        <Text style={[s.cardTitle, { color: palette.primary }]}>How to Use Exercise Hub</Text>
+        <Text style={{ color: palette.text, opacity: 0.95 }}>
+          Browse accessible exercise videos and guides. Filter by audience, favorite exercises, and export your favorites as a CSV for sharing or tracking. Tap "Open Video" to watch, "☆ Favorite" to save, and "Export Favorites" to share your list.
+        </Text>
+      </View>
+      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Accessible Exercise Hub screen">Accessible Exercise Hub</Text>
+      <Pressable
+        onPress={()=>{ try { const { router } = require('expo-router'); router.push('/(tabs)/wellness/exercise-favorites'); } catch {} }}
+        style={[s.btn,{ alignSelf:'flex-start', marginTop: 6 }]
+        }
+        accessibilityRole="button"
+        accessibilityLabel="Open exercise favorites"
+        accessibilityHint="Shows your list of favorited exercises."
+      >
         <Text style={s.btnText}>Open Favorites</Text>
+      </Pressable>
+      <Pressable
+        onPress={exportFavorites}
+        style={[s.btn,{ alignSelf:'flex-start', marginTop: 6 }]}
+        accessibilityRole="button"
+        accessibilityLabel="Export exercise favorites as CSV"
+        accessibilityHint="Exports your favorited exercises as a CSV file for sharing or tracking."
+      >
+        <Text style={s.btnText}>Export Favorites (CSV)</Text>
       </Pressable>
       <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
         {(['all','wheelchair','limited-mobility','sensory-friendly'] as const).map(k => (
-          <Pressable key={k} onPress={()=>setAud(k)} style={[s.chip, aud===k && s.chipActive]}><Text style={{ color: aud===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{k}</Text></Pressable>
+          <Pressable
+            key={k}
+            onPress={()=>setAud(k)}
+            style={[s.chip, aud===k && s.chipActive]}
+            accessibilityRole="button"
+            accessibilityLabel={`Filter exercises for: ${k}`}
+          >
+            <Text style={{ color: aud===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{k}</Text>
+          </Pressable>
         ))}
       </View>
       {combined.map((e: any) => (
         <View key={e.id} style={s.card}>
-          <Text style={s.cardTitle}>{e.title} • {e.minutes} min</Text>
-          <Pressable onPress={()=>Linking.openURL(e.url)} style={s.btn}><Text style={s.btnText}>Open Video</Text></Pressable>
-          <Pressable onPress={()=>{ const next = new Set(favs); if (next.has(e.id)) next.delete(e.id); else next.add(e.id); saveFavs(next); }} style={[s.btn,{ marginLeft: 8 }]}>
+          <Text style={s.cardTitle} accessibilityLabel={`Exercise: ${e.title}, ${e.minutes} minutes`}>{e.title} • {e.minutes} min</Text>
+          <Pressable
+            onPress={()=>Linking.openURL(e.url)}
+            style={s.btn}
+            accessibilityRole="button"
+            accessibilityLabel={`Open exercise video for ${e.title}`}
+          >
+            <Text style={s.btnText}>Open Video</Text>
+          </Pressable>
+          <Pressable
+            onPress={()=>{ const next = new Set(favs); if (next.has(e.id)) next.delete(e.id); else next.add(e.id); saveFavs(next); }}
+            style={[s.btn,{ marginLeft: 8 }]}
+            accessibilityRole="button"
+            accessibilityLabel={favs.has(e.id)? `Remove ${e.title} from favorites`:`Add ${e.title} to favorites`}
+          >
             <Text style={s.btnText}>{favs.has(e.id)? '★ Favorited':'☆ Favorite'}</Text>
           </Pressable>
         </View>
@@ -64,8 +116,22 @@ export default function ExerciseHub() {
           {combined.filter(e=> favs.has(e.id)).map(e=> (
             <View key={`f-${e.id}`} style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginTop: 6 }}>
               <Text style={{ color: palette.text, flex:1 }}>{e.title}</Text>
-              <Pressable onPress={()=> Linking.openURL(e.url)} style={s.btn}><Text style={s.btnText}>Open</Text></Pressable>
-              <Pressable onPress={()=>{ const next = new Set(favs); next.delete(e.id); saveFavs(next); }} style={[s.btn,{ marginLeft: 6 }]}><Text style={s.btnText}>Remove</Text></Pressable>
+              <Pressable
+                onPress={()=> Linking.openURL(e.url)}
+                style={s.btn}
+                accessibilityRole="button"
+                accessibilityLabel={`Open favorite exercise video for ${e.title}`}
+              >
+                <Text style={s.btnText}>Open</Text>
+              </Pressable>
+              <Pressable
+                onPress={()=>{ const next = new Set(favs); next.delete(e.id); saveFavs(next); }}
+                style={[s.btn,{ marginLeft: 6 }]}
+                accessibilityRole="button"
+                accessibilityLabel={`Remove ${e.title} from favorites`}
+              >
+                <Text style={s.btnText}>Remove</Text>
+              </Pressable>
             </View>
           ))}
         </View>

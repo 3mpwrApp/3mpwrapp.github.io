@@ -1,23 +1,23 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  ScrollView,
-  Pressable,
-  Share,
-  Alert,
+    Alert,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
+import PrivacyGate from "../../../components/PrivacyGate";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
-import PrivacyGate from "../../../components/PrivacyGate";
 import { usePrivacy } from "../../../store/privacy";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Entry = {
   id: string;
@@ -209,6 +209,21 @@ export default function SleepEnergyTracker() {
       style={styles.container}
       contentContainerStyle={{ padding: 16 }}
     >
+      <View style={[styles.preview, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
+        <Text style={[styles.title, { color: palette.primary }]}>How to Use Sleep & Energy Tracker</Text>
+        <Text style={styles.previewText}>
+          Track your sleep and energy daily. Add notes and tags for patterns. Export summaries for clinicians or claims, and learn more about sleep health.
+        </Text>
+        <Pressable
+          onPress={() => require('react-native').Linking.openURL('https://empowrapp.com/sleep-energy-info')}
+          style={[styles.button, { backgroundColor: palette.primary, marginBottom: 6 }]}
+          accessibilityRole="link"
+          accessibilityLabel="Learn more about sleep and energy tracking"
+          accessibilityHint="Opens a page with more information about sleep health."
+        >
+          <Text style={[styles.buttonText, { color: palette.onPrimary }]}>Learn More</Text>
+        </Pressable>
+      </View>
       <Text
         ref={titleRef}
         accessibilityRole="header"
@@ -221,36 +236,12 @@ export default function SleepEnergyTracker() {
         Track sleep and energy; export summaries for clinicians or claims.
       </Text>
 
-      <Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} />
-      <Field
-        label="Sleep hours"
-        value={sleepHours}
-        onChangeText={setSleepHours}
-        keyboardType="numeric"
-      />
-      <Field
-        label="Sleep quality (1Ã¢â‚¬â€œ5)"
-        value={sleepQuality}
-        onChangeText={setSleepQuality}
-        keyboardType="numeric"
-      />
-      <Field
-        label="Energy (1Ã¢â‚¬â€œ5)"
-        value={energy}
-        onChangeText={setEnergy}
-        keyboardType="numeric"
-      />
-      <Field
-        label="Notes (insomnia, naps, pain, etc.)"
-        value={notes}
-        onChangeText={setNotes}
-        multiline
-      />
-      <Field
-        label="Tags (comma-separated)"
-        value={tags}
-        onChangeText={setTags}
-      />
+      <Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} accessibilityLabel="Date input" accessibilityHint="Enter the date for your sleep entry." />
+      <Field label="Sleep hours" value={sleepHours} onChangeText={setSleepHours} keyboardType="numeric" accessibilityLabel="Sleep hours input" accessibilityHint="Enter the number of hours you slept." />
+      <Field label="Sleep quality (1-5)" value={sleepQuality} onChangeText={setSleepQuality} keyboardType="numeric" accessibilityLabel="Sleep quality input" accessibilityHint="Enter your sleep quality from 1 to 5." />
+      <Field label="Energy (1-5)" value={energy} onChangeText={setEnergy} keyboardType="numeric" accessibilityLabel="Energy input" accessibilityHint="Enter your energy level from 1 to 5." />
+      <Field label="Notes (insomnia, naps, pain, etc.)" value={notes} onChangeText={setNotes} multiline accessibilityLabel="Notes input" accessibilityHint="Add any notes about your sleep, naps, pain, or other factors." />
+      <Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} accessibilityLabel="Tags input" accessibilityHint="Add tags to help categorize your entry." />
       {editingId ? (
         <View style={{ flexDirection: "row", gap: 8 }}>
           <Pressable
@@ -628,12 +619,16 @@ function Field({
   onChangeText,
   multiline = false,
   keyboardType,
+  accessibilityLabel,
+  accessibilityHint,
 }: {
   label: string;
   value: string;
   onChangeText: (t: string) => void;
   multiline?: boolean;
   keyboardType?: any;
+  accessibilityLabel?: string;
+  accessibilityHint?: string;
 }) {
   const palette = useAppPalette();
   return (
@@ -655,6 +650,8 @@ function Field({
           minHeight: 44,
         }}
         multiline={multiline}
+        accessibilityLabel={accessibilityLabel}
+        accessibilityHint={accessibilityHint}
       />
     </View>
   );

@@ -1,15 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, ScrollView, Share, Alert } from "react-native";
+import { Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
-import { useAppPalette } from "../../../theme/usePalette";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { addEvent } from "../../../services/calendar";
 import { buildICSMany } from "../../../services/ics";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Appt = { id: string; time: string; title: string };
 
@@ -41,6 +41,10 @@ function makePlan(
 export const options = { href: null };
 
 export default function DailyPlanner() {
+  // Info card for discoverability
+  const openLearnMore = () => {
+    require('react-native').Linking.openURL('https://empowrapp.com/daily-planner-info');
+  };
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
@@ -183,6 +187,21 @@ export default function DailyPlanner() {
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
+      <View style={[s.card, { backgroundColor: palette.surface, marginBottom: 12 }]}> 
+        <Text style={[s.title, { color: palette.primary }]}>How to Use the Daily Planner</Text>
+        <Text style={s.tip}>
+          This planner helps you schedule your day with adaptive pacing, rest breaks, and appointment tracking. Add appointments, build your plan, and export or share as needed.
+        </Text>
+        <A11yPressable
+          onPress={openLearnMore}
+          style={[s.button, { backgroundColor: palette.primary, marginBottom: 6 }]}
+          accessibilityRole="link"
+          accessibilityLabel="Learn more about daily planner"
+          accessibilityHint="Opens a page with more information about adaptive planning."
+        >
+          <Text style={[s.buttonText, { color: palette.onPrimary }]}>Learn More</Text>
+        </A11yPressable>
+      </View>
       <Text
         ref={titleRef}
         accessibilityRole="header"
@@ -197,6 +216,29 @@ export default function DailyPlanner() {
       </Text>
       <Text style={s.label}>Date (YYYYÃ¢â‚¬â€˜MMÃ¢â‚¬â€˜DD)</Text>
       <TextInput style={s.input} value={date} onChangeText={setDate} />
+      <TextInput
+        style={s.input}
+        value={date}
+        onChangeText={setDate}
+        accessibilityLabel="Date input"
+        accessibilityHint="Enter the date for your daily plan in YYYY-MM-DD format."
+      />
+      <TextInput
+        style={s.input}
+        value={time}
+        onChangeText={setTime}
+        placeholder="09:00"
+        accessibilityLabel="Time input"
+        accessibilityHint="Enter the time for your appointment."
+      />
+      <TextInput
+        style={s.input}
+        value={title}
+        onChangeText={setTitle}
+        placeholder="Physio / meeting / call"
+        accessibilityLabel="Appointment title input"
+        accessibilityHint="Enter the title or description for your appointment."
+      />
       <Text style={s.tip}>
         Recent averages Ã¢â‚¬â€ Pain: {painAvg.toFixed(1)} / 10; Energy:{" "}
         {energyAvg.toFixed(1)} / 5
@@ -218,6 +260,14 @@ export default function DailyPlanner() {
       <A11yPressable onPress={addAppt} style={s.button}>
         <Text style={s.buttonText}>Add</Text>
       </A11yPressable>
+      <A11yPressable
+        onPress={addAppt}
+        style={s.button}
+        accessibilityRole="button"
+        accessibilityLabel="Add appointment"
+        accessibilityHint="Adds the appointment to your daily plan."
+      >
+      </A11yPressable>
       <View style={{ height: 8 }} />
       {appts
         .sort((a, b) => a.time.localeCompare(b.time))
@@ -232,13 +282,37 @@ export default function DailyPlanner() {
       <A11yPressable onPress={build} style={s.button}>
         <Text style={s.buttonText}>Build plan</Text>
       </A11yPressable>
+      <A11yPressable
+        onPress={build}
+        style={s.button}
+        accessibilityRole="button"
+        accessibilityLabel="Build daily plan"
+        accessibilityHint="Generates your adaptive daily plan based on appointments and averages."
+      >
+      </A11yPressable>
       <View style={{ height: 8 }} />
       <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
         <A11yPressable onPress={morningTemplate} style={s.button}>
           <Text style={s.buttonText}>Morning template</Text>
         </A11yPressable>
+        <A11yPressable
+          onPress={morningTemplate}
+          style={s.button}
+          accessibilityRole="button"
+          accessibilityLabel="Add morning template"
+          accessibilityHint="Adds a morning routine template to your appointments."
+        >
+        </A11yPressable>
         <A11yPressable onPress={afternoonTemplate} style={s.button}>
           <Text style={s.buttonText}>Afternoon template</Text>
+        </A11yPressable>
+        <A11yPressable
+          onPress={afternoonTemplate}
+          style={s.button}
+          accessibilityRole="button"
+          accessibilityLabel="Add afternoon template"
+          accessibilityHint="Adds an afternoon routine template to your appointments."
+        >
         </A11yPressable>
       </View>
       {!!plan && (
@@ -249,19 +323,39 @@ export default function DailyPlanner() {
             <Text style={s.buttonText}>Share</Text>
           </A11yPressable>
           <A11yPressable
+            onPress={sharePlan}
+            style={[s.button, { marginTop: 8 }]}
+            accessibilityRole="button"
+            accessibilityLabel="Share daily plan"
+            accessibilityHint="Shares your daily plan using the system share dialog."
+          >
+          </A11yPressable>
+          <A11yPressable
             onPress={addRestToCalendar}
             style={[s.button, { marginTop: 8 }]}
+            accessibilityRole="button"
+            accessibilityLabel="Add rest break to calendar"
+            accessibilityHint="Adds a rest break to your calendar for today."
           >
-            <Text style={s.buttonText}>Add rest to calendar</Text>
           </A11yPressable>
           <A11yPressable onPress={addAllRests} style={[s.button, { marginTop: 8 }]}>
             <Text style={s.buttonText}>Add all suggested rests</Text>
           </A11yPressable>
           <A11yPressable
+            onPress={addAllRests}
+            style={[s.button, { marginTop: 8 }]}
+            accessibilityRole="button"
+            accessibilityLabel="Add all rest breaks to calendar"
+            accessibilityHint="Adds all suggested rest breaks to your calendar for today."
+          >
+          </A11yPressable>
+          <A11yPressable
             onPress={exportRestsICS}
             style={[s.button, { marginTop: 8 }]}
+            accessibilityRole="button"
+            accessibilityLabel="Export rest breaks as ICS"
+            accessibilityHint="Exports all rest breaks as an ICS calendar file for sharing or import."
           >
-            <Text style={s.buttonText}>Export rests (ICS)</Text>
           </A11yPressable>
         </View>
       )}
