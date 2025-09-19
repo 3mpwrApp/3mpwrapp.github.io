@@ -23,5 +23,9 @@ locales.forEach(loc=>{
   if(improved.length) console.log('  Improved sample:', improved.slice(0,5));
   if(regress.length) console.log('  Regressed sample:', regress.slice(0,5));
 });
-fs.writeFileSync(SNAP, JSON.stringify(current,null,2)+'\n','utf8');
-console.log('Snapshot updated at', SNAP);
+if(process.env.I18N_UPDATE_SNAPSHOT){
+  fs.writeFileSync(SNAP, JSON.stringify(current,null,2)+'\n','utf8');
+  console.log('Snapshot updated at', SNAP);
+} else {
+  console.log('Dry run (set I18N_UPDATE_SNAPSHOT=1 to write snapshot)');
+}

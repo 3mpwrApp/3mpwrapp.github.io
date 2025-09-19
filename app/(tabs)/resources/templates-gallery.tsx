@@ -1,10 +1,11 @@
 import * as Clipboard from "expo-clipboard";
 import React from "react";
-import { AccessibilityInfo, Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import { MAX_FONT_SCALE, useAnnounceOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
+import { announce } from '../../../utils/announce';
 let AsyncStorage: any; try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
 
 const EXAMPLES = [
@@ -45,7 +46,7 @@ export default function TemplatesGallery() {
       .replaceAll("[date]", vars.date || "[date]");
 
   const copyText = async (text: string) => {
-    try { await Clipboard.setStringAsync(text); AccessibilityInfo.announceForAccessibility?.("Copied"); } catch {}
+    try { await Clipboard.setStringAsync(text); announce("Copied"); } catch {}
   };
 
   const saveDraft = async (title: string, body: string) => {
@@ -56,7 +57,7 @@ export default function TemplatesGallery() {
       arr.unshift({ id: String(Date.now()), title, body, vars });
       await AsyncStorage?.setItem?.(key, JSON.stringify(arr.slice(0, 50)));
       setDrafts(arr.slice(0, 50));
-      AccessibilityInfo.announceForAccessibility?.("Draft saved");
+  announce("Draft saved");
     } catch {}
   };
 
@@ -100,7 +101,7 @@ export default function TemplatesGallery() {
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("templates.gallery.title","Template Gallery")}</Text>
       <View style={s.actionsRow}>
         <A11yPressable
-          onPress={() => { setShowInfo(v => !v); AccessibilityInfo.announceForAccessibility?.(showInfo ? t("common.hide","Hide") : t("templates.gallery.toggleInfo","Toggle instructions")); }}
+          onPress={() => { setShowInfo(v => !v); announce(showInfo ? t("common.hide","Hide") : t("templates.gallery.toggleInfo","Toggle instructions")); }}
           style={s.infoBtn}
           accessibilityRole="button"
           accessibilityLabel={t("templates.gallery.toggleInfo","Toggle instructions")}

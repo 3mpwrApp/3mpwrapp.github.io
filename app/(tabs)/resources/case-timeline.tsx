@@ -1,11 +1,12 @@
 import { Link } from "expo-router";
 import React from "react";
-import { AccessibilityInfo, Alert, ScrollView, Share, StyleSheet, Text, View } from "react-native";
+import { Alert, ScrollView, Share, StyleSheet, Text, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { useAppPalette } from "../../../theme/usePalette";
+import { announce } from "../../../utils/announce";
 
 type TimelineEntry = { id: string; date: string; title: string; details?: string };
 
@@ -28,8 +29,8 @@ export default function CaseTimelineTracker() {
   const addEntry = () => {
     if (!newTitle.trim()) { Alert.alert(t('templates.timeline.missingTitle','Missing title'), t('templates.timeline.missingTitleBody','Please enter a title for this event.')); return; }
     const item: TimelineEntry = { id: String(Date.now()), date: newDate, title: newTitle.trim(), details: newDetails.trim()||undefined };
-    setEntries(prev => [item, ...prev]);
-    AccessibilityInfo.announceForAccessibility?.(t('templates.timeline.entryAdded','Timeline entry added'));
+  setEntries(prev => [item, ...prev]);
+  announce(t('templates.timeline.entryAdded','Timeline entry added'));
     setNewTitle(''); setNewDetails('');
   };
 
@@ -55,7 +56,7 @@ export default function CaseTimelineTracker() {
         {t('templates.timeline.title','Case Timeline Tracker')}
       </Text>
       <View style={styles.actionsRow}>
-        <A11yPressable onPress={()=>{ setShowInfo(v=>!v); AccessibilityInfo.announceForAccessibility?.(showInfo? t('common.hidden','Hidden'): t('common.shown','Shown')); }} style={styles.secondaryBtn} accessibilityLabel={t('templates.timeline.toggleInfo','Toggle instructions')}><Text style={styles.secondaryBtnText}>{showInfo? t('common.hide','Hide'): t('common.show','Show')}</Text></A11yPressable>
+  <A11yPressable onPress={()=>{ setShowInfo(v=>!v); announce(showInfo? t('common.hidden','Hidden'): t('common.shown','Shown')); }} style={styles.secondaryBtn} accessibilityLabel={t('templates.timeline.toggleInfo','Toggle instructions')}><Text style={styles.secondaryBtnText}>{showInfo? t('common.hide','Hide'): t('common.show','Show')}</Text></A11yPressable>
         <A11yPressable onPress={copyAll} style={styles.secondaryBtn}><Text style={styles.secondaryBtnText}>{t('common.copyAll','Copy All')}</Text></A11yPressable>
         <A11yPressable onPress={shareAll} style={styles.secondaryBtn}><Text style={styles.secondaryBtnText}>{t('common.share','Share')}</Text></A11yPressable>
         <A11yPressable onPress={exportDoc} style={styles.secondaryBtn}><Text style={styles.secondaryBtnText}>{t('common.exportDoc','Export .DOC')}</Text></A11yPressable>
@@ -89,7 +90,7 @@ export default function CaseTimelineTracker() {
               const note = { id: String(Date.now()), text: t('templates.timeline.caseDocuments','Case documents'), date: new Date().toISOString(), tags: ['timeline','document'], files } as any;
               const raw = (await AsyncStorage?.getItem?.('evidence:notes:v1')) || '[]';
               const arr = JSON.parse(raw); arr.unshift(note); await AsyncStorage?.setItem?.('evidence:notes:v1', JSON.stringify(arr));
-              AccessibilityInfo.announceForAccessibility?.(t('templates.timeline.addedToLocker','Added to locker'));
+              announce(t('templates.timeline.addedToLocker','Added to locker'));
               try { const { router } = require('expo-router'); router.push('/(tabs)/resources/evidence-locker'); } catch {}
             } catch { Alert.alert(t('templates.timeline.addFailed','Add failed'), t('templates.timeline.addFailedBody','Could not add documents.')); }
           }}

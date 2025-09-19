@@ -1,6 +1,6 @@
 import * as Clipboard from "expo-clipboard";
 import React from "react";
-import { AccessibilityInfo, Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
@@ -8,6 +8,7 @@ import { logEvent } from "../../../services/analytics";
 import { buildCombinedEvidenceSummary } from "../../../services/insights";
 import { useProfileLocal } from "../../../store/profileLocal";
 import { useAppPalette } from "../../../theme/usePalette";
+import { announce } from '../../../utils/announce';
 
 export const options = { href: null };
 
@@ -34,7 +35,7 @@ export default function ReconsiderationLetter() {
     <ScrollView style={s.container} contentContainerStyle={{ padding: 20 }} accessibilityLabel={t("templates.letters.reconsideration.screenLabel","Reconsideration letter screen")}>      
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("templates.letters.reconsideration.title","Reconsideration Letter")}</Text>
       <View style={s.actionsRow}>
-        <A11yPressable onPress={() => { setShowInfo(v=>!v); AccessibilityInfo.announceForAccessibility?.(showInfo ? t("common.hide","Hide") : t("templates.letters.common.toggleInfo","Toggle instructions")); }} style={s.infoBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.toggleInfo","Toggle instructions")}><Text style={s.infoBtnText}>{showInfo ? t("common.hide","Hide") : t("common.show","Show")}</Text></A11yPressable>
+        <A11yPressable onPress={() => { setShowInfo(v=>!v); announce(showInfo ? t("common.hide","Hide") : t("templates.letters.common.toggleInfo","Toggle instructions")); }} style={s.infoBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.toggleInfo","Toggle instructions")}><Text style={s.infoBtnText}>{showInfo ? t("common.hide","Hide") : t("common.show","Show")}</Text></A11yPressable>
         <A11yPressable onPress={copyLetter} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.copy","Copy")}> <Text style={s.secondaryBtnText}>{t("templates.letters.common.copy","Copy")}</Text></A11yPressable>
         <A11yPressable onPress={insertTrackers} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.insertTrackers","Insert from trackers")}> <Text style={s.secondaryBtnText}>{t("templates.letters.common.insertTrackers","Insert from trackers")}</Text></A11yPressable>
         <A11yPressable onPress={exportPdf} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.exportPdf","Export as PDF")}> <Text style={s.secondaryBtnText}>{t("templates.letters.common.exportPdf","Export as PDF")}</Text></A11yPressable>

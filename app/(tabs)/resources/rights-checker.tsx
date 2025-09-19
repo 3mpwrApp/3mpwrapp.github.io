@@ -1,5 +1,5 @@
 import React from "react";
-import { AccessibilityInfo, Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
@@ -7,6 +7,7 @@ import {
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
+import { announce } from '../../../utils/announce';
 
 type Answer = "yes" | "no" | null;
 
@@ -68,7 +69,7 @@ export default function RightsChecker() {
     return lines.join("\n\n");
   }, [ready, q1, q2, q3, q4, q5]);
 
-  React.useEffect(()=>{ if(summary) AccessibilityInfo.announceForAccessibility?.(t('rightsChecker.summaryReady','Rights summary ready')); }, [summary]);
+  React.useEffect(()=>{ if(summary) announce(t('rightsChecker.summaryReady','Rights summary ready')); }, [summary]);
 
   const Choice = ({ label, value, selected, onPress }: { label: string; value: Answer; selected: Answer; onPress: () => void }) => (
     <Pressable
@@ -84,7 +85,7 @@ export default function RightsChecker() {
 
   const reset = () => {
     setQ1(null); setQ2(null); setQ3(null); setQ4(null); setQ5(null);
-    AccessibilityInfo.announceForAccessibility?.(t('rightsChecker.resetAnnounce','Answers cleared'));
+  announce(t('rightsChecker.resetAnnounce','Answers cleared'));
   };
 
   const copySummary = async () => {

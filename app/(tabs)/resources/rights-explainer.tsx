@@ -1,8 +1,9 @@
 import React from 'react';
-import { AccessibilityInfo, Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
+import { announce as globalAnnounce } from '../../../utils/announce';
 
 export const options = { href: null };
 
@@ -25,7 +26,7 @@ export default function RightsExplainer() {
   const sectionTitle = React.useMemo(()=> region === 'province' ? `${prov} – ${t('rightsExplainer.provincial','Provincial Rights')}` : region === 'canada' ? t('rightsExplainer.federal','Canada – Federal Rights') : t('rightsExplainer.international','Global – International Rights'), [region, prov, t]);
 
   const announce = (key:string, msg:string) => {
-    if(lastAnnouncedKey===key) return; setLastAnnouncedKey(key); AccessibilityInfo.announceForAccessibility?.(msg);
+    if(lastAnnouncedKey===key) return; setLastAnnouncedKey(key); globalAnnounce(msg);
   };
 
   React.useEffect(()=>{ announce('lang_'+lang, t('rightsExplainer.langChanged','Language changed')); }, [lang]);
@@ -49,7 +50,7 @@ export default function RightsExplainer() {
     catch { Alert.alert(t('rightsExplainer.shareError','Share failed'), t('rightsExplainer.shareErrorBody','Could not share rights explainer file.')); }
   };
 
-  const reset = () => { setLang('en'); setRegion('canada'); setProv('ON'); AccessibilityInfo.announceForAccessibility?.(t('rightsExplainer.resetAnnounce','Explainer reset to defaults')); };
+  const reset = () => { setLang('en'); setRegion('canada'); setProv('ON'); globalAnnounce(t('rightsExplainer.resetAnnounce','Explainer reset to defaults')); };
 
   // buildBlocks() invoked directly where needed; no local variable retained (clears TS6133)
 

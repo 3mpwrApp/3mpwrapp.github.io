@@ -1,7 +1,6 @@
 import * as FileSystem from "expo-file-system";
 import React from "react";
 import {
-  AccessibilityInfo,
   Alert,
   FlatList,
   KeyboardAvoidingView,
@@ -11,7 +10,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  View,
+  View
 } from "react-native";
 import {
   MAX_FONT_SCALE,
@@ -20,6 +19,7 @@ import {
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
+import { announce } from "../../../utils/announce";
 
 type Msg = { id: string; role: "bot" | "user"; text: string };
 
@@ -110,7 +110,7 @@ export default function AppealCoach() {
     };
     setMsgs((m) => [...m, u, a]);
     setTimeout(() => {
-      AccessibilityInfo.announceForAccessibility?.(t("appealCoach.newResponse", "New coach response ready"));
+  announce(t("appealCoach.newResponse", "New coach response ready"));
       // auto scroll after layout paint
       setTimeout(() => (listRef.current as any)?.scrollToEnd?.({ animated: true }), 30);
     }, 40);
@@ -134,7 +134,7 @@ export default function AppealCoach() {
 
   const clearConversation = () => {
     setMsgs(SEED);
-    AccessibilityInfo.announceForAccessibility?.(t("appealCoach.reset", "Conversation reset."));
+  announce(t("appealCoach.reset", "Conversation reset."));
     setTimeout(() => inputRef.current?.focus(), 50);
   };
 

@@ -1,8 +1,9 @@
 import React from "react";
-import { AccessibilityInfo, Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
+import { announce } from '../../../utils/announce';
 
 export default function JusticeAsAService() {
   const palette = useAppPalette();
@@ -40,7 +41,7 @@ export default function JusticeAsAService() {
       ];
       const output = lines.join('\n');
       setReport(output);
-      AccessibilityInfo.announceForAccessibility?.(t('justiceService.generatedAnnounce','Advocacy snapshot generated'));
+  announce(t('justiceService.generatedAnnounce','Advocacy snapshot generated'));
     } catch {
       setReport(t('justiceService.generateError','Unable to generate a local report.'));
       Alert.alert(t('justiceService.errorTitle','Generation failed'), t('justiceService.errorBody','Could not build snapshot.'));
@@ -51,7 +52,7 @@ export default function JusticeAsAService() {
 
   const reset = () => {
     setReport("");
-    AccessibilityInfo.announceForAccessibility?.(t('justiceService.resetAnnounce','Snapshot cleared'));
+  announce(t('justiceService.resetAnnounce','Snapshot cleared'));
   };
 
   const copyReport = async () => {

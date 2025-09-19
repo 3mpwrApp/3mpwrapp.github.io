@@ -1,10 +1,11 @@
 ﻿import { router } from "expo-router";
 import React from "react";
-import { AccessibilityInfo, Alert, FlatList, Modal, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, FlatList, Modal, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar";
 import { useAuth } from "../../../context/AuthContext";
 import { addEvidenceNote, deleteEvidenceDoc, listEvidencePage, uploadEvidenceFileWithProgress, type EvidenceFile } from "../../../services/evidence";
+import { announce } from "../../../utils/announce";
 // Linking added when preview links are active; safe to lazy import when needed
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
@@ -26,7 +27,7 @@ export default function EvidenceLocker() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  const { t } = useTranslation();
+  const { t, tCount } = useTranslation();
   useAnnounceOnMount(t("templates.evidenceLocker.title", "Evidence Locker"));
   useFocusOnRefOnMount(titleRef);
   const { isAdmin } = useAuth();
@@ -130,6 +131,12 @@ export default function EvidenceLocker() {
       >
         {t("templates.evidenceLocker.title", "Evidence Locker")}
       </Text>
+      <Text
+        style={styles.countLine}
+        accessibilityLabel={tCount('demoPlural.item', notes.length)}
+      >
+        {tCount('demoPlural.item', notes.length)}
+      </Text>
       {/* Actions / Info toggle row */}
       <View style={styles.actionsRow} accessible accessibilityLabel={t("templates.evidenceLocker.screenLabel", "Evidence Locker screen")}>        
         <Pressable
@@ -149,7 +156,7 @@ export default function EvidenceLocker() {
               const full = [header, ...notesLines].join('\n');
               // summary removed
               let Clipboard: any; try { Clipboard = require('expo-clipboard'); } catch {}
-              if (Clipboard?.setStringAsync) { await Clipboard.setStringAsync(full); Alert.alert(t("templates.evidenceLocker.copied", "Copied"), t("templates.evidenceLocker.copiedBody", "Notes copied to clipboard.")); AccessibilityInfo.announceForAccessibility?.(t("templates.evidenceLocker.copied", "Copied")); } else {
+              if (Clipboard?.setStringAsync) { await Clipboard.setStringAsync(full); Alert.alert(t("templates.evidenceLocker.copied", "Copied"), t("templates.evidenceLocker.copiedBody", "Notes copied to clipboard.")); announce(t("templates.evidenceLocker.copied", "Copied")); } else {
                 Alert.alert(t("templates.evidenceLocker.clipboardMissingTitle"), t("templates.evidenceLocker.clipboardMissingMsg"));
               }
             } catch {}
@@ -192,7 +199,7 @@ export default function EvidenceLocker() {
               t("templates.evidenceLocker.resetConfirm", "Clear all locker notes?"),
               [
                 { text: t("common.cancel", "Cancel"), style: 'cancel' },
-                { text: t("templates.evidenceLocker.reset", "Reset"), style: 'destructive', onPress: () => { setNotes([]); AccessibilityInfo.announceForAccessibility?.(t("templates.evidenceLocker.resetAnnounce", "Evidence locker cleared")); } }
+                { text: t("templates.evidenceLocker.reset", "Reset"), style: 'destructive', onPress: () => { setNotes([]); announce(t("templates.evidenceLocker.resetAnnounce", "Evidence locker cleared")); } }
               ]
             );
           }}
@@ -605,6 +612,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: "700", color: palette.text },
+  countLine: { marginTop: 2, color: palette.text, opacity: 0.75, fontSize: 14 },
     input: {
       borderWidth: 1,
       borderColor: palette.muted,

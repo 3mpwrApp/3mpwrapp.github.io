@@ -1,10 +1,11 @@
 import React from 'react';
-import { AccessibilityInfo, Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { clearQueue, getQueue, processQueue } from '../../../services/evidenceQueue';
 import { useAppPalette } from '../../../theme/usePalette';
+import { announce } from '../../../utils/announce';
 
 export const options = { href: null };
 
@@ -32,7 +33,7 @@ export default function EvidenceQueueScreen() {
       </Text>
       <View style={s.actionsRow}>
         <A11yPressable
-          onPress={() => { setShowInfo(v=>!v); AccessibilityInfo.announceForAccessibility?.(showInfo ? t('common.hide') : t('templates.evidenceLocker.toggleInfo','Toggle instructions')); }}
+          onPress={() => { setShowInfo(v=>!v); announce(showInfo ? t('common.hide') : t('templates.evidenceLocker.toggleInfo','Toggle instructions')); }}
           style={s.infoBtn}
           accessibilityRole="button"
           accessibilityLabel={t('templates.evidenceLocker.toggleInfo','Toggle instructions')}
@@ -40,7 +41,7 @@ export default function EvidenceQueueScreen() {
           <Text style={s.infoBtnText}>{showInfo ? t('common.hide','Hide') : t('common.show','Show')}</Text>
         </A11yPressable>
         <A11yPressable
-          onPress={async () => { try { setBusy(t('templates.evidenceLocker.processing','Processing')); await processQueue(()=>{}); await load(); Alert.alert(t('templates.evidenceLocker.exportReady','Export ready'), t('templates.evidenceLocker.resetAnnounce','Evidence locker cleared')); } catch { Alert.alert(t('templates.evidenceLocker.shareError','Share failed'), t('templates.evidenceLocker.shareErrorBody','Could not share evidence file.')); } finally { setBusy(null); AccessibilityInfo.announceForAccessibility?.(t('common.processQueue','Process Queue')); } }}
+          onPress={async () => { try { setBusy(t('templates.evidenceLocker.processing','Processing')); await processQueue(()=>{}); await load(); Alert.alert(t('templates.evidenceLocker.exportReady','Export ready'), t('templates.evidenceLocker.resetAnnounce','Evidence locker cleared')); } catch { Alert.alert(t('templates.evidenceLocker.shareError','Share failed'), t('templates.evidenceLocker.shareErrorBody','Could not share evidence file.')); } finally { setBusy(null); announce(t('common.processQueue','Process Queue')); } }}
           style={s.processBtn}
           accessibilityRole="button"
           accessibilityLabel={t('common.processQueue','Process Queue')}
@@ -48,7 +49,7 @@ export default function EvidenceQueueScreen() {
           <Text style={s.processBtnText}>{busy || t('common.processQueue','Process Queue')}</Text>
         </A11yPressable>
         <A11yPressable
-          onPress={async () => { await clearQueue(); await load(); AccessibilityInfo.announceForAccessibility?.(t('templates.evidenceLocker.resetAnnounce','Evidence locker cleared')); }}
+          onPress={async () => { await clearQueue(); await load(); announce(t('templates.evidenceLocker.resetAnnounce','Evidence locker cleared')); }}
           style={s.clearBtn}
           accessibilityRole="button"
           accessibilityLabel={t('common.deleteAll','Delete All')}

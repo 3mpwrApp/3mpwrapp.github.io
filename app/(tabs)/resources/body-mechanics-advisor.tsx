@@ -1,11 +1,12 @@
 import * as FileSystem from 'expo-file-system';
 import React from 'react';
-import { AccessibilityInfo, Alert, Share, StyleSheet, Text, View } from 'react-native';
+import { Alert, Share, StyleSheet, Text, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { analyzeBodyVideo } from '../../../services/body';
 import { useAppPalette } from '../../../theme/usePalette';
+import { announce } from '../../../utils/announce';
 
 export const options = { href: null };
 
@@ -34,7 +35,7 @@ export default function BodyMechanicsAdvisor() {
           t('bodyMechanics.tipPacing','Consider pacing: activity blocks of 20–30 minutes with breaks.'),
         ]);
       }
-      setTimeout(()=> AccessibilityInfo.announceForAccessibility?.(t('bodyMechanics.analysisComplete','Analysis complete. Suggestions ready.')), 50);
+  setTimeout(()=> announce(t('bodyMechanics.analysisComplete','Analysis complete. Suggestions ready.')), 50);
     } catch {
       Alert.alert(t('bodyMechanics.analysisFailTitle','Analysis failed'), t('bodyMechanics.analysisFailMsg','Could not analyze the video. Using default guidance.'));
       setAdvice([

@@ -39,7 +39,12 @@
     ,"i18n:progress": "node ./scripts/i18n-progress-diff.js",
   "i18n:export:open": "I18N_OPEN=1 node ./scripts/i18n-export-untranslated.js",
   "i18n:plural": "node ./scripts/i18n-plural-check.js",
-  "i18n:test": "npm run i18n:diff && npm run i18n:plural && npm run i18n:threshold && npm run i18n:assert"
+  "i18n:test": "npm run i18n:diff && npm run i18n:plural && npm run i18n:threshold && npm run i18n:assert",
+  "i18n:progress:update": "set I18N_UPDATE_SNAPSHOT=1&& node ./scripts/i18n-progress-diff.js",
+  "i18n:orphans": "node ./scripts/i18n-orphans.js",
+  "test": "jest --passWithNoTests",
+  "test:watch": "jest --watch",
+  "test:ci": "jest --runInBand"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -90,10 +95,14 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
+    "@types/jest": "^29.5.12",
+  "@testing-library/react-hooks": "^8.0.1",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "firebase-admin": "^13.5.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
     "typescript": "~5.8.3"
   },
   "overrides": {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { AccessibilityInfo, Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -8,6 +8,7 @@ import { deleteDeadline, listDeadlines, updateDeadline, type Deadline } from '..
 import { buildICS, buildICSMany, parseICS } from '../../../services/ics';
 import * as Notifier from '../../../services/notifications';
 import { useAppPalette } from '../../../theme/usePalette';
+import { announce } from '../../../utils/announce';
 
 export const options = { href: null };
 
@@ -136,7 +137,7 @@ export default function DeadlinesList() {
                 const { updateDeadline } = await import('../../../services/deadlines');
                 await Promise.all(items.map((d) => updateDeadline(d.id!, { done: true })));
                 load();
-                AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.bulkMarkedDone','All marked done'));
+                announce(t('templates.deadlines.bulkMarkedDone','All marked done'));
               } catch { Alert.alert(t('templates.deadlines.bulkUpdateFailed','Bulk update failed'), t('templates.deadlines.bulkUpdateFailedBody','Unable to mark all done.')); }
             }}
             style={s.button}
@@ -149,7 +150,7 @@ export default function DeadlinesList() {
                 const { updateDeadline } = await import('../../../services/deadlines');
                 await Promise.all(items.map((d) => updateDeadline(d.id!, { done: false })));
                 load();
-                AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.bulkMarkedUndone','All marked not-done'));
+                announce(t('templates.deadlines.bulkMarkedUndone','All marked not-done'));
               } catch { Alert.alert(t('templates.deadlines.bulkUpdateFailed','Bulk update failed'), t('templates.deadlines.bulkUpdateFailedBody','Unable to mark all not-done.')); }
             }}
             style={s.button}
@@ -171,7 +172,7 @@ export default function DeadlinesList() {
               });
               await Promise.all(adds);
               load();
-              AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.recurringAdded','Added'));
+              announce(t('templates.deadlines.recurringAdded','Added'));
             } catch { Alert.alert(t('templates.deadlines.addFailed','Add failed'), t('templates.deadlines.addFailedWeeklyBody','Could not add weekly reminders.')); }
           }}
           style={s.button}
@@ -191,7 +192,7 @@ export default function DeadlinesList() {
               });
               await Promise.all(adds);
               load();
-              AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.recurringAdded','Added'));
+              announce(t('templates.deadlines.recurringAdded','Added'));
             } catch { Alert.alert(t('templates.deadlines.addFailed','Add failed'), t('templates.deadlines.addFailedMonthlyBody','Could not add monthly reminders.')); }
           }}
           style={s.button}
@@ -222,7 +223,7 @@ export default function DeadlinesList() {
                     <View style={{ flexDirection: 'row', gap: 8 }}>
                       <A11yPressable
                         onPress={async () => {
-                          try { await updateDeadline(d.id!, { title: editTitle, dueAt: new Date(editDate).toISOString() }); setEditingId(null); load(); AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.updated','Updated')); }
+                          try { await updateDeadline(d.id!, { title: editTitle, dueAt: new Date(editDate).toISOString() }); setEditingId(null); load(); announce(t('templates.deadlines.updated','Updated')); }
                           catch { Alert.alert(t('templates.deadlines.updateFailed','Update failed'), t('templates.deadlines.updateFailedBody','Check your inputs.')); }
                         }}
                         style={s.smallBtn}
@@ -256,7 +257,7 @@ export default function DeadlinesList() {
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {
-                      try { await updateDeadline(d.id!, { done: !d.done }); load(); AccessibilityInfo.announceForAccessibility?.(d.done ? t('templates.deadlines.markedUndone','Marked undone') : t('templates.deadlines.markedDone','Marked done')); }
+                      try { await updateDeadline(d.id!, { done: !d.done }); load(); announce(d.done ? t('templates.deadlines.markedUndone','Marked undone') : t('templates.deadlines.markedDone','Marked done')); }
                       catch { Alert.alert(t('templates.deadlines.updateFailed','Update failed'), t('templates.deadlines.updateFailedBody','Unable to update.')); }
                     }}
                     style={s.smallBtn}
@@ -296,7 +297,7 @@ export default function DeadlinesList() {
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {
-                      try { await deleteDeadline(d.id!); setItems((prev) => prev.filter((x) => x.id !== d.id)); AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.deleted','Deleted')); }
+                      try { await deleteDeadline(d.id!); setItems((prev) => prev.filter((x) => x.id !== d.id)); announce(t('templates.deadlines.deleted','Deleted')); }
                       catch { Alert.alert(t('templates.deadlines.deleteFailed','Delete failed'), t('templates.deadlines.deleteFailedBody','Unable to delete.')); }
                     }}
                     style={s.smallBtn}

@@ -1,10 +1,11 @@
 import * as Clipboard from 'expo-clipboard';
 import React from "react";
-import { AccessibilityInfo, Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
+import { announce } from "../../../utils/announce";
 
 type Kind = "WCB" | "LTD" | "CPP-D" | "Accommodation";
 
@@ -54,7 +55,7 @@ export default function EvidenceChecklist() {
   const completed = React.useRef<Set<number>>(new Set());
   const [, force] = React.useState(0);
 
-  const toggleLine = (i:number) => { if(completed.current.has(i)) completed.current.delete(i); else completed.current.add(i); force(x=>x+1); AccessibilityInfo.announceForAccessibility?.(t('templates.checklist.progressAnnounce','Progress updated')); };
+  const toggleLine = (i:number) => { if(completed.current.has(i)) completed.current.delete(i); else completed.current.add(i); force(x=>x+1); announce(t('templates.checklist.progressAnnounce','Progress updated')); };
   const progressPct = Math.round((completed.current.size / lines.length) * 100);
 
   const buildSummary = () => {
@@ -63,13 +64,13 @@ export default function EvidenceChecklist() {
 
   const copySummary = async () => { try { await Clipboard.setStringAsync(buildSummary()); Alert.alert(t('templates.checklist.copied','Copied'), t('templates.checklist.copiedBody','Checklist summary copied.')); } catch { Alert.alert(t('templates.checklist.clipboardNA','Clipboard not available'), t('templates.checklist.clipboardNABody','Install expo-clipboard in a dev build to enable copy.')); } };
   const exportSummary = async () => { try { const FS = await import('expo-file-system'); const Share = await import('expo-sharing').catch(()=>null); const path = FS.cacheDirectory + `evidence_checklist_${Date.now()}.txt`; await FS.writeAsStringAsync(path, buildSummary()); if(Share?.isAvailableAsync && await Share.isAvailableAsync()) await Share.shareAsync(path); else Alert.alert(t('templates.checklist.shareUnavailable','Share unavailable'), t('templates.checklist.shareUnavailableBody','System share sheet not available.')); } catch { Alert.alert(t('templates.checklist.shareError','Share failed'), t('templates.checklist.shareErrorBody','Could not share checklist file.')); } };
-  const reset = () => { completed.current.clear(); force(x=>x+1); AccessibilityInfo.announceForAccessibility?.(t('templates.checklist.resetAnnounce','Checklist reset')); };
+  const reset = () => { completed.current.clear(); force(x=>x+1); announce(t('templates.checklist.resetAnnounce','Checklist reset')); };
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }} accessibilityLabel={t('templates.checklist.screenLabel','Evidence checklist screen')}>
       <Text ref={titleRef} accessibilityRole='header' style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('templates.checklist.title','Evidence Checklist')}</Text>
       <View style={s.actionsRow}>
-        <A11yPressable onPress={()=>{ setShowInfo(v=>!v); AccessibilityInfo.announceForAccessibility?.(showInfo? t('common.hide','Hide') : t('templates.checklist.toggleInfo','Toggle instructions')); }} style={s.infoBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.toggleInfo','Toggle instructions')}><Text style={s.infoBtnText}>{showInfo ? t('common.hide','Hide') : t('common.show','Show')}</Text></A11yPressable>
+  <A11yPressable onPress={()=>{ setShowInfo(v=>!v); announce(showInfo? t('common.hide','Hide') : t('templates.checklist.toggleInfo','Toggle instructions')); }} style={s.infoBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.toggleInfo','Toggle instructions')}><Text style={s.infoBtnText}>{showInfo ? t('common.hide','Hide') : t('common.show','Show')}</Text></A11yPressable>
         <A11yPressable onPress={copySummary} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.copy','Copy summary')}><Text style={s.secondaryBtnText}>{t('templates.checklist.copy','Copy summary')}</Text></A11yPressable>
         <A11yPressable onPress={exportSummary} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.export','Export')}><Text style={s.secondaryBtnText}>{t('templates.checklist.export','Export')}</Text></A11yPressable>
         <A11yPressable onPress={reset} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.reset','Reset')}><Text style={s.secondaryBtnText}>{t('templates.checklist.reset','Reset')}</Text></A11yPressable>
@@ -85,7 +86,7 @@ export default function EvidenceChecklist() {
       <Text style={s.subtitle}>{t('templates.checklist.subtitle','Pick a process to view a tailored checklist.')}</Text>
       <View style={s.chipRow}>
         {(['WCB','LTD','CPP-D','Accommodation'] as Kind[]).map(k => (
-          <Pressable key={k} onPress={()=>{ setKind(k); AccessibilityInfo.announceForAccessibility?.(t('templates.checklist.kindChanged','Checklist type changed')); }} accessibilityRole='button' accessibilityState={{ selected: kind===k }} style={[s.chip, kind===k && s.chipActive]}>
+          <Pressable key={k} onPress={()=>{ setKind(k); announce(t('templates.checklist.kindChanged','Checklist type changed')); }} accessibilityRole='button' accessibilityState={{ selected: kind===k }} style={[s.chip, kind===k && s.chipActive]}>
             <Text style={[s.chipText, kind===k && s.chipTextActive]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{k}</Text>
           </Pressable>
         ))}

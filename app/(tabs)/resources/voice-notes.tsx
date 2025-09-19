@@ -1,11 +1,12 @@
 import React from "react";
-import { AccessibilityInfo, Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { transcribeAudio } from "../../../services/stt";
 import { useAppPalette } from "../../../theme/usePalette";
+import { announce } from '../../../utils/announce';
 
 type Note = { id: string; date: string; who?: string; topic?: string; summary?: string; audioUri?: string };
 export const options = { href: null };
@@ -38,16 +39,16 @@ export default function VoiceNotes() {
       await rec.prepareToRecordAsync(Audio.RecordingOptionsPresets.HIGH_QUALITY);
       await rec.startAsync();
       setRecording(rec);
-      AccessibilityInfo.announceForAccessibility?.(t('templates.voice.recording','Recording...'));
+  announce(t('templates.voice.recording','Recording...'));
     } catch { Alert.alert(t('templates.voice.recordUnavailable','Recording unavailable'), t('templates.voice.recordUnavailableBody','Rebuild with expo-av to enable.')); }
   };
-  const stop = async () => { try { await recording.stopAndUnloadAsync(); const uri = recording.getURI(); setAudioUri(uri||undefined); setRecording(null); AccessibilityInfo.announceForAccessibility?.(t('templates.voice.recordingStopped','Recording stopped')); } catch {} };
+  const stop = async () => { try { await recording.stopAndUnloadAsync(); const uri = recording.getURI(); setAudioUri(uri||undefined); setRecording(null); announce(t('templates.voice.recordingStopped','Recording stopped')); } catch {} };
 
   const save = () => {
     const n: Note = { id: String(Date.now()), date, who, topic, summary, audioUri };
     setNotes(prev => [n, ...prev]);
     setWho(''); setTopic(''); setSummary(''); setAudioUri(undefined);
-    AccessibilityInfo.announceForAccessibility?.(t('templates.voice.noteSaved','Voice note saved'));
+  announce(t('templates.voice.noteSaved','Voice note saved'));
   };
 
   const caseLog = (n: Note) => `${t('templates.voice.date','Date')}: ${n.date}\n${t('templates.voice.who','Who')}: ${n.who || '-'}\n${t('templates.voice.topic','Topic')}: ${n.topic || '-'}\n${t('templates.voice.summary','Summary')}: ${n.summary || '-'}${n.audioUri? `\n${t('templates.voice.audio','Audio')}: ${n.audioUri}`:''}`;

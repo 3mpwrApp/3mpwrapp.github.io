@@ -1,33 +1,34 @@
-import React from "react";
-import { AccessibilityInfo, View, Text, StyleSheet, AppState } from "react-native";
-import { Stack, usePathname } from "expo-router";
-import { useFonts } from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { useFonts } from "expo-font";
+import { Stack, usePathname } from "expo-router";
+import React from "react";
+import { AccessibilityInfo, AppState, StyleSheet, Text, View } from "react-native";
+import { announce } from "../utils/announce";
 
-import Header from "../components/ThemedHeader";
-import Footer from "../components/ThemedFooter";
-import TermsGate from "../components/TermsGate";
 import ChangelogGate from "../components/ChangelogGate";
+import TermsGate from "../components/TermsGate";
+import Footer from "../components/ThemedFooter";
+import Header from "../components/ThemedHeader";
 
-import { FavoritesProvider } from "../store/favorites";
 import { CountsProvider } from "../store/counts";
-import { RefreshProvider } from "../store/refresh";
+import { FavoritesProvider } from "../store/favorites";
 import { NetworkProvider, useNetwork } from "../store/network";
+import { RefreshProvider } from "../store/refresh";
 // Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
-import { SettingsProvider } from "../store/settings";
-import { A11ySettingsProvider } from "../store/a11ySettings";
 import { I18nProvider } from "../i18n";
-import { ProfileLocalProvider } from "../store/profileLocal";
+import { A11ySettingsProvider } from "../store/a11ySettings";
 import { PrivacyProvider, usePrivacy } from "../store/privacy";
+import { ProfileLocalProvider } from "../store/profileLocal";
+import { SettingsProvider } from "../store/settings";
 
-import * as Notifier from "../services/notifications";
-import { initSentry, initAnalytics } from "../services/telemetry";
-import { fetchPodcasts } from "../services/podcasts";
-import { fetchResources } from "../services/resources";
 import { fetchCampaigns } from "../services/campaigns";
 import { fetchEvents } from "../services/events";
+import * as Notifier from "../services/notifications";
+import { fetchPodcasts } from "../services/podcasts";
+import { fetchResources } from "../services/resources";
+import { initAnalytics, initSentry } from "../services/telemetry";
 // Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
 // removed getFirebaseAnalytics direct import (handled via telemetry module)
 
@@ -72,7 +73,7 @@ export default function RootLayout() {
     if (!pathname) return;
     const readable =
       pathname === "/" ? "Home" : pathname.replace(/[/()-]+/g, " ").trim();
-    AccessibilityInfo.announceForAccessibility?.(`${readable}`);
+  announce(`${readable}`);
   }, [pathname]);
 
   // Light prefetch: warm common data caches shortly after mount and on app foreground

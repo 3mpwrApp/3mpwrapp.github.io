@@ -1,10 +1,11 @@
 import React from 'react';
-import { AccessibilityInfo, Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { addDeadline, listDeadlines, type Deadline } from '../../../services/deadlines';
 import { useAppPalette } from '../../../theme/usePalette';
+import { announce } from '../../../utils/announce';
 import DeadlinesList from './deadlines-list';
 
 export const options = { href: null };
@@ -18,7 +19,7 @@ export default function DeadlinesScreen() {
   useFocusOnRefOnMount(titleRef);
   const [tab, setTab] = React.useState<'calendar'|'list'>('calendar');
   const [showInfo, setShowInfo] = React.useState(true);
-  const changeTab = (next:'calendar'|'list') => { setTab(next); AccessibilityInfo.announceForAccessibility?.(next==='calendar' ? t('templates.deadlines.calendarTab','Calendar') : t('templates.deadlines.listTab','List')); };
+  const changeTab = (next:'calendar'|'list') => { setTab(next); announce(next==='calendar' ? t('templates.deadlines.calendarTab','Calendar') : t('templates.deadlines.listTab','List')); };
   const importICS = async () => {
     try {
       const DP = await import('expo-document-picker');
@@ -36,7 +37,7 @@ export default function DeadlinesScreen() {
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }} accessibilityLabel={t('templates.deadlines.screenLabel','Deadlines screen')}>
       <Text ref={titleRef} style={s.title} accessibilityRole='header' maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('templates.deadlines.title','Deadlines')}</Text>
       <View style={s.actionsRow}>
-        <A11yPressable onPress={()=>{ setShowInfo(v=>!v); AccessibilityInfo.announceForAccessibility?.(showInfo? t('common.hide','Hide'): t('templates.deadlines.toggleInfo','Toggle instructions')); }} style={s.infoBtn} accessibilityRole='button' accessibilityLabel={t('templates.deadlines.toggleInfo','Toggle instructions')}><Text style={s.infoBtnText}>{showInfo? t('common.hide','Hide'): t('common.show','Show')}</Text></A11yPressable>
+  <A11yPressable onPress={()=>{ setShowInfo(v=>!v); announce(showInfo? t('common.hide','Hide'): t('templates.deadlines.toggleInfo','Toggle instructions')); }} style={s.infoBtn} accessibilityRole='button' accessibilityLabel={t('templates.deadlines.toggleInfo','Toggle instructions')}><Text style={s.infoBtnText}>{showInfo? t('common.hide','Hide'): t('common.show','Show')}</Text></A11yPressable>
         <A11yPressable onPress={importICS} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.deadlines.importICS','Import ICS to Calendar')}><Text style={s.secondaryBtnText}>{t('templates.deadlines.importICS','Import ICS to Calendar')}</Text></A11yPressable>
       </View>
       {showInfo && (
@@ -69,7 +70,7 @@ function DeadlinesCalendar() {
   const monthLabel = React.useMemo(() => month.toLocaleString(undefined, { month:'long', year:'numeric' }), [month]);
   const matrix = React.useMemo(()=> buildMonthMatrix(month), [month]);
   const byDay = React.useMemo(()=> mapDeadlinesByDay(items), [items]);
-  const changeView = (v:'month'|'week') => { setView(v); AccessibilityInfo.announceForAccessibility?.(v=== 'month'? t('templates.deadlines.monthView','Month'): t('templates.deadlines.weekView','Week')); };
+  const changeView = (v:'month'|'week') => { setView(v); announce(v=== 'month'? t('templates.deadlines.monthView','Month'): t('templates.deadlines.weekView','Week')); };
   return (
     <View style={{ marginTop: 8 }}>
       <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginBottom: 6 }}>
