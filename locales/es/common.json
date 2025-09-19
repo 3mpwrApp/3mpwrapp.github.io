@@ -24,6 +24,78 @@
     "subtitle": "Apoyo. Defensa. Empoderamiento.",
     "welcome": "¡Bienvenido! Tu centro para comunidad, educación, herramientas de defensa y podcasts — ¡todo en un solo lugar!"
   },
+  "settings": {
+    "title": "Configuración",
+    "accessibility": {
+      "title": "Accesibilidad",
+      "subtitle": "Haga que la aplicación funcione mejor para usted",
+      "highContrast": "Alto contraste",
+      "highContrastDesc": "Aumenta el contraste para mejor legibilidad",
+      "textSize": "Tamaño del texto",
+      "textSizeDesc": "Ajustar el tamaño del texto en toda la aplicación",
+      "screenReader": "Optimizado para lector de pantalla",
+      "screenReaderDesc": "Optimiza el contenido para lectores de pantalla",
+      "reduceMotion": "Reducir movimiento",
+      "reduceMotionDesc": "Minimiza animaciones y transiciones",
+      "focusIndicator": "Indicadores de enfoque mejorados",
+      "focusIndicatorDesc": "Hace la navegación por teclado más visible",
+      "tapTarget": "Tamaño mínimo de área táctil",
+      "tapTargetDesc": "Asegura que los botones sean fáciles de tocar",
+      "dyslexiaFriendly": "Fuente amigable para dislexia",
+      "dyslexiaFriendlyDesc": "Mejora el espaciado de letras y legibilidad",
+      "plainLanguage": "Lenguaje sencillo",
+      "plainLanguageDesc": "Usa texto más simple y claro",
+      "captions": "Subtítulos preferidos",
+      "captionsDesc": "Muestra subtítulos cuando estén disponibles",
+      "voiceMode": "Modo de voz",
+      "voiceModeDesc": "Habilita navegación por voz (beta)"
+    },
+    "language": {
+      "title": "Idioma",
+      "subtitle": "Elija su idioma preferido",
+      "english": "Inglés",
+      "french": "Francés",
+      "spanish": "Español"
+    },
+    "notifications": {
+      "title": "Notificaciones",
+      "subtitle": "Elija qué alertas recibir",
+      "enabled": "Habilitar notificaciones",
+      "enabledDesc": "Recibir notificaciones de la aplicación",
+      "sound": "Sonido de notificación",
+      "soundDesc": "Reproducir sonido con notificaciones",
+      "vibration": "Vibración",
+      "vibrationDesc": "Vibrar para notificaciones",
+      "emergency": "Alertas de emergencia",
+      "emergencyDesc": "Notificaciones de seguridad críticas",
+      "wellness": "Recordatorios de bienestar",
+      "wellnessDesc": "Chequeos diarios de bienestar",
+      "events": "Recordatorios de eventos",
+      "eventsDesc": "Notificaciones de eventos próximos"
+    },
+    "emergency": {
+      "title": "Tarjeta de emergencia",
+      "subtitle": "Acceso rápido a información importante",
+      "description": "Cree una tarjeta de emergencia digital con su información clave para acceso rápido cuando sea necesario"
+    },
+    "privacy": {
+      "title": "Privacidad y seguridad",
+      "subtitle": "Controle sus datos y seguridad",
+      "passcode": "Requerir código de acceso",
+      "passcodeDesc": "Bloquear aplicación con código de acceso",
+      "autoLock": "Tiempo de bloqueo automático",
+      "autoLockDesc": "Minutos antes de que se bloquee la aplicación",
+      "analytics": "Optar por no usar analíticas",
+      "analyticsDesc": "No compartir datos de uso"
+    },
+    "account": {
+      "title": "Gestión de cuenta",
+      "subtitle": "Gestione su perfil y preferencias",
+      "displayName": "Nombre para mostrar",
+      "password": "Cambiar contraseña",
+      "preferences": "Preferencias"
+    }
+  },
   "wellness": {
     "tools": "Herramientas de bienestar"
   },

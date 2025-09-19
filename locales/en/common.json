@@ -75,5 +75,77 @@
       "ai_gov": "AI Government Navigator",
       "ai_case": "AI Case Interpreter"
     }
+  },
+  "settings": {
+    "title": "Settings",
+    "accessibility": {
+      "title": "Accessibility",
+      "subtitle": "Make the app work better for you",
+      "highContrast": "High Contrast",
+      "highContrastDesc": "Increases contrast for better readability",
+      "textSize": "Text Size",
+      "textSizeDesc": "Adjust text size throughout the app",
+      "screenReader": "Screen Reader Optimized",
+      "screenReaderDesc": "Optimizes content for screen readers",
+      "reduceMotion": "Reduce Motion",
+      "reduceMotionDesc": "Minimizes animations and transitions",
+      "focusIndicator": "Enhanced Focus Indicators",
+      "focusIndicatorDesc": "Makes keyboard navigation more visible",
+      "tapTarget": "Minimum Tap Target Size",
+      "tapTargetDesc": "Ensures buttons are easy to tap",
+      "dyslexiaFriendly": "Dyslexia-Friendly Font",
+      "dyslexiaFriendlyDesc": "Improves letter spacing and readability",
+      "plainLanguage": "Plain Language",
+      "plainLanguageDesc": "Uses simpler, clearer text",
+      "captions": "Captions Preferred",
+      "captionsDesc": "Shows captions when available",
+      "voiceMode": "Voice Mode",
+      "voiceModeDesc": "Enables voice navigation (beta)"
+    },
+    "language": {
+      "title": "Language",
+      "subtitle": "Choose your preferred language",
+      "english": "English",
+      "french": "Français",
+      "spanish": "Español"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Choose what alerts you receive",
+      "enabled": "Enable Notifications",
+      "enabledDesc": "Receive app notifications",
+      "sound": "Notification Sound",
+      "soundDesc": "Play sound with notifications",
+      "vibration": "Vibration",
+      "vibrationDesc": "Vibrate for notifications",
+      "emergency": "Emergency Alerts",
+      "emergencyDesc": "Critical safety notifications",
+      "wellness": "Wellness Reminders",
+      "wellnessDesc": "Daily wellness check-ins",
+      "events": "Event Reminders",
+      "eventsDesc": "Upcoming event notifications"
+    },
+    "emergency": {
+      "title": "Emergency Wallet Card",
+      "subtitle": "Quick access to important information",
+      "description": "Create a digital emergency card with your key information for quick access when needed"
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "subtitle": "Control your data and security",
+      "passcode": "Require Passcode",
+      "passcodeDesc": "Lock app with passcode",
+      "autoLock": "Auto-Lock Timeout",
+      "autoLockDesc": "Minutes before app locks",
+      "analytics": "Opt Out of Analytics",
+      "analyticsDesc": "Don't share usage data"
+    },
+    "account": {
+      "title": "Account Management",
+      "subtitle": "Manage your profile and preferences",
+      "displayName": "Display Name",
+      "password": "Change Password",
+      "preferences": "Preferences"
+    }
   }
 }
