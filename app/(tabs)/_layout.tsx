@@ -103,7 +103,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="community/[slug]" options={{ href: null }} />
       <Tabs.Screen name="community/compose" options={{ href: null }} />
       <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />
-      <Tabs.Screen name="advocacy/index" options={{ href: null }} />
+      {/* Hidden advocacy detail routes only; index is a visible tab below */}
       <Tabs.Screen
         name="advocacy/self-advocacy-coach"
         options={{ href: null }}
