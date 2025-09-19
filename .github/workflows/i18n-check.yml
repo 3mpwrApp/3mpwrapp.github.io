@@ -52,3 +52,45 @@ jobs:
       - name: Assert no [T] tags (release gate)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npm run i18n:assert
+
+  i18n-plural:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install --no-audit --no-fund --omit=optional
+      - name: Validate plural keys
+        run: npm run i18n:plural
+
+  i18n-orphans:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install --no-audit --no-fund --omit=optional
+      - name: Detect orphan / missing keys
+        run: npm run i18n:orphans
+
+  i18n-progress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install --no-audit --no-fund --omit=optional
+      - name: Show untranslated progress delta
+        run: npm run i18n:progress
+      - name: Update snapshot (main push only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          echo "Updating snapshot";
+          export I18N_UPDATE_SNAPSHOT=1
+          npm run i18n:progress

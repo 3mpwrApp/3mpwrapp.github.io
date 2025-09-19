@@ -7,6 +7,7 @@ import { useTranslation } from "../../../i18n";
 import { logEvent } from "../../../services/analytics";
 import { buildCombinedEvidenceSummary } from "../../../services/insights";
 import { useProfileLocal } from "../../../store/profileLocal";
+import { s as sp } from '../../../theme/spacing';
 import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
 import { announce } from '../../../utils/announce';
@@ -45,7 +46,7 @@ export default function AppealLetter() {
   const exportDoc = async () => { try { const FS = await import("expo-file-system"); const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${preview.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</pre></body></html>`; const path = FS.cacheDirectory + `appeal_${Date.now()}.doc`; await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 }); const Share = await import("expo-sharing").catch(()=>null); if (Share?.isAvailableAsync) { if (await Share.isAvailableAsync()) await Share.shareAsync(path); else Alert.alert(t("templates.letters.common.shareUnavailable","Share unavailable"), t("templates.letters.common.shareUnavailableBody","System share sheet not available.")); } } catch { Alert.alert(t("templates.letters.common.exportFailed","Export failed"), t("templates.letters.common.exportFailedBody","Could not create file.")); } };
 
   return (
-    <ScrollView style={s.container} contentContainerStyle={{ padding: 20 }} accessibilityLabel={t("templates.letters.appeal.screenLabel","Appeal letter screen")}>      
+  <ScrollView style={s.container} contentContainerStyle={{ padding: sp('xl') }} accessibilityLabel={t("templates.letters.appeal.screenLabel","Appeal letter screen")}>      
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("templates.letters.appeal.title","Appeal Letter")}</Text>
       <View style={s.actionsRow}>
   <A11yPressable onPress={() => { setShowInfo(v=>!v); announce(showInfo ? t("common.hide","Hide") : t("templates.letters.common.toggleInfo","Toggle instructions")); }} style={s.infoBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.toggleInfo","Toggle instructions")}>
@@ -91,8 +92,8 @@ function Field({
   multiline?: boolean;
 }) {
   return (
-    <View style={{ marginBottom: 10 }}>
-      <Text style={{ color: "#000", opacity: 0.9, marginBottom: 4 }}>
+    <View style={{ marginBottom: sp('md') }}>
+      <Text style={{ color: "#000", opacity: 0.9, marginBottom: sp('xs') }}>
         {label}
       </Text>
       <TextInput
@@ -101,9 +102,9 @@ function Field({
         style={{
           borderWidth: 1,
           borderColor: "#ccc",
-          borderRadius: 8,
-          paddingHorizontal: 12,
-          paddingVertical: 10,
+          borderRadius: sp('lg'),
+          paddingHorizontal: sp('md'),
+          paddingVertical: sp('sm'),
           color: "#000",
           minHeight: 44,
         }}

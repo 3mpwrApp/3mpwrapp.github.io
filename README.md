@@ -46,6 +46,7 @@ Notes
 - Consistent touch targets: `constants/a11y.ts` exports `HIT_SLOP_8` and `touchTarget.min` (44×44dp). Applied to header buttons.
 - RTL readiness: replaced left/right paddings with start/end where present.
 - Static scan: `npm run a11y:scan` to flag missing roles/hitSlop in TSX.
+- Screen reader announcements: use `announce()` from `utils/announce` instead of calling `AccessibilityInfo.announceForAccessibility` directly. It queues rapid calls (debounced ~120ms) and merges messages to avoid flooding. For immediate, unbatched output use `announceNow()`. Tests or scripts can force-flush via `flushAnnouncements()`.
 
 ## Push Notifications
 
@@ -144,11 +145,7 @@ The app uses 8 main tabs. All other features live behind menus or deep links.
 
 - Upload Queue & Progress
   - Local save failures are queued at `AsyncStorage` key `evidence:uploadQueue:v1`.
-  - Upload Queue screen: process or clear queued items.
-  - Visual progress bars for single-note uploads and queue processing.
   - Thumbnails/preview for image attachments with Share/Open actions.
-
-## Wellness Reflections
 
 - Daily mood + optional note with 7‑day trend sparkline.
 - Edit/Delete recent reflections.
@@ -161,9 +158,6 @@ The app uses 8 main tabs. All other features live behind menus or deep links.
 
 ## Firestore & Storage Rules
 
-Rules now enforce:
-
-- Threads/Comments: create (signed-in), update/delete (admin or author).
 - Chat messages: update/delete (admin or author).
 - Presence/Typing/Last_read: a user can only write their own document.
 - User-owned subcollections (evidence, deadlines, reflections): owner-only; admin can read.
@@ -172,9 +166,6 @@ Deploy:
 
 ```
 npm run rules:deploy        # Firestore
-npm run rules:deploy:storage # Storage
-```
-
 ## Remote Integrations
 
 - YouTube Exercises

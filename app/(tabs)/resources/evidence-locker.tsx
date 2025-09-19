@@ -9,6 +9,7 @@ import { announce } from "../../../utils/announce";
 // Linking added when preview links are active; safe to lazy import when needed
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
+import { s } from '../../../theme/spacing';
 import { useAppPalette } from "../../../theme/usePalette";
 
 let AsyncStorage: any;
@@ -610,36 +611,36 @@ export default function EvidenceLocker() {
 
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    container: { flex: 1, padding: 20, backgroundColor: palette.background },
+  container: { flex: 1, padding: s('xl'), backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: "700", color: palette.text },
-  countLine: { marginTop: 2, color: palette.text, opacity: 0.75, fontSize: 14 },
+  countLine: { marginTop: s('xxs'), color: palette.text, opacity: 0.75, fontSize: 14 },
     input: {
       borderWidth: 1,
       borderColor: palette.muted,
-      borderRadius: 8,
-      paddingHorizontal: 12,
-      paddingVertical: 10,
+  borderRadius: s('lg'),
+  paddingHorizontal: s('md'),
+  paddingVertical: s('sm'),
       color: palette.text,
       marginTop: 8,
     },
     button: {
       backgroundColor: palette.primary,
-      paddingVertical: 10,
-      borderRadius: 8,
-      alignItems: "center",
-      marginTop: 8,
+  paddingVertical: s('sm'),
+  borderRadius: s('lg'),
+  alignItems: "center",
+  marginTop: s('sm'),
     },
     secondary: {
       backgroundColor: palette.surface,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
-      paddingVertical: 10,
-      borderRadius: 8,
+  paddingVertical: s('sm'),
+  borderRadius: s('lg'),
       alignItems: "center",
     },
     buttonText: { color: palette.onPrimary, fontWeight: "700" },
     noteRow: {
-      paddingVertical: 8,
+  paddingVertical: s('sm'),
       borderBottomWidth: StyleSheet.hairlineWidth,
       borderBottomColor: palette.muted,
     },
@@ -647,9 +648,9 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     chip: {
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
-      borderRadius: 14,
-      paddingHorizontal: 12,
-      paddingVertical: 6,
+  borderRadius: s('xl'),
+  paddingHorizontal: s('md'),
+  paddingVertical: s('xs'),
     },
     chipActive: {
       backgroundColor: palette.primary,
@@ -660,24 +661,24 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     actionsRow: {
       flexDirection: 'row',
       flexWrap: 'wrap',
-      gap: 8,
-      marginTop: 12,
+  gap: s('sm'),
+  marginTop: s('md'),
       alignItems: 'center'
     },
     actionBtn: {
-      paddingHorizontal: 12,
-      paddingVertical: 8,
-      backgroundColor: palette.surface,
-      borderRadius: 6,
+  paddingHorizontal: s('md'),
+  paddingVertical: s('sm'),
+  backgroundColor: palette.surface,
+  borderRadius: s('md'),
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
     },
     actionText: { color: palette.text, fontWeight: '600', fontSize: 13 },
     infoCard: {
       backgroundColor: palette.card,
-      borderRadius: 8,
-      padding: 12,
-      marginTop: 12,
+  borderRadius: s('lg'),
+  padding: s('md'),
+  marginTop: s('md'),
       borderWidth: 1,
       borderColor: palette.muted
     },
