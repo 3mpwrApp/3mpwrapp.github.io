@@ -1,14 +1,14 @@
-import React from "react";
-import { View, Text, TextInput, StyleSheet, ScrollView, Alert, AccessibilityInfo } from "react-native";
 import * as Clipboard from "expo-clipboard";
+import React from "react";
+import { AccessibilityInfo, Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
-import { useAppPalette } from "../../../theme/usePalette";
-import { useTextScale } from "../../../theme/typography";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
-import { useProfileLocal } from "../../../store/profileLocal";
-import { buildCombinedEvidenceSummary } from "../../../services/insights";
-import { logEvent } from "../../../services/analytics";
 import { useTranslation } from "../../../i18n";
+import { logEvent } from "../../../services/analytics";
+import { buildCombinedEvidenceSummary } from "../../../services/insights";
+import { useProfileLocal } from "../../../store/profileLocal";
+import { useTextScale } from "../../../theme/typography";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export const options = { href: null };
 
