@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import { View, Text, StyleSheet, FlatList, Pressable } from "react-native";
+import { View, Text, StyleSheet, FlatList, Pressable, ScrollView } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import {
@@ -13,6 +13,7 @@ import Card from "../../../components/Card";
 import { Link } from "expo-router";
 import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
+import { Ionicons } from "@expo/vector-icons";
 
 export const options = { href: null };
 
@@ -24,6 +25,7 @@ export default function ResearchScreen() {
   useAnnounceOnMount("Research");
   useFocusOnRefOnMount(titleRef);
 
+  const [selectedView, setSelectedView] = React.useState<'overview' | 'studies' | 'reports' | 'articles'>('overview');
   const [query, setQuery] = React.useState("");
   const [topic, setTopic] = React.useState<string | "all">("all");
   const [year, setYear] = React.useState<number | "all">("all");
@@ -40,9 +42,41 @@ export default function ResearchScreen() {
     return y;
   }, []);
 
+  // Categorize research items
+  const studies = React.useMemo(() => {
+    return researchItems.filter(item => 
+      item.source.toLowerCase().includes('university') || 
+      item.source.toLowerCase().includes('research') ||
+      item.topics.includes('policy')
+    );
+  }, []);
+
+  const reports = React.useMemo(() => {
+    return researchItems.filter(item => 
+      item.source.toLowerCase().includes('government') || 
+      item.source.toLowerCase().includes('policy') ||
+      item.source.toLowerCase().includes('working paper')
+    );
+  }, []);
+
+  const articles = React.useMemo(() => {
+    return researchItems.filter(item => 
+      item.source.toLowerCase().includes('review') ||
+      item.topics.includes('disability') ||
+      item.topics.includes('accommodations') ||
+      item.topics.includes('advocacy')
+    );
+  }, []);
+
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    return researchItems.filter((r) => {
+    let dataToFilter = researchItems;
+    
+    if (selectedView === 'studies') dataToFilter = studies;
+    else if (selectedView === 'reports') dataToFilter = reports;
+    else if (selectedView === 'articles') dataToFilter = articles;
+    
+    return dataToFilter.filter((r) => {
       if (topic !== "all" && !r.topics.includes(topic)) return false;
       if (year !== "all" && r.year !== year) return false;
       if (!q) return true;
@@ -52,29 +86,136 @@ export default function ResearchScreen() {
         r.source.toLowerCase().includes(q)
       );
     });
-  }, [query, topic, year]);
+  }, [query, topic, year, selectedView, studies, reports, articles]);
+
+  if (selectedView === 'overview') {
+    return (
+      <ScrollView style={styles.container}>
+        <Text
+          ref={titleRef}
+          style={styles.title}
+          accessibilityRole="header"
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
+          Research
+        </Text>
+        <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
+        <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
+        <Text style={styles.subtitle}>
+          Access studies, reports, articles, history timeline, and case wait-times.
+        </Text>
+
+        {/* Main Research Categories */}
+        <View style={styles.sectionGrid}>
+          <Pressable 
+            style={styles.sectionCard}
+            onPress={() => setSelectedView('studies')}
+            accessibilityRole="button"
+            accessibilityLabel="Studies - Access clinical and workplace studies"
+          >
+            <Ionicons name="library-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>Studies</Text>
+            <Text style={styles.sectionDescription}>
+              Access clinical and workplace studies
+            </Text>
+            <Text style={styles.sectionCount}>{studies.length} studies</Text>
+          </Pressable>
+
+          <Pressable 
+            style={styles.sectionCard}
+            onPress={() => setSelectedView('reports')}
+            accessibilityRole="button"
+            accessibilityLabel="Reports - Community and government reports made easy"
+          >
+            <Ionicons name="document-text-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>Reports</Text>
+            <Text style={styles.sectionDescription}>
+              Community and government reports made easy
+            </Text>
+            <Text style={styles.sectionCount}>{reports.length} reports</Text>
+          </Pressable>
+
+          <Pressable 
+            style={styles.sectionCard}
+            onPress={() => setSelectedView('articles')}
+            accessibilityRole="button"
+            accessibilityLabel="Articles - Insights on disability, workplace rights, and advocacy"
+          >
+            <Ionicons name="newspaper-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>Articles</Text>
+            <Text style={styles.sectionDescription}>
+              Insights on disability, workplace rights, advocacy
+            </Text>
+            <Text style={styles.sectionCount}>{articles.length} articles</Text>
+          </Pressable>
+
+          <Link href="/(tabs)/research/history-timeline" asChild>
+            <Pressable 
+              style={styles.sectionCard}
+              accessibilityRole="button"
+              accessibilityLabel="History Timeline - Track milestones in disability and worker rights"
+            >
+              <Ionicons name="time-outline" size={32} color={palette.primary} />
+              <Text style={styles.sectionTitle}>History Timeline</Text>
+              <Text style={styles.sectionDescription}>
+                Track milestones in disability, worker, and injured worker rights
+              </Text>
+            </Pressable>
+          </Link>
+
+          <Link href="/(tabs)/research/wait-times" asChild>
+            <Pressable 
+              style={styles.sectionCard}
+              accessibilityRole="button"
+              accessibilityLabel="Case Wait-Times - Estimate how long processes may take"
+            >
+              <Ionicons name="time-outline" size={32} color={palette.primary} />
+              <Text style={styles.sectionTitle}>Case/File Wait-Times</Text>
+              <Text style={styles.sectionDescription}>
+                Estimate how long processes may take
+              </Text>
+            </Pressable>
+          </Link>
+        </View>
+      </ScrollView>
+    );
+  }
 
   return (
     <View style={styles.container}>
-      <Text
-        ref={titleRef}
-        style={styles.title}
-        accessibilityRole="header"
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
-      >
-        Research
-      </Text>
-      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
-      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
+      <View style={styles.header}>
+        <Pressable
+          onPress={() => setSelectedView('overview')}
+          style={styles.backButton}
+          accessibilityRole="button"
+          accessibilityLabel="Back to research overview"
+        >
+          <Ionicons name="arrow-back" size={24} color={palette.text} />
+        </Pressable>
+        <Text
+          style={styles.title}
+          accessibilityRole="header"
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
+          {selectedView === 'studies' ? 'Studies' : 
+           selectedView === 'reports' ? 'Reports' : 'Articles'}
+        </Text>
+        <SettingsLink style={{ position: "absolute", right: 20, top: 0 }} />
+      </View>
+      
       <Text style={styles.subtitle}>
-        Curated research on injured workers and the disability community.
+        {selectedView === 'studies' ? 'Clinical and workplace research studies' :
+         selectedView === 'reports' ? 'Community and government reports' :
+         'Insights on disability, workplace rights, and advocacy'}
       </Text>
+      
       <SearchBar
         value={query}
         onChangeText={setQuery}
-        placeholder="Search research"
-        accessibilityLabel="Search research"
+        placeholder={`Search ${selectedView}`}
+        accessibilityLabel={`Search ${selectedView}`}
       />
+      
       <View style={styles.filters} accessibilityLabel="Filters" accessible>
         <Pressable
           onPress={() => setTopic("all")}
@@ -104,6 +245,7 @@ export default function ResearchScreen() {
           </Pressable>
         ))}
       </View>
+      
       <View style={styles.filters}>
         <Pressable
           onPress={() => setYear("all")}
@@ -167,7 +309,7 @@ export default function ResearchScreen() {
             />
           </Link>
         )}
-        ListEmptyComponent={<Text style={[styles.subtitle, { opacity: 0.7 }]}>No research found</Text>}
+        ListEmptyComponent={<Text style={[styles.subtitle, { opacity: 0.7 }]}>No {selectedView} found</Text>}
         contentContainerStyle={{ paddingVertical: 12 }}
       />
     </View>
@@ -190,7 +332,52 @@ function createStyles(
       fontSize: Math.round(16 * factor),
       color: palette.text,
       opacity: 0.9,
+      marginBottom: 16,
+    },
+    header: {
+      flexDirection: 'row',
+      alignItems: 'center',
       marginBottom: 8,
+      position: 'relative',
+    },
+    backButton: {
+      padding: 8,
+      marginRight: 8,
+      marginLeft: -8,
+    },
+    sectionGrid: {
+      gap: 16,
+      paddingBottom: 20,
+    },
+    sectionCard: {
+      backgroundColor: palette.surface,
+      borderRadius: 12,
+      padding: 20,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      alignItems: 'center',
+      minHeight: 140,
+      justifyContent: 'center',
+    },
+    sectionTitle: {
+      fontSize: Math.round(18 * factor),
+      fontWeight: '700',
+      color: palette.text,
+      marginTop: 12,
+      marginBottom: 8,
+      textAlign: 'center',
+    },
+    sectionDescription: {
+      fontSize: Math.round(14 * factor),
+      color: palette.text,
+      opacity: 0.8,
+      textAlign: 'center',
+      marginBottom: 8,
+    },
+    sectionCount: {
+      fontSize: Math.round(12 * factor),
+      color: palette.primary,
+      fontWeight: '600',
     },
     filters: {
       flexDirection: "row",
