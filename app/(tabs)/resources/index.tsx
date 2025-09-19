@@ -160,103 +160,216 @@ export default function ResourcesScreen() {
         </Text>
       )}
 
+      {/* 1. AI Tools */}
       <Text
         accessibilityRole="header"
         style={[styles.sectionTitle, { marginTop: 4 }]}
       >
-        AI Tools
+        🤖 AI Tools
       </Text>
-      <Link href={"/(tabs)/resources/rights-checker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Automated Rights Checker
+      <Link href={"/(tabs)/resources/ai-decision-simplifier" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          AI Decision Simplifier
         </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/body-mechanics-advisor" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>AI Body Mechanics Advisor</Text>
       </Link>
       <Link href={"/(tabs)/resources/appeal-coach" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          AI Appeal Coach
+          Appeal Coach
         </Text>
       </Link>
-      <Link href={"/(tabs)/resources/deadlines" as Href} asChild>
+      <Link href={"/(tabs)/resources/body-mechanics-advisor" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          {t("resources.tools.deadlines", "Deadline Calculator + Reminders")}
+          Body Mechanics Advisor
         </Text>
       </Link>
-      <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
+      <Link href={"/(tabs)/resources/justice-as-a-service" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          {t("resources.tools.evidence", "Evidence Checklist Generator")}
+          Justice as a Service
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/rights-checker" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Rights Checker
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/rights-explainer" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Rights Explained
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/voice-notes" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          {t("resources.tools.voice_notes", "Voice-to-Case Notes Tool")}
+          Voice-to-Case Notes Tool
         </Text>
       </Link>
-      <Link href={"/(tabs)/resources/denial-decoder" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>AI Claim Denial Decoder</Text>
+
+      {/* 2. Templates & Documents */}
+      <Text
+        accessibilityRole="header"
+        style={[styles.sectionTitle, { marginTop: 20 }]}
+      >
+        📄 Templates & Documents
+      </Text>
+      <Link href={"/(tabs)/resources/accessibility-log" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Accessibility Log
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/templates-gallery" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          {t("resources.tools.templates", "Template Gallery")}
+          Template Gallery
         </Text>
       </Link>
-      <Text
-        accessibilityRole="header"
-        style={[styles.sectionTitle, { marginTop: 10 }]}
-      >
-        AI-Generated Letter Templates
-      </Text>
       <Link href={"/(tabs)/resources/letter-accommodation" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Create Accommodation Letter
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Template Letter: Accommodation
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/accommodation-request" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Accommodation Request Builder</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Accommodation Request Builder
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-appeal" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Create Appeal Letter
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/letter-union-request" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Create Union Representation/Request Letter
+          Template Letter: Appeal
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-reconsideration" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Create Reconsideration Letter
+          Template Letter: Reconsideration
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/letter-rtw-plan" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Create Return-to-Work Plan
+          Template Letter: RTW Plan
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/letter-union-request" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Template Letter: Union Request
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/case-timeline" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Case Timeline
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/claims-navigator" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Guided Claims Navigator
+          Claims Navigator
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Evidence Checklist
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/evidence-locker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
           Evidence Locker
         </Text>
       </Link>
-      <Link href={"/(tabs)/resources/rtw-planner" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Return-to-Work Planner</Text>
+
+      {/* 3. Trackers & Planners */}
+      <Text
+        accessibilityRole="header"
+        style={[styles.sectionTitle, { marginTop: 20 }]}
+      >
+        📊 Trackers & Planners
+      </Text>
+      <Link href={"/(tabs)/resources/chronic-tracker" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Chronic Tracker
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/deadlines" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Deadline Calculator + Reminders
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/deadlines-list" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Deadlines List
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/denial-decoder" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Denial Decoder
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/doctor-visit-prep" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Doctor Visit Prep
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/financial-safety-net" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Financial Safety Net
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/impact-simulator" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Impact Simulator
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/meds-tracker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Medication & Treatment Tracker</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Meds Tracker
+        </Text>
       </Link>
-      <Link href={"/(tabs)/resources/chronic-tracker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Chronic Condition Tracker</Text>
+      <Link href={"/(tabs)/resources/rtw-planner" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Return-to-Work Planner
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/rehab-tracker" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Rehab Progress Tracker
+        </Text>
       </Link>
       <Link href={"/(tabs)/resources/policy-simulator" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Interactive Policy Simulator</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Interactive Policy Simulator
+        </Text>
+      </Link>
+
+      {/* 4. Support & Directories */}
+      <Text
+        accessibilityRole="header"
+        style={[styles.sectionTitle, { marginTop: 20 }]}
+      >
+        🤝 Support & Directories
+      </Text>
+      <Link href={"/(tabs)/resources/adaptive-tech-library" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Adaptive Tech Library
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/allyship-playbook" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Allyship Playbook
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/solidarity-toolkit" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Solidarity Toolkit
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/support-directory" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Support Directory
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/myth-busting-hub" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Myth-Busting Knowledge Hub
+        </Text>
+      </Link>
+      <Link href={"/(tabs)/resources/emergency-wallet-card" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
+          Emergency Info Wallet Card
+        </Text>
       </Link>
 
       <View
@@ -385,99 +498,16 @@ export default function ResourcesScreen() {
         Tip: Use the Accessibility button in the header to choose plain language and your preferred format (Text, Audio, ASL, Easy-Read).
       </Text>
 
-      {/* Tools & Simulators */}
-      <View accessibilityLabel="Tools and simulators" accessible>
-        <Text accessibilityRole="header" style={styles.sectionTitle}>
-          Tools & Simulators
-        </Text>
-        <Pressable onPress={reload} style={{ alignSelf:'flex-start', paddingHorizontal:10, paddingVertical:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 8 }}>
-          <Text style={{ color: palette.text }}>Download key resources for offline use</Text>
-        </Pressable>
-        <Link href={("/(tabs)/resources/financial-safety-net" as any)} asChild>
-          <Card
-            title="Financial Safety Net Navigator"
-            subtitle="Step-by-step guide to combining CPP-D, EI, ODSP, Workersâ€™ Comp without overlap"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/justice-as-a-service" as any)} asChild>
-          <Card
-            title="Justice-as-a-Service"
-            subtitle="Generate anonymized struggle reports for advocacy, unions, or media"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/impact-simulator" as any)} asChild>
-          <Card
-            title="Impact Simulator"
-            subtitle="Model how policy or workplace changes affect disabled/injured people"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/adaptive-tech-library" as any)} asChild>
-          <Card
-            title="Adaptive Tech Library"
-            subtitle="Tutorials and reviews: screen readers, speech-to-text, mobility aids, apps"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/myth-busting-hub" as any)} asChild>
-          <Card
-            title="Myth-Busting Knowledge Hub"
-            subtitle="Plain-language explainers for CPP-D, EI Sickness, Workers' Comp, and more"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/case-timeline" as any)} asChild>
-          <Card
-            title="Case Timeline Tracker"
-            subtitle="Organize documents, deadlines, hearings, and reminders"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/ai-decision-simplifier" as any)} asChild>
-          <Card
-            title="AI Decision Simplifier"
-            subtitle="Upload a decision letter and get a plain-language summary and next steps"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/rights-explainer" as any)} asChild>
-          <Card
-            title="Multi-Language Rights Explainer"
-            subtitle="Plain-language rights by province, Canada, and world in EN/FR/ES"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/doctor-visit-prep" as any)} asChild>
-          <Card
-            title="Doctor Visit Prep"
-            subtitle="One-page summary: condition, medications, and key questions"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/rehab-tracker" as any)} asChild>
-          <Card
-            title="Rehab Progress Tracker"
-            subtitle="Track walking distance, grip strength, and reduced-pain days"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/accessibility-log" as any)} asChild>
-          <Card
-            title="Workplace Accessibility Log"
-            subtitle="Log barriers with timestamps as future evidence"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/solidarity-toolkit" as any)} asChild>
-          <Card
-            title="Union & Solidarity Toolkit"
-            subtitle="Step-by-step guides for accommodation campaigns and support"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/allyship-playbook" as any)} asChild>
-          <Card
-            title="Allyship Playbook"
-            subtitle="Mini-guides for supporters: language, accessibility, solidarity"
-          />
-        </Link>
-        <Link href={("/(tabs)/resources/emergency-wallet-card" as any)} asChild>
-          <Card
-            title="Emergency Info Wallet Card"
-            subtitle="Generate a printable card with conditions, meds, and contacts"
-          />
-        </Link>
-      </View>
+      {/* Additional Resources from External Data */}
+      <Text
+        accessibilityRole="header"
+        style={[styles.sectionTitle, { marginTop: 20 }]}
+      >
+        📚 External Resources
+      </Text>
+      <Pressable onPress={reload} style={{ alignSelf:'flex-start', paddingHorizontal:10, paddingVertical:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 8 }}>
+        <Text style={{ color: palette.text }}>Download key resources for offline use</Text>
+      </Pressable>
 
       <SectionList<Resource>
         sections={sections}
