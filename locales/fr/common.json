@@ -606,6 +606,9 @@
     "delete": "Delete",
     "cancel": "Cancel"
   },
+  "test": {
+    "badge": "[T]BadgeMarque"
+  },
   "demoPlural": {
     "item": {
       "one": "{{count}} item",

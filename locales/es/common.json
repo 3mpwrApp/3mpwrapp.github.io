@@ -458,6 +458,9 @@
       "importFailedBodyList": "No se pudo importar archivo ICS."
     }
   },
+  "test": {
+    "badge": "[T]IndicadorInsignia"
+  },
   "demoPlural": {
     "item": {
       "one": "{{count}} elemento",

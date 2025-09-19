@@ -80,12 +80,27 @@ describe('i18n basic', () => {
     expect(raw).toContain('{{docCount}}');
   });
   test('badge flag adds marker for tagged strings', async () => {
-    // Simulate enabling badge mode
+    // First verify plain (no badge flag) strips [T]
+    delete process.env.EXPO_PUBLIC_I18N_BADGE;
+    let api = await getI18n();
+    expect(api.t('test.badge')).toBe('BadgeMarker');
+    // Now enable badge flag and validate across language switches.
     process.env.EXPO_PUBLIC_I18N_BADGE = '1';
-    const api = await getI18n();
-    // Ensure at least one tagged key exists or skip gracefully
-    const value = api.t('nav.home');
-    // The marker only appears if the underlying string starts with [T]; we just assert call works.
-    expect(typeof value).toBe('string');
+    const outputs: string[] = [];
+    function BadgeStepper() {
+      const { lang, t, setLanguage } = useTranslation();
+      React.useEffect(() => {
+        const v = t('test.badge');
+        if (!outputs.includes(v)) outputs.push(v);
+        if (lang === 'en') setLanguage('fr');
+        else if (lang === 'fr') setLanguage('es');
+      }, [lang, t, setLanguage]);
+      return null;
+    }
+    render(<I18nProvider><BadgeStepper /></I18nProvider>);
+    await waitFor(() => expect(outputs).toContain('BadgeMarker ◀'));
+    await waitFor(() => expect(outputs).toContain('BadgeMarque ◀'));
+    await waitFor(() => expect(outputs).toContain('IndicadorInsignia ◀'));
+    delete process.env.EXPO_PUBLIC_I18N_BADGE;
   });
 });
