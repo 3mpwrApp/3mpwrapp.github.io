@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, Alert } from "react-native";
-import { useAppPalette } from "../theme/usePalette";
-import { useTextScale } from "../theme/typography";
+import { Alert, StyleSheet, Text, View } from "react-native";
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTranslation } from "../i18n";
+import { sendTestLocal, setupAsync } from "../services/notifications";
 import { useSettings } from "../store/settings";
+import { useTextScale } from "../theme/typography";
+import { useAppPalette } from "../theme/usePalette";
 import AccessibilityToggle from "./AccessibilityToggle";
-import { setupAsync, sendTestLocal } from "../services/notifications";
 
 export default function NotificationPreferences() {
   const palette = useAppPalette();
@@ -157,7 +157,7 @@ export default function NotificationPreferences() {
 
       <View style={styles.note}>
         <Text style={styles.noteText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-          You can also manage notification settings from your device's system settings. 
+          You can also manage notification settings from your device&apos;s system settings. 
           Emergency alerts are always enabled when notifications are on to ensure you receive critical safety information.
         </Text>
       </View>

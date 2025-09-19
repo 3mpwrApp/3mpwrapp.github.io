@@ -1,0 +1,54 @@
+name: i18n Key Sync Check
+on:
+  pull_request:
+    paths:
+      - 'locales/**'
+      - 'scripts/i18n-*'
+      - 'package.json'
+  push:
+    branches: [ main ]
+    paths:
+      - 'locales/**'
+      - 'scripts/i18n-*'
+      - 'package.json'
+
+jobs:
+  i18n-diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install minimal deps
+        run: npm install --no-audit --no-fund --omit=optional
+      - name: Run i18n diff
+        run: npm run i18n:diff
+
+  i18n-threshold:
+    runs-on: ubuntu-latest
+    env:
+      I18N_MAX_UNTRANSLATED: 400
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install --no-audit --no-fund --omit=optional
+      - name: Check untranslated threshold
+        run: npm run i18n:threshold
+
+  i18n-tags:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install --no-audit --no-fund --omit=optional
+      - name: Assert no [T] tags (release gate)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: npm run i18n:assert

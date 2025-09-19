@@ -1,46 +1,64 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Alert, Pressable } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
+import { AccessibilityInfo, Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import DeadlinesList from './deadlines-list';
+import { useTranslation } from '../../../i18n';
 import { addDeadline, listDeadlines, type Deadline } from '../../../services/deadlines';
+import { useAppPalette } from '../../../theme/usePalette';
+import DeadlinesList from './deadlines-list';
 
 export const options = { href: null };
 
 export default function DeadlinesScreen() {
+  const { t } = useTranslation();
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('Deadlines');
+  useAnnounceOnMount(t('templates.deadlines.title','Deadlines'));
   useFocusOnRefOnMount(titleRef);
   const [tab, setTab] = React.useState<'calendar'|'list'>('calendar');
+  const [showInfo, setShowInfo] = React.useState(true);
+  const changeTab = (next:'calendar'|'list') => { setTab(next); AccessibilityInfo.announceForAccessibility?.(next==='calendar' ? t('templates.deadlines.calendarTab','Calendar') : t('templates.deadlines.listTab','List')); };
+  const importICS = async () => {
+    try {
+      const DP = await import('expo-document-picker');
+      const res = await DP.getDocumentAsync({ type: 'text/calendar' });
+      const asset = res?.assets?.[0]; if (!asset?.uri) return;
+      const FS = await import('expo-file-system');
+      const text = await FS.readAsStringAsync(asset.uri, { encoding: FS.EncodingType.UTF8 });
+      const { parseICS } = await import('../../../services/ics');
+      const events = parseICS(text).slice(0, 100);
+      await Promise.all(events.map(ev => addDeadline({ title: ev.title, dueAt: ev.startISO, notes: ev.description || '' })));
+      Alert.alert(t('templates.deadlines.imported','Imported'), t('templates.deadlines.importedBody','Added {{count}} deadlines.').replace('{{count}}', String(events.length)));
+    } catch { Alert.alert(t('templates.deadlines.importFailed','Import failed'), t('templates.deadlines.importFailedBody','Could not import ICS.')); }
+  };
   return (
-    <View style={s.container}>
-      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Deadlines</Text>
-      <View style={{ flexDirection:'row', gap:8 }}>
-        <Pressable onPress={()=>setTab('calendar')} style={[s.chip, tab==='calendar'&&s.chipActive]}><Text style={{ color: tab==='calendar'? palette.onPrimary: palette.text, fontWeight:'700' }}>Calendar</Text></Pressable>
-        <Pressable onPress={()=>setTab('list')} style={[s.chip, tab==='list'&&s.chipActive]}><Text style={{ color: tab==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>List</Text></Pressable>
+    <ScrollView style={s.container} contentContainerStyle={{ padding:16 }} accessibilityLabel={t('templates.deadlines.screenLabel','Deadlines screen')}>
+      <Text ref={titleRef} style={s.title} accessibilityRole='header' maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('templates.deadlines.title','Deadlines')}</Text>
+      <View style={s.actionsRow}>
+        <A11yPressable onPress={()=>{ setShowInfo(v=>!v); AccessibilityInfo.announceForAccessibility?.(showInfo? t('common.hide','Hide'): t('templates.deadlines.toggleInfo','Toggle instructions')); }} style={s.infoBtn} accessibilityRole='button' accessibilityLabel={t('templates.deadlines.toggleInfo','Toggle instructions')}><Text style={s.infoBtnText}>{showInfo? t('common.hide','Hide'): t('common.show','Show')}</Text></A11yPressable>
+        <A11yPressable onPress={importICS} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.deadlines.importICS','Import ICS to Calendar')}><Text style={s.secondaryBtnText}>{t('templates.deadlines.importICS','Import ICS to Calendar')}</Text></A11yPressable>
+      </View>
+      {showInfo && (
+        <View style={s.infoCard} accessibilityRole='summary'>
+          <Text style={s.infoTitle}>{t('templates.deadlines.infoTitle','How to Use')}</Text>
+          <Text style={s.infoLine}>{t('templates.deadlines.infoLine1','Track important dates (appeals, follow-ups) in calendar or list view.')}</Text>
+          <Text style={s.infoLine}>{t('templates.deadlines.infoLine2','Import ICS files, add recurring reminders, and export all deadlines (ICS/CSV).')}</Text>
+          <Text style={s.infoLine}>{t('templates.deadlines.infoLine3','Use snooze, bulk mark done, or calendar export for planning.')}</Text>
+        </View>
+      )}
+      <View style={s.tabRow}>
+        <Pressable onPress={()=>changeTab('calendar')} accessibilityRole='tab' accessibilityState={{ selected: tab==='calendar' }} style={[s.chip, tab==='calendar'&&s.chipActive]}><Text style={[s.chipLabel, tab==='calendar'&&s.chipLabelActive]}>{t('templates.deadlines.calendarTab','Calendar')}</Text></Pressable>
+        <Pressable onPress={()=>changeTab('list')} accessibilityRole='tab' accessibilityState={{ selected: tab==='list' }} style={[s.chip, tab==='list'&&s.chipActive]}><Text style={[s.chipLabel, tab==='list'&&s.chipLabelActive]}>{t('templates.deadlines.listTab','List')}</Text></Pressable>
       </View>
       {tab==='calendar'? <DeadlinesCalendar/> : <DeadlinesList/>}
       {tab==='calendar' && <RecurringBuilder/>}
-      <Pressable onPress={async()=>{
-        try {
-          const DP = await import('expo-document-picker');
-          const res = await DP.getDocumentAsync({ type: 'text/calendar' });
-          const asset = res?.assets?.[0]; if (!asset?.uri) return;
-          const FS = await import('expo-file-system');
-          const text = await FS.readAsStringAsync(asset.uri, { encoding: FS.EncodingType.UTF8 });
-          const { parseICS } = await import('../../../services/ics');
-          const events = parseICS(text).slice(0, 100);
-          await Promise.all(events.map(ev => addDeadline({ title: ev.title, dueAt: ev.startISO, notes: ev.description || '' })));
-          Alert.alert('Imported', `Added ${events.length} deadlines.`);
-        } catch { Alert.alert('Import failed','Could not import ICS'); }
-      }} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Import ICS to Calendar</Text></Pressable>
-    </View>
+    </ScrollView>
   );
 }
 
 function DeadlinesCalendar() {
+  const { t } = useTranslation();
   const palette = useAppPalette();
   const s = styles(palette);
   const [month, setMonth] = React.useState(() => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), 1); });
@@ -51,6 +69,7 @@ function DeadlinesCalendar() {
   const monthLabel = React.useMemo(() => month.toLocaleString(undefined, { month:'long', year:'numeric' }), [month]);
   const matrix = React.useMemo(()=> buildMonthMatrix(month), [month]);
   const byDay = React.useMemo(()=> mapDeadlinesByDay(items), [items]);
+  const changeView = (v:'month'|'week') => { setView(v); AccessibilityInfo.announceForAccessibility?.(v=== 'month'? t('templates.deadlines.monthView','Month'): t('templates.deadlines.weekView','Week')); };
   return (
     <View style={{ marginTop: 8 }}>
       <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginBottom: 6 }}>
@@ -59,22 +78,25 @@ function DeadlinesCalendar() {
         <Pressable onPress={()=> setMonth(prev => new Date(prev.getFullYear(), prev.getMonth()+1, 1))}><Text style={{ color: palette.text }}>{'>'}</Text></Pressable>
       </View>
       <View style={{ flexDirection:'row', gap:8, marginBottom: 6 }}>
-        <Pressable onPress={()=>setView('month')} style={[s.chip, view==='month'&&s.chipActive]}><Text style={{ color: view==='month'? palette.onPrimary: palette.text, fontWeight:'700' }}>Month</Text></Pressable>
-        <Pressable onPress={()=>setView('week')} style={[s.chip, view==='week'&&s.chipActive]}><Text style={{ color: view==='week'? palette.onPrimary: palette.text, fontWeight:'700' }}>Week</Text></Pressable>
+        <Pressable onPress={()=>changeView('month')} style={[s.chip, view==='month'&&s.chipActive]} accessibilityRole='button' accessibilityState={{ selected:view==='month' }}><Text style={{ color: view==='month'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.monthView','Month')}</Text></Pressable>
+        <Pressable onPress={()=>changeView('week')} style={[s.chip, view==='week'&&s.chipActive]} accessibilityRole='button' accessibilityState={{ selected:view==='week' }}><Text style={{ color: view==='week'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.weekView','Week')}</Text></Pressable>
       </View>
       {(view==='month'? matrix : [currentWeekFromMatrix(matrix)]).map((week, wi) => (
         <View key={wi} style={{ flexDirection:'row', justifyContent:'space-between', marginBottom: 4 }}>
-          {week.map((day, di) => (
-            <Pressable key={di} onPress={()=> day && setSelectedDay(dayKeyFromMatrix(month, day))} style={{ width: 40, height: 40, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems:'center', justifyContent:'center', backgroundColor: selectedDay===dayKeyFromMatrix(month, day) ? palette.primary : palette.surface }}>
-              <Text style={{ color: selectedDay===dayKeyFromMatrix(month, day) ? palette.onPrimary : palette.text }}>{day ?? ''}</Text>
-              {!!day && !!byDay.get(dayKeyFromMatrix(month, day)) && <View style={{ width: 6, height: 6, borderRadius:3, backgroundColor: dotColor(dayKeyFromMatrix(month, day), items, palette), position:'absolute', bottom: 4 }} />}
-            </Pressable>
-          ))}
+          {week.map((day, di) => {
+            const dayKey = dayKeyFromMatrix(month, day);
+            return (
+              <Pressable key={di} onPress={()=> day && setSelectedDay(dayKey)} accessibilityRole='button' accessibilityState={{ selected: selectedDay===dayKey }} style={{ width: 40, height: 40, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems:'center', justifyContent:'center', backgroundColor: selectedDay===dayKey ? palette.primary : palette.surface }}>
+                <Text style={{ color: selectedDay===dayKey ? palette.onPrimary : palette.text }}>{day ?? ''}</Text>
+                {!!day && !!byDay.get(dayKey) && <View style={{ width: 6, height: 6, borderRadius:3, backgroundColor: dotColor(dayKey, items, palette), position:'absolute', bottom: 4 }} />}
+              </Pressable>
+            );
+          })}
         </View>
       ))}
       {!!selectedDay && (
         <View style={{ marginTop: 8 }}>
-          <Text style={{ color: palette.text, fontWeight:'700' }}>Selected: {new Date(selectedDay).toLocaleDateString()}</Text>
+          <Text style={{ color: palette.text, fontWeight:'700' }}>{t('templates.deadlines.selectedDate','Selected:')} {new Date(selectedDay).toLocaleDateString()}</Text>
           {items.filter(d => toDayKey(d.dueAt)===selectedDay).map(d => (
             <Text key={d.id} style={{ color: palette.text }}>• {new Date(d.dueAt).toLocaleTimeString()} — {d.title}</Text>
           ))}
@@ -85,6 +107,7 @@ function DeadlinesCalendar() {
 }
 
 function RecurringBuilder() {
+  const { t } = useTranslation();
   const palette = useAppPalette();
   const s = styles(palette);
   const [title, setTitle] = React.useState('Follow-up');
@@ -93,14 +116,14 @@ function RecurringBuilder() {
   const [count, setCount] = React.useState('4');
   return (
     <View style={{ marginTop: 12 }}>
-      <Text style={s.cardTitle}>Add Recurring</Text>
-      <TextInput placeholder="Title prefix" placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
-      <TextInput placeholder="Start date (YYYY-MM-DD)" placeholderTextColor={palette.text+'77'} value={start} onChangeText={setStart} style={s.input} />
+      <Text style={s.cardTitle}>{t('templates.deadlines.recurringTitle','Add Recurring')}</Text>
+      <TextInput placeholder={t('templates.deadlines.recurringPrefix','Title prefix')} placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
+      <TextInput placeholder={t('templates.deadlines.recurringStart','Start date (YYYY-MM-DD)')} placeholderTextColor={palette.text+'77'} value={start} onChangeText={setStart} style={s.input} />
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
-        <Pressable onPress={()=>setFreq('weekly')} style={[s.chip, freq==='weekly'&&s.chipActive]}><Text style={{ color: freq==='weekly'? palette.onPrimary: palette.text, fontWeight:'700' }}>Weekly</Text></Pressable>
-        <Pressable onPress={()=>setFreq('monthly')} style={[s.chip, freq==='monthly'&&s.chipActive]}><Text style={{ color: freq==='monthly'? palette.onPrimary: palette.text, fontWeight:'700' }}>Monthly</Text></Pressable>
+        <Pressable onPress={()=>setFreq('weekly')} style={[s.chip, freq==='weekly'&&s.chipActive]} accessibilityRole='button' accessibilityState={{ selected: freq==='weekly' }}><Text style={{ color: freq==='weekly'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.recurringWeekly','Weekly')}</Text></Pressable>
+        <Pressable onPress={()=>setFreq('monthly')} style={[s.chip, freq==='monthly'&&s.chipActive]} accessibilityRole='button' accessibilityState={{ selected: freq==='monthly' }}><Text style={{ color: freq==='monthly'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.recurringMonthly','Monthly')}</Text></Pressable>
       </View>
-      <TextInput placeholder="Count" placeholderTextColor={palette.text+'77'} value={count} onChangeText={setCount} style={s.input} />
+      <TextInput placeholder={t('templates.deadlines.recurringCount','Count')} placeholderTextColor={palette.text+'77'} value={count} onChangeText={setCount} style={s.input} />
       <Pressable onPress={async()=>{
         try {
           const n = Math.max(1, Math.min(52, Number(count)||1));
@@ -113,23 +136,34 @@ function RecurringBuilder() {
             ops.push(addDeadline({ title: `${title} ${freq==='weekly'? `Week ${i+1}` : `Month ${i+1}`}`, dueAt: dt.toISOString(), notes: '' }));
           }
           await Promise.all(ops);
-          Alert.alert('Added', `${n} recurring deadlines added.`);
-        } catch { Alert.alert('Failed','Could not add recurring deadlines'); }
-      }} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>Create</Text></Pressable>
+          Alert.alert(t('templates.deadlines.recurringAdded','Added'), t('templates.deadlines.recurringAddedBody','{{count}} recurring deadlines added.').replace('{{count}}', String(n)));
+        } catch { Alert.alert(t('templates.deadlines.recurringFailed','Failed'), t('templates.deadlines.recurringFailedBody','Could not add recurring deadlines.')); }
+      }} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>{t('templates.deadlines.recurringCreate','Create')}</Text></Pressable>
     </View>
   );
 }
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    container: { flex: 1, backgroundColor: palette.background, padding: 16 },
+    container: { flex: 1, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: '700', color: palette.text },
+    tabRow: { flexDirection:'row', gap:8, marginBottom:8 },
     chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
     chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
+    chipLabel: { color: palette.text, fontWeight:'700' },
+    chipLabelActive: { color: palette.onPrimary },
     input: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding: 8, borderRadius: 6, marginTop: 8 },
     button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems:'center' },
     buttonText: { color: palette.onPrimary, fontWeight:'700' },
     cardTitle: { color: palette.text, fontWeight: '700', marginTop: 10 },
+    actionsRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:12, marginBottom:8 },
+    infoBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:12, paddingVertical:8, borderRadius:6 },
+    infoBtnText: { color: palette.text, fontWeight:'600', fontSize:13 },
+    secondaryBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:8, borderRadius:6 },
+    secondaryBtnText: { color: palette.text, fontWeight:'600' },
+    infoCard: { backgroundColor: palette.card, borderRadius:8, padding:12, borderWidth:1, borderColor:palette.muted, marginTop:8 },
+    infoTitle: { fontWeight:'700', color: palette.text, marginBottom:4 },
+    infoLine: { color: palette.text, opacity:0.85, marginBottom:2, fontSize:13 },
   });
 }
 

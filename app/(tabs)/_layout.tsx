@@ -32,7 +32,7 @@ export default function TabsLayout() {
           tabBarAllowFontScaling: true,
         }}
       >
-        {/* 8 visible tabs */}
+  {/* Visible tabs */}
         <Tabs.Screen
           name="index"
           options={{
@@ -123,8 +123,7 @@ export default function TabsLayout() {
           }}
         />
 
-        {/* Hidden routes: declare once per route to prevent auto-tab */}
-        {/* Resources */}
+  {/* Hidden routes (resources, advocacy, campaigns, community, misc) */}
         <Tabs.Screen name="resources/letter-reconsideration" options={{ href: null }} />
         <Tabs.Screen name="resources/letter-rtw-plan" options={{ href: null }} />
         <Tabs.Screen name="resources/letter-union-request" options={{ href: null }} />
@@ -148,7 +147,7 @@ export default function TabsLayout() {
         <Tabs.Screen name="resources/ai-decision-simplifier" options={{ href: null }} />
         <Tabs.Screen name="resources/[id]" options={{ href: null }} />
 
-  // ...existing code...
+    {/* (additional routes grouped below) */}
 
         {/* Advocacy */}
         <Tabs.Screen name="advocacy/[id]" options={{ href: null }} />

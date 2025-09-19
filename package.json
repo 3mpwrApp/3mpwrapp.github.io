@@ -27,6 +27,19 @@
     "admin:export": "node ./scripts/export-collection.js",
     "rules:deploy": "firebase deploy --only firestore:rules",
     "rules:deploy:storage": "firebase deploy --only storage"
+    ,"i18n:diff": "node ./scripts/i18n-diff.js",
+    "i18n:fill": "node ./scripts/i18n-fill-missing.js",
+    "i18n:untranslated": "node ./scripts/i18n-untranslated.js",
+    "i18n:export": "node ./scripts/i18n-export-untranslated.js",
+    "i18n:tag": "node ./scripts/i18n-tag-untranslated.js",
+    "i18n:strip": "node ./scripts/i18n-strip-tags.js"
+    ,"i18n:tag:check": "node ./scripts/i18n-check-tags.js",
+    "i18n:threshold": "node ./scripts/i18n-threshold.js",
+    "i18n:assert": "node ./scripts/i18n-assert-clean.js"
+    ,"i18n:progress": "node ./scripts/i18n-progress-diff.js",
+  "i18n:export:open": "I18N_OPEN=1 node ./scripts/i18n-export-untranslated.js",
+  "i18n:plural": "node ./scripts/i18n-plural-check.js",
+  "i18n:test": "npm run i18n:diff && npm run i18n:plural && npm run i18n:threshold && npm run i18n:assert"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

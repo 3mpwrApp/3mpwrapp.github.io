@@ -233,3 +233,74 @@ During local dev, Sentry only reports if you configure a DSN. You can add `EXPO_
   - Create channels: `eas channel:create production`, `eas channel:create preview`
   - Publish: `eas update --channel production`
 - Code signing requires generating keys and setting `EXPO_UPDATE_CODE_SIGNING_CERTIFICATE` etc. See Expo docs.
+
+## i18n Tooling
+
+Scripts (see `package.json`):
+
+- `npm run i18n:diff` – Fails (exit 1) if any keys missing vs `en`.
+- `npm run i18n:fill` – Non‑destructive: adds missing English keys to `es` / `fr` only if absent.
+- `npm run i18n:untranslated` – Lists keys whose translated value exactly matches English.
+- `npm run i18n:export` – Writes `i18n-untranslated.csv` (locale,key,en,value) for translator handoff.
+- `npm run i18n:tag` – Prefixes untranslated values with `[T]` tag (visual audit in-app / search).
+- `npm run i18n:strip` – Removes `[T]` tags after translation.
+
+### Additional QA / CI Scripts
+- `npm run i18n:tag:check` – Lists `[T]` tagged keys (fails if any).
+- `npm run i18n:threshold` – Fails if total untranslated (EN-equal) keys exceed `I18N_MAX_UNTRANSLATED` (env).
+- `npm run i18n:assert` – Hard fail if any `[T]` tags remain (intended pre‑release gate).
+
+### Runtime Badge
+Set `EXPO_PUBLIC_I18N_BADGE=1` to display a small `◀` marker after any string whose underlying value is still tagged. Use with `npm run i18n:tag` to visually sweep the UI.
+
+### CI
+The workflow `i18n-check.yml` runs:
+1. `i18n:diff` on PR + push (structure sync)
+2. `i18n:threshold` with a configured ceiling
+3. `i18n:assert` on main pushes (ensures no `[T]` tags ship)
+
+Workflow suggestion:
+1. `npm run i18n:diff` (ensure structure synced)
+2. `npm run i18n:fill` (only on new namespaces)
+3. `npm run i18n:untranslated` (quick counts)
+4. `npm run i18n:export` (send CSV to translators)
+5. Optionally `npm run i18n:tag` before a UI review build
+6. After translations land, run `npm run i18n:strip` then `npm run i18n:diff` again
+
+CI: `.github/workflows/i18n-check.yml` runs the diff on PRs touching locale/script files.
+
+Translation QA ideas:
+- Add visual badge: if value starts with `[T]`, show subtle warning icon.
+- Add unit test to assert no `[T]` tags before production release.
+
+### Progress & Automation
+- `npm run i18n:progress` – Shows change in untranslated counts vs last snapshot (stores `i18n-untranslated.snapshot.json`).
+- `npm run i18n:export:open` – Exports CSV and auto-opens it (sets `I18N_OPEN=1`).
+- `npm run i18n:test` – Runs diff → threshold → assert in sequence.
+
+### Pluralization
+Basic plural support uses `.one` / `.other` key suffixes.
+
+Example keys:
+```json
+"demoPlural": {
+  "item": {
+    "one": "{{count}} item",
+    "other": "{{count}} items"
+  }
+}
+```
+
+Usage in code:
+```ts
+const { tCount } = useTranslation();
+const label = tCount('demoPlural.item', count);
+```
+
+Validation:
+- `npm run i18n:plural` – Ensures every `.one` has a matching `.other` and both include `{{count}}`.
+- Included automatically in `npm run i18n:test`.
+
+Guidelines:
+- Always include `{{count}}` in both forms (even if some languages omit the number).
+- For now only two plural categories are supported (1 vs other). Future ICU expansion possible.

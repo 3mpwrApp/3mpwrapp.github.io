@@ -27,6 +27,7 @@ function get(obj: any, path: string, fallback: string) {
 type I18nContextType = {
   lang: Lang;
   t: (key: string, fallback?: string) => string;
+  tCount: (baseKey: string, count: number, fallbackBase?: string) => string;
   setLanguage: (lang: Lang) => void;
   isRTL: boolean;
 };
@@ -58,16 +59,44 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const setLanguage = (l: Lang) => setLang(l);
 
+  const showBadge = !!process.env.EXPO_PUBLIC_I18N_BADGE;
+  const TAG = "[T]";
   const t = React.useCallback(
     (key: string, fallback: string = key) => {
       const dict = dictionaries[lang] ?? dictionaries.en;
-      const v = get(dict, key, fallback);
-      return typeof v === "string" ? v : fallback;
+      let v = get(dict, key, fallback);
+      if (typeof v !== "string") return fallback;
+      const tagged = v.startsWith(TAG);
+      if (tagged) v = v.slice(TAG.length);
+      if (tagged && showBadge) return `${v} ◀`;
+      return v;
     },
-    [lang],
+    [lang, showBadge],
   );
 
-  const value: I18nContextType = { lang, t, setLanguage, isRTL };
+  const interpolate = (template: string, vars: Record<string, string | number>) =>
+    template.replace(/{{(\w+)}}/g, (_, k) => String(vars[k] ?? ""));
+
+  const tCount = React.useCallback(
+    (baseKey: string, count: number, fallbackBase?: string) => {
+      const form = count === 1 ? "one" : "other";
+      const key = `${baseKey}.${form}`;
+      const baseFallback = fallbackBase || baseKey;
+      // Fallback chain: explicit plural form -> baseKey.other -> baseKey.one -> fallbackBase
+      let raw = t(key, "");
+      if (!raw || raw === key) {
+        raw = t(`${baseKey}.other`, "");
+      }
+      if ((!raw || raw === `${baseKey}.other`) && form === "other") {
+        raw = t(`${baseKey}.one`, baseFallback);
+      }
+      if (!raw) raw = baseFallback;
+      return interpolate(raw, { count });
+    },
+    [t],
+  );
+
+  const value: I18nContextType = { lang, t, tCount, setLanguage, isRTL };
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 

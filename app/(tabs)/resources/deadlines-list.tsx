@@ -1,20 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet, Alert, ScrollView } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
+import { AccessibilityInfo, Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { listDeadlines, deleteDeadline, updateDeadline, type Deadline } from '../../../services/deadlines';
-import { buildICSMany, buildICS, parseICS } from '../../../services/ics';
-import * as Notifier from '../../../services/notifications';
+import { MAX_FONT_SCALE, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useTranslation } from '../../../i18n';
 import { addEvent } from '../../../services/calendar';
+import { deleteDeadline, listDeadlines, updateDeadline, type Deadline } from '../../../services/deadlines';
+import { buildICS, buildICSMany, parseICS } from '../../../services/ics';
+import * as Notifier from '../../../services/notifications';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
 export default function DeadlinesList() {
+  const { t } = useTranslation();
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('My Deadlines');
   useFocusOnRefOnMount(titleRef);
   const [items, setItems] = React.useState<Deadline[]>([]);
   const [loading, setLoading] = React.useState(false);
@@ -28,7 +29,7 @@ export default function DeadlinesList() {
       const rows = await listDeadlines();
       setItems(rows);
     } catch {
-      Alert.alert('Load failed', 'Unable to load deadlines.');
+      Alert.alert(t('templates.deadlines.loadFailed','Load failed'), t('templates.deadlines.loadFailedBody','Unable to load deadlines.'));
     } finally {
       setLoading(false);
     }
@@ -95,9 +96,9 @@ export default function DeadlinesList() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        My Deadlines {loading ? '(loading...)' : ''}
+        {t('templates.deadlines.listTitle','My Deadlines')} {loading ? t('common.loading','(loading...)') : ''}
       </Text>
-      <A11yPressable onPress={load} style={s.button}><Text style={s.buttonText}>Reload</Text></A11yPressable>
+      <A11yPressable onPress={load} style={s.button} accessibilityLabel={t('templates.deadlines.reload','Reload deadlines')}><Text style={s.buttonText}>{t('templates.deadlines.reloadShort','Reload')}</Text></A11yPressable>
       <A11yPressable onPress={async () => {
         try {
           const DP = await import('expo-document-picker');
@@ -110,21 +111,21 @@ export default function DeadlinesList() {
             for (const ev of events) {
               await (await import('../../../services/deadlines')).addDeadline({ title: ev.title, dueAt: ev.startISO, notes: ev.description || '' });
             }
-            Alert.alert('Imported', `Added ${events.length} deadlines from ICS`);
+            Alert.alert(t('templates.deadlines.imported','Imported'), t('templates.deadlines.importedBody','Added {{count}} deadlines.').replace('{{count}}', String(events.length)));
             load();
           }
-        } catch { Alert.alert('Import failed','Could not import ICS file.'); }
+        } catch { Alert.alert(t('templates.deadlines.importFailed','Import failed'), t('templates.deadlines.importFailedBody','Could not import ICS file.')); }
       }} style={[s.button, { marginTop: 8 }]}>
-        <Text style={s.buttonText}>Import ICS</Text>
+        <Text style={s.buttonText}>{t('templates.deadlines.importICS','Import ICS')}</Text>
       </A11yPressable>
       {items.length > 0 && (
         <A11yPressable onPress={exportAll} style={[s.button, { marginTop: 8 }]}> 
-          <Text style={s.buttonText}>Export all as ICS</Text>
+          <Text style={s.buttonText}>{t('templates.deadlines.exportAllICS','Export all as ICS')}</Text>
         </A11yPressable>
       )}
       {items.length > 0 && (
         <A11yPressable onPress={exportCSV} style={[s.button, { marginTop: 8 }]}> 
-          <Text style={s.buttonText}>Export all as CSV</Text>
+          <Text style={s.buttonText}>{t('templates.deadlines.exportAllCSV','Export all as CSV')}</Text>
         </A11yPressable>
       )}
       {items.length > 0 && (
@@ -135,11 +136,12 @@ export default function DeadlinesList() {
                 const { updateDeadline } = await import('../../../services/deadlines');
                 await Promise.all(items.map((d) => updateDeadline(d.id!, { done: true })));
                 load();
-              } catch { Alert.alert('Bulk update failed','Unable to mark all done.'); }
+                AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.bulkMarkedDone','All marked done'));
+              } catch { Alert.alert(t('templates.deadlines.bulkUpdateFailed','Bulk update failed'), t('templates.deadlines.bulkUpdateFailedBody','Unable to mark all done.')); }
             }}
             style={s.button}
           >
-            <Text style={s.buttonText}>Mark all done</Text>
+            <Text style={s.buttonText}>{t('templates.deadlines.markAllDone','Mark all done')}</Text>
           </A11yPressable>
           <A11yPressable
             onPress={async () => {
@@ -147,11 +149,12 @@ export default function DeadlinesList() {
                 const { updateDeadline } = await import('../../../services/deadlines');
                 await Promise.all(items.map((d) => updateDeadline(d.id!, { done: false })));
                 load();
-              } catch { Alert.alert('Bulk update failed','Unable to mark all not-done.'); }
+                AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.bulkMarkedUndone','All marked not-done'));
+              } catch { Alert.alert(t('templates.deadlines.bulkUpdateFailed','Bulk update failed'), t('templates.deadlines.bulkUpdateFailedBody','Unable to mark all not-done.')); }
             }}
             style={s.button}
           >
-            <Text style={s.buttonText}>Mark all not-done</Text>
+            <Text style={s.buttonText}>{t('templates.deadlines.markAllNotDone','Mark all not-done')}</Text>
           </A11yPressable>
         </View>
       )}
@@ -160,42 +163,44 @@ export default function DeadlinesList() {
           onPress={async () => {
             try {
               const { addDeadline } = await import('../../../services/deadlines');
-              const base = 'Follow-up';
+              const base = t('templates.deadlines.followUp','Follow-up');
               const now = new Date();
               const adds = Array.from({ length: 4 }, (_, i) => {
                 const dt = new Date(now.getTime() + (i+1) * 7 * 86400000);
-                return addDeadline({ title: `${base} (Week ${i+1})`, dueAt: dt.toISOString(), notes: '' });
+                return addDeadline({ title: `${base} (${t('templates.deadlines.weekShort','Week')} ${i+1})`, dueAt: dt.toISOString(), notes: '' });
               });
               await Promise.all(adds);
               load();
-            } catch { Alert.alert('Add failed','Could not add weekly reminders.'); }
+              AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.recurringAdded','Added'));
+            } catch { Alert.alert(t('templates.deadlines.addFailed','Add failed'), t('templates.deadlines.addFailedWeeklyBody','Could not add weekly reminders.')); }
           }}
           style={s.button}
         >
-          <Text style={s.buttonText}>Add weekly x4</Text>
+          <Text style={s.buttonText}>{t('templates.deadlines.addWeekly','Add weekly x4')}</Text>
         </A11yPressable>
         <A11yPressable
           onPress={async () => {
             try {
               const { addDeadline } = await import('../../../services/deadlines');
-              const base = 'Follow-up';
+              const base = t('templates.deadlines.followUp','Follow-up');
               const now = new Date();
               const adds = Array.from({ length: 6 }, (_, i) => {
                 const dt = new Date(now);
                 dt.setMonth(dt.getMonth() + (i+1));
-                return addDeadline({ title: `${base} (Month ${i+1})`, dueAt: dt.toISOString(), notes: '' });
+                return addDeadline({ title: `${base} (${t('templates.deadlines.monthShort','Month')} ${i+1})`, dueAt: dt.toISOString(), notes: '' });
               });
               await Promise.all(adds);
               load();
-            } catch { Alert.alert('Add failed','Could not add monthly reminders.'); }
+              AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.recurringAdded','Added'));
+            } catch { Alert.alert(t('templates.deadlines.addFailed','Add failed'), t('templates.deadlines.addFailedMonthlyBody','Could not add monthly reminders.')); }
           }}
           style={s.button}
         >
-          <Text style={s.buttonText}>Add monthly x6</Text>
+          <Text style={s.buttonText}>{t('templates.deadlines.addMonthly','Add monthly x6')}</Text>
         </A11yPressable>
       </View>
       {items.length === 0 ? (
-        <Text style={{ color: palette.text, marginTop: 8 }}>No deadlines saved.</Text>
+        <Text style={{ color: palette.text, marginTop: 8 }}>{t('templates.deadlines.empty','No deadlines saved.')}</Text>
       ) : (
         grouped.map(([month, ds]) => (
           <View key={month}>
@@ -206,26 +211,26 @@ export default function DeadlinesList() {
                 {d.notes ? <Text style={s.cardText}>{d.notes}</Text> : null}
                 {editingId === d.id ? (
                   <View style={{ marginVertical: 8 }}>
-                    <Text style={s.cardText}>Edit title</Text>
+                    <Text style={s.cardText}>{t('templates.deadlines.editTitle','Edit title')}</Text>
                     <View style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
                       <Text style={{ color: palette.text, padding: 6 }}>{editTitle}</Text>
                     </View>
-                    <Text style={s.cardText}>Edit date (YYYY-MM-DD)</Text>
+                    <Text style={s.cardText}>{t('templates.deadlines.editDate','Edit date (YYYY-MM-DD)')}</Text>
                     <View style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 6 }}>
                       <Text style={{ color: palette.text, padding: 6 }}>{editDate}</Text>
                     </View>
                     <View style={{ flexDirection: 'row', gap: 8 }}>
                       <A11yPressable
                         onPress={async () => {
-                          try { await updateDeadline(d.id!, { title: editTitle, dueAt: new Date(editDate).toISOString() }); setEditingId(null); load(); }
-                          catch { Alert.alert('Update failed', 'Check your inputs.'); }
+                          try { await updateDeadline(d.id!, { title: editTitle, dueAt: new Date(editDate).toISOString() }); setEditingId(null); load(); AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.updated','Updated')); }
+                          catch { Alert.alert(t('templates.deadlines.updateFailed','Update failed'), t('templates.deadlines.updateFailedBody','Check your inputs.')); }
                         }}
                         style={s.smallBtn}
                       >
-                        <Text style={s.smallBtnText}>Save</Text>
+                        <Text style={s.smallBtnText}>{t('common.save','Save')}</Text>
                       </A11yPressable>
                       <A11yPressable onPress={() => setEditingId(null)} style={s.smallBtn}>
-                        <Text style={s.smallBtnText}>Cancel</Text>
+                        <Text style={s.smallBtnText}>{t('common.cancel','Cancel')}</Text>
                       </A11yPressable>
                     </View>
                   </View>
@@ -233,45 +238,45 @@ export default function DeadlinesList() {
                 <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
                   <A11yPressable
                     onPress={async () => {
-                      const ok = await Notifier.scheduleAt(new Date(Date.now() + 24*60*60*1000), 'Snoozed deadline', d.title);
-                      Alert.alert(ok ? 'Snoozed' : 'Not scheduled', ok ? 'Reminder in 24 hours.' : 'Unable to schedule.');
+                      const ok = await Notifier.scheduleAt(new Date(Date.now() + 24*60*60*1000), t('templates.deadlines.snoozedDeadline','Snoozed deadline'), d.title);
+                      Alert.alert(ok ? t('templates.deadlines.snoozed','Snoozed') : t('templates.deadlines.notScheduled','Not scheduled'), ok ? t('templates.deadlines.reminder24h','Reminder in 24 hours.') : t('templates.deadlines.unableSchedule','Unable to schedule.'));
                     }}
                     style={s.smallBtn}
                   >
-                    <Text style={s.smallBtnText}>Snooze 24h</Text>
+                    <Text style={s.smallBtnText}>{t('templates.deadlines.snooze24h','Snooze 24h')}</Text>
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {
-                      const ok = await Notifier.scheduleAt(new Date(Date.now() + 7*24*60*60*1000), 'Snoozed deadline', d.title);
-                      Alert.alert(ok ? 'Snoozed' : 'Not scheduled', ok ? 'Reminder in 7 days.' : 'Unable to schedule.');
+                      const ok = await Notifier.scheduleAt(new Date(Date.now() + 7*24*60*60*1000), t('templates.deadlines.snoozedDeadline','Snoozed deadline'), d.title);
+                      Alert.alert(ok ? t('templates.deadlines.snoozed','Snoozed') : t('templates.deadlines.notScheduled','Not scheduled'), ok ? t('templates.deadlines.reminder7d','Reminder in 7 days.') : t('templates.deadlines.unableSchedule','Unable to schedule.'));
                     }}
                     style={s.smallBtn}
                   >
-                    <Text style={s.smallBtnText}>Snooze 7d</Text>
+                    <Text style={s.smallBtnText}>{t('templates.deadlines.snooze7d','Snooze 7d')}</Text>
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {
-                      try { await updateDeadline(d.id!, { done: !d.done }); load(); }
-                      catch { Alert.alert('Update failed', 'Unable to update.'); }
+                      try { await updateDeadline(d.id!, { done: !d.done }); load(); AccessibilityInfo.announceForAccessibility?.(d.done ? t('templates.deadlines.markedUndone','Marked undone') : t('templates.deadlines.markedDone','Marked done')); }
+                      catch { Alert.alert(t('templates.deadlines.updateFailed','Update failed'), t('templates.deadlines.updateFailedBody','Unable to update.')); }
                     }}
                     style={s.smallBtn}
                   >
-                    <Text style={s.smallBtnText}>{d.done ? 'Mark undone' : 'Mark done'}</Text>
+                    <Text style={s.smallBtnText}>{d.done ? t('templates.deadlines.markUndone','Mark undone') : t('templates.deadlines.markDone','Mark done')}</Text>
                   </A11yPressable>
                   <A11yPressable
                     onPress={() => { setEditingId(d.id!); setEditTitle(d.title); setEditDate(d.dueAt.slice(0,10)); }}
                     style={s.smallBtn}
                   >
-                    <Text style={s.smallBtnText}>Edit</Text>
+                    <Text style={s.smallBtnText}>{t('common.edit','Edit')}</Text>
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {
                       const ok = await addEvent({ title: d.title, notes: d.notes, startISO: d.dueAt, durationMinutes: 30 });
-                      Alert.alert(ok ? 'Added' : 'Not added', ok ? 'Event added to calendar.' : 'Unable to add event.');
+                      Alert.alert(ok ? t('templates.deadlines.eventAdded','Added') : t('templates.deadlines.eventNotAdded','Not added'), ok ? t('templates.deadlines.eventAddedBody','Event added to calendar.') : t('templates.deadlines.eventNotAddedBody','Unable to add event.'));
                     }}
                     style={s.smallBtn}
                   >
-                    <Text style={s.smallBtnText}>Calendar</Text>
+                    <Text style={s.smallBtnText}>{t('templates.deadlines.calendarAdd','Calendar')}</Text>
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {
@@ -282,21 +287,21 @@ export default function DeadlinesList() {
                         await FS.writeAsStringAsync(path, ics, { encoding: FS.EncodingType.UTF8 });
                         const Sharing = await import('expo-sharing');
                         if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path);
-                        else Alert.alert('Saved', 'ICS saved to cache.');
-                      } catch { Alert.alert('Export failed', 'Could not create ICS.'); }
+                        else Alert.alert(t('templates.deadlines.saved','Saved'), t('templates.deadlines.icsSaved','ICS saved to cache.'));
+                      } catch { Alert.alert(t('templates.deadlines.exportFailed','Export failed'), t('templates.deadlines.exportFailedBody','Could not create ICS.')); }
                     }}
                     style={s.smallBtn}
                   >
-                    <Text style={s.smallBtnText}>ICS</Text>
+                    <Text style={s.smallBtnText}>{t('templates.deadlines.icsBtn','ICS')}</Text>
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {
-                      try { await deleteDeadline(d.id!); setItems((prev) => prev.filter((x) => x.id !== d.id)); }
-                      catch { Alert.alert('Delete failed', 'Unable to delete.'); }
+                      try { await deleteDeadline(d.id!); setItems((prev) => prev.filter((x) => x.id !== d.id)); AccessibilityInfo.announceForAccessibility?.(t('templates.deadlines.deleted','Deleted')); }
+                      catch { Alert.alert(t('templates.deadlines.deleteFailed','Delete failed'), t('templates.deadlines.deleteFailedBody','Unable to delete.')); }
                     }}
                     style={s.smallBtn}
                   >
-                    <Text style={s.smallBtnText}>Delete</Text>
+                    <Text style={s.smallBtnText}>{t('common.delete','Delete')}</Text>
                   </A11yPressable>
                 </View>
               </View>

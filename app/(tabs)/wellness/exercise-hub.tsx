@@ -53,7 +53,7 @@ export default function ExerciseHub() {
       <View style={[s.card, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
         <Text style={[s.cardTitle, { color: palette.primary }]}>How to Use Exercise Hub</Text>
         <Text style={{ color: palette.text, opacity: 0.95 }}>
-          Browse accessible exercise videos and guides. Filter by audience, favorite exercises, and export your favorites as a CSV for sharing or tracking. Tap "Open Video" to watch, "☆ Favorite" to save, and "Export Favorites" to share your list.
+          Browse accessible exercise videos and guides. Filter by audience, favorite exercises, and export your favorites as a CSV for sharing or tracking. Tap &quot;Open Video&quot; to watch, &quot;☆ Favorite&quot; to save, and &quot;Export Favorites&quot; to share your list.
         </Text>
       </View>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Accessible Exercise Hub screen">Accessible Exercise Hub</Text>
