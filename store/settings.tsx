@@ -23,6 +23,22 @@ export type SettingsState = {
   includeProvincialHolidays: boolean;
   youtubeOpenPreference: "ask" | "app" | "browser";
   voiceMode: boolean;
+  // Enhanced accessibility settings
+  screenReaderOptimized: boolean;
+  reduceMotion: boolean;
+  focusIndicatorEnhanced: boolean;
+  tapTargetMinimum: boolean;
+  // Notification preferences
+  notificationsEnabled: boolean;
+  notificationSound: boolean;
+  notificationVibration: boolean;
+  emergencyAlerts: boolean;
+  wellnessReminders: boolean;
+  eventReminders: boolean;
+  // Privacy and security
+  requirePasscodeOnLaunch: boolean;
+  autoLockTimeout: number; // minutes
+  analyticsOptOut: boolean;
 };
 
 /** Context type including setters */
@@ -37,6 +53,22 @@ type Ctx = SettingsState & {
   setIncludeProvincialHolidays: (v: boolean) => void;
   setYoutubeOpenPreference: (v: SettingsState["youtubeOpenPreference"]) => void;
   setVoiceMode: (v: boolean) => void;
+  // Enhanced accessibility setters
+  setScreenReaderOptimized: (v: boolean) => void;
+  setReduceMotion: (v: boolean) => void;
+  setFocusIndicatorEnhanced: (v: boolean) => void;
+  setTapTargetMinimum: (v: boolean) => void;
+  // Notification setters
+  setNotificationsEnabled: (v: boolean) => void;
+  setNotificationSound: (v: boolean) => void;
+  setNotificationVibration: (v: boolean) => void;
+  setEmergencyAlerts: (v: boolean) => void;
+  setWellnessReminders: (v: boolean) => void;
+  setEventReminders: (v: boolean) => void;
+  // Privacy and security setters
+  setRequirePasscodeOnLaunch: (v: boolean) => void;
+  setAutoLockTimeout: (v: number) => void;
+  setAnalyticsOptOut: (v: boolean) => void;
 };
 
 /** Default values if nothing stored */
@@ -51,6 +83,22 @@ const DEFAULTS: SettingsState = {
   includeProvincialHolidays: false,
   youtubeOpenPreference: "ask",
   voiceMode: false,
+  // Enhanced accessibility defaults
+  screenReaderOptimized: false,
+  reduceMotion: false,
+  focusIndicatorEnhanced: false,
+  tapTargetMinimum: true,
+  // Notification defaults
+  notificationsEnabled: true,
+  notificationSound: true,
+  notificationVibration: true,
+  emergencyAlerts: true,
+  wellnessReminders: false,
+  eventReminders: false,
+  // Privacy and security defaults
+  requirePasscodeOnLaunch: false,
+  autoLockTimeout: 5,
+  analyticsOptOut: false,
 };
 
 const STORAGE_KEY = "settings:v1";
@@ -113,6 +161,38 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
   const setVoiceMode = (v: boolean) =>
     setState((s) => ({ ...s, voiceMode: v }));
 
+  // Enhanced accessibility setters
+  const setScreenReaderOptimized = (v: boolean) =>
+    setState((s) => ({ ...s, screenReaderOptimized: v }));
+  const setReduceMotion = (v: boolean) =>
+    setState((s) => ({ ...s, reduceMotion: v }));
+  const setFocusIndicatorEnhanced = (v: boolean) =>
+    setState((s) => ({ ...s, focusIndicatorEnhanced: v }));
+  const setTapTargetMinimum = (v: boolean) =>
+    setState((s) => ({ ...s, tapTargetMinimum: v }));
+
+  // Notification setters
+  const setNotificationsEnabled = (v: boolean) =>
+    setState((s) => ({ ...s, notificationsEnabled: v }));
+  const setNotificationSound = (v: boolean) =>
+    setState((s) => ({ ...s, notificationSound: v }));
+  const setNotificationVibration = (v: boolean) =>
+    setState((s) => ({ ...s, notificationVibration: v }));
+  const setEmergencyAlerts = (v: boolean) =>
+    setState((s) => ({ ...s, emergencyAlerts: v }));
+  const setWellnessReminders = (v: boolean) =>
+    setState((s) => ({ ...s, wellnessReminders: v }));
+  const setEventReminders = (v: boolean) =>
+    setState((s) => ({ ...s, eventReminders: v }));
+
+  // Privacy and security setters
+  const setRequirePasscodeOnLaunch = (v: boolean) =>
+    setState((s) => ({ ...s, requirePasscodeOnLaunch: v }));
+  const setAutoLockTimeout = (v: number) =>
+    setState((s) => ({ ...s, autoLockTimeout: v }));
+  const setAnalyticsOptOut = (v: boolean) =>
+    setState((s) => ({ ...s, analyticsOptOut: v }));
+
   const value: Ctx = {
     ...state,
     setHighContrast,
@@ -125,6 +205,22 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setIncludeProvincialHolidays,
     setYoutubeOpenPreference,
     setVoiceMode,
+    // Enhanced accessibility setters
+    setScreenReaderOptimized,
+    setReduceMotion,
+    setFocusIndicatorEnhanced,
+    setTapTargetMinimum,
+    // Notification setters
+    setNotificationsEnabled,
+    setNotificationSound,
+    setNotificationVibration,
+    setEmergencyAlerts,
+    setWellnessReminders,
+    setEventReminders,
+    // Privacy and security setters
+    setRequirePasscodeOnLaunch,
+    setAutoLockTimeout,
+    setAnalyticsOptOut,
   };
 
   return (
