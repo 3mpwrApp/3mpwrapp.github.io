@@ -1,46 +1,46 @@
-import React, { useState, useEffect } from "react";
+import { Ionicons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Link } from "expo-router";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import React, { useEffect, useState } from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TextInput,
-  Button,
   Alert,
+  Button,
   Image,
   Linking,
   Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
-import { useAppPalette } from "../../theme/usePalette";
-import { useTextScale } from "../../theme/typography";
+import { useAuth } from "../../context/AuthContext";
+import { db, storage } from "../../firebase/config";
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
-import { useSettings, TextScale, ResourceFormat } from "../../store/settings";
 import { useTranslation } from "../../i18n";
-import { useAuth } from "../../context/AuthContext";
-import { Link } from "expo-router";
-import { db, storage } from "../../firebase/config";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { useNetwork } from "../../store/network";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { useProfileLocal } from "../../store/profileLocal";
 import {
+  clearAllData,
   exportBackup,
   importBackup,
-  clearAllData,
 } from "../../services/backup";
+import { useNetwork } from "../../store/network";
 import { usePrivacy } from "../../store/privacy";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Ionicons } from "@expo/vector-icons";
+import { useProfileLocal } from "../../store/profileLocal";
+import { ResourceFormat, TextScale, useSettings } from "../../store/settings";
+import { useTextScale } from "../../theme/typography";
+import { useAppPalette } from "../../theme/usePalette";
 
 // Import new components
 import AccessibilityToggle from "../../components/AccessibilityToggle";
+import EmergencyWalletCard from "../../components/EmergencyWalletCard";
 import LanguageSelector from "../../components/LanguageSelector";
 import NotificationPreferences from "../../components/NotificationPreferences";
-import EmergencyWalletCard from "../../components/EmergencyWalletCard";
 
 export default function SettingsScreen() {
   const palette = useAppPalette();
@@ -385,7 +385,7 @@ function EnhancedA11ySettingsSection() {
         description={t("settings.accessibility.captionsDesc", "Shows captions when available")}
         value={captionsPreferred}
         onValueChange={setCaptionsPreferred}
-        icon="closed-captioning"
+        icon="logo-closed-captioning"
         testID="captions-toggle"
       />
 
@@ -532,7 +532,7 @@ function EnhancedPrivacySection() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
-  const { state, setPasscode, setLockWellness, setAnalyticsEnabled, setErrorReportingEnabled } = usePrivacy();
+  const { state, setPasscode, setLockWellness, setErrorReportingEnabled } = usePrivacy();
   const {
     requirePasscodeOnLaunch,
     setRequirePasscodeOnLaunch,
@@ -647,7 +647,7 @@ function EnhancedPrivacySection() {
       <AccessibilityToggle
         title="Error Reporting"
         description="Help improve the app by sharing crash reports"
-        value={state.errorReportingEnabled}
+        value={state.errorReportingEnabled ?? false}
         onValueChange={setErrorReportingEnabled}
         icon="bug"
         testID="error-reporting-toggle"
@@ -674,7 +674,7 @@ function EnhancedPrivacySection() {
         <AccessibilityToggle
           title="Wellness Lock"
           description="Require passcode to access wellness features"
-          value={state.lockWellness}
+          value={state.lockWellness ?? false}
           onValueChange={setLockWellness}
           icon="heart-outline"
           testID="wellness-lock-toggle"
@@ -784,7 +784,7 @@ function Section({
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number) {
+function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number = 1) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
     title: {

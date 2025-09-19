@@ -1,11 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
+import { AccessibilityInfo, Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Answer = "yes" | "no" | null;
 
@@ -15,8 +16,10 @@ export default function RightsChecker() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
+  const { t } = useTranslation();
   useAnnounceOnMount("Automated Rights Checker");
   useFocusOnRefOnMount(titleRef);
+  const [showInfo, setShowInfo] = React.useState(true);
 
   const [q1, setQ1] = React.useState<Answer>(null); // employed
   const [q2, setQ2] = React.useState<Answer>(null); // union
@@ -31,83 +34,113 @@ export default function RightsChecker() {
     const lines: string[] = [];
     if (q3 === "yes") {
       lines.push(
-        "You are protected under human rights law, including the duty to accommodate.",
+        t('rightsChecker.protected','You are protected under human rights law, including the duty to accommodate.')
       );
     }
     if (q1 === "yes") {
       lines.push(
-        "You have workplace rights: safety, accommodation, and protection from discrimination.",
+        t('rightsChecker.workplaceRights','You have workplace rights: safety, accommodation, and protection from discrimination.')
       );
-      if (q2 === "yes") lines.push("Contact your union for representation.");
+      if (q2 === "yes") lines.push(t('rightsChecker.union','Contact your union for representation.'));
       else
         lines.push(
-          "If no union, consider contacting a legal clinic or advocacy group.",
+          t('rightsChecker.noUnion','If no union, consider contacting a legal clinic or advocacy group.')
         );
     }
     if (q4 === "yes") {
       lines.push(
-        "You may be eligible to appeal denied benefits. Gather medical evidence and file within deadlines.",
+        t('rightsChecker.appeal','You may be eligible to appeal denied benefits. Gather medical evidence and file within deadlines.')
       );
       lines.push(
-        "Use our letter templates in Resources to request reconsideration or appeal.",
+        t('rightsChecker.templates','Use our letter templates in Resources to request reconsideration or appeal.')
       );
     }
     if (q5 === "yes") {
       lines.push(
-        "Harassment is prohibited. Document incidents and report via proper channels.",
+        t('rightsChecker.harassment','Harassment is prohibited. Document incidents and report via proper channels.')
       );
     }
     if (lines.length === 0) {
       lines.push(
-        "Based on your answers, you still maintain general human rights. Consider browsing Resources for guidance.",
+        t('rightsChecker.general','Based on your answers, you still maintain general human rights. Consider browsing Resources for guidance.')
       );
     }
     return lines.join("\n\n");
   }, [ready, q1, q2, q3, q4, q5]);
 
-  const Choice = ({
-    label,
-    value,
-    selected,
-    onPress,
-  }: {
-    label: string;
-    value: Answer;
-    selected: Answer;
-    onPress: () => void;
-  }) => (
+  React.useEffect(()=>{ if(summary) AccessibilityInfo.announceForAccessibility?.(t('rightsChecker.summaryReady','Rights summary ready')); }, [summary]);
+
+  const Choice = ({ label, value, selected, onPress }: { label: string; value: Answer; selected: Answer; onPress: () => void }) => (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
+      accessibilityLabel={t('rightsChecker.choiceLabel', `${label} answer option`)}
+      accessibilityState={{ selected: selected === value }}
       style={[styles.choice, selected === value && styles.choiceActive]}
     >
-      <Text
-        style={[
-          styles.choiceText,
-          selected === value && styles.choiceTextActive,
-        ]}
-      >
-        {label}
-      </Text>
+      <Text style={[styles.choiceText, selected === value && styles.choiceTextActive]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{label}</Text>
     </Pressable>
   );
 
+  const reset = () => {
+    setQ1(null); setQ2(null); setQ3(null); setQ4(null); setQ5(null);
+    AccessibilityInfo.announceForAccessibility?.(t('rightsChecker.resetAnnounce','Answers cleared'));
+  };
+
+  const copySummary = async () => {
+    if(!summary) return;
+    try { const mod = await import('expo-clipboard'); await mod.setStringAsync(summary); Alert.alert(t('rightsChecker.copied','Copied'), t('rightsChecker.copiedBody','Summary copied to clipboard.')); }
+    catch { Alert.alert(t('rightsChecker.clipboardMissingTitle','Clipboard not available'), t('rightsChecker.clipboardMissingMsg','Install expo-clipboard in a dev build to enable copy.')); }
+  };
+
+  const exportSummary = async () => {
+    if(!summary) return;
+    try {
+      const FS = await import('expo-file-system');
+      const Share = await import('expo-sharing');
+      const path = FS.cacheDirectory + `rights_summary_${Date.now()}.txt`;
+      await FS.writeAsStringAsync(path, summary);
+      if(await Share.isAvailableAsync()) await Share.shareAsync(path); else Alert.alert(t('rightsChecker.shareUnavailable','Share unavailable'), t('rightsChecker.shareUnavailableBody','System share sheet not available.'));
+    } catch { Alert.alert(t('rightsChecker.shareError','Share failed'), t('rightsChecker.shareErrorBody','Could not share summary file.')); }
+  };
+
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={{ padding:16 }} accessibilityLabel={t('rightsChecker.screenLabel','Automated Rights Checker screen')}>
+      <View style={styles.infoCard} accessibilityRole="summary" accessibilityLabel={t('rightsChecker.howToUse','How to use Rights Checker')}>
+        <Pressable onPress={()=>setShowInfo(s=>!s)} accessibilityRole="button" accessibilityLabel={t('rightsChecker.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={styles.infoHeader}>
+          <Text style={styles.infoTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.infoTitle','How to Use')}</Text>
+          <Text style={styles.infoToggle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{showInfo? t('rightsChecker.hide','Hide'): t('rightsChecker.show','Show')}</Text>
+        </Pressable>
+        {showInfo && (
+          <View>
+            <Text style={styles.infoText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.infoLine1','Answer each question. A plain-language summary appears when all are answered.')}</Text>
+            <Text style={styles.infoText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.infoLine2','Use Copy to reuse the summary, Export to generate a text file, and Reset to clear answers.')}</Text>
+            <Text style={styles.infoText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.infoLine3','This tool does not give legal advice; consult official sources.')}</Text>
+          </View>
+        )}
+        <View style={styles.actionRow}>
+          <Pressable onPress={reset} accessibilityRole="button" accessibilityLabel={t('rightsChecker.resetAnswers','Reset answers')} accessibilityHint={t('rightsChecker.resetHint','Clears all selected answers.')} style={[styles.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+            <Text style={[styles.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.reset','Reset')}</Text>
+          </Pressable>
+          <Pressable onPress={copySummary} disabled={!summary} accessibilityRole="button" accessibilityLabel={t('rightsChecker.copySummary','Copy rights summary')} accessibilityHint={t('rightsChecker.copySummaryHint','Copies the current rights summary to the clipboard.')} style={[styles.smallBtn,{ opacity: summary?1:0.5 }]}>
+            <Text style={styles.smallBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.copy','Copy')}</Text>
+          </Pressable>
+          <Pressable onPress={exportSummary} disabled={!summary} accessibilityRole="button" accessibilityLabel={t('rightsChecker.exportSummary','Share or export summary file')} accessibilityHint={t('rightsChecker.exportSummaryHint','Opens system share sheet with a text file of your rights summary.')} style={[styles.smallBtn,{ opacity: summary?1:0.5 }]}>
+            <Text style={styles.smallBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.export','Export')}</Text>
+          </Pressable>
+        </View>
+      </View>
       <Text
         ref={titleRef}
         accessibilityRole="header"
         style={styles.title}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Automated Rights Checker
+        {t('rightsChecker.title','Automated Rights Checker')}
       </Text>
-      <Text style={styles.subtitle}>
-        Answer a few questions to get a plain-language overview of your rights
-        and options.
-      </Text>
+      <Text style={styles.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.subtitle','Answer a few questions to get a plain-language overview of your rights and options.')}</Text>
 
-      <Question title="Are you currently employed?">
+      <Question title={t('rightsChecker.q1','Are you currently employed?')}>
         <Choice
           label="Yes"
           value="yes"
@@ -121,7 +154,7 @@ export default function RightsChecker() {
           onPress={() => setQ1("no")}
         />
       </Question>
-      <Question title="Are you a union member?">
+      <Question title={t('rightsChecker.q2','Are you a union member?')}>
         <Choice
           label="Yes"
           value="yes"
@@ -135,7 +168,7 @@ export default function RightsChecker() {
           onPress={() => setQ2("no")}
         />
       </Question>
-      <Question title="Do you have a disability or health condition requiring accommodations?">
+      <Question title={t('rightsChecker.q3','Do you have a disability or health condition requiring accommodations?')}>
         <Choice
           label="Yes"
           value="yes"
@@ -149,7 +182,7 @@ export default function RightsChecker() {
           onPress={() => setQ3("no")}
         />
       </Question>
-      <Question title="Have you been denied benefits (e.g., workers' compensation, LTD)?">
+      <Question title={t('rightsChecker.q4','Have you been denied benefits (e.g., workers\' compensation, LTD)?')}>
         <Choice
           label="Yes"
           value="yes"
@@ -163,7 +196,7 @@ export default function RightsChecker() {
           onPress={() => setQ4("no")}
         />
       </Question>
-      <Question title="Are you experiencing harassment or discrimination?">
+      <Question title={t('rightsChecker.q5','Are you experiencing harassment or discrimination?')}>
         <Choice
           label="Yes"
           value="yes"
@@ -177,52 +210,17 @@ export default function RightsChecker() {
           onPress={() => setQ5("no")}
         />
       </Question>
-
       {summary && (
-        <View style={styles.box} accessibilityLabel="Summary" accessible>
-          <Text style={styles.resultTitle}>Your summary</Text>
-          <Text style={styles.result}>{summary}</Text>
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel="Copy summary"
-            onPress={async () => {
-              try {
-                const mod = await import("expo-clipboard");
-                await mod.setStringAsync(summary);
-                Alert.alert("Copied", "Summary copied to clipboard.");
-              } catch {
-                Alert.alert(
-                  "Clipboard not available",
-                  "Install expo-clipboard in a dev build to enable copy.",
-                );
-              }
-            }}
-            style={{
-              marginTop: 8,
-              alignSelf: "flex-start",
-              paddingHorizontal: 12,
-              paddingVertical: 8,
-              borderRadius: 8,
-              backgroundColor: palette.primary,
-            }}
-          >
-            <Text style={{ color: palette.onPrimary, fontWeight: "700" }}>
-              Copy
-            </Text>
-          </Pressable>
+        <View style={styles.box} accessibilityLabel={t('rightsChecker.summaryRegion','Rights summary')} accessible>
+          <Text style={styles.resultTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.yourSummary','Your summary')}</Text>
+          <Text style={styles.result} maxFontSizeMultiplier={MAX_FONT_SCALE}>{summary}</Text>
         </View>
       )}
-    </View>
+    </ScrollView>
   );
 }
 
-function Question({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
+function Question({ title, children }: { title: string; children: React.ReactNode }) {
   const palette = useAppPalette();
   const s = StyleSheet.create({
     title: {
@@ -235,7 +233,7 @@ function Question({
   });
   return (
     <View>
-      <Text style={s.title}>{title}</Text>
+      <Text style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{title}</Text>
       <View style={s.row}>{children}</View>
     </View>
   );
@@ -243,7 +241,7 @@ function Question({
 
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    container: { flex: 1, padding: 16, backgroundColor: palette.background },
+    container: { flex: 1, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: "700", color: palette.text },
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 10 },
     choice: {
@@ -268,5 +266,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     resultTitle: { color: palette.text, fontWeight: "700", marginBottom: 6 },
     result: { color: palette.text, opacity: 0.95 },
+    infoCard: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface, padding:12, borderRadius:10, marginBottom:12, marginTop:16 },
+    infoHeader: { flexDirection:'row', justifyContent:'space-between', alignItems:'center', marginBottom:4 },
+    infoTitle: { color: palette.primary, fontWeight:'700', fontSize:16 },
+    infoToggle: { color: palette.text, fontSize:12 },
+    infoText: { color: palette.text, marginTop:4 },
+    actionRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:8 },
+    smallBtn: { backgroundColor: palette.primary, paddingHorizontal:14, paddingVertical:10, borderRadius:8 },
+    smallBtnText: { color: palette.onPrimary, fontWeight:'700' },
   });
 }

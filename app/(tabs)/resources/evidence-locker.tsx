@@ -1,17 +1,14 @@
-﻿import React from "react";
-import { View, Text, StyleSheet, TextInput, FlatList, Alert, Pressable, Modal } from "react-native";
+﻿import { router } from "expo-router";
+import React from "react";
+import { AccessibilityInfo, Alert, FlatList, Modal, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar";
 import { useAuth } from "../../../context/AuthContext";
-import { router } from "expo-router";
-import { addEvidenceNote, uploadEvidenceFileWithProgress, deleteEvidenceDoc, listEvidencePage, type EvidenceFile } from "../../../services/evidence";
+import { addEvidenceNote, deleteEvidenceDoc, listEvidencePage, uploadEvidenceFileWithProgress, type EvidenceFile } from "../../../services/evidence";
 // Linking added when preview links are active; safe to lazy import when needed
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-} from "../../../hooks/useA11y";
 
 let AsyncStorage: any;
 try {
@@ -29,7 +26,8 @@ export default function EvidenceLocker() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Evidence Locker");
+  const { t } = useTranslation();
+  useAnnounceOnMount(t("templates.evidenceLocker.title", "Evidence Locker"));
   useFocusOnRefOnMount(titleRef);
   const { isAdmin } = useAuth();
   const [text, setText] = React.useState("");
@@ -43,6 +41,8 @@ export default function EvidenceLocker() {
   const [processing, setProcessing] = React.useState(false);
   const [progressPct, setProgressPct] = React.useState(0);
   const [preview, setPreview] = React.useState<{ url: string; name?: string } | null>(null);
+  const [showInfo, setShowInfo] = React.useState(false);
+  // summary retained only for potential future export state (unused removed to satisfy TS)
   // Immediate upload progress (non-queue)
   const [immUploading, setImmUploading] = React.useState(false);
   const [immPct, setImmPct] = React.useState(0);
@@ -128,8 +128,90 @@ export default function EvidenceLocker() {
         accessibilityRole="header"
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Evidence Locker
+        {t("templates.evidenceLocker.title", "Evidence Locker")}
       </Text>
+      {/* Actions / Info toggle row */}
+      <View style={styles.actionsRow} accessible accessibilityLabel={t("templates.evidenceLocker.screenLabel", "Evidence Locker screen")}>        
+        <Pressable
+          onPress={() => setShowInfo(v=>!v)}
+          accessibilityRole="button"
+          accessibilityLabel={t("templates.evidenceLocker.toggleInfo", "Toggle instructions")}
+          style={styles.actionBtn}
+        >
+          <Text style={styles.actionText}>{showInfo ? t("common.hide", "Hide") : t("common.show", "Show")}</Text>
+        </Pressable>
+        <Pressable
+          onPress={async () => {
+            try {
+              const notesLines = notes.map(n => `- ${new Date(n.date).toISOString()} [${(n.tags||[]).join('|')}] ${n.text}`);
+              const filesCount = notes.reduce((s,n)=> s + (n.files?.length||0), 0);
+              const header = `Evidence Locker (notes: ${notes.length}, files: ${filesCount})`;
+              const full = [header, ...notesLines].join('\n');
+              // summary removed
+              let Clipboard: any; try { Clipboard = require('expo-clipboard'); } catch {}
+              if (Clipboard?.setStringAsync) { await Clipboard.setStringAsync(full); Alert.alert(t("templates.evidenceLocker.copied", "Copied"), t("templates.evidenceLocker.copiedBody", "Notes copied to clipboard.")); AccessibilityInfo.announceForAccessibility?.(t("templates.evidenceLocker.copied", "Copied")); } else {
+                Alert.alert(t("templates.evidenceLocker.clipboardMissingTitle"), t("templates.evidenceLocker.clipboardMissingMsg"));
+              }
+            } catch {}
+          }}
+          accessibilityRole="button"
+          accessibilityLabel={t("templates.evidenceLocker.copyLabel", "Copy notes")}
+          accessibilityHint={t("templates.evidenceLocker.copyHint")}
+          style={styles.actionBtn}
+        >
+          <Text style={styles.actionText}>{t("templates.evidenceLocker.copy", "Copy")}</Text>
+        </Pressable>
+        <Pressable
+          onPress={async () => {
+            try {
+              const notesLines = notes.map(n => `- ${new Date(n.date).toISOString()} [${(n.tags||[]).join('|')}] ${n.text}`);
+              const filesCount = notes.reduce((s,n)=> s + (n.files?.length||0), 0);
+              const header = `Evidence Locker (notes: ${notes.length}, files: ${filesCount})`;
+              const full = [header, ...notesLines].join('\n');
+              // summary removed
+              const FS = await import('expo-file-system');
+              const path = FS.cacheDirectory + `evidence_summary_${Date.now()}.txt`;
+              await FS.writeAsStringAsync(path, full);
+              try {
+                const Sharing = await import('expo-sharing');
+                if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert(t("templates.evidenceLocker.shareUnavailable"), t("templates.evidenceLocker.shareUnavailableBody"));
+              } catch { Alert.alert(t("templates.evidenceLocker.shareError"), t("templates.evidenceLocker.shareErrorBody")); }
+            } catch { Alert.alert(t("templates.evidenceLocker.shareError"), t("templates.evidenceLocker.shareErrorBody")); }
+          }}
+          accessibilityRole="button"
+          accessibilityLabel={t("templates.evidenceLocker.shareLabel", "Share evidence summary")}
+          accessibilityHint={t("templates.evidenceLocker.shareHint")}
+          style={styles.actionBtn}
+        >
+          <Text style={styles.actionText}>{t("templates.evidenceLocker.share", "Share")}</Text>
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            Alert.alert(
+              t("templates.evidenceLocker.resetLabel", "Reset locker"),
+              t("templates.evidenceLocker.resetConfirm", "Clear all locker notes?"),
+              [
+                { text: t("common.cancel", "Cancel"), style: 'cancel' },
+                { text: t("templates.evidenceLocker.reset", "Reset"), style: 'destructive', onPress: () => { setNotes([]); AccessibilityInfo.announceForAccessibility?.(t("templates.evidenceLocker.resetAnnounce", "Evidence locker cleared")); } }
+              ]
+            );
+          }}
+          accessibilityRole="button"
+          accessibilityLabel={t("templates.evidenceLocker.resetLabel", "Reset locker")}
+          accessibilityHint={t("templates.evidenceLocker.resetHint")}
+          style={styles.actionBtn}
+        >
+          <Text style={styles.actionText}>{t("templates.evidenceLocker.reset", "Reset")}</Text>
+        </Pressable>
+      </View>
+      {showInfo && (
+        <View style={styles.infoCard} accessibilityRole="summary" accessibilityLabel={t("templates.evidenceLocker.howToUse")}>          
+          <Text style={styles.infoTitle}>{t("templates.evidenceLocker.infoTitle", "How to Use")}</Text>
+          <Text style={styles.infoLine}>{t("templates.evidenceLocker.infoLine1")}</Text>
+          <Text style={styles.infoLine}>{t("templates.evidenceLocker.infoLine2")}</Text>
+          <Text style={styles.infoLine}>{t("templates.evidenceLocker.infoLine3")}</Text>
+        </View>
+      )}
       {isAdmin && (
         <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
           <A11yPressable onPress={()=> router.push('/(tabs)/admin' as any)} style={styles.secondary}><Text style={styles.buttonText}>Admin Pending</Text></A11yPressable>
@@ -139,7 +221,7 @@ export default function EvidenceLocker() {
       <TextInput
         value={text}
         onChangeText={setText}
-        placeholder="Add a note (date, contact, summary)"
+        placeholder={t("templates.evidenceLocker.addNote", "Add a note (date, contact, summary)")}
         placeholderTextColor={palette.text + "77"}
         style={styles.input}
       />
@@ -187,7 +269,7 @@ export default function EvidenceLocker() {
           }}
           style={styles.secondary}
         >
-          <Text style={styles.buttonText}>Attach file</Text>
+          <Text style={styles.buttonText}>{t("templates.evidenceLocker.addFile", "Add File")}</Text>
         </A11yPressable>
         <A11yPressable
           accessibilityLabel="Attach files"
@@ -206,7 +288,7 @@ export default function EvidenceLocker() {
           }}
           style={styles.secondary}
         >
-          <Text style={styles.buttonText}>Attach files</Text>
+          <Text style={styles.buttonText}>{t("templates.evidenceLocker.addFile", "Add File")}</Text>
         </A11yPressable>
         <A11yPressable
           accessibilityLabel="Attach photos"
@@ -229,7 +311,7 @@ export default function EvidenceLocker() {
           }}
           style={styles.secondary}
         >
-          <Text style={styles.buttonText}>Attach photos</Text>
+          <Text style={styles.buttonText}>{t("templates.evidenceLocker.addFile", "Add File")}</Text>
         </A11yPressable>
         <A11yPressable
           accessibilityLabel="Add note"
@@ -240,7 +322,7 @@ export default function EvidenceLocker() {
           }}
           style={styles.button}
         >
-          <Text style={styles.buttonText}>Add</Text>
+          <Text style={styles.buttonText}>{t("templates.evidenceLocker.addNote", "Add Note")}</Text>
         </A11yPressable>
         {user && (
           <A11yPressable
@@ -280,7 +362,7 @@ export default function EvidenceLocker() {
             }}
             style={styles.button}
           >
-            <Text style={styles.buttonText}>Save to Cloud</Text>
+            <Text style={styles.buttonText}>{t("common.save", "Save")}</Text>
           </A11yPressable>
         )}\n        {immUploading && (<><Text style={{ color: palette.text, marginTop: 6 }}>{immLabel || "Uploading"} {immPct}%</Text><ProgressBar value={immPct} /></>)}
         {user && (
@@ -329,7 +411,7 @@ export default function EvidenceLocker() {
             }}
             style={styles.secondary}
           >
-            <Text style={styles.buttonText}>Save all to Cloud</Text>
+            <Text style={styles.buttonText}>{t("common.saveAll", "Save All")}</Text>
           </A11yPressable>
         )}
         {processing && (
@@ -344,7 +426,7 @@ export default function EvidenceLocker() {
             onPress={processQueue}
             style={styles.secondary}
           >
-            <Text style={styles.buttonText}>Process queue</Text>
+            <Text style={styles.buttonText}>{t("common.processQueue", "Process Queue")}</Text>
           </A11yPressable>
         )}
         {user && (
@@ -356,7 +438,7 @@ export default function EvidenceLocker() {
             }}
             style={styles.secondary}
           >
-            <Text style={styles.buttonText}>Load Cloud</Text>
+            <Text style={styles.buttonText}>{t("common.load", "Load")}</Text>
           </A11yPressable>
         )}
         {user && cloudCursor && (
@@ -368,7 +450,7 @@ export default function EvidenceLocker() {
             }}
             style={styles.secondary}
           >
-            <Text style={styles.buttonText}>Load more</Text>
+            <Text style={styles.buttonText}>{t("common.loadMore", "Load More")}</Text>
           </A11yPressable>
         )}
         <A11yPressable
@@ -386,12 +468,12 @@ export default function EvidenceLocker() {
           }}
           style={styles.secondary}
         >
-          <Text style={styles.buttonText}>Export CSV</Text>
+          <Text style={styles.buttonText}>{t("templates.evidenceLocker.export", "Export")}</Text>
         </A11yPressable>
       </View>
       {/* Queue screen */}
       <A11yPressable onPress={() => (require('expo-router').router.push('/(tabs)/resources/evidence-queue'))} style={[styles.button, { marginTop: 8 }]}>
-        <Text style={styles.buttonText}>Open Upload Queue</Text>
+        <Text style={styles.buttonText}>{t("common.openQueue", "Open Upload Queue")}</Text>
       </A11yPressable>
       {(immUploading || processing) && (
         <View style={{ marginTop: 6 }}>
@@ -424,7 +506,7 @@ export default function EvidenceLocker() {
       />
       {!!user && cloudItems.length > 0 && (
         <View style={{ marginTop: 12 }}>
-          <Text style={styles.title}>Cloud items</Text>
+          <Text style={styles.title}>{t("common.cloudItems", "Cloud items")}</Text>
           <A11yPressable
             onPress={async () => {
               try {
@@ -442,7 +524,7 @@ export default function EvidenceLocker() {
             }}
             style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
           >
-            <Text style={styles.buttonText}>Delete all</Text>
+            <Text style={styles.buttonText}>{t("common.deleteAll", "Delete All")}</Text>
           </A11yPressable>
           {Object.values(selectedCloud).some(Boolean) && (
             <A11yPressable
@@ -457,7 +539,7 @@ export default function EvidenceLocker() {
               }}
               style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
             >
-              <Text style={styles.buttonText}>Delete selected</Text>
+              <Text style={styles.buttonText}>{t("common.deleteSelected", "Delete Selected")}</Text>
             </A11yPressable>
           )}
           {cloudItems.filter((c:any)=> showDeleted? c?.deleted===true : !c?.deleted).map((c: any) => (
@@ -492,7 +574,7 @@ export default function EvidenceLocker() {
                 }}
                 style={[styles.secondary, { paddingHorizontal: 10 }]}
               >
-                <Text style={styles.buttonText}>Delete</Text>
+                <Text style={styles.buttonText}>{t("common.delete", "Delete")}</Text>
               </A11yPressable>
             </View>
           ))}
@@ -567,6 +649,32 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     chipText: { color: palette.text },
     chipTextActive: { color: palette.onPrimary, fontWeight: "700" },
+    actionsRow: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      gap: 8,
+      marginTop: 12,
+      alignItems: 'center'
+    },
+    actionBtn: {
+      paddingHorizontal: 12,
+      paddingVertical: 8,
+      backgroundColor: palette.surface,
+      borderRadius: 6,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+    },
+    actionText: { color: palette.text, fontWeight: '600', fontSize: 13 },
+    infoCard: {
+      backgroundColor: palette.card,
+      borderRadius: 8,
+      padding: 12,
+      marginTop: 12,
+      borderWidth: 1,
+      borderColor: palette.muted
+    },
+    infoTitle: { fontWeight: '700', color: palette.text, marginBottom: 4 },
+    infoLine: { color: palette.text, opacity: 0.85, marginBottom: 2, fontSize: 13 },
   });
 }
 

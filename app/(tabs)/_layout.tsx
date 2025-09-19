@@ -51,7 +51,7 @@ export default function TabsLayout() {
             tabBarLabel: t("nav.campaigns"),
             tabBarAccessibilityLabel: `${t("nav.campaigns")} tab`,
             tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "megaphone" : "megaphone-outline"} color={color} size={size + 2} />
+              <Ionicons name={focused ? "notifications" : "notifications-outline"} color={color} size={size + 2} />
             ),
           }}
         />

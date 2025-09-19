@@ -1,8 +1,8 @@
 import React from "react";
-import { ScrollView, View, Text, StyleSheet, Alert, TextInput } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
-import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { useAppPalette } from "../../../theme/usePalette";
  
 
 async function copyToClipboard(text: string) {
@@ -101,13 +101,25 @@ export default function AIDecisionSimplifier() {
         Your document stays on your device unless you explicitly opt in to share.
       </Text>
       <A11yPressable onPress={onPick} accessibilityLabel="Upload decision letter" style={styles.cta}>
-        <Text style={styles.ctaText}>Upload Decision Letter</Text>
+          <View style={[styles.card, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
+            <Text style={[styles.title, { color: palette.primary }]}>How to Use AI Decision Simplifier</Text>
+            <Text style={styles.previewText}>
+              Paste or upload a decision letter. The tool will highlight key dates, deadlines, and next steps for appeals or reconsideration. Use the summary to update your Case Timeline or prepare an appeal.
+            </Text>
+          </View>
       </A11yPressable>
-      <Text style={{ color: palette.text, opacity: 0.8, marginTop: 8 }}>
-        Or paste the text of a decision letter below for a quick, plain-language summary preview.
-      </Text>
-
-      <Text style={[styles.subtitle, { marginTop: 8 }]}>Paste decision text</Text>
+          <Text
+            ref={titleRef}
+            accessibilityRole="header"
+            style={styles.title}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+            accessibilityLabel="AI Decision Simplifier screen"
+          >
+            AI Decision Simplifier
+          </Text>
+          <Text style={styles.subtitle}>
+            Paste or upload a decision letter to get a simplified summary and next steps.
+          </Text>
       <TextInput
         style={styles.input}
         placeholder="Paste decision text here"
@@ -163,6 +175,21 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 10,
       alignItems: "center",
       marginTop: 8,
+    },
+    card: {
+      padding: 16,
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.08,
+      shadowRadius: 4,
+      elevation: 2,
+    },
+    previewText: {
+      color: palette.text,
+      opacity: 0.85,
+      fontSize: 16,
+      marginTop: 8,
+      marginBottom: 4,
     },
   });
 }

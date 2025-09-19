@@ -1,11 +1,9 @@
-import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import { useAppPalette } from "../theme/usePalette";
-import { useTextScale } from "../theme/typography";
+import { Ionicons } from "@expo/vector-icons";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useSettings } from "../store/settings";
-import { useTranslation } from "../i18n";
-import { Ionicons } from "@expo/vector-icons";
+import { useTextScale } from "../theme/typography";
+import { useAppPalette } from "../theme/usePalette";
 
 type AccessibilityFeature = {
   id: string;
@@ -21,7 +19,6 @@ export default function AccessibilityStatusDashboard() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
-  const { t } = useTranslation();
   const settings = useSettings();
 
   const features: AccessibilityFeature[] = [
@@ -101,7 +98,7 @@ export default function AccessibilityStatusDashboard() {
       id: "captions",
       name: "Captions Preferred",
       description: "Visual alternatives to audio content",
-      icon: "closed-captioning",
+      icon: "logo-closed-captioning",
       isActive: settings.captionsPreferred,
       wcagLevel: "AA",
       category: "hearing",
@@ -134,7 +131,7 @@ export default function AccessibilityStatusDashboard() {
   const categoryIcons = {
     vision: "eye" as const,
     motor: "hand-left" as const,
-    cognitive: "brain" as const,
+    cognitive: "book" as const,
     hearing: "ear" as const,
   };
 

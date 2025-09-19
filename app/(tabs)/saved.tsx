@@ -1,32 +1,32 @@
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { Link } from "expo-router";
 import React from "react";
-import { 
-  View, 
-  Text, 
-  StyleSheet, 
-  SectionList, 
-  TextInput, 
-  Pressable,
+import {
   FlatList,
+  Pressable,
+  SectionList,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
-import { useAppPalette } from "../../theme/usePalette";
-import { useTextScale } from "../../theme/typography";
+import Card from "../../components/Card";
+import ContrastToggle from "../../components/ContrastToggle";
+import SettingsLink from "../../components/SettingsLink";
+import type { Podcast } from "../../data/podcasts";
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
-import { useFavorites } from "../../store/favorites";
+import { useTranslation } from "../../i18n";
+import { fetchCampaigns } from "../../services/campaigns";
 import { fetchPodcasts } from "../../services/podcasts";
 import { fetchResources } from "../../services/resources";
-import { fetchCampaigns } from "../../services/campaigns";
-import { Link } from "expo-router";
-import Card from "../../components/Card";
-import type { Podcast } from "../../data/podcasts";
-import type { Resource, Campaign } from "../../types/models";
-import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
-import SettingsLink from "../../components/SettingsLink";
-import ContrastToggle from "../../components/ContrastToggle";
-import { useTranslation } from "../../i18n";
+import { useFavorites } from "../../store/favorites";
+import { useTextScale } from "../../theme/typography";
+import { useAppPalette } from "../../theme/usePalette";
+import type { Campaign, Resource } from "../../types/models";
 
 type SectionItem =
   | (Podcast & { kind: "podcast" })
@@ -54,7 +54,7 @@ export default function SavedScreen() {
   // Enhanced filtering and search
   const [searchQuery, setSearchQuery] = React.useState("");
   const [activeFilter, setActiveFilter] = React.useState<FilterType>("all");
-  const [sortBy, setSortBy] = React.useState<SortType>("date");
+    const [sortBy] = React.useState<SortType>("date");
   const [viewMode, setViewMode] = React.useState<"list" | "grid">("list");
 
   React.useEffect(() => {
@@ -101,7 +101,7 @@ export default function SavedScreen() {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(item =>
         item.title.toLowerCase().includes(query) ||
-        (item.description && item.description.toLowerCase().includes(query)) ||
+         (item.kind !== "campaign" && "description" in item && item.description?.toLowerCase().includes(query)) ||
         (item.kind === "campaign" && "summary" in item && item.summary?.toLowerCase().includes(query))
       );
     }
@@ -284,7 +284,7 @@ export default function SavedScreen() {
           <FilterButton filter="all" label="All" icon="apps" />
           <FilterButton filter="podcast" label="Podcasts" icon="mic" />
           <FilterButton filter="resource" label="Resources" icon="document-text" />
-          <FilterButton filter="campaign" label="Campaigns" icon="megaphone" />
+          <FilterButton filter="campaign" label="Campaigns" icon="notifications" />
         </View>
 
         <View style={styles.viewControls}>
@@ -350,7 +350,7 @@ export default function SavedScreen() {
                 <MaterialCommunityIcons
                   name={
                     section.title === "Podcasts" ? "microphone" : 
-                    section.title === "Resources" ? "book-outline" : "megaphone"
+                    section.title === "Resources" ? "book-outline" : "bullhorn"
                   }
                   size={18}
                   color={palette.text}

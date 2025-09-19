@@ -1,9 +1,8 @@
-import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
-import { useAppPalette } from "../theme/usePalette";
-import { useTextScale } from "../theme/typography";
-import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { Ionicons } from "@expo/vector-icons";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import { MAX_FONT_SCALE } from "../hooks/useA11y";
+import { useTextScale } from "../theme/typography";
+import { useAppPalette } from "../theme/usePalette";
 
 type AccessibilityToggleProps = {
   title: string;

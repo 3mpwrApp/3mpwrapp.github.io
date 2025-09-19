@@ -10,6 +10,10 @@ export const colors = {
     muted: "#2A2A2A",
     onPrimary: "#FFFFFF",
     surface: "#FFFFFF",
+    card: "#F5F5F5",
+    error: "#D32F2F",
+    success: "#2E7D32",
+    warning: "#ED6C02",
   },
   dark: {
     primary: "#12E8D6", // Slightly brighter accent
@@ -19,6 +23,10 @@ export const colors = {
     muted: "#D6D6D6",
     onPrimary: "#000000",
     surface: "#0A0A0A",
+    card: "#1A1A1A",
+    error: "#EF5350",
+    success: "#66BB6A",
+    warning: "#FFA726",
   },
 } as const;
 
@@ -29,4 +37,8 @@ export type Palette = {
   muted: string;
   onPrimary: string;
   surface: string;
+  card: string;
+  error: string;
+  success: string;
+  warning: string;
 };

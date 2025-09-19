@@ -1,21 +1,25 @@
+import * as FileSystem from "expo-file-system";
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
+  AccessibilityInfo,
+  Alert,
   FlatList,
   KeyboardAvoidingView,
   Platform,
-  Alert,
+  Pressable,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Msg = { id: string; role: "bot" | "user"; text: string };
 
@@ -35,6 +39,9 @@ export default function AppealCoach() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Appeal Coach");
   useFocusOnRefOnMount(titleRef);
+  const listRef = React.useRef<FlatList<Msg>>(null);
+  const inputRef = React.useRef<TextInput>(null);
+  const { t } = useTranslation();
 
   const [msgs, setMsgs] = React.useState<Msg[]>(SEED);
   const [input, setInput] = React.useState("");
@@ -102,8 +109,34 @@ export default function AppealCoach() {
       text: respond(trimmed),
     };
     setMsgs((m) => [...m, u, a]);
+    setTimeout(() => {
+      AccessibilityInfo.announceForAccessibility?.(t("appealCoach.newResponse", "New coach response ready"));
+      // auto scroll after layout paint
+      setTimeout(() => (listRef.current as any)?.scrollToEnd?.({ animated: true }), 30);
+    }, 40);
     setInput("");
   }, [input, respond]);
+
+  const shareTranscript = async () => {
+    if (!msgs.length) return;
+    const transcript = msgs
+      .map((m) => `${m.role === "user" ? "You" : "Coach"}: ${m.text}`)
+      .join("\n\n");
+    try {
+      // Write to temp file for better share compatibility
+      const path = FileSystem.cacheDirectory + `appeal_coach_${Date.now()}.txt`;
+      await FileSystem.writeAsStringAsync(path, transcript, { encoding: FileSystem.EncodingType.UTF8 });
+      await Share.share({ url: path, message: transcript, title: t("appealCoach.transcriptTitle", "Appeal Coach Transcript") });
+    } catch {
+      Alert.alert("Share failed", "Could not open the share sheet.");
+    }
+  };
+
+  const clearConversation = () => {
+    setMsgs(SEED);
+    AccessibilityInfo.announceForAccessibility?.(t("appealCoach.reset", "Conversation reset."));
+    setTimeout(() => inputRef.current?.focus(), 50);
+  };
 
   return (
     <KeyboardAvoidingView
@@ -111,16 +144,69 @@ export default function AppealCoach() {
       behavior={Platform.select({ ios: "padding", android: undefined })}
       keyboardVerticalOffset={Platform.select({ ios: 80, android: 0 })}
     >
-      <View style={styles.container}>
+      <View style={styles.container} accessibilityLabel={t("appealCoach.screenLabel", "Appeal Coach screen")} accessible>
+        <View
+          style={{
+            margin: 16,
+            marginBottom: 4,
+            borderWidth: StyleSheet.hairlineWidth,
+            borderColor: palette.muted,
+            backgroundColor: palette.surface,
+            padding: 12,
+            borderRadius: 10,
+          }}
+          accessibilityRole="summary"
+          accessibilityLabel={t("appealCoach.howToUse", "How to use Appeal Coach")}
+        >
+          <Text style={{ color: palette.primary, fontWeight: "700", fontSize: 16, marginBottom: 4 }}>
+            {t("appealCoach.howToUseTitle", "How to Use Appeal Coach")}
+          </Text>
+          <Text style={{ color: palette.text }}>
+            {t(
+              "appealCoach.instructions",
+              "Ask about hearings, rehearsal prompts, stress tips, evidence, or statements. Use the Copy buttons to reuse guidance, Share to export a transcript file, or Reset to start over."
+            )}
+          </Text>
+          <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
+            <Pressable
+              onPress={shareTranscript}
+              style={[styles.sendBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
+              accessibilityRole="button"
+              accessibilityLabel={t("appealCoach.share", "Share conversation transcript")}
+              accessibilityHint={t("appealCoach.shareHint", "Opens the system share sheet with the transcript file.")}
+            >
+              <Text style={[styles.sendText, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("appealCoach.shareBtn", "Share")}</Text>
+            </Pressable>
+            <Pressable
+              onPress={clearConversation}
+              style={[styles.sendBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
+              accessibilityRole="button"
+              accessibilityLabel={t("appealCoach.resetLabel", "Reset conversation")}
+              accessibilityHint={t("appealCoach.resetHint", "Clears chat messages and restores the intro message.")}
+            >
+              <Text style={[styles.sendText, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("appealCoach.resetBtn", "Reset")}</Text>
+            </Pressable>
+            <Pressable
+              onPress={() => inputRef.current?.focus()}
+              style={[styles.sendBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
+              accessibilityRole="button"
+              accessibilityLabel={t("appealCoach.skipToInput", "Skip to input")}
+              accessibilityHint={t("appealCoach.skipToInputHint", "Moves focus to the message input field.")}
+            >
+              <Text style={[styles.sendText, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("appealCoach.skip", "Skip to Input")}</Text>
+            </Pressable>
+          </View>
+        </View>
         <Text
           ref={titleRef}
           accessibilityRole="header"
           style={styles.title}
           maxFontSizeMultiplier={MAX_FONT_SCALE}
         >
-          Appeal Coach
+          {t("appealCoach.title", "Appeal Coach")}
         </Text>
         <FlatList
+          ref={listRef}
           data={msgs}
           keyExtractor={(m) => m.id}
           contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 12 }}
@@ -130,14 +216,17 @@ export default function AppealCoach() {
                 styles.bubble,
                 item.role === "user" ? styles.userBubble : styles.botBubble,
               ]}
+              accessibilityLabel={`${item.role === "user" ? t("appealCoach.you", "You") : t("appealCoach.coach", "Coach")}: ${item.text}`}
             >
               <Text
                 style={item.role === "user" ? styles.userText : styles.botText}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
               >
                 {item.text}
               </Text>
             </View>
           )}
+          accessibilityLabel={t("appealCoach.messages", "Conversation messages")}
         />
         <View style={{ flexDirection: "row", gap: 8, paddingHorizontal: 16 }}>
           <Pressable
@@ -147,19 +236,20 @@ export default function AppealCoach() {
               try {
                 const mod = await import("expo-clipboard");
                 await mod.setStringAsync(lastBot.text);
-                Alert.alert("Copied", "Last response copied to clipboard.");
+                Alert.alert(t("appealCoach.copied", "Copied"), t("appealCoach.lastResponseCopied", "Last response copied to clipboard."));
               } catch {
                 Alert.alert(
-                  "Clipboard not available",
-                  "Install expo-clipboard in a dev build to enable copy.",
+                  t("appealCoach.clipboardMissingTitle", "Clipboard not available"),
+                  t("appealCoach.clipboardMissingMsg", "Install expo-clipboard in a dev build to enable copy."),
                 );
               }
             }}
             accessibilityRole="button"
-            accessibilityLabel="Copy last response"
+            accessibilityLabel={t("appealCoach.copyLast", "Copy last response")}
+            accessibilityHint={t("appealCoach.copyLastHint", "Copies the most recent coach message to the clipboard.")}
             style={[styles.sendBtn, { alignSelf: "flex-start" }]}
           >
-            <Text style={styles.sendText}>Copy last</Text>
+            <Text style={styles.sendText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("appealCoach.copyLastBtn", "Copy last")}</Text>
           </Pressable>
           <Pressable
             onPress={async () => {
@@ -170,19 +260,20 @@ export default function AppealCoach() {
               try {
                 const mod = await import("expo-clipboard");
                 await mod.setStringAsync(transcript);
-                Alert.alert("Copied", "Conversation copied to clipboard.");
+                Alert.alert(t("appealCoach.copied", "Copied"), t("appealCoach.conversationCopied", "Conversation copied to clipboard."));
               } catch {
                 Alert.alert(
-                  "Clipboard not available",
-                  "Install expo-clipboard in a dev build to enable copy.",
+                  t("appealCoach.clipboardMissingTitle", "Clipboard not available"),
+                  t("appealCoach.clipboardMissingMsg", "Install expo-clipboard in a dev build to enable copy."),
                 );
               }
             }}
             accessibilityRole="button"
-            accessibilityLabel="Copy conversation"
+            accessibilityLabel={t("appealCoach.copyConversation", "Copy conversation")}
+            accessibilityHint={t("appealCoach.copyConversationHint", "Copies the entire conversation transcript to the clipboard.")}
             style={[styles.sendBtn, { alignSelf: "flex-start" }]}
           >
-            <Text style={styles.sendText}>Copy chat</Text>
+            <Text style={styles.sendText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("appealCoach.copyChatBtn", "Copy chat")}</Text>
           </Pressable>
         </View>
         <View style={styles.inputRow}>
@@ -194,14 +285,19 @@ export default function AppealCoach() {
             onChangeText={setInput}
             onSubmitEditing={send}
             returnKeyType="send"
+            accessibilityLabel="Message input"
+            accessibilityHint="Enter a question about appeals, hearings, rehearsal, stress tips, evidence, or statements."
+            ref={inputRef}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
           />
           <Pressable
             onPress={send}
             style={styles.sendBtn}
             accessibilityRole="button"
             accessibilityLabel="Send"
+            accessibilityHint="Sends your message to the coach."
           >
-            <Text style={styles.sendText}>Send</Text>
+            <Text style={styles.sendText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("appealCoach.sendBtn", "Send")}</Text>
           </Pressable>
         </View>
       </View>
