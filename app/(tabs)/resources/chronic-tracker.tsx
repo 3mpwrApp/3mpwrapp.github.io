@@ -34,6 +34,30 @@ export default function ChronicTracker() {
       catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
     } catch { Alert.alert('Export failed','Could not create CSV.'); }
   };
+  const exportJSON = async () => {
+    try {
+      const FS = await import('expo-file-system');
+      const path = FS.cacheDirectory + `chronic_${Date.now()}.json`;
+      await FS.writeAsStringAsync(path, JSON.stringify(items, null, 2));
+      try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','JSON saved to cache.'); }
+      catch { Alert.alert('Saved','JSON saved to cache (sharing unavailable).'); }
+    } catch { Alert.alert('Export failed','Could not create JSON.'); }
+  };
+  const importTemplate = async () => {
+    try {
+      const DP = await import('expo-document-picker');
+      const res = await DP.getDocumentAsync({ type: 'application/json' });
+      const asset = res?.assets?.[0]; if (!asset?.uri) return;
+      const FS = await import('expo-file-system');
+      const raw = await FS.readAsStringAsync(asset.uri);
+      const arr = JSON.parse(raw);
+      for (const row of arr.slice(0, 50)) {
+        await addEntry({ date: row.date || new Date().toISOString(), symptom: row.symptom||'Symptom', severity: Number(row.severity)||undefined, trigger: row.trigger||'', accommodations: row.accommodations||'', notes: row.notes||'' });
+      }
+      load();
+      Alert.alert('Imported','Template entries added.');
+    } catch { Alert.alert('Import failed','Could not import template.'); }
+  };
 
   return (
     <View style={s.container}>
@@ -44,7 +68,11 @@ export default function ChronicTracker() {
       <TextInput placeholder="Accommodations needed (optional)" placeholderTextColor={palette.text+"77"} value={accom} onChangeText={setAccom} style={s.input} />
       <TextInput placeholder="Notes (optional)" placeholderTextColor={palette.text+"77"} value={notes} onChangeText={setNotes} style={s.input} />
       <A11yPressable onPress={async()=>{ try { await addEntry({ date: new Date().toISOString(), symptom: symptom.trim(), severity: Number(severity)||undefined, trigger, accommodations: accom, notes }); setSymptom(''); setSeverity(''); setTrigger(''); setAccom(''); setNotes(''); load(); } catch { Alert.alert('Add failed','Unable to save entry'); } }} style={s.button}><Text style={s.buttonText}>Add Entry</Text></A11yPressable>
-      <A11yPressable onPress={exportCSV} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text></A11yPressable>
+      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+        <A11yPressable onPress={exportCSV} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text></A11yPressable>
+        <A11yPressable onPress={exportJSON} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export JSON</Text></A11yPressable>
+        <A11yPressable onPress={importTemplate} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Import Template</Text></A11yPressable>
+      </View>
       <FlatList data={items} keyExtractor={i => i.id!} renderItem={({item}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{new Date(item.date).toLocaleString()} — {item.symptom} (sev {item.severity ?? '-'})</Text>
@@ -72,4 +100,3 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     smallBtnText: { color: palette.text, fontWeight: '700' },
   });
 }
-

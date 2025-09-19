@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "home": "Inicio",
     "campaigns": "Campañas",
@@ -24,6 +24,9 @@
     "subtitle": "Apoyo. Defensa. Empoderamiento.",
     "welcome": "¡Bienvenido! Tu centro para comunidad, educación, herramientas de defensa y podcasts — ¡todo en un solo lugar!"
   },
+  "wellness": {
+    "tools": "Herramientas de bienestar"
+  },
   "resources": {
     "tools": {
       "deadlines": "Calculadora de plazos + recordatorios",
@@ -39,4 +42,3 @@
     }
   }
 }
-

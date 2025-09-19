@@ -179,6 +179,16 @@ export default function SettingsScreen() {
         <LocalProfileSection />
       </Section>
 
+      {/* Wellness Preferences */}
+      <Section title="Wellness Preferences" styles={styles}>
+        <WellnessPrefsSection />
+      </Section>
+
+      {/* Media & Locker */}
+      <Section title="Media & Locker" styles={styles}>
+        <MediaLockerSection />
+      </Section>
+
       {/* Privacy & Backups */}
       <Section title="Privacy & Backups" styles={styles}>
         <PrivacyBackupSection />
@@ -325,6 +335,51 @@ function LocalProfileSection() {
         title="Save"
         onPress={() => setProfile({ name, contact, province })}
       />
+    </View>
+  );
+}
+
+function WellnessPrefsSection() {
+  const palette = useAppPalette();
+  const s = createStyles(palette);
+  const [tap, setTap] = React.useState<'details'|'editor'>('details');
+  const [backdate, setBackdate] = React.useState(true);
+  React.useEffect(() => {
+    (async () => {
+      try {
+        const val = await AsyncStorage.getItem('reflections.tapAction'); if (val==='details'||val==='editor') setTap(val as any);
+        const b = await AsyncStorage.getItem('reflections.useServerBackdate'); setBackdate(b!=='0');
+      } catch {}
+    })();
+  }, []);
+  const save = async (next: 'details'|'editor') => { setTap(next); try { await AsyncStorage.setItem('reflections.tapAction', next); } catch {} };
+  const saveBackdate = async (val: boolean) => { setBackdate(val); try { await AsyncStorage.setItem('reflections.useServerBackdate', val? '1':'0'); } catch {} };
+  return (
+    <View>
+      <Text style={s.rowLabel}>Reflections Calendar: default tap action</Text>
+      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+        <Button title={`Details ${tap==='details'?'✓':''}`} onPress={()=> save('details')} />
+        <Button title={`Editor ${tap==='editor'?'✓':''}`} onPress={()=> save('editor')} />
+      </View>
+      <View style={{ height: 10 }} />
+      <Text style={s.rowLabel}>Backdate via server (when adding past days)</Text>
+      <Button title={backdate? 'Disable backdating' : 'Enable backdating'} onPress={()=> saveBackdate(!backdate)} />
+      <Text style={{ color: palette.text, opacity: 0.8, marginTop: 6 }}>Tip: You can still change this from inside the calendar.</Text>
+    </View>
+  );
+}
+
+function MediaLockerSection() {
+  const palette = useAppPalette();
+  const s = createStyles(palette);
+  const [thumbs, setThumbs] = React.useState(true);
+  React.useEffect(()=>{ (async()=>{ try { const v = await AsyncStorage.getItem('locker.videoThumbnails'); setThumbs(v!=='0'); } catch {} })(); },[]);
+  const save = async (val: boolean) => { setThumbs(val); try { await AsyncStorage.setItem('locker.videoThumbnails', val? '1':'0'); } catch {} };
+  return (
+    <View>
+      <Text style={s.rowLabel}>Video thumbnails (cloud videos)</Text>
+      <Button title={thumbs? 'Disable thumbnails' : 'Enable thumbnails'} onPress={()=> save(!thumbs)} />
+      <Text style={{ color: palette.text, opacity: 0.8, marginTop: 6 }}>When enabled, the app may request thumbnails from YouTube or an optional server (if configured).</Text>
     </View>
   );
 }

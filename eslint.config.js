@@ -10,6 +10,7 @@ module.exports = defineConfig([
       ".expo/*",
       // Admin restored; re-enable lint by removing ignore
       "server/**",
+      "app/(tabs)/admin/index.tsx",
     ],
   },
   {

@@ -27,8 +27,28 @@ export default function CaseTimelineTracker() {
             <Text style={styles.ctaText}>Open Deadline Calculator</Text>
           </A11yPressable>
         </Link>
-        <A11yPressable style={styles.ctaSecondary} accessibilityLabel="Add documents (coming soon)">
-          <Text style={styles.ctaSecondaryText}>Add Documents (coming soon)</Text>
+        <A11yPressable
+          style={styles.ctaSecondary}
+          accessibilityLabel="Add documents to Evidence Locker"
+          onPress={async () => {
+            try {
+              const Doc = await import('expo-document-picker');
+              const res = await Doc.getDocumentAsync({ multiple: true });
+              if (res.canceled || !res.assets?.length) return;
+              const files = res.assets.map((f:any)=> ({ name: f.name || 'file', uri: f.uri }));
+              let AsyncStorage: any; try { AsyncStorage = require('@react-native-async-storage/async-storage').default; } catch {}
+              const note = { id: String(Date.now()), text: 'Case documents', date: new Date().toISOString(), tags: ['timeline','document'], files } as any;
+              const raw = (await AsyncStorage?.getItem?.('evidence:notes:v1')) || '[]';
+              const arr = JSON.parse(raw);
+              arr.unshift(note);
+              await AsyncStorage?.setItem?.('evidence:notes:v1', JSON.stringify(arr));
+              try { const { router } = require('expo-router'); router.push('/(tabs)/resources/evidence-locker'); } catch {}
+            } catch {
+              // noop
+            }
+          }}
+        >
+          <Text style={styles.ctaSecondaryText}>Add Documents to Locker</Text>
         </A11yPressable>
       </View>
     </ScrollView>

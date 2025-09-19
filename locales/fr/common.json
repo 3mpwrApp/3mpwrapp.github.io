@@ -1,9 +1,9 @@
-{
+﻿{
   "nav": {
     "home": "Accueil",
     "campaigns": "Campagnes",
     "community": "Communauté",
-    "advocacy": "Défense des droits",
+    "advocacy": "Défense",
     "podcasts": "Balados et récits",
     "resources": "Ressources",
     "events": "Événements",
@@ -24,6 +24,9 @@
     "subtitle": "Soutien. Défense. Autonomisation.",
     "welcome": "Bienvenue ! Votre hub pour communauté, éducation, outils de défense et balados — tout au même endroit !"
   },
+  "wellness": {
+    "tools": "Outils de bien-être"
+  },
   "resources": {
     "tools": {
       "deadlines": "Calculateur d'échéances + rappels",
@@ -39,4 +42,3 @@
     }
   }
 }
-

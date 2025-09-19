@@ -1,34 +1,71 @@
 name: CI
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
+  lint-typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint:ci
+      - name: Typecheck (strict)
+        run: npm run typecheck:strict
+
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Use Node.js 18
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: "npm"
-
+          node-version: '20'
+          cache: 'npm'
       - name: Install dependencies
         run: npm ci
-
-      - name: Lint (CI)
+      - name: Build sanity (lint + typecheck)
         run: |
-          if npm run | grep -q "lint:ci"; then npm run lint:ci; else npm run lint || true; fi
+          npm run lint:ci
+          npm run typecheck:strict
 
-      - name: Typecheck (strict)
-        run: |
-          if npm run | grep -q "typecheck:strict"; then npm run typecheck:strict; else echo "No typecheck:strict script"; fi
+  doctor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Expo Doctor
+        run: npx --yes expo-doctor
+        continue-on-error: true
 
-      - name: Expo Doctor (optional)
-        run: npx expo-doctor || true
+  doctor-strict:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Expo Doctor (strict)
+        run: npx --yes expo-doctor

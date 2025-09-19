@@ -1,126 +1,71 @@
-ï»¿import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  useColorScheme,
-  FlatList,
-  TextInput,
-  Pressable,
-} from "react-native";
+import React from "react";
+import { View, Text, StyleSheet, useColorScheme, FlatList, TextInput, Pressable } from "react-native";
 import { colors, type Palette } from "../../../../theme/colors";
 import { useLocalSearchParams } from "expo-router";
-import { useCommunity, CommunityProvider } from "../../../../store/community";
+import { CommunityProvider } from "../../../../store/community";
 import { HIT_SLOP_8, touchTarget } from "../../../../constants/a11y";
 import { useAuth } from "../../../../context/AuthContext";
+import { db } from "../../../../firebase/config";
+import { collection, query, where, orderBy, onSnapshot, addDoc, serverTimestamp } from 'firebase/firestore';
+import { setTyping, setLastRead } from "../../../../services/community";
 
 function ThreadInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const { state, addComment, reportComment, deleteComment } = useCommunity();
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
-  const thread = state.threads.find((t) => t.id === id);
-  const comments = state.comments
-    .filter((c) => c.threadId === id)
-    .sort((a, b) => a.createdAt - b.createdAt);
-  const [text, setText] = React.useState("");
+  const [items, setItems] = React.useState<any[]>([]);
+  const [text, setText] = React.useState('');
+  const [othersTyping, setOthersTyping] = React.useState(false);
   const { user } = useAuth();
 
-  if (!thread)
-    return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Thread not found</Text>
-      </View>
-    );
+  React.useEffect(() => {
+    if (!id) return;
+    const col = collection(db, 'comments');
+    const q = query(col, where('threadId','==', String(id)), orderBy('createdAt','asc'));
+    const unsub = onSnapshot(q, (snap) => setItems(snap.docs.map(d => ({ id: d.id, ...(d.data() as any) }))));
+    const unsubTyping = onSnapshot(collection(db,'chats','thread_'+String(id),'typing'), (snap) => {
+      try { const me = user?.uid; const any = snap.docs.some(d => (d.data() as any)?.typing && d.id !== me); setOthersTyping(any); } catch { setOthersTyping(false); }
+    });
+    setLastRead('thread_'+String(id));
+    return () => { unsub(); unsubTyping(); };
+  }, [id]);
+
+  const send = async () => {
+    if (!user || !text.trim()) return;
+    try { await addDoc(collection(db,'comments'), { threadId: String(id), text: text.trim(), authorUid: user.uid, createdAt: serverTimestamp() }); setText(''); } catch {}
+  };
 
   return (
-    <View
-      style={styles.container}
-      accessibilityLabel={`Thread ${thread.title}`}
-      accessible
-    >
-      <Text style={styles.title}>{thread.title}</Text>
-
+    <View style={styles.container}>
+      {othersTyping && <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 4 }}>Someone is typing…</Text>}
       <FlatList
-        data={comments}
+        data={items}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <View
-            style={styles.comment}
-            accessibilityLabel={`Comment by ${item.author ?? "Guest"}`}
-            accessible
-          >
-            <Text style={styles.commentAuthor}>{item.author ?? "Guest"}</Text>
-            <Text style={styles.commentText}>{item.content}</Text>
-            <View style={styles.actionsRow}>
-              {!item.reported && (
-                <Pressable
-                  onPress={() => reportComment(item.id)}
-                  accessibilityRole="button"
-                  accessibilityLabel="Report comment"
-                  hitSlop={HIT_SLOP_8}
-                  style={({ pressed }) => [
-                    touchTarget.min,
-                    { opacity: pressed ? 0.7 : 1 },
-                  ]}
-                >
-                  <Text style={styles.actionLink}>Report</Text>
-                </Pressable>
-              )}
-              {user && (
-                <Pressable
-                  onPress={() => deleteComment(item.id)}
-                  accessibilityRole="button"
-                  accessibilityLabel="Delete comment"
-                  hitSlop={HIT_SLOP_8}
-                  style={({ pressed }) => [
-                    touchTarget.min,
-                    { opacity: pressed ? 0.7 : 1 },
-                  ]}
-                >
-                  <Text style={[styles.actionLink, { color: "#d00" }]}>
-                    Delete
-                  </Text>
-                </Pressable>
-              )}
-              {item.reported && (
-                <Text style={[styles.actionLink, { color: "#aa8800" }]}>
-                  Reported
-                </Text>
-              )}
-            </View>
+          <View style={styles.comment}>
+            <Text style={styles.commentAuthor}>{item.authorUid || "User"}</Text>
+            <Text style={styles.commentText}>{item.text}</Text>
           </View>
         )}
         contentContainerStyle={{ paddingTop: 8 }}
       />
-
-      <View style={styles.newBox} accessibilityLabel="Add a comment" accessible>
+      <View style={styles.newBox}>
         <TextInput
           style={styles.input}
           placeholder="Write a comment"
           placeholderTextColor={palette.muted}
           value={text}
-          onChangeText={setText}
+          onChangeText={(t)=>{ setText(t); setTyping('thread_'+String(id), t.length>0); }}
+          onFocus={()=> setTyping('thread_'+String(id), true)}
+          onBlur={()=> setTyping('thread_'+String(id), false)}
         />
         <Pressable
-          onPress={() => {
-            if (!text.trim()) return;
-            const ok = addComment(
-              thread.id,
-              text.trim(),
-              user?.displayName ?? user?.email ?? null,
-            );
-            if (ok) setText("");
-          }}
+          onPress={send}
           accessibilityRole="button"
           accessibilityLabel="Post comment"
           hitSlop={HIT_SLOP_8}
-          style={({ pressed }) => [
-            styles.cta,
-            touchTarget.min,
-            { opacity: pressed ? 0.7 : 1 },
-          ]}
+          style={({ pressed }) => [styles.cta, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
         >
           <Text style={styles.ctaText}>Send</Text>
         </Pressable>
@@ -142,39 +87,12 @@ export default function ThreadScreen() {
 function createStyles(palette: Palette) {
   return StyleSheet.create({
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
-    title: { fontSize: 20, fontWeight: "700", color: palette.text },
-    comment: {
-      paddingVertical: 10,
-      borderBottomWidth: StyleSheet.hairlineWidth,
-      borderBottomColor: palette.muted,
-    },
-    commentAuthor: { color: palette.text, fontWeight: "600", marginBottom: 4 },
-    commentText: { color: palette.text, opacity: 1 },
-    actionsRow: { flexDirection: "row", gap: 12, marginTop: 6 },
-    actionLink: { color: palette.primary, fontWeight: "700" },
-    newBox: {
-      flexDirection: "row",
-      gap: 8,
-      alignItems: "center",
-      marginTop: 12,
-      paddingVertical: 8,
-    },
-    input: {
-      flex: 1,
-      borderWidth: 1,
-      borderColor: palette.muted,
-      borderRadius: 10,
-      paddingHorizontal: 12,
-      paddingVertical: 10,
-      color: palette.text,
-    },
-    cta: {
-      backgroundColor: palette.primary,
-      borderRadius: 10,
-      paddingHorizontal: 16,
-      paddingVertical: 10,
-    },
-    ctaText: { color: palette.onPrimary, fontWeight: "700" },
+    comment: { paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
+    commentAuthor: { color: palette.text, fontWeight: '600', marginBottom: 4 },
+    commentText: { color: palette.text },
+    newBox: { flexDirection: 'row', gap: 8, alignItems: 'center', marginTop: 12, paddingVertical: 8 },
+    input: { flex: 1, borderWidth: 1, borderColor: palette.muted, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, color: palette.text },
+    cta: { backgroundColor: palette.primary, borderRadius: 10, paddingHorizontal: 16, paddingVertical: 10 },
+    ctaText: { color: palette.onPrimary, fontWeight: '700' },
   });
 }
-

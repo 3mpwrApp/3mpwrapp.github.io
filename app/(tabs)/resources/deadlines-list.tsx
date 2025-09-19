@@ -61,6 +61,17 @@ export default function DeadlinesList() {
       Alert.alert('Export failed', 'Could not create ICS.');
     }
   };
+  const exportCSV = async () => {
+    try {
+      const rows = [['date','title','notes','done'], ...items.map(d => [d.dueAt, d.title, (d.notes||'').replace(/\n/g,' '), String(!!d.done)])];
+      const csv = rows.map(r=> r.map(x=> '"' + String(x||'').replace(/"/g,'""') + '"').join(',')).join('\n');
+      const FS = await import('expo-file-system');
+      const path = FS.cacheDirectory + `deadlines_${Date.now()}.csv`;
+      await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 });
+      try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','CSV saved to cache.'); }
+      catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
+    } catch { Alert.alert('Export failed','Could not create CSV.'); }
+  };
 
   const grouped = React.useMemo(() => {
     const map = new Map<string, Deadline[]>();
@@ -109,6 +120,11 @@ export default function DeadlinesList() {
       {items.length > 0 && (
         <A11yPressable onPress={exportAll} style={[s.button, { marginTop: 8 }]}> 
           <Text style={s.buttonText}>Export all as ICS</Text>
+        </A11yPressable>
+      )}
+      {items.length > 0 && (
+        <A11yPressable onPress={exportCSV} style={[s.button, { marginTop: 8 }]}> 
+          <Text style={s.buttonText}>Export all as CSV</Text>
         </A11yPressable>
       )}
       {items.length > 0 && (

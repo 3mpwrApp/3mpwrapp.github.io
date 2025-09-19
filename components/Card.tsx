@@ -22,6 +22,7 @@ type Props = {
   testID?: string;
   accessibilityLabel?: string;
   left?: React.ReactNode;
+  footer?: React.ReactNode;
 };
 
 export default function Card({
@@ -35,6 +36,7 @@ export default function Card({
   testID,
   accessibilityLabel,
   left,
+  footer,
 }: Props) {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
@@ -59,6 +61,7 @@ export default function Card({
       <View style={styles.textWrap}>
         <Text style={styles.title}>{title}</Text>
         {!!subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+        {!!footer && <View style={styles.footer}>{footer}</View>}
       </View>
       {onPressRight ? (
         <Pressable
@@ -111,5 +114,6 @@ function createStyles(palette: Palette, factor: number, dyslexia: boolean) {
       lineHeight: Math.round(18 * factor),
     },
     rightAction: { paddingStart: 8 },
+    footer: { marginTop: 6 },
   });
 }

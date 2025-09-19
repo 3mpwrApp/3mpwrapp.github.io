@@ -75,7 +75,17 @@ export default function AIDecisionSimplifier() {
       const result = await mod.getDocumentAsync({ type: ["application/pdf", "image/*"], multiple: false });
       if (result.canceled) return;
       const file = result.assets?.[0];
-      Alert.alert("Uploaded", `Selected: ${file?.name ?? "document"}.\nSummary coming soon.`);
+      const name = file?.name ?? 'document';
+      const base = `You selected ${name}. This appears to be a decision or related evidence. Look for:\n• Decision date and issue\n• Outcome (approved/denied/partial)\n• Appeal or reconsideration instructions (and deadline)`;
+      setSummary(base + "\n\nNext steps:\n• Log key dates in Case Timeline\n• Add the file to Evidence Locker\n• Consider a short reconsideration/appeal letter if errors exist");
+      // Offer quick insert to Evidence Locker
+      try {
+        let AsyncStorage: any; try { AsyncStorage = require('@react-native-async-storage/async-storage').default; } catch {}
+        const note = { id: String(Date.now()), text: name, date: new Date().toISOString(), tags: ['decision','document'], files: [{ name, uri: file?.uri }] } as any;
+        const raw = (await AsyncStorage?.getItem?.('evidence:notes:v1')) || '[]';
+        const arr = JSON.parse(raw); arr.unshift(note);
+        await AsyncStorage?.setItem?.('evidence:notes:v1', JSON.stringify(arr));
+      } catch {}
     } catch (e: any) {
       Alert.alert("Unavailable", "Document picker not available. Try reinstalling the dev client.");
     }

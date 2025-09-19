@@ -79,6 +79,12 @@ lastUpdated: 2025-09-07
 
 ![Podcasts](images/podcasts.png "Videos list with thumbnails and bookmarks")
 
+### Exercise Hub
+
+- Audience Filters: All, wheelchair, limited‑mobility, sensory‑friendly.
+- Remote Playlists: Uses YouTube when configured; falls back to curated list and cached results.
+- Favorites: Star videos and open your dedicated Favorites list from the Hub (or via Wellness → Exercise Favorites).
+
 ## Research
 
 - Filters: Topic and Year; search titles.
@@ -95,6 +101,22 @@ lastUpdated: 2025-09-07
 
 ![Resources](images/resources.png "Resources grouped by region with category chips")
 
+### Evidence Locker
+
+- Local notes with tags and attachments; optional Cloud save.
+- Gallery View: Toggle to a grid of image thumbnails.
+- Videos: Cloud items show a thumbnail (when available) and open in a built‑in player. If the source lacks a thumbnail and the optional server is configured, the app tries to derive one (YouTube supported; ffmpeg fallback when available). Toggle under Settings → Media & Locker.
+
+### Trackers (Meds, Chronic, Rehab)
+
+- Export: CSV and JSON.
+- Import Templates: Seed entries from JSON templates for quick setup.
+
+### Deadlines
+
+- Calendar and List views with reminders.
+- Import ICS; Export all as ICS or CSV.
+
 ## Wellness
 
 - Tools: Work‑Balance AI, Adaptive Meditation, Grief & Identity support.
@@ -102,6 +124,15 @@ lastUpdated: 2025-09-07
 - Library & Activities: Self‑care and rehab activities.
 
 ![Wellness Tracker](images/wellness-tracker.png "Symptom tracker with export")
+
+### Reflections Calendar
+
+- Views: Grid (month) and List (range). Toggle tap behavior: Details or Editor (remembered per device).
+- Quick‑Add: Long‑press a day (grid or list) to show inline mood chips; tap to add instantly. If connected to the optional server, past days are backdated server‑side.
+- Details: Tap a day to open a modal with that day’s entries (edit/delete/add) and a quick summary (count + average mood).
+- Exports: CSV/JSON with field filters (Mood/Text). One‑tap “Export Week” and “Export Month” CSV.
+- Default setting: Change the default tap behavior under Settings → Wellness Preferences.
+- Backdating: Enable/disable server‑backdating for past days under Settings → Wellness Preferences.
 
 ## Saved
 

@@ -43,6 +43,32 @@ export default function MedsTracker() {
       catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
     } catch { Alert.alert('Export failed','Could not create CSV.'); }
   };
+  const exportJSON = async () => {
+    try {
+      const payload = { medications: items, logs };
+      const FS = await import('expo-file-system');
+      const path = FS.cacheDirectory + `meds_${Date.now()}.json`;
+      await FS.writeAsStringAsync(path, JSON.stringify(payload, null, 2));
+      try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','JSON saved to cache.'); }
+      catch { Alert.alert('Saved','JSON saved to cache (sharing unavailable).'); }
+    } catch { Alert.alert('Export failed','Could not create JSON.'); }
+  };
+  const importTemplate = async () => {
+    try {
+      const DP = await import('expo-document-picker');
+      const res = await DP.getDocumentAsync({ type: 'application/json' });
+      const asset = res?.assets?.[0]; if (!asset?.uri) return;
+      const FS = await import('expo-file-system');
+      const raw = await FS.readAsStringAsync(asset.uri);
+      const json = JSON.parse(raw);
+      const meds = Array.isArray(json?.medications) ? json.medications : Array.isArray(json) ? json : [];
+      for (const m of meds.slice(0, 50)) {
+        await addMedication({ name: m.name||'Medication', dose: m.dose||'', schedule: m.schedule||'', reminderTime: m.reminderTime||undefined, refillAt: m.refillAt||undefined });
+      }
+      load();
+      Alert.alert('Imported','Template medications added.');
+    } catch { Alert.alert('Import failed','Could not import template.'); }
+  };
 
   return (
     <View style={s.container}>
@@ -54,6 +80,11 @@ export default function MedsTracker() {
       <DateTimeField label="Refill date (optional)" mode="date" value={refill} onChange={setRefill} />
       <A11yPressable onPress={async()=>{ try { await addMedication({ name: name.trim(), dose, schedule, reminderTime: remind || undefined, refillAt: refill || undefined }); setName(''); setDose(''); setSchedule(''); setRemind(''); setRefill(''); load(); } catch { Alert.alert('Add failed','Unable to add med'); } }} style={s.button}><Text style={s.buttonText}>Add Medication</Text></A11yPressable>
 
+      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 6 }}>
+        <A11yPressable onPress={exportCSV} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text></A11yPressable>
+        <A11yPressable onPress={exportJSON} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export JSON</Text></A11yPressable>
+        <A11yPressable onPress={importTemplate} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Import Template</Text></A11yPressable>
+      </View>
       <FlatList data={items} keyExtractor={m=>m.id!} renderItem={({item}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{item.name}</Text>

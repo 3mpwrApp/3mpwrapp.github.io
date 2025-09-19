@@ -111,22 +111,69 @@ Revoke admin: `npm run admin:set -- <uid> false`
 - `npm run admin:fcm -- --token <fcmToken> --title "Hi" --body "Message"` — Send FCM via Admin SDK (or `--topic <topic>`)
 - `npm run admin:export -- <collection> [--out file.json]` — Export a Firestore collection
 
-## New Features
+## Navigation & Tabs
 
-- Admin Panel: filters (verified/banned), contains search, client-side sort, CSV export/copy, and Export All (batched).
-- Deadlines: import events from an ICS file, snooze 7 days, bulk mark done/not-done, and quick-add weekly/monthly templates.
-- Evidence Locker: queue progress indicator and bulk delete of cloud items.
-- New Tools and Hubs:
-  - Lawyer & Advocate Finder: `/(tabs)/advocacy/lawyer-finder`
-  - Return-to-Work Planner: `/(tabs)/resources/rtw-planner`
-  - Medication & Treatment Tracker: `/(tabs)/resources/meds-tracker`
-  - Chronic Condition Tracker: `/(tabs)/resources/chronic-tracker`
-  - AI Body Mechanics Advisor (video tips): `/(tabs)/resources/body-mechanics-advisor`
-  - Interactive Policy Simulator: `/(tabs)/resources/policy-simulator`
-  - Accessible Exercise Hub: `/(tabs)/wellness/exercise-hub`
-  - Diet & Nutrition Guides: `/(tabs)/wellness/nutrition-guides`
-- Accessible Event Finder: `/(tabs)/events/finder`
-- Accommodation Request Builder: `/(tabs)/resources/accommodation-request` (redirects to improved letter builder)
+The app uses 8 main tabs. All other features live behind menus or deep links.
+
+- Home (`/(tabs)/index`)
+- Campaigns (`/(tabs)/campaigns/index`)
+- Community (`/(tabs)/community/index`)
+- Resources (`/(tabs)/resources/index`)
+- Wellness (`/(tabs)/wellness`)
+- Advocacy (`/(tabs)/advocacy/index`)
+- Settings (`/(tabs)/settings`)
+- What’s New (`/(tabs)/whatsnew/index`) – shows an unread badge
+
+## Community (Firestore)
+
+- Channels/Threads
+  - Channel pages read threads from Firestore with pagination and pull‑to‑refresh.
+  - Admin-only moderation toggles per thread (Flag/Unflag, Hide/Unhide).
+  - Unread badges per channel use per‑user last_read stored at `chats/channel_<slug>/last_read/{uid}`.
+
+- Thread Comments
+  - Comments stream via Firestore subscription by `threadId`.
+  - Typing indicator via `chats/thread_<id>/typing/{uid}`.
+  - Last-read marked on open for accurate unread separation.
+
+- Testers Chat (real-time)
+  - Room path: `chats/testers/messages` with presence and typing.
+  - Presence: `chats/testers/presence/{uid}`; Typing: `chats/testers/typing/{uid}`; Last read: `chats/testers/last_read/{uid}`.
+
+## Evidence Locker
+
+- Upload Queue & Progress
+  - Local save failures are queued at `AsyncStorage` key `evidence:uploadQueue:v1`.
+  - Upload Queue screen: process or clear queued items.
+  - Visual progress bars for single-note uploads and queue processing.
+  - Thumbnails/preview for image attachments with Share/Open actions.
+
+## Wellness Reflections
+
+- Daily mood + optional note with 7‑day trend sparkline.
+- Edit/Delete recent reflections.
+- “Remind me daily” schedules a local 9:00 notification.
+
+## Admin Tools
+
+- Moderation Queue: lists flagged/hidden threads with Approve/Restore/Trash/Delete actions.
+- User Lookup: shows basic profile and lastActive (from testers presence), plus Ban/Verify toggles.
+
+## Firestore & Storage Rules
+
+Rules now enforce:
+
+- Threads/Comments: create (signed-in), update/delete (admin or author).
+- Chat messages: update/delete (admin or author).
+- Presence/Typing/Last_read: a user can only write their own document.
+- User-owned subcollections (evidence, deadlines, reflections): owner-only; admin can read.
+
+Deploy:
+
+```
+npm run rules:deploy        # Firestore
+npm run rules:deploy:storage # Storage
+```
 
 ## Remote Integrations
 

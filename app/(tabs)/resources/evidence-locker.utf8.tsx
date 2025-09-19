@@ -43,6 +43,30 @@ export default function EvidenceLocker() {
   const [processing, setProcessing] = React.useState(false);
   const [progressPct, setProgressPct] = React.useState(0);
   const [preview, setPreview] = React.useState<{ url: string; name?: string } | null>(null);
+  const [video, setVideo] = React.useState<{ uri: string } | null>(null);
+  const [gallery, setGallery] = React.useState(false);
+  const [thumbs, setThumbs] = React.useState<Record<string,string>>({});
+  const [thumbEnabled, setThumbEnabled] = React.useState(true);
+  const [ffmpegReady, setFfmpegReady] = React.useState<boolean | null>(null);
+  React.useEffect(()=>{ (async()=>{ try { const A = require('@react-native-async-storage/async-storage').default; const v = await A.getItem('locker.videoThumbnails'); if (v==='0') setThumbEnabled(false); } catch {} })(); },[]);
+  React.useEffect(()=>{ (async()=>{ if (!thumbEnabled) return; try { const base = process.env.EXPO_PUBLIC_LLM_BASE || process.env.EXPO_PUBLIC_API_BASE; if (!base) return; const res = await fetch(`${String(base).replace(/\/$/,'')}/health`); if (res.ok) { const j = await res.json(); setFfmpegReady(!!j?.ffmpeg); } } catch { setFfmpegReady(null); } })(); },[thumbEnabled]);
+  const getVideoThumb = React.useCallback(async (url: string) => {
+    if (thumbs[url]) return thumbs[url];
+    // Try YouTube derivation on client
+    try {
+      if (/youtu\.be\//i.test(url)) { const id = url.split('/').pop()?.split('?')[0] || ''; if (id) { const t = `https://img.youtube.com/vi/${id}/hqdefault.jpg`; setThumbs(prev=>({ ...prev, [url]: t })); return t; } }
+      if (/youtube\.com\/watch\?v=/i.test(url)) { const u = new URL(url); const id = u.searchParams.get('v'); if (id) { const t = `https://img.youtube.com/vi/${id}/hqdefault.jpg`; setThumbs(prev=>({ ...prev, [url]: t })); return t; } }
+    } catch {}
+    // Ask server for help if configured
+    try {
+      const base = process.env.EXPO_PUBLIC_LLM_BASE || process.env.EXPO_PUBLIC_API_BASE;
+      if (base) {
+        const res = await fetch(`${String(base).replace(/\/$/,'')}/video-thumb?url=${encodeURIComponent(url)}`);
+        if (res.ok) { const j = await res.json(); if (j?.thumbnailUrl) { setThumbs(prev=>({ ...prev, [url]: j.thumbnailUrl })); return j.thumbnailUrl; } }
+      }
+    } catch {}
+    return '';
+  }, [thumbs]);
   // Immediate upload progress (non-queue)
   const [immUploading, setImmUploading] = React.useState(false);
   const [immPct, setImmPct] = React.useState(0);
@@ -188,6 +212,49 @@ export default function EvidenceLocker() {
           style={styles.secondary}
         >
           <Text style={styles.buttonText}>Attach file</Text>
+        </A11yPressable>
+        <A11yPressable onPress={()=> setGallery(g=>!g)} style={styles.secondary}>
+          <Text style={styles.buttonText}>{gallery? 'List view' : 'Gallery view'}</Text>
+        </A11yPressable>
+        <A11yPressable
+          accessibilityLabel="Take a photo"
+          onPress={async () => {
+            try {
+              const P = await import('expo-image-picker');
+              const perm = await P.requestCameraPermissionsAsync();
+              if (perm.status !== 'granted') { Alert.alert('Permission denied','Camera permission required.'); return; }
+              const res = await P.launchCameraAsync({ mediaTypes: P.MediaTypeOptions.Images, quality: 0.9 });
+              if (res.canceled || !res.assets?.length) return;
+              const a = res.assets[0];
+              const files = [{ name: a.fileName || `photo_${Date.now()}.jpg`, uri: a.uri }];
+              const defaultText = text.trim() || 'Photo';
+              setNotes([{ id: String(Date.now()), text: defaultText, date: new Date().toISOString(), tags: ['photo', ...(tag? [tag]: [])], files }, ...notes]);
+              setText(''); setTag('');
+            } catch { Alert.alert('Camera unavailable', 'Unable to open camera.'); }
+          }}
+          style={styles.secondary}
+        >
+          <Text style={styles.buttonText}>Take photo</Text>
+        </A11yPressable>
+        <A11yPressable
+          accessibilityLabel="Record a video"
+          onPress={async () => {
+            try {
+              const P = await import('expo-image-picker');
+              const perm = await P.requestCameraPermissionsAsync();
+              if (perm.status !== 'granted') { Alert.alert('Permission denied','Camera permission required.'); return; }
+              const res = await P.launchCameraAsync({ mediaTypes: P.MediaTypeOptions.Videos, videoQuality: 1 });
+              if (res.canceled || !res.assets?.length) return;
+              const a = res.assets[0];
+              const files = [{ name: a.fileName || `video_${Date.now()}.mp4`, uri: a.uri }];
+              const defaultText = text.trim() || 'Video';
+              setNotes([{ id: String(Date.now()), text: defaultText, date: new Date().toISOString(), tags: ['video', ...(tag? [tag]: [])], files }, ...notes]);
+              setText(''); setTag('');
+            } catch { Alert.alert('Camera unavailable', 'Unable to record video.'); }
+          }}
+          style={styles.secondary}
+        >
+          <Text style={styles.buttonText}>Record video</Text>
         </A11yPressable>
         <A11yPressable
           accessibilityLabel="Attach files"
@@ -389,6 +456,9 @@ export default function EvidenceLocker() {
           <Text style={styles.buttonText}>Export CSV</Text>
         </A11yPressable>
       </View>
+      {thumbEnabled && (
+        <Text style={{ color: palette.text, opacity: 0.7, marginTop: 4 }}>Video thumbnails: {ffmpegReady===null? 'checking…' : ffmpegReady? 'server ready' : 'server n/a'}</Text>
+      )}
       {/* Queue screen */}
       <A11yPressable onPress={() => (require('expo-router').router.push('/(tabs)/resources/evidence-queue'))} style={[styles.button, { marginTop: 8 }]}>
         <Text style={styles.buttonText}>Open Upload Queue</Text>
@@ -403,6 +473,7 @@ export default function EvidenceLocker() {
           </View>
         </View>
       )}
+      {!gallery && (
       <FlatList
         data={notes.filter(n => (!filter || n.tags?.includes(filter)) && (!query || n.text.toLowerCase().includes(query.toLowerCase())))}
         keyExtractor={(n) => n.id}
@@ -418,10 +489,31 @@ export default function EvidenceLocker() {
                 ); } catch { return null; } })()}
               </View>
             ) : null}
+            {Array.isArray(item.files) && item.files[0]?.uri && /(\.mp4|\.mov|\.m4v|\.webm)$/i.test(item.files[0].name || item.files[0].uri) ? (
+              <View style={{ marginTop: 6 }}>
+                <A11yPressable onPress={()=> setVideo({ uri: item.files![0]!.uri })} style={styles.secondary}><Text style={styles.buttonText}>Play video</Text></A11yPressable>
+              </View>
+            ) : null}
           </View>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
-      />
+      />)}
+      {gallery && (
+        <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginTop: 8 }}>
+          {notes
+            .flatMap(n => (n.files||[]).map(f => ({ n, f })))
+            .filter(x => /\.(png|jpe?g|gif|webp)$/i.test(x.f.name || x.f.uri))
+            .map(({ n, f }, idx) => (
+              <View key={`${n.id}-${idx}`} style={{ width: '31%', aspectRatio: 1, borderRadius: 8, overflow:'hidden' }}>
+                {(() => { try { const { Image } = require('expo-image'); return (
+                  <Pressable onPress={()=> setPreview({ url: f.uri, name: f.name })}>
+                    <Image source={{ uri: f.uri }} style={{ width: '100%', height: '100%' }} />
+                  </Pressable>
+                ); } catch { return null; } })()}
+              </View>
+            ))}
+        </View>
+      )}
       {!!user && cloudItems.length > 0 && (
         <View style={{ marginTop: 12 }}>
           <Text style={styles.title}>Cloud items</Text>
@@ -474,6 +566,11 @@ export default function EvidenceLocker() {
                       </Pressable>
                     ); } catch { return null; } })()}
                   </View>
+                ) : Array.isArray(c.files) && c.files[0]?.url && (/\.(mp4|mov|m4v|webm)$/i.test(c.files[0].url) || String(c.files[0]?.type||'').startsWith('video')) ? (
+                  <View style={{ marginTop: 6, flexDirection:'row', alignItems:'center', gap:8 }}>
+                    {thumbEnabled ? (() => { const local = c.files[0]?.thumbnailUrl || c.files[0]?.thumb || c.files[0]?.preview || thumbs[c.files[0].url]; if (local) { try { const { Image } = require('expo-image'); return (<Image source={{ uri: local }} style={{ width: 100, height: 60, borderRadius: 6 }} />); } catch { return null; } } getVideoThumb(c.files[0].url); return null; })() : null}
+                    <A11yPressable onPress={()=> setVideo({ uri: c.files[0].url })} style={styles.secondary}><Text style={styles.buttonText}>Play</Text></A11yPressable>
+                  </View>
                 ) : null}
               </View>
               <Pressable
@@ -499,7 +596,7 @@ export default function EvidenceLocker() {
         </View>
       )}
       {/* Preview Modal */}
-      {preview && (
+  {preview && (
         <Modal transparent animationType="fade" onRequestClose={() => setPreview(null)}>
           <Pressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)}>
             <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '90%', maxHeight: '90%' }}>
@@ -514,7 +611,22 @@ export default function EvidenceLocker() {
             </View>
           </Pressable>
         </Modal>
-      )}
+  )}
+  {/* Video modal */}
+  {video && (
+    <Modal transparent animationType="fade" onRequestClose={()=> setVideo(null)}>
+      <Pressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setVideo(null)}>
+        <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '95%', maxHeight: '80%', width: 360 }}>
+          {(() => { try { const { Video } = require('expo-av'); return (
+            <Video source={{ uri: video.uri }} style={{ width: 340, height: 220 }} useNativeControls shouldPlay resizeMode="contain" />
+          ); } catch { return (<Text style={{ color: palette.text }}>Video playback unavailable</Text>); } })()}
+          <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
+            <A11yPressable onPress={()=> setVideo(null)} style={styles.secondary}><Text style={styles.buttonText}>Close</Text></A11yPressable>
+          </View>
+        </View>
+      </Pressable>
+    </Modal>
+  )}
     </View>
   );
 }

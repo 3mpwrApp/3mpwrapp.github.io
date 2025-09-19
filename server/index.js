@@ -9,6 +9,58 @@ const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 20 
 
 app.get('/', (_req, res) => res.send('EmpowrApp server ok'));
 
+// Derive a video thumbnail if possible (YouTube only); otherwise return 204
+app.get('/video-thumb', async (req, res) => {
+  try {
+    const url = String(req.query.url || '');
+    if (/youtu\.be\//i.test(url)) {
+      const id = url.split('/').pop().split('?')[0];
+      return res.json({ thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg` });
+    }
+    if (/youtube\.com\/watch\?v=/i.test(url)) {
+      const u = new URL(url);
+      const id = u.searchParams.get('v');
+      if (id) return res.json({ thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg` });
+    }
+    // Fallback: try ffmpeg to capture a frame as data URL
+    try {
+      const { spawn } = await import('node:child_process');
+      const args = ['-ss','00:00:01','-i', url, '-frames:v','1','-f','mjpeg','-'];
+      const ff = spawn('ffmpeg', args, { stdio: ['ignore','pipe','ignore'] });
+      const chunks = [];
+      ff.stdout.on('data', (c) => chunks.push(c));
+      ff.on('error', () => res.status(204).end());
+      ff.on('close', (code) => {
+        if (code === 0 && chunks.length) {
+          const buf = Buffer.concat(chunks);
+          const dataUrl = `data:image/jpeg;base64,${buf.toString('base64')}`;
+          return res.json({ thumbnailUrl: dataUrl });
+        }
+        return res.status(204).end();
+      });
+      return;
+    } catch {}
+    return res.status(204).end();
+  } catch {
+    return res.status(204).end();
+  }
+});
+
+// Simple health endpoint (reports ffmpeg availability if possible)
+app.get('/health', async (_req, res) => {
+  try {
+    let ffmpeg = false;
+    try {
+      const { spawnSync } = await import('node:child_process');
+      const r = spawnSync('ffmpeg', ['-version'], { stdio: 'ignore' });
+      ffmpeg = r.status === 0;
+    } catch {}
+    res.json({ ok: true, ffmpeg });
+  } catch {
+    res.status(200).json({ ok: true, ffmpeg: false });
+  }
+});
+
 // Simple web crawler: fetch URL and extract title + meta description + links
 app.get('/crawl', async (req, res) => {
   try {
@@ -159,6 +211,22 @@ try {
       res.json({ ok: true, expo: expoTokens.length, fcm: fcmTokens.length });
     } catch (e) {
       res.status(500).json({ error: 'notify-chat-post failed' });
+    }
+  });
+
+  // Backdate wellness reflection for a user (admin SDK)
+  app.post('/wellness/add-reflection', express.json(), async (req, res) => {
+    try {
+      if (!admin) return res.status(200).json({ status: 'noop' });
+      const { uid, mood, note = '', createdAtISO } = req.body || {};
+      if (!uid || !mood) return res.status(400).json({ error: 'uid and mood required' });
+      const firestore = (await admin?.firestore?.()) || null;
+      if (!firestore) return res.status(200).json({ status: 'noop' });
+      const ts = createdAtISO ? admin.firestore.Timestamp.fromDate(new Date(createdAtISO)) : admin.firestore.FieldValue.serverTimestamp();
+      const ref = await firestore.collection('users').doc(String(uid)).collection('wellness_reflections').add({ mood, note: String(note||''), createdAt: ts });
+      return res.json({ ok: true, id: ref.id });
+    } catch (e) {
+      return res.status(500).json({ error: 'add-reflection failed' });
     }
   });
 } catch {}

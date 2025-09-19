@@ -35,12 +35,15 @@ service cloud.firestore {
 
     match /threads/{docId} {
       allow read: if true;
-      allow write, update, delete: if isSignedIn();
+      // create if signed-in; update/delete if admin or author
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == resource.data.authorUid);
     }
 
     match /comments/{docId} {
       allow read: if true;
-      allow write, update, delete: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == resource.data.authorUid);
     }
 
     // Users collection
@@ -136,6 +139,27 @@ service cloud.firestore {
     match /users/{uid}/wellness_reflections/{docId} {
       allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Testers chat room (signed-in users)
+    match /chats/{room}/messages/{msgId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == resource.data.authorUid);
+    }
+
+    // Presence/typing/last_read per room
+    match /chats/{room}/presence/{uid} {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn() && request.auth.uid == uid;
+    }
+    match /chats/{room}/typing/{uid} {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn() && request.auth.uid == uid;
+    }
+    match /chats/{room}/last_read/{uid} {
+      allow read: if isSignedIn() && request.auth.uid == uid;
+      allow write: if isSignedIn() && request.auth.uid == uid;
     }
   }
 }
