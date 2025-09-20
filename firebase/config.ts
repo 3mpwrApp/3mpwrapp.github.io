@@ -1,3 +1,4 @@
+// Defensive Platform import (may be partially mocked in Jest)
 import { Platform } from "react-native";
 import { initializeApp, getApp, getApps, type FirebaseApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
@@ -21,8 +22,12 @@ export function getFirebaseApp(): FirebaseApp {
 }
 
 const app = getFirebaseApp();
-// Ensure Auth persistence on native by initializing before getAuth
-if (Platform.OS !== "web") {
+// Detect test environment to avoid native-specific initialization in Jest
+const IS_TEST = typeof process !== 'undefined' && !!process.env.JEST_WORKER_ID;
+const platformOS = (Platform as any)?.OS || 'web';
+
+// Ensure Auth persistence on native by initializing before getAuth (skip in tests)
+if (!IS_TEST && platformOS !== "web") {
   try {
     // Dynamically import RN-only APIs to avoid type mismatch on web
     const {
@@ -39,7 +44,7 @@ if (Platform.OS !== "web") {
 export const auth = getAuth(app);
 // Firestore: use long-polling on native to avoid WebChannel transport issues
 export const db =
-  Platform.OS === "web"
+  platformOS === "web"
     ? getFirestore(app)
     : initializeFirestore(app, {
         // Force long polling on native to avoid WebChannel transport issues
@@ -49,7 +54,7 @@ export const storage = getStorage(app);
 
 // Lazy load Analytics only on web
 export async function getFirebaseAnalytics(): Promise<any | null> {
-  if (Platform.OS !== "web") return null;
+  if (platformOS !== "web") return null;
   try {
     const { getAnalytics } = await import("firebase/analytics");
     return getAnalytics(app);
