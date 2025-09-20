@@ -48,6 +48,50 @@ export const masterIndex: MasterIndexRoot = {
       ]
     },
     {
+      id: 'can-crpd-implementation',
+  title: 'UNCRPD Implementation (Canada – Article 33)',
+      description: 'Ratification facts, focal points, independent monitoring, and latest UN review outputs.',
+      subsections: [
+        {
+          id: 'can-crpd-status',
+          title: 'Status & Core Instruments',
+          links: [
+            { label: 'UNCRPD Ratification (Canada – 2010)', url: 'https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html', note: 'UNCRPD: Canada ratified 11 Mar 2010 (no initial OP accession)' },
+            { label: 'Optional Protocol Accession (2023)', url: 'https://treaties.un.org/', note: 'UNCRPD: Canada acceded 3 Dec 2023 enabling individual communications' },
+            { label: 'Reservations / Declarations Summary', url: 'https://treaties.un.org/', note: 'UNCRPD: Interpretative declarations (federal structure & Article 12 context)' }
+          ]
+        },
+        {
+          id: 'can-crpd-governance',
+          title: 'Governance & Focal Points',
+          links: [
+            { label: 'Federal Focal Point (ESDC Accessibility)', url: 'https://www.canada.ca/en/employment-social-development/programs/accessible-canada.html', note: 'UNCRPD: Primary coordination – Accessibility Strategy & ACA' },
+            { label: 'Chief Accessibility Officer (System Monitoring)', url: 'https://www.canada.ca/en/employment-social-development/programs/accessible-canada/chief-accessibility-officer.html', note: 'UNCRPD: Independent oversight reporting to Minister' },
+            { label: 'Canadian Human Rights Commission – Monitoring Role', url: 'https://www.chrc-ccdp.gc.ca/en', note: 'UNCRPD: Part of independent monitoring framework (Article 33(2))' },
+            { label: 'Accessibility Commissioner (ACE Tribunal Functions)', url: 'https://www.canada.ca/en/accessibility-standards-canada.html', note: 'UNCRPD: Enforcement of accessibility requirements (ACA)' }
+          ]
+        },
+        {
+          id: 'can-crpd-review',
+          title: 'Reporting & Concluding Observations',
+          links: [
+            { label: 'State Party Reports & LOIPR (Canada)', url: 'https://tbinternet.ohchr.org/_layouts/15/TreatyBodyExternal/TBSearch.aspx?Lang=en&TreatyID=4&CountryID=27', note: 'UNCRPD: All submitted periodic reports & lists of issues' },
+            { label: 'UNCRPD Committee Concluding Observations (Canada 2025)', url: 'https://tbinternet.ohchr.org/_layouts/15/TreatyBodyExternal/TBSearch.aspx?Lang=en&TreatyID=4&DocTypeID=5', note: 'UNCRPD: Latest recommendations – implement & cross-map to themes' }
+          ]
+        },
+        {
+          id: 'can-crpd-indicators',
+          title: 'Indicators & Measurement',
+          links: [
+            { label: 'Accessible Canada Act – Progress Reports', url: 'https://www.canada.ca/en/employment-social-development/programs/accessible-canada/reports.html', note: 'UNCRPD: Annual progress & planning under ACA' },
+            { label: 'StatCan Accessibility / Disability Data Portal', url: 'https://www.statcan.gc.ca/en/about/accessibility', note: 'UNCRPD: Foundational structural & outcome indicators' },
+            { label: 'Human Rights Indicators (OHCHR Guide)', url: 'https://www.ohchr.org/en/publications/other-publications/human-rights-indicators-guide-measurement-and-implementation', note: 'UNCRPD: Structure, process, outcome model adaptation' }
+          ]
+        }
+      ],
+      links: []
+    },
+    {
       id: 'can-selected-studies',
       title: 'Selected Canadian Studies (Examples)',
       description: 'Illustrative research themes for deeper exploration.',
@@ -60,12 +104,59 @@ export const masterIndex: MasterIndexRoot = {
   ],
   global: [
     {
+      id: 'crpd-framework',
+  title: 'UNCRPD Framework & Oversight',
+      description: 'Core treaty instruments, Committee guidance, interpretive General Comments, and monitoring outputs.',
+      subsections: [
+        {
+          id: 'crpd-core-texts',
+          title: 'Core Texts & Status',
+          links: [
+            { label: 'UNCRPD Convention (Full Text PDF)', url: 'https://www.un.org/disabilities/documents/convention/convoptprot-e.pdf', note: 'UNCRPD: Adopted 2006 – Foundational disability rights treaty' },
+            { label: 'Optional Protocol (Individual Communications)', url: 'https://www.un.org/disabilities/documents/convention/convoptprot-e.pdf', note: 'UNCRPD: Enables complaints & inquiry procedures' },
+            { label: 'UN Treaty Collection – UNCRPD Status', url: 'https://treaties.un.org/Pages/ViewDetails.aspx?src=IND&mtdsg_no=IV-15&chapter=4&clang=_en', note: 'UNCRPD: Ratifications, accessions, declarations' },
+            { label: 'UNCRPD Committee – Official Page', url: 'https://www.ohchr.org/en/treaty-bodies/crpd', note: 'UNCRPD: Sessions, members, working methods' },
+          ]
+        },
+        {
+          id: 'crpd-general-comments',
+          title: 'General Comments (Authoritative Interpretation)',
+          links: [
+            { label: 'General Comment No. 1 – Equal Recognition Before the Law (2014)', url: 'https://documents-dds-ny.un.org/doc/UNDOC/GEN/G14/031/20/PDF/G1403120.pdf', note: 'UNCRPD: Legal capacity, supported decision-making paradigm' },
+            { label: 'General Comment No. 2 – Accessibility (2014)', url: 'https://documents-dds-ny.un.org/doc/UNDOC/GEN/G14/031/09/PDF/G1403109.pdf', note: 'UNCRPD: Built environment, ICT, services – cross-cutting duty' },
+            { label: 'General Comment No. 3 – Women and Girls with Disabilities (2016)', url: 'https://documents-dds-ny.un.org/doc/UNDOC/GEN/G16/089/30/PDF/G1608930.pdf', note: 'UNCRPD: Gender equality & intersectionality lens' },
+            { label: 'General Comment No. 6 – Equality & Non-Discrimination (2018)', url: 'https://documents-dds-ny.un.org/doc/UNDOC/GEN/G18/214/60/PDF/G1821460.pdf', note: 'UNCRPD: Substantive equality, reasonable accommodation' },
+            { label: 'General Comment No. 7 – Participation (2018)', url: 'https://documents-dds-ny.un.org/doc/UNDOC/GEN/G18/214/41/PDF/G1821441.pdf', note: 'UNCRPD: DPO engagement in monitoring & policy' },
+            { label: 'General Comment No. 8 – Article 27 Work & Employment (2022)', url: 'https://documents-dds-ny.un.org/doc/UNDOC/GEN/G22/323/30/PDF/G2232330.pdf', note: 'UNCRPD: Inclusive labour markets, RTW obligations, non-discrimination' },
+          ]
+        },
+        {
+          id: 'crpd-monitoring',
+          title: 'Monitoring & Concluding Observations',
+          links: [
+            { label: 'UNCRPD Committee – Concluding Observations Database', url: 'https://tbinternet.ohchr.org/_layouts/15/TreatyBodyExternal/TBSearch.aspx?Lang=en&TreatyID=4&DocTypeID=5', note: 'UNCRPD: Search state reviews (e.g., Canada 2025)' },
+            { label: 'UNCRPD Committee – List of Issues Prior to Reporting (LOIPR)', url: 'https://tbinternet.ohchr.org/_layouts/15/TreatyBodyExternal/TBSearch.aspx?Lang=en&TreatyID=4&DocTypeID=29', note: 'UNCRPD: Pre-reporting focus areas & data requests' },
+          ]
+        },
+        {
+          id: 'crpd-implementation-tools',
+          title: 'Implementation & Guidance',
+          links: [
+            { label: 'OHCHR Indicators: Human Rights Measurement Guidance', url: 'https://www.ohchr.org/en/publications/other-publications/human-rights-indicators-guide-measurement-and-implementation', note: 'UNCRPD: Struct./process/outcome indicator model' },
+            { label: 'OHCHR – National Implementation & Monitoring Guidance', url: 'https://www.ohchr.org/en/publications/manuals-and-training-materials/handbook-national-human-rights-plans-action', note: 'UNCRPD: Planning & coordination frameworks' },
+            { label: 'UN Disability Strategy & Action Plan', url: 'https://www.un.org/en/content/disabilitystrategy/', note: 'UNCRPD: UN system internal accessibility model' },
+          ]
+        }
+      ],
+      links: []
+    },
+    {
       id: 'un-who',
       title: 'UN & WHO (Foundational)',
       links: [
         { label: 'WHO Global Report on Health Equity for Persons with Disabilities (2022)', url: 'https://www.who.int/publications/i/item/9789240063600' },
         { label: 'WHO & UNICEF Global Report on Assistive Technology (GReAT, 2022)', url: 'https://www.who.int/publications/i/item/9789240049451' },
-        { label: 'UN CRPD (Convention) + Optional Protocol (2006)', url: 'https://www.un.org/disabilities/documents/convention/convoptprot-e.pdf' }
+  { label: 'UNCRPD (Convention) + Optional Protocol (2006)', url: 'https://www.un.org/disabilities/documents/convention/convoptprot-e.pdf', note: 'UNCRPD: Core treaty & complaints mechanism' }
       ]
     },
     {
@@ -158,7 +249,8 @@ export const masterIndex: MasterIndexRoot = {
       links: [
         { label: 'IWH – OLAWIS Outcomes', url: 'https://www.iwh.on.ca/projects/life-after-work-injury-study' },
         { label: 'Safe Work Australia – National RTW Survey', url: 'https://www.safeworkaustralia.gov.au/' },
-        { label: 'Cochrane Work RTW Coordination Reviews', url: 'https://work.cochrane.org/' }
+        { label: 'Cochrane Work RTW Coordination Reviews', url: 'https://work.cochrane.org/' },
+  { label: 'UNCRPD General Comment No. 8 – Work & Employment (2022)', url: 'https://documents-dds-ny.un.org/doc/UNDOC/GEN/G22/323/30/PDF/G2232330.pdf', note: 'UNCRPD: Interpretive standards for inclusive labour markets / RTW' }
       ]
     },
     {
@@ -237,7 +329,8 @@ export const masterIndex: MasterIndexRoot = {
       title: 'Accessibility & Anti-Discrimination Law (Canada)',
       links: [
         { label: 'Accessible Canada Act (2019)', url: 'https://laws-lois.justice.gc.ca/eng/acts/A-0.6/' },
-        { label: 'Canadian Human Rights Act – Disability Guidance', url: 'https://www.chrc-ccdp.gc.ca/en' }
+        { label: 'Canadian Human Rights Act – Disability Guidance', url: 'https://www.chrc-ccdp.gc.ca/en' },
+  { label: 'UNCRPD General Comment No. 2 – Accessibility (2014)', url: 'https://documents-dds-ny.un.org/doc/UNDOC/GEN/G14/031/09/PDF/G1403109.pdf', note: 'UNCRPD: Cross-cutting duty: built environment, ICT, transport, services' }
       ]
     },
     {
@@ -246,6 +339,16 @@ export const masterIndex: MasterIndexRoot = {
       links: [
         { label: 'WHO ICF Framework (2001)', url: 'https://www.who.int/classifications/icf/en/' },
         { label: 'BLS SOII Methodology', url: 'https://www.bls.gov/opub/hom/soii/' }
+      ]
+    },
+    {
+      id: 'theme-legal-capacity',
+      title: 'Legal Capacity & Supported Decision-Making',
+      description: 'Normative shift from substituted to supported decision-making – implications for consent, claims navigation, and accommodations.',
+      links: [
+  { label: 'UNCRPD General Comment No. 1 – Equal Recognition Before the Law (2014)', url: 'https://documents-dds-ny.un.org/doc/UNDOC/GEN/G14/031/20/PDF/G1403120.pdf', note: 'UNCRPD: Affirms universal legal capacity & support obligations' },
+        { label: 'Canadian Human Rights Act – Accommodation (Capacity Context)', url: 'https://www.chrc-ccdp.gc.ca/en', note: 'Reasonable accommodation & non-discrimination interplay' },
+        { label: 'OHCHR – Supported Decision-Making Guidance (Compilation)', url: 'https://www.ohchr.org/', note: 'Practices & design of support frameworks' }
       ]
     },
     {
@@ -321,6 +424,19 @@ export const masterIndex: MasterIndexRoot = {
         { label: 'Time Filter (e.g., 2010–present)', note: 'Capture modern policy context' },
         { label: 'Trace Back via Landmarks', note: 'Add historical lineage (1897, 1914, ILO conventions)' },
         { label: 'Validate with Official Stats', note: 'AWCBC, BLS, HSE, Eurostat for denominators' }
+      ]
+    },
+    {
+      id: 'apply-uncrpd',
+      title: 'Applying the UNCRPD (Operational Steps)',
+      links: [
+        { label: 'Map Issue → Article & General Comment', note: 'Align problem to specific UNCRPD article (e.g., Work → Art.27 + GC8)' },
+        { label: 'Extract State Obligations', note: 'Use GC paragraphs to list concrete duties & timelines' },
+        { label: 'Cross-Reference Concluding Observations', note: 'Pull recent Canada recommendations for reinforcement' },
+        { label: 'Identify Structural / Process / Outcome Indicators', note: 'Adapt OHCHR indicator model for tracking' },
+        { label: 'Document Gaps & Reasonable Accommodation Failures', note: 'Evidence log → supports advocacy / complaint pathways' },
+        { label: 'Prioritize Remedies & Policy Levers', note: 'Rank fixes: legislation, enforcement, data transparency' },
+        { label: 'Feedback Loop with Community Advocates', note: 'Share drafts with IWC / networks for lived-experience validation' }
       ]
     }
   ]

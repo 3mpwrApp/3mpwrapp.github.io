@@ -1,15 +1,15 @@
-import React from 'react';
-import { ScrollView, StyleSheet, Text, View, Linking, TextInput, AccessibilityInfo } from 'react-native';
 import { Stack } from 'expo-router';
+import React from 'react';
+import { AccessibilityInfo, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { masterIndex } from '../../../data/research-master-index';
 import A11yPressable from '../../../components/A11yPressable';
-import SettingsLink from '../../../components/SettingsLink';
 import ContrastToggle from '../../../components/ContrastToggle';
+import SettingsLink from '../../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { masterIndex } from '../../../data/research-master-index';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { useAppPalette } from '../../../theme/usePalette';
 import { useTextScale } from '../../../theme/typography';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -31,8 +31,9 @@ export default function MasterIndexScreen() {
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState('');
   const [announceTimer, setAnnounceTimer] = React.useState<ReturnType<typeof setTimeout> | null>(null);
+  const [quickFilter, setQuickFilter] = React.useState<string | null>(null);
 
-  const normalizedQuery = query.trim().toLowerCase();
+  const normalizedQuery = (quickFilter ? `${query} ${quickFilter}` : query).trim().toLowerCase();
 
   const filtered = React.useMemo(() => {
     if (!normalizedQuery) return masterIndex;
@@ -95,6 +96,24 @@ export default function MasterIndexScreen() {
         <ContrastToggle style={{ position: 'absolute', right: 56, top: 20 }} />
         <Text style={styles.intro}>Hierarchical map of authoritative data sources, research hubs, thematic drill-downs, historical frameworks, and search strategies across Canada and global contexts.</Text>
         <View style={styles.searchWrap} accessibilityRole="search">
+          <View style={styles.filterChipsRow} accessibilityRole="tablist">
+            {['UNCRPD','Advocacy','Poverty','Suppression'].map(chip => {
+              const active = quickFilter === chip.toLowerCase();
+              return (
+                <A11yPressable
+                  key={chip}
+                  accessibilityRole="tab"
+                  accessibilityState={{ selected: active }}
+                  accessibilityLabel={`${chip} quick filter`}
+                  onPress={() => setQuickFilter(active ? null : chip.toLowerCase())}
+                  style={[styles.filterChip, active && styles.filterChipActive]}
+                  hitSlop={HIT_SLOP_8}
+                >
+                  <Text style={[styles.filterChipText, active && styles.filterChipTextActive]}>{chip}</Text>
+                </A11yPressable>
+              );
+            })}
+          </View>
           <Text style={styles.searchLabel}>Filter sources</Text>
           <TextInput
             value={query}
@@ -168,6 +187,11 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     title: { fontSize: Math.round(24 * factor), fontWeight: '700', marginBottom: 12, color: palette.text },
     intro: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.85, lineHeight: 20, marginBottom: 24 },
     searchWrap: { marginBottom: 28, backgroundColor: palette.surface, padding: 12, borderRadius: 12, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
+  filterChipsRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 10 },
+  filterChip: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 16, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
+  filterChipActive: { backgroundColor: palette.primary },
+  filterChipText: { fontSize: Math.round(12 * factor), color: palette.text },
+  filterChipTextActive: { color: palette.onPrimary },
     searchLabel: { fontSize: Math.round(12 * factor), fontWeight: '600', color: palette.text, marginBottom: 6, textTransform: 'uppercase', letterSpacing: 0.5 },
   searchInput: { backgroundColor: palette.card, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, fontSize: Math.round(14 * factor), color: palette.text, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
     resultsMeta: { marginTop: 8, fontSize: Math.round(12 * factor), color: palette.text, opacity: 0.75 },

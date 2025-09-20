@@ -110,6 +110,18 @@ export default function ResearchScreen() {
             <Text style={styles.sectionDescription}>Comprehensive map of data & research sources</Text>
           </A11yPressable>
         </Link>
+        <Link href="/(tabs)/research/master-index" asChild>
+          <A11yPressable
+            style={styles.sectionCard}
+            accessibilityRole="button"
+            accessibilityLabel="Community Advocacy & UNCRPD - Access advocacy clinics, FightWCB, and UN treaty guidance"
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons name="people-circle-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>Community Advocacy & UNCRPD</Text>
+            <Text style={styles.sectionDescription}>Grassroots legal support + UN rights framework</Text>
+          </A11yPressable>
+        </Link>
       </View>
       <View style={styles.hubsContainer} accessibilityRole="summary">
         <Text style={styles.hubsHeader} accessibilityRole="header">Research & Data Hubs</Text>
