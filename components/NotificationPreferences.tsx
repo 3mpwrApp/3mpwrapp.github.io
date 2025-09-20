@@ -54,7 +54,7 @@ export default function NotificationPreferences() {
     try {
       await sendTestLocal();
       Alert.alert("Test Sent", "If you don't see a notification, check your device notification settings.");
-    } catch (error) {
+  } catch {
       Alert.alert("Test Failed", "Unable to send test notification. Please check your settings.");
     }
   };

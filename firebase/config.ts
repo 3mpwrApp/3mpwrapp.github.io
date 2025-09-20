@@ -1,10 +1,10 @@
 // Defensive Platform import (may be partially mocked in Jest)
-import { Platform } from "react-native";
-import { initializeApp, getApp, getApps, type FirebaseApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
 import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
+import { getApp, getApps, initializeApp, type FirebaseApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import { getFirestore, initializeFirestore, setLogLevel } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+import { Platform } from "react-native";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBv4rtD3it2yoIIFpxckCEXC9haKIbVjA8",
@@ -56,8 +56,12 @@ export const storage = getStorage(app);
 export async function getFirebaseAnalytics(): Promise<any | null> {
   if (platformOS !== "web") return null;
   try {
-    const { getAnalytics } = await import("firebase/analytics");
-    return getAnalytics(app);
+    const analyticsMod = await import("firebase/analytics");
+    if (typeof (analyticsMod as any).isSupported === 'function') {
+      const ok = await (analyticsMod as any).isSupported();
+      if (!ok) return null;
+    }
+    return (analyticsMod as any).getAnalytics(app);
   } catch {
     return null;
   }

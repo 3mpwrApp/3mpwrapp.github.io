@@ -1,3 +1,4 @@
+/* eslint-env jest */
 // Basic globals expected by react-native / metro environment
 if (typeof global.__DEV__ === 'undefined') {
   global.__DEV__ = true;

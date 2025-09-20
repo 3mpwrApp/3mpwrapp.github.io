@@ -1,9 +1,9 @@
+import { addEvidenceNote, uploadEvidenceFileWithProgress, type EvidenceFile } from './evidence';
+
 let AsyncStorage: any;
 try {
   AsyncStorage = require('@react-native-async-storage/async-storage').default;
 } catch {}
-
-import { addEvidenceNote, uploadEvidenceFileWithProgress, type EvidenceFile } from './evidence';
 
 export const EVIDENCE_QUEUE_KEY = 'evidence:uploadQueue:v1';
 

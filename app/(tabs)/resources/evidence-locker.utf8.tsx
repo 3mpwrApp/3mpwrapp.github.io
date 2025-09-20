@@ -1,4 +1,4 @@
-﻿import { router } from "expo-router";
+import { router } from "expo-router";
 import React from "react";
 import { Alert, FlatList, Modal, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
@@ -338,7 +338,7 @@ export default function EvidenceLocker() {
                 }
                 await addEvidenceNote({ text: current.text, tags: current.tags, files: uploaded });
                 Alert.alert('Saved', 'Note saved to your cloud locker.');
-              } catch (e: any) {
+              } catch {
                 if (snapshot) await enqueueFailed({ text: snapshot.text, tags: snapshot.tags, files: snapshot.files });
                 Alert.alert('Save failed', 'Queued to upload later.');
               } finally {

@@ -62,8 +62,8 @@ export default function EmergencyWalletCard() {
       if (saved) {
         setInfo(JSON.parse(saved));
       }
-    } catch (error) {
-      console.warn("Failed to load emergency info:", error);
+    } catch {
+      console.warn("Failed to load emergency info");
     } finally {
       setIsLoading(false);
     }
@@ -73,7 +73,7 @@ export default function EmergencyWalletCard() {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(info));
       Alert.alert("Saved", "Emergency information has been saved securely on your device.");
-    } catch (error) {
+  } catch {
       Alert.alert("Error", "Failed to save emergency information.");
     }
   };

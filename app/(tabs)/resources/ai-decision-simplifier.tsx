@@ -9,7 +9,7 @@ async function copyToClipboard(text: string) {
   try {
     const mod = await import("expo-clipboard");
     await mod.setStringAsync(text);
-  } catch (e) {
+  } catch {
     Alert.alert(
       "Clipboard unavailable",
       "Copy failed because the dev client doesn’t include expo-clipboard. Rebuild the native app or open in Expo Go."
@@ -21,7 +21,7 @@ async function pasteFromClipboard(): Promise<string> {
   try {
     const mod = await import("expo-clipboard");
     return await mod.getStringAsync();
-  } catch (e) {
+  } catch {
     Alert.alert(
       "Clipboard unavailable",
       "Paste failed because the dev client doesn’t include expo-clipboard. Rebuild the native app or open in Expo Go."
@@ -86,7 +86,7 @@ export default function AIDecisionSimplifier() {
         const arr = JSON.parse(raw); arr.unshift(note);
         await AsyncStorage?.setItem?.('evidence:notes:v1', JSON.stringify(arr));
       } catch {}
-    } catch (e: any) {
+  } catch {
       Alert.alert("Unavailable", "Document picker not available. Try reinstalling the dev client.");
     }
   };

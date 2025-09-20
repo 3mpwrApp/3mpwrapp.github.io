@@ -1,4 +1,4 @@
-﻿import type { Href } from "expo-router";
+import type { Href } from "expo-router";
 import { router, useLocalSearchParams } from "expo-router";
 import { collection, doc, getDocs, limit, orderBy, query, startAfter, updateDoc, where } from "firebase/firestore";
 import React from "react";

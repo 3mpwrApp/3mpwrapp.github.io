@@ -45,7 +45,7 @@ export default function SettingsScreen() {
   const [password, setPassword] = useState('');
   const [deleting, setDeleting] = useState(false);
   const [hasPasswordProvider, setHasPasswordProvider] = useState(false);
-  const [isAnonymous, setIsAnonymous] = useState(false);
+  // Removed unused isAnonymous state (previously tracked anonymous account status)
   const [providerList, setProviderList] = useState<string[]>([]);
 
   useEffect(() => { if (!user) return; (async () => {
@@ -62,7 +62,7 @@ export default function SettingsScreen() {
     const providers = user.providerData.map(p => p.providerId);
     setProviderList(providers);
     setHasPasswordProvider(providers.includes('password'));
-    setIsAnonymous(!!user.isAnonymous);
+  // Anonymous status no longer tracked locally (removed isAnonymous state)
     setDeleteMode(true);
   };
   const cancelDelete = () => { setDeleteMode(false); setPassword(''); };

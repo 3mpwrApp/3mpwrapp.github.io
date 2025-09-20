@@ -1,6 +1,6 @@
+import { addDoc, collection, limit as fsLimit, startAfter as fsStartAfter, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
+import { getDownloadURL, ref, uploadBytes, uploadBytesResumable } from 'firebase/storage';
 import { auth, db, storage } from '../firebase/config';
-import { addDoc, collection, getDocs, orderBy, query, serverTimestamp, limit as fsLimit, startAfter as fsStartAfter } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 
 export type EvidenceFile = {
   name: string;
@@ -52,7 +52,7 @@ export async function uploadEvidenceFileWithProgress(
     });
     const url = await getDownloadURL(r);
     return { name, url, path, size };
-  } catch (e) {
+  } catch {
     // Fallback to non-resumable
     const f = await uploadEvidenceFile(uri, name);
     if (onProgress) onProgress(100);

@@ -1,15 +1,14 @@
 import React from "react";
-import { ScrollView, View, Text, StyleSheet, TextInput } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
-import { useAppPalette } from "../../../theme/usePalette";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
-import { Alert } from "react-native";
+import { useAppPalette } from "../../../theme/usePalette";
 
 async function copyToClipboard(text: string) {
   try {
     const mod = await import("expo-clipboard");
     await mod.setStringAsync(text);
-  } catch (e) {
+  } catch {
     Alert.alert(
       "Clipboard unavailable",
       "Copy failed because the dev client doesn’t include expo-clipboard. Rebuild the native app or open in Expo Go."

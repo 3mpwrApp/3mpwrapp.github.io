@@ -17,7 +17,7 @@ export default function ReflectionsCalendar() {
   useAnnounceOnMount("Reflections Calendar");
   useFocusOnRefOnMount(titleRef);
 
-  const [days, setDays] = React.useState<Array<{ date: Date; entry?: Reflection }>>([]);
+  const [days, setDays] = React.useState<{ date: Date; entry?: Reflection }[]>([]);
   const [rangeDays, setRangeDays] = React.useState(30);
   const [loading, setLoading] = React.useState(false);
   const [entries, setEntries] = React.useState<Reflection[]>([]);
@@ -60,7 +60,7 @@ export default function ReflectionsCalendar() {
         const key = new Date(d.getFullYear(), d.getMonth(), d.getDate()).toISOString();
         if (!byDay.has(key)) byDay.set(key, r); // keep most recent for the day
       }
-      const out: Array<{ date: Date; entry?: Reflection }> = [];
+      const out: { date: Date; entry?: Reflection }[] = [];
       for (let i = 0; i < nDays; i++) {
         const d = new Date();
         d.setHours(0, 0, 0, 0);
@@ -137,7 +137,7 @@ export default function ReflectionsCalendar() {
     great: palette.primary,
   } as const;
 
-  function computeActiveDates(): Array<{ date: Date; entry?: Reflection }>{
+  function computeActiveDates(): { date: Date; entry?: Reflection }[]{
     const startTs = fromDate ? new Date(fromDate).setHours(0,0,0,0) : null;
     const endTs = toDate ? new Date(toDate).setHours(23,59,59,999) : null;
     if (view === 'list') {
@@ -152,7 +152,7 @@ export default function ReflectionsCalendar() {
     // grid: compute month cells
     const first = new Date(monthAnchor.getFullYear(), monthAnchor.getMonth(), 1);
     const startDow = first.getDay(); // 0-6 Sun-Sat
-    const cells: Array<{ date: Date; entry?: Reflection }> = [];
+    const cells: { date: Date; entry?: Reflection }[] = [];
     const byKey = new Map<string, Reflection>();
     for (const r of entries) {
       const d = new Date(r.createdAt?.toDate?.() || Date.now());
