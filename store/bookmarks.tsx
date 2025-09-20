@@ -1,4 +1,5 @@
 import React from "react";
+import { logEvent } from "../services/analytics";
 
 let AsyncStorage: any;
 try {
@@ -57,11 +58,23 @@ export function BookmarksProvider({ children }: { children: React.ReactNode }) {
     setItems((prev) => {
       if (prev.some((b) => b.route === route)) return prev; // avoid duplicate by route
       const id = `${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
-      return [...prev, { id, route, label, created: Date.now(), tKey }];
+      const next = [...prev, { id, route, label, created: Date.now(), tKey }];
+      logEvent("bookmark_add", { route, has_tKey: !!tKey });
+      return next;
     });
   };
-  const removeBookmark = (id: string) => setItems((prev) => prev.filter((b) => b.id !== id));
-  const clearBookmarks = () => setItems([]);
+  const removeBookmark = (id: string) => {
+    setItems((prev) => {
+      const target = prev.find(b => b.id === id);
+      const next = prev.filter((b) => b.id !== id);
+      if (target) logEvent("bookmark_remove", { route: target.route });
+      return next;
+    });
+  };
+  const clearBookmarks = () => {
+    if (items.length) logEvent("bookmark_clear_all", { count: items.length });
+    setItems([]);
+  };
   const isBookmarked = (route: string) => items.some((b) => b.route === route);
   const findByRoute = (route: string) => items.find((b) => b.route === route);
 

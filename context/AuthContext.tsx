@@ -1,14 +1,16 @@
+import { signOut as fbSignOut, getIdTokenResult, onAuthStateChanged, signInAnonymously, User } from "firebase/auth";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { onAuthStateChanged, signOut as fbSignOut, User, getIdTokenResult } from "firebase/auth";
 import { auth } from "../firebase/config";
 
 type AuthContextValue = {
   user: User | null;
   loading: boolean;
   isAdmin: boolean;
+  isGuest: boolean;
   setUser: React.Dispatch<React.SetStateAction<User | null>>;
   signOut: () => Promise<void>;
   refreshClaims: () => Promise<void>;
+  signInGuest: () => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
@@ -17,10 +19,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isGuest, setIsGuest] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
-      setUser(firebaseUser);
+  setUser(firebaseUser);
+  setIsGuest(!!firebaseUser?.isAnonymous);
       setLoading(false);
       if (firebaseUser) {
         try {
@@ -48,8 +52,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     } catch {}
   };
 
+  const signInGuest = async () => {
+    await signInAnonymously(auth);
+  };
+
   return (
-    <AuthContext.Provider value={{ user, loading, isAdmin, setUser, signOut, refreshClaims }}>
+    <AuthContext.Provider value={{ user, loading, isAdmin, isGuest, setUser, signOut, refreshClaims, signInGuest }}>
       {children}
     </AuthContext.Provider>
   );

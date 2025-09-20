@@ -54,6 +54,10 @@
       "title": "Marcadores",
       "subtitle": "Guarde accesos rápidos a funciones",
       "description": "Agregue marcadores para abrir rápidamente herramientas y pantallas usadas con frecuencia.",
+      "search": "Buscar o filtrar rutas disponibles",
+      "searchPlaceholder": "Escriba para filtrar sugerencias",
+      "suggestions": "Sugerencias",
+      "addSuggestion": "Agregar marcador para",
       "route": "Ruta",
       "routePlaceholder": "p.ej. /(tabs)/resources/index",
       "label": "Etiqueta",
@@ -120,9 +124,18 @@
       "delete": "Eliminar cuenta",
       "deleteConfirmTitle": "Eliminar cuenta",
       "deleteConfirmBody": "Esto eliminará permanentemente su cuenta. No se puede deshacer.",
+      "deleteConfirmPasswordTitle": "Confirmar eliminación",
+      "deleteConfirmPasswordBody": "Ingrese su contraseña para eliminar permanentemente su cuenta.",
       "deleted": "Cuenta eliminada",
-      "deleteFailed": "Error al eliminar"
+      "deleteFailed": "Error al eliminar",
+      "passwordPlaceholder": "Contraseña",
+      "reauthFailed": "Fallo en la re-autenticación",
+      "confirmDelete": "Confirmar"
     }
+  },
+  "admin": {
+    "onlyTitle": "Solo administradores",
+    "onlyDescription": "Debes ser administrador para acceder a esta área."
   },
   "bookmark": {
     "add": "Agregar marcador",

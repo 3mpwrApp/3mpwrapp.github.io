@@ -295,3 +295,18 @@ Validation:
 Guidelines:
 - Always include `{{count}}` in both forms (even if some languages omit the number).
 - For now only two plural categories are supported (1 vs other). Future ICU expansion possible.
+
+## Linting & Type Quality
+
+Commands:
+
+- `npm run lint` – Uses Expo's lint integration (fast iteration).
+- `npm run lint:ci` – Direct `eslint . --quiet` for authoritative results.
+- `npm run typecheck:strict` – Runs `tsconfig.strict.json` (no emit) for deeper TS diagnostics.
+
+Suggested workflow:
+1. Feature dev: `npm run lint`.
+2. Pre-commit/PR: `npm run lint:ci && npm run typecheck:strict`.
+3. If adding libs with types, run strict early to catch structural issues.
+
+If results differ, prefer the direct ESLint output. Strict typecheck intentionally enables tighter flags than the base config.

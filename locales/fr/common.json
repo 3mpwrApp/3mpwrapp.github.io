@@ -54,6 +54,10 @@
       "title": "Signets",
       "subtitle": "Enregistrez des liens rapides vers les fonctionnalités",
       "description": "Ajoutez des signets pour ouvrir rapidement les outils et écrans fréquemment utilisés.",
+      "search": "Rechercher ou filtrer les routes",
+      "searchPlaceholder": "Tapez pour filtrer les suggestions",
+      "suggestions": "Suggestions",
+      "addSuggestion": "Ajouter un signet pour",
       "route": "Chemin de route",
       "routePlaceholder": "ex. /(tabs)/resources/index",
       "label": "Libellé",
@@ -120,9 +124,18 @@
       "delete": "Supprimer le compte",
       "deleteConfirmTitle": "Supprimer le compte",
       "deleteConfirmBody": "Cette action supprimera définitivement votre compte. Cette action est irréversible.",
+      "deleteConfirmPasswordTitle": "Confirmer la suppression",
+      "deleteConfirmPasswordBody": "Entrez votre mot de passe pour supprimer définitivement votre compte.",
       "deleted": "Compte supprimé",
-      "deleteFailed": "Suppression échouée"
+      "deleteFailed": "Suppression échouée",
+      "passwordPlaceholder": "Mot de passe",
+      "reauthFailed": "Échec de la ré-authentification",
+      "confirmDelete": "Confirmer"
     }
+  },
+  "admin": {
+    "onlyTitle": "Administrateur uniquement",
+    "onlyDescription": "Vous devez être administrateur pour accéder à cette zone."
   },
   "bookmark": {
     "add": "Ajouter un signet",

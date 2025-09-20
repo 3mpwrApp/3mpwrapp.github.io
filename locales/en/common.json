@@ -129,6 +129,10 @@
       "title": "Bookmarks",
       "subtitle": "Save quick links to app features",
       "description": "Add bookmarks to quickly open frequently used tools and screens.",
+      "search": "Search or filter available routes",
+      "searchPlaceholder": "Type to filter suggestions",
+      "suggestions": "Suggestions",
+      "addSuggestion": "Add bookmark for",
       "route": "Route Path",
       "routePlaceholder": "e.g. /(tabs)/resources/index",
       "label": "Label",
@@ -172,9 +176,18 @@
       "delete": "Delete Account",
       "deleteConfirmTitle": "Delete Account",
       "deleteConfirmBody": "This will permanently delete your account. This cannot be undone.",
+      "deleteConfirmPasswordTitle": "Confirm Deletion",
+      "deleteConfirmPasswordBody": "Enter your password to permanently delete your account.",
       "deleted": "Account deleted",
-      "deleteFailed": "Delete failed"
+      "deleteFailed": "Delete failed",
+      "passwordPlaceholder": "Password",
+      "reauthFailed": "Re-authentication failed",
+      "confirmDelete": "Confirm Delete"
     }
+  },
+  "admin": {
+    "onlyTitle": "Admin Only",
+    "onlyDescription": "You must be an admin to access this area."
   },
   "bookmark": {
     "add": "Add bookmark",

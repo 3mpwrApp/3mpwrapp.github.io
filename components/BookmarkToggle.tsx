@@ -1,5 +1,6 @@
 import { usePathname } from 'expo-router';
 import { Pressable, Text } from 'react-native';
+const HIT_SLOP = { top:8, bottom:8, left:8, right:8 };
 import { useTranslation } from '../i18n';
 import { useBookmarks } from '../store/bookmarks';
 import { useTextScale } from '../theme/typography';
@@ -25,7 +26,8 @@ export default function BookmarkToggle() {
       onPress={() => {
         if (active && existing) removeBookmark(existing.id); else addBookmark(entry.route, t(entry.tKey, entry.fallback), entry.tKey);
       }}
-      style={{ paddingHorizontal: 12, paddingVertical: 6 }}
+      hitSlop={HIT_SLOP}
+      style={{ paddingHorizontal: 12, paddingVertical: 6, minHeight:44, justifyContent:'center' }}
     >
       <Text style={{ color: active ? palette.primary : palette.text, fontSize: Math.round(14 * factor), fontWeight: '600' }}>
         {active ? t('bookmark.saved', 'Saved') : t('bookmark.save', 'Save')}
