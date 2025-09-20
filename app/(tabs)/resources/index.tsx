@@ -1,40 +1,41 @@
-﻿import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  SectionList,
-  RefreshControl,
-  Pressable,
-  Linking,
-} from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { useAppPalette } from "../../../theme/usePalette";
-import { useTranslation } from "../../../i18n";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-  useAnnounceOnChange,
-} from "../../../hooks/useA11y";
-import Card from "../../../components/Card";
-import SettingsLink from "../../../components/SettingsLink";
-import ContrastToggle from "../../../components/ContrastToggle";
-import { resources as localResources } from "../../../data/resources";
-import { fetchResources } from "../../../services/resources";
-import { Link } from "expo-router";
+﻿import { MaterialCommunityIcons } from "@expo/vector-icons";
 import type { Href } from "expo-router";
-import SearchBar from "../../../components/SearchBar";
-import { useCounts } from "../../../store/counts";
-import SkeletonRow from "../../../components/SkeletonRow";
-import { useRefresh } from "../../../store/refresh";
-import { useNetwork } from "../../../store/network";
-import type { Resource, ResourceCategory } from "../../../types/models";
-import { useSettings } from "../../../store/settings";
+import { Link } from "expo-router";
+import React from "react";
 import {
-  filterResources,
-  groupByRegion,
-  presentProvinceCodes,
+    Linking,
+    RefreshControl,
+    SectionList,
+    StyleSheet,
+    Text,
+    View,
+} from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
+import Card from "../../../components/Card";
+import ContrastToggle from "../../../components/ContrastToggle";
+import SearchBar from "../../../components/SearchBar";
+import SettingsLink from "../../../components/SettingsLink";
+import SkeletonRow from "../../../components/SkeletonRow";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { resources as localResources } from "../../../data/resources";
+import {
+    MAX_FONT_SCALE,
+    useAnnounceOnChange,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
+import { fetchResources } from "../../../services/resources";
+import { useCounts } from "../../../store/counts";
+import { useNetwork } from "../../../store/network";
+import { useRefresh } from "../../../store/refresh";
+import { useSettings } from "../../../store/settings";
+import { useAppPalette } from "../../../theme/usePalette";
+import type { Resource, ResourceCategory } from "../../../types/models";
+import {
+    filterResources,
+    groupByRegion,
+    presentProvinceCodes,
 } from "../../../utils/resources";
 
 const PROVINCE_NAMES: Record<string, string> = {
@@ -385,7 +386,8 @@ export default function ResourcesScreen() {
             "emergency_crisis",
           ] as CategoryFilter[]
         ).map((key) => (
-          <Pressable
+          <A11yPressable
+            hitSlop={HIT_SLOP_8}
             key={key}
             onPress={() => setCategory(key)}
             accessibilityRole="button"
@@ -432,7 +434,7 @@ export default function ResourcesScreen() {
                         )}
               </Text>
             </View>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
 
@@ -447,7 +449,8 @@ export default function ResourcesScreen() {
           marginBottom: 8,
         }}
       >
-        <Pressable
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
           style={[styles.chip, region === "all" && styles.chipActive]}
           onPress={() => setRegion("all")}
         >
@@ -456,8 +459,9 @@ export default function ResourcesScreen() {
           >
             {t("resources.filters.all", "All")}
           </Text>
-        </Pressable>
-        <Pressable
+        </A11yPressable>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
           style={[styles.chip, region === "canada" && styles.chipActive]}
           onPress={() => setRegion("canada")}
         >
@@ -469,9 +473,10 @@ export default function ResourcesScreen() {
           >
             Canada
           </Text>
-        </Pressable>
+        </A11yPressable>
         {presentProvinceCodes(items).map((code) => (
-          <Pressable
+          <A11yPressable
+            hitSlop={HIT_SLOP_8}
             key={code}
             style={[styles.chip, region === code && styles.chipActive]}
             onPress={() => setRegion(code as any)}
@@ -484,7 +489,7 @@ export default function ResourcesScreen() {
             >
               {code}
             </Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
 
@@ -505,9 +510,9 @@ export default function ResourcesScreen() {
       >
         📚 External Resources
       </Text>
-      <Pressable onPress={reload} style={{ alignSelf:'flex-start', paddingHorizontal:10, paddingVertical:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 8 }}>
+      <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Download key resources for offline use" onPress={reload} style={{ alignSelf:'flex-start', paddingHorizontal:10, paddingVertical:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 8 }}>
         <Text style={{ color: palette.text }}>Download key resources for offline use</Text>
-      </Pressable>
+      </A11yPressable>
 
       <SectionList<Resource>
         sections={sections}

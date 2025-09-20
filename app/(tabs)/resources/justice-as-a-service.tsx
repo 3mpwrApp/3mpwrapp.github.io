@@ -1,5 +1,7 @@
 import React from "react";
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -83,10 +85,10 @@ export default function JusticeAsAService() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 16 }} accessibilityLabel={t('justiceService.screenLabel','Justice-as-a-Service screen')}>
       <View style={styles.infoCard} accessibilityRole="summary" accessible accessibilityLabel={t('justiceService.howToUse','How to use Justice-as-a-Service')}>
-        <Pressable onPress={()=>setShowInfo(s=>!s)} accessibilityRole="button" accessibilityLabel={t('justiceService.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={styles.infoHeader}>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setShowInfo(s=>!s)} accessibilityRole="button" accessibilityLabel={t('justiceService.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={styles.infoHeader}>
           <Text style={styles.infoTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.infoTitle','How to Use')}</Text>
           <Text style={styles.infoToggle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{showInfo? t('justiceService.hide','Hide'): t('justiceService.show','Show')}</Text>
-        </Pressable>
+        </A11yPressable>
         {showInfo && (
           <View>
             <Text style={styles.infoText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.infoLine1','Generate a local advocacy snapshot using only on-device cached data (notes and counts).')}</Text>
@@ -95,18 +97,18 @@ export default function JusticeAsAService() {
           </View>
         )}
         <View style={styles.actionRow}>
-          <Pressable onPress={generate} disabled={generating} accessibilityRole="button" accessibilityLabel={t('justiceService.generateBtnLabel','Generate snapshot')} accessibilityHint={t('justiceService.generateHint','Builds a local advocacy snapshot from cached notes and counts.')} style={[styles.smallBtn, { opacity: generating?0.6:1 }]}> 
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={generate} disabled={generating} accessibilityRole="button" accessibilityLabel={t('justiceService.generateBtnLabel','Generate snapshot')} accessibilityHint={t('justiceService.generateHint','Builds a local advocacy snapshot from cached notes and counts.')} style={[styles.smallBtn, { opacity: generating?0.6:1 }]}> 
             <Text style={styles.smallBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{generating? t('justiceService.generating','Generating...'): t('justiceService.generate','Generate')}</Text>
-          </Pressable>
-          <Pressable onPress={copyReport} disabled={!report} accessibilityRole="button" accessibilityLabel={t('justiceService.copyLabel','Copy snapshot')} accessibilityHint={t('justiceService.copyHint','Copies the generated snapshot to the clipboard.')} style={[styles.smallBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, opacity: !report?0.5:1 }]}> 
+          </A11yPressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={copyReport} disabled={!report} accessibilityRole="button" accessibilityLabel={t('justiceService.copyLabel','Copy snapshot')} accessibilityHint={t('justiceService.copyHint','Copies the generated snapshot to the clipboard.')} style={[styles.smallBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, opacity: !report?0.5:1 }]}> 
             <Text style={[styles.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.copy','Copy')}</Text>
-          </Pressable>
-          <Pressable onPress={shareReport} disabled={!report} accessibilityRole="button" accessibilityLabel={t('justiceService.shareLabel','Share snapshot file')} accessibilityHint={t('justiceService.shareHint','Opens the system share dialog with a snapshot text file.')} style={[styles.smallBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, opacity: !report?0.5:1 }]}> 
+          </A11yPressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={shareReport} disabled={!report} accessibilityRole="button" accessibilityLabel={t('justiceService.shareLabel','Share snapshot file')} accessibilityHint={t('justiceService.shareHint','Opens the system share dialog with a snapshot text file.')} style={[styles.smallBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, opacity: !report?0.5:1 }]}> 
             <Text style={[styles.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.share','Share')}</Text>
-          </Pressable>
-          <Pressable onPress={reset} disabled={!report} accessibilityRole="button" accessibilityLabel={t('justiceService.resetLabel','Reset snapshot')} accessibilityHint={t('justiceService.resetHint','Clears the generated snapshot text.')} style={[styles.smallBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, opacity: !report?0.5:1 }]}> 
+          </A11yPressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={reset} disabled={!report} accessibilityRole="button" accessibilityLabel={t('justiceService.resetLabel','Reset snapshot')} accessibilityHint={t('justiceService.resetHint','Clears the generated snapshot text.')} style={[styles.smallBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, opacity: !report?0.5:1 }]}> 
             <Text style={[styles.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.reset','Reset')}</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       </View>
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.title','Justice-as-a-Service')}</Text>

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -57,10 +59,10 @@ export default function RightsExplainer() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }} accessibilityLabel={t('rightsExplainer.screenLabel','Rights Explainer screen')}>
       <View style={s.infoCard} accessibilityRole="summary" accessibilityLabel={t('rightsExplainer.howToUse','How to use Rights Explainer')}>
-        <Pressable onPress={()=>setShowInfo(v=>!v)} accessibilityRole="button" accessibilityLabel={t('rightsExplainer.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={s.infoHeader}>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setShowInfo(v=>!v)} accessibilityRole="button" accessibilityLabel={t('rightsExplainer.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={s.infoHeader}>
           <Text style={s.infoTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.infoTitle','How to Use')}</Text>
           <Text style={s.infoToggle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{showInfo ? t('rightsExplainer.hide','Hide'): t('rightsExplainer.show','Show')}</Text>
-        </Pressable>
+        </A11yPressable>
         {showInfo && (
           <View>
             <Text style={s.infoText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.infoLine1','Select a language and region to view simplified rights statements.')}</Text>
@@ -69,15 +71,15 @@ export default function RightsExplainer() {
           </View>
         )}
         <View style={s.actionRow}>
-          <Pressable onPress={copyCurrent} accessibilityRole='button' accessibilityLabel={t('rightsExplainer.copyLabel','Copy rights explainer')} accessibilityHint={t('rightsExplainer.copyHint','Copies the current rights statements.')} style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={copyCurrent} accessibilityRole='button' accessibilityLabel={t('rightsExplainer.copyLabel','Copy rights explainer')} accessibilityHint={t('rightsExplainer.copyHint','Copies the current rights statements.')} style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
             <Text style={[s.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.copy','Copy')}</Text>
-          </Pressable>
-            <Pressable onPress={shareCurrent} accessibilityRole='button' accessibilityLabel={t('rightsExplainer.shareLabel','Share rights explainer file')} accessibilityHint={t('rightsExplainer.shareHint','Opens system share sheet with a text file of current statements.')} style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+          </A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={shareCurrent} accessibilityRole='button' accessibilityLabel={t('rightsExplainer.shareLabel','Share rights explainer file')} accessibilityHint={t('rightsExplainer.shareHint','Opens system share sheet with a text file of current statements.')} style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
             <Text style={[s.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.share','Share')}</Text>
-          </Pressable>
-          <Pressable onPress={reset} accessibilityRole='button' accessibilityLabel={t('rightsExplainer.resetLabel','Reset explainer')} accessibilityHint={t('rightsExplainer.resetHint','Restores default language and region.')} style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+          </A11yPressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={reset} accessibilityRole='button' accessibilityLabel={t('rightsExplainer.resetLabel','Reset explainer')} accessibilityHint={t('rightsExplainer.resetHint','Restores default language and region.')} style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
             <Text style={[s.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.reset','Reset')}</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       </View>
       <Text style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.heading','Multi‑Language Rights Explainer')}</Text>
@@ -85,26 +87,26 @@ export default function RightsExplainer() {
 
       <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
         {(['en','fr','es'] as Lang[]).map(l => (
-          <Pressable key={l} onPress={()=>setLang(l)} accessibilityRole='button' accessibilityState={{ selected: lang===l }} accessibilityLabel={t('rightsExplainer.langChip','Language ' + l.toUpperCase())} style={[s.chip, lang===l&&s.chipActive]}>
+          <A11yPressable hitSlop={HIT_SLOP_8} key={l} onPress={()=>setLang(l)} accessibilityRole='button' accessibilityState={{ selected: lang===l }} accessibilityLabel={t('rightsExplainer.langChip','Language ' + l.toUpperCase())} style={[s.chip, lang===l&&s.chipActive]}>
             <Text style={{ color: lang===l? palette.onPrimary: palette.text, fontWeight:'700' }} maxFontSizeMultiplier={MAX_FONT_SCALE}>{l.toUpperCase()}</Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
 
       <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
         {(['canada','province','world'] as Region[]).map(r => (
-          <Pressable key={r} onPress={()=>setRegion(r)} accessibilityRole='button' accessibilityState={{ selected: region===r }} accessibilityLabel={t('rightsExplainer.regionChip', `Region ${r}`)} style={[s.chip, region===r&&s.chipActive]}>
+          <A11yPressable hitSlop={HIT_SLOP_8} key={r} onPress={()=>setRegion(r)} accessibilityRole='button' accessibilityState={{ selected: region===r }} accessibilityLabel={t('rightsExplainer.regionChip', `Region ${r}`)} style={[s.chip, region===r&&s.chipActive]}>
             <Text style={{ color: region===r? palette.onPrimary: palette.text, fontWeight:'700' }} maxFontSizeMultiplier={MAX_FONT_SCALE}>{r}</Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
 
       {region==='province' && (
         <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
           {PROVINCES.map(p => (
-            <Pressable key={p} onPress={()=>setProv(p)} accessibilityRole='button' accessibilityState={{ selected: prov===p }} accessibilityLabel={t('rightsExplainer.provinceChip','Province '+p)} style={[s.chip, prov===p&&s.chipActive]}>
+            <A11yPressable hitSlop={HIT_SLOP_8} key={p} onPress={()=>setProv(p)} accessibilityRole='button' accessibilityState={{ selected: prov===p }} accessibilityLabel={t('rightsExplainer.provinceChip','Province '+p)} style={[s.chip, prov===p&&s.chipActive]}>
               <Text style={{ color: prov===p? palette.onPrimary: palette.text, fontWeight:'700' }} maxFontSizeMultiplier={MAX_FONT_SCALE}>{p}</Text>
-            </Pressable>
+            </A11yPressable>
           ))}
         </View>
       )}

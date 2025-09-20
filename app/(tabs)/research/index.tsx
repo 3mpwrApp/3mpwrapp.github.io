@@ -1,5 +1,7 @@
 ﻿import React from "react";
-import { View, Text, StyleSheet, FlatList, Pressable, ScrollView } from "react-native";
+import { View, Text, StyleSheet, FlatList, ScrollView, Pressable } from "react-native";
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import {
@@ -107,11 +109,12 @@ export default function ResearchScreen() {
 
         {/* Main Research Categories */}
         <View style={styles.sectionGrid}>
-          <Pressable 
+          <A11yPressable 
             style={styles.sectionCard}
             onPress={() => setSelectedView('studies')}
             accessibilityRole="button"
             accessibilityLabel="Studies - Access clinical and workplace studies"
+            hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="library-outline" size={32} color={palette.primary} />
             <Text style={styles.sectionTitle}>Studies</Text>
@@ -119,13 +122,14 @@ export default function ResearchScreen() {
               Access clinical and workplace studies
             </Text>
             <Text style={styles.sectionCount}>{studies.length} studies</Text>
-          </Pressable>
+          </A11yPressable>
 
-          <Pressable 
+          <A11yPressable 
             style={styles.sectionCard}
             onPress={() => setSelectedView('reports')}
             accessibilityRole="button"
             accessibilityLabel="Reports - Community and government reports made easy"
+            hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="document-text-outline" size={32} color={palette.primary} />
             <Text style={styles.sectionTitle}>Reports</Text>
@@ -133,13 +137,14 @@ export default function ResearchScreen() {
               Community and government reports made easy
             </Text>
             <Text style={styles.sectionCount}>{reports.length} reports</Text>
-          </Pressable>
+          </A11yPressable>
 
-          <Pressable 
+          <A11yPressable 
             style={styles.sectionCard}
             onPress={() => setSelectedView('articles')}
             accessibilityRole="button"
             accessibilityLabel="Articles - Insights on disability, workplace rights, and advocacy"
+            hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="newspaper-outline" size={32} color={palette.primary} />
             <Text style={styles.sectionTitle}>Articles</Text>
@@ -147,34 +152,36 @@ export default function ResearchScreen() {
               Insights on disability, workplace rights, advocacy
             </Text>
             <Text style={styles.sectionCount}>{articles.length} articles</Text>
-          </Pressable>
+          </A11yPressable>
 
           <Link href="/(tabs)/research/history-timeline" asChild>
-            <Pressable 
+            <A11yPressable 
               style={styles.sectionCard}
               accessibilityRole="button"
               accessibilityLabel="History Timeline - Track milestones in disability and worker rights"
+              hitSlop={HIT_SLOP_8}
             >
               <Ionicons name="time-outline" size={32} color={palette.primary} />
               <Text style={styles.sectionTitle}>History Timeline</Text>
               <Text style={styles.sectionDescription}>
                 Track milestones in disability, worker, and injured worker rights
               </Text>
-            </Pressable>
+            </A11yPressable>
           </Link>
 
           <Link href="/(tabs)/research/wait-times" asChild>
-            <Pressable 
+            <A11yPressable 
               style={styles.sectionCard}
               accessibilityRole="button"
               accessibilityLabel="Case Wait-Times - Estimate how long processes may take"
+              hitSlop={HIT_SLOP_8}
             >
               <Ionicons name="time-outline" size={32} color={palette.primary} />
               <Text style={styles.sectionTitle}>Case/File Wait-Times</Text>
               <Text style={styles.sectionDescription}>
                 Estimate how long processes may take
               </Text>
-            </Pressable>
+            </A11yPressable>
           </Link>
         </View>
       </ScrollView>
@@ -184,14 +191,15 @@ export default function ResearchScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Pressable
+        <A11yPressable
           onPress={() => setSelectedView('overview')}
           style={styles.backButton}
           accessibilityRole="button"
           accessibilityLabel="Back to research overview"
+          hitSlop={HIT_SLOP_8}
         >
           <Ionicons name="arrow-back" size={24} color={palette.text} />
-        </Pressable>
+        </A11yPressable>
         <Text
           style={styles.title}
           accessibilityRole="header"
@@ -217,62 +225,66 @@ export default function ResearchScreen() {
       />
       
       <View style={styles.filters} accessibilityLabel="Filters" accessible>
-        <Pressable
+        <A11yPressable
           onPress={() => setTopic("all")}
           style={[styles.chip, topic === "all" && styles.chipActive]}
           accessibilityRole="button"
           accessibilityLabel="All topics"
+          hitSlop={HIT_SLOP_8}
         >
           <Text
             style={[styles.chipText, topic === "all" && styles.chipTextActive]}
           >
             All topics
           </Text>
-        </Pressable>
+        </A11yPressable>
         {topics.map((t) => (
-          <Pressable
+          <A11yPressable
             key={t}
             onPress={() => setTopic(t)}
             style={[styles.chip, topic === t && styles.chipActive]}
             accessibilityRole="button"
             accessibilityLabel={`Filter ${t}`}
+            hitSlop={HIT_SLOP_8}
           >
             <Text
               style={[styles.chipText, topic === t && styles.chipTextActive]}
             >
               {t}
             </Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
       
       <View style={styles.filters}>
-        <Pressable
+        <A11yPressable
           onPress={() => setYear("all")}
           style={[styles.chip, year === "all" && styles.chipActive]}
           accessibilityRole="button"
           accessibilityLabel="All years"
+          hitSlop={HIT_SLOP_8}
         >
           <Text
             style={[styles.chipText, year === "all" && styles.chipTextActive]}
           >
             All years
           </Text>
-        </Pressable>
+        </A11yPressable>
         {years.map((y) => (
-          <Pressable
+          <A11yPressable
             key={y}
             onPress={() => setYear(y)}
             style={[styles.chip, year === y && styles.chipActive]}
             accessibilityRole="button"
             accessibilityLabel={`Filter ${y}`}
+            hitSlop={HIT_SLOP_8}
           >
             <Text
               style={[styles.chipText, year === y && styles.chipTextActive]}
             >
               {y}
             </Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
 

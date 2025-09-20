@@ -1,9 +1,11 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, FlatList, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useAppPalette } from '../../../theme/usePalette';
+import { addDoc, collection, startAfter as fsStartAfter, getDocs, orderBy, limit as ql, query, serverTimestamp, where } from 'firebase/firestore';
+import React from 'react';
+import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { auth, db } from '../../../firebase/config';
-import { addDoc, collection, serverTimestamp, getDocs, query, where, orderBy, limit as ql, startAfter as fsStartAfter } from 'firebase/firestore';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -61,14 +63,14 @@ export default function AccessibilityLog() {
       <Text style={s.title}>Workplace Accessibility Log</Text>
       <Text style={s.text}>Log daily barriers with timestamps for future evidence.</Text>
       <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
-        <Pressable onPress={()=> setView('local')} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></Pressable>
-        <Pressable onPress={()=> { setView('cloud'); loadCloud(false); }} style={[s.chip, view==='cloud' && s.chipActive]}><Text style={{ color: view==='cloud'? palette.onPrimary: palette.text, fontWeight:'700' }}>Cloud</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setView('local')} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { setView('cloud'); loadCloud(false); }} style={[s.chip, view==='cloud' && s.chipActive]}><Text style={{ color: view==='cloud'? palette.onPrimary: palette.text, fontWeight:'700' }}>Cloud</Text></A11yPressable>
       </View>
       <TextInput placeholder="Barrier or incident (e.g., no breaks, stairs)" placeholderTextColor={palette.text+'77'} value={description} onChangeText={setDescription} style={s.input} />
       <TextInput placeholder="Location / context (optional)" placeholderTextColor={palette.text+'77'} value={location} onChangeText={setLocation} style={s.input} />
       {view==='local' && (<View style={{ flexDirection:'row', gap:8 }}>
-        <Pressable onPress={add} style={[s.button,{ flex:1 }]}><Text style={s.buttonText}>Add Entry</Text></Pressable>
-        <Pressable onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Sync</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={add} style={[s.button,{ flex:1 }]}><Text style={s.buttonText}>Add Entry</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Sync</Text></A11yPressable>
       </View>)}
       {view==='local' ? (
       <FlatList data={items} keyExtractor={i=>i.id} renderItem={({item:i})=> (
@@ -76,9 +78,9 @@ export default function AccessibilityLog() {
           <Text style={s.cardTitle}>{new Date(i.ts).toLocaleString()}</Text>
           <Text style={s.text}>{i.description}</Text>
           {!!i.location && <Text style={s.text}>@ {i.location}</Text>}
-          <Pressable onPress={()=>remove(i.id)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>remove(i.id)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}> 
             <Text style={[s.buttonText,{ color: palette.text }]}>Delete</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       )} />
       ) : (
@@ -90,9 +92,9 @@ export default function AccessibilityLog() {
               {!!c.location && <Text style={s.text}>@ {c.location}</Text>}
             </View>
           ))}
-          <Pressable onPress={()=> loadCloud(true)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> loadCloud(true)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}> 
             <Text style={[s.buttonText,{ color: palette.text }]}>Load more</Text>
-          </Pressable>
+          </A11yPressable>
         </>
       )}
     </View>

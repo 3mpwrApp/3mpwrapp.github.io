@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, Alert } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
+import { Alert, StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useSettings } from '../../../store/settings';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -32,7 +34,7 @@ export default function DenialDecoder() {
   return (
     <View style={s.container}>
       <Text style={s.title}>AI Claim Denial Decoder</Text>
-      <Pressable onPress={analyze} style={s.button}><Text style={s.buttonText}>Upload denial letter</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={analyze} style={s.button}><Text style={s.buttonText}>Upload denial letter</Text></A11yPressable>
       {result && (
         <View style={s.card}>
           <Text style={s.cardTitle}>Summary</Text>

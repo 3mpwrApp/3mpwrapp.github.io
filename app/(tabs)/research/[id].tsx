@@ -1,16 +1,11 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  Linking,
-  Share,
-} from "react-native";
-import { useLocalSearchParams, Stack } from "expo-router";
-import { useAppPalette } from "../../../theme/usePalette";
-import { useTextScale } from "../../../theme/typography";
-import { researchItems } from "../../../data/research";
+import { Stack, useLocalSearchParams } from "expo-router";
+import { Linking, Share, StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
 import SettingsLink from "../../../components/SettingsLink";
+import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { researchItems } from "../../../data/research";
+import { useTextScale } from "../../../theme/typography";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export const options = { href: null };
 
@@ -34,7 +29,7 @@ export default function ResearchDetail() {
           {item?.summary ?? "Details unavailable."}
         </Text>
         {item?.url ? (
-          <Pressable
+          <A11yPressable
             style={({ pressed }) => [
               styles.button,
               pressed && { opacity: 0.9 },
@@ -42,12 +37,13 @@ export default function ResearchDetail() {
             onPress={() => Linking.openURL(item.url!).catch(() => {})}
             accessibilityRole="button"
             accessibilityLabel="Open research link"
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={styles.buttonText}>Open Link</Text>
-          </Pressable>
+          </A11yPressable>
         ) : null}
         {item?.url ? (
-          <Pressable
+          <A11yPressable
             style={({ pressed }) => [
               styles.button,
               { marginTop: 8 },
@@ -60,9 +56,10 @@ export default function ResearchDetail() {
             }
             accessibilityRole="button"
             accessibilityLabel="Share"
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={styles.buttonText}>Share</Text>
-          </Pressable>
+          </A11yPressable>
         ) : null}
       </View>
     </>

@@ -1,9 +1,11 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, FlatList, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useAppPalette } from '../../../theme/usePalette';
+import { addDoc, collection, startAfter as fsStartAfter, getDocs, orderBy, limit as ql, query, serverTimestamp, where } from 'firebase/firestore';
+import React from 'react';
+import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { auth, db } from '../../../firebase/config';
-import { addDoc, collection, serverTimestamp, getDocs, query, where, orderBy, limit as ql, startAfter as fsStartAfter } from 'firebase/firestore';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -69,8 +71,8 @@ export default function RehabTracker() {
       <Text style={s.title}>Rehab Progress Tracker</Text>
       <Text style={s.text}>Log small wins to boost morale and share with providers.</Text>
       <View style={{ flexDirection:'row', gap:8, marginBottom: 6 }}>
-        <Pressable onPress={()=> setView('local')} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></Pressable>
-        <Pressable onPress={()=> { setView('cloud'); loadCloud(false); }} style={[s.chip, view==='cloud' && s.chipActive]}><Text style={{ color: view==='cloud'? palette.onPrimary: palette.text, fontWeight:'700' }}>Cloud</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setView('local')} accessibilityRole='button' accessibilityState={{ selected: view==='local' }} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { setView('cloud'); loadCloud(false); }} accessibilityRole='button' accessibilityState={{ selected: view==='cloud' }} style={[s.chip, view==='cloud' && s.chipActive]}><Text style={{ color: view==='cloud'? palette.onPrimary: palette.text, fontWeight:'700' }}>Cloud</Text></A11yPressable>
       </View>
       {view==='local' && (
       <>
@@ -79,16 +81,16 @@ export default function RehabTracker() {
       <TextInput placeholder="Pain‑reduced days this week" placeholderTextColor={palette.text+'77'} value={painFree} onChangeText={setPainFree} style={s.input} />
       <TextInput placeholder="Notes" placeholderTextColor={palette.text+'77'} value={note} onChangeText={setNote} style={s.input} />
       <View style={{ flexDirection:'row', gap:8 }}>
-        <Pressable onPress={add} style={[s.button,{ flex:1 }]}><Text style={s.buttonText}>Log Progress</Text></Pressable>
-        <Pressable onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Sync</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={add} style={[s.button,{ flex:1 }]} accessibilityLabel='Log progress entry'><Text style={s.buttonText}>Log Progress</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Sync local logs to cloud'><Text style={[s.buttonText,{ color: palette.text }]}>Sync</Text></A11yPressable>
       </View>
       </>
       )}
       {view==='local' ? (
       <View>
       <View style={{ flexDirection:'row', gap:8 }}>
-        <Pressable onPress={exportJSON} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Export JSON</Text></Pressable>
-        <Pressable onPress={importTemplate} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={[s.buttonText,{ color: palette.text }]}>Import Template</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={exportJSON} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Export logs to JSON'><Text style={[s.buttonText,{ color: palette.text }]}>Export JSON</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={importTemplate} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Import template JSON'><Text style={[s.buttonText,{ color: palette.text }]}>Import Template</Text></A11yPressable>
       </View>
       <FlatList data={items} keyExtractor={i=>i.id} renderItem={({item:i})=> (
         <View style={s.card}>
@@ -97,9 +99,9 @@ export default function RehabTracker() {
           {!!i.grip && <Text style={s.text}>Grip: {i.grip}</Text>}
           {!!i.painFree && <Text style={s.text}>Reduced pain days: {i.painFree}</Text>}
           {!!i.note && <Text style={s.text}>{i.note}</Text>}
-          <Pressable onPress={()=>remove(i.id)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>remove(i.id)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Delete entry'>
             <Text style={[s.buttonText,{ color: palette.text }]}>Delete</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       )} />
       </View>
@@ -114,9 +116,9 @@ export default function RehabTracker() {
               {!!c.note && <Text style={s.text}>{c.note}</Text>}
             </View>
           ))}
-          <Pressable onPress={()=> loadCloud(true)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> loadCloud(true)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Load more cloud logs'>
             <Text style={[s.buttonText,{ color: palette.text }]}>Load more</Text>
-          </Pressable>
+          </A11yPressable>
         </>
       )}
     </View>

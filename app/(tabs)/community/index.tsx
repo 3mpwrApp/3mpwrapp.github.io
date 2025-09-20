@@ -1,13 +1,14 @@
-import React from "react";
-import { View, Text, StyleSheet, useColorScheme, SectionList, Pressable } from "react-native";
-import { colors, type Palette } from "../../../theme/colors";
-import { useAnnounceOnMount, useFocusOnRefOnMount, MAX_FONT_SCALE } from "../../../hooks/useA11y";
-import { channels, seedThreads, seedComments } from "../../../data/community";
-import { useCommunity, CommunityProvider } from "../../../store/community";
-import { getChannelUnread, setChannelLastRead } from "../../../services/community";
-import { router } from "expo-router";
 import type { Href } from "expo-router";
+import { router } from "expo-router";
+import React from "react";
+import { SectionList, StyleSheet, Text, useColorScheme, View } from "react-native";
+import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
+import { channels, seedComments, seedThreads } from "../../../data/community";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { getChannelUnread, setChannelLastRead } from "../../../services/community";
+import { CommunityProvider, useCommunity } from "../../../store/community";
+import { colors, type Palette } from "../../../theme/colors";
 
 function ScreenInner() {
   const scheme = useColorScheme();
@@ -51,7 +52,7 @@ function ScreenInner() {
       {/* Community Features Navigation */}
       <View style={styles.featuresContainer}>
         <View style={styles.featuresRow}>
-          <Pressable
+          <A11yPressable
             accessibilityRole="button"
             accessibilityLabel="Open Media Studio to create and share memes, posters, and graphics"
             style={({ pressed }) => [styles.featureButton, pressed && { opacity: 0.7 }]}
@@ -59,9 +60,9 @@ function ScreenInner() {
           >
             <Text style={styles.featureTitle}>🎨 Media Studio</Text>
             <Text style={styles.featureDesc}>Create & share memes, posters, graphics</Text>
-          </Pressable>
+          </A11yPressable>
 
-          <Pressable
+          <A11yPressable
             accessibilityRole="button"
             accessibilityLabel="Open Mutual Aid to exchange support and resources"
             style={({ pressed }) => [styles.featureButton, pressed && { opacity: 0.7 }]}
@@ -69,11 +70,11 @@ function ScreenInner() {
           >
             <Text style={styles.featureTitle}>🤝 Mutual Aid</Text>
             <Text style={styles.featureDesc}>Exchange support, resources, peer help</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
 
         <View style={styles.featuresRow}>
-          <Pressable
+          <A11yPressable
             accessibilityRole="button"
             accessibilityLabel="Open Mutual Chat for real-time group and one-on-one conversations"
             style={({ pressed }) => [styles.featureButton, pressed && { opacity: 0.7 }]}
@@ -81,9 +82,9 @@ function ScreenInner() {
           >
             <Text style={styles.featureTitle}>💬 Mutual Chat</Text>
             <Text style={styles.featureDesc}>Real-time group & 1-1 conversations</Text>
-          </Pressable>
+          </A11yPressable>
 
-          <Pressable
+          <A11yPressable
             accessibilityRole="button"
             accessibilityLabel="Open Beta Testers Chat for live collaboration and feedback"
             style={({ pressed }) => [styles.featureButton, pressed && { opacity: 0.7 }]}
@@ -91,11 +92,11 @@ function ScreenInner() {
           >
             <Text style={styles.featureTitle}>🧪 Beta Testers Chat</Text>
             <Text style={styles.featureDesc}>Live chat to collaborate & give feedback</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
 
         <View style={styles.featuresRow}>
-          <Pressable
+          <A11yPressable
             accessibilityRole="button"
             accessibilityLabel="Compose a new post"
             style={({ pressed }) => [styles.featureButton, styles.composeButton, pressed && { opacity: 0.7 }]}
@@ -103,7 +104,7 @@ function ScreenInner() {
           >
             <Text style={[styles.featureTitle, { color: palette.onPrimary }]}>✏️ Compose Post</Text>
             <Text style={[styles.featureDesc, { color: palette.onPrimary }]}>Create a new forum post</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       </View>
 
@@ -115,7 +116,7 @@ function ScreenInner() {
         keyExtractor={(item) => `channel-${item.id}`}
         renderSectionHeader={({ section }) => <Text style={styles.section}>{section.title}</Text>}
         renderItem={({ item }) => (
-          <Pressable
+          <A11yPressable
             onPress={async () => { await setChannelLastRead(item.slug); router.push(`/(tabs)/community/${item.slug}` as Href); }}
             accessibilityRole="button"
             accessibilityLabel={`Open channel ${item.title}`}
@@ -123,7 +124,7 @@ function ScreenInner() {
             style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
           >
             <Text style={styles.rowText}>{item.title}{unread[item.slug] ? ` (${unread[item.slug]})` : ''}</Text>
-          </Pressable>
+          </A11yPressable>
         )}
         contentContainerStyle={{ paddingTop: 8 }}
       />

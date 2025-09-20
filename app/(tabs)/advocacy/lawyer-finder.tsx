@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, Linking, FlatList } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { FlatList, Linking, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import MapEmbed from '../../../components/MapEmbed';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { advocates } from '../../../data/lawyers';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { fetchAdvocates } from '../../../services/advocates';
 import { useFavorites } from '../../../store/favorites';
-import MapEmbed from '../../../components/MapEmbed';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -45,16 +47,16 @@ export default function LawyerFinder() {
         Lawyer & Advocate Finder
       </Text>
       <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
-        <Pressable onPress={()=>setMode('list')} style={[s.chip, mode==='list'&&s.chipActive]}><Text style={{ color: mode==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>List</Text></Pressable>
-        <Pressable onPress={()=>setMode('map')} style={[s.chip, mode==='map'&&s.chipActive]}><Text style={{ color: mode==='map'? palette.onPrimary: palette.text, fontWeight:'700' }}>Map</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('list')} style={[s.chip, mode==='list'&&s.chipActive]}><Text style={{ color: mode==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>List</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('map')} style={[s.chip, mode==='map'&&s.chipActive]}><Text style={{ color: mode==='map'? palette.onPrimary: palette.text, fontWeight:'700' }}>Map</Text></A11yPressable>
       </View>
       <TextInput placeholder="Search by name, city, org" placeholderTextColor={palette.text+"77"} value={query} onChangeText={setQuery} style={s.input} />
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
         <TextInput placeholder="Issue (e.g., WSIB)" placeholderTextColor={palette.text+"77"} value={issue} onChangeText={setIssue} style={[s.input,{flex:1}]} />
         <TextInput placeholder="Province (e.g., ON)" placeholderTextColor={palette.text+"77"} value={province} onChangeText={setProvince} style={[s.input,{width:100}]} />
-        <Pressable onPress={() => setProBono(v=>!v)} style={[s.chip, proBono && s.chipActive]}>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setProBono(v=>!v)} style={[s.chip, proBono && s.chipActive]}>
           <Text style={{ color: proBono? palette.onPrimary: palette.text, fontWeight:'700' }}>{proBono? 'Pro bono only':'Include paid'}</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       {mode==='list' ? (
       <FlatList data={filtered} keyExtractor={(a)=>a.id} renderItem={({item}) => (
@@ -63,24 +65,24 @@ export default function LawyerFinder() {
           <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || '—'}</Text>
           <Text style={s.cardText}>Issues: {item.issues.join(', ')}</Text>
           {item.website && (
-            <Pressable onPress={() => Linking.openURL(item.website)} style={s.btn}><Text style={s.btnText}>Open website</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => Linking.openURL(item.website)} style={s.btn}><Text style={s.btnText}>Open website</Text></A11yPressable>
           )}
           {item.email && (
-            <Pressable onPress={() => Linking.openURL(`mailto:${item.email}`)} style={s.btn}><Text style={s.btnText}>Email</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => Linking.openURL(`mailto:${item.email}`)} style={s.btn}><Text style={s.btnText}>Email</Text></A11yPressable>
           )}
           <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
-            <Pressable onPress={()=> Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`)} style={s.btn}><Text style={s.btnText}>Open on Map</Text></Pressable>
-            <Pressable onPress={()=> toggle('advocate', item.id)} style={s.btn}>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`)} style={s.btn}><Text style={s.btnText}>Open on Map</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> toggle('advocate', item.id)} style={s.btn}>
               <Text style={s.btnText}>{state.advocate.has(item.id) ? '★ Saved' : '☆ Save'}</Text>
-            </Pressable>
+            </A11yPressable>
           </View>
         </View>
       )}
       ListFooterComponent={
         total > filtered.length ? (
-          <Pressable onPress={() => load(false)} style={[s.btn,{ alignSelf:'center', marginVertical: 12 }]}> 
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => load(false)} style={[s.btn,{ alignSelf:'center', marginVertical: 12 }]}> 
             <Text style={s.btnText}>{loading? 'Loading…':'Load more'}</Text>
-          </Pressable>
+          </A11yPressable>
         ) : null
       }
       />) : (

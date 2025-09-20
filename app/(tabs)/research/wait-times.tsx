@@ -1,11 +1,13 @@
+import { collection, getDocs } from 'firebase/firestore';
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, Alert, ScrollView } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import SimpleBarChart from '../../../components/SimpleBarChart';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { waitTimes } from '../../../data/wait-times';
 import { db } from '../../../firebase/config';
-import { collection, getDocs } from 'firebase/firestore';
-import { useAppPalette } from '../../../theme/usePalette';
 import { submitWaitTime } from '../../../services/waits';
-import SimpleBarChart from '../../../components/SimpleBarChart';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -41,9 +43,9 @@ export default function WaitTimes() {
       <Text style={s.title}>Compensation Wait-Time Tracker</Text>
       <Text style={s.text}>Anonymized community-reported timelines by province (seed data shown).</Text>
       <View style={{ flexDirection:'row', gap:8, marginTop: 8, flexWrap:'wrap' }}>
-        <Pressable onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></A11yPressable>
         {merged.map(w => w.province).map(p => (
-          <Pressable key={p} onPress={()=>setFilter(p)} style={[s.chip, filter===p&&s.chipActive]}><Text style={{ color: filter===p? palette.onPrimary: palette.text, fontWeight:'700' }}>{p}</Text></Pressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} key={p} onPress={()=>setFilter(p)} style={[s.chip, filter===p&&s.chipActive]}><Text style={{ color: filter===p? palette.onPrimary: palette.text, fontWeight:'700' }}>{p}</Text></A11yPressable>
         ))}
       </View>
       <View style={{ marginTop: 8 }}>
@@ -52,8 +54,8 @@ export default function WaitTimes() {
       <Text style={[s.title,{ fontSize:18, marginTop: 12 }]}>Submit your wait</Text>
       <TextInput placeholder="Province (e.g., ON)" placeholderTextColor={palette.text+'77'} value={prov} onChangeText={setProv} style={s.input} />
       <TextInput placeholder="Days waited (number)" placeholderTextColor={palette.text+'77'} value={days} onChangeText={setDays} style={s.input} />
-      <Pressable onPress={async()=>{ try { await submitWaitTime(prov.trim().toUpperCase(), Number(days)||0); Alert.alert('Thanks','Submission received'); setProv(''); setDays(''); } catch { Alert.alert('Failed','Could not submit'); } }} style={s.button}><Text style={s.buttonText}>Submit</Text></Pressable>
-      <Pressable onPress={async()=>{ try { const rows = submissions; const csvRows = [['province','days'], ...rows.map(r => [r.province, String(r.days)])]; const csv = csvRows.map(r => r.map(x=> '"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\n'); const FS = await import('expo-file-system'); const path = FS.cacheDirectory + `wait_times_${Date.now()}.csv`; await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 }); const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','CSV saved to cache.'); } catch { Alert.alert('Export failed','Could not export CSV'); } }} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { await submitWaitTime(prov.trim().toUpperCase(), Number(days)||0); Alert.alert('Thanks','Submission received'); setProv(''); setDays(''); } catch { Alert.alert('Failed','Could not submit'); } }} style={s.button}><Text style={s.buttonText}>Submit</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const rows = submissions; const csvRows = [['province','days'], ...rows.map(r => [r.province, String(r.days)])]; const csv = csvRows.map(r => r.map(x=> '"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\n'); const FS = await import('expo-file-system'); const path = FS.cacheDirectory + `wait_times_${Date.now()}.csv`; await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 }); const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','CSV saved to cache.'); } catch { Alert.alert('Export failed','Could not export CSV'); } }} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text></A11yPressable>
     </ScrollView>
   );
 }

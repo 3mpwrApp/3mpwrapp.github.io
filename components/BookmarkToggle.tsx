@@ -1,11 +1,11 @@
 import { usePathname } from 'expo-router';
 import { Pressable, Text } from 'react-native';
-const HIT_SLOP = { top:8, bottom:8, left:8, right:8 };
 import { useTranslation } from '../i18n';
 import { useBookmarks } from '../store/bookmarks';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
 import { findRouteEntry } from '../utils/routeRegistry';
+const HIT_SLOP = { top:8, bottom:8, left:8, right:8 };
 
 export default function BookmarkToggle() {
   const pathname = usePathname();

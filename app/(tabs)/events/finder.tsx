@@ -1,9 +1,11 @@
-import React from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
-import { events } from '../../../data/events';
-import { useAppPalette } from '../../../theme/usePalette';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { Link } from 'expo-router';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { events } from '../../../data/events';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -22,17 +24,17 @@ export default function AccessibleEventFinder() {
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Accessible Event Finder</Text>
       <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
-        <Pressable onPress={()=>setAsl(v=>!v)} style={[s.chip, asl && s.chipActive]}><Text style={{ color: asl? palette.onPrimary: palette.text, fontWeight:'700' }}>ASL</Text></Pressable>
-        <Pressable onPress={()=>setCaptions(v=>!v)} style={[s.chip, captions && s.chipActive]}><Text style={{ color: captions? palette.onPrimary: palette.text, fontWeight:'700' }}>Captions</Text></Pressable>
-        <Pressable onPress={()=>setStepFree(v=>!v)} style={[s.chip, stepFree && s.chipActive]}><Text style={{ color: stepFree? palette.onPrimary: palette.text, fontWeight:'700' }}>Step-free</Text></Pressable>
-        <Pressable onPress={()=>setSensory(v=>!v)} style={[s.chip, sensory && s.chipActive]}><Text style={{ color: sensory? palette.onPrimary: palette.text, fontWeight:'700' }}>Sensory</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setAsl(v=>!v)} style={[s.chip, asl && s.chipActive]}><Text style={{ color: asl? palette.onPrimary: palette.text, fontWeight:'700' }}>ASL</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setCaptions(v=>!v)} style={[s.chip, captions && s.chipActive]}><Text style={{ color: captions? palette.onPrimary: palette.text, fontWeight:'700' }}>Captions</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setStepFree(v=>!v)} style={[s.chip, stepFree && s.chipActive]}><Text style={{ color: stepFree? palette.onPrimary: palette.text, fontWeight:'700' }}>Step-free</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSensory(v=>!v)} style={[s.chip, sensory && s.chipActive]}><Text style={{ color: sensory? palette.onPrimary: palette.text, fontWeight:'700' }}>Sensory</Text></A11yPressable>
       </View>
       {filtered.map(e => (
         <View key={e.id} style={s.card}>
           <Text style={s.cardTitle}>{e.title} • {new Date(e.date).toLocaleString()}</Text>
           <Text style={s.cardText}>{e.isVirtual? 'Online': (e.location || '')}</Text>
           <Link href={`/(tabs)/events/${e.id}`} asChild>
-            <Pressable style={s.btn}><Text style={s.btnText}>Details</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} style={s.btn}><Text style={s.btnText}>Details</Text></A11yPressable>
           </Link>
         </View>
       ))}

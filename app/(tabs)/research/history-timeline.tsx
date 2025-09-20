@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, Alert, ScrollView } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
-import { addEntry, listEntries } from '../../../services/timeline';
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
 import SimpleBarChart from '../../../components/SimpleBarChart';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { addEntry, listEntries } from '../../../services/timeline';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -31,7 +33,7 @@ export default function HistoryTimeline() {
       <TextInput placeholder="Title" placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
       <TextInput placeholder="Date YYYY-MM-DD" placeholderTextColor={palette.text+'77'} value={date} onChangeText={setDate} style={s.input} />
       <TextInput placeholder="Description" placeholderTextColor={palette.text+'77'} value={description} onChangeText={setDescription} style={s.input} />
-      <Pressable onPress={async()=>{ try { await addEntry({ title, date, description }); setTitle(''); setDescription(''); load(); } catch { Alert.alert('Failed','Could not add'); } }} style={s.button}><Text style={s.buttonText}>Add Entry</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { await addEntry({ title, date, description }); setTitle(''); setDescription(''); load(); } catch { Alert.alert('Failed','Could not add'); } }} style={s.button}><Text style={s.buttonText}>Add Entry</Text></A11yPressable>
       {items.map(i => (
         <View key={i.id} style={s.card}>
           <Text style={s.cardTitle}>{i.date} — {i.title}</Text>

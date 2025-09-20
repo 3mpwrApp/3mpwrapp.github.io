@@ -1,7 +1,8 @@
 import * as Clipboard from 'expo-clipboard';
 import React from "react";
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -86,17 +87,17 @@ export default function EvidenceChecklist() {
       <Text style={s.subtitle}>{t('templates.checklist.subtitle','Pick a process to view a tailored checklist.')}</Text>
       <View style={s.chipRow}>
         {(['WCB','LTD','CPP-D','Accommodation'] as Kind[]).map(k => (
-          <Pressable key={k} onPress={()=>{ setKind(k); announce(t('templates.checklist.kindChanged','Checklist type changed')); }} accessibilityRole='button' accessibilityState={{ selected: kind===k }} style={[s.chip, kind===k && s.chipActive]}>
+          <A11yPressable hitSlop={HIT_SLOP_8} key={k} onPress={()=>{ setKind(k); announce(t('templates.checklist.kindChanged','Checklist type changed')); }} accessibilityRole='button' accessibilityState={{ selected: kind===k }} style={[s.chip, kind===k && s.chipActive]}>
             <Text style={[s.chipText, kind===k && s.chipTextActive]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{k}</Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
   <Text style={s.progress} accessibilityLabel={t('templates.checklist.progressLabel','Checklist progress')} accessibilityValue={{ text: `${completed.current.size}/${lines.length}` }}>{t('templates.checklist.progress','Progress: {{done}} / {{total}} ({{pct}}%)').replace('{{done}}', String(completed.current.size)).replace('{{total}}', String(lines.length)).replace('{{pct}}', String(progressPct))}</Text>
       {lines.map((line,i)=>(
-        <Pressable key={i} onPress={()=>toggleLine(i)} accessibilityRole='checkbox' accessibilityState={{ checked: completed.current.has(i) }} style={s.itemRow}>
+        <A11yPressable hitSlop={HIT_SLOP_8} key={i} onPress={()=>toggleLine(i)} accessibilityRole='checkbox' accessibilityState={{ checked: completed.current.has(i) }} style={s.itemRow}>
           <View style={[s.checkbox, completed.current.has(i) && s.checkboxChecked]} />
           <Text style={[s.itemText, completed.current.has(i) && s.itemTextDone]} maxFontSizeMultiplier={MAX_FONT_SCALE}>• {line}</Text>
-        </Pressable>
+        </A11yPressable>
       ))}
       <Text style={[s.tip,{ marginTop:12 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('templates.checklist.tip','Tip: Summaries from Wellness trackers can support your evidence.')}</Text>
     </ScrollView>

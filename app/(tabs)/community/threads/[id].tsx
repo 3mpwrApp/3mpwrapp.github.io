@@ -1,13 +1,14 @@
-import React from "react";
-import { View, Text, StyleSheet, useColorScheme, FlatList, TextInput, Pressable } from "react-native";
-import { colors, type Palette } from "../../../../theme/colors";
 import { useLocalSearchParams } from "expo-router";
-import { CommunityProvider } from "../../../../store/community";
+import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp, where } from 'firebase/firestore';
+import React from "react";
+import { FlatList, StyleSheet, Text, TextInput, useColorScheme, View } from "react-native";
+import A11yPressable from '../../../../components/A11yPressable';
 import { HIT_SLOP_8, touchTarget } from "../../../../constants/a11y";
 import { useAuth } from "../../../../context/AuthContext";
 import { db } from "../../../../firebase/config";
-import { collection, query, where, orderBy, onSnapshot, addDoc, serverTimestamp } from 'firebase/firestore';
-import { setTyping, setLastRead } from "../../../../services/community";
+import { setLastRead, setTyping } from "../../../../services/community";
+import { CommunityProvider } from "../../../../store/community";
+import { colors, type Palette } from "../../../../theme/colors";
 
 function ThreadInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -38,7 +39,7 @@ function ThreadInner() {
 
   return (
     <View style={styles.container}>
-      {othersTyping && <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 4 }}>Someone is typing…</Text>}
+      {othersTyping && <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 4 }}>Someone is typingï¿½</Text>}
       <FlatList
         data={items}
         keyExtractor={(item) => item.id}
@@ -60,7 +61,7 @@ function ThreadInner() {
           onFocus={()=> setTyping('thread_'+String(id), true)}
           onBlur={()=> setTyping('thread_'+String(id), false)}
         />
-        <Pressable
+        <A11yPressable
           onPress={send}
           accessibilityRole="button"
           accessibilityLabel="Post comment"
@@ -68,7 +69,7 @@ function ThreadInner() {
           style={({ pressed }) => [styles.cta, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
         >
           <Text style={styles.ctaText}>Send</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
     </View>
   );

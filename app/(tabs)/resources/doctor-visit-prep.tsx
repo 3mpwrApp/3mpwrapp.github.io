@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, StyleSheet, TextInput, Pressable, Alert, ScrollView } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, TextInput } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
@@ -38,7 +40,7 @@ export default function DoctorVisitPrep() {
       <TextInput placeholder="Condition(s)" placeholderTextColor={palette.text+'77'} value={condition} onChangeText={setCondition} style={s.input} />
       <TextInput placeholder="Current medications (one per line)" multiline placeholderTextColor={palette.text+'77'} value={meds} onChangeText={setMeds} style={[s.input,{ height: 120 }]} />
       <TextInput placeholder="Key questions for your provider (one per line)" multiline placeholderTextColor={palette.text+'77'} value={questions} onChangeText={setQuestions} style={[s.input,{ height: 140 }]} />
-      <Pressable onPress={generate} style={s.button}><Text style={s.buttonText}>Generate Summary</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={generate} style={s.button}><Text style={s.buttonText}>Generate Summary</Text></A11yPressable>
     </ScrollView>
   );
 }

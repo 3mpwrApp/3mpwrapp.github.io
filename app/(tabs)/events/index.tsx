@@ -1,37 +1,37 @@
-﻿import React from "react";
+﻿import { Link } from "expo-router";
+import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  RefreshControl,
-  Pressable,
+    FlatList,
+    RefreshControl,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
-import { useTextScale } from "../../../theme/typography";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-  useAnnounceOnChange,
-} from "../../../hooks/useA11y";
+import A11yPressable from '../../../components/A11yPressable';
+import Card from "../../../components/Card";
+import ContrastToggle from "../../../components/ContrastToggle";
+import SettingsLink from "../../../components/SettingsLink";
+import SkeletonRow from "../../../components/SkeletonRow";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { generateDisabilityObservances } from "../../../data/disability-observances";
 import { events as localEvents } from "../../../data/events";
 import {
-  generateCanadianHolidays,
-  generateProvincialHolidays,
+    generateCanadianHolidays,
+    generateProvincialHolidays,
 } from "../../../data/holidays-ca";
-import { generateDisabilityObservances } from "../../../data/disability-observances";
-import { useSettings } from "../../../store/settings";
+import {
+    MAX_FONT_SCALE,
+    useAnnounceOnChange,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
 import { fetchEvents } from "../../../services/events";
 import { useCounts } from "../../../store/counts";
-import Card from "../../../components/Card";
-import { Link } from "expo-router";
-import SkeletonRow from "../../../components/SkeletonRow";
-import { useRefresh } from "../../../store/refresh";
 import { useNetwork } from "../../../store/network";
-import SettingsLink from "../../../components/SettingsLink";
-import ContrastToggle from "../../../components/ContrastToggle";
-import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { useRefresh } from "../../../store/refresh";
+import { useSettings } from "../../../store/settings";
+import { useTextScale } from "../../../theme/typography";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export default function EventsScreen() {
   const palette = useAppPalette();
@@ -193,7 +193,7 @@ export default function EventsScreen() {
       )}
 
       <View style={styles.calHeader}>
-        <Pressable
+        <A11yPressable
           accessibilityRole="button"
           accessibilityLabel="Previous month"
           hitSlop={HIT_SLOP_8}
@@ -202,9 +202,9 @@ export default function EventsScreen() {
           }
         >
           <Text style={styles.calNav}>{"<"}</Text>
-        </Pressable>
+        </A11yPressable>
         <Text style={styles.calTitle}>{monthLabel}</Text>
-        <Pressable
+        <A11yPressable
           accessibilityRole="button"
           accessibilityLabel="Next month"
           hitSlop={HIT_SLOP_8}
@@ -213,7 +213,7 @@ export default function EventsScreen() {
           }
         >
           <Text style={styles.calNav}>{">"}</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
 
       <View style={styles.weekRow}>
@@ -231,7 +231,7 @@ export default function EventsScreen() {
             const has = !!key && eventsByDay.has(key);
             const isSel = !!key && selectedDay === key;
             return (
-              <Pressable
+              <A11yPressable
                 key={`${wi}-${di}`}
                 style={[
                   styles.dayCell,
@@ -255,7 +255,7 @@ export default function EventsScreen() {
                 >
                   {d ?? ""}
                 </Text>
-              </Pressable>
+              </A11yPressable>
             );
           })}
         </View>

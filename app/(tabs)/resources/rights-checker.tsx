@@ -1,9 +1,11 @@
 import React from "react";
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -72,7 +74,8 @@ export default function RightsChecker() {
   React.useEffect(()=>{ if(summary) announce(t('rightsChecker.summaryReady','Rights summary ready')); }, [summary]);
 
   const Choice = ({ label, value, selected, onPress }: { label: string; value: Answer; selected: Answer; onPress: () => void }) => (
-    <Pressable
+    <A11yPressable
+      hitSlop={HIT_SLOP_8}
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={t('rightsChecker.choiceLabel', `${label} answer option`)}
@@ -80,7 +83,7 @@ export default function RightsChecker() {
       style={[styles.choice, selected === value && styles.choiceActive]}
     >
       <Text style={[styles.choiceText, selected === value && styles.choiceTextActive]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{label}</Text>
-    </Pressable>
+    </A11yPressable>
   );
 
   const reset = () => {
@@ -108,10 +111,10 @@ export default function RightsChecker() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding:16 }} accessibilityLabel={t('rightsChecker.screenLabel','Automated Rights Checker screen')}>
       <View style={styles.infoCard} accessibilityRole="summary" accessibilityLabel={t('rightsChecker.howToUse','How to use Rights Checker')}>
-        <Pressable onPress={()=>setShowInfo(s=>!s)} accessibilityRole="button" accessibilityLabel={t('rightsChecker.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={styles.infoHeader}>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setShowInfo(s=>!s)} accessibilityRole="button" accessibilityLabel={t('rightsChecker.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={styles.infoHeader}>
           <Text style={styles.infoTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.infoTitle','How to Use')}</Text>
           <Text style={styles.infoToggle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{showInfo? t('rightsChecker.hide','Hide'): t('rightsChecker.show','Show')}</Text>
-        </Pressable>
+        </A11yPressable>
         {showInfo && (
           <View>
             <Text style={styles.infoText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.infoLine1','Answer each question. A plain-language summary appears when all are answered.')}</Text>
@@ -120,15 +123,15 @@ export default function RightsChecker() {
           </View>
         )}
         <View style={styles.actionRow}>
-          <Pressable onPress={reset} accessibilityRole="button" accessibilityLabel={t('rightsChecker.resetAnswers','Reset answers')} accessibilityHint={t('rightsChecker.resetHint','Clears all selected answers.')} style={[styles.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={reset} accessibilityRole="button" accessibilityLabel={t('rightsChecker.resetAnswers','Reset answers')} accessibilityHint={t('rightsChecker.resetHint','Clears all selected answers.')} style={[styles.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
             <Text style={[styles.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.reset','Reset')}</Text>
-          </Pressable>
-          <Pressable onPress={copySummary} disabled={!summary} accessibilityRole="button" accessibilityLabel={t('rightsChecker.copySummary','Copy rights summary')} accessibilityHint={t('rightsChecker.copySummaryHint','Copies the current rights summary to the clipboard.')} style={[styles.smallBtn,{ opacity: summary?1:0.5 }]}>
+          </A11yPressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={copySummary} disabled={!summary} accessibilityRole="button" accessibilityLabel={t('rightsChecker.copySummary','Copy rights summary')} accessibilityHint={t('rightsChecker.copySummaryHint','Copies the current rights summary to the clipboard.')} style={[styles.smallBtn,{ opacity: summary?1:0.5 }]}>
             <Text style={styles.smallBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.copy','Copy')}</Text>
-          </Pressable>
-          <Pressable onPress={exportSummary} disabled={!summary} accessibilityRole="button" accessibilityLabel={t('rightsChecker.exportSummary','Share or export summary file')} accessibilityHint={t('rightsChecker.exportSummaryHint','Opens system share sheet with a text file of your rights summary.')} style={[styles.smallBtn,{ opacity: summary?1:0.5 }]}>
+          </A11yPressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={exportSummary} disabled={!summary} accessibilityRole="button" accessibilityLabel={t('rightsChecker.exportSummary','Share or export summary file')} accessibilityHint={t('rightsChecker.exportSummaryHint','Opens system share sheet with a text file of your rights summary.')} style={[styles.smallBtn,{ opacity: summary?1:0.5 }]}>
             <Text style={styles.smallBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.export','Export')}</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       </View>
       <Text

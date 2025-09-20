@@ -1,8 +1,9 @@
 ﻿import { router } from "expo-router";
 import React from "react";
-import { Alert, FlatList, Modal, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, FlatList, Modal, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { useAuth } from "../../../context/AuthContext";
 import { addEvidenceNote, deleteEvidenceDoc, listEvidencePage, uploadEvidenceFileWithProgress, type EvidenceFile } from "../../../services/evidence";
 import { announce } from "../../../utils/announce";
@@ -140,15 +141,17 @@ export default function EvidenceLocker() {
       </Text>
       {/* Actions / Info toggle row */}
       <View style={styles.actionsRow} accessible accessibilityLabel={t("templates.evidenceLocker.screenLabel", "Evidence Locker screen")}>        
-        <Pressable
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
           onPress={() => setShowInfo(v=>!v)}
           accessibilityRole="button"
           accessibilityLabel={t("templates.evidenceLocker.toggleInfo", "Toggle instructions")}
           style={styles.actionBtn}
         >
           <Text style={styles.actionText}>{showInfo ? t("common.hide", "Hide") : t("common.show", "Show")}</Text>
-        </Pressable>
-        <Pressable
+        </A11yPressable>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
           onPress={async () => {
             try {
               const notesLines = notes.map(n => `- ${new Date(n.date).toISOString()} [${(n.tags||[]).join('|')}] ${n.text}`);
@@ -168,8 +171,9 @@ export default function EvidenceLocker() {
           style={styles.actionBtn}
         >
           <Text style={styles.actionText}>{t("templates.evidenceLocker.copy", "Copy")}</Text>
-        </Pressable>
-        <Pressable
+        </A11yPressable>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
           onPress={async () => {
             try {
               const notesLines = notes.map(n => `- ${new Date(n.date).toISOString()} [${(n.tags||[]).join('|')}] ${n.text}`);
@@ -192,8 +196,9 @@ export default function EvidenceLocker() {
           style={styles.actionBtn}
         >
           <Text style={styles.actionText}>{t("templates.evidenceLocker.share", "Share")}</Text>
-        </Pressable>
-        <Pressable
+        </A11yPressable>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
           onPress={() => {
             Alert.alert(
               t("templates.evidenceLocker.resetLabel", "Reset locker"),
@@ -210,7 +215,7 @@ export default function EvidenceLocker() {
           style={styles.actionBtn}
         >
           <Text style={styles.actionText}>{t("templates.evidenceLocker.reset", "Reset")}</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       {showInfo && (
         <View style={styles.infoCard} accessibilityRole="summary" accessibilityLabel={t("templates.evidenceLocker.howToUse")}>          
@@ -559,14 +564,14 @@ export default function EvidenceLocker() {
                 {Array.isArray(c.files) && c.files[0]?.url && /\.(png|jpe?g|gif|webp)$/i.test(c.files[0].url) ? (
                   <View style={{ marginTop: 6 }}>
                     {(() => { try { const { Image } = require('expo-image'); return (
-                      <Pressable onPress={() => setPreview({ url: c.files[0].url, name: c.files[0].name })}>
+                      <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel={t("common.previewImage", "Preview image")} onPress={() => setPreview({ url: c.files[0].url, name: c.files[0].name })}>
                         <Image source={{ uri: c.files[0].url }} style={{ width: 100, height: 60, borderRadius: 6 }} />
-                      </Pressable>
+                      </A11yPressable>
                     ); } catch { return null; } })()}
                   </View>
                 ) : null}
               </View>
-              <Pressable
+              <A11yPressable
                 accessibilityRole="checkbox"
                 accessibilityLabel={selectedCloud[c.id] ? 'Unselect item' : 'Select item'}
                 accessibilityState={{ checked: !!selectedCloud[c.id] }}
@@ -574,7 +579,7 @@ export default function EvidenceLocker() {
                 style={{ width: 22, height: 22, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems: 'center', justifyContent: 'center', backgroundColor: selectedCloud[c.id] ? palette.primary : 'transparent' }}
               >
                 {selectedCloud[c.id] ? (<View style={{ width: 12, height: 12, backgroundColor: palette.onPrimary, borderRadius: 2 }} />) : null}
-              </Pressable>
+              </A11yPressable>
               <A11yPressable
                 onPress={async () => {
                   const ok = await deleteEvidenceDoc(c.id);
@@ -591,7 +596,7 @@ export default function EvidenceLocker() {
       {/* Preview Modal */}
       {preview && (
         <Modal transparent animationType="fade" onRequestClose={() => setPreview(null)}>
-          <Pressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)}>
+          <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel={t("common.closePreview", "Close preview")} style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)}>
             <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '90%', maxHeight: '90%' }}>
               {(() => { try { const { Image } = require('expo-image'); return (
                 <Image source={{ uri: preview.url }} style={{ width: 320, height: 200, borderRadius: 6 }} contentFit="contain" />
@@ -602,7 +607,7 @@ export default function EvidenceLocker() {
                 <A11yPressable onPress={()=> setPreview(null)} style={styles.secondary}><Text style={styles.buttonText}>Close</Text></A11yPressable>
               </View>
             </View>
-          </Pressable>
+          </A11yPressable>
         </Modal>
       )}
     </View>

@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
+import { StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -43,7 +45,7 @@ export default function PolicySimulator() {
       <Text style={s.text}>{step.text}</Text>
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
         {step.choices.map((c) => (
-          <Pressable key={c.id} onPress={() => choose(c)} style={s.chip}><Text style={s.chipText}>{c.label}</Text></Pressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} key={c.id} onPress={() => choose(c)} accessibilityRole='button' accessibilityLabel={c.label} style={s.chip}><Text style={s.chipText}>{c.label}</Text></A11yPressable>
         ))}
       </View>
       {!!log.length && (

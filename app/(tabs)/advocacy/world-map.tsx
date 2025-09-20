@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
+import { StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
 import MapEmbed from '../../../components/MapEmbed';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { fetchWorldItems } from '../../../services/worlddata';
+import { useAppPalette } from '../../../theme/usePalette';
 
 type MapItem = { id: string; title: string; country: string; city?: string; kind: 'law'|'protest'|'update'; lat: number; lng: number };
 const seed: MapItem[] = [
@@ -27,7 +29,7 @@ export default function WorldMap() {
       <Text style={s.title}>World Disability Map</Text>
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         {(['all','law','protest','update'] as const).map(k => (
-          <Pressable key={k} onPress={()=>setKind(k)} style={[s.chip, kind===k&&s.chipActive]}><Text style={{ color: kind===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{k}</Text></Pressable>
+          <A11yPressable key={k} hitSlop={HIT_SLOP_8} onPress={()=>setKind(k)} style={[s.chip, kind===k&&s.chipActive]}><Text style={{ color: kind===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{k}</Text></A11yPressable>
         ))}
       </View>
       <View style={{ marginTop: 8 }}>
@@ -35,10 +37,10 @@ export default function WorldMap() {
       </View>
       <Text style={[s.text,{ marginTop: 8 }]}>Tap a card to open Google Maps</Text>
       {items.map(i => (
-        <Pressable key={i.id} onPress={()=> require('expo-linking').openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([i.title,i.city,i.country].filter(Boolean).join(' '))}`)} style={s.card}>
+        <A11yPressable key={i.id} hitSlop={HIT_SLOP_8} onPress={()=> require('expo-linking').openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([i.title,i.city,i.country].filter(Boolean).join(' '))}`)} style={s.card}>
           <Text style={s.cardTitle}>{i.title}</Text>
           <Text style={s.cardText}>{[i.city, i.country].filter(Boolean).join(', ')} • {i.kind}</Text>
-        </Pressable>
+        </A11yPressable>
       ))}
     </View>
   );

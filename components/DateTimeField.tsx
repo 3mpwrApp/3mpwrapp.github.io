@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Text, Pressable, Modal, Platform } from 'react-native';
+import { Modal, Platform, Text, View } from 'react-native';
+import { HIT_SLOP_8 } from '../constants/a11y';
 import { useAppPalette } from '../theme/usePalette';
+import A11yPressable from './A11yPressable';
 
 type Props = {
   label: string;
@@ -37,8 +39,9 @@ export default function DateTimeField({ label, mode, value, onChange }: Props) {
 
   return (
     <View style={{ marginTop: 8 }}>
-      <Pressable
+      <A11yPressable
         onPress={() => setOpen(true)}
+        hitSlop={HIT_SLOP_8}
         style={{
           borderWidth: 1,
           borderColor: palette.muted,
@@ -50,10 +53,10 @@ export default function DateTimeField({ label, mode, value, onChange }: Props) {
       >
         <Text style={{ color: palette.text, opacity: 0.8 }}>{label}</Text>
         <Text style={{ color: palette.text, fontWeight: '700', marginTop: 2 }}>{displayValue}</Text>
-      </Pressable>
+      </A11yPressable>
       {open && hasPicker && (
         <Modal transparent animationType="fade" onRequestClose={() => setOpen(false)}>
-          <Pressable style={{ flex: 1, backgroundColor: '#0008', alignItems: 'center', justifyContent: 'center' }} onPress={() => setOpen(false)}>
+          <A11yPressable role="button" hitSlop={HIT_SLOP_8} style={{ flex: 1, backgroundColor: '#0008', alignItems: 'center', justifyContent: 'center' }} onPress={() => setOpen(false)}>
             <View style={{ backgroundColor: palette.surface, padding: 12, borderRadius: 8, minWidth: 260 }}>
               {(() => {
                 try {
@@ -80,11 +83,11 @@ export default function DateTimeField({ label, mode, value, onChange }: Props) {
                   );
                 } catch { return null; }
               })()}
-              <Pressable onPress={() => setOpen(false)} style={{ marginTop: 8, alignSelf: 'flex-end' }}>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setOpen(false)} style={{ marginTop: 8, alignSelf: 'flex-end' }}>
                 <Text style={{ color: palette.primary, fontWeight: '700' }}>Done</Text>
-              </Pressable>
+              </A11yPressable>
             </View>
-          </Pressable>
+          </A11yPressable>
         </Modal>
       )}
     </View>

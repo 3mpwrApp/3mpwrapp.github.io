@@ -1,21 +1,21 @@
-﻿import React from "react";
+﻿import type { Href } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
+import { collection, doc, getDocs, limit, orderBy, query, startAfter, updateDoc, where } from "firebase/firestore";
+import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  useColorScheme,
-  FlatList,
-  Pressable,
-  TextInput,
+    FlatList,
+    StyleSheet,
+    Text,
+    TextInput,
+    useColorScheme,
+    View,
 } from "react-native";
-import { colors, type Palette } from "../../../theme/colors";
-import { useLocalSearchParams, router } from "expo-router";
-import type { Href } from "expo-router";
-import { CommunityProvider } from "../../../store/community";
-import { db } from "../../../firebase/config";
-import { collection, query, where, orderBy, limit, getDocs, startAfter, updateDoc, doc } from "firebase/firestore";
+import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
 import { useAuth } from "../../../context/AuthContext";
+import { db } from "../../../firebase/config";
+import { CommunityProvider } from "../../../store/community";
+import { colors, type Palette } from "../../../theme/colors";
 
 function ChannelInner() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
@@ -66,7 +66,7 @@ function ChannelInner() {
           value={title}
           onChangeText={setTitle}
         />
-        <Pressable
+        <A11yPressable
           onPress={() => {
             if (!title.trim()) return;
             // Compose navigates to composer to ensure consistent logic
@@ -82,14 +82,14 @@ function ChannelInner() {
           ]}
         >
           <Text style={styles.ctaText}>Post</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
 
       <FlatList
         data={items}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Pressable
+          <A11yPressable
             onPress={() =>
               router.push(`/(tabs)/community/threads/${item.id}` as Href)
             }
@@ -108,15 +108,15 @@ function ChannelInner() {
             </Text>
             {isAdmin && (
               <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
-                <Pressable onPress={async () => { try { await updateDoc(doc(db,'threads', item.id), { flagged: !(item.flagged===true) }); } catch {} }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}>
+                <A11yPressable onPress={async () => { try { await updateDoc(doc(db,'threads', item.id), { flagged: !(item.flagged===true) }); } catch {} }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}>
                   <Text style={{ color: palette.text }}>{item.flagged ? 'Unflag' : 'Flag'}</Text>
-                </Pressable>
-                <Pressable onPress={async () => { try { await updateDoc(doc(db,'threads', item.id), { hidden: !(item.hidden===true) }); } catch {} }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}>
+                </A11yPressable>
+                <A11yPressable onPress={async () => { try { await updateDoc(doc(db,'threads', item.id), { hidden: !(item.hidden===true) }); } catch {} }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}>
                   <Text style={{ color: palette.text }}>{item.hidden ? 'Unhide' : 'Hide'}</Text>
-                </Pressable>
+                </A11yPressable>
               </View>
             )}
-          </Pressable>
+          </A11yPressable>
         )}
         onEndReached={() => loadPage(false)}
         onEndReachedThreshold={0.6}

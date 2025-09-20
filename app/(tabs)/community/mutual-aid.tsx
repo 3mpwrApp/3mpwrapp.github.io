@@ -1,11 +1,12 @@
+import { Link, router } from 'expo-router';
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
+import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useAuth } from '../../../context/AuthContext';
-import { router } from 'expo-router';
-import { addAidPost, listAidPosts, respondToPost, softDeletePost } from '../../../services/mutual';
 import { flagItem } from '../../../services/moderation';
-import { Link } from 'expo-router';
+import { addAidPost, listAidPosts, respondToPost, softDeletePost } from '../../../services/mutual';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -28,15 +29,15 @@ export default function MutualAid() {
       {isAdmin && (
         <View style={{ gap:8 }}>
           <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-            <Pressable onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></Pressable>
-            <Pressable onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>Approved</Text></Pressable>
-            <Pressable onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>Pending</Text></Pressable>
-            <Pressable onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>Trash</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>Approved</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>Pending</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>Trash</Text></A11yPressable>
           </View>
           <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>Admin Pending</Text></Pressable>
-            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>Admin Approved</Text></Pressable>
-            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>Admin Trash</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>Admin Pending</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>Admin Approved</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>Admin Trash</Text></A11yPressable>
           </View>
         </View>
       )}
@@ -44,7 +45,7 @@ export default function MutualAid() {
       <TextInput placeholder="Description" placeholderTextColor={palette.text+'77'} value={desc} onChangeText={setDesc} style={s.input} />
       <TextInput placeholder="City (optional)" placeholderTextColor={palette.text+'77'} value={city} onChangeText={setCity} style={s.input} />
       <TextInput placeholder="Contact (email/phone) (optional)" placeholderTextColor={palette.text+'77'} value={contact} onChangeText={setContact} style={s.input} />
-      <Pressable onPress={async()=>{ try{ await addAidPost({ type, description: desc, city, contact }); setType('rides'); setDesc(''); setCity(''); setContact(''); load(); } catch { Alert.alert('Failed','Could not post'); } }} style={s.button}><Text style={s.buttonText}>Post Need</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await addAidPost({ type, description: desc, city, contact }); setType('rides'); setDesc(''); setCity(''); setContact(''); load(); } catch { Alert.alert('Failed','Could not post'); } }} style={s.button}><Text style={s.buttonText}>Post Need</Text></A11yPressable>
       <Text style={[s.title,{ fontSize: 18, marginTop: 12 }]}>Recent posts</Text>
       {items.filter(p => {
         const approved = p.approved === true;
@@ -62,11 +63,11 @@ export default function MutualAid() {
           {!!p.contact && <Text style={s.cardText}>Contact: {p.contact}</Text>}
           <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 6 }}>
             <TextInput placeholder="Reply..." placeholderTextColor={palette.text+'77'} value={reply} onChangeText={setReply} style={[s.input,{ flex:1 }]} />
-            <Pressable onPress={async()=>{ try{ await respondToPost(p.id, reply); setReply(''); Alert.alert('Sent','Your response was sent.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Send</Text></Pressable>
-            <Pressable onPress={async()=>{ try{ await softDeletePost(p.id); setItems(prev=>prev.map(x=> x.id===p.id? { ...x, deleted: true }: x)); } catch{} }} style={s.smallBtn}><Text style={s.smallBtnText}>Delete</Text></Pressable>
-            <Pressable onPress={async()=>{ try { await flagItem('mutual', p.id, 'inappropriate'); Alert.alert('Flagged','Thanks for reporting.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Flag</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await respondToPost(p.id, reply); setReply(''); Alert.alert('Sent','Your response was sent.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Send</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await softDeletePost(p.id); setItems(prev=>prev.map(x=> x.id===p.id? { ...x, deleted: true }: x)); } catch{} }} style={s.smallBtn}><Text style={s.smallBtnText}>Delete</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { await flagItem('mutual', p.id, 'inappropriate'); Alert.alert('Flagged','Thanks for reporting.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Flag</Text></A11yPressable>
             <Link href={{ pathname: '/(tabs)/community/mutual-chat', params: { id: p.id } }} asChild>
-              <Pressable style={s.smallBtn}><Text style={s.smallBtnText}>Open chat</Text></Pressable>
+              <A11yPressable hitSlop={HIT_SLOP_8} style={s.smallBtn}><Text style={s.smallBtnText}>Open chat</Text></A11yPressable>
             </Link>
           </View>
         </View>

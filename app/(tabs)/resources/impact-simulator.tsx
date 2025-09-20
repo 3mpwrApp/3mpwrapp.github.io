@@ -1,7 +1,9 @@
 import React from "react";
-import { ScrollView, View, Text, StyleSheet, Pressable } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export default function ImpactSimulator() {
   const palette = useAppPalette();
@@ -59,26 +61,26 @@ export default function ImpactSimulator() {
         <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginBottom: 6 }}>
           <Text style={styles.text}>Benefit rate</Text>
           <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
-            <Pressable onPress={()=> setRate(r=> Math.max(50, r-5))} style={styles.tiny}><Text style={styles.tinyText}>-</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Decrease benefit rate" onPress={()=> setRate(r=> Math.max(50, r-5))} style={styles.tiny}><Text style={styles.tinyText}>-</Text></A11yPressable>
             <Text style={styles.text}>{rate}%</Text>
-            <Pressable onPress={()=> setRate(r=> Math.min(100, r+5))} style={styles.tiny}><Text style={styles.tinyText}>+</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Increase benefit rate" onPress={()=> setRate(r=> Math.min(100, r+5))} style={styles.tiny}><Text style={styles.tinyText}>+</Text></A11yPressable>
           </View>
         </View>
         <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginBottom: 6 }}>
           <Text style={styles.text}>Waiting period</Text>
           <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
-            <Pressable onPress={()=> setWait(w=> Math.max(0, w-1))} style={styles.tiny}><Text style={styles.tinyText}>-</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Decrease waiting period" onPress={()=> setWait(w=> Math.max(0, w-1))} style={styles.tiny}><Text style={styles.tinyText}>-</Text></A11yPressable>
             <Text style={styles.text}>{wait}d</Text>
-            <Pressable onPress={()=> setWait(w=> Math.min(30, w+1))} style={styles.tiny}><Text style={styles.tinyText}>+</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Increase waiting period" onPress={()=> setWait(w=> Math.min(30, w+1))} style={styles.tiny}><Text style={styles.tinyText}>+</Text></A11yPressable>
           </View>
         </View>
         <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between' }}>
           <Text style={styles.text}>Accommodations</Text>
           <View style={{ flexDirection:'row', gap:8 }}>
             {(['none','basic','robust'] as const).map(v => (
-              <Pressable key={v} onPress={()=> setAccom(v)} style={[styles.chip, accom===v && { backgroundColor: palette.primary, borderColor: palette.primary }]}>
+              <A11yPressable hitSlop={HIT_SLOP_8} key={v} accessibilityRole="button" accessibilityState={{ selected: accom===v }} accessibilityLabel={`Select ${v} accommodations`} onPress={()=> setAccom(v)} style={[styles.chip, accom===v && { backgroundColor: palette.primary, borderColor: palette.primary }]}>
                 <Text style={[styles.text, accom===v && { color: palette.onPrimary, fontWeight:'700' }]}>{v}</Text>
-              </Pressable>
+              </A11yPressable>
             ))}
           </View>
         </View>
@@ -86,9 +88,9 @@ export default function ImpactSimulator() {
       <View style={styles.block}>
         <Text style={styles.blockTitle}>Estimate</Text>
         <Text style={styles.text}>{summary}</Text>
-        <Pressable onPress={async()=>{ try { const FS = await import('expo-file-system'); const p = FS.cacheDirectory+`impact_${Date.now()}.txt`; await FS.writeAsStringAsync(p, summary); const Share = await import('expo-sharing'); if (await Share.isAvailableAsync()) await Share.shareAsync(p); } catch {} }} style={[styles.cta,{ marginTop: 8 }]}>
+        <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Share impact estimate" onPress={async()=>{ try { const FS = await import('expo-file-system'); const p = FS.cacheDirectory+`impact_${Date.now()}.txt`; await FS.writeAsStringAsync(p, summary); const Share = await import('expo-sharing'); if (await Share.isAvailableAsync()) await Share.shareAsync(p); } catch {} }} style={[styles.cta,{ marginTop: 8 }]}>
           <Text style={styles.ctaText}>Share estimate</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
     </ScrollView>
   );

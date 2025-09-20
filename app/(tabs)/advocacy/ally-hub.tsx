@@ -1,4 +1,6 @@
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useAppPalette } from '../../../theme/usePalette';
 
 const links = [
@@ -17,10 +19,10 @@ export default function AllyHub() {
       <Text style={s.title}>Cross‑Movement Ally Hub</Text>
       <Text style={s.text}>Links across movements for solidarity and learning.</Text>
       {links.map(l => (
-        <Pressable key={l.title} onPress={()=> require('expo-linking').openURL(l.url)} style={s.card}>
+        <A11yPressable key={l.title} hitSlop={HIT_SLOP_8} onPress={()=> require('expo-linking').openURL(l.url)} style={s.card}>
           <Text style={s.cardTitle}>{l.title}</Text>
           <Text style={[s.text,{ color: palette.primary }]}>{l.url}</Text>
-        </Pressable>
+        </A11yPressable>
       ))}
     </View>
   );

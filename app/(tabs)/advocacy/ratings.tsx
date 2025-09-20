@@ -1,12 +1,14 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, Alert, FlatList } from 'react-native';
-import { router } from 'expo-router';
-import { useAppPalette } from '../../../theme/usePalette';
-import { useAuth } from '../../../context/AuthContext';
-import { listRatings, upsertRating, ensureTarget, listTargets } from '../../../services/ratings';
-import { flagItem } from '../../../services/moderation';
-import SimpleBarChart from '../../../components/SimpleBarChart';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { router } from 'expo-router';
+import React from 'react';
+import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import SimpleBarChart from '../../../components/SimpleBarChart';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { useAuth } from '../../../context/AuthContext';
+import { flagItem } from '../../../services/moderation';
+import { ensureTarget, listRatings, listTargets, upsertRating } from '../../../services/ratings';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -43,15 +45,15 @@ export default function Ratings() {
       {isAdmin && (
         <View style={{ gap:8, marginBottom: 8 }}>
           <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-            <Pressable onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></Pressable>
-            <Pressable onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>Approved</Text></Pressable>
-            <Pressable onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>Pending</Text></Pressable>
-            <Pressable onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>Trash</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>Approved</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>Pending</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>Trash</Text></A11yPressable>
           </View>
           <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>Admin Pending</Text></Pressable>
-            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>Admin Approved</Text></Pressable>
-            <Pressable onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>Admin Trash</Text></Pressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>Admin Pending</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>Admin Approved</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>Admin Trash</Text></A11yPressable>
           </View>
         </View>
       )}
@@ -66,17 +68,17 @@ export default function Ratings() {
         {showSug && suggestions.length>0 && (
           <View style={s.suggestBox}>
             {suggestions.map(sug => (
-              <Pressable key={sug} onPress={()=> { setTarget(sug); setShowSug(false); }} style={s.suggestRow}>
+              <A11yPressable key={sug} hitSlop={HIT_SLOP_8} onPress={()=> { setTarget(sug); setShowSug(false); }} style={s.suggestRow}>
                 <Text style={{ color: palette.text }}>{sug}</Text>
-              </Pressable>
+              </A11yPressable>
             ))}
           </View>
         )}
       </View>
       <TextInput placeholder="Type (hospital, clinic, law, employer, union)" placeholderTextColor={palette.text+'77'} value={kind} onChangeText={setKind} style={s.input} />
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
-        <Pressable onPress={()=>setSort('latest')} style={[s.chip, sort==='latest'&&s.chipActive]}><Text style={{ color: sort==='latest'? palette.onPrimary: palette.text, fontWeight:'700' }}>Latest</Text></Pressable>
-        <Pressable onPress={()=>setSort('score')} style={[s.chip, sort==='score'&&s.chipActive]}><Text style={{ color: sort==='score'? palette.onPrimary: palette.text, fontWeight:'700' }}>Top</Text></Pressable>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSort('latest')} style={[s.chip, sort==='latest'&&s.chipActive]}><Text style={{ color: sort==='latest'? palette.onPrimary: palette.text, fontWeight:'700' }}>Latest</Text></A11yPressable>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSort('score')} style={[s.chip, sort==='score'&&s.chipActive]}><Text style={{ color: sort==='score'? palette.onPrimary: palette.text, fontWeight:'700' }}>Top</Text></A11yPressable>
       </View>
       <Text style={s.text}>Average rating: {avg} ({items.length})</Text>
       <View style={{ marginTop: 8 }}>
@@ -84,12 +86,12 @@ export default function Ratings() {
       </View>
       <TextInput placeholder="Score 1-5" placeholderTextColor={palette.text+'77'} value={score} onChangeText={setScore} style={s.input} />
       <TextInput placeholder="Comment (optional)" placeholderTextColor={palette.text+'77'} value={comment} onChangeText={setComment} style={s.input} />
-      <Pressable onPress={async()=>{ try{ const key = `rate:${target}`; const last = await AsyncStorage.getItem(key); if (last && (Date.now() - Number(last) < 5*60*1000)) { Alert.alert('Slow down','Please wait before submitting again.'); return; } await ensureTarget(target); await upsertRating({ target, kind: kind as any, score: Number(score)||0, comment }); await AsyncStorage.setItem(key, String(Date.now())); setComment(''); setScore('5'); load(); } catch (e:any) { Alert.alert('Failed', e?.message || 'Could not submit'); } }} style={s.button}><Text style={s.buttonText}>Submit Rating</Text></Pressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ const key = `rate:${target}`; const last = await AsyncStorage.getItem(key); if (last && (Date.now() - Number(last) < 5*60*1000)) { Alert.alert('Slow down','Please wait before submitting again.'); return; } await ensureTarget(target); await upsertRating({ target, kind: kind as any, score: Number(score)||0, comment }); await AsyncStorage.setItem(key, String(Date.now())); setComment(''); setScore('5'); load(); } catch (e:any) { Alert.alert('Failed', e?.message || 'Could not submit'); } }} style={s.button}><Text style={s.buttonText}>Submit Rating</Text></A11yPressable>
       <FlatList data={[...visible].sort((a,b)=> sort==='latest'? ((b.createdAt?.toDate?.()?.getTime?.()||0) - (a.createdAt?.toDate?.()?.getTime?.()||0)) : ((b.score||0)-(a.score||0)))} keyExtractor={i=>i.id} renderItem={({item:i}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{i.score} ★</Text>
           {!!i.comment && <Text style={s.text}>{i.comment}</Text>}
-          <Pressable onPress={async()=>{ try{ await flagItem('rating', i.id, 'inaccurate'); Alert.alert('Flagged','Thanks for reporting.'); } catch {} }} style={s.button}><Text style={s.buttonText}>Flag</Text></Pressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await flagItem('rating', i.id, 'inaccurate'); Alert.alert('Flagged','Thanks for reporting.'); } catch {} }} style={s.button}><Text style={s.buttonText}>Flag</Text></A11yPressable>
         </View>
       )} />
     </View>

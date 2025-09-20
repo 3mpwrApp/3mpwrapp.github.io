@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { View, Pressable, Text, StyleSheet, Platform } from 'react-native';
-import { useAppPalette } from '../theme/usePalette';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import { HIT_SLOP_8 } from '../constants/a11y';
 import { useVoiceCommands } from '../hooks/useVoiceMode';
 import { transcribeAudio } from '../services/stt';
+import { useAppPalette } from '../theme/usePalette';
+import A11yPressable from './A11yPressable';
 
 export default function VoiceController() {
   const palette = useAppPalette();
@@ -85,9 +87,9 @@ export default function VoiceController() {
           ].map((c)=> (<Text key={c} style={s.helpText}>• {c}</Text>))}
         </View>
       )}
-      <Pressable accessibilityLabel="Voice control" onPress={onPress} onLongPress={()=> setShowHelp(v=>!v)} style={[s.mic, recording && s.micRec]}>
+      <A11yPressable role="button" hitSlop={HIT_SLOP_8} accessibilityLabel="Voice control" onPress={onPress} onLongPress={()=> setShowHelp(v=>!v)} style={[s.mic, recording && s.micRec]}>
         <Text style={s.micText}>{busy ? '…' : (recording ? 'Stop' : 'Mic')}</Text>
-      </Pressable>
+      </A11yPressable>
     </View>
   );
 }

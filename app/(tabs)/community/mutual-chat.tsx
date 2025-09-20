@@ -1,11 +1,12 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
-import { useAppPalette } from '../../../theme/usePalette';
-import { db } from '../../../firebase/config';
-import { addDoc, collection, orderBy, query, serverTimestamp, onSnapshot, setDoc, doc } from 'firebase/firestore';
+import { addDoc, collection, doc, onSnapshot, orderBy, query, serverTimestamp, setDoc } from 'firebase/firestore';
+import React from 'react';
+import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { auth, db } from '../../../firebase/config';
 import { registerExpoPushToken } from '../../../services/tokens';
-import { auth } from '../../../firebase/config';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -99,7 +100,7 @@ export default function MutualChat() {
           }} 
           style={[s.input,{ flex:1 }]} 
         />
-        <Pressable onPress={async()=>{ 
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ 
           try{ 
             const author = auth.currentUser?.uid || 'anon'; 
             if (chatId === 'general') {
@@ -127,7 +128,7 @@ export default function MutualChat() {
           } 
         }} style={s.button}>
           <Text style={s.buttonText}>Send</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
     </View>
   );

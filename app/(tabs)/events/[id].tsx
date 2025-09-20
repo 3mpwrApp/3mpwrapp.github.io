@@ -1,9 +1,11 @@
-import { View, Text, StyleSheet, Pressable, Share } from "react-native";
 import * as Linking from "expo-linking";
-import { useLocalSearchParams, Stack } from "expo-router";
-import { useAppPalette } from "../../../theme/usePalette";
+import { Stack, useLocalSearchParams } from "expo-router";
+import { Share, StyleSheet, Text, View } from "react-native";
+import A11yPressable from '../../../components/A11yPressable';
 import SettingsLink from "../../../components/SettingsLink";
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { events } from "../../../data/events";
+import { useAppPalette } from "../../../theme/usePalette";
 
 function createICS(
   title: string,
@@ -82,7 +84,7 @@ export default function EventDetail() {
           Where: {event?.isVirtual ? "Virtual" : (event?.location ?? "TBD")}
         </Text>
         {!!event && (
-          <Pressable
+          <A11yPressable
             style={({ pressed }) => [
               styles.button,
               pressed && { opacity: 0.8 },
@@ -90,9 +92,10 @@ export default function EventDetail() {
             onPress={addToCalendar}
             accessibilityRole="button"
             accessibilityLabel="Add to calendar"
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={styles.buttonText}>Add Reminder</Text>
-          </Pressable>
+          </A11yPressable>
         )}
       </View>
     </>

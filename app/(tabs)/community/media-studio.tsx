@@ -1,11 +1,13 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
-import { auth, db, storage } from '../../../firebase/config';
-import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { useAuth } from '../../../context/AuthContext';
 import { router } from 'expo-router';
+import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import React from 'react';
+import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { useAuth } from '../../../context/AuthContext';
+import { auth, db, storage } from '../../../firebase/config';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -40,13 +42,13 @@ export default function MediaStudio() {
       <Text style={s.title}>Disability + Worker Media Studio</Text>
       {isAdmin && (
         <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-          <Pressable onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.chip}><Text style={s.chipText}>Pending</Text></Pressable>
-          <Pressable onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.chip}><Text style={s.chipText}>Trash</Text></Pressable>
+      <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.chip}><Text style={s.chipText}>Pending</Text></A11yPressable>
+      <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.chip}><Text style={s.chipText}>Trash</Text></A11yPressable>
         </View>
       )}
       <TextInput placeholder="Title" placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
       <TextInput placeholder="Caption / text" placeholderTextColor={palette.text+'77'} value={text} onChangeText={setText} style={s.input} />
-      <Pressable onPress={upload} style={s.button}><Text style={s.buttonText}>Upload media</Text></Pressable>
+    <A11yPressable hitSlop={HIT_SLOP_8} onPress={upload} style={s.button}><Text style={s.buttonText}>Upload media</Text></A11yPressable>
       {items.map(it => (
         <View key={it.id} style={s.card}>
           <Text style={s.cardTitle}>{it.title || '(untitled)'}</Text>
