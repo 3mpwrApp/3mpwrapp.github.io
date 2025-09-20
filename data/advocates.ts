@@ -16,4 +16,9 @@ export const advocates: Advocate[] = [
     name: "Jordan Lee",
     bio: "Public health researcher focused on access.",
   },
+  {
+    id: "a4",
+    name: "Paul Taylor",
+    bio: "Injured worker advocate, founder of FightWCB.org sharing global stories and legal support resources.",
+  },
 ];

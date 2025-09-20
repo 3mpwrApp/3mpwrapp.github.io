@@ -36,6 +36,18 @@ export const masterIndex: MasterIndexRoot = {
       ]
     },
     {
+      id: 'can-community-advocacy',
+      title: 'Community Advocacy & Legal Support (Ontario Focus)',
+      description: 'Grassroots and clinic-based hubs combining advocacy, research, legal support, and education.',
+      links: [
+        { label: 'Injured Workers Community Legal Clinic (IWC)', url: 'https://injuredworkersonline.org/' },
+        { label: 'FightWCB – Global Injured Worker Stories & Resources', url: 'https://fightwcb.org/' },
+        { label: 'ONIWG – Ontario Network of Injured Workers Groups', url: 'https://injuredworkersonline.org/oniwg/' },
+        { label: 'Important Papers / Reports (FightWCB)', url: 'https://fightwcb.org/important-papers-reports/' },
+        { label: 'Paul Taylor – My Story (FightWCB)', url: 'https://fightwcb.org/my-story/' }
+      ]
+    },
+    {
       id: 'can-selected-studies',
       title: 'Selected Canadian Studies (Examples)',
       description: 'Illustrative research themes for deeper exploration.',
@@ -188,7 +200,18 @@ export const masterIndex: MasterIndexRoot = {
       title: 'Claim Suppression / Access to Compensation',
       links: [
         { label: 'Canadian Academic & Network Publications (Gateway)', url: 'https://injuredworkersonline.org/' },
-        { label: 'IWH – Reporting & Claim Behaviour Studies', url: 'https://www.iwh.on.ca/' }
+        { label: 'IWH – Reporting & Claim Behaviour Studies', url: 'https://www.iwh.on.ca/' },
+        { label: 'Claims Suppression Research Project (2025 – IWC/McMaster/ONIWG)', url: 'https://injuredworkersonline.org/' },
+        { label: 'FightWCB – Worker Story Archive (Under-reporting Signals)', url: 'https://fightwcb.org/' }
+      ]
+    },
+    {
+      id: 'theme-poverty-income-loss',
+      title: 'Poverty & Income Loss Post-Injury',
+      links: [
+        { label: 'Phantom Jobs, Empty Pockets (2019)', url: 'https://injuredworkersonline.org/' },
+        { label: 'Poverty Survey (Thunder Bay & District IWSG / ONIWG)', url: 'https://injuredworkersonline.org/' },
+        { label: 'What Injured Workers Need – Community Response (2024)', url: 'https://injuredworkersonline.org/' }
       ]
     },
     {
@@ -262,7 +285,9 @@ export const masterIndex: MasterIndexRoot = {
       title: 'Policy Evaluation & Reforms',
       links: [
         { label: 'WCRI – State Reforms & CompScope', url: 'https://www.wcrinet.org/' },
-        { label: 'OECD – Comparative Policy Analyses', url: 'https://www.oecd.org/' }
+        { label: 'OECD – Comparative Policy Analyses', url: 'https://www.oecd.org/' },
+        { label: 'Meredith Principles / Reform Platforms (Ontario)', url: 'https://injuredworkersonline.org/' },
+        { label: 'Workers’ Compensation Act (Proposed 2025) – Advocacy Draft', url: 'https://injuredworkersonline.org/' }
       ]
     },
     {

@@ -18,4 +18,6 @@ export const advocates: Advocate[] = [
   { id: 'a4', name: 'Prairie Legal Aid', city: 'Winnipeg', province: 'MB', issues: ['WSIB','employment'], proBono: true, website: 'https://example.org' },
   { id: 'a5', name: 'Atlantic Disability Advocates', city: 'Halifax', province: 'NS', issues: ['human-rights','accommodation'], proBono: false, email: 'info@ada.ca' },
   { id: 'a6', name: 'Northern Justice Network', city: 'Yellowknife', province: 'NT', issues: ['appeals','human-rights'], proBono: true },
+  { id: 'a7', name: 'Injured Workers Community Legal Clinic (IWC)', org: 'Community Legal Clinic', city: 'Toronto', province: 'ON', issues: ['WSIB','appeals','policy-reform','occupational-disease'], proBono: true, website: 'https://injuredworkersonline.org/' },
+  { id: 'a8', name: 'FightWCB.org (Paul Taylor)', org: 'Advocacy / Story Archive', issues: ['WSIB','claim-suppression','poverty','law-reform'], proBono: true, website: 'https://fightwcb.org/' },
 ];
