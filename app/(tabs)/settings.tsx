@@ -6,11 +6,13 @@ import { deleteUser, EmailAuthProvider, reauthenticateWithCredential, sendPasswo
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import React, { useEffect, useRef, useState } from 'react';
-import { Alert, Button, Image, Linking, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Button, Image, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../components/A11yPressable';
 import AccessibilityToggle from '../../components/AccessibilityToggle';
 import EmergencyWalletCard from '../../components/EmergencyWalletCard';
 import LanguageSelector from '../../components/LanguageSelector';
 import NotificationPreferences from '../../components/NotificationPreferences';
+import { HIT_SLOP_8 } from '../../constants/a11y';
 import { useAuth } from '../../context/AuthContext';
 import { auth, db, storage } from '../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
@@ -66,7 +68,7 @@ export default function SettingsScreen() {
   const cancelDelete = () => { setDeleteMode(false); setPassword(''); };
   const confirmDelete = async () => { if (!user?.email) return; setDeleting(true); try { const cred = EmailAuthProvider.credential(user.email, password); await reauthenticateWithCredential(user, cred); await deleteUser(user); logEvent('account_delete', { method: 'password' }); Alert.alert(t('settings.account.deleted','Account deleted')); setDeleteMode(false); } catch(e:any){ logEvent('account_delete_failed', { code: e?.code || 'error', message: e?.message }); Alert.alert(t('settings.account.reauthFailed','Re-authentication failed'), e?.message||'Error'); } finally { setDeleting(false); } };
 
-  if (showEmergencyCard) return <EmergencyWalletCard />;
+  // Removed standalone emergency card navigation: now embedded below.
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding:20 }} accessibilityLabel={t('settings.title','Settings screen')}>
@@ -74,16 +76,29 @@ export default function SettingsScreen() {
       <Section title={t('settings.accessibility.title','Accessibility')} subtitle={t('settings.accessibility.subtitle','Make the app work better for you')} styles={styles}><EnhancedA11ySettingsSection /></Section>
       <LanguageSelector />
       <NotificationPreferences />
+      <Section title={t('settings.emergencyWallet.title','Emergency Wallet Card')} subtitle={t('settings.emergencyWallet.subtitle','Store key medical and emergency contact information locally')} styles={styles}>
+        <A11yPressable
+          onPress={() => setShowEmergencyCard(v => !v)}
+          accessibilityRole='button'
+          accessibilityLabel={showEmergencyCard ? t('settings.emergencyWallet.hide','Hide emergency wallet card form') : t('settings.emergencyWallet.show','Show emergency wallet card form')}
+          hitSlop={HIT_SLOP_8}
+          style={[styles.linkButton, { justifyContent:'center', marginBottom:12 }]}
+        >
+          <Ionicons name='medical' size={20} color={palette.primary} />
+          <Text style={styles.linkText}>{showEmergencyCard ? t('common.hide','Hide') : t('common.show','Show')}</Text>
+        </A11yPressable>
+        {showEmergencyCard && <EmergencyWalletCard />}
+      </Section>
       <Section title={t('settings.bookmarks.title','Bookmarks')} subtitle={t('settings.bookmarks.subtitle','Save quick links to app features')} styles={styles}><BookmarksSection /></Section>
       <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>
         {isGuest && (
           <View style={{ marginBottom:16 }}>
             <Text style={[styles.description, { marginBottom:8 }]}>{t('settings.account.guestNotice','You are browsing as a guest. Create an account to sync data across devices and enable full features.')}</Text>
             <Link href={'/auth/sign-up' as any} asChild>
-              <Pressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button'>
+              <A11yPressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button' accessibilityLabel={t('settings.account.createAccount','Create Account')} hitSlop={HIT_SLOP_8}>
                 <Ionicons name='person-add' size={20} color={palette.primary} />
                 <Text style={styles.linkText}>{t('settings.account.createAccount','Create Account')}</Text>
-              </Pressable>
+              </A11yPressable>
             </Link>
           </View>
         )}
@@ -111,8 +126,12 @@ export default function SettingsScreen() {
                     <Text style={{ color:palette.text, opacity:0.8, marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordBody','Enter your password to permanently delete your account.')}</Text>
                     <TextInput style={styles.input} secureTextEntry value={password} onChangeText={setPassword} placeholder={t('settings.account.passwordPlaceholder','Password')} accessibilityLabel={t('settings.account.passwordPlaceholder','Password')} />
                     <View style={{ flexDirection:'row', gap:8 }}>
-                      <Pressable hitSlop={{ top:8, bottom:8, left:8, right:8 }} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting || !password} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}><Text style={{ color:'#fff', fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text></Pressable>
-                      <Pressable hitSlop={{ top:8, bottom:8, left:8, right:8 }} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}><Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text></Pressable>
+                      <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting || !password} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}>
+                        <Text style={{ color:'#fff', fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text>
+                      </A11yPressable>
+                      <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}>
+                        <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
+                      </A11yPressable>
                     </View>
                   </>
                 ) : (
@@ -122,8 +141,12 @@ export default function SettingsScreen() {
                       {t('settings.account.deleteNoPassword','This account uses a third-party sign-in method. Sign in again with your provider (e.g. Google/Apple) recently, then press Continue to delete.')}
                     </Text>
                     <View style={{ flexDirection:'row', gap:8 }}>
-                      <Pressable hitSlop={{ top:8, bottom:8, left:8, right:8 }} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}><Text style={{ color:'#fff', fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text></Pressable>
-                      <Pressable hitSlop={{ top:8, bottom:8, left:8, right:8 }} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}><Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text></Pressable>
+                      <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}>
+                        <Text style={{ color:'#fff', fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text>
+                      </A11yPressable>
+                      <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}>
+                        <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
+                      </A11yPressable>
                     </View>
                     {!!providerList.length && <Text style={{ color:palette.text, opacity:0.6, marginTop:8, fontSize:12 }}>Providers: {providerList.join(', ')}</Text>}
                   </>
@@ -135,10 +158,10 @@ export default function SettingsScreen() {
       </Section>
       <Section title={t('settings.emergency.title','Emergency Wallet Card')} subtitle={t('settings.emergency.subtitle','Quick access to important information')} styles={styles}>
         <Text style={styles.description}>{t('settings.emergency.description','Create a digital emergency card with your key information for quick access when needed')}</Text>
-        <Pressable style={styles.emergencyButton} onPress={()=> setShowEmergencyCard(true)} accessibilityRole='button' accessibilityLabel={t('settings.emergency.openLabel','Open emergency wallet card')}>
+        <A11yPressable style={styles.emergencyButton} onPress={()=> setShowEmergencyCard(true)} accessibilityRole='button' accessibilityLabel={t('settings.emergency.openLabel','Open emergency wallet card')} hitSlop={HIT_SLOP_8}>
           <Ionicons name='medical' size={20} color='white' />
           <Text style={styles.emergencyButtonText}>{t('settings.emergency.manage','Manage Emergency Card')}</Text>
-        </Pressable>
+        </A11yPressable>
       </Section>
       <Section title='Local Profile (for templates)' styles={styles}><LocalProfileSection /></Section>
       <Section title='Wellness Preferences' styles={styles}><WellnessPrefsSection /></Section>
@@ -158,14 +181,14 @@ function EnhancedA11ySettingsSection() {
   const { textScale, setTextScale, resourcePreferredFormat, setResourcePreferredFormat } = useSettings();
   const { dyslexiaFriendly, setDyslexiaFriendly, plainLanguage, setPlainLanguage, captionsPreferred, setCaptionsPreferred, voiceMode, setVoiceMode } = useSettings();
   const ScaleButton = ({ label, value }: { label: string; value: TextScale }) => (
-    <Pressable accessibilityRole='button' accessibilityState={{ selected: textScale === value }} onPress={() => setTextScale(value)} style={[styles.button, textScale === value && styles.buttonActive]}>
+    <A11yPressable accessibilityRole='button' accessibilityState={{ selected: textScale === value }} onPress={() => setTextScale(value)} style={[styles.button, textScale === value && styles.buttonActive]} hitSlop={HIT_SLOP_8}>
       <Text style={[styles.buttonText, textScale === value && styles.buttonTextActive]}>{label}</Text>
-    </Pressable>
+    </A11yPressable>
   );
   const FormatButton = ({ label, value }: { label: string; value: ResourceFormat }) => (
-    <Pressable accessibilityRole='button' accessibilityState={{ selected: resourcePreferredFormat === value }} onPress={() => setResourcePreferredFormat(value)} style={[styles.button, resourcePreferredFormat === value && styles.buttonActive]}>
+    <A11yPressable accessibilityRole='button' accessibilityState={{ selected: resourcePreferredFormat === value }} onPress={() => setResourcePreferredFormat(value)} style={[styles.button, resourcePreferredFormat === value && styles.buttonActive]} hitSlop={HIT_SLOP_8}>
       <Text style={[styles.buttonText, resourcePreferredFormat === value && styles.buttonTextActive]}>{label}</Text>
-    </Pressable>
+    </A11yPressable>
   );
   return (
     <View>
@@ -193,10 +216,10 @@ function EnhancedA11ySettingsSection() {
       </View>
       <View style={styles.voiceHelpSection}>
         <Link href={'/(tabs)/voice-help' as any} asChild>
-          <Pressable style={styles.linkButton} accessibilityRole='button'>
+          <A11yPressable style={styles.linkButton} accessibilityRole='button' accessibilityLabel='Open voice help guide' hitSlop={HIT_SLOP_8}>
             <Ionicons name='help-circle' size={20} color={palette.primary} />
             <Text style={styles.linkText}>Voice Help Guide</Text>
-          </Pressable>
+          </A11yPressable>
         </Link>
       </View>
     </View>
@@ -279,9 +302,9 @@ function EnhancedPrivacySection() {
         <Text style={styles.description}>{t('settings.privacy.autoLockDesc','Minutes before app locks')}</Text>
         <View style={styles.buttonRow}>
           {[1,5,15,30].map(m => (
-            <Pressable key={m} style={[styles.button, autoLockTimeout === m && styles.buttonActive]} onPress={()=> setAutoLockTimeout(m)} accessibilityRole='button' accessibilityState={{ selected: autoLockTimeout === m }} accessibilityLabel={`Set auto-lock to ${m} minutes`}>
+            <A11yPressable key={m} style={[styles.button, autoLockTimeout === m && styles.buttonActive]} onPress={()=> setAutoLockTimeout(m)} accessibilityRole='button' accessibilityState={{ selected: autoLockTimeout === m }} accessibilityLabel={`Set auto-lock to ${m} minutes`} hitSlop={HIT_SLOP_8}>
               <Text style={[styles.buttonText, autoLockTimeout === m && styles.buttonTextActive]}>{m}m</Text>
-            </Pressable>
+            </A11yPressable>
           ))}
         </View>
       </View>
@@ -295,9 +318,9 @@ function EnhancedPrivacySection() {
         </View>
         <AccessibilityToggle title='Wellness Lock' description='Require passcode to access wellness features' value={state.lockWellness ?? false} onValueChange={setLockWellness} icon='heart-outline' testID='wellness-lock-toggle' />
         <View style={styles.backupButtons}>
-          <Pressable style={styles.backupButton} onPress={onExport} accessibilityRole='button' accessibilityLabel='Export backup'><Ionicons name='download' size={16} color={palette.primary} /><Text style={styles.backupButtonText}>Export Backup</Text></Pressable>
-          <Pressable style={styles.backupButton} onPress={onImport} accessibilityRole='button' accessibilityLabel='Import backup'><Ionicons name='cloud-upload' size={16} color={palette.primary} /><Text style={styles.backupButtonText}>Import Backup</Text></Pressable>
-          <Pressable style={[styles.backupButton, styles.dangerButton]} onPress={onClear} accessibilityRole='button' accessibilityLabel='Clear all data'><Ionicons name='trash' size={16} color={palette.error} /><Text style={[styles.backupButtonText, styles.dangerButtonText]}>Clear All Data</Text></Pressable>
+          <A11yPressable style={styles.backupButton} onPress={onExport} accessibilityRole='button' accessibilityLabel='Export backup' hitSlop={HIT_SLOP_8}><Ionicons name='download' size={16} color={palette.primary} /><Text style={styles.backupButtonText}>Export Backup</Text></A11yPressable>
+          <A11yPressable style={styles.backupButton} onPress={onImport} accessibilityRole='button' accessibilityLabel='Import backup' hitSlop={HIT_SLOP_8}><Ionicons name='cloud-upload' size={16} color={palette.primary} /><Text style={styles.backupButtonText}>Import Backup</Text></A11yPressable>
+          <A11yPressable style={[styles.backupButton, styles.dangerButton]} onPress={onClear} accessibilityRole='button' accessibilityLabel='Clear all data' hitSlop={HIT_SLOP_8}><Ionicons name='trash' size={16} color={palette.error} /><Text style={[styles.backupButtonText, styles.dangerButtonText]}>Clear All Data</Text></A11yPressable>
         </View>
       </View>
     </View>
@@ -323,7 +346,15 @@ function AdminSection() {
     <View>
       <Text style={{ color:palette.text, opacity:0.9, marginBottom:6 }}>Status: {isAdmin? 'Admin':'Standard user'}</Text>
       <Button title='Refresh admin status' onPress={refreshClaims} />
-      {isAdmin && <View style={{ marginTop:8 }}><Link href={'/(tabs)/admin' as any}><Text style={{ color:palette.primary, fontWeight:'700' }}>Open Admin Panel</Text></Link></View>}
+      {isAdmin && (
+        <View style={{ marginTop:8 }}>
+          <Link href={'/(tabs)/admin' as any} asChild>
+            <A11yPressable accessibilityRole='link' accessibilityLabel='Open Admin Panel' hitSlop={HIT_SLOP_8} style={{ paddingVertical:4 }}>
+              <Text style={{ color:palette.primary, fontWeight:'700' }}>Open Admin Panel</Text>
+            </A11yPressable>
+          </Link>
+        </View>
+      )}
     </View>
   );
 }
@@ -354,9 +385,9 @@ function BookmarksSection() {
           <Text style={[styles.rowLabel, { marginTop:0 }]}>{t('settings.bookmarks.suggestions','Suggestions')}</Text>
           <View style={{ flexDirection:'row', flexWrap:'wrap' }}>
             {suggestions.map(s => (
-              <Pressable key={s.route} hitSlop={{ top:8, bottom:8, left:8, right:8 }} onPress={()=> addEntry(s.route)} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.addSuggestion','Add bookmark for') + ' ' + t(s.tKey, s.fallback)} style={{ paddingHorizontal:12, paddingVertical:8, backgroundColor:palette.card, borderRadius:999, borderWidth:1, borderColor:palette.muted, marginRight:6, marginBottom:6, minHeight:40, justifyContent:'center' }}>
+              <A11yPressable key={s.route} hitSlop={HIT_SLOP_8} onPress={()=> addEntry(s.route)} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.addSuggestion','Add bookmark for') + ' ' + t(s.tKey, s.fallback)} style={{ paddingHorizontal:12, paddingVertical:8, backgroundColor:palette.card, borderRadius:999, borderWidth:1, borderColor:palette.muted, marginRight:6, marginBottom:6, minHeight:40, justifyContent:'center' }}>
                 <Text style={{ color:palette.text, fontSize:Math.round(13*factor) }}>{t(s.tKey, s.fallback)}</Text>
-              </Pressable>
+              </A11yPressable>
             ))}
           </View>
         </View>
@@ -375,14 +406,14 @@ function BookmarksSection() {
                 <Text style={{ color:palette.text, fontWeight:'600' }}>{b.tKey ? t(b.tKey, b.label) : b.label}</Text>
                 <Text style={{ color:palette.text, opacity:0.6, fontSize:12 }}>{b.route}</Text>
               </View>
-              <Pressable hitSlop={{ top:8, bottom:8, left:8, right:8 }} onPress={()=> removeBookmark(b.id)} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.remove','Remove bookmark')} style={{ padding:8, minHeight:44, justifyContent:'center' }}>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> removeBookmark(b.id)} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.remove','Remove bookmark')} style={{ padding:8, minHeight:44, justifyContent:'center' }}>
                 <Ionicons name='trash' size={18} color={palette.error} />
-              </Pressable>
+              </A11yPressable>
             </View>
           ))}
-          <Pressable hitSlop={{ top:8, bottom:8, left:8, right:8 }} onPress={()=> clearBookmarks()} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.clearAll','Clear all bookmarks')} style={{ padding:8, alignSelf:'flex-start', minHeight:44, justifyContent:'center' }}>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> clearBookmarks()} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.clearAll','Clear all bookmarks')} style={{ padding:8, alignSelf:'flex-start', minHeight:44, justifyContent:'center' }}>
             <Text style={{ color:palette.error, fontWeight:'600' }}>{t('settings.bookmarks.clearAll','Clear All')}</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       )}
     </View>

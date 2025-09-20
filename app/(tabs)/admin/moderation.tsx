@@ -1,10 +1,12 @@
+import { collection, deleteDoc, doc, getDocs, orderBy, query, updateDoc, where } from 'firebase/firestore';
 import React from 'react';
-import { View, Text, StyleSheet, Alert, FlatList, Pressable } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
+import { Alert, FlatList, StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
 import AdminGuard from '../../../components/AdminGuard';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { db } from '../../../firebase/config';
-import { collection, getDocs, orderBy, query, where, updateDoc, doc, deleteDoc } from 'firebase/firestore';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -44,9 +46,33 @@ export default function ModerationQueue() {
             <View style={s.row}>
               <Text style={s.text}>{item.title || '(no title)'} {item.flagged ? '— flagged' : ''} {item.hidden ? '— hidden' : ''}</Text>
               <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
-                <Pressable onPress={async()=>{ try { await updateDoc(doc(db,'threads', item.id), { flagged: !(item.flagged===true) }); load(); } catch {} }} style={s.btn}><Text style={s.btnText}>{item.flagged ? 'Unflag' : 'Flag'}</Text></Pressable>
-                <Pressable onPress={async()=>{ try { await updateDoc(doc(db,'threads', item.id), { hidden: !(item.hidden===true) }); load(); } catch {} }} style={s.btn}><Text style={s.btnText}>{item.hidden ? 'Unhide' : 'Hide'}</Text></Pressable>
-                <Pressable onPress={async()=>{ try { await deleteDoc(doc(db,'threads', item.id)); load(); } catch {} }} style={s.btn}><Text style={s.btnText}>Delete</Text></Pressable>
+                <A11yPressable
+                  onPress={async()=>{ try { await updateDoc(doc(db,'threads', item.id), { flagged: !(item.flagged===true) }); load(); } catch {} }}
+                  style={s.btn}
+                  hitSlop={HIT_SLOP_8}
+                  accessibilityRole="button"
+                  accessibilityLabel={item.flagged ? 'Unflag thread' : 'Flag thread'}
+                >
+                  <Text style={s.btnText}>{item.flagged ? 'Unflag' : 'Flag'}</Text>
+                </A11yPressable>
+                <A11yPressable
+                  onPress={async()=>{ try { await updateDoc(doc(db,'threads', item.id), { hidden: !(item.hidden===true) }); load(); } catch {} }}
+                  style={s.btn}
+                  hitSlop={HIT_SLOP_8}
+                  accessibilityRole="button"
+                  accessibilityLabel={item.hidden ? 'Unhide thread' : 'Hide thread'}
+                >
+                  <Text style={s.btnText}>{item.hidden ? 'Unhide' : 'Hide'}</Text>
+                </A11yPressable>
+                <A11yPressable
+                  onPress={async()=>{ try { await deleteDoc(doc(db,'threads', item.id)); load(); } catch {} }}
+                  style={s.btn}
+                  hitSlop={HIT_SLOP_8}
+                  accessibilityRole="button"
+                  accessibilityLabel="Delete thread"
+                >
+                  <Text style={s.btnText}>Delete</Text>
+                </A11yPressable>
               </View>
             </View>
           )}

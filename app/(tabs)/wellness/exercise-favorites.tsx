@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, Linking, FlatList } from 'react-native';
-import { useAppPalette } from '../../../theme/usePalette';
+import { FlatList, Linking, StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -51,8 +53,8 @@ export default function ExerciseFavorites() {
           <View style={s.row}>
             <Text style={s.rowText}>{item.title}</Text>
             <View style={{ flexDirection:'row', gap:8 }}>
-              <Pressable onPress={()=> Linking.openURL(item.url)} style={s.btn}><Text style={s.btnText}>Open</Text></Pressable>
-              <Pressable onPress={()=> remove(item.id)} style={s.btn}><Text style={s.btnText}>Remove</Text></Pressable>
+              <A11yPressable onPress={()=> Linking.openURL(item.url)} style={s.btn} accessibilityRole="button" accessibilityLabel={`Open exercise link for ${item.title}`} hitSlop={HIT_SLOP_8}><Text style={s.btnText}>Open</Text></A11yPressable>
+              <A11yPressable onPress={()=> remove(item.id)} style={s.btn} accessibilityRole="button" accessibilityLabel={`Remove ${item.title} from favorites`} hitSlop={HIT_SLOP_8}><Text style={s.btnText}>Remove</Text></A11yPressable>
             </View>
           </View>
         )}

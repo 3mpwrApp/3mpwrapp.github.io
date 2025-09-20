@@ -1,7 +1,6 @@
 import React from "react";
 import {
     Alert,
-    Pressable,
     ScrollView,
     Share,
     StyleSheet,
@@ -9,7 +8,9 @@ import {
     TextInput,
     View,
 } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import PrivacyGate from "../../../components/PrivacyGate";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -214,15 +215,16 @@ export default function SleepEnergyTracker() {
         <Text style={styles.previewText}>
           Track your sleep and energy daily. Add notes and tags for patterns. Export summaries for clinicians or claims, and learn more about sleep health.
         </Text>
-        <Pressable
+        <A11yPressable
           onPress={() => require('react-native').Linking.openURL('https://empowrapp.com/sleep-energy-info')}
           style={[styles.button, { backgroundColor: palette.primary, marginBottom: 6 }]}
           accessibilityRole="link"
           accessibilityLabel="Learn more about sleep and energy tracking"
           accessibilityHint="Opens a page with more information about sleep health."
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={[styles.buttonText, { color: palette.onPrimary }]}>Learn More</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       <Text
         ref={titleRef}
@@ -244,32 +246,35 @@ export default function SleepEnergyTracker() {
       <Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} accessibilityLabel="Tags input" accessibilityHint="Add tags to help categorize your entry." />
       {editingId ? (
         <View style={{ flexDirection: "row", gap: 8 }}>
-          <Pressable
+          <A11yPressable
             style={[styles.button, { flex: 1 }]}
             onPress={saveEdit}
             accessibilityRole="button"
             accessibilityLabel="Save edits"
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={styles.buttonText}>Save</Text>
-          </Pressable>
-          <Pressable
+          </A11yPressable>
+          <A11yPressable
             style={[styles.button, { flex: 1, backgroundColor: "#777" }]}
             onPress={cancelEdit}
             accessibilityRole="button"
             accessibilityLabel="Cancel edits"
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={styles.buttonText}>Cancel</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       ) : (
-        <Pressable
+        <A11yPressable
           style={styles.button}
           onPress={add}
           accessibilityRole="button"
           accessibilityLabel="Add entry"
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={styles.buttonText}>Add Entry</Text>
-        </Pressable>
+        </A11yPressable>
       )}
 
       <Text style={[styles.sectionTitle, { marginTop: 12 }]}>
@@ -285,7 +290,7 @@ export default function SleepEnergyTracker() {
         }}
       >
         {["insomnia", "nap", "fatigue", "pain", "stress"].map((tg) => (
-          <Pressable
+          <A11yPressable
             key={tg}
             onPress={() => {
               const arr = (tags || "")
@@ -306,6 +311,10 @@ export default function SleepEnergyTracker() {
                 ? palette.primary
                 : "transparent",
             }}
+            accessibilityRole="button"
+            accessibilityLabel={`Toggle tag ${tg}`}
+            accessibilityState={{ selected: (tags || "").includes(tg) }}
+            hitSlop={HIT_SLOP_8}
           >
             <Text
               style={{
@@ -316,7 +325,7 @@ export default function SleepEnergyTracker() {
             >
               {tg}
             </Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
       {filtered.length === 0 ? (
@@ -328,9 +337,10 @@ export default function SleepEnergyTracker() {
               style={styles.entryText}
             >{`${e.date} Ã¢â‚¬â€ ${e.sleepHours || "?"}h, q${e.sleepQuality || "?"}, e${e.energy || "?"}`}</Text>
             <View style={{ flexDirection: "row", gap: 8, marginTop: 6 }}>
-              <Pressable
+              <A11yPressable
                 onPress={() => startEdit(e)}
                 accessibilityRole="button"
+                accessibilityLabel={`Edit entry dated ${e.date}`}
                 style={[
                   styles.smallBtn,
                   {
@@ -339,20 +349,23 @@ export default function SleepEnergyTracker() {
                     borderWidth: StyleSheet.hairlineWidth,
                   },
                 ]}
+                hitSlop={HIT_SLOP_8}
               >
                 <Text style={[styles.smallBtnText, { color: palette.text }]}>
                   Edit
                 </Text>
-              </Pressable>
-              <Pressable
+              </A11yPressable>
+              <A11yPressable
                 onPress={() => remove(e.id)}
                 accessibilityRole="button"
+                accessibilityLabel={`Delete entry dated ${e.date}`}
                 style={[styles.smallBtn, { backgroundColor: "#b00020" }]}
+                hitSlop={HIT_SLOP_8}
               >
                 <Text style={[styles.smallBtnText, { color: "#fff" }]}>
                   Delete
                 </Text>
-              </Pressable>
+              </A11yPressable>
             </View>
           </View>
         ))
@@ -411,7 +424,7 @@ export default function SleepEnergyTracker() {
         <Text style={styles.previewText}>{summary}</Text>
       </View>
 
-      <Pressable
+      <A11yPressable
         style={styles.button}
         onPress={() => {
           try {
@@ -424,10 +437,13 @@ export default function SleepEnergyTracker() {
             title: "Sleep & Energy Summary",
           }).catch(() => {});
         }}
+        accessibilityRole="button"
+        accessibilityLabel="Share sleep and energy summary"
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={styles.buttonText}>Share</Text>
-      </Pressable>
-      <Pressable
+      </A11yPressable>
+      <A11yPressable
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           try {
@@ -441,10 +457,13 @@ export default function SleepEnergyTracker() {
             );
           }
         }}
+        accessibilityRole="button"
+        accessibilityLabel="Copy summary to clipboard"
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={styles.buttonText}>Copy to clipboard</Text>
-      </Pressable>
-      <Pressable
+      </A11yPressable>
+      <A11yPressable
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           try {
@@ -462,10 +481,13 @@ export default function SleepEnergyTracker() {
             Alert.alert("Export failed", "Could not create .doc file.");
           }
         }}
+        accessibilityRole="button"
+        accessibilityLabel="Export summary as Word document"
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={styles.buttonText}>Export as .doc</Text>
-      </Pressable>
-      <Pressable
+      </A11yPressable>
+      <A11yPressable
         style={[styles.button, { marginTop: 8 }]}
         onPress={() => {
           const rows = [
@@ -488,10 +510,13 @@ export default function SleepEnergyTracker() {
             () => {},
           );
         }}
+        accessibilityRole="button"
+        accessibilityLabel="Export summary as CSV text"
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={styles.buttonText}>Export CSV</Text>
-      </Pressable>
-      <Pressable
+      </A11yPressable>
+      <A11yPressable
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           try {
@@ -523,9 +548,12 @@ export default function SleepEnergyTracker() {
             );
           }
         }}
+        accessibilityRole="button"
+        accessibilityLabel="Export summary as downloadable CSV file"
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={styles.buttonText}>Export CSV File</Text>
-      </Pressable>
+      </A11yPressable>
 
       <Text style={[styles.sectionTitle, { marginTop: 16 }]}>
         Filters (optional)
@@ -551,7 +579,7 @@ export default function SleepEnergyTracker() {
         value={filterTag}
         onChangeText={setFilterTag}
       />
-      <Pressable
+      <A11yPressable
         style={[styles.button, { marginTop: 8 }]}
         onPress={() => {
           setFilterStart("");
@@ -559,10 +587,13 @@ export default function SleepEnergyTracker() {
           setFilterMinHours("");
           setFilterTag("");
         }}
+        accessibilityRole="button"
+        accessibilityLabel="Clear all filters"
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={styles.buttonText}>Clear filters</Text>
-      </Pressable>
-      <Pressable
+      </A11yPressable>
+      <A11yPressable
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           try {
@@ -577,9 +608,12 @@ export default function SleepEnergyTracker() {
             );
           }
         }}
+        accessibilityRole="button"
+        accessibilityLabel="Export summary as PDF"
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={styles.buttonText}>Export as PDF</Text>
-      </Pressable>
+      </A11yPressable>
       {!!undo && (
         <View
           style={{
@@ -597,15 +631,18 @@ export default function SleepEnergyTracker() {
           <Text style={{ color: palette.text, marginBottom: 6 }}>
             Entry deleted
           </Text>
-          <Pressable
+          <A11yPressable
             onPress={() => {
               setEntries((prev) => [undo.entry, ...prev]);
               setUndo(null);
             }}
             style={styles.button}
+            accessibilityRole="button"
+            accessibilityLabel="Undo delete entry"
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={styles.buttonText}>Undo</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       )}
     </ScrollView>

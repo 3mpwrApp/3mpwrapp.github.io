@@ -1,6 +1,7 @@
 import React from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { addDeadline, listDeadlines, type Deadline } from '../../../services/deadlines';
@@ -49,8 +50,26 @@ export default function DeadlinesScreen() {
         </View>
       )}
       <View style={s.tabRow}>
-        <Pressable onPress={()=>changeTab('calendar')} accessibilityRole='tab' accessibilityState={{ selected: tab==='calendar' }} style={[s.chip, tab==='calendar'&&s.chipActive]}><Text style={[s.chipLabel, tab==='calendar'&&s.chipLabelActive]}>{t('templates.deadlines.calendarTab','Calendar')}</Text></Pressable>
-        <Pressable onPress={()=>changeTab('list')} accessibilityRole='tab' accessibilityState={{ selected: tab==='list' }} style={[s.chip, tab==='list'&&s.chipActive]}><Text style={[s.chipLabel, tab==='list'&&s.chipLabelActive]}>{t('templates.deadlines.listTab','List')}</Text></Pressable>
+        <A11yPressable
+          onPress={()=>changeTab('calendar')}
+          accessibilityRole='tab'
+          accessibilityState={{ selected: tab==='calendar' }}
+          accessibilityLabel={t('templates.deadlines.calendarTab','Calendar view tab')}
+          style={[s.chip, tab==='calendar'&&s.chipActive]}
+          hitSlop={HIT_SLOP_8}
+        >
+          <Text style={[s.chipLabel, tab==='calendar'&&s.chipLabelActive]}>{t('templates.deadlines.calendarTab','Calendar')}</Text>
+        </A11yPressable>
+        <A11yPressable
+          onPress={()=>changeTab('list')}
+          accessibilityRole='tab'
+          accessibilityState={{ selected: tab==='list' }}
+          accessibilityLabel={t('templates.deadlines.listTab','List view tab')}
+          style={[s.chip, tab==='list'&&s.chipActive]}
+          hitSlop={HIT_SLOP_8}
+        >
+          <Text style={[s.chipLabel, tab==='list'&&s.chipLabelActive]}>{t('templates.deadlines.listTab','List')}</Text>
+        </A11yPressable>
       </View>
       {tab==='calendar'? <DeadlinesCalendar/> : <DeadlinesList/>}
       {tab==='calendar' && <RecurringBuilder/>}
@@ -74,23 +93,55 @@ function DeadlinesCalendar() {
   return (
     <View style={{ marginTop: 8 }}>
       <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginBottom: 6 }}>
-        <Pressable onPress={()=> setMonth(prev => new Date(prev.getFullYear(), prev.getMonth()-1, 1))}><Text style={{ color: palette.text }}>{'<'}</Text></Pressable>
+        <A11yPressable
+          onPress={()=> setMonth(prev => new Date(prev.getFullYear(), prev.getMonth()-1, 1))}
+          accessibilityRole='button'
+          accessibilityLabel={t('templates.deadlines.prevMonth','Previous month')}
+          hitSlop={HIT_SLOP_8}
+        ><Text style={{ color: palette.text }}>{'<'}</Text></A11yPressable>
         <Text style={{ color: palette.text, fontWeight:'700' }}>{monthLabel}</Text>
-        <Pressable onPress={()=> setMonth(prev => new Date(prev.getFullYear(), prev.getMonth()+1, 1))}><Text style={{ color: palette.text }}>{'>'}</Text></Pressable>
+        <A11yPressable
+          onPress={()=> setMonth(prev => new Date(prev.getFullYear(), prev.getMonth()+1, 1))}
+            accessibilityRole='button'
+            accessibilityLabel={t('templates.deadlines.nextMonth','Next month')}
+            hitSlop={HIT_SLOP_8}
+        ><Text style={{ color: palette.text }}>{'>'}</Text></A11yPressable>
       </View>
       <View style={{ flexDirection:'row', gap:8, marginBottom: 6 }}>
-        <Pressable onPress={()=>changeView('month')} style={[s.chip, view==='month'&&s.chipActive]} accessibilityRole='button' accessibilityState={{ selected:view==='month' }}><Text style={{ color: view==='month'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.monthView','Month')}</Text></Pressable>
-        <Pressable onPress={()=>changeView('week')} style={[s.chip, view==='week'&&s.chipActive]} accessibilityRole='button' accessibilityState={{ selected:view==='week' }}><Text style={{ color: view==='week'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.weekView','Week')}</Text></Pressable>
+        <A11yPressable
+          onPress={()=>changeView('month')}
+          style={[s.chip, view==='month'&&s.chipActive]}
+          accessibilityRole='button'
+          accessibilityState={{ selected:view==='month' }}
+          accessibilityLabel={t('templates.deadlines.monthView','Month view')}
+          hitSlop={HIT_SLOP_8}
+        ><Text style={{ color: view==='month'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.monthView','Month')}</Text></A11yPressable>
+        <A11yPressable
+          onPress={()=>changeView('week')}
+          style={[s.chip, view==='week'&&s.chipActive]}
+          accessibilityRole='button'
+          accessibilityState={{ selected:view==='week' }}
+          accessibilityLabel={t('templates.deadlines.weekView','Week view')}
+          hitSlop={HIT_SLOP_8}
+        ><Text style={{ color: view==='week'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.weekView','Week')}</Text></A11yPressable>
       </View>
       {(view==='month'? matrix : [currentWeekFromMatrix(matrix)]).map((week, wi) => (
         <View key={wi} style={{ flexDirection:'row', justifyContent:'space-between', marginBottom: 4 }}>
           {week.map((day, di) => {
             const dayKey = dayKeyFromMatrix(month, day);
             return (
-              <Pressable key={di} onPress={()=> day && setSelectedDay(dayKey)} accessibilityRole='button' accessibilityState={{ selected: selectedDay===dayKey }} style={{ width: 40, height: 40, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems:'center', justifyContent:'center', backgroundColor: selectedDay===dayKey ? palette.primary : palette.surface }}>
+              <A11yPressable
+                key={di}
+                onPress={()=> day && setSelectedDay(dayKey)}
+                accessibilityRole='button'
+                accessibilityState={{ selected: selectedDay===dayKey, disabled: !day }}
+                accessibilityLabel={day ? `${t('templates.deadlines.dayCell','Day')} ${day}` : t('templates.deadlines.emptyDay','Empty day cell')}
+                hitSlop={HIT_SLOP_8}
+                style={{ width: 40, height: 40, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems:'center', justifyContent:'center', backgroundColor: selectedDay===dayKey ? palette.primary : palette.surface }}
+              >
                 <Text style={{ color: selectedDay===dayKey ? palette.onPrimary : palette.text }}>{day ?? ''}</Text>
                 {!!day && !!byDay.get(dayKey) && <View style={{ width: 6, height: 6, borderRadius:3, backgroundColor: dotColor(dayKey, items, palette), position:'absolute', bottom: 4 }} />}
-              </Pressable>
+              </A11yPressable>
             );
           })}
         </View>
@@ -121,11 +172,25 @@ function RecurringBuilder() {
       <TextInput placeholder={t('templates.deadlines.recurringPrefix','Title prefix')} placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
       <TextInput placeholder={t('templates.deadlines.recurringStart','Start date (YYYY-MM-DD)')} placeholderTextColor={palette.text+'77'} value={start} onChangeText={setStart} style={s.input} />
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
-        <Pressable onPress={()=>setFreq('weekly')} style={[s.chip, freq==='weekly'&&s.chipActive]} accessibilityRole='button' accessibilityState={{ selected: freq==='weekly' }}><Text style={{ color: freq==='weekly'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.recurringWeekly','Weekly')}</Text></Pressable>
-        <Pressable onPress={()=>setFreq('monthly')} style={[s.chip, freq==='monthly'&&s.chipActive]} accessibilityRole='button' accessibilityState={{ selected: freq==='monthly' }}><Text style={{ color: freq==='monthly'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.recurringMonthly','Monthly')}</Text></Pressable>
+        <A11yPressable
+          onPress={()=>setFreq('weekly')}
+          style={[s.chip, freq==='weekly'&&s.chipActive]}
+          accessibilityRole='button'
+            accessibilityState={{ selected: freq==='weekly' }}
+            accessibilityLabel={t('templates.deadlines.recurringWeekly','Weekly frequency')}
+            hitSlop={HIT_SLOP_8}
+        ><Text style={{ color: freq==='weekly'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.recurringWeekly','Weekly')}</Text></A11yPressable>
+        <A11yPressable
+          onPress={()=>setFreq('monthly')}
+          style={[s.chip, freq==='monthly'&&s.chipActive]}
+          accessibilityRole='button'
+          accessibilityState={{ selected: freq==='monthly' }}
+          accessibilityLabel={t('templates.deadlines.recurringMonthly','Monthly frequency')}
+          hitSlop={HIT_SLOP_8}
+        ><Text style={{ color: freq==='monthly'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.recurringMonthly','Monthly')}</Text></A11yPressable>
       </View>
       <TextInput placeholder={t('templates.deadlines.recurringCount','Count')} placeholderTextColor={palette.text+'77'} value={count} onChangeText={setCount} style={s.input} />
-      <Pressable onPress={async()=>{
+      <A11yPressable onPress={async()=>{
         try {
           const n = Math.max(1, Math.min(52, Number(count)||1));
           const base = new Date(start);
@@ -139,7 +204,7 @@ function RecurringBuilder() {
           await Promise.all(ops);
           Alert.alert(t('templates.deadlines.recurringAdded','Added'), t('templates.deadlines.recurringAddedBody','{{count}} recurring deadlines added.').replace('{{count}}', String(n)));
         } catch { Alert.alert(t('templates.deadlines.recurringFailed','Failed'), t('templates.deadlines.recurringFailedBody','Could not add recurring deadlines.')); }
-      }} style={[s.button,{ marginTop: 8 }]}><Text style={s.buttonText}>{t('templates.deadlines.recurringCreate','Create')}</Text></Pressable>
+      }} style={[s.button,{ marginTop: 8 }]} accessibilityRole='button' accessibilityLabel={t('templates.deadlines.recurringCreate','Create recurring deadlines')} hitSlop={HIT_SLOP_8}><Text style={s.buttonText}>{t('templates.deadlines.recurringCreate','Create')}</Text></A11yPressable>
     </View>
   );
 }

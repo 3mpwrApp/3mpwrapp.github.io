@@ -1,5 +1,7 @@
 import React from 'react';
-import { Alert, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { addMood, listMoods } from '../../../services/companion';
 import * as Notifier from '../../../services/notifications';
@@ -50,15 +52,16 @@ export default function AICompanion() {
       <Text style={s.text} accessibilityLabel="Quick check-in prompt">Quick check-in: How are you today?</Text>
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         {[['good','😊'],['ok','😐'],['bad','😔']].map(([m, emoji]) => (
-          <Pressable
+          <A11yPressable
             key={m}
             onPress={async()=>{ try { await addMood(m as any, notes); setNotes(''); setMoods(await listMoods()); } catch {} }}
             style={[s.chip]}
+            hitSlop={HIT_SLOP_8}
             accessibilityRole="button"
             accessibilityLabel={`Log mood: ${m}`}
           >
             <Text style={{ color: palette.text, fontWeight:'700' }}>{emoji} {m}</Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
       <TextInput
@@ -70,30 +73,33 @@ export default function AICompanion() {
         accessibilityLabel="Mood notes input"
       />
       <View style={{ flexDirection:'row', gap:8, marginTop: 8, flexWrap:'wrap' }}>
-        <Pressable
+        <A11yPressable
           onPress={scheduleChecks}
           style={s.button}
+          hitSlop={HIT_SLOP_8}
           accessibilityRole="button"
           accessibilityLabel="Schedule daily check-ins"
         >
           <Text style={s.buttonText}>Schedule daily check-ins</Text>
-        </Pressable>
-        <Pressable
+        </A11yPressable>
+        <A11yPressable
           onPress={async()=>{ try { const d=new Date(); d.setMinutes(d.getMinutes()+1); await Notifier.scheduleAt(d, 'Hydrate', 'Sip water and stretch.'); Alert.alert('Scheduled','Hydration reminder in 1 min.'); } catch {} }}
           style={s.secondary}
+          hitSlop={HIT_SLOP_8}
           accessibilityRole="button"
           accessibilityLabel="Schedule hydration reminder"
         >
           <Text style={{ color: palette.text, fontWeight:'700' }}>Hydration in 1 min</Text>
-        </Pressable>
-        <Pressable
+        </A11yPressable>
+        <A11yPressable
           onPress={exportMoods}
-          style={s.secondary}
-          accessibilityRole="button"
-          accessibilityLabel="Export mood log as CSV"
+            style={s.secondary}
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="button"
+            accessibilityLabel="Export mood log as CSV"
         >
           <Text style={{ color: palette.text, fontWeight:'700' }}>Export moods (CSV)</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       <Text style={[s.text,{ marginTop: 12, fontWeight:'700' }]} accessibilityLabel="Recent moods">Recent moods</Text>
       {moods.slice(0,10).map(m => (

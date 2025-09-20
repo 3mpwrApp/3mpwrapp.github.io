@@ -1,17 +1,17 @@
-﻿import React from "react";
-import { View, Text, StyleSheet, TextInput, FlatList, Alert, Pressable, Modal } from "react-native";
+﻿import { router } from "expo-router";
+import React from "react";
+import { Alert, FlatList, Modal, StyleSheet, Text, TextInput, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar";
 import { useAuth } from "../../../context/AuthContext";
-import { router } from "expo-router";
-import { addEvidenceNote, uploadEvidenceFileWithProgress, deleteEvidenceDoc, listEvidencePage, type EvidenceFile } from "../../../services/evidence";
+import { addEvidenceNote, deleteEvidenceDoc, listEvidencePage, uploadEvidenceFileWithProgress, type EvidenceFile } from "../../../services/evidence";
 // Linking added when preview links are active; safe to lazy import when needed
-import { useAppPalette } from "../../../theme/usePalette";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useAppPalette } from "../../../theme/usePalette";
 
 let AsyncStorage: any;
 try {
@@ -506,9 +506,9 @@ export default function EvidenceLocker() {
             .map(({ n, f }, idx) => (
               <View key={`${n.id}-${idx}`} style={{ width: '31%', aspectRatio: 1, borderRadius: 8, overflow:'hidden' }}>
                 {(() => { try { const { Image } = require('expo-image'); return (
-                  <Pressable onPress={()=> setPreview({ url: f.uri, name: f.name })}>
+                  <A11yPressable onPress={()=> setPreview({ url: f.uri, name: f.name })} accessibilityRole="button" accessibilityLabel={`Open preview for ${f.name || 'image'}`}> 
                     <Image source={{ uri: f.uri }} style={{ width: '100%', height: '100%' }} />
-                  </Pressable>
+                  </A11yPressable>
                 ); } catch { return null; } })()}
               </View>
             ))}
@@ -561,9 +561,9 @@ export default function EvidenceLocker() {
                 {Array.isArray(c.files) && c.files[0]?.url && /\.(png|jpe?g|gif|webp)$/i.test(c.files[0].url) ? (
                   <View style={{ marginTop: 6 }}>
                     {(() => { try { const { Image } = require('expo-image'); return (
-                      <Pressable onPress={() => setPreview({ url: c.files[0].url, name: c.files[0].name })}>
+                      <A11yPressable onPress={() => setPreview({ url: c.files[0].url, name: c.files[0].name })} accessibilityRole="button" accessibilityLabel={`Open preview for ${c.files[0].name || 'image'}`}>
                         <Image source={{ uri: c.files[0].url }} style={{ width: 100, height: 60, borderRadius: 6 }} />
-                      </Pressable>
+                      </A11yPressable>
                     ); } catch { return null; } })()}
                   </View>
                 ) : Array.isArray(c.files) && c.files[0]?.url && (/\.(mp4|mov|m4v|webm)$/i.test(c.files[0].url) || String(c.files[0]?.type||'').startsWith('video')) ? (
@@ -573,7 +573,7 @@ export default function EvidenceLocker() {
                   </View>
                 ) : null}
               </View>
-              <Pressable
+              <A11yPressable
                 accessibilityRole="checkbox"
                 accessibilityLabel={selectedCloud[c.id] ? 'Unselect item' : 'Select item'}
                 accessibilityState={{ checked: !!selectedCloud[c.id] }}
@@ -581,7 +581,7 @@ export default function EvidenceLocker() {
                 style={{ width: 22, height: 22, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems: 'center', justifyContent: 'center', backgroundColor: selectedCloud[c.id] ? palette.primary : 'transparent' }}
               >
                 {selectedCloud[c.id] ? (<View style={{ width: 12, height: 12, backgroundColor: palette.onPrimary, borderRadius: 2 }} />) : null}
-              </Pressable>
+              </A11yPressable>
               <A11yPressable
                 onPress={async () => {
                   const ok = await deleteEvidenceDoc(c.id);
@@ -598,7 +598,7 @@ export default function EvidenceLocker() {
       {/* Preview Modal */}
   {preview && (
         <Modal transparent animationType="fade" onRequestClose={() => setPreview(null)}>
-          <Pressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)}>
+          <A11yPressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)} accessibilityRole="button" accessibilityLabel="Close preview">
             <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '90%', maxHeight: '90%' }}>
               {(() => { try { const { Image } = require('expo-image'); return (
                 <Image source={{ uri: preview.url }} style={{ width: 320, height: 200, borderRadius: 6 }} contentFit="contain" />
@@ -609,13 +609,13 @@ export default function EvidenceLocker() {
                 <A11yPressable onPress={()=> setPreview(null)} style={styles.secondary}><Text style={styles.buttonText}>Close</Text></A11yPressable>
               </View>
             </View>
-          </Pressable>
+          </A11yPressable>
         </Modal>
   )}
   {/* Video modal */}
   {video && (
     <Modal transparent animationType="fade" onRequestClose={()=> setVideo(null)}>
-      <Pressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setVideo(null)}>
+  <A11yPressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setVideo(null)} accessibilityRole="button" accessibilityLabel="Close video">
         <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '95%', maxHeight: '80%', width: 360 }}>
           {(() => { try { const { Video } = require('expo-av'); return (
             <Video source={{ uri: video.uri }} style={{ width: 340, height: 220 }} useNativeControls shouldPlay resizeMode="contain" />
@@ -624,7 +624,7 @@ export default function EvidenceLocker() {
             <A11yPressable onPress={()=> setVideo(null)} style={styles.secondary}><Text style={styles.buttonText}>Close</Text></A11yPressable>
           </View>
         </View>
-      </Pressable>
+  </A11yPressable>
     </Modal>
   )}
     </View>

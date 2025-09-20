@@ -1,12 +1,13 @@
 import React from "react";
 import {
     Linking,
-    Pressable,
     ScrollView,
     StyleSheet,
     Text,
     View,
 } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -117,24 +118,26 @@ export default function SelfCareLibrary() {
         <Text style={styles.tipText}>
           Explore curated audio, video, and easy-read guides for accessible self-care. Tap any link to open. You can export the full list or suggest new resources.
         </Text>
-        <Pressable
+        <A11yPressable
           onPress={exportResources}
           style={[styles.linkRow, { backgroundColor: palette.primary, borderRadius: 6, padding: 8, marginBottom: 6 }]}
           accessibilityRole="button"
           accessibilityLabel="Export self-care resources as CSV"
           accessibilityHint="Shares the full list of resources as a CSV file for tracking or sharing."
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={[styles.linkLabel, { color: palette.onPrimary }]}>Export Resources (CSV)</Text>
-        </Pressable>
-        <Pressable
+        </A11yPressable>
+        <A11yPressable
           onPress={openSuggestResource}
           style={[styles.linkRow, { backgroundColor: palette.surface, borderRadius: 6, padding: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
           accessibilityRole="button"
           accessibilityLabel="Suggest a new self-care resource"
           accessibilityHint="Opens email to suggest a new resource for the library."
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={[styles.linkLabel, { color: palette.primary }]}>Suggest a Resource</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       <Text
         ref={titleRef}
@@ -156,7 +159,7 @@ export default function SelfCareLibrary() {
         >
           <Text style={styles.sectionTitle}>{sec.title}</Text>
           {sec.items.map((it) => (
-            <Pressable
+            <A11yPressable
               key={it.label}
               onPress={() => open(it.url)}
               accessibilityRole="link"
@@ -166,12 +169,13 @@ export default function SelfCareLibrary() {
                 styles.linkRow,
                 pressed && { opacity: 0.85 },
               ]}
+              hitSlop={HIT_SLOP_8}
             >
               <Text style={styles.linkLabel}>{it.label}</Text>
               {!!it.description && (
                 <Text style={styles.tipText}>{it.description}</Text>
               )}
-            </Pressable>
+            </A11yPressable>
           ))}
         </View>
       ))}

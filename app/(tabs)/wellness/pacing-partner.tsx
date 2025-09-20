@@ -1,6 +1,8 @@
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import React from 'react';
-import { Alert, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { auth, db } from '../../../firebase/config';
 import * as Notifier from '../../../services/notifications';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -54,24 +56,26 @@ export default function PacingPartner() {
         <Text style={s.text}>
           Log your daily activities and minutes spent. The AI will help you avoid overexertion and suggest rest breaks. You can export your recent logs or learn more about pacing.
         </Text>
-        <Pressable
+        <A11yPressable
           onPress={exportActivities}
           style={[s.button, { backgroundColor: palette.primary, marginBottom: 6 }]}
           accessibilityRole="button"
           accessibilityLabel="Export pacing activities as CSV"
           accessibilityHint="Shares your recent activity logs as a CSV file for tracking or sharing."
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={[s.buttonText, { color: palette.onPrimary }]}>Export Activities (CSV)</Text>
-        </Pressable>
-        <Pressable
+        </A11yPressable>
+        <A11yPressable
           onPress={openLearnMore}
           style={[s.button, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
           accessibilityRole="link"
           accessibilityLabel="Learn more about pacing partner"
           accessibilityHint="Opens a page with more information about pacing and rest."
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={[s.buttonText, { color: palette.primary }]}>Learn More</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       <Text style={s.title} accessibilityRole="header" maxFontSizeMultiplier={1.3}>AI Pacing Partner</Text>
       <TextInput
@@ -92,15 +96,16 @@ export default function PacingPartner() {
         accessibilityLabel="Activity type input"
         accessibilityHint="Enter the type of activity you are logging."
       />
-      <Pressable
+      <A11yPressable
         onPress={add}
         style={s.button}
         accessibilityRole="button"
         accessibilityLabel="Log activity"
         accessibilityHint="Logs the activity and minutes to your pacing history."
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={s.buttonText}>Log Activity</Text>
-      </Pressable>
+      </A11yPressable>
       <Text style={[s.text,{ marginTop: 12, fontWeight:'700' }]}>Recent</Text>
       {items.slice(0,10).map(i=> (
         <Text key={i.id} style={s.text} accessibilityLabel={`Activity: ${i.type||'activity'}, Minutes: ${i.minutes}, Date: ${new Date(i.createdAt?.toDate?.()||Date.now()).toLocaleString()}`}>{`• ${new Date(i.createdAt?.toDate?.()||Date.now()).toLocaleString()} — ${i.type||'activity'}: ${i.minutes} min`}</Text>

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Alert, Linking, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Alert, Linking, StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { exercises } from '../../../data/exercises';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { fetchExercisePlaylist } from '../../../services/youtube';
@@ -57,57 +59,64 @@ export default function ExerciseHub() {
         </Text>
       </View>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Accessible Exercise Hub screen">Accessible Exercise Hub</Text>
-      <Pressable
+      <A11yPressable
         onPress={()=>{ try { const { router } = require('expo-router'); router.push('/(tabs)/wellness/exercise-favorites'); } catch {} }}
         style={[s.btn,{ alignSelf:'flex-start', marginTop: 6 }]
         }
+        hitSlop={HIT_SLOP_8}
         accessibilityRole="button"
         accessibilityLabel="Open exercise favorites"
         accessibilityHint="Shows your list of favorited exercises."
       >
         <Text style={s.btnText}>Open Favorites</Text>
-      </Pressable>
-      <Pressable
+      </A11yPressable>
+      <A11yPressable
         onPress={exportFavorites}
         style={[s.btn,{ alignSelf:'flex-start', marginTop: 6 }]}
+        hitSlop={HIT_SLOP_8}
         accessibilityRole="button"
         accessibilityLabel="Export exercise favorites as CSV"
         accessibilityHint="Exports your favorited exercises as a CSV file for sharing or tracking."
       >
         <Text style={s.btnText}>Export Favorites (CSV)</Text>
-      </Pressable>
+      </A11yPressable>
       <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
         {(['all','wheelchair','limited-mobility','sensory-friendly'] as const).map(k => (
-          <Pressable
+          <A11yPressable
             key={k}
             onPress={()=>setAud(k)}
             style={[s.chip, aud===k && s.chipActive]}
+            hitSlop={HIT_SLOP_8}
             accessibilityRole="button"
             accessibilityLabel={`Filter exercises for: ${k}`}
+            accessibilityState={{ selected: aud===k }}
           >
             <Text style={{ color: aud===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{k}</Text>
-          </Pressable>
+          </A11yPressable>
         ))}
       </View>
       {combined.map((e: any) => (
         <View key={e.id} style={s.card}>
           <Text style={s.cardTitle} accessibilityLabel={`Exercise: ${e.title}, ${e.minutes} minutes`}>{e.title} • {e.minutes} min</Text>
-          <Pressable
+          <A11yPressable
             onPress={()=>Linking.openURL(e.url)}
             style={s.btn}
+            hitSlop={HIT_SLOP_8}
             accessibilityRole="button"
             accessibilityLabel={`Open exercise video for ${e.title}`}
           >
             <Text style={s.btnText}>Open Video</Text>
-          </Pressable>
-          <Pressable
+          </A11yPressable>
+          <A11yPressable
             onPress={()=>{ const next = new Set(favs); if (next.has(e.id)) next.delete(e.id); else next.add(e.id); saveFavs(next); }}
             style={[s.btn,{ marginLeft: 8 }]}
+            hitSlop={HIT_SLOP_8}
             accessibilityRole="button"
             accessibilityLabel={favs.has(e.id)? `Remove ${e.title} from favorites`:`Add ${e.title} to favorites`}
+            accessibilityState={{ selected: favs.has(e.id) }}
           >
             <Text style={s.btnText}>{favs.has(e.id)? '★ Favorited':'☆ Favorite'}</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       ))}
       {favs.size>0 && (
@@ -116,22 +125,24 @@ export default function ExerciseHub() {
           {combined.filter(e=> favs.has(e.id)).map(e=> (
             <View key={`f-${e.id}`} style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginTop: 6 }}>
               <Text style={{ color: palette.text, flex:1 }}>{e.title}</Text>
-              <Pressable
+              <A11yPressable
                 onPress={()=> Linking.openURL(e.url)}
                 style={s.btn}
+                hitSlop={HIT_SLOP_8}
                 accessibilityRole="button"
                 accessibilityLabel={`Open favorite exercise video for ${e.title}`}
               >
                 <Text style={s.btnText}>Open</Text>
-              </Pressable>
-              <Pressable
+              </A11yPressable>
+              <A11yPressable
                 onPress={()=>{ const next = new Set(favs); next.delete(e.id); saveFavs(next); }}
                 style={[s.btn,{ marginLeft: 6 }]}
+                hitSlop={HIT_SLOP_8}
                 accessibilityRole="button"
                 accessibilityLabel={`Remove ${e.title} from favorites`}
               >
                 <Text style={s.btnText}>Remove</Text>
-              </Pressable>
+              </A11yPressable>
             </View>
           ))}
         </View>

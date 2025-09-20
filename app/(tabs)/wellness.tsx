@@ -1,20 +1,22 @@
-import React from "react";
-import { View, Text, StyleSheet, Pressable, Linking, TextInput, Alert } from "react-native";
-import { useAppPalette } from "../../theme/usePalette";
-import { useTextScale } from "../../theme/typography";
-import { useTranslation } from "../../i18n";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-} from "../../hooks/useA11y";
-import SettingsLink from "../../components/SettingsLink";
-import ContrastToggle from "../../components/ContrastToggle";
-import { Link } from "expo-router";
 import type { Href } from "expo-router";
+import { Link } from "expo-router";
+import React from "react";
+import { Alert, Linking, StyleSheet, Text, TextInput, View } from "react-native";
+import A11yPressable from "../../components/A11yPressable";
+import ContrastToggle from "../../components/ContrastToggle";
+import SettingsLink from "../../components/SettingsLink";
+import { HIT_SLOP_8 } from "../../constants/a11y";
 import { useAuth } from "../../context/AuthContext";
-import { addReflection, listReflections, updateReflection, deleteReflection, type Reflection } from "../../services/wellness";
+import {
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
+} from "../../hooks/useA11y";
+import { useTranslation } from "../../i18n";
 import * as Notifier from "../../services/notifications";
+import { addReflection, deleteReflection, listReflections, updateReflection, type Reflection } from "../../services/wellness";
+import { useTextScale } from "../../theme/typography";
+import { useAppPalette } from "../../theme/usePalette";
 
 export default function WellnessScreen() {
   const palette = useAppPalette();
@@ -231,7 +233,13 @@ export default function WellnessScreen() {
           <>
             <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
               {(['bad','ok','good','great'] as Reflection['mood'][]).map((m) => (
-                <Pressable key={m} onPress={() => setMood(m)} accessibilityRole="button"
+                <A11yPressable
+                  key={m}
+                  onPress={() => setMood(m)}
+                  hitSlop={HIT_SLOP_8}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Set mood to ${m}`}
+                  accessibilityState={{ selected: mood === m }}
                   style={({ pressed }) => [
                     { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
                     mood === m && { backgroundColor: palette.primary, borderColor: palette.primary },
@@ -239,7 +247,7 @@ export default function WellnessScreen() {
                   ]}
                 >
                   <Text style={[{ color: palette.text }, mood === m && { color: palette.onPrimary, fontWeight: '700' }]}>{m.toUpperCase()}</Text>
-                </Pressable>
+                </A11yPressable>
               ))}
             </View>
             <TextInput
@@ -250,7 +258,7 @@ export default function WellnessScreen() {
               style={{ borderWidth: 1, borderColor: palette.muted, borderRadius: 8, padding: 10, color: palette.text, marginBottom: 8 }}
               multiline
             />
-            <Pressable
+            <A11yPressable
               onPress={async () => {
                 try {
                   await addReflection(mood, note.trim());
@@ -259,12 +267,14 @@ export default function WellnessScreen() {
                   Alert.alert('Saved', 'Reflection saved.');
                 } catch { Alert.alert('Not saved', 'Sign in to save reflections.'); }
               }}
+              hitSlop={HIT_SLOP_8}
               accessibilityRole="button"
+              accessibilityLabel={`Save reflection with mood ${mood}`}
               style={({ pressed }) => [{ backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center' }, pressed && { opacity: 0.9 }]}
             >
               <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Save Reflection</Text>
-            </Pressable>
-            <Pressable
+            </A11yPressable>
+            <A11yPressable
               onPress={async () => {
                 try {
                   const ok = await Notifier.setupAsync();
@@ -273,11 +283,13 @@ export default function WellnessScreen() {
                   Alert.alert(scheduled ? 'Scheduled' : 'Not scheduled', scheduled ? 'Daily 9:00 reminder set.' : 'Unable to schedule.');
                 } catch { Alert.alert('Not scheduled', 'Notifications unavailable.'); }
               }}
+              hitSlop={HIT_SLOP_8}
               accessibilityRole="button"
+              accessibilityLabel="Schedule daily 9 AM reflection reminder"
               style={({ pressed }) => [{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingVertical: 10, borderRadius: 8, alignItems: 'center', marginTop: 8 }, pressed && { opacity: 0.8 }]}
             >
               <Text style={{ color: palette.text }}>Remind me daily</Text>
-            </Pressable>
+            </A11yPressable>
 
             {/* 7-day trend */}
             {recent.length > 0 && (
@@ -304,18 +316,30 @@ export default function WellnessScreen() {
                       {new Date(r.createdAt?.toDate?.() || Date.now()).toLocaleString()} — {r.mood.toUpperCase()}{r.note ? `: ${r.note}` : ''}
                     </Text>
                     <View style={{ flexDirection: 'row', gap: 8 }}>
-                      <Pressable onPress={async () => {
-                        try { await deleteReflection(r.id!); setRecent(await listReflections(10)); }
-                        catch {}
-                      }} style={({ pressed }) => [{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 10, paddingVertical: 6, borderRadius: 6 }, pressed && { opacity: 0.8 }]}>
+                      <A11yPressable
+                        onPress={async () => {
+                          try { await deleteReflection(r.id!); setRecent(await listReflections(10)); }
+                          catch {}
+                        }}
+                        hitSlop={HIT_SLOP_8}
+                        accessibilityRole="button"
+                        accessibilityLabel="Delete reflection"
+                        style={({ pressed }) => [{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 10, paddingVertical: 6, borderRadius: 6 }, pressed && { opacity: 0.8 }]}
+                      >
                         <Text style={{ color: palette.text }}>Delete</Text>
-                      </Pressable>
-                      <Pressable onPress={async () => {
-                        try { await updateReflection(r.id!, { note: prompt('Edit note', r.note || '') || r.note }); setRecent(await listReflections(10)); }
-                        catch {}
-                      }} style={({ pressed }) => [{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 10, paddingVertical: 6, borderRadius: 6 }, pressed && { opacity: 0.8 }]}>
+                      </A11yPressable>
+                      <A11yPressable
+                        onPress={async () => {
+                          try { await updateReflection(r.id!, { note: prompt('Edit note', r.note || '') || r.note }); setRecent(await listReflections(10)); }
+                          catch {}
+                        }}
+                        hitSlop={HIT_SLOP_8}
+                        accessibilityRole="button"
+                        accessibilityLabel="Edit reflection note"
+                        style={({ pressed }) => [{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 10, paddingVertical: 6, borderRadius: 6 }, pressed && { opacity: 0.8 }]}
+                      >
                         <Text style={{ color: palette.text }}>Edit</Text>
-                      </Pressable>
+                      </A11yPressable>
                     </View>
                   </View>
                 ))}
@@ -344,10 +368,11 @@ export default function WellnessScreen() {
                 accessibilityLabel={it.label}
               >
                 {it.url ? (
-                  <Pressable
+                  <A11yPressable
                     onPress={() => onOpen(it.url!)}
+                    hitSlop={HIT_SLOP_8}
                     accessibilityRole="link"
-                    accessibilityLabel={`Open ${it.label}`}
+                    accessibilityLabel={`Open resource: ${it.label}`}
                     style={({ pressed }) => [
                       styles.linkRow,
                       pressed && { opacity: 0.8 },
@@ -357,7 +382,7 @@ export default function WellnessScreen() {
                     {!!it.description && (
                       <Text style={styles.tipText}>{it.description}</Text>
                     )}
-                  </Pressable>
+                  </A11yPressable>
                 ) : (
                   <View>
                     <Text style={styles.itemLabel}>{it.label}</Text>

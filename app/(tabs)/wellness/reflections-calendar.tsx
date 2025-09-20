@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, Alert, FlatList, Modal, TextInput } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
-import { listReflections, type Reflection } from "../../../services/wellness";
+import { Alert, FlatList, Modal, StyleSheet, Text, TextInput, View } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
 import DateTimeField from "../../../components/DateTimeField";
 import SimpleBarChart from "../../../components/SimpleBarChart";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { listReflections, type Reflection } from "../../../services/wellness";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export const options = { href: null };
 
@@ -219,32 +221,80 @@ export default function ReflectionsCalendar() {
       </Text>
       <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
         {(['grid','list'] as const).map(v => (
-          <Pressable key={v} onPress={()=> setView(v)} accessibilityRole="button" style={[s.chip, view===v && s.chipActive]}>
+          <A11yPressable
+            key={v}
+            onPress={()=> setView(v)}
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="button"
+            accessibilityLabel={`Switch to ${v} view`}
+            accessibilityState={{ selected: view===v }}
+            style={[s.chip, view===v && s.chipActive]}
+          >
             <Text style={[s.chipText, view===v && s.chipTextActive]}>{v.toUpperCase()}</Text>
-          </Pressable>
+          </A11yPressable>
         ))}
         {([7,14,30,60,90] as const).map(n => (
-          <Pressable key={n} onPress={()=> setRangeDays(n)} accessibilityRole="button" style={[s.chip, rangeDays===n && s.chipActive]}>
+          <A11yPressable
+            key={n}
+            onPress={()=> setRangeDays(n)}
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="button"
+            accessibilityLabel={`Show last ${n} days`}
+            accessibilityState={{ selected: rangeDays===n }}
+            style={[s.chip, rangeDays===n && s.chipActive]}
+          >
             <Text style={[s.chipText, rangeDays===n && s.chipTextActive]}>{n}d</Text>
-          </Pressable>
+          </A11yPressable>
         ))}
-        <Pressable onPress={()=> saveTapPref(tapAction==='details'?'editor':'details')} accessibilityRole="button" style={[s.chip, s.chipActive]}> 
+        <A11yPressable
+          onPress={()=> saveTapPref(tapAction==='details'?'editor':'details')}
+          hitSlop={HIT_SLOP_8}
+          accessibilityRole="button"
+          accessibilityLabel={`Toggle tap action. Currently ${tapAction}.`}
+          style={[s.chip, s.chipActive]}
+        >
           <Text style={[s.chipText, s.chipTextActive]}>Tap: {tapAction==='details'? 'Details':'Editor'}</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       <View style={{ flexDirection:'row', gap:8, marginTop:8, flexWrap:'wrap' }}>
-        <Pressable onPress={exportCSV} accessibilityRole="button" style={[s.button]}>
+        <A11yPressable
+          onPress={exportCSV}
+          hitSlop={HIT_SLOP_8}
+          accessibilityRole="button"
+          accessibilityLabel="Export reflections as CSV"
+          style={[s.button]}
+        >
           <Text style={s.buttonText}>Export CSV</Text>
-        </Pressable>
-        <Pressable onPress={exportJSON} accessibilityRole="button" style={[s.secondary]}>
+        </A11yPressable>
+        <A11yPressable
+          onPress={exportJSON}
+          hitSlop={HIT_SLOP_8}
+          accessibilityRole="button"
+          accessibilityLabel="Export reflections as JSON"
+          style={[s.secondary]}
+        >
           <Text style={s.secondaryText}>Export JSON</Text>
-        </Pressable>
-        <Pressable onPress={()=> setExportOpts(o=> ({ ...o, includeMood: !o.includeMood }))} style={[s.secondary]}>
+        </A11yPressable>
+        <A11yPressable
+          onPress={()=> setExportOpts(o=> ({ ...o, includeMood: !o.includeMood }))}
+          hitSlop={HIT_SLOP_8}
+          accessibilityRole="button"
+          accessibilityLabel={`Toggle include mood. Currently ${exportOpts.includeMood? 'on':'off'}.`}
+          accessibilityState={{ checked: exportOpts.includeMood }}
+          style={[s.secondary]}
+        >
           <Text style={s.secondaryText}>{exportOpts.includeMood? 'Mood: ON':'Mood: OFF'}</Text>
-        </Pressable>
-        <Pressable onPress={()=> setExportOpts(o=> ({ ...o, includeText: !o.includeText }))} style={[s.secondary]}>
+        </A11yPressable>
+        <A11yPressable
+          onPress={()=> setExportOpts(o=> ({ ...o, includeText: !o.includeText }))}
+          hitSlop={HIT_SLOP_8}
+          accessibilityRole="button"
+          accessibilityLabel={`Toggle include text. Currently ${exportOpts.includeText? 'on':'off'}.`}
+          accessibilityState={{ checked: exportOpts.includeText }}
+          style={[s.secondary]}
+        >
           <Text style={s.secondaryText}>{exportOpts.includeText? 'Text: ON':'Text: OFF'}</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
 
       <View style={{ flexDirection:'row', gap:8, alignItems:'center', marginTop: 8 }}>
@@ -255,9 +305,21 @@ export default function ReflectionsCalendar() {
       {view === 'grid' && (
         <View style={{ marginTop: 12 }}>
           <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between' }}>
-            <Pressable onPress={()=> setMonthAnchor(prev => new Date(prev.getFullYear(), prev.getMonth()-1, 1))} style={[s.secondary,{ paddingHorizontal:12 }]}><Text style={s.secondaryText}>{'‹ Prev'}</Text></Pressable>
+            <A11yPressable
+              onPress={()=> setMonthAnchor(prev => new Date(prev.getFullYear(), prev.getMonth()-1, 1))}
+              hitSlop={HIT_SLOP_8}
+              accessibilityRole="button"
+              accessibilityLabel="Previous month"
+              style={[s.secondary,{ paddingHorizontal:12 }]}
+            ><Text style={s.secondaryText}>{'‹ Prev'}</Text></A11yPressable>
             <Text style={{ color: palette.text, fontWeight:'700' }}>{monthAnchor.toLocaleString(undefined,{ month:'long', year:'numeric' })}</Text>
-            <Pressable onPress={()=> setMonthAnchor(prev => new Date(prev.getFullYear(), prev.getMonth()+1, 1))} style={[s.secondary,{ paddingHorizontal:12 }]}><Text style={s.secondaryText}>{'Next ›'}</Text></Pressable>
+            <A11yPressable
+              onPress={()=> setMonthAnchor(prev => new Date(prev.getFullYear(), prev.getMonth()+1, 1))}
+              hitSlop={HIT_SLOP_8}
+              accessibilityRole="button"
+              accessibilityLabel="Next month"
+              style={[s.secondary,{ paddingHorizontal:12 }]}
+            ><Text style={s.secondaryText}>{'Next ›'}</Text></A11yPressable>
           </View>
           <View style={{ flexDirection:'row', marginTop: 8 }}>
             {['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(d => (<Text key={d} style={[s.dow]}>{d}</Text>))}
@@ -275,34 +337,55 @@ export default function ReflectionsCalendar() {
                     const borderColor = inMonth ? palette.muted : palette.muted + '55';
                     const key = `${it.date.getFullYear()}-${it.date.getMonth()}-${it.date.getDate()}`;
                     return (
-                      <Pressable key={`c-${r+i}`} onPress={()=>{
-                        if (tapAction==='details') {
-                          setDetails({ open:true, date: it.date });
-                        } else {
-                          setEditor({
-                            open: true,
-                            date: it.date,
-                            entry: it.entry,
-                            mood: it.entry?.mood || 'ok',
-                            note: it.entry?.note || '',
-                          });
-                        }
-                      }} onLongPress={()=> setQuickKey(key)} style={[s.cell,{ borderColor }]} accessibilityRole="button" accessibilityLabel={`${it.date.toDateString()} ${it.entry? it.entry.mood: 'no entry'}`}> 
+                      <A11yPressable
+                        key={`c-${r+i}`}
+                        onPress={()=>{
+                          if (tapAction==='details') {
+                            setDetails({ open:true, date: it.date });
+                          } else {
+                            setEditor({
+                              open: true,
+                              date: it.date,
+                              entry: it.entry,
+                              mood: it.entry?.mood || 'ok',
+                              note: it.entry?.note || '',
+                            });
+                          }
+                        }}
+                        onLongPress={()=> setQuickKey(key)}
+                        hitSlop={HIT_SLOP_8}
+                        accessibilityRole="button"
+                        accessibilityLabel={`${it.date.toDateString()} ${it.entry? it.entry.mood: 'no entry'}`}
+                        style={[s.cell,{ borderColor }]}
+                      >
                         <View style={[s.dot, { backgroundColor: bg, opacity: it.entry? 1 : 0 }]} />
                         <Text style={[s.cellText, !inMonth && { opacity: 0.4 }]}>{it.date.getDate()}</Text>
                         {quickKey===key && (
                           <View style={s.quickRow}>
                             {(['bad','ok','good','great'] as const).map(m => (
-                              <Pressable key={m} onPress={async(e)=>{ e.stopPropagation?.(); try { const { addReflectionAt, addReflection } = await import('../../../services/wellness'); const iso = new Date(it.date.getFullYear(), it.date.getMonth(), it.date.getDate(), 12, 0, 0).toISOString(); const today = new Date(); today.setHours(0,0,0,0); const isPast = new Date(iso).getTime() < today.getTime(); if (isPast && useServerBackdate) { await addReflectionAt(iso, m); } else { await addReflection(m); } setQuickKey(null); load(rangeDays); } catch {} }} style={[s.quickChip,{ backgroundColor: moodColors[m] }]}>
+                              <A11yPressable
+                                key={m}
+                                onPress={async(e)=>{ e.stopPropagation?.(); try { const { addReflectionAt, addReflection } = await import('../../../services/wellness'); const iso = new Date(it.date.getFullYear(), it.date.getMonth(), it.date.getDate(), 12, 0, 0).toISOString(); const today = new Date(); today.setHours(0,0,0,0); const isPast = new Date(iso).getTime() < today.getTime(); if (isPast && useServerBackdate) { await addReflectionAt(iso, m); } else { await addReflection(m); } setQuickKey(null); load(rangeDays); } catch {} }}
+                                hitSlop={HIT_SLOP_8}
+                                accessibilityRole="button"
+                                accessibilityLabel={`Quick set mood ${m} for ${it.date.toDateString()}`}
+                                style={[s.quickChip,{ backgroundColor: moodColors[m] }]}
+                              >
                                 <Text style={{ color: '#fff', fontSize: 10, fontWeight:'700' }}>{m.toUpperCase()}</Text>
-                              </Pressable>
+                              </A11yPressable>
                             ))}
-                            <Pressable onPress={(e)=> { e.stopPropagation?.(); setQuickKey(null); }} style={[s.quickChip,{ backgroundColor: palette.muted }]}>
+                            <A11yPressable
+                              onPress={(e)=> { e.stopPropagation?.(); setQuickKey(null); }}
+                              hitSlop={HIT_SLOP_8}
+                              accessibilityRole="button"
+                              accessibilityLabel="Close quick mood options"
+                              style={[s.quickChip,{ backgroundColor: palette.muted }]}
+                            >
                               <Text style={{ color: '#000', fontSize: 10, fontWeight:'700' }}>X</Text>
-                            </Pressable>
+                            </A11yPressable>
                           </View>
                         )}
-                      </Pressable>
+                      </A11yPressable>
                     );
                   })}
                 </View>
@@ -336,11 +419,18 @@ export default function ReflectionsCalendar() {
           data={computeActiveDates()}
           keyExtractor={(d)=> d.date.toISOString()}
           renderItem={({ item }) => (
-            <Pressable style={s.dayRow} onPress={()=> setDetails({ open:true, date: item.date })} onLongPress={()=> setQuickKey(`${item.date.getFullYear()}-${item.date.getMonth()}-${item.date.getDate()}`)}>
+            <A11yPressable
+              style={s.dayRow}
+              onPress={()=> setDetails({ open:true, date: item.date })}
+              onLongPress={()=> setQuickKey(`${item.date.getFullYear()}-${item.date.getMonth()}-${item.date.getDate()}`)}
+              hitSlop={HIT_SLOP_8}
+              accessibilityRole="button"
+              accessibilityLabel={`View day ${item.date.toDateString()} ${item.entry? 'with entry':'no entry'}`}
+            >
               <Text style={s.dayDate}>{item.date.toDateString()}</Text>
               <Text style={s.dayMood}>{item.entry ? moods[item.entry.mood] : '—'}</Text>
               <Text style={s.dayNote} numberOfLines={1}>{item.entry?.note || ''}</Text>
-            </Pressable>
+            </A11yPressable>
           )}
           ListEmptyComponent={<Text style={{ color: palette.text, opacity: 0.8 }}>{loading? 'Loading…' : 'No reflections yet.'}</Text>}
         />
@@ -349,19 +439,27 @@ export default function ReflectionsCalendar() {
     {/* Editor Modal */}
     {editor.open && (
       <Modal transparent animationType="fade" onRequestClose={()=> setEditor(prev=>({ ...prev, open:false }))}>
-        <Pressable style={{ flex:1, backgroundColor:'#0008', alignItems:'center', justifyContent:'center' }} onPress={()=> setEditor(prev=>({ ...prev, open:false }))}>
+        <A11yPressable style={{ flex:1, backgroundColor:'#0008', alignItems:'center', justifyContent:'center' }} onPress={()=> setEditor(prev=>({ ...prev, open:false }))} accessibilityRole="button" accessibilityLabel="Close editor" hitSlop={HIT_SLOP_8}>
           <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '90%', maxWidth: 520 }}>
             <Text style={{ color: palette.text, fontWeight:'700', marginBottom: 8 }}>{editor.entry? 'Edit Reflection' : 'New Reflection'}</Text>
             <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginBottom: 8 }}>
               {(['bad','ok','good','great'] as Reflection['mood'][]).map(m => (
-                <Pressable key={m} onPress={()=> setEditor(prev=>({ ...prev, mood:m }))} style={[s.chip, editor.mood===m && s.chipActive]}>
+                <A11yPressable
+                  key={m}
+                  onPress={()=> setEditor(prev=>({ ...prev, mood:m }))}
+                  hitSlop={HIT_SLOP_8}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Set mood to ${m}`}
+                  accessibilityState={{ selected: editor.mood===m }}
+                  style={[s.chip, editor.mood===m && s.chipActive]}
+                >
                   <Text style={[s.chipText, editor.mood===m && s.chipTextActive]}>{m.toUpperCase()}</Text>
-                </Pressable>
+                </A11yPressable>
               ))}
             </View>
             <TextInput value={editor.note} onChangeText={(v)=> setEditor(prev=>({ ...prev, note:v }))} placeholder="Optional note" placeholderTextColor={palette.text+"77"} style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 10, color: palette.text }} multiline />
             <View style={{ flexDirection:'row', gap:8, marginTop: 10 }}>
-              <Pressable onPress={async()=>{
+              <A11yPressable onPress={async()=>{
                 try {
                   if (editor.entry?.id) {
                     const { updateReflection } = await import('../../../services/wellness');
@@ -382,21 +480,21 @@ export default function ReflectionsCalendar() {
                   // reload
                   load(rangeDays);
                 } catch { Alert.alert('Save failed','Unable to save reflection.'); }
-              }} style={[s.button,{ flex:1 }]}>
+              }} style={[s.button,{ flex:1 }]} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Save reflection" >
                 <Text style={s.buttonText}>Save</Text>
-              </Pressable>
-              <Pressable onPress={()=> setEditor({ open:false, date:null, entry: undefined, mood:'ok', note:'' })} style={[s.secondary,{ flex:1 }]}>
+              </A11yPressable>
+              <A11yPressable onPress={()=> setEditor({ open:false, date:null, entry: undefined, mood:'ok', note:'' })} style={[s.secondary,{ flex:1 }]} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Cancel editing" >
                 <Text style={s.secondaryText}>Cancel</Text>
-              </Pressable>
+              </A11yPressable>
             </View>
           </View>
-        </Pressable>
+        </A11yPressable>
       </Modal>
     )}
     {/* Details Modal */}
     {details.open && (
       <Modal transparent animationType="fade" onRequestClose={()=> setDetails({ open:false, date:null })}>
-        <Pressable style={{ flex:1, backgroundColor:'#0008', alignItems:'center', justifyContent:'center' }} onPress={()=> setDetails({ open:false, date:null })}>
+        <A11yPressable style={{ flex:1, backgroundColor:'#0008', alignItems:'center', justifyContent:'center' }} onPress={()=> setDetails({ open:false, date:null })} accessibilityRole="button" accessibilityLabel="Close details" hitSlop={HIT_SLOP_8}>
           <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '94%', maxWidth: 560, maxHeight: '80%' }}>
             <Text style={{ color: palette.text, fontWeight:'700', marginBottom: 8 }}>{details.date?.toDateString()}</Text>
             {/* Day summary */}
@@ -418,8 +516,8 @@ export default function ReflectionsCalendar() {
                   <Text style={{ color: palette.text, fontWeight:'700' }}>{r.mood.toUpperCase()}</Text>
                   {!!r.note && <Text style={{ color: palette.text }}>{r.note}</Text>}
                   <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
-                    <Pressable onPress={async()=>{ try { const { deleteReflection } = await import('../../../services/wellness'); await deleteReflection(r.id!); load(rangeDays); } catch {} }} style={[s.secondary,{ paddingHorizontal: 12 }]}><Text style={s.secondaryText}>Delete</Text></Pressable>
-                    <Pressable onPress={()=> setEditor({ open:true, date: details.date!, entry: r, mood: r.mood, note: r.note||'' })} style={[s.secondary,{ paddingHorizontal: 12 }]}><Text style={s.secondaryText}>Edit</Text></Pressable>
+                    <A11yPressable onPress={async()=>{ try { const { deleteReflection } = await import('../../../services/wellness'); await deleteReflection(r.id!); load(rangeDays); } catch {} }} style={[s.secondary,{ paddingHorizontal: 12 }]} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Delete reflection" ><Text style={s.secondaryText}>Delete</Text></A11yPressable>
+                    <A11yPressable onPress={()=> setEditor({ open:true, date: details.date!, entry: r, mood: r.mood, note: r.note||'' })} style={[s.secondary,{ paddingHorizontal: 12 }]} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Edit reflection" ><Text style={s.secondaryText}>Edit</Text></A11yPressable>
                   </View>
                 </View>
               )}
@@ -427,18 +525,18 @@ export default function ReflectionsCalendar() {
               style={{ maxHeight: 320 }}
             />
             <View style={{ flexDirection:'row', gap:8, marginTop: 10 }}>
-              <Pressable onPress={()=> setEditor({ open:true, date: details.date!, entry: undefined, mood:'ok', note:'' })} style={[s.button,{ flex:1 }]}><Text style={s.buttonText}>Add Reflection</Text></Pressable>
-              <Pressable onPress={()=> setDetails({ open:false, date:null })} style={[s.secondary,{ flex:1 }]}><Text style={s.secondaryText}>Close</Text></Pressable>
+              <A11yPressable onPress={()=> setEditor({ open:true, date: details.date!, entry: undefined, mood:'ok', note:'' })} style={[s.button,{ flex:1 }]} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Add reflection" ><Text style={s.buttonText}>Add Reflection</Text></A11yPressable>
+              <A11yPressable onPress={()=> setDetails({ open:false, date:null })} style={[s.secondary,{ flex:1 }]} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close dialog" ><Text style={s.secondaryText}>Close</Text></A11yPressable>
             </View>
           </View>
-        </Pressable>
+        </A11yPressable>
       </Modal>
     )}
     {/* Week/Month quick export */}
     <View style={{ paddingHorizontal: 16, paddingBottom: 8 }}>
       <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-        <Pressable onPress={async()=>{ await exportRangeCSV(7); }} style={[s.secondary,{ paddingHorizontal:12 }]}><Text style={s.secondaryText}>Export Week CSV</Text></Pressable>
-        <Pressable onPress={async()=>{ await exportRangeCSV(30); }} style={[s.secondary,{ paddingHorizontal:12 }]}><Text style={s.secondaryText}>Export Month CSV</Text></Pressable>
+        <A11yPressable onPress={async()=>{ await exportRangeCSV(7); }} style={[s.secondary,{ paddingHorizontal:12 }]} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Export last week as CSV" ><Text style={s.secondaryText}>Export Week CSV</Text></A11yPressable>
+        <A11yPressable onPress={async()=>{ await exportRangeCSV(30); }} style={[s.secondary,{ paddingHorizontal:12 }]} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Export last month as CSV" ><Text style={s.secondaryText}>Export Month CSV</Text></A11yPressable>
       </View>
     </View>
     </>

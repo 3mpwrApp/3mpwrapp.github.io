@@ -1,5 +1,7 @@
 import React from 'react';
-import { Pressable, StyleSheet, Text, View, Alert, Linking } from 'react-native';
+import { Alert, Linking, StyleSheet, Text, View } from 'react-native';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { recipes } from '../../../data/recipes';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -32,18 +34,19 @@ export default function NutritionGuides() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Diet & Nutrition Guides screen">Diet & Nutrition Guides</Text>
-      <Pressable
+      <A11yPressable
         onPress={exportFavorites}
         style={[s.btn,{ alignSelf:'flex-start', marginTop: 6 }]}
         accessibilityRole="button"
         accessibilityLabel="Export nutrition favorites as CSV"
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={s.btnText}>Export Favorites (CSV)</Text>
-      </Pressable>
+      </A11yPressable>
       <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
-        <Pressable onPress={()=>setTag('all')} style={[s.chip, tag==='all' && s.chipActive]} accessibilityRole="button" accessibilityLabel="Show all recipes"><Text style={{ color: tag==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>all</Text></Pressable>
+        <A11yPressable onPress={()=>setTag('all')} style={[s.chip, tag==='all' && s.chipActive]} accessibilityRole="button" accessibilityLabel="Show all recipes" hitSlop={HIT_SLOP_8}><Text style={{ color: tag==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>all</Text></A11yPressable>
         {tags.map(t => (
-          <Pressable key={t} onPress={()=>setTag(t)} style={[s.chip, tag===t && s.chipActive]} accessibilityRole="button" accessibilityLabel={`Filter recipes by tag: ${t}`}><Text style={{ color: tag===t? palette.onPrimary: palette.text, fontWeight:'700' }}>{t}</Text></Pressable>
+          <A11yPressable key={t} onPress={()=>setTag(t)} style={[s.chip, tag===t && s.chipActive]} accessibilityRole="button" accessibilityLabel={`Filter recipes by tag: ${t}`} hitSlop={HIT_SLOP_8}><Text style={{ color: tag===t? palette.onPrimary: palette.text, fontWeight:'700' }}>{t}</Text></A11yPressable>
         ))}
       </View>
       {filtered.map(r => (
@@ -51,15 +54,16 @@ export default function NutritionGuides() {
           <Text style={s.cardTitle} accessibilityLabel={`Recipe: ${r.title}`}>{r.title}</Text>
           <Text style={s.cardText}>Tags: {r.tags.join(', ')}</Text>
           {!!r.notes && <Text style={s.cardText}>{r.notes}</Text>}
-          {!!r.url && <Pressable style={s.btn} accessibilityRole="button" accessibilityLabel={`Open recipe link for ${r.title}`}><Text style={s.btnText}>Open</Text></Pressable>}
-          <Pressable
+          {!!r.url && <A11yPressable style={s.btn} accessibilityRole="button" accessibilityLabel={`Open recipe link for ${r.title}`} hitSlop={HIT_SLOP_8}><Text style={s.btnText}>Open</Text></A11yPressable>}
+          <A11yPressable
             onPress={()=>{ const next = new Set(favs); if (next.has(r.id)) next.delete(r.id); else next.add(r.id); saveFavs(next); }}
             style={[s.btn,{ marginLeft: 8 }]}
             accessibilityRole="button"
             accessibilityLabel={favs.has(r.id)? `Remove ${r.title} from favorites`:`Add ${r.title} to favorites`}
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={s.btnText}>{favs.has(r.id)? '★ Favorited':'☆ Favorite'}</Text>
-          </Pressable>
+          </A11yPressable>
         </View>
       ))}
       {favs.size>0 && (
@@ -69,16 +73,17 @@ export default function NutritionGuides() {
             <View key={`f-${r.id}`} style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginTop: 6 }}>
               <Text style={{ color: palette.text, flex:1 }}>{r.title}</Text>
               {!!r.url && typeof r.url === 'string' && (
-                <Pressable
+                <A11yPressable
                   onPress={() => Linking.openURL(r.url as string)}
                   style={s.btn}
                   accessibilityRole="button"
                   accessibilityLabel={`Open favorite recipe link for ${r.title}`}
+                  hitSlop={HIT_SLOP_8}
                 >
                   <Text style={s.btnText}>Open</Text>
-                </Pressable>
+                </A11yPressable>
               )}
-              <Pressable onPress={()=>{ const next = new Set(favs); next.delete(r.id); saveFavs(next); }} style={[s.btn,{ marginLeft: 6 }]} accessibilityRole="button" accessibilityLabel={`Remove ${r.title} from favorites`}><Text style={s.btnText}>Remove</Text></Pressable>
+              <A11yPressable onPress={()=>{ const next = new Set(favs); next.delete(r.id); saveFavs(next); }} style={[s.btn,{ marginLeft: 6 }]} accessibilityRole="button" accessibilityLabel={`Remove ${r.title} from favorites`} hitSlop={HIT_SLOP_8}><Text style={s.btnText}>Remove</Text></A11yPressable>
             </View>
           ))}
         </View>

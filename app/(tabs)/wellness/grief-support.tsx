@@ -1,12 +1,7 @@
 import React from "react";
-import {
-    Linking,
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
-} from "react-native";
+import { Linking, ScrollView, StyleSheet, Text, View } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -99,24 +94,26 @@ export default function GriefSupport() {
         <Text style={s.tipText}>
           Explore curated resources for identity, loss, and community support. Tap any link to open. You can export the full list or suggest new resources.
         </Text>
-        <Pressable
+        <A11yPressable
           onPress={exportResources}
           style={[s.linkRow, { backgroundColor: palette.primary, borderRadius: 6, padding: 8, marginBottom: 6 }]}
+          hitSlop={HIT_SLOP_8}
           accessibilityRole="button"
           accessibilityLabel="Export grief support resources as CSV"
           accessibilityHint="Shares the full list of resources as a CSV file for tracking or sharing."
         >
           <Text style={[s.linkLabel, { color: palette.onPrimary }]}>Export Resources (CSV)</Text>
-        </Pressable>
-        <Pressable
+        </A11yPressable>
+        <A11yPressable
           onPress={openSuggestResource}
           style={[s.linkRow, { backgroundColor: palette.surface, borderRadius: 6, padding: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
+          hitSlop={HIT_SLOP_8}
           accessibilityRole="button"
           accessibilityLabel="Suggest a new grief support resource"
           accessibilityHint="Opens email to suggest a new resource for the hub."
         >
           <Text style={[s.linkLabel, { color: palette.primary }]}>Suggest a Resource</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       <Text
         ref={titleRef}
@@ -139,19 +136,20 @@ export default function GriefSupport() {
         >
           <Text style={s.sectionTitle}>{sec.title}</Text>
           {sec.items.map((it) => (
-            <Pressable
+            <A11yPressable
               key={it.label}
               onPress={() => open(it.url)}
               accessibilityRole="link"
               accessibilityLabel={it.label}
               accessibilityHint={it.description ? it.description : `Opens ${it.label}`}
+              hitSlop={HIT_SLOP_8}
               style={({ pressed }) => [s.linkRow, pressed && { opacity: 0.85 }]}
             >
               <Text style={s.linkLabel}>{it.label}</Text>
               {!!it.description && (
                 <Text style={s.tipText}>{it.description}</Text>
               )}
-            </Pressable>
+            </A11yPressable>
           ))}
         </View>
       ))}

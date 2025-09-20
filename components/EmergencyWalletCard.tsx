@@ -1,18 +1,19 @@
+import { Ionicons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useState } from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  Alert,
-  ScrollView,
+    Alert,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
-import { useAppPalette } from "../theme/usePalette";
-import { useTextScale } from "../theme/typography";
+import { HIT_SLOP_8 } from "../constants/a11y";
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Ionicons } from "@expo/vector-icons";
+import { useTextScale } from "../theme/typography";
+import { useAppPalette } from "../theme/usePalette";
+import A11yPressable from "./A11yPressable";
 
 type EmergencyContact = {
   name: string;
@@ -219,14 +220,15 @@ export default function EmergencyWalletCard() {
             <View style={styles.contactHeader}>
               <Text style={styles.contactTitle}>Contact {index + 1}</Text>
               {info.emergencyContacts.length > 1 && (
-                <Pressable
+                <A11yPressable
                   onPress={() => removeEmergencyContact(index)}
                   style={styles.removeButton}
                   accessibilityRole="button"
                   accessibilityLabel={`Remove contact ${index + 1}`}
+                  hitSlop={HIT_SLOP_8}
                 >
                   <Ionicons name="close-circle" size={20} color={palette.error} />
-                </Pressable>
+                </A11yPressable>
               )}
             </View>
             
@@ -263,15 +265,16 @@ export default function EmergencyWalletCard() {
           </View>
         ))}
 
-        <Pressable
+        <A11yPressable
           style={styles.addContactButton}
           onPress={addEmergencyContact}
           accessibilityRole="button"
           accessibilityLabel="Add another emergency contact"
+          hitSlop={HIT_SLOP_8}
         >
           <Ionicons name="add" size={20} color={palette.primary} />
           <Text style={styles.addContactText}>Add Another Contact</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
 
       <View style={styles.section}>
@@ -292,16 +295,17 @@ export default function EmergencyWalletCard() {
         />
       </View>
 
-      <Pressable
+      <A11yPressable
         style={styles.saveButton}
         onPress={saveEmergencyInfo}
         accessibilityRole="button"
         accessibilityLabel="Save emergency information"
         accessibilityHint="Saves your emergency information securely on this device"
+        hitSlop={HIT_SLOP_8}
       >
         <Ionicons name="save" size={20} color="white" />
         <Text style={styles.saveButtonText}>Save Emergency Information</Text>
-      </Pressable>
+      </A11yPressable>
 
       <View style={styles.privacyNote}>
         <Ionicons name="shield-checkmark" size={16} color={palette.text} />

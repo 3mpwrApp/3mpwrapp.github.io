@@ -1,12 +1,13 @@
 import React from "react";
 import {
     Alert,
-    Pressable,
     ScrollView,
     StyleSheet,
     Text,
     View,
 } from "react-native";
+import A11yPressable from "../../../components/A11yPressable";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -86,25 +87,27 @@ export default function RehabGames() {
           <Text style={s.cardText}>
             These mini-games are designed to encourage gentle movement and support your rehab journey. Tap each button to log your progress. Always adapt to comfort and stop if pain increases.
           </Text>
-          <Pressable
+          <A11yPressable
             onPress={openLearnMore}
             style={[s.button, { backgroundColor: palette.primary }]}
             accessibilityRole="link"
             accessibilityLabel="Learn more about rehab games"
             accessibilityHint="Opens a page with more information about these games"
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={s.buttonText}>Learn More</Text>
-          </Pressable>
+          </A11yPressable>
       </View>
-      <Pressable
-  onPress={exportHistory}
-  style={[s.button, { marginBottom: 8 }]} 
-  accessibilityRole="button"
-  accessibilityLabel="Export rehab progress as CSV"
-  accessibilityHint="Shares your progress as a CSV file for tracking or sharing with your care team"
+      <A11yPressable
+        onPress={exportHistory}
+        style={[s.button, { marginBottom: 8 }]}
+        accessibilityRole="button"
+        accessibilityLabel="Export rehab progress as CSV"
+        accessibilityHint="Shares your progress as a CSV file for tracking or sharing with your care team"
+        hitSlop={HIT_SLOP_8}
       >
-  <Text style={s.buttonText}>Export Progress (CSV)</Text>
-      </Pressable>
+        <Text style={s.buttonText}>Export Progress (CSV)</Text>
+      </A11yPressable>
       <Text
         ref={titleRef}
         accessibilityRole="header"
@@ -126,7 +129,7 @@ export default function RehabGames() {
           Gently raise your arm and tap the button. Aim for 10 slow taps.
         </Text>
         <Text style={s.cardText}>Taps: {taps}</Text>
-        <Pressable
+        <A11yPressable
           onPress={async () => {
             const np = taps + 1;
             setTaps(np);
@@ -144,9 +147,10 @@ export default function RehabGames() {
           accessibilityLabel="Tap to log reach & tap exercise"
           accessibilityHint="Logs a reach & tap exercise. Aim for 10 slow taps."
           style={s.button}
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={s.buttonText}>Tap</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       <View style={s.card}>
         <Text style={s.cardTitle}>Breath Pacing</Text>
@@ -154,7 +158,7 @@ export default function RehabGames() {
           Box breathing: inhale 4, hold 4, exhale 4, hold 4. Do 3 cycles.
         </Text>
         <Text style={s.cardText}>Cycles: {breaths}</Text>
-        <Pressable
+        <A11yPressable
           onPress={async () => {
             const nb = breaths + 1;
             setBreaths(nb);
@@ -172,9 +176,10 @@ export default function RehabGames() {
           accessibilityLabel="Tap to log breath pacing exercise"
           accessibilityHint="Logs a breath pacing cycle. Complete 3 cycles for a milestone."
           style={s.button}
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={s.buttonText}>Complete cycle</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       <View style={s.card}>
         <Text style={s.cardTitle}>Gentle Sit-to-Stand</Text>
@@ -183,7 +188,7 @@ export default function RehabGames() {
           supports as needed.
         </Text>
         <Text style={s.cardText}>Round: {round}/5</Text>
-        <Pressable
+        <A11yPressable
           onPress={async () => {
             if (round < 5) {
               const nr = round + 1;
@@ -206,11 +211,12 @@ export default function RehabGames() {
           accessibilityLabel="Tap to log sit-to-stand exercise"
           accessibilityHint="Logs a sit-to-stand rep. Complete 5 reps for a milestone."
           style={s.button}
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={s.buttonText}>Mark rep</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
-      <Pressable
+      <A11yPressable
         onPress={() => {
           reset();
           setTaps(0);
@@ -225,9 +231,10 @@ export default function RehabGames() {
   accessibilityRole="button"
   accessibilityLabel="Reset all rehab progress"
   accessibilityHint="Resets all progress and counters for rehab games."
+        hitSlop={HIT_SLOP_8}
       >
         <Text style={[s.buttonText, { color: palette.text }]}>Reset</Text>
-      </Pressable>
+      </A11yPressable>
       <Text style={[s.tip, { marginTop: 8 }]}>Tip: Celebrate small wins. Consistency beats intensity.</Text>
       {history.length > 0 && (
         <View style={s.card}>
