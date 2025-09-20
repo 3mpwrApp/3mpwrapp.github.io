@@ -1,16 +1,16 @@
-import React from 'react';
-import { ScrollView, StyleSheet, Text, View, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
+import React from 'react';
+import { Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import ContrastToggle from '../../../components/ContrastToggle';
 import SettingsLink from '../../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { researchHubs } from '../../../data/research-hubs';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
-import { researchHubs } from '../../../data/research-hubs';
 
 export const options = { href: null };
 
@@ -96,6 +96,18 @@ export default function ResearchScreen() {
             <Ionicons name="time-outline" size={32} color={palette.primary} />
             <Text style={styles.sectionTitle}>Case/File Wait-Times</Text>
             <Text style={styles.sectionDescription}>Estimate how long processes may take</Text>
+          </A11yPressable>
+        </Link>
+        <Link href="/(tabs)/research/master-index" asChild>
+          <A11yPressable
+            style={styles.sectionCard}
+            accessibilityRole="button"
+            accessibilityLabel="Master Index - Comprehensive map of disability, compensation, and RTW sources"
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons name="map-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>Master Index</Text>
+            <Text style={styles.sectionDescription}>Comprehensive map of data & research sources</Text>
           </A11yPressable>
         </Link>
       </View>
