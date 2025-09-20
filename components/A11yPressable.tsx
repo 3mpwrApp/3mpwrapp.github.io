@@ -1,4 +1,5 @@
-import { Pressable, PressableProps, Insets } from "react-native";
+import type { PressableProps, Insets } from "react-native";
+import { Pressable } from "react-native";
 
 type Props = PressableProps & { role?: "button" | "link" | "menu" };
 

@@ -1,15 +1,7 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import type { Href } from "expo-router";
-import { Link } from "expo-router";
+import { Link, type Href } from "expo-router";
 import React from "react";
-import {
-    Linking,
-    RefreshControl,
-    SectionList,
-    StyleSheet,
-    Text,
-    View,
-} from "react-native";
+import { Linking, RefreshControl, SectionList, StyleSheet, Text, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import Card from "../../../components/Card";
 import ContrastToggle from "../../../components/ContrastToggle";
@@ -18,12 +10,7 @@ import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { resources as localResources } from "../../../data/resources";
-import {
-    MAX_FONT_SCALE,
-    useAnnounceOnChange,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
-} from "../../../hooks/useA11y";
+import { MAX_FONT_SCALE, useAnnounceOnChange, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { fetchResources } from "../../../services/resources";
 import { useCounts } from "../../../store/counts";
@@ -32,11 +19,8 @@ import { useRefresh } from "../../../store/refresh";
 import { useSettings } from "../../../store/settings";
 import { useAppPalette } from "../../../theme/usePalette";
 import type { Resource, ResourceCategory } from "../../../types/models";
-import {
-    filterResources,
-    groupByRegion,
-    presentProvinceCodes,
-} from "../../../utils/resources";
+// eslint-disable-next-line import/order
+import { filterResources, groupByRegion, presentProvinceCodes } from "../../../utils/resources";
 
 const PROVINCE_NAMES: Record<string, string> = {
   AB: "Alberta",
@@ -603,7 +587,9 @@ function simplify(text: string) {
   return firstSentence.length > 120 ? firstSentence.slice(0, 117) + "..." : firstSentence;
 }
 
-function openResource(item: Resource, pref: import("../../../store/settings").ResourceFormat) {
+import type { ResourceFormat } from "../../../store/settings";
+
+function openResource(item: Resource, pref: ResourceFormat) {
   // Prefer specific format URLs when present; fall back to default url
   const url =
     (pref === "audio" && (item as any).audioUrl) ||

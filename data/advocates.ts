@@ -1,4 +1,4 @@
-import { Advocate } from "../types/models";
+import type { Advocate } from "../types/models";
 
 export const advocates: Advocate[] = [
   {

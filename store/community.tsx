@@ -281,7 +281,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
 export function useCommunity() {
   const ctx = React.useContext(Ctx);
   if (!ctx)
-    throw new Error("useCommunity must be used within CommunityProvider");
+    {throw new Error("useCommunity must be used within CommunityProvider");}
   return ctx;
 }
 

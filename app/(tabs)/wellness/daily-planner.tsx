@@ -266,8 +266,7 @@ export default function DailyPlanner() {
         accessibilityRole="button"
         accessibilityLabel="Add appointment"
         accessibilityHint="Adds the appointment to your daily plan."
-      >
-      </A11yPressable>
+       />
       <View style={{ height: 8 }} />
       {appts
         .sort((a, b) => a.time.localeCompare(b.time))
@@ -288,8 +287,7 @@ export default function DailyPlanner() {
         accessibilityRole="button"
         accessibilityLabel="Build daily plan"
         accessibilityHint="Generates your adaptive daily plan based on appointments and averages."
-      >
-      </A11yPressable>
+       />
       <View style={{ height: 8 }} />
       <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
         <A11yPressable onPress={morningTemplate} style={s.button}>
@@ -301,8 +299,7 @@ export default function DailyPlanner() {
           accessibilityRole="button"
           accessibilityLabel="Add morning template"
           accessibilityHint="Adds a morning routine template to your appointments."
-        >
-        </A11yPressable>
+         />
         <A11yPressable onPress={afternoonTemplate} style={s.button}>
           <Text style={s.buttonText}>Afternoon template</Text>
         </A11yPressable>
@@ -312,8 +309,7 @@ export default function DailyPlanner() {
           accessibilityRole="button"
           accessibilityLabel="Add afternoon template"
           accessibilityHint="Adds an afternoon routine template to your appointments."
-        >
-        </A11yPressable>
+         />
       </View>
       {!!plan && (
         <View style={s.card}>
@@ -328,16 +324,14 @@ export default function DailyPlanner() {
             accessibilityRole="button"
             accessibilityLabel="Share daily plan"
             accessibilityHint="Shares your daily plan using the system share dialog."
-          >
-          </A11yPressable>
+           />
           <A11yPressable
             onPress={addRestToCalendar}
             style={[s.button, { marginTop: 8 }]}
             accessibilityRole="button"
             accessibilityLabel="Add rest break to calendar"
             accessibilityHint="Adds a rest break to your calendar for today."
-          >
-          </A11yPressable>
+           />
           <A11yPressable onPress={addAllRests} style={[s.button, { marginTop: 8 }]}>
             <Text style={s.buttonText}>Add all suggested rests</Text>
           </A11yPressable>
@@ -347,16 +341,14 @@ export default function DailyPlanner() {
             accessibilityRole="button"
             accessibilityLabel="Add all rest breaks to calendar"
             accessibilityHint="Adds all suggested rest breaks to your calendar for today."
-          >
-          </A11yPressable>
+           />
           <A11yPressable
             onPress={exportRestsICS}
             style={[s.button, { marginTop: 8 }]}
             accessibilityRole="button"
             accessibilityLabel="Export rest breaks as ICS"
             accessibilityHint="Exports all rest breaks as an ICS calendar file for sharing or import."
-          >
-          </A11yPressable>
+           />
         </View>
       )}
     </ScrollView>

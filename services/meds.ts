@@ -1,5 +1,5 @@
-import { auth, db } from '../firebase/config';
 import { addDoc, collection, deleteDoc, doc, getDocs, orderBy, query, serverTimestamp, updateDoc, where } from 'firebase/firestore';
+import { auth, db } from '../firebase/config';
 
 export type Medication = {
   id?: string;

@@ -1,4 +1,5 @@
 import React from "react";
+import type { ProvinceCode } from "../types/models";
 
 let AsyncStorage: any;
 try {
@@ -19,7 +20,7 @@ export type SettingsState = {
   plainLanguage: boolean;
   captionsPreferred: boolean;
   resourcePreferredFormat: ResourceFormat;
-  province: import("../types/models").ProvinceCode | null;
+  province: ProvinceCode | null;
   includeProvincialHolidays: boolean;
   youtubeOpenPreference: "ask" | "app" | "browser";
   voiceMode: boolean;

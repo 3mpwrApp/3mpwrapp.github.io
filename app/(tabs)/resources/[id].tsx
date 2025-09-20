@@ -7,9 +7,9 @@ import {
   Linking,
   Share,
 } from "react-native";
-import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useLocalSearchParams, Stack } from "expo-router";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import { resources } from "../../../data/resources";
@@ -43,7 +43,7 @@ export default function ResourceDetail() {
     if (!resource) return null;
     if (resource.scope === "canada") return "Canada";
     if (resource.scope === "province" && resource.province)
-      return resource.province;
+      {return resource.province;}
     return null;
   }, [resource]);
 

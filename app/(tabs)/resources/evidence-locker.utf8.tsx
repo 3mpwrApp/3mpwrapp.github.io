@@ -88,7 +88,7 @@ export default function EvidenceLocker() {
   React.useEffect(() => {
     (async () => {
       if (AsyncStorage)
-        await AsyncStorage.setItem("evidence:notes:v1", JSON.stringify(notes));
+        {await AsyncStorage.setItem("evidence:notes:v1", JSON.stringify(notes));}
     })();
   }, [notes]);
 

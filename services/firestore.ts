@@ -1,10 +1,9 @@
+import type * as Fire from "firebase/firestore";
 import { db as sharedDb } from "../firebase/config";
 
-type Fire = typeof import("firebase/firestore");
+let mod: typeof Fire | null = null;
 
-let mod: Fire | null = null;
-
-async function ensure(): Promise<Fire | null> {
+async function ensure(): Promise<typeof Fire | null> {
   if (mod) return mod;
   try {
     mod = await import("firebase/firestore");

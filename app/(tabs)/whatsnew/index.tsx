@@ -7,6 +7,7 @@ import {
   TextInput,
   Pressable,
 } from "react-native";
+import { useFocusEffect } from "@react-navigation/native";
 import { useAppPalette } from "../../../theme/usePalette";
 import { useTextScale } from "../../../theme/typography";
 import {
@@ -20,7 +21,6 @@ import {
   addLocalWhatsNew,
 } from "../../../services/localContent";
 import SettingsLink from "../../../components/SettingsLink";
-import { useFocusEffect } from "@react-navigation/native";
 import ContrastToggle from "../../../components/ContrastToggle";
 
 export default function WhatsNewScreen() {

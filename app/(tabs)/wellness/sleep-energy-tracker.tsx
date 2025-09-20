@@ -160,7 +160,7 @@ export default function SleepEnergyTracker() {
         filterTag &&
         !(e.tags || "").toLowerCase().includes(filterTag.toLowerCase())
       )
-        return false;
+        {return false;}
       return true;
     });
   }, [entries, filterStart, filterEnd, filterMinHours, filterTag]);

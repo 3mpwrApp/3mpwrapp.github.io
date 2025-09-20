@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import A11yPressable from "./A11yPressable";
 import { Ionicons } from "@expo/vector-icons";
 import { useAppPalette } from "../theme/usePalette";
-import { useSettings, TextScale, ResourceFormat } from "../store/settings";
+import type { TextScale, ResourceFormat } from "../store/settings";
+import { useSettings } from "../store/settings";
 import { touchTarget } from "../constants/a11y";
+import A11yPressable from "./A11yPressable";
 
 export default function A11yQuickSettings() {
   const palette = useAppPalette();

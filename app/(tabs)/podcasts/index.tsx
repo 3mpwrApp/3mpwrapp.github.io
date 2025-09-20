@@ -262,11 +262,11 @@ export default function PodcastsScreen() {
                   ? () => {
                       const id = String(item.id);
                       if (youtubeOpenPreference === "app")
-                        return openYouTubeDirect(id);
+                        {return openYouTubeDirect(id);}
                       if (youtubeOpenPreference === "browser")
-                        return Linking.openURL(
+                        {return Linking.openURL(
                           `https://youtu.be/${id.replace("yt:", "")}`,
-                        );
+                        );}
                       return openYouTubeChooser(id, item.title);
                     }
                   : undefined

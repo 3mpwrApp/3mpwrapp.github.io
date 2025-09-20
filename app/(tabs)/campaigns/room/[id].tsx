@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, Share, Alert, ScrollView } from "react-native";
+import { useLocalSearchParams, Stack } from "expo-router";
 import A11yPressable from "../../../../components/A11yPressable";
 import { useAuth } from "../../../../context/AuthContext";
-import { useLocalSearchParams, Stack } from "expo-router";
 import { useAppPalette } from "../../../../theme/usePalette";
 import { getCachedJSON, setCachedJSON } from "../../../../services/cache";
 import {

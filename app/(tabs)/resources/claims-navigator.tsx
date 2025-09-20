@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  ScrollView,
-} from "react-native";
-// Lazy-load Printing when needed to avoid dev-client crashes
+import { View, Text, StyleSheet, TextInput, Pressable, ScrollView } from "react-native";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -32,13 +24,13 @@ export default function ClaimsNavigator() {
   const generate = React.useCallback(() => {
     const steps: string[] = [];
     if (incident)
-      steps.push(
+      {steps.push(
         "Write a detailed incident report (date/time/location/witnesses)",
-      );
+      );}
     if (employer)
-      steps.push(`Notify ${employer} in writing; request acknowledgement`);
+      {steps.push(`Notify ${employer} in writing; request acknowledgement`);}
     if (limitations)
-      steps.push("Ask your clinician for a functional abilities form");
+      {steps.push("Ask your clinician for a functional abilities form");}
     steps.push("File or update your claim; keep copies of all documents");
     steps.push(
       "Track communications (dates, names, summaries) in Evidence Locker",

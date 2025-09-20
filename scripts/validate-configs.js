@@ -74,12 +74,12 @@ try {
     app?.expo?.android?.adaptiveIcon?.foregroundImage &&
     path.join(base, app.expo.android.adaptiveIcon.foregroundImage);
   if (fg && !exists(fg))
-    warns.push(
+    {warns.push(
       `Missing android adaptiveIcon.foregroundImage at ${app.expo.android.adaptiveIcon.foregroundImage}`,
-    );
+    );}
   const fav = app?.expo?.web?.favicon && path.join(base, app.expo.web.favicon);
   if (fav && !exists(fav))
-    warns.push(`Missing web favicon at ${app.expo.web.favicon}`);
+    {warns.push(`Missing web favicon at ${app.expo.web.favicon}`);}
 } catch (e) {
   warns.push(`app.json asset check warning: ${e.message}`);
 }
@@ -94,7 +94,7 @@ try {
 try {
   const base = process.env.EXPO_PUBLIC_LLM_BASE;
   if (base && !/^https?:\/\//.test(base))
-    warns.push("EXPO_PUBLIC_LLM_BASE should be http(s) URL");
+    {warns.push("EXPO_PUBLIC_LLM_BASE should be http(s) URL");}
 } catch {}
 
 // Simple import path case check for relative imports (helps CI on case-sensitive FS)

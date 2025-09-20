@@ -1,12 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, Pressable, TextInput } from "react-native";
+import { router } from "expo-router";
+import type { Href } from "expo-router";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 import { useA11ySettings } from "../store/a11ySettings";
 import { useAuth } from "../context/AuthContext";
-import { router } from "expo-router";
-import type { Href } from "expo-router";
-import { useTranslation, Lang } from "../i18n";
+import type { Lang } from "../i18n";
+import { useTranslation } from "../i18n";
 
 export default function Profile() {
   const palette = useAppPalette();

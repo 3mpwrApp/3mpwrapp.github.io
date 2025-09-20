@@ -156,12 +156,12 @@ export default function SymptomTracker() {
       if (filterEnd && e.date > filterEnd) return false;
       const p = parseFloat(e.pain || "0");
       if (min !== null && !isNaN(min) && (!e.pain || isNaN(p) || p < min))
-        return false;
+        {return false;}
       if (
         filterTag &&
         !(e.tags || "").toLowerCase().includes(filterTag.toLowerCase())
       )
-        return false;
+        {return false;}
       return true;
     });
   }, [entries, filterStart, filterEnd, filterMinPain, filterTag]);

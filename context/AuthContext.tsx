@@ -1,4 +1,5 @@
-import { signOut as fbSignOut, getIdTokenResult, onAuthStateChanged, signInAnonymously, User } from "firebase/auth";
+import type { User } from "firebase/auth";
+import { signOut as fbSignOut, getIdTokenResult, onAuthStateChanged, signInAnonymously } from "firebase/auth";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../firebase/config";
 

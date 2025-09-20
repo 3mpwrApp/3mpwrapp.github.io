@@ -1,5 +1,6 @@
 /* eslint import/no-named-as-default: off */
-import useColorScheme, { Scheme } from "./useColorScheme";
+import type { Scheme } from "./useColorScheme";
+import useColorScheme from "./useColorScheme";
 type ThemeColors = {
   text: { light: string; dark: string };
   background: { light: string; dark: string };

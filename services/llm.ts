@@ -27,6 +27,6 @@ export async function llmInterpret(
 ): Promise<{ summary: string; next: string[] } | null> {
   const data = await post("/interpret", { text });
   if (data && typeof data.summary === "string" && Array.isArray(data.next))
-    return data as any;
+    {return data as any;}
   return null;
 }

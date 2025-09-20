@@ -48,7 +48,7 @@ export default function EventDetail() {
       const supported = await Linking.canOpenURL(url);
       if (supported) await Linking.openURL(url);
       else
-        await Share.share({
+        {await Share.share({
           message: createICS(
             event.title,
             event.date,
@@ -56,7 +56,7 @@ export default function EventDetail() {
             event.location,
           ),
           title: "Event",
-        });
+        });}
     } catch {
       await Share.share({
         message: createICS(

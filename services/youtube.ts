@@ -1,3 +1,4 @@
+import type { Podcast } from "../data/podcasts";
 export type YTVideo = { id: string; title: string; url: string; minutes?: number; audience?: string };
 
 export async function fetchExercisePlaylist(query: string, max = 6): Promise<YTVideo[]> {
@@ -19,7 +20,7 @@ export async function fetchExercisePlaylist(query: string, max = 6): Promise<YTV
   }));
 }
 
-export async function fetchInjuredWorkerVideos(max = 30): Promise<import('../data/podcasts').Podcast[]> {
+export async function fetchInjuredWorkerVideos(max = 30): Promise<Podcast[]> {
   const key = process.env.EXPO_PUBLIC_YT_API_KEY;
   if (!key) return [] as any;
   const url = new URL('https://www.googleapis.com/youtube/v3/search');

@@ -1,5 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, SectionList } from "react-native";
+import { Link } from "expo-router";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
 import {
@@ -11,11 +13,9 @@ import { useFavorites } from "../../store/favorites";
 import { fetchPodcasts } from "../../services/podcasts";
 import { fetchResources } from "../../services/resources";
 import { fetchCampaigns } from "../../services/campaigns";
-import { Link } from "expo-router";
 import Card from "../../components/Card";
 import type { Podcast } from "../../data/podcasts";
 import type { Resource, Campaign } from "../../types/models";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import SettingsLink from "../../components/SettingsLink";
 import ContrastToggle from "../../components/ContrastToggle";
 
@@ -183,7 +183,7 @@ export default function SavedScreen() {
           );
         }}
         ListEmptyComponent={
-          <Text style={styles.subtitle}>You haven’t saved anything yet.</Text>
+          <Text style={styles.subtitle}>You havenï¿½t saved anything yet.</Text>
         }
         contentContainerStyle={{ paddingVertical: 12 }}
       />

@@ -1,4 +1,4 @@
-import { Resource } from "../types/models";
+import type { Resource } from "../types/models";
 
 export const resources: Resource[] = [
   // Tools & Downloads

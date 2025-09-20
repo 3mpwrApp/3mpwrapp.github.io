@@ -21,17 +21,17 @@ function interpret(text: string): { summary: string; next: string[] } {
   const lower = text.toLowerCase();
   const next: string[] = [];
   if (lower.includes("deadline"))
-    next.push("Write down any deadlines and add a calendar reminder.");
+    {next.push("Write down any deadlines and add a calendar reminder.");}
   if (lower.includes("appeal") || lower.includes("reconsideration"))
-    next.push(
+    {next.push(
       "Use Resources Ã¢â€ â€™ Letter templates for reconsideration/appeal.",
-    );
+    );}
   if (lower.includes("medical"))
-    next.push(
+    {next.push(
       "Gather medical notes focusing on functional limits, not diagnoses.",
-    );
+    );}
   if (lower.includes("overpayment"))
-    next.push("Consider financial hardship and repayment plan options.");
+    {next.push("Consider financial hardship and repayment plan options.");}
   const summary = text.split(/\n|\./).slice(0, 5).join(". ").trim();
   return {
     summary:

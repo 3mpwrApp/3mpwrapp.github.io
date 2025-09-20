@@ -1,6 +1,6 @@
-import { withFallback, retry } from "./api";
 import { events as local } from "../data/events";
 import type { Event } from "../data/events";
+import { withFallback, retry } from "./api";
 import { getCachedJSON, setCachedJSON } from "./cache";
 
 const BASE = process.env.EXPO_PUBLIC_API_BASE ?? "";

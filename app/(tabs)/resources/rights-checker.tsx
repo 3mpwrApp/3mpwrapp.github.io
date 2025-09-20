@@ -46,9 +46,9 @@ export default function RightsChecker() {
       );
       if (q2 === "yes") lines.push(t('rightsChecker.union','Contact your union for representation.'));
       else
-        lines.push(
+        {lines.push(
           t('rightsChecker.noUnion','If no union, consider contacting a legal clinic or advocacy group.')
-        );
+        );}
     }
     if (q4 === "yes") {
       lines.push(

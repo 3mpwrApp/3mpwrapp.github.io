@@ -20,7 +20,7 @@ export async function logEvent(name: string, params?: Record<string, any>) {
     } else {
       // No-op on native for now
       if (__DEV__) {
-        console.log("analytics:", name, params);
+        console.warn("analytics event (noop native):", name, params);
       }
     }
   } catch {

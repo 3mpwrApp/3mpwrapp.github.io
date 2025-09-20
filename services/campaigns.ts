@@ -1,6 +1,6 @@
-import { withFallback, retry } from "./api";
 import { campaigns as local } from "../data/campaigns";
 import type { Campaign } from "../types/models";
+import { withFallback, retry } from "./api";
 
 const BASE = process.env.EXPO_PUBLIC_API_BASE ?? "";
 

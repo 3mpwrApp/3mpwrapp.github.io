@@ -1,7 +1,8 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
-import { Lang, useTranslation } from "../i18n";
+import type { Lang} from "../i18n";
+import { useTranslation } from "../i18n";
 import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
 

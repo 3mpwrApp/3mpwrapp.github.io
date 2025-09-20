@@ -1,28 +1,16 @@
 import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TextInput,
-  Button,
-  Alert,
-  Image,
-} from "react-native";
+import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image } from "react-native";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
 import { useAppPalette } from "../../theme/usePalette";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-} from "../../hooks/useA11y";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
+import { useAuth } from "../../context/AuthContext";
+import { db, storage } from "../../firebase/config"; // dY"1 storage import
+import { useNetwork } from "../../store/network";
+
 // import { useTranslation } from "../../i18n"; // not used currently
 // import { useSettings } from "../../store/settings"; // not used currently
 
-import { useAuth } from "../../context/AuthContext";
-import { db, storage } from "../../firebase/config"; // dY"1 storage import
-import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { useNetwork } from "../../store/network";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
 
 export default function SettingsScreen() {
   const palette = useAppPalette();

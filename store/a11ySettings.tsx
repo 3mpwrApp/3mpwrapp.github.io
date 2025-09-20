@@ -65,6 +65,6 @@ export function A11ySettingsProvider({
 export function useA11ySettings() {
   const ctx = React.useContext(Ctx);
   if (!ctx)
-    throw new Error("useA11ySettings must be used within A11ySettingsProvider");
+    {throw new Error("useA11ySettings must be used within A11ySettingsProvider");}
   return ctx;
 }

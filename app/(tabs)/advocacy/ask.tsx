@@ -7,6 +7,7 @@ import {
   Pressable,
   Alert,
 } from "react-native";
+import { router } from "expo-router";
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,
@@ -15,7 +16,6 @@ import {
 } from "../../../hooks/useA11y";
 import { CommunityProvider, useCommunity } from "../../../store/community";
 import { channels as seedChannels } from "../../../data/community";
-import { router } from "expo-router";
 
 function Inner() {
   const palette = useAppPalette();

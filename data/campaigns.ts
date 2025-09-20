@@ -1,4 +1,4 @@
-import { Campaign } from "../types/models";
+import type { Campaign } from "../types/models";
 
 export const campaigns: Campaign[] = [
   {

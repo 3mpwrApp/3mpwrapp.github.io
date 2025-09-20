@@ -65,7 +65,7 @@ module.exports = defineConfig([
       'jsx-a11y/aria-role': 'warn',
       // Imports
       'import/no-duplicates': 'warn',
-      'import/order': ['warn', { groups: ['builtin','external','internal','parent','sibling','index'], 'newlines-between':'always' }],
+  'import/order': ['warn', { groups: ['builtin','external','internal','parent','sibling','index'], 'newlines-between':'never' }],
       'import/no-named-as-default': 'off',
       // General
       'no-console': ['warn', { allow: ['warn', 'error'] }],
@@ -89,6 +89,8 @@ module.exports = defineConfig([
     },
     rules: {
       '@typescript-eslint/no-unused-vars': 'off',
+      // Allow verbose logging in maintenance/utility scripts
+      'no-console': 'off',
     },
   },
   // Jest tests

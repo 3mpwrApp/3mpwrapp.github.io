@@ -1,5 +1,6 @@
 import React from "react";
-import { Pressable, GestureResponderEvent } from "react-native";
+import type { GestureResponderEvent } from "react-native";
+import { Pressable } from "react-native";
 
 type Props = React.ComponentProps<typeof Pressable>;
 

@@ -1,5 +1,5 @@
-import type { Event } from "./events";
 import type { ProvinceCode } from "../types/models";
+import type { Event } from "./events";
 
 function pad2(n: number) {
   return String(n).padStart(2, "0");

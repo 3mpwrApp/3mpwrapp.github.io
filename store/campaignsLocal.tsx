@@ -73,8 +73,8 @@ export function CampaignsLocalProvider({
 export function useCampaignsLocal() {
   const ctx = React.useContext(Ctx);
   if (!ctx)
-    throw new Error(
+    {throw new Error(
       "useCampaignsLocal must be used within CampaignsLocalProvider",
-    );
+    );}
   return ctx;
 }

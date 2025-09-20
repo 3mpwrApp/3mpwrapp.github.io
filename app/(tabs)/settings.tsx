@@ -23,7 +23,8 @@ import { useBookmarks } from '../../store/bookmarks';
 import { useNetwork } from '../../store/network';
 import { usePrivacy } from '../../store/privacy';
 import { useProfileLocal } from '../../store/profileLocal';
-import { ResourceFormat, TextScale, useSettings } from '../../store/settings';
+import type { ResourceFormat, TextScale} from '../../store/settings';
+import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 

@@ -36,7 +36,7 @@ export default function AboutScreen() {
     const url = `mailto:${EMAIL}?${params.toString()}`;
     const supported = await Linking.canOpenURL(url);
     if (!supported)
-      return Alert.alert("Email not configured", `Please email ${EMAIL}`);
+      {return Alert.alert("Email not configured", `Please email ${EMAIL}`);}
     await Linking.openURL(url);
   };
 

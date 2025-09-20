@@ -1,25 +1,25 @@
+import { Ionicons } from "@expo/vector-icons";
+import * as Linking from "expo-linking";
+import { router, usePathname, type Href } from "expo-router";
 import React from "react";
 import {
-  SafeAreaView,
-  Text,
-  StyleSheet,
-  View,
-  Pressable,
-  Image,
-  ScrollView,
+    Image,
+    Pressable,
+    SafeAreaView,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
-import * as Linking from "expo-linking";
-import { usePathname, router } from "expo-router";
-import { type Palette } from "../theme/colors";
-import { useAppPalette } from "../theme/usePalette";
-import { useFavorites } from "../store/favorites";
+import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
+import { useAuth } from "../context/AuthContext";
+import { useTranslation } from "../i18n";
 import { useCounts } from "../store/counts";
+import { useFavorites } from "../store/favorites";
 import { useNetwork } from "../store/network";
 import { useRefresh } from "../store/refresh";
-import { Ionicons } from "@expo/vector-icons";
-import { useAuth } from "../context/AuthContext";
-import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
-import { useTranslation } from "../i18n";
+import { type Palette } from "../theme/colors";
+import { useAppPalette } from "../theme/usePalette";
 import A11yQuickSettings from "./A11yQuickSettings";
 
 export default function ThemedHeader() {
@@ -190,9 +190,7 @@ export default function ThemedHeader() {
 
         {/* Settings */}
         <Pressable
-          onPress={() =>
-            router.push("/(tabs)/settings" as import("expo-router").Href)
-          }
+          onPress={() => router.push("/(tabs)/settings" as Href)}
           accessibilityRole="button"
           accessibilityLabel="Open settings"
           hitSlop={HIT_SLOP_8}
@@ -207,7 +205,7 @@ export default function ThemedHeader() {
 
         {/* Profile */}
         <Pressable
-          onPress={() => router.push("/profile" as import("expo-router").Href)}
+          onPress={() => router.push("/profile" as Href)}
           accessibilityRole="button"
           accessibilityLabel={t("header.openProfile")}
           hitSlop={HIT_SLOP_8}
@@ -242,7 +240,7 @@ export default function ThemedHeader() {
         ) : (
           <Pressable
             onPress={() =>
-              router.push("/(auth)/login" as import("expo-router").Href)
+              router.push("/(auth)/login" as Href)
             }
             accessibilityRole="button"
             accessibilityLabel={t("header.signIn")}
@@ -279,7 +277,7 @@ export default function ThemedHeader() {
                 key={item.path}
                 onPress={() => {
                   setMenuOpen(false);
-                  router.push(item.path as import("expo-router").Href);
+                  router.push(item.path as Href);
                 }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
@@ -309,7 +307,7 @@ export default function ThemedHeader() {
                 key={item.path}
                 onPress={() => {
                   setMenuOpen(false);
-                  router.push(item.path as import("expo-router").Href);
+                  router.push(item.path as Href);
                 }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
@@ -337,7 +335,7 @@ export default function ThemedHeader() {
                 key={item.path}
                 onPress={() => {
                   setMenuOpen(false);
-                  router.push(item.path as import("expo-router").Href);
+                  router.push(item.path as Href);
                 }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
@@ -368,7 +366,7 @@ export default function ThemedHeader() {
                 key={item.path}
                 onPress={() => {
                   setMenuOpen(false);
-                  router.push(item.path as import("expo-router").Href);
+                  router.push(item.path as Href);
                 }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
@@ -391,7 +389,7 @@ export default function ThemedHeader() {
                 key={item.path}
                 onPress={() => {
                   setMenuOpen(false);
-                  router.push(item.path as import("expo-router").Href);
+                  router.push(item.path as Href);
                 }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to ${item.label}`}
@@ -423,7 +421,7 @@ export default function ThemedHeader() {
               <Pressable
                 onPress={() => {
                   setMenuOpen(false);
-                  router.push('/(tabs)/admin' as import('expo-router').Href);
+                  router.push('/(tabs)/admin' as Href);
                 }}
                 accessibilityRole="button"
                 accessibilityLabel={`Go to Admin Panel`}

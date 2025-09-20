@@ -51,6 +51,6 @@ export function ProfileLocalProvider({
 export function useProfileLocal() {
   const ctx = React.useContext(Ctx);
   if (!ctx)
-    throw new Error("useProfileLocal must be used within ProfileLocalProvider");
+    {throw new Error("useProfileLocal must be used within ProfileLocalProvider");}
   return ctx;
 }

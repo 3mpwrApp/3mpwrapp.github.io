@@ -97,6 +97,6 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
 export function useFavorites() {
   const ctx = React.useContext(FavoritesContext);
   if (!ctx)
-    throw new Error("useFavorites must be used within FavoritesProvider");
+    {throw new Error("useFavorites must be used within FavoritesProvider");}
   return ctx;
 }

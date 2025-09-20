@@ -5,12 +5,10 @@ import { Stack, usePathname } from "expo-router";
 import React from "react";
 import { AccessibilityInfo, AppState, StyleSheet, Text, View } from "react-native";
 import { announce } from "../utils/announce";
-
 import ChangelogGate from "../components/ChangelogGate";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
 import Header from "../components/ThemedHeader";
-
 import { CountsProvider } from "../store/counts";
 import { FavoritesProvider } from "../store/favorites";
 import { NetworkProvider, useNetwork } from "../store/network";
@@ -23,7 +21,6 @@ import { BookmarksProvider } from "../store/bookmarks";
 import { PrivacyProvider, usePrivacy } from "../store/privacy";
 import { ProfileLocalProvider } from "../store/profileLocal";
 import { SettingsProvider } from "../store/settings";
-
 import { fetchCampaigns } from "../services/campaigns";
 import { fetchEvents } from "../services/events";
 import * as Notifier from "../services/notifications";
@@ -64,7 +61,7 @@ export default function RootLayout() {
   React.useEffect(() => {
     Notifier.setupAsync();
     Notifier.getExpoPushToken().then((t) => {
-      if (t && __DEV__) console.log("Expo push token:", t);
+      if (t && __DEV__) console.warn("Expo push token:", t);
     });
   }, []);
 

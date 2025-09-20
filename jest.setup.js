@@ -15,8 +15,8 @@ jest.mock('react-native', () => {
     const {
       accessibilityRole,
       accessibilityLabel,
-      accessibilityState,
-      hitSlop,
+      // accessibilityState intentionally omitted (unused in test env mock)
+      // hitSlop omitted
       onPress,
       ...rest
     } = props;

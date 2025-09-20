@@ -14,12 +14,12 @@ export function filterResources(
   const q = (opts.query ?? "").trim().toLowerCase();
   let base = items;
   if (opts.category !== "all")
-    base = base.filter((r) => r.category === opts.category);
+    {base = base.filter((r) => r.category === opts.category);}
   if (opts.region === "canada") base = base.filter((r) => r.scope === "canada");
   else if (opts.region !== "all")
-    base = base.filter(
+    {base = base.filter(
       (r) => r.scope === "province" && r.province === opts.region,
-    );
+    );}
   if (!q) return base;
   return base.filter(
     (r) =>
@@ -43,6 +43,6 @@ export function groupByRegion(filtered: Resource[]) {
 export function presentProvinceCodes(items: Resource[]): string[] {
   const set = new Set<string>();
   for (const r of items)
-    if (r.scope === "province" && r.province) set.add(r.province);
+    {if (r.scope === "province" && r.province) set.add(r.province);}
   return Array.from(set);
 }

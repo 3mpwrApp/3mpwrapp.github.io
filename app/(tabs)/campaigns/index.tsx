@@ -9,6 +9,7 @@ import {
   TextInput,
   Pressable,
 } from "react-native";
+import { Link } from "expo-router";
 import { colors, type Palette } from "../../../theme/colors";
 import {
   MAX_FONT_SCALE,
@@ -19,7 +20,6 @@ import {
 import Card from "../../../components/Card";
 import { campaigns as localCampaigns } from "../../../data/campaigns";
 import { fetchCampaigns } from "../../../services/campaigns";
-import { Link } from "expo-router";
 import SearchBar from "../../../components/SearchBar";
 import { useCounts } from "../../../store/counts";
 import SkeletonRow from "../../../components/SkeletonRow";

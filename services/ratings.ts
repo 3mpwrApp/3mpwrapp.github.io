@@ -1,5 +1,5 @@
-import { auth, db } from '../firebase/config';
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp, where, setDoc, doc, limit as fsLimit } from 'firebase/firestore';
+import { auth, db } from '../firebase/config';
 
 export type Rating = { id?: string; target: string; kind: 'hospital'|'clinic'|'law'|'employer'|'union'|'other'; score: number; comment?: string; createdAt?: any };
 

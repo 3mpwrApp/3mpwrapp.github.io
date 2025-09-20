@@ -1,7 +1,8 @@
-import { Pressable, ViewStyle } from "react-native";
-import { HIT_SLOP_8 } from "../constants/a11y";
+import type { ViewStyle } from "react-native";
+import { Pressable } from "react-native";
 import { Link } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { HIT_SLOP_8 } from "../constants/a11y";
 import { useAppPalette } from "../theme/usePalette";
 
 export default function SettingsLink({ style }: { style?: ViewStyle }) {
