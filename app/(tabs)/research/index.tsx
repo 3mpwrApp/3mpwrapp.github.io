@@ -1,21 +1,21 @@
-﻿import React from "react";
-import { View, Text, StyleSheet, FlatList, ScrollView, Pressable } from "react-native";
+﻿import { Ionicons } from "@expo/vector-icons";
+import { Link } from "expo-router";
+import React from "react";
+import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
 import A11yPressable from '../../../components/A11yPressable';
+import Card from "../../../components/Card";
+import ContrastToggle from "../../../components/ContrastToggle";
+import SearchBar from "../../../components/SearchBar";
+import SettingsLink from "../../../components/SettingsLink";
 import { HIT_SLOP_8 } from '../../../constants/a11y';
-import { useAppPalette } from "../../../theme/usePalette";
-import { useTextScale } from "../../../theme/typography";
+import { researchItems } from "../../../data/research";
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
-import { researchItems } from "../../../data/research";
-import SearchBar from "../../../components/SearchBar";
-import Card from "../../../components/Card";
-import { Link } from "expo-router";
-import SettingsLink from "../../../components/SettingsLink";
-import ContrastToggle from "../../../components/ContrastToggle";
-import { Ionicons } from "@expo/vector-icons";
+import { useTextScale } from "../../../theme/typography";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export const options = { href: null };
 
