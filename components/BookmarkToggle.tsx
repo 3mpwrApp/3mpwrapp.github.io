@@ -1,10 +1,12 @@
 import { usePathname } from 'expo-router';
 import { Text } from 'react-native';
+
 import { useTranslation } from '../i18n';
 import { useBookmarks } from '../store/bookmarks';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
 import { findRouteEntry } from '../utils/routeRegistry';
+
 import A11yPressable from './A11yPressable';
 const HIT_SLOP = { top:8, bottom:8, left:8, right:8 };
 

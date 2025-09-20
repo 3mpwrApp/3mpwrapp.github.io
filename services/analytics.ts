@@ -1,5 +1,6 @@
 import { Platform } from "react-native";
-import { getFirebaseApp, getFirebaseAnalytics } from "../firebase/config";
+
+import { getFirebaseAnalytics, getFirebaseApp } from "../firebase/config";
 
 let analyticsLoaded: Promise<any | null> | null = null;
 

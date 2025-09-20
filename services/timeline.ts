@@ -1,4 +1,5 @@
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
+
 import { auth, db } from '../firebase/config';
 
 export type TimelineEntry = { id?: string; title: string; date: string; description?: string; createdAt?: any };

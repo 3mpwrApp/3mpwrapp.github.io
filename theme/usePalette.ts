@@ -1,5 +1,7 @@
 import { useColorScheme } from "react-native";
+
 import { useSettings } from "../store/settings";
+
 import { colors, type Palette } from "./colors";
 
 const highContrastLight: Palette = {

@@ -1,11 +1,13 @@
 import React from "react";
 import { Alert, StyleSheet, Text, View } from "react-native";
+
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTranslation } from "../i18n";
 import { sendTestLocal, setupAsync } from "../services/notifications";
 import { useSettings } from "../store/settings";
 import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
+
 import AccessibilityToggle from "./AccessibilityToggle";
 
 export default function NotificationPreferences() {

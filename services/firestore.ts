@@ -1,4 +1,5 @@
 import type * as Fire from "firebase/firestore";
+
 import { db as sharedDb } from "../firebase/config";
 
 let mod: typeof Fire | null = null;

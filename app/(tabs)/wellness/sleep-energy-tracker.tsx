@@ -8,6 +8,7 @@ import {
     TextInput,
     View,
 } from "react-native";
+
 import A11yPressable from "../../../components/A11yPressable";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { HIT_SLOP_8 } from "../../../constants/a11y";

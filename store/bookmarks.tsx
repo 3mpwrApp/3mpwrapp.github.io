@@ -1,4 +1,5 @@
 import React from "react";
+
 import { logEvent } from "../services/analytics";
 
 let AsyncStorage: any;

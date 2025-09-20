@@ -1,6 +1,7 @@
 /// <reference types="jest" />
 import { render, waitFor } from '@testing-library/react';
 import React from 'react';
+
 import { I18nProvider, useTranslation } from '../i18n';
 
 function getI18n(): Promise<ReturnType<typeof useTranslation>> {

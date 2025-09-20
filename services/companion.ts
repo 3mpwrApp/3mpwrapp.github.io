@@ -1,4 +1,5 @@
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
+
 import { auth, db } from '../firebase/config';
 
 export type MoodEntry = { id?: string; mood: 'good'|'ok'|'bad'; notes?: string; createdAt?: any };

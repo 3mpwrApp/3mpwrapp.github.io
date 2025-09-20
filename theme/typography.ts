@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useSettings } from "../store/settings";
 
 export function useTextScale() {

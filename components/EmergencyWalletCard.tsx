@@ -9,10 +9,12 @@ import {
     TextInput,
     View,
 } from "react-native";
+
 import { HIT_SLOP_8 } from "../constants/a11y";
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
+
 import A11yPressable from "./A11yPressable";
 
 type EmergencyContact = {

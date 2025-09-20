@@ -1,6 +1,7 @@
 import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 import { doc, setDoc } from 'firebase/firestore';
+
 import { auth, db } from '../firebase/config';
 
 export async function registerExpoPushToken() {

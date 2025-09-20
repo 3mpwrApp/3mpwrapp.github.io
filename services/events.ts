@@ -1,5 +1,6 @@
 import { events as local } from "../data/events";
 import type { Event } from "../data/events";
+
 import { withFallback, retry } from "./api";
 import { getCachedJSON, setCachedJSON } from "./cache";
 

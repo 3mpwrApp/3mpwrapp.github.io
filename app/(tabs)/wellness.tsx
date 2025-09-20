@@ -2,6 +2,7 @@ import type { Href } from "expo-router";
 import { Link } from "expo-router";
 import React from "react";
 import { Alert, Linking, StyleSheet, Text, TextInput, View } from "react-native";
+
 import A11yPressable from "../../components/A11yPressable";
 import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";

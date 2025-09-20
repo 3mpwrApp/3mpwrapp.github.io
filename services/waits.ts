@@ -1,4 +1,5 @@
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+
 import { db } from '../firebase/config';
 
 export async function submitWaitTime(province: string, days: number) {

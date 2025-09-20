@@ -1,6 +1,7 @@
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { auth, db } from '../../../firebase/config';

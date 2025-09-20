@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+
 import { useAppPalette } from '../theme/usePalette';
 
 type Point = { id: string; title: string; lat: number; lng: number; kind?: 'law'|'protest'|'update' };

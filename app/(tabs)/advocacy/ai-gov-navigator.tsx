@@ -8,6 +8,7 @@ import {
   Share,
   Alert,
 } from "react-native";
+
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,

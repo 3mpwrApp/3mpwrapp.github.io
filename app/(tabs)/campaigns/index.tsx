@@ -10,6 +10,7 @@ import {
   Pressable,
 } from "react-native";
 import { Link } from "expo-router";
+
 import { colors, type Palette } from "../../../theme/colors";
 import {
   MAX_FONT_SCALE,

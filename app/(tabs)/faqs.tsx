@@ -7,6 +7,7 @@ import {
   FlatList,
   Pressable,
 } from "react-native";
+
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
 import {

@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
+
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };

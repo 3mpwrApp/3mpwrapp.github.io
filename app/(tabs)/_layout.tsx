@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { StyleSheet, useColorScheme } from "react-native";
+
 import VoiceController from "../../components/VoiceController";
 import { useWhatsNewBadge } from "../../hooks/useWhatsNewBadge";
 import { useTranslation } from "../../i18n";

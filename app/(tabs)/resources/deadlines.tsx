@@ -1,5 +1,6 @@
 import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
@@ -7,6 +8,7 @@ import { useTranslation } from '../../../i18n';
 import { addDeadline, listDeadlines, type Deadline } from '../../../services/deadlines';
 import { useAppPalette } from '../../../theme/usePalette';
 import { announce } from '../../../utils/announce';
+
 import DeadlinesList from './deadlines-list';
 
 export const options = { href: null };

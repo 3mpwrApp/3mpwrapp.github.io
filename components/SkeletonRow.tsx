@@ -1,5 +1,6 @@
 import React from "react";
 import { View, StyleSheet, useColorScheme } from "react-native";
+
 import { colors, type Palette } from "../theme/colors";
 
 export default function SkeletonRow({ testID }: { testID?: string }) {

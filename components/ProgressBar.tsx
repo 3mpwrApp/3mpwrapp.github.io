@@ -1,4 +1,5 @@
 import { View } from 'react-native';
+
 import { useAppPalette } from '../theme/usePalette';
 
 export default function ProgressBar({ value, height = 8 }: { value: number; height?: number }) {

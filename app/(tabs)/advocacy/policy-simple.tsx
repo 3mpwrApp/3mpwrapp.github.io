@@ -7,6 +7,7 @@ import {
   Pressable,
   Linking,
 } from "react-native";
+
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,

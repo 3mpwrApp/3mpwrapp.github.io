@@ -1,11 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, Pressable, ScrollView } from "react-native";
-import { useAppPalette } from "../../../theme/usePalette";
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export const options = { href: null };
 

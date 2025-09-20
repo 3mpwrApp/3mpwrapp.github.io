@@ -9,6 +9,7 @@ import {
   ScrollView,
   Share,
 } from "react-native";
+
 import { useAppPalette } from "../../../theme/usePalette";
 import { llmSimplify } from "../../../services/llm";
 import {

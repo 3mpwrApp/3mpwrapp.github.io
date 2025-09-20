@@ -7,6 +7,7 @@ import {
   Share,
 } from "react-native";
 import { useLocalSearchParams, Stack, router } from "expo-router";
+
 import { colors, type Palette } from "../../../theme/colors";
 import SettingsLink from "../../../components/SettingsLink";
 import { useTextScale } from "../../../theme/typography";

@@ -1,4 +1,5 @@
 import React from "react";
+
 import type { Campaign, ID } from "../types/models";
 
 let AsyncStorage: any;

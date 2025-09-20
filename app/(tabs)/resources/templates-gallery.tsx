@@ -1,6 +1,7 @@
 import * as Clipboard from "expo-clipboard";
 import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+
 import A11yPressable from "../../../components/A11yPressable";
 import { MAX_FONT_SCALE, useAnnounceOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";

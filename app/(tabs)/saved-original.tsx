@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, SectionList } from "react-native";
 import { Link } from "expo-router";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 import { useAppPalette } from "../../theme/usePalette";
 import { useTextScale } from "../../theme/typography";
 import {

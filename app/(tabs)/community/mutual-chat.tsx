@@ -2,6 +2,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { addDoc, collection, doc, onSnapshot, orderBy, query, serverTimestamp, setDoc } from 'firebase/firestore';
 import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { auth, db } from '../../../firebase/config';

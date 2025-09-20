@@ -1,6 +1,7 @@
 import * as FileSystem from 'expo-file-system';
 import React from 'react';
 import { Alert, Share, StyleSheet, Text, View } from 'react-native';
+
 import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';

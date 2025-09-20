@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import React, { useEffect } from 'react';
 import { Text, View } from 'react-native';
+
 import { useAuth } from '../context/AuthContext';
 import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';

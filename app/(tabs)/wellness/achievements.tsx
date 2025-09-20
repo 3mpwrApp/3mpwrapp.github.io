@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
+
 import { useAppPalette } from "../../../theme/usePalette";
 import {
   MAX_FONT_SCALE,

@@ -2,6 +2,7 @@ import type { Href } from "expo-router";
 import { router } from "expo-router";
 import React from "react";
 import { SectionList, StyleSheet, Text, useColorScheme, View } from "react-native";
+
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
 import { channels, seedComments, seedThreads } from "../../../data/community";

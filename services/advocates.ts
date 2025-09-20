@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { advocates as local } from '../data/lawyers';
 
 export type AdvocateFilter = { query?: string; issue?: string; province?: string; proBono?: boolean };

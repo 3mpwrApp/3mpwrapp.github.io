@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
+
 import { HIT_SLOP_8 } from '../constants/a11y';
 import { useVoiceCommands } from '../hooks/useVoiceMode';
 import { transcribeAudio } from '../services/stt';
 import { useAppPalette } from '../theme/usePalette';
+
 import A11yPressable from './A11yPressable';
 
 export default function VoiceController() {

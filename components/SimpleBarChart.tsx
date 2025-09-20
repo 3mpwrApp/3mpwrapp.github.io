@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+
 import { useAppPalette } from '../theme/usePalette';
 
 export default function SimpleBarChart({ data, labelKey, valueKey, height = 140 }: { data: any[]; labelKey: string; valueKey: string; height?: number }) {

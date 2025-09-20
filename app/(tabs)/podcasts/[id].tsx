@@ -8,6 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 import { Stack, useLocalSearchParams } from "expo-router";
+
 import { colors, type Palette } from "../../../theme/colors";
 import { useTextScale } from "../../../theme/typography";
 import { useFavorites } from "../../../store/favorites";

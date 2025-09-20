@@ -1,5 +1,6 @@
 import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
+
 import A11yPressable from "../../../components/A11yPressable";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";

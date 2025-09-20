@@ -1,6 +1,7 @@
 import { collection, getDocs } from 'firebase/firestore';
 import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+
 import A11yPressable from '../../../components/A11yPressable';
 import SimpleBarChart from '../../../components/SimpleBarChart';
 import { HIT_SLOP_8 } from '../../../constants/a11y';

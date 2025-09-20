@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
+
 import A11yPressable from "./A11yPressable";
 
 let AsyncStorage: any;

@@ -1,5 +1,6 @@
 import { Stack, useLocalSearchParams } from "expo-router";
 import { Linking, Share, StyleSheet, Text, View } from 'react-native';
+
 import A11yPressable from '../../../components/A11yPressable';
 import SettingsLink from "../../../components/SettingsLink";
 import { HIT_SLOP_8 } from '../../../constants/a11y';

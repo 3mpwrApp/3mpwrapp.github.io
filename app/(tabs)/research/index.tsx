@@ -2,6 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import React from "react";
 import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
+
 import A11yPressable from '../../../components/A11yPressable';
 import Card from "../../../components/Card";
 import ContrastToggle from "../../../components/ContrastToggle";

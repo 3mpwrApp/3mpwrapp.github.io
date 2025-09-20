@@ -1,5 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";

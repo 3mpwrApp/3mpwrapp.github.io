@@ -4,7 +4,7 @@ import { useFonts } from "expo-font";
 import { Stack, usePathname } from "expo-router";
 import React from "react";
 import { AccessibilityInfo, AppState, StyleSheet, Text, View } from "react-native";
-import { announce } from "../utils/announce";
+
 import ChangelogGate from "../components/ChangelogGate";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
@@ -13,20 +13,21 @@ import { CountsProvider } from "../store/counts";
 import { FavoritesProvider } from "../store/favorites";
 import { NetworkProvider, useNetwork } from "../store/network";
 import { RefreshProvider } from "../store/refresh";
+import { announce } from "../utils/announce";
 // Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
 import { I18nProvider } from "../i18n";
-import { A11ySettingsProvider } from "../store/a11ySettings";
-import { BookmarksProvider } from "../store/bookmarks";
-import { PrivacyProvider, usePrivacy } from "../store/privacy";
-import { ProfileLocalProvider } from "../store/profileLocal";
-import { SettingsProvider } from "../store/settings";
 import { fetchCampaigns } from "../services/campaigns";
 import { fetchEvents } from "../services/events";
 import * as Notifier from "../services/notifications";
 import { fetchPodcasts } from "../services/podcasts";
 import { fetchResources } from "../services/resources";
 import { initAnalytics, initSentry } from "../services/telemetry";
+import { A11ySettingsProvider } from "../store/a11ySettings";
+import { BookmarksProvider } from "../store/bookmarks";
+import { PrivacyProvider, usePrivacy } from "../store/privacy";
+import { ProfileLocalProvider } from "../store/profileLocal";
+import { SettingsProvider } from "../store/settings";
 // Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
 // removed getFirebaseAnalytics direct import (handled via telemetry module)
 

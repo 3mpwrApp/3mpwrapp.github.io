@@ -1,7 +1,9 @@
 import React from 'react';
 import { Modal, Platform, Text, View } from 'react-native';
+
 import { HIT_SLOP_8 } from '../constants/a11y';
 import { useAppPalette } from '../theme/usePalette';
+
 import A11yPressable from './A11yPressable';
 
 type Props = {

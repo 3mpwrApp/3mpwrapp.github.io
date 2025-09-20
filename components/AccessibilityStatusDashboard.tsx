@@ -1,5 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
+
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useSettings } from "../store/settings";
 import { useTextScale } from "../theme/typography";

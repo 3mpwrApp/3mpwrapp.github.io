@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ScrollView, TextInput, Button, Alert, Image } from "react-native";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // dY"1 for file upload
-import { useAppPalette } from "../../theme/usePalette";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage"; // dY"1 for file upload
+import React, { useEffect, useState } from "react";
+import { Alert, Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+
 import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import { useNetwork } from "../../store/network";
+import { useAppPalette } from "../../theme/usePalette";
 
 // import { useTranslation } from "../../i18n"; // not used currently
 // import { useSettings } from "../../store/settings"; // not used currently

@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Alert,
 } from "react-native";
+
 import { usePrivacy } from "../store/privacy";
 import { useAppPalette } from "../theme/usePalette";
 

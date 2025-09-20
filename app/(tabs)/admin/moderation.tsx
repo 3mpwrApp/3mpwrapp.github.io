@@ -1,6 +1,7 @@
 import { collection, deleteDoc, doc, getDocs, orderBy, query, updateDoc, where } from 'firebase/firestore';
 import React from 'react';
 import { Alert, FlatList, StyleSheet, Text, View } from 'react-native';
+
 import A11yPressable from '../../../components/A11yPressable';
 import AdminGuard from '../../../components/AdminGuard';
 import { HIT_SLOP_8 } from '../../../constants/a11y';

@@ -64,8 +64,8 @@ module.exports = defineConfig([
       'jsx-a11y/alt-text': 'warn',
       'jsx-a11y/aria-role': 'warn',
       // Imports
-      'import/no-duplicates': 'warn',
-  'import/order': ['warn', { groups: ['builtin','external','internal','parent','sibling','index'], 'newlines-between':'never' }],
+  'import/no-duplicates': 'warn',
+  'import/order': ['warn', { groups: ['builtin','external','internal','parent','sibling','index'], 'newlines-between': 'always' }],
       'import/no-named-as-default': 'off',
       // General
       'no-console': ['warn', { allow: ['warn', 'error'] }],

@@ -2,6 +2,7 @@ import type { ViewStyle } from "react-native";
 import { Pressable } from "react-native";
 import { Link } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+
 import { HIT_SLOP_8 } from "../constants/a11y";
 import { useAppPalette } from "../theme/usePalette";
 

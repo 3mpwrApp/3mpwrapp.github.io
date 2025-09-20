@@ -7,6 +7,7 @@ import {
     Text,
     View,
 } from "react-native";
+
 import A11yPressable from '../../../components/A11yPressable';
 import Card from "../../../components/Card";
 import ContrastToggle from "../../../components/ContrastToggle";

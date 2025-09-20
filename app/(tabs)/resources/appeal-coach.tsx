@@ -12,6 +12,7 @@ import {
   TextInput,
   View
 } from "react-native";
+
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,

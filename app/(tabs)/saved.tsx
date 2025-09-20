@@ -10,6 +10,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+
 import Card from "../../components/Card";
 import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";

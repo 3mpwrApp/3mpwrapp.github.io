@@ -7,6 +7,7 @@ import {
   useColorScheme,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+
 import { colors, type Palette } from "../theme/colors";
 import { useTextScale } from "../theme/typography";
 import { useSettings } from "../store/settings";

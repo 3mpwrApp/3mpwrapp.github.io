@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, useColorScheme } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
+
 import { colors, type Palette } from "../../../../theme/colors";
 import { stories } from "../../../../data/stories";
 

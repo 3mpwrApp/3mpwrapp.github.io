@@ -1,5 +1,6 @@
 import React from "react";
 import { Alert, StyleSheet, Text, View } from "react-native";
+
 import A11yPressable from "../../../components/A11yPressable";
 import {
     MAX_FONT_SCALE,

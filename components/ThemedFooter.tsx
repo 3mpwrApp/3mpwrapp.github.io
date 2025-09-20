@@ -1,4 +1,5 @@
 import { SafeAreaView, Text, StyleSheet } from "react-native";
+
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 

@@ -2,6 +2,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Link, type Href } from "expo-router";
 import React from "react";
 import { Linking, RefreshControl, SectionList, StyleSheet, Text, View } from "react-native";
+
 import A11yPressable from "../../../components/A11yPressable";
 import Card from "../../../components/Card";
 import ContrastToggle from "../../../components/ContrastToggle";

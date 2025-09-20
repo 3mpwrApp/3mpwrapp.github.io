@@ -3,6 +3,7 @@ import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'fi
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useAuth } from '../../../context/AuthContext';

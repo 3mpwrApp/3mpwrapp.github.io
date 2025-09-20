@@ -11,6 +11,7 @@ import {
     Text,
     View,
 } from "react-native";
+
 import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
 import { useAuth } from "../context/AuthContext";
 import { useTranslation } from "../i18n";
@@ -20,6 +21,7 @@ import { useNetwork } from "../store/network";
 import { useRefresh } from "../store/refresh";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
+
 import A11yQuickSettings from "./A11yQuickSettings";
 
 export default function ThemedHeader() {

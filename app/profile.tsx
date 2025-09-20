@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Pressable, TextInput } from "react-native";
 import { router } from "expo-router";
 import type { Href } from "expo-router";
+
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 import { useA11ySettings } from "../store/a11ySettings";

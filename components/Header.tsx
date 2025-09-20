@@ -7,8 +7,10 @@ import {
     View,
     useColorScheme,
 } from "react-native";
+
 import { colors, type Palette } from "../theme/colors";
 import { openExternalUrl } from "../utils/linking";
+
 import BookmarkToggle from "./BookmarkToggle";
 
 export default function Header() {

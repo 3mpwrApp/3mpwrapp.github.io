@@ -1,4 +1,5 @@
 import { addDoc, collection, doc, getDocs, limit, orderBy, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
+
 import { db, auth } from '../firebase/config';
 
 export type Thread = { id?: string; channel: string; title: string; body: string; authorUid: string; createdAt?: any; flagged?: boolean; hidden?: boolean };

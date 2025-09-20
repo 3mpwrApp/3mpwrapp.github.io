@@ -1,4 +1,5 @@
 import React from "react";
+
 import type {
   CommunityChannel,
   CommunityThread,
@@ -7,6 +8,7 @@ import type {
 } from "../types/models";
 import { scheduleLocal } from "../services/notifications";
 import { fsAddThread, fsAddComment, getDB } from "../services/firestore";
+
 import { useNetwork } from "./network";
 
 let AsyncStorage: any;
