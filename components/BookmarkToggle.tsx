@@ -1,11 +1,10 @@
-import React from 'react';
-import { Pressable, Text } from 'react-native';
 import { usePathname } from 'expo-router';
-import { useBookmarks } from '../store/bookmarks';
-import { findRouteEntry } from '../utils/routeRegistry';
+import { Pressable, Text } from 'react-native';
 import { useTranslation } from '../i18n';
-import { useAppPalette } from '../theme/usePalette';
+import { useBookmarks } from '../store/bookmarks';
 import { useTextScale } from '../theme/typography';
+import { useAppPalette } from '../theme/usePalette';
+import { findRouteEntry } from '../utils/routeRegistry';
 
 export default function BookmarkToggle() {
   const pathname = usePathname();

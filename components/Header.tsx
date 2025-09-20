@@ -1,15 +1,15 @@
 import { Ionicons } from "@expo/vector-icons";
 import {
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  useColorScheme,
-  SafeAreaView,
+    Pressable,
+    SafeAreaView,
+    StyleSheet,
+    Text,
+    View,
+    useColorScheme,
 } from "react-native";
 import { colors, type Palette } from "../theme/colors";
-import BookmarkToggle from "./BookmarkToggle";
 import { openExternalUrl } from "../utils/linking";
+import BookmarkToggle from "./BookmarkToggle";
 
 export default function Header() {
   const scheme = useColorScheme();
