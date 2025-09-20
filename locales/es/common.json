@@ -660,6 +660,72 @@
     "deleteAll": "Delete All",
     "deleteSelected": "Delete Selected",
     "delete": "Delete",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "filter": "filtro rápido"
+  }
+  ,
+  "masterIndex": {
+    "title": "Índice maestro de investigación",
+    "screenLabel": "Pantalla índice maestro investigación",
+    "intro": "Mapa jerárquico de fuentes de datos autorizadas, hubs de investigación, análisis temáticos, marcos históricos y estrategias de búsqueda en Canadá y global.",
+    "results": "{{count}} enlace{{suffix}} coincide",
+    "filterLabel": "Filtrar fuentes",
+    "searchPlaceholder": "Buscar temas, portales, hubs...",
+    "sections": {
+      "canada": "Índice maestro — Canadá",
+      "global": "Índice maestro — Global y Regional",
+      "themes": "Análisis temáticos",
+      "landmarks": "Marcos históricos",
+      "search": "Portales de búsqueda",
+      "howTo": "Cómo usar este mapa"
+    },
+    "chipsAnnounce": "Filtro rápido establecido en {{label}}"
+  }
+  ,
+  "research": {
+    "chips": {
+      "uncrpd": "UNCRPD",
+      "advocacy": "Defensa",
+      "poverty": "Pobreza",
+      "suppression": "Supresión"
+    },
+    "card": {
+      "uncrpdGuideTitle": "Guía y Marco UNCRPD",
+      "uncrpdGuideDesc": "Explora artículos, Comentarios Generales, herramientas de implementación y vías de monitoreo nacional."
+    }
+  },
+  "uncrpd": {
+    "screenLabel": "Pantalla de información y guía de aplicación UNCRPD",
+    "title": "Marco UNCRPD y Guía de Aplicación",
+    "intro": "La Convención de la ONU sobre los Derechos de las Personas con Discapacidad (UNCRPD) establece obligaciones globales para respetar, proteger y garantizar derechos. Esta guía te ayuda a navegar textos básicos, Comentarios Generales, herramientas de monitoreo y vías prácticas de implementación.",
+    "quickAccess": "Acceso rápido",
+    "openFilteredIndex": "Abrir índice de investigación (filtrado)",
+    "sections": {
+      "coreTexts": "Textos básicos y Comentarios Generales",
+      "monitoring": "Monitoreo e Implementación",
+      "apply": "Aplicando la UNCRPD",
+      "canada": "Canadá – Implementación Artículo 33"
+    },
+    "workflow": {
+      "heading": "Flujo práctico",
+      "step1": "1. Identifica los artículos UNCRPD relevantes y cualquier Comentario General aclaratorio.",
+      "step2": "2. Mapea hechos y barreras al lenguaje del tratado (derechos afectados, deberes activados).",
+      "step3": "3. Reúne evidencia de apoyo (cronologías, notas médicas, registros de adaptaciones).",
+      "step4": "4. Formula solicitudes o escritos citando artículos + impacto en lenguaje sencillo.",
+      "step5": "5. Referencia guías de monitoreo/implementación para seguimiento o escalamiento.",
+      "step6": "6. Sigue resultados y itera – actualiza evidencia y mapeo de artículos según necesidad."
+    },
+    "indicator": {
+      "title": "Consejos de diseño de indicadores",
+      "body": "Usa modelo OHCHR: Estructura (leyes/mandatos), Proceso (cobertura, participación), Resultado (retención laboral, tiempos de resolución de adaptaciones, reducción de supresión de reclamaciones)."
+    },
+    "actions": {
+      "openArticles": "Abrir artículos y CGs",
+      "openMonitoring": "Abrir herramientas de monitoreo",
+      "openApplication": "Abrir guía de aplicación",
+      "gcEmployment": "Empleo (CG 8)",
+      "gcLegalCapacity": "Capacidad jurídica (CG 1)",
+      "gcAccessibility": "Accesibilidad (CG 2)"
+    }
   }
 }

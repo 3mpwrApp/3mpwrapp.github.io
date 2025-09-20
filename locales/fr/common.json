@@ -651,7 +651,8 @@
     "deleteAll": "Delete All",
     "deleteSelected": "Delete Selected",
     "delete": "Delete",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "filter": "filtre rapide"
   },
   "test": {
     "badge": "[T]BadgeMarque"
@@ -660,6 +661,71 @@
     "item": {
       "one": "{{count}} item",
       "other": "{{count}} items"
+    }
+  }
+  ,
+  "masterIndex": {
+    "title": "Index maître de recherche",
+    "screenLabel": "Écran index maître recherche",
+    "intro": "Carte hiérarchique des sources de données faisant autorité, hubs de recherche, analyses thématiques, cadres historiques et stratégies de recherche au Canada et globalement.",
+    "results": "{{count}} lien{{suffix}} correspondant",
+    "filterLabel": "Filtrer les sources",
+    "searchPlaceholder": "Rechercher thèmes, portails, hubs...",
+    "sections": {
+      "canada": "Index maître — Canada",
+      "global": "Index maître — Global & Régional",
+      "themes": "Analyses thématiques",
+      "landmarks": "Cadres historiques",
+      "search": "Portails de recherche",
+      "howTo": "Comment utiliser cette carte"
+    },
+    "chipsAnnounce": "Filtre rapide défini sur {{label}}"
+  }
+  ,
+  "research": {
+    "chips": {
+      "uncrpd": "UNCRPD",
+      "advocacy": "Plaidoyer",
+      "poverty": "Pauvreté",
+      "suppression": "Suppression"
+    },
+    "card": {
+      "uncrpdGuideTitle": "Guide et cadre UNCRPD",
+      "uncrpdGuideDesc": "Parcourez articles, Observations générales, outils d'implémentation et voies de suivi nationales."
+    }
+  },
+  "uncrpd": {
+    "screenLabel": "Écran informations et guide d'application UNCRPD",
+    "title": "Cadre UNCRPD et guide d'application",
+    "intro": "La Convention des Nations Unies relative aux droits des personnes handicapées (UNCRPD) définit des obligations mondiales pour respecter, protéger et réaliser les droits liés au handicap. Ce guide aide à naviguer textes de base, Observations générales, outils de suivi et voies pratiques d'application.",
+    "quickAccess": "Accès rapide",
+    "openFilteredIndex": "Ouvrir index de recherche (filtré)",
+    "sections": {
+      "coreTexts": "Textes de base et Observations générales",
+      "monitoring": "Suivi et mise en œuvre",
+      "apply": "Appliquer l'UNCRPD",
+      "canada": "Canada – Mise en œuvre Article 33"
+    },
+    "workflow": {
+      "heading": "Flux pratique",
+      "step1": "1. Identifier les articles UNCRPD pertinents et toute Observation générale clarificatrice.",
+      "step2": "2. Aligner faits et obstacles avec le texte du traité (droits touchés, obligations déclenchées).",
+      "step3": "3. Rassembler preuves de soutien (chronologies, notes médicales, dossiers d'aménagement).",
+      "step4": "4. Formuler demandes ou mémoires en citant articles + impact en langage simple.",
+      "step5": "5. Référencer guides de suivi / mise en œuvre pour suivi ou escalade.",
+      "step6": "6. Suivre résultats et itérer – mettre à jour preuves et cartographie des articles au besoin."
+    },
+    "indicator": {
+      "title": "Conseils conception indicateurs",
+      "body": "Utiliser modèle HCDH : Structure (lois/mandats), Processus (couverture programmes, participation), Résultat (maintien en emploi, délais résolution aménagements, réduction suppression réclamations)."
+    },
+    "actions": {
+      "openArticles": "Ouvrir articles et OG",
+      "openMonitoring": "Ouvrir outils de suivi",
+      "openApplication": "Ouvrir guide d'application",
+      "gcEmployment": "Emploi (OG 8)",
+      "gcLegalCapacity": "Capacité juridique (OG 1)",
+      "gcAccessibility": "Accessibilité (OG 2)"
     }
   }
 }

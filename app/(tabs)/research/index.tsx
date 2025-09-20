@@ -1,8 +1,9 @@
-import { Ionicons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
 import React from 'react';
 import { Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { Link } from 'expo-router';
 
+import { useTranslation } from '../../../i18n';
 import A11yPressable from '../../../components/A11yPressable';
 import ContrastToggle from '../../../components/ContrastToggle';
 import SettingsLink from '../../../components/SettingsLink';
@@ -19,6 +20,7 @@ export default function ResearchScreen() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
+  const { t } = useTranslation();
   useAnnounceOnMount("Research");
   useFocusOnRefOnMount(titleRef);
 
@@ -110,16 +112,16 @@ export default function ResearchScreen() {
             <Text style={styles.sectionDescription}>Comprehensive map of data & research sources</Text>
           </A11yPressable>
         </Link>
-        <Link href="/(tabs)/research/master-index" asChild>
+        <Link href="/(tabs)/research/uncrpd-info" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel="Community Advocacy & UNCRPD - Access advocacy clinics, FightWCB, and UN treaty guidance"
+            accessibilityLabel={`${t('research.card.uncrpdGuideTitle')} - ${t('research.card.uncrpdGuideDesc')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="people-circle-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>Community Advocacy & UNCRPD</Text>
-            <Text style={styles.sectionDescription}>Grassroots legal support + UN rights framework</Text>
+            <Text style={styles.sectionTitle}>{t('research.card.uncrpdGuideTitle')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.card.uncrpdGuideDesc')}</Text>
           </A11yPressable>
         </Link>
       </View>

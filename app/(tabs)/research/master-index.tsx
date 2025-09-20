@@ -1,6 +1,6 @@
-import { Stack } from 'expo-router';
 import React from 'react';
 import { AccessibilityInfo, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Stack, useLocalSearchParams } from 'expo-router';
 
 import A11yPressable from '../../../components/A11yPressable';
 import ContrastToggle from '../../../components/ContrastToggle';
@@ -8,30 +8,41 @@ import SettingsLink from '../../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { masterIndex } from '../../../data/research-master-index';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useTranslation } from '../../../i18n';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
-const regionOrder: { key: keyof typeof masterIndex; title: string }[] = [
-  { key: 'canada', title: 'Master Index — Canada' },
-  { key: 'global', title: 'Master Index — Global & Regional' },
-  { key: 'themes', title: 'Thematic Drill-Downs' },
-  { key: 'landmarks', title: 'Historical Bedrock & Frameworks' },
-  { key: 'search', title: 'Search Portals' },
-  { key: 'howTo', title: 'How to Use This Map' },
-];
+const buildRegionOrder = (t: any) => ([
+  { key: 'canada', title: t('masterIndex.sections.canada') },
+  { key: 'global', title: t('masterIndex.sections.global') },
+  { key: 'themes', title: t('masterIndex.sections.themes') },
+  { key: 'landmarks', title: t('masterIndex.sections.landmarks') },
+  { key: 'search', title: t('masterIndex.sections.search') },
+  { key: 'howTo', title: t('masterIndex.sections.howTo') },
+]);
 
 export default function MasterIndexScreen() {
+  const params = useLocalSearchParams<{ filter?: string }>();
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('Master research index');
+  const { t } = useTranslation();
+  useAnnounceOnMount(t('masterIndex.screenLabel'));
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState('');
   const [announceTimer, setAnnounceTimer] = React.useState<ReturnType<typeof setTimeout> | null>(null);
   const [quickFilter, setQuickFilter] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    if (params.filter && typeof params.filter === 'string') {
+      const lower = params.filter.toLowerCase();
+      const allowed = ['uncrpd','advocacy','poverty','suppression'];
+      if (allowed.includes(lower)) setQuickFilter(lower);
+    }
+  }, [params.filter]);
 
   const normalizedQuery = (quickFilter ? `${query} ${quickFilter}` : query).trim().toLowerCase();
 
@@ -87,24 +98,34 @@ export default function MasterIndexScreen() {
     };
   }, [normalizedQuery, totalResults]);
 
+  const regionOrder = React.useMemo(() => buildRegionOrder(t), [t]);
+
+  React.useEffect(() => {
+    if (quickFilter) {
+      AccessibilityInfo.announceForAccessibility(
+        t('masterIndex.chipsAnnounce', { label: quickFilter.toUpperCase() })
+      );
+    }
+  }, [quickFilter, t]);
+
   return (
     <>
-      <Stack.Screen options={{ title: 'Master Index' }} />
+      <Stack.Screen options={{ title: t('masterIndex.title') }} />
       <ScrollView style={styles.container} contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
-        <Text ref={titleRef} style={styles.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Master Research Index</Text>
+        <Text ref={titleRef} style={styles.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('masterIndex.title')}</Text>
         <SettingsLink style={{ position: 'absolute', right: 20, top: 20 }} />
         <ContrastToggle style={{ position: 'absolute', right: 56, top: 20 }} />
-        <Text style={styles.intro}>Hierarchical map of authoritative data sources, research hubs, thematic drill-downs, historical frameworks, and search strategies across Canada and global contexts.</Text>
+        <Text style={styles.intro}>{t('masterIndex.intro')}</Text>
         <View style={styles.searchWrap} accessibilityRole="search">
           <View style={styles.filterChipsRow} accessibilityRole="tablist">
-            {['UNCRPD','Advocacy','Poverty','Suppression'].map(chip => {
+            {[t('research.chips.uncrpd'), t('research.chips.advocacy'), t('research.chips.poverty'), t('research.chips.suppression')].map(chip => {
               const active = quickFilter === chip.toLowerCase();
               return (
                 <A11yPressable
                   key={chip}
                   accessibilityRole="tab"
                   accessibilityState={{ selected: active }}
-                  accessibilityLabel={`${chip} quick filter`}
+                  accessibilityLabel={`${chip} ${t('common.filter') || 'quick filter'}`}
                   onPress={() => setQuickFilter(active ? null : chip.toLowerCase())}
                   style={[styles.filterChip, active && styles.filterChipActive]}
                   hitSlop={HIT_SLOP_8}
@@ -114,11 +135,11 @@ export default function MasterIndexScreen() {
               );
             })}
           </View>
-          <Text style={styles.searchLabel}>Filter sources</Text>
+          <Text style={styles.searchLabel}>{t('masterIndex.filterLabel')}</Text>
           <TextInput
             value={query}
             onChangeText={setQuery}
-            placeholder="Search themes, portals, hubs..."
+            placeholder={t('masterIndex.searchPlaceholder')}
             placeholderTextColor={palette.muted}
             style={styles.searchInput}
             accessibilityLabel="Search or filter master index"
@@ -126,7 +147,7 @@ export default function MasterIndexScreen() {
             clearButtonMode="while-editing"
           />
           {normalizedQuery ? (
-            <Text style={styles.resultsMeta} accessibilityLiveRegion="polite">{totalResults ?? 0} link{(totalResults ?? 0) === 1 ? '' : 's'} match</Text>
+            <Text style={styles.resultsMeta} accessibilityLiveRegion="polite">{t('masterIndex.results', { count: totalResults ?? 0, suffix: (totalResults ?? 0) === 1 ? '' : 's' })}</Text>
           ) : null}
         </View>
         {regionOrder.map(sectionGroup => {

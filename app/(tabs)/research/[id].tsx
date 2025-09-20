@@ -1,12 +1,12 @@
 import { Stack, useLocalSearchParams } from 'expo-router';
-import React, { useCallback, useRef, useState } from 'react';
-import { Linking, Share, StyleSheet, Text, View, Pressable, ScrollView } from 'react-native';
+import { useCallback, useRef, useState } from 'react';
+import { Linking, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import SettingsLink from '../../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
-import { researchItems } from '../../../data/research';
 import type { ResearchSection } from '../../../data/research';
+import { researchItems } from '../../../data/research';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
 

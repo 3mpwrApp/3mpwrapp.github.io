@@ -608,7 +608,8 @@
     "deleteAll": "Delete All",
     "deleteSelected": "Delete Selected",
     "delete": "Delete",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "filter": "quick filter"
   },
   "test": {
     "badge": "[T]BadgeMarker"
@@ -618,5 +619,70 @@
       "one": "{{count}} item",
       "other": "{{count}} items"
     }
+  }
+  ,
+  "research": {
+    "chips": {
+      "uncrpd": "UNCRPD",
+      "advocacy": "Advocacy",
+      "poverty": "Poverty",
+      "suppression": "Suppression"
+    },
+    "card": {
+      "uncrpdGuideTitle": "UNCRPD Guide & Framework",
+      "uncrpdGuideDesc": "Browse articles, General Comments, implementation tools, and country monitoring pathways."
+    }
+  },
+  "uncrpd": {
+    "screenLabel": "UNCRPD information and application guide screen",
+    "title": "UNCRPD Framework & Application Guide",
+    "intro": "The UN Convention on the Rights of Persons with Disabilities (UNCRPD) sets out global obligations to respect, protect, and fulfill disability rights. This guide helps you navigate its core texts, General Comments, monitoring tools, and practical implementation pathways.",
+    "quickAccess": "Quick Access",
+    "openFilteredIndex": "Open Research Index (filtered)",
+    "sections": {
+      "coreTexts": "Core Texts & General Comments",
+      "monitoring": "Monitoring & Implementation",
+      "apply": "Applying the UNCRPD",
+      "canada": "Canada – Article 33 Implementation"
+    },
+    "workflow": {
+      "heading": "Practical Workflow",
+      "step1": "1. Identify the relevant UNCRPD article(s) and any clarifying General Comment.",
+      "step2": "2. Map facts and barriers to treaty language (rights affected, duties triggered).",
+      "step3": "3. Collect supporting evidence (timelines, medical notes, accommodation records).",
+      "step4": "4. Frame requests or submissions using article citations + plain language impact.",
+      "step5": "5. Reference monitoring or implementation guidance for follow‑up or escalation.",
+      "step6": "6. Track outcomes and iterate – update evidence and article mapping as needed."
+    },
+    "indicator": {
+      "title": "Indicator Design Tips",
+      "body": "Use OHCHR model: Structure (laws/mandates), Process (program coverage, participation), Outcome (employment retention, accommodation resolution timelines, reduction in claim suppression)."
+    },
+    "actions": {
+      "openArticles": "Open Articles & GCs",
+      "openMonitoring": "Open Monitoring Tools",
+      "openApplication": "Open Application How-To",
+      "gcEmployment": "Employment (GC 8)",
+      "gcLegalCapacity": "Legal Capacity (GC 1)",
+      "gcAccessibility": "Accessibility (GC 2)"
+    }
+  }
+  ,
+  "masterIndex": {
+    "title": "Master Research Index",
+    "screenLabel": "Master research index screen",
+    "intro": "Hierarchical map of authoritative data sources, research hubs, thematic drill-downs, historical frameworks, and search strategies across Canada and global contexts.",
+    "results": "{{count}} link{{suffix}} match",
+    "filterLabel": "Filter sources",
+    "searchPlaceholder": "Search themes, portals, hubs...",
+    "sections": {
+      "canada": "Master Index — Canada",
+      "global": "Master Index — Global & Regional",
+      "themes": "Thematic Drill-Downs",
+      "landmarks": "Historical Bedrock & Frameworks",
+      "search": "Search Portals",
+      "howTo": "How to Use This Map"
+    },
+    "chipsAnnounce": "Quick filter set to {{label}}"
   }
 }
