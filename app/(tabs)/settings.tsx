@@ -5,29 +5,29 @@ import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import React, { useEffect, useState } from "react";
 import {
-  Alert,
-  Button,
-  Image,
-  Linking,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    Button,
+    Image,
+    Linking,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
 import {
-  clearAllData,
-  exportBackup,
-  importBackup,
+    clearAllData,
+    exportBackup,
+    importBackup,
 } from "../../services/backup";
 import { useNetwork } from "../../store/network";
 import { usePrivacy } from "../../store/privacy";
@@ -37,10 +37,13 @@ import { useTextScale } from "../../theme/typography";
 import { useAppPalette } from "../../theme/usePalette";
 
 // Import new components
+import { sendPasswordResetEmail } from "firebase/auth";
 import AccessibilityToggle from "../../components/AccessibilityToggle";
 import EmergencyWalletCard from "../../components/EmergencyWalletCard";
 import LanguageSelector from "../../components/LanguageSelector";
 import NotificationPreferences from "../../components/NotificationPreferences";
+import { auth } from "../../firebase/config";
+import { useBookmarks } from "../../store/bookmarks";
 
 export default function SettingsScreen() {
   const palette = useAppPalette();
@@ -156,6 +159,30 @@ export default function SettingsScreen() {
         {t("settings.title", "Settings")}
       </Text>
 
+      {/* Accessibility First */}
+      <Section 
+        title={t("settings.accessibility.title", "Accessibility")}
+        subtitle={t("settings.accessibility.subtitle", "Make the app work better for you")}
+        styles={styles}
+      >
+        <EnhancedA11ySettingsSection />
+      </Section>
+
+      {/* Language Preferences */}
+      <LanguageSelector />
+
+      {/* Notifications */}
+      <NotificationPreferences />
+
+      {/* Bookmarks Section */}
+      <Section
+        title={t("settings.bookmarks.title", "Bookmarks")}
+        subtitle={t("settings.bookmarks.subtitle", "Save quick links to app features")}
+        styles={styles}
+      >
+        <BookmarksSection />
+      </Section>
+
       {/* Account Management Section */}
       <Section 
         title={t("settings.account.title", "Account Management")}
@@ -173,36 +200,67 @@ export default function SettingsScreen() {
             <Ionicons name="person" size={40} color={palette.text} />
           </View>
         )}
-        <Button title="Change Profile Picture" onPress={handleUploadPhoto} />
+        <Button title={t("settings.account.changePhoto", "Change Profile Picture")} onPress={handleUploadPhoto} />
 
         <Text style={styles.rowLabel}>{t("settings.account.displayName", "Display Name")}</Text>
         <TextInput
           style={styles.input}
-          placeholder="Enter display name"
+          placeholder={t("settings.account.displayNamePlaceholder", "Enter display name")}
           value={displayName}
           onChangeText={setDisplayName}
-          accessibilityLabel="Display name"
+          accessibilityLabel={t("settings.account.displayName", "Display Name")}
           maxFontSizeMultiplier={MAX_FONT_SCALE}
         />
-        <Button title="Update Name" onPress={handleUpdateDisplayName} />
+        <Button title={t("settings.account.updateName", "Update Name")} onPress={handleUpdateDisplayName} />
+        {user?.email && (
+          <View style={{ marginTop: 10 }}>
+            <Button
+              title={t("settings.account.resetPassword", "Send Password Reset Email")}
+              onPress={async () => {
+                try {
+                  await sendPasswordResetEmail(auth, user.email!);
+                  Alert.alert(
+                    t("settings.account.resetPasswordSent", "Email Sent"),
+                    t("settings.account.resetPasswordSentDesc", "Check your inbox for reset instructions."),
+                  );
+                } catch (e: any) {
+                  Alert.alert(
+                    t("settings.account.resetPasswordFailed", "Reset Failed"),
+                    e?.message || "Unable to send reset email",
+                  );
+                }
+              }}
+            />
+            <View style={{ height: 8 }} />
+            <Button
+              color={palette.error}
+              title={t("settings.account.delete", "Delete Account")}
+              onPress={() => {
+                Alert.alert(
+                  t("settings.account.deleteConfirmTitle", "Delete Account"),
+                  t("settings.account.deleteConfirmBody", "This will permanently delete your account. This cannot be undone."),
+                  [
+                    { text: t("common.cancel", "Cancel"), style: "cancel" },
+                    { text: t("settings.account.delete", "Delete Account"), style: "destructive", onPress: async () => {
+                      try {
+                        const { deleteUser } = await import("firebase/auth");
+                        if (auth.currentUser) {
+                          await deleteUser(auth.currentUser);
+                          Alert.alert(t("settings.account.deleted", "Account deleted"));
+                        }
+                      } catch (e: any) {
+                        Alert.alert(t("settings.account.deleteFailed", "Delete failed"), e?.message || "Error");
+                      }
+                    }}
+                  ]
+                );
+              }}
+            />
+          </View>
+        )}
       </Section>
 
-      {/* Enhanced Accessibility Preferences */}
-      <Section 
-        title={t("settings.accessibility.title", "Accessibility")}
-        subtitle={t("settings.accessibility.subtitle", "Make the app work better for you")}
-        styles={styles}
-      >
-        <EnhancedA11ySettingsSection />
-      </Section>
-
-      {/* Language Preferences */}
-      <LanguageSelector />
-
-      {/* Notification Preferences */}
-      <NotificationPreferences />
-
-      {/* Emergency Wallet Card */}
+      {/* Safety & Emergency */}
       <Section 
         title={t("settings.emergency.title", "Emergency Wallet Card")}
         subtitle={t("settings.emergency.subtitle", "Quick access to important information")}
@@ -215,11 +273,11 @@ export default function SettingsScreen() {
           style={styles.emergencyButton}
           onPress={() => setShowEmergencyCard(true)}
           accessibilityRole="button"
-          accessibilityLabel="Open emergency wallet card"
-          accessibilityHint="Create or edit your emergency contact and medical information"
+          accessibilityLabel={t("settings.emergency.openLabel", "Open emergency wallet card")}
+          accessibilityHint={t("settings.emergency.openHint", "Create or edit your emergency contact and medical information")}
         >
           <Ionicons name="medical" size={20} color="white" />
-          <Text style={styles.emergencyButtonText}>Manage Emergency Card</Text>
+          <Text style={styles.emergencyButtonText}>{t("settings.emergency.manage", "Manage Emergency Card")}</Text>
         </Pressable>
       </Section>
 
@@ -752,6 +810,103 @@ function AdminSection() {
           <Link href={"/(tabs)/admin" as any}>
             <Text style={{ color: palette.primary, fontWeight: "700" }}>Open Admin Panel</Text>
           </Link>
+        </View>
+      )}
+    </View>
+  );
+}
+
+function BookmarksSection() {
+  const { t } = useTranslation();
+  const { items, addBookmark, removeBookmark, clearBookmarks } = useBookmarks();
+  const palette = useAppPalette();
+  const { factor } = useTextScale();
+  const styles = createStyles(palette, factor);
+  const [route, setRoute] = React.useState("");
+  const [label, setLabel] = React.useState("");
+  const [error, setError] = React.useState<string | null>(null);
+  const { findByRoute } = useBookmarks();
+  const registry = require("../../utils/routeRegistry") as any;
+
+  return (
+    <View>
+      <Text style={styles.description} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        {t("settings.bookmarks.description", "Add bookmarks to quickly open frequently used tools and screens.")}
+      </Text>
+      <Text style={styles.rowLabel}>{t("settings.bookmarks.route", "Route Path")}</Text>
+      <TextInput
+        style={styles.input}
+        placeholder={t("settings.bookmarks.routePlaceholder", "e.g. /(tabs)/resources/index")}
+        value={route}
+        onChangeText={setRoute}
+        autoCapitalize="none"
+      />
+      <Text style={styles.rowLabel}>{t("settings.bookmarks.label", "Label")}</Text>
+      <TextInput
+        style={styles.input}
+        placeholder={t("settings.bookmarks.labelPlaceholder", "My Resources")}
+        value={label}
+        onChangeText={setLabel}
+      />
+      <Button
+        title={t("settings.bookmarks.add", "Add Bookmark")}
+        onPress={() => {
+          const r = route.trim();
+          const l = label.trim();
+          if (!r) { setError(t("settings.bookmarks.errEmptyRoute", "Route required")); return; }
+          const entry = registry.findRouteEntry?.(r);
+          if (!entry) { setError(t("settings.bookmarks.errInvalid", "Route not bookmarkable")); return; }
+          if (findByRoute(r)) { setError(t("settings.bookmarks.errDuplicate", "Already bookmarked")); return; }
+            addBookmark(r, l || t(entry.tKey, entry.fallback), entry.tKey);
+            setRoute("");
+            setLabel("");
+            setError(null);
+        }}
+      />
+      {error && (
+        <Text style={{ color: palette.error, marginTop: 6 }} accessibilityLiveRegion="polite">{error}</Text>
+      )}
+      {items.length === 0 ? (
+        <Text style={[styles.description, { marginTop: 12 }]}>
+          {t("settings.bookmarks.empty", "No bookmarks yet.")}
+        </Text>
+      ) : (
+        <View style={{ marginTop: 12 }}>
+          {items
+            .slice()
+            .sort((a, b) => b.created - a.created)
+            .map((b) => (
+              <View
+                key={b.id}
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  paddingVertical: 8,
+                }}
+              >
+                <View style={{ flex: 1, paddingRight: 8 }}>
+                  <Text style={{ color: palette.text, fontWeight: "600" }}>{b.tKey ? t(b.tKey, b.label) : b.label}</Text>
+                  <Text style={{ color: palette.text, opacity: 0.6, fontSize: 12 }}>{b.route}</Text>
+                </View>
+                <Pressable
+                  onPress={() => removeBookmark(b.id)}
+                  accessibilityRole="button"
+                  accessibilityLabel={t("settings.bookmarks.remove", "Remove bookmark")}
+                  style={{ padding: 8 }}
+                >
+                  <Ionicons name="trash" size={18} color={palette.error} />
+                </Pressable>
+              </View>
+            ))}
+          <Pressable
+            onPress={() => clearBookmarks()}
+            accessibilityRole="button"
+            accessibilityLabel={t("settings.bookmarks.clearAll", "Clear all bookmarks")}
+            style={{ padding: 8, alignSelf: "flex-start" }}
+          >
+            <Text style={{ color: palette.error, fontWeight: "600" }}>{t("settings.bookmarks.clearAll", "Clear All")}</Text>
+          </Pressable>
         </View>
       )}
     </View>

@@ -50,6 +50,22 @@
       "voiceMode": "Mode vocal",
       "voiceModeDesc": "Active la navigation vocale (bêta)"
     },
+    "bookmarks": {
+      "title": "Signets",
+      "subtitle": "Enregistrez des liens rapides vers les fonctionnalités",
+      "description": "Ajoutez des signets pour ouvrir rapidement les outils et écrans fréquemment utilisés.",
+      "route": "Chemin de route",
+      "routePlaceholder": "ex. /(tabs)/resources/index",
+      "label": "Libellé",
+      "labelPlaceholder": "Mes ressources",
+      "add": "Ajouter un signet",
+      "remove": "Supprimer le signet",
+      "empty": "Aucun signet pour l'instant.",
+      "clearAll": "Tout effacer",
+      "errEmptyRoute": "Chemin requis",
+      "errInvalid": "Chemin non signetable",
+      "errDuplicate": "Déjà enregistré"
+    },
     "language": {
       "title": "Langue",
       "subtitle": "Choisissez votre langue préférée",
@@ -92,9 +108,27 @@
       "title": "Gestion du compte",
       "subtitle": "Gérez votre profil et vos préférences",
       "displayName": "Nom d'affichage",
+      "displayNamePlaceholder": "Saisir le nom d'affichage",
+      "changePhoto": "Changer la photo de profil",
+      "updateName": "Mettre à jour le nom",
+      "resetPassword": "Envoyer un e-mail de réinitialisation",
+      "resetPasswordSent": "E-mail envoyé",
+      "resetPasswordSentDesc": "Vérifiez votre boîte de réception pour les instructions.",
+      "resetPasswordFailed": "Échec de la réinitialisation",
       "password": "Changer le mot de passe",
-      "preferences": "Préférences"
+      "preferences": "Préférences",
+      "delete": "Supprimer le compte",
+      "deleteConfirmTitle": "Supprimer le compte",
+      "deleteConfirmBody": "Cette action supprimera définitivement votre compte. Cette action est irréversible.",
+      "deleted": "Compte supprimé",
+      "deleteFailed": "Suppression échouée"
     }
+  },
+  "bookmark": {
+    "add": "Ajouter un signet",
+    "remove": "Supprimer le signet",
+    "save": "Enregistrer",
+    "saved": "Enregistré"
   },
   "wellness": {
     "tools": {

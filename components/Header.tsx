@@ -8,6 +8,7 @@ import {
   SafeAreaView,
 } from "react-native";
 import { colors, type Palette } from "../theme/colors";
+import BookmarkToggle from "./BookmarkToggle";
 import { openExternalUrl } from "../utils/linking";
 
 export default function Header() {
@@ -28,6 +29,7 @@ export default function Header() {
       </Text>
 
       <View style={styles.icons}>
+        <BookmarkToggle />
         {/* Facebook */}
         <Pressable
           onPress={() =>

@@ -50,6 +50,22 @@
       "voiceMode": "Modo de voz",
       "voiceModeDesc": "Habilita navegación por voz (beta)"
     },
+    "bookmarks": {
+      "title": "Marcadores",
+      "subtitle": "Guarde accesos rápidos a funciones",
+      "description": "Agregue marcadores para abrir rápidamente herramientas y pantallas usadas con frecuencia.",
+      "route": "Ruta",
+      "routePlaceholder": "p.ej. /(tabs)/resources/index",
+      "label": "Etiqueta",
+      "labelPlaceholder": "Mis recursos",
+      "add": "Agregar marcador",
+      "remove": "Eliminar marcador",
+      "empty": "Sin marcadores aún.",
+      "clearAll": "Borrar todo",
+      "errEmptyRoute": "Ruta requerida",
+      "errInvalid": "Ruta no disponible",
+      "errDuplicate": "Ya marcado"
+    },
     "language": {
       "title": "Idioma",
       "subtitle": "Elija su idioma preferido",
@@ -92,9 +108,27 @@
       "title": "Gestión de cuenta",
       "subtitle": "Gestione su perfil y preferencias",
       "displayName": "Nombre para mostrar",
+      "displayNamePlaceholder": "Ingrese nombre para mostrar",
+      "changePhoto": "Cambiar foto de perfil",
+      "updateName": "Actualizar nombre",
+      "resetPassword": "Enviar correo de restablecimiento",
+      "resetPasswordSent": "Correo enviado",
+      "resetPasswordSentDesc": "Revise su bandeja de entrada para instrucciones.",
+      "resetPasswordFailed": "Fallo al restablecer",
       "password": "Cambiar contraseña",
-      "preferences": "Preferencias"
+      "preferences": "Preferencias",
+      "delete": "Eliminar cuenta",
+      "deleteConfirmTitle": "Eliminar cuenta",
+      "deleteConfirmBody": "Esto eliminará permanentemente su cuenta. No se puede deshacer.",
+      "deleted": "Cuenta eliminada",
+      "deleteFailed": "Error al eliminar"
     }
+  },
+  "bookmark": {
+    "add": "Agregar marcador",
+    "remove": "Eliminar marcador",
+    "save": "Guardar",
+    "saved": "Guardado"
   },
   "wellness": {
     "tools": {

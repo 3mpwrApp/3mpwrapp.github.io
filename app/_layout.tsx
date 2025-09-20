@@ -19,6 +19,7 @@ import { RefreshProvider } from "../store/refresh";
 import { AuthProvider } from "../context/AuthContext";
 import { I18nProvider } from "../i18n";
 import { A11ySettingsProvider } from "../store/a11ySettings";
+import { BookmarksProvider } from "../store/bookmarks";
 import { PrivacyProvider, usePrivacy } from "../store/privacy";
 import { ProfileLocalProvider } from "../store/profileLocal";
 import { SettingsProvider } from "../store/settings";
@@ -106,6 +107,7 @@ export default function RootLayout() {
     <I18nProvider>
       <A11ySettingsProvider>
         <SettingsProvider>
+          <BookmarksProvider>
           <ProfileLocalProvider>
             <PrivacyProvider>
               {/* Ã°Å¸â€Â¹ Firebase Auth Provider wraps the app */}
@@ -156,6 +158,7 @@ export default function RootLayout() {
               </AuthProvider>
             </PrivacyProvider>
           </ProfileLocalProvider>
+          </BookmarksProvider>
         </SettingsProvider>
       </A11ySettingsProvider>
     </I18nProvider>

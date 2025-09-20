@@ -125,6 +125,22 @@
       "events": "Event Reminders",
       "eventsDesc": "Upcoming event notifications"
     },
+    "bookmarks": {
+      "title": "Bookmarks",
+      "subtitle": "Save quick links to app features",
+      "description": "Add bookmarks to quickly open frequently used tools and screens.",
+      "route": "Route Path",
+      "routePlaceholder": "e.g. /(tabs)/resources/index",
+      "label": "Label",
+      "labelPlaceholder": "My Resources",
+      "add": "Add Bookmark",
+      "remove": "Remove bookmark",
+      "empty": "No bookmarks yet.",
+      "clearAll": "Clear All",
+      "errEmptyRoute": "Route required",
+      "errInvalid": "Route not bookmarkable",
+      "errDuplicate": "Already bookmarked"
+    },
     "emergency": {
       "title": "Emergency Wallet Card",
       "subtitle": "Quick access to important information",
@@ -144,9 +160,27 @@
       "title": "Account Management",
       "subtitle": "Manage your profile and preferences",
       "displayName": "Display Name",
+      "displayNamePlaceholder": "Enter display name",
+      "changePhoto": "Change Profile Picture",
+      "updateName": "Update Name",
+      "resetPassword": "Send Password Reset Email",
+      "resetPasswordSent": "Email Sent",
+      "resetPasswordSentDesc": "Check your inbox for reset instructions.",
+      "resetPasswordFailed": "Reset Failed",
       "password": "Change Password",
-      "preferences": "Preferences"
+      "preferences": "Preferences",
+      "delete": "Delete Account",
+      "deleteConfirmTitle": "Delete Account",
+      "deleteConfirmBody": "This will permanently delete your account. This cannot be undone.",
+      "deleted": "Account deleted",
+      "deleteFailed": "Delete failed"
     }
+  },
+  "bookmark": {
+    "add": "Add bookmark",
+    "remove": "Remove bookmark",
+    "save": "Save",
+    "saved": "Saved"
   },
   "justiceService": {
     "header": "Empowr — Local Advocacy Snapshot",
