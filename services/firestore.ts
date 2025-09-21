@@ -84,6 +84,55 @@ export async function fsIncrementCampaignMembers(id: string, delta: number) {
   }
 }
 
+// Campaign membership (per-user)
+export async function fsJoinCampaign(campaignId: string, uid: string) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    await m.setDoc(m.doc(db, `campaigns/${campaignId}/members`, uid), { uid, joinedAt: Date.now() } as any, { merge: true });
+    await fsIncrementCampaignMembers(campaignId, 1);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export async function fsLeaveCampaign(campaignId: string, uid: string) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    await m.deleteDoc(m.doc(db, `campaigns/${campaignId}/members`, uid));
+    await fsIncrementCampaignMembers(campaignId, -1);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export async function fsFetchJoinedCampaigns(uid: string): Promise<string[]> {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return [];
+  try {
+    // Query all campaigns with membership subcollection containing uid (fan out): not directly queryable without collection group.
+    // Use collection group on members
+    const cg = m.collectionGroup(db, 'members');
+    const q = m.query(cg, m.where('uid', '==', uid));
+    const snap = await m.getDocs(q);
+    const list: string[] = [];
+    snap.forEach(doc => {
+      const path = doc.ref.path; // campaigns/<id>/members/<uid>
+      const parts = path.split('/');
+      if (parts.length >= 4) list.push(parts[1]);
+    });
+    return list;
+  } catch {
+    return [];
+  }
+}
+
 // Community
 export async function fsAddThread(data: {
   id: string;

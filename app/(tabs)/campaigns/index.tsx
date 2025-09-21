@@ -1,42 +1,44 @@
+import { Link } from "expo-router";
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  useColorScheme,
-  FlatList,
-  RefreshControl,
-  TextInput,
-  Pressable,
-  Share,
-  Alert,
+    Alert,
+    FlatList,
+    Pressable,
+    RefreshControl,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    useColorScheme,
+    View,
 } from "react-native";
-import { Link } from "expo-router";
 
-import { colors, type Palette } from "../../../theme/colors";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-  useAnnounceOnChange,
-} from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
-import { campaigns as localCampaigns } from "../../../data/campaigns";
-import { fetchCampaigns } from "../../../services/campaigns";
 import SearchBar from "../../../components/SearchBar";
-import { useCounts } from "../../../store/counts";
 import SkeletonRow from "../../../components/SkeletonRow";
-import { useRefresh } from "../../../store/refresh";
-import { useNetwork } from "../../../store/network";
+import { campaigns as localCampaigns } from "../../../data/campaigns";
 import {
-  CampaignsLocalProvider,
-  useCampaignsLocal,
-} from "../../../store/campaignsLocal";
+    MAX_FONT_SCALE,
+    useAnnounceOnChange,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
 import { logEvent } from "../../../services/analytics";
+import { fetchCampaigns } from "../../../services/campaigns";
 import {
   fsAddCampaign,
   fsIncrementCampaignMembers,
+  fsJoinCampaign,
+  fsLeaveCampaign,
 } from "../../../services/firestore";
+import {
+    CampaignsLocalProvider,
+    useCampaignsLocal,
+} from "../../../store/campaignsLocal";
+import { useCounts } from "../../../store/counts";
+import { useNetwork } from "../../../store/network";
+import { useRefresh } from "../../../store/refresh";
+import { colors, type Palette } from "../../../theme/colors";
 
 function ScreenInner() {
   const scheme = useColorScheme();
@@ -55,6 +57,7 @@ function ScreenInner() {
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
   const { state: local, createCampaign, join, leave, isJoined } = useCampaignsLocal();
+  const inFlightRef = React.useRef<Record<string, number>>({});
 
   const reload = React.useCallback(async () => {
     try {
@@ -194,22 +197,35 @@ function ScreenInner() {
               </Pressable>
               <Pressable
                 onPress={async () => {
+                  const now = Date.now();
+                  if (inFlightRef.current[item.id] && now - inFlightRef.current[item.id] < 1200) return; // rate limit
+                  inFlightRef.current[item.id] = now;
                   const joined = isJoined(item.id);
-                  try {
-                    if (joined) {
-                      leave(item.id);
-                      Alert.alert('Left Campaign', 'You have left this campaign.');
-                      await fsIncrementCampaignMembers(item.id, -1);
-                    } else {
+                  if (joined) {
+                    // optimistic leave
+                    leave(item.id);
+                    const ok = await fsLeaveCampaign(item.id, 'self'); // placeholder; server will infer actual user in secured rules (or pass uid)
+                    if (!ok) {
+                      // rollback
                       join(item.id);
-                      Alert.alert('Joined Campaign', 'You are now supporting this campaign.');
-                      await fsIncrementCampaignMembers(item.id, 1);
+                      Alert.alert('Leave Failed', 'Could not leave campaign (offline?)');
+                    } else {
+                      Alert.alert('Left Campaign', 'You have left this campaign.');
                     }
-                  } catch {}
+                  } else {
+                    join(item.id);
+                    const ok = await fsJoinCampaign(item.id, 'self');
+                    if (!ok) {
+                      leave(item.id);
+                      Alert.alert('Join Failed', 'Could not join campaign (offline?)');
+                    } else {
+                      Alert.alert('Joined Campaign', 'You are now supporting this campaign.');
+                    }
+                  }
                 }}
                 accessibilityRole="button"
                 accessibilityLabel={(isJoined(item.id)? 'Leave' : 'Join') + ' ' + item.title}
-                style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6, backgroundColor: isJoined(item.id)? palette.primary: 'transparent' }}
+                style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6, backgroundColor: isJoined(item.id)? palette.primary: 'transparent', opacity: inFlightRef.current[item.id] && Date.now()-inFlightRef.current[item.id]<400? 0.6:1 }}
               >
                 <Text style={{ color: isJoined(item.id)? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{isJoined(item.id)? 'Joined':'Join'}</Text>
               </Pressable>

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useAuth } from "../context/AuthContext";
+import { fsFetchJoinedCampaigns } from "../services/firestore";
 import type { Campaign, ID } from "../types/models";
 
 let AsyncStorage: any;
@@ -21,6 +23,7 @@ type CampaignsCtx = {
   join: (id: ID) => void;
   leave: (id: ID) => void;
   isJoined: (id: ID) => boolean;
+  syncRemote: () => Promise<void>;
 };
 
 const Ctx = React.createContext<CampaignsCtx | undefined>(undefined);
@@ -31,6 +34,8 @@ export function CampaignsLocalProvider({
   children: React.ReactNode;
 }) {
   const [state, setState] = React.useState<State>(DEFAULT);
+  const { user } = useAuth();
+  const syncingRef = React.useRef(false);
 
   React.useEffect(() => {
     (async () => {
@@ -39,6 +44,20 @@ export function CampaignsLocalProvider({
       if (raw) setState(JSON.parse(raw));
     })();
   }, []);
+
+  // Fetch remote memberships when user changes
+  const syncRemote = React.useCallback(async () => {
+    if (!user?.uid || syncingRef.current) return;
+    syncingRef.current = true;
+    try {
+      const remote = await fsFetchJoinedCampaigns(user.uid);
+      if (remote.length) {
+        setState(s => ({ ...s, joined: { ...s.joined, ...Object.fromEntries(remote.map(r => [r, true])) } }));
+      }
+    } catch {} finally { syncingRef.current = false; }
+  }, [user?.uid]);
+
+  React.useEffect(() => { syncRemote(); }, [syncRemote]);
 
   React.useEffect(() => {
     (async () => {
@@ -67,7 +86,7 @@ export function CampaignsLocalProvider({
     });
   const isJoined = (id: ID) => !!state.joined[id];
 
-  const value: CampaignsCtx = { state, createCampaign, join, leave, isJoined };
+  const value: CampaignsCtx = { state, createCampaign, join, leave, isJoined, syncRemote };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 

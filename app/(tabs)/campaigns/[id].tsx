@@ -18,7 +18,7 @@ import {
   CampaignsLocalProvider,
 } from "../../../store/campaignsLocal";
 import { logEvent } from "../../../services/analytics";
-import { fsIncrementCampaignMembers } from "../../../services/firestore";
+import { fsJoinCampaign, fsLeaveCampaign } from "../../../services/firestore";
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -71,15 +71,24 @@ function CampaignDetailInner() {
               styles.secondary,
               pressed && { opacity: 0.8 },
             ]}
-            onPress={() => {
+            onPress={async () => {
               if (joined) {
+                // optimistic leave
                 leave(campaign.id);
-                logEvent("campaign_leave", { id: campaign.id });
-                fsIncrementCampaignMembers(campaign.id, -1);
+                const ok = await fsLeaveCampaign(campaign.id, 'self');
+                if (!ok) {
+                  join(campaign.id); // rollback
+                } else {
+                  logEvent("campaign_leave", { id: campaign.id });
+                }
               } else {
                 join(campaign.id);
-                logEvent("campaign_join", { id: campaign.id });
-                fsIncrementCampaignMembers(campaign.id, 1);
+                const ok = await fsJoinCampaign(campaign.id, 'self');
+                if (!ok) {
+                  leave(campaign.id);
+                } else {
+                  logEvent("campaign_join", { id: campaign.id });
+                }
               }
             }}
             accessibilityRole="button"
@@ -114,12 +123,9 @@ function CampaignDetailInner() {
             style={({ pressed }) => [styles.ghost, pressed && { opacity: 0.8 }]}
             onPress={async () => {
               try {
-                const msg = `${campaign.title} - ${campaign.summary}`;
-                await Share.share({
-                  title: campaign.title,
-                  message: msg,
-                  url: `https://empowr.app/campaigns/${campaign.id}`,
-                });
+                const deepLink = `https://empowr.app/campaigns/${campaign.id}`;
+                const message = `${campaign.title} - ${campaign.summary}\nJoin: ${deepLink}`;
+                await Share.share({ title: campaign.title, message, url: deepLink });
                 logEvent("campaign_share", { id: campaign.id });
               } catch {}
             }}
