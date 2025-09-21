@@ -631,6 +631,27 @@
     "card": {
       "uncrpdGuideTitle": "UNCRPD Guide & Framework",
       "uncrpdGuideDesc": "Browse articles, General Comments, implementation tools, and country monitoring pathways."
+    },
+    "landing": {
+      "screenLabel": "Research screen",
+      "title": "Research",
+      "subtitle": "Access studies, reports, articles, history timeline, and case wait-times.",
+      "studiesTitle": "Studies",
+      "studiesDesc": "Access clinical and workplace studies",
+      "reportsTitle": "Reports",
+      "reportsDesc": "Community and government reports made easy",
+      "articlesTitle": "Articles",
+      "articlesDesc": "Insights on disability, workplace rights, advocacy",
+      "timelineTitle": "History Timeline",
+      "timelineDesc": "Track milestones in disability, worker, and injured worker rights",
+      "waitTitle": "Case/File Wait-Times",
+      "waitDesc": "Estimate how long processes may take",
+      "masterIndexTitle": "Master Index",
+      "masterIndexDesc": "Comprehensive map of data & research sources",
+      "hubsHeader": "Research & Data Hubs",
+      "hubsIntro": "Trusted national and global sources for disability, return-to-work, accessibility, assistive tech, and social protection evidence.",
+      "regionCanada": "Canada",
+      "regionWorldwide": "Worldwide"
     }
   },
   "uncrpd": {
@@ -672,7 +693,10 @@
     "title": "Master Research Index",
     "screenLabel": "Master research index screen",
     "intro": "Hierarchical map of authoritative data sources, research hubs, thematic drill-downs, historical frameworks, and search strategies across Canada and global contexts.",
-    "results": "{{count}} link{{suffix}} match",
+    "results": {
+      "one": "{{count}} link",
+      "other": "{{count}} links"
+    },
     "filterLabel": "Filter sources",
     "searchPlaceholder": "Search themes, portals, hubs...",
     "sections": {

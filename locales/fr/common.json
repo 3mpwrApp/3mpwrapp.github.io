@@ -172,10 +172,9 @@
       "rtw": "Plan de retour au travail",
       "meds": "Suivi des médicaments et traitements",
       "chronic": "Suivi des affections chroniques",
-      "body_mech": "Conseiller en biomécanique (IA)",
-      "policy_sim": "Simulateur de politiques interactif",
-      "accommodation": "Demande d'aménagements"
-    },
+      "body_mech": "Conseiller en biomécanique (IA)"
+    }
+  },
     "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
     "filters": {
       "all": "All",
@@ -184,7 +183,7 @@
       "tools_downloads": "Tools & Downloads",
       "emergency_crisis": "Emergency & Crisis"
     }
-  },
+  ,
   "templates": {
     "voice": {
       "title": "Notes vocales du dossier",
@@ -668,7 +667,10 @@
     "title": "Index maître de recherche",
     "screenLabel": "Écran index maître recherche",
     "intro": "Carte hiérarchique des sources de données faisant autorité, hubs de recherche, analyses thématiques, cadres historiques et stratégies de recherche au Canada et globalement.",
-    "results": "{{count}} lien{{suffix}} correspondant",
+    "results": {
+      "one": "{{count}} lien",
+      "other": "{{count}} liens"
+    },
     "filterLabel": "Filtrer les sources",
     "searchPlaceholder": "Rechercher thèmes, portails, hubs...",
     "sections": {
@@ -692,6 +694,27 @@
     "card": {
       "uncrpdGuideTitle": "Guide et cadre UNCRPD",
       "uncrpdGuideDesc": "Parcourez articles, Observations générales, outils d'implémentation et voies de suivi nationales."
+    },
+    "landing": {
+      "screenLabel": "Écran recherche",
+      "title": "Recherche",
+      "subtitle": "Accédez à études, rapports, articles, frise historique et délais de dossiers.",
+      "studiesTitle": "Études",
+      "studiesDesc": "Accès à des études cliniques et en milieu de travail",
+      "reportsTitle": "Rapports",
+      "reportsDesc": "Rapports communautaires et gouvernementaux simplifiés",
+      "articlesTitle": "Articles",
+      "articlesDesc": "Analyses sur handicap, droits au travail et plaidoyer",
+      "timelineTitle": "Frise Historique",
+      "timelineDesc": "Suivre les étapes marquantes des droits du handicap et du travail",
+      "waitTitle": "Délais Dossier / Instance",
+      "waitDesc": "Estimer la durée probable des processus",
+      "masterIndexTitle": "Index Principal",
+      "masterIndexDesc": "Cartographie complète des sources de données & recherche",
+      "hubsHeader": "Hubs de Données et Recherche",
+      "hubsIntro": "Sources nationales et mondiales sur handicap, retour au travail, accessibilité, technologies d’assistance et protection sociale.",
+      "regionCanada": "Canada",
+      "regionWorldwide": "Monde"
     }
   },
   "uncrpd": {

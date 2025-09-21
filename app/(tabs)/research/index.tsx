@@ -1,15 +1,15 @@
-import React from 'react';
-import { Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
+import React from 'react';
+import { Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { useTranslation } from '../../../i18n';
 import A11yPressable from '../../../components/A11yPressable';
 import ContrastToggle from '../../../components/ContrastToggle';
 import SettingsLink from '../../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { researchHubs } from '../../../data/research-hubs';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useTranslation } from '../../../i18n';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -21,7 +21,7 @@ export default function ResearchScreen() {
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
   const { t } = useTranslation();
-  useAnnounceOnMount("Research");
+  useAnnounceOnMount(t('research.landing.screenLabel','Research screen'));
   useFocusOnRefOnMount(titleRef);
 
   return (
@@ -32,84 +32,84 @@ export default function ResearchScreen() {
         accessibilityRole="header"
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Research
+  {t('research.landing.title','Research')}
       </Text>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.subtitle}>
-        Access studies, reports, articles, history timeline, and case wait-times.
+  {t('research.landing.subtitle','Access studies, reports, articles, history timeline, and case wait-times.')}
       </Text>
       <View style={styles.sectionGrid}>
         <Link href="/(tabs)/research/studies" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel="Studies - Access clinical and workplace studies"
+            accessibilityLabel={`${t('research.landing.studiesTitle','Studies')} - ${t('research.landing.studiesDesc','Access clinical and workplace studies')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="library-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>Studies</Text>
-            <Text style={styles.sectionDescription}>Access clinical and workplace studies</Text>
+            <Text style={styles.sectionTitle}>{t('research.landing.studiesTitle','Studies')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.studiesDesc','Access clinical and workplace studies')}</Text>
           </A11yPressable>
         </Link>
         <Link href="/(tabs)/research/reports" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel="Reports - Community and government reports made easy"
+            accessibilityLabel={`${t('research.landing.reportsTitle','Reports')} - ${t('research.landing.reportsDesc','Community and government reports made easy')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="document-text-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>Reports</Text>
-            <Text style={styles.sectionDescription}>Community and government reports made easy</Text>
+            <Text style={styles.sectionTitle}>{t('research.landing.reportsTitle','Reports')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.reportsDesc','Community and government reports made easy')}</Text>
           </A11yPressable>
         </Link>
         <Link href="/(tabs)/research/articles" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel="Articles - Insights on disability, workplace rights, and advocacy"
+            accessibilityLabel={`${t('research.landing.articlesTitle','Articles')} - ${t('research.landing.articlesDesc','Insights on disability, workplace rights, advocacy')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="newspaper-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>Articles</Text>
-            <Text style={styles.sectionDescription}>Insights on disability, workplace rights, advocacy</Text>
+            <Text style={styles.sectionTitle}>{t('research.landing.articlesTitle','Articles')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.articlesDesc','Insights on disability, workplace rights, advocacy')}</Text>
           </A11yPressable>
         </Link>
         <Link href="/(tabs)/research/history-timeline" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel="History Timeline - Track milestones in disability and worker rights"
+            accessibilityLabel={`${t('research.landing.timelineTitle','History Timeline')} - ${t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="time-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>History Timeline</Text>
-            <Text style={styles.sectionDescription}>Track milestones in disability, worker, and injured worker rights</Text>
+            <Text style={styles.sectionTitle}>{t('research.landing.timelineTitle','History Timeline')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}</Text>
           </A11yPressable>
         </Link>
         <Link href="/(tabs)/research/wait-times" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel="Case Wait-Times - Estimate how long processes may take"
+            accessibilityLabel={`${t('research.landing.waitTitle','Case/File Wait-Times')} - ${t('research.landing.waitDesc','Estimate how long processes may take')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="time-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>Case/File Wait-Times</Text>
-            <Text style={styles.sectionDescription}>Estimate how long processes may take</Text>
+            <Text style={styles.sectionTitle}>{t('research.landing.waitTitle','Case/File Wait-Times')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.waitDesc','Estimate how long processes may take')}</Text>
           </A11yPressable>
         </Link>
         <Link href="/(tabs)/research/master-index" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel="Master Index - Comprehensive map of disability, compensation, and RTW sources"
+            accessibilityLabel={`${t('research.landing.masterIndexTitle','Master Index')} - ${t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="map-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>Master Index</Text>
-            <Text style={styles.sectionDescription}>Comprehensive map of data & research sources</Text>
+            <Text style={styles.sectionTitle}>{t('research.landing.masterIndexTitle','Master Index')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}</Text>
           </A11yPressable>
         </Link>
         <Link href="/(tabs)/research/uncrpd-info" asChild>
@@ -126,14 +126,14 @@ export default function ResearchScreen() {
         </Link>
       </View>
       <View style={styles.hubsContainer} accessibilityRole="summary">
-        <Text style={styles.hubsHeader} accessibilityRole="header">Research & Data Hubs</Text>
-        <Text style={styles.hubsIntro}>Trusted national and global sources for disability, return-to-work, accessibility, assistive tech, and social protection evidence.</Text>
+  <Text style={styles.hubsHeader} accessibilityRole="header">{t('research.landing.hubsHeader','Research & Data Hubs')}</Text>
+  <Text style={styles.hubsIntro}>{t('research.landing.hubsIntro','Trusted national and global sources for disability, return-to-work, accessibility, assistive tech, and social protection evidence.')}</Text>
         {(['canada','world'] as const).map(region => {
           const hubs = researchHubs.filter(h => h.region === region);
           if (!hubs.length) return null;
           return (
             <View key={region} style={styles.hubRegion} accessibilityRole="header" accessibilityLabel={region === 'canada' ? 'Canada hubs' : 'Worldwide hubs'}>
-              <Text style={styles.regionTitle}>{region === 'canada' ? 'Canada' : 'Worldwide'}</Text>
+              <Text style={styles.regionTitle}>{region === 'canada' ? t('research.landing.regionCanada','Canada') : t('research.landing.regionWorldwide','Worldwide')}</Text>
               {hubs.map(h => (
                 <View key={h.id} style={styles.hubCard} accessibilityRole="summary">
                   <Text style={styles.hubName}>{h.name}</Text>

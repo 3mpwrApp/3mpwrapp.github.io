@@ -172,9 +172,7 @@
       "rtw": "Plan de regreso al trabajo",
       "meds": "Registro de medicamentos y tratamientos",
       "chronic": "Seguimiento de condiciones crónicas",
-      "body_mech": "Asesor de biomecánica (IA)",
-      "policy_sim": "Simulador de políticas interactivo",
-      "accommodation": "Solicitud de adaptaciones"
+      "body_mech": "Asesor de biomecánica (IA)"
     },
     "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
     "filters": {
@@ -668,7 +666,10 @@
     "title": "Índice maestro de investigación",
     "screenLabel": "Pantalla índice maestro investigación",
     "intro": "Mapa jerárquico de fuentes de datos autorizadas, hubs de investigación, análisis temáticos, marcos históricos y estrategias de búsqueda en Canadá y global.",
-    "results": "{{count}} enlace{{suffix}} coincide",
+    "results": {
+      "one": "{{count}} enlace",
+      "other": "{{count}} enlaces"
+    },
     "filterLabel": "Filtrar fuentes",
     "searchPlaceholder": "Buscar temas, portales, hubs...",
     "sections": {
@@ -692,6 +693,27 @@
     "card": {
       "uncrpdGuideTitle": "Guía y Marco UNCRPD",
       "uncrpdGuideDesc": "Explora artículos, Comentarios Generales, herramientas de implementación y vías de monitoreo nacional."
+    },
+    "landing": {
+      "screenLabel": "Pantalla de investigación",
+      "title": "Investigación",
+      "subtitle": "Accede a estudios, informes, artículos, línea histórica y tiempos de espera de casos.",
+      "studiesTitle": "Estudios",
+      "studiesDesc": "Accede a estudios clínicos y laborales",
+      "reportsTitle": "Informes",
+      "reportsDesc": "Informes comunitarios y gubernamentales simplificados",
+      "articlesTitle": "Artículos",
+      "articlesDesc": "Perspectivas sobre discapacidad, derechos laborales y defensa",
+      "timelineTitle": "Línea Histórica",
+      "timelineDesc": "Sigue hitos en derechos de discapacidad y laborales",
+      "waitTitle": "Tiempos de Espera de Casos/Expedientes",
+      "waitDesc": "Estima cuánto pueden demorar los procesos",
+      "masterIndexTitle": "Índice Maestro",
+      "masterIndexDesc": "Mapa integral de fuentes de datos e investigación",
+      "hubsHeader": "Centros de Datos e Investigación",
+      "hubsIntro": "Fuentes nacionales y globales de evidencia sobre discapacidad, retorno al trabajo, accesibilidad, tecnología asistiva y protección social.",
+      "regionCanada": "Canadá",
+      "regionWorldwide": "Mundial"
     }
   },
   "uncrpd": {
