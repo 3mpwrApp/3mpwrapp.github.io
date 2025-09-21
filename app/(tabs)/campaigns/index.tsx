@@ -8,6 +8,8 @@ import {
   RefreshControl,
   TextInput,
   Pressable,
+  Share,
+  Alert,
 } from "react-native";
 import { Link } from "expo-router";
 
@@ -52,7 +54,7 @@ function ScreenInner() {
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
-  const { state: local, createCampaign } = useCampaignsLocal();
+  const { state: local, createCampaign, join, leave, isJoined } = useCampaignsLocal();
 
   const reload = React.useCallback(async () => {
     try {
@@ -85,6 +87,8 @@ function ScreenInner() {
     [local.myCampaigns, items],
   );
 
+  const joinedCount = React.useMemo(() => Object.keys(local.joined).length, [local.joined]);
+
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return allItems;
@@ -107,6 +111,9 @@ function ScreenInner() {
         Campaigns
       </Text>
       <Text style={styles.subtitle}>Browse, create, and join campaigns.</Text>
+      <Text style={[styles.subtitle, { fontSize:14, opacity:0.8 }]} accessibilityLabel={`You have joined ${joinedCount} campaigns`}>
+        Joined: {joinedCount} / {allItems.length}
+      </Text>
 
       <CreateCampaignBox
         onCreate={async (data) => {
@@ -159,14 +166,9 @@ function ScreenInner() {
         data={filtered}
         keyExtractor={(item) => `thread-${item.id}`}
         renderItem={({ item }) => (
-          <View>
+          <View style={{ marginBottom:12 }}>
             <Link
-              href={
-                {
-                  pathname: "/(tabs)/campaigns/[id]",
-                  params: { id: item.id },
-                } as any
-              }
+              href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any}
               asChild
             >
               <Card
@@ -174,28 +176,54 @@ function ScreenInner() {
                 subtitle={`${item.summary}${item.membersCount ? ` - ${item.membersCount} supporters` : ""}`}
               />
             </Link>
-            <Pressable
-              onPress={async () => {
-                try {
-                  await fsIncrementCampaignMembers(item.id, 1);
-                } catch {}
-              }}
-              accessibilityRole="button"
-              accessibilityLabel="Support this campaign"
-              style={{
-                alignSelf: "flex-start",
-                marginTop: 6,
-                borderWidth: StyleSheet.hairlineWidth,
-                borderColor: palette.muted,
-                borderRadius: 8,
-                paddingHorizontal: 10,
-                paddingVertical: 6,
-              }}
-            >
-              <Text style={{ color: palette.text, fontWeight: "700" }}>
-                Support
-              </Text>
-            </Pressable>
+            <View style={{ flexDirection:'row', marginTop:6, gap:8 }}>
+              <Pressable
+                onPress={async () => {
+                  try {
+                    await Share.share({
+                      message: `${item.title}\n${item.summary}`,
+                      title: item.title,
+                    });
+                  } catch {}
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={`Share ${item.title}`}
+                style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6 }}
+              >
+                <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>Share</Text>
+              </Pressable>
+              <Pressable
+                onPress={async () => {
+                  const joined = isJoined(item.id);
+                  try {
+                    if (joined) {
+                      leave(item.id);
+                      Alert.alert('Left Campaign', 'You have left this campaign.');
+                      await fsIncrementCampaignMembers(item.id, -1);
+                    } else {
+                      join(item.id);
+                      Alert.alert('Joined Campaign', 'You are now supporting this campaign.');
+                      await fsIncrementCampaignMembers(item.id, 1);
+                    }
+                  } catch {}
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={(isJoined(item.id)? 'Leave' : 'Join') + ' ' + item.title}
+                style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6, backgroundColor: isJoined(item.id)? palette.primary: 'transparent' }}
+              >
+                <Text style={{ color: isJoined(item.id)? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{isJoined(item.id)? 'Joined':'Join'}</Text>
+              </Pressable>
+              <Pressable
+                onPress={async () => {
+                  try { await fsIncrementCampaignMembers(item.id, 1); } catch {}
+                }}
+                accessibilityRole="button"
+                accessibilityLabel="Support this campaign"
+                style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6 }}
+              >
+                <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>+1</Text>
+              </Pressable>
+            </View>
           </View>
         )}
         ListEmptyComponent={!loading && !error ? (
