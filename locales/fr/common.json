@@ -143,6 +143,25 @@
     "save": "Enregistrer",
     "saved": "Enregistré"
   },
+  "eventsFeature": {
+    "createTitle": "Créer événement",
+    "create": "Créer",
+    "close": "Fermer",
+    "titlePlaceholder": "Titre",
+    "descriptionPlaceholder": "Description",
+    "datePlaceholder": "Date (AAAA-MM-JJ HH:MM)",
+    "locationPlaceholder": "Lieu (optionnel)",
+    "virtual": "Virtuel",
+    "asl": "ASL",
+    "captions": "Sous-titres",
+    "stepFree": "Sans marches",
+    "sensory": "Sensoriel",
+    "addReminder": "Ajouter rappel",
+    "removeReminder": "Retirer rappel",
+    "reminderScheduled": "Rappel programmé",
+    "reminderRemoved": "Rappel retiré",
+    "addToCalendar": "Ajouter au calendrier"
+  },
   "wellness": {
     "tools": {
       "symptom": "Symptom & Pain Tracker (exportable report)",

@@ -31,48 +31,53 @@ export async function setupAsync() {
 }
 
 export async function scheduleLocal(title: string, body: string) {
-  if (!Notifications) return false;
+  if (!Notifications) return false as const;
   try {
-    await Notifications.scheduleNotificationAsync({
+    const id = await Notifications.scheduleNotificationAsync({
       content: { title, body },
       trigger: null,
     });
-    return true;
+    return id as string;
   } catch {
-    return false;
+    return false as const;
   }
 }
 
 // Schedule a daily notification at local time hour:minute
 export async function scheduleDailyAt(hour: number, minute: number, title: string, body: string) {
-  if (!Notifications) return false;
+  if (!Notifications) return false as const;
   try {
     const now = new Date();
     const first = new Date();
     first.setHours(hour, minute, 0, 0);
     if (first.getTime() <= now.getTime()) first.setDate(first.getDate() + 1);
-    await Notifications.scheduleNotificationAsync({
+    const id = await Notifications.scheduleNotificationAsync({
       content: { title, body },
       trigger: { hour, minute, repeats: true } as any,
     });
-    return true;
+    return id as string;
   } catch {
-    return false;
+    return false as const;
   }
 }
 
 // Schedule a notification at a specific Date
 export async function scheduleAt(when: Date, title: string, body: string) {
-  if (!Notifications) return false;
+  if (!Notifications) return false as const;
   try {
-    await Notifications.scheduleNotificationAsync({
+    const id = await Notifications.scheduleNotificationAsync({
       content: { title, body },
       trigger: when,
     });
-    return true;
+    return id as string;
   } catch {
-    return false;
+    return false as const;
   }
+}
+
+export async function cancel(id: string) {
+  if (!Notifications) return false;
+  try { await Notifications.cancelScheduledNotificationAsync(id); return true; } catch { return false; }
 }
 
 // Get an Expo push token (web/native if available). Returns null if unsupported.

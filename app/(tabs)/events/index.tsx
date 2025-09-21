@@ -1,12 +1,13 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-  FlatList,
-  RefreshControl,
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
+    FlatList,
+    RefreshControl,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
+    Share,
 } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
@@ -291,53 +292,52 @@ export default function EventsScreen() {
         data={filtered}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Link
-            href={
-              {
-                pathname: "/(tabs)/events/[id]",
-                params: { id: item.id },
-              } as any
-            }
-            asChild
-            accessibilityRole="link"
-            accessibilityLabel={`Open ${item.title}`}
-          >
-            <Card
-              title={item.title}
-              subtitle={formatMeta(item.date, item.isVirtual, item.location)}
-              left={(() => {
-                const label = item.id.startsWith("holiday-")
-                  ? "Holiday"
-                  : item.id.startsWith("prov-")
-                    ? "Provincial"
-                    : item.id.startsWith("obs-")
-                      ? "Observance"
-                      : null;
-                if (!label) return null;
-                return (
-                  <View
-                    style={{
-                      backgroundColor: palette.primary,
-                      borderRadius: 6,
-                      paddingHorizontal: 6,
-                      paddingVertical: 2,
-                    }}
-                  >
-                    <Text
-                      style={{
-                        color: palette.onPrimary,
-                        fontSize: 11,
-                        fontWeight: "700",
-                      }}
-                    >
-                      {label}
-                    </Text>
-                  </View>
-                );
-              })()}
-              testID={`event-${item.id}`}
-            />
-          </Link>
+          <View style={{ marginBottom:12 }}>
+            <Link
+              href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any}
+              asChild
+              accessibilityRole="link"
+              accessibilityLabel={`Open ${item.title}`}
+            >
+              <Card
+                title={item.title}
+                subtitle={formatMeta(item.date, item.isVirtual, item.location)}
+                left={(() => {
+                  const label = item.id.startsWith("holiday-")
+                    ? "Holiday"
+                    : item.id.startsWith("prov-")
+                      ? "Provincial"
+                      : item.id.startsWith("obs-")
+                        ? "Observance"
+                        : null;
+                  if (!label) return null;
+                  return (
+                    <View style={{ backgroundColor: palette.primary, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 }}>
+                      <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: "700" }}>{label}</Text>
+                    </View>
+                  );
+                })()}
+                testID={`event-${item.id}`}
+              />
+            </Link>
+            <View style={{ flexDirection:'row', marginTop:4, gap:8 }}>
+              <A11yPressable
+                onPress={async () => {
+                  try {
+                    await Share.share({
+                      message: `${item.title}\n${item.date}\n${item.isVirtual? 'Virtual': (item.location||'TBD')}\n\n${item.description || ''}`.trim(),
+                      title: item.title,
+                    });
+                  } catch {}
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={`Share ${item.title}`}
+                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Share</Text>
+              </A11yPressable>
+            </View>
+          </View>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
         refreshControl={
