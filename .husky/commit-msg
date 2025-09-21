@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+# Empowr commit-msg hook: light conventional commit guard
+
+if [ "$SKIP_HOOKS" = "1" ]; then
+  echo "↷ SKIP_HOOKS=1 -> skipping commit message validation"
+  exit 0
+fi
+
+MSG_FILE="$1"
+MSG="$(head -n1 "$MSG_FILE" | tr -d '\r')"
+
+# Allow merge commits, revert commits, version bumps, and WIP bypass
+case "$MSG" in
+  Merge*|Revert*|v[0-9]*|WIP*)
+    exit 0
+    ;;
+esac
+
+# Basic Conventional Commit pattern: type(scope?): description
+pattern='^(feat|fix|docs|style|refactor|perf|test|chore|build|ci|revert)(\([a-z0-9_.-]+\))?: .+'
+if echo "$MSG" | grep -Eq "$pattern"; then
+  exit 0
+fi
+
+echo "✗ Commit message does not follow Conventional Commits (e.g. feat(api): add X)"
+echo "  Got: $MSG"
+echo "  Allowed types: feat, fix, docs, style, refactor, perf, test, chore, build, ci, revert"
+echo "  Use WIP prefix to bypass temporarily (will block CI tagging)"
+exit 1
