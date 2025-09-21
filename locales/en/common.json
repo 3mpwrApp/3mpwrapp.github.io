@@ -709,4 +709,37 @@
     },
     "chipsAnnounce": "Quick filter set to {{label}}"
   }
+  ,
+  "eventsFeature": {
+    "createToggleOpen": "Create Event",
+    "createToggleClose": "Close Form",
+    "form": {
+      "titlePlaceholder": "Title",
+      "descriptionPlaceholder": "Description",
+      "datePlaceholder": "Date (YYYY-MM-DD HH:MM)",
+      "locationPlaceholder": "Location (optional)",
+      "add": "Add Event",
+      "invalidDate": "Invalid date",
+      "added": "Event added"
+    },
+    "chips": {
+      "virtual": "Virtual",
+      "asl": "ASL",
+      "captions": "Captions",
+      "stepFree": "Step-free",
+      "sensory": "Sensory"
+    },
+    "reminders": {
+      "add": "Add Reminder",
+      "remove": "Remove Reminder",
+      "disabledTitle": "Reminders Disabled",
+      "disabledBody": "Enable Event Reminders in Settings to schedule local notifications.",
+      "scheduled": "Reminder set for 60 minutes before start.",
+      "removed": "Event reminder removed.",
+      "tooSoon": "Event is starting too soon for a reminder.",
+      "invalidDate": "Cannot parse event date.",
+      "failed": "Unable to schedule reminder.",
+      "addCalendar": "Add to Calendar"
+    }
+  }
 }

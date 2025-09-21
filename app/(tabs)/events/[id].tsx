@@ -1,11 +1,14 @@
 import * as Linking from "expo-linking";
+import React from 'react';
 import { Stack, useLocalSearchParams } from "expo-router";
-import { Share, StyleSheet, Text, View } from "react-native";
+import { Share, StyleSheet, Text, View, Alert } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
 import SettingsLink from "../../../components/SettingsLink";
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { events } from "../../../data/events";
+import { useSettings } from "../../../store/settings";
+import { scheduleForEvent, isScheduled, removeReminder } from "../../../services/eventReminders";
 import { useAppPalette } from "../../../theme/usePalette";
 
 function createICS(
@@ -28,6 +31,13 @@ export default function EventDetail() {
   const styles = createStyles(palette);
 
   const event = events.find((e) => e.id === id);
+  const { eventReminders } = useSettings();
+  const [scheduled, setScheduled] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!event?.id) return;
+    isScheduled(event.id).then(setScheduled).catch(()=>{});
+  }, [event?.id]);
 
   const addToCalendar = async () => {
     if (!event) return;
@@ -85,18 +95,56 @@ export default function EventDetail() {
           Where: {event?.isVirtual ? "Virtual" : (event?.location ?? "TBD")}
         </Text>
         {!!event && (
-          <A11yPressable
-            style={({ pressed }) => [
-              styles.button,
-              pressed && { opacity: 0.8 },
-            ]}
-            onPress={addToCalendar}
-            accessibilityRole="button"
-            accessibilityLabel="Add to calendar"
-            hitSlop={HIT_SLOP_8}
-          >
-            <Text style={styles.buttonText}>Add Reminder</Text>
-          </A11yPressable>
+          <>
+            <A11yPressable
+              style={({ pressed }) => [
+                styles.button,
+                pressed && { opacity: 0.8 },
+              ]}
+              onPress={async () => {
+                if (!event) return;
+                if (!eventReminders) {
+                  Alert.alert('Reminders Disabled', 'Enable Event Reminders in Settings to schedule local notifications.');
+                  return;
+                }
+                if (scheduled) {
+                  await removeReminder(event.id);
+                  setScheduled(false);
+                  Alert.alert('Removed', 'Event reminder removed.');
+                  return;
+                }
+                const res = await scheduleForEvent(event, 60);
+                if (res.ok) {
+                  setScheduled(true);
+                  Alert.alert('Scheduled', 'Reminder set for 60 minutes before start.');
+                } else if (res.reason === 'too-soon') {
+                  Alert.alert('Too Soon', 'Event is starting too soon for a reminder.');
+                } else if (res.reason === 'invalid-date') {
+                  Alert.alert('Invalid Date', 'Cannot parse event date.');
+                } else {
+                  Alert.alert('Failed', 'Unable to schedule reminder.');
+                }
+              }}
+              accessibilityRole="button"
+              accessibilityLabel={scheduled ? 'Remove event reminder' : 'Schedule event reminder'}
+              hitSlop={HIT_SLOP_8}
+            >
+              <Text style={styles.buttonText}>{scheduled ? 'Remove Reminder' : 'Add Reminder'}</Text>
+            </A11yPressable>
+            <View style={{ height: 8 }} />
+            <A11yPressable
+              style={({ pressed }) => [
+                styles.secondaryButton,
+                pressed && { opacity: 0.8 },
+              ]}
+              onPress={addToCalendar}
+              accessibilityRole="button"
+              accessibilityLabel="Add to external calendar"
+              hitSlop={HIT_SLOP_8}
+            >
+              <Text style={styles.secondaryButtonText}>Add to Calendar</Text>
+            </A11yPressable>
+          </>
         )}
       </View>
     </>
@@ -123,5 +171,16 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       marginTop: 12,
     },
     buttonText: { color: palette.onPrimary, fontSize: 16 },
+    secondaryButton: {
+      backgroundColor: palette.surface,
+      paddingVertical: 10,
+      paddingHorizontal: 16,
+      borderRadius: 6,
+      minHeight: 44,
+      minWidth: 44,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+    },
+    secondaryButtonText: { color: palette.text, fontSize: 16, fontWeight: '700' },
   });
 }

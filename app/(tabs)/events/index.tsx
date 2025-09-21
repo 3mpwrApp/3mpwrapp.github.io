@@ -1,11 +1,12 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-    FlatList,
-    RefreshControl,
-    StyleSheet,
-    Text,
-    View,
+  FlatList,
+  RefreshControl,
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
 } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
@@ -27,6 +28,7 @@ import {
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { fetchEvents } from "../../../services/events";
+import { fsAddEvent } from "../../../services/firestore";
 import { useCounts } from "../../../store/counts";
 import { useNetwork } from "../../../store/network";
 import { useRefresh } from "../../../store/refresh";
@@ -146,6 +148,16 @@ export default function EventsScreen() {
     [items, selectedDay],
   );
 
+  const [showCreate, setShowCreate] = React.useState(false);
+  const handleCreate = async (data: {
+    title: string; description: string; date: string; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean;
+  }) => {
+    const id = `evt-${Date.now()}`;
+    const newEvt = { id, ...data } as any;
+    setBaseItems(prev => [newEvt, ...prev]);
+    try { await fsAddEvent(newEvt); } catch { /* silent fail keeps local */ }
+  };
+
   return (
     <View
       style={styles.container}
@@ -168,6 +180,19 @@ export default function EventsScreen() {
       <Text style={styles.subtitle}>
         Community events, workshops, and meetups.
       </Text>
+
+      <A11yPressable
+        accessibilityRole="button"
+        accessibilityLabel={showCreate ? "Hide create event form" : "Show create event form"}
+        onPress={() => setShowCreate(v => !v)}
+        style={{ alignSelf:'flex-start', marginBottom: 8, paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.primary }}
+      >
+        <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate? 'Close Form':'Create Event'}</Text>
+      </A11yPressable>
+
+      {showCreate && (
+        <CreateEventBox onCreate={handleCreate} palette={palette} />
+      )}
 
       {loading && (
         <View>
@@ -385,6 +410,52 @@ function createStyles(
     },
     dayText: { color: palette.text },
   });
+}
+
+function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; description: string; date: string; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean; }) => void; palette: any; }) {
+  const [title, setTitle] = React.useState("");
+  const [description, setDescription] = React.useState("");
+  const [date, setDate] = React.useState("");
+  const [location, setLocation] = React.useState("");
+  const [isVirtual, setIsVirtual] = React.useState(false);
+  const [asl, setAsl] = React.useState(false);
+  const [captions, setCaptions] = React.useState(false);
+  const [stepFree, setStepFree] = React.useState(false);
+  const [sensorySpace, setSensory] = React.useState(false);
+  const valid = title.trim().length>2 && description.trim().length>4 && date.trim().length>3;
+  const fieldStyle = { borderWidth:1, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:8, color: palette.text, marginBottom:6 };
+  return (
+    <View style={{ marginBottom:12, alignSelf:'stretch' }}>
+      <TextInput placeholder="Title" placeholderTextColor={palette.muted} value={title} onChangeText={setTitle} style={fieldStyle} />
+      <TextInput placeholder="Description" placeholderTextColor={palette.muted} value={description} onChangeText={setDescription} style={[fieldStyle,{ minHeight:60 }]} multiline />
+      <TextInput placeholder="Date (YYYY-MM-DD HH:MM)" placeholderTextColor={palette.muted} value={date} onChangeText={setDate} style={fieldStyle} />
+      <TextInput placeholder="Location (optional)" placeholderTextColor={palette.muted} value={location} onChangeText={setLocation} style={fieldStyle} />
+      <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom:8 }}>
+        <ToggleChip label="Virtual" active={isVirtual} onToggle={()=>setIsVirtual(v=>!v)} palette={palette} />
+        <ToggleChip label="ASL" active={asl} onToggle={()=>setAsl(v=>!v)} palette={palette} />
+        <ToggleChip label="Captions" active={captions} onToggle={()=>setCaptions(v=>!v)} palette={palette} />
+        <ToggleChip label="Step-free" active={stepFree} onToggle={()=>setStepFree(v=>!v)} palette={palette} />
+        <ToggleChip label="Sensory" active={sensorySpace} onToggle={()=>setSensory(v=>!v)} palette={palette} />
+      </View>
+      <A11yPressable
+        accessibilityRole="button"
+        accessibilityLabel="Create event"
+        disabled={!valid}
+        onPress={() => { if(!valid) return; onCreate({ title: title.trim(), description: description.trim(), date: date.trim(), location: location.trim()||undefined, isVirtual, asl, captions, stepFree, sensorySpace }); setTitle(''); setDescription(''); setDate(''); setLocation(''); setIsVirtual(false); setAsl(false); setCaptions(false); setStepFree(false); setSensory(false); }}
+        style={{ backgroundColor: palette.primary, opacity: valid?1:0.5, paddingVertical:10, borderRadius:8, alignItems:'center' }}
+      >
+        <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>Add Event</Text>
+      </A11yPressable>
+    </View>
+  );
+}
+
+function ToggleChip({ label, active, onToggle, palette }: { label: string; active: boolean; onToggle: () => void; palette: any; }) {
+  return (
+    <A11yPressable onPress={onToggle} accessibilityRole="button" accessibilityLabel={label} style={{ borderWidth:1, borderColor: active? palette.primary: palette.muted, backgroundColor: active? palette.primary: 'transparent', paddingHorizontal:10, paddingVertical:6, borderRadius:20 }}>
+      <Text style={{ color: active? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{label}</Text>
+    </A11yPressable>
+  );
 }
 
 // Calendar helpers

@@ -44,6 +44,30 @@ export async function fsAddCampaign(c: {
   }
 }
 
+// Events
+export async function fsAddEvent(e: {
+  id: string;
+  title: string;
+  description: string;
+  date: string; // ISO or friendly
+  location?: string;
+  isVirtual?: boolean;
+  asl?: boolean;
+  captions?: boolean;
+  stepFree?: boolean;
+  sensorySpace?: boolean;
+}) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    await m.setDoc(m.doc(db, "events", e.id), { ...e, createdAt: Date.now() } as any, { merge: true });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export async function fsIncrementCampaignMembers(id: string, delta: number) {
   const m = await ensure();
   const db = await getDB();
