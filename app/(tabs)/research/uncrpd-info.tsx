@@ -1,6 +1,6 @@
+import { Link, Stack } from 'expo-router';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Link, Stack } from 'expo-router';
 
 import A11yPressable from '../../../components/A11yPressable';
 import ContrastToggle from '../../../components/ContrastToggle';

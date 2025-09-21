@@ -167,7 +167,7 @@ export default function SleepEnergyTracker() {
   }, [entries, filterStart, filterEnd, filterMinHours, filterTag]);
 
   const summary = React.useMemo(() => {
-    if (filtered.length === 0) return "No entries (check filters).";
+  if (filtered.length === 0) return "No entries (check filters).";
     const hours = filtered
       .map((e) => parseFloat(e.sleepHours || "0"))
       .filter((n) => !isNaN(n));

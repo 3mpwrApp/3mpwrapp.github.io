@@ -1,6 +1,6 @@
+import { Stack, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { AccessibilityInfo, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import { Stack, useLocalSearchParams } from 'expo-router';
 
 import A11yPressable from '../../../components/A11yPressable';
 import ContrastToggle from '../../../components/ContrastToggle';
@@ -11,6 +11,7 @@ import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../
 import { useTranslation } from '../../../i18n';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
+let AsyncStorage: any; try { AsyncStorage = require('@react-native-async-storage/async-storage').default; } catch {}
 
 export const options = { href: null };
 
@@ -29,12 +30,23 @@ export default function MasterIndexScreen() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
-  const { t } = useTranslation();
+  const { t, tCount } = useTranslation();
   useAnnounceOnMount(t('masterIndex.screenLabel'));
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState('');
   const [announceTimer, setAnnounceTimer] = React.useState<ReturnType<typeof setTimeout> | null>(null);
   const [quickFilter, setQuickFilter] = React.useState<string | null>(null);
+
+  // Load persisted quick filter
+  React.useEffect(() => {
+    (async () => {
+      if (params.filter) return; // URL param overrides saved
+      try {
+        const saved = await AsyncStorage?.getItem?.('research:quickFilter');
+        if (saved) setQuickFilter(saved);
+      } catch {}
+    })();
+  }, [params.filter]);
 
   React.useEffect(() => {
     if (params.filter && typeof params.filter === 'string') {
@@ -102,9 +114,8 @@ export default function MasterIndexScreen() {
 
   React.useEffect(() => {
     if (quickFilter) {
-      AccessibilityInfo.announceForAccessibility(
-        t('masterIndex.chipsAnnounce', { label: quickFilter.toUpperCase() })
-      );
+      const msg = t('masterIndex.chipsAnnounce').replace('{{label}}', quickFilter.toUpperCase());
+      AccessibilityInfo.announceForAccessibility(msg);
     }
   }, [quickFilter, t]);
 
@@ -126,7 +137,11 @@ export default function MasterIndexScreen() {
                   accessibilityRole="tab"
                   accessibilityState={{ selected: active }}
                   accessibilityLabel={`${chip} ${t('common.filter') || 'quick filter'}`}
-                  onPress={() => setQuickFilter(active ? null : chip.toLowerCase())}
+                  onPress={async () => {
+                    const next = active ? null : chip.toLowerCase();
+                    setQuickFilter(next);
+                    try { if (next) await AsyncStorage?.setItem?.('research:quickFilter', next); else await AsyncStorage?.removeItem?.('research:quickFilter'); } catch {}
+                  }}
                   style={[styles.filterChip, active && styles.filterChipActive]}
                   hitSlop={HIT_SLOP_8}
                 >
@@ -147,19 +162,20 @@ export default function MasterIndexScreen() {
             clearButtonMode="while-editing"
           />
           {normalizedQuery ? (
-            <Text style={styles.resultsMeta} accessibilityLiveRegion="polite">{t('masterIndex.results', { count: totalResults ?? 0, suffix: (totalResults ?? 0) === 1 ? '' : 's' })}</Text>
+            <Text style={styles.resultsMeta} accessibilityLiveRegion="polite">{tCount('masterIndex.results', totalResults ?? 0)}</Text>
           ) : null}
         </View>
         {regionOrder.map(sectionGroup => {
-          const sections = (normalizedQuery ? filtered : masterIndex)[sectionGroup.key];
+          const source: any = normalizedQuery ? filtered : masterIndex;
+          const sections: any[] = source[sectionGroup.key as keyof typeof source] as any[];
           return (
             <View key={sectionGroup.key} style={styles.group}>
               <Text style={styles.groupTitle} accessibilityRole="header">{sectionGroup.title}</Text>
-              {sections.map(sec => (
+              {sections.map((sec: any) => (
                 <View key={sec.id} style={styles.section}>
                   <Text style={styles.sectionTitle}>{sec.title}</Text>
                   {sec.description && <Text style={styles.sectionDescription}>{sec.description}</Text>}
-                  {sec.links.map(link => (
+                  {sec.links.map((link: any) => (
                     <A11yPressable
                       key={link.label + link.url}
                       accessibilityRole="link"
@@ -172,11 +188,11 @@ export default function MasterIndexScreen() {
                       {link.note && <Text style={styles.linkNote}>{link.note}</Text>}
                     </A11yPressable>
                   ))}
-                  {sec.subsections?.map(sub => (
+                  {sec.subsections?.map((sub: any) => (
                     <View key={sub.id} style={styles.subSection}>
                       <Text style={styles.subSectionTitle}>{sub.title}</Text>
                       {sub.description && <Text style={styles.sectionDescription}>{sub.description}</Text>}
-                      {sub.links.map(l => (
+                      {sub.links.map((l: any) => (
                         <A11yPressable
                           key={l.label + l.url}
                           accessibilityRole="link"

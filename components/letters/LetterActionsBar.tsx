@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-import A11yPressable from '../A11yPressable';
 import { useTranslation } from '../../i18n';
 import { announce } from '../../utils/announce';
+import A11yPressable from '../A11yPressable';
 
 export interface LetterActionsBarProps {
   showInfo: boolean;
@@ -26,24 +26,24 @@ export function LetterActionsBar({ showInfo, onToggleInfo, onCopy, onInsertTrack
         accessibilityRole="button"
         accessibilityLabel={t('templates.letters.common.toggleInfo','Toggle instructions')}
       >
-        <Text style={s.infoBtnText}>{showInfo ? t('common.hide','Hide') : t('common.show','Show')}</Text>
+  <Text testID="letterActionToggle" style={s.infoBtnText}>{showInfo ? t('common.hide','Hide') : t('common.show','Show')}</Text>
       </A11yPressable>
       <A11yPressable onPress={onCopy} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t('templates.letters.common.copy','Copy')}>
-        <Text style={s.secondaryBtnText}>{t('templates.letters.common.copy','Copy')}</Text>
+  <Text testID="letterActionCopy" style={s.secondaryBtnText}>{t('templates.letters.common.copy','Copy')}</Text>
       </A11yPressable>
       {onInsertTrackers && (
         <A11yPressable onPress={onInsertTrackers} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t('templates.letters.common.insertTrackers','Insert from trackers')}>
-          <Text style={s.secondaryBtnText}>{t('templates.letters.common.insertTrackers','Insert from trackers')}</Text>
+          <Text testID="letterActionInsert" style={s.secondaryBtnText}>{t('templates.letters.common.insertTrackers','Insert from trackers')}</Text>
         </A11yPressable>
       )}
       {onExportPdf && (
         <A11yPressable onPress={onExportPdf} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t('templates.letters.common.exportPdf','Export as PDF')}>
-          <Text style={s.secondaryBtnText}>{t('templates.letters.common.exportPdf','Export as PDF')}</Text>
+          <Text testID="letterActionPdf" style={s.secondaryBtnText}>{t('templates.letters.common.exportPdf','Export as PDF')}</Text>
         </A11yPressable>
       )}
       {onExportDoc && (
         <A11yPressable onPress={onExportDoc} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t('templates.letters.common.exportDoc','Export as .doc')}>
-          <Text style={s.secondaryBtnText}>{t('templates.letters.common.exportDoc','Export as .doc')}</Text>
+          <Text testID="letterActionDoc" style={s.secondaryBtnText}>{t('templates.letters.common.exportDoc','Export as .doc')}</Text>
         </A11yPressable>
       )}
     </View>

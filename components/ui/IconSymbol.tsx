@@ -1,9 +1,9 @@
 // Fallback for using MaterialIcons on Android and web.
 
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import type { SymbolWeight, SymbolViewProps } from "expo-symbols";
+import type { SymbolViewProps, SymbolWeight } from "expo-symbols";
 import type { ComponentProps } from "react";
-import type { OpaqueColorValue, type StyleProp, type TextStyle } from "react-native";
+import type { OpaqueColorValue, StyleProp, TextStyle } from "react-native";
 
 type IconMapping = Record<
   SymbolViewProps["name"],

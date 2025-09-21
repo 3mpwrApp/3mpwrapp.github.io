@@ -168,7 +168,7 @@ export default function SymptomTracker() {
   }, [entries, filterStart, filterEnd, filterMinPain, filterTag]);
 
   const report = React.useMemo(() => {
-    if (filtered.length === 0) return "No entries (check filters).";
+  if (filtered.length === 0) return "No entries (check filters).";
     const pains = filtered
       .map((e) => parseFloat(e.pain || "0"))
       .filter((n) => !isNaN(n));
