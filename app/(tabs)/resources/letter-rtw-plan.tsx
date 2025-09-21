@@ -2,14 +2,13 @@ import * as Clipboard from "expo-clipboard";
 import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
-import A11yPressable from "../../../components/A11yPressable";
+import LetterActionsBar from "../../../components/letters/LetterActionsBar";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { logEvent } from "../../../services/analytics";
 import { buildSymptomSummary } from "../../../services/insights";
 import { useProfileLocal } from "../../../store/profileLocal";
 import { useAppPalette } from "../../../theme/usePalette";
-import { announce } from '../../../utils/announce';
 
 export const options = { href: null };
 
@@ -35,12 +34,14 @@ export default function RTWPlanLetter() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:20 }} accessibilityLabel={t("templates.letters.rtw.screenLabel","Return to work plan letter screen")}>      
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("templates.letters.rtw.title","Return-to-Work Plan")}</Text>
-      <View style={s.actionsRow}>
-  <A11yPressable onPress={()=>{ setShowInfo(v=>!v); announce(showInfo ? t("common.hide","Hide") : t("templates.letters.common.toggleInfo","Toggle instructions")); }} style={s.infoBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.toggleInfo","Toggle instructions")}><Text style={s.infoBtnText}>{showInfo ? t("common.hide","Hide") : t("common.show","Show")}</Text></A11yPressable>
-        <A11yPressable onPress={copyLetter} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.copy","Copy")}> <Text style={s.secondaryBtnText}>{t("templates.letters.common.copy","Copy")}</Text></A11yPressable>
-        <A11yPressable onPress={insertTrackers} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.insertTrackers","Insert from trackers")}> <Text style={s.secondaryBtnText}>{t("templates.letters.common.insertTrackers","Insert from trackers")}</Text></A11yPressable>
-        <A11yPressable onPress={exportDoc} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t("templates.letters.common.exportDoc","Export as .doc")}> <Text style={s.secondaryBtnText}>{t("templates.letters.common.exportDoc","Export as .doc")}</Text></A11yPressable>
-      </View>
+      <LetterActionsBar
+        showInfo={showInfo}
+        onToggleInfo={() => setShowInfo(v=>!v)}
+        onCopy={copyLetter}
+        onInsertTrackers={insertTrackers}
+        onExportDoc={exportDoc}
+        palette={palette}
+      />
       {showInfo && (
         <View style={s.infoCard} accessibilityRole="summary">
           <Text style={s.infoTitle}>{t("templates.letters.common.infoTitle","How to Use")}</Text>

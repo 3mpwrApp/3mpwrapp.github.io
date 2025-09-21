@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
-    "types": ["react", "react-native", "expo-router"],
+  "types": ["react", "react-native", "expo-router", "jest", "node"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
