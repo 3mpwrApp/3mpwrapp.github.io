@@ -13,7 +13,9 @@ export type ActivityEventType =
   | 'error.report'
   | 'faq.create'
   | 'faq.update'
-  | 'faq.delete';
+  | 'faq.delete'
+  | 'coach.generate'
+  | 'coach.view';
 
 export interface BaseActivityEvent<T extends ActivityEventType = ActivityEventType, P = any> {
   id?: string; // Firestore doc id when fetched
@@ -36,6 +38,8 @@ export interface A11yToggleEvent extends BaseActivityEvent<'a11y.toggle',{ featu
 export interface FaqCreateEvent extends BaseActivityEvent<'faq.create',{ id: string; q: string; }> {}
 export interface FaqUpdateEvent extends BaseActivityEvent<'faq.update',{ id: string; q?: string; a?: string; }> {}
 export interface FaqDeleteEvent extends BaseActivityEvent<'faq.delete',{ id: string; }> {}
+export interface CoachGenerateEvent extends BaseActivityEvent<'coach.generate',{ promptLength: number; jurisdiction?: string; steps?: number; }> {}
+export interface CoachViewEvent extends BaseActivityEvent<'coach.view',{ steps?: number; jurisdiction?: string; }> {}
 
 export type AnyActivityEvent =
   | BookmarkAddEvent
@@ -47,4 +51,6 @@ export type AnyActivityEvent =
   | FaqCreateEvent
   | FaqUpdateEvent
   | FaqDeleteEvent
+  | CoachGenerateEvent
+  | CoachViewEvent
   | BaseActivityEvent; // fallback

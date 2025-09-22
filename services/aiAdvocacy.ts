@@ -39,10 +39,12 @@ export async function aiPolicySimplify(_topic: string, text: string) {
   return { summary: lines.slice(0,3).join(' '), keyPoints: lines.slice(0,8) };
 }
 
-export async function aiCoachPrompt(prompt: string) {
+export async function aiCoachPrompt(prompt: string, evidenceFocus?: string[]) {
   if (!prompt.trim()) return '';
-  // Mocked structured coaching response
-  return `Goal: ${prompt}\nStep 1: Clarify the specific outcome you want.\nStep 2: Gather supporting evidence (documents, dates).\nStep 3: Draft a concise request using plain language.\nBarrier Check: Identify any access barriers and accommodations needed.\nConfidence Tip: Focus on functional limits not just diagnosis.`;
+  const evidenceBlock = evidenceFocus && evidenceFocus.length
+    ? `\nSuggested Evidence Focus: ${evidenceFocus.slice(0,6).join('; ')}`
+    : '';
+  return `Goal: ${prompt}\nStep 1: Clarify the specific outcome you want.\nStep 2: Gather supporting evidence (documents, dates).${evidenceBlock}\nStep 3: Draft a concise request using plain language.\nBarrier Check: Identify any access barriers and accommodations needed.\nConfidence Tip: Focus on functional limits not just diagnosis.`;
 }
 
 export type CollectiveInterest = { id: string; title: string; description?: string; supporters: number; personal?: boolean };

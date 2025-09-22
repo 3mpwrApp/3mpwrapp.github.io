@@ -1,14 +1,15 @@
 import React from "react";
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
+import AIDisclaimer from '../../../components/AIDisclaimer';
+import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
-import { useAppPalette } from "../../../theme/usePalette";
-import AIDisclaimer from '../../../components/AIDisclaimer';
 import { useTranslation } from '../../../i18n';
+import { useAppPalette } from "../../../theme/usePalette";
 
 const LESSON_IDS = ["conf-1","speak-1","assert-1","docs-1"] as const;
 type LessonId = typeof LESSON_IDS[number];
@@ -45,6 +46,7 @@ export default function SelfAdvocacyCoach() {
         {t('advocacy.tools.self_coach')}
       </Text>
       <Text style={s.subtitle}>{t('advocacy.coach.subtitle')}</Text>
+  <JurisdictionPanel />
       <View
         style={{
           flexDirection: "row",
@@ -82,17 +84,26 @@ export default function SelfAdvocacyCoach() {
   );
 }
 
+import { logActivity } from '../../../services/activity';
 import { aiCoachPrompt } from '../../../services/aiAdvocacy';
+import { useJurisdiction } from '../../../store/jurisdiction';
+import { parseCoachOutput } from '../../../utils/coachParser';
 
 function PracticeCoach() {
   const { t } = useTranslation();
+  const { data: jurisdiction } = useJurisdiction();
   const [prompt, setPrompt] = React.useState(t('advocacy.coach.defaultPrompt'));
   const [output, setOutput] = React.useState('');
+  const parsed = React.useMemo(()=> output ? parseCoachOutput(output) : null, [output]);
   const [loading, setLoading] = React.useState(false);
   const run = async () => {
     if (!prompt.trim()) return;
     setLoading(true);
-    try { setOutput(await aiCoachPrompt(prompt)); } catch { Alert.alert(t('common.errorTitle','Error'), t('advocacy.coach.generateError','Could not generate practice steps.')); } finally { setLoading(false); }
+    try {
+      const res = await aiCoachPrompt(prompt, jurisdiction?.evidenceFocus);
+      setOutput(res);
+      try { await logActivity({ type:'coach.generate', payload:{ promptLength: prompt.length, jurisdiction: jurisdiction?.code, steps: res.split(/\n+/).length }, summaryKey:'coach.generate' }); } catch {}
+    } catch { Alert.alert(t('common.errorTitle','Error'), t('advocacy.coach.generateError','Could not generate practice steps.')); } finally { setLoading(false); }
   };
   return (
     <View style={{ marginTop:16 }}>
@@ -102,9 +113,16 @@ function PracticeCoach() {
       <Pressable onPress={run} style={{ backgroundColor:'#333', paddingVertical:10, borderRadius:8, alignItems:'center', marginTop:8 }} accessibilityRole="button" accessibilityLabel={t('advocacy.coach.practiceGenerateLabel','Generate practice coaching')} disabled={loading}>
         <Text style={{ color:'#fff', fontWeight:'700' }}>{loading ? t('advocacy.coach.generating') : t('advocacy.coach.generate')}</Text>
       </Pressable>
-      {!!output && (
+      {!!parsed && (
         <View style={{ marginTop:10 }} accessibilityRole="summary" accessibilityLabel={t('advocacy.coach.practiceOutputLabel','Practice coaching output')}>
-          {output.split(/\n+/).map((ln,i)=>(<Text key={i} style={{ color:'#444', marginBottom:4 }}>• {ln}</Text>))}
+          {parsed.steps.map(step => (
+            <View key={step.order} style={{ marginBottom:6 }}>
+              <Text style={{ color:'#222', fontWeight:'600' }}>{step.order}. {step.text}</Text>
+              {step.tips?.map(tip => (
+                <Text key={tip} style={{ color:'#555', fontSize:12 }}>• {tip}</Text>
+              ))}
+            </View>
+          ))}
         </View>
       )}
     </View>

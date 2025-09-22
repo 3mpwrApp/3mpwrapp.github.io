@@ -1,0 +1,54 @@
+{
+  "code": "ON",
+  "name": "Ontario",
+  "workplaceInjury": {
+    "name": "Workplace Safety and Insurance Board (WSIB)",
+    "initialClaimForm": "Form 6 (Worker's Report)",
+    "appealLevels": [
+      {"name": "Internal Review / Objection", "body": "WSIB", "notes": "Written objection within 6 months for many decisions."},
+      {"name": "Appeal Services Division", "body": "WSIB", "notes": "Appeal readiness form required."},
+      {"name": "Appeals Tribunal", "body": "WSIAT", "notes": "Independent final level for most issues."}
+    ],
+    "links": [
+      {"label": "WSIB Worker Form", "url": "https://www.wsib.ca/en"}
+    ],
+    "notes": "Deadlines can vary; extend for occupational disease discovery dates."
+  },
+  "humanRights": {
+    "name": "Ontario Human Rights Tribunal",
+    "complaintDeadlineMonths": 12,
+    "url": "https://tribunalsontario.ca/hrto/"
+  },
+  "benefitPrograms": [
+    {
+      "code": "ODSP",
+      "name": "Ontario Disability Support Program",
+      "administeringBody": "Ministry of Children, Community and Social Services",
+      "description": "Income and employment supports for persons with substantial disability impacts.",
+      "evidenceTips": ["Medical forms with functional impact", "Medication and treatment history", "ADL limitations"],
+      "links": [
+        {"label": "ODSP Overview", "url": "https://www.ontario.ca/page/ontario-disability-support-program"}
+      ]
+    },
+    {
+      "code": "WSIB-RTW",
+      "name": "WSIB Return to Work",
+      "administeringBody": "WSIB",
+      "description": "Return-to-work and work transition services for injured workers.",
+      "evidenceTips": ["Functional abilities form", "Accommodation attempts", "Graduated RTW plan"],
+      "links": [
+        {"label": "RTW Info", "url": "https://www.wsib.ca/en/returning-work"}
+      ]
+    }
+  ],
+  "accommodationGuidance": [
+    "Cooperate in accommodation process",
+    "Provide medical info focused on limitations (not diagnoses)",
+    "Document offers and responses"
+  ],
+  "evidenceFocus": ["Functional abilities forms", "Treating provider notes", "RTW/accommodation correspondence"],
+  "limitationNotes": [
+    "Most WSIB objections 6 months; human rights 12 months from last incident."
+  ],
+  "updated": "2025-09-22"
+}

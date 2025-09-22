@@ -26,6 +26,8 @@ export interface Resource {
   scope?: "canada" | "province";
   // Province code when scope === "province"
   province?: ProvinceCode;
+  // Optional explicit jurisdiction codes this resource applies to (e.g., ["FED","ON"]).
+  jurisdictions?: string[];
   // High-level category for filtering/grouping in UI
   category?: ResourceCategory;
 }

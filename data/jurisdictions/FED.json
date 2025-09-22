@@ -1,0 +1,58 @@
+{
+  "code": "FED",
+  "name": "Canada (Federal)",
+  "workplaceInjury": {
+    "name": "(Provincial boards handle workplace injury)",
+    "notes": "Workplace injury compensation is administered provincially; federal layer relevant mainly to federally regulated employers via the provincial boards in most cases."
+  },
+  "humanRights": {
+    "name": "Canadian Human Rights Commission",
+    "complaintDeadlineMonths": 12,
+    "url": "https://www.chrc-ccdp.gc.ca/",
+    "notes": "Applies to federally regulated sectors (banks, telecom, interprovincial transport)."
+  },
+  "benefitPrograms": [
+    {
+      "code": "CPP-D",
+      "name": "Canada Pension Plan Disability",
+      "administeringBody": "Service Canada",
+      "description": "Income replacement for contributors with severe and prolonged disability preventing any substantially gainful work.",
+      "keyForms": ["ISP-1151", "Medical report (ISP-2519)"] ,
+      "evidenceTips": ["Longitudinal medical records", "Functional capacity details", "Prognosis statements"],
+      "appealPath": ["Reconsideration", "Social Security Tribunal (General)", "SST Appeal Division"],
+      "links": [
+        {"label": "Program Overview", "url": "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-disability-benefit.html"}
+      ]
+    },
+    {
+      "code": "EI-SICK",
+      "name": "Employment Insurance Sickness Benefits",
+      "administeringBody": "Service Canada",
+      "description": "Short-term income support for insured workers temporarily unable to work due to illness or injury.",
+      "evidenceTips": ["Medical certificate", "Employer ROE", "Functional limitations"],
+      "appealPath": ["Request for Reconsideration", "Social Security Tribunal"],
+      "links": [
+        {"label": "EI Sickness", "url": "https://www.canada.ca/en/services/benefits/ei/ei-sickness.html"}
+      ]
+    },
+    {
+      "code": "ACA-COMP",
+      "name": "Accessible Canada Act Complaint",
+      "administeringBody": "Accessibility Commissioner",
+      "description": "Complaint process for barriers under the Accessible Canada Act (federal entities).",
+      "links": [
+        {"label": "ACA Info", "url": "https://accessible.canada.ca/"}
+      ]
+    }
+  ],
+  "accommodationGuidance": [
+    "Duty to accommodate to point of undue hardship",
+    "Interactive dialogue required",
+    "Consider modified duties + gradual return"
+  ],
+  "evidenceFocus": ["Functional limitations", "Prognosis & restrictions", "Accommodation history"],
+  "limitationNotes": [
+    "Human rights complaints generally within 12 months of incident (federal sector)."
+  ],
+  "updated": "2025-09-22"
+}

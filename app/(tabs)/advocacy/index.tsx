@@ -2,6 +2,7 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -42,7 +43,8 @@ export default function AdvocacyHub() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Advocacy Hub</Text>
-      <Text style={s.subtitle}>Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.</Text>
+  <Text style={s.subtitle}>Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.</Text>
+  <JurisdictionPanel />
       {FEATURES.map(f => {
         const title = t(featureKeyMap[f.key]);
         return (
