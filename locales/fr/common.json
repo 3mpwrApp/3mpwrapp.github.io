@@ -1049,7 +1049,8 @@
     "answerPlaceholder": "[T] Answer",
     "add": "[T] Add",
     "addLabel": "[T] Add FAQ",
-    "empty": "[T] No FAQs found"
+    "empty": "[T] No FAQs found",
+    "suggestions": "[T] Suggestions"
   },
   "voiceHelp": {
     "title": "[T] Voice Help",

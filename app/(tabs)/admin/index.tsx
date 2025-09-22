@@ -67,7 +67,6 @@ export default function AdminPanel() {
     (params?.tab as ReviewKind) || "pending",
   );
   const [reviewItems, setReviewItems] = React.useState<ReviewItem[]>([]);
-  const [activityEvents, setActivityEvents] = React.useState<any[]>([]);
   const [activityStats, setActivityStats] = React.useState<{ total:number; since24h:number; byType: Record<string,number>; }>({ total:0, since24h:0, byType:{} });
 
   const [broadcastTitle, setBroadcastTitle] = React.useState('');
@@ -86,7 +85,6 @@ export default function AdminPanel() {
   // Activity subscription
   React.useEffect(()=> {
     const unsub = subscribeToActivityFeed(evts => {
-      setActivityEvents(evts);
       setActivityStats(computeActivityStats(evts));
     }, { limit: 200 });
     return () => unsub();

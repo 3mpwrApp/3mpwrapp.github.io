@@ -1024,7 +1024,8 @@
     "answerPlaceholder": "Answer",
     "add": "Add",
     "addLabel": "Add FAQ",
-    "empty": "No FAQs found"
+    "empty": "No FAQs found",
+    "suggestions": "Suggestions"
   },
   "voiceHelp": {
     "title": "Voice Help",

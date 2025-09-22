@@ -33,7 +33,6 @@ export default function FaqsScreen() {
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState("");
   const [items, setItems] = React.useState(defaultFaqs);
-  const [remoteReady, setRemoteReady] = React.useState(false);
   const [qText, setQText] = React.useState("");
   const [aText, setAText] = React.useState("");
   React.useEffect(() => {
@@ -50,10 +49,10 @@ export default function FaqsScreen() {
               const localOnly = prev.filter(p => p.id.startsWith('faq-') && !remote.find(r => r.id === p.id));
               return [...localOnly, ...remote.length ? remote : defaultFaqs];
             });
-            setRemoteReady(true);
+            // remote ready
         });
       } catch {
-        setRemoteReady(true);
+  // remote fallback ready
       }
     })();
     return () => { if (unsub) unsub(); };
