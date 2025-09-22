@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 import SettingsLink from "../../../components/SettingsLink";
+import { useAuth } from "../../../context/AuthContext";
 import { campaigns } from "../../../data/campaigns";
 import { logEvent } from "../../../services/analytics";
 import { fsJoinCampaign, fsLeaveCampaign } from "../../../services/firestore";
@@ -19,7 +20,6 @@ import {
 import { useFavorites } from "../../../store/favorites";
 import { colors, type Palette } from "../../../theme/colors";
 import { useTextScale } from "../../../theme/typography";
-import { useAuth } from "../../../context/AuthContext";
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
