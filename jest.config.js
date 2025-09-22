@@ -11,7 +11,7 @@ module.exports = {
   ],
   moduleFileExtensions: ['ts','tsx','js','jsx','json'],
   roots: ['<rootDir>'],
-  testMatch: ['**/__tests__/**/*.test.tsx'],
+  testMatch: ['**/__tests__/**/*.test.tsx','**/__tests__/**/*.test.ts'],
   collectCoverageFrom: ['i18n/**/*.{ts,tsx}','scripts/i18n-*.js'],
   coveragePathIgnorePatterns: ['/node_modules/'],
   setupFiles: ['<rootDir>/jest.setup.js']
