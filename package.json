@@ -41,6 +41,8 @@
     "i18n:export:open": "I18N_OPEN=1 node ./scripts/i18n-export-untranslated.js",
     "i18n:plural": "node ./scripts/i18n-plural-check.js",
     "i18n:report": "node ./scripts/i18n-report-missing.js",
+  "i18n:seed": "node ./scripts/i18n-seed-missing.js",
+  "i18n:propagate": "node ./scripts/i18n-propagate-placeholders.js",
     "i18n:coverage": "node ./scripts/i18n-coverage.js",
     "i18n:check": "node ./scripts/check-i18n-keys.mjs",
     "i18n:test": "npm run i18n:diff && npm run i18n:plural && npm run i18n:threshold && npm run i18n:assert",

@@ -9,7 +9,8 @@
     "events": "Eventos",
     "wellness": "Bienestar",
     "profile": "Perfil",
-    "saved": "Guardado"
+    "saved": "Guardado",
+    "settings": "[T] nav.settings"
   },
   "header": {
     "favorites": "Favs",
@@ -48,7 +49,9 @@
       "captions": "Subtítulos preferidos",
       "captionsDesc": "Muestra subtítulos cuando estén disponibles",
       "voiceMode": "Modo de voz",
-      "voiceModeDesc": "Habilita navegación por voz (beta)"
+      "voiceModeDesc": "Habilita navegación por voz (beta)",
+      "dyslexia": "[T] settings.accessibility.dyslexia",
+      "dyslexiaDesc": "[T] settings.accessibility.dyslexiaDesc"
     },
     "bookmarks": {
       "title": "Marcadores",
@@ -96,7 +99,9 @@
     "emergency": {
       "title": "Tarjeta de emergencia",
       "subtitle": "Acceso rápido a información importante",
-      "description": "Cree una tarjeta de emergencia digital con su información clave para acceso rápido cuando sea necesario"
+      "description": "Cree una tarjeta de emergencia digital con su información clave para acceso rápido cuando sea necesario",
+      "openLabel": "[T] settings.emergency.openLabel",
+      "manage": "[T] settings.emergency.manage"
     },
     "privacy": {
       "title": "Privacidad y seguridad",
@@ -130,7 +135,19 @@
       "deleteFailed": "Error al eliminar",
       "passwordPlaceholder": "Contraseña",
       "reauthFailed": "Fallo en la re-autenticación",
-      "confirmDelete": "Confirmar"
+      "confirmDelete": "Confirmar",
+      "updatedName": "[T] settings.account.updatedName",
+      "photoUpdated": "[T] settings.account.photoUpdated",
+      "guestNotice": "[T] settings.account.guestNotice",
+      "createAccount": "[T] settings.account.createAccount",
+      "photo": "[T] settings.account.photo",
+      "deleteNoPassword": "[T] settings.account.deleteNoPassword"
+    },
+    "emergencyWallet": {
+      "title": "[T] settings.emergencyWallet.title",
+      "subtitle": "[T] settings.emergencyWallet.subtitle",
+      "hide": "[T] settings.emergencyWallet.hide",
+      "show": "[T] settings.emergencyWallet.show"
     }
   },
   "admin": {
@@ -224,7 +241,8 @@
     "achievements": {
       "subtitle": "Earn badges as you build healthy routines.",
       "title": "Achievements"
-    }
+    },
+    "intro": "[T] wellness.intro"
   },
   "resources": {
     "tools": {
@@ -246,7 +264,8 @@
       "work_financial": "Work & Financial",
       "tools_downloads": "Tools & Downloads",
       "emergency_crisis": "Emergency & Crisis"
-    }
+    },
+    "search": "[T] resources.search"
   },
   "templates": {
     "voice": {
@@ -276,7 +295,12 @@
       "pdfUnavailable": "PDF no disponible",
       "pdfUnavailableBody": "Instale expo-print en una compilación de desarrollo.",
       "exportFailed": "Exportación fallida",
-      "exportFailedBody": "No se pudo crear el archivo .doc"
+      "exportFailedBody": "No se pudo crear el archivo .doc",
+      "recording": "[T] templates.voice.recording",
+      "recordingStopped": "[T] templates.voice.recordingStopped",
+      "who": "[T] templates.voice.who",
+      "summary": "[T] templates.voice.summary",
+      "audio": "[T] templates.voice.audio"
     },
     "timeline": {
       "title": "Cronología del caso",
@@ -292,7 +316,27 @@
       "entriesTitle": "Entradas de la cronología",
       "entryAdded": "Entrada agregada",
       "copied": "Copiado",
-      "copiedBody": "Cronología copiada"
+      "copiedBody": "Cronología copiada",
+      "missingTitle": "[T] templates.timeline.missingTitle",
+      "missingTitleBody": "[T] templates.timeline.missingTitleBody",
+      "copyFailed": "[T] templates.timeline.copyFailed",
+      "copyFailedBody": "[T] templates.timeline.copyFailedBody",
+      "shareTitle": "[T] templates.timeline.shareTitle",
+      "exportFailed": "[T] templates.timeline.exportFailed",
+      "exportFailedBody": "[T] templates.timeline.exportFailedBody",
+      "resetTitle": "[T] templates.timeline.resetTitle",
+      "resetBody": "[T] templates.timeline.resetBody",
+      "screenLabel": "[T] templates.timeline.screenLabel",
+      "toggleInfo": "[T] templates.timeline.toggleInfo",
+      "resetTimeline": "[T] templates.timeline.resetTimeline",
+      "subtitle": "[T] templates.timeline.subtitle",
+      "openDeadlines": "[T] templates.timeline.openDeadlines",
+      "addDocuments": "[T] templates.timeline.addDocuments",
+      "caseDocuments": "[T] templates.timeline.caseDocuments",
+      "addedToLocker": "[T] templates.timeline.addedToLocker",
+      "addFailed": "[T] templates.timeline.addFailed",
+      "addFailedBody": "[T] templates.timeline.addFailedBody",
+      "addDocsBtn": "[T] templates.timeline.addDocsBtn"
     },
     "evidenceLocker": {
       "title": "Casillero de Evidencias",
@@ -334,7 +378,12 @@
       "exportError": "Error al exportar",
       "exportErrorBody": "No se pudo crear exportación.",
       "exportReady": "Export listo",
-      "summaryRegion": "Región resumen evidencias"
+      "summaryRegion": "Región resumen evidencias",
+      "queueTitle": "[T] templates.evidenceLocker.queueTitle",
+      "queueScreenLabel": "[T] templates.evidenceLocker.queueScreenLabel",
+      "processing": "[T] templates.evidenceLocker.processing",
+      "queueSubtitle": "[T] templates.evidenceLocker.queueSubtitle",
+      "emptyQueue": "[T] templates.evidenceLocker.emptyQueue"
     },
     "gallery": {
       "title": "Galería de plantillas",
@@ -565,7 +614,43 @@
       "loadFailed": "Error de carga",
       "loadFailedBody": "No se pudieron cargar plazos.",
       "importedFromICS": "Añadidos {{count}} desde ICS",
-      "importFailedBodyList": "No se pudo importar archivo ICS."
+      "importFailedBodyList": "No se pudo importar archivo ICS.",
+      "listTitle": "[T] templates.deadlines.listTitle",
+      "reloadShort": "[T] templates.deadlines.reloadShort",
+      "exportAllICS": "[T] templates.deadlines.exportAllICS",
+      "exportAllCSV": "[T] templates.deadlines.exportAllCSV",
+      "bulkMarkedDone": "[T] templates.deadlines.bulkMarkedDone",
+      "markAllDone": "[T] templates.deadlines.markAllDone",
+      "bulkMarkedUndone": "[T] templates.deadlines.bulkMarkedUndone",
+      "markAllNotDone": "[T] templates.deadlines.markAllNotDone",
+      "followUp": "[T] templates.deadlines.followUp",
+      "weekShort": "[T] templates.deadlines.weekShort",
+      "addWeekly": "[T] templates.deadlines.addWeekly",
+      "monthShort": "[T] templates.deadlines.monthShort",
+      "addMonthly": "[T] templates.deadlines.addMonthly",
+      "empty": "[T] templates.deadlines.empty",
+      "updated": "[T] templates.deadlines.updated",
+      "snoozedDeadline": "[T] templates.deadlines.snoozedDeadline",
+      "reminder24h": "[T] templates.deadlines.reminder24h",
+      "unableSchedule": "[T] templates.deadlines.unableSchedule",
+      "snooze24h": "[T] templates.deadlines.snooze24h",
+      "reminder7d": "[T] templates.deadlines.reminder7d",
+      "snooze7d": "[T] templates.deadlines.snooze7d",
+      "markedUndone": "[T] templates.deadlines.markedUndone",
+      "markedDone": "[T] templates.deadlines.markedDone",
+      "eventAdded": "[T] templates.deadlines.eventAdded",
+      "eventNotAdded": "[T] templates.deadlines.eventNotAdded",
+      "eventAddedBody": "[T] templates.deadlines.eventAddedBody",
+      "eventNotAddedBody": "[T] templates.deadlines.eventNotAddedBody",
+      "saved": "[T] templates.deadlines.saved",
+      "icsSaved": "[T] templates.deadlines.icsSaved",
+      "exportFailedBody": "[T] templates.deadlines.exportFailedBody",
+      "icsBtn": "[T] templates.deadlines.icsBtn",
+      "deleted": "[T] templates.deadlines.deleted",
+      "prevMonth": "[T] templates.deadlines.prevMonth",
+      "nextMonth": "[T] templates.deadlines.nextMonth",
+      "dayCell": "[T] templates.deadlines.dayCell",
+      "emptyDay": "[T] templates.deadlines.emptyDay"
     }
   },
   "test": {
@@ -691,7 +776,13 @@
     "infoLine3": "Data stays local; no network calls are made.",
     "title": "Justice-as-a-Service",
     "snapshotRegion": "Generated snapshot",
-    "generateBtnLabel": "Generate snapshot"
+    "generateBtnLabel": "Generate snapshot",
+    "hide": "[T] justiceService.hide",
+    "show": "[T] justiceService.show",
+    "generateHint": "[T] justiceService.generateHint",
+    "copyLabel": "[T] justiceService.copyLabel",
+    "shareLabel": "[T] justiceService.shareLabel",
+    "resetLabel": "[T] justiceService.resetLabel"
   },
   "rightsChecker": {
     "title": "Automated Rights Checker",
@@ -736,7 +827,10 @@
     "infoLine3": "This tool does not give legal advice; consult official sources.",
     "choiceLabel": "{{label}} answer option",
     "yourSummary": "Your summary",
-    "summaryRegion": "Rights summary"
+    "summaryRegion": "Rights summary",
+    "resetAnnounce": "[T] rightsChecker.resetAnnounce",
+    "hide": "[T] rightsChecker.hide",
+    "show": "[T] rightsChecker.show"
   },
   "rightsExplainer": {
     "screenLabel": "Rights Explainer screen",
@@ -774,7 +868,9 @@
     "shareErrorBody": "Could not share rights explainer file.",
     "provinceChip": "Province {{code}}",
     "langChip": "Language {{code}}",
-    "regionChip": "Region {{code}}"
+    "regionChip": "Region {{code}}",
+    "hide": "[T] rightsExplainer.hide",
+    "show": "[T] rightsExplainer.show"
   },
   "common": {
     "hide": "Hide",
@@ -790,7 +886,27 @@
     "deleteSelected": "Delete Selected",
     "delete": "Delete",
     "cancel": "Cancel",
-    "filter": "filtro rápido"
+    "filter": "filtro rápido",
+    "errorTitle": "[T] common.errorTitle",
+    "ok": "[T] common.ok",
+    "hidden": "[T] common.hidden",
+    "shown": "[T] common.shown",
+    "copyAll": "[T] common.copyAll",
+    "share": "[T] common.share",
+    "exportDoc": "[T] common.exportDoc",
+    "reset": "[T] common.reset",
+    "loading": "[T] common.loading",
+    "edit": "[T] common.edit",
+    "previewImage": "[T] common.previewImage",
+    "closePreview": "[T] common.closePreview",
+    "preview": "[T] common.preview",
+    "copied": "[T] common.copied",
+    "copy": "[T] common.copy",
+    "pdf": "[T] common.pdf",
+    "doc": "[T] common.doc",
+    "success": "[T] common.success",
+    "error": "[T] common.error",
+    "working": "[T] common.working"
   },
   "masterIndex": {
     "title": "Índice maestro de investigación",
@@ -878,5 +994,150 @@
       "gcLegalCapacity": "Capacidad jurídica (CG 1)",
       "gcAccessibility": "Accesibilidad (CG 2)"
     }
+  },
+  "about": {
+    "title": "[T] About & Contact",
+    "intro1": "[T] Empowr supports injured workers, the disability community, advocates and allies with tools, resources, and updates.",
+    "intro2": "[T] Vision: a full lifecycle empowerment hub - starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.",
+    "intro3": "[T] Questions, suggestions, or requests? Reach out anytime.",
+    "emailLabel": "[T] Email",
+    "subjectPlaceholder": "[T] Subject",
+    "messagePlaceholder": "[T] Your message",
+    "send": "[T] Send",
+    "sendLabel": "[T] Send email",
+    "emailNotConfiguredTitle": "[T] Email not configured",
+    "emailNotConfiguredBody": "[T] Please email {{email}}",
+    "validationMissing": "[T] Subject and message required"
+  },
+  "faqs": {
+    "title": "[T] FAQs",
+    "searchPlaceholder": "[T] Search FAQs",
+    "searchLabel": "[T] Search FAQs",
+    "questionPlaceholder": "[T] Question",
+    "answerPlaceholder": "[T] Answer",
+    "add": "[T] Add",
+    "addLabel": "[T] Add FAQ",
+    "empty": "[T] No FAQs found"
+  },
+  "voiceHelp": {
+    "title": "[T] Voice Help",
+    "intro": "[T] Press the mic and say a command:",
+    "commands": {
+      "openResources": "[T] Open resources",
+      "openRatings": "[T] Open ratings",
+      "openAdvocacy": "[T] Open advocacy",
+      "openCommunity": "[T] Open community",
+      "openSettings": "[T] Open settings",
+      "openAdminPending": "[T] Open admin pending / approved / trash",
+      "openRightsExplainer": "[T] Open rights explainer",
+      "openDoctorPrep": "[T] Open doctor visit prep",
+      "openA11yLog": "[T] Open accessibility log",
+      "openRehabTracker": "[T] Open rehab tracker",
+      "openWorldMap": "[T] Open world map",
+      "openMediaStudio": "[T] Open media studio",
+      "goBack": "[T] Back / Go back"
+    }
+  },
+  "savedScreen": {
+    "subtitle": "[T] Organize and access your bookmarked content",
+    "searchPlaceholder": "[T] Search saved items...",
+    "searchLabel": "[T] Search saved items",
+    "searchHint": "[T] Search through your saved podcasts, resources, and campaigns",
+    "clearSearch": "[T] Clear search",
+    "filters": {
+      "all": "[T] All",
+      "podcast": "[T] Podcasts",
+      "resource": "[T] Resources",
+      "campaign": "[T] Campaigns"
+    },
+    "view": {
+      "list": "[T] List view",
+      "grid": "[T] Grid view"
+    },
+    "resultsCount": "[T] {{count}} result{{plural}} found",
+    "emptyNoneTitle": "[T] No saved items yet",
+    "emptyNoneBody": "[T] Start saving podcasts, resources, and campaigns to access them here",
+    "emptySearchTitle": "[T] No results found",
+    "emptySearchBody": "[T] Try adjusting your search or filter criteria",
+    "a11y": {
+      "screenLabel": "[T] savedScreen.a11y.screenLabel"
+    },
+    "searchA11y": {
+      "label": "[T] savedScreen.searchA11y.label",
+      "hint": "[T] savedScreen.searchA11y.hint",
+      "clear": "[T] savedScreen.searchA11y.clear"
+    }
+  },
+  "appealCoach": {
+    "newResponse": "[T] appealCoach.newResponse",
+    "transcriptTitle": "[T] appealCoach.transcriptTitle",
+    "reset": "[T] appealCoach.reset",
+    "screenLabel": "[T] appealCoach.screenLabel",
+    "howToUse": "[T] appealCoach.howToUse",
+    "howToUseTitle": "[T] appealCoach.howToUseTitle",
+    "instructions": "[T] appealCoach.instructions",
+    "share": "[T] appealCoach.share",
+    "shareHint": "[T] appealCoach.shareHint",
+    "shareBtn": "[T] appealCoach.shareBtn",
+    "resetLabel": "[T] appealCoach.resetLabel",
+    "resetHint": "[T] appealCoach.resetHint",
+    "resetBtn": "[T] appealCoach.resetBtn",
+    "skipToInput": "[T] appealCoach.skipToInput",
+    "skipToInputHint": "[T] appealCoach.skipToInputHint",
+    "skip": "[T] appealCoach.skip",
+    "title": "[T] appealCoach.title",
+    "you": "[T] appealCoach.you",
+    "coach": "[T] appealCoach.coach",
+    "messages": "[T] appealCoach.messages",
+    "copied": "[T] appealCoach.copied",
+    "lastResponseCopied": "[T] appealCoach.lastResponseCopied",
+    "clipboardMissingTitle": "[T] appealCoach.clipboardMissingTitle",
+    "clipboardMissingMsg": "[T] appealCoach.clipboardMissingMsg",
+    "copyLast": "[T] appealCoach.copyLast",
+    "copyLastHint": "[T] appealCoach.copyLastHint",
+    "copyLastBtn": "[T] appealCoach.copyLastBtn",
+    "conversationCopied": "[T] appealCoach.conversationCopied",
+    "copyConversation": "[T] appealCoach.copyConversation",
+    "copyConversationHint": "[T] appealCoach.copyConversationHint",
+    "copyChatBtn": "[T] appealCoach.copyChatBtn",
+    "sendBtn": "[T] appealCoach.sendBtn"
+  },
+  "bodyMechanics": {
+    "tipWrists": "[T] bodyMechanics.tipWrists",
+    "tipHinge": "[T] bodyMechanics.tipHinge",
+    "tipPacing": "[T] bodyMechanics.tipPacing",
+    "analysisComplete": "[T] bodyMechanics.analysisComplete",
+    "analysisFailTitle": "[T] bodyMechanics.analysisFailTitle",
+    "analysisFailMsg": "[T] bodyMechanics.analysisFailMsg",
+    "shareTitle": "[T] bodyMechanics.shareTitle",
+    "shareFailTitle": "[T] bodyMechanics.shareFailTitle",
+    "shareFailMsg": "[T] bodyMechanics.shareFailMsg",
+    "copiedTitle": "[T] bodyMechanics.copiedTitle",
+    "copiedMsg": "[T] bodyMechanics.copiedMsg",
+    "clipboardFailTitle": "[T] bodyMechanics.clipboardFailTitle",
+    "clipboardFailMsg": "[T] bodyMechanics.clipboardFailMsg",
+    "screenLabel": "[T] bodyMechanics.screenLabel",
+    "howToUse": "[T] bodyMechanics.howToUse",
+    "howToUseTitle": "[T] bodyMechanics.howToUseTitle",
+    "instructions": "[T] bodyMechanics.instructions",
+    "export": "[T] bodyMechanics.export",
+    "exportHint": "[T] bodyMechanics.exportHint",
+    "exportBtn": "[T] bodyMechanics.exportBtn",
+    "copy": "[T] bodyMechanics.copy",
+    "copyHint": "[T] bodyMechanics.copyHint",
+    "copyBtn": "[T] bodyMechanics.copyBtn",
+    "reset": "[T] bodyMechanics.reset",
+    "resetHint": "[T] bodyMechanics.resetHint",
+    "resetBtn": "[T] bodyMechanics.resetBtn",
+    "subtitle": "[T] bodyMechanics.subtitle",
+    "pickFailTitle": "[T] bodyMechanics.pickFailTitle",
+    "pickFailMsg": "[T] bodyMechanics.pickFailMsg",
+    "pick": "[T] bodyMechanics.pick",
+    "pickHint": "[T] bodyMechanics.pickHint",
+    "pickBtn": "[T] bodyMechanics.pickBtn",
+    "selectedLabel": "[T] bodyMechanics.selectedLabel",
+    "analyzing": "[T] bodyMechanics.analyzing",
+    "suggestions": "[T] bodyMechanics.suggestions",
+    "noSuggestionsYet": "[T] bodyMechanics.noSuggestionsYet"
   }
 }

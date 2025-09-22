@@ -26,7 +26,7 @@ function get(obj: any, path: string, fallback: string) {
 
 type I18nContextType = {
   lang: Lang;
-  t: (key: string, fallback?: string) => string;
+  t: (key: string, fallback?: string, vars?: Record<string, string | number>) => string;
   tCount: (baseKey: string, count: number, fallbackBase?: string) => string;
   setLanguage: (lang: Lang) => void;
   isRTL: boolean;
@@ -62,8 +62,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const showBadge = !!process.env.EXPO_PUBLIC_I18N_BADGE;
   const logMissing = !!process.env.EXPO_PUBLIC_I18N_LOG_MISSING;
   const TAG = "[T]";
+  const interpolate = (template: string, vars?: Record<string, string | number>) =>
+    vars ? template.replace(/{{(\w+)}}/g, (_, k) => String(vars[k] ?? '')) : template;
+
   const t = React.useCallback(
-    (key: string, fallback: string = key) => {
+    (key: string, fallback: string = key, vars?: Record<string, string | number>) => {
       const dict = dictionaries[lang] ?? dictionaries.en;
       let v = get(dict, key, fallback);
       if (typeof v !== "string") {
@@ -76,14 +79,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       }
       const tagged = v.startsWith(TAG);
       if (tagged) v = v.slice(TAG.length);
-      if (tagged && showBadge) return `${v} ◀`;
-      return v;
+      if (tagged && showBadge) return interpolate(`${v} ◀`, vars);
+      return interpolate(v, vars);
     },
     [lang, showBadge, logMissing],
   );
-
-  const interpolate = (template: string, vars: Record<string, string | number>) =>
-    template.replace(/{{(\w+)}}/g, (_, k) => String(vars[k] ?? ""));
 
   const tCount = React.useCallback(
     (baseKey: string, count: number, fallbackBase?: string) => {
