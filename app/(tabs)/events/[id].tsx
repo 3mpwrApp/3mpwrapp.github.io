@@ -121,6 +121,8 @@ export default function EventDetail() {
                   Alert.alert('Too Soon', 'Event is starting too soon for a reminder.');
                 } else if (res.reason === 'invalid-date') {
                   Alert.alert('Invalid Date', 'Cannot parse event date.');
+                } else if (res.reason === 'no-permission') {
+                  Alert.alert('Permission Needed', 'Enable notification permissions in system settings to schedule reminders.');
                 } else {
                   Alert.alert('Failed', 'Unable to schedule reminder.');
                 }

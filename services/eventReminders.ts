@@ -38,6 +38,8 @@ export async function scheduleForEvent(evt: Event, minutesBefore = 60) {
     // require at least 2 minutes lead
     return { ok:false, reason:'too-soon' } as const;
   }
+  const allowed = await Notifier.ensureNotificationPermission?.();
+  if (!allowed) return { ok:false, reason:'no-permission' } as const;
   const notifId = await Notifier.scheduleAt(trigger, evt.title, evt.description || '');
   if (!notifId) return { ok:false, reason:'schedule-failed' } as const;
   try { await AsyncStorage.setItem(KEY_PREFIX + evt.id, JSON.stringify({ at: trigger.toISOString(), notifId })); } catch {}

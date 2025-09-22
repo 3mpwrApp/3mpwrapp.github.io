@@ -6,28 +6,45 @@ try {
   Notifications = require("expo-notifications");
 } catch {}
 
+let _permissionCache: boolean | null = null;
+export async function ensureNotificationPermission() {
+  if (!Notifications) return false;
+  if (_permissionCache != null) return _permissionCache;
+  try {
+    const { status } = await Notifications.getPermissionsAsync();
+    if (status === 'granted') { _permissionCache = true; return true; }
+    const req = await Notifications.requestPermissionsAsync();
+    _permissionCache = req.status === 'granted';
+    return _permissionCache;
+  } catch {
+    _permissionCache = false;
+    return false;
+  }
+}
+
 export async function setupAsync() {
   if (!Notifications) return false;
   try {
-    // Android: ensure default channel exists
     if (Platform.OS === "android") {
       await Notifications.setNotificationChannelAsync("default", {
         name: "Default",
         importance: Notifications.AndroidImportance.MAX,
         vibrationPattern: [0, 250, 250, 250],
-        lockscreenVisibility:
-          Notifications.AndroidNotificationVisibility.PUBLIC,
+        lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
         sound: true,
         enableVibrate: true,
         enableLights: true,
         lightColor: "#ffffff",
       });
     }
-    const { status } = await Notifications.requestPermissionsAsync();
-    return status === "granted";
+    return await ensureNotificationPermission();
   } catch {
     return false;
   }
+}
+
+export function hasNotificationPermissionCached() {
+  return _permissionCache === true;
 }
 
 export async function scheduleLocal(title: string, body: string) {

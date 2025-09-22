@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+# Empowr pre-push quality gate
+
+echo "→ pre-push: typecheck (strict)"
+npm run typecheck:strict || { echo "✗ typecheck failed"; exit 1; }
+
+echo "→ pre-push: tests"
+npm run test:ci || { echo "✗ tests failed"; exit 1; }
+
+echo "→ pre-push: i18n validation"
+npm run i18n:test || { echo "✗ i18n checks failed"; exit 1; }
+
+echo "✓ pre-push checks passed"
