@@ -313,12 +313,13 @@ export default function SavedScreen() {
       {/* Results Count */}
       {searchQuery.trim() && (
         <Text style={styles.resultsCount} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-          {t("savedScreen.resultsCountFound", {
-            count: filteredAndSortedItems.length,
-            defaultValue: "{{count}} result{{count, plural, one {} other {s}}} found"
-          })
-            .replace("{{count}}", String(filteredAndSortedItems.length))
-            .replace("{{count, plural, one {} other {s}}}", filteredAndSortedItems.length === 1 ? "" : "s")}
+          {(() => {
+            const count = filteredAndSortedItems.length;
+            const template = t("savedScreen.resultsCount", "{{count}} result{{plural}} found");
+            return template
+              .replace("{{count}}", String(count))
+              .replace("{{plural}}", count === 1 ? "" : "s");
+          })()}
         </Text>
       )}
 
@@ -327,12 +328,12 @@ export default function SavedScreen() {
         <View style={styles.emptyContainer}>
           <Ionicons name="bookmark-outline" size={64} color={palette.text} style={styles.emptyIcon} />
           <Text style={styles.emptyTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            {searchQuery.trim() ? t("savedScreen.empty.searchTitle", "No results found") : t("savedScreen.empty.title", "No saved items yet")}
+            {searchQuery.trim() ? t("savedScreen.emptySearchTitle", "No results found") : t("savedScreen.emptyNoneTitle", "No saved items yet")}
           </Text>
           <Text style={styles.emptyDescription} maxFontSizeMultiplier={MAX_FONT_SCALE}>
             {searchQuery.trim() 
-              ? t("savedScreen.empty.searchDescription", "Try adjusting your search or filter criteria")
-              : t("savedScreen.empty.description", "Start saving podcasts, resources, and campaigns to access them here")
+              ? t("savedScreen.emptySearchBody", "Try adjusting your search or filter criteria")
+              : t("savedScreen.emptyNoneBody", "Start saving podcasts, resources, and campaigns to access them here")
             }
           </Text>
         </View>

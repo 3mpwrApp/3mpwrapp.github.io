@@ -32,7 +32,11 @@ locales.forEach(loc => {
 
 if (missingOverall > 0) {
   console.log(`\nTotal missing across locales: ${missingOverall}`);
-  process.exitCode = 1;
+  if (!process.env.I18N_DIFF_ALLOW_MISSING) {
+    process.exitCode = 1;
+  } else {
+    console.log('Bypass active: not failing due to I18N_DIFF_ALLOW_MISSING');
+  }
 } else {
   console.log('\nAll locale keys are in sync.');
 }

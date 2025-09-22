@@ -45,9 +45,11 @@ export default function AboutScreen() {
     const url = `mailto:${EMAIL}?${params.toString()}`;
     const supported = await Linking.canOpenURL(url);
     if (!supported) {
+      const bodyTemplate = t("about.emailNotConfiguredBody","Please email {{email}}");
+      const body = bodyTemplate.replace('{{email}}', EMAIL);
       return Alert.alert(
         t("about.emailNotConfiguredTitle","Email not configured"),
-        t("about.emailNotConfiguredBody","Please email {{email}}", { email: EMAIL } as any)
+        body
       );
     }
     await Linking.openURL(url);
@@ -86,7 +88,7 @@ export default function AboutScreen() {
         accessibilityLabel={t("about.messagePlaceholder","Message")}
         multiline
       />
-      {error ? <Text style={[styles.text,{color: palette.danger || '#c00'}]} accessibilityLiveRegion="polite">{error}</Text> : null}
+  {error ? <Text style={[styles.text,{color: palette.error || '#c00'}]} accessibilityLiveRegion="polite">{error}</Text> : null}
       <Pressable
         style={({ pressed }) => [styles.button, pressed && { opacity: 0.9 }]}
         onPress={sendEmail}
