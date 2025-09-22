@@ -19,13 +19,15 @@ import { faqs as defaultFaqs } from "../../data/faqs";
 import { getLocalFaqs, addLocalFaq } from "../../services/localContent";
 import SettingsLink from "../../components/SettingsLink";
 import ContrastToggle from "../../components/ContrastToggle";
+import { useTranslation } from "../../i18n";
 
 export default function FaqsScreen() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("FAQs");
+  const { t } = useTranslation();
+  useAnnounceOnMount(t("faqs.title","FAQs"));
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState("");
   const [items, setItems] = React.useState(defaultFaqs);
@@ -53,7 +55,7 @@ export default function FaqsScreen() {
         accessibilityRole="header"
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        FAQs
+        {t("faqs.title","FAQs")}
       </Text>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
@@ -61,23 +63,23 @@ export default function FaqsScreen() {
         style={styles.input}
         value={query}
         onChangeText={setQuery}
-        placeholder="Search FAQs"
+        placeholder={t("faqs.searchPlaceholder","Search FAQs")}
         placeholderTextColor={palette.text}
-        accessibilityLabel="Search FAQs"
+        accessibilityLabel={t("faqs.searchLabel","Search FAQs")}
       />
       <View style={{ marginBottom: 8 }}>
         <TextInput
           style={styles.input}
           value={qText}
           onChangeText={setQText}
-          placeholder="Question"
+          placeholder={t("faqs.questionPlaceholder","Question")}
           placeholderTextColor={palette.text}
         />
         <TextInput
           style={[styles.input, { minHeight: 80 }]}
           value={aText}
           onChangeText={setAText}
-          placeholder="Answer"
+          placeholder={t("faqs.answerPlaceholder","Answer")}
           placeholderTextColor={palette.text}
           multiline
         />
@@ -95,13 +97,13 @@ export default function FaqsScreen() {
             setAText("");
           }}
           accessibilityRole="button"
-          accessibilityLabel="Add FAQ"
+          accessibilityLabel={t("faqs.addLabel","Add FAQ")}
           style={({ pressed }) => [
             styles.button,
             (!qText.trim() || !aText.trim() || pressed) && { opacity: 0.7 },
           ]}
         >
-          <Text style={styles.buttonText}>Add</Text>
+          <Text style={styles.buttonText}>{t("faqs.add","Add")}</Text>
         </Pressable>
       </View>
       <FlatList
@@ -113,7 +115,7 @@ export default function FaqsScreen() {
             <Text style={styles.a}>{item.a}</Text>
           </View>
         )}
-        ListEmptyComponent={<Text style={styles.a}>No FAQs found</Text>}
+        ListEmptyComponent={<Text style={styles.a}>{t("faqs.empty","No FAQs found")}</Text>}
         contentContainerStyle={{ paddingVertical: 12 }}
       />
     </View>

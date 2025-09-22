@@ -1,7 +1,7 @@
 import type { NetInfoState } from '@react-native-community/netinfo';
 import NetInfo from '@react-native-community/netinfo';
 import React from 'react';
-import type { AccessibilityRole} from 'react-native';
+import type { AccessibilityRole } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../i18n';

@@ -134,8 +134,8 @@ export default function SavedScreen() {
       });
 
       return Object.entries(groupedByType).map(([type, items]) => ({
-        title: type === "podcast" ? "Podcasts" : 
-               type === "resource" ? "Resources" : "Campaigns",
+        title: type === "podcast" ? t("savedScreen.filters.podcast", "Podcasts") : 
+               type === "resource" ? t("savedScreen.filters.resource", "Resources") : t("savedScreen.filters.campaign", "Campaigns"),
         data: items,
       }));
     } else {
@@ -237,7 +237,7 @@ export default function SavedScreen() {
   };
 
   return (
-    <View style={styles.container} accessibilityLabel="Saved items screen" accessible>
+  <View style={styles.container} accessibilityLabel={t("savedScreen.a11y.screenLabel", "Saved items screen")} accessible>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       
@@ -252,7 +252,7 @@ export default function SavedScreen() {
       </Text>
 
       <Text style={styles.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        Organize and access your bookmarked content
+        {t("savedScreen.subtitle", "Organize and access your bookmarked content")}
       </Text>
 
       {/* Search Bar */}
@@ -260,11 +260,11 @@ export default function SavedScreen() {
         <Ionicons name="search" size={20} color={palette.text} style={styles.searchIcon} />
         <TextInput
           style={styles.searchInput}
-          placeholder="Search saved items..."
+          placeholder={t("savedScreen.searchPlaceholder", "Search saved items...")}
           value={searchQuery}
           onChangeText={setSearchQuery}
-          accessibilityLabel="Search saved items"
-          accessibilityHint="Search through your saved podcasts, resources, and campaigns"
+          accessibilityLabel={t("savedScreen.searchA11y.label", "Search saved items")}
+          accessibilityHint={t("savedScreen.searchA11y.hint", "Search through your saved podcasts, resources, and campaigns")}
           maxFontSizeMultiplier={MAX_FONT_SCALE}
         />
         {searchQuery.length > 0 && (
@@ -272,7 +272,7 @@ export default function SavedScreen() {
             style={styles.clearButton}
             onPress={() => setSearchQuery("")}
             accessibilityRole="button"
-            accessibilityLabel="Clear search"
+            accessibilityLabel={t("savedScreen.searchA11y.clear", "Clear search")}
           >
             <Ionicons name="close-circle" size={20} color={palette.text} />
           </Pressable>
@@ -282,10 +282,10 @@ export default function SavedScreen() {
       {/* Filter and Sort Controls */}
       <View style={styles.controlsContainer}>
         <View style={styles.filtersContainer}>
-          <FilterButton filter="all" label="All" icon="apps" />
-          <FilterButton filter="podcast" label="Podcasts" icon="mic" />
-          <FilterButton filter="resource" label="Resources" icon="document-text" />
-          <FilterButton filter="campaign" label="Campaigns" icon="notifications" />
+          <FilterButton filter="all" label={t("savedScreen.filters.all", "All")} icon="apps" />
+          <FilterButton filter="podcast" label={t("savedScreen.filters.podcast", "Podcasts")} icon="mic" />
+          <FilterButton filter="resource" label={t("savedScreen.filters.resource", "Resources")} icon="document-text" />
+          <FilterButton filter="campaign" label={t("savedScreen.filters.campaign", "Campaigns")} icon="notifications" />
         </View>
 
         <View style={styles.viewControls}>
@@ -294,7 +294,7 @@ export default function SavedScreen() {
             onPress={() => setViewMode("list")}
             accessibilityRole="button"
             accessibilityState={{ selected: viewMode === "list" }}
-            accessibilityLabel="List view"
+            accessibilityLabel={t("savedScreen.view.list", "List view")}
           >
             <Ionicons name="list" size={20} color={viewMode === "list" ? "white" : palette.text} />
           </Pressable>
@@ -303,7 +303,7 @@ export default function SavedScreen() {
             onPress={() => setViewMode("grid")}
             accessibilityRole="button"
             accessibilityState={{ selected: viewMode === "grid" }}
-            accessibilityLabel="Grid view"
+            accessibilityLabel={t("savedScreen.view.grid", "Grid view")}
           >
             <Ionicons name="grid" size={20} color={viewMode === "grid" ? "white" : palette.text} />
           </Pressable>
@@ -313,7 +313,12 @@ export default function SavedScreen() {
       {/* Results Count */}
       {searchQuery.trim() && (
         <Text style={styles.resultsCount} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-          {filteredAndSortedItems.length} result{filteredAndSortedItems.length !== 1 ? 's' : ''} found
+          {t("savedScreen.resultsCountFound", {
+            count: filteredAndSortedItems.length,
+            defaultValue: "{{count}} result{{count, plural, one {} other {s}}} found"
+          })
+            .replace("{{count}}", String(filteredAndSortedItems.length))
+            .replace("{{count, plural, one {} other {s}}}", filteredAndSortedItems.length === 1 ? "" : "s")}
         </Text>
       )}
 
@@ -322,12 +327,12 @@ export default function SavedScreen() {
         <View style={styles.emptyContainer}>
           <Ionicons name="bookmark-outline" size={64} color={palette.text} style={styles.emptyIcon} />
           <Text style={styles.emptyTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            {searchQuery.trim() ? "No results found" : "No saved items yet"}
+            {searchQuery.trim() ? t("savedScreen.empty.searchTitle", "No results found") : t("savedScreen.empty.title", "No saved items yet")}
           </Text>
           <Text style={styles.emptyDescription} maxFontSizeMultiplier={MAX_FONT_SCALE}>
             {searchQuery.trim() 
-              ? "Try adjusting your search or filter criteria"
-              : "Start saving podcasts, resources, and campaigns to access them here"
+              ? t("savedScreen.empty.searchDescription", "Try adjusting your search or filter criteria")
+              : t("savedScreen.empty.description", "Start saving podcasts, resources, and campaigns to access them here")
             }
           </Text>
         </View>
@@ -350,8 +355,8 @@ export default function SavedScreen() {
               <View style={styles.sectionHeaderRow}>
                 <MaterialCommunityIcons
                   name={
-                    section.title === "Podcasts" ? "microphone" : 
-                    section.title === "Resources" ? "book-outline" : "bullhorn"
+                    section.title === t("savedScreen.filters.podcast", "Podcasts") ? "microphone" : 
+                    section.title === t("savedScreen.filters.resource", "Resources") ? "book-outline" : "bullhorn"
                   }
                   size={18}
                   color={palette.text}

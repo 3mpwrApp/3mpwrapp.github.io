@@ -19,6 +19,7 @@ import {
 } from "../../hooks/useA11y";
 import SettingsLink from "../../components/SettingsLink";
 import ContrastToggle from "../../components/ContrastToggle";
+import { useTranslation } from "../../i18n";
 
 const EMAIL = "empowrapp08162025@gmail.com";
 
@@ -27,17 +28,28 @@ export default function AboutScreen() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("About & Contact");
+  const { t } = useTranslation();
+  useAnnounceOnMount(t("about.title","About & Contact"));
   useFocusOnRefOnMount(titleRef);
   const [subject, setSubject] = React.useState("");
   const [message, setMessage] = React.useState("");
+  const [error, setError] = React.useState<string | null>(null);
 
   const sendEmail = async () => {
+    if(!subject.trim() || !message.trim()) {
+      setError(t("about.validationMissing","Subject and message required"));
+      return;
+    }
+    setError(null);
     const params = new URLSearchParams({ subject, body: message });
     const url = `mailto:${EMAIL}?${params.toString()}`;
     const supported = await Linking.canOpenURL(url);
-    if (!supported)
-      {return Alert.alert("Email not configured", `Please email ${EMAIL}`);}
+    if (!supported) {
+      return Alert.alert(
+        t("about.emailNotConfiguredTitle","Email not configured"),
+        t("about.emailNotConfiguredBody","Please email {{email}}", { email: EMAIL } as any)
+      );
+    }
     await Linking.openURL(url);
   };
 
@@ -49,46 +61,40 @@ export default function AboutScreen() {
         accessibilityRole="header"
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        About & Contact
+        {t("about.title","About & Contact")}
       </Text>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
-      <Text style={styles.text}>
-        Empowr supports injured workers, the disability community, advocates and
-        allies with tools, resources, and updates.
-      </Text>
-      <Text style={styles.text}>
-        Vision: a full lifecycle empowerment hub - starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.
-      </Text>
-      <Text style={styles.text}>
-        Questions, suggestions, or requests? Reach out anytime.
-      </Text>
-      <Text style={styles.text}>Email: {EMAIL}</Text>
+      <Text style={styles.text}>{t("about.intro1")}</Text>
+      <Text style={styles.text}>{t("about.intro2")}</Text>
+      <Text style={styles.text}>{t("about.intro3")}</Text>
+      <Text style={styles.text}>{t("about.emailLabel","Email")}: {EMAIL}</Text>
       <TextInput
         style={styles.input}
         value={subject}
         onChangeText={setSubject}
-        placeholder="Subject"
+        placeholder={t("about.subjectPlaceholder","Subject")}
         placeholderTextColor={palette.text}
-        accessibilityLabel="Subject"
+        accessibilityLabel={t("about.subjectPlaceholder","Subject")}
       />
       <TextInput
         style={[styles.input, { minHeight: 120 }]}
         value={message}
         onChangeText={setMessage}
-        placeholder="Your message"
+        placeholder={t("about.messagePlaceholder","Your message")}
         placeholderTextColor={palette.text}
-        accessibilityLabel="Message"
+        accessibilityLabel={t("about.messagePlaceholder","Message")}
         multiline
       />
+      {error ? <Text style={[styles.text,{color: palette.danger || '#c00'}]} accessibilityLiveRegion="polite">{error}</Text> : null}
       <Pressable
         style={({ pressed }) => [styles.button, pressed && { opacity: 0.9 }]}
         onPress={sendEmail}
         accessibilityRole="button"
-        accessibilityLabel="Send email"
+        accessibilityLabel={t("about.sendLabel","Send email")}
         hitSlop={HIT_SLOP_8}
       >
-        <Text style={styles.buttonText}>Send</Text>
+        <Text style={styles.buttonText}>{t("about.send","Send")}</Text>
       </Pressable>
     </View>
   );

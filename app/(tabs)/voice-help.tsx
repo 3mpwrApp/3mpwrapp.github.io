@@ -1,32 +1,36 @@
 import { View, Text, StyleSheet } from 'react-native';
 
 import { useAppPalette } from '../../theme/usePalette';
+import { useTranslation } from '../../i18n';
 
 export const options = { href: null };
 
 export default function VoiceHelp() {
   const palette = useAppPalette();
+  const { t } = useTranslation();
   const s = styles(palette);
-  const cmds = [
-    'Open resources',
-    'Open ratings',
-    'Open advocacy',
-    'Open community',
-    'Open settings',
-    'Open admin pending / approved / trash',
-    'Open rights explainer',
-    'Open doctor visit prep',
-    'Open accessibility log',
-    'Open rehab tracker',
-    'Open world map',
-    'Open media studio',
-    'Back / Go back',
+  const cmdKeys: Array<[string,string]> = [
+    ['voiceHelp.commands.openResources','openResources'],
+    ['voiceHelp.commands.openRatings','openRatings'],
+    ['voiceHelp.commands.openAdvocacy','openAdvocacy'],
+    ['voiceHelp.commands.openCommunity','openCommunity'],
+    ['voiceHelp.commands.openSettings','openSettings'],
+    ['voiceHelp.commands.openAdminPending','openAdminPending'],
+    ['voiceHelp.commands.openRightsExplainer','openRightsExplainer'],
+    ['voiceHelp.commands.openDoctorPrep','openDoctorPrep'],
+    ['voiceHelp.commands.openA11yLog','openA11yLog'],
+    ['voiceHelp.commands.openRehabTracker','openRehabTracker'],
+    ['voiceHelp.commands.openWorldMap','openWorldMap'],
+    ['voiceHelp.commands.openMediaStudio','openMediaStudio'],
+    ['voiceHelp.commands.goBack','goBack']
   ];
   return (
-    <View style={s.container}>
-      <Text style={s.title}>Voice Help</Text>
-      <Text style={s.text}>Press the mic and say a command:</Text>
-      {cmds.map(c => (<Text key={c} style={s.text}>• {c}</Text>))}
+    <View style={s.container} accessibilityLabel={t('voiceHelp.title','Voice Help')}>
+      <Text style={s.title}>{t('voiceHelp.title','Voice Help')}</Text>
+      <Text style={s.text}>{t('voiceHelp.intro','Press the mic and say a command:')}</Text>
+      {cmdKeys.map(([k,id]) => (
+        <Text key={id} style={s.text}>• {t(k)}</Text>
+      ))}
     </View>
   );
 }

@@ -822,4 +822,70 @@
       "addCalendar": "Add to Calendar"
     }
   }
+  ,
+  "about": {
+    "title": "About & Contact",
+    "intro1": "Empowr supports injured workers, the disability community, advocates and allies with tools, resources, and updates.",
+    "intro2": "Vision: a full lifecycle empowerment hub - starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.",
+    "intro3": "Questions, suggestions, or requests? Reach out anytime.",
+    "emailLabel": "Email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Your message",
+    "send": "Send",
+    "sendLabel": "Send email",
+    "emailNotConfiguredTitle": "Email not configured",
+    "emailNotConfiguredBody": "Please email {{email}}",
+    "validationMissing": "Subject and message required"
+  },
+  "faqs": {
+    "title": "FAQs",
+    "searchPlaceholder": "Search FAQs",
+    "searchLabel": "Search FAQs",
+    "questionPlaceholder": "Question",
+    "answerPlaceholder": "Answer",
+    "add": "Add",
+    "addLabel": "Add FAQ",
+    "empty": "No FAQs found"
+  },
+  "voiceHelp": {
+    "title": "Voice Help",
+    "intro": "Press the mic and say a command:",
+    "commands": {
+      "openResources": "Open resources",
+      "openRatings": "Open ratings",
+      "openAdvocacy": "Open advocacy",
+      "openCommunity": "Open community",
+      "openSettings": "Open settings",
+      "openAdminPending": "Open admin pending / approved / trash",
+      "openRightsExplainer": "Open rights explainer",
+      "openDoctorPrep": "Open doctor visit prep",
+      "openA11yLog": "Open accessibility log",
+      "openRehabTracker": "Open rehab tracker",
+      "openWorldMap": "Open world map",
+      "openMediaStudio": "Open media studio",
+      "goBack": "Back / Go back"
+    }
+  },
+  "savedScreen": {
+    "subtitle": "Organize and access your bookmarked content",
+    "searchPlaceholder": "Search saved items...",
+    "searchLabel": "Search saved items",
+    "searchHint": "Search through your saved podcasts, resources, and campaigns",
+    "clearSearch": "Clear search",
+    "filters": {
+      "all": "All",
+      "podcast": "Podcasts",
+      "resource": "Resources",
+      "campaign": "Campaigns"
+    },
+    "view": {
+      "list": "List view",
+      "grid": "Grid view"
+    },
+    "resultsCount": "{{count}} result{{plural}} found",
+    "emptyNoneTitle": "No saved items yet",
+    "emptyNoneBody": "Start saving podcasts, resources, and campaigns to access them here",
+    "emptySearchTitle": "No results found",
+    "emptySearchBody": "Try adjusting your search or filter criteria"
+  }
 }
