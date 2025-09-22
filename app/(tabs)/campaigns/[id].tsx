@@ -19,6 +19,7 @@ import {
 import { useFavorites } from "../../../store/favorites";
 import { colors, type Palette } from "../../../theme/colors";
 import { useTextScale } from "../../../theme/typography";
+import { useAuth } from "../../../context/AuthContext";
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -32,6 +33,7 @@ function CampaignDetailInner() {
   const saved = campaign ? has("campaign", campaign.id) : false;
   const { isJoined, join, leave } = useCampaignsLocal();
   const joined = campaign ? isJoined(campaign.id) : false;
+  const { user } = useAuth();
 
   return (
     <>
@@ -75,7 +77,8 @@ function CampaignDetailInner() {
               if (joined) {
                 // optimistic leave
                 leave(campaign.id);
-                const ok = await fsLeaveCampaign(campaign.id, 'self');
+                const uid = user?.uid || 'anonymous';
+                const ok = await fsLeaveCampaign(campaign.id, uid);
                 if (!ok) {
                   join(campaign.id); // rollback
                 } else {
@@ -83,7 +86,8 @@ function CampaignDetailInner() {
                 }
               } else {
                 join(campaign.id);
-                const ok = await fsJoinCampaign(campaign.id, 'self');
+                const uid = user?.uid || 'anonymous';
+                const ok = await fsJoinCampaign(campaign.id, uid);
                 if (!ok) {
                   leave(campaign.id);
                 } else {

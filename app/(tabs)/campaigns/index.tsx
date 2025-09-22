@@ -39,6 +39,7 @@ import { useCounts } from "../../../store/counts";
 import { useNetwork } from "../../../store/network";
 import { useRefresh } from "../../../store/refresh";
 import { colors, type Palette } from "../../../theme/colors";
+import { useAuth } from "../../../context/AuthContext";
 
 function ScreenInner() {
   const scheme = useColorScheme();
@@ -57,6 +58,7 @@ function ScreenInner() {
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
   const { state: local, createCampaign, join, leave, isJoined } = useCampaignsLocal();
+  const { user } = useAuth();
   const inFlightRef = React.useRef<Record<string, number>>({});
 
   const reload = React.useCallback(async () => {
@@ -204,7 +206,8 @@ function ScreenInner() {
                   if (joined) {
                     // optimistic leave
                     leave(item.id);
-                    const ok = await fsLeaveCampaign(item.id, 'self'); // placeholder; server will infer actual user in secured rules (or pass uid)
+                    const uid = user?.uid || 'anonymous';
+                    const ok = await fsLeaveCampaign(item.id, uid);
                     if (!ok) {
                       // rollback
                       join(item.id);
@@ -214,7 +217,8 @@ function ScreenInner() {
                     }
                   } else {
                     join(item.id);
-                    const ok = await fsJoinCampaign(item.id, 'self');
+                    const uid = user?.uid || 'anonymous';
+                    const ok = await fsJoinCampaign(item.id, uid);
                     if (!ok) {
                       leave(item.id);
                       Alert.alert('Join Failed', 'Could not join campaign (offline?)');
