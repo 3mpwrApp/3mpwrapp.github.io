@@ -174,7 +174,37 @@
     "removeReminder": "Retirer rappel",
     "reminderScheduled": "Rappel programmé",
     "reminderRemoved": "Rappel retiré",
-    "addToCalendar": "Ajouter au calendrier"
+    "addToCalendar": "Ajouter au calendrier",
+    "createToggleOpen": "Create Event",
+    "createToggleClose": "Close Form",
+    "form": {
+      "titlePlaceholder": "Title",
+      "descriptionPlaceholder": "Description",
+      "datePlaceholder": "Date (YYYY-MM-DD HH:MM)",
+      "locationPlaceholder": "Location (optional)",
+      "add": "Add Event",
+      "invalidDate": "Invalid date",
+      "added": "Event added"
+    },
+    "chips": {
+      "virtual": "Virtual",
+      "asl": "ASL",
+      "captions": "Captions",
+      "stepFree": "Step-free",
+      "sensory": "Sensory"
+    },
+    "reminders": {
+      "add": "Add Reminder",
+      "remove": "Remove Reminder",
+      "disabledTitle": "Reminders Disabled",
+      "disabledBody": "Enable Event Reminders in Settings to schedule local notifications.",
+      "scheduled": "Reminder set for 60 minutes before start.",
+      "removed": "Event reminder removed.",
+      "tooSoon": "Event is starting too soon for a reminder.",
+      "invalidDate": "Cannot parse event date.",
+      "failed": "Unable to schedule reminder.",
+      "addCalendar": "Add to Calendar"
+    }
   },
   "wellness": {
     "tools": {
@@ -205,9 +235,10 @@
       "rtw": "Plan de retour au travail",
       "meds": "Suivi des médicaments et traitements",
       "chronic": "Suivi des affections chroniques",
-      "body_mech": "Conseiller en biomécanique (IA)"
-    }
-  },
+      "body_mech": "Conseiller en biomécanique (IA)",
+      "policy_sim": "Interactive Policy Simulator",
+      "accommodation": "Accommodation Request Builder"
+    },
     "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
     "filters": {
       "all": "All",
@@ -216,7 +247,15 @@
       "tools_downloads": "Tools & Downloads",
       "emergency_crisis": "Emergency & Crisis"
     }
-  ,
+  },
+  "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
+  "filters": {
+    "all": "All",
+    "canada": "Canada",
+    "work_financial": "Work & Financial",
+    "tools_downloads": "Tools & Downloads",
+    "emergency_crisis": "Emergency & Crisis"
+  },
   "templates": {
     "voice": {
       "title": "Notes vocales du dossier",
@@ -597,9 +636,9 @@
         },
         "docs-1": {
           "title": "Documentation",
-            "b1": "Résumer appel/réunion par courriel",
-            "b2": "Joindre seulement preuves clés",
-            "b3": "Suivre dates et échéances"
+          "b1": "Résumer appel/réunion par courriel",
+          "b2": "Joindre seulement preuves clés",
+          "b3": "Suivre dates et échéances"
         }
       }
     },
@@ -760,8 +799,7 @@
       "one": "{{count}} item",
       "other": "{{count}} items"
     }
-  }
-  ,
+  },
   "masterIndex": {
     "title": "Index maître de recherche",
     "screenLabel": "Écran index maître recherche",
@@ -781,8 +819,7 @@
       "howTo": "Comment utiliser cette carte"
     },
     "chipsAnnounce": "Filtre rapide défini sur {{label}}"
-  }
-  ,
+  },
   "research": {
     "chips": {
       "uncrpd": "UNCRPD",
