@@ -3,8 +3,8 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { useAppPalette } from '../../../theme/usePalette';
 import { useTranslation } from '../../../i18n';
+import { useAppPalette } from '../../../theme/usePalette';
 
 type Feature = { route: string; key: keyof typeof featureKeyMap; };
 // Map feature keys to translation keys under advocacy.tools.*

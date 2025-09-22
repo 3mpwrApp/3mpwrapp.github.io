@@ -1,4 +1,4 @@
-import { llmSimplify, llmInterpret } from './llm';
+import { llmInterpret, llmSimplify } from './llm';
 
 // Shared deterministic fallback helpers for offline / no-backend scenarios.
 

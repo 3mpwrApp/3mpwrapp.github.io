@@ -1,22 +1,24 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  Pressable,
-  Linking,
-  TextInput,
-  Alert,
+    Alert,
+    Linking,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
-import { useAppPalette } from "../../../theme/usePalette";
+import AIDisclaimer from '../../../components/AIDisclaimer';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useTranslation } from '../../../i18n';
 import { aiPolicySimplify } from '../../../services/aiAdvocacy';
+import { useAppPalette } from "../../../theme/usePalette";
 
 const SECTIONS = [
   {
@@ -65,6 +67,7 @@ export default function PolicySimple() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Policy Made Simple");
   useFocusOnRefOnMount(titleRef);
+  const { t } = useTranslation();
   const open = (url: string) => Linking.openURL(url).catch(() => {});
   const [raw, setRaw] = React.useState('Paste or type a policy / decision excerpt here to simplify.');
   const [loading, setLoading] = React.useState(false);
@@ -92,14 +95,14 @@ export default function PolicySimple() {
         style={s.title}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Policy Made Simple
+        {t('advocacy.tools.policy_simple')}
       </Text>
       <Text style={s.subtitle}>
         Easy-read guides to accessibility, human rights, and benefits.
       </Text>
       <View style={s.aiBox}>
-        <Text style={s.sectionTitle}>AI Simplifier</Text>
-        <Text style={s.helper}>Paste policy/decision text below. Processing is local unless backend available.</Text>
+        <Text style={s.sectionTitle}>{t('advocacy.policy.aiHeader')}</Text>
+        <Text style={s.helper}>{t('advocacy.policy.aiHelp')}</Text>
         <TextInput
           style={s.input}
             multiline
@@ -107,17 +110,18 @@ export default function PolicySimple() {
             onChangeText={setRaw}
             accessibilityLabel="Policy text input"
         />
-        <Pressable onPress={runSimplify} style={[s.button, loading && { opacity:0.6 }]} accessibilityRole="button" accessibilityLabel="Simplify policy excerpt" disabled={loading}>
-          <Text style={s.buttonText}>{loading ? 'Simplifying...' : 'Simplify'}</Text>
+        <Pressable onPress={runSimplify} style={[s.button, loading && { opacity:0.6 }]} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.simplify')} disabled={loading}>
+          <Text style={s.buttonText}>{loading ? t('advocacy.policy.simplifying') : t('advocacy.policy.simplify')}</Text>
         </Pressable>
         {!!summary && (
           <View style={s.resultBox} accessibilityRole="summary" accessibilityLabel="Simplified summary and key points">
-            <Text style={s.resultTitle}>Summary</Text>
+            <Text style={s.resultTitle}>{t('advocacy.policy.summary')}</Text>
             <Text style={s.resultText}>{summary}</Text>
-            {points.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>Key Points</Text>}
+            {points.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>{t('advocacy.policy.keyPoints')}</Text>}
             {points.map((p,i)=>(<Text key={i} style={s.resultText}>• {p}</Text>))}
           </View>
         )}
+        <AIDisclaimer />
       </View>
       {SECTIONS.map((sec) => (
         <View key={sec.title} style={s.card}>

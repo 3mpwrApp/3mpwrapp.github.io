@@ -1,15 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, Alert, ScrollView } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
-import { useAppPalette } from "../../../theme/usePalette";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { fsAddViolationReport } from "../../../services/violations";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Report = {
   id: string;

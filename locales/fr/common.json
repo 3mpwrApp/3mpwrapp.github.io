@@ -548,6 +548,64 @@
       "ally_hub": "Ally Hub",
       "finder": "Lawyer & Advocate Finder",
       "ratings": "Disability Justice Ratings"
+    },
+    "ally": {
+      "intro": "Cross-movement solidarity resources and quick coaching prompts for allies supporting disabled / injured workers.",
+      "linksHeader": "Movement Links",
+      "coachHeader": "Coaching Prompt",
+      "coachHelp": "Describe what you want to help with (e.g., support letter, preparing for meeting, reducing overwhelm).",
+      "generate": "Generate Steps",
+      "generating": "Generating..."
+    },
+    "policy": {
+      "aiHeader": "AI Simplifier",
+      "aiHelp": "Paste policy/decision text below. Processing is local unless backend available.",
+      "simplify": "Simplify",
+      "simplifying": "Simplifying...",
+      "summary": "Summary",
+      "keyPoints": "Key Points"
+    },
+    "coach": {
+      "practiceHeader": "Practice Prompt",
+      "practiceHelp": "Describe a need or goal. The coach returns structured steps.",
+      "generate": "Generate Practice",
+      "generating": "Generating...",
+      "subtitle": "Micro-lessons for confidence, public speaking, and assertiveness.",
+      "defaultPrompt": "Request a 10-minute break each hour due to pain",
+      "generateError": "Could not generate practice steps.",
+      "practiceInputLabel": "Practice prompt input",
+      "practiceGenerateLabel": "Generate practice coaching",
+      "practiceOutputLabel": "Practice coaching output",
+      "lesson": {
+        "conf-1": {
+          "title": "Confidence Basics",
+          "b1": "Breathe low and slow (4-4-4-4)",
+          "b2": "Stand/sit grounded; soften shoulders",
+          "b3": "Prepare one sentence purpose statement"
+        },
+        "speak-1": {
+          "title": "Speak Clearly",
+          "b1": "Short sentences; one point at a time",
+          "b2": "Ask to repeat/clarify questions",
+          "b3": "Pause before answering"
+        },
+        "assert-1": {
+          "title": "Assertiveness in Medical/Work",
+          "b1": "Name your need: 'I need...'",
+          "b2": "Explain impact briefly",
+          "b3": "Offer options, ask for collaboration"
+        },
+        "docs-1": {
+          "title": "Documentation",
+          "b1": "Summarize call/meeting in email",
+          "b2": "Attach key evidence only",
+          "b3": "Track dates and deadlines"
+        }
+      }
+    },
+    "disclaimer": {
+      "notLegal": "Educational only — not legal advice. Verify with official sources.",
+      "privacy": "Inputs processed locally unless a configured backend is available."
     }
   },
   "justiceService": {

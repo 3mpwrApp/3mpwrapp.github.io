@@ -1,4 +1,4 @@
-import { aiSimplify, aiInterpret, aiPolicySimplify, aiCoachPrompt } from '../services/aiAdvocacy';
+import { aiCoachPrompt, aiInterpret, aiPolicySimplify, aiSimplify } from '../services/aiAdvocacy';
 
 jest.mock('../services/llm', () => ({
   llmSimplify: async () => null,

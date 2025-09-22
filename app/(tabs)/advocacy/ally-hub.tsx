@@ -1,12 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView, Alert } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import AIDisclaimer from '../../../components/AIDisclaimer';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
-import { useAppPalette } from '../../../theme/usePalette';
-import { useTranslation } from '../../../i18n';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useTranslation } from '../../../i18n';
 import { aiCoachPrompt } from '../../../services/aiAdvocacy';
+import { useAppPalette } from '../../../theme/usePalette';
 
 const links = [
   { title:'Climate Justice x Disability', url:'https://www.climatedisability.org' },
@@ -21,7 +22,7 @@ export default function AllyHub() {
   const s = styles(palette);
   const { t } = useTranslation();
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('Ally Hub');
+  useAnnounceOnMount(t('advocacy.tools.ally_hub'));
   useFocusOnRefOnMount(titleRef);
   const [prompt, setPrompt] = React.useState('Help a friend appeal a denied benefit');
   const [coaching, setCoaching] = React.useState('');
@@ -42,17 +43,17 @@ export default function AllyHub() {
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }}>
-      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.tools.ally_hub')}</Text>
-      <Text style={s.text}>Cross‑movement solidarity resources and quick coaching prompts for allies supporting disabled / injured workers.</Text>
-      <Text style={[s.sectionLabel,{marginTop:12}]}>Movement Links</Text>
+  <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.tools.ally_hub')}</Text>
+  <Text style={s.text}>{t('advocacy.ally.intro')}</Text>
+  <Text style={[s.sectionLabel,{marginTop:12}]}>{t('advocacy.ally.linksHeader')}</Text>
       {links.map(l => (
         <A11yPressable key={l.title} hitSlop={HIT_SLOP_8} onPress={()=> require('expo-linking').openURL(l.url)} style={s.card} accessibilityRole="link" accessibilityLabel={l.title}>
           <Text style={s.cardTitle}>{l.title}</Text>
           <Text style={[s.text,{ color: palette.primary, marginTop:2 }]}>{l.url}</Text>
         </A11yPressable>
       ))}
-      <Text style={[s.sectionLabel,{marginTop:20}]}>Coaching Prompt</Text>
-      <Text style={s.text}>Describe what you want to help with (e.g., support letter, preparing for meeting, reducing overwhelm).</Text>
+  <Text style={[s.sectionLabel,{marginTop:20}]}>{t('advocacy.ally.coachHeader')}</Text>
+  <Text style={s.text}>{t('advocacy.ally.coachHelp')}</Text>
       <TextInput
         style={s.input}
         value={prompt}
@@ -60,14 +61,15 @@ export default function AllyHub() {
         multiline
         accessibilityLabel="Ally coaching prompt"
       />
-      <A11yPressable onPress={runCoach} style={[s.button, loading && { opacity:0.6 }]} disabled={loading} accessibilityRole="button" accessibilityLabel="Generate coaching steps">
-        <Text style={s.buttonText}>{loading ? 'Generating...' : 'Generate Steps'}</Text>
+      <A11yPressable onPress={runCoach} style={[s.button, loading && { opacity:0.6 }]} disabled={loading} accessibilityRole="button" accessibilityLabel={t('advocacy.ally.generate')}>
+        <Text style={s.buttonText}>{loading ? t('advocacy.ally.generating') : t('advocacy.ally.generate')}</Text>
       </A11yPressable>
       {!!coaching && (
         <View style={s.resultBox} accessibilityRole="summary" accessibilityLabel="Coaching output">
           {coaching.split(/\n+/).map((ln,i)=>(<Text key={i} style={s.resultText}>• {ln}</Text>))}
         </View>
       )}
+      <AIDisclaimer />
     </ScrollView>
   );
 }
