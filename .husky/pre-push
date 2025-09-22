@@ -10,4 +10,7 @@ npm run test:ci || { echo "✗ tests failed"; exit 1; }
 echo "→ pre-push: i18n validation"
 npm run i18n:test || { echo "✗ i18n checks failed"; exit 1; }
 
+echo "→ pre-push: i18n missing keys report"
+npm run i18n:report || { echo "✗ missing i18n keys"; exit 1; }
+
 echo "✓ pre-push checks passed"

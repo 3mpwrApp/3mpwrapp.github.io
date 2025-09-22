@@ -60,18 +60,26 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const setLanguage = (l: Lang) => setLang(l);
 
   const showBadge = !!process.env.EXPO_PUBLIC_I18N_BADGE;
+  const logMissing = !!process.env.EXPO_PUBLIC_I18N_LOG_MISSING;
   const TAG = "[T]";
   const t = React.useCallback(
     (key: string, fallback: string = key) => {
       const dict = dictionaries[lang] ?? dictionaries.en;
       let v = get(dict, key, fallback);
-      if (typeof v !== "string") return fallback;
+      if (typeof v !== "string") {
+        if (logMissing && fallback === key) {
+          // Only log when true miss (fallback equals key)
+             
+            console.warn("[i18n-missing]", key);
+        }
+        return fallback;
+      }
       const tagged = v.startsWith(TAG);
       if (tagged) v = v.slice(TAG.length);
       if (tagged && showBadge) return `${v} ◀`;
       return v;
     },
-    [lang, showBadge],
+    [lang, showBadge, logMissing],
   );
 
   const interpolate = (template: string, vars: Record<string, string | number>) =>
