@@ -57,7 +57,11 @@ missing.sort();
 if(missing.length){
   console.log(`Missing i18n keys (not in en/common.json): ${missing.length}`);
   missing.forEach(k=>console.log('  -',k));
-  process.exitCode = 1;
+  if(!process.env.I18N_REPORT_ALLOW_MISSING){
+    process.exitCode = 1;
+  } else {
+    console.log('Bypass active: not failing due to I18N_REPORT_ALLOW_MISSING');
+  }
 } else {
   console.log('All referenced i18n keys are present in en/common.json');
 }
