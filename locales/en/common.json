@@ -137,6 +137,11 @@
       "privacy": "Inputs processed locally unless a configured backend is available."
     }
   },
+  "network": {
+    "online": "Online",
+    "offline": "Offline (local only)",
+    "checking": "Checking..."
+  },
   "settings": {
     "title": "Settings",
     "accessibility": {

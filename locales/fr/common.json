@@ -608,6 +608,11 @@
       "privacy": "Entrées traitées localement sauf backend configuré."
     }
   },
+  "network": {
+    "online": "En ligne",
+    "offline": "Hors ligne (local seulement)",
+    "checking": "Vérification..."
+  },
   "justiceService": {
     "header": "Empowr — Local Advocacy Snapshot",
     "evidenceLine": "Evidence Locker: {{noteCount}} notes, {{docCount}} file(s)",

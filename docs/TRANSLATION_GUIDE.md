@@ -16,6 +16,32 @@ locales/
 - Never delete a key from non‑English locales unless also removed from English.
 - Keep JSON strictly valid (no comments, trailing commas, or duplicate keys).
 
+## Advocacy Namespace & Scoped Checks
+As we modernize legacy areas, advocacy-related keys are enforced more strictly via `npm run i18n:check` which runs `scripts/check-i18n-keys.mjs` to assert parity for all `advocacy.*` (and related subkeys like `advocacy.coach.lessons.*`) across `fr` and `es`.
+
+Rationale:
+- Allows rapid iteration on new advocacy features with guaranteed localization.
+- Avoids blocking CI due to older still‑untranslated keys elsewhere.
+
+If you add new advocacy keys:
+1. Add them to `en/common.json` under `advocacy.*`.
+2. Immediately add FR/ES translations (avoid shipping English fallbacks here).
+3. Run `npm run i18n:check` and `npm run test`.
+
+## Network Status Keys
+Connectivity transparency strings used by `OnlineStatusBadge` live under `network.*`:
+```
+"network": {
+  "checking": "Checking...",
+  "online": "Online",
+  "offline": "Offline (local only)"
+}
+```
+Guidelines:
+- Keep labels succinct (badge width is constrained).
+- Avoid technical jargon; prioritize user mental model ("Offline" vs "No Internet Connectivity").
+- If you localize, retain any parenthetical nuance (e.g., explain that only local logic runs).
+
 ## Placeholders
 Placeholders use `{{name}}` syntax. Examples:
 ```
@@ -72,6 +98,7 @@ When new English keys are added:
 | `npm run i18n:assert` | Aggregate release gate (no missing, no tags, below threshold). |
 | `npm run i18n:test` | Runs diff + plural + threshold + assert. |
 | `npm run i18n:progress` | Shows delta in coverage over last snapshot. |
+| `npm run i18n:check` | Advocacy namespace enforcement (`advocacy.*`). |
 
 ## Adding a New Key
 1. Add to `en/common.json`.
@@ -93,10 +120,11 @@ When new English keys are added:
 
 ## Reviewer Checklist
 - Keys present in all locales.
+- Advocacy additions localized promptly (script passes).
 - No runtime placeholders removed.
 - Plural pairs complete and include `{{count}}`.
 - No stray `[T]` tags for production merges.
-- `npm run i18n:test` passes locally.
+- `npm run i18n:test && npm run i18n:check` passes locally.
 
 ## Future Enhancements (Roadmap)
 - ICU plural categories for Slavic / Arabic languages.

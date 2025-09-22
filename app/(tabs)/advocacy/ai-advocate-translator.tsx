@@ -1,23 +1,24 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  Alert,
-  ScrollView,
-  Share,
+    Alert,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
-import { useAppPalette } from "../../../theme/usePalette";
 import AIDisclaimer from '../../../components/AIDisclaimer';
-import { llmSimplify } from "../../../services/llm";
+import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { llmSimplify } from "../../../services/llm";
+import { useAppPalette } from "../../../theme/usePalette";
 
 function simplify(text: string): string {
   const rules: [RegExp, string][] = [
@@ -37,7 +38,6 @@ function simplify(text: string): string {
 }
 
 export const options = { href: null };
-
 export default function AiAdvocateTranslator() {
   const palette = useAppPalette();
   const s = styles(palette);
@@ -56,6 +56,7 @@ export default function AiAdvocateTranslator() {
       >
         AI Advocate Translator
       </Text>
+      <OnlineStatusBadge />
       <Text style={s.subtitle}>
         Paste a bureaucratic letter to simplify into plain language. ASL video
         summary requires server integration.

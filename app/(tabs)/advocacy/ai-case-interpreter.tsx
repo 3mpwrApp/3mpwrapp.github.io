@@ -1,23 +1,24 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  Alert,
-  ScrollView,
-  Share,
+    Alert,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
-import { useAppPalette } from "../../../theme/usePalette";
 import AIDisclaimer from '../../../components/AIDisclaimer';
-import { llmInterpret } from "../../../services/llm";
+import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { llmInterpret } from "../../../services/llm";
+import { useAppPalette } from "../../../theme/usePalette";
 
 function interpret(text: string): { summary: string; next: string[] } {
   const lower = text.toLowerCase();
@@ -51,10 +52,7 @@ export default function AiCaseInterpreter() {
   useAnnounceOnMount("AI Case Interpreter");
   useFocusOnRefOnMount(titleRef);
   const [input, setInput] = React.useState("");
-  const [out, setOut] = React.useState<{
-    summary: string;
-    next: string[];
-  } | null>(null);
+  const [out, setOut] = React.useState<{ summary: string; next: string[] } | null>(null);
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text
@@ -65,6 +63,7 @@ export default function AiCaseInterpreter() {
       >
         AI Case Interpreter
       </Text>
+      <OnlineStatusBadge />
       <Text
         style={[
           s.subtitle,

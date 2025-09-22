@@ -41,6 +41,34 @@ Notes
 - Usage: `const { t } = useTranslation();` then `t('home.title')`.
 - Change language: Profile screen provides quick EN/FR/ES toggle.
 
+## AI Transparency & Offline Fallbacks
+
+To build trust and meet accessibility & ethical guidelines, every AI-assisted advocacy tool follows a consistent pattern:
+
+1. Deterministic offline fallback logic (no network required) always produces a predictable result when `EXPO_PUBLIC_LLM_BASE` is unset or unreachable.
+2. A shared `AIDisclaimer` component clarifies that outputs are educational, not legal advice.
+3. A `OnlineStatusBadge` component surfaces current connectivity state:
+   - `Checking…` while resolving state
+   - `Online` (server augmentation may occur)
+   - `Offline (local only)` (only deterministic logic runs)
+4. All network status strings live under `network.*` i18n keys so they remain translatable.
+5. Screens keep the badge visually near the title for immediate context; they also set `accessibilityRole="status"` so screen readers announce changes.
+
+Add the badge to a new AI screen:
+```tsx
+import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
+// ... inside component JSX near the header
+<OnlineStatusBadge />
+<AIDisclaimer />
+```
+
+If you introduce a new AI helper:
+- Provide a pure, side‑effect free fallback (avoid randomness; keep deterministic for testability).
+- Wrap calls to remote endpoints in a try/catch; on error, fall back silently and optionally log (Sentry) without blocking the user.
+- Place the disclaimer and status badge before interactive form fields so users understand context up front.
+
+Advocacy i18n enforcement: The script `npm run i18n:check` ( `scripts/check-i18n-keys.mjs`) asserts that all `advocacy.*` keys are present in FR/ES; this narrower scope allows legacy non-advocacy keys to remain while modernization continues.
+
 ## Accessibility Enhancements
 
 - Consistent touch targets: `constants/a11y.ts` exports `HIT_SLOP_8` and `touchTarget.min` (44×44dp). Applied to header buttons.
@@ -109,8 +137,8 @@ Revoke admin: `npm run admin:set -- <uid> false`
 ### Admin scripts
 
 - `npm run admin:users` — List all users as JSON (add `-- --format csv` for CSV)
-- `npm run admin:fcm -- --token <fcmToken> --title "Hi" --body "Message"` — Send FCM via Admin SDK (or `--topic <topic>`)
-- `npm run admin:export -- <collection> [--out file.json]` — Export a Firestore collection
+- `npm run admin:fcm` — Send FCM via Admin SDK (or `--topic <topic>`)
+- `npm run admin:export` — Export a Firestore collection
 
 ## Navigation & Tabs
 

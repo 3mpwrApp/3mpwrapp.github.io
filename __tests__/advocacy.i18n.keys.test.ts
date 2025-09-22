@@ -1,6 +1,6 @@
 import en from '../locales/en/common.json';
-import fr from '../locales/fr/common.json';
 import es from '../locales/es/common.json';
+import fr from '../locales/fr/common.json';
 
 describe('Advocacy i18n keys', () => {
   const requiredKeys = [

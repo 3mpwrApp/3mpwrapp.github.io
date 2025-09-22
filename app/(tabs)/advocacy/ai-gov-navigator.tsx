@@ -1,22 +1,23 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  ScrollView,
-  Share,
-  Alert,
+    Alert,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
 
-import { useAppPalette } from "../../../theme/usePalette";
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Flow = "CPP-D" | "WCB" | "EI-Sickness";
 
@@ -92,6 +93,7 @@ export default function AiGovNavigator() {
       >
         Help & tips
       </Text>
+      <OnlineStatusBadge />
       <Text style={s.subtitle}>
         Conversational, step-by-step guidance through forms with
         accessibility in mind.
