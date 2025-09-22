@@ -40,12 +40,12 @@ export default function CollectiveLegal() {
 
   React.useEffect(() => {
     (async () => {
-      const saved = await getCachedJSON<Report[]>("collective_reports");
+      const saved = await getCachedJSON<Report[]>("advocacy:collective_reports:v1");
       if (saved) setReports(saved);
     })();
   }, []);
   React.useEffect(() => {
-    setCachedJSON("collective_reports", reports);
+    setCachedJSON("advocacy:collective_reports:v1", reports);
   }, [reports]);
 
   const submit = async () => {
@@ -81,8 +81,7 @@ export default function CollectiveLegal() {
         Collective Legal Action Hub
       </Text>
       <Text style={s.subtitle}>
-        If multiple users report the same violation, Empowr groups cases for
-        union/classÃ¢â‚¬â€˜action leverage.
+        If multiple users report the same violation, Empowr groups cases for union / class-action leverage.
       </Text>
       <Text style={s.label}>Violation type</Text>
       <View
@@ -138,8 +137,8 @@ export default function CollectiveLegal() {
         <Text style={s.tip}>No reports yet.</Text>
       ) : (
         Object.entries(byType).map(([k, v]) => (
-          <Text key={k} style={s.tip}>
-            Ã¢â‚¬Â¢ {k}: {v}
+          <Text key={k} style={s.tip} accessibilityLabel={`${k} ${v}`}>
+            • {k}: {v}
           </Text>
         ))
       )}

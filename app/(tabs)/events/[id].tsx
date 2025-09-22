@@ -7,10 +7,10 @@ import A11yPressable from '../../../components/A11yPressable';
 import SettingsLink from "../../../components/SettingsLink";
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { events } from "../../../data/events";
+import { useTranslation } from "../../../i18n";
 import { isScheduled, removeReminder, scheduleForEvent } from "../../../services/eventReminders";
 import { useSettings } from "../../../store/settings";
 import { useAppPalette } from "../../../theme/usePalette";
-import { useTranslation } from "../../../i18n";
 
 function createICS(
   title: string,

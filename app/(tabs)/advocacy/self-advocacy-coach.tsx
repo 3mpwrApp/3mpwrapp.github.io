@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Pressable, ScrollView, TextInput, Alert } from "react-native";
 
 import { useAppPalette } from "../../../theme/usePalette";
 import {
@@ -31,7 +31,7 @@ const LESSONS = [
     id: "assert-1",
     title: "Assertiveness in Medical/Work",
     bullets: [
-      "Name your need: Ã¢â‚¬Å“I needÃ¢â‚¬Â¦Ã¢â‚¬Â",
+  "Name your need: 'I need...'",
       "Explain impact briefly",
       "Offer options, ask for collaboration",
     ],
@@ -53,7 +53,7 @@ export default function SelfAdvocacyCoach() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("SelfÃ¢â‚¬â€˜Advocacy Coach");
+  useAnnounceOnMount("Self-Advocacy Coach");
   useFocusOnRefOnMount(titleRef);
 
   const [active, setActive] = React.useState<string | null>(LESSONS[0].id);
@@ -66,10 +66,10 @@ export default function SelfAdvocacyCoach() {
         style={s.title}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        SelfÃ¢â‚¬â€˜Advocacy Coach
+        Self-Advocacy Coach
       </Text>
       <Text style={s.subtitle}>
-        MicroÃ¢â‚¬â€˜lessons for confidence, public speaking, and assertiveness.
+        Micro-lessons for confidence, public speaking, and assertiveness.
       </Text>
       <View
         style={{
@@ -97,16 +97,41 @@ export default function SelfAdvocacyCoach() {
           <Text style={s.cardTitle}>{l.title}</Text>
           {l.bullets.map((b, i) => (
             <Text key={i} style={s.cardText}>
-              Ã¢â‚¬Â¢ {b}
+              • {b}
             </Text>
           ))}
         </View>
       ))}
-      <Text style={[s.subtitle, { marginTop: 12 }]}>
-        Practice prompt: Explain your need in one sentence. Example: Ã¢â‚¬Å“I
-        need a 10Ã¢â‚¬â€˜minute break every hour due to pain.Ã¢â‚¬Â
-      </Text>
+      <PracticeCoach />
     </ScrollView>
+  );
+}
+
+import { aiCoachPrompt } from '../../../services/aiAdvocacy';
+
+function PracticeCoach() {
+  const [prompt, setPrompt] = React.useState('Request a 10-minute break each hour due to pain');
+  const [output, setOutput] = React.useState('');
+  const [loading, setLoading] = React.useState(false);
+  const run = async () => {
+    if (!prompt.trim()) return;
+    setLoading(true);
+    try { setOutput(await aiCoachPrompt(prompt)); } catch { Alert.alert('Error','Could not generate practice steps.'); } finally { setLoading(false); }
+  };
+  return (
+    <View style={{ marginTop:16 }}>
+      <Text style={{ fontWeight:'700', color:'#888', marginBottom:4 }}>Practice Prompt</Text>
+      <Text style={{ color:'#888', marginBottom:6 }}>Describe a need or goal. The coach returns structured steps.</Text>
+      <TextInput style={{ borderWidth:1, borderColor:'#ccc', borderRadius:8, padding:10, minHeight:70, textAlignVertical:'top' }} multiline value={prompt} onChangeText={setPrompt} accessibilityLabel="Practice prompt input" />
+      <Pressable onPress={run} style={{ backgroundColor:'#333', paddingVertical:10, borderRadius:8, alignItems:'center', marginTop:8 }} accessibilityRole="button" accessibilityLabel="Generate practice coaching" disabled={loading}>
+        <Text style={{ color:'#fff', fontWeight:'700' }}>{loading ? 'Generating...' : 'Generate Practice'}</Text>
+      </Pressable>
+      {!!output && (
+        <View style={{ marginTop:10 }} accessibilityRole="summary" accessibilityLabel="Practice coaching output">
+          {output.split(/\n+/).map((ln,i)=>(<Text key={i} style={{ color:'#444', marginBottom:4 }}>• {ln}</Text>))}
+        </View>
+      )}
+    </View>
   );
 }
 

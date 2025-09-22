@@ -28,6 +28,7 @@ import {
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
 import { fetchEvents } from "../../../services/events";
 import { fsAddEvent } from "../../../services/firestore";
 import { useCounts } from "../../../store/counts";
@@ -36,7 +37,6 @@ import { useRefresh } from "../../../store/refresh";
 import { useSettings } from "../../../store/settings";
 import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
-import { useTranslation } from "../../../i18n";
 
 export default function EventsScreen() {
   const palette = useAppPalette();

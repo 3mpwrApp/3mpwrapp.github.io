@@ -552,7 +552,10 @@
       "collective": "Collective Legal Action Hub",
       "policy_simple": "Policy Made Simple",
       "ai_gov": "AI Government Navigator",
-      "ai_case": "AI Case Interpreter"
+      "ai_case": "AI Case Interpreter",
+      "ally_hub": "Ally Hub",
+      "finder": "Lawyer & Advocate Finder",
+      "ratings": "Disability Justice Ratings"
     }
   },
   "justiceService": {
