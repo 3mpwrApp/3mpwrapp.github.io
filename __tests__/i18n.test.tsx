@@ -99,9 +99,10 @@ describe('i18n basic', () => {
       return null;
     }
     render(<I18nProvider><BadgeStepper /></I18nProvider>);
-    await waitFor(() => expect(outputs).toContain('BadgeMarker ◀'));
-    await waitFor(() => expect(outputs).toContain('BadgeMarque ◀'));
-    await waitFor(() => expect(outputs).toContain('IndicadorInsignia ◀'));
+  // Only English remains tagged; other locales now untagged (no badge marker expected)
+  await waitFor(() => expect(outputs).toContain('BadgeMarker ◀'));
+  await waitFor(() => expect(outputs).toContain('BadgeMarque'));
+  await waitFor(() => expect(outputs).toContain('IndicadorInsignia'));
     delete process.env.EXPO_PUBLIC_I18N_BADGE;
   });
 });

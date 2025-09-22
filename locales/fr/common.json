@@ -792,7 +792,7 @@
     "filter": "filtre rapide"
   },
   "test": {
-    "badge": "[T]BadgeMarque"
+    "badge": "BadgeMarque"
   },
   "demoPlural": {
     "item": {

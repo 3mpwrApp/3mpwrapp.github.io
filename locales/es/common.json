@@ -569,7 +569,7 @@
     }
   },
   "test": {
-    "badge": "[T]IndicadorInsignia"
+    "badge": "IndicadorInsignia"
   },
   "demoPlural": {
     "item": {
