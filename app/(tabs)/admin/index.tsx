@@ -26,6 +26,8 @@ import AdminGuard from "../../../components/AdminGuard";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { db } from "../../../firebase/config";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
+import { computeActivityStats, logActivity, subscribeToActivityFeed } from "../../../services/activity";
+import { createFaq, deleteFaq, subscribeFaqs, updateFaq } from "../../../services/faqs";
 import { useAppPalette } from "../../../theme/usePalette";
 
 export const options = { href: null };
@@ -65,6 +67,30 @@ export default function AdminPanel() {
     (params?.tab as ReviewKind) || "pending",
   );
   const [reviewItems, setReviewItems] = React.useState<ReviewItem[]>([]);
+  const [activityEvents, setActivityEvents] = React.useState<any[]>([]);
+  const [activityStats, setActivityStats] = React.useState<{ total:number; since24h:number; byType: Record<string,number>; }>({ total:0, since24h:0, byType:{} });
+
+  const [broadcastTitle, setBroadcastTitle] = React.useState('');
+  const [broadcastBody, setBroadcastBody] = React.useState('');
+  // FAQs management
+  const [faqs, setFaqs] = React.useState<any[]>([]);
+  const [faqQ, setFaqQ] = React.useState('');
+  const [faqA, setFaqA] = React.useState('');
+  const [editingFaqId, setEditingFaqId] = React.useState<string | null>(null);
+
+  React.useEffect(()=> {
+    const unsub = subscribeFaqs(rows => setFaqs(rows));
+    return () => unsub();
+  }, []);
+
+  // Activity subscription
+  React.useEffect(()=> {
+    const unsub = subscribeToActivityFeed(evts => {
+      setActivityEvents(evts);
+      setActivityStats(computeActivityStats(evts));
+    }, { limit: 200 });
+    return () => unsub();
+  }, []);
 
   React.useEffect(() => {
     (async () => {
@@ -176,6 +202,124 @@ export default function AdminPanel() {
         <View style={{ marginTop: 8 }}>
           <Text style={s.text}>Counts — Users: {counts.users ?? "-"} | Campaigns: {counts.campaigns ?? "-"} | Resources: {counts.resources ?? "-"}</Text>
         </View>
+
+        {/* Activity Metrics */}
+        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Activity Metrics</Text>
+        <Text style={s.text}>Events (last 24h / total): {activityStats.since24h} / {activityStats.total}</Text>
+        <View style={{ flexDirection:'row', flexWrap:'wrap', gap:6 }}>
+          {Object.entries(activityStats.byType).slice(0,12).map(([k,v])=> (
+            <View key={k} style={{ backgroundColor: palette.surface, paddingHorizontal:8, paddingVertical:4, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+              <Text style={{ color: palette.text, fontSize:12 }}>{k}: {v}</Text>
+            </View>
+          ))}
+        </View>
+
+        {/* Broadcast Tool */}
+        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Broadcast Announcement</Text>
+        <TextInput
+          value={broadcastTitle}
+          onChangeText={setBroadcastTitle}
+          placeholder="Title"
+          style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
+        />
+        <TextInput
+          value={broadcastBody}
+          onChangeText={setBroadcastBody}
+          placeholder="Body (optional)"
+          multiline
+          style={{ borderWidth: StyleSheet.hairlineWidth, minHeight:70, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
+        />
+        <View style={{ flexDirection:'row', gap:8 }}>
+          <A11yPressable
+            accessibilityRole="button"
+            accessibilityLabel="Send broadcast announcement"
+            disabled={!broadcastTitle.trim()}
+            onPress={async ()=> {
+              try {
+                await logActivity({ type:'broadcast', payload:{ title: broadcastTitle.trim(), body: broadcastBody.trim()||undefined, importance:'info' }, summaryKey:'broadcast.generic' });
+                setBroadcastTitle(''); setBroadcastBody(''); Alert.alert('Broadcast sent');
+              } catch { Alert.alert('Failed','Could not send broadcast'); }
+            }}
+            style={{ paddingHorizontal: 14, paddingVertical:10, backgroundColor: palette.primary, borderRadius:6, opacity: broadcastTitle.trim()?1:0.6 }}
+          >
+            <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>Send</Text>
+          </A11yPressable>
+          <A11yPressable
+            accessibilityRole="button"
+            accessibilityLabel="Clear broadcast form"
+            onPress={()=> { setBroadcastTitle(''); setBroadcastBody(''); }}
+            style={{ paddingHorizontal: 14, paddingVertical:10, backgroundColor: palette.surface, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+          >
+            <Text style={{ color: palette.text, fontWeight:'700' }}>Clear</Text>
+          </A11yPressable>
+        </View>
+
+        {/* FAQ Management */}
+        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>FAQs</Text>
+        <Text style={s.text}>Create or edit FAQ entries (remote collection).</Text>
+        <TextInput
+          value={faqQ}
+          onChangeText={setFaqQ}
+          placeholder="Question"
+          style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
+        />
+        <TextInput
+          value={faqA}
+          onChangeText={setFaqA}
+          placeholder="Answer"
+          multiline
+          style={{ borderWidth: StyleSheet.hairlineWidth, minHeight:70, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
+        />
+        <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
+          <A11yPressable
+            accessibilityLabel={editingFaqId? 'Update FAQ' : 'Create FAQ'}
+            disabled={!faqQ.trim() || !faqA.trim()}
+            onPress={async ()=> {
+              try {
+                if (editingFaqId) {
+                  await updateFaq(editingFaqId, { q: faqQ.trim(), a: faqA.trim() });
+                } else {
+                  await createFaq({ q: faqQ.trim(), a: faqA.trim(), source: 'admin' });
+                }
+                setFaqQ(''); setFaqA(''); setEditingFaqId(null);
+              } catch { Alert.alert('Failed','Could not save FAQ'); }
+            }}
+            style={{ paddingHorizontal:14, paddingVertical:10, backgroundColor: palette.primary, borderRadius:6, opacity: (!faqQ.trim() || !faqA.trim())?0.6:1 }}
+          >
+            <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{editingFaqId? 'Update' : 'Create'}</Text>
+          </A11yPressable>
+          {editingFaqId && (
+            <A11yPressable
+              accessibilityLabel="Cancel editing"
+              onPress={()=> { setEditingFaqId(null); setFaqQ(''); setFaqA(''); }}
+              style={{ paddingHorizontal:14, paddingVertical:10, backgroundColor: palette.surface, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+            >
+              <Text style={{ color: palette.text, fontWeight:'700' }}>Cancel</Text>
+            </A11yPressable>
+          )}
+        </View>
+        {faqs.map(f => (
+          <View key={f.id} style={{ marginBottom:6, paddingBottom:6, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted }}>
+            <Text style={[s.text,{ fontWeight:'700', marginBottom:2 }]}>{f.q}</Text>
+            <Text style={[s.text,{ opacity:0.9 }]}>{f.a}</Text>
+            <View style={{ flexDirection:'row', gap:8, marginTop:4 }}>
+              <A11yPressable
+                accessibilityLabel="Edit FAQ"
+                onPress={()=> { setEditingFaqId(f.id); setFaqQ(f.q); setFaqA(f.a); }}
+                style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.surface, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontWeight:'700' }}>Edit</Text>
+              </A11yPressable>
+              <A11yPressable
+                accessibilityLabel="Delete FAQ"
+                onPress={()=> Alert.alert('Delete','Remove this FAQ?', [ { text:'Cancel' }, { text:'Delete', style:'destructive', onPress: async()=> { try { await deleteFaq(f.id); } catch { Alert.alert('Failed','Could not delete'); } } } ]) }
+                style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.surface, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontWeight:'700' }}>Delete</Text>
+              </A11yPressable>
+            </View>
+          </View>
+        ))}
 
         {/* User Lookup */}
         <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>User Lookup</Text>

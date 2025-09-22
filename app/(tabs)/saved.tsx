@@ -2,13 +2,13 @@ import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import React from "react";
 import {
-  FlatList,
-  Pressable,
-  SectionList,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    FlatList,
+    Pressable,
+    SectionList,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
 import Card from "../../components/Card";
@@ -16,9 +16,9 @@ import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";
 import type { Podcast } from "../../data/podcasts";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
 import { fetchCampaigns } from "../../services/campaigns";

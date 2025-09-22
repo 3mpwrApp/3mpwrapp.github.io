@@ -1,21 +1,22 @@
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Stack, useLocalSearchParams } from "expo-router";
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  Linking,
-  Share,
+    Linking,
+    Pressable,
+    Share,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { useLocalSearchParams, Stack } from "expo-router";
 
-import { HIT_SLOP_8 } from "../../../constants/a11y";
-import { useAppPalette } from "../../../theme/usePalette";
-import { useTextScale } from "../../../theme/typography";
-import { resources } from "../../../data/resources";
-import { useFavorites } from "../../../store/favorites";
 import SettingsLink from "../../../components/SettingsLink";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { resources } from "../../../data/resources";
+import { logActivity } from "../../../services/activity";
+import { useFavorites } from "../../../store/favorites";
+import { useTextScale } from "../../../theme/typography";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export const options = { href: null };
 
@@ -26,6 +27,11 @@ export default function ResourceDetail() {
   const styles = createStyles(palette, factor);
 
   const resource = resources.find((r) => r.id === id);
+  React.useEffect(() => {
+    if (resource) {
+      logActivity({ type: 'resource.view', payload: { resourceId: resource.id, category: resource.category } });
+    }
+  }, [resource]);
 
   const catLabel = React.useMemo(() => {
     switch (resource?.category) {

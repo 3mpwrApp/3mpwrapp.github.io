@@ -61,6 +61,30 @@
     "subtitle": "Support. Advocacy. Empowerment.",
     "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!"
   },
+  "notify": {
+    "broadcast": {
+      "title": "Announcement: {{title}}",
+      "body": "{{body}}"
+    },
+    "petition": {
+      "signed": {
+        "title": "Petition signed",
+        "body": "You signed \"{{petition}}\""
+      }
+    },
+    "resource": {
+      "viewed": {
+        "title": "Resource viewed",
+        "body": "You viewed {{resource}}"
+      }
+    },
+    "faq": {
+      "created": {
+        "title": "FAQ added",
+        "body": "Created: {{question}}"
+      }
+    }
+  },
   "header": {
     "favorites": "Favs",
     "items": "Items",

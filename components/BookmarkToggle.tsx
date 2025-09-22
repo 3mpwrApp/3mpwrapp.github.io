@@ -2,6 +2,7 @@ import { usePathname } from 'expo-router';
 import { Text } from 'react-native';
 
 import { useTranslation } from '../i18n';
+import { logActivity } from '../services/activity';
 import { useBookmarks } from '../store/bookmarks';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
@@ -26,8 +27,14 @@ export default function BookmarkToggle() {
     <A11yPressable
       role="button"
       accessibilityLabel={active ? t('bookmark.remove', 'Remove bookmark') : t('bookmark.add', 'Add bookmark')}
-      onPress={() => {
-        if (active && existing) removeBookmark(existing.id); else addBookmark(entry.route, t(entry.tKey, entry.fallback), entry.tKey);
+      onPress={async () => {
+        if (active && existing) {
+          removeBookmark(existing.id);
+          logActivity({ type: 'bookmark.remove', payload: { targetId: existing.id } });
+        } else {
+          addBookmark(entry.route, t(entry.tKey, entry.fallback), entry.tKey);
+          logActivity({ type: 'bookmark.add', payload: { targetId: entry.route } });
+        }
       }}
       hitSlop={HIT_SLOP}
       style={{ paddingHorizontal: 12, paddingVertical: 6, minHeight:44, justifyContent:'center' }}

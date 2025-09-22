@@ -26,6 +26,7 @@ import {
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
+import { logActivity } from "../../../services/activity";
 import { logEvent } from "../../../services/analytics";
 import { fetchCampaigns } from "../../../services/campaigns";
 import {
@@ -223,6 +224,7 @@ function ScreenInner() {
                       Alert.alert('Leave Failed', 'Could not leave campaign (offline?)');
                     } else {
                       Alert.alert('Left Campaign', 'You have left this campaign.');
+                      logActivity({ type: 'feature.use', payload: { feature: 'campaign.leave', id: item.id } });
                     }
                   } else {
                     join(item.id);
@@ -233,6 +235,12 @@ function ScreenInner() {
                       Alert.alert('Join Failed', 'Could not join campaign (offline?)');
                     } else {
                       Alert.alert('Joined Campaign', 'You are now supporting this campaign.');
+                      // Treat petitions specially for signing event.
+                      if ((item as any).kind === 'petition') {
+                        logActivity({ type: 'petition.sign', payload: { petitionId: item.id } });
+                      } else {
+                        logActivity({ type: 'feature.use', payload: { feature: 'campaign.join', id: item.id } });
+                      }
                     }
                   }
                 }}

@@ -1,25 +1,25 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  Linking,
-  Alert,
+    Alert,
+    Linking,
+    Pressable,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
-import { HIT_SLOP_8 } from "../../constants/a11y";
-import { useAppPalette } from "../../theme/usePalette";
-import { useTextScale } from "../../theme/typography";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-} from "../../hooks/useA11y";
-import SettingsLink from "../../components/SettingsLink";
 import ContrastToggle from "../../components/ContrastToggle";
+import SettingsLink from "../../components/SettingsLink";
+import { HIT_SLOP_8 } from "../../constants/a11y";
+import {
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
+} from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
+import { useTextScale } from "../../theme/typography";
+import { useAppPalette } from "../../theme/usePalette";
 
 const EMAIL = "empowrapp08162025@gmail.com";
 

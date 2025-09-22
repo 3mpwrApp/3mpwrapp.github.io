@@ -15,8 +15,8 @@ jest.mock('react-native', () => {
     const {
       accessibilityRole,
       accessibilityLabel,
-      // accessibilityState intentionally omitted (unused in test env mock)
-      // hitSlop omitted
+      accessibilityState, // remove from DOM
+      hitSlop, // remove from DOM
       onPress,
       ...rest
     } = props;
@@ -35,3 +35,37 @@ try {
     rtl.fireEvent.press = rtl.fireEvent.click;
   }
 } catch {}
+
+// Suppress known noisy React Native / Expo warnings that add no test value
+const originalWarn = console.warn;
+const originalError = console.error;
+const NOISY_WARN_PATTERNS = [
+  /Animated: `useNativeDriver` was not specified/i,
+  /Remote debugger is in a background tab/i,
+  /Require cycle:/i,
+  /deprecated prop type/i,
+  /Non-serializable values were found in the navigation state/i,
+  /RCTBridge required dispatch_sync to load/i,
+  /ViewPropTypes will be removed/i,
+  /Can't perform a React state update on an unmounted component/i,
+  /AsyncStorage has been extracted from react-native core/i,
+  /Warning: componentWillReceiveProps has been renamed/i
+];
+function shouldFilter(message, args){
+  if (typeof message === 'string') {
+    return NOISY_WARN_PATTERNS.some(r=> r.test(message));
+  }
+  if (args && args.length && typeof args[0] === 'string') {
+    return NOISY_WARN_PATTERNS.some(r=> r.test(args[0]));
+  }
+  return false;
+}
+console.warn = function(...args){
+  if (shouldFilter(args[0], args)) return; // swallow
+  return originalWarn.apply(this,args);
+};
+console.error = function(...args){
+  // Keep console.error strict: only filter the exact duplicate patterns when they originate as warnings mis-routed.
+  if (shouldFilter(args[0], args)) return;
+  return originalError.apply(this,args);
+};

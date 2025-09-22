@@ -1,5 +1,7 @@
 export type Faq = { id: string; q: string; a: string };
 
+// TODO(deprecate): After confirming Firestore seeding (`scripts/seed-faqs.js`) in production environments,
+// migrate consumers to rely solely on remote collection + local user additions, then remove this file.
 export const faqs: Faq[] = [
   {
     id: "f1",

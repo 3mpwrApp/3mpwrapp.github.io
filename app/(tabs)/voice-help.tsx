@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-import { useAppPalette } from '../../theme/usePalette';
 import { useTranslation } from '../../i18n';
+import { useAppPalette } from '../../theme/usePalette';
 
 export const options = { href: null };
 

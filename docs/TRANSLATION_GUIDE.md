@@ -131,5 +131,30 @@ When new English keys are added:
 - Extraction script to pull keys referenced in code automatically.
 - Screenshot-based context for translators.
 
+## Planned Tightening: Removal of `I18N_ALLOW_TAGS`
+We currently allow `[T]` placeholders in CI when the environment flag `I18N_ALLOW_TAGS=1` is set. This staged approach let us build a complete key baseline without blocking feature work.
+
+Staged plan:
+1. Baseline (DONE): Seed all missing keys + allow tags (flag on in dev/CI).
+2. Coverage Push: Reduce untranslated ceiling via `i18n-threshold` script until < 5% remain.
+3. Soft Enforcement: Turn off `I18N_ALLOW_TAGS` locally; fix offenders; keep flag only in CI for one sprint.
+4. Hard Enforcement: Remove the flag from CI; `[T]` tags cause failure (`i18n-tag-untranslated` + `i18n-assert-clean`).
+5. Post-Removal: Delete references to the flag from scripts and docs; rely solely on threshold + orphan & naming lint.
+
+Action Items for Contributors:
+- Avoid adding new `[T]` tags unless they will be translated same day.
+- Prefer committing real translations (even draft) to prevent churn.
+- Watch CI output for threshold warnings.
+
+## New Linting / Quality Scripts Added
+| Script | Purpose |
+|--------|---------|
+| `i18n-orphans` | Detect unused (orphan) keys & missing references. |
+| `i18n-lint-keys` | Enforce naming conventions (lowercase dot/kebab segments). |
+| `seed-faqs` | One-off seeding of static FAQ set into Firestore. |
+| `seed-targets` / `seed-resources` | Existing seed utilities (reference). |
+
+Integrate `i18n-lint-keys` and `i18n-orphans` into pre-release flows to maintain cleanliness as namespaces grow.
+
 ---
 Questions or improvements? Open an issue or add a note to this guide.

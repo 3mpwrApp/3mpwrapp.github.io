@@ -25,6 +25,30 @@
     "subtitle": "Apoyo. Defensa. Empoderamiento.",
     "welcome": "¡Bienvenido! Tu centro para comunidad, educación, herramientas de defensa y podcasts — ¡todo en un solo lugar!"
   },
+  "notify": {
+    "broadcast": {
+      "title": "Anuncio: {{title}}",
+      "body": "{{body}}"
+    },
+    "petition": {
+      "signed": {
+        "title": "Petición firmada",
+        "body": "Firmaste \"{{petition}}\""
+      }
+    },
+    "resource": {
+      "viewed": {
+        "title": "Recurso visto",
+        "body": "Consultaste {{resource}}"
+      }
+    },
+    "faq": {
+      "created": {
+        "title": "FAQ añadida",
+        "body": "Creada: {{question}}"
+      }
+    }
+  },
   "settings": {
     "title": "Configuración",
     "accessibility": {

@@ -25,6 +25,30 @@
     "subtitle": "Soutien. Défense. Autonomisation.",
     "welcome": "Bienvenue ! Votre hub pour communauté, éducation, outils de défense et balados — tout au même endroit !"
   },
+  "notify": {
+    "broadcast": {
+      "title": "Annonce : {{title}}",
+      "body": "{{body}}"
+    },
+    "petition": {
+      "signed": {
+        "title": "Pétition signée",
+        "body": "Vous avez signé \"{{petition}}\""
+      }
+    },
+    "resource": {
+      "viewed": {
+        "title": "Ressource consultée",
+        "body": "Vous avez consulté {{resource}}"
+      }
+    },
+    "faq": {
+      "created": {
+        "title": "FAQ ajoutée",
+        "body": "Créé : {{question}}"
+      }
+    }
+  },
   "settings": {
     "title": "Paramètres",
     "accessibility": {

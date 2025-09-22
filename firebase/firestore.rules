@@ -123,6 +123,12 @@ service cloud.firestore {
       allow create: if isSignedIn();
     }
 
+    // FAQs (public read; admin write)
+    match /faqs/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
     // Ratings (public read; one-per-user-per-target via doc id)
     match /ratings/{docId} {
       allow read: if true;

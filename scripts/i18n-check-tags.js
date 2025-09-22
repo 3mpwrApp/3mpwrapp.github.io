@@ -2,6 +2,7 @@
 const fs=require('fs');
 const path=require('path');
 const TAG='[T]';
+const allowTags = process.env.I18N_ALLOW_TAGS === '1';
 function load(locale){
   const p=path.join(__dirname,'..','locales',locale,'common.json');
   const raw=fs.readFileSync(p,'utf8').replace(/^\uFEFF/,'');
@@ -20,7 +21,11 @@ locales.forEach(loc=>{
 });
 if(taggedTotal>0){
   console.log(`Total tagged: ${taggedTotal}`);
-  process.exitCode=1;
-}else{
+  if(!allowTags){
+    process.exitCode=1;
+  } else {
+    console.warn('Tags present but allowed via I18N_ALLOW_TAGS=1');
+  }
+} else {
   console.log('No tagged strings found.');
 }

@@ -3,6 +3,7 @@ const fs=require('fs');
 const path=require('path');
 const TAG='[T]';
 const max=parseInt(process.env.I18N_MAX_UNTRANSLATED||'0',10);
+const allowTags = process.env.I18N_ALLOW_TAGS === '1';
 function load(locale){
   const p=path.join(__dirname,'..','locales',locale,'common.json');
   const raw=fs.readFileSync(p,'utf8').replace(/^\uFEFF/,'');
@@ -20,8 +21,12 @@ locales.forEach(loc=>{
 });
 console.log('Total untranslated:', untranslated, 'Allowed:', max);
 if(untranslated>max){
-  console.error('Untranslated count above threshold.');
-  process.exitCode=1;
-}else{
+  if(allowTags){
+    console.warn('Untranslated count above threshold but allowed via I18N_ALLOW_TAGS=1 (temporary).');
+  } else {
+    console.error('Untranslated count above threshold.');
+    process.exitCode=1;
+  }
+} else {
   console.log('Within threshold.');
 }

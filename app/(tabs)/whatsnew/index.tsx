@@ -1,28 +1,30 @@
+import { useFocusEffect } from "@react-navigation/native";
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  SectionList,
-  TextInput,
-  Pressable,
+    Pressable,
+    SectionList,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
-import { useFocusEffect } from "@react-navigation/native";
 
-import { useAppPalette } from "../../../theme/usePalette";
-import { useTextScale } from "../../../theme/typography";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-} from "../../../hooks/useA11y";
+import ContrastToggle from "../../../components/ContrastToggle";
+import SettingsLink from "../../../components/SettingsLink";
 import { whatsnew as defaultWN } from "../../../data/whatsnew";
 import {
-  getLocalWhatsNew,
-  addLocalWhatsNew,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
+import { subscribeToActivityFeed } from "../../../services/activity";
+import {
+    addLocalWhatsNew,
+    getLocalWhatsNew,
 } from "../../../services/localContent";
-import SettingsLink from "../../../components/SettingsLink";
-import ContrastToggle from "../../../components/ContrastToggle";
+import { useTextScale } from "../../../theme/typography";
+import { useAppPalette } from "../../../theme/usePalette";
+import type { AnyActivityEvent } from "../../../types/activity";
 
 export default function WhatsNewScreen() {
   const palette = useAppPalette();
@@ -37,6 +39,7 @@ export default function WhatsNewScreen() {
   const [lastSeen, setLastSeen] = React.useState<string | null>(null);
   const AsyncStorageRef = React.useRef<any>(null);
   const [items, setItems] = React.useState(defaultWN);
+  const [activity, setActivity] = React.useState<AnyActivityEvent[]>([]);
   const [title, setTitle] = React.useState("");
   const [summary, setSummary] = React.useState("");
   React.useEffect(() => {
@@ -57,6 +60,24 @@ export default function WhatsNewScreen() {
     })();
   }, []);
 
+  // Real-time activity subscription
+  React.useEffect(() => {
+    const unsub = subscribeToActivityFeed(evts => {
+      setActivity(evts);
+    }, { limit: 120 });
+    return () => unsub();
+  }, []);
+
+  // Map activity events to display items (light transformation)
+  const activityItems = React.useMemo(() => {
+    return activity.map(a => ({
+      id: a.id || `act-${a.ts}-${a.type}`,
+      title: readableTitle(a),
+      summary: readableSummary(a),
+      date: new Date(a.ts).toISOString()
+    }));
+  }, [activity]);
+
   // Mark as seen when visiting this tab
   useFocusEffect(
     React.useCallback(() => {
@@ -73,8 +94,9 @@ export default function WhatsNewScreen() {
     (now.getTime() - new Date(d).getTime()) / (1000 * 60 * 60 * 24) <= 30;
   const isUnread = (d: string) =>
     lastSeen ? new Date(d).getTime() > new Date(lastSeen).getTime() : true;
-  const recent = items.filter((i) => isWithin30Days(i.date));
-  const older = items.filter((i) => !isWithin30Days(i.date));
+  const combined = [...activityItems, ...items];
+  const recent = combined.filter((i) => isWithin30Days(i.date));
+  const older = combined.filter((i) => !isWithin30Days(i.date));
   const sections = [
     ...(recent.length ? [{ title: "New", data: recent }] : []),
     ...(older.length ? [{ title: "Archive", data: older }] : []),
@@ -97,7 +119,7 @@ export default function WhatsNewScreen() {
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.subtitle}>
-        Latest updates. Items older than 30 days move to Archive.
+        Latest updates & live activity (bookmarks, petitions, resources). Older than 30 days move to Archive.
       </Text>
       <View style={{ marginBottom: 8 }}>
         <TextInput
@@ -161,7 +183,7 @@ export default function WhatsNewScreen() {
       </Pressable>
 
       <SectionList
-        sections={sections}
+  sections={sections}
         keyExtractor={(item) => item.id}
         renderSectionHeader={({ section }) => (
           <Text style={styles.section}>{section.title}</Text>
@@ -264,6 +286,38 @@ function createStyles(
     },
     buttonText: { color: palette.onPrimary, fontSize: 16, fontWeight: "700" },
   });
+}
+
+// Map raw activity events to simple human-readable lines.
+function readableTitle(a: AnyActivityEvent): string {
+  switch(a.type){
+    case 'bookmark.add': return 'Bookmark Added';
+    case 'bookmark.remove': return 'Bookmark Removed';
+    case 'petition.sign': return 'Petition Signed';
+    case 'resource.view': return 'Resource Viewed';
+    case 'broadcast': return a.payload?.title || 'Broadcast';
+    case 'feature.use': return 'Feature Used';
+    case 'a11y.toggle': return 'Accessibility Toggle';
+    case 'faq.create': return 'FAQ Created';
+    case 'faq.update': return 'FAQ Updated';
+    case 'faq.delete': return 'FAQ Deleted';
+    default: return a.type;
+  }
+}
+function readableSummary(a: AnyActivityEvent): string {
+  switch(a.type){
+    case 'bookmark.add': return `Added: ${a.payload?.targetId || ''}`.trim();
+    case 'bookmark.remove': return `Removed: ${a.payload?.targetId || ''}`.trim();
+    case 'petition.sign': return `Signed petition ${a.payload?.petitionId || ''}`.trim();
+    case 'resource.view': return `Viewed resource ${a.payload?.resourceId || ''}`.trim();
+    case 'broadcast': return a.payload?.body || a.payload?.title || 'Announcement';
+    case 'feature.use': return a.payload?.feature ? `Used ${a.payload.feature}` : 'Feature interaction';
+    case 'a11y.toggle': return `${a.payload?.feature} set to ${a.payload?.enabled}`;
+    case 'faq.create': return `Created FAQ: ${a.payload?.q || a.payload?.id || ''}`.trim();
+    case 'faq.update': return `Updated FAQ: ${a.payload?.q || a.payload?.id || ''}`.trim();
+    case 'faq.delete': return `Deleted FAQ ${a.payload?.id || ''}`.trim();
+    default: return a.type;
+  }
 }
 
 
