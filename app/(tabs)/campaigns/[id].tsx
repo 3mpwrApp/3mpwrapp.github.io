@@ -20,6 +20,7 @@ import {
 import { useFavorites } from "../../../store/favorites";
 import { colors, type Palette } from "../../../theme/colors";
 import { useTextScale } from "../../../theme/typography";
+import { useTranslation } from "../../../i18n";
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -34,6 +35,7 @@ function CampaignDetailInner() {
   const { isJoined, join, leave } = useCampaignsLocal();
   const joined = campaign ? isJoined(campaign.id) : false;
   const { user } = useAuth();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -54,9 +56,7 @@ function CampaignDetailInner() {
             ]}
             onPress={() => toggle("campaign", campaign.id)}
             accessibilityRole="button"
-            accessibilityLabel={
-              saved ? "Remove from favorites" : "Save to favorites"
-            }
+            accessibilityLabel={saved ? t('a11y.removeCampaign') : t('a11y.saveCampaign')}
             focusable
           >
             <Text style={styles.buttonText}>
@@ -96,7 +96,7 @@ function CampaignDetailInner() {
               }
             }}
             accessibilityRole="button"
-            accessibilityLabel={joined ? "Leave campaign" : "Join campaign"}
+            accessibilityLabel={joined ? t('a11y.leaveCampaign').replace('{{title}}', campaign.title) : t('a11y.joinCampaign').replace('{{title}}', campaign.title)}
             focusable
           >
             <Text style={styles.secondaryText}>
@@ -115,7 +115,7 @@ function CampaignDetailInner() {
               router.push(`/(tabs)/campaigns/room/${campaign.id}`);
             }}
             accessibilityRole="button"
-            accessibilityLabel="Open campaign room"
+            accessibilityLabel={t('a11y.openCampaignRoom')}
             focusable
           >
             <Text style={styles.linkText}>Open Campaign Room</Text>
@@ -134,7 +134,7 @@ function CampaignDetailInner() {
               } catch {}
             }}
             accessibilityRole="button"
-            accessibilityLabel="Share campaign"
+            accessibilityLabel={t('a11y.shareCampaign').replace('{{title}}', campaign.title)}
             focusable
           >
             <Text style={styles.linkText}>Share</Text>

@@ -195,6 +195,20 @@
     "save": "Save",
     "saved": "Saved"
   },
+  "a11y": {
+    "shareCampaign": "Share campaign {{title}}",
+    "joinCampaign": "Join {{title}}",
+    "leaveCampaign": "Leave {{title}}",
+    "supportCampaign": "Support this campaign",
+    "openCampaignRoom": "Open campaign room",
+    "saveCampaign": "Save to favorites",
+    "removeCampaign": "Remove from favorites",
+    "toggleCreateEventFormOpen": "Show create event form",
+    "toggleCreateEventFormClose": "Hide create event form",
+    "scheduleEventReminder": "Schedule event reminder",
+    "removeEventReminder": "Remove event reminder",
+    "addToCalendar": "Add to external calendar"
+  },
   "justiceService": {
     "header": "Empowr — Local Advocacy Snapshot",
     "evidenceLine": "Evidence Locker: {{noteCount}} notes, {{docCount}} file(s)",

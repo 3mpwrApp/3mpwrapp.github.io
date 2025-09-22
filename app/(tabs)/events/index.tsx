@@ -36,11 +36,13 @@ import { useRefresh } from "../../../store/refresh";
 import { useSettings } from "../../../store/settings";
 import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
+import { useTranslation } from "../../../i18n";
 
 export default function EventsScreen() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
+  const { t } = useTranslation();
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Events");
   useFocusOnRefOnMount(titleRef);
@@ -184,7 +186,7 @@ export default function EventsScreen() {
 
       <A11yPressable
         accessibilityRole="button"
-        accessibilityLabel={showCreate ? "Hide create event form" : "Show create event form"}
+        accessibilityLabel={showCreate ? t('a11y.toggleCreateEventFormClose') : t('a11y.toggleCreateEventFormOpen')}
         onPress={() => setShowCreate(v => !v)}
         style={{ alignSelf:'flex-start', marginBottom: 8, paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.primary }}
       >

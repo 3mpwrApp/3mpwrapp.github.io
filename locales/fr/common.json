@@ -143,6 +143,20 @@
     "save": "Enregistrer",
     "saved": "Enregistré"
   },
+  "a11y": {
+    "shareCampaign": "Partager la campagne {{title}}",
+    "joinCampaign": "Rejoindre {{title}}",
+    "leaveCampaign": "Quitter {{title}}",
+    "supportCampaign": "Soutenir cette campagne",
+    "openCampaignRoom": "Ouvrir la salle de campagne",
+    "saveCampaign": "Ajouter aux favoris",
+    "removeCampaign": "Retirer des favoris",
+    "toggleCreateEventFormOpen": "Afficher le formulaire d'événement",
+    "toggleCreateEventFormClose": "Masquer le formulaire d'événement",
+    "scheduleEventReminder": "Programmer le rappel de l'événement",
+    "removeEventReminder": "Supprimer le rappel de l'événement",
+    "addToCalendar": "Ajouter au calendrier externe"
+  },
   "eventsFeature": {
     "createTitle": "Créer événement",
     "create": "Créer",

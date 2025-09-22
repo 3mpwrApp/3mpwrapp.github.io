@@ -17,6 +17,7 @@ import Card from "../../../components/Card";
 import SearchBar from "../../../components/SearchBar";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useAuth } from "../../../context/AuthContext";
+import { useTranslation } from "../../../i18n";
 import { campaigns as localCampaigns } from "../../../data/campaigns";
 import { petitions } from "../../../data/petitions";
 import {
@@ -61,6 +62,7 @@ function ScreenInner() {
   const { setOffline } = useNetwork();
   const { state: local, createCampaign, join, leave, isJoined } = useCampaignsLocal();
   const { user } = useAuth();
+  const { t } = useTranslation();
   const inFlightRef = React.useRef<Record<string, number>>({});
 
   const reload = React.useCallback(async () => {
@@ -199,7 +201,7 @@ function ScreenInner() {
                   } catch {}
                 }}
                 accessibilityRole="button"
-                accessibilityLabel={`Share ${item.title}`}
+                accessibilityLabel={t('a11y.shareCampaign').replace('{{title}}', item.title)}
                 style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6 }}
               >
                 <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>Share</Text>
@@ -235,7 +237,7 @@ function ScreenInner() {
                   }
                 }}
                 accessibilityRole="button"
-                accessibilityLabel={(isJoined(item.id)? 'Leave' : 'Join') + ' ' + item.title}
+                accessibilityLabel={isJoined(item.id) ? t('a11y.leaveCampaign').replace('{{title}}', item.title) : t('a11y.joinCampaign').replace('{{title}}', item.title)}
                 style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6, backgroundColor: isJoined(item.id)? palette.primary: 'transparent', opacity: inFlightRef.current[item.id] && Date.now()-inFlightRef.current[item.id]<400? 0.6:1 }}
               >
                 <Text style={{ color: isJoined(item.id)? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{isJoined(item.id)? 'Joined':'Join'}</Text>
@@ -246,7 +248,7 @@ function ScreenInner() {
                   try { await fsIncrementCampaignMembers(item.id, 1); } catch {}
                 }}
                 accessibilityRole="button"
-                accessibilityLabel="Support this campaign"
+                accessibilityLabel={t('a11y.supportCampaign')}
                 style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6 }}
               >
                 <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>+1</Text>

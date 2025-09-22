@@ -10,6 +10,7 @@ import { events } from "../../../data/events";
 import { isScheduled, removeReminder, scheduleForEvent } from "../../../services/eventReminders";
 import { useSettings } from "../../../store/settings";
 import { useAppPalette } from "../../../theme/usePalette";
+import { useTranslation } from "../../../i18n";
 
 function createICS(
   title: string,
@@ -33,6 +34,7 @@ export default function EventDetail() {
   const event = events.find((e) => e.id === id);
   const { eventReminders } = useSettings();
   const [scheduled, setScheduled] = React.useState(false);
+  const { t } = useTranslation();
 
   React.useEffect(() => {
     if (!event?.id) return;
@@ -128,7 +130,7 @@ export default function EventDetail() {
                 }
               }}
               accessibilityRole="button"
-              accessibilityLabel={scheduled ? 'Remove event reminder' : 'Schedule event reminder'}
+              accessibilityLabel={scheduled ? t('a11y.removeEventReminder') : t('a11y.scheduleEventReminder')}
               hitSlop={HIT_SLOP_8}
             >
               <Text style={styles.buttonText}>{scheduled ? 'Remove Reminder' : 'Add Reminder'}</Text>
@@ -141,7 +143,7 @@ export default function EventDetail() {
               ]}
               onPress={addToCalendar}
               accessibilityRole="button"
-              accessibilityLabel="Add to external calendar"
+              accessibilityLabel={t('a11y.addToCalendar')}
               hitSlop={HIT_SLOP_8}
             >
               <Text style={styles.secondaryButtonText}>Add to Calendar</Text>

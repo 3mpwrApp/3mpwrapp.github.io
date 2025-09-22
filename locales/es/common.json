@@ -143,6 +143,20 @@
     "save": "Guardar",
     "saved": "Guardado"
   },
+  "a11y": {
+    "shareCampaign": "Compartir campaña {{title}}",
+    "joinCampaign": "Unirse a {{title}}",
+    "leaveCampaign": "Salir de {{title}}",
+    "supportCampaign": "Apoyar esta campaña",
+    "openCampaignRoom": "Abrir sala de campaña",
+    "saveCampaign": "Guardar en favoritos",
+    "removeCampaign": "Quitar de favoritos",
+    "toggleCreateEventFormOpen": "Mostrar formulario de evento",
+    "toggleCreateEventFormClose": "Ocultar formulario de evento",
+    "scheduleEventReminder": "Programar recordatorio del evento",
+    "removeEventReminder": "Quitar recordatorio del evento",
+    "addToCalendar": "Agregar al calendario externo"
+  },
   "eventsFeature": {
     "createTitle": "Crear evento",
     "create": "Crear",

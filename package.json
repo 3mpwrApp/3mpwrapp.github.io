@@ -124,7 +124,8 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --cache --fix",
       "jest --bail --findRelatedTests --passWithNoTests"
-    ]
+    ],
+    "!.eslintcache": []
   },
   "overrides": {
     "@sentry/browser": "^7.119.1",
