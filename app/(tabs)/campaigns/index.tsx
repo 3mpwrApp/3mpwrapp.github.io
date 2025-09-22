@@ -16,7 +16,9 @@ import {
 import Card from "../../../components/Card";
 import SearchBar from "../../../components/SearchBar";
 import SkeletonRow from "../../../components/SkeletonRow";
+import { useAuth } from "../../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../../data/campaigns";
+import { petitions } from "../../../data/petitions";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnChange,
@@ -39,7 +41,6 @@ import { useCounts } from "../../../store/counts";
 import { useNetwork } from "../../../store/network";
 import { useRefresh } from "../../../store/refresh";
 import { colors, type Palette } from "../../../theme/colors";
-import { useAuth } from "../../../context/AuthContext";
 
 function ScreenInner() {
   const scheme = useColorScheme();
@@ -52,6 +53,7 @@ function ScreenInner() {
 
   const [query, setQuery] = React.useState("");
   const [items, setItems] = React.useState(localCampaigns);
+  const [localPetitions, setLocalPetitions] = React.useState(petitions);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -87,9 +89,14 @@ function ScreenInner() {
 
   useAnnounceOnChange(items.length, (n) => `${n} campaigns loaded`);
 
-  const allItems = React.useMemo(
-    () => [...local.myCampaigns, ...items],
-    [local.myCampaigns, items],
+  type Mixed = (typeof local.myCampaigns[number] & { kind?: 'campaign' | 'petition' });
+  const allItems = React.useMemo<Mixed[]>(
+    () => [
+      ...local.myCampaigns.map(c => ({ ...c, kind: 'campaign' as const })),
+      ...items.map(c => ({ ...c, kind: 'campaign' as const })),
+      ...localPetitions.map(p => ({ ...p, kind: 'petition' as const })),
+    ],
+    [local.myCampaigns, items, localPetitions],
   );
 
   const joinedCount = React.useMemo(() => Object.keys(local.joined).length, [local.joined]);
@@ -177,7 +184,7 @@ function ScreenInner() {
               asChild
             >
               <Card
-                title={item.title}
+                title={item.title + (item.kind === 'petition' ? ' (Petition)' : '')}
                 subtitle={`${item.summary}${item.membersCount ? ` - ${item.membersCount} supporters` : ""}`}
               />
             </Link>
@@ -233,6 +240,7 @@ function ScreenInner() {
               >
                 <Text style={{ color: isJoined(item.id)? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{isJoined(item.id)? 'Joined':'Join'}</Text>
               </Pressable>
+              {item.kind !== 'petition' && (
               <Pressable
                 onPress={async () => {
                   try { await fsIncrementCampaignMembers(item.id, 1); } catch {}
@@ -243,6 +251,7 @@ function ScreenInner() {
               >
                 <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>+1</Text>
               </Pressable>
+              )}
             </View>
           </View>
         )}
