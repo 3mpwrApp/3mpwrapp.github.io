@@ -1,4 +1,8 @@
-// Deprecated duplicate of i18n tests intentionally left empty.
-// Any JSX here will cause CI guard (scripts/check-jsx-tests.js) to fail.
-// Remove this file if no longer needed.
+// Deprecated duplicate of i18n tests.
+// Keeping a no-op test so Jest does not fail with zero tests.
+describe('i18n placeholder', () => {
+	it('noop', () => {
+		expect(true).toBe(true);
+	});
+});
 
