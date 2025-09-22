@@ -1,14 +1,14 @@
 import * as Linking from "expo-linking";
-import React from 'react';
 import { Stack, useLocalSearchParams } from "expo-router";
-import { Share, StyleSheet, Text, View, Alert } from "react-native";
+import React from 'react';
+import { Alert, Share, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
 import SettingsLink from "../../../components/SettingsLink";
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { events } from "../../../data/events";
+import { isScheduled, removeReminder, scheduleForEvent } from "../../../services/eventReminders";
 import { useSettings } from "../../../store/settings";
-import { scheduleForEvent, isScheduled, removeReminder } from "../../../services/eventReminders";
 import { useAppPalette } from "../../../theme/usePalette";
 
 function createICS(

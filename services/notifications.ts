@@ -1,6 +1,6 @@
 // Optional notification helper. Uses expo-notifications if available, else no-ops.
-import { Platform } from "react-native";
 import Constants from "expo-constants";
+import { Platform } from "react-native";
 let Notifications: any;
 try {
   Notifications = require("expo-notifications");

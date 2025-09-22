@@ -1,24 +1,24 @@
+import { Stack, router, useLocalSearchParams } from "expo-router";
 import {
-  View,
-  Text,
-  StyleSheet,
-  useColorScheme,
-  Pressable,
-  Share,
+    Pressable,
+    Share,
+    StyleSheet,
+    Text,
+    View,
+    useColorScheme,
 } from "react-native";
-import { useLocalSearchParams, Stack, router } from "expo-router";
 
-import { colors, type Palette } from "../../../theme/colors";
 import SettingsLink from "../../../components/SettingsLink";
-import { useTextScale } from "../../../theme/typography";
 import { campaigns } from "../../../data/campaigns";
-import { useFavorites } from "../../../store/favorites";
-import {
-  useCampaignsLocal,
-  CampaignsLocalProvider,
-} from "../../../store/campaignsLocal";
 import { logEvent } from "../../../services/analytics";
 import { fsJoinCampaign, fsLeaveCampaign } from "../../../services/firestore";
+import {
+    CampaignsLocalProvider,
+    useCampaignsLocal,
+} from "../../../store/campaignsLocal";
+import { useFavorites } from "../../../store/favorites";
+import { colors, type Palette } from "../../../theme/colors";
+import { useTextScale } from "../../../theme/typography";
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();

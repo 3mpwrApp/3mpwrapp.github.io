@@ -26,10 +26,10 @@ import {
 import { logEvent } from "../../../services/analytics";
 import { fetchCampaigns } from "../../../services/campaigns";
 import {
-  fsAddCampaign,
-  fsIncrementCampaignMembers,
-  fsJoinCampaign,
-  fsLeaveCampaign,
+    fsAddCampaign,
+    fsIncrementCampaignMembers,
+    fsJoinCampaign,
+    fsLeaveCampaign,
 } from "../../../services/firestore";
 import {
     CampaignsLocalProvider,

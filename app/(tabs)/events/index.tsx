@@ -3,11 +3,11 @@ import React from "react";
 import {
     FlatList,
     RefreshControl,
+    Share,
     StyleSheet,
     Text,
     TextInput,
     View,
-    Share,
 } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';

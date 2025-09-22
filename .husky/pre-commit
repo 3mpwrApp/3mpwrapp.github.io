@@ -7,8 +7,10 @@ if [ "$SKIP_HOOKS" = "1" ]; then
 	exit 0
 fi
 
-echo "→ Running lint-staged (pre-commit)"
-npx lint-staged
+echo "→ Running lint-staged (pre-commit) with --no-stash"
+# Ensure .eslintcache isn't partially staged noise
+git reset -q HEAD .eslintcache 2>/dev/null || true
+npx lint-staged --no-stash
 rc=$?
 if [ $rc -ne 0 ]; then
 	echo "✗ lint-staged failed (commit aborted)"
