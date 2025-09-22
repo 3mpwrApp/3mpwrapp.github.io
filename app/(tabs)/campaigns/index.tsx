@@ -17,7 +17,6 @@ import Card from "../../../components/Card";
 import SearchBar from "../../../components/SearchBar";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { useAuth } from "../../../context/AuthContext";
-import { useTranslation } from "../../../i18n";
 import { campaigns as localCampaigns } from "../../../data/campaigns";
 import { petitions } from "../../../data/petitions";
 import {
@@ -26,6 +25,7 @@ import {
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
 import { logEvent } from "../../../services/analytics";
 import { fetchCampaigns } from "../../../services/campaigns";
 import {
@@ -242,7 +242,6 @@ function ScreenInner() {
               >
                 <Text style={{ color: isJoined(item.id)? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{isJoined(item.id)? 'Joined':'Join'}</Text>
               </Pressable>
-              {item.kind !== 'petition' && (
               <Pressable
                 onPress={async () => {
                   try { await fsIncrementCampaignMembers(item.id, 1); } catch {}
@@ -253,7 +252,6 @@ function ScreenInner() {
               >
                 <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>+1</Text>
               </Pressable>
-              )}
             </View>
           </View>
         )}

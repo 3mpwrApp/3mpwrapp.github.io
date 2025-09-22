@@ -20,6 +20,7 @@ import { I18nProvider } from "../i18n";
 import { fetchCampaigns } from "../services/campaigns";
 import { fetchEvents } from "../services/events";
 import * as Notifier from "../services/notifications";
+import { pruneExpiredReminders } from "../services/eventReminders";
 import { fetchPodcasts } from "../services/podcasts";
 import { fetchResources } from "../services/resources";
 import { initAnalytics, initSentry } from "../services/telemetry";
@@ -64,6 +65,8 @@ export default function RootLayout() {
     Notifier.getExpoPushToken().then((t) => {
       if (t && __DEV__) console.warn("Expo push token:", t);
     });
+    // Cleanup any past-due event reminders (fire and forget)
+    pruneExpiredReminders().then(r => { if (r.removed && __DEV__) console.warn('Pruned reminders', r.removed); }).catch(()=>{});
   }, []);
 
   // Announce route changes for screen readers

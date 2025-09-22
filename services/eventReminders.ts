@@ -55,3 +55,30 @@ export async function removeReminder(eventId: string) {
     await AsyncStorage.removeItem(KEY_PREFIX + eventId);
   } catch {}
 }
+
+// Remove reminders whose trigger time is in the past (cleanup on startup)
+export async function pruneExpiredReminders() {
+  try {
+    const keys = await AsyncStorage.getAllKeys();
+    const evKeys = keys.filter(k => k.startsWith(KEY_PREFIX));
+    if (!evKeys.length) return { removed: 0 } as const;
+    const values = await AsyncStorage.multiGet(evKeys);
+    let removed = 0;
+    const toRemove: string[] = [];
+    for (const [k, v] of values) {
+      if (!v) continue;
+      try {
+        const parsed = JSON.parse(v);
+        if (parsed?.at && new Date(parsed.at).getTime() <= Date.now()) {
+          if (parsed?.notifId) await Notifier.cancel(parsed.notifId);
+          toRemove.push(k);
+          removed++;
+        }
+      } catch {}
+    }
+    if (toRemove.length) await AsyncStorage.multiRemove(toRemove);
+    return { removed } as const;
+  } catch {
+    return { removed: 0 } as const;
+  }
+}
