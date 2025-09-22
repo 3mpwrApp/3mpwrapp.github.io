@@ -54,7 +54,7 @@ function ScreenInner() {
 
   const [query, setQuery] = React.useState("");
   const [items, setItems] = React.useState(localCampaigns);
-  const [localPetitions, setLocalPetitions] = React.useState(petitions);
+  const [localPetitions] = React.useState(petitions);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 

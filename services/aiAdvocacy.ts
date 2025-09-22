@@ -31,7 +31,7 @@ export async function aiInterpret(input: string) {
   return { summary: summary || 'Summary unavailable - provide more detail.', next };
 }
 
-export async function aiPolicySimplify(topic: string, text: string) {
+export async function aiPolicySimplify(_topic: string, text: string) {
   if (!text.trim()) return { summary: '', keyPoints: [] as string[] };
   // No remote endpoint yet; reuse aiSimplify and extract bullet-ish lines
   const simple = await aiSimplify(text);
