@@ -45,4 +45,13 @@ describe('Advocacy i18n keys', () => {
       expect(base.b1 && base.b2 && base.b3).toBeTruthy();
     });
   });
+
+  it('fr/es translations differ from EN for selected keys', () => {
+    const sample = ['advocacy.ally.generate','advocacy.policy.simplify','advocacy.coach.practiceHeader'];
+    const get = (obj: any, path: string) => path.split('.').reduce((a,p)=>a?.[p], obj);
+    sample.forEach(k => {
+      expect(get(fr,k)).not.toEqual(get(en,k));
+      expect(get(es,k)).not.toEqual(get(en,k));
+    });
+  });
 });

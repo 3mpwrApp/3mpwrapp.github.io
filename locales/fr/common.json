@@ -550,62 +550,62 @@
       "ratings": "Disability Justice Ratings"
     },
     "ally": {
-      "intro": "Cross-movement solidarity resources and quick coaching prompts for allies supporting disabled / injured workers.",
-      "linksHeader": "Movement Links",
-      "coachHeader": "Coaching Prompt",
-      "coachHelp": "Describe what you want to help with (e.g., support letter, preparing for meeting, reducing overwhelm).",
-      "generate": "Generate Steps",
-      "generating": "Generating..."
+      "intro": "Ressources de solidarité inter‑mouvements et invites rapides pour alliés soutenant des personnes handicapées / travailleuses blessées.",
+      "linksHeader": "Liens mouvements",
+      "coachHeader": "Invite de coaching",
+      "coachHelp": "Décrivez ce que vous voulez aider à faire (ex. lettre de soutien, préparation réunion, réduire la surcharge).",
+      "generate": "Générer étapes",
+      "generating": "Génération..."
     },
     "policy": {
-      "aiHeader": "AI Simplifier",
-      "aiHelp": "Paste policy/decision text below. Processing is local unless backend available.",
-      "simplify": "Simplify",
-      "simplifying": "Simplifying...",
-      "summary": "Summary",
-      "keyPoints": "Key Points"
+      "aiHeader": "Simplificateur IA",
+      "aiHelp": "Collez le texte de politique/décision ci‑dessous. Traitement local sauf serveur configuré.",
+      "simplify": "Simplifier",
+      "simplifying": "Simplification...",
+      "summary": "Résumé",
+      "keyPoints": "Points clés"
     },
     "coach": {
-      "practiceHeader": "Practice Prompt",
-      "practiceHelp": "Describe a need or goal. The coach returns structured steps.",
-      "generate": "Generate Practice",
-      "generating": "Generating...",
-      "subtitle": "Micro-lessons for confidence, public speaking, and assertiveness.",
-      "defaultPrompt": "Request a 10-minute break each hour due to pain",
-      "generateError": "Could not generate practice steps.",
-      "practiceInputLabel": "Practice prompt input",
-      "practiceGenerateLabel": "Generate practice coaching",
-      "practiceOutputLabel": "Practice coaching output",
+      "practiceHeader": "Invite d'entraînement",
+      "practiceHelp": "Décrivez un besoin ou objectif. Le coach renvoie des étapes structurées.",
+      "generate": "Générer entraînement",
+      "generating": "Génération...",
+      "subtitle": "Micro-leçons pour confiance, expression claire et assertivité.",
+      "defaultPrompt": "Demander une pause de 10 minutes chaque heure à cause de la douleur",
+      "generateError": "Impossible de générer les étapes.",
+      "practiceInputLabel": "Saisie invite entraînement",
+      "practiceGenerateLabel": "Générer coaching entraînement",
+      "practiceOutputLabel": "Résultat coaching entraînement",
       "lesson": {
         "conf-1": {
-          "title": "Confidence Basics",
-          "b1": "Breathe low and slow (4-4-4-4)",
-          "b2": "Stand/sit grounded; soften shoulders",
-          "b3": "Prepare one sentence purpose statement"
+          "title": "Bases de confiance",
+          "b1": "Respirer lentement et bas (4-4-4-4)",
+          "b2": "Posture ancrée; relâcher les épaules",
+          "b3": "Préparer une phrase d'objectif"
         },
         "speak-1": {
-          "title": "Speak Clearly",
-          "b1": "Short sentences; one point at a time",
-          "b2": "Ask to repeat/clarify questions",
-          "b3": "Pause before answering"
+          "title": "Parler clairement",
+          "b1": "Phrases courtes; une idée à la fois",
+          "b2": "Demander répétition/clarification",
+          "b3": "Marquer une pause avant répondre"
         },
         "assert-1": {
-          "title": "Assertiveness in Medical/Work",
-          "b1": "Name your need: 'I need...'",
-          "b2": "Explain impact briefly",
-          "b3": "Offer options, ask for collaboration"
+          "title": "Assertivité santé/travail",
+          "b1": "Nommer le besoin : 'J'ai besoin de…'",
+          "b2": "Expliquer brièvement l'impact",
+          "b3": "Proposer options, inviter à collaborer"
         },
         "docs-1": {
           "title": "Documentation",
-          "b1": "Summarize call/meeting in email",
-          "b2": "Attach key evidence only",
-          "b3": "Track dates and deadlines"
+            "b1": "Résumer appel/réunion par courriel",
+            "b2": "Joindre seulement preuves clés",
+            "b3": "Suivre dates et échéances"
         }
       }
     },
     "disclaimer": {
-      "notLegal": "Educational only — not legal advice. Verify with official sources.",
-      "privacy": "Inputs processed locally unless a configured backend is available."
+      "notLegal": "Éducatif uniquement — pas un avis juridique. Vérifiez sources officielles.",
+      "privacy": "Entrées traitées localement sauf backend configuré."
     }
   },
   "justiceService": {
