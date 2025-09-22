@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 import { useAppPalette } from "../../../theme/usePalette";
+import AIDisclaimer from '../../../components/AIDisclaimer';
 import { llmSimplify } from "../../../services/llm";
 import {
   MAX_FONT_SCALE,
@@ -155,6 +156,7 @@ export default function AiAdvocateTranslator() {
           </View>
         </View>
       )}
+      <AIDisclaimer />
     </ScrollView>
   );
 }

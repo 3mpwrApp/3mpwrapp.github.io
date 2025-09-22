@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 import { useAppPalette } from "../../../theme/usePalette";
+import AIDisclaimer from '../../../components/AIDisclaimer';
 import { llmInterpret } from "../../../services/llm";
 import {
   MAX_FONT_SCALE,
@@ -25,7 +26,7 @@ function interpret(text: string): { summary: string; next: string[] } {
     {next.push("Write down any deadlines and add a calendar reminder.");}
   if (lower.includes("appeal") || lower.includes("reconsideration"))
     {next.push(
-      "Use Resources Ã¢â€ â€™ Letter templates for reconsideration/appeal.",
+      "Use Resources — Letter templates for reconsideration/appeal.",
     );}
   if (lower.includes("medical"))
     {next.push(
@@ -80,7 +81,7 @@ export default function AiCaseInterpreter() {
       </Text>
       <Text style={s.subtitle}>
         Paste tribunal/insurance/government letter text. Get a
-        plainÃ¢â‚¬â€˜language summary and next steps. ASL video/easyÃ¢â‚¬â€˜read
+        plain-language summary and next steps. ASL video/easy-read
         requires server integration.
       </Text>
       <TextInput
@@ -106,7 +107,7 @@ export default function AiCaseInterpreter() {
           <Text style={[s.cardTitle, { marginTop: 8 }]}>Next steps</Text>
           {out.next.map((n, i) => (
             <Text key={i} style={s.cardText}>
-              Ã¢â‚¬Â¢ {n}
+              • {n}
             </Text>
           ))}
           <Pressable
@@ -186,6 +187,7 @@ export default function AiCaseInterpreter() {
           </View>
         </View>
       )}
+      <AIDisclaimer />
     </ScrollView>
   );
 }

@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 import { useAppPalette } from "../../../theme/usePalette";
+import AIDisclaimer from '../../../components/AIDisclaimer';
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
@@ -92,7 +93,7 @@ export default function AiGovNavigator() {
         Help & tips
       </Text>
       <Text style={s.subtitle}>
-        Conversational, stepÃ¢â‚¬â€˜byÃ¢â‚¬â€˜step guidance through forms with
+        Conversational, step-by-step guidance through forms with
         accessibility in mind.
       </Text>
       <View
@@ -202,9 +203,8 @@ export default function AiGovNavigator() {
           <Text style={s.buttonText}>Export as .doc</Text>
         </Pressable>
       </View>
-      <Text style={[s.subtitle, { marginTop: 8 }]}>
-        Tip: Save copies of all forms and keep a timeline of key dates.
-      </Text>
+      <Text style={[s.subtitle, { marginTop: 8 }]}>Tip: Save copies of all forms and keep a timeline of key dates.</Text>
+      <AIDisclaimer />
     </ScrollView>
   );
 }
