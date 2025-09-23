@@ -86,6 +86,14 @@
     "suggested": "Suggested",
     "open": "Open",
     "noSuggestions": "No suggestions yet",
+    "mood": {
+      "trendImproving": "Mood improving (last week)",
+      "trendDeclining": "Mood declining (last week)",
+      "trendStable": "Mood stable (last week)",
+      "streak": "Mood log streak: {{days}}d",
+      "nudge": "Evening check-in? Log how you feel.",
+      "nudgeAction": "Log Mood"
+    },
     "feedback": {
       "up": "Helpful suggestion",
       "down": "Not relevant"

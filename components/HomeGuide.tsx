@@ -2,6 +2,7 @@ import { Link } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../i18n';
+import { computeMoodInsights, shouldShowMoodNudge } from '../services/moodInsights';
 import { scoreTools, submitFeedback, useSuggestions } from '../services/personalization';
 import { filterToolsByFlags, getToolMeta, resolveToolRoute } from '../services/toolRegistry';
 import { usage } from '../services/usage';
@@ -16,24 +17,52 @@ export function HomeGuide() {
   const enabledFlags: Set<string> | undefined = undefined;
   const allowedIds = new Set(filterToolsByFlags(enabledFlags).map(m=> m.id));
   const top3 = suggestions.filter(s=> allowedIds.has(s.toolId)).slice(0,3);
-  let mood: { avg: number | null; count: number } | null = null;
+  let mood: { avg: number | null; count: number; insights?: ReturnType<typeof computeMoodInsights> } | null = null;
   try {
     const m = useMood();
-    mood = { avg: m.recentAverage, count: m.todayEntries.length };
+    const insights = computeMoodInsights(m.entries);
+    mood = { avg: m.recentAverage, count: m.todayEntries.length, insights };
   } catch {}
+  const showNudge = mood && shouldShowMoodNudge(new Date(), mood.count, mood.insights?.lastEntryAgeHours!=null? Date.now() - mood.insights.lastEntryAgeHours*3600000 : null);
   return (
     <View style={[styles.container,{ backgroundColor: palette.surface, borderColor: palette.muted }]}>      
       <Text style={[styles.header,{ color: palette.primary }]}>{t('home.guide.header','Today\'s Guide')}</Text>
       <View style={{ marginBottom:8 }}>
         <Text style={[styles.snapshotLabel,{ color: palette.text }]}>{t('home.guide.snapshot','Snapshot')}</Text>
         {mood ? (
-          <Text style={{ color: palette.text, fontSize:12 }}>
-            {t('home.guide.moodSummary','Mood 7d avg: {{avg}} • Today entries: {{count}}',{ avg: mood.avg==null? '—' : mood.avg.toFixed(2), count: mood.count })}
-          </Text>
+          <View style={{ gap:4 }}>
+            <Text style={{ color: palette.text, fontSize:12 }}>
+              {t('home.guide.moodSummary','Mood 7d avg: {{avg}} • Today entries: {{count}}',{ avg: mood.avg==null? '—' : mood.avg.toFixed(2), count: mood.count })}
+            </Text>
+            {mood.insights && (
+              <View style={{ flexDirection:'row', flexWrap:'wrap', gap:6 }}>
+                {mood.insights.trend !== 'none' && (
+                  <Text style={trendStyle(palette, mood.insights.trend)}>
+                    {t(`homeGuide.mood.trend${cap(mood.insights.trend)}`, mood.insights.trend)}
+                  </Text>
+                )}
+                {mood.insights.streakDays > 1 && (
+                  <Text style={badgeStyle(palette)}>
+                    {t('homeGuide.mood.streak','Mood log streak: {{days}}d',{ days: mood.insights.streakDays })}
+                  </Text>
+                )}
+              </View>
+            )}
+          </View>
         ) : (
           <Text style={{ color: palette.text, fontSize:12 }}>{t('home.guide.snapshotPlaceholder','(Mood tracking available on Wellness tab)')}</Text>
         )}
       </View>
+      {showNudge && (()=> { usage.view('home_mood_nudge_view','/',{ }); return (
+        <View style={{ marginBottom:12, padding:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, backgroundColor: palette.surface }}>
+          <Text style={{ color: palette.text, fontSize:12, marginBottom:6 }}>{t('homeGuide.mood.nudge','Evening check-in? Log how you feel.')}</Text>
+          <Link href={resolveToolRoute('wellness_mood') as any} asChild onPress={()=> usage.view('home_mood_nudge_tap','/',{})}>
+            <Pressable accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:10, paddingVertical:6, alignSelf:'flex-start', borderRadius:6 }}>
+              <Text style={{ color: palette.onPrimary, fontWeight:'600', fontSize:12 }}>{t('homeGuide.mood.nudgeAction','Log Mood')}</Text>
+            </Pressable>
+          </Link>
+        </View>
+      ); })()}
       {top3.length ? (
         <View style={{ gap:12 }}>
           <Text style={[styles.suggestionTitle,{ color: palette.text }]}>{t('home.guide.suggested','Suggested')}</Text>
@@ -105,6 +134,20 @@ function renderIcon(name?: string) {
     case 'search': return '🔍';
     default: return '•';
   }
+}
+
+function cap(s: string) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+function badgeStyle(palette: any) {
+  return { backgroundColor: palette.primary, color: palette.onPrimary, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 };
+}
+
+function trendStyle(palette: any, trend: string) {
+  let bg = palette.primary;
+  if (trend === 'improving') bg = '#2d7d46';
+  else if (trend === 'declining') bg = '#a83232';
+  else if (trend === 'stable') bg = '#666';
+  return { backgroundColor: bg, color: '#fff', paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 };
 }
 
 // legacy helper removed; route resolution handled by registry
