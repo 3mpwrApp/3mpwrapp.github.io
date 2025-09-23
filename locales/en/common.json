@@ -92,6 +92,10 @@
       "engagement_gap": "Inactive",
       "importance": "Important",
       "streak": "Streak",
+      "recentUse": "Recent",
+      "tod_morning": "Morning Boost",
+      "tod_midday": "Midday Focus",
+      "tod_evening": "Evening Resource",
       "default": "Suggested"
     },
     "tool": {

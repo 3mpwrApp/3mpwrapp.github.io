@@ -25,10 +25,36 @@ interface Suggestion { toolId: string; score: number; reason: { key: string; dat
 
 function now() { return Date.now(); }
 
-function recencyBoost(ts: number | undefined, halfLifeMinutes: number) {
+function recencyFactor(ts: number | undefined, halfLifeMinutes: number) {
   if (!ts) return 0;
   const deltaMin = (now() - ts) / 60000;
-  return Math.exp(-deltaMin / halfLifeMinutes);
+  return Math.exp(-deltaMin / halfLifeMinutes); // 1 (just used) -> ~0 over time
+}
+
+function computeStreak(tool: string) {
+  // Count consecutive prior days with at least one interaction
+  const buf = usage.getBuffer().filter(e => e.tool === tool);
+  if (!buf.length) return 0;
+  const days = new Set(buf.map(e => new Date(e.ts).toDateString()));
+  // Walk backwards from today
+  let streak = 0; const today = new Date();
+  for (let i=0;i<30;i++) { // cap at 30 for performance
+    const d = new Date(today.getTime() - i*86400000).toDateString();
+    if (days.has(d)) streak++; else break;
+  }
+  return streak;
+}
+
+function timeOfDayBoost(tool: SuggestibleTool) {
+  const h = new Date().getHours();
+  // simple heuristic windows
+  const isMorning = h >=5 && h < 11;
+  const isMidday = h >=11 && h < 17;
+  const isEvening = h >=17 && h < 23;
+  if (tool.category === 'wellness' && isMorning) return { boost:0.25, key:'tod_morning' };
+  if (tool.category === 'advocacy' && isMidday) return { boost:0.2, key:'tod_midday' };
+  if (tool.category === 'resources' && isEvening) return { boost:0.2, key:'tod_evening' };
+  return { boost:0, key:'' };
 }
 
 function lastEvent(tool: string, types: string[]) {
@@ -58,13 +84,20 @@ export async function scoreTools(extra?: { coachProgress?: number }) : Promise<S
     const lastComplete = lastEvent(tool.id, ['usage.complete']);
     const lastView = lastEvent(tool.id, ['usage.view','usage.start']);
     const recencyTs = lastView?.ts || lastComplete?.ts;
-    const rb = recencyBoost(recencyTs, tool.id === 'coach' ? 180 : 1440); // minutes
-    score += rb;
-    if (rb > 0) reason.push({ key:'recency', data:{ value: rb.toFixed(2) }});
+    const rf = recencyFactor(recencyTs, tool.id === 'coach' ? 180 : 720); // coach decays slower, others moderate
+    // Instead of adding positive boost, interpret recency as a dampening factor (recently used -> lower novelty weight)
+    const recencyPenalty = rf * 0.6; // max penalty 0.6 when just used
+    if (recencyPenalty > 0) { score -= recencyPenalty; reason.push({ key:'recentUse', data:{ penalty: recencyPenalty.toFixed(2) }}); }
     if (!lastView && !lastComplete) { score += 0.35; reason.push({ key:'novelty' }); }
     if (tool.id === 'coach' && typeof extra?.coachProgress === 'number' && extra.coachProgress < 1) {
       const gap = 1 - extra.coachProgress; const boost = gap * 0.5; score += boost; reason.push({ key:'engagementGap', data:{ gap: gap.toFixed(2) }}); }
     if (tool.id === lastSuggested) { score -= 0.5; reason.push({ key:'rotation' }); }
+    // Streak boost (small, log diminishing)
+    const streak = computeStreak(tool.id);
+    if (streak > 1) { const sb = Math.min(0.4, Math.log2(streak)/5); score += sb; reason.push({ key:'streak', data:{ streak, boost: sb.toFixed(2) }}); }
+    // Time-of-day contextual boost
+    const tod = timeOfDayBoost(tool);
+    if (tod.boost) { score += tod.boost; reason.push({ key: tod.key, data:{ boost: tod.boost } }); }
     suggestions.push({ toolId: tool.id, score, reason });
   });
   const sorted = suggestions.sort((a,b)=> b.score - a.score);
