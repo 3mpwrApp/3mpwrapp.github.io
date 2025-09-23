@@ -3,6 +3,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage"; // dY"1 for
 import React, { useEffect, useState } from "react";
 import { Alert, Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
+import { HomeGuide } from "../../components/HomeGuide";
 import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
@@ -116,6 +117,7 @@ export default function SettingsScreen() {
       accessibilityLabel="Settings screen"
       accessible
     >
+      <HomeGuide />
       <Text
         ref={titleRef}
         nativeID="settings-title"

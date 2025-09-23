@@ -9,17 +9,28 @@ import {
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
+import { useCoachInactivityReminder } from '../../../services/coachReminder';
+import { usage } from '../../../services/usage';
+import { useCoachProgress } from '../../../store/coachProgress';
 import { useAppPalette } from "../../../theme/usePalette";
 
-const LESSON_IDS = ["conf-1","speak-1","assert-1","docs-1"] as const;
-type LessonId = typeof LESSON_IDS[number];
+interface LessonMeta { id: string; evidenceNeeded?: string[]; suggestedDeadlineDays?: number; }
+const LESSONS_META: LessonMeta[] = [
+  { id: 'conf-1', evidenceNeeded: ['timeline','policy excerpt'], suggestedDeadlineDays: 3 },
+  { id: 'speak-1', evidenceNeeded: ['example scenario notes'], suggestedDeadlineDays: 5 },
+  { id: 'assert-1', evidenceNeeded: ['accommodation request email','response letter'] },
+  { id: 'docs-1', evidenceNeeded: ['medical summary','supporting emails','decision letter'], suggestedDeadlineDays: 7 }
+] as const;
+type LessonId = typeof LESSONS_META[number]['id'];
 
 function useLessons() {
   const { t } = useTranslation();
-  return LESSON_IDS.map(id => ({
-    id,
-    title: t(`advocacy.coach.lesson.${id}.title`),
-    bullets: [1,2,3].map(i => t(`advocacy.coach.lesson.${id}.b${i}`)).filter(Boolean)
+  return LESSONS_META.map(meta => ({
+    id: meta.id as LessonId,
+    title: t(`advocacy.coach.lesson.${meta.id}.title`),
+    bullets: [1,2,3].map(i => t(`advocacy.coach.lesson.${meta.id}.b${i}`)).filter(Boolean),
+    evidenceNeeded: meta.evidenceNeeded,
+    suggestedDeadlineDays: meta.suggestedDeadlineDays
   }));
 }
 
@@ -34,6 +45,29 @@ export default function SelfAdvocacyCoach() {
   useFocusOnRefOnMount(titleRef);
   const lessons = useLessons();
   const [active, setActive] = React.useState<LessonId | null>(lessons[0].id as LessonId);
+  const { markViewed, percentComplete } = useCoachProgress();
+  useCoachInactivityReminder();
+  const startedRef = React.useRef(false);
+  React.useEffect(() => {
+    if (!startedRef.current) {
+      startedRef.current = true;
+      import('../../../services/activity').then(m => m.logActivity?.({ type:'coach.start', summaryKey:'coach.start', payload:{ lessonCount: lessons.length }})).catch(()=>{});
+      usage.start('coach','/coach',{ lessonCount: lessons.length });
+    }
+  }, [lessons.length]);
+  const completedStepsRef = React.useRef<Set<string>>(new Set());
+  const onViewLesson = React.useCallback((id: LessonId) => {
+    setActive(id);
+    if (!completedStepsRef.current.has(id)) {
+      completedStepsRef.current.add(id);
+      try { markViewed(id); } catch {}
+      import('../../../services/activity').then(m => m.logActivity?.({ type:'coach.stepComplete', summaryKey:'coach.stepComplete', payload:{ lessonId: id, completed: completedStepsRef.current.size, total: lessons.length }})).catch(()=>{});
+      usage.complete('coach','/coach',undefined,{ lessonId: id, completed: completedStepsRef.current.size, total: lessons.length });
+      if (completedStepsRef.current.size === lessons.length) {
+        import('../../../services/activity').then(m => m.logActivity?.({ type:'coach.complete', summaryKey:'coach.complete', payload:{ total: lessons.length }})).catch(()=>{});
+      }
+    }
+  }, [lessons.length]);
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
@@ -46,6 +80,7 @@ export default function SelfAdvocacyCoach() {
         {t('advocacy.tools.self_coach')}
       </Text>
       <Text style={s.subtitle}>{t('advocacy.coach.subtitle')}</Text>
+    <Text style={[s.subtitle,{ marginTop:4, fontSize:12 }]}>{percentComplete}% {t('advocacy.coach.complete','complete')}</Text>
   <JurisdictionPanel />
       <View
         style={{
@@ -58,7 +93,7 @@ export default function SelfAdvocacyCoach() {
         {lessons.map((l) => (
           <Pressable
             key={l.id}
-            onPress={() => setActive(l.id)}
+            onPress={() => onViewLesson(l.id)}
             style={[s.chip, active === l.id && s.chipActive]}
             accessibilityRole="button"
           >
@@ -68,16 +103,26 @@ export default function SelfAdvocacyCoach() {
           </Pressable>
         ))}
       </View>
-      {lessons.filter((l) => l.id === active).map((l) => (
-        <View key={l.id} style={s.card}>
-          <Text style={s.cardTitle}>{l.title}</Text>
-          {l.bullets.map((b, i) => (
-            <Text key={i} style={s.cardText}>
-              • {b}
-            </Text>
-          ))}
-        </View>
-      ))}
+      {lessons.filter((l) => l.id === active).map((l) => {
+        const deadlineLabel = l.suggestedDeadlineDays ? t('advocacy.coach.deadlineInDays','Complete within {{d}} days',{ d: l.suggestedDeadlineDays }) : null;
+        return (
+          <View key={l.id} style={s.card}>
+            <Text style={s.cardTitle}>{l.title}</Text>
+            {deadlineLabel && <Text style={[s.cardText,{ fontStyle:'italic', color: palette.primary }]}>{deadlineLabel}</Text>}
+            {l.bullets.map((b, i) => (
+              <Text key={i} style={s.cardText}>• {b}</Text>
+            ))}
+            {!!l.evidenceNeeded?.length && (
+              <View style={{ marginTop:8 }}>
+                <Text style={[s.cardText,{ fontWeight:'600' }]}>{t('advocacy.coach.evidenceNeeded','Evidence needed')}:</Text>
+                {l.evidenceNeeded.map(ev => (
+                  <Text key={ev} style={[s.cardText,{ fontSize:13, color: palette.text, opacity:0.85 }]}>• {ev}</Text>
+                ))}
+              </View>
+            )}
+          </View>
+        );
+      })}
       <PracticeCoach />
       <AIDisclaimer />
     </ScrollView>
@@ -86,6 +131,7 @@ export default function SelfAdvocacyCoach() {
 
 import { logActivity } from '../../../services/activity';
 import { aiCoachPrompt } from '../../../services/aiAdvocacy';
+import { useNotificationDispatcher } from '../../../services/notifications.dispatcher';
 import { useJurisdiction } from '../../../store/jurisdiction';
 import { parseCoachOutput } from '../../../utils/coachParser';
 
@@ -94,15 +140,17 @@ function PracticeCoach() {
   const { data: jurisdiction } = useJurisdiction();
   const [prompt, setPrompt] = React.useState(t('advocacy.coach.defaultPrompt'));
   const [output, setOutput] = React.useState('');
+  const { dispatchDomainEvent } = useNotificationDispatcher();
   const parsed = React.useMemo(()=> output ? parseCoachOutput(output) : null, [output]);
   const [loading, setLoading] = React.useState(false);
   const run = async () => {
     if (!prompt.trim()) return;
     setLoading(true);
     try {
-      const res = await aiCoachPrompt(prompt, jurisdiction?.evidenceFocus);
+  const res = await aiCoachPrompt(prompt, jurisdiction?.evidenceFocus);
       setOutput(res);
       try { await logActivity({ type:'coach.generate', payload:{ promptLength: prompt.length, jurisdiction: jurisdiction?.code, steps: res.split(/\n+/).length }, summaryKey:'coach.generate' }); } catch {}
+  try { await dispatchDomainEvent({ event:'coach.generate.completed', payload:{ jurisdictionName: jurisdiction?.name, coachTopic: prompt.slice(0,40) } }); } catch {}
     } catch { Alert.alert(t('common.errorTitle','Error'), t('advocacy.coach.generateError','Could not generate practice steps.')); } finally { setLoading(false); }
   };
   return (

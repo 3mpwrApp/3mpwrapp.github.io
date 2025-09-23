@@ -51,6 +51,18 @@ const templates: NotificationTemplate[] = [
     i18n: { titleKey: "notify.system.changelog.title", bodyKey: "notify.system.changelog.body" },
     dedupe: "template",
   },
+  {
+    id: "coach-inactivity-reminder",
+    version: 1,
+    category: "advocacy",
+    event: "coach.reminder",
+    channels: { inApp: true, push: true },
+    priority: "low",
+    throttleSec: 3600, // avoid spamming
+    i18n: { titleKey: "notify.coach.reminder.title", bodyKey: "notify.coach.reminder.body" },
+    personalization: { fields: ["idleHours"] },
+    dedupe: "event",
+  },
 ];
 
 // Build index (event -> templateIds)

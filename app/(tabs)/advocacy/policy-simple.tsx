@@ -73,6 +73,8 @@ export default function PolicySimple() {
   const [loading, setLoading] = React.useState(false);
   const [summary, setSummary] = React.useState('');
   const [points, setPoints] = React.useState<string[]>([]);
+  const [obligations, setObligations] = React.useState<string[]>([]);
+  const [actions, setActions] = React.useState<string[]>([]);
 
   const runSimplify = async () => {
     if (!raw.trim()) return;
@@ -81,6 +83,16 @@ export default function PolicySimple() {
       const { summary, keyPoints } = await aiPolicySimplify('policy', raw);
       setSummary(summary);
       setPoints(keyPoints);
+      // Simple heuristic extraction: lines containing must/shall/required -> obligations; recommend/should/consider -> actions
+      const lines = raw.split(/\n+/).map(l=>l.trim()).filter(Boolean).slice(0,200);
+      const ob: string[] = []; const act: string[] = [];
+      lines.forEach(l => {
+        const lower = l.toLowerCase();
+        if(/\b(must|shall|required|obliged)\b/.test(lower)) ob.push(l);
+        else if(/\b(should|recommend|consider|encouraged)\b/.test(lower)) act.push(l);
+      });
+      setObligations(ob.slice(0,8));
+      setActions(act.slice(0,8));
     } catch {
       Alert.alert('Error','Could not simplify.');
     } finally {
@@ -119,6 +131,10 @@ export default function PolicySimple() {
             <Text style={s.resultText}>{summary}</Text>
             {points.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>{t('advocacy.policy.keyPoints')}</Text>}
             {points.map((p,i)=>(<Text key={i} style={s.resultText}>• {p}</Text>))}
+            {obligations.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>{t('advocacy.policy.obligations','Obligations')}</Text>}
+            {obligations.map((p,i)=>(<Text key={i} style={s.resultText}>• {p}</Text>))}
+            {actions.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>{t('advocacy.policy.suggestedActions','Suggested Actions')}</Text>}
+            {actions.map((p,i)=>(<Text key={i} style={s.resultText}>• {p}</Text>))}
           </View>
         )}
         <AIDisclaimer />

@@ -61,21 +61,76 @@
     "subtitle": "Support. Advocacy. Empowerment.",
     "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!"
   },
+  "mood": {
+    "title": "Mood Tracker",
+    "subtitle": "Log how you feel to spot trends.",
+    "notePlaceholder": "Optional note",
+    "save": "Save",
+    "today": "Today",
+    "emptyToday": "No entries yet today.",
+    "avg7d": "7d Avg:",
+    "total": "Total entries:",
+    "veryLow": "Very Low",
+    "low": "Low",
+    "neutral": "Neutral",
+    "good": "Good",
+    "great": "Great"
+  },
+  "homeGuide": {
+    "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
+    "snapshotPlaceholder": "(Mood tracking available on Wellness tab)"
+  },
+  "translator": {
+    "simplify": "Simplify",
+    "summary": "Plain Summary",
+    "keyTerms": "Key Terms",
+    "deadlines": "Deadlines",
+    "actions": "Actions",
+    "fullText": "Full Simplified Text",
+    "copiedTitle": "Copied",
+    "copiedBody": "Summary copied."
+  },
   "notify": {
     "broadcast": {
       "title": "Announcement: {{title}}",
       "body": "{{body}}"
     },
+    "coach": {
+      "result": {
+        "title": "Coaching session ready",
+        "body": "Your practice coaching steps are prepared."
+      },
+      "reminder": {
+        "title": "Continue your coaching journey",
+        "body": "You’ve been away for a while ({{idleHours}}h). Pick up a lesson to keep momentum."
+      }
+    },
+    "evidence": {
+      "reminder": {
+        "title": "Weekly evidence check-in",
+        "body": "Add new notes or upload documents to stay organized."
+      }
+    },
+    "resource": {
+      "bookmark": {
+        "title": "Resource saved",
+        "body": "You bookmarked {{resourceTitle}}."
+      },
+      "viewed": {
+        "title": "Resource viewed",
+        "body": "You viewed {{resource}}"
+      }
+    },
+    "system": {
+      "changelog": {
+        "title": "What's new in Empowr",
+        "body": "New features and improvements are available."
+      }
+    },
     "petition": {
       "signed": {
         "title": "Petition signed",
         "body": "You signed \"{{petition}}\""
-      }
-    },
-    "resource": {
-      "viewed": {
-        "title": "Resource viewed",
-        "body": "You viewed {{resource}}"
       }
     },
     "faq": {
@@ -105,6 +160,24 @@
       "finder": "Lawyer & Advocate Finder",
       "ratings": "Disability Justice Ratings"
     },
+    "translator": {
+      "simplify": "Simplify",
+      "summary": "Plain Summary",
+      "keyTerms": "Key Terms",
+      "deadlines": "Deadlines",
+      "actions": "Actions",
+      "fullText": "Full Simplified Text",
+      "copiedTitle": "Copied",
+      "copiedBody": "Summary copied.",
+      "shareTitle": "Plain-language Summary",
+      "shareTitleDoc": "Plain-language Summary (.doc)",
+      "pdf": "PDF",
+      "doc": "DOC",
+      "pdfUnavailableTitle": "PDF not available",
+      "pdfUnavailableBody": "Install expo-print in a dev build.",
+      "exportFailedTitle": "Export failed",
+      "exportFailedBody": "Could not create .doc file."
+    },
     "ally": {
       "intro": "Cross-movement solidarity resources and quick coaching prompts for allies supporting disabled / injured workers.",
       "linksHeader": "Movement Links",
@@ -119,7 +192,9 @@
       "simplify": "Simplify",
       "simplifying": "Simplifying...",
       "summary": "Summary",
-      "keyPoints": "Key Points"
+      "keyPoints": "Key Points",
+      "obligations": "Obligations",
+      "suggestedActions": "Suggested Actions"
     },
     "coach": {
       "practiceHeader": "Practice Prompt",

@@ -17,8 +17,12 @@ import {
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useTranslation } from '../../../i18n';
+import { logActivity } from '../../../services/activity';
 import { llmSimplify } from "../../../services/llm";
+import { usage } from '../../../services/usage';
 import { useAppPalette } from "../../../theme/usePalette";
+import { extractTranslatorSections, getTranslatorConfigForLocale } from "../../../utils/translatorExtract";
 
 function simplify(text: string): string {
   const rules: [RegExp, string][] = [
@@ -44,8 +48,11 @@ export default function AiAdvocateTranslator() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("AI Advocate Translator");
   useFocusOnRefOnMount(titleRef);
+  const { t, i18n } = useTranslation();
   const [input, setInput] = React.useState("");
   const [output, setOutput] = React.useState("");
+  const [sections, setSections] = React.useState<{summary:string; keyTerms:string[]; deadlines:string[]; actions:string[]}|null>(null);
+  React.useEffect(()=>{ usage.view('translator','/translator'); },[]);
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text
@@ -70,15 +77,49 @@ export default function AiAdvocateTranslator() {
       />
       <Pressable
         onPress={async () => {
+          if(!input.trim()) return;
+          const start = Date.now();
           const remote = await llmSimplify(input);
-          setOutput(remote ?? simplify(input));
+          const simplified = remote ?? simplify(input);
+          const duration = Date.now() - start;
+          setOutput(simplified);
+          const cfg = getTranslatorConfigForLocale(i18n.language);
+          const extracted = extractTranslatorSections(simplified, cfg);
+          setSections(extracted);
+          usage.complete('translator','/translator', duration,{ chars: input.length, hasRemote: !!remote, locale: i18n.language, actions: extracted.actions.length, deadlines: extracted.deadlines.length, keyTerms: extracted.keyTerms.length });
+          try { await logActivity({ type:'translator.simplify', payload:{ chars: input.length, hasRemote: !!remote, locale: i18n.language, ms: duration, actions: extracted.actions.length, deadlines: extracted.deadlines.length, keyTerms: extracted.keyTerms.length } } as any); } catch {}
         }}
         style={s.button}
       >
-        <Text style={s.buttonText}>Simplify</Text>
+        <Text style={s.buttonText}>{t('translator.simplify','Simplify')}</Text>
       </Pressable>
       {!!output && (
         <View style={s.card}>
+          {sections && (
+            <View>
+              <Text style={[s.sectionHeader]}>{t('translator.summary','Plain Summary')}</Text>
+              <Text style={{ color: palette.text, marginBottom:8 }}>{sections.summary}</Text>
+              {!!sections.keyTerms.length && (
+                <View style={{ marginBottom:8 }}>
+                  <Text style={s.sectionHeader}>{t('translator.keyTerms','Key Terms')}</Text>
+                  <Text style={{ color: palette.text }}>{sections.keyTerms.join(', ')}</Text>
+                </View>
+              )}
+              {!!sections.deadlines.length && (
+                <View style={{ marginBottom:8 }}>
+                  <Text style={s.sectionHeader}>{t('translator.deadlines','Deadlines')}</Text>
+                  {sections.deadlines.map((d,i)=>(<Text key={i} style={{ color: palette.text }}>• {d}</Text>))}
+                </View>
+              )}
+              {!!sections.actions.length && (
+                <View style={{ marginBottom:8 }}>
+                  <Text style={s.sectionHeader}>{t('translator.actions','Actions')}</Text>
+                  {sections.actions.map((a,i)=>(<Text key={i} style={{ color: palette.text }}>• {a}</Text>))}
+                </View>
+              )}
+              <Text style={s.sectionHeader}>{t('translator.fullText','Full Simplified Text')}</Text>
+            </View>
+          )}
           <Text style={{ color: palette.text }}>{output}</Text>
           <View
             style={{
@@ -93,23 +134,23 @@ export default function AiAdvocateTranslator() {
                 try {
                   const mod = await import("expo-clipboard");
                   await mod.setStringAsync(output);
-                  Alert.alert("Copied", "Summary copied.");
+                  Alert.alert(t('translator.copiedTitle','Copied'), t('translator.copiedBody','Summary copied.'));
                 } catch {}
               }}
               style={s.button}
             >
-              <Text style={s.buttonText}>Copy</Text>
+              <Text style={s.buttonText}>{t('common.copy','Copy')}</Text>
             </Pressable>
             <Pressable
               onPress={() =>
                 Share.share({
                   message: output,
-                  title: "Plain-language Summary",
+                  title: t('translator.shareTitle','Plain-language Summary'),
                 }).catch(() => {})
               }
               style={s.button}
             >
-              <Text style={s.buttonText}>Share</Text>
+              <Text style={s.buttonText}>{t('common.share','Share')}</Text>
             </Pressable>
             <Pressable
               onPress={async () => {
@@ -119,18 +160,18 @@ export default function AiAdvocateTranslator() {
                   const { uri } = await mod.printToFileAsync({ html });
                   await Share.share({
                     url: uri,
-                    title: "Plain-language Summary",
+                    title: t('translator.shareTitle','Plain-language Summary'),
                   });
                 } catch {
                   Alert.alert(
-                    "PDF not available",
-                    "Install expo-print in a dev build.",
+                    t('translator.pdfUnavailableTitle','PDF not available'),
+                    t('translator.pdfUnavailableBody','Install expo-print in a dev build.'),
                   );
                 }
               }}
               style={s.button}
             >
-              <Text style={s.buttonText}>PDF</Text>
+              <Text style={s.buttonText}>{t('translator.pdf','PDF')}</Text>
             </Pressable>
             <Pressable
               onPress={async () => {
@@ -144,15 +185,15 @@ export default function AiAdvocateTranslator() {
                   });
                   await Share.share({
                     url: path,
-                    title: "Plain-language Summary (.doc)",
+                    title: t('translator.shareTitleDoc','Plain-language Summary (.doc)'),
                   });
                 } catch {
-                  Alert.alert("Export failed", "Could not create .doc file.");
+                  Alert.alert(t('translator.exportFailedTitle','Export failed'), t('translator.exportFailedBody','Could not create .doc file.'));
                 }
               }}
               style={s.button}
             >
-              <Text style={s.buttonText}>DOC</Text>
+              <Text style={s.buttonText}>{t('translator.doc','DOC')}</Text>
             </Pressable>
           </View>
         </View>
@@ -190,5 +231,6 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       backgroundColor: palette.surface,
       marginTop: 8,
     },
+    sectionHeader: { color: palette.text, fontWeight:'700', marginBottom:4, marginTop:4 },
   });
 }

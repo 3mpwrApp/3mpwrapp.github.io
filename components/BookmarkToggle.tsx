@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 
 import { useTranslation } from '../i18n';
 import { logActivity } from '../services/activity';
+import { useNotificationDispatcher } from '../services/notifications.dispatcher';
 import { useBookmarks } from '../store/bookmarks';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
@@ -18,6 +19,7 @@ export default function BookmarkToggle() {
   const { isBookmarked, addBookmark, removeBookmark, findByRoute } = useBookmarks();
   const palette = useAppPalette();
   const { factor } = useTextScale();
+  const { dispatchDomainEvent } = useNotificationDispatcher();
 
   if (!entry) return null;
   const active = isBookmarked(entry.route);
@@ -34,6 +36,7 @@ export default function BookmarkToggle() {
         } else {
           addBookmark(entry.route, t(entry.tKey, entry.fallback), entry.tKey);
           logActivity({ type: 'bookmark.add', payload: { targetId: entry.route } });
+          try { await dispatchDomainEvent({ event:'resource.bookmark.add', payload:{ resourceTitle: t(entry.tKey, entry.fallback) } }); } catch {}
         }
       }}
       hitSlop={HIT_SLOP}

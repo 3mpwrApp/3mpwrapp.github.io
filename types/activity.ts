@@ -15,7 +15,10 @@ export type ActivityEventType =
   | 'faq.update'
   | 'faq.delete'
   | 'coach.generate'
-  | 'coach.view';
+  | 'coach.view'
+  | 'coach.start'
+  | 'coach.stepComplete'
+  | 'coach.complete';
 
 export interface BaseActivityEvent<T extends ActivityEventType = ActivityEventType, P = any> {
   id?: string; // Firestore doc id when fetched
@@ -40,6 +43,9 @@ export interface FaqUpdateEvent extends BaseActivityEvent<'faq.update',{ id: str
 export interface FaqDeleteEvent extends BaseActivityEvent<'faq.delete',{ id: string; }> {}
 export interface CoachGenerateEvent extends BaseActivityEvent<'coach.generate',{ promptLength: number; jurisdiction?: string; steps?: number; }> {}
 export interface CoachViewEvent extends BaseActivityEvent<'coach.view',{ steps?: number; jurisdiction?: string; }> {}
+export interface CoachStartEvent extends BaseActivityEvent<'coach.start',{ lessonCount: number; }> {}
+export interface CoachStepCompleteEvent extends BaseActivityEvent<'coach.stepComplete',{ lessonId: string; completed: number; total: number; }> {}
+export interface CoachCompleteEvent extends BaseActivityEvent<'coach.complete',{ total: number; }> {}
 
 export type AnyActivityEvent =
   | BookmarkAddEvent
@@ -53,4 +59,7 @@ export type AnyActivityEvent =
   | FaqDeleteEvent
   | CoachGenerateEvent
   | CoachViewEvent
+  | CoachStartEvent
+  | CoachStepCompleteEvent
+  | CoachCompleteEvent
   | BaseActivityEvent; // fallback

@@ -1,5 +1,6 @@
 // Optional notification helper. Uses expo-notifications if available, else no-ops.
-import Constants from "expo-constants";
+let Constants: any = {};
+try { Constants = require('expo-constants'); } catch {}
 import { Platform } from "react-native";
 let Notifications: any;
 try {

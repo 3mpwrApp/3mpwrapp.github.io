@@ -2,6 +2,7 @@ import { fireEvent, render } from '@testing-library/react';
 
 import BookmarkToggle from '../components/BookmarkToggle';
 import { BookmarksProvider } from '../store/bookmarks';
+import { NotificationsProvider } from '../store/notifications';
 
 // Mock translation
 jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (k:string, f?:string)=> f || k }) }));
@@ -13,12 +14,22 @@ jest.mock('expo-router', () => ({ usePathname: () => '/test/route' }));
 // Mock route registry
 jest.mock('../utils/routeRegistry', () => ({ findRouteEntry: (r:string) => ({ route:r, tKey:'test.key', fallback:'Test Route' }) }));
 
-// silence analytics
+// silence analytics & notifications side-effects
 jest.mock('../services/analytics', () => ({ logEvent: () => {} }));
+jest.mock('../services/notifications', () => ({
+  ensureNotificationPermission: jest.fn().mockResolvedValue(false),
+  scheduleLocal: jest.fn().mockResolvedValue(false)
+}));
 
 describe('BookmarkToggle', () => {
   test('renders and can be pressed', () => {
-    const { getByText } = render(<BookmarksProvider><BookmarkToggle /></BookmarksProvider>);
+    const { getByText } = render(
+      <NotificationsProvider>
+        <BookmarksProvider>
+          <BookmarkToggle />
+        </BookmarksProvider>
+      </NotificationsProvider>
+    );
     const addBtn = getByText(/Save|Saved/);
   // @ts-ignore react-native testing library press alias
   fireEvent.press(addBtn);
