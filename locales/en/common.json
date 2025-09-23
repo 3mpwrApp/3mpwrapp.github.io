@@ -340,6 +340,8 @@
       "emergencyDesc": "Critical safety notifications",
       "wellness": "Wellness Reminders",
       "wellnessDesc": "Daily wellness check-ins",
+    "moodNudges": "Mood Nudges",
+    "moodNudgesDesc": "Evening reminder to log how you feel",
       "events": "Event Reminders",
       "eventsDesc": "Upcoming event notifications"
     },

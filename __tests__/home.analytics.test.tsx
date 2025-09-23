@@ -6,6 +6,8 @@ import { HomeGuide } from '../components/HomeGuide';
 jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (_k:string, def?:string)=> def || _k }) }));
 // Mock mood store (optional)
 jest.mock('../store/mood', () => ({ useMood: () => ({ recentAverage: 3, todayEntries: [] }) }));
+// Mock settings store
+jest.mock('../store/settings', () => ({ useSettings: () => ({ moodNudgesEnabled: true }) }));
 // Mock palette
 jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ surface:'#fff', muted:'#ccc', primary:'#036', onPrimary:'#fff', text:'#111' }) }));
 // Mock tool registry (include filterToolsByFlags used by component)

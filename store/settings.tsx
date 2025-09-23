@@ -41,6 +41,7 @@ export type SettingsState = {
   requirePasscodeOnLaunch: boolean;
   autoLockTimeout: number; // minutes
   analyticsOptOut: boolean;
+  moodNudgesEnabled: boolean;
 };
 
 /** Context type including setters */
@@ -71,6 +72,7 @@ type Ctx = SettingsState & {
   setRequirePasscodeOnLaunch: (v: boolean) => void;
   setAutoLockTimeout: (v: number) => void;
   setAnalyticsOptOut: (v: boolean) => void;
+  setMoodNudgesEnabled: (v: boolean) => void;
 };
 
 /** Default values if nothing stored */
@@ -101,6 +103,7 @@ const DEFAULTS: SettingsState = {
   requirePasscodeOnLaunch: false,
   autoLockTimeout: 5,
   analyticsOptOut: false,
+  moodNudgesEnabled: true,
 };
 
 const STORAGE_KEY = "settings:v1";
@@ -194,6 +197,8 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setState((s) => ({ ...s, autoLockTimeout: v }));
   const setAnalyticsOptOut = (v: boolean) =>
     setState((s) => ({ ...s, analyticsOptOut: v }));
+  const setMoodNudgesEnabled = (v: boolean) =>
+    setState((s) => ({ ...s, moodNudgesEnabled: v }));
 
   const value: Ctx = {
     ...state,
@@ -223,6 +228,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setRequirePasscodeOnLaunch,
     setAutoLockTimeout,
     setAnalyticsOptOut,
+    setMoodNudgesEnabled,
   };
 
   return (

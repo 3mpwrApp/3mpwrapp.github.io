@@ -1,4 +1,6 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Link } from 'expo-router';
+import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../i18n';
@@ -7,6 +9,7 @@ import { scoreTools, submitFeedback, useSuggestions } from '../services/personal
 import { filterToolsByFlags, getToolMeta, resolveToolRoute } from '../services/toolRegistry';
 import { usage } from '../services/usage';
 import { useMood } from '../store/mood';
+import { useSettings } from '../store/settings';
 import { useAppPalette } from '../theme/usePalette';
 
 export function HomeGuide() {
@@ -23,7 +26,23 @@ export function HomeGuide() {
     const insights = computeMoodInsights(m.entries);
     mood = { avg: m.recentAverage, count: m.todayEntries.length, insights };
   } catch {}
-  const showNudge = mood && shouldShowMoodNudge(new Date(), mood.count, mood.insights?.lastEntryAgeHours!=null? Date.now() - mood.insights.lastEntryAgeHours*3600000 : null);
+  const moodNudgesEnabled = useSettings().moodNudgesEnabled;
+  const [nudgeEligible, setNudgeEligible] = React.useState(false);
+  React.useEffect(()=> {
+    (async () => {
+      if (!moodNudgesEnabled || !mood) return setNudgeEligible(false);
+      const lastKey = 'mood:nudge:lastShown';
+      let lastShown: number | null = null;
+      try { const raw = await AsyncStorage.getItem(lastKey); if (raw) lastShown = parseInt(raw,10); } catch {}
+      const now = new Date();
+      const sameDay = lastShown ? new Date(lastShown).toDateString() === now.toDateString() : false;
+      if (sameDay) return setNudgeEligible(false);
+      const should = shouldShowMoodNudge(now, mood.count, mood.insights?.lastEntryAgeHours!=null? Date.now() - mood.insights.lastEntryAgeHours*3600000 : null);
+      setNudgeEligible(!!should);
+      if (should) { try { await AsyncStorage.setItem(lastKey, Date.now().toString()); } catch {} }
+    })();
+  }, [moodNudgesEnabled, mood?.count, mood?.insights?.lastEntryAgeHours]);
+  const showNudge = nudgeEligible;
   return (
     <View style={[styles.container,{ backgroundColor: palette.surface, borderColor: palette.muted }]}>      
       <Text style={[styles.header,{ color: palette.primary }]}>{t('home.guide.header','Today\'s Guide')}</Text>
@@ -34,6 +53,11 @@ export function HomeGuide() {
             <Text style={{ color: palette.text, fontSize:12 }}>
               {t('home.guide.moodSummary','Mood 7d avg: {{avg}} • Today entries: {{count}}',{ avg: mood.avg==null? '—' : mood.avg.toFixed(2), count: mood.count })}
             </Text>
+            {mood.insights?.delta24h!=null && (
+              <Text style={{ color: palette.text, fontSize:11 }}>
+                {mood.insights.delta24h > 0 ? `▲ +${mood.insights.delta24h.toFixed(2)}` : mood.insights.delta24h < 0 ? `▼ ${mood.insights.delta24h.toFixed(2)}` : '▬ 0.00'}
+              </Text>
+            )}
             {mood.insights && (
               <View style={{ flexDirection:'row', flexWrap:'wrap', gap:6 }}>
                 {mood.insights.trend !== 'none' && (
