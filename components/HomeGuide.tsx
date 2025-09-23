@@ -56,7 +56,15 @@ export function HomeGuide() {
           <Link
             href={resolveToolRoute(top.toolId) as any}
             asChild
-            onPress={()=> { usage.view('home_guide_select', '/', { tool: top.toolId }); }}
+            onPress={()=> {
+              const meta = getToolMeta(top.toolId);
+              usage.view('home_guide_select', '/', {
+                tool: top.toolId,
+                category: meta?.category,
+                reasons: top.reason.map(r=> r.key),
+                reasonDetail: top.reason,
+              });
+            }}
           >
             <Pressable accessibilityRole='button' style={{ marginTop:8, backgroundColor: palette.primary, paddingVertical:8, borderRadius:6, alignItems:'center' }}>
               <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{t('home.guide.open','Open')}</Text>
