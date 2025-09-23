@@ -8,6 +8,7 @@ import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
 import { useNetwork } from "../../store/network";
+import { useSettings } from "../../store/settings";
 import { useAppPalette } from "../../theme/usePalette";
 
 // import { useTranslation } from "../../i18n"; // not used currently
@@ -22,7 +23,7 @@ export default function SettingsScreen() {
   useFocusOnRefOnMount(titleRef);
 
   // const { setLanguage } = useTranslation();
-  // const settings = useSettings();
+  const settings = useSettings();
 
   // dY"1 Profile state
   const { user } = useAuth();
@@ -129,7 +130,7 @@ export default function SettingsScreen() {
       </Text>
 
       {/* dY"1 Profile section */}
-      <Section title="Profile" styles={styles}>
+  <Section title="Profile" styles={styles}>
         {photoURL ? (
           <Image
             source={{ uri: photoURL }}
@@ -151,8 +152,13 @@ export default function SettingsScreen() {
         <Button title="Update Name" onPress={handleUpdateDisplayName} />
       </Section>
 
-      {/* dY"1 Keep rest of your settings */}
-      {/* ... existing Display, Language, Region, Links sections ... */}
+      <Section title="Wellness" styles={styles}>
+        <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between' }}>
+          <Text style={styles.rowLabel}>Mood Nudges</Text>
+          <Button title={settings.moodNudgesEnabled ? 'On' : 'Off'} accessibilityLabel="Toggle mood nudges" onPress={()=> settings.setMoodNudgesEnabled(!settings.moodNudgesEnabled)} />
+        </View>
+      </Section>
+      {/* ... other settings sections below ... */}
     </ScrollView>
   );
 }

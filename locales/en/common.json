@@ -92,7 +92,10 @@
       "trendStable": "Mood stable (last week)",
       "streak": "Mood log streak: {{days}}d",
       "nudge": "Evening check-in? Log how you feel.",
-      "nudgeAction": "Log Mood"
+      "nudgeAction": "Log Mood",
+      "deltaPositive": "24h change: +{{delta}}",
+      "deltaNegative": "24h change: {{delta}}",
+      "deltaNeutral": "24h change: 0"
     },
     "feedback": {
       "up": "Helpful suggestion",

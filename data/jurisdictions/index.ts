@@ -1,6 +1,5 @@
 import type { JurisdictionData } from '../../types/jurisdiction';
 
-// Static imports to satisfy Metro (dynamic template requires can fail in production bundles)
 import AB from './AB.json';
 import BC from './BC.json';
 import FED from './FED.json';
@@ -17,29 +16,27 @@ import SK from './SK.json';
 import YT from './YT.json';
 
 const MAP: Record<string, JurisdictionData> = {
-  FED: FED as JurisdictionData,
-  ON: ON as JurisdictionData,
-  BC: BC as JurisdictionData,
   AB: AB as JurisdictionData,
-  SK: SK as JurisdictionData,
+  BC: BC as JurisdictionData,
+  FED: FED as JurisdictionData,
   MB: MB as JurisdictionData,
-  QC: QC as JurisdictionData,
   NB: NB as JurisdictionData,
-  NS: NS as JurisdictionData,
-  PE: PE as JurisdictionData,
   NL: NL as JurisdictionData,
-  YT: YT as JurisdictionData,
+  NS: NS as JurisdictionData,
   NT: NT as JurisdictionData,
   NU: NU as JurisdictionData,
+  ON: ON as JurisdictionData,
+  PE: PE as JurisdictionData,
+  QC: QC as JurisdictionData,
+  SK: SK as JurisdictionData,
+  YT: YT as JurisdictionData,
 };
 
 function load(code: string): JurisdictionData | null {
   return MAP[code.toUpperCase()] || null;
 }
 
-export const ALL_JURISDICTION_CODES = [
-  'FED','ON','BC','AB','SK','MB','QC','NB','NS','PE','NL','YT','NT','NU'
-];
+export const ALL_JURISDICTION_CODES = ['AB','BC','FED','MB','NB','NL','NS','NT','NU','ON','PE','QC','SK','YT'];
 
 export function getJurisdiction(code: string): JurisdictionData | null {
   return load(code.toUpperCase());

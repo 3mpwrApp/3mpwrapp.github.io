@@ -55,7 +55,11 @@ export function HomeGuide() {
             </Text>
             {mood.insights?.delta24h!=null && (
               <Text style={{ color: palette.text, fontSize:11 }}>
-                {mood.insights.delta24h > 0 ? `▲ +${mood.insights.delta24h.toFixed(2)}` : mood.insights.delta24h < 0 ? `▼ ${mood.insights.delta24h.toFixed(2)}` : '▬ 0.00'}
+                {mood.insights.delta24h > 0
+                  ? t('homeGuide.mood.deltaPositive','24h change: +{{delta}}',{ delta: mood.insights.delta24h.toFixed(2) })
+                  : mood.insights.delta24h < 0
+                    ? t('homeGuide.mood.deltaNegative','24h change: {{delta}}',{ delta: mood.insights.delta24h.toFixed(2) })
+                    : t('homeGuide.mood.deltaNeutral','24h change: 0')}
               </Text>
             )}
             {mood.insights && (
