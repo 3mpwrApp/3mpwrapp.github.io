@@ -74,11 +74,34 @@
     "low": "Low",
     "neutral": "Neutral",
     "good": "Good",
-    "great": "Great"
+    "great": "Great",
+    "addEntryLabel": "Add mood entry",
+    "scoreLabel": "Mood score {{score}}"
   },
   "homeGuide": {
     "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
-    "snapshotPlaceholder": "(Mood tracking available on Wellness tab)"
+    "snapshotPlaceholder": "(Mood tracking available on Wellness tab)",
+    "header": "Today's Guide",
+    "snapshot": "Snapshot",
+    "suggested": "Suggested",
+    "open": "Open",
+    "noSuggestions": "No suggestions yet",
+    "reason": {
+      "novelty": "New",
+      "rotation": "Rotation",
+      "engagement_gap": "Inactive",
+      "importance": "Important",
+      "streak": "Streak",
+      "default": "Suggested"
+    },
+    "tool": {
+      "coach": "Advocacy Coach",
+      "translator": "AI Translator",
+      "policy_simplifier": "Policy Simplifier",
+      "wellness_mood": "Mood Tracker",
+      "resources_search": "Resources Hub",
+      "default": "Tool"
+    }
   },
   "translator": {
     "simplify": "Simplify",

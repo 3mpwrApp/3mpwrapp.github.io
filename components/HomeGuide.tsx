@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../i18n';
 import { useSuggestions } from '../services/personalization';
+import { getToolMeta, resolveToolRoute } from '../services/toolRegistry';
 import { usage } from '../services/usage';
 import { useMood } from '../store/mood';
 import { useAppPalette } from '../theme/usePalette';
@@ -33,14 +34,19 @@ export function HomeGuide() {
       {top ? (
         <View style={{ marginBottom:8 }}>
           <Text style={[styles.suggestionTitle,{ color: palette.text }]}>{t('home.guide.suggested','Suggested')}</Text>
-          <Text style={{ color: palette.text, fontWeight:'600' }}>{top.toolId}</Text>
+          <Text style={{ color: palette.text, fontWeight:'600' }}>
+            {t(getToolMeta(top.toolId)?.i18nLabelKey || 'homeGuide.tool.default', getToolMeta(top.toolId)?.id || top.toolId)}
+          </Text>
           <View style={{ flexDirection:'row', flexWrap:'wrap', gap:4, marginTop:4 }}>
-            {top.reason.map(r => (
-              <Text key={r.key} style={{ backgroundColor: palette.primary, color: palette.onPrimary, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 }}>{r.key}</Text>
-            ))}
+            {top.reason.map(r => {
+              const label = t(`homeGuide.reason.${r.key}`, t('homeGuide.reason.default','Suggested'));
+              return (
+                <Text key={r.key} style={{ backgroundColor: palette.primary, color: palette.onPrimary, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 }}>{label}</Text>
+              );
+            })}
           </View>
           <Link
-            href={toolToRoute(top.toolId)}
+            href={resolveToolRoute(top.toolId)}
             asChild
             onPress={()=> { usage.view('home_guide_select', '/', { tool: top.toolId }); }}
           >
@@ -56,16 +62,7 @@ export function HomeGuide() {
   );
 }
 
-function toolToRoute(id: string) {
-  switch(id) {
-    case 'coach': return '/(tabs)/advocacy/self-advocacy-coach';
-    case 'translator': return '/(tabs)/advocacy/ai-advocate-translator';
-    case 'policy_simplifier': return '/(tabs)/advocacy/policy-simple';
-    case 'wellness_mood': return '/(tabs)/wellness.mood';
-    case 'resources_search': return '/(tabs)/resources';
-    default: return '/';
-  }
-}
+// legacy helper removed; route resolution handled by registry
 
 const styles = StyleSheet.create({
   container: { borderWidth: StyleSheet.hairlineWidth, padding:12, borderRadius:12, marginBottom:16 },
