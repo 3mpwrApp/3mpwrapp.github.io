@@ -12,7 +12,7 @@ export function HomeGuide() {
   const suggestions = useSuggestions();
   const palette = useAppPalette();
   const { t } = useTranslation();
-  const top = suggestions[0];
+  const top3 = suggestions.slice(0,3);
   let mood: { avg: number | null; count: number } | null = null;
   try {
     const m = useMood();
@@ -31,45 +31,52 @@ export function HomeGuide() {
           <Text style={{ color: palette.text, fontSize:12 }}>{t('home.guide.snapshotPlaceholder','(Mood tracking available on Wellness tab)')}</Text>
         )}
       </View>
-      {top ? (
-        <View style={{ marginBottom:8 }}>
+      {top3.length ? (
+        <View style={{ gap:12 }}>
           <Text style={[styles.suggestionTitle,{ color: palette.text }]}>{t('home.guide.suggested','Suggested')}</Text>
-          <Text style={{ color: palette.text, fontWeight:'600' }}>
-            {t(getToolMeta(top.toolId)?.i18nLabelKey || 'homeGuide.tool.default', getToolMeta(top.toolId)?.id || top.toolId)}
-          </Text>
-          <View style={{ flexDirection:'row', flexWrap:'wrap', gap:4, marginTop:4 }}>
-            {top.reason.map(r => {
-              const label = t(`homeGuide.reason.${r.key}`, t('homeGuide.reason.default','Suggested'));
-              return (
-                <Text key={r.key} style={{ backgroundColor: palette.primary, color: palette.onPrimary, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 }}>{label}</Text>
-              );
-            })}
-          </View>
-          <View style={{ flexDirection:'row', marginTop:6, gap:8 }}>
-            <Pressable accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(top.toolId,'up')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
-              <Text style={{ color: palette.text }}>👍</Text>
-            </Pressable>
-            <Pressable accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(top.toolId,'down')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
-              <Text style={{ color: palette.text }}>👎</Text>
-            </Pressable>
-          </View>
-          <Link
-            href={resolveToolRoute(top.toolId) as any}
-            asChild
-            onPress={()=> {
-              const meta = getToolMeta(top.toolId);
-              usage.view('home_guide_select', '/', {
-                tool: top.toolId,
-                category: meta?.category,
-                reasons: top.reason.map(r=> r.key),
-                reasonDetail: top.reason,
-              });
-            }}
-          >
-            <Pressable accessibilityRole='button' style={{ marginTop:8, backgroundColor: palette.primary, paddingVertical:8, borderRadius:6, alignItems:'center' }}>
-              <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{t('home.guide.open','Open')}</Text>
-            </Pressable>
-          </Link>
+          {top3.map((sug, idx) => {
+            const meta = getToolMeta(sug.toolId);
+            return (
+              <View key={sug.toolId} style={{ padding:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8 }}>
+                <Text style={{ color: palette.text, fontWeight:'600' }}>
+                  {idx===0 ? '⭐ ' : ''}{t(meta?.i18nLabelKey || 'homeGuide.tool.default', meta?.id || sug.toolId)}
+                </Text>
+                <View style={{ flexDirection:'row', flexWrap:'wrap', gap:4, marginTop:4 }}>
+                  {sug.reason.map(r => {
+                    const label = t(`homeGuide.reason.${r.key}`, t('homeGuide.reason.default','Suggested'));
+                    return (
+                      <Text key={r.key} style={{ backgroundColor: palette.primary, color: palette.onPrimary, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 }}>{label}</Text>
+                    );
+                  })}
+                </View>
+                <View style={{ flexDirection:'row', marginTop:6, gap:8 }}>
+                  <Pressable accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+                    <Text style={{ color: palette.text }}>👍</Text>
+                  </Pressable>
+                  <Pressable accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+                    <Text style={{ color: palette.text }}>👎</Text>
+                  </Pressable>
+                  <Link
+                    href={resolveToolRoute(sug.toolId) as any}
+                    asChild
+                    onPress={()=> {
+                      usage.view('home_guide_select', '/', {
+                        tool: sug.toolId,
+                        category: meta?.category,
+                        reasons: sug.reason.map(r=> r.key),
+                        reasonDetail: sug.reason,
+                        rank: idx+1
+                      });
+                    }}
+                  >
+                    <Pressable accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6 }}>
+                      <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{t('home.guide.open','Open')}</Text>
+                    </Pressable>
+                  </Link>
+                </View>
+              </View>
+            );
+          })}
         </View>
       ) : (
         <Text style={{ color: palette.text }}>{t('home.guide.noSuggestions','No suggestions yet')}</Text>
