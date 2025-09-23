@@ -121,6 +121,15 @@
     "copiedTitle": "Copied",
     "copiedBody": "Summary copied."
   },
+  "a11y": {
+    "tool": {
+      "coach": "Open Advocacy Coach tool",
+      "translator": "Open AI Translator tool",
+      "policy_simplifier": "Open Policy Simplifier tool",
+      "wellness_mood": "Open Mood Tracker tool",
+      "resources_search": "Open Resources Hub"
+    }
+  },
   "notify": {
     "broadcast": {
       "title": "Announcement: {{title}}",

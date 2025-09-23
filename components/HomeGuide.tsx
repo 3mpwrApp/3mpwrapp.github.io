@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../i18n';
 import { scoreTools, submitFeedback, useSuggestions } from '../services/personalization';
-import { getToolMeta, resolveToolRoute } from '../services/toolRegistry';
+import { filterToolsByFlags, getToolMeta, resolveToolRoute } from '../services/toolRegistry';
 import { usage } from '../services/usage';
 import { useMood } from '../store/mood';
 import { useAppPalette } from '../theme/usePalette';
@@ -12,7 +12,10 @@ export function HomeGuide() {
   const suggestions = useSuggestions();
   const palette = useAppPalette();
   const { t } = useTranslation();
-  const top3 = suggestions.slice(0,3);
+  // Placeholder for future feature flags (could be sourced from user settings or remote config)
+  const enabledFlags: Set<string> | undefined = undefined;
+  const allowedIds = new Set(filterToolsByFlags(enabledFlags).map(m=> m.id));
+  const top3 = suggestions.filter(s=> allowedIds.has(s.toolId)).slice(0,3);
   let mood: { avg: number | null; count: number } | null = null;
   try {
     const m = useMood();
@@ -38,8 +41,8 @@ export function HomeGuide() {
             const meta = getToolMeta(sug.toolId);
             return (
               <View key={sug.toolId} style={{ padding:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8 }}>
-                <Text style={{ color: palette.text, fontWeight:'600' }}>
-                  {idx===0 ? '⭐ ' : ''}{t(meta?.i18nLabelKey || 'homeGuide.tool.default', meta?.id || sug.toolId)}
+                <Text style={{ color: palette.text, fontWeight:'600', flexWrap:'wrap' }}>
+                  {idx===0 ? '⭐ ' : ''}{renderIcon(meta?.icon)} {t(meta?.i18nLabelKey || 'homeGuide.tool.default', meta?.id || sug.toolId)}
                 </Text>
                 <View style={{ flexDirection:'row', flexWrap:'wrap', gap:4, marginTop:4 }}>
                   {sug.reason.map(r => {
@@ -91,6 +94,17 @@ async function handleFeedback(toolId: string, kind: 'up'|'down') {
     // Re-score in background to reflect new feedback next render cycle (no direct state access here, hook will refresh on next mount or we could force an event bus)
     scoreTools();
   } catch {}
+}
+
+function renderIcon(name?: string) {
+  switch(name) {
+    case 'coach': return '🎯';
+    case 'translate': return '🗣️';
+    case 'policy': return '📜';
+    case 'mood': return '🫀';
+    case 'search': return '🔍';
+    default: return '•';
+  }
 }
 
 // legacy helper removed; route resolution handled by registry

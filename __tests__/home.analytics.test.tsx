@@ -8,8 +8,12 @@ jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (_k:string, def?:strin
 jest.mock('../store/mood', () => ({ useMood: () => ({ recentAverage: 3, todayEntries: [] }) }));
 // Mock palette
 jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ surface:'#fff', muted:'#ccc', primary:'#036', onPrimary:'#fff', text:'#111' }) }));
-// Mock tool registry
-jest.mock('../services/toolRegistry', () => ({ getToolMeta:(id:string)=> ({ id, category:'advocacy', i18nLabelKey:'homeGuide.tool.coach' }), resolveToolRoute:()=>'/'}));
+// Mock tool registry (include filterToolsByFlags used by component)
+jest.mock('../services/toolRegistry', () => ({
+  getToolMeta: (id:string) => ({ id, category:'advocacy', i18nLabelKey:'homeGuide.tool.coach', icon:'coach', a11yLabelKey:'a11y.tool.coach' }),
+  resolveToolRoute: () => '/',
+  filterToolsByFlags: () => ([{ id:'coach', category:'advocacy', i18nLabelKey:'homeGuide.tool.coach', icon:'coach', a11yLabelKey:'a11y.tool.coach' }])
+}));
 // Mock expo-router Link to avoid navigation stack import chain
 jest.mock('expo-router', () => ({ Link: ({ children, onPress }: any) => <div onClick={onPress}>{children}</div> }));
 // Mock react-native primitives for web test environment

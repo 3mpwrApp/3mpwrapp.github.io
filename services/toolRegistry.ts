@@ -35,3 +35,8 @@ const REGISTRY: Record<string, ToolMeta> = {
 export function getToolMeta(id: string): ToolMeta | undefined { return REGISTRY[id]; }
 export function resolveToolRoute(id: string): string { return REGISTRY[id]?.route || '/'; }
 export function listToolMeta(): ToolMeta[] { return Object.values(REGISTRY); }
+export function filterToolsByFlags(enabled: Set<string> | undefined): ToolMeta[] {
+  const all = listToolMeta();
+  if (!enabled) return all.filter(t=> !t.featureFlag);
+  return all.filter(t => !t.featureFlag || enabled.has(t.featureFlag));
+}
