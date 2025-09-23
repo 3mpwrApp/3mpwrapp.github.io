@@ -2,7 +2,7 @@ import { computeMoodInsights, shouldShowMoodNudge } from '../services/moodInsigh
 import type { MoodEntry } from '../store/mood';
 
 describe('mood insights', () => {
-  function makeEntry(offsetHours: number, score: number): MoodEntry { return { id: Math.random().toString(36).slice(2), ts: Date.now() - offsetHours*3600000, score }; }
+  function _makeEntry(offsetHours: number, score: number): MoodEntry { return { id: Math.random().toString(36).slice(2), ts: Date.now() - offsetHours*3600000, score }; }
 
   it('handles empty', () => {
     const ins = computeMoodInsights([]);
