@@ -75,8 +75,24 @@ async function setLastSuggested(id: string) {
   try { await AsyncStorage.setItem('personalization:lastSuggested', JSON.stringify({ id, ts: Date.now() })); } catch {}
 }
 
+// Feedback persistence (simple aggregated counters)
+interface FeedbackEntry { up: number; down: number; }
+interface FeedbackMap { [toolId: string]: FeedbackEntry }
+async function loadFeedback(): Promise<FeedbackMap> { try { const raw = await AsyncStorage.getItem('personalization:feedback:v1'); if (raw) return JSON.parse(raw); } catch {} return {}; }
+async function saveFeedback(map: FeedbackMap) { try { await AsyncStorage.setItem('personalization:feedback:v1', JSON.stringify(map)); } catch {} }
+
+export async function submitFeedback(toolId: string, kind: 'up'|'down') {
+  const map = await loadFeedback();
+  const entry = map[toolId] || { up:0, down:0 };
+  if (kind === 'up') entry.up++; else entry.down++;
+  map[toolId] = entry;
+  await saveFeedback(map);
+  return entry;
+}
+
 export async function scoreTools(extra?: { coachProgress?: number }) : Promise<Suggestion[]> {
   const { id: lastSuggested } = await getLastSuggested();
+  const feedback = await loadFeedback();
   const suggestions: Suggestion[] = [];
   TOOLS.forEach(tool => {
     if (tool.prereq && !tool.prereq()) return;
@@ -98,6 +114,16 @@ export async function scoreTools(extra?: { coachProgress?: number }) : Promise<S
     // Time-of-day contextual boost
     const tod = timeOfDayBoost(tool);
     if (tod.boost) { score += tod.boost; reason.push({ key: tod.key, data:{ boost: tod.boost } }); }
+    // Feedback weight (net sentiment)
+    const fb = feedback[tool.id];
+    if (fb) {
+      const net = fb.up - fb.down;
+      if (net !== 0) {
+        const weight = Math.tanh(net / 5) * 0.6; // cap influence
+        score += weight;
+        reason.push({ key:'feedback', data:{ up: fb.up, down: fb.down, weight: weight.toFixed(2) } });
+      }
+    }
     suggestions.push({ toolId: tool.id, score, reason });
   });
   const sorted = suggestions.sort((a,b)=> b.score - a.score);

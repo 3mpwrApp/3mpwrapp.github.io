@@ -2,7 +2,7 @@ import { Link } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../i18n';
-import { useSuggestions } from '../services/personalization';
+import { scoreTools, submitFeedback, useSuggestions } from '../services/personalization';
 import { getToolMeta, resolveToolRoute } from '../services/toolRegistry';
 import { usage } from '../services/usage';
 import { useMood } from '../store/mood';
@@ -45,8 +45,16 @@ export function HomeGuide() {
               );
             })}
           </View>
+          <View style={{ flexDirection:'row', marginTop:6, gap:8 }}>
+            <Pressable accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(top.toolId,'up')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+              <Text style={{ color: palette.text }}>👍</Text>
+            </Pressable>
+            <Pressable accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(top.toolId,'down')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+              <Text style={{ color: palette.text }}>👎</Text>
+            </Pressable>
+          </View>
           <Link
-            href={resolveToolRoute(top.toolId)}
+            href={resolveToolRoute(top.toolId) as any}
             asChild
             onPress={()=> { usage.view('home_guide_select', '/', { tool: top.toolId }); }}
           >
@@ -60,6 +68,14 @@ export function HomeGuide() {
       )}
     </View>
   );
+}
+
+async function handleFeedback(toolId: string, kind: 'up'|'down') {
+  try {
+    await submitFeedback(toolId, kind);
+    // Re-score in background to reflect new feedback next render cycle (no direct state access here, hook will refresh on next mount or we could force an event bus)
+    scoreTools();
+  } catch {}
 }
 
 // legacy helper removed; route resolution handled by registry

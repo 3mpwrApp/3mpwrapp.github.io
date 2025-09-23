@@ -86,6 +86,10 @@
     "suggested": "Suggested",
     "open": "Open",
     "noSuggestions": "No suggestions yet",
+    "feedback": {
+      "up": "Helpful suggestion",
+      "down": "Not relevant"
+    },
     "reason": {
       "novelty": "New",
       "rotation": "Rotation",
