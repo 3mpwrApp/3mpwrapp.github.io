@@ -1,21 +1,21 @@
 import React from "react";
 import {
-    Alert,
-    Pressable,
-    ScrollView,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  Alert,
+  Pressable,
+  ScrollView,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { logActivity } from '../../../services/activity';
@@ -48,7 +48,7 @@ export default function AiAdvocateTranslator() {
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("AI Advocate Translator");
   useFocusOnRefOnMount(titleRef);
-  const { t, i18n } = useTranslation();
+  const { t, lang: language } = useTranslation();
   const [input, setInput] = React.useState("");
   const [output, setOutput] = React.useState("");
   const [sections, setSections] = React.useState<{summary:string; keyTerms:string[]; deadlines:string[]; actions:string[]}|null>(null);
@@ -83,11 +83,11 @@ export default function AiAdvocateTranslator() {
           const simplified = remote ?? simplify(input);
           const duration = Date.now() - start;
           setOutput(simplified);
-          const cfg = getTranslatorConfigForLocale(i18n.language);
+          const cfg = getTranslatorConfigForLocale(language);
           const extracted = extractTranslatorSections(simplified, cfg);
           setSections(extracted);
-          usage.complete('translator','/translator', duration,{ chars: input.length, hasRemote: !!remote, locale: i18n.language, actions: extracted.actions.length, deadlines: extracted.deadlines.length, keyTerms: extracted.keyTerms.length });
-          try { await logActivity({ type:'translator.simplify', payload:{ chars: input.length, hasRemote: !!remote, locale: i18n.language, ms: duration, actions: extracted.actions.length, deadlines: extracted.deadlines.length, keyTerms: extracted.keyTerms.length } } as any); } catch {}
+          usage.complete('translator','/translator', duration,{ chars: input.length, hasRemote: !!remote, locale: language, actions: extracted.actions.length, deadlines: extracted.deadlines.length, keyTerms: extracted.keyTerms.length });
+          try { await logActivity({ type:'translator.simplify', payload:{ chars: input.length, hasRemote: !!remote, locale: language, ms: duration, actions: extracted.actions.length, deadlines: extracted.deadlines.length, keyTerms: extracted.keyTerms.length } } as any); } catch {}
         }}
         style={s.button}
       >

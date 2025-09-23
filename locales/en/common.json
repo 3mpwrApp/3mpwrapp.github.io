@@ -139,7 +139,19 @@
       "policy_simplifier": "Open Policy Simplifier tool",
       "wellness_mood": "Open Mood Tracker tool",
       "resources_search": "Open Resources Hub"
-    }
+    },
+    "shareCampaign": "Share campaign {{title}}",
+    "joinCampaign": "Join {{title}}",
+    "leaveCampaign": "Leave {{title}}",
+    "supportCampaign": "Support this campaign",
+    "openCampaignRoom": "Open campaign room",
+    "saveCampaign": "Save to favorites",
+    "removeCampaign": "Remove from favorites",
+    "toggleCreateEventFormOpen": "Show create event form",
+    "toggleCreateEventFormClose": "Hide create event form",
+    "scheduleEventReminder": "Schedule event reminder",
+    "removeEventReminder": "Remove event reminder",
+    "addToCalendar": "Add to external calendar"
   },
   "notify": {
     "broadcast": {
@@ -422,19 +434,7 @@
       "show": "[T] settings.emergencyWallet.show"
     }
   },
-  "admin": {
-    "onlyTitle": "Admin Only",
-    "onlyDescription": "You must be an admin to access this area."
-  },
-  "bookmark": {
-    "add": "Add bookmark",
-    "remove": "Remove bookmark",
-    "save": "Save",
-    "saved": "Saved"
-  },
-  "a11y": {
-    "shareCampaign": "Share campaign {{title}}",
-    "joinCampaign": "Join {{title}}",
+  "justiceService": {
     "leaveCampaign": "Leave {{title}}",
     "supportCampaign": "Support this campaign",
     "openCampaignRoom": "Open campaign room",
@@ -444,9 +444,7 @@
     "toggleCreateEventFormClose": "Hide create event form",
     "scheduleEventReminder": "Schedule event reminder",
     "removeEventReminder": "Remove event reminder",
-    "addToCalendar": "Add to external calendar"
-  },
-  "justiceService": {
+    "addToCalendar": "Add to external calendar",
     "header": "Empowr — Local Advocacy Snapshot",
     "evidenceLine": "Evidence Locker: {{noteCount}} notes, {{docCount}} file(s)",
     "resourcesViewed": "Resources viewed this session: ~{{resourcesCount}}",

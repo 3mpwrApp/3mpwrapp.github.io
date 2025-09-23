@@ -27,7 +27,7 @@ const MAP: Record<string, JurisdictionData> = {
   NU: NU as JurisdictionData,
   ON: ON as JurisdictionData,
   PE: PE as JurisdictionData,
-  QC: QC as JurisdictionData,
+  QC: QC as unknown as JurisdictionData,
   SK: SK as JurisdictionData,
   YT: YT as JurisdictionData,
 };
