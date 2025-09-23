@@ -74,6 +74,14 @@ module.exports = defineConfig([
       curly: ['warn', 'multi-line'],
     },
   },
+  // Disallow dynamic require in jurisdictions data (enforce static imports for Metro compatibility)
+  {
+    files: ['data/jurisdictions/**/*.ts'],
+    rules: {
+      'import/no-dynamic-require': 'error',
+      'global-require': 'error'
+    }
+  },
   // Scripts (Node context)
   {
     files: ['scripts/**/*.js'],
