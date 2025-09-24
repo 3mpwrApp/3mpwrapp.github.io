@@ -21,7 +21,7 @@ export function computeAmbience(moodScore: number | null, trend: 'improving'|'de
 export function useApplyAmbience(moodScore: number | null, trend: 'improving'|'declining'|'stable'|'none') {
   const palette = useAppPalette();
   useEffect(() => {
-    const a = computeAmbience(moodScore, trend);
+    computeAmbience(moodScore, trend);
     // We cannot set OS wallpaper from Expo reliably; adjust in-app accents only
     // Trigger a light haptic as subtle feedback
     try { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); } catch {}
