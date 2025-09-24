@@ -4,7 +4,8 @@ import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
-import { aiAccountabilityPlan } from '../../../services/aiAccountability';
+import { addEvent, upsertCase } from '../../../services/accountability.tracker';
+import { aiAccountabilityPlan, buildAllyBrief, detectViolations, draftAccountabilityLetter } from '../../../services/aiAccountability';
 import { useJurisdiction } from '../../../store/jurisdiction';
 import { useAppPalette } from '../../../theme/usePalette';
 import { parseCoachOutput } from '../../../utils/coachParser';
@@ -25,6 +26,7 @@ export default function AccountabilityCoach() {
   const [output, setOutput] = React.useState('');
   const parsed = React.useMemo(() => (output ? parseCoachOutput(output) : null), [output]);
   const [loading, setLoading] = React.useState(false);
+  const [caseId, setCaseId] = React.useState<string | null>(null);
 
   const run = async () => {
     if (!issue.trim()) return;
@@ -32,11 +34,58 @@ export default function AccountabilityCoach() {
     try {
       const plan = await aiAccountabilityPlan(issue, target, jurisdiction?.code);
       setOutput(plan);
-    } catch (e) {
+      try {
+        const cs = await upsertCase({ target, issue }, { type: 'plan', text: plan });
+        setCaseId(cs.id);
+      } catch {}
+    } catch {
       Alert.alert(t('common.errorTitle', 'Error'), t('accountability.generateError'));
     } finally {
       setLoading(false);
     }
+  };
+
+  const onDetect = async () => {
+    if (!issue.trim()) return;
+    setLoading(true);
+    try {
+      const items = await detectViolations(issue, jurisdiction?.code);
+      const text = items.length ? items.map((i, idx) => `${idx + 1}. ${i.type}${i.ruleHint ? ` (${i.ruleHint})` : ''} — ${(i.confidence * 100).toFixed(0)}%`).join('\n') : 'None found';
+      await upsertCase({ target, issue }, { type: 'violations', text });
+      Alert.alert('Detected', text);
+    } catch {
+      Alert.alert(t('common.errorTitle','Error'), 'Could not detect');
+    } finally { setLoading(false); }
+  };
+
+  const onDraft = async () => {
+    if (!issue.trim()) return;
+    setLoading(true);
+    try {
+      const letter = await draftAccountabilityLetter({ issue, target, jurisdictionCode: jurisdiction?.code });
+      await upsertCase({ target, issue }, { type: 'letter', text: letter });
+      Alert.alert('Letter', letter);
+    } catch { Alert.alert(t('common.errorTitle','Error'), 'Could not draft'); }
+    finally { setLoading(false); }
+  };
+
+  const onTrack = async () => {
+    if (!caseId) return;
+    try {
+      await addEvent(caseId, 'response', `Response noted at ${new Date().toLocaleString()}`);
+      Alert.alert('Tracked', 'Response recorded');
+    } catch {}
+  };
+
+  const onAlly = async () => {
+    if (!issue.trim()) return;
+    setLoading(true);
+    try {
+      const brief = await buildAllyBrief({ issue, target, plan: output });
+      await upsertCase({ target, issue }, { type: 'ally', text: brief });
+      Alert.alert('Ally Brief', brief);
+    } catch { Alert.alert(t('common.errorTitle','Error'), 'Could not create brief'); }
+    finally { setLoading(false); }
   };
 
   return (
@@ -72,6 +121,20 @@ export default function AccountabilityCoach() {
       <Pressable onPress={run} style={s.button} accessibilityRole="button" disabled={loading}>
         <Text style={s.buttonText}>{loading ? t('accountability.generating') : t('accountability.generate')}</Text>
       </Pressable>
+      <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:8 }}>
+        <Pressable onPress={onDetect} style={[s.button, { backgroundColor: '#444' }]} accessibilityRole="button" disabled={loading}>
+          <Text style={s.buttonText}>{t('accountability.detect','Detect violations')}</Text>
+        </Pressable>
+        <Pressable onPress={onDraft} style={[s.button, { backgroundColor: '#555' }]} accessibilityRole="button" disabled={loading}>
+          <Text style={s.buttonText}>{t('accountability.draftLetter','Draft letter')}</Text>
+        </Pressable>
+        <Pressable onPress={onTrack} style={[s.button, { backgroundColor: '#666' }]} accessibilityRole="button" disabled={!caseId}>
+          <Text style={s.buttonText}>{t('accountability.track','Track response')}</Text>
+        </Pressable>
+        <Pressable onPress={onAlly} style={[s.button, { backgroundColor: '#777' }]} accessibilityRole="button" disabled={loading}>
+          <Text style={s.buttonText}>{t('accountability.ally','Ally brief')}</Text>
+        </Pressable>
+      </View>
 
       {!!parsed && (
         <View style={{ marginTop: 12 }} accessibilityRole="summary" accessibilityLabel={t('accountability.outputLabel')}>

@@ -721,7 +721,9 @@
       "ai_case": "AI Case Interpreter",
       "ally_hub": "Ally Hub",
       "finder": "Lawyer & Advocate Finder",
-      "ratings": "Disability Justice Ratings"
+      "ratings": "Disability Justice Ratings",
+  "accountability": "Coach de Redevabilité",
+  "accountability_cases": "Dossiers de redevabilité"
     },
     "ally": {
       "intro": "Ressources de solidarité inter‑mouvements et invites rapides pour alliés soutenant des personnes handicapées / travailleuses blessées.",
@@ -781,6 +783,26 @@
       "notLegal": "Éducatif uniquement — pas un avis juridique. Vérifiez sources officielles.",
       "privacy": "Entrées traitées localement sauf backend configuré."
     }
+  },
+  "accountability": {
+    "title": "Coach de Redevabilité",
+    "subtitle": "Détecter des violations, rédiger des lettres, suivre des réponses et mobiliser des alliés — en langage simple.",
+    "targetLabel": "Cible (agence/organisation)",
+    "targetPlaceholder": "ex. Commission des accidents du travail, Service du logement",
+    "issueLabel": "Description du problème",
+    "issuePlaceholder": "Ce qui s’est passé et le résultat souhaité",
+    "generate": "Générer le plan",
+    "generating": "Génération...",
+    "outputLabel": "Plan de redevabilité",
+    "generateError": "Impossible de générer le plan.",
+    "detect": "Détecter les violations",
+    "draftLetter": "Rédiger une lettre",
+    "track": "Suivre une réponse",
+    "ally": "Brief allié",
+    "casesTitle": "Dossiers de redevabilité",
+    "casesEmpty": "Aucun dossier pour l'instant. Utilisez le coach pour en créer un.",
+    "unknownTarget": "Cible inconnue",
+    "latestEvent": "Dernier événement"
   },
   "network": {
     "online": "En ligne",

@@ -20,6 +20,7 @@ const featureKeyMap = {
   ratings: 'advocacy.tools.ratings',
   self_coach: 'advocacy.tools.self_coach',
   accountability: 'advocacy.tools.accountability',
+  accountability_cases: 'advocacy.tools.accountability_cases',
 } as const;
 
 const FEATURES: Feature[] = [
@@ -33,6 +34,7 @@ const FEATURES: Feature[] = [
   { route: '/(tabs)/advocacy/ratings', key: 'ratings' },
   { route: '/(tabs)/advocacy/self-advocacy-coach', key: 'self_coach' },
   { route: '/(tabs)/advocacy/accountability-coach', key: 'accountability' },
+  { route: '/(tabs)/advocacy/accountability-cases', key: 'accountability_cases' },
 ];
 
 export default function AdvocacyHub() {

@@ -722,7 +722,9 @@
       "ai_case": "AI Case Interpreter",
       "ally_hub": "Centro de Aliados",
       "finder": "Lawyer & Advocate Finder",
-      "ratings": "Disability Justice Ratings"
+      "ratings": "Disability Justice Ratings",
+  "accountability": "Asistente de Rendición de Cuentas",
+  "accountability_cases": "Casos de Rendición de Cuentas"
     },
     "ally": {
       "intro": "Recursos de solidaridad inter‑movimientos e indicaciones rápidas para aliados que apoyan a personas con discapacidad / trabajadoras lesionadas.",
@@ -782,6 +784,26 @@
       "notLegal": "Solo educativo — no es asesoría legal. Verifique fuentes oficiales.",
       "privacy": "Entradas procesadas localmente salvo backend configurado."
     }
+  },
+  "accountability": {
+    "title": "Asistente de Rendición de Cuentas",
+    "subtitle": "Detecta posibles violaciones, genera cartas claras, registra respuestas y convoca aliados.",
+    "targetLabel": "Entidad objetivo (agencia/organización)",
+    "targetPlaceholder": "p.ej., Junta de Compensación Laboral, Dpto. de Vivienda",
+    "issueLabel": "Descripción del problema",
+    "issuePlaceholder": "Qué ocurrió y qué resultado buscas",
+    "generate": "Generar plan",
+    "generating": "Generando...",
+    "outputLabel": "Plan de rendición de cuentas",
+    "generateError": "No se pudo generar el plan.",
+    "detect": "Detectar violaciones",
+    "draftLetter": "Redactar carta",
+    "track": "Registrar respuesta",
+    "ally": "Brief para aliados",
+    "casesTitle": "Casos de Rendición de Cuentas",
+    "casesEmpty": "Aún no hay casos. Usa el asistente para crear uno.",
+    "unknownTarget": "Objetivo desconocido",
+    "latestEvent": "Último evento"
   },
   "network": {
     "online": "En línea",

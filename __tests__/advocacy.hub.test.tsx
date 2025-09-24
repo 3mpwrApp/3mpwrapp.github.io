@@ -13,7 +13,9 @@ jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (k:string) => {
     'advocacy.tools.finder':'advocacy.tools.finder',
     'advocacy.tools.policy_simple':'advocacy.tools.policy_simple',
     'advocacy.tools.ratings':'advocacy.tools.ratings',
-    'advocacy.tools.self_coach':'advocacy.tools.self_coach'
+    'advocacy.tools.self_coach':'advocacy.tools.self_coach',
+    'advocacy.tools.accountability':'advocacy.tools.accountability',
+    'advocacy.tools.accountability_cases':'advocacy.tools.accountability_cases'
   };
   return map[k] || k;
 } }) }));
@@ -39,7 +41,9 @@ describe('AdvocacyHub', () => {
       'advocacy.tools.finder',
       'advocacy.tools.policy_simple',
       'advocacy.tools.ratings',
-      'advocacy.tools.self_coach'
+      'advocacy.tools.self_coach',
+      'advocacy.tools.accountability',
+      'advocacy.tools.accountability_cases'
     ];
     // Count how many expected keys appear as text nodes
   const foundCount = titles.reduce((acc, t) => acc + (queryByText(t) ? 1 : 0), 0);

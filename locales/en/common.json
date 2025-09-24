@@ -206,8 +206,9 @@
       "finder": "Lawyer & Advocate Finder",
       "policy_simple": "Policy Simplifier",
       "ratings": "Disability Justice Ratings",
-      "self_coach": "Self‑Advocacy Coach",
-      "accountability": "Accountability Coach"
+  "self_coach": "Self‑Advocacy Coach",
+  "accountability": "Accountability Coach",
+  "accountability_cases": "Accountability Cases"
     },
     "disclaimer": {
       "notLegal": "Educational only — not legal advice. Check official sources.",
@@ -255,7 +256,7 @@
   },
   "accountability": {
     "title": "Accountability Coach",
-    "subtitle": "Plan steps to hold a government body or organization accountable — in plain language.",
+    "subtitle": "Spot violations, draft letters, track responses, and rally allies — in plain language.",
     "targetLabel": "Target (agency/organization)",
     "targetPlaceholder": "e.g., Workers’ Compensation Board, City Housing Dept.",
     "issueLabel": "Issue description",
@@ -263,7 +264,15 @@
     "generate": "Generate plan",
     "generating": "Generating...",
     "outputLabel": "Accountability plan",
-    "generateError": "Could not generate plan."
+    "generateError": "Could not generate plan.",
+    "detect": "Detect violations",
+    "draftLetter": "Draft letter",
+    "track": "Track response",
+    "ally": "Ally brief",
+    "casesTitle": "Accountability Cases",
+    "casesEmpty": "No cases yet. Use the coach to create one.",
+    "unknownTarget": "Unknown target",
+    "latestEvent": "Latest event"
   },
   
   "home": {
