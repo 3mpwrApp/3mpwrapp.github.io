@@ -202,16 +202,29 @@
       "linksHeader": "Movement links",
       "coachHeader": "Coaching prompt",
       "coachHelp": "Describe what you want to help with (e.g., support letter, meeting prep, reducing overload).",
-      "generate": "Generate steps"
+      "generate": "Generate steps",
+      "generating": "Generating..."
     },
     "policy": {
       "aiHeader": "AI Simplifier",
       "aiHelp": "Paste policy/decision text below. Processes locally unless a backend is configured.",
       "simplify": "Simplify",
+      "simplifying": "Simplifying...",
       "summary": "Summary",
-      "keyPoints": "Key Points"
+      "keyPoints": "Key Points",
+      "obligations": "Obligations",
+      "suggestedActions": "Suggested Actions"
     },
     "coach": {
+      "complete": "complete",
+      "deadlineInDays": "Complete within {{d}} days",
+      "evidenceNeeded": "Evidence needed",
+      "generateError": "Could not generate practice steps.",
+      "practiceGenerateLabel": "Generate practice coaching",
+      "practiceInputLabel": "Practice prompt input",
+      "practiceOutputLabel": "Practice coaching output",
+      "generating": "Generating...",
+      "generate": "Generate practice",
       "practiceHeader": "Practice prompt",
       "practiceHelp": "Describe a need or goal. The coach returns structured steps.",
       "generate": "Generate practice",
@@ -224,6 +237,11 @@
         "docs-1": { "title": "Documentation", "b1": "Summarize call/meeting by email", "b2": "Attach only key evidence", "b3": "Track dates and deadlines" }
       }
     },
+    "tools": {
+      "ally_hub": "Ally Hub",
+      "policy_simple": "Policy Simplifier",
+      "self_coach": "Self‑Advocacy Coach"
+    },
     "disclaimer": {
       "notLegal": "Educational only — not legal advice. Check official sources.",
       "privacy": "Inputs processed locally unless a backend is configured."
@@ -232,7 +250,20 @@
   "home": {
     "title": "Welcome to Empowr",
     "subtitle": "Support. Advocacy. Empowerment.",
-    "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!"
+    "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!",
+    "guide": {
+      "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
+      "snapshotPlaceholder": "(Mood tracking available on Wellness tab)",
+      "header": "Today's Guide",
+      "snapshot": "Snapshot",
+      "suggested": "Suggested",
+      "open": "Open",
+      "noSuggestions": "No suggestions yet",
+      "feedback": {
+        "up": "Helpful suggestion",
+        "down": "Not relevant"
+      }
+    }
   },
   "mood": {
     "title": "Mood Tracker",
@@ -481,7 +512,32 @@
     "doc": "[T] common.doc",
     "success": "[T] common.success",
     "error": "[T] common.error",
-    "working": "[T] common.working"
+    "working": "[T] common.working",
+    "add": "Add",
+    "next": "Next"
+  },
+  "admin": {
+    "onlyTitle": "Admin Only",
+    "onlyDescription": "You must be an admin to access this area."
+  },
+  "header": {
+    "favorites": "Favorites",
+    "items": "Items",
+    "openProfile": "Open profile",
+    "refresh": "Refresh",
+    "signIn": "Sign in",
+    "signOut": "Sign out"
+  },
+  "bookmark": {
+    "add": "Add bookmark",
+    "remove": "Remove bookmark",
+    "save": "Save",
+    "saved": "Saved"
+  },
+  "network": {
+    "checking": "Checking...",
+    "online": "Online",
+    "offline": "Offline (local only)"
   },
   "a11y": {
     "toggleMoodNudges": "Toggle mood nudges",
@@ -1157,6 +1213,38 @@
       "entriesTitle": "[T] templates.timeline.entriesTitle"
     },
     "voice": {
+      "title": "Voice-to-Case Notes",
+      "subtitle": "Record audio notes and convert them into formatted case logs for doctors or tribunals.",
+      "infoTitle": "Capture and Transcribe",
+      "info1": "Record conversations or notes and add quick context (who, topic).",
+      "info2": "Transcribe audio (if enabled) and export/share formatted logs.",
+      "info3": "Use logs for medical visits, HR calls, or hearings.",
+      "date": "Date",
+      "who": "Who",
+      "whoField": "Who (doctor, case mgr, HR)",
+      "topic": "Topic",
+      "summary": "Summary",
+      "summaryField": "Summary / Transcript",
+      "audio": "Audio",
+      "record": "Record audio",
+      "stop": "Stop recording",
+      "recording": "Recording...",
+      "recordingStopped": "Recording stopped",
+      "recordUnavailable": "Recording unavailable",
+      "recordUnavailableBody": "Rebuild with expo-av to enable.",
+      "transcribe": "Transcribe",
+      "saveNote": "Save Note",
+      "noteSaved": "Voice note saved",
+      "savedNotes": "Saved notes",
+      "none": "No notes yet.",
+      "note": "Note",
+      "copiedBody": "Log copied to clipboard.",
+      "shareTitle": "Case Log",
+      "shareTitleDoc": "Case Log (.doc)",
+      "pdfUnavailable": "PDF not available",
+      "pdfUnavailableBody": "Install expo-print in a dev build.",
+      "exportFailed": "Export failed",
+      "exportFailedBody": "Could not create .doc file.",
     "show": "Show",
     "save": "Save",
     "saveAll": "Save All",
