@@ -28,6 +28,7 @@ import { A11ySettingsProvider } from "../store/a11ySettings";
 import { BookmarksProvider } from "../store/bookmarks";
 import { PrivacyProvider, usePrivacy } from "../store/privacy";
 import { ProfileLocalProvider } from "../store/profileLocal";
+import { ResilienceProvider } from "../store/resilience";
 import { SettingsProvider } from "../store/settings";
 // Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
 // removed getFirebaseAnalytics direct import (handled via telemetry module)
@@ -108,6 +109,7 @@ export default function RootLayout() {
     <I18nProvider>
       <A11ySettingsProvider>
         <SettingsProvider>
+          <ResilienceProvider>
           <BookmarksProvider>
           <ProfileLocalProvider>
             <PrivacyProvider>
@@ -160,6 +162,7 @@ export default function RootLayout() {
             </PrivacyProvider>
           </ProfileLocalProvider>
           </BookmarksProvider>
+          </ResilienceProvider>
         </SettingsProvider>
       </A11ySettingsProvider>
     </I18nProvider>

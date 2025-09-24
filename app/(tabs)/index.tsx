@@ -7,6 +7,7 @@ import { HomeGuide } from "../../components/HomeGuide";
 import { useAuth } from "../../context/AuthContext";
 import { db, storage } from "../../firebase/config"; // dY"1 storage import
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../hooks/useA11y";
+import { useTranslation } from "../../i18n";
 import { useNetwork } from "../../store/network";
 import { useSettings } from "../../store/settings";
 import { useAppPalette } from "../../theme/usePalette";
@@ -22,7 +23,7 @@ export default function SettingsScreen() {
   useAnnounceOnMount("Settings");
   useFocusOnRefOnMount(titleRef);
 
-  // const { setLanguage } = useTranslation();
+  const { t } = useTranslation();
   const settings = useSettings();
 
   // dY"1 Profile state
@@ -152,10 +153,13 @@ export default function SettingsScreen() {
         <Button title="Update Name" onPress={handleUpdateDisplayName} />
       </Section>
 
-      <Section title="Wellness" styles={styles}>
+      <Section title={t('settings.wellness','Wellness')} styles={styles}>
         <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between' }}>
-          <Text style={styles.rowLabel}>Mood Nudges</Text>
-          <Button title={settings.moodNudgesEnabled ? 'On' : 'Off'} accessibilityLabel="Toggle mood nudges" onPress={()=> settings.setMoodNudgesEnabled(!settings.moodNudgesEnabled)} />
+          <View style={{ flex:1 }}>
+            <Text style={styles.rowLabel}>{t('settings.mood.nudges','Mood Nudges')}</Text>
+            <Text style={{ color: palette.text, opacity:0.7 }}>{t('settings.mood.nudgesHelp','Evening reminder to log mood if you skipped today.')}</Text>
+          </View>
+          <Button title={settings.moodNudgesEnabled ? t('common.on','On') : t('common.off','Off')} accessibilityLabel={t('a11y.toggleMoodNudges','Toggle mood nudges')} onPress={()=> settings.setMoodNudgesEnabled(!settings.moodNudgesEnabled)} />
         </View>
       </Section>
       {/* ... other settings sections below ... */}

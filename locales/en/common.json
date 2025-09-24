@@ -31,7 +31,147 @@
       "subtitle": "Earn badges as you build healthy routines.",
       "title": "Achievements"
     },
-    "intro": "[T] wellness.intro"
+    "intro": "[T] wellness.intro",
+    "hub": {
+      "title": "Wellness & Recovery",
+      "subtitle": "Evidence-based tools for mood, pain, resilience, and recovery."
+    },
+    "resilience": {
+      "title": "Resilience Points",
+      "desc": "Gamified micro-wins for therapy and life steps.",
+      "points": "Points: {{points}}",
+      "faceFear": "Face a fear",
+      "therapy": "Attend therapy",
+      "grounding": "Practice grounding",
+      "breathing": "Breathing"
+    },
+    "dbt": {
+      "title": "DBT Skill Matcher",
+      "desc": "Instant skill suggestions for current emotion.",
+      "sad": "Sad",
+      "angry": "Angry",
+      "anxious": "Anxious",
+      "overwhelmed": "Overwhelmed",
+      "numb": "Numb"
+    },
+    "dreams": {
+      "title": "Dream Tracker & Interpreter",
+      "desc": "Log dreams and get symbolic interpretations.",
+      "placeholder": "Describe your dream..."
+    },
+    "ambience": {
+      "title": "Ambience Sync AI",
+      "desc": "Match background, color, soundscape to your mood.",
+      "current": "Suggestion: {{palette}}, {{soundscape}}, {{brightness}}",
+      "apply": "Apply in app"
+    },
+    "opposite": {
+      "title": "Opposite Action Companion",
+      "desc": "When emotions suggest unhelpful actions, try the opposite in small, safe steps.",
+      "what": "Name the emotion and urge.",
+      "check": "Check the facts: Is the urge justified?",
+      "choose": "Choose a small opposite action.",
+      "do": "Do it briefly. Notice the effect."
+    },
+    "acceptance": {
+      "title": "Radical Acceptance",
+      "desc": "A brief guide to reduce suffering by accepting reality as it is, while taking wise action.",
+      "line1": "This moment is as it is (not approval).",
+      "line2": "Name what’s in your control and what isn’t.",
+      "line3": "Take the next kind action within your control."
+    },
+    "cbt": {
+      "title": "CBT Virtual Coach",
+      "desc": "Reframe thoughts with evidence.",
+      "thought": "Automatic thought",
+      "evidenceFor": "Evidence supporting",
+      "evidenceAgainst": "Evidence against",
+      "generate": "Generate",
+      "alt": "Alternate view",
+      "prompt": "Given",
+      "consider": "consider evidence",
+      "try": "Try a balanced statement."
+    },
+    "sleepReframe": {
+      "title": "Sleep Reframe",
+      "desc": "Support better sleep with kind, practical reframes and routines.",
+      "tip1": "Can’t sleep → It’s okay to rest quietly; rest still helps.",
+      "tip2": "If awake >20m, reset: dim lights, gentle stretch, return.",
+      "tip3": "Anchor wake time; short daytime rest if needed."
+    },
+    "painForecast": {
+      "title": "Pain Forecast",
+      "desc": "Simple trend-based suggestions for pacing.",
+      "avg7d": "7‑day average pain: {{n}}",
+      "trend": "Trend: {{t}}",
+      "next": "Next 3 days",
+      "tips": "Tips"
+    },
+    "micro": {
+      "title": "Micro‑Movement Coach",
+      "desc": "Gentle, chair‑friendly movements. Stop if uncomfortable."
+    },
+    "energy": {
+      "title": "Daily Energy Coins",
+      "desc": "Set a daily budget and spend coins on tasks. Pace kindly.",
+      "today": "Today: {{date}}",
+      "remaining": "Remaining coins: {{n}}",
+      "daily": "Daily coins",
+      "set": "Set",
+      "label": "Task label",
+      "cost": "Cost",
+      "spend": "Spend",
+      "reset": "Reset day",
+      "history": "History"
+    },
+    "distress": {
+      "title": "Distress Tolerance",
+      "desc": "Reduce crisis intensity with brief, practical skills. Adapt to your body.",
+      "tipp1": "T: Temperature — cool face/neck (safe cold pack).",
+      "tipp2": "I: Intense (gentle) exercise — brief walk, arm circles.",
+      "tipp3": "P: Paced breathing — 4 in, 6 out, 2–3 minutes.",
+      "tipp4": "P: Progressive relax — tense/release muscle groups."
+    },
+    "belief": {
+      "title": "Belief Strength Meter",
+      "desc": "Rate how strongly you believe a thought (0–100). Track change after a reframe.",
+      "thought": "Thought",
+      "rating": "Belief strength (0–100)",
+      "now": "Now: {{n}}",
+      "after": "After a reframe, consider if strength shifts",
+      "hint": "Tip: pair with CBT Coach to generate reframes.",
+      "measure": "Measure"
+    },
+    "mini": {
+      "title": "CBT Mini‑Games",
+      "desc": "Quick grounding games to shift attention and calm.",
+      "fiveSenses": "5‑4‑3‑2‑1 grounding (senses).",
+      "nameColors": "Name colors in the room.",
+      "countBack": "Count backwards by 7s from 100."
+    },
+    "triggers": {
+      "title": "Trigger Detector",
+      "desc": "Suggests possible correlations from recent logs.",
+      "maybe": "Possible trigger",
+      "none": "No strong correlations found. Keep logging."
+    },
+    "harm": {
+      "title": "Harm Reduction Guide",
+      "desc": "Practical steps to reduce harm and increase safety.",
+      "plan": "Make a safety plan and keep it visible.",
+      "delay": "Delay + Distract: set a 10‑minute timer and switch tasks.",
+      "connection": "Connection: text a friend or peer support.",
+      "crisis": "Crisis: know local lines and emergency steps."
+    },
+    "acceptFn": {
+      "title": "Acceptance & Function",
+      "desc": "Track acceptance and daily functioning to notice supportive patterns.",
+      "date": "Date (YYYY-MM-DD)",
+      "acceptance": "Acceptance (0–10)",
+      "function": "Function (0–10)",
+      "note": "Note (optional)",
+      "recent": "Recent"
+    }
   },
   "resources": {
     "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
@@ -55,6 +195,39 @@
       "accommodation": "Accommodation Request Builder"
     },
     "search": "[T] resources.search"
+  },
+  "advocacy": {
+    "ally": {
+      "intro": "Cross‑movement solidarity resources and quick prompts for allies supporting disabled people / injured workers.",
+      "linksHeader": "Movement links",
+      "coachHeader": "Coaching prompt",
+      "coachHelp": "Describe what you want to help with (e.g., support letter, meeting prep, reducing overload).",
+      "generate": "Generate steps"
+    },
+    "policy": {
+      "aiHeader": "AI Simplifier",
+      "aiHelp": "Paste policy/decision text below. Processes locally unless a backend is configured.",
+      "simplify": "Simplify",
+      "summary": "Summary",
+      "keyPoints": "Key Points"
+    },
+    "coach": {
+      "practiceHeader": "Practice prompt",
+      "practiceHelp": "Describe a need or goal. The coach returns structured steps.",
+      "generate": "Generate practice",
+      "subtitle": "Micro‑lessons for confidence, clear expression, and assertiveness.",
+      "defaultPrompt": "Ask for a 10‑minute break each hour due to pain",
+      "lesson": {
+        "conf-1": { "title": "Confidence basics", "b1": "Breathe slow and low (4‑4‑4‑4)", "b2": "Grounded posture; release shoulders", "b3": "Prepare a goal sentence" },
+        "speak-1": { "title": "Speak clearly", "b1": "Short sentences; one idea at a time", "b2": "Ask to repeat/clarify", "b3": "Pause briefly before responding" },
+        "assert-1": { "title": "Health/work assertiveness", "b1": "Name the need: 'I need…'", "b2": "Briefly explain impact", "b3": "Offer options; invite collaboration" },
+        "docs-1": { "title": "Documentation", "b1": "Summarize call/meeting by email", "b2": "Attach only key evidence", "b3": "Track dates and deadlines" }
+      }
+    },
+    "disclaimer": {
+      "notLegal": "Educational only — not legal advice. Check official sources.",
+      "privacy": "Inputs processed locally unless a backend is configured."
+    }
   },
   "home": {
     "title": "Welcome to Empowr",
@@ -93,9 +266,9 @@
       "streak": "Mood log streak: {{days}}d",
       "nudge": "Evening check-in? Log how you feel.",
       "nudgeAction": "Log Mood",
-      "deltaPositive": "24h change: +{{delta}}",
-      "deltaNegative": "24h change: {{delta}}",
-      "deltaNeutral": "24h change: 0"
+  "deltaPositive": "Up {{delta}} in the last 24h",
+  "deltaNegative": "Down {{delta}} in the last 24h",
+  "deltaNeutral": "No change in the last 24h"
     },
     "feedback": {
       "up": "Helpful suggestion",
@@ -132,7 +305,178 @@
     "copiedTitle": "Copied",
     "copiedBody": "Summary copied."
   },
+  "settings": {
+    "wellness": "Wellness",
+    "mood": {
+      "nudges": "Mood Nudges",
+      "nudgesHelp": "Evening reminder to log mood if you skipped today."
+    },
+    "title": "Settings",
+    "accessibility": {
+      "title": "Accessibility",
+      "subtitle": "Make the app work better for you",
+      "highContrast": "High Contrast",
+      "highContrastDesc": "Increases contrast for better readability",
+      "textSize": "Text Size",
+      "textSizeDesc": "Adjust text size throughout the app",
+      "screenReader": "Screen Reader Optimized",
+      "screenReaderDesc": "Optimizes content for screen readers",
+      "reduceMotion": "Reduce Motion",
+      "reduceMotionDesc": "Minimizes animations and transitions",
+      "focusIndicator": "Enhanced Focus Indicators",
+      "focusIndicatorDesc": "Makes keyboard navigation more visible",
+      "tapTarget": "Minimum Tap Target Size",
+      "tapTargetDesc": "Ensures buttons are easy to tap",
+      "dyslexiaFriendly": "Dyslexia-Friendly Font",
+      "dyslexiaFriendlyDesc": "Improves letter spacing and readability",
+      "plainLanguage": "Plain Language",
+      "plainLanguageDesc": "Uses simpler, clearer text",
+      "captions": "Captions Preferred",
+      "captionsDesc": "Shows captions when available",
+      "voiceMode": "Voice Mode",
+      "voiceModeDesc": "Enables voice navigation (beta)",
+      "dyslexia": "[T] settings.accessibility.dyslexia",
+      "dyslexiaDesc": "[T] settings.accessibility.dyslexiaDesc"
+    },
+    "language": {
+      "title": "Language",
+      "subtitle": "Choose your preferred language",
+      "english": "English",
+      "french": "Français",
+      "spanish": "Español"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Choose what alerts you receive",
+      "enabled": "Enable Notifications",
+      "enabledDesc": "Receive app notifications",
+      "sound": "Notification Sound",
+      "soundDesc": "Play sound with notifications",
+      "vibration": "Vibration",
+      "vibrationDesc": "Vibrate for notifications",
+      "emergency": "Emergency Alerts",
+      "emergencyDesc": "Critical safety notifications",
+      "wellness": "Wellness Reminders",
+      "wellnessDesc": "Daily wellness check-ins",
+      "moodNudges": "Mood Nudges",
+      "moodNudgesDesc": "Evening reminder to log how you feel",
+      "events": "Event Reminders",
+      "eventsDesc": "Upcoming event notifications"
+    },
+    "bookmarks": {
+      "title": "Bookmarks",
+      "subtitle": "Save quick links to app features",
+      "description": "Add bookmarks to quickly open frequently used tools and screens.",
+      "search": "Search or filter available routes",
+      "searchPlaceholder": "Type to filter suggestions",
+      "suggestions": "Suggestions",
+      "addSuggestion": "Add bookmark for",
+      "route": "Route Path",
+      "routePlaceholder": "e.g. /(tabs)/resources/index",
+      "label": "Label",
+      "labelPlaceholder": "My Resources",
+      "add": "Add Bookmark",
+      "remove": "Remove bookmark",
+      "empty": "No bookmarks yet.",
+      "clearAll": "Clear All",
+      "errEmptyRoute": "Route required",
+      "errInvalid": "Route not bookmarkable",
+      "errDuplicate": "Already bookmarked"
+    },
+    "emergency": {
+      "title": "Emergency Wallet Card",
+      "subtitle": "Quick access to important information",
+      "description": "Create a digital emergency card with your key information for quick access when needed",
+      "openLabel": "[T] settings.emergency.openLabel",
+      "manage": "[T] settings.emergency.manage"
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "subtitle": "Control your data and security",
+      "passcode": "Require Passcode",
+      "passcodeDesc": "Lock app with passcode",
+      "autoLock": "Auto-Lock Timeout",
+      "autoLockDesc": "Minutes before app locks",
+      "analytics": "Opt Out of Analytics",
+      "analyticsDesc": "Don't share usage data"
+    },
+    "account": {
+      "title": "Account Management",
+      "subtitle": "Manage your profile and preferences",
+      "displayName": "Display Name",
+      "displayNamePlaceholder": "Enter display name",
+      "changePhoto": "Change Profile Picture",
+      "updateName": "Update Name",
+      "resetPassword": "Send Password Reset Email",
+      "resetPasswordSent": "Email Sent",
+      "resetPasswordSentDesc": "Check your inbox for reset instructions.",
+      "resetPasswordFailed": "Reset Failed",
+      "password": "Change Password",
+      "preferences": "Preferences",
+      "delete": "Delete Account",
+      "deleteConfirmTitle": "Delete Account",
+      "deleteConfirmBody": "This will permanently delete your account. This cannot be undone.",
+      "deleteConfirmPasswordTitle": "Confirm Deletion",
+      "deleteConfirmPasswordBody": "Enter your password to permanently delete your account.",
+      "deleted": "Account deleted",
+      "deleteFailed": "Delete failed",
+      "passwordPlaceholder": "Password",
+      "reauthFailed": "Re-authentication failed",
+      "confirmDelete": "Confirm Delete",
+      "updatedName": "[T] settings.account.updatedName",
+      "photoUpdated": "[T] settings.account.photoUpdated",
+      "guestNotice": "[T] settings.account.guestNotice",
+      "createAccount": "[T] settings.account.createAccount",
+      "photo": "[T] settings.account.photo",
+      "deleteNoPassword": "[T] settings.account.deleteNoPassword"
+    },
+    "emergencyWallet": {
+      "title": "[T] settings.emergencyWallet.title",
+      "subtitle": "[T] settings.emergencyWallet.subtitle",
+      "hide": "[T] settings.emergencyWallet.hide",
+      "show": "[T] settings.emergencyWallet.show"
+    }
+  },
+  "common": {
+    "on": "On",
+    "off": "Off",
+    "copy": "Copy",
+    "share": "Share",
+    "hide": "Hide",
+    "show": "Show",
+    "save": "Save",
+    "saveAll": "Save All",
+    "processQueue": "Process Queue",
+    "load": "Load",
+    "loadMore": "Load More",
+    "openQueue": "Open Upload Queue",
+    "cloudItems": "Cloud items",
+    "deleteAll": "Delete All",
+    "deleteSelected": "Delete Selected",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "filter": "quick filter",
+    "errorTitle": "[T] common.errorTitle",
+    "ok": "[T] common.ok",
+    "hidden": "[T] common.hidden",
+    "shown": "[T] common.shown",
+    "copyAll": "[T] common.copyAll",
+    "exportDoc": "[T] common.exportDoc",
+    "reset": "[T] common.reset",
+    "loading": "[T] common.loading",
+    "edit": "[T] common.edit",
+    "previewImage": "[T] common.previewImage",
+    "closePreview": "[T] common.closePreview",
+    "preview": "[T] common.preview",
+    "copied": "[T] common.copied",
+    "pdf": "[T] common.pdf",
+    "doc": "[T] common.doc",
+    "success": "[T] common.success",
+    "error": "[T] common.error",
+    "working": "[T] common.working"
+  },
   "a11y": {
+    "toggleMoodNudges": "Toggle mood nudges",
     "tool": {
       "coach": "Open Advocacy Coach tool",
       "translator": "Open AI Translator tool",
@@ -184,131 +528,6 @@
         "body": "You viewed {{resource}}"
       }
     },
-    "system": {
-      "changelog": {
-        "title": "What's new in Empowr",
-        "body": "New features and improvements are available."
-      }
-    },
-    "petition": {
-      "signed": {
-        "title": "Petition signed",
-        "body": "You signed \"{{petition}}\""
-      }
-    },
-    "faq": {
-      "created": {
-        "title": "FAQ added",
-        "body": "Created: {{question}}"
-      }
-    }
-  },
-  "header": {
-    "favorites": "Favs",
-    "items": "Items",
-    "openProfile": "Open profile",
-    "signIn": "Sign in",
-    "signOut": "Sign out",
-    "refresh": "Refresh all"
-  },
-  "advocacy": {
-    "tools": {
-      "self_coach": "Self-Advocacy Coach (micro-lessons)",
-      "ai_translator": "AI Advocate Translator",
-      "collective": "Collective Legal Action Hub",
-      "policy_simple": "Policy Made Simple",
-      "ai_gov": "AI Government Navigator",
-      "ai_case": "AI Case Interpreter",
-      "ally_hub": "Ally Hub",
-      "finder": "Lawyer & Advocate Finder",
-      "ratings": "Disability Justice Ratings"
-    },
-    "translator": {
-      "simplify": "Simplify",
-      "summary": "Plain Summary",
-      "keyTerms": "Key Terms",
-      "deadlines": "Deadlines",
-      "actions": "Actions",
-      "fullText": "Full Simplified Text",
-      "copiedTitle": "Copied",
-      "copiedBody": "Summary copied.",
-      "shareTitle": "Plain-language Summary",
-      "shareTitleDoc": "Plain-language Summary (.doc)",
-      "pdf": "PDF",
-      "doc": "DOC",
-      "pdfUnavailableTitle": "PDF not available",
-      "pdfUnavailableBody": "Install expo-print in a dev build.",
-      "exportFailedTitle": "Export failed",
-      "exportFailedBody": "Could not create .doc file."
-    },
-    "ally": {
-      "intro": "Cross-movement solidarity resources and quick coaching prompts for allies supporting disabled / injured workers.",
-      "linksHeader": "Movement Links",
-      "coachHeader": "Coaching Prompt",
-      "coachHelp": "Describe what you want to help with (e.g., support letter, preparing for meeting, reducing overwhelm).",
-      "generate": "Generate Steps",
-      "generating": "Generating..."
-    },
-    "policy": {
-      "aiHeader": "AI Simplifier",
-      "aiHelp": "Paste policy/decision text below. Processing is local unless backend available.",
-      "simplify": "Simplify",
-      "simplifying": "Simplifying...",
-      "summary": "Summary",
-      "keyPoints": "Key Points",
-      "obligations": "Obligations",
-      "suggestedActions": "Suggested Actions"
-    },
-    "coach": {
-      "practiceHeader": "Practice Prompt",
-      "practiceHelp": "Describe a need or goal. The coach returns structured steps.",
-      "generate": "Generate Practice",
-      "generating": "Generating...",
-      "subtitle": "Micro-lessons for confidence, public speaking, and assertiveness.",
-      "defaultPrompt": "Request a 10-minute break each hour due to pain",
-      "generateError": "Could not generate practice steps.",
-      "practiceInputLabel": "Practice prompt input",
-      "practiceGenerateLabel": "Generate practice coaching",
-      "practiceOutputLabel": "Practice coaching output",
-      "lesson": {
-        "conf-1": {
-          "title": "Confidence Basics",
-          "b1": "Breathe low and slow (4-4-4-4)",
-          "b2": "Stand/sit grounded; soften shoulders",
-          "b3": "Prepare one sentence purpose statement"
-        },
-        "speak-1": {
-          "title": "Speak Clearly",
-          "b1": "Short sentences; one point at a time",
-          "b2": "Ask to repeat/clarify questions",
-          "b3": "Pause before answering"
-        },
-        "assert-1": {
-          "title": "Assertiveness in Medical/Work",
-          "b1": "Name your need: 'I need...'",
-          "b2": "Explain impact briefly",
-          "b3": "Offer options, ask for collaboration"
-        },
-        "docs-1": {
-          "title": "Documentation",
-          "b1": "Summarize call/meeting in email",
-          "b2": "Attach key evidence only",
-          "b3": "Track dates and deadlines"
-        }
-      }
-    },
-    "disclaimer": {
-      "notLegal": "Educational only — not legal advice. Verify with official sources.",
-      "privacy": "Inputs processed locally unless a configured backend is available."
-    }
-  },
-  "network": {
-    "online": "Online",
-    "offline": "Offline (local only)",
-    "checking": "Checking..."
-  },
-  "settings": {
-    "title": "Settings",
     "accessibility": {
       "title": "Accessibility",
       "subtitle": "Make the app work better for you",
@@ -930,42 +1149,6 @@
       "entriesTitle": "[T] templates.timeline.entriesTitle"
     },
     "voice": {
-      "title": "[T] templates.voice.title",
-      "recording": "[T] templates.voice.recording",
-      "recordUnavailable": "[T] templates.voice.recordUnavailable",
-      "recordUnavailableBody": "[T] templates.voice.recordUnavailableBody",
-      "recordingStopped": "[T] templates.voice.recordingStopped",
-      "noteSaved": "[T] templates.voice.noteSaved",
-      "date": "[T] templates.voice.date",
-      "who": "[T] templates.voice.who",
-      "topic": "[T] templates.voice.topic",
-      "summary": "[T] templates.voice.summary",
-      "audio": "[T] templates.voice.audio",
-      "copiedBody": "[T] templates.voice.copiedBody",
-      "shareTitle": "[T] templates.voice.shareTitle",
-      "pdfUnavailable": "[T] templates.voice.pdfUnavailable",
-      "pdfUnavailableBody": "[T] templates.voice.pdfUnavailableBody",
-      "shareTitleDoc": "[T] templates.voice.shareTitleDoc",
-      "exportFailed": "[T] templates.voice.exportFailed",
-      "exportFailedBody": "[T] templates.voice.exportFailedBody",
-      "infoTitle": "[T] templates.voice.infoTitle",
-      "info1": "[T] templates.voice.info1",
-      "info2": "[T] templates.voice.info2",
-      "info3": "[T] templates.voice.info3",
-      "subtitle": "[T] templates.voice.subtitle",
-      "whoField": "[T] templates.voice.whoField",
-      "summaryField": "[T] templates.voice.summaryField",
-      "record": "[T] templates.voice.record",
-      "stop": "[T] templates.voice.stop",
-      "transcribe": "[T] templates.voice.transcribe",
-      "saveNote": "[T] templates.voice.saveNote",
-      "savedNotes": "[T] templates.voice.savedNotes",
-      "none": "[T] templates.voice.none",
-      "note": "[T] templates.voice.note"
-    }
-  },
-  "common": {
-    "hide": "Hide",
     "show": "Show",
     "save": "Save",
     "saveAll": "Save All",
@@ -999,6 +1182,7 @@
     "success": "[T] common.success",
     "error": "[T] common.error",
     "working": "[T] common.working"
+    }
   },
   "test": {
     "badge": "[T]BadgeMarker"
@@ -1274,4 +1458,5 @@
     "suggestions": "[T] bodyMechanics.suggestions",
     "noSuggestionsYet": "[T] bodyMechanics.noSuggestionsYet"
   }
+  
 }

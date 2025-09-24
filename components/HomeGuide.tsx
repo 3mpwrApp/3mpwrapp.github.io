@@ -28,6 +28,7 @@ export function HomeGuide() {
   } catch {}
   const moodNudgesEnabled = useSettings().moodNudgesEnabled;
   const [nudgeEligible, setNudgeEligible] = React.useState(false);
+  const nudgeLoggedRef = React.useRef(false);
   React.useEffect(()=> {
     (async () => {
       if (!moodNudgesEnabled || !mood) return setNudgeEligible(false);
@@ -81,7 +82,7 @@ export function HomeGuide() {
           <Text style={{ color: palette.text, fontSize:12 }}>{t('home.guide.snapshotPlaceholder','(Mood tracking available on Wellness tab)')}</Text>
         )}
       </View>
-      {showNudge && (()=> { usage.view('home_mood_nudge_view','/',{ }); return (
+  {showNudge && (()=> { if (!nudgeLoggedRef.current) { usage.view('home_mood_nudge_view','/',{}); nudgeLoggedRef.current = true; } return (
         <View style={{ marginBottom:12, padding:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, backgroundColor: palette.surface }}>
           <Text style={{ color: palette.text, fontSize:12, marginBottom:6 }}>{t('homeGuide.mood.nudge','Evening check-in? Log how you feel.')}</Text>
           <Link href={resolveToolRoute('wellness_mood') as any} asChild onPress={()=> usage.view('home_mood_nudge_tap','/',{})}>
