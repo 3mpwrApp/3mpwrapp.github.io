@@ -197,6 +197,22 @@
     "search": "Search resources"
   },
   "advocacy": {
+    "tools": {
+      "ai_translator": "AI Advocate Translator",
+      "ai_case": "AI Case Interpreter",
+      "ai_gov": "AI Government Navigator",
+      "ally_hub": "Ally Hub",
+      "collective": "Collective Legal Action Hub",
+      "finder": "Lawyer & Advocate Finder",
+      "policy_simple": "Policy Simplifier",
+      "ratings": "Disability Justice Ratings",
+      "self_coach": "Self‑Advocacy Coach",
+      "accountability": "Accountability Coach"
+    },
+    "disclaimer": {
+      "notLegal": "Educational only — not legal advice. Check official sources.",
+      "privacy": "Inputs processed locally unless a backend is configured."
+    },
     "ally": {
       "intro": "Cross‑movement solidarity resources and quick prompts for allies supporting disabled people / injured workers.",
       "linksHeader": "Movement links",
@@ -235,17 +251,21 @@
         "assert-1": { "title": "Health/work assertiveness", "b1": "Name the need: 'I need…'", "b2": "Briefly explain impact", "b3": "Offer options; invite collaboration" },
         "docs-1": { "title": "Documentation", "b1": "Summarize call/meeting by email", "b2": "Attach only key evidence", "b3": "Track dates and deadlines" }
       }
-    },
-    "tools": {
-      "ally_hub": "Ally Hub",
-      "policy_simple": "Policy Simplifier",
-      "self_coach": "Self‑Advocacy Coach"
-    },
-    "disclaimer": {
-      "notLegal": "Educational only — not legal advice. Check official sources.",
-      "privacy": "Inputs processed locally unless a backend is configured."
     }
   },
+  "accountability": {
+    "title": "Accountability Coach",
+    "subtitle": "Plan steps to hold a government body or organization accountable — in plain language.",
+    "targetLabel": "Target (agency/organization)",
+    "targetPlaceholder": "e.g., Workers’ Compensation Board, City Housing Dept.",
+    "issueLabel": "Issue description",
+    "issuePlaceholder": "What happened and what outcome you seek",
+    "generate": "Generate plan",
+    "generating": "Generating...",
+    "outputLabel": "Accountability plan",
+    "generateError": "Could not generate plan."
+  },
+  
   "home": {
     "title": "Welcome to Empowr",
     "subtitle": "Support. Advocacy. Empowerment.",
