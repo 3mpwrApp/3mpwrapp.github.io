@@ -7,8 +7,5 @@
 //
 // TODO: Re-implement once testing stack is updated.
 
-describe.skip('LetterActionsBar (pending)', () => {
-  test('pending implementation', () => {
-    expect(true).toBe(true);
-  });
-});
+// TODO: Re-implement LetterActionsBar tests once testing stack is updated.
+test.todo('LetterActionsBar: pending implementation until supported RN testing approach is adopted');

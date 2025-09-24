@@ -4,16 +4,20 @@ import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
+import { logActivity } from '../../../services/activity';
+import { aiCoachPrompt } from '../../../services/aiAdvocacy';
 import { useCoachInactivityReminder } from '../../../services/coachReminder';
+import { useNotificationDispatcher } from '../../../services/notifications.dispatcher';
 import { usage } from '../../../services/usage';
 import { useCoachProgress } from '../../../store/coachProgress';
+import { useJurisdiction } from '../../../store/jurisdiction';
 import { useAppPalette } from "../../../theme/usePalette";
-
+import { parseCoachOutput } from '../../../utils/coachParser';
 interface LessonMeta { id: string; evidenceNeeded?: string[]; suggestedDeadlineDays?: number; }
 const LESSONS_META: LessonMeta[] = [
   { id: 'conf-1', evidenceNeeded: ['timeline','policy excerpt'], suggestedDeadlineDays: 3 },
@@ -129,45 +133,100 @@ export default function SelfAdvocacyCoach() {
   );
 }
 
-import { logActivity } from '../../../services/activity';
-import { aiCoachPrompt } from '../../../services/aiAdvocacy';
-import { useNotificationDispatcher } from '../../../services/notifications.dispatcher';
-import { useJurisdiction } from '../../../store/jurisdiction';
-import { parseCoachOutput } from '../../../utils/coachParser';
-
 function PracticeCoach() {
   const { t } = useTranslation();
   const { data: jurisdiction } = useJurisdiction();
   const [prompt, setPrompt] = React.useState(t('advocacy.coach.defaultPrompt'));
   const [output, setOutput] = React.useState('');
   const { dispatchDomainEvent } = useNotificationDispatcher();
-  const parsed = React.useMemo(()=> output ? parseCoachOutput(output) : null, [output]);
+  const parsed = React.useMemo(() => (output ? parseCoachOutput(output) : null), [output]);
   const [loading, setLoading] = React.useState(false);
   const run = async () => {
     if (!prompt.trim()) return;
     setLoading(true);
     try {
-  const res = await aiCoachPrompt(prompt, jurisdiction?.evidenceFocus);
+      const res = await aiCoachPrompt(prompt, jurisdiction?.evidenceFocus);
       setOutput(res);
-      try { await logActivity({ type:'coach.generate', payload:{ promptLength: prompt.length, jurisdiction: jurisdiction?.code, steps: res.split(/\n+/).length }, summaryKey:'coach.generate' }); } catch {}
-  try { await dispatchDomainEvent({ event:'coach.generate.completed', payload:{ jurisdictionName: jurisdiction?.name, coachTopic: prompt.slice(0,40) } }); } catch {}
-    } catch { Alert.alert(t('common.errorTitle','Error'), t('advocacy.coach.generateError','Could not generate practice steps.')); } finally { setLoading(false); }
+      try {
+        await logActivity({
+          type: 'coach.generate',
+          payload: {
+            promptLength: prompt.length,
+            jurisdiction: jurisdiction?.code,
+            steps: res.split(/\n+/).length,
+          },
+          summaryKey: 'coach.generate',
+        });
+      } catch {}
+      try {
+        await dispatchDomainEvent({
+          event: 'coach.generate.completed',
+          payload: { jurisdictionName: jurisdiction?.name, coachTopic: prompt.slice(0, 40) },
+        });
+      } catch {}
+    } catch {
+      Alert.alert(
+        t('common.errorTitle', 'Error'),
+        t('advocacy.coach.generateError', 'Could not generate practice steps.'),
+      );
+    } finally {
+      setLoading(false);
+    }
   };
   return (
-    <View style={{ marginTop:16 }}>
-      <Text style={{ fontWeight:'700', color:'#888', marginBottom:4 }}>{t('advocacy.coach.practiceHeader')}</Text>
-      <Text style={{ color:'#888', marginBottom:6 }}>{t('advocacy.coach.practiceHelp')}</Text>
-      <TextInput style={{ borderWidth:1, borderColor:'#ccc', borderRadius:8, padding:10, minHeight:70, textAlignVertical:'top' }} multiline value={prompt} onChangeText={setPrompt} accessibilityLabel={t('advocacy.coach.practiceInputLabel','Practice prompt input')} />
-      <Pressable onPress={run} style={{ backgroundColor:'#333', paddingVertical:10, borderRadius:8, alignItems:'center', marginTop:8 }} accessibilityRole="button" accessibilityLabel={t('advocacy.coach.practiceGenerateLabel','Generate practice coaching')} disabled={loading}>
-        <Text style={{ color:'#fff', fontWeight:'700' }}>{loading ? t('advocacy.coach.generating') : t('advocacy.coach.generate')}</Text>
+    <View style={{ marginTop: 16 }}>
+      <Text style={{ fontWeight: '700', color: '#888', marginBottom: 4 }}>
+        {t('advocacy.coach.practiceHeader')}
+      </Text>
+      <Text style={{ color: '#888', marginBottom: 6 }}>
+        {t('advocacy.coach.practiceHelp')}
+      </Text>
+      <TextInput
+        style={{
+          borderWidth: 1,
+          borderColor: '#ccc',
+          borderRadius: 8,
+          padding: 10,
+          minHeight: 70,
+          textAlignVertical: 'top',
+        }}
+        multiline
+        value={prompt}
+        onChangeText={setPrompt}
+        accessibilityLabel={t('advocacy.coach.practiceInputLabel', 'Practice prompt input')}
+      />
+      <Pressable
+        onPress={run}
+        style={{
+          backgroundColor: '#333',
+          paddingVertical: 10,
+          borderRadius: 8,
+          alignItems: 'center',
+          marginTop: 8,
+        }}
+        accessibilityRole="button"
+        accessibilityLabel={t('advocacy.coach.practiceGenerateLabel', 'Generate practice coaching')}
+        disabled={loading}
+      >
+        <Text style={{ color: '#fff', fontWeight: '700' }}>
+          {loading ? t('advocacy.coach.generating') : t('advocacy.coach.generate')}
+        </Text>
       </Pressable>
       {!!parsed && (
-        <View style={{ marginTop:10 }} accessibilityRole="summary" accessibilityLabel={t('advocacy.coach.practiceOutputLabel','Practice coaching output')}>
-          {parsed.steps.map(step => (
-            <View key={step.order} style={{ marginBottom:6 }}>
-              <Text style={{ color:'#222', fontWeight:'600' }}>{step.order}. {step.text}</Text>
-              {step.tips?.map(tip => (
-                <Text key={tip} style={{ color:'#555', fontSize:12 }}>• {tip}</Text>
+        <View
+          style={{ marginTop: 10 }}
+          accessibilityRole="summary"
+          accessibilityLabel={t('advocacy.coach.practiceOutputLabel', 'Practice coaching output')}
+        >
+          {parsed.steps.map((step) => (
+            <View key={step.order} style={{ marginBottom: 6 }}>
+              <Text style={{ color: '#222', fontWeight: '600' }}>
+                {step.order}. {step.text}
+              </Text>
+              {step.tips?.map((tip) => (
+                <Text key={tip} style={{ color: '#555', fontSize: 12 }}>
+                  • {tip}
+                </Text>
               ))}
             </View>
           ))}

@@ -1,3 +1,4 @@
+import { useTranslation } from '../i18n';
 import { useNotifications } from '../store/notifications';
 import type { DeliveredNotification, NotificationPreferences } from '../types/notifications';
 
@@ -37,6 +38,7 @@ export interface DomainNotificationEvent {
 
 export function useNotificationDispatcher() {
   const { prefs, lastSent, setLastSent, add } = useNotifications();
+  const { t } = useTranslation();
 
   async function dispatchDomainEvent(evt: DomainNotificationEvent, options: DispatchOptions = {}) {
     const now = options.now ?? new Date();
@@ -70,16 +72,16 @@ export function useNotificationDispatcher() {
         try {
           const granted = await ensureNotificationPermission();
           if (granted) {
-            const title = tpl.i18n.titleKey; // placeholder until i18n resolution integrated
-            const body = tpl.i18n.bodyKey;
+            const title = t(tpl.i18n.titleKey, tpl.i18n.titleKey, evt.payload as any);
+            const body = t(tpl.i18n.bodyKey, tpl.i18n.bodyKey, evt.payload as any);
             const res = await scheduleLocal(title, body);
             if (res) scheduledPush = true;
           }
         } catch {}
       }
 
-      const title = tpl.i18n.titleKey;
-      const body = tpl.i18n.bodyKey;
+      const title = t(tpl.i18n.titleKey, tpl.i18n.titleKey, evt.payload as any);
+      const body = t(tpl.i18n.bodyKey, tpl.i18n.bodyKey, evt.payload as any);
       const payloadHash = dedupeKey; // simple stand-in hash
       const delivered: DeliveredNotification = {
         id: `${templateId}:${now.getTime()}`,

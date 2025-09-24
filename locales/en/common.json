@@ -10,7 +10,7 @@
     "wellness": "Wellness",
     "profile": "Profile",
     "saved": "Saved",
-    "settings": "[T] nav.settings"
+    "settings": "Settings"
   },
   "wellness": {
     "tools": {
@@ -42,7 +42,7 @@
       "points": "Points: {{points}}",
       "faceFear": "Face a fear",
       "therapy": "Attend therapy",
-      "grounding": "Practice grounding",
+      "intro": "Build supportive routines and track your wellbeing.",
       "breathing": "Breathing"
     },
     "dbt": {
@@ -194,7 +194,7 @@
       "policy_sim": "Interactive Policy Simulator",
       "accommodation": "Accommodation Request Builder"
     },
-    "search": "[T] resources.search"
+    "search": "Search resources"
   },
   "advocacy": {
     "ally": {
@@ -227,7 +227,6 @@
       "generate": "Generate practice",
       "practiceHeader": "Practice prompt",
       "practiceHelp": "Describe a need or goal. The coach returns structured steps.",
-      "generate": "Generate practice",
       "subtitle": "Micro‑lessons for confidence, clear expression, and assertiveness.",
       "defaultPrompt": "Ask for a 10‑minute break each hour due to pain",
       "lesson": {
@@ -374,8 +373,8 @@
       "captionsDesc": "Shows captions when available",
       "voiceMode": "Voice Mode",
       "voiceModeDesc": "Enables voice navigation (beta)",
-      "dyslexia": "[T] settings.accessibility.dyslexia",
-      "dyslexiaDesc": "[T] settings.accessibility.dyslexiaDesc"
+      "dyslexia": "Dyslexia-friendly font",
+      "dyslexiaDesc": "Improves letter spacing and readability"
     },
     "language": {
       "title": "Language",
@@ -426,8 +425,8 @@
       "title": "Emergency Wallet Card",
       "subtitle": "Quick access to important information",
       "description": "Create a digital emergency card with your key information for quick access when needed",
-      "openLabel": "[T] settings.emergency.openLabel",
-      "manage": "[T] settings.emergency.manage"
+      "openLabel": "Open emergency card",
+      "manage": "Manage emergency info"
     },
     "privacy": {
       "title": "Privacy & Security",
@@ -462,18 +461,18 @@
       "passwordPlaceholder": "Password",
       "reauthFailed": "Re-authentication failed",
       "confirmDelete": "Confirm Delete",
-      "updatedName": "[T] settings.account.updatedName",
-      "photoUpdated": "[T] settings.account.photoUpdated",
-      "guestNotice": "[T] settings.account.guestNotice",
-      "createAccount": "[T] settings.account.createAccount",
-      "photo": "[T] settings.account.photo",
-      "deleteNoPassword": "[T] settings.account.deleteNoPassword"
+      "updatedName": "Display name updated",
+      "photoUpdated": "Profile photo updated",
+      "guestNotice": "You're in guest mode. Create an account to sync.",
+      "createAccount": "Create account",
+      "photo": "Photo",
+      "deleteNoPassword": "No password set; cannot confirm deletion."
     },
     "emergencyWallet": {
-      "title": "[T] settings.emergencyWallet.title",
-      "subtitle": "[T] settings.emergencyWallet.subtitle",
-      "hide": "[T] settings.emergencyWallet.hide",
-      "show": "[T] settings.emergencyWallet.show"
+      "title": "Emergency Wallet Card",
+      "subtitle": "Quick access to critical medical and contact info.",
+      "hide": "Hide wallet card",
+      "show": "Show wallet card"
     }
   },
   "common": {
@@ -495,24 +494,24 @@
     "delete": "Delete",
     "cancel": "Cancel",
     "filter": "quick filter",
-    "errorTitle": "[T] common.errorTitle",
-    "ok": "[T] common.ok",
-    "hidden": "[T] common.hidden",
-    "shown": "[T] common.shown",
-    "copyAll": "[T] common.copyAll",
-    "exportDoc": "[T] common.exportDoc",
-    "reset": "[T] common.reset",
-    "loading": "[T] common.loading",
-    "edit": "[T] common.edit",
-    "previewImage": "[T] common.previewImage",
-    "closePreview": "[T] common.closePreview",
-    "preview": "[T] common.preview",
-    "copied": "[T] common.copied",
-    "pdf": "[T] common.pdf",
-    "doc": "[T] common.doc",
-    "success": "[T] common.success",
-    "error": "[T] common.error",
-    "working": "[T] common.working",
+  "errorTitle": "Error",
+  "ok": "OK",
+  "hidden": "Hidden",
+  "shown": "Shown",
+  "copyAll": "Copy all",
+  "exportDoc": ".doc",
+  "reset": "Reset",
+  "loading": "Loading...",
+  "edit": "Edit",
+  "previewImage": "Preview image",
+  "closePreview": "Close preview",
+  "preview": "Preview",
+  "copied": "Copied",
+  "pdf": "PDF",
+  "doc": ".doc",
+  "success": "Success",
+  "error": "Error",
+  "working": "Working...",
     "add": "Add",
     "next": "Next"
   },
@@ -590,6 +589,12 @@
       "viewed": {
         "title": "Resource viewed",
         "body": "You viewed {{resource}}"
+      }
+    },
+    "system": {
+      "changelog": {
+        "title": "What's new in Empowr",
+        "body": "Check out the latest updates and improvements."
       }
     },
     "accessibility": {
@@ -766,12 +771,12 @@
     "title": "Justice-as-a-Service",
     "snapshotRegion": "Generated snapshot",
     "generateBtnLabel": "Generate snapshot",
-    "hide": "[T] justiceService.hide",
-    "show": "[T] justiceService.show",
-    "generateHint": "[T] justiceService.generateHint",
-    "copyLabel": "[T] justiceService.copyLabel",
-    "shareLabel": "[T] justiceService.shareLabel",
-    "resetLabel": "[T] justiceService.resetLabel"
+    "hide": "Hide snapshot",
+    "show": "Show snapshot",
+    "generateHint": "Generate a local snapshot using cached data.",
+    "copyLabel": "Copy snapshot",
+    "shareLabel": "Share snapshot file",
+    "resetLabel": "Reset snapshot"
   },
   "rightsChecker": {
     "title": "Automated Rights Checker",
@@ -817,9 +822,9 @@
     "choiceLabel": "{{label}} answer option",
     "yourSummary": "Your summary",
     "summaryRegion": "Rights summary",
-    "resetAnnounce": "[T] rightsChecker.resetAnnounce",
-    "hide": "[T] rightsChecker.hide",
-    "show": "[T] rightsChecker.show"
+    "resetAnnounce": "Answers cleared",
+    "hide": "Hide",
+    "show": "Show"
   },
   "rightsExplainer": {
     "screenLabel": "Rights Explainer screen",
@@ -858,8 +863,8 @@
     "provinceChip": "Province {{code}}",
     "langChip": "Language {{code}}",
     "regionChip": "Region {{code}}",
-    "hide": "[T] rightsExplainer.hide",
-    "show": "[T] rightsExplainer.show"
+    "hide": "Hide",
+    "show": "Show"
   },
   "templates": {
     "evidenceLocker": {
@@ -903,11 +908,11 @@
       "exportErrorBody": "Could not build evidence export.",
       "exportReady": "Export ready",
       "summaryRegion": "Evidence summary region",
-      "queueTitle": "[T] templates.evidenceLocker.queueTitle",
-      "queueScreenLabel": "[T] templates.evidenceLocker.queueScreenLabel",
-      "processing": "[T] templates.evidenceLocker.processing",
-      "queueSubtitle": "[T] templates.evidenceLocker.queueSubtitle",
-      "emptyQueue": "[T] templates.evidenceLocker.emptyQueue"
+  "queueTitle": "Upload Queue",
+  "queueScreenLabel": "Evidence Locker Upload Queue screen",
+  "processing": "Processing uploads...",
+  "queueSubtitle": "Review pending uploads, retry failures, or clear processed items.",
+  "emptyQueue": "No items in the upload queue."
     },
     "gallery": {
       "title": "Template Gallery",
@@ -1139,78 +1144,78 @@
       "loadFailedBody": "Unable to load deadlines.",
       "importedFromICS": "Added {{count}} deadlines from ICS",
       "importFailedBodyList": "Could not import ICS file.",
-      "listTitle": "[T] templates.deadlines.listTitle",
-      "reloadShort": "[T] templates.deadlines.reloadShort",
-      "exportAllICS": "[T] templates.deadlines.exportAllICS",
-      "exportAllCSV": "[T] templates.deadlines.exportAllCSV",
-      "bulkMarkedDone": "[T] templates.deadlines.bulkMarkedDone",
-      "markAllDone": "[T] templates.deadlines.markAllDone",
-      "bulkMarkedUndone": "[T] templates.deadlines.bulkMarkedUndone",
-      "markAllNotDone": "[T] templates.deadlines.markAllNotDone",
-      "followUp": "[T] templates.deadlines.followUp",
-      "weekShort": "[T] templates.deadlines.weekShort",
-      "addWeekly": "[T] templates.deadlines.addWeekly",
-      "monthShort": "[T] templates.deadlines.monthShort",
-      "addMonthly": "[T] templates.deadlines.addMonthly",
-      "empty": "[T] templates.deadlines.empty",
-      "updated": "[T] templates.deadlines.updated",
-      "snoozedDeadline": "[T] templates.deadlines.snoozedDeadline",
-      "reminder24h": "[T] templates.deadlines.reminder24h",
-      "unableSchedule": "[T] templates.deadlines.unableSchedule",
-      "snooze24h": "[T] templates.deadlines.snooze24h",
-      "reminder7d": "[T] templates.deadlines.reminder7d",
-      "snooze7d": "[T] templates.deadlines.snooze7d",
-      "markedUndone": "[T] templates.deadlines.markedUndone",
-      "markedDone": "[T] templates.deadlines.markedDone",
-      "eventAdded": "[T] templates.deadlines.eventAdded",
-      "eventNotAdded": "[T] templates.deadlines.eventNotAdded",
-      "eventAddedBody": "[T] templates.deadlines.eventAddedBody",
-      "eventNotAddedBody": "[T] templates.deadlines.eventNotAddedBody",
-      "saved": "[T] templates.deadlines.saved",
-      "icsSaved": "[T] templates.deadlines.icsSaved",
-      "exportFailedBody": "[T] templates.deadlines.exportFailedBody",
-      "icsBtn": "[T] templates.deadlines.icsBtn",
-      "deleted": "[T] templates.deadlines.deleted",
-      "prevMonth": "[T] templates.deadlines.prevMonth",
-      "nextMonth": "[T] templates.deadlines.nextMonth",
-      "dayCell": "[T] templates.deadlines.dayCell",
-      "emptyDay": "[T] templates.deadlines.emptyDay"
+      "listTitle": "List",
+      "reloadShort": "Reload",
+      "exportAllICS": "Export all as ICS",
+      "exportAllCSV": "Export all as CSV",
+      "bulkMarkedDone": "All marked done",
+      "markAllDone": "Mark all done",
+      "bulkMarkedUndone": "All marked not done",
+      "markAllNotDone": "Mark all not done",
+      "followUp": "Follow‑up",
+      "weekShort": "Wk",
+      "addWeekly": "Add weekly",
+      "monthShort": "Mo",
+      "addMonthly": "Add monthly",
+      "empty": "No deadlines yet.",
+      "updated": "Updated",
+      "snoozedDeadline": "Deadline snoozed",
+      "reminder24h": "Reminder in 24 hours",
+      "unableSchedule": "Unable to schedule",
+      "snooze24h": "Snooze 24h",
+      "reminder7d": "Reminder in 7 days",
+      "snooze7d": "Snooze 7d",
+      "markedUndone": "Marked not done",
+      "markedDone": "Marked done",
+      "eventAdded": "Event added",
+      "eventNotAdded": "Event not added",
+      "eventAddedBody": "Event added to calendar.",
+      "eventNotAddedBody": "Unable to add event.",
+      "saved": "Saved",
+      "icsSaved": "ICS saved to cache.",
+      "exportFailedBody": "Could not create export file.",
+      "icsBtn": "ICS",
+      "deleted": "Deleted",
+      "prevMonth": "Previous",
+      "nextMonth": "Next",
+      "dayCell": "Day",
+      "emptyDay": "No events"
     },
     "timeline": {
-      "title": "[T] templates.timeline.title",
-      "missingTitle": "[T] templates.timeline.missingTitle",
-      "missingTitleBody": "[T] templates.timeline.missingTitleBody",
-      "entryAdded": "[T] templates.timeline.entryAdded",
-      "copied": "[T] templates.timeline.copied",
-      "copiedBody": "[T] templates.timeline.copiedBody",
-      "copyFailed": "[T] templates.timeline.copyFailed",
-      "copyFailedBody": "[T] templates.timeline.copyFailedBody",
-      "shareTitle": "[T] templates.timeline.shareTitle",
-      "exportFailed": "[T] templates.timeline.exportFailed",
-      "exportFailedBody": "[T] templates.timeline.exportFailedBody",
-      "resetTitle": "[T] templates.timeline.resetTitle",
-      "resetBody": "[T] templates.timeline.resetBody",
-      "screenLabel": "[T] templates.timeline.screenLabel",
-      "toggleInfo": "[T] templates.timeline.toggleInfo",
-      "resetTimeline": "[T] templates.timeline.resetTimeline",
-      "infoTitle": "[T] templates.timeline.infoTitle",
-      "infoLine1": "[T] templates.timeline.infoLine1",
-      "infoLine2": "[T] templates.timeline.infoLine2",
-      "infoLine3": "[T] templates.timeline.infoLine3",
-      "subtitle": "[T] templates.timeline.subtitle",
-      "openDeadlines": "[T] templates.timeline.openDeadlines",
-      "addDocuments": "[T] templates.timeline.addDocuments",
-      "caseDocuments": "[T] templates.timeline.caseDocuments",
-      "addedToLocker": "[T] templates.timeline.addedToLocker",
-      "addFailed": "[T] templates.timeline.addFailed",
-      "addFailedBody": "[T] templates.timeline.addFailedBody",
-      "addDocsBtn": "[T] templates.timeline.addDocsBtn",
-      "newEntry": "[T] templates.timeline.newEntry",
-      "date": "[T] templates.timeline.date",
-      "titleField": "[T] templates.timeline.titleField",
-      "detailsField": "[T] templates.timeline.detailsField",
-      "addEntry": "[T] templates.timeline.addEntry",
-      "entriesTitle": "[T] templates.timeline.entriesTitle"
+      "title": "Case Timeline",
+      "missingTitle": "Title required",
+      "missingTitleBody": "Enter a title to add an entry.",
+      "entryAdded": "Entry added",
+      "copied": "Copied",
+      "copiedBody": "Timeline copied.",
+      "copyFailed": "Copy failed",
+      "copyFailedBody": "Unable to copy timeline.",
+      "shareTitle": "Case Timeline",
+      "exportFailed": "Export failed",
+      "exportFailedBody": "Unable to create export file.",
+      "resetTitle": "Reset timeline",
+      "resetBody": "Clear all timeline entries? This cannot be undone.",
+      "screenLabel": "Case timeline screen",
+      "toggleInfo": "Toggle instructions",
+      "resetTimeline": "Reset timeline",
+      "infoTitle": "How to Use",
+      "infoLine1": "Record key events like forms, visits, and calls.",
+      "infoLine2": "Use when drafting letters or appeals.",
+      "infoLine3": "Copy or export to share.",
+      "subtitle": "Track important events in your case.",
+      "openDeadlines": "Open Deadlines",
+      "addDocuments": "Add documents",
+      "caseDocuments": "Case documents",
+      "addedToLocker": "Added to Evidence Locker",
+      "addFailed": "Add failed",
+      "addFailedBody": "Unable to add to Evidence Locker.",
+      "addDocsBtn": "Add documents",
+      "newEntry": "New entry",
+      "date": "Date",
+      "titleField": "Title",
+      "detailsField": "Details",
+      "addEntry": "Add",
+      "entriesTitle": "Timeline entries"
     },
     "voice": {
       "title": "Voice-to-Case Notes",
@@ -1474,12 +1479,12 @@
     "emptySearchTitle": "No results found",
     "emptySearchBody": "Try adjusting your search or filter criteria",
     "a11y": {
-      "screenLabel": "[T] savedScreen.a11y.screenLabel"
+      "screenLabel": "Saved items screen"
     },
     "searchA11y": {
-      "label": "[T] savedScreen.searchA11y.label",
-      "hint": "[T] savedScreen.searchA11y.hint",
-      "clear": "[T] savedScreen.searchA11y.clear"
+      "label": "Search saved items",
+      "hint": "Filter your saved podcasts, resources, and campaigns",
+      "clear": "Clear search"
     }
   },
   "appealCoach": {

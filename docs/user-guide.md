@@ -101,6 +101,12 @@ lastUpdated: 2025-09-07
 
 ![Resources](images/resources.png "Resources grouped by region with category chips")
 
+### Emergency Wallet Card
+
+- Location: Settings → Emergency Wallet Card.
+- Purpose: Store key medical info and emergency contacts locally and generate a printable card.
+- Quick open: From Resources → Support & Directories → Emergency Info Wallet Card (opens Settings section).
+
 ### Evidence Locker
 
 - Local notes with tags and attachments; optional Cloud save.

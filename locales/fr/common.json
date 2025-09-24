@@ -10,7 +10,7 @@
     "wellness": "Bien-être",
     "profile": "Profil",
     "saved": "Enregistré",
-    "settings": "[T] nav.settings"
+    "settings": "Paramètres"
   },
   "header": {
     "favorites": "Favs",
@@ -30,16 +30,42 @@
       "title": "Annonce : {{title}}",
       "body": "{{body}}"
     },
+    "coach": {
+      "result": {
+        "title": "Séance de coaching prête",
+        "body": "Vos étapes de pratique sont prêtes."
+      },
+      "reminder": {
+        "title": "Poursuivez votre coaching",
+        "body": "Inactif depuis {{idleHours}}h. Reprenez une leçon pour garder l'élan."
+      }
+    },
+    "evidence": {
+      "reminder": {
+        "title": "Rappel hebdomadaire des preuves",
+        "body": "Ajoutez de nouvelles notes ou téléversez des documents pour rester organisé."
+      }
+    },
+    "resource": {
+      "bookmark": {
+        "title": "Ressource enregistrée",
+        "body": "Vous avez ajouté {{resourceTitle}} aux favoris."
+      },
+      "viewed": {
+        "title": "Ressource consultée",
+        "body": "Vous avez consulté {{resource}}"
+      }
+    },
+    "system": {
+      "changelog": {
+        "title": "Nouveautés d'Empowr",
+        "body": "Découvrez les dernières mises à jour et améliorations."
+      }
+    },
     "petition": {
       "signed": {
         "title": "Pétition signée",
         "body": "Vous avez signé \"{{petition}}\""
-      }
-    },
-    "resource": {
-      "viewed": {
-        "title": "Ressource consultée",
-        "body": "Vous avez consulté {{resource}}"
       }
     },
     "faq": {
@@ -74,8 +100,8 @@
       "captionsDesc": "Affiche les sous-titres quand disponibles",
       "voiceMode": "Mode vocal",
       "voiceModeDesc": "Active la navigation vocale (bêta)",
-      "dyslexia": "[T] settings.accessibility.dyslexia",
-      "dyslexiaDesc": "[T] settings.accessibility.dyslexiaDesc"
+      "dyslexia": "Police adaptée à la dyslexie",
+      "dyslexiaDesc": "Améliore l'espacement et la lisibilité"
     },
     "bookmarks": {
       "title": "Signets",
@@ -124,8 +150,8 @@
       "title": "Carte d'urgence portefeuille",
       "subtitle": "Accès rapide aux informations importantes",
       "description": "Créez une carte d'urgence numérique avec vos informations clés pour un accès rapide en cas de besoin",
-      "openLabel": "[T] settings.emergency.openLabel",
-      "manage": "[T] settings.emergency.manage"
+      "openLabel": "Ouvrir la carte d'urgence",
+      "manage": "Gérer les infos d'urgence"
     },
     "privacy": {
       "title": "Confidentialité et sécurité",
@@ -160,18 +186,18 @@
       "passwordPlaceholder": "Mot de passe",
       "reauthFailed": "Échec de la ré-authentification",
       "confirmDelete": "Confirmer",
-      "updatedName": "[T] settings.account.updatedName",
-      "photoUpdated": "[T] settings.account.photoUpdated",
-      "guestNotice": "[T] settings.account.guestNotice",
-      "createAccount": "[T] settings.account.createAccount",
-      "photo": "[T] settings.account.photo",
-      "deleteNoPassword": "[T] settings.account.deleteNoPassword"
+      "updatedName": "Nom d'affichage mis à jour",
+      "photoUpdated": "Photo de profil mise à jour",
+      "guestNotice": "Mode invité. Créez un compte pour synchroniser.",
+      "createAccount": "Créer un compte",
+      "photo": "Photo",
+      "deleteNoPassword": "Aucun mot de passe défini; suppression non confirmable."
     },
     "emergencyWallet": {
-      "title": "[T] settings.emergencyWallet.title",
-      "subtitle": "[T] settings.emergencyWallet.subtitle",
-      "hide": "[T] settings.emergencyWallet.hide",
-      "show": "[T] settings.emergencyWallet.show"
+      "title": "Carte d'urgence",
+      "subtitle": "Accès rapide aux infos médicales et contacts essentiels.",
+      "hide": "Masquer la carte",
+      "show": "Afficher la carte"
     }
   },
   "admin": {
@@ -266,7 +292,7 @@
       "subtitle": "Earn badges as you build healthy routines.",
       "title": "Achievements"
     },
-    "intro": "[T] wellness.intro"
+    "intro": "Créez des routines de soutien et suivez votre bien‑être."
   },
   "resources": {
     "tools": {
@@ -278,18 +304,18 @@
       "meds": "Suivi des médicaments et traitements",
       "chronic": "Suivi des affections chroniques",
       "body_mech": "Conseiller en biomécanique (IA)",
-      "policy_sim": "Interactive Policy Simulator",
-      "accommodation": "Accommodation Request Builder"
+      "policy_sim": "Simulateur de politiques (interactif)",
+      "accommodation": "Générateur de demande d'aménagement"
     },
-    "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
+    "intro": "Vous trouverez ici des outils, guides et soutiens pratiques — des demandes de prestations aux contacts d’urgence. Ce hub vous fait gagner du temps et vous aide à vous défendre efficacement.",
     "filters": {
-      "all": "All",
+      "all": "Tout",
       "canada": "Canada",
-      "work_financial": "Work & Financial",
-      "tools_downloads": "Tools & Downloads",
-      "emergency_crisis": "Emergency & Crisis"
+      "work_financial": "Travail et finances",
+      "tools_downloads": "Outils et téléchargements",
+      "emergency_crisis": "Urgence et crise"
     },
-    "search": "[T] resources.search"
+    "search": "Rechercher des ressources"
   },
   "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
   "filters": {
@@ -328,11 +354,11 @@
       "pdfUnavailableBody": "Installez expo-print dans une build de dev.",
       "exportFailed": "Export échoué",
       "exportFailedBody": "Impossible de créer le fichier .doc",
-      "recording": "[T] templates.voice.recording",
-      "recordingStopped": "[T] templates.voice.recordingStopped",
-      "who": "[T] templates.voice.who",
-      "summary": "[T] templates.voice.summary",
-      "audio": "[T] templates.voice.audio"
+      "recording": "Enregistrement...",
+      "recordingStopped": "Enregistrement arrêté",
+      "who": "Qui",
+      "summary": "Résumé",
+      "audio": "Audio"
     },
     "timeline": {
       "title": "Chronologie du dossier",
@@ -349,26 +375,26 @@
       "entryAdded": "Entrée ajoutée",
       "copied": "Copié",
       "copiedBody": "Chronologie copiée",
-      "missingTitle": "[T] templates.timeline.missingTitle",
-      "missingTitleBody": "[T] templates.timeline.missingTitleBody",
-      "copyFailed": "[T] templates.timeline.copyFailed",
-      "copyFailedBody": "[T] templates.timeline.copyFailedBody",
-      "shareTitle": "[T] templates.timeline.shareTitle",
-      "exportFailed": "[T] templates.timeline.exportFailed",
-      "exportFailedBody": "[T] templates.timeline.exportFailedBody",
-      "resetTitle": "[T] templates.timeline.resetTitle",
-      "resetBody": "[T] templates.timeline.resetBody",
-      "screenLabel": "[T] templates.timeline.screenLabel",
-      "toggleInfo": "[T] templates.timeline.toggleInfo",
-      "resetTimeline": "[T] templates.timeline.resetTimeline",
-      "subtitle": "[T] templates.timeline.subtitle",
-      "openDeadlines": "[T] templates.timeline.openDeadlines",
-      "addDocuments": "[T] templates.timeline.addDocuments",
-      "caseDocuments": "[T] templates.timeline.caseDocuments",
-      "addedToLocker": "[T] templates.timeline.addedToLocker",
-      "addFailed": "[T] templates.timeline.addFailed",
-      "addFailedBody": "[T] templates.timeline.addFailedBody",
-      "addDocsBtn": "[T] templates.timeline.addDocsBtn"
+      "missingTitle": "Titre requis",
+      "missingTitleBody": "Saisissez un titre pour ajouter une entrée.",
+      "copyFailed": "Copie échouée",
+      "copyFailedBody": "Impossible de copier la chronologie.",
+      "shareTitle": "Chronologie du dossier",
+      "exportFailed": "Export échoué",
+      "exportFailedBody": "Impossible de créer le fichier d'export.",
+      "resetTitle": "Réinitialiser la chronologie",
+      "resetBody": "Effacer toutes les entrées ? Action irréversible.",
+      "screenLabel": "Écran chronologie du dossier",
+      "toggleInfo": "Afficher/masquer les instructions",
+      "resetTimeline": "Réinitialiser la chronologie",
+      "subtitle": "Suivez les événements importants de votre dossier.",
+      "openDeadlines": "Ouvrir Échéances",
+      "addDocuments": "Ajouter des documents",
+      "caseDocuments": "Documents du dossier",
+      "addedToLocker": "Ajouté au Coffre de preuves",
+      "addFailed": "Ajout échoué",
+      "addFailedBody": "Impossible d'ajouter au Coffre de preuves.",
+      "addDocsBtn": "Ajouter des documents"
     },
     "evidenceLocker": {
       "title": "Coffre de preuves",
@@ -411,11 +437,11 @@
       "exportErrorBody": "Impossible de créer export.",
       "exportReady": "Export prêt",
       "summaryRegion": "Région résumé preuves",
-      "queueTitle": "[T] templates.evidenceLocker.queueTitle",
-      "queueScreenLabel": "[T] templates.evidenceLocker.queueScreenLabel",
-      "processing": "[T] templates.evidenceLocker.processing",
-      "queueSubtitle": "[T] templates.evidenceLocker.queueSubtitle",
-      "emptyQueue": "[T] templates.evidenceLocker.emptyQueue"
+  "queueTitle": "File de téléversement",
+  "queueScreenLabel": "Écran file de téléversement du Coffre",
+  "processing": "Traitement des téléversements...",
+  "queueSubtitle": "Vérifiez les envois en attente, réessayez les échecs ou videz les éléments traités.",
+  "emptyQueue": "Aucun élément dans la file de téléversement."
     },
     "gallery": {
       "title": "Galerie de modèles",
@@ -647,42 +673,42 @@
       "loadFailedBody": "Impossible de charger échéances.",
       "importedFromICS": "{{count}} ajoutées depuis ICS",
       "importFailedBodyList": "Impossible d'importer fichier ICS.",
-      "listTitle": "[T] templates.deadlines.listTitle",
-      "reloadShort": "[T] templates.deadlines.reloadShort",
-      "exportAllICS": "[T] templates.deadlines.exportAllICS",
-      "exportAllCSV": "[T] templates.deadlines.exportAllCSV",
-      "bulkMarkedDone": "[T] templates.deadlines.bulkMarkedDone",
-      "markAllDone": "[T] templates.deadlines.markAllDone",
-      "bulkMarkedUndone": "[T] templates.deadlines.bulkMarkedUndone",
-      "markAllNotDone": "[T] templates.deadlines.markAllNotDone",
-      "followUp": "[T] templates.deadlines.followUp",
-      "weekShort": "[T] templates.deadlines.weekShort",
-      "addWeekly": "[T] templates.deadlines.addWeekly",
-      "monthShort": "[T] templates.deadlines.monthShort",
-      "addMonthly": "[T] templates.deadlines.addMonthly",
-      "empty": "[T] templates.deadlines.empty",
-      "updated": "[T] templates.deadlines.updated",
-      "snoozedDeadline": "[T] templates.deadlines.snoozedDeadline",
-      "reminder24h": "[T] templates.deadlines.reminder24h",
-      "unableSchedule": "[T] templates.deadlines.unableSchedule",
-      "snooze24h": "[T] templates.deadlines.snooze24h",
-      "reminder7d": "[T] templates.deadlines.reminder7d",
-      "snooze7d": "[T] templates.deadlines.snooze7d",
-      "markedUndone": "[T] templates.deadlines.markedUndone",
-      "markedDone": "[T] templates.deadlines.markedDone",
-      "eventAdded": "[T] templates.deadlines.eventAdded",
-      "eventNotAdded": "[T] templates.deadlines.eventNotAdded",
-      "eventAddedBody": "[T] templates.deadlines.eventAddedBody",
-      "eventNotAddedBody": "[T] templates.deadlines.eventNotAddedBody",
-      "saved": "[T] templates.deadlines.saved",
-      "icsSaved": "[T] templates.deadlines.icsSaved",
-      "exportFailedBody": "[T] templates.deadlines.exportFailedBody",
-      "icsBtn": "[T] templates.deadlines.icsBtn",
-      "deleted": "[T] templates.deadlines.deleted",
-      "prevMonth": "[T] templates.deadlines.prevMonth",
-      "nextMonth": "[T] templates.deadlines.nextMonth",
-      "dayCell": "[T] templates.deadlines.dayCell",
-      "emptyDay": "[T] templates.deadlines.emptyDay"
+      "listTitle": "Liste",
+      "reloadShort": "Recharger",
+      "exportAllICS": "Tout exporter en ICS",
+      "exportAllCSV": "Tout exporter en CSV",
+      "bulkMarkedDone": "Tout marqué fait",
+      "markAllDone": "Marquer tout fait",
+      "bulkMarkedUndone": "Tout marqué non fait",
+      "markAllNotDone": "Marquer tout non fait",
+      "followUp": "Suivi",
+      "weekShort": "Sem",
+      "addWeekly": "Ajouter hebdo",
+      "monthShort": "Mois",
+      "addMonthly": "Ajouter mensuel",
+      "empty": "Aucune échéance pour l'instant.",
+      "updated": "Mis à jour",
+      "snoozedDeadline": "Échéance reportée",
+      "reminder24h": "Rappel dans 24 heures",
+      "unableSchedule": "Impossible de programmer",
+      "snooze24h": "Reporter 24h",
+      "reminder7d": "Rappel dans 7 jours",
+      "snooze7d": "Reporter 7j",
+      "markedUndone": "Marqué non fait",
+      "markedDone": "Marqué fait",
+      "eventAdded": "Événement ajouté",
+      "eventNotAdded": "Événement non ajouté",
+      "eventAddedBody": "Événement ajouté au calendrier.",
+      "eventNotAddedBody": "Impossible d'ajouter l'événement.",
+      "saved": "Sauvegardé",
+      "icsSaved": "ICS enregistré en cache.",
+      "exportFailedBody": "Impossible de créer le fichier d'export.",
+      "icsBtn": "ICS",
+      "deleted": "Supprimé",
+      "prevMonth": "Précédent",
+      "nextMonth": "Suivant",
+      "dayCell": "Jour",
+      "emptyDay": "Aucun événement"
     }
   },
   "advocacy": {
@@ -800,12 +826,12 @@
     "title": "Justice-as-a-Service",
     "snapshotRegion": "Generated snapshot",
     "generateBtnLabel": "Generate snapshot",
-    "hide": "[T] justiceService.hide",
-    "show": "[T] justiceService.show",
-    "generateHint": "[T] justiceService.generateHint",
-    "copyLabel": "[T] justiceService.copyLabel",
-    "shareLabel": "[T] justiceService.shareLabel",
-    "resetLabel": "[T] justiceService.resetLabel"
+    "hide": "Masquer l'instantané",
+    "show": "Afficher l'instantané",
+    "generateHint": "Générer un instantané local à partir des données en cache.",
+    "copyLabel": "Copier l'instantané",
+    "shareLabel": "Partager le fichier d'instantané",
+    "resetLabel": "Réinitialiser l'instantané"
   },
   "rightsChecker": {
     "title": "Automated Rights Checker",
@@ -851,9 +877,9 @@
     "choiceLabel": "{{label}} answer option",
     "yourSummary": "Your summary",
     "summaryRegion": "Rights summary",
-    "resetAnnounce": "[T] rightsChecker.resetAnnounce",
-    "hide": "[T] rightsChecker.hide",
-    "show": "[T] rightsChecker.show"
+    "resetAnnounce": "Réponses effacées",
+    "hide": "Masquer",
+    "show": "Afficher"
   },
   "rightsExplainer": {
     "screenLabel": "Rights Explainer screen",
@@ -892,44 +918,44 @@
     "provinceChip": "Province {{code}}",
     "langChip": "Language {{code}}",
     "regionChip": "Region {{code}}",
-    "hide": "[T] rightsExplainer.hide",
-    "show": "[T] rightsExplainer.show"
+    "hide": "Masquer",
+    "show": "Afficher"
   },
   "common": {
-    "hide": "Hide",
-    "show": "Show",
-    "save": "Save",
-    "saveAll": "Save All",
-    "processQueue": "Process Queue",
-    "load": "Load",
-    "loadMore": "Load More",
-    "openQueue": "Open Upload Queue",
-    "cloudItems": "Cloud items",
-    "deleteAll": "Delete All",
-    "deleteSelected": "Delete Selected",
-    "delete": "Delete",
-    "cancel": "Cancel",
+    "hide": "Masquer",
+    "show": "Afficher",
+    "save": "Enregistrer",
+    "saveAll": "Tout enregistrer",
+    "processQueue": "Traiter la file",
+    "load": "Charger",
+    "loadMore": "Charger plus",
+    "openQueue": "Ouvrir la file de téléversement",
+    "cloudItems": "Éléments cloud",
+    "deleteAll": "Tout supprimer",
+    "deleteSelected": "Supprimer la sélection",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
     "filter": "filtre rapide",
-    "errorTitle": "[T] common.errorTitle",
-    "ok": "[T] common.ok",
-    "hidden": "[T] common.hidden",
-    "shown": "[T] common.shown",
-    "copyAll": "[T] common.copyAll",
-    "share": "[T] common.share",
-    "exportDoc": "[T] common.exportDoc",
-    "reset": "[T] common.reset",
-    "loading": "[T] common.loading",
-    "edit": "[T] common.edit",
-    "previewImage": "[T] common.previewImage",
-    "closePreview": "[T] common.closePreview",
-    "preview": "[T] common.preview",
-    "copied": "[T] common.copied",
-    "copy": "[T] common.copy",
-    "pdf": "[T] common.pdf",
-    "doc": "[T] common.doc",
-    "success": "[T] common.success",
-    "error": "[T] common.error",
-    "working": "[T] common.working"
+    "errorTitle": "Erreur",
+    "ok": "OK",
+    "hidden": "Masqué",
+    "shown": "Affiché",
+    "copyAll": "Tout copier",
+    "share": "Partager",
+    "exportDoc": ".doc",
+    "reset": "Réinitialiser",
+    "loading": "Chargement...",
+    "edit": "Modifier",
+    "previewImage": "Aperçu de l'image",
+    "closePreview": "Fermer l'aperçu",
+    "preview": "Aperçu",
+    "copied": "Copié",
+    "copy": "Copier",
+    "pdf": "PDF",
+    "doc": ".doc",
+    "success": "Succès",
+    "error": "Erreur",
+    "working": "Traitement..."
   },
   "test": {
     "badge": "BadgeMarque"
@@ -1072,33 +1098,33 @@
     }
   },
   "savedScreen": {
-    "subtitle": "[T] Organize and access your bookmarked content",
-    "searchPlaceholder": "[T] Search saved items...",
-    "searchLabel": "[T] Search saved items",
-    "searchHint": "[T] Search through your saved podcasts, resources, and campaigns",
-    "clearSearch": "[T] Clear search",
+    "subtitle": "Organisez et accédez à vos contenus enregistrés",
+    "searchPlaceholder": "Rechercher des éléments enregistrés...",
+    "searchLabel": "Rechercher des éléments enregistrés",
+    "searchHint": "Filtrez vos balados, ressources et campagnes enregistrés",
+    "clearSearch": "Effacer la recherche",
     "filters": {
-      "all": "[T] All",
-      "podcast": "[T] Podcasts",
-      "resource": "[T] Resources",
-      "campaign": "[T] Campaigns"
+      "all": "Tout",
+      "podcast": "Balados",
+      "resource": "Ressources",
+      "campaign": "Campagnes"
     },
     "view": {
-      "list": "[T] List view",
-      "grid": "[T] Grid view"
+      "list": "Vue liste",
+      "grid": "Vue grille"
     },
-    "resultsCount": "[T] {{count}} result{{plural}} found",
-    "emptyNoneTitle": "[T] No saved items yet",
-    "emptyNoneBody": "[T] Start saving podcasts, resources, and campaigns to access them here",
-    "emptySearchTitle": "[T] No results found",
-    "emptySearchBody": "[T] Try adjusting your search or filter criteria",
+  "resultsCount": "{{count}} résultat(s) trouvé(s)",
+  "emptyNoneTitle": "Aucun élément enregistré pour l'instant",
+  "emptyNoneBody": "Commencez à enregistrer des balados, ressources et campagnes pour les voir ici",
+  "emptySearchTitle": "Aucun résultat",
+  "emptySearchBody": "Essayez d'ajuster votre recherche ou vos filtres",
     "a11y": {
-      "screenLabel": "[T] savedScreen.a11y.screenLabel"
+      "screenLabel": "Écran des éléments enregistrés"
     },
     "searchA11y": {
-      "label": "[T] savedScreen.searchA11y.label",
-      "hint": "[T] savedScreen.searchA11y.hint",
-      "clear": "[T] savedScreen.searchA11y.clear"
+      "label": "Rechercher des éléments enregistrés",
+      "hint": "Filtrez vos balados, ressources et campagnes enregistrés",
+      "clear": "Effacer la recherche"
     }
   },
   "appealCoach": {

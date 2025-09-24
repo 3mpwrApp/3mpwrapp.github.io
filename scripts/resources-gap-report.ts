@@ -108,16 +108,16 @@ const aggregate = {
 
 // Render console output
 function renderConsole() {
-  console.log("Resources Gap Report\n====================\n");
+  console.warn("Resources Gap Report\n====================\n");
   for (const prov of PROVINCES) {
     const { present, missing } = report[prov];
-    console.log(`${prov}: present ${present.length}/${BASELINE.length}`);
-    if (missing.length) console.log(`  Missing: ${missing.join(", ")}`);
+    console.warn(`${prov}: present ${present.length}/${BASELINE.length}`);
+    if (missing.length) console.warn(`  Missing: ${missing.join(", ")}`);
   }
-  console.log("\nAggregate Missing Counts:");
+  console.warn("\nAggregate Missing Counts:");
   for (const key of BASELINE.map((b) => b.key)) {
     const missingList = aggregate.missingByKey[key];
-    console.log(`  ${key}: missing in ${missingList.length} provinces`);
+    console.warn(`  ${key}: missing in ${missingList.length} provinces`);
   }
 }
 
@@ -131,9 +131,9 @@ if (asJson && outPath) {
   const full = path.resolve(outPath);
   mkdirSync(path.dirname(full), { recursive: true });
   writeFileSync(full, JSON.stringify({ report, aggregate }, null, 2), "utf-8");
-  console.log(`Wrote JSON report to ${full}`);
+  console.warn(`Wrote JSON report to ${full}`);
 } else if (asJson) {
-  console.log(JSON.stringify({ report, aggregate }, null, 2));
+  console.warn(JSON.stringify({ report, aggregate }, null, 2));
 } else {
   renderConsole();
 }

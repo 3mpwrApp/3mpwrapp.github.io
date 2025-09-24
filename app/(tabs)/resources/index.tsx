@@ -352,7 +352,7 @@ export default function ResourcesScreen() {
           Myth-Busting Knowledge Hub
         </Text>
       </Link>
-      <Link href={"/(tabs)/resources/emergency-wallet-card" as Href} asChild>
+      <Link href={"/(tabs)/settings?open=emergencyCard" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
           Emergency Info Wallet Card
         </Text>

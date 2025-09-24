@@ -58,4 +58,9 @@ export const faqs: Faq[] = [
     q: "How can I contact you?",
     a: "Use the About tab to send an email to empowrapp08162025@gmail.com with suggestions, requests, or questions.",
   },
+  {
+    id: "f12",
+    q: "Where is the Emergency Wallet Card?",
+    a: "It now lives under Settings → Emergency Wallet Card. You can also open it from Resources → Support & Directories → Emergency Info Wallet Card, which jumps to the Settings section.",
+  },
 ];

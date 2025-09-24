@@ -1,6 +1,26 @@
 import { act, render } from '@testing-library/react';
 import React from 'react';
 
+jest.mock('../i18n', () => {
+  const React = require('react');
+  const actual = jest.requireActual('../i18n');
+  return {
+    ...actual,
+    I18nProvider: ({ children }: any) => React.createElement(React.Fragment, null, children),
+    useTranslation: () => ({
+      lang: 'en',
+      isRTL: false,
+      setLanguage: jest.fn(),
+      t: (key: string, fallback?: string, vars?: Record<string, string | number>) => {
+        const base = typeof fallback === 'string' && fallback && fallback !== key ? fallback : key;
+        return base.replace(/{{(\w+)}}/g, (_: any, k: string) => String(vars?.[k] ?? ''));
+      },
+      tCount: (_: string, count: number) => String(count),
+    }),
+  };
+});
+
+import { I18nProvider } from '../i18n';
 import { useNotificationDispatcher } from '../services/notifications.dispatcher';
 import { listNotificationTemplates } from '../services/notifications.templates';
 import { NotificationsProvider, useNotifications } from '../store/notifications';
@@ -35,7 +55,7 @@ async function waitForInbox(getApi: () => any, min: number) {
 describe('Notification Dispatcher', () => {
   it('delivers in-app notification for coach completion', async () => {
     let api: any;    
-    render(<NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider>);
+    render(<I18nProvider><NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider></I18nProvider>);
     await waitForApi(()=>api);
     await act(async () => { await api.dispatchDomainEvent({ event:'coach.generate.completed', payload:{ jurisdictionName:'Ontario', coachTopic:'Accessibility' } }); });
     await waitForInbox(()=>api,1);
@@ -43,7 +63,7 @@ describe('Notification Dispatcher', () => {
 
   it('respects template throttle (coach)', async () => {
     let api: any;    
-    render(<NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider>);
+    render(<I18nProvider><NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider></I18nProvider>);
     await waitForApi(()=>api);
     const tpl = listNotificationTemplates().find(t=> t.id==='coach-result-ready');
     expect(tpl).toBeTruthy();
@@ -64,7 +84,7 @@ describe('Notification Dispatcher', () => {
 
   it('suppresses push during quiet hours but still delivers in-app', async () => {
     let api: any;
-    render(<NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider>);
+    render(<I18nProvider><NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider></I18nProvider>);
     await waitForApi(()=>api);
     const late = new Date(); late.setHours(23); // within quiet hours window
     await act(async () => { await api.dispatchDomainEvent({ event:'coach.generate.completed' }, { now: late }); });
@@ -73,7 +93,7 @@ describe('Notification Dispatcher', () => {
 
   it('skips when category preference disabled', async () => {
     let api: any;
-    render(<NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider>);
+    render(<I18nProvider><NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider></I18nProvider>);
     await waitForApi(()=>api);
     // Disable advocacy category (coach template category)
   await act(async () => { api.updatePrefs((p: any) => ({ ...p, categories: { ...p.categories, advocacy: false } })); });
@@ -85,7 +105,7 @@ describe('Notification Dispatcher', () => {
 
   it('falls back to in-app only when push channel disabled in prefs', async () => {
     let api: any;
-    render(<NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider>);
+    render(<I18nProvider><NotificationsProvider><TestHarness cb={(a)=> (api=a)} /></NotificationsProvider></I18nProvider>);
     await waitForApi(()=>api);
   await act(async () => { api.updatePrefs((p: any) => ({ ...p, channels: { ...p.channels, push: false } })); });
     await act(async () => { await api.dispatchDomainEvent({ event:'coach.generate.completed' }); });

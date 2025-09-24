@@ -1,0 +1,546 @@
+{
+  "count": 89,
+  "results": [
+    {
+      "file": "app/(auth)/login.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(auth)/register.js",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/about.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/admin/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/advocacy/ai-advocate-translator.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/advocacy/ai-case-interpreter.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/advocacy/ask.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/advocacy/collective-legal.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/advocacy/lawyer-finder.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/advocacy/ratings.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/campaigns/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/campaigns/room/[id].tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/compose.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/media-studio.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/mutual-aid.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/mutual-chat.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/testers-chat.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/threads/[id].tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/[slug].tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/events/index.tsx",
+      "patterns": [
+        "placeholder",
+        "tbd"
+      ]
+    },
+    {
+      "file": "app/(tabs)/events/[id].tsx",
+      "patterns": [
+        "tbd"
+      ]
+    },
+    {
+      "file": "app/(tabs)/faqs.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/podcasts/[id].tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/research/history-timeline.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/research/master-index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/research/wait-times.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/accessibility-log.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/ai-decision-simplifier.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/appeal-coach.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/chronic-tracker.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/claims-navigator.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/deadlines.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/doctor-visit-prep.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/evidence-locker.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/evidence-locker.utf8.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/financial-safety-net.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/letter-accommodation.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/letter-appeal.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/letter-reconsideration.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/letter-rtw-plan.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/letter-union-request.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/meds-tracker.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/rehab-tracker.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/rtw-planner.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/support-directory.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/resources/templates-gallery.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/saved.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/settings.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/acceptance-function.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/ai-companion.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/belief-meter.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/cbt-coach.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/daily-planner.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/dreams.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/energy-coins.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/pacing-partner.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/reflections-calendar.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness/work-balance-ai.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness.mood.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/wellness.tsx",
+      "patterns": [
+        "coming soon",
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/whatsnew/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/profile.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "components/EmergencyWalletCard.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "components/HomeGuide.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "components/PrivacyGate.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "components/SearchBar.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "data/faqs.ts",
+      "patterns": [
+        "todo"
+      ]
+    },
+    {
+      "file": "data/resources.js",
+      "patterns": [
+        "placeholder",
+        "tbd"
+      ]
+    },
+    {
+      "file": "docs/ADMIN_METRICS_EXTENSION_PLAN.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "docs/DATA_GOVERNANCE.md",
+      "patterns": [
+        "tbd"
+      ]
+    },
+    {
+      "file": "docs/EVIDENCE_LOCKER_PLAN.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "docs/JURISDICTION_COVERAGE.md",
+      "patterns": [
+        "tbd"
+      ]
+    },
+    {
+      "file": "docs/LOCALIZATION_CLEANUP_PLAN.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "docs/NOTIFICATIONS_INTEGRATION_PLAN.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "docs/PRUNING_AND_ARCHIVAL_PLAN.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "docs/ROADMAP_SEQUENCING.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "docs/TESTING_COVERAGE_EXPANSION_PLAN.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "docs/TRANSLATION_GUIDE.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "docs/UNFINISHED_WORK.md",
+      "patterns": [
+        "coming soon",
+        "todo",
+        "placeholder",
+        "tbd"
+      ]
+    },
+    {
+      "file": "docs/user-guide.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "README.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "scripts/i18n-propagate-placeholders.js",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "scripts/i18n-seed-missing.js",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "services/notificationTemplates.ts",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/i18n.test.ts",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/i18n.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/LetterActionsBar.test.tsx",
+      "patterns": [
+        "todo",
+        "placeholder"
+      ]
+    }
+  ]
+}

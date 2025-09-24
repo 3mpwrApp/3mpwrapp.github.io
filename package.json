@@ -50,6 +50,8 @@
     "i18n:progress:update": "set I18N_UPDATE_SNAPSHOT=1&& node ./scripts/i18n-progress-diff.js",
     "i18n:orphans": "node ./scripts/i18n-orphans.js",
     "i18n:lint": "node ./scripts/i18n-lint-keys.js",
+  "scan:incomplete": "node ./scripts/scan-incomplete.mjs",
+  "scan:incomplete:soft": "node ./scripts/scan-incomplete.mjs --soft",
     "seed:faqs": "node ./scripts/seed-faqs.js",
     "activity:seed": "node ./scripts/seed-faqs.js",
   "jurisdictions:gen": "node ./scripts/gen-jurisdictions-map.js",

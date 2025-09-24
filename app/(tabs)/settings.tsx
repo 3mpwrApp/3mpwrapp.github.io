@@ -1,7 +1,7 @@
 // Settings Screen – fully reconstructed (v2)
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Link } from 'expo-router';
+import { Link, useLocalSearchParams } from 'expo-router';
 import { deleteUser, EmailAuthProvider, reauthenticateWithCredential, sendPasswordResetEmail } from 'firebase/auth';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
@@ -24,12 +24,13 @@ import { useBookmarks } from '../../store/bookmarks';
 import { useNetwork } from '../../store/network';
 import { usePrivacy } from '../../store/privacy';
 import { useProfileLocal } from '../../store/profileLocal';
-import type { ResourceFormat, TextScale} from '../../store/settings';
+import type { ResourceFormat, TextScale } from '../../store/settings';
 import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 
 export default function SettingsScreen() {
+  const params = useLocalSearchParams<{ open?: string }>();
   const { t } = useTranslation();
   const palette = useAppPalette();
   const { factor } = useTextScale();
@@ -54,6 +55,12 @@ export default function SettingsScreen() {
     try { const snap = await getDoc(doc(db, 'users', user.uid)); if (snap.exists()) { const p = snap.data() as any; setDisplayName(p.displayName || ''); setPhotoURL(p.photoURL || null); } }
     catch (e:any) { const msg = String(e?.message||''); if (msg.toLowerCase().includes('offline')) setOffline(true); else console.error(msg); }
   })(); }, [user]);
+
+  useEffect(() => {
+    if (typeof params?.open === 'string' && params.open.toLowerCase() === 'emergencycard') {
+      setShowEmergencyCard(true);
+    }
+  }, [params?.open]);
 
   const handleUpdateDisplayName = async () => { if (!user) return; try { await updateDoc(doc(db,'users',user.uid), { displayName }); Alert.alert(t('common.success','Success'), t('settings.account.updatedName','Display name updated')); } catch(e:any){ Alert.alert(t('common.error','Error'), e?.message||'Failed'); } };
 
