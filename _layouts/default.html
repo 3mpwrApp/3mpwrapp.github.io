@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
-  <header class="hero">
-    <img class="logo" src="{{ '/assets/img/empowr-logo.png' | relative_url }}" alt="Empowr logo">
-    <h1>{{ site.title }}</h1>
-    <p class="tagline">{{ site.tagline }}</p>
-    <nav class="nav">
+  <header>
+    <nav>
       <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/features/' | relative_url }}">Features</a>
-      <a href="{{ '/community/' | relative_url }}">Community</a>
-      <a href="{{ '/resources/' | relative_url }}">Resources</a>
-      <a href="{{ '/wellness/' | relative_url }}">Wellness</a>
-      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      <a href="{{ '/about' | relative_url }}">About</a>
+      <a href="{{ '/contact' | relative_url }}">Contact</a>
+      <a href="{{ '/blog' | relative_url }}">Blog</a>
+      <a href="{{ '/newsletter' | relative_url }}">Newsletter</a>
+      <a href="{{ '/beta' | relative_url }}">Beta Test</a>
+      <a href="{{ '/user-guide' | relative_url }}">User Guide</a>
     </nav>
   </header>
-
-  <main class="content">
+  <main>
     {{ content }}
   </main>
-
-  <footer class="footer">
-    <p>&copy; {{ site.time | date: '%Y' }} Empowr App. All rights reserved.</p>
+  <footer>
+    <p>&copy; {{ site.time | date: '%Y' }} Empowr App</p>
   </footer>
 </body>
 </html>
