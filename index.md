@@ -3,18 +3,16 @@ layout: default
 title: Home
 ---
 
-# Welcome to Empowr
+# Welcome to Empowr App
 
-Empowr is a community-driven platform for Injured Workers and Persons with Disabilities across Canada.
-We create a safe, inclusive space to **connect**, **learn**, and **advocate**.
+Empowr App provides practical tools and a vibrant community for injured workers and persons with disabilities.
 
-<div class="cardgrid">
-  <div class="card"><h3>Community Support</h3><p>Share experiences and build solidarity.</p></div>
-  <div class="card"><h3>Advocacy Tools</h3><p>Campaign resources to drive policy change.</p></div>
-  <div class="card"><h3>Educational Resources</h3><p>Know your rights and stay informed.</p></div>
-  <div class="card"><h3>Podcasts & Updates</h3><p>Stories and insights from the community.</p></div>
-</div>
+**Explore our features:**
+- [About](about)
+- [Contact](contact)
+- [Blog](blog)
+- [Newsletter Signup](newsletter)
+- [Beta Test Signup](beta)
+- [User Guide](user-guide)
 
-<div class="cta">
-  <a class="button" href="{{ '/contact/' | relative_url }}">Contact Us</a>
-</div>
+Stay informed, empowered, and connected!
