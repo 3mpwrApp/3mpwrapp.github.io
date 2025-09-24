@@ -103,13 +103,13 @@ export default function AccountabilityCase() {
             <Text style={s.issue}>{caze.issue}</Text>
 
             <View style={[s.section,{ flexDirection:'row', gap:8, flexWrap:'wrap' }]}>
-              <Pressable onPress={copyAll} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t('common.copy','Copy')}>
+              <Pressable onPress={copyAll} disabled={working} style={[s.secondaryBtn, working && { opacity: 0.6 }]} accessibilityRole="button" accessibilityLabel={t('common.copy','Copy')}>
                 <Text style={s.secondaryBtnText}>{t('common.copy','Copy')}</Text>
               </Pressable>
-              <Pressable onPress={shareAll} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t('common.share','Share')}>
+              <Pressable onPress={shareAll} disabled={working} style={[s.secondaryBtn, working && { opacity: 0.6 }]} accessibilityRole="button" accessibilityLabel={t('common.share','Share')}>
                 <Text style={s.secondaryBtnText}>{t('common.share','Share')}</Text>
               </Pressable>
-              <Pressable onPress={insertLocker} style={s.secondaryBtn} accessibilityRole="button" accessibilityLabel={t('templates.letters.common.insertLocker','Insert into Evidence Locker')}>
+              <Pressable onPress={insertLocker} disabled={working} style={[s.secondaryBtn, working && { opacity: 0.6 }]} accessibilityRole="button" accessibilityLabel={t('templates.letters.common.insertLocker','Insert into Evidence Locker')}>
                 <Text style={s.secondaryBtnText}>{t('templates.letters.common.insertLocker','Insert into Evidence Locker')}</Text>
               </Pressable>
             </View>
