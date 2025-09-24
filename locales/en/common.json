@@ -303,7 +303,15 @@
     "actions": "Actions",
     "fullText": "Full Simplified Text",
     "copiedTitle": "Copied",
-    "copiedBody": "Summary copied."
+    "copiedBody": "Summary copied.",
+    "pdf": "PDF",
+    "doc": ".doc",
+    "shareTitle": "Translator Output",
+    "shareTitleDoc": "Translator Output (.doc)",
+    "pdfUnavailableTitle": "PDF unavailable",
+    "pdfUnavailableBody": "Install expo-print in a dev build to export PDFs.",
+    "exportFailedTitle": "Export failed",
+    "exportFailedBody": "Could not create file."
   },
   "settings": {
     "wellness": "Wellness",
