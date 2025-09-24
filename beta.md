@@ -5,7 +5,7 @@ title: Beta Test Signup
 
 # 🚀 Beta Test Signup
 
-Are you interested in shaping the future of the Empowr App? Join our beta tester community and get early access to new features, provide valuable feedback, and help us build the best experience possible!
+Are you interested in shaping the future of the 3mpowr App? Join our beta tester community and get early access to new features, provide valuable feedback, and help us build the best experience possible!
 
 **Sign up now to become a beta tester:**
 
