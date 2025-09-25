@@ -5,10 +5,12 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-nati
 import LetterActionsBar from "../../../components/letters/LetterActionsBar";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
-import { logEvent } from "../../../services/analytics";
 import { buildSymptomSummary } from "../../../services/insights";
 import { useProfileLocal } from "../../../store/profileLocal";
 import { useAppPalette } from "../../../theme/usePalette";
+
+ 
+const { trackEvent } = require("../../../services/analyticsClient");
 
 export const options = { href: null };
 
@@ -59,10 +61,14 @@ export default function AccommodationLetter() {
 
   const exportDoc = async () => {
     try {
-      const FS = await import("expo-file-system");
-      const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${preview.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</pre></body></html>`;
-      const path = FS.cacheDirectory + `accommodation_${Date.now()}.doc`;
-      await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 });
+    const FSmod: any = await import("expo-file-system");
+    const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${preview.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</pre></body></html>`;
+    const cacheDir: string = (FSmod && (FSmod.cacheDirectory || FSmod.default?.cacheDirectory)) || "";
+    const writeFn = FSmod?.writeAsStringAsync || FSmod?.default?.writeAsStringAsync;
+    const encodingType = FSmod?.EncodingType?.UTF8 || FSmod?.default?.EncodingType?.UTF8;
+    if (!cacheDir || !writeFn || !encodingType) throw new Error("fs module incomplete");
+    const path = cacheDir + `accommodation_${Date.now()}.doc`;
+    await writeFn(path, html, { encoding: encodingType });
       const Share = await import("expo-sharing").catch(()=>null);
       if (Share?.isAvailableAsync) {
         if (await Share.isAvailableAsync()) await Share.shareAsync(path); else Alert.alert(t("templates.letters.common.shareUnavailable","Share unavailable"), t("templates.letters.common.shareUnavailableBody","System share sheet not available."));
@@ -72,7 +78,7 @@ export default function AccommodationLetter() {
 
   const insertFromTrackers = async () => {
     const ins = await buildSymptomSummary();
-    logEvent("letter_insert_from_trackers", { type: "accommodation" });
+  try { trackEvent("letter_insert_from_trackers", { type: "accommodation" }); } catch {}
     setLimitations(p => (p ? p + "\n\n" : "") + ins);
     Alert.alert(t("templates.letters.common.inserted","Added"), t("templates.letters.common.insertedBody","Inserted into Evidence Locker."));
   };

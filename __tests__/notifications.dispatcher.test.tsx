@@ -1,6 +1,20 @@
 import { act, render } from '@testing-library/react';
 import React from 'react';
 
+// Mocks to neutralize native/expo runtime side-effects (HMR websockets, permissions APIs)
+jest.mock('expo', () => ({
+  // minimal surface required; avoid HMRClient usage
+}));
+jest.mock('expo-notifications', () => ({
+  getPermissionsAsync: async () => ({ status: 'granted' }),
+  requestPermissionsAsync: async () => ({ status: 'granted' }),
+  scheduleNotificationAsync: async () => 'local-id-1',
+  setNotificationHandler: () => {},
+  AndroidImportance: { MAX: 5 },
+  AndroidNotificationVisibility: { PUBLIC: 1 },
+  setNotificationChannelAsync: async () => {},
+}));
+
 import { useNotificationDispatcher } from '../services/notifications.dispatcher';
 import { NotificationsProvider, useNotifications } from '../store/notifications';
 

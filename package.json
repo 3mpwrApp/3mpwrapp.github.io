@@ -19,6 +19,7 @@
     "prepare": "husky",
     "typecheck:strict": "tsc -p tsconfig.strict.json --noEmit",
     "a11y:scan": "node scripts/a11y-scan.js",
+  "wcag:audit": "node scripts/wcag_compliance_audit.js",
     "clean:win": "if exist node_modules rmdir /s /q node_modules && if exist package-lock.json del /f /q package-lock.json && if exist yarn.lock del /f /q yarn.lock && if exist pnpm-lock.yaml del /f /q pnpm-lock.yaml && npx expo install",
     "metro:clear": "set EXPO_NO_METRO_CACHE=1&& npx expo start -c",
     "align:expo": "npx expo install && npx expo install react-native@0.79.5",
@@ -58,7 +59,10 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "test:guard": "node ./scripts/check-jsx-tests.js",
-    "test:ci": "npm run test:guard && jest --runInBand"
+  "check:analytics": "node ./scripts/check-analytics-imports.mjs",
+  "analytics:scan": "node ./scripts/analytics-scan.mjs",
+  "analytics:report": "node ./scripts/analytics-report.mjs",
+  "test:ci": "npm run test:guard && npm run check:analytics && npm run analytics:report && jest --runInBand"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -145,5 +149,6 @@
     "@sentry/browser": "^7.119.1",
     "@sentry/react": "^7.119.1"
   },
+  "engines": { "node": ">=20.0.0" },
   "private": true
 }

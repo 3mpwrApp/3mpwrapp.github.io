@@ -76,6 +76,44 @@ Advocacy i18n enforcement: The script `npm run i18n:check` ( `scripts/check-i18n
 - Static scan: `npm run a11y:scan` to flag missing roles/hitSlop in TSX.
 - Screen reader announcements: use `announce()` from `utils/announce` instead of calling `AccessibilityInfo.announceForAccessibility` directly. It queues rapid calls (debounced ~120ms) and merges messages to avoid flooding. For immediate, unbatched output use `announceNow()`. Tests or scripts can force-flush via `flushAnnouncements()`.
 
+### WCAG Color Contrast Audit
+Audits theme palette tokens and inline hex color literals for WCAG contrast compliance. Palette AA failures return a non‑zero exit code (CI gating). Inline issues are advisory for now (reported for both light & dark assumed backgrounds).
+
+Basic usage:
+
+```
+npm run wcag:audit
+```
+
+Advanced flags:
+
+```
+node scripts/wcag_compliance_audit.js \
+  --aa=4.5 \
+  --aaa=7 \
+  --inline-bg=#FFFFFF \
+  --inline-bg-dark=#000000 \
+  --json            # print JSON to stdout
+node scripts/wcag_compliance_audit.js --json=wcag-report.json
+```
+
+Flags:
+- `--aa` / `--aaa`: Override contrast thresholds (defaults 4.5 / 7).
+- `--inline-bg` / `--inline-bg-dark`: Override assumed background colors for inline literal checks.
+- `--json` (boolean): Emit machine-readable JSON to stdout.
+- `--json=path.json`: Write JSON output to file.
+
+Report Sections:
+- Palette Contrast Ratios: Each token vs theme background with AA / AAA status and suggestions for failing tokens (a closest lightness-adjusted candidate).
+- Inline Hex Color Issues: Any literal below AA threshold for light or dark contexts (includes contrast ratio and suggestion when derivable).
+
+Suggestions: For failing tokens, a candidate adjusted color is proposed to reach at least the AA threshold using a lightness shift heuristic.
+
+Planned Enhancements (tracked in `unfinishedwork.md`):
+- Gate inline issues after baseline is clean.
+- Detect ambiguous background contexts (improved heuristic using component usage patterns).
+- Provide delta analysis between commits (regression focus).
+
 ## Push Notifications
 
 - Local notifications work in Expo Go. Remote push (Expo push tokens) requires a development build (Dev Client) or EAS build.

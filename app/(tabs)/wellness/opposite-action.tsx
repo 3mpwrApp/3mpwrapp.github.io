@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
-import { logEvent, logView } from '../../../services/analytics';
+import { logView } from '../../../services/analytics';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
@@ -26,7 +26,7 @@ export default function OppositeAction(){
       <Text accessibilityRole="header" style={s.header}>{t('wellness.opposite.title','Opposite Action Companion')}</Text>
       <Text style={s.desc}>{t('wellness.opposite.desc','When emotions suggest unhelpful actions, try the opposite in small, safe steps.')}</Text>
       <View style={s.card}><Text style={{ color: palette.text }}>{steps[step]}</Text></View>
-  <A11yPressable onPress={()=> { logEvent('wellness_opposite_next_step',{ step }); setStep((step+1)%steps.length);} } style={s.button} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Next step">
+  <A11yPressable onPress={()=> { require('../../../services/analyticsClient').trackEvent('wellness_opposite_next_step',{ step }); setStep((step+1)%steps.length);} } style={s.button} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Next step">
         <Text style={s.buttonText}>{t('common.next','Next')}</Text>
       </A11yPressable>
     </View>

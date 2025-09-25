@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
 import A11yPressable from '../../../components/A11yPressable';
 import MapEmbed from '../../../components/MapEmbed';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { useTranslation } from '../../../i18n';
+import { trackEvent } from '../../../services/analyticsClient';
 import { fetchWorldItems } from '../../../services/worlddata';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -27,7 +27,7 @@ export default function WorldMap() {
   const [kind, setKind] = React.useState<'all'|'law'|'protest'|'update'>('all');
   const [remote, setRemote] = React.useState(seed);
   React.useEffect(()=>{ (async()=>{ try { const rows = await fetchWorldItems(); if (rows?.length) setRemote(rows as any); } catch {} })(); },[]);
-  React.useEffect(()=>{ logEvent?.('advocacy.world.view', { kind }); },[kind]);
+  React.useEffect(()=>{ trackEvent('advocacy.world.view', { kind }); },[kind]);
   const items = kind==='all' ? remote : remote.filter(i => i.kind === kind);
   return (
     <View style={s.container}>

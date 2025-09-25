@@ -2,7 +2,6 @@ import { useTranslation } from '../i18n';
 import { useNotifications } from '../store/notifications';
 import type { DeliveredNotification, NotificationPreferences } from '../types/notifications';
 
-import { logEvent } from './analytics';
 import { ensureNotificationPermission, scheduleLocal } from './notifications';
 import { getNotificationTemplate, getTemplatesForEvent } from './notifications.templates';
 
@@ -36,6 +35,9 @@ export interface DomainNotificationEvent {
   payload?: Record<string, any>;
 }
 
+// Runtime in-memory mirror of lastSent to ensure immediate throttle enforcement between rapid sequential dispatches in the same tick/test.
+const runtimeLastSent: Record<string, number> = {};
+
 export function useNotificationDispatcher() {
   const { prefs, lastSent, setLastSent, add } = useNotifications();
   const { t } = useTranslation();
@@ -56,7 +58,7 @@ export function useNotificationDispatcher() {
         if (!isTemplateAllowedByPrefs(tpl.category, prefs)) continue;
       }
 
-      const last = lastSent[templateId];
+      const last = runtimeLastSent[templateId] ?? lastSent[templateId];
       const throttleWindow = tpl.throttleSec ?? DEFAULT_THROTTLE_SECONDS;
       if (!options.force && last) {
         const diffSec = (now.getTime() - last) / 1000;
@@ -95,10 +97,13 @@ export function useNotificationDispatcher() {
         channel: scheduledPush ? 'push' : 'inApp',
       };
 
-      add([delivered]);
-      setLastSent(templateId, now.getTime());
+  // Record throttle timestamp early (before async permission scheduling) & update state + runtime cache
+  runtimeLastSent[templateId] = now.getTime();
+  setLastSent(templateId, now.getTime());
+  add([delivered]);
 
-      logEvent?.('notification.delivered', {
+  const { trackEvent } = await import('./analyticsClient');
+  trackEvent('notification.delivered', {
         templateId,
         templateVersion: tpl.version,
         event: evt.event,

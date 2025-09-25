@@ -5,10 +5,12 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-nati
 import LetterActionsBar from "../../../components/letters/LetterActionsBar";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
-import { logEvent } from "../../../services/analytics";
 import { buildCombinedEvidenceSummary } from "../../../services/insights";
 import { useProfileLocal } from "../../../store/profileLocal";
 import { useAppPalette } from "../../../theme/usePalette";
+
+ 
+const { trackEvent } = require("../../../services/analyticsClient");
 
 export const options = { href: null };
 
@@ -28,8 +30,33 @@ export default function ReconsiderationLetter() {
   const preview = `Date: ${date || new Date().toLocaleDateString()}\n\nRe: Request for Reconsideration (Claim ${claim || "[ID]"})\n\nDear Claims Officer,\n\nI am requesting reconsideration of my claim decision. Key points: ${points || "[list facts/evidence]"}.\n\nSincerely,\n${name || "[Your Name]"}`;
   const copyLetter = async () => { try { await Clipboard.setStringAsync(preview); Alert.alert(t("templates.letters.common.copied","Copied"), t("templates.letters.common.copiedBody","Letter copied to clipboard.")); } catch { Alert.alert(t("templates.letters.common.clipboardNA","Clipboard not available"), t("templates.letters.common.clipboardNABody","Install expo-clipboard in a dev build to enable copy.")); } };
   const exportPdf = async () => { try { const mod = await import("expo-print"); const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">${preview.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</pre>`; const { uri } = await mod.printToFileAsync({ html }); const Share = await import("expo-sharing").catch(()=>null); if (Share?.isAvailableAsync) { if (await Share.isAvailableAsync()) await Share.shareAsync(uri); else Alert.alert(t("templates.letters.common.shareUnavailable","Share unavailable"), t("templates.letters.common.shareUnavailableBody","System share sheet not available.")); } } catch { Alert.alert(t("templates.letters.common.pdfNA","PDF not available"), t("templates.letters.common.pdfNABody","Install expo-print in a dev build to export PDFs.")); } };
-  const exportDoc = async () => { try { const FS = await import("expo-file-system"); const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${preview.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</pre></body></html>`; const path = FS.cacheDirectory + `reconsideration_${Date.now()}.doc`; await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 }); const Share = await import("expo-sharing").catch(()=>null); if (Share?.isAvailableAsync) { if (await Share.isAvailableAsync()) await Share.shareAsync(path); else Alert.alert(t("templates.letters.common.shareUnavailable","Share unavailable"), t("templates.letters.common.shareUnavailableBody","System share sheet not available.")); } } catch { Alert.alert(t("templates.letters.common.exportFailed","Export failed"), t("templates.letters.common.exportFailedBody","Could not create file.")); } };
-  const insertTrackers = async () => { const ins = await buildCombinedEvidenceSummary(); logEvent("letter_insert_from_trackers", { type: "reconsideration" }); setPoints(p=> (p? p+"\n\n":"")+ins); Alert.alert(t("templates.letters.common.inserted","Added"), t("templates.letters.common.insertedBody","Inserted into Evidence Locker.")); };
+  const exportDoc = async () => {
+    try {
+      const FS: any = await import("expo-file-system");
+      const cacheDir: string = (FS && (FS.cacheDirectory || FS.default?.cacheDirectory)) || "";
+      const writeFn = FS?.writeAsStringAsync || FS?.default?.writeAsStringAsync;
+      const encodingType = FS?.EncodingType?.UTF8 || FS?.default?.EncodingType?.UTF8;
+      if (!cacheDir || !writeFn || !encodingType) throw new Error("fs module incomplete");
+      const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${preview.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</pre></body></html>`;
+      const path = cacheDir + `reconsideration_${Date.now()}.doc`;
+      await writeFn(path, html, { encoding: encodingType });
+      const Share = await import("expo-sharing").catch(() => null);
+      if (Share?.isAvailableAsync) {
+        if (await Share.isAvailableAsync()) await Share.shareAsync(path);
+        else
+          {Alert.alert(
+            t("templates.letters.common.shareUnavailable","Share unavailable"),
+            t("templates.letters.common.shareUnavailableBody","System share sheet not available."),
+          );}
+      }
+    } catch {
+      Alert.alert(
+        t("templates.letters.common.exportFailed","Export failed"),
+        t("templates.letters.common.exportFailedBody","Could not create file."),
+      );
+    }
+  };
+  const insertTrackers = async () => { const ins = await buildCombinedEvidenceSummary(); try { trackEvent("letter_insert_from_trackers", { type: "reconsideration" }); } catch {} setPoints(p=> (p? p+"\n\n":"")+ins); Alert.alert(t("templates.letters.common.inserted","Added"), t("templates.letters.common.insertedBody","Inserted into Evidence Locker.")); };
   const placeholder = palette.text + '77';
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 20 }} accessibilityLabel={t("templates.letters.reconsideration.screenLabel","Reconsideration letter screen")}>      

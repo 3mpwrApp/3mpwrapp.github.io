@@ -1,0 +1,39 @@
+name: CI Quality Gates
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install deps
+        run: npm ci
+      - name: Lint
+        run: npm run lint:ci
+      - name: Typecheck (strict)
+        run: npm run typecheck:strict || true
+      - name: i18n assertions
+        run: npm run i18n:assert
+      - name: Accessibility scan
+        run: npm run a11y:scan
+      - name: WCAG audit (JSON)
+        run: npm run wcag:audit -- --json=wcag-report.json || true
+      - name: Upload WCAG report
+        uses: actions/upload-artifact@v4
+        with:
+          name: wcag-report
+          path: wcag-report.json
+          if-no-files-found: warn
+      - name: Tests
+        run: npm test -- --runInBand

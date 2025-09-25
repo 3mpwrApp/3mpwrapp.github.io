@@ -12,7 +12,6 @@ import SettingsLink from "../../../components/SettingsLink";
 import { useAuth } from "../../../context/AuthContext";
 import { campaigns } from "../../../data/campaigns";
 import { useTranslation } from "../../../i18n";
-import { logEvent } from "../../../services/analytics";
 import { fsJoinCampaign, fsLeaveCampaign } from "../../../services/firestore";
 import {
     CampaignsLocalProvider,
@@ -21,6 +20,9 @@ import {
 import { useFavorites } from "../../../store/favorites";
 import { colors, type Palette } from "../../../theme/colors";
 import { useTextScale } from "../../../theme/typography";
+
+ 
+const { trackEvent } = require("../../../services/analyticsClient");
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -82,7 +84,7 @@ function CampaignDetailInner() {
                 if (!ok) {
                   join(campaign.id); // rollback
                 } else {
-                  logEvent("campaign_leave", { id: campaign.id });
+                  try { trackEvent("campaign_leave", { id: campaign.id }); } catch {}
                 }
               } else {
                 join(campaign.id);
@@ -91,7 +93,7 @@ function CampaignDetailInner() {
                 if (!ok) {
                   leave(campaign.id);
                 } else {
-                  logEvent("campaign_join", { id: campaign.id });
+                  try { trackEvent("campaign_join", { id: campaign.id }); } catch {}
                 }
               }
             }}
@@ -130,7 +132,7 @@ function CampaignDetailInner() {
                 const deepLink = `https://empowr.app/campaigns/${campaign.id}`;
                 const message = `${campaign.title} - ${campaign.summary}\nJoin: ${deepLink}`;
                 await Share.share({ title: campaign.title, message, url: deepLink });
-                logEvent("campaign_share", { id: campaign.id });
+                try { trackEvent("campaign_share", { id: campaign.id }); } catch {}
               } catch {}
             }}
             accessibilityRole="button"

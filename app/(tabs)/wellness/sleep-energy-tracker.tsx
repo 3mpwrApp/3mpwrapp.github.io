@@ -67,7 +67,7 @@ export default function SleepEnergyTracker() {
     };
     setEntries((prev) => [e, ...prev]);
     try {
-      require("../../../services/analytics").logEvent?.("tracker_add_entry", {
+  require("../../../services/analyticsClient").trackEvent("tracker_add_entry", {
         kind: "sleep",
       });
     } catch {}
@@ -429,7 +429,7 @@ export default function SleepEnergyTracker() {
         style={styles.button}
         onPress={() => {
           try {
-            require("../../../services/analytics").logEvent?.("tracker_share", {
+            require("../../../services/analyticsClient").trackEvent("tracker_share", {
               kind: "sleep",
             });
           } catch {}

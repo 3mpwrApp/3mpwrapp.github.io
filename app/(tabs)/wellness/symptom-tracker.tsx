@@ -67,7 +67,7 @@ export default function SymptomTracker() {
     };
     setEntries((prev) => [e, ...prev]);
     try {
-      require("../../../services/analytics").logEvent?.("tracker_add_entry", {
+  require("../../../services/analyticsClient").trackEvent("tracker_add_entry", {
         kind: "symptom",
       });
     } catch {}
@@ -419,7 +419,7 @@ export default function SymptomTracker() {
         style={styles.button}
         onPress={() => {
           try {
-            require("../../../services/analytics").logEvent?.("tracker_share", {
+            require("../../../services/analyticsClient").trackEvent("tracker_share", {
               kind: "symptom",
             });
           } catch {}
@@ -458,16 +458,20 @@ export default function SymptomTracker() {
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           try {
-            const FS = await import("expo-file-system");
-            const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${report.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</pre></body></html>`;
-            const path = FS.cacheDirectory + `symptom_report_${Date.now()}.doc`;
-            await FS.writeAsStringAsync(path, html, {
-              encoding: FS.EncodingType.UTF8,
-            });
-            await Share.share({
-              url: path,
-              title: "Symptom & Pain Report (.doc)",
-            });
+            const FS: any = await import("expo-file-system");
+            const cacheDir: string =
+              (FS && (FS.cacheDirectory || (FS.default && FS.default.cacheDirectory))) || "";
+            const writeFn =
+              FS?.writeAsStringAsync || FS?.default?.writeAsStringAsync;
+            const encodingType =
+              FS?.EncodingType?.UTF8 || FS?.default?.EncodingType?.UTF8;
+            if (!cacheDir || !writeFn || !encodingType) throw new Error("fs module incomplete");
+            const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${report
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")}</pre></body></html>`;
+            const path = cacheDir + `symptom_report_${Date.now()}.doc`;
+            await writeFn(path, html, { encoding: encodingType });
+            await Share.share({ url: path, title: "Symptom & Pain Report (.doc)" });
           } catch {
             Alert.alert("Export failed", "Could not create .doc file.");
           }
@@ -476,7 +480,7 @@ export default function SymptomTracker() {
         accessibilityLabel="Export report as Word document"
         hitSlop={HIT_SLOP_8}
       >
-          <Text style={styles.buttonText}>Export as .doc</Text>
+        <Text style={styles.buttonText}>Export as .doc</Text>
       </A11yPressable>
       <A11yPressable
         style={[styles.button, { marginTop: 8 }]}
@@ -526,11 +530,16 @@ export default function SymptomTracker() {
                 r.map((x) => `"${(x || "").replace(/"/g, '""')}"`).join(","),
               )
               .join("\n");
-            const FS = await import("expo-file-system");
-            const path = FS.cacheDirectory + `symptom_pain_${Date.now()}.csv`;
-            await FS.writeAsStringAsync(path, csv, {
-              encoding: FS.EncodingType.UTF8,
-            });
+            const FS: any = await import("expo-file-system");
+            const cacheDir: string =
+              (FS && (FS.cacheDirectory || (FS.default && FS.default.cacheDirectory))) || "";
+            const writeFn =
+              FS?.writeAsStringAsync || FS?.default?.writeAsStringAsync;
+            const encodingType =
+              FS?.EncodingType?.UTF8 || FS?.default?.EncodingType?.UTF8;
+            if (!cacheDir || !writeFn || !encodingType) throw new Error("fs module incomplete");
+            const path = cacheDir + `symptom_pain_${Date.now()}.csv`;
+            await writeFn(path, csv, { encoding: encodingType });
             await Share.share({ url: path, title: "Symptom & Pain CSV" });
           } catch {
             Alert.alert(
@@ -543,7 +552,7 @@ export default function SymptomTracker() {
         accessibilityLabel="Export report as downloadable CSV file"
         hitSlop={HIT_SLOP_8}
       >
-          <Text style={styles.buttonText}>Export CSV File</Text>
+        <Text style={styles.buttonText}>Export CSV File</Text>
       </A11yPressable>
 
       <Text style={[styles.sectionTitle, { marginTop: 16 }]}>

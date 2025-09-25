@@ -1,18 +1,20 @@
-import {
-  Text,
-  StyleSheet,
-  useColorScheme,
-  Pressable,
-  Share,
-  Image,
-  ScrollView,
-} from "react-native";
 import { Stack, useLocalSearchParams } from "expo-router";
+import {
+    Image,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    useColorScheme,
+} from "react-native";
 
+import { useFavorites } from "../../../store/favorites";
 import { colors, type Palette } from "../../../theme/colors";
 import { useTextScale } from "../../../theme/typography";
-import { useFavorites } from "../../../store/favorites";
-import { logEvent } from "../../../services/analytics";
+
+ 
+const { trackEvent } = require("../../../services/analyticsClient");
 
 export const options = { href: null };
 
@@ -91,7 +93,7 @@ export default function PodcastDetail() {
                   message: msg,
                   url: `https://empowr.app/podcasts/${id}`,
                 });
-                logEvent("podcast_share", { id });
+                try { trackEvent("podcast_share", { id }); } catch {}
               } catch (e) {
                 console.warn("Share failed", e);
               }

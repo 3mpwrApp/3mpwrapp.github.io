@@ -9,14 +9,14 @@ import {
     View,
 } from "react-native";
 
-import { useTranslation } from "../../../i18n";
-import { logEvent } from "../../../services/analytics";
 import { channels as seedChannels } from "../../../data/community";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
+import { trackEvent } from "../../../services/analyticsClient";
 import { CommunityProvider, useCommunity } from "../../../store/community";
 import { useAppPalette } from "../../../theme/usePalette";
 
@@ -38,7 +38,7 @@ function Inner() {
     if(!title.trim()) { Alert.alert(t('advocacy.ask.missingTitleTitle','Title required'), t('advocacy.ask.missingTitleBody','Please enter a short title.')); return; }
     const ok = createThread(channelId, `${title} — ${details.slice(0, 120)}`, null);
     if (ok) {
-      logEvent?.('advocacy.ask.submitted',{ channelId });
+      trackEvent('advocacy.ask.submitted',{ channelId });
       Alert.alert(t('advocacy.ask.submittedTitle','Submitted'), t('advocacy.ask.submittedBody','Your request has been posted. Community advocates may respond.'));
       router.push("/(tabs)/community/topic-ask-advocate");
     } else {

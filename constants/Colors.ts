@@ -4,7 +4,8 @@ const Colors = {
     background: "#FFFFFF",
     tint: "#007AFF",
     tabIconDefault: "#687076",
-    tabIconSelected: "#007AFF",
+  // Adjusted from #007AFF to #0056B3 for WCAG AA contrast (>4.5:1) against white
+  tabIconSelected: "#0056B3",
   },
   dark: {
     text: "#ECEDEE",

@@ -1,6 +1,8 @@
 import React from "react";
 
-import { logEvent } from "../services/analytics";
+// Use trackEvent abstraction (dynamic require to avoid import cycles in tests)
+ 
+const { trackEvent } = require("../services/analyticsClient");
 
 let AsyncStorage: any;
 try {
@@ -60,7 +62,7 @@ export function BookmarksProvider({ children }: { children: React.ReactNode }) {
       if (prev.some((b) => b.route === route)) return prev; // avoid duplicate by route
       const id = `${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
       const next = [...prev, { id, route, label, created: Date.now(), tKey }];
-      logEvent("bookmark_add", { route, has_tKey: !!tKey });
+  try { trackEvent("bookmark_add", { route, has_tKey: !!tKey }); } catch {}
       return next;
     });
   };
@@ -68,12 +70,12 @@ export function BookmarksProvider({ children }: { children: React.ReactNode }) {
     setItems((prev) => {
       const target = prev.find(b => b.id === id);
       const next = prev.filter((b) => b.id !== id);
-      if (target) logEvent("bookmark_remove", { route: target.route });
+  if (target) { try { trackEvent("bookmark_remove", { route: target.route }); } catch {} }
       return next;
     });
   };
   const clearBookmarks = () => {
-    if (items.length) logEvent("bookmark_clear_all", { count: items.length });
+  if (items.length) { try { trackEvent("bookmark_clear_all", { count: items.length }); } catch {} }
     setItems([]);
   };
   const isBookmarked = (route: string) => items.some((b) => b.route === route);

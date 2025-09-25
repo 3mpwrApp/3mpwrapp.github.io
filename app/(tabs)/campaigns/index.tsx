@@ -27,7 +27,6 @@ import {
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { logActivity } from "../../../services/activity";
-import { logEvent } from "../../../services/analytics";
 import { fetchCampaigns } from "../../../services/campaigns";
 import {
     fsAddCampaign,
@@ -43,6 +42,9 @@ import { useCounts } from "../../../store/counts";
 import { useNetwork } from "../../../store/network";
 import { useRefresh } from "../../../store/refresh";
 import { colors, type Palette } from "../../../theme/colors";
+
+ 
+const { trackEvent } = require("../../../services/analyticsClient");
 
 function ScreenInner() {
   const scheme = useColorScheme();
@@ -133,7 +135,7 @@ function ScreenInner() {
       <CreateCampaignBox
         onCreate={async (data) => {
           const c = createCampaign(data.title, data.summary);
-          logEvent("campaign_create", { id: c.id });
+          try { trackEvent("campaign_create", { id: c.id }); } catch {}
           await fsAddCampaign({
             id: c.id,
             title: data.title,

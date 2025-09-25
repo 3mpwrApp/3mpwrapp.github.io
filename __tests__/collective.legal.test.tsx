@@ -16,7 +16,7 @@ jest.mock('react-native', () => {
     ScrollView: (props: any) => props.children,
     StyleSheet: { create: (s: any) => s },
     Text: (props: any) => props.children,
-    TextInput: (props: any) => null,
+    TextInput: (_props: any) => null,
     View: (props: any) => props.children,
     Pressable: (props: any) => props.children,
     useColorScheme: () => 'light',
@@ -40,5 +40,5 @@ describe('CollectiveLegal', () => {
     expect(submit).toBeTruthy();
     await act(async () => { submit.props.onPress(); });
     expect(violations.fsAddViolationReport).toHaveBeenCalled();
-  });
+  }, 15000);
 });

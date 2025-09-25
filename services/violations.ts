@@ -1,4 +1,4 @@
-import { logEvent } from './analytics';
+import { trackEvent } from './analyticsClient';
 import { getDB } from "./firestore";
 
 export async function fsAddViolationReport(r: {
@@ -20,7 +20,7 @@ export async function fsAddViolationReport(r: {
       { merge: true },
     );
     const res = true;
-    logEvent?.('advocacy.collective.submit', { type: r?.type });
+  trackEvent('advocacy.collective.submit', { type: r?.type });
     return res;
   } catch {
     return false;

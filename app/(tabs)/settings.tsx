@@ -18,7 +18,6 @@ import { useAuth } from '../../context/AuthContext';
 import { auth, db, storage } from '../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
-import { logEvent } from '../../services/analytics';
 import { clearAllData, exportBackup, importBackup } from '../../services/backup';
 import { useBookmarks } from '../../store/bookmarks';
 import { useNetwork } from '../../store/network';
@@ -75,7 +74,7 @@ export default function SettingsScreen() {
     setDeleteMode(true);
   };
   const cancelDelete = () => { setDeleteMode(false); setPassword(''); };
-  const confirmDelete = async () => { if (!user?.email) return; setDeleting(true); try { const cred = EmailAuthProvider.credential(user.email, password); await reauthenticateWithCredential(user, cred); await deleteUser(user); logEvent('account_delete', { method: 'password' }); Alert.alert(t('settings.account.deleted','Account deleted')); setDeleteMode(false); } catch(e:any){ logEvent('account_delete_failed', { code: e?.code || 'error', message: e?.message }); Alert.alert(t('settings.account.reauthFailed','Re-authentication failed'), e?.message||'Error'); } finally { setDeleting(false); } };
+  const confirmDelete = async () => { if (!user?.email) return; const { trackEvent } = require('../../services/analyticsClient'); setDeleting(true); try { const cred = EmailAuthProvider.credential(user.email, password); await reauthenticateWithCredential(user, cred); await deleteUser(user); trackEvent('account_delete', { method: 'password' }); Alert.alert(t('settings.account.deleted','Account deleted')); setDeleteMode(false); } catch(e:any){ trackEvent('account_delete_failed', { code: e?.code || 'error', message: e?.message }); Alert.alert(t('settings.account.reauthFailed','Re-authentication failed'), e?.message||'Error'); } finally { setDeleting(false); } };
 
   // Removed standalone emergency card navigation: now embedded below.
 

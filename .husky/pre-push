@@ -1,3 +1,23 @@
+#!/usr/bin/env bash
+# Pre-push quality gate
+set -euo pipefail
+
+echo "[pre-push] Running lint:ci"
+npm run lint:ci
+
+echo "[pre-push] Running strict typecheck"
+npm run typecheck:strict
+
+echo "[pre-push] i18n assert"
+npm run i18n:assert
+
+echo "[pre-push] accessibility scan"
+npm run a11y:scan
+
+echo "[pre-push] wcag audit"
+npm run wcag:audit
+
+echo "[pre-push] All checks passed"
 #!/usr/bin/env sh
 # Empowr pre-push quality gate
 
