@@ -28,6 +28,12 @@ export default function NotificationPreferences() {
     setWellnessReminders,
     eventReminders,
     setEventReminders,
+    quietHoursEnabled,
+    quietHoursStart,
+    quietHoursEnd,
+    setQuietHoursEnabled,
+    setQuietHoursStart,
+    setQuietHoursEnd,
   } = useSettings();
 
   React.useEffect(() => {
@@ -85,6 +91,45 @@ export default function NotificationPreferences() {
 
       {notificationsEnabled && (
         <>
+          <AccessibilityToggle
+            title={t('settings.notifications.quietHoursEnabled', 'Quiet Hours Enabled')}
+            description={t('settings.notifications.quietHoursEnabledDesc', 'Silence push notifications during configured hours')}
+            value={quietHoursEnabled !== false}
+            onValueChange={setQuietHoursEnabled}
+            icon="moon"
+            testID="quiet-hours-enabled-toggle"
+          />
+          {quietHoursEnabled !== false && (
+            <View style={{ marginLeft: 12, marginBottom: 12 }}>
+              <Text style={styles.sectionTitle}>{t('settings.notifications.quietHoursWindow', 'Quiet Hours Window')}</Text>
+              <Text style={styles.testDescription}>{t('settings.notifications.quietHoursWindowDesc', 'Current window')}: {quietHoursStart || '22:00'} - {quietHoursEnd || '07:00'}</Text>
+              {/* Simple cycle buttons for now instead of time pickers (mobile platform pickers not in test env). */}
+              <AccessibilityToggle
+                title={t('settings.notifications.quietHoursStart', 'Toggle Start Hour')}
+                description={t('settings.notifications.quietHoursStartDesc', 'Cycles through preset start times')}
+                value={false}
+                onValueChange={() => {
+                  const presets = ['21:00','22:00','23:00','00:00'];
+                  const idx = presets.indexOf(quietHoursStart || '22:00');
+                  setQuietHoursStart(presets[(idx+1)%presets.length]);
+                }}
+                icon="time"
+                testID="quiet-hours-start-toggle"
+              />
+              <AccessibilityToggle
+                title={t('settings.notifications.quietHoursEnd', 'Toggle End Hour')}
+                description={t('settings.notifications.quietHoursEndDesc', 'Cycles through preset end times')}
+                value={false}
+                onValueChange={() => {
+                  const presets = ['06:00','07:00','08:00'];
+                  const idx = presets.indexOf(quietHoursEnd || '07:00');
+                  setQuietHoursEnd(presets[(idx+1)%presets.length]);
+                }}
+                icon="time"
+                testID="quiet-hours-end-toggle"
+              />
+            </View>
+          )}
           <AccessibilityToggle
             title={t("settings.notifications.sound", "Notification Sound")}
             description={t("settings.notifications.soundDesc", "Play sound with notifications")}

@@ -40,6 +40,7 @@ export const ANALYTICS_EVENTS = {
 
   // Notifications
   NOTIFICATION_DELIVERED: "notification.delivered",
+  NOTIFICATION_QUIET_SUPPRESSED: "notification.quiet_suppressed",
 } as const;
 
 export type AnalyticsEventName = typeof ANALYTICS_EVENTS[keyof typeof ANALYTICS_EVENTS];

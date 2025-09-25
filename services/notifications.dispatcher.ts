@@ -10,8 +10,9 @@ export interface DispatchOptions {
   now?: Date;
 }
 
-const QUIET_HOURS_START = 22;
-const QUIET_HOURS_END = 7;
+// Fallback defaults if user has not configured quiet hours in settings yet
+const FALLBACK_QUIET_START = 22;
+const FALLBACK_QUIET_END = 7;
 const DEFAULT_THROTTLE_SECONDS = 300;
 
 function buildDedupeKey(templateId: string, payload?: any) {
@@ -21,12 +22,21 @@ function buildDedupeKey(templateId: string, payload?: any) {
   return `${templateId}|${parts.join('|')}`;
 }
 
-function inQuietHours(d: Date) {
+function parseHour(str?: string, fallback?: number) {
+  if (!str) return fallback ?? 0;
+  const m = /^(\d{1,2}):(\d{2})$/.exec(str.trim());
+  if (!m) return fallback ?? 0;
+  const h = Math.min(23, Math.max(0, parseInt(m[1],10)));
+  return h;
+}
+
+function inQuietHours(d: Date, startH: number, endH: number) {
   const h = d.getHours();
-  if (QUIET_HOURS_START > QUIET_HOURS_END) {
-    return h >= QUIET_HOURS_START || h < QUIET_HOURS_END;
+  if (startH === endH) return false; // degenerate (disabled style)
+  if (startH > endH) {
+    return h >= startH || h < endH; // overnight span
   }
-  return h >= QUIET_HOURS_START && h < QUIET_HOURS_END;
+  return h >= startH && h < endH;
 }
 
 export interface DomainNotificationEvent {
@@ -67,7 +77,11 @@ export function useNotificationDispatcher() {
 
       const dedupeKey = buildDedupeKey(templateId, evt.payload);
 
-      const suppressPush = !options.force && inQuietHours(now);
+  // Derive quiet hours from settings (if enabled)
+  const qEnabled = (prefs as any).quietHoursEnabled !== false; // default enabled
+  const qStart = parseHour((prefs as any).quietHoursStart, FALLBACK_QUIET_START);
+  const qEnd = parseHour((prefs as any).quietHoursEnd, FALLBACK_QUIET_END);
+  const suppressPush = !options.force && qEnabled && inQuietHours(now, qStart, qEnd);
       let scheduledPush = false;
       const allowPush = tpl.channels.push && !suppressPush && prefs.channels.push;
       if (allowPush) {
@@ -114,6 +128,14 @@ export function useNotificationDispatcher() {
         cat_enabled: Object.entries(prefs.categories).filter(([,v])=>v).length,
         push_enabled: prefs.channels.push,
       });
+      if (suppressPush) {
+        trackEvent('notification.quiet_suppressed', {
+          templateId,
+          event: evt.event,
+          start_h: qStart,
+          end_h: qEnd,
+        });
+      }
     }
   }
 

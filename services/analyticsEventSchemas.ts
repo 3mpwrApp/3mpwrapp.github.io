@@ -54,6 +54,12 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
     cat_enabled: { type: 'number' },
     push_enabled: { type: 'boolean' },
   },
+  'notification.quiet_suppressed': {
+    templateId: { type: 'string', required: true },
+    event: { type: 'string', required: true },
+    start_h: { type: 'number', required: true },
+    end_h: { type: 'number', required: true },
+  },
 };
 
 export interface ValidationResult {

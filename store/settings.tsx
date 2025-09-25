@@ -42,6 +42,9 @@ export type SettingsState = {
   autoLockTimeout: number; // minutes
   analyticsOptOut: boolean;
   moodNudgesEnabled: boolean;
+  quietHoursEnabled?: boolean;
+  quietHoursStart?: string; // '22:00'
+  quietHoursEnd?: string;   // '07:00'
 };
 
 /** Context type including setters */
@@ -73,6 +76,9 @@ type Ctx = SettingsState & {
   setAutoLockTimeout: (v: number) => void;
   setAnalyticsOptOut: (v: boolean) => void;
   setMoodNudgesEnabled: (v: boolean) => void;
+  setQuietHoursEnabled: (v: boolean) => void;
+  setQuietHoursStart: (v: string) => void;
+  setQuietHoursEnd: (v: string) => void;
 };
 
 /** Default values if nothing stored */
@@ -104,6 +110,9 @@ const DEFAULTS: SettingsState = {
   autoLockTimeout: 5,
   analyticsOptOut: false,
   moodNudgesEnabled: true,
+  quietHoursEnabled: true,
+  quietHoursStart: '22:00',
+  quietHoursEnd: '07:00',
 };
 
 const STORAGE_KEY = "settings:v1";
@@ -199,6 +208,12 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setState((s) => ({ ...s, analyticsOptOut: v }));
   const setMoodNudgesEnabled = (v: boolean) =>
     setState((s) => ({ ...s, moodNudgesEnabled: v }));
+  const setQuietHoursEnabled = (v: boolean) =>
+    setState(s => ({ ...s, quietHoursEnabled: v }));
+  const setQuietHoursStart = (v: string) =>
+    setState(s => ({ ...s, quietHoursStart: v }));
+  const setQuietHoursEnd = (v: string) =>
+    setState(s => ({ ...s, quietHoursEnd: v }));
 
   const value: Ctx = {
     ...state,
@@ -229,6 +244,9 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setAutoLockTimeout,
     setAnalyticsOptOut,
     setMoodNudgesEnabled,
+    setQuietHoursEnabled,
+    setQuietHoursStart,
+    setQuietHoursEnd,
   };
 
   return (
