@@ -3,7 +3,8 @@ import React from "react";
 import { Alert, FlatList, Modal, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
-import ProgressBar from "../../../components/ProgressBar";
+import ProgressBar from "../../../components/ProgressBar"; // retained for some inline uses
+import UploadProgress from "../../../components/UploadProgress";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { useAuth } from "../../../context/AuthContext";
 import { addEvidenceNote, deleteEvidenceDoc, listEvidencePage, uploadEvidenceFileWithProgress, type EvidenceFile } from "../../../services/evidence";
@@ -89,7 +90,7 @@ export default function EvidenceLocker() {
       const raw = (await AsyncStorage?.getItem?.(QUEUE_KEY)) || "[]";
       const arr: QueueItem[] = JSON.parse(raw);
       if (!arr.length) {
-        Alert.alert("Queue", "No pending items.");
+        Alert.alert(t('templates.evidenceLocker.queueTitle', 'Queue'), t('templates.evidenceLocker.queueNoPending', 'No pending items.'));
         return;
       }
 
@@ -112,9 +113,9 @@ export default function EvidenceLocker() {
         setProgressPct(Math.round(((i + 1) / arr.length) * 100));
       }
       await AsyncStorage?.setItem?.(QUEUE_KEY, JSON.stringify([]));
-      Alert.alert("Queue", "Processed all queued items.");
+      Alert.alert(t('templates.evidenceLocker.queueTitle', 'Queue'), t('templates.evidenceLocker.queueProcessed', 'Processed all queued items.'));
     } catch {
-      Alert.alert("Queue", "Some items could not be processed.");
+      Alert.alert(t('templates.evidenceLocker.queueTitle', 'Queue'), t('templates.evidenceLocker.queueProcessedSome', 'Some items could not be processed.'));
     } finally {
       setProcessing(false);
     }
@@ -123,7 +124,7 @@ export default function EvidenceLocker() {
   return (
     <View
       style={styles.container}
-      accessibilityLabel="Evidence Locker screen"
+      accessibilityLabel={t('templates.evidenceLocker.screenLabel', 'Evidence Locker screen')}
       accessible
     >
       <Text
@@ -228,8 +229,8 @@ export default function EvidenceLocker() {
       )}
       {isAdmin && (
         <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
-          <A11yPressable onPress={()=> router.push('/(tabs)/admin' as any)} style={styles.secondary}><Text style={styles.buttonText}>Admin Pending</Text></A11yPressable>
-          <A11yPressable onPress={()=> router.push('/(tabs)/admin' as any)} style={styles.secondary}><Text style={styles.buttonText}>Admin Trash</Text></A11yPressable>
+          <A11yPressable onPress={()=> router.push('/(tabs)/admin' as any)} style={styles.secondary}><Text style={styles.buttonText}>{t('admin.pending','Admin Pending')}</Text></A11yPressable>
+          <A11yPressable onPress={()=> router.push('/(tabs)/admin' as any)} style={styles.secondary}><Text style={styles.buttonText}>{t('admin.trash','Admin Trash')}</Text></A11yPressable>
         </View>
       )}
       <TextInput
@@ -241,34 +242,34 @@ export default function EvidenceLocker() {
       />
       {isAdmin && (
         <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
-          <A11yPressable onPress={()=> setShowDeleted(v=>!v)} style={styles.secondary}><Text style={styles.buttonText}>{showDeleted? 'Showing Trash':'Show Trash'}</Text></A11yPressable>
+          <A11yPressable onPress={()=> setShowDeleted(v=>!v)} style={styles.secondary}><Text style={styles.buttonText}>{showDeleted? t('templates.evidenceLocker.showingTrash','Showing Trash'): t('templates.evidenceLocker.showTrash','Show Trash')}</Text></A11yPressable>
         </View>
       )}
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
-        {['call','letter','medical','decision','payment','email'].map((t) => (
-          <A11yPressable key={t} onPress={() => setTag(t)} style={[styles.chip, tag===t && styles.chipActive]}>
-            <Text style={[styles.chipText, tag===t && styles.chipTextActive]}>{t.toUpperCase()}</Text>
+        {['call','letter','medical','decision','payment','email'].map((tagKey) => (
+          <A11yPressable key={tagKey} onPress={() => setTag(tagKey)} style={[styles.chip, tag===tagKey && styles.chipActive]} accessibilityLabel={t(`templates.evidenceLocker.tag.${tagKey}`, tagKey)}>
+            <Text style={[styles.chipText, tag===tagKey && styles.chipTextActive]}>{t(`templates.evidenceLocker.tag.${tagKey}`, tagKey).toUpperCase()}</Text>
           </A11yPressable>
         ))}
       </View>
       {/* Filters */}
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
-        {['','call','letter','medical','decision','payment','email'].map((t) => (
-          <A11yPressable key={`f-${t||'all'}`} onPress={() => setFilter(t)} style={[styles.chip, filter===t && styles.chipActive]}>
-            <Text style={[styles.chipText, filter===t && styles.chipTextActive]}>{(t||'all').toUpperCase()}</Text>
+        {['','call','letter','medical','decision','payment','email'].map((f) => (
+          <A11yPressable key={`f-${f||'all'}`} onPress={() => setFilter(f)} style={[styles.chip, filter===f && styles.chipActive]} accessibilityLabel={f? t(`templates.evidenceLocker.tag.${f}`, f): t('common.all','All')}>
+            <Text style={[styles.chipText, filter===f && styles.chipTextActive]}>{(f? t(`templates.evidenceLocker.tag.${f}`, f): t('common.all','All')).toUpperCase()}</Text>
           </A11yPressable>
         ))}
       </View>
       <TextInput
         value={query}
         onChangeText={setQuery}
-        placeholder="Search text"
+        placeholder={t('common.search','Search')}
         placeholderTextColor={palette.text + '77'}
         style={[styles.input, { marginTop: 8 }]}
       />
       <View style={{ flexDirection: 'row', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
         <A11yPressable
-          accessibilityLabel="Attach file"
+          accessibilityLabel={t('templates.evidenceLocker.attachFile','Attach file')}
           onPress={async () => {
             try {
               const Doc = await import('expo-document-picker');
@@ -278,7 +279,7 @@ export default function EvidenceLocker() {
               setNotes([{ id: String(Date.now()), text: text.trim() || file.name || 'Attachment', date: new Date().toISOString(), tags: tag? [tag]: [], files: [{ name: file.name || 'file', uri: file.uri }] }, ...notes]);
               setText(''); setTag('');
             } catch {
-              Alert.alert('Attach unavailable', 'Document picker not available in this build.');
+              Alert.alert(t('common.attachUnavailableTitle','Attach unavailable'), t('common.attachUnavailableBody','Document picker not available in this build.'));
             }
           }}
           style={styles.secondary}
@@ -286,7 +287,7 @@ export default function EvidenceLocker() {
           <Text style={styles.buttonText}>{t("templates.evidenceLocker.addFile", "Add File")}</Text>
         </A11yPressable>
         <A11yPressable
-          accessibilityLabel="Attach files"
+          accessibilityLabel={t('templates.evidenceLocker.attachFiles','Attach files')}
           onPress={async () => {
             try {
               const Doc = await import('expo-document-picker');
@@ -297,7 +298,7 @@ export default function EvidenceLocker() {
               setNotes([{ id: String(Date.now()), text: defaultText, date: new Date().toISOString(), tags: tag? [tag]: [], files }, ...notes]);
               setText(''); setTag('');
             } catch {
-              Alert.alert('Attach unavailable', 'Multi-file picker not available in this build.');
+              Alert.alert(t('common.attachUnavailableTitle','Attach unavailable'), t('common.attachMultiUnavailable','Multi-file picker not available in this build.'));
             }
           }}
           style={styles.secondary}
@@ -305,12 +306,12 @@ export default function EvidenceLocker() {
           <Text style={styles.buttonText}>{t("templates.evidenceLocker.addFile", "Add File")}</Text>
         </A11yPressable>
         <A11yPressable
-          accessibilityLabel="Attach photos"
+          accessibilityLabel={t('templates.evidenceLocker.attachPhotos','Attach photos')}
           onPress={async () => {
             try {
               const P = await import('expo-image-picker');
               const perm = await P.requestMediaLibraryPermissionsAsync();
-              if (perm.status !== 'granted') { Alert.alert('Permission denied','Photos permission required.'); return; }
+              if (perm.status !== 'granted') { Alert.alert(t('common.permissionDenied','Permission denied'), t('templates.evidenceLocker.photosPermission','Photos permission required.')); return; }
               const res = await P.launchImageLibraryAsync({ allowsMultipleSelection: true, mediaTypes: P.MediaTypeOptions.Images, selectionLimit: 10, quality: 0.9 });
               if (res.canceled) return;
               const assets: any[] = (res.assets||[]);
@@ -320,7 +321,7 @@ export default function EvidenceLocker() {
               setNotes([{ id: String(Date.now()), text: defaultText, date: new Date().toISOString(), tags: tag? [tag]: [], files }, ...notes]);
               setText(''); setTag('');
             } catch {
-              Alert.alert('Attach unavailable', 'Image picker not available in this build.');
+              Alert.alert(t('common.attachUnavailableTitle','Attach unavailable'), t('templates.evidenceLocker.imagePickerUnavailable','Image picker not available in this build.'));
             }
           }}
           style={styles.secondary}
@@ -328,7 +329,7 @@ export default function EvidenceLocker() {
           <Text style={styles.buttonText}>{t("templates.evidenceLocker.addFile", "Add File")}</Text>
         </A11yPressable>
         <A11yPressable
-          accessibilityLabel="Add note"
+          accessibilityLabel={t('templates.evidenceLocker.addNote','Add Note')}
           onPress={() => {
             if (!text.trim()) return;
             setNotes([{ id: String(Date.now()), text: text.trim(), date: new Date().toISOString(), tags: tag? [tag]: [] }, ...notes]);
@@ -340,7 +341,7 @@ export default function EvidenceLocker() {
         </A11yPressable>
         {user && (
           <A11yPressable
-            accessibilityLabel="Save to Cloud"
+            accessibilityLabel={t('templates.evidenceLocker.saveCloud','Save to Cloud')}
             onPress={async () => {
               const snapshot = notes[0];
               try {
@@ -366,10 +367,10 @@ export default function EvidenceLocker() {
                   }
                 }
                 await addEvidenceNote({ text: current.text, tags: current.tags, files: uploaded });
-                Alert.alert('Saved', 'Note saved to your cloud locker.');
+                Alert.alert(t('common.saved','Saved'), t('templates.evidenceLocker.noteSaved','Note saved to your cloud locker.'));
               } catch {
                 if (snapshot) await enqueueFailed({ text: snapshot.text, tags: snapshot.tags, files: snapshot.files });
-                Alert.alert('Save failed', 'Queued to upload later.');
+                Alert.alert(t('common.saveFailed','Save failed'), t('templates.evidenceLocker.queuedUpload','Queued to upload later.'));
               } finally {
                 setImmUploading(false); setImmPct(0); setImmLabel("");
               }
@@ -378,7 +379,7 @@ export default function EvidenceLocker() {
           >
             <Text style={styles.buttonText}>{t("common.save", "Save")}</Text>
           </A11yPressable>
-        )}\n        {immUploading && (<><Text style={{ color: palette.text, marginTop: 6 }}>{immLabel || "Uploading"} {immPct}%</Text><ProgressBar value={immPct} /></>)}
+  )}\n        {immUploading && (<><Text style={{ color: palette.text, marginTop: 6 }}>{immLabel ? t('common.uploadingItem','Uploading {{name}}',{ name: immLabel }) : t('common.uploading','Uploading')} {immPct}%</Text><ProgressBar value={immPct} /></>)}
         {user && (
           <A11yPressable
             accessibilityLabel="Save all to Cloud"
@@ -418,9 +419,9 @@ export default function EvidenceLocker() {
                     await enqueueFailed({ text: n.text, tags: n.tags, files: n.files });
                   }
                 }
-                Alert.alert('Saved', 'Finished saving notes (failures queued).');
+                Alert.alert(t('common.saved','Saved'), t('templates.evidenceLocker.saveAllDone','Finished saving notes (failures queued).'));
               } catch {
-                Alert.alert('Save failed', 'Could not save some items.');
+                Alert.alert(t('common.saveFailed','Save failed'), t('templates.evidenceLocker.saveSomeFailed','Could not save some items.'));
               } finally { setImmUploading(false); setImmPct(0); setImmLabel(''); }
             }}
             style={styles.secondary}
@@ -429,10 +430,7 @@ export default function EvidenceLocker() {
           </A11yPressable>
         )}
         {processing && (
-          <View style={{ marginTop: 8 }}>
-            <Text style={{ color: palette.text, marginBottom: 4 }}>Processing queue: {progressPct}%</Text>
-            <ProgressBar value={progressPct} />
-          </View>
+          <UploadProgress type='queue' pct={progressPct} />
         )}
         {user && (
           <A11yPressable
@@ -447,8 +445,8 @@ export default function EvidenceLocker() {
           <A11yPressable
             accessibilityLabel="Load Cloud"
             onPress={async () => {
-              try { const { items, cursor } = await listEvidencePage(10, null); setCloudItems(items); setCloudCursor(cursor); Alert.alert('Cloud', `${items.length} items loaded.`); }
-              catch { Alert.alert('Load failed', 'Unable to load cloud items'); }
+              try { const { items, cursor } = await listEvidencePage(10, null); setCloudItems(items); setCloudCursor(cursor); Alert.alert(t('common.cloud','Cloud'), t('templates.evidenceLocker.loadedCount','{{count}} items loaded.',{ count: items.length })); }
+              catch { Alert.alert(t('templates.evidenceLocker.loadCloudFailed','Load failed'), t('templates.evidenceLocker.loadCloudFailedBody','Unable to load cloud items')); }
             }}
             style={styles.secondary}
           >
@@ -460,7 +458,7 @@ export default function EvidenceLocker() {
             accessibilityLabel="Load more Cloud"
             onPress={async () => {
               try { const { items, cursor } = await listEvidencePage(10, cloudCursor); setCloudItems(prev => prev.concat(items)); setCloudCursor(cursor); }
-              catch { Alert.alert('Load failed', 'Unable to load more'); }
+              catch { Alert.alert(t('templates.evidenceLocker.loadMoreFailed','Load failed'), t('templates.evidenceLocker.loadMoreFailedBody','Unable to load more')); }
             }}
             style={styles.secondary}
           >
@@ -476,9 +474,9 @@ export default function EvidenceLocker() {
               const FS = await import('expo-file-system');
               const path = FS.cacheDirectory + `evidence_${Date.now()}.csv`;
               await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 });
-              try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) { await Sharing.shareAsync(path); } else { Alert.alert('Saved','CSV saved to cache.'); } }
-              catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
-            } catch { Alert.alert('Export failed','Could not create CSV.'); }
+              try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) { await Sharing.shareAsync(path); } else { Alert.alert(t('common.saved','Saved'),t('templates.evidenceLocker.csvSavedCache','CSV saved to cache.')); } }
+              catch { Alert.alert(t('common.saved','Saved'),t('templates.evidenceLocker.csvSavedCacheNoShare','CSV saved to cache (sharing unavailable).')); }
+            } catch { Alert.alert(t('templates.evidenceLocker.exportFailedTitle','Export failed'),t('templates.evidenceLocker.exportFailedBodyCsv','Could not create CSV.')); }
           }}
           style={styles.secondary}
         >
@@ -489,15 +487,8 @@ export default function EvidenceLocker() {
       <A11yPressable onPress={() => (require('expo-router').router.push('/(tabs)/resources/evidence-queue'))} style={[styles.button, { marginTop: 8 }]}>
         <Text style={styles.buttonText}>{t("common.openQueue", "Open Upload Queue")}</Text>
       </A11yPressable>
-      {(immUploading || processing) && (
-        <View style={{ marginTop: 6 }}>
-          <Text style={{ color: palette.text }}>
-            {processing ? `Processing queue: ${progressPct}%` : immLabel ? `Uploading ${immLabel}: ${immPct}%` : `Uploading: ${immPct}%`}
-          </Text>
-          <View style={{ marginTop: 6 }}>
-            <ProgressBar value={processing ? progressPct : immPct} />
-          </View>
-        </View>
+      {(immUploading && !processing) && (
+        <UploadProgress type='upload' pct={immPct} itemName={immLabel || undefined} />
       )}
       <FlatList
         data={notes.filter(n => (!filter || n.tags?.includes(filter)) && (!query || n.text.toLowerCase().includes(query.toLowerCase())))}
@@ -524,14 +515,14 @@ export default function EvidenceLocker() {
           <A11yPressable
             onPress={async () => {
               try {
-                Alert.alert('Delete all?', 'This will delete all cloud items in your Evidence Locker.', [
-                  { text: 'Cancel', style: 'cancel' },
-                  { text: 'Delete', style: 'destructive', onPress: async () => {
+                Alert.alert(t('templates.evidenceLocker.deleteAllConfirmTitle','Delete all?'), t('templates.evidenceLocker.deleteAllConfirmBody','This will delete all cloud items in your Evidence Locker.'), [
+                  { text: t('common.cancel','Cancel'), style: 'cancel' },
+                  { text: t('common.delete','Delete'), style: 'destructive', onPress: async () => {
                     try {
                       for (const c of cloudItems) { await deleteEvidenceDoc(c.id); }
                       setCloudItems([]);
-                      Alert.alert('Deleted', 'All cloud items deleted.');
-                    } catch { Alert.alert('Delete failed','Unable to delete all items.'); }
+                      Alert.alert(t('common.deleted','Deleted'), t('templates.evidenceLocker.deletedAll','All cloud items deleted.'));
+                    } catch { Alert.alert(t('templates.evidenceLocker.deleteAllFailed','Delete failed'),t('templates.evidenceLocker.deleteAllFailedBody','Unable to delete all items.')); }
                   }}
                 ]);
               } catch {}
@@ -548,8 +539,8 @@ export default function EvidenceLocker() {
                   for (const id of ids) { await deleteEvidenceDoc(id); }
                   setCloudItems((prev) => prev.filter((x) => !selectedCloud[x.id]));
                   setSelectedCloud({});
-                  Alert.alert('Deleted', 'Selected items deleted.');
-                } catch { Alert.alert('Delete failed','Unable to delete selected items.'); }
+                  Alert.alert(t('common.deleted','Deleted'), t('templates.evidenceLocker.deletedSelected','Selected items deleted.'));
+                } catch { Alert.alert(t('templates.evidenceLocker.deleteSelectedFailed','Delete failed'),t('templates.evidenceLocker.deleteSelectedFailedBody','Unable to delete selected items.')); }
               }}
               style={[styles.secondary, { marginTop: 6, alignSelf: 'flex-start', paddingHorizontal: 10 }]}
             >
@@ -601,11 +592,11 @@ export default function EvidenceLocker() {
             <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '90%', maxHeight: '90%' }}>
               {(() => { try { const { Image } = require('expo-image'); return (
                 <Image source={{ uri: preview.url }} style={{ width: 320, height: 200, borderRadius: 6 }} contentFit="contain" />
-              ); } catch { return (<Text style={{ color: palette.text }}>Preview unavailable</Text>); } })()}
+              ); } catch { return (<Text style={{ color: palette.text }}>{t('templates.evidenceLocker.previewUnavailable','Preview unavailable')}</Text>); } })()}
               <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
-                <A11yPressable onPress={async()=>{ try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(preview.url); } catch {} }} style={styles.secondary}><Text style={styles.buttonText}>Share</Text></A11yPressable>
-                <A11yPressable onPress={async()=>{ try { const Web = await import('expo-web-browser'); await Web.openBrowserAsync(preview.url); } catch {} }} style={styles.secondary}><Text style={styles.buttonText}>Open</Text></A11yPressable>
-                <A11yPressable onPress={()=> setPreview(null)} style={styles.secondary}><Text style={styles.buttonText}>Close</Text></A11yPressable>
+                <A11yPressable onPress={async()=>{ try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(preview.url); } catch {} }} style={styles.secondary}><Text style={styles.buttonText}>{t('common.share','Share')}</Text></A11yPressable>
+                <A11yPressable onPress={async()=>{ try { const Web = await import('expo-web-browser'); await Web.openBrowserAsync(preview.url); } catch {} }} style={styles.secondary}><Text style={styles.buttonText}>{t('common.open','Open')}</Text></A11yPressable>
+                <A11yPressable onPress={()=> setPreview(null)} style={styles.secondary}><Text style={styles.buttonText}>{t('common.close','Close')}</Text></A11yPressable>
               </View>
             </View>
           </A11yPressable>

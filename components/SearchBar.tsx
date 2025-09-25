@@ -1,28 +1,35 @@
-import React from "react";
-import { View, TextInput, StyleSheet, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import { Pressable, StyleSheet, TextInput, View } from "react-native";
 
+import { useTranslation } from "../i18n";
 import { type Palette } from "../theme/colors";
-import { useAppPalette } from "../theme/usePalette";
 import { useTextScale } from "../theme/typography";
+import { useAppPalette } from "../theme/usePalette";
 
 type Props = {
   value: string;
   onChangeText: (text: string) => void;
-  placeholder?: string;
-  accessibilityLabel?: string;
+  placeholder?: string; // custom placeholder (already localized upstream if provided)
+  accessibilityLabel?: string; // custom accessibility label
+  clearLabel?: string; // optional custom clear label
   testID?: string;
 };
 
 export default function SearchBar({
   value,
   onChangeText,
-  placeholder = "Search",
-  accessibilityLabel = "Search",
+  placeholder,
+  accessibilityLabel,
+  clearLabel,
   testID,
 }: Props) {
   const palette = useAppPalette();
   const { factor } = useTextScale();
+  const { t } = useTranslation();
+  const finalPlaceholder = placeholder ?? t("common.search", "Search");
+  const finalA11yLabel = accessibilityLabel ?? finalPlaceholder;
+  const finalClearLabel = clearLabel ?? t("common.clearSearch", "Clear search");
   const styles = React.useMemo(
     () => createStyles(palette, factor),
     [palette, factor],
@@ -40,16 +47,16 @@ export default function SearchBar({
         style={styles.input}
         value={value}
         onChangeText={onChangeText}
-        placeholder={placeholder}
+        placeholder={finalPlaceholder}
         placeholderTextColor={palette.text}
-        accessibilityLabel={accessibilityLabel}
+        accessibilityLabel={finalA11yLabel}
         returnKeyType="search"
       />
       {!!value && (
         <Pressable
           onPress={() => onChangeText("")}
           accessibilityRole="button"
-          accessibilityLabel="Clear search"
+          accessibilityLabel={finalClearLabel}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           focusable
           style={({ pressed }) => [{ padding: 6 }, pressed && { opacity: 0.7 }]}

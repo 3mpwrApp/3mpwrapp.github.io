@@ -1,22 +1,23 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  Pressable,
-  Linking,
-  TextInput,
+    FlatList,
+    Linking,
+    Pressable,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
-import { useAppPalette } from "../../../theme/usePalette";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-} from "../../../hooks/useA11y";
 import { supportOrgs } from "../../../data/support";
+import {
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
 import { useSettings } from "../../../store/settings";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export const options = { href: null };
 
@@ -24,7 +25,8 @@ export default function SupportDirectory() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Support Directory");
+  const { t } = useTranslation();
+  useAnnounceOnMount(t('advocacy.support.title','Support Directory'));
   useFocusOnRefOnMount(titleRef);
   const { province } = useSettings();
   const filtered = React.useMemo(
@@ -47,7 +49,7 @@ export default function SupportDirectory() {
   return (
     <View
       style={styles.container}
-      accessibilityLabel="Support directory screen"
+  accessibilityLabel={t('advocacy.support.screenLabel','Support directory screen')}
       accessible
     >
       <Text
@@ -56,10 +58,10 @@ export default function SupportDirectory() {
         accessibilityRole="header"
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Support Directory
+        {t('advocacy.support.title','Support Directory')}
       </Text>
       <Text style={styles.subtitle}>
-        Organizations that may help with claims, accommodations, and advocacy.
+        {t('advocacy.support.subtitle','Organizations that may help with claims, accommodations, and advocacy.')}
       </Text>
       <FlatList
         data={filtered}
@@ -69,21 +71,21 @@ export default function SupportDirectory() {
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.meta}>
               {item.province}
-              {item.accessible ? " Ã¢â‚¬Â¢ Accessible" : ""}
+              {item.accessible ? ` • ${t('advocacy.support.accessible','Accessible')}` : ''}
             </Text>
             {!!item.phone && (
-              <Text style={styles.meta}>Ã¢ËœÅ½ {item.phone}</Text>
+              <Text style={styles.meta}>{t('advocacy.support.phoneIcon','☎')} {item.phone}</Text>
             )}
             {!!item.url && (
               <Pressable
                 accessibilityRole="link"
-                accessibilityLabel={`Open ${item.name} website`}
+                accessibilityLabel={t('advocacy.support.openWebsiteLabel','Open {{name}} website',{ name: item.name })}
                 onPress={() => Linking.openURL(item.url!)}
               >
                 <Text
                   style={[styles.meta, { textDecorationLine: "underline" }]}
                 >
-                  Website
+                  {t('advocacy.support.website','Website')}
                 </Text>
               </Pressable>
             )}
@@ -92,17 +94,17 @@ export default function SupportDirectory() {
         contentContainerStyle={{ paddingTop: 8 }}
       />
       <View style={{ marginTop: 12 }}>
-        <Text style={styles.subtitle}>Suggest a correction</Text>
+        <Text style={styles.subtitle}>{t('advocacy.support.suggestHeader','Suggest a correction')}</Text>
         <TextInput
           value={suggestion}
           onChangeText={setSuggestion}
-          placeholder="Org ID and your suggestion"
+          placeholder={t('advocacy.support.suggestPlaceholder','Org ID and your suggestion')}
           placeholderTextColor={palette.text + "77"}
           style={styles.input}
         />
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel="Submit suggestion"
+          accessibilityLabel={t('advocacy.support.submitSuggestion','Submit suggestion')}
           onPress={async () => {
             const AsyncStorage = AsyncStorageRef.current;
             if (!suggestion.trim() || !AsyncStorage) return;
@@ -130,7 +132,7 @@ export default function SupportDirectory() {
           ]}
         >
           <Text style={{ color: palette.onPrimary, fontWeight: "700" }}>
-            Submit
+            {t('common.submit','Submit')}
           </Text>
         </Pressable>
       </View>

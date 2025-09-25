@@ -31,20 +31,12 @@
       "subtitle": "Earn badges as you build healthy routines.",
       "title": "Achievements"
     },
-    "intro": "[T] wellness.intro",
     "hub": {
       "title": "Wellness & Recovery",
       "subtitle": "Evidence-based tools for mood, pain, resilience, and recovery."
     },
-    "resilience": {
-      "title": "Resilience Points",
-      "desc": "Gamified micro-wins for therapy and life steps.",
-      "points": "Points: {{points}}",
-      "faceFear": "Face a fear",
-      "therapy": "Attend therapy",
-      "intro": "Build supportive routines and track your wellbeing.",
-      "breathing": "Breathing"
-    },
+    "intro": "Build supportive routines and track your wellbeing.",
+    "breathing": "Breathing",
     "dbt": {
       "title": "DBT Skill Matcher",
       "desc": "Instant skill suggestions for current emotion.",
@@ -230,7 +222,18 @@
       "summary": "Summary",
       "keyPoints": "Key Points",
       "obligations": "Obligations",
-      "suggestedActions": "Suggested Actions"
+      "suggestedActions": "Suggested Actions",
+      "sectionRights": "Human Rights & Duty to Accommodate",
+      "linkDuty": "What is the duty to accommodate?",
+      "linkOHRC": "Ontario Human Rights Commission",
+      "sectionAccessibility": "Accessibility Laws",
+      "linkAccessibleCanada": "Accessibility (Canada)",
+      "linkAoda": "AODA (Ontario)",
+      "sectionBenefits": "Disability Benefits",
+      "linkCppd": "CPP-D",
+      "linkEmploymentStandards": "Employment Standards (ON)",
+      "placeholder": "Paste or type a policy / decision excerpt here to simplify.",
+      "subtitle": "Easy-read guides to accessibility, human rights, and benefits."
     },
     "coach": {
       "complete": "complete",
@@ -252,6 +255,79 @@
         "assert-1": { "title": "Health/work assertiveness", "b1": "Name the need: 'I need…'", "b2": "Briefly explain impact", "b3": "Offer options; invite collaboration" },
         "docs-1": { "title": "Documentation", "b1": "Summarize call/meeting by email", "b2": "Attach only key evidence", "b3": "Track dates and deadlines" }
       }
+    },
+    "collective": {
+      "title": "Collective Legal Action Hub",
+      "subtitle": "If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
+      "typeLabel": "Violation type",
+      "type": {
+        "deniedModified": "denied modified duties",
+        "refusedAccommodation": "refused accommodation",
+        "retaliation": "retaliation",
+        "benefitDenial": "benefit denial"
+      },
+      "provinceLabel": "Province (optional)",
+      "provincePlaceholder": "ON, BC, ...",
+      "detailsLabel": "Details (optional)",
+      "detailsPlaceholder": "Short summary; do not include identifiers.",
+      "submit": "Submit report",
+      "aggregatedHeader": "Aggregated reports",
+      "none": "No reports yet.",
+      "note": "Note: Submissions are anonymous; contact details are not collected.",
+      "submittedTitle": "Submitted",
+      "submittedBody": "Report added anonymously. Aggregated counts help build leverage."
+    },
+    "finder": {
+      "title": "Lawyer & Advocate Finder",
+      "modeList": "List",
+      "modeMap": "Map",
+      "searchPlaceholder": "Search by name, city, org",
+      "issuePlaceholder": "Issue (e.g., WSIB)",
+      "provincePlaceholder": "Province (e.g., ON)",
+      "proBonoOnly": "Pro bono only",
+      "includePaid": "Include paid",
+      "locationUnknown": "—",
+      "issuesLabel": "Issues",
+      "openWebsite": "Open website",
+      "email": "Email",
+      "openOnMap": "Open on Map",
+      "saved": "★ Saved",
+      "save": "☆ Save",
+      "mapHint": "Tap a listing in List mode to open maps."
+    },
+    "support": {
+      "title": "Support Directory",
+      "screenLabel": "Support directory screen",
+      "subtitle": "Organizations that may help with claims, accommodations, and advocacy.",
+      "accessible": "Accessible",
+      "phoneIcon": "☎",
+      "openWebsiteLabel": "Open {{name}} website",
+      "website": "Website",
+      "suggestHeader": "Suggest a correction",
+      "suggestPlaceholder": "Org ID and your suggestion",
+      "submitSuggestion": "Submit suggestion"
+    },
+    "ask": {
+      "title": "Ask an Advocate",
+      "formLabel": "Ask an Advocate form",
+      "subtitle": "Briefly describe your issue. Do not include personal identifiers.",
+      "category": "Category",
+      "titleLabel": "Title",
+      "titlePlaceholder": "Short title",
+      "detailsLabel": "Details",
+      "detailsPlaceholder": "What happened? What help do you need?",
+      "submit": "Submit",
+      "submittedTitle": "Submitted",
+      "submittedBody": "Your request has been posted. Community advocates may respond.",
+      "rateTitle": "Slow down",
+      "rateBody": "Please wait a few seconds before posting again.",
+      "missingTitleTitle": "Title required",
+      "missingTitleBody": "Please enter a short title."
+    },
+    "world": {
+      "title": "World Disability Map",
+      "filter": { "all": "All", "law": "Law", "protest": "Protest", "update": "Update" },
+      "hint": "Tap a card to open Google Maps"
     }
   },
   "accountability": {
@@ -524,6 +600,17 @@
     "off": "Off",
     "copy": "Copy",
     "share": "Share",
+    "all": "All",
+    "attachUnavailableTitle": "Attach unavailable",
+    "attachUnavailableBody": "Document picker not available in this build.",
+    "attachMultiUnavailable": "Multi-file picker not available in this build.",
+    "permissionDenied": "Permission denied",
+    "saved": "Saved",
+    "saveFailed": "Save failed",
+    "uploading": "Uploading",
+    "uploadingItem": "Uploading {{name}}",
+    "search": "Search",
+    "clearSearch": "Clear search",
     "hide": "Hide",
     "show": "Show",
     "save": "Save",
@@ -532,6 +619,7 @@
     "load": "Load",
     "loadMore": "Load More",
     "openQueue": "Open Upload Queue",
+    "cloud": "Cloud",
     "cloudItems": "Cloud items",
     "deleteAll": "Delete All",
     "deleteSelected": "Delete Selected",
@@ -549,6 +637,8 @@
   "edit": "Edit",
   "previewImage": "Preview image",
   "closePreview": "Close preview",
+  "open": "Open",
+  "close": "Close",
   "preview": "Preview",
   "copied": "Copied",
   "pdf": "PDF",
@@ -618,6 +708,57 @@
         "title": "Continue your coaching journey",
         "body": "You’ve been away for a while ({{idleHours}}h). Pick up a lesson to keep momentum."
       }
+    },
+    "collective": {
+      "title": "Collective Legal Action Hub",
+      "subtitle": "If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
+      "typeLabel": "Violation type",
+      "type": {
+        "deniedModified": "denied modified duties",
+        "refusedAccommodation": "refused accommodation",
+        "retaliation": "retaliation",
+        "benefitDenial": "benefit denial"
+      },
+      "provinceLabel": "Province (optional)",
+      "provincePlaceholder": "ON, BC, ...",
+      "detailsLabel": "Details (optional)",
+      "detailsPlaceholder": "Short summary; do not include identifiers.",
+      "submit": "Submit report",
+      "aggregatedHeader": "Aggregated reports",
+      "none": "No reports yet.",
+      "note": "Note: Submissions are anonymous; contact details are not collected.",
+      "submittedTitle": "Submitted",
+      "submittedBody": "Report added anonymously. Aggregated counts help build leverage."
+    },
+    "finder": {
+      "title": "Lawyer & Advocate Finder",
+      "modeList": "List",
+      "modeMap": "Map",
+      "searchPlaceholder": "Search by name, city, org",
+      "issuePlaceholder": "Issue (e.g., WSIB)",
+      "provincePlaceholder": "Province (e.g., ON)",
+      "proBonoOnly": "Pro bono only",
+      "includePaid": "Include paid",
+      "locationUnknown": "—",
+      "issuesLabel": "Issues",
+      "openWebsite": "Open website",
+      "email": "Email",
+      "openOnMap": "Open on Map",
+      "saved": "★ Saved",
+      "save": "☆ Save",
+      "mapHint": "Tap a listing in List mode to open maps."
+    },
+    "support": {
+      "title": "Support Directory",
+      "screenLabel": "Support directory screen",
+      "subtitle": "Organizations that may help with claims, accommodations, and advocacy.",
+      "accessible": "Accessible",
+      "phoneIcon": "☎",
+      "openWebsiteLabel": "Open {{name}} website",
+      "website": "Website",
+      "suggestHeader": "Suggest a correction",
+      "suggestPlaceholder": "Org ID and your suggestion",
+      "submitSuggestion": "Submit suggestion"
     },
     "evidence": {
       "reminder": {
@@ -956,7 +1097,95 @@
   "queueScreenLabel": "Evidence Locker Upload Queue screen",
   "processing": "Processing uploads...",
   "queueSubtitle": "Review pending uploads, retry failures, or clear processed items.",
-  "emptyQueue": "No items in the upload queue."
+      "emptyQueue": "No items in the upload queue.",
+      "queueNoPending": "No pending items.",
+      "queueProcessed": "Processed all queued items.",
+      "queueProcessedSome": "Some items could not be processed.",
+      "showTrash": "Show Trash",
+      "showingTrash": "Showing Trash",
+      "tag": {
+        "call": "call",
+        "letter": "letter",
+        "medical": "medical",
+        "decision": "decision",
+        "payment": "payment",
+      "mood": {
+        "nudge": {
+          "evening": {
+            "title": "Log mood?",
+            "body": "Quick 5‑second check‑in helps spot trends. {{streak}} day streak?"
+          }
+        },
+        "streak": {
+          "milestone": {
+            "title": "Mood streak milestone!",
+            "body": "You've logged {{streak}} days in a row. Small steps add up."
+          }
+        }
+      },
+      "evidence": {
+        "reminder": {
+          "daily": {
+            "title": "Add today's evidence?",
+            "body": "You have {{count}} new notes/files to capture before the day ends."
+          }
+        },
+        "upload": {
+          "failed": {
+            "title": "Uploads queued",
+            "body": "{{queued}} item(s) waiting for connection. We'll retry soon."
+          }
+        }
+      },
+      "accountability": {
+        "case": {
+          "created": {
+            "title": "Case created",
+            "body": "New case: {{case}}"
+          },
+          "updated": {
+            "title": "Case updated",
+            "body": "Recent activity on: {{case}}"
+          }
+        },
+        "deadline": {
+          "upcoming": {
+            "title": "Deadline approaching",
+            "body": "{{case}} due in {{days}} day(s). Review and act."
+          }
+        }
+      },
+        "email": "email"
+      },
+      "attachFile": "Attach file",
+      "attachFiles": "Attach files",
+      "attachPhotos": "Attach photos",
+      "photosPermission": "Photos permission required.",
+      "imagePickerUnavailable": "Image picker not available in this build.",
+      "saveCloud": "Save to Cloud",
+      "noteSaved": "Note saved to your cloud locker.",
+      "queuedUpload": "Queued to upload later.",
+      "saveAllDone": "Finished saving notes (failures queued).",
+      "saveSomeFailed": "Could not save some items.",
+      "processingPct": "Processing queue:",
+      "loadedCount": "{{count}} items loaded.",
+      "loadCloudFailed": "Load failed",
+      "loadCloudFailedBody": "Unable to load cloud items",
+      "loadMoreFailed": "Load failed",
+      "loadMoreFailedBody": "Unable to load more",
+      "csvSavedCache": "CSV saved to cache.",
+      "csvSavedCacheNoShare": "CSV saved to cache (sharing unavailable).",
+      "exportFailedTitle": "Export failed",
+      "exportFailedBodyCsv": "Could not create CSV.",
+      "deleteAllConfirmTitle": "Delete all?",
+      "deleteAllConfirmBody": "This will delete all cloud items in your Evidence Locker.",
+      "deletedAll": "All cloud items deleted.",
+      "deleteAllFailed": "Delete failed",
+      "deleteAllFailedBody": "Unable to delete all items.",
+      "deletedSelected": "Selected items deleted.",
+      "deleteSelectedFailed": "Delete failed",
+      "deleteSelectedFailedBody": "Unable to delete selected items.",
+      "previewUnavailable": "Preview unavailable"
     },
     "gallery": {
       "title": "Template Gallery",
@@ -1223,7 +1452,14 @@
       "prevMonth": "Previous",
       "nextMonth": "Next",
       "dayCell": "Day",
-      "emptyDay": "No events"
+      "emptyDay": "No events",
+      "csvHeaderDate": "date",
+      "csvHeaderTitle": "title",
+      "csvHeaderNotes": "notes",
+      "csvHeaderDone": "done",
+      "csvSaved": "Saved",
+      "csvSavedBody": "CSV saved to cache.",
+      "csvSavedShareNA": "CSV saved to cache (sharing unavailable)."
     },
     "timeline": {
       "title": "Case Timeline",
@@ -1470,6 +1706,18 @@
     "emailNotConfiguredTitle": "Email not configured",
     "emailNotConfiguredBody": "Please email {{email}}",
     "validationMissing": "Subject and message required"
+  },
+  "auth": {
+    "registerTitle": "Register",
+    "registerScreen": "Register screen",
+    "displayName": "Display Name",
+    "email": "Email",
+    "password": "Password",
+    "createAccount": "Create Account",
+    "missingFields": "All fields required",
+    "loginTitle": "Login",
+    "loginScreen": "Login screen",
+    "login": "Login"
   },
   "faqs": {
     "title": "FAQs",

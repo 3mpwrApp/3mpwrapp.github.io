@@ -432,8 +432,22 @@
   "queueTitle": "Cola de cargas",
   "queueScreenLabel": "Pantalla cola de cargas del Casillero",
   "processing": "Procesando cargas...",
+  "processingPct": "Procesando cola:",
   "queueSubtitle": "Revise cargas pendientes, reintente fallos o limpie elementos procesados.",
-  "emptyQueue": "No hay elementos en la cola de cargas."
+  "emptyQueue": "No hay elementos en la cola de cargas.",
+  "queueNoPending": "No hay pendientes.",
+  "queueProcessed": "Todos los elementos procesados.",
+  "queueProcessedSome": "Algunos elementos no se pudieron procesar.",
+  "showTrash": "Mostrar papelera",
+  "showingTrash": "Mostrando papelera",
+  "tag": {
+        "call": "llamada",
+        "letter": "carta",
+        "medical": "médico",
+        "decision": "decisión",
+        "payment": "pago",
+        "email": "correo"
+      }
     },
     "gallery": {
       "title": "Galería de plantillas",
@@ -701,6 +715,14 @@
       "nextMonth": "Siguiente",
       "dayCell": "Día",
       "emptyDay": "Sin eventos"
+    ,
+      "csvHeaderDate": "fecha",
+      "csvHeaderTitle": "título",
+      "csvHeaderNotes": "notas",
+      "csvHeaderDone": "hecho",
+      "csvSaved": "Guardado",
+      "csvSavedBody": "CSV guardado en caché.",
+      "csvSavedShareNA": "CSV en caché (compartir no disponible)."
     }
   },
   "test": {
@@ -740,7 +762,91 @@
       "simplify": "Simplificar",
       "simplifying": "Simplificando...",
       "summary": "Resumen",
-      "keyPoints": "Puntos clave"
+      "keyPoints": "Puntos clave",
+      "sectionRights": "Derechos Humanos y Deber de Adaptación",
+      "linkDuty": "¿Qué es el deber de acomodar?",
+      "linkOHRC": "Comisión de Derechos Humanos de Ontario",
+      "sectionAccessibility": "Leyes de Accesibilidad",
+      "linkAccessibleCanada": "Ley de Accesibilidad (Canadá)",
+      "linkAoda": "AODA (Ontario)",
+      "sectionBenefits": "Prestaciones por Discapacidad",
+      "linkCppd": "Pensión CPP-D",
+      "linkEmploymentStandards": "Normas Laborales (ON)",
+      "placeholder": "Pegue o escriba un extracto de política / decisión para simplificar.",
+      "subtitle": "Guías de fácil lectura sobre accesibilidad, derechos y prestaciones."
+    },
+    "collective": {
+      "title": "[T] Collective Legal Action Hub",
+      "subtitle": "[T] If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
+      "typeLabel": "[T] Violation type",
+      "type": {
+        "deniedModified": "[T] denied modified duties",
+        "refusedAccommodation": "[T] refused accommodation",
+        "retaliation": "[T] retaliation",
+        "benefitDenial": "[T] benefit denial"
+      },
+      "provinceLabel": "[T] Province (optional)",
+      "provincePlaceholder": "[T] ON, BC, ...",
+      "detailsLabel": "[T] Details (optional)",
+      "detailsPlaceholder": "[T] Short summary; do not include identifiers.",
+      "submit": "[T] Submit report",
+      "aggregatedHeader": "[T] Aggregated reports",
+      "none": "[T] No reports yet.",
+      "note": "[T] Note: Submissions are anonymous; contact details are not collected.",
+      "submittedTitle": "[T] Submitted",
+      "submittedBody": "[T] Report added anonymously. Aggregated counts help build leverage."
+    },
+    "finder": {
+      "title": "[T] Lawyer & Advocate Finder",
+      "modeList": "[T] List",
+      "modeMap": "[T] Map",
+      "searchPlaceholder": "[T] Search by name, city, org",
+      "issuePlaceholder": "[T] Issue (e.g., WSIB)",
+      "provincePlaceholder": "[T] Province (e.g., ON)",
+      "proBonoOnly": "[T] Pro bono only",
+      "includePaid": "[T] Include paid",
+      "locationUnknown": "[T] —",
+      "issuesLabel": "[T] Issues",
+      "openWebsite": "[T] Open website",
+      "email": "[T] Email",
+      "openOnMap": "[T] Open on Map",
+      "saved": "[T] ★ Saved",
+      "save": "[T] ☆ Save",
+      "mapHint": "[T] Tap a listing in List mode to open maps."
+    },
+    "support": {
+      "title": "[T] Support Directory",
+      "screenLabel": "[T] Support directory screen",
+      "subtitle": "[T] Organizations that may help with claims, accommodations, and advocacy.",
+      "accessible": "[T] Accessible",
+      "phoneIcon": "☎",
+      "openWebsiteLabel": "[T] Open {{name}} website",
+      "website": "[T] Website",
+      "suggestHeader": "[T] Suggest a correction",
+      "suggestPlaceholder": "[T] Org ID and your suggestion",
+      "submitSuggestion": "[T] Submit suggestion"
+    },
+    "ask": {
+      "title": "[T] Ask an Advocate",
+      "formLabel": "[T] Ask an Advocate form",
+      "subtitle": "[T] Briefly describe your issue. Do not include personal identifiers.",
+      "category": "[T] Category",
+      "titleLabel": "[T] Title",
+      "titlePlaceholder": "[T] Short title",
+      "detailsLabel": "[T] Details",
+      "detailsPlaceholder": "[T] What happened? What help do you need?",
+      "submit": "[T] Submit",
+      "submittedTitle": "[T] Submitted",
+      "submittedBody": "[T] Your request has been posted. Community advocates may respond.",
+      "rateTitle": "[T] Slow down",
+      "rateBody": "[T] Please wait a few seconds before posting again.",
+      "missingTitleTitle": "[T] Title required",
+      "missingTitleBody": "[T] Please enter a short title."
+    },
+    "world": {
+      "title": "[T] World Disability Map",
+      "filter": { "all": "[T] All", "law": "[T] Law", "protest": "[T] Protest", "update": "[T] Update" },
+      "hint": "[T] Tap a card to open Google Maps"
     },
     "coach": {
       "practiceHeader": "Indicador de práctica",
@@ -945,6 +1051,10 @@
     "show": "Mostrar"
   },
   "common": {
+    "on": "Activado",
+    "off": "Desactivado",
+    "uploading": "Cargando",
+    "uploadingItem": "Cargando {{name}}",
     "hide": "Ocultar",
     "show": "Mostrar",
     "save": "Guardar",

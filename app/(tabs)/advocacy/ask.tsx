@@ -1,28 +1,31 @@
+import { router } from "expo-router";
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  Alert,
+    Alert,
+    Pressable,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
-import { router } from "expo-router";
 
-import { useAppPalette } from "../../../theme/usePalette";
+import { useTranslation } from "../../../i18n";
+import { logEvent } from "../../../services/analytics";
+import { channels as seedChannels } from "../../../data/community";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { CommunityProvider, useCommunity } from "../../../store/community";
-import { channels as seedChannels } from "../../../data/community";
+import { useAppPalette } from "../../../theme/usePalette";
 
 function Inner() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Ask an Advocate");
+  const { t } = useTranslation();
+  useAnnounceOnMount(t('advocacy.ask.title','Ask an Advocate'));
   useFocusOnRefOnMount(titleRef);
   const { createThread } = useCommunity();
 
@@ -32,29 +35,21 @@ function Inner() {
   const [channelId, setChannelId] = React.useState<string>("ch_topic_ask");
 
   const submit = () => {
-    const ok = createThread(
-      channelId,
-      `${title} Ã¢â‚¬â€ ${details.slice(0, 120)}`,
-      null,
-    );
+    if(!title.trim()) { Alert.alert(t('advocacy.ask.missingTitleTitle','Title required'), t('advocacy.ask.missingTitleBody','Please enter a short title.')); return; }
+    const ok = createThread(channelId, `${title} — ${details.slice(0, 120)}`, null);
     if (ok) {
-      Alert.alert(
-        "Submitted",
-        "Your request has been posted. Community advocates may respond.",
-      );
+      logEvent?.('advocacy.ask.submitted',{ channelId });
+      Alert.alert(t('advocacy.ask.submittedTitle','Submitted'), t('advocacy.ask.submittedBody','Your request has been posted. Community advocates may respond.'));
       router.push("/(tabs)/community/topic-ask-advocate");
     } else {
-      Alert.alert(
-        "Slow down",
-        "Please wait a few seconds before posting again.",
-      );
+      Alert.alert(t('advocacy.ask.rateTitle','Slow down'), t('advocacy.ask.rateBody','Please wait a few seconds before posting again.'));
     }
   };
 
   return (
     <View
       style={styles.container}
-      accessibilityLabel="Ask an Advocate form"
+      accessibilityLabel={t('advocacy.ask.formLabel','Ask an Advocate form')}
       accessible
     >
       <Text
@@ -63,13 +58,13 @@ function Inner() {
         style={styles.title}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Ask an Advocate
+        {t('advocacy.ask.title','Ask an Advocate')}
       </Text>
       <Text style={styles.subtitle}>
-        Briefly describe your issue. Do not include personal identifiers.
+        {t('advocacy.ask.subtitle','Briefly describe your issue. Do not include personal identifiers.')}
       </Text>
 
-      <Text style={styles.label}>Category</Text>
+      <Text style={styles.label}>{t('advocacy.ask.category','Category')}</Text>
       <View
         style={{
           flexDirection: "row",
@@ -96,20 +91,20 @@ function Inner() {
           </Pressable>
         ))}
       </View>
-      <Text style={styles.label}>Title</Text>
+      <Text style={styles.label}>{t('advocacy.ask.titleLabel','Title')}</Text>
       <TextInput
         style={styles.input}
         value={title}
         onChangeText={setTitle}
-        placeholder="Short title"
+        placeholder={t('advocacy.ask.titlePlaceholder','Short title')}
       />
-      <Text style={styles.label}>Details</Text>
+      <Text style={styles.label}>{t('advocacy.ask.detailsLabel','Details')}</Text>
       <TextInput
         style={[styles.input, { minHeight: 100 }]}
         value={details}
         onChangeText={setDetails}
         multiline
-        placeholder="What happened? What help do you need?"
+        placeholder={t('advocacy.ask.detailsPlaceholder','What happened? What help do you need?')}
       />
 
       <Pressable
@@ -117,7 +112,7 @@ function Inner() {
         style={styles.button}
         accessibilityRole="button"
       >
-        <Text style={styles.buttonText}>Submit</Text>
+        <Text style={styles.buttonText}>{t('advocacy.ask.submit','Submit')}</Text>
       </Pressable>
     </View>
   );

@@ -6,6 +6,7 @@ import MapEmbed from '../../../components/MapEmbed';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { advocates } from '../../../data/lawyers';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useTranslation } from '../../../i18n';
 import { fetchAdvocates } from '../../../services/advocates';
 import { useFavorites } from '../../../store/favorites';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -16,7 +17,8 @@ export default function LawyerFinder() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('Lawyer & Advocate Finder');
+  const { t } = useTranslation();
+  useAnnounceOnMount(t('advocacy.finder.title','Lawyer & Advocate Finder'));
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState('');
   const [issue, setIssue] = React.useState('');
@@ -45,36 +47,36 @@ export default function LawyerFinder() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        Lawyer & Advocate Finder
+        {t('advocacy.finder.title','Lawyer & Advocate Finder')}
       </Text>
       <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
-  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('list')} style={[s.chip, mode==='list'&&s.chipActive]}><Text style={{ color: mode==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>List</Text></A11yPressable>
-  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('map')} style={[s.chip, mode==='map'&&s.chipActive]}><Text style={{ color: mode==='map'? palette.onPrimary: palette.text, fontWeight:'700' }}>Map</Text></A11yPressable>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('list')} style={[s.chip, mode==='list'&&s.chipActive]}><Text style={{ color: mode==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeList','List')}</Text></A11yPressable>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('map')} style={[s.chip, mode==='map'&&s.chipActive]}><Text style={{ color: mode==='map'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeMap','Map')}</Text></A11yPressable>
       </View>
-      <TextInput placeholder="Search by name, city, org" placeholderTextColor={palette.text+"77"} value={query} onChangeText={setQuery} style={s.input} />
+      <TextInput placeholder={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} placeholderTextColor={palette.text+"77"} value={query} onChangeText={setQuery} style={s.input} accessibilityLabel={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} />
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
-        <TextInput placeholder="Issue (e.g., WSIB)" placeholderTextColor={palette.text+"77"} value={issue} onChangeText={setIssue} style={[s.input,{flex:1}]} />
-        <TextInput placeholder="Province (e.g., ON)" placeholderTextColor={palette.text+"77"} value={province} onChangeText={setProvince} style={[s.input,{width:100}]} />
+        <TextInput placeholder={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} placeholderTextColor={palette.text+"77"} value={issue} onChangeText={setIssue} style={[s.input,{flex:1}]} accessibilityLabel={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} />
+        <TextInput placeholder={t('advocacy.finder.provincePlaceholder','Province (e.g., ON)')} placeholderTextColor={palette.text+"77"} value={province} onChangeText={setProvince} style={[s.input,{width:100}]} accessibilityLabel={t('advocacy.finder.provincePlaceholder','Province (e.g., ON)')} />
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setProBono(v=>!v)} style={[s.chip, proBono && s.chipActive]}>
-          <Text style={{ color: proBono? palette.onPrimary: palette.text, fontWeight:'700' }}>{proBono? 'Pro bono only':'Include paid'}</Text>
+          <Text style={{ color: proBono? palette.onPrimary: palette.text, fontWeight:'700' }}>{proBono? t('advocacy.finder.proBonoOnly','Pro bono only'): t('advocacy.finder.includePaid','Include paid')}</Text>
         </A11yPressable>
       </View>
       {mode==='list' ? (
       <FlatList data={filtered} keyExtractor={(a)=>a.id} renderItem={({item}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{item.name}{item.org? ` • ${item.org}`: ''}</Text>
-          <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || '—'}</Text>
-          <Text style={s.cardText}>Issues: {item.issues.join(', ')}</Text>
+          <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || t('advocacy.finder.locationUnknown','—')}</Text>
+          <Text style={s.cardText}>{t('advocacy.finder.issuesLabel','Issues')}: {item.issues.join(', ')}</Text>
           {item.website && (
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => Linking.openURL(item.website)} style={s.btn}><Text style={s.btnText}>Open website</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => Linking.openURL(item.website)} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openWebsite','Open website')}</Text></A11yPressable>
           )}
           {item.email && (
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => Linking.openURL(`mailto:${item.email}`)} style={s.btn}><Text style={s.btnText}>Email</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => Linking.openURL(`mailto:${item.email}`)} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.email','Email')}</Text></A11yPressable>
           )}
           <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`)} style={s.btn}><Text style={s.btnText}>Open on Map</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`)} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openOnMap','Open on Map')}</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> toggle('advocate', item.id)} style={s.btn}>
-              <Text style={s.btnText}>{state.advocate.has(item.id) ? '★ Saved' : '☆ Save'}</Text>
+              <Text style={s.btnText}>{state.advocate.has(item.id) ? t('advocacy.finder.saved','★ Saved') : t('advocacy.finder.save','☆ Save')}</Text>
             </A11yPressable>
           </View>
         </View>
@@ -82,15 +84,15 @@ export default function LawyerFinder() {
       ListFooterComponent={
         total > filtered.length ? (
           <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => load(false)} style={[s.btn,{ alignSelf:'center', marginVertical: 12 }]}> 
-            <Text style={s.btnText}>{loading? 'Loading…':'Load more'}</Text>
+            <Text style={s.btnText}>{loading? t('common.loading','Loading…'): t('common.loadMore','Load more')}</Text>
           </A11yPressable>
         ) : null
       }
       />) : (
         <View style={s.mapWrap}>
-          <Text style={s.cardTitle}>Map</Text>
+          <Text style={s.cardTitle}>{t('advocacy.finder.modeMap','Map')}</Text>
           <MapEmbed points={filtered.slice(0,20).map((item)=> ({ id: item.id, title: item.name, ...placeToCoords(item.city, item.province) }))} />
-          <Text style={s.cardText}>Tap a listing in List mode to open maps.</Text>
+          <Text style={s.cardText}>{t('advocacy.finder.mapHint','Tap a listing in List mode to open maps.')}</Text>
         </View>
       )}
     </View>

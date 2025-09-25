@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { useTranslation } from '../../../i18n';
+import { logEvent } from '../../../services/analytics';
 import A11yPressable from '../../../components/A11yPressable';
 import MapEmbed from '../../../components/MapEmbed';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
@@ -21,26 +23,28 @@ export const options = { href: null };
 export default function WorldMap() {
   const palette = useAppPalette();
   const s = styles(palette);
+  const { t } = useTranslation();
   const [kind, setKind] = React.useState<'all'|'law'|'protest'|'update'>('all');
   const [remote, setRemote] = React.useState(seed);
   React.useEffect(()=>{ (async()=>{ try { const rows = await fetchWorldItems(); if (rows?.length) setRemote(rows as any); } catch {} })(); },[]);
+  React.useEffect(()=>{ logEvent?.('advocacy.world.view', { kind }); },[kind]);
   const items = kind==='all' ? remote : remote.filter(i => i.kind === kind);
   return (
     <View style={s.container}>
-      <Text style={s.title}>World Disability Map</Text>
+      <Text style={s.title}>{t('advocacy.world.title','World Disability Map')}</Text>
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         {(['all','law','protest','update'] as const).map(k => (
-          <A11yPressable key={k} hitSlop={HIT_SLOP_8} onPress={()=>setKind(k)} style={[s.chip, kind===k&&s.chipActive]}><Text style={{ color: kind===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{k}</Text></A11yPressable>
+          <A11yPressable key={k} hitSlop={HIT_SLOP_8} accessibilityLabel={t(`advocacy.world.filter.${k}`, k)} onPress={()=>setKind(k)} style={[s.chip, kind===k&&s.chipActive]}><Text style={{ color: kind===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{t(`advocacy.world.filter.${k}`, k)}</Text></A11yPressable>
         ))}
       </View>
       <View style={{ marginTop: 8 }}>
         <MapEmbed points={items.map(i => ({ id: i.id, title: i.title, lat: i.lat, lng: i.lng, kind: i.kind }))} />
       </View>
-      <Text style={[s.text,{ marginTop: 8 }]}>Tap a card to open Google Maps</Text>
+      <Text style={[s.text,{ marginTop: 8 }]}>{t('advocacy.world.hint','Tap a card to open Google Maps')}</Text>
       {items.map(i => (
         <A11yPressable key={i.id} hitSlop={HIT_SLOP_8} onPress={()=> require('expo-linking').openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([i.title,i.city,i.country].filter(Boolean).join(' '))}`)} style={s.card}>
           <Text style={s.cardTitle}>{i.title}</Text>
-          <Text style={s.cardText}>{[i.city, i.country].filter(Boolean).join(', ')} • {i.kind}</Text>
+          <Text style={s.cardText}>{[i.city, i.country].filter(Boolean).join(', ')} • {t(`advocacy.world.filter.${i.kind}`, i.kind)}</Text>
         </A11yPressable>
       ))}
     </View>

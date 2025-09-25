@@ -440,8 +440,22 @@
   "queueTitle": "File de téléversement",
   "queueScreenLabel": "Écran file de téléversement du Coffre",
   "processing": "Traitement des téléversements...",
+  "processingPct": "Traitement file:",
   "queueSubtitle": "Vérifiez les envois en attente, réessayez les échecs ou videz les éléments traités.",
-  "emptyQueue": "Aucun élément dans la file de téléversement."
+  "emptyQueue": "Aucun élément dans la file de téléversement.",
+  "queueNoPending": "Aucun élément en attente.",
+  "queueProcessed": "Tous les éléments ont été traités.",
+  "queueProcessedSome": "Certains éléments n'ont pas pu être traités.",
+  "showTrash": "Afficher corbeille",
+  "showingTrash": "Affichage corbeille",
+  "tag": {
+        "call": "appel",
+        "letter": "lettre",
+        "medical": "médical",
+        "decision": "décision",
+        "payment": "paiement",
+        "email": "courriel"
+      }
     },
     "gallery": {
       "title": "Galerie de modèles",
@@ -708,7 +722,14 @@
       "prevMonth": "Précédent",
       "nextMonth": "Suivant",
       "dayCell": "Jour",
-      "emptyDay": "Aucun événement"
+      "emptyDay": "Aucun événement",
+      "csvHeaderDate": "date",
+      "csvHeaderTitle": "titre",
+      "csvHeaderNotes": "notes",
+      "csvHeaderDone": "fait",
+      "csvSaved": "Sauvegardé",
+      "csvSavedBody": "CSV enregistré en cache.",
+      "csvSavedShareNA": "CSV en cache (partage indisponible)."
     }
   },
   "advocacy": {
@@ -739,7 +760,91 @@
       "simplify": "Simplifier",
       "simplifying": "Simplification...",
       "summary": "Résumé",
-      "keyPoints": "Points clés"
+      "keyPoints": "Points clés",
+      "sectionRights": "Droits de la personne & obligation d'accommodement",
+      "linkDuty": "Qu'est-ce que l'obligation d'accommodement?",
+      "linkOHRC": "Commission ontarienne des droits de la personne",
+      "sectionAccessibility": "Lois sur l'accessibilité",
+      "linkAccessibleCanada": "Loi canadienne sur l'accessibilité",
+      "linkAoda": "LAPHO (Ontario)",
+      "sectionBenefits": "Prestations d'invalidité",
+      "linkCppd": "RPC-I (CPP-D)",
+      "linkEmploymentStandards": "Normes d'emploi (ON)",
+      "placeholder": "Collez ou tapez un extrait de politique / décision à simplifier.",
+      "subtitle": "Guides en langage clair sur l'accessibilité, les droits et prestations."
+    },
+    "collective": {
+      "title": "[T] Collective Legal Action Hub",
+      "subtitle": "[T] If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
+      "typeLabel": "[T] Violation type",
+      "type": {
+        "deniedModified": "[T] denied modified duties",
+        "refusedAccommodation": "[T] refused accommodation",
+        "retaliation": "[T] retaliation",
+        "benefitDenial": "[T] benefit denial"
+      },
+      "provinceLabel": "[T] Province (optional)",
+      "provincePlaceholder": "[T] ON, BC, ...",
+      "detailsLabel": "[T] Details (optional)",
+      "detailsPlaceholder": "[T] Short summary; do not include identifiers.",
+      "submit": "[T] Submit report",
+      "aggregatedHeader": "[T] Aggregated reports",
+      "none": "[T] No reports yet.",
+      "note": "[T] Note: Submissions are anonymous; contact details are not collected.",
+      "submittedTitle": "[T] Submitted",
+      "submittedBody": "[T] Report added anonymously. Aggregated counts help build leverage."
+    },
+    "finder": {
+      "title": "[T] Lawyer & Advocate Finder",
+      "modeList": "[T] List",
+      "modeMap": "[T] Map",
+      "searchPlaceholder": "[T] Search by name, city, org",
+      "issuePlaceholder": "[T] Issue (e.g., WSIB)",
+      "provincePlaceholder": "[T] Province (e.g., ON)",
+      "proBonoOnly": "[T] Pro bono only",
+      "includePaid": "[T] Include paid",
+      "locationUnknown": "[T] —",
+      "issuesLabel": "[T] Issues",
+      "openWebsite": "[T] Open website",
+      "email": "[T] Email",
+      "openOnMap": "[T] Open on Map",
+      "saved": "[T] ★ Saved",
+      "save": "[T] ☆ Save",
+      "mapHint": "[T] Tap a listing in List mode to open maps."
+    },
+    "support": {
+      "title": "[T] Support Directory",
+      "screenLabel": "[T] Support directory screen",
+      "subtitle": "[T] Organizations that may help with claims, accommodations, and advocacy.",
+      "accessible": "[T] Accessible",
+      "phoneIcon": "☎",
+      "openWebsiteLabel": "[T] Open {{name}} website",
+      "website": "[T] Website",
+      "suggestHeader": "[T] Suggest a correction",
+      "suggestPlaceholder": "[T] Org ID and your suggestion",
+      "submitSuggestion": "[T] Submit suggestion"
+    },
+    "ask": {
+      "title": "[T] Ask an Advocate",
+      "formLabel": "[T] Ask an Advocate form",
+      "subtitle": "[T] Briefly describe your issue. Do not include personal identifiers.",
+      "category": "[T] Category",
+      "titleLabel": "[T] Title",
+      "titlePlaceholder": "[T] Short title",
+      "detailsLabel": "[T] Details",
+      "detailsPlaceholder": "[T] What happened? What help do you need?",
+      "submit": "[T] Submit",
+      "submittedTitle": "[T] Submitted",
+      "submittedBody": "[T] Your request has been posted. Community advocates may respond.",
+      "rateTitle": "[T] Slow down",
+      "rateBody": "[T] Please wait a few seconds before posting again.",
+      "missingTitleTitle": "[T] Title required",
+      "missingTitleBody": "[T] Please enter a short title."
+    },
+    "world": {
+      "title": "[T] World Disability Map",
+      "filter": { "all": "[T] All", "law": "[T] Law", "protest": "[T] Protest", "update": "[T] Update" },
+      "hint": "[T] Tap a card to open Google Maps"
     },
     "coach": {
       "practiceHeader": "Invite d'entraînement",
@@ -944,6 +1049,10 @@
     "show": "Afficher"
   },
   "common": {
+    "on": "Activé",
+    "off": "Désactivé",
+    "uploading": "Téléversement",
+    "uploadingItem": "Téléversement de {{name}}",
     "hide": "Masquer",
     "show": "Afficher",
     "save": "Enregistrer",

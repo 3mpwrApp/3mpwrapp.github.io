@@ -1,21 +1,21 @@
 import React from "react";
 import {
-  Alert,
-  Pressable,
-  ScrollView,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { logActivity } from '../../../services/activity';
@@ -46,9 +46,10 @@ export default function AiAdvocateTranslator() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("AI Advocate Translator");
-  useFocusOnRefOnMount(titleRef);
   const { t, lang: language } = useTranslation();
+  useAnnounceOnMount(t('advocacy.tools.ai_translator','AI Advocate Translator'));
+  useFocusOnRefOnMount(titleRef);
+  // moved earlier
   const [input, setInput] = React.useState("");
   const [output, setOutput] = React.useState("");
   const [sections, setSections] = React.useState<{summary:string; keyTerms:string[]; deadlines:string[]; actions:string[]}|null>(null);
@@ -61,18 +62,15 @@ export default function AiAdvocateTranslator() {
         style={s.title}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        AI Advocate Translator
+  {t('advocacy.tools.ai_translator','AI Advocate Translator')}
       </Text>
       <OnlineStatusBadge />
-      <Text style={s.subtitle}>
-        Paste a bureaucratic letter to simplify into plain language. ASL video
-        summary requires server integration.
-      </Text>
+      <Text style={s.subtitle}>{t('translator.subtitle','Paste a bureaucratic letter to simplify into plain language. ASL video summary requires server integration.')}</Text>
       <TextInput
         style={[s.input, { minHeight: 120 }]}
         value={input}
         onChangeText={setInput}
-        placeholder="Paste text here"
+  placeholder={t('translator.placeholder','Paste text here')}
         multiline
       />
       <Pressable
@@ -94,7 +92,7 @@ export default function AiAdvocateTranslator() {
         <Text style={s.buttonText}>{t('translator.simplify','Simplify')}</Text>
       </Pressable>
       {!!output && (
-        <View style={s.card}>
+  <View style={s.card} accessibilityLabel={t('translator.summary','Plain Summary')}>
           {sections && (
             <View>
               <Text style={[s.sectionHeader]}>{t('translator.summary','Plain Summary')}</Text>

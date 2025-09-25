@@ -1,20 +1,20 @@
 import React from "react";
 import {
-    Alert,
-    Linking,
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  Alert,
+  Linking,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { aiPolicySimplify } from '../../../services/aiAdvocacy';
@@ -22,39 +22,24 @@ import { useAppPalette } from "../../../theme/usePalette";
 
 const SECTIONS = [
   {
-    title: "Human Rights & Duty to Accommodate",
+    title: 'advocacy.policy.sectionRights',
     items: [
-      {
-        label: "What is the duty to accommodate?",
-        url: "https://www.chrc-ccdp.gc.ca/en/resources/what-duty-accommodate",
-      },
-      {
-        label: "Ontario Human Rights Commission",
-        url: "https://www.ohrc.on.ca/",
-      },
+      { label: 'advocacy.policy.linkDuty', url: 'https://www.chrc-ccdp.gc.ca/en/resources/what-duty-accommodate' },
+      { label: 'advocacy.policy.linkOHRC', url: 'https://www.ohrc.on.ca/' },
     ],
   },
   {
-    title: "Accessibility Laws",
+    title: 'advocacy.policy.sectionAccessibility',
     items: [
-      { label: "Accessibility (Canada)", url: "https://accessible.canada.ca/" },
-      {
-        label: "AODA (Ontario)",
-        url: "https://www.ontario.ca/page/accessibility-laws",
-      },
+      { label: 'advocacy.policy.linkAccessibleCanada', url: 'https://accessible.canada.ca/' },
+      { label: 'advocacy.policy.linkAoda', url: 'https://www.ontario.ca/page/accessibility-laws' },
     ],
   },
   {
-    title: "Disability Benefits",
+    title: 'advocacy.policy.sectionBenefits',
     items: [
-      {
-        label: "CPPÃ¢â‚¬â€˜D",
-        url: "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-disability-benefit.html",
-      },
-      {
-        label: "Employment Standards (ON)",
-        url: "https://www.ontario.ca/document/your-guide-employment-standards-act-0",
-      },
+      { label: 'advocacy.policy.linkCppd', url: 'https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-disability-benefit.html' },
+      { label: 'advocacy.policy.linkEmploymentStandards', url: 'https://www.ontario.ca/document/your-guide-employment-standards-act-0' },
     ],
   },
 ];
@@ -65,11 +50,11 @@ export default function PolicySimple() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Policy Made Simple");
-  useFocusOnRefOnMount(titleRef);
   const { t } = useTranslation();
+  useAnnounceOnMount(t('advocacy.tools.policy_simple'));
+  useFocusOnRefOnMount(titleRef);
   const open = (url: string) => Linking.openURL(url).catch(() => {});
-  const [raw, setRaw] = React.useState('Paste or type a policy / decision excerpt here to simplify.');
+  const [raw, setRaw] = React.useState(t('advocacy.policy.placeholder','Paste or type a policy / decision excerpt here to simplify.'));
   const [loading, setLoading] = React.useState(false);
   const [summary, setSummary] = React.useState('');
   const [points, setPoints] = React.useState<string[]>([]);
@@ -109,9 +94,7 @@ export default function PolicySimple() {
       >
         {t('advocacy.tools.policy_simple')}
       </Text>
-      <Text style={s.subtitle}>
-        Easy-read guides to accessibility, human rights, and benefits.
-      </Text>
+      <Text style={s.subtitle}>{t('advocacy.policy.subtitle','Easy-read guides to accessibility, human rights, and benefits.')}</Text>
       <View style={s.aiBox}>
         <Text style={s.sectionTitle}>{t('advocacy.policy.aiHeader')}</Text>
         <Text style={s.helper}>{t('advocacy.policy.aiHelp')}</Text>
@@ -141,14 +124,14 @@ export default function PolicySimple() {
       </View>
       {SECTIONS.map((sec) => (
         <View key={sec.title} style={s.card}>
-          <Text style={s.cardTitle}>{sec.title}</Text>
+          <Text style={s.cardTitle}>{t(sec.title, sec.title)}</Text>
           {sec.items.map((it) => (
             <Pressable
               key={it.label}
               onPress={() => open(it.url)}
               accessibilityRole="link"
             >
-              <Text style={s.link}>{it.label}</Text>
+              <Text style={s.link}>{t(it.label, it.label)}</Text>
             </Pressable>
           ))}
         </View>

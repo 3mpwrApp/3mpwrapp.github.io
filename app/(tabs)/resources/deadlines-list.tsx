@@ -41,6 +41,7 @@ export default function DeadlinesList() {
     load();
   }, [load]);
 
+  // Updated: i18n for export alerts
   const exportAll = async () => {
     try {
       const events = items.map((d) => ({
@@ -56,24 +57,30 @@ export default function DeadlinesList() {
       try {
         const Sharing = await import('expo-sharing');
         if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path);
-        else Alert.alert('Saved', 'ICS saved to cache.');
+        else Alert.alert(t('templates.deadlines.saved','Saved'), t('templates.deadlines.icsSaved','ICS saved to cache.'));
       } catch {
-        Alert.alert('Saved', 'ICS saved to cache (sharing unavailable).');
+        Alert.alert(t('templates.deadlines.saved','Saved'), t('templates.deadlines.savedCacheShareNA','File saved to cache (sharing unavailable).'));
       }
     } catch {
-      Alert.alert('Export failed', 'Could not create ICS.');
+      Alert.alert(t('templates.deadlines.exportFailed','Export failed'), t('templates.deadlines.exportFailedBodyIcs','Could not create ICS.'));
     }
   };
+  // Updated: internationalized headers + alerts
   const exportCSV = async () => {
     try {
-      const rows = [['date','title','notes','done'], ...items.map(d => [d.dueAt, d.title, (d.notes||'').replace(/\n/g,' '), String(!!d.done)])];
+      const rows = [[
+        t('templates.deadlines.csvHeaderDate','date'),
+        t('templates.deadlines.csvHeaderTitle','title'),
+        t('templates.deadlines.csvHeaderNotes','notes'),
+        t('templates.deadlines.csvHeaderDone','done')
+      ], ...items.map(d => [d.dueAt, d.title, (d.notes||'').replace(/\n/g,' '), String(!!d.done)])];
       const csv = rows.map(r=> r.map(x=> '"' + String(x||'').replace(/"/g,'""') + '"').join(',')).join('\n');
       const FS = await import('expo-file-system');
       const path = FS.cacheDirectory + `deadlines_${Date.now()}.csv`;
       await FS.writeAsStringAsync(path, csv, { encoding: FS.EncodingType.UTF8 });
-      try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert('Saved','CSV saved to cache.'); }
-      catch { Alert.alert('Saved','CSV saved to cache (sharing unavailable).'); }
-    } catch { Alert.alert('Export failed','Could not create CSV.'); }
+      try { const Sharing = await import('expo-sharing'); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert(t('templates.deadlines.csvSaved','Saved'), t('templates.deadlines.csvSavedBody','CSV saved to cache.')); }
+      catch { Alert.alert(t('templates.deadlines.csvSaved','Saved'), t('templates.deadlines.csvSavedShareNA','CSV saved to cache (sharing unavailable).')); }
+    } catch { Alert.alert(t('templates.deadlines.exportFailed','Export failed'), t('templates.deadlines.exportFailedBodyCsv','Could not create CSV.')); }
   };
 
   const grouped = React.useMemo(() => {
@@ -98,7 +105,7 @@ export default function DeadlinesList() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        {t('templates.deadlines.listTitle','My Deadlines')} {loading ? t('common.loading','(loading...)') : ''}
+        {t('templates.deadlines.myDeadlines','My Deadlines')} {loading ? t('common.loading','(loading...)') : ''}
       </Text>
       <A11yPressable onPress={load} style={s.button} accessibilityLabel={t('templates.deadlines.reload','Reload deadlines')}><Text style={s.buttonText}>{t('templates.deadlines.reloadShort','Reload')}</Text></A11yPressable>
       <A11yPressable onPress={async () => {
