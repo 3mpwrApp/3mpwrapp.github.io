@@ -62,6 +62,7 @@
   "check:analytics": "node ./scripts/check-analytics-imports.mjs",
   "analytics:scan": "node ./scripts/analytics-scan.mjs",
   "analytics:report": "node ./scripts/analytics-report.mjs",
+  "analytics:pii": "node ./scripts/analytics-pii-scan.mjs",
   "test:ci": "npm run test:guard && npm run check:analytics && npm run analytics:report && jest --runInBand"
   },
   "dependencies": {
