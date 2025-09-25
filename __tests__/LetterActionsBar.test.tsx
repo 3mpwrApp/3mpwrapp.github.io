@@ -7,5 +7,34 @@
 //
 // TODO: Re-implement once testing stack is updated.
 
-// TODO: Re-implement LetterActionsBar tests once testing stack is updated.
-test.todo('LetterActionsBar: pending implementation until supported RN testing approach is adopted');
+import { fireEvent, render, screen } from '@testing-library/react';
+
+// Minimal mocks for RN + palette
+jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ background:'#fff', text:'#111', primary:'#06f', onPrimary:'#fff', muted:'#ccc', surface:'#f9f9f9' }) }));
+jest.mock('react-native', () => ({
+	StyleSheet: { create: (o:any)=> o },
+	View: ({children}:any)=> <div>{children}</div>,
+	Text: ({children}:any)=> <span>{children}</span>,
+	Pressable: ({children,onPress, accessibilityLabel}:any)=> <button aria-label={accessibilityLabel} onClick={onPress}>{children}</button>
+}));
+jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (k:string, fb?:string) => fb || k }) }));
+
+try { jest.mock('../services/analyticsClient', () => ({ trackEvent: jest.fn() })); } catch {}
+
+// Import component under test
+import LetterActionsBar from '../components/letters/LetterActionsBar';
+
+describe('LetterActionsBar', () => {
+		it('renders toggle + copy actions and triggers callbacks', () => {
+			const onToggleInfo = jest.fn();
+			const onCopy = jest.fn();
+			const palette = { background:'#fff', text:'#111', primary:'#06f', onPrimary:'#fff', muted:'#ccc', surface:'#f9f9f9' };
+			render(<LetterActionsBar showInfo={false} onToggleInfo={onToggleInfo} onCopy={onCopy} palette={palette} />);
+			const toggle = screen.getByRole('button', { name: /toggle instructions/i });
+			const copy = screen.getByRole('button', { name: /copy/i });
+			fireEvent.click(toggle);
+			fireEvent.click(copy);
+			expect(onToggleInfo).toHaveBeenCalledTimes(1);
+			expect(onCopy).toHaveBeenCalledTimes(1);
+		});
+});
