@@ -206,27 +206,27 @@ function main() {
   );
 
   if (!opts.json) {
-    console.log('WCAG Color Contrast Audit');
-    console.log('==========================');
-    console.log(`Thresholds: AA=${opts.aa} AAA=${opts.aaa}`);
-    console.log('\nPalette Contrast Ratios:');
+  console.warn('WCAG Color Contrast Audit');
+  console.warn('==========================');
+  console.warn(`Thresholds: AA=${opts.aa} AAA=${opts.aaa}`);
+  console.warn('\nPalette Contrast Ratios:');
     results.forEach(r => {
       const sugg = r.suggestion ? ` (suggestion: ${r.suggestion})` : '';
-      console.log(`${r.pair}: ${r.ratio.toFixed(2)}  AA:${r.passesAA?'✓':'✗'} AAA:${r.passesAAA?'✓':'✗'}${sugg}`);
+  console.warn(`${r.pair}: ${r.ratio.toFixed(2)}  AA:${r.passesAA?'✓':'✗'} AAA:${r.passesAAA?'✓':'✗'}${sugg}`);
     });
-    if (!results.length) console.log('No theme colors parsed.');
+  if (!results.length) console.warn('No theme colors parsed.');
 
     if (failing.length) {
-      console.log(`\nFAIL: ${failing.length} palette pair(s) below AA threshold (${opts.aa}:1).`);
+      console.warn(`\nFAIL: ${failing.length} palette pair(s) below AA threshold (${opts.aa}:1).`);
     } else {
-      console.log('\nAll palette pairs meet AA (heuristic rules).');
+      console.warn('\nAll palette pairs meet AA (heuristic rules).');
     }
 
-    console.log(`\nInline Hex Color Issues (<${opts.aa}:1 contrast against light/dark backgrounds):`);
-    if (!inlineIssues.length) console.log('None detected');
+  console.warn(`\nInline Hex Color Issues (<${opts.aa}:1 contrast against light/dark backgrounds):`);
+  if (!inlineIssues.length) console.warn('None detected');
     inlineIssues.forEach(i => {
       const sugg = i.suggested ? ` -> suggestion ${i.suggested}` : '';
-      console.log(`  [${i.context}] ${i.file}:${i.line}  ${i.color} ratio=${i.ratio.toFixed(2)}${sugg}`);
+  console.warn(`  [${i.context}] ${i.file}:${i.line}  ${i.color} ratio=${i.ratio.toFixed(2)}${sugg}`);
     });
   }
 
@@ -236,7 +236,7 @@ function main() {
     if (typeof opts.json === 'string') {
       fs.writeFileSync(opts.json, jsonStr, 'utf8');
     } else {
-      console.log(jsonStr);
+  console.warn(jsonStr);
     }
   }
 

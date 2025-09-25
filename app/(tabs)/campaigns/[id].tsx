@@ -1,11 +1,11 @@
 import { Stack, router, useLocalSearchParams } from "expo-router";
 import {
-    Pressable,
-    Share,
-    StyleSheet,
-    Text,
-    View,
-    useColorScheme,
+  Pressable,
+  Share,
+  StyleSheet,
+  Text,
+  View,
+  useColorScheme,
 } from "react-native";
 
 import SettingsLink from "../../../components/SettingsLink";
@@ -14,8 +14,8 @@ import { campaigns } from "../../../data/campaigns";
 import { useTranslation } from "../../../i18n";
 import { fsJoinCampaign, fsLeaveCampaign } from "../../../services/firestore";
 import {
-    CampaignsLocalProvider,
-    useCampaignsLocal,
+  CampaignsLocalProvider,
+  useCampaignsLocal,
 } from "../../../store/campaignsLocal";
 import { useFavorites } from "../../../store/favorites";
 import { colors, type Palette } from "../../../theme/colors";
@@ -113,8 +113,8 @@ function CampaignDetailInner() {
           <Pressable
             style={({ pressed }) => [styles.ghost, pressed && { opacity: 0.8 }]}
             onPress={() => {
-              // open campaign room
-              router.push(`/(tabs)/campaigns/room/${campaign.id}`);
+              // open campaign room (route group (tabs) not part of URL); navigate directly
+              router.push(`/campaigns/room/${campaign.id}`);
             }}
             accessibilityRole="button"
             accessibilityLabel={t('a11y.openCampaignRoom')}

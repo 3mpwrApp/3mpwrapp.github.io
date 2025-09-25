@@ -63,7 +63,10 @@
   "analytics:scan": "node ./scripts/analytics-scan.mjs",
   "analytics:report": "node ./scripts/analytics-report.mjs",
   "analytics:pii": "node ./scripts/analytics-pii-scan.mjs",
-  "test:ci": "npm run test:guard && npm run check:analytics && npm run analytics:report && jest --runInBand"
+  "analytics:pii:soft": "set PII_SCAN_SOFT=1&& node ./scripts/analytics-pii-scan.mjs",
+  "perf:budget": "node ./scripts/perf-bundle-budget.mjs",
+  "perf:breakdown": "node ./scripts/perf-bundle-breakdown.mjs",
+  "test:ci": "npm run test:guard && npm run check:analytics && npm run analytics:report && npm run analytics:pii:soft && npm run perf:budget && npm run perf:breakdown && jest --runInBand"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

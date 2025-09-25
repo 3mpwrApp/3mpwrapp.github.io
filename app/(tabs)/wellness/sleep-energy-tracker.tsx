@@ -468,11 +468,15 @@ export default function SleepEnergyTracker() {
         style={[styles.button, { marginTop: 8 }]}
         onPress={async () => {
           try {
-            const FS = await import("expo-file-system");
+            const { default: FileSystem } = await import("expo-file-system");
+            const dir =
+              (FileSystem as any).cacheDirectory ||
+              (FileSystem as any).documentDirectory;
+            if (!dir) throw new Error("No writable directory");
             const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${summary.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</pre></body></html>`;
-            const path = FS.cacheDirectory + `sleep_energy_${Date.now()}.doc`;
-            await FS.writeAsStringAsync(path, html, {
-              encoding: FS.EncodingType.UTF8,
+            const path = `${dir}sleep_energy_${Date.now()}.doc`;
+            await FileSystem.writeAsStringAsync(path, html, {
+              encoding: 'utf8',
             });
             await Share.share({
               url: path,
@@ -536,10 +540,14 @@ export default function SleepEnergyTracker() {
                 r.map((x) => `"${(x || "").replace(/"/g, '""')}"`).join(","),
               )
               .join("\n");
-            const FS = await import("expo-file-system");
-            const path = FS.cacheDirectory + `sleep_energy_${Date.now()}.csv`;
-            await FS.writeAsStringAsync(path, csv, {
-              encoding: FS.EncodingType.UTF8,
+            const { default: FileSystem } = await import("expo-file-system");
+            const baseDir =
+              (FileSystem as any).cacheDirectory ||
+              (FileSystem as any).documentDirectory;
+            if (!baseDir) throw new Error("No writable directory");
+            const path = `${baseDir}sleep_energy_${Date.now()}.csv`;
+            await (FileSystem as any).writeAsStringAsync(path, csv, {
+              encoding: 'utf8',
             });
             await Share.share({ url: path, title: "Sleep & Energy CSV" });
           } catch {

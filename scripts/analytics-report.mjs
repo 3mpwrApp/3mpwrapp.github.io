@@ -43,6 +43,14 @@ const unused = registry.filter(e => !eventCounts.has(e));
 const ranked = [...eventCounts.entries()].sort((a,b)=> b[1]-a[1]);
 const totalEmissions = [...eventCounts.values()].reduce((a,b)=>a+b,0);
 
+// Derive category counts (prefix before first dot or full event if none)
+function categorize(name){ const idx = name.indexOf('.'); return idx>0 ? name.slice(0,idx) : name; }
+const categoryCounts = {};
+for (const ev of new Set([...registry, ...usedEvents])) {
+  const cat = categorize(ev);
+  categoryCounts[cat] = (categoryCounts[cat]||0)+1;
+}
+
 const lines = [];
 lines.push('# Analytics Event Report');
 lines.push('');
@@ -84,6 +92,14 @@ if (unused.length) {
   for (const e of unused) lines.push(`- ${e}`);
   lines.push('');
 }
+lines.push('## Categories');
+lines.push('');
+lines.push('| Category | Events |');
+lines.push('|----------|-------:|');
+for (const [cat,count] of Object.entries(categoryCounts).sort((a,b)=> a[0].localeCompare(b[0]))) {
+  lines.push(`| ${cat} | ${count} |`);
+}
+lines.push('');
 lines.push('## Event Usage');
 lines.push('');
 lines.push('| Event | Count | Status |');

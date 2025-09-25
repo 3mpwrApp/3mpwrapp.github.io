@@ -299,7 +299,26 @@ function EnhancedPrivacySection() {
   const styles = createStyles(palette, factor);
   const { state, setPasscode, setLockWellness, setErrorReportingEnabled } = usePrivacy();
   const { requirePasscodeOnLaunch, setRequirePasscodeOnLaunch, autoLockTimeout, setAutoLockTimeout, analyticsOptOut, setAnalyticsOptOut } = useSettings();
-  const onExport = async () => { const bundle = await exportBackup(); if (!bundle) return Alert.alert('Export failed','Storage unavailable.'); try { const FS = await import('expo-file-system'); const path = FS.cacheDirectory + `empowr_backup_${Date.now()}.json`; await FS.writeAsStringAsync(path, JSON.stringify(bundle,null,2)); const Share = await import('expo-sharing'); if (Share?.isAvailableAsync && (await Share.isAvailableAsync())) { await Share.shareAsync(path); } else { Alert.alert('Backup ready','Backup file saved to cache.'); } } catch { Alert.alert('Export failed','Could not create file.'); } };
+  const onExport = async () => {
+    const bundle = await exportBackup();
+    if (!bundle) return Alert.alert('Export failed','Storage unavailable.');
+    try {
+      const FileSystemModule = await import('expo-file-system');
+      const FS: any = FileSystemModule.default ?? FileSystemModule;
+      const baseDir = FS.cacheDirectory ?? FS.documentDirectory;
+      if (!baseDir) return Alert.alert('Export failed','No writable directory.');
+      const path = baseDir + `empowr_backup_${Date.now()}.json`;
+      await FS.writeAsStringAsync(path, JSON.stringify(bundle, null, 2));
+      const Share = await import('expo-sharing');
+      if (Share?.isAvailableAsync && (await Share.isAvailableAsync())) {
+        await Share.shareAsync(path);
+      } else {
+        Alert.alert('Backup ready','Backup file saved to cache.');
+      }
+    } catch {
+      Alert.alert('Export failed','Could not create file.');
+    }
+  };
   const onImport = async () => { try { const Doc = await import('expo-document-picker'); const res = await Doc.getDocumentAsync({ type:'application/json' }); if (res.canceled || !res.assets?.length) return; const uri = res.assets[0].uri; const FS = await import('expo-file-system'); const raw = await FS.readAsStringAsync(uri); const ok = await importBackup(JSON.parse(raw)); Alert.alert(ok? 'Imported':'Import failed', ok? 'Backup restored.':'Could not restore backup.'); } catch { Alert.alert('Import failed','Unable to read backup file.'); } };
   const onClear = async () => { Alert.alert('Clear All Data','This will permanently delete all your local app data. This cannot be undone. Are you sure?', [ { text:'Cancel', style:'cancel' }, { text:'Clear Data', style:'destructive', onPress: async()=> { const ok = await clearAllData(); Alert.alert(ok? 'Cleared':'Failed', ok? 'Local app data cleared.':'Unable to clear data.'); } } ] ); };
   return (

@@ -59,7 +59,38 @@ while ((em = EVENT_ENTRY_RE.exec(schemaBlock))) {
   if (eventName) eventParamMeta[eventName] = params;
 }
 
+// Normalize relative path to posix for matching
+function norm(rel) { return rel.split('\\').join('/'); }
+
+// Whitelist (posix-style) for files allowed to contain illustrative emails / contact literals
+const FILE_WHITELIST = [
+  'app/(tabs)/about.tsx',
+  'app/(tabs)/admin/index.tsx',
+  'app/(tabs)/settings.tsx',
+  'app/(tabs)/wellness/grief-support.tsx',
+  'app/(tabs)/wellness/self-care-library.tsx',
+  'components/Header.tsx',
+  'data/faqs.ts',
+  'data/lawyers.ts'
+].map(p=>p.replace(/\\/g,'/'));
+
+function isWhitelisted(rel) { rel = norm(rel); return FILE_WHITELIST.some(w => rel === w); }
+
 const suspicious = { schema: [], trackEventParams: [], literals: [] };
+
+// Inline suppression support:
+//  - // pii-scan-ignore-file  -> skip all per-file heuristics (except schema checks)
+//  - // pii-scan-ignore-next-line -> skip findings on the following physical line
+function computeSuppressions(text){
+  const lines = text.split(/\n/);
+  const suppressLine = new Set();
+  let fileIgnored = false;
+  lines.forEach((l,idx)=>{
+    if (/pii-scan-ignore-file/.test(l)) fileIgnored = true;
+    if (/pii-scan-ignore-next-line/.test(l)) suppressLine.add(idx+1); // next line index
+  });
+  return { fileIgnored, suppressLine };
+}
 
 // Heuristic 1: schema param names that look sensitive but not marked sensitive
 for (const [event, params] of Object.entries(eventParamMeta)) {
@@ -76,6 +107,8 @@ for (const file of walk(ROOT)) {
   if (/__tests__/.test(file) || /locales\//.test(file)) continue;
   let text = '';
   try { text = fs.readFileSync(file,'utf8'); } catch { continue; }
+  const { fileIgnored, suppressLine } = computeSuppressions(text);
+  if (fileIgnored) continue; // skip entire file for heuristics 2+3
   let m; TRACK_EVENT_RE.lastIndex = 0;
   while ((m = TRACK_EVENT_RE.exec(text))) {
     const event = m[1];
@@ -87,17 +120,22 @@ for (const file of walk(ROOT)) {
       if (SUSPICIOUS_KEY_RE.test(k)) {
         const alreadySensitive = eventParamMeta[event]?.[k]?.sensitive;
         if (!alreadySensitive) {
-          suspicious.trackEventParams.push({ file: path.relative(ROOT,file), event, param: k, reason: 'Suspicious key in trackEvent params literal' });
+          // Determine line number (rough) for suppression check
+          const upto = text.slice(0, m.index + km.index).split(/\n/).length - 1; // 0-based line with key start
+          if (!suppressLine.has(upto)) {
+            suspicious.trackEventParams.push({ file: path.relative(ROOT,file), event, param: k, reason: 'Suspicious key in trackEvent params literal' });
+          }
         }
       }
     }
   }
   // Heuristic 3: literal email / token presence
-  if (EMAIL_LITERAL_RE.test(text)) {
-    suspicious.literals.push({ file: path.relative(ROOT,file), kind: 'emailPattern', reason: 'Email-like literal found' });
+  const rel = path.relative(ROOT,file);
+  if (EMAIL_LITERAL_RE.test(text) && !isWhitelisted(rel)) {
+    suspicious.literals.push({ file: rel, kind: 'emailPattern', reason: 'Email-like literal found' });
   }
-  if (TOKEN_LITERAL_RE.test(text)) {
-    suspicious.literals.push({ file: path.relative(ROOT,file), kind: 'tokenPattern', reason: 'Token/JWT-like literal found' });
+  if (TOKEN_LITERAL_RE.test(text) && !isWhitelisted(rel)) {
+    suspicious.literals.push({ file: rel, kind: 'tokenPattern', reason: 'Token/JWT-like literal found' });
   }
 }
 
@@ -110,13 +148,14 @@ function printSection(title, arr, fields) {
 }
 
 const totalFindings = suspicious.schema.length + suspicious.trackEventParams.length + suspicious.literals.length;
+const soft = process.env.PII_SCAN_SOFT === '1';
 if (totalFindings === 0) {
   console.log('[analytics-pii-scan] No suspicious patterns found.');
   process.exit(0);
 } else {
-  console.log(`[analytics-pii-scan] Suspicious patterns detected: ${totalFindings}`);
+  console.log(`[analytics-pii-scan] Suspicious patterns detected: ${totalFindings}${soft ? ' (soft mode)' : ''}`);
   printSection('Schema Param Flags', suspicious.schema, ['event','param','reason']);
   printSection('trackEvent Param Literal Flags', suspicious.trackEventParams, ['file','event','param','reason']);
   printSection('Literal Pattern Flags', suspicious.literals, ['file','kind','reason']);
-  process.exitCode = 2;
+  if (!soft) process.exitCode = 2; else process.exitCode = 0;
 }

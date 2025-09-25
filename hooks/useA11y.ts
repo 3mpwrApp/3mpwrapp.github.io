@@ -5,8 +5,10 @@ export const MAX_FONT_SCALE = 2.0;
 
 export function useAnnounceOnMount(message: string, delayMs: number = 300) {
   React.useEffect(() => {
+    // In test / web (jsdom) environments AccessibilityInfo may not expose native methods.
+    if (typeof AccessibilityInfo?.announceForAccessibility !== "function") return;
     const id = setTimeout(() => {
-      AccessibilityInfo.announceForAccessibility?.(message);
+      AccessibilityInfo?.announceForAccessibility?.(message);
     }, delayMs);
     return () => clearTimeout(id);
   }, [message, delayMs]);
@@ -18,9 +20,11 @@ export function useFocusOnRefOnMount(
 ) {
   React.useEffect(() => {
     const id = setTimeout(() => {
+      // Guard: findNodeHandle isn't implemented in jsdom; skip if missing.
+      if (typeof findNodeHandle !== "function") return;
       const handle = findNodeHandle((ref as any).current);
-      if (handle) {
-        AccessibilityInfo.setAccessibilityFocus?.(handle);
+      if (handle && typeof AccessibilityInfo?.setAccessibilityFocus === "function") {
+        AccessibilityInfo?.setAccessibilityFocus?.(handle);
       }
     }, delayMs);
     return () => clearTimeout(id);
@@ -37,9 +41,11 @@ export function useAnnounceOnChange<T>(
     let id: ReturnType<typeof setTimeout> | undefined;
     if (prev.current !== value) {
       const msg = format(value);
-      id = setTimeout(() => {
-        AccessibilityInfo.announceForAccessibility?.(msg);
-      }, delayMs);
+      if (typeof AccessibilityInfo?.announceForAccessibility === "function") {
+        id = setTimeout(() => {
+          AccessibilityInfo?.announceForAccessibility?.(msg);
+        }, delayMs);
+      }
       prev.current = value;
     }
     return () => {

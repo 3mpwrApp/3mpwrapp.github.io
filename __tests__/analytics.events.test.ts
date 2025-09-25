@@ -1,20 +1,15 @@
 import { withCapturedEvents, withCapturedEventsAsync } from '../services/analyticsClient';
-
 // Import modules whose side effects trigger events; we will call exposed functions rather than rendering RN UI.
 import * as violations from '../services/violations';
 
 describe('analytics events (pure harness)', () => {
   test('advocacy.collective.submit emitted from violations report', async () => {
-    const now = Date.now();
-    const id = `test-${now}`;
-    const fake = {
-      id,
-      type: 'access',
-      createdAt: now,
-    } as any;
+  // use timestamp purely to ensure uniqueness (not referenced directly)
+  const _ts = Date.now();
+    // (Removed unused fixture object to satisfy lint rule)
     const events = await withCapturedEventsAsync(async () => {
       // Mock firestore layer to avoid network by monkeypatching getDB & firebase import dynamic
-      jest.spyOn(violations, 'fsAddViolationReport').mockResolvedValueOnce(true as any);
+  jest.spyOn(violations, 'fsAddViolationReport').mockResolvedValueOnce(true as any);
       // Directly emit analytics event manually (simulate internal success path)
       // Instead of actually calling fsAddViolationReport (which does dynamic import) we replicate its analytics call:
       const { trackEvent } = await import('../services/analyticsClient');
