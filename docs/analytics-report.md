@@ -1,15 +1,16 @@
 # Analytics Event Report
 
-Generated: 2025-09-25T20:05:54.797Z
+Generated: 2025-09-25T20:53:40.436Z
 
 ## Summary
 
-- Registry events: 21
-- Unique events referenced in code: 21
-- Total literal emissions (static scan): 27
+- Registry events: 22
+- Unique events referenced in code: 22
+- Total literal emissions (static scan): 28
 - Missing (used not registered): 0
 - Unused (registered not used): 0
 - Sensitive field occurrences (schema): 1
+- Classification counts: secret=1
 
 ## Event Usage
 
@@ -32,6 +33,7 @@ Generated: 2025-09-25T20:05:54.797Z
 | energy_reset_day | 1 | OK |
 | wellness_opposite_next_step | 1 | OK |
 | notification.delivered | 1 | OK |
+| notification.quiet_suppressed | 1 | OK |
 | advocacy.collective.submit | 1 | OK |
 | bookmark_add | 1 | OK |
 | bookmark_remove | 1 | OK |

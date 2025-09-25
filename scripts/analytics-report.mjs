@@ -62,6 +62,15 @@ try {
   sensitiveCount = (schemaSrc.match(/sensitive:\s*true/g)||[]).length;
 } catch {}
 lines.push(`- Sensitive field occurrences (schema): ${sensitiveCount}`);
+// Classification breakdown (pii/secret/token/other)
+try {
+  const schemaSrc2 = fs.readFileSync(path.join(ROOT,'services','analyticsEventSchemas.ts'),'utf8');
+  const classMatches = [...schemaSrc2.matchAll(/classification:\s*'([a-zA-Z]+)'/g)].map(m=>m[1]);
+  const classCounts = classMatches.reduce((acc,c)=>{acc[c]=(acc[c]||0)+1;return acc;},{});
+  if (Object.keys(classCounts).length) {
+    lines.push(`- Classification counts: ${Object.entries(classCounts).map(([k,v])=>`${k}=${v}`).join(', ')}`);
+  }
+} catch {}
 lines.push('');
 if (missing.length) {
   lines.push('### Missing');
@@ -86,7 +95,7 @@ for (const [name,count] of ranked) {
 if (!ranked.length) lines.push('| (none) | 0 | - |');
 // Append simple sensitive listing (event -> fields)
 try {
-  const { getSensitiveFields } = await import('../services/analyticsEventSchemas.ts');
+  const { getSensitiveFields, getSensitiveFieldMeta } = await import('../services/analyticsEventSchemas.ts');
   const sens = getSensitiveFields();
   const entries = Object.entries(sens);
   if (entries.length) {
@@ -96,6 +105,21 @@ try {
     lines.push('| Event | Fields |');
     lines.push('|-------|--------|');
     for (const [ev, fields] of entries) lines.push(`| ${ev} | ${fields.join(', ')} |`);
+    // Detailed classification table
+    const meta = getSensitiveFieldMeta();
+    const metaEntries = Object.entries(meta);
+    if (metaEntries.length) {
+      lines.push('');
+      lines.push('### Sensitive Field Classification');
+      lines.push('');
+      lines.push('| Event | Field | Classification |');
+      lines.push('|-------|-------|----------------|');
+      for (const [ev, rows] of metaEntries) {
+        for (const r of rows) {
+          lines.push(`| ${ev} | ${r.field} | ${r.classification||''} |`);
+        }
+      }
+    }
   }
 } catch {}
 
