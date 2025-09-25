@@ -61,4 +61,21 @@ describe('notifications dispatcher', () => {
     await act(async () => { await ref.current!.dispatch({ event: 'coach.generate.completed', payload: {} }, { now: new Date(t0.getTime() + 60 * 1000) }); });
     expect(ref.current!.getInbox().length).toBe(1);
   });
+
+  it('emits quiet suppression analytics when in quiet hours', async () => {
+    const ref = React.createRef<API>();
+    const { unmount } = render(<Wrapper><Harness ref={ref} /></Wrapper>);
+    // Force prefs push/inapp enabled
+    act(() => { ref.current!.updatePrefs((p) => ({ ...p, channels: { ...p.channels, push: true, inapp: true } })); });
+    const late = new Date(); late.setHours(23,15,0,0);
+    const warnSpy = jest.spyOn(console, 'warn').mockImplementation(()=>{});
+    await act(async () => { await ref.current!.dispatch({ event: 'coach.generate.completed', payload: {} }, { now: late }); });
+    // Expect one delivered in-app notification
+    expect(ref.current!.getInbox().length).toBe(1);
+    // Find quiet_suppressed analytics log in captured warnings
+    const hasQuiet = warnSpy.mock.calls.some(c => typeof c[0] === 'string' && /notification.quiet_suppressed/.test(c[0]) || (c[0] && /notification.quiet_suppressed/.test(JSON.stringify(c))));
+    expect(hasQuiet).toBeTruthy();
+    warnSpy.mockRestore();
+    unmount();
+  });
 });
