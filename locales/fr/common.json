@@ -23,7 +23,20 @@
   "home": {
     "title": "Bienvenue sur Empowr",
     "subtitle": "Soutien. Défense. Autonomisation.",
-    "welcome": "Bienvenue ! Votre hub pour communauté, éducation, outils de défense et balados — tout au même endroit !"
+    "welcome": "Bienvenue ! Votre hub pour communauté, éducation, outils de défense et balados — tout au même endroit !",
+    "guide": {
+      "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
+      "snapshotPlaceholder": "(Mood tracking available on Wellness tab)",
+      "header": "Today's Guide",
+      "snapshot": "Snapshot",
+      "suggested": "Suggested",
+      "open": "Open",
+      "noSuggestions": "No suggestions yet",
+      "feedback": {
+        "up": "Helpful suggestion",
+        "down": "Not relevant"
+      }
+    }
   },
   "notify": {
     "broadcast": {
@@ -73,6 +86,189 @@
         "title": "FAQ ajoutée",
         "body": "Créé : {{question}}"
       }
+    },
+    "collective": {
+      "title": "Collective Legal Action Hub",
+      "subtitle": "If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
+      "typeLabel": "Violation type",
+      "type": {
+        "deniedModified": "denied modified duties",
+        "refusedAccommodation": "refused accommodation",
+        "retaliation": "retaliation",
+        "benefitDenial": "benefit denial"
+      },
+      "provinceLabel": "Province (optional)",
+      "provincePlaceholder": "ON, BC, ...",
+      "detailsLabel": "Details (optional)",
+      "detailsPlaceholder": "Short summary; do not include identifiers.",
+      "submit": "Submit report",
+      "aggregatedHeader": "Aggregated reports",
+      "none": "No reports yet.",
+      "note": "Note: Submissions are anonymous; contact details are not collected.",
+      "submittedTitle": "Submitted",
+      "submittedBody": "Report added anonymously. Aggregated counts help build leverage."
+    },
+    "finder": {
+      "title": "Lawyer & Advocate Finder",
+      "modeList": "List",
+      "modeMap": "Map",
+      "searchPlaceholder": "Search by name, city, org",
+      "issuePlaceholder": "Issue (e.g., WSIB)",
+      "provincePlaceholder": "Province (e.g., ON)",
+      "proBonoOnly": "Pro bono only",
+      "includePaid": "Include paid",
+      "locationUnknown": "—",
+      "issuesLabel": "Issues",
+      "openWebsite": "Open website",
+      "email": "Email",
+      "openOnMap": "Open on Map",
+      "saved": "★ Saved",
+      "save": "☆ Save",
+      "mapHint": "Tap a listing in List mode to open maps."
+    },
+    "support": {
+      "title": "Support Directory",
+      "screenLabel": "Support directory screen",
+      "subtitle": "Organizations that may help with claims, accommodations, and advocacy.",
+      "accessible": "Accessible",
+      "phoneIcon": "☎",
+      "openWebsiteLabel": "Open {{name}} website",
+      "website": "Website",
+      "suggestHeader": "Suggest a correction",
+      "suggestPlaceholder": "Org ID and your suggestion",
+      "submitSuggestion": "Submit suggestion"
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "subtitle": "Make the app work better for you",
+      "highContrast": "High Contrast",
+      "highContrastDesc": "Increases contrast for better readability",
+      "textSize": "Text Size",
+      "textSizeDesc": "Adjust text size throughout the app",
+      "screenReader": "Screen Reader Optimized",
+      "screenReaderDesc": "Optimizes content for screen readers",
+      "reduceMotion": "Reduce Motion",
+      "reduceMotionDesc": "Minimizes animations and transitions",
+      "focusIndicator": "Enhanced Focus Indicators",
+      "focusIndicatorDesc": "Makes keyboard navigation more visible",
+      "tapTarget": "Minimum Tap Target Size",
+      "tapTargetDesc": "Ensures buttons are easy to tap",
+      "dyslexiaFriendly": "Dyslexia-Friendly Font",
+      "dyslexiaFriendlyDesc": "Improves letter spacing and readability",
+      "plainLanguage": "Plain Language",
+      "plainLanguageDesc": "Uses simpler, clearer text",
+      "captions": "Captions Preferred",
+      "captionsDesc": "Shows captions when available",
+      "voiceMode": "Voice Mode",
+      "voiceModeDesc": "Enables voice navigation (beta)",
+      "dyslexia": "[T] settings.accessibility.dyslexia",
+      "dyslexiaDesc": "[T] settings.accessibility.dyslexiaDesc"
+    },
+    "language": {
+      "title": "Language",
+      "subtitle": "Choose your preferred language",
+      "english": "English",
+      "french": "Français",
+      "spanish": "Español"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Choose what alerts you receive",
+      "enabled": "Enable Notifications",
+      "enabledDesc": "Receive app notifications",
+      "quietHoursEnabled": "Quiet Hours Enabled",
+      "quietHoursEnabledDesc": "Silence push notifications during configured hours",
+      "quietHoursWindow": "Quiet Hours Window",
+      "quietHoursWindowDesc": "Current window",
+      "quietHoursStart": "Toggle Start Hour",
+      "quietHoursStartDesc": "Cycles through preset start times",
+      "quietHoursEnd": "Toggle End Hour",
+      "quietHoursEndDesc": "Cycles through preset end times",
+      "sound": "Notification Sound",
+      "soundDesc": "Play sound with notifications",
+      "vibration": "Vibration",
+      "vibrationDesc": "Vibrate for notifications",
+      "emergency": "Emergency Alerts",
+      "emergencyDesc": "Critical safety notifications",
+      "wellness": "Wellness Reminders",
+      "wellnessDesc": "Daily wellness check-ins",
+      "moodNudges": "Mood Nudges",
+      "moodNudgesDesc": "Evening reminder to log how you feel",
+      "events": "Event Reminders",
+      "eventsDesc": "Upcoming event notifications"
+    },
+    "bookmarks": {
+      "title": "Bookmarks",
+      "subtitle": "Save quick links to app features",
+      "description": "Add bookmarks to quickly open frequently used tools and screens.",
+      "search": "Search or filter available routes",
+      "searchPlaceholder": "Type to filter suggestions",
+      "suggestions": "Suggestions",
+      "addSuggestion": "Add bookmark for",
+      "route": "Route Path",
+      "routePlaceholder": "e.g. /(tabs)/resources/index",
+      "label": "Label",
+      "labelPlaceholder": "My Resources",
+      "add": "Add Bookmark",
+      "remove": "Remove bookmark",
+      "empty": "No bookmarks yet.",
+      "clearAll": "Clear All",
+      "errEmptyRoute": "Route required",
+      "errInvalid": "Route not bookmarkable",
+      "errDuplicate": "Already bookmarked"
+    },
+    "emergency": {
+      "title": "Emergency Wallet Card",
+      "subtitle": "Quick access to important information",
+      "description": "Create a digital emergency card with your key information for quick access when needed",
+      "openLabel": "[T] settings.emergency.openLabel",
+      "manage": "[T] settings.emergency.manage"
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "subtitle": "Control your data and security",
+      "passcode": "Require Passcode",
+      "passcodeDesc": "Lock app with passcode",
+      "autoLock": "Auto-Lock Timeout",
+      "autoLockDesc": "Minutes before app locks",
+      "analytics": "Opt Out of Analytics",
+      "analyticsDesc": "Don't share usage data"
+    },
+    "account": {
+      "title": "Account Management",
+      "subtitle": "Manage your profile and preferences",
+      "displayName": "Display Name",
+      "displayNamePlaceholder": "Enter display name",
+      "changePhoto": "Change Profile Picture",
+      "updateName": "Update Name",
+      "resetPassword": "Send Password Reset Email",
+      "resetPasswordSent": "Email Sent",
+      "resetPasswordSentDesc": "Check your inbox for reset instructions.",
+      "resetPasswordFailed": "Reset Failed",
+      "password": "Change Password",
+      "preferences": "Preferences",
+      "delete": "Delete Account",
+      "deleteConfirmTitle": "Delete Account",
+      "deleteConfirmBody": "This will permanently delete your account. This cannot be undone.",
+      "deleteConfirmPasswordTitle": "Confirm Deletion",
+      "deleteConfirmPasswordBody": "Enter your password to permanently delete your account.",
+      "deleted": "Account deleted",
+      "deleteFailed": "Delete failed",
+      "passwordPlaceholder": "Password",
+      "reauthFailed": "Re-authentication failed",
+      "confirmDelete": "Confirm Delete",
+      "updatedName": "[T] settings.account.updatedName",
+      "photoUpdated": "[T] settings.account.photoUpdated",
+      "guestNotice": "[T] settings.account.guestNotice",
+      "createAccount": "[T] settings.account.createAccount",
+      "photo": "[T] settings.account.photo",
+      "deleteNoPassword": "[T] settings.account.deleteNoPassword"
+    },
+    "emergencyWallet": {
+      "title": "[T] settings.emergencyWallet.title",
+      "subtitle": "[T] settings.emergencyWallet.subtitle",
+      "hide": "[T] settings.emergencyWallet.hide",
+      "show": "[T] settings.emergencyWallet.show"
     }
   },
   "settings": {
@@ -144,7 +340,17 @@
       "wellness": "Rappels de bien-être",
       "wellnessDesc": "Vérifications quotidiennes de bien-être",
       "events": "Rappels d'événements",
-      "eventsDesc": "Notifications d'événements à venir"
+      "eventsDesc": "Notifications d'événements à venir",
+      "quietHoursEnabled": "Quiet Hours Enabled",
+      "quietHoursEnabledDesc": "Silence push notifications during configured hours",
+      "quietHoursWindow": "Quiet Hours Window",
+      "quietHoursWindowDesc": "Current window",
+      "quietHoursStart": "Toggle Start Hour",
+      "quietHoursStartDesc": "Cycles through preset start times",
+      "quietHoursEnd": "Toggle End Hour",
+      "quietHoursEndDesc": "Cycles through preset end times",
+      "moodNudges": "Mood Nudges",
+      "moodNudgesDesc": "Evening reminder to log how you feel"
     },
     "emergency": {
       "title": "Carte d'urgence portefeuille",
@@ -198,11 +404,18 @@
       "subtitle": "Accès rapide aux infos médicales et contacts essentiels.",
       "hide": "Masquer la carte",
       "show": "Afficher la carte"
+    },
+    "wellness": "Wellness",
+    "mood": {
+      "nudges": "Mood Nudges",
+      "nudgesHelp": "Evening reminder to log mood if you skipped today."
     }
   },
   "admin": {
     "onlyTitle": "Administrateur uniquement",
-    "onlyDescription": "Vous devez être administrateur pour accéder à cette zone."
+    "onlyDescription": "Vous devez être administrateur pour accéder à cette zone.",
+    "pending": "[T] admin.pending",
+    "trash": "[T] admin.trash"
   },
   "bookmark": {
     "add": "Ajouter un signet",
@@ -222,7 +435,15 @@
     "toggleCreateEventFormClose": "Masquer le formulaire d'événement",
     "scheduleEventReminder": "Programmer le rappel de l'événement",
     "removeEventReminder": "Supprimer le rappel de l'événement",
-    "addToCalendar": "Ajouter au calendrier externe"
+    "addToCalendar": "Ajouter au calendrier externe",
+    "toggleMoodNudges": "Toggle mood nudges",
+    "tool": {
+      "coach": "Open Advocacy Coach tool",
+      "translator": "Open AI Translator tool",
+      "policy_simplifier": "Open Policy Simplifier tool",
+      "wellness_mood": "Open Mood Tracker tool",
+      "resources_search": "Open Resources Hub"
+    }
   },
   "eventsFeature": {
     "createTitle": "Créer événement",
@@ -292,7 +513,144 @@
       "subtitle": "Earn badges as you build healthy routines.",
       "title": "Achievements"
     },
-    "intro": "Créez des routines de soutien et suivez votre bien‑être."
+    "intro": "Créez des routines de soutien et suivez votre bien‑être.",
+    "hub": {
+      "title": "Wellness & Recovery",
+      "subtitle": "Evidence-based tools for mood, pain, resilience, and recovery."
+    },
+    "breathing": "Breathing",
+    "dbt": {
+      "title": "DBT Skill Matcher",
+      "desc": "Instant skill suggestions for current emotion.",
+      "sad": "Sad",
+      "angry": "Angry",
+      "anxious": "Anxious",
+      "overwhelmed": "Overwhelmed",
+      "numb": "Numb"
+    },
+    "dreams": {
+      "title": "Dream Tracker & Interpreter",
+      "desc": "Log dreams and get symbolic interpretations.",
+      "placeholder": "Describe your dream..."
+    },
+    "ambience": {
+      "title": "Ambience Sync AI",
+      "desc": "Match background, color, soundscape to your mood.",
+      "current": "Suggestion: {{palette}}, {{soundscape}}, {{brightness}}",
+      "apply": "Apply in app"
+    },
+    "opposite": {
+      "title": "Opposite Action Companion",
+      "desc": "When emotions suggest unhelpful actions, try the opposite in small, safe steps.",
+      "what": "Name the emotion and urge.",
+      "check": "Check the facts: Is the urge justified?",
+      "choose": "Choose a small opposite action.",
+      "do": "Do it briefly. Notice the effect."
+    },
+    "acceptance": {
+      "title": "Radical Acceptance",
+      "desc": "A brief guide to reduce suffering by accepting reality as it is, while taking wise action.",
+      "line1": "This moment is as it is (not approval).",
+      "line2": "Name what’s in your control and what isn’t.",
+      "line3": "Take the next kind action within your control."
+    },
+    "cbt": {
+      "title": "CBT Virtual Coach",
+      "desc": "Reframe thoughts with evidence.",
+      "thought": "Automatic thought",
+      "evidenceFor": "Evidence supporting",
+      "evidenceAgainst": "Evidence against",
+      "generate": "Generate",
+      "alt": "Alternate view",
+      "prompt": "Given",
+      "consider": "consider evidence",
+      "try": "Try a balanced statement."
+    },
+    "sleepReframe": {
+      "title": "Sleep Reframe",
+      "desc": "Support better sleep with kind, practical reframes and routines.",
+      "tip1": "Can’t sleep → It’s okay to rest quietly; rest still helps.",
+      "tip2": "If awake >20m, reset: dim lights, gentle stretch, return.",
+      "tip3": "Anchor wake time; short daytime rest if needed."
+    },
+    "painForecast": {
+      "title": "Pain Forecast",
+      "desc": "Simple trend-based suggestions for pacing.",
+      "avg7d": "7‑day average pain: {{n}}",
+      "trend": "Trend: {{t}}",
+      "next": "Next 3 days",
+      "tips": "Tips"
+    },
+    "micro": {
+      "title": "Micro‑Movement Coach",
+      "desc": "Gentle, chair‑friendly movements. Stop if uncomfortable."
+    },
+    "energy": {
+      "title": "Daily Energy Coins",
+      "desc": "Set a daily budget and spend coins on tasks. Pace kindly.",
+      "today": "Today: {{date}}",
+      "remaining": "Remaining coins: {{n}}",
+      "daily": "Daily coins",
+      "set": "Set",
+      "label": "Task label",
+      "cost": "Cost",
+      "spend": "Spend",
+      "reset": "Reset day",
+      "history": "History"
+    },
+    "distress": {
+      "title": "Distress Tolerance",
+      "desc": "Reduce crisis intensity with brief, practical skills. Adapt to your body.",
+      "tipp1": "T: Temperature — cool face/neck (safe cold pack).",
+      "tipp2": "I: Intense (gentle) exercise — brief walk, arm circles.",
+      "tipp3": "P: Paced breathing — 4 in, 6 out, 2–3 minutes.",
+      "tipp4": "P: Progressive relax — tense/release muscle groups."
+    },
+    "belief": {
+      "title": "Belief Strength Meter",
+      "desc": "Rate how strongly you believe a thought (0–100). Track change after a reframe.",
+      "thought": "Thought",
+      "rating": "Belief strength (0–100)",
+      "now": "Now: {{n}}",
+      "after": "After a reframe, consider if strength shifts",
+      "hint": "Tip: pair with CBT Coach to generate reframes.",
+      "measure": "Measure"
+    },
+    "mini": {
+      "title": "CBT Mini‑Games",
+      "desc": "Quick grounding games to shift attention and calm.",
+      "fiveSenses": "5‑4‑3‑2‑1 grounding (senses).",
+      "nameColors": "Name colors in the room.",
+      "countBack": "Count backwards by 7s from 100."
+    },
+    "triggers": {
+      "title": "Trigger Detector",
+      "desc": "Suggests possible correlations from recent logs.",
+      "maybe": "Possible trigger",
+      "none": "No strong correlations found. Keep logging."
+    },
+    "harm": {
+      "title": "Harm Reduction Guide",
+      "desc": "Practical steps to reduce harm and increase safety.",
+      "plan": "Make a safety plan and keep it visible.",
+      "delay": "Delay + Distract: set a 10‑minute timer and switch tasks.",
+      "connection": "Connection: text a friend or peer support.",
+      "crisis": "Crisis: know local lines and emergency steps."
+    },
+    "acceptFn": {
+      "title": "Acceptance & Function",
+      "desc": "Track acceptance and daily functioning to notice supportive patterns.",
+      "date": "Date (YYYY-MM-DD)",
+      "acceptance": "Acceptance (0–10)",
+      "function": "Function (0–10)",
+      "note": "Note (optional)",
+      "recent": "Recent"
+    },
+    "resilience": {
+      "title": "[T] wellness.resilience.title",
+      "desc": "[T] wellness.resilience.desc",
+      "points": "[T] wellness.resilience.points"
+    }
   },
   "resources": {
     "tools": {
@@ -358,7 +716,40 @@
       "recordingStopped": "Enregistrement arrêté",
       "who": "Qui",
       "summary": "Résumé",
-      "audio": "Audio"
+      "audio": "Audio",
+      "show": "Show",
+      "save": "Save",
+      "saveAll": "Save All",
+      "processQueue": "Process Queue",
+      "load": "Load",
+      "loadMore": "Load More",
+      "openQueue": "Open Upload Queue",
+      "cloudItems": "Cloud items",
+      "deleteAll": "Delete All",
+      "deleteSelected": "Delete Selected",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "filter": "quick filter",
+      "errorTitle": "[T] common.errorTitle",
+      "ok": "[T] common.ok",
+      "hidden": "[T] common.hidden",
+      "shown": "[T] common.shown",
+      "copyAll": "[T] common.copyAll",
+      "share": "[T] common.share",
+      "exportDoc": "[T] common.exportDoc",
+      "reset": "[T] common.reset",
+      "loading": "[T] common.loading",
+      "edit": "[T] common.edit",
+      "previewImage": "[T] common.previewImage",
+      "closePreview": "[T] common.closePreview",
+      "preview": "[T] common.preview",
+      "copied": "[T] common.copied",
+      "copy": "[T] common.copy",
+      "pdf": "[T] common.pdf",
+      "doc": "[T] common.doc",
+      "success": "[T] common.success",
+      "error": "[T] common.error",
+      "working": "[T] common.working"
     },
     "timeline": {
       "title": "Chronologie du dossier",
@@ -454,8 +845,82 @@
         "medical": "médical",
         "decision": "décision",
         "payment": "paiement",
-        "email": "courriel"
-      }
+        "email": "courriel",
+        "mood": {
+          "nudge": {
+            "evening": {
+              "title": "Log mood?",
+              "body": "Quick 5‑second check‑in helps spot trends. {{streak}} day streak?"
+            }
+          },
+          "streak": {
+            "milestone": {
+              "title": "Mood streak milestone!",
+              "body": "You've logged {{streak}} days in a row. Small steps add up."
+            }
+          }
+        },
+        "evidence": {
+          "reminder": {
+            "daily": {
+              "title": "Add today's evidence?",
+              "body": "You have {{count}} new notes/files to capture before the day ends."
+            }
+          },
+          "upload": {
+            "failed": {
+              "title": "Uploads queued",
+              "body": "{{queued}} item(s) waiting for connection. We'll retry soon."
+            }
+          }
+        },
+        "accountability": {
+          "case": {
+            "created": {
+              "title": "Case created",
+              "body": "New case: {{case}}"
+            },
+            "updated": {
+              "title": "Case updated",
+              "body": "Recent activity on: {{case}}"
+            }
+          },
+          "deadline": {
+            "upcoming": {
+              "title": "Deadline approaching",
+              "body": "{{case}} due in {{days}} day(s). Review and act."
+            }
+          }
+        }
+      },
+      "attachFile": "Attach file",
+      "attachFiles": "Attach files",
+      "attachPhotos": "Attach photos",
+      "photosPermission": "Photos permission required.",
+      "imagePickerUnavailable": "Image picker not available in this build.",
+      "saveCloud": "Save to Cloud",
+      "noteSaved": "Note saved to your cloud locker.",
+      "queuedUpload": "Queued to upload later.",
+      "saveAllDone": "Finished saving notes (failures queued).",
+      "saveSomeFailed": "Could not save some items.",
+      "loadedCount": "{{count}} items loaded.",
+      "loadCloudFailed": "Load failed",
+      "loadCloudFailedBody": "Unable to load cloud items",
+      "loadMoreFailed": "Load failed",
+      "loadMoreFailedBody": "Unable to load more",
+      "csvSavedCache": "CSV saved to cache.",
+      "csvSavedCacheNoShare": "CSV saved to cache (sharing unavailable).",
+      "exportFailedTitle": "Export failed",
+      "exportFailedBodyCsv": "Could not create CSV.",
+      "deleteAllConfirmTitle": "Delete all?",
+      "deleteAllConfirmBody": "This will delete all cloud items in your Evidence Locker.",
+      "deletedAll": "All cloud items deleted.",
+      "deleteAllFailed": "Delete failed",
+      "deleteAllFailedBody": "Unable to delete all items.",
+      "deletedSelected": "Selected items deleted.",
+      "deleteSelectedFailed": "Delete failed",
+      "deleteSelectedFailedBody": "Unable to delete selected items.",
+      "previewUnavailable": "Preview unavailable"
     },
     "gallery": {
       "title": "Galerie de modèles",
@@ -771,7 +1236,9 @@
       "linkCppd": "RPC-I (CPP-D)",
       "linkEmploymentStandards": "Normes d'emploi (ON)",
       "placeholder": "Collez ou tapez un extrait de politique / décision à simplifier.",
-      "subtitle": "Guides en langage clair sur l'accessibilité, les droits et prestations."
+      "subtitle": "Guides en langage clair sur l'accessibilité, les droits et prestations.",
+      "obligations": "Obligations",
+      "suggestedActions": "Suggested Actions"
     },
     "collective": {
       "title": " Collective Legal Action Hub",
@@ -887,7 +1354,10 @@
           "b2": "Joindre seulement preuves clés",
           "b3": "Suivre dates et échéances"
         }
-      }
+      },
+      "complete": "complete",
+      "deadlineInDays": "Complete within {{d}} days",
+      "evidenceNeeded": "Evidence needed"
     },
     "disclaimer": {
       "notLegal": "Éducatif uniquement — pas un avis juridique. Vérifiez sources officielles.",
@@ -912,7 +1382,22 @@
     "casesTitle": "Dossiers de redevabilité",
     "casesEmpty": "Aucun dossier pour l'instant. Utilisez le coach pour en créer un.",
     "unknownTarget": "Cible inconnue",
-    "latestEvent": "Dernier événement"
+    "latestEvent": "Dernier événement",
+    "generateHint": "Creates a plain-language plan you can review and edit.",
+    "detectHint": "Checks for potential rights or policy violations based on your issue.",
+    "detectError": "Could not run detection.",
+    "detected": "Potential violations detected",
+    "draftHint": "Produces a polite, assertive letter you can copy or export.",
+    "draftError": "Could not draft a letter.",
+    "letter": "Letter draft",
+    "trackHint": "Record dates and responses to keep a paper trail.",
+    "tracked": "Tracked",
+    "responseRecorded": "Response recorded",
+    "responseNoted": "Response noted",
+    "allyBrief": "Ally Brief",
+    "allyHint": "Generate a short brief to help allies support you.",
+    "allyError": "Could not generate ally brief.",
+    "noneFound": "None found"
   },
   "network": {
     "online": "En ligne",
@@ -963,7 +1448,17 @@
     "generateHint": "Générer un instantané local à partir des données en cache.",
     "copyLabel": "Copier l'instantané",
     "shareLabel": "Partager le fichier d'instantané",
-    "resetLabel": "Réinitialiser l'instantané"
+    "resetLabel": "Réinitialiser l'instantané",
+    "leaveCampaign": "Leave {{title}}",
+    "supportCampaign": "Support this campaign",
+    "openCampaignRoom": "Open campaign room",
+    "saveCampaign": "Save to favorites",
+    "removeCampaign": "Remove from favorites",
+    "toggleCreateEventFormOpen": "Show create event form",
+    "toggleCreateEventFormClose": "Hide create event form",
+    "scheduleEventReminder": "Schedule event reminder",
+    "removeEventReminder": "Remove event reminder",
+    "addToCalendar": "Add to external calendar"
   },
   "rightsChecker": {
     "title": "Automated Rights Checker",
@@ -1091,7 +1586,23 @@
     "doc": ".doc",
     "success": "Succès",
     "error": "Erreur",
-    "working": "Traitement..."
+    "working": "Traitement...",
+    "all": "All",
+    "attachUnavailableTitle": "Attach unavailable",
+    "attachUnavailableBody": "Document picker not available in this build.",
+    "attachMultiUnavailable": "Multi-file picker not available in this build.",
+    "permissionDenied": "Permission denied",
+    "saved": "Saved",
+    "saveFailed": "Save failed",
+    "search": "Search",
+    "clearSearch": "Clear search",
+    "cloud": "Cloud",
+    "open": "Open",
+    "close": "Close",
+    "add": "Add",
+    "next": "Next",
+    "deleted": "[T] common.deleted",
+    "submit": "[T] common.submit"
   },
   "test": {
     "badge": "BadgeMarque"
@@ -1334,5 +1845,98 @@
     "analyzing": " bodyMechanics.analyzing",
     "suggestions": " bodyMechanics.suggestions",
     "noSuggestionsYet": " bodyMechanics.noSuggestionsYet"
+  },
+  "mood": {
+    "title": "Mood Tracker",
+    "subtitle": "Log how you feel to spot trends.",
+    "notePlaceholder": "Optional note",
+    "save": "Save",
+    "today": "Today",
+    "emptyToday": "No entries yet today.",
+    "avg7d": "7d Avg:",
+    "total": "Total entries:",
+    "veryLow": "Very Low",
+    "low": "Low",
+    "neutral": "Neutral",
+    "good": "Good",
+    "great": "Great",
+    "addEntryLabel": "Add mood entry",
+    "scoreLabel": "Mood score {{score}}"
+  },
+  "homeGuide": {
+    "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
+    "snapshotPlaceholder": "(Mood tracking available on Wellness tab)",
+    "header": "Today's Guide",
+    "snapshot": "Snapshot",
+    "suggested": "Suggested",
+    "open": "Open",
+    "noSuggestions": "No suggestions yet",
+    "mood": {
+      "trendImproving": "Mood improving (last week)",
+      "trendDeclining": "Mood declining (last week)",
+      "trendStable": "Mood stable (last week)",
+      "streak": "Mood log streak: {{days}}d",
+      "nudge": "Evening check-in? Log how you feel.",
+      "nudgeAction": "Log Mood",
+      "deltaPositive": "Up {{delta}} in the last 24h",
+      "deltaNegative": "Down {{delta}} in the last 24h",
+      "deltaNeutral": "No change in the last 24h"
+    },
+    "feedback": {
+      "up": "Helpful suggestion",
+      "down": "Not relevant"
+    },
+    "reason": {
+      "novelty": "New",
+      "rotation": "Rotation",
+      "engagement_gap": "Inactive",
+      "importance": "Important",
+      "streak": "Streak",
+      "recentUse": "Recent",
+      "tod_morning": "Morning Boost",
+      "tod_midday": "Midday Focus",
+      "tod_evening": "Evening Resource",
+      "default": "Suggested"
+    },
+    "tool": {
+      "coach": "Advocacy Coach",
+      "translator": "AI Translator",
+      "policy_simplifier": "Policy Simplifier",
+      "wellness_mood": "Mood Tracker",
+      "resources_search": "Resources Hub",
+      "default": "Tool"
+    }
+  },
+  "translator": {
+    "simplify": "Simplify",
+    "summary": "Plain Summary",
+    "keyTerms": "Key Terms",
+    "deadlines": "Deadlines",
+    "actions": "Actions",
+    "fullText": "Full Simplified Text",
+    "copiedTitle": "Copied",
+    "copiedBody": "Summary copied.",
+    "pdf": "PDF",
+    "doc": ".doc",
+    "shareTitle": "Translator Output",
+    "shareTitleDoc": "Translator Output (.doc)",
+    "pdfUnavailableTitle": "PDF unavailable",
+    "pdfUnavailableBody": "Install expo-print in a dev build to export PDFs.",
+    "exportFailedTitle": "Export failed",
+    "exportFailedBody": "Could not create file.",
+    "subtitle": "[T] translator.subtitle",
+    "placeholder": "[T] translator.placeholder"
+  },
+  "auth": {
+    "registerTitle": "Register",
+    "registerScreen": "Register screen",
+    "displayName": "Display Name",
+    "email": "Email",
+    "password": "Password",
+    "createAccount": "Create Account",
+    "missingFields": "All fields required",
+    "loginTitle": "Login",
+    "loginScreen": "Login screen",
+    "login": "Login"
   }
 }
