@@ -173,6 +173,9 @@ export default function TabsLayout() {
         <Tabs.Screen name="community/mutual-chat" options={{ href: null }} />
         <Tabs.Screen name="community/testers-chat" options={{ href: null }} />
 
+  {/* Wellness special routes */}
+  <Tabs.Screen name="wellness.mood" options={{ href: null }} />
+
         {/* Misc */}
         <Tabs.Screen name="events/[id]" options={{ href: null }} />
         <Tabs.Screen name="podcasts/[id]" options={{ href: null }} />
