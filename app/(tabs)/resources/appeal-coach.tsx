@@ -1,22 +1,21 @@
-import * as FileSystem from "expo-file-system";
 import React from "react";
 import {
-  Alert,
-  FlatList,
-  KeyboardAvoidingView,
-  Platform,
-  Pressable,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  View
+    Alert,
+    FlatList,
+    KeyboardAvoidingView,
+    Platform,
+    Pressable,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View
 } from "react-native";
 
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -124,10 +123,21 @@ export default function AppealCoach() {
       .map((m) => `${m.role === "user" ? "You" : "Coach"}: ${m.text}`)
       .join("\n\n");
     try {
-      // Write to temp file for better share compatibility
-      const path = FileSystem.cacheDirectory + `appeal_coach_${Date.now()}.txt`;
-      await FileSystem.writeAsStringAsync(path, transcript, { encoding: FileSystem.EncodingType.UTF8 });
-      await Share.share({ url: path, message: transcript, title: t("appealCoach.transcriptTitle", "Appeal Coach Transcript") });
+      // Dynamic import to avoid crashing when expo-file-system isn't present in dev client
+      const FS: any = await import("expo-file-system");
+      const cacheDir: string | undefined = FS?.cacheDirectory || FS?.default?.cacheDirectory;
+      const write = FS?.writeAsStringAsync || FS?.default?.writeAsStringAsync;
+      const enc = FS?.EncodingType?.UTF8 || FS?.default?.EncodingType?.UTF8;
+      if (!cacheDir || !write) throw new Error("fs-missing");
+      const path = cacheDir + `appeal_coach_${Date.now()}.txt`;
+      await write(path, transcript, enc ? { encoding: enc } : undefined);
+      // Prefer expo-sharing when available, else fall back to RN Share
+      const Sharing = await import("expo-sharing").catch(() => null as any);
+      if (Sharing?.isAvailableAsync && (await Sharing.isAvailableAsync())) {
+        await Sharing.shareAsync(path);
+      } else {
+        await Share.share({ url: path, message: transcript, title: t("appealCoach.transcriptTitle", "Appeal Coach Transcript") });
+      }
     } catch {
       Alert.alert("Share failed", "Could not open the share sheet.");
     }
@@ -174,7 +184,6 @@ export default function AppealCoach() {
               style={[styles.sendBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
               accessibilityRole="button"
               accessibilityLabel={t("appealCoach.share", "Share conversation transcript")}
-              accessibilityHint={t("appealCoach.shareHint", "Opens the system share sheet with the transcript file.")}
             >
               <Text style={[styles.sendText, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("appealCoach.shareBtn", "Share")}</Text>
             </Pressable>

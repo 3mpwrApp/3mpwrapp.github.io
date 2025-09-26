@@ -1,4 +1,3 @@
-import * as Clipboard from 'expo-clipboard';
 import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 
@@ -64,7 +63,15 @@ export default function EvidenceChecklist() {
     return `${t('templates.checklist.summaryHeader','Evidence Checklist Summary')}\nType: ${kind}\nCompleted: ${completed.current.size}/${lines.length} (${progressPct}%)\n\n` + lines.map((l,i)=>`[${completed.current.has(i)?'x':' '}] ${l}`).join("\n");
   };
 
-  const copySummary = async () => { try { await Clipboard.setStringAsync(buildSummary()); Alert.alert(t('templates.checklist.copied','Copied'), t('templates.checklist.copiedBody','Checklist summary copied.')); } catch { Alert.alert(t('templates.checklist.clipboardNA','Clipboard not available'), t('templates.checklist.clipboardNABody','Install expo-clipboard in a dev build to enable copy.')); } };
+  const copySummary = async () => {
+    try {
+      const Clipboard = await import('expo-clipboard');
+      await Clipboard.setStringAsync(buildSummary());
+      Alert.alert(t('templates.checklist.copied','Copied'), t('templates.checklist.copiedBody','Checklist summary copied.'));
+    } catch {
+      Alert.alert(t('templates.checklist.clipboardNA','Clipboard not available'), t('templates.checklist.clipboardNABody','Install expo-clipboard in a dev build to enable copy.'));
+    }
+  };
   const exportSummary = async () => { try { const FS = await import('expo-file-system'); const Share = await import('expo-sharing').catch(()=>null); const path = FS.cacheDirectory + `evidence_checklist_${Date.now()}.txt`; await FS.writeAsStringAsync(path, buildSummary()); if(Share?.isAvailableAsync && await Share.isAvailableAsync()) await Share.shareAsync(path); else Alert.alert(t('templates.checklist.shareUnavailable','Share unavailable'), t('templates.checklist.shareUnavailableBody','System share sheet not available.')); } catch { Alert.alert(t('templates.checklist.shareError','Share failed'), t('templates.checklist.shareErrorBody','Could not share checklist file.')); } };
   const reset = () => { completed.current.clear(); force(x=>x+1); announce(t('templates.checklist.resetAnnounce','Checklist reset')); };
 

@@ -1,4 +1,4 @@
-import * as Clipboard from "expo-clipboard";
+// Clipboard is imported dynamically where used to avoid crashing dev clients without the native module.
 import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
@@ -47,7 +47,7 @@ export default function TemplatesGallery() {
       .replaceAll("[date]", vars.date || "[date]");
 
   const copyText = async (text: string) => {
-    try { await Clipboard.setStringAsync(text); announce("Copied"); } catch {}
+    try { const Clipboard = await import("expo-clipboard"); await Clipboard.setStringAsync(text); announce("Copied"); } catch {}
   };
 
   const saveDraft = async (title: string, body: string) => {

@@ -1,4 +1,3 @@
-import * as FileSystem from 'expo-file-system';
 import React from 'react';
 import { Alert, Share, StyleSheet, Text, View } from 'react-native';
 
@@ -52,8 +51,13 @@ export default function BodyMechanicsAdvisor() {
     if (!advice.length) return;
     const content = `Body Mechanics Suggestions\n\n` + advice.map(a=>`• ${a}`).join('\n');
     try {
-      const path = FileSystem.cacheDirectory + `body_mechanics_${Date.now()}.txt`;
-      await FileSystem.writeAsStringAsync(path, content, { encoding: FileSystem.EncodingType.UTF8 });
+      const FS: any = await import('expo-file-system');
+      const cacheDir: string | undefined = FS?.cacheDirectory || FS?.default?.cacheDirectory;
+      const write = FS?.writeAsStringAsync || FS?.default?.writeAsStringAsync;
+      const enc = FS?.EncodingType?.UTF8 || FS?.default?.EncodingType?.UTF8;
+      if (!cacheDir || !write) throw new Error('fs-missing');
+      const path = cacheDir + `body_mechanics_${Date.now()}.txt`;
+      await write(path, content, enc ? { encoding: enc } : undefined);
       await Share.share({ url: path, message: content, title: t('bodyMechanics.shareTitle','Body Mechanics Suggestions') });
     } catch { Alert.alert(t('bodyMechanics.shareFailTitle','Share failed'), t('bodyMechanics.shareFailMsg','Could not share suggestions.')); }
   };

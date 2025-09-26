@@ -1,4 +1,4 @@
-import * as Clipboard from "expo-clipboard";
+// Clipboard is imported dynamically where used to avoid crashing dev clients without the native module.
 import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
@@ -43,7 +43,7 @@ export default function AccommodationLetter() {
   const placeholderColor = palette.text + "88";
 
   const copyLetter = async () => {
-    try { await Clipboard.setStringAsync(preview); Alert.alert(t("templates.letters.common.copied","Copied"), t("templates.letters.common.copiedBody","Letter copied to clipboard.")); }
+    try { const Clipboard = await import("expo-clipboard"); await Clipboard.setStringAsync(preview); Alert.alert(t("templates.letters.common.copied","Copied"), t("templates.letters.common.copiedBody","Letter copied to clipboard.")); }
     catch { Alert.alert(t("templates.letters.common.clipboardNA","Clipboard not available"), t("templates.letters.common.clipboardNABody","Install expo-clipboard in a dev build to enable copy.")); }
   };
 

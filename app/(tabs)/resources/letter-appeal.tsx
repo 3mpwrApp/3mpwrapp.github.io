@@ -1,4 +1,4 @@
-import * as Clipboard from "expo-clipboard";
+// Clipboard is imported dynamically where used to avoid crashing dev clients without the native module.
 import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
@@ -42,7 +42,7 @@ export default function AppealLetter() {
     `Sincerely,\n${name || "[Your Name]"}\n${contact || "[Phone/Email]"}`
   ), [claim, decisionDate, reasons, appealArgs, name, contact]);
 
-  const copyLetter = async () => { try { await Clipboard.setStringAsync(preview); Alert.alert(t("templates.letters.common.copied","Copied"), t("templates.letters.common.copiedBody","Letter copied to clipboard.")); } catch { Alert.alert(t("templates.letters.common.clipboardNA","Clipboard not available"), t("templates.letters.common.clipboardNABody","Install expo-clipboard in a dev build to enable copy.")); } };
+  const copyLetter = async () => { try { const Clipboard = await import("expo-clipboard"); await Clipboard.setStringAsync(preview); Alert.alert(t("templates.letters.common.copied","Copied"), t("templates.letters.common.copiedBody","Letter copied to clipboard.")); } catch { Alert.alert(t("templates.letters.common.clipboardNA","Clipboard not available"), t("templates.letters.common.clipboardNABody","Install expo-clipboard in a dev build to enable copy.")); } };
   const insertTrackers = async () => { const ins = await buildCombinedEvidenceSummary(); try { trackEvent("letter_insert_from_trackers", { type: "appeal" }); } catch {} setAppealArgs(p=> (p? p+"\n\n":"")+ins); };
   const exportPdf = async () => { try { const mod = await import("expo-print"); const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">${preview.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</pre>`; const { uri } = await mod.printToFileAsync({ html }); const Share = await import("expo-sharing").catch(()=>null); if (Share?.isAvailableAsync) { if (await Share.isAvailableAsync()) await Share.shareAsync(uri); else Alert.alert(t("templates.letters.common.shareUnavailable","Share unavailable"), t("templates.letters.common.shareUnavailableBody","System share sheet not available.")); } } catch { Alert.alert(t("templates.letters.common.pdfNA","PDF not available"), t("templates.letters.common.pdfNABody","Install expo-print in a dev build to export PDFs.")); } };
   const exportDoc = async () => {

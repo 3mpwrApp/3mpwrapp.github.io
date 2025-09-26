@@ -1,5 +1,7 @@
-import type { NetInfoState } from '@react-native-community/netinfo';
-import NetInfo from '@react-native-community/netinfo';
+// NetInfo is optional; in web or if native module isn't installed, we fallback to 'online'.
+type NetInfoState = { isConnected?: boolean; isInternetReachable?: boolean };
+let NetInfo: any = null;
+try { NetInfo = require('@react-native-community/netinfo').default; } catch {}
 import React from 'react';
 import type { AccessibilityRole } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
@@ -12,12 +14,13 @@ export default function OnlineStatusBadge() {
   const { t } = useTranslation();
   const [online, setOnline] = React.useState<boolean | null>(null);
   React.useEffect(() => {
+    if (!NetInfo) { setOnline(true); return; }
     const handler = (state: NetInfoState) => {
       setOnline(!!state.isConnected && !!state.isInternetReachable);
     };
-    const sub = NetInfo.addEventListener(handler);
-    NetInfo.fetch().then(handler).catch(() => setOnline(false));
-    return () => { sub && sub(); };
+    const sub = NetInfo.addEventListener?.(handler);
+    NetInfo.fetch?.().then(handler).catch(() => setOnline(false));
+    return () => { try { sub && sub(); } catch {} };
   }, []);
   const s = styles(palette, online);
   const label = online === null ? t('network.checking','Checking...') : online ? t('network.online','Online') : t('network.offline','Offline (local only)');

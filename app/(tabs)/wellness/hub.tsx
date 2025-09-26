@@ -21,16 +21,16 @@ export default function WellnessHub() {
         <Card href="/wellness/opposite-action" title={t('wellness.opposite.title','Opposite Action Companion')} desc={t('wellness.opposite.desc','Try small, safe opposite actions.')} />
         <Card href="/wellness/radical-acceptance" title={t('wellness.acceptance.title','Radical Acceptance')} desc={t('wellness.acceptance.desc','Reduce suffering; take wise action.')} />
         <Card href="/wellness/cbt-coach" title={t('wellness.cbt.title','CBT Virtual Coach')} desc={t('wellness.cbt.desc','Reframe thoughts with evidence.')} />
-        <Card href="/wellness/sleep-reframe" title={t('wellness.sleepReFrame.title','Sleep Reframe')} desc={t('wellness.sleepReFrame.desc','Kind reframes and routines for better sleep.')} />
+        <Card href="/wellness/sleep-reframe" title={t('wellness.sleepReframe.title','Sleep Reframe')} desc={t('wellness.sleepReframe.desc','Kind reframes and routines for better sleep.')} />
         <Card href="/wellness/pain-forecast" title={t('wellness.painForecast.title','Pain Forecast')} desc={t('wellness.painForecast.desc','Simple trend-based suggestions for pacing.')} />
-        <Card href="/wellness/micro-movement" title={t('wellness.micro.title','Micro‑Movement Coach')} desc={t('wellness.micro.desc','Gentle, chair‑friendly movement ideas.')} />
+        <Card href="/wellness/micro-movement" title={t('wellness.micro.title','Micro\u2011Movement Coach')} desc={t('wellness.micro.desc','Gentle, chair\u2011friendly movement ideas.')} />
         <Card href="/wellness/energy-coins" title={t('wellness.energy.title','Daily Energy Coins')} desc={t('wellness.energy.desc','Set a budget and spend coins on tasks.')} />
         <Card href="/wellness/distress-tolerance" title={t('wellness.distress.title','Distress Tolerance')} desc={t('wellness.distress.desc','Brief skills to reduce crisis intensity.')} />
         <Card href="/wellness/belief-meter" title={t('wellness.belief.title','Belief Strength Meter')} desc={t('wellness.belief.desc','Rate belief strength and track change.')} />
-        <Card href="/wellness/cbt-mini-games" title={t('wellness.mini.title','CBT Mini‑Games')} desc={t('wellness.mini.desc','Quick grounding games to calm.')} />
+        <Card href="/wellness/cbt-mini-games" title={t('wellness.mini.title','CBT Mini\u2011Games')} desc={t('wellness.mini.desc','Quick grounding games to calm.')} />
         <Card href="/wellness/trigger-detector" title={t('wellness.triggers.title','Trigger Detector')} desc={t('wellness.triggers.desc','Suggest correlations from logs.')} />
         <Card href="/wellness/harm-reduction" title={t('wellness.harm.title','Harm Reduction Guide')} desc={t('wellness.harm.desc','Practical steps to increase safety.')} />
-        <Card href="/wellness/acceptance-function" title={t('wellness.acceptFn.title','Acceptance & Function')} desc={t('wellness.acceptFn.desc','Track acceptance and function.')}/>        
+        <Card href="/wellness/acceptance-function" title={t('wellness.acceptFn.title','Acceptance & Function')} desc={t('wellness.acceptFn.desc','Track acceptance and function.')}/>
       </View>
     </ScrollView>
   );
