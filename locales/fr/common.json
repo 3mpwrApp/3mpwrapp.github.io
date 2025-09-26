@@ -408,7 +408,7 @@
       "hide": "Masquer la carte",
       "show": "Afficher la carte"
     },
-    "wellness": "Wellness",
+  "wellness": "Bien-être",
     "mood": {
       "nudges": "Mood Nudges",
       "nudgesHelp": "Evening reminder to log mood if you skipped today."
@@ -680,7 +680,7 @@
   },
   "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
   "filters": {
-    "all": "All",
+  "all": "Tout",
     "canada": "Canada",
     "work_financial": "Work & Financial",
     "tools_downloads": "Tools & Downloads",
