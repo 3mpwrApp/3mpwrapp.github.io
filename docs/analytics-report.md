@@ -1,20 +1,16 @@
 # Analytics Event Report
 
-Generated: 2025-09-26T22:24:51.685Z
+Generated: 2025-09-26T22:28:38.764Z
 
 ## Summary
 
-- Registry events: 22
+- Registry events: 23
 - Unique events referenced in code: 23
 - Total literal emissions (static scan): 29
-- Missing (used not registered): 1
+- Missing (used not registered): 0
 - Unused (registered not used): 0
 - Sensitive field occurrences (schema): 1
 - Classification counts: secret=1
-
-### Missing
-
-- assistant.quick_prompt
 
 ## Categories
 
@@ -49,7 +45,7 @@ Generated: 2025-09-26T22:24:51.685Z
 | tracker_add_entry | 2 | OK |
 | tracker_share | 2 | OK |
 | advocacy.ask.submitted | 1 | OK |
-| assistant.quick_prompt | 1 | MISSING |
+| assistant.quick_prompt | 1 | OK |
 | advocacy.world.view | 1 | OK |
 | campaign_create | 1 | OK |
 | campaign_leave | 1 | OK |

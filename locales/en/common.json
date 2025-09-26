@@ -360,6 +360,38 @@
       "hint": "Tap a card to open Google Maps"
     }
   },
+  "assistant": {
+    "hub": {
+      "title": "Assistant",
+      "subtitle": "Pick a tool below or return to your last task anytime.",
+      "screenLabel": "Assistant hub",
+      "selfCoach": "Self-Advocacy Coach",
+      "selfCoachDesc": "Ask questions and get next-step guidance",
+      "translator": "Advocate Translator",
+      "translatorDesc": "Turn your words into strong advocacy language",
+      "policy": "Policy Simplifier",
+      "policyDesc": "Summarize complex policy into plain language",
+      "gov": "Government Navigator",
+      "govDesc": "Find who to contact and what to say",
+      "case": "Case Interpreter",
+      "caseDesc": "Clarify forms, letters, and decisions",
+      "directory": "Support Directory",
+      "directoryDesc": "Connect with advocates and services",
+      "ally": "Ally Hub",
+      "allyDesc": "Coordinate actions with allies",
+      "quickPrompts": "Quick prompts",
+      "recent": "Recent",
+      "openRecent": "Open recent tool"
+    },
+    "prompt": {
+      "simplifyDecision": "Simplify a decision letter",
+      "exampleDecision": "Please simplify this decision letter and list deadlines:",
+      "callScript": "Draft a call script to HR",
+      "exampleCall": "Draft a brief call script to HR asking for accommodations:",
+      "policyPlain": "Explain this policy in plain language",
+      "examplePolicy": "Summarize key points and actions from this policy:"
+    }
+  },
   "accountability": {
     "title": "Accountability Coach",
     "subtitle": "Spot violations, draft letters, track responses, and rally allies — in plain language.",
@@ -525,7 +557,10 @@
       "voiceMode": "Voice Mode",
       "voiceModeDesc": "Enables voice navigation (beta)",
       "dyslexia": "Dyslexia-friendly font",
-      "dyslexiaDesc": "Improves letter spacing and readability"
+      "dyslexiaDesc": "Improves letter spacing and readability",
+      "assistantPill": "Show Assistant Pill",
+      "assistantPillDesc": "Floating shortcut to the Assistant hub",
+      "assistantDock": "Assistant Pill Position"
     },
     "language": {
       "title": "Language",
@@ -688,7 +723,9 @@
     "add": "Add",
     "next": "Next",
     "deleted": "[T] common.deleted",
-    "submit": "[T] common.submit"
+    "submit": "[T] common.submit",
+    "left": "Left",
+    "right": "Right"
   },
   "admin": {
     "onlyTitle": "Admin Only",
