@@ -163,6 +163,11 @@
       "function": "Function (0–10)",
       "note": "Note (optional)",
       "recent": "Recent"
+    },
+    "resilience": {
+      "title": "[T] wellness.resilience.title",
+      "desc": "[T] wellness.resilience.desc",
+      "points": "[T] wellness.resilience.points"
     }
   },
   "resources": {
@@ -198,9 +203,9 @@
       "finder": "Lawyer & Advocate Finder",
       "policy_simple": "Policy Simplifier",
       "ratings": "Disability Justice Ratings",
-  "self_coach": "Self‑Advocacy Coach",
-  "accountability": "Accountability Coach",
-  "accountability_cases": "Accountability Cases"
+      "self_coach": "Self‑Advocacy Coach",
+      "accountability": "Accountability Coach",
+      "accountability_cases": "Accountability Cases"
     },
     "disclaimer": {
       "notLegal": "Educational only — not legal advice. Check official sources.",
@@ -250,10 +255,30 @@
       "subtitle": "Micro‑lessons for confidence, clear expression, and assertiveness.",
       "defaultPrompt": "Ask for a 10‑minute break each hour due to pain",
       "lesson": {
-        "conf-1": { "title": "Confidence basics", "b1": "Breathe slow and low (4‑4‑4‑4)", "b2": "Grounded posture; release shoulders", "b3": "Prepare a goal sentence" },
-        "speak-1": { "title": "Speak clearly", "b1": "Short sentences; one idea at a time", "b2": "Ask to repeat/clarify", "b3": "Pause briefly before responding" },
-        "assert-1": { "title": "Health/work assertiveness", "b1": "Name the need: 'I need…'", "b2": "Briefly explain impact", "b3": "Offer options; invite collaboration" },
-        "docs-1": { "title": "Documentation", "b1": "Summarize call/meeting by email", "b2": "Attach only key evidence", "b3": "Track dates and deadlines" }
+        "conf-1": {
+          "title": "Confidence basics",
+          "b1": "Breathe slow and low (4‑4‑4‑4)",
+          "b2": "Grounded posture; release shoulders",
+          "b3": "Prepare a goal sentence"
+        },
+        "speak-1": {
+          "title": "Speak clearly",
+          "b1": "Short sentences; one idea at a time",
+          "b2": "Ask to repeat/clarify",
+          "b3": "Pause briefly before responding"
+        },
+        "assert-1": {
+          "title": "Health/work assertiveness",
+          "b1": "Name the need: 'I need…'",
+          "b2": "Briefly explain impact",
+          "b3": "Offer options; invite collaboration"
+        },
+        "docs-1": {
+          "title": "Documentation",
+          "b1": "Summarize call/meeting by email",
+          "b2": "Attach only key evidence",
+          "b3": "Track dates and deadlines"
+        }
       }
     },
     "collective": {
@@ -326,7 +351,12 @@
     },
     "world": {
       "title": "World Disability Map",
-      "filter": { "all": "All", "law": "Law", "protest": "Protest", "update": "Update" },
+      "filter": {
+        "all": "All",
+        "law": "Law",
+        "protest": "Protest",
+        "update": "Update"
+      },
       "hint": "Tap a card to open Google Maps"
     }
   },
@@ -356,7 +386,7 @@
     "responseRecorded": "Response recorded",
     "responseNoted": "Response noted",
     "ally": "Ally brief",
-  "allyBrief": "Ally Brief",
+    "allyBrief": "Ally Brief",
     "allyHint": "Generate a short brief to help allies support you.",
     "allyError": "Could not generate ally brief.",
     "casesTitle": "Accountability Cases",
@@ -365,7 +395,6 @@
     "unknownTarget": "Unknown target",
     "latestEvent": "Latest event"
   },
-  
   "home": {
     "title": "Welcome to Empowr",
     "subtitle": "Support. Advocacy. Empowerment.",
@@ -416,9 +445,9 @@
       "streak": "Mood log streak: {{days}}d",
       "nudge": "Evening check-in? Log how you feel.",
       "nudgeAction": "Log Mood",
-  "deltaPositive": "Up {{delta}} in the last 24h",
-  "deltaNegative": "Down {{delta}} in the last 24h",
-  "deltaNeutral": "No change in the last 24h"
+      "deltaPositive": "Up {{delta}} in the last 24h",
+      "deltaNegative": "Down {{delta}} in the last 24h",
+      "deltaNeutral": "No change in the last 24h"
     },
     "feedback": {
       "up": "Helpful suggestion",
@@ -461,7 +490,9 @@
     "pdfUnavailableTitle": "PDF unavailable",
     "pdfUnavailableBody": "Install expo-print in a dev build to export PDFs.",
     "exportFailedTitle": "Export failed",
-    "exportFailedBody": "Could not create file."
+    "exportFailedBody": "Could not create file.",
+    "subtitle": "[T] translator.subtitle",
+    "placeholder": "[T] translator.placeholder"
   },
   "settings": {
     "wellness": "Wellness",
@@ -634,32 +665,36 @@
     "delete": "Delete",
     "cancel": "Cancel",
     "filter": "quick filter",
-  "errorTitle": "Error",
-  "ok": "OK",
-  "hidden": "Hidden",
-  "shown": "Shown",
-  "copyAll": "Copy all",
-  "exportDoc": ".doc",
-  "reset": "Reset",
-  "loading": "Loading...",
-  "edit": "Edit",
-  "previewImage": "Preview image",
-  "closePreview": "Close preview",
-  "open": "Open",
-  "close": "Close",
-  "preview": "Preview",
-  "copied": "Copied",
-  "pdf": "PDF",
-  "doc": ".doc",
-  "success": "Success",
-  "error": "Error",
-  "working": "Working...",
+    "errorTitle": "Error",
+    "ok": "OK",
+    "hidden": "Hidden",
+    "shown": "Shown",
+    "copyAll": "Copy all",
+    "exportDoc": ".doc",
+    "reset": "Reset",
+    "loading": "Loading...",
+    "edit": "Edit",
+    "previewImage": "Preview image",
+    "closePreview": "Close preview",
+    "open": "Open",
+    "close": "Close",
+    "preview": "Preview",
+    "copied": "Copied",
+    "pdf": "PDF",
+    "doc": ".doc",
+    "success": "Success",
+    "error": "Error",
+    "working": "Working...",
     "add": "Add",
-    "next": "Next"
+    "next": "Next",
+    "deleted": "[T] common.deleted",
+    "submit": "[T] common.submit"
   },
   "admin": {
     "onlyTitle": "Admin Only",
-    "onlyDescription": "You must be an admin to access this area."
+    "onlyDescription": "You must be an admin to access this area.",
+    "pending": "[T] admin.pending",
+    "trash": "[T] admin.trash"
   },
   "header": {
     "favorites": "Favorites",
@@ -844,8 +879,8 @@
       "emergencyDesc": "Critical safety notifications",
       "wellness": "Wellness Reminders",
       "wellnessDesc": "Daily wellness check-ins",
-    "moodNudges": "Mood Nudges",
-    "moodNudgesDesc": "Evening reminder to log how you feel",
+      "moodNudges": "Mood Nudges",
+      "moodNudgesDesc": "Evening reminder to log how you feel",
       "events": "Event Reminders",
       "eventsDesc": "Upcoming event notifications"
     },
@@ -1109,10 +1144,10 @@
       "exportErrorBody": "Could not build evidence export.",
       "exportReady": "Export ready",
       "summaryRegion": "Evidence summary region",
-  "queueTitle": "Upload Queue",
-  "queueScreenLabel": "Evidence Locker Upload Queue screen",
-  "processing": "Processing uploads...",
-  "queueSubtitle": "Review pending uploads, retry failures, or clear processed items.",
+      "queueTitle": "Upload Queue",
+      "queueScreenLabel": "Evidence Locker Upload Queue screen",
+      "processing": "Processing uploads...",
+      "queueSubtitle": "Review pending uploads, retry failures, or clear processed items.",
       "emptyQueue": "No items in the upload queue.",
       "queueNoPending": "No pending items.",
       "queueProcessed": "Processed all queued items.",
@@ -1125,52 +1160,52 @@
         "medical": "medical",
         "decision": "decision",
         "payment": "payment",
-      "mood": {
-        "nudge": {
-          "evening": {
-            "title": "Log mood?",
-            "body": "Quick 5‑second check‑in helps spot trends. {{streak}} day streak?"
-          }
-        },
-        "streak": {
-          "milestone": {
-            "title": "Mood streak milestone!",
-            "body": "You've logged {{streak}} days in a row. Small steps add up."
-          }
-        }
-      },
-      "evidence": {
-        "reminder": {
-          "daily": {
-            "title": "Add today's evidence?",
-            "body": "You have {{count}} new notes/files to capture before the day ends."
-          }
-        },
-        "upload": {
-          "failed": {
-            "title": "Uploads queued",
-            "body": "{{queued}} item(s) waiting for connection. We'll retry soon."
-          }
-        }
-      },
-      "accountability": {
-        "case": {
-          "created": {
-            "title": "Case created",
-            "body": "New case: {{case}}"
+        "mood": {
+          "nudge": {
+            "evening": {
+              "title": "Log mood?",
+              "body": "Quick 5‑second check‑in helps spot trends. {{streak}} day streak?"
+            }
           },
-          "updated": {
-            "title": "Case updated",
-            "body": "Recent activity on: {{case}}"
+          "streak": {
+            "milestone": {
+              "title": "Mood streak milestone!",
+              "body": "You've logged {{streak}} days in a row. Small steps add up."
+            }
           }
         },
-        "deadline": {
-          "upcoming": {
-            "title": "Deadline approaching",
-            "body": "{{case}} due in {{days}} day(s). Review and act."
+        "evidence": {
+          "reminder": {
+            "daily": {
+              "title": "Add today's evidence?",
+              "body": "You have {{count}} new notes/files to capture before the day ends."
+            }
+          },
+          "upload": {
+            "failed": {
+              "title": "Uploads queued",
+              "body": "{{queued}} item(s) waiting for connection. We'll retry soon."
+            }
           }
-        }
-      },
+        },
+        "accountability": {
+          "case": {
+            "created": {
+              "title": "Case created",
+              "body": "New case: {{case}}"
+            },
+            "updated": {
+              "title": "Case updated",
+              "body": "Recent activity on: {{case}}"
+            }
+          },
+          "deadline": {
+            "upcoming": {
+              "title": "Deadline approaching",
+              "body": "{{case}} due in {{days}} day(s). Review and act."
+            }
+          }
+        },
         "email": "email"
       },
       "attachFile": "Attach file",
@@ -1546,39 +1581,39 @@
       "pdfUnavailableBody": "Install expo-print in a dev build.",
       "exportFailed": "Export failed",
       "exportFailedBody": "Could not create .doc file.",
-    "show": "Show",
-    "save": "Save",
-    "saveAll": "Save All",
-    "processQueue": "Process Queue",
-    "load": "Load",
-    "loadMore": "Load More",
-    "openQueue": "Open Upload Queue",
-    "cloudItems": "Cloud items",
-    "deleteAll": "Delete All",
-    "deleteSelected": "Delete Selected",
-    "delete": "Delete",
-    "cancel": "Cancel",
-    "filter": "quick filter",
-    "errorTitle": "[T] common.errorTitle",
-    "ok": "[T] common.ok",
-    "hidden": "[T] common.hidden",
-    "shown": "[T] common.shown",
-    "copyAll": "[T] common.copyAll",
-    "share": "[T] common.share",
-    "exportDoc": "[T] common.exportDoc",
-    "reset": "[T] common.reset",
-    "loading": "[T] common.loading",
-    "edit": "[T] common.edit",
-    "previewImage": "[T] common.previewImage",
-    "closePreview": "[T] common.closePreview",
-    "preview": "[T] common.preview",
-    "copied": "[T] common.copied",
-    "copy": "[T] common.copy",
-    "pdf": "[T] common.pdf",
-    "doc": "[T] common.doc",
-    "success": "[T] common.success",
-    "error": "[T] common.error",
-    "working": "[T] common.working"
+      "show": "Show",
+      "save": "Save",
+      "saveAll": "Save All",
+      "processQueue": "Process Queue",
+      "load": "Load",
+      "loadMore": "Load More",
+      "openQueue": "Open Upload Queue",
+      "cloudItems": "Cloud items",
+      "deleteAll": "Delete All",
+      "deleteSelected": "Delete Selected",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "filter": "quick filter",
+      "errorTitle": "[T] common.errorTitle",
+      "ok": "[T] common.ok",
+      "hidden": "[T] common.hidden",
+      "shown": "[T] common.shown",
+      "copyAll": "[T] common.copyAll",
+      "share": "[T] common.share",
+      "exportDoc": "[T] common.exportDoc",
+      "reset": "[T] common.reset",
+      "loading": "[T] common.loading",
+      "edit": "[T] common.edit",
+      "previewImage": "[T] common.previewImage",
+      "closePreview": "[T] common.closePreview",
+      "preview": "[T] common.preview",
+      "copied": "[T] common.copied",
+      "copy": "[T] common.copy",
+      "pdf": "[T] common.pdf",
+      "doc": "[T] common.doc",
+      "success": "[T] common.success",
+      "error": "[T] common.error",
+      "working": "[T] common.working"
     }
   },
   "test": {
@@ -1867,5 +1902,4 @@
     "suggestions": "[T] bodyMechanics.suggestions",
     "noSuggestionsYet": "[T] bodyMechanics.noSuggestionsYet"
   }
-  
 }

@@ -67,6 +67,11 @@
   "perf:budget": "node ./scripts/perf-bundle-budget.mjs",
   "perf:breakdown": "node ./scripts/perf-bundle-breakdown.mjs",
   "test:ci": "npm run test:guard && npm run check:analytics && npm run analytics:report && npm run analytics:pii:soft && npm run perf:budget && npm run perf:breakdown && jest --runInBand"
+  ,
+  "rebuild:android": "expo run:android --clean",
+  "rebuild:ios": "expo run:ios --clean",
+  "devclient:build:android": "npx eas build --profile development --platform android",
+  "devclient:build:ios": "npx eas build --profile development --platform ios"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

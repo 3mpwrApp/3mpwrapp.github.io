@@ -8,7 +8,6 @@
     "scheme": "empowrapp",
     "userInterfaceStyle": "automatic",
     "jsEngine": "hermes",
-    "newArchEnabled": false,
     "updates": {
       "checkAutomatically": "ON_ERROR_RECOVERY"
     },

@@ -114,7 +114,10 @@ function CampaignDetailInner() {
             style={({ pressed }) => [styles.ghost, pressed && { opacity: 0.8 }]}
             onPress={() => {
               // open campaign room (route group (tabs) not part of URL); navigate directly
-              router.push(`/campaigns/room/${campaign.id}`);
+              // use resolved path string to satisfy router typings
+              if (campaign) {
+                router.push(`/campaigns/room/${campaign.id}`);
+              }
             }}
             accessibilityRole="button"
             accessibilityLabel={t('a11y.openCampaignRoom')}
