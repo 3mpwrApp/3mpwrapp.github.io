@@ -70,3 +70,8 @@ export function useMood() {
   if (!ctx) throw new Error('useMood must be used within MoodProvider');
   return ctx;
 }
+
+// Optional variant for screens that may render outside the provider (e.g., early mounts)
+export function useMoodOptional() {
+  return useContext(MoodContext);
+}

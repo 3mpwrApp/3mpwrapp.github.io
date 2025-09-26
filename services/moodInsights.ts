@@ -10,8 +10,8 @@ export interface MoodInsights {
 
 function dayKey(ts: number) { const d = new Date(ts); d.setHours(0,0,0,0); return d.getTime(); }
 
-export function computeMoodInsights(entries: MoodEntry[], now: number = Date.now()): MoodInsights {
-  if (!entries.length) {
+export function computeMoodInsights(entries: MoodEntry[] | undefined | null, now: number = Date.now()): MoodInsights {
+  if (!entries || !entries.length) {
     return { avg7d: null, delta24h: null, trend: 'none', streakDays: 0, lastEntryAgeHours: null };
   }
   const sorted = [...entries].sort((a,b)=> b.ts - a.ts);

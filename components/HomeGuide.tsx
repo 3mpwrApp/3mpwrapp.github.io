@@ -9,7 +9,7 @@ import { computeMoodInsights, shouldShowMoodNudge } from '../services/moodInsigh
 import { scoreTools, submitFeedback, useSuggestions } from '../services/personalization';
 import { filterToolsByFlags, getToolMeta, resolveToolRoute } from '../services/toolRegistry';
 import { usage } from '../services/usage';
-import { useMood } from '../store/mood';
+import * as MoodStore from '../store/mood';
 import { useSettings } from '../store/settings';
 import { useAppPalette } from '../theme/usePalette';
 
@@ -22,11 +22,19 @@ export function HomeGuide() {
   const allowedIds = new Set(filterToolsByFlags(enabledFlags).map(m=> m.id));
   const top3 = suggestions.filter(s=> allowedIds.has(s.toolId)).slice(0,3);
   let mood: { avg: number | null; count: number; insights?: ReturnType<typeof computeMoodInsights> } | null = null;
+  let m: any = null;
   try {
-    const m = useMood();
-    const insights = computeMoodInsights(m.entries);
-    mood = { avg: m.recentAverage, count: m.todayEntries.length, insights };
-  } catch {}
+    const hook = (MoodStore as any).useMoodOptional || (MoodStore as any).useMood;
+    m = typeof hook === 'function' ? hook() : null;
+  } catch {
+    m = null;
+  }
+  if (m) {
+    const entries = Array.isArray(m.entries) ? m.entries : [];
+    const insights = computeMoodInsights(entries);
+    const count = Array.isArray(m.todayEntries) ? m.todayEntries.length : 0;
+    mood = { avg: m.recentAverage ?? null, count, insights };
+  }
   const moodNudgesEnabled = useSettings().moodNudgesEnabled;
   const [nudgeEligible, setNudgeEligible] = React.useState(false);
   const nudgeLoggedRef = React.useRef(false);
