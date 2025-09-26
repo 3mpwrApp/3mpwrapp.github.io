@@ -77,7 +77,8 @@ const styles = StyleSheet.create({
   subtitle: { fontSize: 14, opacity: 0.8 },
   row: { flexDirection: 'row', gap: 8 },
   scoreBtn: { width: 48, height: 48, borderRadius: 8, borderWidth: 1, alignItems: 'center', justifyContent: 'center', borderColor: '#666' },
-  selected: { backgroundColor: '#3478f6', borderColor: '#3478f6' },
+  // Adjusted to improve contrast (WCAG audit flagged #3478f6 at ~4.07:1). Darkened shade.
+  selected: { backgroundColor: '#1d5ec2', borderColor: '#1d5ec2' },
   scoreText: { fontSize: 18, color: '#fff' },
   scoreLabel: { fontSize: 14, marginBottom: 4 },
   input: { minHeight: 60, borderWidth: 1, borderColor: '#ccc', padding: 8, borderRadius: 8 },
