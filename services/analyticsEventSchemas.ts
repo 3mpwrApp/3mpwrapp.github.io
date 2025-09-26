@@ -60,6 +60,7 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
     start_h: { type: 'number', required: true },
     end_h: { type: 'number', required: true },
   },
+  [E.ASSISTANT_QUICK_PROMPT]: { label: { type: 'string', required: true } },
 };
 
 export interface ValidationResult {
