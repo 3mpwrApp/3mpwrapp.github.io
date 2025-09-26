@@ -8,9 +8,9 @@ import {
     View,
 } from "react-native";
 
-import { HIT_SLOP_8 } from "../../constants/a11y";
 import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";
+import { HIT_SLOP_8 } from "../../constants/a11y";
 import { faqs as defaultFaqs } from "../../data/faqs";
 import {
     MAX_FONT_SCALE,
@@ -103,7 +103,7 @@ export default function FaqsScreen() {
           placeholderTextColor={palette.text}
           multiline
         />
-        <Pressable
+        <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8}
           disabled={!qText.trim() || !aText.trim()}
           onPress={async () => {
             const localItem = {
@@ -122,8 +122,6 @@ export default function FaqsScreen() {
             setQText("");
             setAText("");
           }}
-          accessibilityRole="button"
-          hitSlop={HIT_SLOP_8}
           accessibilityLabel={t("faqs.addLabel","Add FAQ")}
           style={({ pressed }) => [
             styles.button,
@@ -149,9 +147,7 @@ export default function FaqsScreen() {
         <View style={{ marginBottom: 8, backgroundColor: palette.surface, borderRadius:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, padding:8 }}>
           <Text style={{ color: palette.text, fontWeight:'700', marginBottom:4 }}>{t('faqs.suggestions','Suggestions')}</Text>
           {suggestions.map(s => (
-            <Pressable key={s.id} onPress={()=> {
-              setQuery(s.q);
-            }} style={({pressed})=> ({ paddingVertical:4, opacity: pressed?0.6:1 })} accessibilityRole="button" accessibilityLabel={`Use suggestion ${s.q}`} hitSlop={HIT_SLOP_8}>
+            <Pressable key={s.id} accessibilityRole="button" hitSlop={HIT_SLOP_8} accessibilityLabel={`Use suggestion ${s.q}`} onPress={()=> { setQuery(s.q); }} style={({pressed})=> ({ paddingVertical:4, opacity: pressed?0.6:1 })}>
               <Text style={{ color: palette.text, fontWeight:'600' }}>{s.q}</Text>
             </Pressable>
           ))}
