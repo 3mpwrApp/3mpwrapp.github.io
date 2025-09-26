@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { HIT_SLOP_8 } from '../../constants/a11y';
 import { ThemedText } from '../../components/ThemedText';
 import { ThemedView } from '../../components/ThemedView';
 import { useTranslation } from '../../i18n';
@@ -21,7 +22,7 @@ function MoodInner() {
 
       <View style={styles.row}>
         {[ -2,-1,0,1,2 ].map(s => (
-          <Pressable key={s} style={[styles.scoreBtn, score===s && styles.selected]} onPress={() => setScore(s)} accessibilityLabel={t('mood.scoreLabel','Score {{s}}',{ s })}> 
+          <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" key={s} style={[styles.scoreBtn, score===s && styles.selected]} onPress={() => setScore(s)} accessibilityLabel={t('mood.scoreLabel','Score {{s}}',{ s })}> 
             <Text style={styles.scoreText}>{s}</Text>
           </Pressable>
         ))}
@@ -35,6 +36,7 @@ function MoodInner() {
         multiline
       />
       <Pressable
+        hitSlop={HIT_SLOP_8}
         style={styles.addBtn}
         onPress={() => { if (score!=null) { addEntry(score, note || undefined); setNote(''); } }}
         accessibilityRole="button"

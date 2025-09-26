@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -39,7 +40,7 @@ function Card({ href, title, desc }: { href: string; title: string; desc: string
   const palette = useAppPalette();
   return (
     <Link href={href as any} asChild>
-      <Pressable style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, padding:12 }}>
+      <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, padding:12 }}>
         <Text style={{ color: palette.text, fontWeight:'700' }}>{title}</Text>
         <Text style={{ color: palette.text, opacity:0.8, marginTop:4 }}>{desc}</Text>
       </Pressable>

@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import { useResilience } from '../../../store/resilience';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -15,7 +16,7 @@ export default function ResiliencePoints() {
       <Text style={s.points}>{t('wellness.resilience.points','Points: {{points}}',{ points: rs.points })}</Text>
       <View style={{ gap:8 }}>
         {rs.actions.map(a => (
-          <Pressable key={a.id} style={s.action} onPress={()=> rs.award(a.id)}>
+          <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" key={a.id} style={s.action} onPress={()=> rs.award(a.id)}>
             <Text style={{ color: palette.text }}>{a.icon} {t(a.tKey, a.name)} (+{a.points})</Text>
           </Pressable>
         ))}

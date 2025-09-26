@@ -2,8 +2,7 @@
 // Provides compile-time mapping from event name to required/optional param shapes
 // based on ANALYTICS_EVENT_SCHEMAS. This keeps runtime schema (validation + redaction)
 // and static typing in sync without manual duplication.
-import type { ParamSpec, ParamType } from '../services/analyticsEventSchemas';
-import type { ANALYTICS_EVENT_SCHEMAS } from '../services/analyticsEventSchemas';
+import type { ANALYTICS_EVENT_SCHEMAS, ParamSpec, ParamType } from '../services/analyticsEventSchemas';
 import type { AnalyticsEventName } from '../services/analyticsEvents';
 
 type SchemaMap = typeof ANALYTICS_EVENT_SCHEMAS;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import { computeAmbience } from '../../../services/ambience';
 import { logView } from '../../../services/analytics';
@@ -23,7 +24,7 @@ export default function AmbienceSync(){
       <View style={[s.card,{ borderColor: amb.color }]}> 
         <Text style={{ color: palette.text }}>{t('wellness.ambience.current','Suggestion: {{palette}}, {{soundscape}}, {{brightness}}',{ palette: amb.palette, soundscape: amb.soundscape, brightness: amb.brightness })}</Text>
       </View>
-      <Pressable style={s.button} onPress={()=> {/* in future: set in-app theme variant, play soundscape */} }>
+  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" style={s.button} onPress={()=> {/* in future: set in-app theme variant, play soundscape */} }>
         <Text style={s.buttonText}>{t('wellness.ambience.apply','Apply in app')}</Text>
       </Pressable>
     </View>

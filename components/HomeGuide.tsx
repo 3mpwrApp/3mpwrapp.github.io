@@ -3,6 +3,7 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { HIT_SLOP_8 } from '../constants/a11y';
 import { useTranslation } from '../i18n';
 import { computeMoodInsights, shouldShowMoodNudge } from '../services/moodInsights';
 import { scoreTools, submitFeedback, useSuggestions } from '../services/personalization';
@@ -86,7 +87,7 @@ export function HomeGuide() {
         <View style={{ marginBottom:12, padding:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, backgroundColor: palette.surface }}>
           <Text style={{ color: palette.text, fontSize:12, marginBottom:6 }}>{t('homeGuide.mood.nudge','Evening check-in? Log how you feel.')}</Text>
           <Link href={resolveToolRoute('wellness_mood') as any} asChild onPress={()=> usage.view('home_mood_nudge_tap','/',{})}>
-            <Pressable accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:10, paddingVertical:6, alignSelf:'flex-start', borderRadius:6 }}>
+            <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:10, paddingVertical:6, alignSelf:'flex-start', borderRadius:6 }}>
               <Text style={{ color: palette.onPrimary, fontWeight:'600', fontSize:12 }}>{t('homeGuide.mood.nudgeAction','Log Mood')}</Text>
             </Pressable>
           </Link>
@@ -111,10 +112,10 @@ export function HomeGuide() {
                   })}
                 </View>
                 <View style={{ flexDirection:'row', marginTop:6, gap:8 }}>
-                  <Pressable accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
                     <Text style={{ color: palette.text }}>👍</Text>
                   </Pressable>
-                  <Pressable accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
                     <Text style={{ color: palette.text }}>👎</Text>
                   </Pressable>
                   <Link
@@ -130,7 +131,7 @@ export function HomeGuide() {
                       });
                     }}
                   >
-                    <Pressable accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6 }}>
+                    <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6 }}>
                       <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{t('home.guide.open','Open')}</Text>
                     </Pressable>
                   </Link>
