@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { HIT_SLOP_8 } from '../../constants/a11y';
 import { ThemedText } from '../../components/ThemedText';
 import { ThemedView } from '../../components/ThemedView';
+import { HIT_SLOP_8 } from '../../constants/a11y';
 import { useTranslation } from '../../i18n';
 import { MoodProvider, useMood } from '../../store/mood';
 
