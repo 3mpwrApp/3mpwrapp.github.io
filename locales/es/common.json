@@ -297,7 +297,10 @@
       "voiceMode": "Modo de voz",
       "voiceModeDesc": "Habilita navegación por voz (beta)",
       "dyslexia": "Fuente amigable para dislexia",
-      "dyslexiaDesc": "Mejora el espaciado y la legibilidad"
+      "dyslexiaDesc": "Mejora el espaciado y la legibilidad",
+      "assistantPill": "Mostrar botón flotante del Asistente",
+      "assistantPillDesc": "Acceso directo al centro del Asistente",
+      "assistantDock": "Posición del botón del Asistente"
     },
     "bookmarks": {
       "title": "Marcadores",
@@ -409,6 +412,38 @@
     "mood": {
       "nudges": "Mood Nudges",
       "nudgesHelp": "Evening reminder to log mood if you skipped today."
+    }
+  },
+  "assistant": {
+    "hub": {
+      "title": "Asistente",
+      "subtitle": "Elige una herramienta abajo o vuelve a tu última tarea en cualquier momento.",
+      "screenLabel": "Centro del asistente",
+      "selfCoach": "Entrenador de auto‑defensa",
+      "selfCoachDesc": "Haz preguntas y recibe los próximos pasos",
+      "translator": "Traductor para defensa",
+      "translatorDesc": "Convierte tus palabras en lenguaje de defensa sólido",
+      "policy": "Simplificador de políticas",
+      "policyDesc": "Resume políticas complejas en lenguaje sencillo",
+      "gov": "Navegador gubernamental",
+      "govDesc": "Encuentra a quién contactar y qué decir",
+      "case": "Intérprete de casos",
+      "caseDesc": "Aclara formularios, cartas y decisiones",
+      "directory": "Directorio de apoyo",
+      "directoryDesc": "Conéctate con defensores y servicios",
+      "ally": "Centro de aliados",
+      "allyDesc": "Coordina acciones con aliados",
+      "quickPrompts": "Indicaciones rápidas",
+      "recent": "Recientes",
+      "openRecent": "Abrir herramienta reciente"
+    },
+    "prompt": {
+      "simplifyDecision": "Simplificar una carta de decisión",
+      "exampleDecision": "Por favor, simplifica esta carta de decisión y enumera los plazos:",
+      "callScript": "Redactar un guion de llamada a RR. HH.",
+      "exampleCall": "Redacta un breve guion para RR. HH. solicitando adaptaciones:",
+      "policyPlain": "Explica esta política en lenguaje sencillo",
+      "examplePolicy": "Resume puntos clave y acciones de esta política:"
     }
   },
   "admin": {
@@ -1603,7 +1638,9 @@
     "add": "Add",
     "next": "Next",
   "deleted": "Deleted",
-  "submit": "Submit"
+  "submit": "Submit",
+  "left": "Izquierda",
+  "right": "Derecha"
   },
   "masterIndex": {
     "title": "Índice maestro de investigación",

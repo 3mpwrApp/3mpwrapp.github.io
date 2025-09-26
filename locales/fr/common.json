@@ -297,7 +297,10 @@
       "voiceMode": "Mode vocal",
       "voiceModeDesc": "Active la navigation vocale (bêta)",
       "dyslexia": "Police adaptée à la dyslexie",
-      "dyslexiaDesc": "Améliore l'espacement et la lisibilité"
+      "dyslexiaDesc": "Améliore l'espacement et la lisibilité",
+      "assistantPill": "Afficher la pastille Assistant",
+      "assistantPillDesc": "Raccourci flottant vers le hub Assistant",
+      "assistantDock": "Position de la pastille"
     },
     "bookmarks": {
       "title": "Signets",
@@ -1364,6 +1367,38 @@
       "privacy": "Entrées traitées localement sauf backend configuré."
     }
   },
+  "assistant": {
+    "hub": {
+      "title": "Assistant",
+      "subtitle": "Choisissez un outil ci-dessous ou revenez à votre dernière tâche à tout moment.",
+      "screenLabel": "Hub de l’assistant",
+      "selfCoach": "Coach d’auto‑défense",
+      "selfCoachDesc": "Posez des questions et obtenez les prochaines étapes",
+      "translator": "Traducteur de plaidoyer",
+      "translatorDesc": "Transformez vos mots en langage de plaidoyer convaincant",
+      "policy": "Simplificateur de politiques",
+      "policyDesc": "Résumer des politiques complexes en langage simple",
+      "gov": "Navigateur gouvernemental",
+      "govDesc": "Trouver à qui s’adresser et quoi dire",
+      "case": "Interprète de dossier",
+      "caseDesc": "Clarifier formulaires, lettres et décisions",
+      "directory": "Annuaire de soutien",
+      "directoryDesc": "Se connecter à des défenseur·e·s et services",
+      "ally": "Hub des alliés",
+      "allyDesc": "Coordonner des actions avec des alliés",
+      "quickPrompts": "Invites rapides",
+      "recent": "Récents",
+      "openRecent": "Ouvrir l’outil récent"
+    },
+    "prompt": {
+      "simplifyDecision": "Simplifier une lettre de décision",
+      "exampleDecision": "Veuillez simplifier cette lettre de décision et lister les délais :",
+      "callScript": "Rédiger un script d’appel aux RH",
+      "exampleCall": "Rédigez un bref script d’appel aux RH pour demander des aménagements :",
+      "policyPlain": "Expliquer cette politique en langage clair",
+      "examplePolicy": "Résumez les points clés et les actions de cette politique :"
+    }
+  },
   "accountability": {
     "title": "Coach de Redevabilité",
     "subtitle": "Détecter des violations, rédiger des lettres, suivre des réponses et mobiliser des alliés — en langage simple.",
@@ -1601,8 +1636,10 @@
     "close": "Close",
     "add": "Add",
     "next": "Next",
-  "deleted": "Supprimé",
-  "submit": "Soumettre"
+    "deleted": "Supprimé",
+    "submit": "Soumettre",
+    "left": "Gauche",
+    "right": "Droite"
   },
   "test": {
     "badge": "BadgeMarque"

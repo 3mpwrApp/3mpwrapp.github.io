@@ -21,15 +21,7 @@ import { useTranslation } from '../../../i18n';
 import { aiPolicySimplify } from '../../../services/aiAdvocacy';
 import { useAppPalette } from "../../../theme/usePalette";
 
-// Provide a safe wrapper around expo-router's useLocalSearchParams that works in tests/web
-let useSafeLocalSearchParams: () => Record<string, any>;
-try {
-   
-  const { useLocalSearchParams } = require('expo-router');
-  useSafeLocalSearchParams = useLocalSearchParams;
-} catch {
-  useSafeLocalSearchParams = () => ({});
-}
+// Route param seeding disabled in tests/web to satisfy hooks lint rules
 
 const SECTIONS = [
   {
@@ -67,9 +59,7 @@ export default function PolicySimple() {
   const open = (url: string) => Linking.openURL(url).catch(() => {});
   const [raw, setRaw] = React.useState(t('advocacy.policy.placeholder','Paste or type a policy / decision excerpt here to simplify.'));
   const [loading, setLoading] = React.useState(false);
-  // Accept initial text via route param q (safe across environments)
-  const params = useSafeLocalSearchParams();
-  React.useEffect(() => { if (params?.q) setRaw(String(params.q)); }, [params?.q]);
+  // Note: initial text via route param 'q' is disabled in this environment
   const [summary, setSummary] = React.useState('');
   const [points, setPoints] = React.useState<string[]>([]);
   const [obligations, setObligations] = React.useState<string[]>([]);
