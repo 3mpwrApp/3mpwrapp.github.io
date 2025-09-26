@@ -1,20 +1,21 @@
 import React from "react";
 import {
-  Alert,
-  Linking,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    Linking,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { aiPolicySimplify } from '../../../services/aiAdvocacy';
@@ -105,7 +106,7 @@ export default function PolicySimple() {
             onChangeText={setRaw}
             accessibilityLabel="Policy text input"
         />
-        <Pressable onPress={runSimplify} style={[s.button, loading && { opacity:0.6 }]} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.simplify')} disabled={loading}>
+  <Pressable onPress={runSimplify} style={[s.button, loading && { opacity:0.6 }]} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.simplify')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText}>{loading ? t('advocacy.policy.simplifying') : t('advocacy.policy.simplify')}</Text>
         </Pressable>
         {!!summary && (

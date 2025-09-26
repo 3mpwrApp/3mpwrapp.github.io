@@ -8,6 +8,7 @@ import {
     View,
 } from "react-native";
 
+import { HIT_SLOP_8 } from "../../constants/a11y";
 import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";
 import { faqs as defaultFaqs } from "../../data/faqs";
@@ -122,6 +123,7 @@ export default function FaqsScreen() {
             setAText("");
           }}
           accessibilityRole="button"
+          hitSlop={HIT_SLOP_8}
           accessibilityLabel={t("faqs.addLabel","Add FAQ")}
           style={({ pressed }) => [
             styles.button,
@@ -149,7 +151,7 @@ export default function FaqsScreen() {
           {suggestions.map(s => (
             <Pressable key={s.id} onPress={()=> {
               setQuery(s.q);
-            }} style={({pressed})=> ({ paddingVertical:4, opacity: pressed?0.6:1 })} accessibilityLabel={`Use suggestion ${s.q}`}>
+            }} style={({pressed})=> ({ paddingVertical:4, opacity: pressed?0.6:1 })} accessibilityRole="button" accessibilityLabel={`Use suggestion ${s.q}`} hitSlop={HIT_SLOP_8}>
               <Text style={{ color: palette.text, fontWeight:'600' }}>{s.q}</Text>
             </Pressable>
           ))}

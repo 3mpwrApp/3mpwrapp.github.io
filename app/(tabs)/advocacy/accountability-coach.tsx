@@ -1,6 +1,7 @@
 import React from 'react';
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -120,20 +121,20 @@ export default function AccountabilityCoach() {
         />
       </View>
 
-      <Pressable onPress={run} style={s.button} accessibilityRole="button" accessibilityHint={t('accountability.generateHint','Generate a step-by-step plan')} disabled={loading}>
+  <Pressable onPress={run} style={s.button} accessibilityRole="button" accessibilityHint={t('accountability.generateHint','Generate a step-by-step plan')} disabled={loading} hitSlop={HIT_SLOP_8}>
         <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{loading ? t('accountability.generating') : t('accountability.generate')}</Text>
       </Pressable>
       <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:8 }}>
-        <Pressable onPress={onDetect} style={[s.button, { backgroundColor: '#444' }]} accessibilityRole="button" accessibilityHint={t('accountability.detectHint','Analyze issue and list potential violations')} disabled={loading}>
+  <Pressable onPress={onDetect} style={[s.button, { backgroundColor: '#444' }]} accessibilityRole="button" accessibilityHint={t('accountability.detectHint','Analyze issue and list potential violations')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.detect','Detect violations')}</Text>
         </Pressable>
-        <Pressable onPress={onDraft} style={[s.button, { backgroundColor: '#555' }]} accessibilityRole="button" accessibilityHint={t('accountability.draftHint','Draft a formal accountability letter')} disabled={loading}>
+  <Pressable onPress={onDraft} style={[s.button, { backgroundColor: '#555' }]} accessibilityRole="button" accessibilityHint={t('accountability.draftHint','Draft a formal accountability letter')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.draftLetter','Draft letter')}</Text>
         </Pressable>
-        <Pressable onPress={onTrack} style={[s.button, { backgroundColor: '#666' }]} accessibilityRole="button" accessibilityHint={t('accountability.trackHint','Record and track responses you receive')} disabled={!caseId}>
+  <Pressable onPress={onTrack} style={[s.button, { backgroundColor: '#666' }]} accessibilityRole="button" accessibilityHint={t('accountability.trackHint','Record and track responses you receive')} disabled={!caseId} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.track','Track response')}</Text>
         </Pressable>
-        <Pressable onPress={onAlly} style={[s.button, { backgroundColor: '#777' }]} accessibilityRole="button" accessibilityHint={t('accountability.allyHint','Create a brief you can share with allies')} disabled={loading}>
+  <Pressable onPress={onAlly} style={[s.button, { backgroundColor: '#777' }]} accessibilityRole="button" accessibilityHint={t('accountability.allyHint','Create a brief you can share with allies')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.ally','Ally brief')}</Text>
         </Pressable>
       </View>
