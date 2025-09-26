@@ -187,7 +187,7 @@ function EnhancedA11ySettingsSection() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const { textScale, setTextScale, resourcePreferredFormat, setResourcePreferredFormat } = useSettings();
-  const { dyslexiaFriendly, setDyslexiaFriendly, plainLanguage, setPlainLanguage, captionsPreferred, setCaptionsPreferred, voiceMode, setVoiceMode } = useSettings();
+  const { dyslexiaFriendly, setDyslexiaFriendly, plainLanguage, setPlainLanguage, captionsPreferred, setCaptionsPreferred, voiceMode, setVoiceMode, showAssistantPill = true, setShowAssistantPill, assistantPillPosition = 'left', setAssistantPillPosition } = useSettings();
   const ScaleButton = ({ label, value }: { label: string; value: TextScale }) => (
     <A11yPressable accessibilityRole='button' accessibilityState={{ selected: textScale === value }} onPress={() => setTextScale(value)} style={[styles.button, textScale === value && styles.buttonActive]} hitSlop={HIT_SLOP_8}>
       <Text style={[styles.buttonText, textScale === value && styles.buttonTextActive]}>{label}</Text>
@@ -204,6 +204,19 @@ function EnhancedA11ySettingsSection() {
       <AccessibilityToggle title={t('settings.accessibility.plainLanguage','Plain Language')} description={t('settings.accessibility.plainLanguageDesc','Uses simpler, clearer text')} value={plainLanguage} onValueChange={setPlainLanguage} icon='document-text' testID='plain-language-toggle' />
       <AccessibilityToggle title={t('settings.accessibility.captions','Captions Preferred')} description={t('settings.accessibility.captionsDesc','Shows captions when available')} value={captionsPreferred} onValueChange={setCaptionsPreferred} icon='logo-closed-captioning' testID='captions-toggle' />
       <AccessibilityToggle title={t('settings.accessibility.voiceMode','Voice Mode (Beta)')} description={t('settings.accessibility.voiceModeDesc','Enables voice navigation')} value={voiceMode} onValueChange={setVoiceMode} icon='mic' testID='voice-mode-toggle' />
+  <AccessibilityToggle title={t('settings.accessibility.assistantPill','Show Assistant Pill')} description={t('settings.accessibility.assistantPillDesc','Show the floating assistant button on screens')} value={!!showAssistantPill} onValueChange={setShowAssistantPill} icon='chatbubbles' testID='assistant-pill-toggle' />
+      {showAssistantPill && (
+        <View style={{ marginTop: 8 }}>
+          <Text style={styles.sectionSubtitle} accessibilityRole='header'>{t('settings.accessibility.assistantDock','Assistant Pill Position')}</Text>
+          <View style={styles.buttonRow}>
+            {(['left','right'] as const).map(pos => (
+              <A11yPressable key={pos} accessibilityRole='button' accessibilityState={{ selected: assistantPillPosition === pos }} onPress={() => setAssistantPillPosition(pos)} style={[styles.button, assistantPillPosition === pos && styles.buttonActive]} hitSlop={HIT_SLOP_8}>
+                <Text style={[styles.buttonText, assistantPillPosition === pos && styles.buttonTextActive]}>{pos === 'left' ? t('common.left','Left') : t('common.right','Right')}</Text>
+              </A11yPressable>
+            ))}
+          </View>
+        </View>
+      )}
       <View style={styles.textSizeSection}>
         <Text style={styles.sectionSubtitle} accessibilityRole='header'>{t('settings.accessibility.textSize','Text Size')}</Text>
         <Text style={styles.description}>{t('settings.accessibility.textSizeDesc','Adjust text size throughout the app')}</Text>

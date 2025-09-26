@@ -25,6 +25,9 @@ export type SettingsState = {
   includeProvincialHolidays: boolean;
   youtubeOpenPreference: "ask" | "app" | "browser";
   voiceMode: boolean;
+  // UI preferences
+  showAssistantPill?: boolean;
+  assistantPillPosition?: 'left' | 'right';
   // Enhanced accessibility settings
   screenReaderOptimized: boolean;
   reduceMotion: boolean;
@@ -59,6 +62,8 @@ type Ctx = SettingsState & {
   setIncludeProvincialHolidays: (v: boolean) => void;
   setYoutubeOpenPreference: (v: SettingsState["youtubeOpenPreference"]) => void;
   setVoiceMode: (v: boolean) => void;
+  setShowAssistantPill: (v: boolean) => void;
+  setAssistantPillPosition: (v: 'left'|'right') => void;
   // Enhanced accessibility setters
   setScreenReaderOptimized: (v: boolean) => void;
   setReduceMotion: (v: boolean) => void;
@@ -93,6 +98,8 @@ const DEFAULTS: SettingsState = {
   includeProvincialHolidays: false,
   youtubeOpenPreference: "ask",
   voiceMode: false,
+  showAssistantPill: true,
+  assistantPillPosition: 'left',
   // Enhanced accessibility defaults
   screenReaderOptimized: false,
   reduceMotion: false,
@@ -174,6 +181,10 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
   ) => setState((s) => ({ ...s, youtubeOpenPreference: v }));
   const setVoiceMode = (v: boolean) =>
     setState((s) => ({ ...s, voiceMode: v }));
+  const setShowAssistantPill = (v: boolean) =>
+    setState((s) => ({ ...s, showAssistantPill: v }));
+  const setAssistantPillPosition = (v: 'left'|'right') =>
+    setState((s) => ({ ...s, assistantPillPosition: v }));
 
   // Enhanced accessibility setters
   const setScreenReaderOptimized = (v: boolean) =>
@@ -227,6 +238,8 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setIncludeProvincialHolidays,
     setYoutubeOpenPreference,
     setVoiceMode,
+  setShowAssistantPill,
+  setAssistantPillPosition,
     // Enhanced accessibility setters
     setScreenReaderOptimized,
     setReduceMotion,

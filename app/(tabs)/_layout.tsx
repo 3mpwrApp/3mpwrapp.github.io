@@ -152,6 +152,7 @@ export default function TabsLayout() {
 
         {/* Advocacy */}
         <Tabs.Screen name="advocacy/[id]" options={{ href: null }} />
+  <Tabs.Screen name="advocacy/assistant-hub" options={{ href: null }} />
         <Tabs.Screen name="advocacy/self-advocacy-coach" options={{ href: null }} />
         <Tabs.Screen name="advocacy/policy-simple" options={{ href: null }} />
         <Tabs.Screen name="advocacy/ai-advocate-translator" options={{ href: null }} />

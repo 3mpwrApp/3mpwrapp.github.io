@@ -1,21 +1,21 @@
 import React from "react";
 import {
-    Alert,
-    Pressable,
-    ScrollView,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  Alert,
+  Pressable,
+  ScrollView,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { logActivity } from '../../../services/activity';
@@ -23,6 +23,16 @@ import { llmSimplify } from "../../../services/llm";
 import { usage } from '../../../services/usage';
 import { useAppPalette } from "../../../theme/usePalette";
 import { extractTranslatorSections, getTranslatorConfigForLocale } from "../../../utils/translatorExtract";
+
+// Provide a safe wrapper around expo-router's useLocalSearchParams that works in tests/web
+let useSafeLocalSearchParams: () => Record<string, any>;
+try {
+   
+  const { useLocalSearchParams } = require('expo-router');
+  useSafeLocalSearchParams = useLocalSearchParams;
+} catch {
+  useSafeLocalSearchParams = () => ({});
+}
 
 function simplify(text: string): string {
   const rules: [RegExp, string][] = [
@@ -54,6 +64,11 @@ export default function AiAdvocateTranslator() {
   const [output, setOutput] = React.useState("");
   const [sections, setSections] = React.useState<{summary:string; keyTerms:string[]; deadlines:string[]; actions:string[]}|null>(null);
   React.useEffect(()=>{ usage.view('translator','/translator'); },[]);
+  // Accept initial prompt via route param q (safe across environments)
+  const params = useSafeLocalSearchParams();
+  React.useEffect(() => {
+    if (params?.q && !input) setInput(String(params.q));
+  }, [params?.q, input]);
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text

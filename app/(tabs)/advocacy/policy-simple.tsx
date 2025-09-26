@@ -1,25 +1,35 @@
 import React from "react";
 import {
-    Alert,
-    Linking,
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  Alert,
+  Linking,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { aiPolicySimplify } from '../../../services/aiAdvocacy';
 import { useAppPalette } from "../../../theme/usePalette";
+
+// Provide a safe wrapper around expo-router's useLocalSearchParams that works in tests/web
+let useSafeLocalSearchParams: () => Record<string, any>;
+try {
+   
+  const { useLocalSearchParams } = require('expo-router');
+  useSafeLocalSearchParams = useLocalSearchParams;
+} catch {
+  useSafeLocalSearchParams = () => ({});
+}
 
 const SECTIONS = [
   {
@@ -57,6 +67,9 @@ export default function PolicySimple() {
   const open = (url: string) => Linking.openURL(url).catch(() => {});
   const [raw, setRaw] = React.useState(t('advocacy.policy.placeholder','Paste or type a policy / decision excerpt here to simplify.'));
   const [loading, setLoading] = React.useState(false);
+  // Accept initial text via route param q (safe across environments)
+  const params = useSafeLocalSearchParams();
+  React.useEffect(() => { if (params?.q) setRaw(String(params.q)); }, [params?.q]);
   const [summary, setSummary] = React.useState('');
   const [points, setPoints] = React.useState<string[]>([]);
   const [obligations, setObligations] = React.useState<string[]>([]);

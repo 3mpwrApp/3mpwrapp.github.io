@@ -6,9 +6,11 @@ import React from "react";
 import { AccessibilityInfo, AppState, StyleSheet, Text, View } from "react-native";
 
 import ChangelogGate from "../components/ChangelogGate";
+import GlobalAssistant from "../components/GlobalAssistant";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
 import Header from "../components/ThemedHeader";
+import { setSessionSeed } from "../services/session";
 import { CountsProvider } from "../store/counts";
 import { FavoritesProvider } from "../store/favorites";
 import { NetworkProvider, useNetwork } from "../store/network";
@@ -62,6 +64,8 @@ export default function RootLayout() {
 
   // Notifications setup
   React.useEffect(() => {
+    // establish a per-launch session seed (enables suggestion rotation)
+    setSessionSeed();
     Notifier.setupAsync();
     Notifier.getExpoPushToken().then((t) => {
       if (t && __DEV__) console.warn("Expo push token:", t);
@@ -152,6 +156,7 @@ export default function RootLayout() {
                               </Stack>
                             </ChangelogGate>
                           </TermsGate>
+                          <GlobalAssistant />
                           <Footer />
                         </View>
                       </RefreshProvider>

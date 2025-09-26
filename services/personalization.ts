@@ -3,6 +3,7 @@ import React from 'react';
 
 import { useCoachProgress } from '../store/coachProgress';
 
+import { pseudoRandom01 } from './session';
 import { usage } from './usage';
 
 export interface SuggestibleTool {
@@ -91,7 +92,7 @@ export async function submitFeedback(toolId: string, kind: 'up'|'down') {
 }
 
 export async function scoreTools(extra?: { coachProgress?: number }) : Promise<Suggestion[]> {
-  const { id: lastSuggested } = await getLastSuggested();
+  const { id: lastSuggested, ts: lastTs } = await getLastSuggested();
   const feedback = await loadFeedback();
   const suggestions: Suggestion[] = [];
   TOOLS.forEach(tool => {
@@ -107,10 +108,20 @@ export async function scoreTools(extra?: { coachProgress?: number }) : Promise<S
     if (!lastView && !lastComplete) { score += 0.35; reason.push({ key:'novelty' }); }
     if (tool.id === 'coach' && typeof extra?.coachProgress === 'number' && extra.coachProgress < 1) {
       const gap = 1 - extra.coachProgress; const boost = gap * 0.5; score += boost; reason.push({ key:'engagementGap', data:{ gap: gap.toFixed(2) }}); }
-    if (tool.id === lastSuggested) { score -= 0.5; reason.push({ key:'rotation' }); }
+    if (tool.id === lastSuggested) {
+      let penalty = 0.5;
+      if (lastTs) {
+        const ageMin = (now() - lastTs) / 60000;
+        if (ageMin < 360) { // within 6 hours: stronger demotion
+          penalty += 0.4; // total 0.9
+          reason.push({ key:'rotation_recent', data:{ ageMin: Math.round(ageMin) } });
+        }
+      }
+      score -= penalty; reason.push({ key:'rotation' });
+    }
     // Streak boost (small, log diminishing)
     const streak = computeStreak(tool.id);
-    if (streak > 1) { const sb = Math.min(0.4, Math.log2(streak)/5); score += sb; reason.push({ key:'streak', data:{ streak, boost: sb.toFixed(2) }}); }
+  if (streak > 1) { const sb = Math.min(0.4, Math.log2(streak)/5); score += sb; reason.push({ key:'streak', data:{ streak, boost: sb.toFixed(2) }}); }
     // Time-of-day contextual boost
     const tod = timeOfDayBoost(tool);
     if (tod.boost) { score += tod.boost; reason.push({ key: tod.key, data:{ boost: tod.boost } }); }
@@ -123,7 +134,11 @@ export async function scoreTools(extra?: { coachProgress?: number }) : Promise<S
         score += weight;
         reason.push({ key:'feedback', data:{ up: fb.up, down: fb.down, weight: weight.toFixed(2) } });
       }
-    }
+  }
+  // Per-session rotation jitter: deterministic within a session, changes next launch
+  const jitter = (pseudoRandom01(tool.id) - 0.5) * 0.6; // [-0.3, +0.3]
+  score += jitter;
+  reason.push({ key:'rotation', data:{ jitter: +jitter.toFixed(2) } });
     suggestions.push({ toolId: tool.id, score, reason });
   });
   const sorted = suggestions.sort((a,b)=> b.score - a.score);
