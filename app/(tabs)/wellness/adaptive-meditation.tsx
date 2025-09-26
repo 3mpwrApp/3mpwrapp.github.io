@@ -26,7 +26,15 @@ export default function AdaptiveMeditation() {
         ["Calm Reset", "Calm Reset – 30 sec", "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"],
       ];
       const csv = rows.map(r => r.map(x => `"${(x || "").replace(/"/g, '""')}"`).join(",")).join("\n");
-      await require("react-native-share").default.open({ message: csv, title: "Meditation Links CSV" });
+      const FileSystem = await import('expo-file-system');
+      const Sharing = await import('expo-sharing');
+      const baseDir: any = (FileSystem as any).default?.cacheDirectory || (FileSystem as any).cacheDirectory || (FileSystem as any).default?.documentDirectory;
+      if (!baseDir) return;
+      const path = `${baseDir}adaptive_meditations_${Date.now()}.csv`;
+      await (FileSystem as any).writeAsStringAsync(path, csv, { encoding: (FileSystem as any).EncodingType?.UTF8 });
+      if (Sharing?.isAvailableAsync && (await Sharing.isAvailableAsync())) {
+        await Sharing.shareAsync(path, { mimeType: 'text/csv', dialogTitle: 'Meditation Links CSV' });
+      }
     } catch {
       // Optionally show error
     }

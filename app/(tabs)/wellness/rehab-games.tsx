@@ -69,7 +69,17 @@ export default function RehabGames() {
     try {
       const rows = [["date", "taps", "breaths", "sit-stand", "points"], ...history.map(h => [h.date, h.taps, h.breaths, h.round, h.points])];
       const csv = rows.map(r => r.map(x => `"${(x || "").replace(/"/g, '""')}"`).join(",")).join("\n");
-      await require("react-native-share").default.open({ message: csv, title: "Rehab Progress CSV" });
+      const FileSystem = await import('expo-file-system');
+      const Sharing = await import('expo-sharing');
+      const baseDir: any = (FileSystem as any).default?.cacheDirectory || (FileSystem as any).cacheDirectory || (FileSystem as any).default?.documentDirectory;
+      if (!baseDir) return;
+      const path = `${baseDir}rehab_progress_${Date.now()}.csv`;
+      await (FileSystem as any).writeAsStringAsync(path, csv, { encoding: (FileSystem as any).EncodingType?.UTF8 });
+      if (Sharing?.isAvailableAsync && (await Sharing.isAvailableAsync())) {
+        await Sharing.shareAsync(path, { mimeType: 'text/csv', dialogTitle: 'Rehab Progress CSV' });
+      } else {
+        Alert.alert('Export ready', 'CSV saved to cache directory.');
+      }
     } catch {
       Alert.alert("Export failed", "Could not share rehab progress.");
     }

@@ -25,7 +25,15 @@ export default function PacingPartner() {
         ...items.slice(0,10).map(i => [new Date(i.createdAt?.toDate?.()||Date.now()).toLocaleString(), i.type||'activity', String(i.minutes)]),
       ];
       const csv = rows.map(r => r.map(x => `"${(x || "").replace(/"/g, '""')}"`).join(",")).join("\n");
-      await require("react-native-share").default.open({ message: csv, title: "Pacing Partner Activities CSV" });
+      const FileSystem = await import('expo-file-system');
+      const Sharing = await import('expo-sharing');
+      const baseDir: any = (FileSystem as any).default?.cacheDirectory || (FileSystem as any).cacheDirectory || (FileSystem as any).default?.documentDirectory;
+      if (!baseDir) return;
+      const path = `${baseDir}pacing_activities_${Date.now()}.csv`;
+      await (FileSystem as any).writeAsStringAsync(path, csv, { encoding: (FileSystem as any).EncodingType?.UTF8 });
+      if (Sharing?.isAvailableAsync && (await Sharing.isAvailableAsync())) {
+        await Sharing.shareAsync(path, { mimeType: 'text/csv', dialogTitle: 'Pacing Partner Activities CSV' });
+      }
     } catch {
       // Optionally show error
     }

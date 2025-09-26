@@ -27,7 +27,17 @@ export default function NutritionGuides() {
       const favList = recipes.filter(r => favs.has(r.id));
       const rows = [["title", "tags", "notes", "url"], ...favList.map(r => [r.title, r.tags.join(', '), r.notes || '', r.url || ''])];
       const csv = rows.map(r => r.map(x => `"${(x || "").replace(/"/g, '""')}"`).join(",")).join("\n");
-      await require("react-native-share").default.open({ message: csv, title: "Nutrition Favorites CSV" });
+      const FileSystem = await import('expo-file-system');
+      const Sharing = await import('expo-sharing');
+      const baseDir: any = (FileSystem as any).default?.cacheDirectory || (FileSystem as any).cacheDirectory || (FileSystem as any).default?.documentDirectory;
+      if (!baseDir) return;
+      const path = `${baseDir}nutrition_favorites_${Date.now()}.csv`;
+      await (FileSystem as any).writeAsStringAsync(path, csv, { encoding: (FileSystem as any).EncodingType?.UTF8 });
+      if (Sharing?.isAvailableAsync && (await Sharing.isAvailableAsync())) {
+        await Sharing.shareAsync(path, { mimeType: 'text/csv', dialogTitle: 'Nutrition Favorites CSV' });
+      } else {
+        Alert.alert('Export ready', 'CSV saved to cache directory.');
+      }
     } catch {
       Alert.alert("Export failed", "Could not share favorites.");
     }

@@ -1,14 +1,15 @@
-import React from "react";
-import { View, Text, StyleSheet, Pressable, TextInput } from "react-native";
-import { router } from "expo-router";
 import type { Href } from "expo-router";
+import { router } from "expo-router";
+import React from "react";
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
-import { type Palette } from "../theme/colors";
-import { useAppPalette } from "../theme/usePalette";
-import { useA11ySettings } from "../store/a11ySettings";
+import EmergencyWalletCard from "../components/EmergencyWalletCard";
 import { useAuth } from "../context/AuthContext";
 import type { Lang } from "../i18n";
 import { useTranslation } from "../i18n";
+import { useA11ySettings } from "../store/a11ySettings";
+import { type Palette } from "../theme/colors";
+import { useAppPalette } from "../theme/usePalette";
 
 export default function Profile() {
   const palette = useAppPalette();
@@ -17,6 +18,7 @@ export default function Profile() {
   const { lang, setLanguage } = useTranslation();
   const [name, setName] = React.useState(user?.displayName ?? "");
   const { state: a11y, toggleHighContrast } = useA11ySettings();
+  const [showEmergencyCard, setShowEmergencyCard] = React.useState(false);
 
   return (
     <View
@@ -28,6 +30,19 @@ export default function Profile() {
 
       <View style={styles.card}>
         <Row label="User" value={user?.email ?? user?.displayName ?? "Guest"} />
+        <Pressable
+          onPress={() => setShowEmergencyCard(v => !v)}
+          accessibilityRole="button"
+          accessibilityLabel={showEmergencyCard ? "Hide emergency wallet card form" : "Show emergency wallet card form"}
+          style={[styles.cta, styles.ghost]}
+        >
+          <Text style={styles.ghostText}>{showEmergencyCard ? "Hide Emergency Card" : "Manage Emergency Card"}</Text>
+        </Pressable>
+        {showEmergencyCard && (
+          <View style={{ marginTop: 12 }}>
+            <EmergencyWalletCard />
+          </View>
+        )}
       </View>
 
       <View style={styles.card}>

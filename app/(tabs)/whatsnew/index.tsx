@@ -21,6 +21,7 @@ import { subscribeToActivityFeed } from "../../../services/activity";
 import {
     addLocalWhatsNew,
     getLocalWhatsNew,
+    setLocalWhatsNew,
 } from "../../../services/localContent";
 import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -48,8 +49,9 @@ export default function WhatsNewScreen() {
         const mod = await import("@react-native-async-storage/async-storage");
         AsyncStorageRef.current = mod.default;
       } catch {}
-      const local = await getLocalWhatsNew();
-      if (local.length) setItems([...local, ...defaultWN]);
+  const local = await getLocalWhatsNew();
+  // Merge, then auto-archive items older than 30 days by marking a transient flag (computed at render)
+  if (local.length) setItems([...local, ...defaultWN]);
       const AsyncStorage = AsyncStorageRef.current;
       if (AsyncStorage) {
         try {
@@ -90,13 +92,30 @@ export default function WhatsNewScreen() {
       })();
     }, []),
   );
-  const isWithin30Days = (d: string) =>
-    (now.getTime() - new Date(d).getTime()) / (1000 * 60 * 60 * 24) <= 30;
+  const daysSince = (d: string) => (now.getTime() - new Date(d).getTime()) / (1000 * 60 * 60 * 24);
+  const isWithin30Days = (d: string) => daysSince(d) <= 30;
   const isUnread = (d: string) =>
     lastSeen ? new Date(d).getTime() > new Date(lastSeen).getTime() : true;
   const combined = [...activityItems, ...items];
   const recent = combined.filter((i) => isWithin30Days(i.date));
   const older = combined.filter((i) => !isWithin30Days(i.date));
+
+  // Persist auto-archive state for local items: keep only last 90 days of local entries to prevent unbounded growth
+  React.useEffect(() => {
+    (async () => {
+      try {
+        // Only operate on locally-added items (we can detect these by id prefix we assign in this screen)
+        const localOnly = items.filter(it => it.id.startsWith('wn-'));
+        const within90 = localOnly.filter(it => daysSince(it.date) <= 90);
+        if (within90.length !== localOnly.length) {
+          const keepIds = new Set(within90.map(i => i.id));
+          const merged = items.filter(i => keepIds.has(i.id));
+          setItems(merged);
+          await setLocalWhatsNew(merged.filter(i => i.id.startsWith('wn-')));
+        }
+      } catch {}
+    })();
+  }, [items]);
   const sections = [
     ...(recent.length ? [{ title: "New", data: recent }] : []),
     ...(older.length ? [{ title: "Archive", data: older }] : []),
