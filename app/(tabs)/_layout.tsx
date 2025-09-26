@@ -79,7 +79,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="wellness"
+          name="wellness/index"
           options={{
             title: t("nav.wellness"),
             tabBarLabel: t("nav.wellness"),
