@@ -21,7 +21,7 @@ export default function WellnessHub() {
         <Card href="/wellness/opposite-action" title={t('wellness.opposite.title','Opposite Action Companion')} desc={t('wellness.opposite.desc','Try small, safe opposite actions.')} />
         <Card href="/wellness/radical-acceptance" title={t('wellness.acceptance.title','Radical Acceptance')} desc={t('wellness.acceptance.desc','Reduce suffering; take wise action.')} />
         <Card href="/wellness/cbt-coach" title={t('wellness.cbt.title','CBT Virtual Coach')} desc={t('wellness.cbt.desc','Reframe thoughts with evidence.')} />
-        <Card href="/wellness/sleep-reframe" title={t('wellness.sleepReFrame.title','Sleep Reframe')} desc={t('wellness.sleepReFrame.desc','Kind reframes and routines for better sleep.')} />
+  <Card href="/wellness/sleep-reframe" title={t('wellness.sleepReframe.title','Sleep Reframe')} desc={t('wellness.sleepReframe.desc','Kind reframes and routines for better sleep.')} />
         <Card href="/wellness/pain-forecast" title={t('wellness.painForecast.title','Pain Forecast')} desc={t('wellness.painForecast.desc','Simple trend-based suggestions for pacing.')} />
         <Card href="/wellness/micro-movement" title={t('wellness.micro.title','Micro‑Movement Coach')} desc={t('wellness.micro.desc','Gentle, chair‑friendly movement ideas.')} />
         <Card href="/wellness/energy-coins" title={t('wellness.energy.title','Daily Energy Coins')} desc={t('wellness.energy.desc','Set a budget and spend coins on tasks.')} />
