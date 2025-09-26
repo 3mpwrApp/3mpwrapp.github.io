@@ -161,8 +161,8 @@
       "captionsDesc": "Shows captions when available",
       "voiceMode": "Voice Mode",
       "voiceModeDesc": "Enables voice navigation (beta)",
-      "dyslexia": "[T] settings.accessibility.dyslexia",
-      "dyslexiaDesc": "[T] settings.accessibility.dyslexiaDesc"
+  "dyslexia": "Police adaptée dyslexie",
+  "dyslexiaDesc": "Variante de police pour meilleure lisibilité"
     },
     "language": {
       "title": "Language",
@@ -221,8 +221,8 @@
       "title": "Emergency Wallet Card",
       "subtitle": "Quick access to important information",
       "description": "Create a digital emergency card with your key information for quick access when needed",
-      "openLabel": "[T] settings.emergency.openLabel",
-      "manage": "[T] settings.emergency.manage"
+  "openLabel": "Ouvrir portefeuille d'urgence",
+  "manage": "Gérer éléments d'urgence"
     },
     "privacy": {
       "title": "Privacy & Security",
@@ -257,18 +257,18 @@
       "passwordPlaceholder": "Password",
       "reauthFailed": "Re-authentication failed",
       "confirmDelete": "Confirm Delete",
-      "updatedName": "[T] settings.account.updatedName",
-      "photoUpdated": "[T] settings.account.photoUpdated",
-      "guestNotice": "[T] settings.account.guestNotice",
-      "createAccount": "[T] settings.account.createAccount",
-      "photo": "[T] settings.account.photo",
-      "deleteNoPassword": "[T] settings.account.deleteNoPassword"
+  "updatedName": "Nom mis à jour",
+  "photoUpdated": "Photo de profil mise à jour",
+  "guestNotice": "Mode invité limité",
+  "createAccount": "Créer un compte",
+  "photo": "Photo",
+  "deleteNoPassword": "Entrez le mot de passe pour supprimer"
     },
     "emergencyWallet": {
-      "title": "[T] settings.emergencyWallet.title",
-      "subtitle": "[T] settings.emergencyWallet.subtitle",
-      "hide": "[T] settings.emergencyWallet.hide",
-      "show": "[T] settings.emergencyWallet.show"
+  "title": "Portefeuille d'urgence",
+  "subtitle": "Infos santé & ID rapides",
+  "hide": "Masquer",
+  "show": "Afficher"
     }
   },
   "settings": {
@@ -414,8 +414,8 @@
   "admin": {
     "onlyTitle": "Administrateur uniquement",
     "onlyDescription": "Vous devez être administrateur pour accéder à cette zone.",
-    "pending": "[T] admin.pending",
-    "trash": "[T] admin.trash"
+  "pending": "En attente",
+  "trash": "Corbeille"
   },
   "bookmark": {
     "add": "Ajouter un signet",
@@ -647,9 +647,9 @@
       "recent": "Recent"
     },
     "resilience": {
-      "title": "[T] wellness.resilience.title",
-      "desc": "[T] wellness.resilience.desc",
-      "points": "[T] wellness.resilience.points"
+  "title": "Points de résilience",
+  "desc": "Gagnez des points pour des actions positives",
+  "points": "Points : {{points}}"
     }
   },
   "resources": {
@@ -730,26 +730,26 @@
       "delete": "Delete",
       "cancel": "Cancel",
       "filter": "quick filter",
-      "errorTitle": "[T] common.errorTitle",
-      "ok": "[T] common.ok",
-      "hidden": "[T] common.hidden",
-      "shown": "[T] common.shown",
-      "copyAll": "[T] common.copyAll",
-      "share": "[T] common.share",
-      "exportDoc": "[T] common.exportDoc",
-      "reset": "[T] common.reset",
-      "loading": "[T] common.loading",
-      "edit": "[T] common.edit",
-      "previewImage": "[T] common.previewImage",
-      "closePreview": "[T] common.closePreview",
-      "preview": "[T] common.preview",
-      "copied": "[T] common.copied",
-      "copy": "[T] common.copy",
-      "pdf": "[T] common.pdf",
-      "doc": "[T] common.doc",
-      "success": "[T] common.success",
-      "error": "[T] common.error",
-      "working": "[T] common.working"
+  "errorTitle": "Erreur",
+  "ok": "OK",
+  "hidden": "Masqué",
+  "shown": "Affiché",
+  "copyAll": "Tout copier",
+  "share": "Partager",
+  "exportDoc": "Exporter DOC",
+  "reset": "Réinitialiser",
+  "loading": "Chargement…",
+  "edit": "Modifier",
+  "previewImage": "Aperçu image",
+  "closePreview": "Fermer aperçu",
+  "preview": "Aperçu",
+  "copied": "Copié",
+  "copy": "Copier",
+  "pdf": "PDF",
+  "doc": "DOC",
+  "success": "Succès",
+  "error": "Erreur",
+  "working": "Travail…"
     },
     "timeline": {
       "title": "Chronologie du dossier",
@@ -1601,8 +1601,8 @@
     "close": "Close",
     "add": "Add",
     "next": "Next",
-    "deleted": "[T] common.deleted",
-    "submit": "[T] common.submit"
+  "deleted": "Supprimé",
+  "submit": "Soumettre"
   },
   "test": {
     "badge": "BadgeMarque"
@@ -1924,8 +1924,8 @@
     "pdfUnavailableBody": "Install expo-print in a dev build to export PDFs.",
     "exportFailedTitle": "Export failed",
     "exportFailedBody": "Could not create file.",
-    "subtitle": "[T] translator.subtitle",
-    "placeholder": "[T] translator.placeholder"
+  "subtitle": "Assistant de traduction IA",
+  "placeholder": "Entrez le texte à traduire"
   },
   "auth": {
     "registerTitle": "Register",

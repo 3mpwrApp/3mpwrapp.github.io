@@ -161,8 +161,8 @@
       "captionsDesc": "Shows captions when available",
       "voiceMode": "Voice Mode",
       "voiceModeDesc": "Enables voice navigation (beta)",
-      "dyslexia": "[T] settings.accessibility.dyslexia",
-      "dyslexiaDesc": "[T] settings.accessibility.dyslexiaDesc"
+  "dyslexia": "Dyslexia-friendly font",
+  "dyslexiaDesc": "Use a font variant to improve legibility"
     },
     "language": {
       "title": "Language",
@@ -221,8 +221,8 @@
       "title": "Emergency Wallet Card",
       "subtitle": "Quick access to important information",
       "description": "Create a digital emergency card with your key information for quick access when needed",
-      "openLabel": "[T] settings.emergency.openLabel",
-      "manage": "[T] settings.emergency.manage"
+  "openLabel": "Open emergency wallet",
+  "manage": "Manage emergency items"
     },
     "privacy": {
       "title": "Privacy & Security",
@@ -257,18 +257,18 @@
       "passwordPlaceholder": "Password",
       "reauthFailed": "Re-authentication failed",
       "confirmDelete": "Confirm Delete",
-      "updatedName": "[T] settings.account.updatedName",
-      "photoUpdated": "[T] settings.account.photoUpdated",
-      "guestNotice": "[T] settings.account.guestNotice",
-      "createAccount": "[T] settings.account.createAccount",
-      "photo": "[T] settings.account.photo",
-      "deleteNoPassword": "[T] settings.account.deleteNoPassword"
+  "updatedName": "Name updated",
+  "photoUpdated": "Profile photo updated",
+  "guestNotice": "Guest mode has limited features",
+  "createAccount": "Create account",
+  "photo": "Photo",
+  "deleteNoPassword": "Enter password to delete"
     },
     "emergencyWallet": {
-      "title": "[T] settings.emergencyWallet.title",
-      "subtitle": "[T] settings.emergencyWallet.subtitle",
-      "hide": "[T] settings.emergencyWallet.hide",
-      "show": "[T] settings.emergencyWallet.show"
+  "title": "Emergency Wallet",
+  "subtitle": "Quick access health & ID info",
+  "hide": "Hide",
+  "show": "Show"
     }
   },
   "settings": {
@@ -414,8 +414,8 @@
   "admin": {
     "onlyTitle": "Solo administradores",
     "onlyDescription": "Debes ser administrador para acceder a esta área.",
-    "pending": "[T] admin.pending",
-    "trash": "[T] admin.trash"
+  "pending": "Pending",
+  "trash": "Trash"
   },
   "bookmark": {
     "add": "Agregar marcador",
@@ -647,9 +647,9 @@
       "recent": "Recent"
     },
     "resilience": {
-      "title": "[T] wellness.resilience.title",
-      "desc": "[T] wellness.resilience.desc",
-      "points": "[T] wellness.resilience.points"
+  "title": "Resilience Points",
+  "desc": "Earn points for positive actions",
+  "points": "Points: {{points}}"
     }
   },
   "resources": {
@@ -722,26 +722,26 @@
       "delete": "Delete",
       "cancel": "Cancel",
       "filter": "quick filter",
-      "errorTitle": "[T] common.errorTitle",
-      "ok": "[T] common.ok",
-      "hidden": "[T] common.hidden",
-      "shown": "[T] common.shown",
-      "copyAll": "[T] common.copyAll",
-      "share": "[T] common.share",
-      "exportDoc": "[T] common.exportDoc",
-      "reset": "[T] common.reset",
-      "loading": "[T] common.loading",
-      "edit": "[T] common.edit",
-      "previewImage": "[T] common.previewImage",
-      "closePreview": "[T] common.closePreview",
-      "preview": "[T] common.preview",
-      "copied": "[T] common.copied",
-      "copy": "[T] common.copy",
-      "pdf": "[T] common.pdf",
-      "doc": "[T] common.doc",
-      "success": "[T] common.success",
-      "error": "[T] common.error",
-      "working": "[T] common.working"
+  "errorTitle": "Error",
+  "ok": "OK",
+  "hidden": "Hidden",
+  "shown": "Shown",
+  "copyAll": "Copy all",
+  "share": "Share",
+  "exportDoc": "Export DOC",
+  "reset": "Reset",
+  "loading": "Loading…",
+  "edit": "Edit",
+  "previewImage": "Preview image",
+  "closePreview": "Close preview",
+  "preview": "Preview",
+  "copied": "Copied",
+  "copy": "Copy",
+  "pdf": "PDF",
+  "doc": "DOC",
+  "success": "Success",
+  "error": "Error",
+  "working": "Working…"
     },
     "timeline": {
       "title": "Cronología del caso",
@@ -1602,8 +1602,8 @@
     "close": "Close",
     "add": "Add",
     "next": "Next",
-    "deleted": "[T] common.deleted",
-    "submit": "[T] common.submit"
+  "deleted": "Deleted",
+  "submit": "Submit"
   },
   "masterIndex": {
     "title": "Índice maestro de investigación",
@@ -1916,8 +1916,8 @@
     "pdfUnavailableBody": "Install expo-print in a dev build to export PDFs.",
     "exportFailedTitle": "Export failed",
     "exportFailedBody": "Could not create file.",
-    "subtitle": "[T] translator.subtitle",
-    "placeholder": "[T] translator.placeholder"
+  "subtitle": "AI translation helper",
+  "placeholder": "Enter text to translate"
   },
   "auth": {
     "registerTitle": "Register",
