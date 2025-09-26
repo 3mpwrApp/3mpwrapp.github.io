@@ -4,8 +4,7 @@ import * as violations from '../services/violations';
 
 describe('analytics events (pure harness)', () => {
   test('advocacy.collective.submit emitted from violations report', async () => {
-  // use timestamp purely to ensure uniqueness (not referenced directly)
-  const _ts = Date.now();
+  // (removed unused timestamp variable to satisfy noUnusedLocals)
     // (Removed unused fixture object to satisfy lint rule)
     const events = await withCapturedEventsAsync(async () => {
       // Mock firestore layer to avoid network by monkeypatching getDB & firebase import dynamic
