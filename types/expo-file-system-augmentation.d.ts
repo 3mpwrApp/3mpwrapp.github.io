@@ -6,20 +6,29 @@
 
 import 'expo-file-system';
 
+// We augment so dynamic namespace imports (const FS = await import('expo-file-system')) work with
+// FS.cacheDirectory, FS.EncodingType.UTF8, etc. without sprinkling `as any` everywhere.
+// Use literal union for encoding so TS accepts passing FS.EncodingType.UTF8 to options.
 declare module 'expo-file-system' {
-  // Ensure top-level (namespace) export has these fields (already present at runtime)
-  export const cacheDirectory: string | undefined;
+  export type EncodingLiteral = 'utf8' | 'base64';
+  // top-level constant already exists at runtime; we just refine literal types
   export namespace EncodingType {
-    const UTF8: string;
-    const Base64: string;
+    const UTF8: 'utf8';
+    const Base64: 'base64';
   }
-  // Provide interface for default export when imported as a value (FS.default)
-  // so that FS.default.cacheDirectory and FS.default.EncodingType are recognized.
+  export const cacheDirectory: string | null | undefined;
+  export const documentDirectory: string | null | undefined;
+
+  interface WriteOptions { encoding?: 'utf8' | 'base64' | EncodingLiteral; }
+  interface ReadOptions { encoding?: 'utf8' | 'base64' | EncodingLiteral; }
+
+  // Ensure default export shape (FS.default) exposes same surface (non-optional for convenience)
   const _default: {
-    cacheDirectory?: string;
-    EncodingType?: { UTF8: string; Base64: string };
-    writeAsStringAsync?: (fileUri: string, contents: string, options?: { encoding?: string }) => Promise<void>;
-    readAsStringAsync?: (fileUri: string, options?: { encoding?: string }) => Promise<string>;
+    cacheDirectory?: string | null;
+    documentDirectory?: string | null;
+    EncodingType: { UTF8: 'utf8'; Base64: 'base64' };
+    writeAsStringAsync: (fileUri: string, contents: string, options?: WriteOptions) => Promise<void>;
+    readAsStringAsync: (fileUri: string, options?: ReadOptions) => Promise<string>;
   } & Record<string, any>;
   export default _default;
 }

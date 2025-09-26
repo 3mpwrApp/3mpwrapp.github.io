@@ -1,21 +1,21 @@
 import React from "react";
 import {
-    Alert,
-    ScrollView,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  Alert,
+  ScrollView,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { usePrivacy } from "../../../store/privacy";
@@ -475,8 +475,9 @@ export default function SleepEnergyTracker() {
             if (!dir) throw new Error("No writable directory");
             const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${summary.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</pre></body></html>`;
             const path = `${dir}sleep_energy_${Date.now()}.doc`;
+            // Use augmented types (EncodingType.UTF8) for consistency across platforms
             await FileSystem.writeAsStringAsync(path, html, {
-              encoding: 'utf8',
+              encoding: FileSystem.EncodingType.UTF8,
             });
             await Share.share({
               url: path,
@@ -546,8 +547,8 @@ export default function SleepEnergyTracker() {
               (FileSystem as any).documentDirectory;
             if (!baseDir) throw new Error("No writable directory");
             const path = `${baseDir}sleep_energy_${Date.now()}.csv`;
-            await (FileSystem as any).writeAsStringAsync(path, csv, {
-              encoding: 'utf8',
+            await FileSystem.writeAsStringAsync(path, csv, {
+              encoding: FileSystem.EncodingType.UTF8,
             });
             await Share.share({ url: path, title: "Sleep & Energy CSV" });
           } catch {
