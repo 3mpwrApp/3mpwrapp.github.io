@@ -58,7 +58,7 @@ export default function DateTimeField({ label, mode, value, onChange }: Props) {
       </A11yPressable>
       {open && hasPicker && (
         <Modal transparent animationType="fade" onRequestClose={() => setOpen(false)}>
-          <A11yPressable role="button" hitSlop={HIT_SLOP_8} style={{ flex: 1, backgroundColor: '#0008', alignItems: 'center', justifyContent: 'center' }} onPress={() => setOpen(false)}>
+          <A11yPressable role="button" hitSlop={HIT_SLOP_8} style={{ flex: 1, backgroundColor: '#2229', alignItems: 'center', justifyContent: 'center' }} onPress={() => setOpen(false)}>
             <View style={{ backgroundColor: palette.surface, padding: 12, borderRadius: 8, minWidth: 260 }}>
               {(() => {
                 try {
@@ -85,7 +85,7 @@ export default function DateTimeField({ label, mode, value, onChange }: Props) {
                   );
                 } catch { return null; }
               })()}
-              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setOpen(false)} style={{ marginTop: 8, alignSelf: 'flex-end' }}>
+                <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setOpen(false)} style={{ marginTop: 8, alignSelf: 'flex-end' }}>
                 <Text style={{ color: palette.primary, fontWeight: '700' }}>Done</Text>
               </A11yPressable>
             </View>

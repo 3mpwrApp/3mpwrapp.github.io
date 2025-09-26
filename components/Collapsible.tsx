@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 export default function Collapsible({
   title,
   children,
@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
   },
   header: {
     padding: 12,
-    backgroundColor: "#F7F8FA",
+    // Adjusted for better contrast per WCAG audit (prev #F7F8FA ~1.06)
+    backgroundColor: "#eef1f5",
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
   },
