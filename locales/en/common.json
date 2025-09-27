@@ -31,6 +31,10 @@
       "subtitle": "Earn badges as you build healthy routines.",
       "title": "Achievements"
     },
+    "quick": {
+      "sleep": "Sleep & Energy",
+      "balance": "Work/Rest Balance AI"
+    },
     "hub": {
       "title": "Wellness & Recovery",
       "subtitle": "Evidence-based tools for mood, pain, resilience, and recovery."
@@ -372,6 +376,9 @@
       "open": "Open assistant",
       "cta": "🤖 Ask"
     },
+    "home": {
+      "recentPrompts": "Recently used prompts"
+    },
     "tools": {
       "coach": "Coach",
       "translator": "Translator",
@@ -479,6 +486,10 @@
     "subtitle": "Log how you feel to spot trends.",
     "notePlaceholder": "Optional note",
     "save": "Save",
+      "quick": {
+        "sleep": "Sleep & Energy",
+        "balance": "Work/Rest Balance AI"
+      },
     "today": "Today",
     "emptyToday": "No entries yet today.",
     "avg7d": "7d Avg:",

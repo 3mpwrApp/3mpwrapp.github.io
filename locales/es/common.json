@@ -419,6 +419,9 @@
       "open": "Abrir asistente",
       "cta": "🤖 Preguntar"
     },
+    "home": {
+      "recentPrompts": "Indicaciones usadas recientemente"
+    },
     "tools": {
       "coach": "Entrenador",
       "translator": "Traductor",
@@ -552,6 +555,10 @@
     }
   },
   "wellness": {
+    "quick": {
+      "sleep": "Sueño y energía",
+      "balance": "Equilibrio trabajo/descanso (IA)"
+    },
     "tools": {
       "symptom": "Seguimiento de síntomas y dolor (informe exportable)",
       "sleep": "Seguimiento de sueño y energía (resumen legal/médico)",

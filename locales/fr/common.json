@@ -498,6 +498,10 @@
     }
   },
   "wellness": {
+    "quick": {
+      "sleep": "Sommeil & Énergie",
+      "balance": "Équilibre travail/repos (IA)"
+    },
     "tools": {
       "symptom": "Symptom & Pain Tracker (exportable report)",
       "sleep": "Sleep & Energy Tracker (legal/medical summary)",
@@ -1378,6 +1382,9 @@
     "pill": {
       "open": "Ouvrir l’assistant",
       "cta": "🤖 Demander"
+    },
+    "home": {
+      "recentPrompts": "Invites utilisées récemment"
     },
     "tools": {
       "coach": "Coach",
