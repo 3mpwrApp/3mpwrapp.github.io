@@ -447,7 +447,17 @@
       "quickPrompts": "Indicaciones rápidas",
       "recent": "Recientes",
       "openRecent": "Abrir herramienta reciente",
-      "openRecentHint": "Abre la herramienta reciente"
+      "openRecentHint": "Abre la herramienta reciente",
+      "quickPromptHint": "Abre la herramienta con una indicación sugerida",
+      "clearRecents": "Borrar herramientas recientes",
+      "clearRecentsHint": "Limpia la lista de herramientas recientes",
+      "clear": "Borrar",
+      "clearConfirm": {
+        "title": "¿Borrar herramientas recientes?",
+        "body": "Esto eliminará tu lista de herramientas recientes. No afectará tus datos.",
+        "confirm": "Borrar",
+        "cancel": "Cancelar"
+      }
     },
     "prompt": {
       "simplifyDecision": "Simplificar una carta de decisión",

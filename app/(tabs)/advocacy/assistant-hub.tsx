@@ -49,6 +49,7 @@ export default function AssistantHub() {
             hitSlop={HIT_SLOP_8}
             accessibilityRole="button"
             accessibilityLabel={p.label}
+            accessibilityHint={t('assistant.hub.quickPromptHint','Opens tool with a suggested prompt')}
             style={s.promptChip}
             onPress={() => {
               trackEvent('assistant.quick_prompt', { label: p.label });
@@ -91,7 +92,7 @@ function RecentTools() {
   const s = styles(palette, factor);
   const { t } = useTranslation();
   const [items, setItems] = useState<{ tool: string; route?: string; ts: number }[]>([]);
-  useEffect(() => {
+  const refresh = () => {
     try {
       const mod = require('../../../services/usage') as any;
       const buf = mod.usage?.getBuffer?.() || [];
@@ -108,15 +109,64 @@ function RecentTools() {
       }
       setItems(uniq);
     } catch {}
+  };
+  useEffect(() => {
+    refresh();
   }, []);
   if (!items.length) return null;
   return (
     <View style={{ marginBottom: 12 }}>
-      <Text style={s.sectionHeader}>{t('assistant.hub.recent','Recent')}</Text>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Text style={s.sectionHeader}>{t('assistant.hub.recent','Recent')}</Text>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          accessibilityRole="button"
+          accessibilityLabel={t('assistant.hub.clearRecents','Clear recent tools')}
+          accessibilityHint={t('assistant.hub.clearRecentsHint','Clears the recent tools list')}
+          onPress={() => {
+            try {
+              const mod = require('../../../services/usage') as any;
+              const buf = mod.usage?.getBuffer?.() || [];
+              const clearedCount = buf.filter((e: any) => e.type === 'usage.view' || e.type === 'usage.complete').length;
+              const doClear = () => {
+                try { mod.usage?.clearRecents?.(); } catch {}
+                try { trackEvent('assistant.recents.clear', { count: clearedCount }); } catch {}
+                refresh();
+              };
+              const isTest = !!(process.env.JEST_WORKER_ID || process.env.NODE_ENV === 'test');
+              if (isTest) { doClear(); return; }
+              try {
+                const { Alert } = require('react-native');
+                const title = t('assistant.hub.clearConfirm.title','Clear recent tools?');
+                const message = t('assistant.hub.clearConfirm.body','This will remove your recent tools list. This won’t affect your data.');
+                const confirm = t('assistant.hub.clearConfirm.confirm','Clear');
+                const cancel = t('assistant.hub.clearConfirm.cancel','Cancel');
+                Alert?.alert?.(title, message, [
+                  { text: cancel, style: 'cancel' },
+                  { text: confirm, style: 'destructive', onPress: doClear },
+                ]);
+              } catch {
+                doClear();
+              }
+            } catch {
+              try { (require('../../../services/usage') as any).usage?.clearRecents?.(); } catch {}
+              refresh();
+            }
+          }}
+          style={[s.promptChip, { paddingVertical: 6 }]}>
+          <Text style={[s.promptText, { fontSize: Math.round(12 * factor) }]}>{t('assistant.hub.clear','Clear')}</Text>
+        </A11yPressable>
+      </View>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
         {items.map((it) => (
           <Link key={it.tool} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild>
-            <A11yPressable hitSlop={HIT_SLOP_8} style={s.recentChip} accessibilityRole="link" accessibilityLabel={t('assistant.hub.openRecent','Open recent tool')} accessibilityHint={t('assistant.hub.openRecentHint','Opens recent tool')}>
+            <A11yPressable
+              hitSlop={HIT_SLOP_8}
+              style={s.recentChip}
+              accessibilityRole="link"
+              accessibilityLabel={`${t('assistant.hub.openRecent','Open recent tool')}: ${mapToolLabel(it.tool, t)}`}
+              accessibilityHint={t('assistant.hub.openRecentHint','Opens recent tool')}
+            >
               <Text style={s.recentText}>{mapToolLabel(it.tool, t)}</Text>
             </A11yPressable>
           </Link>

@@ -36,5 +36,10 @@ export const usage = {
   start(tool: string, route?: string, meta?: Record<string,any>) { return push({ type:'usage.start', tool, route, meta }); },
   complete(tool: string, route?: string, durationMs?: number, meta?: Record<string,any>) { return push({ type:'usage.complete', tool, route, durationMs, meta }); },
   error(tool: string, route?: string, meta?: Record<string,any>) { return push({ type:'usage.error', tool, route, meta }); },
-  getBuffer() { return buffer.slice(); }
+  getBuffer() { return buffer.slice(); },
+  clearRecents() {
+    // Remove only items contributing to Recent Tools (view/complete), keep starts/errors for diagnostics
+    buffer = buffer.filter(e => !(e.type === 'usage.view' || e.type === 'usage.complete'));
+    persist();
+  }
 };

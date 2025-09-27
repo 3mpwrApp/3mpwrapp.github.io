@@ -44,6 +44,7 @@ export const ANALYTICS_EVENTS = {
 
   // Assistant
   ASSISTANT_QUICK_PROMPT: "assistant.quick_prompt",
+  ASSISTANT_RECENTS_CLEAR: "assistant.recents.clear",
 } as const;
 
 export type AnalyticsEventName = typeof ANALYTICS_EVENTS[keyof typeof ANALYTICS_EVENTS];

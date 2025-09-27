@@ -1407,7 +1407,17 @@
       "quickPrompts": "Invites rapides",
       "recent": "Récents",
       "openRecent": "Ouvrir l’outil récent",
-      "openRecentHint": "Ouvre l’outil récent"
+      "openRecentHint": "Ouvre l’outil récent",
+      "quickPromptHint": "Ouvre l’outil avec une invite suggérée",
+      "clearRecents": "Effacer les outils récents",
+      "clearRecentsHint": "Efface la liste des outils récents",
+      "clear": "Effacer",
+      "clearConfirm": {
+        "title": "Effacer les outils récents ?",
+        "body": "Cela supprimera votre liste d'outils récents. Cela n'affectera pas vos données.",
+        "confirm": "Effacer",
+        "cancel": "Annuler"
+      }
     },
     "prompt": {
       "simplifyDecision": "Simplifier une lettre de décision",

@@ -400,7 +400,17 @@
       "quickPrompts": "Quick prompts",
       "recent": "Recent",
       "openRecent": "Open recent tool",
-      "openRecentHint": "Opens recent tool"
+      "openRecentHint": "Opens recent tool",
+      "quickPromptHint": "Opens tool with a suggested prompt",
+      "clearRecents": "Clear recent tools",
+      "clearRecentsHint": "Clears the recent tools list",
+      "clear": "Clear",
+      "clearConfirm": {
+        "title": "Clear recent tools?",
+        "body": "This will remove your recent tools list. This won’t affect your data.",
+        "confirm": "Clear",
+        "cancel": "Cancel"
+      }
     },
     "prompt": {
       "simplifyDecision": "Simplify a decision letter",
