@@ -1368,6 +1368,10 @@
     }
   },
   "assistant": {
+    "pill": {
+      "open": "Ouvrir l’assistant",
+      "cta": "🤖 Demander"
+    },
     "hub": {
       "title": "Assistant",
       "subtitle": "Choisissez un outil ci-dessous ou revenez à votre dernière tâche à tout moment.",

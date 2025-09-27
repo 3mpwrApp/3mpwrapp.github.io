@@ -361,6 +361,10 @@
     }
   },
   "assistant": {
+    "pill": {
+      "open": "Open assistant",
+      "cta": "🤖 Ask"
+    },
     "hub": {
       "title": "Assistant",
       "subtitle": "Pick a tool below or return to your last task anytime.",

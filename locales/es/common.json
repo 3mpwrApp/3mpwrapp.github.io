@@ -415,6 +415,10 @@
     }
   },
   "assistant": {
+    "pill": {
+      "open": "Abrir asistente",
+      "cta": "🤖 Preguntar"
+    },
     "hub": {
       "title": "Asistente",
       "subtitle": "Elige una herramienta abajo o vuelve a tu última tarea en cualquier momento.",

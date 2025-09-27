@@ -2,6 +2,7 @@ import { Link, usePathname } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/a11y';
+import { useTranslation } from '../i18n';
 import { useSettings } from '../store/settings';
 import { useAppPalette } from '../theme/usePalette';
 
@@ -16,6 +17,7 @@ export default function GlobalAssistant() {
   const palette = useAppPalette();
   const s = styles(palette);
   const pathname = usePathname();
+  const { t } = useTranslation();
   const { showAssistantPill = true, assistantPillPosition = 'left' } = useSettings();
   // Hide on auth routes or modal overlays
   if (pathname?.startsWith('/(auth)')) return null;
@@ -23,8 +25,8 @@ export default function GlobalAssistant() {
   return (
     <View pointerEvents="box-none" style={[s.wrap, assistantPillPosition === 'right' ? s.right : s.left]}>
       <Link href={('/(tabs)/advocacy/assistant-hub' as any)} asChild>
-        <A11yPressable role="button" hitSlop={HIT_SLOP_8} accessibilityLabel={'Open assistant'} style={s.btn}>
-          <Text style={s.text}>🤖 Ask</Text>
+        <A11yPressable role="button" hitSlop={HIT_SLOP_8} accessibilityLabel={t('assistant.pill.open','Open assistant')} style={s.btn}>
+          <Text style={s.text}>{t('assistant.pill.cta','🤖 Ask')}</Text>
         </A11yPressable>
       </Link>
     </View>
