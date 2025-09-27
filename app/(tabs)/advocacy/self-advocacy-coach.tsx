@@ -136,6 +136,7 @@ export default function SelfAdvocacyCoach() {
 function PracticeCoach() {
   const { t } = useTranslation();
   const { data: jurisdiction } = useJurisdiction();
+  const palette = useAppPalette();
   const [prompt, setPrompt] = React.useState(t('advocacy.coach.defaultPrompt'));
   const [output, setOutput] = React.useState('');
   const { dispatchDomainEvent } = useNotificationDispatcher();
@@ -175,16 +176,16 @@ function PracticeCoach() {
   };
   return (
     <View style={{ marginTop: 16 }}>
-      <Text style={{ fontWeight: '700', color: '#888', marginBottom: 4 }}>
+      <Text style={{ fontWeight: '700', color: palette.text, opacity: 0.7, marginBottom: 4 }}>
         {t('advocacy.coach.practiceHeader')}
       </Text>
-      <Text style={{ color: '#888', marginBottom: 6 }}>
+      <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 6 }}>
         {t('advocacy.coach.practiceHelp')}
       </Text>
       <TextInput
         style={{
           borderWidth: 1,
-          borderColor: '#ccc',
+          borderColor: palette.muted,
           borderRadius: 8,
           padding: 10,
           minHeight: 70,
@@ -198,7 +199,7 @@ function PracticeCoach() {
       <Pressable
         onPress={run}
         style={{
-          backgroundColor: '#333',
+          backgroundColor: palette.primary,
           paddingVertical: 10,
           borderRadius: 8,
           alignItems: 'center',
@@ -208,7 +209,7 @@ function PracticeCoach() {
         accessibilityLabel={t('advocacy.coach.practiceGenerateLabel', 'Generate practice coaching')}
         disabled={loading}
       >
-        <Text style={{ color: '#fff', fontWeight: '700' }}>
+        <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>
           {loading ? t('advocacy.coach.generating') : t('advocacy.coach.generate')}
         </Text>
       </Pressable>
@@ -220,11 +221,11 @@ function PracticeCoach() {
         >
           {parsed.steps.map((step) => (
             <View key={step.order} style={{ marginBottom: 6 }}>
-              <Text style={{ color: '#222', fontWeight: '600' }}>
+              <Text style={{ color: palette.text, fontWeight: '600' }}>
                 {step.order}. {step.text}
               </Text>
               {step.tips?.map((tip) => (
-                <Text key={tip} style={{ color: '#555', fontSize: 12 }}>
+                <Text key={tip} style={{ color: palette.text, opacity: 0.8, fontSize: 12 }}>
                   • {tip}
                 </Text>
               ))}

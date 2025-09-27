@@ -1,8 +1,8 @@
 import React from 'react';
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { HIT_SLOP_8 } from '../../../constants/a11y';
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { addEvent, upsertCase } from '../../../services/accountability.tracker';
@@ -125,16 +125,16 @@ export default function AccountabilityCoach() {
         <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{loading ? t('accountability.generating') : t('accountability.generate')}</Text>
       </Pressable>
       <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:8 }}>
-  <Pressable onPress={onDetect} style={[s.button, { backgroundColor: '#444' }]} accessibilityRole="button" accessibilityHint={t('accountability.detectHint','Analyze issue and list potential violations')} disabled={loading} hitSlop={HIT_SLOP_8}>
+  <Pressable onPress={onDetect} style={[s.button, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityHint={t('accountability.detectHint','Analyze issue and list potential violations')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.detect','Detect violations')}</Text>
         </Pressable>
-  <Pressable onPress={onDraft} style={[s.button, { backgroundColor: '#555' }]} accessibilityRole="button" accessibilityHint={t('accountability.draftHint','Draft a formal accountability letter')} disabled={loading} hitSlop={HIT_SLOP_8}>
+  <Pressable onPress={onDraft} style={[s.button, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityHint={t('accountability.draftHint','Draft a formal accountability letter')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.draftLetter','Draft letter')}</Text>
         </Pressable>
-  <Pressable onPress={onTrack} style={[s.button, { backgroundColor: '#666' }]} accessibilityRole="button" accessibilityHint={t('accountability.trackHint','Record and track responses you receive')} disabled={!caseId} hitSlop={HIT_SLOP_8}>
+  <Pressable onPress={onTrack} style={[s.button, { backgroundColor: palette.primary, opacity: caseId ? 1 : 0.5 }]} accessibilityRole="button" accessibilityHint={t('accountability.trackHint','Record and track responses you receive')} disabled={!caseId} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.track','Track response')}</Text>
         </Pressable>
-  <Pressable onPress={onAlly} style={[s.button, { backgroundColor: '#777' }]} accessibilityRole="button" accessibilityHint={t('accountability.allyHint','Create a brief you can share with allies')} disabled={loading} hitSlop={HIT_SLOP_8}>
+  <Pressable onPress={onAlly} style={[s.button, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityHint={t('accountability.allyHint','Create a brief you can share with allies')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.ally','Ally brief')}</Text>
         </Pressable>
       </View>
@@ -164,7 +164,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
     fieldGroup: { marginTop: 8 },
     label: { color: palette.text, fontWeight: '600', marginBottom: 4 },
-    input: { borderWidth: 1, borderColor: '#ccc', borderRadius: 8, padding: 10, color: palette.text, backgroundColor: palette.surface },
+  input: { borderWidth: 1, borderColor: palette.muted, borderRadius: 8, padding: 10, color: palette.text, backgroundColor: palette.surface },
     button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center', marginTop: 8 },
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
   });

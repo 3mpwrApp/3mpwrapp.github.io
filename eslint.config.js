@@ -51,7 +51,7 @@ module.exports = defineConfig([
         },
       },
     },
-    rules: {
+  rules: {
       // TypeScript / code quality
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/consistent-type-imports': 'warn',
@@ -76,6 +76,26 @@ module.exports = defineConfig([
       'no-debugger': 'warn',
       eqeqeq: ['warn', 'smart'],
       curly: ['warn', 'multi-line'],
+    },
+  },
+  // Enforce no inline hex in app UI code only (allow theme, scripts, tests, and service internals)
+  {
+    files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}'],
+    rules: {
+      'no-restricted-syntax': [
+        'warn',
+        {
+          selector: "Literal[value=/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/]",
+          message: 'Do not use inline hex colors in UI. Use palette tokens via useAppPalette().',
+        },
+      ],
+    },
+  },
+  // Relax the inline-hex restriction for theme, scripts, test files
+  {
+    files: ['theme/**/*.ts', 'scripts/**/*', '**/__tests__/**/*', '**/*.test.*'],
+    rules: {
+      'no-restricted-syntax': 'off',
     },
   },
   // Disallow dynamic require in jurisdictions data (enforce static imports for Metro compatibility)

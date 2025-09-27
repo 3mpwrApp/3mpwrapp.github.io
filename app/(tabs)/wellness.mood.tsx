@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Link } from 'expo-router';
 
 import { ThemedText } from '../../components/ThemedText';
 import { ThemedView } from '../../components/ThemedView';
@@ -21,6 +22,17 @@ function MoodInner() {
     <ThemedView style={styles.container}>
   <ThemedText style={styles.title}>{t('mood.title','Mood Tracker')}</ThemedText>
   <ThemedText style={styles.subtitle}>{t('mood.subtitle','Log how you feel to spot trends.')}</ThemedText>
+
+      {/* Quick access wellness chips */}
+      <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8 }}>
+        {[{ label: t('wellness.quick.sleep','Sleep & Energy'), href: '/(tabs)/wellness/sleep-energy-tracker' }, { label: t('wellness.quick.balance','Work/Rest Balance AI'), href: '/(tabs)/wellness/work-balance-ai' }].map((c) => (
+          <Link key={c.href} href={(c.href as any)} asChild>
+            <View style={{ borderWidth: 1, borderRadius: 999, paddingHorizontal: 10, paddingVertical: 6, borderColor: palette.muted }}>
+              <Text style={{ color: palette.text, fontSize: 12 }}>{c.label}</Text>
+            </View>
+          </Link>
+        ))}
+      </View>
 
       <View style={styles.row}>
         {[ -2,-1,0,1,2 ].map(s => (

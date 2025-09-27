@@ -88,7 +88,7 @@ export default function AboutScreen() {
         accessibilityLabel={t("about.messagePlaceholder","Message")}
         multiline
       />
-  {error ? <Text style={[styles.text,{color: palette.error || '#c00'}]} accessibilityLiveRegion="polite">{error}</Text> : null}
+  {error ? <Text style={[styles.text,{color: palette.error}]} accessibilityLiveRegion="polite">{error}</Text> : null}
       <Pressable
         style={({ pressed }) => [styles.button, pressed && { opacity: 0.9 }]}
         onPress={sendEmail}
