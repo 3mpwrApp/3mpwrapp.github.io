@@ -104,6 +104,9 @@ export default function PolicySimple() {
         {t('advocacy.tools.policy_simple')}
       </Text>
       <Text style={s.subtitle}>{t('advocacy.policy.subtitle','Easy-read guides to accessibility, human rights, and benefits.')}</Text>
+      <Text style={[s.helper, { fontStyle: 'italic' }]}>
+        Hint: prefill from Assistant quick prompts or deep-links using ?q=...
+      </Text>
       <View style={s.aiBox}>
         <Text style={s.sectionTitle}>{t('advocacy.policy.aiHeader')}</Text>
         <Text style={s.helper}>{t('advocacy.policy.aiHelp')}</Text>

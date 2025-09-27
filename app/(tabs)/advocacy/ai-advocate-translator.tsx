@@ -72,8 +72,11 @@ export default function AiAdvocateTranslator() {
       >
   {t('advocacy.tools.ai_translator','AI Advocate Translator')}
       </Text>
+      <Text style={[s.subtitle, { fontStyle: 'italic' }]} accessibilityLabel={t('assistant.hub.quickPrompts','Quick prompts')}>
+        {t('translator.subtitle','Paste a bureaucratic letter to simplify into plain language. ASL video summary requires server integration.')} · Hint: you can prefill this from Assistant quick prompts or links with ?q=...
+      </Text>
       <OnlineStatusBadge />
-      <Text style={s.subtitle}>{t('translator.subtitle','Paste a bureaucratic letter to simplify into plain language. ASL video summary requires server integration.')}</Text>
+      
       <TextInput
         style={[s.input, { minHeight: 120 }]}
         value={input}
