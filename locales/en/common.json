@@ -523,8 +523,8 @@
     "pdfUnavailableBody": "Install expo-print in a dev build to export PDFs.",
     "exportFailedTitle": "Export failed",
     "exportFailedBody": "Could not create file.",
-    "subtitle": "[T] translator.subtitle",
-    "placeholder": "[T] translator.placeholder"
+    "subtitle": "Paste a bureaucratic letter to simplify into plain language. ASL video summary requires server integration.",
+    "placeholder": "Paste text here"
   },
   "settings": {
     "wellness": "Wellness",

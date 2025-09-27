@@ -1,3 +1,4 @@
+import { useLocalSearchParams } from 'expo-router';
 import React from "react";
 import {
   Alert,
@@ -9,7 +10,7 @@ import {
   TextInput,
   View,
 } from "react-native";
-
+ 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
@@ -24,7 +25,6 @@ import { usage } from '../../../services/usage';
 import { useAppPalette } from "../../../theme/usePalette";
 import { extractTranslatorSections, getTranslatorConfigForLocale } from "../../../utils/translatorExtract";
 
-// Route param seeding disabled in tests/web to satisfy hooks lint rules
 
 function simplify(text: string): string {
   const rules: [RegExp, string][] = [
@@ -45,6 +45,8 @@ function simplify(text: string): string {
 
 export const options = { href: null };
 export default function AiAdvocateTranslator() {
+  // Router params (must be top-most hooks to avoid any conditional order concerns)
+  const { q } = useLocalSearchParams<{ q?: string }>();
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
@@ -56,7 +58,10 @@ export default function AiAdvocateTranslator() {
   const [output, setOutput] = React.useState("");
   const [sections, setSections] = React.useState<{summary:string; keyTerms:string[]; deadlines:string[]; actions:string[]}|null>(null);
   React.useEffect(()=>{ usage.view('translator','/translator'); },[]);
-  // Note: initial prompt via route param 'q' is disabled in this environment
+  // Accept initial prompt via route param 'q'
+  React.useEffect(() => {
+    if (q && !input) setInput(String(q));
+  }, [q, input]);
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text

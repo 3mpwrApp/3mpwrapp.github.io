@@ -1,3 +1,4 @@
+import { useLocalSearchParams } from 'expo-router';
 import React from "react";
 import {
   Alert,
@@ -9,7 +10,7 @@ import {
   TextInput,
   View,
 } from "react-native";
-
+ 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import {
@@ -21,7 +22,6 @@ import { useTranslation } from '../../../i18n';
 import { aiPolicySimplify } from '../../../services/aiAdvocacy';
 import { useAppPalette } from "../../../theme/usePalette";
 
-// Route param seeding disabled in tests/web to satisfy hooks lint rules
 
 const SECTIONS = [
   {
@@ -50,6 +50,8 @@ const SECTIONS = [
 export const options = { href: null };
 
 export default function PolicySimple() {
+  // Router params (top-most to avoid conditional hooks)
+  const { q } = useLocalSearchParams<{ q?: string }>();
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
@@ -59,11 +61,14 @@ export default function PolicySimple() {
   const open = (url: string) => Linking.openURL(url).catch(() => {});
   const [raw, setRaw] = React.useState(t('advocacy.policy.placeholder','Paste or type a policy / decision excerpt here to simplify.'));
   const [loading, setLoading] = React.useState(false);
-  // Note: initial text via route param 'q' is disabled in this environment
+  // Seed via q param when present
   const [summary, setSummary] = React.useState('');
   const [points, setPoints] = React.useState<string[]>([]);
   const [obligations, setObligations] = React.useState<string[]>([]);
   const [actions, setActions] = React.useState<string[]>([]);
+  React.useEffect(()=>{
+    if (q && !raw) setRaw(String(q));
+  }, [q, raw]);
 
   const runSimplify = async () => {
     if (!raw.trim()) return;

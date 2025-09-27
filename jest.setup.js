@@ -10,7 +10,9 @@ jest.mock('react-native', () => {
   const RN = {
     I18nManager: { isRTL: false, forceRTL: () => {}, allowRTL: () => {} },
     Platform: { OS: 'web', select: (o) => o.web },
+    useColorScheme: () => 'light',
   };
+  const StyleSheet = { create: (styles) => styles, hairlineWidth: 1 };
   const stripProps = (props) => {
     const {
       accessibilityRole,
@@ -26,7 +28,7 @@ jest.mock('react-native', () => {
   const View = (props) => React.createElement('div', props, props.children);
   const Text = (props) => React.createElement('span', props, props.children);
   const Pressable = (props) => React.createElement('button', stripProps(props), props.children);
-  return { ...RN, View, Text, Pressable };
+  return { ...RN, StyleSheet, View, Text, Pressable };
 });
 
 // Alias fireEvent.press -> fireEvent.click for web-like test env
