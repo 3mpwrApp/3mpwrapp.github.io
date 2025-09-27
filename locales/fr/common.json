@@ -1924,6 +1924,10 @@
     "subtitle": "Log how you feel to spot trends.",
     "notePlaceholder": "Optional note",
     "save": "Save",
+      "quick": {
+        "sleep": "Sommeil & Énergie",
+        "balance": "Équilibre travail/repos (IA)"
+      },
     "today": "Today",
     "emptyToday": "No entries yet today.",
     "avg7d": "7d Avg:",
