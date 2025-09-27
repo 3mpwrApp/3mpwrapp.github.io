@@ -524,6 +524,13 @@
     "breathing": "Breathing",
     "dbt": {
       "title": "DBT Skill Matcher",
+      "tools": {
+        "coach": "Coach",
+        "translator": "Traducteur",
+        "policy": "Politique",
+        "mood": "Humeur",
+        "resources": "Ressources"
+      },
       "desc": "Instant skill suggestions for current emotion.",
       "sad": "Sad",
       "angry": "Angry",
@@ -1633,7 +1640,7 @@
     "success": "Succès",
     "error": "Erreur",
     "working": "Traitement...",
-    "all": "All",
+  "all": "Tous",
     "attachUnavailableTitle": "Attach unavailable",
     "attachUnavailableBody": "Document picker not available in this build.",
     "attachMultiUnavailable": "Multi-file picker not available in this build.",

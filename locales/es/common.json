@@ -567,6 +567,13 @@
     "breathing": "Breathing",
     "dbt": {
       "title": "DBT Skill Matcher",
+      "tools": {
+        "coach": "Entrenador",
+        "translator": "Traductor",
+        "policy": "Política",
+        "mood": "Ánimo",
+        "resources": "Recursos"
+      },
       "desc": "Instant skill suggestions for current emotion.",
       "sad": "Sad",
       "angry": "Angry",
