@@ -117,7 +117,7 @@ function RecentTools() {
         {items.map((it) => (
           <Link key={it.tool} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild>
             <A11yPressable hitSlop={HIT_SLOP_8} style={s.recentChip} accessibilityRole="link" accessibilityLabel={t('assistant.hub.openRecent','Open recent tool')}>
-              <Text style={s.recentText}>{mapToolLabel(it.tool)}</Text>
+              <Text style={s.recentText}>{mapToolLabel(it.tool, t)}</Text>
             </A11yPressable>
           </Link>
         ))}
@@ -126,13 +126,13 @@ function RecentTools() {
   );
 }
 
-function mapToolLabel(tool: string) {
+function mapToolLabel(tool: string, t: (k: string, def?: string) => string) {
   switch (tool) {
-    case 'coach': return 'Coach';
-    case 'translator': return 'Translator';
-    case 'policy_simplifier': return 'Policy';
-    case 'wellness_mood': return 'Mood';
-    case 'resources_search': return 'Resources';
+    case 'coach': return t('assistant.tools.coach', 'Coach');
+    case 'translator': return t('assistant.tools.translator', 'Translator');
+    case 'policy_simplifier': return t('assistant.tools.policy', 'Policy');
+    case 'wellness_mood': return t('assistant.tools.mood', 'Mood');
+    case 'resources_search': return t('assistant.tools.resources', 'Resources');
     default: return tool;
   }
 }

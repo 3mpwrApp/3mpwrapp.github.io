@@ -419,6 +419,13 @@
       "open": "Abrir asistente",
       "cta": "🤖 Preguntar"
     },
+    "tools": {
+      "coach": "Entrenador",
+      "translator": "Traductor",
+      "policy": "Política",
+      "mood": "Ánimo",
+      "resources": "Recursos"
+    },
     "hub": {
       "title": "Asistente",
       "subtitle": "Elige una herramienta abajo o vuelve a tu última tarea en cualquier momento.",

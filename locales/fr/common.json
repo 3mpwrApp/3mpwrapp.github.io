@@ -1372,6 +1372,13 @@
       "open": "Ouvrir l’assistant",
       "cta": "🤖 Demander"
     },
+    "tools": {
+      "coach": "Coach",
+      "translator": "Traducteur",
+      "policy": "Politique",
+      "mood": "Humeur",
+      "resources": "Ressources"
+    },
     "hub": {
       "title": "Assistant",
       "subtitle": "Choisissez un outil ci-dessous ou revenez à votre dernière tâche à tout moment.",

@@ -37,8 +37,15 @@
     },
     "intro": "Build supportive routines and track your wellbeing.",
     "breathing": "Breathing",
-    "dbt": {
+  "dbt": {
       "title": "DBT Skill Matcher",
+      "tools": {
+        "coach": "Coach",
+        "translator": "Translator",
+        "policy": "Policy",
+        "mood": "Mood",
+        "resources": "Resources"
+      },
       "desc": "Instant skill suggestions for current emotion.",
       "sad": "Sad",
       "angry": "Angry",
