@@ -137,10 +137,10 @@ export default function AccessibilityStatusDashboard() {
   };
 
   const wcagLevelColors = {
-    A: palette.success || "#28a745",
+    A: palette.success,
     AA: palette.primary,
-    AAA: palette.warning || "#ffc107",
-  };
+    AAA: palette.warning,
+  } as const;
 
   return (
     <ScrollView 
@@ -160,7 +160,7 @@ export default function AccessibilityStatusDashboard() {
           {activeFeatures.length} of {features.length} accessibility features active
         </Text>
         <View style={styles.complianceIndicator}>
-          <Ionicons name="checkmark-circle" size={20} color={palette.success || "#28a745"} />
+          <Ionicons name="checkmark-circle" size={20} color={palette.success} />
           <Text style={styles.complianceText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
             WCAG 2.1 AA Compliant
           </Text>
@@ -228,7 +228,7 @@ export default function AccessibilityStatusDashboard() {
                 <Ionicons 
                   name={feature.isActive ? "checkmark-circle" : "ellipse-outline"} 
                   size={24} 
-                  color={feature.isActive ? palette.success || "#28a745" : palette.muted} 
+                  color={feature.isActive ? palette.success : palette.muted} 
                 />
               </View>
             </View>

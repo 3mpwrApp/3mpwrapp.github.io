@@ -10,7 +10,7 @@ import {
   TextInput,
   View,
 } from "react-native";
- 
+
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {

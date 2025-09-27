@@ -252,13 +252,13 @@ export default function SymptomTracker() {
             <Text style={styles.buttonText}>Save</Text>
           </A11yPressable>
           <A11yPressable
-            style={[styles.button, { flex: 1, backgroundColor: "#777" }]}
+            style={[styles.button, { flex: 1, backgroundColor: palette.muted }]}
             onPress={cancelEdit}
             accessibilityRole="button"
             accessibilityLabel="Cancel edits"
             hitSlop={HIT_SLOP_8}
           >
-            <Text style={styles.buttonText}>Cancel</Text>
+            <Text style={[styles.buttonText, { color: palette.text }]}>Cancel</Text>
           </A11yPressable>
         </View>
       ) : (
@@ -357,10 +357,10 @@ export default function SymptomTracker() {
                 onPress={() => remove(e.id)}
                 accessibilityRole="button"
                 accessibilityLabel={`Delete entry dated ${e.date}`}
-                style={[styles.smallBtn, { backgroundColor: "#b00020" }]}
+                style={[styles.smallBtn, { backgroundColor: palette.error }]}
                 hitSlop={HIT_SLOP_8}
               >
-                <Text style={[styles.smallBtnText, { color: "#fff" }]}>Delete</Text>
+                <Text style={[styles.smallBtnText, { color: palette.onPrimary }]}>Delete</Text>
               </A11yPressable>
             </View>
           </View>

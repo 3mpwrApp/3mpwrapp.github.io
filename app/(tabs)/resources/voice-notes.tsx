@@ -79,7 +79,7 @@ export default function VoiceNotes() {
       {!recording ? (
         <A11yPressable onPress={start} style={s.button} accessibilityLabel={t('templates.voice.record','Record audio')}><Text style={s.buttonText}>{t('templates.voice.record','Record audio')}</Text></A11yPressable>
       ) : (
-        <A11yPressable onPress={stop} style={[s.button,{ backgroundColor:'#b00020' }]} accessibilityLabel={t('templates.voice.stop','Stop recording')}><Text style={s.buttonText}>{t('templates.voice.stop','Stop recording')}</Text></A11yPressable>
+        <A11yPressable onPress={stop} style={[s.button,{ backgroundColor: palette.error }]} accessibilityLabel={t('templates.voice.stop','Stop recording')}><Text style={s.buttonText}>{t('templates.voice.stop','Stop recording')}</Text></A11yPressable>
       )}
       {!!audioUri && (
         <A11yPressable onPress={async()=>{ const text = await transcribeAudio(audioUri); if (text) setSummary(prev=> (prev? prev+'\n\n':'') + text); }} style={[s.button,{ marginTop:8 }]} accessibilityLabel={t('templates.voice.transcribe','Transcribe')}><Text style={s.buttonText}>{t('templates.voice.transcribe','Transcribe')}</Text></A11yPressable>

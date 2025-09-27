@@ -240,4 +240,12 @@ function dayKeyFromMatrix(baseMonth: Date, day: number | null) { if (!day) retur
 function buildMonthMatrix(firstOfMonth: Date): (number | null)[][] { const y = firstOfMonth.getFullYear(); const m = firstOfMonth.getMonth(); const first = new Date(y,m,1); const startDay = first.getDay(); const daysInMonth = new Date(y,m+1,0).getDate(); const matrix: (number|null)[][]=[]; let current = 1 - startDay; for (let w=0; w<6; w++){ const week:(number|null)[]=[]; for(let d=0; d<7; d++){ if(current<1||current>daysInMonth) week.push(null); else week.push(current); current++; } matrix.push(week); if (current>daysInMonth) break; } return matrix; }
 function mapDeadlinesByDay(items: { dueAt: string }[]) { const m = new Map<string, number>(); for (const e of items) { const k = toDayKey(e.dueAt); m.set(k, (m.get(k)||0)+1); } return m; }
 function currentWeekFromMatrix(matrix: (number|null)[][]) { const today = new Date().getDate(); for (const w of matrix) { if (w.includes(today)) return w; } return matrix[0]; }
-function dotColor(dayKey: string, items: { dueAt: string }[], palette: any) { const d = new Date(dayKey + 'T00:00:00'); const now = new Date(); const dayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime(); const ts = d.getTime(); if (ts < dayStart && items.some(x => toDayKey(x.dueAt)===dayKey)) return '#b00020'; if (ts - dayStart < 7*86400000) return '#f0a500'; return palette.primary; }
+function dotColor(dayKey: string, items: { dueAt: string }[], palette: any) {
+  const d = new Date(dayKey + 'T00:00:00');
+  const now = new Date();
+  const dayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  const ts = d.getTime();
+  if (ts < dayStart && items.some(x => toDayKey(x.dueAt)===dayKey)) return palette.error;
+  if (ts - dayStart < 7*86400000) return palette.warning;
+  return palette.primary;
+}

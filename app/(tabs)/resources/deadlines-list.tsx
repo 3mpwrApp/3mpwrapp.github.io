@@ -97,7 +97,7 @@ export default function DeadlinesList() {
   const statusStyle = (dueISO: string) => {
     const now = Date.now();
     const due = new Date(dueISO).getTime();
-    if (due < now) return { color: '#b00020' };
+    if (due < now) return { color: palette.error };
     if (due - now < 7 * 86400000) return { color: palette.primary };
     return { color: palette.text };
   };

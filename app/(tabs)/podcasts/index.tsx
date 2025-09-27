@@ -1,37 +1,37 @@
+import { Ionicons } from "@expo/vector-icons";
+import { Image as ExpoImage } from "expo-image";
+import * as Linking from "expo-linking";
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  RefreshControl,
-  Alert,
-  Pressable,
+    Alert,
+    FlatList,
+    Pressable,
+    RefreshControl,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
-import * as Linking from "expo-linking";
-import { Image as ExpoImage } from "expo-image";
-import { Ionicons } from "@expo/vector-icons";
 
-import { useAppPalette } from "../../../theme/usePalette";
-import { useTextScale } from "../../../theme/typography";
-import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-  useAnnounceOnChange,
-} from "../../../hooks/useA11y";
 import { podcasts as localPodcasts } from "../../../data/podcasts";
+import {
+    MAX_FONT_SCALE,
+    useAnnounceOnChange,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
+} from "../../../hooks/useA11y";
+import { useTextScale } from "../../../theme/typography";
+import { useAppPalette } from "../../../theme/usePalette";
 // Stories mirror YouTube list; we render a single combined list (podcasts only)
+import Card from "../../../components/Card";
 import { fetchPodcasts } from "../../../services/podcasts";
 import { useCounts } from "../../../store/counts";
-import Card from "../../../components/Card";
 // Link not needed; we open externally via Linking
-import SkeletonRow from "../../../components/SkeletonRow";
-import { useRefresh } from "../../../store/refresh";
-import { useNetwork } from "../../../store/network";
-import SettingsLink from "../../../components/SettingsLink";
 import ContrastToggle from "../../../components/ContrastToggle";
+import SettingsLink from "../../../components/SettingsLink";
+import SkeletonRow from "../../../components/SkeletonRow";
 import { useFavorites } from "../../../store/favorites";
+import { useNetwork } from "../../../store/network";
+import { useRefresh } from "../../../store/refresh";
 import { useSettings } from "../../../store/settings";
 
 export default function PodcastsScreen() {
@@ -144,7 +144,7 @@ export default function PodcastsScreen() {
             justifyContent: "center",
           }}
         >
-          <Ionicons name="play-circle" size={22} color="#ffffff" />
+          <Ionicons name="play-circle" size={22} color={palette.onPrimary} />
         </View>
         <Pressable
           onPress={onToggle}
@@ -162,7 +162,7 @@ export default function PodcastsScreen() {
           <Ionicons
             name={saved ? "bookmark" : "bookmark-outline"}
             size={16}
-            color="#fff"
+            color={palette.onPrimary}
           />
         </Pressable>
       </View>

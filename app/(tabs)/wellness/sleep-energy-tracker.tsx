@@ -1,21 +1,21 @@
 import React from "react";
 import {
-  Alert,
-  ScrollView,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { usePrivacy } from "../../../store/privacy";
@@ -257,13 +257,13 @@ export default function SleepEnergyTracker() {
             <Text style={styles.buttonText}>Save</Text>
           </A11yPressable>
           <A11yPressable
-            style={[styles.button, { flex: 1, backgroundColor: "#777" }]}
+            style={[styles.button, { flex: 1, backgroundColor: palette.muted }]}
             onPress={cancelEdit}
             accessibilityRole="button"
             accessibilityLabel="Cancel edits"
             hitSlop={HIT_SLOP_8}
           >
-            <Text style={styles.buttonText}>Cancel</Text>
+            <Text style={[styles.buttonText, { color: palette.text }]}>Cancel</Text>
           </A11yPressable>
         </View>
       ) : (
@@ -360,12 +360,10 @@ export default function SleepEnergyTracker() {
                 onPress={() => remove(e.id)}
                 accessibilityRole="button"
                 accessibilityLabel={`Delete entry dated ${e.date}`}
-                style={[styles.smallBtn, { backgroundColor: "#b00020" }]}
+                style={[styles.smallBtn, { backgroundColor: palette.error }]}
                 hitSlop={HIT_SLOP_8}
               >
-                <Text style={[styles.smallBtnText, { color: "#fff" }]}>
-                  Delete
-                </Text>
+                <Text style={[styles.smallBtnText, { color: palette.onPrimary }]}>Delete</Text>
               </A11yPressable>
             </View>
           </View>

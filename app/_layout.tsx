@@ -5,6 +5,7 @@ import { Stack, usePathname } from "expo-router";
 import React from "react";
 import { AccessibilityInfo, AppState, StyleSheet, Text, View } from "react-native";
 
+// internal modules
 import ChangelogGate from "../components/ChangelogGate";
 import GlobalAssistant from "../components/GlobalAssistant";
 import TermsGate from "../components/TermsGate";
@@ -15,6 +16,7 @@ import { CountsProvider } from "../store/counts";
 import { FavoritesProvider } from "../store/favorites";
 import { NetworkProvider, useNetwork } from "../store/network";
 import { RefreshProvider } from "../store/refresh";
+import { useAppPalette } from "../theme/usePalette";
 import { announce } from "../utils/announce";
 // Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
@@ -193,25 +195,25 @@ function TelemetryInit() {
 
 function OfflineBanner() {
   const { offline } = useNetwork();
+  const palette = useAppPalette();
   if (!offline) return null;
   return (
     <View
-      style={bannerStyles.wrap}
+      style={[bannerStyles.wrap, { backgroundColor: palette.error }]}
       accessibilityRole="alert"
       accessibilityLabel="Offline notice"
     >
-      <Text style={bannerStyles.text}>Offline: showing cached content</Text>
+      <Text style={[bannerStyles.text, { color: palette.onPrimary }]}>Offline: showing cached content</Text>
     </View>
   );
 }
 
 const bannerStyles = StyleSheet.create({
   wrap: {
-    backgroundColor: "#b00020",
     paddingVertical: 6,
     paddingHorizontal: 12,
   },
-  text: { color: "#fff", textAlign: "center", fontWeight: "700" },
+  text: { textAlign: "center", fontWeight: "700" },
 });
 
 

@@ -182,10 +182,11 @@ function badgeStyle(palette: any) {
 
 function trendStyle(palette: any, trend: string) {
   let bg = palette.primary;
-  if (trend === 'improving') bg = '#2d7d46';
-  else if (trend === 'declining') bg = '#a83232';
-  else if (trend === 'stable') bg = '#666';
-  return { backgroundColor: bg, color: '#fff', paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 };
+  if (trend === 'improving') bg = palette.success;
+  else if (trend === 'declining') bg = palette.error;
+  else if (trend === 'stable') bg = palette.muted;
+  const fg = bg === palette.muted ? palette.text : palette.onPrimary;
+  return { backgroundColor: bg, color: fg, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 };
 }
 
 // legacy helper removed; route resolution handled by registry

@@ -1,12 +1,14 @@
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  ScrollView,
-  Linking,
+    Linking,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
+
+import { useAppPalette } from "../theme/usePalette";
 
 let AsyncStorage: any;
 try {
@@ -16,6 +18,8 @@ try {
 const KEY = "empowr.terms.accepted.v1";
 
 export default function TermsGate({ children }: { children: React.ReactNode }) {
+  const palette = useAppPalette();
+  const styles = createStyles(palette);
   const [accepted, setAccepted] = React.useState<boolean | null>(null);
 
   React.useEffect(() => {
@@ -82,36 +86,38 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
   );
 }
 
-const styles = StyleSheet.create({
-  overlay: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: "rgba(0,0,0,0.6)",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 16,
-    zIndex: 9999,
-  },
-  card: {
-    width: "100%",
-    maxWidth: 520,
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    padding: 16,
-  },
-  title: { fontSize: 18, fontWeight: "700", marginBottom: 8, color: "#000" },
-  text: { color: "#000", opacity: 0.9 },
-  link: { marginTop: 8 },
-  linkText: { color: "#0066cc", fontWeight: "700" },
-  button: {
-    marginTop: 8,
-    backgroundColor: "#0066cc",
-    borderRadius: 8,
-    paddingVertical: 10,
-    alignItems: "center",
-  },
-  buttonText: { color: "#fff", fontWeight: "700" },
-});
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
+  return StyleSheet.create({
+    overlay: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: "rgba(0,0,0,0.6)",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: 16,
+      zIndex: 9999,
+    },
+    card: {
+      width: "100%",
+      maxWidth: 520,
+      backgroundColor: palette.card,
+      borderRadius: 12,
+      padding: 16,
+    },
+    title: { fontSize: 18, fontWeight: "700", marginBottom: 8, color: palette.text },
+    text: { color: palette.text, opacity: 0.9 },
+    link: { marginTop: 8 },
+    linkText: { color: palette.primary, fontWeight: "700" },
+    button: {
+      marginTop: 8,
+      backgroundColor: palette.primary,
+      borderRadius: 8,
+      paddingVertical: 10,
+      alignItems: "center",
+    },
+    buttonText: { color: palette.onPrimary, fontWeight: "700" },
+  });
+}

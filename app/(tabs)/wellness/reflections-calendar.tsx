@@ -132,9 +132,9 @@ export default function ReflectionsCalendar() {
   } as const;
 
   const moodColors: Record<NonNullable<Reflection['mood']>, string> = {
-    bad: '#d9534f',
-    ok: '#f0ad4e',
-    good: '#5cb85c',
+    bad: palette.error,
+    ok: palette.warning,
+    good: palette.success,
     great: palette.primary,
   } as const;
 
@@ -372,7 +372,7 @@ export default function ReflectionsCalendar() {
                                 accessibilityLabel={`Quick set mood ${m} for ${it.date.toDateString()}`}
                                 style={[s.quickChip,{ backgroundColor: moodColors[m] }]}
                               >
-                                <Text style={{ color: '#fff', fontSize: 10, fontWeight:'700' }}>{m.toUpperCase()}</Text>
+                                <Text style={{ color: palette.onPrimary, fontSize: 10, fontWeight:'700' }}>{m.toUpperCase()}</Text>
                               </A11yPressable>
                             ))}
                             <A11yPressable
@@ -382,7 +382,7 @@ export default function ReflectionsCalendar() {
                               accessibilityLabel="Close quick mood options"
                               style={[s.quickChip,{ backgroundColor: palette.muted }]}
                             >
-                              <Text style={{ color: '#000', fontSize: 10, fontWeight:'700' }}>X</Text>
+                              <Text style={{ color: palette.text, fontSize: 10, fontWeight:'700' }}>X</Text>
                             </A11yPressable>
                           </View>
                         )}
@@ -440,7 +440,7 @@ export default function ReflectionsCalendar() {
     {/* Editor Modal */}
     {editor.open && (
       <Modal transparent animationType="fade" onRequestClose={()=> setEditor(prev=>({ ...prev, open:false }))}>
-        <A11yPressable style={{ flex:1, backgroundColor:'#0008', alignItems:'center', justifyContent:'center' }} onPress={()=> setEditor(prev=>({ ...prev, open:false }))} accessibilityRole="button" accessibilityLabel="Close editor" hitSlop={HIT_SLOP_8}>
+        <A11yPressable style={{ flex:1, backgroundColor:(palette.text+'88') as any, alignItems:'center', justifyContent:'center' }} onPress={()=> setEditor(prev=>({ ...prev, open:false }))} accessibilityRole="button" accessibilityLabel="Close editor" hitSlop={HIT_SLOP_8}>
           <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '90%', maxWidth: 520 }}>
             <Text style={{ color: palette.text, fontWeight:'700', marginBottom: 8 }}>{editor.entry? 'Edit Reflection' : 'New Reflection'}</Text>
             <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginBottom: 8 }}>
@@ -495,7 +495,7 @@ export default function ReflectionsCalendar() {
     {/* Details Modal */}
     {details.open && (
       <Modal transparent animationType="fade" onRequestClose={()=> setDetails({ open:false, date:null })}>
-        <A11yPressable style={{ flex:1, backgroundColor:'#0008', alignItems:'center', justifyContent:'center' }} onPress={()=> setDetails({ open:false, date:null })} accessibilityRole="button" accessibilityLabel="Close details" hitSlop={HIT_SLOP_8}>
+        <A11yPressable style={{ flex:1, backgroundColor:(palette.text+'88') as any, alignItems:'center', justifyContent:'center' }} onPress={()=> setDetails({ open:false, date:null })} accessibilityRole="button" accessibilityLabel="Close details" hitSlop={HIT_SLOP_8}>
           <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '94%', maxWidth: 560, maxHeight: '80%' }}>
             <Text style={{ color: palette.text, fontWeight:'700', marginBottom: 8 }}>{details.date?.toDateString()}</Text>
             {/* Day summary */}

@@ -33,12 +33,12 @@ export default function OnlineStatusBadge() {
 }
 
 function styles(palette: ReturnType<typeof useAppPalette>, online: boolean | null) {
-  const color = online == null ? palette.muted : online ? '#1a7f37' : '#914d04';
-  const bg = online == null ? palette.surface : online ? '#d1fae5' : '#fef3c7';
-  const text = online == null ? palette.text : online ? '#065f46' : '#92400e';
+  const dot = online == null ? palette.muted : online ? palette.success : palette.warning;
+  const text = palette.text;
+  const bg = palette.card;
   return StyleSheet.create({
-    container: { flexDirection:'row', alignItems:'center', paddingHorizontal:8, paddingVertical:4, borderRadius:16, backgroundColor:bg, alignSelf:'flex-start', marginBottom:8 },
-    dot: { width:8, height:8, borderRadius:4, backgroundColor:color, marginRight:6 },
+    container: { flexDirection:'row', alignItems:'center', paddingHorizontal:8, paddingVertical:4, borderRadius:16, backgroundColor:bg, alignSelf:'flex-start', marginBottom:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
+    dot: { width:8, height:8, borderRadius:4, backgroundColor:dot, marginRight:6 },
     text: { fontSize:12, fontWeight:'600', color:text }
   });
 }

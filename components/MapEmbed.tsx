@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
 
@@ -39,7 +39,16 @@ export default function MapEmbed({ points, cluster = true }: { points: Point[]; 
       </View>
     );
   }
-  const pinColor = (k?: string) => k==='law'? '#0066cc' : k==='protest'? '#cc0000' : '#00a85a';
+  const pinColor = (k?: string) => {
+    switch (k) {
+      case 'law':
+        return palette.primary;
+      case 'protest':
+        return palette.error;
+      default:
+        return palette.success;
+    }
+  };
   return (
     <View style={{ height: 240, borderWidth: 1, borderColor: palette.muted, borderRadius: 8, overflow: 'hidden' }}>
       <MapView style={{ flex: 1 }} initialRegion={{ latitude: center.lat, longitude: center.lng, latitudeDelta: 0.5, longitudeDelta: 0.5 }}>
