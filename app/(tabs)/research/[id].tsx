@@ -208,7 +208,7 @@ function createStyles(
       minWidth: 44,
     },
     buttonText: { color: palette.onPrimary, fontSize: 16 },
-  toc: { borderWidth: StyleSheet.hairlineWidth, borderColor: '#666', borderRadius: 8, padding: 12, marginBottom: 28 },
+  toc: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginBottom: 28 },
     tocHeading: { fontWeight: '600', fontSize: 16, marginBottom: 6, color: palette.text },
     tocItem: { paddingVertical: 6 },
     tocText: { color: palette.text, fontSize: 14 },
@@ -226,11 +226,11 @@ function createStyles(
     tagRow: { flexDirection: 'row', flexWrap: 'wrap', marginBottom: 8 },
   tagChip: { backgroundColor: palette.card, paddingHorizontal: 8, paddingVertical: 4, borderRadius: 12, marginRight: 6, marginBottom: 6 },
     tagText: { fontSize: 12, color: palette.text },
-  references: { marginTop: 8, paddingTop: 12, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: '#666' },
+  references: { marginTop: 8, paddingTop: 12, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted },
     referencesHeading: { fontSize: Math.round(18 * factor), fontWeight: '600', marginBottom: 12, color: palette.text },
     referenceItem: { marginBottom: 6 },
     referenceText: { fontSize: 12, lineHeight: 16, color: palette.text },
-    backToTop: { position: 'absolute', right: 16, bottom: 24, backgroundColor: palette.primary, paddingHorizontal: 16, paddingVertical: 10, borderRadius: 24, shadowColor: '#000', shadowOpacity: 0.25, shadowRadius: 4, shadowOffset: { width: 0, height: 2 } },
+  backToTop: { position: 'absolute', right: 16, bottom: 24, backgroundColor: palette.primary, paddingHorizontal: 16, paddingVertical: 10, borderRadius: 24, shadowColor: palette.text, shadowOpacity: 0.25, shadowRadius: 4, shadowOffset: { width: 0, height: 2 } },
     backToTopText: { color: palette.onPrimary, fontWeight: '600' },
   });
 }

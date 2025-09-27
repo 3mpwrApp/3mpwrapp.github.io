@@ -179,7 +179,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     card: {
       padding: 16,
-      shadowColor: "#000",
+      shadowColor: palette.text,
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.08,
       shadowRadius: 4,

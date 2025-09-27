@@ -123,7 +123,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       height: 20,
       borderRadius: 10,
       backgroundColor: "white",
-      shadowColor: "#000",
+      shadowColor: palette.text,
       shadowOffset: { width: 0, height: 1 },
       shadowOpacity: 0.3,
       shadowRadius: 2,
