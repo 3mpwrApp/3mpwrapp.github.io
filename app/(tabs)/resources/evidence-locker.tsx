@@ -588,7 +588,7 @@ export default function EvidenceLocker() {
       {/* Preview Modal */}
       {preview && (
         <Modal transparent animationType="fade" onRequestClose={() => setPreview(null)}>
-          <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel={t("common.closePreview", "Close preview")} style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)}>
+          <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel={t("common.closePreview", "Close preview")} style={{ flex:1, backgroundColor: palette.text + '99', alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)}>
             <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '90%', maxHeight: '90%' }}>
               {(() => { try { const { Image } = require('expo-image'); return (
                 <Image source={{ uri: preview.url }} style={{ width: 320, height: 200, borderRadius: 6 }} contentFit="contain" />
