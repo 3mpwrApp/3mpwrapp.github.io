@@ -599,7 +599,7 @@ export default function EvidenceLocker() {
       {/* Preview Modal */}
   {preview && (
         <Modal transparent animationType="fade" onRequestClose={() => setPreview(null)}>
-          <A11yPressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)} accessibilityRole="button" accessibilityLabel="Close preview">
+          <A11yPressable style={{ flex:1, backgroundColor:(palette.text+'88') as any, alignItems:'center', justifyContent:'center' }} onPress={()=>setPreview(null)} accessibilityRole="button" accessibilityLabel="Close preview">
             <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '90%', maxHeight: '90%' }}>
               {(() => { try { const { Image } = require('expo-image'); return (
                 <Image source={{ uri: preview.url }} style={{ width: 320, height: 200, borderRadius: 6 }} contentFit="contain" />
@@ -616,7 +616,7 @@ export default function EvidenceLocker() {
   {/* Video modal */}
   {video && (
     <Modal transparent animationType="fade" onRequestClose={()=> setVideo(null)}>
-  <A11yPressable style={{ flex:1, backgroundColor:'#000a', alignItems:'center', justifyContent:'center' }} onPress={()=>setVideo(null)} accessibilityRole="button" accessibilityLabel="Close video">
+  <A11yPressable style={{ flex:1, backgroundColor:(palette.text+'88') as any, alignItems:'center', justifyContent:'center' }} onPress={()=>setVideo(null)} accessibilityRole="button" accessibilityLabel="Close video">
         <View style={{ backgroundColor: palette.surface, padding: 10, borderRadius: 8, maxWidth: '95%', maxHeight: '80%', width: 360 }}>
           {(() => { try { const { Video } = require('expo-av'); return (
             <Video source={{ uri: video.uri }} style={{ width: 340, height: 220 }} useNativeControls shouldPlay resizeMode="contain" />

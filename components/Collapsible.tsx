@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+
+import { useAppPalette } from "../theme/usePalette";
 export default function Collapsible({
   title,
   children,
@@ -7,43 +9,40 @@ export default function Collapsible({
   title: string;
   children: React.ReactNode;
 }) {
+  const palette = useAppPalette();
   const [open, setOpen] = useState(false);
 
   return (
-    <View style={styles.wrapper}>
+    <View style={[styles.wrapper, { borderColor: palette.muted, backgroundColor: palette.card }]}>
       <Pressable
         onPress={() => setOpen((v) => !v)}
         accessibilityLabel={`${open ? "Collapse" : "Expand"} ${title}`}
         accessibilityRole="button"
-        style={({ pressed }) => [styles.header, pressed && { opacity: 0.6 }]}
+        style={({ pressed }) => [styles.header, { backgroundColor: palette.surface }, pressed && { opacity: 0.8 }]}
       >
-        <Text style={styles.headerText}>
+        <Text style={[styles.headerText, { color: palette.text }]}>
           {open ? "▾ " : "▸ "} {title}
         </Text>
       </Pressable>
 
-      {open && <View style={styles.content}>{children}</View>}
+      {open && <View style={[styles.content, { backgroundColor: palette.card }]}>{children}</View>}
     </View>
   );
 }
 const styles = StyleSheet.create({
   wrapper: {
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: "#ddd",
     borderRadius: 8,
     marginVertical: 8,
   },
   header: {
     padding: 12,
-    // Adjusted for better contrast per WCAG audit (prev #F7F8FA ~1.06)
-    backgroundColor: "#eef1f5",
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
   },
   headerText: { fontSize: 16, fontWeight: "600" },
   content: {
     padding: 12,
-    backgroundColor: "#fff",
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
   },

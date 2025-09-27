@@ -104,12 +104,12 @@ export default function AccommodationLetter() {
         </View>
       )}
       <Text style={s.subtitle}>{t("templates.letters.accommodation.subtitle","Fill in your details, review the preview, then share or copy.")}</Text>
-      <Field label={t("templates.letters.accommodation.title","Your Name")} value={name} onChangeText={setName} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.accommodation.employer","Employer")} value={employer} onChangeText={setEmployer} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.accommodation.jobTitle","Job Title")} value={jobTitle} onChangeText={setJobTitle} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.accommodation.date","Date (optional)")} value={date} onChangeText={setDate} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.accommodation.limitations","Limitations (brief)")} value={limitations} onChangeText={setLimitations} placeholderColor={placeholderColor} multiline />
-      <Field label={t("templates.letters.accommodation.accommodations","Requested Accommodations")} value={accom} onChangeText={setAccom} placeholderColor={placeholderColor} multiline />
+  <Field palette={palette} label={t("templates.letters.accommodation.title","Your Name")} value={name} onChangeText={setName} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.accommodation.employer","Employer")} value={employer} onChangeText={setEmployer} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.accommodation.jobTitle","Job Title")} value={jobTitle} onChangeText={setJobTitle} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.accommodation.date","Date (optional)")} value={date} onChangeText={setDate} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.accommodation.limitations","Limitations (brief)")} value={limitations} onChangeText={setLimitations} placeholderColor={placeholderColor} multiline />
+  <Field palette={palette} label={t("templates.letters.accommodation.accommodations","Requested Accommodations")} value={accom} onChangeText={setAccom} placeholderColor={placeholderColor} multiline />
       <Text style={[s.sectionTitle,{ marginTop:12 }]}>{t("common.preview","Preview")}</Text>
       <View style={s.previewBox}><Text style={s.previewText}>{preview}</Text></View>
     </ScrollView>
@@ -128,10 +128,12 @@ function Field({
   onChangeText: (t: string) => void;
   placeholderColor: string;
   multiline?: boolean;
+  palette: any;
 }) {
+  const { palette } = arguments[0] as any;
   return (
     <View style={{ marginBottom: 10 }}>
-      <Text style={{ color: "#000", opacity: 0.9, marginBottom: 4 }}>
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 4 }}>
         {label}
       </Text>
       <TextInput
@@ -139,11 +141,11 @@ function Field({
         onChangeText={onChangeText}
         style={{
           borderWidth: 1,
-          borderColor: "#ccc",
+          borderColor: palette.muted,
           borderRadius: 8,
           paddingHorizontal: 12,
           paddingVertical: 10,
-          color: "#000",
+          color: palette.text,
           minHeight: 44,
         }}
         placeholder={label}

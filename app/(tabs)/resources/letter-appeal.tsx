@@ -93,12 +93,12 @@ export default function AppealLetter() {
         </View>
       )}
       <Text style={s.subtitle}>{t("templates.letters.appeal.subtitle","Fill in your details, review the preview, then share or export.")}</Text>
-      <Field label={t("templates.letters.appeal.title","Your Name")} value={name} onChangeText={setName} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.appeal.claim","Claim Number")} value={claim} onChangeText={setClaim} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.appeal.decisionDate","Decision Date")} value={decisionDate} onChangeText={setDecisionDate} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.appeal.decisionSummary","Decision Summary")} value={reasons} onChangeText={setReasons} multiline placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.appeal.arguments","Your Arguments/Evidence")} value={appealArgs} onChangeText={setAppealArgs} multiline placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.appeal.contact","Contact (email/phone)")} value={contact} onChangeText={setContact} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.appeal.title","Your Name")} value={name} onChangeText={setName} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.appeal.claim","Claim Number")} value={claim} onChangeText={setClaim} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.appeal.decisionDate","Decision Date")} value={decisionDate} onChangeText={setDecisionDate} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.appeal.decisionSummary","Decision Summary")} value={reasons} onChangeText={setReasons} multiline placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.appeal.arguments","Your Arguments/Evidence")} value={appealArgs} onChangeText={setAppealArgs} multiline placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.appeal.contact","Contact (email/phone)")} value={contact} onChangeText={setContact} placeholderColor={placeholderColor} />
       <Text style={[s.sectionTitle,{ marginTop:12 }]}>{t("common.preview","Preview")}</Text>
       <View style={s.previewBox}><Text style={s.previewText}>{preview}</Text></View>
     </ScrollView>
@@ -117,10 +117,12 @@ function Field({
   onChangeText: (t: string) => void;
   placeholderColor: string;
   multiline?: boolean;
+  palette: any;
 }) {
+  const { palette } = arguments[0] as any;
   return (
     <View style={{ marginBottom: sp('md') }}>
-      <Text style={{ color: "#000", opacity: 0.9, marginBottom: sp('xs') }}>
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: sp('xs') }}>
         {label}
       </Text>
       <TextInput
@@ -128,11 +130,11 @@ function Field({
         onChangeText={onChangeText}
         style={{
           borderWidth: 1,
-          borderColor: "#ccc",
+          borderColor: palette.muted,
           borderRadius: sp('lg'),
           paddingHorizontal: sp('md'),
           paddingVertical: sp('sm'),
-          color: "#000",
+          color: palette.text,
           minHeight: 44,
         }}
         placeholder={label}

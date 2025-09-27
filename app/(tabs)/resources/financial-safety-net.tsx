@@ -196,16 +196,17 @@ function RowChips({ value, onChange, options }: { value: string; onChange: (v: a
 }
 
 function NavButtons({ onBack, onNext }: { onBack?: () => void; onNext?: () => void }) {
+  const palette = useAppPalette();
   return (
     <View style={{ flexDirection: "row", gap: 10, marginTop: 8 }}>
       {onBack && (
-        <A11yPressable onPress={onBack} style={{ paddingVertical: 10, paddingHorizontal: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: "#aaa", borderRadius: 8 }}>
-          <Text>Back</Text>
+        <A11yPressable onPress={onBack} style={{ paddingVertical: 10, paddingHorizontal: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8 }}>
+          <Text style={{ color: palette.text }}>Back</Text>
         </A11yPressable>
       )}
       {onNext && (
-        <A11yPressable onPress={onNext} style={{ paddingVertical: 10, paddingHorizontal: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: "#aaa", borderRadius: 8 }}>
-          <Text>Next</Text>
+        <A11yPressable onPress={onNext} style={{ paddingVertical: 10, paddingHorizontal: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8 }}>
+          <Text style={{ color: palette.text }}>Next</Text>
         </A11yPressable>
       )}
     </View>

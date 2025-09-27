@@ -68,13 +68,13 @@ export default function UnionRequestLetter() {
           <Text style={s.infoLine}>{t("templates.letters.common.infoLine3","Adapt wording to your facts; this is not legal advice.")}</Text>
         </View>
       )}
-      <Field label={t("templates.letters.union.name","Your Name")} value={name} onChangeText={setName} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.union.position","Position/Role")} value={position} onChangeText={setPosition} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.union.workplace","Workplace/Department")} value={workplace} onChangeText={setWorkplace} placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.union.issue","Issue Summary")} value={issue} onChangeText={setIssue} multiline placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.union.accommodation","Requested Accommodation/Remedy")} value={accommodation} onChangeText={setAccommodation} multiline placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.union.evidence","Evidence/Docs (optional)")} value={evidence} onChangeText={setEvidence} multiline placeholderColor={placeholderColor} />
-      <Field label={t("templates.letters.union.contact","Contact (email/phone)")} value={contact} onChangeText={setContact} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.union.name","Your Name")} value={name} onChangeText={setName} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.union.position","Position/Role")} value={position} onChangeText={setPosition} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.union.workplace","Workplace/Department")} value={workplace} onChangeText={setWorkplace} placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.union.issue","Issue Summary")} value={issue} onChangeText={setIssue} multiline placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.union.accommodation","Requested Accommodation/Remedy")} value={accommodation} onChangeText={setAccommodation} multiline placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.union.evidence","Evidence/Docs (optional)")} value={evidence} onChangeText={setEvidence} multiline placeholderColor={placeholderColor} />
+  <Field palette={palette} label={t("templates.letters.union.contact","Contact (email/phone)")} value={contact} onChangeText={setContact} placeholderColor={placeholderColor} />
       <Text style={[s.sectionTitle,{ marginTop:12 }]}>{t("common.preview","Preview")}</Text>
       <View style={s.previewBox}><Text style={s.previewText}>{preview}</Text></View>
     </ScrollView>
@@ -93,10 +93,12 @@ function Field({
   onChangeText: (t: string) => void;
   placeholderColor: string;
   multiline?: boolean;
+  palette: any;
 }) {
+  const { palette } = arguments[0] as any;
   return (
     <View style={{ marginBottom: 10 }}>
-      <Text style={{ color: "#000", opacity: 0.9, marginBottom: 4 }}>
+      <Text style={{ color: palette.text, opacity: 0.9, marginBottom: 4 }}>
         {label}
       </Text>
       <TextInput
@@ -104,11 +106,11 @@ function Field({
         onChangeText={onChangeText}
         style={{
           borderWidth: 1,
-          borderColor: "#ccc",
+          borderColor: palette.muted,
           borderRadius: 8,
           paddingHorizontal: 12,
           paddingVertical: 10,
-          color: "#000",
+          color: palette.text,
           minHeight: 44,
         }}
         placeholder={label}
