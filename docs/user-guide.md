@@ -105,7 +105,9 @@ lastUpdated: 2025-09-07
 
 - Location: Settings → Emergency Wallet Card.
 - Purpose: Store key medical info and emergency contacts locally and generate a printable card.
-- Quick open: From Resources → Support & Directories → Emergency Info Wallet Card (opens Settings section).
+- Quick open: From Resources → Support & Directories → Emergency Info Wallet Card. Note: this entry redirects you to Settings and auto-expands the Emergency Wallet Card section.
+
+![Emergency Wallet Card](images/emergency-wallet-card.png "Emergency Wallet Card form with fields for medical info and contacts")
 
 ### Evidence Locker
 
@@ -157,7 +159,7 @@ lastUpdated: 2025-09-07
   - Clear local data from device.
 - Terms & Policies: View Terms; “Require re‑acceptance” to be re‑prompted next launch.
 
-![Settings](images/settings.png "Profile, Local Profile, Privacy, and Terms")
+![Settings](images/settings.png "Settings showing Accessibility, Language, Notifications, and Emergency Wallet Card")
 
 ## How Do I…
 

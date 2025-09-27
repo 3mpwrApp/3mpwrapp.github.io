@@ -25,6 +25,13 @@ export default function RightsExplainer() {
   const [prov, setProv] = React.useState<Province>('ON');
   const [showInfo, setShowInfo] = React.useState(true);
   const [lastAnnouncedKey, setLastAnnouncedKey] = React.useState('');
+  // Plain-language toggle (per-screen) and micro-coach hint (persisted)
+  const [plainHere, setPlainHere] = React.useState<boolean>(false);
+  const [hintSeen, setHintSeen] = React.useState<boolean>(false);
+
+  // Optional AsyncStorage (graceful fallback if not present)
+  let AsyncStorage: any;
+  try { AsyncStorage = require('@react-native-async-storage/async-storage').default; } catch {}
 
   const sectionTitle = React.useMemo(()=> region === 'province' ? `${prov} – ${t('rightsExplainer.provincial','Provincial Rights')}` : region === 'canada' ? t('rightsExplainer.federal','Canada – Federal Rights') : t('rightsExplainer.international','Global – International Rights'), [region, prov, t]);
 
@@ -35,6 +42,16 @@ export default function RightsExplainer() {
   React.useEffect(()=>{ announce('lang_'+lang, t('rightsExplainer.langChanged','Language changed')); }, [lang]);
   React.useEffect(()=>{ announce('region_'+region, t('rightsExplainer.regionChanged','Region changed')); }, [region]);
   React.useEffect(()=>{ if(region==='province') announce('prov_'+prov, t('rightsExplainer.provinceChanged','Province changed')); }, [prov, region]);
+  React.useEffect(()=>{
+    (async()=>{
+      try {
+        const plain = await AsyncStorage?.getItem?.('rightsExplainer:plain:v1');
+        const seen = await AsyncStorage?.getItem?.('rightsExplainer:hintSeen:v1');
+        setPlainHere(plain === '1');
+        setHintSeen(seen === '1');
+      } catch {}
+    })();
+  },[]);
 
   const contentRef = React.useRef<Text>(null);
   React.useEffect(()=>{ setTimeout(()=>contentRef.current?.focus?.(), 40); }, [lang, region, prov]);
@@ -59,6 +76,23 @@ export default function RightsExplainer() {
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }} accessibilityLabel={t('rightsExplainer.screenLabel','Rights Explainer screen')}>
+      {/* Micro‑coach contextual hint */}
+      {!hintSeen && (
+        <View style={s.hintCard} accessibilityRole="summary">
+          <Text style={s.hintTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('microCoach.hint','Tip')}</Text>
+          <Text style={s.hintText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.hintPlain','Use plain language mode to simplify text on this screen.')}</Text>
+          <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+            <A11yPressable
+              style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
+              onPress={async()=>{ setHintSeen(true); try{ await AsyncStorage?.setItem?.('rightsExplainer:hintSeen:v1','1'); } catch{} }}
+              accessibilityRole='button'
+              accessibilityLabel={t('microCoach.dismiss','Got it')}
+            >
+              <Text style={[s.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('microCoach.dismiss','Got it')}</Text>
+            </A11yPressable>
+          </View>
+        </View>
+      )}
       <View style={s.infoCard} accessibilityRole="summary" accessibilityLabel={t('rightsExplainer.howToUse','How to use Rights Explainer')}>
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setShowInfo(v=>!v)} accessibilityRole="button" accessibilityLabel={t('rightsExplainer.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={s.infoHeader}>
           <Text style={s.infoTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.infoTitle','How to Use')}</Text>
@@ -84,6 +118,18 @@ export default function RightsExplainer() {
         </View>
       </View>
       <Text style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.heading','Multi‑Language Rights Explainer')}</Text>
+      <View style={{ flexDirection:'row', gap:8, marginTop: 8, alignItems:'center', flexWrap:'wrap' }}>
+        <A11yPressable
+          onPress={async()=>{ const next = !plainHere; setPlainHere(next); try { await AsyncStorage?.setItem?.('rightsExplainer:plain:v1', next ? '1' : '0'); } catch{} }}
+          accessibilityRole='button'
+          accessibilityLabel={plainHere ? t('plainMode.toggleOff','Use standard language on this screen') : t('plainMode.toggleOn','Use plain language on this screen')}
+          style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
+        >
+          <Text style={[s.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            {plainHere ? t('plainMode.toggleOff','Use standard language on this screen') : t('plainMode.toggleOn','Use plain language on this screen')}
+          </Text>
+        </A11yPressable>
+      </View>
       <Text style={s.text} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.subhead','Plain‑language summaries of basic rights. Select language and region.')}</Text>
 
       <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
@@ -172,5 +218,8 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     actionRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:8 },
     smallBtn: { backgroundColor: palette.primary, paddingHorizontal:14, paddingVertical:10, borderRadius:8 },
     smallBtnText: { color: palette.onPrimary, fontWeight:'700' },
+    hintCard: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.card, padding:12, borderRadius:10, marginBottom:12 },
+    hintTitle: { color: palette.text, fontWeight:'700', marginBottom: 2 },
+    hintText: { color: palette.text, opacity: 0.95 },
   });
 }

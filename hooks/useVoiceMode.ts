@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { router } from 'expo-router';
+import * as React from 'react';
 
 import { useSettings } from '../store/settings';
 
@@ -17,6 +17,10 @@ export function useVoiceCommands() {
     };
     // Navigation intents
     if (/(open|go to).*(resources|tools)/.test(text)) return open('/(tabs)/resources', 'Resources');
+    // Emergency wallet card in Settings
+    if (/(open|go to).*(wallet|emergency.*card)/.test(text)) return open('/(tabs)/settings?open=emergencyCard', 'Wallet Card');
+    // Wellness: Mood tracker
+    if (/\b(log|open|go to).*mood\b/.test(text)) return open('/(tabs)/wellness.mood', 'Mood');
     if (/(open|go to).*(ratings|reviews)/.test(text)) return open('/(tabs)/advocacy/ratings', 'Ratings');
     if (/(open|go to).*(advocacy|campaigns?)/.test(text)) return open('/(tabs)/advocacy', 'Advocacy');
     if (/(open|go to).*(community|mutual)/.test(text)) return open('/(tabs)/community', 'Community');

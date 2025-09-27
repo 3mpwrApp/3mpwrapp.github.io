@@ -3,6 +3,7 @@ import { Platform, StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/a11y';
 import { useVoiceCommands } from '../hooks/useVoiceMode';
+import { useTranslation } from '../i18n';
 import { transcribeAudio } from '../services/stt';
 import { useAppPalette } from '../theme/usePalette';
 
@@ -12,6 +13,7 @@ export default function VoiceController() {
   const palette = useAppPalette();
   const s = styles(palette);
   const { voiceMode, handleVoiceCommand } = useVoiceCommands();
+  const { t } = useTranslation();
   const [recording, setRecording] = React.useState<any | null>(null);
   const [busy, setBusy] = React.useState(false);
   const [toast, setToast] = React.useState<string | null>(null);
@@ -75,17 +77,24 @@ export default function VoiceController() {
       )}
       {showHelp && (
         <View style={s.helpBox}>
-          <Text style={s.helpTitle}>Voice commands</Text>
+          <Text style={s.helpTitle}>{t('voiceHelp.title','Voice Help')}</Text>
+          <Text style={s.helpText}>{t('voiceHelp.intro','Press the mic and say a command:')}</Text>
           {[
-            'Open resources',
-            'Open ratings',
-            'Open advocacy',
-            'Open community',
-            'Open settings',
-            'Open admin pending / approved / trash',
-            'Open rights explainer',
-            'Open doctor visit prep',
-            'Back',
+            t('voiceHelp.commands.openResources','Open resources'),
+            t('voiceHelp.commands.openWalletCard','Open wallet card'),
+            t('voiceHelp.commands.logMood','Log mood'),
+            t('voiceHelp.commands.openRatings','Open ratings'),
+            t('voiceHelp.commands.openAdvocacy','Open advocacy'),
+            t('voiceHelp.commands.openCommunity','Open community'),
+            t('voiceHelp.commands.openSettings','Open settings'),
+            t('voiceHelp.commands.openAdminPending','Open admin pending / approved / trash'),
+            t('voiceHelp.commands.openRightsExplainer','Open rights explainer'),
+            t('voiceHelp.commands.openDoctorPrep','Open doctor visit prep'),
+            t('voiceHelp.commands.openA11yLog','Open accessibility log'),
+            t('voiceHelp.commands.openRehabTracker','Open rehab tracker'),
+            t('voiceHelp.commands.openWorldMap','Open world map'),
+            t('voiceHelp.commands.openMediaStudio','Open media studio'),
+            t('voiceHelp.commands.goBack','Back / Go back'),
           ].map((c)=> (<Text key={c} style={s.helpText}>• {c}</Text>))}
         </View>
       )}

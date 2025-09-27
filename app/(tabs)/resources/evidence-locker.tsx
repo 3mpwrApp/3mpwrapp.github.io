@@ -47,6 +47,9 @@ export default function EvidenceLocker() {
   const [progressPct, setProgressPct] = React.useState(0);
   const [preview, setPreview] = React.useState<{ url: string; name?: string } | null>(null);
   const [showInfo, setShowInfo] = React.useState(false);
+  // Plain-language toggle (per-screen) and micro-coach hint
+  const [plainHere, setPlainHere] = React.useState<boolean>(false);
+  const [hintSeen, setHintSeen] = React.useState<boolean>(false);
   // summary retained only for potential future export state (unused removed to satisfy TS)
   // Immediate upload progress (non-queue)
   const [immUploading, setImmUploading] = React.useState(false);
@@ -63,6 +66,10 @@ export default function EvidenceLocker() {
       try {
         const raw = await AsyncStorage.getItem("evidence:notes:v1");
         if (raw) setNotes(JSON.parse(raw));
+        const plain = await AsyncStorage.getItem('evidence:plain:v1');
+        const seen = await AsyncStorage.getItem('evidence:hintSeen:v1');
+        setPlainHere(plain === '1');
+        setHintSeen(seen === '1');
       } catch {}
     })();
   }, []);
@@ -127,6 +134,18 @@ export default function EvidenceLocker() {
       accessibilityLabel={t('templates.evidenceLocker.screenLabel', 'Evidence Locker screen')}
       accessible
     >
+      {/* Micro‑coach contextual hint */}
+      {!hintSeen && (
+        <View style={styles.hintCard} accessibilityRole="summary">
+          <Text style={styles.hintTitle}>{t('microCoach.hint','Tip')}</Text>
+          <Text style={styles.hintText}>{t('templates.evidenceLocker.hintTags','Use tags to find notes faster. Try tagging calls, letters, or decisions.')}</Text>
+          <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+            <A11yPressable style={styles.secondary} onPress={async()=>{ setHintSeen(true); try{ await AsyncStorage?.setItem?.('evidence:hintSeen:v1','1'); } catch{} }}>
+              <Text style={styles.buttonText}>{t('microCoach.dismiss','Got it')}</Text>
+            </A11yPressable>
+          </View>
+        </View>
+      )}
       <Text
         ref={titleRef}
         style={styles.title}
@@ -135,6 +154,17 @@ export default function EvidenceLocker() {
       >
         {t("templates.evidenceLocker.title", "Evidence Locker")}
       </Text>
+      <View style={{ flexDirection:'row', gap:8, marginTop: 6, alignItems:'center' }}>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          onPress={async () => { const next = !plainHere; setPlainHere(next); try{ await AsyncStorage?.setItem?.('evidence:plain:v1', next ? '1' : '0'); } catch{} }}
+          accessibilityRole="button"
+          accessibilityLabel={plainHere ? t('plainMode.toggleOff','Use standard language on this screen') : t('plainMode.toggleOn','Use plain language on this screen')}
+          style={styles.secondary}
+        >
+          <Text style={styles.buttonText}>{plainHere ? t('plainMode.toggleOff','Use standard language on this screen') : t('plainMode.toggleOn','Use plain language on this screen')}</Text>
+        </A11yPressable>
+      </View>
       <Text
         style={styles.countLine}
         accessibilityLabel={tCount('demoPlural.item', notes.length)}
@@ -611,6 +641,9 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
   container: { flex: 1, padding: s('xl'), backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: "700", color: palette.text },
   countLine: { marginTop: s('xxs'), color: palette.text, opacity: 0.75, fontSize: 14 },
+    hintCard: { backgroundColor: palette.card, borderRadius: s('lg'), padding: s('md'), borderWidth: 1, borderColor: palette.muted, marginBottom: s('sm') },
+    hintTitle: { color: palette.text, fontWeight: '700', marginBottom: 2 },
+    hintText: { color: palette.text, opacity: 0.9 },
     input: {
       borderWidth: 1,
       borderColor: palette.muted,

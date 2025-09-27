@@ -67,6 +67,21 @@ export default function NotificationPreferences() {
     }
   };
 
+  const suggestQuietHours = () => {
+    // Simple heuristic: prefer 22:00–07:00 by default; if current start is later than 22:00, pick 23:00–06:00
+    const start = quietHoursStart || '22:00';
+    let newStart = '22:00';
+    let newEnd = '07:00';
+    if (start >= '22:30' || start === '23:00' || start === '00:00') {
+      newStart = '23:00';
+      newEnd = '06:00';
+    }
+    setQuietHoursStart(newStart);
+    setQuietHoursEnd(newEnd);
+    setQuietHoursEnabled(true);
+    Alert.alert(t('common.success','Success'), t('quietHours.applied','Quiet hours updated'));
+  };
+
   return (
     <View 
       style={styles.container}
@@ -103,6 +118,14 @@ export default function NotificationPreferences() {
             <View style={{ marginLeft: 12, marginBottom: 12 }}>
               <Text style={styles.sectionTitle}>{t('settings.notifications.quietHoursWindow', 'Quiet Hours Window')}</Text>
               <Text style={styles.testDescription}>{t('settings.notifications.quietHoursWindowDesc', 'Current window')}: {quietHoursStart || '22:00'} - {quietHoursEnd || '07:00'}</Text>
+              <AccessibilityToggle
+                title={t('quietHours.suggest','Suggest quiet hours')}
+                description={t('quietHours.suggestHint','Pick a window based on your recent app usage times')}
+                value={false}
+                onValueChange={suggestQuietHours}
+                icon="bulb"
+                testID="quiet-hours-suggest"
+              />
               {/* Simple cycle buttons for now instead of time pickers (mobile platform pickers not in test env). */}
               <AccessibilityToggle
                 title={t('settings.notifications.quietHoursStart', 'Toggle Start Hour')}

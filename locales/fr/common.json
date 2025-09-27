@@ -38,37 +38,6 @@
       }
     }
   },
-  "notify": {
-    "broadcast": {
-      "title": "Annonce : {{title}}",
-      "body": "{{body}}"
-    },
-    "coach": {
-      "result": {
-        "title": "Séance de coaching prête",
-        "body": "Vos étapes de pratique sont prêtes."
-      },
-      "reminder": {
-        "title": "Poursuivez votre coaching",
-        "body": "Inactif depuis {{idleHours}}h. Reprenez une leçon pour garder l'élan."
-      }
-    },
-    "evidence": {
-      "reminder": {
-        "title": "Rappel hebdomadaire des preuves",
-        "body": "Ajoutez de nouvelles notes ou téléversez des documents pour rester organisé."
-      }
-    },
-    "resource": {
-      "bookmark": {
-        "title": "Ressource enregistrée",
-        "body": "Vous avez ajouté {{resourceTitle}} aux favoris."
-      },
-      "viewed": {
-        "title": "Ressource consultée",
-        "body": "Vous avez consulté {{resource}}"
-      }
-    },
     "system": {
       "changelog": {
         "title": "Nouveautés d'Empowr",
@@ -137,140 +106,7 @@
       "suggestHeader": "Suggest a correction",
       "suggestPlaceholder": "Org ID and your suggestion",
       "submitSuggestion": "Submit suggestion"
-    },
-    "accessibility": {
-      "title": "Accessibility",
-      "subtitle": "Make the app work better for you",
-      "highContrast": "High Contrast",
-      "highContrastDesc": "Increases contrast for better readability",
-      "textSize": "Text Size",
-      "textSizeDesc": "Adjust text size throughout the app",
-      "screenReader": "Screen Reader Optimized",
-      "screenReaderDesc": "Optimizes content for screen readers",
-      "reduceMotion": "Reduce Motion",
-      "reduceMotionDesc": "Minimizes animations and transitions",
-      "focusIndicator": "Enhanced Focus Indicators",
-      "focusIndicatorDesc": "Makes keyboard navigation more visible",
-      "tapTarget": "Minimum Tap Target Size",
-      "tapTargetDesc": "Ensures buttons are easy to tap",
-      "dyslexiaFriendly": "Dyslexia-Friendly Font",
-      "dyslexiaFriendlyDesc": "Improves letter spacing and readability",
-      "plainLanguage": "Plain Language",
-      "plainLanguageDesc": "Uses simpler, clearer text",
-      "captions": "Captions Preferred",
-      "captionsDesc": "Shows captions when available",
-      "voiceMode": "Voice Mode",
-      "voiceModeDesc": "Enables voice navigation (beta)",
-  "dyslexia": "Police adaptée dyslexie",
-  "dyslexiaDesc": "Variante de police pour meilleure lisibilité"
-    },
-    "language": {
-      "title": "Language",
-      "subtitle": "Choose your preferred language",
-      "english": "English",
-      "french": "Français",
-      "spanish": "Español"
-    },
-    "notifications": {
-      "title": "Notifications",
-      "subtitle": "Choose what alerts you receive",
-      "enabled": "Enable Notifications",
-      "enabledDesc": "Receive app notifications",
-      "quietHoursEnabled": "Quiet Hours Enabled",
-      "quietHoursEnabledDesc": "Silence push notifications during configured hours",
-      "quietHoursWindow": "Quiet Hours Window",
-      "quietHoursWindowDesc": "Current window",
-      "quietHoursStart": "Toggle Start Hour",
-      "quietHoursStartDesc": "Cycles through preset start times",
-      "quietHoursEnd": "Toggle End Hour",
-      "quietHoursEndDesc": "Cycles through preset end times",
-      "sound": "Notification Sound",
-      "soundDesc": "Play sound with notifications",
-      "vibration": "Vibration",
-      "vibrationDesc": "Vibrate for notifications",
-      "emergency": "Emergency Alerts",
-      "emergencyDesc": "Critical safety notifications",
-      "wellness": "Wellness Reminders",
-      "wellnessDesc": "Daily wellness check-ins",
-      "moodNudges": "Mood Nudges",
-      "moodNudgesDesc": "Evening reminder to log how you feel",
-      "events": "Event Reminders",
-      "eventsDesc": "Upcoming event notifications"
-    },
-    "bookmarks": {
-      "title": "Bookmarks",
-      "subtitle": "Save quick links to app features",
-      "description": "Add bookmarks to quickly open frequently used tools and screens.",
-      "search": "Search or filter available routes",
-      "searchPlaceholder": "Type to filter suggestions",
-      "suggestions": "Suggestions",
-      "addSuggestion": "Add bookmark for",
-      "route": "Route Path",
-      "routePlaceholder": "e.g. /(tabs)/resources/index",
-      "label": "Label",
-      "labelPlaceholder": "My Resources",
-      "add": "Add Bookmark",
-      "remove": "Remove bookmark",
-      "empty": "No bookmarks yet.",
-      "clearAll": "Clear All",
-      "errEmptyRoute": "Route required",
-      "errInvalid": "Route not bookmarkable",
-      "errDuplicate": "Already bookmarked"
-    },
-    "emergency": {
-      "title": "Emergency Wallet Card",
-      "subtitle": "Quick access to important information",
-      "description": "Create a digital emergency card with your key information for quick access when needed",
-  "openLabel": "Ouvrir portefeuille d'urgence",
-  "manage": "Gérer éléments d'urgence"
-    },
-    "privacy": {
-      "title": "Privacy & Security",
-      "subtitle": "Control your data and security",
-      "passcode": "Require Passcode",
-      "passcodeDesc": "Lock app with passcode",
-      "autoLock": "Auto-Lock Timeout",
-      "autoLockDesc": "Minutes before app locks",
-      "analytics": "Opt Out of Analytics",
-      "analyticsDesc": "Don't share usage data"
-    },
-    "account": {
-      "title": "Account Management",
-      "subtitle": "Manage your profile and preferences",
-      "displayName": "Display Name",
-      "displayNamePlaceholder": "Enter display name",
-      "changePhoto": "Change Profile Picture",
-      "updateName": "Update Name",
-      "resetPassword": "Send Password Reset Email",
-      "resetPasswordSent": "Email Sent",
-      "resetPasswordSentDesc": "Check your inbox for reset instructions.",
-      "resetPasswordFailed": "Reset Failed",
-      "password": "Change Password",
-      "preferences": "Preferences",
-      "delete": "Delete Account",
-      "deleteConfirmTitle": "Delete Account",
-      "deleteConfirmBody": "This will permanently delete your account. This cannot be undone.",
-      "deleteConfirmPasswordTitle": "Confirm Deletion",
-      "deleteConfirmPasswordBody": "Enter your password to permanently delete your account.",
-      "deleted": "Account deleted",
-      "deleteFailed": "Delete failed",
-      "passwordPlaceholder": "Password",
-      "reauthFailed": "Re-authentication failed",
-      "confirmDelete": "Confirm Delete",
-  "updatedName": "Nom mis à jour",
-  "photoUpdated": "Photo de profil mise à jour",
-  "guestNotice": "Mode invité limité",
-  "createAccount": "Créer un compte",
-  "photo": "Photo",
-  "deleteNoPassword": "Entrez le mot de passe pour supprimer"
-    },
-    "emergencyWallet": {
-  "title": "Portefeuille d'urgence",
-  "subtitle": "Infos santé & ID rapides",
-  "hide": "Masquer",
-  "show": "Afficher"
-    }
-  },
+      },
   "settings": {
     "title": "Paramètres",
     "accessibility": {
@@ -800,19 +636,19 @@
       "who": "Qui",
       "summary": "Résumé",
       "audio": "Audio",
-      "show": "Show",
-      "save": "Save",
-      "saveAll": "Save All",
-      "processQueue": "Process Queue",
-      "load": "Load",
-      "loadMore": "Load More",
-      "openQueue": "Open Upload Queue",
-      "cloudItems": "Cloud items",
-      "deleteAll": "Delete All",
-      "deleteSelected": "Delete Selected",
-      "delete": "Delete",
-      "cancel": "Cancel",
-      "filter": "quick filter",
+    "show": "Afficher",
+    "save": "Enregistrer",
+    "saveAll": "Tout enregistrer",
+    "processQueue": "Traiter la file",
+    "load": "Charger",
+    "loadMore": "Charger plus",
+    "openQueue": "Ouvrir la file de téléversement",
+    "cloudItems": "Éléments cloud",
+    "deleteAll": "Tout supprimer",
+    "deleteSelected": "Supprimer la sélection",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "filter": "filtre rapide",
   "errorTitle": "Erreur",
   "ok": "OK",
   "hidden": "Masqué",
@@ -832,7 +668,7 @@
   "doc": "DOC",
   "success": "Succès",
   "error": "Erreur",
-  "working": "Travail…"
+  "working": "Traitement…"
     },
     "timeline": {
       "title": "Chronologie du dossier",
@@ -898,7 +734,8 @@
       "resetLabel": "Vider coffre",
       "resetHint": "Efface toutes les notes (fichiers exclus sauf export).",
       "resetConfirm": "Effacer toutes les notes ? Action irréversible.",
-      "resetAnnounce": "Coffre vidé",
+  "resetAnnounce": "Coffre vidé",
+  "hintTags": "Utilisez des étiquettes pour retrouver plus vite. Essayez d'étiqueter appels, lettres ou décisions.",
       "copied": "Copié",
       "copiedBody": "Notes copiées.",
       "clipboardMissingTitle": "Presse-papiers indisponible",
@@ -976,34 +813,35 @@
           }
         }
       },
-      "attachFile": "Attach file",
-      "attachFiles": "Attach files",
-      "attachPhotos": "Attach photos",
-      "photosPermission": "Photos permission required.",
-      "imagePickerUnavailable": "Image picker not available in this build.",
-      "saveCloud": "Save to Cloud",
-      "noteSaved": "Note saved to your cloud locker.",
-      "queuedUpload": "Queued to upload later.",
-      "saveAllDone": "Finished saving notes (failures queued).",
-      "saveSomeFailed": "Could not save some items.",
-      "loadedCount": "{{count}} items loaded.",
-      "loadCloudFailed": "Load failed",
-      "loadCloudFailedBody": "Unable to load cloud items",
-      "loadMoreFailed": "Load failed",
-      "loadMoreFailedBody": "Unable to load more",
-      "csvSavedCache": "CSV saved to cache.",
-      "csvSavedCacheNoShare": "CSV saved to cache (sharing unavailable).",
-      "exportFailedTitle": "Export failed",
-      "exportFailedBodyCsv": "Could not create CSV.",
-      "deleteAllConfirmTitle": "Delete all?",
-      "deleteAllConfirmBody": "This will delete all cloud items in your Evidence Locker.",
-      "deletedAll": "All cloud items deleted.",
-      "deleteAllFailed": "Delete failed",
-      "deleteAllFailedBody": "Unable to delete all items.",
-      "deletedSelected": "Selected items deleted.",
-      "deleteSelectedFailed": "Delete failed",
-      "deleteSelectedFailedBody": "Unable to delete selected items.",
-      "previewUnavailable": "Preview unavailable"
+  "attachFile": "Joindre un fichier",
+  "attachFiles": "Joindre des fichiers",
+  "attachPhotos": "Joindre des photos",
+  "photosPermission": "Autorisation Photos requise.",
+  "imagePickerUnavailable": "Sélecteur d'images non disponible dans cette build.",
+  "saveCloud": "Enregistrer dans le Cloud",
+  "noteSaved": "Note enregistrée dans votre coffre cloud.",
+  "queuedUpload": "Ajouté à la file pour téléverser plus tard.",
+  "saveAllDone": "Enregistrement des notes terminé (échecs ajoutés à la file).",
+  "saveSomeFailed": "Impossible d'enregistrer certains éléments.",
+  "loadedCount": "{{count}} éléments chargés.",
+  "loadCloudFailed": "Échec du chargement",
+  "loadCloudFailedBody": "Impossible de charger les éléments cloud",
+  "loadMoreFailed": "Échec du chargement",
+  "loadMoreFailedBody": "Impossible de charger davantage",
+  "csvSavedCache": "CSV enregistré en cache.",
+  "csvSavedCacheNoShare": "CSV enregistré en cache (partage indisponible).",
+  "exportFailedTitle": "Échec de l'export",
+  "exportFailedBodyCsv": "Impossible de créer le CSV.",
+  "deleteAllConfirmTitle": "Tout supprimer ?",
+  "deleteAllConfirmBody": "Cela supprimera tous les éléments cloud de votre Coffre de preuves.",
+  "deletedAll": "Tous les éléments cloud supprimés.",
+  "deleteAllFailed": "Échec de la suppression",
+  "deleteAllFailedBody": "Impossible de tout supprimer.",
+  "deletedSelected": "Éléments sélectionnés supprimés.",
+  "deleteSelectedFailed": "Échec de la suppression",
+  "deleteSelectedFailedBody": "Impossible de supprimer les éléments sélectionnés.",
+  "previewUnavailable": "Aperçu indisponible"
+      
     },
     "gallery": {
       "title": "Galerie de modèles",
@@ -1649,6 +1487,7 @@
     "show": "Afficher"
   },
   "rightsExplainer": {
+    "hintPlain": "Utilisez le mode langage simple pour simplifier le texte sur cet écran.",
     "screenLabel": "Rights Explainer screen",
     "howToUse": "How to use Rights Explainer",
     "toggleInfo": "Toggle instructions",
@@ -1728,19 +1567,19 @@
     "error": "Erreur",
     "working": "Traitement...",
   "all": "Tous",
-    "attachUnavailableTitle": "Attach unavailable",
-    "attachUnavailableBody": "Document picker not available in this build.",
-    "attachMultiUnavailable": "Multi-file picker not available in this build.",
+    "attachUnavailableTitle": "Pièce jointe indisponible",
+    "attachUnavailableBody": "Sélecteur de documents non disponible dans cette build.",
+    "attachMultiUnavailable": "Sélecteur multi‑fichiers non disponible dans cette build.",
   "permissionDenied": "Permission refusée",
-    "saved": "Saved",
-    "saveFailed": "Save failed",
-    "search": "Search",
-    "clearSearch": "Clear search",
+    "saved": "Enregistré",
+    "saveFailed": "Échec de l'enregistrement",
+    "search": "Rechercher",
+    "clearSearch": "Effacer la recherche",
     "cloud": "Cloud",
-    "open": "Open",
-    "close": "Close",
-    "add": "Add",
-    "next": "Next",
+    "open": "Ouvrir",
+    "close": "Fermer",
+    "add": "Ajouter",
+    "next": "Suivant",
     "deleted": "Supprimé",
     "submit": "Soumettre",
     "left": "Gauche",
@@ -1874,6 +1713,8 @@
     "intro": " Press the mic and say a command:",
     "commands": {
       "openResources": " Open resources",
+      "openWalletCard": " Open wallet card",
+      "logMood": " Log mood",
       "openRatings": " Open ratings",
       "openAdvocacy": " Open advocacy",
       "openCommunity": " Open community",
@@ -1888,6 +1729,21 @@
       "goBack": " Back / Go back"
     }
   },
+  "plainMode": {
+    "toggleOn": "Use plain language on this screen",
+    "toggleOff": "Use standard language on this screen",
+    "tip": "Plain mode simplifies long sentences and replaces jargon with everyday words."
+  },
+  "microCoach": {
+    "hint": "Tip",
+    "dismiss": "Got it"
+  },
+  "quietHours": {
+    "suggest": "Suggest quiet hours",
+    "suggestHint": "Pick a window based on your recent app usage times",
+    "applied": "Quiet hours updated"
+  },
+  
   "savedScreen": {
     "subtitle": "Organisez et accédez à vos contenus enregistrés",
     "searchPlaceholder": "Rechercher des éléments enregistrés...",
