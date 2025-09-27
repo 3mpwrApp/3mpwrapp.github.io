@@ -1644,7 +1644,7 @@
     "attachUnavailableTitle": "Attach unavailable",
     "attachUnavailableBody": "Document picker not available in this build.",
     "attachMultiUnavailable": "Multi-file picker not available in this build.",
-    "permissionDenied": "Permission denied",
+  "permissionDenied": "Permission refusée",
     "saved": "Saved",
     "saveFailed": "Save failed",
     "search": "Search",
