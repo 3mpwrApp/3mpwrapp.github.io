@@ -14,13 +14,14 @@ import { useSettings } from '../store/settings';
 import { useAppPalette } from '../theme/usePalette';
 
 export function HomeGuide() {
-  const suggestions = useSuggestions();
+  const suggestions = useSuggestions() ?? [];
   const palette = useAppPalette();
   const { t } = useTranslation();
   // Placeholder for future feature flags (could be sourced from user settings or remote config)
   const enabledFlags: Set<string> | undefined = undefined;
-  const allowedIds = new Set(filterToolsByFlags(enabledFlags).map(m=> m.id));
-  const top3 = suggestions.filter(s=> allowedIds.has(s.toolId)).slice(0,3);
+  const filteredTools = (filterToolsByFlags(enabledFlags) ?? []) as Array<{ id: string }>;
+  const allowedIds = new Set(filteredTools.map(m=> m.id));
+  const top3 = (Array.isArray(suggestions) ? suggestions : []).filter(s=> allowedIds.has(s.toolId)).slice(0,3);
   let mood: { avg: number | null; count: number; insights?: ReturnType<typeof computeMoodInsights> } | null = null;
   let m: any = null;
   try {
@@ -112,7 +113,7 @@ export function HomeGuide() {
                   {idx===0 ? '⭐ ' : ''}{renderIcon(meta?.icon)} {t(meta?.i18nLabelKey || 'homeGuide.tool.default', meta?.id || sug.toolId)}
                 </Text>
                 <View style={{ flexDirection:'row', flexWrap:'wrap', gap:4, marginTop:4 }}>
-                  {sug.reason.map(r => {
+                  {(sug.reason ?? []).map(r => {
                     const label = t(`homeGuide.reason.${r.key}`, t('homeGuide.reason.default','Suggested'));
                     return (
                       <Text key={r.key} style={{ backgroundColor: palette.primary, color: palette.onPrimary, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 }}>{label}</Text>
@@ -133,8 +134,8 @@ export function HomeGuide() {
                       usage.view('home_guide_select', '/', {
                         tool: sug.toolId,
                         category: meta?.category,
-                        reasons: sug.reason.map(r=> r.key),
-                        reasonDetail: sug.reason,
+                        reasons: (sug.reason ?? []).map(r=> r.key),
+                        reasonDetail: sug.reason ?? [],
                         rank: idx+1
                       });
                     }}
