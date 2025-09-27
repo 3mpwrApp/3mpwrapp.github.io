@@ -372,6 +372,13 @@
       "open": "Open assistant",
       "cta": "🤖 Ask"
     },
+    "tools": {
+      "coach": "Coach",
+      "translator": "Translator",
+      "policy": "Policy",
+      "mood": "Mood",
+      "resources": "Resources"
+    },
     "hub": {
       "title": "Assistant",
       "subtitle": "Pick a tool below or return to your last task anytime.",
