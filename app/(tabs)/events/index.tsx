@@ -44,7 +44,7 @@ export default function EventsScreen() {
   const styles = createStyles(palette, factor);
   const { t } = useTranslation();
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Events");
+  useAnnounceOnMount(t('nav.events','Events'));
   useFocusOnRefOnMount(titleRef);
 
   const [baseItems, setBaseItems] = React.useState(localEvents);
@@ -110,11 +110,11 @@ export default function EventsScreen() {
     setCount("events", items.length);
   }, [items, setCount]);
 
-  useAnnounceOnChange(items.length, (n) => `${n} events loaded`);
+  useAnnounceOnChange(items.length, (n) => t('eventsFeature.loadedCount','{{n}} events loaded', { n }));
 
   const formatMeta = (date: string, isVirtual?: boolean, location?: string) => {
-    const place = isVirtual ? "Virtual" : (location ?? "TBD");
-    return `${date} Ã¢â‚¬Â¢ ${place}`;
+    const place = isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (location ?? t('eventsFeature.tbd','TBD'));
+    return `${date} • ${place}`;
   };
 
   const monthLabel = React.useMemo(
@@ -174,14 +174,14 @@ export default function EventsScreen() {
         style={styles.title}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Events
+        {t('nav.events','Events')}
       </Text>
 
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
 
       <Text style={styles.subtitle}>
-        Community events, workshops, and meetups.
+        {t('eventsFeature.subtitle','Community events, workshops, and meetups.')}
       </Text>
 
       <A11yPressable
@@ -190,7 +190,7 @@ export default function EventsScreen() {
         onPress={() => setShowCreate(v => !v)}
         style={{ alignSelf:'flex-start', marginBottom: 8, paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.primary }}
       >
-        <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate? 'Close Form':'Create Event'}</Text>
+        <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}</Text>
       </A11yPressable>
 
       {showCreate && (
@@ -208,15 +208,15 @@ export default function EventsScreen() {
       {error && (
         <>
           <Text style={styles.subtitle} accessibilityRole="alert">
-            {error}
+            {t('eventsFeature.loadFailed','Failed to load events')}
           </Text>
           <Text
             onPress={reload}
             accessibilityRole="button"
-            accessibilityLabel="Try again"
+            accessibilityLabel={t('deadlines.reloadShort','Reload')}
             style={styles.subtitle}
           >
-            Try again
+            {t('deadlines.reloadShort','Reload')}
           </Text>
         </>
       )}
@@ -224,7 +224,7 @@ export default function EventsScreen() {
       <View style={styles.calHeader}>
         <A11yPressable
           accessibilityRole="button"
-          accessibilityLabel="Previous month"
+          accessibilityLabel={t('deadlines.prevMonth','Previous')}
           hitSlop={HIT_SLOP_8}
           onPress={() =>
             setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))
@@ -235,7 +235,7 @@ export default function EventsScreen() {
         <Text style={styles.calTitle}>{monthLabel}</Text>
         <A11yPressable
           accessibilityRole="button"
-          accessibilityLabel="Next month"
+          accessibilityLabel={t('deadlines.nextMonth','Next')}
           hitSlop={HIT_SLOP_8}
           onPress={() =>
             setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))
@@ -253,7 +253,7 @@ export default function EventsScreen() {
         ))}
       </View>
 
-      {daysMatrix.map((week, wi) => (
+        {daysMatrix.map((week, wi) => (
         <View key={wi} style={styles.weekRow}>
           {week.map((d, di) => {
             const key = dayKeyFromMatrix(month, d);
@@ -272,7 +272,7 @@ export default function EventsScreen() {
                 }
                 accessibilityRole="button"
                 accessibilityLabel={
-                  key ? `Select ${key}${has ? ", has events" : ""}` : "Empty"
+                  key ? `${t('common.select','Select')} ${key}${has ? ", " + t('eventsFeature.hasEvents','has events') : ""}` : t('common.empty','Empty')
                 }
                 disabled={!key}
               >
@@ -299,18 +299,18 @@ export default function EventsScreen() {
               href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any}
               asChild
               accessibilityRole="link"
-              accessibilityLabel={`Open ${item.title}`}
+              accessibilityLabel={`${t('home.guide.open','Open')} ${item.title}`}
             >
               <Card
                 title={item.title}
                 subtitle={formatMeta(item.date, item.isVirtual, item.location)}
                 left={(() => {
                   const label = item.id.startsWith("holiday-")
-                    ? "Holiday"
+                    ? t('eventsFeature.tags.holiday','Holiday')
                     : item.id.startsWith("prov-")
-                      ? "Provincial"
+                      ? t('eventsFeature.tags.provincial','Provincial')
                       : item.id.startsWith("obs-")
-                        ? "Observance"
+                        ? t('eventsFeature.tags.observance','Observance')
                         : null;
                   if (!label) return null;
                   return (
@@ -327,16 +327,16 @@ export default function EventsScreen() {
                 onPress={async () => {
                   try {
                     await Share.share({
-                      message: `${item.title}\n${item.date}\n${item.isVirtual? 'Virtual': (item.location||'TBD')}\n\n${item.description || ''}`.trim(),
+                      message: `${item.title}\n${item.date}\n${item.isVirtual? t('eventsFeature.chips.virtual','Virtual'): (item.location||t('eventsFeature.tbd','TBD'))}\n\n${item.description || ''}`.trim(),
                       title: item.title,
                     });
                   } catch {}
                 }}
                 accessibilityRole="button"
-                accessibilityLabel={`Share ${item.title}`}
+                accessibilityLabel={`${t('common.share','Share')} ${item.title}`}
                 style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
               >
-                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Share</Text>
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>{t('common.share','Share')}</Text>
               </A11yPressable>
             </View>
           </View>
@@ -415,6 +415,7 @@ function createStyles(
 }
 
 function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; description: string; date: string; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean; }) => void; palette: any; }) {
+  const { t } = useTranslation();
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [date, setDate] = React.useState("");
@@ -428,25 +429,25 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
   const fieldStyle = { borderWidth:1, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:8, color: palette.text, marginBottom:6 };
   return (
     <View style={{ marginBottom:12, alignSelf:'stretch' }}>
-      <TextInput placeholder="Title" placeholderTextColor={palette.muted} value={title} onChangeText={setTitle} style={fieldStyle} />
-      <TextInput placeholder="Description" placeholderTextColor={palette.muted} value={description} onChangeText={setDescription} style={[fieldStyle,{ minHeight:60 }]} multiline />
-      <TextInput placeholder="Date (YYYY-MM-DD HH:MM)" placeholderTextColor={palette.muted} value={date} onChangeText={setDate} style={fieldStyle} />
-      <TextInput placeholder="Location (optional)" placeholderTextColor={palette.muted} value={location} onChangeText={setLocation} style={fieldStyle} />
+      <TextInput placeholder={t('eventsFeature.form.titlePlaceholder','Title')} placeholderTextColor={palette.muted} value={title} onChangeText={setTitle} style={fieldStyle} />
+      <TextInput placeholder={t('eventsFeature.form.descriptionPlaceholder','Description')} placeholderTextColor={palette.muted} value={description} onChangeText={setDescription} style={[fieldStyle,{ minHeight:60 }]} multiline />
+      <TextInput placeholder={t('eventsFeature.form.datePlaceholder','Date (YYYY-MM-DD HH:MM)')} placeholderTextColor={palette.muted} value={date} onChangeText={setDate} style={fieldStyle} />
+      <TextInput placeholder={t('eventsFeature.form.locationPlaceholder','Location (optional)')} placeholderTextColor={palette.muted} value={location} onChangeText={setLocation} style={fieldStyle} />
       <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom:8 }}>
-        <ToggleChip label="Virtual" active={isVirtual} onToggle={()=>setIsVirtual(v=>!v)} palette={palette} />
-        <ToggleChip label="ASL" active={asl} onToggle={()=>setAsl(v=>!v)} palette={palette} />
-        <ToggleChip label="Captions" active={captions} onToggle={()=>setCaptions(v=>!v)} palette={palette} />
-        <ToggleChip label="Step-free" active={stepFree} onToggle={()=>setStepFree(v=>!v)} palette={palette} />
-        <ToggleChip label="Sensory" active={sensorySpace} onToggle={()=>setSensory(v=>!v)} palette={palette} />
+        <ToggleChip label={t('eventsFeature.chips.virtual','Virtual')} active={isVirtual} onToggle={()=>setIsVirtual(v=>!v)} palette={palette} />
+        <ToggleChip label={t('eventsFeature.chips.asl','ASL')} active={asl} onToggle={()=>setAsl(v=>!v)} palette={palette} />
+        <ToggleChip label={t('eventsFeature.chips.captions','Captions')} active={captions} onToggle={()=>setCaptions(v=>!v)} palette={palette} />
+        <ToggleChip label={t('eventsFeature.chips.stepFree','Step-free')} active={stepFree} onToggle={()=>setStepFree(v=>!v)} palette={palette} />
+        <ToggleChip label={t('eventsFeature.chips.sensory','Sensory')} active={sensorySpace} onToggle={()=>setSensory(v=>!v)} palette={palette} />
       </View>
       <A11yPressable
         accessibilityRole="button"
-        accessibilityLabel="Create event"
+        accessibilityLabel={t('eventsFeature.createToggleOpen','Create Event')}
         disabled={!valid}
         onPress={() => { if(!valid) return; onCreate({ title: title.trim(), description: description.trim(), date: date.trim(), location: location.trim()||undefined, isVirtual, asl, captions, stepFree, sensorySpace }); setTitle(''); setDescription(''); setDate(''); setLocation(''); setIsVirtual(false); setAsl(false); setCaptions(false); setStepFree(false); setSensory(false); }}
         style={{ backgroundColor: palette.primary, opacity: valid?1:0.5, paddingVertical:10, borderRadius:8, alignItems:'center' }}
       >
-        <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>Add Event</Text>
+        <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{t('eventsFeature.form.add','Add Event')}</Text>
       </A11yPressable>
     </View>
   );

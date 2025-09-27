@@ -1,13 +1,14 @@
 import React from "react";
 import {
-  View,
-  Text,
-  TextInput,
+  Alert,
   Pressable,
   StyleSheet,
-  Alert,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
+import { useTranslation } from "../i18n";
 import { usePrivacy } from "../store/privacy";
 import { useAppPalette } from "../theme/usePalette";
 
@@ -21,27 +22,28 @@ export default function PrivacyGate({
   const [code, setCode] = React.useState("");
   const palette = useAppPalette();
   const styles = createStyles(palette);
+  const { t } = useTranslation();
 
   if (unlocked) return <>{children}</>;
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Privacy Lock</Text>
-      <Text style={styles.text}>Enter your passcode to continue.</Text>
+      <Text style={styles.title}>{t('privacyGate.title','Privacy Lock')}</Text>
+      <Text style={styles.text}>{t('privacyGate.subtitle','Enter your passcode to continue.')}</Text>
       <TextInput
         style={styles.input}
         value={code}
         onChangeText={setCode}
         secureTextEntry
-        placeholder="Passcode"
+        placeholder={t('privacyGate.placeholder','Passcode')}
       />
       <Pressable
         onPress={() => {
           if (code === (state.passcode ?? "")) setUnlocked(true);
-          else Alert.alert("Incorrect", "Wrong passcode.");
+          else Alert.alert(t('privacyGate.incorrectTitle','Incorrect'), t('privacyGate.incorrectBody','Wrong passcode.'));
         }}
         style={styles.button}
       >
-        <Text style={styles.buttonText}>Unlock</Text>
+        <Text style={styles.buttonText}>{t('privacyGate.unlock','Unlock')}</Text>
       </Pressable>
     </View>
   );

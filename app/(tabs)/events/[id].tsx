@@ -54,7 +54,7 @@ export default function EventDetail() {
         action: "TEMPLATE",
         text: event.title,
         details: event.description ?? "",
-        location: event.isVirtual ? "Virtual" : (event.location ?? ""),
+        location: event.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event.location ?? ""),
         dates,
       });
       const url = `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -68,7 +68,7 @@ export default function EventDetail() {
             event.description,
             event.location,
           ),
-          title: "Event",
+          title: t('eventsFeature.shareTitle','Event'),
         });}
     } catch {
       await Share.share({
@@ -78,23 +78,23 @@ export default function EventDetail() {
           event.description,
           event.location,
         ),
-        title: "Event",
+        title: t('eventsFeature.shareTitle','Event'),
       });
     }
   };
 
   return (
     <>
-      <Stack.Screen options={{ title: event?.title ?? "Event" }} />
+      <Stack.Screen options={{ title: event?.title ?? t('eventsFeature.detailTitle','Event') }} />
       <View style={styles.container}>
         <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
-        <Text style={styles.title}>{event?.title ?? "Event"}</Text>
+        <Text style={styles.title}>{event?.title ?? t('eventsFeature.detailTitle','Event')}</Text>
         <Text style={styles.text}>
-          {event?.description ?? "Details unavailable."}
+          {event?.description ?? t('eventsFeature.detailUnavailable','Details unavailable.')}
         </Text>
-        <Text style={styles.text}>When: {event?.date}</Text>
+        <Text style={styles.text}>{t('eventsFeature.whenLabel','When:')} {event?.date}</Text>
         <Text style={styles.text}>
-          Where: {event?.isVirtual ? "Virtual" : (event?.location ?? "TBD")}
+          {t('eventsFeature.whereLabel','Where:')} {event?.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event?.location ?? t('eventsFeature.tbd','TBD'))}
         </Text>
         {!!event && (
           <>
@@ -106,34 +106,34 @@ export default function EventDetail() {
               onPress={async () => {
                 if (!event) return;
                 if (!eventReminders) {
-                  Alert.alert('Reminders Disabled', 'Enable Event Reminders in Settings to schedule local notifications.');
+                  Alert.alert(t('eventsFeature.reminders.disabledTitle','Reminders Disabled'), t('eventsFeature.reminders.disabledBody','Enable Event Reminders in Settings to schedule local notifications.'));
                   return;
                 }
                 if (scheduled) {
                   await removeReminder(event.id);
                   setScheduled(false);
-                  Alert.alert('Removed', 'Event reminder removed.');
+                  Alert.alert(t('common.success','Success'), t('eventsFeature.reminders.removed','Event reminder removed.'));
                   return;
                 }
                 const res = await scheduleForEvent(event, 60);
                 if (res.ok) {
                   setScheduled(true);
-                  Alert.alert('Scheduled', 'Reminder set for 60 minutes before start.');
+                  Alert.alert(t('common.success','Success'), t('eventsFeature.reminders.scheduled','Reminder set for 60 minutes before start.'));
                 } else if (res.reason === 'too-soon') {
-                  Alert.alert('Too Soon', 'Event is starting too soon for a reminder.');
+                  Alert.alert(t('common.error','Error'), t('eventsFeature.reminders.tooSoon','Event is starting too soon for a reminder.'));
                 } else if (res.reason === 'invalid-date') {
-                  Alert.alert('Invalid Date', 'Cannot parse event date.');
+                  Alert.alert(t('common.error','Error'), t('eventsFeature.reminders.invalidDate','Cannot parse event date.'));
                 } else if (res.reason === 'no-permission') {
-                  Alert.alert('Permission Needed', 'Enable notification permissions in system settings to schedule reminders.');
+                  Alert.alert(t('common.error','Error'), t('eventsFeature.reminders.disabledBody','Enable Event Reminders in Settings to schedule local notifications.'));
                 } else {
-                  Alert.alert('Failed', 'Unable to schedule reminder.');
+                  Alert.alert(t('common.error','Error'), t('eventsFeature.reminders.failed','Unable to schedule reminder.'));
                 }
               }}
               accessibilityRole="button"
               accessibilityLabel={scheduled ? t('a11y.removeEventReminder') : t('a11y.scheduleEventReminder')}
               hitSlop={HIT_SLOP_8}
             >
-              <Text style={styles.buttonText}>{scheduled ? 'Remove Reminder' : 'Add Reminder'}</Text>
+              <Text style={styles.buttonText}>{scheduled ? t('eventsFeature.reminders.remove','Remove Reminder') : t('eventsFeature.reminders.add','Add Reminder')}</Text>
             </A11yPressable>
             <View style={{ height: 8 }} />
             <A11yPressable
@@ -146,7 +146,7 @@ export default function EventDetail() {
               accessibilityLabel={t('a11y.addToCalendar')}
               hitSlop={HIT_SLOP_8}
             >
-              <Text style={styles.secondaryButtonText}>Add to Calendar</Text>
+              <Text style={styles.secondaryButtonText}>{t('eventsFeature.reminders.addCalendar','Add to Calendar')}</Text>
             </A11yPressable>
           </>
         )}
