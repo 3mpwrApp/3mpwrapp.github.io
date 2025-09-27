@@ -16,6 +16,8 @@
 
 You can start developing by editing the files inside the `app` directory. This project uses file-based routing via Expo Router.
 
+Quick reference: Deep-link seeding with q param is documented in `docs/deep-linking.md`.
+
 ## Auth, Onboarding, and Guest Mode
 
 - Auth store: `store/auth.tsx` manages auth state with optional AsyncStorage persistence.

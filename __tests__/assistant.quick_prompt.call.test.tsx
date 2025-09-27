@@ -43,19 +43,13 @@ import { fireEvent, render } from '@testing-library/react';
 import AssistantHub from '../app/(tabs)/advocacy/assistant-hub';
 import * as analyticsClient from '../services/analyticsClient';
 
-import { TestProviders } from './TestProviders';
-
-describe('Assistant Hub quick prompts (policy)', () => {
-  it('emits assistant.quick_prompt when tapping the policy simplifier prompt', () => {
+describe('Assistant Hub quick prompts (call script)', () => {
+  it('emits assistant.quick_prompt and navigates with q when tapping the HR call script prompt', () => {
     const events: analyticsClient.AnalyticsEvent[] = [] as any;
     analyticsClient.setAnalyticsSink((n, p) => { events.push({ name: n, params: p }); });
     try {
-      const { getByText } = render(
-        <TestProviders>
-          <AssistantHub />
-        </TestProviders>
-      );
-      const chip = getByText('Explain this policy in plain language');
+      const { getByText } = render(<AssistantHub />);
+      const chip = getByText('Draft a call script to HR');
       fireEvent.click(chip);
     } finally {
       analyticsClient.setAnalyticsSink(null);
