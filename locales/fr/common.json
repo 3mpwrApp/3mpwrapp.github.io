@@ -1406,7 +1406,8 @@
       "allyDesc": "Coordonner des actions avec des alliés",
       "quickPrompts": "Invites rapides",
       "recent": "Récents",
-      "openRecent": "Ouvrir l’outil récent"
+      "openRecent": "Ouvrir l’outil récent",
+      "openRecentHint": "Ouvre l’outil récent"
     },
     "prompt": {
       "simplifyDecision": "Simplifier une lettre de décision",

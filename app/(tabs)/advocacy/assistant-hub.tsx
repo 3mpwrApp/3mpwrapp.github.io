@@ -116,7 +116,7 @@ function RecentTools() {
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
         {items.map((it) => (
           <Link key={it.tool} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild>
-            <A11yPressable hitSlop={HIT_SLOP_8} style={s.recentChip} accessibilityRole="link" accessibilityLabel={t('assistant.hub.openRecent','Open recent tool')}>
+            <A11yPressable hitSlop={HIT_SLOP_8} style={s.recentChip} accessibilityRole="link" accessibilityLabel={t('assistant.hub.openRecent','Open recent tool')} accessibilityHint={t('assistant.hub.openRecentHint','Opens recent tool')}>
               <Text style={s.recentText}>{mapToolLabel(it.tool, t)}</Text>
             </A11yPressable>
           </Link>

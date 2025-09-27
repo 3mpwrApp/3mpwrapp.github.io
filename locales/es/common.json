@@ -446,7 +446,8 @@
       "allyDesc": "Coordina acciones con aliados",
       "quickPrompts": "Indicaciones rápidas",
       "recent": "Recientes",
-      "openRecent": "Abrir herramienta reciente"
+      "openRecent": "Abrir herramienta reciente",
+      "openRecentHint": "Abre la herramienta reciente"
     },
     "prompt": {
       "simplifyDecision": "Simplificar una carta de decisión",

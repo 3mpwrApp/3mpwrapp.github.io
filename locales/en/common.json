@@ -399,7 +399,8 @@
       "allyDesc": "Coordinate actions with allies",
       "quickPrompts": "Quick prompts",
       "recent": "Recent",
-      "openRecent": "Open recent tool"
+      "openRecent": "Open recent tool",
+      "openRecentHint": "Opens recent tool"
     },
     "prompt": {
       "simplifyDecision": "Simplify a decision letter",
