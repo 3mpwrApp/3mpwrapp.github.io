@@ -41,7 +41,7 @@ export default function Header() {
           accessibilityLabel="Visit Empowr on Facebook"
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
-          <Ionicons name="logo-facebook" size={22} color="#1877F2" />
+          <Ionicons name="logo-facebook" size={22} color={palette.primary} />
         </Pressable>
 
         {/* Instagram */}
@@ -55,7 +55,7 @@ export default function Header() {
           accessibilityLabel="Visit Empowr on Instagram"
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
-          <Ionicons name="logo-instagram" size={22} color="#E1306C" />
+          <Ionicons name="logo-instagram" size={22} color={palette.primary} />
         </Pressable>
 
         {/* X / Twitter */}
@@ -69,7 +69,7 @@ export default function Header() {
           accessibilityLabel="Visit Empowr on X"
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
-          <Ionicons name="logo-twitter" size={22} color="#000000" />
+          <Ionicons name="logo-twitter" size={22} color={palette.text} />
         </Pressable>
 
         {/* Email */}
@@ -79,7 +79,7 @@ export default function Header() {
           accessibilityLabel="Email Empowr at empowrapp08162025@gmail.com"
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
-          <Ionicons name="mail" size={22} color="#D44638" />
+          <Ionicons name="mail" size={22} color={palette.primary} />
         </Pressable>
       </View>
     </SafeAreaView>

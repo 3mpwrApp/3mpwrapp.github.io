@@ -1,5 +1,7 @@
 import React from "react";
-import { Linking, Pressable, Text, StyleSheet } from "react-native";
+import { Linking, Pressable, StyleSheet, Text } from "react-native";
+
+import { useAppPalette } from "../theme/usePalette";
 
 interface ExternalLinkProps {
   href: string;
@@ -7,6 +9,8 @@ interface ExternalLinkProps {
 }
 
 export default function ExternalLink({ href, children }: ExternalLinkProps) {
+  const palette = useAppPalette();
+  const styles = createStyles(palette);
   const handlePress = async () => {
     const supported = await Linking.canOpenURL(href);
     if (supported) {
@@ -28,16 +32,18 @@ export default function ExternalLink({ href, children }: ExternalLinkProps) {
   );
 }
 
-const styles = StyleSheet.create({
-  link: {
-    paddingVertical: 4,
-  },
-  linkPressed: {
-    opacity: 0.6,
-  },
-  linkText: {
-    color: "#007AFF",
-    fontWeight: "500",
-    textDecorationLine: "underline",
-  },
-});
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
+  return StyleSheet.create({
+    link: {
+      paddingVertical: 4,
+    },
+    linkPressed: {
+      opacity: 0.6,
+    },
+    linkText: {
+      color: palette.primary,
+      fontWeight: "500",
+      textDecorationLine: "underline",
+    },
+  });
+}

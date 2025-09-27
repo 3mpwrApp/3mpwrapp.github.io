@@ -1,5 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+
+import { useAppPalette } from "../theme/usePalette";
 
 import A11yPressable from "./A11yPressable";
 
@@ -17,6 +19,8 @@ export default function ChangelogGate({
 }: {
   children: React.ReactNode;
 }) {
+  const palette = useAppPalette();
+  const styles = createStyles(palette);
   const [show, setShow] = React.useState(false);
 
   React.useEffect(() => {
@@ -64,34 +68,41 @@ export default function ChangelogGate({
   );
 }
 
-const styles = StyleSheet.create({
-  overlay: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: "rgba(0,0,0,0.5)",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 16,
-    zIndex: 9998,
-  },
-  card: {
-    width: "100%",
-    maxWidth: 520,
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    padding: 16,
-  },
-  title: { fontSize: 18, fontWeight: "700", marginBottom: 8, color: "#000" },
-  text: { color: "#000", opacity: 0.95, lineHeight: 20 },
-  button: {
-    marginTop: 10,
-    backgroundColor: "#0066cc",
-    borderRadius: 8,
-    paddingVertical: 10,
-    alignItems: "center",
-  },
-  buttonText: { color: "#fff", fontWeight: "700" },
-});
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
+  return StyleSheet.create({
+    overlay: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: "rgba(0,0,0,0.5)",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: 16,
+      zIndex: 9998,
+    },
+    card: {
+      width: "100%",
+      maxWidth: 520,
+      backgroundColor: palette.card,
+      borderRadius: 12,
+      padding: 16,
+    },
+    title: {
+      fontSize: 18,
+      fontWeight: "700",
+      marginBottom: 8,
+      color: palette.text,
+    },
+    text: { color: palette.text, opacity: 0.95, lineHeight: 20 },
+    button: {
+      marginTop: 10,
+      backgroundColor: palette.primary,
+      borderRadius: 8,
+      paddingVertical: 10,
+      alignItems: "center",
+    },
+    buttonText: { color: palette.onPrimary, fontWeight: "700" },
+  });
+}
