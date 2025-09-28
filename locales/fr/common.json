@@ -2163,5 +2163,10 @@
       "hide": " settings.emergencyWallet.hide",
       "show": " settings.emergencyWallet.show"
     }
+  },
+  "deadlines": {
+    "prevMonth": "Previous",
+    "nextMonth": "Next",
+    "reloadShort": "Reload"
   }
 }

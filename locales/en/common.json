@@ -2071,5 +2071,10 @@
     "analyzing": "Analyzing…",
     "suggestions": "Suggestions",
     "noSuggestionsYet": "No suggestions yet"
+  },
+  "deadlines": {
+    "prevMonth": "Previous",
+    "nextMonth": "Next",
+    "reloadShort": "Reload"
   }
 }

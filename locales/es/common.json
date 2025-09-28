@@ -2098,5 +2098,10 @@
     "loginTitle": "Login",
     "loginScreen": "Login screen",
     "login": "Login"
+  },
+  "deadlines": {
+    "prevMonth": "Previous",
+    "nextMonth": "Next",
+    "reloadShort": "Reload"
   }
 }
