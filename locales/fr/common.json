@@ -38,75 +38,75 @@
       }
     }
   },
-    "system": {
-      "changelog": {
-        "title": "Nouveautés d'Empowr",
-        "body": "Découvrez les dernières mises à jour et améliorations."
-      }
+  "system": {
+    "changelog": {
+      "title": "Nouveautés d'Empowr",
+      "body": "Découvrez les dernières mises à jour et améliorations."
+    }
+  },
+  "petition": {
+    "signed": {
+      "title": "Pétition signée",
+      "body": "Vous avez signé \"{{petition}}\""
+    }
+  },
+  "faq": {
+    "created": {
+      "title": "FAQ ajoutée",
+      "body": "Créé : {{question}}"
+    }
+  },
+  "collective": {
+    "title": "Collective Legal Action Hub",
+    "subtitle": "If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
+    "typeLabel": "Violation type",
+    "type": {
+      "deniedModified": "denied modified duties",
+      "refusedAccommodation": "refused accommodation",
+      "retaliation": "retaliation",
+      "benefitDenial": "benefit denial"
     },
-    "petition": {
-      "signed": {
-        "title": "Pétition signée",
-        "body": "Vous avez signé \"{{petition}}\""
-      }
-    },
-    "faq": {
-      "created": {
-        "title": "FAQ ajoutée",
-        "body": "Créé : {{question}}"
-      }
-    },
-    "collective": {
-      "title": "Collective Legal Action Hub",
-      "subtitle": "If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
-      "typeLabel": "Violation type",
-      "type": {
-        "deniedModified": "denied modified duties",
-        "refusedAccommodation": "refused accommodation",
-        "retaliation": "retaliation",
-        "benefitDenial": "benefit denial"
-      },
-      "provinceLabel": "Province (optional)",
-      "provincePlaceholder": "ON, BC, ...",
-      "detailsLabel": "Details (optional)",
-      "detailsPlaceholder": "Short summary; do not include identifiers.",
-      "submit": "Submit report",
-      "aggregatedHeader": "Aggregated reports",
-      "none": "No reports yet.",
-      "note": "Note: Submissions are anonymous; contact details are not collected.",
-      "submittedTitle": "Submitted",
-      "submittedBody": "Report added anonymously. Aggregated counts help build leverage."
-    },
-    "finder": {
-      "title": "Lawyer & Advocate Finder",
-      "modeList": "List",
-      "modeMap": "Map",
-      "searchPlaceholder": "Search by name, city, org",
-      "issuePlaceholder": "Issue (e.g., WSIB)",
-      "provincePlaceholder": "Province (e.g., ON)",
-      "proBonoOnly": "Pro bono only",
-      "includePaid": "Include paid",
-      "locationUnknown": "—",
-      "issuesLabel": "Issues",
-      "openWebsite": "Open website",
-      "email": "Email",
-      "openOnMap": "Open on Map",
-      "saved": "★ Saved",
-      "save": "☆ Save",
-      "mapHint": "Tap a listing in List mode to open maps."
-    },
-    "support": {
-      "title": "Support Directory",
-      "screenLabel": "Support directory screen",
-      "subtitle": "Organizations that may help with claims, accommodations, and advocacy.",
-      "accessible": "Accessible",
-      "phoneIcon": "☎",
-      "openWebsiteLabel": "Open {{name}} website",
-      "website": "Website",
-      "suggestHeader": "Suggest a correction",
-      "suggestPlaceholder": "Org ID and your suggestion",
-      "submitSuggestion": "Submit suggestion"
-      },
+    "provinceLabel": "Province (optional)",
+    "provincePlaceholder": "ON, BC, ...",
+    "detailsLabel": "Details (optional)",
+    "detailsPlaceholder": "Short summary; do not include identifiers.",
+    "submit": "Submit report",
+    "aggregatedHeader": "Aggregated reports",
+    "none": "No reports yet.",
+    "note": "Note: Submissions are anonymous; contact details are not collected.",
+    "submittedTitle": "Submitted",
+    "submittedBody": "Report added anonymously. Aggregated counts help build leverage."
+  },
+  "finder": {
+    "title": "Lawyer & Advocate Finder",
+    "modeList": "List",
+    "modeMap": "Map",
+    "searchPlaceholder": "Search by name, city, org",
+    "issuePlaceholder": "Issue (e.g., WSIB)",
+    "provincePlaceholder": "Province (e.g., ON)",
+    "proBonoOnly": "Pro bono only",
+    "includePaid": "Include paid",
+    "locationUnknown": "—",
+    "issuesLabel": "Issues",
+    "openWebsite": "Open website",
+    "email": "Email",
+    "openOnMap": "Open on Map",
+    "saved": "★ Saved",
+    "save": "☆ Save",
+    "mapHint": "Tap a listing in List mode to open maps."
+  },
+  "support": {
+    "title": "Support Directory",
+    "screenLabel": "Support directory screen",
+    "subtitle": "Organizations that may help with claims, accommodations, and advocacy.",
+    "accessible": "Accessible",
+    "phoneIcon": "☎",
+    "openWebsiteLabel": "Open {{name}} website",
+    "website": "Website",
+    "suggestHeader": "Suggest a correction",
+    "suggestPlaceholder": "Org ID and your suggestion",
+    "submitSuggestion": "Submit suggestion"
+  },
   "settings": {
     "title": "Paramètres",
     "accessibility": {
@@ -244,7 +244,7 @@
       "hide": "Masquer la carte",
       "show": "Afficher la carte"
     },
-  "wellness": "Bien-être",
+    "wellness": "Bien-être",
     "mood": {
       "nudges": "Mood Nudges",
       "nudgesHelp": "Evening reminder to log mood if you skipped today."
@@ -253,8 +253,8 @@
   "admin": {
     "onlyTitle": "Administrateur uniquement",
     "onlyDescription": "Vous devez être administrateur pour accéder à cette zone.",
-  "pending": "En attente",
-  "trash": "Corbeille"
+    "pending": "En attente",
+    "trash": "Corbeille"
   },
   "bookmark": {
     "add": "Ajouter un signet",
@@ -357,7 +357,9 @@
     "incorrectBody": "Veuillez réessayer."
   },
   "emergencyWalletCard": {
-    "a11y": { "form": "Formulaire de carte d'urgence" },
+    "a11y": {
+      "form": "Formulaire de carte d'urgence"
+    },
     "personalInfo": "Informations personnelles",
     "fullName": "Nom complet",
     "fullNamePh": "Entrez votre nom complet",
@@ -566,9 +568,9 @@
       "recent": "Recent"
     },
     "resilience": {
-  "title": "Points de résilience",
-  "desc": "Gagnez des points pour des actions positives",
-  "points": "Points : {{points}}"
+      "title": "Points de résilience",
+      "desc": "Gagnez des points pour des actions positives",
+      "points": "Points : {{points}}"
     }
   },
   "resources": {
@@ -596,7 +598,7 @@
   },
   "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
   "filters": {
-  "all": "Tout",
+    "all": "Tout",
     "canada": "Canada",
     "work_financial": "Work & Financial",
     "tools_downloads": "Tools & Downloads",
@@ -636,39 +638,39 @@
       "who": "Qui",
       "summary": "Résumé",
       "audio": "Audio",
-    "show": "Afficher",
-    "save": "Enregistrer",
-    "saveAll": "Tout enregistrer",
-    "processQueue": "Traiter la file",
-    "load": "Charger",
-    "loadMore": "Charger plus",
-    "openQueue": "Ouvrir la file de téléversement",
-    "cloudItems": "Éléments cloud",
-    "deleteAll": "Tout supprimer",
-    "deleteSelected": "Supprimer la sélection",
-    "delete": "Supprimer",
-    "cancel": "Annuler",
-    "filter": "filtre rapide",
-  "errorTitle": "Erreur",
-  "ok": "OK",
-  "hidden": "Masqué",
-  "shown": "Affiché",
-  "copyAll": "Tout copier",
-  "share": "Partager",
-  "exportDoc": "Exporter DOC",
-  "reset": "Réinitialiser",
-  "loading": "Chargement…",
-  "edit": "Modifier",
-  "previewImage": "Aperçu image",
-  "closePreview": "Fermer aperçu",
-  "preview": "Aperçu",
-  "copied": "Copié",
-  "copy": "Copier",
-  "pdf": "PDF",
-  "doc": "DOC",
-  "success": "Succès",
-  "error": "Erreur",
-  "working": "Traitement…"
+      "show": "Afficher",
+      "save": "Enregistrer",
+      "saveAll": "Tout enregistrer",
+      "processQueue": "Traiter la file",
+      "load": "Charger",
+      "loadMore": "Charger plus",
+      "openQueue": "Ouvrir la file de téléversement",
+      "cloudItems": "Éléments cloud",
+      "deleteAll": "Tout supprimer",
+      "deleteSelected": "Supprimer la sélection",
+      "delete": "Supprimer",
+      "cancel": "Annuler",
+      "filter": "filtre rapide",
+      "errorTitle": "Erreur",
+      "ok": "OK",
+      "hidden": "Masqué",
+      "shown": "Affiché",
+      "copyAll": "Tout copier",
+      "share": "Partager",
+      "exportDoc": "Exporter DOC",
+      "reset": "Réinitialiser",
+      "loading": "Chargement…",
+      "edit": "Modifier",
+      "previewImage": "Aperçu image",
+      "closePreview": "Fermer aperçu",
+      "preview": "Aperçu",
+      "copied": "Copié",
+      "copy": "Copier",
+      "pdf": "PDF",
+      "doc": "DOC",
+      "success": "Succès",
+      "error": "Erreur",
+      "working": "Traitement…"
     },
     "timeline": {
       "title": "Chronologie du dossier",
@@ -734,8 +736,8 @@
       "resetLabel": "Vider coffre",
       "resetHint": "Efface toutes les notes (fichiers exclus sauf export).",
       "resetConfirm": "Effacer toutes les notes ? Action irréversible.",
-  "resetAnnounce": "Coffre vidé",
-  "hintTags": "Utilisez des étiquettes pour retrouver plus vite. Essayez d'étiqueter appels, lettres ou décisions.",
+      "resetAnnounce": "Coffre vidé",
+      "hintTags": "Utilisez des étiquettes pour retrouver plus vite. Essayez d'étiqueter appels, lettres ou décisions.",
       "copied": "Copié",
       "copiedBody": "Notes copiées.",
       "clipboardMissingTitle": "Presse-papiers indisponible",
@@ -813,35 +815,34 @@
           }
         }
       },
-  "attachFile": "Joindre un fichier",
-  "attachFiles": "Joindre des fichiers",
-  "attachPhotos": "Joindre des photos",
-  "photosPermission": "Autorisation Photos requise.",
-  "imagePickerUnavailable": "Sélecteur d'images non disponible dans cette build.",
-  "saveCloud": "Enregistrer dans le Cloud",
-  "noteSaved": "Note enregistrée dans votre coffre cloud.",
-  "queuedUpload": "Ajouté à la file pour téléverser plus tard.",
-  "saveAllDone": "Enregistrement des notes terminé (échecs ajoutés à la file).",
-  "saveSomeFailed": "Impossible d'enregistrer certains éléments.",
-  "loadedCount": "{{count}} éléments chargés.",
-  "loadCloudFailed": "Échec du chargement",
-  "loadCloudFailedBody": "Impossible de charger les éléments cloud",
-  "loadMoreFailed": "Échec du chargement",
-  "loadMoreFailedBody": "Impossible de charger davantage",
-  "csvSavedCache": "CSV enregistré en cache.",
-  "csvSavedCacheNoShare": "CSV enregistré en cache (partage indisponible).",
-  "exportFailedTitle": "Échec de l'export",
-  "exportFailedBodyCsv": "Impossible de créer le CSV.",
-  "deleteAllConfirmTitle": "Tout supprimer ?",
-  "deleteAllConfirmBody": "Cela supprimera tous les éléments cloud de votre Coffre de preuves.",
-  "deletedAll": "Tous les éléments cloud supprimés.",
-  "deleteAllFailed": "Échec de la suppression",
-  "deleteAllFailedBody": "Impossible de tout supprimer.",
-  "deletedSelected": "Éléments sélectionnés supprimés.",
-  "deleteSelectedFailed": "Échec de la suppression",
-  "deleteSelectedFailedBody": "Impossible de supprimer les éléments sélectionnés.",
-  "previewUnavailable": "Aperçu indisponible"
-      
+      "attachFile": "Joindre un fichier",
+      "attachFiles": "Joindre des fichiers",
+      "attachPhotos": "Joindre des photos",
+      "photosPermission": "Autorisation Photos requise.",
+      "imagePickerUnavailable": "Sélecteur d'images non disponible dans cette build.",
+      "saveCloud": "Enregistrer dans le Cloud",
+      "noteSaved": "Note enregistrée dans votre coffre cloud.",
+      "queuedUpload": "Ajouté à la file pour téléverser plus tard.",
+      "saveAllDone": "Enregistrement des notes terminé (échecs ajoutés à la file).",
+      "saveSomeFailed": "Impossible d'enregistrer certains éléments.",
+      "loadedCount": "{{count}} éléments chargés.",
+      "loadCloudFailed": "Échec du chargement",
+      "loadCloudFailedBody": "Impossible de charger les éléments cloud",
+      "loadMoreFailed": "Échec du chargement",
+      "loadMoreFailedBody": "Impossible de charger davantage",
+      "csvSavedCache": "CSV enregistré en cache.",
+      "csvSavedCacheNoShare": "CSV enregistré en cache (partage indisponible).",
+      "exportFailedTitle": "Échec de l'export",
+      "exportFailedBodyCsv": "Impossible de créer le CSV.",
+      "deleteAllConfirmTitle": "Tout supprimer ?",
+      "deleteAllConfirmBody": "Cela supprimera tous les éléments cloud de votre Coffre de preuves.",
+      "deletedAll": "Tous les éléments cloud supprimés.",
+      "deleteAllFailed": "Échec de la suppression",
+      "deleteAllFailedBody": "Impossible de tout supprimer.",
+      "deletedSelected": "Éléments sélectionnés supprimés.",
+      "deleteSelectedFailed": "Échec de la suppression",
+      "deleteSelectedFailedBody": "Impossible de supprimer les éléments sélectionnés.",
+      "previewUnavailable": "Aperçu indisponible"
     },
     "gallery": {
       "title": "Galerie de modèles",
@@ -1566,11 +1567,11 @@
     "success": "Succès",
     "error": "Erreur",
     "working": "Traitement...",
-  "all": "Tous",
+    "all": "Tous",
     "attachUnavailableTitle": "Pièce jointe indisponible",
     "attachUnavailableBody": "Sélecteur de documents non disponible dans cette build.",
     "attachMultiUnavailable": "Sélecteur multi‑fichiers non disponible dans cette build.",
-  "permissionDenied": "Permission refusée",
+    "permissionDenied": "Permission refusée",
     "saved": "Enregistré",
     "saveFailed": "Échec de l'enregistrement",
     "search": "Rechercher",
@@ -1743,7 +1744,6 @@
     "suggestHint": "Pick a window based on your recent app usage times",
     "applied": "Quiet hours updated"
   },
-  
   "savedScreen": {
     "subtitle": "Organisez et accédez à vos contenus enregistrés",
     "searchPlaceholder": "Rechercher des éléments enregistrés...",
@@ -1851,10 +1851,10 @@
     "subtitle": "Log how you feel to spot trends.",
     "notePlaceholder": "Optional note",
     "save": "Save",
-      "quick": {
-        "sleep": "Sommeil & Énergie",
-        "balance": "Équilibre travail/repos (IA)"
-      },
+    "quick": {
+      "sleep": "Sommeil & Énergie",
+      "balance": "Équilibre travail/repos (IA)"
+    },
     "today": "Today",
     "emptyToday": "No entries yet today.",
     "avg7d": "7d Avg:",
@@ -1928,8 +1928,8 @@
     "pdfUnavailableBody": "Install expo-print in a dev build to export PDFs.",
     "exportFailedTitle": "Export failed",
     "exportFailedBody": "Could not create file.",
-  "subtitle": "Assistant de traduction IA",
-  "placeholder": "Entrez le texte à traduire"
+    "subtitle": "Assistant de traduction IA",
+    "placeholder": "Entrez le texte à traduire"
   },
   "auth": {
     "registerTitle": "Register",
@@ -1942,5 +1942,226 @@
     "loginTitle": "Login",
     "loginScreen": "Login screen",
     "login": "Login"
+  },
+  "notify": {
+    "broadcast": {
+      "title": "Announcement: {{title}}",
+      "body": "{{body}}"
+    },
+    "coach": {
+      "result": {
+        "title": "Coaching session ready",
+        "body": "Your practice coaching steps are prepared."
+      },
+      "reminder": {
+        "title": "Continue your coaching journey",
+        "body": "You’ve been away for a while ({{idleHours}}h). Pick up a lesson to keep momentum."
+      }
+    },
+    "collective": {
+      "title": "Collective Legal Action Hub",
+      "subtitle": "If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
+      "typeLabel": "Violation type",
+      "type": {
+        "deniedModified": "denied modified duties",
+        "refusedAccommodation": "refused accommodation",
+        "retaliation": "retaliation",
+        "benefitDenial": "benefit denial"
+      },
+      "provinceLabel": "Province (optional)",
+      "provincePlaceholder": "ON, BC, ...",
+      "detailsLabel": "Details (optional)",
+      "detailsPlaceholder": "Short summary; do not include identifiers.",
+      "submit": "Submit report",
+      "aggregatedHeader": "Aggregated reports",
+      "none": "No reports yet.",
+      "note": "Note: Submissions are anonymous; contact details are not collected.",
+      "submittedTitle": "Submitted",
+      "submittedBody": "Report added anonymously. Aggregated counts help build leverage."
+    },
+    "finder": {
+      "title": "Lawyer & Advocate Finder",
+      "modeList": "List",
+      "modeMap": "Map",
+      "searchPlaceholder": "Search by name, city, org",
+      "issuePlaceholder": "Issue (e.g., WSIB)",
+      "provincePlaceholder": "Province (e.g., ON)",
+      "proBonoOnly": "Pro bono only",
+      "includePaid": "Include paid",
+      "locationUnknown": "—",
+      "issuesLabel": "Issues",
+      "openWebsite": "Open website",
+      "email": "Email",
+      "openOnMap": "Open on Map",
+      "saved": "★ Saved",
+      "save": "☆ Save",
+      "mapHint": "Tap a listing in List mode to open maps."
+    },
+    "support": {
+      "title": "Support Directory",
+      "screenLabel": "Support directory screen",
+      "subtitle": "Organizations that may help with claims, accommodations, and advocacy.",
+      "accessible": "Accessible",
+      "phoneIcon": "☎",
+      "openWebsiteLabel": "Open {{name}} website",
+      "website": "Website",
+      "suggestHeader": "Suggest a correction",
+      "suggestPlaceholder": "Org ID and your suggestion",
+      "submitSuggestion": "Submit suggestion"
+    },
+    "evidence": {
+      "reminder": {
+        "title": "Weekly evidence check-in",
+        "body": "Add new notes or upload documents to stay organized."
+      }
+    },
+    "resource": {
+      "bookmark": {
+        "title": "Resource saved",
+        "body": "You bookmarked {{resourceTitle}}."
+      },
+      "viewed": {
+        "title": "Resource viewed",
+        "body": "You viewed {{resource}}"
+      }
+    },
+    "system": {
+      "changelog": {
+        "title": "What's new in Empowr",
+        "body": "Check out the latest updates and improvements."
+      }
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "subtitle": "Make the app work better for you",
+      "highContrast": "High Contrast",
+      "highContrastDesc": "Increases contrast for better readability",
+      "textSize": "Text Size",
+      "textSizeDesc": "Adjust text size throughout the app",
+      "screenReader": "Screen Reader Optimized",
+      "screenReaderDesc": "Optimizes content for screen readers",
+      "reduceMotion": "Reduce Motion",
+      "reduceMotionDesc": "Minimizes animations and transitions",
+      "focusIndicator": "Enhanced Focus Indicators",
+      "focusIndicatorDesc": "Makes keyboard navigation more visible",
+      "tapTarget": "Minimum Tap Target Size",
+      "tapTargetDesc": "Ensures buttons are easy to tap",
+      "dyslexiaFriendly": "Dyslexia-Friendly Font",
+      "dyslexiaFriendlyDesc": "Improves letter spacing and readability",
+      "plainLanguage": "Plain Language",
+      "plainLanguageDesc": "Uses simpler, clearer text",
+      "captions": "Captions Preferred",
+      "captionsDesc": "Shows captions when available",
+      "voiceMode": "Voice Mode",
+      "voiceModeDesc": "Enables voice navigation (beta)",
+      "dyslexia": "[T] settings.accessibility.dyslexia",
+      "dyslexiaDesc": "[T] settings.accessibility.dyslexiaDesc"
+    },
+    "language": {
+      "title": "Language",
+      "subtitle": "Choose your preferred language",
+      "english": "English",
+      "french": "Français",
+      "spanish": "Español"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Choose what alerts you receive",
+      "enabled": "Enable Notifications",
+      "enabledDesc": "Receive app notifications",
+      "quietHoursEnabled": "Quiet Hours Enabled",
+      "quietHoursEnabledDesc": "Silence push notifications during configured hours",
+      "quietHoursWindow": "Quiet Hours Window",
+      "quietHoursWindowDesc": "Current window",
+      "quietHoursStart": "Toggle Start Hour",
+      "quietHoursStartDesc": "Cycles through preset start times",
+      "quietHoursEnd": "Toggle End Hour",
+      "quietHoursEndDesc": "Cycles through preset end times",
+      "sound": "Notification Sound",
+      "soundDesc": "Play sound with notifications",
+      "vibration": "Vibration",
+      "vibrationDesc": "Vibrate for notifications",
+      "emergency": "Emergency Alerts",
+      "emergencyDesc": "Critical safety notifications",
+      "wellness": "Wellness Reminders",
+      "wellnessDesc": "Daily wellness check-ins",
+      "moodNudges": "Mood Nudges",
+      "moodNudgesDesc": "Evening reminder to log how you feel",
+      "events": "Event Reminders",
+      "eventsDesc": "Upcoming event notifications"
+    },
+    "bookmarks": {
+      "title": "Bookmarks",
+      "subtitle": "Save quick links to app features",
+      "description": "Add bookmarks to quickly open frequently used tools and screens.",
+      "search": "Search or filter available routes",
+      "searchPlaceholder": "Type to filter suggestions",
+      "suggestions": "Suggestions",
+      "addSuggestion": "Add bookmark for",
+      "route": "Route Path",
+      "routePlaceholder": "e.g. /(tabs)/resources/index",
+      "label": "Label",
+      "labelPlaceholder": "My Resources",
+      "add": "Add Bookmark",
+      "remove": "Remove bookmark",
+      "empty": "No bookmarks yet.",
+      "clearAll": "Clear All",
+      "errEmptyRoute": "Route required",
+      "errInvalid": "Route not bookmarkable",
+      "errDuplicate": "Already bookmarked"
+    },
+    "emergency": {
+      "title": "Emergency Wallet Card",
+      "subtitle": "Quick access to important information",
+      "description": "Create a digital emergency card with your key information for quick access when needed",
+      "openLabel": "[T] settings.emergency.openLabel",
+      "manage": "[T] settings.emergency.manage"
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "subtitle": "Control your data and security",
+      "passcode": "Require Passcode",
+      "passcodeDesc": "Lock app with passcode",
+      "autoLock": "Auto-Lock Timeout",
+      "autoLockDesc": "Minutes before app locks",
+      "analytics": "Opt Out of Analytics",
+      "analyticsDesc": "Don't share usage data"
+    },
+    "account": {
+      "title": "Account Management",
+      "subtitle": "Manage your profile and preferences",
+      "displayName": "Display Name",
+      "displayNamePlaceholder": "Enter display name",
+      "changePhoto": "Change Profile Picture",
+      "updateName": "Update Name",
+      "resetPassword": "Send Password Reset Email",
+      "resetPasswordSent": "Email Sent",
+      "resetPasswordSentDesc": "Check your inbox for reset instructions.",
+      "resetPasswordFailed": "Reset Failed",
+      "password": "Change Password",
+      "preferences": "Preferences",
+      "delete": "Delete Account",
+      "deleteConfirmTitle": "Delete Account",
+      "deleteConfirmBody": "This will permanently delete your account. This cannot be undone.",
+      "deleteConfirmPasswordTitle": "Confirm Deletion",
+      "deleteConfirmPasswordBody": "Enter your password to permanently delete your account.",
+      "deleted": "Account deleted",
+      "deleteFailed": "Delete failed",
+      "passwordPlaceholder": "Password",
+      "reauthFailed": "Re-authentication failed",
+      "confirmDelete": "Confirm Delete",
+      "updatedName": "[T] settings.account.updatedName",
+      "photoUpdated": "[T] settings.account.photoUpdated",
+      "guestNotice": "[T] settings.account.guestNotice",
+      "createAccount": "[T] settings.account.createAccount",
+      "photo": "[T] settings.account.photo",
+      "deleteNoPassword": "[T] settings.account.deleteNoPassword"
+    },
+    "emergencyWallet": {
+      "title": "[T] settings.emergencyWallet.title",
+      "subtitle": "[T] settings.emergencyWallet.subtitle",
+      "hide": "[T] settings.emergencyWallet.hide",
+      "show": "[T] settings.emergencyWallet.show"
+    }
   }
 }

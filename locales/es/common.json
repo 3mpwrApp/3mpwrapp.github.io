@@ -161,8 +161,8 @@
       "captionsDesc": "Shows captions when available",
       "voiceMode": "Voice Mode",
       "voiceModeDesc": "Enables voice navigation (beta)",
-  "dyslexia": "Dyslexia-friendly font",
-  "dyslexiaDesc": "Use a font variant to improve legibility"
+      "dyslexia": "Dyslexia-friendly font",
+      "dyslexiaDesc": "Use a font variant to improve legibility"
     },
     "language": {
       "title": "Language",
@@ -221,8 +221,8 @@
       "title": "Emergency Wallet Card",
       "subtitle": "Quick access to important information",
       "description": "Create a digital emergency card with your key information for quick access when needed",
-  "openLabel": "Open emergency wallet",
-  "manage": "Manage emergency items"
+      "openLabel": "Open emergency wallet",
+      "manage": "Manage emergency items"
     },
     "privacy": {
       "title": "Privacy & Security",
@@ -257,18 +257,18 @@
       "passwordPlaceholder": "Password",
       "reauthFailed": "Re-authentication failed",
       "confirmDelete": "Confirm Delete",
-  "updatedName": "Name updated",
-  "photoUpdated": "Profile photo updated",
-  "guestNotice": "Guest mode has limited features",
-  "createAccount": "Create account",
-  "photo": "Photo",
-  "deleteNoPassword": "Enter password to delete"
+      "updatedName": "Name updated",
+      "photoUpdated": "Profile photo updated",
+      "guestNotice": "Guest mode has limited features",
+      "createAccount": "Create account",
+      "photo": "Photo",
+      "deleteNoPassword": "Enter password to delete"
     },
     "emergencyWallet": {
-  "title": "Emergency Wallet",
-  "subtitle": "Quick access health & ID info",
-  "hide": "Hide",
-  "show": "Show"
+      "title": "Emergency Wallet",
+      "subtitle": "Quick access health & ID info",
+      "hide": "Hide",
+      "show": "Show"
     }
   },
   "settings": {
@@ -474,8 +474,8 @@
   "admin": {
     "onlyTitle": "Solo administradores",
     "onlyDescription": "Debes ser administrador para acceder a esta área.",
-  "pending": "Pending",
-  "trash": "Trash"
+    "pending": "Pending",
+    "trash": "Trash"
   },
   "bookmark": {
     "add": "Agregar marcador",
@@ -578,7 +578,9 @@
     "incorrectBody": "Inténtelo de nuevo."
   },
   "emergencyWalletCard": {
-    "a11y": { "form": "Formulario de tarjeta de emergencia" },
+    "a11y": {
+      "form": "Formulario de tarjeta de emergencia"
+    },
     "personalInfo": "Información personal",
     "fullName": "Nombre completo",
     "fullNamePh": "Ingrese su nombre completo",
@@ -787,9 +789,9 @@
       "recent": "Recent"
     },
     "resilience": {
-  "title": "Resilience Points",
-  "desc": "Earn points for positive actions",
-  "points": "Points: {{points}}"
+      "title": "Resilience Points",
+      "desc": "Earn points for positive actions",
+      "points": "Points: {{points}}"
     }
   },
   "resources": {
@@ -849,39 +851,39 @@
       "who": "Quién",
       "summary": "Resumen",
       "audio": "Clip de audio",
-    "show": "Mostrar",
-    "save": "Guardar",
-    "saveAll": "Guardar todo",
-    "processQueue": "Procesar cola",
-    "load": "Cargar",
-    "loadMore": "Cargar más",
-    "openQueue": "Abrir cola de cargas",
-    "cloudItems": "Elementos en la nube",
-    "deleteAll": "Eliminar todo",
-    "deleteSelected": "Eliminar seleccionados",
-    "delete": "Eliminar",
-    "cancel": "Cancelar",
-    "filter": "filtro rápido",
-  "errorTitle": "Error",
-  "ok": "Aceptar",
-  "hidden": "Oculto",
-  "shown": "Mostrado",
-  "copyAll": "Copiar todo",
-  "share": "Compartir",
-  "exportDoc": "Exportar DOC",
-  "reset": "Restablecer",
-  "loading": "Cargando…",
-  "edit": "Editar",
-  "previewImage": "Vista previa de imagen",
-  "closePreview": "Cerrar vista previa",
-  "preview": "Vista previa",
-  "copied": "Copiado",
-  "copy": "Copiar",
-  "pdf": "PDF",
-  "doc": "DOC",
-  "success": "Éxito",
-  "error": "Error",
-  "working": "Trabajando…"
+      "show": "Mostrar",
+      "save": "Guardar",
+      "saveAll": "Guardar todo",
+      "processQueue": "Procesar cola",
+      "load": "Cargar",
+      "loadMore": "Cargar más",
+      "openQueue": "Abrir cola de cargas",
+      "cloudItems": "Elementos en la nube",
+      "deleteAll": "Eliminar todo",
+      "deleteSelected": "Eliminar seleccionados",
+      "delete": "Eliminar",
+      "cancel": "Cancelar",
+      "filter": "filtro rápido",
+      "errorTitle": "Error",
+      "ok": "Aceptar",
+      "hidden": "Oculto",
+      "shown": "Mostrado",
+      "copyAll": "Copiar todo",
+      "share": "Compartir",
+      "exportDoc": "Exportar DOC",
+      "reset": "Restablecer",
+      "loading": "Cargando…",
+      "edit": "Editar",
+      "previewImage": "Vista previa de imagen",
+      "closePreview": "Cerrar vista previa",
+      "preview": "Vista previa",
+      "copied": "Copiado",
+      "copy": "Copiar",
+      "pdf": "PDF",
+      "doc": "DOC",
+      "success": "Éxito",
+      "error": "Error",
+      "working": "Trabajando…"
     },
     "timeline": {
       "title": "Cronología del caso",
@@ -947,8 +949,8 @@
       "resetLabel": "Vaciar casillero",
       "resetHint": "Borra todas las notas (archivos no incluidos salvo exportación).",
       "resetConfirm": "¿Borrar todas las notas? No se puede deshacer.",
-  "resetAnnounce": "Casillero limpiado",
-  "hintTags": "Usa etiquetas para encontrar notas más rápido. Prueba etiquetar llamadas, cartas o decisiones.",
+      "resetAnnounce": "Casillero limpiado",
+      "hintTags": "Usa etiquetas para encontrar notas más rápido. Prueba etiquetar llamadas, cartas o decisiones.",
       "copied": "Copiado",
       "copiedBody": "Notas copiadas.",
       "clipboardMissingTitle": "Portapapeles no disponible",
@@ -1026,34 +1028,34 @@
           }
         }
       },
-  "attachFile": "Adjuntar archivo",
-  "attachFiles": "Adjuntar archivos",
-  "attachPhotos": "Adjuntar fotos",
-  "photosPermission": "Se requieren permisos de fotos.",
-  "imagePickerUnavailable": "Selector de imágenes no disponible en esta compilación.",
-  "saveCloud": "Guardar en la nube",
-  "noteSaved": "Nota guardada en tu casillero en la nube.",
-  "queuedUpload": "En cola para subir más tarde.",
-  "saveAllDone": "Finalizado el guardado de notas (fallos en cola).",
-  "saveSomeFailed": "No se pudieron guardar algunos elementos.",
-  "loadedCount": "{{count}} elementos cargados.",
-  "loadCloudFailed": "Fallo al cargar",
-  "loadCloudFailedBody": "No se pueden cargar elementos de la nube",
-  "loadMoreFailed": "Fallo al cargar",
-  "loadMoreFailedBody": "No se puede cargar más",
-  "csvSavedCache": "CSV guardado en caché.",
-  "csvSavedCacheNoShare": "CSV guardado en caché (compartir no disponible).",
-  "exportFailedTitle": "Exportación fallida",
-  "exportFailedBodyCsv": "No se pudo crear el CSV.",
-  "deleteAllConfirmTitle": "¿Eliminar todo?",
-  "deleteAllConfirmBody": "Esto eliminará todos los elementos en la nube de tu Casillero de Evidencias.",
-  "deletedAll": "Todos los elementos en la nube eliminados.",
-  "deleteAllFailed": "Fallo al eliminar",
-  "deleteAllFailedBody": "No se pueden eliminar todos los elementos.",
-  "deletedSelected": "Elementos seleccionados eliminados.",
-  "deleteSelectedFailed": "Fallo al eliminar",
-  "deleteSelectedFailedBody": "No se pueden eliminar los elementos seleccionados.",
-  "previewUnavailable": "Vista previa no disponible"
+      "attachFile": "Adjuntar archivo",
+      "attachFiles": "Adjuntar archivos",
+      "attachPhotos": "Adjuntar fotos",
+      "photosPermission": "Se requieren permisos de fotos.",
+      "imagePickerUnavailable": "Selector de imágenes no disponible en esta compilación.",
+      "saveCloud": "Guardar en la nube",
+      "noteSaved": "Nota guardada en tu casillero en la nube.",
+      "queuedUpload": "En cola para subir más tarde.",
+      "saveAllDone": "Finalizado el guardado de notas (fallos en cola).",
+      "saveSomeFailed": "No se pudieron guardar algunos elementos.",
+      "loadedCount": "{{count}} elementos cargados.",
+      "loadCloudFailed": "Fallo al cargar",
+      "loadCloudFailedBody": "No se pueden cargar elementos de la nube",
+      "loadMoreFailed": "Fallo al cargar",
+      "loadMoreFailedBody": "No se puede cargar más",
+      "csvSavedCache": "CSV guardado en caché.",
+      "csvSavedCacheNoShare": "CSV guardado en caché (compartir no disponible).",
+      "exportFailedTitle": "Exportación fallida",
+      "exportFailedBodyCsv": "No se pudo crear el CSV.",
+      "deleteAllConfirmTitle": "¿Eliminar todo?",
+      "deleteAllConfirmBody": "Esto eliminará todos los elementos en la nube de tu Casillero de Evidencias.",
+      "deletedAll": "Todos los elementos en la nube eliminados.",
+      "deleteAllFailed": "Fallo al eliminar",
+      "deleteAllFailedBody": "No se pueden eliminar todos los elementos.",
+      "deletedSelected": "Elementos seleccionados eliminados.",
+      "deleteSelectedFailed": "Fallo al eliminar",
+      "deleteSelectedFailedBody": "No se pueden eliminar los elementos seleccionados.",
+      "previewUnavailable": "Vista previa no disponible"
     },
     "gallery": {
       "title": "Galería de plantillas",
@@ -1744,12 +1746,12 @@
     "close": "Cerrar",
     "add": "Agregar",
     "next": "Siguiente",
-  "deleted": "Eliminado",
-  "submit": "Enviar",
-  "left": "Izquierda",
-  "right": "Derecha",
-  "select": "Seleccionar",
-  "empty": "Vacío"
+    "deleted": "Eliminado",
+    "submit": "Enviar",
+    "left": "Izquierda",
+    "right": "Derecha",
+    "select": "Seleccionar",
+    "empty": "Vacío"
   },
   "masterIndex": {
     "title": "Índice maestro de investigación",
@@ -2082,8 +2084,8 @@
     "pdfUnavailableBody": "Install expo-print in a dev build to export PDFs.",
     "exportFailedTitle": "Export failed",
     "exportFailedBody": "Could not create file.",
-  "subtitle": "AI translation helper",
-  "placeholder": "Enter text to translate"
+    "subtitle": "AI translation helper",
+    "placeholder": "Enter text to translate"
   },
   "auth": {
     "registerTitle": "Register",
