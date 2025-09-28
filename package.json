@@ -51,6 +51,7 @@
     "i18n:progress:update": "set I18N_UPDATE_SNAPSHOT=1&& node ./scripts/i18n-progress-diff.js",
     "i18n:orphans": "node ./scripts/i18n-orphans.js",
     "i18n:lint": "node ./scripts/i18n-lint-keys.js",
+  "i18n:validate": "node ./scripts/i18n-validate-json.js",
     "scan:incomplete": "node ./scripts/scan-incomplete.mjs",
     "scan:incomplete:soft": "node ./scripts/scan-incomplete.mjs --soft",
     "seed:faqs": "node ./scripts/seed-faqs.js",
@@ -66,7 +67,7 @@
   "analytics:pii:soft": "set PII_SCAN_SOFT=1&& node ./scripts/analytics-pii-scan.mjs",
   "perf:budget": "node ./scripts/perf-bundle-budget.mjs",
   "perf:breakdown": "node ./scripts/perf-bundle-breakdown.mjs",
-  "test:ci": "npm run test:guard && npm run check:analytics && npm run analytics:report && npm run analytics:pii:soft && npm run perf:budget && npm run perf:breakdown && jest --runInBand"
+  "test:ci": "npm run test:guard && npm run i18n:validate && npm run check:analytics && npm run analytics:report && npm run analytics:pii:soft && npm run perf:budget && npm run perf:breakdown && jest --runInBand"
   ,
   "rebuild:android": "expo run:android --clean",
   "rebuild:ios": "expo run:ios --clean",
