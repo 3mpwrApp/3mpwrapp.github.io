@@ -2165,8 +2165,8 @@
     }
   },
   "deadlines": {
-    "prevMonth": "Previous",
-    "nextMonth": "Next",
-    "reloadShort": "Reload"
+    "prevMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "reloadShort": "Actualiser"
   }
 }

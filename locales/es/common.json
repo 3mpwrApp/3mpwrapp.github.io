@@ -2100,8 +2100,8 @@
     "login": "Login"
   },
   "deadlines": {
-    "prevMonth": "Previous",
-    "nextMonth": "Next",
-    "reloadShort": "Reload"
+    "prevMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "reloadShort": "Recargar"
   }
 }
