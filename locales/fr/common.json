@@ -2054,8 +2054,8 @@
       "captionsDesc": "Shows captions when available",
       "voiceMode": "Voice Mode",
       "voiceModeDesc": "Enables voice navigation (beta)",
-      "dyslexia": "[T] settings.accessibility.dyslexia",
-      "dyslexiaDesc": "[T] settings.accessibility.dyslexiaDesc"
+      "dyslexia": " settings.accessibility.dyslexia",
+      "dyslexiaDesc": " settings.accessibility.dyslexiaDesc"
     },
     "language": {
       "title": "Language",
@@ -2114,8 +2114,8 @@
       "title": "Emergency Wallet Card",
       "subtitle": "Quick access to important information",
       "description": "Create a digital emergency card with your key information for quick access when needed",
-      "openLabel": "[T] settings.emergency.openLabel",
-      "manage": "[T] settings.emergency.manage"
+      "openLabel": " settings.emergency.openLabel",
+      "manage": " settings.emergency.manage"
     },
     "privacy": {
       "title": "Privacy & Security",
@@ -2150,18 +2150,18 @@
       "passwordPlaceholder": "Password",
       "reauthFailed": "Re-authentication failed",
       "confirmDelete": "Confirm Delete",
-      "updatedName": "[T] settings.account.updatedName",
-      "photoUpdated": "[T] settings.account.photoUpdated",
-      "guestNotice": "[T] settings.account.guestNotice",
-      "createAccount": "[T] settings.account.createAccount",
-      "photo": "[T] settings.account.photo",
-      "deleteNoPassword": "[T] settings.account.deleteNoPassword"
+      "updatedName": " settings.account.updatedName",
+      "photoUpdated": " settings.account.photoUpdated",
+      "guestNotice": " settings.account.guestNotice",
+      "createAccount": " settings.account.createAccount",
+      "photo": " settings.account.photo",
+      "deleteNoPassword": " settings.account.deleteNoPassword"
     },
     "emergencyWallet": {
-      "title": "[T] settings.emergencyWallet.title",
-      "subtitle": "[T] settings.emergencyWallet.subtitle",
-      "hide": "[T] settings.emergencyWallet.hide",
-      "show": "[T] settings.emergencyWallet.show"
+      "title": " settings.emergencyWallet.title",
+      "subtitle": " settings.emergencyWallet.subtitle",
+      "hide": " settings.emergencyWallet.hide",
+      "show": " settings.emergencyWallet.show"
     }
   }
 }
