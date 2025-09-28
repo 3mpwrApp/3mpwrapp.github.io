@@ -38,10 +38,15 @@ Notes
 
 ## Localization (i18n)
 
-- Provider: `i18n/index.tsx` with lightweight runtime translations (no external deps).
-- Languages: English (`en`), French (`fr`), Spanish (`es`). Files in `locales/<lang>/common.json`.
-- Usage: `const { t } = useTranslation();` then `t('home.title')`.
-- Change language: Profile screen provides quick EN/FR/ES toggle.
+  - JSON structure validation (`npm run i18n:validate`)
+
+Translator note:
+
+- Events screen uses top-level navigation keys under `deadlines.*` for next/prev and quick reload buttons:
+  - `deadlines.prevMonth`
+  - `deadlines.nextMonth`
+  - `deadlines.reloadShort`
+  Ensure these exist in `es` and `fr`. Parity tools will flag if missing.
 
 ## AI Transparency & Offline Fallbacks
 

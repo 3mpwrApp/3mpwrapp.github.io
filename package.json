@@ -151,6 +151,9 @@
       "eslint --cache --fix",
       "jest --bail --findRelatedTests --passWithNoTests"
     ],
+    "locales/*/common.json": [
+      "npm run i18n:validate"
+    ],
     "!.eslintcache": []
   },
   "overrides": {
