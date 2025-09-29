@@ -1553,7 +1553,7 @@
       "importedFromICS": "Added {{count}} deadlines from ICS",
       "importFailedBodyList": "Could not import ICS file.",
       "listTitle": "List",
-      "reloadShort": "Reload",
+      
       "exportAllICS": "Export all as ICS",
       "exportAllCSV": "Export all as CSV",
       "bulkMarkedDone": "All marked done",
@@ -1584,8 +1584,7 @@
       "exportFailedBody": "Could not create export file.",
       "icsBtn": "ICS",
       "deleted": "Deleted",
-      "prevMonth": "Previous",
-      "nextMonth": "Next",
+      
       "dayCell": "Day",
       "emptyDay": "No events",
       "csvHeaderDate": "date",
