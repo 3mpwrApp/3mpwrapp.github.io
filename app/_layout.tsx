@@ -30,6 +30,7 @@ import { fetchResources } from "../services/resources";
 import { initAnalytics, initSentry } from "../services/telemetry";
 import { A11ySettingsProvider } from "../store/a11ySettings";
 import { BookmarksProvider } from "../store/bookmarks";
+import { CoachProgressProvider } from "../store/coachProgress";
 import { PrivacyProvider, usePrivacy } from "../store/privacy";
 import { ProfileLocalProvider } from "../store/profileLocal";
 import { ResilienceProvider } from "../store/resilience";
@@ -115,6 +116,7 @@ export default function RootLayout() {
     <I18nProvider>
       <A11ySettingsProvider>
         <SettingsProvider>
+          <CoachProgressProvider>
           <ResilienceProvider>
           <BookmarksProvider>
           <ProfileLocalProvider>
@@ -170,6 +172,7 @@ export default function RootLayout() {
           </ProfileLocalProvider>
           </BookmarksProvider>
           </ResilienceProvider>
+          </CoachProgressProvider>
         </SettingsProvider>
       </A11ySettingsProvider>
     </I18nProvider>
