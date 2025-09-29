@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
 
-import { useCoachProgress } from '../store/coachProgress';
+import { useCoachProgressOptional } from '../store/coachProgress';
 
 import { pseudoRandom01 } from './session';
 import { usage } from './usage';
@@ -148,8 +148,8 @@ export async function scoreTools(extra?: { coachProgress?: number }) : Promise<S
 
 // React hook wrapper (simplified example)
 export function useSuggestions() {
-  const { percentComplete } = useCoachProgress();
-  const fraction = percentComplete / 100;
+  const progress = useCoachProgressOptional();
+  const fraction = (progress?.percentComplete ?? 0) / 100;
   const [list, setList] = React.useState<Suggestion[]>([]);
   React.useEffect(()=> { scoreTools({ coachProgress: fraction }).then(setList); }, [fraction]);
   return list;
