@@ -49,7 +49,7 @@ export default function CollectiveLegal() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} accessibilityRole='header' style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.collective.title', 'Collective Legal Action Hub')}</Text>
-      <Text style={s.subtitle}>{t('advocacy.collective.subtitle', 'If multiple users report the same violation, Empowr groups cases for union / class-action leverage.')}</Text>
+  <Text style={s.subtitle}>{t('advocacy.collective.subtitle', 'If multiple users report the same violation, 3mpowr App groups cases for union / class-action leverage.')}</Text>
       <Text style={s.label}>{t('advocacy.collective.typeLabel', 'Violation type')}</Text>
       <View style={s.typesWrap}>
         {TYPES.map(([k, fallback]) => { const active = k === typeKey; return (

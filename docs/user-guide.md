@@ -1,17 +1,17 @@
 ---
-title: Empowr App — User Guide
-description: A practical guide to using Empowr’s tools and community features
+title: 3mpowr App — User Guide
+description: A practical guide to using 3mpowr’s tools and community features
 version: 1.0
 lastUpdated: 2025-09-07
 ---
 
-# Empowr App — User Guide
+# 3mpowr App — User Guide
 
 > Purpose: Practical tools and community for injured workers and persons with disabilities.
 
 ## Quick Start
 
-1. Install: Open the Empowr app on iOS/Android, or visit the web app.
+1. Install: Open the 3mpowr App on Android, or visit the web app.
 2. Sign In: Create an account or log in from the welcome screen.
 3. First Launch: Accept Terms to continue (you can reset this in Settings).
 4. Setup: Open Settings → set your Display Name; optionally set a Local Profile (name, contact, province) for templates.

@@ -1,13 +1,13 @@
-import { View, Text, Button, StyleSheet } from "react-native";
-import { useRouter } from "expo-router";
 import type { Href } from "expo-router";
+import { useRouter } from "expo-router";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function OnboardingScreen() {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Empowr App</Text>
+      <Text style={styles.title}>Welcome to 3mpowr App</Text>
       <Text style={styles.subtitle}>
         Empowering injured workers & persons with disabilities.
       </Text>

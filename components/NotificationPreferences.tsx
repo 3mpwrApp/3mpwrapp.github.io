@@ -49,7 +49,7 @@ export default function NotificationPreferences() {
       if (!hasPermission) {
         Alert.alert(
           "Permission Required",
-          "Please enable notifications in your device settings to receive alerts from Empowr.",
+          "Please enable notifications in your device settings to receive alerts from 3mpowr App.",
           [{ text: "OK" }]
         );
         return;

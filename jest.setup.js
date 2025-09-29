@@ -17,18 +17,35 @@ jest.mock('react-native', () => {
     const {
       accessibilityRole,
       accessibilityLabel,
-      // remove from DOM
+      testID,
+      // remove from DOM-only props
       accessibilityState: _accessibilityState,
       hitSlop: _hitSlop,
       onPress,
       ...rest
     } = props;
-    return { ...rest, 'aria-label': accessibilityLabel, role: accessibilityRole === 'button' ? 'button' : undefined, onClick: onPress };
+    const out = {
+      ...rest,
+      'aria-label': accessibilityLabel,
+      role: accessibilityRole === 'button' ? 'button' : undefined,
+      onClick: onPress,
+    };
+    if (testID) out['data-testid'] = testID;
+    return out;
   };
   const View = (props) => React.createElement('div', props, props.children);
+  const ScrollView = (props) => React.createElement('div', props, props.children);
   const Text = (props) => React.createElement('span', props, props.children);
+  const TextInput = (props) => {
+    const { onChangeText, value, multiline, ...rest } = props;
+    const tag = multiline ? 'textarea' : 'input';
+    const handleChange = (e) => {
+      if (onChangeText) onChangeText(e && e.target ? e.target.value : '');
+    };
+    return React.createElement(tag, { value, onChange: handleChange, ...rest }, props.children);
+  };
   const Pressable = (props) => React.createElement('button', stripProps(props), props.children);
-  return { ...RN, StyleSheet, View, Text, Pressable };
+  return { ...RN, StyleSheet, View, ScrollView, Text, TextInput, Pressable };
 });
 
 // Alias fireEvent.press -> fireEvent.click for web-like test env

@@ -60,10 +60,10 @@ export default function ThemedHeader() {
           source={require("../assets/images/brand-logo.png")}
           style={styles.logo}
           accessible
-          accessibilityLabel="3mpwrApp logo"
+          accessibilityLabel="3mpowr App logo"
         />
-        <Text style={styles.title} accessibilityLabel="3mpwrApp header">
-          3mpwrApp
+        <Text style={styles.title} accessibilityLabel="3mpowr App header">
+          3mpowr App
         </Text>
       </Pressable>
 
@@ -78,7 +78,7 @@ export default function ThemedHeader() {
           <Pressable
             onPress={() => Linking.openURL("https://x.com/empowrapp0816")}
             accessibilityRole="link"
-            accessibilityLabel="Open Empowr on X (formerly Twitter)"
+            accessibilityLabel="Open 3mpowr on X (formerly Twitter)"
             hitSlop={HIT_SLOP_8}
             testID="link-social-x"
             focusable
@@ -95,7 +95,7 @@ export default function ThemedHeader() {
               Linking.openURL("https://www.instagram.com/empowrapp/")
             }
             accessibilityRole="link"
-            accessibilityLabel="Open Empowr on Instagram"
+            accessibilityLabel="Open 3mpowr on Instagram"
             hitSlop={HIT_SLOP_8}
             testID="link-social-instagram"
             focusable
@@ -114,7 +114,7 @@ export default function ThemedHeader() {
               )
             }
             accessibilityRole="link"
-            accessibilityLabel="Open Empowr on Facebook"
+            accessibilityLabel="Open 3mpowr on Facebook"
             hitSlop={HIT_SLOP_8}
             testID="link-social-facebook"
             focusable

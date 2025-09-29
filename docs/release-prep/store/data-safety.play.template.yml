@@ -1,0 +1,28 @@
+# Google Play Data Safety (Draft)
+# Prepare answers offline; copy into Play Console later
+
+collects_data: true
+shares_data: false
+encrypted_in_transit: true
+delete_request_supported: true
+
+collected_data:
+  - type: "Personal info"
+    items:
+      - name: "Email address"
+        required: false
+        purpose: ["App functionality", "Account management"]
+  - type: "App activity"
+    items:
+      - name: "App interactions"
+        required: false
+        purpose: ["Analytics"]
+  - type: "Diagnostics"
+    items: []
+
+security_practices:
+  - data_encrypted_in_transit: true
+  - data_deletion: upon_request
+
+notes: |
+  We apply a PII scan to analytics and log no sensitive identifiers by default.

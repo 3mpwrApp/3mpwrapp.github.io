@@ -61,7 +61,7 @@ export default function AllyHub() {
         multiline
         accessibilityLabel="Ally coaching prompt"
       />
-      <A11yPressable onPress={runCoach} style={[s.button, loading && { opacity:0.6 }]} disabled={loading} accessibilityRole="button" accessibilityLabel={t('advocacy.ally.generate')}>
+      <A11yPressable testID="ally-generate-btn" onPress={runCoach} style={[s.button, loading && { opacity:0.6 }]} disabled={loading} accessibilityRole="button" accessibilityLabel={t('advocacy.ally.generate')}>
         <Text style={s.buttonText}>{loading ? t('advocacy.ally.generating') : t('advocacy.ally.generate')}</Text>
       </A11yPressable>
       {!!coaching && (

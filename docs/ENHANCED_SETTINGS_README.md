@@ -1,6 +1,6 @@
 # Enhanced Settings Tab - Accessibility First Implementation
 
-This document outlines the comprehensive accessibility features and improvements made to the Empowr app's Settings Tab, focusing on WCAG 2.1 AA compliance and inclusive design principles.
+This document outlines the comprehensive accessibility features and improvements made to the 3mpowr App's Settings Tab, focusing on WCAG 2.1 AA compliance and inclusive design principles.
 
 ## Overview
 
@@ -232,4 +232,4 @@ The enhanced Settings Tab transforms the app into a fully accessible experience 
 
 ---
 
-This implementation represents a comprehensive approach to accessibility that goes beyond compliance to create a truly inclusive user experience. The focus on user control, clear communication, and robust functionality ensures that all users can effectively use the Empowr app to access the resources and support they need.
+This implementation represents a comprehensive approach to accessibility that goes beyond compliance to create a truly inclusive user experience. The focus on user control, clear communication, and robust functionality ensures that all users can effectively use the 3mpowr App to access the resources and support they need.

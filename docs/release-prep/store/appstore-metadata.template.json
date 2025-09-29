@@ -1,0 +1,18 @@
+{
+  "name": "3mpowr App",
+  "subtitle": "",
+  "promotionalText": "",
+  "description": "",
+  "keywords": "",
+  "supportURL": "https://example.com/support",
+  "marketingURL": "https://example.com",
+  "privacyPolicyURL": "https://example.com/privacy",
+  "primaryCategory": "Utilities",
+  "secondaryCategory": "",
+  "languages": ["en-US"],
+  "screenshots": {
+    "iphone_6_5": ["path/to/shot1.png", "path/to/shot2.png"],
+    "iphone_5_5": [],
+    "ipad_pro_3rd_gen_129": []
+  }
+}

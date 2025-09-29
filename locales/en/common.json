@@ -294,7 +294,7 @@
     },
     "collective": {
       "title": "Collective Legal Action Hub",
-      "subtitle": "If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
+  "subtitle": "If multiple users report the same violation, 3mpowr App groups cases for union / class-action leverage.",
       "typeLabel": "Violation type",
       "type": {
         "deniedModified": "denied modified duties",
@@ -464,7 +464,7 @@
     "latestEvent": "Latest event"
   },
   "home": {
-    "title": "Welcome to Empowr",
+  "title": "Welcome to 3mpowr App",
     "subtitle": "Support. Advocacy. Empowerment.",
     "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!",
     "guide": {
@@ -833,7 +833,7 @@
     },
     "collective": {
       "title": "Collective Legal Action Hub",
-      "subtitle": "If multiple users report the same violation, Empowr groups cases for union / class-action leverage.",
+  "subtitle": "If multiple users report the same violation, 3mpowr App groups cases for union / class-action leverage.",
       "typeLabel": "Violation type",
       "type": {
         "deniedModified": "denied modified duties",
@@ -900,7 +900,7 @@
     },
     "system": {
       "changelog": {
-        "title": "What's new in Empowr",
+  "title": "What's new in 3mpowr App",
         "body": "Check out the latest updates and improvements."
       }
     },
@@ -1048,7 +1048,7 @@
     "scheduleEventReminder": "Schedule event reminder",
     "removeEventReminder": "Remove event reminder",
     "addToCalendar": "Add to external calendar",
-    "header": "Empowr — Local Advocacy Snapshot",
+  "header": "3mpowr App — Local Advocacy Snapshot",
     "evidenceLine": "Evidence Locker: {{noteCount}} notes, {{docCount}} file(s)",
     "resourcesViewed": "Resources viewed this session: ~{{resourcesCount}}",
     "signals": "Signals:",
@@ -1843,7 +1843,7 @@
     "loadFailed": "Failed to load events"
   },
   "privacyGate": {
-    "title": "Unlock Empowr",
+  "title": "Unlock 3mpowr App",
     "subtitle": "Enter your passcode to continue.",
     "placeholder": "Enter passcode",
     "unlock": "Unlock",
@@ -1899,7 +1899,7 @@
   
   "about": {
     "title": "About & Contact",
-    "intro1": "Empowr supports injured workers, the disability community, advocates and allies with tools, resources, and updates.",
+  "intro1": "3mpowr App supports injured workers, the disability community, advocates and allies with tools, resources, and updates.",
     "intro2": "Vision: a full lifecycle empowerment hub - starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.",
     "intro3": "Questions, suggestions, or requests? Reach out anytime.",
     "emailLabel": "Email",

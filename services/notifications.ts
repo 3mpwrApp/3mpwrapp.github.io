@@ -113,7 +113,7 @@ export async function getExpoPushToken(): Promise<string | null> {
 
 // Send a local test notification now
 export async function sendTestLocal() {
-  await scheduleLocal("Empowr", "This is a test notification");
+  await scheduleLocal("3mpowr App", "This is a test notification");
 }
 
 // Ensure alerts show while app is foregrounded

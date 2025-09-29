@@ -1,0 +1,13 @@
+{
+  "title": "3mpowr App",
+  "shortDescription": "",
+  "fullDescription": "",
+  "video": "",
+  "privacyPolicy": "https://example.com/privacy",
+  "screenshots": {
+    "phone": ["path/to/shot1.png", "path/to/shot2.png"],
+    "sevenInch": [],
+    "tenInch": []
+  },
+  "featureGraphic": "path/to/feature-graphic.png"
+}

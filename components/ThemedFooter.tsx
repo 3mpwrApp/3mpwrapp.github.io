@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet, Text } from "react-native";
 
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
@@ -12,9 +12,9 @@ export default function ThemedFooter() {
     <SafeAreaView
       style={styles.container}
       accessibilityRole="text"
-      accessibilityLabel={`Footer. Empowr, ${year}`}
+      accessibilityLabel={`Footer. 3mpowr App, ${year}`}
     >
-      <Text style={styles.text} numberOfLines={1}>{"\u00A9 "}{year} Empowr</Text>
+      <Text style={styles.text} numberOfLines={1}>{"\u00A9 "}{year} 3mpowr App</Text>
     </SafeAreaView>
   );
 }

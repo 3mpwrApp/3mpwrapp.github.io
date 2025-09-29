@@ -15,7 +15,7 @@ function parseArgs() {
   return out;
 }
 
-const { to, title = "Empowr", body = "Test push from script" } = parseArgs();
+const { to, title = "3mpowr App", body = "Test push from script" } = parseArgs();
 if (!to) {
   console.error("Missing --to <ExpoPushToken>");
   process.exit(1);

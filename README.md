@@ -1,4 +1,4 @@
-# Empowr App
+# 3mpowr App
 
 ## Get started
 
@@ -47,6 +47,7 @@ Translator note:
   - `deadlines.nextMonth`
   - `deadlines.reloadShort`
   Ensure these exist in `es` and `fr`. Parity tools will flag if missing.
+  - Source of truth: The top-level `deadlines.*` keys are canonical. The `templates.deadlines.*` keys in Deadlines-specific screens MUST mirror them for shared UI controls. A parity unit test (`__tests__/i18n-deadlines-parity.test.ts`) enforces FR/ES alignment to prevent drift.
 
 ## AI Transparency & Offline Fallbacks
 
@@ -370,6 +371,21 @@ Guidelines:
 - For now only two plural categories are supported (1 vs other). Future ICU expansion possible.
 
 ## Linting & Type Quality
+
+## Release prep (no paid accounts required)
+
+Before enrolling in Apple/Google developer programs, you can prepare everything offline:
+
+- Checklists and templates live in `docs/release-prep/`:
+  - `CHECKLIST.md` — step-by-step preflight
+  - `store/appstore-metadata.template.json` — iOS metadata
+  - `store/play-metadata.template.json` — Play metadata
+  - `store/app-privacy.apple.template.yml` — App Privacy questionnaire draft
+  - `store/data-safety.play.template.yml` — Data Safety questionnaire draft
+  - `legal/privacy-policy.template.md` — privacy policy scaffold
+  - `artifacts/` — screenshot/icon specs and guidelines
+
+When ready to publish, copy these into App Store Connect / Play Console forms. See also `docs/store-listing-placeholder.md` for costs and listing strategies.
 
 Commands:
 

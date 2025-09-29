@@ -1,0 +1,27 @@
+# Apple App Privacy (Draft)
+# Answer these questions offline; later copy into App Store Connect
+
+collects_data: true
+linked_to_user: true
+used_for_tracking: false
+
+categories:
+  - contact_info:
+      collected: ["email"]
+      purpose: ["app_functionality", "support"]
+      optional: true
+  - identifiers:
+      collected: ["user_id"]
+      purpose: ["app_functionality"]
+      optional: false
+  - usage_data:
+      collected: ["product_interaction"]
+      purpose: ["analytics"]
+      optional: true
+  - diagnostics:
+      collected: []
+      purpose: []
+      optional: true
+
+notes: |
+  Analytics events are de-identified and avoid PII by design; see analytics safeguards in repo.
