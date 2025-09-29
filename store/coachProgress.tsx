@@ -51,6 +51,12 @@ export function useCoachProgress() {
   return ctx;
 }
 
+// Optional variant that does not throw when used outside the provider.
+// Useful for components that can render before providers are mounted or in Storybook/tests.
+export function useCoachProgressOptional() {
+  return React.useContext(Ctx);
+}
+
 // Test helper (mirrors pattern used elsewhere)
 export function __getCoachProgressTestSnapshot() {
   return { lessons: JSON.parse(JSON.stringify((global as any).__coachProgressLessons || [])) };
