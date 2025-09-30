@@ -1,6 +1,7 @@
 {
   "expo": {
   "name": "3mpowr App",
+    "owner": "empowrapp",
     "slug": "empowrapp",
     "version": "1.0.0",
     "orientation": "portrait",
