@@ -1,7 +1,7 @@
 {
   "expo": {
   "name": "3mpowr App",
-    "owner": "empowrapp",
+    "owner": "empowrapp-2",
     "slug": "empowrapp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -26,8 +26,8 @@
         "foregroundImage": "./assets/images/brand-adaptive.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
-      "package": "com.empowrapp.empowrapp",
+  "edgeToEdgeEnabled": true,
+  "package": "com.empowrapp2.empowrapp",
       
       "allowBackup": false
     },
