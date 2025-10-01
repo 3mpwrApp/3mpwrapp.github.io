@@ -13,6 +13,11 @@
     "settings": "Paramètres",
     "inbox": "Boîte de réception"
   },
+  "inbox": {
+    "itemRead": "Lu",
+    "itemUnread": "Non lu",
+    "markAll": "Tout marquer comme lus"
+  },
   "header": {
     "favorites": "Favs",
     "items": "Éléments",
@@ -750,6 +755,12 @@
       "exportError": "Export échoué",
       "exportErrorBody": "Impossible de créer export.",
       "exportReady": "Export prêt",
+  "exportEncrypted": "Exporter chiffré",
+  "exportSavedCache": "Fichier chiffré enregistré en cache.",
+  "importEncrypted": "Importer chiffré",
+  "importFailedTitle": "Échec de l'import",
+  "importFailedBody": "Impossible d'importer les données chiffrées.",
+  "importedNotes": "{{count}} notes importées.",
       "summaryRegion": "Région résumé preuves",
       "queueTitle": "File de téléversement",
       "queueScreenLabel": "Écran file de téléversement du Coffre",
@@ -1566,6 +1577,10 @@
   "common": {
     "on": "Activé",
     "off": "Désactivé",
+    "failed": "Échec",
+    "export": "Exporter",
+    "import": "Importer",
+    "imported": "Importé",
     "uploading": "Téléversement",
     "uploadingItem": "Téléversement de {{name}}",
     "hide": "Masquer",
@@ -1621,6 +1636,7 @@
     "left": "Gauche",
     "right": "Droite",
     "select": "Sélectionner",
+    "unread": "Non lu",
     "empty": "Vide"
   },
   "test": {

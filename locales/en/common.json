@@ -13,6 +13,11 @@
     "settings": "Settings",
     "inbox": "Inbox"
   },
+  "inbox": {
+    "itemRead": "Read",
+    "itemUnread": "Unread",
+    "markAll": "Mark all as read"
+  },
   "wellness": {
     "tools": {
       "symptom": "Symptom & Pain Tracker (exportable report)",
@@ -794,7 +799,11 @@
     "doc": ".doc",
     "success": "Success",
     "error": "Error",
+    "failed": "Failed",
     "working": "Working...",
+    "export": "Export",
+    "import": "Import",
+    "imported": "Imported",
     "add": "Add",
     "next": "Next",
     "select": "Select",
@@ -802,7 +811,8 @@
     "deleted": "[T] common.deleted",
     "submit": "[T] common.submit",
     "left": "Left",
-    "right": "Right"
+    "right": "Right",
+    "unread": "Unread"
   },
   "admin": {
     "onlyTitle": "Admin Only",
@@ -1256,9 +1266,15 @@
       "shareUnavailableBody": "System share sheet not available.",
       "shareError": "Share failed",
       "shareErrorBody": "Could not share evidence file.",
-      "exportError": "Export failed",
+  "exportError": "Export failed",
       "exportErrorBody": "Could not build evidence export.",
       "exportReady": "Export ready",
+  "exportEncrypted": "Export encrypted",
+  "exportSavedCache": "Encrypted file saved to cache.",
+  "importEncrypted": "Import encrypted",
+  "importFailedTitle": "Import failed",
+  "importFailedBody": "Could not import encrypted data.",
+  "importedNotes": "Imported {{count}} notes.",
       "summaryRegion": "Evidence summary region",
       "queueTitle": "Upload Queue",
       "queueScreenLabel": "Evidence Locker Upload Queue screen",

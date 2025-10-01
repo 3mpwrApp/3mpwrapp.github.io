@@ -13,6 +13,11 @@
     "settings": "Configuración",
     "inbox": "Bandeja de entrada"
   },
+  "inbox": {
+    "itemRead": "Leído",
+    "itemUnread": "No leído",
+    "markAll": "Marcar todo como leído"
+  },
   "header": {
     "favorites": "Favs",
     "items": "Elementos",
@@ -963,6 +968,12 @@
       "exportError": "Error al exportar",
       "exportErrorBody": "No se pudo crear exportación.",
       "exportReady": "Export listo",
+  "exportEncrypted": "Exportar cifrado",
+  "exportSavedCache": "Archivo cifrado guardado en caché.",
+  "importEncrypted": "Importar cifrado",
+  "importFailedTitle": "Fallo de importación",
+  "importFailedBody": "No se pudieron importar datos cifrados.",
+  "importedNotes": "{{count}} notas importadas.",
       "summaryRegion": "Región resumen evidencias",
       "queueTitle": "Cola de cargas",
       "queueScreenLabel": "Pantalla cola de cargas del Casillero",
@@ -1731,6 +1742,10 @@
   "common": {
     "on": "Activado",
     "off": "Desactivado",
+    "failed": "Falló",
+    "export": "Exportar",
+    "import": "Importar",
+    "imported": "Importado",
     "uploading": "Cargando",
     "uploadingItem": "Cargando {{name}}",
     "hide": "Ocultar",
@@ -1786,6 +1801,7 @@
     "left": "Izquierda",
     "right": "Derecha",
     "select": "Seleccionar",
+    "unread": "No leído",
     "empty": "Vacío"
   },
   "masterIndex": {
