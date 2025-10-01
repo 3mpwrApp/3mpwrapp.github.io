@@ -424,6 +424,13 @@
       "sleep": "Sommeil & Énergie",
       "balance": "Équilibre travail/repos (IA)"
     },
+    "search": "Rechercher des outils bien‑être...",
+    "sections": {
+      "sleep": "Sommeil & Énergie",
+      "tracking": "Suivi",
+      "cognitive": "Cognitif & Humeur",
+      "movement": "Mouvement & Physio"
+    },
     "tools": {
       "symptom": "Symptom & Pain Tracker (exportable report)",
       "sleep": "Sleep & Energy Tracker (legal/medical summary)",
@@ -586,6 +593,62 @@
       "title": "Points de résilience",
       "desc": "Gagnez des points pour des actions positives",
       "points": "Points : {{points}}"
+    },
+    "sleepEnergy": {
+      "title": "Sommeil & Énergie",
+      "desc": "Suivez sommeil et énergie; résumé partageable."
+    },
+    "symptomTracker": {
+      "title": "Suivi symptômes & douleur",
+      "desc": "Notez symptômes/douleur; exportez un rapport."
+    },
+    "selfCare": {
+      "title": "Autosoins accessibles",
+      "desc": "Idées simples et adaptables pour jours à faible énergie."
+    },
+    "workBalance": {
+      "title": "Équilibre bien‑être/travail (IA)",
+      "desc": "Planifiez alternance travail/repos avec conseils doux."
+    },
+    "griefSupport": {
+      "title": "Soutien deuil & identité",
+      "desc": "Réflexions et invites pour changements d'identité."
+    },
+    "adaptiveMeditation": {
+      "title": "Méditation adaptative",
+      "desc": "Méditations courtes et ajustables."
+    },
+    "rehabGames": {
+      "title": "Jeux de rééducation",
+      "desc": "Mini‑jeux de mouvement doux. Adaptez au confort."
+    },
+    "dailyPlanner": {
+      "title": "Planificateur quotidien adaptatif",
+      "desc": "Priorisez tâches selon l'énergie."
+    },
+    "aiCompanion": {
+      "title": "Compagnon IA bien‑être",
+      "desc": "Aide douce pour coaching et recadrages."
+    },
+    "exerciseHub": {
+      "title": "Hub exercice & mouvement",
+      "desc": "Routines sur chaise et conseils de rythme."
+    },
+    "nutrition": {
+      "title": "Nutrition & hydratation",
+      "desc": "Guides légers et rappels pour bien s'alimenter."
+    },
+    "pacingPartner": {
+      "title": "Partenaire de rythme",
+      "desc": "Découpez tâches en petites étapes et micro‑pauses."
+    },
+    "reflections": {
+      "title": "Calendrier de réflexions",
+      "desc": "Saisissez des notes et réussites; voyez les tendances."
+    },
+    "classicHub": {
+      "title": "Hub bien‑être classique",
+      "desc": "Ensemble original d'outils regroupés."
     }
   },
   "resources": {
@@ -1686,6 +1749,7 @@
     "chipsAnnounce": "Filtre rapide défini sur {{label}}"
   },
   "research": {
+    "search": "Rechercher des hubs de recherche...",
     "chips": {
       "uncrpd": "UNCRPD",
       "advocacy": "Plaidoyer",
