@@ -24,6 +24,7 @@ export function useCoachInactivityReminder() {
       timeout = setTimeout(() => {
         dispatchDomainEvent({ event:'coach.reminder', payload:{ idleHours: Math.round(THRESHOLD_MS/3600000) } }).catch(()=>{});
       }, wait);
+      try { (timeout as any)?.unref?.(); } catch {}
     }
     return () => { if (timeout) clearTimeout(timeout); };
   }, [lessons.map(l=>l.completedAt).join('|')]);

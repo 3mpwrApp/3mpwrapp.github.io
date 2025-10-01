@@ -1,5 +1,5 @@
 Param(
-  [string]$InputPath = "..\..\Empowr App social media graphics\empowrapp-logo.png"
+  [string]$InputPath = "..\..\3mpowr App social media graphics\empowrapp-logo.png"
 )
 
 Set-StrictMode -Version Latest

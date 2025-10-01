@@ -7,6 +7,7 @@ import A11yPressable from '../../../components/A11yPressable';
 import SimpleBarChart from '../../../components/SimpleBarChart';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useAuth } from '../../../context/AuthContext';
+import { useTranslation } from '../../../i18n';
 import { flagItem } from '../../../services/moderation';
 import { ensureTarget, listRatings, listTargets, upsertRating } from '../../../services/ratings';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -17,6 +18,7 @@ export default function Ratings() {
   const palette = useAppPalette();
   const s = styles(palette);
   const { isAdmin } = useAuth();
+  const { t } = useTranslation();
   const [target, setTarget] = React.useState('Hospital X');
   const [kind, setKind] = React.useState('hospital');
   const [score, setScore] = React.useState('5');
@@ -42,25 +44,25 @@ export default function Ratings() {
   const dist = [1,2,3,4,5].map(n => ({ n, c: items.filter(i => i.score===n).length }));
   return (
     <View style={s.container}>
-      <Text style={s.title}>Disability Justice Ratings</Text>
+      <Text style={s.title}>{t('advocacy.ratings.title','Disability Justice Ratings')}</Text>
       {isAdmin && (
         <View style={{ gap:8, marginBottom: 8 }}>
           <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></A11yPressable>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>Approved</Text></A11yPressable>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>Pending</Text></A11yPressable>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>Trash</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.filter.all','All')}</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.filter.approved','Approved')}</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.filter.pending','Pending')}</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.filter.trash','Trash')}</Text></A11yPressable>
           </View>
           <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>Admin Pending</Text></A11yPressable>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>Admin Approved</Text></A11yPressable>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>Admin Trash</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>{t('advocacy.ratings.admin.pending','Admin Pending')}</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>{t('advocacy.ratings.admin.approved','Admin Approved')}</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>{t('advocacy.ratings.admin.trash','Admin Trash')}</Text></A11yPressable>
           </View>
         </View>
       )}
       <View>
         <TextInput
-          placeholder="Target (name)"
+          placeholder={t('advocacy.ratings.targetPlaceholder','Target (name)')}
           placeholderTextColor={palette.text+'77'}
           value={target}
           onChangeText={async (t)=>{ setTarget(t); try { const sug = await listTargets(t || ''); setSuggestions(sug); setShowSug(!!t); } catch {} }}
@@ -76,23 +78,45 @@ export default function Ratings() {
           </View>
         )}
       </View>
-      <TextInput placeholder="Type (hospital, clinic, law, employer, union)" placeholderTextColor={palette.text+'77'} value={kind} onChangeText={setKind} style={s.input} />
+      <TextInput placeholder={t('advocacy.ratings.typePlaceholder','Type (hospital, clinic, law, employer, union)')} placeholderTextColor={palette.text+'77'} value={kind} onChangeText={setKind} style={s.input} />
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
-        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSort('latest')} style={[s.chip, sort==='latest'&&s.chipActive]}><Text style={{ color: sort==='latest'? palette.onPrimary: palette.text, fontWeight:'700' }}>Latest</Text></A11yPressable>
-        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSort('score')} style={[s.chip, sort==='score'&&s.chipActive]}><Text style={{ color: sort==='score'? palette.onPrimary: palette.text, fontWeight:'700' }}>Top</Text></A11yPressable>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSort('latest')} style={[s.chip, sort==='latest'&&s.chipActive]}><Text style={{ color: sort==='latest'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.sort.latest','Latest')}</Text></A11yPressable>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSort('score')} style={[s.chip, sort==='score'&&s.chipActive]}><Text style={{ color: sort==='score'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.sort.top','Top')}</Text></A11yPressable>
       </View>
-      <Text style={s.text}>Average rating: {avg} ({items.length})</Text>
+      <Text style={s.text}>{t('advocacy.ratings.average','Average rating: {{avg}} ({{count}})',{ avg, count: items.length })}</Text>
       <View style={{ marginTop: 8 }}>
         <SimpleBarChart data={dist} labelKey="n" valueKey="c" />
       </View>
-      <TextInput placeholder="Score 1-5" placeholderTextColor={palette.text+'77'} value={score} onChangeText={setScore} style={s.input} />
-      <TextInput placeholder="Comment (optional)" placeholderTextColor={palette.text+'77'} value={comment} onChangeText={setComment} style={s.input} />
-  <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ const key = `rate:${target}`; const last = await AsyncStorage.getItem(key); if (last && (Date.now() - Number(last) < 5*60*1000)) { Alert.alert('Slow down','Please wait before submitting again.'); return; } await ensureTarget(target); await upsertRating({ target, kind: kind as any, score: Number(score)||0, comment }); await AsyncStorage.setItem(key, String(Date.now())); setComment(''); setScore('5'); load(); } catch (e:any) { Alert.alert('Failed', e?.message || 'Could not submit'); } }} style={s.button}><Text style={s.buttonText}>Submit Rating</Text></A11yPressable>
+      <TextInput placeholder={t('advocacy.ratings.scorePlaceholder','Score 1-5')} placeholderTextColor={palette.text+'77'} value={score} onChangeText={setScore} style={s.input} />
+      <TextInput placeholder={t('advocacy.ratings.commentPlaceholder','Comment (optional)')} placeholderTextColor={palette.text+'77'} value={comment} onChangeText={setComment} style={s.input} />
+      <A11yPressable
+        hitSlop={HIT_SLOP_8}
+        onPress={async()=>{
+          try{
+            const key = `rate:${target}`;
+            const last = await AsyncStorage.getItem(key);
+            if (last && (Date.now() - Number(last) < 5*60*1000)) {
+              Alert.alert(t('advocacy.ratings.slowDownTitle','Slow down'), t('advocacy.ratings.slowDownBody','Please wait before submitting again.'));
+              return;
+            }
+            await ensureTarget(target);
+            await upsertRating({ target, kind: kind as any, score: Number(score)||0, comment });
+            await AsyncStorage.setItem(key, String(Date.now()));
+            setComment(''); setScore('5'); load();
+          } catch (e:any) {
+            Alert.alert(t('common.failed','Failed'), e?.message || t('advocacy.ratings.submitFailed','Could not submit'));
+          }
+        }}
+        style={s.button}
+        accessibilityLabel={t('advocacy.ratings.submit','Submit Rating')}
+      >
+        <Text style={s.buttonText}>{t('advocacy.ratings.submit','Submit Rating')}</Text>
+      </A11yPressable>
       <FlatList data={[...visible].sort((a,b)=> sort==='latest'? ((b.createdAt?.toDate?.()?.getTime?.()||0) - (a.createdAt?.toDate?.()?.getTime?.()||0)) : ((b.score||0)-(a.score||0)))} keyExtractor={i=>i.id} renderItem={({item:i}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{i.score} ★</Text>
           {!!i.comment && <Text style={s.text}>{i.comment}</Text>}
-          <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await flagItem('rating', i.id, 'inaccurate'); Alert.alert('Flagged','Thanks for reporting.'); } catch {} }} style={s.button}><Text style={s.buttonText}>Flag</Text></A11yPressable>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await flagItem('rating', i.id, 'inaccurate'); Alert.alert(t('advocacy.ratings.flaggedTitle','Flagged'), t('advocacy.ratings.flaggedBody','Thanks for reporting.')); } catch {} }} style={s.button} accessibilityLabel={t('advocacy.ratings.flag','Flag')}><Text style={s.buttonText}>{t('advocacy.ratings.flag','Flag')}</Text></A11yPressable>
         </View>
       )} />
     </View>

@@ -5,6 +5,7 @@ import { StyleSheet, useColorScheme } from "react-native";
 import VoiceController from "../../components/VoiceController";
 import { useWhatsNewBadge } from "../../hooks/useWhatsNewBadge";
 import { useTranslation } from "../../i18n";
+import { useNotifications } from "../../store/notifications";
 import { colors } from "../../theme/colors";
 
 export default function TabsLayout() {
@@ -14,6 +15,9 @@ export default function TabsLayout() {
   const inactiveTint = palette.muted;
   const { t } = useTranslation();
   const wnBadge = useWhatsNewBadge();
+  // Unread badge for Inbox
+  const notifications = useNotifications();
+  const unread = notifications?.unread ?? 0;
 
   return (
     <>
@@ -42,6 +46,18 @@ export default function TabsLayout() {
             tabBarAccessibilityLabel: `${t("nav.home")} tab`,
             tabBarIcon: ({ color, size, focused }) => (
               <Ionicons name={focused ? "home" : "home-outline"} color={color} size={size + 2} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="inbox"
+          options={{
+            title: t("nav.inbox", "Inbox"),
+            tabBarLabel: t("nav.inbox", "Inbox"),
+            tabBarAccessibilityLabel: `${t("nav.inbox", "Inbox")} tab`,
+            tabBarBadge: unread > 0 ? unread : undefined,
+            tabBarIcon: ({ color, size, focused }) => (
+              <Ionicons name={focused ? "mail" : "mail-outline"} color={color} size={size + 2} />
             ),
           }}
         />

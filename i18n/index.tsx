@@ -52,8 +52,13 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const isRTL = false; // Extend in future when adding Arabic/Hebrew
 
   React.useEffect(() => {
-    if (I18nManager.isRTL !== isRTL) {
-      // Do not force reload; our current langs are LTR only.
+    // In web/test environments, I18nManager may be undefined; guard accordingly.
+    try {
+      if ((I18nManager as any)?.isRTL !== isRTL) {
+        // Do not force reload; our current langs are LTR only.
+      }
+    } catch {
+      // noop
     }
   }, [isRTL]);
 

@@ -1,5 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 import { Stack, usePathname } from "expo-router";
 import React from "react";
@@ -31,6 +30,7 @@ import { initAnalytics, initSentry } from "../services/telemetry";
 import { A11ySettingsProvider } from "../store/a11ySettings";
 import { BookmarksProvider } from "../store/bookmarks";
 import { CoachProgressProvider } from "../store/coachProgress";
+import { NotificationsProvider } from "../store/notifications";
 import { PrivacyProvider, usePrivacy } from "../store/privacy";
 import { ProfileLocalProvider } from "../store/profileLocal";
 import { ResilienceProvider } from "../store/resilience";
@@ -136,6 +136,7 @@ export default function RootLayout() {
                           <TermsGate>
                             <ChangelogGate>
                               <TelemetryInit />
+                              <NotificationsProvider>
                               <Stack
                                 screenOptions={{
                                   animation: reduceMotion ? "none" : "default",
@@ -158,6 +159,7 @@ export default function RootLayout() {
                                   options={{ presentation: "modal" }}
                                 />
                               </Stack>
+                              </NotificationsProvider>
                             </ChangelogGate>
                           </TermsGate>
                           <GlobalAssistant />

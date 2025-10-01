@@ -8,6 +8,16 @@ import UploadProgress from "../../../components/UploadProgress";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { useAuth } from "../../../context/AuthContext";
 import { addEvidenceNote, deleteEvidenceDoc, listEvidencePage, uploadEvidenceFileWithProgress, type EvidenceFile } from "../../../services/evidence";
+import {
+  ENCRYPTED_NOTES_KEY,
+  exportNotesEncrypted,
+  importNotesEncrypted,
+  loadEncryptedNotes,
+  migrateLegacyNotes,
+  rotateDeviceKeyAndReencrypt,
+  saveEncryptedNotes,
+  type EvidenceLocalNote,
+} from '../../../services/evidenceCrypto';
 import { announce } from "../../../utils/announce";
 // Linking added when preview links are active; safe to lazy import when needed
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
@@ -21,7 +31,7 @@ try {
 } catch {}
 
 type Attachment = { name: string; uri: string };
-type Note = { id: string; text: string; date: string; tags?: string[]; files?: Attachment[] };
+type Note = EvidenceLocalNote;
 type QueueItem = { text: string; tags?: string[]; files?: Attachment[] };
 const QUEUE_KEY = "evidence:uploadQueue:v1";
 
@@ -47,6 +57,23 @@ export default function EvidenceLocker() {
   const [progressPct, setProgressPct] = React.useState(0);
   const [preview, setPreview] = React.useState<{ url: string; name?: string } | null>(null);
   const [showInfo, setShowInfo] = React.useState(false);
+  // Passphrase modal state
+  const [passModal, setPassModal] = React.useState<{ mode: 'export' | 'import' | null; fileUri?: string } | null>(null);
+  const [passValue, setPassValue] = React.useState('');
+  const [passVisible, setPassVisible] = React.useState(false);
+  const [passConfirm, setPassConfirm] = React.useState('');
+  const passStrength = React.useMemo(() => {
+    const p = passValue || '';
+    let score = 0;
+    if (p.length >= 8) score++;
+    if (p.length >= 12) score++;
+    if (/[A-Z]/.test(p) && /[a-z]/.test(p)) score++;
+    if (/\d/.test(p) && /[^\w\s]/.test(p)) score++;
+    if (score >= 3) return { label: t('security.strong','Strong'), color: palette.success, score } as const;
+    if (score === 2) return { label: t('security.medium','Medium'), color: palette.warning, score } as const;
+    if (score === 1) return { label: t('security.weak','Weak'), color: palette.error, score } as const;
+    return { label: t('security.tooShort','Too short'), color: palette.error, score } as const;
+  }, [passValue, t, palette]);
   // Plain-language toggle (per-screen) and micro-coach hint
   const [plainHere, setPlainHere] = React.useState<boolean>(false);
   const [hintSeen, setHintSeen] = React.useState<boolean>(false);
@@ -59,15 +86,23 @@ export default function EvidenceLocker() {
   const [selectedCloud, setSelectedCloud] = React.useState<Record<string, boolean>>({});
   // Upload progress state can be surfaced later
   const { user } = useAuth();
+  // Lightweight toast
+  const [toast, setToast] = React.useState<string | null>(null);
+  const showToast = React.useCallback((msg: string) => {
+    setToast(msg);
+    announce(msg);
+    setTimeout(() => setToast(null), 1800);
+  }, []);
 
   React.useEffect(() => {
     (async () => {
-      if (!AsyncStorage) return;
       try {
-        const raw = await AsyncStorage.getItem("evidence:notes:v1");
-        if (raw) setNotes(JSON.parse(raw));
-        const plain = await AsyncStorage.getItem('evidence:plain:v1');
-        const seen = await AsyncStorage.getItem('evidence:hintSeen:v1');
+        // Migrate legacy plaintext notes (if any) to encrypted storage once
+        await migrateLegacyNotes();
+        const encNotes = await loadEncryptedNotes();
+        setNotes(encNotes);
+        const plain = await AsyncStorage?.getItem?.('evidence:plain:v1');
+        const seen = await AsyncStorage?.getItem?.('evidence:hintSeen:v1');
         setPlainHere(plain === '1');
         setHintSeen(seen === '1');
       } catch {}
@@ -75,8 +110,8 @@ export default function EvidenceLocker() {
   }, []);
   React.useEffect(() => {
     (async () => {
-      if (AsyncStorage)
-        {await AsyncStorage.setItem("evidence:notes:v1", JSON.stringify(notes));}
+      // Save encrypted copy of notes
+      await saveEncryptedNotes(notes);
     })();
   }, [notes]);
 
@@ -102,7 +137,6 @@ export default function EvidenceLocker() {
       }
 
       for (let i = 0; i < arr.length; i++) {
-        
         const n = arr[i];
         let uploaded: EvidenceFile[] = [];
         if (n.files?.length) {
@@ -111,8 +145,8 @@ export default function EvidenceLocker() {
               await uploadEvidenceFileWithProgress(
                 f.uri,
                 f.name,
-                (pct) => setProgressPct(Math.round(((i + pct / 100) / arr.length) * 100)),
-              ),
+                (pct) => setProgressPct(Math.round(((i + pct / 100) / arr.length) * 100))
+              )
             );
           }
         }
@@ -163,6 +197,25 @@ export default function EvidenceLocker() {
           style={styles.secondary}
         >
           <Text style={styles.buttonText}>{plainHere ? t('plainMode.toggleOff','Use standard language on this screen') : t('plainMode.toggleOn','Use plain language on this screen')}</Text>
+        </A11yPressable>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          onPress={async () => {
+            try {
+              const ok = await rotateDeviceKeyAndReencrypt();
+              Alert.alert(
+                t('security.keyRotation','Key rotation'),
+                ok ? t('security.keyRotationOk','Local encryption key rotated.') : t('security.keyRotationFail','Could not rotate encryption key.'),
+              );
+            } catch {
+              Alert.alert(t('security.keyRotation','Key rotation'), t('security.keyRotationFail','Could not rotate encryption key.'));
+            }
+          }}
+          accessibilityRole="button"
+          accessibilityLabel={t('security.rotateKey','Rotate local encryption key')}
+          style={styles.secondary}
+        >
+          <Text style={styles.buttonText}>{t('security.rotate','Rotate Key')}</Text>
         </A11yPressable>
       </View>
       <Text
@@ -237,7 +290,7 @@ export default function EvidenceLocker() {
               t("templates.evidenceLocker.resetConfirm", "Clear all locker notes?"),
               [
                 { text: t("common.cancel", "Cancel"), style: 'cancel' },
-                { text: t("templates.evidenceLocker.reset", "Reset"), style: 'destructive', onPress: () => { setNotes([]); announce(t("templates.evidenceLocker.resetAnnounce", "Evidence locker cleared")); } }
+                { text: t("templates.evidenceLocker.reset", "Reset"), style: 'destructive', onPress: async () => { setNotes([]); try { await AsyncStorage?.removeItem?.(ENCRYPTED_NOTES_KEY); } catch {} announce(t("templates.evidenceLocker.resetAnnounce", "Evidence locker cleared")); } }
               ]
             );
           }}
@@ -247,6 +300,35 @@ export default function EvidenceLocker() {
           style={styles.actionBtn}
         >
           <Text style={styles.actionText}>{t("templates.evidenceLocker.reset", "Reset")}</Text>
+        </A11yPressable>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          onPress={() => { setPassValue(''); setPassModal({ mode: 'export' }); }}
+          accessibilityRole="button"
+          accessibilityLabel={t('templates.evidenceLocker.exportEncrypted','Export encrypted')}
+          style={styles.actionBtn}
+        >
+          <Text style={styles.actionText}>{t('common.export','Export')}</Text>
+        </A11yPressable>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          onPress={async () => {
+            try {
+              const Doc = await import('expo-document-picker');
+              const res = await Doc.getDocumentAsync({ multiple: false, copyToCacheDirectory: true });
+              if (res.canceled || !res.assets?.length) return;
+              const asset = res.assets[0];
+              setPassValue('');
+              setPassModal({ mode: 'import', fileUri: asset.uri });
+            } catch {
+              Alert.alert(t('templates.evidenceLocker.importFailedTitle','Import failed'), t('templates.evidenceLocker.importFailedBody','Could not import encrypted notes.'));
+            }
+          }}
+          accessibilityRole="button"
+          accessibilityLabel={t('templates.evidenceLocker.importEncrypted','Import encrypted')}
+          style={styles.actionBtn}
+        >
+          <Text style={styles.actionText}>{t('common.import','Import')}</Text>
         </A11yPressable>
       </View>
       {showInfo && (
@@ -391,7 +473,7 @@ export default function EvidenceLocker() {
                           const total = current.files?.length || 1;
                           setImmPct(Math.round(((idx + pct/100) / total) * 100));
                         },
-                      ),
+                      )
                     );
                     idx++;
                   }
@@ -409,7 +491,15 @@ export default function EvidenceLocker() {
           >
             <Text style={styles.buttonText}>{t("common.save", "Save")}</Text>
           </A11yPressable>
-  )}\n        {immUploading && (<><Text style={{ color: palette.text, marginTop: 6 }}>{immLabel ? t('common.uploadingItem','Uploading {{name}}',{ name: immLabel }) : t('common.uploading','Uploading')} {immPct}%</Text><ProgressBar value={immPct} /></>)}
+        )}
+        {immUploading && (
+          <>
+            <Text style={{ color: palette.text, marginTop: 6 }}>
+              {immLabel ? t('common.uploadingItem','Uploading {{name}}',{ name: immLabel }) : t('common.uploading','Uploading')} {immPct}%
+            </Text>
+            <ProgressBar value={immPct} />
+          </>
+        )}
         {user && (
           <A11yPressable
             accessibilityLabel="Save all to Cloud"
@@ -435,7 +525,7 @@ export default function EvidenceLocker() {
                               const overall = (fileCursor + pct/100) / totalFiles;
                               setImmPct(Math.round(overall * 100));
                             },
-                          ),
+                          )
                         );
                         fileCursor++;
                       } catch {
@@ -450,6 +540,8 @@ export default function EvidenceLocker() {
                   }
                 }
                 Alert.alert(t('common.saved','Saved'), t('templates.evidenceLocker.saveAllDone','Finished saving notes (failures queued).'));
+                // Provide a lightweight toast for consistent feedback
+                showToast(t('common.saved','Saved'));
               } catch {
                 Alert.alert(t('common.saveFailed','Save failed'), t('templates.evidenceLocker.saveSomeFailed','Could not save some items.'));
               } finally { setImmUploading(false); setImmPct(0); setImmLabel(''); }
@@ -632,6 +724,108 @@ export default function EvidenceLocker() {
           </A11yPressable>
         </Modal>
       )}
+      {/* Passphrase Modal */}
+      {passModal && (
+        <Modal transparent animationType="fade" onRequestClose={() => setPassModal(null)}>
+          <View style={{ flex:1, backgroundColor: palette.text + '99', alignItems:'center', justifyContent:'center' }}>
+            <View style={{ backgroundColor: palette.surface, padding: 16, borderRadius: 10, width: '90%', maxWidth: 420 }}>
+              <Text style={[styles.title, { marginBottom: 8 }]}>
+                {passModal.mode === 'export' ? t('security.exportTitle','Export encrypted') : t('security.importTitle','Import encrypted')}
+              </Text>
+              <View style={{ flexDirection:'row', alignItems:'center', gap: 8 }}>
+                <View style={{ flex: 1 }}>
+                  <TextInput
+                    value={passValue}
+                    onChangeText={setPassValue}
+                    placeholder={t('security.passphrase','Passphrase')}
+                    placeholderTextColor={palette.text + '77'}
+                    secureTextEntry={!passVisible}
+                    style={[styles.input, { marginTop: 6 }]} 
+                  />
+                </View>
+                <A11yPressable onPress={() => setPassVisible(v=>!v)} style={[styles.secondary, { paddingHorizontal: 10, marginTop: 6 }]} accessibilityLabel={passVisible ? t('security.hidePass','Hide passphrase') : t('security.showPass','Show passphrase')}>
+                  <Text style={[styles.buttonText, { color: palette.text }]}>{passVisible ? t('common.hide','Hide') : t('common.show','Show')}</Text>
+                </A11yPressable>
+              </View>
+              {!!passValue && (
+                <Text style={{ marginTop: 6, color: passStrength.color }}>{t('security.strength','Strength')}: {passStrength.label}</Text>
+              )}
+              {/* Helper guidance using existing weakPassBody copy as a hint (no new i18n key) */}
+              {passModal.mode === 'export' && (
+                <Text style={{ marginTop: 6, color: palette.text, opacity: 0.8 }}>
+                  {t('security.weakPassBody','Use at least 12 characters with a mix of cases, numbers, and symbols.')}
+                </Text>
+              )}
+              {passModal?.mode === 'export' && (
+                <TextInput
+                  value={passConfirm}
+                  onChangeText={setPassConfirm}
+                  placeholder={t('security.confirmPassphrase','Confirm passphrase')}
+                  placeholderTextColor={palette.text + '77'}
+                  secureTextEntry={!passVisible}
+                  style={[styles.input, { marginTop: 6 }]}
+                />
+              )}
+              <View style={{ flexDirection:'row', gap: 8, marginTop: 10, justifyContent:'flex-end' }}>
+                <A11yPressable onPress={() => setPassModal(null)} style={styles.secondary}><Text style={styles.buttonText}>{t('common.cancel','Cancel')}</Text></A11yPressable>
+                <A11yPressable
+                  onPress={async () => {
+                    try {
+                      if (!passModal) return;
+                      const pass = passValue.trim();
+                      if (!pass) { setPassModal(null); return; }
+                      if (passModal.mode === 'export') {
+                        // Enforce minimum strength and confirmation match
+                        const strongEnough = passStrength.score >= 2; // at least Medium
+                        if (!strongEnough) {
+                          Alert.alert(t('security.weakPassTitle','Passphrase too weak'), t('security.weakPassBody','Use at least 12 characters with a mix of cases, numbers, and symbols.'));
+                          return;
+                        }
+                        if (passConfirm.trim() !== pass) {
+                          Alert.alert(t('security.confirmMismatch','Passphrases do not match'), t('security.confirmMismatchBody','Please re-enter to confirm.'));
+                          return;
+                        }
+                      }
+                      if (passModal.mode === 'export') {
+                        const path = await exportNotesEncrypted(notes, pass);
+                        try {
+                          const Sharing = await import('expo-sharing');
+                          if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path);
+                          else Alert.alert(t('common.saved','Saved'), t('templates.evidenceLocker.exportSavedCache','Encrypted export saved to cache.'));
+                          showToast(t('common.saved','Saved'));
+                        } catch {
+                          Alert.alert(t('common.saved','Saved'), t('templates.evidenceLocker.exportSavedCache','Encrypted export saved to cache.'));
+                          showToast(t('common.saved','Saved'));
+                        }
+                      } else if (passModal.mode === 'import' && passModal.fileUri) {
+                        const imported = await importNotesEncrypted(passModal.fileUri, pass);
+                        setNotes(imported);
+                        Alert.alert(t('common.imported','Imported'), t('templates.evidenceLocker.importedNotes','Encrypted notes imported.'));
+                        showToast(t('common.imported','Imported'));
+                      }
+                    } catch {
+                      Alert.alert(t('templates.evidenceLocker.importFailedTitle','Operation failed'), t('templates.evidenceLocker.importFailedBody','Could not complete the operation.'));
+                    } finally {
+                      setPassModal(null);
+                      setPassValue('');
+                      setPassConfirm('');
+                      setPassVisible(false);
+                    }
+                  }}
+                  style={styles.button}
+                >
+                  <Text style={styles.buttonText}>{t('common.ok','OK')}</Text>
+                </A11yPressable>
+              </View>
+            </View>
+          </View>
+        </Modal>
+      )}
+      {toast && (
+        <View style={styles.toast} accessibilityLiveRegion="polite" accessible>
+          <Text style={styles.toastText}>{toast}</Text>
+        </View>
+      )}
     </View>
   );
 }
@@ -714,6 +908,9 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     infoTitle: { fontWeight: '700', color: palette.text, marginBottom: 4 },
     infoLine: { color: palette.text, opacity: 0.85, marginBottom: 2, fontSize: 13 },
+    toast: { position: 'absolute', right: 12, bottom: 24, backgroundColor: palette.surface, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 12, paddingVertical: 8 },
+    toastText: { color: palette.text, fontWeight: '700' },
   });
 }
+// Simple passphrase prompt using a modal Alert-like flow.
 

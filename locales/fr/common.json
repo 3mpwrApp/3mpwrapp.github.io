@@ -1133,6 +1133,40 @@
       "accountability": "Coach de Redevabilité",
       "accountability_cases": "Dossiers de redevabilité"
     },
+    "hub": {
+      "title": "Hub Défense",
+      "subtitle": "Accès unifié aux outils IA, annuaires, coaching, évaluations, ressources alliées et actions collectives. Choisissez un outil ci‑dessous."
+    },
+    "ratings": {
+      "title": "Évaluations de justice du handicap",
+      "filter": {
+        "all": "Tous",
+        "approved": "Approuvés",
+        "pending": "En attente",
+        "trash": "Corbeille"
+      },
+      "admin": {
+        "pending": "Admin – En attente",
+        "approved": "Admin – Approuvés",
+        "trash": "Admin – Corbeille"
+      },
+      "targetPlaceholder": "Cible (nom)",
+      "typePlaceholder": "Type (hôpital, clinique, droit, employeur, syndicat)",
+      "sort": {
+        "latest": "Récents",
+        "top": "Meilleures"
+      },
+      "average": "Note moyenne : {{avg}} ({{count}})",
+      "scorePlaceholder": "Note 1‑5",
+      "commentPlaceholder": "Commentaire (optionnel)",
+      "slowDownTitle": "Ralentissez",
+      "slowDownBody": "Veuillez attendre avant de soumettre à nouveau.",
+      "submitFailed": "Soumission impossible",
+      "submit": "Soumettre une évaluation",
+      "flag": "Signaler",
+      "flaggedTitle": "Signalé",
+      "flaggedBody": "Merci pour votre signalement."
+    },
     "ally": {
       "intro": "Ressources de solidarité inter‑mouvements et invites rapides pour alliés soutenant des personnes handicapées / travailleuses blessées.",
       "linksHeader": "Liens mouvements",
@@ -1184,22 +1218,22 @@
       "submittedBody": " Report added anonymously. Aggregated counts help build leverage."
     },
     "finder": {
-      "title": " Lawyer & Advocate Finder",
-      "modeList": " List",
-      "modeMap": " Map",
-      "searchPlaceholder": " Search by name, city, org",
-      "issuePlaceholder": " Issue (e.g., WSIB)",
-      "provincePlaceholder": " Province (e.g., ON)",
-      "proBonoOnly": " Pro bono only",
-      "includePaid": " Include paid",
-      "locationUnknown": " —",
-      "issuesLabel": " Issues",
-      "openWebsite": " Open website",
-      "email": " Email",
-      "openOnMap": " Open on Map",
-      "saved": " ★ Saved",
-      "save": " ☆ Save",
-      "mapHint": " Tap a listing in List mode to open maps."
+      "title": "Annuaire avocats et défenseurs",
+      "modeList": "Liste",
+      "modeMap": "Carte",
+      "searchPlaceholder": "Rechercher par nom, ville, org",
+      "issuePlaceholder": "Problème (p. ex., WSIB)",
+      "provincePlaceholder": "Province (p. ex., ON)",
+      "proBonoOnly": "Pro bono seulement",
+      "includePaid": "Inclure payant",
+      "locationUnknown": "—",
+      "issuesLabel": "Enjeux",
+      "openWebsite": "Ouvrir le site",
+      "email": "Courriel",
+      "openOnMap": "Ouvrir dans la carte",
+      "saved": "★ Enregistré",
+      "save": "☆ Enregistrer",
+      "mapHint": "Touchez une fiche en mode Liste pour ouvrir la carte."
     },
     "support": {
       "title": " Support Directory",
@@ -1231,14 +1265,14 @@
       "missingTitleBody": " Please enter a short title."
     },
     "world": {
-      "title": " World Disability Map",
+      "title": "Carte mondiale du handicap",
       "filter": {
-        "all": " All",
-        "law": " Law",
-        "protest": " Protest",
-        "update": " Update"
+        "all": "Tous",
+        "law": "Droit",
+        "protest": "Manifestation",
+        "update": "Mise à jour"
       },
-      "hint": " Tap a card to open Google Maps"
+      "hint": "Touchez une carte pour ouvrir Google Maps"
     },
     "coach": {
       "practiceHeader": "Invite d'entraînement",
@@ -1734,6 +1768,28 @@
     "toggleOn": "Use plain language on this screen",
     "toggleOff": "Use standard language on this screen",
     "tip": "Plain mode simplifies long sentences and replaces jargon with everyday words."
+  },
+  "security": {
+    "strong": "Fort",
+    "medium": "Moyen",
+    "weak": "Faible",
+    "tooShort": "Trop court",
+    "passphrase": "Phrase secrète",
+    "confirmPassphrase": "Confirmer la phrase secrète",
+    "exportTitle": "Exporter chiffré",
+    "importTitle": "Importer chiffré",
+    "weakPassTitle": "Phrase secrète trop faible",
+    "weakPassBody": "Utilisez au moins 12 caractères avec majuscules, minuscules, chiffres et symboles.",
+    "confirmMismatch": "Les phrases ne correspondent pas",
+    "confirmMismatchBody": "Veuillez saisir de nouveau pour confirmer.",
+    "rotateKey": "Tourner la clé de chiffrement locale",
+    "rotate": "Tourner la clé",
+    "keyRotation": "Rotation de clé",
+    "keyRotationOk": "Clé locale de chiffrement tournée.",
+    "keyRotationFail": "Impossible de tourner la clé de chiffrement.",
+    "showPass": "Afficher la phrase secrète",
+    "hidePass": "Masquer la phrase secrète",
+    "strength": "Solidité"
   },
   "microCoach": {
     "hint": "Tip",

@@ -1355,6 +1355,40 @@
       "accountability": "Asistente de Rendición de Cuentas",
       "accountability_cases": "Casos de Rendición de Cuentas"
     },
+    "hub": {
+      "title": "Centro de Defensa",
+      "subtitle": "Acceso unificado a herramientas IA, directorios, coaching, calificaciones, recursos para aliados y acciones colectivas. Elige una herramienta abajo."
+    },
+    "ratings": {
+      "title": "Calificaciones de Justicia para la Discapacidad",
+      "filter": {
+        "all": "Todo",
+        "approved": "Aprobados",
+        "pending": "Pendientes",
+        "trash": "Papelera"
+      },
+      "admin": {
+        "pending": "Admin – Pendientes",
+        "approved": "Admin – Aprobados",
+        "trash": "Admin – Papelera"
+      },
+      "targetPlaceholder": "Entidad (nombre)",
+      "typePlaceholder": "Tipo (hospital, clínica, derecho, empleador, sindicato)",
+      "sort": {
+        "latest": "Recientes",
+        "top": "Mejor puntuación"
+      },
+      "average": "Promedio: {{avg}} ({{count}})",
+      "scorePlaceholder": "Puntuación 1‑5",
+      "commentPlaceholder": "Comentario (opcional)",
+      "slowDownTitle": "Más despacio",
+      "slowDownBody": "Espera antes de enviar otra vez.",
+      "submitFailed": "No se pudo enviar",
+      "submit": "Enviar calificación",
+      "flag": "Reportar",
+      "flaggedTitle": "Reportado",
+      "flaggedBody": "Gracias por informar."
+    },
     "ally": {
       "intro": "Recursos de solidaridad inter‑movimientos e indicaciones rápidas para aliados que apoyan a personas con discapacidad / trabajadoras lesionadas.",
       "linksHeader": "Enlaces movimientos",
@@ -1406,22 +1440,22 @@
       "submittedBody": " Report added anonymously. Aggregated counts help build leverage."
     },
     "finder": {
-      "title": " Lawyer & Advocate Finder",
-      "modeList": " List",
-      "modeMap": " Map",
-      "searchPlaceholder": " Search by name, city, org",
-      "issuePlaceholder": " Issue (e.g., WSIB)",
-      "provincePlaceholder": " Province (e.g., ON)",
-      "proBonoOnly": " Pro bono only",
-      "includePaid": " Include paid",
-      "locationUnknown": " —",
-      "issuesLabel": " Issues",
-      "openWebsite": " Open website",
-      "email": " Email",
-      "openOnMap": " Open on Map",
-      "saved": " ★ Saved",
-      "save": " ☆ Save",
-      "mapHint": " Tap a listing in List mode to open maps."
+      "title": "Directorio de abogadas/os y defensoras/es",
+      "modeList": "Lista",
+      "modeMap": "Mapa",
+      "searchPlaceholder": "Buscar por nombre, ciudad, org",
+      "issuePlaceholder": "Tema (p. ej., WSIB)",
+      "provincePlaceholder": "Provincia (p. ej., ON)",
+      "proBonoOnly": "Solo pro bono",
+      "includePaid": "Incluir de pago",
+      "locationUnknown": "—",
+      "issuesLabel": "Temas",
+      "openWebsite": "Abrir sitio web",
+      "email": "Correo",
+      "openOnMap": "Abrir en mapa",
+      "saved": "★ Guardado",
+      "save": "☆ Guardar",
+      "mapHint": "Toca un elemento en modo Lista para abrir el mapa."
     },
     "support": {
       "title": " Support Directory",
@@ -1453,14 +1487,14 @@
       "missingTitleBody": " Please enter a short title."
     },
     "world": {
-      "title": " World Disability Map",
+      "title": "Mapa mundial de discapacidad",
       "filter": {
-        "all": " All",
-        "law": " Law",
-        "protest": " Protest",
-        "update": " Update"
+        "all": "Todo",
+        "law": "Ley",
+        "protest": "Protesta",
+        "update": "Actualización"
       },
-      "hint": " Tap a card to open Google Maps"
+      "hint": "Toca una tarjeta para abrir Google Maps"
     },
     "coach": {
       "practiceHeader": "Indicador de práctica",
@@ -1890,6 +1924,28 @@
     "toggleOn": "Use plain language on this screen",
     "toggleOff": "Use standard language on this screen",
     "tip": "Plain mode simplifies long sentences and replaces jargon with everyday words."
+  },
+  "security": {
+    "strong": "Fuerte",
+    "medium": "Media",
+    "weak": "Débil",
+    "tooShort": "Muy corta",
+    "passphrase": "Frase de contraseña",
+    "confirmPassphrase": "Confirmar frase",
+    "exportTitle": "Exportar cifrado",
+    "importTitle": "Importar cifrado",
+    "weakPassTitle": "Frase demasiado débil",
+    "weakPassBody": "Usa al menos 12 caracteres con mayúsculas, minúsculas, números y símbolos.",
+    "confirmMismatch": "Las frases no coinciden",
+    "confirmMismatchBody": "Vuelve a ingresarla para confirmar.",
+    "rotateKey": "Rotar clave de cifrado local",
+    "rotate": "Rotar clave",
+    "keyRotation": "Rotación de clave",
+    "keyRotationOk": "Clave de cifrado local rotada.",
+    "keyRotationFail": "No se pudo rotar la clave de cifrado.",
+    "showPass": "Mostrar frase",
+    "hidePass": "Ocultar frase",
+    "strength": "Fuerza"
   },
   "microCoach": {
     "hint": "Tip",

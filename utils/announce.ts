@@ -14,6 +14,8 @@ export function announce(msg: string, delayMs = 120) {
     timer = null;
     AccessibilityInfo.announceForAccessibility?.(text);
   }, delayMs);
+  // In Node/Jest, avoid keeping the event loop alive
+  try { (timer as any)?.unref?.(); } catch {}
 }
 
 /** Immediate single announcement (bypasses queue) */

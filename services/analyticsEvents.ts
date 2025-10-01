@@ -10,6 +10,11 @@ export const ANALYTICS_EVENTS = {
   ADVOCACY_COLLECTIVE_SUBMIT: "advocacy.collective.submit",
   ADVOCACY_ASK_SUBMITTED: "advocacy.ask.submitted",
   ADVOCACY_WORLD_VIEW: "advocacy.world.view",
+  ADVOCACY_FINDER_SEARCH: "advocacy.finder.search",
+  ADVOCACY_FINDER_OPEN_WEBSITE: "advocacy.finder.open_website",
+  ADVOCACY_FINDER_EMAIL: "advocacy.finder.email",
+  ADVOCACY_FINDER_OPEN_MAP: "advocacy.finder.open_map",
+  ADVOCACY_FINDER_SAVE_TOGGLE: "advocacy.finder.save_toggle",
 
   // Bookmarks
   BOOKMARK_ADD: "bookmark_add",
@@ -45,12 +50,15 @@ export const ANALYTICS_EVENTS = {
   // Assistant
   ASSISTANT_QUICK_PROMPT: "assistant.quick_prompt",
   ASSISTANT_RECENTS_CLEAR: "assistant.recents.clear",
+
+  // Events
+  EVENTS_EXPORT_ICS: "events.export.ics",
+  EVENTS_EXPORT_CSV: "events.export.csv",
 } as const;
 
 export type AnalyticsEventName = typeof ANALYTICS_EVENTS[keyof typeof ANALYTICS_EVENTS];
 
 // Utility: constant-time lookup set for validation
-export const ANALYTICS_EVENT_SET: Record<string, true> = Object.values(ANALYTICS_EVENTS).reduce(
-  (acc, name) => { acc[name] = true; return acc; },
-  {} as Record<string, true>,
-);
+export const ANALYTICS_EVENT_SET: Record<string, true> = Object.values(ANALYTICS_EVENTS).reduce((acc, name) => {
+  acc[name] = true; return acc;
+}, {} as Record<string, true>);

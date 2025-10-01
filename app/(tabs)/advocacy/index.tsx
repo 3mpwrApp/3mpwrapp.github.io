@@ -41,13 +41,13 @@ export default function AdvocacyHub() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('Advocacy Hub');
-  useFocusOnRefOnMount(titleRef);
   const { t } = useTranslation();
+  useAnnounceOnMount(t('advocacy.hub.title','Advocacy Hub'));
+  useFocusOnRefOnMount(titleRef);
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
-      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>Advocacy Hub</Text>
-  <Text style={s.subtitle}>Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.</Text>
+    <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.hub.title','Advocacy Hub')}</Text>
+    <Text style={s.subtitle}>{t('advocacy.hub.subtitle','Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.')}</Text>
   <JurisdictionPanel />
       {FEATURES.map(f => {
         const title = t(featureKeyMap[f.key]);

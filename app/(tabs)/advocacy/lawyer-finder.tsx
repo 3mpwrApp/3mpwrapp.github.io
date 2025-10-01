@@ -3,11 +3,13 @@ import { FlatList, Linking, StyleSheet, Text, TextInput, View } from 'react-nati
 
 import A11yPressable from '../../../components/A11yPressable';
 import MapEmbed from '../../../components/MapEmbed';
+import ProvincePicker from '../../../components/ProvincePicker';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { advocates } from '../../../data/lawyers';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { fetchAdvocates } from '../../../services/advocates';
+import { ANALYTICS_EVENTS, trackEvent } from '../../../services/analyticsClient';
 import { useFavorites } from '../../../store/favorites';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -24,6 +26,7 @@ export default function LawyerFinder() {
   const [issue, setIssue] = React.useState('');
   const [province, setProvince] = React.useState('');
   const [proBono, setProBono] = React.useState(false);
+  const [savedOnly, setSavedOnly] = React.useState(false);
   const [mode, setMode] = React.useState<'list'|'map'>('list');
   const { state, toggle } = useFavorites();
 
@@ -42,13 +45,27 @@ export default function LawyerFinder() {
     } finally { setLoading(false); }
   }, [query, issue, province, proBono, page]);
   React.useEffect(() => { load(true); }, [query, issue, province, proBono]);
-  const filtered = remoteItems.length ? remoteItems : advocates;
+  React.useEffect(() => {
+    // Debounced-ish analytics for search state change
+    const id = setTimeout(() => {
+      trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_SEARCH, {
+        query: query || undefined,
+        issue: issue || undefined,
+        province: province || undefined,
+        proBono,
+        savedOnly,
+        mode,
+        total,
+      });
+    }, 400);
+    return () => clearTimeout(id);
+  }, [query, issue, province, proBono, savedOnly, mode, total]);
+  const base = remoteItems.length ? remoteItems : advocates;
+  const filtered = savedOnly ? base.filter((a)=> state.advocate.has(a.id)) : base;
 
   return (
     <View style={s.container}>
-      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        {t('advocacy.finder.title','Lawyer & Advocate Finder')}
-      </Text>
+      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.finder.title','Lawyer & Advocate Finder')}</Text>
       <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('list')} style={[s.chip, mode==='list'&&s.chipActive]}><Text style={{ color: mode==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeList','List')}</Text></A11yPressable>
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('map')} style={[s.chip, mode==='map'&&s.chipActive]}><Text style={{ color: mode==='map'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeMap','Map')}</Text></A11yPressable>
@@ -56,9 +73,13 @@ export default function LawyerFinder() {
       <TextInput placeholder={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} placeholderTextColor={palette.text+"77"} value={query} onChangeText={setQuery} style={s.input} accessibilityLabel={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} />
       <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
         <TextInput placeholder={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} placeholderTextColor={palette.text+"77"} value={issue} onChangeText={setIssue} style={[s.input,{flex:1}]} accessibilityLabel={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} />
-        <TextInput placeholder={t('advocacy.finder.provincePlaceholder','Province (e.g., ON)')} placeholderTextColor={palette.text+"77"} value={province} onChangeText={setProvince} style={[s.input,{width:100}]} accessibilityLabel={t('advocacy.finder.provincePlaceholder','Province (e.g., ON)')} />
+        <View style={{ flexBasis: '100%' }} />
+        <ProvincePicker value={province} onChange={(p)=> setProvince(p as any)} />
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setProBono(v=>!v)} style={[s.chip, proBono && s.chipActive]}>
           <Text style={{ color: proBono? palette.onPrimary: palette.text, fontWeight:'700' }}>{proBono? t('advocacy.finder.proBonoOnly','Pro bono only'): t('advocacy.finder.includePaid','Include paid')}</Text>
+        </A11yPressable>
+        <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSavedOnly(v=>!v)} style={[s.chip, savedOnly && s.chipActive]}>
+          <Text style={{ color: savedOnly? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('common.saved','Saved')}</Text>
         </A11yPressable>
       </View>
       {mode==='list' ? (
@@ -68,14 +89,14 @@ export default function LawyerFinder() {
           <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || t('advocacy.finder.locationUnknown','—')}</Text>
           <Text style={s.cardText}>{t('advocacy.finder.issuesLabel','Issues')}: {item.issues.join(', ')}</Text>
           {item.website && (
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => Linking.openURL(item.website)} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openWebsite','Open website')}</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => { trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_OPEN_WEBSITE, { id: item.id }); Linking.openURL(item.website); }} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openWebsite','Open website')}</Text></A11yPressable>
           )}
           {item.email && (
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => Linking.openURL(`mailto:${item.email}`)} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.email','Email')}</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => { trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_EMAIL, { id: item.id }); Linking.openURL(`mailto:${item.email}`); }} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.email','Email')}</Text></A11yPressable>
           )}
           <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`)} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openOnMap','Open on Map')}</Text></A11yPressable>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> toggle('advocate', item.id)} style={s.btn}>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_OPEN_MAP, { id: item.id }); Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`); }} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openOnMap','Open on Map')}</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { const next = !state.advocate.has(item.id); trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_SAVE_TOGGLE, { id: item.id, next }); toggle('advocate', item.id); }} style={s.btn}>
               <Text style={s.btnText}>{state.advocate.has(item.id) ? t('advocacy.finder.saved','★ Saved') : t('advocacy.finder.save','☆ Save')}</Text>
             </A11yPressable>
           </View>

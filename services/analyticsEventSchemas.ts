@@ -1,6 +1,6 @@
 // Parameter schemas for analytics events. Each event maps to a dictionary of parameter specs.
-// These are used for runtime dev validation and optional redaction of sensitive fields.
 import { ANALYTICS_EVENTS } from './analyticsEvents';
+// These are used for runtime dev validation and optional redaction of sensitive fields.
 
 export type ParamType = 'string' | 'number' | 'boolean';
 export interface ParamSpec {
@@ -22,6 +22,19 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
   [E.ADVOCACY_COLLECTIVE_SUBMIT]: { type: { type: 'string', required: true } },
   [E.ADVOCACY_ASK_SUBMITTED]: { channelId: { type: 'string', required: true } },
   [E.ADVOCACY_WORLD_VIEW]: { kind: { type: 'string', required: true } },
+  [E.ADVOCACY_FINDER_SEARCH]: {
+    query: { type: 'string' },
+    issue: { type: 'string' },
+    province: { type: 'string' },
+    proBono: { type: 'boolean' },
+    savedOnly: { type: 'boolean' },
+    mode: { type: 'string' },
+    total: { type: 'number' },
+  },
+  [E.ADVOCACY_FINDER_OPEN_WEBSITE]: { id: { type: 'string', required: true } },
+  [E.ADVOCACY_FINDER_EMAIL]: { id: { type: 'string', required: true } },
+  [E.ADVOCACY_FINDER_OPEN_MAP]: { id: { type: 'string', required: true } },
+  [E.ADVOCACY_FINDER_SAVE_TOGGLE]: { id: { type: 'string', required: true }, next: { type: 'boolean', required: true } },
 
   [E.BOOKMARK_ADD]: { route: { type: 'string', required: true }, has_tKey: { type: 'boolean' } },
   [E.BOOKMARK_REMOVE]: { route: { type: 'string', required: true } },
@@ -54,7 +67,7 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
     cat_enabled: { type: 'number' },
     push_enabled: { type: 'boolean' },
   },
-  'notification.quiet_suppressed': {
+  [E.NOTIFICATION_QUIET_SUPPRESSED]: {
     templateId: { type: 'string', required: true },
     event: { type: 'string', required: true },
     start_h: { type: 'number', required: true },
@@ -62,6 +75,8 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
   },
   [E.ASSISTANT_QUICK_PROMPT]: { label: { type: 'string', required: true } },
   [E.ASSISTANT_RECENTS_CLEAR]: { count: { type: 'number', required: true } },
+  [E.EVENTS_EXPORT_ICS]: { id: { type: 'string', required: true } },
+  [E.EVENTS_EXPORT_CSV]: { id: { type: 'string', required: true } },
 };
 
 export interface ValidationResult {
@@ -104,8 +119,8 @@ export function validateAndRedactEvent(name: string, params?: Record<string, any
 
 // Utility to ensure every registry event has a schema (empty allowed)
 export function eventsMissingSchemas(): string[] {
-  const names = Object.values(ANALYTICS_EVENTS);
-  return names.filter(n => !(n in ANALYTICS_EVENT_SCHEMAS));
+  const names = Object.values(ANALYTICS_EVENTS) as string[];
+  return names.filter((n: string) => !(n in ANALYTICS_EVENT_SCHEMAS));
 }
 
 export function getSensitiveFields(): Record<string,string[]> {

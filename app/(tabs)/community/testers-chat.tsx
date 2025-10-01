@@ -1,12 +1,12 @@
-import React from 'react';
-import { View, Text, StyleSheet, FlatList, TextInput, Alert } from 'react-native';
 import { addDoc, collection, doc, getDoc, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
+import React from 'react';
+import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
-import { useAppPalette } from '../../../theme/usePalette';
+import { auth, db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { db, auth } from '../../../firebase/config';
-import { setTyping, touchPresence, setLastRead } from '../../../services/community';
+import { setLastRead, setTyping, touchPresence } from '../../../services/community';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -70,7 +70,8 @@ export default function TestersChat() {
     let mounted = true;
     const beat = async () => { if (mounted) await touchPresence('testers'); };
     beat();
-    const id = setInterval(beat, 30000);
+  const id = setInterval(beat, 30000);
+  try { (id as any)?.unref?.(); } catch {}
     setLastRead('testers');
     return () => { mounted = false; clearInterval(id); };
   }, []);

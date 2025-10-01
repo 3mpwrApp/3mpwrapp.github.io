@@ -10,7 +10,8 @@
     "wellness": "Wellness",
     "profile": "Profile",
     "saved": "Saved",
-    "settings": "Settings"
+    "settings": "Settings",
+    "inbox": "Inbox"
   },
   "wellness": {
     "tools": {
@@ -217,6 +218,40 @@
       "self_coach": "Self‑Advocacy Coach",
       "accountability": "Accountability Coach",
       "accountability_cases": "Accountability Cases"
+    },
+    "hub": {
+      "title": "Advocacy Hub",
+      "subtitle": "Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below."
+    },
+    "ratings": {
+      "title": "Disability Justice Ratings",
+      "filter": {
+        "all": "All",
+        "approved": "Approved",
+        "pending": "Pending",
+        "trash": "Trash"
+      },
+      "admin": {
+        "pending": "Admin Pending",
+        "approved": "Admin Approved",
+        "trash": "Admin Trash"
+      },
+      "targetPlaceholder": "Target (name)",
+      "typePlaceholder": "Type (hospital, clinic, law, employer, union)",
+      "sort": {
+        "latest": "Latest",
+        "top": "Top"
+      },
+      "average": "Average rating: {{avg}} ({{count}})",
+      "scorePlaceholder": "Score 1-5",
+      "commentPlaceholder": "Comment (optional)",
+      "slowDownTitle": "Slow down",
+      "slowDownBody": "Please wait before submitting again.",
+      "submitFailed": "Could not submit",
+      "submit": "Submit Rating",
+      "flag": "Flag",
+      "flaggedTitle": "Flagged",
+      "flaggedBody": "Thanks for reporting."
     },
     "disclaimer": {
       "notLegal": "Educational only — not legal advice. Check official sources.",
@@ -772,8 +807,8 @@
   "admin": {
     "onlyTitle": "Admin Only",
     "onlyDescription": "You must be an admin to access this area.",
-    "pending": "[T] admin.pending",
-    "trash": "[T] admin.trash"
+    "pending": "Pending",
+    "trash": "Trash"
   },
   "header": {
     "favorites": "Favorites",
@@ -1699,6 +1734,7 @@
       "working": "[T] common.working"
     }
   },
+  
   "test": {
     "badge": "[T]BadgeMarker"
   },
@@ -1959,6 +1995,28 @@
     "toggleOn": "Use plain language on this screen",
     "toggleOff": "Use standard language on this screen",
     "tip": "Plain mode simplifies long sentences and replaces jargon with everyday words."
+  },
+  "security": {
+    "strong": "Strong",
+    "medium": "Medium",
+    "weak": "Weak",
+    "tooShort": "Too short",
+    "passphrase": "Passphrase",
+    "confirmPassphrase": "Confirm passphrase",
+    "exportTitle": "Export encrypted",
+    "importTitle": "Import encrypted",
+    "weakPassTitle": "Passphrase too weak",
+    "weakPassBody": "Use at least 12 characters with a mix of cases, numbers, and symbols.",
+    "confirmMismatch": "Passphrases do not match",
+    "confirmMismatchBody": "Please re-enter to confirm.",
+    "rotateKey": "Rotate local encryption key",
+    "rotate": "Rotate Key",
+    "keyRotation": "Key rotation",
+    "keyRotationOk": "Local encryption key rotated.",
+    "keyRotationFail": "Could not rotate encryption key.",
+    "showPass": "Show passphrase",
+    "hidePass": "Hide passphrase",
+    "strength": "Strength"
   },
   "microCoach": {
     "hint": "Tip",

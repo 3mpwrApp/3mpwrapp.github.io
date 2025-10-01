@@ -13,15 +13,40 @@ jest.mock('react-native', () => {
     useColorScheme: () => 'light',
   };
   const StyleSheet = { create: (styles) => styles, hairlineWidth: 1 };
-  const stripProps = (props) => {
+  const normalizeStyle = (style) => {
+    try {
+      if (typeof style === 'function') {
+        // Call with a deterministic state for tests
+        style = style({ pressed: false, hovered: false, focused: false });
+      }
+      const merge = (acc, part) => {
+        if (!part) return acc;
+        if (Array.isArray(part)) return part.reduce(merge, acc);
+        if (typeof part === 'object') return Object.assign(acc, part);
+        return acc;
+      };
+      if (Array.isArray(style)) return style.reduce(merge, {});
+      if (style && typeof style === 'object') return style;
+    } catch {}
+    return undefined;
+  };
+  const stripProps = (props = {}) => {
     const {
       accessibilityRole,
       accessibilityLabel,
       testID,
-      // remove from DOM-only props
+      // remove RN-only or unsupported DOM props
       accessibilityState: _accessibilityState,
+      accessibilityHint: _accessibilityHint,
       hitSlop: _hitSlop,
       onPress,
+      contentContainerStyle: _contentContainerStyle,
+      collapsable: _collapsable,
+      nativeID: _nativeID,
+      importantForAccessibility: _ifa,
+      // Style-only RN props ignored in DOM
+      onLayout: _onLayout,
+      // everything else
       ...rest
     } = props;
     const out = {
@@ -30,22 +55,46 @@ jest.mock('react-native', () => {
       role: accessibilityRole === 'button' ? 'button' : undefined,
       onClick: onPress,
     };
+    // Normalize RN style prop (arrays/functions) to a plain object for DOM
+    if ('style' in out) {
+      out.style = normalizeStyle(out.style);
+      if (out.style === undefined) delete out.style;
+    }
     if (testID) out['data-testid'] = testID;
     return out;
   };
-  const View = (props) => React.createElement('div', props, props.children);
-  const ScrollView = (props) => React.createElement('div', props, props.children);
-  const Text = (props) => React.createElement('span', props, props.children);
+  const View = (props) => React.createElement('div', stripProps(props), props.children);
+  const ScrollView = (props) => React.createElement('div', stripProps(props), props.children);
+  const Text = (props) => React.createElement('span', stripProps(props), props.children);
   const TextInput = (props) => {
     const { onChangeText, value, multiline, ...rest } = props;
     const tag = multiline ? 'textarea' : 'input';
     const handleChange = (e) => {
       if (onChangeText) onChangeText(e && e.target ? e.target.value : '');
     };
-    return React.createElement(tag, { value, onChange: handleChange, ...rest }, props.children);
+    return React.createElement(tag, { value, onChange: handleChange, ...stripProps(rest) }, props.children);
   };
   const Pressable = (props) => React.createElement('button', stripProps(props), props.children);
-  return { ...RN, StyleSheet, View, ScrollView, Text, TextInput, Pressable };
+  // Minimal FlatList mock: render items using renderItem
+  const FlatList = ({ data = [], renderItem = () => null, keyExtractor, ListFooterComponent, ...rest }) => {
+    const children = (data || []).map((item, index) => {
+      const element = renderItem({ item, index });
+      if (!element) return null;
+      const key = keyExtractor ? keyExtractor(item, index) : index;
+      return React.createElement(React.Fragment, { key }, element);
+    });
+    if (ListFooterComponent) {
+      children.push(React.createElement(React.Fragment, { key: 'footer' },
+        typeof ListFooterComponent === 'function' ? ListFooterComponent() : ListFooterComponent
+      ));
+    }
+    return React.createElement('div', stripProps(rest), children);
+  };
+  // Minimal RefreshControl mock: ignore
+  const RefreshControl = () => null;
+  // Share mock to enable jest.spyOn(Share, 'share')
+  const Share = { share: async () => ({}) };
+  return { ...RN, StyleSheet, View, ScrollView, Text, TextInput, Pressable, FlatList, RefreshControl, Share };
 });
 
 // Alias fireEvent.press -> fireEvent.click for web-like test env

@@ -31,7 +31,7 @@ export default function WorldMap() {
   const items = kind==='all' ? remote : remote.filter(i => i.kind === kind);
   return (
     <View style={s.container}>
-      <Text style={s.title}>{t('advocacy.world.title','World Disability Map')}</Text>
+  <Text style={s.title}>{t('advocacy.world.title','World Disability Map')}</Text>
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         {(['all','law','protest','update'] as const).map(k => (
           <A11yPressable key={k} hitSlop={HIT_SLOP_8} accessibilityLabel={t(`advocacy.world.filter.${k}`, k)} onPress={()=>setKind(k)} style={[s.chip, kind===k&&s.chipActive]}><Text style={{ color: kind===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{t(`advocacy.world.filter.${k}`, k)}</Text></A11yPressable>

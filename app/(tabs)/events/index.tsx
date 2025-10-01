@@ -29,6 +29,7 @@ import {
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
+import { ANALYTICS_EVENTS, trackEvent } from "../../../services/analyticsClient";
 import { fetchEvents } from "../../../services/events";
 import { fsAddEvent } from "../../../services/firestore";
 import { useCounts } from "../../../store/counts";
@@ -37,6 +38,7 @@ import { useRefresh } from "../../../store/refresh";
 import { useSettings } from "../../../store/settings";
 import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
+import { makeCSVRow, makeICS, shareText } from "../../../utils/eventsExport";
 
 export default function EventsScreen() {
   const palette = useAppPalette();
@@ -337,6 +339,31 @@ export default function EventsScreen() {
                 style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
               >
                 <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>{t('common.share','Share')}</Text>
+              </A11yPressable>
+              <A11yPressable
+                onPress={async () => {
+                  const ics = makeICS(item);
+                  await shareText(`${item.title}.ics`, ics);
+                  trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { id: item.id });
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={`${t('common.export','Export')} ${item.title} ICS`}
+                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>ICS</Text>
+              </A11yPressable>
+              <A11yPressable
+                onPress={async () => {
+                  const header = '"Date","Title","Description","Location"';
+                  const row = makeCSVRow(item as any);
+                  await shareText(`${item.title}.csv`, `${header}\n${row}`);
+                  trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { id: item.id });
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={`${t('common.export','Export')} ${item.title} CSV`}
+                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>CSV</Text>
               </A11yPressable>
             </View>
           </View>

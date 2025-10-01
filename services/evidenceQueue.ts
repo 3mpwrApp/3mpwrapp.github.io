@@ -1,4 +1,5 @@
 import { addEvidenceNote, uploadEvidenceFileWithProgress, type EvidenceFile } from './evidence';
+import { decryptString, encryptString } from './evidenceCrypto';
 
 let AsyncStorage: any;
 try {
@@ -6,12 +7,23 @@ try {
 } catch {}
 
 export const EVIDENCE_QUEUE_KEY = 'evidence:uploadQueue:v1';
+export const EVIDENCE_QUEUE_KEY_ENC = 'evidence:uploadQueue.enc:v1';
 
 export type QueuedAttachment = { name: string; uri: string };
 export type QueuedItem = { text: string; tags?: string[]; files?: QueuedAttachment[] };
 
 export async function getQueue(): Promise<QueuedItem[]> {
   try {
+    // Prefer encrypted queue
+    const enc = await AsyncStorage?.getItem?.(EVIDENCE_QUEUE_KEY_ENC);
+    if (enc) {
+      try {
+        const json = await decryptString(enc);
+        return json ? (JSON.parse(json) as QueuedItem[]) : [];
+      } catch {
+        // fall through to plaintext
+      }
+    }
     const raw = (await AsyncStorage?.getItem?.(EVIDENCE_QUEUE_KEY)) || '[]';
     return JSON.parse(raw);
   } catch {
@@ -21,12 +33,22 @@ export async function getQueue(): Promise<QueuedItem[]> {
 
 export async function setQueue(items: QueuedItem[]) {
   try {
-    await AsyncStorage?.setItem?.(EVIDENCE_QUEUE_KEY, JSON.stringify(items));
-  } catch {}
+    const json = JSON.stringify(items);
+    const c = await encryptString(json);
+    await AsyncStorage?.setItem?.(EVIDENCE_QUEUE_KEY_ENC, c);
+    // Remove legacy plaintext key
+    await AsyncStorage?.removeItem?.(EVIDENCE_QUEUE_KEY);
+  } catch {
+    // Fallback to plaintext if crypto unavailable
+    try { await AsyncStorage?.setItem?.(EVIDENCE_QUEUE_KEY, JSON.stringify(items)); } catch {}
+  }
 }
 
 export async function clearQueue() {
-  await setQueue([]);
+  try {
+    await AsyncStorage?.removeItem?.(EVIDENCE_QUEUE_KEY_ENC);
+    await AsyncStorage?.removeItem?.(EVIDENCE_QUEUE_KEY);
+  } catch {}
 }
 
 export async function processQueue(onProgress?: (index: number, total: number, pct?: number) => void) {
