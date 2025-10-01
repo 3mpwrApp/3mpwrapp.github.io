@@ -11,7 +11,10 @@
     "profile": "Profile",
     "saved": "Saved",
     "settings": "Settings",
-    "inbox": "Inbox"
+    "inbox": "Inbox",
+    "about": "About / Contact",
+    "faqs": "FAQs",
+    "research": "Research"
   },
   "inbox": {
     "itemRead": "Read",
@@ -211,6 +214,13 @@
     "search": "Search resources"
   },
   "advocacy": {
+    "search": "Search advocacy tools...",
+    "sections": {
+      "ai": "AI Tools",
+      "coaching": "Coaching",
+      "directories": "Directories & Ratings",
+      "collective": "Collective & Accountability"
+    },
     "tools": {
       "ai_translator": "AI Advocate Translator",
       "ai_case": "AI Case Interpreter",
@@ -787,6 +797,7 @@
     "copyAll": "Copy all",
     "exportDoc": ".doc",
     "reset": "Reset",
+  "resetFilters": "Reset filters",
     "loading": "Loading...",
     "edit": "Edit",
     "previewImage": "Preview image",
@@ -813,6 +824,21 @@
     "left": "Left",
     "right": "Right",
     "unread": "Unread"
+  },
+  "campaigns": {
+    "empty": "No campaigns match your filters"
+  },
+  "community": {
+    "empty": "No channels match your filters",
+    "toolsEmpty": "No tools match your search",
+    "myPosts": {
+      "title": "My Posts",
+      "open": "Open",
+      "empty": "You haven't posted yet."
+    }
+  },
+  "podcasts": {
+    "empty": "No videos match your filters"
   },
   "admin": {
     "onlyTitle": "Admin Only",
@@ -1848,6 +1874,12 @@
     "chipsAnnounce": "Quick filter set to {{label}}"
   },
   "eventsFeature": {
+    "empty": "No events match your filters",
+    "search": { "placeholder": "Search events, tags, places" },
+    "section": {
+      "community": "Community Events",
+      "observances": "Holidays & Observances"
+    },
     "createToggleOpen": "Create Event",
     "createToggleClose": "Close Form",
     "subtitle": "Community events, workshops, and meetups.",
@@ -2150,12 +2182,5 @@
     "nextMonth": "Next",
     "reloadShort": "Reload"
   }
-  ,
-  "community": {
-    "myPosts": {
-      "title": "My Posts",
-      "open": "Open",
-      "empty": "You haven't posted yet."
-    }
-  }
+  
 }
