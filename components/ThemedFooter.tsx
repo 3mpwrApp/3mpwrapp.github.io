@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text } from "react-native";
+import { Platform, SafeAreaView, StyleSheet, Text } from "react-native";
 
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
@@ -10,7 +10,7 @@ export default function ThemedFooter() {
   const year = new Date().getFullYear();
   return (
     <SafeAreaView
-      style={styles.container}
+      style={[styles.container, Platform.OS === 'web' ? styles.webOnly : null]}
       accessibilityRole="text"
       accessibilityLabel={`Footer. 3mpowr App, ${year}`}
     >
@@ -27,6 +27,11 @@ function createStyles(palette: Palette) {
       borderTopColor: palette.muted,
       paddingHorizontal: 16,
       paddingVertical: 10,
+    },
+    webOnly: {
+      // On web we can allow it to behave like a footer at the bottom
+      position: 'sticky',
+      bottom: 0,
     },
     text: {
       color: palette.text,

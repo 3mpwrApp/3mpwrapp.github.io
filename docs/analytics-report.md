@@ -1,16 +1,26 @@
 # Analytics Event Report
 
-Generated: 2025-09-30T21:28:09.117Z
+Generated: 2025-10-01T00:40:42.798Z
 
 ## Summary
 
-- Registry events: 24
+- Registry events: 31
 - Unique events referenced in code: 24
 - Total literal emissions (static scan): 30
 - Missing (used not registered): 0
-- Unused (registered not used): 0
+- Unused (registered not used): 7
 - Sensitive field occurrences (schema): 1
 - Classification counts: secret=1
+
+### Unused
+
+- advocacy.finder.search
+- advocacy.finder.open_website
+- advocacy.finder.email
+- advocacy.finder.open_map
+- advocacy.finder.save_toggle
+- events.export.ics
+- events.export.csv
 
 ## Categories
 
@@ -18,7 +28,7 @@ Generated: 2025-09-30T21:28:09.117Z
 |----------|-------:|
 | account_delete | 1 |
 | account_delete_failed | 1 |
-| advocacy | 3 |
+| advocacy | 8 |
 | assistant | 2 |
 | bookmark_add | 1 |
 | bookmark_clear_all | 1 |
@@ -30,6 +40,7 @@ Generated: 2025-09-30T21:28:09.117Z
 | energy_reset_day | 1 |
 | energy_set_daily | 1 |
 | energy_spend | 1 |
+| events | 2 |
 | letter_insert_from_trackers | 1 |
 | notification | 2 |
 | podcast_share | 1 |

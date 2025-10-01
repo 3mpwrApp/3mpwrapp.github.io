@@ -2,7 +2,7 @@ import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 import { Stack, usePathname } from "expo-router";
 import React from "react";
-import { AccessibilityInfo, AppState, StyleSheet, Text, View } from "react-native";
+import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "react-native";
 
 // internal modules
 import ChangelogGate from "../components/ChangelogGate";
@@ -163,7 +163,8 @@ export default function RootLayout() {
                             </ChangelogGate>
                           </TermsGate>
                           <GlobalAssistant />
-                          <Footer />
+                          {/* Show footer only on web to avoid overlapping native tab bar */}
+                          {Platform.OS === 'web' ? <Footer /> : null}
                         </View>
                       </RefreshProvider>
                     </NetworkProvider>
