@@ -1,6 +1,8 @@
 import { Link } from 'expo-router';
+import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import SearchBar from '../../../components/SearchBar';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -9,28 +11,125 @@ export default function WellnessHub() {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const s = styles(palette);
+  const [query, setQuery] = React.useState('');
+  const norm = (v: string) => v.toLowerCase().replace(/\s+/g,'-');
+  const matches = (href: string) => {
+    if (!query.trim()) return true;
+    const q = norm(query.trim());
+    const h = norm(href);
+    return h.includes(q);
+  };
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.hub.title','Wellness & Recovery')}</Text>
       <Text style={s.subtitle}>{t('wellness.hub.subtitle','Evidence-based tools for mood, pain, resilience, and recovery.')}</Text>
+      <SearchBar value={query} onChangeText={setQuery} placeholder={t('wellness.search','Search wellness tools...')} />
+
+      {/* Movement */}
+      <Text style={s.sectionHeader}>{t('wellness.sections.movement','Movement')}</Text>
       <View style={s.grid}>
-        <Card href="/wellness/resilience" title={t('wellness.resilience.title','Resilience Points')} desc={t('wellness.resilience.desc','Gamified micro-wins for therapy and life steps.')} />
-        <Card href="/wellness/dbt" title={t('wellness.dbt.title','DBT Skill Matcher')} desc={t('wellness.dbt.desc','Instant skill suggestions for current emotion.')} />
-        <Card href="/wellness/dreams" title={t('wellness.dreams.title','Dream Tracker & Interpreter')} desc={t('wellness.dreams.desc','Log dreams and get symbolic interpretations.')} />
-        <Card href="/wellness/ambience" title={t('wellness.ambience.title','Ambience Sync AI')} desc={t('wellness.ambience.desc','Match background, color, soundscape to your mood.')} />
-        <Card href="/wellness/opposite-action" title={t('wellness.opposite.title','Opposite Action Companion')} desc={t('wellness.opposite.desc','Try small, safe opposite actions.')} />
-        <Card href="/wellness/radical-acceptance" title={t('wellness.acceptance.title','Radical Acceptance')} desc={t('wellness.acceptance.desc','Reduce suffering; take wise action.')} />
-        <Card href="/wellness/cbt-coach" title={t('wellness.cbt.title','CBT Virtual Coach')} desc={t('wellness.cbt.desc','Reframe thoughts with evidence.')} />
-  <Card href="/wellness/sleep-reframe" title={t('wellness.sleepReframe.title','Sleep Reframe')} desc={t('wellness.sleepReframe.desc','Kind reframes and routines for better sleep.')} />
-        <Card href="/wellness/pain-forecast" title={t('wellness.painForecast.title','Pain Forecast')} desc={t('wellness.painForecast.desc','Simple trend-based suggestions for pacing.')} />
-        <Card href="/wellness/micro-movement" title={t('wellness.micro.title','Micro‑Movement Coach')} desc={t('wellness.micro.desc','Gentle, chair‑friendly movement ideas.')} />
-        <Card href="/wellness/energy-coins" title={t('wellness.energy.title','Daily Energy Coins')} desc={t('wellness.energy.desc','Set a budget and spend coins on tasks.')} />
-        <Card href="/wellness/distress-tolerance" title={t('wellness.distress.title','Distress Tolerance')} desc={t('wellness.distress.desc','Brief skills to reduce crisis intensity.')} />
-        <Card href="/wellness/belief-meter" title={t('wellness.belief.title','Belief Strength Meter')} desc={t('wellness.belief.desc','Rate belief strength and track change.')} />
-        <Card href="/wellness/cbt-mini-games" title={t('wellness.mini.title','CBT Mini‑Games')} desc={t('wellness.mini.desc','Quick grounding games to calm.')} />
-        <Card href="/wellness/trigger-detector" title={t('wellness.triggers.title','Trigger Detector')} desc={t('wellness.triggers.desc','Suggest correlations from logs.')} />
-        <Card href="/wellness/harm-reduction" title={t('wellness.harm.title','Harm Reduction Guide')} desc={t('wellness.harm.desc','Practical steps to increase safety.')} />
-        <Card href="/wellness/acceptance-function" title={t('wellness.acceptFn.title','Acceptance & Function')} desc={t('wellness.acceptFn.desc','Track acceptance and function.')}/>        
+        {matches('/wellness/micro-movement') && (
+          <Card href="/wellness/micro-movement" title={t('wellness.micro.title','Micro‑Movements Coach')} desc={t('wellness.micro.desc','Gentle, chair‑friendly movement ideas.')} />
+        )}
+        {matches('/wellness/exercise-hub') && (
+          <Card href="/wellness/exercise-hub" title={t('wellness.exerciseHub.title','Exercise Hub')} desc={t('wellness.exerciseHub.desc','Discover gentle routines and videos.')} />
+        )}
+        {matches('/wellness/rehab-games') && (
+          <Card href="/wellness/rehab-games" title={t('wellness.rehabGames.title','Rehab Games')} desc={t('wellness.rehabGames.desc','Light, recovery-friendly activities.')} />
+        )}
+        {matches('/wellness/pacing-partner') && (
+          <Card href="/wellness/pacing-partner" title={t('wellness.pacingPartner.title','Pacing Partner')} desc={t('wellness.pacingPartner.desc','Right-size activities to avoid crashes.')} />
+        )}
+        {matches('/wellness/nutrition-guides') && (
+          <Card href="/wellness/nutrition-guides" title={t('wellness.nutrition.title','Diet & Nutrition Guides')} desc={t('wellness.nutrition.desc','Eating ideas tailored to symptoms.')} />
+        )}
+        {matches('/wellness/work-balance-ai') && (
+          <Card href="/wellness/work-balance-ai" title={t('wellness.workBalance.title','Work‑Balance AI')} desc={t('wellness.workBalance.desc','Balance work demands with health.')} />
+        )}
+      </View>
+
+      {/* Sleep */}
+      <Text style={s.sectionHeader}>{t('wellness.sections.sleep','Sleep')}</Text>
+      <View style={s.grid}>
+        {matches('/wellness/sleep-reframe') && (
+          <Card href="/wellness/sleep-reframe" title={t('wellness.sleepReframe.title','Sleep Reframe')} desc={t('wellness.sleepReframe.desc','Kind reframes and routines for better sleep.')} />
+        )}
+        {matches('/wellness/sleep-energy-tracker') && (
+          <Card href="/wellness/sleep-energy-tracker" title={t('wellness.sleepEnergy.title','Sleep & Energy Tracker')} desc={t('wellness.sleepEnergy.desc','Track rest, energy, and patterns.')} />
+        )}
+      </View>
+
+      {/* Cognitive */}
+      <Text style={s.sectionHeader}>{t('wellness.sections.cognitive','Cognitive')}</Text>
+      <View style={s.grid}>
+        {matches('/wellness/cbt-coach') && (
+          <Card href="/wellness/cbt-coach" title={t('wellness.cbt.title','CBT Virtual Coach')} desc={t('wellness.cbt.desc','Reframe thoughts with evidence.')} />
+        )}
+        {matches('/wellness/cbt-mini-games') && (
+          <Card href="/wellness/cbt-mini-games" title={t('wellness.mini.title','CBT Mini‑Games')} desc={t('wellness.mini.desc','Quick grounding games to calm.')} />
+        )}
+        {matches('/wellness/dbt') && (
+          <Card href="/wellness/dbt" title={t('wellness.dbt.title','DBT Skill Matcher')} desc={t('wellness.dbt.desc','Instant skill suggestions for current emotion.')} />
+        )}
+        {matches('/wellness/opposite-action') && (
+          <Card href="/wellness/opposite-action" title={t('wellness.opposite.title','Opposite Action Companion')} desc={t('wellness.opposite.desc','Try small, safe opposite actions.')} />
+        )}
+        {matches('/wellness/radical-acceptance') && (
+          <Card href="/wellness/radical-acceptance" title={t('wellness.acceptance.title','Radical Acceptance')} desc={t('wellness.acceptance.desc','Reduce suffering; take wise action.')} />
+        )}
+        {matches('/wellness/acceptance-function') && (
+          <Card href="/wellness/acceptance-function" title={t('wellness.acceptFn.title','Acceptance & Function')} desc={t('wellness.acceptFn.desc','Track acceptance and function.')} />
+        )}
+        {matches('/wellness/distress-tolerance') && (
+          <Card href="/wellness/distress-tolerance" title={t('wellness.distress.title','Distress Tolerance')} desc={t('wellness.distress.desc','Brief skills to reduce crisis intensity.')} />
+        )}
+        {matches('/wellness/belief-meter') && (
+          <Card href="/wellness/belief-meter" title={t('wellness.belief.title','Belief Strength Meter')} desc={t('wellness.belief.desc','Rate belief strength and track change.')} />
+        )}
+        {matches('/wellness/adaptive-meditation') && (
+          <Card href="/wellness/adaptive-meditation" title={t('wellness.adaptiveMeditation.title','Adaptive Meditation')} desc={t('wellness.adaptiveMeditation.desc','Meditations tuned to your state.')} />
+        )}
+        {matches('/wellness/ai-companion') && (
+          <Card href="/wellness/ai-companion" title={t('wellness.aiCompanion.title','AI Companion')} desc={t('wellness.aiCompanion.desc','A gentle assistant for wellness.')} />
+        )}
+        {matches('/wellness/ambience') && (
+          <Card href="/wellness/ambience" title={t('wellness.ambience.title','Ambience Sync AI')} desc={t('wellness.ambience.desc','Match background, color, soundscape to your mood.')} />
+        )}
+        {matches('/wellness/grief-support') && (
+          <Card href="/wellness/grief-support" title={t('wellness.griefSupport.title','Grief Support')} desc={t('wellness.griefSupport.desc','Compassionate prompts and resources.')} />
+        )}
+        {matches('/wellness/resilience') && (
+          <Card href="/wellness/resilience" title={t('wellness.resilience.title','Resilience Points')} desc={t('wellness.resilience.desc','Gamified micro-wins for therapy and life steps.')} />
+        )}
+        {matches('/wellness/hub') && (
+          <Card href="/wellness/hub" title={t('wellness.classicHub.title','Classic Wellness Hub')} desc={t('wellness.classicHub.desc','Alternate, compact entry point.')} />
+        )}
+      </View>
+
+      {/* Tracking */}
+      <Text style={s.sectionHeader}>{t('wellness.sections.tracking','Tracking')}</Text>
+      <View style={s.grid}>
+        {matches('/wellness/symptom-tracker') && (
+          <Card href="/wellness/symptom-tracker" title={t('wellness.symptomTracker.title','Symptom & Pain Tracker')} desc={t('wellness.symptomTracker.desc','Log symptoms and pain trends.')} />
+        )}
+        {matches('/wellness/pain-forecast') && (
+          <Card href="/wellness/pain-forecast" title={t('wellness.painForecast.title','Pain Forecast')} desc={t('wellness.painForecast.desc','Simple trend-based suggestions for pacing.')} />
+        )}
+        {matches('/wellness/energy-coins') && (
+          <Card href="/wellness/energy-coins" title={t('wellness.energy.title','Daily Energy Coins')} desc={t('wellness.energy.desc','Set a budget and spend coins on tasks.')} />
+        )}
+        {matches('/wellness/daily-planner') && (
+          <Card href="/wellness/daily-planner" title={t('wellness.dailyPlanner.title','Daily Planner')} desc={t('wellness.dailyPlanner.desc','Plan tasks with your energy in mind.')} />
+        )}
+        {matches('/wellness/reflections-calendar') && (
+          <Card href="/wellness/reflections-calendar" title={t('wellness.reflections.title','Reflections Calendar')} desc={t('wellness.reflections.desc','Daily notes, gratitude, and wins.')} />
+        )}
+        {matches('/wellness/dreams') && (
+          <Card href="/wellness/dreams" title={t('wellness.dreams.title','Dream Tracker & Interpreter')} desc={t('wellness.dreams.desc','Log dreams and get symbolic interpretations.')} />
+        )}
+        {matches('/wellness/self-care-library') && (
+          <Card href="/wellness/self-care-library" title={t('wellness.selfCare.title','Self‑Care Library')} desc={t('wellness.selfCare.desc','Curated self‑care practices.')} />
+        )}
       </View>
     </ScrollView>
   );
@@ -53,6 +152,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     container:{ flex:1, backgroundColor: palette.background },
     header:{ color: palette.text, fontSize:22, fontWeight:'800' },
     subtitle:{ color: palette.text, opacity:0.9, marginBottom:8 },
+    sectionHeader:{ color: palette.text, opacity:0.9, marginTop:16, marginBottom:8, fontWeight:'700' },
     grid:{ gap:12 }
   });
 }

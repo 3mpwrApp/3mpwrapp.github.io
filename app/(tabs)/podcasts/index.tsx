@@ -27,8 +27,10 @@ import { fetchPodcasts } from "../../../services/podcasts";
 import { useCounts } from "../../../store/counts";
 // Link not needed; we open externally via Linking
 import ContrastToggle from "../../../components/ContrastToggle";
+import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
+import { useTranslation } from "../../../i18n";
 import { useFavorites } from "../../../store/favorites";
 import { useNetwork } from "../../../store/network";
 import { useRefresh } from "../../../store/refresh";
@@ -44,6 +46,8 @@ export default function PodcastsScreen() {
   useFocusOnRefOnMount(titleRef);
 
   const [items, setItems] = React.useState(localPodcasts);
+  const [query, setQuery] = React.useState("");
+  const [mode, setMode] = React.useState<'all'|'saved'>('all');
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -52,6 +56,7 @@ export default function PodcastsScreen() {
   const { tick } = useRefresh();
   const { has, toggle } = useFavorites();
   const { youtubeOpenPreference } = useSettings();
+  const { t } = useTranslation();
 
   const openYouTubeDirect = React.useCallback(async (idOrUrl: string) => {
     const id = idOrUrl.startsWith("yt:") ? idOrUrl.replace("yt:", "") : idOrUrl;
@@ -195,6 +200,16 @@ export default function PodcastsScreen() {
 
   useAnnounceOnChange(items.length, (n) => `${n} videos loaded`);
 
+  const filtered = React.useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const base = mode === 'saved' ? items.filter(it => has('podcast', it.id)) : items;
+    if (!q) return base;
+    return base.filter((it) =>
+      it.title.toLowerCase().includes(q) ||
+      (it.description || '').toLowerCase().includes(q)
+    );
+  }, [items, query, mode, has]);
+
   return (
     <View
       style={styles.container}
@@ -218,6 +233,17 @@ export default function PodcastsScreen() {
       <Text style={styles.subtitle}>
         Listen to community stories and insights.
       </Text>
+
+      <View style={{ flexDirection:'row', gap:8, marginBottom:8 }}>
+        <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
+        <FilterChip label="Saved" active={mode==='saved'} onPress={() => setMode('saved')} palette={palette} />
+      </View>
+
+      <SearchBar
+        value={query}
+        onChangeText={setQuery}
+        placeholder="Search podcasts & stories"
+      />
 
       {/* Loading skeletons */}
       {loading && (
@@ -247,8 +273,25 @@ export default function PodcastsScreen() {
 
       {/* Videos List (YouTube) */}
       <FlatList
-        data={items}
+        data={filtered}
         keyExtractor={(item) => `thread-${item.id}`}
+        ListEmptyComponent={(
+          <View style={{ paddingVertical: 12 }}>
+            <Text style={[styles.subtitle, { marginBottom: 6, opacity: 0.8 }]}>
+              {t('podcasts.empty','No videos match your filters')}
+            </Text>
+            {(query || mode !== 'all') && (
+              <Pressable
+                onPress={() => { setQuery(''); setMode('all'); }}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.resetFilters','Reset filters')}
+                style={({ pressed }) => [{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }, pressed && { opacity: 0.8 }]}
+              >
+                <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
+              </Pressable>
+            )}
+          </View>
+        )}
         renderItem={({ item }) => {
           const isYT = String(item.id).startsWith("yt:");
           const saved = has("podcast", item.id);
@@ -324,4 +367,12 @@ function createStyles(palette: any, factor: number) {
       marginBottom: 8,
     },
   });
+}
+
+function FilterChip({ label, active, onPress, palette }: { label: string; active: boolean; onPress: () => void; palette: any; }) {
+  return (
+    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={label} style={({ pressed }) => [{ borderWidth:1, borderColor: active? palette.primary: palette.muted, backgroundColor: active? palette.primary: 'transparent', paddingHorizontal:10, paddingVertical:6, borderRadius:20 }, pressed && { opacity: 0.7 }]}>
+      <Text style={{ color: active? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{label}</Text>
+    </Pressable>
+  );
 }

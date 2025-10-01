@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Platform, Text, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
 
@@ -18,6 +18,19 @@ export default function MapEmbed({ points, cluster = true }: { points: Point[]; 
     });
     return Array.from(grid.values());
   }, [points, cluster]);
+  // If running on web, avoid loading native-only modules and render a simple list fallback.
+  if (Platform.OS === 'web') {
+    return (
+      <View style={{ padding: 12, borderWidth: 1, borderColor: palette.muted, borderRadius: 8, backgroundColor: palette.surface }}>
+        <Text style={{ color: palette.text, fontWeight: '700' }}>Map unavailable on web</Text>
+        <Text style={{ color: palette.text, opacity: 0.9 }}>Showing a list fallback. Install a web map provider for full support.</Text>
+        {points.map((p) => (
+          <Text key={p.id} style={{ color: palette.text }}>• {p.title} ({p.lat.toFixed(2)},{p.lng.toFixed(2)})</Text>
+        ))}
+      </View>
+    );
+  }
+
   let MapView: any = null;
   let Marker: any = null;
   try {

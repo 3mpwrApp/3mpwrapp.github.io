@@ -1,12 +1,12 @@
 # Analytics Event Report
 
-Generated: 2025-10-01T02:16:01.907Z
+Generated: 2025-10-01T04:17:59.424Z
 
 ## Summary
 
-- Registry events: 31
-- Unique events referenced in code: 24
-- Total literal emissions (static scan): 30
+- Registry events: 37
+- Unique events referenced in code: 30
+- Total literal emissions (static scan): 37
 - Missing (used not registered): 0
 - Unused (registered not used): 7
 - Sensitive field occurrences (schema): 1
@@ -41,6 +41,7 @@ Generated: 2025-10-01T02:16:01.907Z
 | energy_set_daily | 1 |
 | energy_spend | 1 |
 | events | 2 |
+| evidence | 6 |
 | letter_insert_from_trackers | 1 |
 | notification | 2 |
 | podcast_share | 1 |
@@ -53,6 +54,7 @@ Generated: 2025-10-01T02:16:01.907Z
 | Event | Count | Status |
 |-------|------:|--------|
 | letter_insert_from_trackers | 5 | OK |
+| evidence.export.encrypted | 2 | OK |
 | tracker_add_entry | 2 | OK |
 | tracker_share | 2 | OK |
 | advocacy.ask.submitted | 1 | OK |
@@ -64,6 +66,11 @@ Generated: 2025-10-01T02:16:01.907Z
 | campaign_join | 1 | OK |
 | campaign_share | 1 | OK |
 | podcast_share | 1 | OK |
+| evidence.queue.enqueued | 1 | OK |
+| evidence.queue.processed | 1 | OK |
+| evidence.save.single | 1 | OK |
+| evidence.save.bulk | 1 | OK |
+| evidence.import.encrypted | 1 | OK |
 | account_delete | 1 | OK |
 | account_delete_failed | 1 | OK |
 | energy_set_daily | 1 | OK |

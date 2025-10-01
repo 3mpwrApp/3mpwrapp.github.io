@@ -1,16 +1,16 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-    Alert,
-    FlatList,
-    Pressable,
-    RefreshControl,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    useColorScheme,
-    View,
+  Alert,
+  Pressable,
+  RefreshControl,
+  SectionList,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  useColorScheme,
+  View,
 } from "react-native";
 
 import Card from "../../../components/Card";
@@ -20,23 +20,23 @@ import { useAuth } from "../../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../../data/campaigns";
 import { petitions } from "../../../data/petitions";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnChange,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnChange,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { logActivity } from "../../../services/activity";
 import { fetchCampaigns } from "../../../services/campaigns";
 import {
-    fsAddCampaign,
-    fsIncrementCampaignMembers,
-    fsJoinCampaign,
-    fsLeaveCampaign,
+  fsAddCampaign,
+  fsIncrementCampaignMembers,
+  fsJoinCampaign,
+  fsLeaveCampaign,
 } from "../../../services/firestore";
 import {
-    CampaignsLocalProvider,
-    useCampaignsLocal,
+  CampaignsLocalProvider,
+  useCampaignsLocal,
 } from "../../../store/campaignsLocal";
 import { useCounts } from "../../../store/counts";
 import { useNetwork } from "../../../store/network";
@@ -106,15 +106,31 @@ function ScreenInner() {
 
   const joinedCount = React.useMemo(() => Object.keys(local.joined).length, [local.joined]);
 
-  const filtered = React.useMemo(() => {
+  const sections = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return allItems;
-    return allItems.filter(
-      (c) =>
+    const campaigns = allItems.filter(i => (i as any).kind !== 'petition');
+    // Your campaigns: joined or created locally
+    const your = campaigns.filter(i => isJoined(i.id) || local.myCampaigns.some(m => m.id === i.id));
+    const yourIds = new Set(your.map(i => i.id));
+    // Other campaigns (dedup your)
+    const others = campaigns.filter(i => !yourIds.has(i.id));
+    const petitionsOnly = allItems.filter(i => (i as any).kind === 'petition');
+
+    const match = (c: any) => {
+      if (!q) return true;
+      return (
         c.title.toLowerCase().includes(q) ||
-        c.summary.toLowerCase().includes(q),
-    );
-  }, [query, allItems]);
+        (c.summary || '').toLowerCase().includes(q)
+      );
+    };
+
+    const sec = [
+      { title: 'Your Campaigns', data: your.filter(match) },
+      { title: 'All Campaigns', data: others.filter(match) },
+      { title: 'Petitions', data: petitionsOnly.filter(match) },
+    ].filter(s => s.data.length > 0);
+    return sec as { title: string; data: Mixed[] }[];
+  }, [query, allItems, local.myCampaigns, isJoined]);
 
   return (
     <View style={styles.container}>
@@ -179,9 +195,12 @@ function ScreenInner() {
         </>
       )}
 
-      <FlatList
-        data={filtered}
+      <SectionList
+        sections={sections}
         keyExtractor={(item) => `thread-${item.id}`}
+        renderSectionHeader={({ section }) => (
+          <Text style={[styles.subtitle, { marginTop: 8, fontWeight:'700' }]}>{section.title}</Text>
+        )}
         renderItem={({ item }) => (
           <View style={{ marginBottom:12 }}>
             <Link
@@ -189,7 +208,7 @@ function ScreenInner() {
               asChild
             >
               <Card
-                title={item.title + (item.kind === 'petition' ? ' (Petition)' : '')}
+                title={item.title + ((item as any).kind === 'petition' ? ' (Petition)' : '')}
                 subtitle={`${item.summary}${item.membersCount ? ` - ${item.membersCount} supporters` : ""}`}
               />
             </Link>
@@ -266,9 +285,19 @@ function ScreenInner() {
           </View>
         )}
         ListEmptyComponent={!loading && !error ? (
-          <Text style={{ color: palette.text, opacity: 0.7, marginTop: 12 }}>
-            No campaigns found
-          </Text>
+          <View style={{ paddingVertical: 12 }}>
+            <Text style={{ color: palette.text, opacity: 0.8, marginBottom: 6 }}>{t('campaigns.empty','No campaigns match your filters')}</Text>
+            {query ? (
+              <Pressable
+                onPress={() => setQuery('')}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.resetFilters','Reset filters')}
+                style={({ pressed }) => [{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }, pressed && { opacity: 0.8 }]}
+              >
+                <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
+              </Pressable>
+            ) : null}
+          </View>
         ) : null}
         contentContainerStyle={{ paddingVertical: 12 }}
         refreshControl={

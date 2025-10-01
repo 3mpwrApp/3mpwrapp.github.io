@@ -1,6 +1,5 @@
-import { Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { Pressable, StyleSheet, TextInput, View } from "react-native";
+import { Platform, Pressable, StyleSheet, TextInput, View } from "react-native";
 
 import { useTranslation } from "../i18n";
 import { type Palette } from "../theme/colors";
@@ -30,11 +29,17 @@ export default function SearchBar({
   const finalPlaceholder = placeholder ?? t("common.search", "Search");
   const finalA11yLabel = accessibilityLabel ?? finalPlaceholder;
   const finalClearLabel = clearLabel ?? t("common.clearSearch", "Clear search");
+  // In Jest or non-Expo environments, loading vector icons can fail. Fallback gracefully.
+  let Ionicons: any = () => null;
+  try {
+    Ionicons = require("@expo/vector-icons").Ionicons;
+  } catch {}
   const styles = React.useMemo(
     () => createStyles(palette, factor),
     [palette, factor],
   );
 
+  const isWeb = Platform.OS === 'web';
   return (
     <View style={styles.container} accessibilityRole="search" testID={testID}>
       <Ionicons
@@ -48,9 +53,8 @@ export default function SearchBar({
         value={value}
         onChangeText={onChangeText}
         placeholder={finalPlaceholder}
-        placeholderTextColor={palette.text}
         accessibilityLabel={finalA11yLabel}
-        returnKeyType="search"
+        {...(!isWeb ? { placeholderTextColor: palette.muted ?? palette.text, returnKeyType: 'search' as const } : {})}
       />
       {!!value && (
         <Pressable

@@ -1,32 +1,33 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-    FlatList,
-    RefreshControl,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  FlatList,
+  RefreshControl,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
 import Card from "../../../components/Card";
 import ContrastToggle from "../../../components/ContrastToggle";
+import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { generateDisabilityObservances } from "../../../data/disability-observances";
 import { events as localEvents } from "../../../data/events";
 import {
-    generateCanadianHolidays,
-    generateProvincialHolidays,
+  generateCanadianHolidays,
+  generateProvincialHolidays,
 } from "../../../data/holidays-ca";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnChange,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnChange,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { ANALYTICS_EVENTS, trackEvent } from "../../../services/analyticsClient";
@@ -55,6 +56,7 @@ export default function EventsScreen() {
     return new Date(d.getFullYear(), d.getMonth(), 1);
   });
   const [selectedDay, setSelectedDay] = React.useState<string | null>(null);
+  const [query, setQuery] = React.useState("");
   const [systemItems, setSystemItems] = React.useState(() => {
     const y = new Date().getFullYear();
     return [
@@ -65,7 +67,7 @@ export default function EventsScreen() {
   const { includeProvincialHolidays, province } = useSettings();
 
   type FilterMode = "all" | "community" | "observances";
-  const [mode] = React.useState<FilterMode>("all");
+  const [mode, setMode] = React.useState<FilterMode>("all");
 
   const systemForMonth = React.useMemo(() => {
     const y = month.getFullYear();
@@ -146,11 +148,24 @@ export default function EventsScreen() {
   const daysMatrix = React.useMemo(() => buildMonthMatrix(month), [month]);
   const eventsByDay = React.useMemo(() => mapEventsByDay(items), [items]);
   const filtered = React.useMemo(
-    () =>
-      selectedDay
+    () => {
+      const base = selectedDay
         ? items.filter((e) => toDayKey(e.date) === selectedDay)
-        : items,
-    [items, selectedDay],
+        : items;
+      const q = query.trim().toLowerCase();
+      if (!q) return base;
+      return base.filter((e: any) => {
+        const place = e.isVirtual ? 'virtual' : (e.location || '');
+        const tag = e.id.startsWith('holiday-') ? 'holiday' : e.id.startsWith('prov-') ? 'provincial' : e.id.startsWith('obs-') ? 'observance' : '';
+        return (
+          e.title.toLowerCase().includes(q) ||
+          (e.description || '').toLowerCase().includes(q) ||
+          place.toLowerCase().includes(q) ||
+          tag.includes(q)
+        );
+      });
+    },
+    [items, selectedDay, query],
   );
 
   const [showCreate, setShowCreate] = React.useState(false);
@@ -186,6 +201,12 @@ export default function EventsScreen() {
         {t('eventsFeature.subtitle','Community events, workshops, and meetups.')}
       </Text>
 
+      <SearchBar
+        value={query}
+        onChangeText={setQuery}
+        placeholder={t('eventsFeature.search.placeholder','Search events, tags, places')}
+      />
+
       <A11yPressable
         accessibilityRole="button"
         accessibilityLabel={showCreate ? t('a11y.toggleCreateEventFormClose') : t('a11y.toggleCreateEventFormOpen')}
@@ -194,6 +215,13 @@ export default function EventsScreen() {
       >
         <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}</Text>
       </A11yPressable>
+
+      {/* Filter chips */}
+      <View style={{ flexDirection:'row', gap:8, marginBottom:8 }}>
+        <FilterChip label={t('common.all','All')} active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
+        <FilterChip label={t('eventsFeature.section.community','Community Events')} active={mode==='community'} onPress={() => setMode('community')} palette={palette} />
+        <FilterChip label={t('eventsFeature.section.observances','Holidays & Observances')} active={mode==='observances'} onPress={() => setMode('observances')} palette={palette} />
+      </View>
 
       {showCreate && (
         <CreateEventBox onCreate={handleCreate} palette={palette} />
@@ -295,6 +323,23 @@ export default function EventsScreen() {
       <FlatList
         data={filtered}
         keyExtractor={(item) => item.id}
+        ListEmptyComponent={(
+          <View style={{ paddingVertical: 16 }}>
+            <Text style={[styles.subtitle, { marginBottom: 6 }]}>
+              {t('eventsFeature.empty','No events match your filters')}
+            </Text>
+            {(selectedDay || query || mode !== 'all') && (
+              <A11yPressable
+                onPress={() => { setSelectedDay(null); setQuery(''); setMode('all'); }}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.resetFilters','Reset filters')}
+                style={{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
+              </A11yPressable>
+            )}
+          </View>
+        )}
         renderItem={({ item }) => (
           <View style={{ marginBottom:12 }}>
             <Link
@@ -483,6 +528,14 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
 function ToggleChip({ label, active, onToggle, palette }: { label: string; active: boolean; onToggle: () => void; palette: any; }) {
   return (
     <A11yPressable onPress={onToggle} accessibilityRole="button" accessibilityLabel={label} style={{ borderWidth:1, borderColor: active? palette.primary: palette.muted, backgroundColor: active? palette.primary: 'transparent', paddingHorizontal:10, paddingVertical:6, borderRadius:20 }}>
+      <Text style={{ color: active? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{label}</Text>
+    </A11yPressable>
+  );
+}
+
+function FilterChip({ label, active, onPress, palette }: { label: string; active: boolean; onPress: () => void; palette: any; }) {
+  return (
+    <A11yPressable onPress={onPress} accessibilityRole="button" accessibilityLabel={label} style={{ borderWidth:1, borderColor: active? palette.primary: palette.muted, backgroundColor: active? palette.primary: 'transparent', paddingHorizontal:10, paddingVertical:6, borderRadius:20 }}>
       <Text style={{ color: active? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{label}</Text>
     </A11yPressable>
   );

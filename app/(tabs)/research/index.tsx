@@ -5,6 +5,7 @@ import { Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import ContrastToggle from '../../../components/ContrastToggle';
+import SearchBar from '../../../components/SearchBar';
 import SettingsLink from '../../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { researchHubs } from '../../../data/research-hubs';
@@ -23,6 +24,9 @@ export default function ResearchScreen() {
   const { t } = useTranslation();
   useAnnounceOnMount(t('research.landing.screenLabel','Research screen'));
   useFocusOnRefOnMount(titleRef);
+  const [query, setQuery] = React.useState('');
+  const q = query.trim().toLowerCase();
+  const matchesText = (txt: string) => !q || txt.toLowerCase().includes(q);
 
   return (
     <ScrollView style={styles.container}>
@@ -39,7 +43,9 @@ export default function ResearchScreen() {
       <Text style={styles.subtitle}>
   {t('research.landing.subtitle','Access studies, reports, articles, history timeline, and case wait-times.')}
       </Text>
+      <SearchBar value={query} onChangeText={setQuery} placeholder={t('research.search','Search research...')} />
       <View style={styles.sectionGrid}>
+        {matchesText(t('research.landing.studiesTitle','Studies')) && (
         <Link href="/(tabs)/research/studies" asChild>
           <A11yPressable
             style={styles.sectionCard}
@@ -52,6 +58,8 @@ export default function ResearchScreen() {
             <Text style={styles.sectionDescription}>{t('research.landing.studiesDesc','Access clinical and workplace studies')}</Text>
           </A11yPressable>
         </Link>
+        )}
+        {matchesText(t('research.landing.reportsTitle','Reports')) && (
         <Link href="/(tabs)/research/reports" asChild>
           <A11yPressable
             style={styles.sectionCard}
@@ -64,6 +72,8 @@ export default function ResearchScreen() {
             <Text style={styles.sectionDescription}>{t('research.landing.reportsDesc','Community and government reports made easy')}</Text>
           </A11yPressable>
         </Link>
+        )}
+        {matchesText(t('research.landing.articlesTitle','Articles')) && (
         <Link href="/(tabs)/research/articles" asChild>
           <A11yPressable
             style={styles.sectionCard}
@@ -76,6 +86,8 @@ export default function ResearchScreen() {
             <Text style={styles.sectionDescription}>{t('research.landing.articlesDesc','Insights on disability, workplace rights, advocacy')}</Text>
           </A11yPressable>
         </Link>
+        )}
+        {matchesText(t('research.landing.timelineTitle','History Timeline')) && (
         <Link href="/(tabs)/research/history-timeline" asChild>
           <A11yPressable
             style={styles.sectionCard}
@@ -88,6 +100,8 @@ export default function ResearchScreen() {
             <Text style={styles.sectionDescription}>{t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}</Text>
           </A11yPressable>
         </Link>
+        )}
+        {matchesText(t('research.landing.waitTitle','Case/File Wait-Times')) && (
         <Link href="/(tabs)/research/wait-times" asChild>
           <A11yPressable
             style={styles.sectionCard}
@@ -100,6 +114,8 @@ export default function ResearchScreen() {
             <Text style={styles.sectionDescription}>{t('research.landing.waitDesc','Estimate how long processes may take')}</Text>
           </A11yPressable>
         </Link>
+        )}
+        {matchesText(t('research.landing.masterIndexTitle','Master Index')) && (
         <Link href="/(tabs)/research/master-index" asChild>
           <A11yPressable
             style={styles.sectionCard}
@@ -112,6 +128,8 @@ export default function ResearchScreen() {
             <Text style={styles.sectionDescription}>{t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}</Text>
           </A11yPressable>
         </Link>
+        )}
+        {matchesText(t('research.card.uncrpdGuideTitle')) && (
         <Link href="/(tabs)/research/uncrpd-info" asChild>
           <A11yPressable
             style={styles.sectionCard}
@@ -124,12 +142,15 @@ export default function ResearchScreen() {
             <Text style={styles.sectionDescription}>{t('research.card.uncrpdGuideDesc')}</Text>
           </A11yPressable>
         </Link>
+        )}
       </View>
       <View style={styles.hubsContainer} accessibilityRole="summary">
   <Text style={styles.hubsHeader} accessibilityRole="header">{t('research.landing.hubsHeader','Research & Data Hubs')}</Text>
   <Text style={styles.hubsIntro}>{t('research.landing.hubsIntro','Trusted national and global sources for disability, return-to-work, accessibility, assistive tech, and social protection evidence.')}</Text>
         {(['canada','world'] as const).map(region => {
-          const hubs = researchHubs.filter(h => h.region === region);
+          const hubs = researchHubs.filter(h => h.region === region).filter(h =>
+            !q || matchesText(h.name) || matchesText(h.description) || (h.tags?.some(tag => matchesText(tag)) ?? false)
+          );
           if (!hubs.length) return null;
           return (
             <View key={region} style={styles.hubRegion} accessibilityRole="header" accessibilityLabel={region === 'canada' ? 'Canada hubs' : 'Worldwide hubs'}>
