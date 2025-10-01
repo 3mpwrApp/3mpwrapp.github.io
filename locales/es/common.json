@@ -11,7 +11,10 @@
     "profile": "Perfil",
     "saved": "Guardado",
     "settings": "Configuración",
-    "inbox": "Bandeja de entrada"
+    "inbox": "Bandeja de entrada",
+    "about": "Acerca de / Contacto",
+    "faqs": "Preguntas frecuentes",
+    "research": "Investigación"
   },
   "inbox": {
     "itemRead": "Leído",
@@ -512,6 +515,12 @@
     }
   },
   "eventsFeature": {
+    "empty": "Ningún evento coincide con tus filtros",
+    "search": { "placeholder": "Buscar eventos, etiquetas, lugares" },
+    "section": {
+      "community": "Eventos comunitarios",
+      "observances": "Feriados y conmemoraciones"
+    },
     "createTitle": "Crear evento",
     "create": "Crear",
     "close": "Cerrar",
@@ -1354,6 +1363,13 @@
     }
   },
   "advocacy": {
+    "search": "Buscar herramientas de defensa...",
+    "sections": {
+      "ai": "Herramientas IA",
+      "coaching": "Coaching",
+      "directories": "Directorios y calificaciones",
+      "collective": "Colectivo y rendición de cuentas"
+    },
     "tools": {
       "self_coach": "Self-Advocacy Coach (micro-lessons)",
       "ai_translator": "AI Advocate Translator",
@@ -1740,6 +1756,7 @@
     "show": "Mostrar"
   },
   "common": {
+    "resetFilters": "Restablecer filtros",
     "on": "Activado",
     "off": "Desactivado",
     "failed": "Falló",
@@ -2178,11 +2195,19 @@
     "reloadShort": "Recargar"
   }
   ,
+  "campaigns": {
+    "empty": "Ninguna campaña coincide con tus filtros"
+  },
   "community": {
+    "empty": "Ningún canal coincide con tus filtros",
+    "toolsEmpty": "Ninguna herramienta coincide con tu búsqueda",
     "myPosts": {
       "title": "Mis publicaciones",
       "open": "Abrir",
       "empty": "Aún no has publicado."
     }
+  },
+  "podcasts": {
+    "empty": "Ningún video coincide con tus filtros"
   }
 }

@@ -11,7 +11,10 @@
     "profile": "Profil",
     "saved": "Enregistré",
     "settings": "Paramètres",
-    "inbox": "Boîte de réception"
+    "inbox": "Boîte de réception",
+    "about": "À propos / Contact",
+    "faqs": "FAQs",
+    "research": "Recherche"
   },
   "inbox": {
     "itemRead": "Lu",
@@ -291,6 +294,12 @@
     }
   },
   "eventsFeature": {
+    "empty": "Aucun événement ne correspond à vos filtres",
+    "search": { "placeholder": "Rechercher événements, tags, lieux" },
+    "section": {
+      "community": "Événements communautaires",
+      "observances": "Jours fériés et observances"
+    },
     "createTitle": "Créer événement",
     "create": "Créer",
     "close": "Fermer",
@@ -1132,6 +1141,13 @@
     }
   },
   "advocacy": {
+    "search": "Rechercher des outils de défense...",
+    "sections": {
+      "ai": "Outils IA",
+      "coaching": "Coaching",
+      "directories": "Annuaires et évaluations",
+      "collective": "Collectif et reddition de comptes"
+    },
     "tools": {
       "self_coach": "Self-Advocacy Coach (micro-lessons)",
       "ai_translator": "AI Advocate Translator",
@@ -1575,6 +1591,7 @@
     "show": "Afficher"
   },
   "common": {
+    "resetFilters": "Réinitialiser les filtres",
     "on": "Activé",
     "off": "Désactivé",
     "failed": "Échec",
@@ -2243,11 +2260,19 @@
     "reloadShort": "Actualiser"
   }
   ,
+  "campaigns": {
+    "empty": "Aucune campagne ne correspond à vos filtres"
+  },
   "community": {
+    "empty": "Aucun canal ne correspond à vos filtres",
+    "toolsEmpty": "Aucun outil ne correspond à votre recherche",
     "myPosts": {
       "title": "Mes publications",
       "open": "Ouvrir",
       "empty": "Vous n'avez pas encore publié."
     }
+  },
+  "podcasts": {
+    "empty": "Aucune vidéo ne correspond à vos filtres"
   }
 }
