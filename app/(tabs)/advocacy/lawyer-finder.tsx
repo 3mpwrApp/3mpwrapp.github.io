@@ -83,7 +83,7 @@ export default function LawyerFinder() {
         </A11yPressable>
       </View>
       {mode==='list' ? (
-      <FlatList data={filtered} keyExtractor={(a)=>a.id} renderItem={({item}) => (
+      <FlatList data={filtered} initialNumToRender={Math.min(10, filtered.length || 10)} keyExtractor={(a)=>a.id} renderItem={({item}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{item.name}{item.org? ` • ${item.org}`: ''}</Text>
           <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || t('advocacy.finder.locationUnknown','—')}</Text>

@@ -14,6 +14,7 @@ import {
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
 import { useAuth } from "../../../context/AuthContext";
+import { channels as seedChannels } from "../../../data/community";
 import { db } from "../../../firebase/config";
 import { CommunityProvider } from "../../../store/community";
 import { colors, type Palette } from "../../../theme/colors";
@@ -30,30 +31,34 @@ function ChannelInner() {
   const [refreshing, setRefreshing] = React.useState(false);
   const pageSize = 10;
 
+  // Resolve the channel by slug to get the stable channelId
+  const channel = React.useMemo(() => seedChannels.find(c => c.slug === String(slug)), [slug]);
+
   const loadPage = React.useCallback(async (reset = false) => {
-    if (!slug) return;
+    if (!slug || !channel) return;
     try {
       const col = collection(db, 'threads');
-      let q = query(col, where('channel','==', String(slug)), orderBy('createdAt','desc'), limit(pageSize));
-      if (!reset && cursor) q = query(col, where('channel','==', String(slug)), orderBy('createdAt','desc'), startAfter(cursor), limit(pageSize));
+      // Threads are stored with channelId not channel slug
+      let q = query(col, where('channelId','==', String(channel.id)), orderBy('createdAt','desc'), limit(pageSize));
+      if (!reset && cursor) q = query(col, where('channelId','==', String(channel.id)), orderBy('createdAt','desc'), startAfter(cursor), limit(pageSize));
       const snap = await getDocs(q);
       const newItems = snap.docs.map(d => ({ id: d.id, ...(d.data() as any) }));
       setItems(reset ? newItems : [...items, ...newItems]);
       setCursor(snap.docs[snap.docs.length-1] || null);
     } catch {}
-  }, [slug, cursor, items]);
+  }, [slug, channel, cursor, items]);
 
-  React.useEffect(() => { setItems([]); setCursor(null); loadPage(true); }, [slug]);
+  React.useEffect(() => { setItems([]); setCursor(null); loadPage(true); }, [slug, channel]);
 
   const onRefresh = React.useCallback(async () => { setRefreshing(true); await loadPage(true); setRefreshing(false); }, [loadPage]);
 
   return (
     <View
       style={styles.container}
-      accessibilityLabel={`Channel ${slug}`}
+      accessibilityLabel={`Channel ${channel?.title ?? slug}`}
       accessible
     >
-      <Text style={styles.title}>{String(slug)}</Text>
+      <Text style={styles.title}>{channel?.title ?? String(slug)}</Text>
 
       <View
         style={styles.newBox}
@@ -70,8 +75,8 @@ function ChannelInner() {
         <A11yPressable
           onPress={() => {
             if (!title.trim()) return;
-            // Compose navigates to composer to ensure consistent logic
-            router.push('/(tabs)/community/compose' as Href);
+            // Compose navigates to composer with channel slug context
+            router.push((`/(tabs)/community/compose?slug=${encodeURIComponent(String(slug))}`) as Href);
           }}
           accessibilityRole="button"
           accessibilityLabel="Create thread"
@@ -105,7 +110,11 @@ function ChannelInner() {
           >
             <Text style={styles.threadTitle}>{item.title}</Text>
             <Text style={styles.threadMeta}>
-              {new Date(item.createdAt?.toDate?.() || Date.now()).toLocaleString()}
+              {(() => {
+                const ts: any = item.createdAt;
+                const ms = typeof ts === 'number' ? ts : ts?.toDate?.()?.getTime?.() ?? Date.now();
+                return new Date(ms).toLocaleString();
+              })()}
             </Text>
             {isAdmin && (
               <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>

@@ -129,6 +129,16 @@ function ScreenInner() {
         )}
         contentContainerStyle={{ paddingTop: 8 }}
       />
+      <View style={{ marginTop: 16 }}>
+        <A11yPressable
+          accessibilityRole="button"
+          accessibilityLabel="Open My Posts"
+          style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+          onPress={() => router.push('/(tabs)/community/my-posts' as Href)}
+        >
+          <Text style={styles.rowText}>My Posts</Text>
+        </A11yPressable>
+      </View>
     </View>
   );
 }

@@ -1,3 +1,4 @@
+import { router, type Href } from 'expo-router';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
@@ -30,7 +31,12 @@ export default function InboxScreen() {
         keyExtractor={(n) => n.id}
         renderItem={({ item }) => (
           <A11yPressable
-            onPress={() => markRead(item.id)}
+            onPress={() => {
+              markRead(item.id);
+              if (item.route) {
+                try { router.push(item.route as Href); } catch {}
+              }
+            }}
             accessibilityRole="button"
             accessibilityLabel={item.read ? t('inbox.itemRead','Notification (read)') : t('inbox.itemUnread','Notification (unread)')}
             style={[s.row, !item.read && { backgroundColor: palette.card }]}

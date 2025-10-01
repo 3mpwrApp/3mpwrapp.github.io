@@ -1,12 +1,14 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, Alert } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import React from 'react';
+import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
-import { useAppPalette } from '../../../theme/usePalette';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useAuth } from '../../../context/AuthContext';
-import { db, auth } from '../../../firebase/config';
+import { channels as seedChannels } from '../../../data/community';
+import { auth, db } from '../../../firebase/config';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -17,7 +19,9 @@ export default function CommunityCompose() {
   useAnnounceOnMount('Compose Post');
   useFocusOnRefOnMount(titleRef);
   const { user } = useAuth();
-  const [channel, setChannel] = React.useState('general');
+  const params = useLocalSearchParams<{ slug?: string }>();
+  const initialSlug = typeof params.slug === 'string' ? params.slug : 'general';
+  const [channelSlug, setChannelSlug] = React.useState(initialSlug);
   const [title, setTitle] = React.useState('');
   const [body, setBody] = React.useState('');
 
@@ -25,9 +29,13 @@ export default function CommunityCompose() {
     if (!user) { Alert.alert('Sign in required', 'Please sign in to post.'); return; }
     if (!title.trim() || !body.trim()) { Alert.alert('Missing', 'Title and body are required.'); return; }
     try {
+      const channel = seedChannels.find(c => c.slug === channelSlug);
+      const channelId = channel?.id ?? channelSlug; // fallback to slug if unknown
       const col = collection(db, 'threads');
       await addDoc(col, {
-        channel,
+        channel: channelSlug, // legacy/back-compat
+        channelSlug,
+        channelId,
         title: title.trim(),
         body: body.trim(),
         authorUid: auth.currentUser?.uid,
@@ -43,8 +51,8 @@ export default function CommunityCompose() {
   return (
     <View style={s.container} accessibilityLabel="Compose post" accessible>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Compose Post</Text>
-      <Text style={s.label}>Channel</Text>
-      <TextInput value={channel} onChangeText={setChannel} style={s.input} placeholder="general" placeholderTextColor={palette.text} />
+  <Text style={s.label}>Channel</Text>
+  <TextInput value={channelSlug} onChangeText={setChannelSlug} style={s.input} placeholder="general" placeholderTextColor={palette.text} />
       <Text style={s.label}>Title</Text>
       <TextInput value={title} onChangeText={setTitle} style={s.input} placeholder="Add a title" placeholderTextColor={palette.text} />
       <Text style={s.label}>Body</Text>

@@ -34,6 +34,9 @@ export interface DeliveredNotification {
   payloadHash: string;
   event: string;
   channel: 'inApp' | 'push';
+  // Optional deep-link support: route and arbitrary params
+  route?: string;
+  routeParams?: Record<string, any>;
 }
 
 export interface TemplateIndex { [event: string]: string[]; }

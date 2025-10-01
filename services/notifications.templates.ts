@@ -63,6 +63,18 @@ const templates: NotificationTemplate[] = [
     personalization: { fields: ["idleHours"] },
     dedupe: "event",
   },
+  {
+    id: "community-comment-added",
+    version: 1,
+    category: "community",
+    event: "community.comment.added",
+    channels: { inApp: true, push: true },
+    priority: "normal",
+    throttleSec: 60,
+    i18n: { titleKey: "notify.community.comment.title", bodyKey: "notify.community.comment.body" },
+    personalization: { fields: ["threadTitle", "snippet"] },
+    dedupe: "event",
+  },
 ];
 
 // Build index (event -> templateIds)

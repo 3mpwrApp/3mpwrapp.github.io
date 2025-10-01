@@ -77,6 +77,12 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
   [E.ASSISTANT_RECENTS_CLEAR]: { count: { type: 'number', required: true } },
   [E.EVENTS_EXPORT_ICS]: { id: { type: 'string', required: true } },
   [E.EVENTS_EXPORT_CSV]: { id: { type: 'string', required: true } },
+  [E.EVIDENCE_EXPORT_ENCRYPTED]: { count: { type: 'number', required: true } },
+  [E.EVIDENCE_IMPORT_ENCRYPTED]: { count: { type: 'number', required: true } },
+  [E.EVIDENCE_SAVE_SINGLE]: { hasFiles: { type: 'boolean', required: true } },
+  [E.EVIDENCE_SAVE_BULK]: { notes: { type: 'number', required: true }, files: { type: 'number', required: true } },
+  [E.EVIDENCE_QUEUE_ENQUEUED]: { count: { type: 'number', required: true } },
+  [E.EVIDENCE_QUEUE_PROCESSED]: { total: { type: 'number', required: true } },
 };
 
 export interface ValidationResult {

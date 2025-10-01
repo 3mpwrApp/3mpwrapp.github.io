@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from "expo-router";
-import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp, where } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, onSnapshot, orderBy, query, serverTimestamp, where } from 'firebase/firestore';
 import React from "react";
 import { FlatList, StyleSheet, Text, TextInput, useColorScheme, View } from "react-native";
 
@@ -8,6 +8,7 @@ import { HIT_SLOP_8, touchTarget } from "../../../../constants/a11y";
 import { useAuth } from "../../../../context/AuthContext";
 import { db } from "../../../../firebase/config";
 import { setLastRead, setTyping } from "../../../../services/community";
+import { useNotificationDispatcher } from "../../../../services/notifications.dispatcher";
 import { CommunityProvider } from "../../../../store/community";
 import { colors, type Palette } from "../../../../theme/colors";
 
@@ -20,6 +21,7 @@ function ThreadInner() {
   const [text, setText] = React.useState('');
   const [othersTyping, setOthersTyping] = React.useState(false);
   const { user } = useAuth();
+  const { dispatchDomainEvent } = useNotificationDispatcher();
 
   React.useEffect(() => {
     if (!id) return;
@@ -35,7 +37,25 @@ function ThreadInner() {
 
   const send = async () => {
     if (!user || !text.trim()) return;
-    try { await addDoc(collection(db,'comments'), { threadId: String(id), text: text.trim(), authorUid: user.uid, createdAt: serverTimestamp() }); setText(''); } catch {}
+    try {
+      await addDoc(collection(db,'comments'), { threadId: String(id), text: text.trim(), authorUid: user.uid, createdAt: serverTimestamp() });
+      setText('');
+      try {
+        // Fetch thread title for personalization
+        const tRef = doc(db, 'threads', String(id));
+        const tSnap = await getDoc(tRef as any);
+        const threadTitle = (tSnap.data() as any)?.title || 'Thread';
+        await dispatchDomainEvent({
+          event: 'community.comment.added',
+          payload: {
+            threadTitle,
+            snippet: text.trim().slice(0, 80),
+            route: `/(tabs)/community/threads/${String(id)}`,
+            routeParams: { id: String(id) },
+          },
+        });
+      } catch {}
+    } catch {}
   };
 
   return (

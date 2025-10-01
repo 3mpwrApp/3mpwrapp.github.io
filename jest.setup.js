@@ -38,12 +38,18 @@ jest.mock('react-native', () => {
       // remove RN-only or unsupported DOM props
       accessibilityState: _accessibilityState,
       accessibilityHint: _accessibilityHint,
+      accessibilityLiveRegion: _accessibilityLiveRegion,
       hitSlop: _hitSlop,
       onPress,
       contentContainerStyle: _contentContainerStyle,
       collapsable: _collapsable,
       nativeID: _nativeID,
       importantForAccessibility: _ifa,
+      maxFontSizeMultiplier: _maxFontSizeMultiplier,
+      placeholderTextColor: _placeholderTextColor,
+      refreshControl: _refreshControl,
+      accessible: _accessible,
+      onLongPress: _onLongPress,
       // Style-only RN props ignored in DOM
       onLayout: _onLayout,
       // everything else

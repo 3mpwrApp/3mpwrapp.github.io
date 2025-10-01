@@ -54,6 +54,14 @@ export const ANALYTICS_EVENTS = {
   // Events
   EVENTS_EXPORT_ICS: "events.export.ics",
   EVENTS_EXPORT_CSV: "events.export.csv",
+
+  // Evidence Locker telemetry
+  EVIDENCE_EXPORT_ENCRYPTED: "evidence.export.encrypted",
+  EVIDENCE_IMPORT_ENCRYPTED: "evidence.import.encrypted",
+  EVIDENCE_SAVE_SINGLE: "evidence.save.single",
+  EVIDENCE_SAVE_BULK: "evidence.save.bulk",
+  EVIDENCE_QUEUE_ENQUEUED: "evidence.queue.enqueued",
+  EVIDENCE_QUEUE_PROCESSED: "evidence.queue.processed",
 } as const;
 
 export type AnalyticsEventName = typeof ANALYTICS_EVENTS[keyof typeof ANALYTICS_EVENTS];

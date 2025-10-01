@@ -122,6 +122,7 @@ export default function EvidenceLocker() {
       const arr = JSON.parse(raw);
       arr.push(item);
       await AsyncStorage?.setItem?.(QUEUE_KEY, JSON.stringify(arr));
+      try { const { trackEvent } = await import('../../../services/analyticsClient'); trackEvent('evidence.queue.enqueued', { count: 1 }); } catch {}
     } catch {}
   };
 
@@ -155,6 +156,7 @@ export default function EvidenceLocker() {
       }
       await AsyncStorage?.setItem?.(QUEUE_KEY, JSON.stringify([]));
       Alert.alert(t('templates.evidenceLocker.queueTitle', 'Queue'), t('templates.evidenceLocker.queueProcessed', 'Processed all queued items.'));
+      try { const { trackEvent } = await import('../../../services/analyticsClient'); trackEvent('evidence.queue.processed', { total: arr.length }); } catch {}
     } catch {
       Alert.alert(t('templates.evidenceLocker.queueTitle', 'Queue'), t('templates.evidenceLocker.queueProcessedSome', 'Some items could not be processed.'));
     } finally {
@@ -480,6 +482,7 @@ export default function EvidenceLocker() {
                 }
                 await addEvidenceNote({ text: current.text, tags: current.tags, files: uploaded });
                 Alert.alert(t('common.saved','Saved'), t('templates.evidenceLocker.noteSaved','Note saved to your cloud locker.'));
+                try { const { trackEvent } = await import('../../../services/analyticsClient'); trackEvent('evidence.save.single', { hasFiles: !!(current.files?.length) }); } catch {}
               } catch {
                 if (snapshot) await enqueueFailed({ text: snapshot.text, tags: snapshot.tags, files: snapshot.files });
                 Alert.alert(t('common.saveFailed','Save failed'), t('templates.evidenceLocker.queuedUpload','Queued to upload later.'));
@@ -542,6 +545,7 @@ export default function EvidenceLocker() {
                 Alert.alert(t('common.saved','Saved'), t('templates.evidenceLocker.saveAllDone','Finished saving notes (failures queued).'));
                 // Provide a lightweight toast for consistent feedback
                 showToast(t('common.saved','Saved'));
+                try { const { trackEvent } = await import('../../../services/analyticsClient'); trackEvent('evidence.save.bulk', { notes: notes.length, files: notes.reduce((s,n)=> s + (n.files?.length||0), 0) }); } catch {}
               } catch {
                 Alert.alert(t('common.saveFailed','Save failed'), t('templates.evidenceLocker.saveSomeFailed','Could not save some items.'));
               } finally { setImmUploading(false); setImmPct(0); setImmLabel(''); }
@@ -793,15 +797,18 @@ export default function EvidenceLocker() {
                           if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path);
                           else Alert.alert(t('common.saved','Saved'), t('templates.evidenceLocker.exportSavedCache','Encrypted export saved to cache.'));
                           showToast(t('common.saved','Saved'));
+                          try { const { trackEvent } = await import('../../../services/analyticsClient'); trackEvent('evidence.export.encrypted', { count: notes.length }); } catch {}
                         } catch {
                           Alert.alert(t('common.saved','Saved'), t('templates.evidenceLocker.exportSavedCache','Encrypted export saved to cache.'));
                           showToast(t('common.saved','Saved'));
+                          try { const { trackEvent } = await import('../../../services/analyticsClient'); trackEvent('evidence.export.encrypted', { count: notes.length }); } catch {}
                         }
                       } else if (passModal.mode === 'import' && passModal.fileUri) {
                         const imported = await importNotesEncrypted(passModal.fileUri, pass);
                         setNotes(imported);
                         Alert.alert(t('common.imported','Imported'), t('templates.evidenceLocker.importedNotes','Encrypted notes imported.'));
                         showToast(t('common.imported','Imported'));
+                        try { const { trackEvent } = await import('../../../services/analyticsClient'); trackEvent('evidence.import.encrypted', { count: imported.length }); } catch {}
                       }
                     } catch {
                       Alert.alert(t('templates.evidenceLocker.importFailedTitle','Operation failed'), t('templates.evidenceLocker.importFailedBody','Could not complete the operation.'));

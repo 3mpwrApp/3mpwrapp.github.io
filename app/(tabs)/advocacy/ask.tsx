@@ -40,7 +40,9 @@ function Inner() {
     if (ok) {
       trackEvent('advocacy.ask.submitted',{ channelId });
       Alert.alert(t('advocacy.ask.submittedTitle','Submitted'), t('advocacy.ask.submittedBody','Your request has been posted. Community advocates may respond.'));
-      router.push("/(tabs)/community/topic-ask-advocate" as Href);
+      const ch = seedChannels.find(c => c.id === channelId);
+      const slug = ch?.slug ?? 'topic-ask-advocate';
+      router.push((`/(tabs)/community/${slug}`) as Href);
     } else {
       Alert.alert(t('advocacy.ask.rateTitle','Slow down'), t('advocacy.ask.rateBody','Please wait a few seconds before posting again.'));
     }

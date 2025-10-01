@@ -109,6 +109,8 @@ export function useNotificationDispatcher() {
         payloadHash,
         event: evt.event,
         channel: scheduledPush ? 'push' : 'inApp',
+        route: (evt.payload as any)?.route,
+        routeParams: (evt.payload as any)?.routeParams,
       };
 
   // Record throttle timestamp early (before async permission scheduling) & update state + runtime cache
