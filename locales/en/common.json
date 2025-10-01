@@ -22,6 +22,13 @@
     "markAll": "Mark all as read"
   },
   "wellness": {
+    "search": "Search wellness tools...",
+    "sections": {
+      "sleep": "Sleep & Energy",
+      "tracking": "Tracking",
+      "cognitive": "Cognitive & Mood",
+      "movement": "Movement & Physio"
+    },
     "tools": {
       "symptom": "Symptom & Pain Tracker (exportable report)",
       "sleep": "Sleep & Energy Tracker (legal/medical summary)",
@@ -188,6 +195,62 @@
       "title": "[T] wellness.resilience.title",
       "desc": "[T] wellness.resilience.desc",
       "points": "[T] wellness.resilience.points"
+    },
+    "sleepEnergy": {
+      "title": "Sleep & Energy",
+      "desc": "Track sleep and energy with a daily summary you can share."
+    },
+    "symptomTracker": {
+      "title": "Symptom & Pain Tracker",
+      "desc": "Log symptoms and pain; export a report for care or claims."
+    },
+    "selfCare": {
+      "title": "Accessible Self‑Care",
+      "desc": "Simple, adaptive self‑care ideas for low‑energy days."
+    },
+    "workBalance": {
+      "title": "Wellness + Work Balance AI",
+      "desc": "Plan work/rest balance and pacing with gentle suggestions."
+    },
+    "griefSupport": {
+      "title": "Grief + Identity Support",
+      "desc": "Reflections and prompts for identity shifts and loss."
+    },
+    "adaptiveMeditation": {
+      "title": "Adaptive Meditation",
+      "desc": "Short, adjustable meditations and relaxation."
+    },
+    "rehabGames": {
+      "title": "Virtual Rehab Games",
+      "desc": "Gentle movement mini‑games. Always adapt to comfort."
+    },
+    "dailyPlanner": {
+      "title": "Adaptive Daily Planner",
+      "desc": "Prioritize tasks using energy‑based pacing."
+    },
+    "aiCompanion": {
+      "title": "AI Wellness Companion",
+      "desc": "A gentle helper for coaching and reframes."
+    },
+    "exerciseHub": {
+      "title": "Exercise & Movement Hub",
+      "desc": "Chair‑friendly routines and pacing tips."
+    },
+    "nutrition": {
+      "title": "Nutrition & Hydration",
+      "desc": "Light guidance and reminders to fuel well."
+    },
+    "pacingPartner": {
+      "title": "Pacing Partner",
+      "desc": "Break tasks into small steps and set micro‑breaks."
+    },
+    "reflections": {
+      "title": "Reflections Calendar",
+      "desc": "Capture brief notes and wins; notice patterns over time."
+    },
+    "classicHub": {
+      "title": "Classic Wellness Hub",
+      "desc": "The original set of tools in one place."
     }
   },
   "resources": {
@@ -1787,6 +1850,7 @@
     }
   },
   "research": {
+    "search": "Search research hubs...",
     "chips": {
       "uncrpd": "UNCRPD",
       "advocacy": "Advocacy",
