@@ -2177,4 +2177,12 @@
     "nextMonth": "Mes siguiente",
     "reloadShort": "Recargar"
   }
+  ,
+  "community": {
+    "myPosts": {
+      "title": "Mis publicaciones",
+      "open": "Abrir",
+      "empty": "Aún no has publicado."
+    }
+  }
 }

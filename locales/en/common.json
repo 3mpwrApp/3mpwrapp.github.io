@@ -2150,4 +2150,12 @@
     "nextMonth": "Next",
     "reloadShort": "Reload"
   }
+  ,
+  "community": {
+    "myPosts": {
+      "title": "My Posts",
+      "open": "Open",
+      "empty": "You haven't posted yet."
+    }
+  }
 }

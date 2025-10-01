@@ -2242,4 +2242,12 @@
     "nextMonth": "Mois suivant",
     "reloadShort": "Actualiser"
   }
+  ,
+  "community": {
+    "myPosts": {
+      "title": "Mes publications",
+      "open": "Ouvrir",
+      "empty": "Vous n'avez pas encore publié."
+    }
+  }
 }
