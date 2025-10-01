@@ -23,6 +23,7 @@ import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
 // Stories mirror YouTube list; we render a single combined list (podcasts only)
 import Card from "../../../components/Card";
+import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { fetchPodcasts } from "../../../services/podcasts";
 import { useCounts } from "../../../store/counts";
 // Link not needed; we open externally via Linking
@@ -371,7 +372,16 @@ function createStyles(palette: any, factor: number) {
 
 function FilterChip({ label, active, onPress, palette }: { label: string; active: boolean; onPress: () => void; palette: any; }) {
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={label} style={({ pressed }) => [{ borderWidth:1, borderColor: active? palette.primary: palette.muted, backgroundColor: active? palette.primary: 'transparent', paddingHorizontal:10, paddingVertical:6, borderRadius:20 }, pressed && { opacity: 0.7 }]}>
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      hitSlop={HIT_SLOP_8}
+      style={({ pressed }) => [
+        { borderWidth:1, borderColor: active? palette.primary: palette.muted, backgroundColor: active? palette.primary: 'transparent', paddingHorizontal:10, paddingVertical:6, borderRadius:20 },
+        pressed && { opacity: 0.7 }
+      ]}
+    >
       <Text style={{ color: active? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{label}</Text>
     </Pressable>
   );
