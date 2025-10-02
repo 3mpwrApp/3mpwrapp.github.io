@@ -5,8 +5,6 @@ title: Contact
 
 # Contact
 
-**Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-
 ## Follow Us on Social Media
 
 Stay connected with 3mpowr App on social media:
