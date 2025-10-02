@@ -2,7 +2,7 @@
 
 This is the official website repository for the 3mpowr App - a community-driven platform for injured workers and persons with disabilities across Canada.
 
-🌐 **Live Site:** [empowrapp08162025.github.io/empowr-site.github.io](https://empowrapp08162025.github.io/empowr-site.github.io/)
+🌐 **Live Site:** [https://empowrapp08162025.github.io](https://empowrapp08162025.github.io)
 
 ## About
 
@@ -80,7 +80,7 @@ This site is automatically deployed to GitHub Pages when changes are merged to t
 
 ## License
 
-© 2024 3mpowr App. All rights reserved.
+© 2025 3mpowr App. All rights reserved.
 
 ---
 
