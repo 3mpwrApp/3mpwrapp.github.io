@@ -4,7 +4,8 @@ const Colors = {
     background: "#FFFFFF",
     // Adjusted for WCAG AAA against white background
     tint: "#004A99",
-    tabIconDefault: "#5A6268",
+  // Darkened to reach AAA (>=7:1) contrast against white
+  tabIconDefault: "#434A50",
     // Adjusted from #007AFF to a deeper shade to reach >=7:1 on white
     tabIconSelected: "#003E80",
   },
