@@ -47,6 +47,7 @@ Ready to join the movement? Here's how you can get started:
 
 - **[Become a Beta Tester](beta)** - Help shape the future of 3mpowr by testing new features
 - **[Read Our User Guide](user-guide)** - Learn how to make the most of the app
+- **[Explore All Features](features)** - Detailed step-by-step guides for every feature
 - **[Subscribe to Our Newsletter](newsletter)** - Stay updated with the latest news and resources
 - **[Explore Our Blog](blog)** - Read stories, updates, and important information
 

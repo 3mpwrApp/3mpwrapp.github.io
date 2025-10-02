@@ -5,7 +5,7 @@ title: Contact
 
 # Contact
 
-**Email:** [contact@empowr.ca](mailto:contact@empowr.ca)
+**Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
 
 ## Follow Us on Social Media
 
