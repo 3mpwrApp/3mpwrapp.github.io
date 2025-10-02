@@ -2,17 +2,19 @@ const Colors = {
   light: {
     text: "#11181C",
     background: "#FFFFFF",
-    tint: "#007AFF",
-    tabIconDefault: "#687076",
-  // Adjusted from #007AFF to #0056B3 for WCAG AA contrast (>4.5:1) against white
-  tabIconSelected: "#0056B3",
+    // Adjusted for WCAG AAA against white background
+    tint: "#004A99",
+    tabIconDefault: "#5A6268",
+    // Adjusted from #007AFF to a deeper shade to reach >=7:1 on white
+    tabIconSelected: "#003E80",
   },
   dark: {
     text: "#ECEDEE",
     background: "#000000",
-    tint: "#0A84FF",
-    tabIconDefault: "#9BA1A6",
-    tabIconSelected: "#0A84FF",
+    // For AAA on black, slightly increase luminance while keeping contrast high
+    tint: "#4DA3FF",
+    tabIconDefault: "#B0B6BB",
+    tabIconSelected: "#4DA3FF",
   },
 } as const;
 export default Colors;

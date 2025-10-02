@@ -34,42 +34,66 @@ jest.mock('react-native', () => {
     const {
       accessibilityRole,
       accessibilityLabel,
-      testID,
-      // remove RN-only or unsupported DOM props
-      accessibilityState: _accessibilityState,
       accessibilityHint: _accessibilityHint,
       accessibilityLiveRegion: _accessibilityLiveRegion,
-      hitSlop: _hitSlop,
-      onPress,
-      contentContainerStyle: _contentContainerStyle,
-      collapsable: _collapsable,
+      accessibilityState,
+      accessible: _accessible,
+      accessibilityElementsHidden: _a11yHidden,
+      accessibilityViewIsModal: _a11yModal,
       nativeID: _nativeID,
       importantForAccessibility: _ifa,
-      maxFontSizeMultiplier: _maxFontSizeMultiplier,
+      testID,
+      // interactivity
+      onPress,
+      onLongPress: _onLongPress,
+      // RN-only or unsupported DOM props
+      hitSlop: _hitSlop,
+      collapsable: _collapsable,
+      contentContainerStyle: _contentContainerStyle,
+      // TextInput only
       placeholderTextColor: _placeholderTextColor,
+      returnKeyType: _returnKeyType,
+      secureTextEntry: _secureTextEntry,
+      // Text only
+      numberOfLines: _numberOfLines,
+      // typography
+      maxFontSizeMultiplier: _maxFontSizeMultiplier,
       // FlatList-only RN props we don't want on DOM
       ListEmptyComponent: _ListEmptyComponent,
       ListHeaderComponent: _ListHeaderComponent,
       ListFooterComponent: _ListFooterComponent,
       initialNumToRender: _initialNumToRender,
       refreshControl: _refreshControl,
-      accessible: _accessible,
-      onLongPress: _onLongPress,
       // Style-only RN props ignored in DOM
       onLayout: _onLayout,
       // everything else
       ...rest
     } = props;
+    // map a11y role
+    let role;
+    if (accessibilityRole === 'button') role = 'button';
+    else if (accessibilityRole === 'link') role = 'link';
+    else if (accessibilityRole === 'header') role = 'heading';
+    // Build base out props
     const out = {
       ...rest,
       'aria-label': accessibilityLabel,
-      role: accessibilityRole === 'button' ? 'button' : undefined,
+      role,
       onClick: onPress,
     };
     // Normalize RN style prop (arrays/functions) to a plain object for DOM
     if ('style' in out) {
       out.style = normalizeStyle(out.style);
       if (out.style === undefined) delete out.style;
+    }
+    // Map accessibilityState to ARIA
+    if (accessibilityState) {
+      if (typeof accessibilityState.checked !== 'undefined') out['aria-checked'] = accessibilityState.checked;
+      if (typeof accessibilityState.disabled !== 'undefined') out['aria-disabled'] = accessibilityState.disabled;
+      if (typeof accessibilityState.selected !== 'undefined') out['aria-selected'] = accessibilityState.selected;
+      if (typeof accessibilityState.busy !== 'undefined') out['aria-busy'] = accessibilityState.busy;
+      if (typeof accessibilityState.expanded !== 'undefined') out['aria-expanded'] = accessibilityState.expanded;
+      if (typeof accessibilityState.readonly !== 'undefined') out['aria-readonly'] = accessibilityState.readonly;
     }
     if (testID) out['data-testid'] = testID;
     return out;

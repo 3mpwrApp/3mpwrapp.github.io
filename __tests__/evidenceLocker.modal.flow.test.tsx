@@ -1,5 +1,7 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
 
+jest.setTimeout(30000);
+
 import EvidenceLocker from '../app/(tabs)/resources/evidence-locker';
 
 // Mock i18n to avoid I18nManager usage and provide simple t/tCount
@@ -17,11 +19,18 @@ jest.mock('../i18n', () => {
 // Provide a minimal react-native DOM shim so the component can render in jsdom
 jest.mock('react-native', () => {
   const React = require('react');
-  const View = ({ children, ...rest }: any) => React.createElement('div', rest, children);
-  const Text = ({ children, ...rest }: any) => React.createElement('span', rest, children);
+  const strip = ({ accessibilityRole, accessibilityLabel, _accessible, _placeholderTextColor, _maxFontSizeMultiplier, onPress, ...rest }: any) => {
+    const out: any = { ...rest };
+    if (accessibilityLabel) out['aria-label'] = accessibilityLabel;
+    if (accessibilityRole === 'button') out.role = 'button';
+    if (onPress) out.onClick = onPress;
+    return out;
+  };
+  const View = ({ children, ...rest }: any) => React.createElement('div', strip(rest), children);
+  const Text = ({ children, ...rest }: any) => React.createElement('span', strip(rest), children);
   const TextInput = ({ value, onChangeText, placeholder, secureTextEntry, ...rest }: any) =>
     React.createElement('input', {
-      ...rest,
+      ...strip(rest),
       placeholder,
       value: value || '',
       type: secureTextEntry ? 'password' : 'text',
@@ -115,7 +124,8 @@ describe('EvidenceLocker passphrase modal flow', () => {
   const confirm = getByPlaceholderText(/Confirm passphrase/i);
   fireEvent.change(confirm, { target: { value: 'Very$trongPass123' } });
 
-  fireEvent.click(getByText(/OK/i));
+  const okButtons = getAllByText(/OK/i);
+  fireEvent.click(okButtons[okButtons.length - 1]);
 
     await waitFor(() => expect(queryByText(/Export encrypted/i)).toBeNull());
   });

@@ -8,7 +8,6 @@ import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import React, { useEffect, useRef, useState } from 'react';
 import { Alert, Button, Image, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { a11yLiveRegion } from '../../utils/platform';
 import A11yPressable from '../../components/A11yPressable';
 import AccessibilityToggle from '../../components/AccessibilityToggle';
 import EmergencyWalletCard from '../../components/EmergencyWalletCard';
@@ -28,6 +27,7 @@ import type { ResourceFormat, TextScale } from '../../store/settings';
 import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
+import { a11yLiveRegion } from '../../utils/platform';
 
 export default function SettingsScreen() {
   const params = useLocalSearchParams<{ open?: string }>();

@@ -2,7 +2,6 @@ import { router } from "expo-router";
 import React from "react";
 import { Alert, FlatList, Modal, StyleSheet, Text, TextInput, View } from "react-native";
 
-import { a11yLiveRegion, nativeOnly } from "../../../utils/platform";
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar"; // retained for some inline uses
 import UploadProgress from "../../../components/UploadProgress";
@@ -20,6 +19,7 @@ import {
   type EvidenceLocalNote,
 } from '../../../services/evidenceCrypto';
 import { announce } from "../../../utils/announce";
+import { a11yLiveRegion, nativeOnly } from "../../../utils/platform";
 // Linking added when preview links are active; safe to lazy import when needed
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
@@ -607,7 +607,7 @@ export default function EvidenceLocker() {
           }}
           style={styles.secondary}
         >
-          <Text style={styles.buttonText}>{t("templates.evidenceLocker.export", "Export")}</Text>
+          <Text style={styles.buttonText}>{t("templates.evidenceLocker.export", "Export")} CSV</Text>
         </A11yPressable>
       </View>
       {/* Queue screen */}

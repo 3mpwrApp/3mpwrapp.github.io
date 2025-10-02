@@ -1,7 +1,6 @@
 import React from 'react';
 import { FlatList, Linking, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { nativeOnly } from '../../../utils/platform';
 import A11yPressable from '../../../components/A11yPressable';
 import MapEmbed from '../../../components/MapEmbed';
 import ProvincePicker from '../../../components/ProvincePicker';
@@ -13,6 +12,7 @@ import { fetchAdvocates } from '../../../services/advocates';
 import { ANALYTICS_EVENTS, trackEvent } from '../../../services/analyticsClient';
 import { useFavorites } from '../../../store/favorites';
 import { useAppPalette } from '../../../theme/usePalette';
+import { nativeOnly } from '../../../utils/platform';
 
 export const options = { href: null };
 
