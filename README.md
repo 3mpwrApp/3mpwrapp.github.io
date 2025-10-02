@@ -1,64 +1,87 @@
 # 3mpowr App Website
 
-Official website for 3mpowr App - A community-driven platform for injured workers and persons with disabilities across Canada.
+This is the official website repository for the 3mpowr App - a community-driven platform for injured workers and persons with disabilities across Canada.
 
-🌐 **Live Site**: [https://empowrapp08162025.github.io](https://empowrapp08162025.github.io)
+🌐 **Live Site:** [https://empowrapp08162025.github.io](https://empowrapp08162025.github.io)
 
 ## About
 
-3mpowr App provides practical tools and a vibrant community to help people:
-- Connect with others who understand their journey
-- Advocate for their rights and meaningful change
-- Learn about resources, rights, and support available
-- Grow through peer support and shared experiences
+3mpowr App provides practical tools and a vibrant community to help people connect, advocate for their rights, and access valuable resources. This repository contains the source code for our informational website built with Jekyll and hosted on GitHub Pages.
 
-## Technology
+## Contributing
 
-This website is built with:
-- **Jekyll** - Static site generator
-- **GitHub Pages** - Hosting and deployment
-- **GitHub Actions** - Automated builds on push to main
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting any changes.
 
-## Local Development
+### Quick Start for Contributors
 
-To run the site locally:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Make your changes
+4. Test locally (optional: `bundle exec jekyll serve`)
+5. Submit a pull request
+
+For detailed instructions, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Branch Protection
+
+The main branch is protected to ensure code quality and stability. Please read our [Branch Protection Guide](.github/BRANCH_PROTECTION.md) to understand the workflow and requirements.
+
+**Key Points:**
+- Direct pushes to `main` are not allowed
+- All changes must go through pull requests
+- Pull requests require approval before merging
+- CI checks must pass before merging
+
+## Development
+
+### Local Setup
+
+This is a Jekyll-based static site. To run it locally:
 
 ```bash
 # Install dependencies
 bundle install
 
-# Serve the site locally
+# Run local server
 bundle exec jekyll serve
 
 # Visit http://localhost:4000
 ```
 
-## Site Structure
+### Project Structure
 
-- `_layouts/` - Page templates
-- `_config.yml` - Jekyll configuration
-- `assets/` - CSS, images, and other static files
-- `*.md` and `*/index.md` - Page content in Markdown
+```
+├── .github/          # GitHub configuration and workflows
+├── _layouts/         # Jekyll layout templates
+├── assets/           # CSS, images, and other static files
+├── blog/             # Blog pages
+├── beta/             # Beta testing information
+├── contact/          # Contact pages
+├── resources/        # Resource pages
+├── index.md          # Homepage
+└── _config.yml       # Jekyll configuration
+```
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch via GitHub Actions.
+This site is automatically deployed to GitHub Pages when changes are merged to the main branch. The deployment workflow is defined in `.github/workflows/jekyll.yml`.
 
-## Contributing
+## Support
 
-1. Create a new branch for your changes
-2. Make your edits
-3. Test locally if possible
-4. Create a pull request to `main`
-5. Once merged, the site will automatically deploy
+- 📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
+- 📘 [Documentation](CONTRIBUTING.md)
+- 🔒 [Branch Protection Guide](.github/BRANCH_PROTECTION.md)
 
-## Contact
+## Connect With Us
 
-- **Email**: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- **Facebook**: [3mpowrapp](https://www.facebook.com/3mpowrapp)
-- **X (Twitter)**: [@3mpowrApp0816](https://x.com/3mpowrApp0816)
-- **Instagram**: [@3mpowrapp](https://www.instagram.com/3mpowrapp/)
+- [Facebook](https://www.facebook.com/3mpowrapp)
+- [X (Twitter)](https://x.com/3mpowrApp0816)
+- [Instagram](https://www.instagram.com/3mpowrapp/)
+
+## License
+
+© 2025 3mpowr App. All rights reserved.
 
 ---
 
-© 2025 3mpowr App. Built with ❤️ for the community.
+**Stay informed, empowered, and connected!**
