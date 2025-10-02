@@ -16,21 +16,30 @@ This guide is for repository maintainers and administrators to help manage the 3
 
 After creating or cloning this repository, follow these steps:
 
-1. **Enable GitHub Pages**
+1. **Enable GitHub Pages** ⚠️ **IMPORTANT - START HERE**
    - Go to Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: `main` / `(root)`
-   - Click Save
+   - Source: **Select "GitHub Actions"** (recommended)
+   - This enables automatic deployment using the workflow in `.github/workflows/jekyll.yml`
+   - **Alternative:** Deploy from a branch
+     - Branch: `main` / `(root)`
+     - Click Save
+   
+   > **📖 Detailed Guide:** See [ACTIVATION.md](../ACTIVATION.md) for step-by-step instructions with screenshots
 
-2. **Set Up Branch Protection** (see detailed guide below)
+2. **Verify Deployment**
+   - Check the Actions tab for the first workflow run
+   - Wait 2-5 minutes for deployment to complete
+   - Visit https://empowrapp08162025.github.io to see your live site
 
-3. **Configure Repository Settings**
+3. **Set Up Branch Protection** (see detailed guide below)
+
+4. **Configure Repository Settings**
    - Settings → General → Features
    - ✅ Enable Issues
    - ✅ Enable Pull Requests
    - ✅ Enable Discussions (optional)
 
-4. **Add Collaborators**
+5. **Add Collaborators**
    - Settings → Collaborators and teams
    - Add team members with appropriate permissions
 
@@ -187,12 +196,25 @@ When reviewing a PR, verify:
 
 ## Release Process
 
-This site uses continuous deployment:
+This site uses continuous deployment with GitHub Actions:
 
 1. **Merge to Main** → Automatically triggers deployment
-2. **GitHub Actions** runs Jekyll build
+2. **GitHub Actions** runs Jekyll build (see `.github/workflows/jekyll.yml`)
 3. **Deploy to GitHub Pages** happens automatically
-4. **Site Updates** within a few minutes
+4. **Site Updates** within 2-5 minutes
+
+### Deployment Methods
+
+**GitHub Actions (Recommended - Currently Configured):**
+- Automatic deployment on every push to `main`
+- Full control over build process
+- Detailed logs in Actions tab
+- Modern and flexible approach
+
+**Deploy from Branch (Legacy):**
+- Alternative method available in Settings → Pages
+- Less control over build process
+- Simpler but less flexible
 
 ### Manual Deployment
 

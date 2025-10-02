@@ -1,8 +1,26 @@
 # 3mpowr App Website
 
+> **⚠️ WEBSITE NOT LIVE YET?** → See [HOW_TO_ACTIVATE.md](HOW_TO_ACTIVATE.md) for quick setup (takes 2 minutes!)
+
 This is the official website repository for the 3mpowr App - a community-driven platform for injured workers and persons with disabilities across Canada.
 
 🌐 **Live Site:** [https://empowrapp08162025.github.io](https://empowrapp08162025.github.io)
+
+---
+
+## 🚀 First Time Here? Activate Your Website!
+
+**Is your website not live yet?** Follow our step-by-step guide to activate GitHub Pages:
+
+👉 **[ACTIVATION GUIDE](ACTIVATION.md)** - Enable your website in 5 minutes!
+
+The guide includes:
+- ✅ Simple step-by-step instructions
+- ✅ Visual diagrams
+- ✅ Troubleshooting tips
+- ✅ What to do after activation
+
+---
 
 ## About
 
