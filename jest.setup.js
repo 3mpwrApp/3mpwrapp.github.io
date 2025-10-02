@@ -47,6 +47,11 @@ jest.mock('react-native', () => {
       importantForAccessibility: _ifa,
       maxFontSizeMultiplier: _maxFontSizeMultiplier,
       placeholderTextColor: _placeholderTextColor,
+      // FlatList-only RN props we don't want on DOM
+      ListEmptyComponent: _ListEmptyComponent,
+      ListHeaderComponent: _ListHeaderComponent,
+      ListFooterComponent: _ListFooterComponent,
+      initialNumToRender: _initialNumToRender,
       refreshControl: _refreshControl,
       accessible: _accessible,
       onLongPress: _onLongPress,

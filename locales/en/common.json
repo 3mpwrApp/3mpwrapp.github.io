@@ -57,7 +57,7 @@
     },
     "intro": "Build supportive routines and track your wellbeing.",
     "breathing": "Breathing",
-  "dbt": {
+    "dbt": {
       "title": "DBT Skill Matcher",
       "tools": {
         "coach": "Coach",
@@ -407,7 +407,7 @@
     },
     "collective": {
       "title": "Collective Legal Action Hub",
-  "subtitle": "If multiple users report the same violation, 3mpowr App groups cases for union / class-action leverage.",
+      "subtitle": "If multiple users report the same violation, 3mpowr App groups cases for union / class-action leverage.",
       "typeLabel": "Violation type",
       "type": {
         "deniedModified": "denied modified duties",
@@ -577,7 +577,7 @@
     "latestEvent": "Latest event"
   },
   "home": {
-  "title": "Welcome to 3mpowr App",
+    "title": "Welcome to 3mpowr App",
     "subtitle": "Support. Advocacy. Empowerment.",
     "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!",
     "guide": {
@@ -599,10 +599,10 @@
     "subtitle": "Log how you feel to spot trends.",
     "notePlaceholder": "Optional note",
     "save": "Save",
-      "quick": {
-        "sleep": "Sleep & Energy",
-        "balance": "Work/Rest Balance AI"
-      },
+    "quick": {
+      "sleep": "Sleep & Energy",
+      "balance": "Work/Rest Balance AI"
+    },
     "today": "Today",
     "emptyToday": "No entries yet today.",
     "avg7d": "7d Avg:",
@@ -860,7 +860,7 @@
     "copyAll": "Copy all",
     "exportDoc": ".doc",
     "reset": "Reset",
-  "resetFilters": "Reset filters",
+    "resetFilters": "Reset filters",
     "loading": "Loading...",
     "edit": "Edit",
     "previewImage": "Preview image",
@@ -967,7 +967,7 @@
     },
     "collective": {
       "title": "Collective Legal Action Hub",
-  "subtitle": "If multiple users report the same violation, 3mpowr App groups cases for union / class-action leverage.",
+      "subtitle": "If multiple users report the same violation, 3mpowr App groups cases for union / class-action leverage.",
       "typeLabel": "Violation type",
       "type": {
         "deniedModified": "denied modified duties",
@@ -1034,7 +1034,7 @@
     },
     "system": {
       "changelog": {
-  "title": "What's new in 3mpowr App",
+        "title": "What's new in 3mpowr App",
         "body": "Check out the latest updates and improvements."
       }
     },
@@ -1182,7 +1182,7 @@
     "scheduleEventReminder": "Schedule event reminder",
     "removeEventReminder": "Remove event reminder",
     "addToCalendar": "Add to external calendar",
-  "header": "3mpowr App — Local Advocacy Snapshot",
+    "header": "3mpowr App — Local Advocacy Snapshot",
     "evidenceLine": "Evidence Locker: {{noteCount}} notes, {{docCount}} file(s)",
     "resourcesViewed": "Resources viewed this session: ~{{resourcesCount}}",
     "signals": "Signals:",
@@ -1346,7 +1346,7 @@
       "resetHint": "Clears all notes from view (files unaffected unless included).",
       "resetConfirm": "Clear all locker notes? This cannot be undone.",
       "resetAnnounce": "Evidence locker cleared",
-  "hintTags": "Use tags to find notes faster. Try tagging calls, letters, or decisions.",
+      "hintTags": "Use tags to find notes faster. Try tagging calls, letters, or decisions.",
       "copied": "Copied",
       "copiedBody": "Notes copied to clipboard.",
       "clipboardMissingTitle": "Clipboard not available",
@@ -1355,15 +1355,15 @@
       "shareUnavailableBody": "System share sheet not available.",
       "shareError": "Share failed",
       "shareErrorBody": "Could not share evidence file.",
-  "exportError": "Export failed",
+      "exportError": "Export failed",
       "exportErrorBody": "Could not build evidence export.",
       "exportReady": "Export ready",
-  "exportEncrypted": "Export encrypted",
-  "exportSavedCache": "Encrypted file saved to cache.",
-  "importEncrypted": "Import encrypted",
-  "importFailedTitle": "Import failed",
-  "importFailedBody": "Could not import encrypted data.",
-  "importedNotes": "Imported {{count}} notes.",
+      "exportEncrypted": "Export encrypted",
+      "exportSavedCache": "Encrypted file saved to cache.",
+      "importEncrypted": "Import encrypted",
+      "importFailedTitle": "Import failed",
+      "importFailedBody": "Could not import encrypted data.",
+      "importedNotes": "Imported {{count}} notes.",
       "summaryRegion": "Evidence summary region",
       "queueTitle": "Upload Queue",
       "queueScreenLabel": "Evidence Locker Upload Queue screen",
@@ -1619,8 +1619,8 @@
       "listTab": "List",
       "monthView": "Month",
       "weekView": "Week",
-  "prevMonth": "Previous month",
-  "nextMonth": "Next month",
+      "prevMonth": "Previous month",
+      "nextMonth": "Next month",
       "importICS": "Import ICS to Calendar",
       "importICSShort": "Import ICS",
       "imported": "Imported",
@@ -1644,7 +1644,7 @@
       "myDeadlines": "My Deadlines",
       "loading": "(loading...)",
       "reload": "Reload",
-  "reloadShort": "Reload",
+      "reloadShort": "Reload",
       "exportAllIcs": "Export all as ICS",
       "exportAllCsv": "Export all as CSV",
       "bulkMarkDone": "Mark all done",
@@ -1693,7 +1693,6 @@
       "importedFromICS": "Added {{count}} deadlines from ICS",
       "importFailedBodyList": "Could not import ICS file.",
       "listTitle": "List",
-      
       "exportAllICS": "Export all as ICS",
       "exportAllCSV": "Export all as CSV",
       "bulkMarkedDone": "All marked done",
@@ -1724,7 +1723,6 @@
       "exportFailedBody": "Could not create export file.",
       "icsBtn": "ICS",
       "deleted": "Deleted",
-      
       "dayCell": "Day",
       "emptyDay": "No events",
       "csvHeaderDate": "date",
@@ -1839,7 +1837,6 @@
       "working": "[T] common.working"
     }
   },
-  
   "test": {
     "badge": "[T]BadgeMarker"
   },
@@ -1939,7 +1936,9 @@
   },
   "eventsFeature": {
     "empty": "No events match your filters",
-    "search": { "placeholder": "Search events, tags, places" },
+    "search": {
+      "placeholder": "Search events, tags, places"
+    },
     "section": {
       "community": "Community Events",
       "observances": "Holidays & Observances"
@@ -1991,7 +1990,7 @@
     "loadFailed": "Failed to load events"
   },
   "privacyGate": {
-  "title": "Unlock 3mpowr App",
+    "title": "Unlock 3mpowr App",
     "subtitle": "Enter your passcode to continue.",
     "placeholder": "Enter passcode",
     "unlock": "Unlock",
@@ -1999,7 +1998,9 @@
     "incorrectBody": "Please try again."
   },
   "emergencyWalletCard": {
-    "a11y": { "form": "Emergency wallet card form" },
+    "a11y": {
+      "form": "Emergency wallet card form"
+    },
     "personalInfo": "Personal Information",
     "fullName": "Full Name",
     "fullNamePh": "Enter your full name",
@@ -2044,10 +2045,9 @@
     "saveFailed": "Failed to save emergency information.",
     "privacy": "All information is stored securely on your device only. Nothing is shared with external servers."
   },
-  
   "about": {
     "title": "About & Contact",
-  "intro1": "3mpowr App supports injured workers, the disability community, advocates and allies with tools, resources, and updates.",
+    "intro1": "3mpowr App supports injured workers, the disability community, advocates and allies with tools, resources, and updates.",
     "intro2": "Vision: a full lifecycle empowerment hub - starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.",
     "intro3": "Questions, suggestions, or requests? Reach out anytime.",
     "emailLabel": "Email",
@@ -2246,5 +2246,4 @@
     "nextMonth": "Next",
     "reloadShort": "Reload"
   }
-  
 }

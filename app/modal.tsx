@@ -1,19 +1,20 @@
+import { Stack, useRouter } from "expo-router";
 import React from "react";
 import {
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  useColorScheme,
+    Pressable,
+    StyleSheet,
+    Text,
+    View,
+    useColorScheme,
 } from "react-native";
-import { Stack, useRouter } from "expo-router";
 
-import { colors, type Palette } from "../theme/colors";
+import { maxFontScale } from '../utils/platform';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../hooks/useA11y";
+import { colors, type Palette } from "../theme/colors";
 
 export default function Modal() {
   const router = useRouter();
@@ -34,7 +35,7 @@ export default function Modal() {
           nativeID="modal-title"
           accessibilityRole="header"
           style={styles.text}
-          maxFontSizeMultiplier={MAX_FONT_SCALE}
+          {...maxFontScale(MAX_FONT_SCALE)}
         >
           This is a modal screen
         </Text>
@@ -48,7 +49,7 @@ export default function Modal() {
         >
           <Text
             style={styles.buttonText}
-            maxFontSizeMultiplier={MAX_FONT_SCALE}
+            {...maxFontScale(MAX_FONT_SCALE)}
           >
             Close
           </Text>

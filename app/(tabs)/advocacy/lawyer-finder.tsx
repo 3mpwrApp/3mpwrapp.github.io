@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList, Linking, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { nativeOnly } from '../../../utils/platform';
 import A11yPressable from '../../../components/A11yPressable';
 import MapEmbed from '../../../components/MapEmbed';
 import ProvincePicker from '../../../components/ProvincePicker';
@@ -83,7 +84,7 @@ export default function LawyerFinder() {
         </A11yPressable>
       </View>
       {mode==='list' ? (
-      <FlatList data={filtered} initialNumToRender={Math.min(10, filtered.length || 10)} keyExtractor={(a)=>a.id} renderItem={({item}) => (
+      <FlatList data={filtered} keyExtractor={(a)=>a.id} renderItem={({item}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{item.name}{item.org? ` • ${item.org}`: ''}</Text>
           <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || t('advocacy.finder.locationUnknown','—')}</Text>
@@ -108,8 +109,9 @@ export default function LawyerFinder() {
             <Text style={s.btnText}>{loading? t('common.loading','Loading…'): t('common.loadMore','Load more')}</Text>
           </A11yPressable>
         ) : null
-      }
-      />) : (
+  }
+  {...nativeOnly({ initialNumToRender: Math.min(10, filtered.length || 10) })}
+  />) : (
         <View style={s.mapWrap}>
           <Text style={s.cardTitle}>{t('advocacy.finder.modeMap','Map')}</Text>
           <MapEmbed points={filtered.slice(0,20).map((item)=> ({ id: item.id, title: item.name, ...placeToCoords(item.city, item.province) }))} />

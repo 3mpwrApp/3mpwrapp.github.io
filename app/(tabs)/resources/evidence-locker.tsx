@@ -2,6 +2,7 @@ import { router } from "expo-router";
 import React from "react";
 import { Alert, FlatList, Modal, StyleSheet, Text, TextInput, View } from "react-native";
 
+import { a11yLiveRegion, nativeOnly } from "../../../utils/platform";
 import A11yPressable from "../../../components/A11yPressable";
 import ProgressBar from "../../../components/ProgressBar"; // retained for some inline uses
 import UploadProgress from "../../../components/UploadProgress";
@@ -9,14 +10,14 @@ import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { useAuth } from "../../../context/AuthContext";
 import { addEvidenceNote, deleteEvidenceDoc, listEvidencePage, uploadEvidenceFileWithProgress, type EvidenceFile } from "../../../services/evidence";
 import {
-    ENCRYPTED_NOTES_KEY,
-    exportNotesEncrypted,
-    importNotesEncrypted,
-    loadEncryptedNotes,
-    migrateLegacyNotes,
-    rotateDeviceKeyAndReencrypt,
-    saveEncryptedNotes,
-    type EvidenceLocalNote,
+  ENCRYPTED_NOTES_KEY,
+  exportNotesEncrypted,
+  importNotesEncrypted,
+  loadEncryptedNotes,
+  migrateLegacyNotes,
+  rotateDeviceKeyAndReencrypt,
+  saveEncryptedNotes,
+  type EvidenceLocalNote,
 } from '../../../services/evidenceCrypto';
 import { announce } from "../../../utils/announce";
 // Linking added when preview links are active; safe to lazy import when needed
@@ -829,7 +830,7 @@ export default function EvidenceLocker() {
         </Modal>
       )}
       {toast && (
-        <View style={styles.toast} accessibilityLiveRegion="polite" accessible>
+        <View style={styles.toast} {...a11yLiveRegion('polite')} {...nativeOnly({ accessible: true })}>
           <Text style={styles.toastText}>{toast}</Text>
         </View>
       )}

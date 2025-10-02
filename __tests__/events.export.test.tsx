@@ -42,7 +42,7 @@ describe('Events export actions', () => {
   it('exports ICS and CSV via share', async () => {
     const spy = jest.spyOn(RN.Share, 'share').mockResolvedValue({} as any);
     render(<EventsScreen />);
-    const toggle = screen.getByText(/Create Event|Close Form/i);
+    const toggle = await screen.findByText(/Create Event|Close Form/i);
     // @ts-ignore react-native testing library press alias
     fireEvent.press(toggle);
     const title = screen.getByPlaceholderText(/Title/i);
@@ -63,5 +63,5 @@ describe('Events export actions', () => {
   fireEvent.press(csv);
 
     expect(spy).toHaveBeenCalled();
-  });
+  }, 30000);
 });

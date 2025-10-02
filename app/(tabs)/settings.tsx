@@ -8,6 +8,7 @@ import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import React, { useEffect, useRef, useState } from 'react';
 import { Alert, Button, Image, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { a11yLiveRegion } from '../../utils/platform';
 import A11yPressable from '../../components/A11yPressable';
 import AccessibilityToggle from '../../components/AccessibilityToggle';
 import EmergencyWalletCard from '../../components/EmergencyWalletCard';
@@ -465,7 +466,7 @@ function BookmarksSection() {
       <Text style={styles.rowLabel}>{t('settings.bookmarks.label','Label')}</Text>
       <TextInput style={styles.input} placeholder={t('settings.bookmarks.labelPlaceholder','My Resources')} value={label} onChangeText={setLabel} />
       <Button title={t('settings.bookmarks.add','Add Bookmark')} onPress={onAdd} />
-      {error && <Text style={{ color:palette.error, marginTop:6 }} accessibilityLiveRegion='polite'>{error}</Text>}
+  {error && <Text style={{ color:palette.error, marginTop:6 }} {...a11yLiveRegion('polite')}>{error}</Text>}
       {items.length === 0 ? <Text style={[styles.description, { marginTop:12 }]}>{t('settings.bookmarks.empty','No bookmarks yet.')}</Text> : (
         <View style={{ marginTop:12 }}>
           {items.slice().sort((a,b)=> b.created - a.created).map(b => (

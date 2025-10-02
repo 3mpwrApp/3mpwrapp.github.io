@@ -1,10 +1,11 @@
 import React from "react";
-import { Platform, Pressable, StyleSheet, TextInput, View } from "react-native";
+import { Pressable, StyleSheet, TextInput, View } from "react-native";
 
 import { useTranslation } from "../i18n";
 import { type Palette } from "../theme/colors";
 import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
+import { textInputNativeProps } from '../utils/platform';
 
 type Props = {
   value: string;
@@ -39,7 +40,6 @@ export default function SearchBar({
     [palette, factor],
   );
 
-  const isWeb = Platform.OS === 'web';
   return (
     <View style={styles.container} accessibilityRole="search" testID={testID}>
       <Ionicons
@@ -54,7 +54,7 @@ export default function SearchBar({
         onChangeText={onChangeText}
         placeholder={finalPlaceholder}
         accessibilityLabel={finalA11yLabel}
-        {...(!isWeb ? { placeholderTextColor: palette.muted ?? palette.text, returnKeyType: 'search' as const } : {})}
+        {...textInputNativeProps({ placeholderTextColor: palette.muted ?? palette.text, returnKeyType: 'search' as const })}
       />
       {!!value && (
         <Pressable
