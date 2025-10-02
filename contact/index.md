@@ -5,8 +5,6 @@ title: Contact
 
 # Contact
 
-**Email:** [contact@empowr.ca](mailto:contact@empowr.ca)
-
 ## Follow Us on Social Media
 
 Stay connected with 3mpowr App on social media:
