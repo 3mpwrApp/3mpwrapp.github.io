@@ -5,7 +5,7 @@
 ### Quick Steps:
 
 1. **Go to Settings**
-   - Visit: https://github.com/empowrapp08162025/empowrapp.github.io/settings/pages
+   - Visit: https://github.com/3mpowrApp/3mpwrapp.github.io/settings/pages
 
 2. **Select GitHub Actions as the source**
    - Under "Build and deployment"
@@ -13,10 +13,10 @@
 
 3. **Wait 2-5 minutes**
    - The first deployment will run automatically
-   - Check the Actions tab: https://github.com/empowrapp08162025/empowrapp.github.io/actions
+   - Check the Actions tab: https://github.com/3mpowrApp/3mpwrapp.github.io/actions
 
 4. **Visit your live site**
-   - https://empowrapp08162025.github.io
+   - https://3mpwrapp.github.io
 
 ---
 
