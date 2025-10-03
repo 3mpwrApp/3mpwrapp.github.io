@@ -29,7 +29,7 @@ After creating or cloning this repository, follow these steps:
 2. **Verify Deployment**
    - Check the Actions tab for the first workflow run
    - Wait 2-5 minutes for deployment to complete
-   - Visit https://empowrapp08162025.github.io to see your live site
+   - Visit https://3mpwrapp.github.io to see your live site
 
 3. **Set Up Branch Protection** (see detailed guide below)
 
@@ -58,17 +58,17 @@ After creating or cloning this repository, follow these steps:
       ✅ Require approvals: 1
       ✅ Dismiss stale pull request approvals when new commits are pushed
       ✅ Require review from Code Owners
-   
+
    ✅ Require status checks to pass before merging
       ✅ Require branches to be up to date before merging
       ✅ Status checks: build (from jekyll.yml workflow)
-   
+
    ✅ Require conversation resolution before merging
-   
+
    ✅ Include administrators (apply rules to admins too)
-   
+
    ✅ Restrict who can push to matching branches (optional)
-   
+
    ❌ Allow force pushes: Disabled
    ❌ Allow deletions: Disabled
    ```
