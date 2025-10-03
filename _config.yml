@@ -16,7 +16,7 @@ plugins:
 # SEO and social (jekyll-seo-tag)
 author:
   name: "3mpowr App"
-logo: /assets/images/og-image.png
+logo: /assets/favicon.svg
 social:
   name: "3mpowr App"
   links:
