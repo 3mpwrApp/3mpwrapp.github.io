@@ -17,8 +17,9 @@ Stay tuned for updates, stories, and news.
 <article>
   <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
   <p><small>{{ post.date | date: "%B %-d, %Y" }}</small></p>
+  {% if post.excerpt %}
   <p>{{ post.excerpt }}</p>
-  <p><a href="{{ post.url | relative_url }}">Read more →</a></p>
+  {% endif %}
 </article>
 <hr>
 {% endfor %}
