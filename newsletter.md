@@ -18,7 +18,15 @@ Stay updated with the latest news, resources, and updates from 3mpowr App.
 
 ## Subscribe Now
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9AHMg9pMWS2njErNXDj1W0g2rXBNabXsUnZOgRF4vfvk0kQ/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe
+  title="3mpowr App newsletter signup"
+  src="https://docs.google.com/forms/d/e/1FAIpQLSf9AHMg9pMWS2njErNXDj1W0g2rXBNabXsUnZOgRF4vfvk0kQ/viewform?embedded=true"
+  width="100%"
+  height="900"
+  frameborder="0"
+  marginheight="0"
+  marginwidth="0"
+>Loading…</iframe>
 
 ---
 
