@@ -44,3 +44,8 @@ ga_measurement_id: ""
 
 twitter_username: "3mpowrApp0816"
 github_username: "3mpowrApp"
+
+# New: asset variables used by custom-head.html
+favicon: /assets/favicon.svg
+webmanifest: /assets/site.webmanifest
+# apple_touch_icon: /assets/apple-touch-icon.png  # Uncomment after adding the file
