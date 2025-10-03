@@ -7,7 +7,7 @@ exclude = [
   "https://docs.google.com/.*"
 ]
 
-# Some sites return 403 to headless checkers; treat as acceptable.
+# Accept common non-200 responses from guarded endpoints.
 accept = [200, 204, 206, 403]
 
 # Retries to reduce transient failures.
