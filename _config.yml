@@ -13,10 +13,24 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Kramdown options (for Table of Contents)
+kramdown:
+  toc_levels: 2..4
+
 # SEO and social (jekyll-seo-tag)
 author:
   name: "3mpowr App"
+# For best social previews, place a 1200x630 PNG at this path.
+# You can keep favicon as the logo for JSON-LD; 'image' below is used for social cards.
 logo: /assets/favicon.svg
+
+# Default Open Graph/Twitter image for all pages.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-image.png
+
 social:
   name: "3mpowr App"
   links:
@@ -25,8 +39,7 @@ social:
     - https://x.com/3mpowrApp0816
     - https://www.instagram.com/3mpowrapp/
 
-# Optional: GA4 (custom include)
-# Set to your GA4 Measurement ID, e.g., G-ABC1234567
+# Optional: GA4 (set your Measurement ID to enable)
 ga_measurement_id: ""
 
 # Minima settings (optional social handles)
