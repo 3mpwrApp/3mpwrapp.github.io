@@ -13,13 +13,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Link Checker
+
+      # Build the site so we check real output, not Liquid templates
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Install dependencies and build
+        run: |
+          bundle install --jobs 4 --retry 3
+          bundle exec jekyll build --trace
+
+      - name: Link Checker (lychee) on built site
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
             --verbose
             --no-progress
             --config lychee.toml
-            .
+            ./_site
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
