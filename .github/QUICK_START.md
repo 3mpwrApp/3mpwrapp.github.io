@@ -52,7 +52,7 @@ You need to manually set up branch protection in GitHub settings:
 
 1. **Go to Repository Settings:**
    ```
-   https://github.com/empowrapp08162025/empowr-site.github.io/settings
+   https://github.com/3mpowrApp/3mpwrapp.github.io/settings
    ```
 
 2. **Navigate to Branches:**
@@ -68,14 +68,14 @@ You need to manually set up branch protection in GitHub settings:
       ✅ Require approvals: 1
       ✅ Dismiss stale pull request approvals when new commits are pushed
       ✅ Require review from Code Owners
-   
+
    ✅ Require status checks to pass before merging
       ✅ Require branches to be up to date before merging
       ✅ Add status check: build
-   
+
    ✅ Require conversation resolution before merging
    ✅ Include administrators
-   
+
    ❌ Allow force pushes: DISABLED
    ❌ Allow deletions: DISABLED
    ```
@@ -86,7 +86,7 @@ You need to manually set up branch protection in GitHub settings:
 
 1. **Go to Repository Settings:**
    ```
-   https://github.com/empowrapp08162025/empowr-site.github.io/settings
+   https://github.com/3mpowrApp/3mpwrapp.github.io/settings
    ```
 
 2. **Navigate to Rulesets:**
@@ -123,15 +123,15 @@ git push origin main
 - **For Setup:** Read [BRANCH_PROTECTION.md](BRANCH_PROTECTION.md)
 - **For Maintainers:** Read [MAINTENANCE.md](MAINTENANCE.md)
 
-## 🔑 Key Benefits
+## 🔐 Key Benefits
 
 Once branch protection is enabled:
 
-✅ **No direct pushes to main** - All changes go through PRs
-✅ **Required reviews** - Changes must be approved before merging
-✅ **Status checks** - Jekyll build must pass before merging
-✅ **Protected history** - No force pushes or deletions
-✅ **Code quality** - Consistent review process
+✅ **No direct pushes to main** - All changes go through PRs  
+✅ **Required reviews** - Changes must be approved before merging  
+✅ **Status checks** - Jekyll build must pass before merging  
+✅ **Protected history** - No force pushes or deletions  
+✅ **Code quality** - Consistent review process  
 ✅ **Collaboration** - Standardized workflow for all contributors
 
 ## 💡 Tips
@@ -148,12 +148,12 @@ Once branch protection is enabled:
 - Open an issue if you encounter problems
 - Email: empowrapp08162025@gmail.com
 
-## 📋 Quick Links
+## 📎 Quick Links
 
-- [Repository](https://github.com/empowrapp08162025/empowr-site.github.io)
-- [Settings](https://github.com/empowrapp08162025/empowr-site.github.io/settings)
-- [Branch Protection](https://github.com/empowrapp08162025/empowr-site.github.io/settings/branches)
-- [Rulesets](https://github.com/empowrapp08162025/empowr-site.github.io/settings/rules)
+- [Repository](https://github.com/3mpowrApp/3mpwrapp.github.io)
+- [Settings](https://github.com/3mpowrApp/3mpwrapp.github.io/settings)
+- [Branch Protection](https://github.com/3mpowrApp/3mpwrapp.github.io/settings/branches)
+- [Rulesets](https://github.com/3mpowrApp/3mpwrapp.github.io/settings/rules)
 
 ---
 
