@@ -10,7 +10,7 @@ Help us shape the future of the 3mpowr App by joining our beta tester program.
 
 ## Signup Form
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/formResponse" method="POST" target="_blank" novalidate>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/formResponse" method="POST" target="_blank">
   <div>
     <label for="beta-name">Name</label><br>
     <input id="beta-name" type="text" name="entry.2048050345" autocomplete="name" required>
