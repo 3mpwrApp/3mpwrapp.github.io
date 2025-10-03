@@ -45,6 +45,43 @@ description: Community-driven tools, resources, and support for injured workers 
 
 ---
 
+## Get the app
+
+<p>Mobile apps are in progress. Store availability is coming soon.</p>
+
+<ul class="store-badges" role="list" aria-label="App store availability">
+  <li role="listitem">
+    <figure class="store-badge">
+      <img
+        src="{{ '/assets/images/app-store-coming-soon.svg' | relative_url }}"
+        width="180"
+        height="53"
+        alt="App Store — coming soon"
+      >
+      <figcaption class="sr-only">App Store — coming soon</figcaption>
+    </figure>
+  </li>
+  <li role="listitem">
+    <figure class="store-badge">
+      <img
+        src="{{ '/assets/images/google-play-coming-soon.svg' | relative_url }}"
+        width="180"
+        height="53"
+        alt="Google Play — coming soon"
+      >
+      <figcaption class="sr-only">Google Play — coming soon</figcaption>
+    </figure>
+  </li>
+</ul>
+
+<!-- When live, replace the figures above with anchors like:
+<a class="store-link" href="https://apps.apple.com/app/idYOUR_ID">
+  <img src="{{ '/assets/images/app-store-badge.svg' | relative_url }}" alt="Download on the App Store">
+</a>
+-->
+
+---
+
 ## Get Involved
 
 Ready to join the movement? Here’s how you can get started:
