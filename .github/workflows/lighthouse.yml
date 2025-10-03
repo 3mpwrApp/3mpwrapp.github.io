@@ -1,0 +1,29 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: "0 7 * * 1" # Weekly Monday 07:00 UTC
+
+jobs:
+  lhci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Lighthouse CI on production
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://3mpwrapp.github.io/
+            https://3mpwrapp.github.io/features
+            https://3mpwrapp.github.io/user-guide
+            https://3mpwrapp.github.io/blog
+            https://3mpwrapp.github.io/beta
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: .lighthouserc.json
