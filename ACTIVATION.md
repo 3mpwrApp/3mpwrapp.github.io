@@ -20,7 +20,7 @@ Your website repository is already set up with all the necessary code and config
 
 1. Go to your repository on GitHub:
    ```
-   https://github.com/empowrapp08162025/empowrapp.github.io/settings
+   https://github.com/3mpowrApp/3mpwrapp.github.io/settings
    ```
 
 2. Click on the **Settings** tab (⚙️ gear icon near the top)
@@ -48,28 +48,28 @@ You'll see the GitHub Pages configuration page. Follow these settings:
    > - Build logs you can review
 
 #### **Custom domain** (Optional)
-- Leave blank to use the default: `https://empowrapp08162025.github.io`
+- Leave blank to use the default: `https://3mpwrapp.github.io`
 - Or enter a custom domain if you have one
 
 ### Step 4: Save and Wait
 
 1. The settings save automatically when you select **GitHub Actions**
 2. GitHub will now trigger the first deployment
-3. Your website will be live at: **https://empowrapp08162025.github.io**
+3. Your website will be live at: **https://3mpwrapp.github.io**
 4. First deployment takes 2-5 minutes
 
 ### Step 5: Verify Deployment
 
 1. **Check the Actions tab:**
    ```
-   https://github.com/empowrapp08162025/empowrapp.github.io/actions
+   https://github.com/3mpowrApp/3mpwrapp.github.io/actions
    ```
    - You should see a workflow run called "Deploy Jekyll site to Pages"
    - Wait for it to complete (green checkmark ✓)
 
 2. **Visit your website:**
    ```
-   https://empowrapp08162025.github.io
+   https://3mpwrapp.github.io
    ```
    - You should see the 3mpowr App homepage
    - If you see a 404 error, wait a few more minutes and refresh
@@ -81,19 +81,19 @@ You'll see the GitHub Pages configuration page. Follow these settings:
 ### What You'll See in Settings → Pages
 
 ```
-┌─────────────────────────────────────────────┐
+┌──────────────────────────────────────────────┐
 │ Build and deployment                        │
-├─────────────────────────────────────────────┤
-│                                             │
-│ Source                                      │
-│ ┌─────────────────────────────────────┐   │
-│ │ GitHub Actions                ▼     │   │  ← SELECT THIS
-│ └─────────────────────────────────────┘   │
-│                                             │
-│ Your site is live at                        │
-│ https://empowrapp08162025.github.io        │
-│                                             │
-└─────────────────────────────────────────────┘
+├──────────────────────────────────────────────┤
+│                                              │
+│ Source                                       │
+│ ┌──────────────────────────────────────────┐ │
+│ │ GitHub Actions                ▼          │ │  ← SELECT THIS
+│ └──────────────────────────────────────────┘ │
+│                                              │
+│ Your site is live at                         │
+│ https://3mpwrapp.github.io                   │
+│                                              │
+└──────────────────────────────────────────────┘
 ```
 
 ---
@@ -103,7 +103,7 @@ You'll see the GitHub Pages configuration page. Follow these settings:
 After activation, you should see:
 
 1. ✅ **In Settings → Pages:**
-   - "Your site is live at https://empowrapp08162025.github.io"
+   - "Your site is live at https://3mpwrapp.github.io"
    - A link to visit your site
 
 2. ✅ **In Actions tab:**
@@ -214,7 +214,7 @@ Your website is a **static site** - no backend server or database. This means:
 
 ### Need Help?
 - 📧 Email: empowrapp08162025@gmail.com
-- 🐛 [Open an Issue](https://github.com/empowrapp08162025/empowrapp.github.io/issues)
+- 🐛 [Open an Issue](https://github.com/3mpowrApp/3mpwrapp.github.io/issues)
 - 💬 Check existing documentation in `.github/` directory
 
 ---
