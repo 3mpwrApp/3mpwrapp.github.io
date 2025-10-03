@@ -19,10 +19,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude-mail
-            --max-redirects 5
-            --retry-wait-time 2
-            --retry-count 2
+            --config lychee.toml
             .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
