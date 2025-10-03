@@ -5,9 +5,11 @@ title: User Guide
 
 # 3mpowr App – User Guide
 
-Welcome to 3mpowr. This guide explains every feature in the app, what it does, and how to use it safely and effectively. It's organized by tabs and major components, with accessibility notes and privacy tips throughout.
+> Note: Feature availability may vary by platform (iOS, Android, Web). Some items that require device capabilities are not supported on the Web (e.g., native Share Sheets, Image Picker). Where relevant, we note platform-specific behavior and alternatives.
 
-> Note: Feature availability may vary by platform (iOS, Android, Web). Some items that require device capabilities are not supported on the Web (e.g., native Share Sheets, Image Picker). Where relevant, we call this out with alternatives.
+## Table of Contents
+- TOC
+{:toc}
 
 ## Getting Started
 - **First Launch**: You'll be prompted to accept the Terms. You can use Guest Mode without an account.
@@ -18,7 +20,7 @@ Welcome to 3mpowr. This guide explains every feature in the app, what it does, a
 ### Your first 7 days
 - **Purpose**: A private checklist to get oriented without sharing data. Tracks progress locally only.
 - **Actions**:
-  - Mark steps complete like capturing your basics, adding your first Evidence Locker note, tagging key contacts, bookmarking resources, setting reminders, recording denial dates, reviewing privacy, and exporting a backup.
+  - Mark steps complete like capturing your basics, adding your first Evidence Locker note, tagging key contacts, bookmarking resources, setting reminders, recording denial dates, reviewing privacy settings, and more.
   - Quick links jump to common features (Evidence Locker, Resources, Advocacy Hub, Profile, Notifications).
 - **Data & Privacy**: Stored on your device with optional persistence via AsyncStorage; not uploaded unless you explicitly choose cloud features elsewhere.
 
