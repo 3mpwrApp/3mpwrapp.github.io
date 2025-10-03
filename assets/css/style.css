@@ -1,10 +1,18 @@
-/* ...existing styles... */
+/* Existing styles above */
 
 /* Ensure links in content are clearly identifiable and high contrast */
 main a {
   color: #0645ad;           /* Higher-contrast blue on light backgrounds */
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* Footer contrast (WCAG AA) */
+footer {
+  text-align: center;
+  padding: 2em 0 0.7em 0;
+  color: #4a5568;           /* Darker than #888 for contrast on white */
+  font-size: 0.95em;
 }
 
 /* Larger tap targets for primary nav */
@@ -20,9 +28,18 @@ main a {
   main { background: #111a2b; box-shadow: 0 2px 8px #0006; }
   .nav-list a { color: #e6edf6; }
   .nav-list a:hover, .nav-list a:focus { background: #183c65; }
-  main a { color: #a8c7ff; } /* Lighter blue for stronger contrast on dark */
+  main a { color: #a8c7ff; }                 /* Stronger contrast on dark */
   .social-links a { color: #cfe8ff; border-color: #82aaff; }
   .social-links a:hover, .social-links a:focus-visible { background: #183c65; color: #fff; }
+  footer { color: #d1d5db; }                 /* Lighter footer text on dark */
 }
 
-/* ...rest of your styles... */
+/* Print styles for legibility */
+@media print {
+  header, nav, .social-links, footer { display: none !important; }
+  main {
+    box-shadow: none;
+    background: #fff;
+    color: #000;
+  }
+}
