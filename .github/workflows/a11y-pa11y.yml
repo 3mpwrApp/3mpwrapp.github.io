@@ -20,6 +20,19 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Run pa11y-ci against production
+      - name: Run pa11y-ci against production (save report)
+        id: pa11y
+        continue-on-error: true
         run: |
-          npx pa11y-ci --config .pa11yci.json
+          npx pa11y-ci --config .pa11yci.json --reporter json > pa11y-report.json
+
+      - name: Upload pa11y report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pa11y-report
+          path: pa11y-report.json
+
+      - name: Fail if pa11y found issues
+        if: steps.pa11y.outcome != 'success'
+        run: exit 1
