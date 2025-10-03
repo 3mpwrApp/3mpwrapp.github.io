@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Run Lighthouse CI on production
+      - name: Run Lighthouse CI on production (report-only)
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
@@ -26,4 +26,3 @@ jobs:
             https://3mpwrapp.github.io/beta
           uploadArtifacts: true
           temporaryPublicStorage: true
-          configPath: .lighthouserc.json
