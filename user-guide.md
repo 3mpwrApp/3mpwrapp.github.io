@@ -108,4 +108,11 @@ Below are the major components you'll interact with; developers can find source 
 
 # Contact & Feedback
 - Send feedback from Settings or community channels.
-- For privacy concerns, consult the in-app Privacy policy and contact support.
+
+---
+
+## Additional Resources
+- [Website]({{ '/' | relative_url }}) - Official site
+- [Privacy Policy]({{ '/privacy' | relative_url }}) - Review our privacy practices
+- [Terms of Service]({{ '/terms' | relative_url }}) - Understand terms and conditions
+- [Beta Testing]({{ '/beta' | relative_url }}) - Join our beta program
