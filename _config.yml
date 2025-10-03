@@ -2,7 +2,33 @@ title: 3mpowr App
 description: Practical tools and community for injured workers and persons with disabilities.
 baseurl: ""
 url: "https://3mpwrapp.github.io"
+
+# Theme and markdown
 markdown: kramdown
 theme: minima
+
+# Plugins
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO and social (jekyll-seo-tag)
+author:
+  name: "3mpowr App"
+logo: /assets/images/og-image.png
+social:
+  name: "3mpowr App"
+  links:
+    - https://github.com/3mpowrApp
+    - https://www.facebook.com/3mpowrapp
+    - https://x.com/3mpowrApp0816
+    - https://www.instagram.com/3mpowrapp/
+
+# Optional: GA4 (custom include)
+# Set to your GA4 Measurement ID, e.g., G-ABC1234567
+ga_measurement_id: ""
+
+# Minima settings (optional social handles)
+twitter_username: "3mpowrApp0816"
+github_username: "3mpowrApp"
