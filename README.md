@@ -1,10 +1,10 @@
-# 3mpowr App Website
+# 3mpwr App Website
 
 > **⚠️ WEBSITE NOT LIVE YET?** → See [HOW_TO_ACTIVATE.md](HOW_TO_ACTIVATE.md) for quick setup (takes 2 minutes!)
 
 This is the official website repository for the 3mpowr App - a community-driven platform for injured workers and persons with disabilities across Canada.
 
-🌐 **Live Site:** [https://empowrapp08162025.github.io](https://empowrapp08162025.github.io)
+🌐 **Live Site:** [https://3mpwrapp.github.io](https://3mpwrapp.github.io)
 
 ---
 
@@ -24,7 +24,7 @@ The guide includes:
 
 ## About
 
-3mpowr App provides practical tools and a vibrant community to help people connect, advocate for their rights, and access valuable resources. This repository contains the source code for our informational website built with Jekyll and hosted on GitHub Pages.
+3mpwr App provides practical tools and a vibrant community to help people connect, advocate for their rights, and access valuable resources. This repository contains the source code for our infor[...]
 
 ## Contributing
 
@@ -98,7 +98,7 @@ This site is automatically deployed to GitHub Pages when changes are merged to t
 
 ## License
 
-© 2025 3mpowr App. All rights reserved.
+© 2025 3mpwr App. All rights reserved.
 
 ---
 
