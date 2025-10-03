@@ -19,18 +19,38 @@ Help us shape the future of the 3mpowr App by joining our beta tester program.
     Email:<br>
     <input type="email" name="entry.2128873790" required>
   </label><br><br>
-  <label>
-    What device(s) will you be testing on?<br>
-    <select name="entry.470559077" required>
-      <option value="">Please select</option>
-      <option value="Android">Android phone</option>
-      <option value="iPhone/iOS">iPhone/iOS</option>
-      <option value="Tablet">Tablet</option>
-      <option value="Windows PC">Windows PC</option>
-      <option value="Mac">Mac</option>
-      <option value="Other">Other</option>
-    </select>
-  </label><br><br>
+
+  <fieldset>
+    <legend>What device(s) will you be testing on?</legend>
+    <label>
+      <input type="checkbox" name="entry.470559077" value="Android" required>
+      Android phone
+    </label><br>
+    <label>
+      <input type="checkbox" name="entry.470559077" value="iPhone/iOS">
+      iPhone/iOS
+    </label><br>
+    <label>
+      <input type="checkbox" name="entry.470559077" value="Tablet">
+      Tablet
+    </label><br>
+    <label>
+      <input type="checkbox" name="entry.470559077" value="Windows PC">
+      Windows PC
+    </label><br>
+    <label>
+      <input type="checkbox" name="entry.470559077" value="Mac">
+      Mac
+    </label><br>
+    <label>
+      <input type="checkbox" id="device-other" name="entry.470559077" value="Other">
+      Other
+    </label>
+    <label for="device-other-text" class="sr-only" style="position:absolute;left:-9999px;">Please specify</label>
+    <input type="text" id="device-other-text" name="entry.470559077.other_option_response" placeholder="Please specify" disabled>
+  </fieldset>
+  <br>
+
   <label>
     Why would you like to be a beta tester?<br>
     <textarea name="entry.1434274983"></textarea>
@@ -45,5 +65,20 @@ Help us shape the future of the 3mpowr App by joining our beta tester program.
   </label><br><br>
   <button type="submit">Sign Up</button>
 </form>
+
+<script>
+  (function () {
+    const otherCb = document.getElementById('device-other');
+    const otherText = document.getElementById('device-other-text');
+    if (otherCb && otherText) {
+      const sync = () => {
+        otherText.disabled = !otherCb.checked;
+        if (!otherCb.checked) otherText.value = '';
+      };
+      otherCb.addEventListener('change', sync);
+      sync();
+    }
+  })();
+</script>
 
 *We will contact selected testers by email. Thank you for your interest!*
