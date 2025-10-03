@@ -17,9 +17,11 @@ description: Search the 3mpowr website using DuckDuckGo.
 
   <!-- Real query sent to DuckDuckGo; filled on submit -->
   <input type="hidden" id="q_real" name="q" value="">
-  <!-- Optional: use DuckDuckGo settings param (harmless if unused) -->
   <input type="hidden" name="t" value="h_">
 </form>
+
+<!-- Live region for announcements -->
+<div id="search-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 
 <noscript>
   <p>
@@ -33,10 +35,18 @@ description: Search the 3mpowr website using DuckDuckGo.
     var form = document.getElementById('site-search');
     var user = document.getElementById('q');
     var real = document.getElementById('q_real');
+    var status = document.getElementById('search-status');
     if (form && user && real) {
-      form.addEventListener('submit', function (e) {
+      form.addEventListener('submit', function () {
         var term = (user.value || '').trim();
         real.value = 'site:3mpwrapp.github.io ' + term;
+        var msg = term ? ('Searching this site for “' + term + '”.') : 'Searching this site.';
+        if (window.announce) {
+          window.announce(msg);
+        } else if (status) {
+          status.textContent = '';
+          setTimeout(function(){ status.textContent = msg; }, 10);
+        }
       });
     }
   })();
