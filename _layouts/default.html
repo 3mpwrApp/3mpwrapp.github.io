@@ -4,23 +4,30 @@
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.description }}">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  {%- comment -%} Include custom head (favicon, manifest, GA) {%- endcomment -%}
+  {%- include custom-head.html -%}
+  {%- comment -%} SEO tags (OpenGraph, Twitter, canonical, JSON-LD) {%- endcomment -%}
+  {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header>
-    <nav>
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/about' | relative_url }}">About</a>
-      <a href="{{ '/features' | relative_url }}">Features</a>
-      <a href="{{ '/user-guide' | relative_url }}">User Guide</a>
-      <a href="{{ '/contact' | relative_url }}">Contact</a>
-      <a href="{{ '/blog' | relative_url }}">Blog</a>
-      <a href="{{ '/newsletter' | relative_url }}">Newsletter</a>
-      <a href="{{ '/beta' | relative_url }}">Beta Test</a>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="{{ '/' | relative_url }}" aria-current="{% if page.url == '/' %}page{% endif %}">Home</a></li>
+        <li><a href="{{ '/about' | relative_url }}" aria-current="{% if page.url == '/about.html' or page.url == '/about/' %}page{% endif %}">About</a></li>
+        <li><a href="{{ '/features' | relative_url }}" aria-current="{% if page.url contains '/features' %}page{% endif %}">Features</a></li>
+        <li><a href="{{ '/user-guide' | relative_url }}" aria-current="{% if page.url contains '/user-guide' %}page{% endif %}">User Guide</a></li>
+        <li><a href="{{ '/contact' | relative_url }}" aria-current="{% if page.url contains '/contact' %}page{% endif %}">Contact</a></li>
+        <li><a href="{{ '/blog' | relative_url }}" aria-current="{% if page.url contains '/blog' %}page{% endif %}">Blog</a></li>
+        <li><a href="{{ '/newsletter' | relative_url }}" aria-current="{% if page.url contains '/newsletter' %}page{% endif %}">Newsletter</a></li>
+        <li><a href="{{ '/beta' | relative_url }}" aria-current="{% if page.url contains '/beta' %}page{% endif %}">Beta Test</a></li>
+      </ul>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     {{ content }}
   </main>
   <footer>
@@ -28,6 +35,7 @@
       <a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">Facebook</a>
       <a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
       <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml">RSS</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">Beta Testers Sign Up</a>
     </div>
     <p>&copy; {{ site.time | date: '%Y' }} 3mpowr App</p>
