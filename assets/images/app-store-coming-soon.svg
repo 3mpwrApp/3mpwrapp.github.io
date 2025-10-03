@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="53" viewBox="0 0 180 53" role="img" aria-labelledby="title desc">
+  <title id="title">App Store — coming soon</title>
+  <desc id="desc">A rounded rectangle badge with the text App Store coming soon.</desc>
+  <rect x="1" y="1" width="178" height="51" rx="10" ry="10" fill="#111827" stroke="#111827" stroke-width="2"/>
+  <text x="90" y="32" font-family="system-ui, Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">App Store — Coming soon</text>
+</svg>
