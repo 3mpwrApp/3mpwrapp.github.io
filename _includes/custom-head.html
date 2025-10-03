@@ -5,8 +5,10 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
 
 {%- comment -%} Favicon & PWA {%- endcomment -%}
 <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
 <link rel="manifest" href="{{ '/assets/site.webmanifest' | relative_url }}">
 <meta name="theme-color" content="#111111">
+<meta name="color-scheme" content="light dark">
 
 {%- comment -%} Optional GA4 {%- endcomment -%}
 {%- if site.ga_measurement_id and site.ga_measurement_id != '' -%}
