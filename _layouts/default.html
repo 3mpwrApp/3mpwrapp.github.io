@@ -26,8 +26,8 @@
       </ul>
     </nav>
 
-    <!-- High contrast toggle -->
-    <div class="header-controls">
+    <!-- High contrast + Dark mode toggles -->
+    <div class="header-controls" role="group" aria-label="Display settings">
       <button
         id="contrast-toggle"
         class="contrast-toggle"
@@ -36,6 +36,16 @@
         aria-label="Toggle high contrast mode"
       >
         High contrast
+      </button>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle dark mode"
+      >
+        Dark mode
       </button>
     </div>
   </header>
@@ -55,7 +65,7 @@
     <p>&copy; {{ site.time | date: '%Y' }} 3mpowr App</p>
   </footer>
 
-  <!-- A11y: ensure skip link focuses main -->
+  <!-- A11y: skip link should move focus to main -->
   <script>
     (function() {
       var skip = document.querySelector('.skip-link');
@@ -68,7 +78,21 @@
     })();
   </script>
 
-  <!-- Contrast toggle script -->
+  <!-- Utilities and controls -->
+  <script src="{{ '/assets/js/a11y.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/contrast.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/back-to-top.js' | relative_url }}" defer></script>
+
+  <!-- Back to top button -->
+  <button
+    id="back-to-top"
+    class="back-to-top"
+    type="button"
+    aria-label="Back to top"
+    aria-hidden="true"
+  >
+    ↑ Back to top
+  </button>
 </body>
 </html>
