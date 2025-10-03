@@ -1,5 +1,5 @@
 // Accessible "Back to top" button that appears after scrolling.
-// Respects prefers-reduced-motion and announces when activated.
+// Stays out of the tab order when hidden; respects reduced motion.
 (function () {
   var btn = document.getElementById('back-to-top');
   if (!btn) return;
@@ -10,6 +10,7 @@
     var visible = window.scrollY > 400;
     btn.classList.toggle('is-visible', visible);
     btn.setAttribute('aria-hidden', visible ? 'false' : 'true');
+    btn.setAttribute('tabindex', visible ? '0' : '-1');
   }
 
   window.addEventListener('scroll', updateVisibility, { passive: true });
