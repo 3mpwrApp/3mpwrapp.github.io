@@ -15,7 +15,7 @@ Branch protection rules help to:
 
 ### Step 1: Access Repository Settings
 
-1. Go to your repository on GitHub: `https://github.com/empowrapp08162025/empowr-site.github.io`
+1. Go to your repository on GitHub: `https://github.com/3mpowrApp/3mpwrapp.github.io`
 2. Click on **Settings** tab (you need admin permissions)
 3. In the left sidebar, click on **Branches** under "Code and automation"
 
@@ -118,11 +118,11 @@ Create `.github/CODEOWNERS` to automatically request reviews from specific peopl
 
 ```
 # Default owners for everything
-*       @empowrapp08162025
+*       @3mpowrApp
 
 # Specific paths
-/.github/       @empowrapp08162025
-/assets/        @empowrapp08162025
+/.github/       @3mpowrApp
+/assets/        @3mpowrApp
 ```
 
 ### Enable Required Reviews
