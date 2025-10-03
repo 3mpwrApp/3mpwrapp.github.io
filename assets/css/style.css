@@ -1,11 +1,29 @@
+/* 3mpowr App – Global Styles
+   Accessibility-first: WCAG-compliant contrast, visible focus outlines,
+   keyboard-friendly controls, reduced motion support, and user toggles
+   for High-contrast and Dark mode.
+*/
+
 /* Base */
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: system-ui, Arial, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   margin: 0;
   background: #fafbfd;
   color: #222;
+  line-height: 1.6;
 }
 
+/* Header */
 header {
   background: #183c65;
   color: #fff;
@@ -22,13 +40,18 @@ header {
   padding: 8px 12px;
   border-radius: 4px;
   border: 2px solid #183c65;
-  transition: top .2s;
+  transition: top 0.2s;
   z-index: 1000;
 }
-.skip-link:focus { top: 8px; }
+.skip-link:focus {
+  top: 8px;
+}
 
-/* Nav */
-nav { display: flex; justify-content: center; }
+/* Navigation */
+nav { 
+  display: flex; 
+  justify-content: center; 
+}
 .nav-list {
   display: flex;
   flex-wrap: wrap;
@@ -42,18 +65,20 @@ nav { display: flex; justify-content: center; }
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.03em;
-  padding: 0.6rem 1rem; /* Larger hit area */
+  padding: 0.6rem 1rem; /* Larger hit area (advisory target size) */
   border-radius: 6px;
   transition: background 0.2s;
 }
 .nav-list a:hover,
-.nav-list a:focus { background: #285e93; }
+.nav-list a:focus {
+  background: #285e93;
+}
 .nav-list a[aria-current="page"] {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-/* Header controls */
+/* Header controls (toggles) */
 .header-controls {
   display: flex;
   gap: 0.5rem;
@@ -88,9 +113,9 @@ main {
   box-shadow: 0 2px 8px #0001;
 }
 
-/* Content links */
+/* Content links – clearly identifiable (WCAG 1.4.1) */
 main a {
-  color: #0645ad; /* High contrast blue */
+  color: #0645ad;             /* High-contrast blue */
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -119,7 +144,7 @@ textarea:focus-visible {
   border: 0 !important;
 }
 
-/* Social links */
+/* Social Media Links */
 .social-links {
   display: flex;
   gap: 1rem;
@@ -142,15 +167,15 @@ textarea:focus-visible {
   color: #fff;
 }
 
-/* Footer contrast (AA) */
+/* Footer – stronger contrast on light background */
 footer {
   text-align: center;
   padding: 2em 0 0.7em 0;
-  color: #4a5568; /* Darker for AA contrast */
+  color: #4a5568;
   font-size: 0.95em;
 }
 
-/* Features grid */
+/* Features Grid */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -174,12 +199,43 @@ footer {
   box-shadow: 0 4px 12px rgba(24, 60, 101, 0.1);
 }
 
-/* Responsive embeds */
-iframe { width: 100%; max-width: 100%; }
+/* Store badges (Coming soon) */
+.store-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 1rem 0 2rem;
+  list-style: none;
+}
+.store-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+  border: 2px dashed #d1d5db; /* visually conveys “not yet available” */
+}
+.store-badge img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-/* Reduce motion */
+/* Responsive embeds (WCAG 1.4.10) */
+iframe {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Reduce motion (WCAG 2.3.3, 2.2.2) */
 @media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* High-contrast (user-controlled) */
@@ -231,9 +287,13 @@ body[data-contrast="high"] .theme-toggle {
   border-color: #fff !important;
 }
 body[data-contrast="high"] :focus-visible {
-  outline: 3px solid #ffbf00 !important;
+  outline: 3px solid #ffbf00 !important; /* amber focus ring */
   outline-offset: 3px !important;
   border-radius: 2px !important;
+}
+body[data-contrast="high"] .store-badge {
+  background: #fff !important;
+  border: 3px solid #000 !important;
 }
 
 /* Dark mode (user-controlled) */
@@ -241,26 +301,42 @@ body[data-theme="dark"] {
   background: #0e1726;
   color: #f2f5f9;
 }
-body[data-theme="dark"] header { background: #0b2545; }
+body[data-theme="dark"] header {
+  background: #0b2545;
+}
 body[data-theme="dark"] main {
   background: #111a2b;
   color: #f2f5f9;
   box-shadow: 0 2px 8px #0006;
 }
-body[data-theme="dark"] .nav-list a { color: #e6edf6; }
+body[data-theme="dark"] .nav-list a {
+  color: #e6edf6;
+}
 body[data-theme="dark"] .nav-list a:hover,
-body[data-theme="dark"] .nav-list a:focus { background: #183c65; }
-body[data-theme="dark"] main a { color: #a8c7ff; }
+body[data-theme="dark"] .nav-list a:focus {
+  background: #183c65;
+}
+body[data-theme="dark"] main a {
+  color: #a8c7ff; /* maintain strong contrast on dark */
+}
 body[data-theme="dark"] .social-links a {
-  color: #cfe8ff; border-color: #82aaff;
+  color: #cfe8ff;
+  border-color: #82aaff;
 }
 body[data-theme="dark"] .social-links a:hover,
 body[data-theme="dark"] .social-links a:focus-visible {
-  background: #183c65; color: #fff;
+  background: #183c65;
+  color: #fff;
 }
-body[data-theme="dark"] footer { color: #d1d5db; }
+body[data-theme="dark"] footer {
+  color: #d1d5db;
+}
+body[data-theme="dark"] .store-badge {
+  background: #0f2037;
+  border-color: #355c7d;
+}
 
-/* Back to top */
+/* Back to top button */
 .back-to-top {
   position: fixed;
   right: 1rem;
@@ -275,7 +351,7 @@ body[data-theme="dark"] footer { color: #d1d5db; }
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 .back-to-top:focus-visible,
 .back-to-top:hover {
@@ -288,5 +364,19 @@ body[data-theme="dark"] footer { color: #d1d5db; }
   transform: translateY(0);
 }
 body[data-contrast="high"] .back-to-top {
-  background: #000; color: #fff; border-color: #fff;
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Print styles */
+@media print {
+  header, nav, .social-links, .header-controls, footer, .back-to-top { 
+    display: none !important; 
+  }
+  main {
+    box-shadow: none;
+    background: #fff;
+    color: #000;
+  }
 }
