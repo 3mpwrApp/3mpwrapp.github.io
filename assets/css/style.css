@@ -1,45 +1,93 @@
-/* Existing styles above */
+/* ...existing styles... */
 
-/* Ensure links in content are clearly identifiable and high contrast */
-main a {
-  color: #0645ad;           /* Higher-contrast blue on light backgrounds */
+/* Header controls container */
+.header-controls {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0 0.25rem;
+}
+
+/* Contrast toggle */
+.contrast-toggle {
+  background: #ffffff;
+  color: #183c65;
+  border: 2px solid #183c65;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.contrast-toggle:hover,
+.contrast-toggle:focus-visible {
+  background: #183c65;
+  color: #fff;
+}
+
+/* High-contrast mode overrides (user-controlled) */
+body[data-contrast="high"] {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+body[data-contrast="high"] header {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+body[data-contrast="high"] main {
+  background: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+  border: 3px solid #000; /* clear separation */
+}
+body[data-contrast="high"] .nav-list a {
+  color: #ffffff !important;
+  border: 3px solid transparent;
+}
+body[data-contrast="high"] .nav-list a:hover,
+body[data-contrast="high"] .nav-list a:focus-visible {
+  background: #333333 !important;
+  color: #ffffff !important;
+  border-color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+body[data-contrast="high"] main a {
+  color: #0000EE !important; /* classic high-contrast link blue */
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+body[data-contrast="high"] .social-links a {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+body[data-contrast="high"] .social-links a:hover,
+body[data-contrast="high"] .social-links a:focus-visible {
+  background: #222 !important;
+  color: #fff !important;
+}
+body[data-contrast="high"] .contrast-toggle {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
 
-/* Footer contrast (WCAG AA) */
+/* Strong, highly visible focus for high-contrast mode */
+body[data-contrast="high"] :focus-visible {
+  outline: 3px solid #ffbf00 !important; /* amber focus ring */
+  outline-offset: 3px !important;
+  border-radius: 2px !important;
+}
+
+/* Footer contrast (AA) */
 footer {
   text-align: center;
   padding: 2em 0 0.7em 0;
-  color: #4a5568;           /* Darker than #888 for contrast on white */
+  color: #4a5568; /* darker for better contrast on white */
   font-size: 0.95em;
 }
 
-/* Larger tap targets for primary nav */
-.nav-list a {
-  padding: 0.6rem 1rem;     /* Larger hit area */
-  border-radius: 6px;
-}
-
-/* Dark mode adjustments for contrast */
-@media (prefers-color-scheme: dark) {
-  body { background: #0e1726; color: #f2f5f9; }
-  header { background: #0b2545; }
-  main { background: #111a2b; box-shadow: 0 2px 8px #0006; }
-  .nav-list a { color: #e6edf6; }
-  .nav-list a:hover, .nav-list a:focus { background: #183c65; }
-  main a { color: #a8c7ff; }                 /* Stronger contrast on dark */
-  .social-links a { color: #cfe8ff; border-color: #82aaff; }
-  .social-links a:hover, .social-links a:focus-visible { background: #183c65; color: #fff; }
-  footer { color: #d1d5db; }                 /* Lighter footer text on dark */
-}
-
-/* Print styles for legibility */
+/* Print styles */
 @media print {
-  header, nav, .social-links, footer { display: none !important; }
-  main {
-    box-shadow: none;
-    background: #fff;
-    color: #000;
-  }
+  header, nav, .social-links, .header-controls, footer { display: none !important; }
+  main { box-shadow: none; background: #fff; color: #000; }
 }
