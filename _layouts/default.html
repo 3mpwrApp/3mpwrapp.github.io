@@ -5,9 +5,7 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ page.description | default: site.description }}">
-  {%- comment -%} Include custom head (favicon, manifest, GA) {%- endcomment -%}
   {%- include custom-head.html -%}
-  {%- comment -%} SEO tags (OpenGraph, Twitter, canonical, JSON-LD) {%- endcomment -%}
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
@@ -27,7 +25,7 @@
       </ul>
     </nav>
   </header>
-  <main id="main-content">
+  <main id="main-content" role="main" tabindex="-1">
     {{ content }}
   </main>
   <footer>
@@ -40,5 +38,19 @@
     </div>
     <p>&copy; {{ site.time | date: '%Y' }} 3mpowr App</p>
   </footer>
+
+  <script>
+    // Ensure skip link moves focus to main for screen readers and keyboard users
+    (function() {
+      var skip = document.querySelector('.skip-link');
+      var main = document.getElementById('main-content');
+      if (skip && main) {
+        skip.addEventListener('click', function() {
+          // Let the hash jump happen, then focus
+          setTimeout(function(){ main.focus(); }, 0);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
