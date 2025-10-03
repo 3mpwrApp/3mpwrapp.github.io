@@ -505,6 +505,7 @@ Stay informed about app improvements, new features, and bug fixes.
 - **Community**: Ask for help in community channels
 
 ### Additional Resources
+- [Website](https://3mpwrapp.github.io) - Official site
 - [User Guide](user-guide) - Comprehensive documentation
 - [Privacy Policy](#) - Review our privacy practices
 - [Terms of Service](#) - Understand terms and conditions
@@ -513,4 +514,3 @@ Stay informed about app improvements, new features, and bug fixes.
 ---
 
 **Remember**: 3mpowr is built with your privacy and security as top priorities. All features are designed to empower you while protecting your sensitive information.
-
