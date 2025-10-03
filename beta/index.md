@@ -15,6 +15,7 @@ Help us shape the future of the 3mpowr App by joining our beta tester program.
     Name:<br>
     <input type="text" name="entry.2048050345" required>
   </label><br><br>
+
   <label>
     Email:<br>
     <input type="email" name="entry.2128873790" required>
@@ -22,26 +23,32 @@ Help us shape the future of the 3mpowr App by joining our beta tester program.
 
   <fieldset>
     <legend>What device(s) will you be testing on?</legend>
+
     <label>
       <input type="checkbox" name="entry.470559077" value="Android" required>
       Android phone
     </label><br>
+
     <label>
       <input type="checkbox" name="entry.470559077" value="iPhone/iOS">
       iPhone/iOS
     </label><br>
+
     <label>
       <input type="checkbox" name="entry.470559077" value="Tablet">
       Tablet
     </label><br>
+
     <label>
       <input type="checkbox" name="entry.470559077" value="Windows PC">
       Windows PC
     </label><br>
+
     <label>
       <input type="checkbox" name="entry.470559077" value="Mac">
       Mac
     </label><br>
+
     <label>
       <input type="checkbox" id="device-other" name="entry.470559077" value="Other">
       Other
@@ -55,6 +62,7 @@ Help us shape the future of the 3mpowr App by joining our beta tester program.
     Why would you like to be a beta tester?<br>
     <textarea name="entry.1434274983"></textarea>
   </label><br><br>
+
   <label>
     Are you willing to test all the features and report bugs/feedback?<br>
     <select name="entry.617838265" required>
@@ -63,6 +71,7 @@ Help us shape the future of the 3mpowr App by joining our beta tester program.
       <option value="No">No, I may not be able to test everything.</option>
     </select>
   </label><br><br>
+
   <button type="submit">Sign Up</button>
 </form>
 
