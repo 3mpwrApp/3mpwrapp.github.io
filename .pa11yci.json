@@ -1,0 +1,22 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 30000,
+    "wait": 500,
+    "chromeLaunchConfig": { "args": ["--no-sandbox"] }
+  },
+  "urls": [
+    "https://3mpwrapp.github.io/",
+    "https://3mpwrapp.github.io/about",
+    "https://3mpwrapp.github.io/features",
+    "https://3mpwrapp.github.io/user-guide",
+    "https://3mpwrapp.github.io/community",
+    "https://3mpwrapp.github.io/contact",
+    "https://3mpwrapp.github.io/newsletter",
+    "https://3mpwrapp.github.io/blog",
+    "https://3mpwrapp.github.io/beta",
+    "https://3mpwrapp.github.io/accessibility",
+    "https://3mpwrapp.github.io/site-map"
+  ],
+  "threshold": 0
+}
