@@ -1,0 +1,15 @@
+# Exclude domains that frequently block bots or rate-limit aggressively.
+exclude = [
+  "https://x.com/.*",
+  "https://twitter.com/.*",
+  "https://www.instagram.com/.*",
+  "https://www.facebook.com/.*",
+  "https://docs.google.com/.*"
+]
+
+# Some sites return 403 to headless checkers; treat as acceptable.
+accept = [200, 204, 206, 403]
+
+# Retries to reduce transient failures.
+max_retries = 2
+retry_wait_time = 2
