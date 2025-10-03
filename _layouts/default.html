@@ -14,15 +14,33 @@
   <header>
     <nav aria-label="Primary">
       <ul class="nav-list">
-        <li><a href="{{ '/' | relative_url }}" aria-current="{% if page.url == '/' %}page{% endif %}">Home</a></li>
-        <li><a href="{{ '/about' | relative_url }}" aria-current="{% if page.url == '/about.html' or page.url == '/about/' %}page{% endif %}">About</a></li>
-        <li><a href="{{ '/features' | relative_url }}" aria-current="{% if page.url contains '/features' %}page{% endif %}">Features</a></li>
-        <li><a href="{{ '/user-guide' | relative_url }}" aria-current="{% if page.url contains '/user-guide' %}page{% endif %}">User Guide</a></li>
-        <li><a href="{{ '/contact' | relative_url }}" aria-current="{% if page.url contains '/contact' %}page{% endif %}">Contact</a></li>
-        <li><a href="{{ '/blog' | relative_url }}" aria-current="{% if page.url contains '/blog' %}page{% endif %}">Blog</a></li>
-        <li><a href="{{ '/newsletter' | relative_url }}" aria-current="{% if page.url contains '/newsletter' %}page{% endif %}">Newsletter</a></li>
-        <li><a href="{{ '/beta' | relative_url }}" aria-current="{% if page.url contains '/beta' %}page{% endif %}">Beta Test</a></li>
-        <li><a href="{{ '/search' | relative_url }}" aria-current="{% if page.url contains '/search' %}page{% endif %}">Search</a></li>
+        <li>
+          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+        </li>
+        <li>
+          <a href="{{ '/about' | relative_url }}" {% if page.url == '/about.html' or page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+        </li>
+        <li>
+          <a href="{{ '/features' | relative_url }}" {% if page.url contains '/features' %}aria-current="page"{% endif %}>Features</a>
+        </li>
+        <li>
+          <a href="{{ '/user-guide' | relative_url }}" {% if page.url contains '/user-guide' %}aria-current="page"{% endif %}>User Guide</a>
+        </li>
+        <li>
+          <a href="{{ '/contact' | relative_url }}" {% if page.url contains '/contact' %}aria-current="page"{% endif %}>Contact</a>
+        </li>
+        <li>
+          <a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>Blog</a>
+        </li>
+        <li>
+          <a href="{{ '/newsletter' | relative_url }}" {% if page.url contains '/newsletter' %}aria-current="page"{% endif %}>Newsletter</a>
+        </li>
+        <li>
+          <a href="{{ '/beta' | relative_url }}" {% if page.url contains '/beta' %}aria-current="page"{% endif %}>Beta Test</a>
+        </li>
+        <li>
+          <a href="{{ '/search' | relative_url }}" {% if page.url contains '/search' %}aria-current="page"{% endif %}>Search</a>
+        </li>
       </ul>
     </nav>
 
@@ -91,6 +109,7 @@
     type="button"
     aria-label="Back to top"
     aria-hidden="true"
+    tabindex="-1"
   >
     ↑ Back to top
   </button>
