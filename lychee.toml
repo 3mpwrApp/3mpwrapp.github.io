@@ -1,13 +1,17 @@
-# Exclude domains that frequently block bots or rate-limit aggressively.
+# Scan the built site (set in workflow). This config reduces false positives.
+
+# Exclude domains that frequently block bots or are out of our control.
 exclude = [
   "https://x.com/.*",
   "https://twitter.com/.*",
   "https://www.instagram.com/.*",
   "https://www.facebook.com/.*",
-  "https://docs.google.com/.*"
+  "https://docs.google.com/.*",
+  "https://github.com/3mpowrApp/3mpwrapp.github.io/settings/pages",
+  "https://3mpwrapp.github.io/sitemap.xml"
 ]
 
-# Accept common non-200 responses from guarded endpoints.
+# Some sites return 403 to headless checkers; accept them.
 accept = [200, 204, 206, 403]
 
 # Retries to reduce transient failures.
