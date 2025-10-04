@@ -45,7 +45,18 @@ ga_measurement_id: ""
 twitter_username: "3mpowrApp0816"
 github_username: "3mpowrApp"
 
-# New: asset variables used by custom-head.html
+# Asset variables used by custom-head.html
 favicon: /assets/favicon.svg
 webmanifest: /assets/site.webmanifest
-# apple_touch_icon: /assets/apple-touch-icon.png  # Uncomment after adding the file
+# apple_touch_icon intentionally omitted
+
+# Do not publish repository maintenance docs on the website
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - ACTIVATION.md
+  - HOW_TO_ACTIVATE.md
+  - .github
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
