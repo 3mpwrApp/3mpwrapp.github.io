@@ -5,9 +5,8 @@ type Props = {
   description: string;
   url: string;         // absolute canonical URL
   image?: string;      // absolute OG/Twitter image URL
-  type?: 'website' | 'article' | 'product';
+  type?: 'website' | 'article';
   publishedTime?: string; // ISO 8601 for articles
-  schema?: object;     // JSON-LD object
 };
 
 export function SEO({
@@ -17,10 +16,7 @@ export function SEO({
   image,
   type = 'website',
   publishedTime,
-  schema,
 }: Props) {
-  const jsonLd = schema ? JSON.stringify(schema) : null;
-
   return (
     <>
       <title>{title}</title>
@@ -39,10 +35,6 @@ export function SEO({
       {image ? <meta name="twitter:image" content={image} /> : null}
 
       {publishedTime ? <meta property="article:published_time" content={publishedTime} /> : null}
-
-      {jsonLd ? (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      ) : null}
     </>
   );
 }
