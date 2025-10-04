@@ -15,7 +15,7 @@ Branch protection rules help to:
 
 ### Step 1: Access Repository Settings
 
-1. Go to your repository on GitHub: `https://github.com/3mpowrApp/3mpwrapp.github.io`
+1. Go to your repository on GitHub: `https://github.com/3mpwrApp/3mpwrapp.github.io`
 2. Click on **Settings** tab (you need admin permissions)
 3. In the left sidebar, click on **Branches** under "Code and automation"
 

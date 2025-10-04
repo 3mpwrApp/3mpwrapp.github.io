@@ -35,15 +35,15 @@ defaults:
 social:
   name: "3mpowr App"
   links:
-    - https://github.com/3mpowrApp
+    - https://github.com/3mpwrApp
     - https://www.facebook.com/3mpowrapp
-    - https://x.com/3mpowrApp0816
+    - https://x.com/3mpwrApp0816
     - https://www.instagram.com/3mpowrapp/
 
 ga_measurement_id: ""
 
-twitter_username: "3mpowrApp0816"
-github_username: "3mpowrApp"
+twitter_username: "3mpwrApp0816"
+github_username: "3mpwrApp"
 
 # Asset variables used by custom-head.html
 favicon: /assets/favicon.svg

@@ -4,7 +4,7 @@
 
 This is the official website repository for the 3mpowr App — a community‑driven platform for injured workers and persons with disabilities across Canada.
 
-🌐 Live Site: [https://3mpowrapp.github.io](https://3mpowrapp.github.io)
+🌐 Live Site: [https://3mpwrapp.github.io](https://3mpwrapp.github.io)
 
 ---
 
@@ -87,6 +87,8 @@ Prerequisites:
 
 This site is automatically deployed to GitHub Pages when changes are merged to the `main` branch. The deployment workflow is defined in `.github/workflows/jekyll.yml`.
 
+Note: For the site to live at the root (https://3mpwrapp.github.io/), the repository name must be exactly `3mpwrapp.github.io`. If the repo name differs, GitHub will publish it under `https://3mpwrapp.github.io/<repo-name>/` and CI should point to that path.
+
 ## Support
 
 - 📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
@@ -96,7 +98,7 @@ This site is automatically deployed to GitHub Pages when changes are merged to t
 ## Connect With Us
 
 - [Facebook](https://www.facebook.com/3mpowrapp)
-- [X (Twitter)](https://x.com/3mpowrApp0816)
+- [X (Twitter)](https://x.com/3mpwrApp0816)
 - [Instagram](https://www.instagram.com/3mpowrapp/)
 
 ## License
