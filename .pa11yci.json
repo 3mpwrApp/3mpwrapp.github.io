@@ -6,18 +6,18 @@
     "chromeLaunchConfig": { "args": ["--no-sandbox"] }
   },
   "urls": [
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/about",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/features",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/user-guide",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/community",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/contact",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/newsletter",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/blog",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/beta",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/accessibility",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/site-map",
-    "https://3mpowrapp.github.io/3mpwrapp.github.io/privacy"
+    "https://3mpwrapp.github.io/",
+    "https://3mpwrapp.github.io/about",
+    "https://3mpwrapp.github.io/features",
+    "https://3mpwrapp.github.io/user-guide",
+    "https://3mpwrapp.github.io/community",
+    "https://3mpwrapp.github.io/contact",
+    "https://3mpwrapp.github.io/newsletter",
+    "https://3mpwrapp.github.io/blog",
+    "https://3mpwrapp.github.io/beta",
+    "https://3mpwrapp.github.io/accessibility",
+    "https://3mpwrapp.github.io/site-map",
+    "https://3mpwrapp.github.io/privacy"
   ],
   "threshold": 0
 }
