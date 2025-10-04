@@ -22,9 +22,8 @@ jobs:
 
       - name: Run pa11y-ci against production (save report)
         id: pa11y
-        continue-on-error: true
         run: |
-          npx pa11y-ci --config .pa11yci.json --reporter json > pa11y-report.json || true
+          npx pa11y-ci --config .pa11yci.json --reporter json > pa11y-report.json
 
       - name: Upload pa11y report
         if: always()
