@@ -26,12 +26,13 @@ jobs:
           bundle install --jobs 4 --retry 3
           bundle exec jekyll build --trace
 
-      - name: Link Checker (lychee) on built site
+      - name: Link Checker (lychee) on built site (offline)
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
             --verbose
             --no-progress
+            --offline
             --config lychee.toml
             ./_site
         env:
