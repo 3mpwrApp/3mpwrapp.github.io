@@ -225,6 +225,7 @@
         if (!modal || modal.hidden) return;
         if (e.key === 'Escape') {
           safeSet(MODAL_KEY, '1');
+          safeSet(MODAL_LAST, String(Date.now()));
           closeModal();
           return;
         }
