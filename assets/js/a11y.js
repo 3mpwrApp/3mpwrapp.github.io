@@ -22,10 +22,25 @@
     } else {
       el.setAttribute('aria-live', 'polite');
     }
-    // Clear then set to ensure SR announcement
     el.textContent = '';
     setTimeout(function () { el.textContent = message; }, 10);
   }
 
   window.announce = announce;
+
+  // Performance: lazily load images that don't already opt into eager loading
+  function lazyImages() {
+    var imgs = document.querySelectorAll('img:not([loading])');
+    imgs.forEach(function (img) {
+      img.loading = 'lazy';
+      // Optional: decoding hint for faster rendering
+      if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', lazyImages, { once: true });
+  } else {
+    lazyImages();
+  }
 })();
