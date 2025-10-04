@@ -20,6 +20,7 @@ Stay informed about product updates, early access, and beta invites. We’ll onl
 
 <div class="newsletter-embed">
   <iframe
+    id="newsletter-form"
     title="3mpowr App newsletter signup"
     src="https://docs.google.com/forms/d/e/1FAIpQLSf9AHMg9pMWS2njErNXDj1W0g2rXBNabXsUnZOgRF4vfvk0kQ/viewform?embedded=true"
     loading="lazy"
@@ -33,7 +34,29 @@ Stay informed about product updates, early access, and beta invites. We’ll onl
 <style>
 .newsletter-embed { position: relative; width: 100%; }
 .newsletter-embed iframe { width: 100%; height: min(1600px, 86vh); background: #fff; border: 0; border-radius: 8px; }
+/* Optional: a subtle fade while redirecting */
+.newsletter-redirecting { opacity: 0.4; transition: opacity 200ms ease-in-out; pointer-events: none; }
 </style>
+
+<script>
+// Redirect to home after the Google Form finishes submitting inside the iframe.
+// Technique: the iframe 'load' event fires twice — first for the form, second for the "response recorded" view.
+(function () {
+  var iframe = document.getElementById('newsletter-form');
+  if (!iframe) return;
+  var firstLoadDone = false;
+  iframe.addEventListener('load', function () {
+    if (firstLoadDone) {
+      // Optional visual hint
+      iframe.classList.add('newsletter-redirecting');
+      // Redirect after a brief delay to ensure responses are logged
+      setTimeout(function () { window.location.href = '/'; }, 300);
+      return;
+    }
+    firstLoadDone = true;
+  });
+})();
+</script>
 
 If you cannot see the embedded form, use this direct link:
 - [Open the signup form](https://docs.google.com/forms/d/e/1FAIpQLSf9AHMg9pMWS2njErNXDj1W0g2rXBNabXsUnZOgRF4vfvk0kQ/viewform)
