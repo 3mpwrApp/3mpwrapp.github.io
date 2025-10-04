@@ -284,6 +284,9 @@ export default function ResourcesScreen() {
           Denial Decoder
         </Text>
       </Link>
+      <Link href={"/(tabs)/resources/prepare-appeal" as Href} asChild>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Prepare to Appeal</Text>
+      </Link>
       <Link href={"/(tabs)/resources/doctor-visit-prep" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
           Doctor Visit Prep

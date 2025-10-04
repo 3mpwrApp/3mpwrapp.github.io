@@ -1,18 +1,8 @@
 import { Stack, useRouter } from "expo-router";
 import React from "react";
-import {
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
-    useColorScheme,
-} from "react-native";
+import { Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
 
-import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
-} from "../hooks/useA11y";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../hooks/useA11y";
 import { colors, type Palette } from "../theme/colors";
 import { maxFontScale } from '../utils/platform';
 

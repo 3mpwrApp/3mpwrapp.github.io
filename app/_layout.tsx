@@ -31,6 +31,7 @@ import { A11ySettingsProvider } from "../store/a11ySettings";
 import { BookmarksProvider } from "../store/bookmarks";
 import { CoachProgressProvider } from "../store/coachProgress";
 import { NotificationsProvider } from "../store/notifications";
+import { First7Provider } from "../store/onboardingFirst7";
 import { PrivacyProvider, usePrivacy } from "../store/privacy";
 import { ProfileLocalProvider } from "../store/profileLocal";
 import { ResilienceProvider } from "../store/resilience";
@@ -137,28 +138,30 @@ export default function RootLayout() {
                             <ChangelogGate>
                               <TelemetryInit />
                               <NotificationsProvider>
-                              <Stack
-                                screenOptions={{
-                                  animation: reduceMotion ? "none" : "default",
-                                }}
-                              >
-                                <Stack.Screen
-                                  name="profile"
-                                  options={{ headerShown: false }}
-                                />
-                                <Stack.Screen
-                                  name="(auth)"
-                                  options={{ headerShown: false }}
-                                />
-                                <Stack.Screen
-                                  name="(tabs)"
-                                  options={{ headerShown: false }}
-                                />
-                                <Stack.Screen
-                                  name="modal"
-                                  options={{ presentation: "modal" }}
-                                />
-                              </Stack>
+                              <First7Provider>
+                                <Stack
+                                  screenOptions={{
+                                    animation: reduceMotion ? "none" : "default",
+                                  }}
+                                >
+                                  <Stack.Screen
+                                    name="profile"
+                                    options={{ headerShown: false }}
+                                  />
+                                  <Stack.Screen
+                                    name="(auth)"
+                                    options={{ headerShown: false }}
+                                  />
+                                  <Stack.Screen
+                                    name="(tabs)"
+                                    options={{ headerShown: false }}
+                                  />
+                                  <Stack.Screen
+                                    name="modal"
+                                    options={{ presentation: "modal" }}
+                                  />
+                                </Stack>
+                              </First7Provider>
                               </NotificationsProvider>
                             </ChangelogGate>
                           </TermsGate>

@@ -66,6 +66,13 @@ jest.mock('react-native', () => {
       refreshControl: _refreshControl,
       // Style-only RN props ignored in DOM
       onLayout: _onLayout,
+      // Modal-only / RN-specific props
+      animationType: _animationType,
+      onRequestClose: _onRequestClose,
+      presentationStyle: _presentationStyle,
+      statusBarTranslucent: _statusBarTranslucent,
+      transparent: _transparent,
+      visible: _visible,
       // everything else
       ...rest
     } = props;
@@ -110,6 +117,15 @@ jest.mock('react-native', () => {
     return React.createElement(tag, { value, onChange: handleChange, ...stripProps(rest) }, props.children);
   };
   const Pressable = (props) => React.createElement('button', stripProps(props), props.children);
+  // Basic Modal mock: render children in place, stripping RN-only props to avoid DOM warnings
+  const Modal = ({ children, ...props }) => {
+    // Reuse stripProps to drop animationType/onRequestClose/etc.
+    const safe = stripProps(props);
+    return React.createElement('div', safe, children);
+  };
+  // Basic Alert mock: capture calls for assertions
+  const Alert = { alert: jest.fn(), prompt: jest.fn() };
+  const AccessibilityInfo = { announceForAccessibility: jest.fn() };
   // Minimal FlatList mock: render items using renderItem
   const FlatList = ({ data = [], renderItem = () => null, keyExtractor, ListFooterComponent, ...rest }) => {
     const children = (data || []).map((item, index) => {
@@ -129,7 +145,7 @@ jest.mock('react-native', () => {
   const RefreshControl = () => null;
   // Share mock to enable jest.spyOn(Share, 'share')
   const Share = { share: async () => ({}) };
-  return { ...RN, StyleSheet, View, ScrollView, Text, TextInput, Pressable, FlatList, RefreshControl, Share };
+  return { ...RN, StyleSheet, View, ScrollView, Text, TextInput, Pressable, FlatList, RefreshControl, Share, Modal, Alert, AccessibilityInfo };
 });
 
 // Alias fireEvent.press -> fireEvent.click for web-like test env
