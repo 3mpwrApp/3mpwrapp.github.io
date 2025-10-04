@@ -2,17 +2,26 @@
 layout: default
 title: Newsletter
 permalink: /newsletter/
-description: Sign up for updates, early access, and beta invites from 3mpowr App.
+description: Subscribe for weekly updates, community stories, resource highlights, events, and advocacy news from 3mpowr App.
 ---
 
 # Newsletter
 
 Stay informed about product updates, early access, and beta invites. We’ll only email you about 3mpowr App. You can unsubscribe any time.
 
+## What You'll Get
+- **Weekly Updates**: Latest features and improvements
+- **Community Stories**: Inspiring stories from our community
+- **Resource Highlights**: New guides, templates, and educational materials
+- **Event Announcements**: Upcoming workshops, webinars, and community events
+- **Advocacy Updates**: Important policy changes and campaign progress
+
+## Subscribe Now
+
 <div class="newsletter-embed">
   <iframe
-    title="3mpowr App Newsletter Signup"
-    src="https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?embedded=true"
+    title="3mpowr App newsletter signup"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSf9AHMg9pMWS2njErNXDj1W0g2rXBNabXsUnZOgRF4vfvk0kQ/viewform?embedded=true"
     loading="lazy"
     frameborder="0"
     marginheight="0"
@@ -27,4 +36,8 @@ Stay informed about product updates, early access, and beta invites. We’ll onl
 </style>
 
 If you cannot see the embedded form, use this direct link:
-- [Open the signup form](https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform)
+- [Open the signup form](https://docs.google.com/forms/d/e/1FAIpQLSf9AHMg9pMWS2njErNXDj1W0g2rXBNabXsUnZOgRF4vfvk0kQ/viewform)
+
+---
+
+**We respect your privacy.** Your email will only be used for 3mpowr App newsletters and important updates. You can unsubscribe at any time.
