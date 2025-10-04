@@ -3,14 +3,14 @@
   "short_name": "3mpowr",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#111111",
-  "theme_color": "#111111",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
   "icons": [
     {
       "src": "/assets/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }
