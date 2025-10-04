@@ -111,7 +111,7 @@
   <script src="{{ '/assets/js/back-to-top.js' | relative_url }}" defer></script>
 
   <!-- Newsletter modal (homepage only) -->
-  <div id="newsletter-modal" role="dialog" aria-modal="true" aria-labelledby="newsletter-title" hidden style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.5);z-index:1000;padding:1rem;">
+  <div id="newsletter-modal" role="dialog" aria-modal="true" aria-labelledby="newsletter-title" hidden style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.5);z-index:1000;padding:1rem;">
     <div data-newsletter-dialog style="max-width:640px;width:100%;background:#fff;color:#111;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.2);overflow:hidden">
       <div style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid #eee;gap:.75rem">
         <h2 id="newsletter-title" style="margin:0;font-size:1.25rem">Subscribe to our newsletter</h2>
@@ -128,15 +128,18 @@
           loading="lazy"
         >Loading…</iframe>
       </div>
-      <div style="padding:0.75rem 1.25rem;border-top:1px solid #eee;display:flex;justify-content:flex-end">
+      <div style="padding:0.75rem 1.25rem;border-top:1px solid #eee;display:flex;gap:.5rem;justify-content:flex-end">
         <button id="newsletter-dismiss" type="button" class="button" style="padding:.5rem .75rem;border:1px solid #ccc;border-radius:.375rem;background:#f6f6f6;cursor:pointer">Not now</button>
+        <button id="newsletter-done" type="button" class="button" style="padding:.5rem .75rem;border:1px solid #ccc;border-radius:.375rem;background:#e9f5ff;cursor:pointer">Done, go home</button>
       </div>
     </div>
   </div>
 
   <script>
     (function() {
-  var MODAL_KEY = 'newsletter-dismissed';
+  var MODAL_KEY = 'newsletter-dismissed'; // legacy key (kept for compatibility)
+  var MODAL_LAST = 'newsletter-last-dismissed';
+  var MODAL_SUB = 'newsletter-subscribed';
   var modal = document.getElementById('newsletter-modal');
   var closeBtn = document.getElementById('newsletter-close');
   var dismissBtn = document.getElementById('newsletter-dismiss');
@@ -169,18 +172,47 @@
         if (dialog && dialog.focus) dialog.setAttribute('tabindex','-1'), dialog.focus();
       }
 
-      if (modal && isHome && !safeGet(MODAL_KEY)) {
+      function shouldShow() {
+        if (safeGet(MODAL_SUB) === '1') return false; // user said they're subscribed
+        var last = parseInt(safeGet(MODAL_LAST) || '0', 10);
+        if (!last) return true;
+        var WEEK = 7 * 24 * 60 * 60 * 1000;
+        return (Date.now() - last) > WEEK;
+      }
+
+      if (modal && isHome && shouldShow()) {
         // Show after a tiny delay so content is visible behind
         setTimeout(openModal, 400);
       }
 
-      [closeBtn, dismissBtn].forEach(function(btn){
-        if (!btn) return;
-        btn.addEventListener('click', function(){
-          safeSet(MODAL_KEY, '1');
-          closeModal();
+      function handleDismiss() {
+        safeSet(MODAL_KEY, '1'); // legacy
+        safeSet(MODAL_LAST, String(Date.now()));
+        closeModal();
+      }
+
+      [closeBtn, dismissBtn].forEach(function(btn){ if (btn) btn.addEventListener('click', handleDismiss); });
+
+      var doneBtn = document.getElementById('newsletter-done');
+      if (doneBtn) {
+        doneBtn.addEventListener('click', function(){
+          handleDismiss();
+          // Ensure we land on home
+          try { window.location.assign(homeRoot); } catch(e) {}
         });
-      });
+      }
+
+      // Delegation fallback (in case elements are replaced dynamically)
+      document.addEventListener('click', function(e){
+        var t = e.target;
+        if (!t) return;
+        if (t.id === 'newsletter-close' || t.id === 'newsletter-dismiss') {
+          handleDismiss();
+        } else if (t.id === 'newsletter-done') {
+          handleDismiss();
+          try { window.location.assign(homeRoot); } catch(e) {}
+        }
+      }, true);
 
       // Close on ESC and trap focus while open
       document.addEventListener('keydown', function(e){
@@ -216,6 +248,7 @@
         modal.addEventListener('click', function(e){
           if (e.target === modal) {
             safeSet(MODAL_KEY, '1');
+            safeSet(MODAL_LAST, String(Date.now()));
             closeModal();
           }
         });
@@ -224,6 +257,7 @@
       // Optional: if Google Form redirects back, auto-dismiss next visit
       if (document.referrer && document.referrer.includes('docs.google.com/forms')) {
         safeSet(MODAL_KEY, '1');
+        safeSet(MODAL_LAST, String(Date.now()));
       }
     })();
   </script>
