@@ -1,6 +1,6 @@
-# Scan the built site (set in workflow). This config reduces false positives.
+# Lychee config for built-site scanning
 
-# Exclude domains that frequently block bots or are out of our control.
+# Exclude domains that frequently block bots or are managed externally.
 exclude = [
   "https://x.com/.*",
   "https://twitter.com/.*",
@@ -11,8 +11,17 @@ exclude = [
   "https://3mpwrapp.github.io/sitemap.xml"
 ]
 
-# Some sites return 403 to headless checkers; accept them.
+# Accept 403 for some guarded endpoints if they slip through.
 accept = [200, 204, 206, 403]
+
+# Skip repo docs if they ever appear in _site accidentally.
+exclude_path = [
+  ".*/_site/README\\.md$",
+  ".*/_site/CONTRIBUTING\\.md$",
+  ".*/_site/ACTIVATION\\.md$",
+  ".*/_site/HOW_TO_ACTIVATE\\.md$",
+  ".*/_site/\\.github/.*"
+]
 
 # Retries to reduce transient failures.
 max_retries = 2
