@@ -369,6 +369,27 @@ body[data-contrast="high"] .back-to-top {
   border-color: #fff;
 }
 
+/* Modal utilities */
+body.no-scroll {
+  overflow: hidden !important;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding: 1rem;
+}
+.modal.is-open {
+  display: flex;
+}
+.is-hidden {
+  display: none !important;
+}
+
 /* Print styles */
 @media print {
   header, nav, .social-links, .header-controls, footer, .back-to-top { 
