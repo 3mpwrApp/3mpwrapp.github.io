@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3mpowrApp Newsletter</title>
+  <meta name="description" content="Sign up to receive updates from 3mpowrApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>3mpowrApp</h1>
+      <p class="tagline">Sign up for updates, early access, and beta invites.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Newsletter signup</h2>
+      <p>Use the form below to subscribe. We’ll only email you about 3mpowrApp. You can unsubscribe any time.</p>
+
+      <div class="embed-wrap">
+        <iframe
+          title="3mpowrApp Newsletter Signup"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfuItjmtWlUW3L8irmSe8QN129_GJDLAF4f5n-QHPcj_FFoyg/viewform?embedded=true"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          loading="lazy"
+        >Loading…</iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container small">
+      <p>© <span id="year"></span> 3mpowrApp • <a href="#privacy">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
