@@ -49,8 +49,8 @@ Stay informed about product updates, early access, and beta invites. We’ll onl
     if (firstLoadDone) {
       // Optional visual hint
       iframe.classList.add('newsletter-redirecting');
-      // Redirect after a brief delay to ensure responses are logged
-      setTimeout(function () { window.location.href = '/'; }, 300);
+      // Redirect immediately
+      setTimeout(function () { window.location.href = '/'; }, 0);
       return;
     }
     firstLoadDone = true;
