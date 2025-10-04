@@ -120,7 +120,7 @@ Ready to join the movement? Here’s how you can get started:
 Follow 3mpowr on social media to stay connected and be part of the community:
 
 - <a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">Facebook</a> – Follow us for updates and community news
-- <a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">X (Twitter)</a> – Join the conversation
+- <a href="https://x.com/3mpwrApp0816" target="_blank" rel="noopener noreferrer">X (Twitter)</a> – Join the conversation
 - <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">Instagram</a> – See our latest posts and stories
 
 ---

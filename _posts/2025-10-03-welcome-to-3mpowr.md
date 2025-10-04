@@ -12,7 +12,7 @@ We’re excited to launch the 3mpowr App website. Here’s what you can do today
 - Sign up to be a [Beta Tester]({{ '/beta' | relative_url }})
 - Subscribe to our [Newsletter]({{ '/newsletter' | relative_url }})
 
-Follow us on social: [Facebook](https://www.facebook.com/3mpowrapp), [X](https://x.com/3mpowrApp0816), [Instagram](https://www.instagram.com/3mpowrapp/).
+Follow us on social: [Facebook](https://www.facebook.com/3mpowrapp), [X](https://x.com/3mpwrApp0816), [Instagram](https://www.instagram.com/3mpowrapp/).
 
 <!--more-->
 

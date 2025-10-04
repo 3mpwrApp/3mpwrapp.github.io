@@ -20,7 +20,7 @@ Your website repository is already set up with all the necessary code and config
 
 1. Go to your repository on GitHub:
    ```
-   https://github.com/3mpowrApp/3mpwrapp.github.io/settings
+   https://github.com/3mpwrApp/3mpwrapp.github.io/settings
    ```
 
 2. Click on the **Settings** tab (⚙️ gear icon near the top)
@@ -62,7 +62,7 @@ You'll see the GitHub Pages configuration page. Follow these settings:
 
 1. **Check the Actions tab:**
    ```
-   https://github.com/3mpowrApp/3mpwrapp.github.io/actions
+   https://github.com/3mpwrApp/3mpwrapp.github.io/actions
    ```
    - You should see a workflow run called "Deploy Jekyll site to Pages"
    - Wait for it to complete (green checkmark ✓)
@@ -214,7 +214,7 @@ Your website is a **static site** - no backend server or database. This means:
 
 ### Need Help?
 - 📧 Email: empowrapp08162025@gmail.com
-- 🐛 [Open an Issue](https://github.com/3mpowrApp/3mpwrapp.github.io/issues)
+- 🐛 [Open an Issue](https://github.com/3mpwrApp/3mpwrapp.github.io/issues)
 - 💬 Check existing documentation in `.github/` directory
 
 ---

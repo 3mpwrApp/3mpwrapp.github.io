@@ -52,7 +52,7 @@ You need to manually set up branch protection in GitHub settings:
 
 1. **Go to Repository Settings:**
    ```
-   https://github.com/3mpowrApp/3mpwrapp.github.io/settings
+   https://github.com/3mpwrApp/3mpwrapp.github.io/settings
    ```
 
 2. **Navigate to Branches:**
@@ -86,7 +86,7 @@ You need to manually set up branch protection in GitHub settings:
 
 1. **Go to Repository Settings:**
    ```
-   https://github.com/3mpowrApp/3mpwrapp.github.io/settings
+   https://github.com/3mpwrApp/3mpwrapp.github.io/settings
    ```
 
 2. **Navigate to Rulesets:**
@@ -150,10 +150,10 @@ Once branch protection is enabled:
 
 ## 📎 Quick Links
 
-- [Repository](https://github.com/3mpowrApp/3mpwrapp.github.io)
-- [Settings](https://github.com/3mpowrApp/3mpwrapp.github.io/settings)
-- [Branch Protection](https://github.com/3mpowrApp/3mpwrapp.github.io/settings/branches)
-- [Rulesets](https://github.com/3mpowrApp/3mpwrapp.github.io/settings/rules)
+- [Repository](https://github.com/3mpwrApp/3mpwrapp.github.io)
+- [Settings](https://github.com/3mpwrApp/3mpwrapp.github.io/settings)
+- [Branch Protection](https://github.com/3mpwrApp/3mpwrapp.github.io/settings/branches)
+- [Rulesets](https://github.com/3mpwrApp/3mpwrapp.github.io/settings/rules)
 
 ---
 

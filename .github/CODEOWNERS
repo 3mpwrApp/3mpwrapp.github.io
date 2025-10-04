@@ -8,26 +8,26 @@
 
 # Default owner for everything in the repository
 # This user will be requested for review on all pull requests
-*       @3mpowrApp
+*       @3mpwrApp
 
 # GitHub configuration and workflows
-/.github/       @3mpowrApp
+/.github/       @3mpwrApp
 
 # Jekyll configuration and layouts
-/_config.yml    @3mpowrApp
-/_layouts/      @3mpowrApp
+/_config.yml    @3mpwrApp
+/_layouts/      @3mpwrApp
 
 # Critical documentation files
-/README.md              @3mpowrApp
-/CONTRIBUTING.md        @3mpowrApp
+//README.md              @3mpwrApp
+//CONTRIBUTING.md        @3mpwrApp
 
 # Assets (CSS, images, etc.)
 # You may want to assign a design/frontend specialist here
-/assets/        @3mpowrApp
+/assets/        @3mpwrApp
 
 # Main pages
-/index.md       @3mpowrApp
-/about.md       @3mpowrApp
+/index.md       @3mpwrApp
+/about.md       @3mpwrApp
 
 # Content directories
 # You can add specific owners for different content areas

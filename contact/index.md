@@ -10,7 +10,7 @@ title: Contact
 Stay connected with 3mpowr App on social media:
 
 - **[Facebook](https://www.facebook.com/3mpowrapp)** - Follow us for updates and community news
-- **[X (Twitter)](https://x.com/3mpowrApp0816)** - Join the conversation and get real-time updates
+- **[X (Twitter)](https://x.com/3mpwrApp0816)** - Join the conversation and get real-time updates
 - **[Instagram](https://www.instagram.com/3mpowrapp/)** - See our latest posts and stories
 
 ## Join Our Beta Program
