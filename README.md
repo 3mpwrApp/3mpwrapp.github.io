@@ -87,6 +87,8 @@ Prerequisites:
 
 This site is automatically deployed to GitHub Pages when changes are merged to the `main` branch. The deployment workflow is defined in `.github/workflows/jekyll.yml`.
 
+Note: For the site to live at the root (https://3mpowrapp.github.io/), the repository name must be exactly `3mpowrapp.github.io`. If the repo name differs, GitHub will publish it under `https://3mpowrapp.github.io/<repo-name>/` and CI should point to that path.
+
 ## Support
 
 - 📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
