@@ -18,8 +18,8 @@
 /_layouts/      @3mpwrApp
 
 # Critical documentation files
-//README.md              @3mpwrApp
-//CONTRIBUTING.md        @3mpwrApp
+/README.md              @3mpwrApp
+/CONTRIBUTING.md        @3mpwrApp
 
 # Assets (CSS, images, etc.)
 # You may want to assign a design/frontend specialist here
