@@ -34,22 +34,18 @@ Stay informed about product updates, early access, and beta invites. We’ll onl
 <style>
 .newsletter-embed { position: relative; width: 100%; }
 .newsletter-embed iframe { width: 100%; height: min(1600px, 86vh); background: #fff; border: 0; border-radius: 8px; }
-/* Optional: a subtle fade while redirecting */
 .newsletter-redirecting { opacity: 0.4; transition: opacity 200ms ease-in-out; pointer-events: none; }
 </style>
 
 <script>
-// Redirect to home after the Google Form finishes submitting inside the iframe.
-// Technique: the iframe 'load' event fires twice — first for the form, second for the "response recorded" view.
 (function () {
   var iframe = document.getElementById('newsletter-form');
   if (!iframe) return;
   var firstLoadDone = false;
   iframe.addEventListener('load', function () {
     if (firstLoadDone) {
-      // Optional visual hint
       iframe.classList.add('newsletter-redirecting');
-      // Redirect immediately
+      // Redirect immediately after submission view loads
       setTimeout(function () { window.location.href = '/'; }, 0);
       return;
     }
