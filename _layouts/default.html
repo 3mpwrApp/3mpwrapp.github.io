@@ -83,7 +83,7 @@
   <footer>
     <div class="social-links">
       <a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">Facebook</a>
-  <a href="https://x.com/3mpwrApp0816" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+  <a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
       <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="Subscribe to RSS feed">RSS</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">Beta Testers Sign Up</a>
@@ -111,62 +111,195 @@
   <script src="{{ '/assets/js/back-to-top.js' | relative_url }}" defer></script>
 
   <!-- Newsletter modal (homepage only) -->
-  <div id="newsletter-modal" role="dialog" aria-modal="true" aria-labelledby="newsletter-title" hidden style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:color-mix(in oklab, black 50%, transparent);z-index:1000;padding:1rem;">
-    <div style="max-width:640px;width:100%;background:#fff;color:#111;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.2);overflow:hidden">
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid #eee">
-        <h2 id="newsletter-title" style="margin:0;font-size:1.25rem">Subscribe to our newsletter</h2>
-        <button id="newsletter-close" type="button" aria-label="Close" style="border:0;background:transparent;font-size:1.25rem;line-height:1;cursor:pointer">×</button>
+  <div id="newsletter-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="newsletter-title" hidden>
+    <div class="modal-dialog newsletter-dialog" data-newsletter-dialog>
+      <div class="modal-header">
+        <h2 id="newsletter-title">Subscribe to our newsletter</h2>
+        <div class="modal-actions">
+          <a class="modal-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfuItjmtWlUW3L8irmSe8QN129_GJDLAF4f5n-QHPcj_FFoyg/viewform" target="_blank" rel="noopener noreferrer">Open form in new tab</a>
+          <button id="newsletter-close" data-action="newsletter-close" type="button" aria-label="Close" class="modal-close">×</button>
+        </div>
       </div>
-      <div style="padding:0;">
+      <div class="modal-body">
         <iframe
           title="3mpowrApp Newsletter Signup"
           src="https://docs.google.com/forms/d/e/1FAIpQLSfuItjmtWlUW3L8irmSe8QN129_GJDLAF4f5n-QHPcj_FFoyg/viewform?embedded=true"
-          style="width:100%;height:70vh;border:0"
+          class="modal-iframe"
           loading="lazy"
         >Loading…</iframe>
       </div>
-      <div style="padding:0.75rem 1.25rem;border-top:1px solid #eee;display:flex;justify-content:flex-end">
-        <button id="newsletter-dismiss" type="button" class="button" style="padding:.5rem .75rem;border:1px solid #ccc;border-radius:.375rem;background:#f6f6f6;cursor:pointer">Not now</button>
+      <div class="modal-footer">
+        <div class="reminder">
+          <label for="newsletter-remind">Remind me in:</label>
+          <select id="newsletter-remind" aria-label="Reminder interval">
+            <option value="604800000" selected>1 week</option>
+            <option value="1209600000">2 weeks</option>
+            <option value="2592000000">1 month</option>
+          </select>
+        </div>
+        <div class="modal-buttons">
+          <button id="newsletter-dismiss" data-action="newsletter-dismiss" type="button" class="button button--secondary">Not now</button>
+          <button id="newsletter-subscribed" data-action="newsletter-subscribed" type="button" class="button">Already subscribed</button>
+          <button id="newsletter-done" data-action="newsletter-done" type="button" class="button button--primary">Done, go home</button>
+        </div>
       </div>
     </div>
   </div>
 
   <script>
     (function() {
-      var MODAL_KEY = 'newsletter-dismissed';
-      var modal = document.getElementById('newsletter-modal');
-      var closeBtn = document.getElementById('newsletter-close');
-      var dismissBtn = document.getElementById('newsletter-dismiss');
-      var isHome = (location.pathname === '{{ '/' | relative_url }}' || location.pathname === '{{ '/' | relative_url }}index.html');
+  var MODAL_KEY = 'newsletter-dismissed'; // legacy key (kept for compatibility)
+  var MODAL_LAST = 'newsletter-last-dismissed';
+  var MODAL_SUB = 'newsletter-subscribed';
+  var modal = document.getElementById('newsletter-modal');
+  var closeBtn = document.getElementById('newsletter-close');
+  var dismissBtn = document.getElementById('newsletter-dismiss');
+  var subscribedBtn = document.getElementById('newsletter-subscribed');
+  var dialog = modal ? modal.querySelector('[data-newsletter-dialog]') : null;
+  var reminderSelect = document.getElementById('newsletter-remind');
+  var REM_MS = 'newsletter-reminder-ms';
+  var homeRoot = '{{ '/' | relative_url }}';
+      var isHome = (location.pathname === homeRoot || location.pathname === homeRoot + 'index.html');
+  var noModal = (new URLSearchParams(location.search)).get('no-modal') === '1';
+
+      function safeSet(key, val) {
+        try { localStorage.setItem(key, val); } catch (e) { /* ignore */ }
+      }
+      function safeGet(key) {
+        try { return localStorage.getItem(key); } catch (e) { return null; }
+      }
 
       function closeModal() {
         if (!modal) return;
         modal.hidden = true;
-        document.body.style.overflow = '';
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden','true');
+        document.body.classList.remove('no-scroll');
       }
 
       function openModal() {
         if (!modal) return;
         modal.hidden = false;
-        document.body.style.overflow = 'hidden';
+        modal.classList.add('is-open');
+        modal.removeAttribute('aria-hidden');
+        document.body.classList.add('no-scroll');
+        // Focus the dialog for a11y
+        if (dialog && dialog.focus) dialog.setAttribute('tabindex','-1'), dialog.focus();
       }
 
-      if (modal && isHome && !localStorage.getItem(MODAL_KEY)) {
+      function shouldShow() {
+        if (safeGet(MODAL_SUB) === '1') return false; // user said they're subscribed
+        var last = parseInt(safeGet(MODAL_LAST) || '0', 10);
+        if (!last) return true;
+        var WEEK = 7 * 24 * 60 * 60 * 1000;
+        var interval = parseInt(safeGet(REM_MS) || String(WEEK), 10);
+        if (!isFinite(interval) || interval < 24*60*60*1000) interval = WEEK; // min 1 day safeguard
+        return (Date.now() - last) > interval;
+      }
+
+      if (modal && isHome && !noModal && shouldShow()) {
         // Show after a tiny delay so content is visible behind
         setTimeout(openModal, 400);
       }
 
-      [closeBtn, dismissBtn].forEach(function(btn){
-        if (!btn) return;
-        btn.addEventListener('click', function(){
-          localStorage.setItem(MODAL_KEY, '1');
+      function handleDismiss() {
+        safeSet(MODAL_KEY, '1'); // legacy
+        var interval = null;
+        if (reminderSelect && reminderSelect.value) {
+          var v = parseInt(reminderSelect.value, 10);
+          if (isFinite(v)) interval = v;
+        }
+        if (interval) safeSet(REM_MS, String(interval));
+        safeSet(MODAL_LAST, String(Date.now()));
+        closeModal();
+      }
+
+  [closeBtn, dismissBtn].forEach(function(btn){ if (btn) btn.addEventListener('click', handleDismiss); });
+
+      var doneBtn = document.getElementById('newsletter-done');
+      if (doneBtn) {
+        doneBtn.addEventListener('click', function(){
+          handleDismiss();
+          // Ensure we land on home
+          try { window.location.assign(homeRoot); } catch(e) {}
+        });
+      }
+
+      if (subscribedBtn) {
+        subscribedBtn.addEventListener('click', function(){
+          safeSet(MODAL_SUB, '1');
+          safeSet(MODAL_LAST, String(Date.now()));
           closeModal();
         });
-      });
+      }
 
-      // Optional: if Google Form redirects back, we can auto-dismiss next visit
+      // Delegated click handling using data-action for broader compatibility
+      document.addEventListener('click', function(e){
+        var t = e.target;
+        if (!t) return;
+        var action = t.getAttribute && t.getAttribute('data-action');
+        if (!action && t.closest) {
+          var closest = t.closest('[data-action]');
+          if (closest) action = closest.getAttribute('data-action');
+        }
+        if (!action) return;
+        if (action === 'newsletter-close' || action === 'newsletter-dismiss') {
+          handleDismiss();
+        } else if (action === 'newsletter-subscribed') {
+          safeSet(MODAL_SUB, '1');
+          safeSet(MODAL_LAST, String(Date.now()));
+          closeModal();
+        } else if (action === 'newsletter-done') {
+          handleDismiss();
+          try { window.location.assign(homeRoot); } catch(e) {}
+        }
+      }, true);
+
+      // Close on ESC and trap focus while open
+      document.addEventListener('keydown', function(e){
+        if (!modal || modal.hidden) return;
+        if (e.key === 'Escape') {
+          safeSet(MODAL_KEY, '1');
+          safeSet(MODAL_LAST, String(Date.now()));
+          closeModal();
+          return;
+        }
+        if (e.key === 'Tab') {
+          var focusables = dialog ? dialog.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])') : [];
+          focusables = Array.prototype.slice.call(focusables).filter(function(el){ return el.offsetParent !== null; });
+          if (focusables.length === 0) return;
+          var first = focusables[0];
+          var last = focusables[focusables.length - 1];
+          var active = document.activeElement;
+          if (e.shiftKey) {
+            if (active === first || !dialog.contains(active)) {
+              e.preventDefault();
+              last.focus();
+            }
+          } else {
+            if (active === last || !dialog.contains(active)) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+        }
+      }, true);
+
+      // Close on backdrop click (but not when clicking inside dialog)
+      if (modal) {
+        modal.addEventListener('click', function(e){
+          if (e.target === modal) {
+            safeSet(MODAL_KEY, '1');
+            safeSet(MODAL_LAST, String(Date.now()));
+            closeModal();
+          }
+        });
+      }
+
+      // Optional: if Google Form redirects back, auto-dismiss next visit
       if (document.referrer && document.referrer.includes('docs.google.com/forms')) {
-        localStorage.setItem(MODAL_KEY, '1');
+        safeSet(MODAL_KEY, '1');
+        safeSet(MODAL_LAST, String(Date.now()));
       }
     })();
   </script>
