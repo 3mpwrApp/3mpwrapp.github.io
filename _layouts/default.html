@@ -158,8 +158,9 @@
   var dialog = modal ? modal.querySelector('[data-newsletter-dialog]') : null;
   var reminderSelect = document.getElementById('newsletter-remind');
   var REM_MS = 'newsletter-reminder-ms';
-      var homeRoot = '{{ '/' | relative_url }}';
+  var homeRoot = '{{ '/' | relative_url }}';
       var isHome = (location.pathname === homeRoot || location.pathname === homeRoot + 'index.html');
+  var noModal = (new URLSearchParams(location.search)).get('no-modal') === '1';
 
       function safeSet(key, val) {
         try { localStorage.setItem(key, val); } catch (e) { /* ignore */ }
@@ -196,7 +197,7 @@
         return (Date.now() - last) > interval;
       }
 
-      if (modal && isHome && shouldShow()) {
+      if (modal && isHome && !noModal && shouldShow()) {
         // Show after a tiny delay so content is visible behind
         setTimeout(openModal, 400);
       }
