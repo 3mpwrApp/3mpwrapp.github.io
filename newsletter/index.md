@@ -31,11 +31,7 @@ Stay informed about product updates, early access, and beta invites. We’ll onl
   >Loading…</iframe>
 </div>
 
-<style>
-.newsletter-embed { position: relative; width: 100%; }
-.newsletter-embed iframe { width: 100%; height: min(1600px, 86vh); background: #fff; border: 0; border-radius: 8px; }
-.newsletter-redirecting { opacity: 0.4; transition: opacity 200ms ease-in-out; pointer-events: none; }
-</style>
+<!-- styles moved to assets/css/style.css -->
 
 <script>
 (function () {

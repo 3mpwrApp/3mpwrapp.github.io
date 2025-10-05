@@ -7,6 +7,7 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: "0 6 * * 1" # Weekly Monday 06:00 UTC
+  workflow_dispatch:
 
 jobs:
   pa11y:
@@ -25,6 +26,11 @@ jobs:
         continue-on-error: ${{ github.event_name == 'pull_request' }}
         run: |
           npx pa11y-ci --config .pa11yci.json --reporter json > pa11y-report.json
+
+      - name: Summarize pa11y results
+        if: always()
+        run: |
+          node -e "const fs=require('fs');let out='';try{const data=JSON.parse(fs.readFileSync('pa11y-report.json','utf8'));if(Array.isArray(data)){let total=0;out+='# Pa11y Summary\n\n';for(const r of data){const issues=(r.issues||[]).filter(i=>i.type==='error');total+=issues.length;if(issues.length){out+=`## ${r.url} — ${issues.length} error(s)\n`;for(const i of issues.slice(0,10)){out+=`- [${i.code}] ${i.message} (selector: \`${(i.selector||'').toString().trim()}\`)\n`;}if(issues.length>10){out+=`- …and ${issues.length-10} more on this page\n`;}out+='\n';}}out+=`\nTotal errors: ${total}\n`; } else { out='No pa11y JSON array found.' } fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY||'pa11y-summary.md',out); }catch(e){fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY||'pa11y-summary.md','Pa11y report not available.');}"
 
       - name: Upload pa11y report
         if: always()

@@ -76,7 +76,7 @@ title: User Guide
 
 ---
 
-# Components Reference
+## Components Reference
 Below are the major components you'll interact with; developers can find source in the `components/` folder.
 
 - **A11yPressable**: Pressable button with screen reader role/labels and large touch targets.
@@ -91,22 +91,22 @@ Below are the major components you'll interact with; developers can find source 
 
 ---
 
-# Privacy & Security
+## Privacy & Security
 - Evidence Locker encryption uses AES with device-stored keys and passphrase-based export/import.
 - Exported files are encrypted; keep your passphrase safe—there's no recovery.
 - Analytics registry enforces schemas and redacts PII. Sensitive fields or free text are never logged.
 
-# Accessibility
+## Accessibility
 - **Roles**: Components map RN accessibility roles to web ARIA when on Web.
 - **Announcements**: Focus and live-region announcements guide screen reader users.
 - **Color & Contrast**: Palette is AAA-compliant; avoid relying on color alone.
 
-# Troubleshooting
+## Troubleshooting
 - **Sharing not available on Web**: The app falls back to cache save and a confirmation alert.
 - **Image picker denied**: Grant Photos permission in your device settings.
 - **Upload errors**: Items are queued automatically; process the queue when back online.
 
-# Contact & Feedback
+## Contact & Feedback
 - Send feedback from Settings or community channels.
 
 ---

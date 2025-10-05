@@ -11,11 +11,12 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#site-footer">Skip to footer</a>
   <header>
     <!-- Brand: clicking this takes you home -->
     <div class="brand">
-      <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home" style="display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .75rem;border:2px solid currentColor;border-radius:.5rem;text-decoration:none;font-weight:700">
-        <img src="{{ '/assets/empowrapp-logo.png' | relative_url }}" alt="" width="28" height="28" style="display:inline-block" />
+      <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+        <img src="{{ '/assets/empowrapp-logo.png' | relative_url }}" alt="" width="28" height="28" aria-hidden="true" />
         <span>{{ site.title }}</span>
       </a>
     </div>
@@ -23,7 +24,7 @@
     <nav aria-label="Primary">
       <ul class="nav-list">
         <li>
-          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+          <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Home</a>
         </li>
         <li>
           <a href="{{ '/about' | relative_url }}" {% if page.url == '/about.html' or page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
@@ -80,7 +81,7 @@
     {{ content }}
   </main>
 
-  <footer>
+  <footer id="site-footer">
     <div class="social-links">
       <a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">Facebook</a>
   <a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
@@ -88,7 +89,7 @@
       <a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="Subscribe to RSS feed">RSS</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">Beta Testers Sign Up</a>
     </div>
-  <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpowr App</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy</a></p>
+  <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpowr App</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy</a> • <a href="{{ '/accessibility' | relative_url }}">Accessibility</a></p>
   </footer>
 
   <!-- A11y: skip link should move focus to main -->

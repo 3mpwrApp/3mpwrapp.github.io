@@ -28,4 +28,6 @@ If you encounter accessibility issues:
 
 We review feedback promptly and work to improve the experience for all users.
 
+We aim to respond within 5 business days. If you need content in an alternative format (e.g., large print, accessible PDF, plain text), let us know which format you prefer and the page URL.
+
 Last updated: {{ site.time | date: "%Y-%m-%d" }}
