@@ -346,6 +346,13 @@
     "policy": {
       "aiHeader": "AI Simplifier",
       "aiHelp": "Paste policy/decision text below. Processes locally unless a backend is configured.",
+      "copy": "Copy",
+      "copiedBody": "Summary copied.",
+      "share": "Share",
+      "exportPdf": "Export as PDF",
+      "exportDoc": "Export as .doc",
+      "clipboardNA": "Clipboard not available",
+      "clipboardNABody": "Install expo-clipboard in a dev build to enable copy.",
       "simplify": "Simplify",
       "simplifying": "Simplifying...",
       "summary": "Summary",

@@ -19,11 +19,22 @@ lastUpdated: 2025-10-05
 
 > Tip: The app respects your device’s text size. Increase font size in system Accessibility/Display.
 
+## Onboarding — Your first 7 days
+
+- Private checklist to get oriented; progress is stored locally only.
+- Suggested steps: capture basics, add your first Evidence Locker note, tag key contacts, bookmark resources, set reminders, record denial dates, review privacy, and export a backup.
+- Quick links jump to common features (Evidence Locker, Resources, Advocacy Hub, Profile, Notifications).
+- Privacy: Stays on device unless you choose optional cloud features elsewhere.
+
 ## Navigation
 
 - Tabs: Advocacy, Campaigns, Community, Events, Podcasts, Research, Resources, Wellness, Saved, Settings.
 - Header: Top‑right shows Settings and a High‑Contrast toggle. Some screens show counters and refresh.
 - Back: Use your device back gesture/button; links and buttons move between screens.
+
+### What’s New
+
+- See release notes and recent improvements in the What’s New area. Changelogs also live in `docs/CHANGELOG.md`.
 
 ![Home Header](images/home-header.png "Top bar with brand, Settings, and High‑Contrast")
 
@@ -36,9 +47,12 @@ lastUpdated: 2025-10-05
   - AI Advocate Translator: Simplifies bureaucratic letters into plain English.
   - AI Case Interpreter: Helps interpret case notes/letters.
   - Collective Legal Action Hub: Organize and coordinate.
+  - Ally Hub: Quick prompts and links for supporters to coordinate.
   - AI Government Navigator: Navigate government pathways faster.
   - Lawyer Finder: Search advocates by name, bio, or location; filter and browse map/list views.
   - Disability Justice Ratings (beta): Rate services and providers (e.g., hospitals, clinics); see averages and score distribution; submissions are throttled and moderated.
+  - Accountability Coach (beta): Generate step‑by‑step plans, detect violations, draft letters, and track responses.
+  - Accountability Cases (beta): Review cases created via the coach and recent events.
 - Ask an Advocate: Intake form to request support.
 
 ![Advocacy Directory](images/advocacy-directory.png "Advocacy directory with search and tools")
@@ -341,21 +355,30 @@ lastUpdated: 2025-10-05
 Where you’ll see “Coming soon” today
 
 - Community: Media Studio, Mutual Aid, Mutual Chat, Beta Testers Chat, and Compose Post cards show “Coming soon”. DMs are marked “beta”. Safety & Blocking mentions upcoming one‑tap block, report tools, and moderation flows.
-- Wellness hub: Many tools are still being built. You’ll see “Coming soon” on Rehab Games, Diet & Nutrition Guides, Sleep Reframe, CBT Mini‑Games, DBT Skill Matcher, Opposite Action, Radical Acceptance, Acceptance & Function, Distress Tolerance, Belief Strength Meter, Adaptive Meditation, Ambience Sync AI, Grief Support, Resilience Points, Dream Tracker & Interpreter, and the Self‑Care Library.
-- Research: History Timeline, Case/File Wait‑Times, and Master Index are labeled “Coming soon”.
-- Resources: Some AI tools and planners are staged, including AI Decision Simplifier and Claims Navigator (cards show “Coming soon”).
-- Advocacy: Several advanced tools and directories are staged. Cards for Ally Hub, Collective Legal, Accountability Coach, and Accountability Cases show “Coming soon”.
+- Wellness hub: Some future tools are still being built; labels will indicate “Coming soon”.
+- Research: History Timeline, Case/File Wait‑Times, and Master Index may be labeled “Coming soon”.
+- Resources: Some experimental AI tools and planners are staged (cards will show “Coming soon”).
 - Admin/Docs: Certain admin utilities and docs may still be placeholders; they won’t affect normal use.
 
 Beta today
 
-- Advocacy: AI Advocate Translator, AI Case Interpreter, AI Government Navigator, Policy Made Simple, Lawyer Finder, and Ratings are available as Beta.
+- Advocacy: AI Advocate Translator, AI Case Interpreter, AI Government Navigator, Policy Made Simple, Lawyer Finder, Ratings, Ally Hub, Collective Legal Action Hub, Accountability Coach, and Accountability Cases are available as Beta.
 - Wellness: AI Companion, Work‑Balance AI, Ambience Sync AI, Grief + Identity Support, Self‑Care Library, Rehab Games, Diet & Nutrition Guides, Symptom & Pain Tracker, Sleep & Energy Tracker, Pain Forecast, Reflections Calendar, Accessible Exercise Hub, Daily Energy Coins, and Daily Planner are available as Beta.
   - Also in Beta: Sleep Reframe, CBT Mini‑Games, DBT Skill Matcher, Opposite Action, Radical Acceptance, Acceptance & Function, Distress Tolerance, Belief Strength Meter, Adaptive Meditation, and Dream Tracker & Interpreter.
 - Resources: Evidence Locker, Chronic Tracker, and Medication & Treatment Tracker are available as Beta.
   - Resources → Trackers & Planners: Deadline Calculator + Reminders, Rehab Progress Tracker, and Return‑to‑Work Planner are available as Beta.
   
   - Wellness: Also in Beta — Micro‑Movement Coach and AI Pacing Partner.
+
+## Troubleshooting
+
+- Sharing not available on Web: The app falls back to saving in cache and a confirmation alert.
+- Image picker denied: Grant Photos permission in your device settings.
+- Upload errors: Items queue automatically; process the queue when back online.
+
+## Contact & Feedback
+
+- Send feedback from Settings or community channels. For privacy concerns, review the in‑app Privacy policy and contact support.
 
 ## Offline & Sync
 
