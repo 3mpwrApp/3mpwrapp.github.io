@@ -9,6 +9,8 @@ All notable changes to this project will be documented in this file.
 - Added comprehensive USER_GUIDE.md covering all app features and major components.
 
 ## [2025-10-05]
+ - i18n: Added missing Advocacy Policy actions keys (copy/share/export/clipboard messages) to es and fr; i18n parity and assertions pass.
+ - Docs: Consolidated User Guide into `docs/user-guide.md`; removed the temporary merged note placeholder file.
 - Advocacy: Standardized "Coming soon" labeling across Advocacy hub cards; ensured each title renders as a single Text node and removed a11y label duplication that could create hidden mirrors on web.
 - Tests: Hardened Advocacy hub test to match against rendered text content, tolerating the "(Coming soon)" suffix and zero‑width space used for non‑coming‑soon titles; entire test suite passes.
 - Docs: Synced User Guide section "Where you’ll see ‘Coming soon’ today" with actual app placements; reconfirmed Events ICS feed documentation and DM beta notes.
