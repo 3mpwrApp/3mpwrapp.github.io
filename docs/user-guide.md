@@ -211,6 +211,13 @@ lastUpdated: 2025-09-07
 - Some screens and buttons may show a subtle “Coming soon” label to signal features that are in development.
 - Feedback welcome: Use About → Contact to send suggestions.
 
+Where you’ll see “Coming soon” today
+
+- Community → Media Studio, Mutual Aid, Mutual Chat, Beta Testers Chat, and Compose Post cards show “Coming soon”.
+- Community → Safety & Blocking notes future one-tap block and report tools.
+- Wellness: Some advanced tools are in development; labels appear on their entries when applicable.
+- Admin/Docs: Certain admin utilities and docs may still be placeholders; they won’t affect normal use.
+
 ## Offline & Sync
 
 - Offline: Clear indicators when offline; lists cache locally.

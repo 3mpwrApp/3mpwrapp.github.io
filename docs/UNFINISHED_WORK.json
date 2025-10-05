@@ -1,5 +1,5 @@
 {
-  "count": 89,
+  "count": 109,
   "results": [
     {
       "file": "app/(auth)/login.tsx",
@@ -8,7 +8,7 @@
       ]
     },
     {
-      "file": "app/(auth)/register.js",
+      "file": "app/(auth)/register.tsx",
       "patterns": [
         "placeholder"
       ]
@@ -21,6 +21,18 @@
     },
     {
       "file": "app/(tabs)/admin/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/advocacy/accountability-case.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/advocacy/accountability-coach.tsx",
       "patterns": [
         "placeholder"
       ]
@@ -50,7 +62,19 @@
       ]
     },
     {
+      "file": "app/(tabs)/advocacy/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
       "file": "app/(tabs)/advocacy/lawyer-finder.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/advocacy/policy-simple.tsx",
       "patterns": [
         "placeholder"
       ]
@@ -80,6 +104,24 @@
       ]
     },
     {
+      "file": "app/(tabs)/community/dms/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/dms/[id].tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
       "file": "app/(tabs)/community/media-studio.tsx",
       "patterns": [
         "placeholder"
@@ -94,6 +136,13 @@
     {
       "file": "app/(tabs)/community/mutual-chat.tsx",
       "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/community/safety.tsx",
+      "patterns": [
+        "coming soon",
         "placeholder"
       ]
     },
@@ -135,7 +184,7 @@
       ]
     },
     {
-      "file": "app/(tabs)/index.tsx",
+      "file": "app/(tabs)/podcasts/index.tsx",
       "patterns": [
         "placeholder"
       ]
@@ -148,6 +197,12 @@
     },
     {
       "file": "app/(tabs)/research/history-timeline.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/research/index.tsx",
       "patterns": [
         "placeholder"
       ]
@@ -345,6 +400,12 @@
       ]
     },
     {
+      "file": "app/(tabs)/wellness/index.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
       "file": "app/(tabs)/wellness/pacing-partner.tsx",
       "patterns": [
         "placeholder"
@@ -369,13 +430,6 @@
       ]
     },
     {
-      "file": "app/(tabs)/wellness.tsx",
-      "patterns": [
-        "coming soon",
-        "placeholder"
-      ]
-    },
-    {
       "file": "app/(tabs)/whatsnew/index.tsx",
       "patterns": [
         "placeholder"
@@ -385,6 +439,12 @@
       "file": "app/profile.tsx",
       "patterns": [
         "placeholder"
+      ]
+    },
+    {
+      "file": "components/ComingSoon.tsx",
+      "patterns": [
+        "coming soon"
       ]
     },
     {
@@ -467,7 +527,19 @@
       ]
     },
     {
+      "file": "docs/release-prep/artifacts/ASSETS_GUIDE.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
       "file": "docs/ROADMAP_SEQUENCING.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "docs/store-listing-placeholder.md",
       "patterns": [
         "placeholder"
       ]
@@ -496,6 +568,13 @@
     {
       "file": "docs/user-guide.md",
       "patterns": [
+        "coming soon",
+        "placeholder"
+      ]
+    },
+    {
+      "file": "jest.setup.js",
+      "patterns": [
         "placeholder"
       ]
     },
@@ -518,7 +597,43 @@
       ]
     },
     {
+      "file": "scripts/wcag_compliance_audit.ts",
+      "patterns": [
+        "not implemented"
+      ]
+    },
+    {
       "file": "services/notificationTemplates.ts",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "unfinishedwork.md",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "utils/platform.ts",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/events.export.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/evidenceLocker.modal.flow.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/i18n.locale.parity.test.ts",
       "patterns": [
         "placeholder"
       ]
@@ -539,6 +654,12 @@
       "file": "__tests__/LetterActionsBar.test.tsx",
       "patterns": [
         "todo",
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/notification.templates.test.ts",
+      "patterns": [
         "placeholder"
       ]
     }
