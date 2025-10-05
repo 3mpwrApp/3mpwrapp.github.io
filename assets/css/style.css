@@ -263,6 +263,8 @@ body[data-contrast="high"] footer a {
   border: 2px dashed #d1d5db; /* visually conveys “not yet available” */
   min-height: 64px;
   line-height: 1.2;
+  min-width: 200px;
+  text-align: center;
 }
 .store-badge img {
   display: block;

@@ -32,6 +32,12 @@ defaults:
     values:
       image: /assets/images/og-image.png
 
+# Collections
+collections:
+  whats_new:
+    output: true
+    permalink: /whats-new/:name/
+
 social:
   name: "3mpowr App"
   links:
