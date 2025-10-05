@@ -1,7 +1,7 @@
 // Summarize pa11y-ci JSON output and write to GitHub Step Summary or a file
 const fs = require('fs');
 
-function summarize(inputPath = 'pa11y-report.json', outputPath = process.env.GITHUB_STEP_SUMMARY || 'pa11y-summary.md') {
+function summarize(inputPath = 'pa11y-report.json') {
   let out = '';
   try {
     const txt = fs.readFileSync(inputPath, 'utf8');
@@ -29,9 +29,18 @@ function summarize(inputPath = 'pa11y-report.json', outputPath = process.env.GIT
     } else {
       out = 'No pa11y JSON array found.';
     }
-    fs.writeFileSync(outputPath, out);
+    // Always write a local file for later steps
+    fs.writeFileSync('pa11y-summary.md', out);
+    // Also write to the GitHub Step Summary when available
+    if (process.env.GITHUB_STEP_SUMMARY) {
+      fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, out);
+    }
   } catch (e) {
-    fs.writeFileSync(outputPath, 'Pa11y report not available.');
+    const fallback = 'Pa11y report not available.';
+    fs.writeFileSync('pa11y-summary.md', fallback);
+    if (process.env.GITHUB_STEP_SUMMARY) {
+      fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, fallback);
+    }
   }
 }
 

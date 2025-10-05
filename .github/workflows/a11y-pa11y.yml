@@ -36,4 +36,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pa11y-report
-          path: pa11y-report.json
+          path: |
+            pa11y-report.json
+            pa11y-summary.md

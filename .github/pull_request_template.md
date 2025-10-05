@@ -1,3 +1,28 @@
+## Summary
+
+Describe the change and why it’s needed.
+
+## Changes
+
+- 
+
+## Accessibility checklist
+
+- [ ] Keyboard accessible (no traps; ESC closes modals; focus is managed)
+- [ ] Visible focus states and sufficient color contrast
+- [ ] No duplicate H1; headings are hierarchical
+- [ ] External links annotated (↗) and use `rel="noopener noreferrer"`
+- [ ] Newsletter modal gated or disabled for CI via `?no-modal=1`
+
+## CI checklist
+
+- [ ] Pa11y passes at WCAG2AA (see Actions: Accessibility (pa11y-ci))
+- [ ] Axe-core Playwright passes (see Actions: Accessibility (axe-core))
+- [ ] Links checker and Lighthouse jobs are green
+
+## Screenshots (optional)
+
+Add screenshots/GIFs for visual changes.
 ## Description
 
 <!-- Provide a brief description of the changes in this PR -->

@@ -1,5 +1,11 @@
 # 3mpowr App Website
 
+[![Accessibility (pa11y-ci)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/a11y-pa11y.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/a11y-pa11y.yml)
+[![Accessibility (axe-core)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/accessibility-axe.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/accessibility-axe.yml)
+[![Links](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/links.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/links.yml)
+[![Lighthouse](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/lighthouse.yml)
+[![Pages build](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/jekyll.yml)
+
 > ⚠️ WEBSITE NOT LIVE YET? → See the Activation Guide: [ACTIVATION.md](ACTIVATION.md) (2–5 minutes)
 
 This is the official website repository for the 3mpowr App — a community‑driven platform for injured workers and persons with disabilities across Canada.
