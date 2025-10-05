@@ -1271,6 +1271,13 @@
     "policy": {
       "aiHeader": "Simplificateur IA",
       "aiHelp": "Collez le texte de politique/décision ci‑dessous. Traitement local sauf serveur configuré.",
+      "copy": "Copier",
+      "copiedBody": "Résumé copié.",
+      "share": "Partager",
+      "exportPdf": "Exporter en PDF",
+      "exportDoc": "Exporter en .doc",
+      "clipboardNA": "Presse-papiers indisponible",
+      "clipboardNABody": "Installez expo-clipboard dans une build de dev pour activer la copie.",
       "simplify": "Simplifier",
       "simplifying": "Simplification...",
       "summary": "Résumé",

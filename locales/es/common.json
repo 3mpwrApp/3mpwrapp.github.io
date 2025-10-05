@@ -604,6 +604,13 @@
     "policy": {
       "aiHeader": "IA Simplificador",
       "aiHelp": "Pega texto de políticas/decisiones. Se procesa localmente salvo que haya backend.",
+      "copy": "Copiar",
+      "copiedBody": "Resumen copiado.",
+      "share": "Compartir",
+      "exportPdf": "Exportar como PDF",
+      "exportDoc": "Exportar como .doc",
+      "clipboardNA": "Portapapeles no disponible",
+      "clipboardNABody": "Instale expo-clipboard en una build de desarrollo para habilitar copiar.",
       "simplify": "Simplificar",
       "simplifying": "Simplificando...",
       "summary": "Resumen",
