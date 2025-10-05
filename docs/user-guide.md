@@ -217,6 +217,10 @@ lastUpdated: 2025-10-05
 - Accessibility: Clear button labels and large tap targets.
 
 ### Diet & Nutrition Guides (beta)
+ 
+- Browse curated recipes and tips; filter by tags; mark items as Favorites.
+- Actions: Tap a tag chip to filter; “☆ Favorite/★ Favorited” toggles saved items.
+- Export: “Export Favorites (CSV)” saves a CSV of your favorites.
 ### Sleep Reframe (beta)
 
 - Gentle reframes and routines to reduce sleep pressure and improve rest quality.
@@ -257,16 +261,13 @@ lastUpdated: 2025-10-05
 
 - Log dreams; see a lightweight interpretation to reflect on themes.
 
-- Browse curated recipes and tips; filter by tags; mark items as Favorites.
-- Actions: Tap a tag chip to filter; “☆ Favorite/★ Favorited” toggles saved items.
-- Export: “Export Favorites (CSV)” saves a CSV of your favorites.
--### Ambience Sync AI (beta)
+### Ambience Sync AI (beta)
 
 - Suggests in‑app ambience based on mood trends: palette, soundscape, and brightness.
 - Actions: Tap “Apply in app” (no OS changes; in‑app accents only in this beta).
 - Privacy: Uses local mood data if available; otherwise suggests a calming default.
 
--### Grief + Identity Support (beta)
+### Grief + Identity Support (beta)
 
 - Curated reading and community links for identity changes and loss after injury.
 - Actions: Export Resources (CSV); “Suggest a Resource” opens email.
@@ -275,6 +276,7 @@ lastUpdated: 2025-10-05
 - Curated list of accessible audio practices, gentle movement, and easy‑read guides.
 - Actions: Tap to open links; Export Resources (CSV) to save/share the catalog; “Suggest a Resource” opens email.
 - Accessibility: Links and buttons have clear labels; large tap targets.
+
 ### Micro‑Movement Coach (beta)
 
 - Gentle, chair‑friendly movement prompts. Tap Next to cycle through ideas. Always stop if uncomfortable.
@@ -301,6 +303,14 @@ lastUpdated: 2025-10-05
 - Summary: Auto‑generated, plain‑text summary with averages and a concise medical/legal statement.
 - Exports: Share text, Copy to clipboard, Export CSV (text), Export CSV File (download), Export as PDF, and Export as .doc.
 - Privacy & Safety: Respect Privacy Gate when Wellness Lock is enabled; data is stored locally unless you export/share.
+
+### Resilience Points (beta)
+
+- Purpose: Build resilience by celebrating small, healthy actions. Earn points for steps like facing a fear, attending therapy, practicing grounding, or paced breathing.
+- How it works: Open Wellness → Resilience Points. Tap an action card to add its points to your total; your current “Points” total is shown at the top.
+- Tips: Start with the easiest actions on low-energy days. Small steps count; consistency matters more than totals.
+- Accessibility: Clear labels and large tap targets. Works with High Contrast and text scaling.
+- Privacy: Points are stored on your device; nothing is uploaded.
 
 ## Saved
 

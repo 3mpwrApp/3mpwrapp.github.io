@@ -1,14 +1,17 @@
 // Optional notification helper. Uses expo-notifications if available, else no-ops.
-let Constants: any = {};
-try { Constants = require('expo-constants'); } catch {}
 import { Platform } from "react-native";
-let Notifications: any;
-try {
-  Notifications = require("expo-notifications");
-} catch {}
+
+// Lazy accessors to avoid loading optional native modules during tests/web
+function getConstants(): any {
+  try { return require('expo-constants'); } catch { return {}; }
+}
+function getNotifications(): any | null {
+  try { return require('expo-notifications'); } catch { return null; }
+}
 
 let _permissionCache: boolean | null = null;
 export async function ensureNotificationPermission() {
+  const Notifications = getNotifications();
   if (!Notifications) return false;
   if (_permissionCache != null) return _permissionCache;
   try {
@@ -24,6 +27,7 @@ export async function ensureNotificationPermission() {
 }
 
 export async function setupAsync() {
+  const Notifications = getNotifications();
   if (!Notifications) return false;
   try {
     if (Platform.OS === "android") {
@@ -49,6 +53,7 @@ export function hasNotificationPermissionCached() {
 }
 
 export async function scheduleLocal(title: string, body: string) {
+  const Notifications = getNotifications();
   if (!Notifications) return false as const;
   try {
     const id = await Notifications.scheduleNotificationAsync({
@@ -63,6 +68,7 @@ export async function scheduleLocal(title: string, body: string) {
 
 // Schedule a daily notification at local time hour:minute
 export async function scheduleDailyAt(hour: number, minute: number, title: string, body: string) {
+  const Notifications = getNotifications();
   if (!Notifications) return false as const;
   try {
     const now = new Date();
@@ -81,6 +87,7 @@ export async function scheduleDailyAt(hour: number, minute: number, title: strin
 
 // Schedule a notification at a specific Date
 export async function scheduleAt(when: Date, title: string, body: string) {
+  const Notifications = getNotifications();
   if (!Notifications) return false as const;
   try {
     const id = await Notifications.scheduleNotificationAsync({
@@ -94,14 +101,17 @@ export async function scheduleAt(when: Date, title: string, body: string) {
 }
 
 export async function cancel(id: string) {
+  const Notifications = getNotifications();
   if (!Notifications) return false;
   try { await Notifications.cancelScheduledNotificationAsync(id); return true; } catch { return false; }
 }
 
 // Get an Expo push token (web/native if available). Returns null if unsupported.
 export async function getExpoPushToken(): Promise<string | null> {
+  const Notifications = getNotifications();
   if (!Notifications) return null;
   // Skip in Expo Go where remote push isn't supported as of SDK 53
+  const Constants = getConstants();
   if (Constants?.appOwnership === "expo") return null;
   try {
     const token = await Notifications.getExpoPushTokenAsync();
@@ -118,6 +128,7 @@ export async function sendTestLocal() {
 
 // Ensure alerts show while app is foregrounded
 try {
+  const Notifications = getNotifications();
   Notifications?.setNotificationHandler?.({
     handleNotification: async () =>
       ({

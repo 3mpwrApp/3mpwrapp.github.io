@@ -1,6 +1,7 @@
 import React from "react";
 import {
     Alert,
+    Platform,
     ScrollView,
     Share,
     StyleSheet,
@@ -684,7 +685,7 @@ function Field({
       <TextInput
         value={value}
         onChangeText={onChangeText}
-        keyboardType={keyboardType}
+        {...(Platform.OS==='web' ? {} : { keyboardType })}
         style={{
           borderWidth: 1,
           borderColor: palette.muted,

@@ -36,7 +36,7 @@ export default function WellnessHub() {
     // '/wellness/ai-companion',
   // '/wellness/ambience',
     // '/wellness/grief-support',
-    '/wellness/resilience',
+  // '/wellness/resilience',
     // Promote these to Beta below
     // '/wellness/symptom-tracker',
     // '/wellness/pain-forecast',
@@ -45,6 +45,7 @@ export default function WellnessHub() {
   // Promote Reflections Calendar to Beta
     // '/wellness/dreams',
     '/wellness/self-care-library',
+  '/wellness/resilience',
   ]);
   const BETA = new Set<string>([
     '/wellness/ai-companion',

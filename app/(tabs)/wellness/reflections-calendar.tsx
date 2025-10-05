@@ -440,7 +440,8 @@ export default function ReflectionsCalendar() {
     {/* Editor Modal */}
     {editor.open && (
       <Modal transparent animationType="fade" onRequestClose={()=> setEditor(prev=>({ ...prev, open:false }))}>
-        <A11yPressable style={{ flex:1, backgroundColor:(palette.text+'88') as any, alignItems:'center', justifyContent:'center' }} onPress={()=> setEditor(prev=>({ ...prev, open:false }))} accessibilityRole="button" accessibilityLabel="Close editor" hitSlop={HIT_SLOP_8}>
+        {/* Non-pressable overlay; provide explicit close controls inside */}
+        <View style={{ flex:1, backgroundColor:(palette.text+'88') as any, alignItems:'center', justifyContent:'center' }}>
           <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '90%', maxWidth: 520 }}>
             <Text style={{ color: palette.text, fontWeight:'700', marginBottom: 8 }}>{editor.entry? 'Edit Reflection' : 'New Reflection'}</Text>
             <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginBottom: 8 }}>
@@ -489,13 +490,14 @@ export default function ReflectionsCalendar() {
               </A11yPressable>
             </View>
           </View>
-        </A11yPressable>
+        </View>
       </Modal>
     )}
     {/* Details Modal */}
     {details.open && (
       <Modal transparent animationType="fade" onRequestClose={()=> setDetails({ open:false, date:null })}>
-        <A11yPressable style={{ flex:1, backgroundColor:(palette.text+'88') as any, alignItems:'center', justifyContent:'center' }} onPress={()=> setDetails({ open:false, date:null })} accessibilityRole="button" accessibilityLabel="Close details" hitSlop={HIT_SLOP_8}>
+        {/* Non-pressable overlay; provide explicit close controls inside */}
+        <View style={{ flex:1, backgroundColor:(palette.text+'88') as any, alignItems:'center', justifyContent:'center' }}>
           <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '94%', maxWidth: 560, maxHeight: '80%' }}>
             <Text style={{ color: palette.text, fontWeight:'700', marginBottom: 8 }}>{details.date?.toDateString()}</Text>
             {/* Day summary */}
@@ -530,7 +532,7 @@ export default function ReflectionsCalendar() {
               <A11yPressable onPress={()=> setDetails({ open:false, date:null })} style={[s.secondary,{ flex:1 }]} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close dialog" ><Text style={s.secondaryText}>Close</Text></A11yPressable>
             </View>
           </View>
-        </A11yPressable>
+        </View>
       </Modal>
     )}
     {/* Week/Month quick export */}

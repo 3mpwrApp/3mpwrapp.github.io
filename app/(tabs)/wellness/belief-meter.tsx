@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { Platform, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
@@ -25,7 +25,7 @@ export default function BeliefMeter(){
       <Text accessibilityRole="header" style={s.header}>{t('wellness.belief.title','Belief Strength Meter')}</Text>
       <Text style={s.desc}>{t('wellness.belief.desc','Rate how strongly you believe a thought (0–100). Track change after a reframe.')}</Text>
       <TextInput value={belief} onChangeText={setBelief} placeholder={t('wellness.belief.thought','Thought')} placeholderTextColor={palette.text+'77'} style={s.input}/>
-      <TextInput value={rating} onChangeText={setRating} keyboardType="numeric" placeholder={t('wellness.belief.rating','Belief strength (0–100)')} placeholderTextColor={palette.text+'77'} style={s.input}/>
+  <TextInput value={rating} onChangeText={setRating} {...(Platform.OS==='web'? {} : { keyboardType: 'numeric' })} placeholder={t('wellness.belief.rating','Belief strength (0–100)')} placeholderTextColor={palette.text+'77'} style={s.input}/>
       <Text style={s.text}>{t('wellness.belief.now','Now: {{n}}',{ n: rating || '0' })}</Text>
       <Text style={s.text}>{after || ''}</Text>
       <View style={{ height: 1, backgroundColor: palette.muted, marginVertical: 8 }} />

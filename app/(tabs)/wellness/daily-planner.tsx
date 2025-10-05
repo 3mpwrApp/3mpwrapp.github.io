@@ -9,7 +9,6 @@ import {
 } from "../../../hooks/useA11y";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import { addEvent } from "../../../services/calendar";
-import { buildICSMany } from "../../../services/ics";
 import { useAppPalette } from "../../../theme/usePalette";
 
 type Appt = { id: string; time: string; title: string };
@@ -90,11 +89,15 @@ export default function DailyPlanner() {
     setCachedJSON(`daily_planner_${date}`, appts);
   }, [appts, date]);
 
+  // Avoid duplicate keys by tracking an incrementing counter in addition to timestamp
+  const idCounter = React.useRef(0);
   const addAppt = () => {
     if (!title.trim()) return;
+    const base = Date.now();
+    const id = `${base}-${idCounter.current++}`;
     setAppts((prev) => [
       ...prev,
-      { id: String(Date.now()), time, title: title.trim() },
+      { id, time, title: title.trim() },
     ]);
     setTitle("");
   };
@@ -167,6 +170,7 @@ export default function DailyPlanner() {
 
   const exportRestsICS = async () => {
     try {
+      const { buildICSMany } = await import("../../../services/ics");
       const events = ["11:00", "14:30"].map((t) => ({
         title: "Rest break",
         startISO: new Date(date + "T" + t + ":00").toISOString(),
@@ -272,7 +276,7 @@ export default function DailyPlanner() {
       {appts
         .sort((a, b) => a.time.localeCompare(b.time))
         .map((a) => (
-          <View key={a.id} style={s.row}>
+          <View key={`appt-${a.id}`} style={s.row}>
             <Text style={s.rowText}>
               {a.time} Ã¢â‚¬â€ {a.title}
             </Text>

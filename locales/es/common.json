@@ -1156,9 +1156,9 @@
       "recent": " Recent"
     },
     "resilience": {
-      "title": " wellness.resilience.title",
-      "desc": " wellness.resilience.desc",
-      "points": " wellness.resilience.points"
+      "title": "Puntos de resiliencia",
+      "desc": "Gana puntos por acciones positivas",
+      "points": "Puntos: {{points}}"
     },
     "sleepEnergy": {
       "title": " Sleep & Energy",
