@@ -38,6 +38,11 @@ collections:
     output: true
     permalink: /whats-new/:name/
 
+# Feeds: generate a dedicated feed for What's New collection
+feed:
+  collections:
+    - whats_new
+
 social:
   name: "3mpowr App"
   links:

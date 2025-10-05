@@ -1,0 +1,22 @@
+---
+layout: null
+permalink: /whats-new/feed.xml
+---
+{% assign items = site.whats_new | sort: 'date' | reverse %}
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title }} — What's New</title>
+    <link>{{ site.url }}{{ '/whats-new/' }}</link>
+    <description>Latest updates and improvements</description>
+    {% for item in items %}
+    <item>
+      <title>{{ item.title | escape }}</title>
+      <link>{{ site.url }}{{ item.url }}</link>
+      <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
+      <guid>{{ site.url }}{{ item.url }}</guid>
+      <description>{{ item.excerpt | strip_html | normalize_whitespace | escape }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

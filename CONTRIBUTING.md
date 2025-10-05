@@ -47,6 +47,28 @@ Help us improve our content:
 - Update outdated information
 - Add missing information
 
+### What's New updates (site changelog)
+
+To announce updates visible on https://3mpwrapp.github.io/whats-new/:
+
+1. Create a new file under `_whats_new/` named `YYYY-MM-DD-title.md`.
+2. Add front matter and content, for example:
+
+   ```markdown
+   ---
+   layout: default
+   title: Improved accessibility checks and new Events page
+   date: 2025-10-05
+   ---
+
+   Short summary (appears on the listing).
+
+   - Detail 1
+   - Detail 2
+   ```
+
+Items appear under “What’s New” for 30 days, then automatically show under Archive. A dedicated RSS feed is at `/whats-new/feed.xml`.
+
 ### Code Contributions
 
 We welcome code contributions including:
