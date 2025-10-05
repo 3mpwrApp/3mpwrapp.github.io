@@ -21,5 +21,8 @@ All notable changes to this project will be documented in this file.
  - Tests: Added Wellness Mood Tracker smoke test (note + Save path) and Resources Chronic Tracker export smoke test (CSV/JSON). Mocked expo‑router and native modules to avoid web asset imports. Final run: 64/64 suites passing.
  - Tests: Added Wellness Energy Coins and Sleep & Energy Tracker smoke tests; added Meds Tracker smoke test with mocked services and native modules. Final run: 67/67 suites passing.
  - Docs: Expanded User Guide with comprehensive sections for Sleep & Energy Tracker, Daily Energy Coins, and Medication & Treatment Tracker; updated “Beta today” lists in Wellness/Resources.
+ - Resources: Marked Deadline Calculator + Reminders as Beta in Resources hub; screen supports ICS import and list/calendar views.
+ - Wellness: Confirmed Sleep & Energy Tracker label as Beta in hub to match docs and tests.
  - Wellness: Promoted Reflections Calendar and Accessible Exercise Hub to Beta; added CSV/JSON export note for Reflections and Favorites CSV export for Exercise Hub.
  - Tests: Added smoke tests for Reflections Calendar and Exercise Hub with deterministic mocks for AsyncStorage, file sharing, and service layers. Final run: all suites passing.
+ - Wellness/Resources: Added smoke tests for Micro‑Movement Coach, Pacing Partner, Rehab Progress Tracker, and RTW Planner. Promoted these to Beta in the hubs and updated the User Guide accordingly.

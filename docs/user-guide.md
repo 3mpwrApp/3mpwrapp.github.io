@@ -187,6 +187,25 @@ lastUpdated: 2025-10-05
 - Accessibility: Clear labels, larger tap areas, and color contrast that respects High Contrast mode.
 
 ### Sleep & Energy Tracker (beta)
+### Micro‑Movement Coach (beta)
+
+- Gentle, chair‑friendly movement prompts. Tap Next to cycle through ideas. Always stop if uncomfortable.
+- Accessibility: Clear labels and large buttons.
+
+### AI Pacing Partner (beta)
+
+- Log activities with minutes; basic pacing suggestions and optional overexertion reminder.
+- Export: Tap Export Activities (CSV) to save/share a CSV of recent logs.
+
+### Rehab Progress Tracker (beta)
+
+- Track rehab metrics like walking distance, grip strength, and pain‑reduced days. Keep brief notes.
+- Views: Local (on‑device) and Cloud (optional, when signed in). Export JSON; import a JSON template.
+
+### Return‑to‑Work Planner (beta)
+
+- Plan RTW goals with supports and steps; mark goals done. Stored in your account when signed in.
+
 
 - Add entries: Date, sleep hours, sleep quality (1–5), energy (1–5), notes, and tags.
 - Filters: Optional start/end date, minimum sleep hours, and tag contains.
@@ -259,6 +278,9 @@ Beta today
 - Advocacy: AI Advocate Translator, AI Case Interpreter, AI Government Navigator, Policy Made Simple, Lawyer Finder, and Ratings are available as Beta.
 - Wellness: AI Companion, Symptom & Pain Tracker, Sleep & Energy Tracker, Pain Forecast, Reflections Calendar, Accessible Exercise Hub, Daily Energy Coins, and Daily Planner are available as Beta.
 - Resources: Evidence Locker, Chronic Tracker, and Medication & Treatment Tracker are available as Beta.
+  - Resources → Trackers & Planners: Deadline Calculator + Reminders, Rehab Progress Tracker, and Return‑to‑Work Planner are available as Beta.
+  
+  - Wellness: Also in Beta — Micro‑Movement Coach and AI Pacing Partner.
 
 ## Offline & Sync
 

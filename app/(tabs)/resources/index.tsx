@@ -271,7 +271,7 @@ export default function ResourcesScreen() {
       </Link>
       <Link href={"/(tabs)/resources/deadlines" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Deadline Calculator + Reminders
+            Deadline Calculator + Reminders (Beta)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/deadlines-list" as Href} asChild>
@@ -309,12 +309,12 @@ export default function ResourcesScreen() {
       </Link>
       <Link href={"/(tabs)/resources/rtw-planner" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Return-to-Work Planner
+          Return-to-Work Planner (Beta)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/rehab-tracker" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Rehab Progress Tracker
+          Rehab Progress Tracker (Beta)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/policy-simulator" as Href} asChild>

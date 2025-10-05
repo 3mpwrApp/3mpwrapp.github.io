@@ -48,8 +48,11 @@ export default function WellnessHub() {
   ]);
   const BETA = new Set<string>([
     '/wellness/ai-companion',
+    '/wellness/micro-movement',
+    '/wellness/pacing-partner',
     '/wellness/symptom-tracker',
     '/wellness/pain-forecast',
+    '/wellness/sleep-energy-tracker',
     '/wellness/energy-coins',
     '/wellness/daily-planner',
     '/wellness/exercise-hub',
