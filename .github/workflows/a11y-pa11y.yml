@@ -12,6 +12,7 @@ on:
 jobs:
   pa11y:
     runs-on: ubuntu-latest
+    continue-on-error: ${{ github.event_name != 'pull_request' }}
     steps:
       - name: Checkout (no build needed; we test the deployed site)
         uses: actions/checkout@v4

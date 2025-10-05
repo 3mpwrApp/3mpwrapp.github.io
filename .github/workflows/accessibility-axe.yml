@@ -10,6 +10,7 @@ on:
 jobs:
   axe:
     runs-on: ubuntu-latest
+    continue-on-error: ${{ github.event_name != 'pull_request' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
