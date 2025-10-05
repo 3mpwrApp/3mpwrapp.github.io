@@ -46,15 +46,11 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 
 For detailed instructions, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Branch Protection
+## Workflow
 
-The main branch is protected to ensure code quality and stability. Please read our [Branch Protection Guide](.github/BRANCH_PROTECTION.md) to understand the workflow and requirements.
+This repository currently allows direct pushes to `main` for maintainers. CI will still run on push for visibility.
 
-Key points:
-- Direct pushes to `main` are not allowed
-- All changes must go through pull requests
-- Pull requests require approval before merging
-- CI checks must pass before merging
+If you want to enforce stricter controls in the future, see our optional [Branch Protection Guide](.github/BRANCH_PROTECTION.md).
 
 ## Development
 
