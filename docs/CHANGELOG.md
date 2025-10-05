@@ -28,3 +28,5 @@ All notable changes to this project will be documented in this file.
  - Wellness/Resources: Added smoke tests for Micro‑Movement Coach, Pacing Partner, Rehab Progress Tracker, and RTW Planner. Promoted these to Beta in the hubs and updated the User Guide accordingly.
 	- Wellness: Added smoke tests for Self‑Care Library and Work‑Balance AI; promoted both to Beta; updated User Guide.
 		- Wellness: Added smoke tests for Ambience Sync AI and Grief + Identity Support; promoted both to Beta; updated User Guide.
+		- Wellness: Added smoke tests for Rehab Games and Diet & Nutrition Guides; promoted both to Beta in the Wellness hub; updated User Guide.
+		- Wellness: Added smoke tests and promoted to Beta: Sleep Reframe, CBT Mini‑Games, DBT Skill Matcher, Opposite Action Companion, Radical Acceptance, Acceptance & Function, Distress Tolerance, Belief Strength Meter, Adaptive Meditation, and Dream Tracker & Interpreter. Updated Wellness hub labels and User Guide.

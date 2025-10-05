@@ -21,17 +21,17 @@ export default function WellnessHub() {
   };
   const COMING_SOON = new Set<string>([
     // Promote Exercise Hub to Beta
-    '/wellness/rehab-games',
-    '/wellness/nutrition-guides',
-    '/wellness/sleep-reframe',
-    '/wellness/cbt-mini-games',
-    '/wellness/dbt',
-    '/wellness/opposite-action',
-    '/wellness/radical-acceptance',
-    '/wellness/acceptance-function',
-    '/wellness/distress-tolerance',
-    '/wellness/belief-meter',
-    '/wellness/adaptive-meditation',
+    // '/wellness/rehab-games',
+    // '/wellness/nutrition-guides',
+  // '/wellness/sleep-reframe',
+  // '/wellness/cbt-mini-games',
+  // '/wellness/dbt',
+  // '/wellness/opposite-action',
+  // '/wellness/radical-acceptance',
+  // '/wellness/acceptance-function',
+  // '/wellness/distress-tolerance',
+  // '/wellness/belief-meter',
+  // '/wellness/adaptive-meditation',
     // Promote these to Beta below
     // '/wellness/ai-companion',
   // '/wellness/ambience',
@@ -43,7 +43,7 @@ export default function WellnessHub() {
     // '/wellness/energy-coins',
     // '/wellness/daily-planner',
   // Promote Reflections Calendar to Beta
-    '/wellness/dreams',
+    // '/wellness/dreams',
     '/wellness/self-care-library',
   ]);
   const BETA = new Set<string>([
@@ -61,6 +61,18 @@ export default function WellnessHub() {
     '/wellness/daily-planner',
     '/wellness/exercise-hub',
     '/wellness/reflections-calendar',
+    '/wellness/rehab-games',
+    '/wellness/nutrition-guides',
+    '/wellness/sleep-reframe',
+    '/wellness/cbt-mini-games',
+    '/wellness/dbt',
+    '/wellness/opposite-action',
+    '/wellness/radical-acceptance',
+    '/wellness/acceptance-function',
+    '/wellness/distress-tolerance',
+    '/wellness/belief-meter',
+    '/wellness/adaptive-meditation',
+    '/wellness/dreams',
   ]);
   const label = (href: string, title: string) => BETA.has(href) ? `${title} (Beta)` : COMING_SOON.has(href) ? `${title} (Coming soon)` : title;
   return (

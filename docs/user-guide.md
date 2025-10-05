@@ -195,6 +195,57 @@ lastUpdated: 2025-10-05
 - Privacy: Reads local trackers if present; nothing is uploaded.
 
 ### Self‑Care Library (beta)
+### Rehab Games (beta)
+
+- Simple, accessible mini‑games to encourage gentle movement and physio‑style exercises.
+- Actions: Tap to log Reach & Tap, Breath Pacing, and Sit‑to‑Stand reps; points accrue automatically.
+- Export: “Export Progress (CSV)” shares your recent session history.
+- Accessibility: Clear button labels and large tap targets.
+
+### Diet & Nutrition Guides (beta)
+### Sleep Reframe (beta)
+
+- Gentle reframes and routines to reduce sleep pressure and improve rest quality.
+
+### CBT Mini‑Games (beta)
+
+- Quick grounding games (e.g., 5‑4‑3‑2‑1 senses) to shift attention and calm.
+
+### DBT Skill Matcher (beta)
+
+- Pick your current state to see suggested DBT skills (like TIPP or paced breathing).
+
+### Opposite Action Companion (beta)
+
+- Walk through steps to pick a small, safe opposite action when urges are unhelpful.
+
+### Radical Acceptance (beta)
+
+- Brief guide to accept reality as it is while taking the next kind action.
+
+### Acceptance & Function (beta)
+
+- Track acceptance and daily function (0–10); review recent entries.
+
+### Distress Tolerance (beta)
+
+- TIPP-based tips to reduce crisis intensity; adapt to your body.
+
+### Belief Strength Meter (beta)
+
+- Rate belief strength (0–100) before/after a reframe and observe change.
+
+### Adaptive Meditation (beta)
+
+- Short, adaptive audio meditations; export link list as CSV.
+
+### Dream Tracker & Interpreter (beta)
+
+- Log dreams; see a lightweight interpretation to reflect on themes.
+
+- Browse curated recipes and tips; filter by tags; mark items as Favorites.
+- Actions: Tap a tag chip to filter; “☆ Favorite/★ Favorited” toggles saved items.
+- Export: “Export Favorites (CSV)” saves a CSV of your favorites.
 -### Ambience Sync AI (beta)
 
 - Suggests in‑app ambience based on mood trends: palette, soundscape, and brightness.
@@ -299,7 +350,8 @@ Where you’ll see “Coming soon” today
 Beta today
 
 - Advocacy: AI Advocate Translator, AI Case Interpreter, AI Government Navigator, Policy Made Simple, Lawyer Finder, and Ratings are available as Beta.
-- Wellness: AI Companion, Work‑Balance AI, Ambience Sync AI, Grief + Identity Support, Self‑Care Library, Symptom & Pain Tracker, Sleep & Energy Tracker, Pain Forecast, Reflections Calendar, Accessible Exercise Hub, Daily Energy Coins, and Daily Planner are available as Beta.
+- Wellness: AI Companion, Work‑Balance AI, Ambience Sync AI, Grief + Identity Support, Self‑Care Library, Rehab Games, Diet & Nutrition Guides, Symptom & Pain Tracker, Sleep & Energy Tracker, Pain Forecast, Reflections Calendar, Accessible Exercise Hub, Daily Energy Coins, and Daily Planner are available as Beta.
+  - Also in Beta: Sleep Reframe, CBT Mini‑Games, DBT Skill Matcher, Opposite Action, Radical Acceptance, Acceptance & Function, Distress Tolerance, Belief Strength Meter, Adaptive Meditation, and Dream Tracker & Interpreter.
 - Resources: Evidence Locker, Chronic Tracker, and Medication & Treatment Tracker are available as Beta.
   - Resources → Trackers & Planners: Deadline Calculator + Reminders, Rehab Progress Tracker, and Return‑to‑Work Planner are available as Beta.
   
