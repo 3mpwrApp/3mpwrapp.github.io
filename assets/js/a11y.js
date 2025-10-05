@@ -28,6 +28,28 @@
 
   window.announce = announce;
 
+  // For links that open in new tabs, append a visually-hidden note for screen readers
+  function annotateNewTabLinks() {
+    try {
+      var links = document.querySelectorAll('a[target="_blank"]');
+      links.forEach(function (a) {
+        // Ensure security attributes
+        var rel = (a.getAttribute('rel') || '').split(/\s+/);
+        if (rel.indexOf('noopener') === -1) rel.push('noopener');
+        if (rel.indexOf('noreferrer') === -1) rel.push('noreferrer');
+        a.setAttribute('rel', rel.join(' ').trim());
+
+        // Add screen-reader-only cue if not already present
+        if (!a.querySelector('.sr-only')) {
+          var sr = document.createElement('span');
+          sr.className = 'sr-only';
+          sr.textContent = ' (opens in a new tab)';
+          a.appendChild(sr);
+        }
+      });
+    } catch (e) { /* ignore */ }
+  }
+
   // Performance: lazily load images that don't already opt into eager loading
   function lazyImages() {
     var imgs = document.querySelectorAll('img:not([loading])');
@@ -39,8 +61,9 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', lazyImages, { once: true });
+    document.addEventListener('DOMContentLoaded', function(){ lazyImages(); annotateNewTabLinks(); }, { once: true });
   } else {
     lazyImages();
+    annotateNewTabLinks();
   }
 })();

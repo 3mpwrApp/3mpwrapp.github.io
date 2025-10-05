@@ -54,8 +54,6 @@ description: Community-driven tools, resources, and support for injured workers 
     <figure class="store-badge">
       <img
         src="{{ '/assets/images/app-store-coming-soon.svg' | relative_url }}"
-        width="180"
-        height="53"
         alt="App Store — coming soon"
       >
       <figcaption class="sr-only">App Store — coming soon</figcaption>
@@ -65,8 +63,6 @@ description: Community-driven tools, resources, and support for injured workers 
     <figure class="store-badge">
       <img
         src="{{ '/assets/images/google-play-coming-soon.svg' | relative_url }}"
-        width="180"
-        height="53"
         alt="Google Play — coming soon"
       >
       <figcaption class="sr-only">Google Play — coming soon</figcaption>
