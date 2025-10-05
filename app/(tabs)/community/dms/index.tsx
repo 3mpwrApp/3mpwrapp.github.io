@@ -84,7 +84,7 @@ export default function DMListScreen() {
         contentContainerStyle={{ paddingTop: 8 }}
       />
       <Text style={[s.rowSub, { marginTop: 12 }]}>Note: This is a minimal DM prototype using user IDs for discovery.</Text>
-      <Link href="/(tabs)/community" style={{ color: palette.primary, marginTop: 8 }}>Back to Community</Link>
+      <Link accessibilityRole="link" href="/(tabs)/community" style={{ color: palette.primary, marginTop: 8 }}>Back to Community</Link>
     </View>
   );
 }
