@@ -26,3 +26,5 @@ All notable changes to this project will be documented in this file.
  - Wellness: Promoted Reflections Calendar and Accessible Exercise Hub to Beta; added CSV/JSON export note for Reflections and Favorites CSV export for Exercise Hub.
  - Tests: Added smoke tests for Reflections Calendar and Exercise Hub with deterministic mocks for AsyncStorage, file sharing, and service layers. Final run: all suites passing.
  - Wellness/Resources: Added smoke tests for Micro‑Movement Coach, Pacing Partner, Rehab Progress Tracker, and RTW Planner. Promoted these to Beta in the hubs and updated the User Guide accordingly.
+	- Wellness: Added smoke tests for Self‑Care Library and Work‑Balance AI; promoted both to Beta; updated User Guide.
+		- Wellness: Added smoke tests for Ambience Sync AI and Grief + Identity Support; promoted both to Beta; updated User Guide.

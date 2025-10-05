@@ -34,8 +34,8 @@ export default function WellnessHub() {
     '/wellness/adaptive-meditation',
     // Promote these to Beta below
     // '/wellness/ai-companion',
-    '/wellness/ambience',
-    '/wellness/grief-support',
+  // '/wellness/ambience',
+    // '/wellness/grief-support',
     '/wellness/resilience',
     // Promote these to Beta below
     // '/wellness/symptom-tracker',
@@ -50,6 +50,10 @@ export default function WellnessHub() {
     '/wellness/ai-companion',
     '/wellness/micro-movement',
     '/wellness/pacing-partner',
+    '/wellness/work-balance-ai',
+    '/wellness/self-care-library',
+  '/wellness/ambience',
+  '/wellness/grief-support',
     '/wellness/symptom-tracker',
     '/wellness/pain-forecast',
     '/wellness/sleep-energy-tracker',

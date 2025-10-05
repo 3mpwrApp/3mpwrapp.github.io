@@ -187,6 +187,29 @@ lastUpdated: 2025-10-05
 - Accessibility: Clear labels, larger tap areas, and color contrast that respects High Contrast mode.
 
 ### Sleep & Energy Tracker (beta)
+### Work‑Balance AI (beta)
+
+- Purpose: Combine recent pain, sleep/energy, and mood to suggest pacing-friendly work/rest blocks for the day.
+- How it works: Pick your current mood, add optional notes, and tap “Plan my day.” The plan uses your latest Sleep & Energy and Symptom entries when available.
+- Actions: Copy the generated plan to share with a manager or keep for yourself.
+- Privacy: Reads local trackers if present; nothing is uploaded.
+
+### Self‑Care Library (beta)
+-### Ambience Sync AI (beta)
+
+- Suggests in‑app ambience based on mood trends: palette, soundscape, and brightness.
+- Actions: Tap “Apply in app” (no OS changes; in‑app accents only in this beta).
+- Privacy: Uses local mood data if available; otherwise suggests a calming default.
+
+-### Grief + Identity Support (beta)
+
+- Curated reading and community links for identity changes and loss after injury.
+- Actions: Export Resources (CSV); “Suggest a Resource” opens email.
+- Accessibility: Clear link labels and larger tap targets.
+
+- Curated list of accessible audio practices, gentle movement, and easy‑read guides.
+- Actions: Tap to open links; Export Resources (CSV) to save/share the catalog; “Suggest a Resource” opens email.
+- Accessibility: Links and buttons have clear labels; large tap targets.
 ### Micro‑Movement Coach (beta)
 
 - Gentle, chair‑friendly movement prompts. Tap Next to cycle through ideas. Always stop if uncomfortable.
@@ -276,7 +299,7 @@ Where you’ll see “Coming soon” today
 Beta today
 
 - Advocacy: AI Advocate Translator, AI Case Interpreter, AI Government Navigator, Policy Made Simple, Lawyer Finder, and Ratings are available as Beta.
-- Wellness: AI Companion, Symptom & Pain Tracker, Sleep & Energy Tracker, Pain Forecast, Reflections Calendar, Accessible Exercise Hub, Daily Energy Coins, and Daily Planner are available as Beta.
+- Wellness: AI Companion, Work‑Balance AI, Ambience Sync AI, Grief + Identity Support, Self‑Care Library, Symptom & Pain Tracker, Sleep & Energy Tracker, Pain Forecast, Reflections Calendar, Accessible Exercise Hub, Daily Energy Coins, and Daily Planner are available as Beta.
 - Resources: Evidence Locker, Chronic Tracker, and Medication & Treatment Tracker are available as Beta.
   - Resources → Trackers & Planners: Deadline Calculator + Reminders, Rehab Progress Tracker, and Return‑to‑Work Planner are available as Beta.
   
