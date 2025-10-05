@@ -29,3 +29,12 @@ jobs:
 
       - name: Run axe-core against key pages
         run: node scripts/axe-check.js
+
+      - name: Upload axe report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axe-report
+          path: |
+            axe-report.json
+            axe-summary.md
