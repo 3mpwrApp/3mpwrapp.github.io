@@ -166,7 +166,10 @@
     "@sentry/react": "^7.119.1"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.19.4"
   },
-  "private": true
+  "private": true,
+  "volta": {
+    "node": "20.19.4"
+  }
 }

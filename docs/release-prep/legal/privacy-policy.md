@@ -1,8 +1,8 @@
-# 3mpowr App — Privacy Policy
+# 3mpwr App — Privacy Policy
 
 Last updated: September 29, 2025
 
-This policy describes how 3mpowr App ("we", "us", "our") collects, uses, and protects information in the 3mpowr App mobile application and web experience (if enabled). By using the app, you agree to these practices.
+This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and protects information in the 3mpwr App mobile application and web experience (if enabled). By using the app, you agree to these practices.
 
 ## Summary
 - We practice data minimization and store most preferences locally on your device by default.
@@ -80,7 +80,7 @@ We use administrative, technical, and organizational measures to protect informa
 We may update this policy to reflect changes to our practices or legal requirements. The updated policy will be posted with a new "Last updated" date. Material changes will be communicated within the app or via other appropriate channels.
 
 ## Contact Us
-- Organization: 3mpowr App
+- Organization: 3mpwr App
 - Email: empowrapp08162025@gmail.com
 - Address: Toronto, ON, Canada
 - Website: https://empowr.app

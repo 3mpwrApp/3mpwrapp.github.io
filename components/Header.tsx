@@ -24,10 +24,10 @@ export default function Header() {
     <SafeAreaView style={styles.container} accessibilityRole="header">
       <Text
         style={styles.title}
-        accessibilityRole="header"
-            accessibilityLabel="3mpowr App Header"
+    accessibilityRole="header"
+      accessibilityLabel="3mpwr App Header"
       >
-            3mpowr App
+      3mpwr App
       </Text>
 
       <View style={styles.icons}>
@@ -38,7 +38,7 @@ export default function Header() {
             openLink("https://www.facebook.com/profile.php?id=61579428783083")
           }
           accessibilityRole="link"
-              accessibilityLabel="Visit 3mpowr on Facebook"
+              accessibilityLabel="Visit 3mpwr on Facebook"
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
           <Ionicons name="logo-facebook" size={22} color={palette.primary} />
@@ -52,7 +52,7 @@ export default function Header() {
             )
           }
           accessibilityRole="link"
-              accessibilityLabel="Visit 3mpowr on Instagram"
+              accessibilityLabel="Visit 3mpwr on Instagram"
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
           <Ionicons name="logo-instagram" size={22} color={palette.primary} />
@@ -66,7 +66,7 @@ export default function Header() {
             )
           }
           accessibilityRole="link"
-              accessibilityLabel="Visit 3mpowr on X"
+              accessibilityLabel="Visit 3mpwr on X"
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
           <Ionicons name="logo-twitter" size={22} color={palette.text} />
@@ -76,7 +76,7 @@ export default function Header() {
         <Pressable
           onPress={() => openLink("mailto:empowrapp08162025@gmail.com")}
           accessibilityRole="link"
-              accessibilityLabel="Email 3mpowr at empowrapp08162025@gmail.com"
+              accessibilityLabel="Email 3mpwr at empowrapp08162025@gmail.com"
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
           <Ionicons name="mail" size={22} color={palette.primary} />

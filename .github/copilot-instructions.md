@@ -1,4 +1,4 @@
-# Copilot Instructions for 3mpowr App
+# Copilot Instructions for 3mpwr App
 
 ## Project Overview
 - React Native app using Expo Router for file-based navigation (`app/` directory).

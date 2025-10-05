@@ -31,7 +31,7 @@ export default function JusticeAsAService() {
       let resourcesCount = 0; try { const { useCounts } = require('../../../store/counts'); resourcesCount = useCounts.getState?.()?.resources ?? 0; } catch {}
       const now = new Date();
       const lines = [
-  t('justiceService.header','3mpowr App — Local Advocacy Snapshot'),
+  t('justiceService.header','3mpwr App — Local Advocacy Snapshot'),
         now.toLocaleString(),
         '',
         t('justiceService.evidenceLine',`Evidence Locker: ${noteCount} notes, ${docCount} file(s)`),

@@ -1,6 +1,6 @@
-# 3mpowr App – User Guide
+# 3mpwr App – User Guide
 
-Welcome to 3mpowr. This guide explains every feature in the app, what it does, and how to use it safely and effectively. It’s organized by tabs and major components, with accessibility notes and privacy tips throughout.
+Welcome to 3mpwr. This guide explains every feature in the app, what it does, and how to use it safely and effectively. It’s organized by tabs and major components, with accessibility notes and privacy tips throughout.
 
 > Note: Feature availability may vary by platform (iOS, Android, Web). Some items that require device capabilities are not supported on the Web (e.g., native Share Sheets, Image Picker). Where relevant, we call this out with alternatives.
 

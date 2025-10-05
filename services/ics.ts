@@ -18,9 +18,9 @@ export function buildICS({
   return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-  "PRODID:-//3mpowr//Calendar 1.0//EN",
+  "PRODID:-//3mpwr//Calendar 1.0//EN",
     "BEGIN:VEVENT",
-  `UID:${Date.now()}@3mpowr`,
+  `UID:${Date.now()}@3mpwr`,
     `DTSTAMP:${dt(new Date().toISOString())}`,
     `DTSTART:${start}`,
     `DTEND:${end}`,
@@ -45,7 +45,7 @@ export function buildICSMany(
   const lines: string[] = [];
   lines.push("BEGIN:VCALENDAR");
   lines.push("VERSION:2.0");
-  lines.push("PRODID:-//3mpowr//Calendar 1.0//EN");
+  lines.push("PRODID:-//3mpwr//Calendar 1.0//EN");
   const now = dt(new Date().toISOString());
   events.forEach((ev) => {
     const start = dt(ev.startISO);
@@ -55,7 +55,7 @@ export function buildICSMany(
     const end = dt(endDate);
     lines.push("BEGIN:VEVENT");
     lines.push(
-  `UID:${Date.now()}_${Math.random().toString(36).slice(2)}@3mpowr`,
+  `UID:${Date.now()}_${Math.random().toString(36).slice(2)}@3mpwr`,
     );
     lines.push(`DTSTAMP:${now}`);
     lines.push(`DTSTART:${start}`);

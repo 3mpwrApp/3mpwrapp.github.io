@@ -53,17 +53,17 @@ export default function ThemedHeader() {
         style={styles.brand}
         onPress={() => router.replace("/")}
         accessibilityRole="link"
-        accessibilityLabel="Go to Home"
+  accessibilityLabel="Go to Home"
         hitSlop={HIT_SLOP_8}
       >
         <Image
           source={require("../assets/images/brand-logo.png")}
           style={styles.logo}
           accessible
-          accessibilityLabel="3mpowr App logo"
+          accessibilityLabel="3mpwr App logo"
         />
-        <Text style={styles.title} accessibilityLabel="3mpowr App header">
-          3mpowr App
+        <Text style={styles.title} accessibilityLabel="3mpwr App header">
+          3mpwr App
         </Text>
       </Pressable>
 
@@ -78,7 +78,7 @@ export default function ThemedHeader() {
           <Pressable
             onPress={() => Linking.openURL("https://x.com/empowrapp0816")}
             accessibilityRole="link"
-            accessibilityLabel="Open 3mpowr on X (formerly Twitter)"
+            accessibilityLabel="Open 3mpwr on X (formerly Twitter)"
             hitSlop={HIT_SLOP_8}
             testID="link-social-x"
             focusable
@@ -95,7 +95,7 @@ export default function ThemedHeader() {
               Linking.openURL("https://www.instagram.com/empowrapp/")
             }
             accessibilityRole="link"
-            accessibilityLabel="Open 3mpowr on Instagram"
+            accessibilityLabel="Open 3mpwr on Instagram"
             hitSlop={HIT_SLOP_8}
             testID="link-social-instagram"
             focusable
@@ -114,7 +114,7 @@ export default function ThemedHeader() {
               )
             }
             accessibilityRole="link"
-            accessibilityLabel="Open 3mpowr on Facebook"
+            accessibilityLabel="Open 3mpwr on Facebook"
             hitSlop={HIT_SLOP_8}
             testID="link-social-facebook"
             focusable

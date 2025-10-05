@@ -7,7 +7,7 @@ app.use(cors());
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 20 * 1024 * 1024 } });
 
-app.get('/', (_req, res) => res.send('3mpowr App server ok'));
+app.get('/', (_req, res) => res.send('3mpwr App server ok'));
 
 // Derive a video thumbnail if possible (YouTube only); otherwise return 204
 app.get('/video-thumb', async (req, res) => {

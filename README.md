@@ -1,4 +1,4 @@
-# 3mpowr App
+# 3mpwr App
 
 ## Get started
 

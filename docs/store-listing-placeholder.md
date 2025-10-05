@@ -12,7 +12,7 @@ Creating/maintaining listings requires these paid developer accounts. There are 
 1. Enroll in the Apple Developer Program.
 2. Ensure your bundle identifier is decided (matches `ios.bundleIdentifier` in your app config).
 3. In App Store Connect → My Apps → New App:
-   - Name: 3mpowr App (or your final display name; must be unique)
+   - Name: 3mpwr App (or your final display name; must be unique)
    - Primary language
    - Bundle ID: choose the exact bundle ID you’ll ship with
    - SKU: any internal identifier
@@ -29,7 +29,7 @@ Notes:
 
 ## Android (Google Play Console)
 1. Register a Google Play Developer account.
-2. Create App → Default language → App name: 3mpowr App → App type: App → Free/Paid → Declarations.
+2. Create App → Default language → App name: 3mpwr App → App type: App → Free/Paid → Declarations.
 3. Complete the mandatory sections (you can save drafts):
    - App content: Data Safety, Ads, Target audience, etc.
    - Store listing: Short/Full description, Screenshots, Privacy Policy URL
@@ -39,7 +39,7 @@ Notes:
 - App name isn’t globally reserved until you publish, but creating the app in your console is usually sufficient for planning.
 
 ## Expo/EAS mapping
-- Display name on device: `expo.name` in `app.json` (currently set to "3mpowr App").
+- Display name on device: `expo.name` in `app.json` (currently set to "3mpwr App").
 - Android package: `android.package` in `app.json` (e.g., `com.empowrapp2.empowrapp`). This must match the app you create in Play Console.
 - iOS bundle identifier: Add `ios.bundleIdentifier` in `app.json` when you’re ready. This must match the app record in App Store Connect.
 - Scheme/deep links: `expo.scheme` (optional to change).

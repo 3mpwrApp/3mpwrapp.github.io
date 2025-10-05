@@ -5,8 +5,8 @@ export type Faq = { id: string; q: string; a: string };
 export const faqs: Faq[] = [
   {
     id: "f1",
-    q: "What is 3mpowr App?",
-    a: "3mpowr App is a hub for injured workers, the disability community, advocates, and allies. It brings together resources, podcasts, events, wellness tools, and simple letter templates in one app.",
+  q: "What is 3mpwr App?",
+  a: "3mpwr App is a hub for injured workers, the disability community, advocates, and allies. It brings together resources, podcasts, events, wellness tools, and simple letter templates in one app.",
   },
   {
     id: "f2",

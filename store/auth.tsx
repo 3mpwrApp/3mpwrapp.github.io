@@ -109,7 +109,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setState((s) => ({ ...s, province: p }));
   };
 
-  const signIn = async (name = "3mpowr User") => {
+  const signIn = async (name = "3mpwr User") => {
     const user: User = { id: "local", name };
     await persist(AUTH_MODE_KEY, "signedIn");
     await persist(USER_KEY, JSON.stringify(user));

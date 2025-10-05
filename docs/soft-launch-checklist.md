@@ -1,6 +1,6 @@
 Soft Launch QA Checklist
 
-Owner: 3mpowr App
+Owner: 3mpwr App
 
 Build & Cache
 - Clear Metro cache: `npm run metro:clear`

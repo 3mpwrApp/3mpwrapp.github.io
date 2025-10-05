@@ -12,9 +12,9 @@ export default function ThemedFooter() {
     <SafeAreaView
       style={[styles.container, Platform.OS === 'web' ? styles.webOnly : null]}
       accessibilityRole="text"
-      accessibilityLabel={`Footer. 3mpowr App, ${year}`}
+      accessibilityLabel={`Footer. 3mpwr App, ${year}`}
     >
-      <Text style={styles.text} numberOfLines={1}>{"\u00A9 "}{year} 3mpowr App</Text>
+      <Text style={styles.text} numberOfLines={1}>{"\u00A9 "}{year} 3mpwr App</Text>
     </SafeAreaView>
   );
 }

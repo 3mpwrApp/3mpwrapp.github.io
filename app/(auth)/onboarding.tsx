@@ -7,7 +7,7 @@ export default function OnboardingScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to 3mpowr App</Text>
+  <Text style={styles.title}>Welcome to 3mpwr App</Text>
       <Text style={styles.subtitle}>
         Empowering injured workers & persons with disabilities.
       </Text>

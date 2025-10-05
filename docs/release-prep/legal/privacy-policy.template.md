@@ -1,11 +1,11 @@
-# 3mpowr App — Privacy Policy (Template)
+# 3mpwr App — Privacy Policy (Template)
 
 Last updated: {{DATE}}
 
-This template is provided to help you prepare a privacy policy for 3mpowr App. It must be reviewed and customized by your legal counsel to reflect your actual practices and applicable laws.
+This template is provided to help you prepare a privacy policy for 3mpwr App. It must be reviewed and customized by your legal counsel to reflect your actual practices and applicable laws.
 
 ## Scope
-This policy applies to the 3mpowr App mobile application (Android) and the web experience (if enabled). It covers how we collect, use, disclose, and safeguard information when you use the app and related services.
+This policy applies to the 3mpwr App mobile application (Android) and the web experience (if enabled). It covers how we collect, use, disclose, and safeguard information when you use the app and related services.
 
 If you do not agree with the terms of this policy, please do not use the app.
 
