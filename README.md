@@ -91,6 +91,10 @@ This site is automatically deployed to GitHub Pages when changes are merged to t
 
 Note: For the site to live at the root (https://3mpwrapp.github.io/), the repository name must be exactly `3mpwrapp.github.io`. If the repo name differs, GitHub will publish it under `https://3mpwrapp.github.io/<repo-name>/` and CI should point to that path.
 
+## Subscribe to updates
+
+- What’s New RSS: https://3mpwrapp.github.io/whats-new/feed.xml
+
 ## Support
 
 - 📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)

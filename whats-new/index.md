@@ -6,7 +6,9 @@ permalink: /whats-new/
 
 # What's New
 
-Here are the latest updates and improvements to the website and project. Subscribe to updates via RSS:
+Here are the latest updates and improvements to the website and project.
+
+Subscribe to updates:
 
 - RSS: [What's New feed]({{ '/whats-new/feed.xml' | relative_url }})
 

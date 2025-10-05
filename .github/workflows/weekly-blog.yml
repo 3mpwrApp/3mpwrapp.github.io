@@ -18,8 +18,9 @@ jobs:
         run: |
           set -e
           DATE=$(date -u +"%Y-%m-%d")
-          TITLE="Weekly Update"
-          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+          WEEK=$(date -u +"%V")
+          TITLE="Weekly Update — Week ${WEEK}"
+          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -d '—')
           FILE="_posts/${DATE}-${SLUG}.md"
           if [ -f "$FILE" ]; then
             echo "Post already exists for $DATE, skipping.";
