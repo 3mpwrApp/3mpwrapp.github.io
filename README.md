@@ -99,9 +99,9 @@ Note: For the site to live at the root (https://3mpwrapp.github.io/), the reposi
 
 ## Connect With Us
 
-- [Facebook](https://www.facebook.com/3mpowrapp)
-- [X (Twitter)](https://x.com/3mpowrApp0816)
-- [Instagram](https://www.instagram.com/3mpowrapp/)
+- [Facebook](https://www.facebook.com/3mpowrapp/)
+- [X (Twitter)](https://x.com/3mpowrapp0816)
+- [Instagram](https://www.instagram.com/3mpwrapp/)
 
 ## License
 

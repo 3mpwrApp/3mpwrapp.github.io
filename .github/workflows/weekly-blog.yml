@@ -1,0 +1,45 @@
+name: Weekly Blog Update
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Every Monday at 09:00 UTC
+  workflow_dispatch:
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create weekly blog post
+        run: |
+          set -e
+          DATE=$(date -u +"%Y-%m-%d")
+          TITLE="Weekly Update"
+          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+          FILE="_posts/${DATE}-${SLUG}.md"
+          if [ -f "$FILE" ]; then
+            echo "Post already exists for $DATE, skipping.";
+            exit 0;
+          fi
+          echo "---" > "$FILE"
+          echo "layout: post" >> "$FILE"
+          echo "title: $TITLE ($DATE)" >> "$FILE"
+          echo "date: ${DATE} 09:00:00 +0000" >> "$FILE"
+          echo "---" >> "$FILE"
+          echo >> "$FILE"
+          echo "This is an automated weekly update. Highlights:" >> "$FILE"
+          echo >> "$FILE"
+          echo "- Site health checks (a11y, links, performance) continue to run weekly." >> "$FILE"
+          echo "- Add your notes for this week here." >> "$FILE"
+
+      - name: Commit and push
+        run: |
+          git config user.email "actions@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add _posts/*.md
+          git commit -m "chore(blog): weekly automated update" || echo "No changes to commit"
+          git push
