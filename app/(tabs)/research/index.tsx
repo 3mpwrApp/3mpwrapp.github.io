@@ -92,11 +92,11 @@ export default function ResearchScreen() {
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel={`${t('research.landing.timelineTitle','History Timeline')} - ${t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}`}
+            accessibilityLabel={`${t('research.landing.timelineTitle','History Timeline')} (Coming soon) - ${t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="time-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>{t('research.landing.timelineTitle','History Timeline')}</Text>
+            <Text style={styles.sectionTitle}>{t('research.landing.timelineTitle','History Timeline')} (Coming soon)</Text>
             <Text style={styles.sectionDescription}>{t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}</Text>
           </A11yPressable>
         </Link>
@@ -106,11 +106,11 @@ export default function ResearchScreen() {
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel={`${t('research.landing.waitTitle','Case/File Wait-Times')} - ${t('research.landing.waitDesc','Estimate how long processes may take')}`}
+            accessibilityLabel={`${t('research.landing.waitTitle','Case/File Wait-Times')} (Coming soon) - ${t('research.landing.waitDesc','Estimate how long processes may take')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="time-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>{t('research.landing.waitTitle','Case/File Wait-Times')}</Text>
+            <Text style={styles.sectionTitle}>{t('research.landing.waitTitle','Case/File Wait-Times')} (Coming soon)</Text>
             <Text style={styles.sectionDescription}>{t('research.landing.waitDesc','Estimate how long processes may take')}</Text>
           </A11yPressable>
         </Link>
@@ -120,11 +120,11 @@ export default function ResearchScreen() {
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
-            accessibilityLabel={`${t('research.landing.masterIndexTitle','Master Index')} - ${t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}`}
+            accessibilityLabel={`${t('research.landing.masterIndexTitle','Master Index')} (Coming soon) - ${t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}`}
             hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="map-outline" size={32} color={palette.primary} />
-            <Text style={styles.sectionTitle}>{t('research.landing.masterIndexTitle','Master Index')}</Text>
+            <Text style={styles.sectionTitle}>{t('research.landing.masterIndexTitle','Master Index')} (Coming soon)</Text>
             <Text style={styles.sectionDescription}>{t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}</Text>
           </A11yPressable>
         </Link>

@@ -38,6 +38,11 @@
 - [ ] Ran `npm run a11y:scan`
 - [ ] Manually smoke-tested on device / simulator
 
+## Documentation
+- [ ] Updated `docs/user-guide.md` (if user-visible changes)
+- [ ] Added entry to `docs/CHANGELOG.md` (today’s date)
+- [ ] Updated `docs/UNFINISHED_WORK.md` if placeholders were resolved/added
+
 ## Checklist
 - [ ] Follows project coding style & conventions
 - [ ] No new ESLint warnings

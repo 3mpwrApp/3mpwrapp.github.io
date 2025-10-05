@@ -57,7 +57,7 @@
     "seed:faqs": "node ./scripts/seed-faqs.js",
     "activity:seed": "node ./scripts/seed-faqs.js",
     "jurisdictions:gen": "node ./scripts/gen-jurisdictions-map.js",
-    "pretest": "npm run i18n:validate && jest --clearCache",
+  "pretest": "npm run i18n:validate && node ./scripts/jest-clear-cache-safe.js",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "test:guard": "node ./scripts/check-jsx-tests.js",

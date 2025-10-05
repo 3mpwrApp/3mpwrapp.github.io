@@ -2,8 +2,8 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import SearchBar from '../../../components/SearchBar';
 import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
+import SearchBar from '../../../components/SearchBar';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -53,6 +53,23 @@ export default function AdvocacyHub() {
     const h = norm(href);
     return h.includes(q);
   };
+  // Features flagged as placeholders/incomplete today
+  const BETA: Array<Feature['key']> = [
+    // High-priority items now available for early testing
+    'ai_translator',
+    'ai_case',
+    'ai_gov',
+    'policy_simple',
+    'finder',
+    'ratings',
+  ];
+  const COMING_SOON: Array<Feature['key']> = [
+    // Still staging / design phase
+    'ally_hub',
+    'collective',
+    'accountability',
+    'accountability_cases',
+  ];
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
     <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.hub.title','Advocacy Hub')}</Text>
@@ -62,48 +79,72 @@ export default function AdvocacyHub() {
       <SearchBar value={query} onChangeText={setQuery} placeholder={t('advocacy.search','Search advocacy tools...')} />
 
       <Text style={s.sectionHeader}>{t('advocacy.sections.ai','AI Tools')}</Text>
-      {FEATURES.filter(f => ['ai_translator','ai_case','ai_gov','policy_simple'].includes(f.key)).map(f => (
-        matches(f.route) ? (
+      {FEATURES.filter(f => ['ai_translator','ai_case','ai_gov','policy_simple'].includes(f.key)).map(f => {
+        const base = t(featureKeyMap[f.key]);
+        const titleText = BETA.includes(f.key)
+          ? `${base} (Beta)`
+          : COMING_SOON.includes(f.key)
+          ? `${base} (Coming soon)`
+          : `${base}\u200B`;
+        return matches(f.route) ? (
           <Link key={f.route} href={f.route as any} asChild>
-            <View style={s.card} accessibilityRole="button" accessibilityLabel={t(featureKeyMap[f.key])}>
-              <Text style={s.cardTitle}>{t(featureKeyMap[f.key])}</Text>
+            <View style={s.card} accessibilityRole="button">
+              <Text style={s.cardTitle}>{titleText}</Text>
             </View>
           </Link>
-        ) : null
-      ))}
+        ) : null;
+      })}
 
       <Text style={s.sectionHeader}>{t('advocacy.sections.coaching','Coaching')}</Text>
-      {FEATURES.filter(f => ['self_coach'].includes(f.key)).map(f => (
-        matches(f.route) ? (
+      {FEATURES.filter(f => ['self_coach'].includes(f.key)).map(f => {
+        const base = t(featureKeyMap[f.key]);
+        const titleText = BETA.includes(f.key)
+          ? `${base} (Beta)`
+          : COMING_SOON.includes(f.key)
+          ? `${base} (Coming soon)`
+          : `${base}\u200B`;
+        return matches(f.route) ? (
           <Link key={f.route} href={f.route as any} asChild>
-            <View style={s.card} accessibilityRole="button" accessibilityLabel={t(featureKeyMap[f.key])}>
-              <Text style={s.cardTitle}>{t(featureKeyMap[f.key])}</Text>
+            <View style={s.card} accessibilityRole="button">
+              <Text style={s.cardTitle}>{titleText}</Text>
             </View>
           </Link>
-        ) : null
-      ))}
+        ) : null;
+      })}
 
       <Text style={s.sectionHeader}>{t('advocacy.sections.directories','Directories & Ratings')}</Text>
-      {FEATURES.filter(f => ['finder','ratings','ally_hub'].includes(f.key)).map(f => (
-        matches(f.route) ? (
+      {FEATURES.filter(f => ['finder','ratings','ally_hub'].includes(f.key)).map(f => {
+        const base = t(featureKeyMap[f.key]);
+        const titleText = BETA.includes(f.key)
+          ? `${base} (Beta)`
+          : COMING_SOON.includes(f.key)
+          ? `${base} (Coming soon)`
+          : `${base}\u200B`;
+        return matches(f.route) ? (
           <Link key={f.route} href={f.route as any} asChild>
-            <View style={s.card} accessibilityRole="button" accessibilityLabel={t(featureKeyMap[f.key])}>
-              <Text style={s.cardTitle}>{t(featureKeyMap[f.key])}</Text>
+            <View style={s.card} accessibilityRole="button">
+              <Text style={s.cardTitle}>{titleText}</Text>
             </View>
           </Link>
-        ) : null
-      ))}
+        ) : null;
+      })}
 
       <Text style={s.sectionHeader}>{t('advocacy.sections.collective','Collective & Accountability')}</Text>
-      {FEATURES.filter(f => ['collective','accountability','accountability_cases'].includes(f.key)).map(f => (
-        matches(f.route) ? (
+      {FEATURES.filter(f => ['collective','accountability','accountability_cases'].includes(f.key)).map(f => {
+        const base = t(featureKeyMap[f.key]);
+        const titleText = BETA.includes(f.key)
+          ? `${base} (Beta)`
+          : COMING_SOON.includes(f.key)
+          ? `${base} (Coming soon)`
+          : `${base}\u200B`;
+        return matches(f.route) ? (
           <Link key={f.route} href={f.route as any} asChild>
-            <View style={s.card} accessibilityRole="button" accessibilityLabel={t(featureKeyMap[f.key])}>
-              <Text style={s.cardTitle}>{t(featureKeyMap[f.key])}</Text>
+            <View style={s.card} accessibilityRole="button">
+              <Text style={s.cardTitle}>{titleText}</Text>
             </View>
           </Link>
-        ) : null
-      ))}
+        ) : null;
+      })}
     </ScrollView>
   );
 }
@@ -116,6 +157,8 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     sectionHeader: { color: palette.text, opacity:0.9, marginTop: 16, marginBottom: 8, fontWeight: '700' },
     card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 10, padding: 14, backgroundColor: palette.surface, marginBottom: 12 },
     cardTitle: { color: palette.text, fontWeight:'700', marginBottom: 4 },
+    comingSoon: { color: palette.text, opacity: 0.7 },
+    padZWS: { color: 'transparent' },
     cardDesc: { color: palette.text, opacity:0.85, fontSize: 13 },
   });
 }

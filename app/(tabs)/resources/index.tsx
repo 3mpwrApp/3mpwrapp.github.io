@@ -154,13 +154,13 @@ export default function ResourcesScreen() {
         🤖 AI Tools
       </Text>
       <Link href={"/(tabs)/resources/ai-decision-simplifier" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          AI Decision Simplifier
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
+          AI Decision Simplifier (Coming soon)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/appeal-coach" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Appeal Coach
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
+          Appeal Coach (Coming soon)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/body-mechanics-advisor" as Href} asChild>
@@ -242,8 +242,8 @@ export default function ResourcesScreen() {
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/claims-navigator" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Claims Navigator
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
+          Claims Navigator (Coming soon)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
@@ -252,8 +252,8 @@ export default function ResourcesScreen() {
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/evidence-locker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Evidence Locker
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
+          Evidence Locker (Beta)
         </Text>
       </Link>
 
@@ -265,8 +265,8 @@ export default function ResourcesScreen() {
         📊 Trackers & Planners
       </Text>
       <Link href={"/(tabs)/resources/chronic-tracker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Chronic Tracker
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
+          Chronic Tracker (Beta)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/deadlines" as Href} asChild>

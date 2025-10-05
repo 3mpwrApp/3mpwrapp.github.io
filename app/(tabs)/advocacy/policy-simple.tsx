@@ -1,22 +1,23 @@
 import { useLocalSearchParams } from 'expo-router';
 import React from "react";
 import {
-  Alert,
-  Linking,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    Linking,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
  
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { aiPolicySimplify } from '../../../services/aiAdvocacy';
@@ -69,6 +70,33 @@ export default function PolicySimple() {
   React.useEffect(()=>{
     if (q && !raw) setRaw(String(q));
   }, [q, raw]);
+  const buildPlain = React.useCallback(() => {
+    const parts = [] as string[];
+    if (summary) parts.push(summary.trim());
+    if (points.length) parts.push(t('advocacy.policy.keyPoints','Key Points')+':\n' + points.map((p,i)=>`${i+1}. ${p}`).join('\n'));
+    if (obligations.length) parts.push(t('advocacy.policy.obligations','Obligations')+':\n' + obligations.map((p,i)=>`${i+1}. ${p}`).join('\n'));
+    if (actions.length) parts.push(t('advocacy.policy.suggestedActions','Suggested Actions')+':\n' + actions.map((p,i)=>`${i+1}. ${p}`).join('\n'));
+    return parts.join('\n\n');
+  }, [summary, points, obligations, actions, t]);
+  const copySummary = async () => {
+    if (!summary) return;
+    try { const Clipboard = await import('expo-clipboard'); await Clipboard.setStringAsync(buildPlain()); Alert.alert(t('common.copied','Copied'), t('advocacy.policy.copiedBody','Summary copied to clipboard.')); }
+    catch { Alert.alert(t('advocacy.policy.clipboardNA','Clipboard not available'), t('advocacy.policy.clipboardNABody','Install expo-clipboard in a dev build to enable copy.')); }
+  };
+  const shareSummary = async () => {
+    const msg = buildPlain(); if (!msg) return;
+    try { await Share.share({ message: msg, title: t('advocacy.tools.policy_simple') }); } catch {}
+  };
+  const exportPdf = async () => {
+    const msg = buildPlain(); if (!msg) return;
+    try { const Print = await import('expo-print'); const html = `<pre style=\"font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; white-space: pre-wrap;\">${msg.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</pre>`; const { uri } = await Print.printToFileAsync({ html }); await Share.share({ url: uri, title: t('advocacy.tools.policy_simple') }); }
+    catch { Alert.alert(t('templates.letters.common.pdfNA','PDF not available'), t('templates.letters.common.pdfNABody','Install expo-print in a dev build to export PDFs.')); }
+  };
+  const exportDoc = async () => {
+    const msg = buildPlain(); if (!msg) return;
+    try { const FS = await import('expo-file-system'); const html = `<html><meta charset=\"utf-8\"/><body><pre style=\"font-family: Arial; white-space: pre-wrap;\">${msg.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</pre></body></html>`; const path = FS.cacheDirectory + `policy_simple_${Date.now()}.doc`; await FS.writeAsStringAsync(path, html, { encoding: FS.EncodingType.UTF8 }); await Share.share({ url: path, title: t('advocacy.tools.policy_simple') + ' (.doc)' }); }
+    catch { Alert.alert(t('templates.letters.common.exportFailed','Export failed'), t('templates.letters.common.exportFailedBody','Could not create file.')); }
+  };
 
   const runSimplify = async () => {
     if (!raw.trim()) return;
@@ -130,6 +158,12 @@ export default function PolicySimple() {
             {obligations.map((p,i)=>(<Text key={i} style={s.resultText}>• {p}</Text>))}
             {actions.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>{t('advocacy.policy.suggestedActions','Suggested Actions')}</Text>}
             {actions.map((p,i)=>(<Text key={i} style={s.resultText}>• {p}</Text>))}
+            <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginTop: 12 }}>
+              <Pressable onPress={copySummary} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.copy','Copy summary')} hitSlop={HIT_SLOP_8}><Text style={[s.buttonText,{ color: palette.text }]}>{t('advocacy.policy.copy','Copy')}</Text></Pressable>
+              <Pressable onPress={shareSummary} style={s.button} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.share','Share summary')} hitSlop={HIT_SLOP_8}><Text style={s.buttonText}>{t('advocacy.policy.share','Share')}</Text></Pressable>
+              <Pressable onPress={exportPdf} style={s.button} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.exportPdf','Export as PDF')} hitSlop={HIT_SLOP_8}><Text style={s.buttonText}>{t('advocacy.policy.exportPdf','Export as PDF')}</Text></Pressable>
+              <Pressable onPress={exportDoc} style={s.button} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.exportDoc','Export as .doc')} hitSlop={HIT_SLOP_8}><Text style={s.buttonText}>{t('advocacy.policy.exportDoc','Export as .doc')}</Text></Pressable>
+            </View>
           </View>
         )}
         <AIDisclaimer />

@@ -29,7 +29,7 @@ jest.mock('expo-router', () => ({ Link: ({children}: any) => children }));
 
 describe('AdvocacyHub', () => {
   it('renders all feature titles from i18n map', async () => {
-  const { queryByText, container } = render(
+  const { container } = render(
     <SettingsProvider>
       <FavoritesProvider>
         <AdvocacyHub />
@@ -49,8 +49,9 @@ describe('AdvocacyHub', () => {
       'advocacy.tools.accountability',
       'advocacy.tools.accountability_cases'
     ];
-    // Count how many expected keys appear as text nodes
-  const foundCount = titles.reduce((acc, t) => acc + (queryByText(t) ? 1 : 0), 0);
+    // Count how many expected keys appear anywhere in the rendered text
+    const allText = container.textContent || '';
+    const foundCount = titles.reduce((acc, t) => acc + (allText.includes(t) ? 1 : 0), 0);
     if (foundCount !== titles.length) {
       // eslint-disable-next-line no-console
       console.log('Rendered HTML:', container.innerHTML);

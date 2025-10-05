@@ -18,6 +18,14 @@ You can start developing by editing the files inside the `app` directory. This p
 
 Quick reference: Deep-link seeding with q param is documented in `docs/deep-linking.md`.
 
+## Documentation
+
+- User Guide (end-user): `docs/user-guide.md`
+- Changelog (developer-facing): `docs/CHANGELOG.md`
+- Unfinished work inventory: `docs/UNFINISHED_WORK.md`
+
+Policy: When you make a user-visible change (labels, flows, notable behavior), update the User Guide and add an entry to the Changelog in the same PR. If you add or deprecate a feature, also update the "Where you’ll see ‘Coming soon’ today" section in the User Guide.
+
 ## Auth, Onboarding, and Guest Mode
 
 - Auth store: `store/auth.tsx` manages auth state with optional AsyncStorage persistence.

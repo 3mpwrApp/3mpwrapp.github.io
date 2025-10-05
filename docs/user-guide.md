@@ -2,7 +2,7 @@
 title: 3mpwr App — User Guide
 description: A practical guide to using 3mpwr’s tools and community features
 version: 1.0
-lastUpdated: 2025-09-07
+lastUpdated: 2025-10-05
 ---
 
 # 3mpwr App — User Guide
@@ -32,11 +32,13 @@ lastUpdated: 2025-09-07
 - Directory: Browse advocates; search by name/bio; pull‑to‑refresh.
 - Tools:
   - Self‑Advocacy Coach: Short micro‑lessons to build skills.
-  - Policy Made Simple: Plain‑language policy explanations.
+  - Policy Made Simple: Plain‑language policy explanations, with Copy/Share/PDF/.doc export.
   - AI Advocate Translator: Simplifies bureaucratic letters into plain English.
   - AI Case Interpreter: Helps interpret case notes/letters.
   - Collective Legal Action Hub: Organize and coordinate.
   - AI Government Navigator: Navigate government pathways faster.
+  - Lawyer Finder: Search advocates by name, bio, or location; filter and browse map/list views.
+  - Disability Justice Ratings (beta): Rate services and providers (e.g., hospitals, clinics); see averages and score distribution; submissions are throttled and moderated.
 - Ask an Advocate: Intake form to request support.
 
 ![Advocacy Directory](images/advocacy-directory.png "Advocacy directory with search and tools")
@@ -139,6 +141,15 @@ lastUpdated: 2025-09-07
 - Export: CSV and JSON.
 - Import Templates: Seed entries from JSON templates for quick setup.
 
+### Medication & Treatment Tracker (beta)
+
+- Add meds: Name, dose, schedule; optional reminder time and refill date.
+- Logs: Track side effects and effectiveness (1–5) over time per medication.
+- Reminders: One‑tap “Remind daily” schedules the next 7 days at your chosen time; “Refill alert” schedules your refill date.
+- Exports: CSV and JSON. Import a JSON template to seed your list quickly.
+- Privacy: Data is stored locally unless you export/share.
+- Accessibility: Header announces on open; inputs and buttons have labels and larger touch targets.
+
 ### Deadlines
 
 - Calendar and List views with reminders.
@@ -152,7 +163,7 @@ lastUpdated: 2025-09-07
 
 ![Wellness Tracker](images/wellness-tracker.png "Symptom tracker with export")
 
-### Reflections Calendar
+### Reflections Calendar (beta)
 
 - Views: Grid (month) and List (range). Toggle tap behavior: Details or Editor (remembered per device).
 - Quick‑Add: Long‑press a day (grid or list) to show inline mood chips; tap to add instantly. If connected to the optional server, past days are backdated server‑side.
@@ -160,6 +171,29 @@ lastUpdated: 2025-09-07
 - Exports: CSV/JSON with field filters (Mood/Text). One‑tap “Export Week” and “Export Month” CSV.
 - Default setting: Change the default tap behavior under Settings → Wellness Preferences.
 - Backdating: Enable/disable server‑backdating for past days under Settings → Wellness Preferences.
+
+### Accessible Exercise Hub (beta)
+
+- Browse accessible exercise videos and guides. Filter for wheelchair, limited-mobility, or sensory-friendly routines.
+- Favorites: Tap “☆ Favorite” to save exercises; open your list under Favorites.
+- Export: “Export Favorites (CSV)” saves a CSV file you can share or import elsewhere.
+- Offline-friendly: If YouTube is unavailable, the local curated list appears.
+
+### Daily Energy Coins (beta)
+
+- Purpose: Budget your daily energy for tasks; practice kind pacing.
+- How it works: Set a daily coin budget; add a task label and spend coins. Reset at the end of the day. History shows your latest spends.
+- Tips: Start small (e.g., 10–12 coins) and adjust based on your day. Use labels like “Dishes” or “Stretch”.
+- Accessibility: Clear labels, larger tap areas, and color contrast that respects High Contrast mode.
+
+### Sleep & Energy Tracker (beta)
+
+- Add entries: Date, sleep hours, sleep quality (1–5), energy (1–5), notes, and tags.
+- Filters: Optional start/end date, minimum sleep hours, and tag contains.
+- Quick tags: Tap chips like “insomnia”, “nap”, “fatigue”, “pain”, “stress” to toggle tags.
+- Summary: Auto‑generated, plain‑text summary with averages and a concise medical/legal statement.
+- Exports: Share text, Copy to clipboard, Export CSV (text), Export CSV File (download), Export as PDF, and Export as .doc.
+- Privacy & Safety: Respect Privacy Gate when Wellness Lock is enabled; data is stored locally unless you export/share.
 
 ## Saved
 
@@ -213,10 +247,18 @@ lastUpdated: 2025-09-07
 
 Where you’ll see “Coming soon” today
 
-- Community → Media Studio, Mutual Aid, Mutual Chat, Beta Testers Chat, and Compose Post cards show “Coming soon”.
-- Community → Safety & Blocking notes future one-tap block and report tools.
-- Wellness: Some advanced tools are in development; labels appear on their entries when applicable.
+- Community: Media Studio, Mutual Aid, Mutual Chat, Beta Testers Chat, and Compose Post cards show “Coming soon”. DMs are marked “beta”. Safety & Blocking mentions upcoming one‑tap block, report tools, and moderation flows.
+- Wellness hub: Many tools are still being built. You’ll see “Coming soon” on Rehab Games, Diet & Nutrition Guides, Sleep Reframe, CBT Mini‑Games, DBT Skill Matcher, Opposite Action, Radical Acceptance, Acceptance & Function, Distress Tolerance, Belief Strength Meter, Adaptive Meditation, Ambience Sync AI, Grief Support, Resilience Points, Dream Tracker & Interpreter, and the Self‑Care Library.
+- Research: History Timeline, Case/File Wait‑Times, and Master Index are labeled “Coming soon”.
+- Resources: Some AI tools and planners are staged, including AI Decision Simplifier and Claims Navigator (cards show “Coming soon”).
+- Advocacy: Several advanced tools and directories are staged. Cards for Ally Hub, Collective Legal, Accountability Coach, and Accountability Cases show “Coming soon”.
 - Admin/Docs: Certain admin utilities and docs may still be placeholders; they won’t affect normal use.
+
+Beta today
+
+- Advocacy: AI Advocate Translator, AI Case Interpreter, AI Government Navigator, Policy Made Simple, Lawyer Finder, and Ratings are available as Beta.
+- Wellness: AI Companion, Symptom & Pain Tracker, Sleep & Energy Tracker, Pain Forecast, Reflections Calendar, Accessible Exercise Hub, Daily Energy Coins, and Daily Planner are available as Beta.
+- Resources: Evidence Locker, Chronic Tracker, and Medication & Treatment Tracker are available as Beta.
 
 ## Offline & Sync
 
