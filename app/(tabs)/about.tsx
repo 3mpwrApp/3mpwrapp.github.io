@@ -1,13 +1,5 @@
 import React from "react";
-import {
-    Alert,
-    Linking,
-    Pressable,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
-} from "react-native";
+import { Alert, Linking, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";
@@ -20,6 +12,7 @@ import {
 import { useTranslation } from "../../i18n";
 import { useTextScale } from "../../theme/typography";
 import { useAppPalette } from "../../theme/usePalette";
+import { openExternalUrl } from "../../utils/linking";
 
 const EMAIL = "empowrapp08162025@gmail.com";
 
@@ -70,6 +63,23 @@ export default function AboutScreen() {
       <Text style={styles.text}>{t("about.intro1")}</Text>
       <Text style={styles.text}>{t("about.intro2")}</Text>
       <Text style={styles.text}>{t("about.intro3")}</Text>
+      <View style={{ marginVertical: 8 }}>
+        <Text style={[styles.text,{ fontWeight:'700' }]}>Socials & Website</Text>
+        <View style={{ flexDirection:'row', flexWrap:'wrap', gap: 8 }}>
+          <Pressable onPress={()=>openExternalUrl('https://x.com/3mpwrapp')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>X (Twitter)</Text>
+          </Pressable>
+          <Pressable onPress={()=>openExternalUrl('https://instagram.com/3mpwrapp')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Instagram</Text>
+          </Pressable>
+          <Pressable onPress={()=>openExternalUrl('https://facebook.com/3mpwrapp')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Facebook</Text>
+          </Pressable>
+          <Pressable onPress={()=>openExternalUrl('https://3mpwrapp.github.io/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Website</Text>
+          </Pressable>
+        </View>
+      </View>
       <Text style={styles.text}>{t("about.emailLabel","Email")}: {EMAIL}</Text>
       <TextInput
         style={styles.input}

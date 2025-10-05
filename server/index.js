@@ -61,6 +61,39 @@ app.get('/health', async (_req, res) => {
   }
 });
 
+// iCalendar feed for events (for website sync)
+app.get('/events.ics', async (_req, res) => {
+  try {
+    // Load events from API service or local data
+    let events = [];
+    try {
+      const svc = await import('../services/events');
+      const list = await svc.fetchEvents();
+      events = (list || []).map((e) => ({
+        title: String(e.title || 'Event'),
+        description: String(e.description || ''),
+        startISO: String(e.date || new Date().toISOString()),
+        durationMinutes: e.durationMinutes || 60,
+      }));
+    } catch {}
+    if (!events.length) {
+      const local = (await import('../data/events')).events;
+      events = (local || []).map((e) => ({
+        title: String(e.title || 'Event'),
+        description: String(e.description || ''),
+        startISO: String(e.date || new Date().toISOString()),
+        durationMinutes: e.durationMinutes || 60,
+      }));
+    }
+    const ics = (await import('../services/ics')).buildICSMany(events);
+    res.set('Content-Type', 'text/calendar; charset=utf-8');
+    res.set('Cache-Control', 'public, max-age=300'); // 5 minutes
+    return res.send(ics);
+  } catch {
+    return res.status(500).send('');
+  }
+});
+
 // Simple web crawler: fetch URL and extract title + meta description + links
 app.get('/crawl', async (req, res) => {
   try {
@@ -211,6 +244,38 @@ try {
       res.json({ ok: true, expo: expoTokens.length, fcm: fcmTokens.length });
     } catch (e) {
       res.status(500).json({ error: 'notify-chat-post failed' });
+    }
+  });
+
+  // Notify participants of a DM thread (except author)
+  app.post('/notify-dm', express.json(), async (req, res) => {
+    try {
+      const { threadId, fromUid, message } = req.body || {};
+      if (!threadId) return res.status(400).json({ error: 'threadId required' });
+      const firestore = (await admin?.firestore?.()) || null;
+      if (!firestore) return res.status(200).json({ status: 'noop' });
+      const tRef = firestore.collection('dm_threads').doc(String(threadId));
+      const tSnap = await tRef.get();
+      const parts = (tSnap.data()?.participants || []).filter((p) => p && p !== fromUid);
+      if (!parts.length) return res.json({ ok: true, sent: 0 });
+      // Load tokens for other participants
+      const tokensSnap = await firestore.getAll(...parts.map((uid) => firestore.collection('user_tokens').doc(uid)));
+      const expoTokens = [], fcmTokens = [];
+      tokensSnap.forEach((doc) => { const v = doc.data() || {}; if (v.expo) expoTokens.push(v.expo); if (v.fcm) fcmTokens.push(v.fcm); });
+      // Send Expo
+      if (expo && expoTokens.length) {
+        const Ex = (await import('expo-server-sdk')).Expo; const ex = new Ex();
+        const messages = expoTokens.map((t) => ({ to: t, sound: 'default', title: 'New message', body: String(message||'New direct message'), data: { threadId: String(threadId) } }));
+        const chunks = ex.chunkPushNotifications(messages);
+        for (const chunk of chunks) { await ex.sendPushNotificationsAsync(chunk); }
+      }
+      // Send FCM
+      if (admin && fcmTokens.length) {
+        await admin.messaging().sendEachForMulticast({ tokens: fcmTokens, notification: { title: 'New message', body: String(message||'New direct message') }, data: { threadId: String(threadId) } });
+      }
+      res.json({ ok: true, expo: expoTokens.length, fcm: fcmTokens.length });
+    } catch (e) {
+      res.status(500).json({ error: 'notify-dm failed' });
     }
   });
 

@@ -28,6 +28,7 @@ import { fetchPodcasts } from "../services/podcasts";
 import { fetchResources } from "../services/resources";
 import { initAnalytics, initSentry } from "../services/telemetry";
 import { A11ySettingsProvider } from "../store/a11ySettings";
+import { BlocksProvider } from "../store/blocks";
 import { BookmarksProvider } from "../store/bookmarks";
 import { CoachProgressProvider } from "../store/coachProgress";
 import { NotificationsProvider } from "../store/notifications";
@@ -129,6 +130,7 @@ export default function RootLayout() {
                     <NetworkProvider>
                       <RefreshProvider>
                         {/* Ensure a single root element (avoid Fragment) */}
+                        <BlocksProvider>
                         <View style={{ flex: 1 }}>
                           <View>
                             <OfflineBanner />
@@ -169,6 +171,7 @@ export default function RootLayout() {
                           {/* Show footer only on web to avoid overlapping native tab bar */}
                           {Platform.OS === 'web' ? <Footer /> : null}
                         </View>
+                        </BlocksProvider>
                       </RefreshProvider>
                     </NetworkProvider>
                   </CountsProvider>

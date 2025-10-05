@@ -84,6 +84,7 @@ function ScreenInner() {
             { key: 'aid', title: '🤝 Mutual Aid', desc: 'Exchange support, resources, peer help', href: '/(tabs)/community/mutual-aid' as Href },
             { key: 'chat', title: '💬 Mutual Chat', desc: 'Real-time group & 1-1 conversations', href: '/(tabs)/community/mutual-chat?id=general' as Href },
             { key: 'testers', title: '🧪 Beta Testers Chat', desc: 'Live chat to collaborate & give feedback', href: '/(tabs)/community/testers-chat' as Href },
+            { key: 'dm', title: '📥 Direct Messages', desc: 'Private 1‑1 conversations (beta)', href: '/(tabs)/community/dms' as Href },
             { key: 'compose', title: '✏️ Compose Post', desc: 'Create a new forum post', href: '/(tabs)/community/compose' as Href, compose: true },
           ];
           const fMatches: Feature[] = q
@@ -173,6 +174,22 @@ function ScreenInner() {
           onPress={() => router.push('/(tabs)/community/my-posts' as Href)}
         >
           <Text style={styles.rowText}>My Posts</Text>
+        </A11yPressable>
+        <A11yPressable
+          accessibilityRole="button"
+          accessibilityLabel="Open Direct Messages"
+          style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+          onPress={() => router.push('/(tabs)/community/dms' as Href)}
+        >
+          <Text style={styles.rowText}>Direct Messages (beta)</Text>
+        </A11yPressable>
+        <A11yPressable
+          accessibilityRole="button"
+          accessibilityLabel="Open Community Safety"
+          style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+          onPress={() => router.push('/(tabs)/community/safety' as Href)}
+        >
+          <Text style={styles.rowText}>Safety & Blocking</Text>
         </A11yPressable>
       </View>
     </View>

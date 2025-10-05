@@ -231,6 +231,9 @@ export default function TabsLayout() {
         <Tabs.Screen name="community/[slug]" options={{ href: null }} />
         <Tabs.Screen name="community/compose" options={{ href: null }} />
         <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />
+  <Tabs.Screen name="community/dms/index" options={{ href: null }} />
+  <Tabs.Screen name="community/dms/[id]" options={{ href: null }} />
+  <Tabs.Screen name="community/safety" options={{ href: null }} />
         <Tabs.Screen name="community/media-studio" options={{ href: null }} />
         <Tabs.Screen name="community/mutual-aid" options={{ href: null }} />
         <Tabs.Screen name="community/mutual-chat" options={{ href: null }} />

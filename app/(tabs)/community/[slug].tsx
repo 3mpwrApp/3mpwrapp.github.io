@@ -16,6 +16,7 @@ import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
 import { useAuth } from "../../../context/AuthContext";
 import { channels as seedChannels } from "../../../data/community";
 import { db } from "../../../firebase/config";
+import { useBlocks } from "../../../store/blocks";
 import { CommunityProvider } from "../../../store/community";
 import { colors, type Palette } from "../../../theme/colors";
 
@@ -30,6 +31,7 @@ function ChannelInner() {
   const [cursor, setCursor] = React.useState<any>(null);
   const [refreshing, setRefreshing] = React.useState(false);
   const pageSize = 10;
+  const { blockUser, isBlocked } = useBlocks();
 
   // Resolve the channel by slug to get the stable channelId
   const channel = React.useMemo(() => seedChannels.find(c => c.slug === String(slug)), [slug]);
@@ -116,6 +118,18 @@ function ChannelInner() {
                 return new Date(ms).toLocaleString();
               })()}
             </Text>
+            <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+              {!!item.authorUid && item.authorUid !== (require('../../../firebase/config').auth.currentUser?.uid || 'anon') && !isBlocked(item.authorUid) && (
+                <A11yPressable onPress={() => { const me = require('../../../firebase/config').auth.currentUser?.uid || 'anon'; const parts = [String(me), String(item.authorUid)].sort(); const threadId = parts.join('__'); router.push(`/(tabs)/community/dms/${threadId}` as Href); }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}> 
+                  <Text style={{ color: palette.text, fontWeight:'700' }}>Start DM</Text>
+                </A11yPressable>
+              )}
+              {!!item.authorUid && item.authorUid !== (require('../../../firebase/config').auth.currentUser?.uid || 'anon') && (
+                <A11yPressable onPress={() => blockUser(String(item.authorUid))} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}> 
+                  <Text style={{ color: palette.text, fontWeight:'700' }}>Block</Text>
+                </A11yPressable>
+              )}
+            </View>
             {isAdmin && (
               <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
                 <A11yPressable onPress={async () => { try { await updateDoc(doc(db,'threads', item.id), { flagged: !(item.flagged===true) }); } catch {} }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}>

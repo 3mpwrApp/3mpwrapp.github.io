@@ -8,6 +8,7 @@ const ALLOWED_HOSTS = new Set([
   "instagram.com",
   "x.com",
   "twitter.com",
+  "3mpwrapp.github.io",
 ]);
 
 export async function openExternalUrl(url: string) {

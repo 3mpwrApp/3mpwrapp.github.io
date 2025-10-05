@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams , router } from "expo-router";
 import { addDoc, collection, doc, getDoc, onSnapshot, orderBy, query, serverTimestamp, where } from 'firebase/firestore';
 import React from "react";
 import { FlatList, StyleSheet, Text, TextInput, useColorScheme, View } from "react-native";
@@ -9,6 +9,7 @@ import { useAuth } from "../../../../context/AuthContext";
 import { db } from "../../../../firebase/config";
 import { setLastRead, setTyping } from "../../../../services/community";
 import { useNotificationDispatcher } from "../../../../services/notifications.dispatcher";
+import { useBlocks } from "../../../../store/blocks";
 import { CommunityProvider } from "../../../../store/community";
 import { colors, type Palette } from "../../../../theme/colors";
 
@@ -22,6 +23,7 @@ function ThreadInner() {
   const [othersTyping, setOthersTyping] = React.useState(false);
   const { user } = useAuth();
   const { dispatchDomainEvent } = useNotificationDispatcher();
+  const { blockUser, isBlocked } = useBlocks();
 
   React.useEffect(() => {
     if (!id) return;
@@ -68,6 +70,22 @@ function ThreadInner() {
           <View style={styles.comment}>
             <Text style={styles.commentAuthor}>{item.authorUid || "User"}</Text>
             <Text style={styles.commentText}>{item.text}</Text>
+            <View style={{ flexDirection:'row', gap:8, marginTop: 4 }}>
+              {!!item.authorUid && item.authorUid !== user?.uid && !isBlocked(item.authorUid) && (
+                <A11yPressable accessibilityRole="button" accessibilityLabel="Start DM" onPress={() => {
+                  const parts = [String(user?.uid||'anon'), String(item.authorUid)].sort();
+                  const threadId = parts.join('__');
+                  router.push(`/(tabs)/community/dms/${threadId}` as any);
+                }} style={({ pressed }) => [styles.chip, pressed && { opacity: 0.8 }]}>
+                  <Text style={styles.chipText}>Start DM</Text>
+                </A11yPressable>
+              )}
+              {!!item.authorUid && item.authorUid !== user?.uid && (
+                <A11yPressable accessibilityRole="button" accessibilityLabel="Block user" onPress={() => blockUser(String(item.authorUid))} style={({ pressed }) => [styles.chip, pressed && { opacity: 0.8 }]}>
+                  <Text style={styles.chipText}>Block</Text>
+                </A11yPressable>
+              )}
+            </View>
           </View>
         )}
         contentContainerStyle={{ paddingTop: 8 }}
@@ -116,5 +134,7 @@ function createStyles(palette: Palette) {
     input: { flex: 1, borderWidth: 1, borderColor: palette.muted, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, color: palette.text },
     cta: { backgroundColor: palette.primary, borderRadius: 10, paddingHorizontal: 16, paddingVertical: 10 },
     ctaText: { color: palette.onPrimary, fontWeight: '700' },
+    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
+    chipText: { color: palette.text, fontWeight: '700' },
   });
 }

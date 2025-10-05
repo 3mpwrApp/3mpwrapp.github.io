@@ -62,12 +62,31 @@ lastUpdated: 2025-09-07
 - Threads: Post new threads, view and add comments.
 - Offline Queue: Posts and replies queue locally; syncs on reconnect.
 
+### Direct Messages (beta)
+
+- Start a DM: Community → Direct Messages → enter the other user’s ID → Start.
+- Threads: Your recent 1‑1 chats appear in the list; tap to open and send messages.
+- Safety: Users you’ve blocked cannot DM you; your DM list hides messages from blocked users.
+- Notes: This early beta uses user IDs for discovery. Profile search and richer chat features are planned.
+
+### Safety & Blocking
+
+- Block a user: Community → Safety & Blocking → enter their user ID → Block.
+- Unblock: From the same screen, tap Unblock next to their ID.
+- Effect: Hides content and DMs from blocked users. Coming soon: one‑tap block from posts, report tools, and moderation.
+
 ![Community Threads](images/community-threads.png "Channel threads and compose")
 
 ## Events
 
 - Calendar: Month view with community events, national holidays, disability observances; optional provincial holidays (Settings).
 - Add to Calendar: From an event, tap “Add Reminder” (Google Calendar template) or share an ICS fallback.
+
+### Website calendar sync
+
+- ICS feed: The app server exposes an iCalendar feed at `/events.ics` that aggregates upcoming events.
+- Example: If your server base is `https://api.example.com`, use `https://api.example.com/events.ics` in your website/CMS calendar.
+- Refresh: The feed can be cached by your site/CDN; default server cache is 5 minutes.
 
 ![Events Calendar](images/events-month.png "Month view with events and filters")
 
@@ -161,6 +180,11 @@ lastUpdated: 2025-09-07
 
 ![Settings](images/settings.png "Settings showing Accessibility, Language, Notifications, and Emergency Wallet Card")
 
+### Socials & Website
+
+- Find quick links under About → Socials & Website.
+- Current links: X (Twitter) @3mpwrapp, Instagram @3mpwrapp, Facebook @3mpwrapp, Website https://3mpwrapp.github.io/
+
 ## How Do I…
 
 - Save an item: Tap the bookmark icon on a card/detail; find it later under Saved.
@@ -170,6 +194,8 @@ lastUpdated: 2025-09-07
 - Back up & restore: Settings → Privacy & Backups → Export/Import Backup.
 - Reset Terms: Settings → Terms & Policies → “Require re‑acceptance”.
 - Collaborate on a campaign: Campaign detail → “Open Campaign Room” → add tasks/notes → Export CSV.
+- DM someone privately: Community → Direct Messages → enter their user ID → Start.
+- Block a user: Community → Safety & Blocking → enter ID → Block.
 
 ## Accessibility
 
@@ -179,6 +205,11 @@ lastUpdated: 2025-09-07
 - Text Scaling: Respects system font size.
 
 > Tip: Turn on system “Bold Text” or “High Contrast” to further improve readability.
+
+### Coming soon badges
+
+- Some screens and buttons may show a subtle “Coming soon” label to signal features that are in development.
+- Feedback welcome: Use About → Contact to send suggestions.
 
 ## Offline & Sync
 
