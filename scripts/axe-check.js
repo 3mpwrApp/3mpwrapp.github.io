@@ -30,8 +30,25 @@ const fs = require('fs');
   let failures = 0;
   const report = [];
 
+  async function gotoWithRetry(p, url, attempts = 3) {
+    let lastErr;
+    for (let i = 1; i <= attempts; i++) {
+      try {
+        await p.goto(url, { waitUntil: 'load', timeout: 20000 });
+        // tiny settle time for client JS
+        await p.waitForTimeout(300);
+        return;
+      } catch (e) {
+        lastErr = e;
+        console.warn(`goto attempt ${i} failed for ${url}:`, e.message || e);
+        await p.waitForTimeout(500 * i);
+      }
+    }
+    throw lastErr;
+  }
+
   for (const url of urls) {
-    await page.goto(url, { waitUntil: 'domcontentloaded' });
+    await gotoWithRetry(page, url, 3);
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa'])
       .analyze();

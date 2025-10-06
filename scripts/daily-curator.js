@@ -142,7 +142,7 @@ async function main(){
   const deduped = Array.from(byLink.values());
   // Per-source caps: limit items from a single domain to avoid dominance
   const domainCounts = Object.create(null);
-  const capPerSource = 4;
+  const capPerSource = Number(cfg.perSourceCap || 4);
   const capped = [];
   for (const it of deduped.sort((a,b)=> b.score - a.score)) {
     const u = (it.link || '').toString();
@@ -153,7 +153,7 @@ async function main(){
   }
 
   // Must-include allowlist: ensure at least 1 item from each, if present
-  const mustIncludeHosts = [
+  const mustIncludeHosts = Array.isArray(cfg.mustIncludeHosts) ? cfg.mustIncludeHosts : [
     'accessible.canada.ca', 'www.canada.ca', 'chrc-ccdp.gc.ca',
     'www.wsib.ca', 'www.worksafebc.com', 'www.wcb.ab.ca'
   ];

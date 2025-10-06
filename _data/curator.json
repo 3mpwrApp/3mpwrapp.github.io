@@ -152,5 +152,14 @@
   ],
   "maxItems": 25,
   "minScore": 2,
-  "postDaily": true
+  "postDaily": true,
+  "perSourceCap": 4,
+  "mustIncludeHosts": [
+    "accessible.canada.ca",
+    "www.canada.ca",
+    "chrc-ccdp.gc.ca",
+    "www.wsib.ca",
+    "www.worksafebc.com",
+    "www.wcb.ab.ca"
+  ]
 }
