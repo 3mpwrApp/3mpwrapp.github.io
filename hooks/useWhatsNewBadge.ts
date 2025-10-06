@@ -12,11 +12,9 @@ export function useWhatsNewBadge() {
     let mounted = true;
     (async () => {
       try {
-        const { whatsnew: defaults } = await import('../data/whatsnew');
-        const { getLocalWhatsNew } = await import('../services/localContent');
-        const local = await getLocalWhatsNew();
-        const all = [...local, ...defaults];
-        if (!all.length) {
+        const { getWhatsNewSplit } = await import('../services/localContent');
+        const { current } = await getWhatsNewSplit();
+        if (!current.length) {
           if (mounted) setCount(undefined);
           return;
         }
@@ -25,7 +23,7 @@ export function useWhatsNewBadge() {
           const raw = await AsyncStorage?.getItem?.('whatsnew:lastSeen:v1');
           if (raw) lastSeen = new Date(raw).getTime();
         } catch {}
-        const unread = all.filter((i) => new Date(i.date).getTime() > lastSeen);
+        const unread = current.filter((i) => new Date(i.date).getTime() > lastSeen);
         if (mounted) setCount(unread.length > 0 ? unread.length : undefined);
       } catch {
         if (mounted) setCount(undefined);

@@ -1,6 +1,14 @@
 # Jurisdiction Coverage (Canada)
 
-This document tracks structured data integration for federal and provincial/territorial bodies relevant to disability, injury, and workplace accommodation.
+Scope: All disabilities, injuries, illnesses, workplace accommodations, and related protections across Canada. Coverage includes Canada‑wide frameworks and every province/territory.
+
+Foundations and legal anchors
+
+- UNCRPD: United Nations Convention on the Rights of Persons with Disabilities (ratified by Canada). Guides accessibility, non‑discrimination, and accommodation principles.
+- Canadian Charter of Rights and Freedoms (Constitution Act, 1982): Equality rights (s.15) inform non‑discrimination baselines.
+- Accessible Canada Act (federal) and provincial accessibility/human rights statutes (e.g., AODA in Ontario, AMA in Manitoba, etc.).
+- Human rights codes/acts per jurisdiction: complaint timelines and remedies.
+- Workers’ compensation boards per jurisdiction: workplace injury/illness benefits, return‑to‑work duties, appeals.
 
 ## Data Model
 See `types/jurisdiction.ts` for:
@@ -10,6 +18,8 @@ See `types/jurisdiction.ts` for:
 - Accommodation guidance (principles)
 - Evidence focus (prioritized document types)
 - Limitation notes (deadlines / escalation windows)
+ - Coverage scope: disabilities, injuries, chronic illnesses, episodic conditions, and workplace accommodations
+ - Sources: citations and last‑updated timestamps per field
 
 ## Status Summary (Initial Skeleton)
 | Code | Workplace Injury | Human Rights Deadline | Key Programs Included | Notes |
@@ -36,6 +46,8 @@ See `types/jurisdiction.ts` for:
 4. Benefit program evidence tips for each provincial disability income program
 5. Human rights limitation confirmation (source citations) – add `sources` field extension
 6. Add bilingual (EN/FR) field variants for QC and federal entries (future i18n design)
+7. Accessibility/Accommodation frameworks per province (link to statute and guidance pages)
+8. Add mapping for episodic disabilities and chronic illness accommodation examples
 
 ## Integration Plan
 - Rights Checker: display jurisdiction-specific “Evidence Focus” + “Key Deadlines” panel
@@ -43,7 +55,7 @@ See `types/jurisdiction.ts` for:
 - Advocacy Coach: suggest evidence items based on `evidenceFocus` for selected jurisdiction
 - Admin Metrics: province usage counts (derive from user profile province) – future
 
-### Current Integration Status (Sept 2025)
+### Current Integration Status (Oct 2025)
 - Jurisdiction data schema & JSON assets populated (federal + all provinces/territories stubs)
 - React store: `store/jurisdiction.tsx` provides selected jurisdiction with persistence
 - UI: `JurisdictionPanel` integrated into Advocacy hub displaying evidence focus & accommodation principles
@@ -54,5 +66,10 @@ See `types/jurisdiction.ts` for:
 ## Open Questions
 - Should we version jurisdiction data (e.g., for legislative changes)?
 - Strategy for citing official sources inside UI (tooltips vs external links)?
+
+## Summary for User Guide
+- Canada‑wide: We align with UNCRPD and the Charter’s equality rights. Federal ACA sets accessibility duties for federal sector bodies.
+- Provincial: Every province/territory has a human rights act/code and a workers’ compensation board with its own forms, deadlines, and appeal routes.
+- In the app: Choose your province in Settings to see relevant tools, deadlines, and templates. Rights Checker and Resources reflect your selection.
 
 PRs welcome—expand entries, add sources, refine guidance.

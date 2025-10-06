@@ -26,7 +26,25 @@ export async function getLocalWhatsNew(): Promise<WhatsNewItem[]> {
       }
     }
     const items: any[] = raw ? JSON.parse(raw) : [];
-    return Array.isArray(items) ? (items as WhatsNewItem[]) : [];
+    let parsed: WhatsNewItem[] = Array.isArray(items) ? (items as WhatsNewItem[]) : [];
+    // Auto-archive items older than 30 days (idempotent)
+    const now = Date.now();
+    const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+    let changed = false;
+    parsed = parsed.map((i) => {
+      try {
+        const age = now - new Date(i.date).getTime();
+        if (age > THIRTY_DAYS && !i.archived) {
+          changed = true;
+          return { ...i, archived: true };
+        }
+      } catch {}
+      return i as WhatsNewItem;
+    });
+    if (changed) {
+      try { await AsyncStorage.setItem(KEY_WHATS_NEW, JSON.stringify(parsed)); } catch {}
+    }
+    return parsed;
   } catch {
     return [];
   }
@@ -42,6 +60,32 @@ export async function addLocalWhatsNew(item: WhatsNewItem): Promise<void> {
 export async function setLocalWhatsNew(items: WhatsNewItem[]): Promise<void> {
   if (!AsyncStorage) return;
   await AsyncStorage.setItem(KEY_WHATS_NEW, JSON.stringify(items));
+}
+
+export async function getWhatsNewSplit(): Promise<{ current: WhatsNewItem[]; archived: WhatsNewItem[] }>{
+  const local = await getLocalWhatsNew();
+  // Combine with defaults and re-apply age archival at read time
+  let defaults: WhatsNewItem[] = [];
+  let autos: WhatsNewItem[] = [];
+  try {
+    const mod = await import('../data/whatsnew');
+    defaults = mod.whatsnew || [];
+  } catch {}
+  try {
+    // Optional auto-generated items from CHANGELOG via script
+    const mod2 = await import('../data/whatsnew.auto.json');
+    autos = Array.isArray(mod2?.default) ? (mod2.default as WhatsNewItem[]) : [];
+  } catch {}
+  const all = [...local, ...defaults, ...autos];
+  const now = Date.now();
+  const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+  const withArchive = all.map((i) => {
+    const age = now - new Date(i.date).getTime();
+    return age > THIRTY_DAYS ? { ...i, archived: true } : { ...i, archived: i.archived || false };
+  });
+  const current = withArchive.filter((i) => !i.archived);
+  const archived = withArchive.filter((i) => i.archived);
+  return { current, archived };
 }
 
 export async function getLocalFaqs(): Promise<Faq[]> {

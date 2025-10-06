@@ -100,6 +100,10 @@ Prefer a printable 2-page version? Open quick-tour.md
 
 - See release notes and recent improvements in the What’s New area. Changelogs also live in `docs/CHANGELOG.md`.
 
+How it works
+
+- Simple, plain-language updates appear in What’s New. Items older than 30 days move to an Archive automatically so the list stays short and easy to scan.
+
 Recent highlights
 
 - Home: Now marked Beta. You’ll see this message under Today’s Guide: “Suggestions powered by the Personalization Engine (beta).”
@@ -597,6 +601,7 @@ Deep dive — Research routine
 ## Resources
 
 - Region: Choose Canada or your province (set in Settings).
+- Jurisdiction note: The app aligns with Canada‑wide rights (UNCRPD, Charter) and provincial/territorial laws. Set your province in Settings so Resources and Rights Checker reflect local deadlines and processes. See `docs/JURISDICTION_COVERAGE.md` for details.
 - Categories: All, Work & Financial, Tools & Downloads, Emergency & Crisis.
 - AI Tools include: Rights Checker, Appeal Coach, Deadlines + Reminders, Evidence Checklist, Voice‑to‑Case Notes, Template Gallery, Support Directory, and more. All listed Resources tools are now available as Beta.
 - Save/Open/Share: Save items, open links, and share with others.
@@ -694,6 +699,7 @@ Fields you can include
 
 
 
+<a id="evidence-locker"></a>
 ### Evidence Locker
 
 - Private notes: Save notes with tags and attachments. Optional cloud save.
@@ -787,6 +793,7 @@ Troubleshooting (Meds)
 
 - Didn’t get a reminder? Ensure device notifications are allowed. If you changed time zones, open the app once to refresh schedules.
 
+<a id="deadlines"></a>
 ### Deadlines
 
 - Calendar and List views with reminders.
@@ -884,6 +891,7 @@ Weekly routine (simple path)
 
 
 
+<a id="reflections-calendar"></a>
 ### Reflections Calendar (beta)
 
 - Views: Grid (month) and List (range). Toggle tap behavior: Details or Editor (remembered per device).

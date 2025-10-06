@@ -171,6 +171,7 @@ Collected on demand from:
 7. Add preference UI component `NotificationPreferences` (already exists?) – if present, extend to use new matrix
 8. Add tests: registry loading, throttle logic, quiet hours, preference filter, dedupe
 9. Documentation update in README (env var notes) + this plan link
+10. Hook up What's New auto-archive event (system.changelog) to run monthly
 
 ## Testing Strategy
 - Unit: template resolution, throttling, quiet hours edge (wrap midnight), dedupe hashing
@@ -190,6 +191,7 @@ Collected on demand from:
 - Jurisdiction change announcements
 - Evidence locker streak / milestone badges
 - Admin broadcast tools (role-gated)
+ - Auto-expire old marketing/system notices after 30 days (archived list)
 
 ## Open Questions
 - Should quiet hours be jurisdiction-local or device timezone? (Assume device for Phase 1)

@@ -3,6 +3,7 @@ export type WhatsNewItem = {
   title: string;
   summary: string;
   date: string; // ISO date
+  archived?: boolean; // auto-marked when older than 30 days
 };
 
 export const whatsnew: WhatsNewItem[] = [

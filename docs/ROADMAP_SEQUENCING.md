@@ -41,6 +41,8 @@
 13. Evidence export (ZIP encrypted) workflow
 14. Account data wipe (privacy tool)
 15. Adaptive notification scheduling (heuristic -> ML option)
+16. What’s New auto-archival: Move entries older than 30 days to an archived list; show concise, plain-language updates only in current list
+17. Add deep-linkable anchors in User Guide for popular sections (Evidence Locker, Deadlines, Reflections Calendar)
 
 ## Timeboxing (Indicative)
 | Item | Estimate |

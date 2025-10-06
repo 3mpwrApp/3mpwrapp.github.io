@@ -20,7 +20,8 @@ Quick reference: Deep-link seeding with q param is documented in `docs/deep-link
 
 ## Documentation
 
-- User Guide (end-user): `docs/user-guide.md`
+- Quick Tour (2 pages, user-friendly): `docs/quick-tour.md`
+- User Guide (complete, end-user): `docs/user-guide.md`
 - Changelog (developer-facing): `docs/CHANGELOG.md`
 - Unfinished work inventory: `docs/UNFINISHED_WORK.md`
 
@@ -206,6 +207,13 @@ The app uses 8 main tabs. All other features live behind menus or deep links.
 - Advocacy (`/(tabs)/advocacy/index`)
 - Settings (`/(tabs)/settings`)
 - What’s New (`/(tabs)/whatsnew/index`) – shows an unread badge
+
+Quick links to docs
+
+- Evidence Locker how-to: `docs/user-guide.md#evidence-locker`
+- Deadlines how-to: `docs/user-guide.md#deadlines`
+- Reflections Calendar overview: `docs/user-guide.md#reflections-calendar`
+- Full Quick Tour: `docs/quick-tour.md`
 
 ## Community (Firestore)
 

@@ -1,9 +1,9 @@
-# Personalization Engine Design (Draft)
+# Personalization Engine — Core UX “Super‑Brain”
 
 ## Goals
-- Surface the most relevant next action/tool on Home based on recent behavior and stated intent.
+- Always-on guidance: Continuously surface the most relevant next action/tool based on behavior and context.
 - Lightweight client-side scoring first; optionally augment with remote model later.
-- Privacy: all on-device unless user opts into cloud sync.
+- Privacy-first: scoring runs on-device; optional cloud sync is opt-in.
 
 ## Inputs (Events)
 Events unified under `usage.*` namespace (to add):
@@ -76,18 +76,32 @@ Return ordered list; UI shows top 1-3.
 - Maintain rolling event buffer (max 500) in AsyncStorage `usageEvents:v1`.
 - Persist lastSuggested tool + timestamp.
 
-## Incremental Rollout Plan
+## Product Policy
+- No global Settings toggle to disable personalization. It is foundational to the experience and powers tool rotation and suggestions.
+- Provide transparency: show a short line like “Suggestions powered by Personalization (beta)” with a Learn More link.
+- Respect accessibility: explain suggestions in plain language and avoid flashing/animated changes.
+
+## Incremental Rollout Plan (Upgraded)
 1. Implement usage events emission wrappers.
 2. Build `personalization/store` with buffer + scoring function.
-3. Add Home Guide component reading top suggestion; simple CTA.
-4. Add settings toggle to disable personalization.
-5. Expand events mapping (coach, translator, policy simplifier).
+3. Add Home Guide component reading top suggestion; simple CTA and rationale chips.
+4. Add per-surface controls (e.g., “show fewer like this”) rather than a global off.
+5. Expand events mapping (coach, translator, policy simplifier, evidence locker, deadlines).
+6. Add rotation guardrails to avoid repetition; ensure diversity among top picks.
+7. Add minimal A/B parameterization for weights via local config.
 
 ## Future Enhancements
 - Session clustering (group events into sessions for better continuity metrics)
 - Lightweight collaborative filtering (aggregate anonymized trending tools)
 - Natural language intent input with vector matching to tool descriptors
 - A/B testing of scoring parameter sets
+
+## Next Steps (Engineering)
+- Define event adapters from existing analytics/activity events.
+- Create `SuggestibleTool` registry with initial weights and cooldowns.
+- Implement diversity penalty and “lastSuggested” repetition guard.
+- Add transparent reason badges in UI (e.g., “Because you saved 2 resources”).
+- Write unit tests for scoring components and edge cases.
 
 ## Open Questions
 - Should negative signals (dismissals) decay tool priority faster? (Likely yes; add later.)
