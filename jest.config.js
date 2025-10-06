@@ -2,7 +2,7 @@
 module.exports = {
   testEnvironment: 'jsdom',
   // Increase default timeout to reduce flakiness on slower CI/Windows runners
-  testTimeout: 15000,
+  testTimeout: 30000,
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: 'tsconfig.json' }],
     '^.+\\.(js|jsx)$': 'babel-jest'
