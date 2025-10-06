@@ -10,9 +10,15 @@ on:
 permissions:
   contents: read
 
+# Ensure only one pa11y run at a time; cancel previous in-progress runs
+concurrency:
+  group: pa11y
+  cancel-in-progress: true
+
 jobs:
   pa11y:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4

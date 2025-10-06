@@ -9,23 +9,36 @@ const fs = require('fs');
   const browser = await chromium.launch();
   const page = await browser.newPage();
 
-  const urls = [
-    'https://3mpwrapp.github.io/?no-modal=1',
-    'https://3mpwrapp.github.io/about?no-modal=1',
-    'https://3mpwrapp.github.io/features?no-modal=1',
-    'https://3mpwrapp.github.io/user-guide?no-modal=1',
-    'https://3mpwrapp.github.io/community?no-modal=1',
-    'https://3mpwrapp.github.io/resources?no-modal=1',
-    'https://3mpwrapp.github.io/wellness?no-modal=1',
-    'https://3mpwrapp.github.io/contact?no-modal=1',
-    'https://3mpwrapp.github.io/newsletter?no-modal=1',
-    'https://3mpwrapp.github.io/blog?no-modal=1',
-    'https://3mpwrapp.github.io/beta?no-modal=1',
-    'https://3mpwrapp.github.io/search?no-modal=1',
-    'https://3mpwrapp.github.io/site-map?no-modal=1',
-    'https://3mpwrapp.github.io/accessibility?no-modal=1',
-    'https://3mpwrapp.github.io/privacy?no-modal=1',
+  const base = 'https://3mpwrapp.github.io';
+  const q = '?no-modal=1';
+  const mode = (process.env.AXE_MODE || 'quick').toLowerCase();
+  const quick = [
+    `${base}/${q}`,
+    `${base}/about${q}`,
+    `${base}/features${q}`,
+    `${base}/user-guide${q}`,
+    `${base}/blog${q}`,
+    `${base}/contact${q}`,
+    `${base}/privacy${q}`,
   ];
+  const full = [
+    `${base}/${q}`,
+    `${base}/about${q}`,
+    `${base}/features${q}`,
+    `${base}/user-guide${q}`,
+    `${base}/community${q}`,
+    `${base}/resources${q}`,
+    `${base}/wellness${q}`,
+    `${base}/contact${q}`,
+    `${base}/newsletter${q}`,
+    `${base}/blog${q}`,
+    `${base}/beta${q}`,
+    `${base}/search${q}`,
+    `${base}/site-map${q}`,
+    `${base}/accessibility${q}`,
+    `${base}/privacy${q}`,
+  ];
+  const urls = mode === 'full' ? full : quick;
 
   let failures = 0;
   const report = [];

@@ -5,13 +5,22 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  schedule:
+    - cron: '45 6 * * 1' # Weekly Monday 06:45 UTC (full scan)
   workflow_dispatch:
 
+concurrency:
+  group: axe
+  cancel-in-progress: true
+
 jobs:
-  axe:
+  axe_quick:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     continue-on-error: ${{ github.event_name != 'pull_request' }}
+    env:
+      AXE_MODE: quick
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,14 +49,61 @@ jobs:
           echo "Site not reachable after retries" >&2
           exit 1
 
-      - name: Run axe-core against key pages
+      - name: Run axe-core against key pages (quick)
         run: node scripts/axe-check.js
 
       - name: Upload axe report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: axe-report
+          name: axe-report-quick
+          path: |
+            axe-report.json
+            axe-summary.md
+
+  axe_full:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    continue-on-error: true
+    env:
+      AXE_MODE: full
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          if [ ! -f package.json ]; then npm --yes init -y; fi
+          if [ -f package-lock.json ]; then npm ci; else npm i; fi
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Preflight availability check
+        run: |
+          URL="https://3mpwrapp.github.io/?no-modal=1"
+          for i in 1 2 3; do
+            echo "Preflight attempt $i..."
+            if curl -sSfL "$URL" -o /dev/null; then echo "Site reachable"; exit 0; fi
+            sleep 3
+          done
+          echo "Site not reachable after retries" >&2
+          exit 1
+
+      - name: Run axe-core against full scope
+        run: node scripts/axe-check.js
+
+      - name: Upload axe report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axe-report-full
           path: |
             axe-report.json
             axe-summary.md

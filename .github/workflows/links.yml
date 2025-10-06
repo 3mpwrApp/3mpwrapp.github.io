@@ -9,10 +9,16 @@ on:
     - cron: "0 8 * * 1" # Weekly Monday 08:00 UTC
   workflow_dispatch:
 
+# Cancel previous Link Checker runs for the same ref to avoid overlap
+concurrency:
+  group: link-checker
+  cancel-in-progress: true
+
 jobs:
   lychee:
     runs-on: ubuntu-latest
     continue-on-error: ${{ github.event_name != 'pull_request' }}
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 

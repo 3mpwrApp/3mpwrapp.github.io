@@ -1,19 +1,44 @@
 {% assign n = include.name | downcase %}
 {% capture svg %}
 {% if n == 'facebook' %}
-<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z"></path></svg>
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
 {% elsif n == 'x' or n == 'twitter' %}
-<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
 {% elsif n == 'instagram' %}
-<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg>
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Instagram</title>
+	<rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+</svg>
 {% elsif n == 'youtube' %}
-<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><rect x="3" y="6" width="18" height="12" rx="3" ry="3"/><path d="M10 9l6 3-6 3z" fill="#fff"/></svg>
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>YouTube</title>
+	<path d="M3 9a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9z" fill="currentColor"/>
+	<path d="M10 9.5l5.5 2.5L10 14.5V9.5z" fill="#fff"/>
+</svg>
 {% elsif n == 'tiktok' %}
-<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M14 4v5.2c1.2.9 2.6 1.4 4 1.5v2a7.1 7.1 0 0 1-4-1.3V16a4 4 0 1 1-4-4h1.5v2H10a2 2 0 1 0 2 2V4h2z"/></svg>
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>TikTok</title>
+	<path d="M14 4v5.2c1.2.9 2.6 1.4 4 1.5v2a7.1 7.1 0 0 1-4-1.3V16a4 4 0 1 1-4-4h1.5v2H10a2 2 0 1 0 2 2V4h2z" fill="currentColor"/>
+</svg>
 {% elsif n == 'rss' %}
-<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><circle cx="6" cy="18" r="2"/><path d="M4 10a10 10 0 0 1 10 10H12A8 8 0 0 0 4 12v-2zm0-6c11 0 20 9 20 20h-2C22 14.3 13.7 6 4 6V4z"/></svg>
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>RSS</title>
+	<circle cx="6" cy="18" r="2" fill="currentColor"/>
+	<path d="M4 10a10 10 0 0 1 10 10H12A8 8 0 0 0 4 12v-2zm0-6c11 0 20 9 20 20h-2C22 14.3 13.7 6 4 6V4z" fill="currentColor"/>
+</svg>
 {% else %}
-<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/></svg>
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Link</title>
+	<circle cx="12" cy="12" r="10" fill="currentColor"/>
+</svg>
 {% endif %}
 {% endcapture %}
 {{ svg | strip }}

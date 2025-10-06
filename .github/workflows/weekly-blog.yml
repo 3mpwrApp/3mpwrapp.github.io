@@ -5,9 +5,14 @@ on:
     - cron: "0 9 * * 1" # Every Monday at 09:00 UTC
   workflow_dispatch:
 
+concurrency:
+  group: weekly-blog
+  cancel-in-progress: true
+
 jobs:
   weekly:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4

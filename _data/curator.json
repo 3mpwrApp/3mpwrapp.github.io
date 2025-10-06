@@ -151,9 +151,9 @@
     "#HRC"
   ],
   "maxItems": 25,
-  "minScore": 2,
+  "minScore": 3,
   "postDaily": true,
-  "perSourceCap": 4,
+  "perSourceCap": 3,
   "mustIncludeHosts": [
     "accessible.canada.ca",
     "www.canada.ca",
