@@ -9,6 +9,9 @@ lastUpdated: 2025-10-06
 
 > Purpose: Practical tools and community for Persons with Disabilities, Injured Workers, and Allies.
 
+Short on time? See the 2-page Quick Tour: docs/quick-tour.md
+
+<a id="quick-start"></a>
 ## Quick Start
 
 1. Open the app: Use Android or the web version.
@@ -19,6 +22,7 @@ lastUpdated: 2025-10-06
 
 Tip: The app uses your phone’s text size. Increase font size in your device settings if you want larger text.
 
+<a id="privacy-at-a-glance"></a>
 ### Privacy at a glance
 
 - You control your data. Most features store information on your device by default.
@@ -28,37 +32,40 @@ Tip: The app uses your phone’s text size. Increase font size in your device se
 
 ## Table of contents
 
-- Quick Start
-- Privacy at a glance
-- Quick Tour (2-minute overview)
-- Onboarding — Your first 7 days
-- Navigation and What’s New
-- How the app fits together (interconnections)
-- Advocacy (tools, steps, examples, tips)
-- Campaigns (create, support, collaborate)
-- Community (threads, DMs, Safety & Blocking)
-- Events (calendar, reminders, website ICS)
-- Podcasts & Stories (watch, save, learn)
-- Research (filter, evaluate, share)
-- Resources (AI tools, Evidence Locker, Deadlines, Trackers)
-- Wellness (tools, pacing, detailed steps)
-- Saved
-- Settings (privacy, accessibility, backups)
-- Common user journeys (appeals, doctor visits, RTW, crisis, weekly routine)
-- Coming soon — detailed preview and expected flow
-- Accessibility
-- Offline & Sync
-- Privacy & Safety
-- How Do I… (quick actions)
-- Troubleshooting
-- Contact & Feedback
-- Export to PDF
-- Glossary
+- [Quick Start](#quick-start)
+- [Privacy at a glance](#privacy-at-a-glance)
+- [Quick Tour (2-minute overview)](#quick-tour)
+- [Onboarding — Your first 7 days](#onboarding)
+- [Navigation and What’s New](#navigation)
+- [How the app fits together (interconnections)](#how-the-app-fits-together)
+- [Advocacy (tools, steps, examples, tips)](#advocacy)
+- [Campaigns (create, support, collaborate)](#campaigns)
+- [Community (threads, DMs, Safety & Blocking)](#community)
+- [Events (calendar, reminders, website ICS)](#events)
+- [Podcasts & Stories (watch, save, learn)](#podcasts-stories)
+- [Research (filter, evaluate, share)](#research)
+- [Resources (AI tools, Evidence Locker, Deadlines, Trackers)](#resources)
+- [Wellness (tools, pacing, detailed steps)](#wellness)
+- [Saved](#saved)
+- [Settings (privacy, accessibility, backups)](#settings)
+- [Common user journeys (appeals, doctor visits, RTW, crisis, weekly routine)](#common-user-journeys)
+- [Coming soon — detailed preview and expected flow](#coming-soon)
+- [Accessibility](#accessibility)
+- [Offline & Sync](#offline-sync)
+- [Privacy & Safety](#privacy-safety)
+- [How Do I… (quick actions)](#how-do-i)
+- [Troubleshooting](#troubleshooting)
+- [Contact & Feedback](#contact-feedback)
+- [Export to PDF](#export-to-pdf)
+- [Glossary](#glossary)
 
 
+<a id="quick-tour"></a>
 ## Quick Tour (2-minute overview)
 
 This short tour helps you get oriented fast. Each item links to a full section below with detailed steps.
+
+Prefer a printable 2-page version? Open docs/quick-tour.md
 
 - Advocacy: Find tools that simplify letters, explain policy, make action plans, and help connect with legal help. First steps: open AI Advocate Translator and paste a letter to simplify; browse Policy Made Simple for “accommodation.” Pro tip: Save important results to Evidence Locker and tag with “denial” or “appeal.”
 - Campaigns: Start a campaign, gather supporters, and collaborate in a shared room with Tasks and Notes. First steps: Create a campaign with a short, specific title; add one task and share a link. Pro tip: Export tasks weekly to keep everyone aligned.
@@ -69,6 +76,7 @@ This short tour helps you get oriented fast. Each item links to a full section b
 - Resources: One place for tools (Appeal Coach, Deadlines, Template Gallery, etc.). First steps: set your province; open Deadlines and add one date. Pro tip: Use Template Gallery to draft a request or follow-up email fast.
 - Wellness: Gentle tools to pace, reflect, and build resilience (Energy Coins, Reflections Calendar, trackers, mini‑games). First steps: set a daily coin budget and quick‑add one mood today. Pro tip: Small, consistent steps beat big leaps.
 
+<a id="onboarding"></a>
 ## Onboarding — Your first 7 days
 
 - What it is: A private checklist to get oriented. Progress stays on your device.
@@ -81,6 +89,7 @@ This short tour helps you get oriented fast. Each item links to a full section b
 - Quick links: Open common features fast (Evidence Locker, Resources, Advocacy Hub, Profile, Notifications).
 - Privacy: Data stays local unless you choose an optional cloud feature.
 
+<a id="navigation"></a>
 ## Navigation
 
 - Tabs: Advocacy, Campaigns, Community, Events, Podcasts, Research, Resources, Wellness, Saved, Settings.
@@ -95,6 +104,7 @@ Recent highlights
 
 - Home: Now marked Beta. You’ll see this message under Today’s Guide: “Suggestions powered by the Personalization Engine (beta).”
 
+<a id="how-the-app-fits-together"></a>
 ## How the app fits together (interconnections)
 
 This app is designed to feel simple and connected. You can start anywhere and still get value.
@@ -116,6 +126,7 @@ Key idea: Everything is optional. Pick one tool to start. Your notes and tags he
 
 
 
+<a id="advocacy"></a>
 ## Advocacy
 
 - Directory: Browse advocates; search by name or bio; pull down to refresh the list.
@@ -328,6 +339,7 @@ Deep dive — Advocacy best practices
 
 
 
+<a id="campaigns"></a>
 ## Campaigns
 
 - Browse & Search: See community campaigns and your own.
@@ -380,6 +392,7 @@ Deep dive — Campaigns
 
 
 
+<a id="community"></a>
 ## Community
 - Example: Post a thread asking for accessible housing tips in your city. Tag your province channel for visibility.
 - Tips:
@@ -449,6 +462,7 @@ Troubleshooting (Safety)
 
 
 
+<a id="events"></a>
 ## Events
 
 - Calendar: Month view of community events, national holidays, and disability observances. Turn on provincial holidays in Settings if you want.
@@ -480,7 +494,7 @@ Troubleshooting (Events)
 - “Add Reminder” opens the browser but not the app? Use the ICS fallback and open it with your Calendar app.
 - Time zone confusion? Confirm your device time zone in OS settings.
 
-### Website calendar sync
+### Website calendar sync tp 3mpwrApp Events Calendar
 
 - ICS feed (for website owners): The app server exposes a calendar feed at `/events.ics`.
 - Example: If your server base is `https://api.example.com`, use `https://api.example.com/events.ics` in your website/CMS calendar.
@@ -488,6 +502,7 @@ Troubleshooting (Events)
 
 
 
+<a id="podcasts-stories"></a>
 ## Podcasts & Stories
 
 - Browse: See thumbnails and short descriptions.
@@ -542,6 +557,7 @@ Exercise Hub — details, examples, and tips
   - Start small (2–5 minutes). Stop if anything hurts.
   - Use High Contrast mode if visuals are hard to see.
 
+<a id="research"></a>
 ## Research
 
 - Filters: Filter by Topic or Year; use Search to find titles.
@@ -577,6 +593,7 @@ Deep dive — Research routine
 
 
 
+<a id="resources"></a>
 ## Resources
 
 - Region: Choose Canada or your province (set in Settings).
@@ -798,6 +815,7 @@ Troubleshooting (Deadlines)
 
 - Imported ICS dates look wrong? Check your device time zone and the source calendar’s settings.
 
+<a id="wellness"></a>
 ## Wellness
 
 - Tools: Work‑Balance AI, Adaptive Meditation, Grief & Identity Support, and more.
@@ -818,6 +836,7 @@ Deep dive — Getting started with pacing
 - If you’re new to pacing, begin with Daily Energy Coins set low (e.g., 8–12). Add only 2–3 tasks and stop when you reach your budget.
 - Pair with Reflections Calendar: quick‑add your mood after lunch and before bed to notice patterns.
 
+<a id="common-user-journeys"></a>
 ## Common user journeys (start-to-finish examples)
 
 Appeal a decision (simple path)
@@ -1058,6 +1077,7 @@ How to use Sleep & Energy tracker (quick steps)
 - Accessibility: Clear labels and large tap targets. Works with High Contrast and text scaling.
 - Privacy: Points are stored on your device; nothing is uploaded.
 
+<a id="saved"></a>
 ## Saved
 
 - Collections: View your saved Podcasts, Resources, and Campaigns.
@@ -1072,6 +1092,7 @@ Saved — details, examples, and tips
 
 
 
+<a id="settings"></a>
 ## Settings
 
 - Profile: Set your Display Name and profile photo.
@@ -1106,6 +1127,7 @@ More in Settings
 - Find quick links under About → Socials & Website.
 - Current links: X (Twitter) @3mpwrapp, Instagram @3mpwrapp, Facebook @3mpwrapp, Website https://3mpwrapp.github.io/
 
+<a id="how-do-i"></a>
 ## How Do I…
 
 - Save an item: Tap the bookmark icon on a card/detail; find it later under Saved.
@@ -1118,6 +1140,7 @@ More in Settings
 - DM someone privately: Community → Direct Messages → enter their user ID → Start.
 - Block a user: Community → Safety & Blocking → enter ID → Block.
 
+<a id="accessibility"></a>
 ## Accessibility
 
 - Screen reader: Announces page titles and loaded counts; headers use accessible roles.
@@ -1140,6 +1163,7 @@ Where you’ll see “Coming soon” today
 - Resources: Some experimental AI tools and planners are staged (cards will show “Coming soon”).
 - Admin/Docs: Certain admin utilities and docs may still be placeholders; they won’t affect normal use.
 
+<a id="coming-soon"></a>
 ## Coming soon — detailed preview and expected flow
 
 Below are items labeled “Coming soon” and how they are expected to work once released. Details may change before launch.
@@ -1206,16 +1230,19 @@ Beta today
   - Resources → Trackers & Planners: Deadline Calculator + Reminders, Rehab Progress Tracker, and Return‑to‑Work Planner are available as Beta.
   - Wellness: Also in Beta — Micro‑Movement Coach and AI Pacing Partner.
 
+<a id="troubleshooting"></a>
 ## Troubleshooting
 
 - Sharing not available on Web: The app falls back to saving in cache and a confirmation alert.
 - Image picker denied: Grant Photos permission in your device settings.
 - Upload errors: Items queue automatically; process the queue when back online.
 
+<a id="contact-feedback"></a>
 ## Contact & Feedback
 
 - Send feedback from Settings or community channels. For privacy concerns, review the in‑app Privacy policy and contact support.
 
+<a id="offline-sync"></a>
 ## Offline & Sync
 
 - Offline: Clear indicators when offline; lists cache locally.
@@ -1234,6 +1261,7 @@ FAQ (short)
 - Where is my data stored? Most items are local to your device unless you choose optional cloud features.
 
 
+<a id="privacy-safety"></a>
 ## Privacy & Safety
 
 - Data: Favorites and Local Profile are stored on your device; profile photos upload to secure storage.
@@ -1244,6 +1272,7 @@ FAQ (short)
 
  
 
+<a id="export-to-pdf"></a>
 ## Export to PDF
 
 Choose one of the following:
@@ -1266,6 +1295,7 @@ Choose one of the following:
 
 ---
 
+<a id="glossary"></a>
 ## Glossary
 
 - Accommodation: Changes that help you do your job or access services.
@@ -1279,6 +1309,7 @@ Choose one of the following:
 
 ---
 
+<a id="detailed-steps-wellness"></a>
 ## Detailed steps for Wellness features
 
 Below are simple, step‑by‑step instructions for each Wellness feature.
