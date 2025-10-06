@@ -26,6 +26,19 @@ Tip: The app uses your phone’s text size. Increase font size in your device se
 - You can set a Passcode and enable Wellness Lock in Settings to protect sensitive areas.
 - You can Export and Import your data under Settings → Privacy & Backups.
 
+## Quick Tour (2-minute overview)
+
+This short tour helps you get oriented fast. Each item links to a full section below with detailed steps.
+
+- Advocacy: Find tools that simplify letters, explain policy, make action plans, and help connect with legal help. First steps: open AI Advocate Translator and paste a letter to simplify; browse Policy Made Simple for “accommodation.” Pro tip: Save important results to Evidence Locker and tag with “denial” or “appeal.”
+- Campaigns: Start a campaign, gather supporters, and collaborate in a shared room with Tasks and Notes. First steps: Create a campaign with a short, specific title; add one task and share a link. Pro tip: Export tasks weekly to keep everyone aligned.
+- Community: Join channels by province/topic, ask questions, and share. First steps: open your province channel, post one helpful tip or question. Pro tip: Use clear subject lines like “Need advice: appeal due in 10 days.”
+- Events: See the month calendar and add events to your device calendar. First steps: open an event → Add Reminder. Pro tip: Turn on provincial holidays in Settings.
+- Podcasts & Stories: Watch curated videos; save favorites. First steps: open a video; choose YouTube App or Browser. Pro tip: Bookmark useful videos to build a learning queue.
+- Research: Filter by Topic/Year and open original sources. First steps: pick Topic “Workplace,” Year “2024,” save two items. Pro tip: jot notes in Evidence Locker with the links.
+- Resources: One place for tools (Appeal Coach, Deadlines, Template Gallery, etc.). First steps: set your province; open Deadlines and add one date. Pro tip: Use Template Gallery to draft a request or follow-up email fast.
+- Wellness: Gentle tools to pace, reflect, and build resilience (Energy Coins, Reflections Calendar, trackers, mini‑games). First steps: set a daily coin budget and quick‑add one mood today. Pro tip: Small, consistent steps beat big leaps.
+
 ## Onboarding — Your first 7 days
 
 - What it is: A private checklist to get oriented. Progress stays on your device.
@@ -239,6 +252,21 @@ Accountability Cases (beta) — Overview
   - Export a case summary before meetings.
   - Link related Evidence Locker items for quick reference.
 
+Deep dive — Advocacy best practices
+
+- Step-by-step workflow example (denial letter → plan → response)
+  1) Evidence Locker: Create a note “Denial 2025‑10‑03” and attach the letter. Add tags: denial, payment.
+  2) AI Advocate Translator: Paste the letter → Simplify → copy key points into your note.
+  3) Policy Made Simple: Search “appeal timeline” → export summary as PDF; attach to your note.
+  4) Accountability Coach: Describe the issue → generate 3–5 steps and draft letter → copy into Template Gallery letter and personalize.
+  5) Deadlines: Add “Appeal due date” with a reminder 3 days before.
+  6) Follow up: Track responses in Accountability Cases. Export a summary if you need to escalate.
+
+- Common questions and tips
+  - What if I’m not sure what to ask? Use the Coach to create a first draft of steps; then edit to match your situation.
+  - Is my data safe? Most items stay on-device unless you choose to share or turn on optional cloud features.
+  - Too many documents? Use tags, short titles, and weekly cleanup to keep the Locker tidy.
+
 ![Advocacy Directory](images/advocacy-directory.png "Advocacy directory with search and tools")
 
 ## Campaigns
@@ -270,6 +298,20 @@ Campaigns — details, examples, and tips
   - Post updates when you hit milestones; people stay engaged when they see progress.
   - Use the Notes area to keep meeting minutes in one place.
 
+Deep dive — Campaigns
+
+- Step-by-step launch example
+  1) Create: “Accessible transit stops on Main St.” Add Goal (3 shelters, 2 benches), Target (City), Contact (transit email).
+  2) Share: Ask 3 friends to Support and join the Campaign Room.
+  3) Tasks: Add “Photograph stop at 3rd Ave,” “Draft letter,” “Collect 10 supporter stories.”
+  4) Notes: Record meeting minutes and decisions.
+  5) Export: Send CSV weekly to partners and track progress.
+
+- Tips
+  - Keep tasks bite‑sized (finishable in a day or two).
+  - Celebrate small wins to keep momentum.
+  - Use Saved to quickly reopen active campaigns.
+
 ![Campaigns List](images/campaigns-list.png "Campaigns list with Create box and search")
 ![Campaign Room](images/campaign-room.png "Shared tasks and notes with export")
 
@@ -282,6 +324,18 @@ Campaigns — details, examples, and tips
 - Channels: Join channels by province or topic.
 - Threads: Post a new thread, read, and reply to comments.
 - Works offline: If you are offline, your posts and replies queue and send when you reconnect.
+
+Deep dive — Community
+
+- Posting checklist
+  - Clear subject (what + when): “Need wheelchair repair advice (Toronto, by Friday).”
+  - Keep the ask specific and short (2–3 sentences).
+  - Optional: note your province for local help.
+
+- Engagement tips
+  - Thank people who help. It builds community.
+  - Share outcomes so others can learn.
+  - Safety first: block or report if needed.
 
 ### Direct Messages (beta)
 
@@ -298,6 +352,11 @@ How to send a DM
   - Don’t share sensitive info unless you trust the person.
   - If someone is unsafe, block them and tell a moderator.
 
+Troubleshooting (DMs)
+
+- Can’t find a user? This beta uses IDs only. Profile search is planned.
+- Message didn’t send? It will queue and send when you reconnect.
+
 ### Safety & Blocking
 
 How to block or unblock
@@ -311,6 +370,10 @@ How to block or unblock
 - Tips:
   - Use blocking to protect your time and energy.
   - Reporting tools are coming soon; until then, contact moderators via About → Contact.
+
+Troubleshooting (Safety)
+
+- Still seeing posts after blocking? Pull to refresh the channel list; if the issue persists, contact moderators.
 
 ![Community Threads](images/community-threads.png "Channel threads and compose")
 
@@ -333,6 +396,11 @@ Events — details, examples, and tips
 - Tips:
   - Turn on provincial holidays in Settings for a complete view.
   - Use ICS exports if Google Calendar isn’t available.
+
+Troubleshooting (Events)
+
+- “Add Reminder” opens the browser but not the app? Use the ICS fallback and open it with your Calendar app.
+- Time zone confusion? Confirm your device time zone in OS settings.
 
 ### Website calendar sync
 
@@ -362,6 +430,11 @@ Podcasts & Stories — details, examples, and tips
 - Tips:
   - If YouTube is blocked, try opening in the browser.
   - Use Favorites to build a playlist you can return to.
+
+Deep dive — Learning with videos
+
+- Try a “watch + note” routine: Watch once, then save one sentence in Evidence Locker about what you’ll try this week.
+- Share a helpful clip with a friend who’s on the same path.
 
 ![Podcasts](images/podcasts.png "Videos list with thumbnails and bookmarks")
 
@@ -406,6 +479,11 @@ Research — details, examples, and tips
   - Keep notes in Evidence Locker with the study link.
   - Check the year and source for relevance.
 
+Deep dive — Research routine
+
+- Steps: Filter by Topic → scan titles → open 1–2 credible sources → save links → jot 3 bullets in Evidence Locker about why they matter.
+- Use in advocacy: Quote a short, plain sentence and provide the original link in letters.
+
 ![Research](images/research.png "Research list with filters")
 
 ## Resources
@@ -439,6 +517,22 @@ AI Tools — what they’re for and examples
 - Voice‑to‑Case Notes: Speak or record quick notes; transcribe to text to save to Evidence Locker.
 - Template Gallery: Ready‑to‑edit letters and forms. Example: “Request for accommodation,” “Follow‑up on missing payment.”
 - Support Directory: Contact lists for help lines, legal clinics, and disability organizations.
+
+Deep dive — Resource workflows
+
+- Appeal prep example
+  1) Evidence Checklist: Gather doctor letters, pay stubs, and dated emails.
+  2) Template Gallery: Start “Appeal letter,” paste details, and personalize.
+  3) Deadlines: Add due date and a 3‑day early reminder.
+  4) Evidence Locker: Save a PDF copy and tag “appeal.”
+
+- Voice notes example
+  1) Open Voice‑to‑Case Notes → record a quick note after a call.
+  2) Transcribe → clean up → Save to Evidence Locker with tags.
+
+- Tips
+  - Keep templates short; long letters are hard to read.
+  - Use Saved to keep frequently used tools at your fingertips.
 
 ![Resources](images/resources.png "Resources grouped by region with category chips")
 
@@ -489,6 +583,11 @@ Evidence Locker — details, examples, and tips
   - After each call, write 2–3 bullet points and the next step.
   - Optional cloud save is available; if you turn it on, pick strong passwords and enable device security.
 
+Troubleshooting (Evidence Locker)
+
+- Can’t find a note? Use Search or filter by tag.
+- Large videos? Thumbnails may take a moment; if none appears, the app will still play supported formats.
+
 ### Trackers (Meds, Chronic, Rehab)
 
 - Export: CSV and JSON.
@@ -530,6 +629,10 @@ Medication Tracker — details, examples, and tips
   - Use the effectiveness (1–5) to notice trends over weeks.
   - Export before doctor visits and attach to your Evidence Locker.
 
+Troubleshooting (Meds)
+
+- Didn’t get a reminder? Ensure device notifications are allowed. If you changed time zones, open the app once to refresh schedules.
+
 ### Deadlines
 
 - Calendar and List views with reminders.
@@ -550,6 +653,10 @@ Deadlines — details, examples, and tips
   - Add who is responsible in the title when helpful (e.g., “Clinic paperwork due”).
   - Export before vacations or busy weeks.
 
+Troubleshooting (Deadlines)
+
+- Imported ICS dates look wrong? Check your device time zone and the source calendar’s settings.
+
 ## Wellness
 
 - Tools: Work‑Balance AI, Adaptive Meditation, Grief & Identity Support, and more.
@@ -559,6 +666,11 @@ Deadlines — details, examples, and tips
 Wellness — how it helps
 
 - The Wellness tab supports pacing, reflection, and small actions that build capacity. Each tool is optional; start with the one that feels easiest.
+
+Deep dive — Getting started with pacing
+
+- If you’re new to pacing, begin with Daily Energy Coins set low (e.g., 8–12). Add only 2–3 tasks and stop when you reach your budget.
+- Pair with Reflections Calendar: quick‑add your mood after lunch and before bed to notice patterns.
 
 ![Wellness Tracker](images/wellness-tracker.png "Symptom tracker with export")
 
@@ -707,6 +819,11 @@ Actions: Tap to open links; use Export Resources (CSV) to save/share the catalog
   - Example: Save short meditations for breaks; log recurring dream themes.
   - Tips: Export links/notes as CSV for your records.
 
+Troubleshooting (Wellness)
+
+- Work‑Balance AI plan feels too full? Lower your coin budget and add buffer breaks.
+- CSV/PDF export didn’t open? Check your device’s default app for those file types.
+
 ### Micro‑Movement Coach (beta)
 
 - Gentle, chair‑friendly movement prompts. Tap Next to cycle through ideas. Always stop if uncomfortable.
@@ -815,6 +932,62 @@ Where you’ll see “Coming soon” today
 - Research: History Timeline, Case/File Wait‑Times, and Master Index may be labeled “Coming soon”.
 - Resources: Some experimental AI tools and planners are staged (cards will show “Coming soon”).
 - Admin/Docs: Certain admin utilities and docs may still be placeholders; they won’t affect normal use.
+
+## Coming soon — detailed preview and expected flow
+
+Below are items labeled “Coming soon” and how they are expected to work once released. Details may change before launch.
+
+Community — One‑tap block, Reports, Moderation
+
+- Overview: Quickly block from a post, report harmful content, and see clearer moderation outcomes.
+- Expected steps:
+  1) From any post → tap ••• → Block user or Report.
+  2) Pick a reason (spam, harassment, etc.).
+  3) Moderators review; you’ll see status updates.
+- Tips:
+  - Use Block for immediate relief; use Report to help protect the community.
+
+Community — DMs improvements
+
+- Overview: Easier discovery (profile search), read receipts, and better media handling.
+- Expected steps: Search a user by display name → open profile → Start DM.
+- Tips: Keep sensitive info minimal; move to trusted channels for private data.
+
+Research — History Timeline
+
+- Overview: A chronological view of key events and sources by topic/region.
+- Expected steps: Choose a topic → browse timeline entries → open sources.
+- Tips: Use it to quickly brief yourself before meetings.
+
+Research — Case/File Wait‑Times
+
+- Overview: Aggregated wait times (where available) to set realistic expectations.
+- Expected steps: Select region/program → view typical wait ranges.
+- Tips: Use ranges in letters to request status updates (“We are now past the typical wait range”).
+
+Research — Master Index
+
+- Overview: A searchable master list linking out to sources and summaries.
+- Expected steps: Search keywords → open source or simple summary.
+- Tips: Save high‑value links to Saved and Evidence Locker.
+
+Resources — Experimental AI tools and planners
+
+- Overview: New tools (labelled clearly) that may evolve based on feedback.
+- Expected steps: Open the tool → follow the guided steps → export/share.
+- Tips: Double‑check outputs before sending. Keep originals in Evidence Locker.
+
+Wellness hub — Future tools
+
+- Overview: Additional gentle practices and trackers.
+- Expected steps: Open the tool → follow simple prompts → export if available.
+- Tips: Start small; consistency beats intensity.
+
+Admin/Docs placeholders
+
+- Overview: Internal or support‑facing utilities and documentation pages.
+- Expected steps: No action needed for typical users.
+- Tips: You can ignore these; they won’t affect normal use.
 
 Beta today
 
