@@ -708,6 +708,18 @@ a[target="_blank"]:after {
   color: #8a5a00;
   border-color: #f59e0b;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .badge--new {
+    animation: badge-pop 2s ease-in-out 2;
+  }
+  @keyframes badge-pop {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.0); }
+    20% { transform: scale(1.08); box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2); }
+    40% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.0); }
+    60% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+}
 .highlight-banner__desc {
   margin: 0;
 }
