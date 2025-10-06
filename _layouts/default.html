@@ -25,45 +25,72 @@
     </div>
 
   <nav id="primary-nav" aria-label="Primary">
+      {% if page.lang == 'fr' %}{% assign lang_prefix = '/fr' %}{% else %}{% assign lang_prefix = '' %}{% endif %}
       <ul class="nav-list">
         <li>
-          <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Home</a>
+          <a href="{{ lang_prefix | append: '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' or page.url == '/fr/' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Accueil{% else %}Home{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/about' | relative_url }}" {% if page.url == '/about.html' or page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+          <a href="{{ lang_prefix | append: '/about' | relative_url }}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}À propos{% else %}About{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/features' | relative_url }}" {% if page.url contains '/features' %}aria-current="page"{% endif %}>Features</a>
+          <a href="{{ lang_prefix | append: '/features' | relative_url }}" {% if page.url contains '/features' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Fonctionnalités{% else %}Features{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/user-guide' | relative_url }}" {% if page.url contains '/user-guide' %}aria-current="page"{% endif %}>User Guide</a>
+          <a href="{{ lang_prefix | append: '/user-guide' | relative_url }}" {% if page.url contains '/user-guide' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Guide d’utilisation{% else %}User Guide{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/contact' | relative_url }}" {% if page.url contains '/contact' %}aria-current="page"{% endif %}>Contact</a>
+          <a href="{{ lang_prefix | append: '/contact' | relative_url }}" {% if page.url contains '/contact' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Contact{% else %}Contact{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>Blog</a>
+          <a href="{{ lang_prefix | append: '/blog' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Blog{% else %}Blog{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/newsletter' | relative_url }}" {% if page.url contains '/newsletter' %}aria-current="page"{% endif %}>Newsletter</a>
+          <a href="{{ lang_prefix | append: '/newsletter' | relative_url }}" {% if page.url contains '/newsletter' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Infolettre{% else %}Newsletter{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/whats-new' | relative_url }}" {% if page.url contains '/whats-new' %}aria-current="page"{% endif %}>What's New</a>
+          <a href="{{ lang_prefix | append: '/whats-new' | relative_url }}" {% if page.url contains '/whats-new' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Quoi de neuf{% else %}What's New{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/beta' | relative_url }}" {% if page.url contains '/beta' %}aria-current="page"{% endif %}>Beta Test</a>
+          <a href="{{ lang_prefix | append: '/beta' | relative_url }}" {% if page.url contains '/beta' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Bêta{% else %}Beta Test{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/search' | relative_url }}" {% if page.url contains '/search' %}aria-current="page"{% endif %}>Search</a>
+          <a href="{{ lang_prefix | append: '/search' | relative_url }}" {% if page.url contains '/search' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Recherche{% else %}Search{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/events' | relative_url }}" {% if page.url contains '/events' %}aria-current="page"{% endif %}>Events</a>
+          <a href="{{ lang_prefix | append: '/events' | relative_url }}" {% if page.url contains '/events' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Événements{% else %}Events{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/site-map' | relative_url }}" {% if page.url contains '/site-map' %}aria-current="page"{% endif %}>Site Map</a>
+          <a href="{{ lang_prefix | append: '/site-map' | relative_url }}" {% if page.url contains '/site-map' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Plan du site{% else %}Site Map{% endif %}
+          </a>
         </li>
         <li>
-          <a href="{{ '/faq' | relative_url }}" {% if page.url contains '/faq' %}aria-current="page"{% endif %}>FAQ</a>
+          <a href="{{ lang_prefix | append: '/faq' | relative_url }}" {% if page.url contains '/faq' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}FAQ{% else %}FAQ{% endif %}
+          </a>
         </li>
       </ul>
     </nav>

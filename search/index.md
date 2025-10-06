@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Search
-description: Search the 3mpowr website using DuckDuckGo.
+description: Find information quickly with on-page results and a DuckDuckGo fallback, limited to the 3mpowr site.
 ---
 
 # Search the site

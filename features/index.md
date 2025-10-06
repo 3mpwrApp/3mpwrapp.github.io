@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Features
+description: Explore 3mpowr’s core features with step-by-step guidance to help you connect, advocate, and learn.
 ---
 
 # Features
