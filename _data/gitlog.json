@@ -1,5 +1,15 @@
 [
   {
+    "hash": "0dbd08b01cd5dd8e46c21c9e4a6118965033dd67",
+    "date": "2025-10-05",
+    "message": "feat(whats-new,a11y,i18n,head,ga): date-based updates + archive, new languages, show a11y settings, GA4-only path"
+  },
+  {
+    "hash": "1fda284329cba2b7badd8a2e063730de2a5419f4",
+    "date": "2025-10-06",
+    "message": "chore(data): update gitlog.json"
+  },
+  {
     "hash": "6c359b574f07bba65fb116c176cdda4714ca7e29",
     "date": "2025-10-05",
     "message": "Merge branch 'main' of https://github.com/3mpowrApp/3mpwrapp.github.io"
@@ -988,15 +998,5 @@
     "hash": "e5193eb15b22b2af7b2bbcfc482c7aa5af0a4745",
     "date": "2025-10-02",
     "message": "Initial plan"
-  },
-  {
-    "hash": "cabea85d8ce92c8acb5d4cc6d74c3de829e08aee",
-    "date": "2025-10-02",
-    "message": "Merge pull request #2 from empowrapp08162025/copilot/fix-eb6929dc-21d8-460f-9f80-838555237b82"
-  },
-  {
-    "hash": "8cfbb99c990922320b340bd80da8c82d9a5d927e",
-    "date": "2025-10-02",
-    "message": "Enhance home page with full content and add social media links"
   }
 ]
