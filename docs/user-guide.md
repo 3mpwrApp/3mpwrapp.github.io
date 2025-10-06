@@ -26,6 +26,36 @@ Tip: The app uses your phone’s text size. Increase font size in your device se
 - You can set a Passcode and enable Wellness Lock in Settings to protect sensitive areas.
 - You can Export and Import your data under Settings → Privacy & Backups.
 
+## Table of contents
+
+- Quick Start
+- Privacy at a glance
+- Quick Tour (2-minute overview)
+- Onboarding — Your first 7 days
+- Navigation and What’s New
+- How the app fits together (interconnections)
+- Advocacy (tools, steps, examples, tips)
+- Campaigns (create, support, collaborate)
+- Community (threads, DMs, Safety & Blocking)
+- Events (calendar, reminders, website ICS)
+- Podcasts & Stories (watch, save, learn)
+- Research (filter, evaluate, share)
+- Resources (AI tools, Evidence Locker, Deadlines, Trackers)
+- Wellness (tools, pacing, detailed steps)
+- Saved
+- Settings (privacy, accessibility, backups)
+- Common user journeys (appeals, doctor visits, RTW, crisis, weekly routine)
+- Coming soon — detailed preview and expected flow
+- Accessibility
+- Offline & Sync
+- Privacy & Safety
+- How Do I… (quick actions)
+- Troubleshooting
+- Contact & Feedback
+- Export to PDF
+- Glossary
+
+
 ## Quick Tour (2-minute overview)
 
 This short tour helps you get oriented fast. Each item links to a full section below with detailed steps.
@@ -64,6 +94,25 @@ This short tour helps you get oriented fast. Each item links to a full section b
 Recent highlights
 
 - Home: Now marked Beta. You’ll see this message under Today’s Guide: “Suggestions powered by the Personalization Engine (beta).”
+
+## How the app fits together (interconnections)
+
+This app is designed to feel simple and connected. You can start anywhere and still get value.
+
+- Start with a problem → get a plan
+  - Example: You received a confusing letter.
+  - Steps: Evidence Locker (save it) → AI Advocate Translator (simplify) → Policy Made Simple (understand rules) → Accountability Coach (make a plan) → Deadlines (track the due date).
+
+- Build a small routine → support your energy
+  - Example: You want a calmer week.
+  - Steps: Sleep & Energy (log short entries) → Work‑Balance AI (plan lighter blocks) → Daily Energy Coins (budget tasks) → Reflections Calendar (note mood) → Adjust tomorrow.
+
+- Share and organize with others → move faster together
+  - Example: You’re working with allies.
+  - Steps: Campaigns (create and support) → Campaign Room (Tasks & Notes) → Community (share updates) → Research (save sources) → Export CSV for progress.
+
+Key idea: Everything is optional. Pick one tool to start. Your notes and tags help connect the dots so the app supports your day rather than adding work.
+
 
 
 
@@ -769,6 +818,51 @@ Deep dive — Getting started with pacing
 - If you’re new to pacing, begin with Daily Energy Coins set low (e.g., 8–12). Add only 2–3 tasks and stop when you reach your budget.
 - Pair with Reflections Calendar: quick‑add your mood after lunch and before bed to notice patterns.
 
+## Common user journeys (start-to-finish examples)
+
+Appeal a decision (simple path)
+
+1. Evidence Locker: Save the letter; tag “denial, appeal”.
+2. AI Advocate Translator: Simplify the letter and copy key points into your note.
+3. Policy Made Simple: Read the relevant policy and export a summary.
+4. Appeal Coach (Resources): Step through required items and draft.
+5. Template Gallery: Paste your draft and personalize.
+6. Deadlines: Add the due date and a reminder 3 days before.
+7. Accountability Coach: Create 3–5 steps; track progress.
+8. Saved: Bookmark key resources for quick re-open.
+
+Doctor visit prep (simple path)
+
+1. Evidence Locker: Write a short note with symptoms, questions, and dates.
+2. Sleep & Energy: Export recent entries as CSV/PDF if helpful.
+3. Medication Tracker: Export current meds list.
+4. Research: Open 1–2 credible sources to discuss.
+5. After visit: Add follow‑up notes and dates to Deadlines.
+
+Return to work (RTW) planning (simple path)
+
+1. Acceptance & Function: Log baseline scores for a week.
+2. Work‑Balance AI: Create a gentle plan with breaks.
+3. Daily Energy Coins: Budget tasks and stop at your limit.
+4. Rehab Games: Add 1–2 minute micro‑sessions.
+5. RTW Planner: List supports and steps; share progress as needed.
+
+Crisis week (simple path)
+
+1. Distress Tolerance: Try TIPP (temperature, intense exercise, paced breathing).
+2. Sleep Reframe: Focus on light wind‑downs and removing pressure.
+3. Self‑Care Library: Choose one tiny action (2 minutes).
+4. Reflections Calendar: Quick‑add mood once per day to reduce overwhelm.
+5. Support Directory: Call a hotline or local support if you need help now.
+
+Weekly routine (simple path)
+
+1. Sunday: Add key dates to Deadlines; pick 3 priorities.
+2. Daily: Spend coins on 2–3 tasks; log sleep/energy and a quick mood.
+3. Midweek: Check Campaigns/Community for updates and support.
+4. Friday: Export a small summary (sleep/energy or tasks) and celebrate a win.
+
+
 
 
 ### Reflections Calendar (beta)
@@ -996,6 +1090,15 @@ Settings — details, examples, and tips
   - After big changes, export a backup.
   - Set High Contrast and larger text if you squint or get headaches.
 
+More in Settings
+
+- Notifications: Choose which alerts you get and when. Tip: Set quiet hours to avoid night pings.
+- Language: Pick your preferred language (where available). Some items may still be in English; we’re adding more coverage over time.
+- Accessibility: High Contrast, larger text, and clear labels are built‑in. Tip: Combine with your device’s accessibility settings.
+- Backups: Export a backup to keep a copy safe; import to restore. Tip: Store backups in a private folder or cloud drive you control.
+- Data deletion: You can clear local data in Privacy & Backups. Tip: Export first if you might need the data later.
+
+
 
 
 ### Socials & Website
@@ -1117,6 +1220,19 @@ Beta today
 
 - Offline: Clear indicators when offline; lists cache locally.
 - Sync: Campaign Rooms and Community sync in realtime; queued actions flush automatically.
+
+More about offline use
+
+- What works offline: Reading most lists, adding notes to Evidence Locker, composing posts/messages that will send later.
+- What needs a connection: Fetching new items, push notifications, and any cloud‑only items.
+- Tips: If your connection is spotty, write notes first, then sync when stable.
+
+FAQ (short)
+
+- Why can’t I see my friend’s reply? You may be offline; pull to refresh when connected.
+- My reminder didn’t fire: Check device notification permissions. Open the app after changing time zones.
+- Where is my data stored? Most items are local to your device unless you choose optional cloud features.
+
 
 ## Privacy & Safety
 
