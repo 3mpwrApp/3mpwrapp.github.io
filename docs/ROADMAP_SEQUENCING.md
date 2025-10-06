@@ -80,3 +80,25 @@
 
 ---
 Prepared: 2025-09-22
+
+## Closed Beta (Free) – Plan and Criteria
+
+Scope
+- Use Expo Go for distribution to invited testers (no paid accounts).
+- Focus on Wellness, Resources, Advocacy (simple) plus Settings and What’s New.
+
+Steps
+1. Share unlisted Expo project link/QR with invited testers.
+2. Provide `docs/beta/TESTER_GUIDE.md` and set up beta@empowr.app.
+3. Verify What’s New daily PRs land; ensure plain-language bullets.
+4. Confirm push alternatives (in-app inbox/local reminders) for Expo Go.
+5. Run `docs/beta/READINESS_CHECKLIST.md` to green.
+
+Success Criteria
+- 10–20 testers complete a 10‑minute flow without assistance.
+- 0 critical crashes reported; known issues documented.
+- Accessibility: screen reader and large text flows usable end-to-end.
+- Translations: no obvious English fallbacks in ES/FR on top paths.
+
+Exit
+- Decide on next: Dev Client (push testing) or public preview via EAS Update.
