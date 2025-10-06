@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' role='img' aria-labelledby='title desc'>
-  <title id='title'>Advocacy directory placeholder</title>
-  <desc id='desc'>Placeholder image representing the Advocacy directory screen.</desc>
-  <rect width='100%' height='100%' fill='#e5e7eb'/>
-  <g fill='#111827' font-family='system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif'>
-    <text x='50%' y='50%' font-size='36' text-anchor='middle'>Advocacy directory</text>
-  </g>
-</svg>
