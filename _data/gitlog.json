@@ -1,5 +1,15 @@
 [
   {
+    "hash": "87cd5715a88b7f6cdca4c853e1fc0d63e6a7eed7",
+    "date": "2025-10-05",
+    "message": "docs(whats-new): backfill timeline with clear user-facing updates (2025-09-28 → 2025-10-05)"
+  },
+  {
+    "hash": "82529a5e1bb0d218eed2ffb02a11bb9aeeb55ed0",
+    "date": "2025-10-06",
+    "message": "chore(data): update gitlog.json"
+  },
+  {
     "hash": "0dbd08b01cd5dd8e46c21c9e4a6118965033dd67",
     "date": "2025-10-05",
     "message": "feat(whats-new,a11y,i18n,head,ga): date-based updates + archive, new languages, show a11y settings, GA4-only path"
@@ -988,15 +998,5 @@
     "hash": "858f963d9f51e42a1b6a6d2dace65caebe60dac8",
     "date": "2025-10-02",
     "message": "Update user guide and features with comprehensive documentation"
-  },
-  {
-    "hash": "b176da00c182bb5822e8dc2f5458b0328ab32450",
-    "date": "2025-10-02",
-    "message": "Initial plan"
-  },
-  {
-    "hash": "e5193eb15b22b2af7b2bbcfc482c7aa5af0a4745",
-    "date": "2025-10-02",
-    "message": "Initial plan"
   }
 ]
