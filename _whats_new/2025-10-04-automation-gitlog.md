@@ -1,13 +1,13 @@
 ---
 layout: default
-title: What’s New now auto-includes recent changes
+title: What’s New page launched
 date: 2025-10-04
-description: The What’s New page now shows a recent commit history section, kept fresh by an automated workflow.
+description: We introduced a simple, human-friendly What’s New page to share highlights and improvements—no technical details required.
 ---
 
 What changed:
 
-- A new auto‑generated section lists recent changes from the repository
-- A workflow updates this data on pushes and daily, so the page stays fresh
+- A dedicated What’s New page collects updates in plain language
+- Recent updates appear first; older ones move to an archive automatically
 
-Why it matters: more transparency and less manual work to keep you informed.
+Why it matters: it’s easy to see what’s new at a glance without technical jargon.

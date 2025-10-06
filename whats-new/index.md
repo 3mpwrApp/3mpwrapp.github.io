@@ -15,13 +15,13 @@ Subscribe to updates: RSS · [What's New feed]({{ '/whats-new/feed.xml' | relati
 {% assign cutoff = now | minus: cutoff_seconds | plus: 0 %}
 {% assign recent_all = site.whats_new | sort: 'date' | reverse %}
 
-## Recent (last 30 days)
+## Recent (last 30 days) {: #recent }
 
 <ul>
 {% for item in recent_all %}
   {% assign item_seconds = item.date | date: '%s' | plus: 0 %}
   {% if item_seconds >= cutoff %}
-    <li>
+    <li data-date="{{ item.date | date: '%Y-%m-%d' }}">
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       <small> — {{ item.date | date_to_long_string }}</small>
       {% if item.excerpt %}<div>{{ item.excerpt }}</div>{% endif %}
@@ -29,6 +29,26 @@ Subscribe to updates: RSS · [What's New feed]({{ '/whats-new/feed.xml' | relati
   {% endif %}
 {% endfor %}
 </ul>
+
+<script>
+// Defensive check: if any items older than 30 days were rendered here by stale caches,
+// hide them on the client. Uses the date text inside the <small> element.
+(function(){
+  try {
+    const now = Date.now();
+    const cutoffMs = 30 * 24 * 60 * 60 * 1000;
+    document.querySelectorAll('h2#recent + ul li').forEach(li => {
+      const iso = li.getAttribute('data-date');
+      const dt = iso ? Date.parse(iso) : NaN;
+      if (!isNaN(dt)) {
+        if ((now - dt) > cutoffMs) {
+          li.style.display = 'none';
+        }
+      }
+    });
+  } catch (e) { /* noop */ }
+})();
+</script>
 
 ## Archive
 
