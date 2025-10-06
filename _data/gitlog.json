@@ -1,5 +1,20 @@
 [
   {
+    "hash": "5a01639b16f4c02ad824dcde3032bbce62a31cd1",
+    "date": "2025-10-05",
+    "message": "Merge branch 'main' of https://github.com/3mpowrApp/3mpwrapp.github.io"
+  },
+  {
+    "hash": "51e544982a4428da29316f757b7759a6231121d3",
+    "date": "2025-10-05",
+    "message": "docs(whats-new): remove commit hashes/repo link; keep user-facing summaries only"
+  },
+  {
+    "hash": "6edad3335c1c6e9dcdbc1c456070fb7d4db227e2",
+    "date": "2025-10-06",
+    "message": "chore(data): update gitlog.json"
+  },
+  {
     "hash": "87cd5715a88b7f6cdca4c853e1fc0d63e6a7eed7",
     "date": "2025-10-05",
     "message": "docs(whats-new): backfill timeline with clear user-facing updates (2025-09-28 → 2025-10-05)"
@@ -983,20 +998,5 @@
     "hash": "bae5edd2b8761f577e0d75acefe554da7f016e9f",
     "date": "2025-10-02",
     "message": "Add quick start guide for branch protection setup"
-  },
-  {
-    "hash": "38530e87f2298b00528b4681014119082ebe26a3",
-    "date": "2025-10-02",
-    "message": "Add comprehensive branch protection and contribution documentation"
-  },
-  {
-    "hash": "5026dc389d63df9397d159de57ab43ec700afd97",
-    "date": "2025-10-02",
-    "message": "Add features link to homepage and fix email in contact/index.md"
-  },
-  {
-    "hash": "858f963d9f51e42a1b6a6d2dace65caebe60dac8",
-    "date": "2025-10-02",
-    "message": "Update user guide and features with comprehensive documentation"
   }
 ]
