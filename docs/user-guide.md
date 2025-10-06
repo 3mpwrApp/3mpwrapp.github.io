@@ -9,7 +9,7 @@ lastUpdated: 2025-10-06
 
 > Purpose: Practical tools and community for Persons with Disabilities, Injured Workers, and Allies.
 
-Short on time? See the 2-page Quick Tour: docs/quick-tour.md
+Short on time? See the 2-page Quick Tour: quick-tour.md
 
 <a id="quick-start"></a>
 ## Quick Start
@@ -65,7 +65,7 @@ Tip: The app uses your phone’s text size. Increase font size in your device se
 
 This short tour helps you get oriented fast. Each item links to a full section below with detailed steps.
 
-Prefer a printable 2-page version? Open docs/quick-tour.md
+Prefer a printable 2-page version? Open quick-tour.md
 
 - Advocacy: Find tools that simplify letters, explain policy, make action plans, and help connect with legal help. First steps: open AI Advocate Translator and paste a letter to simplify; browse Policy Made Simple for “accommodation.” Pro tip: Save important results to Evidence Locker and tag with “denial” or “appeal.”
 - Campaigns: Start a campaign, gather supporters, and collaborate in a shared room with Tasks and Notes. First steps: Create a campaign with a short, specific title; add one task and share a link. Pro tip: Export tasks weekly to keep everyone aligned.

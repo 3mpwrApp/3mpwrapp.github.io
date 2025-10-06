@@ -9,16 +9,16 @@ lastUpdated: 2025-10-06
 
 This short tour orients you in 2 minutes. Each section links to the full User Guide for step-by-steps.
 
-- Advocacy: Simplify letters, understand policy, and plan actions. Start with the AI Advocate Translator. See: docs/user-guide.md#advocacy
-- Campaigns: Describe a goal, gather supporters, and organize tasks in a Campaign Room. See: docs/user-guide.md#campaigns
-- Community: Join channels by province/topic, post questions, and share updates. See: docs/user-guide.md#community
-- Events: Monthly calendar of community events and observances. Add reminders or export ICS. See: docs/user-guide.md#events
-- Podcasts & Stories: Watch curated videos and save favorites. See: docs/user-guide.md#podcasts-stories
-- Research: Filter by Topic/Year and open original sources; save links. See: docs/user-guide.md#research
-- Resources: Use AI tools (Deadlines, Template Gallery, Evidence Locker). See: docs/user-guide.md#resources
-- Wellness: Pacing tools and trackers like Daily Energy Coins and Reflections Calendar. See: docs/user-guide.md#wellness
-- Saved: Find your bookmarks in one place. See: docs/user-guide.md#saved
-- Settings: Privacy, backups, accessibility, and language. See: docs/user-guide.md#settings
+- Advocacy: Simplify letters, understand policy, and plan actions. Start with the AI Advocate Translator. See: user-guide.md#advocacy
+- Campaigns: Describe a goal, gather supporters, and organize tasks in a Campaign Room. See: user-guide.md#campaigns
+- Community: Join channels by province/topic, post questions, and share updates. See: user-guide.md#community
+- Events: Monthly calendar of community events and observances. Add reminders or export ICS. See: user-guide.md#events
+- Podcasts & Stories: Watch curated videos and save favorites. See: user-guide.md#podcasts-stories
+- Research: Filter by Topic/Year and open original sources; save links. See: user-guide.md#research
+- Resources: Use AI tools (Deadlines, Template Gallery, Evidence Locker). See: user-guide.md#resources
+- Wellness: Pacing tools and trackers like Daily Energy Coins and Reflections Calendar. See: user-guide.md#wellness
+- Saved: Find your bookmarks in one place. See: user-guide.md#saved
+- Settings: Privacy, backups, accessibility, and language. See: user-guide.md#settings
 
 ## First week checklist
 
@@ -37,4 +37,4 @@ This short tour orients you in 2 minutes. Each section links to the full User Gu
 
 ## Need more?
 
-Open the full guide: docs/user-guide.md
+Open the full guide: user-guide.md
