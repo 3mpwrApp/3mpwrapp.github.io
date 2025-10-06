@@ -6,23 +6,7 @@ permalink: /whats-new/
 
 # What's New
 
-Track all updates to the site in one place. Entries from the last 30 days appear first; older items automatically move to the Archive below.
-
-<details>
-  <summary>Auto-generated site changes (from recent commits)</summary>
-  <p>Below is a recent history of changes pulled from the repository. On GitHub Pages, this may show entries only when build metadata is available.</p>
-  <ul>
-  {%- assign gitlog = site.data.gitlog | default: nil -%}
-  {%- if gitlog and gitlog.size > 0 -%}
-    {%- for c in gitlog limit: 50 -%}
-      <li><strong>{{ c.date }}</strong> — {{ c.message }} <small>{{ c.hash | slice: 0, 7 }}</small></li>
-    {%- endfor -%}
-  {%- else -%}
-    <li><em>Commit history not available in this build. Manual entries and the archive appear below.</em></li>
-  {%- endif -%}
-  </ul>
-  <p><a href="{{ site.github.repository_url | default: 'https://github.com/3mpowrApp/3mpwrapp.github.io' }}">View repository</a></p>
-  </details>
+Track all updates to the site in one place. Entries from the last 30 days appear first; older items automatically move to the Archive below. We summarize meaningful changes in plain language without showing technical commit IDs.
 
 Subscribe to updates: RSS · [What's New feed]({{ '/whats-new/feed.xml' | relative_url }})
 
