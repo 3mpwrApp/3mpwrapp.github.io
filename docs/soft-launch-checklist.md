@@ -51,4 +51,19 @@ Performance/Offline
 Release Notes
 - Version: 1.0.0-rc.1
 - Scope: UI polish, accessibility, offline resilience, soft‑launch readiness
+- Promotions: Resources tools promoted to Beta (Rights Checker, Appeal Coach, Deadlines + Reminders, Evidence Checklist, Voice‑to‑Case Notes, Template Gallery, Support Directory)
+- Notifications: Quiet hours defaults (22:00–07:00), throttle windows respected, in‑app delivery always on; verify test suite passes `notifications.store` and `notifications.dispatcher` specs
+
+Accessibility (detailed)
+- High Contrast: global palette and compliant contrast ratios
+- Text Scaling: up to 200% without layout breakage
+- Screen Reader: headers/roles/alerts announce correctly; focus order logical
+- Reduce Motion: transitions minimized when enabled
+- Tap Targets: 44pt minimum for small controls
+- Dyslexia‑friendly spacing: copy and forms retain readability
+
+Offline Resilience
+- Lists show cached data when offline; clear offline banner
+- Compose queues: community posts/DMs retry when back online
+- Evidence Locker: works offline; exports when online
 

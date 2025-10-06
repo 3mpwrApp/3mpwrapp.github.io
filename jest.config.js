@@ -14,7 +14,15 @@ module.exports = {
   moduleFileExtensions: ['ts','tsx','js','jsx','json'],
   roots: ['<rootDir>'],
   testMatch: ['**/__tests__/**/*.test.tsx','**/__tests__/**/*.test.ts'],
-  collectCoverageFrom: ['i18n/**/*.{ts,tsx}','scripts/i18n-*.js'],
+  collectCoverageFrom: ['i18n/**/*.{ts,tsx}','scripts/i18n-*.js','services/notifications*.{ts,tsx}','store/notifications.{ts,tsx}','types/notifications.ts'],
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 70,
+      lines: 70,
+      statements: 70
+    }
+  },
   coveragePathIgnorePatterns: ['/node_modules/'],
   setupFiles: ['<rootDir>/jest.setup.js']
 };

@@ -42,6 +42,22 @@ Add jest config moduleNameMapper for script paths if needed.
 
 ## Phased Implementation
 1. Add utilities (time freeze, template registry mock)
+2. Notifications Store + Dispatcher
+  - Store unit tests: add/markRead/markAllRead/updatePrefs/lastSent; inbox cap
+  - Dispatcher tests: quiet hours suppression, in‑app delivery during quiet, throttle windows
+  - Template registry mock for deterministic scenarios
+3. Scripts Regression
+  - CLI shape tests for analytics report and i18n validators
+4. Coverage Thresholds
+  - Enforce Jest global thresholds (branches 60%, lines 70%, functions 70%) and collect coverage for notifications modules
+5. Accessibility QA with User Input
+  - Regular audits with real users with disabilities; capture issues into a11y backlog
+6. Technology Updates (Assistive Tech)
+  - Periodic test passes on latest iOS/Android AT (VoiceOver, TalkBack, Switch/Voice Control)
+7. Standards Evolution (WCAG)
+  - Track WCAG updates; add automated checks where feasible and manual audits otherwise
+8. Platform Features
+  - Validate new OS accessibility features and integrate where helpful
 2. Implement notifications store tests alongside feature
 3. Implement dispatcher logic + tests (throttle, quiet hours)
 4. Add script regression tests (gap report, future i18n scanners)

@@ -598,7 +598,7 @@ Deep dive — Research routine
 
 - Region: Choose Canada or your province (set in Settings).
 - Categories: All, Work & Financial, Tools & Downloads, Emergency & Crisis.
-- AI Tools include: Rights Checker, Appeal Coach, Deadlines + Reminders, Evidence Checklist, Voice‑to‑Case Notes, Template Gallery, Support Directory, and more.
+- AI Tools include: Rights Checker, Appeal Coach, Deadlines + Reminders, Evidence Checklist, Voice‑to‑Case Notes, Template Gallery, Support Directory, and more. All listed Resources tools are now available as Beta.
 - Save/Open/Share: Save items, open links, and share with others.
 
 How to use Resources
@@ -1105,7 +1105,7 @@ Saved — details, examples, and tips
 
 Settings — details, examples, and tips
 
-- Overview: Control privacy, backups, language, notifications, and accessibility.
+- Overview: Control privacy, backups, language, notifications, and accessibility. High Contrast, Text Scaling up to 200%, Screen Reader optimizations, Reduce Motion, Enhanced Focus Indicators, Minimum Tap Target Size, Dyslexia‑friendly font spacing, and Plain Language mode are available (see enhanced details in docs/ENHANCED_SETTINGS_README.md). Granular notification controls include Emergency Alerts, Wellness Reminders, Event Reminders, and separate Sound/Vibration toggles. Passcode, Auto‑Lock, Analytics opt‑out, and Wellness Lock protect sensitive data.
 - Example: Turn on Wellness Lock to add an extra step before opening sensitive screens.
 - Tips:
   - After big changes, export a backup.
