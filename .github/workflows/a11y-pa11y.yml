@@ -27,8 +27,24 @@ jobs:
           jq --version || (sudo apt-get update -y && sudo apt-get install -y jq)
 
       - name: Run pa11y-ci
+        continue-on-error: true
         run: |
-          npx pa11y-ci --config .pa11yci.json --reporter json | tee pa11y-report.json
+          # Write JSON report while preserving pa11y exit code (no piping)
+          npx --yes pa11y-ci --config .pa11yci.json --reporter json > pa11y-report.json
+
+      - name: Analyze results
+        id: verdict
+        if: always()
+        run: |
+          if [ -f pa11y-report.json ]; then
+            TOTAL=$(jq 'length' pa11y-report.json 2>/dev/null || echo 0)
+            ERROR_PAGES=$(jq '[.[] | select((.issues | length) > 0)] | length' pa11y-report.json 2>/dev/null || echo 0)
+          else
+            TOTAL=0
+            ERROR_PAGES=0
+          fi
+          echo "total=${TOTAL}" >> $GITHUB_OUTPUT
+          echo "error_pages=${ERROR_PAGES}" >> $GITHUB_OUTPUT
 
       - name: Upload pa11y report
         if: always()
@@ -42,11 +58,12 @@ jobs:
         run: |
           echo "## pa11y-ci report" >> $GITHUB_STEP_SUMMARY
           if [ -f pa11y-report.json ]; then
-            TOTAL=$(jq '.["total"] // .total // 0' pa11y-report.json 2>/dev/null || echo 0)
-            PASSES=$(jq '.["passes"] // .passes // 0' pa11y-report.json 2>/dev/null || echo 0)
-            ERRORS=$(jq '.["errors"] // .errors // 0' pa11y-report.json 2>/dev/null || echo 0)
-            echo "Total: ${TOTAL}  Passes: ${PASSES}  Errors: ${ERRORS}" >> $GITHUB_STEP_SUMMARY
-            if [ "$ERRORS" != "0" ]; then
+            # pa11y-ci JSON reporter outputs an array of results
+            TOTAL=$(jq 'length' pa11y-report.json 2>/dev/null || echo 0)
+            ERROR_PAGES=$(jq '[.[] | select((.issues | length) > 0)] | length' pa11y-report.json 2>/dev/null || echo 0)
+            PASSES=$((TOTAL - ERROR_PAGES))
+            echo "Total pages: ${TOTAL}  Pass: ${PASSES}  Fail: ${ERROR_PAGES}" >> $GITHUB_STEP_SUMMARY
+            if [ "$ERROR_PAGES" != "0" ]; then
               echo "\n### Top issues" >> $GITHUB_STEP_SUMMARY
               # Try to extract first few failing entries; pa11y-ci json may be an array of results
               jq -r '(.results // .) | .[]? | select(.issues) | "- URL: " + (.url // .pageUrl // "") + " (" + ((.issues | length) | tostring) + " issues)"' pa11y-report.json | head -n 10 >> $GITHUB_STEP_SUMMARY || true
@@ -54,4 +71,10 @@ jobs:
           else
             echo "No pa11y-report.json found." >> $GITHUB_STEP_SUMMARY
           fi
+
+      - name: Fail if issues detected
+        if: always() && steps.verdict.outputs.error_pages != '0'
+        run: |
+          echo "Accessibility issues detected on ${{ steps.verdict.outputs.error_pages }} page(s). Failing job." >&2
+          exit 1
 
