@@ -2,14 +2,18 @@
 export function freezeTime(when: Date | number) {
   const ts = typeof when === 'number' ? when : when.getTime();
   const RealDate = Date;
-  // @ts-ignore override constructor for tests
-  global.Date = class extends RealDate {
+  class FakeDate extends RealDate {
     constructor(...args: any[]) {
-      if (args.length === 0) return new RealDate(ts);
-      // @ts-ignore intentionally super
-      return new RealDate(...(args as any));
+      if (args.length === 0) {
+        super(ts);
+      } else {
+        // @ts-ignore
+        super(...args);
+      }
     }
     static now() { return ts; }
-  } as any;
-  return () => { global.Date = RealDate as any; };
+  }
+  // @ts-ignore
+  global.Date = FakeDate;
+  return () => { /* @ts-ignore */ global.Date = RealDate; };
 }
