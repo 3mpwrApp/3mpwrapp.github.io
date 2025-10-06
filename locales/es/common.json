@@ -1336,6 +1336,9 @@
     "title": " Welcome to 3mpwr App",
     "subtitle": " Support. Advocacy. Empowerment.",
     "welcome": " Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!",
+    "personalization": {
+      "note": "Sugerencias impulsadas por el Motor de Personalización (beta)."
+    },
     "guide": {
       "moodSummary": " Mood 7d avg: {{avg}} • Today entries: {{count}}",
       "snapshotPlaceholder": " (Mood tracking available on Wellness tab)",
