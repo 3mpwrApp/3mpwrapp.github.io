@@ -93,7 +93,19 @@ Ready to join the movement? Here’s how you can get started:
 ## Curated Daily Highlights
 
 <section class="highlight-banner" role="region" aria-labelledby="latest-curated">
-  <h3 id="latest-curated">Daily highlights from across Canada</h3>
+  {% assign latest_curated = site.posts | where_exp: 'p', "p.tags contains 'highlights'" | first %}
+  <h3 id="latest-curated">
+    Daily highlights from across Canada
+    {% if latest_curated and latest_curated.date %}
+      {% assign now = 'now' | date: '%s' | plus: 0 %}
+      {% assign posted = latest_curated.date | date: '%s' | plus: 0 %}
+      {% assign age = now | minus: posted %}
+      {% assign one_day = 24 | times: 60 | times: 60 %}
+      {% if age < one_day %}
+        <span class="badge badge--new" aria-label="New update in the last 24 hours">New!</span>
+      {% endif %}
+    {% endif %}
+  </h3>
   <p class="highlight-banner__desc">A quick, accessible round-up of community stories, resources, and calls-to-action updated every day.</p>
   <div class="highlight-banner__actions">
     <a class="highlight-banner__button" href="{{ '/blog/#curated-daily' | relative_url }}" aria-describedby="curated-daily-desc">
