@@ -52,6 +52,20 @@ This repository currently allows direct pushes to `main` for maintainers. CI wil
 
 If you want to enforce stricter controls in the future, see our optional [Branch Protection Guide](.github/BRANCH_PROTECTION.md).
 
+### Automated Curation and Checks
+
+- Daily Curator: `.github/workflows/daily-curator.yml`
+	- Runs at 1pm America/Toronto every day. Implementation: schedule at 17:00 and 18:00 UTC with a time-gate that only proceeds when local Toronto time is 13:00.
+	- Produces `_curation/YYYY-MM-DD-curation.md` and, if items meet scoring, `_posts/YYYY-MM-DD-daily-curation.md`.
+	- Configuration: `_data/curator.json`
+		- `rssFeeds`: list of sources to pull
+		- `keywords`, `tags`: scoring terms
+		- `minScore`, `maxItems`, `postDaily`: volume control
+
+- Accessibility (pa11y): `.github/workflows/a11y-pa11y.yml`
+	- Runs on push/PR and Mon+Thu early UTC.
+	- Uploads a JSON report and prints quick stats to the run summary; the job fails if any page has issues.
+
 ## Development
 
 ### Local Setup

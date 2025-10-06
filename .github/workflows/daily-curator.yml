@@ -31,6 +31,12 @@ jobs:
           echo "Toronto hour: ${TORONTO_HOUR}"
           if [ "$TORONTO_HOUR" = "13" ]; then echo "is13=true" >> $GITHUB_OUTPUT; else echo "is13=false" >> $GITHUB_OUTPUT; fi
 
+      - name: Summary (skipped by time gate)
+        if: steps.timegate.outputs.is13 != 'true'
+        run: |
+          echo "## Daily curator" >> $GITHUB_STEP_SUMMARY
+          echo "Skipped because current time in Toronto is not 13:00 (1pm)." >> $GITHUB_STEP_SUMMARY
+
       - name: Run curator
         if: steps.timegate.outputs.is13 == 'true'
         run: node scripts/daily-curator.js
@@ -53,6 +59,12 @@ jobs:
           path: |
             _curation/*.md
             _posts/*daily-curation.md
+
+      - name: Summary (ran at 1pm Toronto)
+        if: steps.timegate.outputs.is13 == 'true'
+        run: |
+          echo "## Daily curator" >> $GITHUB_STEP_SUMMARY
+          echo "Ran at 1pm America/Toronto. See artifacts for curation summary and draft post (if generated)." >> $GITHUB_STEP_SUMMARY
 
       # Optional: Mastodon auto-post (free). Requires MASTO_INSTANCE, MASTO_TOKEN (not set by default).
       # - name: Post to Mastodon
