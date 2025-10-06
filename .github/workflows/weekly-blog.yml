@@ -14,42 +14,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Create weekly blog post
-        run: |
-          set -e
-          DATE=$(date -u +"%Y-%m-%d")
-          WEEK=$(date -u +"%V")
-          TITLE="Weekly Update — Week ${WEEK}"
-          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -d '—')
-          FILE="_posts/${DATE}-${SLUG}.md"
-          if [ -f "$FILE" ]; then
-            echo "Post already exists for $DATE, skipping.";
-            exit 0;
-          fi
-          echo "---" > "$FILE"
-          echo "layout: post" >> "$FILE"
-          echo "title: $TITLE ($DATE)" >> "$FILE"
-          echo "date: ${DATE} 09:00:00 +0000" >> "$FILE"
-          echo "tags: [weekly, updates, changelog]" >> "$FILE"
-          echo "categories: [updates]" >> "$FILE"
-          echo "---" >> "$FILE"
-          echo >> "$FILE"
-          echo "## Highlights" >> "$FILE"
-          echo >> "$FILE"
-          echo "- Site health checks (a11y, links, performance) continue to run weekly." >> "$FILE"
-          echo "- Add this week’s key changes here." >> "$FILE"
-          echo >> "$FILE"
-          echo "## Accessibility" >> "$FILE"
-          echo >> "$FILE"
-          echo "- Note any pa11y/axe fixes or improvements." >> "$FILE"
-          echo >> "$FILE"
-          echo "## Performance & Links" >> "$FILE"
-          echo >> "$FILE"
-          echo "- Note any performance or link integrity improvements." >> "$FILE"
-          echo >> "$FILE"
-          echo "## Next Up" >> "$FILE"
-          echo >> "$FILE"
-          echo "- Planned tasks for next week." >> "$FILE"
+      - name: Use Node to generate weekly from What's New
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Generate post
+        run: node scripts/generate-weekly-post.js
 
       - name: Commit and push
         run: |

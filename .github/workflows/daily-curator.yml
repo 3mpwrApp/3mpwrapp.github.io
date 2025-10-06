@@ -1,0 +1,40 @@
+name: Daily Curator
+
+on:
+  schedule:
+    - cron: "0 12 * * *" # daily at 12:00 UTC
+  workflow_dispatch:
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run curator
+        run: node scripts/daily-curator.js
+
+      - name: Commit and push
+        run: |
+          git config user.email "actions@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add _posts/*.md _curation/*.md || true
+          git commit -m "chore(curator): daily summary and draft post" || echo "No changes to commit"
+          git push
+
+      # Optional: Mastodon auto-post (free). Requires MASTO_INSTANCE, MASTO_TOKEN (not set by default).
+      # - name: Post to Mastodon
+      #   if: ${{ false }}
+      #   env:
+      #     MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+      #     MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+      #   run: |
+      #     echo "Stub for Mastodon posting; add secrets to enable."

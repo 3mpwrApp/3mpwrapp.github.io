@@ -27,4 +27,4 @@ By using the 3mpowr website or app, you agree to these terms.
 - We may update these terms. We’ll post updates here with the effective date.
 
 ## Contact
-Questions about these terms? Contact us at [info@3mpowr.app](mailto:info@3mpowr.app).
+Questions about these terms? Contact us at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).

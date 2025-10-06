@@ -1,0 +1,63 @@
+{
+  "rssFeeds": [
+    "https://www.ccdonline.ca/en/rss.xml",
+    "https://archdisabilitylaw.ca/feed/",
+    "https://rabble.ca/feed/",
+    "https://www.disabledpeoplesalliance.org/feed/",
+    "https://www.cbc.ca/m/rss/canada.xml",
+    "https://www.cbc.ca/m/rss/local/toronto.xml",
+    "https://www.cbc.ca/m/rss/local/vancouver.xml",
+    "https://www.canadianlabour.ca/feed/",
+    "https://cupe.ca/rss/news",
+    "https://www.ufcw.ca/index.php?option=com_rss&lang=en"
+  ],
+  "mastodon": {
+    "enabled": true,
+    "instance": "mastodon.social",
+    "query": "disability OR injured workers OR accessibility OR #DisabilityJustice OR #A11y"
+  },
+  "keywords": [
+    "disability",
+    "persons with disabilities",
+    "PWD",
+    "accessibility",
+    "a11y",
+    "injured worker",
+    "WSIB",
+    "WCB",
+    "accommodation",
+    "barrier-free",
+    "undue hardship",
+    "human rights",
+    "assistive technology",
+    "benefits",
+    "mutual aid",
+    "wheelchair",
+    "neurodivergent",
+    "mental health"
+  ],
+  "tags": [
+    "#Disability",
+    "#DisabilityJustice",
+    "#A11y",
+    "#Accessibility",
+    "#InjuredWorkers",
+    "#WorkersComp",
+    "#WSIB",
+    "#WCB",
+    "#OHRC",
+    "#HumanRights",
+    "#AssistiveTech",
+    "#Canada",
+    "#Ontario",
+    "#Quebec",
+    "#BC",
+    "#Alberta",
+    "#Manitoba",
+    "#Saskatchewan",
+    "#NovaScotia"
+  ],
+  "maxItems": 25,
+  "minScore": 1,
+  "postDaily": true
+}

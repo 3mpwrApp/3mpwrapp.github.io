@@ -20,4 +20,4 @@ Last updated: {{ site.time | date: '%B %d, %Y' }}
 - We retain data only as long as needed for its purpose or as required by law.
 
 ## Contact
-For questions about cookies or data retention, contact us at [info@3mpowr.app](mailto:info@3mpowr.app).
+For questions about cookies or data retention, contact us at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).

@@ -34,4 +34,4 @@ We respect your privacy. This policy explains what data we collect, how we use i
 - Withdraw consent for communications at any time
 
 ## Contact
-If you have questions about this policy, contact us at [info@3mpowr.app](mailto:info@3mpowr.app).
+If you have questions about this policy, contact us at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).

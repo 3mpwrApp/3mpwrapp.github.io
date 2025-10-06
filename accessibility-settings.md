@@ -95,6 +95,6 @@ If you want to reset your saved preferences, use the “Reset to defaults” but
 
 ## Feedback
 
-If any setting isn’t working as expected, contact us at [info@3mpowr.app](mailto:info@3mpowr.app) with your browser and device information.
+If any setting isn’t working as expected, contact us at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with your browser and device information.
 
 <script src="{{ '/assets/js/settings.js' | relative_url }}" defer></script>
