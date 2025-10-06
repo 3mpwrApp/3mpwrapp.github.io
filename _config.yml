@@ -31,6 +31,12 @@ defaults:
       path: ""
     values:
       image: /assets/empowrapp-logo.png
+      lang: en
+      seo:
+        type: WebSite
+        twitter:
+          card: summary_large_image
+          creator: "@3mpowrApp0816"
 
 # Collections
 collections:

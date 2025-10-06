@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 3mpwr App — User Guide
+description: A practical, text-only guide to help you navigate the 3mpowr App’s features, accessibility, and best practices.
 description: A practical guide to using 3mpwr’s tools and community features
 version: 1.0
 lastUpdated: 2025-10-05

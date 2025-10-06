@@ -7,6 +7,9 @@
 /* Base */
 :root {
   color-scheme: light dark;
+  --font-scale: 1;
+  --line-height: 1.6;
+  --letter-spacing: 0;
 }
 
 html {
@@ -20,7 +23,9 @@ body {
   margin: 0;
   background: #fafbfd;
   color: #222;
-  line-height: 1.6;
+  line-height: var(--line-height);
+  font-size: calc(16px * var(--font-scale));
+  letter-spacing: var(--letter-spacing);
 }
 
 /* Header */
@@ -211,6 +216,12 @@ main a {
   text-underline-offset: 3px;
 }
 
+/* Toggle underline strategy */
+html[data-link-underline="always"] main a { text-decoration: underline !important; }
+html[data-link-underline="auto"] main a { text-decoration: underline; }
+html[data-link-underline="auto"] main a:hover,
+html[data-link-underline="auto"] main a:focus-visible { text-decoration-thickness: 2px; }
+
 /* Focus visibility (WCAG 2.4.7) */
 a:focus-visible,
 button:focus-visible,
@@ -358,6 +369,13 @@ iframe {
   }
 }
 
+/* User override for reduced motion */
+html[data-reduce-motion="on"] * {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
 /* High-contrast (user-controlled) */
 body[data-contrast="high"] {
   background: #ffffff !important;
@@ -412,6 +430,26 @@ body[data-contrast="high"] :focus-visible {
   outline-offset: 3px !important;
   border-radius: 2px !important;
 }
+
+/* Readable font toggle */
+html[data-readable-font="readable"] body {
+  font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif !important;
+}
+html[data-readable-font="dyslexia"] body {
+  font-family: "OpenDyslexic", "Atkinson Hyperlegible", "Noto Sans", system-ui, Arial, sans-serif !important;
+}
+
+/* Color filters */
+html[data-color-filter="grayscale"] {
+  filter: grayscale(100%);
+}
+html[data-color-filter="hue"] {
+  filter: hue-rotate(180deg);
+}
+
+/* Adjustable focus ring */
+html[data-focus-ring="thick"] :focus-visible { outline-width: 5px !important; }
+html[data-focus-ring="color"] :focus-visible { outline-color: #ff4d4f !important; }
 body[data-contrast="high"] .store-badge {
   background: #fff !important;
   border: 3px solid #000 !important;

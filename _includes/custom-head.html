@@ -25,9 +25,39 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
 <!-- Main site RSS feed autodiscovery -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }} — Site Feed" href="{{ '/feed.xml' | relative_url }}">
 
-{%- comment -%} Optional GA4 {%- endcomment -%}
+{%- comment -%} Internationalization: hreflang alternates {%- endcomment -%}
+<link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
+<link rel="alternate" hreflang="fr" href="{{ '/fr/' | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+
+{%- comment -%} GA4: load only after explicit consent {%- endcomment -%}
 {%- if site.ga_measurement_id and site.ga_measurement_id != '' -%}
-  {%- include analytics.html -%}
+<script>
+  (function() {
+    var KEY = 'cookie-consent';
+    function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.ga_measurement_id | escape }}';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '{{ site.ga_measurement_id | escape }}');
+    }
+    if (get(KEY) === 'accepted') {
+      loadGA();
+    } else {
+      window.addEventListener('cookie-consent', function(e){
+        if (e && e.detail === 'accepted') loadGA();
+      });
+    }
+  })();
+  </script>
 {%- endif -%}
 
 {%- comment -%} JSON-LD: Organization schema {%- endcomment -%}
@@ -41,3 +71,32 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
   "sameAs": [{% for link in site.social.links %}"{{ link }}"{% if forloop.last == false %}, {% endif %}{% endfor %}]
 }
 </script>
+
+{%- comment -%} JSON-LD: BreadcrumbList for deep pages {%- endcomment -%}
+{%- assign segments = page.url | split: '/' | reject: '' -%}
+{%- if segments.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ '/' | absolute_url }}"
+    }
+    {%- assign path = '' -%}
+    {%- for seg in segments -%}
+      {%- assign path = path | append: '/' | append: seg -%}
+      ,{
+        "@type": "ListItem",
+        "position": {{ forloop.index | plus: 1 }},
+        "name": "{{ seg | replace: '-', ' ' | capitalize }}",
+        "item": "{{ path | absolute_url }}"
+      }
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}

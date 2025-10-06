@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-description: Community-driven tools, resources, and support for injured workers and persons with disabilities across Canada.
+description: A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.
 ---
 
 # Welcome to 3mpowr App
