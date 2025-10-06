@@ -213,11 +213,11 @@ Ready to join the movement? Here’s how you can get started:
 Follow 3mpowr on social media to stay connected and be part of the community:
 
 <ul role="list" aria-label="Social links" class="socials-list">
-  <li role="listitem"><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📘</span> Facebook</a> – Follow us for updates and community news</li>
-  <li role="listitem"><a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✖️</span> X (Twitter)</a> – Join the conversation</li>
-  <li role="listitem"><a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📸</span> Instagram</a> – See our latest posts and stories</li>
-  <li role="listitem"><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶️</span> YouTube</a> – Watch videos and live sessions</li>
-  <li role="listitem"><a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🎵</span> TikTok</a> – Short clips and updates</li>
+  <li role="listitem"><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} Facebook</a> – Follow us for updates and community news</li>
+  <li role="listitem"><a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='x' -%} X (Twitter)</a> – Join the conversation</li>
+  <li role="listitem"><a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='instagram' -%} Instagram</a> – See our latest posts and stories</li>
+  <li role="listitem"><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='youtube' -%} YouTube</a> – Watch videos and live sessions</li>
+  <li role="listitem"><a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='tiktok' -%} TikTok</a> – Short clips and updates</li>
 </ul>
 
 ---

@@ -164,12 +164,12 @@
 
   <footer id="site-footer" role="contentinfo">
     <div class="social-links">
-      <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="social-icon">📘</span> Facebook</a>
-      <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="social-icon">✖️</span> X (Twitter)</a>
-      <a href="https://www.instagram.com/3mpwrapp/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="social-icon">📸</span> Instagram</a>
-      <a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="social-icon">▶️</span> YouTube</a>
-      <a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer"><span aria-hidden="true" class="social-icon">🎵</span> TikTok</a>
-      <a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="Subscribe to RSS feed"><span aria-hidden="true" class="social-icon">📰</span> RSS</a>
+      <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} Facebook</a>
+      <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='x' -%} X (Twitter)</a>
+      <a href="https://www.instagram.com/3mpwrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='instagram' -%} Instagram</a>
+      <a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='youtube' -%} YouTube</a>
+      <a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='tiktok' -%} TikTok</a>
+      <a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="Subscribe to RSS feed">{%- include social-icons.html name='rss' -%} RSS</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">Beta Testers Sign Up</a>
     </div>
   <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpowr App</a> • <a href="{{ '/user-guide/' | relative_url }}">User Guide</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy</a> • <a href="{{ '/terms/' | relative_url }}">Terms</a> • <a href="{{ '/cookies/' | relative_url }}">Cookies</a> • <a href="{{ '/faq/' | relative_url }}">FAQ</a> • <a href="{{ '/accessibility' | relative_url }}">Accessibility</a> • <a href="{{ '/accessibility-settings/' | relative_url }}">Accessibility Settings</a> • <a href="{{ '/site-map/' | relative_url }}">Site Map</a> • <a href="{{ '/whats-new/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="What's New RSS feed">What’s New RSS</a></p>
