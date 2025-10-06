@@ -10,6 +10,7 @@ on:
 jobs:
   axe:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     continue-on-error: ${{ github.event_name != 'pull_request' }}
     steps:
       - name: Checkout
@@ -22,11 +23,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm --yes init -y
-          npm i @axe-core/playwright@latest playwright@latest
+          if [ ! -f package.json ]; then npm --yes init -y; fi
+          if [ -f package-lock.json ]; then npm ci; else npm i; fi
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
+
+      - name: Preflight availability check
+        run: |
+          URL="https://3mpwrapp.github.io/?no-modal=1"
+          for i in 1 2 3; do
+            echo "Preflight attempt $i..."
+            if curl -sSfL "$URL" -o /dev/null; then echo "Site reachable"; exit 0; fi
+            sleep 3
+          done
+          echo "Site not reachable after retries" >&2
+          exit 1
 
       - name: Run axe-core against key pages
         run: node scripts/axe-check.js
