@@ -28,3 +28,9 @@ jobs:
           git add _posts/*.md
           git commit -m "chore(blog): weekly automated update" || echo "No changes to commit"
           git push
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Weekly blog generator" >> $GITHUB_STEP_SUMMARY
+          echo "If a new post was created it has been committed to _posts/." >> $GITHUB_STEP_SUMMARY
