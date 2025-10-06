@@ -67,11 +67,7 @@ jobs:
           echo "## Daily curator" >> $GITHUB_STEP_SUMMARY
           echo "Ran at 1pm America/Toronto. See artifacts for curation summary and draft post (if generated)." >> $GITHUB_STEP_SUMMARY
 
-      # Optional: Mastodon auto-post (free). Requires MASTO_INSTANCE, MASTO_TOKEN (not set by default).
-      # - name: Post to Mastodon
-  #   if: ${{ steps.timegate.outputs.is13 == 'true' }}
-      #   env:
-      #     MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
-      #     MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
-      #   run: |
-      #     echo "Stub for Mastodon posting; add secrets to enable."
+      # Optional: Mastodon auto-post (free). Requires MASTO_INSTANCE, MASTO_TOKEN secrets.
+      - name: Post to Mastodon
+        if: steps.timegate.outputs.is13 == 'true'
+        run: node scripts/post-mastodon.js
