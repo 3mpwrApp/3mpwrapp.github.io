@@ -1,5 +1,20 @@
 [
   {
+    "hash": "6c359b574f07bba65fb116c176cdda4714ca7e29",
+    "date": "2025-10-05",
+    "message": "Merge branch 'main' of https://github.com/3mpowrApp/3mpwrapp.github.io"
+  },
+  {
+    "hash": "2e5d5dc629d586e2719f6708e830a0e617df4e1b",
+    "date": "2025-10-05",
+    "message": "feat(analytics,i18n,seo): consent‑gated GoatCounter/GA4; FR pages; meta descriptions"
+  },
+  {
+    "hash": "1ab8950b2efd0ed123cb8e1b789ea2cbe08b1559",
+    "date": "2025-10-06",
+    "message": "chore(data): update gitlog.json"
+  },
+  {
     "hash": "01e03255b472cf368ae15847bef5e4ee5102cb9f",
     "date": "2025-10-05",
     "message": "Merge branch 'main' of https://github.com/3mpowrApp/3mpwrapp.github.io"
@@ -983,20 +998,5 @@
     "hash": "8cfbb99c990922320b340bd80da8c82d9a5d927e",
     "date": "2025-10-02",
     "message": "Enhance home page with full content and add social media links"
-  },
-  {
-    "hash": "8fa857e7b70aaf8b3fff729eab0f449f8486436c",
-    "date": "2025-10-02",
-    "message": "Initial plan"
-  },
-  {
-    "hash": "a040dc873680ca1b23790c547d4a095e3c873e20",
-    "date": "2025-10-02",
-    "message": "Updating beta/index.md with new content."
-  },
-  {
-    "hash": "925a520a6d9fbd3172d7d834e7a04d0e501cf5f5",
-    "date": "2025-10-02",
-    "message": "Add improved Beta Test Signup page with device question and commitment note."
   }
 ]
