@@ -186,6 +186,9 @@
         modal.classList.remove('is-open');
         modal.setAttribute('aria-hidden','true');
         document.body.classList.remove('no-scroll');
+        if (window.announce) {
+          window.announce('Newsletter dialog closed');
+        }
       }
 
       function openModal() {
@@ -196,6 +199,9 @@
         document.body.classList.add('no-scroll');
         // Focus the dialog for a11y
         if (dialog && dialog.focus) dialog.setAttribute('tabindex','-1'), dialog.focus();
+        if (window.announce) {
+          window.announce('Newsletter dialog opened');
+        }
       }
 
       function shouldShow() {

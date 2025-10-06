@@ -1,0 +1,32 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{%- assign entries = '' | split: '' -%}
+{%- for p in site.pages -%}
+  {%- unless p.title == nil or p.permalink == '/404.html' or p.url == '/404.html' or p.exclude_from_search -%}
+    {%- assign entries = entries | push: p -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- for post in site.posts -%}
+  {%- unless post.exclude_from_search -%}
+    {%- assign entries = entries | push: post -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- if site.whats_new -%}
+  {%- for wn in site.whats_new -%}
+    {%- unless wn.exclude_from_search -%}
+      {%- assign entries = entries | push: wn -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- for e in entries -%}
+  {
+    "title": {{ e.title | jsonify }},
+    "url": {{ e.url | relative_url | jsonify }},
+    "date": {{ e.date | date_to_xmlschema | default: '' | jsonify }},
+    "content": {{ e.content | markdownify | strip_html | strip_newlines | replace: '\r', ' ' | replace: '  ', ' ' | truncate: 2000 | jsonify }}
+  }{%- if forloop.last == false -%},{%- endif -%}
+{%- endfor -%}
+]
