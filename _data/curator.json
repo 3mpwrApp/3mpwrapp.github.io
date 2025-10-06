@@ -32,7 +32,13 @@
     "https://www.wcb.ns.ca/rss/news.aspx",                     
     "https://www.worksafenb.ca/news-and-events/rss/",          
     "https://www.wcb.pe.ca/rss/news",                          
-    "https://workplacenl.ca/feed/"                             
+    "https://workplacenl.ca/feed/",
+    "https://www.aoda.ca/feed/",
+    "https://barrierfreecanada.org/feed/",
+    "https://disabilityalliancebc.org/feed/",
+    "https://www.whsclinic.org/feed/",
+    "https://iavgo.org/feed/",
+    "https://inclusioncanada.ca/feed/"                             
   ],
   "mastodon": {
     "enabled": true,
@@ -74,7 +80,17 @@
     "barriers",
     "inclusive design",
     "assistive device",
-    "accessible transit"
+    "accessible transit",
+    "Accessible Canada Act",
+    "ACA",
+    "Bill C-81",
+    "WSIAT",
+    "WCAT",
+    "Appeals Commission",
+    "Review Division",
+    "tribunal",
+    "hearing",
+    "appeal"
   ],
   "tags": [
     "#Disability",
@@ -114,7 +130,11 @@
     "#InclusiveDesign",
     "#BarrierFree",
     "#DutyToAccommodate",
-    "#ReasonableAccommodation"
+    "#ReasonableAccommodation",
+    "#AccessibleCanadaAct",
+    "#ACA",
+    "#DisabilityRights",
+    "#HRC"
   ],
   "maxItems": 25,
   "minScore": 1,
