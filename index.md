@@ -92,36 +92,32 @@ Ready to join the movement? Here’s how you can get started:
 
 ## Curated Daily Highlights
 
-Stay current with a daily round-up of community stories, resources, and calls-to-action collected from across Canada.
+<section class="highlight-banner" role="region" aria-labelledby="latest-curated">
+  <h3 id="latest-curated">Daily highlights from across Canada</h3>
+  <p class="highlight-banner__desc">A quick, accessible round-up of community stories, resources, and calls-to-action updated every day.</p>
+  <div class="highlight-banner__actions">
+    <a class="highlight-banner__button" href="{{ '/blog/#curated-daily' | relative_url }}" aria-describedby="curated-daily-desc">
+      Check out today’s curated feed →
+    </a>
+    <span id="curated-daily-desc" class="sr-only">This link takes you to the curated daily feed section on our blog.</span>
+  </div>
 
-<p>
-  <a class="button" href="{{ '/blog/#curated-daily' | relative_url }}" aria-describedby="curated-daily-desc">
-    Check out today’s curated feed →
-  </a>
-</p>
-<p id="curated-daily-desc" class="sr-only">This link takes you to the curated daily feed section on our blog.</p>
-
-{% assign daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
-{% if daily and daily.size > 0 %}
-<section aria-labelledby="latest-curated">
-  <h3 id="latest-curated">Latest curated items</h3>
-  <ul class="post-list" role="list">
-    {% for post in daily limit:3 %}
-    <li role="listitem">
-      <h4 style="margin-bottom: 0.25rem;">
+  {% assign daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
+  {% if daily and daily.size > 0 %}
+    <ul class="highlight-banner__list" role="list" aria-label="Latest curated items">
+      {% for post in daily limit:3 %}
+      <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h4>
-      <p><small>{{ post.date | date: "%B %-d, %Y" }}</small></p>
-      {% if post.excerpt %}
-      <p>{{ post.excerpt }}</p>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-  <p><a href="{{ '/blog/#curated-daily' | relative_url }}">See all daily highlights →</a></p>
+        <small> — {{ post.date | date: "%B %-d, %Y" }}</small>
+      </li>
+      {% endfor %}
+    </ul>
+    <p style="margin:0.25rem 0 0;"><a href="{{ '/blog/#curated-daily' | relative_url }}">See all daily highlights →</a></p>
+  {% else %}
+    <p class="highlight-banner__desc" style="margin:0;">No highlights yet today. Check back soon.</p>
+  {% endif %}
 </section>
 ---
-{% endif %}
 
 {% if site.posts.size > 0 %}
 <section aria-labelledby="latest-posts">

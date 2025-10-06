@@ -680,6 +680,80 @@ a[target="_blank"]:after {
   }
 }
 
+/* Curated Daily Highlights banner */
+.highlight-banner {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  border: 2px solid #183c65;
+  background: linear-gradient(180deg, #e9f5ff 0%, #ffffff 100%);
+}
+.highlight-banner h2,
+.highlight-banner h3 {
+  margin: 0;
+  color: #0b2545;
+}
+.highlight-banner__desc {
+  margin: 0;
+}
+.highlight-banner__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.highlight-banner__button {
+  display: inline-block;
+  font-weight: 700;
+  background: #183c65;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 2px solid #183c65;
+}
+.highlight-banner__button:hover,
+.highlight-banner__button:focus-visible {
+  background: #285e93;
+}
+.highlight-banner__list {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.highlight-banner__list li::before {
+  content: '•';
+  color: #183c65;
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+
+/* Dark mode variants */
+body[data-theme="dark"] .highlight-banner {
+  background: linear-gradient(180deg, #0f2037 0%, #111a2b 100%);
+  border-color: #355c7d;
+}
+body[data-theme="dark"] .highlight-banner h2,
+body[data-theme="dark"] .highlight-banner h3 {
+  color: #cfe8ff;
+}
+body[data-theme="dark"] .highlight-banner__list li::before {
+  color: #82aaff;
+}
+
+/* High contrast variants */
+body[data-contrast="high"] .highlight-banner {
+  background: #fff !important;
+  border: 3px solid #000 !important;
+}
+body[data-contrast="high"] .highlight-banner__button {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+}
+
 /* Cookie banner */
 .cookie-banner {
   position: fixed;
