@@ -29,16 +29,42 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
 <link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
 <link rel="alternate" hreflang="fr" href="{{ '/fr/' | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+{%- comment -%}
+Per-page alternates for About, Features, and User Guide
+{%- endcomment -%}
+{%- if page.url == '/about/' or page.url == '/fr/about/' -%}
+  <link rel="alternate" hreflang="en" href="{{ '/about/' | absolute_url }}">
+  <link rel="alternate" hreflang="fr" href="{{ '/fr/about/' | absolute_url }}">
+{%- endif -%}
+{%- if page.url == '/features/' or page.url == '/fr/features/' -%}
+  <link rel="alternate" hreflang="en" href="{{ '/features/' | absolute_url }}">
+  <link rel="alternate" hreflang="fr" href="{{ '/fr/features/' | absolute_url }}">
+{%- endif -%}
+{%- if page.url == '/user-guide/' or page.url == '/fr/user-guide/' -%}
+  <link rel="alternate" hreflang="en" href="{{ '/user-guide/' | absolute_url }}">
+  <link rel="alternate" hreflang="fr" href="{{ '/fr/user-guide/' | absolute_url }}">
+{%- endif -%}
 
-{%- comment -%} GA4: load only after explicit consent {%- endcomment -%}
-{%- if site.ga_measurement_id and site.ga_measurement_id != '' -%}
+{%- comment -%}
+Consent-gated analytics loader
+Supports:
+- Google Analytics 4 (if site.ga_measurement_id is set and analytics_provider is empty)
+- GoatCounter (if site.analytics_provider == 'goatcounter' and site.goatcounter_domain is set)
+{%- endcomment -%}
 <script>
-  (function() {
-    var KEY = 'cookie-consent';
-    function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
-    function loadGA() {
-      if (window.__gaLoaded) return;
-      window.__gaLoaded = true;
+(function(){
+  var KEY = 'cookie-consent';
+  function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function onConsent(cb){
+    if (get(KEY) === 'accepted') { cb(); return; }
+    window.addEventListener('cookie-consent', function(e){ if (e && e.detail === 'accepted') cb(); });
+  }
+
+  // Google Analytics 4
+  var useGA = ("{{ site.ga_measurement_id | default: '' | strip }}" !== "") && ("{{ site.analytics_provider | default: '' | strip }}" === "");
+  if (useGA) {
+    onConsent(function(){
+      if (window.__gaLoaded) return; window.__gaLoaded = true;
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.ga_measurement_id | escape }}';
@@ -48,17 +74,23 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
       window.gtag = gtag;
       gtag('js', new Date());
       gtag('config', '{{ site.ga_measurement_id | escape }}');
-    }
-    if (get(KEY) === 'accepted') {
-      loadGA();
-    } else {
-      window.addEventListener('cookie-consent', function(e){
-        if (e && e.detail === 'accepted') loadGA();
-      });
-    }
-  })();
-  </script>
-{%- endif -%}
+    });
+  }
+
+  // GoatCounter (privacy-friendly, free)
+  var useGoat = ("{{ site.analytics_provider | default: '' | strip }}" === "goatcounter") && ("{{ site.goatcounter_domain | default: '' | strip }}" !== "");
+  if (useGoat) {
+    onConsent(function(){
+      if (window.__goatLoaded) return; window.__goatLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter', 'https://{{ site.goatcounter_domain | escape }}.goatcounter.com/count');
+      s.src = 'https://gc.zgo.at/count.js';
+      document.head.appendChild(s);
+    });
+  }
+})();
+</script>
 
 {%- comment -%} JSON-LD: Organization schema {%- endcomment -%}
 <script type="application/ld+json">

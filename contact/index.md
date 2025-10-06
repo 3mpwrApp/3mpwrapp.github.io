@@ -1,6 +1,6 @@
----
 layout: default
 title: Contact
+description: Get in touch with 3mpowr App and follow us on social media.
 ---
 
 # Contact

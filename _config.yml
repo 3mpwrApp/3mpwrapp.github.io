@@ -59,6 +59,14 @@ social:
 
 ga_measurement_id: ""
 
+# Privacy-friendly analytics (optional, free)
+# Set one provider and its config values to enable consent-gated loading.
+# Supported providers:
+# - goatcounter: set analytics_provider: goatcounter and goatcounter_domain: your-id (from your-id.goatcounter.com)
+# - ga (Google Analytics 4): leave analytics_provider empty and set ga_measurement_id
+analytics_provider: ""   # "goatcounter" or ""
+goatcounter_domain: ""   # e.g., "example" for https://example.goatcounter.com
+
 twitter_username: "3mpowrApp0816"
 github_username: "3mpwrApp"
 

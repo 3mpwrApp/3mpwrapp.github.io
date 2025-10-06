@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Beta Test Signup
+description: Sign up to become a dedicated beta tester and help improve 3mpowr App.
 ---
 
 # Become a 3mpowr Beta Tester!

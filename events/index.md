@@ -2,6 +2,7 @@
 layout: default
 title: Events
 permalink: /events/
+description: Updates on our upcoming calendar and how to subscribe via ICS once available.
 ---
 
 # Events

@@ -1,6 +1,6 @@
----
 layout: default
 title: Community
+description: Join our inclusive community of injured workers and persons with disabilities to learn, advocate, and connect.
 ---
 
 # Community

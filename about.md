@@ -1,6 +1,6 @@
----
 layout: default
 title: About
+description: Who we are and how 3mpowr App helps injured workers and persons with disabilities across Canada.
 ---
 
 # About 3mpowr App
