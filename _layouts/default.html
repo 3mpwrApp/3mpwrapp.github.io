@@ -22,14 +22,15 @@
       </a>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
   {%- assign current = page.url | default: '/' -%}
-  {%- assign switch_to = site.data.locales[page.lang | default: 'en'].switch_href -%}
+  {%- assign lang_code = page.lang | default: 'en' -%}
+  {%- assign switch_to = site.data.locales[lang_code].switch_href -%}
   {%- if current == '/about/' -%}{% assign switch_to = '/fr/about/' %}{%- endif -%}
   {%- if current == '/fr/about/' -%}{% assign switch_to = '/about/' %}{%- endif -%}
   {%- if current == '/features/' -%}{% assign switch_to = '/fr/features/' %}{%- endif -%}
   {%- if current == '/fr/features/' -%}{% assign switch_to = '/features/' %}{%- endif -%}
   {%- if current == '/user-guide/' -%}{% assign switch_to = '/fr/user-guide/' %}{%- endif -%}
   {%- if current == '/fr/user-guide/' -%}{% assign switch_to = '/user-guide/' %}{%- endif -%}
-  <a class="lang-switch" href="{{ switch_to | relative_url }}">{{ site.data.locales[page.lang | default: 'en'].switch_label }}</a>
+  <a class="lang-switch" href="{{ switch_to | relative_url }}">{{ site.data.locales[lang_code].switch_label }}</a>
     </div>
 
   <nav id="primary-nav" aria-label="Primary">

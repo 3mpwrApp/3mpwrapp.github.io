@@ -127,19 +127,21 @@ Stay current with a daily round-up of community stories, resources, and calls-to
 <section aria-labelledby="latest-posts">
   <h2 id="latest-posts">Latest from the blog</h2>
   <ul class="post-list" role="list">
-    {% assign non_daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
-    {% for post in site.posts limit:3 %}
-    {% unless post in non_daily %}
-    <li role="listitem">
-      <h3 style="margin-bottom: 0.25rem;">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h3>
-      <p><small>{{ post.date | date: "%B %-d, %Y" }}</small></p>
-      {% if post.excerpt %}
-      <p>{{ post.excerpt }}</p>
-      {% endif %}
-    </li>
-    {% endunless %}
+    {% assign shown = 0 %}
+    {% for post in site.posts %}
+      {% unless post.tags contains 'highlights' %}
+        <li role="listitem">
+          <h3 style="margin-bottom: 0.25rem;">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p><small>{{ post.date | date: "%B %-d, %Y" }}</small></p>
+          {% if post.excerpt %}
+          <p>{{ post.excerpt }}</p>
+          {% endif %}
+        </li>
+        {% assign shown = shown | plus: 1 %}
+      {% endunless %}
+      {% if shown == 3 %}{% break %}{% endif %}
     {% endfor %}
   </ul>
   <p><a href="{{ '/blog' | relative_url }}">See all posts →</a></p>

@@ -64,7 +64,17 @@
     "mutual aid",
     "wheelchair",
     "neurodivergent",
-    "mental health"
+    "mental health",
+    "UN CRPD",
+    "CRPD",
+    "Convention on the Rights of Persons with Disabilities",
+    "UN Convention on the Rights of Persons with Disabilities",
+    "reasonable accommodation",
+    "duty to accommodate",
+    "barriers",
+    "inclusive design",
+    "assistive device",
+    "accessible transit"
   ],
   "tags": [
     "#Disability",
@@ -98,7 +108,13 @@
     "#Newfoundland",
     "#Yukon",
     "#NWT",
-    "#Nunavut"
+    "#Nunavut",
+    "#CRPD",
+    "#UNCRPD",
+    "#InclusiveDesign",
+    "#BarrierFree",
+    "#DutyToAccommodate",
+    "#ReasonableAccommodation"
   ],
   "maxItems": 25,
   "minScore": 1,
