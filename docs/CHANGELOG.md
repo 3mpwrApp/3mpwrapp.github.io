@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file.
  - Advocacy: Policy Made Simple now includes Copy, Share, Export as PDF, and Export as .doc actions; deterministic offline summaries preserved. Buttons use accessible labels and existing error alert patterns.
  - Tests: Added smoke tests for AI Government Navigator, Policy Made Simple, and Ratings. Stabilized tests by mocking expo‑router and providing a stub I18nProvider in Ratings test. Final run: all suites passing.
  - Docs: Updated User Guide entry for Policy Made Simple to mention Copy/Share/PDF/.doc export; kept lastUpdated in sync.
+ - Docs: Fixed misplaced bullets — moved Diet & Nutrition “recipes/Favorites” bullets out of Dream Tracker & Interpreter into Diet & Nutrition Guides.
 
  - Tests: Added smoke tests for AI Advocate Translator and AI Case Interpreter with deterministic offline fallbacks and resilient selectors to avoid header/button collisions.
  - Tests: Added Wellness Mood Tracker smoke test (note + Save path) and Resources Chronic Tracker export smoke test (CSV/JSON). Mocked expo‑router and native modules to avoid web asset imports. Final run: 64/64 suites passing.
