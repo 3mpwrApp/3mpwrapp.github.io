@@ -23,13 +23,17 @@ function getCfg() {
   return cfg;
 }
 
-function httpGet(url) {
+function httpGet(url, timeoutMs = 12000) {
   return new Promise((resolve, reject) => {
-    https.get(url, res => {
+    const req = https.get(url, res => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => resolve({ status: res.statusCode, data }));
-    }).on('error', reject);
+    });
+    req.on('error', reject);
+    req.setTimeout(timeoutMs, () => {
+      req.destroy(new Error('timeout'));
+    });
   });
 }
 
@@ -95,6 +99,7 @@ async function main(){
   const todayISO = toISODate(now);
   const collected = [];
   // RSS
+  let fetchOk = 0, fetchFail = 0;
   for (const feed of cfg.rssFeeds) {
     try {
       const resp = await httpGet(feed);
@@ -102,10 +107,20 @@ async function main(){
       const items = parseRSS(resp.data).slice(0, 20);
       for (const it of items) {
         const text = `${it.title} ${it.description}`;
-        const score = scoreItem(text, cfg);
+        let score = scoreItem(text, cfg);
+        // Source weighting: boost federal/agency sources
+        if (/accessible\.canada|canada\.ca|chrc-ccdp|a11y\.canada/i.test(feed)) score += 1;
+        if (/wsib|worksafebc|wcb\./i.test(feed)) score += 0.5;
+        // Recency boost: if pubDate within last 24h add +1
+        const pub = Date.parse(it.pubDate || '');
+        if (!isNaN(pub) && (Date.now() - pub) < 24*60*60*1000) score += 1;
         collected.push({ ...it, source: feed, score });
       }
-    } catch(_){}
+      fetchOk++;
+    } catch(e){
+      fetchFail++;
+      console.warn('Feed error:', feed, e && e.message ? e.message : String(e));
+    }
   }
   // Mastodon
   const masto = await fetchMastodon(cfg);
@@ -185,6 +200,7 @@ async function main(){
   }
   fs.writeFileSync(issueFile, lines.join('\n'), 'utf8');
   console.log('Wrote curation summary', issueFile);
+  console.log(`Feeds success: ${fetchOk}, failed: ${fetchFail}, ranked: ${ranked.length}`);
 }
 
 main().catch(e=>{ console.error(e); process.exit(1); });

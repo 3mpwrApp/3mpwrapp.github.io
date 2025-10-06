@@ -157,13 +157,25 @@ Ready to join the movement? Here’s how you can get started:
 ---
 {% endif %}
 
+## Weekly updates
+
+{% assign weekly = site.posts | where_exp: 'p', "p.tags contains 'weekly'" | first %}
+{% if weekly %}
+<p>
+  Don’t miss our latest weekly update:
+  <a href="{{ weekly.url | relative_url }}">{{ weekly.title }}</a> — {{ weekly.date | date: "%B %-d, %Y" }}
+  <br>
+  <a href="{{ '/blog' | relative_url }}">Browse all posts →</a>
+  </p>
+{% else %}
+<p>Weekly updates will appear here once available.</p>
+{% endif %}
+
 ## Connect With Us
 
 Follow 3mpowr on social media to stay connected and be part of the community:
 
-- <a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">Facebook</a> – Follow us for updates and community news
-- <a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">X (Twitter)</a> – Join the conversation
-- <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">Instagram</a> – See our latest posts and stories
+ - <a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">YouTube</a> – Watch videos and live sessions
 
 ---
 

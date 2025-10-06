@@ -46,6 +46,10 @@ jobs:
           echo "total=${TOTAL}" >> $GITHUB_OUTPUT
           echo "error_pages=${ERROR_PAGES}" >> $GITHUB_OUTPUT
 
+              echo "\n### Issue breakdown (first 5 types)" >> $GITHUB_STEP_SUMMARY
+              jq -r '[.[] | .issues[]? | {code, type}] | group_by(.code) | sort_by(length) | reverse | .[0:5] | to_entries[] | ("- " + (.["value"][0].code // "(no code)") + ": " + ((.["value"] | length) | tostring) + " occurrences")' pa11y-report.json >> $GITHUB_STEP_SUMMARY || true
+              echo "\n### Example messages (first 5)" >> $GITHUB_STEP_SUMMARY
+              jq -r '.[] | .issues[]? | "- [" + (.code // .type // "issue") + "] " + (.message // "") + " (" + (.selector // "") + ")"' pa11y-report.json | head -n 5 >> $GITHUB_STEP_SUMMARY || true
       - name: Upload pa11y report
         if: always()
         uses: actions/upload-artifact@v4
