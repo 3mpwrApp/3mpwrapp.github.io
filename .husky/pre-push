@@ -11,6 +11,15 @@ echo "[pre-push] wcag audit"; npm run wcag:audit
 echo "→ pre-push: typecheck (strict)"; npm run typecheck:strict || { echo "✗ typecheck failed"; exit 1; }
 echo "→ pre-push: tests"; npm run test:ci || { echo "✗ tests failed"; exit 1; }
 
+# Auto-commit analytics report if it changed during tests
+if ! git diff --quiet -- docs/analytics-report.md; then
+  echo "→ pre-push: committing analytics-report.md"
+  git add docs/analytics-report.md || true
+  git commit -m "docs: update analytics report" --no-verify || true
+else
+  echo "→ pre-push: analytics-report.md unchanged"
+fi
+
 # Allow unset I18N_TEST_BYPASS without nounset error; use default empty string
 I18N_TEST_BYPASS_VAL="${I18N_TEST_BYPASS:-}" || true
 if [ -z "$I18N_TEST_BYPASS_VAL" ]; then

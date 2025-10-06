@@ -7,7 +7,7 @@ lastUpdated: 2025-10-05
 
 # 3mpwr App — User Guide
 
-> Purpose: Practical tools and community for injured workers and persons with disabilities.
+> Purpose: Practical tools and community for Persons with Disabilities, Injured Workers, and Allies.
 
 ## Quick Start
 

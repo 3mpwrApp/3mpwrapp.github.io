@@ -160,7 +160,7 @@ export default function ResourcesScreen() {
       </Link>
       <Link href={"/(tabs)/resources/appeal-coach" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Appeal Coach (Coming soon)
+          Appeal Coach (Beta)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/body-mechanics-advisor" as Href} asChild>
@@ -243,7 +243,7 @@ export default function ResourcesScreen() {
       </Link>
       <Link href={"/(tabs)/resources/claims-navigator" as Href} asChild>
         <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Claims Navigator (Coming soon)
+          Claims Navigator (Beta)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
@@ -280,16 +280,16 @@ export default function ResourcesScreen() {
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/denial-decoder" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Denial Decoder
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
+          Denial Decoder (Beta)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/prepare-appeal" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Prepare to Appeal</Text>
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Prepare to Appeal (Beta)</Text>
       </Link>
       <Link href={"/(tabs)/resources/doctor-visit-prep" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Doctor Visit Prep
+        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
+          Doctor Visit Prep (Beta)
         </Text>
       </Link>
       <Link href={"/(tabs)/resources/financial-safety-net" as Href} asChild>
@@ -379,7 +379,15 @@ export default function ResourcesScreen() {
             key={key}
             onPress={() => setCategory(key)}
             accessibilityRole="button"
-            accessibilityLabel={`Filter ${key}`}
+            accessibilityLabel={
+              key === "all"
+                ? t("resources.filters.all", "All")
+                : key === "work_financial"
+                  ? t("resources.filters.work_financial", "Work & Financial")
+                  : key === "tools_downloads"
+                    ? t("resources.filters.tools_downloads", "Tools & Downloads")
+                    : t("resources.filters.emergency_crisis", "Emergency & Crisis")
+            }
             style={[styles.chip, category === key && styles.chipActive]}
           >
             <View style={styles.chipInner}>

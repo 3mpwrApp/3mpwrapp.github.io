@@ -26,7 +26,7 @@ export default function MutualAid() {
   React.useEffect(()=>{ load(); },[load]);
   return (
     <View style={s.container}>
-      <Text style={s.title}>Mutual Aid Engine</Text>
+  <Text style={s.title}>Mutual Aid Engine (Beta)</Text>
       {isAdmin && (
         <View style={{ gap:8 }}>
           <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>

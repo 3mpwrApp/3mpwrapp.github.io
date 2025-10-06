@@ -10,9 +10,7 @@ import { Alert, Button, Image, Linking, ScrollView, StyleSheet, Text, TextInput,
 
 import A11yPressable from '../../components/A11yPressable';
 import AccessibilityToggle from '../../components/AccessibilityToggle';
-import EmergencyWalletCard from '../../components/EmergencyWalletCard';
 import LanguageSelector from '../../components/LanguageSelector';
-import NotificationPreferences from '../../components/NotificationPreferences';
 import { HIT_SLOP_8 } from '../../constants/a11y';
 import { useAuth } from '../../context/AuthContext';
 import { auth, db, storage } from '../../firebase/config';
@@ -28,6 +26,8 @@ import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 import { a11yLiveRegion } from '../../utils/platform';
+const NotificationPreferences = React.lazy(() => import('../../components/NotificationPreferences'));
+const EmergencyWalletCard = React.lazy(() => import('../../components/EmergencyWalletCard'));
 
 export default function SettingsScreen() {
   const params = useLocalSearchParams<{ open?: string }>();
@@ -84,7 +84,9 @@ export default function SettingsScreen() {
       <Text ref={titleRef} accessibilityRole='header' style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('settings.title','Settings')}</Text>
       <Section title={t('settings.accessibility.title','Accessibility')} subtitle={t('settings.accessibility.subtitle','Make the app work better for you')} styles={styles}><EnhancedA11ySettingsSection /></Section>
       <LanguageSelector />
-      <NotificationPreferences />
+      <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading notification preferences…</Text></View>}>
+        <NotificationPreferences />
+      </React.Suspense>
       <Section title={t('settings.emergencyWallet.title','Emergency Wallet Card')} subtitle={t('settings.emergencyWallet.subtitle','Store key medical and emergency contact information locally')} styles={styles}>
         <A11yPressable
           onPress={() => setShowEmergencyCard(v => !v)}
@@ -96,7 +98,11 @@ export default function SettingsScreen() {
           <Ionicons name='medical' size={20} color={palette.primary} />
           <Text style={styles.linkText}>{showEmergencyCard ? t('common.hide','Hide') : t('common.show','Show')}</Text>
         </A11yPressable>
-        {showEmergencyCard && <EmergencyWalletCard />}
+        {showEmergencyCard && (
+          <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading emergency card…</Text></View>}>
+            <EmergencyWalletCard />
+          </React.Suspense>
+        )}
       </Section>
       <Section title={t('settings.bookmarks.title','Bookmarks')} subtitle={t('settings.bookmarks.subtitle','Save quick links to app features')} styles={styles}><BookmarksSection /></Section>
       <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>

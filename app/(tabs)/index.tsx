@@ -12,10 +12,13 @@ export default function HomeScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 16 }}>
       <Text accessibilityRole="header" style={{ color: palette.text, fontWeight: '700', fontSize: 20, marginBottom: 12 }}>
-        {t('home.title','Home')}
+        {t('home.title','Home')} <Text style={{ fontSize: 14, opacity: 0.8 }}>(Beta)</Text>
       </Text>
       <RecentPrompts />
       <HomeGuide />
+      <Text style={{ color: palette.text, opacity: 0.7, marginTop: 8 }}>
+        {t('home.personalization.note','Suggestions powered by the Personalization Engine (beta).')}
+      </Text>
     </ScrollView>
   );
 }
