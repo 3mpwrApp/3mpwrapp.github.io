@@ -36,6 +36,10 @@ lastUpdated: 2025-10-05
 
 - See release notes and recent improvements in the What’s New area. Changelogs also live in `docs/CHANGELOG.md`.
 
+Recent highlights
+
+- Home: Now marked Beta. You’ll see a short line under Today’s Guide: “Suggestions powered by the Personalization Engine (beta).”
+
 ![Home Header](images/home-header.png "Top bar with brand, Settings, and High‑Contrast")
 
 ## Advocacy
@@ -364,7 +368,7 @@ lastUpdated: 2025-10-05
 
 Where you’ll see “Coming soon” today
 
-- Community: Media Studio, Mutual Aid, Mutual Chat, Beta Testers Chat, and Compose Post cards show “Coming soon”. DMs are marked “beta”. Safety & Blocking mentions upcoming one‑tap block, report tools, and moderation flows.
+- Community: Safety & Blocking mentions upcoming one‑tap block, report tools, and moderation flows. Direct Messages remain “beta”.
 - Wellness hub: Some future tools are still being built; labels will indicate “Coming soon”.
 - Research: History Timeline, Case/File Wait‑Times, and Master Index may be labeled “Coming soon”.
 - Resources: Some experimental AI tools and planners are staged (cards will show “Coming soon”).
@@ -373,11 +377,11 @@ Where you’ll see “Coming soon” today
 Beta today
 
 - Advocacy: AI Advocate Translator, AI Case Interpreter, AI Government Navigator, Policy Made Simple, Lawyer Finder, Ratings, Ally Hub, Collective Legal Action Hub, Accountability Coach, and Accountability Cases are available as Beta.
+- Community: Media Studio, Mutual Aid Engine, Mutual Chat, Beta Testers Chat, Compose Post, and Direct Messages are available as Beta.
 - Wellness: AI Companion, Work‑Balance AI, Ambience Sync AI, Grief + Identity Support, Self‑Care Library, Rehab Games, Diet & Nutrition Guides, Symptom & Pain Tracker, Sleep & Energy Tracker, Pain Forecast, Reflections Calendar, Accessible Exercise Hub, Daily Energy Coins, and Daily Planner are available as Beta.
   - Also in Beta: Sleep Reframe, CBT Mini‑Games, DBT Skill Matcher, Opposite Action, Radical Acceptance, Acceptance & Function, Distress Tolerance, Belief Strength Meter, Adaptive Meditation, and Dream Tracker & Interpreter.
-- Resources: Evidence Locker, Chronic Tracker, and Medication & Treatment Tracker are available as Beta.
+- Resources: Evidence Locker, Chronic Tracker, Medication & Treatment Tracker, Appeal Coach, Claims Navigator, Denial Decoder, Prepare to Appeal, and Doctor Visit Prep are available as Beta.
   - Resources → Trackers & Planners: Deadline Calculator + Reminders, Rehab Progress Tracker, and Return‑to‑Work Planner are available as Beta.
-  
   - Wellness: Also in Beta — Micro‑Movement Coach and AI Pacing Partner.
 
 ## Troubleshooting
