@@ -140,11 +140,42 @@ async function main(){
     if (!prev || it.score > prev.score) byLink.set(key, it);
   }
   const deduped = Array.from(byLink.values());
+  // Per-source caps: limit items from a single domain to avoid dominance
+  const domainCounts = Object.create(null);
+  const capPerSource = 4;
+  const capped = [];
+  for (const it of deduped.sort((a,b)=> b.score - a.score)) {
+    const u = (it.link || '').toString();
+    const m = u.match(/^https?:\/\/([^\/]+)/i);
+    const host = m ? m[1].toLowerCase() : 'unknown';
+    domainCounts[host] = (domainCounts[host] || 0) + 1;
+    if (domainCounts[host] <= capPerSource) capped.push(it);
+  }
 
-  const ranked = deduped
+  // Must-include allowlist: ensure at least 1 item from each, if present
+  const mustIncludeHosts = [
+    'accessible.canada.ca', 'www.canada.ca', 'chrc-ccdp.gc.ca',
+    'www.wsib.ca', 'www.worksafebc.com', 'www.wcb.ab.ca'
+  ];
+  const ensured = new Map();
+  for (const it of deduped) {
+    const u = (it.link || '').toString();
+    const m = u.match(/^https?:\/\/([^\/]+)/i);
+    const host = m ? m[1].toLowerCase() : '';
+    if (mustIncludeHosts.includes(host)) {
+      if (!ensured.has(host)) ensured.set(host, it);
+    }
+  }
+
+  const ranked = capped
     .filter(i => i.score >= cfg.minScore)
-    .sort((a,b)=> b.score - a.score)
-    .slice(0, cfg.maxItems);
+    .sort((a,b)=> b.score - a.score);
+  // Prepend ensured must-include items if not already present
+  for (const it of ensured.values()) {
+    if (!ranked.find(r => r.link === it.link)) ranked.unshift(it);
+  }
+  // Cut to maxItems after ensuring must-haves
+  ranked.splice(cfg.maxItems);
 
   // Write a daily blog draft (optional)
   if (cfg.postDaily) {

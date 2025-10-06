@@ -26,6 +26,17 @@ jobs:
         run: |
           jq --version || (sudo apt-get update -y && sudo apt-get install -y jq)
 
+      - name: Preflight availability check
+        run: |
+          URL="https://3mpwrapp.github.io/?no-modal=1"
+          for i in 1 2 3; do
+            echo "Preflight attempt $i..."
+            if curl -sSfL "$URL" -o /dev/null; then echo "Site reachable"; exit 0; fi
+            sleep 3
+          done
+          echo "Site not reachable after retries" >&2
+          exit 1
+
       - name: Run pa11y-ci
         continue-on-error: true
         run: |
@@ -45,11 +56,6 @@ jobs:
           fi
           echo "total=${TOTAL}" >> $GITHUB_OUTPUT
           echo "error_pages=${ERROR_PAGES}" >> $GITHUB_OUTPUT
-
-              echo "\n### Issue breakdown (first 5 types)" >> $GITHUB_STEP_SUMMARY
-              jq -r '[.[] | .issues[]? | {code, type}] | group_by(.code) | sort_by(length) | reverse | .[0:5] | to_entries[] | ("- " + (.["value"][0].code // "(no code)") + ": " + ((.["value"] | length) | tostring) + " occurrences")' pa11y-report.json >> $GITHUB_STEP_SUMMARY || true
-              echo "\n### Example messages (first 5)" >> $GITHUB_STEP_SUMMARY
-              jq -r '.[] | .issues[]? | "- [" + (.code // .type // "issue") + "] " + (.message // "") + " (" + (.selector // "") + ")"' pa11y-report.json | head -n 5 >> $GITHUB_STEP_SUMMARY || true
       - name: Upload pa11y report
         if: always()
         uses: actions/upload-artifact@v4
@@ -71,6 +77,12 @@ jobs:
               echo "\n### Top issues" >> $GITHUB_STEP_SUMMARY
               # Try to extract first few failing entries; pa11y-ci json may be an array of results
               jq -r '(.results // .) | .[]? | select(.issues) | "- URL: " + (.url // .pageUrl // "") + " (" + ((.issues | length) | tostring) + " issues)"' pa11y-report.json | head -n 10 >> $GITHUB_STEP_SUMMARY || true
+              echo "\n### Issue breakdown (first 5 types)" >> $GITHUB_STEP_SUMMARY
+              jq -r '[.[] | .issues[]? | {code, type}] | group_by(.code) | sort_by(length) | reverse | .[0:5] | to_entries[] | ("- " + (.["value"][0].code // "(no code)") + ": " + ((.["value"] | length) | tostring) + " occurrences")' pa11y-report.json >> $GITHUB_STEP_SUMMARY || true
+              echo "\n### Example messages (first 5)" >> $GITHUB_STEP_SUMMARY
+              jq -r '.[] | .issues[]? | "- [" + (.code // .type // "issue") + "] " + (.message // "") + " (" + (.selector // "") + ")"' pa11y-report.json | head -n 5 >> $GITHUB_STEP_SUMMARY || true
+              echo "\n### All issue codes (counts)" >> $GITHUB_STEP_SUMMARY
+              jq -r '[.[] | .issues[]? | .code] | group_by(.) | map({code: .[0], count: length}) | sort_by(.count) | reverse | .[] | ("- " + (.code // "(no code)") + ": " + (.count | tostring))' pa11y-report.json >> $GITHUB_STEP_SUMMARY || true
             fi
           else
             echo "No pa11y-report.json found." >> $GITHUB_STEP_SUMMARY

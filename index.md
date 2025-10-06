@@ -159,15 +159,52 @@ Ready to join the movement? Here’s how you can get started:
 
 ## Weekly updates
 
-{% assign weekly = site.posts | where_exp: 'p', "p.tags contains 'weekly'" | first %}
-{% if weekly %}
-<p>
-  Don’t miss our latest weekly update:
-  <a href="{{ weekly.url | relative_url }}">{{ weekly.title }}</a> — {{ weekly.date | date: "%B %-d, %Y" }}
-  <br>
-  <a href="{{ '/blog' | relative_url }}">Browse all posts →</a>
-  </p>
+{% assign weeklies = site.posts | where_exp: 'p', "p.tags contains 'weekly'" %}
+{% if weeklies and weeklies.size > 0 %}
+<div class="weekly-swiper" role="region" aria-labelledby="weekly-title">
+  <h2 id="weekly-title">Weekly updates</h2>
+  <div class="weekly-track" data-weekly-track>
+    {% for p in weeklies limit:2 %}
+    <article class="weekly-card">
+      <h3 class="weekly-card__title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+      <p class="weekly-card__meta">{{ p.date | date: "%B %-d, %Y" }}</p>
+      {% if p.excerpt %}<p class="weekly-card__excerpt">{{ p.excerpt }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  <div class="weekly-controls" role="group" aria-label="Weekly navigation">
+    <button class="weekly-btn" data-dir="-1" aria-label="Previous">‹</button>
+    <button class="weekly-btn" data-dir="1" aria-label="Next">›</button>
+    <a class="weekly-all" href="{{ '/blog' | relative_url }}">All posts →</a>
+  </div>
+</div>
+
+<style>
+.weekly-swiper { margin: 1.5rem 0; }
+.weekly-track { display: grid; grid-auto-flow: column; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory;}
+.weekly-card { min-width: 280px; max-width: 420px; padding: 1rem; border: 1px solid var(--border,#ddd); border-radius: 8px; scroll-snap-align: start; background: var(--bg,#fff);}
+.weekly-card__title { margin: 0 0 .25rem; font-size: 1.1rem; }
+.weekly-card__meta { margin: 0 0 .5rem; color: #666; font-size: .9rem; }
+.weekly-controls { display: flex; align-items: center; gap: .5rem; margin-top: .5rem; }
+.weekly-btn { padding: .25rem .5rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .weekly-track { scroll-behavior: smooth; }
+}
+</style>
+
+<script>
+(function(){
+  var track = document.querySelector('[data-weekly-track]');
+  if (!track) return;
+  var step = 300;
+  function byDir(dir){ try { track.scrollBy({ left: step*dir, top: 0, behavior: (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth') }); } catch(e){ track.scrollLeft += step*dir; } }
+  document.querySelectorAll('.weekly-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ var dir = parseInt(btn.getAttribute('data-dir')||'1',10); byDir(dir); });
+  });
+})();
+</script>
 {% else %}
+<h2>Weekly updates</h2>
 <p>Weekly updates will appear here once available.</p>
 {% endif %}
 
@@ -175,7 +212,13 @@ Ready to join the movement? Here’s how you can get started:
 
 Follow 3mpowr on social media to stay connected and be part of the community:
 
- - <a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">YouTube</a> – Watch videos and live sessions
+<ul role="list" aria-label="Social links" class="socials-list">
+  <li role="listitem"><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📘</span> Facebook</a> – Follow us for updates and community news</li>
+  <li role="listitem"><a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✖️</span> X (Twitter)</a> – Join the conversation</li>
+  <li role="listitem"><a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📸</span> Instagram</a> – See our latest posts and stories</li>
+  <li role="listitem"><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶️</span> YouTube</a> – Watch videos and live sessions</li>
+  <li role="listitem"><a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🎵</span> TikTok</a> – Short clips and updates</li>
+</ul>
 
 ---
 
