@@ -1,5 +1,20 @@
 [
   {
+    "hash": "01e03255b472cf368ae15847bef5e4ee5102cb9f",
+    "date": "2025-10-05",
+    "message": "Merge branch 'main' of https://github.com/3mpowrApp/3mpwrapp.github.io"
+  },
+  {
+    "hash": "5519683b0e8bc9389c66e01e0768c400b7d58ed2",
+    "date": "2025-10-05",
+    "message": "feat(accessibility,ci,seo,i18n,content): expanded a11y settings; auto gitlog updates; SEO polish; FR nav labels; events cleanup"
+  },
+  {
+    "hash": "15dc5379c6228daaa4ca00eeba971575939e940f",
+    "date": "2025-10-06",
+    "message": "chore(data): update gitlog.json"
+  },
+  {
     "hash": "54fa190099c1f9f8f05b2b36cbac061573d00d1f",
     "date": "2025-10-05",
     "message": "feat(a11y,whats-new,nav,seo): granular accessibility settings; auto “What’s New” from commits; mobile menu a11y; hreflang + breadcrumbs"
@@ -983,20 +998,5 @@
     "hash": "925a520a6d9fbd3172d7d834e7a04d0e501cf5f5",
     "date": "2025-10-02",
     "message": "Add improved Beta Test Signup page with device question and commitment note."
-  },
-  {
-    "hash": "dfb650ac364072b772d5e043cc15f9548f1baa97",
-    "date": "2025-09-24",
-    "message": "Merge pull request #1 from empowrapp08162025/copilot/fix-27e9a848-b58d-4779-be47-08acb960ead1"
-  },
-  {
-    "hash": "85362ee5cf50b1a9257e1be814bf2c60a8eb031a",
-    "date": "2025-09-24",
-    "message": "Create blog/index.md as requested"
-  },
-  {
-    "hash": "839f66b19fe01a5f6d101118ae5afc34b20a428e",
-    "date": "2025-09-24",
-    "message": "Initial plan"
   }
 ]
