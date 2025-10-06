@@ -215,6 +215,14 @@ Quick links to docs
 - Reflections Calendar overview: `docs/user-guide.md#reflections-calendar`
 - Full Quick Tour: `docs/quick-tour.md`
 
+### What's New automation (free)
+
+- Source of truth: human-friendly bullets in `docs/CHANGELOG.md`.
+- Generator: `npm run whatsnew:gen` parses the changelog and writes `data/whatsnew.auto.ts`.
+- Daily refresh: A free GitHub Actions workflow (`.github/workflows/whatsnew-daily.yml`) runs every day and opens a PR if the generated file changes. No paid services required.
+- App behavior: Items older than 30 days auto‑archive; the badge only counts non‑archived items.
+- Manual run: If needed, run locally and commit: `npm run whatsnew:gen`.
+
 ## Community (Firestore)
 
 - Channels/Threads
