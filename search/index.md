@@ -7,11 +7,14 @@ description: Search the 3mpowr website using DuckDuckGo.
 # Search the site
 
 <form id="site-search" action="https://duckduckgo.com/" method="get" role="search" aria-describedby="search-help">
-  <div>
-    <label for="q">Search terms</label><br>
-    <input id="q" name="q_user" type="search" required inputmode="search" autocomplete="off" spellcheck="true">
-    <p id="search-help" class="sr-only">Your search will be limited to pages on this website.</p>
-  </div>
+  <fieldset>
+    <legend>Search this site</legend>
+    <div>
+      <label for="q">Search terms</label><br>
+      <input id="q" name="q_user" type="search" required inputmode="search" autocomplete="off" spellcheck="true" aria-describedby="search-help">
+      <p id="search-help">Search this site. Your results will be limited to pages on this website.</p>
+    </div>
+  </fieldset>
   <br>
   <button type="submit">Search</button>
 

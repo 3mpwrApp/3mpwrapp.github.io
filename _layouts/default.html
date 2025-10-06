@@ -11,6 +11,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#primary-nav">Skip to navigation</a>
   <a class="skip-link" href="#site-footer">Skip to footer</a>
   <header>
     <!-- Brand: clicking this takes you home -->
@@ -21,7 +22,7 @@
       </a>
     </div>
 
-    <nav aria-label="Primary">
+  <nav id="primary-nav" aria-label="Primary">
       <ul class="nav-list">
         <li>
           <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Home</a>
@@ -87,7 +88,7 @@
     {{ content }}
   </main>
 
-  <footer id="site-footer">
+  <footer id="site-footer" role="contentinfo">
     <div class="social-links">
       <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">Facebook</a>
       <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
@@ -95,19 +96,27 @@
       <a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="Subscribe to RSS feed">RSS</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">Beta Testers Sign Up</a>
     </div>
-  <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpowr App</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy</a> • <a href="{{ '/accessibility' | relative_url }}">Accessibility</a> • <a href="{{ '/accessibility-settings/' | relative_url }}">Accessibility Settings</a> • <a href="{{ '/whats-new/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="What's New RSS feed">What’s New RSS</a></p>
+  <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpowr App</a> • <a href="{{ '/user-guide/' | relative_url }}">User Guide</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy</a> • <a href="{{ '/accessibility' | relative_url }}">Accessibility</a> • <a href="{{ '/accessibility-settings/' | relative_url }}">Accessibility Settings</a> • <a href="{{ '/whats-new/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="What's New RSS feed">What’s New RSS</a></p>
   </footer>
 
   <!-- A11y: skip link should move focus to main -->
   <script>
     (function() {
-      var skip = document.querySelector('.skip-link');
-      var main = document.getElementById('main-content');
-      if (skip && main) {
-        skip.addEventListener('click', function() {
-          setTimeout(function(){ main.focus(); }, 0);
-        });
+      // Make all skip links move focus to their target
+      function focusTarget(target) {
+        if (!target) return;
+        // Ensure it can be programmatically focused
+        if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+        setTimeout(function(){ try { target.focus(); } catch(e) {} }, 0);
       }
+      var links = document.querySelectorAll('.skip-link[href^="#"]');
+      links.forEach(function(link){
+        link.addEventListener('click', function(e){
+          var id = link.getAttribute('href').slice(1);
+          var target = document.getElementById(id);
+          if (target) { focusTarget(target); }
+        });
+      });
     })();
   </script>
 
@@ -136,14 +145,10 @@
         >Loading…</iframe>
       </div>
       <div class="modal-footer">
-        <div class="reminder">
-          <label for="newsletter-remind">Remind me in:</label>
-          <select id="newsletter-remind" aria-label="Reminder interval">
-            <option value="604800000" selected>1 week</option>
-            <option value="1209600000">2 weeks</option>
-            <option value="2592000000">1 month</option>
-          </select>
-        </div>
+        <label style="display:flex;align-items:center;gap:0.5rem;">
+          <input type="checkbox" id="newsletter-dontshow" />
+          Don’t show again
+        </label>
         <div class="modal-buttons">
           <button id="newsletter-dismiss" data-action="newsletter-dismiss" type="button" class="button button--secondary">Not now</button>
           <button id="newsletter-subscribed" data-action="newsletter-subscribed" type="button" class="button">Already subscribed</button>
@@ -156,15 +161,14 @@
   <script>
     (function() {
   var MODAL_KEY = 'newsletter-dismissed'; // legacy key (kept for compatibility)
-  var MODAL_LAST = 'newsletter-last-dismissed';
+  var MODAL_SEEN = 'newsletter-seen'; // first-visit gating
   var MODAL_SUB = 'newsletter-subscribed';
   var modal = document.getElementById('newsletter-modal');
   var closeBtn = document.getElementById('newsletter-close');
   var dismissBtn = document.getElementById('newsletter-dismiss');
   var subscribedBtn = document.getElementById('newsletter-subscribed');
   var dialog = modal ? modal.querySelector('[data-newsletter-dialog]') : null;
-  var reminderSelect = document.getElementById('newsletter-remind');
-  var REM_MS = 'newsletter-reminder-ms';
+  var dontShow = document.getElementById('newsletter-dontshow');
   var homeRoot = '{{ '/' | relative_url }}';
       var isHome = (location.pathname === homeRoot || location.pathname === homeRoot + 'index.html');
   var noModal = (new URLSearchParams(location.search)).get('no-modal') === '1';
@@ -195,13 +199,9 @@
       }
 
       function shouldShow() {
-        if (safeGet(MODAL_SUB) === '1') return false; // user said they're subscribed
-        var last = parseInt(safeGet(MODAL_LAST) || '0', 10);
-        if (!last) return true;
-        var WEEK = 7 * 24 * 60 * 60 * 1000;
-        var interval = parseInt(safeGet(REM_MS) || String(WEEK), 10);
-        if (!isFinite(interval) || interval < 24*60*60*1000) interval = WEEK; // min 1 day safeguard
-        return (Date.now() - last) > interval;
+        if (safeGet(MODAL_SUB) === '1') return false; // already subscribed
+        if (safeGet(MODAL_SEEN) === '1') return false; // first-visit only
+        return true;
       }
 
       if (modal && isHome && !noModal && shouldShow()) {
@@ -211,13 +211,9 @@
 
       function handleDismiss() {
         safeSet(MODAL_KEY, '1'); // legacy
-        var interval = null;
-        if (reminderSelect && reminderSelect.value) {
-          var v = parseInt(reminderSelect.value, 10);
-          if (isFinite(v)) interval = v;
+        if (dontShow && dontShow.checked) {
+          safeSet(MODAL_SEEN, '1');
         }
-        if (interval) safeSet(REM_MS, String(interval));
-        safeSet(MODAL_LAST, String(Date.now()));
         closeModal();
       }
 
@@ -227,6 +223,7 @@
       if (doneBtn) {
         doneBtn.addEventListener('click', function(){
           handleDismiss();
+          safeSet(MODAL_SEEN, '1');
           // Ensure we land on home
           try { window.location.assign(homeRoot); } catch(e) {}
         });
@@ -235,7 +232,7 @@
       if (subscribedBtn) {
         subscribedBtn.addEventListener('click', function(){
           safeSet(MODAL_SUB, '1');
-          safeSet(MODAL_LAST, String(Date.now()));
+          safeSet(MODAL_SEEN, '1');
           closeModal();
         });
       }
@@ -254,7 +251,7 @@
           handleDismiss();
         } else if (action === 'newsletter-subscribed') {
           safeSet(MODAL_SUB, '1');
-          safeSet(MODAL_LAST, String(Date.now()));
+          safeSet(MODAL_SEEN, '1');
           closeModal();
         } else if (action === 'newsletter-done') {
           handleDismiss();
@@ -267,7 +264,7 @@
         if (!modal || modal.hidden) return;
         if (e.key === 'Escape') {
           safeSet(MODAL_KEY, '1');
-          safeSet(MODAL_LAST, String(Date.now()));
+          if (dontShow && dontShow.checked) safeSet(MODAL_SEEN, '1');
           closeModal();
           return;
         }
@@ -297,7 +294,7 @@
         modal.addEventListener('click', function(e){
           if (e.target === modal) {
             safeSet(MODAL_KEY, '1');
-            safeSet(MODAL_LAST, String(Date.now()));
+            if (dontShow && dontShow.checked) safeSet(MODAL_SEEN, '1');
             closeModal();
           }
         });
@@ -306,7 +303,7 @@
       // Optional: if Google Form redirects back, auto-dismiss next visit
       if (document.referrer && document.referrer.includes('docs.google.com/forms')) {
         safeSet(MODAL_KEY, '1');
-        safeSet(MODAL_LAST, String(Date.now()));
+        safeSet(MODAL_SEEN, '1');
       }
     })();
   </script>

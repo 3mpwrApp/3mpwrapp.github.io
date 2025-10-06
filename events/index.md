@@ -6,12 +6,18 @@ permalink: /events/
 
 # Events
 
-We’re working on bringing the in-app events calendar to the website.
+The website calendar will become available during Beta Testers Phase 1 (Closed Internal Testing) — announcement coming soon.
 
-Options we can support:
+About the feed
 
-- Embed a public Google Calendar or ICS-powered calendar.
-- Fetch an ICS or JSON feed during CI and render accessible event cards.
-- Client-side fetch from an API (if CORS allows), with a static fallback.
+- The app exposes a text/calendar (ICS) feed built from the events service.
+- The feed has a 5‑minute cache window on the server to balance freshness and performance.
+- You can paste the ICS URL into most CMS calendar widgets or subscribe in Google Calendar.
 
-Provide an ICS or API URL and we’ll wire it up. For now, here’s a placeholder.
+Ways we can integrate it here
+
+- Embed the ICS directly in a calendar widget (CMS-dependent).
+- Render accessible event cards during CI by fetching the ICS (or a JSON mirror) and generating static HTML.
+- Client-side fetch from the API (if CORS permits), with a static fallback for reliability.
+
+When the URL is ready, we’ll wire the integration and publish the calendar on this page.

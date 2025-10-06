@@ -22,6 +22,9 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
 <!-- What's New RSS feed autodiscovery -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }} — What's New" href="{{ '/whats-new/feed.xml' | relative_url }}">
 
+<!-- Main site RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }} — Site Feed" href="{{ '/feed.xml' | relative_url }}">
+
 {%- comment -%} Optional GA4 {%- endcomment -%}
 {%- if site.ga_measurement_id and site.ga_measurement_id != '' -%}
   {%- include analytics.html -%}

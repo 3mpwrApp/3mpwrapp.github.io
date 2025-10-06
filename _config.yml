@@ -30,7 +30,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/og-image.png
+      image: /assets/empowrapp-logo.png
 
 # Collections
 collections:
@@ -71,3 +71,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - public
