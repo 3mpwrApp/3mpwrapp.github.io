@@ -29,3 +29,15 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
 {%- if site.ga_measurement_id and site.ga_measurement_id != '' -%}
   {%- include analytics.html -%}
 {%- endif -%}
+
+{%- comment -%} JSON-LD: Organization schema {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.title | escape }}",
+  "url": "{{ site.url | append: site.baseurl }}",
+  "logo": "{{ site.logo | default: site.favicon | relative_url | absolute_url }}",
+  "sameAs": [{% for link in site.social.links %}"{{ link }}"{% if forloop.last == false %}, {% endif %}{% endfor %}]
+}
+</script>

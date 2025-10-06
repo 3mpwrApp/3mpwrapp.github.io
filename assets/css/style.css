@@ -139,6 +139,32 @@ main {
   box-shadow: 0 2px 8px #0001;
 }
 
+/* Breadcrumbs */
+.breadcrumbs {
+  max-width: 700px;
+  margin: 0.5em auto 0;
+  padding: 0 1em;
+}
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.breadcrumbs li::after {
+  content: '/';
+  margin: 0 0.25rem;
+  color: #6b7280;
+}
+.breadcrumbs li:last-child::after { content: ''; }
+.breadcrumbs [aria-current="page"] { font-weight: 700; }
+
+/* Search highlight */
+.mark { background: #fff3b0; color: inherit; padding: 0 0.1em; border-radius: 2px; }
+body[data-theme="dark"] .mark { background: #4b3f00; }
+
 /* Content links – clearly identifiable (WCAG 1.4.1) */
 main a {
   color: #0645ad;             /* High-contrast blue */

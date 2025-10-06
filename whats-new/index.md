@@ -12,14 +12,14 @@ Subscribe to updates:
 
 - RSS: [What's New feed]({{ '/whats-new/feed.xml' | relative_url }})
 
-{% assign now = 'now' | date: '%s' %}
-{% assign cutoff_seconds = 30 | times: 24 | times: 60 | times: 60 %}
-{% assign cutoff = now | minus: cutoff_seconds %}
+{% assign now = 'now' | date: '%s' | plus: 0 %}
+{% assign cutoff_seconds = 30 | times: 24 | times: 60 | times: 60 | plus: 0 %}
+{% assign cutoff = now | minus: cutoff_seconds | plus: 0 %}
 
 <ul>
 {% assign recent = site.whats_new | sort: 'date' | reverse %}
 {% for item in recent %}
-  {% assign item_seconds = item.date | date: '%s' %}
+  {% assign item_seconds = item.date | date: '%s' | plus: 0 %}
   {% if item_seconds >= cutoff %}
   <li>
     <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
@@ -36,7 +36,7 @@ Updates older than 30 days are archived here.
 
 <ul>
 {% for item in recent %}
-  {% assign item_seconds = item.date | date: '%s' %}
+  {% assign item_seconds = item.date | date: '%s' | plus: 0 %}
   {% if item_seconds < cutoff %}
   <li>
     <a href="{{ item.url | relative_url }}">{{ item.title }}</a>

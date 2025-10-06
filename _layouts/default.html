@@ -57,6 +57,9 @@
         <li>
           <a href="{{ '/events' | relative_url }}" {% if page.url contains '/events' %}aria-current="page"{% endif %}>Events</a>
         </li>
+        <li>
+          <a href="{{ '/site-map' | relative_url }}" {% if page.url contains '/site-map' %}aria-current="page"{% endif %}>Site Map</a>
+        </li>
       </ul>
     </nav>
 
@@ -84,6 +87,28 @@
     </div>
   </header>
 
+  {%- comment -%}
+    Accessible breadcrumbs. Shows Home > Section > Page when the URL depth >= 2.
+    Adjusts based on the current page URL segments.
+  {%- endcomment -%}
+  <nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      {%- assign segments = page.url | split: '/' | reject: '' -%}
+      {%- if segments.size > 0 -%}
+        {%- assign path = '' -%}
+        {%- for seg in segments -%}
+          {%- assign path = path | append: '/' | append: seg -%}
+          {%- if forloop.last -%}
+            <li aria-current="page">{{ page.title | default: seg | replace: '-', ' ' | capitalize }}</li>
+          {%- else -%}
+            <li><a href="{{ path | relative_url }}">{{ seg | replace: '-', ' ' | capitalize }}</a></li>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </ol>
+  </nav>
+
   <main id="main-content" role="main" tabindex="-1">
     {{ content }}
   </main>
@@ -96,7 +121,7 @@
       <a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="Subscribe to RSS feed">RSS</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">Beta Testers Sign Up</a>
     </div>
-  <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpowr App</a> • <a href="{{ '/user-guide/' | relative_url }}">User Guide</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy</a> • <a href="{{ '/accessibility' | relative_url }}">Accessibility</a> • <a href="{{ '/accessibility-settings/' | relative_url }}">Accessibility Settings</a> • <a href="{{ '/whats-new/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="What's New RSS feed">What’s New RSS</a></p>
+  <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpowr App</a> • <a href="{{ '/user-guide/' | relative_url }}">User Guide</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy</a> • <a href="{{ '/accessibility' | relative_url }}">Accessibility</a> • <a href="{{ '/accessibility-settings/' | relative_url }}">Accessibility Settings</a> • <a href="{{ '/site-map/' | relative_url }}">Site Map</a> • <a href="{{ '/whats-new/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="What's New RSS feed">What’s New RSS</a></p>
   </footer>
 
   <!-- A11y: skip link should move focus to main -->
