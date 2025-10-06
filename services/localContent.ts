@@ -66,11 +66,16 @@ export async function getWhatsNewSplit(): Promise<{ current: WhatsNewItem[]; arc
   const local = await getLocalWhatsNew();
   // Combine with defaults and re-apply age archival at read time
   let defaults: WhatsNewItem[] = [];
+  let autos: WhatsNewItem[] = [];
   try {
     const mod = await import('../data/whatsnew');
     defaults = mod.whatsnew || [];
   } catch {}
-  const all = [...local, ...defaults];
+  try {
+    const modAuto = await import('../data/whatsnew.auto');
+    autos = (modAuto as any)?.whatsnewAuto || [];
+  } catch {}
+  const all = [...local, ...defaults, ...autos];
   const now = Date.now();
   const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
   const withArchive = all.map((i) => {

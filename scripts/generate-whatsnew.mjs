@@ -4,7 +4,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const changelogPath = path.join(root, 'docs', 'CHANGELOG.md');
-const outPath = path.join(root, 'data', 'whatsnew.auto.json');
+const outPathTs = path.join(root, 'data', 'whatsnew.auto.ts');
 
 function parseChangeLog(md) {
   const lines = md.split(/\r?\n/);
@@ -53,10 +53,14 @@ function main() {
   const md = fs.readFileSync(changelogPath, 'utf8');
   const items = parseChangeLog(md);
   // Ensure output dir exists
-  const outDir = path.dirname(outPath);
+  const outDir = path.dirname(outPathTs);
   fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(outPath, JSON.stringify(items, null, 2));
-  console.log(`[whatsnew:gen] Wrote ${items.length} items to ${outPath}`);
+  const header = `// Auto-generated from docs/CHANGELOG.md\n` +
+    `// Do not edit manually. Run: npm run whatsnew:gen\n` +
+    `import type { WhatsNewItem } from './whatsnew';\n`;
+  const body = `\nexport const whatsnewAuto: WhatsNewItem[] = ${JSON.stringify(items, null, 2)};\n`;
+  fs.writeFileSync(outPathTs, header + body, 'utf8');
+  console.log(`[whatsnew:gen] Wrote ${items.length} items to ${outPathTs}`);
 }
 
 main();
