@@ -19,6 +19,13 @@ lastUpdated: 2025-10-06
 
 Tip: The app uses your phone’s text size. Increase font size in your device settings if you want larger text.
 
+### Privacy at a glance
+
+- You control your data. Most features store information on your device by default.
+- Optional cloud features (like syncing or some community tools) only upload when you choose to sign in or turn them on.
+- You can set a Passcode and enable Wellness Lock in Settings to protect sensitive areas.
+- You can Export and Import your data under Settings → Privacy & Backups.
+
 ## Onboarding — Your first 7 days
 
 - What it is: A private checklist to get oriented. Progress stays on your device.
@@ -140,6 +147,98 @@ Recent highlights
   2. Fill in the intake form with your question.
   3. Submit and watch for a reply.
 
+### Advocacy tools — details, examples, and tips
+
+Self‑Advocacy Coach — Overview
+
+- Learn simple, repeatable steps to speak up and get clear answers. Lessons are short and practical.
+- Try this example: Open the lesson about “Asking for a timeline.” Use the sample sentence to email your case worker: “Can you confirm expected timelines for a decision and the date you will update me?”
+- Tips:
+  - Save favorite lessons for quick access.
+  - Copy the text and personalize it with your own dates and names.
+  - Practice out loud once before sending.
+
+Policy Made Simple — Overview
+
+- Plain‑language summaries of complex policies. Great for preparing for calls, meetings, or appeals.
+- Example: Search for “accommodation.” Read what’s required and common exceptions. Export to PDF to share with a supporter.
+- Tips:
+  - Use the Share button to send a summary to yourself for notes.
+  - If terms are unfamiliar, use the AI Advocate Translator to simplify further.
+
+AI Advocate Translator — Overview
+
+- Paste a confusing letter and get a clear, plain‑English version with the main point and what to do next.
+- Example: Paste a denial letter. The translator highlights the reason and suggests what information you may need to respond.
+- Tips:
+  - Keep a copy of the original text. Use tags in Evidence Locker (e.g., “denial”) to link items.
+  - Remove personal identifiers before sharing text outside the app.
+  - Privacy: Text stays local unless you share it.
+
+AI Case Interpreter — Overview
+
+- Summarizes long notes or mixed sources (emails, call notes). Suggests themes and questions to ask.
+- Example: Paste last month’s notes. The interpreter points out missing documents and suggests asking for a status update.
+- Tips:
+  - Use it before important calls to feel prepared.
+  - Save the summary to Evidence Locker and attach related files.
+
+Collective Legal Action Hub — Overview
+
+- Coordinate with others: set shared tasks, write notes, and export progress. Useful for group actions.
+- Example: Create a room called “Wheelchair Ramp Access.” Add tasks like “Photograph entrance,” “Draft letter to property manager.”
+- Tips:
+  - Keep tasks small and clear. Add owners and due dates when possible.
+  - Export CSV weekly and share updates.
+
+Ally Hub — Overview
+
+- Quick prompts that supporters can use to help (send emails, make calls, share posts).
+- Example: Choose “Call your representative” and send it to 3 friends with your story headline.
+- Tips:
+  - Add context: one sentence about what happened and what you want.
+  - Follow up with a thank‑you; people help again when appreciated.
+
+AI Government Navigator — Overview
+
+- Breaks a government process into simple steps with links. A map for “what comes next.”
+- Example: Enter “Appeal denied benefit.” The tool suggests steps, documents to collect, and deadlines to watch.
+- Tips:
+  - Bookmark helpful pages to Saved.
+  - Copy the list into Evidence Locker and check off steps.
+
+Lawyer Finder — Overview
+
+- Search by name, area, or location. Switch between Map and List. Save profiles to review later.
+- Example: Filter by “workplace injury.” Open a profile and note fee info.
+- Tips:
+  - Call 3–5 options; ask about timelines and next steps.
+  - Save notes in Evidence Locker linked to the profile.
+
+Disability Justice Ratings (beta) — Overview
+
+- Rate services and providers (e.g., clinics, hospitals). See average scores and comments.
+- Example: Rate a clinic for accessibility (entrance, signage, appointment fairness).
+- Tips:
+  - Be specific; it helps others. Avoid personal identifiers.
+  - Submissions are moderated; abusive content is removed.
+
+Accountability Coach (beta) — Overview
+
+- Turn a problem into an action plan with timelines and draft letters.
+- Example: “My wage replacement stopped without notice.” The coach suggests: request reason in writing, set a response deadline, prepare an appeal letter.
+- Tips:
+  - Keep your plan short: 3–5 steps.
+  - Revisit weekly; update status and dates.
+
+Accountability Cases (beta) — Overview
+
+- View all cases created with the coach in one place. Track status and notes.
+- Example: Sort by “Overdue.” Follow up on older items first.
+- Tips:
+  - Export a case summary before meetings.
+  - Link related Evidence Locker items for quick reference.
+
 ![Advocacy Directory](images/advocacy-directory.png "Advocacy directory with search and tools")
 
 ## Campaigns
@@ -162,10 +261,23 @@ Recent highlights
 4. Tap Open Campaign Room to collaborate on tasks and notes.
 5. Use Export CSV to share progress.
 
+Campaigns — details, examples, and tips
+
+- Overview: Campaigns help you describe a goal, gather supporters, and organize work in a Campaign Room.
+- Example: “Safer Crosswalks.” Add Target (City Council) and Goal (Install audible signals at 3 intersections). Ask supporters to share and join the Campaign Room.
+- Tips:
+  - Keep the title short and specific.
+  - Post updates when you hit milestones; people stay engaged when they see progress.
+  - Use the Notes area to keep meeting minutes in one place.
+
 ![Campaigns List](images/campaigns-list.png "Campaigns list with Create box and search")
 ![Campaign Room](images/campaign-room.png "Shared tasks and notes with export")
 
 ## Community
+- Example: Post a thread asking for accessible housing tips in your city. Tag your province channel for visibility.
+- Tips:
+  - Use clear titles like “Need advice: appeal letter due in 10 days.”
+  - Be kind. Safety rules apply to keep the space supportive.
 
 - Channels: Join channels by province or topic.
 - Threads: Post a new thread, read, and reply to comments.
@@ -181,6 +293,11 @@ How to send a DM
 4. Safety: Blocked users cannot DM you; blocked conversations are hidden.
 5. Note: This early beta uses user IDs. Profile search is planned.
 
+- Example: DM a moderator for help finding local resources.
+- Tips:
+  - Don’t share sensitive info unless you trust the person.
+  - If someone is unsafe, block them and tell a moderator.
+
 ### Safety & Blocking
 
 How to block or unblock
@@ -189,6 +306,11 @@ How to block or unblock
 2. To block: enter the user’s ID → tap Block.
 3. To unblock: find their ID → tap Unblock.
 4. What happens: You won’t see their posts or DMs. Coming soon: one‑tap block from posts, report tools, and moderation.
+
+- Example: Block a user who sends unwanted messages. Unblock later if needed.
+- Tips:
+  - Use blocking to protect your time and energy.
+  - Reporting tools are coming soon; until then, contact moderators via About → Contact.
 
 ![Community Threads](images/community-threads.png "Channel threads and compose")
 
@@ -203,6 +325,14 @@ How to use Events
 2. Tap any day to see events.
 3. Open an event to read details.
 4. Tap Add Reminder to add it to your calendar, or share the ICS file as a fallback.
+
+Events — details, examples, and tips
+
+- Overview: A single calendar for community events, holidays, and observances. Easy exports to your device calendar.
+- Example: Add a disability awareness event next week and set a reminder 1 day before.
+- Tips:
+  - Turn on provincial holidays in Settings for a complete view.
+  - Use ICS exports if Google Calendar isn’t available.
 
 ### Website calendar sync
 
@@ -225,6 +355,14 @@ How to use Podcasts & Stories
 3. Choose where to play it (YouTube App or Browser).
 4. Tap the bookmark icon to save it for later.
 
+Podcasts & Stories — details, examples, and tips
+
+- Overview: Curated videos and stories relevant to disability, work, and wellness.
+- Example: Save a story about return‑to‑work accommodations and share it with a friend.
+- Tips:
+  - If YouTube is blocked, try opening in the browser.
+  - Use Favorites to build a playlist you can return to.
+
 ![Podcasts](images/podcasts.png "Videos list with thumbnails and bookmarks")
 
 ### Exercise Hub
@@ -240,6 +378,14 @@ How to use Exercise Hub
 3. Tap a video to play.
 4. Tap ☆ Favorite to save it. View Favorites in the Hub or under Wellness → Exercise Favorites.
 
+Exercise Hub — details, examples, and tips
+
+- Overview: Accessible movement options for many bodies and energy levels.
+- Example: Filter to limited‑mobility and try a 5‑minute upper‑body routine.
+- Tips:
+  - Start small (2–5 minutes). Stop if anything hurts.
+  - Use High Contrast mode if visuals are hard to see.
+
 ## Research
 
 - Filters: Filter by Topic or Year; use Search to find titles.
@@ -251,6 +397,14 @@ How to use Research
 2. Pick a Topic or Year, or type into Search.
 3. Tap an item to open the original source.
 4. Tap Share to send the link to others.
+
+Research — details, examples, and tips
+
+- Overview: Organized links to credible sources. Good for appeal letters, accommodation requests, and planning.
+- Example: Filter by Topic “Workplace” and Year “2024,” then save two studies for later.
+- Tips:
+  - Keep notes in Evidence Locker with the study link.
+  - Check the year and source for relevance.
 
 ![Research](images/research.png "Research list with filters")
 
@@ -268,6 +422,24 @@ How to use Resources
 3. Tap an item to view details or open the link.
 4. Tap the bookmark to add it to Saved.
 
+Resources — details, examples, and tips
+
+- Overview: A hub for tools and information. Region‑aware categories put Canada‑wide and provincial items in context.
+- Example: In Work & Financial, open “Prepare to Appeal” and use the checklist before drafting a letter.
+- Tips:
+  - Set your province in Settings to see local options.
+  - Save useful items so you can find them later under Saved.
+
+AI Tools — what they’re for and examples
+
+- Rights Checker: Answer a few questions to learn if your situation might be covered by a right or policy. Example: “My request for accommodation was ignored for 30 days.”
+- Appeal Coach: Step through building an appeal, from reason to supporting documents. Example: “Benefit reduction without explanation.”
+- Deadlines + Reminders: Track important dates, set reminders, and export. Example: “Appeal due within 14 days.”
+- Evidence Checklist: Guided list of what to gather for a situation. Example: doctor notes, workplace memos, dated emails.
+- Voice‑to‑Case Notes: Speak or record quick notes; transcribe to text to save to Evidence Locker.
+- Template Gallery: Ready‑to‑edit letters and forms. Example: “Request for accommodation,” “Follow‑up on missing payment.”
+- Support Directory: Contact lists for help lines, legal clinics, and disability organizations.
+
 ![Resources](images/resources.png "Resources grouped by region with category chips")
 
 ### Emergency Wallet Card
@@ -282,6 +454,14 @@ How to set up your Emergency Wallet Card
 2. Fill in medical info (conditions, allergies, meds) and contacts.
 3. Tap Save.
 4. Tap Print or Export to create a printable card.
+
+Emergency Wallet Card — details, examples, and tips
+
+- Overview: A compact card with your key info for emergencies.
+- Example: Print a card with your allergy to penicillin and your emergency contact. Keep it in your wallet or on your phone.
+- Tips:
+  - Keep it short and readable.
+  - Update after medication changes.
 
 ![Emergency Wallet Card](images/emergency-wallet-card.png "Emergency Wallet Card form with fields for medical info and contacts")
 
@@ -300,6 +480,15 @@ How to use Evidence Locker
 5. Tap Save. Your note stays on your device unless you choose cloud save.
 6. Tap Gallery to see images in a grid.
 
+Evidence Locker — details, examples, and tips
+
+- Overview: Your private archive. Notes, files, and tags help you prepare, remember, and respond.
+- Example: Create a note “Call with insurer 2025‑10‑02,” attach a screenshot of your call log, and tag “insurer, call, timeline.”
+- Tips:
+  - Use consistent tags like “denial,” “payment,” “doctor.”
+  - After each call, write 2–3 bullet points and the next step.
+  - Optional cloud save is available; if you turn it on, pick strong passwords and enable device security.
+
 ### Trackers (Meds, Chronic, Rehab)
 
 - Export: CSV and JSON.
@@ -311,6 +500,14 @@ How to use Trackers
 2. Choose Meds, Chronic, or Rehab.
 3. Add an entry (details depend on tracker type).
 4. Tap Export to save CSV/JSON. Tap Import to load a template if available.
+
+Trackers — details, examples, and tips
+
+- Overview: Keep simple logs you can share when needed.
+- Example: In Chronic Tracker, log pain level and triggers; export CSV to discuss with your doctor.
+- Tips:
+  - Be consistent but brief—1 minute per entry is enough.
+  - Use tags to mark patterns (e.g., “weather,” “workday”).
 
 ### Medication & Treatment Tracker (beta)
 
@@ -325,6 +522,14 @@ How to track your medications
 7. Export CSV/JSON to share with a doctor if you want.
 8. Privacy: Data stays on your device unless you export or share.
 
+Medication Tracker — details, examples, and tips
+
+- Overview: A simple list of your meds with reminders and effect logs.
+- Example: Add “Gabapentin 300mg, nightly.” Set a 9pm daily reminder and a refill alert for the 25th.
+- Tips:
+  - Use the effectiveness (1–5) to notice trends over weeks.
+  - Export before doctor visits and attach to your Evidence Locker.
+
 ### Deadlines
 
 - Calendar and List views with reminders.
@@ -337,11 +542,23 @@ How to track deadlines
 3. Switch between Calendar and List views.
 4. Import ICS if you have dates from elsewhere; Export ICS/CSV to back up.
 
+Deadlines — details, examples, and tips
+
+- Overview: See all important dates in one place, so nothing slips.
+- Example: Add “Insurer appeal deadline” for 14 days from today. Set a reminder 3 days before.
+- Tips:
+  - Add who is responsible in the title when helpful (e.g., “Clinic paperwork due”).
+  - Export before vacations or busy weeks.
+
 ## Wellness
 
 - Tools: Work‑Balance AI, Adaptive Meditation, Grief & Identity Support, and more.
 - Trackers: Sleep/Energy and Symptom tracking; export CSV/PDF when available.
 - Library & Activities: Self‑care library and rehab activities.
+
+Wellness — how it helps
+
+- The Wellness tab supports pacing, reflection, and small actions that build capacity. Each tool is optional; start with the one that feels easiest.
 
 ![Wellness Tracker](images/wellness-tracker.png "Symptom tracker with export")
 
@@ -444,6 +661,52 @@ How to track deadlines
 Curated list of accessible audio practices, gentle movement, and easy‑read guides.
 Actions: Tap to open links; use Export Resources (CSV) to save/share the catalog; “Suggest a Resource” opens email.
 
+### Tips and examples for Wellness tools
+
+- Reflections Calendar
+  - Example: Quick‑add “calm” on good days; write one line on tough days. Export Week to share with your therapist.
+  - Tips: Set default tap behavior to “Editor” if you usually write notes.
+
+- Exercise Hub
+  - Example: Try 2‑minute breath pacing on low‑energy days.
+  - Tips: Favorite short routines so they’re easy to find.
+
+- Daily Energy Coins
+  - Example: Budget 12 coins. “Dishes (2), Email reply (1), Stretch (1).” Stop at your limit.
+  - Tips: Increase or decrease coins as you learn your limits.
+
+- Sleep & Energy + Work‑Balance AI
+  - Example: After a night of 5 hours sleep, plan a lighter morning with breaks.
+  - Tips: Use tags like “pain flare” so the summary reflects context.
+
+- Self‑Care Library & Rehab Games
+  - Example: Do “Reach & Tap” for 1 minute and log reps. Share CSV with your physio.
+  - Tips: Skip anything that hurts; go slow.
+
+- Diet & Nutrition Guides
+  - Example: Favorite 5 easy dinners. Export Favorites (CSV) to plan grocery shopping.
+  - Tips: Use tags like “soft foods,” “low prep.”
+
+- Sleep Reframe
+  - Example: Try a “light wind‑down” and reduce clock‑watching.
+  - Tips: Consistency helps more than perfection.
+
+- CBT/DBT/Opposite Action/Radical Acceptance
+  - Example: Use 5‑4‑3‑2‑1 senses when overwhelmed; pick a tiny opposite action like “open the window.”
+  - Tips: Write what worked in Reflections Calendar for future you.
+
+- Acceptance & Function
+  - Example: Track acceptance 4/10 → 6/10 after practicing for a week.
+  - Tips: Changes are gradual; look for trends, not perfection.
+
+- Distress Tolerance & Belief Meter
+  - Example: Use TIPP; rate belief strength before/after a reframe.
+  - Tips: Lowering belief intensity even slightly is progress.
+
+- Adaptive Meditation & Dream Tracker
+  - Example: Save short meditations for breaks; log recurring dream themes.
+  - Tips: Export links/notes as CSV for your records.
+
 ### Micro‑Movement Coach (beta)
 
 - Gentle, chair‑friendly movement prompts. Tap Next to cycle through ideas. Always stop if uncomfortable.
@@ -485,6 +748,13 @@ How to use Sleep & Energy tracker (quick steps)
 - Collections: View your saved Podcasts, Resources, and Campaigns.
 - Open: Tap any saved item to open it.
 
+Saved — details, examples, and tips
+
+- Overview: A single place to find what you bookmarked.
+- Example: Before an appointment, open Saved → Evidence Locker notes and your Meds export.
+- Tips:
+  - Periodically remove items you no longer need.
+
 ![Saved](images/saved.png "Saved items grouped by type")
 
 ## Settings
@@ -496,6 +766,14 @@ How to use Sleep & Energy tracker (quick steps)
   - Export or Import local backups.
   - Clear local data from the device if needed.
 - Terms & Policies: Read Terms or tap “Require re‑acceptance” to see them again at next launch.
+
+Settings — details, examples, and tips
+
+- Overview: Control privacy, backups, language, notifications, and accessibility.
+- Example: Turn on Wellness Lock to add an extra step before opening sensitive screens.
+- Tips:
+  - After big changes, export a backup.
+  - Set High Contrast and larger text if you squint or get headaches.
 
 ![Settings](images/settings.png "Settings showing Accessibility, Language, Notifications, and Emergency Wallet Card")
 
@@ -577,18 +855,88 @@ Add PNG/JPG screenshots to `docs/images/` with these filenames or update the ima
 
 - `images/home-header.png`
 - `images/advocacy-directory.png`
+- `images/advocacy-policy-simple.png`
+- `images/advocacy-ai-translator.png`
+- `images/advocacy-ai-case-interpreter.png`
+- `images/advocacy-ally-hub.png`
+- `images/advocacy-gov-navigator.png`
+- `images/advocacy-lawyer-finder.png`
+- `images/advocacy-ratings.png`
+- `images/advocacy-accountability-coach.png`
+- `images/advocacy-accountability-cases.png`
 - `images/campaigns-list.png`
 - `images/campaign-room.png`
 - `images/community-threads.png`
+- `images/community-dms.png`
+- `images/community-safety-blocking.png`
 - `images/events-month.png`
 - `images/podcasts.png`
 - `images/research.png`
 - `images/resources.png`
+- `images/resources-emergency-wallet-card.png`
+- `images/resources-evidence-locker.png`
+- `images/resources-trackers.png`
+- `images/resources-deadlines.png`
 - `images/wellness-tracker.png`
+- `images/wellness-reflections-calendar.png`
+- `images/wellness-exercise-hub.png`
+- `images/wellness-energy-coins.png`
+- `images/wellness-sleep-energy.png`
+- `images/wellness-work-balance-ai.png`
+- `images/wellness-self-care-library.png`
+- `images/wellness-rehab-games.png`
+- `images/wellness-nutrition-guides.png`
+- `images/wellness-sleep-reframe.png`
+- `images/wellness-cbt-mini-games.png`
+- `images/wellness-dbt-matcher.png`
+- `images/wellness-opposite-action.png`
+- `images/wellness-radical-acceptance.png`
+- `images/wellness-acceptance-function.png`
+- `images/wellness-distress-tolerance.png`
+- `images/wellness-belief-meter.png`
+- `images/wellness-adaptive-meditation.png`
+- `images/wellness-dream-tracker.png`
+- `images/wellness-ambience-sync.png`
+- `images/wellness-grief-identity.png`
+- `images/wellness-micro-movement.png`
+- `images/wellness-pacing-partner.png`
 - `images/saved.png`
 - `images/settings.png`
 
 > Tip: On iOS/Android, enable system “Guided Access”/“Screen pinning” while capturing if needed.
+
+### Visual guide — what to capture for each screenshot
+
+- Home header: Show brand, Settings (gear), and High‑Contrast icon; include the “Suggestions powered by the Personalization Engine (beta)” line.
+- Advocacy — Policy Made Simple: Show a policy summary with Export buttons visible.
+- Advocacy — AI Translator: Show input text and simplified output.
+- Advocacy — AI Case Interpreter: Show pasted notes and a summarized output with next steps.
+- Advocacy — Ally Hub: Show a prompt card with Share options.
+- Advocacy — Government Navigator: Show steps list with links.
+- Advocacy — Lawyer Finder: Show filters and Map/List toggle.
+- Advocacy — Ratings: Show a provider entry with rating controls.
+- Advocacy — Accountability Coach: Show a generated plan with steps and draft letter preview.
+- Advocacy — Accountability Cases: Show a list of cases with statuses.
+- Campaigns list and room: Show Create box, search, and in the room show Tasks and Notes.
+- Community threads: Show a channel list and a thread with replies.
+- Community DMs: Show the DM list and an open DM.
+- Safety & Blocking: Show Block and Unblock controls.
+- Events month: Show month grid with at least one event selected.
+- Podcasts: Show thumbnails and a video detail with playback choice.
+- Research: Show filters and a result open.
+- Resources index: Show category chips and a resource card.
+- Emergency Wallet Card: Show filled fields and the Print/Export button.
+- Evidence Locker: Show notes list with tags and an open note with attachments.
+- Trackers: Show tracker selection and an open tracker entry.
+- Meds tracker: Show medication list and reminder options.
+- Deadlines: Show Calendar and List views with a reminder set.
+- Wellness tools: Capture each screen listed above with one clear element visible (e.g., action button, summary, or export).
+
+Image tips
+
+- Use High Contrast on/off as needed for clarity.
+- Ensure labels are visible in screenshots.
+- Crop out personal data; use demo content.
 
 ---
 
