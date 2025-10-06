@@ -109,7 +109,7 @@ Supports:
 </script>
 
 {%- comment -%} JSON-LD: BreadcrumbList for deep pages {%- endcomment -%}
-{%- assign segments = page.url | split: '/' | reject: '' -%}
+{%- assign segments = page.url | split: '/' | where_exp: 's', 's != ""' -%}
 {%- if segments.size > 0 -%}
 <script type="application/ld+json">
 {
@@ -124,6 +124,7 @@ Supports:
     }
     {%- assign path = '' -%}
     {%- for seg in segments -%}
+      {%- if seg == '' -%}{% continue %}{%- endif -%}
       {%- assign path = path | append: '/' | append: seg -%}
       ,{
         "@type": "ListItem",

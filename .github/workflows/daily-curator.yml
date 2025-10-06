@@ -2,7 +2,7 @@ name: Daily Curator
 
 on:
   schedule:
-    - cron: "0 17 * * *" # daily at 17:00 UTC (aims for ~1pm Eastern during DST)
+    - cron: '0 17,18 * * *' # Run at 17:00 and 18:00 UTC to cover 1pm Toronto across DST
   workflow_dispatch:
 
 jobs:
@@ -24,10 +24,19 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Check 1pm Toronto time gate
+        id: timegate
+        run: |
+          TORONTO_HOUR=$(TZ=America/Toronto date +%H)
+          echo "Toronto hour: ${TORONTO_HOUR}"
+          if [ "$TORONTO_HOUR" = "13" ]; then echo "is13=true" >> $GITHUB_OUTPUT; else echo "is13=false" >> $GITHUB_OUTPUT; fi
+
       - name: Run curator
+        if: steps.timegate.outputs.is13 == 'true'
         run: node scripts/daily-curator.js
 
       - name: Commit and push
+        if: steps.timegate.outputs.is13 == 'true'
         run: |
           git config --global --add safe.directory "$(pwd)"
           git config user.email "actions@users.noreply.github.com"
@@ -47,7 +56,7 @@ jobs:
 
       # Optional: Mastodon auto-post (free). Requires MASTO_INSTANCE, MASTO_TOKEN (not set by default).
       # - name: Post to Mastodon
-      #   if: ${{ false }}
+  #   if: ${{ steps.timegate.outputs.is13 == 'true' }}
       #   env:
       #     MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
       #     MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}

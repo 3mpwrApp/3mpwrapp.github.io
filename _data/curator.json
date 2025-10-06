@@ -38,7 +38,21 @@
     "https://disabilityalliancebc.org/feed/",
     "https://www.whsclinic.org/feed/",
     "https://iavgo.org/feed/",
-    "https://inclusioncanada.ca/feed/"                             
+    "https://inclusioncanada.ca/feed/",
+    "https://accessible.canada.ca/en/whats-new.atom",              
+    "https://accessible.canada.ca/en/whats-new.rss",               
+    "https://www.canada.ca/en/government/sign-in-online-account/accessibility.rss", 
+    "https://accessible.canada.ca/en/consultations.atom",          
+    "https://chrc-ccdp.gc.ca/en/rss.xml",                          
+    "https://chrc-ccdp.gc.ca/en/news/rss.xml",                     
+    "https://www.canada.ca/content/canadasite/en/employment-social-development.atom.xml", 
+    "https://www.canada.ca/content/canadasite/en/employment-social-development/programs/accessible-canada.atom.xml",
+    "https://a11y.canada.ca/index.xml",                            
+    "https://www.ontario.ca/page/accessibility-news-en.rss",       
+    "https://inclusionnb.ca/feed/",                                
+    "https://www.bcands.bc.ca/feed/",                              
+    "https://www.cacl.ca/feed/",                                   
+    "https://www.cnib.ca/en/rss.xml"                               
   ],
   "mastodon": {
     "enabled": true,
@@ -137,6 +151,6 @@
     "#HRC"
   ],
   "maxItems": 25,
-  "minScore": 1,
+  "minScore": 2,
   "postDaily": true
 }

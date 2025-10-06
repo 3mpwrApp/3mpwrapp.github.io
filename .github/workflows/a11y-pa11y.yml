@@ -4,8 +4,11 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: "30 6 * * 1,4" # Mon & Thu @ 06:30 UTC
+    - cron: '30 6 * * 1,4' # Mon & Thu @ 06:30 UTC
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   pa11y:
@@ -20,7 +23,6 @@ jobs:
           node-version: '20'
 
       - name: Run pa11y-ci
-        id: run
         run: |
           npx pa11y-ci --config .pa11yci.json --reporter json | tee pa11y-report.json
 
@@ -31,9 +33,21 @@ jobs:
           name: pa11y-report
           path: pa11y-report.json
 
-      - name: Summary
+      - name: Summarize results
         if: always()
         run: |
           echo "## pa11y-ci report" >> $GITHUB_STEP_SUMMARY
-          echo "See attached artifact pa11y-report.json for full details." >> $GITHUB_STEP_SUMMARY
+          if [ -f pa11y-report.json ]; then
+            TOTAL=$(jq '.["total"] // .total // 0' pa11y-report.json 2>/dev/null || echo 0)
+            PASSES=$(jq '.["passes"] // .passes // 0' pa11y-report.json 2>/dev/null || echo 0)
+            ERRORS=$(jq '.["errors"] // .errors // 0' pa11y-report.json 2>/dev/null || echo 0)
+            echo "Total: ${TOTAL}  Passes: ${PASSES}  Errors: ${ERRORS}" >> $GITHUB_STEP_SUMMARY
+            if [ "$ERRORS" != "0" ]; then
+              echo "\n### Top issues" >> $GITHUB_STEP_SUMMARY
+              # Try to extract first few failing entries; pa11y-ci json may be an array of results
+              jq -r '(.results // .) | .[]? | select(.issues) | "- URL: " + (.url // .pageUrl // "") + " (" + ((.issues | length) | tostring) + " issues)"' pa11y-report.json | head -n 10 >> $GITHUB_STEP_SUMMARY || true
+            fi
+          else
+            echo "No pa11y-report.json found." >> $GITHUB_STEP_SUMMARY
+          fi
 
