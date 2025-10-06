@@ -2,7 +2,7 @@ name: Daily Curator
 
 on:
   schedule:
-    - cron: "0 12 * * *" # daily at 12:00 UTC
+    - cron: "0 17 * * *" # daily at 17:00 UTC (aims for ~1pm Eastern during DST)
   workflow_dispatch:
 
 jobs:

@@ -90,11 +90,46 @@ Ready to join the movement? Here’s how you can get started:
 
 ---
 
+## Curated Daily Highlights
+
+Stay current with a daily round-up of community stories, resources, and calls-to-action collected from across Canada.
+
+<p>
+  <a class="button" href="{{ '/blog/#curated-daily' | relative_url }}" aria-describedby="curated-daily-desc">
+    Check out today’s curated feed →
+  </a>
+</p>
+<p id="curated-daily-desc" class="sr-only">This link takes you to the curated daily feed section on our blog.</p>
+
+{% assign daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
+{% if daily and daily.size > 0 %}
+<section aria-labelledby="latest-curated">
+  <h3 id="latest-curated">Latest curated items</h3>
+  <ul class="post-list" role="list">
+    {% for post in daily limit:3 %}
+    <li role="listitem">
+      <h4 style="margin-bottom: 0.25rem;">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h4>
+      <p><small>{{ post.date | date: "%B %-d, %Y" }}</small></p>
+      {% if post.excerpt %}
+      <p>{{ post.excerpt }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  <p><a href="{{ '/blog/#curated-daily' | relative_url }}">See all daily highlights →</a></p>
+</section>
+---
+{% endif %}
+
 {% if site.posts.size > 0 %}
 <section aria-labelledby="latest-posts">
   <h2 id="latest-posts">Latest from the blog</h2>
   <ul class="post-list" role="list">
+    {% assign non_daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
     {% for post in site.posts limit:3 %}
+    {% unless post in non_daily %}
     <li role="listitem">
       <h3 style="margin-bottom: 0.25rem;">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -104,6 +139,7 @@ Ready to join the movement? Here’s how you can get started:
       <p>{{ post.excerpt }}</p>
       {% endif %}
     </li>
+    {% endunless %}
     {% endfor %}
   </ul>
   <p><a href="{{ '/blog' | relative_url }}">See all posts →</a></p>

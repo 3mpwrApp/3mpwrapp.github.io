@@ -116,7 +116,17 @@ async function main(){
   }
 
   // Filter, rank, limit
-  const ranked = collected
+  // Deduplicate by link (keep highest score)
+  const byLink = new Map();
+  for (const it of collected) {
+    const key = (it.link || '').trim();
+    if (!key) continue;
+    const prev = byLink.get(key);
+    if (!prev || it.score > prev.score) byLink.set(key, it);
+  }
+  const deduped = Array.from(byLink.values());
+
+  const ranked = deduped
     .filter(i => i.score >= cfg.minScore)
     .sort((a,b)=> b.score - a.score)
     .slice(0, cfg.maxItems);
