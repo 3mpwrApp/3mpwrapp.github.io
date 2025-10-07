@@ -1,3 +1,5 @@
+import { trackEvent } from './analyticsClient';
+import { ANALYTICS_EVENTS } from './analyticsEvents';
 import { addEvidenceNote, uploadEvidenceFileWithProgress, type EvidenceFile } from './evidence';
 import { decryptString, encryptString } from './evidenceCrypto';
 
@@ -21,7 +23,7 @@ function now() { return Date.now(); }
 async function getItem(key: string) { try { return await AsyncStorage?.getItem?.(key); } catch { return null; } }
 async function setItem(key: string, val: string) { try { await AsyncStorage?.setItem?.(key, val); } catch {} }
 async function logMaintenance(event: string, data: any) {
-  try { const { logEvent } = require('../services/analytics'); logEvent?.(event, data); } catch {}
+  try { trackEvent(event, data); } catch {}
 }
 
 export async function getQueue(): Promise<QueuedItem[]> {
@@ -139,7 +141,7 @@ export async function maybeRunPruneCycle(): Promise<void> {
       sweepTempEvidenceFilesOlderThan().catch(() => ({ removed: 0 })),
     ]);
     await setItem(PRUNE_META_KEY, String(now()));
-    await logMaintenance('maintenance.prune', {
+    await logMaintenance(ANALYTICS_EVENTS.EVIDENCE_QUEUE_PROCESSED, {
       removed_queue_completed: removed,
       removed_temp_evidence: tmp.removed,
       since_ms: elapsed || null,
