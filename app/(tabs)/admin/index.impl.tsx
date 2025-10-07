@@ -62,7 +62,7 @@ export default function AdminPanel() {
     {},
   );
 
-  const [reviewTab] = React.useState<ReviewKind>((params?.tab as ReviewKind) || "pending");
+  // Content review tab state managed inside lazy panel
   const [activityStats, setActivityStats] = React.useState<{ total:number; since24h:number; byType: Record<string,number>; }>({ total:0, since24h:0, byType:{} });
 
   const [broadcastTitle, setBroadcastTitle] = React.useState('');
