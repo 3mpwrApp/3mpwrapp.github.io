@@ -97,6 +97,8 @@ export default function RegisterScreen() {
       >
         <Text style={styles.buttonText}>{working ? t('common.working', 'Working...') : t('auth.createAccount', 'Create Account')}</Text>
       </A11yPressable>
+      <View style={{ height: 10 }} />
+      <OAuthButtons styles={styles} tLabel={(k: string, d: string)=> t(k as any, d)} />
     </View>
   );
 }
@@ -117,4 +119,30 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     button: { backgroundColor: palette.primary, paddingVertical: 14, borderRadius: 10, alignItems: 'center' },
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
   });
+}
+
+function OAuthButtons({ styles, tLabel }: { styles: any; tLabel: (k: string, d: string) => string }) {
+  const palette = useAppPalette();
+  const [busy, setBusy] = useState(false);
+  return (
+    <View>
+      <A11yPressable
+        onPress={async ()=> { setBusy(true); const ok = await (await import('../../services/auth/oauth')).signInWithGoogleAsync(); setBusy(false); if (!ok) {} }}
+        accessibilityRole="button"
+        accessibilityLabel={tLabel('auth.signUpGoogle','Sign up with Google')}
+        style={[styles.button, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
+      >
+        <Text style={[styles.buttonText, { color: palette.text }]}>{busy? tLabel('common.working','Working...') : tLabel('auth.signUpGoogle','Sign up with Google')}</Text>
+      </A11yPressable>
+      <View style={{ height: 8 }} />
+      <A11yPressable
+        onPress={async ()=> { setBusy(true); const ok = await (await import('../../services/auth/oauth')).signInWithAppleAsync(); setBusy(false); if (!ok) {} }}
+        accessibilityRole="button"
+        accessibilityLabel={tLabel('auth.signUpApple','Sign up with Apple')}
+        style={[styles.button, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
+      >
+        <Text style={[styles.buttonText, { color: palette.text }]}>{busy? tLabel('common.working','Working...') : tLabel('auth.signUpApple','Sign up with Apple')}</Text>
+      </A11yPressable>
+    </View>
+  );
 }

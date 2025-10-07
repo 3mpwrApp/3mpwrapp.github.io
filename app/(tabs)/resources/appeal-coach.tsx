@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
     Alert,
     FlatList,
@@ -12,12 +12,24 @@ import {
     View
 } from "react-native";
 
+import ComingSoon from '../../../components/ComingSoon';
+import { useTranslation } from '../../../i18n';
+import { sendFeedbackEmailInternal } from '../../../utils/feedback';
+
+export const options = { href: null };
+
+export default function AppealCoach() {
+  const { t } = useTranslation();
+  return (
+    <ComingSoon title={t('resources.appeal_coach','Appeal Coach (Coming soon)')} onFeedback={() => sendFeedbackEmailInternal(t, { subject: 'Appeal Coach feedback' })} />
+  );
+}
+
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
-import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
 import { announce } from "../../../utils/announce";
 

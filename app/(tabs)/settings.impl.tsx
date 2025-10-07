@@ -23,6 +23,7 @@ import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 import { sendFeedbackEmailInternal } from '../../utils/feedback';
 
+
 import * as SettingsLazy from './settings.lazy';
 const NotificationPreferences = React.lazy(() => import('../../components/NotificationPreferences'));
 const EmergencyWalletCard = React.lazy(() => import('../../components/EmergencyWalletCard'));
@@ -187,8 +188,16 @@ export default function SettingsScreen() {
           <SettingsLazy.LocalProfile />
         </React.Suspense>
       </Section>
-      <Section title='Wellness Preferences' styles={styles}><WellnessPrefsSection /></Section>
-      <Section title='Media & Locker' styles={styles}><MediaLockerSection /></Section>
+      <Section title='Wellness Preferences' styles={styles}>
+        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
+          <SettingsLazy.WellnessPrefs />
+        </React.Suspense>
+      </Section>
+      <Section title='Media & Locker' styles={styles}>
+        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
+          <SettingsLazy.MediaLocker />
+        </React.Suspense>
+      </Section>
       <Section title={t('settings.privacy.title','Privacy & Security')} subtitle={t('settings.privacy.subtitle','Control your data and security')} styles={styles}>
         <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading privacy…</Text></View>}>
           <SettingsLazy.EnhancedPrivacy />
@@ -235,7 +244,7 @@ function EnhancedA11ySettingsSection() {
       <AccessibilityToggle title={t('settings.accessibility.plainLanguage','Plain Language')} description={t('settings.accessibility.plainLanguageDesc','Uses simpler, clearer text')} value={plainLanguage} onValueChange={setPlainLanguage} icon='document-text' testID='plain-language-toggle' />
       <AccessibilityToggle title={t('settings.accessibility.captions','Captions Preferred')} description={t('settings.accessibility.captionsDesc','Shows captions when available')} value={captionsPreferred} onValueChange={setCaptionsPreferred} icon='logo-closed-captioning' testID='captions-toggle' />
       <AccessibilityToggle title={t('settings.accessibility.voiceMode','Voice Mode (Beta)')} description={t('settings.accessibility.voiceModeDesc','Enables voice navigation')} value={voiceMode} onValueChange={setVoiceMode} icon='mic' testID='voice-mode-toggle' />
-  <AccessibilityToggle title={t('settings.accessibility.assistantPill','Show Assistant Pill')} description={t('settings.accessibility.assistantPillDesc','Show the floating assistant button on screens')} value={!!showAssistantPill} onValueChange={setShowAssistantPill} icon='chatbubbles' testID='assistant-pill-toggle' />
+      <AccessibilityToggle title={t('settings.accessibility.assistantPill','Show Assistant Pill')} description={t('settings.accessibility.assistantPillDesc','Show the floating assistant button on screens')} value={!!showAssistantPill} onValueChange={setShowAssistantPill} icon='chatbubbles' testID='assistant-pill-toggle' />
       {showAssistantPill && (
         <View style={{ marginTop: 8 }}>
           <Text style={styles.sectionSubtitle} accessibilityRole='header'>{t('settings.accessibility.assistantDock','Assistant Pill Position')}</Text>
@@ -273,73 +282,6 @@ function EnhancedA11ySettingsSection() {
             <Text style={styles.linkText}>Voice Help Guide</Text>
           </A11yPressable>
         </Link>
-      </View>
-    </View>
-  );
-}
-
-
-function WellnessPrefsSection() {
-  const palette = useAppPalette();
-  const s = createStyles(palette);
-  const [tap, setTap] = useState<'details'|'editor'>('details');
-  const [backdate, setBackdate] = useState(true);
-  useEffect(()=>{ (async()=>{ try { const v = await AsyncStorage.getItem('reflections.tapAction'); if (v==='details'||v==='editor') setTap(v as any); const b = await AsyncStorage.getItem('reflections.useServerBackdate'); setBackdate(b!=='0'); } catch {} })(); },[]);
-  const saveTap = async (next: 'details'|'editor') => { setTap(next); try { await AsyncStorage.setItem('reflections.tapAction', next); } catch {} };
-  const saveBackdate = async (val: boolean) => { setBackdate(val); try { await AsyncStorage.setItem('reflections.useServerBackdate', val? '1':'0'); } catch {} };
-  return (
-    <View>
-      <Text style={s.rowLabel}>Reflections Calendar: default tap action</Text>
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-        <Button title={`Details ${tap==='details'?'✓':''}`} onPress={()=> saveTap('details')} />
-        <Button title={`Editor ${tap==='editor'?'✓':''}`} onPress={()=> saveTap('editor')} />
-      </View>
-      <View style={{ height:10 }} />
-      <Text style={s.rowLabel}>Backdate via server (when adding past days)</Text>
-      <Button title={backdate? 'Disable backdating' : 'Enable backdating'} onPress={()=> saveBackdate(!backdate)} />
-      <Text style={{ color:palette.text, opacity:0.8, marginTop:6 }}>Tip: You can still change this from inside the calendar.</Text>
-    </View>
-  );
-}
-
-function MediaLockerSection() {
-  const palette = useAppPalette();
-  const s = createStyles(palette);
-  const [thumbs, setThumbs] = useState(true);
-  const { youtubeOpenPreference, setYoutubeOpenPreference } = useSettings();
-  useEffect(()=>{ (async()=>{ try { const v = await AsyncStorage.getItem('locker.videoThumbnails'); setThumbs(v!=='0'); } catch {} })(); },[]);
-  const save = async (val:boolean) => { setThumbs(val); try { await AsyncStorage.setItem('locker.videoThumbnails', val? '1':'0'); } catch {} };
-  return (
-    <View>
-      <Text style={s.rowLabel}>Video thumbnails (cloud videos)</Text>
-      <Button title={thumbs? 'Disable thumbnails' : 'Enable thumbnails'} onPress={()=> save(!thumbs)} />
-      <Text style={{ color:palette.text, opacity:0.8, marginTop:6 }}>When enabled, the app may request thumbnails from YouTube or an optional server (if configured).</Text>
-      <View style={{ height:12 }} />
-      <Text style={s.rowLabel}>Open YouTube links in</Text>
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
-        {(['ask','app','browser'] as const).map(mode => (
-          <A11yPressable
-            key={mode}
-            accessibilityRole='button'
-            accessibilityState={{ selected: youtubeOpenPreference === mode }}
-            onPress={() => setYoutubeOpenPreference(mode)}
-            style={{
-              paddingHorizontal:12,
-              paddingVertical:8,
-              borderRadius:8,
-              borderWidth:1,
-              borderColor: youtubeOpenPreference === mode ? palette.primary : palette.muted,
-              backgroundColor: youtubeOpenPreference === mode ? palette.primary : 'transparent',
-              minHeight:44,
-              alignItems:'center',
-              justifyContent:'center'
-            }}
-          >
-            <Text style={{ color: youtubeOpenPreference === mode ? palette.onPrimary : palette.text, fontWeight:'600' }}>
-              {mode === 'ask' ? 'Ask' : mode === 'app' ? 'YouTube App' : 'Browser'}
-            </Text>
-          </A11yPressable>
-        ))}
       </View>
     </View>
   );
