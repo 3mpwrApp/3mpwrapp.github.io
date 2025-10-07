@@ -1,26 +1,26 @@
 import { useFocusEffect } from "@react-navigation/native";
 import React from "react";
 import {
-    Pressable,
-    SectionList,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  Pressable,
+  SectionList,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import ContrastToggle from "../../../components/ContrastToggle";
 import SettingsLink from "../../../components/SettingsLink";
 import { whatsnew as defaultWN } from "../../../data/whatsnew";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { subscribeToActivityFeed } from "../../../services/activity";
 import {
-    addLocalWhatsNew,
-    getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
+  addLocalWhatsNew,
+  getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
 } from "../../../services/localContent";
 import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -65,7 +65,7 @@ export default function WhatsNewScreen() {
   React.useEffect(() => {
     (async () => {
       try {
-        const { current, archived } = await getWhatsNewSplit();
+        const { current } = await getWhatsNewSplit();
         // Keep current + archived accessible; here we merge into items for display grouping already below
         // We only set items to current list; archived will still show via sections based on date checks
         if (current?.length) setItems(current);

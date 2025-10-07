@@ -20,7 +20,8 @@ const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
 function now() { return Date.now(); }
 async function getItem(key: string) { try { return await AsyncStorage?.getItem?.(key); } catch { return null; } }
 async function setItem(key: string, val: string) { try { await AsyncStorage?.setItem?.(key, val); } catch {} }
-async function removeItem(key: string) { try { await AsyncStorage?.removeItem?.(key); } catch {} }
+ 
+async function _removeItem(key: string) { try { await AsyncStorage?.removeItem?.(key); } catch {} }
 async function logMaintenance(event: string, data: any) {
   try { const { logEvent } = require('../services/analytics'); logEvent?.(event, data); } catch {}
 }
