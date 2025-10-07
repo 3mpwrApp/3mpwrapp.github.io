@@ -1,6 +1,6 @@
 import { getApps } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import { addDoc, collection, getFirestore, limit, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { addDoc, collection, getDocs, getFirestore, limit, onSnapshot, orderBy, query } from 'firebase/firestore';
 
 import { ADMIN_AUDIT_COLLECTION, type AdminAuditEvent } from '../types/adminAudit';
 
@@ -38,4 +38,21 @@ export function subscribeAdminAudit(cb: (events: AdminAuditEvent[]) => void, opt
     snap.forEach((d) => list.push({ id: d.id, ...(d.data() as any) }));
     cb(list);
   });
+}
+
+// One-shot list (export helper). Safe no-op if Firebase not initialized.
+export async function listAdminAudit(opts: { limit?: number } = {}): Promise<AdminAuditEvent[]> {
+  if (getApps().length === 0) return [];
+  const db = getFirestore();
+  const q = query(
+    collection(db, ADMIN_AUDIT_COLLECTION),
+    orderBy('ts', 'desc'),
+    limit(opts.limit || 1000)
+  );
+  try {
+    const snap = await getDocs(q);
+    return snap.docs.map(d => ({ id: d.id, ...(d.data() as any) }));
+  } catch {
+    return [];
+  }
 }

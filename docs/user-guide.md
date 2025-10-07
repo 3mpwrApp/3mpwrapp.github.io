@@ -3,8 +3,7 @@ title: 3mpwr App — User Guide
 description: A practical guide to using 3mpwr’s tools and community features
 version: 1.0
 lastUpdated: 2025-10-06
----
-
+lastUpdated: 2025-10-07
 # 3mpwr App — User Guide
 
 > Purpose: Practical tools and community for Persons with Disabilities, Injured Workers, and Allies.
@@ -106,7 +105,8 @@ How it works
 
 Recent highlights
 
-- Home: Now marked Beta. You’ll see this message under Today’s Guide: “Suggestions powered by the Personalization Engine (beta).”
+- Admin: Admin Panel now includes an “Export CSV” button for the Admin Audit log (admin-only).
+- Performance: Tabs use lazy loading so screens mount on first open, improving startup time.
 
 <a id="how-the-app-fits-together"></a>
 ## How the app fits together (interconnections)

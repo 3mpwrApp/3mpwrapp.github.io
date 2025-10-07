@@ -24,23 +24,25 @@ function AdminMetrics() {
   // Activity feed (latest N)
   React.useEffect(() => {
     try {
-      if (getApps().length === 0) { setActivityCount('0'); return; }
+      if (getApps().length === 0) { setActivityCount('0'); return undefined; }
       const unsub = subscribeToActivityFeed((events: any[]) => {
         setActivityCount(String(events.length));
       }, { limit: 100 });
       return () => { try { (unsub as any)(); } catch {} };
     } catch { setActivityCount('0'); }
+    return undefined;
   }, []);
 
   // Admin audit (latest N)
   React.useEffect(() => {
     try {
-      if (getApps().length === 0) { setAuditCount('0'); return; }
+      if (getApps().length === 0) { setAuditCount('0'); return undefined; }
       const unsub = subscribeAdminAudit((events: any[]) => {
         setAuditCount(String(events.length));
       }, { limit: 100 });
       return () => { try { (unsub as any)(); } catch {} };
     } catch { setAuditCount('0'); }
+    return undefined;
   }, []);
 
   return (

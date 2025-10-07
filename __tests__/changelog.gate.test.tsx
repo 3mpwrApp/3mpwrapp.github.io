@@ -45,8 +45,9 @@ describe('ChangelogGate', () => {
     expect(overlay).toBeTruthy();
 
     // Dismiss
-    const btn = await screen.findByText(/Got it/i);
-    fireEvent.press(btn);
+  const btn = await screen.findByText(/Got it/i);
+  // In our test setup, fireEvent.press is aliased to click; accommodate both typings
+  (fireEvent as any).press ? (fireEvent as any).press(btn) : fireEvent.click(btn as any);
 
     await waitFor(() => {
       expect(screen.queryByLabelText(/What’s new/i)).toBeNull();

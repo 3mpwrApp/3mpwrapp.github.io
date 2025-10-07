@@ -186,7 +186,11 @@ const NOISY_WARN_PATTERNS = [
   /ViewPropTypes will be removed/i,
   /Can't perform a React state update on an unmounted component/i,
   /AsyncStorage has been extracted from react-native core/i,
-  /Warning: componentWillReceiveProps has been renamed/i
+  /Warning: componentWillReceiveProps has been renamed/i,
+  // Test-only analytics noise
+  /analytics event \(noop native\)/i,
+  /\[analytics\] Unused registry events/i,
+  /screen_view \{/i
 ];
 function shouldFilter(message, args){
   if (typeof message === 'string') {

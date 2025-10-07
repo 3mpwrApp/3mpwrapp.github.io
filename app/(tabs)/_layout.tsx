@@ -21,6 +21,8 @@ export default function TabsLayout() {
       <Tabs
         screenOptions={{
           headerShown: false,
+          // Lazy render tab screens on first focus to reduce initial bundle work
+          lazy: true,
           tabBarActiveTintColor: activeTint,
           tabBarInactiveTintColor: inactiveTint,
           tabBarStyle: {

@@ -1,24 +1,24 @@
 import { useLocalSearchParams } from "expo-router";
 import {
-  collection,
-  deleteDoc,
-  doc,
-  getCountFromServer,
-  getDocs,
-  limit,
-  query,
-  startAfter,
-  updateDoc,
-  where,
+    collection,
+    deleteDoc,
+    doc,
+    getCountFromServer,
+    getDocs,
+    limit,
+    query,
+    startAfter,
+    updateDoc,
+    where,
 } from "firebase/firestore";
 import React from "react";
 import {
-  Alert,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View
+    Alert,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
@@ -27,7 +27,7 @@ import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { db } from "../../../firebase/config";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
 import { computeActivityStats, logActivity, subscribeToActivityFeed } from "../../../services/activity";
-import { subscribeAdminAudit } from "../../../services/adminAudit";
+import { listAdminAudit, subscribeAdminAudit } from "../../../services/adminAudit";
 import { createFaq, deleteFaq, subscribeFaqs, updateFaq } from "../../../services/faqs";
 import { useAppPalette } from "../../../theme/usePalette";
 
@@ -213,6 +213,41 @@ export default function AdminPanel() {
 
         <View style={s.card}>
           <Text style={s.cardTitle}>Admin Audit (latest)</Text>
+          <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
+            <A11yPressable
+              accessibilityRole="button"
+              accessibilityLabel="Export admin audit events as CSV"
+              hitSlop={HIT_SLOP_8}
+              onPress={async()=>{
+                try {
+                  const rows = await listAdminAudit({ limit: 1000 });
+                  const header = ['ts','actorUid','action','target','details','client_platform','client_version'];
+                  const esc = (v: any) => `"${String(v ?? '').replace(/"/g,'""')}"`;
+                  const data = rows.map(r => [
+                    new Date(r.ts).toISOString(),
+                    r.actorUid ?? '',
+                    r.action ?? '',
+                    r.target ?? '',
+                    (r.details ? JSON.stringify(r.details) : ''),
+                    r.client?.platform ?? '',
+                    r.client?.version ?? ''
+                  ].map(esc).join(',')).join('\n');
+                  const csv = [header.map(esc).join(','), data].filter(Boolean).join('\n');
+                  const FileSystem = await import('expo-file-system');
+                  const Sharing = await import('expo-sharing');
+                  const baseDir: any = (FileSystem as any).default?.cacheDirectory || (FileSystem as any).cacheDirectory || (FileSystem as any).default?.documentDirectory;
+                  const path = `${baseDir}admin_audit_${Date.now()}.csv`;
+                  await (FileSystem as any).writeAsStringAsync(path, csv, { encoding: (FileSystem as any).EncodingType?.UTF8 });
+                  try { if (await (Sharing as any).isAvailableAsync?.()) await (Sharing as any).shareAsync(path, { mimeType: 'text/csv', dialogTitle: 'Admin Audit CSV' }); }
+                  catch {}
+                  Alert.alert('Export ready','CSV saved to cache directory.');
+                } catch { Alert.alert('Export failed','Could not create CSV.'); }
+              }}
+              style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
+            >
+              <Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text>
+            </A11yPressable>
+          </View>
           {auditEvents.length === 0 ? (
             <Text style={s.text}>No recent admin actions.</Text>
           ) : (
@@ -587,6 +622,8 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     container: { flex: 1, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: "700", color: palette.text, marginBottom: 8 },
     text: { color: palette.text, opacity: 0.95, marginBottom: 6 },
+    card: { backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginTop: 10 },
+    cardTitle: { color: palette.text, fontWeight: '700', marginBottom: 6 },
   });
 }
 

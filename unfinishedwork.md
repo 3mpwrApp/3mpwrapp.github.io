@@ -4,7 +4,7 @@ Purpose: Living checklist of outstanding tasks after recent i18n, advocacy, and 
 
 Status legend: [Done] completed this cycle · [In Progress] partially implemented · [Planned] not started
 Linked inventory of raw placeholders: see `docs/UNFINISHED_WORK.md` (auto scan).
-Last updated: 2025-09-25
+Last updated: 2025-10-07
 
 ## 1. Localization
 - [Planned] Replace placeholder "[T]" entries in `locales/es/common.json` and `locales/fr/common.json` with real translations.
@@ -41,7 +41,7 @@ Last updated: 2025-09-25
 - [Done] Add Node engines field (>=20) in `package.json`.
 - [Planned] Enforce Node version in CI matrix + preflight script.
 - [Planned] Replace deprecated `react-test-renderer` with RN Testing Library (blocks: peer deps alignment).
-- [Planned] Lazy load large data modules (e.g., jurisdictions) to reduce initial bundle size.
+- [Done] Enable tab screen lazy loading in Expo Router (reduces startup work).
 - [Planned] Bundle size budget check (report warning if JS bundle > threshold).
 
 ## 5. Evidence Locker Enhancements
@@ -77,7 +77,7 @@ Last updated: 2025-09-25
 ## 10. Security & Privacy
 - [Planned] Threat model doc for evidence storage and advocacy submissions.
 - [Planned] Client-side encryption at rest toggle for evidence files.
-- [Planned] Audit log for admin actions (Firestore collection & retention policy).
+- [Done] Admin audit log implemented (Firestore `admin_audit` + export CSV in Admin Panel). See `docs/ADMIN_AUDIT.md`.
 - [Planned] Data minimization checklist integrated into README.
 
 ## 11. App Runtime Validation
