@@ -94,10 +94,13 @@ export default function AdminPanel() {
 
   // Admin audit subscription (latest 50)
   React.useEffect(() => {
+    let unsub: (() => void) | null = null;
     try {
-      const unsub = subscribeAdminAudit((rows) => setAuditEvents(rows.slice(0, 50)), { limit: 50 });
-      return () => { try { (unsub as any)(); } catch {} };
-    } catch { setAuditEvents([]); }
+      unsub = subscribeAdminAudit((rows) => setAuditEvents(rows.slice(0, 50)), { limit: 50 });
+    } catch {
+      setAuditEvents([]);
+    }
+    return () => { try { if (unsub) unsub(); } catch {} };
   }, []);
 
   React.useEffect(() => {
