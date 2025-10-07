@@ -657,6 +657,8 @@
     }
   },
   "resources": {
+    "appeal_coach": "Coach d'appel (Bientôt)",
+    "prepare_appeal": "Préparer l'appel (Bientôt)",
     "tools": {
       "deadlines": "Calculateur d'échéances + rappels",
       "evidence": "Générateur de liste de preuves",
@@ -1724,6 +1726,7 @@
     "add": "Ajouter",
     "next": "Suivant",
     "deleted": "Supprimé",
+  "comingSoon": "Cette fonctionnalité arrive bientôt. Nous y travaillons !",
     "submit": "Soumettre",
     "left": "Gauche",
     "right": "Droite",

@@ -1,6 +1,7 @@
 import type { AuthCredential } from 'firebase/auth';
 import { Alert, Platform } from 'react-native';
 
+// internal modules
 import { auth } from '../../firebase/config';
 
 export async function signInWithGoogleAsync(): Promise<boolean> {

@@ -1219,6 +1219,8 @@
   },
   "resources": {
     "intro": " Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
+    "appeal_coach": "Appeal Coach (Próximamente)",
+    "prepare_appeal": "Preparación de apelación (Próximamente)",
     "filters": {
       "all": " All",
       "canada": " Canada",
@@ -1482,7 +1484,8 @@
     "submit": " common.submit",
     "left": " Left",
     "right": " Right",
-    "unread": " Unread"
+    "unread": " Unread",
+    "comingSoon": "Esta función llegará pronto. ¡Estamos trabajando en ello!"
   },
   "campaigns": {
     "empty": " No campaigns match your filters"

@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
+// internal modules
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
