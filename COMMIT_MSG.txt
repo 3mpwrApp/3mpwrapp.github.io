@@ -11,3 +11,14 @@ perf(resources): code-split Evidence Locker
 chore: lint tidy
 
 - Fix import/order lint warning in Evidence Locker impl
+
+feat(app): code-split Admin and Settings with Jest-aware lazy wrappers; stabilize Evidence Locker tests
+
+- Admin and Settings: moved full implementations into `index.impl.tsx` and `settings.impl.tsx`.
+	Route files now act as Jest-aware lazy wrappers (React.lazy at runtime, sync `require` under tests).
+- Evidence Locker: kept the minimal implementation with Export/Import and passphrase modal; route stays as a Jest-aware lazy wrapper.
+- Test env: broadened detection to include `NODE_ENV==='test'` in wrappers to avoid Suspense fallbacks in Jest.
+- Admin Audit: JSON export (paged) remains wired with pagination helpers; verified via tests.
+- Validation: Lint clean; all tests pass locally after changes.
+
+Refs: performance/code-splitting initiative; >1000 events JSON export requirement.
