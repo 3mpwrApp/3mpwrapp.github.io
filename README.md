@@ -168,6 +168,14 @@ A sample rules file is included at `firebase/firestore.rules`. To deploy:
 
 Use `firebase emulators:start` during development to test reads/writes locally.
 
+## Security Hardening (Soft Launch)
+
+- Firestore access control is enforced via `firebase/firestore.rules` with `admin` custom claim gating for privileged writes.
+- In‑app admin features are gated by `components/AdminGuard.tsx` and Settings → Admin section; only accounts with `admin=true` claim can access.
+- For production app integrity, prefer EAS Update with Code Signing enabled (see Expo docs) and keep channels private.
+- Server utilities in `server/` are optional and no‑op unless credentials are provided; do not deploy public endpoints without auth.
+- Consider enabling Sentry DSN for tamper/attack diagnostics (optional; env‑based).
+
 ## LLM Backend (optional)
 
 Some advocacy tools can call a server for improved summaries if `EXPO_PUBLIC_LLM_BASE` is set.

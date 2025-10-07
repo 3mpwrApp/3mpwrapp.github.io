@@ -89,7 +89,7 @@ Scope
 
 Steps
 1. Share unlisted Expo project link/QR with invited testers.
-2. Provide `docs/beta/TESTER_GUIDE.md` and set up beta@empowr.app.
+2. Provide `docs/beta/TESTER_GUIDE.md` and enable in‑app feedback via Settings → About (mailto: empowrapp08162025@gmail.com).
 3. Verify What’s New daily PRs land; ensure plain-language bullets.
 4. Confirm push alternatives (in-app inbox/local reminders) for Expo Go.
 5. Run `docs/beta/READINESS_CHECKLIST.md` to green.
@@ -102,3 +102,10 @@ Success Criteria
 
 Exit
 - Decide on next: Dev Client (push testing) or public preview via EAS Update.
+
+### Status update — 2025-10-06
+- What’s New automation: daily generator + PRs live; auto-archive >30d; plain-language filtering active.
+- CHANGELOG: added authoring tip to keep bullets short and user-facing.
+- Analytics: enrichment includes a beta flag for context during closed beta.
+- Settings: About & Contact section added with a “Send email” feedback link to the beta inbox.
+- Next (fast follow): optional lazy-loading of heavy subviews; optional monthly “highlights” notification (in-app) that auto-expires.

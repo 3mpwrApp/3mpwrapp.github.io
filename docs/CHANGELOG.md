@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+Note for authors (plain language):
+- Write short, user-facing bullets in everyday language. Avoid dev noise (build, refactor, chores) unless it changes user behavior.
+- One idea per bullet, present tense, start with a verb (Add, Fix, Improve). Keep it brief and clear.
+- The app’s What’s New generator pulls from this file and strips technical jargon automatically.
+
 ## [Unreleased]
 - Lint cleanup across onboarding and prepare-appeal screens (palette tokens, import order).
 - Jest RN shim Modal/Alert adjustments to suppress RN prop warnings on web tests.

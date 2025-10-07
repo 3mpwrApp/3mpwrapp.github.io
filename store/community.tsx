@@ -1,13 +1,13 @@
 import React from "react";
 
-import type {
-  CommunityChannel,
-  CommunityThread,
-  CommunityComment,
-  ID,
-} from "../types/models";
+import { fsAddComment, fsAddThread, getDB } from "../services/firestore";
 import { scheduleLocal } from "../services/notifications";
-import { fsAddThread, fsAddComment, getDB } from "../services/firestore";
+import type {
+    CommunityChannel,
+    CommunityComment,
+    CommunityThread,
+    ID,
+} from "../types/models";
 
 import { useNetwork } from "./network";
 
@@ -181,6 +181,8 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
     const id = setInterval(() => {
       flushQueue();
     }, 5000);
+    // In Node/Jest, avoid keeping the event loop alive
+    try { (id as any)?.unref?.(); } catch {}
     return () => clearInterval(id);
   }, []);
 

@@ -12,6 +12,11 @@ module.exports = {
     'node_modules/(?!(react-native|@react-native|react-native-.*|@react-navigation/.*|@react-native-async-storage/async-storage|expo|expo-.*|@expo/.*|@unimodules/.*|unimodules-.*|sentry-expo)/)'
   ],
   moduleFileExtensions: ['ts','tsx','js','jsx','json'],
+  moduleNameMapper: {
+    '^@testing-library/react-native$': '@testing-library/react',
+    '^@expo/vector-icons$': '<rootDir>/__mocks__/expo-vector-icons.js',
+    '^expo-router$': '<rootDir>/__mocks__/expo-router.js'
+  },
   roots: ['<rootDir>'],
   testMatch: ['**/__tests__/**/*.test.tsx','**/__tests__/**/*.test.ts'],
   collectCoverageFrom: ['i18n/**/*.{ts,tsx}','scripts/i18n-*.js','services/notifications*.{ts,tsx}','store/notifications.{ts,tsx}','types/notifications.ts'],

@@ -1,24 +1,24 @@
 import { useLocalSearchParams } from "expo-router";
 import {
-    collection,
-    deleteDoc,
-    doc,
-    getCountFromServer,
-    getDocs,
-    limit,
-    query,
-    startAfter,
-    updateDoc,
-    where,
+  collection,
+  deleteDoc,
+  doc,
+  getCountFromServer,
+  getDocs,
+  limit,
+  query,
+  startAfter,
+  updateDoc,
+  where,
 } from "firebase/firestore";
 import React from "react";
 import {
-    Alert,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    View
+  Alert,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
@@ -27,6 +27,7 @@ import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { db } from "../../../firebase/config";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
 import { computeActivityStats, logActivity, subscribeToActivityFeed } from "../../../services/activity";
+import { subscribeAdminAudit } from "../../../services/adminAudit";
 import { createFaq, deleteFaq, subscribeFaqs, updateFaq } from "../../../services/faqs";
 import { useAppPalette } from "../../../theme/usePalette";
 
@@ -68,6 +69,7 @@ export default function AdminPanel() {
   );
   const [reviewItems, setReviewItems] = React.useState<ReviewItem[]>([]);
   const [activityStats, setActivityStats] = React.useState<{ total:number; since24h:number; byType: Record<string,number>; }>({ total:0, since24h:0, byType:{} });
+  const [auditEvents, setAuditEvents] = React.useState<any[]>([]);
 
   const [broadcastTitle, setBroadcastTitle] = React.useState('');
   const [broadcastBody, setBroadcastBody] = React.useState('');
@@ -88,6 +90,14 @@ export default function AdminPanel() {
       setActivityStats(computeActivityStats(evts));
     }, { limit: 200 });
     return () => unsub();
+  }, []);
+
+  // Admin audit subscription (latest 50)
+  React.useEffect(() => {
+    try {
+      const unsub = subscribeAdminAudit((rows) => setAuditEvents(rows.slice(0, 50)), { limit: 50 });
+      return () => { try { (unsub as any)(); } catch {} };
+    } catch { setAuditEvents([]); }
   }, []);
 
   React.useEffect(() => {
@@ -199,6 +209,23 @@ export default function AdminPanel() {
 
         <View style={{ marginTop: 8 }}>
           <Text style={s.text}>Counts — Users: {counts.users ?? "-"} | Campaigns: {counts.campaigns ?? "-"} | Resources: {counts.resources ?? "-"}</Text>
+        </View>
+
+        <View style={s.card}>
+          <Text style={s.cardTitle}>Admin Audit (latest)</Text>
+          {auditEvents.length === 0 ? (
+            <Text style={s.text}>No recent admin actions.</Text>
+          ) : (
+            auditEvents.slice(0, 10).map((e) => (
+              <View key={e.id} style={{ paddingVertical: 6, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted }}>
+                <Text style={s.text}>
+                  {new Date(e.ts).toLocaleString()} — {e.action}
+                  {e.target ? ` · ${e.target}` : ''}
+                </Text>
+                {e.actorUid ? <Text style={[s.text,{opacity:0.7}]}>by {e.actorUid}</Text> : null}
+              </View>
+            ))
+          )}
         </View>
 
         {/* Activity Metrics */}

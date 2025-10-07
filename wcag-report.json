@@ -1,0 +1,90 @@
+{
+  "thresholds": {
+    "aa": 4.5,
+    "aaa": 7
+  },
+  "palette": [
+    {
+      "pair": "light.text on background",
+      "token": "text",
+      "theme": "light",
+      "ratio": 17.929473908734614,
+      "passesAA": true,
+      "passesAAA": true,
+      "fg": "#11181C",
+      "bg": "#FFFFFF"
+    },
+    {
+      "pair": "light.tint on background",
+      "token": "tint",
+      "theme": "light",
+      "ratio": 8.608345058424886,
+      "passesAA": true,
+      "passesAAA": true,
+      "fg": "#004A99",
+      "bg": "#FFFFFF"
+    },
+    {
+      "pair": "light.tabIconDefault on background",
+      "token": "tabIconDefault",
+      "theme": "light",
+      "ratio": 8.997400387484076,
+      "passesAA": true,
+      "passesAAA": true,
+      "fg": "#434A50",
+      "bg": "#FFFFFF"
+    },
+    {
+      "pair": "light.tabIconSelected on background",
+      "token": "tabIconSelected",
+      "theme": "light",
+      "ratio": 10.496051721709804,
+      "passesAA": true,
+      "passesAAA": true,
+      "fg": "#003E80",
+      "bg": "#FFFFFF"
+    },
+    {
+      "pair": "dark.text on background",
+      "token": "text",
+      "theme": "dark",
+      "ratio": 17.914857427570027,
+      "passesAA": true,
+      "passesAAA": true,
+      "fg": "#ECEDEE",
+      "bg": "#000000"
+    },
+    {
+      "pair": "dark.tint on background",
+      "token": "tint",
+      "theme": "dark",
+      "ratio": 7.998433220198195,
+      "passesAA": true,
+      "passesAAA": true,
+      "fg": "#4DA3FF",
+      "bg": "#000000"
+    },
+    {
+      "pair": "dark.tabIconDefault on background",
+      "token": "tabIconDefault",
+      "theme": "dark",
+      "ratio": 10.25477192547125,
+      "passesAA": true,
+      "passesAAA": true,
+      "fg": "#B0B6BB",
+      "bg": "#000000"
+    },
+    {
+      "pair": "dark.tabIconSelected on background",
+      "token": "tabIconSelected",
+      "theme": "dark",
+      "ratio": 7.998433220198195,
+      "passesAA": true,
+      "passesAAA": true,
+      "fg": "#4DA3FF",
+      "bg": "#000000"
+    }
+  ],
+  "paletteFailing": [],
+  "inlineIssues": []
+}

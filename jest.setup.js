@@ -126,6 +126,11 @@ jest.mock('react-native', () => {
   // Basic Alert mock: capture calls for assertions
   const Alert = { alert: jest.fn(), prompt: jest.fn() };
   const AccessibilityInfo = { announceForAccessibility: jest.fn() };
+  // Provide a simple Linking stub used by components and tests
+  const Linking = {
+    canOpenURL: jest.fn(async () => true),
+    openURL: jest.fn(async () => true),
+  };
   // Minimal FlatList mock: render items using renderItem
   const FlatList = ({ data = [], renderItem = () => null, keyExtractor, ListFooterComponent, ...rest }) => {
     const children = (data || []).map((item, index) => {
@@ -145,7 +150,7 @@ jest.mock('react-native', () => {
   const RefreshControl = () => null;
   // Share mock to enable jest.spyOn(Share, 'share')
   const Share = { share: async () => ({}) };
-  return { ...RN, StyleSheet, View, ScrollView, Text, TextInput, Pressable, FlatList, RefreshControl, Share, Modal, Alert, AccessibilityInfo };
+  return { ...RN, StyleSheet, View, ScrollView, Text, TextInput, Pressable, FlatList, RefreshControl, Share, Modal, Alert, AccessibilityInfo, Linking };
 });
 
 // Alias fireEvent.press -> fireEvent.click for web-like test env
@@ -154,6 +159,18 @@ try {
   if (rtl.fireEvent && !rtl.fireEvent.press) {
     rtl.fireEvent.press = rtl.fireEvent.click;
   }
+} catch {}
+
+// Note: Mapping of '@testing-library/react-native' to web variant is handled via moduleNameMapper in jest.config.js
+
+// Provide a lightweight global mock for Expo vector icons to avoid native EventEmitter requirements
+try {
+  jest.mock('@expo/vector-icons', () => {
+    const React = require('react');
+    const Icon = (props) => React.createElement('span', props, null);
+    // Return a proxy so any icon set access resolves to the mock Icon component
+    return new Proxy({}, { get: () => Icon });
+  });
 } catch {}
 
 // Suppress known noisy React Native / Expo warnings that add no test value

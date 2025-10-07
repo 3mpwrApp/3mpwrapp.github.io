@@ -23,6 +23,7 @@ import { I18nProvider } from "../i18n";
 import { fetchCampaigns } from "../services/campaigns";
 import { pruneExpiredReminders } from "../services/eventReminders";
 import { fetchEvents } from "../services/events";
+import { maybeRunPruneCycle } from "../services/evidenceQueue";
 import * as Notifier from "../services/notifications";
 import { fetchPodcasts } from "../services/podcasts";
 import { fetchResources } from "../services/resources";
@@ -77,6 +78,8 @@ export default function RootLayout() {
     });
     // Cleanup any past-due event reminders (fire and forget)
     pruneExpiredReminders().then(r => { if (r.removed && __DEV__) console.warn('Pruned reminders', r.removed); }).catch(()=>{});
+    // Run light pruning cycle (queue cleanup) on start
+    maybeRunPruneCycle().catch(()=>{});
   }, []);
 
   // Announce route changes for screen readers
@@ -102,7 +105,7 @@ export default function RootLayout() {
     };
     const t = setTimeout(() => mounted && prefetch(), 1200);
     const sub = AppState.addEventListener("change", (s) => {
-      if (s === "active") prefetch();
+      if (s === "active") { prefetch(); maybeRunPruneCycle().catch(()=>{}); }
     });
     return () => {
       mounted = false;

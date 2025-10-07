@@ -19,20 +19,21 @@ Control storage growth, maintain performance, and honor retention expectations b
 |----------|--------|
 | Inbox | Keep latest 100 notifications |
 | Upload Queue | Remove completed jobs older than 30 days |
-| Temp Files (evidence) | Purge orphaned temp chunks >24h |
+| Temp Files (evidence) | Purge exported/summaries >7d |
 
 ## Archival Strategy (Future)
 Evidence export: produce encrypted ZIP (AES-256 GCM) containing metadata.json + blobs/. Provide retention policy for generated exports (auto delete after 7 days).
 
 ## Implementation Hooks
-- Notifications store: enforce cap after push
-- Upload queue processor: scheduled sweep (on app launch + every 12h) removing old completed records
-- Temp file manager: cleanup on startup
+- Notifications store: enforce cap after push — IMPLEMENTED (`store/notifications.tsx`, tests cover)
+- Upload queue processor: scheduled sweep (on app launch + every 12h) removing old completed records — DONE (`services/evidenceQueue.ts` sweepQueueOldCompleted)
+- Temp file manager: cleanup on startup — DONE (best-effort `sweepTempEvidenceFilesOlderThan` for cache files with safe prefixes)
+- What's New auto-archive >30 days — IMPLEMENTED (`services/localContent.ts`)
 
 ## Scheduling Model
 No background daemon; piggyback on user activity:
 1. App start: run pruning cycle
-2. Foreground event (>=6h since last): run pruning cycle
+2. Foreground event (>=12h since last): run pruning cycle
 
 Store timestamp: `maintenance:lastPrune`
 
@@ -46,7 +47,7 @@ function enforceInboxCap(list: DeliveredNotification[], cap = 100) {
 ```
 
 ## Telemetry
-Log pruning runs: `maintenance.prune` with counts removed per category.
+Log pruning runs: `maintenance.prune` with counts removed per category (removed_queue_completed, removed_temp_evidence, since_ms).
 
 ## Edge Cases
 - Clock skew: rely on monotonic relative durations where possible
@@ -58,10 +59,10 @@ Log pruning runs: `maintenance.prune` with counts removed per category.
 - User-configurable notification retention cap
 
 ## Acceptance Criteria (Phase 1)
-- Notifications cap enforced
-- Upload queue stale removal implemented (placeholder if queue not yet active)
-- Prune cycle runs on start & after 6h inactivity
-- Telemetry event logged with removal counts
+- Notifications cap enforced — DONE
+- Upload queue stale removal implemented — DONE
+- Prune cycle runs on start & after 12h inactivity — DONE (app/_layout.tsx hooks)
+- Telemetry event logged with removal counts — DONE (`maintenance.prune`)
 
 ---
 Prepared: 2025-09-22

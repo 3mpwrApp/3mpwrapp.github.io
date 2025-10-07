@@ -58,6 +58,7 @@ export default function MutualChat() {
       } catch {}
     })();
     const i = setInterval(async()=>{ try { await setDoc(ref, { lastSeen: serverTimestamp() }, { merge: true }); } catch {} }, 30000);
+    try { (i as any)?.unref?.(); } catch {}
     // Register device token for server-based push (Expo token)
     registerExpoPushToken();
     return () => { clearInterval(i); };

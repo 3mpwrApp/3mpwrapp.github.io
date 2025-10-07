@@ -10,14 +10,22 @@ const sessionId = (() => {
   return `${Date.now().toString(36)}-${rand}`;
 })();
 const eventCounts: Record<string, number> = {};
+let betaFlag: boolean | null = null;
+
+export function setBetaFlag(v: boolean) {
+  betaFlag = v;
+}
 
 function withEnrichment(name: string, params?: Record<string, any>) {
   eventCounts[name] = (eventCounts[name] || 0) + 1;
+  // Decide beta context once per session (default true in dev; allow override via env)
+  const beta = betaFlag ?? (process.env.NODE_ENV !== 'production');
   return {
     ...params,
     session_id: sessionId,
     event_count: eventCounts[name],
     platform: Platform.OS,
+    beta,
   } as Record<string, any>;
 }
 

@@ -3,6 +3,7 @@ import { collection, deleteDoc, doc, getFirestore, onSnapshot, orderBy, query, s
 import type { Faq, NewFaqInput } from '../types/faq';
 
 import { logActivity } from './activity';
+import { writeAdminAudit } from './adminAudit';
 
 // Collection name constant to avoid typos and enable reuse.
 export const FAQ_COLLECTION = 'faqs';
@@ -41,6 +42,7 @@ export async function createFaq(input: NewFaqInput): Promise<Faq> {
   };
   await setDoc(ref, faq);
   try { await logActivity({ type:'faq.create', payload:{ id, q: faq.q }, summaryKey:'faq.create' }); } catch {}
+  try { await writeAdminAudit({ action: 'faq.create', target: id, details: { qLen: faq.q.length, tags: faq.tags?.length || 0 } }); } catch {}
   return faq;
 }
 
@@ -48,10 +50,12 @@ export async function updateFaq(id: string, patch: Partial<Omit<Faq, 'id' | 'cre
   const ref = doc(collection(db(), FAQ_COLLECTION), id);
   await updateDoc(ref, { ...patch, updatedAt: Date.now() });
   try { await logActivity({ type:'faq.update', payload:{ id, ...(patch.q?{ q: patch.q }:{}), ...(patch.a?{ a: patch.a }:{}) }, summaryKey:'faq.update' }); } catch {}
+  try { await writeAdminAudit({ action: 'faq.update', target: id, details: { hasQ: !!patch.q, hasA: !!patch.a } }); } catch {}
 }
 
 export async function deleteFaq(id: string): Promise<void> {
   const ref = doc(collection(db(), FAQ_COLLECTION), id);
   await deleteDoc(ref);
   try { await logActivity({ type:'faq.delete', payload:{ id }, summaryKey:'faq.delete' }); } catch {}
+  try { await writeAdminAudit({ action: 'faq.delete', target: id }); } catch {}
 }

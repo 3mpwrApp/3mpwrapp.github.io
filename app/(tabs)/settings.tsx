@@ -25,6 +25,7 @@ import type { ResourceFormat, TextScale } from '../../store/settings';
 import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
+import { sendFeedbackEmailInternal } from '../../utils/feedback';
 import { a11yLiveRegion } from '../../utils/platform';
 const NotificationPreferences = React.lazy(() => import('../../components/NotificationPreferences'));
 const EmergencyWalletCard = React.lazy(() => import('../../components/EmergencyWalletCard'));
@@ -78,6 +79,8 @@ export default function SettingsScreen() {
   const confirmDelete = async () => { if (!user?.email) return; const { trackEvent } = require('../../services/analyticsClient'); setDeleting(true); try { const cred = EmailAuthProvider.credential(user.email, password); await reauthenticateWithCredential(user, cred); await deleteUser(user); trackEvent('account_delete', { method: 'password' }); Alert.alert(t('settings.account.deleted','Account deleted')); setDeleteMode(false); } catch(e:any){ trackEvent('account_delete_failed', { code: e?.code || 'error', message: e?.message }); Alert.alert(t('settings.account.reauthFailed','Re-authentication failed'), e?.message||'Error'); } finally { setDeleting(false); } };
 
   // Removed standalone emergency card navigation: now embedded below.
+
+  const sendFeedbackEmail = () => sendFeedbackEmailInternal(t);
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding:20 }} accessibilityLabel={t('settings.title','Settings screen')}>
@@ -182,6 +185,18 @@ export default function SettingsScreen() {
       <Section title='Wellness Preferences' styles={styles}><WellnessPrefsSection /></Section>
       <Section title='Media & Locker' styles={styles}><MediaLockerSection /></Section>
       <Section title={t('settings.privacy.title','Privacy & Security')} subtitle={t('settings.privacy.subtitle','Control your data and security')} styles={styles}><EnhancedPrivacySection /></Section>
+      <Section title={t('about.title','About & Contact')} styles={styles}>
+        <A11yPressable
+          onPress={sendFeedbackEmail}
+          accessibilityRole='button'
+          accessibilityLabel={t('about.sendLabel','Send email')}
+          hitSlop={HIT_SLOP_8}
+          style={[styles.linkButton, { justifyContent:'center', marginBottom:12 }]}
+        >
+          <Ionicons name='mail' size={20} color={palette.primary} />
+          <Text style={styles.linkText}>{t('about.sendLabel','Send email')}</Text>
+        </A11yPressable>
+      </Section>
       <Section title='Terms & Policies' styles={styles}><TermsSection /></Section>
   {user && <Section title='Admin' styles={styles}><AdminSection /></Section>}
     </ScrollView>

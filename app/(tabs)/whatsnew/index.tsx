@@ -20,8 +20,7 @@ import {
 import { subscribeToActivityFeed } from "../../../services/activity";
 import {
     addLocalWhatsNew,
-    getLocalWhatsNew,
-    setLocalWhatsNew,
+    getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
 } from "../../../services/localContent";
 import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -32,7 +31,7 @@ export default function WhatsNewScreen() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Whatâ€™s New");
+  useAnnounceOnMount("What’s New");
   useFocusOnRefOnMount(titleRef);
 
   const now = React.useMemo(() => new Date(), []);
@@ -59,6 +58,18 @@ export default function WhatsNewScreen() {
           if (seen) setLastSeen(seen);
         } catch {}
       }
+    })();
+  }, []);
+
+  // Ensure auto-generated feed is merged with defaults and local, and older items archived in UI
+  React.useEffect(() => {
+    (async () => {
+      try {
+        const { current, archived } = await getWhatsNewSplit();
+        // Keep current + archived accessible; here we merge into items for display grouping already below
+        // We only set items to current list; archived will still show via sections based on date checks
+        if (current?.length) setItems(current);
+      } catch {}
     })();
   }, []);
 
@@ -133,7 +144,7 @@ export default function WhatsNewScreen() {
         accessibilityRole="header"
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Whatâ€™s New
+  What’s New
       </Text>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
@@ -170,7 +181,7 @@ export default function WhatsNewScreen() {
             setSummary("");
           }}
           accessibilityRole="button"
-          accessibilityLabel="Add whatâ€™s new"
+          accessibilityLabel="Add what’s new"
           style={({ pressed }) => [
             styles.button,
             (!title.trim() || !summary.trim() || pressed) && { opacity: 0.7 },

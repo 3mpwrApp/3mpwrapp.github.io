@@ -25,6 +25,12 @@ service cloud.firestore {
       allow write, update, delete: if isAdmin();
     }
 
+    // Admin audit log: admin-only read/write
+    match /admin_audit/{docId} {
+      allow read: if isAdmin();
+      allow create, update, delete: if isAdmin();
+    }
+
     // Campaign rooms metadata: owner/moderator control
     function isRoomStaff(roomId) {
       return exists(/databases/$(database)/documents/campaign_rooms/$(roomId)) &&

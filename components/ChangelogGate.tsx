@@ -11,7 +11,7 @@ try {
 } catch {}
 
 // Bump this ID when you want to show users what's new again
-const CHANGELOG_ID = "2025-09-06-a";
+const CHANGELOG_ID = "2025-10-06-a";
 const KEY = "empowr.changelog.seen";
 
 export default function ChangelogGate({
@@ -48,16 +48,14 @@ export default function ChangelogGate({
       accessibilityLabel="What’s new"
     >
       <View style={styles.card}>
-        <Text style={styles.title}>What’s new</Text>
+  <Text accessibilityRole="header" style={styles.title}>What’s new</Text>
         <ScrollView style={{ maxHeight: 280 }}>
           <Text style={styles.text}>
-            New Advocacy tools: Self-Advocacy Coach, Policy Made Simple, AI
-            Translator, AI Case Interpreter, Collective Legal Hub, and AI
-            Government Navigator. Wellness: Work-Balance AI, Grief & Identity
-            Hub, Adaptive Meditation, trackers with exports and privacy lock.
-            Resources: Voice-to-Case Notes, Deadlines with reminders/ICS/calendar,
-            Evidence Checklist, Template Gallery. Campaign Rooms: shared tasks and
-            notes with realtime sync. Terms gate and optional LLM backend hooks.
+            What’s new this month:
+            {'\n'}• Plain-language What’s New: daily updates from our changelog, with older items auto‑archived after 30 days.
+            {'\n'}• Settings → About & Contact: quick “Send email” button for feedback during closed beta.
+            {'\n'}• Accessibility & i18n: more labels and translations across Wellness and Resources.
+            {'\n'}• Analytics: events now include a beta flag to help us focus fixes.
           </Text>
         </ScrollView>
         <A11yPressable onPress={onDismiss} style={styles.button}>
