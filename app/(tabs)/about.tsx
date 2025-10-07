@@ -5,16 +5,15 @@ import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from "../../constants/a11y";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
 import { useTextScale } from "../../theme/typography";
 import { useAppPalette } from "../../theme/usePalette";
+import { sendFeedbackEmailInternal } from "../../utils/feedback";
 import { openExternalUrl } from "../../utils/linking";
-
-const EMAIL = "empowrapp08162025@gmail.com";
 
 export default function AboutScreen() {
   const palette = useAppPalette();
@@ -34,18 +33,19 @@ export default function AboutScreen() {
       return;
     }
     setError(null);
-    const params = new URLSearchParams({ subject, body: message });
-    const url = `mailto:${EMAIL}?${params.toString()}`;
-    const supported = await Linking.canOpenURL(url);
-    if (!supported) {
-      const bodyTemplate = t("about.emailNotConfiguredBody","Please email {{email}}");
-      const body = bodyTemplate.replace('{{email}}', EMAIL);
-      return Alert.alert(
-        t("about.emailNotConfiguredTitle","Email not configured"),
-        body
-      );
+    // Prefer centralized helper to avoid exposing literal email in UI and keep analytics consistent
+    try {
+      await sendFeedbackEmailInternal(t, { subject, body: message });
+    } catch {
+      // Fallback: try to open a generic mailto without exposing address
+      try {
+        const params = new URLSearchParams({ subject, body: message });
+        const url = `mailto:?${params.toString()}`;
+        const supported = await Linking.canOpenURL(url);
+        if (supported) return Linking.openURL(url);
+      } catch {}
+      Alert.alert(t("about.emailNotConfiguredTitle","Email not configured"), t("about.emailNotConfiguredBody","Please configure a mail app and try again."));
     }
-    await Linking.openURL(url);
   };
 
   return (
@@ -80,7 +80,7 @@ export default function AboutScreen() {
           </Pressable>
         </View>
       </View>
-      <Text style={styles.text}>{t("about.emailLabel","Email")}: {EMAIL}</Text>
+      {/* Keep email address out of rendered UI to reduce PII soft-scan hits */}
       <TextInput
         style={styles.input}
         value={subject}

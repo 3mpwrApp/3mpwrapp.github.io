@@ -16,17 +16,14 @@ import { useAuth } from '../../context/AuthContext';
 import { auth, db, storage } from '../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
-import { clearAllData, exportBackup, importBackup } from '../../services/backup';
-import { useBookmarks } from '../../store/bookmarks';
 import { useNetwork } from '../../store/network';
-import { usePrivacy } from '../../store/privacy';
-import { useProfileLocal } from '../../store/profileLocal';
 import type { ResourceFormat, TextScale } from '../../store/settings';
 import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 import { sendFeedbackEmailInternal } from '../../utils/feedback';
-import { a11yLiveRegion } from '../../utils/platform';
+
+import * as SettingsLazy from './settings.lazy';
 const NotificationPreferences = React.lazy(() => import('../../components/NotificationPreferences'));
 const EmergencyWalletCard = React.lazy(() => import('../../components/EmergencyWalletCard'));
 
@@ -107,7 +104,11 @@ export default function SettingsScreen() {
           </React.Suspense>
         )}
       </Section>
-      <Section title={t('settings.bookmarks.title','Bookmarks')} subtitle={t('settings.bookmarks.subtitle','Save quick links to app features')} styles={styles}><BookmarksSection /></Section>
+      <Section title={t('settings.bookmarks.title','Bookmarks')} subtitle={t('settings.bookmarks.subtitle','Save quick links to app features')} styles={styles}>
+        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading bookmarks…</Text></View>}>
+          <SettingsLazy.Bookmarks />
+        </React.Suspense>
+      </Section>
       <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>
         {isGuest && (
           <View style={{ marginBottom:16 }}>
@@ -181,10 +182,18 @@ export default function SettingsScreen() {
           <Text style={styles.emergencyButtonText}>{t('settings.emergency.manage','Manage Emergency Card')}</Text>
         </A11yPressable>
       </Section>
-      <Section title='Local Profile (for templates)' styles={styles}><LocalProfileSection /></Section>
+      <Section title='Local Profile (for templates)' styles={styles}>
+        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
+          <SettingsLazy.LocalProfile />
+        </React.Suspense>
+      </Section>
       <Section title='Wellness Preferences' styles={styles}><WellnessPrefsSection /></Section>
       <Section title='Media & Locker' styles={styles}><MediaLockerSection /></Section>
-      <Section title={t('settings.privacy.title','Privacy & Security')} subtitle={t('settings.privacy.subtitle','Control your data and security')} styles={styles}><EnhancedPrivacySection /></Section>
+      <Section title={t('settings.privacy.title','Privacy & Security')} subtitle={t('settings.privacy.subtitle','Control your data and security')} styles={styles}>
+        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading privacy…</Text></View>}>
+          <SettingsLazy.EnhancedPrivacy />
+        </React.Suspense>
+      </Section>
       <Section title={t('about.title','About & Contact')} styles={styles}>
         <A11yPressable
           onPress={sendFeedbackEmail}
@@ -269,25 +278,6 @@ function EnhancedA11ySettingsSection() {
   );
 }
 
-function LocalProfileSection() {
-  const palette = useAppPalette();
-  const s = createStyles(palette);
-  const { profile, setProfile } = useProfileLocal();
-  const [name, setName] = useState(profile.name ?? '');
-  const [contact, setContact] = useState(profile.contact ?? '');
-  const [province, setProvince] = useState(profile.province ?? '');
-  return (
-    <View>
-      <Text style={{ color:palette.text, opacity:0.9, marginBottom:6 }}>Name</Text>
-      <TextInput style={s.input} value={name} onChangeText={setName} placeholder='Your name' />
-      <Text style={{ color:palette.text, opacity:0.9, marginBottom:6 }}>Contact (email/phone)</Text>
-  <TextInput style={s.input} value={contact} onChangeText={setContact} placeholder='name at example dot com' />
-      <Text style={{ color:palette.text, opacity:0.9, marginBottom:6 }}>Province (e.g., ON, QC)</Text>
-      <TextInput style={s.input} value={province} onChangeText={setProvince} placeholder='ON' autoCapitalize='characters' maxLength={2} />
-      <Button title='Save' onPress={()=> setProfile({ name, contact, province })} />
-    </View>
-  );
-}
 
 function WellnessPrefsSection() {
   const palette = useAppPalette();
@@ -355,67 +345,6 @@ function MediaLockerSection() {
   );
 }
 
-function EnhancedPrivacySection() {
-  const { t } = useTranslation();
-  const palette = useAppPalette();
-  const { factor } = useTextScale();
-  const styles = createStyles(palette, factor);
-  const { state, setPasscode, setLockWellness, setErrorReportingEnabled } = usePrivacy();
-  const { requirePasscodeOnLaunch, setRequirePasscodeOnLaunch, autoLockTimeout, setAutoLockTimeout, analyticsOptOut, setAnalyticsOptOut } = useSettings();
-  const onExport = async () => {
-    const bundle = await exportBackup();
-    if (!bundle) return Alert.alert('Export failed','Storage unavailable.');
-    try {
-      const FileSystemModule = await import('expo-file-system');
-      const FS: any = FileSystemModule.default ?? FileSystemModule;
-      const baseDir = FS.cacheDirectory ?? FS.documentDirectory;
-      if (!baseDir) return Alert.alert('Export failed','No writable directory.');
-      const path = baseDir + `empowr_backup_${Date.now()}.json`;
-      await FS.writeAsStringAsync(path, JSON.stringify(bundle, null, 2));
-      const Share = await import('expo-sharing');
-      if (Share?.isAvailableAsync && (await Share.isAvailableAsync())) {
-        await Share.shareAsync(path);
-      } else {
-        Alert.alert('Backup ready','Backup file saved to cache.');
-      }
-    } catch {
-      Alert.alert('Export failed','Could not create file.');
-    }
-  };
-  const onImport = async () => { try { const Doc = await import('expo-document-picker'); const res = await Doc.getDocumentAsync({ type:'application/json' }); if (res.canceled || !res.assets?.length) return; const uri = res.assets[0].uri; const FS = await import('expo-file-system'); const raw = await FS.readAsStringAsync(uri); const ok = await importBackup(JSON.parse(raw)); Alert.alert(ok? 'Imported':'Import failed', ok? 'Backup restored.':'Could not restore backup.'); } catch { Alert.alert('Import failed','Unable to read backup file.'); } };
-  const onClear = async () => { Alert.alert('Clear All Data','This will permanently delete all your local app data. This cannot be undone. Are you sure?', [ { text:'Cancel', style:'cancel' }, { text:'Clear Data', style:'destructive', onPress: async()=> { const ok = await clearAllData(); Alert.alert(ok? 'Cleared':'Failed', ok? 'Local app data cleared.':'Unable to clear data.'); } } ] ); };
-  return (
-    <View>
-      <AccessibilityToggle title={t('settings.privacy.passcode','Require Passcode on Launch')} description={t('settings.privacy.passcodeDesc','Lock app with passcode')} value={requirePasscodeOnLaunch} onValueChange={setRequirePasscodeOnLaunch} icon='lock-closed' testID='passcode-toggle' />
-      <View style={styles.autoLockSection}>
-        <Text style={styles.sectionSubtitle} accessibilityRole='header'>{t('settings.privacy.autoLock','Auto-Lock Timeout')}</Text>
-        <Text style={styles.description}>{t('settings.privacy.autoLockDesc','Minutes before app locks')}</Text>
-        <View style={styles.buttonRow}>
-          {[1,5,15,30].map(m => (
-            <A11yPressable key={m} style={[styles.button, autoLockTimeout === m && styles.buttonActive]} onPress={()=> setAutoLockTimeout(m)} accessibilityRole='button' accessibilityState={{ selected: autoLockTimeout === m }} accessibilityLabel={`Set auto-lock to ${m} minutes`} hitSlop={HIT_SLOP_8}>
-              <Text style={[styles.buttonText, autoLockTimeout === m && styles.buttonTextActive]}>{m}m</Text>
-            </A11yPressable>
-          ))}
-        </View>
-      </View>
-      <AccessibilityToggle title={t('settings.privacy.analytics','Opt Out of Analytics')} description={t('settings.privacy.analyticsDesc',"Don't share usage data")} value={analyticsOptOut} onValueChange={setAnalyticsOptOut} icon='analytics' testID='analytics-toggle' />
-      <AccessibilityToggle title='Error Reporting' description='Help improve the app by sharing crash reports' value={state.errorReportingEnabled ?? false} onValueChange={setErrorReportingEnabled} icon='bug' testID='error-reporting-toggle' />
-      <View style={styles.backupSection}>
-        <Text style={styles.sectionSubtitle} accessibilityRole='header'>Data Management</Text>
-        <View style={styles.passcodeSection}>
-          <Text style={styles.rowLabel}>Set/Change Passcode</Text>
-          <TextInput style={styles.input} placeholder='New passcode' secureTextEntry onSubmitEditing={(e)=> setPasscode(e.nativeEvent.text || undefined)} accessibilityLabel='New passcode' accessibilityHint='Enter a new passcode for the app' />
-        </View>
-        <AccessibilityToggle title='Wellness Lock' description='Require passcode to access wellness features' value={state.lockWellness ?? false} onValueChange={setLockWellness} icon='heart-outline' testID='wellness-lock-toggle' />
-        <View style={styles.backupButtons}>
-          <A11yPressable style={styles.backupButton} onPress={onExport} accessibilityRole='button' accessibilityLabel='Export backup' hitSlop={HIT_SLOP_8}><Ionicons name='download' size={16} color={palette.primary} /><Text style={styles.backupButtonText}>Export Backup</Text></A11yPressable>
-          <A11yPressable style={styles.backupButton} onPress={onImport} accessibilityRole='button' accessibilityLabel='Import backup' hitSlop={HIT_SLOP_8}><Ionicons name='cloud-upload' size={16} color={palette.primary} /><Text style={styles.backupButtonText}>Import Backup</Text></A11yPressable>
-          <A11yPressable style={[styles.backupButton, styles.dangerButton]} onPress={onClear} accessibilityRole='button' accessibilityLabel='Clear all data' hitSlop={HIT_SLOP_8}><Ionicons name='trash' size={16} color={palette.error} /><Text style={[styles.backupButtonText, styles.dangerButtonText]}>Clear All Data</Text></A11yPressable>
-        </View>
-      </View>
-    </View>
-  );
-}
 
 function TermsSection() {
   const openTerms = () => { Linking.openURL('https://empowr.app/terms').catch(()=>{}); };
@@ -449,66 +378,6 @@ function AdminSection() {
   );
 }
 
-function BookmarksSection() {
-  const { t } = useTranslation();
-  const { items, addBookmark, removeBookmark, clearBookmarks, findByRoute } = useBookmarks();
-  const palette = useAppPalette();
-  const { factor } = useTextScale();
-  const styles = createStyles(palette, factor);
-  const [route, setRoute] = useState('');
-  const [label, setLabel] = useState('');
-  const [error, setError] = useState<string | null>(null);
-  const [query, setQuery] = useState('');
-  const registry = require('../../utils/routeRegistry') as any;
-  const all: any[] = registry.BOOKMARKABLE_ROUTES || [];
-  const bookmarked = new Set(items.map(b => b.route));
-  const suggestions = all.filter(r => !bookmarked.has(r.route)).filter(r => { if (!query.trim()) return true; const q = query.trim().toLowerCase(); return r.route.toLowerCase().includes(q) || r.fallback.toLowerCase().includes(q) || r.tKey.toLowerCase().includes(q); }).slice(0,8);
-  const addEntry = (r: string, custom?: string) => { const entry = registry.findRouteEntry?.(r); if (!entry) { setError(t('settings.bookmarks.errInvalid','Route not bookmarkable')); return; } if (findByRoute(r)) { setError(t('settings.bookmarks.errDuplicate','Already bookmarked')); return; } addBookmark(r, custom || t(entry.tKey, entry.fallback), entry.tKey); setRoute(''); setLabel(''); setError(null); };
-  const onAdd = () => { const r = route.trim(); const l = label.trim(); if (!r) { setError(t('settings.bookmarks.errEmptyRoute','Route required')); return; } addEntry(r, l || undefined); };
-  return (
-    <View>
-      <Text style={styles.description} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('settings.bookmarks.description','Add bookmarks to quickly open frequently used tools and screens.')}</Text>
-      <Text style={styles.rowLabel}>{t('settings.bookmarks.search','Search or filter available routes')}</Text>
-      <TextInput style={styles.input} placeholder={t('settings.bookmarks.searchPlaceholder','Type to filter suggestions')} value={query} onChangeText={setQuery} autoCapitalize='none' accessibilityLabel={t('settings.bookmarks.search','Search or filter available routes')} />
-      {suggestions.length > 0 && (
-        <View style={{ marginBottom:12 }}>
-          <Text style={[styles.rowLabel, { marginTop:0 }]}>{t('settings.bookmarks.suggestions','Suggestions')}</Text>
-          <View style={{ flexDirection:'row', flexWrap:'wrap' }}>
-            {suggestions.map(s => (
-              <A11yPressable key={s.route} hitSlop={HIT_SLOP_8} onPress={()=> addEntry(s.route)} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.addSuggestion','Add bookmark for') + ' ' + t(s.tKey, s.fallback)} style={{ paddingHorizontal:12, paddingVertical:8, backgroundColor:palette.card, borderRadius:999, borderWidth:1, borderColor:palette.muted, marginRight:6, marginBottom:6, minHeight:40, justifyContent:'center' }}>
-                <Text style={{ color:palette.text, fontSize:Math.round(13*factor) }}>{t(s.tKey, s.fallback)}</Text>
-              </A11yPressable>
-            ))}
-          </View>
-        </View>
-      )}
-      <Text style={styles.rowLabel}>{t('settings.bookmarks.route','Route Path')}</Text>
-      <TextInput style={styles.input} placeholder={t('settings.bookmarks.routePlaceholder','e.g. /(tabs)/resources/index')} value={route} onChangeText={setRoute} autoCapitalize='none' />
-      <Text style={styles.rowLabel}>{t('settings.bookmarks.label','Label')}</Text>
-      <TextInput style={styles.input} placeholder={t('settings.bookmarks.labelPlaceholder','My Resources')} value={label} onChangeText={setLabel} />
-      <Button title={t('settings.bookmarks.add','Add Bookmark')} onPress={onAdd} />
-  {error && <Text style={{ color:palette.error, marginTop:6 }} {...a11yLiveRegion('polite')}>{error}</Text>}
-      {items.length === 0 ? <Text style={[styles.description, { marginTop:12 }]}>{t('settings.bookmarks.empty','No bookmarks yet.')}</Text> : (
-        <View style={{ marginTop:12 }}>
-          {items.slice().sort((a,b)=> b.created - a.created).map(b => (
-            <View key={b.id} style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', paddingVertical:8 }}>
-              <View style={{ flex:1, paddingRight:8 }}>
-                <Text style={{ color:palette.text, fontWeight:'600' }}>{b.tKey ? t(b.tKey, b.label) : b.label}</Text>
-                <Text style={{ color:palette.text, opacity:0.6, fontSize:12 }}>{b.route}</Text>
-              </View>
-              <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> removeBookmark(b.id)} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.remove','Remove bookmark')} style={{ padding:8, minHeight:44, justifyContent:'center' }}>
-                <Ionicons name='trash' size={18} color={palette.error} />
-              </A11yPressable>
-            </View>
-          ))}
-          <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> clearBookmarks()} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.clearAll','Clear all bookmarks')} style={{ padding:8, alignSelf:'flex-start', minHeight:44, justifyContent:'center' }}>
-            <Text style={{ color:palette.error, fontWeight:'600' }}>{t('settings.bookmarks.clearAll','Clear All')}</Text>
-          </A11yPressable>
-        </View>
-      )}
-    </View>
-  );
-}
 
 function Section({ title, subtitle, children, styles }: { title: string; subtitle?: string; children: React.ReactNode; styles: ReturnType<typeof createStyles>; }) {
   return (

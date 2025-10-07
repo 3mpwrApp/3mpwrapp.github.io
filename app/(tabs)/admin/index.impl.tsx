@@ -1,7 +1,6 @@
 import { useLocalSearchParams } from "expo-router";
 import {
     collection,
-    deleteDoc,
     doc,
     getCountFromServer,
     getDocs,
@@ -9,7 +8,7 @@ import {
     query,
     startAfter,
     updateDoc,
-    where,
+    where
 } from "firebase/firestore";
 import React from "react";
 import {
@@ -27,14 +26,13 @@ import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { db } from "../../../firebase/config";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
 import { computeActivityStats, logActivity, subscribeToActivityFeed } from "../../../services/activity";
-import { listAdminAudit, listAdminAuditAll, subscribeAdminAudit } from "../../../services/adminAudit";
-import { createFaq, deleteFaq, subscribeFaqs, updateFaq } from "../../../services/faqs";
 import { useAppPalette } from "../../../theme/usePalette";
+
+import * as AdminLazy from "./lazy";
 
 export const options = { href: null };
 
 type ReviewKind = "pending" | "approved" | "trash";
-type ReviewItem = { id: string; type: "mutual" | "rating" } & Record<string, any>;
 
 export default function AdminPanel() {
   const palette = useAppPalette();
@@ -64,25 +62,12 @@ export default function AdminPanel() {
     {},
   );
 
-  const [reviewTab, setReviewTab] = React.useState<ReviewKind>(
-    (params?.tab as ReviewKind) || "pending",
-  );
-  const [reviewItems, setReviewItems] = React.useState<ReviewItem[]>([]);
+  const [reviewTab] = React.useState<ReviewKind>((params?.tab as ReviewKind) || "pending");
   const [activityStats, setActivityStats] = React.useState<{ total:number; since24h:number; byType: Record<string,number>; }>({ total:0, since24h:0, byType:{} });
-  const [auditEvents, setAuditEvents] = React.useState<any[]>([]);
 
   const [broadcastTitle, setBroadcastTitle] = React.useState('');
   const [broadcastBody, setBroadcastBody] = React.useState('');
-  // FAQs management
-  const [faqs, setFaqs] = React.useState<any[]>([]);
-  const [faqQ, setFaqQ] = React.useState('');
-  const [faqA, setFaqA] = React.useState('');
-  const [editingFaqId, setEditingFaqId] = React.useState<string | null>(null);
-
-  React.useEffect(()=> {
-    const unsub = subscribeFaqs(rows => setFaqs(rows));
-    return () => unsub();
-  }, []);
+  // Heavy subpanels are now lazy-loaded components
 
   // Activity subscription
   React.useEffect(()=> {
@@ -92,16 +77,7 @@ export default function AdminPanel() {
     return () => unsub();
   }, []);
 
-  // Admin audit subscription (latest 50)
-  React.useEffect(() => {
-    let unsub: (() => void) | null = null;
-    try {
-      unsub = subscribeAdminAudit((rows) => setAuditEvents(rows.slice(0, 50)), { limit: 50 });
-    } catch {
-      setAuditEvents([]);
-    }
-    return () => { try { if (unsub) unsub(); } catch {} };
-  }, []);
+  // Admin audit subscription moved inside AuditPanel component
 
   React.useEffect(() => {
     (async () => {
@@ -136,49 +112,7 @@ export default function AdminPanel() {
     loadFlags();
   }, [loadFlags]);
 
-  React.useEffect(() => {
-    const t = String(params?.tab || "").toLowerCase();
-    if (t === "pending" || t === "approved" || t === "trash") {
-      setReviewTab(t as ReviewKind);
-    }
-  }, [params?.tab]);
-
-  const loadReview = React.useCallback(async () => {
-    try {
-      const condPending = where("approved", "!=", true);
-      const condApproved = where("approved", "==", true);
-      const condTrash = where("deleted", "==", true);
-      const cond =
-        reviewTab === "approved"
-          ? condApproved
-          : reviewTab === "trash"
-          ? condTrash
-          : condPending;
-
-      const qMut = query(collection(db, "mutual_aid_posts"), cond, limit(50));
-      const qRat = query(collection(db, "ratings"), cond, limit(50));
-      const [mutSnap, ratSnap] = await Promise.all([
-        getDocs(qMut),
-        getDocs(qRat),
-      ]);
-      const items: ReviewItem[] = [
-        ...mutSnap.docs.map((d) => ({
-          id: d.id,
-          type: "mutual",
-          ...(d.data() as any),
-        })),
-        ...ratSnap.docs.map((d) => ({
-          id: d.id,
-          type: "rating",
-          ...(d.data() as any),
-        })),
-      ];
-      setReviewItems(items);
-    } catch {}
-  }, [reviewTab]);
-  React.useEffect(() => {
-    loadReview();
-  }, [loadReview]);
+  // Content review moved to lazy-loaded panel
 
   const filteredUsers = React.useMemo(() => {
     const term = (contains || "").toLowerCase().trim();
@@ -214,96 +148,9 @@ export default function AdminPanel() {
           <Text style={s.text}>Counts — Users: {counts.users ?? "-"} | Campaigns: {counts.campaigns ?? "-"} | Resources: {counts.resources ?? "-"}</Text>
         </View>
 
-        <View style={s.card}>
-          <Text style={s.cardTitle}>Admin Audit (latest)</Text>
-          <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
-            <A11yPressable
-              accessibilityRole="button"
-              accessibilityLabel="Export admin audit events as CSV"
-              hitSlop={HIT_SLOP_8}
-              onPress={async()=>{
-                try {
-                  const rows = await listAdminAudit({ limit: 1000 });
-                  const header = ['ts','actorUid','action','target','details','client_platform','client_version'];
-                  const esc = (v: any) => `"${String(v ?? '').replace(/"/g,'""')}"`;
-                  const data = rows.map(r => [
-                    new Date(r.ts).toISOString(),
-                    r.actorUid ?? '',
-                    r.action ?? '',
-                    r.target ?? '',
-                    (r.details ? JSON.stringify(r.details) : ''),
-                    r.client?.platform ?? '',
-                    r.client?.version ?? ''
-                  ].map(esc).join(',')).join('\n');
-                  const csv = [header.map(esc).join(','), data].filter(Boolean).join('\n');
-                  const FileSystem = await import('expo-file-system');
-                  const Sharing = await import('expo-sharing');
-                  const baseDir: any = (FileSystem as any).default?.cacheDirectory || (FileSystem as any).cacheDirectory || (FileSystem as any).default?.documentDirectory;
-                  const path = `${baseDir}admin_audit_${Date.now()}.csv`;
-                  await (FileSystem as any).writeAsStringAsync(path, csv, { encoding: (FileSystem as any).EncodingType?.UTF8 });
-                  try { if (await (Sharing as any).isAvailableAsync?.()) await (Sharing as any).shareAsync(path, { mimeType: 'text/csv', dialogTitle: 'Admin Audit CSV' }); }
-                  catch {}
-                  Alert.alert('Export ready','CSV saved to cache directory.');
-                } catch { Alert.alert('Export failed','Could not create CSV.'); }
-              }}
-              style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
-            >
-              <Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text>
-            </A11yPressable>
-            <A11yPressable
-              accessibilityRole="button"
-              accessibilityLabel="Export admin audit events as JSON (paged)"
-              hitSlop={HIT_SLOP_8}
-              onPress={async()=>{
-                try {
-                  // Fetch in batches to go beyond Firestore 1000 row practical limits
-                  const rows = await listAdminAuditAll({ batchSize: 500, maxDocs: 5000 });
-                  const payload = rows.map(r => ({
-                    id: (r as any).id || undefined,
-                    ts: r.ts,
-                    iso: new Date(r.ts).toISOString(),
-                    actorUid: r.actorUid ?? null,
-                    action: r.action ?? null,
-                    target: r.target ?? null,
-                    details: r.details ?? null,
-                    client: r.client ?? null,
-                  }));
-                  const json = JSON.stringify({
-                    exportedAt: new Date().toISOString(),
-                    count: payload.length,
-                    items: payload,
-                  }, null, 2);
-                  const FileSystem = await import('expo-file-system');
-                  const Sharing = await import('expo-sharing');
-                  const baseDir: any = (FileSystem as any).default?.cacheDirectory || (FileSystem as any).cacheDirectory || (FileSystem as any).default?.documentDirectory;
-                  const path = `${baseDir}admin_audit_${Date.now()}.json`;
-                  await (FileSystem as any).writeAsStringAsync(path, json, { encoding: (FileSystem as any).EncodingType?.UTF8 });
-                  try { if (await (Sharing as any).isAvailableAsync?.()) await (Sharing as any).shareAsync(path, { mimeType: 'application/json', dialogTitle: 'Admin Audit JSON' }); }
-                  catch {}
-                  Alert.alert('Export ready',`JSON saved to cache (${payload.length} events).`);
-                } catch {
-                  Alert.alert('Export failed','Could not create JSON export.');
-                }
-              }}
-              style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
-            >
-              <Text style={{ color: palette.text, fontWeight:'700' }}>Export JSON (All)</Text>
-            </A11yPressable>
-          </View>
-          {auditEvents.length === 0 ? (
-            <Text style={s.text}>No recent admin actions.</Text>
-          ) : (
-            auditEvents.slice(0, 10).map((e) => (
-              <View key={e.id} style={{ paddingVertical: 6, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted }}>
-                <Text style={s.text}>
-                  {new Date(e.ts).toLocaleString()} — {e.action}
-                  {e.target ? ` · ${e.target}` : ''}
-                </Text>
-                {e.actorUid ? <Text style={[s.text,{opacity:0.7}]}>by {e.actorUid}</Text> : null}
-              </View>
-            ))
-          )}
-        </View>
+        <React.Suspense fallback={<View style={s.card}><Text style={s.cardTitle}>Admin Audit</Text><Text style={s.text}>Loading…</Text></View>}>
+          <AdminLazy.AuditPanel />
+        </React.Suspense>
 
         {/* Activity Metrics */}
         <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Activity Metrics</Text>
@@ -356,72 +203,9 @@ export default function AdminPanel() {
           </A11yPressable>
         </View>
 
-        {/* FAQ Management */}
-        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>FAQs</Text>
-        <Text style={s.text}>Create or edit FAQ entries (remote collection).</Text>
-        <TextInput
-          value={faqQ}
-          onChangeText={setFaqQ}
-          placeholder="Question"
-          style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
-        />
-        <TextInput
-          value={faqA}
-          onChangeText={setFaqA}
-          placeholder="Answer"
-          multiline
-          style={{ borderWidth: StyleSheet.hairlineWidth, minHeight:70, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
-        />
-        <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
-          <A11yPressable
-            accessibilityLabel={editingFaqId? 'Update FAQ' : 'Create FAQ'}
-            disabled={!faqQ.trim() || !faqA.trim()}
-            onPress={async ()=> {
-              try {
-                if (editingFaqId) {
-                  await updateFaq(editingFaqId, { q: faqQ.trim(), a: faqA.trim() });
-                } else {
-                  await createFaq({ q: faqQ.trim(), a: faqA.trim(), source: 'admin' });
-                }
-                setFaqQ(''); setFaqA(''); setEditingFaqId(null);
-              } catch { Alert.alert('Failed','Could not save FAQ'); }
-            }}
-            style={{ paddingHorizontal:14, paddingVertical:10, backgroundColor: palette.primary, borderRadius:6, opacity: (!faqQ.trim() || !faqA.trim())?0.6:1 }}
-          >
-            <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{editingFaqId? 'Update' : 'Create'}</Text>
-          </A11yPressable>
-          {editingFaqId && (
-            <A11yPressable
-              accessibilityLabel="Cancel editing"
-              onPress={()=> { setEditingFaqId(null); setFaqQ(''); setFaqA(''); }}
-              style={{ paddingHorizontal:14, paddingVertical:10, backgroundColor: palette.surface, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-            >
-              <Text style={{ color: palette.text, fontWeight:'700' }}>Cancel</Text>
-            </A11yPressable>
-          )}
-        </View>
-        {faqs.map(f => (
-          <View key={f.id} style={{ marginBottom:6, paddingBottom:6, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted }}>
-            <Text style={[s.text,{ fontWeight:'700', marginBottom:2 }]}>{f.q}</Text>
-            <Text style={[s.text,{ opacity:0.9 }]}>{f.a}</Text>
-            <View style={{ flexDirection:'row', gap:8, marginTop:4 }}>
-              <A11yPressable
-                accessibilityLabel="Edit FAQ"
-                onPress={()=> { setEditingFaqId(f.id); setFaqQ(f.q); setFaqA(f.a); }}
-                style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.surface, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontWeight:'700' }}>Edit</Text>
-              </A11yPressable>
-              <A11yPressable
-                accessibilityLabel="Delete FAQ"
-                onPress={()=> Alert.alert('Delete','Remove this FAQ?', [ { text:'Cancel' }, { text:'Delete', style:'destructive', onPress: async()=> { try { await deleteFaq(f.id); } catch { Alert.alert('Failed','Could not delete'); } } } ]) }
-                style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.surface, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontWeight:'700' }}>Delete</Text>
-              </A11yPressable>
-            </View>
-          </View>
-        ))}
+        <React.Suspense fallback={<Text style={[s.text, { marginTop: 16 }]}>Loading FAQs…</Text>}>
+          <AdminLazy.FaqEditor />
+        </React.Suspense>
 
         {/* User Lookup */}
         <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>User Lookup</Text>
@@ -566,58 +350,9 @@ export default function AdminPanel() {
           </>
         )}
 
-        {/* Content Review */}
-        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Content Review</Text>
-        <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
-          {(['pending','approved','trash'] as ReviewKind[]).map(k => (
-            <A11yPressable
-              key={k}
-              accessibilityLabel={`Show ${k} items`}
-              hitSlop={HIT_SLOP_8}
-              onPress={()=> { setReviewTab(k); loadReview(); }}
-              style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: k===reviewTab? palette.primary: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
-              <Text style={{ color: k===reviewTab? palette.onPrimary: palette.text, fontWeight: '700' }}>{k}</Text>
-            </A11yPressable>
-          ))}
-          <A11yPressable
-            accessibilityLabel="Refresh content review"
-            hitSlop={HIT_SLOP_8}
-            onPress={loadReview}
-            style={{ paddingVertical: 6, paddingHorizontal: 10, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
-            <Text style={{ color: palette.text, fontWeight: '700' }}>Refresh</Text>
-          </A11yPressable>
-        </View>
-        {reviewItems.map((x) => (
-          <View key={`${x.type}:${x.id}`} style={{ marginBottom: 8, paddingBottom: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted }}>
-            <Text style={s.text}>[{x.type}] {x.type==='mutual' ? `${x.type} • ${x.city||''} — ${x.description||''}` : `${x.target||''} • ${x.score||''}★ — ${x.comment||''}`}</Text>
-            <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
-              <A11yPressable
-                accessibilityRole="button"
-                accessibilityLabel="Approve item"
-                hitSlop={HIT_SLOP_8}
-                onPress={async()=>{ try { await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { approved: true, deleted: false }); Alert.alert('Done','Approved'); loadReview(); } catch {} }}
-                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
-                <Text style={{ color: palette.text, fontWeight:'700' }}>Approve</Text>
-              </A11yPressable>
-              <A11yPressable
-                accessibilityRole="button"
-                accessibilityLabel="Restore item"
-                hitSlop={HIT_SLOP_8}
-                onPress={async()=>{ try { await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { approved: false, deleted: false }); Alert.alert('Done','Restored'); loadReview(); } catch {} }}
-                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
-                <Text style={{ color: palette.text, fontWeight:'700' }}>Restore</Text>
-              </A11yPressable>
-              <A11yPressable
-                accessibilityRole="button"
-                accessibilityLabel={reviewTab==='trash' ? 'Purge item' : 'Move item to trash'}
-                hitSlop={HIT_SLOP_8}
-                onPress={async()=>{ try { if (reviewTab==='trash') { await deleteDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id)); Alert.alert('Done','Purged'); } else { await updateDoc(doc(db, x.type==='mutual'?'mutual_aid_posts':'ratings', x.id), { deleted: true }); Alert.alert('Done','Trashed'); } loadReview(); } catch {} }}
-                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
-                <Text style={{ color: palette.text, fontWeight:'700' }}>{reviewTab==='trash' ? 'Purge' : 'Trash'}</Text>
-              </A11yPressable>
-            </View>
-          </View>
-        ))}
+        <React.Suspense fallback={<Text style={[s.text, { marginTop: 16 }]}>Loading content review…</Text>}>
+          <AdminLazy.ContentReview />
+        </React.Suspense>
       </ScrollView>
     </AdminGuard>
   );
