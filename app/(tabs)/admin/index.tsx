@@ -27,7 +27,7 @@ import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { db } from "../../../firebase/config";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
 import { computeActivityStats, logActivity, subscribeToActivityFeed } from "../../../services/activity";
-import { listAdminAudit, subscribeAdminAudit } from "../../../services/adminAudit";
+import { listAdminAudit, listAdminAuditAll, subscribeAdminAudit } from "../../../services/adminAudit";
 import { createFaq, deleteFaq, subscribeFaqs, updateFaq } from "../../../services/faqs";
 import { useAppPalette } from "../../../theme/usePalette";
 
@@ -249,6 +249,45 @@ export default function AdminPanel() {
               style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
             >
               <Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text>
+            </A11yPressable>
+            <A11yPressable
+              accessibilityRole="button"
+              accessibilityLabel="Export admin audit events as JSON (paged)"
+              hitSlop={HIT_SLOP_8}
+              onPress={async()=>{
+                try {
+                  // Fetch in batches to go beyond Firestore 1000 row practical limits
+                  const rows = await listAdminAuditAll({ batchSize: 500, maxDocs: 5000 });
+                  const payload = rows.map(r => ({
+                    id: (r as any).id || undefined,
+                    ts: r.ts,
+                    iso: new Date(r.ts).toISOString(),
+                    actorUid: r.actorUid ?? null,
+                    action: r.action ?? null,
+                    target: r.target ?? null,
+                    details: r.details ?? null,
+                    client: r.client ?? null,
+                  }));
+                  const json = JSON.stringify({
+                    exportedAt: new Date().toISOString(),
+                    count: payload.length,
+                    items: payload,
+                  }, null, 2);
+                  const FileSystem = await import('expo-file-system');
+                  const Sharing = await import('expo-sharing');
+                  const baseDir: any = (FileSystem as any).default?.cacheDirectory || (FileSystem as any).cacheDirectory || (FileSystem as any).default?.documentDirectory;
+                  const path = `${baseDir}admin_audit_${Date.now()}.json`;
+                  await (FileSystem as any).writeAsStringAsync(path, json, { encoding: (FileSystem as any).EncodingType?.UTF8 });
+                  try { if (await (Sharing as any).isAvailableAsync?.()) await (Sharing as any).shareAsync(path, { mimeType: 'application/json', dialogTitle: 'Admin Audit JSON' }); }
+                  catch {}
+                  Alert.alert('Export ready',`JSON saved to cache (${payload.length} events).`);
+                } catch {
+                  Alert.alert('Export failed','Could not create JSON export.');
+                }
+              }}
+              style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
+            >
+              <Text style={{ color: palette.text, fontWeight:'700' }}>Export JSON (All)</Text>
             </A11yPressable>
           </View>
           {auditEvents.length === 0 ? (

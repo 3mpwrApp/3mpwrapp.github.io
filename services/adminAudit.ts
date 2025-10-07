@@ -1,6 +1,6 @@
 import { getApps } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import { addDoc, collection, getDocs, getFirestore, limit, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { addDoc, collection, getDocs, getFirestore, limit, onSnapshot, orderBy, query, startAfter } from 'firebase/firestore';
 
 import { ADMIN_AUDIT_COLLECTION, type AdminAuditEvent } from '../types/adminAudit';
 
@@ -55,4 +55,41 @@ export async function listAdminAudit(opts: { limit?: number } = {}): Promise<Adm
   } catch {
     return [];
   }
+}
+
+// Paged listing for large exports. Uses 'ts' as the cursor field.
+export async function listAdminAuditPage(opts: { pageSize?: number; afterTs?: number | null } = {}): Promise<{ items: AdminAuditEvent[]; cursor: number | null }> {
+  if (getApps().length === 0) return { items: [], cursor: null };
+  const db = getFirestore();
+  const size = opts.pageSize || 500;
+  const base = [collection(db, ADMIN_AUDIT_COLLECTION), orderBy('ts', 'desc')] as const;
+  const q = opts.afterTs != null
+    ? query(base[0], base[1], startAfter(opts.afterTs), limit(size))
+    : query(base[0], base[1], limit(size));
+  try {
+    const snap = await getDocs(q);
+    const items = snap.docs.map(d => ({ id: d.id, ...(d.data() as any) }));
+    const last = items.length ? (items[items.length - 1] as any).ts as number : null;
+    return { items, cursor: last ?? null };
+  } catch {
+    return { items: [], cursor: null };
+  }
+}
+
+// Convenience to iterate pages up to maxDocs. Be mindful of Firestore quotas.
+export async function listAdminAuditAll(opts: { batchSize?: number; maxDocs?: number } = {}): Promise<AdminAuditEvent[]> {
+  const batchSize = Math.max(1, Math.min(1000, opts.batchSize || 500));
+  const maxDocs = Math.max(batchSize, Math.min(10000, opts.maxDocs || 5000));
+  const all: AdminAuditEvent[] = [];
+  let cursor: number | null = null;
+  // Loop until fewer than batchSize returned or we hit maxDocs
+  for (;;) {
+    const { items, cursor: next } = await listAdminAuditPage({ pageSize: batchSize, afterTs: cursor });
+    if (!items.length) break;
+    all.push(...items);
+    if (all.length >= maxDocs) break;
+    cursor = next;
+    if (items.length < batchSize) break;
+  }
+  return all.slice(0, maxDocs);
 }

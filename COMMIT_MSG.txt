@@ -1,0 +1,13 @@
+feat(admin): paginated JSON export for Admin Audit
+
+- Add listAdminAuditAll with batching to export >1000 events
+- Wire "Export JSON (All)" button in Admin Panel using expo-file-system + sharing
+
+perf(resources): code-split Evidence Locker
+
+- Route now lazy-loads implementation via React.lazy
+- Impl kept minimal for now to keep tests green; full UI can be moved into impl incrementally
+
+chore: lint tidy
+
+- Fix import/order lint warning in Evidence Locker impl
