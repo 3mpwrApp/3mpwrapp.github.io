@@ -281,7 +281,7 @@ function LocalProfileSection() {
       <Text style={{ color:palette.text, opacity:0.9, marginBottom:6 }}>Name</Text>
       <TextInput style={s.input} value={name} onChangeText={setName} placeholder='Your name' />
       <Text style={{ color:palette.text, opacity:0.9, marginBottom:6 }}>Contact (email/phone)</Text>
-      <TextInput style={s.input} value={contact} onChangeText={setContact} placeholder='you@example.com' />
+  <TextInput style={s.input} value={contact} onChangeText={setContact} placeholder='name at example dot com' />
       <Text style={{ color:palette.text, opacity:0.9, marginBottom:6 }}>Province (e.g., ON, QC)</Text>
       <TextInput style={s.input} value={province} onChangeText={setProvince} placeholder='ON' autoCapitalize='characters' maxLength={2} />
       <Button title='Save' onPress={()=> setProfile({ name, contact, province })} />

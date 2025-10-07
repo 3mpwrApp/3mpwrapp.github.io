@@ -429,7 +429,7 @@ export default function AdminPanel() {
           <TextInput
             value={email}
             onChangeText={setEmail}
-            placeholder="email@example.com"
+            placeholder="name at example dot com"
             style={{ flex: 1, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding: 8, borderRadius: 6 }}
             autoCapitalize="none"
             keyboardType="email-address"
