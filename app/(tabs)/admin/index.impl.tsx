@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from "expo-router";
+// import { useLocalSearchParams } from "expo-router";
 import {
     collection,
     doc,
@@ -32,13 +32,13 @@ import * as AdminLazy from "./lazy";
 
 export const options = { href: null };
 
-type ReviewKind = "pending" | "approved" | "trash";
+// review kind managed within lazy subpanel
 
 export default function AdminPanel() {
   const palette = useAppPalette();
   const s = styles(palette);
 
-  const params = useLocalSearchParams<{ tab?: ReviewKind }>();
+  // const params = useLocalSearchParams<{ tab?: ReviewKind }>();
 
   const [counts, setCounts] = React.useState<{
     users?: number;
