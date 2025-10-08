@@ -99,3 +99,15 @@ Last updated: 2025-10-07
 
 ---
 Ownership: Keep this file updated each PR (add/remove lines). Short, actionable bullet style.
+
+## Status Delta — Campaigns & Advocacy (Oct 7, 2025)
+
+- [Done] Campaigns list and room fully implemented
+  - `app/(tabs)/campaigns/index.tsx`: Sections, search, create/join/leave, share, support +1.
+  - `app/(tabs)/campaigns/room/[id].tsx`: Tasks, Notes, CSV export, Share Room Link, Invite Moderator, accept invite token.
+- [Done] AI advocacy tools shipped
+  - `app/(tabs)/advocacy/ai-case-interpreter.tsx`: Offline/LLM summary, next steps, share/copy/PDF/DOC, a11y & disclaimer.
+  - `app/(tabs)/advocacy/accountability-coach.tsx`: Plan, violation detect, letter draft, response track, ally brief; persisted to cases.
+- [Docs] User Guide updated (Campaigns): added Share Room Link and Invite Moderator steps.
+
+Note: The automated soft scan still flags historical "placeholder/coming soon" in several files, including these screens; those findings are now stale. See `docs/UNFINISHED_WORK.md` for the raw scan output.

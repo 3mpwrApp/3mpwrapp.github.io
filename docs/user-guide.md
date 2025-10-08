@@ -355,6 +355,8 @@ Deep dive — Advocacy best practices
   - Tasks: Add or check tasks; everyone sees updates.
   - Notes: Write shared notes.
   - Export: Download a CSV of tasks.
+  - Share Room Link: Share a link to your room so others can join the effort.
+  - Invite Moderator: Create a moderator invite token to grant collaborator access.
 
 ### How to use Campaigns
 
@@ -362,7 +364,7 @@ Deep dive — Advocacy best practices
 2. Tap Create to start a campaign. Fill in details and save.
 3. Open any campaign → tap Support if you agree with it.
 4. Tap Open Campaign Room to collaborate on tasks and notes.
-5. Use Export CSV to share progress.
+5. Use Export CSV to share progress. You can also Share Room Link from inside the room to coordinate.
 
 Campaigns — details, examples, and tips
 
@@ -377,8 +379,9 @@ Invite & sharing
 
 1. Open a campaign you created.
 2. Tap Share to copy a link or send via your apps.
-3. In Campaign Room, add a short welcome note with goals, meeting times, and how to contribute.
-4. Weekly: Export CSV of tasks and share progress updates.
+3. In Campaign Room, tap Share Room Link to invite supporters; use Invite Moderator for trusted collaborators (grants elevated room permissions).
+4. In Campaign Room, add a short welcome note with goals, meeting times, and how to contribute.
+5. Weekly: Export CSV of tasks and share progress updates.
 
 Deep dive — Campaigns
 

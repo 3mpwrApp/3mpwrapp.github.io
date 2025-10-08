@@ -1,20 +1,20 @@
+import { Stack, useLocalSearchParams } from "expo-router";
 import React from "react";
-import { View, Text, StyleSheet, TextInput, Share, Alert, ScrollView } from "react-native";
-import { useLocalSearchParams, Stack } from "expo-router";
+import { Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../../components/A11yPressable";
 import { useAuth } from "../../../../context/AuthContext";
-import { useAppPalette } from "../../../../theme/usePalette";
 import { getCachedJSON, setCachedJSON } from "../../../../services/cache";
 import {
+  fsRoomAcceptInvite,
   fsRoomAddTask,
-  fsRoomToggleTask,
+  fsRoomCreateInvite,
+  fsRoomEnsureMeta,
   fsRoomSetNotes,
   fsRoomSubscribe,
-  fsRoomEnsureMeta,
-  fsRoomCreateInvite,
-  fsRoomAcceptInvite,
+  fsRoomToggleTask,
 } from "../../../../services/firestore";
+import { useAppPalette } from "../../../../theme/usePalette";
 
 type Task = {
   id: string;
@@ -153,7 +153,7 @@ export default function CampaignRoom() {
           style={[s.task, t.done && { opacity: 0.6 }]}
         >
           <Text style={s.taskText}>
-            {t.done ? "âœ“ " : "â€¢ "}
+            {t.done ? "✓ " : "• "}
             {t.title} <Text style={{ opacity: 0.7 }}>({t.kind})</Text>
           </Text>
         </A11yPressable>
