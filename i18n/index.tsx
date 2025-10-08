@@ -2,6 +2,7 @@ import React from "react";
 import { I18nManager } from "react-native";
 
 import { announce } from "../utils/announce";
+import { showToast } from "../utils/toast";
 
 // Lightweight i18n without external deps. Supports dot-notation keys and runtime language switch.
 
@@ -70,6 +71,8 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     try {
       const name = l === 'fr' ? 'Français' : l === 'es' ? 'Español' : 'English';
       announce(name + ' selected');
+      // Also show a non-intrusive visible toast for sighted users
+      showToast(name + ' selected', { type: 'success', duration: 1600 });
     } catch {}
   };
 

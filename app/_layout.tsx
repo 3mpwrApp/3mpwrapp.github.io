@@ -38,6 +38,7 @@ import { PrivacyProvider, usePrivacy } from "../store/privacy";
 import { ProfileLocalProvider } from "../store/profileLocal";
 import { ResilienceProvider } from "../store/resilience";
 import { SettingsProvider } from "../store/settings";
+import { ToastViewport } from "../utils/toast";
 // Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
 // removed getFirebaseAnalytics direct import (handled via telemetry module)
 
@@ -171,6 +172,7 @@ export default function RootLayout() {
                             </ChangelogGate>
                           </TermsGate>
                           <GlobalAssistant />
+                          <ToastViewport />
                           {/* Show footer only on web to avoid overlapping native tab bar */}
                           {Platform.OS === 'web' ? <Footer /> : null}
                         </View>
