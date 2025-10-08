@@ -26,7 +26,8 @@ export type Research = {
   references?: ResearchReference[]; // optional references list
 };
 
-import { wsibCPTSDArticle } from './research/wsib-cptsd';
+// Load longform article from JSON to reduce TS source size
+import wsibCPTSDArticle from './research/wsib-cptsd.json';
 
 export const researchItems: Research[] = [
   {
@@ -109,5 +110,5 @@ export const researchItems: Research[] = [
     source: "University Research",
     url: "https://example.org/early-intervention-study",
   },
-  wsibCPTSDArticle,
+  wsibCPTSDArticle as Research,
 ];
