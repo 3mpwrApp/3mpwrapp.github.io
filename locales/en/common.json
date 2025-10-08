@@ -837,6 +837,7 @@
   "common": {
     "on": "On",
     "off": "Off",
+    "guest": "Guest",
     "copy": "Copy",
     "share": "Share",
     "all": "All",

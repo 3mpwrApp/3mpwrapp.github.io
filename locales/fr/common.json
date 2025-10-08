@@ -1669,6 +1669,7 @@
     "show": "Afficher"
   },
   "common": {
+    "guest": "Invité",
     "resetFilters": "Réinitialiser les filtres",
     "on": "Activé",
     "off": "Désactivé",

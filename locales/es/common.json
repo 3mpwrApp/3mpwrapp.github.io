@@ -1495,6 +1495,7 @@
     }
   },
   "common": {
+    "guest": "Invitado",
     "on": " On",
     "off": " Off",
     "copy": " Copy",
