@@ -75,7 +75,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     secondary: { backgroundColor: palette.surface, paddingVertical: s('sm'), paddingHorizontal: s('md'), borderRadius: s('lg'), borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
     secondaryText: { color: palette.text, fontWeight: '700' },
     input: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, borderRadius: s('lg'), paddingHorizontal: s('md'), paddingVertical: s('sm'), marginTop: s('sm') },
-    modalBackdrop: { flex: 1, backgroundColor: palette.text + '99', alignItems: 'center', justifyContent: 'center' },
+  modalBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', alignItems: 'center', justifyContent: 'center' },
     modalCard: { backgroundColor: palette.surface, padding: s('lg'), borderRadius: s('lg'), width: '90%', maxWidth: 420 },
   });
 }

@@ -1,148 +1,17 @@
-import { useLocalSearchParams } from 'expo-router';
-import { addDoc, collection, doc, onSnapshot, orderBy, query, serverTimestamp, setDoc } from 'firebase/firestore';
-import React from 'react';
-import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
-
-import A11yPressable from '../../../components/A11yPressable';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
-import { auth, db } from '../../../firebase/config';
-import { registerExpoPushToken } from '../../../services/tokens';
-import { useAppPalette } from '../../../theme/usePalette';
-
 export const options = { href: null };
+import React, { Suspense } from 'react';
 
-export default function MutualChat() {
-  const { id } = useLocalSearchParams<{ id: string }>();
-  const chatId = id || 'general';
-  const palette = useAppPalette();
-  const s = styles(palette);
-  const [msg, setMsg] = React.useState('');
-  const [items, setItems] = React.useState<any[]>([]);
-  const [roster, setRoster] = React.useState<any[]>([]);
-  const lastRef = React.useRef<number>(0);
-  React.useEffect(()=>{
-    let cleanup: (()=>void) | undefined;
-    try {
-      // Use general chat collection for general chat, mutual aid posts for specific aid chats
-      const collectionPath = chatId === 'general' ? 'chats' : 'mutual_aid_posts';
-      const docPath = chatId === 'general' ? 'mutual_general' : String(chatId);
-      const q = query(collection(db, collectionPath, docPath, chatId === 'general' ? 'messages' : 'chat'), orderBy('createdAt','asc'));
-      const unsub = onSnapshot(q, async (snap) => {
-        const rows = snap.docs.map(d=>({ id:d.id, ...(d.data() as any) }));
-        setItems(rows);
-        const me = auth.currentUser?.uid || 'anon';
-        const latest = rows[rows.length-1];
-        const ts = latest?.createdAt?.toDate?.()?.getTime?.() || 0;
-        if (latest && ts && ts > lastRef.current && latest.author && latest.author !== me) {
-          try { const Notifications = await import('expo-notifications'); await Notifications.scheduleNotificationAsync({ content: { title: 'New message', body: String(latest.message||'') }, trigger: null }); } catch {}
-        }
-        if (ts) lastRef.current = ts;
-      });
-      cleanup = () => unsub();
-    } catch {}
-    return () => { if (cleanup) cleanup(); };
-  },[chatId]);
-  // Presence + typing
-  React.useEffect(() => {
-    const uid = auth.currentUser?.uid || 'anon';
-    const presenceCollectionPath = chatId === 'general' ? 'chats' : 'mutual_aid_posts';
-    const presenceDocPath = chatId === 'general' ? 'mutual_general' : String(chatId);
-    const ref = doc(db, presenceCollectionPath, presenceDocPath, 'presence', uid);
-    (async () => {
-      try {
-        await setDoc(ref, { lastSeen: serverTimestamp(), typing: false }, { merge: true });
-        // add to participants index for server-based push notifications
-        if (chatId !== 'general') {
-          await setDoc(doc(db, 'mutual_aid_posts', String(chatId), 'participants', uid), { joinedAt: serverTimestamp(), lastSeen: serverTimestamp() }, { merge: true });
-        }
-      } catch {}
-    })();
-    const i = setInterval(async()=>{ try { await setDoc(ref, { lastSeen: serverTimestamp() }, { merge: true }); } catch {} }, 30000);
-    try { (i as any)?.unref?.(); } catch {}
-    // Register device token for server-based push (Expo token)
-    registerExpoPushToken();
-    return () => { clearInterval(i); };
-  }, [chatId]);
-  // Roster snapshot
-  React.useEffect(() => {
-    let cleanup: (()=>void) | undefined;
-    try {
-      const presenceCollectionPath = chatId === 'general' ? 'chats' : 'mutual_aid_posts';
-      const presenceDocPath = chatId === 'general' ? 'mutual_general' : String(chatId);
-      const q = collection(db, presenceCollectionPath, presenceDocPath, 'presence');
-      const unsub = onSnapshot(q, (snap) => {
-        const now = Date.now();
-        setRoster(snap.docs.map(d=>({ id: d.id, ...(d.data() as any) })).filter(u => (now - (u.lastSeen?.toDate?.()?.getTime?.()||0)) < 2*60*1000));
-      });
-      cleanup = () => unsub();
-    } catch {}
-    return () => { if (cleanup) cleanup(); };
-  }, [chatId]);
+const isJest = typeof process !== 'undefined' && !!(process as any).env && ((((process as any).env.NODE_ENV) === 'test') || !!(process as any).env.JEST_WORKER_ID);
+const Impl: React.ComponentType<any> = isJest
+  ? require('./mutual-chat.impl').default
+  : React.lazy(async () => ({ default: (await import('./mutual-chat.impl')).default as React.ComponentType<any> }));
+
+export default function MutualChatLazyWrapper() {
+  if (isJest) return <Impl />;
   return (
-    <View style={s.container}>
-      <Text style={s.title}>{chatId === 'general' ? 'Mutual Chat' : 'Mutual Aid Chat'}</Text>
-      <View style={{ marginBottom: 8 }}>
-        <Text style={s.text}>Present: {roster.map(r => r.id).join(', ') || '—'}</Text>
-        {!!roster.some(r => r.typing) && <Text style={s.text}>Someone is typing…</Text>}
-      </View>
-      {items.map(i => (<Text key={i.id} style={s.text}>• {new Date(i.createdAt?.toDate?.()||Date.now()).toLocaleTimeString()} — {i.message || i.text}</Text>))}
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
-        <TextInput 
-          placeholder="Message" 
-          placeholderTextColor={palette.text+'77'} 
-          value={msg} 
-          onChangeText={async (t)=>{ 
-            setMsg(t); 
-            try { 
-              const uid = auth.currentUser?.uid || 'anon'; 
-              const presenceCollectionPath = chatId === 'general' ? 'chats' : 'mutual_aid_posts';
-              const presenceDocPath = chatId === 'general' ? 'mutual_general' : String(chatId);
-              await setDoc(doc(db, presenceCollectionPath, presenceDocPath, 'presence', uid), { typing: !!t }, { merge: true }); 
-            } catch {} 
-          }} 
-          style={[s.input,{ flex:1 }]} 
-        />
-        <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ 
-          try{ 
-            const author = auth.currentUser?.uid || 'anon'; 
-            if (chatId === 'general') {
-              // Send to general chat
-              await addDoc(collection(db, 'chats', 'mutual_general', 'messages'), { 
-                text: msg, 
-                authorUid: author, 
-                createdAt: serverTimestamp() 
-              });
-            } else {
-              // Send to specific aid chat
-              const postId = String(chatId); 
-              await setDoc(doc(db,'mutual_aid_posts', postId, 'participants', author), { joinedAt: serverTimestamp(), lastSeen: serverTimestamp() }, { merge: true }); 
-              await addDoc(collection(db,'mutual_aid_posts', postId, 'chat'), { message: msg, createdAt: serverTimestamp(), author }); 
-              try { 
-                const base = process.env.EXPO_PUBLIC_LLM_BASE; 
-                if (base) { 
-                  await fetch(`${base.replace(/\/$/,'')}/notify-chat-post`, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ postId, fromUid: author, message: msg }) }); 
-                } 
-              } catch {} 
-            }
-            setMsg(''); 
-          } catch { 
-            Alert.alert('Failed','Could not send'); 
-          } 
-        }} style={s.button}>
-          <Text style={s.buttonText}>Send</Text>
-        </A11yPressable>
-      </View>
-    </View>
+    <Suspense fallback={null}>
+      <Impl />
+    </Suspense>
   );
 }
 
-function styles(palette: ReturnType<typeof useAppPalette>) {
-  return StyleSheet.create({
-    container: { flex:1, backgroundColor: palette.background, padding: 16 },
-    title: { fontSize:22, fontWeight:'700', color: palette.text },
-    text: { color: palette.text, opacity: 0.95, marginTop: 6 },
-    input: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding: 8, borderRadius: 6 },
-    button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems:'center' },
-    buttonText: { color: palette.onPrimary, fontWeight:'700' },
-  });
-}
