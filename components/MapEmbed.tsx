@@ -1,6 +1,8 @@
 import React from 'react';
 import { Platform, Text, View } from 'react-native';
 
+import { devCostAlert } from '../services/costGuard';
+import { FLAGS } from '../services/featureFlags';
 import { useAppPalette } from '../theme/usePalette';
 
 type Point = { id: string; title: string; lat: number; lng: number; kind?: 'law'|'protest'|'update' };
@@ -36,6 +38,14 @@ export default function MapEmbed({ points, cluster = true }: { points: Point[]; 
   try {
     // Prefer clustering map if installed
     let maps;
+    if (Platform.OS === 'android' && !FLAGS.mapsAndroid) {
+      // Free Mode or no key: skip map loading and fall back to list
+      throw new Error('Maps disabled by Free Mode or missing key');
+    }
+    if (Platform.OS === 'android' && FLAGS.mapsAndroid) {
+      // Developer cost alert for maps usage
+      devCostAlert({ feature: 'mapsAndroid', action: 'maps:load', details: { points: points.length, cluster } });
+    }
     try { maps = require('react-native-map-clustering'); MapView = maps.default; }
     catch { maps = require('react-native-maps'); MapView = maps.default; }
     const base = require('react-native-maps');

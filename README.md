@@ -271,6 +271,16 @@ Quick links to docs
 - Presence/Typing/Last_read: a user can only write their own document.
 - User-owned subcollections (evidence, deadlines, reflections): owner-only; admin can read.
 
+## Free Mode (zero-cost operation)
+
+Set the environment variable EXPO_PUBLIC_FREE_MODE to 1/true/yes to hard-disable networked/paid integrations for a $0 setup:
+
+- AI LLM backend: disabled (offline fallbacks still work)
+- Sentry error reporting: disabled
+- Android Maps: disabled unless EXPO_PUBLIC_GOOGLE_MAPS_KEY is present
+
+This helps you develop, test, and pilot without incurring any cloud charges. You can override per-feature via environment variables as needed.
+
 Deploy:
 
 ```
