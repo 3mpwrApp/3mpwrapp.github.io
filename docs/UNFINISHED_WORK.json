@@ -1,5 +1,5 @@
 {
-  "count": 109,
+  "count": 112,
   "results": [
     {
       "file": "app/(auth)/login.tsx",
@@ -20,9 +20,21 @@
       ]
     },
     {
-      "file": "app/(tabs)/admin/index.tsx",
+      "file": "app/(tabs)/admin/index.impl.tsx",
       "patterns": [
         "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/admin/panels/FaqEditor.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/admin.tsx",
+      "patterns": [
+        "coming soon"
       ]
     },
     {
@@ -64,6 +76,7 @@
     {
       "file": "app/(tabs)/advocacy/index.tsx",
       "patterns": [
+        "coming soon",
         "placeholder"
       ]
     },
@@ -204,6 +217,7 @@
     {
       "file": "app/(tabs)/research/index.tsx",
       "patterns": [
+        "coming soon",
         "placeholder"
       ]
     },
@@ -234,7 +248,7 @@
     {
       "file": "app/(tabs)/resources/appeal-coach.tsx",
       "patterns": [
-        "placeholder"
+        "coming soon"
       ]
     },
     {
@@ -262,7 +276,7 @@
       ]
     },
     {
-      "file": "app/(tabs)/resources/evidence-locker.tsx",
+      "file": "app/(tabs)/resources/evidence-locker.impl.tsx",
       "patterns": [
         "placeholder"
       ]
@@ -270,6 +284,7 @@
     {
       "file": "app/(tabs)/resources/evidence-locker.utf8.tsx",
       "patterns": [
+        "coming soon",
         "placeholder"
       ]
     },
@@ -282,6 +297,7 @@
     {
       "file": "app/(tabs)/resources/index.tsx",
       "patterns": [
+        "coming soon",
         "placeholder"
       ]
     },
@@ -322,6 +338,12 @@
       ]
     },
     {
+      "file": "app/(tabs)/resources/prepare-appeal.tsx",
+      "patterns": [
+        "coming soon"
+      ]
+    },
+    {
       "file": "app/(tabs)/resources/rehab-tracker.tsx",
       "patterns": [
         "placeholder"
@@ -352,7 +374,25 @@
       ]
     },
     {
-      "file": "app/(tabs)/settings.tsx",
+      "file": "app/(tabs)/settings.impl.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/settings.sections/BookmarksSection.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/settings.sections/EnhancedPrivacySection.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "app/(tabs)/settings.sections/LocalProfileSection.tsx",
       "patterns": [
         "placeholder"
       ]
@@ -402,6 +442,7 @@
     {
       "file": "app/(tabs)/wellness/index.tsx",
       "patterns": [
+        "coming soon",
         "placeholder"
       ]
     },
@@ -485,91 +526,9 @@
       ]
     },
     {
-      "file": "docs/ADMIN_METRICS_EXTENSION_PLAN.md",
+      "file": "data/whatsnew.auto.ts",
       "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/DATA_GOVERNANCE.md",
-      "patterns": [
-        "tbd"
-      ]
-    },
-    {
-      "file": "docs/EVIDENCE_LOCKER_PLAN.md",
-      "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/JURISDICTION_COVERAGE.md",
-      "patterns": [
-        "tbd"
-      ]
-    },
-    {
-      "file": "docs/LOCALIZATION_CLEANUP_PLAN.md",
-      "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/NOTIFICATIONS_INTEGRATION_PLAN.md",
-      "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/PRUNING_AND_ARCHIVAL_PLAN.md",
-      "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/release-prep/artifacts/ASSETS_GUIDE.md",
-      "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/ROADMAP_SEQUENCING.md",
-      "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/store-listing-placeholder.md",
-      "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/TESTING_COVERAGE_EXPANSION_PLAN.md",
-      "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/TRANSLATION_GUIDE.md",
-      "patterns": [
-        "placeholder"
-      ]
-    },
-    {
-      "file": "docs/UNFINISHED_WORK.md",
-      "patterns": [
-        "coming soon",
-        "todo",
-        "placeholder",
-        "tbd"
-      ]
-    },
-    {
-      "file": "docs/user-guide.md",
-      "patterns": [
-        "coming soon",
-        "placeholder"
+        "coming soon"
       ]
     },
     {
@@ -581,6 +540,7 @@
     {
       "file": "README.md",
       "patterns": [
+        "coming soon",
         "placeholder"
       ]
     },
@@ -616,6 +576,24 @@
     },
     {
       "file": "utils/platform.ts",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/advocacy.ai-case-interpreter.smoke.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/advocacy.ai-translator.smoke.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/advocacy.ratings.smoke.test.tsx",
       "patterns": [
         "placeholder"
       ]
@@ -659,6 +637,48 @@
     },
     {
       "file": "__tests__/notification.templates.test.ts",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/resources.chronic-tracker.smoke.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/resources.meds-tracker.smoke.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/resources.rehab-tracker.smoke.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/resources.rtw-planner.smoke.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/wellness.energy-coins.smoke.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/wellness.mood.smoke.test.tsx",
+      "patterns": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "__tests__/wellness.reflections-calendar.smoke.test.tsx",
       "patterns": [
         "placeholder"
       ]

@@ -19,7 +19,8 @@ function walk(dir) {
     if (e.name.startsWith('.')) continue;
     const full = path.join(dir, e.name);
     if (e.isDirectory()) {
-      if (['node_modules','.git','build','dist'].includes(e.name)) continue;
+      // Skip common non-source or generated directories
+      if (['node_modules', '.git', 'build', 'dist', 'docs', '.expo'].includes(e.name)) continue;
       walk(full);
     } else if (/\.(tsx?|js|md)$/i.test(e.name)) {
       const txt = fs.readFileSync(full,'utf8');

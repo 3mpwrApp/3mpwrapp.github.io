@@ -46,10 +46,14 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
 
 export async function signInWithAppleAsync(): Promise<boolean> {
   try {
-  let AppleAuth: any;
-  try { AppleAuth = require('expo-apple-authentication'); } catch {}
-  if (!AppleAuth || !AppleAuth.isAvailableAsync || !(await AppleAuth.isAvailableAsync())) {
-      Alert.alert('Not available', 'Apple Sign-In is not available on this device.');
+    let AppleAuth: any;
+    try { AppleAuth = require('expo-apple-authentication'); } catch {}
+    // On web or unsupported platforms, provide a friendly hint
+    if (!AppleAuth || !AppleAuth.isAvailableAsync || !(await AppleAuth.isAvailableAsync())) {
+      const platformHint = Platform.OS === 'web'
+        ? 'Apple Sign‑In is not supported in web builds. Please use another method.'
+        : 'Apple Sign‑In is not available on this device.';
+      Alert.alert('Not available', platformHint);
       return false;
     }
     const res = await AppleAuth.signInAsync({ requestedScopes: [AppleAuth.AppleAuthenticationScope.FULL_NAME, AppleAuth.AppleAuthenticationScope.EMAIL] });
