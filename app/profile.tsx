@@ -15,7 +15,7 @@ export default function Profile() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const { user, signOut } = useAuth();
-  const { lang, setLanguage } = useTranslation();
+  const { lang, setLanguage, t } = useTranslation();
   const [name, setName] = React.useState(user?.displayName ?? "");
   const { state: a11y, toggleHighContrast } = useA11ySettings();
   const [showEmergencyCard, setShowEmergencyCard] = React.useState(false);
@@ -23,20 +23,31 @@ export default function Profile() {
   return (
     <View
       style={styles.container}
-      accessibilityLabel="Profile screen"
+      accessibilityLabel={t("profile.screenLabel")}
       accessible
     >
-      <Text style={styles.title}>Profile</Text>
+      <Text style={styles.title}>{t("nav.profile")}</Text>
 
       <View style={styles.card}>
-        <Row label="User" value={user?.email ?? user?.displayName ?? "Guest"} />
+        <Row
+          label={t("profile.user")}
+          value={user?.email ?? user?.displayName ?? t("common.guest")}
+        />
         <Pressable
           onPress={() => setShowEmergencyCard(v => !v)}
           accessibilityRole="button"
-          accessibilityLabel={showEmergencyCard ? "Hide emergency wallet card form" : "Show emergency wallet card form"}
+          accessibilityLabel={
+            showEmergencyCard
+              ? t("settings.emergencyWallet.hide")
+              : t("settings.emergencyWallet.show")
+          }
           style={[styles.cta, styles.ghost]}
         >
-          <Text style={styles.ghostText}>{showEmergencyCard ? "Hide Emergency Card" : "Manage Emergency Card"}</Text>
+          <Text style={styles.ghostText}>
+            {showEmergencyCard
+              ? t("settings.emergencyWallet.hide")
+              : t("settings.emergency.manage")}
+          </Text>
         </Pressable>
         {showEmergencyCard && (
           <View style={{ marginTop: 12 }}>
@@ -47,12 +58,14 @@ export default function Profile() {
 
       <View style={styles.card}>
         <Text style={{ fontWeight: "700", marginBottom: 8 }}>
-          Accessibility
+          {t("settings.accessibility.title")}
         </Text>
         <Pressable
           onPress={toggleHighContrast}
           accessibilityRole="button"
-          accessibilityLabel="Toggle high contrast mode"
+          accessibilityLabel={`${t("settings.accessibility.highContrast")}: ${
+            a11y.highContrast ? t("common.on") : t("common.off")
+          }`}
           style={({ pressed }) => [
             styles.cta,
             styles.ghost,
@@ -60,9 +73,7 @@ export default function Profile() {
           ]}
         >
           <Text style={styles.ghostText}>
-            {a11y.highContrast
-              ? "Disable High Contrast"
-              : "Enable High Contrast"}
+            {t("settings.accessibility.highContrast")} · {a11y.highContrast ? t("common.on") : t("common.off")}
           </Text>
         </Pressable>
       </View>
@@ -70,7 +81,9 @@ export default function Profile() {
       {/* Notifications test removed at user's request */}
 
       <View style={styles.card}>
-        <Text style={{ fontWeight: "700", marginBottom: 8 }}>Language</Text>
+        <Text style={{ fontWeight: "700", marginBottom: 8 }}>
+          {t("settings.language.title")}
+        </Text>
         <View style={{ flexDirection: "row", gap: 8 }}>
           {(["en", "fr", "es"] as Lang[]).map((code) => (
             <Pressable
@@ -78,7 +91,7 @@ export default function Profile() {
               onPress={() => setLanguage(code)}
               style={[styles.langChip, lang === code && styles.langChipActive]}
               accessibilityRole="button"
-              accessibilityLabel={`Switch language to ${code}`}
+              accessibilityLabel={t("rightsExplainer.langChip", { code })}
             >
               <Text
                 style={[
@@ -95,22 +108,22 @@ export default function Profile() {
 
       {user ? (
         <>
-          <Text style={styles.label}>Update name</Text>
+          <Text style={styles.label}>{t("settings.account.displayName")}</Text>
           <TextInput
             style={styles.input}
             value={name}
             onChangeText={setName}
-            placeholder="Your name"
+            placeholder={t("settings.account.displayNamePlaceholder")}
             placeholderTextColor={palette.muted}
-            accessibilityLabel="Name"
+            accessibilityLabel={t("settings.account.displayName")}
           />
           <Pressable
             style={[styles.cta, styles.ghost]}
             onPress={signOut}
             accessibilityRole="button"
-            accessibilityLabel="Sign out"
+            accessibilityLabel={t("header.signOut")}
           >
-            <Text style={styles.ghostText}>Sign out</Text>
+            <Text style={styles.ghostText}>{t("header.signOut")}</Text>
           </Pressable>
         </>
       ) : (
@@ -119,9 +132,9 @@ export default function Profile() {
             style={[styles.cta, styles.primary]}
             onPress={() => router.push("/(auth)/login" as Href)}
             accessibilityRole="button"
-            accessibilityLabel="Go to login"
+            accessibilityLabel={t("header.signIn")}
           >
-            <Text style={styles.primaryText}>Sign in</Text>
+            <Text style={styles.primaryText}>{t("header.signIn")}</Text>
           </Pressable>
         </>
       )}
