@@ -7,7 +7,7 @@ const isJest =
   !!(process as any).env &&
   (((process as any).env.NODE_ENV === 'test') || !!(process as any).env.JEST_WORKER_ID);
 const Impl: React.ComponentType<any> = isJest
-  ? require('./reflections-calendar.impl').default
+  ? require('./reflections-calendar.jest').default
   : React.lazy(() => import('./reflections-calendar.impl'));
 
 export default function ReflectionsCalendarLazyWrapper() {

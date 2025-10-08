@@ -123,7 +123,7 @@ export default function ReflectionsCalendarTestImpl() {
 			)}
 
 			<Modal transparent visible={detailsOpen} onRequestClose={() => setDetailsOpen(false)}>
-				<View style={[s.modalBackdrop, { backgroundColor: '#0006' }]}>
+				<View style={[s.modalBackdrop, { backgroundColor: 'rgba(0,0,0,0.5)' }]}>
 					<View style={[s.modalCard, { backgroundColor: palette.surface }]}>
 						<Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>Details</Text>
 						<View style={{ flexDirection: 'row', gap: 8, marginBottom: 8 }}>
