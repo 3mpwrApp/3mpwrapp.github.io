@@ -173,6 +173,20 @@ try {
   });
 } catch {}
 
+// Mock react-native-safe-area-context to avoid native dependency in tests
+try {
+  jest.mock('react-native-safe-area-context', () => {
+    return {
+      useSafeAreaInsets: () => ({ top: 0, left: 0, right: 0, bottom: 0 }),
+      SafeAreaProvider: ({ children }) => children,
+      SafeAreaView: ({ children, ...rest }) => {
+        const React = require('react');
+        return React.createElement('div', rest, children);
+      },
+    };
+  });
+} catch {}
+
 // Suppress known noisy React Native / Expo warnings that add no test value
 const originalWarn = console.warn;
 const originalError = console.error;

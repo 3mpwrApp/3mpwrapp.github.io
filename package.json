@@ -64,6 +64,7 @@
     "check:analytics": "node ./scripts/check-analytics-imports.mjs",
     "analytics:scan": "node ./scripts/analytics-scan.mjs",
     "analytics:report": "node ./scripts/analytics-report.mjs",
+  "scan:inline": "node ./scripts/scan-inline-arrays.mjs",
     "whatsnew:gen": "node ./scripts/generate-whatsnew.mjs",
     "analytics:pii": "node ./scripts/analytics-pii-scan.mjs",
     "analytics:pii:soft": "set PII_SCAN_SOFT=1&& node ./scripts/analytics-pii-scan.mjs",
