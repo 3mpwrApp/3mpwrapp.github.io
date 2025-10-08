@@ -1,13 +1,7 @@
 import React from "react";
-import {
-    FlatList,
-    Pressable,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
-} from "react-native";
+import { FlatList, StyleSheet, Text, TextInput, View } from "react-native";
 
+import A11yPressable from "../../components/A11yPressable";
 import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from "../../constants/a11y";
@@ -66,6 +60,7 @@ export default function FaqsScreen() {
     );
   }, [query, items]);
   const suggestions = useFaqAssistant(items, query, { llm: false });
+  const clearSearch = React.useCallback(() => setQuery(''), []);
 
   return (
     <View style={styles.container}>
@@ -79,14 +74,23 @@ export default function FaqsScreen() {
       </Text>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
-      <TextInput
-        style={styles.input}
-        value={query}
-        onChangeText={setQuery}
-        placeholder={t("faqs.searchPlaceholder","Search FAQs")}
-        placeholderTextColor={palette.text}
-        accessibilityLabel={t("faqs.searchLabel","Search FAQs")}
-      />
+      <View style={{ flexDirection:'row', gap:8, alignItems:'center', marginBottom:6 }}>
+        <TextInput
+          style={[styles.input, { flex:1, marginBottom:0 }]}
+          value={query}
+          onChangeText={setQuery}
+          placeholder={t("faqs.searchPlaceholder","Search FAQs")}
+          placeholderTextColor={palette.text}
+          accessibilityLabel={t("faqs.searchLabel","Search FAQs")}
+          returnKeyType="search"
+        />
+        {!!query.trim() && (
+          <A11yPressable accessibilityRole="button" accessibilityLabel={t('common.clear','Clear')} onPress={clearSearch} hitSlop={HIT_SLOP_8} style={{ paddingHorizontal:12, paddingVertical:10, borderRadius:8, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+            <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.clear','Clear')}</Text>
+          </A11yPressable>
+        )}
+      </View>
+      <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 8 }} accessibilityLiveRegion="polite">{t('eventsFeature.loadedCount','{{n}} events loaded', { n: filtered.length }).replace('events','FAQs')}</Text>
       <View style={{ marginBottom: 8 }}>
         <TextInput
           style={styles.input}
@@ -103,7 +107,7 @@ export default function FaqsScreen() {
           placeholderTextColor={palette.text}
           multiline
         />
-        <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8}
+        <A11yPressable accessibilityRole="button" hitSlop={HIT_SLOP_8}
           disabled={!qText.trim() || !aText.trim()}
           onPress={async () => {
             const localItem = {
@@ -129,7 +133,7 @@ export default function FaqsScreen() {
           ]}
         >
           <Text style={styles.buttonText}>{t("faqs.add","Add")}</Text>
-        </Pressable>
+        </A11yPressable>
       </View>
       <FlatList
         data={filtered}
@@ -147,9 +151,9 @@ export default function FaqsScreen() {
         <View style={{ marginBottom: 8, backgroundColor: palette.surface, borderRadius:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, padding:8 }}>
           <Text style={{ color: palette.text, fontWeight:'700', marginBottom:4 }}>{t('faqs.suggestions','Suggestions')}</Text>
           {suggestions.map(s => (
-            <Pressable key={s.id} accessibilityRole="button" hitSlop={HIT_SLOP_8} accessibilityLabel={`Use suggestion ${s.q}`} onPress={()=> { setQuery(s.q); }} style={({pressed})=> ({ paddingVertical:4, opacity: pressed?0.6:1 })}>
+            <A11yPressable key={s.id} accessibilityRole="button" hitSlop={HIT_SLOP_8} accessibilityLabel={`Use suggestion ${s.q}`} onPress={()=> { setQuery(s.q); }} style={({pressed})=> ({ paddingVertical:4, opacity: pressed?0.6:1 })}>
               <Text style={{ color: palette.text, fontWeight:'600' }}>{s.q}</Text>
-            </Pressable>
+            </A11yPressable>
           ))}
         </View>
       )}

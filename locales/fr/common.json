@@ -1112,7 +1112,8 @@
       "recurringAddedBody": "{{count}} échéances récurrentes ajoutées.",
       "recurringFailed": "Échec",
       "recurringFailedBody": "Impossible d'ajouter échéances.",
-      "monthLabel": "Mois",
+  "monthLabel": "Mois",
+  "today": "Aujourd'hui",
       "weekLabel": "Semaine",
       "selectedDate": "Sélectionné :",
       "myDeadlines": "Mes échéances",
@@ -1718,8 +1719,10 @@
     "permissionDenied": "Permission refusée",
     "saved": "Enregistré",
     "saveFailed": "Échec de l'enregistrement",
-    "search": "Rechercher",
-    "clearSearch": "Effacer la recherche",
+  "search": "Rechercher",
+  "clearSearch": "Effacer la recherche",
+  "clear": "Effacer",
+  "results": "résultats",
     "cloud": "Cloud",
     "open": "Ouvrir",
     "close": "Fermer",
@@ -2336,7 +2339,8 @@
   "deadlines": {
     "prevMonth": "Mois précédent",
     "nextMonth": "Mois suivant",
-    "reloadShort": "Actualiser"
+    "reloadShort": "Actualiser",
+    "today": "Aujourd'hui"
   },
   "campaigns": {
     "empty": "Aucune campagne ne correspond à vos filtres"

@@ -97,6 +97,25 @@ export default function EventDetail() {
           {t('eventsFeature.whereLabel','Where:')} {event?.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event?.location ?? t('eventsFeature.tbd','TBD'))}
         </Text>
         {!!event && (
+          <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom: 8 }}>
+            {event.isVirtual && (
+              <Chip label={t('eventsFeature.chips.virtual','Virtual')} />
+            )}
+            {event.asl && (
+              <Chip label={t('eventsFeature.chips.asl','ASL')} />
+            )}
+            {event.captions && (
+              <Chip label={t('eventsFeature.chips.captions','Captions')} />
+            )}
+            {event.stepFree && (
+              <Chip label={t('eventsFeature.chips.stepFree','Step-free')} />
+            )}
+            {event.sensorySpace && (
+              <Chip label={t('eventsFeature.chips.sensory','Sensory')} />
+            )}
+          </View>
+        )}
+        {!!event && (
           <>
             <A11yPressable
               style={({ pressed }) => [
@@ -148,6 +167,47 @@ export default function EventDetail() {
             >
               <Text style={styles.secondaryButtonText}>{t('eventsFeature.reminders.addCalendar','Add to Calendar')}</Text>
             </A11yPressable>
+            {!!event.location && !event.isVirtual && (
+              <View style={{ height: 8 }} />
+            )}
+            {!!event.location && !event.isVirtual && (
+              <A11yPressable
+                style={({ pressed }) => [
+                  styles.secondaryButton,
+                  pressed && { opacity: 0.8 },
+                ]}
+                onPress={async () => {
+                  const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location || '')}`;
+                  const can = await Linking.canOpenURL(url);
+                  if (can) await Linking.openURL(url);
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={`${t('home.guide.open','Open')} Maps`}
+                hitSlop={HIT_SLOP_8}
+              >
+                <Text style={styles.secondaryButtonText}>{`${t('home.guide.open','Open')} Maps`}</Text>
+              </A11yPressable>
+            )}
+            <View style={{ height: 8 }} />
+            <A11yPressable
+              style={({ pressed }) => [
+                styles.secondaryButton,
+                pressed && { opacity: 0.8 },
+              ]}
+              onPress={async () => {
+                try {
+                  await Share.share({
+                    message: `${event.title}\n${event.date}\n${event.isVirtual? t('eventsFeature.chips.virtual','Virtual'): (event.location||t('eventsFeature.tbd','TBD'))}\n\n${event.description || ''}`.trim(),
+                    title: event.title,
+                  });
+                } catch {}
+              }}
+              accessibilityRole="button"
+              accessibilityLabel={`${t('common.share','Share')} ${event?.title ?? ''}`}
+              hitSlop={HIT_SLOP_8}
+            >
+              <Text style={styles.secondaryButtonText}>{t('common.share','Share')}</Text>
+            </A11yPressable>
           </>
         )}
       </View>
@@ -187,4 +247,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     secondaryButtonText: { color: palette.text, fontSize: 16, fontWeight: '700' },
   });
+}
+
+function Chip({ label }: { label: string }) {
+  const palette = useAppPalette();
+  return (
+    <View style={{ backgroundColor: palette.card, borderRadius: 16, paddingHorizontal: 10, paddingVertical: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+      <Text style={{ color: palette.text, fontSize: 12, fontWeight: '700' }}>{label}</Text>
+    </View>
+  );
 }

@@ -27,6 +27,22 @@ export default function ResearchScreen() {
   const [query, setQuery] = React.useState('');
   const q = query.trim().toLowerCase();
   const matchesText = (txt: string) => !q || txt.toLowerCase().includes(q);
+  const [count, setCount] = React.useState(0);
+  React.useEffect(()=>{
+    // Rough count of visible cards/links
+    let c = 0;
+    const tests = [
+      t('research.landing.studiesTitle','Studies'),
+      t('research.landing.reportsTitle','Reports'),
+      t('research.landing.articlesTitle','Articles'),
+      t('research.landing.timelineTitle','History Timeline'),
+      t('research.landing.waitTitle','Case/File Wait-Times'),
+      t('research.landing.masterIndexTitle','Master Index'),
+      t('research.card.uncrpdGuideTitle'),
+    ];
+    tests.forEach(txt => { if (matchesText(txt)) c++; });
+    setCount(c);
+  }, [query]);
 
   return (
     <ScrollView style={styles.container}>
@@ -44,6 +60,9 @@ export default function ResearchScreen() {
   {t('research.landing.subtitle','Access studies, reports, articles, history timeline, and case wait-times.')}
       </Text>
       <SearchBar value={query} onChangeText={setQuery} placeholder={t('research.search','Search research...')} />
+      {q ? (
+        <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 8 }} accessibilityLiveRegion="polite">{`${count} ${t('common.results') || 'results'}`}</Text>
+      ) : null}
       <View style={styles.sectionGrid}>
         {matchesText(t('research.landing.studiesTitle','Studies')) && (
         <Link href="/(tabs)/research/studies" asChild>

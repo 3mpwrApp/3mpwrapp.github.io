@@ -161,8 +161,19 @@ export default function MasterIndexScreen() {
             returnKeyType="search"
             clearButtonMode="while-editing"
           />
-          {normalizedQuery ? (
-            <Text style={styles.resultsMeta} accessibilityLiveRegion="polite">{tCount('masterIndex.results', totalResults ?? 0)}</Text>
+          {(normalizedQuery || quickFilter) ? (
+            <View style={{ flexDirection:'row', justifyContent:'space-between', alignItems:'center', marginTop:8 }}>
+              <Text style={styles.resultsMeta} accessibilityLiveRegion="polite">{tCount('masterIndex.results', totalResults ?? 0)}</Text>
+              <A11yPressable
+                accessibilityRole="button"
+                accessibilityLabel={t('common.resetFilters','Reset filters')}
+                onPress={async () => { setQuery(''); setQuickFilter(null); try { await AsyncStorage?.removeItem?.('research:quickFilter'); } catch {} }}
+                hitSlop={HIT_SLOP_8}
+                style={{ paddingHorizontal:10, paddingVertical:6, borderRadius:8, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
+              </A11yPressable>
+            </View>
           ) : null}
         </View>
         {regionOrder.map(sectionGroup => {

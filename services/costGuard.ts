@@ -2,6 +2,7 @@
 // Enables a lightweight console warning and optional webhook POST when
 // an integration that may incur cost is about to be used.
 
+import { getCostAlertsEnabled } from './devPrefs';
 import { FLAGS, FREE_MODE } from './featureFlags';
 
 type Feature = keyof typeof FLAGS;
@@ -12,7 +13,7 @@ export type CostEvent = {
   details?: Record<string, any> | string;
 };
 
-const ALERT_ENABLED = (process.env.EXPO_PUBLIC_COST_ALERT || '').toLowerCase() === '1';
+const ALERT_ENABLED_ENV = (process.env.EXPO_PUBLIC_COST_ALERT || '').toLowerCase() === '1';
 const WEBHOOK = process.env.EXPO_PUBLIC_COST_WEBHOOK || '';
 
 function shouldAlert(feature: Feature) {
@@ -36,7 +37,9 @@ async function postWebhook(payload: any) {
 
 export async function devCostAlert(ev: CostEvent) {
   if (!shouldAlert(ev.feature)) return; // only alert for active paid features
-  if (!ALERT_ENABLED && !__DEV__) return; // default to dev-only unless explicitly enabled
+  // Respect both env and runtime developer preference
+  const enabled = getCostAlertsEnabled() || ALERT_ENABLED_ENV || __DEV__;
+  if (!enabled) return; // default to dev-only unless explicitly enabled
 
   const msg = `COST ALERT: ${ev.feature} -> ${ev.action}`;
   try {

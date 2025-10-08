@@ -1,13 +1,13 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-  FlatList,
-  RefreshControl,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    FlatList,
+    RefreshControl,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
@@ -20,14 +20,14 @@ import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { generateDisabilityObservances } from "../../../data/disability-observances";
 import { events as localEvents } from "../../../data/events";
 import {
-  generateCanadianHolidays,
-  generateProvincialHolidays,
+    generateCanadianHolidays,
+    generateProvincialHolidays,
 } from "../../../data/holidays-ca";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnChange,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnChange,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { ANALYTICS_EVENTS, trackEvent } from "../../../services/analyticsClient";
@@ -168,6 +168,17 @@ export default function EventsScreen() {
     [items, selectedDay, query],
   );
 
+  const selectToday = React.useCallback(() => {
+    const today = toDayKey(new Date().toISOString());
+    setSelectedDay(today);
+  }, []);
+
+  const clearFilters = React.useCallback(() => {
+    setSelectedDay(null);
+    setQuery('');
+    setMode('all');
+  }, []);
+
   const [showCreate, setShowCreate] = React.useState(false);
   const handleCreate = async (data: {
     title: string; description: string; date: string; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean;
@@ -206,6 +217,25 @@ export default function EventsScreen() {
         onChangeText={setQuery}
         placeholder={t('eventsFeature.search.placeholder','Search events, tags, places')}
       />
+
+      <View style={{ flexDirection:'row', gap:8, marginBottom:8 }}>
+        <A11yPressable
+          accessibilityRole="button"
+          accessibilityLabel={t('deadlines.today','Today')}
+          onPress={selectToday}
+          style={{ paddingHorizontal:10, paddingVertical:6, borderRadius:20, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+        >
+          <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>{t('deadlines.today','Today')}</Text>
+        </A11yPressable>
+        <A11yPressable
+          accessibilityRole="button"
+          accessibilityLabel={t('common.resetFilters','Reset filters')}
+          onPress={clearFilters}
+          style={{ paddingHorizontal:10, paddingVertical:6, borderRadius:20, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+        >
+          <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>{t('common.resetFilters','Reset filters')}</Text>
+        </A11yPressable>
+      </View>
 
       <A11yPressable
         accessibilityRole="button"
@@ -263,6 +293,9 @@ export default function EventsScreen() {
           <Text style={styles.calNav}>{"<"}</Text>
         </A11yPressable>
         <Text style={styles.calTitle}>{monthLabel}</Text>
+        <Text style={[styles.calTitle, { opacity:0.7 }]} accessibilityLiveRegion="polite">
+          {t('eventsFeature.loadedCount','{{n}} events loaded',{ n: filtered.length })}
+        </Text>
         <A11yPressable
           accessibilityRole="button"
           accessibilityLabel={t('deadlines.nextMonth','Next')}
@@ -330,7 +363,7 @@ export default function EventsScreen() {
             </Text>
             {(selectedDay || query || mode !== 'all') && (
               <A11yPressable
-                onPress={() => { setSelectedDay(null); setQuery(''); setMode('all'); }}
+                onPress={clearFilters}
                 accessibilityRole="button"
                 accessibilityLabel={t('common.resetFilters','Reset filters')}
                 style={{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
@@ -417,6 +450,41 @@ export default function EventsScreen() {
         refreshControl={
           <RefreshControl refreshing={loading} onRefresh={reload} />
         }
+        ListHeaderComponent={(
+          <View style={{ marginBottom: 8 }}>
+            <View style={{ flexDirection:'row', gap:8 }}>
+              <A11yPressable
+                onPress={async () => {
+                  // Export all filtered as single ICS concatenation
+                  try {
+                    const payload = filtered.map(it => makeICS(it as any)).join('\n');
+                    await shareText('events.ics', payload);
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { count: filtered.length, mode });
+                  } catch {}
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.export','Export') + ' ICS'}
+                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export ICS</Text>
+              </A11yPressable>
+              <A11yPressable
+                onPress={async () => {
+                  // Export CSV of filtered
+                  const header = '"Date","Title","Description","Location"';
+                  const rows = filtered.map(it => makeCSVRow(it as any)).join('\n');
+                  await shareText('events.csv', `${header}\n${rows}`);
+                  trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { count: filtered.length, mode });
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.export','Export') + ' CSV'}
+                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
+              </A11yPressable>
+            </View>
+          </View>
+        )}
       />
     </View>
   );

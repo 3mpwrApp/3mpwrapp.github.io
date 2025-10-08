@@ -41,7 +41,8 @@
   "deadlines": {
     "prevMonth": "Anterior",
     "nextMonth": "Siguiente",
-    "reloadShort": "Recargar"
+    "reloadShort": "Recargar",
+    "today": "Today"
   },
   "templates": {
     "deadlines": {
@@ -81,7 +82,8 @@
       "recurringAddedBody": " {{count}} recurring deadlines added.",
       "recurringFailed": " Failed",
       "recurringFailedBody": " Could not add recurring deadlines.",
-      "monthLabel": " Month",
+  "monthLabel": " Month",
+  "today": " Today",
       "weekLabel": " Week",
       "selectedDate": " Selected:",
       "myDeadlines": " My Deadlines",
@@ -1434,8 +1436,9 @@
     "saveFailed": " Save failed",
     "uploading": " Uploading",
     "uploadingItem": " Uploading {{name}}",
-    "search": " Search",
-    "clearSearch": " Clear search",
+  "search": " Search",
+  "clearSearch": " Clear search",
+  "clear": " Clear",
     "hide": " Hide",
     "show": " Show",
     "save": " Save",
@@ -1473,7 +1476,8 @@
     "error": " Error",
     "failed": " Failed",
     "working": " Working...",
-    "export": " Export",
+  "export": " Export",
+  "results": "results",
     "import": " Import",
     "imported": " Imported",
     "add": " Add",

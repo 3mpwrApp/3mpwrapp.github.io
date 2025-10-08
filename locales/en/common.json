@@ -850,6 +850,7 @@
     "uploadingItem": "Uploading {{name}}",
     "search": "Search",
     "clearSearch": "Clear search",
+  "clear": "Clear",
     "hide": "Hide",
     "show": "Show",
     "save": "Save",
@@ -887,6 +888,7 @@
     "error": "Error",
     "failed": "Failed",
     "working": "Working...",
+  "results": "results",
     "export": "Export",
     "import": "Import",
     "imported": "Imported",
@@ -1651,7 +1653,8 @@
       "recurringAddedBody": "{{count}} recurring deadlines added.",
       "recurringFailed": "Failed",
       "recurringFailedBody": "Could not add recurring deadlines.",
-      "monthLabel": "Month",
+  "monthLabel": "Month",
+  "today": "Today",
       "weekLabel": "Week",
       "selectedDate": "Selected:",
       "myDeadlines": "My Deadlines",
@@ -2257,6 +2260,7 @@
   "deadlines": {
     "prevMonth": "Previous",
     "nextMonth": "Next",
-    "reloadShort": "Reload"
+    "reloadShort": "Reload",
+    "today": "Today"
   }
 }

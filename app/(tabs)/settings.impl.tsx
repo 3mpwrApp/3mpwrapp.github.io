@@ -22,7 +22,7 @@ import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 import { sendFeedbackEmailInternal } from '../../utils/feedback';
-
+import { useDevPrefs } from '../../services/devPrefs';
 
 import * as SettingsLazy from './settings.lazy';
 const NotificationPreferences = React.lazy(() => import('../../components/NotificationPreferences'));
@@ -203,6 +203,7 @@ export default function SettingsScreen() {
           <SettingsLazy.EnhancedPrivacy />
         </React.Suspense>
       </Section>
+      <DeveloperSection styles={styles} />
       <Section title={t('about.title','About & Contact')} styles={styles}>
         <A11yPressable
           onPress={sendFeedbackEmail}
@@ -317,6 +318,33 @@ function AdminSection() {
         </View>
       )}
     </View>
+  );
+}
+
+function DeveloperSection({ styles }: { styles: ReturnType<typeof createStyles> }) {
+  const palette = useAppPalette();
+  const { costAlertsEnabled, setCostAlertsEnabled } = useDevPrefs();
+  return (
+    <Section title='Developer' subtitle='Local-only toggles for development' styles={styles}>
+      <View style={{ paddingVertical:8 }}>
+        <A11yPressable
+          accessibilityRole='switch'
+          accessibilityState={{ checked: !!costAlertsEnabled }}
+          onPress={() => setCostAlertsEnabled(!costAlertsEnabled)}
+          hitSlop={HIT_SLOP_8}
+          style={[styles.linkButton, { justifyContent:'space-between' }]}
+        >
+          <View style={{ flexDirection:'row', alignItems:'center' }}>
+            <Ionicons name='alert-circle' size={20} color={palette.primary} />
+            <Text style={[styles.linkText, { marginLeft:8 }]}>Cost alerts</Text>
+          </View>
+          <Text style={{ color: palette.text, opacity: 0.7 }}>{costAlertsEnabled ? 'On' : 'Off'}</Text>
+        </A11yPressable>
+        <Text style={[styles.description, { marginTop:8 }]}>
+          When enabled, the app will warn before using features that could incur costs (e.g., external LLM, Sentry, Android Maps). Free Mode still blocks paid features.
+        </Text>
+      </View>
+    </Section>
   );
 }
 
