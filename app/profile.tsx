@@ -23,15 +23,15 @@ export default function Profile() {
   return (
     <View
       style={styles.container}
-      accessibilityLabel={t("profile.screenLabel")}
+      accessibilityLabel={t("header.openProfile", "Open profile")}
       accessible
     >
       <Text style={styles.title}>{t("nav.profile")}</Text>
 
       <View style={styles.card}>
         <Row
-          label={t("profile.user")}
-          value={user?.email ?? user?.displayName ?? t("common.guest")}
+          label={t("settings.account.title", "Account")}
+          value={user?.email ?? user?.displayName ?? t("common.guest", "Guest")}
         />
         <Pressable
           onPress={() => setShowEmergencyCard(v => !v)}
@@ -91,7 +91,7 @@ export default function Profile() {
               onPress={() => setLanguage(code)}
               style={[styles.langChip, lang === code && styles.langChipActive]}
               accessibilityRole="button"
-              accessibilityLabel={t("rightsExplainer.langChip", { code })}
+              accessibilityLabel={t("rightsExplainer.langChip", "Language {{code}}", { code })}
             >
               <Text
                 style={[
