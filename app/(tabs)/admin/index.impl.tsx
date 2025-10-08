@@ -28,7 +28,7 @@ import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
 import { computeActivityStats, logActivity, subscribeToActivityFeed } from "../../../services/activity";
 import { useAppPalette } from "../../../theme/usePalette";
 
-import * as AdminLazy from "./lazy";
+import * as AdminLazy from "./_lazy";
 
 export const options = { href: null };
 
