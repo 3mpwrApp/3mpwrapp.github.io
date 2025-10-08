@@ -7,6 +7,7 @@ const reactHooks = require('eslint-plugin-react-hooks');
 const jsxA11y = require('eslint-plugin-jsx-a11y');
 const jest = require('eslint-plugin-jest');
 const importPlugin = require('eslint-plugin-import');
+const eslintComments = require('eslint-plugin-eslint-comments');
 
 module.exports = defineConfig([
   {
@@ -39,7 +40,8 @@ module.exports = defineConfig([
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
       jest,
-      import: importPlugin,
+  import: importPlugin,
+  'eslint-comments': eslintComments,
     },
     settings: {
       react: { version: 'detect' },
@@ -73,6 +75,8 @@ module.exports = defineConfig([
       'import/no-named-as-default': 'off',
       // General
       'no-console': ['warn', { allow: ['warn', 'error'] }],
+  // Ensure compatibility with hooks that may reference this rule
+  'eslint-comments/no-unused-disable': 'off',
       'no-debugger': 'warn',
       eqeqeq: ['warn', 'smart'],
       curly: ['warn', 'multi-line'],
@@ -128,7 +132,7 @@ module.exports = defineConfig([
   // Jest tests
   {
     files: ['**/__tests__/**/*', '**/*.test.*'],
-    plugins: { jest },
+  plugins: { jest, 'eslint-comments': eslintComments },
     languageOptions: {
       globals: {
         jest: 'readonly',
@@ -145,6 +149,7 @@ module.exports = defineConfig([
       'jest/no-disabled-tests': 'warn',
       'jest/no-focused-tests': 'error',
       'jest/no-identical-title': 'error',
+  'eslint-comments/no-unused-disable': 'off',
     },
   },
 ]);
