@@ -71,7 +71,8 @@ const FILE_WHITELIST = [
   'app/(tabs)/wellness/self-care-library.tsx',
   'components/Header.tsx',
   'data/faqs.ts',
-  'data/lawyers.ts'
+  'data/lawyers.ts',
+  'utils/feedback.ts'
 ].map(p=>p.replace(/\\/g,'/'));
 
 function isWhitelisted(rel) { rel = norm(rel); return FILE_WHITELIST.some(w => rel === w); }
