@@ -22,8 +22,26 @@ export function hideToast() {
   }
 }
 
+// Optional safe-area hook: uses react-native-safe-area-context when available, else zeros (e.g., Jest)
+function useOptionalInsets() {
+  // In tests, avoid importing native modules altogether
+  const isTest = (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'test')
+    || (typeof jest !== 'undefined');
+  if (isTest) {
+    return { top: 0, left: 0, right: 0, bottom: 0 } as { top: number; left: number; right: number; bottom: number };
+  }
+  try {
+    const mod = require('react-native-safe-area-context');
+    if (mod && typeof mod.useSafeAreaInsets === 'function') {
+      return mod.useSafeAreaInsets();
+    }
+  } catch {}
+  return { top: 0, left: 0, right: 0, bottom: 0 } as { top: number; left: number; right: number; bottom: number };
+}
+
 export function ToastViewport() {
   const palette = useAppPalette();
+  const insets = useOptionalInsets();
   const [msg, setMsg] = React.useState<string | null>(null);
   const [opts, setOpts] = React.useState<ToastOptions | undefined>(undefined);
   const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -59,7 +77,17 @@ export function ToastViewport() {
       accessible={false}
       // RN web/Android hint; iOS ignores this prop
       accessibilityLiveRegion={Platform.OS === 'android' ? 'polite' : undefined}
-      style={[s.wrap, { backgroundColor: bg, borderColor: palette.muted }]}
+      style={[
+        s.wrap,
+        {
+          backgroundColor: bg,
+          borderColor: palette.muted,
+          // Center horizontally with safe-area aware bottom offset
+          left: 12 + insets.left,
+          right: 12 + insets.right,
+          bottom: Math.max(12, 24 + insets.bottom),
+        },
+      ]}
       pointerEvents="none"
     >
       <Text style={[s.text, { color: fg }]}>{msg}</Text>
@@ -70,12 +98,16 @@ export function ToastViewport() {
 const s = StyleSheet.create({
   wrap: {
     position: "absolute",
-    right: 12,
-    bottom: 56,
+    // centered via left/right stretch, content centered
+    alignSelf: 'stretch',
+    // space around text
     borderRadius: 10,
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderWidth: StyleSheet.hairlineWidth,
+    // center text/content
+    alignItems: 'center',
+    justifyContent: 'center',
     // Shadow for visibility (web/native)
     shadowColor: "#000",
     shadowOpacity: 0.15,
