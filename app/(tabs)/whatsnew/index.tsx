@@ -17,6 +17,7 @@ import {
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
 import { subscribeToActivityFeed } from "../../../services/activity";
 import {
   addLocalWhatsNew,
@@ -31,7 +32,8 @@ export default function WhatsNewScreen() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("What’s New");
+  const { t } = useTranslation();
+  useAnnounceOnMount(t("whatsNew.title", "What’s New"));
   useFocusOnRefOnMount(titleRef);
 
   const now = React.useMemo(() => new Date(), []);
@@ -128,8 +130,8 @@ export default function WhatsNewScreen() {
     })();
   }, [items]);
   const sections = [
-    ...(recent.length ? [{ title: "New", data: recent }] : []),
-    ...(older.length ? [{ title: "Archive", data: older }] : []),
+    ...(recent.length ? [{ title: t("whatsNew.new", "New"), data: recent }] : []),
+    ...(older.length ? [{ title: t("whatsNew.archive", "Archive"), data: older }] : []),
   ];
 
   return (
@@ -144,26 +146,29 @@ export default function WhatsNewScreen() {
         accessibilityRole="header"
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-  What’s New
+        {t("whatsNew.title", "What’s New")}
       </Text>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.subtitle}>
-        Latest updates & live activity (bookmarks, petitions, resources). Older than 30 days move to Archive.
+        {t(
+          "whatsNew.subtitle",
+          "Latest updates & live activity (bookmarks, petitions, resources). Older than 30 days move to Archive.",
+        )}
       </Text>
       <View style={{ marginBottom: 8 }}>
         <TextInput
           value={title}
           onChangeText={setTitle}
           style={styles.input}
-          placeholder="Add title"
+          placeholder={t("whatsNew.addTitle", "Add title")}
           placeholderTextColor={palette.text}
         />
         <TextInput
           value={summary}
           onChangeText={setSummary}
           style={styles.input}
-          placeholder="Add summary"
+          placeholder={t("whatsNew.addSummary", "Add summary")}
           placeholderTextColor={palette.text}
         />
         <Pressable
@@ -181,18 +186,18 @@ export default function WhatsNewScreen() {
             setSummary("");
           }}
           accessibilityRole="button"
-          accessibilityLabel="Add what’s new"
+          accessibilityLabel={t("whatsNew.addA11y", "Add what’s new")}
           style={({ pressed }) => [
             styles.button,
             (!title.trim() || !summary.trim() || pressed) && { opacity: 0.7 },
           ]}
         >
-          <Text style={styles.buttonText}>Add</Text>
+          <Text style={styles.buttonText}>{t("whatsNew.addBtn", "Add")}</Text>
         </Pressable>
       </View>
       <Pressable
         accessibilityRole="button"
-        accessibilityLabel="Mark all as read"
+        accessibilityLabel={t("whatsNew.markAllReadA11y", "Mark all as read")}
         onPress={async () => {
           const newest = items.reduce(
             (acc, cur) => Math.max(acc, new Date(cur.date).getTime()),
@@ -209,7 +214,7 @@ export default function WhatsNewScreen() {
         }}
         style={({ pressed }) => [styles.button, pressed && { opacity: 0.7 }]}
       >
-        <Text style={styles.buttonText}>Mark all as read</Text>
+        <Text style={styles.buttonText}>{t("whatsNew.markAllReadBtn", "Mark all as read")}</Text>
       </Pressable>
 
       <SectionList
@@ -247,7 +252,7 @@ export default function WhatsNewScreen() {
                         fontWeight: "700",
                       }}
                     >
-                      New
+                      {t("whatsNew.badgeNew", "New")}
                     </Text>
                   )}
                 </View>

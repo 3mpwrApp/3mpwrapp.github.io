@@ -1,11 +1,12 @@
 import React from "react";
-import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
 
 export const options = { href: null };
@@ -14,7 +15,8 @@ export default function ClaimsNavigator() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Guided Claims Navigator");
+  const { t } = useTranslation();
+  useAnnounceOnMount(t("claimsNavigator.title", "Guided Claims Navigator"));
   useFocusOnRefOnMount(titleRef);
 
   const [incident, setIncident] = React.useState("");
@@ -24,18 +26,11 @@ export default function ClaimsNavigator() {
 
   const generate = React.useCallback(() => {
     const steps: string[] = [];
-    if (incident)
-      {steps.push(
-        "Write a detailed incident report (date/time/location/witnesses)",
-      );}
-    if (employer)
-      {steps.push(`Notify ${employer} in writing; request acknowledgement`);}
-    if (limitations)
-      {steps.push("Ask your clinician for a functional abilities form");}
-    steps.push("File or update your claim; keep copies of all documents");
-    steps.push(
-      "Track communications (dates, names, summaries) in Evidence Locker",
-    );
+    if (incident) steps.push(t("claimsNavigator.step.report", "Write a detailed incident report (date/time/location/witnesses)"));
+    if (employer) steps.push(t("claimsNavigator.step.notify", "Notify {{employer}} in writing; request acknowledgement").replace("{{employer}}", employer));
+    if (limitations) steps.push(t("claimsNavigator.step.faf", "Ask your clinician for a functional abilities form"));
+    steps.push(t("claimsNavigator.step.file", "File or update your claim; keep copies of all documents"));
+    steps.push(t("claimsNavigator.step.track", "Track communications (dates, names, summaries) in Evidence Locker"));
     setNextSteps(steps);
   }, [incident, employer, limitations]);
 
@@ -50,51 +45,51 @@ export default function ClaimsNavigator() {
         style={styles.title}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        Guided Claims Navigator
+        {t("claimsNavigator.title", "Guided Claims Navigator")}
       </Text>
       <Text style={styles.subtitle}>
-        Turn your situation into a clear plan.
+        {t("claimsNavigator.subtitle", "Turn your situation into a clear plan.")}
       </Text>
       <TextInput
         value={incident}
         onChangeText={setIncident}
-        placeholder="Describe what happened"
+        placeholder={t("claimsNavigator.incidentPh", "Describe what happened")}
         placeholderTextColor={palette.text + "77"}
         style={styles.input}
       />
       <TextInput
         value={limitations}
         onChangeText={setLimitations}
-        placeholder="Describe work limitations"
+        placeholder={t("claimsNavigator.limitationsPh", "Describe work limitations")}
         placeholderTextColor={palette.text + "77"}
         style={styles.input}
       />
       <TextInput
         value={employer}
         onChangeText={setEmployer}
-        placeholder="Employer / contact"
+        placeholder={t("claimsNavigator.employerPh", "Employer / contact")}
         placeholderTextColor={palette.text + "77"}
         style={styles.input}
       />
       <Pressable
         onPress={generate}
         accessibilityRole="button"
-        accessibilityLabel="Generate steps"
+        accessibilityLabel={t("claimsNavigator.generateA11y", "Generate steps")}
         style={styles.button}
       >
-        <Text style={styles.buttonText}>Generate Steps</Text>
+        <Text style={styles.buttonText}>{t("claimsNavigator.generateBtn", "Generate Steps")}</Text>
       </Pressable>
       {nextSteps.length > 0 && (
         <View style={{ marginTop: 12 }}>
-          <Text style={styles.sectionTitle}>Suggested next steps</Text>
+          <Text style={styles.sectionTitle}>{t("claimsNavigator.suggested", "Suggested next steps")}</Text>
           {nextSteps.map((s, i) => (
             <Text key={i} style={styles.step}>
-              Ã¢â‚¬Â¢ {s}
+              • {s}
             </Text>
           ))}
           <Pressable
             accessibilityRole="button"
-            accessibilityLabel="Export to PDF"
+            accessibilityLabel={t("claimsNavigator.exportPdfA11y", "Export to PDF")}
             onPress={async () => {
               const html = `<!DOCTYPE html><html><body><h1>Guided Claims Navigator</h1><p><b>Incident:</b> ${incident}</p><p><b>Employer:</b> ${employer}</p><p><b>Limitations:</b> ${limitations}</p><h2>Steps</h2><ol>${nextSteps.map((s) => `<li>${s}</li>`).join("")}</ol></body></html>`;
               try {
@@ -104,7 +99,24 @@ export default function ClaimsNavigator() {
             }}
             style={[styles.button, { marginTop: 8 }]}
           >
-            <Text style={styles.buttonText}>Export PDF</Text>
+            <Text style={styles.buttonText}>{t("claimsNavigator.exportPdfBtn", "Export PDF")}</Text>
+          </Pressable>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t("claimsNavigator.shareA11y", "Share steps")}
+            onPress={async () => {
+              try {
+                const body = `Guided Claims Navigator\n\nIncident: ${incident}\nEmployer: ${employer}\nLimitations: ${limitations}\n\nSteps:\n- ${nextSteps.join("\n- ")}`;
+                const FS = await import("expo-file-system");
+                const path = FS.cacheDirectory + `claims_${Date.now()}.txt`;
+                await FS.writeAsStringAsync(path, body);
+                try { const Sharing = await import("expo-sharing"); if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(path); else Alert.alert(t("common.saved","Saved"), t("claimsNavigator.sharedToCache","Saved to cache as .txt")); }
+                catch { Alert.alert(t("common.saved","Saved"), t("claimsNavigator.sharedToCache","Saved to cache as .txt")); }
+              } catch { Alert.alert(t("common.error","Error"), t("claimsNavigator.shareFail","Could not share.")); }
+            }}
+            style={[styles.button, { marginTop: 8 }]}
+          >
+            <Text style={styles.buttonText}>{t("common.share","Share")}</Text>
           </Pressable>
         </View>
       )}

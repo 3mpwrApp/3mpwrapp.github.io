@@ -1978,7 +1978,10 @@
     "copyConversation": " appealCoach.copyConversation",
     "copyConversationHint": " appealCoach.copyConversationHint",
     "copyChatBtn": " appealCoach.copyChatBtn",
-    "sendBtn": " appealCoach.sendBtn"
+    "sendBtn": " appealCoach.sendBtn",
+    "promptPlaceholder": " Saisissez une question ou collez du texte",
+    "error": " Impossible d’obtenir une réponse",
+    "shareFail": " Partage indisponible"
   },
   "bodyMechanics": {
     "tipWrists": " bodyMechanics.tipWrists",
@@ -2102,6 +2105,41 @@
     "exportFailedBody": "Could not create file.",
     "subtitle": "Assistant de traduction IA",
     "placeholder": "Entrez le texte à traduire"
+  },
+  "whatsNew": {
+    "title": "Quoi de neuf",
+    "subtitle": "Dernières mises à jour et activité. Les éléments de plus de 30 jours passent à l’archive.",
+    "addTitle": "Ajouter un titre",
+    "addSummary": "Ajouter un résumé",
+    "addA11y": "Ajouter une nouveauté",
+    "addBtn": "Ajouter",
+    "markAllReadA11y": "Tout marquer comme lu",
+    "markAllReadBtn": "Tout marquer comme lu",
+    "badgeNew": "Nouveau",
+    "new": "Nouveau",
+    "archive": "Archive"
+  },
+  "claimsNavigator": {
+    "title": "Navigateur de réclamations",
+    "subtitle": "Transformez votre situation en plan clair.",
+    "incidentPh": "Décrivez ce qui s’est passé",
+    "limitationsPh": "Décrivez les limitations au travail",
+    "employerPh": "Employeur / contact",
+    "generateA11y": "Générer les étapes",
+    "generateBtn": "Générer les étapes",
+    "suggested": "Étapes suggérées",
+    "exportPdfA11y": "Exporter en PDF",
+    "exportPdfBtn": "Exporter PDF",
+    "shareA11y": "Partager les étapes",
+    "sharedToCache": "Enregistré dans le cache en .txt",
+    "shareFail": "Impossible de partager.",
+    "step": {
+      "report": "Rédigez un rapport détaillé de l’incident (date/heure/lieu/témoins)",
+      "notify": "Avertissez {{employer}} par écrit; demandez un accusé de réception",
+      "faf": "Demandez à votre clinicien un formulaire des capacités fonctionnelles",
+      "file": "Déposez ou mettez à jour votre réclamation; conservez des copies",
+      "track": "Consignez les communications (dates, noms, résumés) dans le casier de preuves"
+    }
   },
   "auth": {
     "registerTitle": "Register",

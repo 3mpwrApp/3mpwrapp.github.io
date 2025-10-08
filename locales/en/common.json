@@ -2217,7 +2217,10 @@
     "copyConversation": "Copy conversation",
     "copyConversationHint": "Copies the entire chat to the clipboard.",
     "copyChatBtn": "Copy chat",
-    "sendBtn": "Send"
+    "sendBtn": "Send",
+    "promptPlaceholder": "Ask a question or paste text",
+    "error": "Could not get a response.",
+    "shareFail": "Share unavailable"
   },
   "bodyMechanics": {
     "tipWrists": "Keep wrists neutral; avoid sustained flexion or extension.",
@@ -2262,5 +2265,43 @@
     "nextMonth": "Next",
     "reloadShort": "Reload",
     "today": "Today"
+  },
+  "whatsNew": {
+    "title": "What’s New",
+    "subtitle": "Latest updates & live activity (bookmarks, petitions, resources). Older than 30 days move to Archive.",
+    "addTitle": "Add title",
+    "addSummary": "Add summary",
+    "addA11y": "Add what’s new",
+    "addBtn": "Add",
+    "markAllReadA11y": "Mark all as read",
+    "markAllReadBtn": "Mark all as read",
+    "badgeNew": "New",
+    "new": "New",
+    "archive": "Archive"
+  },
+  
+  "claimsNavigator": {
+    "title": "Guided Claims Navigator",
+    "subtitle": "Turn your situation into a clear plan.",
+    "incidentPh": "Describe what happened",
+    "limitationsPh": "Describe work limitations",
+    "employerPh": "Employer / contact",
+    "generateA11y": "Generate steps",
+    "generateBtn": "Generate Steps",
+    "suggested": "Suggested next steps",
+    "exportPdfA11y": "Export to PDF",
+    "exportPdfBtn": "Export PDF",
+    "shareA11y": "Share steps",
+    "sharedToCache": "Saved to cache as .txt",
+    "shareFail": "Could not share.",
+    "step": {
+      "report": "Write a detailed incident report (date/time/location/witnesses)",
+      "notify": "Notify {{employer}} in writing; request acknowledgement",
+      "faf": "Ask your clinician for a functional abilities form",
+      "file": "File or update your claim; keep copies of all documents",
+      "track": "Track communications (dates, names, summaries) in Evidence Locker"
+    }
   }
 }
+
+
