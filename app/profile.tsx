@@ -3,6 +3,7 @@ import { router } from "expo-router";
 import React from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
+import { HIT_SLOP_8 } from "../constants/a11y";
 import EmergencyWalletCard from "../components/EmergencyWalletCard";
 import { useAuth } from "../context/AuthContext";
 import type { Lang } from "../i18n";
@@ -173,7 +174,7 @@ function Row({ label, value }: { label: string; value: string }) {
 
 function QuickLink({ label, onPress, palette }:{ label: string; onPress: ()=>void; palette: Palette }) {
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={label} style={{ borderWidth:1, borderColor: palette.muted, borderRadius:999, paddingHorizontal:12, paddingVertical:8 }}>
+    <Pressable hitSlop={HIT_SLOP_8} onPress={onPress} accessibilityRole="button" accessibilityLabel={label} style={{ borderWidth:1, borderColor: palette.muted, borderRadius:999, paddingHorizontal:12, paddingVertical:8 }}>
       <Text style={{ color: palette.text, fontWeight:'700' }}>{label}</Text>
     </Pressable>
   );
