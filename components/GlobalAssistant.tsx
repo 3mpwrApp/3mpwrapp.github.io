@@ -30,7 +30,7 @@ export default function GlobalAssistant() {
   if (pathname?.startsWith('/(auth)')) return null;
   if (!showAssistantPill) return null;
   return (
-    <View pointerEvents="box-none" style={[s.wrap, assistantPillPosition === 'right' ? s.right : s.left]}>
+    <View style={[s.wrap, assistantPillPosition === 'right' ? s.right : s.left, { pointerEvents: 'box-none' as any }]}>
       <Link href={('/(tabs)/advocacy/assistant-hub' as any)} asChild>
         <A11yPressable
           role="button"

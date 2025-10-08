@@ -86,9 +86,10 @@ export function ToastViewport() {
           left: 12 + insets.left,
           right: 12 + insets.right,
           bottom: Math.max(12, 24 + insets.bottom),
+          // Silence RN Web deprecation: use style.pointerEvents
+          pointerEvents: 'none' as any,
         },
       ]}
-      pointerEvents="none"
     >
       <Text style={[s.text, { color: fg }]}>{msg}</Text>
     </View>

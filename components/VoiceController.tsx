@@ -71,7 +71,7 @@ export default function VoiceController() {
 
   if (!voiceMode) return null;
   return (
-    <View pointerEvents="box-none" style={s.wrap}>
+    <View style={[s.wrap, { pointerEvents: 'box-none' as any }]}>
       {toast && (
         <View style={s.toast}><Text style={s.toastText}>{toast}</Text></View>
       )}
