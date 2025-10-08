@@ -22,10 +22,21 @@ function walk(dir, out=[]) {
   return out;
 }
 
-const registryPath = path.join(ROOT,'services','analyticsEvents.ts');
-const registrySrc = fs.readFileSync(registryPath,'utf8');
-const regMatches = [...registrySrc.matchAll(/"([a-zA-Z0-9_.:-]+)"/g)].map(m=>m[1]);
-const registry = regMatches.filter(e=>/[_\.]/.test(e));
+let registry = [];
+try {
+  const jsonPath = path.join(ROOT,'data','analytics-events.json');
+  const raw = fs.readFileSync(jsonPath, 'utf8');
+  const obj = JSON.parse(raw);
+  registry = Object.values(obj);
+} catch {
+  // Fallback: extract from TS file if JSON not present
+  try {
+    const registryPath = path.join(ROOT,'services','analyticsEvents.ts');
+    const registrySrc = fs.readFileSync(registryPath,'utf8');
+    const regMatches = [...registrySrc.matchAll(/"([a-zA-Z0-9_.:-]+)"/g)].map(m=>m[1]);
+    registry = regMatches.filter(e=>/[_\.]/.test(e));
+  } catch {}
+}
 
 const eventCounts = new Map();
 for (const file of walk(ROOT)) {

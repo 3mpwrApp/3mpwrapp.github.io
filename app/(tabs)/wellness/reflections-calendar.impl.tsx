@@ -1,6 +1,8 @@
-/* eslint-disable no-restricted-syntax -- Minimal, test-only implementation keeps inline colors to avoid pulling palette deps. */
+ 
 import React from 'react';
 import { Alert, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+
+import { useAppPalette } from '../../../theme/usePalette';
 
 // Lightweight, test-focused implementation to satisfy the smoke test
 // Avoids heavy charts and large state to keep Jest memory stable.
@@ -13,6 +15,7 @@ type Reflection = {
 };
 
 export default function ReflectionsCalendarTestImpl() {
+	const palette = useAppPalette();
 	const [view, setView] = React.useState<'grid' | 'list'>('grid');
 	const [items, setItems] = React.useState<Reflection[]>([]);
 	const [detailsOpen, setDetailsOpen] = React.useState(false);
@@ -53,35 +56,35 @@ export default function ReflectionsCalendarTestImpl() {
 		}, [firstWithEntry]);
 
 	return (
-		<View style={s.container} accessibilityLabel="Reflections Calendar" accessible>
-			<Text style={s.title} accessibilityRole="header">Reflections Calendar</Text>
+		<View style={[s.container, { backgroundColor: palette.background }]} accessibilityLabel="Reflections Calendar" accessible>
+			<Text style={[s.title, { color: palette.text }]} accessibilityRole="header">Reflections Calendar</Text>
 
-					<View style={{ flexDirection: 'row', gap: 8 }}>
-						<Pressable
-							hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+			<View style={{ flexDirection: 'row', gap: 8 }}>
+				<Pressable
+					hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
 					onPress={() => setView('grid')}
 					accessibilityRole="button"
 					accessibilityLabel="Switch to grid view"
 					accessibilityState={{ selected: view === 'grid' }}
-					style={[s.chip, view === 'grid' && s.chipActive]}
+					style={[s.chip, view === 'grid' && [s.chipActive, { backgroundColor: palette.primary, borderColor: palette.primary }]]}
 				>
-					<Text style={[s.chipText, view === 'grid' && s.chipTextActive]}>GRID</Text>
-						</Pressable>
-						<Pressable
-							hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+					<Text style={[s.chipText, { color: view==='grid' ? palette.onPrimary : palette.text }]}>GRID</Text>
+				</Pressable>
+				<Pressable
+					hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
 					onPress={() => setView('list')}
 					accessibilityRole="button"
 					accessibilityLabel="Switch to list view"
 					accessibilityState={{ selected: view === 'list' }}
-					style={[s.chip, view === 'list' && s.chipActive]}
+					style={[s.chip, view === 'list' && [s.chipActive, { backgroundColor: palette.primary, borderColor: palette.primary }]]}
 				>
-					<Text style={[s.chipText, view === 'list' && s.chipTextActive]}>LIST</Text>
-						</Pressable>
+					<Text style={[s.chipText, { color: view==='list' ? palette.onPrimary : palette.text }]}>LIST</Text>
+				</Pressable>
 			</View>
 
 			<View style={{ height: 8 }} />
 
-					<Pressable
+			<Pressable
 				onPress={async () => {
 					try {
 						const FS = await import('expo-file-system');
@@ -93,61 +96,61 @@ export default function ReflectionsCalendarTestImpl() {
 				}}
 				accessibilityRole="button"
 				accessibilityLabel="Export reflections as CSV"
-				style={s.secondary}
+				style={[s.secondary, { backgroundColor: palette.surface, borderColor: palette.muted }]}
 			>
-				<Text style={s.secondaryText}>Export CSV</Text>
-					</Pressable>
+				<Text style={[s.secondaryText, { color: palette.text }]}>Export CSV</Text>
+			</Pressable>
 
 			<View style={{ height: 12 }} />
 
-					{view === 'list' ? (
-						<View>
-							{!firstWithEntry && (
-								<Text style={{ color: '#333' }}>No reflections yet.</Text>
-							)}
-							<Pressable
-								hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
-								accessibilityRole="button"
-								accessibilityLabel={`View day ${dayLabel} with entry`}
-								style={s.dayRow}
-								onPress={() => setDetailsOpen(true)}
-							>
-								<Text style={s.dayText}>{dayLabel}</Text>
-							</Pressable>
-						</View>
-					) : (
-				<Text style={{ color: '#333' }}>Grid view</Text>
+			{view === 'list' ? (
+				<View>
+					{!firstWithEntry && (
+						<Text style={{ color: palette.text, opacity: 0.8 }}>No reflections yet.</Text>
+					)}
+					<Pressable
+						hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+						accessibilityRole="button"
+						accessibilityLabel={`View day ${dayLabel} with entry`}
+						style={[s.dayRow, { borderBottomColor: palette.muted }]}
+						onPress={() => setDetailsOpen(true)}
+					>
+						<Text style={[s.dayText, { color: palette.text }]}>{dayLabel}</Text>
+					</Pressable>
+				</View>
+			) : (
+				<Text style={{ color: palette.text, opacity: 0.9 }}>Grid view</Text>
 			)}
 
 			<Modal transparent visible={detailsOpen} onRequestClose={() => setDetailsOpen(false)}>
-				<View style={s.modalBackdrop}>
-					<View style={s.modalCard}>
-						<Text style={{ color: '#111', fontWeight: '700', marginBottom: 8 }}>Details</Text>
+				<View style={[s.modalBackdrop, { backgroundColor: '#0006' }]}>
+					<View style={[s.modalCard, { backgroundColor: palette.surface }]}>
+						<Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>Details</Text>
 						<View style={{ flexDirection: 'row', gap: 8, marginBottom: 8 }}>
-											<Pressable
+							<Pressable
 								accessibilityRole="button"
 								accessibilityLabel="Add reflection"
-								style={s.secondary}
+								style={[s.secondary, { backgroundColor: palette.surface, borderColor: palette.muted }]}
 								onPress={() => setEditorOpen(true)}
 							>
-								<Text style={s.secondaryText}>Add reflection</Text>
-											</Pressable>
-											<Pressable
+								<Text style={[s.secondaryText, { color: palette.text }]}>Add reflection</Text>
+							</Pressable>
+							<Pressable
 								accessibilityRole="button"
 								accessibilityLabel="Close dialog"
-								style={s.secondary}
+								style={[s.secondary, { backgroundColor: palette.surface, borderColor: palette.muted }]}
 								onPress={() => setDetailsOpen(false)}
 							>
-								<Text style={s.secondaryText}>Close</Text>
-											</Pressable>
+								<Text style={[s.secondaryText, { color: palette.text }]}>Close</Text>
+							</Pressable>
 						</View>
 
 						{editorOpen && (
 							<View>
-												<Pressable
+								<Pressable
 									accessibilityRole="button"
 									accessibilityLabel="Save reflection"
-									style={s.primary}
+									style={[s.primary, { backgroundColor: palette.primary }]}
 									onPress={async () => {
 										try {
 											const mod = await import('../../../services/wellness');
@@ -158,8 +161,8 @@ export default function ReflectionsCalendarTestImpl() {
 										}
 									}}
 								>
-									<Text style={s.primaryText}>Save</Text>
-												</Pressable>
+									<Text style={[s.primaryText, { color: palette.onPrimary }]}>Save</Text>
+								</Pressable>
 							</View>
 						)}
 					</View>
@@ -171,18 +174,18 @@ export default function ReflectionsCalendarTestImpl() {
 
 const s = StyleSheet.create({
 	container: { flex: 1, padding: 16 },
-	title: { fontSize: 20, fontWeight: '700', color: '#111' },
-	chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: '#ccc', borderRadius: 14, paddingHorizontal: 12, paddingVertical: 6 },
-	chipActive: { backgroundColor: '#06f', borderColor: '#06f' },
-	chipText: { color: '#111' },
-	chipTextActive: { color: '#fff', fontWeight: '700' },
-	secondary: { backgroundColor: '#fafafa', borderWidth: StyleSheet.hairlineWidth, borderColor: '#ccc', paddingVertical: 8, paddingHorizontal: 12, borderRadius: 6, alignSelf: 'flex-start' },
-	secondaryText: { color: '#111', fontWeight: '700' },
-	primary: { backgroundColor: '#06f', paddingVertical: 10, borderRadius: 8, alignItems: 'center' },
-	primaryText: { color: '#fff', fontWeight: '700' },
-	dayRow: { paddingVertical: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: '#ddd' },
-	dayText: { color: '#111' },
-	modalBackdrop: { flex: 1, backgroundColor: '#0006', alignItems: 'center', justifyContent: 'center' },
-	modalCard: { backgroundColor: '#fff', padding: 14, borderRadius: 10, width: '90%', maxWidth: 520 },
+	title: { fontSize: 20, fontWeight: '700' },
+	chip: { borderWidth: StyleSheet.hairlineWidth, borderRadius: 14, paddingHorizontal: 12, paddingVertical: 6 },
+	chipActive: {},
+	chipText: {},
+	chipTextActive: { fontWeight: '700' },
+	secondary: { borderWidth: StyleSheet.hairlineWidth, paddingVertical: 8, paddingHorizontal: 12, borderRadius: 6, alignSelf: 'flex-start' },
+	secondaryText: { fontWeight: '700' },
+	primary: { paddingVertical: 10, borderRadius: 8, alignItems: 'center' },
+	primaryText: { fontWeight: '700' },
+	dayRow: { paddingVertical: 8, borderBottomWidth: StyleSheet.hairlineWidth },
+	dayText: {},
+	modalBackdrop: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+	modalCard: { padding: 14, borderRadius: 10, width: '90%', maxWidth: 520 },
 });
 
