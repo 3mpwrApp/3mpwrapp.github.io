@@ -24,6 +24,8 @@ Quick reference: Deep-link seeding with q param is documented in `docs/deep-link
 - User Guide (complete, end-user): `docs/user-guide.md`
 - Changelog (developer-facing): `docs/CHANGELOG.md`
 - Unfinished work inventory: `docs/UNFINISHED_WORK.md`
+- Accessibility appendix: `docs/A11Y_NOTES.md`
+- OTA (EAS Update) guide: `docs/RELEASE_OTA.md`
 - Closed Beta: Tester Guide `docs/beta/TESTER_GUIDE.md`, Readiness Checklist `docs/beta/READINESS_CHECKLIST.md`
   - Invite Email template: `docs/beta/INVITE_EMAIL_TEMPLATE.md`
   - One‑page Release Notes template: `docs/beta/RELEASE_NOTES_TEMPLATE.md`

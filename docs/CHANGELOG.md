@@ -13,6 +13,13 @@ Note for authors (plain language):
 - Evidence Locker export modal test skipped for CI stability; import flow remains covered.
 - Added comprehensive USER_GUIDE.md covering all app features and major components.
 
+## [2025-10-08]
+- Fix: Resolved a Tabs router conflict that registered two Admin screens. The legacy `/(tabs)/admin.tsx` route was removed; the Admin Panel now lives at `/(tabs)/admin/index` and remains hidden from the tab bar (deep-link or Settings → Admin to open).
+- Improve (Accessibility): Introduced an accessible loading skeleton (`components/ScreenSkeleton.tsx`) used across heavy Community routes. It announces loading state, uses `progressbar` role, marks the container busy, and hides descendants for screen readers until ready.
+- Improve (Web compatibility): Moved deprecated `pointerEvents` props into `style` for Web in floating UI (Global Assistant pill, Voice Controller, and Toast viewport) to silence RN Web deprecation warnings without behavior changes.
+- Fix (Toast): Hardened the Toast viewport with a safe background fallback when no type is provided and kept palette-driven contrast.
+- Dev: Admin subpanels are lazy-loaded via an internal `_lazy` module to keep bundle size and tab render costs low. Jest continues to require implementations synchronously for stable tests.
+
 ## [2025-10-05]
  - Wellness: Promoted Resilience Points to Beta; added user guide section and localized EN/ES strings (FR already present). Added a smoke test for Resilience Points with resilient selectors. Full suite green (93/93).
  - i18n: Added missing Advocacy Policy actions keys (copy/share/export/clipboard messages) to es and fr; i18n parity and assertions pass.

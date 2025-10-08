@@ -15,6 +15,7 @@ This app uses a Firebase custom claim `admin=true` to gate admin-only features b
 ## Client Guarding
 - Wrap admin-only screens/components with `components/AdminGuard.tsx`.
 - Settings tab shows an Admin section only if `isAdmin` is true.
+- The Admin Panel route is `/(tabs)/admin/index` and is hidden from the tab bar. Use Settings → Admin or deep-links to navigate.
 
 ## Firestore Rules
 - See `firebase/firestore.rules`.
