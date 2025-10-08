@@ -106,6 +106,20 @@ export default function Profile() {
         </View>
       </View>
 
+      <View style={styles.card}>
+        <Text style={{ fontWeight: "700", marginBottom: 8 }}>
+          {t("profile.quickLinks.title", "Quick links")}
+        </Text>
+        <View style={{ flexDirection: 'row', flexWrap:'wrap', gap:8 }}>
+          <QuickLink label={t('profile.quickLinks.evidence','Evidence Locker')} onPress={() => router.push('/(tabs)/resources/evidence-locker' as Href)} palette={palette} />
+          <QuickLink label={t('profile.quickLinks.deadlines','Deadlines')} onPress={() => router.push('/(tabs)/resources/deadlines' as Href)} palette={palette} />
+          <QuickLink label={t('profile.quickLinks.rightsChecker','Rights Checker')} onPress={() => router.push('/(tabs)/resources/rights-checker' as Href)} palette={palette} />
+          <QuickLink label={t('profile.quickLinks.rightsExplainer','Rights Explainer')} onPress={() => router.push('/(tabs)/resources/rights-explainer' as Href)} palette={palette} />
+          <QuickLink label={t('profile.quickLinks.translator','Advocate Translator')} onPress={() => router.push('/(tabs)/advocacy/ai-advocate-translator' as Href)} palette={palette} />
+          <QuickLink label={t('profile.quickLinks.settings','Settings')} onPress={() => router.push('/(tabs)/settings' as Href)} palette={palette} />
+        </View>
+      </View>
+
       {user ? (
         <>
           <Text style={styles.label}>{t("settings.account.displayName")}</Text>
@@ -154,6 +168,14 @@ function Row({ label, value }: { label: string; value: string }) {
       <Text style={{ fontWeight: "600" }}>{label}</Text>
       <Text>{value}</Text>
     </View>
+  );
+}
+
+function QuickLink({ label, onPress, palette }:{ label: string; onPress: ()=>void; palette: Palette }) {
+  return (
+    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={label} style={{ borderWidth:1, borderColor: palette.muted, borderRadius:999, paddingHorizontal:12, paddingVertical:8 }}>
+      <Text style={{ color: palette.text, fontWeight:'700' }}>{label}</Text>
+    </Pressable>
   );
 }
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { I18nManager } from "react-native";
 
+import { announce } from "../utils/announce";
+
 // Lightweight i18n without external deps. Supports dot-notation keys and runtime language switch.
 
 export type Lang = "en" | "fr" | "es";
@@ -62,7 +64,14 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     }
   }, [isRTL]);
 
-  const setLanguage = (l: Lang) => setLang(l);
+  const setLanguage = (l: Lang) => {
+    setLang(l);
+    // Polite live region announcement for screen readers
+    try {
+      const name = l === 'fr' ? 'Français' : l === 'es' ? 'Español' : 'English';
+      announce(name + ' selected');
+    } catch {}
+  };
 
   const showBadge = !!process.env.EXPO_PUBLIC_I18N_BADGE;
   const logMissing = !!process.env.EXPO_PUBLIC_I18N_LOG_MISSING;

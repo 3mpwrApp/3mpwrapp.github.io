@@ -1474,16 +1474,20 @@
       "down": " Not relevant"
     },
     "reason": {
-      "novelty": " New",
-      "rotation": " Rotation",
+      "novelty": " Nuevo",
+      "rotation": " Rotación",
+      "rotation_recent": " Selección reciente",
+      "rotation_memory": " Evitar repeticiones",
+      "feedback": " Comentarios",
+      "pref": " Preferencia",
       "engagement_gap": " Inactive",
       "importance": " Important",
-      "streak": " Streak",
-      "recentUse": " Recent",
-      "tod_morning": " Morning Boost",
-      "tod_midday": " Midday Focus",
-      "tod_evening": " Evening Resource",
-      "default": " Suggested"
+      "streak": " Racha",
+      "recentUse": " Reciente",
+      "tod_morning": " Impulso matutino",
+      "tod_midday": " Enfoque al mediodía",
+      "tod_evening": " Recurso nocturno",
+      "default": " Sugerido"
     },
     "tool": {
       "coach": " Advocacy Coach",
@@ -1492,6 +1496,17 @@
       "wellness_mood": " Mood Tracker",
       "resources_search": " Resources Hub",
       "default": " Tool"
+    }
+  },
+  "profile": {
+    "quickLinks": {
+      "title": "Accesos rápidos",
+      "evidence": "Locker de Evidencia",
+      "deadlines": "Plazos",
+      "rightsChecker": "Verificador de Derechos",
+      "rightsExplainer": "Explicador de Derechos",
+      "translator": "Traductor de Defensa",
+      "settings": "Configuración"
     }
   },
   "common": {

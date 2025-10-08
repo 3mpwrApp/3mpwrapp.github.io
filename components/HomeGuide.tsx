@@ -12,6 +12,7 @@ import { usage } from '../services/usage';
 import * as MoodStore from '../store/mood';
 import { useSettings } from '../store/settings';
 import { useAppPalette } from '../theme/usePalette';
+import { announce } from '../utils/announce';
 
 export function HomeGuide() {
   const suggestions = useSuggestions() ?? [];
@@ -161,6 +162,7 @@ async function handleFeedback(toolId: string, kind: 'up'|'down') {
     await submitFeedback(toolId, kind);
     // Re-score in background to reflect new feedback next render cycle (no direct state access here, hook will refresh on next mount or we could force an event bus)
     scoreTools();
+    announce(kind === 'up' ? 'Thanks, we\'ll show more like this.' : 'Got it, we\'ll show fewer like this.');
   } catch {}
 }
 

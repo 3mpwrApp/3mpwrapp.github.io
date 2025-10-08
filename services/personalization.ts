@@ -82,18 +82,50 @@ interface FeedbackMap { [toolId: string]: FeedbackEntry }
 async function loadFeedback(): Promise<FeedbackMap> { try { const raw = await AsyncStorage.getItem('personalization:feedback:v1'); if (raw) return JSON.parse(raw); } catch {} return {}; }
 async function saveFeedback(map: FeedbackMap) { try { await AsyncStorage.setItem('personalization:feedback:v1', JSON.stringify(map)); } catch {} }
 
+// Evolving per-tool preference weights with gentle decay over time
+interface PrefEntry { weight: number; updatedAt: number }
+type PrefMap = Record<string, PrefEntry>
+async function loadPrefs(): Promise<PrefMap> { try { const raw = await AsyncStorage.getItem('personalization:prefs:v1'); if (raw) return JSON.parse(raw); } catch {} return {}; }
+async function savePrefs(map: PrefMap) { try { await AsyncStorage.setItem('personalization:prefs:v1', JSON.stringify(map)); } catch {} }
+function decayWeight(entry: PrefEntry, nowMs: number) {
+  // Exponential decay half-life ~14 days to avoid long-term lock-in
+  const days = Math.max(0, (nowMs - entry.updatedAt) / 86400000);
+  const halfLife = 14;
+  const factor = Math.pow(0.5, days / halfLife);
+  return { weight: entry.weight * factor, updatedAt: entry.updatedAt } as PrefEntry;
+}
+async function adjustPref(toolId: string, delta: number) {
+  const prefs = await loadPrefs();
+  const nowMs = Date.now();
+  const prev = prefs[toolId] ? decayWeight(prefs[toolId], nowMs) : { weight: 0, updatedAt: nowMs } as PrefEntry;
+  // Apply bounded update and clamp to [-1, 1]
+  const nextW = Math.max(-1, Math.min(1, prev.weight + delta));
+  prefs[toolId] = { weight: nextW, updatedAt: nowMs };
+  await savePrefs(prefs);
+  return prefs[toolId];
+}
+
+// Avoid suggesting the exact same tools repeatedly across short windows
+type SuggestHistory = Array<{ id: string; ts: number }>
+async function loadHistory(): Promise<SuggestHistory> { try { const raw = await AsyncStorage.getItem('personalization:suggestHistory:v1'); if (raw) return JSON.parse(raw); } catch {} return []; }
+async function saveHistory(list: SuggestHistory) { try { await AsyncStorage.setItem('personalization:suggestHistory:v1', JSON.stringify(list.slice(-10))); } catch {} }
+
 export async function submitFeedback(toolId: string, kind: 'up'|'down') {
   const map = await loadFeedback();
   const entry = map[toolId] || { up:0, down:0 };
   if (kind === 'up') entry.up++; else entry.down++;
   map[toolId] = entry;
   await saveFeedback(map);
+  // Also evolve preference weights slightly based on feedback
+  try { await adjustPref(toolId, kind === 'up' ? +0.25 : -0.25); } catch {}
   return entry;
 }
 
 export async function scoreTools(extra?: { coachProgress?: number }) : Promise<Suggestion[]> {
   const { id: lastSuggested, ts: lastTs } = await getLastSuggested();
   const feedback = await loadFeedback();
+  const prefs = await loadPrefs();
+  const hist = await loadHistory();
   const suggestions: Suggestion[] = [];
   TOOLS.forEach(tool => {
     if (tool.prereq && !tool.prereq()) return;
@@ -119,6 +151,8 @@ export async function scoreTools(extra?: { coachProgress?: number }) : Promise<S
       }
       score -= penalty; reason.push({ key:'rotation' });
     }
+    // Penalize if in last few suggestions history
+    if (hist.slice(-3).some(h => h.id === tool.id)) { const pen = 0.35; score -= pen; reason.push({ key:'rotation_memory', data:{ last3: true, penalty: pen } }); }
     // Streak boost (small, log diminishing)
     const streak = computeStreak(tool.id);
   if (streak > 1) { const sb = Math.min(0.4, Math.log2(streak)/5); score += sb; reason.push({ key:'streak', data:{ streak, boost: sb.toFixed(2) }}); }
@@ -135,6 +169,15 @@ export async function scoreTools(extra?: { coachProgress?: number }) : Promise<S
         reason.push({ key:'feedback', data:{ up: fb.up, down: fb.down, weight: weight.toFixed(2) } });
       }
   }
+  // Long‑term evolving preference weight with decay
+  const pref = prefs[tool.id];
+  if (pref) {
+    const decayed = decayWeight(pref, now());
+    if (decayed.weight !== 0) {
+      score += decayed.weight * 0.7; // scale contribution
+      reason.push({ key: 'pref', data: { weight: +decayed.weight.toFixed(2) } });
+    }
+  }
   // Per-session rotation jitter: deterministic within a session, changes next launch
   const jitter = (pseudoRandom01(tool.id) - 0.5) * 0.6; // [-0.3, +0.3]
   score += jitter;
@@ -142,7 +185,15 @@ export async function scoreTools(extra?: { coachProgress?: number }) : Promise<S
     suggestions.push({ toolId: tool.id, score, reason });
   });
   const sorted = suggestions.sort((a,b)=> b.score - a.score);
-  if (sorted[0]) setLastSuggested(sorted[0].toolId);
+  if (sorted[0]) {
+    setLastSuggested(sorted[0].toolId);
+    // Persist short history and rationale snapshot (top 3)
+    try {
+      const newHist = [...hist, { id: sorted[0].toolId, ts: now() }];
+      await saveHistory(newHist);
+      await AsyncStorage.setItem('personalization:lastRationale:v1', JSON.stringify(sorted.slice(0,3)));
+    } catch {}
+  }
   return sorted;
 }
 

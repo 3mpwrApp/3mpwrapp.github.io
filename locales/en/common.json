@@ -653,6 +653,10 @@
     "reason": {
       "novelty": "New",
       "rotation": "Rotation",
+      "rotation_recent": "Recent pick",
+      "rotation_memory": "Avoid repeats",
+      "feedback": "Feedback",
+      "pref": "Preference",
       "engagement_gap": "Inactive",
       "importance": "Important",
       "streak": "Streak",
@@ -669,6 +673,17 @@
       "wellness_mood": "Mood Tracker",
       "resources_search": "Resources Hub",
       "default": "Tool"
+    }
+  },
+  "profile": {
+    "quickLinks": {
+      "title": "Quick links",
+      "evidence": "Evidence Locker",
+      "deadlines": "Deadlines",
+      "rightsChecker": "Rights Checker",
+      "rightsExplainer": "Rights Explainer",
+      "translator": "Advocate Translator",
+      "settings": "Settings"
     }
   },
   "translator": {

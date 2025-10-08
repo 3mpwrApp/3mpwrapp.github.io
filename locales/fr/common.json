@@ -2069,6 +2069,10 @@
     "reason": {
       "novelty": "New",
       "rotation": "Rotation",
+      "rotation_recent": "Sélection récente",
+      "rotation_memory": "Éviter les répétitions",
+      "feedback": "Commentaires",
+      "pref": "Préférence",
       "engagement_gap": "Inactive",
       "importance": "Important",
       "streak": "Streak",
@@ -2085,6 +2089,17 @@
       "wellness_mood": "Mood Tracker",
       "resources_search": "Resources Hub",
       "default": "Tool"
+    }
+  },
+  "profile": {
+    "quickLinks": {
+      "title": "Liens rapides",
+      "evidence": "Coffre de preuves",
+      "deadlines": "Échéances",
+      "rightsChecker": "Vérificateur de droits",
+      "rightsExplainer": "Guide des droits",
+      "translator": "Traducteur de plaidoyer",
+      "settings": "Paramètres"
     }
   },
   "translator": {
