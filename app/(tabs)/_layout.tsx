@@ -170,6 +170,8 @@ export default function TabsLayout() {
         <Tabs.Screen name="voice-help" options={{ href: null }} />
   <Tabs.Screen name="admin/index" options={{ href: null }} />
   <Tabs.Screen name="archive/index" options={{ href: null }} />
+  {/* Hide internal settings sections aggregator */}
+  <Tabs.Screen name="settings.sections/index" options={{ href: null }} />
 
         {/* Keep resource tools hidden under Resources */}
   {/* User-requested hidden tools under Resources */}
