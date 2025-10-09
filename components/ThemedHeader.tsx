@@ -456,7 +456,7 @@ function createStyles(palette: Palette) {
       alignItems: "center",
     },
     brand: { flexDirection: "row", alignItems: "center", gap: 8 },
-    logo: { height: 24, width: 24, resizeMode: "contain" },
+  logo: { height: 24, width: 24 },
     title: {
       color: palette.text,
       fontSize: 22,

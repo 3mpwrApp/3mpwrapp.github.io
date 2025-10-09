@@ -273,7 +273,9 @@ function styles(palette: any) {
     title: { fontSize: 24, fontWeight: "bold", color: palette.primary, marginBottom: 8 },
     subtitle: { fontSize: 16, color: palette.text, marginBottom: 12 },
     points: { fontSize: 16, color: palette.primary, marginBottom: 12 },
-    card: { backgroundColor: palette.surface, borderRadius: 12, padding: 16, marginBottom: 16, shadowColor: palette.muted, shadowOpacity: 0.1, shadowRadius: 4 },
+    card: { backgroundColor: palette.surface, borderRadius: 12, padding: 16, marginBottom: 16, elevation: 2, // native shadow
+      // Web box shadow replacement for deprecated shadow* props
+      boxShadow: '0 2px 4px rgba(0,0,0,0.12)' },
     cardTitle: { fontSize: 18, fontWeight: "bold", color: palette.primary, marginBottom: 4 },
     cardText: { fontSize: 15, color: palette.text, marginBottom: 6 },
     button: { backgroundColor: palette.primary, borderRadius: 8, paddingVertical: 10, paddingHorizontal: 18, alignItems: "center", marginTop: 8 },

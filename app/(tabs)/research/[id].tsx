@@ -230,7 +230,7 @@ function createStyles(
     referencesHeading: { fontSize: Math.round(18 * factor), fontWeight: '600', marginBottom: 12, color: palette.text },
     referenceItem: { marginBottom: 6 },
     referenceText: { fontSize: 12, lineHeight: 16, color: palette.text },
-  backToTop: { position: 'absolute', right: 16, bottom: 24, backgroundColor: palette.primary, paddingHorizontal: 16, paddingVertical: 10, borderRadius: 24, shadowColor: palette.text, shadowOpacity: 0.25, shadowRadius: 4, shadowOffset: { width: 0, height: 2 } },
+  backToTop: { position: 'absolute', right: 16, bottom: 24, backgroundColor: palette.primary, paddingHorizontal: 16, paddingVertical: 10, borderRadius: 24, elevation: 3, boxShadow: '0 4px 8px rgba(0,0,0,0.25)' },
     backToTopText: { color: palette.onPrimary, fontWeight: '600' },
   });
 }
