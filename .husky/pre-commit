@@ -17,3 +17,7 @@ if [ $rc -ne 0 ]; then
 	exit $rc
 fi
 echo "✓ lint-staged passed"
+
+# Advisory check: warn on bad Tabs.Screen names (does not fail commit)
+echo "→ Advisory: check Tabs.Screen names (slashes)"
+npm run --silent check:tabs:names || true

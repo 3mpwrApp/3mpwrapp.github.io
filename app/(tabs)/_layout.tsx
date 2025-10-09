@@ -38,7 +38,7 @@ export default function TabsLayout() {
       >
   {/* Visible tabs (curated) */}
         <Tabs.Screen
-          name="whatsnew/index"
+          name="whatsnew"
           options={{
             title: "What's New",
             tabBarLabel: "What's New",
@@ -72,7 +72,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="wellness/index"
+          name="wellness"
           options={{
             title: t("nav.wellness"),
             tabBarLabel: t("nav.wellness"),
@@ -83,7 +83,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="resources/index"
+          name="resources"
           options={{
             title: t("nav.resources"),
             tabBarLabel: t("nav.resources"),
@@ -94,7 +94,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="research/index"
+          name="research"
           options={{
             title: t("nav.research", "Research"),
             tabBarLabel: t("nav.research", "Research"),
@@ -105,7 +105,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="podcasts/index"
+          name="podcasts"
           options={{
             title: t("nav.podcasts", "Podcasts"),
             tabBarLabel: t("nav.podcasts", "Podcasts"),
@@ -116,7 +116,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="events/index"
+          name="events"
           options={{
             title: t("nav.events", "Events"),
             tabBarLabel: t("nav.events", "Events"),
@@ -127,7 +127,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="community/index"
+          name="community"
           options={{
             title: t("nav.community"),
             tabBarLabel: t("nav.community"),
@@ -138,7 +138,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="campaigns/index"
+          name="campaigns"
           options={{
             title: t("nav.campaigns"),
             tabBarLabel: t("nav.campaigns"),
@@ -149,7 +149,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="advocacy/index"
+          name="advocacy"
           options={{
             title: t("nav.advocacy") || "Advocacy",
             tabBarLabel: t("nav.advocacy") || "Advocacy",
@@ -162,99 +162,31 @@ export default function TabsLayout() {
 
   {/* Hidden routes (resources, advocacy, campaigns, community, misc, and deprioritized tabs) */}
         {/* Hide Home, Inbox, Settings, Saved, Voice Help as tabs but keep routes */}
-        <Tabs.Screen name="index" options={{ href: null }} />
-        <Tabs.Screen name="inbox" options={{ href: null }} />
-        <Tabs.Screen name="settings" options={{ href: null }} />
-        <Tabs.Screen name="saved" options={{ href: null }} />
-        <Tabs.Screen name="saved-original" options={{ href: null }} />
-        <Tabs.Screen name="voice-help" options={{ href: null }} />
-  <Tabs.Screen name="admin/index" options={{ href: null }} />
-  <Tabs.Screen name="archive/index" options={{ href: null }} />
-  {/* Hide internal settings sections aggregator */}
-  <Tabs.Screen name="settings.sections/index" options={{ href: null }} />
+    <Tabs.Screen name="index" options={{ href: null }} />
+    <Tabs.Screen name="inbox" options={{ href: null }} />
+    <Tabs.Screen name="settings" options={{ href: null }} />
+    <Tabs.Screen name="saved" options={{ href: null }} />
+    <Tabs.Screen name="saved-original" options={{ href: null }} />
+    <Tabs.Screen name="voice-help" options={{ href: null }} />
+    <Tabs.Screen name="admin" options={{ href: null }} />
+    <Tabs.Screen name="archive" options={{ href: null }} />
+    {/* Hide internal settings sections aggregator */}
+    <Tabs.Screen name="settings.sections" options={{ href: null }} />
 
-        {/* Keep resource tools hidden under Resources */}
-  {/* User-requested hidden tools under Resources */}
-  <Tabs.Screen name="resources/body-mechanics-advisor" options={{ href: null }} />
-  <Tabs.Screen name="resources/accommodation-request" options={{ href: null }} />
-  <Tabs.Screen name="resources/evidence-locker" options={{ href: null }} />
-  <Tabs.Screen name="resources/allyship-playbook" options={{ href: null }} />
-  <Tabs.Screen name="resources/accessibility-log" options={{ href: null }} />
-  <Tabs.Screen name="resources/rights-explainer" options={{ href: null }} />
-  <Tabs.Screen name="resources/policy-simulator" options={{ href: null }} />
-        <Tabs.Screen name="resources/letter-reconsideration" options={{ href: null }} />
-        <Tabs.Screen name="resources/letter-rtw-plan" options={{ href: null }} />
-        <Tabs.Screen name="resources/letter-union-request" options={{ href: null }} />
-        <Tabs.Screen name="resources/claims-navigator" options={{ href: null }} />
-        <Tabs.Screen name="resources/evidence-queue" options={{ href: null }} />
-  <Tabs.Screen name="resources/support-directory" options={{ href: null }} />
-  <Tabs.Screen name="resources/doctor-visit-prep" options={{ href: null }} />
-  <Tabs.Screen name="resources/denial-decoder" options={{ href: null }} />
-  <Tabs.Screen name="resources/letter-accommodation" options={{ href: null }} />
-  <Tabs.Screen name="resources/letter-appeal" options={{ href: null }} />
-        <Tabs.Screen name="resources/rights-checker" options={{ href: null }} />
-        <Tabs.Screen name="resources/appeal-coach" options={{ href: null }} />
-        <Tabs.Screen name="resources/deadlines" options={{ href: null }} />
-        <Tabs.Screen name="resources/deadlines-list" options={{ href: null }} />
-        <Tabs.Screen name="resources/evidence-checklist" options={{ href: null }} />
-        <Tabs.Screen name="resources/voice-notes" options={{ href: null }} />
-        <Tabs.Screen name="resources/templates-gallery" options={{ href: null }} />
-        <Tabs.Screen name="resources/financial-safety-net" options={{ href: null }} />
-        <Tabs.Screen name="resources/adaptive-tech-library" options={{ href: null }} />
-  <Tabs.Screen name="resources/justice-as-a-service" options={{ href: null }} />
-  <Tabs.Screen name="resources/impact-simulator" options={{ href: null }} />
-        <Tabs.Screen name="resources/myth-busting-hub" options={{ href: null }} />
-        <Tabs.Screen name="resources/case-timeline" options={{ href: null }} />
-  <Tabs.Screen name="resources/ai-decision-simplifier" options={{ href: null }} />
-  <Tabs.Screen name="resources/chronic-tracker" options={{ href: null }} />
-  <Tabs.Screen name="resources/meds-tracker" options={{ href: null }} />
-  <Tabs.Screen name="resources/rehab-tracker" options={{ href: null }} />
-  <Tabs.Screen name="resources/solidarity-toolkit" options={{ href: null }} />
-  <Tabs.Screen name="resources/rtw-planner" options={{ href: null }} />
-        <Tabs.Screen name="resources/[id]" options={{ href: null }} />
+    {/* Keep nested resource tools managed by resources stack; no need to declare here */}
 
     {/* (additional routes grouped below) */}
 
-        {/* Advocacy */}
-        <Tabs.Screen name="advocacy/[id]" options={{ href: null }} />
-  <Tabs.Screen name="advocacy/assistant-hub" options={{ href: null }} />
-        <Tabs.Screen name="advocacy/self-advocacy-coach" options={{ href: null }} />
-        <Tabs.Screen name="advocacy/policy-simple" options={{ href: null }} />
-        <Tabs.Screen name="advocacy/ai-advocate-translator" options={{ href: null }} />
-        <Tabs.Screen name="advocacy/ai-case-interpreter" options={{ href: null }} />
-        <Tabs.Screen name="advocacy/collective-legal" options={{ href: null }} />
-        <Tabs.Screen name="advocacy/ai-gov-navigator" options={{ href: null }} />
-        <Tabs.Screen name="advocacy/ask" options={{ href: null }} />
+    {/* Advocacy routes are handled by its own stack */}
 
-        {/* Campaigns */}
-        <Tabs.Screen name="campaigns/[id]" options={{ href: null }} />
-        <Tabs.Screen name="campaigns/room/[id]" options={{ href: null }} />
+  {/* Campaigns nested routes handled by campaigns stack */}
 
-        {/* Community */}
-        <Tabs.Screen name="community/[slug]" options={{ href: null }} />
-        <Tabs.Screen name="community/compose" options={{ href: null }} />
-        <Tabs.Screen name="community/threads/[id]" options={{ href: null }} />
-  <Tabs.Screen name="community/dms/index" options={{ href: null }} />
-  <Tabs.Screen name="community/dms/[id]" options={{ href: null }} />
-  <Tabs.Screen name="community/safety" options={{ href: null }} />
-        <Tabs.Screen name="community/media-studio" options={{ href: null }} />
-        <Tabs.Screen name="community/mutual-aid" options={{ href: null }} />
-        <Tabs.Screen name="community/mutual-chat" options={{ href: null }} />
-  <Tabs.Screen name="community/testers-chat" options={{ href: null }} />
-  <Tabs.Screen name="community/my-posts" options={{ href: null }} />
+    {/* Community nested routes handled by community stack */}
 
-  {/* Wellness special routes */}
-  <Tabs.Screen name="wellness.mood" options={{ href: null }} />
-  {/* User-requested hidden tools under Wellness */}
-  <Tabs.Screen name="wellness/nutrition-guides" options={{ href: null }} />
-  <Tabs.Screen name="wellness/symptom-tracker" options={{ href: null }} />
-  <Tabs.Screen name="wellness/pain-forecast" options={{ href: null }} />
+    {/* Wellness top-level helpers (direct children) */}
+    <Tabs.Screen name="wellness.mood" options={{ href: null }} />
 
-        {/* Misc */}
-  <Tabs.Screen name="events/[id]" options={{ href: null }} />
-  <Tabs.Screen name="events/finder" options={{ href: null }} />
-        <Tabs.Screen name="podcasts/[id]" options={{ href: null }} />
-        <Tabs.Screen name="podcasts/stories/[id]" options={{ href: null }} />
+          {/* Misc nested routes are handled by their respective stacks */}
     {/* Research routes hide themselves; no need to list here */}
       </Tabs>
       <VoiceController />

@@ -32,6 +32,7 @@ import { A11ySettingsProvider } from "../store/a11ySettings";
 import { BlocksProvider } from "../store/blocks";
 import { BookmarksProvider } from "../store/bookmarks";
 import { CoachProgressProvider } from "../store/coachProgress";
+import { JurisdictionProvider } from "../store/jurisdiction";
 import { NotificationsProvider } from "../store/notifications";
 import { First7Provider } from "../store/onboardingFirst7";
 import { PrivacyProvider, usePrivacy } from "../store/privacy";
@@ -135,6 +136,7 @@ export default function RootLayout() {
                       <RefreshProvider>
                         {/* Ensure a single root element (avoid Fragment) */}
                         <BlocksProvider>
+                        <JurisdictionProvider>
                         <View style={{ flex: 1 }}>
                           <View>
                             <OfflineBanner />
@@ -176,6 +178,7 @@ export default function RootLayout() {
                           {/* Show footer only on web to avoid overlapping native tab bar */}
                           {Platform.OS === 'web' ? <Footer /> : null}
                         </View>
+                        </JurisdictionProvider>
                         </BlocksProvider>
                       </RefreshProvider>
                     </NetworkProvider>

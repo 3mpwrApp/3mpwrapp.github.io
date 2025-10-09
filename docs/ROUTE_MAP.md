@@ -2,7 +2,7 @@
 
 Generated snapshot of user-facing routes derived from the `app/` directory. Implementation helpers like `*.impl.tsx`, `*.jest.tsx`, and `_layout.tsx` are omitted. Paths use Expo Router conventions.
 
-Last updated: 2025-10-08
+Last updated: 2025-10-09
 
 Note
 - Hidden/admin-only routes are marked as such.
@@ -187,3 +187,24 @@ Common top-level tabs/screens under `/(tabs)`:
 How this is generated
 - Copilot scanned the `app/` folder for `*.tsx` files and compiled the route list, omitting `*.impl.tsx` and other non-routable helpers.
 - If you add or remove screens, re-run Copilot to refresh this snapshot.
+
+## Route Conventions (Expo Router)
+
+To keep routing predictable and avoid warning floods:
+
+- Tabs use group segment names, not child files. Do this:
+  - `name="wellness"`, `name="resources"`, `name="events"`, `name="community"`, `name="campaigns"`, `name="advocacy"`, `name="podcasts"`, `name="research"`, `name="whatsnew"`.
+  - Don’t append `/index` in Tab names. For example, avoid `name="resources/index"`.
+
+- Don’t declare nested stack routes in the Tabs layout. Each section manages its own nested routes via its `_layout.tsx` under `app/(tabs)/<section>/`.
+  - Remove any `Tabs.Screen` like `resources/allyship-playbook`, `community/threads/[id]`, `events/finder]`, etc. They belong to their section’s stack, not Tabs.
+
+- Hidden routes under Tabs should be direct children only (no slashes), e.g. `index`, `inbox`, `settings`, `saved`, `saved-original`, `voice-help`, `admin`, `archive`, `settings.sections`.
+  - If a folder has an `index.tsx` inside (e.g., `app/(tabs)/admin/index.tsx`), reference it in Tabs as `name="admin"` (the group name), not `admin/index`.
+
+- When adding a new section:
+  1) Create `app/(tabs)/<section>/_layout.tsx` with a `<Stack />`.
+  2) Add `app/(tabs)/<section>/index.tsx` as the entry screen.
+  3) In `app/(tabs)/_layout.tsx`, add a single `<Tabs.Screen name="<section>" ... />`.
+
+Why: Expo Router’s Tabs only know immediate children. Pointing Tabs at `segment/index` or at deeply nested paths causes “No route named …” warnings because those children are owned by the nested Stack.
