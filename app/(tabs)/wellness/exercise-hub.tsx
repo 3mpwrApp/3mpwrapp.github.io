@@ -39,10 +39,14 @@ export default function ExerciseHub() {
   const [aud, setAud] = React.useState<'all'|'wheelchair'|'limited-mobility'|'sensory-friendly'>('all');
   const [remote, setRemote] = React.useState([] as { id: string; title: string; url: string }[]);
   const [favs, setFavs] = React.useState<Set<string>>(new Set());
+  const [shortOnly, setShortOnly] = React.useState(false);
   const CACHE_KEY = 'exercise.cache.v1';
   const FAVS_KEY = 'exercise.favs.v1';
+  const SHORT_KEY = 'exercise.short.v1';
   React.useEffect(()=>{ (async()=>{ try { const a = require('@react-native-async-storage/async-storage').default; const raw = await a.getItem(FAVS_KEY); if (raw) setFavs(new Set(JSON.parse(raw))); } catch {} })(); },[]);
+  React.useEffect(()=>{ (async()=>{ try { const a = require('@react-native-async-storage/async-storage').default; const raw = await a.getItem(SHORT_KEY); if (raw) setShortOnly(raw==='1'); } catch {} })(); },[]);
   const saveFavs = async (next: Set<string>) => { setFavs(new Set(next)); try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(FAVS_KEY, JSON.stringify(Array.from(next))); } catch {} };
+  const toggleShort = async () => { setShortOnly(v=>{ const next=!v; try { const a = require('@react-native-async-storage/async-storage').default; a.setItem(SHORT_KEY, next? '1':'0'); } catch {}; return next; }); };
   React.useEffect(() => {
     (async () => {
       try {
@@ -60,7 +64,8 @@ export default function ExerciseHub() {
     })();
   }, [aud]);
   const filtered = exercises.filter(e => aud==='all' || e.audience===aud);
-  const combined = (remote.length? remote: filtered).map((e:any)=> ({ ...e, id: e.id || e.title }));
+  const baseList = (remote.length? remote: filtered).map((e:any)=> ({ ...e, id: e.id || e.title }));
+  const combined = shortOnly ? baseList.filter(e => (e.minutes||0) <= 3) : baseList;
   return (
     <View style={s.container}>
       <View style={[s.card, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
@@ -105,6 +110,16 @@ export default function ExerciseHub() {
             <Text style={{ color: aud===k? palette.onPrimary: palette.text, fontWeight:'700' }}>{k}</Text>
           </A11yPressable>
         ))}
+        <A11yPressable
+          onPress={toggleShort}
+          style={[s.chip, shortOnly && s.chipActive]}
+          hitSlop={HIT_SLOP_8}
+          accessibilityRole="button"
+          accessibilityLabel={shortOnly? 'Show all exercise lengths' : 'Show only short (under 3 min) exercises'}
+          accessibilityState={{ selected: shortOnly }}
+        >
+          <Text style={{ color: shortOnly? palette.onPrimary: palette.text, fontWeight:'700' }}>under3m</Text>
+        </A11yPressable>
       </View>
       {combined.map((e: any) => (
         <View key={e.id} style={s.card}>

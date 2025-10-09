@@ -47,6 +47,7 @@ export default function DeadlinesScreen() {
           <Text style={s.infoLine}>{t('templates.deadlines.infoLine1','Track important dates (appeals, follow-ups) in calendar or list view.')}</Text>
           <Text style={s.infoLine}>{t('templates.deadlines.infoLine2','Import ICS files, add recurring reminders, and export all deadlines (ICS/CSV).')}</Text>
           <Text style={s.infoLine}>{t('templates.deadlines.infoLine3','Use snooze, bulk mark done, or calendar export for planning.')}</Text>
+          <Text style={s.infoLine}>{t('templates.deadlines.infoLine4','Times shown in your device timezone unless otherwise noted.')}</Text>
         </View>
       )}
       <View style={s.tabRow}>

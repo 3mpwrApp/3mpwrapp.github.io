@@ -24,6 +24,8 @@ export default function DeadlinesList() {
   const [editingId, setEditingId] = React.useState<string | null>(null);
   const [editTitle, setEditTitle] = React.useState<string>("");
   const [editDate, setEditDate] = React.useState<string>("");
+  const [lastDeleted, setLastDeleted] = React.useState<Deadline | null>(null);
+  const undoTimer = React.useRef<NodeJS.Timeout | null>(null);
 
   const load = React.useCallback(async (announceCount: boolean = false) => {
     try {
@@ -336,8 +338,15 @@ export default function DeadlinesList() {
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {
-                      try { await deleteDeadline(d.id!); setItems((prev) => prev.filter((x) => x.id !== d.id)); announce(t('templates.deadlines.deleted','Deleted')); }
-                      catch { Alert.alert(t('templates.deadlines.deleteFailed','Delete failed'), t('templates.deadlines.deleteFailedBody','Unable to delete.')); }
+                      try {
+                        const copy: Deadline = { ...d };
+                        await deleteDeadline(d.id!);
+                        setItems((prev) => prev.filter((x) => x.id !== d.id));
+                        setLastDeleted(copy);
+                        if (undoTimer.current) clearTimeout(undoTimer.current);
+                        undoTimer.current = setTimeout(() => { setLastDeleted(null); }, 6000);
+                        announce(t('templates.deadlines.deleted','Deleted'));
+                      } catch { Alert.alert(t('templates.deadlines.deleteFailed','Delete failed'), t('templates.deadlines.deleteFailedBody','Unable to delete.')); }
                     }}
                     style={s.smallBtn}
                   >
@@ -348,6 +357,28 @@ export default function DeadlinesList() {
             ))}
           </View>
         ))
+      )}
+      {lastDeleted && (
+        <View style={{ marginTop: 12, padding: 12, borderRadius: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }} accessibilityLiveRegion="polite">
+          <Text style={{ color: palette.text, marginBottom: 6 }}>{t('templates.deadlines.deleted','Deleted')} – {lastDeleted.title}</Text>
+          <A11yPressable
+            onPress={async () => {
+              try {
+                const { addDeadline } = await import('../../../services/deadlines');
+                if (lastDeleted) {
+                  await addDeadline({ title: lastDeleted.title, dueAt: lastDeleted.dueAt, notes: lastDeleted.notes||'' });
+                  announce(t('templates.deadlines.restored','Restored'));
+                }
+                setLastDeleted(null);
+                load();
+              } catch { Alert.alert(t('templates.deadlines.undoFailed','Undo failed'), t('templates.deadlines.undoFailedBody','Could not restore.')); }
+            }}
+            style={s.button}
+            accessibilityLabel={t('templates.deadlines.undoDelete','Undo delete')}
+          >
+            <Text style={s.buttonText}>{t('templates.deadlines.undoDelete','Undo delete')}</Text>
+          </A11yPressable>
+        </View>
       )}
     </ScrollView>
   );

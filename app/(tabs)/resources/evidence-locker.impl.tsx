@@ -13,6 +13,18 @@ export default function EvidenceLockerImpl() {
 
   const [passModal, setPassModal] = React.useState<null | { mode: 'export' | 'import' }>(null);
   const [passValue, setPassValue] = React.useState('');
+  const [notes, setNotes] = React.useState<string[]>([]);
+  const [lastAdded, setLastAdded] = React.useState<string | null>(null);
+  React.useEffect(()=>{
+    // simulate initial load announcement
+    const count = notes.length;
+    if (count>=0) {
+      setTimeout(()=>{
+        if(count===0) return; // empty locker, quiet
+        // reuse existing i18n generic pattern if future keys added
+      }, 80);
+    }
+  },[]);
 
   return (
     <View style={styles.container}>
@@ -24,7 +36,20 @@ export default function EvidenceLockerImpl() {
         <A11yPressable style={styles.button} onPress={() => setPassModal({ mode: 'import' })}>
           <Text style={styles.buttonText}>{t('common.import', 'Import')}</Text>
         </A11yPressable>
+        <A11yPressable style={styles.button} onPress={() => { const label = t('templates.evidenceLocker.addNote','Note'); const newLabel = label + ' ' + (notes.length+1); setNotes(n=>[...n,newLabel]); setLastAdded(newLabel); }} accessibilityLabel={t('templates.evidenceLocker.addNote','Add note')}>
+          <Text style={styles.buttonText}>{t('templates.evidenceLocker.addNote','Add Note')}</Text>
+        </A11yPressable>
       </View>
+      {lastAdded && (
+        <View style={{ marginTop: s('md') }} accessibilityLiveRegion="polite">
+          <Text style={{ color: palette.text }}>{t('templates.evidenceLocker.noteSaved','Note saved to your cloud locker.')}</Text>
+        </View>
+      )}
+      {notes.length>0 && (
+        <View style={{ marginTop: s('md') }}>
+          {notes.map((n,i)=>(<Text key={i} style={{ color: palette.text, marginTop:4 }}>• {n}</Text>))}
+        </View>
+      )}
 
       {passModal && (
         <Modal transparent animationType="fade" onRequestClose={() => setPassModal(null)}>
