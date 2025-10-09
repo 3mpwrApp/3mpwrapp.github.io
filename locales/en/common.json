@@ -288,6 +288,7 @@
     },
     "search": "Search resources"
   },
+  
   "advocacy": {
     "search": "Search advocacy tools...",
     "sections": {
@@ -1650,6 +1651,10 @@
     },
     "deadlines": {
       "title": "Deadlines",
+      "itemsLoaded": {
+        "one": "{{count}} deadline loaded",
+        "other": "{{count}} deadlines loaded"
+      },
       "duplicate": "Duplicate",
       "duplicated": "Duplicated",
       "duplicateFailed": "Duplicate failed",

@@ -1095,6 +1095,10 @@
     },
     "deadlines": {
       "title": "Échéances",
+      "itemsLoaded": {
+        "one": "{{count}} échéance chargée",
+        "other": "{{count}} échéances chargées"
+      },
       "duplicate": "Dupliquer",
       "duplicated": "Dupliqué",
       "duplicateFailed": "Échec de la duplication",

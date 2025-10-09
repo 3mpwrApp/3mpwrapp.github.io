@@ -128,6 +128,10 @@
   },
   "templates": {
     "deadlines": {
+      "itemsLoaded": {
+        "one": "{{count}} plazo cargado",
+        "other": "{{count}} plazos cargados"
+      },
       "duplicate": "Duplicar",
       "duplicated": "Duplicado",
       "duplicateFailed": "Error al duplicar",

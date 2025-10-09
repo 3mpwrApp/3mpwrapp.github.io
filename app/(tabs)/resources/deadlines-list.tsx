@@ -25,11 +25,28 @@ export default function DeadlinesList() {
   const [editTitle, setEditTitle] = React.useState<string>("");
   const [editDate, setEditDate] = React.useState<string>("");
 
-  const load = React.useCallback(async () => {
+  const load = React.useCallback(async (announceCount: boolean = false) => {
     try {
       setLoading(true);
       const rows = await listDeadlines();
       setItems(rows);
+      if (announceCount) {
+        // Announce count (post-load) – avoid noise during mutation-triggered reloads
+        const count = rows.length;
+        setTimeout(() => {
+          if (count === 0) {
+            announce(t('templates.deadlines.empty','No deadlines saved.'));
+          } else if (count === 1) {
+            announce(
+              t('templates.deadlines.itemsLoaded.one','{{count}} deadline loaded').replace('{{count}}', String(count))
+            );
+          } else {
+            announce(
+              t('templates.deadlines.itemsLoaded.other','{{count}} deadlines loaded').replace('{{count}}', String(count))
+            );
+          }
+        }, 50);
+      }
     } catch {
       Alert.alert(t('templates.deadlines.loadFailed','Load failed'), t('templates.deadlines.loadFailedBody','Unable to load deadlines.'));
     } finally {
@@ -38,7 +55,7 @@ export default function DeadlinesList() {
   }, []);
 
   React.useEffect(() => {
-    load();
+    load(true); // initial load announces count
   }, [load]);
 
   // Updated: i18n for export alerts
@@ -107,7 +124,7 @@ export default function DeadlinesList() {
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('templates.deadlines.myDeadlines','My Deadlines')} {loading ? t('common.loading','(loading...)') : ''}
       </Text>
-      <A11yPressable onPress={load} style={s.button} accessibilityLabel={t('templates.deadlines.reload','Reload deadlines')}><Text style={s.buttonText}>{t('templates.deadlines.reloadShort','Reload')}</Text></A11yPressable>
+  <A11yPressable onPress={() => load(true)} style={s.button} accessibilityLabel={t('templates.deadlines.reload','Reload deadlines')}><Text style={s.buttonText}>{t('templates.deadlines.reloadShort','Reload')}</Text></A11yPressable>
       <A11yPressable onPress={async () => {
         try {
           const DP = await import('expo-document-picker');
