@@ -10,7 +10,9 @@ Use `components/ScreenSkeleton.tsx` as the Suspense fallback for heavy screens. 
 
 ### Post‑load announcements
 
-List/screens with dynamic counts (e.g., Deadlines list) announce "N items loaded" once on initial load or manual reload (pluralized keys under `templates.deadlines.itemsLoaded`). Avoid announcing after every mutation to reduce noise.
+List/screens with dynamic counts (e.g., Deadlines list) announce "N items loaded" once on initial load or manual reload (pluralized keys under `templates.<feature>.itemsLoaded`). Avoid announcing after every mutation to reduce noise.
+
+Reusable hook: `hooks/usePostLoadAnnounce.ts` to standardize this behavior across lists (Evidence Locker wired up).
 
 ### Undo patterns
 

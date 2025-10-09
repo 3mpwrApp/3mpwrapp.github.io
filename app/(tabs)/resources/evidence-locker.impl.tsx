@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import { usePostLoadAnnounce } from '../../../hooks/usePostLoadAnnounce';
 import { useTranslation } from '../../../i18n';
 import { s } from '../../../theme/spacing';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -15,16 +16,8 @@ export default function EvidenceLockerImpl() {
   const [passValue, setPassValue] = React.useState('');
   const [notes, setNotes] = React.useState<string[]>([]);
   const [lastAdded, setLastAdded] = React.useState<string | null>(null);
-  React.useEffect(()=>{
-    // simulate initial load announcement
-    const count = notes.length;
-    if (count>=0) {
-      setTimeout(()=>{
-        if(count===0) return; // empty locker, quiet
-        // reuse existing i18n generic pattern if future keys added
-      }, 80);
-    }
-  },[]);
+  // Announce count on first load using shared hook
+  usePostLoadAnnounce({ loading: false, count: notes.length, ns: 'templates.evidenceLocker', emptyKey: 'templates.evidenceLocker.empty' });
 
   return (
     <View style={styles.container}>
