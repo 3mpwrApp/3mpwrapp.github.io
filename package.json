@@ -70,6 +70,7 @@
     "analytics:pii:soft": "set PII_SCAN_SOFT=1&& node ./scripts/analytics-pii-scan.mjs",
     "perf:budget": "node ./scripts/perf-bundle-budget.mjs",
     "perf:breakdown": "node ./scripts/perf-bundle-breakdown.mjs",
+  "read:level": "node ./scripts/reading-level-scan.mjs",
     "test:ci": "npm run test:guard && npm run i18n:validate && npm run check:analytics && npm run analytics:report && npm run analytics:pii:soft && npm run perf:budget && npm run perf:breakdown && jest --runInBand",
     "docs:privacy:pdf": "node ./scripts/html-to-pdf.mjs",
     "rebuild:android": "expo run:android --clean",

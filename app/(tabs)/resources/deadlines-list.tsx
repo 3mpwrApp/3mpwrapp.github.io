@@ -250,7 +250,7 @@ export default function DeadlinesList() {
                     <View style={{ flexDirection: 'row', gap: 8 }}>
                       <A11yPressable
                         onPress={async () => {
-                          try { await updateDeadline(d.id!, { title: editTitle, dueAt: new Date(editDate).toISOString() }); setEditingId(null); load(); announce(t('templates.deadlines.updated','Updated')); }
+                          try { await updateDeadline(d.id!, { title: editTitle, dueAt: new Date(editDate).toISOString() }); setEditingId(null); load(); announce(t('templates.deadlines.updated','Updated')); setTimeout(()=> titleRef.current?.focus?.(), 30); }
                           catch { Alert.alert(t('templates.deadlines.updateFailed','Update failed'), t('templates.deadlines.updateFailedBody','Check your inputs.')); }
                         }}
                         style={s.smallBtn}
