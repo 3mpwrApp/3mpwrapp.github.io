@@ -35,6 +35,7 @@ Tip: The app uses your phone’s text size. Increase font size in your device se
 - [Quick Tour (2-minute overview)](#quick-tour)
 - [Onboarding — Your first 7 days](#onboarding)
 - [Navigation and What’s New](#navigation)
+  - See also: Route Map and Route Conventions
 - [How the app fits together (interconnections)](#how-the-app-fits-together)
 - [Advocacy (tools, steps, examples, tips)](#advocacy)
 - [Campaigns (create, support, collaborate)](#campaigns)
@@ -95,6 +96,8 @@ Prefer a printable 2-page version? Open quick-tour.md
 - Back: Use your device’s back button or gesture. Links and buttons move you between screens.
 
 Need a simple list of screens and paths? See Route Map in the docs folder: `docs/ROUTE_MAP.md`.
+
+Developer note (routes): For how tabs and nested screens are organized, see “Route Conventions (Expo Router)” in `README.md`. The short version: Tabs reference group segment names (no "/index"), and nested routes live in each section’s own stack. The full route list snapshot is in `docs/ROUTE_MAP.md`.
 
 How to switch tabs
 
