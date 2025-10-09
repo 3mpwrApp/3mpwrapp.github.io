@@ -10,12 +10,14 @@ Build & Cache
 Navigation & Tabs
 - Tabs show correct labels (Home, Campaigns, Community, Resources, Wellness, What’s New)
 - Active/inactive colors match theme, labels readable at large text
+- No router warnings during navigation (no "No route named …"): Tabs reference group segment names only — DONE
 
 Lists (Empty/Loading/Error)
 - Podcasts/Resources/Campaigns/Community/Events/Archive/FAQs/Research
 - Loading: skeleton rows appear
 - Error: message announces as alert; retry/refresh works
 - Empty: friendly message visible; padding feels consistent
+- Post‑load item-count announcements (polite, one‑time) on lists — DONE
 
 Saved/Favorites
 - Saved tab shows empty message initially
@@ -29,6 +31,7 @@ Settings/Profile
 - Display name updates; errors show alerts
 - Profile photo picker handles “unavailable” gracefully; upload works in dev build
 - High contrast toggle works; offline banner appears during Firestore offline
+- Jurisdiction context provider wired at app root (panels render correctly) — DONE
 
 Community
 - Channels list shows sections + empty state
@@ -45,6 +48,7 @@ Accessibility
 - Error messages use `accessibilityRole="alert"` — DONE
 - Contrast audit passes palette AA — DONE (see `wcag-report.json`)
 - Accessibility audit report added — DONE (`docs/ACCESSIBILITY_AUDIT_REPORT.md`)
+- Screen reader post‑load announcements for item counts — DONE (shared hook)
 
 Performance/Offline
 - App foreground warms caches (Podcasts, Resources, Campaigns, Events)
@@ -84,6 +88,12 @@ Pruning & Archival
 - Telemetry `maintenance.prune` logs removal counts — DONE
 
 CI/Test Health
-- Full test suite green (97 suites, 180 tests) — PASS
+- Full test suite green (101 suites, 194 tests) — PASS
 - Jest worker graceful-exit warning due to open handles — ACCEPTED (intermittent; added unref() on app intervals; safe to proceed)
+- Pre-push gates enforce: lint (0 warnings), strict typecheck, a11y scan, WCAG audit, i18n assert/diff/plural/threshold, analytics report, PII soft scan, perf budget — PASS
+- Advisory pre-commit guard for bad `Tabs.Screen` names (slashes) — DONE
+
+Docs & Conventions
+- Route conventions documented in README and mirrored in `docs/ROUTE_MAP.md` — DONE
+- ROUTE_MAP regenerated/synced with latest routes — DONE
 
