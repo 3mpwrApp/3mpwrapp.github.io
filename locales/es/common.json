@@ -16,6 +16,14 @@
     "faqs": "Preguntas frecuentes",
     "research": "Investigación"
   },
+  "loading": {
+    "generic": "Cargando…",
+    "community": "Cargando comunidad…",
+    "deadlines": "Cargando plazos…",
+    "evidence": "Cargando locker de evidencia…",
+    "reflections": "Cargando reflexiones…",
+    "advocacy": "Cargando herramientas de defensa…"
+  },
   "a11y": {
     "shareCampaign": "Compartir campaña {{title}}",
     "joinCampaign": "Unirse a {{title}}",
@@ -118,6 +126,11 @@
   },
   "templates": {
     "deadlines": {
+      "duplicate": "Duplicar",
+      "duplicated": "Duplicado",
+      "duplicateFailed": "Error al duplicar",
+      "duplicateFailedBody": "No se pudo duplicar.",
+      "duplicateDeadline": "Duplicar plazo",
       "csvHeaderDate": "fecha",
       "csvHeaderTitle": "título",
       "csvHeaderNotes": "notas",

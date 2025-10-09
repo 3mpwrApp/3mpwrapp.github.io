@@ -20,6 +20,7 @@ export default function ReflectionsCalendarTestImpl() {
 	const [items, setItems] = React.useState<Reflection[]>([]);
 	const [detailsOpen, setDetailsOpen] = React.useState(false);
 	const [editorOpen, setEditorOpen] = React.useState(false);
+	const [standaloneEditor, setStandaloneEditor] = React.useState(false);
 
 	React.useEffect(() => {
 		let mounted = true;
@@ -58,6 +59,15 @@ export default function ReflectionsCalendarTestImpl() {
 	return (
 		<View style={[s.container, { backgroundColor: palette.background }]} accessibilityLabel="Reflections Calendar" accessible>
 			<Text style={[s.title, { color: palette.text }]} accessibilityRole="header">Reflections Calendar</Text>
+
+			<Pressable
+				accessibilityRole="button"
+				accessibilityLabel="Add mood or reflection"
+				style={[s.secondary, { backgroundColor: palette.surface, borderColor: palette.muted, alignSelf:'flex-start', marginBottom:8 }]}
+				onPress={() => { setStandaloneEditor(true); setDetailsOpen(false); setEditorOpen(true); }}
+			>
+				<Text style={[s.secondaryText, { color: palette.text }]}>Add Mood</Text>
+			</Pressable>
 
 			<View style={{ flexDirection: 'row', gap: 8 }}>
 				<Pressable
@@ -155,7 +165,7 @@ export default function ReflectionsCalendarTestImpl() {
 										try {
 											const mod = await import('../../../services/wellness');
 											await (mod as any).addReflection?.('ok', '');
-											setEditorOpen(false);
+											setEditorOpen(false); setStandaloneEditor(false);
 										} catch {
 											Alert.alert('Save failed');
 										}
@@ -168,6 +178,26 @@ export default function ReflectionsCalendarTestImpl() {
 					</View>
 				</View>
 			</Modal>
+			{standaloneEditor && editorOpen && !detailsOpen && (
+				<View style={[s.modalCard, { backgroundColor: palette.surface, marginTop:16 }]}
+					accessibilityLabel="Add reflection inline" accessibilityRole="form">
+					<Text style={{ color: palette.text, fontWeight:'700', marginBottom:8 }}>New Reflection</Text>
+					<Pressable
+						accessibilityRole="button"
+						accessibilityLabel="Save reflection"
+						style={[s.primary, { backgroundColor: palette.primary }]}
+						onPress={async () => {
+							try {
+								const mod = await import('../../../services/wellness');
+								await (mod as any).addReflection?.('ok', '');
+								setEditorOpen(false); setStandaloneEditor(false);
+							} catch { Alert.alert('Save failed'); }
+						}}
+					>
+						<Text style={[s.primaryText, { color: palette.onPrimary }]}>Save</Text>
+					</Pressable>
+				</View>
+			)}
 		</View>
 	);
 }

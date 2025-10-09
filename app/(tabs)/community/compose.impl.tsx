@@ -14,7 +14,7 @@ export default function CommunityCompose() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount('Compose Post');
+  useAnnounceOnMount('Compose Post screen loaded');
   useFocusOnRefOnMount(titleRef);
   const { user } = useAuth();
   const params = useLocalSearchParams<{ slug?: string }>();
@@ -52,9 +52,23 @@ export default function CommunityCompose() {
   <Text style={s.label}>Channel</Text>
   <TextInput value={channelSlug} onChangeText={setChannelSlug} style={s.input} placeholder="general" placeholderTextColor={palette.text} />
       <Text style={s.label}>Title</Text>
-      <TextInput value={title} onChangeText={setTitle} style={s.input} placeholder="Add a title" placeholderTextColor={palette.text} />
-      <Text style={s.label}>Body</Text>
-      <TextInput value={body} onChangeText={setBody} style={[s.input, { minHeight: 120 }]} multiline placeholder="Write your post" placeholderTextColor={palette.text} />
+          <TextInput
+            accessibilityLabel="Post title"
+            value={title}
+            onChangeText={setTitle}
+            style={s.input}
+            placeholder="Short, clear title (what + when)"
+            placeholderTextColor={palette.text}
+          />
+          <Text style={s.label}>Body</Text>
+          <TextInput
+            accessibilityLabel="Post body"
+            value={body}
+            onChangeText={setBody}
+            style={[s.input, { minHeight: 140 }]} multiline
+            placeholder="Write your post. Keep it specific. Add dates if relevant."
+            placeholderTextColor={palette.text}
+          />
       <A11yPressable onPress={save} style={s.button}>
         <Text style={s.buttonText}>Publish</Text>
       </A11yPressable>

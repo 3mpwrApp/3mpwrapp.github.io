@@ -256,6 +256,20 @@ export default function DeadlinesList() {
                   </A11yPressable>
                   <A11yPressable
                     onPress={async () => {
+                      try {
+                        const { addDeadline } = await import('../../../services/deadlines');
+                        await addDeadline({ title: d.title + ' (copy)', dueAt: new Date(d.dueAt).toISOString(), notes: d.notes||'' });
+                        announce(t('templates.deadlines.duplicated','Duplicated'));
+                        load();
+                      } catch { Alert.alert(t('templates.deadlines.duplicateFailed','Duplicate failed'), t('templates.deadlines.duplicateFailedBody','Unable to duplicate.')); }
+                    }}
+                    style={s.smallBtn}
+                    accessibilityLabel={t('templates.deadlines.duplicate','Duplicate deadline')}
+                  >
+                    <Text style={s.smallBtnText}>{t('templates.deadlines.duplicate','Duplicate')}</Text>
+                  </A11yPressable>
+                  <A11yPressable
+                    onPress={async () => {
                       const ok = await Notifier.scheduleAt(new Date(Date.now() + 7*24*60*60*1000), t('templates.deadlines.snoozedDeadline','Snoozed deadline'), d.title);
                       Alert.alert(ok ? t('templates.deadlines.snoozed','Snoozed') : t('templates.deadlines.notScheduled','Not scheduled'), ok ? t('templates.deadlines.reminder7d','Reminder in 7 days.') : t('templates.deadlines.unableSchedule','Unable to schedule.'));
                     }}

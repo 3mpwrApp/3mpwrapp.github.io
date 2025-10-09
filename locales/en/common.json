@@ -16,6 +16,14 @@
     "faqs": "FAQs",
     "research": "Research"
   },
+    "loading": {
+      "generic": "Loading…",
+      "community": "Loading community…",
+      "deadlines": "Loading deadlines…",
+      "evidence": "Loading evidence locker…",
+      "reflections": "Loading reflections…",
+      "advocacy": "Loading advocacy tools…"
+    },
   "inbox": {
     "itemRead": "Read",
     "itemUnread": "Unread",
@@ -1640,6 +1648,11 @@
     },
     "deadlines": {
       "title": "Deadlines",
+      "duplicate": "Duplicate",
+      "duplicated": "Duplicated",
+      "duplicateFailed": "Duplicate failed",
+      "duplicateFailedBody": "Unable to duplicate.",
+      "duplicateDeadline": "Duplicate deadline",
       "screenLabel": "Deadlines screen",
       "toggleInfo": "Toggle instructions",
       "infoTitle": "How to Use",

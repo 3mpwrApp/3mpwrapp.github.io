@@ -2,8 +2,7 @@
 title: 3mpwr App — User Guide
 description: A practical guide to using 3mpwr’s tools and community features
 version: 1.0
-lastUpdated: 2025-10-06
-lastUpdated: 2025-10-07
+lastUpdated: 2025-10-08
 # 3mpwr App — User Guide
 
 > Purpose: Practical tools and community for Persons with Disabilities, Injured Workers, and Allies.
@@ -91,9 +90,24 @@ Prefer a printable 2-page version? Open quick-tour.md
 <a id="navigation"></a>
 ## Navigation
 
-- Tabs: Advocacy, Campaigns, Community, Events, Podcasts, Research, Resources, Wellness, Saved, Settings.
+- Visible tabs: What’s New, FAQs, About, Wellness, Resources, Research, Podcasts, Events, Community, Campaigns, Advocacy.
 - Header: Top‑right has Settings and a High‑Contrast button. Some screens show counters or a refresh icon.
 - Back: Use your device’s back button or gesture. Links and buttons move you between screens.
+
+Need a simple list of screens and paths? See Route Map in the docs folder: `docs/ROUTE_MAP.md`.
+
+How to switch tabs
+
+1. Look at the bottom bar. Each word is a tab (for example: Wellness, Resources).
+2. Tap a tab once to open it. If it’s already open, tapping again scrolls you to the top.
+3. Inside a tab, tap cards and buttons to open features. Use Back to return.
+
+Tip: If text is small or low‑contrast, go to Settings (top‑right gear) and turn on High Contrast and/or increase Text Size.
+
+Hidden but routable
+
+- Saved and Settings are available via menu/header links but not shown in the tab bar.
+- Admin Panel is available to admins only and is hidden from the tab bar.
 
 ### What’s New
 
@@ -107,6 +121,24 @@ Recent highlights
 
 - Admin: Admin Panel now includes an “Export CSV” button for the Admin Audit log (admin-only).
 - Performance: Tabs use lazy loading so screens mount on first open, improving startup time.
+
+Step‑by‑step
+
+1. Tap What’s New.
+2. Read the short bullets. Each item explains a change in simple language.
+3. No action needed. Items older than 30 days are auto‑archived so your list stays short.
+
+FAQs tab (quick guide)
+
+1. Tap FAQs.
+2. Scroll the questions and tap one to open.
+3. At the end of many answers you’ll see next steps or a contact link.
+
+About tab (quick guide)
+
+1. Tap About.
+2. Use the links to reach our website or socials.
+3. There’s also a Contact section if you want to send feedback.
 
 <a id="how-the-app-fits-together"></a>
 ## How the app fits together (interconnections)
@@ -417,6 +449,34 @@ Posting guidelines & moderation roadmap
 - Threads: Post a new thread, read, and reply to comments.
 - Works offline: If you are offline, your posts and replies queue and send when you reconnect.
 
+Post a new thread (step‑by‑step)
+
+1. Open Community → choose your province or a topic channel.
+2. Tap Compose (or the + button) to start a new post.
+3. Write a short title (what + when). Add 2–3 sentences.
+4. Tap Post. Your thread appears in the channel.
+
+Reply to a thread
+
+1. Tap a thread to open it.
+2. Tap Reply, type your message, then Send.
+
+Edit or delete your post
+
+1. Open your post.
+2. Tap the ••• menu.
+3. Choose Edit (update text) or Delete (remove it). Deleted posts can’t be recovered.
+
+Refresh and search
+
+1. Pull down on the channel list to refresh.
+2. Use Search (if available) to find posts by words in the title.
+
+Safety
+
+- To block someone: open Community → Safety & Blocking → enter their ID → Block. Unblock later if needed.
+- Reporting tools from posts are coming soon. For now, use About → Contact to reach a moderator if needed.
+
 Deep dive — Community
 
 - Posting checklist
@@ -482,6 +542,12 @@ How to use Events
 3. Open an event to read details.
 4. Tap Add Reminder to add it to your calendar, or share the ICS file as a fallback.
 
+Add to your phone calendar (step‑by‑step)
+
+1. Open an event → tap Add Reminder.
+2. Your calendar opens with the details pre‑filled. Confirm to save.
+3. If your calendar doesn’t open, tap Share ICS and choose your Calendar app.
+
 Events — details, examples, and tips
 
 - Overview: A single calendar for community events, holidays, and observances. Easy exports to your device calendar.
@@ -501,7 +567,7 @@ Troubleshooting (Events)
 - “Add Reminder” opens the browser but not the app? Use the ICS fallback and open it with your Calendar app.
 - Time zone confusion? Confirm your device time zone in OS settings.
 
-### Website calendar sync tp 3mpwrApp Events Calendar
+### Website calendar sync to 3mpwrApp Events Calendar
 
 - ICS feed (for website owners): The app server exposes a calendar feed at `/events.ics`.
 - Example: If your server base is `https://api.example.com`, use `https://api.example.com/events.ics` in your website/CMS calendar.
@@ -522,6 +588,16 @@ How to use Podcasts & Stories
 2. Scroll to find a video. Tap to open.
 3. Choose where to play it (YouTube App or Browser).
 4. Tap the bookmark icon to save it for later.
+
+Turn on captions (where available)
+
+1. When the video is playing, tap the CC (captions) button in the player.
+2. Choose your caption language if there are options.
+
+Open on YouTube app vs browser
+
+1. If you have the YouTube app, you can choose to open there.
+2. If not, pick Browser. The video will play in your web browser.
 
 Podcasts & Stories — details, examples, and tips
 
@@ -576,6 +652,12 @@ How to use Research
 2. Pick a Topic or Year, or type into Search.
 3. Tap an item to open the original source.
 4. Tap Share to send the link to others.
+
+Save and use later (step‑by‑step)
+
+1. Tap Save to add the item to Saved.
+2. Open Saved later to quickly find it.
+3. Add a note in Evidence Locker with why it matters for your situation.
 
 Research — details, examples, and tips
 
@@ -634,6 +716,40 @@ AI Tools — what they’re for and examples
 - Template Gallery: Ready‑to‑edit letters and forms. Example: “Request for accommodation,” “Follow‑up on missing payment.”
 - Support Directory: Contact lists for help lines, legal clinics, and disability organizations.
 
+Step‑by‑step: Rights Checker
+
+1. Open Resources → Rights Checker.
+2. Answer simple questions about your situation (yes/no and short choices).
+3. Read the summary in plain language. It’s a starting point, not legal advice.
+4. Copy or Save parts you want to keep in Evidence Locker.
+
+Step‑by‑step: Appeal Coach
+
+1. Open Resources → Appeal Coach.
+2. Pick what happened (for example: “Payment stopped” or “Claim denied”).
+3. Follow the guided steps: reason → documents → draft.
+4. Export your draft to Template Gallery, PDF, or .doc, then personalize the details.
+
+Step‑by‑step: Evidence Checklist
+
+1. Open Resources → Evidence Checklist.
+2. Pick the checklist that matches your situation.
+3. Go through each item. Tick off what you already have.
+4. Save your progress or export the list to share.
+
+Step‑by‑step: Doctor Visit Prep
+
+1. Open Resources → Doctor Visit Prep.
+2. Add questions you want to ask and symptoms to mention.
+3. Export or copy the list before your appointment.
+
+Step‑by‑step: Claims Navigator (or Denial Decoder)
+
+1. Open Resources → Claims Navigator (or Denial Decoder).
+2. Choose your province (if asked) so the steps fit your region.
+3. Read the steps in order. Tap links to open official pages.
+4. Save helpful links to Saved or copy them into Evidence Locker.
+
 Step‑by‑steps for key AI Tools
 
 - Voice‑to‑Case Notes
@@ -687,6 +803,11 @@ How to set up your Emergency Wallet Card
 2. Fill in medical info (conditions, allergies, meds) and contacts.
 3. Tap Save.
 4. Tap Print or Export to create a printable card.
+
+Find it quickly from Resources
+
+1. Open Resources → Support & Directories → Emergency Info Wallet Card.
+2. This opens the Settings screen directly to the Wallet Card section.
 
 Emergency Wallet Card — details, examples, and tips
 
@@ -1101,6 +1222,12 @@ Saved — details, examples, and tips
 - Tips:
   - Periodically remove items you no longer need.
 
+How to manage Saved
+
+1. Open Saved.
+2. Tap any item to open it.
+3. To remove, tap the bookmark again to un‑save.
+
 
 
 <a id="settings"></a>
@@ -1129,6 +1256,47 @@ More in Settings
 - Accessibility: High Contrast, larger text, and clear labels are built‑in. Tip: Combine with your device’s accessibility settings.
 - Backups: Export a backup to keep a copy safe; import to restore. Tip: Store backups in a private folder or cloud drive you control.
 - Data deletion: You can clear local data in Privacy & Backups. Tip: Export first if you might need the data later.
+
+Step‑by‑step: Make a backup
+
+1. Open Settings → Privacy & Backups.
+2. Tap Export Backup. Pick a safe place on your device or cloud drive.
+3. Name the file so you remember (for example: backup‑2025‑10‑08).
+
+Step‑by‑step: Restore a backup
+
+1. Open Settings → Privacy & Backups.
+2. Tap Import Backup. Pick your saved file.
+3. Confirm to restore. Your app will reload your data.
+
+Step‑by‑step: Turn on High Contrast and larger text
+
+1. Open Settings → Accessibility.
+2. Turn on High Contrast.
+3. Increase Text Size if you want larger words. The app respects your device’s text settings too.
+
+Step‑by‑step: Set a passcode and Wellness Lock
+
+1. Open Settings → Privacy & Backups.
+2. Turn on Passcode and choose a code.
+3. Turn on Wellness Lock to add a confirmation step for sensitive wellness screens.
+
+Step‑by‑step: Change language
+
+1. Open Settings → Language.
+2. Pick your preferred language (where available).
+3. Some screens may still be in English while we complete translations.
+
+Step‑by‑step: See Terms again
+
+1. Open Settings → Terms & Policies.
+2. Tap “Require re‑acceptance”.
+3. The app will show the Terms again next time you open it.
+
+Admin (for administrators) — minimal
+
+- The Admin Panel is hidden from the tab bar and requires admin access.
+- If you are not an admin, you can ignore this section; it does not affect normal use.
 
 
 

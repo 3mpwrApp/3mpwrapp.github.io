@@ -22,6 +22,7 @@ Quick reference: Deep-link seeding with q param is documented in `docs/deep-link
 
 - Quick Tour (2 pages, user-friendly): `docs/quick-tour.md`
 - User Guide (complete, end-user): `docs/user-guide.md`
+- Route Map (all screens & paths): `docs/ROUTE_MAP.md`
 - Changelog (developer-facing): `docs/CHANGELOG.md`
 - Unfinished work inventory: `docs/UNFINISHED_WORK.md`
 - Accessibility appendix: `docs/A11Y_NOTES.md`

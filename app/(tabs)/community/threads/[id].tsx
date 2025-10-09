@@ -15,7 +15,7 @@ const Impl: React.ComponentType<any> = isJest
 export default function ThreadLazyWrapper() {
   if (isJest) return <Impl />;
   return (
-    <Suspense fallback={<ScreenSkeleton /> }>
+    <Suspense fallback={<ScreenSkeleton labelKey="loading.community" /> }>
       <Impl />
     </Suspense>
   );

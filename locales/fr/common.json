@@ -16,6 +16,14 @@
     "faqs": "FAQs",
     "research": "Recherche"
   },
+  "loading": {
+    "generic": "Chargement…",
+    "community": "Chargement de la communauté…",
+    "deadlines": "Chargement des échéances…",
+    "evidence": "Chargement du casier de preuves…",
+    "reflections": "Chargement des réflexions…",
+    "advocacy": "Chargement des outils de défense…"
+  },
   "inbox": {
     "itemRead": "Lu",
     "itemUnread": "Non lu",
@@ -1085,6 +1093,11 @@
     },
     "deadlines": {
       "title": "Échéances",
+      "duplicate": "Dupliquer",
+      "duplicated": "Dupliqué",
+      "duplicateFailed": "Échec de la duplication",
+      "duplicateFailedBody": "Impossible de dupliquer.",
+      "duplicateDeadline": "Dupliquer l'échéance",
       "screenLabel": "Écran échéances",
       "toggleInfo": "Afficher/masquer instructions",
       "infoTitle": "Mode d'emploi",

@@ -64,11 +64,14 @@ export default function DMListScreenImpl() {
   };
 
   return (
-    <View style={s.container}>
-      <Text style={s.title}>Direct Messages</Text>
+    <View style={s.container} accessibilityLabel="Direct Messages list" accessible>
+      <Text style={s.title} accessibilityRole='header'>Direct Messages</Text>
       <View style={{ flexDirection:'row', gap:8 }}>
-        <TextInput style={[s.input, { flex:1 }]} placeholder="Enter user ID" placeholderTextColor={palette.text+'77'} value={target} onChangeText={setTarget} />
-        <A11yPressable accessibilityRole="button" accessibilityLabel="Start chat" hitSlop={HIT_SLOP_8} onPress={startDM} style={s.button}>
+        <TextInput
+          accessibilityLabel="Enter user ID to start a direct message"
+          style={[s.input, { flex:1 }]} placeholder="Enter exact user ID (prototype)"
+          placeholderTextColor={palette.text+'77'} value={target} onChangeText={setTarget} />
+        <A11yPressable accessibilityRole="button" accessibilityLabel="Start direct message" hitSlop={HIT_SLOP_8} onPress={startDM} style={s.button}>
           <Text style={s.buttonText}>Start</Text>
         </A11yPressable>
       </View>
