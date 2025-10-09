@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
 
+import ScreenSkeleton from '../../../components/ScreenSkeleton';
+
 export const options = { href: null };
 
 const isJest =
@@ -13,7 +15,7 @@ const Impl: React.ComponentType<any> = isJest
 export default function AdminLazyWrapper() {
   if (isJest) return <Impl />;
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<ScreenSkeleton labelKey="loading.advocacy" /> }>
       <Impl />
     </Suspense>
   );

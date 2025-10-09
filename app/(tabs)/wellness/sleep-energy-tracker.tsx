@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
-import { ActivityIndicator, View } from "react-native";
+
+import ScreenSkeleton from '../../../components/ScreenSkeleton';
 
 // Expo Router option: hide href for non-direct deep linking
 export const options = { href: null };
@@ -23,13 +24,7 @@ export default function SleepEnergyTrackerLazy() {
     return <C />;
   }
   return (
-    <Suspense
-      fallback={
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <ActivityIndicator />
-        </View>
-      }
-    >
+    <Suspense fallback={<ScreenSkeleton labelKey="loading.wellness" /> }>
       <LazyImpl />
     </Suspense>
   );

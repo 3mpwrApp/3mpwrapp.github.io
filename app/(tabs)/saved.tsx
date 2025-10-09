@@ -1,6 +1,8 @@
 // Jest-aware lazy route wrapper for the Saved tab
 import React, { Suspense } from "react";
 
+import ScreenSkeleton from '../../components/ScreenSkeleton';
+
 export const options = { href: null };
 
 // In tests, avoid React.lazy to keep snapshot and unit tests stable.
@@ -25,7 +27,7 @@ export default function SavedLazyWrapper(props: any) {
 
   if (isTestEnv) return <Impl {...props} />;
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<ScreenSkeleton labelKey="loading.generic" /> }>
       <Impl {...props} />
     </Suspense>
   );

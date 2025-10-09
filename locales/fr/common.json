@@ -22,7 +22,9 @@
     "deadlines": "Chargement des échéances…",
     "evidence": "Chargement du casier de preuves…",
     "reflections": "Chargement des réflexions…",
-    "advocacy": "Chargement des outils de défense…"
+    "advocacy": "Chargement des outils de défense…",
+    "wellness": "Chargement des outils bien‑être…",
+    "resources": "Chargement des ressources…"
   },
   "inbox": {
     "itemRead": "Lu",

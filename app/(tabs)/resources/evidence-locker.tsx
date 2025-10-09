@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
 
+import ScreenSkeleton from '../../../components/ScreenSkeleton';
+
 export const options = { href: null };
 
 const isJest =
@@ -16,7 +18,7 @@ export default function EvidenceLocker() {
     return <Impl />;
   }
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<ScreenSkeleton labelKey="loading.evidence" /> }>
       <Impl />
     </Suspense>
   );

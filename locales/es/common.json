@@ -22,7 +22,9 @@
     "deadlines": "Cargando plazos…",
     "evidence": "Cargando locker de evidencia…",
     "reflections": "Cargando reflexiones…",
-    "advocacy": "Cargando herramientas de defensa…"
+    "advocacy": "Cargando herramientas de defensa…",
+    "wellness": "Cargando herramientas de bienestar…",
+    "resources": "Cargando recursos…"
   },
   "a11y": {
     "shareCampaign": "Compartir campaña {{title}}",

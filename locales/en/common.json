@@ -22,7 +22,9 @@
       "deadlines": "Loading deadlines…",
       "evidence": "Loading evidence locker…",
       "reflections": "Loading reflections…",
-      "advocacy": "Loading advocacy tools…"
+      "advocacy": "Loading advocacy tools…",
+      "wellness": "Loading wellness tools…",
+      "resources": "Loading resources…"
     },
   "inbox": {
     "itemRead": "Read",
