@@ -5,12 +5,15 @@ import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { exercises } from '../../../data/exercises';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useTranslationSafe } from '../../../i18n';
 import { fetchExercisePlaylist } from '../../../services/youtube';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
 export default function ExerciseHub() {
+    const { t: tt } = useTranslationSafe();
+    const t = (key:string, fb?:string) => tt ? tt(key, fb) : (fb || key);
   const exportFavorites = async () => {
     try {
       const favList = combined.filter(e => favs.has(e.id));
@@ -115,10 +118,10 @@ export default function ExerciseHub() {
           style={[s.chip, shortOnly && s.chipActive]}
           hitSlop={HIT_SLOP_8}
           accessibilityRole="button"
-          accessibilityLabel={shortOnly? 'Show all exercise lengths' : 'Show only short (under 3 min) exercises'}
+          accessibilityLabel={shortOnly? t('wellness.exerciseHub.shortFilterAll','Show all exercise lengths') : t('wellness.exerciseHub.shortFilterOnly','Show only short (under 3 min) exercises')}
           accessibilityState={{ selected: shortOnly }}
         >
-          <Text style={{ color: shortOnly? palette.onPrimary: palette.text, fontWeight:'700' }}>under3m</Text>
+          <Text style={{ color: shortOnly? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('wellness.exerciseHub.shortFilter','<3m')}</Text>
         </A11yPressable>
       </View>
       {combined.map((e: any) => (

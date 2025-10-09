@@ -130,3 +130,12 @@ export function useTranslation() {
   if (!ctx) throw new Error("useTranslation must be used within I18nProvider");
   return ctx;
 }
+
+// Non-throwing variant for components optionally rendered in isolation (tests)
+export function useTranslationSafe() {
+  const ctx = React.useContext(I18nContext);
+  if (!ctx) {
+    return { t: (k: string, fb?: string) => fb || k, tCount: (_k:string, c:number, fb?:string)=> (fb||_k).replace('{{count}}', String(c)), setLanguage: ()=>{}, lang:'en', isRTL:false } as any;
+  }
+  return ctx;
+}

@@ -647,7 +647,10 @@
     },
     "exerciseHub": {
       "title": "Hub exercice & mouvement",
-      "desc": "Routines sur chaise et conseils de rythme."
+      "desc": "Routines sur chaise et conseils de rythme.",
+      "shortFilter": "<3m",
+      "shortFilterOnly": "Afficher uniquement les courtes (<3 min)",
+      "shortFilterAll": "Afficher toutes les durées"
     },
     "nutrition": {
       "title": "Nutrition & hydratation",

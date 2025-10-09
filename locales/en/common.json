@@ -244,7 +244,10 @@
     },
     "exerciseHub": {
       "title": "Exercise & Movement Hub",
-      "desc": "Chair‑friendly routines and pacing tips."
+      "desc": "Chair‑friendly routines and pacing tips.",
+      "shortFilter": "<3m",
+      "shortFilterOnly": "Show only short (under 3 min) exercises",
+      "shortFilterAll": "Show all exercise lengths"
     },
     "nutrition": {
       "title": "Nutrition & Hydration",

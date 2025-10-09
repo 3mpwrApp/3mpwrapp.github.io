@@ -12,6 +12,14 @@ Note for authors (plain language):
 - Jest RN shim Modal/Alert adjustments to suppress RN prop warnings on web tests.
 - Evidence Locker export modal test skipped for CI stability; import flow remains covered.
 - Added comprehensive USER_GUIDE.md covering all app features and major components.
+- Accessibility: Extended contextual loading skeleton labels across Deadlines, Evidence Locker, Reflections, Wellness trackers, Events, Admin, Saved.
+- Accessibility: Added pluralized post‑load item count announcement for Deadlines list.
+- Accessibility: Added undo delete (Deadlines) with polite live region + restore option.
+- Accessibility: Implemented focus restoration after inline edit save in Deadlines list.
+- Accessibility: Added quick add note button + confirmation live region to Evidence Locker (incremental enhancement).
+- Wellness: Added persistent "under 3 min" exercise filter toggle in Exercise Hub (accessible chip, stored in AsyncStorage).
+- Tooling: Added heuristic readability scan script (`npm run read:level`).
+- Docs: Updated A11Y_NOTES with per‑screen labels, post‑load counts, undo, focus restoration, offline banner, readability scan.
 
 ## [2025-10-08]
 - Fix: Resolved a Tabs router conflict that registered two Admin screens. The legacy `/(tabs)/admin.tsx` route was removed; the Admin Panel now lives at `/(tabs)/admin/index` and remains hidden from the tab bar (deep-link or Settings → Admin to open).

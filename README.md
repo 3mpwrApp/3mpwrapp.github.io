@@ -98,6 +98,11 @@ Advocacy i18n enforcement: The script `npm run i18n:check` ( `scripts/check-i18n
 - RTL readiness: replaced left/right paddings with start/end where present.
 - Static scan: `npm run a11y:scan` to flag missing roles/hitSlop in TSX.
 - Screen reader announcements: use `announce()` from `utils/announce` instead of calling `AccessibilityInfo.announceForAccessibility` directly. It queues rapid calls (debounced ~120ms) and merges messages to avoid flooding. For immediate, unbatched output use `announceNow()`. Tests or scripts can force-flush via `flushAnnouncements()`.
+ - Per‑screen loading labels: `ScreenSkeleton` takes `labelKey` (e.g., `loading.deadlines`) to give contextual feedback.
+ - Post‑load counts: Lists can announce item counts once after initial load (see Deadlines list implementation & plural keys `templates.deadlines.itemsLoaded`).
+ - Undo pattern: Deadlines delete shows a temporary live region with an Undo button (6s timeout) — replicate for other destructive actions.
+ - Focus restoration: After inline saves (Deadlines edit), focus is moved back to the heading to avoid disorientation.
+ - Readability scan: `npm run read:level` flags complex strings (heuristic) without failing CI.
 
 ### WCAG Color Contrast Audit
 Audits theme palette tokens and inline hex color literals for WCAG contrast compliance. Palette AA failures return a non‑zero exit code (CI gating). Inline issues are advisory for now (reported for both light & dark assumed backgrounds).
