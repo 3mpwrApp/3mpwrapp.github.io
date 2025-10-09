@@ -25,7 +25,7 @@ export default function DeadlinesList() {
   const [editTitle, setEditTitle] = React.useState<string>("");
   const [editDate, setEditDate] = React.useState<string>("");
   const [lastDeleted, setLastDeleted] = React.useState<Deadline | null>(null);
-  const undoTimer = React.useRef<NodeJS.Timeout | null>(null);
+  const undoTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const load = React.useCallback(async (announceCount: boolean = false) => {
     try {
