@@ -4,7 +4,7 @@ Purpose: Living checklist of outstanding tasks after recent i18n, advocacy, and 
 
 Status legend: [Done] completed this cycle · [In Progress] partially implemented · [Planned] not started
 Linked inventory of raw placeholders: see `docs/UNFINISHED_WORK.md` (auto scan).
-Last updated: 2025-10-07
+Last updated: 2025-10-09
 
 ## 1. Localization
 - [Planned] Replace placeholder "[T]" entries in `locales/es/common.json` and `locales/fr/common.json` with real translations.
@@ -19,6 +19,7 @@ Last updated: 2025-10-07
 - [Planned] Expand `a11y-scan.js`: detect icon-only Pressables missing labels, heading role heuristics, redundant role/label combos.
 - [Planned] Inline contrast severity classification (error/warn/info) & later gating once inline issues remediated.
 - [Planned] Dynamic font scaling smoke test (large accessibility text setting simulation).
+- [Done] Per‑screen loading labels, post‑load item count announcements, undo pattern, and focus restoration patterns implemented; docs updated.
 - [Planned] Add regression snapshot of WCAG JSON to detect palette drift.
 
 ## 3. Analytics Coverage
@@ -43,6 +44,7 @@ Last updated: 2025-10-07
 - [Planned] Replace deprecated `react-test-renderer` with RN Testing Library (blocks: peer deps alignment).
 - [Done] Enable tab screen lazy loading in Expo Router (reduces startup work).
 - [Planned] Bundle size budget check (report warning if JS bundle > threshold).
+- [Done] Router warnings resolved (hidden non-screen routes under tabs and dummy default export for app/utils proxy).
 
 ## 5. Evidence Locker Enhancements
 - [Planned] Retry with exponential backoff for failed uploads.

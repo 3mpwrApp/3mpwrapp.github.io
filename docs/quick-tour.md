@@ -2,7 +2,7 @@
 title: 3mpwr App — Quick Tour
 description: A 2-page orientation to core features with links to the full User Guide
 version: 1.0
-lastUpdated: 2025-10-06
+lastUpdated: 2025-10-09
 ---
 
 # Quick Tour

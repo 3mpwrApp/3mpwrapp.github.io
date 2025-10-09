@@ -2,7 +2,7 @@
 title: 3mpwr App — User Guide
 description: A practical guide to using 3mpwr’s tools and community features
 version: 1.0
-lastUpdated: 2025-10-08
+lastUpdated: 2025-10-09
 # 3mpwr App — User Guide
 
 > Purpose: Practical tools and community for Persons with Disabilities, Injured Workers, and Allies.
@@ -90,7 +90,7 @@ Prefer a printable 2-page version? Open quick-tour.md
 <a id="navigation"></a>
 ## Navigation
 
-- Visible tabs: What’s New, FAQs, About, Wellness, Resources, Research, Podcasts, Events, Community, Campaigns, Advocacy.
+- Visible tabs: What’s New, FAQs, About, Wellness, Resources, Research, Podcasts, Events, Community, Campaigns, Advocacy. These are curated; only main tabs appear in the bar.
 - Header: Top‑right has Settings and a High‑Contrast button. Some screens show counters or a refresh icon.
 - Back: Use your device’s back button or gesture. Links and buttons move you between screens.
 
@@ -107,6 +107,7 @@ Tip: If text is small or low‑contrast, go to Settings (top‑right gear) and t
 Hidden but routable
 
 - Saved and Settings are available via menu/header links but not shown in the tab bar.
+- Internal helpers (for example, settings sections aggregator) are routed but hidden on the tab bar.
 - Admin Panel is available to admins only and is hidden from the tab bar.
 
 ### What’s New
@@ -1321,6 +1322,13 @@ Admin (for administrators) — minimal
 
 <a id="accessibility"></a>
 ## Accessibility
+
+Recent improvements (Oct 2025):
+- Clear, per‑screen loading announcements (ScreenSkeleton) with contextual labels (e.g., Loading Resources…).
+- Post‑load item count announcements on lists (e.g., “3 deadlines loaded”) to confirm content is ready.
+- Undo pattern for destructive actions (e.g., restore after delete) with a polite live region announcement.
+- Focus restoration after inline edits to keep navigation predictable (focus returns to the screen heading).
+- Offline banner appears when connectivity is lost to indicate cached content.
 
 - Screen reader: Announces page titles and loaded counts; headers use accessible roles.
 - High Contrast: App‑wide palette for readability.

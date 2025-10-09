@@ -1,5 +1,7 @@
 # Unfinished Work Report
-Generated: 2025-10-08T23:05:00.000Z
+Generated: 2025-10-09T09:00:00.000Z
+
+Note: This automated scan can lag behind recent work. Cross‑check with `unfinishedwork.md` for the authoritative backlog and status deltas.
 
 Total files flagged: 112
 
