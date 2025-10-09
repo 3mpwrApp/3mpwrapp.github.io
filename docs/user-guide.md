@@ -122,6 +122,8 @@ Recent highlights
 
 - Admin: Admin Panel now includes an “Export CSV” button for the Admin Audit log (admin-only).
 - Performance: Tabs use lazy loading so screens mount on first open, improving startup time.
+- Accessibility: Lists announce when content is ready (e.g., “3 items loaded”), small buttons have larger tap areas, contrast is improved, and focus returns to the screen title after quick edits.
+- Stability: Navigation is smoother and more predictable across tabs and nested screens.
 
 Step‑by‑step
 
@@ -1329,6 +1331,8 @@ Recent improvements (Oct 2025):
 - Undo pattern for destructive actions (e.g., restore after delete) with a polite live region announcement.
 - Focus restoration after inline edits to keep navigation predictable (focus returns to the screen heading).
 - Offline banner appears when connectivity is lost to indicate cached content.
+
+Note: Post‑load announcements are one‑time and polite, so they don’t interrupt your reading experience.
 
 - Screen reader: Announces page titles and loaded counts; headers use accessible roles.
 - High Contrast: App‑wide palette for readability.

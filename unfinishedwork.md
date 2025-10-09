@@ -20,6 +20,7 @@ Last updated: 2025-10-09
 - [Planned] Inline contrast severity classification (error/warn/info) & later gating once inline issues remediated.
 - [Planned] Dynamic font scaling smoke test (large accessibility text setting simulation).
 - [Done] Per‑screen loading labels, post‑load item count announcements, undo pattern, and focus restoration patterns implemented; docs updated.
+- [Done] Jurisdiction context provider added at app root to fix dependent panels and improve accessibility of jurisdiction-aware content.
 - [Planned] Add regression snapshot of WCAG JSON to detect palette drift.
 
 ## 3. Analytics Coverage
@@ -45,6 +46,9 @@ Last updated: 2025-10-09
 - [Done] Enable tab screen lazy loading in Expo Router (reduces startup work).
 - [Planned] Bundle size budget check (report warning if JS bundle > threshold).
 - [Done] Router warnings resolved (hidden non-screen routes under tabs and dummy default export for app/utils proxy).
+- [Done] Route conventions documented in README and mirrored in `docs/ROUTE_MAP.md` to prevent regressions.
+- [Done] Advisory pre-commit check warns on `<Tabs.Screen name=".../...">` to catch common routing mistake early.
+- [Planned] Optional stricter gate: make the Tabs.Screen name check blocking in CI/pre-push once the team is comfortable.
 
 ## 5. Evidence Locker Enhancements
 - [Planned] Retry with exponential backoff for failed uploads.
@@ -72,6 +76,7 @@ Last updated: 2025-10-09
 ## 9. DevEx
 - [Planned] Script to auto-tag untranslated lines inline (`i18n-inline-tag`).
 - [Done] Pre-push hook with lint, strict typecheck, i18n:assert, a11y:scan, wcag audit.
+- [Done] Added advisory pre-commit script for Tabs.Screen names (slashes) to surface route issues early (non-blocking).
 - [Planned] Add commit-msg hook to enforce conventional commit prefixes (feat:, fix:, docs:, chore:, test:, perf:, a11y:).
 - [Planned] Add PR template referencing backlog & WCAG report artifact.
 - [Done] Added `npm run analytics:scan` CLI output (human friendly) using same discovery logic as registry test.
@@ -84,6 +89,7 @@ Last updated: 2025-10-09
 
 ## 11. App Runtime Validation
 - [In Progress] Post-Expo SDK 54 upgrade manual smoke on devices (remaining: deep linking path list verification).
+- [Done] Eliminated “No route named …” warnings by correcting Tab Screen names to group segments and removing nested routes from Tabs.
 - [Planned] Automated detox/e2e smoke for navigation & notifications permission flow.
 - [Planned] Device matrix in CI (at least Android emulator headless for basic launch).
 
