@@ -267,6 +267,10 @@
     }
   },
   "resources": {
+    "itemsLoaded": {
+      "one": "{{count}} resource loaded",
+      "other": "{{count}} resources loaded"
+    },
     "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
     "appeal_coach": "Appeal Coach (Coming soon)",
     "prepare_appeal": "Prepare to Appeal (Coming soon)",
@@ -934,9 +938,17 @@
     "comingSoon": "This feature is coming soon. We're working on it!"
   },
   "campaigns": {
+    "itemsLoaded": {
+      "one": "{{count}} campaign loaded",
+      "other": "{{count}} campaigns loaded"
+    },
     "empty": "No campaigns match your filters"
   },
   "community": {
+    "itemsLoaded": {
+      "one": "{{count}} channel loaded",
+      "other": "{{count}} channels loaded"
+    },
     "empty": "No channels match your filters",
     "toolsEmpty": "No tools match your search",
     "myPosts": {
@@ -946,6 +958,10 @@
     }
   },
   "podcasts": {
+    "itemsLoaded": {
+      "one": "{{count}} video loaded",
+      "other": "{{count}} videos loaded"
+    },
     "empty": "No videos match your filters"
   },
   "admin": {
@@ -1995,6 +2011,10 @@
     "chipsAnnounce": "Quick filter set to {{label}}"
   },
   "eventsFeature": {
+    "itemsLoaded": {
+      "one": "{{count}} event loaded",
+      "other": "{{count}} events loaded"
+    },
     "empty": "No events match your filters",
     "search": {
       "placeholder": "Search events, tags, places"
@@ -2049,6 +2069,7 @@
     },
     "loadFailed": "Failed to load events"
   },
+ 
   "privacyGate": {
   "title": "Unlock 3mpwr App",
     "subtitle": "Enter your passcode to continue.",
@@ -2200,6 +2221,10 @@
     "applied": "Quiet hours updated"
   },
   "savedScreen": {
+    "itemsLoaded": {
+      "one": "{{count}} saved item loaded",
+      "other": "{{count}} saved items loaded"
+    },
     "subtitle": "Organize and access your bookmarked content",
     "searchPlaceholder": "Search saved items...",
     "searchLabel": "Search saved items",

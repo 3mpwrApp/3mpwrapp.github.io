@@ -8,6 +8,7 @@ import SearchBar from '../../../components/SearchBar';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
 import { channels, seedComments, seedThreads } from "../../../data/community";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../../i18n";
 import { getChannelUnread, setChannelLastRead } from "../../../services/community";
 import { CommunityProvider, useCommunity } from "../../../store/community";
@@ -55,6 +56,10 @@ function ScreenInner() {
       } catch {}
     })();
   }, [prov.length, topics.length]);
+
+  const loading = false; // channels are local-sourced/seeded on first mount
+  const totalChannels = prov.length + topics.length;
+  usePostLoadAnnounce({ loading, count: totalChannels, ns: 'community', emptyKey: 'community.empty' });
 
   return (
     <View style={styles.container} accessibilityLabel="Community Hub screen" accessible>

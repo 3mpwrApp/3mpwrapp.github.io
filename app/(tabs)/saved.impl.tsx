@@ -20,6 +20,7 @@ import {
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
+import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
 import { fetchCampaigns } from "../../services/campaigns";
 import { fetchPodcasts } from "../../services/podcasts";
@@ -51,6 +52,7 @@ export default function SavedScreen() {
   const [pods, setPods] = React.useState<Podcast[]>([]);
   const [res, setRes] = React.useState<Resource[]>([]);
   const [camps, setCamps] = React.useState<Campaign[]>([]);
+  const [loading, setLoading] = React.useState(true);
   
   // Enhanced filtering and search
   const [searchQuery, setSearchQuery] = React.useState("");
@@ -70,6 +72,7 @@ export default function SavedScreen() {
         setRes(r);
         setCamps(c);
       } catch {}
+      finally { setLoading(false); }
     })();
   }, []);
 
@@ -123,6 +126,9 @@ export default function SavedScreen() {
 
     return filtered;
   }, [allItems, activeFilter, searchQuery, sortBy]);
+
+  // Announce once when initial saved items are ready
+  usePostLoadAnnounce({ loading, count: filteredAndSortedItems.length, ns: 'savedScreen' });
 
   const sections = React.useMemo(() => {
     if (activeFilter === "all") {

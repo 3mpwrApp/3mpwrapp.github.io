@@ -21,10 +21,10 @@ import { campaigns as localCampaigns } from "../../../data/campaigns";
 import { petitions } from "../../../data/petitions";
 import {
   MAX_FONT_SCALE,
-  useAnnounceOnChange,
   useAnnounceOnMount,
   useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../../i18n";
 import { logActivity } from "../../../services/activity";
 import { fetchCampaigns } from "../../../services/campaigns";
@@ -92,7 +92,8 @@ function ScreenInner() {
     setCount("campaigns", items.length);
   }, [items, setCount]);
 
-  useAnnounceOnChange(items.length, (n) => `${n} campaigns loaded`);
+  // One-time polite announcement of loaded count
+  usePostLoadAnnounce({ loading, count: items.length, ns: 'campaigns' });
 
   type Mixed = (typeof local.myCampaigns[number] & { kind?: 'campaign' | 'petition' });
   const allItems = React.useMemo<Mixed[]>(

@@ -307,6 +307,10 @@
     }
   },
   "eventsFeature": {
+    "itemsLoaded": {
+      "one": "{{count}} événement chargé",
+      "other": "{{count}} événements chargés"
+    },
     "empty": "Aucun événement ne correspond à vos filtres",
     "search": {
       "placeholder": "Rechercher événements, tags, lieux"
@@ -670,6 +674,10 @@
     }
   },
   "resources": {
+    "itemsLoaded": {
+      "one": "{{count}} ressource chargée",
+      "other": "{{count}} ressources chargées"
+    },
   "appeal_coach": "Coach d’appel (bientôt)",
   "prepare_appeal": "Préparation de l’appel (bientôt)",
     "tools": {
@@ -693,6 +701,33 @@
       "emergency_crisis": "Urgence et crise"
     },
     "search": "Rechercher des ressources"
+  },
+  "podcasts": {
+    "itemsLoaded": {
+      "one": "{{count}} vidéo chargée",
+      "other": "{{count}} vidéos chargées"
+    },
+    "empty": "Aucune vidéo ne correspond à vos filtres"
+  },
+  "community": {
+    "itemsLoaded": {
+      "one": "{{count}} canal chargé",
+      "other": "{{count}} canaux chargés"
+    },
+    "empty": "Aucun canal ne correspond à vos filtres",
+    "toolsEmpty": "Aucun outil ne correspond à votre recherche",
+    "myPosts": {
+      "title": "Mes publications",
+      "open": "Ouvrir",
+      "empty": "Vous n'avez pas encore publié."
+    }
+  },
+  "campaigns": {
+    "itemsLoaded": {
+      "one": "{{count}} campagne chargée",
+      "other": "{{count}} campagnes chargées"
+    },
+    "empty": "Aucune campagne ne correspond à vos filtres"
   },
   "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
   "filters": {
@@ -1945,6 +1980,10 @@
     "applied": "Quiet hours updated"
   },
   "savedScreen": {
+    "itemsLoaded": {
+      "one": "{{count}} élément enregistré chargé",
+      "other": "{{count}} éléments enregistrés chargés"
+    },
     "subtitle": "Organisez et accédez à vos contenus enregistrés",
     "searchPlaceholder": "Rechercher des éléments enregistrés...",
     "searchLabel": "Rechercher des éléments enregistrés",
@@ -2416,26 +2455,5 @@
       "hide": " settings.emergencyWallet.hide",
       "show": " settings.emergencyWallet.show"
     }
-  },
-  "deadlines": {
-    "prevMonth": "Mois précédent",
-    "nextMonth": "Mois suivant",
-    "reloadShort": "Actualiser",
-    "today": "Aujourd'hui"
-  },
-  "campaigns": {
-    "empty": "Aucune campagne ne correspond à vos filtres"
-  },
-  "community": {
-    "empty": "Aucun canal ne correspond à vos filtres",
-    "toolsEmpty": "Aucun outil ne correspond à votre recherche",
-    "myPosts": {
-      "title": "Mes publications",
-      "open": "Ouvrir",
-      "empty": "Vous n'avez pas encore publié."
-    }
-  },
-  "podcasts": {
-    "empty": "Aucune vidéo ne correspond à vos filtres"
   }
 }

@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { usePostLoadAnnounce } from '../../../hooks/usePostLoadAnnounce';
 import { useTranslation } from '../../../i18n';
 import { addEvent } from '../../../services/calendar';
 import { deleteDeadline, listDeadlines, updateDeadline, type Deadline } from '../../../services/deadlines';
@@ -32,23 +33,6 @@ export default function DeadlinesList() {
       setLoading(true);
       const rows = await listDeadlines();
       setItems(rows);
-      if (announceCount) {
-        // Announce count (post-load) – avoid noise during mutation-triggered reloads
-        const count = rows.length;
-        setTimeout(() => {
-          if (count === 0) {
-            announce(t('templates.deadlines.empty','No deadlines saved.'));
-          } else if (count === 1) {
-            announce(
-              t('templates.deadlines.itemsLoaded.one','{{count}} deadline loaded').replace('{{count}}', String(count))
-            );
-          } else {
-            announce(
-              t('templates.deadlines.itemsLoaded.other','{{count}} deadlines loaded').replace('{{count}}', String(count))
-            );
-          }
-        }, 50);
-      }
     } catch {
       Alert.alert(t('templates.deadlines.loadFailed','Load failed'), t('templates.deadlines.loadFailedBody','Unable to load deadlines.'));
     } finally {
@@ -59,6 +43,9 @@ export default function DeadlinesList() {
   React.useEffect(() => {
     load(true); // initial load announces count
   }, [load]);
+
+  // One-time post-load announcement using reusable hook
+  usePostLoadAnnounce({ loading, count: items.length, ns: 'templates.deadlines', emptyKey: 'templates.deadlines.empty' });
 
   // Updated: i18n for export alerts
   const exportAll = async () => {

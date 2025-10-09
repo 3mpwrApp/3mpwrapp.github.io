@@ -244,7 +244,7 @@
       "addWeekly": " Add weekly",
       "monthShort": " Mo",
       "addMonthly": " Add monthly",
-      "empty": " No deadlines yet.",
+  "empty": "No hay plazos guardados.",
       "updated": " Updated",
       "snoozedDeadline": " Deadline snoozed",
       "reminder24h": " Reminder in 24 hours",
@@ -1319,6 +1319,10 @@
     }
   },
   "resources": {
+    "itemsLoaded": {
+      "one": "{{count}} recurso cargado",
+      "other": "{{count}} recursos cargados"
+    },
     "intro": " Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
   "appeal_coach": "Asesor de apelaciones (próximamente)",
   "prepare_appeal": "Preparar la apelación (próximamente)",
@@ -1607,9 +1611,11 @@
   "comingSoon": "Esta función estará disponible pronto. Estamos trabajando en ello."
   },
   "campaigns": {
+    "itemsLoaded": { "one": "{{count}} campaña cargada", "other": "{{count}} campañas cargadas" },
     "empty": " No campaigns match your filters"
   },
   "community": {
+    "itemsLoaded": { "one": "{{count}} canal cargado", "other": "{{count}} canales cargados" },
     "empty": " No channels match your filters",
     "toolsEmpty": " No tools match your search",
     "myPosts": {
@@ -1619,6 +1625,7 @@
     }
   },
   "podcasts": {
+    "itemsLoaded": { "one": "{{count}} video cargado", "other": "{{count}} videos cargados" },
     "empty": " No videos match your filters"
   },
   "admin": {
@@ -2073,6 +2080,10 @@
     "chipsAnnounce": " Quick filter set to {{label}}"
   },
   "eventsFeature": {
+    "itemsLoaded": {
+      "one": "{{count}} evento cargado",
+      "other": "{{count}} eventos cargados"
+    },
     "empty": " No events match your filters",
     "search": {
       "placeholder": " Search events, tags, places"
@@ -2278,6 +2289,10 @@
     "applied": " Quiet hours updated"
   },
   "savedScreen": {
+    "itemsLoaded": {
+      "one": "{{count}} elemento guardado cargado",
+      "other": "{{count}} elementos guardados cargados"
+    },
     "subtitle": " Organize and access your bookmarked content",
     "searchPlaceholder": " Search saved items...",
     "searchLabel": " Search saved items",

@@ -1,13 +1,13 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-    FlatList,
-    RefreshControl,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  FlatList,
+  RefreshControl,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
@@ -20,15 +20,15 @@ import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { generateDisabilityObservances } from "../../../data/disability-observances";
 import { events as localEvents } from "../../../data/events";
 import {
-    generateCanadianHolidays,
-    generateProvincialHolidays,
+  generateCanadianHolidays,
+  generateProvincialHolidays,
 } from "../../../data/holidays-ca";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnChange,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../../i18n";
 import { ANALYTICS_EVENTS, trackEvent } from "../../../services/analyticsClient";
 import { fetchEvents } from "../../../services/events";
@@ -114,7 +114,8 @@ export default function EventsScreen() {
     setCount("events", items.length);
   }, [items, setCount]);
 
-  useAnnounceOnChange(items.length, (n) => t('eventsFeature.loadedCount','{{n}} events loaded', { n }));
+  // One-time post-load announcement
+  usePostLoadAnnounce({ loading, count: items.length, ns: 'eventsFeature', emptyKey: 'eventsFeature.empty' });
 
   const formatMeta = (date: string, isVirtual?: boolean, location?: string) => {
     const place = isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (location ?? t('eventsFeature.tbd','TBD'));
