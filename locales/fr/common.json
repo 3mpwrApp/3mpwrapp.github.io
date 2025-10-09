@@ -306,6 +306,12 @@
       "resources_search": "Open Resources Hub"
     }
   },
+  "deadlines": {
+    "prevMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "reloadShort": "Actualiser",
+    "today": "Aujourd'hui"
+  },
   "eventsFeature": {
     "itemsLoaded": {
       "one": "{{count}} événement chargé",
