@@ -28,7 +28,7 @@ export default function DeadlinesList() {
   const [lastDeleted, setLastDeleted] = React.useState<Deadline | null>(null);
   const undoTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const load = React.useCallback(async (announceCount: boolean = false) => {
+  const load = React.useCallback(async () => {
     try {
       setLoading(true);
       const rows = await listDeadlines();
@@ -41,7 +41,7 @@ export default function DeadlinesList() {
   }, []);
 
   React.useEffect(() => {
-    load(true); // initial load announces count
+    load(); // initial load announces count
   }, [load]);
 
   // One-time post-load announcement using reusable hook
@@ -113,7 +113,7 @@ export default function DeadlinesList() {
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('templates.deadlines.myDeadlines','My Deadlines')} {loading ? t('common.loading','(loading...)') : ''}
       </Text>
-  <A11yPressable onPress={() => load(true)} style={s.button} accessibilityLabel={t('templates.deadlines.reload','Reload deadlines')}><Text style={s.buttonText}>{t('templates.deadlines.reloadShort','Reload')}</Text></A11yPressable>
+  <A11yPressable onPress={() => load()} style={s.button} accessibilityLabel={t('templates.deadlines.reload','Reload deadlines')}><Text style={s.buttonText}>{t('templates.deadlines.reloadShort','Reload')}</Text></A11yPressable>
       <A11yPressable onPress={async () => {
         try {
           const DP = await import('expo-document-picker');
