@@ -180,7 +180,7 @@ export default function ReflectionsCalendarTestImpl() {
 			</Modal>
 			{standaloneEditor && editorOpen && !detailsOpen && (
 				<View style={[s.modalCard, { backgroundColor: palette.surface, marginTop:16 }]}
-					accessibilityLabel="Add reflection inline" accessibilityRole="form">
+					accessibilityLabel="Add reflection inline" accessible>
 					<Text style={{ color: palette.text, fontWeight:'700', marginBottom:8 }}>New Reflection</Text>
 					<Pressable
 						accessibilityRole="button"
