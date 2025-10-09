@@ -11,7 +11,8 @@ import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { resources as localResources } from "../../../data/resources";
-import { MAX_FONT_SCALE, useAnnounceOnChange, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../../i18n";
 import { fetchResources } from "../../../services/resources";
 import { useCounts } from "../../../store/counts";
@@ -88,7 +89,8 @@ export default function ResourcesScreen() {
     if (province && region === "all") setRegion(province as any);
   }, [province, region]);
 
-  useAnnounceOnChange(items.length, (n) => `${n} resources loaded`);
+  // One-time polite announcement when items first finish loading
+  usePostLoadAnnounce({ loading, count: items.length, ns: 'resources' });
 
   const filtered = React.useMemo(
     () => filterResources(items, { region, category, query }),

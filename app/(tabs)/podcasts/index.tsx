@@ -15,10 +15,10 @@ import {
 import { podcasts as localPodcasts } from "../../../data/podcasts";
 import {
     MAX_FONT_SCALE,
-    useAnnounceOnChange,
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
+import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
 import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
 // Stories mirror YouTube list; we render a single combined list (podcasts only)
@@ -199,7 +199,8 @@ export default function PodcastsScreen() {
     setCount("podcasts", items.length);
   }, [items, setCount]);
 
-  useAnnounceOnChange(items.length, (n) => `${n} videos loaded`);
+  // One-time polite announcement when items first finish loading
+  usePostLoadAnnounce({ loading, count: items.length, ns: 'podcasts' });
 
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
