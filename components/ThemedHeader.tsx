@@ -3,13 +3,13 @@ import * as Linking from "expo-linking";
 import { router, usePathname, type Href } from "expo-router";
 import React from "react";
 import {
-    Image,
-    Pressable,
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  Image,
+  Pressable,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 
 import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
@@ -330,7 +330,7 @@ export default function ThemedHeader() {
               { label: "Ratings", path: "/(tabs)/advocacy/ratings" },
               {
                 label: "Support Directory",
-                path: "/(tabs)/advocacy/support-directory",
+                path: "/(tabs)/resources/support-directory",
               },
             ].map((item) => (
               <Pressable
@@ -481,6 +481,10 @@ function createStyles(palette: Palette) {
       paddingVertical: 6,
       minWidth: 180,
       zIndex: 999,
+      // Improve layering/visibility on web
+      ...(typeof navigator !== 'undefined' && /WebKit|Firefox|Chrome|Safari/.test(navigator.userAgent || '')
+        ? { boxShadow: '0 8px 24px rgba(0,0,0,0.2)' } as any
+        : {}),
     },
     menuSection: {
       color: palette.text,
