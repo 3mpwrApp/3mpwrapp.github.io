@@ -109,12 +109,16 @@ const s = StyleSheet.create({
     // center text/content
     alignItems: 'center',
     justifyContent: 'center',
-    // Shadow for visibility (web/native)
-    shadowColor: "#000",
-    shadowOpacity: 0.15,
-    shadowRadius: 6,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 3,
+    // Shadows: use boxShadow on web, native shadow props elsewhere
+    ...(Platform.OS === 'web'
+      ? { boxShadow: '0 6px 12px rgba(0,0,0,0.15)' as any }
+      : {
+          shadowColor: '#000',
+          shadowOpacity: 0.15,
+          shadowRadius: 6,
+          shadowOffset: { width: 0, height: 2 },
+          elevation: 3,
+        }),
   },
   text: { fontWeight: "700" },
 });

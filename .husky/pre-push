@@ -8,6 +8,12 @@ echo "[pre-push] i18n assert"; npm run i18n:assert
 echo "[pre-push] accessibility scan"; npm run a11y:scan
 echo "[pre-push] wcag audit"; npm run wcag:audit
 
+# Enforce route conventions before expensive tests
+echo "[pre-push] route conventions (Tabs.Screen names)"; npm run check:tabs:names:strict || { echo "✗ route conventions failed"; exit 1; }
+
+# Enforce per-file perf guard early
+echo "[pre-push] performance: max file size"; npm run perf:max-file || { echo "✗ perf max-file failed"; exit 1; }
+
 echo "→ pre-push: typecheck (strict)"; npm run typecheck:strict || { echo "✗ typecheck failed"; exit 1; }
 echo "→ pre-push: tests"; npm run test:ci || { echo "✗ tests failed"; exit 1; }
 
