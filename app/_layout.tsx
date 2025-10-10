@@ -20,6 +20,7 @@ import { announce } from "../utils/announce";
 // Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
 import { I18nProvider } from "../i18n";
+import { setBetaFlag } from "../services/analytics";
 import { fetchCampaigns } from "../services/campaigns";
 import { pruneExpiredReminders } from "../services/eventReminders";
 import { fetchEvents } from "../services/events";
@@ -199,6 +200,13 @@ export default function RootLayout() {
 
 function TelemetryInit() {
   const { state } = usePrivacy();
+  // Mark analytics events as coming from a beta build when explicitly enabled
+  React.useEffect(() => {
+    try {
+      const betaEnv = (process.env.EXPO_PUBLIC_BETA || "").toLowerCase();
+      if (betaEnv === "1" || betaEnv === "true") setBetaFlag(true);
+    } catch {}
+  }, []);
   React.useEffect(() => {
     if (state.errorReportingEnabled) {
       const dsn = process.env.EXPO_PUBLIC_SENTRY_DSN as string | undefined;
