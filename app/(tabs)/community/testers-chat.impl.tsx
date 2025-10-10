@@ -6,6 +6,7 @@ import A11yPressable from '../../../components/A11yPressable';
 import { auth, db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { setLastRead, setTyping, touchPresence } from '../../../services/community';
+import { isCloudConsentEnabled } from '../../../services/consent';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export type Message = { id?: string; text: string; authorUid: string; createdAt?: any };
@@ -24,6 +25,7 @@ export default function TestersChatImpl() {
   const roomId = 'testers';
 
   React.useEffect(() => {
+    if (!isCloudConsentEnabled()) return;
     const col = collection(db, 'chats', roomId, 'messages');
     const q = query(col, orderBy('createdAt', 'desc'));
     let lastReadTs = 0;
@@ -67,10 +69,10 @@ export default function TestersChatImpl() {
   React.useEffect(() => {
     let mounted = true;
     const beat = async () => { if (mounted) await touchPresence('testers'); };
-    beat();
+    if (isCloudConsentEnabled()) beat();
   const id = setInterval(beat, 30000);
   try { (id as any)?.unref?.(); } catch {}
-    setLastRead('testers');
+  if (isCloudConsentEnabled()) setLastRead('testers');
     return () => { mounted = false; clearInterval(id); };
   }, []);
 
@@ -79,6 +81,7 @@ export default function TestersChatImpl() {
     if (!uid) { Alert.alert('Sign in required', 'Please sign in to chat.'); return; }
     if (!text.trim()) return;
     try {
+      if (!isCloudConsentEnabled()) { Alert.alert('Cloud disabled','Enable cloud features in Settings → Privacy to use chat.'); return; }
       const col = collection(db, 'chats', 'testers', 'messages');
       await addDoc(col, { text: text.trim(), authorUid: uid, createdAt: serverTimestamp() });
       setText('');

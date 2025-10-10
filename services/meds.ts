@@ -2,6 +2,8 @@ import { addDoc, collection, deleteDoc, doc, getDocs, orderBy, query, serverTime
 
 import { auth, db } from '../firebase/config';
 
+import { isCloudConsentEnabled } from './consent';
+
 export type Medication = {
   id?: string;
   name: string;
@@ -26,6 +28,7 @@ export type MedLog = {
 
 export async function addMedication(m: Omit<Medication, 'id' | 'createdAt'>) {
   const uid = auth.currentUser?.uid; if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   await addDoc(collection(db, 'users', uid, 'medications'), { ...m, createdAt: serverTimestamp() });
 }
 export async function listMedications(): Promise<Medication[]> {
@@ -35,14 +38,17 @@ export async function listMedications(): Promise<Medication[]> {
 }
 export async function updateMedication(id: string, patch: Partial<Medication>) {
   const uid = auth.currentUser?.uid; if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   await updateDoc(doc(db, 'users', uid, 'medications', id), patch);
 }
 export async function deleteMedication(id: string) {
   const uid = auth.currentUser?.uid; if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   await deleteDoc(doc(db, 'users', uid, 'medications', id));
 }
 export async function addMedLog(log: Omit<MedLog,'id'|'createdAt'>) {
   const uid = auth.currentUser?.uid; if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   await addDoc(collection(db, 'users', uid, 'med_logs'), { ...log, createdAt: serverTimestamp() });
 }
 export async function listLogs(medId?: string): Promise<MedLog[]> {

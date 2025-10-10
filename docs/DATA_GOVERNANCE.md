@@ -1,4 +1,4 @@
-# Data Governance & Privacy Overview
+# Data Governance, Threat Model & Privacy
 
 ## Purpose
 Define how user data is classified, stored, accessed, retained, and protected to meet privacy-by-design expectations and facilitate future compliance (PIPEDA / GDPR alignment).
@@ -46,12 +46,71 @@ Sensitive flows (evidence) will add: Encryption -> Persist -> Decrypt on access.
 |------|-----------|-----------------|
 | Notifications | 100 most recent | FIFO removal |
 | Activity events (local) | Session only | App restart |
+| Usage buffer | 200 most recent | Manual sweep or auto-cap |
+| Temp evidence exports | 7 days | Auto sweep |
 | Evidence (future) | User-managed | Manual delete / retention policy (TBD) |
 | Coach prompts | Not persisted | N/A |
 
 ## Privacy Controls (User Facing)
 - Terms & Privacy gate acceptance (existing `TermsGate` / `PrivacyGate`)
 - Clear toggle to disable notifications
+- Opt-out of analytics mirrors telemetry consent
+- Cloud Features toggle gates any remote writes (chat, tokens)
+- Data management: Export/Import backup, Clear All Data, Prune Old Cache
+
+## Threat Model (High-level)
+- Adversaries:
+	- Lost/stolen device with unlocked app
+	- Malicious app reading shared storage
+	- Network attacker observing traffic
+	- Rogue admin on backend (if cloud features enabled)
+- Assets:
+	- Evidence notes/files, wellness reflections, personal preferences
+	- Notification schedule/inbox (low sensitivity)
+	- Usage buffer (local-only)
+- Trust assumptions:
+	- Device OS sandboxing; AsyncStorage scoped per app
+	- Transport uses HTTPS/TLS for any cloud calls
+	- No third-party SDKs exfiltrating PII by default
+- Controls (current):
+	- Local-first storage, explicit consent for any cloud use
+	- Optional passcode lock and auto-lock timeout
+	- No telemetry without consent; analytics disabled natively
+	- Evidence queue encrypted at rest (best-effort) and pruned
+	- Retention sweep for temp exports and usage buffer
+- Gaps and mitigations (roadmap):
+	- Encrypt evidence with user-derived key; secure key storage (SecureStore)
+	- Per-record end-to-end encryption for any optional sync
+	- Harden backup export format with encryption + checksum
+	- Expand unit tests for data migrations and retention
+
+## Security Roadmap (Phased)
+1. Device security
+	 - Enforce strong passcode UX and inactivity lock options
+	 - Optional biometric unlock (if available)
+2. Storage encryption
+	 - Evidence content encryption (Argon2id KDF + AES-GCM)
+	 - Encrypt critical keys (device key, notes) with SecureStore
+3. Sync hardening (optional features only)
+	 - Client-side encrypted blobs; zero-knowledge server
+	 - Fine-grained consent: per-feature (chat, tokens)
+4. Observability with privacy
+	 - Local-first logging; aggregated, non-PII metrics if enabled
+	 - Red-team scenarios; add chaos tests for data loss/leak
+
+## Compliance Alignment (Non-regulated baseline)
+- GDPR/PIPEDA principles
+	- Lawfulness/consent: Explicit toggles for telemetry and cloud features
+	- Data minimization: Local-only defaults, narrow schemas, retention caps
+	- Integrity/confidentiality: HTTPS, sandboxing, planned encryption-at-rest
+	- Access/portability: Export backup, planned per-domain exports
+	- Erasure: Clear All Data wipes local keys; planned remote erasure scope if used
+- Out of scope (not a medical app): HIPAA/PHIPA; no claim of compliance
+
+## Operational Playbooks
+- Incident response: disable cloud features globally via env; communicate in About banner and Notifications
+- Backup/restore: user-managed exports only; no server backups of user content
+- Key rotation: when encryption lands, support re-encrypt on upgrade
 - Future: export evidence & delete account workflow
 
 ## Logging & Audit
@@ -87,3 +146,5 @@ Sensitive flows (evidence) will add: Encryption -> Persist -> Decrypt on access.
 
 ---
 Prepared: 2025-09-22
+
+Updated: 2025-10-10

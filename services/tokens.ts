@@ -3,12 +3,16 @@ import { Platform } from 'react-native';
 
 import { auth, db } from '../firebase/config';
 
+import { isCloudConsentEnabled } from './consent';
+
 function getNotifications(): any | null {
   try { return require('expo-notifications'); } catch { return null; }
 }
 
 export async function registerExpoPushToken() {
   try {
+    // Don't collect or store tokens unless user has allowed cloud features
+    if (!isCloudConsentEnabled()) return null;
     // Web does not fully support push token listeners; skip to avoid warnings
     if (Platform.OS === 'web') return null;
     const Notifications = getNotifications();

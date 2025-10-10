@@ -3,6 +3,8 @@ import { getDownloadURL, ref, uploadBytes, uploadBytesResumable } from 'firebase
 
 import { auth, db, storage } from '../firebase/config';
 
+import { isCloudConsentEnabled } from './consent';
+
 export type EvidenceFile = {
   name: string;
   url: string;
@@ -14,6 +16,7 @@ export type EvidenceFile = {
 export async function uploadEvidenceFile(uri: string, name: string): Promise<EvidenceFile> {
   const uid = auth.currentUser?.uid;
   if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   const path = `evidence/${uid}/${Date.now()}_${name.replace(/[^a-zA-Z0-9._-]/g,'_')}`;
   const r = ref(storage, path);
   const resp = await fetch(uri);
@@ -32,6 +35,7 @@ export async function uploadEvidenceFileWithProgress(
   try {
     const uid = auth.currentUser?.uid;
     if (!uid) throw new Error('Not signed in');
+    if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
     const path = `evidence/${uid}/${Date.now()}_${name.replace(/[^a-zA-Z0-9._-]/g,'_')}`;
     const r = ref(storage, path);
     const resp = await fetch(uri);
@@ -72,6 +76,7 @@ export async function addEvidenceNote({
 }) {
   const uid = auth.currentUser?.uid;
   if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   const col = collection(db, 'users', uid, 'evidence');
   await addDoc(col, {
     text: text || '',
@@ -105,6 +110,7 @@ export async function listEvidencePage(pageSize = 10, cursor?: any): Promise<{ i
 export async function deleteEvidenceDoc(id: string): Promise<boolean> {
   const uid = auth.currentUser?.uid;
   if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) return false;
   try {
     const { doc, deleteDoc, getDoc } = await import('firebase/firestore');
     const dref = doc(db, 'users', uid, 'evidence', id);

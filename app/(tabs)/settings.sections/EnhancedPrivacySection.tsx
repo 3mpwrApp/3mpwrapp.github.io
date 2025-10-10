@@ -7,6 +7,8 @@ import AccessibilityToggle from '../../../components/AccessibilityToggle';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import { clearAllData, exportBackup, importBackup } from '../../../services/backup';
+import { isCloudConsentEnabled, setCloudConsent, setTelemetryConsent } from '../../../services/consent';
+import { runRetentionSweep } from '../../../services/retention';
 import { usePrivacy } from '../../../store/privacy';
 import { useSettings } from '../../../store/settings';
 import { useTextScale } from '../../../theme/typography';
@@ -39,6 +41,7 @@ export default function EnhancedPrivacySection() {
   const s = React.useMemo(()=> createStyles(palette, factor), [palette, factor]);
   const { state, setPasscode, setLockWellness, setErrorReportingEnabled } = usePrivacy();
   const { requirePasscodeOnLaunch, setRequirePasscodeOnLaunch, autoLockTimeout, setAutoLockTimeout, analyticsOptOut, setAnalyticsOptOut } = useSettings();
+  const [cloudOn, setCloudOn] = React.useState<boolean>(isCloudConsentEnabled());
 
   const onExport = async () => {
      const bundle = await exportBackup();
@@ -62,6 +65,7 @@ export default function EnhancedPrivacySection() {
   };
   const onImport = async () => { try { const Doc = await import('expo-document-picker'); const res = await Doc.getDocumentAsync({ type:'application/json' }); if (res.canceled || !res.assets?.length) return; const uri = res.assets[0].uri; const FS = await import('expo-file-system'); const raw = await FS.readAsStringAsync(uri); const ok = await importBackup(JSON.parse(raw)); Alert.alert(ok? 'Imported':'Import failed', ok? 'Backup restored.':'Could not restore backup.'); } catch { Alert.alert('Import failed','Unable to read backup file.'); } };
   const onClear = async () => { Alert.alert('Clear All Data','This will permanently delete all your local app data. This cannot be undone. Are you sure?', [ { text:'Cancel', style:'cancel' }, { text:'Clear Data', style:'destructive', onPress: async()=> { const ok = await clearAllData(); Alert.alert(ok? 'Cleared':'Failed', ok? 'Local app data cleared.':'Unable to clear data.'); } } ] ); };
+  const onRetention = async () => { try { const res = await runRetentionSweep(); Alert.alert('Prune complete', `Removed ${res.removed} items.`); } catch { Alert.alert('Prune complete','Done.'); } };
 
   return (
     <View>
@@ -77,7 +81,8 @@ export default function EnhancedPrivacySection() {
           ))}
         </View>
       </View>
-      <AccessibilityToggle title={t('settings.privacy.analytics','Opt Out of Analytics')} description={t('settings.privacy.analyticsDesc',"Don't share usage data")} value={analyticsOptOut} onValueChange={setAnalyticsOptOut} icon='analytics' testID='analytics-toggle' />
+  <AccessibilityToggle title={t('settings.privacy.analytics','Opt Out of Analytics')} description={t('settings.privacy.analyticsDesc',"Don't share usage data")} value={analyticsOptOut} onValueChange={(v)=>{ setAnalyticsOptOut(v); try { setTelemetryConsent(!v); } catch {} }} icon='analytics' testID='analytics-toggle' />
+  <AccessibilityToggle title='Cloud Features (Chat & Sync)' description='Allow optional cloud features like community chat and device tokens' value={cloudOn} onValueChange={(v)=>{ setCloudOn(!!v); try { setCloudConsent(!!v); } catch {} }} icon='cloud-outline' testID='cloud-consent-toggle' />
       <AccessibilityToggle title='Error Reporting' description='Help improve the app by sharing crash reports' value={state.errorReportingEnabled ?? false} onValueChange={setErrorReportingEnabled} icon='bug' testID='error-reporting-toggle' />
       <View style={s.backupSection}>
         <Text style={s.sectionSubtitle} accessibilityRole='header'>Data Management</Text>
@@ -90,6 +95,7 @@ export default function EnhancedPrivacySection() {
           <A11yPressable style={s.backupButton} onPress={onExport} accessibilityRole='button' accessibilityLabel='Export backup' hitSlop={HIT_SLOP_8}><Ionicons name='download' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Export Backup</Text></A11yPressable>
           <A11yPressable style={s.backupButton} onPress={onImport} accessibilityRole='button' accessibilityLabel='Import backup' hitSlop={HIT_SLOP_8}><Ionicons name='cloud-upload' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Import Backup</Text></A11yPressable>
           <A11yPressable style={[s.backupButton, s.dangerButton]} onPress={onClear} accessibilityRole='button' accessibilityLabel='Clear all data' hitSlop={HIT_SLOP_8}><Ionicons name='trash' size={16} color={palette.error} /><Text style={[s.backupButtonText, s.dangerButtonText]}>Clear All Data</Text></A11yPressable>
+          <A11yPressable style={s.backupButton} onPress={onRetention} accessibilityRole='button' accessibilityLabel='Run retention sweep' hitSlop={HIT_SLOP_8}><Ionicons name='time-outline' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Prune Old Cache</Text></A11yPressable>
         </View>
       </View>
     </View>

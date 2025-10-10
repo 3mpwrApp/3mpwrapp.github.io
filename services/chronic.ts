@@ -2,6 +2,8 @@ import { addDoc, collection, deleteDoc, doc, getDocs, orderBy, query, serverTime
 
 import { auth, db } from '../firebase/config';
 
+import { isCloudConsentEnabled } from './consent';
+
 export type ChronicEntry = {
   id?: string;
   date: string; // ISO
@@ -15,6 +17,7 @@ export type ChronicEntry = {
 
 export async function addEntry(e: Omit<ChronicEntry,'id'|'createdAt'>) {
   const uid = auth.currentUser?.uid; if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   await addDoc(collection(db, 'users', uid, 'chronic_entries'), { ...e, createdAt: serverTimestamp() });
 }
 export async function listEntries(): Promise<ChronicEntry[]> {
@@ -24,10 +27,12 @@ export async function listEntries(): Promise<ChronicEntry[]> {
 }
 export async function updateEntry(id: string, patch: Partial<ChronicEntry>) {
   const uid = auth.currentUser?.uid; if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   await updateDoc(doc(db, 'users', uid, 'chronic_entries', id), patch);
 }
 export async function deleteEntry(id: string) {
   const uid = auth.currentUser?.uid; if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   await deleteDoc(doc(db, 'users', uid, 'chronic_entries', id));
 }
 

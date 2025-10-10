@@ -1,6 +1,8 @@
 import { addDoc, collection, doc, getDocs, limit, orderBy, query, serverTimestamp, setDoc, where } from 'firebase/firestore';
 
-import { db, auth } from '../firebase/config';
+import { auth, db } from '../firebase/config';
+
+import { isCloudConsentEnabled } from './consent';
 
 export type Thread = { id?: string; channel: string; title: string; body: string; authorUid: string; createdAt?: any; flagged?: boolean; hidden?: boolean };
 export type Comment = { id?: string; threadId: string; text: string; authorUid: string; createdAt?: any; flagged?: boolean; hidden?: boolean };
@@ -13,11 +15,13 @@ export async function listThreads(_channel: string, pageSize = 10) {
 }
 
 export async function postThread(channel: string, title: string, body: string) {
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   const col = collection(db, 'threads');
   return addDoc(col, { channel, title, body, authorUid: auth.currentUser?.uid, createdAt: serverTimestamp(), flagged:false, hidden:false });
 }
 
 export async function postComment(threadId: string, text: string) {
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   const col = collection(db, 'comments');
   return addDoc(col, { threadId, text, authorUid: auth.currentUser?.uid, createdAt: serverTimestamp(), flagged:false, hidden:false });
 }
@@ -25,22 +29,26 @@ export async function postComment(threadId: string, text: string) {
 // Presence/typing/last_read helpers
 export async function setTyping(room: string, isTyping: boolean) {
   const uid = auth.currentUser?.uid; if (!uid) return;
+  if (!isCloudConsentEnabled()) return;
   await setDoc(doc(db, 'chats', room, 'typing', uid), { typing: isTyping, ts: serverTimestamp() }, { merge: true });
 }
 
 export async function touchPresence(room: string) {
   const uid = auth.currentUser?.uid; if (!uid) return;
+  if (!isCloudConsentEnabled()) return;
   await setDoc(doc(db, 'chats', room, 'presence', uid), { lastActive: serverTimestamp() }, { merge: true });
 }
 
 export async function setLastRead(room: string) {
   const uid = auth.currentUser?.uid; if (!uid) return;
+  if (!isCloudConsentEnabled()) return;
   await setDoc(doc(db, 'chats', room, 'last_read', uid), { ts: serverTimestamp() }, { merge: true });
 }
 
 // Channel unread helpers (per-user lastRead stored in chats/channel_<slug>/last_read/{uid})
 export async function setChannelLastRead(slug: string) {
   const uid = auth.currentUser?.uid; if (!uid) return;
+  if (!isCloudConsentEnabled()) return;
   await setDoc(doc(db, 'chats', `channel_${slug}`, 'last_read', uid), { ts: serverTimestamp() }, { merge: true });
 }
 

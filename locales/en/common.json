@@ -2127,6 +2127,7 @@
     "privacy": "All information is stored securely on your device only. Nothing is shared with external servers."
   },
   "about": {
+    "betaBanner": "This is a beta build",
     "title": "About & Contact",
   "intro1": "3mpwr App supports injured workers, the disability community, advocates and allies with tools, resources, and updates.",
     "intro2": "Vision: a full lifecycle empowerment hub - starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.",
@@ -2139,6 +2140,32 @@
     "emailNotConfiguredTitle": "Email not configured",
     "emailNotConfiguredBody": "Please email {{email}}",
     "validationMissing": "Subject and message required"
+  },
+  "home": {
+    "title": "Home",
+    "personalization": {
+      "note": "Suggestions powered by the Personalization Engine (beta)."
+    },
+    "guide": {
+      "header": "Today's Guide",
+      "snapshot": "Snapshot",
+      "snapshotPlaceholder": "(Mood tracking available on Wellness tab)",
+      "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
+      "suggested": "Suggested",
+      "noSuggestions": "No suggestions yet",
+      "open": "Open",
+      "feedback": {
+        "up": "Helpful suggestion",
+        "down": "Not relevant"
+      }
+    },
+    "quick": {
+      "betaChat": {
+        "title": "Beta Testers Chat",
+        "label": "Open Beta Testers Chat",
+        "cta": "Join the Beta Testers Chat"
+      }
+    }
   },
   "auth": {
     "registerTitle": "Register",

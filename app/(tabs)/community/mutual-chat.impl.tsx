@@ -6,6 +6,7 @@ import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { auth, db } from '../../../firebase/config';
+import { isCloudConsentEnabled } from '../../../services/consent';
 import { registerExpoPushToken } from '../../../services/tokens';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -21,6 +22,7 @@ export default function MutualChatImpl() {
   React.useEffect(()=>{
     let cleanup: (()=>void) | undefined;
     try {
+      if (!isCloudConsentEnabled()) return () => {};
       // Use general chat collection for general chat, mutual aid posts for specific aid chats
       const collectionPath = chatId === 'general' ? 'chats' : 'mutual_aid_posts';
       const docPath = chatId === 'general' ? 'mutual_general' : String(chatId);
@@ -48,6 +50,7 @@ export default function MutualChatImpl() {
     const ref = doc(db, presenceCollectionPath, presenceDocPath, 'presence', uid);
     (async () => {
       try {
+        if (!isCloudConsentEnabled()) return;
         await setDoc(ref, { lastSeen: serverTimestamp(), typing: false }, { merge: true });
         // add to participants index for server-based push notifications
         if (chatId !== 'general') {
@@ -55,10 +58,10 @@ export default function MutualChatImpl() {
         }
       } catch {}
     })();
-    const i = setInterval(async()=>{ try { await setDoc(ref, { lastSeen: serverTimestamp() }, { merge: true }); } catch {} }, 30000);
+    const i = setInterval(async()=>{ try { if (isCloudConsentEnabled()) await setDoc(ref, { lastSeen: serverTimestamp() }, { merge: true }); } catch {} }, 30000);
     try { (i as any)?.unref?.(); } catch {}
     // Register device token for server-based push (Expo token)
-    registerExpoPushToken();
+    if (isCloudConsentEnabled()) registerExpoPushToken();
     return () => { clearInterval(i); };
   }, [chatId]);
   // Roster snapshot
@@ -102,6 +105,7 @@ export default function MutualChatImpl() {
         />
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ 
           try{ 
+            if (!isCloudConsentEnabled()) { Alert.alert('Cloud disabled','Enable cloud features in Settings → Privacy to use chat.'); return; }
             const author = auth.currentUser?.uid || 'anon'; 
             if (chatId === 'general') {
               // Send to general chat

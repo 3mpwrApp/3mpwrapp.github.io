@@ -1446,6 +1446,13 @@
     "personalization": {
       "note": "Sugerencias impulsadas por el Motor de Personalización (beta)."
     },
+    "quick": {
+      "betaChat": {
+        "title": "Chat de Beta Testers",
+        "label": "Abrir chat de testers",
+        "cta": "Unirse"
+      }
+    },
     "guide": {
       "moodSummary": " Mood 7d avg: {{avg}} • Today entries: {{count}}",
       "snapshotPlaceholder": " (Mood tracking available on Wellness tab)",
@@ -2199,6 +2206,7 @@
     "intro1": " 3mpwr App supports injured workers, the disability community, advocates and allies with tools, resources, and updates.",
     "intro2": " Vision: a full lifecycle empowerment hub - starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.",
     "intro3": " Questions, suggestions, or requests? Reach out anytime.",
+    "betaBanner": "Esta es una versión beta",
     "emailLabel": " Email",
     "subjectPlaceholder": " Subject",
     "messagePlaceholder": " Your message",

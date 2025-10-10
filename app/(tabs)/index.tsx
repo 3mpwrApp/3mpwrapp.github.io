@@ -1,6 +1,6 @@
 import { Link } from 'expo-router';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { HomeGuide } from '../../components/HomeGuide';
 import { useTranslation } from '../../i18n';
@@ -14,7 +14,8 @@ export default function HomeScreen() {
       <Text accessibilityRole="header" style={{ color: palette.text, fontWeight: '700', fontSize: 20, marginBottom: 12 }}>
         {t('home.title','Home')} <Text style={{ fontSize: 14, opacity: 0.8 }}>(Beta)</Text>
       </Text>
-      <RecentPrompts />
+  <RecentPrompts />
+  <BetaTestersQuickLink />
       <HomeGuide />
       <Text style={{ color: palette.text, opacity: 0.7, marginTop: 8 }}>
         {t('home.personalization.note','Suggestions powered by the Personalization Engine (beta).')}
@@ -60,6 +61,21 @@ function RecentPrompts(){
           </Link>
         ))}
       </View>
+    </View>
+  );
+}
+
+function BetaTestersQuickLink() {
+  const palette = useAppPalette();
+  const { t } = useTranslation();
+  return (
+    <View style={{ marginBottom: 12 }}>
+      <Text style={{ color: palette.text, fontWeight: '700', marginBottom: 6 }}>{t('home.quick.betaChat.title','Beta Testers Chat')}</Text>
+      <Link href={'/(tabs)/community/testers-chat' as any} asChild>
+        <Pressable hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }} accessibilityRole='button' accessibilityLabel={t('home.quick.betaChat.label','Open Beta Testers Chat')} style={{ backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted, paddingHorizontal: 12, paddingVertical: 10, borderRadius: 8 }}>
+          <Text style={{ color: palette.text }}>🧪 {t('home.quick.betaChat.cta','Join the Beta Testers Chat')}</Text>
+        </Pressable>
+      </Link>
     </View>
   );
 }

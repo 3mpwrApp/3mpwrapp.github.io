@@ -58,6 +58,11 @@ export default function AboutScreen() {
       >
         {t("about.title","About & Contact")}
       </Text>
+      {process.env.EXPO_PUBLIC_BETA ? (
+        <View accessibilityRole="text" style={{ padding: 8, borderRadius: 6, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, marginBottom: 8 }}>
+          <Text style={{ color: palette.text, fontSize: 12 }}>{t('about.betaBanner','This is a beta build')}</Text>
+        </View>
+      ) : null}
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
       <Text style={styles.text}>{t("about.intro1")}</Text>

@@ -1263,6 +1263,16 @@ More in Settings
 - Backups: Export a backup to keep a copy safe; import to restore. Tip: Store backups in a private folder or cloud drive you control.
 - Data deletion: You can clear local data in Privacy & Backups. Tip: Export first if you might need the data later.
 
+### Data Governance & Privacy
+- Local-first: Your data stays on your device by default. Cloud features are off unless you turn them on.
+- Privacy controls (Settings → Privacy & Backups):
+  - Opt Out of Analytics: disables telemetry so the app won’t send usage data.
+  - Cloud Features (Chat & Sync): enables optional online features like community chat and device tokens. Leave this off to stay fully local.
+  - Data management: Export/Import backup, Clear All Data, Prune Old Cache to remove old temp files.
+- Evidence Locker: Notes and files are kept on-device. Future updates will add default encryption and optional encrypted sync.
+- Erasure: Use Clear All Data to wipe local storage. If you enabled cloud features, turn them off first and remove any remote data where applicable.
+- Beta builds: The About screen shows a small “This is a beta build” notice when applicable.
+
 Step‑by‑step: Make a backup
 
 1. Open Settings → Privacy & Backups.

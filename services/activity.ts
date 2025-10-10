@@ -2,13 +2,18 @@ import { getApps } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { addDoc, collection, getFirestore, limit, onSnapshot, orderBy, query, serverTimestamp, Timestamp } from 'firebase/firestore';
 
+
 import type { ActivityEventType, AnyActivityEvent, BaseActivityEvent } from '../types/activity';
 import { ACTIVITY_COLLECTION } from '../types/activity';
+
+import { isTelemetryConsentEnabled } from './consent';
 
 // Firestore write helper. Minimal validation to keep lightweight.
 export async function logActivity<T extends ActivityEventType>(evt: Omit<BaseActivityEvent<T>, 'ts'> & { ts?: number }) {
   // In test / SSR contexts Firebase may not be initialized; fail silently.
   if (getApps().length === 0) return null;
+  // Respect user telemetry consent — no remote writes without it
+  if (!isTelemetryConsentEnabled()) return null;
   const db = getFirestore();
   const auth = getAuth();
   const userId = evt.userId || auth.currentUser?.uid;

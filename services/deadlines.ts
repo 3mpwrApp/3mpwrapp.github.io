@@ -2,6 +2,8 @@ import { addDoc, collection, deleteDoc, doc, getDocs, orderBy, query, serverTime
 
 import { auth, db } from '../firebase/config';
 
+import { isCloudConsentEnabled } from './consent';
+
 export type Deadline = {
   id?: string;
   title: string;
@@ -14,6 +16,7 @@ export type Deadline = {
 export async function addDeadline(d: Omit<Deadline, 'id' | 'createdAt'>) {
   const uid = auth.currentUser?.uid;
   if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   const col = collection(db, 'users', uid, 'deadlines');
   await addDoc(col, { ...d, createdAt: serverTimestamp() });
 }
@@ -30,12 +33,14 @@ export async function listDeadlines(): Promise<Deadline[]> {
 export async function deleteDeadline(id: string) {
   const uid = auth.currentUser?.uid;
   if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   await deleteDoc(doc(db, 'users', uid, 'deadlines', id));
 }
 
 export async function updateDeadline(id: string, patch: Partial<Deadline>) {
   const uid = auth.currentUser?.uid;
   if (!uid) throw new Error('Not signed in');
+  if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   const ref = doc(db, 'users', uid, 'deadlines', id);
   const { updateDoc } = await import('firebase/firestore');
   await updateDoc(ref, patch);
