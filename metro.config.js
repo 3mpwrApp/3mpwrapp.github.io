@@ -8,6 +8,12 @@ const { getDefaultConfig } = require("@expo/metro-config");
 
 const config = getDefaultConfig(__dirname);
 
+// Enable inlineRequires to improve startup/TTI on RN
+config.transformer = {
+  ...(config.transformer || {}),
+  inlineRequires: true,
+};
+
 config.serializer = {
   ...(config.serializer || {}),
   processModuleFilter(module) {

@@ -2,7 +2,7 @@
 import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
 import { getApp, getApps, initializeApp, type FirebaseApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore, initializeFirestore, setLogLevel } from "firebase/firestore";
+import { enableIndexedDbPersistence, getFirestore, initializeFirestore, setLogLevel } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { Platform } from "react-native";
 
@@ -50,6 +50,16 @@ export const db =
         // Force long polling on native to avoid WebChannel transport issues
         experimentalForceLongPolling: true,
       });
+
+// Web-only: enable IndexedDB persistence for offline reads/write queue
+try {
+  // Avoid running inside Jest/node
+  const IS_TEST_ENV = typeof process !== 'undefined' && !!(process as any).env?.JEST_WORKER_ID;
+  if (platformOS === 'web' && !IS_TEST_ENV) {
+    // Ignore re-enable errors or browser incompat
+    enableIndexedDbPersistence(db as any).catch(() => {});
+  }
+} catch {}
 export const storage = getStorage(app);
 
 // Lazy load Analytics only on web
