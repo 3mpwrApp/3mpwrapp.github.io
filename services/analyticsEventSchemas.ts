@@ -75,6 +75,11 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
   },
   [E.ASSISTANT_QUICK_PROMPT]: { label: { type: 'string', required: true } },
   [E.ASSISTANT_RECENTS_CLEAR]: { count: { type: 'number', required: true } },
+  // Assistant Hub search UI
+  [E.ASSISTANT_SEARCH_OPEN]: {
+    q: { type: 'string', sensitive: true, classification: 'pii' },
+    target: { type: 'string' },
+  },
   [E.EVENTS_EXPORT_ICS]: { id: { type: 'string', required: true } },
   [E.EVENTS_EXPORT_CSV]: { id: { type: 'string', required: true } },
   [E.EVIDENCE_EXPORT_ENCRYPTED]: { count: { type: 'number', required: true } },

@@ -1,16 +1,16 @@
 # Analytics Event Report
 
-Generated: 2025-10-10T04:54:20.572Z
+Generated: 2025-10-11T01:53:36.101Z
 
 ## Summary
 
-- Registry events: 37
-- Unique events referenced in code: 24
-- Total literal emissions (static scan): 30
+- Registry events: 38
+- Unique events referenced in code: 25
+- Total literal emissions (static scan): 31
 - Missing (used not registered): 0
 - Unused (registered not used): 13
-- Sensitive field occurrences (schema): 1
-- Classification counts: secret=1
+- Sensitive field occurrences (schema): 2
+- Classification counts: secret=1, pii=1
 
 ### Unused
 
@@ -35,7 +35,7 @@ Generated: 2025-10-10T04:54:20.572Z
 | account_delete | 1 |
 | account_delete_failed | 1 |
 | advocacy | 8 |
-| assistant | 2 |
+| assistant | 3 |
 | bookmark_add | 1 |
 | bookmark_clear_all | 1 |
 | bookmark_remove | 1 |
@@ -63,6 +63,7 @@ Generated: 2025-10-10T04:54:20.572Z
 | tracker_add_entry | 2 | OK |
 | tracker_share | 2 | OK |
 | advocacy.ask.submitted | 1 | OK |
+| assistant.search_open | 1 | OK |
 | assistant.quick_prompt | 1 | OK |
 | assistant.recents.clear | 1 | OK |
 | advocacy.world.view | 1 | OK |

@@ -8,7 +8,7 @@ import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import { clearAllData, exportBackup, importBackup } from '../../../services/backup';
 import { isCloudConsentEnabled, setCloudConsent, setTelemetryConsent } from '../../../services/consent';
-import { runRetentionSweep } from '../../../services/retention';
+import { getBYOCConfig, isStrictBYOC, setBYOCConfig, testBYOCConnection } from '../../../services/dataPolicy';
 import { usePrivacy } from '../../../store/privacy';
 import { useSettings } from '../../../store/settings';
 import { useTextScale } from '../../../theme/typography';
@@ -33,16 +33,42 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number 
     dangerButtonText: { color:palette.error },
   });
 }
+ 
+async function runRetentionSweep(days: number = 30): Promise<{ removed: number }> {
+  try {
+    const FileSystemModule = await import('expo-file-system');
+    const FS: any = FileSystemModule.default ?? FileSystemModule;
+    const baseDir: string | null | undefined = FS.cacheDirectory ?? FS.documentDirectory;
+    if (!baseDir) return { removed: 0 };
+    const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
+    let removed = 0;
+    const entries: string[] = await FS.readDirectoryAsync(baseDir);
+    for (const name of entries) {
+      const path = baseDir + name;
+      try {
+        const info = await FS.getInfoAsync(path, { size: false });
+        const raw = typeof info.modificationTime === 'number' ? info.modificationTime : undefined;
+        const mtime = raw ? (raw > 1e12 ? raw : raw * 1000) : 0;
+        if (mtime && mtime < cutoff) {
+          await FS.deleteAsync(path, { idempotent: true });
+          removed++;
+        }
+      } catch {}
+    }
+    return { removed };
+  } catch {
+    return { removed: 0 };
+  }
+}
 
 export default function EnhancedPrivacySection() {
-  const { t } = useTranslation();
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const s = React.useMemo(()=> createStyles(palette, factor), [palette, factor]);
+  const { t } = useTranslation();
   const { state, setPasscode, setLockWellness, setErrorReportingEnabled } = usePrivacy();
   const { requirePasscodeOnLaunch, setRequirePasscodeOnLaunch, autoLockTimeout, setAutoLockTimeout, analyticsOptOut, setAnalyticsOptOut } = useSettings();
   const [cloudOn, setCloudOn] = React.useState<boolean>(isCloudConsentEnabled());
-
   const onExport = async () => {
      const bundle = await exportBackup();
      if (!bundle) return Alert.alert('Export failed','Storage unavailable.');
@@ -67,6 +93,21 @@ export default function EnhancedPrivacySection() {
   const onClear = async () => { Alert.alert('Clear All Data','This will permanently delete all your local app data. This cannot be undone. Are you sure?', [ { text:'Cancel', style:'cancel' }, { text:'Clear Data', style:'destructive', onPress: async()=> { const ok = await clearAllData(); Alert.alert(ok? 'Cleared':'Failed', ok? 'Local app data cleared.':'Unable to clear data.'); } } ] ); };
   const onRetention = async () => { try { const res = await runRetentionSweep(); Alert.alert('Prune complete', `Removed ${res.removed} items.`); } catch { Alert.alert('Prune complete','Done.'); } };
 
+  // BYOC strict mode config (session-only)
+  const strict = isStrictBYOC();
+  const [endpoint, setEndpoint] = React.useState(getBYOCConfig()?.endpoint || '');
+  const [username, setUsername] = React.useState(getBYOCConfig()?.username || '');
+  const [password, setPassword] = React.useState('');
+  const [probe, setProbe] = React.useState<null | { ok: boolean; status?: number }>(null);
+  const onConnectBYOC = async () => {
+    const cfg = { kind: 'webdav' as const, endpoint: endpoint.trim(), username: username.trim() || undefined, password: password || undefined };
+    setBYOCConfig(cfg);
+    const res = await testBYOCConnection(cfg);
+    setProbe(res);
+    Alert.alert(res.ok ? 'Connected' : 'Connection failed', res.ok ? 'Your personal storage is connected.' : `Status: ${res.status ?? 'error'}`);
+  };
+  const onClearBYOC = () => { setBYOCConfig(null); setProbe(null); setEndpoint(''); setUsername(''); setPassword(''); Alert.alert('Cleared','BYOC session cleared.'); };
+
   return (
     <View>
       <AccessibilityToggle title={t('settings.privacy.passcode','Require Passcode on Launch')} description={t('settings.privacy.passcodeDesc','Lock app with passcode')} value={requirePasscodeOnLaunch} onValueChange={setRequirePasscodeOnLaunch} icon='lock-closed' testID='passcode-toggle' />
@@ -86,6 +127,22 @@ export default function EnhancedPrivacySection() {
       <AccessibilityToggle title='Error Reporting' description='Help improve the app by sharing crash reports' value={state.errorReportingEnabled ?? false} onValueChange={setErrorReportingEnabled} icon='bug' testID='error-reporting-toggle' />
       <View style={s.backupSection}>
         <Text style={s.sectionSubtitle} accessibilityRole='header'>Data Management</Text>
+        {strict && (
+          <View style={{ marginBottom:16 }}>
+            <Text style={[s.description, { marginBottom:8 }]}>Strict mode is ON: 100% user-owned storage. App/server storage is disabled.</Text>
+            <Text style={s.rowLabel}>WebDAV Endpoint</Text>
+            <TextInput style={s.input} placeholder='https://dav.example.com/remote.php/dav/files/username/' value={endpoint} onChangeText={setEndpoint} autoCapitalize='none' autoCorrect={false} keyboardType='url' accessibilityLabel='WebDAV endpoint' />
+            <Text style={s.rowLabel}>Username (optional)</Text>
+            <TextInput style={s.input} placeholder='Username' value={username} onChangeText={setUsername} autoCapitalize='none' autoCorrect={false} accessibilityLabel='WebDAV username' />
+            <Text style={s.rowLabel}>Password (optional)</Text>
+            <TextInput style={s.input} placeholder='Password' value={password} onChangeText={setPassword} secureTextEntry accessibilityLabel='WebDAV password' />
+            <View style={s.buttonRow}>
+              <A11yPressable style={s.backupButton} onPress={onConnectBYOC} accessibilityRole='button' accessibilityLabel='Connect personal storage' hitSlop={HIT_SLOP_8}><Ionicons name='cloud-done' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Connect Storage</Text></A11yPressable>
+              <A11yPressable style={[s.backupButton, s.dangerButton]} onPress={onClearBYOC} accessibilityRole='button' accessibilityLabel='Clear storage session' hitSlop={HIT_SLOP_8}><Ionicons name='close' size={16} color={palette.error} /><Text style={[s.backupButtonText, s.dangerButtonText]}>Clear Session</Text></A11yPressable>
+            </View>
+            {probe && (<Text style={[s.description, { marginTop:8 }]}>Connection: {probe.ok ? 'OK' : 'Failed'}{typeof probe.status==='number' ? ` (HTTP ${probe.status})` : ''}</Text>)}
+          </View>
+        )}
         <View style={{ marginBottom:16 }}>
           <Text style={s.rowLabel}>Set/Change Passcode</Text>
           <TextInput style={s.input} placeholder='New passcode' secureTextEntry onSubmitEditing={(e)=> setPasscode(e.nativeEvent.text || undefined)} accessibilityLabel='New passcode' accessibilityHint='Enter a new passcode for the app' />

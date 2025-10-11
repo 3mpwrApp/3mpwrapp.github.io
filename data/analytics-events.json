@@ -28,6 +28,7 @@
   "NOTIFICATION_QUIET_SUPPRESSED": "notification.quiet_suppressed",
   "ASSISTANT_QUICK_PROMPT": "assistant.quick_prompt",
   "ASSISTANT_RECENTS_CLEAR": "assistant.recents.clear",
+  "ASSISTANT_SEARCH_OPEN": "assistant.search_open",
   "EVENTS_EXPORT_ICS": "events.export.ics",
   "EVENTS_EXPORT_CSV": "events.export.csv",
   "EVIDENCE_EXPORT_ENCRYPTED": "evidence.export.encrypted",

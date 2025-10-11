@@ -6,6 +6,8 @@ import { enableIndexedDbPersistence, getFirestore, initializeFirestore, setLogLe
 import { getStorage } from "firebase/storage";
 import { Platform } from "react-native";
 
+import { isStrictBYOC } from "../services/dataPolicy";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBv4rtD3it2yoIIFpxckCEXC9haKIbVjA8",
   authDomain: "empowrapp.firebaseapp.com",
@@ -16,62 +18,58 @@ const firebaseConfig = {
   measurementId: "G-LKEKHG4GQ6",
 };
 
-// Ensure only one app is initialized
+// Detect test environment to avoid native-specific initialization in Jest
+const IS_TEST = typeof process !== 'undefined' && !!process.env.JEST_WORKER_ID;
+const platformOS = (Platform as any)?.OS || 'web';
+const STRICT = isStrictBYOC();
+
+// Ensure only one app is initialized (when not strict)
 export function getFirebaseApp(): FirebaseApp {
   return getApps().length ? getApp() : initializeApp(firebaseConfig);
 }
 
-const app = getFirebaseApp();
-// Detect test environment to avoid native-specific initialization in Jest
-const IS_TEST = typeof process !== 'undefined' && !!process.env.JEST_WORKER_ID;
-const platformOS = (Platform as any)?.OS || 'web';
-
-// Ensure Auth persistence on native by initializing before getAuth (skip in tests)
-if (!IS_TEST && platformOS !== "web") {
-  try {
-    // Dynamically import RN-only APIs to avoid type mismatch on web
-    const {
-      initializeAuth,
-      getReactNativePersistence,
-    } = require("firebase/auth");
-    initializeAuth(app, {
-      persistence: getReactNativePersistence(ReactNativeAsyncStorage),
-    });
-  } catch {
-    // ignore if already initialized or not available
+let app: FirebaseApp | null = null;
+if (!STRICT) {
+  app = getFirebaseApp();
+  if (!IS_TEST && platformOS !== "web") {
+    try {
+      // Dynamically import RN-only APIs to avoid type mismatch on web
+      const { initializeAuth, getReactNativePersistence } = require("firebase/auth");
+      initializeAuth(app, { persistence: getReactNativePersistence(ReactNativeAsyncStorage) });
+    } catch {
+      // ignore if already initialized or not available
+    }
   }
 }
-export const auth = getAuth(app);
-// Firestore: use long-polling on native to avoid WebChannel transport issues
-export const db =
-  platformOS === "web"
-    ? getFirestore(app)
-    : initializeFirestore(app, {
-        // Force long polling on native to avoid WebChannel transport issues
-        experimentalForceLongPolling: true,
-      });
 
-// Web-only: enable IndexedDB persistence for offline reads/write queue
+// Export configured instances or nulls in strict mode
+export const auth = STRICT ? (null as any) : getAuth(app!);
+export const db = STRICT
+  ? (null as any)
+  : platformOS === "web"
+    ? getFirestore(app!)
+    : initializeFirestore(app!, { experimentalForceLongPolling: true });
+
+// Web-only: enable IndexedDB persistence for offline reads/write queue (non-strict only)
 try {
-  // Avoid running inside Jest/node
   const IS_TEST_ENV = typeof process !== 'undefined' && !!(process as any).env?.JEST_WORKER_ID;
-  if (platformOS === 'web' && !IS_TEST_ENV) {
-    // Ignore re-enable errors or browser incompat
+  if (!STRICT && platformOS === 'web' && !IS_TEST_ENV) {
     enableIndexedDbPersistence(db as any).catch(() => {});
   }
 } catch {}
-export const storage = getStorage(app);
 
-// Lazy load Analytics only on web
+export const storage = STRICT ? (null as any) : getStorage(app!);
+
+// Lazy load Analytics only on web (disabled in strict)
 export async function getFirebaseAnalytics(): Promise<any | null> {
-  if (platformOS !== "web") return null;
+  if (STRICT || platformOS !== "web") return null;
   try {
     const analyticsMod = await import("firebase/analytics");
     if (typeof (analyticsMod as any).isSupported === 'function') {
       const ok = await (analyticsMod as any).isSupported();
       if (!ok) return null;
     }
-    return (analyticsMod as any).getAnalytics(app);
+    return (analyticsMod as any).getAnalytics(app!);
   } catch {
     return null;
   }
@@ -79,5 +77,5 @@ export async function getFirebaseAnalytics(): Promise<any | null> {
 
 // Reduce noisy Firestore warnings in development
 try {
-  setLogLevel("error");
+  if (!STRICT) setLogLevel("error");
 } catch {}

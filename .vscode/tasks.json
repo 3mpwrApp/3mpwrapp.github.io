@@ -84,6 +84,16 @@
 			"command": "npm run lint ; npm test",
 			"isBackground": false,
 			"group": "build"
+		},
+		{
+			"label": "Run lint and tests",
+			"type": "shell",
+			"command": "npm run lint ; npm test",
+			"isBackground": false,
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
+			"group": "build"
 		}
 	]
 }

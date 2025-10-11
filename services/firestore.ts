@@ -2,6 +2,8 @@ import type * as Fire from "firebase/firestore";
 
 import { db as sharedDb } from "../firebase/config";
 
+import { isStrictBYOC } from "./dataPolicy";
+
 let mod: typeof Fire | null = null;
 
 async function ensure(): Promise<typeof Fire | null> {
@@ -16,6 +18,7 @@ async function ensure(): Promise<typeof Fire | null> {
 
 export async function getDB() {
   // Always reuse the singleton Firestore instance configured in firebase/config
+  if (isStrictBYOC()) return null;
   return sharedDb ?? null;
 }
 

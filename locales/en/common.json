@@ -530,6 +530,12 @@
       "title": "Assistant",
       "subtitle": "Pick a tool below or return to your last task anytime.",
       "screenLabel": "Assistant hub",
+      "searchPlaceholder": "Type what you need (e.g., “appeal letter”, “HR script”)",
+      "searchLabel": "Search for tools or actions",
+      "searchHint": "Type to see matching tools you can open",
+      "suggestions": "Suggestions",
+      "open": "Open",
+      "noMatches": "No matches yet — try different words",
       "selfCoach": "Self-Advocacy Coach",
       "selfCoachDesc": "Ask questions and get next-step guidance",
       "translator": "Advocate Translator",
@@ -604,7 +610,7 @@
     "latestEvent": "Latest event"
   },
   "home": {
-  "title": "Welcome to 3mpwr App",
+    "title": "Welcome to 3mpwr App",
     "subtitle": "Support. Advocacy. Empowerment.",
     "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!",
     "personalization": {
@@ -621,6 +627,13 @@
       "feedback": {
         "up": "Helpful suggestion",
         "down": "Not relevant"
+      }
+    },
+    "quick": {
+      "betaChat": {
+        "title": "Beta Testers Chat",
+        "label": "Open Beta Testers Chat",
+        "cta": "Join the Beta Testers Chat"
       }
     }
   },
@@ -1379,6 +1392,7 @@
   },
   "templates": {
     "evidenceLocker": {
+      "subtitle": "Securely store notes and files",
       "title": "Evidence Locker",
       "screenLabel": "Evidence Locker screen",
       "howToUse": "How to use Evidence Locker",
@@ -2141,32 +2155,7 @@
     "emailNotConfiguredBody": "Please email {{email}}",
     "validationMissing": "Subject and message required"
   },
-  "home": {
-    "title": "Home",
-    "personalization": {
-      "note": "Suggestions powered by the Personalization Engine (beta)."
-    },
-    "guide": {
-      "header": "Today's Guide",
-      "snapshot": "Snapshot",
-      "snapshotPlaceholder": "(Mood tracking available on Wellness tab)",
-      "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
-      "suggested": "Suggested",
-      "noSuggestions": "No suggestions yet",
-      "open": "Open",
-      "feedback": {
-        "up": "Helpful suggestion",
-        "down": "Not relevant"
-      }
-    },
-    "quick": {
-      "betaChat": {
-        "title": "Beta Testers Chat",
-        "label": "Open Beta Testers Chat",
-        "cta": "Join the Beta Testers Chat"
-      }
-    }
-  },
+  
   "auth": {
     "registerTitle": "Register",
     "registerScreen": "Register screen",

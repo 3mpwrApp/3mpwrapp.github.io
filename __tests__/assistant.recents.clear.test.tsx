@@ -56,6 +56,13 @@ jest.mock('react-native', () => ({
   StyleSheet: { create: (o: any) => o },
   ScrollView: ({ children }: any) => <div>{children}</div>,
   Text: ({ children }: any) => <span>{children}</span>,
+  TextInput: ({ value, onChangeText, placeholder }: any) => (
+    <input
+      value={value}
+      onChange={(e: any) => onChangeText && onChangeText(e.target?.value)}
+      placeholder={placeholder}
+    />
+  ),
   View: ({ children }: any) => <div>{children}</div>,
 }));
 

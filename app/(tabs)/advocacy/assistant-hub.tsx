@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Link, useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
@@ -20,6 +20,7 @@ export default function AssistantHub() {
   const { t } = useTranslation();
   useFocusOnRefOnMount(titleRef);
   const router = useRouter();
+  const [q, setQ] = useState('');
 
   const items: Array<{ label: string; desc: string; icon: keyof typeof Ionicons.glyphMap; href: any }> = [
     { label: t('assistant.hub.selfCoach','Self-Advocacy Coach'), desc: t('assistant.hub.selfCoachDesc','Ask questions and get next-step guidance'), icon: 'chatbubbles', href: '/(tabs)/advocacy/self-advocacy-coach' },
@@ -31,10 +32,70 @@ export default function AssistantHub() {
     { label: t('assistant.hub.ally','Ally Hub'), desc: t('assistant.hub.allyDesc','Coordinate actions with allies'), icon: 'hand-left', href: '/(tabs)/advocacy/ally-hub' },
   ];
 
+  const extraSuggestions: Array<{ label: string; desc?: string; href: any; tags: string[] }> = [
+    { label: t('advocacy.tools.ai_translator','AI Advocate Translator'), desc: t('advocacy.policy.subtitle','Easy-read guides to accessibility, human rights, and benefits.'), href: '/(tabs)/advocacy/ai-advocate-translator', tags: ['letter','simplify','decision','translate','advocacy'] },
+    { label: t('resources.tools.deadlines','Deadline Calculator + Reminders'), desc: t('templates.deadlines.title','Deadlines'), href: '/(tabs)/resources/deadlines', tags: ['deadline','due','reminder','calendar','ics'] },
+    { label: t('templates.evidenceLocker.title','Evidence Locker'), desc: t('templates.evidenceLocker.subtitle','Securely store notes and files'), href: '/(tabs)/resources/evidence-locker', tags: ['evidence','notes','files','locker','save'] },
+    { label: t('advocacy.tools.finder','Lawyer & Advocate Finder'), desc: t('advocacy.finder.title','Lawyer & Advocate Finder'), href: '/(tabs)/advocacy/lawyer-finder', tags: ['lawyer','advocate','finder','map','list'] },
+    { label: t('wellness.sleepEnergy.title','Sleep & Energy'), desc: t('wellness.sleepEnergy.desc','Track sleep and energy with a daily summary you can share.'), href: '/(tabs)/wellness/sleep-energy', tags: ['sleep','energy','wellness','tracker'] },
+    { label: t('resources.search','Search resources'), desc: t('resources.intro','Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.'), href: '/(tabs)/resources/index', tags: ['resources','hub','tools','search'] },
+  ];
+
+  const allSuggestions = [
+    ...items.map((it) => ({ label: it.label, desc: it.desc, href: it.href, tags: [it.label.toLowerCase()] })),
+    ...extraSuggestions,
+  ];
+
+  const filtered = q.trim()
+    ? allSuggestions.filter((sugg) => {
+        const hay = (sugg.label + ' ' + (sugg.desc || '') + ' ' + sugg.tags.join(' ')).toLowerCase();
+        return q.trim().toLowerCase().split(/\s+/).every((w) => hay.includes(w));
+      }).slice(0, 8)
+    : [];
+
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }} accessibilityLabel={t('assistant.hub.screenLabel','Assistant hub')}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('assistant.hub.title','Assistant')}</Text>
       <Text style={s.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('assistant.hub.subtitle','Pick a tool below or return to your last task anytime.')}</Text>
+
+      {/* Search */}
+      <View accessibilityLabel={t('assistant.hub.searchLabel','Search for tools or actions')}>
+        <TextInput
+          style={s.search}
+          value={q}
+          onChangeText={setQ}
+          placeholder={t('assistant.hub.searchPlaceholder','Type what you need (e.g., “appeal letter”, “HR script”)')}
+          placeholderTextColor={palette.text}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+          accessibilityLabel={t('assistant.hub.searchLabel','Search for tools or actions')}
+          accessibilityHint={t('assistant.hub.searchHint','Type to see matching tools you can open')}
+          returnKeyType="search"
+        />
+        {!!filtered.length && (
+          <View style={s.suggestionsWrap} accessibilityLabel={t('assistant.hub.suggestions','Suggestions')}>
+            {filtered.map((sugg) => (
+              <A11yPressable
+                key={String(sugg.href) + sugg.label}
+                hitSlop={HIT_SLOP_8}
+                accessibilityRole="button"
+                accessibilityLabel={`${t('assistant.hub.open','Open')} ${sugg.label}`}
+                style={s.suggestionItem}
+                onPress={() => {
+                  trackEvent('assistant.search_open', { q, target: sugg.label });
+                  usage.view('assistant', sugg.href as any, { search: q, target: sugg.label });
+                  router.push(sugg.href as any);
+                }}
+              >
+                <Text style={s.suggestionTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{sugg.label}</Text>
+                {!!sugg.desc && <Text style={s.suggestionDesc} maxFontSizeMultiplier={MAX_FONT_SCALE} numberOfLines={2}>{sugg.desc}</Text>}
+              </A11yPressable>
+            ))}
+          </View>
+        )}
+        {!!q.trim() && !filtered.length && (
+          <Text style={s.noResults} accessibilityLiveRegion="polite">{t('assistant.hub.noMatches','No matches yet — try different words')}</Text>
+        )}
+      </View>
 
       {/* Quick prompts */}
       <Text style={s.sectionHeader}>{t('assistant.hub.quickPrompts','Quick prompts')}</Text>
@@ -192,6 +253,12 @@ function styles(palette: ReturnType<typeof useAppPalette>, factor = 1) {
     container: { flex: 1, backgroundColor: palette.background },
     title: { fontSize: Math.round(24 * factor), fontWeight: '700', color: palette.text, marginBottom: 4 },
   subtitle: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.8, marginBottom: 12 },
+  search: { borderWidth: 1, borderColor: palette.muted, backgroundColor: palette.surface, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, color: palette.text, marginBottom: 8 },
+  suggestionsWrap: { borderWidth: 1, borderColor: palette.muted, backgroundColor: palette.card, borderRadius: 8, marginBottom: 12 },
+  suggestionItem: { paddingHorizontal: 12, paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
+  suggestionTitle: { color: palette.text, fontWeight: '700', fontSize: Math.round(14 * factor) },
+  suggestionDesc: { color: palette.text, opacity: 0.7, fontSize: Math.round(12 * factor) },
+  noResults: { color: palette.text, opacity: 0.7, marginBottom: 12, fontSize: Math.round(12 * factor) },
   sectionHeader: { color: palette.text, fontWeight: '700', marginBottom: 6, marginTop: 8, fontSize: Math.round(14 * factor) },
   promptRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 8 },
   promptChip: { backgroundColor: palette.card, borderWidth: 1, borderColor: palette.muted, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 999 },

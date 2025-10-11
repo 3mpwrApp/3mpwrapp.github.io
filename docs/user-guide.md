@@ -48,6 +48,7 @@ Tip: The app uses your phone’s text size. Increase font size in your device se
 - [Saved](#saved)
 - [Settings (privacy, accessibility, backups)](#settings)
 - [Common user journeys (appeals, doctor visits, RTW, crisis, weekly routine)](#common-user-journeys)
+- [Assistant — type what you need](#assistant)
 - [Coming soon — detailed preview and expected flow](#coming-soon)
 - [Accessibility](#accessibility)
 - [Offline & Sync](#offline-sync)
@@ -1272,6 +1273,7 @@ More in Settings
 - Evidence Locker: Notes and files are kept on-device. Future updates will add default encryption and optional encrypted sync.
 - Erasure: Use Clear All Data to wipe local storage. If you enabled cloud features, turn them off first and remove any remote data where applicable.
 - Beta builds: The About screen shows a small “This is a beta build” notice when applicable.
+ - Bring Your Own Cloud (BYOC) strict mode: When enabled by the operator (EXPO_PUBLIC_DATA_POLICY=strict_byoc), the app disables app/server storage. You can connect your own storage (WebDAV/Nextcloud) in Settings → Privacy & Backups (Connect Storage). Credentials are session-only and never saved by the app.
 
 Step‑by‑step: Make a backup
 
@@ -1366,6 +1368,15 @@ Where you’ll see “Coming soon” today
 - Research: History Timeline, Case/File Wait‑Times, and Master Index may be labeled “Coming soon”.
 - Resources: Some experimental AI tools and planners are staged (cards will show “Coming soon”).
 - Admin/Docs: Certain admin utilities and docs may still be placeholders; they won’t affect normal use.
+
+<a id="assistant"></a>
+## Assistant — type what you need
+
+- What it is: A hub with quick prompts and a search box. Start typing what you need (for example: “appeal letter”, “HR script”, “translate letter”). Matching tools show up as suggestions; tap to open.
+- Quick prompts: One‑tap starters like “Simplify a decision letter” or “Draft a call script to HR.” They open the right tool pre‑filled.
+- Recent: The Assistant shows your last tools so you can jump back fast. Clear them with the “Clear” button.
+- Accessibility: The search has clear labels and polite announcements. Buttons have larger tap targets and descriptive labels.
+- Privacy: Searches and prompts are handled in‑app and stay on‑device unless you explicitly share content or turn on optional cloud features.
 
 <a id="coming-soon"></a>
 ## Coming soon — detailed preview and expected flow
