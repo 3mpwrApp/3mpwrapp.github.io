@@ -1,12 +1,24 @@
 # Unfinished Work / Follow-Up Backlog
 
-Purpose: Living checklist of outstanding tasks after recent i18n, advocacy, and Expo SDK upgrade cycles.
+Purpose: Living checklist of outstanding tasks after recent i18n, advocacy, and data ownership implementation cycles.
 
 Status legend: [Done] completed this cycle · [In Progress] partially implemented · [Planned] not started
 Linked inventory of raw placeholders: see `docs/UNFINISHED_WORK.md` (auto scan).
-Last updated: 2025-10-09
+Last updated: 2025-10-11
 
-## 1. Localization
+## 1. Data Ownership & Privacy
+- [Done] 100% User Data Ownership implementation and technical verification
+- [Done] BYOC (Bring Your Own Cloud) strict mode with complete app storage disabling
+- [Done] Data ownership statement component for in-app display
+- [Done] Privacy policy updates with prominent data sovereignty section
+- [Done] User guide updates reflecting complete data ownership guarantees
+- [Planned] Additional BYOC providers (S3 compatible, IPFS, personal FTP)
+- [Planned] Enhanced encryption options for Evidence Locker
+- [Planned] Automated privacy verification reports for users
+- [Planned] Third-party security audit coordination
+- [Planned] User data portability enhancements (structured export formats)
+
+## 2. Localization
 - [Planned] Replace placeholder "[T]" entries in `locales/es/common.json` and `locales/fr/common.json` with real translations.
 - [Planned] Add automated CI gate for translation coverage (extend `i18n.locale.parity` with % threshold from `i18n:coverage`).
 - [Planned] Introduce pluralization validation for new advocacy & evidence keys (ensure they appear in `i18n-plural-check`).

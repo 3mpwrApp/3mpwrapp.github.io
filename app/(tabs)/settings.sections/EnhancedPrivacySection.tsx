@@ -4,11 +4,13 @@ import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import AccessibilityToggle from '../../../components/AccessibilityToggle';
+import DataOwnershipStatement from '../../../components/DataOwnershipStatement';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import { clearAllData, exportBackup, importBackup } from '../../../services/backup';
 import { isCloudConsentEnabled, setCloudConsent, setTelemetryConsent } from '../../../services/consent';
 import { getBYOCConfig, isStrictBYOC, setBYOCConfig, testBYOCConnection } from '../../../services/dataPolicy';
+import { runRetentionSweep } from '../../../services/retention';
 import { usePrivacy } from '../../../store/privacy';
 import { useSettings } from '../../../store/settings';
 import { useTextScale } from '../../../theme/typography';
@@ -32,33 +34,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number 
     dangerButton: { borderColor:palette.error },
     dangerButtonText: { color:palette.error },
   });
-}
- 
-async function runRetentionSweep(days: number = 30): Promise<{ removed: number }> {
-  try {
-    const FileSystemModule = await import('expo-file-system');
-    const FS: any = FileSystemModule.default ?? FileSystemModule;
-    const baseDir: string | null | undefined = FS.cacheDirectory ?? FS.documentDirectory;
-    if (!baseDir) return { removed: 0 };
-    const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
-    let removed = 0;
-    const entries: string[] = await FS.readDirectoryAsync(baseDir);
-    for (const name of entries) {
-      const path = baseDir + name;
-      try {
-        const info = await FS.getInfoAsync(path, { size: false });
-        const raw = typeof info.modificationTime === 'number' ? info.modificationTime : undefined;
-        const mtime = raw ? (raw > 1e12 ? raw : raw * 1000) : 0;
-        if (mtime && mtime < cutoff) {
-          await FS.deleteAsync(path, { idempotent: true });
-          removed++;
-        }
-      } catch {}
-    }
-    return { removed };
-  } catch {
-    return { removed: 0 };
-  }
 }
 
 export default function EnhancedPrivacySection() {
@@ -110,6 +85,15 @@ export default function EnhancedPrivacySection() {
 
   return (
     <View>
+      {/* Data Ownership Statement */}
+      <View style={s.backupSection}>
+        <Text style={s.sectionSubtitle} accessibilityRole='header'>Data Ownership & Security</Text>
+        <Text style={s.description}>
+          Your data belongs 100% to you. 3mpwr App is built on the fundamental principle of complete user data sovereignty.
+        </Text>
+        <DataOwnershipStatement compact showHeader={false} style={{ marginTop: 8 }} />
+      </View>
+
       <AccessibilityToggle title={t('settings.privacy.passcode','Require Passcode on Launch')} description={t('settings.privacy.passcodeDesc','Lock app with passcode')} value={requirePasscodeOnLaunch} onValueChange={setRequirePasscodeOnLaunch} icon='lock-closed' testID='passcode-toggle' />
       <View style={{ marginTop:8, marginBottom:8 }}>
         <Text style={s.sectionSubtitle} accessibilityRole='header'>{t('settings.privacy.autoLock','Auto-Lock Timeout')}</Text>

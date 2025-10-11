@@ -1,15 +1,36 @@
 # 3mpwr App — Privacy Policy
 
-Last updated: September 29, 2025
+Last updated: October 11, 2025
 
 This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and protects information in the 3mpwr App mobile application and web experience (if enabled). By using the app, you agree to these practices.
 
+## Data Ownership Statement
+
+**Your data belongs 100% to you.** 3mpwr App is built on the fundamental principle of complete user data sovereignty:
+
+- **100% User Ownership:** All data created in 3mpwr App belongs entirely to you. We never own, claim, or retain your personal information.
+- **Local-First & Air-Gapped:** All processing happens on your device. Data stays in your possession unless you choose to sync to your own cloud.
+- **Your Cloud, Your Control:** Optional sync connects only to your chosen services (Google Drive, iCloud, WebDAV). No data passes through our servers.
+- **No Tracking:** Zero embedded analytics, trackers, or third-party data collection. No hidden network calls.
+- **Encryption & Privacy:** Local data encrypted using your device security. Cloud encryption handled by your chosen provider.
+- **Open & Transparent:** Our codebase contains no data-logging functions. You can inspect and verify our privacy claims.
+
+**Technical Implementation:**
+- **BYOC Strict Mode:** When enabled (`EXPO_PUBLIC_DATA_POLICY=strict_byoc`), completely disables Firebase and all app storage
+- **Session-Only Credentials:** Your storage credentials are never saved by the app
+- **Verifiable Architecture:** You can technically verify these claims through code inspection and network monitoring
+
+*For our complete Data Ownership and Security Statement, see [DATA_OWNERSHIP_STATEMENT.md](DATA_OWNERSHIP_STATEMENT.md).*
+*For technical verification instructions, see [TECHNICAL_VERIFICATION_GUIDE.md](../TECHNICAL_VERIFICATION_GUIDE.md).*
+
 ## Summary
-- We practice data minimization and store most preferences locally on your device by default.
-- We do not sell personal data.
-- You can use Guest Mode without creating an account (limited features).
-- You control notifications and certain analytics in Settings.
-- You can request access, correction, or deletion of your data.
+- **Local-first architecture:** All data stored on your device by default with optional user-controlled sync
+- **BYOC (Bring Your Own Cloud) support:** Connect your own storage for 100% user-owned data persistence
+- We practice data minimization and store most preferences locally on your device by default
+- We do not sell personal data
+- You can use Guest Mode without creating an account (limited features)
+- You control notifications and certain analytics in Settings
+- You can request access, correction, or deletion of your data
 
 ## Information We Collect
 ### 1) Information you provide

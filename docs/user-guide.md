@@ -1265,6 +1265,42 @@ More in Settings
 - Data deletion: You can clear local data in Privacy & Backups. Tip: Export first if you might need the data later.
 
 ### Data Governance & Privacy
+
+**🔒 100% User Data Ownership Guarantee**
+
+Your data belongs entirely to you. 3mpwr App is designed with complete user data sovereignty:
+
+- **Local-First Architecture**: All data stays on your device by default. No external servers, no app retention.
+- **BYOC Strict Mode**: Connect your own storage (WebDAV/Nextcloud) for 100% user-owned persistence.
+- **Zero App Storage**: When strict mode is enabled, the app completely disables Firebase and all remote storage.
+- **Session-Only Credentials**: Your storage credentials are never saved by the app - only used during your session.
+- **Verifiable Privacy**: You can technically verify that no data is sent to app servers through code inspection.
+
+**Privacy Controls (Settings → Privacy & Security):**
+- **Data Ownership Statement**: Review your complete data sovereignty rights
+- **BYOC Configuration**: Connect your personal WebDAV/Nextcloud storage  
+- **Opt Out of Analytics**: Disables telemetry so the app won't send usage data
+- **Cloud Features Toggle**: Controls optional online features (disabled by default)
+- **Data Management**: Export/Import backup, Clear All Data, Prune Old Cache
+
+**Evidence Locker - 100% Local Storage:**
+- Notes and files kept exclusively on-device with encryption
+- No automatic uploads or cloud syncing
+- Optional user-controlled sync to your own storage only
+- Complete user control over all personal data
+
+**Technical Verification:**
+- **BYOC Strict Mode**: Set `EXPO_PUBLIC_DATA_POLICY=strict_byoc` to disable all app storage
+- **Runtime Check**: Verify `firebase/config.db === null` when strict mode is active
+- **Network Monitoring**: Confirm only your chosen storage endpoints are contacted
+- **Code Audit**: All data handling code is open and verifiable
+
+**Data Erasure & Backup:**
+- **Export Backup**: Full data export under your control
+- **Clear All Data**: Complete local data deletion 
+- **Your Cloud Setup**: If using BYOC, you control retention on your own storage
+- **No App Retention**: App never retains copies of your data
+
 - Local-first: Your data stays on your device by default. Cloud features are off unless you turn them on.
 - Privacy controls (Settings → Privacy & Backups):
   - Opt Out of Analytics: disables telemetry so the app won’t send usage data.
