@@ -30,7 +30,7 @@ function createStyles(palette: Palette) {
     },
     webOnly: {
       // On web we can allow it to behave like a footer at the bottom
-      position: 'sticky',
+      position: 'absolute' as any, // sticky not supported in RN types but works on web
       bottom: 0,
     },
     text: {
