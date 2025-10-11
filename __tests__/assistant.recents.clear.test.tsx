@@ -1,70 +1,14 @@
+// Shared assistant test setup (palette, typography, i18n, A11yPressable)
+import './__helpers__/assistantTestSetup';
+// Use global expo-router mock to keep Link interactions working
 import { fireEvent, render, screen } from '@testing-library/react';
+import { router } from 'expo-router';
 
 import AssistantHub from '../app/(tabs)/advocacy/assistant-hub';
 import { withCapturedEvents } from '../services/analyticsClient';
 
 import { TestProviders } from './TestProviders';
-
-// Mock expo-router so Link works in other parts (not used directly here)
-const pushMock = jest.fn();
-jest.mock('expo-router', () => {
-  const React = require('react');
-  return {
-    Link: ({ children, href }: any) => {
-      const child = React.Children.only(children);
-      const origOnPress = child.props.onPress;
-      const onPress = (...args: any[]) => {
-        const pathname = typeof href === 'string' ? href : href?.pathname;
-        pushMock({ pathname });
-        if (typeof origOnPress === 'function') origOnPress(...args);
-      };
-      return React.cloneElement(child, { onPress });
-    },
-    useRouter: () => ({ push: pushMock }),
-  };
-});
-
-// Mock vector icons to a lightweight component
-jest.mock('@expo/vector-icons', () => {
-  const React = require('react');
-  const Ionicons = (props: any) => React.createElement('span', props, null);
-  (Ionicons as any).glyphMap = {};
-  return { Ionicons };
-});
-
-// Mock palette and typography hooks
-jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ background:'#fff', text:'#111', primary:'#06f', onPrimary:'#fff', muted:'#ccc', surface:'#f9f9f9', card:'#f5f5f5' }) }));
-jest.mock('../theme/typography', () => ({ useTextScale: () => ({ factor: 1 }) }));
-
-// Minimal i18n mock to work with TestProviders
-jest.mock('../i18n', () => {
-  const React = require('react');
-  return {
-    I18nProvider: ({ children }: any) => React.createElement(React.Fragment, null, children),
-    useTranslation: () => ({ t: (k: string, def?: string) => def || k, lang: 'en' }),
-  };
-});
-
-// Mock A11yPressable to a button
-jest.mock('../components/A11yPressable', () => {
-  const React = require('react');
-  return ({ children, onPress }: any) => React.createElement('button', { onClick: onPress }, children);
-});
-
-// Mock RN primitives for jsdom
-jest.mock('react-native', () => ({
-  StyleSheet: { create: (o: any) => o },
-  ScrollView: ({ children }: any) => <div>{children}</div>,
-  Text: ({ children }: any) => <span>{children}</span>,
-  TextInput: ({ value, onChangeText, placeholder }: any) => (
-    <input
-      value={value}
-      onChange={(e: any) => onChangeText && onChangeText(e.target?.value)}
-      placeholder={placeholder}
-    />
-  ),
-  View: ({ children }: any) => <div>{children}</div>,
-}));
+beforeEach(() => (router.push as jest.Mock).mockReset());
 
 // Usage buffer with clearRecents behavior
 jest.mock('../services/usage', () => {
@@ -94,7 +38,8 @@ describe('Assistant Hub — Clear Recents', () => {
       expect(screen.getByText('Recent')).toBeTruthy();
       expect(screen.getByText('Translator')).toBeTruthy();
 
-      const clearBtn = screen.getByRole('button', { name: 'Clear' });
+  // Accessible name may be aria-label ("Clear recent tools") or visible text ("Clear")
+  const clearBtn = screen.getByRole('button', { name: /Clear( recent tools)?/i });
       fireEvent.click(clearBtn);
     });
 

@@ -1,54 +1,14 @@
-// Mock expo-router to avoid actual navigation, capture push calls
-const pushMock = jest.fn();
-jest.mock('expo-router', () => ({
-  Link: ({ children }: any) => children,
-  useRouter: () => ({ push: pushMock }),
-}));
-
-// Mock vector icons to a lightweight component
-jest.mock('@expo/vector-icons', () => {
-  const React = require('react');
-  const Ionicons = (props: any) => React.createElement('span', props, null);
-  (Ionicons as any).glyphMap = {};
-  return { Ionicons };
-});
-
-// Mock palette and typography hooks to avoid provider requirements
-jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ background:'#fff', text:'#111', primary:'#06f', onPrimary:'#fff', muted:'#ccc', surface:'#f9f9f9', card:'#f5f5f5' }) }));
-jest.mock('../theme/typography', () => ({ useTextScale: () => ({ factor: 1 }) }));
-// Minimal i18n mock: include passthrough I18nProvider for TestProviders compatibility
-jest.mock('../i18n', () => {
-  const React = require('react');
-  return {
-    I18nProvider: ({ children }: any) => React.createElement(React.Fragment, null, children),
-    useTranslation: () => ({ t: (k: string, def?: string) => def || k, lang: 'en' }),
-  };
-});
-// Mock A11yPressable to a plain button
-jest.mock('../components/A11yPressable', () => {
-  const React = require('react');
-  return ({ children, onPress }: any) => React.createElement('button', { onClick: onPress }, children);
-});
-
-// Provide minimal react-native primitives used by AssistantHub
-jest.mock('react-native', () => ({
-  StyleSheet: { create: (o: any) => o },
-  ScrollView: ({ children }: any) => <div>{children}</div>,
-  Text: ({ children }: any) => <span>{children}</span>,
-  TextInput: ({ value, onChangeText, placeholder }: any) => (
-    <input
-      value={value}
-      onChange={(e: any) => onChangeText && onChangeText(e.target?.value)}
-      placeholder={placeholder}
-    />
-  ),
-  View: ({ children }: any) => <div>{children}</div>,
-}));
-
+// Shared assistant test setup (palette, typography, i18n, A11yPressable)
 import { fireEvent, render } from '@testing-library/react';
+import { router } from 'expo-router';
+import './__helpers__/assistantTestSetup';
 
 import AssistantHub from '../app/(tabs)/advocacy/assistant-hub';
 import * as analyticsClient from '../services/analyticsClient';
+
+// Use global expo-router mock; capture router.push
+const pushMock = router.push as jest.Mock;
+beforeEach(() => pushMock.mockReset());
 
 describe('Assistant Hub quick prompts (call script)', () => {
   it('emits assistant.quick_prompt and navigates with q when tapping the HR call script prompt', () => {
