@@ -146,6 +146,7 @@ export default function RootLayout() {
                           <TermsGate>
                             <ChangelogGate>
                               <TelemetryInit />
+                              <SecurityInit />
                               <NotificationsProvider>
                               <First7Provider>
                                 <Stack
@@ -218,6 +219,31 @@ function TelemetryInit() {
       initAnalytics();
     }
   }, [state.analyticsEnabled]);
+  return null;
+}
+
+function SecurityInit() {
+  React.useEffect(() => {
+    // Initialize security framework on app startup
+    import("../services/security").then(({ initializeSecurity }) => {
+      return initializeSecurity({
+        enableTamperDetection: true,
+        enableRootJailbreakCheck: true,
+        enableIntegrityValidation: true,
+        enableSecureStorage: true,
+        strictBYOCMode: process.env.EXPO_PUBLIC_DATA_POLICY === 'strict_byoc',
+        allowDebugging: __DEV__
+      });
+    }).then((success: boolean) => {
+      if (__DEV__) {
+        console.warn('🔒 Security framework initialized:', success ? 'SUCCESS' : 'FAILED');
+      }
+    }).catch((error: Error) => {
+      if (__DEV__) {
+        console.error('🔒 Security initialization error:', error);
+      }
+    });
+  }, []);
   return null;
 }
 

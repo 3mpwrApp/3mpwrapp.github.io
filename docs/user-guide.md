@@ -32,8 +32,11 @@ Tip: The app uses your phone’s text size. Increase font size in your device se
 - **🔒 Passcode protection**: Set a Passcode and enable Wellness Lock in Settings for sensitive areas.
 - **📤 Data export/import**: Full control with Export and Import under Settings → Privacy & Backups.
 - **🛡️ Tamper detection**: Built-in security monitoring protects against unauthorized modifications.
+- **🔍 Device security**: Continuous monitoring for rooting/jailbreaking attempts and security threats.
+- **🔐 Network security**: TLS 1.3 enforcement with certificate pinning for all communications.
+- **⚡ Real-time protection**: Security framework initializes automatically and monitors continuously.
 
-The app is designed with security-by-design principles and meets enterprise security standards.
+The app is designed with security-by-design principles, meets enterprise security standards, and provides **100% user data ownership**.
 
 ## Table of contents
 
@@ -1282,6 +1285,8 @@ Your data belongs entirely to you. 3mpwr App is designed with complete user data
 - **Zero App Storage**: When strict mode is enabled, the app completely disables Firebase and all remote storage.
 - **Session-Only Credentials**: Your storage credentials are never saved by the app - only used during your session.
 - **Verifiable Privacy**: You can technically verify that no data is sent to app servers through code inspection.
+- **Enterprise Security Framework**: Real-time tamper detection, device security monitoring, and automatic threat response.
+- **Security Validation**: Complete OWASP Mobile Top 10 compliance with continuous security monitoring.
 
 **Privacy Controls (Settings → Privacy & Security):**
 - **Data Ownership Statement**: Review your complete data sovereignty rights
@@ -1289,9 +1294,10 @@ Your data belongs entirely to you. 3mpwr App is designed with complete user data
 - **Opt Out of Analytics**: Disables telemetry so the app won't send usage data
 - **Cloud Features Toggle**: Controls optional online features (disabled by default)
 - **Data Management**: Export/Import backup, Clear All Data, Prune Old Cache
+- **Security Status**: View real-time security monitoring and threat detection results
 
 **Evidence Locker - 100% Local Storage:**
-- Notes and files kept exclusively on-device with encryption
+- Notes and files kept exclusively on-device with AES-256 encryption
 - No automatic uploads or cloud syncing
 - Optional user-controlled sync to your own storage only
 - Complete user control over all personal data
@@ -1301,6 +1307,7 @@ Your data belongs entirely to you. 3mpwr App is designed with complete user data
 - **Runtime Check**: Verify `firebase/config.db === null` when strict mode is active
 - **Network Monitoring**: Confirm only your chosen storage endpoints are contacted
 - **Code Audit**: All data handling code is open and verifiable
+- **Security Framework**: Real-time integrity monitoring, tamper detection, and threat response
 
 **Data Erasure & Backup:**
 - **Export Backup**: Full data export under your control
