@@ -39,7 +39,7 @@ export default function AdvancedSecurityOptions() {
   const textColor = useThemeColor({}, 'text');
   const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();
-  const { user } = useAuth();
+  const { user: _user } = useAuth();
   const { settings } = useIndigenousLanguage();
 
   // Extract cultural protocols and language from settings

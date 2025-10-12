@@ -187,7 +187,7 @@ export default function IndigenousLanguageScreen() {
     }
   };
 
-  const handleProtocolChange = (protocolKey: string) => (value: boolean) => {
+  const _handleProtocolChange = (_protocolKey: string) => (value: boolean) => {
     // Since culturalProtocols is a boolean in the context, we'll just toggle it
     setCulturalProtocols(value);
   };

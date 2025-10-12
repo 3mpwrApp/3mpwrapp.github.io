@@ -47,7 +47,7 @@ interface _WorkflowEngine {
   analytics: WorkflowAnalytics;
 }
 
-interface WorkflowStep {
+interface _WorkflowStep {
   id: string;
   stepNumber: number;
   name: string;
@@ -82,7 +82,7 @@ interface StepAction {
   failureCriteria: string[];
 }
 
-interface ExecutedStep {
+interface _ExecutedStep {
   stepId: string;
   startTime: Date;
   endTime: Date;
@@ -152,7 +152,7 @@ interface _LegalKnowledgeBase {
 }
 
 // Enums and Types
-type WorkflowType = 
+type _WorkflowType = 
   | 'disability_benefits'
   | 'workplace_accommodation'
   | 'discrimination_complaint'
@@ -188,7 +188,7 @@ type ActionType =
   | 'validate_data'
   | 'cultural_check';
 
-type ExecutionStatus = 
+type _ExecutionStatus = 
   | 'initialized'
   | 'running'
   | 'paused'
@@ -199,7 +199,7 @@ type ExecutionStatus =
   | 'cancelled'
   | 'cultural_review';
 
-type StepStatus = 
+type _StepStatus = 
   | 'pending'
   | 'running'
   | 'completed'
