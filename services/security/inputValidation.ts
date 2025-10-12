@@ -210,7 +210,7 @@ export class InputValidator {
   /**
    * Validate email input
    */
-  private validateEmail(value: string, rules: ValidationRule, errors: string[]): void {
+  private validateEmail(value: string, _rules: ValidationRule, errors: string[]): void {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
     if (!emailRegex.test(value)) {
@@ -229,7 +229,7 @@ export class InputValidator {
   /**
    * Validate URL input
    */
-  private validateUrl(value: string, rules: ValidationRule, errors: string[]): void {
+  private validateUrl(value: string, _rules: ValidationRule, errors: string[]): void {
     try {
       const url = new URL(value);
       
@@ -251,7 +251,7 @@ export class InputValidator {
   /**
    * Validate phone input
    */
-  private validatePhone(value: string, rules: ValidationRule, errors: string[]): void {
+  private validatePhone(value: string, _rules: ValidationRule, errors: string[]): void {
     // Remove common formatting characters
     const cleaned = value.replace(/[\s\-\(\)\+\.]/g, '');
     
@@ -264,7 +264,7 @@ export class InputValidator {
   /**
    * Validate date input
    */
-  private validateDate(value: string, rules: ValidationRule, errors: string[]): void {
+  private validateDate(value: string, _rules: ValidationRule, errors: string[]): void {
     const date = new Date(value);
     
     if (isNaN(date.getTime())) {
@@ -275,7 +275,7 @@ export class InputValidator {
   /**
    * Validate JSON input
    */
-  private validateJson(value: string, rules: ValidationRule, errors: string[]): any {
+  private validateJson(value: string, _rules: ValidationRule, errors: string[]): any {
     try {
       const parsed = JSON.parse(value);
       
@@ -296,7 +296,7 @@ export class InputValidator {
   /**
    * Validate HTML input
    */
-  private validateHtml(value: string, rules: ValidationRule, errors: string[]): string {
+  private validateHtml(value: string, _rules: ValidationRule, errors: string[]): string {
     if (!this.securityContext.allowHtml) {
       errors.push('HTML content not allowed');
       return this.stripHtml(value);

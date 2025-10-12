@@ -63,7 +63,6 @@ const DEFAULT_CONFIG: EncryptionConfig = {
 };
 
 const MASTER_KEY_ID = 'empowr:master:key:v2';
-const _KEY_REGISTRY_ID = 'secure_key_registry_v1';
 
 /**
  * Enhanced encryption service with secure key management
