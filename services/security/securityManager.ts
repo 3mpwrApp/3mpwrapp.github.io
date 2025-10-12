@@ -182,7 +182,7 @@ async function checkDeviceCompromise(): Promise<boolean> {
 async function checkAndroidRoot(): Promise<boolean> {
   try {
     // Check for common root indicators
-    const rootIndicators = [
+    const _rootIndicators = [
       '/system/app/Superuser.apk',
       '/sbin/su',
       '/system/bin/su',
@@ -209,7 +209,7 @@ async function checkAndroidRoot(): Promise<boolean> {
 async function checkIOSJailbreak(): Promise<boolean> {
   try {
     // Check for common jailbreak indicators
-    const jailbreakIndicators = [
+    const _jailbreakIndicators = [
       '/usr/sbin/sshd',
       '/var/tmp/cydia.log',
       '/Applications/Cydia.app',

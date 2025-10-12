@@ -150,7 +150,7 @@ class NetworkSecurityManager {
       // 4. Reject connection if no match
 
       // For now, we'll simulate this with a placeholder
-      console.log(`Certificate pinning validated for ${hostname}`);
+      console.warn(`Certificate pinning validated for ${hostname}`);
 
     } catch (error) {
       console.error('Certificate pinning validation failed:', error);

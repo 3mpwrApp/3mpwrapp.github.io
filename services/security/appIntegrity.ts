@@ -147,7 +147,7 @@ export class AppIntegrityVerifier {
       }
 
       // In production, verify actual cryptographic signature
-      console.log('Signature verification passed (placeholder)');
+      console.warn('Signature verification passed (placeholder)');
       return true;
 
     } catch (error) {
@@ -182,7 +182,7 @@ export class AppIntegrityVerifier {
         }
       }
 
-      console.log('Bundle integrity verification passed (placeholder)');
+      console.warn('Bundle integrity verification passed (placeholder)');
       return true;
 
     } catch (error) {
@@ -206,7 +206,7 @@ export class AppIntegrityVerifier {
       // 3. Report any mismatches
 
       // For now, assume files are intact
-      console.log('Critical files verification passed (placeholder)');
+      console.warn('Critical files verification passed (placeholder)');
       return true;
 
     } catch (error) {
@@ -326,7 +326,7 @@ export class AppIntegrityVerifier {
       // - Compatibility checks
       // - Security policy validation
 
-      console.log('Update integrity verified');
+      console.warn('Update integrity verified');
       return true;
 
     } catch (error) {

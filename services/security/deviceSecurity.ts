@@ -62,7 +62,7 @@ export async function assessDeviceSecurity(): Promise<DeviceSecurityInfo> {
 async function checkAndroidRootAdvanced(): Promise<boolean> {
   try {
     // Method 1: Check for root management apps
-    const rootApps = [
+    const _rootApps = [
       'com.noshufou.android.su',
       'com.noshufou.android.su.elite',
       'eu.chainfire.supersu',
@@ -78,7 +78,7 @@ async function checkAndroidRootAdvanced(): Promise<boolean> {
     ];
 
     // Method 2: Check for root binaries
-    const rootBinaries = [
+    const _rootBinaries = [
       '/system/app/Superuser.apk',
       '/sbin/su',
       '/system/bin/su',
@@ -97,13 +97,13 @@ async function checkAndroidRootAdvanced(): Promise<boolean> {
     ];
 
     // Method 3: Check for dangerous properties
-    const dangerousProps = [
+    const _dangerousProps = [
       'ro.debuggable',
       'ro.secure'
     ];
 
     // Method 4: Check for writable system paths
-    const systemPaths = [
+    const _systemPaths = [
       '/system',
       '/system/bin',
       '/system/sbin',
@@ -129,7 +129,7 @@ async function checkAndroidRootAdvanced(): Promise<boolean> {
 async function checkIOSJailbreakAdvanced(): Promise<boolean> {
   try {
     // Method 1: Check for jailbreak files
-    const jailbreakFiles = [
+    const _jailbreakFiles = [
       '/usr/sbin/sshd',
       '/var/tmp/cydia.log',
       '/Applications/Cydia.app',
@@ -159,7 +159,7 @@ async function checkIOSJailbreakAdvanced(): Promise<boolean> {
     ];
 
     // Method 2: Check for jailbreak schemes
-    const jailbreakSchemes = [
+    const _jailbreakSchemes = [
       'cydia://',
       'undecimus://',
       'sileo://',
@@ -169,7 +169,7 @@ async function checkIOSJailbreakAdvanced(): Promise<boolean> {
     ];
 
     // Method 3: Check sandbox violations
-    const restrictedPaths = [
+    const _restrictedPaths = [
       '/',
       '/root',
       '/private',
@@ -219,7 +219,7 @@ async function checkDebuggerAttachment(): Promise<boolean> {
 async function checkAndroidEmulator(): Promise<boolean> {
   try {
     // Check for emulator-specific properties and files
-    const emulatorIndicators = [
+    const _emulatorIndicators = [
       'ro.kernel.qemu',
       'ro.bootmode',
       'ro.hardware',
@@ -228,13 +228,13 @@ async function checkAndroidEmulator(): Promise<boolean> {
     ];
 
     // Check for Genymotion indicators
-    const genymotionIndicators = [
+    const _genymotionIndicators = [
       '/dev/socket/genyd',
       '/dev/socket/baseband_genyd'
     ];
 
     // Check for generic emulator files
-    const emulatorFiles = [
+    const _emulatorFiles = [
       '/system/lib/libc_malloc_debug_qemu.so',
       '/sys/qemu_trace',
       '/system/bin/qemu-props'
@@ -368,7 +368,7 @@ export async function sanitizeEnvironment(): Promise<void> {
     // Set up memory protection
     // Initialize anti-hooking measures
 
-    console.log('Environment sanitized');
+    console.warn('Environment sanitized');
 
   } catch (error) {
     console.warn('Environment sanitization failed:', error);

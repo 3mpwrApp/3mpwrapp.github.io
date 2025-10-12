@@ -63,7 +63,7 @@ const DEFAULT_CONFIG: EncryptionConfig = {
 };
 
 const MASTER_KEY_ID = 'empowr:master:key:v2';
-const KEY_REGISTRY_ID = 'empowr:key:registry:v1';
+const _KEY_REGISTRY_ID = 'secure_key_registry_v1';
 
 /**
  * Enhanced encryption service with secure key management
@@ -116,7 +116,7 @@ export class SecureEncryption {
         await this.storeKeySecurely(this.masterKeyId, masterKey);
         
         // Log key generation (without the key itself)
-        console.log('New master encryption key generated');
+        console.warn('New master encryption key generated');
       }
 
       return masterKey;
@@ -353,7 +353,7 @@ export class SecureEncryption {
       // Store new key
       await this.storeKeySecurely(this.masterKeyId, newKey);
       
-      console.log('Master key rotated successfully');
+      console.warn('Master key rotated successfully');
       return true;
 
     } catch (error) {

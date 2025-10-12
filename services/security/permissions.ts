@@ -175,7 +175,7 @@ export class PermissionsManager {
   /**
    * Check Android permission
    */
-  private async checkAndroidPermission(permission: string): Promise<PermissionStatus> {
+  private async checkAndroidPermission(_permission: string): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
       // For now, return a placeholder
@@ -189,7 +189,7 @@ export class PermissionsManager {
   /**
    * Check iOS permission
    */
-  private async checkIOSPermission(permission: string): Promise<PermissionStatus> {
+  private async checkIOSPermission(_permission: string): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
       // For now, return a placeholder
@@ -207,8 +207,8 @@ export class PermissionsManager {
     try {
       // This would use expo-permissions or react-native-permissions
       // Show rationale if needed
-      console.log(`Requesting Android permission: ${permission}`);
-      console.log(`Purpose: ${config.purpose}`);
+      console.warn(`Requesting Android permission: ${permission}`);
+      console.warn(`Purpose: ${config.purpose}`);
       
       // Simulate permission request
       return { granted: true, canAskAgain: true };
@@ -224,8 +224,8 @@ export class PermissionsManager {
   private async requestIOSPermission(permission: string, config: PermissionConfig): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
-      console.log(`Requesting iOS permission: ${permission}`);
-      console.log(`Purpose: ${config.purpose}`);
+      console.warn(`Requesting iOS permission: ${permission}`);
+      console.warn(`Purpose: ${config.purpose}`);
       
       // Simulate permission request
       return { granted: true, canAskAgain: true };
