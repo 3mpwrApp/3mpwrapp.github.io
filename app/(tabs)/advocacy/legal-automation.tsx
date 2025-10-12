@@ -324,7 +324,7 @@ export default function LegalProcessAutomation() {
           priority: 'high',
           jurisdiction: 'federal',
           startDate: new Date('2024-01-15'),
-          estimatedCompletionDate: new Date('2024-04-15'),
+          estimatedCompletion: new Date('2024-04-15'),
           currentStep: {
             id: 'step_2',
             title: 'Medical Documentation',
@@ -453,7 +453,7 @@ export default function LegalProcessAutomation() {
           priority: 'medium',
           jurisdiction: 'ontario',
           startDate: new Date('2024-02-01'),
-          estimatedCompletionDate: new Date('2024-03-15'),
+          estimatedCompletion: new Date('2024-03-15'),
           currentStep: {
             id: 'step_3',
             title: 'Employer Response Period',

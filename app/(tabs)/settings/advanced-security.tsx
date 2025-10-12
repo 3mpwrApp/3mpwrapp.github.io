@@ -42,6 +42,14 @@ export default function AdvancedSecurityOptions() {
   const { user } = useAuth();
   const { settings } = useIndigenousLanguage();
 
+  // Extract cultural protocols and language from settings
+  const culturalProtocols = {
+    ceremonialConsiderations: settings.ceremonialConsiderations,
+    elderConsultation: settings.elderConsultation,
+    communityProtocols: settings.communityProtocols
+  };
+  const selectedLanguage = settings.primaryLanguage;
+
   // Create colors object for compatibility
   const colors = {
     text: textColor,
@@ -307,7 +315,7 @@ export default function AdvancedSecurityOptions() {
         },
         traditionalKnowledgeProtection: {
           enabled: true,
-          shareRestrictions: true,
+          shareRestrictions: ['community_approval_required'],
           attributionRequired: true
         },
         communityConsent: {
@@ -316,8 +324,8 @@ export default function AdvancedSecurityOptions() {
           consensusThreshold: 0.75
         },
         culturalAuditRequirements: [
-          { type: 'elder_review', frequency: 'quarterly' },
-          { type: 'community_feedback', frequency: 'bi_annual' }
+          { type: 'elder_review', frequency: 'quarterly', requirement: 'Elder consultation required', approver: 'Elder Council' },
+          { type: 'community_feedback', frequency: 'bi_annual', requirement: 'Community feedback required', approver: 'Community Representative' }
         ],
         indigenousDataSovereignty: {
           enabled: true,

@@ -33,7 +33,16 @@ const LanguageOption: React.FC<LanguageOptionProps> = ({
   onPress,
   disabled = false,
 }) => {
-  const { colors } = useTheme();
+  const textColor = useThemeColor({}, 'text');
+  const backgroundColor = useThemeColor({}, 'background');
+  
+  const colors = {
+    primary: textColor,
+    card: backgroundColor,
+    border: textColor + '20',
+    text: textColor,
+    textSecondary: textColor + '60',
+  };
 
   return (
     <A11yPressable
@@ -86,7 +95,16 @@ const ProtocolSwitch: React.FC<ProtocolSwitchProps> = ({
   onValueChange,
   iconName,
 }) => {
-  const { colors } = useTheme();
+  const textColor = useThemeColor({}, 'text');
+  const backgroundColor = useThemeColor({}, 'background');
+  
+  const colors = {
+    primary: textColor,
+    card: backgroundColor,
+    border: textColor + '20',
+    text: textColor,
+    textSecondary: textColor + '60',
+  };
 
   return (
     <View

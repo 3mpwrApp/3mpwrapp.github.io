@@ -236,10 +236,10 @@ export default function AdvancedAccessibilityScreen() {
         )}
         <View style={styles.sliderContainer}>
           {/* Mock Slider implementation - would use @react-native-community/slider in production */}
-          <View style={[styles.slider, { backgroundColor: textColor + '20' }]}>
+          <View style={[styles.slider, { backgroundColor: palette.text + '20' }]}>
             <View 
               style={{ 
-                backgroundColor: textColor, 
+                backgroundColor: palette.text, 
                 height: 4, 
                 width: `${((value - minimumValue) / (maximumValue - minimumValue)) * 100}%` 
               }} 
