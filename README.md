@@ -74,13 +74,36 @@ npm run security:all       # Complete security test suite
 - **✅ LIVE: OWASP Compliance**: 100% OWASP Mobile Top 10 compliance (11/11 checks passed)
 - **✅ LIVE: Minimal Permissions**: Privacy-first design requesting only essential access
 
-### BYOC (Bring Your Own Cloud) Mode
+### BYOC (Bring Your Own Cloud) Mode ✅ LIVE
 Enable complete data ownership by configuring your own storage:
-```typescript
-// Enable strict BYOC mode for air-gapped operation
-import { setStrictBYOC } from './services/dataPolicy';
-setStrictBYOC(true);
+
+**Quick Start Commands:**
+```bash
+# Start app with user private cloud enabled
+npm run start:byoc
+
+# Test BYOC functionality
+npm run byoc:test
+
+# Validate security with BYOC mode
+npm run byoc:validate
 ```
+
+**Environment Configuration:**
+```bash
+# Enable BYOC strict mode (100% user data ownership)
+set EXPO_PUBLIC_DATA_POLICY=strict_byoc
+
+# Alternative: Create .env file with:
+# EXPO_PUBLIC_DATA_POLICY=strict_byoc
+```
+
+**User Configuration (In App):**
+1. Open Settings → Privacy & Security
+2. Scroll to "Data Management" section 
+3. Configure WebDAV endpoint (e.g., Nextcloud: `https://your-cloud.com/remote.php/dav/files/username/`)
+4. Test connection to verify your private cloud storage
+5. All data now syncs to YOUR cloud, not app servers
 
 ### Data Privacy ✅ ACTIVE PROTECTION
 - **100% User Data Ownership**: Users control all encryption keys

@@ -4,11 +4,12 @@
   "main": "expo-router/entry",
   "version": "1.0.0-rc.1",
   "scripts": {
-    "start": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
-    "prestart": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js",
-    "start:devclient": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js && expo start --dev-client -c",
-    "start:lan": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --lan -c",
-    "start:localhost": "set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --localhost -c",
+    "start": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
+    "prestart": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js",
+    "start:devclient": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js && expo start --dev-client -c",
+    "start:lan": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --lan -c",
+    "start:localhost": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --localhost -c",
+    "start:byoc": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& expo start --clear",
     "validate": "node ./scripts/validate-configs.js",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo run:android",
@@ -83,7 +84,9 @@
     "devclient:build:ios": "npx eas build --profile development --platform ios",
     "security:validate": "node ./scripts/security-validate.js",
     "security:test": "node ./scripts/security-test.js",
-    "security:all": "npm run security:validate && npm run security:test"
+    "security:all": "npm run security:validate && npm run security:test",
+    "byoc:test": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& node ./scripts/test-byoc-private-cloud.js",
+    "byoc:validate": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& npm run security:validate"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
