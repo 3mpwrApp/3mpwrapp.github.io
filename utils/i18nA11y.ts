@@ -28,7 +28,7 @@ export function useAccessibilityAnnouncements() {
       formatForLanguage?: boolean;
     }
   ) => {
-    const { priority = 'polite', delay = 300, formatForLanguage = true } = options || {};
+    const { delay = 300, formatForLanguage = true } = options || {};
     
     try {
       let message = t(key, fallback, vars);
@@ -118,7 +118,7 @@ export function useAccessibilityAnnouncements() {
 /**
  * Format messages appropriately for different languages and RTL support
  */
-function formatMessageForLanguage(message: string, lang: string, isRTL: boolean): string {
+function formatMessageForLanguage(message: string, lang: string, _isRTL: boolean): string {
   // Language-specific formatting rules for screen readers
   switch (lang) {
     case 'fr':
@@ -147,7 +147,7 @@ function formatMessageForLanguage(message: string, lang: string, isRTL: boolean)
  * Generate accessibility labels with proper language context
  */
 export function useAccessibilityLabels() {
-  const { t, lang } = useTranslation();
+  const { t } = useTranslation();
 
   const generateLabel = (
     baseKey: string,

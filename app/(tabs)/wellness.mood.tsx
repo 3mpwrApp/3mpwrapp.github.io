@@ -26,7 +26,7 @@ function MoodInner() {
   
   // Enhanced internationalization accessibility utilities
   const { generateLabel } = useAccessibilityLabels();
-  const { announce, announceContentChange } = useAccessibilityAnnouncements();
+  const { announceContentChange } = useAccessibilityAnnouncements();
   
   // Announce screen load and focus management
   useAnnounceOnMount(t('mood.screenAnnouncement', 'Mood tracker loaded. Select a score and add optional note.'));

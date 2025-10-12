@@ -108,7 +108,7 @@ function RecentPrompts(){
         style={{ flexDirection:'row', flexWrap:'wrap', gap:8 }}
         accessibilityLabel={t('assistant.home.promptsList', 'List of recent prompts')}
       >
-        {items.map((it, index) => (
+        {items.map((it, _index) => (
           <Link key={it.label} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild>
             <A11yPressable
               style={{
