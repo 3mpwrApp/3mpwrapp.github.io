@@ -17,7 +17,7 @@ import { useTranslation } from '../../../i18n';
 import { useTheme } from '../../../theme/ThemeContext';
 
 // Workflow Engine Types
-interface WorkflowEngine {
+interface _WorkflowEngine {
   id: string;
   name: string;
   version: string;
@@ -121,7 +121,7 @@ interface ExecutedStep {
   performance: StepPerformance;
 }
 
-interface DocumentGeneration {
+interface _DocumentGeneration {
   templateId: string;
   outputFormat: 'pdf' | 'docx' | 'txt' | 'html';
   variables: Record<string, any>;
@@ -163,7 +163,7 @@ interface CulturalProtocol {
   traditionalLaw?: TraditionalLawConsideration[];
 }
 
-interface AILegalAssistant {
+interface _AILegalAssistant {
   id: string;
   name: string;
   capabilities: AICapability[];
@@ -176,7 +176,7 @@ interface AILegalAssistant {
   performance: AIPerformance;
 }
 
-interface DocumentReview {
+interface _DocumentReview {
   documentId: string;
   reviewType: 'automated' | 'human' | 'expert' | 'cultural';
   reviewerId?: string;
@@ -192,7 +192,7 @@ interface DocumentReview {
   approvalLevel: 'preliminary' | 'standard' | 'expert' | 'final';
 }
 
-interface LegalKnowledgeBase {
+interface _LegalKnowledgeBase {
   id: string;
   jurisdiction: string;
   laws: LegalReference[];
@@ -267,7 +267,7 @@ type StepStatus =
 // Mock Implementation
 export default function LegalWorkflowEngine() {
   const { colors } = useTheme();
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
   const { user } = useAuth();
   const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
 
@@ -275,8 +275,8 @@ export default function LegalWorkflowEngine() {
   const [workflows, setWorkflows] = useState<LegalWorkflow[]>([]);
   const [executions, setExecutions] = useState<WorkflowExecution[]>([]);
   const [automationRules, setAutomationRules] = useState<AutomationRule[]>([]);
-  const [selectedWorkflow, setSelectedWorkflow] = useState<LegalWorkflow | null>(null);
-  const [showExecutionModal, setShowExecutionModal] = useState(false);
+  const [_selectedWorkflow, _setSelectedWorkflow] = useState<LegalWorkflow | null>(null);
+  const [_showExecutionModal, _setShowExecutionModal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -999,7 +999,7 @@ export default function LegalWorkflowEngine() {
   };
 
   const startWorkflowExecution = (workflow: LegalWorkflow) => {
-    const newExecution: Partial<WorkflowExecution> = {
+    const _newExecution: Partial<WorkflowExecution> = {
       workflowId: workflow.id,
       userId: user?.uid || 'user',
       status: 'initialized',

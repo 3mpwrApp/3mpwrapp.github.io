@@ -50,7 +50,7 @@ interface CampaignGoal {
   category: 'awareness' | 'policy' | 'funding' | 'accessibility' | 'education';
 }
 
-interface TaskAssignment {
+interface _TaskAssignment {
   id: string;
   taskDescription: string;
   assigneeId: string;
@@ -63,7 +63,7 @@ interface TaskAssignment {
   accessibilityRequirements?: string[];
 }
 
-interface AdvocacyTarget {
+interface _AdvocacyTarget {
   id: string;
   name: string;
   type: 'government' | 'organization' | 'business' | 'institution' | 'public';
@@ -82,7 +82,7 @@ interface ContactInfo {
   socialMedia?: Record<string, string>;
 }
 
-interface CommunicationStrategy {
+interface _CommunicationStrategy {
   channels: string[];
   messaging: Record<string, string>; // channel -> message
   frequency: string;
@@ -109,7 +109,7 @@ export default function AdvocacyCampaignCoordinator() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { colors } = useTheme();
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
   const { user } = useAuth();
   const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
 

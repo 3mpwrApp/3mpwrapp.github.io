@@ -190,7 +190,7 @@ export default function AdvancedSecurityOptions() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { colors } = useTheme();
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
   const { user } = useAuth();
   const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
 
@@ -199,8 +199,8 @@ export default function AdvancedSecurityOptions() {
   const [biometricAvailable, setBiometricAvailable] = useState(false);
   const [biometricTypes, setBiometricTypes] = useState<string[]>([]);
   const [securityThreats, setSecurityThreats] = useState<SecurityThreat[]>([]);
-  const [recentAudits, setRecentAudits] = useState<SecurityAudit[]>([]);
-  const [showSecurityModal, setShowSecurityModal] = useState(false);
+  const [_recentAudits, _setRecentAudits] = useState<SecurityAudit[]>([]);
+  const [_showSecurityModal, _setShowSecurityModal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -626,7 +626,7 @@ export default function AdvancedSecurityOptions() {
       setSecurityConfig(updatedConfig);
 
       // Log security configuration change
-      console.log(`Security setting updated: ${path} = ${value}`);
+      console.warn(`Security setting updated: ${path} = ${value}`);
 
     } catch (error) {
       console.error('Error updating security setting:', error);
@@ -936,7 +936,7 @@ export default function AdvancedSecurityOptions() {
             </View>
             <Switch
               value={securityConfig?.authentication.culturalAuthentication?.[0]?.isEnabled || false}
-              onValueChange={(value) => {
+              onValueChange={(_value) => {
                 // Would update cultural authentication settings
                 Alert.alert('Cultural Authentication', 'Traditional verification methods would be configured here.');
               }}

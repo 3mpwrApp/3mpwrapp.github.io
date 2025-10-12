@@ -162,7 +162,7 @@ interface TemplateVariable {
   validation?: string;
 }
 
-interface LegalWorkflow {
+interface _LegalWorkflow {
   id: string;
   name: string;
   description: string;
@@ -262,7 +262,7 @@ export default function LegalProcessAutomation() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { colors } = useTheme();
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
   const { user } = useAuth();
   const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
 
@@ -649,7 +649,7 @@ Sincerely,
   };
 
   const handleCreateProcess = () => {
-    const newProcess: Partial<LegalProcess> = {
+    const _newProcess: Partial<LegalProcess> = {
       type: selectedProcessType,
       jurisdiction: selectedJurisdiction,
       status: 'planning',

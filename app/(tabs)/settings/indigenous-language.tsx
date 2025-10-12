@@ -123,7 +123,7 @@ export default function IndigenousLanguageScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { colors } = useTheme();
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
   const {
     selectedLanguage,
     setSelectedLanguage,

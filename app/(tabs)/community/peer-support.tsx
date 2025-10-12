@@ -188,7 +188,7 @@ export default function PeerSupportMatching() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { colors } = useTheme();
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
   const { user } = useAuth();
   const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
 
@@ -196,7 +196,7 @@ export default function PeerSupportMatching() {
   const [userProfile, setUserProfile] = useState<PeerProfile | null>(null);
   const [availableMatches, setAvailableMatches] = useState<PeerMatch[]>([]);
   const [activeConnections, setActiveConnections] = useState<PeerMatch[]>([]);
-  const [showProfileModal, setShowProfileModal] = useState(false);
+  const [_showProfileModal, _setShowProfileModal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -428,7 +428,7 @@ export default function PeerSupportMatching() {
     );
   };
 
-  const handleStartConversation = (connectionId: string) => {
+  const handleStartConversation = (_connectionId: string) => {
     Alert.alert(
       'Start Conversation',
       'Open communication with your peer supporter?',
@@ -699,7 +699,7 @@ export default function PeerSupportMatching() {
         <View style={styles.profileHeader}>
           <Text style={[styles.profileTitle, { color: colors.text }]}>Peer Support Profile</Text>
           <A11yPressable
-            onPress={() => setShowProfileModal(true)}
+            onPress={() => _setShowProfileModal(true)}
             accessibilityRole="button"
             style={[styles.editButton, { backgroundColor: colors.primary }]}
           >

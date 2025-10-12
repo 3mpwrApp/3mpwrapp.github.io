@@ -135,10 +135,10 @@ interface AccessibilityFeature {
 // Enhanced Community Hub Component
 export default function EnhancedCommunityHub() {
   const insets = useSafeAreaInsets();
-  const router = useRouter();
+  const _router = useRouter();
   const { colors } = useTheme();
-  const { t } = useTranslation();
-  const { user } = useAuth();
+  const { t: _t } = useTranslation();
+  const { user: _user } = useAuth();
   const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
   
   const [activeTab, setActiveTab] = useState<'groups' | 'peer_support' | 'campaigns' | 'meetups'>('groups');
@@ -352,7 +352,7 @@ export default function EnhancedCommunityHub() {
     setShowCreateModal(true);
   };
 
-  const handleJoinGroup = (groupId: string) => {
+  const handleJoinGroup = (_groupId: string) => {
     Alert.alert(
       'Join Group',
       'Would you like to join this advocacy group?',

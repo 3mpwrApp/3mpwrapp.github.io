@@ -163,7 +163,7 @@ export default function CulturalSafetyScreen() {
   );
 
   const CulturalProfileButton = ({ 
-    profile, 
+    profile: _profile, 
     title, 
     description, 
     icon,
