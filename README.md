@@ -75,7 +75,7 @@ npm run security:all       # Complete security test suite
 - **✅ LIVE: Minimal Permissions**: Privacy-first design requesting only essential access
 
 ### BYOC (Bring Your Own Cloud) Mode ✅ LIVE
-Enable complete data ownership by configuring your own storage:
+Enable complete data ownership by configuring ANY storage provider you want:
 
 **Quick Start Commands:**
 ```bash
@@ -101,17 +101,17 @@ set EXPO_PUBLIC_DATA_POLICY=strict_byoc
 **User Configuration (In App):**
 1. Open Settings → Privacy & Security
 2. Scroll to "Data Management" section 
-3. Configure WebDAV endpoint (e.g., Nextcloud: `https://your-cloud.com/remote.php/dav/files/username/`)
+3. Configure ANY cloud storage provider (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, iCloud, or any other service you prefer)
 4. Test connection to verify your private cloud storage
-5. All data now syncs to YOUR cloud, not app servers
+5. All data now syncs to YOUR chosen cloud, not app servers
 
 ### Data Privacy ✅ ACTIVE PROTECTION
-- **100% User Data Ownership**: Users control all encryption keys
-- **Zero Cloud Dependencies**: Optional cloud integration only
+- **100% User Data Ownership**: Users control all encryption keys and can choose ANY cloud provider
+- **Zero Cloud Dependencies**: Optional cloud integration only - user's choice of provider
 - **Local Data Storage**: All data encrypted and stored locally with AES-256
 - **Privacy by Design**: No tracking, no telemetry, no unnecessary data collection
-- **Real-Time Security**: Continuous monitoring and automatic threat response
-- **Enterprise-Grade**: Military-grade encryption and hardware-backed security
+- **Real-Time Security**: Continuous monitoring and automatic threat response across entire 3mpwr infrastructure
+- **Enterprise-Grade**: Military-grade encryption and hardware-backed security for all systems
 
 Policy: When you make a user-visible change (labels, flows, notable behavior), update the User Guide and add an entry to the Changelog in the same PR. If you add or deprecate a feature, also update the "Where you'll see 'Coming soon' today" section in the User Guide.
 

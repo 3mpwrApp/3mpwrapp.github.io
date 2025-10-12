@@ -56,7 +56,7 @@ if (dataPolicy === 'strict_byoc') {
   console.log('✅ USER PRIVATE CLOUD IS ENABLED');
   console.log('✅ 100% user data ownership active');
   console.log('✅ App storage completely disabled');
-  console.log('✅ Ready for user\'s WebDAV/Nextcloud configuration');
+  console.log('✅ Ready for user\'s cloud configuration of ANY provider they choose');
 } else {
   console.log('❌ User private cloud is NOT enabled');
   console.log('   Run: npm run start:byoc to enable');
@@ -65,6 +65,10 @@ if (dataPolicy === 'strict_byoc') {
 console.log('\n📚 User Instructions:');
 console.log('1. Open app and go to Settings → Privacy & Security');
 console.log('2. Scroll to "Data Management" section');
-console.log('3. Configure your WebDAV endpoint (e.g., Nextcloud)');
+console.log('3. Configure ANY cloud provider you want:');
+console.log('   - WebDAV/Nextcloud: https://your-cloud.com/remote.php/dav/files/username/');
+console.log('   - Google Drive, Dropbox, OneDrive: Use respective API endpoints');
+console.log('   - AWS S3, Azure Storage: Configure with your credentials');
+console.log('   - iCloud or any other provider: Use provider-specific configuration');
 console.log('4. Test connection to verify your private cloud storage');
-console.log('5. All data will now sync to YOUR cloud, not app servers');
+console.log('5. All data will now sync to YOUR chosen cloud, not app servers');

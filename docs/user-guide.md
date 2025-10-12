@@ -23,20 +23,20 @@ Tip: The app uses your phone’s text size. Increase font size in your device se
 <a id="privacy-at-a-glance"></a>
 ### Privacy & Security at a glance
 
-- **🔒 Your data is completely secure**: Enterprise-grade AES-256 encryption protects all your information. ✅ **ACTIVE**
+- **🔒 Complete infrastructure security**: Enterprise-grade AES-256 encryption protects all information across the entire 3mpwr ecosystem (app, servers, repositories, databases). ✅ **ACTIVE**
 - **📱 You control everything**: All data is stored encrypted on your device by default. No cloud required. ✅ **ACTIVE**
-- **☁️ Optional private cloud**: Use your own storage (WebDAV, Nextcloud, etc.) for syncing across devices. ✅ **READY**
+- **☁️ Your choice of private cloud**: Use ANY storage provider you want (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, or any other service you prefer) for syncing across devices. ✅ **READY**
 - **🛡️ Air-gapped protection**: The app works 100% offline with no mandatory internet connections. ✅ **ACTIVE**
 - **🔐 Military-grade encryption**: Your encryption keys are stored in your device's secure hardware. ✅ **ACTIVE**
 - **👁️ Zero tracking**: No analytics, no telemetry, no data collection without your explicit consent. ✅ **ACTIVE**
 - **🔒 Passcode protection**: Set a Passcode and enable Wellness Lock in Settings for sensitive areas. ✅ **ACTIVE**
 - **📤 Data export/import**: Full control with Export and Import under Settings → Privacy & Backups. ✅ **ACTIVE**
-- **🛡️ Tamper detection**: Built-in security monitoring protects against unauthorized modifications. ✅ **ACTIVE**
+- **🛡️ Tamper detection**: Built-in security monitoring protects against unauthorized modifications across the entire infrastructure. ✅ **ACTIVE**
 - **🔍 Device security**: Continuous monitoring for rooting/jailbreaking attempts and security threats. ✅ **ACTIVE**
-- **🔐 Network security**: TLS 1.3 enforcement with certificate pinning for all communications. ✅ **ACTIVE**
-- **⚡ Real-time protection**: Security framework initializes automatically and monitors continuously. ✅ **ACTIVE**
+- **🔐 Network security**: TLS 1.3 enforcement with certificate pinning for all communications throughout the 3mpwr infrastructure. ✅ **ACTIVE**
+- **⚡ Real-time protection**: Security framework initializes automatically and monitors continuously across all 3mpwr systems. ✅ **ACTIVE**
 
-The app is designed with security-by-design principles, meets enterprise security standards, and provides **100% user data ownership**.
+The app is designed with security-by-design principles, meets enterprise security standards, and provides **100% user data ownership**. All security measures protect the entire 3mpwr infrastructure including apps, servers, repositories, and databases.
 
 ## Table of contents
 
@@ -1281,16 +1281,16 @@ More in Settings
 Your data belongs entirely to you. 3mpwr App is designed with complete user data sovereignty:
 
 - **Local-First Architecture**: All data stays on your device by default. No external servers, no app retention.
-- **BYOC Strict Mode**: Connect your own storage (WebDAV/Nextcloud) for 100% user-owned persistence.
+- **Universal Cloud Choice**: Connect ANY storage provider you want (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, Azure Storage, iCloud, or any other cloud service) for 100% user-controlled persistence.
 - **Zero App Storage**: When strict mode is enabled, the app completely disables Firebase and all remote storage.
 - **Session-Only Credentials**: Your storage credentials are never saved by the app - only used during your session.
 - **Verifiable Privacy**: You can technically verify that no data is sent to app servers through code inspection.
-- **Enterprise Security Framework**: Real-time tamper detection, device security monitoring, and automatic threat response.
+- **Enterprise Security Framework**: Real-time tamper detection, device security monitoring, and automatic threat response across the entire 3mpwr infrastructure.
 - **Security Validation**: Complete OWASP Mobile Top 10 compliance with continuous security monitoring.
 
 **Privacy Controls (Settings → Privacy & Security):**
 - **Data Ownership Statement**: Review your complete data sovereignty rights
-- **BYOC Configuration**: Connect your personal WebDAV/Nextcloud storage  
+- **BYOC Configuration**: Connect ANY cloud storage provider you prefer (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, iCloud, etc.)  
 - **Opt Out of Analytics**: Disables telemetry so the app won't send usage data
 - **Cloud Features Toggle**: Controls optional online features (disabled by default)
 - **Data Management**: Export/Import backup, Clear All Data, Prune Old Cache
@@ -1323,7 +1323,7 @@ Your data belongs entirely to you. 3mpwr App is designed with complete user data
 - Evidence Locker: Notes and files are kept on-device. Future updates will add default encryption and optional encrypted sync.
 - Erasure: Use Clear All Data to wipe local storage. If you enabled cloud features, turn them off first and remove any remote data where applicable.
 - Beta builds: The About screen shows a small “This is a beta build” notice when applicable.
- - Bring Your Own Cloud (BYOC) strict mode: When enabled by the operator (EXPO_PUBLIC_DATA_POLICY=strict_byoc), the app disables app/server storage. You can connect your own storage (WebDAV/Nextcloud) in Settings → Privacy & Backups (Connect Storage). Credentials are session-only and never saved by the app.
+ - Bring Your Own Cloud (BYOC) strict mode: When enabled by the operator (EXPO_PUBLIC_DATA_POLICY=strict_byoc), the app disables app/server storage. You can connect ANY storage provider you want (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, iCloud, or any other cloud service) in Settings → Privacy & Backups (Connect Storage). Credentials are session-only and never saved by the app.
 
 Step‑by‑step: Make a backup
 

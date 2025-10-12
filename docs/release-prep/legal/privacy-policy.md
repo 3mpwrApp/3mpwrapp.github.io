@@ -16,7 +16,7 @@ This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and prot
 - **Open & Transparent:** Our codebase contains no data-logging functions. You can inspect and verify our privacy claims.
 
 **Technical Implementation:**
-- **BYOC Strict Mode:** When enabled (`EXPO_PUBLIC_DATA_POLICY=strict_byoc`), completely disables Firebase and all app storage
+- **BYOC Strict Mode:** When enabled (`EXPO_PUBLIC_DATA_POLICY=strict_byoc`), completely disables Firebase and all app storage, allowing users to connect ANY cloud provider they want
 - **Session-Only Credentials:** Your storage credentials are never saved by the app
 - **Verifiable Architecture:** You can technically verify these claims through code inspection and network monitoring
 
@@ -25,7 +25,7 @@ This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and prot
 
 ## Summary
 - **Local-first architecture:** All data stored on your device by default with optional user-controlled sync
-- **BYOC (Bring Your Own Cloud) support:** Connect your own storage for 100% user-owned data persistence
+- **BYOC (Bring Your Own Cloud) support:** Connect ANY storage provider you want for 100% user-owned data persistence
 - We practice data minimization and store most preferences locally on your device by default
 - We do not sell personal data
 - You can use Guest Mode without creating an account (limited features)

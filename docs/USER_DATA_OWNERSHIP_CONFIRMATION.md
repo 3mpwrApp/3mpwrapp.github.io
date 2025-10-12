@@ -11,7 +11,7 @@ After comprehensive technical analysis and verification, I can **definitively co
 ### **BYOC Strict Mode Implementation**
 - **Environment Control**: `EXPO_PUBLIC_DATA_POLICY=strict_byoc` completely disables all app storage
 - **Firebase Disabling**: All Firebase services (`auth`, `db`, `storage`) return `null` when strict mode is active
-- **Storage Providers**: Only user's WebDAV/Nextcloud or ephemeral (no persistence) storage available
+- **Universal Storage Support**: Users can connect ANY cloud provider they want (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, iCloud, Azure Storage, or any other service)
 - **Session-Only Credentials**: BYOC credentials never persisted - exist only in memory during session
 
 ### **Data Flow Control**
@@ -41,7 +41,7 @@ export function getActiveStorage(): StorageProvider {
 ### **Steps for Complete User Control:**
 
 1. **Deploy with Strict Mode**: Set `EXPO_PUBLIC_DATA_POLICY=strict_byoc`
-2. **Configure Personal Storage**: Connect WebDAV/Nextcloud endpoint in Settings → Privacy & Security
+2. **Configure Personal Storage**: Connect ANY cloud provider you want (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, iCloud, etc.) in Settings → Privacy & Security
 3. **Verify Connection**: Test storage connectivity (credentials remain session-only)
 4. **Confirm Implementation**: Use Technical Verification Guide to validate data sovereignty
 

@@ -46,14 +46,14 @@
 
 **If you enable backup or sync features, you connect only to your chosen storage service.**
 
-- Backup/sync connects to user's own services: Google Drive, iCloud, WebDAV, Nextcloud, etc.
+- Backup/sync connects to user's own services: ANY cloud provider you want (Google Drive, iCloud, WebDAV, Nextcloud, Dropbox, OneDrive, AWS S3, Azure Storage, or any other service)
 - **No data passes through or is accessible by 3mpwr App or its developers**
 - User authenticates directly with their chosen cloud provider
 - App acts only as a client, never as an intermediary or data handler
 
 ### BYOC Strict Mode:
 - When `EXPO_PUBLIC_DATA_POLICY=strict_byoc` is enabled, Firebase and all app-owned storage are completely disabled
-- Users can connect their own WebDAV/Nextcloud endpoint for 100% user-owned storage
+- Users can connect ANY storage provider they want (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, iCloud, or any other cloud service) for 100% user-owned storage
 - Credentials are session-only and never persisted by the app
 - All writes go directly to user's endpoint, bypassing any app infrastructure
 

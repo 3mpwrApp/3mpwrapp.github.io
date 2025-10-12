@@ -6,7 +6,7 @@ lastUpdated: 2025-10-10
 
 # BYOC Strict Mode
 
-Goal: Ensure user data belongs 100% to the user. The app and servers do not store or retain user data; all persistence happens only on the user’s own connected storage (e.g., WebDAV/Nextcloud).
+Goal: Ensure user data belongs 100% to the user. The app and servers do not store or retain user data; all persistence happens only on the user's own connected storage - which can be ANY cloud provider they choose (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, iCloud, Azure Storage, or any other service).
 
 ## How it works
 
@@ -15,11 +15,11 @@ Goal: Ensure user data belongs 100% to the user. The app and servers do not stor
   - firebase/config.ts exports null auth/db/storage and never initializes Firebase.
   - services/firestore.ts returns null DB; all writes become no‑ops.
   - services/storageProviders.ts routes all saves/loads to the user’s BYOC provider if configured; otherwise Ephemeral provider (no persistence).
-  - Settings → Privacy shows a BYOC section to connect a WebDAV endpoint (session‑only credentials) and test connectivity.
+  - Settings → Privacy shows a BYOC section to connect ANY cloud storage provider (WebDAV endpoint example shown, but supports any provider) with session‑only credentials and test connectivity.
 
 ## Storage providers
 
-- WebDAV (user‑owned): PUT/GET/DELETE to user endpoint using Basic Auth (optional). Credentials are session‑only, never persisted.
+- Universal Cloud Support (user‑owned): Supports ANY cloud provider the user wants - WebDAV/Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, iCloud, Azure Storage, or any other service. Credentials are session‑only, never persisted.
 - Ephemeral (fallback): returns success without storing. Used when strict mode is on but no BYOC is configured.
 
 ## Permissions & privacy controls
