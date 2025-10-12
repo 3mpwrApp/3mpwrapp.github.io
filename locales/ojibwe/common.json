@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "endaaying",
+    "wellness": "mino-ayaawin",
+    "community": "odenang",
+    "advocacy": "naadamaawin",
+    "resources": "aabish",
+    "settings": "gichi-naakonigewin"
+  },
+  "indigenous": {
+    "title": "Anishinaabemowin gichi-naadamaadiwin",
+    "landAcknowledgment": "omaa gidakiiminang enji-ayaang",
+    "protocols": {
+      "ceremonial": "gizhebaashkaa ezhichigewin",
+      "elder": "gichi-aya'aa ezhichigewin",
+      "family": "odenang ezhichigewin"
+    },
+    "wellness": {
+      "traditional": "gakina-awiiya mino-ayaawin",
+      "holistic": "gakina-awiiya mino-ayaawin",
+      "medicine": "mashkiki",
+      "ceremony": "gizhebaashkaa"
+    },
+    "legal": {
+      "rights": "anishinaabe dibaakonigewin",
+      "treaty": "mazina'igan",
+      "customary": "gakina-awiiya dibaakonigewin"
+    },
+    "greetings": {
+      "hello": "boozhoo",
+      "goodbye": "minogiizhigad",
+      "thankyou": "miigwech",
+      "elder_male": "mishomis",
+      "elder_female": "nooko"
+    }
+  },
+  "accessibility": {
+    "traditional": "gakina-awiiya mino-ayaawin",
+    "elder_support": "gichi-aya'aa naadamaawin",
+    "community_centered": "odenang ezhichigewin"
+  },
+  "cultural": {
+    "respect": "mnaadendimowin",
+    "protocol": "ezhichigewin",
+    "ceremony": "gizhebaashkaa",
+    "traditional_knowledge": "gakina-awiiya gikendaasowin",
+    "oral_tradition": "dibaajimowinan",
+    "storytelling": "aadizookaan"
+  },
+  "family": {
+    "mother": "mama",
+    "father": "papa",
+    "grandmother": "nooko",
+    "grandfather": "mishomis",
+    "child": "biinoojiiyenh",
+    "family": "odenang"
+  },
+  "directions": {
+    "east": "giwedin",
+    "south": "zhaawan",
+    "west": "ningaabii'an",
+    "north": "giiwedin"
+  },
+  "time": {
+    "morning": "gizheb",
+    "day": "giizhigad",
+    "evening": "onagoshi",
+    "night": "dibikad"
+  },
+  "common": {
+    "yes": "eya'a",
+    "no": "gaawiin",
+    "maybe": "giishpin",
+    "please": "daga",
+    "help": "naadamaw",
+    "support": "naadamaawin"
+  }
+}

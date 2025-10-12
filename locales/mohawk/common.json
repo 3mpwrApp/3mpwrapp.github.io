@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "kana:takon",
+    "wellness": "skennon",
+    "community": "tsi tethinonhsote",
+    "advocacy": "tsi teiakoientakwen",
+    "resources": "tsi tkaienthos",
+    "settings": "tsi ieri:io"
+  },
+  "indigenous": {
+    "title": "Kanienkehaka tsi teiakoientakwen",
+    "landAcknowledgment": "kionkwe okarahsonha",
+    "protocols": {
+      "ceremonial": "kahiaton",
+      "elder": "roiatatokenti tsi teiakoientakwen",
+      "family": "kanatatokenti tsi teiakoientakwen"
+    },
+    "wellness": {
+      "traditional": "ronhwakta skennon",
+      "holistic": "atkonnikonhrison skennon",
+      "medicine": "onkwehonwe akonistenhsera",
+      "ceremony": "kahiaton"
+    },
+    "legal": {
+      "rights": "onkwehonwe tsi ohenton",
+      "treaty": "tsi na:wen ahkonenhne",
+      "customary": "ronhwakta tsi ohenton"
+    },
+    "greetings": {
+      "hello": "sken",
+      "goodbye": "onkwe ias",
+      "thankyou": "niawen",
+      "elder_male": "rakstha",
+      "elder_female": "yakstha"
+    }
+  },
+  "accessibility": {
+    "traditional": "ronhwakta tekaiasontake",
+    "elder_support": "roiatatokenti tsi teiakoientakwen",
+    "community_centered": "kanatatokenti tekaiasontake"
+  },
+  "cultural": {
+    "respect": "ionkwanikonhrahnirate",
+    "protocol": "tsi teiakoientakwen",
+    "ceremony": "kahiaton",
+    "traditional_knowledge": "ronhwakta tekaiasontake",
+    "oral_tradition": "iakonkwewats",
+    "storytelling": "iakotokaten"
+  },
+  "family": {
+    "mother": "noha",
+    "father": "roniha",
+    "grandmother": "ahkstha",
+    "grandfather": "rakstha",
+    "child": "kheionkwe",
+    "family": "kanatatokenti"
+  },
+  "directions": {
+    "east": "tsi kentiohkwakwe",
+    "south": "tsi tekheiarakehronhkwa",
+    "west": "tsi kahwehrhon",
+    "north": "tsi tekeniatarenhkwa"
+  },
+  "time": {
+    "morning": "entewatatha",
+    "day": "asha karios",
+    "evening": "iokwara",
+    "night": "so:wis"
+  },
+  "common": {
+    "yes": "hen",
+    "no": "iah",
+    "maybe": "tokat",
+    "please": "etho ki",
+    "help": "ieiakohi",
+    "support": "tsi teiakoientakwen"
+  }
+}

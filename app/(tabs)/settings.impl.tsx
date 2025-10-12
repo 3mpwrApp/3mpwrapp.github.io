@@ -16,13 +16,13 @@ import { useAuth } from '../../context/AuthContext';
 import { auth, db, storage } from '../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
+import { useDevPrefs } from '../../services/devPrefs';
 import { useNetwork } from '../../store/network';
 import type { ResourceFormat, TextScale } from '../../store/settings';
 import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 import { sendFeedbackEmailInternal } from '../../utils/feedback';
-import { useDevPrefs } from '../../services/devPrefs';
 
 import * as SettingsLazy from './settings.lazy';
 const NotificationPreferences = React.lazy(() => import('../../components/NotificationPreferences'));
@@ -85,6 +85,19 @@ export default function SettingsScreen() {
       <Text ref={titleRef} accessibilityRole='header' style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('settings.title','Settings')}</Text>
       <Section title={t('settings.accessibility.title','Accessibility')} subtitle={t('settings.accessibility.subtitle','Make the app work better for you')} styles={styles}><EnhancedA11ySettingsSection /></Section>
       <LanguageSelector />
+      <Section title="Indigenous Languages" subtitle="Cultural protocols and traditional language support" styles={styles}>
+        <Link href={'/(tabs)/settings/indigenous-language' as any} asChild>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginBottom:12 }]}
+            accessibilityRole='button'
+            accessibilityLabel="Configure Indigenous language settings and cultural protocols"
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons name='leaf' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Indigenous Language Settings</Text>
+          </A11yPressable>
+        </Link>
+      </Section>
       <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading notification preferences…</Text></View>}>
         <NotificationPreferences />
       </React.Suspense>

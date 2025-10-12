@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "wekwek",
+    "wellness": "kelu'lk",
+    "community": "apoqonmuk",
+    "advocacy": "ankamtmuk",
+    "resources": "kekinu'k",
+    "settings": "ankaptmuk"
+  },
+  "indigenous": {
+    "title": "Mi'kmawi'simk ankamtmuk",
+    "landAcknowledgment": "oqwa'ti'k ankamayimk",
+    "protocols": {
+      "ceremonial": "na'tukwaqn",
+      "elder": "kesalk ankamtmuk",
+      "family": "welalioq ankamtmuk"
+    },
+    "wellness": {
+      "traditional": "aptuk kelu'lk",
+      "holistic": "mawkik kelu'lk",
+      "medicine": "mki'tqamu",
+      "ceremony": "na'tukwaqn"
+    },
+    "legal": {
+      "rights": "mi'kmaq alasutmuaqn",
+      "treaty": "kesputmuaqn",
+      "customary": "aptuk alasutmuaqn"
+    },
+    "greetings": {
+      "hello": "pjila'si",
+      "goodbye": "nmultis",
+      "thankyou": "wela'lioq",
+      "elder_male": "kjijitj",
+      "elder_female": "nukumi"
+    }
+  },
+  "accessibility": {
+    "traditional": "aptuk amkwesewey",
+    "elder_support": "kesalk ankamtmuk",
+    "community_centered": "apoqonmuk amkwesewey"
+  },
+  "cultural": {
+    "respect": "mnamuek",
+    "protocol": "ankamtmuk",
+    "ceremony": "na'tukwaqn",
+    "traditional_knowledge": "aptuk kina'muek",
+    "oral_tradition": "aqalasie'l",
+    "storytelling": "nta'tugwaqn"
+  },
+  "family": {
+    "mother": "nukij",
+    "father": "ntus",
+    "grandmother": "nukumi",
+    "grandfather": "nmumk",
+    "child": "mijisi",
+    "family": "welalioq"
+  },
+  "directions": {
+    "east": "alpit",
+    "south": "unama'kik",
+    "west": "teluisk",
+    "north": "oqiton"
+  },
+  "time": {
+    "morning": "wiktuk",
+    "day": "kesik",
+    "evening": "welunukik",
+    "night": "tepkunset"
+  },
+  "common": {
+    "yes": "ehe",
+    "no": "mu",
+    "maybe": "katu",
+    "please": "meski'k",
+    "help": "ankaptun",
+    "support": "ankamtmuk"
+  }
+}

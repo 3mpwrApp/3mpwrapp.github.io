@@ -19,6 +19,7 @@ import { useAppPalette } from "../theme/usePalette";
 import { announce } from "../utils/announce";
 // Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
+import { NeurodivergentProvider } from "../context/NeurodivergentContext";
 import { I18nProvider } from "../i18n";
 import { setBetaFlag } from "../services/analytics";
 import { fetchCampaigns } from "../services/campaigns";
@@ -123,6 +124,7 @@ export default function RootLayout() {
     fontsLoaded ? (
     <I18nProvider>
       <A11ySettingsProvider>
+        <NeurodivergentProvider>
         <SettingsProvider>
           <CoachProgressProvider>
           <ResilienceProvider>
@@ -193,6 +195,7 @@ export default function RootLayout() {
           </ResilienceProvider>
           </CoachProgressProvider>
         </SettingsProvider>
+        </NeurodivergentProvider>
       </A11ySettingsProvider>
     </I18nProvider>
   ) : null

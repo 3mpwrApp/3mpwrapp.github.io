@@ -15,7 +15,8 @@ module.exports = {
   moduleNameMapper: {
     '^@testing-library/react-native$': '@testing-library/react',
     '^@expo/vector-icons$': '<rootDir>/__mocks__/expo-vector-icons.js',
-    '^expo-router$': '<rootDir>/__mocks__/expo-router.js'
+    '^expo-router$': '<rootDir>/__mocks__/expo-router.js',
+    '^../hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js'
   },
   roots: ['<rootDir>'],
   testMatch: ['**/__tests__/**/*.test.tsx','**/__tests__/**/*.test.ts'],

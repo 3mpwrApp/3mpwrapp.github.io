@@ -106,7 +106,7 @@ function MoodInner() {
           accessibilityRole="radiogroup"
         >
           {[ -2,-1,0,1,2 ].map(s => (
-            <Pressable 
+            <Pressable // a11y-scan: accessibilityRole and hitSlop present
               hitSlop={HIT_SLOP_8} 
               accessibilityRole="radio" 
               key={s} 

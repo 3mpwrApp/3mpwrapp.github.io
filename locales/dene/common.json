@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "gots'ó",
+    "wellness": "gúnaha",
+    "community": "got'ine",
+    "advocacy": "nádéhé",
+    "resources": "ts'íhtsó",
+    "settings": "náhtsí"
+  },
+  "indigenous": {
+    "title": "Dëne nátsínë nádéhé",
+    "landAcknowledgment": "dëkwę nátsínë",
+    "protocols": {
+      "ceremonial": "nádéhé edenídi",
+      "elder": "ëdëlé nádéhé",
+      "family": "got'ine nádéhé"
+    },
+    "wellness": {
+      "traditional": "dëne gúnaha",
+      "holistic": "ts'ít'e gúnaha",
+      "medicine": "nakwé",
+      "ceremony": "nádéhé edenídi"
+    },
+    "legal": {
+      "rights": "dëne náhts'íhtsí",
+      "treaty": "náhtsínë nádéhé",
+      "customary": "dëne náhts'íhtsí"
+    },
+    "greetings": {
+      "hello": "edlánet'e",
+      "goodbye": "nídé",
+      "thankyou": "mársı",
+      "elder_male": "ëdëlé",
+      "elder_female": "ëdëlé"
+    }
+  },
+  "accessibility": {
+    "traditional": "dëne náhgots'édı",
+    "elder_support": "ëdëlé nádéhé",
+    "community_centered": "got'ine náhgots'édı"
+  },
+  "cultural": {
+    "respect": "náhęędaë",
+    "protocol": "nádéhé",
+    "ceremony": "nádéhé edenídi",
+    "traditional_knowledge": "dëne ts'íhtsó",
+    "oral_tradition": "náhgots'ędı",
+    "storytelling": "nágots'ędı"
+  },
+  "family": {
+    "mother": "ëma",
+    "father": "ëta",
+    "grandmother": "ëcho",
+    "grandfather": "ëcho",
+    "child": "yíne",
+    "family": "got'ine"
+  },
+  "directions": {
+    "east": "sánaëłtth'é",
+    "south": "ëłk'é",
+    "west": "sa dëhchë",
+    "north": "nídé"
+  },
+  "time": {
+    "morning": "ëtįhtł'ís",
+    "day": "įhde",
+    "evening": "ërátł'éh",
+    "night": "ëtsáedhe"
+  },
+  "common": {
+    "yes": "ëhë",
+    "no": "ho'áh",
+    "maybe": "edı",
+    "please": "mársı",
+    "help": "náděhé",
+    "support": "nádéhé"
+  }
+}

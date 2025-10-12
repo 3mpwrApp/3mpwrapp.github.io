@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "ᑭᑮᐃᐧᐣ",
+    "wellness": "ᒪᒪᐍᒋᑯᐃᐧᐣ",
+    "community": "ᐅᑕᒪᒋᐦᐃᑐᐃᐧᐣ",
+    "advocacy": "ᐊᓂᔑᐁᐍᐃᐧᐣ",
+    "resources": "ᐊᔑᒋᑫᐃᐧᐣ",
+    "settings": "ᓈᓇᑲᒋᐦᐃᑫᐃᐧᐣ"
+  },
+  "indigenous": {
+    "title": "ᓀᐦᐃᔭᐍᐏᐣ ᐊᓂᔑᐁᐍᐃᐧᐣ",
+    "landAcknowledgment": "ᐁᑿ ᐅᑕᐦᑭᒦᒃ ᐊᓂᔑᐁᐍᐃᐧᐣ",
+    "protocols": {
+      "ceremonial": "ᐅᔅᑲᐱᐣ ᐁᔑᓈᑯᓂᑲᑌᐠ",
+      "elder": "ᐃᐧᒋᐦᑿᐤ ᐁᔑᓈᑯᓂᑲᑌᐠ",
+      "family": "ᐅᑦᐊᐍᐧᒫᐃᐧᐣ ᐁᔑᓈᑯᓂᑲᑌᐠ"
+    },
+    "wellness": {
+      "traditional": "ᑲᔮᔥᑭᐦᑭᓈᐠ ᒪᒪᐍᒋᑯᐃᐧᐣ",
+      "holistic": "ᑲᑭᔑᑲᐍᔨᐠ ᒪᒪᐍᒋᑯᐃᐧᐣ",
+      "medicine": "ᒪᔥᑭᑭ",
+      "ceremony": "ᐅᔅᑲᐱᐣ"
+    },
+    "legal": {
+      "rights": "ᓀᐦᐃᔭᐤ ᐅᑕᐦᑭᒥᑰᐃᐧᐣ",
+      "treaty": "ᐅᓇᑯᓂᑫᐃᐧᐣ",
+      "customary": "ᑲᔮᔥᑭᐦᑭᓈᐠ ᑎᐹᒋᒧᐃᐧᐣ"
+    },
+    "greetings": {
+      "hello": "ᑕᓂᓯ",
+      "goodbye": "ᐁᑿᓂ ᐃᑐᐦᑕᑕᐣ",
+      "thankyou": "ᑭᓇᓈᔅᑯᒦᑎᐣ",
+      "elder_male": "ᒨᓱᒼ",
+      "elder_female": "ᓅᐦᑯᒼ"
+    }
+  },
+  "accessibility": {
+    "traditional": "ᑲᔮᔥᑭᐦᑭᓈᐠ ᐁᔑᑐᑕᑰᓯᐠ",
+    "elder_support": "ᐃᐧᒋᐦᑿᐃᐧᐣ ᐊᓂᔑᐁᐍᐃᐧᐣ",
+    "community_centered": "ᐅᑕᒪᒋᐦᐃᑐᐃᐧᐣ ᐁᔑᓈᑯᓂᑲᑌᐠ"
+  },
+  "cultural": {
+    "respect": "ᑭᒋᐦᐃᑐᐃᐧᐣ",
+    "protocol": "ᐁᔑᓈᑯᓂᑲᑌᐠ",
+    "ceremony": "ᐅᔅᑲᐱᐣ",
+    "traditional_knowledge": "ᑲᔮᔥᑭᐦᑭᓈᐠ ᑭᐢᑫᔨᐦᑕᒧᐃᐧᐣ",
+    "oral_tradition": "ᐊᒋᒧᐃᐧᐣ",
+    "storytelling": "ᐊᒋᒧᐃᐧᐣ ᐁᔑᓈᑯᓂᑲᑌᐠ"
+  },
+  "family": {
+    "mother": "ᓂᑲᐃᐧ",
+    "father": "ᓅᑖᐃᐧ",
+    "grandmother": "ᓅᐦᑯᒼ",
+    "grandfather": "ᒨᓱᒼ",
+    "child": "ᐊᐁᐧᓯᔅ",
+    "family": "ᐅᑦᐊᐍᐧᒫᐃᐧᐣ"
+  },
+  "directions": {
+    "east": "ᑭᐍᑎᓐᐊᐦᐃᐠ",
+    "south": "ᔗᐃᐧᓐᐊᐦᐃᐠ",
+    "west": "ᐸᐢᑯᐣᐊᐦᐃᐠ",
+    "north": "ᑭᐍᑎᓇᐊᐦᐃᐠ"
+  },
+  "time": {
+    "morning": "ᑭᑮᐃᐧᐣ",
+    "day": "ᑭᓯᑲᐤ",
+    "evening": "ᐅᓇᑯᔑᓐ",
+    "night": "ᑎᐱᔅᑲᐤ"
+  },
+  "common": {
+    "yes": "ᐁᐦᐁ",
+    "no": "ᓇᒪ",
+    "maybe": "ᐊᔨᐢᑯ",
+    "please": "ᑭᔭᐣ",
+    "help": "ᐊᓂᔑᐁᐍᐃᐧᐣ",
+    "support": "ᐊᓂᔑᐁᐍᐃᐧᐣ"
+  }
+}

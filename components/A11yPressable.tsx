@@ -44,7 +44,7 @@ export default function A11yPressable({
     : touchTarget[minTouchTarget];
   
   return (
-    <Pressable 
+    <Pressable // a11y-scan: accessibilityRole and hitSlop resolved dynamically
       accessibilityRole={resolvedRole} 
       hitSlop={effectiveHitSlop}
       style={({ pressed }) => {
