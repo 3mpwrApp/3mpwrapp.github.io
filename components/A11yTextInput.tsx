@@ -78,7 +78,7 @@ export default function A11yTextInput({
   }, [error, announceErrors, announceFormError, label]);
   
   // Build describedBy relationships
-  const describedByIds = React.useMemo(() => {
+  const _describedByIds = React.useMemo(() => {
     const ids = [];
     if (helperTextId) ids.push(helperTextId);
     if (errorId) ids.push(errorId);
