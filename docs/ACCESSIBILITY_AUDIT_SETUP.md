@@ -1,18 +1,22 @@
-# Accessibility Audit Setup
+# Accessibility Audit Setup Guide
 
-## Objectives
-Establish a repeatable process to assess and improve WCAG 2.1 AA conformance across core screens, ensuring inclusive experience for assistive tech users.
+## Overview
+This guide explains how to set up and run accessibility audits for the 3mpwr App, including the new internationalization accessibility (i18n a11y) features.
 
-## Scope (Phase 1)
-- Automated static & runtime checks (lint + Jest + optional detox axe pass)
-- Manual focus order & keyboard navigation checklist
-- Color contrast validation against theme tokens
-- Screen reader labeling review (iOS VoiceOver, Android TalkBack)
+## Updated Objectives (October 2025)
+- Establish repeatable WCAG 2.1 AA conformance process across all screens
+- Validate internationalization accessibility (i18n a11y) across English, French, and Spanish
+- Ensure inclusive experience for assistive technology users globally
+- Automated testing integration with comprehensive pattern validation
 
-## Exclusions (Phase 1)
-- Full cognitive load UX studies
-- Gestures/drag alternative patterns (document but not fix yet)
-- Biometric / haptic fallback patterns
+## Enhanced Scope
+- **Automated static & runtime checks**: Enhanced lint, Jest, and custom audit tools
+- **Internationalization testing**: Multi-language accessibility validation
+- **Manual focus order & keyboard navigation**: Complete checklist across languages
+- **Color contrast validation**: Enhanced theme token and inline color analysis
+- **Screen reader comprehensive review**: iOS VoiceOver, Android TalkBack, NVDA/JAWS
+- **Component accessibility validation**: A11yPressable, A11yTextInput testing
+- **i18n accessibility patterns**: Cultural adaptation and translation validation
 
 ## Tooling
 | Layer | Tool | Purpose |

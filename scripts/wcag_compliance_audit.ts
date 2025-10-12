@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node
 /**
- * WCAG Compliance Audit (initial pass)
+ * WCAG Compliance Audit (comprehensive)
  * Focus areas:
  *  1. Color contrast for defined theme tokens (light/dark) using constants/Colors + palette assumptions.
  *  2. Inline hex colors in TSX files (flag potential low contrast vs background).
@@ -8,10 +8,17 @@
  *  4. Optional JSON output (machine readable) via --json or --json=path.json
  *  5. Configurable thresholds (--aa 4.5 --aaa 7) & inline assumed background (--inline-bg #FFFFFF)
  *  6. Suggest closest contrast-compliant shade adjustments for failing palette pairs
+ *  7. Internationalization accessibility audit (i18n a11y)
+ *  8. Accessibility component compliance checks
+ *
+ * New features:
+ *  - i18n accessibility pattern validation
+ *  - Screen reader announcement quality checks
+ *  - Accessibility role and state consistency
+ *  - Enhanced component accessibility validation
  *
  * Future extensions (not implemented yet):
  *  - Focus order heuristic
- *  - ARIA / accessibilityRole pattern checks (delegated now to a11y-scan.js)
  *  - Motion / prefers-reduced-motion checks
  */
 import * as fs from 'fs';
@@ -144,6 +151,21 @@ function walk(dir: string): string[] {
 
 interface InlineColorIssue { file: string; line: number; color: string; ratio: number; suggested?: string; context?: 'light'|'dark'; }
 
+interface I18nA11yIssue {
+  file: string;
+  line: number;
+  type: 'missing-translation' | 'poor-announcement' | 'invalid-role' | 'missing-label';
+  severity: 'error' | 'warning' | 'info';
+  message: string;
+  suggestion?: string;
+}
+
+interface AccessibilityPattern {
+  pattern: RegExp;
+  validator: (match: string, context: string) => I18nA11yIssue | null;
+  description: string;
+}
+
 function scanInlineColors(bgLight: string, bgDark: string, aa: number): InlineColorIssue[] {
   const issues: InlineColorIssue[] = [];
   for (const base of SCAN_DIRS) {
@@ -171,6 +193,110 @@ function scanInlineColors(bgLight: string, bgDark: string, aa: number): InlineCo
       });
     }
   }
+  return issues;
+}
+
+function getAccessibilityPatterns(): AccessibilityPattern[] {
+  return [
+    {
+      pattern: /accessibilityLabel=\{[^}]*t\(['"`]([^'"`]+)['"`]\)/g,
+      validator: (match, context) => {
+        if (match.includes('undefined') || match.includes('null')) {
+          return {
+            file: '',
+            line: 0,
+            type: 'missing-translation',
+            severity: 'error',
+            message: 'Accessibility label translation returns undefined/null',
+            suggestion: 'Check if translation key exists in all locale files'
+          };
+        }
+        return null;
+      },
+      description: 'Accessibility label translation validation'
+    },
+    {
+      pattern: /accessibilityRole=['"`]([^'"`]+)['"`]/g,
+      validator: (match, context) => {
+        const validRoles = ['button', 'link', 'text', 'image', 'header', 'search', 'none', 'adjustable'];
+        const role = match.match(/accessibilityRole=['"`]([^'"`]+)['"`]/)?.[1];
+        if (role && !validRoles.includes(role)) {
+          return {
+            file: '',
+            line: 0,
+            type: 'invalid-role',
+            severity: 'warning',
+            message: `Invalid accessibility role: ${role}`,
+            suggestion: `Use one of: ${validRoles.join(', ')}`
+          };
+        }
+        return null;
+      },
+      description: 'Accessibility role validation'
+    },
+    {
+      pattern: /<Pressable[^>]*>/g,
+      validator: (match, context) => {
+        if (!match.includes('accessibilityLabel') && !match.includes('accessibilityHint')) {
+          return {
+            file: '',
+            line: 0,
+            type: 'missing-label',
+            severity: 'warning',
+            message: 'Pressable component missing accessibility label or hint',
+            suggestion: 'Add accessibilityLabel or accessibilityHint for screen readers'
+          };
+        }
+        return null;
+      },
+      description: 'Pressable accessibility validation'
+    },
+    {
+      pattern: /<TextInput[^>]*>/g,
+      validator: (match, context) => {
+        if (!match.includes('accessibilityLabel') && !match.includes('placeholder')) {
+          return {
+            file: '',
+            line: 0,
+            type: 'missing-label',
+            severity: 'warning',
+            message: 'TextInput missing accessibility label or placeholder',
+            suggestion: 'Add accessibilityLabel or placeholder for screen readers'
+          };
+        }
+        return null;
+      },
+      description: 'TextInput accessibility validation'
+    }
+  ];
+}
+
+function auditI18nAccessibility(): I18nA11yIssue[] {
+  const issues: I18nA11yIssue[] = [];
+  const patterns = getAccessibilityPatterns();
+  
+  for (const base of SCAN_DIRS) {
+    const dir = path.join(process.cwd(), base);
+    for (const file of walk(dir)) {
+      const src = fs.readFileSync(file, 'utf8');
+      const lines = src.split(/\r?\n/);
+      
+      lines.forEach((line, idx) => {
+        patterns.forEach(pattern => {
+          const matches = line.matchAll(pattern.pattern);
+          for (const match of matches) {
+            const issue = pattern.validator(match[0], line);
+            if (issue) {
+              issue.file = path.relative(process.cwd(), file);
+              issue.line = idx + 1;
+              issues.push(issue);
+            }
+          }
+        });
+      });
+    }
+  }
+  
   return issues;
 }
 
@@ -204,10 +330,14 @@ function main() {
     opts.inlineBgDark || colors?.dark.background || '#000000',
     opts.aa
   );
+  
+  // New: i18n accessibility audit
+  const i18nA11yIssues = auditI18nAccessibility();
+  const criticalI18nIssues = i18nA11yIssues.filter(i => i.severity === 'error');
 
   if (!opts.json) {
-  console.warn('WCAG Color Contrast Audit');
-  console.warn('==========================');
+  console.warn('WCAG Color Contrast & i18n Accessibility Audit');
+  console.warn('==============================================');
   console.warn(`Thresholds: AA=${opts.aa} AAA=${opts.aaa}`);
   console.warn('\nPalette Contrast Ratios:');
     results.forEach(r => {
@@ -228,10 +358,40 @@ function main() {
       const sugg = i.suggested ? ` -> suggestion ${i.suggested}` : '';
   console.warn(`  [${i.context}] ${i.file}:${i.line}  ${i.color} ratio=${i.ratio.toFixed(2)}${sugg}`);
     });
+
+    // New: i18n accessibility issues report
+    console.warn('\nInternationalization Accessibility Issues:');
+    if (!i18nA11yIssues.length) {
+      console.warn('None detected');
+    } else {
+      const errorCount = i18nA11yIssues.filter(i => i.severity === 'error').length;
+      const warningCount = i18nA11yIssues.filter(i => i.severity === 'warning').length;
+      console.warn(`Found ${errorCount} errors, ${warningCount} warnings`);
+      
+      i18nA11yIssues.forEach(issue => {
+        const icon = issue.severity === 'error' ? '❌' : issue.severity === 'warning' ? '⚠️' : 'ℹ️';
+        const sugg = issue.suggestion ? ` -> ${issue.suggestion}` : '';
+        console.warn(`  ${icon} [${issue.type}] ${issue.file}:${issue.line} ${issue.message}${sugg}`);
+      });
+    }
   }
 
   if (opts.json) {
-    const payload = { thresholds: { aa: opts.aa, aaa: opts.aaa }, palette: results, paletteFailing: failing, inlineIssues };
+    const payload = { 
+      thresholds: { aa: opts.aa, aaa: opts.aaa }, 
+      palette: results, 
+      paletteFailing: failing, 
+      inlineIssues,
+      i18nAccessibility: {
+        issues: i18nA11yIssues,
+        summary: {
+          total: i18nA11yIssues.length,
+          errors: i18nA11yIssues.filter(i => i.severity === 'error').length,
+          warnings: i18nA11yIssues.filter(i => i.severity === 'warning').length,
+          info: i18nA11yIssues.filter(i => i.severity === 'info').length
+        }
+      }
+    };
     const jsonStr = JSON.stringify(payload, null, 2);
     if (typeof opts.json === 'string') {
       fs.writeFileSync(opts.json, jsonStr, 'utf8');
@@ -240,7 +400,11 @@ function main() {
     }
   }
 
-  if (failing.length) process.exitCode = 1; // failing palette stops CI
+  // Exit with error if there are critical issues
+  if (failing.length || criticalI18nIssues.length) {
+    console.warn(`\nAudit failed: ${failing.length} color contrast failures, ${criticalI18nIssues.length} critical i18n accessibility issues`);
+    process.exitCode = 1;
+  }
 }
 
 main();
