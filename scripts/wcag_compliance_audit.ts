@@ -200,7 +200,7 @@ function getAccessibilityPatterns(): AccessibilityPattern[] {
   return [
     {
       pattern: /accessibilityLabel=\{[^}]*t\(['"`]([^'"`]+)['"`]\)/g,
-      validator: (match, context) => {
+      validator: (match, _context) => {
         if (match.includes('undefined') || match.includes('null')) {
           return {
             file: '',
@@ -217,7 +217,7 @@ function getAccessibilityPatterns(): AccessibilityPattern[] {
     },
     {
       pattern: /accessibilityRole=['"`]([^'"`]+)['"`]/g,
-      validator: (match, context) => {
+      validator: (match, _context) => {
         const validRoles = ['button', 'link', 'text', 'image', 'header', 'search', 'none', 'adjustable'];
         const role = match.match(/accessibilityRole=['"`]([^'"`]+)['"`]/)?.[1];
         if (role && !validRoles.includes(role)) {
@@ -236,7 +236,7 @@ function getAccessibilityPatterns(): AccessibilityPattern[] {
     },
     {
       pattern: /<Pressable[^>]*>/g,
-      validator: (match, context) => {
+      validator: (match, _context) => {
         if (!match.includes('accessibilityLabel') && !match.includes('accessibilityHint')) {
           return {
             file: '',
@@ -253,7 +253,7 @@ function getAccessibilityPatterns(): AccessibilityPattern[] {
     },
     {
       pattern: /<TextInput[^>]*>/g,
-      validator: (match, context) => {
+      validator: (match, _context) => {
         if (!match.includes('accessibilityLabel') && !match.includes('placeholder')) {
           return {
             file: '',
