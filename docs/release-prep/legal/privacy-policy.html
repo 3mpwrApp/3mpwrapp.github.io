@@ -1,140 +1,273 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>3mpwr App — Privacy Policy</title>
-  <style>
-    body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: #111; line-height: 1.6; margin: 40px auto; max-width: 900px; padding: 0 16px; }
-    h1, h2, h3 { line-height: 1.3; }
-    h1 { font-size: 28px; }
-    h2 { font-size: 22px; margin-top: 28px; }
-    h3 { font-size: 18px; margin-top: 20px; }
-    ul { padding-left: 20px; }
-    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .muted { color: #555; }
-    .highlight { background: #f0f8ff; padding: 16px; border-left: 4px solid #007acc; margin: 16px 0; }
-    hr { border: 0; border-top: 1px solid #ddd; margin: 24px 0; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    thead th { background: #f7f7f7; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3mpwr App — Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .highlight-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .security-box {
+            background-color: #e8f5e8;
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        .contact-info {
+            background-color: #e3f2fd;
+            border: 1px solid #2196f3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            font-size: 14px;
+            color: #666;
+        }
+        @media print {
+            body { margin: 0; padding: 20px; }
+        }
+    </style>
 </head>
 <body>
-  <h1>3mpwr App — Privacy Policy</h1>
-  <p class="muted">Last updated: October 11, 2025</p>
-  <p>This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and protects information in the 3mpwr App mobile application and web experience (if enabled). By using the app, you agree to these practices.</p>
-
-  <div class="highlight">
-    <h2>Data Ownership Statement</h2>
-    <p><strong>Your data belongs 100% to you.</strong> 3mpwr App is built on the fundamental principle of complete user data sovereignty:</p>
+    <h1>🔐 3mpwr App — Privacy Policy</h1>
+    
+    <p><strong>Last updated: October 12, 2025</strong></p>
+    
+    <p>This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and protects information in the 3mpwr App mobile application and web experience. By using the app, you agree to these practices.</p>
+    
+    <div class="security-box">
+        <h2>🔐 100% User Data Ownership Guarantee</h2>
+        
+        <p><strong>Your data belongs entirely to you.</strong> 3mpwr App is built on the fundamental principle of complete user data sovereignty:</p>
+        
+        <ul>
+            <li><strong>🏠 100% User Ownership:</strong> All data created in 3mpwr App belongs entirely to you. We never own, claim, or retain your personal information.</li>
+            <li><strong>🔒 Local-First & Air-Gapped:</strong> All processing happens on your device. Data stays in your possession unless you choose to sync to your own cloud.</li>
+            <li><strong>☁️ Your Cloud, Your Control:</strong> Optional sync connects only to your chosen services (Google Drive, iCloud, WebDAV, Dropbox, OneDrive, AWS S3). No data passes through our servers.</li>
+            <li><strong>🚫 Zero Tracking:</strong> No embedded analytics, trackers, or third-party data collection without your explicit consent.</li>
+            <li><strong>🛡️ Military-Grade Security:</strong> AES-256 encryption, hardware-backed key storage, TLS 1.3 network security, and anti-tampering protection.</li>
+            <li><strong>🔍 Verifiable Privacy:</strong> Our codebase contains no hidden data-logging functions. You can inspect and verify our claims.</li>
+        </ul>
+        
+        <h3>Technical Implementation:</h3>
+        <ul>
+            <li><strong>BYOC Strict Mode:</strong> When enabled, completely disables Firebase and all cloud storage, allowing you to connect ANY cloud provider you want</li>
+            <li><strong>Session-Only Credentials:</strong> Your storage credentials are never saved by the app</li>
+            <li><strong>Hardware Security:</strong> Encryption keys stored in your device's secure enclave</li>
+            <li><strong>Network Protection:</strong> Certificate pinning and encrypted connections for all network traffic</li>
+            <li><strong>Tamper Detection:</strong> Real-time monitoring for unauthorized modifications</li>
+            <li><strong>Air-Gapped Operation:</strong> Works 100% offline with no mandatory internet connections</li>
+        </ul>
+    </div>
+    
+    <div class="highlight-box">
+        <h2>📋 Privacy Summary</h2>
+        <ul>
+            <li><strong>🏠 Local-first architecture:</strong> All data stored on your device by default with optional user-controlled sync</li>
+            <li><strong>☁️ BYOC support:</strong> Connect ANY storage provider you want for 100% user-owned data persistence</li>
+            <li><strong>🔒 Data minimization:</strong> We store only what's necessary and most preferences stay on your device</li>
+            <li><strong>💰 No data sales:</strong> We do not sell personal data under any circumstances</li>
+            <li><strong>👤 Guest Mode:</strong> Use without creating an account (limited features available)</li>
+            <li><strong>⚙️ Full control:</strong> You control notifications, analytics, and all data sharing in Settings</li>
+            <li><strong>🔄 Data portability:</strong> Request access, correction, or deletion of your data anytime</li>
+        </ul>
+    </div>
+    
+    <h2>📊 Information We Collect</h2>
+    
+    <h3>1) Information you provide:</h3>
     <ul>
-      <li><strong>100% User Ownership:</strong> All data created in 3mpwr App belongs entirely to you. We never own, claim, or retain your personal information.</li>
-      <li><strong>Local-First &amp; Air-Gapped:</strong> All processing happens on your device. Data stays in your possession unless you choose to sync to your own cloud.</li>
-      <li><strong>Your Cloud, Your Control:</strong> Optional sync connects only to your chosen services (Google Drive, iCloud, WebDAV). No data passes through our servers.</li>
-      <li><strong>No Tracking:</strong> Zero embedded analytics, trackers, or third-party data collection. No hidden network calls.</li>
-      <li><strong>Encryption &amp; Privacy:</strong> Local data encrypted using your device security. Cloud encryption handled by your chosen provider.</li>
-      <li><strong>Open &amp; Transparent:</strong> Our codebase contains no data-logging functions. You can inspect and verify our privacy claims.</li>
+        <li><strong>Account information</strong> (if you create one): name, email, and basic identifiers<br>
+            <em>Guest Mode collects no account identifiers</em></li>
+        <li><strong>Preferences and settings:</strong> accessibility options, quiet hours, language, high contrast mode</li>
+        <li><strong>Community contributions</strong> (if enabled): messages, posts, uploaded media, reactions, profile details</li>
+        <li><strong>Contact messages:</strong> support requests via About/Contact form or email</li>
+        <li><strong>Evidence Locker notes:</strong> stored locally on your device unless you explicitly export or share them</li>
     </ul>
-    <p><em>For our complete Data Ownership and Security Statement, see <a href="DATA_OWNERSHIP_STATEMENT.md">DATA_OWNERSHIP_STATEMENT.md</a>.</em></p>
-  </div>
-
-  <h2>Summary</h2>
-  <ul>
-    <li><strong>Local-first architecture:</strong> All data stored on your device by default with optional user-controlled sync</li>
-    <li><strong>BYOC (Bring Your Own Cloud) support:</strong> Connect your own storage for 100% user-owned data persistence</li>
-    <li>We practice data minimization and store most preferences locally on your device by default</li>
-    <li>We do not sell personal data</li>
-    <li>You can use Guest Mode without creating an account (limited features)</li>
-    <li>You control notifications and certain analytics in Settings.</li>
-    <li>You can request access, correction, or deletion of your data.</li>
-  </ul>
-
-  <h2>Information We Collect</h2>
-  <h3>1) Information you provide</h3>
-  <ul>
-    <li>Account information (if you create one): name, email, and similar identifiers. Guest Mode collects no account identifiers.</li>
-    <li>Preferences and settings (e.g., accessibility options, quiet hours, language).</li>
-    <li>Community contributions (if enabled): messages, posts, uploaded media, reactions, and profile details.</li>
-    <li>Contact messages (e.g., About/Contact form or email requests).</li>
-    <li>Evidence Locker notes and attachments: by design these remain on your device unless you explicitly export or share them. Avoid storing personal identifiers in these notes where possible.</li>
-  </ul>
-  <h3>2) Information collected automatically</h3>
-  <ul>
-    <li>App diagnostics and performance telemetry (e.g., app version, device OS version, basic device capabilities, crash/error logs where enabled).</li>
-    <li>App interactions (analytics events) using pseudonymous identifiers to help improve features and reliability.</li>
-    <li>Push notification token (if you enable notifications) so that we can deliver messages to your device.</li>
-    <li>Network/presence status (for community features) and basic counts of viewed items.</li>
-  </ul>
-  <h3>3) Information from third parties</h3>
-  <ul>
-    <li>Content metadata from integrated services (e.g., YouTube API for videos; Advocate Directory API for listings). We request public metadata only and do not receive your account data from these providers.</li>
-  </ul>
-  <p>We do not intentionally collect sensitive categories of data unless you directly provide them (e.g., in notes or community posts). Do not include sensitive personal identifiers in free-text fields where not required.</p>
-
-  <h2>How We Use Information</h2>
-  <ul>
-    <li>Provide core functionality (navigation, saved items, localization, accessibility options).</li>
-    <li>Deliver optional features (voice navigation, quiet hours, micro-coach overlays) and improve usability.</li>
-    <li>Send notifications you opt into (e.g., reminders, updates). You can change your choices in Settings.</li>
-    <li>Maintain safety, integrity, and security of the app and services.</li>
-    <li>Measure and improve performance and reliability (aggregated analytics and diagnostics).</li>
-    <li>Comply with legal obligations and enforce terms.</li>
-  </ul>
-
-  <h2>Legal Bases (EEA/UK where applicable)</h2>
-  <ul>
-    <li>Contract: to provide services you request.</li>
-    <li>Legitimate interests: to improve and secure the app in a way that does not override your rights.</li>
-    <li>Consent: where required for optional features such as push notifications or analytics; you may withdraw consent in Settings.</li>
-  </ul>
-
-  <h2>Sharing and Disclosure</h2>
-  <p>We do not sell personal data. We share limited information with service providers as necessary to operate the app:</p>
-  <ul>
-    <li>Push Notifications: Expo Notifications or equivalent provider to deliver notifications to your device (stores device push token).</li>
-    <li>Cloud Services (if enabled): Google Firebase (Authentication, Firestore/Storage) for account, community, and sync features.</li>
-    <li>Error Monitoring (optional): Sentry or similar to capture crash logs and errors.</li>
-    <li>Content Integrations: YouTube API (video metadata), Advocate Directory API (professional listings). We receive public content metadata only.</li>
-    <li>Hosting/Delivery (web): Hosting/CDN provider for the web app and static assets.</li>
-  </ul>
-  <p>Service providers process data on our behalf under contracts that require confidentiality and appropriate security. We may disclose information when required by law, to protect rights and safety, or in connection with a merger, acquisition, or similar corporate transaction.</p>
-
-  <h2>International Transfers</h2>
-  <p>If we transfer your information internationally, we rely on approved safeguards (e.g., Standard Contractual Clauses) where required by law.</p>
-
-  <h2>Data Retention</h2>
-  <ul>
-    <li>Local device data (preferences, saved items, notes) persists until you delete the app or clear app data.</li>
-    <li>Accounts and community content (if enabled) are retained while your account is active; you may delete posts or request account deletion.</li>
-    <li>Analytics and diagnostic logs are retained for a limited period (e.g., 13 months for analytics; 30–90 days for logs).</li>
-    <li>Backups (if any) retain content per operational needs and then are deleted securely.</li>
-  </ul>
-
-  <h2>Your Choices and Rights</h2>
-  <ul>
-    <li>Notifications: Enable/disable push and choose categories in Settings. Quiet Hours can silence notifications during certain times.</li>
-    <li>Accessibility &amp; Language: Adjust text size, contrast, and language in Settings.</li>
-    <li>Analytics: Where available, you can opt out of analytics in Settings.</li>
-    <li>Access/Deletion/Correction: Contact us at <a href="mailto:empowrapp08162025@gmail.com">empowrapp08162025@gmail.com</a> to request access to, correction of, or deletion of your data. We may need to verify your identity to process requests.</li>
-  </ul>
-  <p>Depending on your location, you may have additional rights (e.g., data portability, restriction/objection to processing). We will honor rights requests as required by applicable law (e.g., GDPR/UK GDPR, CCPA/CPRA, PIPEDA).</p>
-
-  <h2>Children’s Privacy</h2>
-  <p>The app is not directed to children under 13 (or the age required by your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us personal information, contact us to request deletion.</p>
-
-  <h2>Security</h2>
-  <p>We use administrative, technical, and organizational measures to protect information, including encryption in transit and restricted access. No system is 100% secure; you should also protect your device with a passcode and avoid storing unnecessary identifiers in free-text notes.</p>
-
-  <h2>Changes to This Policy</h2>
-  <p>We may update this policy to reflect changes to our practices or legal requirements. The updated policy will be posted with a new “Last updated” date. Material changes will be communicated within the app or via other appropriate channels.</p>
-
-  <h2>Contact Us</h2>
-  <ul>
-  <li>Organization: 3mpwr App</li>
-    <li>Email: <a href="mailto:empowrapp08162025@gmail.com">empowrapp08162025@gmail.com</a></li>
-    <li>Address: Toronto, ON, Canada</li>
-    <li>Website: <a href="https://empowr.app">https://empowr.app</a></li>
-  </ul>
+    
+    <div class="warning-box">
+        <strong>⚠️ Privacy tip:</strong> Avoid storing personal identifiers in notes where possible
+    </div>
+    
+    <h3>2) Information collected automatically:</h3>
+    <ul>
+        <li><strong>App diagnostics:</strong> app version, device OS version, basic capabilities, crash/error logs (when enabled)</li>
+        <li><strong>Analytics events:</strong> pseudonymous identifiers to improve features and reliability (opt-out available)</li>
+        <li><strong>Push notification token:</strong> required only if you enable notifications</li>
+        <li><strong>Network status:</strong> for community features and offline indicators</li>
+        <li><strong>Security monitoring:</strong> device integrity checks, tamper detection events</li>
+    </ul>
+    
+    <h3>3) Information from third parties:</h3>
+    <ul>
+        <li><strong>Content metadata:</strong> YouTube API (video information), Advocate Directory API (professional listings)<br>
+            <em>We receive only public metadata, never your account data from these providers</em></li>
+        <li><strong>Cloud storage:</strong> When you connect your own cloud storage, we interact only with files you explicitly choose to sync</li>
+    </ul>
+    
+    <div class="warning-box">
+        <strong>⚠️ Important:</strong> We do not intentionally collect sensitive categories of data unless you directly provide them. Do not include sensitive personal identifiers in free-text fields where not required.
+    </div>
+    
+    <h2>🔧 How We Use Information</h2>
+    <p>We use your information only to:</p>
+    <ul>
+        <li><strong>Provide core functionality:</strong> navigation, saved items, localization, accessibility features</li>
+        <li><strong>Deliver optional features:</strong> voice navigation, quiet hours, wellness tracking, advocacy tools</li>
+        <li><strong>Send chosen notifications:</strong> reminders, updates (you control all notification settings)</li>
+        <li><strong>Maintain security:</strong> app integrity, fraud prevention, security monitoring</li>
+        <li><strong>Improve the app:</strong> aggregated analytics and diagnostics (with your consent)</li>
+        <li><strong>Comply with laws:</strong> legal obligations and terms enforcement</li>
+    </ul>
+    
+    <h2>⚖️ Legal Bases (EEA/UK where applicable)</h2>
+    <ul>
+        <li><strong>Contract:</strong> To provide services you request</li>
+        <li><strong>Legitimate interests:</strong> To improve and secure the app without overriding your rights</li>
+        <li><strong>Consent:</strong> For optional features like notifications or analytics (withdraw anytime in Settings)</li>
+    </ul>
+    
+    <h2>🤝 Sharing and Disclosure</h2>
+    <p><strong>We do not sell personal data.</strong> We share limited information only with service providers necessary to operate the app:</p>
+    
+    <ul>
+        <li><strong>Push Notifications:</strong> Expo Notifications to deliver messages to your device</li>
+        <li><strong>Cloud Services:</strong> Google Firebase (Authentication, Firestore/Storage) for optional account and community features</li>
+        <li><strong>Error Monitoring:</strong> Sentry for crash logs and errors (when enabled)</li>
+        <li><strong>Content Integrations:</strong> YouTube API, Advocate Directory API (public metadata only)</li>
+        <li><strong>Web Hosting:</strong> CDN providers for web app delivery</li>
+    </ul>
+    
+    <p>All service providers:</p>
+    <ul>
+        <li>Process data on our behalf under strict contracts</li>
+        <li>Required to maintain confidentiality and appropriate security</li>
+        <li>Cannot use your data for their own purposes</li>
+    </ul>
+    
+    <h2>🎛️ Your Choices and Rights</h2>
+    
+    <h3>Privacy Controls:</h3>
+    <ul>
+        <li><strong>Notifications:</strong> Enable/disable push notifications and choose categories in Settings</li>
+        <li><strong>Quiet Hours:</strong> Silence notifications during specified times</li>
+        <li><strong>Accessibility:</strong> Adjust text size, contrast, and language preferences</li>
+        <li><strong>Analytics:</strong> Opt out of analytics collection in Settings</li>
+        <li><strong>High Contrast Mode:</strong> Enhanced accessibility with improved color contrast</li>
+        <li><strong>Guest Mode:</strong> Use core features without creating an account</li>
+    </ul>
+    
+    <h3>Data Rights:</h3>
+    <p>Contact us at <strong>empowrapp08162025@gmail.com</strong> to request:</p>
+    <ul>
+        <li><strong>Access:</strong> View what data we have about you</li>
+        <li><strong>Correction:</strong> Fix inaccurate information</li>
+        <li><strong>Deletion:</strong> Remove your data from our systems</li>
+        <li><strong>Portability:</strong> Export your data in a standard format</li>
+    </ul>
+    
+    <h2>🔐 Security Measures</h2>
+    <div class="security-box">
+        <h3>Technical Safeguards:</h3>
+        <ul>
+            <li><strong>AES-256 encryption</strong> for data protection</li>
+            <li><strong>Hardware-backed key storage</strong> in your device's secure enclave</li>
+            <li><strong>TLS 1.3 network encryption</strong> with certificate pinning</li>
+            <li><strong>Real-time tamper detection</strong> and integrity monitoring</li>
+            <li><strong>Input validation</strong> preventing injection attacks</li>
+            <li><strong>Device security validation</strong> (root/jailbreak detection)</li>
+        </ul>
+        
+        <h3>Operational Safeguards:</h3>
+        <ul>
+            <li><strong>Access controls</strong> limiting who can access data</li>
+            <li><strong>Security monitoring</strong> with automated threat detection</li>
+            <li><strong>Regular security testing</strong> including OWASP Mobile Top 10 compliance</li>
+            <li><strong>Incident response procedures</strong> for security events</li>
+        </ul>
+    </div>
+    
+    <div class="warning-box">
+        <strong>⚠️ Remember:</strong> No system is 100% secure. Protect your device with a passcode and avoid storing unnecessary identifiers in free-text notes.
+    </div>
+    
+    <h2>👶 Children's Privacy</h2>
+    <p>The app is not directed to children under 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us personal information, contact us immediately to request deletion.</p>
+    
+    <h2>🔄 Changes to This Policy</h2>
+    <p>We may update this policy to reflect changes to our practices, new features, legal requirements, or user feedback.</p>
+    
+    <h3>Notification process:</h3>
+    <ul>
+        <li>Updated policy posted with new "Last updated" date</li>
+        <li>Material changes communicated within the app</li>
+        <li>Major changes may be sent via email or notification</li>
+    </ul>
+    
+    <div class="contact-info">
+        <h2>📞 Contact Us</h2>
+        <p><strong>3mpwr App Privacy Team</strong></p>
+        <ul>
+            <li><strong>Email:</strong> empowrapp08162025@gmail.com</li>
+            <li><strong>Organization:</strong> 3mpwr App</li>
+            <li><strong>Location:</strong> Toronto, ON, Canada</li>
+            <li><strong>Website:</strong> https://empowr.app</li>
+        </ul>
+        <p>For privacy-related questions, data requests, or security concerns, please contact us using the email above. We respond to all privacy inquiries within 48 hours and data rights requests within 30 days (or as required by applicable law).</p>
+    </div>
+    
+    <div class="footer">
+        <p><strong>🔒 Privacy Verification:</strong> This policy reflects our actual technical implementation. You can verify our privacy claims through code inspection, network monitoring, and our published verification guides. Your privacy and data ownership are not just promises—they're technically guaranteed by our architecture.</p>
+    </div>
 </body>
 </html>
