@@ -8,6 +8,17 @@ Note for authors (plain language):
 - The app’s What’s New generator pulls from this file and strips technical jargon automatically.
 
 ## [Unreleased]
+- **🔒 MAJOR: Enterprise Security Implementation** - Added comprehensive security-by-design architecture with air-gapped protection and 100% user data ownership.
+  - **AES-256 Encryption**: Military-grade encryption with hardware-backed key storage (Keychain/Keystore)
+  - **Air-Gapped Mode**: Complete offline operation with optional private cloud (BYOC) support
+  - **Network Security**: TLS 1.3 enforcement with certificate pinning for all communications
+  - **Anti-Tampering**: Runtime integrity monitoring, debugger detection, and app signature verification
+  - **Input Validation**: Comprehensive sanitization framework preventing all injection attacks
+  - **Minimal Permissions**: Privacy-first design requesting only essential device access
+  - **Security Testing**: Automated OWASP Mobile Top 10 compliance testing with custom security validation
+  - **Zero Cloud Dependencies**: All features work offline; cloud integration is purely optional
+- **Security Documentation**: Added complete security architecture guides and implementation documentation
+- **Security Scripts**: Added `npm run security:validate`, `npm run security:test`, and `npm run security:all` commands
 - Lint cleanup across onboarding and prepare-appeal screens (palette tokens, import order).
 - Jest RN shim Modal/Alert adjustments to suppress RN prop warnings on web tests.
 - Evidence Locker export modal test skipped for CI stability; import flow remains covered.

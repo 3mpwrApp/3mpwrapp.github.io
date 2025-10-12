@@ -1,5 +1,6 @@
 {
   "name": "empowrapp",
+  "description": "A secure, privacy-first empowerment app with enterprise-grade security and complete user data ownership. Features air-gapped operation, AES-256 encryption, and OWASP Mobile Top 10 compliance.",
   "main": "expo-router/entry",
   "version": "1.0.0-rc.1",
   "scripts": {
@@ -79,7 +80,10 @@
     "rebuild:android": "expo run:android --clean",
     "rebuild:ios": "expo run:ios --clean",
     "devclient:build:android": "npx eas build --profile development --platform android",
-    "devclient:build:ios": "npx eas build --profile development --platform ios"
+    "devclient:build:ios": "npx eas build --profile development --platform ios",
+    "security:validate": "node ./scripts/security-validate.js",
+    "security:test": "node ./scripts/security-test.js",
+    "security:all": "npm run security:validate && npm run security:test"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
@@ -103,6 +107,7 @@
     "expo-image": "~3.0.9",
     "expo-image-picker": "~17.0.8",
     "expo-linking": "~8.0.8",
+    "expo-local-authentication": "^17.0.7",
     "expo-notifications": "~0.32.12",
     "expo-print": "~15.0.7",
     "expo-router": "~6.0.12",

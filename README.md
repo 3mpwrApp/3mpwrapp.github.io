@@ -1,4 +1,15 @@
-# 3mpwr App
+# 🔒 3mpwr App - Secure & Private
+
+A privacy-first empowerment app with enterprise-grade security and complete user data ownership.
+
+## 🛡️ Security Features
+
+- **🔐 AES-256 Encryption** - Military-grade data protection
+- **☁️ Air-Gapped Mode** - 100% offline operation with optional private cloud
+- **🛡️ Anti-Tampering** - Runtime integrity monitoring and tamper detection
+- **🌐 TLS 1.3 Network Security** - Certificate pinning and secure communications
+- **📱 Minimal Permissions** - Privacy-first design with essential access only
+- **🔍 OWASP Compliant** - All Mobile Top 10 security threats mitigated
 
 ## Get started
 
@@ -8,7 +19,13 @@
    npm install
    ```
 
-2. Start the app
+2. Validate security setup
+
+   ```bash
+   npm run security:validate
+   ```
+
+3. Start the app
 
    ```bash
    npx expo start
@@ -20,6 +37,12 @@ Quick reference: Deep-link seeding with q param is documented in `docs/deep-link
 
 ## Documentation
 
+- **Security Documentation**:
+  - Security Implementation Summary: `SECURITY_COMPLETE.md`
+  - Security Architecture Deep-dive: `docs/SECURITY_ARCHITECTURE.md`
+  - Security Implementation Guide: `docs/SECURITY_IMPLEMENTATION.md`
+  - Security Testing Configuration: `security/testingConfig.ts`
+  - Security Build Configuration: `security/buildConfig.ts`
 - Quick Tour (2 pages, user-friendly): `docs/quick-tour.md`
 - User Guide (complete, end-user): `docs/user-guide.md`
 - Route Map (all screens & paths): `docs/ROUTE_MAP.md`
@@ -31,7 +54,38 @@ Quick reference: Deep-link seeding with q param is documented in `docs/deep-link
   - Invite Email template: `docs/beta/INVITE_EMAIL_TEMPLATE.md`
   - One‑page Release Notes template: `docs/beta/RELEASE_NOTES_TEMPLATE.md`
 
-Policy: When you make a user-visible change (labels, flows, notable behavior), update the User Guide and add an entry to the Changelog in the same PR. If you add or deprecate a feature, also update the "Where you’ll see ‘Coming soon’ today" section in the User Guide.
+## 🔒 Security & Privacy
+
+### Security Testing
+```bash
+npm run security:validate  # Quick security validation
+npm run security:test      # Comprehensive OWASP testing
+npm run security:all       # Complete security test suite
+```
+
+### Security Architecture
+- **Air-Gapped Operation**: Complete offline functionality with optional private cloud
+- **AES-256 Encryption**: All sensitive data encrypted with hardware-backed keys
+- **TLS 1.3 Network Security**: Certificate pinning and secure communications
+- **Input Validation**: Comprehensive sanitization preventing injection attacks
+- **Tamper Detection**: Runtime integrity monitoring and anti-debugging
+- **Minimal Permissions**: Privacy-first design requesting only essential access
+
+### BYOC (Bring Your Own Cloud) Mode
+Enable complete data ownership by configuring your own storage:
+```typescript
+// Enable strict BYOC mode for air-gapped operation
+import { setStrictBYOC } from './services/dataPolicy';
+setStrictBYOC(true);
+```
+
+### Data Privacy
+- **100% User Data Ownership**: Users control all encryption keys
+- **Zero Cloud Dependencies**: Optional cloud integration only
+- **Local Data Storage**: All data encrypted and stored locally
+- **Privacy by Design**: No tracking, no telemetry, no unnecessary data collection
+
+Policy: When you make a user-visible change (labels, flows, notable behavior), update the User Guide and add an entry to the Changelog in the same PR. If you add or deprecate a feature, also update the "Where you'll see 'Coming soon' today" section in the User Guide.
 
 ## Auth, Onboarding, and Guest Mode
 

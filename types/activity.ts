@@ -18,7 +18,10 @@ export type ActivityEventType =
   | 'coach.view'
   | 'coach.start'
   | 'coach.stepComplete'
-  | 'coach.complete';
+  | 'coach.complete'
+  | 'security.threat'
+  | 'security.init'
+  | 'security.violation';
 
 export interface BaseActivityEvent<T extends ActivityEventType = ActivityEventType, P = any> {
   id?: string; // Firestore doc id when fetched

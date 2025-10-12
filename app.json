@@ -1,6 +1,7 @@
 {
   "expo": {
-  "name": "3mpwr App",
+    "name": "3mpwr App - Secure & Private",
+    "description": "A privacy-first empowerment app with enterprise-grade security, complete user data ownership, and air-gapped protection. No cloud required.",
     "owner": "empowrapp-2",
     "slug": "empowrapp",
     "version": "1.0.0",
@@ -19,17 +20,53 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.empowrapp2.empowrapp",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Used to capture evidence photos for your personal records",
+        "NSPhotoLibraryUsageDescription": "Used to import evidence from your photo library",
+        "NSMicrophoneUsageDescription": "Used to record audio evidence for your personal records",
+        "ITSAppUsesNonExemptEncryption": true,
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": false,
+          "NSExceptionDomains": {}
+        },
+        "UIBackgroundModes": ["background-processing"]
+      },
+      "config": {
+        "usesNonExemptEncryption": true
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/brand-adaptive.png",
         "backgroundColor": "#ffffff"
       },
-  "edgeToEdgeEnabled": true,
-  "package": "com.empowrapp2.empowrapp",
-      
-      "allowBackup": false
+      "edgeToEdgeEnabled": true,
+      "package": "com.empowrapp2.empowrapp",
+      "allowBackup": false,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "blockedPermissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.READ_CONTACTS",
+        "android.permission.WRITE_CONTACTS",
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR",
+        "android.permission.READ_SMS",
+        "android.permission.SEND_SMS",
+        "android.permission.CALL_PHONE",
+        "android.permission.READ_PHONE_STATE"
+      ],
+      "usesCleartextTraffic": false,
+      "requestLegacyExternalStorage": false
     },
     "web": {
       "bundler": "metro",
