@@ -13,59 +13,11 @@ import { useAuth } from '../context/AuthContext';
 import { useIndigenousLanguage } from '../context/IndigenousLanguageContext';
 import { useThemeColor } from '../hooks/useThemeColor';
 import { useTranslation } from '../i18n';
-import type {
-    AccessibilityConfig,
-    AccessibilitySupport,
-    AlternativePath,
-    CulturalStepProtocol,
-    DeadlineAction,
-    DocumentAction,
-    AutomationRule as ImportedAutomationRule,
-    CulturalProtocol as ImportedCulturalProtocol,
-    LegalWorkflow as ImportedLegalWorkflow,
-    WorkflowExecution as ImportedWorkflowExecution,
-    NotificationAction,
-    StepValidation,
-    WorkflowAnalytics,
-    WorkflowTemplate
-} from '../types/phase2';
 
 import A11yPressable from './A11yPressable';
 import { A11yTitle, A11yWrapper } from './A11yWrapper';
 
-// Workflow Engine Types
-interface _WorkflowEngine {
-  id: string;
-  name: string;
-  version: string;
-  workflows: ImportedLegalWorkflow[];
-  activeProcesses: ImportedWorkflowExecution[];
-  templates: WorkflowTemplate[];
-  automationRules: ImportedAutomationRule[];
-  culturalProtocols: ImportedCulturalProtocol[];
-  accessibility: AccessibilityConfig;
-  analytics: WorkflowAnalytics;
-}
-
-interface _WorkflowStep {
-  id: string;
-  stepNumber: number;
-  name: string;
-  description: string;
-  type: StepType;
-  isRequired: boolean;
-  isAutomated: boolean;
-  estimatedDuration: number;
-  dependencies: string[]; // other step IDs
-  actions: StepAction[];
-  validations: StepValidation[];
-  documents: DocumentAction[];
-  notifications: NotificationAction[];
-  deadlines: DeadlineAction[];
-  alternativePaths: AlternativePath[];
-  culturalProtocols?: CulturalStepProtocol[];
-  accessibilitySupport: AccessibilitySupport[];
-}
+// Workflow Engine Types - using imported types
 
 interface StepAction {
   id: string;
@@ -82,88 +34,7 @@ interface StepAction {
   failureCriteria: string[];
 }
 
-interface _ExecutedStep {
-  stepId: string;
-  startTime: Date;
-  endTime: Date;
-  status: 'completed' | 'skipped' | 'failed';
-  executionData: any;
-  automationUsed: boolean;
-  userInteractions: Record<string, any>[];
-  documentsGenerated: string[];
-  notificationsSent: string[];
-  errors?: Record<string, any>[];
-  performance: Record<string, any>;
-}
-
-interface _DocumentGeneration {
-  templateId: string;
-  outputFormat: 'pdf' | 'docx' | 'txt' | 'html';
-  variables: Record<string, any>;
-  culturalAdaptations?: Record<string, any>;
-  accessibilityFeatures: Record<string, any>[];
-  generationRules: Record<string, any>[];
-  reviewRequired: boolean;
-  approval: Record<string, any>;
-}
-
-interface _AILegalAssistant {
-  id: string;
-  name: string;
-  capabilities: Record<string, any>[];
-  specializations: string[];
-  confidence: number; // 0-1
-  languages: string[];
-  culturalCompetency: Record<string, any>;
-  safeguards: Record<string, any>[];
-  auditTrail: Record<string, any>[];
-  performance: Record<string, any>;
-}
-
-interface _DocumentReview {
-  documentId: string;
-  reviewType: 'automated' | 'human' | 'expert' | 'cultural';
-  reviewerId?: string;
-  status: 'pending' | 'in_progress' | 'completed' | 'rejected';
-  findings: Record<string, any>[];
-  recommendations: Record<string, any>[];
-  culturalReview?: Record<string, any>;
-  accessibilityReview?: Record<string, any>;
-  legalAccuracy: Record<string, any>;
-  startTime: Date;
-  completionTime?: Date;
-  isApproved: boolean;
-  approvalLevel: 'preliminary' | 'standard' | 'expert' | 'final';
-}
-
-interface _LegalKnowledgeBase {
-  id: string;
-  jurisdiction: string;
-  laws: Record<string, any>[];
-  regulations: Record<string, any>[];
-  precedents: Record<string, any>[];
-  procedures: Record<string, any>[];
-  forms: Record<string, any>[];
-  deadlines: Record<string, any>[];
-  contacts: Record<string, any>[];
-  resources: Record<string, any>[];
-  updates: Record<string, any>[];
-  lastSyncDate: Date;
-}
-
 // Enums and Types
-type _WorkflowType = 
-  | 'disability_benefits'
-  | 'workplace_accommodation'
-  | 'discrimination_complaint'
-  | 'accessibility_appeal'
-  | 'housing_rights'
-  | 'education_accommodation'
-  | 'healthcare_advocacy'
-  | 'legal_name_change'
-  | 'guardianship'
-  | 'appeals_process';
-
 type StepType = 
   | 'data_collection'
   | 'document_generation'
@@ -187,26 +58,6 @@ type ActionType =
   | 'update_status'
   | 'validate_data'
   | 'cultural_check';
-
-type _ExecutionStatus = 
-  | 'initialized'
-  | 'running'
-  | 'paused'
-  | 'waiting_input'
-  | 'waiting_review'
-  | 'completed'
-  | 'failed'
-  | 'cancelled'
-  | 'cultural_review';
-
-type _StepStatus = 
-  | 'pending'
-  | 'running'
-  | 'completed'
-  | 'failed'
-  | 'skipped'
-  | 'waiting'
-  | 'cultural_pause';
 
 // Mock Implementation
 export default function LegalWorkflowEngine() {
@@ -960,35 +811,13 @@ export default function LegalWorkflowEngine() {
   };
 
   const startWorkflowExecution = (workflow: any) => {
-    const _newExecution: any = {
-      workflowId: workflow.id,
-      userId: user?.uid || 'user',
-      status: 'initialized',
-      startDate: new Date(),
-      expectedCompletionDate: new Date(Date.now() + workflow.estimatedDuration * 24 * 60 * 60 * 1000),
-      currentStepId: workflow.steps[0]?.id,
-      currentStepStatus: 'pending',
-      completedSteps: [],
-      pendingSteps: workflow.steps.map((s: any) => s.id),
-      failedSteps: [],
-      data: {},
-      metadata: {
-        initiatedBy: 'user',
-        culturalProtocolsApplied: culturalProtocols,
-        accessibilityMode: true,
-        automationLevel: workflow.automationLevel
-      },
-      analytics: {
-        stepsCompleted: 0,
-        stepsTotal: workflow.steps.length,
-        percentComplete: 0,
-        timeSpent: 0,
-        automationEfficiency: 0,
-        userSatisfaction: null
-      },
-      culturalProtocols: [],
-      accessibilityAccommodations: workflow.accessibilityFeatures
-    };
+    // Mock execution data structure for future implementation
+    // const newExecution = {
+    //   workflowId: workflow.id,
+    //   userId: user?.uid || 'user',
+    //   status: 'initialized',
+    //   ...
+    // };
 
     Alert.alert(
       'Start Workflow',

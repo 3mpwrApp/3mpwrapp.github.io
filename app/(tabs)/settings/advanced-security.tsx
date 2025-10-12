@@ -28,11 +28,6 @@ import type {
 
 // Security Configuration Types - using imported types from types/phase2.ts
 
-// Type Definitions - prefixed to avoid unused variable warnings
-type _BiometricType = 'fingerprint' | 'face_recognition' | 'voice_recognition' | 'iris_scan';
-type _ThreatType = 'unauthorized_access' | 'data_breach' | 'malware' | 'phishing' | 'insider_threat' | 'cultural_violation';
-type _AuditEventType = 'login' | 'logout' | 'data_access' | 'data_modification' | 'permission_change' | 'cultural_access';
-
 export default function AdvancedSecurityOptions() {
   const insets = useSafeAreaInsets();
   const router = useRouter();

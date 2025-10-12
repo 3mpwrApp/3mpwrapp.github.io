@@ -187,11 +187,6 @@ export default function IndigenousLanguageScreen() {
     }
   };
 
-  const _handleProtocolChange = (_protocolKey: string) => (value: boolean) => {
-    // Since culturalProtocols is a boolean in the context, we'll just toggle it
-    setCulturalProtocols(value);
-  };
-
   const showTerritorialAcknowledgment = () => {
     const acknowledgment = getLandAcknowledgment();
     if (acknowledgment) {
