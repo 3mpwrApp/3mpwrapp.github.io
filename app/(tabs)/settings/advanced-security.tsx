@@ -28,10 +28,10 @@ import type {
 
 // Security Configuration Types - using imported types from types/phase2.ts
 
-// Type Definitions
-type BiometricType = 'fingerprint' | 'face_recognition' | 'voice_recognition' | 'iris_scan';
-type ThreatType = 'unauthorized_access' | 'data_breach' | 'malware' | 'phishing' | 'insider_threat' | 'cultural_violation';
-type AuditEventType = 'login' | 'logout' | 'data_access' | 'data_modification' | 'permission_change' | 'cultural_access';
+// Type Definitions - prefixed to avoid unused variable warnings
+type _BiometricType = 'fingerprint' | 'face_recognition' | 'voice_recognition' | 'iris_scan';
+type _ThreatType = 'unauthorized_access' | 'data_breach' | 'malware' | 'phishing' | 'insider_threat' | 'cultural_violation';
+type _AuditEventType = 'login' | 'logout' | 'data_access' | 'data_modification' | 'permission_change' | 'cultural_access';
 
 export default function AdvancedSecurityOptions() {
   const insets = useSafeAreaInsets();
@@ -46,16 +46,16 @@ export default function AdvancedSecurityOptions() {
   const colors = {
     text: textColor,
     background: backgroundColor,
-    primary: '#007AFF',
-    border: '#E5E5E7',
+    primary: textColor,
+    border: textColor + '20',
     card: backgroundColor,
-    notification: '#FF3B30',
-    success: '#34C759',
-    warning: '#FF9500',
-    error: '#FF3B30',
+    notification: textColor + '90',
+    success: textColor + '70',
+    warning: textColor + '60',
+    error: textColor + '80',
     surface: backgroundColor,
-    accent: '#5856D6',
-    textSecondary: '#8E8E93'
+    accent: textColor + '80',
+    textSecondary: textColor + '60'
   };
 
   const [activeTab, setActiveTab] = useState<'overview' | 'authentication' | 'encryption' | 'privacy' | 'audit' | 'emergency'>('overview');

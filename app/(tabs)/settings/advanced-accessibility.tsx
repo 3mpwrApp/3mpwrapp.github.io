@@ -209,10 +209,10 @@ export default function AdvancedAccessibilityScreen() {
     title,
     description,
     value,
-    onValueChange,
+    onValueChange: _onValueChange,
     minimumValue,
     maximumValue,
-    step = 1,
+    step: _step = 1,
     unit = '',
   }: {
     title: string;
@@ -236,10 +236,10 @@ export default function AdvancedAccessibilityScreen() {
         )}
         <View style={styles.sliderContainer}>
           {/* Mock Slider implementation - would use @react-native-community/slider in production */}
-          <View style={[styles.slider, { backgroundColor: '#E5E5E7' }]}>
+          <View style={[styles.slider, { backgroundColor: textColor + '20' }]}>
             <View 
               style={{ 
-                backgroundColor: '#007AFF', 
+                backgroundColor: textColor, 
                 height: 4, 
                 width: `${((value - minimumValue) / (maximumValue - minimumValue)) * 100}%` 
               }} 

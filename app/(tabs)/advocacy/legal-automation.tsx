@@ -1,7 +1,9 @@
 // Legal Process Automation for Disability Rights
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
+import type { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import {
     Alert,
     Modal,
@@ -13,11 +15,22 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import A11yPressable from '../../../components/A11yPressable';
-import { A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
 import { useAuth } from '../../../context/AuthContext';
 import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
 import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
+
+const A11yWrapper = ({ style, children }: { style?: StyleProp<ViewStyle>; children: ReactNode }) => (
+  <View style={style} accessibilityElementsHidden={false} importantForAccessibility="yes">
+    {children}
+  </View>
+);
+
+const A11yTitle = ({ level: _level = 2, style, children }: { level?: 1 | 2 | 3 | 4 | 5 | 6; style?: StyleProp<TextStyle>; children: ReactNode }) => (
+  <Text accessibilityRole="header" style={style}>
+    {children}
+  </Text>
+);
 
 // Legal process types and interfaces
 interface LegalProcess {
@@ -29,7 +42,7 @@ interface LegalProcess {
   priority: 'low' | 'medium' | 'high' | 'urgent';
   jurisdiction: Jurisdiction;
   startDate: Date;
-  estimatedCompletionDate?: Date;
+  estimatedCompletion?: Date;
   actualCompletionDate?: Date;
   currentStep: ProcessStep;
   steps: ProcessStep[];
@@ -271,16 +284,16 @@ export default function LegalProcessAutomation() {
   const colors = {
     text: textColor,
     background: backgroundColor,
-    primary: '#007AFF',
-    border: '#E5E5E7',
+    primary: textColor,
+    border: `${textColor}20`,
     card: backgroundColor,
-    notification: '#FF3B30',
-    success: '#34C759',
-    warning: '#FF9500',
-    error: '#FF3B30',
+    notification: `${textColor}90`,
+    success: `${textColor}70`,
+    warning: `${textColor}60`,
+    error: `${textColor}80`,
     surface: backgroundColor,
-    accent: '#5856D6',
-    textSecondary: '#8E8E93'
+    accent: `${textColor}80`,
+    textSecondary: `${textColor}60`
   };
 
   const [activeTab, setActiveTab] = useState<'dashboard' | 'processes' | 'documents' | 'deadlines' | 'templates'>('dashboard');

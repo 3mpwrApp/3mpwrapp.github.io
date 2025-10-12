@@ -271,22 +271,22 @@ export default function LegalWorkflowEngine() {
   const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();
   const { user } = useAuth();
-  const { settings } = useIndigenousLanguage();
+  const { settings: _settings } = useIndigenousLanguage();
 
   // Create colors object for compatibility
   const colors = {
     text: textColor,
     background: backgroundColor,
-    primary: '#007AFF',
-    border: '#E5E5E7',
+    primary: textColor,
+    border: textColor + '20',
     card: backgroundColor,
-    notification: '#FF3B30',
-    success: '#34C759',
-    warning: '#FF9500',
-    error: '#FF3B30',
+    notification: textColor + '90',
+    success: textColor + '70',
+    warning: textColor + '60',
+    error: textColor + '80',
     surface: backgroundColor,
-    accent: '#5856D6',
-    textSecondary: '#8E8E93'
+    accent: textColor + '80',
+    textSecondary: textColor + '60'
   };
 
   const [activeTab, setActiveTab] = useState<'workflows' | 'executions' | 'automation' | 'analytics'>('workflows');
