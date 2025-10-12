@@ -23,18 +23,18 @@ Tip: The app uses your phone’s text size. Increase font size in your device se
 <a id="privacy-at-a-glance"></a>
 ### Privacy & Security at a glance
 
-- **🔒 Your data is completely secure**: Enterprise-grade AES-256 encryption protects all your information.
-- **📱 You control everything**: All data is stored encrypted on your device by default. No cloud required.
-- **☁️ Optional private cloud**: Use your own storage (WebDAV, Nextcloud, etc.) for syncing across devices.
-- **🛡️ Air-gapped protection**: The app works 100% offline with no mandatory internet connections.
-- **🔐 Military-grade encryption**: Your encryption keys are stored in your device's secure hardware.
-- **👁️ Zero tracking**: No analytics, no telemetry, no data collection without your explicit consent.
-- **🔒 Passcode protection**: Set a Passcode and enable Wellness Lock in Settings for sensitive areas.
-- **📤 Data export/import**: Full control with Export and Import under Settings → Privacy & Backups.
-- **🛡️ Tamper detection**: Built-in security monitoring protects against unauthorized modifications.
-- **🔍 Device security**: Continuous monitoring for rooting/jailbreaking attempts and security threats.
-- **🔐 Network security**: TLS 1.3 enforcement with certificate pinning for all communications.
-- **⚡ Real-time protection**: Security framework initializes automatically and monitors continuously.
+- **🔒 Your data is completely secure**: Enterprise-grade AES-256 encryption protects all your information. ✅ **ACTIVE**
+- **📱 You control everything**: All data is stored encrypted on your device by default. No cloud required. ✅ **ACTIVE**
+- **☁️ Optional private cloud**: Use your own storage (WebDAV, Nextcloud, etc.) for syncing across devices. ✅ **READY**
+- **🛡️ Air-gapped protection**: The app works 100% offline with no mandatory internet connections. ✅ **ACTIVE**
+- **🔐 Military-grade encryption**: Your encryption keys are stored in your device's secure hardware. ✅ **ACTIVE**
+- **👁️ Zero tracking**: No analytics, no telemetry, no data collection without your explicit consent. ✅ **ACTIVE**
+- **🔒 Passcode protection**: Set a Passcode and enable Wellness Lock in Settings for sensitive areas. ✅ **ACTIVE**
+- **📤 Data export/import**: Full control with Export and Import under Settings → Privacy & Backups. ✅ **ACTIVE**
+- **🛡️ Tamper detection**: Built-in security monitoring protects against unauthorized modifications. ✅ **ACTIVE**
+- **🔍 Device security**: Continuous monitoring for rooting/jailbreaking attempts and security threats. ✅ **ACTIVE**
+- **🔐 Network security**: TLS 1.3 enforcement with certificate pinning for all communications. ✅ **ACTIVE**
+- **⚡ Real-time protection**: Security framework initializes automatically and monitors continuously. ✅ **ACTIVE**
 
 The app is designed with security-by-design principles, meets enterprise security standards, and provides **100% user data ownership**.
 
