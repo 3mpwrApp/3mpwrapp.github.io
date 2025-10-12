@@ -396,14 +396,15 @@ export interface MitigationStep {
 
 export interface CulturalImpactAssessment {
   id: string;
-  impact: string;
+  impact: 'low' | 'medium' | 'high';
   mitigation: string[];
 }
 
 export interface AccessibilityImpactAssessment {
   id: string;
-  impact: string;
+  impact: 'low' | 'medium' | 'high';
   mitigation: string[];
+  affected: boolean;
 }
 
 export interface SecurityFinding {
@@ -411,6 +412,7 @@ export interface SecurityFinding {
   severity: 'low' | 'medium' | 'high' | 'critical';
   description: string;
   evidence: string[];
+  type: 'vulnerability' | 'configuration' | 'policy' | 'compliance';
 }
 
 export interface SecurityRecommendation {
@@ -418,24 +420,28 @@ export interface SecurityRecommendation {
   priority: 'low' | 'medium' | 'high' | 'critical';
   action: string;
   timeline: string;
+  description: string;
 }
 
 export interface ComplianceResult {
   standard: string;
   status: 'compliant' | 'non_compliant' | 'partial';
   findings: string[];
+  score: number;
 }
 
 export interface CulturalComplianceResult {
   protocol: string;
   status: 'compliant' | 'non_compliant' | 'partial';
   findings: string[];
+  notes: string;
 }
 
 export interface AccessibilityComplianceResult {
   feature: string;
   status: 'compliant' | 'non_compliant' | 'partial';
   findings: string[];
+  score: number;
 }
 
 // Security Configuration Types
@@ -634,18 +640,22 @@ export interface SacredDataProtection {
   enabled: boolean;
   protocols: string[];
   restrictions: string[];
+  accessRestrictions: string[];
 }
 
 export interface ElderAccessRights {
   fullAccess: boolean;
   restrictions: string[];
   specialPrivileges: string[];
+  enabled: boolean;
 }
 
 export interface CeremonyPrivacyConfig {
   restrictAccess: boolean;
   allowedUsers: string[];
   timeRestrictions: boolean;
+  enabled: boolean;
+  privacyLevel: string;
 }
 
 export interface TraditionalKnowledgeProtection {
@@ -658,18 +668,21 @@ export interface CommunityConsentConfig {
   required: boolean;
   minimumConsent: number;
   elderApproval: boolean;
+  collectiveDecisionMaking: boolean;
 }
 
 export interface CulturalAuditRequirement {
   requirement: string;
   frequency: string;
   approver: string;
+  type: 'elder_review' | 'community_feedback' | 'cultural_assessment' | 'protocol_review';
 }
 
 export interface IndigenousDataSovereignty {
   enabled: boolean;
   dataOwnership: string;
   governanceRules: string[];
+  communityOwnership: boolean;
 }
 
 // Accessibility Types
@@ -722,25 +735,26 @@ export interface SecurityThreat {
   severity: 'low' | 'medium' | 'high' | 'critical';
   description: string;
   timestamp: Date;
+  detectedAt: Date;
   resolved: boolean;
-  mitigationSteps: MitigationStep[];
-  culturalImpact?: CulturalImpactAssessment;
-  accessibilityImpact?: AccessibilityImpactAssessment;
+  mitigationSteps: ThreatMitigationStep[];
+  culturalImpact?: ThreatCulturalImpactAssessment;
+  accessibilityImpact?: ThreatAccessibilityImpactAssessment;
 }
 
-export interface MitigationStep {
+export interface ThreatMitigationStep {
   step: string;
   completed: boolean;
   timestamp?: Date;
 }
 
-export interface CulturalImpactAssessment {
+export interface ThreatCulturalImpactAssessment {
   impact: 'low' | 'medium' | 'high';
   affectedCommunities: string[];
   recommendations: string[];
 }
 
-export interface AccessibilityImpactAssessment {
+export interface ThreatAccessibilityImpactAssessment {
   impact: 'low' | 'medium' | 'high';
   affectedUsers: string[];
   mitigations: string[];
@@ -752,93 +766,93 @@ export interface SecurityAudit {
   date: Date;
   auditor: string;
   type: string;
-  status: 'passed' | 'failed' | 'warning';
-  findings: SecurityFinding[];
-  recommendations: SecurityRecommendation[];
-  compliance: ComplianceResult[];
-  culturalCompliance?: CulturalComplianceResult[];
-  accessibilityCompliance?: AccessibilityComplianceResult[];
+  status: 'passed' | 'failed' | 'warning' | 'completed';
+  findings: AuditSecurityFinding[];
+  recommendations: AuditSecurityRecommendation[];
+  compliance: AuditComplianceResult[];
+  culturalCompliance?: AuditCulturalComplianceResult[];
+  accessibilityCompliance?: AuditAccessibilityComplianceResult[];
 }
 
-export interface SecurityFinding {
+export interface AuditSecurityFinding {
   id: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   description: string;
   remediation: string;
 }
 
-export interface SecurityRecommendation {
-  priority: 'low' | 'medium' | 'high';
+export interface AuditSecurityRecommendation {
+  priority: 'low' | 'medium' | 'high' | 'critical';
   recommendation: string;
   timeline: string;
 }
 
-export interface ComplianceResult {
+export interface AuditComplianceResult {
   standard: string;
   compliant: boolean;
   issues?: string[];
 }
 
-export interface CulturalComplianceResult {
+export interface AuditCulturalComplianceResult {
   protocol: string;
   compliant: boolean;
   issues?: string[];
 }
 
-export interface AccessibilityComplianceResult {
+export interface AuditAccessibilityComplianceResult {
   guideline: string;
   compliant: boolean;
   issues?: string[];
 }
 
 // Workflow Engine Types
-export interface WorkflowTemplate {
+export interface WorkflowTemplateSummary {
   id: string;
   name: string;
   description: string;
   category: string;
 }
 
-export interface AccessibilityConfig {
+export interface AccessibilityConfigBasic {
   screenReaderOptimized: boolean;
   highContrast: boolean;
   largeText: boolean;
 }
 
-export interface WorkflowAnalytics {
+export interface WorkflowAnalyticsSummary {
   totalExecutions: number;
   successRate: number;
   averageCompletion: number;
 }
 
-export interface DocumentRequirement {
+export interface DocumentRequirementLite {
   id: string;
   name: string;
   required: boolean;
   format: string[];
 }
 
-export interface LegalStandard {
+export interface LegalStandardLite {
   id: string;
   name: string;
   jurisdiction: string;
   requirements: string[];
 }
 
-export interface WorkflowTrigger {
+export interface WorkflowTriggerConfig {
   id: string;
   type: string;
   triggerConditions: Record<string, any>;
 }
 
-export interface WorkflowCondition {
+export interface WorkflowConditionExpression {
   id: string;
   type: string;
   operator: string;
   value: any;
 }
 
-export interface WorkflowOutcome {
+export interface WorkflowOutcomeResult {
   id: string;
   type: string;
   result: any;
@@ -852,6 +866,11 @@ export interface SecurityConfig {
   authentication: {
     biometric: boolean;
     multiFactorAuth: boolean;
+    biometricEnabled: boolean;
+    multiFactorEnabled: boolean;
+    pinEnabled: boolean;
+    sessionTimeout: number;
+    deviceBinding: boolean;
     culturalAuthentication?: CulturalAuthenticationMethod[];
     trustedDevices: TrustedDevice[];
     authenticationHistory: AuthenticationEvent[];
@@ -926,4 +945,5 @@ export interface SecurityConfig {
     motorAccessibilityFeatures: MotorAccessibilityFeature[];
     alternativeAuthMethods: AlternativeAuthMethod[];
   };
+  lastUpdated?: Date;
 }
