@@ -12,12 +12,12 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { A11yPressable } from '../../../components/A11yPressable';
+import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
 import { useAuth } from '../../../context/AuthContext';
-import { useIndigenousLanguageContext } from '../../../context/IndigenousLanguageContext';
+import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
+import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
-import { useTheme } from '../../../theme/ThemeContext';
 
 // Legal process types and interfaces
 interface LegalProcess {
@@ -261,10 +261,27 @@ type ContactRole =
 export default function LegalProcessAutomation() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { colors } = useTheme();
+  const textColor = useThemeColor({}, 'text');
+  const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();
   const { user } = useAuth();
-  const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
+  const { settings } = useIndigenousLanguage();
+
+  // Create colors object for compatibility
+  const colors = {
+    text: textColor,
+    background: backgroundColor,
+    primary: '#007AFF',
+    border: '#E5E5E7',
+    card: backgroundColor,
+    notification: '#FF3B30',
+    success: '#34C759',
+    warning: '#FF9500',
+    error: '#FF3B30',
+    surface: backgroundColor,
+    accent: '#5856D6',
+    textSecondary: '#8E8E93'
+  };
 
   const [activeTab, setActiveTab] = useState<'dashboard' | 'processes' | 'documents' | 'deadlines' | 'templates'>('dashboard');
   const [legalProcesses, setLegalProcesses] = useState<LegalProcess[]>([]);
@@ -541,8 +558,8 @@ Sincerely,
             'Screen reader compatible',
             'Plain language version available'
           ],
-          culturalAdaptations: selectedLanguage ? {
-            [selectedLanguage]: 'Traditional consultation protocols may be incorporated where appropriate'
+          culturalAdaptations: settings.primaryLanguage ? {
+            [settings.primaryLanguage]: 'Traditional consultation protocols may be incorporated where appropriate'
           } : undefined,
           lastUpdated: new Date('2024-01-01'),
           version: '2.1'
@@ -661,7 +678,7 @@ Sincerely,
       contacts: [],
       notes: [],
       accessibilityAccommodations: ['Standard accommodations as needed'],
-      culturalConsiderations: culturalProtocols.ceremonialConsiderations ? 
+      culturalConsiderations: settings.ceremonialConsiderations ? 
         ['Traditional consultation protocols will be observed'] : undefined
     };
 
@@ -1122,7 +1139,7 @@ Sincerely,
             </View>
           </View>
 
-          {culturalProtocols.ceremonialConsiderations && (
+          {settings.ceremonialConsiderations && (
             <View style={[styles.culturalGuidance, { backgroundColor: colors.warning + '10', borderColor: colors.warning }]}>
               <Ionicons name="leaf" size={20} color={colors.warning} />
               <View style={styles.culturalGuidanceContent}>
@@ -1185,7 +1202,7 @@ Sincerely,
         </A11yTitle>
       </View>
 
-      {selectedLanguage && culturalProtocols.ceremonialConsiderations && (
+      {settings.primaryLanguage && settings.ceremonialConsiderations && (
         <View style={[styles.culturalBanner, { backgroundColor: colors.warning + '10', borderColor: colors.warning }]}>
           <Ionicons name="leaf" size={20} color={colors.warning} />
           <Text style={[styles.culturalBannerText, { color: colors.warning }]}>
@@ -1646,10 +1663,6 @@ const styles = StyleSheet.create({
     padding: 12,
     minWidth: 100,
     alignItems: 'center',
-  },
-  jurisdictionText: {
-    fontSize: 14,
-    fontWeight: '500',
   },
   culturalGuidance: {
     borderWidth: 1,

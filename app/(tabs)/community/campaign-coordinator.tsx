@@ -13,12 +13,12 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { A11yPressable } from '../../../components/A11yPressable';
+import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
 import { useAuth } from '../../../context/AuthContext';
-import { useIndigenousLanguageContext } from '../../../context/IndigenousLanguageContext';
+import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
+import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
-import { useTheme } from '../../../theme/ThemeContext';
 
 interface CampaignTemplate {
   id: string;
@@ -108,10 +108,27 @@ type CampaignCategory =
 export default function AdvocacyCampaignCoordinator() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { colors } = useTheme();
+  const textColor = useThemeColor({}, 'text');
+  const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();
   const { user } = useAuth();
-  const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
+  const { settings } = useIndigenousLanguage();
+
+  // Create colors object for compatibility
+  const colors = {
+    text: textColor,
+    background: backgroundColor,
+    primary: '#007AFF',
+    border: '#E5E5E7',
+    card: backgroundColor,
+    notification: '#FF3B30',
+    success: '#34C759',
+    warning: '#FF9500',
+    error: '#FF3B30',
+    surface: backgroundColor,
+    accent: '#5856D6',
+    textSecondary: '#8E8E93'
+  };
 
   const [activeTab, setActiveTab] = useState<'overview' | 'planning' | 'execution' | 'tracking'>('overview');
   const [campaigns, setCampaigns] = useState<any[]>([]);
@@ -374,7 +391,7 @@ export default function AdvocacyCampaignCoordinator() {
       createdAt: new Date(),
       createdBy: user?.uid || 'anonymous',
       team: [user?.displayName || 'Campaign Creator'],
-      culturalProtocols: culturalProtocols.ceremonialConsiderations ? ['Traditional protocols observed'] : [],
+      culturalProtocols: settings.ceremonialConsiderations ? ['Traditional protocols observed'] : [],
       accessibilityPlan: [
         'All materials in multiple formats',
         'Sign language interpretation available',
@@ -853,7 +870,7 @@ export default function AdvocacyCampaignCoordinator() {
         </A11yTitle>
       </View>
 
-      {selectedLanguage && culturalProtocols.ceremonialConsiderations && (
+      {settings.primaryLanguage && settings.ceremonialConsiderations && (
         <View style={[styles.culturalBanner, { backgroundColor: colors.warning + '10', borderColor: colors.warning }]}>
           <Ionicons name="leaf" size={20} color={colors.warning} />
           <Text style={[styles.culturalBannerText, { color: colors.warning }]}>

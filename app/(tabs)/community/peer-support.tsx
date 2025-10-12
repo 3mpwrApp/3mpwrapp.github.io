@@ -11,12 +11,12 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { A11yPressable } from '../../../components/A11yPressable';
+import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
 import { useAuth } from '../../../context/AuthContext';
-import { useIndigenousLanguageContext } from '../../../context/IndigenousLanguageContext';
+import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
+import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
-import { useTheme } from '../../../theme/ThemeContext';
 
 interface PeerProfile {
   id: string;
@@ -187,10 +187,27 @@ type MatchStatus =
 export default function PeerSupportMatching() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { colors } = useTheme();
+  const textColor = useThemeColor({}, 'text');
+  const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();
   const { user } = useAuth();
-  const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
+  const { settings } = useIndigenousLanguage();
+
+  // Create colors object for compatibility
+  const colors = {
+    text: textColor,
+    background: backgroundColor,
+    primary: '#007AFF',
+    border: '#E5E5E7',
+    card: backgroundColor,
+    notification: '#FF3B30',
+    success: '#34C759',
+    warning: '#FF9500',
+    error: '#FF3B30',
+    surface: backgroundColor,
+    accent: '#5856D6',
+    textSecondary: '#8E8E93'
+  };
 
   const [activeTab, setActiveTab] = useState<'matches' | 'profile' | 'connections' | 'safety'>('matches');
   const [userProfile, setUserProfile] = useState<PeerProfile | null>(null);
@@ -265,9 +282,9 @@ export default function PeerSupportMatching() {
         successfulMatches: 10
       };
 
-      if (selectedLanguage && culturalProtocols.communityCentered) {
+      if (settings.primaryLanguage && settings.communityCenteredApproach) {
         mockProfile.culturalBackground = 'Indigenous';
-        mockProfile.languagePreferences.push(selectedLanguage);
+        mockProfile.languagePreferences.push(settings.primaryLanguage);
       }
 
       setUserProfile(mockProfile);
@@ -303,7 +320,7 @@ export default function PeerSupportMatching() {
           status: 'pending',
           createdAt: new Date('2024-02-10'),
           communicationLog: [],
-          culturalConsiderations: selectedLanguage ? ['Traditional protocols respected', 'Elder guidance available'] : undefined
+          culturalConsiderations: settings.primaryLanguage ? ['Traditional protocols respected', 'Elder guidance available'] : undefined
         },
         {
           id: '2',
@@ -897,7 +914,7 @@ export default function PeerSupportMatching() {
         </A11yTitle>
       </View>
 
-      {selectedLanguage && culturalProtocols.communityCentered && (
+      {settings.primaryLanguage && settings.communityCenteredApproach && (
         <View style={[styles.culturalBanner, { backgroundColor: colors.warning + '10', borderColor: colors.warning }]}>
           <Ionicons name="leaf" size={20} color={colors.warning} />
           <Text style={[styles.culturalBannerText, { color: colors.warning }]}>

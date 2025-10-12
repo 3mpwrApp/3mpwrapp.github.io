@@ -11,11 +11,10 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { A11yPressable } from '../../components/A11yPressable';
-import { A11yText, A11yTitle, A11yWrapper } from '../../components/A11yWrapper';
-import { useIndigenousLanguageContext } from '../../context/IndigenousLanguageContext';
-import { useTranslation } from '../../i18n';
-import { useTheme } from '../../theme/ThemeContext';
+import A11yPressable, { A11yText, A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
+import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
+import { useThemeColor } from '../../../hooks/useThemeColor';
+import { useTranslation } from '../../../i18n';
 
 interface LanguageOptionProps {
   language: string;
@@ -122,7 +121,8 @@ const ProtocolSwitch: React.FC<ProtocolSwitchProps> = ({
 export default function IndigenousLanguageScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { colors } = useTheme();
+  const textColor = useThemeColor({}, 'text');
+  const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();
   const {
     selectedLanguage,
@@ -137,7 +137,23 @@ export default function IndigenousLanguageScreen() {
     getLandAcknowledgment,
     getTraditionalProtocols,
     isInitialized,
-  } = useIndigenousLanguageContext();
+  } = useIndigenousLanguage();
+
+  // Create colors object for compatibility
+  const colors = {
+    text: textColor,
+    background: backgroundColor,
+    primary: '#007AFF',
+    border: '#E5E5E7',
+    card: backgroundColor,
+    notification: '#FF3B30',
+    success: '#34C759',
+    warning: '#FF9500',
+    error: '#FF3B30',
+    surface: backgroundColor,
+    accent: '#5856D6',
+    textSecondary: '#8E8E93'
+  };
 
   const handleLanguageSelect = (languageCode: string) => {
     const language = availableLanguages.find(lang => lang.code === languageCode);

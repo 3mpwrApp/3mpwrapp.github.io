@@ -1,0 +1,929 @@
+// Phase 2 Type Definitions
+// Basic type definitions for Phase 2 features to resolve TypeScript compilation errors
+
+// Workflow Engine Types
+export interface WorkflowStep {
+  id: string;
+  name: string;
+  type: string;
+  description?: string;
+  validations: StepValidation[];
+  documents: DocumentAction[];
+  notifications: NotificationAction[];
+  deadlines: DeadlineAction[];
+  alternativePaths: AlternativePath[];
+  culturalProtocols?: CulturalStepProtocol[];
+  accessibilitySupport: AccessibilitySupport[];
+  userInput?: UserInputSpec[];
+  validation?: ValidationRule[];
+  errorHandling: ErrorHandling;
+  retryLogic?: RetryConfig;
+}
+
+export interface WorkflowTemplate {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  steps: WorkflowStep[];
+  requiredDocuments: DocumentRequirement[];
+  legalStandards: LegalStandard[];
+  triggers: WorkflowTrigger[];
+  conditions: WorkflowCondition[];
+  outcomes: WorkflowOutcome[];
+  culturalProtocols?: CulturalStepProtocol[];
+  accessibilitySupport: AccessibilitySupport[];
+}
+
+export interface DocumentRequirement {
+  id: string;
+  name: string;
+  type: string;
+  required: boolean;
+  culturalSensitive: boolean;
+}
+
+export interface LegalStandard {
+  id: string;
+  name: string;
+  jurisdiction: string;
+  requirements: string[];
+}
+
+export interface WorkflowTrigger {
+  id: string;
+  type: string;
+  conditions: string[];
+}
+
+export interface WorkflowCondition {
+  id: string;
+  type: string;
+  criteria: string;
+}
+
+export interface WorkflowOutcome {
+  id: string;
+  type: string;
+  description: string;
+}
+
+export interface AccessibilityConfig {
+  features: AccessibilityFeature[];
+  requirements: string[];
+}
+
+export interface WorkflowAnalytics {
+  completionRate: number;
+  averageTime: number;
+  successRate: number;
+}
+
+export interface StepValidation {
+  id: string;
+  type: string;
+  rules: ValidationRule[];
+}
+
+export interface DocumentAction {
+  id: string;
+  type: string;
+  document: string;
+}
+
+export interface NotificationAction {
+  id: string;
+  type: string;
+  message: string;
+}
+
+export interface DeadlineAction {
+  id: string;
+  type: string;
+  deadline: string;
+}
+
+export interface AlternativePath {
+  id: string;
+  condition: string;
+  steps: string[];
+}
+
+export interface CulturalStepProtocol {
+  id: string;
+  type: string;
+  requirements: string[];
+}
+
+export interface AccessibilitySupport {
+  id: string;
+  type: string;
+  description: string;
+}
+
+export interface UserInputSpec {
+  id: string;
+  type: string;
+  required: boolean;
+}
+
+export interface ValidationRule {
+  id: string;
+  type: string;
+  criteria: string;
+}
+
+export interface ErrorHandling {
+  strategy: string;
+  fallbacks: string[];
+}
+
+export interface RetryConfig {
+  maxAttempts: number;
+  backoffStrategy: string;
+}
+
+export interface FailedStep {
+  stepId: string;
+  error: string;
+  timestamp: string;
+}
+
+export interface ExecutionData {
+  inputs: Record<string, any>;
+  outputs: Record<string, any>;
+}
+
+export interface ExecutionMetadata {
+  startTime: string;
+  endTime?: string;
+  userId: string;
+}
+
+export interface ExecutionAnalytics {
+  stepTimes: Record<string, number>;
+  errors: ExecutionError[];
+}
+
+export interface AppliedCulturalProtocol {
+  protocolId: string;
+  appliedAt: string;
+  result: string;
+}
+
+export interface UserInteraction {
+  stepId: string;
+  type: string;
+  timestamp: string;
+}
+
+export interface ExecutionError {
+  stepId: string;
+  message: string;
+  timestamp: string;
+}
+
+export interface StepPerformance {
+  executionTime: number;
+  memoryUsage: number;
+}
+
+export interface AccessibilityFeature {
+  id: string;
+  type: string;
+  enabled: boolean;
+}
+
+export interface GenerationRule {
+  id: string;
+  type: string;
+  criteria: string;
+}
+
+export interface ApprovalWorkflow {
+  id: string;
+  steps: string[];
+  approvers: string[];
+}
+
+export interface AutomationTrigger {
+  id: string;
+  type: string;
+  conditions: string[];
+}
+
+export interface AutomationCondition {
+  id: string;
+  type: string;
+  criteria: string;
+}
+
+export interface AutomationAction {
+  id: string;
+  type: string;
+  action: string;
+}
+
+export interface CulturalSafeguard {
+  id: string;
+  type: string;
+  protection: string;
+}
+
+export interface AccessibilityCheck {
+  id: string;
+  type: string;
+  criteria: string;
+}
+
+export interface CeremonialConsideration {
+  id: string;
+  type: string;
+  requirements: string[];
+}
+
+export interface ConsultationRequirement {
+  id: string;
+  type: string;
+  stakeholders: string[];
+}
+
+export interface DocumentAdaptation {
+  id: string;
+  type: string;
+  modifications: string[];
+}
+
+export interface TimeConsideration {
+  id: string;
+  type: string;
+  requirements: string[];
+}
+
+export interface RespectProtocol {
+  id: string;
+  type: string;
+  guidelines: string[];
+}
+
+export interface ElderInvolvementProtocol {
+  required: boolean;
+  consultationSteps: string[];
+}
+
+export interface TraditionalLawConsideration {
+  id: string;
+  type: string;
+  principles: string[];
+}
+
+export interface AICapability {
+  id: string;
+  name: string;
+  description: string;
+}
+
+export interface CulturalCompetency {
+  level: string;
+  certifications: string[];
+}
+
+export interface AISafeguard {
+  id: string;
+  type: string;
+  protection: string;
+}
+
+export interface AIDecision {
+  id: string;
+  decision: string;
+  reasoning: string;
+}
+
+export interface AIPerformance {
+  accuracy: number;
+  speed: number;
+}
+
+export interface ReviewFinding {
+  id: string;
+  type: string;
+  description: string;
+}
+
+export interface ReviewRecommendation {
+  id: string;
+  type: string;
+  action: string;
+}
+
+export interface CulturalReview {
+  reviewerId: string;
+  findings: string[];
+}
+
+export interface AccessibilityReview {
+  reviewerId: string;
+  findings: string[];
+}
+
+export interface LegalAccuracyReview {
+  reviewerId: string;
+  findings: string[];
+}
+
+export interface LegalReference {
+  id: string;
+  title: string;
+  source: string;
+}
+
+export interface RegulationReference {
+  id: string;
+  title: string;
+  jurisdiction: string;
+}
+
+export interface PrecedentCase {
+  id: string;
+  title: string;
+  outcome: string;
+}
+
+export interface LegalProcedure {
+  id: string;
+  name: string;
+  steps: string[];
+}
+
+export interface StandardForm {
+  id: string;
+  name: string;
+  template: string;
+}
+
+export interface StandardDeadline {
+  id: string;
+  name: string;
+  timeframe: string;
+}
+
+export interface LegalContact {
+  id: string;
+  name: string;
+  role: string;
+}
+
+export interface LegalResource {
+  id: string;
+  name: string;
+  type: string;
+}
+
+export interface LegalUpdate {
+  id: string;
+  title: string;
+  date: string;
+}
+
+// Missing types for advanced-security.tsx
+export interface MitigationStep {
+  id: string;
+  description: string;
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  status: 'pending' | 'in_progress' | 'completed';
+}
+
+export interface CulturalImpactAssessment {
+  id: string;
+  impact: string;
+  mitigation: string[];
+}
+
+export interface AccessibilityImpactAssessment {
+  id: string;
+  impact: string;
+  mitigation: string[];
+}
+
+export interface SecurityFinding {
+  id: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+  evidence: string[];
+}
+
+export interface SecurityRecommendation {
+  id: string;
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  action: string;
+  timeline: string;
+}
+
+export interface ComplianceResult {
+  standard: string;
+  status: 'compliant' | 'non_compliant' | 'partial';
+  findings: string[];
+}
+
+export interface CulturalComplianceResult {
+  protocol: string;
+  status: 'compliant' | 'non_compliant' | 'partial';
+  findings: string[];
+}
+
+export interface AccessibilityComplianceResult {
+  feature: string;
+  status: 'compliant' | 'non_compliant' | 'partial';
+  findings: string[];
+}
+
+// Security Configuration Types
+export interface TrustedDevice {
+  id: string;
+  name: string;
+  lastAccess: Date;
+  trusted: boolean;
+}
+
+export interface AuthenticationEvent {
+  id: string;
+  timestamp: Date;
+  method: string;
+  success: boolean;
+  location?: string;
+}
+
+export interface CulturalAuthenticationMethod {
+  id: string;
+  name: string;
+  isEnabled: boolean;
+  description: string;
+}
+
+export interface EncryptionKey {
+  id: string;
+  algorithm: string;
+  strength: number;
+  createdAt: Date;
+}
+
+export interface ThirdPartySharing {
+  enabled: boolean;
+  allowedDomains: string[];
+  restrictions: string[];
+}
+
+export interface LocationTrackingConfig {
+  enabled: boolean;
+  precision: 'high' | 'medium' | 'low';
+  frequency: number;
+}
+
+export interface CulturalDataProtection {
+  sacredDataProtection: boolean;
+  elderAccess: boolean;
+  communityConsent: boolean;
+}
+
+export interface SensitiveDataHandling {
+  encryption: boolean;
+  anonymization: boolean;
+  accessLogging: boolean;
+}
+
+export interface DataExportControl {
+  format: string;
+  restrictions: string[];
+  approvalRequired: boolean;
+}
+
+export interface DataSharingConfig {
+  internal: boolean;
+  external: boolean;
+  anonymous: boolean;
+}
+
+export interface DataBreachProtection {
+  autoResponse: boolean;
+  notificationTime: number;
+  escalationPath: string[];
+}
+
+export interface ComplianceStandard {
+  name: string;
+  version: string;
+  compliance: boolean;
+}
+
+export interface DataClassification {
+  level: 'public' | 'internal' | 'confidential' | 'sacred';
+  category: string;
+  handling: string[];
+}
+
+export interface RetentionPolicy {
+  dataType: string;
+  retentionPeriod: number;
+  deletionMethod: string;
+}
+
+export interface DataDisposalMethod {
+  method: string;
+  secure: boolean;
+  verified: boolean;
+}
+
+// Access Control Types
+export interface FeaturePermission {
+  feature: string;
+  granted: boolean;
+  conditions?: string[];
+}
+
+export interface DataAccessRestriction {
+  dataType: string;
+  restrictions: string[];
+  exceptions?: string[];
+}
+
+export interface TemporaryAccessConfig {
+  feature: string;
+  duration: number;
+  autoRevoke: boolean;
+}
+
+export interface DelegatedAccessConfig {
+  delegateTo: string;
+  permissions: string[];
+  expiry: Date;
+}
+
+export interface EmergencyOverrideConfig {
+  enabled: boolean;
+  contacts: string[];
+  autoActivation: boolean;
+}
+
+export interface AccessReview {
+  id: string;
+  reviewDate: Date;
+  approver: string;
+  status: 'approved' | 'denied' | 'pending';
+}
+
+export interface PrivilegedOperation {
+  operation: string;
+  requiresApproval: boolean;
+  auditRequired: boolean;
+}
+
+export interface CulturalAccessControl {
+  requirement: string;
+  elderApproval: boolean;
+  communityConsent: boolean;
+}
+
+// Audit Types
+export interface AlertThreshold {
+  metric: string;
+  threshold: number;
+  action: string;
+}
+
+export interface LogExportControl {
+  format: string;
+  encryptionRequired: boolean;
+  approvalRequired: boolean;
+}
+
+// Emergency Types
+export interface EmergencyContact {
+  name: string;
+  relationship: string;
+  phone: string;
+  email: string;
+}
+
+export interface EmergencyDataAccess {
+  dataType: string;
+  accessLevel: string;
+  conditions: string[];
+}
+
+export interface EmergencyAuthMethod {
+  method: string;
+  enabled: boolean;
+  fallback: boolean;
+}
+
+export interface EmergencyNotification {
+  type: string;
+  recipients: string[];
+  message: string;
+}
+
+export interface RecoveryMethod {
+  method: string;
+  enabled: boolean;
+  secure: boolean;
+}
+
+// Cultural Security Types
+export interface SacredDataProtection {
+  enabled: boolean;
+  protocols: string[];
+  restrictions: string[];
+}
+
+export interface ElderAccessRights {
+  fullAccess: boolean;
+  restrictions: string[];
+  specialPrivileges: string[];
+}
+
+export interface CeremonyPrivacyConfig {
+  restrictAccess: boolean;
+  allowedUsers: string[];
+  timeRestrictions: boolean;
+}
+
+export interface TraditionalKnowledgeProtection {
+  enabled: boolean;
+  shareRestrictions: string[];
+  accessRequirements: string[];
+}
+
+export interface CommunityConsentConfig {
+  required: boolean;
+  minimumConsent: number;
+  elderApproval: boolean;
+}
+
+export interface CulturalAuditRequirement {
+  requirement: string;
+  frequency: string;
+  approver: string;
+}
+
+export interface IndigenousDataSovereignty {
+  enabled: boolean;
+  dataOwnership: string;
+  governanceRules: string[];
+}
+
+// Accessibility Types
+export interface AccessibleAuthConfig {
+  voiceRecognition: boolean;
+  gestureAuth: boolean;
+  assistiveDeviceSupport: boolean;
+}
+
+export interface AssistiveTechSupport {
+  screenReader: boolean;
+  voiceControl: boolean;
+  switchControl: boolean;
+}
+
+export interface CognitiveAccessibilityFeature {
+  name: string;
+  enabled: boolean;
+  settings: Record<string, any>;
+}
+
+export interface VisualAccessibilityFeature {
+  name: string;
+  enabled: boolean;
+  settings: Record<string, any>;
+}
+
+export interface AuditoryAccessibilityFeature {
+  name: string;
+  enabled: boolean;
+  settings: Record<string, any>;
+}
+
+export interface MotorAccessibilityFeature {
+  name: string;
+  enabled: boolean;
+  settings: Record<string, any>;
+}
+
+export interface AlternativeAuthMethod {
+  method: string;
+  enabled: boolean;
+  accessibilityCompliant: boolean;
+}
+
+// Security Threat Types
+export interface SecurityThreat {
+  id: string;
+  type: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+  timestamp: Date;
+  resolved: boolean;
+  mitigationSteps: MitigationStep[];
+  culturalImpact?: CulturalImpactAssessment;
+  accessibilityImpact?: AccessibilityImpactAssessment;
+}
+
+export interface MitigationStep {
+  step: string;
+  completed: boolean;
+  timestamp?: Date;
+}
+
+export interface CulturalImpactAssessment {
+  impact: 'low' | 'medium' | 'high';
+  affectedCommunities: string[];
+  recommendations: string[];
+}
+
+export interface AccessibilityImpactAssessment {
+  impact: 'low' | 'medium' | 'high';
+  affectedUsers: string[];
+  mitigations: string[];
+}
+
+// Security Audit Types
+export interface SecurityAudit {
+  id: string;
+  date: Date;
+  auditor: string;
+  type: string;
+  status: 'passed' | 'failed' | 'warning';
+  findings: SecurityFinding[];
+  recommendations: SecurityRecommendation[];
+  compliance: ComplianceResult[];
+  culturalCompliance?: CulturalComplianceResult[];
+  accessibilityCompliance?: AccessibilityComplianceResult[];
+}
+
+export interface SecurityFinding {
+  id: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+  remediation: string;
+}
+
+export interface SecurityRecommendation {
+  priority: 'low' | 'medium' | 'high';
+  recommendation: string;
+  timeline: string;
+}
+
+export interface ComplianceResult {
+  standard: string;
+  compliant: boolean;
+  issues?: string[];
+}
+
+export interface CulturalComplianceResult {
+  protocol: string;
+  compliant: boolean;
+  issues?: string[];
+}
+
+export interface AccessibilityComplianceResult {
+  guideline: string;
+  compliant: boolean;
+  issues?: string[];
+}
+
+// Workflow Engine Types
+export interface WorkflowTemplate {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+}
+
+export interface AccessibilityConfig {
+  screenReaderOptimized: boolean;
+  highContrast: boolean;
+  largeText: boolean;
+}
+
+export interface WorkflowAnalytics {
+  totalExecutions: number;
+  successRate: number;
+  averageCompletion: number;
+}
+
+export interface DocumentRequirement {
+  id: string;
+  name: string;
+  required: boolean;
+  format: string[];
+}
+
+export interface LegalStandard {
+  id: string;
+  name: string;
+  jurisdiction: string;
+  requirements: string[];
+}
+
+export interface WorkflowTrigger {
+  id: string;
+  type: string;
+  triggerConditions: Record<string, any>;
+}
+
+export interface WorkflowCondition {
+  id: string;
+  type: string;
+  operator: string;
+  value: any;
+}
+
+export interface WorkflowOutcome {
+  id: string;
+  type: string;
+  result: any;
+}
+
+// And many more types as placeholders...
+// These are basic definitions to resolve compilation errors
+// In a production environment, these would be properly defined with full interfaces
+
+export interface SecurityConfig {
+  authentication: {
+    biometric: boolean;
+    multiFactorAuth: boolean;
+    culturalAuthentication?: CulturalAuthenticationMethod[];
+    trustedDevices: TrustedDevice[];
+    authenticationHistory: AuthenticationEvent[];
+  };
+  encryption: {
+    dataAtRest: boolean;
+    dataInTransit: boolean;
+    keyManagement: string;
+    encryptionKeys: EncryptionKey[];
+  };
+  privacy: {
+    dataMinimization: boolean;
+    purposeLimitation: boolean;
+    consentManagement: boolean;
+    thirdPartySharing: ThirdPartySharing;
+    locationTracking: LocationTrackingConfig;
+    dataRetention: string;
+    culturalDataProtection: CulturalDataProtection;
+    sensitiveDataHandling: SensitiveDataHandling;
+  };
+  dataGovernance: {
+    dataClassificationEnabled: boolean;
+    dataExportControls: DataExportControl[];
+    dataSharing: DataSharingConfig;
+    dataBreachProtection: DataBreachProtection;
+    complianceStandards: ComplianceStandard[];
+    dataClassification: DataClassification[];
+    retentionPolicies: RetentionPolicy[];
+    disposalMethods: DataDisposalMethod[];
+  };
+  accessControl: {
+    roleBasedAccess: boolean;
+    featurePermissions: FeaturePermission[];
+    dataAccessRestrictions: DataAccessRestriction[];
+    temporaryAccess: TemporaryAccessConfig[];
+    delegatedAccess: DelegatedAccessConfig[];
+    emergencyOverride: EmergencyOverrideConfig;
+    accessReviews: AccessReview[];
+    privilegedOperations: PrivilegedOperation[];
+    culturalAccessControls: CulturalAccessControl[];
+  };
+  monitoring: {
+    securityLogging: boolean;
+    anomalyDetection: boolean;
+    alertThresholds: AlertThreshold[];
+    logExportControls: LogExportControl[];
+  };
+  emergencyFeatures: {
+    panicButton: boolean;
+    emergencyContacts: EmergencyContact[];
+    emergencyBypass: boolean;
+    emergencyDataAccess: EmergencyDataAccess[];
+    emergencyAuthMethods: EmergencyAuthMethod[];
+    emergencyNotifications: EmergencyNotification[];
+    recoveryMethods: RecoveryMethod[];
+  };
+  culturalSecurity: {
+    sacredDataProtection: SacredDataProtection;
+    elderAccessRights: ElderAccessRights;
+    ceremonyPrivacy: CeremonyPrivacyConfig;
+    traditionalKnowledgeProtection: TraditionalKnowledgeProtection;
+    communityConsent: CommunityConsentConfig;
+    culturalAuditRequirements: CulturalAuditRequirement[];
+    indigenousDataSovereignty: IndigenousDataSovereignty;
+  };
+  accessibilitySecurity: {
+    accessibleAuthentication: AccessibleAuthConfig;
+    assistiveTechnologySupport: AssistiveTechSupport;
+    cognitiveAccessibilityFeatures: CognitiveAccessibilityFeature[];
+    visualAccessibilityFeatures: VisualAccessibilityFeature[];
+    auditoryAccessibilityFeatures: AuditoryAccessibilityFeature[];
+    motorAccessibilityFeatures: MotorAccessibilityFeature[];
+    alternativeAuthMethods: AlternativeAuthMethod[];
+  };
+}

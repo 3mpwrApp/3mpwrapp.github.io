@@ -13,12 +13,12 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { A11yPressable } from '../../../components/A11yPressable';
+import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
 import { useAuth } from '../../../context/AuthContext';
-import { useIndigenousLanguageContext } from '../../../context/IndigenousLanguageContext';
+import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
+import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
-import { useTheme } from '../../../theme/ThemeContext';
 
 // Types for enhanced community features
 interface AdvocacyGroup {
@@ -136,10 +136,27 @@ interface AccessibilityFeature {
 export default function EnhancedCommunityHub() {
   const insets = useSafeAreaInsets();
   const _router = useRouter();
-  const { colors } = useTheme();
+  const textColor = useThemeColor({}, 'text');
+  const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();
   const { user: _user } = useAuth();
-  const { selectedLanguage, culturalProtocols } = useIndigenousLanguageContext();
+  const { settings } = useIndigenousLanguage();
+
+  // Create colors object for compatibility
+  const colors = {
+    text: textColor,
+    background: backgroundColor,
+    primary: '#007AFF',
+    border: '#E5E5E7',
+    card: backgroundColor,
+    notification: '#FF3B30',
+    success: '#34C759',
+    warning: '#FF9500',
+    error: '#FF3B30',
+    surface: backgroundColor,
+    accent: '#5856D6',
+    textSecondary: '#8E8E93'
+  };
   
   const [activeTab, setActiveTab] = useState<'groups' | 'peer_support' | 'campaigns' | 'meetups'>('groups');
   const [advocacyGroups, setAdvocacyGroups] = useState<AdvocacyGroup[]>([]);
@@ -808,7 +825,7 @@ export default function EnhancedCommunityHub() {
         </A11yPressable>
       </View>
 
-      {selectedLanguage && culturalProtocols.ceremonialConsiderations && (
+      {settings.primaryLanguage && settings.ceremonialConsiderations && (
         <View style={[styles.culturalBanner, { backgroundColor: colors.warning + '10', borderColor: colors.warning }]}>
           <Ionicons name="leaf" size={20} color={colors.warning} />
           <Text style={[styles.culturalBannerText, { color: colors.warning }]}>
