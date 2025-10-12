@@ -39,13 +39,77 @@
     "scheduleEventReminder": "Programar recordatorio de evento",
     "removeEventReminder": "Eliminar recordatorio de evento",
     "addToCalendar": "Agregar al calendario",
-    "toggleMoodNudges": " Toggle mood nudges",
+    "toggleMoodNudges": "Activar/desactivar recordatorios de estado de ánimo",
     "tool": {
-      "coach": " Open Advocacy Coach tool",
-      "translator": " Open AI Translator tool",
-      "policy_simplifier": " Open Policy Simplifier tool",
-      "wellness_mood": " Open Mood Tracker tool",
-      "resources_search": " Open Resources Hub"
+      "coach": "Abrir herramienta de Coach de Defensa",
+      "translator": "Abrir herramienta de Traductor IA",
+      "policy_simplifier": "Abrir herramienta de Simplificador de Políticas",
+      "wellness_mood": "Abrir herramienta de Monitor de Estado de Ánimo",
+      "resources_search": "Abrir Hub de Recursos"
+    },
+    "navigation": {
+      "screen": "Navegado a {{screen}}",
+      "screenWithContext": "Navegado a {{screen}}. {{context}}"
+    },
+    "input": {
+      "required": "requerido",
+      "errorAnnouncement": "Error: {{error}}",
+      "characterLimit": "{{count}} de {{max}} caracteres",
+      "errorWithField": "Error en {{field}}: {{error}}",
+      "characterCount": "{{current}} de {{max}} caracteres",
+      "requiredField": "Campo requerido",
+      "optionalField": "Campo opcional"
+    },
+    "focus": {
+      "button": "Enfoque en botón {{name}}",
+      "textInput": "Enfoque en entrada de texto {{name}}",
+      "heading": "Enfoque en encabezado {{name}}",
+      "link": "Enfoque en enlace {{name}}"
+    },
+    "hints": {
+      "tap": "Toque dos veces para activar",
+      "swipe": "Deslice hacia la derecha o izquierda para navegar",
+      "hold": "Toque dos veces y mantenga presionado",
+      "navigate": "Use gestos de deslizamiento para navegar",
+      "withTarget": "{{hint}} {{target}}",
+      "withContext": "{{hint}}. {{context}}"
+    },
+    "roles": {
+      "button": "botón",
+      "link": "enlace",
+      "heading": "encabezado",
+      "textInput": "entrada de texto",
+      "slider": "deslizador",
+      "switch": "interruptor",
+      "radioButton": "botón de radio",
+      "checkbox": "casilla de verificación",
+      "tab": "pestaña",
+      "list": "lista",
+      "listItem": "elemento de lista"
+    },
+    "states": {
+      "selected": "seleccionado",
+      "checked": "marcado",
+      "unchecked": "desmarcado",
+      "expanded": "expandido",
+      "collapsed": "contraído",
+      "disabled": "deshabilitado",
+      "loading": "cargando",
+      "error": "tiene error"
+    },
+    "position": "{{index}} de {{total}}",
+    "labelWithRole": "{{label}}, {{role}}",
+    "labelWithState": "{{label}}, {{state}}",
+    "labelWithPosition": "{{label}}, {{position}}",
+    "labelWithValue": "{{label}}, valor {{value}}",
+    "loading": {
+      "announcement": "Cargando {{content}}",
+      "complete": "Carga completa"
+    },
+    "form": {
+      "validationError": "El formulario tiene errores",
+      "submissionSuccess": "Formulario enviado exitosamente",
+      "submissionError": "Error al enviar el formulario"
     }
   },
   "deadlines": {
@@ -1749,6 +1813,37 @@
         "body": " You viewed {{resource}}"
       }
     },
+    "mood": {
+      "title": "Monitor de Estado de Ánimo",
+      "subtitle": "Registra cómo te sientes para identificar tendencias.",
+      "screenAnnouncement": "Monitor de estado de ánimo cargado. Selecciona un puntaje y agrega una nota opcional.",
+      "scoreSection": "Selección de puntaje de estado de ánimo",
+      "scoreLabel": "Selecciona tu puntaje de estado de ánimo",
+      "scoreButtons": "Botones de puntaje de estado de ánimo de -2 a 2",
+      "scoreOption": "{{score}}: {{description}}",
+      "scoreHint": "Toca dos veces para seleccionar este puntaje de estado de ánimo",
+      "selectedScore": "Seleccionado: {{description}}",
+      "noteLabel": "Nota opcional",
+      "noteHelper": "Agrega detalles adicionales sobre tu estado de ánimo",
+      "noteAccessibility": "Entrada de texto para nota de estado de ánimo",
+      "noteHint": "Campo opcional para agregar contexto sobre tu estado de ánimo",
+      "notePlaceholder": "Nota opcional",
+      "save": "Guardar",
+      "addEntryLabel": "Agregar entrada de estado de ánimo",
+      "quick": {
+        "sleep": "Sueño y Energía",
+        "balance": "IA de Equilibrio Trabajo/Descanso"
+      },
+      "veryLow": "Muy bajo",
+      "low": "Bajo",
+      "neutral": "Neutral",
+      "good": "Bueno",
+      "great": "Excelente",
+      "today": "Hoy",
+      "emptyToday": "No hay entradas hoy.",
+      "avg7d": "Promedio 7d:",
+      "total": "Entradas totales:"
+    },
     "system": {
       "changelog": {
         "title": " What's new in 3mpwr App",
@@ -1756,30 +1851,33 @@
       }
     },
     "accessibility": {
-      "title": " Accessibility",
-      "subtitle": " Make the app work better for you",
-      "highContrast": " High Contrast",
-      "highContrastDesc": " Increases contrast for better readability",
-      "textSize": " Text Size",
-      "textSizeDesc": " Adjust text size throughout the app",
-      "screenReader": " Screen Reader Optimized",
-      "screenReaderDesc": " Optimizes content for screen readers",
-      "reduceMotion": " Reduce Motion",
-      "reduceMotionDesc": " Minimizes animations and transitions",
-      "focusIndicator": " Enhanced Focus Indicators",
-      "focusIndicatorDesc": " Makes keyboard navigation more visible",
-      "tapTarget": " Minimum Tap Target Size",
-      "tapTargetDesc": " Ensures buttons are easy to tap",
-      "dyslexiaFriendly": " Dyslexia-Friendly Font",
-      "dyslexiaFriendlyDesc": " Improves letter spacing and readability",
-      "plainLanguage": " Plain Language",
-      "plainLanguageDesc": " Uses simpler, clearer text",
-      "captions": " Captions Preferred",
-      "captionsDesc": " Shows captions when available",
-      "voiceMode": " Voice Mode",
-      "voiceModeDesc": " Enables voice navigation (beta)",
-      "dyslexia": " settings.accessibility.dyslexia",
-      "dyslexiaDesc": " settings.accessibility.dyslexiaDesc"
+      "title": "Accesibilidad",
+      "subtitle": "Hacer que la aplicación funcione mejor para ti",
+      "highContrast": "Alto Contraste",
+      "highContrastDesc": "Aumenta el contraste para mejor legibilidad",
+      "textSize": "Tamaño de Texto",
+      "textSizeDesc": "Ajusta el tamaño del texto en toda la aplicación",
+      "screenReader": "Optimizado para Lector de Pantalla",
+      "screenReaderDesc": "Optimiza el contenido para lectores de pantalla",
+      "reduceMotion": "Reducir Movimiento",
+      "reduceMotionDesc": "Minimiza animaciones y transiciones",
+      "focusIndicator": "Indicadores de Foco Mejorados",
+      "focusIndicatorDesc": "Hace la navegación con teclado más visible",
+      "tapTarget": "Tamaño Mínimo de Objetivo Táctil",
+      "tapTargetDesc": "Asegura que los botones sean fáciles de tocar",
+      "dyslexiaFriendly": "Fuente Amigable para Dislexia",
+      "dyslexiaFriendlyDesc": "Mejora el espaciado de letras y la legibilidad",
+      "plainLanguage": "Lenguaje Sencillo",
+      "plainLanguageDesc": "Usa texto más simple y claro",
+      "captions": "Subtítulos Preferidos",
+      "captionsDesc": "Muestra subtítulos cuando están disponibles",
+      "voiceMode": "Modo de Voz",
+      "voiceModeDesc": "Habilita navegación por voz (beta)",
+      "dyslexia": "Fuente amigable para dislexia",
+      "dyslexiaDesc": "Mejora el espaciado de letras y la legibilidad",
+      "assistantPill": "Mostrar Botón del Asistente",
+      "assistantPillDesc": "Acceso directo flotante al hub del Asistente",
+      "assistantDock": "Posición del Botón del Asistente"
     },
     "language": {
       "title": " Language",

@@ -517,7 +517,11 @@
       "cta": "🤖 Ask"
     },
     "home": {
-      "recentPrompts": "Recently used prompts"
+      "recentPrompts": "Recently used prompts",
+      "recentPromptsRegion": "Recent prompts section",
+      "promptsList": "List of recent prompts",
+      "promptAccessibilityLabel": "Recent prompt: {{prompt}}",
+      "promptHint": "Double tap to use this prompt again"
     },
     "tools": {
       "coach": "Coach",
@@ -613,6 +617,8 @@
     "title": "Welcome to 3mpwr App",
     "subtitle": "Support. Advocacy. Empowerment.",
     "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!",
+    "announcement": "Home screen loaded. Beta features available.",
+    "screenLabel": "Home screen",
     "personalization": {
       "note": "Suggestions powered by the Personalization Engine (beta)."
     },
@@ -632,14 +638,27 @@
     "quick": {
       "betaChat": {
         "title": "Beta Testers Chat",
-        "label": "Open Beta Testers Chat",
-        "cta": "Join the Beta Testers Chat"
+        "label": "Join the Beta Testers Chat",
+        "cta": "Join the Beta Testers Chat",
+        "hint": "Opens the beta testers community chat",
+        "section": "Beta testers section"
       }
     }
   },
   "mood": {
     "title": "Mood Tracker",
     "subtitle": "Log how you feel to spot trends.",
+    "screenAnnouncement": "Mood tracker loaded. Select a score and add optional note.",
+    "scoreSection": "Mood score selection",
+    "scoreLabel": "Select your mood score",
+    "scoreButtons": "Mood score buttons from -2 to 2",
+    "scoreOption": "{{score}}: {{description}}",
+    "scoreHint": "Double tap to select this mood score",
+    "selectedScore": "Selected: {{description}}",
+    "noteLabel": "Optional note",
+    "noteHelper": "Add any additional details about your mood",
+    "noteAccessibility": "Mood note text input",
+    "noteHint": "Optional field to add context about your mood",
     "notePlaceholder": "Optional note",
     "save": "Save",
     "quick": {
@@ -655,8 +674,7 @@
     "neutral": "Neutral",
     "good": "Good",
     "great": "Great",
-    "addEntryLabel": "Add mood entry",
-    "scoreLabel": "Mood score {{score}}"
+    "addEntryLabel": "Add mood entry"
   },
   "homeGuide": {
     "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
@@ -1010,6 +1028,70 @@
       "policy_simplifier": "Open Policy Simplifier tool",
       "wellness_mood": "Open Mood Tracker tool",
       "resources_search": "Open Resources Hub"
+    },
+    "input": {
+      "required": "required",
+      "errorAnnouncement": "Error: {{error}}",
+      "characterLimit": "{{count}} of {{max}} characters",
+      "errorWithField": "Error in {{field}}: {{error}}",
+      "characterCount": "{{current}} of {{max}} characters",
+      "requiredField": "Required field",
+      "optionalField": "Optional field"
+    },
+    "navigation": {
+      "screen": "Navigated to {{screen}}",
+      "screenWithContext": "Navigated to {{screen}}. {{context}}"
+    },
+    "focus": {
+      "button": "Focused on {{name}} button",
+      "textInput": "Focused on {{name}} text input",
+      "heading": "Focused on {{name}} heading",
+      "link": "Focused on {{name}} link"
+    },
+    "hints": {
+      "tap": "Double tap to activate",
+      "swipe": "Swipe right or left to navigate",
+      "hold": "Double tap and hold",
+      "navigate": "Use swipe gestures to navigate",
+      "withTarget": "{{hint}} {{target}}",
+      "withContext": "{{hint}}. {{context}}"
+    },
+    "roles": {
+      "button": "button",
+      "link": "link",
+      "heading": "heading",
+      "textInput": "text input",
+      "slider": "slider",
+      "switch": "switch",
+      "radioButton": "radio button",
+      "checkbox": "checkbox",
+      "tab": "tab",
+      "list": "list",
+      "listItem": "list item"
+    },
+    "states": {
+      "selected": "selected",
+      "checked": "checked",
+      "unchecked": "unchecked",
+      "expanded": "expanded",
+      "collapsed": "collapsed",
+      "disabled": "disabled",
+      "loading": "loading",
+      "error": "has error"
+    },
+    "position": "{{index}} of {{total}}",
+    "labelWithRole": "{{label}}, {{role}}",
+    "labelWithState": "{{label}}, {{state}}",
+    "labelWithPosition": "{{label}}, {{position}}",
+    "labelWithValue": "{{label}}, value {{value}}",
+    "loading": {
+      "announcement": "Loading {{content}}",
+      "complete": "Loading complete"
+    },
+    "form": {
+      "validationError": "Form has errors",
+      "submissionSuccess": "Form submitted successfully",
+      "submissionError": "Form submission failed"
     },
     "shareCampaign": "Share campaign {{title}}",
     "joinCampaign": "Join {{title}}",
