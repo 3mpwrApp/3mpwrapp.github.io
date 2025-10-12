@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides comprehensive documentation for Phase 2 implementation of EmpowrApp, which includes Indigenous language support, enhanced community features, legal process automation, and advanced security options.
+This document provides comprehensive documentation for Phase 2 implementation of 3mpwrApp, which includes Indigenous language support, enhanced community features, legal process automation, and advanced security options.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ This document provides comprehensive documentation for Phase 2 implementation of
 ## Indigenous Language Support
 
 ### Overview
-EmpowrApp now supports 6 Indigenous languages with comprehensive cultural protocol integration:
+3mpwrApp now supports 6 Indigenous languages with comprehensive cultural protocol integration:
 - Plains Cree (nehiyawewin)
 - Ojibwe (Anishinaabemowin)
 - Inuktitut

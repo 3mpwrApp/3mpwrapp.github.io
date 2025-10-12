@@ -95,7 +95,7 @@ class NetworkSecurityManager {
 
       // Configure secure headers
       const secureHeaders = {
-        'User-Agent': 'EmpowrApp/1.0',
+        'User-Agent': '3mpwrApp/1.0',
         'Accept': 'application/json',
         'Cache-Control': 'no-cache',
         'Pragma': 'no-cache',

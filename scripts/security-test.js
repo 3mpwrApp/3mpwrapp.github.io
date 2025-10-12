@@ -43,7 +43,7 @@ class SecurityTester {
    * Run complete security test suite
    */
   async runAllTests() {
-    console.log('🔒 Starting EmpowrApp Security Test Suite...\n');
+    console.log('🔒 Starting 3mpwrApp Security Test Suite...\n');
 
     try {
       // Ensure output directories exist
@@ -217,7 +217,7 @@ class SecurityTester {
       let owaspResult = { success: true, message: 'OWASP Dependency Check not available' };
       if (this.isCommandAvailable('dependency-check')) {
         owaspResult = this.runCommand(
-          'dependency-check --project EmpowrApp --scan package.json --format JSON --out ' + 
+          'dependency-check --project 3mpwrApp --scan package.json --format JSON --out ' + 
           `${SECURITY_CONFIG.outputDir}/dependencies/owasp-dependency-check.json`,
           null
         );
@@ -727,7 +727,7 @@ class SecurityTester {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>EmpowrApp Security Report</title>
+    <title>3mpwrApp Security Report</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .header { background: #2196F3; color: white; padding: 20px; border-radius: 8px; }
@@ -742,7 +742,7 @@ class SecurityTester {
 </head>
 <body>
     <div class="header">
-        <h1>🔒 EmpowrApp Security Report</h1>
+        <h1>🔒 3mpwrApp Security Report</h1>
         <p>Generated: ${this.results.timestamp}</p>
     </div>
     
@@ -771,7 +771,7 @@ class SecurityTester {
     `).join('')}
     
     <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;">
-        <p>Security testing performed by EmpowrApp Security Suite</p>
+        <p>Security testing performed by 3mpwrApp Security Suite</p>
     </footer>
 </body>
 </html>

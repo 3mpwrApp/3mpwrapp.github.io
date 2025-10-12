@@ -1,16 +1,16 @@
-// Advanced Security Options for EmpowrApp
+// Advanced Security Options for 3mpwrApp
 import { Ionicons } from '@expo/vector-icons';
 import * as LocalAuthentication from 'expo-local-authentication';
 import { useRouter } from 'expo-router';
 // import * as SecureStore from 'expo-secure-store'; // Commented out due to missing dependency
 import { useEffect, useState } from 'react';
 import {
-    Alert,
-    ScrollView,
-    StyleSheet,
-    Switch,
-    Text,
-    View
+  Alert,
+  ScrollView,
+  StyleSheet,
+  Switch,
+  Text,
+  View
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -21,9 +21,9 @@ import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContex
 import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
 import type {
-    SecurityAudit,
-    SecurityConfig,
-    SecurityThreat
+  SecurityAudit,
+  SecurityConfig,
+  SecurityThreat
 } from '../../../types/phase2';
 
 // Security Configuration Types - using imported types from types/phase2.ts
@@ -135,9 +135,9 @@ export default function AdvancedSecurityOptions() {
 
   const createDefaultSecurityConfig = async (): Promise<SecurityConfig> => {
     const defaultConfig: SecurityConfig = {
-      id: `security_${Date.now()}`,
-      userId: user?.uid || 'user',
       authentication: {
+        biometric: false,
+        multiFactorAuth: false,
         multiFactorEnabled: false,
         biometricEnabled: false,
         biometricTypes: [],
@@ -166,10 +166,8 @@ export default function AdvancedSecurityOptions() {
       },
       privacy: {
         dataMinimization: true,
-        anonymizationEnabled: false,
-        pseudonymizationEnabled: true,
-        dataRetentionPeriod: 365 * 7, // 7 years
-        automaticDataDeletion: false,
+        purposeLimitation: true,
+        consentManagement: true,
         thirdPartySharing: {
           enabled: false,
           allowedDomains: [],
@@ -178,59 +176,62 @@ export default function AdvancedSecurityOptions() {
         locationTracking: {
           enabled: false,
           precision: 'low',
+          frequency: 0,
           purpose: 'service_improvement'
         },
-        analyticsOptOut: false,
-        marketingOptOut: true,
-        researchOptOut: false,
+        dataRetention: '7 years',
         culturalDataProtection: {
           sacredDataProtection: true,
-          communityConsentRequired: true,
-          elderApprovalRequired: false
+          elderAccess: true,
+          elderApprovalRequired: false,
+          communityConsent: true,
+          communityConsentRequired: true
         },
         sensitiveDataHandling: {
-          extraProtection: true,
+          encryption: true,
+          anonymization: true,
           accessLogging: true,
-          purposeLimitation: true
+          purposeLimitation: true,
+          extraProtection: true
         }
       },
-      dataProtection: {
-        backupEncryption: true,
-        cloudSyncEnabled: false,
-        localBackupsOnly: true,
+      dataGovernance: {
+        dataClassificationEnabled: true,
         dataExportControls: [
           {
             format: 'encrypted_json',
             approvalRequired: true,
-            culturalReview: true
+            restrictions: ['cultural_review']
           }
         ],
         dataSharing: {
-          internalSharing: false,
-          externalSharing: false,
-          researchSharing: false,
-          emergencySharing: true
+          internal: false,
+          external: false,
+          anonymous: true
         },
         dataBreachProtection: {
-          automaticNotification: true,
-          breachResponse: 'lockdown',
-          recoveryPlan: 'comprehensive'
+          autoResponse: true,
+          notificationTime: 24,
+          escalationPath: ['security_team', 'legal', 'elder_council']
         },
-        complianceStandards: ['PIPEDA', 'Indigenous_Data_Governance'],
+        complianceStandards: [
+          { name: 'PIPEDA', version: '2023', compliance: true },
+          { name: 'Indigenous_Data_Governance', version: '2023', compliance: true }
+        ],
         dataClassification: [
-          { type: 'medical', level: 'highly_sensitive' },
-          { type: 'legal', level: 'highly_sensitive' },
-          { type: 'cultural', level: 'sacred' },
-          { type: 'personal', level: 'sensitive' }
+          { level: 'confidential', category: 'medical', handling: ['encrypt', 'audit_access'] },
+          { level: 'confidential', category: 'legal', handling: ['encrypt', 'legal_review'] },
+          { level: 'sacred', category: 'cultural', handling: ['elder_approval', 'ceremonial_protection'] },
+          { level: 'internal', category: 'personal', handling: ['encrypt', 'access_control'] }
         ],
         retentionPolicies: [
-          { dataType: 'medical', retentionPeriod: 365 * 10 },
-          { dataType: 'legal', retentionPeriod: 365 * 7 },
-          { dataType: 'cultural', retentionPeriod: 365 * 100 }
+          { dataType: 'medical', retentionPeriod: 365 * 10, deletionMethod: 'secure_wipe' },
+          { dataType: 'legal', retentionPeriod: 365 * 7, deletionMethod: 'secure_wipe' },
+          { dataType: 'cultural', retentionPeriod: 365 * 100, deletionMethod: 'ceremonial_return' }
         ],
         disposalMethods: [
-          { dataType: 'standard', method: 'secure_deletion' },
-          { dataType: 'cultural', method: 'ceremonial_disposal' }
+          { method: 'secure_deletion', secure: true, verified: true },
+          { method: 'ceremonial_disposal', secure: true, verified: true }
         ]
       },
       accessControl: {
@@ -241,85 +242,93 @@ export default function AdvancedSecurityOptions() {
         delegatedAccess: [],
         emergencyOverride: {
           enabled: true,
-          requiresJustification: true,
-          auditRequired: true
+          contacts: ['admin@empowrapp.com'],
+          autoActivation: false,
+          auditRequired: true,
+          requiresJustification: true
         },
         accessReviews: [],
         privilegedOperations: [],
         culturalAccessControls: settings.ceremonialConsiderations ? [
           {
+            requirement: 'sacred_data_access',
+            elderApproval: true,
+            communityConsent: true,
             type: 'sacred_data_access',
             restrictions: ['elder_approval', 'ceremony_appropriate_time'],
             culturalGuidelines: 'Respect traditional protocols for accessing sacred information'
           }
         ] : []
       },
-      auditLog: {
-        auditingEnabled: true,
-        logRetentionPeriod: 365 * 2,
-        detailedLogging: true,
-        realTimeMonitoring: false,
+      monitoring: {
+        securityLogging: true,
         anomalyDetection: true,
-        logEncryption: true,
-        logIntegrityProtection: true,
-        auditEvents: ['login', 'logout', 'data_access', 'data_modification', 'cultural_access'],
         alertThresholds: [
-          { event: 'failed_login', threshold: 3, timeWindow: 15 },
-          { event: 'cultural_access', threshold: 1, timeWindow: 60 }
+          { metric: 'failed_login', threshold: 3, action: 'lockout' },
+          { metric: 'cultural_access', threshold: 1, action: 'alert_elders' }
         ],
         logExportControls: [
-          { purpose: 'compliance', approvalRequired: true },
-          { purpose: 'investigation', approvalRequired: true }
+          { format: 'encrypted_json', encryptionRequired: true, approvalRequired: true },
+          { format: 'investigation_log', encryptionRequired: true, approvalRequired: true }
         ]
       },
-      emergencyAccess: {
-        emergencyContactsEnabled: true,
+      emergencyFeatures: {
+        panicButton: true,
         emergencyContacts: [],
-        medicalEmergencyAccess: true,
-        legalEmergencyAccess: true,
-        culturalEmergencyAccess: settings.ceremonialConsiderations,
+        emergencyBypass: false,
         emergencyDataAccess: [
-          { dataType: 'medical', accessLevel: 'read_only', justificationRequired: true },
-          { dataType: 'emergency_contacts', accessLevel: 'full', justificationRequired: false }
+          { dataType: 'medical', accessLevel: 'read_only', conditions: ['medical_emergency'] },
+          { dataType: 'emergency_contacts', accessLevel: 'full', conditions: [] }
         ],
         emergencyAuthMethods: [
-          { type: 'emergency_code', enabled: false },
-          { type: 'trusted_contact', enabled: true }
+          { method: 'emergency_code', enabled: false, fallback: true },
+          { method: 'trusted_contact', enabled: true, fallback: false }
         ],
         emergencyNotifications: [
-          { type: 'email', enabled: true },
-          { type: 'sms', enabled: true }
+          { type: 'email', recipients: ['admin@3mpwrapp.com'], message: 'Emergency access granted' },
+          { type: 'sms', recipients: ['+1234567890'], message: 'Emergency access alert' }
         ],
         recoveryMethods: [
-          { type: 'security_questions', enabled: false },
-          { type: 'trusted_device', enabled: true },
-          { type: 'emergency_contact', enabled: true }
+          { method: 'security_questions', enabled: false, secure: true },
+          { method: 'trusted_device', enabled: true, secure: true },
+          { method: 'emergency_contact', enabled: true, secure: false }
         ]
       },
       culturalSecurity: {
-        culturalProtocolsEnabled: !!settings.ceremonialConsiderations,
         sacredDataProtection: {
           enabled: true,
+          protocols: ['traditional_protocols', 'respect_guidelines'],
+          restrictions: ['ceremony_time_only', 'elder_present'],
           accessRestrictions: ['ceremony_appropriate', 'elder_consultation'],
           specialHandling: true
         },
         elderAccessRights: {
+          fullAccess: false,
+          restrictions: ['data_sensitivity_respected'],
+          respectProtocols: true,
+          specialPrivileges: ['advisor_status', 'protocol_guidance'],
           enabled: settings.elderConsultation,
-          accessLevel: 'advisory',
-          respectProtocols: true
+          accessLevel: 'advisory'
         },
         ceremonyPrivacy: {
           enabled: true,
-          participantConsent: true,
-          recordingRestrictions: true
+          restrictAccess: true,
+          allowedUsers: ['community_members'],
+          recordingRestrictions: ['no_recording_without_consent'],
+          timeRestrictions: false,
+          privacyLevel: 'high',
+          participantConsent: true
         },
         traditionalKnowledgeProtection: {
           enabled: true,
           shareRestrictions: ['community_approval_required'],
+          accessRequirements: ['cultural_competency', 'respect_protocols'],
           attributionRequired: true
         },
         communityConsent: {
           required: true,
+          minimumConsent: 75,
+          elderApproval: true,
           collectiveDecisionMaking: true,
           consensusThreshold: 0.75
         },
@@ -329,49 +338,50 @@ export default function AdvancedSecurityOptions() {
         ],
         indigenousDataSovereignty: {
           enabled: true,
+          dataOwnership: 'community_controlled',
+          governanceRules: ['OCAP_principles', 'traditional_protocols'],
           communityOwnership: true,
           culturalProtocolCompliance: true
         }
       },
-      accessibilityConsiderations: {
+      accessibilitySecurity: {
         accessibleAuthentication: {
-          alternativeMethodsEnabled: true,
-          cognitiveSupport: true,
-          assistiveTechCompatible: true
+          voiceRecognition: true,
+          gestureAuth: true,
+          assistiveDeviceSupport: true
         },
         assistiveTechnologySupport: {
-          screenReaderOptimized: true,
-          voiceControlEnabled: true,
-          switchControlEnabled: true
+          screenReader: true,
+          voiceControl: true,
+          switchControl: true
         },
         cognitiveAccessibilityFeatures: [
-          { feature: 'simplified_interface', enabled: true },
-          { feature: 'memory_aids', enabled: true },
-          { feature: 'extra_time', enabled: true }
+          { name: 'simplified_interface', enabled: true, settings: {} },
+          { name: 'memory_aids', enabled: true, settings: {} },
+          { name: 'extra_time', enabled: true, settings: {} }
         ],
         visualAccessibilityFeatures: [
-          { feature: 'high_contrast', enabled: true },
-          { feature: 'large_text', enabled: true },
-          { feature: 'color_blind_support', enabled: true }
+          { name: 'high_contrast', enabled: true, settings: {} },
+          { name: 'large_text', enabled: true, settings: {} },
+          { name: 'color_blind_support', enabled: true, settings: {} }
         ],
         auditoryAccessibilityFeatures: [
-          { feature: 'visual_alerts', enabled: true },
-          { feature: 'captions', enabled: true },
-          { feature: 'sound_alternatives', enabled: true }
+          { name: 'visual_alerts', enabled: true, settings: {} },
+          { name: 'captions', enabled: true, settings: {} },
+          { name: 'sound_alternatives', enabled: true, settings: {} }
         ],
         motorAccessibilityFeatures: [
-          { feature: 'switch_control', enabled: true },
-          { feature: 'voice_input', enabled: true },
-          { feature: 'gesture_alternatives', enabled: true }
+          { name: 'switch_control', enabled: true, settings: {} },
+          { name: 'voice_input', enabled: true, settings: {} },
+          { name: 'gesture_alternatives', enabled: true, settings: {} }
         ],
         alternativeAuthMethods: [
-          { method: 'voice_pattern', enabled: false },
-          { method: 'gesture_sequence', enabled: false },
-          { method: 'accessibility_code', enabled: true }
+          { method: 'voice_pattern', enabled: false, accessibilityCompliant: true },
+          { method: 'gesture_sequence', enabled: false, accessibilityCompliant: true },
+          { method: 'accessibility_code', enabled: true, accessibilityCompliant: true }
         ]
       },
-      lastUpdated: new Date(),
-      version: '1.0.0'
+      lastUpdated: new Date()
     };
 
     // Save the default configuration
@@ -394,19 +404,20 @@ export default function AdvancedSecurityOptions() {
           type: 'unauthorized_access',
           severity: 'medium',
           description: 'Multiple failed login attempts detected from unknown device',
-          detectedAt: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago
-          source: 'Authentication Monitor',
-          affectedSystems: ['authentication'],
+          timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
+          detectedAt: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), // 2 hours ago
+          resolved: false,
           mitigationSteps: [
             { step: 'Temporary account lockout applied', completed: true },
             { step: 'User notification sent', completed: true },
             { step: 'Security review scheduled', completed: false }
           ],
-          status: 'investigating',
           accessibilityImpact: {
-            affected: false,
+            impact: 'low',
+            affectedUsers: [],
+            mitigations: ['alternative_login_methods'],
             alternativesProvided: true,
-            assistiveTechCompatible: true
+            affected: false
           }
         }
       ];
@@ -415,17 +426,17 @@ export default function AdvancedSecurityOptions() {
       const mockAudits: SecurityAudit[] = [
         {
           id: 'audit_1',
+          date: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
+          auditor: 'System Audit',
           type: 'automated',
-          scope: ['authentication', 'encryption', 'access_control'],
-          startDate: new Date(Date.now() - 24 * 60 * 60 * 1000), // Yesterday
-          endDate: new Date(Date.now() - 23 * 60 * 60 * 1000),
+          status: 'completed',
           findings: [
             {
               id: 'finding_1',
               type: 'configuration',
               severity: 'low',
               description: 'Session timeout could be reduced for enhanced security',
-              recommendation: 'Consider reducing session timeout from 30 to 15 minutes'
+              remediation: 'Consider reducing session timeout from 30 to 15 minutes'
             }
           ],
           recommendations: [
@@ -433,33 +444,33 @@ export default function AdvancedSecurityOptions() {
               id: 'rec_1',
               priority: 'medium',
               description: 'Enable multi-factor authentication',
-              implementationEffort: 'low',
-              culturalConsiderations: 'Ensure MFA methods are culturally appropriate'
+              recommendation: 'Implement culturally appropriate MFA methods',
+              timeline: '2 weeks'
             }
           ],
           compliance: [
             {
               standard: 'PIPEDA',
               status: 'compliant',
-              score: 95
+              score: 95,
+              compliant: true
             }
           ],
           culturalCompliance: culturalProtocols.ceremonialConsiderations ? [
             {
               protocol: 'Sacred Data Protection',
-              status: 'compliant',
-              notes: 'All cultural protocols properly implemented'
+              compliant: true,
+              status: 'compliant'
             }
           ] : undefined,
           accessibilityCompliance: [
             {
               guideline: 'WCAG_2.1_AA',
-              status: 'compliant',
-              score: 92,
-              areas: ['authentication', 'data_access', 'emergency_procedures']
+              level: 'AA',
+              compliant: true,
+              status: 'compliant'
             }
-          ],
-          status: 'completed'
+          ]
         }
       ];
 

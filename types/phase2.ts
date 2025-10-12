@@ -454,7 +454,7 @@ export interface TrustedDevice {
 
 export interface AuthenticationEvent {
   id: string;
-  timestamp: Date;
+  timestamp: string;
   method: string;
   success: boolean;
   location?: string;
@@ -490,6 +490,7 @@ export interface LocationTrackingConfig {
 export interface CulturalDataProtection {
   sacredDataProtection: boolean;
   elderAccess: boolean;
+  elderApprovalRequired: boolean;
   communityConsent: boolean;
   communityConsentRequired: boolean;
 }
@@ -498,6 +499,7 @@ export interface SensitiveDataHandling {
   encryption: boolean;
   anonymization: boolean;
   accessLogging: boolean;
+  purposeLimitation: boolean;
   extraProtection: boolean;
 }
 
@@ -572,12 +574,13 @@ export interface EmergencyOverrideConfig {
   enabled: boolean;
   contacts: string[];
   autoActivation: boolean;
+  auditRequired: boolean;
   requiresJustification: boolean;
 }
 
 export interface AccessReview {
   id: string;
-  reviewDate: Date;
+  reviewDate: string;
   approver: string;
   status: 'approved' | 'denied' | 'pending';
 }
@@ -654,6 +657,7 @@ export interface SacredDataProtection {
 export interface ElderAccessRights {
   fullAccess: boolean;
   restrictions: string[];
+  respectProtocols: boolean;
   specialPrivileges: string[];
   enabled: boolean;
   accessLevel: string;
@@ -662,6 +666,7 @@ export interface ElderAccessRights {
 export interface CeremonyPrivacyConfig {
   restrictAccess: boolean;
   allowedUsers: string[];
+  recordingRestrictions: string[];
   timeRestrictions: boolean;
   enabled: boolean;
   privacyLevel: string;
@@ -747,8 +752,8 @@ export interface SecurityThreat {
   type: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   description: string;
-  timestamp: Date;
-  detectedAt: Date;
+  timestamp: string;
+  detectedAt: string;
   resolved: boolean;
   mitigationSteps: ThreatMitigationStep[];
   culturalImpact?: ThreatCulturalImpactAssessment;
@@ -771,13 +776,14 @@ export interface ThreatAccessibilityImpactAssessment {
   impact: 'low' | 'medium' | 'high';
   affectedUsers: string[];
   mitigations: string[];
+  alternativesProvided: boolean;
   affected: boolean;
 }
 
 // Security Audit Types
 export interface SecurityAudit {
   id: string;
-  date: Date;
+  date: string;
   auditor: string;
   type: string;
   status: 'passed' | 'failed' | 'warning' | 'completed';
@@ -798,6 +804,7 @@ export interface AuditSecurityFinding {
 
 export interface AuditSecurityRecommendation {
   priority: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
   recommendation: string;
   timeline: string;
   id: string;
@@ -805,6 +812,7 @@ export interface AuditSecurityRecommendation {
 
 export interface AuditComplianceResult {
   standard: string;
+  score: number;
   compliant: boolean;
   issues?: string[];
   status: string;
@@ -819,9 +827,133 @@ export interface AuditCulturalComplianceResult {
 
 export interface AuditAccessibilityComplianceResult {
   guideline: string;
+  level: string;
   compliant: boolean;
   issues?: string[];
   status: string;
+}
+
+// Missing workflow interfaces needed by LegalWorkflowEngine.tsx
+export interface DocumentRequirement {
+  id: string;
+  type: string;
+  required: boolean;
+  description: string;
+}
+
+export interface LegalStandard {
+  id: string;
+  name: string;
+  requirements: string[];
+  jurisdiction: string;
+}
+
+export interface WorkflowTrigger {
+  id: string;
+  type: string;
+  condition: string;
+  enabled: boolean;
+}
+
+export interface WorkflowCondition {
+  id: string;
+  type: string;
+  expression: string;
+  description: string;
+}
+
+export interface WorkflowOutcome {
+  id: string;
+  type: string;
+  result: string;
+  success: boolean;
+}
+
+export interface StepValidation {
+  id: string;
+  rule: string;
+  message: string;
+  required: boolean;
+}
+
+export interface DocumentAction {
+  id: string;
+  type: string;
+  target: string;
+  parameters: Record<string, any>;
+}
+
+export interface NotificationAction {
+  id: string;
+  type: string;
+  recipients: string[];
+  message: string;
+  channel: string;
+}
+
+export interface AutomationRule {
+  id: string;
+  name: string;
+  trigger: string;
+  conditions: string[];
+  actions: string[];
+  enabled: boolean;
+}
+
+export interface CulturalProtocol {
+  id: string;
+  name: string;
+  requirements: string[];
+  guidelines: string;
+  respectMeasures: string[];
+}
+
+export interface LegalWorkflow {
+  id: string;
+  name: string;
+  description: string;
+  steps: WorkflowStep[];
+  triggers: WorkflowTrigger[];
+  culturalProtocols: CulturalProtocol[];
+}
+
+export interface WorkflowExecution {
+  id: string;
+  workflowId: string;
+  status: 'pending' | 'running' | 'completed' | 'failed';
+  currentStep: string;
+  startTime: string;
+  endTime?: string;
+  metadata: ExecutionMetadata;
+}
+
+export interface AccessibilitySupport {
+  screenReader: boolean;
+  highContrast: boolean;
+  largeText: boolean;
+  keyboardNavigation: boolean;
+  voiceControl: boolean;
+}
+
+export interface CulturalStepProtocol {
+  id: string;
+  protocolType: string;
+  requirements: string[];
+  respectGuidelines: string;
+}
+
+export interface AccessibilityStepProtocol {
+  id: string;
+  accessibilityFeatures: string[];
+  alternativeFormats: string[];
+  assistiveTechSupport: boolean;
+}
+
+export interface WorkflowAnalytics {
+  executionTime: number;
+  stepCount: number;
+  successRate: number;
+  commonErrors: string[];
 }
 
 // Workflow Engine Types
@@ -888,7 +1020,10 @@ export interface SecurityConfig {
     biometricEnabled: boolean;
     multiFactorEnabled: boolean;
     pinEnabled: boolean;
+    pinLength: number;
     sessionTimeout: number;
+    maxFailedAttempts: number;
+    lockoutDuration: number;
     deviceBinding: boolean;
     biometricTypes: string[];
     culturalAuthentication?: CulturalAuthenticationMethod[];
@@ -976,11 +1111,6 @@ export interface WorkflowTemplate {
   steps: WorkflowStep[];
 }
 
-export interface AccessibilityConfig {
-  enabled: boolean;
-  features: string[];
-}
-
 export interface WorkflowAnalytics {
   executionCount: number;
   successRate: number;
@@ -1037,7 +1167,7 @@ export interface NotificationAction {
 
 export interface DeadlineAction {
   id: string;
-  date: Date;
+  date: string;
   reminder: boolean;
 }
 
@@ -1084,7 +1214,7 @@ export interface RetryConfig {
 export interface FailedStep {
   stepId: string;
   error: string;
-  timestamp: Date;
+  timestamp: string;
 }
 
 export interface ExecutionData {
@@ -1094,8 +1224,8 @@ export interface ExecutionData {
 
 export interface ExecutionMetadata {
   executionId: string;
-  startTime: Date;
-  endTime?: Date;
+  startTime: string;
+  endTime?: string;
 }
 
 export interface ExecutionAnalytics {
@@ -1113,7 +1243,7 @@ export interface AppliedCulturalProtocol {
 export interface UserInteraction {
   stepId: string;
   action: string;
-  timestamp: Date;
+  timestamp: string;
 }
 
 export interface ExecutionError {
@@ -1322,5 +1452,5 @@ export interface LegalResource {
 export interface LegalUpdate {
   id: string;
   update: string;
-  date: Date;
+  date: string;
 }

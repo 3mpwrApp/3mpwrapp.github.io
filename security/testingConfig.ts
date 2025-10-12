@@ -62,7 +62,7 @@ export const owaspDependencyConfig = {
   cli: {
     command: 'dependency-check',
     args: [
-      '--project', 'EmpowrApp',
+      '--project', '3mpwrApp',
       '--scan', './package.json',
       '--scan', './node_modules',
       '--format', 'ALL',
@@ -114,7 +114,7 @@ export const sonarqubeConfig = {
   // Project configuration
   project: {
     key: 'empowrapp',
-    name: 'EmpowrApp',
+    name: '3mpwrApp',
     version: '1.0.0',
     sources: './app,./components,./services,./utils',
     exclusions: [
@@ -364,7 +364,7 @@ export const testingScripts = {
 
     # 1. Dependency vulnerability scan
     echo "Running dependency check..."
-    ./dependency-check/bin/dependency-check.sh --project EmpowrApp --scan package.json --format ALL --out ./security-reports/dependency-check
+    ./dependency-check/bin/dependency-check.sh --project 3mpwrApp --scan package.json --format ALL --out ./security-reports/dependency-check
 
     # 2. Node.js security audit
     echo "Running npm audit..."

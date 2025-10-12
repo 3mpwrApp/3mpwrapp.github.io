@@ -7,7 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔒 EmpowrApp Security Validation\n');
+console.log('🔒 3mpwrApp Security Validation\n');
 
 // Security validation results
 const results = {

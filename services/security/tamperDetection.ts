@@ -304,7 +304,7 @@ export class TamperDetector {
       // For now, perform basic checks
       
       // Check if running in expected environment
-      const expectedUserAgent = /EmpowrApp/;
+      const expectedUserAgent = /3mpwrApp/;
       if (typeof navigator !== 'undefined' && !expectedUserAgent.test(navigator.userAgent) && !__DEV__) {
         this.updateCheck(checkId, false, 'Unexpected user agent');
         return {

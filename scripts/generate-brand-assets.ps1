@@ -1,9 +1,18 @@
 Param(
-  [string]$InputPath = "..\..\3mpwr App social media graphics\empowrapp-logo.png"
+  [string]$InputPath = "..\..\3mpwrApp social media graphics\3mpwrApp-logo.png"
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+# Brand asset generation constants
+$ICON_SIZE = 1024
+$ICON_PADDING = 60          # Padding for main app icon
+$FAVICON_SIZE = 48
+$FAVICON_PADDING = 2        # Minimal padding for favicon
+$ADAPTIVE_SIZE = 1024
+$ADAPTIVE_PADDING = 100     # Padding for Android adaptive icon
+$CROP_TOP_PERCENT = 0.72    # Crop to top 72% for logo symbol
 
 function New-Canvas {
   Param(
@@ -80,7 +89,12 @@ function Save-Png {
   $Image.Save($Path, [System.Drawing.Imaging.ImageFormat]::Png)
 }
 
-Add-Type -AssemblyName System.Drawing
+# Load System.Drawing assembly with error handling
+try {
+  Add-Type -AssemblyName System.Drawing
+} catch {
+  throw "Failed to load System.Drawing assembly. Ensure .NET Framework is installed."
+}
 
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
 $assetsDir = Join-Path $repoRoot 'assets/images'
@@ -98,22 +112,28 @@ if (!(Test-Path $InputPath)) {
 
 $src = [System.Drawing.Image]::FromFile((Resolve-Path $InputPath))
 
-# 1) App icon (brand-logo.png) 1024x1024, white background
-$icon = New-Canvas -Width 1024 -Height 1024 -BgColor ([System.Drawing.Color]::White)
-Draw-Contain -Canvas $icon -Source $src -Padding 60
+# Validate source image dimensions
+if ($src.Width -lt 512 -or $src.Height -lt 512) {
+  $src.Dispose()
+  throw "Source image must be at least 512x512 pixels. Current size: $($src.Width)x$($src.Height)"
+}
+
+# 1) App icon (brand-logo.png) - main 3mpwrApp icon with white background
+$icon = New-Canvas -Width $ICON_SIZE -Height $ICON_SIZE -BgColor ([System.Drawing.Color]::White)
+Draw-Contain -Canvas $icon -Source $src -Padding $ICON_PADDING
 Save-Png -Image $icon -Path (Join-Path $assetsDir 'brand-logo.png')
 $icon.Dispose()
 
-# 2) Favicon 48x48, white background
-$fav = New-Canvas -Width 48 -Height 48 -BgColor ([System.Drawing.Color]::White)
-Draw-Contain -Canvas $fav -Source $src -Padding 2
+# 2) Favicon - compact 3mpwrApp icon with white background
+$fav = New-Canvas -Width $FAVICON_SIZE -Height $FAVICON_SIZE -BgColor ([System.Drawing.Color]::White)
+Draw-Contain -Canvas $fav -Source $src -Padding $FAVICON_PADDING
 Save-Png -Image $fav -Path (Join-Path $assetsDir 'favicon.png')
 $fav.Dispose()
 
-# 3) Android adaptive foreground: transparent canvas, symbol only (crop top ~72%), centered within 1024
-$cropped = Crop-TopPortion -Source $src -TopPercent 0.72
-$adaptive = New-Canvas -Width 1024 -Height 1024 -BgColor $null
-Draw-Contain -Canvas $adaptive -Source $cropped -Padding 100
+# 3) Android adaptive foreground: transparent canvas, 3mpwrApp symbol only (crop top for logo mark)
+$cropped = Crop-TopPortion -Source $src -TopPercent $CROP_TOP_PERCENT
+$adaptive = New-Canvas -Width $ADAPTIVE_SIZE -Height $ADAPTIVE_SIZE -BgColor $null
+Draw-Contain -Canvas $adaptive -Source $cropped -Padding $ADAPTIVE_PADDING
 Save-Png -Image $adaptive -Path (Join-Path $assetsDir 'brand-adaptive.png')
 $adaptive.Dispose()
 $cropped.Dispose()

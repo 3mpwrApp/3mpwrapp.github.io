@@ -76,6 +76,21 @@ interface IndigenousLanguageContextType {
   enableNationProfile: (nation: string) => Promise<void>;
   getLandAcknowledgment: () => string;
   isLoaded: boolean;
+  
+  // Additional properties needed by indigenous-language.tsx
+  selectedLanguage: string;
+  setSelectedLanguage: (language: string) => void;
+  enableSyllabics: boolean;
+  setEnableSyllabics: (enable: boolean) => void;
+  culturalProtocols: boolean;
+  setCulturalProtocols: (enable: boolean) => void;
+  territorialAcknowledgment: boolean;
+  setTerritorialAcknowledgment: (enable: boolean) => void;
+  availableLanguages: Array<{
+    code: string;
+    name: string;
+    nativeName: string;
+  }>;
 }
 
 const IndigenousLanguageContext = createContext<IndigenousLanguageContextType | null>(null);
@@ -189,6 +204,40 @@ export const territorialAcknowledgments = {
 export function IndigenousLanguageProvider({ children }: { children: React.ReactNode }) {
   const [settings, setSettings] = useState<IndigenousLanguageSupport>(defaultSettings);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  // Additional state for the properties needed by indigenous-language.tsx
+  const [selectedLanguage, setSelectedLanguageState] = useState(settings.primaryLanguage);
+  const [enableSyllabics, setEnableSyllabicsState] = useState(settings.syllabicsEnabled);
+  const [culturalProtocols, setCulturalProtocolsState] = useState(settings.ceremonialConsiderations);
+  const [territorialAcknowledgment, setTerritorialAcknowledgmentState] = useState(settings.enableLandAcknowledgment);
+
+  // Wrapper functions to match expected interface
+  const setSelectedLanguage = (language: string) => {
+    setSelectedLanguageState(language as any);
+  };
+
+  const setEnableSyllabics = (enable: boolean) => {
+    setEnableSyllabicsState(enable);
+  };
+
+  const setCulturalProtocols = (enable: boolean) => {
+    setCulturalProtocolsState(enable);
+  };
+
+  const setTerritorialAcknowledgment = (enable: boolean) => {
+    setTerritorialAcknowledgmentState(enable);
+  };
+
+  const availableLanguages = [
+    { code: 'en', name: 'English', nativeName: 'English' },
+    { code: 'fr', name: 'French', nativeName: 'Français' },
+    { code: 'cree', name: 'Cree', nativeName: 'ᓀᐦᐃᔭᐍᐏᐣ' },
+    { code: 'ojibwe', name: 'Ojibwe', nativeName: 'ᐊᓂᔑᓈᐯᒧᐎᓐ' },
+    { code: 'inuktitut', name: 'Inuktitut', nativeName: 'ᐃᓄᒃᑎᑐᑦ' },
+    { code: 'mikmaq', name: "Mi'kmaq", nativeName: "Mi'kmaq" },
+    { code: 'mohawk', name: 'Mohawk', nativeName: 'Kanienʼkehá꞉ka' },
+    { code: 'dene', name: 'Dene', nativeName: 'Dené' },
+  ];
 
   useEffect(() => {
     loadSettings();
@@ -376,6 +425,15 @@ export function IndigenousLanguageProvider({ children }: { children: React.React
         enableNationProfile,
         getLandAcknowledgment,
         isLoaded,
+        selectedLanguage,
+        setSelectedLanguage,
+        enableSyllabics,
+        setEnableSyllabics,
+        culturalProtocols,
+        setCulturalProtocols,
+        territorialAcknowledgment,
+        setTerritorialAcknowledgment,
+        availableLanguages,
       }}
     >
       {children}

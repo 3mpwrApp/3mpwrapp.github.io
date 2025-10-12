@@ -121,7 +121,7 @@ export default function ComprehensiveDisclaimer({ type, style, compact = false }
   const { icon, title, text } = getDisclaimerContent();
 
   return (
-    <View style={[styles.container, style]} accessibilityRole="complementary">
+    <View style={[styles.container, style]} accessibilityRole="none">
       <View style={styles.header}>
         <Text style={styles.icon}>{icon}</Text>
         <Text style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>

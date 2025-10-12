@@ -13,6 +13,22 @@ import { useAuth } from '../context/AuthContext';
 import { useIndigenousLanguage } from '../context/IndigenousLanguageContext';
 import { useThemeColor } from '../hooks/useThemeColor';
 import { useTranslation } from '../i18n';
+import type {
+    AccessibilityConfig,
+    AccessibilitySupport,
+    AlternativePath,
+    CulturalStepProtocol,
+    DeadlineAction,
+    DocumentAction,
+    AutomationRule as ImportedAutomationRule,
+    CulturalProtocol as ImportedCulturalProtocol,
+    LegalWorkflow as ImportedLegalWorkflow,
+    WorkflowExecution as ImportedWorkflowExecution,
+    NotificationAction,
+    StepValidation,
+    WorkflowAnalytics,
+    WorkflowTemplate
+} from '../types/phase2';
 
 import A11yPressable from './A11yPressable';
 import { A11yTitle, A11yWrapper } from './A11yWrapper';
@@ -22,35 +38,13 @@ interface _WorkflowEngine {
   id: string;
   name: string;
   version: string;
-  workflows: LegalWorkflow[];
-  activeProcesses: WorkflowExecution[];
+  workflows: ImportedLegalWorkflow[];
+  activeProcesses: ImportedWorkflowExecution[];
   templates: WorkflowTemplate[];
-  automationRules: AutomationRule[];
-  culturalProtocols: CulturalProtocol[];
+  automationRules: ImportedAutomationRule[];
+  culturalProtocols: ImportedCulturalProtocol[];
   accessibility: AccessibilityConfig;
   analytics: WorkflowAnalytics;
-}
-
-interface LegalWorkflow {
-  id: string;
-  name: string;
-  description: string;
-  type: WorkflowType;
-  jurisdiction: string[];
-  complexity: 'simple' | 'moderate' | 'complex' | 'expert_required';
-  estimatedDuration: number; // days
-  successRate: number; // percentage
-  steps: WorkflowStep[];
-  automationLevel: 'manual' | 'semi_automated' | 'fully_automated';
-  requiredDocuments: DocumentRequirement[];
-  legalStandards: LegalStandard[];
-  triggers: WorkflowTrigger[];
-  conditions: WorkflowCondition[];
-  outcomes: WorkflowOutcome[];
-  culturalConsiderations: string[];
-  accessibilityFeatures: string[];
-  lastUpdated: Date;
-  isActive: boolean;
 }
 
 interface WorkflowStep {
@@ -79,33 +73,13 @@ interface StepAction {
   description: string;
   isAutomated: boolean;
   automationScript?: string;
-  userInput?: UserInputSpec[];
-  validation?: ValidationRule[];
-  errorHandling: ErrorHandling;
-  retryLogic?: RetryConfig;
+  userInput?: Record<string, any>[];
+  validation?: Record<string, any>[];
+  errorHandling: Record<string, any>;
+  retryLogic?: Record<string, any>;
   timeoutSeconds: number;
   successCriteria: string[];
   failureCriteria: string[];
-}
-
-interface WorkflowExecution {
-  id: string;
-  workflowId: string;
-  userId: string;
-  status: ExecutionStatus;
-  startDate: Date;
-  expectedCompletionDate: Date;
-  actualCompletionDate?: Date;
-  currentStepId: string;
-  currentStepStatus: StepStatus;
-  completedSteps: ExecutedStep[];
-  pendingSteps: string[];
-  failedSteps: FailedStep[];
-  data: ExecutionData;
-  metadata: ExecutionMetadata;
-  analytics: ExecutionAnalytics;
-  culturalProtocols: AppliedCulturalProtocol[];
-  accessibilityAccommodations: string[];
 }
 
 interface ExecutedStep {
@@ -115,11 +89,11 @@ interface ExecutedStep {
   status: 'completed' | 'skipped' | 'failed';
   executionData: any;
   automationUsed: boolean;
-  userInteractions: UserInteraction[];
+  userInteractions: Record<string, any>[];
   documentsGenerated: string[];
   notificationsSent: string[];
-  errors?: ExecutionError[];
-  performance: StepPerformance;
+  errors?: Record<string, any>[];
+  performance: Record<string, any>;
 }
 
 interface _DocumentGeneration {
@@ -127,54 +101,23 @@ interface _DocumentGeneration {
   outputFormat: 'pdf' | 'docx' | 'txt' | 'html';
   variables: Record<string, any>;
   culturalAdaptations?: Record<string, any>;
-  accessibilityFeatures: AccessibilityFeature[];
-  generationRules: GenerationRule[];
+  accessibilityFeatures: Record<string, any>[];
+  generationRules: Record<string, any>[];
   reviewRequired: boolean;
-  approval: ApprovalWorkflow;
-}
-
-interface AutomationRule {
-  id: string;
-  name: string;
-  description: string;
-  trigger: AutomationTrigger;
-  conditions: AutomationCondition[];
-  actions: AutomationAction[];
-  isActive: boolean;
-  priority: number;
-  cooldownPeriod?: number; // minutes
-  maxExecutions?: number;
-  executionCount: number;
-  lastExecution?: Date;
-  culturalSafeguards: CulturalSafeguard[];
-  accessibilityChecks: AccessibilityCheck[];
-}
-
-interface CulturalProtocol {
-  id: string;
-  name: string;
-  description: string;
-  applicableLanguages: string[];
-  ceremonies: CeremonialConsideration[];
-  consultationRequirements: ConsultationRequirement[];
-  documentAdaptations: DocumentAdaptation[];
-  timeConsiderations: TimeConsideration[];
-  respectProtocols: RespectProtocol[];
-  elderInvolvement?: ElderInvolvementProtocol;
-  traditionalLaw?: TraditionalLawConsideration[];
+  approval: Record<string, any>;
 }
 
 interface _AILegalAssistant {
   id: string;
   name: string;
-  capabilities: AICapability[];
+  capabilities: Record<string, any>[];
   specializations: string[];
   confidence: number; // 0-1
   languages: string[];
-  culturalCompetency: CulturalCompetency;
-  safeguards: AISafeguard[];
-  auditTrail: AIDecision[];
-  performance: AIPerformance;
+  culturalCompetency: Record<string, any>;
+  safeguards: Record<string, any>[];
+  auditTrail: Record<string, any>[];
+  performance: Record<string, any>;
 }
 
 interface _DocumentReview {
@@ -182,11 +125,11 @@ interface _DocumentReview {
   reviewType: 'automated' | 'human' | 'expert' | 'cultural';
   reviewerId?: string;
   status: 'pending' | 'in_progress' | 'completed' | 'rejected';
-  findings: ReviewFinding[];
-  recommendations: ReviewRecommendation[];
-  culturalReview?: CulturalReview;
-  accessibilityReview?: AccessibilityReview;
-  legalAccuracy: LegalAccuracyReview;
+  findings: Record<string, any>[];
+  recommendations: Record<string, any>[];
+  culturalReview?: Record<string, any>;
+  accessibilityReview?: Record<string, any>;
+  legalAccuracy: Record<string, any>;
   startTime: Date;
   completionTime?: Date;
   isApproved: boolean;
@@ -196,15 +139,15 @@ interface _DocumentReview {
 interface _LegalKnowledgeBase {
   id: string;
   jurisdiction: string;
-  laws: LegalReference[];
-  regulations: RegulationReference[];
-  precedents: PrecedentCase[];
-  procedures: LegalProcedure[];
-  forms: StandardForm[];
-  deadlines: StandardDeadline[];
-  contacts: LegalContact[];
-  resources: LegalResource[];
-  updates: LegalUpdate[];
+  laws: Record<string, any>[];
+  regulations: Record<string, any>[];
+  precedents: Record<string, any>[];
+  procedures: Record<string, any>[];
+  forms: Record<string, any>[];
+  deadlines: Record<string, any>[];
+  contacts: Record<string, any>[];
+  resources: Record<string, any>[];
+  updates: Record<string, any>[];
   lastSyncDate: Date;
 }
 
@@ -271,7 +214,7 @@ export default function LegalWorkflowEngine() {
   const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();
   const { user } = useAuth();
-  const { settings: _settings } = useIndigenousLanguage();
+  const { settings: _settings, selectedLanguage: _selectedLanguage, culturalProtocols } = useIndigenousLanguage();
 
   // Create colors object for compatibility
   const colors = {
@@ -290,10 +233,10 @@ export default function LegalWorkflowEngine() {
   };
 
   const [activeTab, setActiveTab] = useState<'workflows' | 'executions' | 'automation' | 'analytics'>('workflows');
-  const [workflows, setWorkflows] = useState<LegalWorkflow[]>([]);
-  const [executions, setExecutions] = useState<WorkflowExecution[]>([]);
-  const [automationRules, setAutomationRules] = useState<AutomationRule[]>([]);
-  const [_selectedWorkflow, _setSelectedWorkflow] = useState<LegalWorkflow | null>(null);
+  const [workflows, setWorkflows] = useState<any[]>([]);
+  const [executions, setExecutions] = useState<any[]>([]);
+  const [automationRules, setAutomationRules] = useState<any[]>([]);
+  const [_selectedWorkflow, _setSelectedWorkflow] = useState<any | null>(null);
   const [_showExecutionModal, _setShowExecutionModal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -306,7 +249,7 @@ export default function LegalWorkflowEngine() {
       setIsLoading(true);
 
       // Mock workflows with detailed automation
-      const mockWorkflows: LegalWorkflow[] = [
+      const mockWorkflows: any[] = [
         {
           id: 'workflow_1',
           name: 'Canada Disability Benefit Application',
@@ -376,7 +319,7 @@ export default function LegalWorkflowEngine() {
                   description: 'Provide guidance for ineligible applicants'
                 }
               ],
-              culturalProtocols: culturalProtocols.ceremonialConsiderations ? [
+              culturalProtocols: culturalProtocols ? [
                 {
                   type: 'consultation',
                   description: 'Traditional consultation may be offered before proceeding',
@@ -832,7 +775,7 @@ export default function LegalWorkflowEngine() {
       ];
 
       // Mock executions
-      const mockExecutions: WorkflowExecution[] = [
+      const mockExecutions: any[] = [
         {
           id: 'exec_1',
           workflowId: 'workflow_1',
@@ -879,13 +822,13 @@ export default function LegalWorkflowEngine() {
             },
             preferences: {
               communication: 'email',
-              language: selectedLanguage || 'en',
+              language: _selectedLanguage || 'en',
               accessibility: ['large_text', 'high_contrast']
             }
           },
           metadata: {
             initiatedBy: 'user',
-            culturalProtocolsApplied: culturalProtocols.ceremonialConsiderations,
+            culturalProtocolsApplied: culturalProtocols,
             accessibilityMode: true,
             automationLevel: 'semi_automated'
           },
@@ -897,7 +840,7 @@ export default function LegalWorkflowEngine() {
             automationEfficiency: 0.85,
             userSatisfaction: null // not yet collected
           },
-          culturalProtocols: culturalProtocols.ceremonialConsiderations ? [
+          culturalProtocols: culturalProtocols ? [
             {
               protocolId: 'traditional_consultation',
               applied: true,
@@ -914,7 +857,7 @@ export default function LegalWorkflowEngine() {
       ];
 
       // Mock automation rules
-      const mockAutomationRules: AutomationRule[] = [
+      const mockAutomationRules: any[] = [
         {
           id: 'rule_1',
           name: 'Document Deadline Reminder',
@@ -1016,8 +959,8 @@ export default function LegalWorkflowEngine() {
     }
   };
 
-  const startWorkflowExecution = (workflow: LegalWorkflow) => {
-    const _newExecution: Partial<WorkflowExecution> = {
+  const startWorkflowExecution = (workflow: any) => {
+    const _newExecution: any = {
       workflowId: workflow.id,
       userId: user?.uid || 'user',
       status: 'initialized',
@@ -1026,12 +969,12 @@ export default function LegalWorkflowEngine() {
       currentStepId: workflow.steps[0]?.id,
       currentStepStatus: 'pending',
       completedSteps: [],
-      pendingSteps: workflow.steps.map(s => s.id),
+      pendingSteps: workflow.steps.map((s: any) => s.id),
       failedSteps: [],
       data: {},
       metadata: {
         initiatedBy: 'user',
-        culturalProtocolsApplied: culturalProtocols.ceremonialConsiderations,
+        culturalProtocolsApplied: culturalProtocols,
         accessibilityMode: true,
         automationLevel: workflow.automationLevel
       },
@@ -1159,7 +1102,7 @@ export default function LegalWorkflowEngine() {
             <Text style={[styles.stepsTitle, { color: colors.text }]}>
               Process Steps ({workflow.steps.length})
             </Text>
-            {workflow.steps.slice(0, 3).map(step => (
+            {workflow.steps.slice(0, 3).map((step: any) => (
               <View key={step.id} style={styles.stepPreview}>
                 <View style={[styles.stepNumber, { backgroundColor: colors.primary }]}>
                   <Text style={styles.stepNumberText}>{step.stepNumber}</Text>
@@ -1266,7 +1209,7 @@ export default function LegalWorkflowEngine() {
 
             <View style={styles.currentStep}>
               <Text style={[styles.currentStepTitle, { color: colors.text }]}>
-                Current Step: {workflow?.steps.find(s => s.id === execution.currentStepId)?.name}
+                Current Step: {workflow?.steps.find((s: any) => s.id === execution.currentStepId)?.name}
               </Text>
               <Text style={[styles.currentStepStatus, { color: colors.textSecondary }]}>
                 Status: {execution.currentStepStatus.replace('_', ' ')}
@@ -1389,7 +1332,7 @@ export default function LegalWorkflowEngine() {
         Legal Workflow Engine
       </A11yTitle>
 
-      {selectedLanguage && culturalProtocols.ceremonialConsiderations && (
+      {_selectedLanguage && culturalProtocols && (
         <View style={[styles.culturalBanner, { backgroundColor: colors.warning + '10', borderColor: colors.warning }]}>
           <Ionicons name="leaf" size={20} color={colors.warning} />
           <Text style={[styles.culturalBannerText, { color: colors.warning }]}>

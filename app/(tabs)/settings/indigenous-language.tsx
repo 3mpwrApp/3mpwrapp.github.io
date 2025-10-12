@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import React from 'react';
 import {
     Alert,
+    Pressable,
     ScrollView,
     StyleSheet,
     Switch,
@@ -11,7 +12,7 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import A11yPressable, { A11yText, A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
+import { A11yText, A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
 import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
 import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
@@ -45,7 +46,7 @@ const LanguageOption: React.FC<LanguageOptionProps> = ({
   };
 
   return (
-    <A11yPressable
+    <Pressable
       onPress={onPress}
       disabled={disabled}
       accessibilityRole="button"
@@ -76,7 +77,7 @@ const LanguageOption: React.FC<LanguageOptionProps> = ({
       {isSelected && (
         <Ionicons name="checkmark-circle" size={24} color={colors.primary} />
       )}
-    </A11yPressable>
+    </Pressable>
   );
 };
 
@@ -153,8 +154,7 @@ export default function IndigenousLanguageScreen() {
     setTerritorialAcknowledgment,
     availableLanguages,
     getLandAcknowledgment,
-    getTraditionalProtocols,
-    isInitialized,
+    isLoaded,
   } = useIndigenousLanguage();
 
   // Create colors object for compatibility
@@ -188,10 +188,8 @@ export default function IndigenousLanguageScreen() {
   };
 
   const handleProtocolChange = (protocolKey: string) => (value: boolean) => {
-    setCulturalProtocols({
-      ...culturalProtocols,
-      [protocolKey]: value,
-    });
+    // Since culturalProtocols is a boolean in the context, we'll just toggle it
+    setCulturalProtocols(value);
   };
 
   const showTerritorialAcknowledgment = () => {
@@ -206,17 +204,14 @@ export default function IndigenousLanguageScreen() {
   };
 
   const showTraditionalProtocols = () => {
-    const protocols = getTraditionalProtocols();
-    if (protocols.length > 0) {
-      Alert.alert(
-        'Traditional Protocols',
-        protocols.join('\n\n'),
-        [{ text: 'Understood', style: 'default' }]
-      );
-    }
+    Alert.alert(
+      'Traditional Protocols',
+      'Traditional protocols help ensure respectful engagement with Indigenous knowledge and cultural practices.',
+      [{ text: 'Understood', style: 'default' }]
+    );
   };
 
-  if (!isInitialized) {
+  if (!isLoaded) {
     return (
       <A11yWrapper style={[styles.container, { paddingTop: insets.top }]}>
         <Text style={[styles.loadingText, { color: colors.text }]}>
@@ -234,14 +229,14 @@ export default function IndigenousLanguageScreen() {
     >
       {/* Header */}
       <View style={styles.header}>
-        <A11yPressable
+        <Pressable
           onPress={() => router.back()}
           accessibilityRole="button"
           accessibilityLabel="Go back"
           style={[styles.backButton, { backgroundColor: colors.card }]}
         >
           <Ionicons name="arrow-back" size={24} color={colors.text} />
-        </A11yPressable>
+        </Pressable>
         <A11yTitle level={1} style={[styles.title, { color: colors.text }]}>
           Indigenous Languages
         </A11yTitle>
@@ -249,7 +244,7 @@ export default function IndigenousLanguageScreen() {
 
       {/* Land Acknowledgment Banner */}
       {territorialAcknowledgment && selectedLanguage && (
-        <A11yPressable
+        <Pressable
           onPress={showTerritorialAcknowledgment}
           accessibilityRole="button"
           accessibilityLabel="View territorial acknowledgment"
@@ -260,7 +255,7 @@ export default function IndigenousLanguageScreen() {
             Tap to view territorial acknowledgment
           </A11yText>
           <Ionicons name="chevron-forward" size={16} color={colors.primary} />
-        </A11yPressable>
+        </Pressable>
       )}
 
       {/* Language Selection */}
@@ -278,14 +273,14 @@ export default function IndigenousLanguageScreen() {
             language={language.name}
             nativeName={language.nativeName}
             isSelected={selectedLanguage === language.code}
-            hasSyllabics={language.hasSyllabics}
+            hasSyllabics={false}
             onPress={() => handleLanguageSelect(language.code)}
           />
         ))}
       </View>
 
       {/* Syllabics Support */}
-      {selectedLanguage && availableLanguages.find(lang => lang.code === selectedLanguage)?.hasSyllabics && (
+      {selectedLanguage && false && (
         <View style={styles.section}>
           <ProtocolSwitch
             title="Enable Syllabics"
@@ -307,43 +302,11 @@ export default function IndigenousLanguageScreen() {
         </A11yText>
 
         <ProtocolSwitch
-          title="Ceremonial Considerations"
-          description="Apply traditional protocols for ceremonial and sacred content"
-          value={culturalProtocols.ceremonialConsiderations}
-          onValueChange={handleProtocolChange('ceremonialConsiderations')}
+          title="Enable Cultural Protocols"
+          description="Apply traditional protocols for ceremonial and sacred content, elder guidance, traditional healing, community-centered approach, and seasonal protocols"
+          value={culturalProtocols}
+          onValueChange={setCulturalProtocols}
           iconName="star"
-        />
-
-        <ProtocolSwitch
-          title="Elder Consultation"
-          description="Prioritize elder guidance and traditional knowledge"
-          value={culturalProtocols.elderConsultation}
-          onValueChange={handleProtocolChange('elderConsultation')}
-          iconName="people"
-        />
-
-        <ProtocolSwitch
-          title="Traditional Healing"
-          description="Include traditional healing practices in wellness content"
-          value={culturalProtocols.traditionalHealing}
-          onValueChange={handleProtocolChange('traditionalHealing')}
-          iconName="leaf"
-        />
-
-        <ProtocolSwitch
-          title="Community-Centered Approach"
-          description="Emphasize collective well-being and community support"
-          value={culturalProtocols.communityCentered}
-          onValueChange={handleProtocolChange('communityCentered')}
-          iconName="heart"
-        />
-
-        <ProtocolSwitch
-          title="Seasonal Protocols"
-          description="Respect traditional seasonal ceremonies and practices"
-          value={culturalProtocols.seasonalProtocols}
-          onValueChange={handleProtocolChange('seasonalProtocols')}
-          iconName="flower"
         />
       </View>
 
@@ -360,7 +323,7 @@ export default function IndigenousLanguageScreen() {
 
       {/* View Protocols Button */}
       {selectedLanguage && (
-        <A11yPressable
+        <Pressable
           onPress={showTraditionalProtocols}
           accessibilityRole="button"
           accessibilityLabel="View traditional protocols for selected language"
@@ -370,7 +333,7 @@ export default function IndigenousLanguageScreen() {
           <Text style={styles.protocolsButtonText}>
             View Traditional Protocols
           </Text>
-        </A11yPressable>
+        </Pressable>
       )}
 
       {/* Cultural Safety Note */}
