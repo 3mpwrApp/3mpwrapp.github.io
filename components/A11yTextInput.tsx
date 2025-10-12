@@ -77,15 +77,6 @@ export default function A11yTextInput({
     }
   }, [error, announceErrors, announceFormError, label]);
   
-  // Build describedBy relationships
-  const _describedByIds = React.useMemo(() => {
-    const ids = [];
-    if (helperTextId) ids.push(helperTextId);
-    if (errorId) ids.push(errorId);
-    if (charCountId) ids.push(charCountId);
-    return ids.length > 0 ? ids.join(' ') : undefined;
-  }, [helperTextId, errorId, charCountId]);
-  
   // Determine keyboard type based on input type
   const keyboardType = React.useMemo(() => {
     switch (inputType) {
