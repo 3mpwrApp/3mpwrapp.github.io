@@ -94,7 +94,7 @@ export default function SettingsScreen() {
             accessibilityLabel={t('settings.cognitiveAccessibility', 'Cognitive Accessibility Settings - Simplified mode, auto-save, and navigation memory for ADHD, autism, and learning disabilities')}
             hitSlop={HIT_SLOP_8}
           >
-            <Ionicons name='brain' size={20} color={palette.primary} />
+            <Ionicons name='bulb-outline' size={20} color={palette.primary} />
             <Text style={styles.linkText}>{t('settings.cognitiveAccessibilityTitle', 'Cognitive Accessibility')}</Text>
             <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
           </A11yPressable>
