@@ -80,10 +80,10 @@ description: A community-powered hub for injured workers and persons with disabi
 
 ## Get Involved
 
-Ready to join the movement? Here’s how you can get started:
+Ready to join the movement? Here's how you can get started:
 
 - <a href="{{ '/beta' | relative_url }}">Become a Beta Tester</a> – Help shape the future of 3mpowr by testing new features
-- <a href="{{ '/user-guide' | relative_url }}">Read Our User Guide</a> – Learn how to make the most of the app
+- <a href="{{ '/user-guide' | relative_url }}"><strong>📖 Read Our Complete User Guide</strong></a> – **NEW Phase 2!** Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more ([Download PDF](/assets/downloads/3mpwrapp-user-guide-full.pdf))
 - <a href="{{ '/features' | relative_url }}">Explore All Features</a> – Detailed step-by-step guides for every feature
 - <a href="{{ '/newsletter' | relative_url }}">Subscribe to Our Newsletter</a> – Stay updated with the latest news and resources
 - <a href="{{ '/blog' | relative_url }}">Explore Our Blog</a> – Read stories, updates, and important information
