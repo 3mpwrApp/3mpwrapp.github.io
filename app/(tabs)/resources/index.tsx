@@ -16,6 +16,7 @@ import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../../i18n";
 import { fetchResources } from "../../../services/resources";
 import { useCounts } from "../../../store/counts";
+import { useJurisdiction } from "../../../store/jurisdiction";
 import { useNetwork } from "../../../store/network";
 import { useRefresh } from "../../../store/refresh";
 import { useSettings } from "../../../store/settings";
@@ -60,6 +61,8 @@ export default function ResourcesScreen() {
   const [category, setCategory] = React.useState<CategoryFilter>("all");
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
+  const { code: jurisdictionCode, all: allJurisdictions } = useJurisdiction();
+  const [jurisdictionFilter, setJurisdictionFilter] = React.useState<string>("all");
 
   const reload = React.useCallback(async () => {
     try {
@@ -92,10 +95,30 @@ export default function ResourcesScreen() {
   // One-time polite announcement when items first finish loading
   usePostLoadAnnounce({ loading, count: items.length, ns: 'resources' });
 
-  const filtered = React.useMemo(
-    () => filterResources(items, { region, category, query }),
-    [items, region, category, query],
-  );
+  const filtered = React.useMemo(() => {
+    let result = filterResources(items, { region, category, query });
+    
+    // Apply jurisdiction filter
+    if (jurisdictionFilter !== "all") {
+      result = result.filter((r) => {
+        // Canada scope maps to FED jurisdiction
+        if (r.scope === "canada") {
+          return jurisdictionFilter === "FED";
+        }
+        // Province scope maps to province code as jurisdiction
+        if (r.scope === "province" && r.province) {
+          return jurisdictionFilter === r.province;
+        }
+        // Also check explicit jurisdictions field if present
+        if (r.jurisdictions && r.jurisdictions.length > 0) {
+          return r.jurisdictions.includes(jurisdictionFilter);
+        }
+        return false;
+      });
+    }
+    
+    return result;
+  }, [items, region, category, query, jurisdictionFilter]);
 
   const sections = React.useMemo(() => {
     if (region !== "all") {
@@ -434,6 +457,70 @@ export default function ResourcesScreen() {
             </View>
           </A11yPressable>
         ))}
+      </View>
+
+      {/* Jurisdiction Filter */}
+      <Text style={styles.subtitle}>
+        {t("jurisdiction.filter.label", "Filter by jurisdiction")}
+      </Text>
+      <View
+        style={{
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: 8,
+          marginBottom: 8,
+        }}
+      >
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          style={[styles.chip, jurisdictionFilter === "all" && styles.chipActive]}
+          onPress={() => setJurisdictionFilter("all")}
+        >
+          <Text
+            style={[
+              styles.chipText,
+              jurisdictionFilter === "all" && styles.chipTextActive,
+            ]}
+          >
+            {t("jurisdiction.filter.all", "All jurisdictions")}
+          </Text>
+        </A11yPressable>
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          style={[styles.chip, jurisdictionFilter === "FED" && styles.chipActive]}
+          onPress={() => setJurisdictionFilter("FED")}
+        >
+          <Text
+            style={[
+              styles.chipText,
+              jurisdictionFilter === "FED" && styles.chipTextActive,
+            ]}
+          >
+            {t("jurisdiction.filter.canada", "National (Canada)")}
+          </Text>
+        </A11yPressable>
+        {allJurisdictions
+          .filter((j) => j.code !== "FED")
+          .map((j) => (
+            <A11yPressable
+              hitSlop={HIT_SLOP_8}
+              key={j.code}
+              style={[
+                styles.chip,
+                jurisdictionFilter === j.code && styles.chipActive,
+              ]}
+              onPress={() => setJurisdictionFilter(j.code)}
+            >
+              <Text
+                style={[
+                  styles.chipText,
+                  jurisdictionFilter === j.code && styles.chipTextActive,
+                ]}
+              >
+                {j.code}
+              </Text>
+            </A11yPressable>
+          ))}
       </View>
 
       <Text style={styles.subtitle}>

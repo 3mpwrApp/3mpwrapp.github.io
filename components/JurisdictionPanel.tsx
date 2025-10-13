@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
+import { useTranslation } from '../i18n';
 import { useJurisdiction } from '../store/jurisdiction';
 import { useAppPalette } from '../theme/usePalette';
 
@@ -9,34 +10,48 @@ export function JurisdictionPanel() {
   const { code, setCode, data, all } = useJurisdiction();
   const palette = useAppPalette();
   const s = styles(palette);
+  const { t, lang } = useTranslation();
+  const isQuebecFrench = code === 'QC' && lang === 'fr';
   return (
-  <View style={s.container} accessibilityLabel={`Jurisdiction context ${data?.name || code}`}>   
+  <View style={s.container} accessibilityLabel={t('jurisdiction.current', `Jurisdiction context ${data?.name || code}`, { name: data?.name || code })}>   
       <View style={s.headerRow}>
-        <Text style={s.header}>Jurisdiction: {data?.name || code}</Text>
+        <Text style={s.header}>{t('jurisdiction.label', 'Jurisdiction')}: {data?.name || code}</Text>
         {/* Simple cycle button for now (future: picker modal) */}
-        <A11yPressable accessibilityRole="button" accessibilityLabel="Change jurisdiction" onPress={() => {
+        <A11yPressable accessibilityRole="button" accessibilityLabel={t('jurisdiction.change', 'Change jurisdiction')} onPress={() => {
           const idx = all.findIndex(j => j.code === code);
           const next = all[(idx + 1) % all.length].code;
             setCode(next);
         }} style={s.changeBtn}>
-          <Text style={s.changeBtnText}>Change</Text>
+          <Text style={s.changeBtnText}>{t('jurisdiction.change', 'Change')}</Text>
         </A11yPressable>
       </View>
       {data?.evidenceFocus?.length ? (
         <View style={s.block}>
-          <Text style={s.blockTitle}>Evidence Focus</Text>
+          <Text style={s.blockTitle}>
+            {isQuebecFrench 
+              ? t('jurisdiction.qc.evidenceFocus', 'Preuves essentielles')
+              : t('jurisdiction.evidenceFocus', 'Evidence Focus')}
+          </Text>
           {data.evidenceFocus.map(item => <Text key={item} style={s.item}>• {item}</Text>)}
         </View>
       ) : null}
       {data?.accommodationGuidance?.length ? (
         <View style={s.block}>
-          <Text style={s.blockTitle}>Accommodation Principles</Text>
+          <Text style={s.blockTitle}>
+            {isQuebecFrench
+              ? t('jurisdiction.qc.accommodationGuidance', 'Principes d\'accommodement')
+              : t('jurisdiction.accommodationGuidance', 'Accommodation Principles')}
+          </Text>
           {data.accommodationGuidance.map(item => <Text key={item} style={s.item}>• {item}</Text>)}
         </View>
       ) : null}
       {data?.limitationNotes?.length ? (
         <View style={s.block}>
-          <Text style={s.blockTitle}>Limitations / Deadlines</Text>
+          <Text style={s.blockTitle}>
+            {isQuebecFrench
+              ? t('jurisdiction.qc.limitationNotes', 'Délais de prescription')
+              : t('jurisdiction.limitationNotes', 'Limitations / Deadlines')}
+          </Text>
           {data.limitationNotes.map(item => <Text key={item} style={s.item}>• {item}</Text>)}
         </View>
       ) : null}

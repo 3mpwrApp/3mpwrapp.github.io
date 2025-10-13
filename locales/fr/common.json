@@ -2574,5 +2574,113 @@
       "hide": " settings.emergencyWallet.hide",
       "show": " settings.emergencyWallet.show"
     }
+  },
+  "jurisdiction": {
+    "label": "Juridiction",
+    "current": "Juridiction actuelle : {{name}}",
+    "change": "Changer",
+    "cycle": "Appuyez pour parcourir les juridictions",
+    "select": "Sélectionner une juridiction",
+    "evidenceFocus": "Preuve requise",
+    "accommodationGuidance": "Principes d'accommodement",
+    "limitationNotes": "Limitations / Délais",
+    "qc": {
+      "name": "Québec",
+      "workplaceInjury": {
+        "name": "CNESST (Commission des normes, de l'équité, de la santé et de la sécurité du travail)",
+        "initialClaimForm": "Réclamation du travailleur",
+        "notes": "La CNESST administre l'indemnisation des lésions professionnelles. Appel à deux niveaux : Révision administrative, puis TAT.",
+        "appealLevel1": "Révision administrative",
+        "appealLevel1Body": "CNESST - Bureau de révision",
+        "appealLevel1Notes": "Demande de révision administrative auprès de la CNESST dans les 30 jours suivant la décision.",
+        "appealLevel2": "Tribunal administratif du travail (TAT)",
+        "appealLevel2Body": "TAT - Division de la santé et de la sécurité du travail",
+        "appealLevel2Notes": "Contestation devant le TAT dans les 45 jours suivant la décision de révision."
+      },
+      "humanRights": {
+        "name": "Commission des droits de la personne et des droits de la jeunesse (CDPDJ)",
+        "notes": "Dépôt d'une plainte dans les 2 ans suivant le dernier acte ou incident discriminatoire (délai plus long que d'autres provinces)."
+      },
+      "benefitPrograms": {
+        "rqap": {
+          "name": "Régime québécois d'assurance parentale (RQAP)",
+          "subtitle": "Prestations de maternité",
+          "administeringBody": "Conseil de gestion de l'assurance parentale",
+          "description": "Prestations de remplacement du revenu pour congé de maternité et parental au Québec.",
+          "keyForm": "Demande de prestations RQAP",
+          "evidenceTip1": "Certificat médical de grossesse",
+          "evidenceTip2": "Relevés d'emploi",
+          "evidenceTip3": "Preuve de revenus assurables"
+        }
+      },
+      "accommodationGuidance": {
+        "principle1": "Obligation d'accommodement jusqu'à contrainte excessive",
+        "principle2": "Processus de dialogue coopératif",
+        "principle3": "Dignité et respect de la personne"
+      },
+      "evidenceFocus": {
+        "item1": "Restrictions fonctionnelles",
+        "item2": "Rapports médicaux détaillés",
+        "item3": "Limitations au travail",
+        "item4": "Pronostic et durée prévue"
+      },
+      "limitationNotes": {
+        "humanRights": "Plaintes de droits de la personne : 24 mois",
+        "cnesst": "Réclamations CNESST : Dès que possible, idéalement dans les jours suivant l'accident",
+        "review": "Révision administrative : 30 jours",
+        "appeal": "Appel au TAT : 45 jours"
+      }
+    },
+    "forms": {
+      "noJurisdiction": "Veuillez d'abord sélectionner une juridiction.",
+      "selectSituation": "Sélectionnez votre situation :",
+      "workplaceInjury": "Réclamation de lésion professionnelle",
+      "workplaceInjuryDesc": "Dépôt d'une nouvelle réclamation pour lésion ou maladie professionnelle",
+      "disabilityBenefit": "Demande de prestations d'invalidité",
+      "disabilityBenefitDesc": "Demande de soutien du revenu d'invalidité provincial/territorial",
+      "humanRights": "Plainte en droits de la personne",
+      "humanRightsDesc": "Plainte pour discrimination ou harcèlement",
+      "appeal": "Appel d'une décision",
+      "appealDesc": "Contestation d'une décision défavorable",
+      "formName": "Formulaire",
+      "purpose": "Objectif",
+      "required": "Requis",
+      "optional": "Optionnel",
+      "notes": "Notes importantes",
+      "disclaimer": "Avertissement : Ce sont des suggestions générales. Consultez toujours les exigences officielles de votre juridiction et envisagez l'aide d'un avocat.",
+      "noFormsAvailable": "Aucun formulaire disponible pour cette situation dans cette juridiction.",
+      "back": "Retour aux situations",
+      "purposeInitialClaim": "Soumettre à {{body}}",
+      "purposeAppeal": "Soumettre à {{body}}",
+      "notesInitialClaimDeadline": "À soumettre dès que possible après l'incident. Délais : {{notes}}",
+      "notesAppealDeadline": "Délai : {{days}} jours après la décision. {{notes}}",
+      "newEvidence": "Nouvelles preuves médicales",
+      "purposeNewEvidence": "Rapports mis à jour appuyant votre appel",
+      "notesNewEvidence": "Les appels plus solides incluent de nouvelles informations non présentes dans la décision initiale"
+    },
+    "deadline": {
+      "title": "Calculateur de délais",
+      "subtitle": "Calculez les délais d'appel importants",
+      "decisionDateLabel": "Date de la décision",
+      "decisionDatePlaceholder": "Sélectionnez la date de la décision",
+      "calculate": "Calculer les délais",
+      "clear": "Effacer",
+      "noAppealLevels": "Aucun niveau d'appel disponible pour cette juridiction.",
+      "resultsTitle": "Vos délais d'appel",
+      "level": "Niveau",
+      "deadline": "Délai",
+      "daysRemaining": "Jours restants",
+      "urgencyCritical": "Urgent",
+      "urgencyWarning": "Avertissement",
+      "urgencyNormal": "Normal",
+      "disclaimer": "Avertissement : Ce sont des estimations. Vérifiez toujours les délais officiels avec l'organisme compétent."
+    },
+    "filter": {
+      "label": "Filtrer par juridiction",
+      "all": "Toutes les juridictions",
+      "canada": "National (Canada)",
+      "selectPlaceholder": "Choisir...",
+      "noResults": "Aucun résultat pour cette juridiction"
+    }
   }
 }

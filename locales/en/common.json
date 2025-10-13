@@ -2703,6 +2703,67 @@
       "file": "File or update your claim; keep copies of all documents",
       "track": "Track communications (dates, names, summaries) in Evidence Locker"
     }
+  },
+  "jurisdiction": {
+    "label": "Jurisdiction",
+    "current": "Current jurisdiction: {{name}}",
+    "change": "Change",
+    "cycle": "Tap to cycle through jurisdictions",
+    "select": "Select jurisdiction",
+    "evidenceFocus": "Evidence Focus",
+    "accommodationGuidance": "Accommodation Principles",
+    "limitationNotes": "Limitations / Deadlines",
+    "forms": {
+      "noJurisdiction": "Please select a jurisdiction first.",
+      "selectSituation": "Select your situation:",
+      "workplaceInjury": "Workplace Injury Claim",
+      "workplaceInjuryDesc": "Filing a new workplace injury or illness claim",
+      "disabilityBenefit": "Disability Benefit Application",
+      "disabilityBenefitDesc": "Applying for provincial/territorial disability income support",
+      "humanRights": "Human Rights Complaint",
+      "humanRightsDesc": "Filing a discrimination or harassment complaint",
+      "appeal": "Appeal a Decision",
+      "appealDesc": "Challenging an unfavorable decision",
+      "formName": "Form",
+      "purpose": "Purpose",
+      "required": "Required",
+      "optional": "Optional",
+      "notes": "Important Notes",
+      "disclaimer": "Disclaimer: These are general suggestions. Always check official requirements for your jurisdiction and consider legal assistance.",
+      "noFormsAvailable": "No forms available for this situation in this jurisdiction.",
+      "back": "Back to situations",
+      "purposeInitialClaim": "Submit to {{body}}",
+      "purposeAppeal": "Submit to {{body}}",
+      "notesInitialClaimDeadline": "Submit as soon as possible after incident. Deadlines: {{notes}}",
+      "notesAppealDeadline": "Deadline: {{days}} days from decision. {{notes}}",
+      "newEvidence": "New Medical Evidence",
+      "purposeNewEvidence": "Updated reports supporting your appeal",
+      "notesNewEvidence": "Stronger appeals include new information not in original decision"
+    },
+    "deadline": {
+      "title": "Deadline Calculator",
+      "subtitle": "Calculate important appeal deadlines",
+      "decisionDateLabel": "Decision Date",
+      "decisionDatePlaceholder": "Select decision date",
+      "calculate": "Calculate Deadlines",
+      "clear": "Clear",
+      "noAppealLevels": "No appeal levels available for this jurisdiction.",
+      "resultsTitle": "Your Appeal Deadlines",
+      "level": "Level",
+      "deadline": "Deadline",
+      "daysRemaining": "Days Remaining",
+      "urgencyCritical": "Critical",
+      "urgencyWarning": "Warning",
+      "urgencyNormal": "Normal",
+      "disclaimer": "Disclaimer: These are estimates. Always verify official deadlines with the relevant body."
+    },
+    "filter": {
+      "label": "Filter by jurisdiction",
+      "all": "All jurisdictions",
+      "canada": "National (Canada)",
+      "selectPlaceholder": "Choose...",
+      "noResults": "No results for this jurisdiction"
+    }
   }
 }
 
