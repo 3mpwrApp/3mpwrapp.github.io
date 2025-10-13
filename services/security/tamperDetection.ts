@@ -49,7 +49,7 @@ export class TamperDetector {
     // Set up periodic monitoring
     this.monitoringInterval = setInterval(() => {
       this.performAllChecks();
-    }, intervalMs);
+    }, intervalMs) as unknown as NodeJS.Timeout;
 
     console.warn('Tamper detection monitoring started');
   }

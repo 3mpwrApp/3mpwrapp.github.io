@@ -1,5 +1,5 @@
 import React from 'react';
-import type { TextInputProps, ViewStyle } from 'react-native';
+import type { TextInputProps, TextStyle, ViewStyle } from 'react-native';
 import { Text, TextInput, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/a11y';
@@ -27,7 +27,7 @@ type A11yTextInputProps = TextInputProps & {
   /** Container style */
   containerStyle?: ViewStyle;
   /** Label style override */
-  labelStyle?: ViewStyle;
+  labelStyle?: TextStyle;
   /** Enhanced error announcements */
   announceErrors?: boolean;
 };
