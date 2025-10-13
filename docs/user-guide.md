@@ -2161,6 +2161,175 @@ Remember:
 
 ---
 
+## 🗺️ What's Coming Next: Our Roadmap
+
+We're constantly improving 3mpwrApp based on your feedback and the community's needs. Here's what we're working on:
+
+### 🎯 **Coming Very Soon (Next 3-6 Months)**
+
+#### **Enhanced Cognitive Accessibility**
+**Who it helps:** People with ADHD, autism, learning disabilities, memory challenges  
+**What's new:**
+- Simplified mode with fewer choices per screen
+- Enhanced auto-save (saves your work every 30 seconds)
+- "Back to where I was" button to restore your place
+- Visual progress indicators to show where you are
+- Step-by-step guidance for complex tasks
+- Breadcrumb navigation so you never get lost
+
+#### **Dyslexia Support Features**
+**Who it helps:** People with dyslexia and reading challenges  
+**What's new:**
+- OpenDyslexic font option (designed specifically for dyslexia)
+- Adjustable letter and word spacing
+- Colored overlay options to reduce visual stress
+- Text-to-speech for all content
+- Word highlighting as you read
+- Larger paragraph spacing
+
+#### **Motor Disability Enhancements**
+**Who it helps:** People with limited fine motor control, tremors, mobility challenges  
+**What's new:**
+- Dwell-click: Hover over buttons to activate them (no clicking needed)
+- Sticky keys for complex gestures
+- Simplified gestures (no complicated swipes)
+- Voice command support
+- Support for head-tracking devices
+- Custom controller mapping
+
+#### **Stronger Community Safety**
+**Who it helps:** Everyone, especially vulnerable community members  
+**What's new:**
+- Pre-screening for peer supporters
+- Content warnings for potentially triggering topics
+- Safe word system for emergency stops
+- Better detection of concerning behavior
+- Panic button to immediately end conversations
+- Trauma-informed communication features
+- Crisis resource integration
+
+#### **Indigenous Cultural Protections**
+**Who it helps:** Indigenous peoples and communities  
+**What's new:**
+- Sacred data classification and protection
+- Ceremony time-locks (auto-lock app during ceremonies)
+- Community consent for sharing cultural knowledge
+- Elder approval workflows
+- Traditional calendar integration
+- Seasonal protocols and reminders
+
+### 🌟 **Coming Later This Year (6-12 Months)**
+
+#### **Smarter Disability Wizard**
+- Learns your patterns over time (all on your device, totally private)
+- Adapts to your changing needs
+- Integrates with your mood and energy tracking
+- Suggests tools to help you reach your goals
+- Voice-activated "What should I do today?"
+
+#### **Photo-to-Form Technology**
+- Take a photo of a paper form
+- App auto-fills it from your profile
+- Review and correct before submitting
+- Save time and reduce errors
+- Generate filled PDF instantly
+
+#### **Traditional Calendar**
+- Traditional seasons and ceremonies
+- Sacred day observances
+- Seasonal protocol guidance
+- Ceremony reminders
+- Integration with accessibility features
+
+#### **Performance Improvements**
+- Faster loading times
+- Better battery life
+- Works better on older phones
+- More features available offline
+
+### 🚀 **Future Innovations (2026 and Beyond)**
+
+#### **AI Assistant (On Your Device)**
+- Conversational AI that runs on your phone (no internet needed)
+- Answers legal questions in plain language
+- Explains complex documents
+- Guides you through the app
+- Emotional support and encouragement
+- Voice-first design for accessibility
+
+#### **Wellness Integration**
+- Connect your advocacy journey with wellness
+- Track how legal stress affects your health
+- Energy management for advocacy work
+- Celebrate your wins and progress
+- Community wellness challenges
+- Integration with health apps
+
+#### **Family Coordinator Features**
+- Support role for family members and caregivers
+- Shared evidence locker with your consent
+- Task assignment and coordination
+- Communication hub for family
+- Caregiver resources and respite reminders
+
+#### **Virtual Disability Rights Clinic**
+- AI pre-screens your case
+- Connects you to real lawyers (pro bono network)
+- Document review service
+- Practice for hearings
+- Legal knowledge base
+
+#### **Accessibility Hardware Support**
+- Switch control support
+- Eye-tracking integration
+- Custom controller mapping
+- Support for brain-computer interfaces (future)
+- Directory of assistive technology
+
+### 💡 **How We Decide What to Build**
+
+**We listen to you!** Here's how we prioritize:
+1. **Safety First** - Features that protect vulnerable users
+2. **Accessibility Gaps** - Barriers that exclude people
+3. **Most Requested** - What the community asks for most
+4. **Cultural Respect** - Indigenous protocols and sovereignty
+5. **Legal Impact** - Tools that help you win your case
+6. **Community Input** - Advisory groups guide decisions
+
+### 📣 **Have Ideas? We Want to Hear!**
+
+**Tell us what you need:**
+- Use the feedback form in Settings → About
+- Join community discussions
+- Participate in user testing
+- Attend our virtual town halls
+- Email us at feedback@3mpwr.app
+
+**What happens to your feedback:**
+- We read every single message
+- Common requests go on the roadmap
+- We prioritize based on community needs
+- We test with real users before launching
+- We iterate based on your experience
+
+### ⏱️ **Why Some Features Take Time**
+
+**We're thorough because you deserve the best:**
+- **Accessibility Review** - Every feature tested with assistive tech
+- **Security Audit** - Your privacy and safety are non-negotiable
+- **Cultural Consultation** - Indigenous features require elder approval
+- **User Testing** - We test with real community members
+- **Legal Review** - Legal tools must be accurate and safe
+- **Performance Testing** - Must work on older phones and slow internet
+
+**Privacy and security can't be rushed:**
+- On-device AI takes time to implement properly
+- Encryption must be bulletproof
+- Cultural protocols require deep consultation
+- Accessibility must be comprehensive, not tokenistic
+
+---
+
 ## 🤝 Join Our Community
 
 ### 💬 Connect with Others

@@ -19,6 +19,7 @@ import { useAppPalette } from "../theme/usePalette";
 import { announce } from "../utils/announce";
 // Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
+import { CognitiveAccessibilityProvider } from "../context/CognitiveAccessibilityContext";
 import { NeurodivergentProvider } from "../context/NeurodivergentContext";
 import { I18nProvider } from "../i18n";
 import { setBetaFlag } from "../services/analytics";
@@ -123,8 +124,9 @@ export default function RootLayout() {
     // Avoid rendering until fonts are available to prevent missing glyphs (X boxes)
     fontsLoaded ? (
     <I18nProvider>
-      <A11ySettingsProvider>
-        <NeurodivergentProvider>
+  <CognitiveAccessibilityProvider>
+    <A11ySettingsProvider>
+      <NeurodivergentProvider>
         <SettingsProvider>
           <CoachProgressProvider>
           <ResilienceProvider>
@@ -197,6 +199,7 @@ export default function RootLayout() {
         </SettingsProvider>
         </NeurodivergentProvider>
       </A11ySettingsProvider>
+    </CognitiveAccessibilityProvider>
     </I18nProvider>
   ) : null
   );

@@ -86,10 +86,24 @@ export default function SettingsScreen() {
       <Section title={t('settings.accessibility.title','Accessibility')} subtitle={t('settings.accessibility.subtitle','Make the app work better for you')} styles={styles}>
         <EnhancedA11ySettingsSection />
         
+        {/* Cognitive Accessibility Settings Link */}
+        <Link href={'/(tabs)/settings/cognitive-accessibility' as any} asChild>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
+            accessibilityRole='button'
+            accessibilityLabel={t('settings.cognitiveAccessibility', 'Cognitive Accessibility Settings - Simplified mode, auto-save, and navigation memory for ADHD, autism, and learning disabilities')}
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons name='brain' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>{t('settings.cognitiveAccessibilityTitle', 'Cognitive Accessibility')}</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
+        </Link>
+        
         {/* Advanced Accessibility Settings Link */}
         <Link href={'/(tabs)/settings/advanced-accessibility' as any} asChild>
           <A11yPressable
-            style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
+            style={[styles.linkButton, { justifyContent:'center', marginTop:8 }]}
             accessibilityRole='button'
             accessibilityLabel="Advanced Accessibility Settings - Additional accessibility options"
             hitSlop={HIT_SLOP_8}
