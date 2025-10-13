@@ -3,6 +3,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
+import DisabilityWizard from '../../components/DisabilityWizard';
 import { HomeGuide } from '../../components/HomeGuide';
 import { HIT_SLOP_8 } from '../../constants/a11y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
@@ -35,6 +36,15 @@ export default function HomeScreen() {
       >
         {t('home.title','Home')} <Text style={{ fontSize: Math.round(14 * factor), opacity: 0.8 }}>(Beta)</Text>
       </Text>
+      
+      {/* Disability Wizard - Personalized Recommendations */}
+      <DisabilityWizard 
+        maxSuggestions={3}
+        title={t('wizard.homeTitle', 'Recommended For You')}
+        subtitle={t('wizard.homeSubtitle', 'Based on your needs and energy level')}
+        showReasons
+      />
+      
       <RecentPrompts />
       <BetaTestersQuickLink />
       <HomeGuide />
@@ -42,7 +52,7 @@ export default function HomeScreen() {
         style={[styles.noteText, { color: palette.text, fontSize: Math.round(14 * factor) }]}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        {t('home.personalization.note','Suggestions powered by the Personalization Engine (beta).')}
+        {t('home.personalization.note','Suggestions powered by the Disability Wizard (beta).')}
       </Text>
     </ScrollView>
   );

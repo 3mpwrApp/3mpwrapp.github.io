@@ -24,6 +24,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [isGuest, setIsGuest] = useState(false);
 
   useEffect(() => {
+    // Handle strict BYOC mode where auth is null
+    if (!auth) {
+      setLoading(false);
+      return;
+    }
+
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
   setUser(firebaseUser);
   setIsGuest(!!firebaseUser?.isAnonymous);
@@ -43,11 +49,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   const signOut = async () => {
+    if (!auth) return;
     await fbSignOut(auth);
   };
 
   const refreshClaims = async () => {
-    if (!user) return;
+    if (!user || !auth) return;
     try {
       const res = await getIdTokenResult(user, true);
       setIsAdmin(Boolean((res.claims as any)?.admin));
@@ -55,6 +62,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const signInGuest = async () => {
+    if (!auth) return;
     await signInAnonymously(auth);
   };
 

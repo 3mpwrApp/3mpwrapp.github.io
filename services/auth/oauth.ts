@@ -6,6 +6,12 @@ import { auth } from '../../firebase/config';
 
 export async function signInWithGoogleAsync(): Promise<boolean> {
   try {
+    // Check if Firebase auth is available
+    if (!auth) {
+      Alert.alert('Not available', 'Authentication is not available in this mode.');
+      return false;
+    }
+    
     // Dynamically import to avoid bundling when not configured
     const clientId = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID;
     if (!clientId) {
@@ -46,6 +52,12 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
 
 export async function signInWithAppleAsync(): Promise<boolean> {
   try {
+    // Check if Firebase auth is available
+    if (!auth) {
+      Alert.alert('Not available', 'Authentication is not available in this mode.');
+      return false;
+    }
+    
     let AppleAuth: any;
     try { AppleAuth = require('expo-apple-authentication'); } catch {}
     // On web or unsupported platforms, provide a friendly hint

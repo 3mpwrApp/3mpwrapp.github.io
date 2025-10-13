@@ -25,6 +25,15 @@ export default function LoginScreen() {
       setError(t("auth.missingFields", "All fields required"));
       return;
     }
+    
+    // Check if Firebase auth is available
+    if (!auth) {
+      const msg = t("auth.unavailable", "Authentication is not available in this mode");
+      setError(msg);
+      Alert.alert(t("common.errorTitle", "Error"), msg);
+      return;
+    }
+    
     try {
       setWorking(true);
       await signInWithEmailAndPassword(auth, email.trim(), password);

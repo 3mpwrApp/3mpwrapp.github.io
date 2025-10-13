@@ -1,14 +1,28 @@
 /**
- * Central data policy guard. Supports a strict BYOC mode where no app/server storage is used.
- * Strict mode is enabled when EXPO_PUBLIC_DATA_POLICY === 'strict_byoc'.
+ * Central data policy guard. Supports multiple BYOC modes:
+ * - 'default': Firebase auth + Firebase storage (standard cloud app)
+ * - 'hybrid_byoc': Firebase auth for login + User's own cloud for ALL data storage
+ * - 'strict_byoc': No Firebase at all, 100% user-owned everything
  */
 
-export type DataPolicyMode = 'default' | 'strict_byoc';
+export type DataPolicyMode = 'default' | 'hybrid_byoc' | 'strict_byoc';
 
 const mode: DataPolicyMode = (process.env.EXPO_PUBLIC_DATA_POLICY as DataPolicyMode) || 'default';
 
 export function isStrictBYOC(): boolean {
   return mode === 'strict_byoc';
+}
+
+export function isHybridBYOC(): boolean {
+  return mode === 'hybrid_byoc';
+}
+
+export function isBYOCEnabled(): boolean {
+  return mode === 'hybrid_byoc' || mode === 'strict_byoc';
+}
+
+export function getDataPolicyMode(): DataPolicyMode {
+  return mode;
 }
 
 // Runtime, session-only BYOC config (not persisted)

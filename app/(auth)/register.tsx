@@ -26,6 +26,15 @@ export default function RegisterScreen() {
       setError(t('auth.missingFields', 'All fields required'));
       return;
     }
+    
+    // Check if Firebase auth and db are available
+    if (!auth || !db) {
+      const msg = t('auth.unavailable', 'Authentication is not available in this mode');
+      setError(msg);
+      Alert.alert(t('common.errorTitle', 'Error'), msg);
+      return;
+    }
+    
     try {
       setWorking(true);
       const userCredential = await createUserWithEmailAndPassword(auth, email.trim(), password);

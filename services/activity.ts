@@ -14,20 +14,25 @@ export async function logActivity<T extends ActivityEventType>(evt: Omit<BaseAct
   if (getApps().length === 0) return null;
   // Respect user telemetry consent — no remote writes without it
   if (!isTelemetryConsentEnabled()) return null;
-  const db = getFirestore();
-  const auth = getAuth();
-  const userId = evt.userId || auth.currentUser?.uid;
-  const toStore: any = {
-    type: evt.type,
-    ts: evt.ts || Date.now(),
-    userId: userId || null,
-    payload: evt.payload || null,
-    summaryKey: evt.summaryKey || null,
-    metadata: evt.metadata || null,
-    // serverTimestamp used as secondary ordering fallback
-    createdAt: serverTimestamp()
-  };
+  
   try {
+    const db = getFirestore();
+    const auth = getAuth();
+    // In strict BYOC mode, these might be null
+    if (!db || !auth) return null;
+    
+    const userId = evt.userId || auth.currentUser?.uid;
+    const toStore: any = {
+      type: evt.type,
+      ts: evt.ts || Date.now(),
+      userId: userId || null,
+      payload: evt.payload || null,
+      summaryKey: evt.summaryKey || null,
+      metadata: evt.metadata || null,
+      // serverTimestamp used as secondary ordering fallback
+      createdAt: serverTimestamp()
+    };
+    
     const ref = await addDoc(collection(db, ACTIVITY_COLLECTION), toStore);
     return ref.id;
   } catch {
@@ -41,28 +46,44 @@ export interface FeedSubscriptionOptions {
 }
 
 export function subscribeToActivityFeed(cb: (events: AnyActivityEvent[]) => void, opts: FeedSubscriptionOptions = {}) {
-  const db = getFirestore();
-  const q = query(
-    collection(db, ACTIVITY_COLLECTION),
-    orderBy('ts', 'desc'),
-    orderBy('createdAt', 'desc'),
-    limit(opts.limit || 100)
-  );
-  return onSnapshot(q, snap => {
-    const events: AnyActivityEvent[] = snap.docs.map(d => {
-      const data = d.data();
-      return {
-        id: d.id,
-        type: data.type,
-        ts: typeof data.ts === 'number' ? data.ts : (data.ts instanceof Timestamp ? data.ts.toMillis() : Date.now()),
-        userId: data.userId || undefined,
-        payload: data.payload || undefined,
-        summaryKey: data.summaryKey || undefined,
-        metadata: data.metadata || undefined,
-      } as AnyActivityEvent;
-    });
-    cb(events);
-  }, err => { if(opts.onError) opts.onError(err as Error); });
+  // Guard against null db in strict BYOC mode
+  if (getApps().length === 0) {
+    if (opts.onError) opts.onError(new Error('Firebase not initialized'));
+    return () => {}; // Return no-op unsubscribe function
+  }
+  
+  try {
+    const db = getFirestore();
+    if (!db) {
+      if (opts.onError) opts.onError(new Error('Firestore not available'));
+      return () => {}; // Return no-op unsubscribe function
+    }
+    
+    const q = query(
+      collection(db, ACTIVITY_COLLECTION),
+      orderBy('ts', 'desc'),
+      orderBy('createdAt', 'desc'),
+      limit(opts.limit || 100)
+    );
+    return onSnapshot(q, snap => {
+      const events: AnyActivityEvent[] = snap.docs.map(d => {
+        const data = d.data();
+        return {
+          id: d.id,
+          type: data.type,
+          ts: typeof data.ts === 'number' ? data.ts : (data.ts instanceof Timestamp ? data.ts.toMillis() : Date.now()),
+          userId: data.userId || undefined,
+          payload: data.payload || undefined,
+          summaryKey: data.summaryKey || undefined,
+          metadata: data.metadata || undefined,
+        } as AnyActivityEvent;
+      });
+      cb(events);
+    }, err => { if(opts.onError) opts.onError(err as Error); });
+  } catch (error) {
+    if (opts.onError) opts.onError(error as Error);
+    return () => {}; // Return no-op unsubscribe function
+  }
 }
 
 // Lightweight aggregation (client side). Extend later with server functions.

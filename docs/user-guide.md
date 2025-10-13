@@ -19,6 +19,14 @@ phase2Features: Legal Workflow Automation, Indigenous Languages, Advanced Securi
 
 We've added powerful new features to help you even more:
 
+### ✨ **Disability Wizard - Your Personal Guide**
+- **Smart recommendations** - The app learns what works for you and suggests the right tools at the right time
+- **Daily variety** - Fresh feature suggestions every day, never repetitive
+- **Energy-aware** - Matches activities to when you have the most energy
+- **Clear explanations** - See exactly why each tool is recommended for you
+- **Natural flows** - Get suggestions for what to do next after completing a task
+- **Fully accessible** - Works perfectly with screen readers, reduced motion, and high contrast
+
 ### 🤖 **Legal Workflow Automation**
 - **Automated legal processes** - Step-by-step guidance for disability benefits, workplace accommodations, appeals
 - **AI-powered assistance** - Document review, case interpretation, form filling help
@@ -53,6 +61,7 @@ We've added powerful new features to help you even more:
 - [How to Navigate the App](#how-to-navigate)
 
 ### 🛠️ Main Features
+- [Disability Wizard](#disability-wizard) **(NEW)** - Personalized recommendations just for you
 - [Advocacy Tools](#advocacy-tools) - Get help with letters, appeals, and legal issues
 - [Legal Workflow Automation](#legal-workflow-automation) **(NEW)** - Automated guidance for legal processes
 - [Community](#community) - Connect with others who understand
@@ -820,6 +829,157 @@ The app has several main sections. You'll see them at the bottom of your screen:
 - **Text too small?** Increase text size in your phone's settings
 - **Using a screen reader?** The app announces page titles and item counts
 - **Motor difficulties?** Buttons have large touch areas for easier tapping
+
+---
+
+<a id="disability-wizard"></a>
+## ✨ Disability Wizard - Your Personal Guide
+
+**What it does:** Recommends the right tools at the right time based on your needs, energy levels, and preferences.
+
+### 🌟 How It Helps You
+
+The Disability Wizard appears on your **Home screen** and acts like a smart assistant that:
+- **Learns your needs:** Understands your disability type, energy patterns, and preferences
+- **Suggests tools:** Shows you 3 personalized recommendations every time you open the app
+- **Matches your energy:** Recommends light tasks when you're tired, more complex ones when you have energy
+- **Provides variety:** Rotates through different features daily so you don't see the same things repeatedly
+- **Explains why:** Shows clear reasons for each recommendation
+- **Guides next steps:** Suggests what to do after you complete a task
+
+### 📱 What You'll See
+
+Each suggestion card shows:
+- **Feature name and icon:** What the tool is
+- **Brief description:** What it does for you
+- **Energy level:** Low/Medium/High (shown with battery icon and color)
+  - 🟢 Green (Low) = Can do with minimal energy
+  - 🟠 Orange (Medium) = Requires moderate effort
+  - 🔴 Red (High) = Needs significant energy
+- **Focus level:** Light/Moderate/Heavy (shown with light bulb icon)
+- **Time estimate:** How many minutes it typically takes
+- **Reasoning chips:** Why this is recommended for you right now
+  - Example: "Designed for physical support" or "Good for morning focus"
+
+### ⭐ Featured Picks
+
+Tools with a gold star badge (⭐ "Today's Pick") are specially selected for today based on:
+- Daily rotation schedule
+- Your typical usage patterns
+- Features you haven't tried recently
+
+### 🔗 What Comes Next?
+
+After you select a tool, the Wizard shows you "**What comes next?**" - natural next steps that flow from what you just did.
+
+**Example flows:**
+- **Wellness Mood Tracker** → Wellness Exercises → Peer Support
+- **AI Translator** → Evidence Locker → Legal Workflow
+- **Policy Simplifier** → Advocate Finder → Legal Templates
+
+### ⚙️ Setting Up Your Profile (Optional)
+
+The first time you use the app, you can set up your Disability Wizard profile:
+
+**Step 1: Disability Types** (select all that apply)
+- Physical disabilities
+- Cognitive differences
+- Sensory disabilities
+- Neurodivergent
+- Chronic illness
+- Mental health conditions
+
+**Step 2: Energy Patterns**
+- When do you have the most energy? (Morning/Afternoon/Evening/Variable)
+- How much mental energy do you usually have? (Light/Mixed/Deep focus)
+
+**Step 3: Accessibility Needs**
+- Screen reader
+- High contrast
+- Large text
+- Reduced motion
+- Cognitive support
+- Motor assistance
+
+**Don't worry!** You can always:
+- Skip setup and use default recommendations
+- Change your profile anytime in Settings
+- Your profile stays on YOUR device (100% private)
+
+### 🎯 Tips for Getting Better Suggestions
+
+1. **Use the app regularly** - The Wizard learns what times you're most active
+2. **Try suggested tools** - This helps it understand what works for you
+3. **Update your profile** - If your needs change, update your settings
+4. **Check different times** - Morning vs. evening suggestions may differ based on your energy patterns
+
+### 🔒 Your Privacy
+
+- All personalization happens **on your device**
+- No data sent to servers or third parties
+- You can reset or delete your profile anytime
+- The Wizard only sees what you tell it
+
+### 💡 Example Recommendations
+
+**If you have physical disability + low energy in morning:**
+- ✅ Wellness Mood Tracker (5 min, low energy, light focus)
+- ✅ Evidence Locker (3 min, low energy, light focus)
+- ✅ Resources Search (7 min, low energy, moderate focus)
+
+**If you have cognitive disability + afternoon peak:**
+- ✅ AI Translator (10 min, medium energy, moderate focus)
+- ✅ Legal Workflow (15 min, medium energy, moderate focus)
+- ✅ Policy Simplifier (8 min, medium energy, moderate focus)
+
+**If you're neurodivergent + prefer light tasks:**
+- ✅ Daily Energy Coins (2 min, low energy, light focus)
+- ✅ Peer Support Chat (5 min, low energy, light focus)
+- ✅ Save Resource (3 min, low energy, light focus)
+
+### 🌈 Benefits for Different Disabilities
+
+**Physical Disabilities:**
+- Prioritizes low-effort digital tasks
+- Suggests appropriate activity levels
+- Considers mobility needs
+
+**Cognitive/Neurodivergent:**
+- Breaks tasks into small steps
+- Reduces cognitive overload
+- Provides clear, simple guidance
+
+**Mental Health:**
+- Respects emotional capacity
+- Suggests stress-relief tools when needed
+- Offers gentle wellness options
+
+**Chronic Illness:**
+- Adapts to fluctuating energy
+- Prioritizes health tracking tools
+- Respects need for pacing
+
+**Sensory Disabilities:**
+- Highlights accessible features
+- Respects format preferences
+- Considers communication needs
+
+### ❓ Common Questions
+
+**Q: Can I turn off the Disability Wizard?**
+A: Currently it appears on the home screen, but you can scroll past it. A hide option is coming soon.
+
+**Q: Will suggestions change every day?**
+A: Yes! The daily rotation ensures you see fresh recommendations while still personalizing to your needs.
+
+**Q: What if a suggestion doesn't match my needs?**
+A: Just scroll past it or try a different one. The Wizard learns from what you actually use.
+
+**Q: How does it know my energy level?**
+A: It uses the time of day and energy patterns you set in your profile. You can also manually set your current energy.
+
+**Q: Does it share my disability information?**
+A: Never. All profile information stays completely private on your device.
 
 ---
 

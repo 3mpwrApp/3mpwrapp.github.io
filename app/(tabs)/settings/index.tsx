@@ -8,25 +8,24 @@ import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import React, { useEffect, useRef, useState } from 'react';
 import { Alert, Button, Image, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import A11yPressable from '../../components/A11yPressable';
-import AccessibilityToggle from '../../components/AccessibilityToggle';
-import LanguageSelector from '../../components/LanguageSelector';
-import { HIT_SLOP_8 } from '../../constants/a11y';
-import { useAuth } from '../../context/AuthContext';
-import { auth, db, storage } from '../../firebase/config';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
-import { useTranslation } from '../../i18n';
-import { useDevPrefs } from '../../services/devPrefs';
-import { useNetwork } from '../../store/network';
-import type { ResourceFormat, TextScale } from '../../store/settings';
-import { useSettings } from '../../store/settings';
-import { useTextScale } from '../../theme/typography';
-import { useAppPalette } from '../../theme/usePalette';
-import { sendFeedbackEmailInternal } from '../../utils/feedback';
-
-import * as SettingsLazy from './settings.lazy';
-const NotificationPreferences = React.lazy(() => import('../../components/NotificationPreferences'));
-const EmergencyWalletCard = React.lazy(() => import('../../components/EmergencyWalletCard'));
+import A11yPressable from '../../../components/A11yPressable';
+import AccessibilityToggle from '../../../components/AccessibilityToggle';
+import LanguageSelector from '../../../components/LanguageSelector';
+import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { useAuth } from '../../../context/AuthContext';
+import { auth, db, storage } from '../../../firebase/config';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useTranslation } from '../../../i18n';
+import { useDevPrefs } from '../../../services/devPrefs';
+import { useNetwork } from '../../../store/network';
+import type { ResourceFormat, TextScale } from '../../../store/settings';
+import { useSettings } from '../../../store/settings';
+import { useTextScale } from '../../../theme/typography';
+import { useAppPalette } from '../../../theme/usePalette';
+import { sendFeedbackEmailInternal } from '../../../utils/feedback';
+import * as SettingsLazy from '../settings.sections';
+const NotificationPreferences = React.lazy(() => import('../../../components/NotificationPreferences'));
+const EmergencyWalletCard = React.lazy(() => import('../../../components/EmergencyWalletCard'));
 
 export default function SettingsScreen() {
   const params = useLocalSearchParams<{ open?: string }>();
@@ -74,7 +73,7 @@ export default function SettingsScreen() {
     setDeleteMode(true);
   };
   const cancelDelete = () => { setDeleteMode(false); setPassword(''); };
-  const confirmDelete = async () => { if (!user?.email) return; const { trackEvent } = require('../../services/analyticsClient'); setDeleting(true); try { const cred = EmailAuthProvider.credential(user.email, password); await reauthenticateWithCredential(user, cred); await deleteUser(user); trackEvent('account_delete', { method: 'password' }); Alert.alert(t('settings.account.deleted','Account deleted')); setDeleteMode(false); } catch(e:any){ trackEvent('account_delete_failed', { code: e?.code || 'error', message: e?.message }); Alert.alert(t('settings.account.reauthFailed','Re-authentication failed'), e?.message||'Error'); } finally { setDeleting(false); } };
+  const confirmDelete = async () => { if (!user?.email) return; const { trackEvent } = require('../../../services/analyticsClient'); setDeleting(true); try { const cred = EmailAuthProvider.credential(user.email, password); await reauthenticateWithCredential(user, cred); await deleteUser(user); trackEvent('account_delete', { method: 'password' }); Alert.alert(t('settings.account.deleted','Account deleted')); setDeleteMode(false); } catch(e:any){ trackEvent('account_delete_failed', { code: e?.code || 'error', message: e?.message }); Alert.alert(t('settings.account.reauthFailed','Re-authentication failed'), e?.message||'Error'); } finally { setDeleting(false); } };
 
   // Removed standalone emergency card navigation: now embedded below.
 
@@ -83,21 +82,91 @@ export default function SettingsScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding:20 }} accessibilityLabel={t('settings.title','Settings screen')}>
       <Text ref={titleRef} accessibilityRole='header' style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('settings.title','Settings')}</Text>
-      <Section title={t('settings.accessibility.title','Accessibility')} subtitle={t('settings.accessibility.subtitle','Make the app work better for you')} styles={styles}><EnhancedA11ySettingsSection /></Section>
-      <LanguageSelector />
-      <Section title="Indigenous Languages" subtitle="Cultural protocols and traditional language support" styles={styles}>
-        <Link href={'/(tabs)/settings/indigenous-language' as any} asChild>
+      
+      <Section title={t('settings.accessibility.title','Accessibility')} subtitle={t('settings.accessibility.subtitle','Make the app work better for you')} styles={styles}>
+        <EnhancedA11ySettingsSection />
+        
+        {/* Advanced Accessibility Settings Link */}
+        <Link href={'/(tabs)/settings/advanced-accessibility' as any} asChild>
           <A11yPressable
-            style={[styles.linkButton, { justifyContent:'center', marginBottom:12 }]}
+            style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
             accessibilityRole='button'
-            accessibilityLabel="Configure Indigenous language settings and cultural protocols"
+            accessibilityLabel="Advanced Accessibility Settings - Additional accessibility options"
             hitSlop={HIT_SLOP_8}
           >
-            <Ionicons name='leaf' size={20} color={palette.primary} />
-            <Text style={styles.linkText}>Indigenous Language Settings</Text>
+            <Ionicons name='options' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Advanced Accessibility</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
           </A11yPressable>
         </Link>
       </Section>
+      
+      <Section title="Cultural & Neurodiversity Support" subtitle="Inclusive settings for diverse communities" styles={styles}>
+        {/* Neurodivergent Support Link */}
+        <Link href={'/(tabs)/settings/neurodivergent' as any} asChild>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+            accessibilityRole='button'
+            accessibilityLabel="Neurodivergent Support Settings"
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons name='git-branch' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Neurodivergent Support</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
+        </Link>
+        
+        {/* Cultural Safety Link */}
+        <Link href={'/(tabs)/settings/cultural-safety' as any} asChild>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+            accessibilityRole='button'
+            accessibilityLabel="Cultural Safety Settings"
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons name='globe' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Cultural Safety</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
+        </Link>
+        
+        {/* Indigenous Languages Link */}
+        <Link href={'/(tabs)/settings/indigenous-language' as any} asChild>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center' }]}
+            accessibilityRole='button'
+            accessibilityLabel="Indigenous Languages - Traditional language support"
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons name='leaf' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Indigenous Languages</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
+        </Link>
+      </Section>
+      
+      <LanguageSelector />
+      
+      <Section title={t('settings.privacy.title','Privacy & Security')} subtitle={t('settings.privacy.subtitle','Control your data and security')} styles={styles}>
+        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading privacy…</Text></View>}>
+          <SettingsLazy.EnhancedPrivacySection />
+        </React.Suspense>
+        
+        {/* Advanced Security Link */}
+        <Link href={'/(tabs)/settings/advanced-security' as any} asChild>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
+            accessibilityRole='button'
+            accessibilityLabel="Advanced Security Settings"
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons name='shield-checkmark' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Advanced Security</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
+        </Link>
+      </Section>
+      
       <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading notification preferences…</Text></View>}>
         <NotificationPreferences />
       </React.Suspense>
@@ -120,7 +189,7 @@ export default function SettingsScreen() {
       </Section>
       <Section title={t('settings.bookmarks.title','Bookmarks')} subtitle={t('settings.bookmarks.subtitle','Save quick links to app features')} styles={styles}>
         <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading bookmarks…</Text></View>}>
-          <SettingsLazy.Bookmarks />
+          <SettingsLazy.BookmarksSection />
         </React.Suspense>
       </Section>
       <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>
@@ -198,22 +267,22 @@ export default function SettingsScreen() {
       </Section>
       <Section title='Local Profile (for templates)' styles={styles}>
         <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
-          <SettingsLazy.LocalProfile />
+          <SettingsLazy.LocalProfileSection />
         </React.Suspense>
       </Section>
       <Section title='Wellness Preferences' styles={styles}>
         <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
-          <SettingsLazy.WellnessPrefs />
+          <SettingsLazy.WellnessPrefsSection />
         </React.Suspense>
       </Section>
       <Section title='Media & Locker' styles={styles}>
         <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
-          <SettingsLazy.MediaLocker />
+          <SettingsLazy.MediaLockerSection />
         </React.Suspense>
       </Section>
       <Section title={t('settings.privacy.title','Privacy & Security')} subtitle={t('settings.privacy.subtitle','Control your data and security')} styles={styles}>
         <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading privacy…</Text></View>}>
-          <SettingsLazy.EnhancedPrivacy />
+          <SettingsLazy.EnhancedPrivacySection />
         </React.Suspense>
       </Section>
       <DeveloperSection styles={styles} />

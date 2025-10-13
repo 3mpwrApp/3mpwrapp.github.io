@@ -4,6 +4,15 @@ A privacy-first empowerment app with enterprise-grade security, Indigenous langu
 
 ## 🆕 Phase 2 Features - NOW AVAILABLE ✅
 
+### ✨ Disability Wizard - Smart Personalization
+- **Intelligent Recommendations**: AI-powered suggestions based on your disability type, energy levels, and preferences
+- **Daily Rotation**: Fresh feature suggestions every day while respecting your needs
+- **Context-Aware**: Matches tools to your current time of day, energy patterns, and stress indicators
+- **9-Factor Scoring**: Disability match, energy fit, time optimization, and more
+- **Interconnected Flows**: Natural progression between related features
+- **Transparent Reasoning**: See exactly why each tool is recommended
+- **Privacy-First**: All personalization happens on your device
+
 ### 🍃 Indigenous Language Support
 - **6 Indigenous Languages**: Plains Cree, Ojibwe, Inuktitut, Mi'kmaq, Mohawk, Dene
 - **Cultural Protocols**: Traditional consultation integration and ceremonial considerations
@@ -68,6 +77,10 @@ Quick reference: Deep-link seeding with q param is documented in `docs/deep-link
 
 ## Documentation
 
+- **Disability Wizard Documentation**:
+  - Integration Guide: `docs/DISABILITY_WIZARD_INTEGRATION.md`
+  - Quick Start Guide: `docs/DISABILITY_WIZARD_QUICK_START.md`
+  - Improvement Roadmap: `docs/DISABILITY_WIZARD_IMPROVEMENTS.md`
 - **Phase 2 Implementation**: Complete documentation in `docs/PHASE2_IMPLEMENTATION.md`
 - **Security Documentation**:
   - Security Implementation Summary: `SECURITY_COMPLETE.md`

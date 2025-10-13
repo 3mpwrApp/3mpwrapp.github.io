@@ -6,7 +6,7 @@ import { enableIndexedDbPersistence, getFirestore, initializeFirestore, setLogLe
 import { getStorage } from "firebase/storage";
 import { Platform } from "react-native";
 
-import { isStrictBYOC } from "../services/dataPolicy";
+import { isHybridBYOC, isStrictBYOC } from "../services/dataPolicy";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBv4rtD3it2yoIIFpxckCEXC9haKIbVjA8",
@@ -22,6 +22,7 @@ const firebaseConfig = {
 const IS_TEST = typeof process !== 'undefined' && !!process.env.JEST_WORKER_ID;
 const platformOS = (Platform as any)?.OS || 'web';
 const STRICT = isStrictBYOC();
+const HYBRID = isHybridBYOC();
 
 // Ensure only one app is initialized (when not strict)
 export function getFirebaseApp(): FirebaseApp {
@@ -43,26 +44,27 @@ if (!STRICT) {
 }
 
 // Export configured instances or nulls in strict mode
+// In hybrid mode: auth is enabled, but db/storage are null (user's cloud only)
 export const auth = STRICT ? (null as any) : getAuth(app!);
-export const db = STRICT
+export const db = STRICT || HYBRID
   ? (null as any)
   : platformOS === "web"
     ? getFirestore(app!)
     : initializeFirestore(app!, { experimentalForceLongPolling: true });
 
-// Web-only: enable IndexedDB persistence for offline reads/write queue (non-strict only)
+// Web-only: enable IndexedDB persistence for offline reads/write queue (non-strict, non-hybrid only)
 try {
   const IS_TEST_ENV = typeof process !== 'undefined' && !!(process as any).env?.JEST_WORKER_ID;
-  if (!STRICT && platformOS === 'web' && !IS_TEST_ENV) {
+  if (!STRICT && !HYBRID && platformOS === 'web' && !IS_TEST_ENV) {
     enableIndexedDbPersistence(db as any).catch(() => {});
   }
 } catch {}
 
-export const storage = STRICT ? (null as any) : getStorage(app!);
+export const storage = STRICT || HYBRID ? (null as any) : getStorage(app!);
 
-// Lazy load Analytics only on web (disabled in strict)
+// Lazy load Analytics only on web (disabled in strict/hybrid)
 export async function getFirebaseAnalytics(): Promise<any | null> {
-  if (STRICT || platformOS !== "web") return null;
+  if (STRICT || HYBRID || platformOS !== "web") return null;
   try {
     const analyticsMod = await import("firebase/analytics");
     if (typeof (analyticsMod as any).isSupported === 'function') {
@@ -77,5 +79,5 @@ export async function getFirebaseAnalytics(): Promise<any | null> {
 
 // Reduce noisy Firestore warnings in development
 try {
-  if (!STRICT) setLogLevel("error");
+  if (!STRICT && !HYBRID) setLogLevel("error");
 } catch {}

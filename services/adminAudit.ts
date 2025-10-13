@@ -7,18 +7,20 @@ import { ADMIN_AUDIT_COLLECTION, type AdminAuditEvent } from '../types/adminAudi
 // Write an admin audit event. Safe no-op if Firebase not initialized.
 export async function writeAdminAudit(evt: Omit<AdminAuditEvent, 'ts' | 'actorUid'> & { ts?: number; actorUid?: string | null }) {
   if (getApps().length === 0) return null;
-  const db = getFirestore();
-  const auth = getAuth();
-  const actorUid = typeof evt.actorUid !== 'undefined' ? evt.actorUid : (auth.currentUser?.uid ?? null);
-  const toStore: AdminAuditEvent = {
-    ts: evt.ts || Date.now(),
-    actorUid,
-    action: evt.action,
-    target: evt.target ?? null,
-    details: evt.details ?? null,
-    client: evt.client ?? null,
-  };
   try {
+    const db = getFirestore();
+    const auth = getAuth();
+    if (!db || !auth) return null;
+    
+    const actorUid = typeof evt.actorUid !== 'undefined' ? evt.actorUid : (auth.currentUser?.uid ?? null);
+    const toStore: AdminAuditEvent = {
+      ts: evt.ts || Date.now(),
+      actorUid,
+      action: evt.action,
+      target: evt.target ?? null,
+      details: evt.details ?? null,
+      client: evt.client ?? null,
+    };
     const ref = await addDoc(collection(db, ADMIN_AUDIT_COLLECTION), toStore as any);
     return ref.id;
   } catch {
@@ -27,29 +29,38 @@ export async function writeAdminAudit(evt: Omit<AdminAuditEvent, 'ts' | 'actorUi
 }
 
 export function subscribeAdminAudit(cb: (events: AdminAuditEvent[]) => void, opts: { limit?: number } = {}) {
-  const db = getFirestore();
-  const q = query(
-    collection(db, ADMIN_AUDIT_COLLECTION),
-    orderBy('ts', 'desc'),
-    limit(opts.limit || 200)
-  );
-  return onSnapshot(q, (snap) => {
-    const list: AdminAuditEvent[] = [];
-    snap.forEach((d) => list.push({ id: d.id, ...(d.data() as any) }));
-    cb(list);
-  });
+  if (getApps().length === 0) return () => {};
+  try {
+    const db = getFirestore();
+    if (!db) return () => {};
+    
+    const q = query(
+      collection(db, ADMIN_AUDIT_COLLECTION),
+      orderBy('ts', 'desc'),
+      limit(opts.limit || 200)
+    );
+    return onSnapshot(q, (snap) => {
+      const list: AdminAuditEvent[] = [];
+      snap.forEach((d) => list.push({ id: d.id, ...(d.data() as any) }));
+      cb(list);
+    });
+  } catch {
+    return () => {};
+  }
 }
 
 // One-shot list (export helper). Safe no-op if Firebase not initialized.
 export async function listAdminAudit(opts: { limit?: number } = {}): Promise<AdminAuditEvent[]> {
   if (getApps().length === 0) return [];
-  const db = getFirestore();
-  const q = query(
-    collection(db, ADMIN_AUDIT_COLLECTION),
-    orderBy('ts', 'desc'),
-    limit(opts.limit || 1000)
-  );
   try {
+    const db = getFirestore();
+    if (!db) return [];
+    
+    const q = query(
+      collection(db, ADMIN_AUDIT_COLLECTION),
+      orderBy('ts', 'desc'),
+      limit(opts.limit || 1000)
+    );
     const snap = await getDocs(q);
     return snap.docs.map(d => ({ id: d.id, ...(d.data() as any) }));
   } catch {
@@ -60,13 +71,15 @@ export async function listAdminAudit(opts: { limit?: number } = {}): Promise<Adm
 // Paged listing for large exports. Uses 'ts' as the cursor field.
 export async function listAdminAuditPage(opts: { pageSize?: number; afterTs?: number | null } = {}): Promise<{ items: AdminAuditEvent[]; cursor: number | null }> {
   if (getApps().length === 0) return { items: [], cursor: null };
-  const db = getFirestore();
-  const size = opts.pageSize || 500;
-  const base = [collection(db, ADMIN_AUDIT_COLLECTION), orderBy('ts', 'desc')] as const;
-  const q = opts.afterTs != null
-    ? query(base[0], base[1], startAfter(opts.afterTs), limit(size))
-    : query(base[0], base[1], limit(size));
   try {
+    const db = getFirestore();
+    if (!db) return { items: [], cursor: null };
+    
+    const size = opts.pageSize || 500;
+    const base = [collection(db, ADMIN_AUDIT_COLLECTION), orderBy('ts', 'desc')] as const;
+    const q = opts.afterTs != null
+      ? query(base[0], base[1], startAfter(opts.afterTs), limit(size))
+      : query(base[0], base[1], limit(size));
     const snap = await getDocs(q);
     const items = snap.docs.map(d => ({ id: d.id, ...(d.data() as any) }));
     const last = items.length ? (items[items.length - 1] as any).ts as number : null;

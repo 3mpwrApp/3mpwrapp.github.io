@@ -1,4 +1,4 @@
-import { getBYOCConfig, isStrictBYOC, type BYOCConfig } from './dataPolicy';
+import { getBYOCConfig, isBYOCEnabled, type BYOCConfig } from './dataPolicy';
 
 export type StorageProvider = {
   id: 'ephemeral' | 'webdav';
@@ -67,13 +67,13 @@ const ephemeralProvider: StorageProvider = {
 };
 
 export function getActiveStorage(): StorageProvider {
-  // Strict mode requires a BYOC provider; if none configured, use ephemeral to avoid writing anywhere.
+  // BYOC mode (hybrid or strict) requires a BYOC provider; if none configured, use ephemeral to avoid writing to app storage.
   const cfg = getBYOCConfig();
-  if (isStrictBYOC()) {
+  if (isBYOCEnabled()) {
     if (cfg?.kind === 'webdav') return webdavProvider;
     return ephemeralProvider;
   }
-  // Default: still prefer BYOC if configured; otherwise ephemeral
+  // Default mode: still prefer BYOC if configured; otherwise ephemeral
   if (cfg?.kind === 'webdav') return webdavProvider;
   return ephemeralProvider;
 }

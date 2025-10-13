@@ -164,8 +164,10 @@ export default function TabsLayout() {
         {/* Hide Home, Inbox, Settings, Saved, Voice Help as tabs but keep routes */}
     <Tabs.Screen name="index" options={{ href: null }} />
     <Tabs.Screen name="inbox" options={{ href: null }} />
+    {/* settings/ folder contains the main settings screen and sub-pages */}
     <Tabs.Screen name="settings" options={{ href: null }} />
     <Tabs.Screen name="saved" options={{ href: null }} />
+    <Tabs.Screen name="saved.impl" options={{ href: null }} />
     <Tabs.Screen name="saved-original" options={{ href: null }} />
     <Tabs.Screen name="voice-help" options={{ href: null }} />
     <Tabs.Screen name="admin" options={{ href: null }} />
