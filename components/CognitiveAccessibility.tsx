@@ -117,7 +117,6 @@ interface BreadcrumbsProps {
 
 export function Breadcrumbs({ items, onNavigate }: BreadcrumbsProps) {
   const palette = useAppPalette();
-  const { t } = useTranslation();
   
   // Show only last N items if too many
   const visibleItems = items.slice(-BREADCRUMB_CONFIG.maxVisible);
@@ -177,6 +176,7 @@ interface ComplexityBadgeProps {
 }
 
 export function ComplexityBadge({ complexity, showDetails = false }: ComplexityBadgeProps) {
+  const palette = useAppPalette();
   const indicator = COMPLEXITY_INDICATORS[complexity.level];
   
   return (
@@ -187,8 +187,8 @@ export function ComplexityBadge({ complexity, showDetails = false }: ComplexityB
       </View>
       {showDetails && (
         <View style={styles.complexityDetails}>
-          <Text style={styles.complexityDescription}>{indicator.description}</Text>
-          <Text style={styles.complexityInfo}>
+          <Text style={[styles.complexityDescription, { color: palette.textSecondary }]}>{indicator.description}</Text>
+          <Text style={[styles.complexityInfo, { color: palette.textSecondary }]}>
             {complexity.steps} steps • {complexity.estimatedMinutes} minutes
           </Text>
         </View>
@@ -445,11 +445,11 @@ const styles = StyleSheet.create({
   },
   complexityDescription: {
     fontSize: 14,
-    color: '#666',
+    // Uses palette.textSecondary dynamically in component
   },
   complexityInfo: {
     fontSize: 12,
-    color: '#999',
+    // Uses palette.textSecondary dynamically in component
     marginTop: 2,
   },
   

@@ -11,7 +11,8 @@ import React, { createContext, useCallback, useContext, useEffect, useState } fr
 import type {
     CognitiveMode,
     CognitivePreferences,
-    TaskReminder} from '../constants/cognitive';
+    TaskReminder
+} from '../constants/cognitive';
 import {
     COGNITIVE_MODES,
     COGNITIVE_STORAGE_KEYS,
@@ -329,7 +330,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
   }, [incompleteTasks]);
 
   const triggerAutoSave = useCallback(
-    async (screen: string, data: any) => {
+    async (screen: string, _data: any) => {
       const modeConfig = COGNITIVE_MODES[preferences.mode];
       const now = Date.now();
       const lastSave = lastAutoSave[screen] || 0;
