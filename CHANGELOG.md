@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] - 2025-10-13
+
+### Added
+
+#### 📝 Master Letter Generator Expansion (Phase 1 Item #4 - COMPLETED)
+- **Expanded Letter Types** from 5 to 22 comprehensive letter templates:
+  - **Original 5 Types**: Accommodation, Appeal, Reconsideration, Return-to-Work Plan, Union Request
+  - **Medical Leave & Workplace Issues** (5 new): Medical Leave Request, Leave Extension, WSIB Claim, Harassment Complaint, Wrongful Termination
+  - **Insurance & Medical Support** (5 new): LTD Appeal, IME Objection, Doctor Support Request, Medical Records Request, Prescription Coverage Appeal
+  - **Housing & Accessibility** (3 new): Housing Accommodation, Service Animal Approval, Parking Permit Appeal
+  - **Human Rights & Legal** (4 new): Human Rights Complaint, Cease and Desist, Demand Letter, General Legal Template
+
+- **Technical Implementation** (`app/(tabs)/resources/letter-wizard.tsx`):
+  - Expanded from 300 lines to 1,310 lines (+1,010 lines of code)
+  - 11 situation categories (up from 5 original categories)
+  - All 22 letter types properly typed with TypeScript
+  - Each template includes: type, titleKey, descKey, icon, field definitions, and generatePreview function
+  - Intelligent field validation and context-aware form fields
+
+- **Bilingual Support**:
+  - Added 200+ translation keys in English (`locales/en/common.json`)
+  - Added 200+ translation keys in French (`locales/fr/common.json`)
+  - All 22 letter types fully translated with professional legal/advocacy terminology
+  - 6 new situation categories fully translated
+  - 80+ field labels and descriptions translated
+
+- **Comprehensive Documentation**:
+  - `LETTER_WIZARD_EXPANSION_COMMIT.md` - Complete change documentation (120+ lines)
+  - `docs/ENHANCEMENT_SUGGESTIONS.md` - Strategic enhancement roadmap (1,315 lines)
+  - Phase 1 Item #4 marked as ✅ COMPLETED (Oct 13, 2025)
+  - Updated README.md, PHASE2_IMPLEMENTATION.md, user-guide.md with new letter types
+
 ## [Unreleased] - 2025-10-12
 
 ### Added

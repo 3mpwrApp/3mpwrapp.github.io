@@ -8,6 +8,15 @@ Note for authors (plain language):
 - The app’s What’s New generator pulls from this file and strips technical jargon automatically.
 
 ## [Unreleased]
+- **📝 Master Letter Generator Expansion (Phase 1 Item #4)** - Expanded from 5 to 22 comprehensive letter types covering all major disability advocacy situations.
+  - **Workplace & Accommodation** (5 types): Accommodation requests, appeals, reconsideration, return-to-work plans, union requests
+  - **Medical Leave & Workplace Issues** (5 types): Medical leave requests, leave extensions, WSIB claims, harassment complaints, wrongful termination
+  - **Insurance & Medical Support** (5 types): LTD appeals, IME objections, doctor support requests, medical records requests, prescription coverage appeals
+  - **Housing & Accessibility** (3 types): Housing accommodation, service animal approval, parking permit appeals
+  - **Human Rights & Legal** (4 types): Human rights complaints, cease and desist, demand letters, general legal templates
+  - **Bilingual Support**: All 22 letter types available in English and French with professional legal terminology
+  - **Smart Fields**: Context-aware form fields with intelligent validation for each letter type
+  - **Professional Output**: Generated letters ready to submit with proper formatting and legal language
 - **🇨🇦 Jurisdiction System: Canada-Wide Legal Coverage** - Added comprehensive jurisdiction support for all 14 Canadian jurisdictions (federal + 10 provinces + 3 territories).
   - **Deadline Calculator**: Calculate days remaining for workplace injury appeals with color-coded urgency (<30 days critical, <60 days warning). Auto-detects appeal levels from your jurisdiction.
   - **Form Helper**: Situation-based recommendations showing which forms you need (workplace injury, disability benefit, human rights complaint, or appeal). Shows required vs optional forms with deadlines and notes.

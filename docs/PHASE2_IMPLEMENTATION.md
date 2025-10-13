@@ -188,13 +188,13 @@ Comprehensive legal automation system for disability rights processes with cultu
 - **Accessibility Violation Reports**
 
 #### 2. Document Generation
-- **15+ Legal Templates**:
-  - Accommodation request letters
-  - Appeal letters
-  - Complaint forms
-  - Supporting statements
-  - Legal briefs
-  - Correspondence templates
+- **22 Comprehensive Letter Types** (Master Letter Generator):
+  - **Workplace & Accommodation**: Accommodation requests, appeal letters, reconsideration, return-to-work plans, union requests
+  - **Medical Leave & Workplace Issues**: Medical leave requests, leave extensions, WSIB claims, harassment complaints, wrongful termination
+  - **Insurance & Medical Support**: LTD appeals, IME objections, doctor support requests, medical records requests, prescription coverage appeals
+  - **Housing & Accessibility**: Housing accommodation, service animal approval, parking permit appeals
+  - **Human Rights & Legal**: Human rights complaints, cease and desist, legal demand letters
+  - All templates available in English and French with cultural adaptations
 
 #### 3. Workflow Engine
 - **Automation Levels**:

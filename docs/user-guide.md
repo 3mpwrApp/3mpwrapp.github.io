@@ -1548,8 +1548,33 @@ Use Campaign Coordination for:
 
 **What this section does:** Provides tools, templates, and information to help with daily challenges.
 
-### 📋 Template Gallery
-**What it does:** Pre-written letters and forms you can customize
+### 📋 Master Letter Generator
+**What it does:** Generates professional advocacy letters for 22 different disability-related situations
+
+**Available Letter Types:**
+- **Workplace & Accommodation** (5 types): Accommodation requests, appeals, reconsideration, return-to-work plans, union requests
+- **Medical Leave & Workplace Issues** (5 types): Medical leave requests, leave extensions, WSIB claims, harassment complaints, wrongful termination
+- **Insurance & Medical Support** (5 types): LTD appeals, IME objections, doctor support requests, medical records requests, prescription coverage appeals
+- **Housing & Accessibility** (3 types): Housing accommodation, service animal approval, parking permit appeals
+- **Human Rights & Legal** (4 types): Human rights complaints, cease and desist, demand letters, plus general templates
+
+**How to use it:**
+1. Go to Resources → Master Letter Generator
+2. Select your situation category
+3. Choose the specific letter type you need
+4. Fill in the required information (your details, dates, specific circumstances)
+5. Review the generated professional letter
+6. Copy, share, or export as PDF
+7. Available in both English and French
+
+**Example:** If you need to request medical leave:
+- Select "Medical Leave & Workplace Issues"
+- Choose "Medical Leave Request"
+- Fill in: your name, employer, start date, expected duration, medical provider info
+- Get a professionally formatted letter ready to submit
+
+### 📋 Template Gallery (Additional Resources)
+**What it does:** Pre-written letters and forms you can customize beyond the Master Letter Generator
 
 **How to use it:**
 1. Go to Resources → Template Gallery
