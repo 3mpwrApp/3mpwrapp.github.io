@@ -101,21 +101,67 @@ description: Find information quickly with on-page results and a DuckDuckGo fall
     }
 
     function highlight(text, terms) {
-      var safe = escapeHTML(text || '');
-      if (!terms || terms.length === 0) return safe;
+      // SECURE: Use DOM methods instead of innerHTML to prevent XSS
+      var container = document.createElement('span');
+      var safe = text || '';
+      
+      if (!terms || terms.length === 0) {
+        container.textContent = safe;
+        return container;
+      }
+      
       try {
-        var pattern = terms.map(function(t){ return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|');
+        var pattern = terms.map(function(t){ 
+          return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); 
+        }).join('|');
         var re = new RegExp('(' + pattern + ')', 'ig');
-        return safe.replace(re, '<mark class="mark">$1</mark>');
-      } catch (e) { return safe; }
+        var lastIndex = 0;
+        var match;
+        
+        // Reset regex state
+        re.lastIndex = 0;
+        
+        while ((match = re.exec(safe)) !== null) {
+          // Add text before match
+          if (match.index > lastIndex) {
+            container.appendChild(
+              document.createTextNode(safe.slice(lastIndex, match.index))
+            );
+          }
+          
+          // Add highlighted match
+          var mark = document.createElement('mark');
+          mark.className = 'mark';
+          mark.textContent = match[0];
+          container.appendChild(mark);
+          
+          lastIndex = match.index + match[0].length;
+          
+          // Prevent infinite loop on zero-width matches
+          if (match.index === re.lastIndex) {
+            re.lastIndex++;
+          }
+        }
+        
+        // Add remaining text
+        if (lastIndex < safe.length) {
+          container.appendChild(document.createTextNode(safe.slice(lastIndex)));
+        }
+        
+        return container;
+      } catch (e) {
+        container.textContent = safe;
+        return container;
+      }
     }
 
     function render(results, q, terms) {
       if (!list) return;
-      list.innerHTML = '';
+      list.innerHTML = ''; // Safe to clear
       var count = results.length;
-      var msg = !q ? '' : (count === 0 ? ('No results for "' + q + '"') : (count + ' result' + (count === 1 ? '' : 's') + ' for "' + q + '"'));
+      var msg = !q ? '' : (count === 0 ? ('No results for "' + escapeHTML(q) + '"') : (count + ' result' + (count === 1 ? '' : 's') + ' for "' + escapeHTML(q) + '"'));
       if (summary) summary.textContent = msg;
+      if (status) status.textContent = msg; // Update live region
       if (q) announce(msg);
       var limit = 160;
       results.slice(0, 50).forEach(function(item){
@@ -123,12 +169,33 @@ description: Find information quickly with on-page results and a DuckDuckGo fall
         var a = node.querySelector('a');
         var p = node.querySelector('.result-excerpt');
         a.href = item.url;
+        
+        // SECURE: Use DOM methods instead of innerHTML
         var shownTitle = item.title || item.url || '';
-        a.innerHTML = highlight(shownTitle, terms);
+        var titleEl = highlight(shownTitle, terms);
+        a.textContent = ''; // Clear first
+        if (titleEl.nodeType === Node.TEXT_NODE) {
+          a.appendChild(titleEl);
+        } else {
+          // Append all children from container
+          while (titleEl.firstChild) {
+            a.appendChild(titleEl.firstChild);
+          }
+        }
 
         var text = item.excerpt || item.content || '';
         var snippet = text.length > limit ? (text.slice(0, limit).trim() + '…') : text;
-        p.innerHTML = highlight(snippet, terms);
+        var excerptEl = highlight(snippet, terms);
+        p.textContent = ''; // Clear first
+        if (excerptEl.nodeType === Node.TEXT_NODE) {
+          p.appendChild(excerptEl);
+        } else {
+          // Append all children from container
+          while (excerptEl.firstChild) {
+            p.appendChild(excerptEl.firstChild);
+          }
+        }
+        
         list.appendChild(node);
       });
     }

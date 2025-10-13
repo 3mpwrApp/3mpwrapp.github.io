@@ -98,9 +98,15 @@ nav {
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.03em;
-  padding: 0.6rem 1rem; /* Larger hit area (advisory target size) */
+  /* WCAG 2.2 2.5.8: Minimum 24x24px, recommend 44x44px for touch */
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.6rem 1rem;
   border-radius: 6px;
   transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-list a:visited { color: #fff; }
 .nav-list a:hover,
@@ -118,6 +124,9 @@ nav {
   background: #ffffff;
   color: #183c65;
   border: 2px solid #183c65;
+  /* WCAG 2.2 2.5.8: Minimum target size */
+  min-height: 44px;
+  min-width: 44px;
   padding: 0.5rem 0.9rem;
   border-radius: 6px;
   font-weight: 700;
@@ -148,10 +157,16 @@ nav {
   color: #183c65;
   background: #fff;
   border: 2px solid #183c65;
+  /* WCAG 2.2 2.5.8: Minimum target size */
+  min-height: 44px;
+  min-width: 44px;
   padding: 0.35rem 0.6rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .lang-switch:hover,
 .lang-switch:focus-visible { background: #183c65; color: #fff; }
@@ -160,10 +175,16 @@ nav {
   background: #ffffff;
   color: #183c65;
   border: 2px solid #183c65;
+  /* WCAG 2.2 2.5.8: Minimum target size */
+  min-height: 44px;
+  min-width: 44px;
   padding: 0.5rem 0.9rem;
   border-radius: 6px;
   font-weight: 700;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .contrast-toggle:hover,
 .contrast-toggle:focus-visible,
@@ -222,15 +243,38 @@ html[data-link-underline="auto"] main a { text-decoration: underline; }
 html[data-link-underline="auto"] main a:hover,
 html[data-link-underline="auto"] main a:focus-visible { text-decoration-thickness: 2px; }
 
-/* Focus visibility (WCAG 2.4.7) */
+/* Focus visibility (WCAG 2.4.7, 2.2 2.4.11 Enhanced) */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
-textarea:focus-visible {
-  outline: 3px solid #06b6d4;
-  outline-offset: 2px;
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 3px solid #0066CC; /* High contrast blue */
+  outline-offset: 3px;
   border-radius: 4px;
+  /* Double ring for better visibility on all backgrounds (WCAG 2.2 2.4.11) */
+  box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 4px #0066CC;
+}
+
+/* Dark mode focus indicators */
+body[data-theme="dark"] :focus-visible {
+  outline-color: #66B3FF;
+  box-shadow: 0 0 0 1px #000000, 0 0 0 4px #66B3FF;
+}
+
+/* High contrast mode focus indicators (WCAG 2.2 2.4.11 AAA) */
+body[data-contrast="high"] :focus-visible {
+  outline: 4px solid #000000 !important;
+  outline-offset: 4px !important;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 6px #000000 !important;
+}
+
+/* Ensure focus not obscured by sticky header (WCAG 2.2 2.4.12) */
+:focus {
+  scroll-margin-top: 100px;
+  scroll-margin-bottom: 20px;
 }
 
 /* Visually hidden utility (WCAG 1.3.1) */
@@ -295,11 +339,11 @@ textarea:focus-visible {
   text-decoration-thickness: 2px;
 }
 
-/* Footer – stronger contrast on light background */
+/* Footer – stronger contrast on light background (WCAG 1.4.6 AAA) */
 footer {
   text-align: center;
   padding: 2em 0 0.7em 0;
-  color: #4a5568;
+  color: #2D3748; /* Darker gray for 8.5:1 contrast (AAA compliant) */
   font-size: 0.95em;
 }
 @media (max-width: 768px) {
@@ -313,6 +357,9 @@ footer a {
 footer a:hover,
 footer a:focus-visible {
   color: #0f2a46;
+}
+body[data-theme="dark"] footer {
+  color: #e5e7eb; /* Lighter for dark mode */
 }
 body[data-theme="dark"] footer a {
   color: #a8c7ff;
@@ -527,6 +574,9 @@ body[data-theme="dark"] .store-badge {
   right: 1rem;
   bottom: 1rem;
   z-index: 1000;
+  /* WCAG 2.2 2.5.8: Minimum target size */
+  min-height: 44px;
+  min-width: 44px;
   padding: 0.6rem 1rem;
   border-radius: 999px;
   background: #183c65;
@@ -537,6 +587,9 @@ body[data-theme="dark"] .store-badge {
   visibility: hidden;
   transform: translateY(10px);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .back-to-top:focus-visible,
 .back-to-top:hover {
@@ -828,10 +881,58 @@ body[data-contrast="high"] .badge--new {
   padding: 0.75rem 1rem;
   background: #111827;
   color: #fff;
+  border-top: 3px solid #0066CC;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
 }
-.cookie-banner a { color: #a8c7ff; }
-.cookie-actions { display: flex; gap: 0.5rem; }
+.cookie-banner a { 
+  color: #60A5FA; 
+  text-decoration: underline;
+}
+.cookie-banner a:hover,
+.cookie-banner a:focus { 
+  color: #93C5FD; 
+  text-decoration: none;
+}
+.cookie-banner summary {
+  padding: 0.5rem;
+  margin: -0.5rem;
+  border-radius: 4px;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.cookie-banner summary:hover,
+.cookie-banner summary:focus {
+  background: rgba(255, 255, 255, 0.1);
+  outline: 2px solid #0066CC;
+  outline-offset: 2px;
+}
+.cookie-banner label {
+  min-height: 44px;
+}
+.cookie-banner input[type="checkbox"] {
+  min-width: 24px;
+  min-height: 24px;
+  flex-shrink: 0;
+}
+.cookie-actions { 
+  display: flex; 
+  gap: 0.5rem; 
+  flex-wrap: wrap;
+}
 @media (max-width: 600px) {
-  .cookie-banner { flex-direction: column; align-items: stretch; }
-  .cookie-actions { justify-content: flex-end; }
+  .cookie-banner { 
+    flex-direction: column; 
+    align-items: stretch;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .cookie-actions { 
+    justify-content: stretch;
+    flex-direction: column;
+  }
+  .cookie-actions button {
+    width: 100%;
+  }
 }

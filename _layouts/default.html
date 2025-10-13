@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta name="description" content="{{ page.description | default: site.description }}">
+  
+  <!-- Security Headers (GitHub Pages fallback - prefer server-side headers) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://gc.zgo.at 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src https://docs.google.com; base-uri 'self'; form-action 'self' https://duckduckgo.com https://docs.google.com; upgrade-insecure-requests">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  
   {%- include custom-head.html -%}
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
@@ -257,37 +264,107 @@
   </script>
 
   <!-- Cookie consent banner -->
-  <div id="cookie-banner" class="cookie-banner" hidden>
-    <p>We use cookies to improve your experience. <a href="{{ '/cookies/' | relative_url }}">Learn more</a>.</p>
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" hidden>
+    <div>
+      <h2 id="cookie-banner-title" style="font-size: 1rem; margin: 0 0 0.5rem;">Cookie Preferences</h2>
+      <p id="cookie-banner-desc" style="margin: 0 0 0.5rem;">We use cookies to improve your experience. <a href="{{ '/cookies/' | relative_url }}">Learn more</a>.</p>
+      <details style="margin: 0.5rem 0;">
+        <summary style="cursor: pointer; user-select: none;">Manage cookie settings</summary>
+        <div style="margin: 0.5rem 0; padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 4px;">
+          <label style="display: flex; align-items: center; gap: 0.5rem; margin: 0.25rem 0;">
+            <input type="checkbox" checked disabled aria-disabled="true">
+            <span><strong>Essential cookies</strong> (required) - Necessary for the website to function</span>
+          </label>
+          <label style="display: flex; align-items: center; gap: 0.5rem; margin: 0.25rem 0;">
+            <input type="checkbox" id="cookie-analytics-pref" aria-describedby="analytics-desc">
+            <span><strong>Analytics cookies</strong> (optional) - Help us understand how visitors use our site</span>
+          </label>
+          <p id="analytics-desc" style="margin: 0.25rem 0 0 1.75rem; font-size: 0.85em; color: rgba(255,255,255,0.8);">
+            We use privacy-friendly analytics with IP anonymization. No personal data is collected.
+          </p>
+        </div>
+      </details>
+    </div>
     <div class="cookie-actions">
-      <button id="cookie-accept" type="button" class="button button--primary">Accept</button>
-      <button id="cookie-decline" type="button" class="button button--secondary">Decline</button>
+      <button id="cookie-accept" type="button" class="button button--primary" aria-label="Accept all cookies">Accept all</button>
+      <button id="cookie-custom" type="button" class="button" aria-label="Save cookie preferences">Save preferences</button>
+      <button id="cookie-decline" type="button" class="button button--secondary" aria-label="Decline optional cookies">Decline optional</button>
     </div>
   </div>
   <script>
     (function(){
       var KEY = 'cookie-consent';
+      var ANALYTICS_KEY = 'cookie-analytics';
       function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
       function set(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
       var banner = document.getElementById('cookie-banner');
       var accept = document.getElementById('cookie-accept');
+      var custom = document.getElementById('cookie-custom');
       var decline = document.getElementById('cookie-decline');
+      var analyticsPref = document.getElementById('cookie-analytics-pref');
       if (!banner || !accept || !decline) return;
-      if (!get(KEY)) { banner.hidden = false; }
-      function emit(status){ try { window.dispatchEvent(new CustomEvent('cookie-consent', { detail: status })); } catch(e){} }
-      accept.addEventListener('click', function(){ set(KEY, 'accepted'); banner.hidden = true; emit('accepted'); });
-      decline.addEventListener('click', function(){ set(KEY, 'declined'); banner.hidden = true; emit('declined'); });
+      
+      // Show banner if no consent recorded
+      if (!get(KEY)) { 
+        banner.hidden = false;
+        banner.setAttribute('aria-hidden', 'false');
+      }
+      
+      // Load saved analytics preference
+      if (analyticsPref) {
+        analyticsPref.checked = get(ANALYTICS_KEY) === 'true';
+      }
+      
+      function emit(status, analytics){ 
+        try { 
+          window.dispatchEvent(new CustomEvent('cookie-consent', { 
+            detail: { 
+              status: status,
+              analytics: analytics 
+            } 
+          })); 
+        } catch(e){} 
+      }
+      
+      function closeBanner(status, analytics) {
+        set(KEY, status);
+        set(ANALYTICS_KEY, analytics.toString());
+        banner.hidden = true;
+        banner.setAttribute('aria-hidden', 'true');
+        emit(status, analytics);
+        if (window.announce) {
+          window.announce('Cookie preferences saved: ' + (analytics ? 'All cookies accepted' : 'Only essential cookies'));
+        }
+      }
+      
+      accept.addEventListener('click', function(){ 
+        closeBanner('accepted', true);
+      });
+      
+      if (custom) {
+        custom.addEventListener('click', function(){
+          var analyticsEnabled = analyticsPref ? analyticsPref.checked : false;
+          closeBanner('custom', analyticsEnabled);
+        });
+      }
+      
+      decline.addEventListener('click', function(){ 
+        closeBanner('declined', false);
+      });
     })();
   </script>
 
   <!-- Newsletter modal (homepage only) -->
-  <div id="newsletter-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="newsletter-title" hidden>
+  <div id="newsletter-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="newsletter-title" aria-describedby="newsletter-description" hidden>
     <div class="modal-dialog newsletter-dialog" data-newsletter-dialog>
       <div class="modal-header">
         <h2 id="newsletter-title">Subscribe to our newsletter</h2>
+        <p id="newsletter-description" class="sr-only">
+          Get updates and news about 3mpwrApp. You can unsubscribe anytime. Form will open in a new window if needed.
+        </p>
         <div class="modal-actions">
           <a class="modal-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfuItjmtWlUW3L8irmSe8QN129_GJDLAF4f5n-QHPcj_FFoyg/viewform" target="_blank" rel="noopener noreferrer">Open form in new tab</a>
-          <button id="newsletter-close" data-action="newsletter-close" type="button" aria-label="Close" class="modal-close">×</button>
+          <button id="newsletter-close" data-action="newsletter-close" type="button" aria-label="Close newsletter dialog" class="modal-close">×</button>
         </div>
       </div>
       <div class="modal-body">

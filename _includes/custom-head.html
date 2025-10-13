@@ -1,7 +1,20 @@
 {%- comment -%}
-This file is injected by Minima’s head.html if present.
+This file is injected by Minima's head.html if present.
 We add favicons, webmanifest, and optional GA4 (via analytics.html).
 {%- endcomment -%}
+
+{%- comment -%} Performance: DNS prefetch and preconnect for external resources {%- endcomment -%}
+{%- if site.ga_measurement_id -%}
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+{%- endif -%}
+{%- if site.analytics_provider == 'goatcounter' -%}
+<link rel="dns-prefetch" href="//gc.zgo.at">
+<link rel="preconnect" href="https://gc.zgo.at" crossorigin>
+{%- endif -%}
+
+{%- comment -%} Performance: Preload critical CSS {%- endcomment -%}
+<link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}" as="style">
 
 {%- comment -%} Favicon & PWA {%- endcomment -%}
 {%- if site.favicon and site.favicon != '' -%}
@@ -72,12 +85,28 @@ Supports:
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.ga_measurement_id | escape }}';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('Google Analytics script blocked or failed to load. Ad blockers or privacy extensions may be active.');
+        window.__gaLoadError = true;
+      };
       document.head.appendChild(s);
       window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
+      function gtag(){ 
+        if (!window.__gaLoadError) {
+          dataLayer.push(arguments); 
+        }
+      }
       window.gtag = gtag;
       gtag('js', new Date());
-      gtag('config', '{{ site.ga_measurement_id | escape }}');
+      gtag('config', '{{ site.ga_measurement_id | escape }}', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=Strict;Secure',
+        'cookie_expires': 63072000,
+        'cookie_update': false,
+        'allow_ad_personalization_signals': false,
+        'allow_google_signals': false
+      });
     });
   }
 
@@ -90,6 +119,10 @@ Supports:
       s.async = true;
       s.setAttribute('data-goatcounter', 'https://{{ site.goatcounter_domain | escape }}.goatcounter.com/count');
       s.src = 'https://gc.zgo.at/count.js';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('GoatCounter analytics unavailable. Connection may be blocked.');
+      };
       document.head.appendChild(s);
     });
   }
