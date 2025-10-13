@@ -11,48 +11,139 @@
     "url": "https://www.chrc-ccdp.gc.ca/",
     "notes": "Applies to federally regulated sectors (banks, telecom, interprovincial transport)."
   },
+  "accessibilityCompliance": {
+    "name": "Accessible Canada Act (ACA)",
+    "administeringBody": "Accessibility Commissioner (Canadian Accessibility Standards Development Organization)",
+    "complaintProcess": [
+      {
+        "step": 1,
+        "name": "Attempt to resolve with organization",
+        "description": "Contact the federal entity directly to resolve the accessibility barrier.",
+        "typicalTimeframe": "Informal - varies by organization"
+      },
+      {
+        "step": 2,
+        "name": "File complaint with Accessibility Commissioner",
+        "description": "Submit formal complaint if unable to resolve directly. Commissioner may facilitate resolution or conduct investigation.",
+        "typicalTimeframe": "No statutory deadline for filing; investigation timelines vary",
+        "url": "https://accessible.canada.ca/making-complaint"
+      },
+      {
+        "step": 3,
+        "name": "Investigation and Resolution",
+        "description": "Commissioner investigates and may order compliance measures, publish findings, or impose administrative monetary penalties.",
+        "typicalTimeframe": "Varies - can take months to over a year depending on complexity"
+      }
+    ],
+    "applicableTo": [
+      "Federal government departments and agencies",
+      "Crown corporations",
+      "Parliament",
+      "Federally regulated private sector (banks, telecoms, interprovincial transport, broadcasting)"
+    ],
+    "priorityAreas": [
+      "Employment",
+      "Built environment",
+      "Information and communication technologies (ICT)",
+      "Procurement of goods, services, and facilities",
+      "Design and delivery of programs and services",
+      "Transportation"
+    ],
+    "keyStandards": [
+      "Barrier identification and removal",
+      "Accessibility plans (published every 3 years)",
+      "Feedback mechanisms",
+      "Progress reports"
+    ],
+    "notes": "ACA came into force in 2019. Applies to federal jurisdiction entities. Does not replace provincial accessibility laws or human rights codes.",
+    "links": [
+      {"label": "Accessible Canada Act Overview", "url": "https://laws-lois.justice.gc.ca/eng/acts/A-0.6/"},
+      {"label": "Making a Complaint", "url": "https://accessible.canada.ca/making-complaint"},
+      {"label": "Accessibility Standards", "url": "https://accessible.canada.ca/standards"}
+    ]
+  },
   "benefitPrograms": [
     {
       "code": "CPP-D",
       "name": "Canada Pension Plan Disability",
       "administeringBody": "Service Canada",
       "description": "Income replacement for contributors with severe and prolonged disability preventing any substantially gainful work.",
-      "keyForms": ["ISP-1151", "Medical report (ISP-2519)"] ,
-      "evidenceTips": ["Longitudinal medical records", "Functional capacity details", "Prognosis statements"],
-      "appealPath": ["Reconsideration", "Social Security Tribunal (General)", "SST Appeal Division"],
+      "keyForms": ["ISP-1151 (Application)", "ISP-2519 (Medical Report)"],
+      "evidenceTips": [
+        "Longitudinal medical records showing onset and progression",
+        "Functional capacity details (what you can/cannot do)",
+        "Prognosis statements indicating severity and duration",
+        "Treatment history and compliance",
+        "Impact on ability to perform any substantially gainful work"
+      ],
+      "appealPath": [
+        {"level": "Reconsideration", "deadline": "90 days from decision", "body": "Service Canada"},
+        {"level": "Social Security Tribunal - General Division", "deadline": "90 days from reconsideration", "body": "SST-GD"},
+        {"level": "Social Security Tribunal - Appeal Division", "deadline": "90 days from GD decision", "body": "SST-AD", "notes": "Leave to appeal required; limited grounds"}
+      ],
+      "typicalProcessingTime": "120 days for initial decision (can be longer)",
       "links": [
-        {"label": "Program Overview", "url": "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-disability-benefit.html"}
+        {"label": "CPP-D Overview", "url": "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-disability-benefit.html"},
+        {"label": "Application Kit", "url": "https://www.canada.ca/en/employment-social-development/services/my-service-canada-account/apply-cpp-disability-benefit.html"},
+        {"label": "SST Appeals", "url": "https://www.canada.ca/en/sst.html"}
       ]
     },
     {
       "code": "EI-SICK",
       "name": "Employment Insurance Sickness Benefits",
       "administeringBody": "Service Canada",
-      "description": "Short-term income support for insured workers temporarily unable to work due to illness or injury.",
-      "evidenceTips": ["Medical certificate", "Employer ROE", "Functional limitations"],
-      "appealPath": ["Request for Reconsideration", "Social Security Tribunal"],
+      "description": "Short-term income support (up to 26 weeks) for insured workers temporarily unable to work due to illness, injury, or quarantine.",
+      "keyForms": ["EI Sickness Application (online via My Service Canada)", "Medical Certificate"],
+      "evidenceTips": [
+        "Medical certificate stating inability to work",
+        "Record of Employment (ROE) from employer",
+        "Functional limitations and restrictions",
+        "Expected return to work date"
+      ],
+      "appealPath": [
+        {"level": "Request for Reconsideration", "deadline": "30 days from decision", "body": "Service Canada"},
+        {"level": "Social Security Tribunal - General Division", "deadline": "365 days from reconsideration", "body": "SST-GD"}
+      ],
+      "typicalProcessingTime": "28 days after application",
+      "eligibility": "Insured employment, 600 hours in last 52 weeks, medical certification",
       "links": [
-        {"label": "EI Sickness", "url": "https://www.canada.ca/en/services/benefits/ei/ei-sickness.html"}
+        {"label": "EI Sickness Overview", "url": "https://www.canada.ca/en/services/benefits/ei/ei-sickness.html"},
+        {"label": "Apply Online", "url": "https://www.canada.ca/en/services/benefits/ei/ei-sickness/apply.html"}
       ]
     },
     {
-      "code": "ACA-COMP",
-      "name": "Accessible Canada Act Complaint",
-      "administeringBody": "Accessibility Commissioner",
-      "description": "Complaint process for barriers under the Accessible Canada Act (federal entities).",
+      "code": "CDB",
+      "name": "Canada Disability Benefit",
+      "administeringBody": "Employment and Social Development Canada",
+      "description": "New federal income supplement for working-age Canadians with disabilities (implementation in progress as of 2024-2025).",
+      "keyForms": ["Application process to be determined"],
+      "evidenceTips": ["Details pending regulations; expected to align with DTC eligibility"],
+      "notes": "The Canada Disability Benefit Act received Royal Assent in June 2023. Regulations being developed. Expected to provide income supplement for low-income persons with disabilities.",
       "links": [
-        {"label": "ACA Info", "url": "https://accessible.canada.ca/"}
+        {"label": "CDB Announcement", "url": "https://www.canada.ca/en/employment-social-development/programs/disability-benefit.html"}
       ]
     }
   ],
   "accommodationGuidance": [
-    "Duty to accommodate to point of undue hardship",
-    "Interactive dialogue required",
-    "Consider modified duties + gradual return"
+    "Duty to accommodate to point of undue hardship (Meiorin test)",
+    "Interactive dialogue required between employee and employer",
+    "Consider modified duties, flexible hours, gradual return to work",
+    "Employer must explore all reasonable accommodations",
+    "Medical information limited to restrictions and accommodation needs"
   ],
-  "evidenceFocus": ["Functional limitations", "Prognosis & restrictions", "Accommodation history"],
+  "evidenceFocus": [
+    "Functional limitations and work restrictions",
+    "Prognosis and expected duration",
+    "Accommodation history and what has/hasn't worked",
+    "Treatment plans and compliance",
+    "Impact on essential job duties"
+  ],
   "limitationNotes": [
-    "Human rights complaints generally within 12 months of incident (federal sector)."
+    "Human rights complaints: 12 months from last incident (federal sector - CHRC)",
+    "CPP-D reconsideration: 90 days from decision",
+    "CPP-D SST appeal: 90 days from reconsideration",
+    "EI reconsideration: 30 days from decision",
+    "ACA complaints: No statutory deadline, but timely filing recommended"
   ],
-  "updated": "2025-09-22"
+  "updated": "2025-10-13"
 }

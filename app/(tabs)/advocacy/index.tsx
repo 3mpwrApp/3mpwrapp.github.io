@@ -2,6 +2,8 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import JurisdictionDeadlineCalculator from '../../../components/JurisdictionDeadlineCalculator';
+import JurisdictionFormHelper from '../../../components/JurisdictionFormHelper';
 import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
 import SearchBar from '../../../components/SearchBar';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
@@ -75,6 +77,8 @@ export default function AdvocacyHub() {
     <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.hub.title','Advocacy Hub')}</Text>
     <Text style={s.subtitle}>{t('advocacy.hub.subtitle','Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.')}</Text>
   <JurisdictionPanel />
+  <JurisdictionDeadlineCalculator />
+  <JurisdictionFormHelper />
 
       <SearchBar value={query} onChangeText={setQuery} placeholder={t('advocacy.search','Search advocacy tools...')} />
 

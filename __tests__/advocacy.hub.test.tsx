@@ -5,6 +5,12 @@ import { FavoritesProvider } from '../store/favorites';
 import { SettingsProvider } from '../store/settings';
 jest.mock('@expo/vector-icons', () => ({ Ionicons: () => null }));
 jest.mock('../components/JurisdictionPanel', () => ({ JurisdictionPanel: () => null }));
+jest.mock('../components/JurisdictionDeadlineCalculator', () => ({ __esModule: true, default: () => null }));
+jest.mock('../components/JurisdictionFormHelper', () => ({ __esModule: true, default: () => null }));
+jest.mock('../store/jurisdiction', () => ({ 
+  useJurisdiction: () => ({ code: 'ON', data: null, all: [] }),
+  JurisdictionProvider: ({children}: any) => children 
+}));
 
 jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (k:string) => {
   const map: Record<string,string> = {

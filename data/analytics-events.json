@@ -36,5 +36,8 @@
   "EVIDENCE_SAVE_SINGLE": "evidence.save.single",
   "EVIDENCE_SAVE_BULK": "evidence.save.bulk",
   "EVIDENCE_QUEUE_ENQUEUED": "evidence.queue.enqueued",
-  "EVIDENCE_QUEUE_PROCESSED": "evidence.queue.processed"
+  "EVIDENCE_QUEUE_PROCESSED": "evidence.queue.processed",
+  "JURISDICTION_CHANGED": "jurisdiction.changed",
+  "JURISDICTION_DEADLINE_CALCULATED": "jurisdiction.deadline_calculated",
+  "JURISDICTION_FORM_HELPER_USED": "jurisdiction.form_helper_used"
 }

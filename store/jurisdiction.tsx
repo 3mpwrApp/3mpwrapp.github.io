@@ -1,6 +1,8 @@
 import React from "react";
 
 import { getJurisdiction, listJurisdictions } from "../data/jurisdictions";
+import { logEvent } from "../services/analytics";
+import { ANALYTICS_EVENTS } from "../services/analyticsEvents";
 import type { JurisdictionData } from "../types/jurisdiction";
 
 let AsyncStorage: any;
@@ -59,7 +61,14 @@ export function JurisdictionProvider({ children }: { children: React.ReactNode }
   // Provide stable setter (validate code exists; fall back if bad)
   const setCode = React.useCallback((next: string) => {
     const exists = listJurisdictions().some((j) => j.code === next);
-    setCodeState(exists ? next : DEFAULT_CODE);
+    const validCode = exists ? next : DEFAULT_CODE;
+    setCodeState(validCode);
+    
+    // Track jurisdiction changes
+    logEvent(ANALYTICS_EVENTS.JURISDICTION_CHANGED, {
+      jurisdiction_code: validCode,
+      jurisdiction_name: getJurisdiction(validCode)?.name || validCode,
+    });
   }, []);
 
   const data = getJurisdiction(code) || null;
