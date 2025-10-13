@@ -61,7 +61,7 @@ export default function ResourcesScreen() {
   const [category, setCategory] = React.useState<CategoryFilter>("all");
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
-  const { code: jurisdictionCode, all: allJurisdictions } = useJurisdiction();
+  const { all: allJurisdictions } = useJurisdiction();
   const [jurisdictionFilter, setJurisdictionFilter] = React.useState<string>("all");
 
   const reload = React.useCallback(async () => {
