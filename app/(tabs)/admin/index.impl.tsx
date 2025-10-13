@@ -1,23 +1,23 @@
 // import { useLocalSearchParams } from "expo-router";
 import {
-    collection,
-    doc,
-    getCountFromServer,
-    getDocs,
-    limit,
-    query,
-    startAfter,
-    updateDoc,
-    where
+  collection,
+  doc,
+  getCountFromServer,
+  getDocs,
+  limit,
+  query,
+  startAfter,
+  updateDoc,
+  where
 } from "firebase/firestore";
 import React from "react";
 import {
-    Alert,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    View
+  Alert,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
@@ -26,6 +26,7 @@ import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { db } from "../../../firebase/config";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
 import { computeActivityStats, logActivity, subscribeToActivityFeed } from "../../../services/activity";
+import { isBYOCEnabled } from "../../../services/dataPolicy";
 import { useAppPalette } from "../../../theme/usePalette";
 
 import * as AdminLazy from "./_lazy";
@@ -37,6 +38,7 @@ export const options = { href: null };
 export default function AdminPanel() {
   const palette = useAppPalette();
   const s = styles(palette);
+  const byocMode = isBYOCEnabled();
 
   // const params = useLocalSearchParams<{ tab?: ReviewKind }>();
 
@@ -80,6 +82,7 @@ export default function AdminPanel() {
   // Admin audit subscription moved inside AuditPanel component
 
   React.useEffect(() => {
+    if (!db || byocMode) return; // Skip in BYOC mode - no Firestore access
     (async () => {
       try {
         const usersCol = collection(db, "users");
@@ -99,7 +102,7 @@ export default function AdminPanel() {
         setCounts({ users: uc, campaigns: cc, resources: rc });
       } catch {}
     })();
-  }, []);
+  }, [byocMode]);
 
   const loadFlags = React.useCallback(async () => {
     try {
@@ -144,9 +147,21 @@ export default function AdminPanel() {
         <Text style={s.text}>Use this area for admin-only tools and metrics.</Text>
         <Text style={s.text}>To grant admin: set Firebase custom claim admin=true for your UID.</Text>
 
-        <View style={{ marginTop: 8 }}>
-          <Text style={s.text}>Counts — Users: {counts.users ?? "-"} | Campaigns: {counts.campaigns ?? "-"} | Resources: {counts.resources ?? "-"}</Text>
-        </View>
+        {byocMode && (
+          <View style={{ marginTop: 12, padding: 12, backgroundColor: palette.warning || '#FFA500', borderRadius: 8 }}>
+            <Text style={{ color: '#000', fontWeight: '700', marginBottom: 4 }}>⚠️ BYOC Mode Active</Text>
+            <Text style={{ color: '#000', fontSize: 13 }}>
+              Admin features requiring Firestore are disabled in Hybrid/Strict BYOC mode. 
+              Only activity logs and broadcast tools are available. Switch to default mode for full admin access.
+            </Text>
+          </View>
+        )}
+
+        {!byocMode && (
+          <View style={{ marginTop: 8 }}>
+            <Text style={s.text}>Counts — Users: {counts.users ?? "-"} | Campaigns: {counts.campaigns ?? "-"} | Resources: {counts.resources ?? "-"}</Text>
+          </View>
+        )}
 
         <React.Suspense fallback={<View style={s.card}><Text style={s.cardTitle}>Admin Audit</Text><Text style={s.text}>Loading…</Text></View>}>
           <AdminLazy.AuditPanel />
@@ -207,8 +222,10 @@ export default function AdminPanel() {
           <AdminLazy.FaqEditor />
         </React.Suspense>
 
-        {/* User Lookup */}
-        <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>User Lookup</Text>
+        {!byocMode && (
+          <>
+            {/* User Lookup */}
+            <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>User Lookup</Text>
         <View style={{ flexDirection: "row", gap: 8, alignItems: "center" }}>
           <TextInput
             value={email}
@@ -348,6 +365,8 @@ export default function AdminPanel() {
               </View>
             ))}
           </>
+        )}
+        </>
         )}
 
         <React.Suspense fallback={<Text style={[s.text, { marginTop: 16 }]}>Loading content review…</Text>}>

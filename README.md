@@ -335,6 +335,8 @@ Without this var, the app uses offline deterministic fallbacks.
 On first open, users must accept Terms to proceed. See `components/TermsGate.tsx`. Host your Terms at `https://empowr.app/terms` or update the URL inside the component.
 ## Admin setup
 
+**Full documentation:** See [docs/ADMIN.md](./docs/ADMIN.md) for comprehensive admin guide including BYOC mode limitations, security, and troubleshooting.
+
 Grant yourself admin once using Firebase Admin SDK:
 
 1. Download a Firebase service account JSON for your project.
@@ -344,11 +346,15 @@ Grant yourself admin once using Firebase Admin SDK:
 
 Revoke admin: `npm run admin:set -- <uid> false`
 
+**Note:** Admin features requiring Firestore are disabled in Hybrid/Strict BYOC mode. Only activity logs and broadcast tools are available. Switch to default mode for full admin access.
+
 ### Admin scripts
 
 - `npm run admin:users` — List all users as JSON (add `-- --format csv` for CSV)
 - `npm run admin:fcm` — Send FCM via Admin SDK (or `--topic <topic>`)
 - `npm run admin:export` — Export a Firestore collection
+
+For detailed script usage and examples, see [docs/ADMIN.md](./docs/ADMIN.md#admin-scripts).
 
 ## Navigation & Tabs
 
