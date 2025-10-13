@@ -274,7 +274,7 @@ export function IndigenousLanguageProvider({ children }: { children: React.React
     await saveSettings(newSettings);
   };
 
-  const getLocalizedText = (key: string, fallback: string): string => {
+  const getLocalizedText = (_key: string, fallback: string): string => {
     // This would integrate with the translation system
     // For now, return the fallback
     return fallback;

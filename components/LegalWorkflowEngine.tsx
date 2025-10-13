@@ -17,47 +17,7 @@ import { useTranslation } from '../i18n';
 import A11yPressable from './A11yPressable';
 import { A11yTitle, A11yWrapper } from './A11yWrapper';
 
-// Workflow Engine Types - using imported types
-
-interface StepAction {
-  id: string;
-  type: ActionType;
-  description: string;
-  isAutomated: boolean;
-  automationScript?: string;
-  userInput?: Record<string, any>[];
-  validation?: Record<string, any>[];
-  errorHandling: Record<string, any>;
-  retryLogic?: Record<string, any>;
-  timeoutSeconds: number;
-  successCriteria: string[];
-  failureCriteria: string[];
-}
-
-// Enums and Types
-type StepType = 
-  | 'data_collection'
-  | 'document_generation'
-  | 'form_submission'
-  | 'deadline_tracking'
-  | 'communication'
-  | 'review_approval'
-  | 'payment_processing'
-  | 'notification'
-  | 'validation'
-  | 'cultural_consultation';
-
-type ActionType = 
-  | 'generate_document'
-  | 'send_email'
-  | 'create_calendar_event'
-  | 'submit_form'
-  | 'request_review'
-  | 'schedule_meeting'
-  | 'send_notification'
-  | 'update_status'
-  | 'validate_data'
-  | 'cultural_check';
+// Workflow Engine - using imported types from types/phase2.ts
 
 // Mock Implementation
 export default function LegalWorkflowEngine() {
