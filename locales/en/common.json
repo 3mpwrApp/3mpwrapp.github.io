@@ -2820,6 +2820,30 @@
       "other": {
         "title": "Other Situation",
         "desc": "Browse all letter types"
+      },
+      "medicalLeave": {
+        "title": "Medical Leave Needed",
+        "desc": "Request leave for medical reasons or extend existing leave"
+      },
+      "workplaceIssues": {
+        "title": "Workplace Discrimination/Harassment",
+        "desc": "Report harassment, wrongful termination, or discrimination"
+      },
+      "insuranceDispute": {
+        "title": "Insurance Dispute",
+        "desc": "Appeal LTD denial or challenge IME report"
+      },
+      "medicalSupport": {
+        "title": "Medical Documentation Needed",
+        "desc": "Request medical letters or records from healthcare providers"
+      },
+      "housingAccessibility": {
+        "title": "Housing Accessibility",
+        "desc": "Request home modifications, service animal approval, or parking permit"
+      },
+      "humanRights": {
+        "title": "Legal Action Required",
+        "desc": "File human rights complaint or send legal demand"
       }
     },
     "types": {
@@ -2842,6 +2866,70 @@
       "unionRequest": {
         "title": "Union Assistance Request",
         "desc": "Request union support for workplace issues"
+      },
+      "medicalLeaveRequest": {
+        "title": "Medical Leave Request",
+        "desc": "Request time off work for medical treatment or recovery"
+      },
+      "leaveExtension": {
+        "title": "Leave Extension Request",
+        "desc": "Extend existing medical leave due to ongoing health needs"
+      },
+      "wsibClaim": {
+        "title": "WSIB Injury Report",
+        "desc": "Report workplace injury for workers' compensation claim"
+      },
+      "harassmentComplaint": {
+        "title": "Harassment Complaint",
+        "desc": "File formal complaint about workplace harassment"
+      },
+      "wrongfulTermination": {
+        "title": "Wrongful Termination Letter",
+        "desc": "Challenge termination based on disability discrimination"
+      },
+      "ltdAppeal": {
+        "title": "LTD Denial Appeal",
+        "desc": "Appeal long-term disability insurance denial"
+      },
+      "imeObjection": {
+        "title": "IME Report Objection",
+        "desc": "Challenge biased independent medical examination"
+      },
+      "doctorSupportRequest": {
+        "title": "Doctor Support Letter Request",
+        "desc": "Request medical letter from your physician"
+      },
+      "medicalRecordsRequest": {
+        "title": "Medical Records Request",
+        "desc": "Request copies of your complete medical records"
+      },
+      "prescriptionCoverageAppeal": {
+        "title": "Prescription Coverage Appeal",
+        "desc": "Appeal denial of medication coverage"
+      },
+      "housingAccommodation": {
+        "title": "Housing Modification Request",
+        "desc": "Request accessibility modifications to your home"
+      },
+      "serviceAnimalApproval": {
+        "title": "Service Animal Approval",
+        "desc": "Request approval for service or emotional support animal"
+      },
+      "parkingPermitAppeal": {
+        "title": "Parking Permit Appeal",
+        "desc": "Appeal denial of accessible parking permit"
+      },
+      "humanRightsComplaint": {
+        "title": "Human Rights Complaint",
+        "desc": "File discrimination complaint with human rights tribunal"
+      },
+      "ceaseAndDesist": {
+        "title": "Cease and Desist Letter",
+        "desc": "Demand immediate stop to harmful behavior"
+      },
+      "demandLetter": {
+        "title": "Formal Demand Letter",
+        "desc": "Demand action or compensation for wrongs"
       }
     },
     "fields": {
@@ -2882,7 +2970,109 @@
       "issue": "Issue",
       "issuePlaceholder": "Describe the workplace issue",
       "assistance": "Assistance Needed",
-      "assistancePlaceholder": "Describe the support you're requesting"
+      "assistancePlaceholder": "Describe the support you're requesting",
+      "leaveStartDate": "Leave Start Date",
+      "leaveStartDatePlaceholder": "When you need leave to begin",
+      "leaveDuration": "Expected Duration",
+      "leaveDurationPlaceholder": "e.g., 2 weeks, 3 months",
+      "medicalReason": "Medical Reason (General)",
+      "medicalReasonPlaceholder": "Brief reason without detailed diagnosis",
+      "originalEndDate": "Original End Date",
+      "originalEndDatePlaceholder": "Current scheduled return date",
+      "newReturnDate": "New Return Date",
+      "newReturnDatePlaceholder": "Requested new return date",
+      "medicalUpdate": "Medical Update",
+      "medicalUpdatePlaceholder": "Brief update on recovery progress",
+      "incidentDate": "Incident Date",
+      "incidentDatePlaceholder": "Date of workplace injury",
+      "incidentDescription": "Incident Description",
+      "incidentDescriptionPlaceholder": "Detailed description of how injury occurred",
+      "injuries": "Injuries Sustained",
+      "injuriesPlaceholder": "Description of injuries",
+      "witnesses": "Witnesses",
+      "witnessesPlaceholder": "Names of witnesses (if any)",
+      "harasserName": "Harasser Name/Title",
+      "harasserNamePlaceholder": "Name or title of person causing harassment",
+      "incidentDetails": "Incident Details",
+      "incidentDetailsPlaceholder": "Dates, times, locations, and description of incidents",
+      "desiredResolution": "Desired Resolution",
+      "desiredResolutionPlaceholder": "What action you want taken",
+      "terminationDate": "Termination Date",
+      "terminationDatePlaceholder": "Date you were terminated",
+      "reasonGiven": "Reason Given",
+      "reasonGivenPlaceholder": "Stated reason for termination",
+      "discriminationEvidence": "Evidence of Discrimination",
+      "discriminationEvidencePlaceholder": "List evidence supporting discrimination claim",
+      "desiredOutcome": "Desired Outcome",
+      "desiredOutcomePlaceholder": "What you're seeking (reinstatement, severance, etc.)",
+      "policyNumber": "Policy Number",
+      "policyNumberPlaceholder": "Your insurance policy number",
+      "denialDate": "Denial Date",
+      "denialDatePlaceholder": "Date benefits were denied",
+      "denialReasons": "Denial Reasons",
+      "denialReasonsPlaceholder": "Reasons given for denial",
+      "appealArguments": "Appeal Arguments",
+      "appealArgumentsPlaceholder": "Your detailed arguments with evidence",
+      "imeDate": "IME Date",
+      "imeDatePlaceholder": "Date of independent medical exam",
+      "imeDoctorName": "IME Doctor Name",
+      "imeDoctorNamePlaceholder": "Name of examining doctor",
+      "objections": "Objections",
+      "objectionsPlaceholder": "Why IME report is biased or inaccurate",
+      "doctorName": "Doctor Name",
+      "doctorNamePlaceholder": "Your physician's name",
+      "purposeOfLetter": "Purpose of Letter",
+      "purposeOfLetterPlaceholder": "Why you need the medical letter",
+      "specificPoints": "Specific Points to Address",
+      "specificPointsPlaceholder": "What the letter should cover",
+      "deadline": "Deadline",
+      "deadlinePlaceholder": "When you need this by",
+      "dateOfBirth": "Date of Birth",
+      "dateOfBirthPlaceholder": "Your date of birth",
+      "recordsPeriod": "Records Period",
+      "recordsPeriodPlaceholder": "e.g., 2020-present",
+      "purposeOfRequest": "Purpose of Request",
+      "purposeOfRequestPlaceholder": "Why you need your records",
+      "drugName": "Medication Name",
+      "drugNamePlaceholder": "Name of prescribed medication",
+      "prescribingDoctor": "Prescribing Doctor",
+      "prescribingDoctorPlaceholder": "Doctor who prescribed medication",
+      "denialReason": "Denial Reason",
+      "denialReasonPlaceholder": "Why coverage was denied",
+      "medicalNecessity": "Medical Necessity",
+      "medicalNecessityPlaceholder": "Why this is medically necessary",
+      "landlordName": "Landlord Name",
+      "landlordNamePlaceholder": "Your landlord or property manager",
+      "address": "Address",
+      "addressPlaceholder": "Your rental address",
+      "modificationsRequested": "Modifications Requested",
+      "modificationsRequestedPlaceholder": "What accessibility changes you need",
+      "animalType": "Animal Type",
+      "animalTypePlaceholder": "Type and breed of service animal",
+      "training": "Training & Certification",
+      "trainingPlaceholder": "Animal's training and certifications",
+      "mobilityLimitations": "Mobility Limitations",
+      "mobilityLimitationsPlaceholder": "Describe walking/mobility limitations",
+      "functionalImpact": "Functional Impact",
+      "functionalImpactPlaceholder": "How lack of parking affects your life",
+      "respondentName": "Respondent Name",
+      "respondentNamePlaceholder": "Person or organization you're complaining about",
+      "attemptedResolution": "Attempted Resolution",
+      "attemptedResolutionPlaceholder": "Steps you took to resolve informally",
+      "desiredRemedy": "Desired Remedy",
+      "desiredRemedyPlaceholder": "What you want the tribunal to order",
+      "recipientName": "Recipient Name",
+      "recipientNamePlaceholder": "Person or organization receiving this letter",
+      "harmfulBehavior": "Harmful Behavior",
+      "harmfulBehaviorPlaceholder": "Detailed description of behavior to stop",
+      "legalBasis": "Legal Basis",
+      "legalBasisPlaceholder": "Laws or rights being violated",
+      "wrongDescription": "Description of Wrong",
+      "wrongDescriptionPlaceholder": "What wrong was done to you",
+      "demandedAction": "Demanded Action",
+      "demandedActionPlaceholder": "Specific actions you're demanding",
+      "compensationRequested": "Compensation Requested",
+      "compensationRequestedPlaceholder": "Amount of money sought"
     }
   }
 }

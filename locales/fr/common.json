@@ -2738,6 +2738,30 @@
       "other": {
         "title": "Autre situation",
         "desc": "Parcourez tous les types de lettres"
+      },
+      "medicalLeave": {
+        "title": "Congé médical nécessaire",
+        "desc": "Demandez un congé pour des raisons médicales ou prolongez un congé existant"
+      },
+      "workplaceIssues": {
+        "title": "Discrimination/harcèlement au travail",
+        "desc": "Signalez du harcèlement, un congédiement abusif ou de la discrimination"
+      },
+      "insuranceDispute": {
+        "title": "Litige d'assurance",
+        "desc": "Contestez un refus d'ALI ou contestez un rapport d'EMI"
+      },
+      "medicalSupport": {
+        "title": "Documentation médicale nécessaire",
+        "desc": "Demandez des lettres médicales ou des dossiers auprès des fournisseurs de soins"
+      },
+      "housingAccessibility": {
+        "title": "Accessibilité du logement",
+        "desc": "Demandez des modifications domiciliaires, l'approbation d'un animal d'assistance ou un permis de stationnement"
+      },
+      "humanRights": {
+        "title": "Action juridique requise",
+        "desc": "Déposez une plainte pour droits de la personne ou envoyez une mise en demeure"
       }
     },
     "types": {
@@ -2760,6 +2784,70 @@
       "unionRequest": {
         "title": "Demande d'aide syndicale",
         "desc": "Demandez le soutien syndical pour des problèmes en milieu de travail"
+      },
+      "medicalLeaveRequest": {
+        "title": "Demande de congé médical",
+        "desc": "Demandez un congé de travail pour traitement médical ou rétablissement"
+      },
+      "leaveExtension": {
+        "title": "Demande de prolongation de congé",
+        "desc": "Prolongez un congé médical existant en raison de besoins de santé continus"
+      },
+      "wsibClaim": {
+        "title": "Rapport de blessure CNESST",
+        "desc": "Signalez une blessure au travail pour une réclamation d'indemnisation"
+      },
+      "harassmentComplaint": {
+        "title": "Plainte pour harcèlement",
+        "desc": "Déposez une plainte formelle concernant du harcèlement au travail"
+      },
+      "wrongfulTermination": {
+        "title": "Lettre de congédiement abusif",
+        "desc": "Contestez un congédiement fondé sur la discrimination liée au handicap"
+      },
+      "ltdAppeal": {
+        "title": "Appel de refus d'ALI",
+        "desc": "Contestez un refus d'assurance invalidité de longue durée"
+      },
+      "imeObjection": {
+        "title": "Objection au rapport d'EMI",
+        "desc": "Contestez un examen médical indépendant biaisé"
+      },
+      "doctorSupportRequest": {
+        "title": "Demande de lettre d'appui médical",
+        "desc": "Demandez une lettre médicale à votre médecin"
+      },
+      "medicalRecordsRequest": {
+        "title": "Demande de dossiers médicaux",
+        "desc": "Demandez des copies de vos dossiers médicaux complets"
+      },
+      "prescriptionCoverageAppeal": {
+        "title": "Appel de couverture de médicaments",
+        "desc": "Contestez un refus de couverture de médicaments"
+      },
+      "housingAccommodation": {
+        "title": "Demande de modification de logement",
+        "desc": "Demandez des modifications d'accessibilité à votre domicile"
+      },
+      "serviceAnimalApproval": {
+        "title": "Approbation d'animal d'assistance",
+        "desc": "Demandez l'approbation d'un animal d'assistance ou de soutien émotionnel"
+      },
+      "parkingPermitAppeal": {
+        "title": "Appel de permis de stationnement",
+        "desc": "Contestez un refus de permis de stationnement accessible"
+      },
+      "humanRightsComplaint": {
+        "title": "Plainte pour droits de la personne",
+        "desc": "Déposez une plainte de discrimination auprès du tribunal des droits de la personne"
+      },
+      "ceaseAndDesist": {
+        "title": "Lettre de mise en demeure",
+        "desc": "Exigez l'arrêt immédiat d'un comportement préjudiciable"
+      },
+      "demandLetter": {
+        "title": "Lettre de mise en demeure formelle",
+        "desc": "Exigez une action ou une indemnisation pour des torts"
       }
     },
     "fields": {
@@ -2800,7 +2888,109 @@
       "issue": "Problème",
       "issuePlaceholder": "Décrivez le problème en milieu de travail",
       "assistance": "Aide nécessaire",
-      "assistancePlaceholder": "Décrivez le soutien que vous demandez"
+      "assistancePlaceholder": "Décrivez le soutien que vous demandez",
+      "leaveStartDate": "Date de début du congé",
+      "leaveStartDatePlaceholder": "Quand vous avez besoin que le congé commence",
+      "leaveDuration": "Durée prévue",
+      "leaveDurationPlaceholder": "p. ex., 2 semaines, 3 mois",
+      "medicalReason": "Raison médicale (générale)",
+      "medicalReasonPlaceholder": "Brève raison sans diagnostic détaillé",
+      "originalEndDate": "Date de fin originale",
+      "originalEndDatePlaceholder": "Date de retour actuellement prévue",
+      "newReturnDate": "Nouvelle date de retour",
+      "newReturnDatePlaceholder": "Nouvelle date de retour demandée",
+      "medicalUpdate": "Mise à jour médicale",
+      "medicalUpdatePlaceholder": "Brève mise à jour sur les progrès de rétablissement",
+      "incidentDate": "Date de l'incident",
+      "incidentDatePlaceholder": "Date de la blessure au travail",
+      "incidentDescription": "Description de l'incident",
+      "incidentDescriptionPlaceholder": "Description détaillée de la façon dont la blessure s'est produite",
+      "injuries": "Blessures subies",
+      "injuriesPlaceholder": "Description des blessures",
+      "witnesses": "Témoins",
+      "witnessesPlaceholder": "Noms des témoins (le cas échéant)",
+      "harasserName": "Nom/titre du harceleur",
+      "harasserNamePlaceholder": "Nom ou titre de la personne causant le harcèlement",
+      "incidentDetails": "Détails de l'incident",
+      "incidentDetailsPlaceholder": "Dates, heures, lieux et description des incidents",
+      "desiredResolution": "Résolution souhaitée",
+      "desiredResolutionPlaceholder": "Quelle action vous voulez qui soit prise",
+      "terminationDate": "Date de cessation d'emploi",
+      "terminationDatePlaceholder": "Date à laquelle vous avez été congédié",
+      "reasonGiven": "Raison donnée",
+      "reasonGivenPlaceholder": "Raison donnée pour le congédiement",
+      "discriminationEvidence": "Preuve de discrimination",
+      "discriminationEvidencePlaceholder": "Énumérez les preuves appuyant la plainte de discrimination",
+      "desiredOutcome": "Résultat souhaité",
+      "desiredOutcomePlaceholder": "Ce que vous recherchez (réintégration, indemnité de départ, etc.)",
+      "policyNumber": "Numéro de police",
+      "policyNumberPlaceholder": "Votre numéro de police d'assurance",
+      "denialDate": "Date de refus",
+      "denialDatePlaceholder": "Date à laquelle les prestations ont été refusées",
+      "denialReasons": "Raisons du refus",
+      "denialReasonsPlaceholder": "Raisons données pour le refus",
+      "appealArguments": "Arguments d'appel",
+      "appealArgumentsPlaceholder": "Vos arguments détaillés avec preuves",
+      "imeDate": "Date de l'EMI",
+      "imeDatePlaceholder": "Date de l'examen médical indépendant",
+      "imeDoctorName": "Nom du médecin de l'EMI",
+      "imeDoctorNamePlaceholder": "Nom du médecin examinateur",
+      "objections": "Objections",
+      "objectionsPlaceholder": "Pourquoi le rapport d'EMI est biaisé ou inexact",
+      "doctorName": "Nom du médecin",
+      "doctorNamePlaceholder": "Le nom de votre médecin",
+      "purposeOfLetter": "Objectif de la lettre",
+      "purposeOfLetterPlaceholder": "Pourquoi vous avez besoin de la lettre médicale",
+      "specificPoints": "Points spécifiques à aborder",
+      "specificPointsPlaceholder": "Ce que la lettre devrait couvrir",
+      "deadline": "Date limite",
+      "deadlinePlaceholder": "Quand vous en avez besoin",
+      "dateOfBirth": "Date de naissance",
+      "dateOfBirthPlaceholder": "Votre date de naissance",
+      "recordsPeriod": "Période des dossiers",
+      "recordsPeriodPlaceholder": "p. ex., 2020-présent",
+      "purposeOfRequest": "Objectif de la demande",
+      "purposeOfRequestPlaceholder": "Pourquoi vous avez besoin de vos dossiers",
+      "drugName": "Nom du médicament",
+      "drugNamePlaceholder": "Nom du médicament prescrit",
+      "prescribingDoctor": "Médecin prescripteur",
+      "prescribingDoctorPlaceholder": "Médecin qui a prescrit le médicament",
+      "denialReason": "Raison du refus",
+      "denialReasonPlaceholder": "Pourquoi la couverture a été refusée",
+      "medicalNecessity": "Nécessité médicale",
+      "medicalNecessityPlaceholder": "Pourquoi c'est médicalement nécessaire",
+      "landlordName": "Nom du propriétaire",
+      "landlordNamePlaceholder": "Votre propriétaire ou gestionnaire immobilier",
+      "address": "Adresse",
+      "addressPlaceholder": "Votre adresse de location",
+      "modificationsRequested": "Modifications demandées",
+      "modificationsRequestedPlaceholder": "Quels changements d'accessibilité vous avez besoin",
+      "animalType": "Type d'animal",
+      "animalTypePlaceholder": "Type et race de l'animal d'assistance",
+      "training": "Formation et certification",
+      "trainingPlaceholder": "Formation et certifications de l'animal",
+      "mobilityLimitations": "Limitations de mobilité",
+      "mobilityLimitationsPlaceholder": "Décrivez les limitations de marche/mobilité",
+      "functionalImpact": "Impact fonctionnel",
+      "functionalImpactPlaceholder": "Comment le manque de stationnement affecte votre vie",
+      "respondentName": "Nom du défendeur",
+      "respondentNamePlaceholder": "Personne ou organisation contre qui vous vous plaignez",
+      "attemptedResolution": "Tentative de résolution",
+      "attemptedResolutionPlaceholder": "Étapes que vous avez prises pour résoudre de manière informelle",
+      "desiredRemedy": "Recours souhaité",
+      "desiredRemedyPlaceholder": "Ce que vous voulez que le tribunal ordonne",
+      "recipientName": "Nom du destinataire",
+      "recipientNamePlaceholder": "Personne ou organisation recevant cette lettre",
+      "harmfulBehavior": "Comportement préjudiciable",
+      "harmfulBehaviorPlaceholder": "Description détaillée du comportement à arrêter",
+      "legalBasis": "Base juridique",
+      "legalBasisPlaceholder": "Lois ou droits violés",
+      "wrongDescription": "Description du tort",
+      "wrongDescriptionPlaceholder": "Quel tort vous a été fait",
+      "demandedAction": "Action exigée",
+      "demandedActionPlaceholder": "Actions spécifiques que vous exigez",
+      "compensationRequested": "Indemnisation demandée",
+      "compensationRequestedPlaceholder": "Montant d'argent demandé"
     }
   }
 }
