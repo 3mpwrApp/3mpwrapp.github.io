@@ -24,8 +24,10 @@ import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import { ComplexityBadge, SimplifiedView } from "../../../components/CognitiveAccessibility";
 import LetterActionsBar from "../../../components/letters/LetterActionsBar";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { type TaskComplexity } from "../../../constants/cognitive";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { buildCombinedEvidenceSummary, buildSymptomSummary } from "../../../services/insights";
@@ -163,6 +165,7 @@ interface LetterTemplate {
   icon: string;
   fields: FieldDefinition[];
   generatePreview: (fields: Record<string, string>) => string;
+  complexity?: TaskComplexity; // Add complexity scoring
 }
 
 interface FieldDefinition {
@@ -183,6 +186,14 @@ const LETTER_TEMPLATES: Record<LetterType, LetterTemplate> = {
     titleKey: 'letterWizard.types.accommodation.title',
     descKey: 'letterWizard.types.accommodation.desc',
     icon: '🏢',
+    complexity: { 
+      level: 'moderate', 
+      steps: 6, 
+      estimatedMinutes: 15,
+      requiresDecisions: 2,
+      requiresReading: 'light',
+      requiresWriting: true
+    },
     fields: [
       { key: 'name', labelKey: 'letterWizard.fields.name', placeholderKey: 'letterWizard.fields.namePlaceholder', defaultFromProfile: 'name' },
       { key: 'employer', labelKey: 'letterWizard.fields.employer', placeholderKey: 'letterWizard.fields.employerPlaceholder' },
@@ -947,30 +958,36 @@ export default function LetterWizard() {
         <Text style={s.stepDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>
           {t('letterWizard.step2Desc', 'Based on your situation, these letters are recommended:')}
         </Text>
-        <View style={s.optionsGrid}>
+        <SimplifiedView>
           {situation.recommendedLetters.map(type => {
             const template = LETTER_TEMPLATES[type];
             return (
-              <A11yPressable
-                key={type}
-                onPress={() => selectLetterType(type)}
-                hitSlop={HIT_SLOP_8}
-                style={s.optionCard}
-                accessibilityRole="button"
-                accessibilityLabel={t(template.titleKey, template.titleKey)}
-                accessibilityHint={t(template.descKey, template.descKey)}
-              >
-                <Text style={s.optionIcon}>{template.icon}</Text>
-                <Text style={s.optionTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-                  {t(template.titleKey, template.titleKey)}
-                </Text>
-                <Text style={s.optionDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-                  {t(template.descKey, template.descKey)}
-                </Text>
-              </A11yPressable>
+              <View key={type} style={{ marginBottom: 12 }}>
+                <A11yPressable
+                  onPress={() => selectLetterType(type)}
+                  hitSlop={HIT_SLOP_8}
+                  style={s.optionCard}
+                  accessibilityRole="button"
+                  accessibilityLabel={t(template.titleKey, template.titleKey)}
+                  accessibilityHint={t(template.descKey, template.descKey)}
+                >
+                  <Text style={s.optionIcon}>{template.icon}</Text>
+                  <Text style={s.optionTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                    {t(template.titleKey, template.titleKey)}
+                  </Text>
+                  <Text style={s.optionDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                    {t(template.descKey, template.descKey)}
+                  </Text>
+                </A11yPressable>
+                {template.complexity && (
+                  <View style={{ marginTop: 8 }}>
+                    <ComplexityBadge complexity={template.complexity} showDetails={false} />
+                  </View>
+                )}
+              </View>
             );
           })}
-        </View>
+        </SimplifiedView>
         <A11yPressable
           onPress={() => setStep('situation')}
           hitSlop={HIT_SLOP_8}
