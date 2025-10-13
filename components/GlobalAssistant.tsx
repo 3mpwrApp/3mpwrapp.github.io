@@ -1,4 +1,4 @@
-import { Link, usePathname } from 'expo-router';
+import { usePathname, useRouter } from 'expo-router';
 import React from 'react';
 import { Animated, Easing, StyleSheet, Text, View } from 'react-native';
 
@@ -12,39 +12,90 @@ import A11yPressable from './A11yPressable';
 /**
  * Floating global AI assistant entry point.
  * - Always available above tabs (root layout)
- * - Navigates to advocacy coach (can be re-routed later to a unified chat)
+ * - Smart routing: routes to different destinations based on context
+ *   - If user has disability wizard suggestions: goes to home
+ *   - If user has recent tools: goes to assistant hub
+ *   - Default: goes to assistant hub
  */
 export default function GlobalAssistant() {
   const palette = useAppPalette();
   const s = styles(palette);
   const pathname = usePathname();
+  const router = useRouter();
   const { t } = useTranslation();
   const { showAssistantPill = true, assistantPillPosition = 'left' } = useSettings();
+  const [smartRoute, setSmartRoute] = React.useState<string>('/(tabs)/advocacy/assistant-hub');
+  
+  // Determine smart route based on context
+  React.useEffect(() => {
+    (async () => {
+      try {
+        // Check if user has disability wizard suggestions
+        const { getWizardSuggestions } = await import('../services/disabilityWizard');
+        const suggestions = await getWizardSuggestions();
+        
+        // Check if user has recent tool usage
+        const { usage } = await import('../services/usage');
+        const buffer = usage?.getBuffer?.() || [];
+        const recentTools = buffer
+          .filter((e: any) => ['usage.view', 'usage.complete'].includes(e.type))
+          .slice(-5);
+        
+        // Smart routing logic:
+        // 1. If on home and has suggestions -> assistant hub
+        // 2. If on assistant hub -> home (toggle behavior)
+        // 3. If has suggestions and not on home -> home
+        // 4. Otherwise -> assistant hub
+        if (pathname === '/(tabs)/index' || pathname === '/') {
+          setSmartRoute('/(tabs)/advocacy/assistant-hub');
+        } else if (pathname === '/(tabs)/advocacy/assistant-hub') {
+          setSmartRoute('/(tabs)/index');
+        } else if (suggestions.length > 0) {
+          setSmartRoute('/(tabs)/index');
+        } else if (recentTools.length > 0) {
+          setSmartRoute('/(tabs)/advocacy/assistant-hub');
+        } else {
+          setSmartRoute('/(tabs)/advocacy/assistant-hub');
+        }
+      } catch {
+        setSmartRoute('/(tabs)/advocacy/assistant-hub');
+      }
+    })();
+  }, [pathname]);
+  
   // Haptics optional
   let Haptics: any; try { Haptics = require('expo-haptics'); } catch {}
   const scale = React.useRef(new Animated.Value(1)).current as any;
   const animateTo = (v: number) => {
     Animated.timing(scale, { toValue: v, duration: 90, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();
   };
+  
   // Hide on auth routes or modal overlays
   if (pathname?.startsWith('/(auth)')) return null;
   if (!showAssistantPill) return null;
+  
+  const label = smartRoute === '/(tabs)/index' 
+    ? t('assistant.pill.suggestions', 'View suggestions')
+    : t('assistant.pill.open','Open assistant');
+  
   return (
     <View style={[s.wrap, assistantPillPosition === 'right' ? s.right : s.left, { pointerEvents: 'box-none' as any }]}>
-      <Link href={('/(tabs)/advocacy/assistant-hub' as any)} asChild>
-        <A11yPressable
-          role="button"
-          hitSlop={HIT_SLOP_8}
-          accessibilityLabel={t('assistant.pill.open','Open assistant')}
-          style={s.btn}
-          onPressIn={() => { try { Haptics?.impactAsync?.(Haptics?.ImpactFeedbackStyle?.Light || 0); } catch {}; animateTo(0.96); }}
-          onPressOut={() => animateTo(1)}
-        >
-          <Animated.View style={{ transform: [{ scale }] }}>
-            <Text style={s.text}>{t('assistant.pill.cta','🤖 Ask')}</Text>
-          </Animated.View>
-        </A11yPressable>
-      </Link>
+      <A11yPressable
+        role="button"
+        hitSlop={HIT_SLOP_8}
+        accessibilityLabel={label}
+        style={s.btn}
+        onPressIn={() => { try { Haptics?.impactAsync?.(Haptics?.ImpactFeedbackStyle?.Light || 0); } catch {}; animateTo(0.96); }}
+        onPressOut={() => animateTo(1)}
+        onPress={() => {
+          try { Haptics?.impactAsync?.(Haptics?.ImpactFeedbackStyle?.Light || 0); } catch {};
+          router.push(smartRoute as any);
+        }}
+      >
+        <Animated.View style={{ transform: [{ scale }] }}>
+          <Text style={s.text}>{t('assistant.pill.cta','🤖 Ask')}</Text>
+        </Animated.View>
+      </A11yPressable>
     </View>
   );
 }

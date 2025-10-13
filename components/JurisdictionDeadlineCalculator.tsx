@@ -56,7 +56,7 @@ export default function JurisdictionDeadlineCalculator() {
       const today = new Date();
       const deadlines: DeadlineInfo[] = jurisdiction.workplaceInjury.appealLevels.map((level) => {
         const deadlineDate = new Date(decision);
-        deadlineDate.setDate(deadlineDate.getDate() + level.typicalDeadlineDays);
+        deadlineDate.setDate(deadlineDate.getDate() + (level.typicalDeadlineDays ?? 90));
         
         const msPerDay = 24 * 60 * 60 * 1000;
         const daysRemaining = Math.ceil((deadlineDate.getTime() - today.getTime()) / msPerDay);
@@ -97,7 +97,7 @@ export default function JurisdictionDeadlineCalculator() {
     setCalculatedDeadlines([]);
   };
 
-  const styles = makeStyles(palette, factor);
+  const styles = makeStyles(palette, factor.factor);
 
   if (!jurisdiction?.workplaceInjury?.appealLevels) {
     return (

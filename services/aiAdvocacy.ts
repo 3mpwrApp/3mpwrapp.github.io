@@ -41,10 +41,23 @@ export async function aiPolicySimplify(_topic: string, text: string) {
 
 export async function aiCoachPrompt(prompt: string, evidenceFocus?: string[]) {
   if (!prompt.trim()) return '';
+  
+  // Get disability context for personalized guidance
+  let disabilityContext = '';
+  try {
+    const { getDisabilityContextForAI } = await import('./disabilityWizard');
+    disabilityContext = await getDisabilityContextForAI();
+  } catch {
+    // Disability wizard context unavailable, continue without it
+  }
+  
   const evidenceBlock = evidenceFocus && evidenceFocus.length
     ? `\nSuggested Evidence Focus: ${evidenceFocus.slice(0,6).join('; ')}`
     : '';
-  return `Goal: ${prompt}\nStep 1: Clarify the specific outcome you want.\nStep 2: Gather supporting evidence (documents, dates).${evidenceBlock}\nStep 3: Draft a concise request using plain language.\nBarrier Check: Identify any access barriers and accommodations needed.\nConfidence Tip: Focus on functional limits not just diagnosis.`;
+  
+  const contextBlock = disabilityContext ? `\n${disabilityContext}` : '';
+  
+  return `Goal: ${prompt}${contextBlock}\nStep 1: Clarify the specific outcome you want.\nStep 2: Gather supporting evidence (documents, dates).${evidenceBlock}\nStep 3: Draft a concise request using plain language.\nBarrier Check: Identify any access barriers and accommodations needed.\nConfidence Tip: Focus on functional limits not just diagnosis.`;
 }
 
 export type CollectiveInterest = { id: string; title: string; description?: string; supporters: number; personal?: boolean };

@@ -150,9 +150,9 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette }: S
   
   // Get energy level icon and color
   const energyConfig = {
-    low: { icon: 'battery-half', color: '#4CAF50', label: t('wizard.energy.low', 'Low energy') },
-    medium: { icon: 'battery-charging', color: '#FF9800', label: t('wizard.energy.medium', 'Medium energy') },
-    high: { icon: 'battery-full', color: '#F44336', label: t('wizard.energy.high', 'High energy') },
+    low: { icon: 'battery-half', color: palette.success || palette.primary, label: t('wizard.energy.low', 'Low energy') },
+    medium: { icon: 'battery-charging', color: palette.warning || palette.primary, label: t('wizard.energy.medium', 'Medium energy') },
+    high: { icon: 'battery-full', color: palette.error || palette.primary, label: t('wizard.energy.high', 'High energy') },
   };
   
   const energy = energyConfig[suggestion.energyLevel];
@@ -179,7 +179,7 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette }: S
         {/* Featured Badge */}
         {suggestion.dayOfRotation !== undefined && (
           <View style={styles.featuredBadge}>
-            <Ionicons name="star" size={14} color="#FFD700" />
+            <Ionicons name="star" size={14} color={palette.warning || palette.primary} />
             <Text style={styles.featuredText}>
               {t('wizard.featured', "Today's Pick")}
             </Text>
@@ -187,7 +187,7 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette }: S
         )}
         
         {/* Icon */}
-        <View style={[styles.cardIcon, { backgroundColor: palette.primary + '20' }]}>
+        <View style={[styles.cardIcon, { backgroundColor: palette.surface }]}>
           <Ionicons name={suggestion.icon as any} size={32} color={palette.primary} />
         </View>
         
@@ -241,8 +241,6 @@ interface NextStepCardProps {
 }
 
 function NextStepCard({ suggestion, styles, palette }: NextStepCardProps) {
-  const { t } = useTranslation();
-  
   return (
     <Link href={suggestion.route as any} asChild>
       <A11yPressable
@@ -251,7 +249,7 @@ function NextStepCard({ suggestion, styles, palette }: NextStepCardProps) {
         accessibilityLabel={`${suggestion.title}. ${suggestion.reasoning[0]?.label || ''}`}
         hitSlop={HIT_SLOP_8}
       >
-        <View style={[styles.nextStepIcon, { backgroundColor: palette.primary + '20' }]}>
+        <View style={[styles.nextStepIcon, { backgroundColor: palette.surface }]}>
           <Ionicons name={suggestion.icon as any} size={24} color={palette.primary} />
         </View>
         <Text style={styles.nextStepTitle} maxFontSizeMultiplier={MAX_FONT_SCALE} numberOfLines={2}>
@@ -316,7 +314,7 @@ function createStyles(palette: any, factor: number) {
       marginVertical: 12,
       ...Platform.select({
         ios: {
-          shadowColor: '#000',
+          shadowColor: palette.shadow || palette.text,
           shadowOffset: { width: 0, height: 2 },
           shadowOpacity: 0.1,
           shadowRadius: 8,
@@ -392,7 +390,7 @@ function createStyles(palette: any, factor: number) {
       flexDirection: 'row',
       alignItems: 'center',
       alignSelf: 'flex-start',
-      backgroundColor: '#FFD700' + '20',
+      backgroundColor: palette.warningBg || palette.surface,
       paddingHorizontal: 8,
       paddingVertical: 4,
       borderRadius: 12,
@@ -402,7 +400,7 @@ function createStyles(palette: any, factor: number) {
     featuredText: {
       fontSize: Math.round(12 * factor),
       fontWeight: '600',
-      color: '#FFD700',
+      color: palette.warning || palette.primary,
     },
     cardIcon: {
       width: 56,

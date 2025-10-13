@@ -238,13 +238,13 @@ export default function DisabilityProfileSetup() {
           disabled={saving}
         >
           {saving ? (
-            <ActivityIndicator color="#FFFFFF" />
+            <ActivityIndicator color={palette.onPrimary} />
           ) : (
             <>
               <Text style={styles.buttonText}>
                 {step < totalSteps - 1 ? t('wizard.setup.next', 'Next') : t('wizard.setup.finish', 'Finish')}
               </Text>
-              <Ionicons name={step < totalSteps - 1 ? 'arrow-forward' : 'checkmark'} size={20} color="#FFFFFF" />
+              <Ionicons name={step < totalSteps - 1 ? 'arrow-forward' : 'checkmark'} size={20} color={palette.onPrimary} />
             </>
           )}
         </A11yPressable>
@@ -733,7 +733,7 @@ function createStyles(palette: any, factor: number) {
     buttonText: {
       fontSize: Math.round(16 * factor),
       fontWeight: '600',
-      color: '#FFFFFF',
+      color: palette.onPrimary,
     },
     buttonTextSecondary: {
       // color set inline

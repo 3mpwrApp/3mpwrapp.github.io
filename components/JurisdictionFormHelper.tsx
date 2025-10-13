@@ -146,13 +146,13 @@ export default function JurisdictionFormHelper() {
 
       case 'appeal':
         if (jurisdiction.workplaceInjury?.appealLevels && jurisdiction.workplaceInjury.appealLevels.length > 0) {
-          jurisdiction.workplaceInjury.appealLevels.forEach((level) => {
+          jurisdiction.workplaceInjury.appealLevels?.forEach((level) => {
             recs.push({
               formName: t('jurisdiction.forms.appealForm', 'Appeal / Review Request Form - {{level}}', { level: level.name }),
               purpose: t('jurisdiction.forms.purposeAppeal', 'Submit to {{body}}', { body: level.body }),
               required: true,
               notes: t('jurisdiction.forms.notesAppealDeadline', 'Deadline: {{days}} days from decision. {{notes}}', { 
-                days: level.typicalDeadlineDays,
+                days: level.typicalDeadlineDays ?? 'N/A',
                 notes: level.notes || ''
               }),
             });
@@ -189,7 +189,7 @@ export default function JurisdictionFormHelper() {
     setRecommendations([]);
   };
 
-  const styles = makeStyles(palette, factor);
+  const styles = makeStyles(palette, factor.factor);
 
   if (!jurisdiction) {
     return (

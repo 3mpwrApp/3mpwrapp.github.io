@@ -99,6 +99,34 @@ export default function AssistantHub() {
 
       {/* Quick prompts */}
       <Text style={s.sectionHeader}>{t('assistant.hub.quickPrompts','Quick prompts')}</Text>
+      
+      {/* What should I do today - Disability Wizard integration */}
+      <A11yPressable
+        hitSlop={HIT_SLOP_8}
+        accessibilityRole="button"
+        accessibilityLabel={t('assistant.hub.wizardCta','What should I do today? Get personalized suggestions')}
+        accessibilityHint={t('assistant.hub.wizardHint','Opens your personalized recommendations based on your needs')}
+        style={s.wizardButton}
+        onPress={() => {
+          trackEvent('assistant.disability_wizard_cta', { source: 'assistant_hub' });
+          usage.view('assistant', '/(tabs)/index', { from: 'disability_wizard_cta' });
+          router.push('/(tabs)/index' as any);
+        }}
+      >
+        <View style={s.wizardIconWrap}>
+          <Ionicons name="sparkles" size={24} color={palette.primary} />
+        </View>
+        <View style={{ flex: 1 }}>
+          <Text style={s.wizardTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            {t('assistant.hub.wizardTitle','What should I do today?')}
+          </Text>
+          <Text style={s.wizardDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            {t('assistant.hub.wizardDesc','Get personalized suggestions based on your energy, needs, and goals')}
+          </Text>
+        </View>
+        <Ionicons name="arrow-forward" size={20} color={palette.primary} />
+      </A11yPressable>
+      
       <View style={s.promptRow}>
         {[
           { label: t('assistant.prompt.simplifyDecision','Simplify a decision letter'), route: '/(tabs)/advocacy/ai-advocate-translator', q: t('assistant.prompt.exampleDecision','Please simplify this decision letter and list deadlines:') },
@@ -260,6 +288,10 @@ function styles(palette: ReturnType<typeof useAppPalette>, factor = 1) {
   suggestionDesc: { color: palette.text, opacity: 0.7, fontSize: Math.round(12 * factor) },
   noResults: { color: palette.text, opacity: 0.7, marginBottom: 12, fontSize: Math.round(12 * factor) },
   sectionHeader: { color: palette.text, fontWeight: '700', marginBottom: 6, marginTop: 8, fontSize: Math.round(14 * factor) },
+  wizardButton: { flexDirection: 'row', alignItems: 'center', backgroundColor: palette.surface, borderWidth: 2, borderColor: palette.primary, borderRadius: 12, padding: 12, marginBottom: 12, gap: 12 },
+  wizardIconWrap: { width: 44, height: 44, borderRadius: 22, backgroundColor: palette.surface, alignItems: 'center', justifyContent: 'center' },
+  wizardTitle: { fontSize: Math.round(16 * factor), fontWeight: '700', color: palette.text, marginBottom: 2 },
+  wizardDesc: { fontSize: Math.round(13 * factor), color: palette.muted, lineHeight: Math.round(18 * factor) },
   promptRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 8 },
   promptChip: { backgroundColor: palette.card, borderWidth: 1, borderColor: palette.muted, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 999 },
   promptText: { color: palette.text, fontSize: Math.round(13 * factor) },

@@ -117,6 +117,24 @@ export interface SuggestibleTool {
 
 const WIZARD_TOOLS: SuggestibleTool[] = [
   {
+    id: 'assistant_hub',
+    category: 'advocacy',
+    title: 'AI Assistant Hub',
+    description: 'Get help with any advocacy task - your all-in-one AI support center',
+    icon: 'chatbubbles',
+    route: '/(tabs)/advocacy/assistant-hub',
+    importance: 3,
+    energyLevel: 'low',
+    cognitiveLoad: 'light',
+    estimatedTime: 5,
+    accessibilityFeatures: ['screen_reader', 'voice_input', 'simplified_interface'],
+    helpsWith: ['cognitive', 'all'],
+    bestTimeOfDay: 'anytime',
+    relatedTools: ['coach', 'translator', 'policy_simplifier'],
+    flowsInto: ['coach', 'translator', 'policy_simplifier', 'evidence_locker'],
+    rotationDays: [0, 2, 4], // Sun, Tue, Thu
+  },
+  {
     id: 'coach',
     category: 'advocacy',
     title: 'AI Accountability Coach',
@@ -130,7 +148,7 @@ const WIZARD_TOOLS: SuggestibleTool[] = [
     accessibilityFeatures: ['screen_reader', 'simplified_language', 'progress_tracking'],
     helpsWith: ['all'],
     bestTimeOfDay: 'morning',
-    relatedTools: ['translator', 'policy_simplifier', 'legal_workflow'],
+    relatedTools: ['assistant_hub', 'translator', 'policy_simplifier', 'legal_workflow'],
     flowsInto: ['evidence_locker', 'letter_generator'],
     rotationDays: [1, 3, 5], // Mon, Wed, Fri
   },
@@ -148,7 +166,7 @@ const WIZARD_TOOLS: SuggestibleTool[] = [
     accessibilityFeatures: ['screen_reader', 'simplified_language', 'audio_output'],
     helpsWith: ['cognitive', 'all'],
     bestTimeOfDay: 'anytime',
-    relatedTools: ['policy_simplifier', 'coach'],
+    relatedTools: ['assistant_hub', 'policy_simplifier', 'coach'],
     flowsInto: ['coach', 'evidence_locker'],
     rotationDays: [0, 2, 4, 6], // Sun, Tue, Thu, Sat
   },
@@ -166,7 +184,7 @@ const WIZARD_TOOLS: SuggestibleTool[] = [
     accessibilityFeatures: ['screen_reader', 'plain_language', 'visual_aids'],
     helpsWith: ['cognitive', 'all'],
     bestTimeOfDay: 'afternoon',
-    relatedTools: ['translator', 'resources_search'],
+    relatedTools: ['assistant_hub', 'translator', 'resources_search'],
     flowsInto: ['coach', 'evidence_locker'],
     rotationDays: [1, 4], // Mon, Thu
   },
@@ -734,6 +752,73 @@ export function findNextSteps(currentToolId: string): WizardSuggestion[] {
     }],
     timesShown: 0,
   }));
+}
+
+// ============================================================================
+// AI Context Helper - Generate disability-aware context for LLM prompts
+// ============================================================================
+
+/**
+ * Get a human-readable summary of the user's disability profile
+ * to include as context in AI/LLM prompts for more personalized responses.
+ * 
+ * @returns A string describing the user's needs, or empty if no profile exists
+ */
+export async function getDisabilityContextForAI(): Promise<string> {
+  const profile = await getDisabilityProfile();
+  if (!profile) return '';
+  
+  const parts: string[] = [];
+  
+  // Disability types
+  if (profile.disabilityTypes.length > 0) {
+    const types = profile.disabilityTypes
+      .filter(t => t !== 'multiple')
+      .map(t => t.replace(/_/g, ' '))
+      .join(', ');
+    if (types) {
+      parts.push(`User has: ${types}`);
+    }
+  }
+  
+  // Energy patterns
+  if (profile.energyPeakHours.length > 0) {
+    const hours = profile.energyPeakHours;
+    const timeOfDay = 
+      hours.some(h => h >= 6 && h <= 11) ? 'morning' :
+      hours.some(h => h >= 12 && h <= 17) ? 'afternoon' :
+      hours.some(h => h >= 18 && h <= 22) ? 'evening' : 'varies';
+    parts.push(`Best energy: ${timeOfDay}`);
+  }
+  
+  // Cognitive preferences
+  if (profile.cognitiveLoadPreference) {
+    parts.push(`Prefers ${profile.cognitiveLoadPreference} cognitive load tasks`);
+  }
+  
+  // Accessibility needs
+  const a11yNeeds: string[] = [];
+  if (profile.screenReaderUser) a11yNeeds.push('screen reader');
+  if (profile.simplifiedLanguage) a11yNeeds.push('plain language');
+  if (profile.reducedMotion) a11yNeeds.push('reduced motion');
+  if (profile.highContrast) a11yNeeds.push('high contrast');
+  if (a11yNeeds.length > 0) {
+    parts.push(`Accessibility: ${a11yNeeds.join(', ')}`);
+  }
+  
+  // Communication preferences
+  if (profile.preferredFormats.length > 0) {
+    parts.push(`Prefers: ${profile.preferredFormats.join(', ')} communication`);
+  }
+  
+  // Support level
+  if (profile.independenceLevel !== 'full') {
+    parts.push(`Needs ${profile.independenceLevel.replace(/_/g, ' ')}`);
+  }
+  
+  return parts.length > 0 
+    ? `[User context: ${parts.join('; ')}]`
+    : '';
 }
 
 // ============================================================================
