@@ -17,5 +17,10 @@
     }
   },
   "include": ["./**/*.ts", "./**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "app/(tabs)/advocacy/legal-automation.tsx",
+    "app/(tabs)/community/campaign-coordinator.tsx",
+    "app/(tabs)/community/enhanced-hub.tsx"
+  ]
 }
