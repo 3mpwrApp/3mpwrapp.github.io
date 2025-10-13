@@ -2,9 +2,9 @@
 title: 3mpwrApp — User Guide for Everyone
 description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
 version: 2.1 (Phase 2)
-lastUpdated: 2025-10-12
+lastUpdated: 2025-10-13
 accessibility: Enhanced for screen readers, cognitive accessibility, and diverse needs
-phase2Features: Legal Workflow Automation, Indigenous Languages, Advanced Security, Campaign Coordination
+phase2Features: Legal Workflow Automation, Indigenous Languages, Advanced Security, Campaign Coordination, Master Letter Generator
 ---
 
 # 3mpwrApp — User Guide for Everyone
@@ -26,6 +26,13 @@ We've added powerful new features to help you even more:
 - **Clear explanations** - See exactly why each tool is recommended for you
 - **Natural flows** - Get suggestions for what to do next after completing a task
 - **Fully accessible** - Works perfectly with screen readers, reduced motion, and high contrast
+
+### 📝 **Master Letter Generator - 22 Professional Letters**
+- **Comprehensive coverage** - 22 letter types covering workplace accommodation, medical leave, insurance appeals, housing rights, and legal issues
+- **Smart forms** - Context-aware fields that guide you through each letter
+- **Professional output** - Generate ready-to-submit letters with proper legal language
+- **Bilingual support** - All letter types available in English and French
+- **Easy to use** - Just answer simple questions and get a professional letter
 
 ### 🤖 **Legal Workflow Automation**
 - **Automated legal processes** - Step-by-step guidance for disability benefits, workplace accommodations, appeals
