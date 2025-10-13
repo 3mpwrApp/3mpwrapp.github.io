@@ -77,22 +77,24 @@ All 14 Canadian jurisdictions now have comprehensive data including:
 ### Future Enhancement Priorities
 
 **High Priority:**
-1. **Federal ACA (Accessible Canada Act) workflow**: Add detailed complaint and appeal process for federal sector accessibility violations
+1. ✅ **Federal ACA (Accessible Canada Act) workflow**: ~~Add detailed complaint and appeal process for federal sector accessibility violations~~ **COMPLETED Oct 2025** - Comprehensive 3-step complaint process added to FED.json with priority areas, applicable entities, key standards, and links
 2. **Quebec bilingual content**: Add French translations for all QC jurisdiction fields (currently mixed EN/FR)
-3. **Form attachments**: Link to downloadable PDF versions of all claim forms
-4. **Evidence templates**: Create jurisdiction-specific evidence checklist templates
+3. ✅ **Deadline calculator**: ~~Show days remaining for appeals based on decision dates~~ **COMPLETED Oct 2025** - Interactive calculator component integrated into Advocacy Hub
+4. ✅ **Form helper tool**: ~~Suggest which forms needed based on situation~~ **COMPLETED Oct 2025** - Situation-based form recommendations (4 types) integrated into Advocacy Hub
 
 **Medium Priority:**
-5. **Appeal success rates**: Research and document typical success rates at each appeal level
-6. **Legal representation**: Add info on free legal clinics and representation options per jurisdiction
-7. **Processing times**: Document typical decision timelines for each WCB/commission
-8. **Special programs**: Add veterans' benefits, Indigenous-specific programs where applicable
+5. **Form attachments**: Link to downloadable PDF versions of all claim forms
+6. **Evidence templates**: Create jurisdiction-specific evidence checklist templates
+7. **Appeal success rates**: Research and document typical success rates at each appeal level
+8. **Legal representation**: Add info on free legal clinics and representation options per jurisdiction
+9. **Processing times**: Document typical decision timelines for each WCB/commission
+10. **Special programs**: Add veterans' benefits, Indigenous-specific programs where applicable
 
 **Lower Priority:**
-9. **Legislative references**: Add specific statute citations (Workers' Compensation Acts, Human Rights Codes)
-10. **Historical changes**: Version tracking for legislative updates
-11. **Multi-jurisdiction cases**: Guidance for workers with claims in multiple provinces
-12. **Intersectionality**: Enhanced guidance for multiple protected grounds (disability + race, gender, etc.)
+11. **Legislative references**: Add specific statute citations (Workers' Compensation Acts, Human Rights Codes)
+12. **Historical changes**: Version tracking for legislative updates
+13. **Multi-jurisdiction cases**: Guidance for workers with claims in multiple provinces
+14. **Intersectionality**: Enhanced guidance for multiple protected grounds (disability + race, gender, etc.)
 
 ### Data Quality Achieved
 
@@ -116,7 +118,13 @@ Each jurisdiction now includes:
 
 ### Current Integration Status (Oct 2025)
 - ✅ **All 14 jurisdictions data complete**: FED + 10 provinces + 3 territories with full appeal structures, forms, deadlines, and benefit programs
-- ✅ React store: `store/jurisdiction.tsx` provides selected jurisdiction with AsyncStorage persistence
+- ✅ **Federal ACA workflow complete**: 3-step complaint process added to FED.json with Accessibility Commissioner process, priority areas (employment, built environment, ICT, procurement, programs, transportation), and applicable entities
+- ✅ **Enhanced federal programs**: CPP-D and EI-SICK programs updated with structured appeal paths, deadlines (90 days, 30 days), processing times, and detailed evidence tips
+- ✅ **Canada Disability Benefit**: CDB program placeholder added to FED.json (implementation in progress 2024-2025, regulations pending)
+- ✅ **Deadline Calculator Component**: `JurisdictionDeadlineCalculator.tsx` (268 lines) - calculates days remaining for workplace injury appeals with color-coded urgency indicators (<30 days critical, <60 days warning), auto-detects appeal levels from selected jurisdiction, integrated into Advocacy Hub
+- ✅ **Form Helper Component**: `JurisdictionFormHelper.tsx` (405 lines) - situation-based form recommendations (workplace injury, disability benefit, human rights, appeal), required vs optional indicators, purpose/notes/deadlines displayed, integrated into Advocacy Hub
+- ✅ **Analytics tracking**: Jurisdiction selection, deadline calculator usage, and form helper usage tracked via Firebase Analytics (`jurisdiction.changed`, `jurisdiction.deadline_calculated`, `jurisdiction.form_helper_used` events)
+- ✅ React store: `store/jurisdiction.tsx` provides selected jurisdiction with AsyncStorage persistence and analytics event tracking
 - ✅ UI component: `JurisdictionPanel` integrated into Advocacy hub (`app/(tabs)/advocacy/index.tsx` and `app/(tabs)/advocacy/self-advocacy-coach.tsx`)
 - ✅ Displays: Evidence focus, accommodation guidance, limitation notes per jurisdiction
 - ✅ User interaction: "Change" button cycles through all jurisdictions
@@ -130,10 +138,6 @@ Each jurisdiction now includes:
 **Implementation Roadmap:**
 - 🔄 **In Progress**: Integrate into Rights Checker flow with jurisdiction-specific deadline warnings
 - 📋 **Planned**: Resource filtering logic by jurisdiction code (enable users to filter resources by province/territory)
-- 📋 **Planned**: Analytics tracking of jurisdiction selection and usage patterns (which provinces most used)
-- 📋 **Planned**: Smart suggestions in Advocacy Coach based on jurisdiction-specific evidence requirements
-- 📋 **Planned**: Deadline calculator showing days remaining for appeals based on decision dates
-- 📋 **Planned**: Form helper tool suggesting which forms needed based on situation
 - 📋 **Future**: Multi-language support (French for QC, Inuktitut for NU, etc.)
 - 📋 **Future**: Push notifications for approaching deadline milestones
 

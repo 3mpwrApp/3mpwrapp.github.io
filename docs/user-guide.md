@@ -988,6 +988,75 @@ A: Never. All profile information stays completely private on your device.
 
 **What these tools do:** Help you understand letters, write appeals, and get the support you need.
 
+### 🇨🇦 Jurisdiction Tools (Canada-Wide)
+**What they do:** Provide legal guidance specific to your province/territory
+
+**Available now:**
+- **Deadline Calculator**: Figure out when you need to file an appeal
+- **Form Helper**: Find out which forms you need for your situation
+- **Federal ACA**: File accessibility complaints under the Accessible Canada Act
+
+#### Deadline Calculator
+**What it does:** Calculates days remaining for workplace injury appeals
+
+**How to use it:**
+1. Go to Advocacy Hub
+2. Find "Appeal Deadline Calculator" panel
+3. Select your jurisdiction if not already set
+4. Enter the date you received your WCB/WSIB decision (YYYY-MM-DD format)
+5. See days remaining for each appeal level
+6. Color codes show urgency:
+   - 🔴 Red (<30 days): File immediately
+   - 🟡 Yellow (<60 days): File soon
+   - 🟢 Green (60+ days): You have time
+
+**Example:** If you received a WCB decision on Oct 1 and it's now Oct 20, in Ontario you'd see:
+- Internal Review: 39 days remaining (🟡 Warning)
+- Appeals Services Division: 69 days remaining (🟢 Normal)
+- WSIAT: 159 days remaining (🟢 Normal)
+
+**Important:** Always verify deadlines with your board. Some jurisdictions accept late appeals in special circumstances.
+
+#### Form Helper
+**What it does:** Shows which forms you need based on your situation
+
+**How to use it:**
+1. Go to Advocacy Hub
+2. Find "Form Helper" panel
+3. Select your situation:
+   - **Workplace Injury**: Filing a new claim
+   - **Disability Benefit**: Applying for income support
+   - **Human Rights**: Filing a discrimination complaint
+   - **Appeal**: Challenging a decision
+4. See required forms (red badge) and optional forms (gray badge)
+5. Read purpose, notes, and deadlines for each form
+6. Follow links to official forms when available
+
+**Example:** For "Workplace Injury" in British Columbia, you'll see:
+- ✅ Required: Form 6A - Worker's Report of Injury
+- ✅ Required: Functional Abilities Form (FAF) - from your doctor
+- ✅ Required: Employer's Report (request from your employer)
+
+**Tip:** Check "Human Rights" to see your province's complaint deadline (12-24 months depending on jurisdiction).
+
+#### Federal Accessibility (ACA)
+**What it does:** Explains how to file accessibility complaints for federal organizations
+
+**Covers:**
+- Federal government departments
+- Crown corporations (CBC, Canada Post, VIA Rail)
+- Banks and telecommunications
+- Federally regulated transportation
+
+**3-Step Process:**
+1. **Try to resolve directly**: Contact the organization first
+2. **File formal complaint**: Submit to Accessibility Commissioner if needed
+3. **Investigation**: Commissioner investigates and can order compliance
+
+**Priority areas:** Employment, buildings, websites/apps, procurement, programs, transportation
+
+**Note:** This is separate from provincial accessibility laws. Use this for federal sector only.
+
 ### 📝 AI Advocate Translator
 **What it does:** Turns confusing legal or medical letters into simple English
 

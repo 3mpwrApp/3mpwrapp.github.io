@@ -8,6 +8,13 @@ Note for authors (plain language):
 - The app’s What’s New generator pulls from this file and strips technical jargon automatically.
 
 ## [Unreleased]
+- **🇨🇦 Jurisdiction System: Canada-Wide Legal Coverage** - Added comprehensive jurisdiction support for all 14 Canadian jurisdictions (federal + 10 provinces + 3 territories).
+  - **Deadline Calculator**: Calculate days remaining for workplace injury appeals with color-coded urgency (<30 days critical, <60 days warning). Auto-detects appeal levels from your jurisdiction.
+  - **Form Helper**: Situation-based recommendations showing which forms you need (workplace injury, disability benefit, human rights complaint, or appeal). Shows required vs optional forms with deadlines and notes.
+  - **Federal ACA Workflow**: Complete Accessible Canada Act complaint process (3 steps) for federal sector accessibility barriers. Priority areas include employment, built environment, ICT, procurement, programs, and transportation.
+  - **Enhanced Federal Programs**: Updated CPP-D and EI-SICK with structured appeal paths, deadlines, and evidence tips. Added Canada Disability Benefit (CDB) placeholder.
+  - **Complete Coverage**: All 14 jurisdictions with workplace injury boards (1-3 appeal tiers), human rights deadlines (12-24 months), benefit programs, claim forms, and official links.
+  - **Analytics**: Track jurisdiction changes and tool usage to improve features based on real needs.
 - **🔒 MAJOR: Enterprise Security Implementation** - Added comprehensive security-by-design architecture with air-gapped protection and 100% user data ownership.
   - **AES-256 Encryption**: Military-grade encryption with hardware-backed key storage (Keychain/Keystore)
   - **Air-Gapped Mode**: Complete offline operation with optional private cloud (BYOC) support

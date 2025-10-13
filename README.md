@@ -367,7 +367,75 @@ The app uses 8 main tabs. All other features live behind menus or deep links.
 - Wellness (`/(tabs)/wellness`)
 - Advocacy (`/(tabs)/advocacy/index`)
 - Settings (`/(tabs)/settings`)
-- What’s New (`/(tabs)/whatsnew/index`) – shows an unread badge
+- What's New (`/(tabs)/whatsnew/index`) – shows an unread badge
+
+## Jurisdiction System (Canada-Wide Coverage) ✅
+
+Complete legal and procedural guidance for all 14 Canadian jurisdictions (federal + 10 provinces + 3 territories).
+
+### Features
+
+**📍 Jurisdiction Selection**
+- Persistent selection stored locally with AsyncStorage
+- Switch jurisdictions via `JurisdictionPanel` component in Advocacy Hub
+- Analytics tracking of jurisdiction changes and usage patterns
+
+**⏰ Deadline Calculator** (`JurisdictionDeadlineCalculator.tsx`)
+- Calculate days remaining for workplace injury appeals based on decision dates
+- Auto-detects appeal levels from selected jurisdiction (1-3 tiers)
+- Color-coded urgency indicators:
+  - 🔴 Critical: <30 days remaining
+  - 🟡 Warning: <60 days remaining
+  - 🟢 Normal: 60+ days remaining
+- Shows deadline date and days remaining/overdue for each appeal tier
+- YYYY-MM-DD date input with clear button
+- Accessible with proper labels and keyboard support
+
+**📋 Form Helper** (`JurisdictionFormHelper.tsx`)
+- Situation-based form recommendations (4 types):
+  1. **Workplace Injury**: Initial claim, FAF, employer accident report
+  2. **Disability Benefit**: Application forms from jurisdiction's benefit programs
+  3. **Human Rights**: Complaint form with deadline, supporting documents
+  4. **Appeal**: Appeal/review forms for each level, new evidence suggestions
+- Required vs optional form badges (red/gray)
+- Form purpose, notes, and deadlines displayed
+- Links to official forms where available
+- Scrollable results with clear categorization
+
+**🇨🇦 Federal ACA Workflow** (Accessible Canada Act)
+- 3-step complaint process documented in `data/jurisdictions/FED.json`
+- Priority areas: employment, built environment, ICT, procurement, programs, transportation
+- Applicable entities: federal govt, Crown corps, Parliament, federally regulated private sector
+- Enhanced CPP-D and EI-SICK programs with structured appeal paths
+- Canada Disability Benefit (CDB) placeholder (implementation in progress 2024-2025)
+
+**📊 Complete Coverage**
+- All 14 jurisdictions: FED, ON, BC, AB, SK, MB, QC, NB, NS, PE, NL, YT, NT, NU
+- Workplace injury boards: WCB/WSCC/CNESST with 1-3 tier appeal structures
+- Human rights: Commission data with complaint deadlines (12mo, 18mo, 24mo)
+- Benefit programs: 14 total programs across all jurisdictions
+- Initial claim forms with form numbers for all WCBs
+- Typical deadlines for each appeal level (21-150 days)
+- Official website links for all boards and commissions
+
+### Data Files
+- Jurisdiction data: `data/jurisdictions/*.json` (14 files)
+- Types: `types/jurisdiction.ts`
+- Store: `store/jurisdiction.tsx`
+- Panel component: `components/JurisdictionPanel.tsx`
+- Calculator: `components/JurisdictionDeadlineCalculator.tsx` (268 lines)
+- Form helper: `components/JurisdictionFormHelper.tsx` (405 lines)
+
+### Analytics Events
+- `jurisdiction.changed` - tracks when user switches jurisdictions (includes jurisdiction code and name)
+- `jurisdiction.deadline_calculated` - tracks calculator usage (includes jurisdiction, appeal levels count, critical deadline flag)
+- `jurisdiction.form_helper_used` - tracks form helper by situation type (includes jurisdiction, situation type, forms recommended count, required forms count)
+
+### Documentation
+- Complete coverage details: `docs/JURISDICTION_COVERAGE.md`
+- Appeal structures, deadlines, and benefit programs for all 14 jurisdictions
+- Future enhancement roadmap and integration plans
+- Data quality metrics and validation status
 
 Quick links to docs
 
