@@ -148,9 +148,9 @@ export default function AdminPanel() {
         <Text style={s.text}>To grant admin: set Firebase custom claim admin=true for your UID.</Text>
 
         {byocMode && (
-          <View style={{ marginTop: 12, padding: 12, backgroundColor: palette.warning || '#FFA500', borderRadius: 8 }}>
-            <Text style={{ color: '#000', fontWeight: '700', marginBottom: 4 }}>⚠️ BYOC Mode Active</Text>
-            <Text style={{ color: '#000', fontSize: 13 }}>
+          <View style={{ marginTop: 12, padding: 12, backgroundColor: palette.warning || palette.primary, borderRadius: 8 }}>
+            <Text style={{ color: palette.onPrimary, fontWeight: '700', marginBottom: 4 }}>⚠️ BYOC Mode Active</Text>
+            <Text style={{ color: palette.onPrimary, fontSize: 13 }}>
               Admin features requiring Firestore are disabled in Hybrid/Strict BYOC mode. 
               Only activity logs and broadcast tools are available. Switch to default mode for full admin access.
             </Text>
