@@ -508,7 +508,7 @@ function calculateDisabilityMatch(tool: SuggestibleTool, profile: DisabilityProf
   };
 }
 
-function calculateEnergyFit(tool: SuggestibleTool, context: UserContext, profile: DisabilityProfile | null): { score: number; reason: ReasonChip | null } {
+function calculateEnergyFit(tool: SuggestibleTool, context: UserContext, _profile: DisabilityProfile | null): { score: number; reason: ReasonChip | null } {
   if (!context.isInEnergyPeak && tool.energyLevel === 'high') {
     return {
       score: -0.5,
