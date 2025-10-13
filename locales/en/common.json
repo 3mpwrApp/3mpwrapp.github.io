@@ -1632,6 +1632,10 @@
     "union": "Contact your union for representation.",
     "noUnion": "If no union, consider contacting a legal clinic or advocacy group.",
     "appeal": "You may be eligible to appeal denied benefits. Gather medical evidence and file within deadlines.",
+    "workplaceDeadline": "⚠️ DEADLINE: {{board}} - File within {{days}} days for most decisions.",
+    "workplaceNotes": "⚠️ {{board}}: {{notes}}",
+    "humanRightsDeadline": "⚠️ DEADLINE: {{body}} - File complaint within {{months}} months from last incident.",
+    "limitationNotes": "📌 Note: {{notes}}",
     "templates": "Use our letter templates in Resources to request reconsideration or appeal.",
     "harassment": "Harassment is prohibited. Document incidents and report via proper channels.",
     "general": "Based on your answers, you still maintain general human rights. Consider browsing Resources for guidance.",
@@ -2764,7 +2768,122 @@
       "selectPlaceholder": "Choose...",
       "noResults": "No results for this jurisdiction"
     }
+  },
+  "letterWizard": {
+    "title": "Master Letter Generator",
+    "subtitle": "Create professional letters for any disability advocacy situation.",
+    "screenLabel": "Master Letter Generator screen",
+    "step1Title": "Step 1: What's your situation?",
+    "step1Desc": "Select the situation that best matches your needs.",
+    "step2Title": "Step 2: Choose letter type",
+    "step2Desc": "Based on your situation, these letters are recommended:",
+    "step3Title": "Step 3: Fill in details",
+    "step4Title": "Step 4: Review & Export",
+    "back": "Back",
+    "preview": "Preview",
+    "edit": "Edit",
+    "startOver": "Start Over",
+    "insertTrackers": "Insert Evidence",
+    "editLetter": "Edit letter",
+    "copied": "Copied",
+    "copiedBody": "Letter copied to clipboard.",
+    "clipboardNA": "Clipboard not available",
+    "clipboardNABody": "Install expo-clipboard in a dev build to enable copy.",
+    "shareUnavailable": "Share unavailable",
+    "shareUnavailableBody": "System share sheet not available.",
+    "pdfNA": "PDF not available",
+    "pdfNABody": "Install expo-print in a dev build to export PDFs.",
+    "exportFailed": "Export failed",
+    "exportFailedBody": "Could not create file.",
+    "inserted": "Added",
+    "insertedBody": "Evidence inserted from your trackers.",
+    "infoTitle": "How to Use",
+    "infoLine1": "Review your letter below. Use Copy, PDF, or Doc buttons to export.",
+    "infoLine2": "Adapt wording to your specific facts. This is not legal advice.",
+    "situations": {
+      "accommodation": {
+        "title": "Need Workplace Accommodation",
+        "desc": "Request accommodations for disability-related needs at work"
+      },
+      "benefitDenied": {
+        "title": "Benefits Denied",
+        "desc": "Appeal or request reconsideration of denied disability benefits"
+      },
+      "returningWork": {
+        "title": "Returning to Work",
+        "desc": "Plan gradual return with accommodations after medical leave"
+      },
+      "unionHelp": {
+        "title": "Need Union Support",
+        "desc": "Request union representation for workplace issues"
+      },
+      "other": {
+        "title": "Other Situation",
+        "desc": "Browse all letter types"
+      }
+    },
+    "types": {
+      "accommodation": {
+        "title": "Accommodation Request",
+        "desc": "Request workplace accommodations for disability needs"
+      },
+      "appeal": {
+        "title": "Appeal Letter",
+        "desc": "Appeal denied workers' compensation or disability benefits"
+      },
+      "reconsideration": {
+        "title": "Reconsideration Request",
+        "desc": "Request review of benefit decision before formal appeal"
+      },
+      "rtwPlan": {
+        "title": "Return-to-Work Plan",
+        "desc": "Propose gradual return with medical restrictions"
+      },
+      "unionRequest": {
+        "title": "Union Assistance Request",
+        "desc": "Request union support for workplace issues"
+      }
+    },
+    "fields": {
+      "name": "Your Name",
+      "namePlaceholder": "Enter your full name",
+      "employer": "Employer",
+      "employerPlaceholder": "Enter employer name",
+      "jobTitle": "Job Title",
+      "jobTitlePlaceholder": "Your position or job title",
+      "date": "Date",
+      "datePlaceholder": "Leave blank to use today's date",
+      "limitations": "Limitations",
+      "limitationsPlaceholder": "Briefly describe your limitations (not diagnoses)",
+      "accommodations": "Requested Accommodations",
+      "accommodationsPlaceholder": "List the accommodations you need",
+      "claimNumber": "Claim Number",
+      "claimNumberPlaceholder": "Your claim or file number",
+      "decisionDate": "Decision Date",
+      "decisionDatePlaceholder": "Date of the decision you're appealing",
+      "decisionSummary": "Decision Summary",
+      "decisionSummaryPlaceholder": "Briefly summarize the decision",
+      "appealArgs": "Your Arguments/Evidence",
+      "appealArgsPlaceholder": "State your key arguments and supporting evidence",
+      "contact": "Contact Info",
+      "contactPlaceholder": "Your phone number and/or email",
+      "keyPoints": "Key Points",
+      "keyPointsPlaceholder": "List facts and evidence for reconsideration",
+      "position": "Position",
+      "positionPlaceholder": "Your job position",
+      "returnDate": "Return Date",
+      "returnDatePlaceholder": "Planned date to return to work",
+      "restrictions": "Restrictions",
+      "restrictionsPlaceholder": "List any medical restrictions or limitations",
+      "gradualReturn": "Gradual Return Plan",
+      "gradualReturnPlaceholder": "Describe your proposed gradual return schedule",
+      "union": "Union",
+      "unionPlaceholder": "Your union local or representative name",
+      "issue": "Issue",
+      "issuePlaceholder": "Describe the workplace issue",
+      "assistance": "Assistance Needed",
+      "assistancePlaceholder": "Describe the support you're requesting"
+    }
   }
 }
-
 

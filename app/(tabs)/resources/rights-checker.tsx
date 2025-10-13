@@ -4,11 +4,12 @@ import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
+import { useJurisdiction } from "../../../store/jurisdiction";
 import { useAppPalette } from "../../../theme/usePalette";
 import { announce } from '../../../utils/announce';
 
@@ -21,6 +22,7 @@ export default function RightsChecker() {
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
   const { t } = useTranslation();
+  const { data: jurisdictionData } = useJurisdiction();
   useAnnounceOnMount("Automated Rights Checker");
   useFocusOnRefOnMount(titleRef);
   const [showInfo, setShowInfo] = React.useState(true);
@@ -55,6 +57,57 @@ export default function RightsChecker() {
       lines.push(
         t('rightsChecker.appeal','You may be eligible to appeal denied benefits. Gather medical evidence and file within deadlines.')
       );
+      
+      // Add jurisdiction-specific deadline warnings
+      if (jurisdictionData) {
+        const deadlines: string[] = [];
+        
+        // Workplace injury appeal deadlines
+        if (jurisdictionData.workplaceInjury?.appealLevels) {
+          const levels = jurisdictionData.workplaceInjury.appealLevels;
+          const firstLevel = levels[0];
+          if (firstLevel && firstLevel.typicalDeadlineDays) {
+            deadlines.push(
+              t('rightsChecker.workplaceDeadline', 
+                `⚠️ DEADLINE: ${jurisdictionData.workplaceInjury.name} - File within ${firstLevel.typicalDeadlineDays} days for most decisions.`,
+                { board: jurisdictionData.workplaceInjury.name, days: firstLevel.typicalDeadlineDays.toString() }
+              )
+            );
+          } else if (firstLevel?.notes) {
+            deadlines.push(
+              t('rightsChecker.workplaceNotes',
+                `⚠️ ${jurisdictionData.workplaceInjury.name}: ${firstLevel.notes}`,
+                { board: jurisdictionData.workplaceInjury.name, notes: firstLevel.notes }
+              )
+            );
+          }
+        }
+        
+        // Human rights complaint deadlines
+        if (jurisdictionData.humanRights?.complaintDeadlineMonths) {
+          deadlines.push(
+            t('rightsChecker.humanRightsDeadline',
+              `⚠️ DEADLINE: ${jurisdictionData.humanRights.name} - File complaint within ${jurisdictionData.humanRights.complaintDeadlineMonths} months from last incident.`,
+              { body: jurisdictionData.humanRights.name, months: jurisdictionData.humanRights.complaintDeadlineMonths.toString() }
+            )
+          );
+        }
+        
+        // Add limitation notes
+        if (jurisdictionData.limitationNotes && jurisdictionData.limitationNotes.length > 0) {
+          deadlines.push(
+            t('rightsChecker.limitationNotes',
+              `📌 Note: ${jurisdictionData.limitationNotes.join(' ')}`,
+              { notes: jurisdictionData.limitationNotes.join(' ') }
+            )
+          );
+        }
+        
+        if (deadlines.length > 0) {
+          lines.push(deadlines.join('\n\n'));
+        }
+      }
+      
       lines.push(
         t('rightsChecker.templates','Use our letter templates in Resources to request reconsideration or appeal.')
       );
@@ -70,7 +123,7 @@ export default function RightsChecker() {
       );
     }
     return lines.join("\n\n");
-  }, [ready, q1, q2, q3, q4, q5]);
+  }, [ready, q1, q2, q3, q4, q5, jurisdictionData]);
 
   React.useEffect(()=>{ if(summary) announce(t('rightsChecker.summaryReady','Rights summary ready')); }, [summary]);
 
