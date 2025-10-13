@@ -146,7 +146,7 @@ export default function JurisdictionFormHelper() {
 
       case 'appeal':
         if (jurisdiction.workplaceInjury?.appealLevels && jurisdiction.workplaceInjury.appealLevels.length > 0) {
-          jurisdiction.workplaceInjury.appealLevels.forEach((level, index) => {
+          jurisdiction.workplaceInjury.appealLevels.forEach((level) => {
             recs.push({
               formName: t('jurisdiction.forms.appealForm', 'Appeal / Review Request Form - {{level}}', { level: level.name }),
               purpose: t('jurisdiction.forms.purposeAppeal', 'Submit to {{body}}', { body: level.body }),
