@@ -1,16 +1,47 @@
 ---
-title: 3mpwr App — User Guide for Everyone
-description: A simple guide to using 3mpwr's tools and community features. Written for the disability community.
-version: 2.0
+title: 3mpwrApp — User Guide for Everyone
+description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
+version: 2.1 (Phase 2)
 lastUpdated: 2025-10-12
 accessibility: Enhanced for screen readers, cognitive accessibility, and diverse needs
+phase2Features: Legal Workflow Automation, Indigenous Languages, Advanced Security, Campaign Coordination
 ---
 
-# 3mpwr App — User Guide for Everyone
+# 3mpwrApp — User Guide for Everyone
 
 > **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, and their supporters.
 
 **Quick start? Jump to [Getting Started in 5 Minutes](#getting-started-in-5-minutes)**
+
+---
+
+## 🆕 **What's New in Phase 2 (October 2025)**
+
+We've added powerful new features to help you even more:
+
+### 🤖 **Legal Workflow Automation**
+- **Automated legal processes** - Step-by-step guidance for disability benefits, workplace accommodations, appeals
+- **AI-powered assistance** - Document review, case interpretation, form filling help
+- **Smart reminders** - Never miss a deadline or important step
+- **Privacy-first** - All processing happens on your device
+
+### 🌍 **Indigenous Language Support**
+- **Multiple Indigenous languages** - Interface available in select Indigenous languages
+- **Cultural protocols** - Respectful handling of traditional knowledge and protocols
+- **Territorial acknowledgments** - Connect with the land and its history
+- **Community-centered** - Designed with and for Indigenous communities
+
+### 🔐 **Advanced Security**
+- **Biometric protection** - Fingerprint, Face ID, voice recognition
+- **Threat monitoring** - Real-time security alerts
+- **Enhanced encryption** - Military-grade protection for your data
+- **Security audits** - Track who accesses what and when
+
+### 📊 **Campaign Coordination**
+- **Community organizing** - Tools for planning and running advocacy campaigns
+- **Task management** - Coordinate efforts with your community
+- **Privacy-respecting** - No surveillance, full control over your data
+- **Offline-capable** - Work without internet connection
 
 ---
 
@@ -23,10 +54,14 @@ accessibility: Enhanced for screen readers, cognitive accessibility, and diverse
 
 ### 🛠️ Main Features
 - [Advocacy Tools](#advocacy-tools) - Get help with letters, appeals, and legal issues
+- [Legal Workflow Automation](#legal-workflow-automation) **(NEW)** - Automated guidance for legal processes
 - [Community](#community) - Connect with others who understand
+- [Campaign Coordination](#campaign-coordination) **(NEW)** - Organize community advocacy efforts
 - [Wellness Support](#wellness-support) - Take care of yourself
 - [Resources](#resources) - Tools and information you need
 - [Evidence Locker](#evidence-locker) - Save important documents safely
+- [Indigenous Languages](#indigenous-languages) **(NEW)** - Multilingual support with cultural protocols
+- [Advanced Security](#advanced-security-features) **(NEW)** - Enhanced protection options
 
 ### ♿ Comprehensive Disability Support
 - [All Disability Types Supported](#all-disability-types-supported) - How we support every disability
@@ -851,6 +886,337 @@ The app has several main sections. You'll see them at the bottom of your screen:
 2. Use filters for your location and issue type
 3. View profiles and contact information
 4. Save promising contacts
+
+---
+
+<a id="legal-workflow-automation"></a>
+## 🤖 Legal Workflow Automation **(NEW - Phase 2)**
+
+**What this feature does:** Guides you step-by-step through complex legal processes automatically
+
+### Overview
+Legal Workflow Automation helps you navigate complicated processes like:
+- Disability benefit applications
+- Workplace accommodation requests
+- Discrimination complaints  
+- Accessibility appeals
+- Housing rights issues
+
+**How it's different:** Instead of reading long guides, the app walks you through each step, automatically generates documents, tracks deadlines, and reminds you what to do next.
+
+### Starting a Workflow
+
+**How to begin:**
+1. Go to Advocacy → Legal Workflow Automation
+2. Browse available workflows or search for your issue
+3. Tap on a workflow to see:
+   - How long it typically takes
+   - What documents you'll need
+   - Success rate percentage
+   - Automation level (how much the app does for you)
+4. Tap "Start Workflow" to begin
+
+### Following the Steps
+
+**What happens:**
+- The app breaks the process into simple steps
+- Each step shows you exactly what to do
+- Green checkmarks show completed steps
+- Yellow highlights show what's next
+- Red alerts show if something needs urgent attention
+
+**Automation features:**
+- ✅ **Auto-fill forms** - App fills in repetitive information
+- 📄 **Generate documents** - Creates letters and forms for you
+- 📅 **Track deadlines** - Reminders before things are due
+- ✔️ **Validate data** - Checks that forms are filled correctly
+- 🔔 **Send notifications** - Reminds you of next steps
+
+### Example: Disability Benefit Application
+
+**Step 1: Eligibility Check**
+- App asks you qualifying questions
+- Automated assessment tells you if you're eligible
+- Shows what documents you'll need
+
+**Step 2: Document Gathering**
+- Checklist of required documents
+- Upload documents or take photos
+- App validates that documents are complete
+
+**Step 3: Form Completion**
+- App pre-fills forms with your information
+- You review and edit
+- App checks for errors
+
+**Step 4: Submission**
+- App generates cover letter
+- Provides mailing instructions
+- Creates submission checklist
+
+**Step 5: Follow-up Tracking**
+- Tracks expected response times
+- Reminds you to check status
+- Guides you through next steps
+
+### Privacy & Security
+
+**Your data is safe:**
+- ✅ All processing happens on your device
+- ✅ No legal information sent to external servers
+- ✅ You control what data goes into workflows
+- ✅ Encrypted storage for sensitive documents
+- ✅ You can delete workflow data anytime
+
+### Cultural Considerations
+
+**Respectful automation:**
+- Cultural protocols respected (Indigenous, religious, etc.)
+- Language options available
+- Flexibility for traditional processes
+- Optional elder consultation steps
+- Ceremonial considerations included
+
+---
+
+<a id="indigenous-languages"></a>
+## 🌍 Indigenous Language Support **(NEW - Phase 2)**
+
+**What this feature does:** Provides the app interface and support in Indigenous languages with cultural protocols
+
+### Available Languages
+
+Currently supported:
+- Cree (ᓀᐦᐃᔭᐍᐏᐣ)
+- Ojibwe (ᐊᓂᔑᓈᐯᒧᐎᐣ)
+- Inuktitut (ᐃᓄᒃᑎᑐᑦ)
+- Mi'kmaq
+- More languages being added regularly
+
+### Enabling Indigenous Languages
+
+**How to set it up:**
+1. Go to Settings → Indigenous Language
+2. Choose your preferred language
+3. Select cultural protocols you want to observe
+4. Review territorial acknowledgment
+5. Tap "Save Preferences"
+
+**What changes:**
+- App interface translated to your language
+- Cultural protocols automatically applied
+- Traditional knowledge handled respectfully
+- Territorial acknowledgments shown
+
+### Cultural Protocols
+
+**What they do:** Ensure the app respects traditional practices and protocols
+
+**Options you can enable:**
+- **Ceremonial considerations** - App respects ceremony times
+- **Elder consultation** - Reminders to consult elders on important decisions
+- **Traditional knowledge** - Special handling of cultural information
+- **Seasonal awareness** - Recognition of traditional seasons and practices
+- **Territorial acknowledgment** - Recognition of traditional territories
+
+**How protocols work:**
+- Non-intrusive reminders
+- You control what's enabled
+- Culturally appropriate language
+- Respect for sovereignty and self-determination
+
+### Territorial Acknowledgments
+
+**What it does:** Recognizes the traditional territories where you are
+
+**How to use it:**
+1. Go to Indigenous Language settings
+2. Tap "View Territorial Acknowledgment"
+3. Read the acknowledgment for your area
+4. Option to display on app startup
+
+**Why it matters:** Land acknowledgments are important for respecting Indigenous sovereignty and history. The app helps non-Indigenous users learn whose land they're on.
+
+### Privacy for Indigenous Communities
+
+**Special protections:**
+- ✅ Cultural information never leaves your device
+- ✅ Traditional knowledge protocols respected
+- ✅ No data shared with external organizations
+- ✅ Community-centered design principles
+- ✅ Sovereignty over your cultural data
+
+---
+
+<a id="campaign-coordination"></a>
+## 📊 Campaign Coordination **(NEW - Phase 2)**
+
+**What this feature does:** Helps communities organize advocacy campaigns and coordinate collective action
+
+### Overview
+
+Use Campaign Coordination for:
+- Community organizing
+- Policy change campaigns
+- Collective advocacy efforts
+- Event planning
+- Resource coordination
+
+**Privacy-first:** No surveillance, no tracking, full control over who sees what.
+
+### Creating a Campaign
+
+**How to start:**
+1. Go to Community → Campaign Coordination
+2. Tap "Create Campaign"
+3. Fill in:
+   - Campaign name
+   - Goals and objectives
+   - Timeline
+   - Privacy level (Public, Members Only, Private)
+4. Tap "Create"
+
+### Managing Tasks
+
+**Organize your campaign:**
+1. Add tasks with descriptions and deadlines
+2. Assign tasks to community members
+3. Track progress with status updates
+4. Mark tasks complete when done
+
+**Task features:**
+- Priority levels (High, Medium, Low)
+- Deadline reminders
+- Progress tracking
+- File attachments
+- Discussion threads
+
+### Communication Strategy
+
+**Keep everyone informed:**
+- Send updates to all campaign members
+- Schedule announcements
+- Share resources and documents
+- Coordinate meeting times
+
+**Communication tools:**
+- Group messaging
+- Announcement posts
+- Document sharing
+- Calendar integration
+
+### Advocacy Targets
+
+**Track who you're targeting:**
+- Government officials
+- Policy makers
+- Organizations
+- Media contacts
+
+**For each target:**
+- Contact information
+- Engagement history
+- Response tracking
+- Follow-up reminders
+
+### Privacy & Safety
+
+**Protect your organizing:**
+- ✅ End-to-end encryption for sensitive campaigns
+- ✅ Control who can see campaign details
+- ✅ Anonymous participation options
+- ✅ Secure document storage
+- ✅ No data sold or shared
+
+### Offline Capability
+
+**Work anywhere:**
+- Create and edit campaigns offline
+- Sync when you have connection
+- All data stored locally
+- No internet required for most features
+
+---
+
+<a id="advanced-security-features"></a>
+## 🔐 Advanced Security **(NEW - Phase 2)**
+
+**What this feature does:** Adds extra layers of protection for your sensitive information
+
+### Biometric Authentication
+
+**Available methods:**
+- 👆 Fingerprint (Touch ID)
+- 😊 Face recognition (Face ID)
+- 🎤 Voice recognition
+- 👁️ Iris scanning (if your device supports it)
+
+**How to enable:**
+1. Go to Settings → Advanced Security
+2. Tap "Biometric Authentication"
+3. Choose your preferred method
+4. Follow setup instructions
+5. Test that it works
+
+**What it protects:**
+- App access
+- Evidence Locker
+- Legal workflows
+- Sensitive documents
+- Community messages
+
+### Threat Monitoring
+
+**What it does:** Watches for security issues and alerts you
+
+**Features:**
+- Unauthorized access attempts
+- Suspicious activity detection
+- Device integrity checks
+- Network security monitoring
+- Tampering detection
+
+**How to view:**
+1. Go to Settings → Advanced Security → Threat Dashboard
+2. See security alerts and warnings
+3. Review security recommendations
+4. Take action on threats
+
+### Security Auditing
+
+**Track access to your data:**
+- Who accessed what
+- When they accessed it
+- What actions were taken
+- Export audit logs
+
+**How to use:**
+1. Go to Settings → Advanced Security → Security Audit
+2. View audit logs
+3. Filter by date, event type, or action
+4. Export logs for records
+
+### Data Encryption
+
+**Enhanced protection:**
+- AES-256 encryption for all data
+- Hardware-backed key storage
+- Encrypted backups
+- Secure key management
+
+**Settings:**
+1. Go to Settings → Advanced Security → Encryption
+2. View encryption status
+3. Manage encryption keys
+4. Configure backup encryption
+
+### Session Management
+
+**Control active sessions:**
+- View all logged-in devices
+- End sessions remotely
+- Set session timeout
+- Require re-authentication
 
 ---
 

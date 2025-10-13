@@ -1,19 +1,34 @@
-# 3mpwr App — Privacy Policy
+# 3mpwrApp — Privacy Policy
 
 **Last updated: October 12, 2025**
+**Version: 2.0 (Phase 2 Update)**
 
-This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and protects information in the 3mpwr App mobile application and web experience. By using the app, you agree to these practices.
+This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and protects information in the 3mpwrApp mobile application and web experience. By using the app, you agree to these practices.
+
+## 🆕 **Phase 2 Updates (October 2025)**
+
+We've expanded 3mpwrApp with powerful new features while maintaining our commitment to 100% user data ownership:
+
+- **🤖 Legal Workflow Automation:** AI-powered assistance for legal processes with full transparency and cultural sensitivity
+- **🌐 Indigenous Language Support:** Multilingual interface with cultural protocols and territorial acknowledgments
+- **🔐 Advanced Security Options:** Enhanced biometric security, threat monitoring, and security auditing
+- **🎯 Campaign Coordination:** Privacy-respecting tools for community organizing and advocacy
+- **📊 Enhanced Analytics:** Opt-in detailed insights while maintaining data sovereignty
+
+**Privacy-First Design:** All Phase 2 features follow the same local-first, air-gapped architecture. New features collect no additional personal data without your explicit consent.
 
 ## 🔐 **100% User Data Ownership Guarantee**
 
-**Your data belongs entirely to you.** 3mpwr App is built on the fundamental principle of complete user data sovereignty:
+**Your data belongs entirely to you.** 3mpwrApp is built on the fundamental principle of complete user data sovereignty:
 
-- **🏠 100% User Ownership:** All data created in 3mpwr App belongs entirely to you. We never own, claim, or retain your personal information.
+- **🏠 100% User Ownership:** All data created in 3mpwrApp belongs entirely to you. We never own, claim, or retain your personal information.
 - **🔒 Local-First & Air-Gapped:** All processing happens on your device. Data stays in your possession unless you choose to sync to your own cloud.
 - **☁️ Your Cloud, Your Control:** Optional sync connects only to your chosen services (Google Drive, iCloud, WebDAV, Dropbox, OneDrive, AWS S3). No data passes through our servers.
 - **🚫 Zero Tracking:** No embedded analytics, trackers, or third-party data collection without your explicit consent.
 - **🛡️ Military-Grade Security:** AES-256 encryption, hardware-backed key storage, TLS 1.3 network security, and anti-tampering protection.
 - **🔍 Verifiable Privacy:** Our codebase contains no hidden data-logging functions. You can inspect and verify our claims.
+- **🤖 AI Processing:** All AI features (legal workflow automation, document analysis) process data locally on your device. No AI model receives your personal information.
+- **🌍 Cultural Sensitivity:** Indigenous language features and cultural protocols are processed locally with deep respect for privacy and sovereignty.
 
 ### **Technical Implementation:**
 - **BYOC Strict Mode:** When enabled (`EXPO_PUBLIC_DATA_POLICY=strict_byoc`), completely disables Firebase and all cloud storage, allowing you to connect ANY cloud provider you want
@@ -40,18 +55,25 @@ This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and prot
 ### 1) **Information you provide:**
 - **Account information** (if you create one): name, email, and basic identifiers
   - *Guest Mode collects no account identifiers*
-- **Preferences and settings**: accessibility options, quiet hours, language, high contrast mode
-- **Community contributions** (if enabled): messages, posts, uploaded media, reactions, profile details
+- **Preferences and settings**: accessibility options, quiet hours, language, high contrast mode, indigenous language preferences
+- **Community contributions** (if enabled): messages, posts, uploaded media, reactions, profile details, campaign coordination activities
 - **Contact messages**: support requests via About/Contact form or email
 - **Evidence Locker notes**: stored locally on your device unless you explicitly export or share them
   - *⚠️ Privacy tip: Avoid storing personal identifiers in notes where possible*
+- **Legal workflow data**: Information you provide for automated legal processes (disability benefit applications, workplace accommodations, etc.)
+  - *All legal workflow processing happens locally on your device*
+  - *No legal information is transmitted to external servers without your explicit consent*
+- **Cultural protocol preferences**: Indigenous language selections, territorial acknowledgments, ceremonial considerations
+  - *Stored locally and never shared externally*
 
 ### 2) **Information collected automatically:**
 - **App diagnostics**: app version, device OS version, basic capabilities, crash/error logs (when enabled)
 - **Analytics events**: pseudonymous identifiers to improve features and reliability (opt-out available)
 - **Push notification token**: required only if you enable notifications
 - **Network status**: for community features and offline indicators
-- **Security monitoring**: device integrity checks, tamper detection events
+- **Security monitoring**: device integrity checks, tamper detection events, biometric authentication attempts (local only)
+- **Workflow analytics**: Aggregated, anonymized data about legal workflow completion rates and automation efficiency (opt-in only)
+  - *No personally identifiable information or case details are ever collected*
 
 ### 3) **Information from third parties:**
 - **Content metadata**: YouTube API (video information), Advocate Directory API (professional listings)
@@ -64,9 +86,12 @@ This policy describes how 3mpwr App ("we", "us", "our") collects, uses, and prot
 
 We use your information only to:
 - **Provide core functionality**: navigation, saved items, localization, accessibility features
-- **Deliver optional features**: voice navigation, quiet hours, wellness tracking, advocacy tools
-- **Send chosen notifications**: reminders, updates (you control all notification settings)
-- **Maintain security**: app integrity, fraud prevention, security monitoring
+- **Deliver optional features**: voice navigation, quiet hours, wellness tracking, advocacy tools, legal workflow automation
+- **Process legal workflows**: Automated document generation, form validation, deadline tracking (all processed locally)
+- **Support cultural protocols**: Indigenous language features, territorial acknowledgments, ceremonial considerations
+- **Enable AI assistance**: Local AI processing for legal document review, case interpretation, translation assistance
+- **Send chosen notifications**: reminders, updates, workflow deadlines (you control all notification settings)
+- **Maintain security**: app integrity, fraud prevention, security monitoring, biometric authentication
 - **Improve the app**: aggregated analytics and diagnostics (with your consent)
 - **Comply with laws**: legal obligations and terms enforcement
 
@@ -112,6 +137,10 @@ When we transfer your information internationally, we rely on approved safeguard
 - **Analytics:** Opt out of analytics collection in Settings
 - **High Contrast Mode:** Enhanced accessibility with improved color contrast
 - **Guest Mode:** Use core features without creating an account
+- **Legal Workflow Privacy:** Control what data is included in automated workflows
+- **Indigenous Language Settings:** Choose language preferences and cultural protocol visibility
+- **Advanced Security:** Enable biometric authentication, threat monitoring, and security auditing
+- **AI Features:** Opt in/out of AI-powered assistance features independently
 
 ### **Data Rights:**
 Contact us at **empowrapp08162025@gmail.com** to request:
