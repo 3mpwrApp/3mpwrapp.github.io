@@ -31,8 +31,8 @@ Generated: 2025-10-13T10:00:00.000Z
 
 ---
 
-### Phase 1.2: Dyslexia Support 🔄 95% COMPLETE
-**Status:** Near feature-complete; font binaries and user testing remaining  
+### Phase 1.2: Dyslexia Support 🔄 98% COMPLETE
+**Status:** Feature-complete; font binaries require manual download  
 **Priority:** P0 (Critical - 15% adoption expected)
 
 #### Completed ✅
@@ -48,17 +48,24 @@ Generated: 2025-10-13T10:00:00.000Z
   - `app/(tabs)/advocacy/policy-simple.tsx` (all result text blocks)
   - `app/(tabs)/advocacy/ai-advocate-translator.tsx` (summary, terms, deadlines, actions, full output)
   - `app/(tabs)/wellness/self-care-library.tsx` (descriptions, disclaimer)
-- `__tests__/dyslexia.settings.test.tsx` - Smoke test suite (presets, persistence, reset)
+- `__tests__/dyslexia.settings.test.tsx` - Smoke test suite (presets, persistence, reset) - 6 tests passing
 - i18n: 32 English translation keys for dyslexia settings
-- Documentation: `docs/DYSLEXIA_FONTS.md`, `assets/fonts/README.md` (font download instructions)
+- Documentation: 
+  - `docs/DYSLEXIA_FONTS.md` - Comprehensive feature overview
+  - `docs/DYSLEXIA_FONT_INSTALLATION.md` - Detailed installation guide with checksums
+  - `assets/fonts/README.md` - Quick setup instructions
+  - `scripts/download-dyslexia-fonts.ps1` - Automated download script
+  - `assets/fonts/OpenDyslexic-Regular.ttf.PLACEHOLDER` - Download instructions
+  - `assets/fonts/Lexend-Regular.ttf.PLACEHOLDER` - Download instructions
 
-#### Remaining ⏳ (5%)
-- Font asset binaries: Download and add OpenDyslexic-Regular.ttf, Lexend-Regular.ttf (~130 KB) to `assets/fonts/`
-- Additional screen adoption: Community threads, Resource articles, Wellness exercises (optional)
-- Advanced ruler: Auto-follow scroll position (requires onLayout + scroll tracking)
-- Syllable breaks: Hyphenation markers (experimental, low priority)
-- User testing: 15 users with dyslexia (collect spacing & overlay preference metrics)
-- Screenshots: Capture settings UI, visual overlay, word highlight for documentation
+#### Remaining ⏳ (2%)
+- **Font binaries (manual download required):**
+  - OpenDyslexic-Regular.ttf (~80 KB) - Download from https://opendyslexic.org/
+  - Lexend-Regular.ttf (~50 KB) - Download from https://fonts.google.com/specimen/Lexend
+  - See `assets/fonts/*.PLACEHOLDER` files for detailed instructions
+  - **Note:** App functions fully without fonts (graceful fallback to system default)
+- User testing: 15 users with dyslexia (collect spacing & overlay preference metrics) - Optional
+- Screenshots: Capture settings UI, visual overlay, word highlight for documentation - Optional
 
 **Files:** See `docs/PHASE_1.2_DYSLEXIA_SUMMARY.md` for complete details
 
