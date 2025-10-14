@@ -93,3 +93,4 @@ exclude:
   - Gemfile.lock
   - node_modules
   - public
+  - assets/downloads/3mpwrapp-user-guide-full.md  # Exclude .md, keep .html version
