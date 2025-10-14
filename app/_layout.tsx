@@ -6,7 +6,6 @@ import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "r
 
 // internal modules
 import ChangelogGate from "../components/ChangelogGate";
-import { DyslexiaVisualLayer } from "../components/DyslexiaVisualLayer";
 import GlobalAssistant from "../components/GlobalAssistant";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
@@ -280,13 +279,6 @@ const bannerStyles = StyleSheet.create({
   },
   text: { textAlign: "center", fontWeight: "700" },
 });
-
-// Placeholder for upcoming overlay + reading ruler visual layer.
-// Intentionally minimal now; will evolve in later step to apply colored overlay backgrounds
-// and a focus line (reading ruler) that can follow user scroll / tap interactions.
-export function DyslexiaVisualLayer() {
-  return null;
-}
 
 
 

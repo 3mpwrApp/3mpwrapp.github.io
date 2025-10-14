@@ -9,7 +9,7 @@
  */
 
 import { useState } from 'react';
-import type { GestureResponderEvent} from 'react-native';
+import type { GestureResponderEvent } from 'react-native';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { COLORED_OVERLAYS, READING_RULER } from '../constants/dyslexia';
@@ -33,8 +33,7 @@ export function DyslexiaVisualLayer() {
 
   const handleRulerDrag = (event: GestureResponderEvent) => {
     // Allow dragging ruler to reposition
-    const { pageY, locationY } = event.nativeEvent;
-    // Use locationY relative to parent or pageY relative to screen
+    const { pageY } = event.nativeEvent;
     // Convert to percentage for responsive positioning
     if (pageY > 0) {
       const screenHeight = 800; // Fallback; ideally use Dimensions

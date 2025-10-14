@@ -40,7 +40,7 @@ export function useDyslexiaFont(load: boolean = true): UseDyslexiaFontResult {
         for (const key of Object.keys(FONT_SOURCES)) {
           try {
             fontMap[key] = FONT_SOURCES[key];
-          } catch (_) {
+          } catch {
             // If asset missing, skip silently
           }
         }

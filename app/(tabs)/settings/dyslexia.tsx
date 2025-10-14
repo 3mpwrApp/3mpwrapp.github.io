@@ -51,14 +51,14 @@ export default function DyslexiaSettingsScreen() {
   const applyPreset = async (preset: DyslexiaPresetKey) => {
     setSaving(true);
     try { await dys.applyPreset(preset); }
-    catch (e) { Alert.alert(t('common.error', 'Error'), t('dyslexia.presetError', 'Failed to apply preset')); }
+    catch (_e) { Alert.alert(t('common.error', 'Error'), t('dyslexia.presetError', 'Failed to apply preset')); }
     finally { setSaving(false); }
   };
 
   const update = async (partial: Partial<typeof preferences>) => {
     setSaving(true);
     try { await dys.setPreferences(partial); }
-    catch (e) { /* silent */ }
+    catch (_e) { /* silent */ }
     finally { setSaving(false); }
   };
 
@@ -207,7 +207,7 @@ function Section({ title, description, children }: { title: string; description?
   );
 }
 
-function RowChoices<T extends string>({ current, onSelect, items, getLabel, palette, t }: { current: T; onSelect: (v: T) => void; items: T[]; getLabel: (k: T) => string; palette: ReturnType<typeof useAppPalette>; t: any }) {
+function RowChoices<T extends string>({ current, onSelect, items, getLabel, palette }: { current: T; onSelect: (v: T) => void; items: T[]; getLabel: (k: T) => string; palette: ReturnType<typeof useAppPalette>; t?: any }) {
   return (
     <View style={styles.rowChoicesWrap}>
       {items.map(item => {
