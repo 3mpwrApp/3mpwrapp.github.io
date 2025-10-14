@@ -7,9 +7,10 @@ const fs = require('fs');
 
 (async () => {
   const browser = await chromium.launch();
-  const page = await browser.newPage();
+  const context = await browser.newContext();
+  const page = await context.newPage();
 
-  const base = 'https://3mpwrapp.github.io';
+  const base = process.env.SITE_URL || 'https://3mpwrapp.pages.dev';
   const q = '?no-modal=1';
   const mode = (process.env.AXE_MODE || 'quick').toLowerCase();
   const quick = [

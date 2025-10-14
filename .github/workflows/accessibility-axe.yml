@@ -21,6 +21,7 @@ jobs:
     continue-on-error: ${{ github.event_name != 'pull_request' }}
     env:
       AXE_MODE: quick
+      SITE_URL: https://3mpwrapp.pages.dev
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,7 +41,7 @@ jobs:
 
       - name: Preflight availability check
         run: |
-          URL="https://3mpwrapp.github.io/?no-modal=1"
+          URL="https://3mpwrapp.pages.dev/?no-modal=1"
           for i in 1 2 3; do
             echo "Preflight attempt $i..."
             if curl -sSfL "$URL" -o /dev/null; then echo "Site reachable"; exit 0; fi
@@ -68,6 +69,7 @@ jobs:
     continue-on-error: true
     env:
       AXE_MODE: full
+      SITE_URL: https://3mpwrapp.pages.dev
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -87,7 +89,7 @@ jobs:
 
       - name: Preflight availability check
         run: |
-          URL="https://3mpwrapp.github.io/?no-modal=1"
+          URL="https://3mpwrapp.pages.dev/?no-modal=1"
           for i in 1 2 3; do
             echo "Preflight attempt $i..."
             if curl -sSfL "$URL" -o /dev/null; then echo "Site reachable"; exit 0; fi
