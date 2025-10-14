@@ -49,8 +49,8 @@ export function useDwellClick(options: UseDwellClickOptions): UseDwellClickRetur
 
   const [isDwelling, setIsDwelling] = useState(false);
   const [progress, setProgress] = useState(0);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const progressIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const activatedRef = useRef(false);
 
   // Clear timers on unmount

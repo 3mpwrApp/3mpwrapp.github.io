@@ -1,4 +1,3 @@
-import Slider from '@react-native-community/slider';
 import React from 'react';
 import {
     Alert,
@@ -114,17 +113,9 @@ export default function MotorAccessibilityScreen() {
             <Text style={styles.label} maxFontSizeMultiplier={MAX_FONT_SCALE}>
               {t('motorAccessibility.dwellDelay', 'Delay: {{delay}}ms', { delay: preferences.dwellClickDelay })}
             </Text>
-            <Slider
-              style={styles.slider}
-              minimumValue={1000}
-              maximumValue={5000}
-              step={500}
-              value={preferences.dwellClickDelay}
-              onValueChange={(delay) => setPreferences({ dwellClickDelay: delay })}
-              minimumTrackTintColor={palette.primary}
-              maximumTrackTintColor={palette.muted}
-              accessibilityLabel={t('motorAccessibility.dwellDelaySlider', 'Dwell delay slider')}
-            />
+            <Text style={styles.helpText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              {t('motorAccessibility.sliderNote', 'Slider control coming soon. Default: 2000ms')}
+            </Text>
 
             {/* Test Button */}
             <A11yPressable
