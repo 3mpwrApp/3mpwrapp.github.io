@@ -177,8 +177,8 @@ async function main(){
   // Cut to maxItems after ensuring must-haves
   ranked.splice(cfg.maxItems);
 
-  // Write a daily blog draft (optional)
-  if (cfg.postDaily) {
+  // Write a daily blog draft (optional) - ONLY if there are results
+  if (cfg.postDaily && ranked.length > 0) {
     const postsDir = path.join(process.cwd(), '_posts');
     if (!fs.existsSync(postsDir)) fs.mkdirSync(postsDir, { recursive: true });
     const file = path.join(postsDir, `${todayISO}-daily-curation.md`);
@@ -194,13 +194,9 @@ async function main(){
       out.push('');
       out.push('A quick round-up of community stories, mutual aid, and calls-to-action:');
       out.push('');
-      if (ranked.length === 0) {
-        out.push('- No high-priority items today.');
-      } else {
-        for (const it of ranked) {
-          const title = it.title || 'Post';
-          out.push(`- [${title}](${it.link}) — ${it.description || ''}`);
-        }
+      for (const it of ranked) {
+        const title = it.title || 'Post';
+        out.push(`- [${title}](${it.link}) — ${it.description || ''}`);
       }
       out.push('');
       fs.writeFileSync(file, out.join('\n'), 'utf8');
@@ -208,6 +204,8 @@ async function main(){
     } else {
       console.log('Daily draft already exists, skipping');
     }
+  } else if (cfg.postDaily && ranked.length === 0) {
+    console.log('Skipping daily post - no items met minimum score threshold');
   }
 
   // Also write an ISSUE-like markdown summary to _curation/ for human review
