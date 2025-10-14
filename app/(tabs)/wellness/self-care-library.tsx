@@ -8,6 +8,7 @@ import {
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import { DyslexiaText } from "../../../components/DyslexiaText";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
     MAX_FONT_SCALE,
@@ -182,16 +183,16 @@ export default function SelfCareLibrary() {
             >
               <Text style={styles.linkLabel}>{it.label}</Text>
               {!!it.description && (
-                <Text style={styles.tipText}>{it.description}</Text>
+                <DyslexiaText style={styles.tipText}>{it.description}</DyslexiaText>
               )}
             </A11yPressable>
           ))}
         </View>
       ))}
-      <Text style={styles.disclaimer}>
+      <DyslexiaText style={styles.disclaimer}>
         Always adapt activities to your abilities and consult a clinician when
         needed.
-      </Text>
+      </DyslexiaText>
     </ScrollView>
   );
 }

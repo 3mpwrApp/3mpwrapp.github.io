@@ -5,14 +5,14 @@
  * - OpenDyslexic or Lexend font
  * - Custom letter/word/line spacing
  * - Colored overlays
- * - Word highlighting
+ * - Word highlighting (tap individual words to highlight them)
  * 
  * Usage:
  *   <DyslexiaText>Your text here</DyslexiaText>
  *   <DyslexiaText style={{fontSize: 16}}>Custom styled</DyslexiaText>
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, type TextProps, type TextStyle } from 'react-native';
 
 import {
@@ -40,6 +40,7 @@ export function DyslexiaText({
   ...props
 }: DyslexiaTextProps) {
   const dyslexia = useDyslexiaOptional();
+  const [highlightedIndex, setHighlightedIndex] = useState<number | null>(null);
 
   // If dyslexia context not available or disabled, render normal Text
   if (!dyslexia || !dyslexia.isEnabled || disableDyslexiaFont) {
@@ -84,6 +85,30 @@ export function DyslexiaText({
   if (preferences.textContrast !== 'blackOnWhite') {
     const contrast = TEXT_CONTRAST[preferences.textContrast];
     dyslexiaStyle.color = contrast.text;
+  }
+
+  // Word highlighting feature
+  if (preferences.wordHighlighting && typeof children === 'string') {
+    const words = children.split(/(\s+)/); // Split but keep whitespace
+    return (
+      <Text style={[style, dyslexiaStyle]} {...props}>
+        {words.map((word, idx) => {
+          const isWhitespace = /^\s+$/.test(word);
+          if (isWhitespace) return word;
+          
+          const isHighlighted = highlightedIndex === idx;
+          return (
+            <Text
+              key={idx}
+              onPress={() => setHighlightedIndex(isHighlighted ? null : idx)}
+              style={isHighlighted ? { backgroundColor: 'rgba(255, 255, 0, 0.4)' } : undefined}
+            >
+              {word}
+            </Text>
+          );
+        })}
+      </Text>
+    );
   }
 
   // Note: Word spacing not supported in React Native Text component
