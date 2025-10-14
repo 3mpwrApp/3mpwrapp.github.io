@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies
+        run: npm install --no-save node-fetch@3 || true
+
       - name: Check 1pm Toronto time gate
         id: timegate
         run: |
@@ -53,7 +56,7 @@ jobs:
           git push
 
       - name: Upload curation artifacts
-        if: always()
+        if: steps.timegate.outputs.is13 == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: daily-curation
@@ -70,4 +73,10 @@ jobs:
       # Optional: Mastodon auto-post (free). Requires MASTO_INSTANCE, MASTO_TOKEN secrets.
       - name: Post to Mastodon
         if: steps.timegate.outputs.is13 == 'true'
+        continue-on-error: true
+        env:
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          SITE_URL: https://3mpwrapp.pages.dev/
+          MASTO_VISIBILITY: public
         run: node scripts/post-mastodon.js
