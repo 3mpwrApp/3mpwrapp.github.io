@@ -2,6 +2,7 @@ import React from "react";
 import { Linking, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import { DyslexiaText } from "../../../components/DyslexiaText";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import {
     MAX_FONT_SCALE,
@@ -132,10 +133,10 @@ export default function GriefSupport() {
       >
         Grief + Identity Support Hub
       </Text>
-      <Text style={s.subtitle}>
+      <DyslexiaText style={s.subtitle}>
         Resources for the loss of identity and purpose that can follow injury or
         disability.
-      </Text>
+      </DyslexiaText>
       {sections.map((sec) => (
         <View
           key={sec.title}
@@ -156,7 +157,7 @@ export default function GriefSupport() {
             >
               <Text style={s.linkLabel}>{it.label}</Text>
               {!!it.description && (
-                <Text style={s.tipText}>{it.description}</Text>
+                <DyslexiaText style={s.tipText}>{it.description}</DyslexiaText>
               )}
             </A11yPressable>
           ))}

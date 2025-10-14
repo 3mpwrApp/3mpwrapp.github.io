@@ -1,13 +1,14 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
-import { useAppPalette } from "../../../theme/usePalette";
+import { DyslexiaText } from "../../../components/DyslexiaText";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
+import { useAppPalette } from "../../../theme/usePalette";
 
 let AsyncStorage: any;
 try {
@@ -89,21 +90,21 @@ export default function Achievements() {
       >
         {t("wellness.achievements.title", "Achievements")}
       </Text>
-      <Text style={s.subtitle}>
+      <DyslexiaText style={s.subtitle}>
         {t(
           "wellness.achievements.subtitle",
           "Earn badges as you build healthy routines.",
         )}
-      </Text>
+      </DyslexiaText>
       <Text style={s.points}>
         Points: {points} Ã¢â‚¬Â¢ Streak: {streak} days
       </Text>
       {items.map((it) => (
         <View key={it.id} style={[s.card, !flags[it.id] && { opacity: 0.5 }]}>
           <Text style={s.cardTitle}>
-            {flags[it.id] ? "Ã°Å¸Ââ€¦ " : "Ã°Å¸â€Â² "} {it.title}
+            {flags[it.id] ? "Ã°Å¸Ââ€¦ " : "Ã°Å¸â€Â² "} {it.title}
           </Text>
-          <Text style={s.cardText}>{it.desc}</Text>
+          <DyslexiaText style={s.cardText}>{it.desc}</DyslexiaText>
         </View>
       ))}
     </ScrollView>

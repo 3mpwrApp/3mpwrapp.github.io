@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import { DyslexiaText } from '../../../components/DyslexiaText';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
     MAX_FONT_SCALE,
@@ -134,7 +135,7 @@ export default function AiGovNavigator() {
         <Text style={s.cardTitle}>
           Step {step + 1} of {list.length}
         </Text>
-        <Text style={s.cardText}>{list[step]}</Text>
+        <DyslexiaText style={s.cardText}>{list[step]}</DyslexiaText>
         <View style={{ flexDirection: "row", gap: 8, marginTop: 8 }}>
           <Pressable
             onPress={prev}

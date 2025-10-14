@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import { DyslexiaText } from '../../../components/DyslexiaText';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -12,7 +13,7 @@ export default function WellnessHub() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.hub.title','Wellness & Recovery')}</Text>
-      <Text style={s.subtitle}>{t('wellness.hub.subtitle','Evidence-based tools for mood, pain, resilience, and recovery.')}</Text>
+      <DyslexiaText style={s.subtitle}>{t('wellness.hub.subtitle','Evidence-based tools for mood, pain, resilience, and recovery.')}</DyslexiaText>
       <View style={s.grid}>
         <Card href="/wellness/resilience" title={t('wellness.resilience.title','Resilience Points')} desc={t('wellness.resilience.desc','Gamified micro-wins for therapy and life steps.')} />
         <Card href="/wellness/dbt" title={t('wellness.dbt.title','DBT Skill Matcher')} desc={t('wellness.dbt.desc','Instant skill suggestions for current emotion.')} />
@@ -42,7 +43,7 @@ function Card({ href, title, desc }: { href: string; title: string; desc: string
     <Link href={href as any} asChild>
       <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, padding:12 }}>
         <Text style={{ color: palette.text, fontWeight:'700' }}>{title}</Text>
-        <Text style={{ color: palette.text, opacity:0.9, marginTop:4 }}>{desc}</Text>
+        <DyslexiaText style={{ color: palette.text, opacity:0.9, marginTop:4 }}>{desc}</DyslexiaText>
       </Pressable>
     </Link>
   );
