@@ -60,12 +60,63 @@ function parseRSS(xml) {
   return items;
 }
 
-function scoreItem(text, cfg) {
+function scoreItem(text, link, cfg) {
   let s = 0;
   const t = (text || '').toLowerCase();
+  const url = (link || '').toLowerCase();
+  
+  // Core keyword matching (1 point each)
   for (const k of cfg.keywords) if (t.includes(k.toLowerCase())) s += 1;
-  for (const tag of cfg.tags) if (t.includes(tag.toLowerCase())) s += 1;
-  return s;
+  
+  // Hashtag matching (0.5 points each - less valuable than keywords)
+  for (const tag of cfg.tags) if (t.includes(tag.toLowerCase())) s += 0.5;
+  
+  // High-priority terms (2 points each - critical topics)
+  const highPriority = [
+    'un crpd', 'uncrpd', 'convention on the rights of persons with disabilities',
+    'bill c-81', 'accessible canada act',
+    'wsib appeal', 'wcb appeal', 'benefits denied', 'discrimination',
+    'accessibility barrier', 'duty to accommodate', 'human rights complaint',
+    'injured worker', 'workplace injury', 'workers compensation'
+  ];
+  for (const term of highPriority) {
+    if (t.includes(term.toLowerCase())) s += 2;
+  }
+  
+  // Canadian geographic relevance (1 point)
+  const canadianTerms = ['canada', 'canadian', 'ontario', 'quebec', 'bc', 'british columbia', 
+    'alberta', 'manitoba', 'saskatchewan', 'nova scotia', 'new brunswick', 
+    'newfoundland', 'pei', 'yukon', 'nwt', 'nunavut', 'toronto', 'vancouver', 
+    'montreal', 'calgary', 'ottawa', 'edmonton', 'winnipeg'];
+  if (canadianTerms.some(term => t.includes(term))) s += 1;
+  
+  // International disability rights (1.5 points)
+  const intlTerms = ['united nations', 'world health organization', 'who', 'ilo',
+    'international labour', 'disability rights', 'global accessibility'];
+  if (intlTerms.some(term => t.includes(term))) s += 1.5;
+  
+  // Government/official sources (bonus by URL)
+  if (url.includes('.gc.ca') || url.includes('.canada.ca')) s += 2;
+  if (url.includes('.gov.') || url.includes('.gouv.')) s += 1.5;
+  if (url.includes('chrc-ccdp') || url.includes('ohrc')) s += 2;
+  
+  // Workers' comp boards (1.5 points)
+  if (/wsib|worksafebc|wcb\.|cnesst|wscc|whscc/.test(url)) s += 1.5;
+  
+  // Legal/advocacy organizations (1 point)
+  if (url.includes('arch') || url.includes('ccdonline') || 
+      url.includes('disabilityalliancebc') || url.includes('aoda') ||
+      url.includes('inclusioncanada')) s += 1;
+  
+  // News quality sources (0.5 point)
+  if (url.includes('cbc.ca') || url.includes('thestar.com') || 
+      url.includes('globeandmail.com') || url.includes('nationalpost.com')) s += 0.5;
+  
+  // Reduce score for spam indicators
+  if (/viagra|casino|lottery|crypto|forex|binary/i.test(t)) s = 0;
+  if (/click here|buy now|limited time|act now/i.test(t)) s *= 0.5;
+  
+  return Math.round(s * 10) / 10; // Round to 1 decimal
 }
 
 function toISODate(d) {
@@ -107,13 +158,15 @@ async function main(){
       const items = parseRSS(resp.data).slice(0, 20);
       for (const it of items) {
         const text = `${it.title} ${it.description}`;
-        let score = scoreItem(text, cfg);
-        // Source weighting: boost federal/agency sources
-        if (/accessible\.canada|canada\.ca|chrc-ccdp|a11y\.canada/i.test(feed)) score += 1;
-        if (/wsib|worksafebc|wcb\./i.test(feed)) score += 0.5;
+        let score = scoreItem(text, it.link || feed, cfg);
+        
         // Recency boost: if pubDate within last 24h add +1
         const pub = Date.parse(it.pubDate || '');
         if (!isNaN(pub) && (Date.now() - pub) < 24*60*60*1000) score += 1;
+        
+        // Extra recency: within last 6 hours add another +0.5
+        if (!isNaN(pub) && (Date.now() - pub) < 6*60*60*1000) score += 0.5;
+        
         collected.push({ ...it, source: feed, score });
       }
       fetchOk++;
@@ -126,7 +179,7 @@ async function main(){
   const masto = await fetchMastodon(cfg);
   for (const it of masto) {
     const text = `${it.title} ${it.description}`;
-    const score = scoreItem(text, cfg);
+    const score = scoreItem(text, it.link || '', cfg);
     collected.push({ ...it, source: `mastodon:${cfg.mastodon.instance}`, score });
   }
 
