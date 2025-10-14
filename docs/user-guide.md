@@ -103,6 +103,31 @@ We've added powerful new features to help you even more:
 
 ---
 
+## ♿ Accessibility Features (Quick Overview)
+
+Looking for how to enable or tune accessibility support? See the dedicated walkthrough: `ACCESSIBILITY_WALKTHROUGH.md`.
+
+### Available Now
+- **Cognitive Accessibility Modes** (Standard / Simplified / Minimal) – reduce choices, add progress + breadcrumbs, auto-save state.
+- **Dyslexia Core Infrastructure** – fonts, spacing, overlays (developer preview; full settings UI coming soon).
+
+### Coming Soon (In Order)
+1. **Dyslexia Settings UI & Global Activation**
+2. **Motor Accessibility Suite** (dwell-click, sticky keys, voice commands, one‑handed mode, tremor compensation)
+3. **Community Safety Tools** (content warnings, safe word protocol, sentiment flags, moderation dashboard)
+4. **Cultural Data Protection / OCAP Compliance** (sacred data encryption, elder permissions, ceremony time‑locks)
+5. **Indigenous Calendar** (traditional seasons, moon phases, ceremony reminders)
+6. **Performance Monitoring Dashboard** (load time, render spans, memory, network)
+
+### Fast Start
+- To enable Cognitive Mode: Settings → Cognitive Accessibility → pick a mode.
+- To experiment with Dyslexia support now: wrap text components with `DyslexiaText` (see walkthrough doc for example until settings UI ships).
+
+### Feedback
+Use Settings → About → Feedback or email accessibility@3mpwr.app – early feedback shapes priorities.
+
+---
+
 <a id="all-disability-types-supported"></a>
 ## All Disability Types Supported
 
