@@ -13,9 +13,9 @@ interface DwellProgressIndicatorProps {
  */
 export function DwellProgressIndicator({ progress, size = 40 }: DwellProgressIndicatorProps) {
   const palette = useAppPalette();
-  const radius = size / 2 - 4;
-  const circumference = 2 * Math.PI * radius;
-  // For future SVG implementation:
+  // For future SVG implementation with proper arc drawing:
+  // const radius = size / 2 - 4;
+  // const circumference = 2 * Math.PI * radius;
   // const strokeDashoffset = circumference - (progress / 100) * circumference;
 
   return (
