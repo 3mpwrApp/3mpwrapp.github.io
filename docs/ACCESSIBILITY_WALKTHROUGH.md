@@ -50,10 +50,10 @@ Planned Enhancements (Integration Remaining 60%):
 - Community thread memory, Wellness feature step bundling, Resource pagination simplification.
 
 ### 2.2 Dyslexia Support (Phase 1.2 Core)
-Status: Core infrastructure ready (fonts, spacing, overlays). Settings UI & global activation in progress.
+Status: Core infrastructure + Settings UI + initial integration COMPLETE (85%). Global adoption & advanced reading aids in progress.
 
-Temporary Activation (Developer Preview):
-Until the settings screen lands, wrap high-density text blocks with `<DyslexiaText>` component.
+Current Activation:
+Use the Settings → Dyslexia screen to configure fonts, spacing, overlays, and presets. Wrap any remaining high-density text blocks with `<DyslexiaText>` during phased migration.
 
 Code Example:
 ```tsx
@@ -79,11 +79,12 @@ Reading Comfort Recommendations:
 | Visual stress / glare | Overlay: Cream or Aqua + DarkMode preset |
 | Tracking difficulty | Increase spacing + enable reading ruler (coming) |
 
-Planned (30% Remaining):
-- Settings UI (font preview, slider controls)
-- Automatic Text wrapper adoption across core screens
+Remaining (15%):
+- App-wide `<DyslexiaText>` adoption (policy simplifier, AI translator outputs, resource articles)
 - Reading ruler + word highlight follow mode
+- Overlay runtime container + performance validation
 - User testing & fine-tuning letter-spacing defaults
+- i18n key additions for new advanced toggles
 
 ---
 ## 3. Near-Term Planned Features (Design Locked)
@@ -140,7 +141,7 @@ Priority Handling:
 | Phase | State | % | ETA | Notes |
 |-------|-------|----|-----|-------|
 | 1.1 Cognitive | Core live | 40% integration | Ongoing | Rolling screen adoption |
-| 1.2 Dyslexia | Core ready | 70% | +2 weeks | Settings UI + global wrap |
+| 1.2 Dyslexia | Core+UI live | 85% | +10 days | Global wrap + ruler/overlay |
 | 1.3 Motor | Planned | 0% | +6 weeks start | Start after dyslexia UI |
 | 1.4 Safety | Planned | 0% | +10 weeks | Parallel with motor mid-phase |
 | 1.5 Cultural | Planned | 0% | +14 weeks | Requires consultation |

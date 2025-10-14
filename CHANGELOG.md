@@ -2,18 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased] - 2025-10-13
+## [Unreleased] - 2025-10-14
 
 ### Added
 
-#### � Dyslexia Support System (Phase 1.2 - 70% COMPLETE)
+#### 📖 Dyslexia Support System (Phase 1.2 - 85% COMPLETE)
 - **Core Infrastructure** for dyslexia-friendly reading experience:
   - `constants/dyslexia.ts` (380 lines) - Complete configuration: 5 fonts (OpenDyslexic, Lexend, Comic Sans, Arial, System), letter spacing (0→0.2em), line height (1.2→2.0), 8 colored overlays, 4 presets (Standard, Recommended, High Contrast, Dark Mode)
   - `context/DyslexiaContext.tsx` (160 lines) - State management with AsyncStorage, applyPreset(), setPreferences(), reset(), useDyslexia() hooks
   - `components/DyslexiaText.tsx` (120 lines) - Drop-in Text replacement with auto-styling, font scaling (100-200%), letter spacing, line height, colors
+  - `hooks/useDyslexiaFont.ts` (90 lines) - Async font loader with graceful fallback (OpenDyslexic, Lexend)
+  - `app/(tabs)/settings/dyslexia.tsx` (300+ lines) - Full settings UI (presets, font selection, spacing chips, overlays, advanced toggles, reset)
+  - Initial integration in `app/(tabs)/resources/letter-wizard.tsx` (title/subtitle migrated to `DyslexiaText`) as phased rollout validation
 - **Expected Impact**: 15% adoption (1.4M Canadians with dyslexia), 25-40% faster reading, 30% fewer errors
-- **Remaining Work**: Settings UI, font loading, app-wide integration, i18n keys, testing
+- **Remaining Work (15%)**: App-wide `<DyslexiaText>` adoption (high-density text), reading ruler + word highlight mode, overlay runtime container, performance validation, ~50 i18n keys, user testing & parameter tuning
 - **Documentation**: `docs/PHASE_1.2_DYSLEXIA_SUMMARY.md`
+  - Updated: `docs/UNFINISHED_WORK.md`, `docs/ACCESSIBILITY_WALKTHROUGH.md` (progress from 70%→85%)
 
 #### 🖐️ Motor Disabilities Support (Phase 1.3 - PLANNING COMPLETE)
 - **Comprehensive Plan** for users with mobility challenges (CP, MS, arthritis, Parkinson's, tremors, injuries):

@@ -23,6 +23,7 @@
 import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
+import { DyslexiaText } from '../../../components/DyslexiaText';
 import A11yPressable from "../../../components/A11yPressable";
 import { ComplexityBadge, SimplifiedView } from "../../../components/CognitiveAccessibility";
 import LetterActionsBar from "../../../components/letters/LetterActionsBar";
@@ -1152,18 +1153,17 @@ export default function LetterWizard() {
       contentContainerStyle={{ padding: 16 }}
       accessibilityLabel={t('letterWizard.screenLabel', 'Master Letter Generator screen')}
     >
-      <Text
-        ref={titleRef}
+      <DyslexiaText
+        ref={titleRef as any}
         style={s.title}
         accessibilityRole="header"
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
         {t('letterWizard.title', 'Master Letter Generator')}
-      </Text>
+      </DyslexiaText>
       
-      <Text style={s.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+      <DyslexiaText style={s.subtitle}>
         {t('letterWizard.subtitle', 'Create professional letters for any disability advocacy situation.')}
-      </Text>
+      </DyslexiaText>
       
       {step === 'situation' && renderSituationStep()}
       {step === 'letter_type' && renderLetterTypeStep()}

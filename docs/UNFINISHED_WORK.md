@@ -31,21 +31,26 @@ Generated: 2025-10-13T10:00:00.000Z
 
 ---
 
-### Phase 1.2: Dyslexia Support 🔄 70% COMPLETE
-**Status:** Core infrastructure complete, settings UI and app integration pending  
+### Phase 1.2: Dyslexia Support 🔄 85% COMPLETE
+**Status:** Core infrastructure + settings UI + initial high-impact integration complete; global adoption & advanced reading aids pending  
 **Priority:** P0 (Critical - 15% adoption expected)
 
 #### Completed ✅
 - `constants/dyslexia.ts` - 380 lines, complete configuration (5 fonts, 8 overlays, 4 presets)
 - `context/DyslexiaContext.tsx` - 160 lines, state management with AsyncStorage
 - `components/DyslexiaText.tsx` - 120 lines, drop-in Text replacement with auto-styling
+- `hooks/useDyslexiaFont.ts` - 90 lines, async font loader (OpenDyslexic, Lexend) with graceful fallback
+- `app/(tabs)/settings/dyslexia.tsx` - 300+ lines, full settings UI (presets, font selection, spacing, overlays, advanced toggles)
+- Initial integration in `app/(tabs)/resources/letter-wizard.tsx` (titles & subtitle converted to `DyslexiaText`) – validation path for phased rollout
 
 #### Remaining ⏳
-- `app/(tabs)/settings/dyslexia.tsx` - Settings UI screen (300 lines estimated)
-- Font loading: Load OpenDyslexic and Lexend fonts via expo-font (50 lines)
-- App-wide integration: Replace `<Text>` with `<DyslexiaText>` in 20+ screens (100 lines)
-- i18n keys: Add 50 translation keys for dyslexia features
-- User testing: 15 users with dyslexia
+- App-wide integration: Replace remaining high-density `<Text>` blocks (articles, policy simplifier, AI translator outputs, resource articles)
+- Overlay & reading ruler runtime layer (global container + focus line tracking)
+- Word highlight / syllable break visual modes (tied to reading ruler feature flag)
+- i18n: Add ~50 translation keys for new settings labels & descriptions
+- Provider optimization: Decide on global vs on-demand overlay injection for performance
+- User testing: 15 users with dyslexia (collect spacing & overlay preference metrics)
+- Documentation screenshots & usage examples (post font asset confirmation)
 
 **Files:** See `docs/PHASE_1.2_DYSLEXIA_SUMMARY.md` for complete details
 
