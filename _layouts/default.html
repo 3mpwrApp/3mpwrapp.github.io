@@ -330,6 +330,7 @@
         set(KEY, status);
         set(ANALYTICS_KEY, analytics.toString());
         banner.hidden = true;
+        banner.style.display = 'none';
         banner.setAttribute('aria-hidden', 'true');
         emit(status, analytics);
         if (window.announce) {
