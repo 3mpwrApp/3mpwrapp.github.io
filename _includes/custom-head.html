@@ -3,7 +3,20 @@ This file is injected by Minima's head.html if present.
 We add favicons, webmanifest, and optional GA4 (via analytics.html).
 {%- endcomment -%}
 
+{%- comment -%} Microsoft Clarity - Privacy-friendly analytics (free, unlimited) {%- endcomment -%}
+{% if jekyll.environment == 'production' %}
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "tps3d4cg0x");
+</script>
+{% endif %}
+
 {%- comment -%} Performance: DNS prefetch and preconnect for external resources {%- endcomment -%}
+<link rel="dns-prefetch" href="//www.clarity.ms">
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin>
 {%- if site.ga_measurement_id -%}
 <link rel="dns-prefetch" href="//www.googletagmanager.com">
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
