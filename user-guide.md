@@ -1,52 +1,28 @@
-﻿------------
-
+﻿---
 layout: default
-
-title: 3mpwrApp — User Guide for Everyonelayout: default
-
+title: 3mpwrApp — User Guide for Everyone
 description: A comprehensive guide to using 3mpwrApp's tools and community features. Written for the disability community, Indigenous peoples, injured workers, and allies.
-
-version: 2.1 (Phase 2)title: 3mpwrApp — User Guide for Everyone  layout: defaultlayout: default
-
+version: 2.1 (Phase 2)
 lastUpdated: 2025-10-13
-
-accessibility: WCAG 2.1 AAA compliant, screen reader optimized, cognitive accessibility enhanceddescription: A comprehensive guide to using 3mpwrApp's tools and community features. Written for the disability community, Indigenous peoples, injured workers, and allies.
-
+accessibility: WCAG 2.1 AAA compliant, screen reader optimized, cognitive accessibility enhanced
 phase2Features: Disability Wizard, Master Letter Generator (22 types), Legal Workflow Automation, Indigenous Languages, Advanced Security, Campaign Coordination
+---
 
----version: 2.1 (Phase 2)title: 3mpwrApp — User Guide for Everyonetitle: 3mpwrApp — User Guide for Everyone
+# 3mpwrApp — User Guide for Everyone
 
+> **What this app does:** Practical tools and community support for People with Disabilities, Injured Workers, Indigenous peoples, and their supporters.
 
+**Quick start? Jump to [Getting Started in 5 Minutes](#getting-started-in-5-minutes)**
 
-# 3mpwrApp — User Guide for EveryonelastUpdated: 2025-10-13
-
-
-
-> **What this app does:** Practical tools and community support for People with Disabilities, Injured Workers, Indigenous peoples, and their supporters.accessibility: WCAG 2.1 AAA compliant, screen reader optimized, cognitive accessibility enhanceddescription: A comprehensive guide to using 3mpwrApp's tools and community features. Written for the disability community, Indigenous peoples, injured workers, and allies.description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
-
-
-
-**Quick start? Jump to [Getting Started in 5 Minutes](#getting-started-in-5-minutes)**phase2Features: Disability Wizard, Master Letter Generator (22 types), Legal Workflow Automation, Indigenous Languages, Advanced Security, Campaign Coordination
-
-
-
-Version: {{ page.version }} • Last updated: {{ page.lastUpdated }}---version: 2.1 (Phase 2)version: 2.1 (Phase 2)
-
-
+Version: {{ page.version }} • Last updated: {{ page.lastUpdated }}
 
 ---
 
-
-
-📥 **[Download Complete PDF Guide](/assets/downloads/3mpwrapp-user-guide-full.pdf)** (15,000 words, ~75 pages) • **[View Full Version](/assets/downloads/3mpwrapp-user-guide-full.html)**# 3mpwrApp — User Guide for EveryonelastUpdated: 2025-10-13lastUpdated: 2025-10-13
-
-
+📥 **[Download Complete PDF Guide](/assets/downloads/3mpwrapp-user-guide-full.pdf)** (15,000 words, ~75 pages) • **[View Full Version](/assets/downloads/3mpwrapp-user-guide-full.html)**
 
 ---
 
-
-
-## 🆕 What's New in Phase 2 (October 2025)> **What this app does:** Practical tools and community support for People with Disabilities, Injured Workers, Indigenous peoples, and their supporters.accessibility: WCAG 2.1 AAA compliant, screen reader optimized, cognitive accessibility enhancedaccessibility: Enhanced for screen readers, cognitive accessibility, and diverse needs
+## 🆕 What's New in Phase 2 (October 2025)
 
 
 
