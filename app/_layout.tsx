@@ -6,6 +6,7 @@ import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "r
 
 // internal modules
 import ChangelogGate from "../components/ChangelogGate";
+import DyslexiaVisualLayer from "../components/DyslexiaVisualLayer";
 import GlobalAssistant from "../components/GlobalAssistant";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
