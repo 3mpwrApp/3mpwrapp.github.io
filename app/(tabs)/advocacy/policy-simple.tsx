@@ -13,6 +13,7 @@ import {
 } from "react-native";
  
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import { DyslexiaText } from '../../../components/DyslexiaText';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import {
     MAX_FONT_SCALE,
@@ -151,13 +152,13 @@ export default function PolicySimple() {
         {!!summary && (
           <View style={s.resultBox} accessibilityRole="summary" accessibilityLabel="Simplified summary and key points">
             <Text style={s.resultTitle}>{t('advocacy.policy.summary')}</Text>
-            <Text style={s.resultText}>{summary}</Text>
+            <DyslexiaText style={s.resultText}>{summary}</DyslexiaText>
             {points.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>{t('advocacy.policy.keyPoints')}</Text>}
-            {points.map((p,i)=>(<Text key={i} style={s.resultText}>• {p}</Text>))}
+            {points.map((p,i)=>(<DyslexiaText key={i} style={s.resultText}>• {p}</DyslexiaText>))}
             {obligations.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>{t('advocacy.policy.obligations','Obligations')}</Text>}
-            {obligations.map((p,i)=>(<Text key={i} style={s.resultText}>• {p}</Text>))}
+            {obligations.map((p,i)=>(<DyslexiaText key={i} style={s.resultText}>• {p}</DyslexiaText>))}
             {actions.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>{t('advocacy.policy.suggestedActions','Suggested Actions')}</Text>}
-            {actions.map((p,i)=>(<Text key={i} style={s.resultText}>• {p}</Text>))}
+            {actions.map((p,i)=>(<DyslexiaText key={i} style={s.resultText}>• {p}</DyslexiaText>))}
             <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginTop: 12 }}>
               <Pressable onPress={copySummary} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.copy','Copy summary')} hitSlop={HIT_SLOP_8}><Text style={[s.buttonText,{ color: palette.text }]}>{t('advocacy.policy.copy','Copy')}</Text></Pressable>
               <Pressable onPress={shareSummary} style={s.button} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.share','Share summary')} hitSlop={HIT_SLOP_8}><Text style={s.buttonText}>{t('advocacy.policy.share','Share')}</Text></Pressable>

@@ -1,22 +1,23 @@
 import { useLocalSearchParams } from 'expo-router';
 import React from "react";
 import {
-  Alert,
-  Pressable,
-  ScrollView,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import { DyslexiaText } from '../../../components/DyslexiaText';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { logActivity } from '../../../services/activity';
@@ -107,29 +108,29 @@ export default function AiAdvocateTranslator() {
           {sections && (
             <View>
               <Text style={[s.sectionHeader]}>{t('translator.summary','Plain Summary')}</Text>
-              <Text style={{ color: palette.text, marginBottom:8 }}>{sections.summary}</Text>
+              <DyslexiaText style={{ color: palette.text, marginBottom:8 }}>{sections.summary}</DyslexiaText>
               {!!sections.keyTerms.length && (
                 <View style={{ marginBottom:8 }}>
                   <Text style={s.sectionHeader}>{t('translator.keyTerms','Key Terms')}</Text>
-                  <Text style={{ color: palette.text }}>{sections.keyTerms.join(', ')}</Text>
+                  <DyslexiaText style={{ color: palette.text }}>{sections.keyTerms.join(', ')}</DyslexiaText>
                 </View>
               )}
               {!!sections.deadlines.length && (
                 <View style={{ marginBottom:8 }}>
                   <Text style={s.sectionHeader}>{t('translator.deadlines','Deadlines')}</Text>
-                  {sections.deadlines.map((d,i)=>(<Text key={i} style={{ color: palette.text }}>• {d}</Text>))}
+                  {sections.deadlines.map((d,i)=>(<DyslexiaText key={i} style={{ color: palette.text }}>• {d}</DyslexiaText>))}
                 </View>
               )}
               {!!sections.actions.length && (
                 <View style={{ marginBottom:8 }}>
                   <Text style={s.sectionHeader}>{t('translator.actions','Actions')}</Text>
-                  {sections.actions.map((a,i)=>(<Text key={i} style={{ color: palette.text }}>• {a}</Text>))}
+                  {sections.actions.map((a,i)=>(<DyslexiaText key={i} style={{ color: palette.text }}>• {a}</DyslexiaText>))}
                 </View>
               )}
               <Text style={s.sectionHeader}>{t('translator.fullText','Full Simplified Text')}</Text>
             </View>
           )}
-          <Text style={{ color: palette.text }}>{output}</Text>
+          <DyslexiaText style={{ color: palette.text }}>{output}</DyslexiaText>
           <View
             style={{
               flexDirection: "row",

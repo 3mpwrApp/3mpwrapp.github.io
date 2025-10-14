@@ -6,6 +6,7 @@ import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "r
 
 // internal modules
 import ChangelogGate from "../components/ChangelogGate";
+import { DyslexiaVisualLayer } from "../components/DyslexiaVisualLayer";
 import GlobalAssistant from "../components/GlobalAssistant";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
@@ -20,6 +21,7 @@ import { announce } from "../utils/announce";
 // Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
 import { CognitiveAccessibilityProvider } from "../context/CognitiveAccessibilityContext";
+import { DyslexiaProvider } from "../context/DyslexiaContext";
 import { NeurodivergentProvider } from "../context/NeurodivergentContext";
 import { I18nProvider } from "../i18n";
 import { setBetaFlag } from "../services/analytics";
@@ -125,6 +127,7 @@ export default function RootLayout() {
     fontsLoaded ? (
     <I18nProvider>
   <CognitiveAccessibilityProvider>
+    <DyslexiaProvider>
     <A11ySettingsProvider>
       <NeurodivergentProvider>
         <SettingsProvider>
@@ -180,6 +183,7 @@ export default function RootLayout() {
                             </ChangelogGate>
                           </TermsGate>
                           <GlobalAssistant />
+                          <DyslexiaVisualLayer />
                           <ToastViewport />
                           {/* Show footer only on web to avoid overlapping native tab bar */}
                           {Platform.OS === 'web' ? <Footer /> : null}
@@ -199,6 +203,7 @@ export default function RootLayout() {
         </SettingsProvider>
         </NeurodivergentProvider>
       </A11ySettingsProvider>
+    </DyslexiaProvider>
     </CognitiveAccessibilityProvider>
     </I18nProvider>
   ) : null
@@ -275,6 +280,13 @@ const bannerStyles = StyleSheet.create({
   },
   text: { textAlign: "center", fontWeight: "700" },
 });
+
+// Placeholder for upcoming overlay + reading ruler visual layer.
+// Intentionally minimal now; will evolve in later step to apply colored overlay backgrounds
+// and a focus line (reading ruler) that can follow user scroll / tap interactions.
+export function DyslexiaVisualLayer() {
+  return null;
+}
 
 
 
