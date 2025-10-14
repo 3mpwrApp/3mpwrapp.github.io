@@ -884,6 +884,9 @@ body[data-contrast="high"] .badge--new {
   border-top: 3px solid #0066CC;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
 }
+.cookie-banner[hidden] {
+  display: none;
+}
 .cookie-banner a { 
   color: #60A5FA; 
   text-decoration: underline;
