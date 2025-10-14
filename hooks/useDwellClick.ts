@@ -98,7 +98,7 @@ export function useDwellClick(options: UseDwellClickOptions): UseDwellClickRetur
         if (haptics) {
           try {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-          } catch (error) {
+          } catch {
             // Haptics not available, silently fail
           }
         }

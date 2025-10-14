@@ -15,7 +15,8 @@ export function DwellProgressIndicator({ progress, size = 40 }: DwellProgressInd
   const palette = useAppPalette();
   const radius = size / 2 - 4;
   const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = circumference - (progress / 100) * circumference;
+  // For future SVG implementation:
+  // const strokeDashoffset = circumference - (progress / 100) * circumference;
 
   return (
     <View 
