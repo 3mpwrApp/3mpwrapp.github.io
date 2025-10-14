@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
+import { StyleSheet, Text, View } from 'react-native';
 
+import { DyslexiaText } from '../../../components/DyslexiaText';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
@@ -11,7 +12,7 @@ export default function SolidarityToolkit() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Union & Worker Solidarity Toolkit</Text>
-      <Text style={s.text}>Step‑by‑step resources for organizing workplace support, including accommodation campaigns. This section will grow with templates, checklists, and guides.</Text>
+      <DyslexiaText style={s.text}>Step‑by‑step resources for organizing workplace support, including accommodation campaigns. This section will grow with templates, checklists, and guides.</DyslexiaText>
       <View style={{ height: 12 }} />
       <Text style={s.h2}>Templates & Kits</Text>
       <Link href={("/(tabs)/resources/templates-gallery" as any)} asChild>

@@ -2,6 +2,7 @@ import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import { DyslexiaText } from "../../../components/DyslexiaText";
 import { HIT_SLOP_8 } from "../../../constants/a11y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
@@ -87,12 +88,12 @@ export default function EvidenceChecklist() {
       {showInfo && (
         <View style={s.infoCard} accessibilityRole='summary'>
           <Text style={s.infoTitle}>{t('templates.checklist.infoTitle','How to Use')}</Text>
-          <Text style={s.infoLine}>{t('templates.checklist.infoLine1','Select a process type to load its suggested evidence items.')}</Text>
-          <Text style={s.infoLine}>{t('templates.checklist.infoLine2','Tap items to mark them complete; progress updates are announced.')}</Text>
-          <Text style={s.infoLine}>{t('templates.checklist.infoLine3','Use Copy or Export to reuse the summary. Reset clears progress.')}</Text>
+          <DyslexiaText style={s.infoLine}>{t('templates.checklist.infoLine1','Select a process type to load its suggested evidence items.')}</DyslexiaText>
+          <DyslexiaText style={s.infoLine}>{t('templates.checklist.infoLine2','Tap items to mark them complete; progress updates are announced.')}</DyslexiaText>
+          <DyslexiaText style={s.infoLine}>{t('templates.checklist.infoLine3','Use Copy or Export to reuse the summary. Reset clears progress.')}</DyslexiaText>
         </View>
       )}
-      <Text style={s.subtitle}>{t('templates.checklist.subtitle','Pick a process to view a tailored checklist.')}</Text>
+      <DyslexiaText style={s.subtitle}>{t('templates.checklist.subtitle','Pick a process to view a tailored checklist.')}</DyslexiaText>
       <View style={s.chipRow}>
         {(['WCB','LTD','CPP-D','Accommodation'] as Kind[]).map(k => (
           <A11yPressable hitSlop={HIT_SLOP_8} key={k} onPress={()=>{ setKind(k); announce(t('templates.checklist.kindChanged','Checklist type changed')); }} accessibilityRole='button' accessibilityState={{ selected: kind===k }} style={[s.chip, kind===k && s.chipActive]}>

@@ -1,10 +1,11 @@
-import React from "react";
-import { ScrollView, View, Text, StyleSheet } from "react-native";
 import { Link } from "expo-router";
+import React from "react";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
-import { useAppPalette } from "../../../theme/usePalette";
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import Card from "../../../components/Card";
+import { DyslexiaText } from "../../../components/DyslexiaText";
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
+import { useAppPalette } from "../../../theme/usePalette";
 
 export default function MythBustingHub() {
   const palette = useAppPalette();
@@ -18,10 +19,10 @@ export default function MythBustingHub() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Myth-Busting Knowledge Hub
       </Text>
-      <Text style={styles.subtitle}>
-        Break down complex policies in plain language — with interactive explainers for Workers’ Comp, Canada-wide and
+      <DyslexiaText style={styles.subtitle}>
+        Break down complex policies in plain language — with interactive explainers for Workers' Comp, Canada-wide and
         provincial programs, CPP-D, EI Sickness, and more.
-      </Text>
+      </DyslexiaText>
       <View>
         <Text style={styles.blockTitle}>Popular explainers</Text>
         <Link href={("/(tabs)/advocacy/policy-simple" as any)} asChild>

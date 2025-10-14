@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { DyslexiaText } from '../../../components/DyslexiaText';
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -20,8 +21,8 @@ export default function RadicalAcceptance(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.acceptance.title','Radical Acceptance')}</Text>
-      <Text style={s.desc}>{t('wellness.acceptance.desc','A brief guide to reduce suffering by accepting reality as it is, while taking wise action.')}</Text>
-      {lines.map((l,i)=>(<Text key={i} style={s.line}>• {l}</Text>))}
+      <DyslexiaText style={s.desc}>{t('wellness.acceptance.desc','A brief guide to reduce suffering by accepting reality as it is, while taking wise action.')}</DyslexiaText>
+      {lines.map((l,i)=>(<DyslexiaText key={i} style={s.line}>• {l}</DyslexiaText>))}
     </View>
   );
 }

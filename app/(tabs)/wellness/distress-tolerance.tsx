@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { DyslexiaText } from '../../../components/DyslexiaText';
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -21,8 +22,8 @@ export default function DistressTolerance(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.distress.title','Distress Tolerance')}</Text>
-      <Text style={s.desc}>{t('wellness.distress.desc','Reduce crisis intensity with brief, practical skills. Adapt to your body.')}</Text>
-      {lines.map((l,i)=>(<Text key={i} style={s.line}>• {l}</Text>))}
+      <DyslexiaText style={s.desc}>{t('wellness.distress.desc','Reduce crisis intensity with brief, practical skills. Adapt to your body.')}</DyslexiaText>
+      {lines.map((l,i)=>(<DyslexiaText key={i} style={s.line}>• {l}</DyslexiaText>))}
     </View>
   );
 }
