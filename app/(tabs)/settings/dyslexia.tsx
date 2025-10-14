@@ -51,14 +51,14 @@ export default function DyslexiaSettingsScreen() {
   const applyPreset = async (preset: DyslexiaPresetKey) => {
     setSaving(true);
     try { await dys.applyPreset(preset); }
-    catch (_e) { Alert.alert(t('common.error', 'Error'), t('dyslexia.presetError', 'Failed to apply preset')); }
+    catch { Alert.alert(t('common.error', 'Error'), t('dyslexia.presetError', 'Failed to apply preset')); }
     finally { setSaving(false); }
   };
 
   const update = async (partial: Partial<typeof preferences>) => {
     setSaving(true);
     try { await dys.setPreferences(partial); }
-    catch (_e) { /* silent */ }
+    catch { /* silent */ }
     finally { setSaving(false); }
   };
 
