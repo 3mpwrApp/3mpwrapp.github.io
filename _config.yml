@@ -77,6 +77,11 @@ favicon: /assets/favicon.svg
 webmanifest: /assets/site.webmanifest
 # apple_touch_icon intentionally omitted
 
+# Include Google Search Console verification file
+include:
+  - google92c2c14246b0aaae.html
+  - _headers
+
 # Do not publish repository maintenance docs on the website
 exclude:
   - README.md
