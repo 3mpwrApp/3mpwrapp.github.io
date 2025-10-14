@@ -9,7 +9,7 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { renderHook, waitFor } from '@testing-library/react-native';
+import { act, renderHook, waitFor } from '@testing-library/react';
 import React from 'react';
 
 import { DYSLEXIA_PRESETS, DYSLEXIA_STORAGE_KEYS, type DyslexiaPresetKey } from '../constants/dyslexia';
@@ -41,8 +41,16 @@ describe('Dyslexia Settings', () => {
     
     const { result } = renderHook(() => useDyslexia(), { wrapper });
     
+    // Wait for initial load
+    await waitFor(() => {
+      expect(result.current).not.toBeNull();
+      expect(result.current.preferences).toBeDefined();
+    });
+    
     // Apply recommended preset
-    await waitFor(() => result.current.applyPreset('recommended'));
+    await act(async () => {
+      await result.current.applyPreset('recommended');
+    });
     
     await waitFor(() => {
       expect(result.current.preferences.font).toBe('openDyslexic');
@@ -64,8 +72,16 @@ describe('Dyslexia Settings', () => {
     
     const { result } = renderHook(() => useDyslexia(), { wrapper });
     
+    // Wait for initial load
+    await waitFor(() => {
+      expect(result.current).not.toBeNull();
+      expect(result.current.preferences).toBeDefined();
+    });
+    
     // Update single preference
-    await waitFor(() => result.current.setPreferences({ fontSize: 150 }));
+    await act(async () => {
+      await result.current.setPreferences({ fontSize: 150 });
+    });
     
     await waitFor(() => {
       expect(result.current.preferences.fontSize).toBe(150);
@@ -80,15 +96,25 @@ describe('Dyslexia Settings', () => {
     
     const { result } = renderHook(() => useDyslexia(), { wrapper });
     
+    // Wait for initial load
+    await waitFor(() => {
+      expect(result.current).not.toBeNull();
+      expect(result.current.preferences).toBeDefined();
+    });
+    
     // Apply preset
-    await waitFor(() => result.current.applyPreset('highContrast'));
+    await act(async () => {
+      await result.current.applyPreset('highContrast');
+    });
     
     await waitFor(() => {
       expect(result.current.preferences.font).toBe('openDyslexic');
     });
     
     // Reset
-    await waitFor(() => result.current.reset());
+    await act(async () => {
+      await result.current.reset();
+    });
     
     await waitFor(() => {
       expect(result.current.preferences.font).toBe('system');
@@ -113,7 +139,9 @@ describe('Dyslexia Settings', () => {
     });
     
     // Enable feature
-    await waitFor(() => result.current.setPreferences({ coloredOverlay: 'cream' }));
+    await act(async () => {
+      await result.current.setPreferences({ coloredOverlay: 'cream' });
+    });
     
     await waitFor(() => {
       expect(result.current.isEnabled).toBe(true);
