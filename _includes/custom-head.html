@@ -3,6 +3,9 @@ This file is injected by Minima's head.html if present.
 We add favicons, webmanifest, and optional GA4 (via analytics.html).
 {%- endcomment -%}
 
+{%- comment -%} Canonical URL: Always point to Cloudflare Pages as primary {%- endcomment -%}
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
 {%- comment -%} Microsoft Clarity - Privacy-friendly analytics (free, unlimited) {%- endcomment -%}
 {% if jekyll.environment == 'production' %}
 <script type="text/javascript">
