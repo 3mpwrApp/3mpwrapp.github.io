@@ -441,10 +441,10 @@
         return true;
       }
 
-      if (modal && isHome && !noModal && shouldShow()) {
-        // Show after a tiny delay so content is visible behind
-        setTimeout(openModal, 400);
-      }
+      // Newsletter popup disabled - users can access via newsletter link in footer
+      // if (modal && isHome && !noModal && shouldShow()) {
+      //   setTimeout(openModal, 400);
+      // }
 
       function handleDismiss() {
         safeSet(MODAL_KEY, '1'); // legacy
