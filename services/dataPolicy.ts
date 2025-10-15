@@ -5,6 +5,8 @@
  * - 'strict_byoc': No Firebase at all, 100% user-owned everything
  */
 
+import { fetchWithRetry, getErrorMessage, isNetworkError } from '../utils/network';
+
 export type DataPolicyMode = 'default' | 'hybrid_byoc' | 'strict_byoc';
 
 const mode: DataPolicyMode = (process.env.EXPO_PUBLIC_DATA_POLICY as DataPolicyMode) || 'default';
@@ -47,7 +49,7 @@ export function getBYOCConfig(): BYOCConfig | null {
  * Quick connection probe. For WebDAV, try a HEAD to endpoint root.
  * Never store creds; use basic auth for this probe only.
  */
-export async function testBYOCConnection(cfg: BYOCConfig): Promise<{ ok: boolean; status?: number }> {
+export async function testBYOCConnection(cfg: BYOCConfig): Promise<{ ok: boolean; status?: number; error?: string }> {
   try {
     const headers: Record<string, string> = {};
     if (cfg.username && cfg.password) {
@@ -56,9 +58,19 @@ export async function testBYOCConnection(cfg: BYOCConfig): Promise<{ ok: boolean
         : Buffer.from(`${cfg.username}:${cfg.password}`, 'utf8').toString('base64');
       headers['Authorization'] = `Basic ${token}`;
     }
-    const res = await fetch(cfg.endpoint, { method: 'HEAD', headers });
+    
+    // Use network utility with 10s timeout and 2 retries
+    const res = await fetchWithRetry(cfg.endpoint, { 
+      method: 'HEAD', 
+      headers,
+      timeout: 10000,
+      retries: 2,
+    });
+    
     return { ok: res.ok, status: res.status };
-  } catch {
-    return { ok: false };
+  } catch (error) {
+    // Provide user-friendly error message
+    const message = isNetworkError(error) ? getErrorMessage(error) : 'Connection failed';
+    return { ok: false, error: message };
   }
 }

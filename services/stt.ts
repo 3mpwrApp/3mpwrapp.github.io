@@ -1,6 +1,7 @@
 import { Alert, Platform } from 'react-native';
 
 import { logger } from '../utils/logger';
+import { fetchJSON } from '../utils/network';
 
 let FileSystem: any;
 try { FileSystem = require('expo-file-system'); } catch { FileSystem = null; }
@@ -17,13 +18,16 @@ export async function transcribeAudio(uri: string): Promise<string | null> {
     const dataBase64 = await FileSystem.readAsStringAsync(uri, { encoding: FileSystem.EncodingType.Base64 });
     const filename = uri.split('/').pop() || 'audio.m4a';
     const contentType = Platform.OS === 'ios' ? 'audio/m4a' : 'audio/3gpp';
-    const res = await fetch(`${base.replace(/\/$/,'')}/stt`, {
+    
+    // Use network utility with 30s timeout for audio upload
+    const json = await fetchJSON<{ text?: string }>(`${base.replace(/\/$/,'')}/stt`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ filename, contentType, dataBase64 })
+      body: JSON.stringify({ filename, contentType, dataBase64 }),
+      timeout: 30000, // 30s timeout for large audio files
+      retries: 1, // Only retry once for expensive operations
     });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const json = await res.json();
+    
     return (json.text as string) || null;
   } catch (e) {
     logger.warn('STT failed', e);
