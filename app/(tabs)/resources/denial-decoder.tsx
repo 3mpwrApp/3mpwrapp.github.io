@@ -13,6 +13,14 @@ export default function DenialDecoder() {
   const s = styles(palette);
   const [result, setResult] = React.useState<{ summary: string; next: string[]; template?: string } | null>(null);
   const { province } = useSettings();
+  
+  // Type for React Native FormData file object
+  interface RNFormDataFile {
+    uri: string;
+    name: string;
+    type: string;
+  }
+  
   const analyze = async () => {
     try {
       const DP = await import('expo-document-picker');
@@ -21,9 +29,9 @@ export default function DenialDecoder() {
       const base = process.env.EXPO_PUBLIC_LLM_BASE;
       if (base) {
         const fd = new FormData();
-        const file: any = { uri: f.uri, name: f.name || 'file', type: f.mimeType || 'application/octet-stream' };
-        // @ts-ignore
-        fd.append('file', file);
+        const file: RNFormDataFile = { uri: f.uri, name: f.name || 'file', type: f.mimeType || 'application/octet-stream' };
+        // React Native FormData accepts RNFormDataFile objects
+        fd.append('file', file as any);
         fd.append('province', String(province || 'GEN'));
         const r = await fetch(`${base.replace(/\/$/,'')}/decode-denial`, { method:'POST', body: fd as any });
         if (r.ok) { const data = await r.json(); setResult(data); return; }

@@ -1,6 +1,7 @@
 import React from "react";
 
 import type { ProvinceCode } from "../types/models";
+import { logger } from "../utils/logger";
 
 type User = { id: string; name: string } | null;
 
@@ -95,8 +96,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const persist = async (key: string, value: string | null) => {
     if (!AsyncStorage) return;
-    if (value === null) await AsyncStorage.removeItem(key);
-    else await AsyncStorage.setItem(key, value);
+    try {
+      if (value === null) {
+        await AsyncStorage.removeItem(key);
+      } else {
+        await AsyncStorage.setItem(key, value);
+      }
+    } catch (error) {
+      logger.error('[Auth] Failed to persist to AsyncStorage:', error);
+      // Don't throw - allow app to continue even if storage fails
+    }
   };
 
   const completeOnboarding = async () => {

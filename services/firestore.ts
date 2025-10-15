@@ -1,6 +1,7 @@
 import type * as Fire from "firebase/firestore";
 
 import { db as sharedDb } from "../firebase/config";
+import { logger } from "../utils/logger";
 
 import { isBYOCEnabled } from "./dataPolicy";
 
@@ -14,6 +15,43 @@ async function ensure(): Promise<typeof Fire | null> {
   } catch {
     return null;
   }
+}
+
+/**
+ * Retry wrapper for Firestore operations
+ * Handles transient errors like network issues, rate limiting
+ */
+async function withRetry<T>(
+  operation: () => Promise<T>,
+  retries: number = 2,
+  delayMs: number = 1000
+): Promise<T> {
+  let lastError: any;
+  
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      return await operation();
+    } catch (error: any) {
+      lastError = error;
+      
+      // Don't retry on permission errors or invalid data
+      if (error?.code === 'permission-denied' || error?.code === 'invalid-argument') {
+        throw error;
+      }
+      
+      // If this is the last attempt, throw
+      if (attempt === retries) {
+        logger.error('[Firestore] Operation failed after retries:', error);
+        throw error;
+      }
+      
+      // Wait before retry with exponential backoff
+      await new Promise(resolve => setTimeout(resolve, delayMs * Math.pow(2, attempt)));
+      logger.warn(`[Firestore] Retry attempt ${attempt + 1}/${retries}`);
+    }
+  }
+  
+  throw lastError;
 }
 
 export async function getDB() {
@@ -37,11 +75,13 @@ export async function fsAddCampaign(c: {
   const db = await getDB();
   if (!m || !db) return false;
   try {
-    await m.setDoc(m.doc(db, "campaigns", c.id), {
-      ...c,
-      createdAt: c.createdAt ?? Date.now(),
-      membersCount: 0,
-    });
+    await withRetry(() =>
+      m.setDoc(m.doc(db, "campaigns", c.id), {
+        ...c,
+        createdAt: c.createdAt ?? Date.now(),
+        membersCount: 0,
+      })
+    );
     return true;
   } catch {
     return false;
@@ -65,7 +105,9 @@ export async function fsAddEvent(e: {
   const db = await getDB();
   if (!m || !db) return false;
   try {
-    await m.setDoc(m.doc(db, "events", e.id), { ...e, createdAt: Date.now() } as any, { merge: true });
+    await withRetry(() =>
+      m.setDoc(m.doc(db, "events", e.id), { ...e, createdAt: Date.now() } as any, { merge: true })
+    );
     return true;
   } catch {
     return false;
@@ -124,7 +166,7 @@ export async function fsFetchJoinedCampaigns(uid: string): Promise<string[]> {
     // Use collection group on members
     const cg = m.collectionGroup(db, 'members');
     const q = m.query(cg, m.where('uid', '==', uid));
-    const snap = await m.getDocs(q);
+    const snap = await withRetry(() => m.getDocs(q));
     const list: string[] = [];
     snap.forEach(doc => {
       const path = doc.ref.path; // campaigns/<id>/members/<uid>

@@ -21,9 +21,10 @@ export default function useReducedMotion() {
 
     return () => {
       mounted = false;
-      // newer RN returns subscription with remove; older might not
-      // @ts-ignore
-      sub?.remove?.();
+      // Handle RN subscription cleanup safely
+      if (sub && 'remove' in sub && typeof sub.remove === 'function') {
+        sub.remove();
+      }
     };
   }, []);
 

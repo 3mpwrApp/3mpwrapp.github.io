@@ -6,6 +6,10 @@ import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "r
 
 import { logger } from "../utils/logger";
 
+// Type for React Native event subscriptions (compatible with multiple RN versions)
+// Older RN: { remove: () => void }, Newer RN: () => void
+type RNSubscription = { remove?: () => void } | (() => void) | undefined;
+
 // internal modules
 import ChangelogGate from "../components/ChangelogGate";
 import DyslexiaVisualLayer from "../components/DyslexiaVisualLayer";
@@ -72,9 +76,10 @@ export default function RootLayout() {
     );
     return () => {
       mounted = false;
-      // RN <=0.71 returns { remove }, newer returns subscription
-      // @ts-ignore
-      sub?.remove?.();
+      // Handle different RN version subscription types
+      if (sub && 'remove' in sub && typeof sub.remove === 'function') {
+        sub.remove();
+      }
     };
   }, []);
 
@@ -120,8 +125,10 @@ export default function RootLayout() {
     return () => {
       mounted = false;
       clearTimeout(t);
-      // @ts-ignore RN versions return different shapes
-      sub?.remove?.();
+      // Handle different RN version subscription types
+      if (sub && 'remove' in sub && typeof sub.remove === 'function') {
+        sub.remove();
+      }
     };
   }, []);
 
