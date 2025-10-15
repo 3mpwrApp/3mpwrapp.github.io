@@ -70,7 +70,6 @@ const MASTER_KEY_ID = 'empowr:master:key:v2';
  * Enhanced encryption service with secure key management
  */
 
-import { logger } from '../../utils/logger';
 export class SecureEncryption {
   private config: EncryptionConfig;
   private masterKeyId: string;
@@ -85,7 +84,6 @@ export class SecureEncryption {
    * Initialize encryption service
    */
 
-import { logger } from '../../utils/logger';
   async initialize(): Promise<boolean> {
     try {
       // Ensure master key exists
@@ -109,7 +107,6 @@ import { logger } from '../../utils/logger';
    * Generate and securely store master encryption key
    */
 
-import { logger } from '../../utils/logger';
   private async ensureMasterKey(): Promise<string> {
     try {
       // Try to get existing master key
@@ -138,7 +135,6 @@ import { logger } from '../../utils/logger';
    * Generate cryptographically secure random key
    */
 
-import { logger } from '../../utils/logger';
   private async generateSecureKey(): Promise<string> {
     try {
       if (Crypto?.getRandomBytesAsync) {
@@ -169,7 +165,6 @@ import { logger } from '../../utils/logger';
    * Store key in most secure storage available
    */
 
-import { logger } from '../../utils/logger';
   private async storeKeySecurely(keyId: string, key: string): Promise<void> {
     try {
       if (SecureStore?.setItemAsync) {
@@ -195,7 +190,6 @@ import { logger } from '../../utils/logger';
    * Retrieve stored key
    */
 
-import { logger } from '../../utils/logger';
   private async getStoredKey(keyId: string): Promise<string | null> {
     try {
       if (SecureStore?.getItemAsync) {
@@ -214,7 +208,6 @@ import { logger } from '../../utils/logger';
    * Encrypt data with AES-256-GCM
    */
 
-import { logger } from '../../utils/logger';
   async encrypt(plaintext: string, password?: string): Promise<EncryptedData> {
     if (!this.initialized) {
       throw new Error('Encryption service not initialized');
@@ -283,7 +276,6 @@ import { logger } from '../../utils/logger';
    * Decrypt data
    */
 
-import { logger } from '../../utils/logger';
   async decrypt(encryptedData: EncryptedData, password?: string): Promise<string> {
     if (!this.initialized) {
       throw new Error('Encryption service not initialized');
@@ -335,7 +327,6 @@ import { logger } from '../../utils/logger';
    * Encrypt file data
    */
 
-import { logger } from '../../utils/logger';
   async encryptFile(fileData: ArrayBuffer, password?: string): Promise<EncryptedData> {
     // Convert ArrayBuffer to base64 string
     const uint8Array = new Uint8Array(fileData);
@@ -348,7 +339,6 @@ import { logger } from '../../utils/logger';
    * Decrypt file data
    */
 
-import { logger } from '../../utils/logger';
   async decryptFile(encryptedData: EncryptedData, password?: string): Promise<ArrayBuffer> {
     const base64String = await this.decrypt(encryptedData, password);
     
@@ -367,7 +357,6 @@ import { logger } from '../../utils/logger';
    * Rotate master key
    */
 
-import { logger } from '../../utils/logger';
   async rotateMasterKey(): Promise<boolean> {
     try {
       // Generate new master key
@@ -389,7 +378,6 @@ import { logger } from '../../utils/logger';
    * Secure key deletion
    */
 
-import { logger } from '../../utils/logger';
   async deleteKey(keyId: string): Promise<boolean> {
     try {
       if (SecureStore?.deleteItemAsync) {
@@ -410,7 +398,6 @@ import { logger } from '../../utils/logger';
    * Get encryption info
    */
 
-import { logger } from '../../utils/logger';
   getEncryptionInfo(): { algorithm: string; keyDerivation: string; hardware: boolean } {
     return {
       algorithm: this.config.algorithm,

@@ -15,9 +15,9 @@ import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTranslation } from "../i18n";
 import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
+import { logger } from '../utils/logger';
 
 import A11yPressable from "./A11yPressable";
-import { logger } from '../utils/logger';
 
 type EmergencyContact = {
   name: string;

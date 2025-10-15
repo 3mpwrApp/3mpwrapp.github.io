@@ -3,10 +3,9 @@
  * Manages initialization, monitoring, and enforcement of security policies
  */
 
-import { logger } from '../../utils/logger';
-
 import { Platform } from 'react-native';
 
+import { logger } from '../../utils/logger';
 import { logActivity } from '../activity';
 
 interface SecurityConfig {
@@ -54,7 +53,6 @@ let securityConfig: SecurityConfig = {
  * Call this early in app lifecycle
  */
 
-import { logger } from '../../utils/logger';
 export async function initializeSecurity(config?: Partial<SecurityConfig>): Promise<boolean> {
   try {
     // Merge user config with defaults
@@ -100,7 +98,6 @@ export async function initializeSecurity(config?: Partial<SecurityConfig>): Prom
  * Perform comprehensive security check
  */
 
-import { logger } from '../../utils/logger';
 export async function performSecurityCheck(): Promise<SecurityThreat[]> {
   const threats: SecurityThreat[] = [];
   const now = Date.now();
@@ -174,7 +171,6 @@ export async function performSecurityCheck(): Promise<SecurityThreat[]> {
  * Check for device compromise (root/jailbreak)
  */
 
-import { logger } from '../../utils/logger';
 async function checkDeviceCompromise(): Promise<boolean> {
   if (Platform.OS === 'android') {
     return checkAndroidRoot();
@@ -188,7 +184,6 @@ async function checkDeviceCompromise(): Promise<boolean> {
  * Android root detection
  */
 
-import { logger } from '../../utils/logger';
 async function checkAndroidRoot(): Promise<boolean> {
   try {
     // In production, this would check for root management apps, binaries, and system properties
@@ -204,7 +199,6 @@ async function checkAndroidRoot(): Promise<boolean> {
  * iOS jailbreak detection
  */
 
-import { logger } from '../../utils/logger';
 async function checkIOSJailbreak(): Promise<boolean> {
   try {
     // In production, this would check for jailbreak files, schemes, and sandbox violations
@@ -220,7 +214,6 @@ async function checkIOSJailbreak(): Promise<boolean> {
  * App tampering detection
  */
 
-import { logger } from '../../utils/logger';
 async function checkAppTampering(): Promise<boolean> {
   try {
     // Check application signature/integrity
@@ -241,7 +234,6 @@ async function checkAppTampering(): Promise<boolean> {
  * Handle critical security threats
  */
 
-import { logger } from '../../utils/logger';
 async function handleCriticalThreats(threats: SecurityThreat[]): Promise<void> {
   try {
     // Log critical threats
@@ -272,7 +264,6 @@ async function handleCriticalThreats(threats: SecurityThreat[]): Promise<void> {
  * Get current security state
  */
 
-import { logger } from '../../utils/logger';
 export function getSecurityState(): SecurityState {
   return { ...securityState };
 }
@@ -281,7 +272,6 @@ export function getSecurityState(): SecurityState {
  * Update security configuration
  */
 
-import { logger } from '../../utils/logger';
 export function updateSecurityConfig(updates: Partial<SecurityConfig>): void {
   securityConfig = { ...securityConfig, ...updates };
 }
@@ -291,7 +281,6 @@ export function updateSecurityConfig(updates: Partial<SecurityConfig>): void {
  * Call this periodically to maintain security posture
  */
 
-import { logger } from '../../utils/logger';
 export async function monitorSecurity(): Promise<void> {
   const now = Date.now();
   const timeSinceLastCheck = now - securityState.lastCheck;
@@ -315,7 +304,6 @@ export async function monitorSecurity(): Promise<void> {
  * Export security utilities
  */
 
-import { logger } from '../../utils/logger';
 export {
     securityConfig,
     type SecurityConfig,

@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useContext, useEffect, useState } from 'react';
+
 import { logger } from '../utils/logger';
 
 const STORAGE_KEY = 'motor_accessibility_preferences_v1';

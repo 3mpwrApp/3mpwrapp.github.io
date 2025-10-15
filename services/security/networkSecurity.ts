@@ -48,7 +48,6 @@ class NetworkSecurityManager {
    * Configure certificate pins for specific domains
    */
 
-import { logger } from '../../utils/logger';
   configureCertificatePins(pins: CertificatePin[]): void {
     this.config.certificatePins = pins;
   }
@@ -57,7 +56,6 @@ import { logger } from '../../utils/logger';
    * Add certificate pin for a domain
    */
 
-import { logger } from '../../utils/logger';
   addCertificatePin(hostname: string, hashes: string[], includeSubdomains = false): void {
     const existingPin = this.config.certificatePins.find(p => p.hostname === hostname);
     
@@ -77,7 +75,6 @@ import { logger } from '../../utils/logger';
    * Secure HTTP fetch with certificate pinning
    */
 
-import { logger } from '../../utils/logger';
   async secureFetch(url: string, options: RequestInit = {}): Promise<Response> {
     try {
       // Parse URL to get hostname
@@ -138,7 +135,6 @@ import { logger } from '../../utils/logger';
    * Validate certificate pinning for hostname
    */
 
-import { logger } from '../../utils/logger';
   private async validateCertificatePin(hostname: string): Promise<void> {
     try {
       // Find matching pin configuration
@@ -172,7 +168,6 @@ import { logger } from '../../utils/logger';
    * Check if endpoint is allowed in strict BYOC mode
    */
 
-import { logger } from '../../utils/logger';
   private async isAllowedEndpoint(hostname: string): Promise<boolean> {
     try {
       // In strict BYOC mode, only allow user-configured endpoints
@@ -197,7 +192,6 @@ import { logger } from '../../utils/logger';
    * Log network connection for monitoring
    */
 
-import { logger } from '../../utils/logger';
   private logConnection(info: ConnectionInfo): void {
     this.connections.push(info);
     
@@ -211,7 +205,6 @@ import { logger } from '../../utils/logger';
    * Get connection history for audit
    */
 
-import { logger } from '../../utils/logger';
   getConnectionHistory(): ConnectionInfo[] {
     return [...this.connections];
   }
@@ -220,7 +213,6 @@ import { logger } from '../../utils/logger';
    * WebDAV client with security enhancements
    */
 
-import { logger } from '../../utils/logger';
   async webdavRequest(endpoint: string, method: string, path: string, options: {
     username?: string;
     password?: string;
@@ -257,7 +249,6 @@ import { logger } from '../../utils/logger';
    * Test WebDAV connection
    */
 
-import { logger } from '../../utils/logger';
   async testWebDAVConnection(endpoint: string, username?: string, password?: string): Promise<{ ok: boolean; status?: number; error?: string }> {
     try {
       const response = await this.webdavRequest(endpoint, 'PROPFIND', '', {
@@ -290,7 +281,6 @@ import { logger } from '../../utils/logger';
    * Update security configuration
    */
 
-import { logger } from '../../utils/logger';
   updateConfig(updates: Partial<NetworkSecurityConfig>): void {
     this.config = { ...this.config, ...updates };
   }
@@ -299,7 +289,6 @@ import { logger } from '../../utils/logger';
    * Get current security configuration
    */
 
-import { logger } from '../../utils/logger';
   getConfig(): NetworkSecurityConfig {
     return { ...this.config };
   }

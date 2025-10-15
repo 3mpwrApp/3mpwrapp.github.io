@@ -3,9 +3,10 @@
  * Implements: principle of least privilege, permission auditing, secure defaults
  */
 
+import { Platform } from 'react-native';
+
 import { logger } from '../../utils/logger';
 
-import { Platform } from 'react-native';
 
 interface PermissionConfig {
   android: string[];
@@ -32,7 +33,6 @@ interface PermissionAuditEntry {
  * Secure permissions management
  */
 
-import { logger } from '../../utils/logger';
 export class PermissionsManager {
   private auditLog: PermissionAuditEntry[] = [];
   private permissionCache: Map<string, PermissionStatus> = new Map();
@@ -41,7 +41,6 @@ export class PermissionsManager {
    * Essential permissions only - following principle of least privilege
    */
 
-import { logger } from '../../utils/logger';
   private readonly PERMISSION_CONFIGS: Record<string, PermissionConfig> = {
     // Local storage access - essential for offline-first operation
     STORAGE: {
@@ -105,7 +104,6 @@ import { logger } from '../../utils/logger';
    * Check if permission is granted
    */
 
-import { logger } from '../../utils/logger';
   async checkPermission(permission: string): Promise<PermissionStatus> {
     try {
       // Check cache first
@@ -141,7 +139,6 @@ import { logger } from '../../utils/logger';
    * Request permission with clear justification
    */
 
-import { logger } from '../../utils/logger';
   async requestPermission(permission: string, justification?: string): Promise<PermissionStatus> {
     try {
       const config = this.PERMISSION_CONFIGS[permission];
@@ -186,7 +183,6 @@ import { logger } from '../../utils/logger';
    * Check Android permission
    */
 
-import { logger } from '../../utils/logger';
   private async checkAndroidPermission(_permission: string): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
@@ -202,7 +198,6 @@ import { logger } from '../../utils/logger';
    * Check iOS permission
    */
 
-import { logger } from '../../utils/logger';
   private async checkIOSPermission(_permission: string): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
@@ -218,7 +213,6 @@ import { logger } from '../../utils/logger';
    * Request Android permission
    */
 
-import { logger } from '../../utils/logger';
   private async requestAndroidPermission(permission: string, config: PermissionConfig): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
@@ -238,7 +232,6 @@ import { logger } from '../../utils/logger';
    * Request iOS permission
    */
 
-import { logger } from '../../utils/logger';
   private async requestIOSPermission(permission: string, config: PermissionConfig): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
@@ -257,7 +250,6 @@ import { logger } from '../../utils/logger';
    * Audit permission activity
    */
 
-import { logger } from '../../utils/logger';
   private auditPermission(permission: string, action: PermissionAuditEntry['action'], purpose: string): void {
     this.auditLog.push({
       permission,
@@ -276,7 +268,6 @@ import { logger } from '../../utils/logger';
    * Get all required permissions
    */
 
-import { logger } from '../../utils/logger';
   getRequiredPermissions(): string[] {
     return Object.keys(this.PERMISSION_CONFIGS)
       .filter(key => this.PERMISSION_CONFIGS[key].required);
@@ -286,7 +277,6 @@ import { logger } from '../../utils/logger';
    * Get all optional permissions
    */
 
-import { logger } from '../../utils/logger';
   getOptionalPermissions(): string[] {
     return Object.keys(this.PERMISSION_CONFIGS)
       .filter(key => !this.PERMISSION_CONFIGS[key].required);
@@ -296,7 +286,6 @@ import { logger } from '../../utils/logger';
    * Get permission purpose/justification
    */
 
-import { logger } from '../../utils/logger';
   getPermissionPurpose(permission: string): string {
     return this.PERMISSION_CONFIGS[permission]?.purpose || 'Unknown purpose';
   }
@@ -305,7 +294,6 @@ import { logger } from '../../utils/logger';
    * Get permission audit log
    */
 
-import { logger } from '../../utils/logger';
   getAuditLog(): PermissionAuditEntry[] {
     return [...this.auditLog];
   }
@@ -314,7 +302,6 @@ import { logger } from '../../utils/logger';
    * Clear permission cache (force recheck)
    */
 
-import { logger } from '../../utils/logger';
   clearCache(): void {
     this.permissionCache.clear();
   }
@@ -323,7 +310,6 @@ import { logger } from '../../utils/logger';
    * Check if all required permissions are granted
    */
 
-import { logger } from '../../utils/logger';
   async checkRequiredPermissions(): Promise<{ allGranted: boolean; missing: string[] }> {
     const required = this.getRequiredPermissions();
     const missing: string[] = [];
@@ -345,7 +331,6 @@ import { logger } from '../../utils/logger';
    * Request all required permissions
    */
 
-import { logger } from '../../utils/logger';
   async requestRequiredPermissions(): Promise<{ allGranted: boolean; results: Record<string, PermissionStatus> }> {
     const required = this.getRequiredPermissions();
     const results: Record<string, PermissionStatus> = {};
@@ -363,7 +348,6 @@ import { logger } from '../../utils/logger';
    * Generate permission manifest for documentation
    */
 
-import { logger } from '../../utils/logger';
   generateManifest(): { android: string[]; ios: string[]; purposes: Record<string, string> } {
     const android: string[] = [];
     const ios: string[] = [];

@@ -5,12 +5,12 @@ import { useRouter } from 'expo-router';
 // import * as SecureStore from 'expo-secure-store'; // Commented out due to missing dependency
 import { useEffect, useState } from 'react';
 import {
-  Alert,
-  ScrollView,
-  StyleSheet,
-  Switch,
-  Text,
-  View
+    Alert,
+    ScrollView,
+    StyleSheet,
+    Switch,
+    Text,
+    View
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -21,11 +21,11 @@ import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContex
 import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
 import type {
-import { logger } from '../../../../utils/logger';
-  SecurityAudit,
-  SecurityConfig,
-  SecurityThreat
+    SecurityAudit,
+    SecurityConfig,
+    SecurityThreat
 } from '../../../types/phase2';
+import { logger } from '../../../utils/logger';
 
 // Security Configuration Types - using imported types from types/phase2.ts
 

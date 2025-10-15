@@ -221,7 +221,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       minHeight: 48,
     },
     primaryButton: {
-      shadowColor: '#000',
+      shadowColor: palette.text,
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.1,
       shadowRadius: 4,

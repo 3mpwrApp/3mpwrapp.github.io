@@ -4,11 +4,9 @@ import { Stack, usePathname } from "expo-router";
 import React from "react";
 import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "react-native";
 
-import { logger } from "../utils/logger";
-
 // Type for React Native event subscriptions (compatible with multiple RN versions)
 // Older RN: { remove: () => void }, Newer RN: () => void
-type RNSubscription = { remove?: () => void } | (() => void) | undefined;
+type _RNSubscription = { remove?: () => void } | (() => void) | undefined;
 
 // internal modules
 import ChangelogGate from "../components/ChangelogGate";
@@ -25,6 +23,7 @@ import { NetworkProvider, useNetwork } from "../store/network";
 import { RefreshProvider } from "../store/refresh";
 import { useAppPalette } from "../theme/usePalette";
 import { announce } from "../utils/announce";
+import { logger } from "../utils/logger";
 // Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
 import { CognitiveAccessibilityProvider } from "../context/CognitiveAccessibilityContext";

@@ -1,4 +1,5 @@
 import { Linking } from "react-native";
+
 import { logger } from '../utils/logger';
 
 const ALLOWED_SCHEMES = ["http:", "https:", "mailto:", "tel:"] as const;

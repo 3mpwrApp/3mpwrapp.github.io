@@ -13,8 +13,8 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
-import { logger } from '../utils/logger';
 
+import { logger } from '../utils/logger';
 import {
     DEFAULT_DYSLEXIA_PREFERENCES,
     DYSLEXIA_PRESETS,

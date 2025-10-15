@@ -32,7 +32,6 @@ interface IntegrityResult {
  * Application integrity verification service
  */
 
-import { logger } from '../../utils/logger';
 export class AppIntegrityVerifier {
   private manifest: IntegrityManifest | null = null;
   private lastVerification: number = 0;
@@ -44,8 +43,6 @@ export class AppIntegrityVerifier {
   /**
    * Initialize integrity manifest
    */
-
-import { logger } from '../../utils/logger';
   private initializeManifest(): void {
     // In a real implementation, this would be embedded during build
     // and protected against tampering
@@ -71,8 +68,6 @@ import { logger } from '../../utils/logger';
   /**
    * Verify application integrity
    */
-
-import { logger } from '../../utils/logger';
   async verifyIntegrity(): Promise<IntegrityResult> {
     const issues: string[] = [];
     
@@ -126,7 +121,6 @@ import { logger } from '../../utils/logger';
    * Verify application signature
    */
 
-import { logger } from '../../utils/logger';
   private async verifySignature(): Promise<boolean> {
     try {
       if (!this.manifest?.signature) {
@@ -170,7 +164,6 @@ import { logger } from '../../utils/logger';
    * Verify bundle integrity
    */
 
-import { logger } from '../../utils/logger';
   private async verifyBundle(): Promise<boolean> {
     try {
       // In a real implementation, this would:
@@ -207,7 +200,6 @@ import { logger } from '../../utils/logger';
    * Verify critical files haven't been modified
    */
 
-import { logger } from '../../utils/logger';
   private async verifyCriticalFiles(): Promise<boolean> {
     try {
       if (!this.manifest?.criticalFiles) {
@@ -233,7 +225,6 @@ import { logger } from '../../utils/logger';
    * Check for tampering indicators
    */
 
-import { logger } from '../../utils/logger';
   private async checkTamperingIndicators(): Promise<string[]> {
     const indicators: string[] = [];
 
@@ -300,7 +291,6 @@ import { logger } from '../../utils/logger';
    * Generate integrity report
    */
 
-import { logger } from '../../utils/logger';
   async generateIntegrityReport(): Promise<{
     timestamp: number;
     appVersion: string;
@@ -327,7 +317,6 @@ import { logger } from '../../utils/logger';
    * Verify update integrity before applying
    */
 
-import { logger } from '../../utils/logger';
   async verifyUpdateIntegrity(updateBundle: ArrayBuffer, expectedHash: string): Promise<boolean> {
     try {
       // Calculate hash of update bundle
@@ -359,7 +348,6 @@ import { logger } from '../../utils/logger';
    * Get last verification timestamp
    */
 
-import { logger } from '../../utils/logger';
   getLastVerification(): number {
     return this.lastVerification;
   }
@@ -368,7 +356,6 @@ import { logger } from '../../utils/logger';
    * Get app manifest
    */
 
-import { logger } from '../../utils/logger';
   getManifest(): IntegrityManifest | null {
     return this.manifest ? { ...this.manifest } : null;
   }
@@ -377,7 +364,6 @@ import { logger } from '../../utils/logger';
    * Check if verification is needed
    */
 
-import { logger } from '../../utils/logger';
   shouldVerify(maxAge: number = 24 * 60 * 60 * 1000): boolean { // Default: 24 hours
     const now = Date.now();
     return (now - this.lastVerification) > maxAge;
