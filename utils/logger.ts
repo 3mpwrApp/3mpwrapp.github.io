@@ -9,6 +9,9 @@
  *   logger.error('Error'); // Always logged (production too)
  */
 
+/* eslint-disable no-console */
+// This file is the only place where direct console usage is allowed
+
 // TypeScript doesn't know about __DEV__ by default (it's injected by Metro/Expo)
 declare const __DEV__: boolean;
 

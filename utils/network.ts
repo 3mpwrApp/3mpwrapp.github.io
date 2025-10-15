@@ -111,8 +111,8 @@ export async function fetchJSON<T = any>(
   }
 
   try {
-    return await response.json();
-  } catch (error) {
+    return (await response.json()) as T;
+  } catch (_error) {
     throw new NetworkError('Invalid JSON response');
   }
 }
