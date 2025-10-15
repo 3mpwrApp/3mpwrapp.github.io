@@ -16,7 +16,7 @@ import ComprehensiveDisclaimer from '../../../components/ComprehensiveDisclaimer
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
-import { logger } from '../../../../utils/logger';
+import { logger } from '../../../utils/logger';
 
 interface AdvancedAccessibilityPreferences {
   // Visual accessibility

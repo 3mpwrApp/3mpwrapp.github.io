@@ -36,7 +36,7 @@ import { useFavorites } from "../../../store/favorites";
 import { useNetwork } from "../../../store/network";
 import { useRefresh } from "../../../store/refresh";
 import { useSettings } from "../../../store/settings";
-import { logger } from '../../../../utils/logger';
+import { logger } from '../../../utils/logger';
 
 export default function PodcastsScreen() {
   const palette = useAppPalette();
