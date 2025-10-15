@@ -36,6 +36,7 @@ import { useFavorites } from "../../../store/favorites";
 import { useNetwork } from "../../../store/network";
 import { useRefresh } from "../../../store/refresh";
 import { useSettings } from "../../../store/settings";
+import { logger } from '../../../../utils/logger';
 
 export default function PodcastsScreen() {
   const palette = useAppPalette();
@@ -183,7 +184,7 @@ export default function PodcastsScreen() {
       setItems(podData);
       setOffline(false);
     } catch (e) {
-      console.warn("Failed to fetch podcasts", e);
+      logger.warn("Failed to fetch podcasts", e);
       setError("Failed to load podcasts");
       setOffline(true);
     } finally {
@@ -387,3 +388,4 @@ function FilterChip({ label, active, onPress, palette }: { label: string; active
     </Pressable>
   );
 }
+

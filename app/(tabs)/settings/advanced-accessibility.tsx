@@ -16,6 +16,7 @@ import ComprehensiveDisclaimer from '../../../components/ComprehensiveDisclaimer
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
+import { logger } from '../../../../utils/logger';
 
 interface AdvancedAccessibilityPreferences {
   // Visual accessibility
@@ -135,7 +136,7 @@ export default function AdvancedAccessibilityScreen() {
         setPreferences({ ...defaultPreferences, ...parsed });
       }
     } catch (error) {
-      console.warn('Failed to load advanced accessibility preferences:', error);
+      logger.warn('Failed to load advanced accessibility preferences:', error);
     } finally {
       setIsLoaded(true);
     }
@@ -145,7 +146,7 @@ export default function AdvancedAccessibilityScreen() {
     try {
       await AsyncStorage.setItem('advanced-accessibility-preferences:v1', JSON.stringify(newPreferences));
     } catch (error) {
-      console.warn('Failed to save advanced accessibility preferences:', error);
+      logger.warn('Failed to save advanced accessibility preferences:', error);
     }
   };
 

@@ -15,6 +15,7 @@ import ComprehensiveDisclaimer from '../../../components/ComprehensiveDisclaimer
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
+import { logger } from '../../../../utils/logger';
 
 interface CulturalSafetyPreferences {
   // Indigenous preferences
@@ -92,7 +93,7 @@ export default function CulturalSafetyScreen() {
         setPreferences({ ...defaultPreferences, ...parsed });
       }
     } catch (error) {
-      console.warn('Failed to load cultural safety preferences:', error);
+      logger.warn('Failed to load cultural safety preferences:', error);
     } finally {
       setIsLoaded(true);
     }
@@ -102,7 +103,7 @@ export default function CulturalSafetyScreen() {
     try {
       await AsyncStorage.setItem('cultural-safety-preferences:v1', JSON.stringify(newPreferences));
     } catch (error) {
-      console.warn('Failed to save cultural safety preferences:', error);
+      logger.warn('Failed to save cultural safety preferences:', error);
     }
   };
 

@@ -21,6 +21,7 @@ import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContex
 import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
 import type {
+import { logger } from '../../../../utils/logger';
   SecurityAudit,
   SecurityConfig,
   SecurityThreat
@@ -500,7 +501,7 @@ export default function AdvancedSecurityOptions() {
       setSecurityConfig(updatedConfig);
 
       // Log security configuration change
-      console.warn(`Security setting updated: ${path} = ${value}`);
+      logger.warn(`Security setting updated: ${path} = ${value}`);
 
     } catch (error) {
       console.error('Error updating security setting:', error);
