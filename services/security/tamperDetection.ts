@@ -3,6 +3,8 @@
  * Implements: anti-debugging, hook detection, signature verification
  */
 
+import { logger } from '../../utils/logger';
+
 interface TamperEvent {
   type: 'debug' | 'hook' | 'modification' | 'signature' | 'environment' | 'memory';
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -51,7 +53,7 @@ export class TamperDetector {
       this.performAllChecks();
     }, intervalMs) as unknown as NodeJS.Timeout;
 
-    console.warn('Tamper detection monitoring started');
+    logger.log('[TamperDetection] Monitoring started');
   }
 
   /**
@@ -65,7 +67,7 @@ export class TamperDetector {
       this.monitoringInterval = undefined;
     }
 
-    console.warn('Tamper detection monitoring stopped');
+    logger.log('[TamperDetection] Monitoring stopped');
   }
 
   /**
@@ -131,7 +133,7 @@ export class TamperDetector {
       }
 
     } catch (error) {
-      console.error('Integrity check failed:', error);
+      logger.error('[TamperDetection] Integrity check failed:', error);
       
       const errorEvent: TamperEvent = {
         type: 'modification',
@@ -372,7 +374,7 @@ export class TamperDetector {
 
       // This would compare with known good values in production
       // For now, just log the counts
-      console.warn('Critical object property counts:', expectedPropertyCount);
+      logger.debug('[TamperDetection] Critical object property counts:', expectedPropertyCount);
 
       this.updateCheck(checkId, true);
       return null;

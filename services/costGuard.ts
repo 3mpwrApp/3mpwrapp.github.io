@@ -2,6 +2,7 @@
 // Enables a lightweight console warning and optional webhook POST when
 // an integration that may incur cost is about to be used.
 
+import { logger } from '../utils/logger';
 import { getCostAlertsEnabled } from './devPrefs';
 import { FLAGS, FREE_MODE } from './featureFlags';
 
@@ -46,7 +47,7 @@ export async function devCostAlert(ev: CostEvent) {
     // Prefer warn to make it stand out in devtools
     // Include small, safe details preview
     // Avoid logging potentially sensitive payloads in full
-  console.warn(msg, ev.details ? safePreview(ev.details) : '');
+  logger.warn(msg, ev.details ? safePreview(ev.details) : '');
   } catch {}
 
   // Fire-and-forget webhook

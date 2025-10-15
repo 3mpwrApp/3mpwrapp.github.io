@@ -2,6 +2,7 @@
 // Production code should import { trackEvent } from this file instead of using logEvent directly.
 import type { AnalyticsEventParamsMap } from '../types/analytics';
 
+import { logger } from '../utils/logger';
 import { logEvent } from './analytics';
 import type { AnalyticsEventName } from './analyticsEvents';
 import { ANALYTICS_EVENT_SET } from './analyticsEvents';
@@ -24,14 +25,14 @@ export function trackEvent(name: string, params?: Record<string, any>) {
   const dev = process.env.NODE_ENV !== 'production';
   if (dev && !ANALYTICS_EVENT_SET[name]) {
      
-    console.warn(`[analytics] Unregistered event name: ${name}`);
+    logger.warn(`[analytics] Unregistered event name: ${name}`);
   }
   let finalParams = params;
   if (dev) {
     const { sanitized, warnings } = validateAndRedactEvent(name, params);
     if (warnings.length) {
        
-      console.warn('[analytics][schema]', name, warnings);
+      logger.warn('[analytics][schema]', name, warnings);
     }
     if (sanitized) finalParams = sanitized; // Use redacted sanitized subset
   }
