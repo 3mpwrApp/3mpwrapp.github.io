@@ -2,7 +2,8 @@ import { fireEvent, render } from '@testing-library/react';
 
 // Minimal mocks
 jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ text:'#111', onPrimary:'#fff', primary:'#06f', muted:'#ddd', background:'#fff', surface:'#fafafa' }) }));
-jest.mock('../hooks/useA11y', () => ({ MAX_FONT_SCALE: 2, useAnnounceOnMount: () => {}, useFocusOnRefOnMount: () => {} }));
+// Use the complete mock from __mocks__/useA11y.js instead of partial inline mock
+jest.mock('../hooks/useA11y');
 
 jest.mock('../services/companion', () => ({
   addMood: jest.fn(async ()=>{}),
