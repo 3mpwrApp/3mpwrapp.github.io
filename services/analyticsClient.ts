@@ -1,8 +1,8 @@
 // Lightweight analytics client wrapper to centralize event emission for testability.
 // Production code should import { trackEvent } from this file instead of using logEvent directly.
 import type { AnalyticsEventParamsMap } from '../types/analytics';
-
 import { logger } from '../utils/logger';
+
 import { logEvent } from './analytics';
 import type { AnalyticsEventName } from './analyticsEvents';
 import { ANALYTICS_EVENT_SET } from './analyticsEvents';
