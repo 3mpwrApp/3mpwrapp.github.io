@@ -3,6 +3,8 @@
  * Implements: device keystore/keychain, secure key generation, encrypted storage
  */
 
+import { logger } from '../../utils/logger';
+
 
 // Lazy imports for optional dependencies
 let SecureStore: any;
@@ -67,6 +69,8 @@ const MASTER_KEY_ID = 'empowr:master:key:v2';
 /**
  * Enhanced encryption service with secure key management
  */
+
+import { logger } from '../../utils/logger';
 export class SecureEncryption {
   private config: EncryptionConfig;
   private masterKeyId: string;
@@ -80,6 +84,8 @@ export class SecureEncryption {
   /**
    * Initialize encryption service
    */
+
+import { logger } from '../../utils/logger';
   async initialize(): Promise<boolean> {
     try {
       // Ensure master key exists
@@ -94,7 +100,7 @@ export class SecureEncryption {
       return true;
 
     } catch (error) {
-      console.error('Encryption initialization failed:', error);
+      logger.error('Encryption initialization failed:', error);
       return false;
     }
   }
@@ -102,6 +108,8 @@ export class SecureEncryption {
   /**
    * Generate and securely store master encryption key
    */
+
+import { logger } from '../../utils/logger';
   private async ensureMasterKey(): Promise<string> {
     try {
       // Try to get existing master key
@@ -115,13 +123,13 @@ export class SecureEncryption {
         await this.storeKeySecurely(this.masterKeyId, masterKey);
         
         // Log key generation (without the key itself)
-        console.warn('New master encryption key generated');
+        logger.warn('New master encryption key generated');
       }
 
       return masterKey;
 
     } catch (error) {
-      console.error('Master key management failed:', error);
+      logger.error('Master key management failed:', error);
       throw error;
     }
   }
@@ -129,6 +137,8 @@ export class SecureEncryption {
   /**
    * Generate cryptographically secure random key
    */
+
+import { logger } from '../../utils/logger';
   private async generateSecureKey(): Promise<string> {
     try {
       if (Crypto?.getRandomBytesAsync) {
@@ -149,7 +159,7 @@ export class SecureEncryption {
         return CryptoJS.lib.WordArray.random(32).toString();
       }
     } catch (error) {
-      console.error('Secure key generation failed, using fallback:', error);
+      logger.error('Secure key generation failed, using fallback:', error);
       // Last resort: crypto-js random
       return CryptoJS.lib.WordArray.random(32).toString();
     }
@@ -158,6 +168,8 @@ export class SecureEncryption {
   /**
    * Store key in most secure storage available
    */
+
+import { logger } from '../../utils/logger';
   private async storeKeySecurely(keyId: string, key: string): Promise<void> {
     try {
       if (SecureStore?.setItemAsync) {
@@ -168,13 +180,13 @@ export class SecureEncryption {
         });
       } else if (AsyncStorage?.setItem) {
         // Fallback to AsyncStorage (less secure)
-        console.warn('Using AsyncStorage for key storage - consider enabling SecureStore');
+        logger.warn('Using AsyncStorage for key storage - consider enabling SecureStore');
         await AsyncStorage.setItem(keyId, key);
       } else {
         throw new Error('No secure storage available');
       }
     } catch (error) {
-      console.error('Key storage failed:', error);
+      logger.error('Key storage failed:', error);
       throw error;
     }
   }
@@ -182,6 +194,8 @@ export class SecureEncryption {
   /**
    * Retrieve stored key
    */
+
+import { logger } from '../../utils/logger';
   private async getStoredKey(keyId: string): Promise<string | null> {
     try {
       if (SecureStore?.getItemAsync) {
@@ -191,7 +205,7 @@ export class SecureEncryption {
       }
       return null;
     } catch (error) {
-      console.error('Key retrieval failed:', error);
+      logger.error('Key retrieval failed:', error);
       return null;
     }
   }
@@ -199,6 +213,8 @@ export class SecureEncryption {
   /**
    * Encrypt data with AES-256-GCM
    */
+
+import { logger } from '../../utils/logger';
   async encrypt(plaintext: string, password?: string): Promise<EncryptedData> {
     if (!this.initialized) {
       throw new Error('Encryption service not initialized');
@@ -258,7 +274,7 @@ export class SecureEncryption {
       };
 
     } catch (error) {
-      console.error('Encryption failed:', error);
+      logger.error('Encryption failed:', error);
       throw error;
     }
   }
@@ -266,6 +282,8 @@ export class SecureEncryption {
   /**
    * Decrypt data
    */
+
+import { logger } from '../../utils/logger';
   async decrypt(encryptedData: EncryptedData, password?: string): Promise<string> {
     if (!this.initialized) {
       throw new Error('Encryption service not initialized');
@@ -308,7 +326,7 @@ export class SecureEncryption {
       return decrypted.toString(CryptoJS.enc.Utf8);
 
     } catch (error) {
-      console.error('Decryption failed:', error);
+      logger.error('Decryption failed:', error);
       throw error;
     }
   }
@@ -316,6 +334,8 @@ export class SecureEncryption {
   /**
    * Encrypt file data
    */
+
+import { logger } from '../../utils/logger';
   async encryptFile(fileData: ArrayBuffer, password?: string): Promise<EncryptedData> {
     // Convert ArrayBuffer to base64 string
     const uint8Array = new Uint8Array(fileData);
@@ -327,6 +347,8 @@ export class SecureEncryption {
   /**
    * Decrypt file data
    */
+
+import { logger } from '../../utils/logger';
   async decryptFile(encryptedData: EncryptedData, password?: string): Promise<ArrayBuffer> {
     const base64String = await this.decrypt(encryptedData, password);
     
@@ -344,6 +366,8 @@ export class SecureEncryption {
   /**
    * Rotate master key
    */
+
+import { logger } from '../../utils/logger';
   async rotateMasterKey(): Promise<boolean> {
     try {
       // Generate new master key
@@ -352,11 +376,11 @@ export class SecureEncryption {
       // Store new key
       await this.storeKeySecurely(this.masterKeyId, newKey);
       
-      console.warn('Master key rotated successfully');
+      logger.warn('Master key rotated successfully');
       return true;
 
     } catch (error) {
-      console.error('Key rotation failed:', error);
+      logger.error('Key rotation failed:', error);
       return false;
     }
   }
@@ -364,6 +388,8 @@ export class SecureEncryption {
   /**
    * Secure key deletion
    */
+
+import { logger } from '../../utils/logger';
   async deleteKey(keyId: string): Promise<boolean> {
     try {
       if (SecureStore?.deleteItemAsync) {
@@ -375,7 +401,7 @@ export class SecureEncryption {
       return true;
 
     } catch (error) {
-      console.error('Key deletion failed:', error);
+      logger.error('Key deletion failed:', error);
       return false;
     }
   }
@@ -383,6 +409,8 @@ export class SecureEncryption {
   /**
    * Get encryption info
    */
+
+import { logger } from '../../utils/logger';
   getEncryptionInfo(): { algorithm: string; keyDerivation: string; hardware: boolean } {
     return {
       algorithm: this.config.algorithm,

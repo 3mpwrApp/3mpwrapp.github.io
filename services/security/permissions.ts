@@ -3,6 +3,8 @@
  * Implements: principle of least privilege, permission auditing, secure defaults
  */
 
+import { logger } from '../../utils/logger';
+
 import { Platform } from 'react-native';
 
 interface PermissionConfig {
@@ -29,6 +31,8 @@ interface PermissionAuditEntry {
 /**
  * Secure permissions management
  */
+
+import { logger } from '../../utils/logger';
 export class PermissionsManager {
   private auditLog: PermissionAuditEntry[] = [];
   private permissionCache: Map<string, PermissionStatus> = new Map();
@@ -36,6 +40,8 @@ export class PermissionsManager {
   /**
    * Essential permissions only - following principle of least privilege
    */
+
+import { logger } from '../../utils/logger';
   private readonly PERMISSION_CONFIGS: Record<string, PermissionConfig> = {
     // Local storage access - essential for offline-first operation
     STORAGE: {
@@ -98,6 +104,8 @@ export class PermissionsManager {
   /**
    * Check if permission is granted
    */
+
+import { logger } from '../../utils/logger';
   async checkPermission(permission: string): Promise<PermissionStatus> {
     try {
       // Check cache first
@@ -124,7 +132,7 @@ export class PermissionsManager {
       return status;
 
     } catch (error) {
-      console.error(`Permission check failed for ${permission}:`, error);
+      logger.error(`Permission check failed for ${permission}:`, error);
       return { granted: false, canAskAgain: false };
     }
   }
@@ -132,6 +140,8 @@ export class PermissionsManager {
   /**
    * Request permission with clear justification
    */
+
+import { logger } from '../../utils/logger';
   async requestPermission(permission: string, justification?: string): Promise<PermissionStatus> {
     try {
       const config = this.PERMISSION_CONFIGS[permission];
@@ -166,7 +176,7 @@ export class PermissionsManager {
       return status;
 
     } catch (error) {
-      console.error(`Permission request failed for ${permission}:`, error);
+      logger.error(`Permission request failed for ${permission}:`, error);
       this.auditPermission(permission, 'denied', 'Request failed');
       return { granted: false, canAskAgain: false };
     }
@@ -175,13 +185,15 @@ export class PermissionsManager {
   /**
    * Check Android permission
    */
+
+import { logger } from '../../utils/logger';
   private async checkAndroidPermission(_permission: string): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
       // For now, return a placeholder
       return { granted: true, canAskAgain: true };
     } catch (error) {
-      console.error('Android permission check failed:', error);
+      logger.error('Android permission check failed:', error);
       return { granted: false, canAskAgain: true };
     }
   }
@@ -189,13 +201,15 @@ export class PermissionsManager {
   /**
    * Check iOS permission
    */
+
+import { logger } from '../../utils/logger';
   private async checkIOSPermission(_permission: string): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
       // For now, return a placeholder
       return { granted: true, canAskAgain: true };
     } catch (error) {
-      console.error('iOS permission check failed:', error);
+      logger.error('iOS permission check failed:', error);
       return { granted: false, canAskAgain: true };
     }
   }
@@ -203,17 +217,19 @@ export class PermissionsManager {
   /**
    * Request Android permission
    */
+
+import { logger } from '../../utils/logger';
   private async requestAndroidPermission(permission: string, config: PermissionConfig): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
       // Show rationale if needed
-      console.warn(`Requesting Android permission: ${permission}`);
-      console.warn(`Purpose: ${config.purpose}`);
+      logger.warn(`Requesting Android permission: ${permission}`);
+      logger.warn(`Purpose: ${config.purpose}`);
       
       // Simulate permission request
       return { granted: true, canAskAgain: true };
     } catch (error) {
-      console.error('Android permission request failed:', error);
+      logger.error('Android permission request failed:', error);
       return { granted: false, canAskAgain: false };
     }
   }
@@ -221,16 +237,18 @@ export class PermissionsManager {
   /**
    * Request iOS permission
    */
+
+import { logger } from '../../utils/logger';
   private async requestIOSPermission(permission: string, config: PermissionConfig): Promise<PermissionStatus> {
     try {
       // This would use expo-permissions or react-native-permissions
-      console.warn(`Requesting iOS permission: ${permission}`);
-      console.warn(`Purpose: ${config.purpose}`);
+      logger.warn(`Requesting iOS permission: ${permission}`);
+      logger.warn(`Purpose: ${config.purpose}`);
       
       // Simulate permission request
       return { granted: true, canAskAgain: true };
     } catch (error) {
-      console.error('iOS permission request failed:', error);
+      logger.error('iOS permission request failed:', error);
       return { granted: false, canAskAgain: false };
     }
   }
@@ -238,6 +256,8 @@ export class PermissionsManager {
   /**
    * Audit permission activity
    */
+
+import { logger } from '../../utils/logger';
   private auditPermission(permission: string, action: PermissionAuditEntry['action'], purpose: string): void {
     this.auditLog.push({
       permission,
@@ -255,6 +275,8 @@ export class PermissionsManager {
   /**
    * Get all required permissions
    */
+
+import { logger } from '../../utils/logger';
   getRequiredPermissions(): string[] {
     return Object.keys(this.PERMISSION_CONFIGS)
       .filter(key => this.PERMISSION_CONFIGS[key].required);
@@ -263,6 +285,8 @@ export class PermissionsManager {
   /**
    * Get all optional permissions
    */
+
+import { logger } from '../../utils/logger';
   getOptionalPermissions(): string[] {
     return Object.keys(this.PERMISSION_CONFIGS)
       .filter(key => !this.PERMISSION_CONFIGS[key].required);
@@ -271,6 +295,8 @@ export class PermissionsManager {
   /**
    * Get permission purpose/justification
    */
+
+import { logger } from '../../utils/logger';
   getPermissionPurpose(permission: string): string {
     return this.PERMISSION_CONFIGS[permission]?.purpose || 'Unknown purpose';
   }
@@ -278,6 +304,8 @@ export class PermissionsManager {
   /**
    * Get permission audit log
    */
+
+import { logger } from '../../utils/logger';
   getAuditLog(): PermissionAuditEntry[] {
     return [...this.auditLog];
   }
@@ -285,6 +313,8 @@ export class PermissionsManager {
   /**
    * Clear permission cache (force recheck)
    */
+
+import { logger } from '../../utils/logger';
   clearCache(): void {
     this.permissionCache.clear();
   }
@@ -292,6 +322,8 @@ export class PermissionsManager {
   /**
    * Check if all required permissions are granted
    */
+
+import { logger } from '../../utils/logger';
   async checkRequiredPermissions(): Promise<{ allGranted: boolean; missing: string[] }> {
     const required = this.getRequiredPermissions();
     const missing: string[] = [];
@@ -312,6 +344,8 @@ export class PermissionsManager {
   /**
    * Request all required permissions
    */
+
+import { logger } from '../../utils/logger';
   async requestRequiredPermissions(): Promise<{ allGranted: boolean; results: Record<string, PermissionStatus> }> {
     const required = this.getRequiredPermissions();
     const results: Record<string, PermissionStatus> = {};
@@ -328,6 +362,8 @@ export class PermissionsManager {
   /**
    * Generate permission manifest for documentation
    */
+
+import { logger } from '../../utils/logger';
   generateManifest(): { android: string[]; ios: string[]; purposes: Record<string, string> } {
     const android: string[] = [];
     const ios: string[] = [];
@@ -372,3 +408,4 @@ export async function requestMicrophonePermission(): Promise<boolean> {
 }
 
 export { type PermissionAuditEntry, type PermissionConfig, type PermissionStatus };
+

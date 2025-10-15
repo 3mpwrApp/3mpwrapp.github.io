@@ -3,6 +3,8 @@
  * Implements: certificate validation, man-in-the-middle protection, secure HTTP client
  */
 
+import { logger } from '../../utils/logger';
+
 interface CertificatePin {
   hostname: string;
   hashes: string[]; // SHA-256 hashes of certificate public keys
@@ -45,6 +47,8 @@ class NetworkSecurityManager {
   /**
    * Configure certificate pins for specific domains
    */
+
+import { logger } from '../../utils/logger';
   configureCertificatePins(pins: CertificatePin[]): void {
     this.config.certificatePins = pins;
   }
@@ -52,6 +56,8 @@ class NetworkSecurityManager {
   /**
    * Add certificate pin for a domain
    */
+
+import { logger } from '../../utils/logger';
   addCertificatePin(hostname: string, hashes: string[], includeSubdomains = false): void {
     const existingPin = this.config.certificatePins.find(p => p.hostname === hostname);
     
@@ -70,6 +76,8 @@ class NetworkSecurityManager {
   /**
    * Secure HTTP fetch with certificate pinning
    */
+
+import { logger } from '../../utils/logger';
   async secureFetch(url: string, options: RequestInit = {}): Promise<Response> {
     try {
       // Parse URL to get hostname
@@ -121,7 +129,7 @@ class NetworkSecurityManager {
       return response;
 
     } catch (error) {
-      console.error('Secure fetch failed:', error);
+      logger.error('Secure fetch failed:', error);
       throw error;
     }
   }
@@ -129,6 +137,8 @@ class NetworkSecurityManager {
   /**
    * Validate certificate pinning for hostname
    */
+
+import { logger } from '../../utils/logger';
   private async validateCertificatePin(hostname: string): Promise<void> {
     try {
       // Find matching pin configuration
@@ -139,7 +149,7 @@ class NetworkSecurityManager {
 
       if (!pin) {
         // No pin configured - allow connection but log warning
-        console.warn(`No certificate pin configured for ${hostname}`);
+        logger.warn(`No certificate pin configured for ${hostname}`);
         return;
       }
 
@@ -150,10 +160,10 @@ class NetworkSecurityManager {
       // 4. Reject connection if no match
 
       // For now, we'll simulate this with a placeholder
-      console.warn(`Certificate pinning validated for ${hostname}`);
+      logger.warn(`Certificate pinning validated for ${hostname}`);
 
     } catch (error) {
-      console.error('Certificate pinning validation failed:', error);
+      logger.error('Certificate pinning validation failed:', error);
       throw new Error('Certificate pinning validation failed');
     }
   }
@@ -161,6 +171,8 @@ class NetworkSecurityManager {
   /**
    * Check if endpoint is allowed in strict BYOC mode
    */
+
+import { logger } from '../../utils/logger';
   private async isAllowedEndpoint(hostname: string): Promise<boolean> {
     try {
       // In strict BYOC mode, only allow user-configured endpoints
@@ -176,7 +188,7 @@ class NetworkSecurityManager {
       return hostname === byocUrl.hostname;
 
     } catch (error) {
-      console.error('Endpoint validation failed:', error);
+      logger.error('Endpoint validation failed:', error);
       return false;
     }
   }
@@ -184,6 +196,8 @@ class NetworkSecurityManager {
   /**
    * Log network connection for monitoring
    */
+
+import { logger } from '../../utils/logger';
   private logConnection(info: ConnectionInfo): void {
     this.connections.push(info);
     
@@ -196,6 +210,8 @@ class NetworkSecurityManager {
   /**
    * Get connection history for audit
    */
+
+import { logger } from '../../utils/logger';
   getConnectionHistory(): ConnectionInfo[] {
     return [...this.connections];
   }
@@ -203,6 +219,8 @@ class NetworkSecurityManager {
   /**
    * WebDAV client with security enhancements
    */
+
+import { logger } from '../../utils/logger';
   async webdavRequest(endpoint: string, method: string, path: string, options: {
     username?: string;
     password?: string;
@@ -230,7 +248,7 @@ class NetworkSecurityManager {
       });
 
     } catch (error) {
-      console.error('WebDAV request failed:', error);
+      logger.error('WebDAV request failed:', error);
       throw error;
     }
   }
@@ -238,6 +256,8 @@ class NetworkSecurityManager {
   /**
    * Test WebDAV connection
    */
+
+import { logger } from '../../utils/logger';
   async testWebDAVConnection(endpoint: string, username?: string, password?: string): Promise<{ ok: boolean; status?: number; error?: string }> {
     try {
       const response = await this.webdavRequest(endpoint, 'PROPFIND', '', {
@@ -258,7 +278,7 @@ class NetworkSecurityManager {
       };
 
     } catch (error) {
-      console.error('WebDAV connection test failed:', error);
+      logger.error('WebDAV connection test failed:', error);
       return {
         ok: false,
         error: error instanceof Error ? error.message : 'Unknown error'
@@ -269,6 +289,8 @@ class NetworkSecurityManager {
   /**
    * Update security configuration
    */
+
+import { logger } from '../../utils/logger';
   updateConfig(updates: Partial<NetworkSecurityConfig>): void {
     this.config = { ...this.config, ...updates };
   }
@@ -276,6 +298,8 @@ class NetworkSecurityManager {
   /**
    * Get current security configuration
    */
+
+import { logger } from '../../utils/logger';
   getConfig(): NetworkSecurityConfig {
     return { ...this.config };
   }
@@ -308,3 +332,4 @@ networkSecurity.configureCertificatePins([
 
 // Export utilities
 export { type CertificatePin, type ConnectionInfo, type NetworkSecurityConfig };
+

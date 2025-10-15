@@ -6,6 +6,7 @@
 import * as LocalAuthentication from 'expo-local-authentication';
 import { Platform } from 'react-native';
 
+
 export interface SecurityEnvironment {
   isRooted: boolean;
   isJailbroken: boolean;
@@ -82,7 +83,7 @@ export class DeviceSecurityValidator {
       return result;
 
     } catch (error) {
-      console.error('Device security assessment failed:', error);
+      logger.error('Device security assessment failed:', error);
       
       // Return safe defaults on error
       return {
@@ -108,11 +109,11 @@ export class DeviceSecurityValidator {
     try {
       // Basic root detection - in production this would be more comprehensive
       // Check for su binary availability, root management apps, etc.
-      console.warn('Android root detection (placeholder implementation)');
+      logger.warn('Android root detection (placeholder implementation)');
       return false;
 
     } catch (error) {
-      console.error('Android root check failed:', error);
+      logger.error('Android root check failed:', error);
       return false;
     }
   }
@@ -127,11 +128,11 @@ export class DeviceSecurityValidator {
 
     try {
       // Basic jailbreak detection - in production this would be more comprehensive
-      console.warn('iOS jailbreak detection (placeholder implementation)');
+      logger.warn('iOS jailbreak detection (placeholder implementation)');
       return false;
 
     } catch (error) {
-      console.error('iOS jailbreak check failed:', error);
+      logger.error('iOS jailbreak check failed:', error);
       return false;
     }
   }
@@ -142,11 +143,11 @@ export class DeviceSecurityValidator {
   private async detectEmulator(): Promise<boolean> {
     try {
       // Basic emulator detection
-      console.warn('Emulator detection (placeholder implementation)');
+      logger.warn('Emulator detection (placeholder implementation)');
       return false;
 
     } catch (error) {
-      console.error('Emulator detection failed:', error);
+      logger.error('Emulator detection failed:', error);
       return false;
     }
   }
@@ -163,7 +164,7 @@ export class DeviceSecurityValidator {
       return isDebugMode || hasDevTools;
 
     } catch (error) {
-      console.error('Debug detection failed:', error);
+      logger.error('Debug detection failed:', error);
       return false;
     }
   }
@@ -174,11 +175,11 @@ export class DeviceSecurityValidator {
   private async detectTampering(): Promise<boolean> {
     try {
       // Basic tampering detection
-      console.warn('Tampering detection (placeholder implementation)');
+      logger.warn('Tampering detection (placeholder implementation)');
       return false;
 
     } catch (error) {
-      console.error('Tampering detection failed:', error);
+      logger.error('Tampering detection failed:', error);
       return false;
     }
   }
@@ -194,7 +195,7 @@ export class DeviceSecurityValidator {
       return hasHardware && isEnrolled;
 
     } catch (error) {
-      console.error('Biometric capability check failed:', error);
+      logger.error('Biometric capability check failed:', error);
       return false;
     }
   }
@@ -213,7 +214,7 @@ export class DeviceSecurityValidator {
       };
 
     } catch (error) {
-      console.error('Device info retrieval failed:', error);
+      logger.error('Device info retrieval failed:', error);
       
       return {
         platform: 'unknown',
@@ -252,10 +253,10 @@ export class DeviceSecurityValidator {
         delete (globalThis as any).__REDUX_DEVTOOLS_EXTENSION__;
       }
 
-      console.warn('Environment sanitized');
+      logger.warn('Environment sanitized');
 
     } catch (error) {
-      console.warn('Environment sanitization failed:', error);
+      logger.warn('Environment sanitization failed:', error);
     }
   }
 }

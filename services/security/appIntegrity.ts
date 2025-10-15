@@ -3,6 +3,8 @@
  * Implements: code signing validation, bundle integrity, update verification
  */
 
+import { logger } from '../../utils/logger';
+
 interface AppSignature {
   algorithm: string;
   hash: string;
@@ -29,6 +31,8 @@ interface IntegrityResult {
 /**
  * Application integrity verification service
  */
+
+import { logger } from '../../utils/logger';
 export class AppIntegrityVerifier {
   private manifest: IntegrityManifest | null = null;
   private lastVerification: number = 0;
@@ -40,6 +44,8 @@ export class AppIntegrityVerifier {
   /**
    * Initialize integrity manifest
    */
+
+import { logger } from '../../utils/logger';
   private initializeManifest(): void {
     // In a real implementation, this would be embedded during build
     // and protected against tampering
@@ -65,6 +71,8 @@ export class AppIntegrityVerifier {
   /**
    * Verify application integrity
    */
+
+import { logger } from '../../utils/logger';
   async verifyIntegrity(): Promise<IntegrityResult> {
     const issues: string[] = [];
     
@@ -117,6 +125,8 @@ export class AppIntegrityVerifier {
   /**
    * Verify application signature
    */
+
+import { logger } from '../../utils/logger';
   private async verifySignature(): Promise<boolean> {
     try {
       if (!this.manifest?.signature) {
@@ -147,11 +157,11 @@ export class AppIntegrityVerifier {
       }
 
       // In production, verify actual cryptographic signature
-      console.warn('Signature verification passed (placeholder)');
+      logger.warn('Signature verification passed (placeholder)');
       return true;
 
     } catch (error) {
-      console.error('Signature verification failed:', error);
+      logger.error('Signature verification failed:', error);
       return false;
     }
   }
@@ -159,6 +169,8 @@ export class AppIntegrityVerifier {
   /**
    * Verify bundle integrity
    */
+
+import { logger } from '../../utils/logger';
   private async verifyBundle(): Promise<boolean> {
     try {
       // In a real implementation, this would:
@@ -178,15 +190,15 @@ export class AppIntegrityVerifier {
       for (const globalName of expectedGlobals) {
         if (typeof window !== 'undefined' && (window as any)[globalName] === undefined) {
           // Global missing - potential indication of modified environment
-          console.warn(`Expected global ${globalName} is missing`);
+          logger.warn(`Expected global ${globalName} is missing`);
         }
       }
 
-      console.warn('Bundle integrity verification passed (placeholder)');
+      logger.warn('Bundle integrity verification passed (placeholder)');
       return true;
 
     } catch (error) {
-      console.error('Bundle verification failed:', error);
+      logger.error('Bundle verification failed:', error);
       return false;
     }
   }
@@ -194,6 +206,8 @@ export class AppIntegrityVerifier {
   /**
    * Verify critical files haven't been modified
    */
+
+import { logger } from '../../utils/logger';
   private async verifyCriticalFiles(): Promise<boolean> {
     try {
       if (!this.manifest?.criticalFiles) {
@@ -206,11 +220,11 @@ export class AppIntegrityVerifier {
       // 3. Report any mismatches
 
       // For now, assume files are intact
-      console.warn('Critical files verification passed (placeholder)');
+      logger.warn('Critical files verification passed (placeholder)');
       return true;
 
     } catch (error) {
-      console.error('Critical files verification failed:', error);
+      logger.error('Critical files verification failed:', error);
       return false;
     }
   }
@@ -218,6 +232,8 @@ export class AppIntegrityVerifier {
   /**
    * Check for tampering indicators
    */
+
+import { logger } from '../../utils/logger';
   private async checkTamperingIndicators(): Promise<string[]> {
     const indicators: string[] = [];
 
@@ -283,6 +299,8 @@ export class AppIntegrityVerifier {
   /**
    * Generate integrity report
    */
+
+import { logger } from '../../utils/logger';
   async generateIntegrityReport(): Promise<{
     timestamp: number;
     appVersion: string;
@@ -308,6 +326,8 @@ export class AppIntegrityVerifier {
   /**
    * Verify update integrity before applying
    */
+
+import { logger } from '../../utils/logger';
   async verifyUpdateIntegrity(updateBundle: ArrayBuffer, expectedHash: string): Promise<boolean> {
     try {
       // Calculate hash of update bundle
@@ -317,7 +337,7 @@ export class AppIntegrityVerifier {
 
       // Compare with expected hash
       if (hashHex !== expectedHash) {
-        console.error('Update hash mismatch:', { calculated: hashHex, expected: expectedHash });
+        logger.error('Update hash mismatch:', { calculated: hashHex, expected: expectedHash });
         return false;
       }
 
@@ -326,11 +346,11 @@ export class AppIntegrityVerifier {
       // - Compatibility checks
       // - Security policy validation
 
-      console.warn('Update integrity verified');
+      logger.warn('Update integrity verified');
       return true;
 
     } catch (error) {
-      console.error('Update verification failed:', error);
+      logger.error('Update verification failed:', error);
       return false;
     }
   }
@@ -338,6 +358,8 @@ export class AppIntegrityVerifier {
   /**
    * Get last verification timestamp
    */
+
+import { logger } from '../../utils/logger';
   getLastVerification(): number {
     return this.lastVerification;
   }
@@ -345,6 +367,8 @@ export class AppIntegrityVerifier {
   /**
    * Get app manifest
    */
+
+import { logger } from '../../utils/logger';
   getManifest(): IntegrityManifest | null {
     return this.manifest ? { ...this.manifest } : null;
   }
@@ -352,6 +376,8 @@ export class AppIntegrityVerifier {
   /**
    * Check if verification is needed
    */
+
+import { logger } from '../../utils/logger';
   shouldVerify(maxAge: number = 24 * 60 * 60 * 1000): boolean { // Default: 24 hours
     const now = Date.now();
     return (now - this.lastVerification) > maxAge;
@@ -372,3 +398,4 @@ export async function getIntegrityReport() {
 }
 
 export { type AppSignature, type IntegrityManifest, type IntegrityResult };
+
