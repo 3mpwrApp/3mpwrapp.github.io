@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { logger } from '../utils/logger';
 
 export interface NeurodivergentPreferences {
   // Sensory-friendly options
@@ -98,7 +99,7 @@ export function NeurodivergentProvider({ children }: { children: React.ReactNode
         setPreferences({ ...defaultPreferences, ...parsed });
       }
     } catch (error) {
-      console.warn('Failed to load neurodivergent preferences:', error);
+      logger.warn('Failed to load neurodivergent preferences:', error);
     } finally {
       setIsLoaded(true);
     }
@@ -108,7 +109,7 @@ export function NeurodivergentProvider({ children }: { children: React.ReactNode
     try {
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newPreferences));
     } catch (error) {
-      console.warn('Failed to save neurodivergent preferences:', error);
+      logger.warn('Failed to save neurodivergent preferences:', error);
     }
   };
 

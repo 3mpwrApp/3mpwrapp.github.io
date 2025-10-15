@@ -8,6 +8,7 @@
 import { AccessibilityInfo } from 'react-native';
 
 import { useTranslation } from '../i18n';
+import { logger } from '../utils/logger';
 
 /**
  * Enhanced announcement system with language-aware formatting
@@ -47,7 +48,7 @@ export function useAccessibilityAnnouncements() {
       
     } catch (error) {
       if (__DEV__) {
-        console.warn('Failed to announce accessibility message:', error);
+        logger.warn('Failed to announce accessibility message:', error);
       }
     }
   };

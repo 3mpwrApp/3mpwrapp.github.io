@@ -37,7 +37,7 @@ export function useFocusOnRefOnMount(
         }
       } catch (error) {
         if (__DEV__) {
-          console.warn("Failed to set accessibility focus:", error);
+          logger.warn("Failed to set accessibility focus:", error);
         }
       }
     }, delayMs);
@@ -64,7 +64,7 @@ export function useAnnounceOnChange<T>(
             AccessibilityInfo?.announceForAccessibility?.(msg);
           } catch (error) {
             if (__DEV__) {
-              console.warn("Failed to announce for accessibility:", error);
+              logger.warn("Failed to announce for accessibility:", error);
             }
           }
         }, delayMs);
@@ -92,7 +92,7 @@ export function useScreenReaderEnabled() {
         }
       } catch (error) {
         if (__DEV__) {
-          console.warn("Failed to check screen reader status:", error);
+          logger.warn("Failed to check screen reader status:", error);
         }
       }
     };
@@ -131,7 +131,7 @@ export function useReduceMotionEnabled() {
         }
       } catch (error) {
         if (__DEV__) {
-          console.warn("Failed to check reduce motion status:", error);
+          logger.warn("Failed to check reduce motion status:", error);
         }
       }
     };
@@ -170,7 +170,7 @@ export function useAccessibilityFontScale() {
         }
       } catch (error) {
         if (__DEV__) {
-          console.warn("Failed to check font scale:", error);
+          logger.warn("Failed to check font scale:", error);
         }
       }
     };
@@ -202,7 +202,7 @@ export function useFocusRestore(shouldRestore: boolean = true) {
       }
     } catch (error) {
       if (__DEV__) {
-        console.warn("Failed to store focus:", error);
+        logger.warn("Failed to store focus:", error);
       }
     }
   }, [shouldRestore]);
@@ -217,7 +217,7 @@ export function useFocusRestore(shouldRestore: boolean = true) {
       }
     } catch (error) {
       if (__DEV__) {
-        console.warn("Failed to restore focus:", error);
+        logger.warn("Failed to restore focus:", error);
       }
     } finally {
       lastFocusedElement.current = null;
@@ -242,3 +242,4 @@ export function useLiveRegion(content: string, politeness: "polite" | "assertive
     return () => clearTimeout(id);
   }, [content, politeness]);
 }
+

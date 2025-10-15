@@ -2,6 +2,7 @@ import React from "react";
 import { Linking, Pressable, StyleSheet, Text } from "react-native";
 
 import { useAppPalette } from "../theme/usePalette";
+import { logger } from '../utils/logger';
 
 interface ExternalLinkProps {
   href: string;
@@ -16,7 +17,7 @@ export default function ExternalLink({ href, children }: ExternalLinkProps) {
     if (supported) {
       await Linking.openURL(href);
     } else {
-      console.warn(`Don't know how to open URI: ${href}`);
+      logger.warn(`Don't know how to open URI: ${href}`);
     }
   };
 
@@ -47,3 +48,4 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
   });
 }
+

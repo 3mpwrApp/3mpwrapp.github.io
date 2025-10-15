@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { logger } from '../utils/logger';
 
 export interface IndigenousLanguageSupport {
   // Language preferences
@@ -251,7 +252,7 @@ export function IndigenousLanguageProvider({ children }: { children: React.React
         setSettings({ ...defaultSettings, ...parsed });
       }
     } catch (error) {
-      console.warn('Failed to load Indigenous language settings:', error);
+      logger.warn('Failed to load Indigenous language settings:', error);
     } finally {
       setIsLoaded(true);
     }
@@ -261,7 +262,7 @@ export function IndigenousLanguageProvider({ children }: { children: React.React
     try {
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newSettings));
     } catch (error) {
-      console.warn('Failed to save Indigenous language settings:', error);
+      logger.warn('Failed to save Indigenous language settings:', error);
     }
   };
 

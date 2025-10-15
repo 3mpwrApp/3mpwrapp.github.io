@@ -1,4 +1,5 @@
 import { Linking } from "react-native";
+import { logger } from '../utils/logger';
 
 const ALLOWED_SCHEMES = ["http:", "https:", "mailto:", "tel:"] as const;
 const ALLOWED_HOSTS = new Set([
@@ -26,6 +27,7 @@ export async function openExternalUrl(url: string) {
     if (!supported) throw new Error("Cannot open URL");
     await Linking.openURL(url);
   } catch {
-    console.warn("openExternalUrl blocked:", url);
+    logger.warn("openExternalUrl blocked:", url);
   }
 }
+

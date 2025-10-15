@@ -17,6 +17,7 @@ import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
 
 import A11yPressable from "./A11yPressable";
+import { logger } from '../utils/logger';
 
 type EmergencyContact = {
   name: string;
@@ -67,7 +68,7 @@ export default function EmergencyWalletCard() {
         setInfo(JSON.parse(saved));
       }
     } catch {
-      console.warn("Failed to load emergency info");
+      logger.warn("Failed to load emergency info");
     } finally {
       setIsLoading(false);
     }

@@ -3,6 +3,7 @@ import { I18nManager } from "react-native";
 
 import { announce } from "../utils/announce";
 import { showToast } from "../utils/toast";
+import { logger } from '../utils/logger';
 
 // Lightweight i18n without external deps. Supports dot-notation keys and runtime language switch.
 
@@ -90,7 +91,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
         if (logMissing && fallback === key) {
           // Only log when true miss (fallback equals key)
              
-            console.warn("[i18n-missing]", key);
+            logger.warn("[i18n-missing]", key);
         }
         return fallback;
       }
@@ -139,3 +140,4 @@ export function useTranslationSafe() {
   }
   return ctx;
 }
+

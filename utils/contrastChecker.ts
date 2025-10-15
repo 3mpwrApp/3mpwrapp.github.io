@@ -125,7 +125,7 @@ export function checkPaletteContrast(palette: Record<string, string>): {
           largeText,
         });
       } catch (error) {
-        console.warn(`Failed to check contrast for ${fg}/${bg}:`, error);
+        logger.warn(`Failed to check contrast for ${fg}/${bg}:`, error);
       }
     }
   }

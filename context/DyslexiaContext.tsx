@@ -13,6 +13,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import { logger } from '../utils/logger';
 
 import {
     DEFAULT_DYSLEXIA_PREFERENCES,
@@ -73,7 +74,7 @@ export function DyslexiaProvider({ children }: { children: React.ReactNode }) {
         setCurrentPreset(savedPreset as DyslexiaPresetKey | 'custom');
       }
     } catch (error) {
-      console.warn('Failed to load dyslexia preferences:', error);
+      logger.warn('Failed to load dyslexia preferences:', error);
     } finally {
       setIsLoaded(true);
     }
@@ -87,7 +88,7 @@ export function DyslexiaProvider({ children }: { children: React.ReactNode }) {
       AsyncStorage.setItem(
         DYSLEXIA_STORAGE_KEYS.PREFERENCES,
         JSON.stringify(updated)
-      ).catch(err => console.warn('Failed to save dyslexia preferences:', err));
+      ).catch(err => logger.warn('Failed to save dyslexia preferences:', err));
       
       return updated;
     });
@@ -178,3 +179,4 @@ export function useDyslexiaOptional(): DyslexiaContextValue | null {
   const context = useContext(DyslexiaContext);
   return context || null;
 }
+
