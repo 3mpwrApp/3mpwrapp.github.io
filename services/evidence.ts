@@ -2,6 +2,7 @@ import { addDoc, collection, limit as fsLimit, startAfter as fsStartAfter, getDo
 import { getDownloadURL, ref, uploadBytes, uploadBytesResumable } from 'firebase/storage';
 
 import { auth, db, storage } from '../firebase/config';
+import { fetchWithRetry } from '../utils/network';
 
 import { isCloudConsentEnabled } from './consent';
 
@@ -19,7 +20,13 @@ export async function uploadEvidenceFile(uri: string, name: string): Promise<Evi
   if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
   const path = `evidence/${uid}/${Date.now()}_${name.replace(/[^a-zA-Z0-9._-]/g,'_')}`;
   const r = ref(storage, path);
-  const resp = await fetch(uri);
+  
+  // Use network utility for better error handling
+  const resp = await fetchWithRetry(uri, {
+    timeout: 30000, // Longer timeout for file uploads
+    retries: 2,
+  });
+  
   const blob = await resp.blob();
   const size = (blob as any).size as number | undefined;
   await uploadBytes(r, blob as any);
@@ -38,7 +45,13 @@ export async function uploadEvidenceFileWithProgress(
     if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
     const path = `evidence/${uid}/${Date.now()}_${name.replace(/[^a-zA-Z0-9._-]/g,'_')}`;
     const r = ref(storage, path);
-    const resp = await fetch(uri);
+    
+    // Use network utility for better error handling
+    const resp = await fetchWithRetry(uri, {
+      timeout: 30000,
+      retries: 2,
+    });
+    
     const blob = await resp.blob();
     const size = (blob as any).size as number | undefined;
     const task = uploadBytesResumable(r, blob as any);

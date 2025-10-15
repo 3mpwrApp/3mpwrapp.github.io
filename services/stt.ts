@@ -1,4 +1,7 @@
 import { Alert, Platform } from 'react-native';
+
+import { logger } from '../utils/logger';
+
 let FileSystem: any;
 try { FileSystem = require('expo-file-system'); } catch { FileSystem = null; }
 
@@ -23,7 +26,7 @@ export async function transcribeAudio(uri: string): Promise<string | null> {
     const json = await res.json();
     return (json.text as string) || null;
   } catch (e) {
-    console.warn('STT failed', e);
+    logger.warn('STT failed', e);
     Alert.alert('Transcription unavailable', 'Configure EXPO_PUBLIC_API_BASE and backend /stt to enable transcription.');
     return null;
   }

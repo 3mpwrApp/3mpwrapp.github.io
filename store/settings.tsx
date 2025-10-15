@@ -1,6 +1,7 @@
 import React from "react";
 
 import type { ProvinceCode } from "../types/models";
+import { logger } from "../utils/logger";
 
 let AsyncStorage: any;
 try {
@@ -142,7 +143,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
           setState({ ...DEFAULTS, ...parsed });
         }
       } catch (e) {
-        console.warn("Failed to load settings", e);
+        logger.warn("Failed to load settings", e);
       }
     })();
   }, []);
@@ -154,7 +155,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
       try {
         await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       } catch (e) {
-        console.warn("Failed to save settings", e);
+        logger.warn("Failed to save settings", e);
       }
     })();
   }, [state]);

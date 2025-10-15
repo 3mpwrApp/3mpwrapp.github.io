@@ -4,6 +4,7 @@ import { getJurisdiction, listJurisdictions } from "../data/jurisdictions";
 import { logEvent } from "../services/analytics";
 import { ANALYTICS_EVENTS } from "../services/analyticsEvents";
 import type { JurisdictionData } from "../types/jurisdiction";
+import { logger } from "../utils/logger";
 
 let AsyncStorage: any;
 try {
@@ -39,7 +40,7 @@ export function JurisdictionProvider({ children }: { children: React.ReactNode }
           setCodeState(raw);
         }
       } catch (e) {
-        console.warn("Failed to load jurisdiction", e);
+        logger.warn("Failed to load jurisdiction", e);
       } finally {
         setLoaded(true);
       }
@@ -53,7 +54,7 @@ export function JurisdictionProvider({ children }: { children: React.ReactNode }
       try {
         await AsyncStorage.setItem(STORAGE_KEY, code);
       } catch (e) {
-        console.warn("Failed to save jurisdiction", e);
+        logger.warn("Failed to save jurisdiction", e);
       }
     })();
   }, [code]);

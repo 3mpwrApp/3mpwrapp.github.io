@@ -27,3 +27,6 @@ module.exports = {
   MAX_FONT_SCALE: 2.0,
   MAX_CONTRAST_RATIO: 21.0,
 };
+
+// Also export as default for ESM compatibility
+module.exports.default = module.exports;

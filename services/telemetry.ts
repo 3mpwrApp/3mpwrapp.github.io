@@ -1,5 +1,7 @@
 import { Platform } from 'react-native';
 
+import { logger } from '../utils/logger';
+
 import { devCostAlert } from './costGuard';
 import { FLAGS } from './featureFlags';
 
@@ -18,7 +20,7 @@ export async function initSentry(dsn?: string) {
     initialized = true;
   } catch (e) {
     // If native module isn't available in this build/dev client, safely skip
-    if (__DEV__) console.warn('Sentry init skipped:', (e as Error)?.message);
+    if (__DEV__) logger.warn('Sentry init skipped:', (e as Error)?.message);
   }
 }
 

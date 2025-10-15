@@ -1,3 +1,5 @@
+import { logger } from '../utils/logger';
+
 type ExpoResponse = {
   data?:
     | { status: string; id?: string; message?: string }
@@ -20,7 +22,7 @@ export async function sendExpoPush(to: string, title: string, body: string) {
     if (!res.ok || (json as any)?.errors) throw new Error(JSON.stringify(json));
     return json;
   } catch (e) {
-    if (__DEV__) console.warn("sendExpoPush failed", e);
+    if (__DEV__) logger.warn("sendExpoPush failed", e);
     throw e;
   }
 }

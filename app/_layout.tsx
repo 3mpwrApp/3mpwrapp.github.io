@@ -4,9 +4,12 @@ import { Stack, usePathname } from "expo-router";
 import React from "react";
 import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "react-native";
 
+import { logger } from "../utils/logger";
+
 // internal modules
 import ChangelogGate from "../components/ChangelogGate";
 import DyslexiaVisualLayer from "../components/DyslexiaVisualLayer";
+import ErrorBoundary from "../components/ErrorBoundary";
 import GlobalAssistant from "../components/GlobalAssistant";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
@@ -81,10 +84,10 @@ export default function RootLayout() {
     setSessionSeed();
     Notifier.setupAsync();
     Notifier.getExpoPushToken().then((t) => {
-      if (t && __DEV__) console.warn("Expo push token:", t);
+      if (t && __DEV__) logger.debug("Expo push token:", t);
     });
     // Cleanup any past-due event reminders (fire and forget)
-    pruneExpiredReminders().then(r => { if (r.removed && __DEV__) console.warn('Pruned reminders', r.removed); }).catch(()=>{});
+    pruneExpiredReminders().then(r => { if (r.removed && __DEV__) logger.debug('Pruned reminders', r.removed); }).catch(()=>{});
     // Run light pruning cycle (queue cleanup) on start
     maybeRunPruneCycle().catch(()=>{});
   }, []);
@@ -125,6 +128,7 @@ export default function RootLayout() {
   return (
     // Avoid rendering until fonts are available to prevent missing glyphs (X boxes)
     fontsLoaded ? (
+    <ErrorBoundary>
     <I18nProvider>
   <CognitiveAccessibilityProvider>
     <DyslexiaProvider>
@@ -206,6 +210,7 @@ export default function RootLayout() {
     </DyslexiaProvider>
     </CognitiveAccessibilityProvider>
     </I18nProvider>
+    </ErrorBoundary>
   ) : null
   );
 }
@@ -247,7 +252,7 @@ function SecurityInit() {
       });
     }).then((success: boolean) => {
       if (__DEV__) {
-        console.warn('🔒 Security framework initialized:', success ? 'SUCCESS' : 'FAILED');
+        logger.log('🔒 Security framework initialized:', success ? 'SUCCESS' : 'FAILED');
       }
     }).catch((error: Error) => {
       if (__DEV__) {
