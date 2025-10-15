@@ -6,6 +6,8 @@
 import * as LocalAuthentication from 'expo-local-authentication';
 import { Platform } from 'react-native';
 
+import { logger } from '../../utils/logger';
+
 
 export interface SecurityEnvironment {
   isRooted: boolean;
