@@ -12,10 +12,11 @@ import * as Font from 'expo-font';
 import { useEffect, useState } from 'react';
 
 // Local font asset paths (add font files under assets/fonts/)
-// If fonts are not yet added, this gracefully no-ops.
+// TODO: Add OpenDyslexic-Regular.ttf and Lexend-Regular.ttf to assets/fonts/
+// Currently disabled until font files are added to the project
 const FONT_SOURCES: Record<string, any> = {
-  OpenDyslexic: require('../assets/fonts/OpenDyslexic-Regular.ttf'),
-  Lexend: require('../assets/fonts/Lexend-Regular.ttf'),
+  // OpenDyslexic: require('../assets/fonts/OpenDyslexic-Regular.ttf'),
+  // Lexend: require('../assets/fonts/Lexend-Regular.ttf'),
 };
 
 export interface UseDyslexiaFontResult {
