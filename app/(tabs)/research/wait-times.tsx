@@ -19,7 +19,16 @@ export default function WaitTimes() {
   const [days, setDays] = React.useState('');
   const [filter, setFilter] = React.useState('all');
   const [submissions, setSubmissions] = React.useState<{ province: string; days: number }[]>([]);
-  React.useEffect(()=>{ (async()=>{ try { const snap = await getDocs(collection(db,'public_wait_times')); setSubmissions(snap.docs.map(d=>d.data() as any)); } catch {} })(); },[]);
+  React.useEffect(()=>{ 
+    let mounted = true;
+    (async()=>{ 
+      try { 
+        const snap = await getDocs(collection(db,'public_wait_times')); 
+        if (mounted) setSubmissions(snap.docs.map(d=>d.data() as any)); 
+      } catch {} 
+    })();
+    return () => { mounted = false; };
+  },[]);
   function aggregate(list: { province: string; days: number }[]) {
     const m = new Map<string, number[]>();
     list.forEach(r => { if (!m.has(r.province)) m.set(r.province, []); m.get(r.province)!.push(Number(r.days)||0); });

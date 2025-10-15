@@ -49,10 +49,28 @@ export default function SettingsScreen() {
   // Removed unused isAnonymous state (previously tracked anonymous account status)
   const [providerList, setProviderList] = useState<string[]>([]);
 
-  useEffect(() => { if (!user) return; (async () => {
-    try { const snap = await getDoc(doc(db, 'users', user.uid)); if (snap.exists()) { const p = snap.data() as any; setDisplayName(p.displayName || ''); setPhotoURL(p.photoURL || null); } }
-    catch (e:any) { const msg = String(e?.message||''); if (msg.toLowerCase().includes('offline')) setOffline(true); else console.error(msg); }
-  })(); }, [user]);
+  useEffect(() => { 
+    if (!user) return;
+    let mounted = true;
+    (async () => {
+      try { 
+        const snap = await getDoc(doc(db, 'users', user.uid)); 
+        if (mounted && snap.exists()) { 
+          const p = snap.data() as any; 
+          setDisplayName(p.displayName || ''); 
+          setPhotoURL(p.photoURL || null); 
+        } 
+      }
+      catch (e:any) { 
+        if (mounted) {
+          const msg = String(e?.message||''); 
+          if (msg.toLowerCase().includes('offline')) setOffline(true); 
+          else console.error(msg); 
+        }
+      }
+    })();
+    return () => { mounted = false; };
+  }, [user]);
 
   useEffect(() => {
     if (typeof params?.open === 'string' && params.open.toLowerCase() === 'emergencycard') {

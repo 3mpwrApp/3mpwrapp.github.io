@@ -15,18 +15,23 @@ export default function TriggerDetector(){
   const palette = useAppPalette();
   const s = styles(palette);
   const [insights, setInsights] = React.useState<string[]>([]);
-  React.useEffect(()=>{ logView('wellness/trigger-detector'); (async()=>{
-    const entries = (await getCachedJSON<Entry[]>("wellness_symptom_entries")) || [];
-    const high = entries.filter(e => (parseFloat(e.pain||'0')||0) >= 6);
-    const tags = ['stress','sleep','work','flare','med-change'];
-    const out: string[] = [];
-    for (const tTag of tags){
-      const rate = high.length? high.filter(e => (e.tags||'').toLowerCase().includes(tTag)).length / high.length : 0;
-      if (rate >= 0.4) out.push(`${t('wellness.triggers.maybe','Possible trigger')}: ${tTag} (${Math.round(rate*100)}%)`);
-    }
-    if (!out.length) out.push(t('wellness.triggers.none','No strong correlations found. Keep logging.'));
-    setInsights(out);
-  })(); },[]);
+  React.useEffect(()=>{ 
+    logView('wellness/trigger-detector'); 
+    let mounted = true;
+    (async()=>{
+      const entries = (await getCachedJSON<Entry[]>("wellness_symptom_entries")) || [];
+      const high = entries.filter(e => (parseFloat(e.pain||'0')||0) >= 6);
+      const tags = ['stress','sleep','work','flare','med-change'];
+      const out: string[] = [];
+      for (const tTag of tags){
+        const rate = high.length? high.filter(e => (e.tags||'').toLowerCase().includes(tTag)).length / high.length : 0;
+        if (rate >= 0.4) out.push(`${t('wellness.triggers.maybe','Possible trigger')}: ${tTag} (${Math.round(rate*100)}%)`);
+      }
+      if (!out.length) out.push(t('wellness.triggers.none','No strong correlations found. Keep logging.'));
+      if (mounted) setInsights(out);
+    })();
+    return () => { mounted = false; };
+  },[]);
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.triggers.title','Trigger Detector')}</Text>

@@ -26,7 +26,16 @@ export default function WorldMap() {
   const { t } = useTranslation();
   const [kind, setKind] = React.useState<'all'|'law'|'protest'|'update'>('all');
   const [remote, setRemote] = React.useState(seed);
-  React.useEffect(()=>{ (async()=>{ try { const rows = await fetchWorldItems(); if (rows?.length) setRemote(rows as any); } catch {} })(); },[]);
+  React.useEffect(()=>{ 
+    let mounted = true;
+    (async()=>{ 
+      try { 
+        const rows = await fetchWorldItems(); 
+        if (mounted && rows?.length) setRemote(rows as any); 
+      } catch {} 
+    })();
+    return () => { mounted = false; };
+  },[]);
   React.useEffect(()=>{ trackEvent('advocacy.world.view', { kind }); },[kind]);
   const items = kind==='all' ? remote : remote.filter(i => i.kind === kind);
   return (

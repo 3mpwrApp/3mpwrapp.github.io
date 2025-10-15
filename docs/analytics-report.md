@@ -1,16 +1,21 @@
 # Analytics Event Report
 
-Generated: 2025-10-12T02:49:27.256Z
+Generated: 2025-10-15T04:39:24.171Z
 
 ## Summary
 
-- Registry events: 38
-- Unique events referenced in code: 25
-- Total literal emissions (static scan): 31
-- Missing (used not registered): 0
-- Unused (registered not used): 13
+- Registry events: 41
+- Unique events referenced in code: 27
+- Total literal emissions (static scan): 33
+- Missing (used not registered): 2
+- Unused (registered not used): 16
 - Sensitive field occurrences (schema): 2
 - Classification counts: secret=1, pii=1
+
+### Missing
+
+- assistant.disability_wizard_cta
+- letter_wizard_insert_trackers
 
 ### Unused
 
@@ -27,6 +32,9 @@ Generated: 2025-10-12T02:49:27.256Z
 - evidence.save.bulk
 - evidence.queue.enqueued
 - evidence.queue.processed
+- jurisdiction.changed
+- jurisdiction.deadline_calculated
+- jurisdiction.form_helper_used
 
 ## Categories
 
@@ -35,7 +43,7 @@ Generated: 2025-10-12T02:49:27.256Z
 | account_delete | 1 |
 | account_delete_failed | 1 |
 | advocacy | 8 |
-| assistant | 3 |
+| assistant | 4 |
 | bookmark_add | 1 |
 | bookmark_clear_all | 1 |
 | bookmark_remove | 1 |
@@ -48,7 +56,9 @@ Generated: 2025-10-12T02:49:27.256Z
 | energy_spend | 1 |
 | events | 2 |
 | evidence | 6 |
+| jurisdiction | 3 |
 | letter_insert_from_trackers | 1 |
+| letter_wizard_insert_trackers | 1 |
 | notification | 2 |
 | podcast_share | 1 |
 | tracker_add_entry | 1 |
@@ -64,6 +74,7 @@ Generated: 2025-10-12T02:49:27.256Z
 | tracker_share | 2 | OK |
 | advocacy.ask.submitted | 1 | OK |
 | assistant.search_open | 1 | OK |
+| assistant.disability_wizard_cta | 1 | MISSING |
 | assistant.quick_prompt | 1 | OK |
 | assistant.recents.clear | 1 | OK |
 | advocacy.world.view | 1 | OK |
@@ -72,6 +83,7 @@ Generated: 2025-10-12T02:49:27.256Z
 | campaign_join | 1 | OK |
 | campaign_share | 1 | OK |
 | podcast_share | 1 | OK |
+| letter_wizard_insert_trackers | 1 | MISSING |
 | account_delete | 1 | OK |
 | account_delete_failed | 1 | OK |
 | energy_set_daily | 1 | OK |

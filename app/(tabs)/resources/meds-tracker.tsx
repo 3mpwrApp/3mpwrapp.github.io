@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Alert, FlatList } from 'react-native';
+import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
-import { useAppPalette } from '../../../theme/usePalette';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { addMedication, listMedications, deleteMedication, addMedLog, listLogs, type Medication, type MedLog } from '../../../services/meds';
-import * as Notifier from '../../../services/notifications';
 import DateTimeField from '../../../components/DateTimeField';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { addMedication, addMedLog, deleteMedication, listLogs, listMedications, type Medication, type MedLog } from '../../../services/meds';
+import * as Notifier from '../../../services/notifications';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -31,7 +31,16 @@ export default function MedsTracker() {
     try { setItems(await listMedications()); } catch {}
   }, []);
   React.useEffect(() => { load(); }, [load]);
-  React.useEffect(() => { (async () => { try { setLogs(await listLogs(selectedMed || undefined)); } catch {} })(); }, [selectedMed]);
+  React.useEffect(() => { 
+    let mounted = true;
+    (async () => { 
+      try { 
+        const data = await listLogs(selectedMed || undefined);
+        if (mounted) setLogs(data);
+      } catch {} 
+    })();
+    return () => { mounted = false; };
+  }, [selectedMed]);
 
   const exportCSV = async () => {
     try {
