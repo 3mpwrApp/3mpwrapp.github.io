@@ -39,5 +39,7 @@
   "EVIDENCE_QUEUE_PROCESSED": "evidence.queue.processed",
   "JURISDICTION_CHANGED": "jurisdiction.changed",
   "JURISDICTION_DEADLINE_CALCULATED": "jurisdiction.deadline_calculated",
-  "JURISDICTION_FORM_HELPER_USED": "jurisdiction.form_helper_used"
+  "JURISDICTION_FORM_HELPER_USED": "jurisdiction.form_helper_used",
+  "ASSISTANT_DISABILITY_WIZARD_CTA": "assistant.disability_wizard_cta",
+  "LETTER_WIZARD_INSERT_TRACKERS": "letter_wizard_insert_trackers"
 }

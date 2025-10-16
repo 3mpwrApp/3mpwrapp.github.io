@@ -1,21 +1,16 @@
 # Analytics Event Report
 
-Generated: 2025-10-16T19:46:02.391Z
+Generated: 2025-10-16T21:15:06.966Z
 
 ## Summary
 
-- Registry events: 41
+- Registry events: 43
 - Unique events referenced in code: 27
 - Total literal emissions (static scan): 33
-- Missing (used not registered): 2
+- Missing (used not registered): 0
 - Unused (registered not used): 16
 - Sensitive field occurrences (schema): 2
 - Classification counts: secret=1, pii=1
-
-### Missing
-
-- assistant.disability_wizard_cta
-- letter_wizard_insert_trackers
 
 ### Unused
 
@@ -74,7 +69,7 @@ Generated: 2025-10-16T19:46:02.391Z
 | tracker_share | 2 | OK |
 | advocacy.ask.submitted | 1 | OK |
 | assistant.search_open | 1 | OK |
-| assistant.disability_wizard_cta | 1 | MISSING |
+| assistant.disability_wizard_cta | 1 | OK |
 | assistant.quick_prompt | 1 | OK |
 | assistant.recents.clear | 1 | OK |
 | advocacy.world.view | 1 | OK |
@@ -89,7 +84,7 @@ Generated: 2025-10-16T19:46:02.391Z
 | energy_spend | 1 | OK |
 | energy_reset_day | 1 | OK |
 | wellness_opposite_next_step | 1 | OK |
-| letter_wizard_insert_trackers | 1 | MISSING |
+| letter_wizard_insert_trackers | 1 | OK |
 | notification.delivered | 1 | OK |
 | notification.quiet_suppressed | 1 | OK |
 | advocacy.collective.submit | 1 | OK |
