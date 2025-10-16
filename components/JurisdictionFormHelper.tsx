@@ -4,7 +4,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/a11y';
 import { useTranslation } from '../i18n';
-import { logEvent } from '../services/analytics';
+import { trackEvent } from '../services/analyticsClient';
 import { ANALYTICS_EVENTS } from '../services/analyticsEvents';
 import { useJurisdiction } from '../store/jurisdiction';
 import { useTextScale } from '../theme/typography';
@@ -176,7 +176,7 @@ export default function JurisdictionFormHelper() {
     setRecommendations(recs);
     
     // Track form helper usage
-    logEvent(ANALYTICS_EVENTS.JURISDICTION_FORM_HELPER_USED, {
+    trackEvent(ANALYTICS_EVENTS.JURISDICTION_FORM_HELPER_USED, {
       jurisdiction_code: jurisdiction?.code,
       situation_type: situation,
       forms_recommended: recs.length,

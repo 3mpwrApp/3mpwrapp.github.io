@@ -4,7 +4,7 @@ import { Platform, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/a11y';
 import { useTranslation } from '../i18n';
-import { logEvent } from '../services/analytics';
+import { trackEvent } from '../services/analyticsClient';
 import { ANALYTICS_EVENTS } from '../services/analyticsEvents';
 import { useJurisdiction } from '../store/jurisdiction';
 import { useTextScale } from '../theme/typography';
@@ -76,7 +76,7 @@ export default function JurisdictionDeadlineCalculator() {
       setCalculatedDeadlines(deadlines);
       
       // Track deadline calculation usage
-      logEvent(ANALYTICS_EVENTS.JURISDICTION_DEADLINE_CALCULATED, {
+      trackEvent(ANALYTICS_EVENTS.JURISDICTION_DEADLINE_CALCULATED, {
         jurisdiction_code: jurisdiction.code,
         appeal_levels_count: deadlines.length,
         has_critical_deadline: deadlines.some(d => d.urgency === 'critical'),

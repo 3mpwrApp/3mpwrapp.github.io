@@ -1,7 +1,7 @@
 import React from "react";
 
 import { getJurisdiction, listJurisdictions } from "../data/jurisdictions";
-import { logEvent } from "../services/analytics";
+import { trackEvent } from "../services/analyticsClient";
 import { ANALYTICS_EVENTS } from "../services/analyticsEvents";
 import type { JurisdictionData } from "../types/jurisdiction";
 import { logger } from "../utils/logger";
@@ -66,7 +66,7 @@ export function JurisdictionProvider({ children }: { children: React.ReactNode }
     setCodeState(validCode);
     
     // Track jurisdiction changes
-    logEvent(ANALYTICS_EVENTS.JURISDICTION_CHANGED, {
+    trackEvent(ANALYTICS_EVENTS.JURISDICTION_CHANGED, {
       jurisdiction_code: validCode,
       jurisdiction_name: getJurisdiction(validCode)?.name || validCode,
     });
