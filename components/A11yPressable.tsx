@@ -51,7 +51,7 @@ export default function A11yPressable({
         const baseStyles: ViewStyle[] = [touchTargetStyle];
         
         if (typeof style === 'function') {
-          const dynamicStyle = style({ pressed, hovered });
+          const dynamicStyle = style({ pressed, hovered: hovered ?? false });
           if (dynamicStyle) {
             baseStyles.push(dynamicStyle as ViewStyle);
           }

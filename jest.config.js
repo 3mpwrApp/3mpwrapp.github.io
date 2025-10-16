@@ -19,7 +19,8 @@ module.exports = {
     // Map all useA11y imports to the mock file
     '^../hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js',
     '^.*/hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js',
-    '^../../../hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js'
+    '^../../../hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js',
+    '^.*hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js'
   },
   roots: ['<rootDir>'],
   testMatch: ['**/__tests__/**/*.test.tsx','**/__tests__/**/*.test.ts'],

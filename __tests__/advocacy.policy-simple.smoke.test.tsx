@@ -3,7 +3,7 @@ import { act, fireEvent, render, waitFor } from '@testing-library/react';
 // i18n and palette/a11y mocks
 jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (k:string, d?:any) => (d ?? k) }) }));
 jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ text:'#111', onPrimary:'#fff', primary:'#06f', muted:'#ddd', background:'#fff', surface:'#fafafa' }) }));
-jest.mock('../hooks/useA11y', () => ({ MAX_FONT_SCALE: 2, useAnnounceOnMount: () => {}, useFocusOnRefOnMount: () => {} }));
+jest.mock('../hooks/useA11y', () => ({ MAX_FONT_SCALE: 2, useAnnounceOnMount: () => {}, useFocusOnRefOnMount: () => {}, useScreenReaderEnabled: () => false, useReduceMotionEnabled: () => false }));
 // Avoid importing real expo-router which pulls react-navigation assets
 jest.mock('expo-router', () => ({ useLocalSearchParams: () => ({}) }));
 

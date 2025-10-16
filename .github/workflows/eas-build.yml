@@ -33,7 +33,6 @@ concurrency:
 permissions:
   contents: read
   actions: read
-  secrets: read
 
 jobs:
   build-android:

@@ -1,6 +1,6 @@
 # Analytics Event Report
 
-Generated: 2025-10-15T04:39:24.171Z
+Generated: 2025-10-16T19:46:02.391Z
 
 ## Summary
 
@@ -83,13 +83,13 @@ Generated: 2025-10-15T04:39:24.171Z
 | campaign_join | 1 | OK |
 | campaign_share | 1 | OK |
 | podcast_share | 1 | OK |
-| letter_wizard_insert_trackers | 1 | MISSING |
 | account_delete | 1 | OK |
 | account_delete_failed | 1 | OK |
 | energy_set_daily | 1 | OK |
 | energy_spend | 1 | OK |
 | energy_reset_day | 1 | OK |
 | wellness_opposite_next_step | 1 | OK |
+| letter_wizard_insert_trackers | 1 | MISSING |
 | notification.delivered | 1 | OK |
 | notification.quiet_suppressed | 1 | OK |
 | advocacy.collective.submit | 1 | OK |

@@ -2,7 +2,13 @@ import { fireEvent, render, waitFor } from '@testing-library/react';
 
 // Palette and a11y minimal mocks
 jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ text:'#111', onPrimary:'#fff', primary:'#06f', muted:'#ddd', background:'#fff', surface:'#fafafa' }) }));
-jest.mock('../hooks/useA11y', () => ({ MAX_FONT_SCALE: 2, useAnnounceOnMount: () => {}, useFocusOnRefOnMount: () => {} }));
+jest.mock('../hooks/useA11y', () => ({ 
+  MAX_FONT_SCALE: 2, 
+  useAnnounceOnMount: () => {}, 
+  useFocusOnRefOnMount: () => {},
+  useScreenReaderEnabled: () => false,
+  useReduceMotionEnabled: () => false
+}));
 
 // AsyncStorage mock
 jest.mock('@react-native-async-storage/async-storage', () => ({ __esModule: true, default: { getItem: jest.fn(async () => null), setItem: jest.fn(async () => {}), removeItem: jest.fn(async () => {}) } }));

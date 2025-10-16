@@ -1,0 +1,291 @@
+[
+  {
+    "id": "bc-employment-accommodation",
+    "title": "Employment Accommodation Request",
+    "description": "Request workplace accommodations under BC Human Rights Code",
+    "jurisdiction": "BC",
+    "category": "accommodation",
+    "complexity": "basic",
+    "timeToComplete": "30-45 minutes",
+    "requiredInfo": [
+      "Employee details",
+      "Employer information",
+      "Specific accommodation needs",
+      "Medical documentation (if applicable)",
+      "Preferred timeline"
+    ],
+    "template": "[Date]\n\n[Employer Name]\n[Employer Address]\n\nDear [Employer Name/HR Manager],\n\nRe: Request for Workplace Accommodation under BC Human Rights Code\n\nI am writing to formally request workplace accommodation(s) under the British Columbia Human Rights Code, RSBC 1996, c. 210.\n\nEMPLOYEE INFORMATION:\nName: [Your Name]\nPosition: [Your Position]\nDepartment: [Your Department]\nEmployee ID: [Your Employee ID]\n\nACCOMMODATION REQUEST:\nI am requesting the following accommodation(s):\n[List specific accommodations needed]\n\nREASON FOR ACCOMMODATION:\n[Brief description of disability/condition requiring accommodation]\n\nSUPPORTING DOCUMENTATION:\n[List any medical documentation attached]\n\nPROPOSED TIMELINE:\nI would appreciate implementing these accommodations by [Date], and I am available to discuss this request at your convenience.\n\nDUTY TO ACCOMMODATE:\nUnder section 13 of the BC Human Rights Code, employers have a duty to accommodate employees with disabilities to the point of undue hardship. I believe these accommodations are reasonable and would not cause undue hardship.\n\nI look forward to working with you to implement these accommodations and continuing my productive work with [Company Name].\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]\n[Your Contact Information]\n\nAttachments:\n- Medical documentation (if applicable)\n- Accommodation suggestions",
+    "legalBasis": [
+      "BC Human Rights Code, RSBC 1996, c. 210, section 13",
+      "Employment Standards Act, RSBC 1996, c. 113"
+    ],
+    "relatedLaws": [
+      "Workers Compensation Act",
+      "Occupational Health and Safety Regulation"
+    ],
+    "deadlines": [
+      {
+        "description": "Human Rights Complaint Filing",
+        "timeframe": "Within 1 year of alleged discrimination",
+        "consequences": "Cannot file complaint after deadline except in exceptional circumstances"
+      }
+    ],
+    "tips": [
+      "Be specific about accommodation needs",
+      "Provide medical documentation when appropriate",
+      "Keep detailed records of all communications",
+      "Follow up in writing after verbal discussions"
+    ],
+    "resources": [
+      {
+        "title": "BC Human Rights Tribunal",
+        "description": "File complaints and get information about rights",
+        "url": "https://www.bchrt.bc.ca/",
+        "phone": "604-775-2000"
+      },
+      {
+        "title": "Disability Alliance BC",
+        "description": "Advocacy and support for people with disabilities",
+        "url": "https://disabilityalliancebc.org/",
+        "phone": "604-875-0188"
+      }
+    ]
+  },
+  {
+    "id": "bc-healthcare-complaint",
+    "title": "Healthcare Discrimination Complaint",
+    "description": "File complaint about discrimination in healthcare services",
+    "jurisdiction": "BC",
+    "category": "complaint",
+    "complexity": "intermediate",
+    "timeToComplete": "60-90 minutes",
+    "requiredInfo": [
+      "Healthcare provider details",
+      "Date and location of incident",
+      "Description of discrimination",
+      "Witnesses (if any)",
+      "Previous complaints or resolution attempts"
+    ],
+    "template": "FORMAL COMPLAINT - HEALTHCARE DISCRIMINATION\n\nTO: [Healthcare Provider/Institution]\nFROM: [Your Name]\nDATE: [Date]\n\nCOMPLAINT UNDER BC HUMAN RIGHTS CODE\n\nI am filing this formal complaint regarding discrimination I experienced while accessing healthcare services, which I believe violates the BC Human Rights Code.\n\nINCIDENT DETAILS:\nDate: [Date of incident]\nLocation: [Healthcare facility]\nHealthcare Provider(s): [Names of involved staff]\n\nDESCRIPTION OF DISCRIMINATION:\n[Detailed description of what happened, including specific discriminatory actions or statements]\n\nPROTECTED CHARACTERISTIC:\nThe discrimination was based on my: [disability/mental health condition/other protected ground]\n\nIMPACT:\nThis discrimination affected me by:\n[Describe impact on health, dignity, access to services]\n\nPREVIOUS RESOLUTION ATTEMPTS:\n[Describe any attempts to resolve the issue directly]\n\nWITNESSES:\n[List any witnesses with contact information]\n\nREMEDY SOUGHT:\nI am seeking:\n- Formal apology\n- Policy changes to prevent future discrimination\n- Staff training on disability rights\n- [Other specific remedies]\n\nSUPPORTING DOCUMENTATION:\n[List attached documents]\n\nThis complaint is filed under sections 8 and 13 of the BC Human Rights Code, which prohibit discrimination in services and facilities.\n\nI request a written response within 30 days outlining steps to address this complaint.\n\n[Your Name]\n[Your Contact Information]\n\ncc: BC Human Rights Tribunal (if applicable)",
+    "legalBasis": [
+      "BC Human Rights Code, section 8 (services and facilities)",
+      "BC Human Rights Code, section 13 (duty to accommodate)"
+    ],
+    "relatedLaws": [
+      "Health Professions Act",
+      "Hospital Act",
+      "Medicare Protection Act"
+    ],
+    "tips": [
+      "Document incidents immediately while details are fresh",
+      "Request copies of medical records",
+      "Consider filing with professional college if healthcare provider is regulated",
+      "Seek support from patient advocate if available"
+    ],
+    "resources": [
+      {
+        "title": "Patient Care Quality Office",
+        "description": "Healthcare complaints for BC",
+        "url": "https://www.gov.bc.ca/gov/content/health/accessing-health-care/patient-care-quality-office",
+        "phone": "1-877-977-7787"
+      }
+    ]
+  },
+  {
+    "id": "ab-housing-complaint",
+    "title": "Housing Discrimination Complaint",
+    "description": "File complaint about discrimination in housing under Alberta Human Rights Act",
+    "jurisdiction": "AB",
+    "category": "complaint",
+    "complexity": "intermediate",
+    "timeToComplete": "45-60 minutes",
+    "requiredInfo": [
+      "Landlord/property manager details",
+      "Property address",
+      "Description of discrimination",
+      "Communication records",
+      "Witnesses"
+    ],
+    "template": "HOUSING DISCRIMINATION COMPLAINT\n\nAlberta Human Rights Commission\nComplaint Form - Housing Discrimination\n\nCOMPLAINANT INFORMATION:\nName: [Your Name]\nAddress: [Your Address]\nPhone: [Your Phone]\nEmail: [Your Email]\n\nRESPONDENT INFORMATION:\nLandlord/Property Manager: [Name]\nCompany: [Company Name]\nAddress: [Property/Company Address]\nPhone: [Phone Number]\n\nPROPERTY DETAILS:\nProperty Address: [Address of rental property]\nType of Housing: [Apartment/house/condo]\nDate of Application/Incident: [Date]\n\nGROUNDS OF DISCRIMINATION:\nThe discrimination was based on:\n☐ Physical disability\n☐ Mental disability  \n☐ Other: [Specify]\n\nDESCRIPTION OF DISCRIMINATION:\n[Provide detailed description of discriminatory actions, including specific statements made, actions taken, and how it violated your rights]\n\nACCOMMODATION REQUESTS:\nDid you request accommodation? ☐ Yes ☐ No\nIf yes, describe: [Details of accommodation requested]\n\nLandlord's response: [How landlord responded to accommodation request]\n\nIMPACT OF DISCRIMINATION:\n[Describe how this discrimination affected you - financially, emotionally, physically]\n\nREMEDY SOUGHT:\n☐ Financial compensation: $[Amount]\n☐ Policy changes\n☐ Accommodation provided\n☐ Training for staff\n☐ Other: [Specify]\n\nSUPPORTING EVIDENCE:\n☐ Emails/text messages\n☐ Witness statements\n☐ Medical documentation\n☐ Photos\n☐ Other: [Specify]\n\nI declare that the information provided is true and accurate to the best of my knowledge.\n\nSignature: [Your Signature]\nDate: [Date]\n\nNote: This complaint must be filed within one year of the alleged discrimination.",
+    "legalBasis": [
+      "Alberta Human Rights Act, RSA 2000, c. A-25.5, section 4 (accommodation)",
+      "Alberta Human Rights Act, section 7 (duty to accommodate)"
+    ],
+    "relatedLaws": [
+      "Residential Tenancies Act",
+      "Mobile Home Sites Tenancies Act"
+    ],
+    "deadlines": [
+      {
+        "description": "Human Rights Complaint Filing",
+        "timeframe": "Within 1 year of discrimination",
+        "consequences": "Cannot file complaint after one year deadline"
+      }
+    ],
+    "tips": [
+      "Keep all communication with landlord in writing",
+      "Take photos of property conditions",
+      "Get witness statements",
+      "Document all financial losses"
+    ],
+    "resources": [
+      {
+        "title": "Alberta Human Rights Commission",
+        "description": "File human rights complaints",
+        "url": "https://www.albertahumanrights.ab.ca/",
+        "phone": "780-427-7661"
+      },
+      {
+        "title": "Residential Tenancy Dispute Resolution Service",
+        "description": "Resolve landlord-tenant disputes",
+        "url": "https://www.alberta.ca/residential-tenancy-dispute-resolution-service.aspx",
+        "phone": "1-877-427-4088"
+      }
+    ]
+  },
+  {
+    "id": "on-education-accommodation",
+    "title": "Education Accommodation Request",
+    "description": "Request accommodations in Ontario educational institutions",
+    "jurisdiction": "ON",
+    "category": "accommodation",
+    "complexity": "basic",
+    "timeToComplete": "30-45 minutes",
+    "requiredInfo": [
+      "Student information",
+      "Institution details",
+      "Specific accommodation needs",
+      "Medical/psychological documentation",
+      "Previous accommodations"
+    ],
+    "template": "ACCOMMODATION REQUEST - ONTARIO EDUCATION\n\n[Date]\n\n[Institution Name]\nAccessibility Services/Disability Services\n[Institution Address]\n\nDear Accessibility Services Coordinator,\n\nRe: Request for Academic Accommodations under Ontario Human Rights Code\n\nSTUDENT INFORMATION:\nName: [Student Name]\nStudent ID: [Student ID]\nProgram: [Program/Course of Study]\nYear of Study: [Year]\n\nREQUEST FOR ACCOMMODATION:\nI am writing to request academic accommodations under the Ontario Human Rights Code, RSO 1990, c. H.19. I have a [disability/condition] that impacts my ability to [describe impact on learning].\n\nSPECIFIC ACCOMMODATIONS REQUESTED:\n☐ Extended time for exams ([specify time - e.g., time and a half])\n☐ Alternative exam format\n☐ Note-taking assistance\n☐ Audio recording of lectures\n☐ Accessible course materials\n☐ Reduced course load\n☐ Other: [Specify]\n\nSUPPORTING DOCUMENTATION:\nI am providing the following documentation to support my accommodation request:\n- [Medical report/psychological assessment]\n- [Previous accommodation plans]\n- [Other relevant documentation]\n\nDUTY TO ACCOMMODATE:\nUnder section 1 of the Ontario Human Rights Code and section 17 (education), educational institutions have a duty to accommodate students with disabilities to the point of undue hardship. The Supreme Court of Canada has established that this includes providing individualized accommodations that address the impact of a student's disability.\n\nCONFIDENTIALITY:\nI understand that information about my disability will be kept confidential and shared only with those who need to know to implement accommodations.\n\nI am available to meet to discuss these accommodations and any additional information you may require. I can be reached at [phone] or [email].\n\nThank you for your consideration. I look forward to working with you to ensure equal access to education.\n\nSincerely,\n[Student Name]\n[Contact Information]\n\nEnclosures:\n- Medical/psychological documentation\n- Previous accommodation letters (if applicable)",
+    "legalBasis": [
+      "Ontario Human Rights Code, RSO 1990, c. H.19, section 1 (equal treatment)",
+      "Ontario Human Rights Code, section 17 (accommodation in education)",
+      "Accessibility for Ontarians with Disabilities Act, 2005"
+    ],
+    "relatedLaws": [
+      "Education Act",
+      "Post-secondary Education Choice and Excellence Act"
+    ],
+    "tips": [
+      "Apply for accommodations early in the semester",
+      "Provide current medical documentation",
+      "Meet with accessibility services regularly to review accommodations",
+      "Know your rights under the Human Rights Code"
+    ],
+    "resources": [
+      {
+        "title": "Human Rights Tribunal of Ontario",
+        "description": "File human rights applications",
+        "url": "https://www.tribunalsontario.ca/hrto/",
+        "phone": "416-326-1312"
+      },
+      {
+        "title": "Accessibility Directorate of Ontario",
+        "description": "Information about AODA compliance",
+        "url": "https://www.ontario.ca/page/accessibility-directorate-ontario"
+      }
+    ]
+  },
+  {
+    "id": "qc-services-complaint",
+    "title": "Services Discrimination Complaint",
+    "description": "File complaint about discrimination in services under Quebec Charter",
+    "jurisdiction": "QC",
+    "category": "complaint",
+    "complexity": "intermediate",
+    "timeToComplete": "45-75 minutes",
+    "requiredInfo": [
+      "Service provider details",
+      "Description of discrimination",
+      "Date and location",
+      "Accommodation requests made",
+      "Witnesses"
+    ],
+    "template": "PLAINTE POUR DISCRIMINATION - SERVICES\nCOMPLAINT FOR DISCRIMINATION - SERVICES\n\nCommission des droits de la personne et des droits de la jeunesse du Québec\n\nRENSEIGNEMENTS SUR LE PLAIGNANT / COMPLAINANT INFORMATION:\nNom / Name: [Votre nom / Your name]\nAdresse / Address: [Votre adresse / Your address]\nTéléphone / Phone: [Votre téléphone / Your phone]\nCourriel / Email: [Votre courriel / Your email]\n\nORGANISME/PERSONNE MISE EN CAUSE / RESPONDENT ORGANIZATION/PERSON:\nNom / Name: [Nom de l'organisation / Organization name]\nAdresse / Address: [Adresse / Address]\nType de service / Type of service: [Santé, commerce, transport, etc. / Health, commerce, transport, etc.]\n\nMOTIF DE DISCRIMINATION / GROUND OF DISCRIMINATION:\n☐ Handicap / Disability\n☐ Autre / Other: [Préciser / Specify]\n\nDESCRIPTION DES FAITS / DESCRIPTION OF FACTS:\nDate de l'incident / Date of incident: [Date]\nLieu / Location: [Lieu / Location]\n\n[Description détaillée de la discrimination subie, incluant les paroles et gestes discriminatoires / Detailed description of discrimination experienced, including discriminatory words and actions]\n\nDEMANDE D'ACCOMMODEMENT / ACCOMMODATION REQUEST:\nAvez-vous demandé un accommodement? / Did you request accommodation? ☐ Oui/Yes ☐ Non/No\n\nSi oui, décrire / If yes, describe:\n[Description de l'accommodement demandé / Description of accommodation requested]\n\nRéponse reçue / Response received:\n[Réponse de l'organisation / Organization's response]\n\nTÉMOINS / WITNESSES:\n[Nom et coordonnées des témoins / Name and contact information of witnesses]\n\nPRÉJUDICE SUBI / HARM SUFFERED:\n[Description du préjudice moral, physique ou financier / Description of moral, physical or financial harm]\n\nRÉPARATION DEMANDÉE / REMEDY SOUGHT:\n☐ Excuses / Apology\n☐ Dommages-intérêts / Damages: [Montant / Amount]\n☐ Changements de politique / Policy changes\n☐ Formation du personnel / Staff training\n☐ Autre / Other: [Préciser / Specify]\n\nJe déclare que les renseignements fournis sont véridiques.\nI declare that the information provided is truthful.\n\nSignature: [Signature]\nDate: [Date]\n\nNote: Cette plainte doit être déposée dans les deux ans de l'acte discriminatoire.\nNote: This complaint must be filed within two years of the discriminatory act.",
+    "legalBasis": [
+      "Charte des droits et libertés de la personne, RLRQ c. C-12, article 10",
+      "Charte québécoise, article 12 (services)",
+      "Charte québécoise, article 13 (accommodement)"
+    ],
+    "relatedLaws": [
+      "Code civil du Québec",
+      "Loi assurant l'exercice des droits des personnes handicapées"
+    ],
+    "deadlines": [
+      {
+        "description": "Dépôt de plainte / Filing complaint",
+        "timeframe": "Dans les 2 ans / Within 2 years",
+        "consequences": "Impossible de déposer après délai / Cannot file after deadline"
+      }
+    ],
+    "tips": [
+      "Conservez tous les documents / Keep all documents",
+      "Notez les détails immédiatement / Note details immediately",
+      "Demandez l'aide d'un organisme / Seek help from advocacy organization",
+      "La plainte peut être déposée en français ou en anglais / Complaint can be filed in French or English"
+    ],
+    "resources": [
+      {
+        "title": "Commission des droits de la personne et des droits de la jeunesse",
+        "description": "Déposer une plainte pour discrimination / File discrimination complaint",
+        "url": "https://www.cdpdj.qc.ca/",
+        "phone": "514-873-5146"
+      }
+    ]
+  },
+  {
+    "id": "fed-government-services",
+    "title": "Federal Government Services Complaint",
+    "description": "Complaint about discrimination in federal government services",
+    "jurisdiction": "Federal",
+    "category": "complaint",
+    "complexity": "intermediate",
+    "timeToComplete": "45-60 minutes",
+    "requiredInfo": [
+      "Federal department/agency",
+      "Service being accessed",
+      "Description of discrimination",
+      "Accommodation requests",
+      "Previous complaint attempts"
+    ],
+    "template": "COMPLAINT - FEDERAL GOVERNMENT SERVICES DISCRIMINATION\n\nCanadian Human Rights Commission\nComplaint Form\n\nCOMPLAINANT INFORMATION:\nName: [Your Name]\nAddress: [Your Address]\nPhone: [Your Phone Number]\nEmail: [Your Email]\n\nRESPONDENT INFORMATION:\nFederal Department/Agency: [Name of Department]\nContact Person: [Name if known]\nAddress: [Department Address]\nPhone: [Department Phone]\n\nDISCRIMINATION DETAILS:\nDate of Incident: [Date]\nLocation: [Where discrimination occurred]\nService Involved: [Type of federal service - EI, CPP, Immigration, etc.]\n\nGROUND OF DISCRIMINATION:\n☐ Disability (physical)\n☐ Disability (mental)\n☐ Other: [Specify if applicable]\n\nDESCRIPTION OF DISCRIMINATION:\n[Provide detailed description of what happened, including specific actions, statements, or refusals that you believe were discriminatory]\n\nACCOMMODATION REQUESTS:\nDid you request accommodation? ☐ Yes ☐ No\n\nIf yes, describe the accommodation requested:\n[Detail what accommodation you requested]\n\nResponse from federal department:\n[Describe how the department responded to your accommodation request]\n\nIMPACT OF DISCRIMINATION:\n[Describe how this discrimination affected you - financially, emotionally, access to services]\n\nPREVIOUS COMPLAINT ATTEMPTS:\nHave you filed complaints with:\n☐ Department's internal complaint process\n☐ Ombudsman office\n☐ Other: [Specify]\n\nResults: [Describe outcomes of previous complaints]\n\nREMEDY SOUGHT:\n☐ Financial compensation\n☐ Apology\n☐ Policy changes\n☐ Training for staff\n☐ Accommodation provided\n☐ Other: [Specify]\n\nSUPPORTING EVIDENCE:\n☐ Correspondence with department\n☐ Medical documentation\n☐ Witness statements\n☐ Other: [Specify]\n\nI understand that this complaint is filed under the Canadian Human Rights Act and that the Canadian Human Rights Commission will investigate this matter.\n\nSignature: [Your Signature]\nDate: [Date]\n\nFiling Deadline: This complaint must be filed within one year of the last discriminatory act.",
+    "legalBasis": [
+      "Canadian Human Rights Act, RSC 1985, c. H-6, section 5 (services)",
+      "Canadian Human Rights Act, section 15 (duty to accommodate)",
+      "Employment Equity Act (for federal employment)"
+    ],
+    "relatedLaws": [
+      "Accessible Canada Act",
+      "Employment Insurance Act",
+      "Canada Pension Plan"
+    ],
+    "deadlines": [
+      {
+        "description": "Human Rights Complaint Filing",
+        "timeframe": "Within 1 year of last discriminatory act",
+        "consequences": "Cannot file complaint after one year deadline"
+      }
+    ],
+    "tips": [
+      "Try internal complaint process first",
+      "Keep detailed records of all interactions",
+      "Federal government has stronger duty to accommodate",
+      "Consider contacting relevant ombudsman office"
+    ],
+    "resources": [
+      {
+        "title": "Canadian Human Rights Commission",
+        "description": "File federal human rights complaints",
+        "url": "https://www.chrc-ccdp.gc.ca/",
+        "phone": "1-888-214-1090"
+      },
+      {
+        "title": "Office of the Federal Ombudsman for Victims of Crime",
+        "description": "Federal services complaints",
+        "url": "https://www.victimsfirst.gc.ca/"
+      }
+    ]
+  }
+]
