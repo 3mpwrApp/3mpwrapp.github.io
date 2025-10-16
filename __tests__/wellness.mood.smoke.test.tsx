@@ -7,8 +7,6 @@ jest.mock('../hooks/useA11y', () => ({ useScreenReaderEnabled: () => false, useR
 jest.mock('expo-router', () => ({ Link: ({ children }: any) => children }));
 
 // Import after mocking
-const React = require('react');
-
 const { SettingsProvider } = require('../store/settings');
 const Mod = require('../app/(tabs)/wellness.mood');
 const Mood = (Mod && Mod.default) ? Mod.default : Mod;
