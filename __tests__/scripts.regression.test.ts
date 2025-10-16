@@ -36,7 +36,7 @@ describe('scripts regression', () => {
       'scripts/i18n-report-missing.js',
     ];
     for (const s of reports) {
-      const { code, out } = runNode(s);
+      const { out } = runNode(s);
       // These can exit with non-zero to report status, but should not have hard errors
       expect(out).not.toMatch(/^Error|^TypeError/i);
     }
