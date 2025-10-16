@@ -1,0 +1,13 @@
+# Gitleaks ignore file - suppresses false positives
+# See: https://github.com/gitleaks/gitleaks#gitleaksignore
+
+# README.md contains example/placeholder environment variables for documentation purposes
+# These are not real secrets, just illustrative examples
+README.md:aws-access-token:221
+README.md:aws-access-token:223
+README.md:aws-access-token:259
+README.md:sidekiq-secret:42
+
+# Firebase Web API Key - This is intentionally public for client-side apps
+# See: https://firebase.google.com/docs/projects/api-keys#api-keys-for-firebase-are-different
+firebase/config.ts:gcp-api-key:12

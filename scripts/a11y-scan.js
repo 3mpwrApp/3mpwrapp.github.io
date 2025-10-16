@@ -34,8 +34,11 @@ function scanFile(file) {
   lines.forEach((line, i) => {
     const ln = i + 1;
 
+    // Check for suppression comment
+    const isSuppressed = /\/\/\s*a11y-scan:/.test(line);
+
     // Pressable opening tag
-    if (/\<Pressable(\s|>)/.test(line)) {
+    if (/\<Pressable(\s|>)/.test(line) && !isSuppressed) {
       if (!/accessibilityRole\s*=/.test(line)) {
         issues.push({
           ln,
@@ -51,7 +54,7 @@ function scanFile(file) {
     }
 
     // expo-router Link
-    if (/\<Link(\s|>)/.test(line)) {
+    if (/\<Link(\s|>)/.test(line) && !isSuppressed) {
       if (!/accessibilityRole\s*=/.test(line) && !/asChild/.test(line)) {
         issues.push({
           ln,
