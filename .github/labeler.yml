@@ -1,0 +1,86 @@
+# Auto-labeling rules for PRs based on files changed
+
+# Frontend/UI
+'frontend':
+  - changed-files:
+    - any-glob-to-any-file: ['app/**', 'components/**', 'theme/**']
+
+# Backend/API
+'backend':
+  - changed-files:
+    - any-glob-to-any-file: ['server/**', 'services/**', 'firebase/**']
+
+# Testing
+'testing':
+  - changed-files:
+    - any-glob-to-any-file: ['__tests__/**', '*.test.ts', '*.test.tsx', 'jest.config.js', 'jest.setup.js']
+
+# CI/CD
+'ci/cd':
+  - changed-files:
+    - any-glob-to-any-file: ['.github/workflows/**', 'eas.json']
+
+# Documentation
+'documentation':
+  - changed-files:
+    - any-glob-to-any-file: ['docs/**', '*.md', '!CHANGELOG.md']
+
+# Dependencies
+'dependencies':
+  - changed-files:
+    - any-glob-to-any-file: ['package.json', 'package-lock.json']
+
+# Configuration
+'configuration':
+  - changed-files:
+    - any-glob-to-any-file: ['*.config.js', 'tsconfig.json', 'app.json']
+
+# Internationalization
+'i18n':
+  - changed-files:
+    - any-glob-to-any-file: ['locales/**', 'i18n/**', 'scripts/i18n-*']
+
+# Security
+'security':
+  - changed-files:
+    - any-glob-to-any-file: ['security/**', 'firebase/**rules']
+
+# Accessibility
+'accessibility':
+  - changed-files:
+    - any-glob-to-any-file: ['constants/a11y.ts', 'hooks/useA11y.ts']
+
+# Analytics
+'analytics':
+  - changed-files:
+    - any-glob-to-any-file: ['services/analytics.ts', 'types/analytics.ts']
+
+# Performance
+'performance':
+  - changed-files:
+    - any-glob-to-any-file: ['scripts/perf-*']
+
+# Breaking Change
+'breaking-change':
+  - head-branch: ['^breaking/', 'breaking']
+  - title: ['^breaking', '^BREAKING CHANGE']
+
+# Feature
+'feature':
+  - head-branch: ['^feat/', '^feature/']
+  - title: ['^feat:', '^feature:']
+
+# Bug Fix
+'bug':
+  - head-branch: ['^fix/', '^bugfix/']
+  - title: ['^fix:', '^bugfix:']
+
+# Chore
+'chore':
+  - head-branch: ['^chore/']
+  - title: ['^chore:']
+
+# Refactor
+'refactor':
+  - head-branch: ['^refactor/']
+  - title: ['^refactor:']

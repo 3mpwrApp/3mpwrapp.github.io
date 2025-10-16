@@ -6,7 +6,7 @@ import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "r
 
 // Type for React Native event subscriptions (compatible with multiple RN versions)
 // Older RN: { remove: () => void }, Newer RN: () => void
-type _RNSubscription = { remove?: () => void } | (() => void) | undefined;
+type RNSubscription = { remove?: () => void } | (() => void) | undefined;
 
 // internal modules
 import ChangelogGate from "../components/ChangelogGate";
@@ -69,7 +69,7 @@ export default function RootLayout() {
     AccessibilityInfo.isReduceMotionEnabled().then((enabled) => {
       if (mounted) setReduceMotion(enabled);
     });
-    const sub = AccessibilityInfo.addEventListener(
+    const sub: RNSubscription = AccessibilityInfo.addEventListener(
       "reduceMotionChanged",
       (enabled) => setReduceMotion(enabled),
     );
@@ -118,7 +118,7 @@ export default function RootLayout() {
       ]).catch(() => {});
     };
     const t = setTimeout(() => mounted && prefetch(), 1200);
-    const sub = AppState.addEventListener("change", (s) => {
+    const sub: RNSubscription = AppState.addEventListener("change", (s) => {
       if (s === "active") { prefetch(); maybeRunPruneCycle().catch(()=>{}); }
     });
     return () => {

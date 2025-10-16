@@ -1,0 +1,79 @@
+name: i18n Quality Checks
+
+on:
+  pull_request:
+    paths:
+      - 'locales/**'
+      - 'scripts/i18n-*'
+      - 'i18n/**'
+  push:
+    branches: [main]
+    paths:
+      - 'locales/**'
+      - 'scripts/i18n-*'
+      - 'i18n/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  i18n-validation:
+    name: i18n Validation Suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Cache node_modules
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a # v4.2.0
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci --no-audit --fund=false
+
+      - name: Validate JSON syntax
+        run: npm run i18n:validate
+
+      - name: Check key differences
+        run: npm run i18n:diff
+
+      - name: Validate plural keys
+        run: npm run i18n:plural
+
+      - name: Check untranslated threshold
+        run: npm run i18n:threshold
+        env:
+          I18N_MAX_UNTRANSLATED: 400
+
+      - name: Detect orphan/missing keys
+        run: npm run i18n:orphans
+
+      - name: Assert no [T] tags (release gate)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: npm run i18n:assert
+
+      - name: Show untranslated progress delta
+        run: npm run i18n:progress
+
+      - name: Lint i18n keys
+        run: npm run i18n:lint
+        continue-on-error: true # Advisory
+
+      - name: Generate coverage report
+        run: npm run i18n:coverage
+        continue-on-error: true # Advisory

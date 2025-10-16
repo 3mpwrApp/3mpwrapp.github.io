@@ -1,0 +1,118 @@
+name: Performance Monitoring
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+jobs:
+  bundle-analysis:
+    name: Bundle Size Analysis
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Cache node_modules
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a # v4.2.0
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install dependencies
+        run: npm ci --no-audit --fund=false
+
+      - name: Check bundle budget
+        id: budget
+        run: |
+          npm run perf:budget
+          echo "budget_passed=$?" >> $GITHUB_OUTPUT
+
+      - name: Generate bundle breakdown
+        run: npm run perf:breakdown > bundle-breakdown.txt
+
+      - name: Check max file size
+        run: npm run perf:max-file
+
+      - name: Upload bundle breakdown
+        uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.5.0
+        if: always()
+        with:
+          name: bundle-analysis
+          path: bundle-breakdown.txt
+          retention-days: 30
+
+      - name: Comment on PR with bundle size
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          script: |
+            const fs = require('fs');
+            const breakdown = fs.readFileSync('bundle-breakdown.txt', 'utf8');
+            
+            const comment = `## 📦 Bundle Size Analysis
+            
+            \`\`\`
+            ${breakdown}
+            \`\`\`
+            
+            ${context.payload.pull_request.head.sha}
+            `;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+      - name: Fail if budget exceeded
+        if: steps.budget.outputs.budget_passed != '0'
+        run: |
+          echo "::error::Bundle size budget exceeded!"
+          exit 1
+
+  reading-level:
+    name: Content Reading Level
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Cache node_modules
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a # v4.2.0
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install dependencies
+        run: npm ci --no-audit --fund=false
+
+      - name: Check reading level
+        run: npm run read:level
+        continue-on-error: true # Advisory check
