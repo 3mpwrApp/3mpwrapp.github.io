@@ -3,7 +3,13 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import CollectiveLegal from '../app/(tabs)/advocacy/collective-legal';
 import * as cache from '../services/cache';
 import * as violations from '../services/violations';
-jest.mock('../hooks/useA11y', () => ({ useAnnounceOnMount: () => {}, useFocusOnRefOnMount: () => {}, MAX_FONT_SCALE: 2 }));
+jest.mock('../hooks/useA11y', () => ({ 
+  useAnnounceOnMount: () => {}, 
+  useFocusOnRefOnMount: () => {}, 
+  useScreenReaderEnabled: () => false,
+  useReduceMotionEnabled: () => false,
+  MAX_FONT_SCALE: 2 
+}));
 
 // Mock palette + RN color scheme + settings to avoid native hooks
 jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({
@@ -13,6 +19,7 @@ jest.mock('react-native', () => {
   // Provide only pieces actually touched during this test to avoid deep internal module resolution
   return {
     Alert: { alert: jest.fn() },
+    Platform: { OS: 'web' },
     ScrollView: (props: any) => props.children,
     StyleSheet: { create: (s: any) => s },
     Text: (props: any) => props.children,

@@ -1,6 +1,8 @@
 import * as React from "react";
 import { AccessibilityInfo, findNodeHandle, Platform } from "react-native";
 
+import { logger } from "../utils/logger";
+
 export const MAX_FONT_SCALE = 2.0;
 
 // Maximum safe contrast ratio that exceeds WCAG AAA standards

@@ -12,7 +12,7 @@ type State = {
   errorReportingEnabled?: boolean;
 };
 
-const KEY = "empowr.privacy.v1";
+const STORAGE_KEY = "privacy:state:v1";
 
 type PrivacyCtx = {
   state: State;
@@ -29,14 +29,14 @@ export function PrivacyProvider({ children }: { children: React.ReactNode }) {
   React.useEffect(() => {
     (async () => {
       try {
-        const raw = await AsyncStorage?.getItem?.(KEY);
+        const raw = await AsyncStorage?.getItem?.(STORAGE_KEY);
         if (raw) setState(JSON.parse(raw));
       } catch {}
     })();
   }, []);
   const persist = async (s: State) => {
     try {
-      await AsyncStorage?.setItem?.(KEY, JSON.stringify(s));
+      await AsyncStorage?.setItem?.(STORAGE_KEY, JSON.stringify(s));
     } catch {}
   };
   const setPasscode = async (p?: string) => {

@@ -3,6 +3,8 @@
  * AAA requires 7:1 for normal text, 4.5:1 for large text (18pt+ or 14pt+ bold)
  */
 
+import { logger } from "./logger";
+
 /**
  * Convert hex color to RGB values
  */

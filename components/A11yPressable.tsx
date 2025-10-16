@@ -47,11 +47,11 @@ export default function A11yPressable({
     <Pressable // a11y-scan: accessibilityRole and hitSlop resolved dynamically
       accessibilityRole={resolvedRole} 
       hitSlop={effectiveHitSlop}
-      style={({ pressed }) => {
+      style={({ pressed, hovered }) => {
         const baseStyles: ViewStyle[] = [touchTargetStyle];
         
         if (typeof style === 'function') {
-          const dynamicStyle = style({ pressed });
+          const dynamicStyle = style({ pressed, hovered });
           if (dynamicStyle) {
             baseStyles.push(dynamicStyle as ViewStyle);
           }

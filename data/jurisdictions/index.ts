@@ -16,20 +16,20 @@ import SK from './SK.json';
 import YT from './YT.json';
 
 const MAP: Record<string, JurisdictionData> = {
-  AB: AB as JurisdictionData,
-  BC: BC as JurisdictionData,
-  FED: FED as JurisdictionData,
-  MB: MB as JurisdictionData,
-  NB: NB as JurisdictionData,
-  NL: NL as JurisdictionData,
-  NS: NS as JurisdictionData,
-  NT: NT as JurisdictionData,
-  NU: NU as JurisdictionData,
-  ON: ON as JurisdictionData,
-  PE: PE as JurisdictionData,
-  QC: QC as JurisdictionData,
-  SK: SK as JurisdictionData,
-  YT: YT as JurisdictionData,
+  AB: AB as unknown as JurisdictionData,
+  BC: BC as unknown as JurisdictionData,
+  FED: FED as unknown as JurisdictionData,
+  MB: MB as unknown as JurisdictionData,
+  NB: NB as unknown as JurisdictionData,
+  NL: NL as unknown as JurisdictionData,
+  NS: NS as unknown as JurisdictionData,
+  NT: NT as unknown as JurisdictionData,
+  NU: NU as unknown as JurisdictionData,
+  ON: ON as unknown as JurisdictionData,
+  PE: PE as unknown as JurisdictionData,
+  QC: QC as unknown as JurisdictionData,
+  SK: SK as unknown as JurisdictionData,
+  YT: YT as unknown as JurisdictionData,
 };
 
 function load(code: string): JurisdictionData | null {

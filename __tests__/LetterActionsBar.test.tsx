@@ -13,6 +13,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ background:'#fff', text:'#111', primary:'#06f', onPrimary:'#fff', muted:'#ccc', surface:'#f9f9f9' }) }));
 jest.mock('react-native', () => ({
 	StyleSheet: { create: (o:any)=> o },
+	Platform: { OS: 'web' },
 	View: ({children}:any)=> <div>{children}</div>,
 	Text: ({children}:any)=> <span>{children}</span>,
 	Pressable: ({children,onPress, accessibilityLabel}:any)=> <button aria-label={accessibilityLabel} onClick={onPress}>{children}</button>
