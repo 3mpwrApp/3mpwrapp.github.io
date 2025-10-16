@@ -88,6 +88,11 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
   [E.EVIDENCE_SAVE_BULK]: { notes: { type: 'number', required: true }, files: { type: 'number', required: true } },
   [E.EVIDENCE_QUEUE_ENQUEUED]: { count: { type: 'number', required: true } },
   [E.EVIDENCE_QUEUE_PROCESSED]: { total: { type: 'number', required: true } },
+  [E.JURISDICTION_CHANGED]: { jurisdiction: { type: 'string', required: true } },
+  [E.JURISDICTION_DEADLINE_CALCULATED]: { type: { type: 'string', required: true }, daysRemaining: { type: 'number', required: true } },
+  [E.JURISDICTION_FORM_HELPER_USED]: { situationType: { type: 'string', required: true } },
+  [E.ASSISTANT_DISABILITY_WIZARD_CTA]: { step: { type: 'string', required: true } },
+  [E.LETTER_WIZARD_INSERT_TRACKERS]: { letterType: { type: 'string', required: true } },
 };
 
 export interface ValidationResult {
