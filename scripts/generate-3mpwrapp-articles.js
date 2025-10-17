@@ -13,10 +13,21 @@
  * - Community highlights
  * - Accessibility achievements
  * - Resource round-ups
+ * - Policy updates
+ * - Q&A sessions
+ * - User spotlights
+ * - Myth busting
+ * - Legal updates
+ * - Wellness tips
+ * - Resource spotlights
+ * - Community news
+ * - Interviews
+ * - Behind the scenes
  */
 
 const fs = require('fs');
 const path = require('path');
+const extendedTemplates = require('./extended-article-templates');
 
 function toISODate(d) {
   return d.toISOString().split('T')[0];
@@ -575,7 +586,8 @@ The Master Letter Generator in 3mpwrApp does the hard work for you—creating pr
 
 [Create Your First Letter Today →](/resources)
 `
-  }
+  },
+  ...extendedTemplates
 ];
 
 // Generate article

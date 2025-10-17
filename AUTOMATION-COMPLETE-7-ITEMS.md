@@ -386,7 +386,18 @@ Related files and guides:
 4. Monitor RSS feeds for quality
 
 ### Optional Enhancements
-4. Create email newsletter
+1. Add more article templates
+2. Build search index
+3. Fine-tune scoring weights
+4. Add social media automation
+5. Create email newsletter
+
+### Future Features
+- Keyword alerts system
+- Advanced filtering by category
+- User-created bookmarks
+- Reading recommendations
+- Community comments
 
 ---
 

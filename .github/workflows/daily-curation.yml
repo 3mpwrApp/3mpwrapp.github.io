@@ -78,6 +78,11 @@ jobs:
         echo "Generating social media sharing content..."
         node scripts/share-to-social.js || echo "Social post generation optional - continuing"
     
+    - name: Build search index
+      run: |
+        echo "Building search index..."
+        node scripts/build-search-index.js || echo "Search index build optional - continuing"
+    
     - name: Update git configuration
       run: |
         git config --local user.email "empowrapp08162025@gmail.com"
