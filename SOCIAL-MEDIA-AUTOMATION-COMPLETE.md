@@ -63,7 +63,6 @@
   - 3-minute setup process
   - How it learns your patterns
   - Following recommendations
-  - Real examples (Jamie's story)
   - Privacy & data control
   - Getting started guide
 
