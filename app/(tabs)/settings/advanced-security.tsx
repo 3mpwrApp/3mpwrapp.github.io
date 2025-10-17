@@ -1,4 +1,4 @@
-// Advanced Security Options for 3mpwrApp
+// Advanced Security Options for 3mpwrApp - Route-based lazy loaded component (Phase 4.5)
 import { Ionicons } from '@expo/vector-icons';
 import * as LocalAuthentication from 'expo-local-authentication';
 import { useRouter } from 'expo-router';
