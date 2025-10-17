@@ -15,7 +15,8 @@ import {
 import type { EnergyForecast as EnergyForecastType } from '../services/energyPrediction';
 import type { Palette } from '../theme/usePalette';
 import { useAppPalette } from '../theme/usePalette';
-import { TextV2 } from '../components/TextV2';
+
+import { ThemedText } from './ThemedText';
 
 interface EnergyForecastComponentProps {
   forecast: EnergyForecastType | null;
@@ -36,7 +37,7 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
   if (isLoading) {
     return (
       <View style={styles.container}>
-        <TextV2 variant="body2">Loading energy forecast...</TextV2>
+        <ThemedText>Loading energy forecast...</ThemedText>
       </View>
     );
   }
@@ -44,9 +45,9 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
   if (!forecast) {
     return (
       <View style={styles.container}>
-        <TextV2 variant="body2" style={styles.errorText}>
+        <ThemedText style={styles.errorText}>
           Unable to generate forecast
-        </TextV2>
+        </ThemedText>
       </View>
     );
   }
@@ -76,10 +77,10 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
       {/* Header */}
       <View style={styles.header}>
         <View style={styles.titleRow}>
-          <Ionicons name="flash" size={20} color={palette.warning.main} />
-          <TextV2 variant="subtitle2" style={styles.title}>
+          <Ionicons name="flash" size={20} color={palette.warning} />
+          <ThemedText style={styles.title}>
             Energy Forecast
-          </TextV2>
+          </ThemedText>
         </View>
         <TrendBadge
           trend={forecast.trend}
@@ -90,17 +91,17 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
       {/* Current Energy */}
       {currentEnergy !== undefined && (
         <View style={styles.currentEnergySection}>
-          <TextV2 variant="caption" style={styles.sectionLabel}>
+          <ThemedText style={styles.sectionLabel}>
             Current Energy
-          </TextV2>
+          </ThemedText>
           <EnergyBar
             level={currentEnergy}
             palette={palette}
             width={chartWidth}
           />
-          <TextV2 variant="caption" style={styles.energyValue}>
+          <ThemedText style={styles.energyValue}>
             {currentEnergy}%
-          </TextV2>
+          </ThemedText>
         </View>
       )}
 
@@ -128,22 +129,21 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
                 height={120}
                 showLabel={false}
               />
-              <TextV2
-                variant="caption"
+              <ThemedText
                 style={[
                   styles.barLabel,
                   {
                     color:
                       prediction.level > 60
-                        ? palette.success.main
+                        ? palette.success
                         : prediction.level > 30
-                          ? palette.warning.main
-                          : palette.error.main,
+                          ? palette.warning
+                          : palette.error,
                   },
                 ]}
               >
                 {prediction.hourOfDay}h
-              </TextV2>
+              </ThemedText>
             </View>
           ))}
         </View>
@@ -170,9 +170,9 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
       {/* Recommendations */}
       {forecast.recommendations.length > 0 && (
         <View style={styles.recommendations}>
-          <TextV2 variant="caption" style={styles.sectionLabel}>
+          <ThemedText style={styles.sectionLabel}>
             Recommendations
-          </TextV2>
+          </ThemedText>
           {forecast.recommendations.map((rec, index) => (
             <View
               key={index}
@@ -183,12 +183,12 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
               <Ionicons
                   name="checkmark-circle"
                   size={16}
-                  color={typeof palette.success === 'string' ? palette.success : palette.success.main}
+                  color={palette.success}
                   style={styles.recIcon}
                 />
-              <TextV2 variant="body2" style={styles.recText}>
+              <ThemedText style={styles.recText}>
                 {rec}
-              </TextV2>
+              </ThemedText>
             </View>
           ))}
         </View>
@@ -213,10 +213,10 @@ function EnergyBar({
   showLabel = true,
 }: EnergyBarProps) {
   const getColor = (level: number) => {
-    if (level >= 75) return palette.success.main;
-    if (level >= 50) return palette.warning.main;
-    if (level >= 25) return palette.info.main;
-    return palette.error.main;
+    if (level >= 75) return palette.success;
+    if (level >= 50) return palette.warning;
+    if (level >= 25) return palette.info;
+    return palette.error;
   };
 
   return (
@@ -224,7 +224,7 @@ function EnergyBar({
       style={{
         width,
         height,
-        backgroundColor: palette.background.secondary,
+        backgroundColor: palette.card,
         borderRadius: 4,
         overflow: 'hidden',
         justifyContent: 'flex-end',
@@ -238,17 +238,16 @@ function EnergyBar({
         }}
       />
       {showLabel && (
-        <TextV2
-          variant="caption"
+        <ThemedText
           style={{
             position: 'absolute',
             alignSelf: 'center',
-            color: palette.text.secondary,
+            color: palette.textSecondary,
             fontSize: 11,
           }}
         >
           {level}%
-        </TextV2>
+        </ThemedText>
       )}
     </View>
   );
@@ -263,11 +262,11 @@ function TrendBadge({ trend, palette }: TrendBadgeProps) {
   const getTrendInfo = (trend: string) => {
     switch (trend) {
       case 'increasing':
-        return { icon: 'trending-up' as const, color: palette.success.main, label: 'Increasing' };
+        return { icon: 'trending-up' as const, color: palette.success, label: 'Increasing' };
       case 'decreasing':
-        return { icon: 'trending-down' as const, color: palette.error.main, label: 'Decreasing' };
+        return { icon: 'trending-down' as const, color: palette.error, label: 'Decreasing' };
       default:
-        return { icon: 'remove' as const, color: palette.info.main, label: 'Stable' };
+        return { icon: 'remove' as const, color: palette.info, label: 'Stable' };
     }
   };
 
@@ -286,9 +285,9 @@ function TrendBadge({ trend, palette }: TrendBadgeProps) {
       }}
     >
       <Ionicons name={info.icon} size={14} color={info.color} />
-      <TextV2 variant="caption" style={{ color: info.color, fontWeight: '600' }}>
+      <ThemedText style={{ color: info.color, fontWeight: '600' }}>
         {info.label}
-      </TextV2>
+      </ThemedText>
     </View>
   );
 }
@@ -302,24 +301,23 @@ interface SummaryItemProps {
 }
 
 function SummaryItem({ label, value, subValue, icon, palette }: SummaryItemProps) {
-  const iconColor = typeof palette.primary === 'string' ? palette.primary : palette.primary.main;
+  const iconColor = palette.primary;
   
   return (
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
       <Ionicons name={icon as any} size={24} color={iconColor} />
       <View style={{ flex: 1 }}>
-        <TextV2 variant="caption" style={{ color: palette.text.secondary }}>
+        <ThemedText style={{ color: palette.textSecondary }}>
           {label}
-        </TextV2>
-        <TextV2 variant="body2" style={{ color: palette.text.primary }}>
+        </ThemedText>
+        <ThemedText style={{ color: palette.text }}>
           {value}
-        </TextV2>
-        <TextV2
-          variant="caption"
-          style={{ color: palette.text.secondary, fontSize: 11 }}
+        </ThemedText>
+        <ThemedText
+          style={{ color: palette.textSecondary, fontSize: 11 }}
         >
           {subValue}
-        </TextV2>
+        </ThemedText>
       </View>
     </View>
   );
@@ -328,9 +326,9 @@ function SummaryItem({ label, value, subValue, icon, palette }: SummaryItemProps
 const createStyles = (palette: Palette) =>
   StyleSheet.create({
     container: {
-      backgroundColor: palette.background.elevated,
+      backgroundColor: palette.surface,
       borderWidth: 1,
-      borderColor: palette.divider,
+      borderColor: palette.border,
       borderRadius: 12,
       padding: 16,
       gap: 16,
@@ -346,17 +344,17 @@ const createStyles = (palette: Palette) =>
       gap: 8,
     },
     title: {
-      color: palette.text.primary,
+      color: palette.text,
     },
     currentEnergySection: {
       gap: 8,
     },
     sectionLabel: {
-      color: palette.text.secondary,
+      color: palette.textSecondary,
       fontWeight: '600',
     },
     energyValue: {
-      color: palette.text.secondary,
+      color: palette.textSecondary,
     },
     chartScroll: {
       marginHorizontal: -16,
@@ -378,13 +376,13 @@ const createStyles = (palette: Palette) =>
       gap: 16,
       paddingVertical: 12,
       borderTopWidth: 1,
-      borderTopColor: palette.divider,
+      borderTopColor: palette.border,
     },
     recommendations: {
       gap: 8,
       paddingTop: 8,
       borderTopWidth: 1,
-      borderTopColor: palette.divider,
+      borderTopColor: palette.border,
     },
     recommendationItem: {
       flexDirection: 'row',
@@ -396,10 +394,10 @@ const createStyles = (palette: Palette) =>
     },
     recText: {
       flex: 1,
-      color: palette.text.secondary,
+      color: palette.textSecondary,
     },
     errorText: {
-      color: palette.error.main,
+      color: palette.error,
     },
   });
 

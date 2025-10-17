@@ -52,6 +52,14 @@ We've added powerful new features to help you even more:
 - **Enhanced encryption** - Military-grade protection for your data
 - **Security audits** - Track who accesses what and when
 
+### ⚡ **Energy Forecast & Smart Scheduling** **(NEW - Phase 6)**
+- **24-hour energy prediction** - See when you'll have the most and least energy throughout the day
+- **Personalized forecasting** - Uses your actual patterns to predict future energy levels
+- **Smart notifications** - The app learns when you have energy and schedules messages for optimal times
+- **Weekly wellness reports** - Track your energy trends, mood patterns, and tool usage over time
+- **Actionable insights** - Get personalized recommendations based on your energy and patterns
+- **Privacy-first** - All predictions happen on your device using your own data
+
 ### 📊 **Campaign Coordination**
 - **Community organizing** - Tools for planning and running advocacy campaigns
 - **Task management** - Coordinate efforts with your community
@@ -74,6 +82,7 @@ We've added powerful new features to help you even more:
 - [Community](#community) - Connect with others who understand
 - [Campaign Coordination](#campaign-coordination) **(NEW)** - Organize community advocacy efforts
 - [Wellness Support](#wellness-support) - Take care of yourself
+- [Energy Forecast & Smart Scheduling](#energy-forecast-smart-scheduling) **(NEW - Phase 6)** - 24-hour energy prediction and smart notifications
 - [Resources](#resources) - Tools and information you need
 - [Evidence Locker](#evidence-locker) - Save important documents safely
 - [Indigenous Languages](#indigenous-languages) **(NEW)** - Multilingual support with cultural protocols

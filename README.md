@@ -1,8 +1,26 @@
 # 🔒 3mpwr App - Secure & Private
 
-A privacy-first empowerment app with enterprise-grade security, Indigenous language support, and complete user data ownership.
+A privacy-first empowerment app with enterprise-grade security, Indigenous language support, complete user data ownership, and ML-driven personalization.
 
-## 🚀 Phase 3 Optimization - NOW LIVE ✅
+## 🆕 Phase 6 - ML-Driven Personalization - NOW LIVE ✅
+
+### ⚡ Energy Prediction & Smart Scheduling
+- **24-Hour Energy Forecasting**: Uses weighted ensemble algorithm (30% historical avg + 40% patterns + 20% time-of-day + 10% trend)
+- **Smart Notifications**: Learns your energy patterns and automatically schedules messages for when you're most likely to engage
+- **Weekly Wellness Reports**: Comprehensive analytics across energy, mood, tool usage, achievements, and wellness score
+- **Personalized Recommendations**: Action items based on your specific energy patterns and engagement
+- **Energy Visualization**: Beautiful 24-hour chart with trend indicators and best/worst time predictions
+
+### 🤖 Advanced ML Features (Phase 6)
+- **Pattern Recognition**: Analyzes activity, energy, mood, recovery, and engagement patterns
+- **A/B Testing Framework**: Model versioning with statistical significance testing for continuous improvement
+- **Accuracy Tracking**: Measures prediction accuracy and generates improvement recommendations
+- **ML Tool Registry**: 9 ML-enhanced tools across predictive, adaptive, and energy-aware categories
+- **Privacy-Preserving**: All ML computation happens on-device with your own data
+
+**Impact**: Better energy management, more engaging notifications, personalized wellness insights, all on your device.
+
+## 🚀 Phase 3 Optimization - LIVE ✅
 
 ### ⚡ Performance Optimization
 - **Bundle Size Reduction**: 3.2MB → 2.75MB (14% smaller)
