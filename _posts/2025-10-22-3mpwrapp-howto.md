@@ -1,59 +1,139 @@
 ---
 layout: post
-title: "How-To: Navigate Your Benefits with 3mpwrApp"
+title: "How-To: Using the Disability Wizard for Personalized Recommendations"
 date: 2025-10-22T09:00:00+00:00
 tags: [3mpwrapp, features, community, guide]
 categories: [news, updates, education]
-excerpt: "Step-by-step guide to finding your eligibility and benefits using 3mpwrApp's tools"
+excerpt: "Discover your best tools first. The Disability Wizard learns your needs and suggests exactly what you need, when you need it."
 ---
 
-## Finding Your Path: A Beginner's Guide to 3mpwrApp
+## Let AI Learn Your Needs
 
-Navigating disability benefits and support services doesn't have to be overwhelming. Here's how 3mpwrApp makes it simple.
+The Disability Wizard is like a smart personal assistant that learns your disability, energy patterns, and preferences—then recommends the perfect tool at the right time.
 
-### Step 1: Start with the Quiz
+### What is the Disability Wizard?
 
-Take our quick assessment to identify which programs you might qualify for:
+Every time you open 3mpwrApp, you'll see three personalized recommendations:
 
-1. Visit the [Features page →](/features)
-2. Start with "Benefits Eligibility Quiz"
-3. Answer questions about your situation
-4. Get personalized recommendations
+- 🎯 **Today's Feature** - Highest priority for you right now
+- ⭐ **Energy-Matched Tool** - What you can actually do today (not just tomorrow)
+- 💡 **Hidden Gem** - A feature you might not have discovered yet
 
-### Step 2: Explore Resources
+Each includes:
+- Simple explanation of what it does
+- How much energy it takes (🟢 Low / 🟠 Medium / 🔴 High)
+- Time estimate (usually 2-15 minutes)
+- Why it's recommended for YOU
 
-Once you know which programs to look into:
+### Step 1: Set Up Your Profile
 
-1. Go to [Resources →](/resources)
-2. Filter by province and program type
-3. Read detailed information about each
-4. Find contact information and application links
+**Takes 3 minutes:**
 
-### Step 3: Use Our Community
+1. Open 3mpwrApp → Settings → Disability Wizard
+2. Select your disability type (or multiple if relevant)
+   - Physical disabilities
+   - Neurodivergent (ADHD, autism, etc.)
+   - Cognitive/learning disabilities
+   - Mental health conditions
+   - Chronic illness
+   - Sensory disabilities
+3. Choose your energy patterns
+   - Morning person, evening person, or variable?
+   - Generally high energy, low energy, or fluctuating?
+4. Select accessibility needs
+   - Screen reader, high contrast, large text, etc.
+5. Tap Save
 
-Connect with others in similar situations:
+**That's it!** Your wizard is now personalized.
 
-1. Join our [Community →](/community)
-2. Share experiences and advice
-3. Get real-world insights
-4. Find peer support
+### Step 2: Let It Learn Your Patterns
 
-### Step 4: Stay Updated
+The wizard gets smarter the more you use it. After a few days:
 
-Get the latest news and changes:
+- It learns when YOU typically open the app
+- It sees which tools you actually use
+- It notices what types of tasks you complete
+- It tracks your energy patterns over time
 
-1. Subscribe to [What's New →](/whats-new)
-2. Receive weekly recaps
-3. Get alerts about policy changes
-4. Learn about new programs
+**After 1 week:** Recommendations become much more accurate  
+**After 1 month:** Wizard knows you better than you know yourself
 
-### Need More Help?
+### Step 3: Follow the Recommendations
 
-- [User Guide →](/user-guide) - Comprehensive walkthrough
-- [FAQ →](/faq) - Common questions answered
-- [Contact Us →](/contact) - Reach out directly
-- [Accessibility Support →](/accessibility) - Get assistance with the site
+Try the suggestions it offers. You don't have to use them, but:
+
+- ✅ **If it helps:** Tell the app "That was perfect" → recommendations improve
+- ✅ **If it's not for you:** Just skip it → Wizard learns what you don't need
+- ✅ **If you're not sure:** Read the description → You might discover something useful
+
+### Real Example
+
+**Meet Jamie:**
+- Autism + chronic pain + ADHD
+- Mornings are rough, productive from 2-5 PM
+- Uses a screen reader
+- Struggles with decision fatigue
+
+**What the Wizard recommends:**
+
+> **Tuesday Morning (11 AM)**
+> 
+> 🟢 Low Energy, 3 minutes
+> 
+> "Mood Reflection - You usually track mood in the morning. Take 60 seconds?"
+>
+> Why: You've been consistent with daily reflections
+> What's next: Suggesting peer support after this
+
+> **Tuesday Afternoon (2 PM)**
+>
+> 🟡 Medium Energy, 8 minutes
+>
+> "AI Translator - Someone shared a confusing benefits letter with you"
+>
+> Why: Your peak energy time + you've used this tool 4 times before
+> What's next: Can save to your Evidence Locker
+
+> **Tuesday Evening (4:30 PM)**
+>
+> 🟡 Medium Energy, 10 minutes
+>
+> "Disability Wizard Profile Check - Updating your patterns"
+>
+> Why: It's learning your real preferences based on what you actually use
+> What's next: Tomorrow's recommendations will be even better
+
+### Tips for Getting the Most Out of It
+
+✅ **Open the app regularly** - More usage = better learning  
+✅ **Try recommended tools** - Even if unsure, you might love it  
+✅ **Give feedback** - "That helped" / "Not for me" improves recommendations  
+✅ **Update your profile** - If your energy changes, tell the wizard  
+✅ **Check different times** - You might get different recommendations at different times  
+
+### What If Recommendations Aren't Working?
+
+**The wizard learns from what you do, not just what you click.** If recommendations miss the mark:
+
+1. **Update your profile** - Go to Settings, refresh your preferences
+2. **Tell the wizard directly** - "I prefer..." feedback helps
+3. **Reset and restart** - Sometimes a fresh start helps
+4. **Try advanced setup** - More detailed profile = better predictions
+
+### Privacy & Your Data
+
+- ✅ All learning happens on YOUR device
+- ✅ Your preferences never leave your phone
+- ✅ No cloud processing of personal patterns
+- ✅ Delete anytime with one click
+- ✅ Complete control over your data
+
+### Getting Started Right Now
+
+[Open the Disability Wizard →](/features#disability-wizard)  
+[Start the 5-minute setup →](/wizard-setup)  
+[Read full documentation →](/user-guide#disability-wizard)  
 
 ---
 
-You're not alone on this journey. 3mpwrApp is here to help every step of the way.
+**Your disability is unique. So should your tools. The Disability Wizard finds exactly what you need.**
