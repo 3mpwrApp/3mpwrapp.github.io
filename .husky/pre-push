@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Unified Empowr pre-push quality gate
-set -euo pipefail
+set -e
 
 echo "[pre-push] Running lint:ci"; npm run lint:ci
 echo "[pre-push] Running strict typecheck"; npm run typecheck:strict
