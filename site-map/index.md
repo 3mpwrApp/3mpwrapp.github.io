@@ -16,6 +16,8 @@ description: Human-readable overview of pages available on the site.
 - [Blog]({{ '/blog' | relative_url }})
 - [Beta Test]({{ '/beta' | relative_url }})
 - [Accessibility Statement]({{ '/accessibility' | relative_url }})
+- [Accessibility Walkthrough]({{ '/accessibility-walkthrough' | relative_url }})
+- [Accessibility Settings]({{ '/accessibility-settings' | relative_url }})
 
 Resources:
 - [Robots.txt]({{ '/robots.txt' | relative_url }})

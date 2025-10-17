@@ -179,7 +179,7 @@
       <a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="Subscribe to RSS feed">{%- include social-icons.html name='rss' -%} RSS</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">Beta Testers Sign Up</a>
     </div>
-  <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpowr App</a> • <a href="{{ '/user-guide/' | relative_url }}">User Guide</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy</a> • <a href="{{ '/terms/' | relative_url }}">Terms</a> • <a href="{{ '/cookies/' | relative_url }}">Cookies</a> • <a href="{{ '/faq/' | relative_url }}">FAQ</a> • <a href="{{ '/accessibility' | relative_url }}">Accessibility</a> • <a href="{{ '/accessibility-settings/' | relative_url }}">Accessibility Settings</a> • <a href="{{ '/site-map/' | relative_url }}">Site Map</a> • <a href="{{ '/whats-new/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="What's New RSS feed">What’s New RSS</a></p>
+  <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpowr App</a> • <a href="{{ '/user-guide/' | relative_url }}">User Guide</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy</a> • <a href="{{ '/terms/' | relative_url }}">Terms</a> • <a href="{{ '/cookies/' | relative_url }}">Cookies</a> • <a href="{{ '/faq/' | relative_url }}">FAQ</a> • <a href="{{ '/accessibility' | relative_url }}">Accessibility</a> • <a href="{{ '/accessibility-walkthrough/' | relative_url }}">Accessibility Walkthrough</a> • <a href="{{ '/accessibility-settings/' | relative_url }}">Accessibility Settings</a> • <a href="{{ '/site-map/' | relative_url }}">Site Map</a> • <a href="{{ '/whats-new/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="What's New RSS feed">What's New RSS</a></p>
   <p><strong>Contact:</strong> <a href="mailto:empowrapp08162025@gmail.com">empowrapp08162025@gmail.com</a> • <strong>Company:</strong> 3mpowr App — Canada</p>
   </footer>
 
@@ -295,8 +295,29 @@
     (function(){
       var KEY = 'cookie-consent';
       var ANALYTICS_KEY = 'cookie-analytics';
-      function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
-      function set(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+      var storageMode = 'localStorage';
+      function lsAvailable(){
+        try { var t='__t'; localStorage.setItem(t,'1'); localStorage.removeItem(t); return true; } catch(e){ return false; }
+      }
+      function cookieGet(k){
+        var m=document.cookie.match(new RegExp('(?:^|; )'+k.replace(/([.$?*|{}()\[\]\\\/\+^])/g,'\\$1')+'=([^;]*)'));
+        return m? decodeURIComponent(m[1]) : null;
+      }
+      function cookieSet(k,v,days){
+        var exp='';
+        if (days){ var d=new Date(); d.setTime(d.getTime()+days*864e5); exp='; expires='+d.toUTCString(); }
+        document.cookie=k+'='+encodeURIComponent(v)+exp+'; path=/; SameSite=Lax';
+      }
+      var haveLS = lsAvailable();
+      if (!haveLS) storageMode = 'cookie';
+      function get(k){
+        if (storageMode==='localStorage') return localStorage.getItem(k);
+        return cookieGet(k);
+      }
+      function set(k,v){
+        if (storageMode==='localStorage') { try { localStorage.setItem(k,v); } catch(e){} }
+        else cookieSet(k,v,365);
+      }
       var banner = document.getElementById('cookie-banner');
       var accept = document.getElementById('cookie-accept');
       var custom = document.getElementById('cookie-custom');
@@ -329,6 +350,11 @@
       function closeBanner(status, analytics) {
         set(KEY, status);
         set(ANALYTICS_KEY, analytics.toString());
+        // Mirror into cookies if using localStorage so server/other scripts can read (lightweight)
+        if (storageMode==='localStorage') {
+          try { document.cookie = KEY + '=' + encodeURIComponent(status) + '; path=/; SameSite=Lax;'; } catch(e){}
+          try { document.cookie = ANALYTICS_KEY + '=' + encodeURIComponent(analytics.toString()) + '; path=/; SameSite=Lax;'; } catch(e){}
+        }
         banner.hidden = true;
         banner.style.display = 'none';
         banner.setAttribute('aria-hidden', 'true');
@@ -352,6 +378,9 @@
       decline.addEventListener('click', function(){ 
         closeBanner('declined', false);
       });
+      if (!haveLS) {
+        console.log('[cookie-consent] localStorage unavailable, using cookies fallback');
+      }
     })();
   </script>
 

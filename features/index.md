@@ -10,6 +10,17 @@ Welcome to the 3mpowr App features guide. Below you'll find comprehensive, step-
 
 ---
 
+## Recent Updates (Oct 2025)
+
+- Daily Curator now supports forced publication with debug logging.
+- Accessibility settings banner improved (cookie & analytics consent persistence).
+- Performance: refined cache headers for faster repeat visits.
+- Added environment overrides for automated curation (`MIN_SCORE`, `FORCE_DAILY`, `DEBUG_CURATOR`).
+ - Added optional JSON API for curated items (`/curation-latest.json`).
+ - Basic English/French language filtering available via `FILTER_LANGS`.
+
+---
+
 <!-- Content unchanged above ... -->
 
 ## Getting Help
