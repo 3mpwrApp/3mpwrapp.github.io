@@ -1689,6 +1689,24 @@
         "disabilityRequired": "Please select at least one disability category"
       }
     },
+    "feedback": {
+      "title": "Share Your Feedback",
+      "prompt": "How did this suggestion help you?",
+      "thumbsUp": "This suggestion was helpful",
+      "thumbsDown": "This suggestion was not helpful",
+      "thankYou": "Thank you!",
+      "thankYouMessage": "Your feedback helps us improve",
+      "comment": "Add a comment (optional)",
+      "commentPlaceholder": "Tell us more...",
+      "reasons": {
+        "helpful": "Helpful",
+        "not_relevant": "Not relevant to me",
+        "misleading": "Misleading or incorrect",
+        "other": "Other reason"
+      },
+      "submitError": "Failed to submit feedback. Please try again.",
+      "reasonRequired": "Please select a reason"
+    },
     "emergencyWallet": {
       "title": "[T] settings.emergencyWallet.title",
       "subtitle": "[T] settings.emergencyWallet.subtitle",

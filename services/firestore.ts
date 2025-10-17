@@ -349,3 +349,32 @@ export async function fsRoomSubscribe(
     },
   };
 }
+
+// Feedback (Phase 6)
+export async function fsSubmitFeedback(params: {
+  userId: string;
+  suggestionId: string;
+  reason: 'helpful' | 'not_relevant' | 'misleading' | 'other';
+  comment?: string;
+  timestamp?: number;
+}) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    const feedbackId = `${params.suggestionId}_${Date.now()}`;
+    await withRetry(() =>
+      m.setDoc(m.doc(db, `users/${params.userId}/feedback`, feedbackId), {
+        suggestionId: params.suggestionId,
+        reason: params.reason,
+        comment: params.comment || null,
+        timestamp: params.timestamp ?? Date.now(),
+      })
+    );
+    return true;
+  } catch (error) {
+    logger.error('[Firestore] Failed to submit feedback:', error);
+    return false;
+  }
+}
+
