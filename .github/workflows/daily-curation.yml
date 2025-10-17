@@ -88,6 +88,11 @@ jobs:
         echo "Generating keyword alerts..."
         node scripts/keyword-alerts.js || echo "Keyword alerts optional - continuing"
     
+    - name: Categorize content
+      run: |
+        echo "Categorizing content..."
+        node scripts/content-categorizer.js || echo "Content categorization optional - continuing"
+    
     - name: Update git configuration
       run: |
         git config --local user.email "empowrapp08162025@gmail.com"

@@ -1,0 +1,40 @@
+{
+  "demo_user_1": {
+    "interests": [
+      "workers_compensation",
+      "accessibility"
+    ],
+    "readingHistory": 12,
+    "recommendations": [
+      {
+        "title": "WSIB Appeals Process Simplified",
+        "reason": "Based on your interest in workers compensation",
+        "confidence": 95
+      },
+      {
+        "title": "New Workplace Accessibility Standards",
+        "reason": "Matches your recent reading",
+        "confidence": 88
+      }
+    ]
+  },
+  "demo_user_2": {
+    "interests": [
+      "disability_rights",
+      "policy"
+    ],
+    "readingHistory": 5,
+    "recommendations": [
+      {
+        "title": "Federal Disability Framework Update",
+        "reason": "New policy document related to your interests",
+        "confidence": 92
+      },
+      {
+        "title": "Accessibility Rights Enforcement",
+        "reason": "Popular in your reading category",
+        "confidence": 85
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "algorithm": "hybrid (content-based + collaborative)",
+  "factors": {
+    "categoryMatch": 0.4,
+    "recency": 0.3,
+    "engagement": 0.2,
+    "diversity": 0.1
+  },
+  "coldStartThreshold": 3,
+  "recommendationCount": 5
+}
