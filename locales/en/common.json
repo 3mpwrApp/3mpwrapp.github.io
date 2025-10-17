@@ -3348,6 +3348,42 @@
       "patternStrengthMedium": "Moderate pattern detected",
       "patternStrengthLow": "Pattern forming (more data needed)"
     }
+  },
+  "energyPrediction": {
+    "title": "Energy Forecast",
+    "currentEnergy": "Current Energy",
+    "forecast": "24-Hour Forecast",
+    "bestTime": "Best Time",
+    "worstTime": "Lowest Energy",
+    "trending": "Trending",
+    "trendingUp": "Energy increasing",
+    "trendingDown": "Energy decreasing",
+    "stable": "Energy stable",
+    "predictions": {
+      "high": "High energy expected",
+      "medium": "Moderate energy expected",
+      "low": "Low energy expected",
+      "peakTime": "Peak energy time",
+      "lowEnergyTime": "Challenging time",
+      "recommendation": "Recommendation"
+    },
+    "factors": {
+      "averageEnergy": "Historical average",
+      "patternBased": "Based on your patterns",
+      "timeOfDay": "Time of day effect",
+      "recentTrend": "Recent trend"
+    },
+    "recommendations": {
+      "planRest": "Plan rest during low-energy times",
+      "demandingTasks": "Best time for demanding tasks",
+      "recoveryStrategies": "Use recovery strategies during low-energy periods",
+      "needsRest": "Your energy is low. Consider getting more rest."
+    },
+    "chart": {
+      "hourLabel": "{{hour}}h",
+      "energyLevel": "{{level}}% energy",
+      "accessibility": "Energy level chart showing predicted energy for each hour of the day"
+    }
   }
 }
 

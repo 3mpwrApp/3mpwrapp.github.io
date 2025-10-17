@@ -12,9 +12,9 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import type {
-  Pattern,
-  PatternAnalysis,
-  PatternType,
+    Pattern,
+    PatternAnalysis,
+    PatternType,
 } from '../services/patternLearning';
 import { analyzePattern, getUserPatterns } from '../services/patternLearning';
 
