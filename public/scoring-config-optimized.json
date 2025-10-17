@@ -1,0 +1,136 @@
+{
+  "rssFeeds": [
+    "https://disabilityalliancebc.org/feed/",
+    "https://www.inclusioncanada.ca/feed/",
+    "https://www.arch.ca/feed/",
+    "https://www.ccdo.ca/feed/",
+    "https://www.cacl.ca/feed/",
+    "https://www.cnib.ca/feed/",
+    "https://www.chrc-ccdp.gc.ca/en/feed",
+    "https://www.ccpa.ca/feed/",
+    "https://news.ontario.ca/en/en/newsroom.rss.xml",
+    "https://www.news.gov.ab.ca/news/index.rss",
+    "https://www.gov.sk.ca/news/rss",
+    "https://news.gov.mb.ca/news/index.rss",
+    "https://rss.cbc.ca/lineup/canada.xml",
+    "https://policyoptions.irpp.org/feed/",
+    "https://globalnews.ca/canada/feed/",
+    "https://rabble.ca/feed/",
+    "https://www.straight.com/rss.xml",
+    "https://thetyee.ca/rss2.xml",
+    "https://www.cpsa.org/news-publications/feed/",
+    "https://www.openparliament.ca/feeds/recent-bills/",
+    "https://www.novascotia.ca/news/rss",
+    "https://www2.gnb.ca/content/gnb/en/news/rss.html",
+    "https://www.gov.nl.ca/releases/2024/",
+    "https://www.gov.nt.ca/en/rss.xml"
+  ],
+  "scoringWeights": {
+    "description": "Fine-tuned weights for 3mpwrApp curation. Optimized for disability-related content.",
+    "lastOptimized": "2025-10-17",
+    "criticalTerms": {
+      "score": 4.5,
+      "description": "Breaking news, urgent updates, critical policy changes",
+      "examples": [
+        "breaking",
+        "urgent",
+        "emergency",
+        "lawsuit",
+        "court ruling"
+      ]
+    },
+    "disabilityKeywords": {
+      "score": 3,
+      "description": "Direct disability-related content (core to mission)",
+      "examples": [
+        "accessibility",
+        "disability",
+        "disabled",
+        "inclusive"
+      ]
+    },
+    "provincialPrograms": {
+      "score": 3.5,
+      "description": "Provincial disability assistance programs (ODSP, AISH, etc.)",
+      "examples": [
+        "odsp",
+        "aish",
+        "pwd benefits",
+        "eia disability"
+      ]
+    },
+    "federalPrograms": {
+      "score": 3.25,
+      "description": "Federal disability programs (CPP-D, DTC, RDSP, etc.)",
+      "examples": [
+        "cpp-d",
+        "disability tax credit",
+        "rdsp"
+      ]
+    },
+    "workersCompensation": {
+      "score": 3.25,
+      "description": "Workers compensation updates (WSIB, WCB, etc.)",
+      "examples": [
+        "wsib",
+        "worksafebc",
+        "wcb",
+        "injured worker"
+      ]
+    },
+    "legalRights": {
+      "score": 3.5,
+      "description": "Legal challenges, human rights, accessibility enforcement",
+      "examples": [
+        "accessible canada act",
+        "human rights commission",
+        "discrimination ruling"
+      ]
+    },
+    "mentalHealth": {
+      "score": 2,
+      "description": "Mental health, mental illness, psychiatric conditions",
+      "examples": [
+        "mental health",
+        "mental illness",
+        "ptsd",
+        "depression"
+      ]
+    },
+    "employment": {
+      "score": 2.5,
+      "description": "Workplace accessibility, employment equity",
+      "examples": [
+        "workplace accommodation",
+        "accessibility barrier",
+        "inclusive hiring"
+      ]
+    },
+    "research": {
+      "score": 1.5,
+      "description": "Research, statistics, studies",
+      "examples": [
+        "study shows",
+        "research finds",
+        "statistics"
+      ]
+    },
+    "sourceMultipliers": {
+      "accessibleCanada": 2.5,
+      "federalGovernment": 2,
+      "provincialGovernment": 1.75,
+      "workersCompBoard": 2.25,
+      "humanRightsCommission": 2,
+      "disabilityOrganization": 1.75,
+      "statisticsCanada": 1.75,
+      "majorNews": 0.75
+    },
+    "minScore": 1.5,
+    "maxScore": 18.5,
+    "maxItems": 25,
+    "languages": [
+      "en",
+      "fr"
+    ]
+  }
+}
