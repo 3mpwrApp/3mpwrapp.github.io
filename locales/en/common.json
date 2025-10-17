@@ -3439,5 +3439,41 @@
     "deliveryStatus": "Delivery Status",
     "scheduledForDelivery": "Scheduled for next Monday morning",
     "delivered": "Delivered on {{date}}"
+  },
+  "mlModels": {
+    "title": "ML Model Management",
+    "description": "Track and optimize machine learning models",
+    "modelTypes": {
+      "energyPrediction": "Energy Prediction",
+      "patternLearning": "Pattern Learning",
+      "smartNotifications": "Smart Notifications"
+    },
+    "status": {
+      "development": "Development",
+      "testing": "Testing",
+      "production": "Production",
+      "deprecated": "Deprecated"
+    },
+    "metrics": {
+      "accuracy": "Accuracy",
+      "precision": "Precision",
+      "recall": "Recall",
+      "f1Score": "F1 Score"
+    },
+    "abTesting": {
+      "title": "A/B Testing",
+      "controlGroup": "Current Model",
+      "treatmentGroup": "New Model",
+      "status": "Status"
+    },
+    "feedback": {
+      "rating": "Rating",
+      "yourFeedback": "Your Feedback"
+    },
+    "statistics": {
+      "totalModels": "Total Models",
+      "production": "In Production",
+      "testing": "Testing"
+    }
   }
 }

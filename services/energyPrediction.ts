@@ -9,8 +9,8 @@
  * - Confidence scoring based on data quality and consistency
  */
 
-import type { Pattern} from './patternLearning';
-import { PatternType, analyzePattern } from './patternLearning';
+import type { Pattern } from './patternLearning';
+import { analyzePattern } from './patternLearning';
 
 export interface EnergyPrediction {
   /** Predicted energy level (0-100) */
@@ -76,7 +76,6 @@ export function predictEnergyForTime(
   targetHour: number,
   targetDate: Date = new Date()
 ): EnergyPrediction {
-  const now = Date.now();
   const targetTimestamp = new Date(targetDate);
   targetTimestamp.setHours(targetHour, 0, 0, 0);
   const targetMs = targetTimestamp.getTime();
@@ -89,7 +88,7 @@ export function predictEnergyForTime(
   const patternPrediction = getPatternBasedPrediction(
     energyPatterns,
     targetHour,
-    averageEnergy
+    averageEnergy ?? currentEnergy
   );
 
   // 3. Calculate time-of-day adjustment
@@ -230,7 +229,7 @@ function calculateWeightedMovingAverage(
   let totalWeight = 0;
   let weightedSum = 0;
 
-  energyHistory.forEach((point, index) => {
+  energyHistory.forEach((point, _index) => {
     // Weight decreases exponentially with age
     // Recent points get weight 1.0, older points get lower weight
     const ageHours = (now - point.timestamp) / (1000 * 60 * 60);
@@ -343,7 +342,7 @@ function calculateRecentTrend(
 function calculateConfidence(
   energyHistory: { timestamp: number; level: number }[],
   patterns: Pattern[],
-  targetHour: number
+  _targetHour: number
 ): number {
   let confidence = 20; // Base confidence
 
@@ -377,9 +376,9 @@ function calculateConfidence(
  */
 function generateReasoningString(
   predictedLevel: number,
-  patternPrediction: number | undefined,
-  timeOfDayAdjustment: number | undefined,
-  recentTrend: number | undefined
+  patternPrediction: number | null | undefined,
+  timeOfDayAdjustment: number | null | undefined,
+  recentTrend: number | null | undefined
 ): string {
   const reasons: string[] = [];
 
@@ -391,21 +390,27 @@ function generateReasoningString(
     reasons.push('Expected low energy');
   }
 
-  if (
-    patternPrediction !== undefined &&
-    patternPrediction > 60
-  ) {
+  if (patternPrediction !== null && patternPrediction !== undefined && patternPrediction > 60) {
     reasons.push('Pattern suggests high energy');
   } else if (
+    patternPrediction !== null &&
     patternPrediction !== undefined &&
     patternPrediction < 40
   ) {
     reasons.push('Pattern suggests low energy');
   }
 
-  if (recentTrend !== undefined && recentTrend > 52) {
+  if (
+    recentTrend !== null &&
+    recentTrend !== undefined &&
+    recentTrend > 52
+  ) {
     reasons.push('Energy trending upward');
-  } else if (recentTrend !== undefined && recentTrend < 48) {
+  } else if (
+    recentTrend !== null &&
+    recentTrend !== undefined &&
+    recentTrend < 48
+  ) {
     reasons.push('Energy trending downward');
   }
 
