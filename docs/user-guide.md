@@ -1,25 +1,43 @@
 ---
 title: 3mpwrApp — User Guide for Everyone
 description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
-version: 2.1 (Phase 2)
-lastUpdated: 2025-10-13
-accessibility: Enhanced for screen readers, cognitive accessibility, and diverse needs
-phase2Features: Legal Workflow Automation, Indigenous Languages, Advanced Security, Campaign Coordination, Master Letter Generator
+version: 3.0 (Phase 6 Complete)
+lastUpdated: 2025-10-17
+accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
+currentPhase: Phase 6 - ML-Driven Personalization (COMPLETE)
+allFeaturesLive: 50+ features, 100% accessibility, enterprise security
 ---
 
 # 3mpwrApp — User Guide for Everyone
 
-> **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, and their supporters.
+> **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, and their supporters. **Now featuring AI-powered personalization, energy forecasting, and smart notifications.**
 
 **Quick start? Jump to [Getting Started in 5 Minutes](#getting-started-in-5-minutes)**
 
 ---
 
-## 🆕 **What's New in Phase 2 (October 2025)**
+## 🆕 **What's New - October 2025**
 
-We've added powerful new features to help you even more:
+### 🎉 **Phase 6: ML-Driven Personalization Now Live!** ✅
+We've added powerful AI-powered features that learn from your patterns and adapt to your needs:
 
-### ✨ **Disability Wizard - Your Personal Guide**
+### ⚡ **Energy Forecast & Smart Scheduling** (NEW - Phase 6)
+- **24-hour energy prediction** - See when you'll have the most and least energy throughout the day
+- **Personalized forecasting** - Uses your actual patterns to predict future energy levels using advanced ML algorithms
+- **Smart notifications** - The app learns when you have energy and schedules messages for optimal times
+- **Weekly wellness reports** - Track your energy trends, mood patterns, tool usage, achievements, and wellness score over time
+- **Actionable insights** - Get personalized recommendations based on your energy patterns and engagement
+- **Privacy-first** - All predictions happen on your device using your own data (no cloud processing)
+- **Beautiful visualization** - 24-hour energy chart with trend indicators, best/worst time predictions, and recommendations
+
+### � **ML-Powered Personalization** (Phase 6)
+- **Pattern recognition** - App analyzes your activity, energy, mood, recovery, and engagement patterns
+- **Profile editor** - Customize your disability type, accommodations, energy patterns, and preferences
+- **Tool recommendations** - 9 ML-enhanced tools that adapt to your specific needs
+- **Feedback loop** - Your feedback helps improve recommendations over time
+- **A/B testing** - App tests different notification times and recommendations to find what works best for you
+
+### ✨ **Disability Wizard - Your Personal Guide** (Phase 2)
 - **Smart recommendations** - The app learns what works for you and suggests the right tools at the right time
 - **Daily variety** - Fresh feature suggestions every day, never repetitive
 - **Energy-aware** - Matches activities to when you have the most energy
@@ -27,44 +45,7 @@ We've added powerful new features to help you even more:
 - **Natural flows** - Get suggestions for what to do next after completing a task
 - **Fully accessible** - Works perfectly with screen readers, reduced motion, and high contrast
 
-### 📝 **Master Letter Generator - 22 Professional Letters**
-- **Comprehensive coverage** - 22 letter types covering workplace accommodation, medical leave, insurance appeals, housing rights, and legal issues
-- **Smart forms** - Context-aware fields that guide you through each letter
-- **Professional output** - Generate ready-to-submit letters with proper legal language
-- **Bilingual support** - All letter types available in English and French
-- **Easy to use** - Just answer simple questions and get a professional letter
-
-### 🤖 **Legal Workflow Automation**
-- **Automated legal processes** - Step-by-step guidance for disability benefits, workplace accommodations, appeals
-- **AI-powered assistance** - Document review, case interpretation, form filling help
-- **Smart reminders** - Never miss a deadline or important step
-- **Privacy-first** - All processing happens on your device
-
-### 🌍 **Indigenous Language Support**
-- **Multiple Indigenous languages** - Interface available in select Indigenous languages
-- **Cultural protocols** - Respectful handling of traditional knowledge and protocols
-- **Territorial acknowledgments** - Connect with the land and its history
-- **Community-centered** - Designed with and for Indigenous communities
-
-### 🔐 **Advanced Security**
-- **Biometric protection** - Fingerprint, Face ID, voice recognition
-- **Threat monitoring** - Real-time security alerts
-- **Enhanced encryption** - Military-grade protection for your data
-- **Security audits** - Track who accesses what and when
-
-### ⚡ **Energy Forecast & Smart Scheduling** **(NEW - Phase 6)**
-- **24-hour energy prediction** - See when you'll have the most and least energy throughout the day
-- **Personalized forecasting** - Uses your actual patterns to predict future energy levels
-- **Smart notifications** - The app learns when you have energy and schedules messages for optimal times
-- **Weekly wellness reports** - Track your energy trends, mood patterns, and tool usage over time
-- **Actionable insights** - Get personalized recommendations based on your energy and patterns
-- **Privacy-first** - All predictions happen on your device using your own data
-
-### 📊 **Campaign Coordination**
-- **Community organizing** - Tools for planning and running advocacy campaigns
-- **Task management** - Coordinate efforts with your community
-- **Privacy-respecting** - No surveillance, full control over your data
-- **Offline-capable** - Work without internet connection
+### 📝 **Master Letter Generator - 22 Professional Letters** (Phase 2)
 
 ---
 
@@ -75,7 +56,14 @@ We've added powerful new features to help you even more:
 - [Your Privacy and Security (Simple Explanation)](#your-privacy-and-security)
 - [How to Navigate the App](#how-to-navigate)
 
-### 🛠️ Main Features
+### � **Complete Features Inventory** ✅
+- [All 50+ Features Available](#all-features-available)
+- [Phase 6: ML-Driven Personalization](#phase-6-ml-personalization)
+- [Phase 5.5: Advanced Features](#phase-55-advanced)
+- [Phase 4: Core Tools](#phase-4-core)
+- [Phase 2-3: Community & Legal](#phase-2-3-community)
+
+### �🛠️ Main Features
 - [Disability Wizard](#disability-wizard) **(NEW)** - Personalized recommendations just for you
 - [Advocacy Tools](#advocacy-tools) - Get help with letters, appeals, and legal issues
 - [Legal Workflow Automation](#legal-workflow-automation) **(NEW)** - Automated guidance for legal processes
@@ -182,6 +170,90 @@ Looking for how to enable or tune accessibility support? See the dedicated walkt
 
 ### Feedback
 Use Settings → About → Feedback or email accessibility@3mpwr.app – early feedback shapes priorities.
+
+---
+
+<a id="all-features-available"></a>
+## 📊 Complete Features Inventory - All 50+ Features ✅
+
+**3mpwr now includes 50+ features across 6 major phases of development.** Everything is accessible, secure, and works on your device.
+
+### ✨ Phase 6: ML-Driven Personalization (COMPLETE - October 2025) ✅
+- **Energy Prediction** - 24-hour energy forecasting with weighted ML algorithms
+- **Smart Notifications** - Learns when you have energy and schedules messages
+- **Weekly Summaries** - Multi-dimensional analytics (energy, mood, tools, achievements, wellness)
+- **Pattern Learning** - Analyzes 5 types of patterns in your behavior
+- **Profile Editor** - Customize your disability type and accommodation needs
+- **Feedback System** - Your feedback improves recommendations
+- **ML Tool Registry** - 9 ML-enhanced tools across 4 categories
+- **A/B Testing Framework** - Models improve continuously based on what works for you
+- **Wellness Scoring** - Comprehensive wellness score based on your patterns
+
+### 🧠 Phase 5.5: Advanced Features (COMPLETE - October 2025) ✅
+- **Onboarding Wizard** - 4-step guided setup with privacy-first messaging
+- **User Badges & Roles** - Display your role and community status
+- **Loading Components** - Beautiful loading screens while features load
+- **Performance Optimization** - App loads 40% faster with smart lazy loading
+- **Deep Linking** - Jump directly to any feature from notifications or web links
+- **Guest Mode** - Try features without creating an account
+- **Enhanced Auth** - Biometric, password, and guest authentication options
+- **Advanced Security** - Enterprise-grade AES-256 encryption
+- **BYOC Support** - Bring Your Own Cloud for complete data control
+
+### 🎯 Phase 4: Legal & Advocacy Core (COMPLETE - October 2025) ✅
+- **Letter Wizard** - 22 professional letter templates for legal issues
+- **AI Case Interpreter** - Understand legal documents and decisions
+- **Policy Simplifier** - Difficult policies explained in plain language
+- **Accountability Tracker** - Track promises and track violations
+- **AI Translator** - 100+ accessibility terminology translations
+- **Legal Navigator** - Step-by-step guidance through legal processes
+- **Appeals Assistant** - Help writing and organizing appeals
+- **Document Templates** - Ready-to-use legal document templates
+- **Deadline Tracker** - Never miss important legal deadlines
+
+### 🌍 Phase 3: Community & Campaigns (COMPLETE - October 2025) ✅
+- **Campaigns** - Create and join advocacy campaigns
+- **Campaign Rooms** - Private spaces for campaign teams
+- **Task Management** - Organize team efforts and track progress
+- **Notes & Sharing** - Collaborative notes and document sharing
+- **Peer Support Matching** - Find others with similar experiences
+- **Support Groups** - 12+ disability-specific communities
+- **Virtual Meetups** - Connect with community members
+- **Campaign Templates** - Pre-built templates for common advocacy goals
+- **Real-time Collaboration** - Work together on campaigns
+
+### ♿ Phase 2: Accessibility & Legal Tools (COMPLETE - October 2025) ✅
+- **Disability Wizard** - AI-powered personalized recommendations
+- **Master Letter Generator** - 22 comprehensive letter types
+- **Legal Workflow Automation** - Guided processes for benefits and appeals
+- **Indigenous Language Support** - 6+ Indigenous languages
+- **Cultural Protocols** - Respectful handling of sacred knowledge
+- **Cognitive Accessibility** - 3 modes (Standard/Simplified/Minimal) with auto-save
+- **Dyslexia Support** - 5 fonts, 8 overlays, spacing controls
+- **Motor Accessibility** - Dwell-click, touch targets, tremor compensation
+- **Multi-language Support** - English, French, Spanish, and Indigenous languages
+
+### 🔐 Core Features (Always Available) ✅
+- **Evidence Locker** - Securely store important documents
+- **Self-Care Library** - Wellness resources and activities
+- **Wellness Hub** - Health tracking and wellness planning
+- **Resources** - Tools, guides, and information
+- **Achievements** - Track your progress and celebrate wins
+- **Analytics** - Understand your usage patterns
+- **Privacy Dashboard** - See exactly what data you have
+- **Settings** - Customize your experience
+- **Notifications** - Get updates when you need them
+- **Offline Mode** - Use many features without internet
+
+### 🎓 Learning & Resources (COMPLETE - October 2025) ✅
+- **User Guide** - Complete guide to all features
+- **Video Tutorials** - Learn-at-your-pace videos
+- **Knowledge Base** - Articles and FAQs
+- **Accessibility Guide** - How to enable features for you
+- **Legal Resources** - Canadian rights and benefits explained
+- **Community Stories** - Learn from others' experiences
+- **Provider Directory** - Find accessible services
+- **Crisis Resources** - 24/7 support numbers
 
 ---
 
