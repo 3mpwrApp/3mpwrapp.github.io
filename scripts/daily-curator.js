@@ -23,36 +23,80 @@ function httpGet(url, timeoutMs=12000){
   });
 }
 
+// Decode HTML entities and numeric character references
+function decodeHtmlEntities(text){
+  if(!text) return '';
+  const entities={'&nbsp;':' ','&lt;':'<','&gt;':'>','&quot;':'"','&apos;':"'",'&amp;':'&','&#039;':"'",'&#8217;':"'",'&#038;':'&','&#8211;':'–','&#8212;':'—','&mdash;':'—','&ndash;':'–'};
+  let result=text;
+  for(const [ent,ch] of Object.entries(entities)){ result=result.replace(new RegExp(ent,'g'),ch); }
+  result=result.replace(/&#(\d+);/g,(_,code)=>String.fromCharCode(code));
+  result=result.replace(/&#x([A-Fa-f0-9]+);/g,(_,code)=>String.fromCharCode(parseInt(code,16)));
+  return result;
+}
+
 function parseRSS(xml){
   const items=[]; 
   
   // Try RSS <item> format first
-  const rssRe=/<item>([\s\S]*?)<\/item>/g; 
+  const rssRe=/<item[^>]*>([\s\S]*?)<\/item>/gi; 
   let m;
   while((m=rssRe.exec(xml))){
     const chunk=m[1];
-    const get=tag=>{ const r=new RegExp(`<${tag}[^>]*>([\s\S]*?)<\/${tag}>`,'i'); const mm=r.exec(chunk); return mm? mm[1].replace(/<[^>]+>/g,'').trim():''; };
-    items.push({ 
-      title:get('title'), 
-      link:get('link') || get('guid'), 
-      description:get('description') || get('summary'), 
-      pubDate:get('pubDate') || get('updated') 
-    });
+    const getField=tag=>{
+      // First try CDATA sections
+      const cdataRe=new RegExp(`<${tag}[^>]*>\\s*<!\\[CDATA\\[(.*?)\\]\\]>\\s*</${tag}>`,'i');
+      let match=cdataRe.exec(chunk);
+      if(match) return decodeHtmlEntities(match[1].trim());
+      // Then try regular tags
+      const tagRe=new RegExp(`<${tag}[^>]*>(.*?)</${tag}>`,'i');
+      match=tagRe.exec(chunk);
+      if(match){
+        let content=match[1];
+        if(['description','summary','content','content:encoded'].includes(tag.toLowerCase())){
+          content=content.replace(/<[^>]+>/g,'').trim();
+        }
+        return decodeHtmlEntities(content.trim());
+      }
+      return '';
+    };
+    const title=getField('title');
+    const link=getField('link')||getField('guid');
+    const description=getField('description')||getField('content:encoded')||getField('summary');
+    const pubDate=getField('pubDate')||getField('updated');
+    // Only add items with valid title or link
+    if(title||link){
+      items.push({title,link,description,pubDate});
+    }
   }
   
   // If no items found, try Atom <entry> format
-  if (items.length === 0) {
-    const atomRe=/<entry[^>]*>([\s\S]*?)<\/entry>/g;
+  if(items.length===0){
+    const atomRe=/<entry[^>]*>([\s\S]*?)<\/entry>/gi;
     while((m=atomRe.exec(xml))){
       const chunk=m[1];
-      const get=tag=>{ const r=new RegExp(`<${tag}[^>]*>([\s\S]*?)<\/${tag}>`,'i'); const mm=r.exec(chunk); return mm? mm[1].replace(/<[^>]+>/g,'').trim():''; };
-      const link=chunk.match(/<link[^>]*href=["']([^"']+)["']/i)?.[1] || '';
-      items.push({ 
-        title:get('title'), 
-        link:link, 
-        description:get('summary') || get('content'), 
-        pubDate:get('updated') 
-      });
+      const getField=tag=>{
+        const cdataRe=new RegExp(`<${tag}[^>]*>\\s*<!\\[CDATA\\[(.*?)\\]\\]>\\s*</${tag}>`,'i');
+        let match=cdataRe.exec(chunk);
+        if(match) return decodeHtmlEntities(match[1].trim());
+        const tagRe=new RegExp(`<${tag}[^>]*>(.*?)</${tag}>`,'i');
+        match=tagRe.exec(chunk);
+        if(match){
+          let content=match[1];
+          if(['summary','content'].includes(tag.toLowerCase())){
+            content=content.replace(/<[^>]+>/g,'').trim();
+          }
+          return decodeHtmlEntities(content.trim());
+        }
+        return '';
+      };
+      const linkMatch=chunk.match(/<link[^>]*href=["']([^"']+)["']/i);
+      const link=linkMatch?linkMatch[1]:'';
+      const title=getField('title');
+      const description=getField('summary')||getField('content');
+      const pubDate=getField('updated');
+      if(title||link){
+        items.push({title,link,description,pubDate});
+      }
     }
   }
   

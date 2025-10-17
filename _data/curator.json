@@ -1,6 +1,5 @@
 {
   "rssFeeds": [
-    
     "https://disabilityalliancebc.org/feed/",
     "https://news.gov.mb.ca/news/index.rss",
     "https://www.gov.nt.ca/en/rss.xml",
@@ -9,13 +8,7 @@
     "https://www.straight.com/rss.xml",
     "https://thetyee.ca/rss2.xml",
     "https://policyoptions.irpp.org/feed/",
-    
-    "https://rss.cbc.ca/lineup/canada.xml",
-    "https://www.ctvnews.ca/rss/canada",
-    
-    "https://feeds.google.com/reader/public/com.google.reader/label/disability-rights",
-    "https://feeds.google.com/reader/public/com.google.reader/label/workers-rights",
-    "https://feeds.google.com/reader/public/com.google.reader/label/government-policy"
+    "https://rss.cbc.ca/lineup/canada.xml"
   ],
   
   "scoringKeywords": {
