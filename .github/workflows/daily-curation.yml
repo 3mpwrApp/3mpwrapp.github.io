@@ -63,6 +63,16 @@ jobs:
         
         node scripts/daily-curator.js
     
+    - name: Automate What's New updates
+      run: |
+        echo "Updating What's New collection..."
+        node scripts/automate-whats-new.js || echo "What's New automation optional - continuing"
+    
+    - name: Generate 3mpwrApp articles
+      run: |
+        echo "Generating 3mpwrApp feature articles..."
+        node scripts/generate-3mpwrapp-articles.js || echo "Article generation optional - continuing"
+    
     - name: Generate social media posts
       run: |
         echo "Generating social media content..."
@@ -84,7 +94,7 @@ jobs:
         fi
         
         # Add all new files
-        git add _curation/ _posts/ public/ || true
+        git add _curation/ _posts/ _whats_new/ public/ || true
         
         # Check again after adding
         if git diff --staged --quiet; then
@@ -93,14 +103,8 @@ jobs:
         fi
         
         # Commit changes
-        git commit -m "Daily curation: $TODAY
-        
-        - Automated news monitoring from 50+ sources
-        - Articles scored for disability rights relevance  
-        - Social media content generated
-        - JSON API updated for latest curated items
-        
-        Sources include: Government accessibility sites, disability rights organizations, workers' compensation boards, news outlets, and community feeds."
+        COMMIT_MSG="📰 Daily automation: $TODAY - News curation, What's New updates, feature articles, social content, and JSON API refresh"
+        git commit -m "$COMMIT_MSG"
         
         # Push changes
         git push origin main

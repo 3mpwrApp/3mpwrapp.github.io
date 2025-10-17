@@ -8,7 +8,24 @@
     "https://www.straight.com/rss.xml",
     "https://thetyee.ca/rss2.xml",
     "https://policyoptions.irpp.org/feed/",
-    "https://rss.cbc.ca/lineup/canada.xml"
+    "https://rss.cbc.ca/lineup/canada.xml",
+    "https://www.inclusioncanada.ca/feed/",
+    "https://www.chrc-ccdp.gc.ca/en/feed",
+    "https://www.ccdo.ca/feed/",
+    "https://www.arch.ca/feed/",
+    "https://www.cacl.ca/feed/",
+    "https://www.cnib.ca/feed/",
+    "https://news.ontario.ca/en/en/newsroom.rss.xml",
+    "https://www2.gov.bc.ca/gov/content/about-gov-bc/news",
+    "https://www.news.gov.ab.ca/news/index.rss",
+    "https://www.gov.sk.ca/news/rss",
+    "https://www.news.gov.qc.ca/",
+    "https://www.novascotia.ca/news/rss",
+    "https://www2.gnb.ca/content/gnb/en/news/rss.html",
+    "https://www.gov.nl.ca/releases/2024/",
+    "https://www.cpsa.org/news-publications/feed/",
+    "https://www.ccpa.ca/feed/",
+    "https://www.openparliament.ca/feeds/recent-bills/"
   ],
   
   "scoringKeywords": {
