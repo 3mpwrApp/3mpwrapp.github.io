@@ -3226,6 +3226,68 @@
       "compensationRequested": "Compensation Requested",
       "compensationRequestedPlaceholder": "Amount of money sought"
     }
+  },
+  "tools": {
+    "registry": {
+      "energyForecast": {
+        "name": "Energy Forecast",
+        "description": "AI-powered prediction of your energy levels for the next 24 hours"
+      },
+      "moodTrendAnalyzer": {
+        "name": "Mood Trend Analyzer",
+        "description": "Analyze mood patterns and predict emotional cycles"
+      },
+      "personalizedSuggestionEngine": {
+        "name": "Smart Suggestions",
+        "description": "Get personalized tool recommendations based on your patterns"
+      },
+      "activityOptimizer": {
+        "name": "Activity Optimizer",
+        "description": "Adaptive suggestions for activities based on your energy and mood"
+      },
+      "energyLevelIndicator": {
+        "name": "Energy Level Indicator",
+        "description": "Real-time indicator of current energy level with smart recommendations"
+      },
+      "lowEnergyMode": {
+        "name": "Low Energy Mode",
+        "description": "Simplified interface and reduced notifications during low energy periods"
+      },
+      "wellnessDashboard": {
+        "name": "Wellness Dashboard",
+        "description": "AI-enhanced dashboard showing wellness insights and recommendations"
+      },
+      "smartNotifications": {
+        "name": "Smart Notifications",
+        "description": "Intelligent notifications delivered at optimal times based on your energy"
+      },
+      "aiCompanion": {
+        "name": "AI Wellness Companion",
+        "description": "Personalized AI assistant that learns your wellness patterns"
+      }
+    },
+    "categories": {
+      "predictive": "Predictive",
+      "adaptive": "Adaptive",
+      "mlEnhanced": "AI-Enhanced",
+      "energyAware": "Energy-Aware"
+    },
+    "badges": {
+      "beta": "Beta",
+      "ai": "AI",
+      "learns": "Learns",
+      "personalized": "Personalized",
+      "lowEnergy": "Low energy",
+      "mediumEnergy": "Medium energy",
+      "highEnergy": "High energy"
+    },
+    "metadata": {
+      "requiresFeedback": "Your feedback improves this tool",
+      "mlPowered": "AI-powered learning engine",
+      "personalizable": "Personalized to your needs",
+      "energyOptimal": "Optimal for {{energy}} energy levels",
+      "accessibility": "Accessibility: {{features}}"
+    }
   }
 }
 
