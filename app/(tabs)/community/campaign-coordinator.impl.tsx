@@ -64,13 +64,14 @@ interface CampaignGoal {
 //   accessibilityRequirements?: string[];
 // }
 
-interface ContactInfo {
-  email?: string;
-  phone?: string;
-  address?: string;
-  website?: string;
-  socialMedia?: Record<string, string>;
-}
+// TODO: Contact information structure for advocacy targets (Phase 6)
+// interface ContactInfo {
+//   email?: string;
+//   phone?: string;
+//   address?: string;
+//   website?: string;
+//   socialMedia?: Record<string, string>;
+// }
 
 // TODO: Implement advocacy target tracking in Phase 6
 // interface AdvocacyTarget {
