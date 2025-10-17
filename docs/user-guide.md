@@ -899,6 +899,610 @@ Pick what you need most right now:
 
 ---
 
+<a id="7-day-onboarding-walkthrough"></a>
+## 🗓️ Your First Week: 7-Day Onboarding Walkthrough
+
+**What this is:** A guided experience showing you what you can do in your first week using 3mpwr. Each day introduces new features with real scenarios and examples.
+
+**How to use this guide:**
+- Follow one day per day (or move at your own pace)
+- Each day takes 10-20 minutes to explore
+- All examples are based on real situations
+- Feel free to skip ahead to features you need most
+- No pressure to do everything—this is YOUR app
+
+---
+
+### 📅 **Day 1: Getting Started & Your First Save** ⭐
+
+**Theme:** Understanding what 3mpwr can do for you  
+**Time:** 15 minutes  
+**Goal:** Create your first saved document
+
+#### Morning: Welcome & Setup (5 minutes)
+
+**What happens when you open the app:**
+1. You'll see the home screen with a welcome message
+2. You can create an account or use Guest mode
+3. If it's your first time, you'll see tips and feature highlights
+4. Your location (province/territory) helps personalize resources for you
+
+**Your first decision:**
+- **Choose a password you'll remember** - Write it down somewhere safe
+- **Set up biometric login (optional)** - Fingerprint or face ID speeds things up
+- **Accept privacy terms** - We explain everything clearly
+
+**Quick accessibility check:**
+- Go to Settings ⚙️ (top right)
+- **Visual:** Turn on High Contrast if text is hard to see
+- **Text:** The app follows your phone's text size setting
+- **Motor:** Check if buttons are big enough to tap
+- **Screen reader:** If you use VoiceOver/TalkBack, it should work automatically
+
+#### Mid-Morning: Explore Your First Resource (5 minutes)
+
+**Scenario:** You just received a confusing letter from your insurance company and want to understand what it means.
+
+**What you'll do:**
+1. Go to **Advocacy tab** (at the bottom)
+2. Find **"AI Advocate Translator"** (looks like a speech bubble with AI symbol)
+3. Copy the confusing text from your letter
+4. Paste it into the translator
+5. Read the plain English version
+6. **Save the result:** Tap the bookmark icon 📖 to save for later
+
+**What you've learned:**
+- ✅ How to navigate to different sections
+- ✅ How to use an AI tool to make something clearer
+- ✅ How to save important information
+
+**Pro tip:** Save confusing letters this way. You can show the simple version to doctors or advocates later.
+
+#### Afternoon: Create Your First Note (5 minutes)
+
+**Scenario:** You had an important conversation with your doctor today and want to remember what was discussed.
+
+**What you'll do:**
+1. Go to **Resources tab** → **Evidence Locker**
+2. Tap **"New"** or **"+" button**
+3. Give your note a title: "Doctor call - Oct 17, 2025"
+4. Write what happened:
+   - "Doctor said my energy is low"
+   - "Discussed medication side effects"
+   - "Next appointment: Nov 1"
+5. Add a tag: "medical" (tap the tag icon)
+6. Tap **"Save"**
+
+**What you've accomplished:**
+- ✅ Created your first saved note
+- ✅ Learned how to organize information with tags
+- ✅ Have a record you can refer to or share later
+
+**Why this matters:** Healthcare providers often expect you to remember details. Saving notes means you don't have to rely on memory alone.
+
+---
+
+### 📅 **Day 2: Wellness Check-In & Energy Tracking** 🌟
+
+**Theme:** Understanding your own patterns  
+**Time:** 15 minutes  
+**Goal:** Start tracking your energy and mood
+
+#### Morning: Set Up Daily Energy Coins (8 minutes)
+
+**Scenario:** You wake up and want to plan what you can do today based on your energy.
+
+**What you'll do:**
+1. Go to **Wellness tab** → **Daily Energy Coins**
+2. Read the intro (explains the concept)
+3. Set your daily "budget": Start with **10 coins** (you can adjust)
+4. Look at example costs:
+   - Sending one email = 1 coin
+   - Doctor appointment = 2 coins
+   - Grocery shopping = 3 coins
+   - Household cleaning = 2-4 coins
+5. Plan your day by "spending" coins mentally
+   - "I'll do email (1 coin) and rest (0 coins)" = 1 coin spent
+   - You still have 9 coins left for unexpected things
+
+**What you're learning:**
+- ✅ Recognize you have limited energy (just like money)
+- ✅ Make conscious choices about how to spend it
+- ✅ Avoid over-committing yourself
+- ✅ Plan realistic days
+
+**Real example:**
+> Sarah wakes up tired. She uses Energy Coins to plan:
+> - Morning bathroom routine: 1 coin (low energy needed)
+> - Eat breakfast: 1 coin
+> - Rest and watch TV: 0 coins
+> - Check on pets: 1 coin
+> - Total so far: 3 coins, 7 coins left for afternoon
+> 
+> This helps Sarah see that she CAN do some things, just not everything.
+
+#### Afternoon: Track Your Mood (7 minutes)
+
+**Scenario:** It's 3 PM and you want to check in with yourself about how you're feeling.
+
+**What you'll do:**
+1. Go to **Wellness tab** → **Reflections Calendar**
+2. Look at the calendar grid
+3. Tap on TODAY'S DATE
+4. You'll see options to rate your mood:
+   - 😞 Bad (difficult day)
+   - 😐 Okay (mixed day)
+   - 🙂 Good (decent day)
+   - 😊 Great (really good day)
+5. Add a quick note:
+   - "Good morning, difficult afternoon"
+   - "Pain level is high today"
+   - "Had a good conversation with friend"
+6. Tap **Save**
+
+**What happens next:**
+- The calendar will color-code each day
+- Over time, you'll see patterns (good days on weekends? tough mornings?)
+- You can export this data for doctors or therapists
+
+**Privacy note:** This stays completely private on your phone unless you choose to share it.
+
+---
+
+### 📅 **Day 3: Understanding Your Rights & Documents** ⚖️
+
+**Theme:** Knowing what you're entitled to  
+**Time:** 20 minutes  
+**Goal:** Create a letter requesting an accommodation
+
+#### Morning: Learn About Your Rights (7 minutes)
+
+**Scenario:** You need a workplace accommodation but don't know where to start.
+
+**What you'll do:**
+1. Go to **Advocacy tab** → **Policy Made Simple**
+2. Search for: "accommodation rights workplace"
+3. Read the simple explanation that appears
+4. It will cover:
+   - What employers have to do
+   - What your rights are
+   - What counts as "unreasonable" refusal
+   - How to document refusals
+   - Your next steps if they refuse
+5. Bookmark this page 📖 for reference
+
+**What you learned:**
+- ✅ Employers must accommodate you (it's the law)
+- ✅ They can't refuse just because it's inconvenient
+- ✅ You have a legal right to request
+- ✅ You can appeal if they refuse
+
+#### Afternoon: Create Your First Professional Letter (13 minutes)
+
+**Scenario:** You need to formally request that your employer allow you to work from home due to your disability.
+
+**What you'll do:**
+1. Go to **Resources tab** → **Master Letter Generator**
+2. Choose your category: **"Workplace & Accommodation"**
+3. Choose your letter type: **"Accommodation Request"**
+4. Fill in the form:
+   - Your name
+   - Employer name
+   - Your job title
+   - What accommodation you need (work from home)
+   - Why you need it (explain how it helps you manage your disability)
+   - Proposed start date
+5. The app generates a professional letter
+6. Review the letter for accuracy
+7. Copy it and email or print it
+
+**Example letter output:**
+```
+Dear [Employer Name],
+
+I am writing to formally request an accommodation to work from home.
+
+Due to [your condition], I experience difficulty with [specific impact].
+
+Working from home would [how it helps you].
+
+This accommodation will allow me to continue performing my duties effectively
+while managing my health needs.
+
+I am happy to discuss this further.
+
+Sincerely,
+[Your name]
+```
+
+**What you've accomplished:**
+- ✅ Created a professional legal document
+- ✅ Documented your request formally
+- ✅ Have a record of what you asked for and when
+- ✅ Protected yourself legally
+
+**Pro tip:** Keep a copy in your Evidence Locker, and date it for your records.
+
+---
+
+### 📅 **Day 4: Building Your Support Network** 🤝
+
+**Theme:** You're not alone—connect with others  
+**Time:** 20 minutes  
+**Goal:** Join a community and read others' experiences
+
+#### Morning: Find Your Community (8 minutes)
+
+**Scenario:** You want to talk to others who understand what you're going through.
+
+**What you'll do:**
+1. Go to **Community tab**
+2. Your province/territory should be selected
+3. Browse the community channels:
+   - "Workplace & Accommodation" - Others dealing with employment issues
+   - "Disabilities & Chronic Illness" - General support
+   - "Mental Health & Wellness" - Emotional support
+   - "Caregivers & Family" - If you support someone
+   - "Legal & Rights" - Questions about the law
+4. Click on **"Workplace & Accommodation"** to see what others are talking about
+5. Read a few posts (you don't have to reply yet)
+
+**What you'll find:**
+- Real people sharing real experiences
+- People asking questions similar to yours
+- Others celebrating wins ("I got my accommodation approved!")
+- Practical advice from people who've been through it
+
+**Examples of posts you might see:**
+> "My employer is refusing to let me work part-time due to my disability. Is that legal?"
+> 
+> "I just got approval to work from home! It's already making such a difference."
+> 
+> "How do I explain invisible disability to my coworkers?"
+
+#### Afternoon: Make Your First Post (12 minutes)
+
+**Scenario:** You have a question and want advice from the community.
+
+**What you'll do:**
+1. In the same **Community tab**
+2. Find the **"Compose"** button (pencil icon or "New Post")
+3. Choose which channel to post in (try "Workplace & Accommodation")
+4. Write a post:
+   - **Title:** "Tips for requesting work-from-home accommodation?"
+   - **Body:** "I need to request WFH due to [your situation]. Has anyone done this before? Any tips?"
+   - Don't share personal details like your full name or workplace name
+5. Tap **"Share" or "Post"**
+6. Check back in a few hours—people may have replied!
+
+**Important safety reminder:**
+- ✅ DO share: General experiences, advice requests, challenges
+- ❌ DON'T share: Your full name, workplace name, home address, phone number
+- ✅ DO be kind to others
+- ❌ DON'T attack or be harsh
+
+**What happens next:**
+- Community members will see your post
+- People with experience may reply with advice
+- You might make connections with people going through similar things
+- You're building a support network
+
+---
+
+### 📅 **Day 5: Making Your Documents Count** 📋
+
+**Theme:** Building a strong evidence file for your case  
+**Time:** 25 minutes  
+**Goal:** Organize multiple documents that support your situation
+
+#### Morning: Gather Your Evidence (12 minutes)
+
+**Scenario:** You're preparing for a meeting with your doctor to discuss accommodation needs. You want to be organized and help them understand your situation.
+
+**What you'll do:**
+1. Go to **Resources → Evidence Locker**
+2. Check what you've already saved (the doctor note from Day 1, maybe)
+3. Add more key documents by creating new notes:
+   - **Medical appointments:** "Oct 10 - Discussed pain levels"
+   - **Work struggles:** "Oct 15 - Worked past 3 PM, had to rest next day"
+   - **Attempts to manage:** "Oct 16 - Tried scheduling breaks, still exhausted"
+   - **Impact on life:** "Oct 17 - Cancelled social plans due to fatigue"
+4. Use tags to organize:
+   - "medical" for doctor info
+   - "workplace" for work situations
+   - "impact" for how it affects you
+   - "evidence" for proof of your condition
+
+#### Afternoon: Create a Summary for Your Doctor (13 minutes)
+
+**Scenario:** You want to prepare for your next doctor's appointment.
+
+**What you'll do:**
+1. Go to **Resources → Doctor Visit Prep**
+2. Use this tool to create an organized summary:
+   - What symptoms have been happening
+   - How they affect your work/daily life
+   - What helps or makes it worse
+   - What you want to ask the doctor
+   - What you might need (accommodation note, letter, etc.)
+3. Export this as a document or PDF
+4. Save it in Evidence Locker with tag "doctor-visit-prep"
+5. Print it or bring it on your phone to the appointment
+
+**Example summary you might create:**
+```
+Doctor Visit - October 30, 2025
+
+Current Issues:
+- Afternoon fatigue (especially after 3 PM)
+- Brain fog affecting work
+- Pain levels: Morning 3/10, Afternoon 7/10
+
+How It Affects Me:
+- Can't work full days
+- Missing social events
+- Having to cancel plans
+
+What Helps:
+- Afternoon naps (30 min)
+- Working from home
+- Flexible schedule
+
+What I Need:
+- Documentation for my employer
+- Recommendation for part-time hours
+- Possible medication adjustment
+
+Questions for Doctor:
+- Is this normal for my condition?
+- Will it get better?
+- What can I do to help?
+```
+
+**Why this works:**
+- ✅ You won't forget anything in the appointment
+- ✅ Doctor has a clear picture of your situation
+- ✅ You have a record of what was discussed
+- ✅ You can reference it for future appointments
+
+---
+
+### 📅 **Day 6: Advocacy in Action** 💪
+
+**Theme:** Taking steps toward the changes you need  
+**Time:** 25 minutes  
+**Goal:** Create an action plan and track progress
+
+#### Morning: Identify Your Goal (8 minutes)
+
+**Scenario:** You know you need to take action on something (getting accommodation, appealing a decision, filing a complaint), but aren't sure where to start.
+
+**What you'll do:**
+1. Go to **Advocacy → Legal Workflow Automation**
+2. Browse available workflows related to your situation:
+   - "Disability Accommodation Request"
+   - "Appeal of Denied Benefits"
+   - "Human Rights Complaint"
+   - "Healthcare Accessibility Issue"
+3. Click on the one that matches your need
+4. Read:
+   - How long it typically takes
+   - What documents you'll need
+   - Success rate percentage
+   - Next steps
+
+#### Afternoon: Start Your Workflow (17 minutes)
+
+**Scenario:** You've decided to formally request a workplace accommodation.
+
+**What you'll do:**
+1. Open your chosen workflow (e.g., "Disability Accommodation Request")
+2. Tap **"Start Workflow"**
+3. Follow the step-by-step process:
+   - **Step 1:** Is this accommodation reasonable? (the app helps you assess)
+   - **Step 2:** Gather required documents (checklist appears)
+   - **Step 3:** Fill out forms (the app pre-fills what it can)
+   - **Step 4:** Generate your accommodation request letter
+   - **Step 5:** Submit according to instructions
+   - **Step 6:** Track your deadline
+4. Complete Step 1 today
+5. Green checkmark appears when each step is done
+6. Yellow indicator shows what's next
+7. Red alert if a deadline is approaching
+
+**What's being tracked for you:**
+- ✅ Each step you've completed
+- ✅ Documents you've gathered
+- ✅ Deadlines you need to meet
+- ✅ Next action required
+- ✅ Expected outcomes
+
+**Example workflow view you'll see:**
+```
+Disability Accommodation Request
+
+✅ Step 1: Eligibility Assessment (Completed Oct 20)
+✅ Step 2: Document Gathering (Completed Oct 21)
+🟡 Step 3: Form Completion (In Progress) ← You are here
+   - Accommodation request form
+   - Medical documentation
+   - Impact statement
+⭕ Step 4: Submission Preparation
+⭕ Step 5: Send to Employer
+⭕ Step 6: Track Response
+```
+
+---
+
+### 📅 **Day 7: Celebration & Building Your Habit** 🎉
+
+**Theme:** You've done so much—acknowledge progress and plan to keep going  
+**Time:** 20 minutes  
+**Goal:** Celebrate what you've learned and plan next steps
+
+#### Morning: Explore the Disability Wizard (10 minutes)
+
+**Scenario:** You're getting the hang of the app and want to see what it recommends for you today.
+
+**What you'll do:**
+1. Go to **Home tab**
+2. Look for the **Disability Wizard** section (usually at the top)
+3. You'll see 3 personalized recommendations:
+   - Each shows a tool that might help you today
+   - Each shows energy level needed (🟢 low, 🟠 medium, 🔴 high)
+   - Each explains WHY it's recommended
+4. Try one of the recommendations
+5. If you like it, use it—if not, scroll past
+
+**What you'll learn:**
+- ✅ The app is learning your needs
+- ✅ New tools appear based on your patterns
+- ✅ You can discover features you didn't know about
+- ✅ Recommendations adapt to your energy level
+
+**Example recommendations you might see:**
+> "**Mood Tracker** - 🟢 Low Energy, 3 min  
+> We noticed you've been tracking your mood regularly. Try today's reflection to see patterns."
+> 
+> "**Evidence Locker** - 🟡 Medium Energy, 5 min  
+> You're preparing for your doctor's appointment. Organize your documents now."
+> 
+> "**Community Support** - 🟢 Low Energy, 5 min  
+> Others are discussing accommodation in your situation. Read to feel less alone."
+
+#### Afternoon: Reflect & Celebrate (10 minutes)
+
+**Scenario:** It's the end of your first week. Time to think about what you've accomplished.
+
+**What you'll do:**
+1. Go to **Wellness → Reflections Calendar**
+2. Tap on TODAY'S DATE
+3. Add a note reflecting on your week:
+   - "Learned how to save documents"
+   - "Found people in my community"
+   - "Created my first accommodation letter"
+   - "Feeling more prepared"
+4. Rate your mood for the week overall
+5. Save it
+
+**Create a checklist of what you've accomplished this week:**
+- ✅ Downloaded and opened the app
+- ✅ Learned to use the AI Translator
+- ✅ Created your first Evidence Locker note
+- ✅ Tracked your energy with Energy Coins
+- ✅ Documented your mood patterns
+- ✅ Learned about your rights
+- ✅ Created a professional letter
+- ✅ Joined your community
+- ✅ Made your first post
+- ✅ Organized your evidence
+- ✅ Started a workflow for your goal
+- ✅ Met the Disability Wizard
+
+**That's 12 things you learned in ONE WEEK!**
+
+#### Planning Ahead: Make It a Habit
+
+**Set yourself up for success:**
+1. **When to use the app:**
+   - Morning: Check Disability Wizard for today's suggestion
+   - Afternoon: Track mood and energy if helpful
+   - Evening: Save any important conversations
+
+2. **What to do next:**
+   - Continue your workflow from Day 6
+   - Check your community posts for replies
+   - Add to your Evidence Locker as things happen
+   - Share an update when you reach a goal
+
+3. **Getting deeper:**
+   - Explore features you haven't tried yet
+   - Customize your accessibility settings
+   - Connect with specific community members
+   - Use more templates and tools
+
+4. **Know you're supported:**
+   - Community is here if you have questions
+   - Everything is documented for when you need it
+   - Your privacy is protected
+   - You can do this at your own pace
+
+---
+
+## 🌟 What Comes After Week 1?
+
+### Week 2+: Deepen Your Advocacy
+
+**As you continue using the app:**
+- Your workflows progress toward completion
+- Community connections strengthen
+- You have more evidence and documentation
+- You start seeing patterns in your data
+- Recommendations become more personalized
+
+**Things to explore in Week 2+:**
+- **Accountability Coach** - Track if promises are being kept
+- **Lawyer Finder** - Find professional help if needed
+- **Appeals Process Guide** - Understand your options if something is denied
+- **Collective Legal Action** - Join others on similar issues
+
+### Month 1-3: Building Your Case
+
+**By the end of your first month:**
+- You'll have comprehensive documentation
+- Your workflow is advancing
+- You understand your rights better
+- Community has supported you
+- You have concrete next steps
+
+**By the end of three months:**
+- Your accommodation may be approved
+- You have a track record of attempts and responses
+- You've made friends in the community
+- You're ready for next level (appeals, legal action, etc.)
+
+### Celebrating Progress
+
+**Remember:**
+- Every note you save is progress
+- Every community connection is support
+- Every letter you create is strength
+- Every time you advocate for yourself, you matter
+- You're not alone—thousands are using this app to change their lives
+
+---
+
+## 💡 Tips for Success in Your First Week
+
+### ✅ Do These Things
+- **Save important information** - The more you document, the stronger your case
+- **Join your community** - People understand and want to help
+- **Follow one workflow** - Finish what you start, even if it takes a few weeks
+- **Use accessibility settings** - Make the app work for YOUR body and brain
+- **Take breaks** - Don't try to do everything at once
+
+### ❌ Don't Do These Things
+- **Don't share personal details publicly** - Be safe in community posts
+- **Don't try every feature at once** - Information overload isn't helpful
+- **Don't delete documents** - Keep everything for your records
+- **Don't feel pressure to do it perfectly** - Messy progress is still progress
+- **Don't hesitate to ask questions** - Community members are here to help
+
+### 🎯 Your Success Indicators
+
+**You're doing well if:**
+- ✅ You've saved at least 3 important documents
+- ✅ You've read posts in your community
+- ✅ You've created at least one letter or formal request
+- ✅ You can find what you need in the app
+- ✅ You feel less alone about your situation
+- ✅ You understand your next step forward
+- ✅ You know what accessibility settings work for you
+
+**These aren't requirements—just signs you're making good progress!**
+
+---
+
 <a id="your-privacy-and-security"></a>
 ## Your Privacy and Security (Simple Explanation)
 
