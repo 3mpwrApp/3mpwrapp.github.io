@@ -3384,6 +3384,29 @@
       "energyLevel": "{{level}}% energy",
       "accessibility": "Energy level chart showing predicted energy for each hour of the day"
     }
+  },
+  "smartNotifications": {
+    "title": "Smart Notification Settings",
+    "description": "Control when notifications reach you based on your energy levels",
+    "quietHours": "Quiet Hours",
+    "enableQuietHours": "Enable Quiet Hours",
+    "enableQuietHoursDescription": "Pause non-urgent notifications during your rest times",
+    "quietHoursEnabled": "Quiet hours enabled",
+    "quietHoursDisabled": "Quiet hours disabled",
+    "startTime": "Start Time",
+    "startTimeA11y": "Set quiet hours start time",
+    "endTime": "End Time",
+    "endTimeA11y": "Set quiet hours end time",
+    "allowHighPriority": "Allow Urgent Notifications",
+    "allowHighPriorityDescription": "Send high-priority notifications even during quiet hours",
+    "timeZone": "Time Zone",
+    "current": "Current Time Zone",
+    "saved": "Settings saved successfully",
+    "errors": {
+      "loadingFailed": "Could not load notification settings",
+      "savingFailed": "Could not save notification settings"
+    },
+    "saveHint": "Save your notification preferences"
   }
 }
 

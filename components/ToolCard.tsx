@@ -6,12 +6,33 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useMemo } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View, Text } from 'react-native';
 
 import type { ToolMetadata } from '../services/phase6ToolRegistry';
 import { useAppPalette } from '../theme/usePalette';
 
-import { TextV2 } from './TextV2';
+// Lightweight local TextV2 fallback used by ToolCard when a shared TextV2 module isn't available
+// Keeps API small: variant, style, numberOfLines
+interface TextV2Props {
+  variant?: 'subtitle2' | 'body2' | 'caption' | string;
+  style?: any;
+  numberOfLines?: number;
+  children?: React.ReactNode;
+}
+
+const TextV2: React.FC<TextV2Props> = ({ variant = 'body2', style, numberOfLines, children }) => {
+  const variantStyles: Record<string, any> = {
+    subtitle2: { fontSize: 16, fontWeight: '600' },
+    body2: { fontSize: 14 },
+    caption: { fontSize: 12 },
+  };
+
+  return (
+    <Text style={[variantStyles[variant] || variantStyles.body2, style]} numberOfLines={numberOfLines}>
+      {children}
+    </Text>
+  );
+};
 
 interface ToolCardProps {
   tool: ToolMetadata;
@@ -35,11 +56,8 @@ export const ToolCard: React.FC<ToolCardProps> = ({
     if (onPress) {
       onPress();
     } else {
-      // Navigate to tool detail screen
-      router.push({
-        pathname: '/(tabs)/wellness/tool-detail',
-        params: { toolId: tool.id },
-      });
+      // Navigate to tool detail screen using typed params to satisfy router typings
+      router.push(`/(tabs)/wellness/${tool.id}` as any);
     }
   };
 
@@ -66,7 +84,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
         <Ionicons
           name={tool.icon as any}
           size={32}
-          color={palette.text.secondary}
+          color={palette.primary}
         />
         <TextV2
           variant="caption"
@@ -92,7 +110,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
           <Ionicons
             name={tool.icon as any}
             size={24}
-            color={palette.primary.main}
+            color={palette.primary}
           />
         </View>
         <View style={styles.titleContainer}>
@@ -130,7 +148,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
             <Ionicons
               name="pricetag"
               size={12}
-              color={palette.primary.main}
+              color={palette.primary}
               style={styles.badgeIcon}
             />
             <TextV2 variant="caption" style={styles.categoryText}>
@@ -148,7 +166,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
               <Ionicons
                 name="bulb"
                 size={12}
-                color={palette.success.main}
+                color={palette.success}
                 style={styles.badgeIcon}
               />
               <TextV2 variant="caption" style={styles.mlText}>
@@ -167,7 +185,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
               <Ionicons
                 name={getEnergyIcon(tool.energyOptimal)}
                 size={12}
-                color={palette.warning.main}
+                color={palette.warning}
                 style={styles.badgeIcon}
               />
               <TextV2 variant="caption" style={styles.energyText}>
@@ -186,7 +204,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
               <Ionicons
                 name="thumbs-up"
                 size={12}
-                color={palette.info.main}
+                color={palette.info}
                 style={styles.badgeIcon}
               />
               <TextV2 variant="caption" style={styles.feedbackText}>
@@ -205,7 +223,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
               <Ionicons
                 name="person"
                 size={12}
-                color={palette.secondary.main}
+                color={palette.info}
                 style={styles.badgeIcon}
               />
               <TextV2 variant="caption" style={styles.personalizableText}>
@@ -356,10 +374,10 @@ const createStyles = (palette: any) =>
       fontWeight: '500',
     },
     personalizableBadge: {
-      backgroundColor: palette.secondary.light,
+      backgroundColor: palette.info.light,
     },
     personalizableText: {
-      color: palette.secondary.main,
+      color: palette.info.main,
       fontWeight: '500',
     },
     a11yContainer: {

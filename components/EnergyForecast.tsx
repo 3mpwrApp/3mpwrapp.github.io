@@ -12,13 +12,14 @@ import {
     View
 } from 'react-native';
 
-import type { EnergyForecast } from '../services/energyPrediction';
+import type { EnergyForecast as EnergyForecastType } from '../services/energyPrediction';
 import { useAppPalette } from '../theme/usePalette';
+import type { Palette } from '../theme/usePalette';
 
-import { TextV2 } from './TextV2';
+import { TextV2 } from './common/TextV2';
 
 interface EnergyForecastComponentProps {
-  forecast: EnergyForecast | null;
+  forecast: EnergyForecastType | null;
   isLoading?: boolean;
   currentEnergy?: number;
 }
@@ -71,7 +72,7 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
       style={styles.container}
       accessible
       accessibilityLabel={a11yLabel}
-      accessibilityRole="table"
+      accessibilityRole="list"
     >
       {/* Header */}
       <View style={styles.header}>
@@ -199,7 +200,7 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
 
 interface EnergyBarProps {
   level: number;
-  palette: any;
+  palette: Palette;
   width?: number;
   height?: number;
   showLabel?: boolean;
@@ -256,7 +257,7 @@ function EnergyBar({
 
 interface TrendBadgeProps {
   trend: 'increasing' | 'decreasing' | 'stable';
-  palette: any;
+  palette: Palette;
 }
 
 function TrendBadge({ trend, palette }: TrendBadgeProps) {
@@ -298,7 +299,7 @@ interface SummaryItemProps {
   value: string;
   subValue: string;
   icon: string;
-  palette: any;
+  palette: Palette;
 }
 
 function SummaryItem({ label, value, subValue, icon, palette }: SummaryItemProps) {
@@ -323,7 +324,7 @@ function SummaryItem({ label, value, subValue, icon, palette }: SummaryItemProps
   );
 }
 
-const createStyles = (palette: any) =>
+const createStyles = (palette: Palette) =>
   StyleSheet.create({
     container: {
       backgroundColor: palette.background.elevated,
