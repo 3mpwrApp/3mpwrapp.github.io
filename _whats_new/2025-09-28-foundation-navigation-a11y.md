@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Site foundation, cleaner navigation, and better basics
+title: Easier to find your way around – Better site navigation and design
 date: 2025-09-28
-description: We tidied up the site structure, fixed duplicate pages, made navigation clearer, and improved contrast and focus for accessibility.
+description: We cleaned up our website to make it easier to navigate, find what you need, and use on any device.
 ---
 
-We focused on the fundamentals so the site is easier to understand and navigate.
+We worked on making the website easier to use for everyone.
 
-- Consolidated duplicates (like Privacy and 404) and ensured a single, clear homepage
-- Cleaned up the top navigation and made the brand logo link home
-- Improved color contrast and visible focus styles for keyboard users
+- Removed duplicate pages so there's only one way to find what you need
+- Made the menu clearer and easier to follow
+- Made text darker and buttons easier to see if you use a keyboard
 
-Why it matters: a simpler structure helps everyone find content quickly, and better contrast/focus makes the site more accessible.
+Why it matters: a clearer website means you can find answers faster, and better design helps people with different needs use the site.

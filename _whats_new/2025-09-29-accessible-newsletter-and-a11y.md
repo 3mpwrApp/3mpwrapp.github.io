@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Accessible newsletter modal, focus improvements, and new skip links
+title: Better newsletter sign-up and easier keyboard navigation
 date: 2025-09-29
-description: We added an accessible newsletter sign‑up, improved keyboard focus, and introduced skip links to move around the page faster.
+description: We made it easier to sign up for our newsletter, and added tools to help keyboard users navigate the page faster.
 ---
 
-What changed:
+What's better now:
 
-- Accessible newsletter modal: close with Escape, click outside, or buttons; focus stays inside while open
-- First‑visit gating with a “Don’t show again” option; CI flag available to disable during checks
-- Added Skip to content/navigation/footer links and enhanced focus‑visible styles
+- Newsletter sign-up: press Escape to close, or click outside to close
+- First-time visitors see a sign-up offer, but can choose not to see it again
+- Added "Skip to" links to jump to main content, menu, or footer without scrolling through everything
 
-Why it matters: signing up is smoother and more accessible; skip links save time for keyboard and screen reader users.
+Why it matters: signing up is faster and easier, and keyboard users can jump straight to what they need.

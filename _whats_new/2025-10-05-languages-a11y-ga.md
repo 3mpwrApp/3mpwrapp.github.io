@@ -1,15 +1,15 @@
 ---
 layout: default
-title: New languages, easier Accessibility Settings, and Google Analytics path
+title: More languages, accessibility tools, and better tracking
 date: 2025-10-05
-description: Added Spanish, Arabic, Chinese, and Punjabi home pages; Accessibility Settings now in the main menu; and analytics ready for GA4 with consent.
+description: We added Spanish, Arabic, Chinese, and Punjabi so more people can use the site. We made accessibility settings easier to find, and set up tracking that respects your privacy.
 ---
 
-What’s new today:
+What's new today:
 
-- New language home pages: Spanish (es), Arabic (ar), Chinese (zh), Punjabi (pa)
-- Arabic pages now render RTL correctly
-- Accessibility Settings added to the top navigation
-- Analytics loader supports Google Analytics 4 and remains consent‑gated
+- New language pages: Spanish, Arabic, Chinese, and Punjabi
+- Arabic pages now read right-to-left (the correct way)
+- Accessibility Settings moved to the main menu (easier to find)
+- Tracking set up to respect your privacy choices
 
-Why it matters: more people can find and read our content; settings are easier to find; and analytics respect privacy.
+Why it matters: more people can access our content in their language, and your privacy is protected.

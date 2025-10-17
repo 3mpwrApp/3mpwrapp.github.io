@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Better search with live results, highlighting, and announcements
+title: New search with live results – Find what you need instantly
 date: 2025-10-01
-description: Search now shows on‑page results with term highlighting and screen‑reader announcements, with DuckDuckGo fallback if you need a wider search.
+description: We added a fast search feature that shows results as you type, making it easy to find articles and resources.
 ---
 
-What’s new:
+What's new:
 
-- On‑page live results with ranking by title > URL > content
-- Highlighted search terms and polite announcements of result counts
-- DuckDuckGo fallback scoped to 3mpowr if you want a broader search
+- Search shows results right away as you type
+- Your search words are highlighted so you can spot them easily
+- Search works right in your browser – no waiting
 
-Why it matters: find what you need faster, with accessible feedback as results update.
+Why it matters: you can quickly find the information you need without clicking through pages.

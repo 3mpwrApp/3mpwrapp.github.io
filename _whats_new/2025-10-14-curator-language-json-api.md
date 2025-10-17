@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Curator gains language filtering & JSON API
+title: Daily Content now Available in Multiple Languages and Easy Formats
 date: 2025-10-14 18:00:00 +0000
-summary: Daily curator now outputs JSON and supports basic language filtering.
+summary: We added language filtering so you can see content in your preferred language, and made the content available in an easy format for apps to use.
 ---
 
-We expanded the automated daily curator with two new capabilities:
+What's new:
 
-- Language filtering via a lightweight heuristic (English / French) using `FILTER_LANGS` env (e.g. `en,fr`).
-- Public JSON feed at `/curation-latest.json` (enable with `WRITE_JSON=1`) containing the scored items, source, language tag, and metadata.
+- Filter daily content by language (English and French)
+- Content is available in an easy format that apps and websites can use
+- Makes it easier to show curated content the way that works best for you
 
 Why it matters:
 
-- Lets the front‑end (or external tools) render curated items without parsing Markdown.
-- Enables future UI toggles for language preference.
+- See content in your preferred language
+- Apps can use our curated content to serve you better
+- We're preparing for better multilingual support
 
 Technical notes:
 

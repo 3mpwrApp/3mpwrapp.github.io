@@ -1,13 +1,14 @@
 ---
 layout: default
-title: What’s New page launched
+title: Automatic Daily Updates – New content every day
 date: 2025-10-04
-description: We introduced a simple, human-friendly What’s New page to share highlights and improvements—no technical details required.
+description: We set up automatic updates to bring you new resources and community news every day.
 ---
 
-What changed:
+What's happening now:
 
-- A dedicated What’s New page collects updates in plain language
-- Recent updates appear first; older ones move to an archive automatically
+- New content is added automatically every day
+- Community stories and resource highlights are collected daily
+- Updates happen at a set time so you know when to check back
 
-Why it matters: it’s easy to see what’s new at a glance without technical jargon.
+Why it matters: you always have fresh, relevant information without us having to do it manually each day.

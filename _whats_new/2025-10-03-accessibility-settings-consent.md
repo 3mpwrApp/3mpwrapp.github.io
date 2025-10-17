@@ -1,18 +1,22 @@
 ---
 layout: default
-title: New Accessibility Settings and cookie consent banner
+title: New Accessibility Settings – Make the site work for you
 date: 2025-10-03
-description: You can now personalize reading settings site‑wide, and analytics only load after explicit consent.
+description: You can now adjust text size, fonts, spacing, and colors to read the site the way that's best for you.
 ---
 
-New settings page:
+New settings you can control:
 
-- Adjust text size, line height, letter spacing, and link underlines
-- Choose readable or dyslexia‑friendly font
-- Reduce motion, apply color filters, and increase focus ring visibility
-- Preferences are saved on your device and apply across pages
+- Make text bigger or smaller
+- Choose a regular or dyslexia-friendly font
+- Adjust line spacing and letter spacing
+- Reduce animations if they bother you
+- Use a dyslexia-friendly font
+- Your settings save on your device
 
 Privacy:
 
-- Cookie consent banner added
-- Analytics (when configured) are loaded only after you accept cookies
+- We added a cookie notice
+- We only track your visits if you say it's okay
+
+Why it matters: everyone can customize the website to work the way that's best for them.

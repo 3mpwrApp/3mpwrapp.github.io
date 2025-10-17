@@ -1,14 +1,14 @@
 ---
 layout: default
-title: SEO & schema upgrades, with French language foundation
+title: Better search visibility and new language pages
 date: 2025-10-02
-description: We enabled structured data, hreflang alternates, page descriptions, and added a French homepage with a language switch.
+description: Our site now shows up better in Google search, and we've added French language support to help more people.
 ---
 
-Highlights:
+What's new today:
 
-- jekyll-seo-tag enabled, plus JSON‑LD Organization and BreadcrumbList
-- Hreflang alternates for English/French; page descriptions for key pages
-- French homepage and a simple language switch added
+- Better Google search display with page descriptions
+- Added French language homepage
+- Easy language switcher at the top
 
-Why it matters: better search appearance and a more inclusive experience for Francophone visitors.
+Why it matters: more people can find our site in search results, and French speakers can access content in their language.

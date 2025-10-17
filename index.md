@@ -4,17 +4,17 @@ title: Home
 description: A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.
 ---
 
-# Welcome to 3mpowr App
+# Welcome to 3mpwr App
 
 <strong>Connecting voices, empowering change.</strong>
 
-3mpowr App is a community-driven platform built for injured workers and persons with disabilities across Canada. We’re creating a safe, inclusive space where people can connect, share experiences, and advocate for change.
+3mpwr App is a community-driven platform built for injured workers and persons with disabilities across Canada. We're creating a safe, inclusive space where people can connect, share experiences, and advocate for change.
 
 ---
 
-## Why 3mpowr?
+## Why 3mpwr?
 
-3mpowr provides practical tools and a vibrant community to help you:
+3mpwr provides practical tools and a vibrant community to help you:
 - <strong>Connect</strong> with others who understand your journey
 - <strong>Advocate</strong> for your rights and meaningful change
 - <strong>Learn</strong> about resources, rights, and support available to you
@@ -82,7 +82,7 @@ description: A community-powered hub for injured workers and persons with disabi
 
 Ready to join the movement? Here's how you can get started:
 
-- <a href="{{ '/beta' | relative_url }}">Become a Beta Tester</a> – Help shape the future of 3mpowr by testing new features
+- <a href="{{ '/beta' | relative_url }}">Become a Beta Tester</a> – Help shape the future of 3mpwr by testing new features
 - <a href="{{ '/user-guide' | relative_url }}"><strong>📖 Read Our Complete User Guide</strong></a> – **NEW Phase 2!** Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more ([Download PDF](/assets/downloads/3mpwrapp-user-guide-full.pdf))
 - <a href="{{ '/features' | relative_url }}">Explore All Features</a> – Detailed step-by-step guides for every feature
 - <a href="{{ '/newsletter' | relative_url }}">Subscribe to Our Newsletter</a> – Stay updated with the latest news and resources
@@ -210,7 +210,7 @@ Ready to join the movement? Here's how you can get started:
 
 ## Connect With Us
 
-Follow 3mpowr on social media to stay connected and be part of the community:
+Follow 3mpwr on social media to stay connected and be part of the community:
 
 <ul role="list" aria-label="Social links" class="socials-list">
   <li role="listitem"><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} Facebook</a> – Follow us for updates and community news</li>
