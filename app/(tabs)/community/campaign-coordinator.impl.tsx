@@ -50,30 +50,19 @@ interface CampaignGoal {
   category: 'awareness' | 'policy' | 'funding' | 'accessibility' | 'education';
 }
 
-interface _TaskAssignment {
-  id: string;
-  taskDescription: string;
-  assigneeId: string;
-  assigneeName: string;
-  dueDate: Date;
-  status: 'pending' | 'in_progress' | 'completed' | 'blocked';
-  priority: 'urgent' | 'high' | 'medium' | 'low';
-  estimatedHours: number;
-  skillsRequired: string[];
-  accessibilityRequirements?: string[];
-}
-
- 
-interface _AdvocacyTarget {
-  id: string;
-  name: string;
-  type: 'government' | 'organization' | 'business' | 'institution' | 'public';
-  level: 'municipal' | 'provincial' | 'federal' | 'international';
-  contactInfo: ContactInfo;
-  influence: 'high' | 'medium' | 'low';
-  receptiveness: 'supportive' | 'neutral' | 'opposed' | 'unknown';
-  previousEngagement?: string;
-}
+// TODO: Implement task assignment tracking in Phase 6
+// interface TaskAssignment {
+//   id: string;
+//   taskDescription: string;
+//   assigneeId: string;
+//   assigneeName: string;
+//   dueDate: Date;
+//   status: 'pending' | 'in_progress' | 'completed' | 'blocked';
+//   priority: 'urgent' | 'high' | 'medium' | 'low';
+//   estimatedHours: number;
+//   skillsRequired: string[];
+//   accessibilityRequirements?: string[];
+// }
 
 interface ContactInfo {
   email?: string;
@@ -83,15 +72,27 @@ interface ContactInfo {
   socialMedia?: Record<string, string>;
 }
 
- 
-interface _CommunicationStrategy {
-  channels: string[];
-  messaging: Record<string, string>; // channel -> message
-  frequency: string;
-  languages: string[];
-  accessibilityFormats: string[];
-  culturalAdaptations?: string[];
-}
+// TODO: Implement advocacy target tracking in Phase 6
+// interface AdvocacyTarget {
+//   id: string;
+//   name: string;
+//   type: 'government' | 'organization' | 'business' | 'institution' | 'public';
+//   level: 'municipal' | 'provincial' | 'federal' | 'international';
+//   contactInfo: ContactInfo;
+//   influence: 'high' | 'medium' | 'low';
+//   receptiveness: 'supportive' | 'neutral' | 'opposed' | 'unknown';
+//   previousEngagement?: string;
+// }
+
+// TODO: Implement communication strategy tracking in Phase 6
+// interface CommunicationStrategy {
+//   channels: string[];
+//   messaging: Record<string, string>; // channel -> message
+//   frequency: string;
+//   languages: string[];
+//   accessibilityFormats: string[];
+//   culturalAdaptations?: string[];
+// }
 
 type CampaignCategory = 
   | 'accessibility_rights'

@@ -5,16 +5,12 @@ import { useThemeColor } from '../hooks/useThemeColor';
 interface SkeletonLoaderProps {
   lines?: number;
   lineHeight?: number;
-  _width?: string | number;
-  _height?: number;
   style?: any;
 }
 
 export default function SkeletonLoader({
   lines = 3,
   lineHeight = 16,
-  _width,
-  _height,
   style,
 }: SkeletonLoaderProps) {
   const textColor = useThemeColor({}, 'text');
