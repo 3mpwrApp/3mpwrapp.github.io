@@ -3288,6 +3288,66 @@
       "energyOptimal": "Optimal for {{energy}} energy levels",
       "accessibility": "Accessibility: {{features}}"
     }
+  },
+  "patterns": {
+    "activity": {
+      "title": "Activity Patterns",
+      "description": "Patterns of when and how you do activities",
+      "recordDataPoint": "Record activity",
+      "viewHistory": "View activity history",
+      "insights": "Activity insights"
+    },
+    "energy": {
+      "title": "Energy Patterns",
+      "description": "When your energy levels are highest and lowest",
+      "morning": "Morning energy",
+      "afternoon": "Afternoon energy",
+      "evening": "Evening energy",
+      "night": "Night energy",
+      "predictedEnergy": "Predicted energy"
+    },
+    "mood": {
+      "title": "Mood Patterns",
+      "description": "Your emotional patterns and cycles",
+      "moodBefore": "Mood before",
+      "moodAfter": "Mood after",
+      "moodTrend": "Mood trend",
+      "emotionalCycle": "Emotional cycle"
+    },
+    "recovery": {
+      "title": "Recovery Patterns",
+      "description": "What helps you recover and feel better",
+      "whatHelps": "What helps you recover",
+      "recoveryTips": "Recovery tips",
+      "fastestRecovery": "Fastest recovery"
+    },
+    "engagement": {
+      "title": "Engagement Patterns",
+      "description": "When you're most engaged and productive",
+      "peakTime": "Peak engagement time",
+      "engagementLevel": "Engagement level",
+      "recommendations": "Engagement recommendations"
+    },
+    "analysis": {
+      "strength": "Pattern strength",
+      "confidence": "Confidence level",
+      "occurrences": "Pattern occurrences",
+      "lastSeen": "Last occurred",
+      "nextPredicted": "Predicted next occurrence",
+      "recommendation": "Recommendation",
+      "insight": "Insight",
+      "bestTime": "Best time for this pattern",
+      "worstTime": "Challenging time for this pattern",
+      "noPatterns": "No patterns recorded yet. Start recording activities to build patterns."
+    },
+    "labels": {
+      "recordedInstances": "Recorded {{count}} time{{plural}}",
+      "mostCommon": "Most common on {{day}}s",
+      "dataCollecting": "Data collecting...",
+      "patternStrengthHigh": "Strong pattern identified",
+      "patternStrengthMedium": "Moderate pattern detected",
+      "patternStrengthLow": "Pattern forming (more data needed)"
+    }
   }
 }
 
