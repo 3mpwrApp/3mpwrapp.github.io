@@ -50,7 +50,9 @@
       "betaChat": {
         "title": "Chat des bêta‑testeurs",
         "label": "Ouvrir le chat testeurs",
-        "cta": "Rejoindre"
+        "cta": "Rejoindre",
+        "hint": "Opens the beta testers community chat",
+        "section": "Beta testers section"
       }
     },
     "guide": {
@@ -65,7 +67,9 @@
         "up": "Helpful suggestion",
         "down": "Not relevant"
       }
-    }
+    },
+    "announcement": "Home screen loaded. Beta features available.",
+    "screenLabel": "Home screen"
   },
   "system": {
     "changelog": {
@@ -277,6 +281,99 @@
     "mood": {
       "nudges": "Mood Nudges",
       "nudgesHelp": "Evening reminder to log mood if you skipped today."
+    },
+    "cognitiveAccessibility": "Cognitive Accessibility Settings - Simplified mode, auto-save, and navigation memory for ADHD, autism, and learning disabilities",
+    "cognitiveAccessibilityTitle": "Cognitive Accessibility",
+    "cognitive": {
+      "settingsTitle": "Cognitive Accessibility",
+      "modeTitle": "Cognitive Mode",
+      "modeDescription": "Choose how the app should adapt to your cognitive needs. Simplified modes reduce choices, enhance auto-save, and provide more guidance.",
+      "modeChanged": "Cognitive mode changed to {{mode}}",
+      "modeChangeTitle": "Mode Changed",
+      "modeChangeMessage": "Cognitive accessibility mode is now set to {{mode}}. {{description}}",
+      "modeChangeError": "Failed to change cognitive mode. Please try again.",
+      "maxItems": "Max {{count}} items per screen",
+      "autoSaveEvery": "Auto-save every {{seconds}}s",
+      "featuresTitle": "Features",
+      "navigationMemory": "Navigation Memory",
+      "navigationMemoryDesc": "Remember where you were and offer to go back",
+      "toggleNavigationMemory": "Toggle navigation memory",
+      "scrollMemory": "Scroll Position Memory",
+      "scrollMemoryDesc": "Return to where you were scrolling on each screen",
+      "toggleScrollMemory": "Toggle scroll position memory",
+      "breadcrumbs": "Progress Breadcrumbs",
+      "breadcrumbsDesc": "Show \"You are here\" navigation breadcrumbs",
+      "toggleBreadcrumbs": "Toggle breadcrumbs",
+      "complexityIndicators": "Task Complexity Indicators",
+      "complexityIndicatorsDesc": "Show how complex or time-consuming tasks are",
+      "toggleComplexityIndicators": "Toggle complexity indicators",
+      "stepByStep": "Step-by-Step Guidance",
+      "stepByStepDesc": "Break complex tasks into smaller steps",
+      "toggleStepByStep": "Toggle step-by-step guidance",
+      "actionsTitle": "Actions",
+      "viewIncompleteTasks": "View incomplete tasks",
+      "viewTasks": "View Incomplete Tasks",
+      "viewTasksDesc": "See tasks you started but didn't finish",
+      "clearAllData": "Clear all saved data",
+      "clearData": "Clear All Data",
+      "clearDataDesc": "Remove all navigation history, saved forms, and tasks",
+      "clearDataTitle": "Clear Saved Data?",
+      "clearDataMessage": "This will clear all navigation history, scroll positions, saved forms, and incomplete tasks. This cannot be undone.",
+      "dataCleared": "All cognitive accessibility data has been cleared",
+      "dataClearedMessage": "All saved data has been cleared.",
+      "clearDataError": "Failed to clear data. Please try again.",
+      "noTasksTitle": "No Incomplete Tasks",
+      "noTasksMessage": "You have no incomplete tasks at the moment.",
+      "incompleteTasksTitle": "Incomplete Tasks ({{count}})",
+      "clearTasks": "Clear All Tasks",
+      "tasksCleared": "All tasks have been cleared",
+      "preferenceUpdated": "Preference updated",
+      "saving": "Saving...",
+      "savedJustNow": "Saved just now",
+      "savedMinutesAgo": "Saved {{count}} minute ago",
+      "savedMinutesAgo_other": "Saved {{count}} minutes ago",
+      "savedHoursAgo": "Saved {{count}} hour ago",
+      "savedHoursAgo_other": "Saved {{count}} hours ago",
+      "youWereHere": "You were here last:",
+      "backToWhereYouWere": "Go back to {{location}}",
+      "showMoreItems": "Show {{count}} more items",
+      "showMore": "Show {{count}} more",
+      "showLess": "Show less",
+      "helpText": "Cognitive accessibility features help users with ADHD, autism, learning disabilities, and anyone who benefits from simplified interfaces, memory aids, and step-by-step guidance."
+    },
+    "dyslexia": {
+      "settingsTitle": "Dyslexia Support",
+      "custom": "Custom",
+      "presets": "Quick Presets",
+      "presetsDesc": "Start with a preset and fine-tune",
+      "presetError": "Failed to apply preset",
+      "font": "Font",
+      "fontDesc": "Choose a font that improves readability",
+      "loadingFonts": "Loading fonts...",
+      "fontSize": "Font Size (%)",
+      "spacing": "Spacing",
+      "spacingDesc": "Adjust spacing to reduce visual crowding",
+      "letterSpacing": "Letter Spacing",
+      "wordSpacing": "Word Spacing",
+      "lineHeight": "Line Height",
+      "visual": "Visual",
+      "visualDesc": "Overlays and contrast for comfort",
+      "overlay": "Colored Overlay",
+      "contrast": "Contrast",
+      "readingRuler": "Reading Ruler",
+      "advanced": "Advanced",
+      "advancedDesc": "Experimental and assistive options",
+      "wordHighlighting": "Word Highlighting",
+      "wordHighlightingDesc": "Tap words to highlight them",
+      "syllableBreaks": "Syllable Breaks",
+      "syllableBreaksDesc": "Show hyphenation markers (experimental)",
+      "autoScrolling": "Auto Scrolling",
+      "autoScrollingDesc": "Slow automatic scroll for continuous reading",
+      "actions": "Actions",
+      "reset": "Reset to defaults",
+      "resetTitle": "Reset Dyslexia Settings?",
+      "resetMessage": "This will restore default reading settings.",
+      "help": "These tools support readers with dyslexia by reducing visual stress, improving letter differentiation, and enhancing tracking. Experiment to find what feels best for you."
     }
   },
   "admin": {
@@ -755,8 +852,8 @@
       "one": "{{count}} ressource chargée",
       "other": "{{count}} ressources chargées"
     },
-  "appeal_coach": "Coach d’appel (bientôt)",
-  "prepare_appeal": "Préparation de l’appel (bientôt)",
+    "appeal_coach": "Coach d’appel (bientôt)",
+    "prepare_appeal": "Préparation de l’appel (bientôt)",
     "tools": {
       "deadlines": "Calculateur d'échéances + rappels",
       "evidence": "Générateur de liste de preuves",
@@ -1247,13 +1344,13 @@
       "recurringAddedBody": "{{count}} échéances récurrentes ajoutées.",
       "recurringFailed": "Échec",
       "recurringFailedBody": "Impossible d'ajouter échéances.",
-  "infoLine4": "Heures affichées selon le fuseau horaire de votre appareil sauf indication contraire.",
-  "undoDelete": "Annuler suppression",
-  "restored": "Restauré",
-  "undoFailed": "Échec annulation",
-  "undoFailedBody": "Impossible de restaurer.",
-  "monthLabel": "Mois",
-  "today": "Aujourd'hui",
+      "infoLine4": "Heures affichées selon le fuseau horaire de votre appareil sauf indication contraire.",
+      "undoDelete": "Annuler suppression",
+      "restored": "Restauré",
+      "undoFailed": "Échec annulation",
+      "undoFailedBody": "Impossible de restaurer.",
+      "monthLabel": "Mois",
+      "today": "Aujourd'hui",
       "weekLabel": "Semaine",
       "selectedDate": "Sélectionné :",
       "myDeadlines": "Mes échéances",
@@ -1572,7 +1669,11 @@
       "cta": "🤖 Demander"
     },
     "home": {
-      "recentPrompts": "Invites utilisées récemment"
+      "recentPrompts": "Invites utilisées récemment",
+      "recentPromptsRegion": "Recent prompts section",
+      "promptsList": "List of recent prompts",
+      "promptAccessibilityLabel": "Recent prompt: {{prompt}}",
+      "promptHint": "Double tap to use this prompt again"
     },
     "tools": {
       "coach": "Coach",
@@ -1870,17 +1971,17 @@
     "permissionDenied": "Permission refusée",
     "saved": "Enregistré",
     "saveFailed": "Échec de l'enregistrement",
-  "search": "Rechercher",
-  "clearSearch": "Effacer la recherche",
-  "clear": "Effacer",
-  "results": "résultats",
+    "search": "Rechercher",
+    "clearSearch": "Effacer la recherche",
+    "clear": "Effacer",
+    "results": "résultats",
     "cloud": "Cloud",
     "open": "Ouvrir",
     "close": "Fermer",
     "add": "Ajouter",
     "next": "Suivant",
     "deleted": "Supprimé",
-  "comingSoon": "Cette fonctionnalité sera bientôt disponible. Nous y travaillons.",
+    "comingSoon": "Cette fonctionnalité sera bientôt disponible. Nous y travaillons.",
     "submit": "Soumettre",
     "left": "Gauche",
     "right": "Droite",
@@ -2196,7 +2297,17 @@
     "good": "Good",
     "great": "Great",
     "addEntryLabel": "Add mood entry",
-    "scoreLabel": "Mood score {{score}}"
+    "scoreLabel": "Mood score {{score}}",
+    "screenAnnouncement": "Mood tracker loaded. Select a score and add optional note.",
+    "scoreSection": "Mood score selection",
+    "scoreButtons": "Mood score buttons from -2 to 2",
+    "scoreOption": "{{score}}: {{description}}",
+    "scoreHint": "Double tap to select this mood score",
+    "selectedScore": "Selected: {{description}}",
+    "noteLabel": "Optional note",
+    "noteHelper": "Add any additional details about your mood",
+    "noteAccessibility": "Mood note text input",
+    "noteHint": "Optional field to add context about your mood"
   },
   "homeGuide": {
     "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
@@ -2991,6 +3102,241 @@
       "demandedActionPlaceholder": "Actions spécifiques que vous exigez",
       "compensationRequested": "Indemnisation demandée",
       "compensationRequestedPlaceholder": "Montant d'argent demandé"
+    }
+  },
+  "cultural": {
+    "title": "Cultural Safety & Respect",
+    "subtitle": "Ensure culturally safe and respectful experiences that honor diverse ways of knowing and being",
+    "profiles": {
+      "title": "Cultural Profile Setup",
+      "description": "Quick setup for specific cultural contexts and needs",
+      "indigenous": "Indigenous Cultural Protocols",
+      "indigenousDesc": "Traditional knowledge respect, ceremonial considerations, land acknowledgment",
+      "religious": "Faith-Based Accommodations",
+      "religiousDesc": "Religious practices, spiritual wellness, faith-based resources",
+      "newcomer": "Newcomer & Immigrant Support",
+      "newcomerDesc": "Cultural navigation, interpretation services, settlement resources"
+    },
+    "indigenous": {
+      "title": "Indigenous Cultural Protocols",
+      "description": "Respect for Indigenous ways of knowing, being, and healing",
+      "profileTitle": "Indigenous Cultural Safety",
+      "profileMessage": "Enable protocols that respect Indigenous ways of knowing, ceremonial considerations, and traditional approaches to wellness and advocacy?",
+      "protocols": "Indigenous Protocols",
+      "protocolsDesc": "Apply Indigenous-specific protocols for wellness and advocacy",
+      "traditionalKnowledge": "Traditional Knowledge Respect",
+      "traditionalDesc": "Honor traditional healing and wellness practices alongside Western approaches",
+      "ceremonial": "Ceremonial Considerations",
+      "ceremonialDesc": "Acknowledge ceremonial time, sacred practices, and spiritual obligations",
+      "landAcknowledgment": "Land Acknowledgment",
+      "landDesc": "Show acknowledgment of traditional territories and relationships to land"
+    },
+    "communication": {
+      "title": "Cultural Communication",
+      "description": "Respectful and culturally appropriate communication approaches",
+      "contextAwareness": "Cultural Context Awareness",
+      "contextDesc": "Consider cultural context in all information and recommendations",
+      "respectfulLanguage": "Respectful Language",
+      "respectfulDesc": "Use culturally appropriate and respectful terminology",
+      "competentResources": "Culturally Competent Resources",
+      "competentDesc": "Prioritize culturally competent service providers and resources",
+      "communityGuidance": "Community-Specific Guidance",
+      "communityDesc": "Provide guidance specific to cultural communities and contexts"
+    },
+    "religious": {
+      "title": "Religious & Spiritual Considerations",
+      "description": "Accommodations for faith-based approaches to wellness and advocacy",
+      "profileTitle": "Faith-Based Cultural Safety",
+      "profileMessage": "Enable accommodations for religious practices, spiritual wellness approaches, and faith-based resources?",
+      "accommodations": "Religious Accommodations",
+      "accommodationsDesc": "Provide accommodations for religious practices and observances",
+      "spiritualSupport": "Spiritual Practice Support",
+      "spiritualDesc": "Include spiritual wellness practices and considerations",
+      "faithResources": "Faith-Based Resources",
+      "faithDesc": "Include faith-based support services and resources"
+    },
+    "newcomer": {
+      "profileTitle": "Newcomer Cultural Safety",
+      "profileMessage": "Enable supports for newcomers including interpretation services, cultural navigation, and settlement-specific resources?"
+    },
+    "intersectional": {
+      "title": "Intersectional Identity Support",
+      "description": "Recognition of multiple, intersecting identities and experiences",
+      "awareness": "Intersectional Awareness",
+      "awarenessDesc": "Consider how cultural, racial, and other identities intersect with disability",
+      "disabilityModels": "Cultural Disability Models",
+      "modelsDesc": "Acknowledge different cultural understandings of disability and wellness",
+      "familyCentered": "Family-Centered Approach",
+      "familyDesc": "Recognize the role of family and community in cultural contexts"
+    },
+    "language": {
+      "title": "Language & Interpretation",
+      "description": "Language access and cultural mediation support",
+      "mediators": "Cultural Mediators",
+      "mediatorsDesc": "Access to cultural mediators who understand both disability and cultural contexts",
+      "interpretation": "Interpretation Services",
+      "interpretationDesc": "Include information about interpretation services and language access"
+    },
+    "privacy": {
+      "title": "Cultural Privacy & Consent",
+      "description": "Respect for cultural approaches to privacy, consent, and data sharing",
+      "culturalPrivacy": "Cultural Privacy Practices",
+      "privacyDesc": "Apply cultural protocols for privacy and information sharing",
+      "communityConsent": "Community Consent Protocols",
+      "consentDesc": "Consider community consent protocols for sensitive cultural information",
+      "dataGovernance": "Cultural Data Governance",
+      "governanceDesc": "Respect cultural data governance principles and community ownership"
+    }
+  },
+  "neurodivergent": {
+    "title": "Neurodivergent Support",
+    "subtitle": "Customize your experience for optimal comfort and accessibility",
+    "profile": {
+      "confirmTitle": "Apply Profile Settings?",
+      "confirmMessage": "This will override your current preferences with optimized settings for {{profile}}."
+    },
+    "reset": {
+      "title": "Reset All Settings?",
+      "message": "This will restore all neurodivergent preferences to their default values.",
+      "button": "Reset All Settings",
+      "accessibility": "Reset all neurodivergent settings to defaults"
+    },
+    "profiles": {
+      "title": "Quick Setup Profiles",
+      "description": "Apply optimized settings for common neurodivergent needs",
+      "adhd": "ADHD Support",
+      "adhdDesc": "Focus aids, time awareness, task management",
+      "autism": "Autism Support",
+      "autismDesc": "Sensory-friendly, clear communication, predictable interface",
+      "dyslexia": "Dyslexia Support",
+      "dyslexiaDesc": "Reading aids, alternative formats, clear typography",
+      "sensory": "Sensory Processing Support",
+      "sensoryDesc": "Reduced stimulation, minimal interface, gentle interactions"
+    },
+    "themes": {
+      "title": "Sensory-Friendly Themes",
+      "description": "Choose colors that work best for your visual processing"
+    },
+    "sensory": {
+      "title": "Sensory Preferences",
+      "description": "Adjust visual and interaction elements for comfort",
+      "reducedMotion": "Reduced Motion",
+      "reducedMotionDesc": "Minimize animations and transitions",
+      "highContrast": "High Contrast",
+      "highContrastDesc": "Stronger color contrasts for better visibility",
+      "colorBlindFriendly": "Color Blind Friendly",
+      "colorBlindDesc": "Use patterns and shapes in addition to color",
+      "sensoryFriendly": "Sensory-Friendly Mode",
+      "sensoryFriendlyDesc": "Reduce overstimulating elements",
+      "minimal": "Minimal Interface",
+      "minimalDesc": "Hide non-essential interface elements"
+    },
+    "focus": {
+      "title": "Focus & Attention",
+      "description": "Tools to help maintain focus and manage attention",
+      "focusMode": "Focus Mode",
+      "focusModeDesc": "Hide distracting elements while working",
+      "distractionReduction": "Distraction Reduction",
+      "distractionDesc": "Minimize notifications and visual noise",
+      "breakReminders": "Task Break Reminders",
+      "breakDesc": "Gentle reminders to take breaks during long tasks",
+      "timeAwareness": "Time Awareness",
+      "timeDesc": "Show time estimates and progress indicators"
+    },
+    "executive": {
+      "title": "Executive Function Support",
+      "description": "Tools to help with planning, organization, and task completion",
+      "stepByStep": "Step-by-Step Guidance",
+      "stepByStepDesc": "Break complex tasks into clear steps",
+      "visualProgress": "Visual Progress Indicators",
+      "visualProgressDesc": "Show clear progress through tasks and forms",
+      "taskChunking": "Task Chunking",
+      "taskChunkingDesc": "Break large tasks into smaller, manageable pieces",
+      "priorityHighlighting": "Priority Highlighting",
+      "priorityDesc": "Clearly mark important or urgent items"
+    },
+    "cognitive": {
+      "title": "Cognitive Load Management",
+      "description": "Reduce mental processing demands",
+      "simplifiedLanguage": "Simplified Language",
+      "simplifiedDesc": "Use clear, direct language throughout the app",
+      "extraTime": "Extra Processing Time",
+      "extraTimeDesc": "Allow more time for reading and decision-making",
+      "confirmations": "Confirmation Dialogs",
+      "confirmationsDesc": "Ask for confirmation before important actions",
+      "undo": "Undo Available",
+      "undoDesc": "Provide undo options for reversible actions"
+    },
+    "communication": {
+      "title": "Communication Preferences",
+      "description": "Adjust how information is presented and communicated",
+      "literal": "Literal Language",
+      "literalDesc": "Avoid idioms, metaphors, and unclear expressions",
+      "clearInstructions": "Clear Instructions",
+      "clearDesc": "Provide explicit, detailed instructions for all tasks",
+      "alternativeFormats": "Alternative Formats",
+      "alternativeDesc": "Offer information in multiple formats (text, audio, visual)"
+    },
+    "interaction": {
+      "title": "Interaction Preferences",
+      "description": "Customize how you interact with the app",
+      "extendedTargets": "Extended Touch Targets",
+      "extendedDesc": "Make buttons and links easier to tap accurately",
+      "gestureAlternatives": "Gesture Alternatives",
+      "gestureDesc": "Provide button alternatives to gesture controls",
+      "voiceControl": "Voice Control Friendly",
+      "voiceDesc": "Optimize interface for voice control users"
+    }
+  },
+  "disclaimers": {
+    "legal": {
+      "title": "Legal Disclaimer",
+      "compact": "Educational only — not legal advice. Consult official sources and qualified legal professionals.",
+      "full": "This information is for educational purposes only and does not constitute legal advice. Laws vary by jurisdiction and change over time. Always verify information with official sources and consult qualified legal professionals for your specific situation."
+    },
+    "medical": {
+      "title": "Medical Disclaimer",
+      "compact": "Not medical advice. Consult healthcare providers for medical decisions.",
+      "full": "This app does not provide medical advice, diagnosis, or treatment. Information is for educational purposes only. Always consult qualified healthcare providers for medical decisions. In medical emergencies, call 911 or your local emergency number immediately."
+    },
+    "wellness": {
+      "title": "Wellness Disclaimer",
+      "compact": "Adapt activities to your abilities. Stop if experiencing pain or distress.",
+      "full": "Wellness tools are suggestions only. Always adapt activities to your current abilities and stop immediately if you experience pain, distress, or worsening symptoms. These tools do not replace professional healthcare or crisis intervention services."
+    },
+    "emergency": {
+      "title": "Emergency Services",
+      "compact": "For emergencies, call 911 or your local emergency number immediately.",
+      "full": "This app is not for emergency situations. If you are in immediate danger or experiencing a medical emergency, call 911 (Canada) or your local emergency number immediately. For mental health crisis, go to your nearest emergency department or call a crisis line."
+    },
+    "ai": {
+      "title": "AI Tools Disclaimer",
+      "compact": "AI suggestions are not professional advice. Review and verify all outputs.",
+      "full": "AI-generated content is for informational purposes only and may contain errors. AI suggestions are not professional legal, medical, or other advice. Always review, verify, and adapt AI outputs for your specific situation. Human professional judgment supersedes AI recommendations."
+    },
+    "community": {
+      "title": "Community Disclaimer",
+      "compact": "Community content reflects individual experiences, not professional advice.",
+      "full": "Community discussions reflect individual experiences and opinions, not professional advice. The app does not endorse user-generated content. Use community information as starting points for your own research and professional consultation."
+    },
+    "data": {
+      "title": "Data Export Disclaimer",
+      "compact": "Protect exported data. Remove personal identifiers before sharing.",
+      "full": "Exported data may contain sensitive personal information. Protect files with strong passwords, store securely, and remove personal identifiers before sharing. You are responsible for data security after export."
+    },
+    "cultural": {
+      "title": "Cultural Safety",
+      "compact": "Approach cultural information with respect and consult community-specific resources.",
+      "full": "Cultural information is provided for general awareness. Approach with respect, recognize diversity within communities, and consult community-specific resources and leaders for culturally appropriate guidance."
+    },
+    "crisis": {
+      "title": "Crisis Support",
+      "compact": "Crisis tools are not emergency services. Get immediate help if in danger.",
+      "full": "Crisis support tools are supplementary only and not emergency intervention services. If you are in immediate danger, having thoughts of self-harm, or experiencing a mental health crisis, seek immediate professional help through emergency services or crisis lines."
+    },
+    "general": {
+      "title": "Important Information",
+      "text": "This information is provided for educational purposes. Consult appropriate professionals for your specific situation."
     }
   }
 }
