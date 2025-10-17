@@ -13,10 +13,9 @@ import {
 } from 'react-native';
 
 import type { EnergyForecast as EnergyForecastType } from '../services/energyPrediction';
-import { useAppPalette } from '../theme/usePalette';
 import type { Palette } from '../theme/usePalette';
-
-import { TextV2 } from './common/TextV2';
+import { useAppPalette } from '../theme/usePalette';
+import { TextV2 } from '../components/TextV2';
 
 interface EnergyForecastComponentProps {
   forecast: EnergyForecastType | null;
@@ -182,11 +181,11 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
               accessibilityLabel={`Recommendation ${index + 1}: ${rec}`}
             >
               <Ionicons
-                name="checkmark-circle"
-                size={16}
-                color={palette.success.main}
-                style={styles.recIcon}
-              />
+                  name="checkmark-circle"
+                  size={16}
+                  color={typeof palette.success === 'string' ? palette.success : palette.success.main}
+                  style={styles.recIcon}
+                />
               <TextV2 variant="body2" style={styles.recText}>
                 {rec}
               </TextV2>
@@ -303,9 +302,11 @@ interface SummaryItemProps {
 }
 
 function SummaryItem({ label, value, subValue, icon, palette }: SummaryItemProps) {
+  const iconColor = typeof palette.primary === 'string' ? palette.primary : palette.primary.main;
+  
   return (
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-      <Ionicons name={icon as any} size={24} color={palette.primary.main} />
+      <Ionicons name={icon as any} size={24} color={iconColor} />
       <View style={{ flex: 1 }}>
         <TextV2 variant="caption" style={{ color: palette.text.secondary }}>
           {label}

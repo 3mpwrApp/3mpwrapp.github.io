@@ -3407,6 +3407,37 @@
       "savingFailed": "Could not save notification settings"
     },
     "saveHint": "Save your notification preferences"
+  },
+  "weeklySummary": {
+    "title": "Weekly Summary",
+    "generatedOn": "Generated on {{date}}",
+    "weekOf": "Week of {{startDate}} - {{endDate}}",
+    "energyMetrics": "Energy Analysis",
+    "averageEnergy": "Average Energy",
+    "bestDay": "Best Day",
+    "worstDay": "Lowest Energy Day",
+    "trend": "Trend",
+    "trendImproving": "📈 Improving",
+    "trendDeclining": "📉 Declining",
+    "trendStable": "➡️ Stable",
+    "recoveryRate": "Recovery Time",
+    "moodMetrics": "Mood Patterns",
+    "dominantMood": "Most Common Mood",
+    "moodVariance": "Mood Variability",
+    "toolUsage": "Tool Usage",
+    "totalSessions": "Total Sessions",
+    "mostUsedTools": "Most Used Tools",
+    "categoriesUsed": "Categories Explored",
+    "timeSpent": "Time in Wellness",
+    "achievements": "Achievements",
+    "streakDays": "Day Streak",
+    "goalsCompleted": "Goals Completed",
+    "newAchievements": "New Achievements",
+    "wellnessScore": "Wellness Score",
+    "insights": "Insights",
+    "recommendations": "Recommendations",
+    "deliveryStatus": "Delivery Status",
+    "scheduledForDelivery": "Scheduled for next Monday morning",
+    "delivered": "Delivered on {{date}}"
   }
 }
-

@@ -44,3 +44,5 @@ export function useAppPalette(): Palette {
   }
   return scheme === "dark" ? colors.dark : colors.light;
 }
+
+export { Palette };
