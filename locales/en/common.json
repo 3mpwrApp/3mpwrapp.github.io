@@ -1648,6 +1648,47 @@
       "photo": "[T] settings.account.photo",
       "deleteNoPassword": "[T] settings.account.deleteNoPassword"
     },
+    "editor": {
+      "title": "Profile Settings",
+      "role": {
+        "title": "Your Role",
+        "description": "How do you use 3mpwr App?",
+        "pwd": "Person with Disability",
+        "supporter": "Supporter or Family Member",
+        "ally": "Advocate or Ally"
+      },
+      "disability": {
+        "title": "Disability Categories",
+        "description": "Select all that apply"
+      },
+      "accommodations": {
+        "title": "Accommodations",
+        "description": "Select accommodations you need"
+      },
+      "energy": {
+        "title": "Energy Patterns",
+        "description": "When are you typically most energetic?",
+        "morning": "Morning",
+        "afternoon": "Afternoon",
+        "evening": "Evening"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "toggle": "Enable notifications",
+        "description": "Receive push notifications and reminders"
+      },
+      "save": "Save Changes",
+      "saved": "Your profile has been updated.",
+      "unsavedChanges": "You have unsaved changes",
+      "revert": {
+        "title": "Discard Changes?",
+        "message": "All unsaved changes will be lost."
+      },
+      "error": {
+        "roleRequired": "Please select a role",
+        "disabilityRequired": "Please select at least one disability category"
+      }
+    },
     "emergencyWallet": {
       "title": "[T] settings.emergencyWallet.title",
       "subtitle": "[T] settings.emergencyWallet.subtitle",

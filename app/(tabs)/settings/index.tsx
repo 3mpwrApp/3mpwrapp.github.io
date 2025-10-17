@@ -225,6 +225,22 @@ export default function SettingsScreen() {
         </React.Suspense>
       </Section>
       <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>
+        {/* Profile Editor Link */}
+        {!isGuest && (
+          <Link href={'/(tabs)/settings/profile-editor' as any} asChild>
+            <A11yPressable
+              style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+              accessibilityRole='button'
+              accessibilityLabel="Profile Editor - Update your disability profile, role, and energy patterns"
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='person-circle' size={20} color={palette.primary} />
+              <Text style={styles.linkText}>Edit Profile</Text>
+              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+            </A11yPressable>
+          </Link>
+        )}
+        
         {isGuest && (
           <View style={{ marginBottom:16 }}>
             <Text style={[styles.description, { marginBottom:8 }]}>{t('settings.account.guestNotice','You are browsing as a guest. Create an account to sync data across devices and enable full features.')}</Text>
