@@ -946,7 +946,6 @@ const styles = StyleSheet.create({
     padding: 16,
     marginBottom: 20,
     borderWidth: 1,
-    borderColor: `${textColor}33`,
   },
   sectionTitle: {
     fontSize: 18,

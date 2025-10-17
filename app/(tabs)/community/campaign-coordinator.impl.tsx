@@ -3,13 +3,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import {
-  Alert,
-  Modal,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View
+    Alert,
+    Modal,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -63,6 +63,7 @@ interface _TaskAssignment {
   accessibilityRequirements?: string[];
 }
 
+ 
 interface _AdvocacyTarget {
   id: string;
   name: string;
@@ -82,6 +83,7 @@ interface ContactInfo {
   socialMedia?: Record<string, string>;
 }
 
+ 
 interface _CommunicationStrategy {
   channels: string[];
   messaging: Record<string, string>; // channel -> message

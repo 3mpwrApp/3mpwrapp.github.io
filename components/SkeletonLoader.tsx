@@ -13,8 +13,8 @@ interface SkeletonLoaderProps {
 export default function SkeletonLoader({
   lines = 3,
   lineHeight = 16,
-  _width = '100%',
-  _height = 200,
+  _width,
+  _height,
   style,
 }: SkeletonLoaderProps) {
   const textColor = useThemeColor({}, 'text');
