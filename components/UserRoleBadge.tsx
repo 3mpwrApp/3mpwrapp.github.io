@@ -16,41 +16,41 @@ interface UserRoleBadgeProps {
   showLabel?: boolean;
 }
 
-const getRoleConfig = (role: UserRoleType) => {
+const getRoleConfig = (role: UserRoleType, textColor: string) => {
   const configs = {
     pwd: {
       label: 'Person with Disability',
-      icon: 'accessibility' as const,
-      color: '#007AFF',
-      backgroundColor: '#E3F2FD',
+      icon: 'accessibility-outline' as const,
+      color: textColor,
+      backgroundColor: `${textColor}15`,
       description: 'Verified person with disability',
     },
     verified: {
       label: 'Verified',
-      icon: 'checkmark-circle' as const,
-      color: '#34C759',
-      backgroundColor: '#E8F5E9',
+      icon: 'checkmark-circle-outline' as const,
+      color: textColor,
+      backgroundColor: `${textColor}15`,
       description: 'Verified user account',
     },
     supporter: {
       label: 'Supporter',
-      icon: 'heart-circle' as const,
-      color: '#FF2D55',
-      backgroundColor: '#FCE4EC',
+      icon: 'heart-circle-outline' as const,
+      color: textColor,
+      backgroundColor: `${textColor}15`,
       description: 'Verified supporter or family member',
     },
     ally: {
       label: 'Ally',
-      icon: 'handshake' as const,
-      color: '#FF9500',
-      backgroundColor: '#FFF3E0',
+      icon: 'people-outline' as const,
+      color: textColor,
+      backgroundColor: `${textColor}15`,
       description: 'Verified advocate or professional ally',
     },
     admin: {
       label: 'Admin',
-      icon: 'shield-checkmark' as const,
-      color: '#8B00FF',
-      backgroundColor: '#F3E5F5',
+      icon: 'shield-checkmark-outline' as const,
+      color: textColor,
+      backgroundColor: `${textColor}15`,
       description: 'Administrator account',
     },
   };
@@ -91,7 +91,7 @@ export default function UserRoleBadge({
   showLabel = false,
 }: UserRoleBadgeProps) {
   const textColor = useThemeColor({}, 'text');
-  const config = getRoleConfig(role);
+  const config = getRoleConfig(role, textColor);
   const sizeConfig = getSizeConfig(size);
 
   const BadgeContent = (

@@ -1,5 +1,7 @@
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
+import { useThemeColor } from '../hooks/useThemeColor';
+
 interface LoadingSpinnerProps {
   size?: 'small' | 'large';
   color?: string;
@@ -7,8 +9,11 @@ interface LoadingSpinnerProps {
 
 export default function LoadingSpinner({
   size = 'large',
-  color = '#007AFF',
+  color,
 }: LoadingSpinnerProps) {
+  const defaultColor = useThemeColor({}, 'text');
+  const spinnerColor = color || defaultColor;
+
   return (
     <View
       style={styles.container}
@@ -17,7 +22,7 @@ export default function LoadingSpinner({
       accessibilityLabel="Loading"
       accessibilityLiveRegion="polite"
     >
-      <ActivityIndicator size={size} color={color} />
+      <ActivityIndicator size={size} color={spinnerColor} />
     </View>
   );
 }

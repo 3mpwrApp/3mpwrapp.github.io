@@ -23,8 +23,7 @@ export default function GuestModeBadge() {
   const colors = {
     text: textColor,
     background: backgroundColor,
-    primary: '#007AFF',
-    warning: '#FF9500',
+    warning: textColor,
     border: `${textColor}20`,
   };
 
@@ -79,7 +78,7 @@ export default function GuestModeBadge() {
           accessibilityRole="button"
           accessibilityLabel="Sign in to your account"
           accessibilityHint="Tap to navigate to login screen"
-          style={[styles.button, { backgroundColor: colors.primary }]}
+          style={[styles.button, { backgroundColor: colors.text }]}
         >
           <Text style={styles.buttonText}>Sign In</Text>
         </A11yPressable>

@@ -13,7 +13,6 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import A11yPressable from '../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../components/A11yWrapper';
-import { useScreenReaderEnabled } from '../../hooks/useA11y';
 import { useThemeColor } from '../../hooks/useThemeColor';
 
 interface AccessibilityPreferences {
@@ -51,13 +50,11 @@ export default function OnboardingScreen() {
   const router = useRouter();
   const textColor = useThemeColor({}, 'text');
   const backgroundColor = useThemeColor({}, 'background');
-  const isScreenReaderEnabled = useScreenReaderEnabled();
   
   // For now, we'll create a simple announce function
-  const announceForAccessibility = (message: string) => {
+  const announceForAccessibility = (_message: string) => {
     // This would typically use AccessibilityInfo.announceForScreenReader
     // or similar platform-specific announcement method
-    console.log('Accessibility announcement:', message);
   };
   
   const [step, setStep] = useState<'role-select' | 'welcome' | 'accessibility' | 'disability' | 'supporter-info' | 'ally-info' | 'ready'>('role-select');
@@ -89,10 +86,10 @@ export default function OnboardingScreen() {
   const colors = {
     text: textColor,
     background: backgroundColor,
-    primary: '#007AFF',
-    secondary: '#5AC8FA',
-    success: '#34C759',
-    warning: '#FF9500',
+    primary: textColor,
+    secondary: textColor,
+    success: textColor,
+    warning: textColor,
     border: `${textColor}20`,
   };
 
@@ -223,7 +220,7 @@ export default function OnboardingScreen() {
           },
         ]}
       >
-        <Ionicons name="handshake" size={48} color={colors.success} style={{ marginBottom: 12 }} />
+        <Ionicons name="people" size={48} color={colors.success} style={{ marginBottom: 12 }} />
         <A11yTitle level={3} style={[styles.roleCardTitle, { color: colors.text }]}>
           Advocate / Professional Ally
         </A11yTitle>
@@ -949,7 +946,7 @@ const styles = StyleSheet.create({
     padding: 16,
     marginBottom: 20,
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: `${textColor}33`,
   },
   sectionTitle: {
     fontSize: 18,

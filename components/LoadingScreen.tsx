@@ -8,7 +8,7 @@ interface LoadingScreenProps {
 
 export default function LoadingScreen({ message }: LoadingScreenProps) {
   const backgroundColor = useThemeColor({}, 'background');
-  const primaryColor = '#007AFF';
+  const spinnerColor = useThemeColor({}, 'text');
 
   return (
     <View
@@ -18,7 +18,7 @@ export default function LoadingScreen({ message }: LoadingScreenProps) {
       accessibilityLabel={message || 'Loading content'}
       accessibilityLiveRegion="polite"
     >
-      <ActivityIndicator size="large" color={primaryColor} style={styles.spinner} />
+      <ActivityIndicator size="large" color={spinnerColor} style={styles.spinner} />
     </View>
   );
 }
