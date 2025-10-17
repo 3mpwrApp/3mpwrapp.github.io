@@ -171,14 +171,14 @@ We've added powerful AI-powered features that learn from your patterns and adapt
 - **Motor Accessibility:** Settings → Motor Accessibility → Enable dwell-click, touch targets, or tremor compensation
 
 ### Feedback
-Use Settings → About → Feedback or email accessibility@3mpwr.app – early feedback shapes priorities.
+Use Settings → About → Feedback or email empowrapp08162025@gmail.com – early feedback shapes priorities.
 
 ---
 
 <a id="all-features-available"></a>
 ## 📊 Complete Features Inventory - All 50+ Features ✅
 
-**3mpwr now includes 50+ features across 6 major phases of development.** Everything is accessible, secure, and works on your device.
+**3mpwrApp now includes 50+ features across 6 major phases of development.** Everything is accessible, secure, and works on your device.
 
 ### ✨ Phase 6: ML-Driven Personalization (COMPLETE - October 2025) ✅
 - **Energy Prediction** - 24-hour energy forecasting with weighted ML algorithms
@@ -262,7 +262,7 @@ Use Settings → About → Feedback or email accessibility@3mpwr.app – early f
 <a id="all-disability-types-supported"></a>
 ## All Disability Types Supported
 
-**3mpwr is designed to support every type of disability, condition, and difference.** We recognize that disability is diverse and that everyone's experience is unique.
+**3mpwrApp is designed to support every type of disability, condition, and difference.** We recognize that disability is diverse and that everyone's experience is unique.
 
 ### ♿ Physical and Mobility Disabilities
 **What we support:**
@@ -872,7 +872,7 @@ The app includes legal information and resources for:
 ## Getting Started in 5 Minutes
 
 ### Step 1: Download and Open
-- Open the 3mpwr app on your phone or computer
+- Open the 3mpwrApp on your phone or computer
 - Create an account or sign in (Guest mode is available if you prefer)
 - Accept the Terms of Service (required to use the app)
 
@@ -904,7 +904,7 @@ Pick what you need most right now:
 <a id="7-day-onboarding-walkthrough"></a>
 ## 🗓️ Your First Week: 7-Day Onboarding Walkthrough
 
-**What this is:** A guided experience showing you what you can do in your first week using 3mpwr. Each day introduces new features with real scenarios and examples.
+**What this is:** A guided experience showing you what you can do in your first week using 3mpwrApp. Each day introduces new features with real scenarios and examples.
 
 **How to use this guide:**
 - Follow one day per day (or move at your own pace)
@@ -917,7 +917,7 @@ Pick what you need most right now:
 
 ### 📅 **Day 1: Getting Started & Your First Save** ⭐
 
-**Theme:** Understanding what 3mpwr can do for you  
+**Theme:** Understanding what 3mpwrApp can do for you  
 **Time:** 15 minutes  
 **Goal:** Create your first saved document
 
@@ -2649,7 +2649,7 @@ Use Campaign Coordination for:
 1. Go to Settings → Privacy & Backups
 2. Tap "Export Backup"
 3. Choose where to save it (your cloud drive is safest)
-4. Name it with the date (like "3mpwr-backup-2025-10-12")
+4. Name it with the date (like "3mpwrApp-backup-2025-10-12")
 
 **Restoring from backup:**
 1. Go to Settings → Privacy & Backups
@@ -2842,7 +2842,7 @@ Contact support if:
 
 ---
 
-## 🎉 You're Ready to Use 3mpwr!
+## 🎉 You're Ready to Use 3mpwrApp!
 
 This guide covers all the main features, but don't feel like you need to learn everything at once. Start with what you need most, and explore other features as you feel comfortable.
 
@@ -3241,7 +3241,7 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 - Join community discussions
 - Participate in user testing
 - Attend our virtual town halls
-- Email us at feedback@3mpwr.app
+- Email us at empowrapp08162025@gmail.com
 
 **What happens to your feedback:**
 - We read every single message

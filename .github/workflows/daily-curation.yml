@@ -1,0 +1,132 @@
+name: Daily News Curation
+
+on:
+  schedule:
+    # Run at 9:00 AM UTC daily (5:00 AM EST, 6:00 AM EDT)
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    inputs:
+      force_publish:
+        description: 'Force publish even with low score items (requires content to exist)'
+        required: false
+        default: false
+        type: boolean
+      min_score:
+        description: 'Minimum score threshold'
+        required: false
+        default: '2.5'
+        type: string
+      debug_mode:
+        description: 'Enable debug logging'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        npm install --production
+        # Install any additional dependencies needed for curation
+        npm install axios cheerio rss-parser
+    
+    - name: Run daily curation
+      env:
+        MIN_SCORE: ${{ github.event.inputs.min_score || '2.5' }}
+        FORCE_PUBLISH: ${{ github.event.inputs.force_publish == 'true' && '1' || '0' }}
+        DEBUG_CURATOR: ${{ github.event.inputs.debug_mode == 'true' && '1' || '0' }}
+        WRITE_JSON: '1'
+        FILTER_LANGS: 'en,fr'
+      run: |
+        echo "Starting daily curation with settings:"
+        echo "MIN_SCORE: $MIN_SCORE"
+        echo "FORCE_PUBLISH: $FORCE_PUBLISH"
+        echo "DEBUG_CURATOR: $DEBUG_CURATOR"
+        
+        node scripts/daily-curator.js
+    
+    - name: Generate social media posts
+      run: |
+        echo "Generating social media content..."
+        node scripts/generate-social-posts.js || echo "Social post generation optional - continuing"
+    
+    - name: Update git configuration
+      run: |
+        git config --local user.email "empowrapp08162025@gmail.com"
+        git config --local user.name "3mpwrApp Daily Curator"
+    
+    - name: Commit and push changes
+      run: |
+        TODAY=$(date -u +%Y-%m-%d)
+        
+        # Check if there are any changes to commit
+        if git diff --quiet && git diff --staged --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
+        
+        # Add all new files
+        git add _curation/ _posts/ public/ || true
+        
+        # Check again after adding
+        if git diff --staged --quiet; then
+          echo "No staged changes to commit"
+          exit 0
+        fi
+        
+        # Commit changes
+        git commit -m "Daily curation: $TODAY
+        
+        - Automated news monitoring from 50+ sources
+        - Articles scored for disability rights relevance  
+        - Social media content generated
+        - JSON API updated for latest curated items
+        
+        Sources include: Government accessibility sites, disability rights organizations, workers' compensation boards, news outlets, and community feeds."
+        
+        # Push changes
+        git push origin main
+    
+    - name: Create summary
+      run: |
+        TODAY=$(date -u +%Y-%m-%d)
+        echo "## Daily Curation Summary - $TODAY" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f "_curation/$TODAY-curation.md" ]; then
+          ITEM_COUNT=$(grep -c "^[0-9]\+\." "_curation/$TODAY-curation.md" || echo "0")
+          echo "✅ **$ITEM_COUNT items curated** from 50+ news sources" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Top 3 items:**" >> $GITHUB_STEP_SUMMARY
+          head -15 "_curation/$TODAY-curation.md" | tail -12 >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ No items met the minimum score threshold today" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [ -f "_posts/$TODAY-daily-curation.md" ]; then
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **Daily blog post created** at \`_posts/$TODAY-daily-curation.md\`" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [ -f "public/curation-latest.json" ]; then
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **JSON API updated** at \`/curation-latest.json\`" >> $GITHUB_STEP_SUMMARY
+        fi

@@ -1,0 +1,45 @@
+{
+  "generated": "2025-10-17T19:53:54.534Z",
+  "minScore": 1,
+  "forced": false,
+  "filterLangs": [],
+  "totalRanked": 4,
+  "items": [
+    {
+      "title": "",
+      "link": "",
+      "description": "",
+      "score": 1.5,
+      "source": "https://disabilityalliancebc.org/feed/",
+      "lang": "en",
+      "contentType": "GENERAL_CONTENT"
+    },
+    {
+      "title": "",
+      "link": "",
+      "description": "",
+      "score": 1.5,
+      "source": "https://disabilityalliancebc.org/feed/",
+      "lang": "en",
+      "contentType": "GENERAL_CONTENT"
+    },
+    {
+      "title": "",
+      "link": "",
+      "description": "",
+      "score": 1.5,
+      "source": "https://disabilityalliancebc.org/feed/",
+      "lang": "en",
+      "contentType": "GENERAL_CONTENT"
+    },
+    {
+      "title": "",
+      "link": "",
+      "description": "",
+      "score": 1.5,
+      "source": "https://disabilityalliancebc.org/feed/",
+      "lang": "en",
+      "contentType": "GENERAL_CONTENT"
+    }
+  ]
+}

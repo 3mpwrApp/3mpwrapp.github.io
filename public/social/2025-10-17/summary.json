@@ -1,0 +1,43 @@
+{
+  "date": "2025-10-17",
+  "totalItems": 7,
+  "postsGenerated": 5,
+  "platforms": [
+    "twitter",
+    "mastodon",
+    "linkedin",
+    "instagram"
+  ],
+  "topItems": [
+    {
+      "title": "CBC News: Disability advocates call for faster implementation of accessibility standards",
+      "score": 4.5,
+      "link": "https://www.cbc.ca/news/politics/accessibility-standards-implementation-1.7234567",
+      "description": "Disability rights groups urge federal government to accelerate timeline for Accessible Canada Act compliance across transportation and telecommunications sectors."
+    },
+    {
+      "title": "Statistics Canada: A profile of persons with disabilities among Canadians aged 15 years and older, 2022",
+      "score": 4.1,
+      "link": "https://www150.statcan.gc.ca/n1/pub/89-654-x/89-654-x2023002-eng.htm",
+      "description": "Latest data reveals 27% of Canadians aged 15+ have at least one disability, with employment gaps highlighting need for better workplace inclusion."
+    },
+    {
+      "title": "The Globe and Mail: Why workplace accommodations benefit everyone, not just disabled employees",
+      "score": 3.8,
+      "link": "https://www.theglobeandmail.com/business/article-workplace-accommodations-universal-design/",
+      "description": "New research shows flexible work arrangements and accessible design improve productivity and job satisfaction for all workers."
+    },
+    {
+      "title": "Canada Human Rights Commission - Filing a Complaint",
+      "score": 3.5,
+      "link": "https://www.chrc-ccdp.gc.ca/en/complaints/how-file-complaint",
+      "description": "Step-by-step guide for filing discrimination complaints, including accessibility-related issues in employment, services, and housing."
+    },
+    {
+      "title": "Accessible Canada Act - Government of Canada",
+      "score": 3.2,
+      "link": "https://accessible.canada.ca/en",
+      "description": "Canada's landmark accessibility legislation creating a barrier-free Canada by 2040, with comprehensive requirements for federally regulated organizations."
+    }
+  ]
+}

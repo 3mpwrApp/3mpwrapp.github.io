@@ -1,21 +1,66 @@
 {
   "rssFeeds": [
     
+    "https://accessible.canada.ca/en/whats-new.atom",
+    "https://www.canada.ca/content/canadasite/api/nws/fds/en/web-feeds/employment-social-development.atom.xml",
+    "https://www.statcan.gc.ca/en/dai/rss/rss-main",
+    "https://www.veterans.gc.ca/eng/rss",
+    "https://www.servicecanada.gc.ca/rss/news-eng.xml",
+    
+    "https://www.ohrc.on.ca/en/news_rss.xml",
+    "https://www.wsib.ca/en/newsroom/rss.xml",
+    "https://news.ontario.ca/en/search/rss?topic=social+services",
+    "https://news.ontario.ca/en/search/rss?topic=disability",
+    
+    "https://www.worksafebc.com/en/about-us/news-events/news/rss",
     "https://disabilityalliancebc.org/feed/",
+    "https://news.gov.bc.ca/rss",
+    
+    "https://www.wcb.ab.ca/resources/insight/insight.xml",
+    "https://www.alberta.ca/newsroom.rss",
+    
+    "https://www.wcb.mb.ca/news/feed",
     "https://news.gov.mb.ca/news/index.rss",
+    
+    "https://www.wcbsask.com/news?format=feed&type=rss",
+    
+    "https://www.cnesst.gouv.qc.ca/fr/rss/nouvelles",
+    
+    "https://novascotia.ca/news/rss.xml",
+    
+    "https://www2.gnb.ca/content/gnb/en/news.rss.xml",
+    
+    "https://www.gov.nl.ca/releases/news.xml",
+    
+    "https://www.princeedwardisland.ca/en/rss/news.xml",
+    
     "https://www.gov.nt.ca/en/rss.xml",
+    "https://yukon.ca/en/news/rss.xml",
+    "https://www.gov.nu.ca/executive-and-intergovernmental-affairs/news/rss.xml",
+    
+    "https://www.ccdonline.ca/feed/",
+    "https://inclusioncanada.ca/feed/",
+    "https://cnib.ca/en/news/feed",
+    "https://www.marchofdimes.ca/EN/news/RSS",
+    "https://www.disabledwomensnetwork.ca/feed/",
+    "https://www.camh.ca/en/camh-news-and-stories/rss.xml",
+    
+    "https://rss.cbc.ca/lineup/canada.xml",
+    "https://www.theglobeandmail.com/canada/rss/",
+    "https://nationalpost.com/rss/",
+    "https://www.ctvnews.ca/rss/canada",
     "https://globalnews.ca/canada/feed/",
+    
     "https://rabble.ca/feed/",
     "https://www.straight.com/rss.xml",
     "https://thetyee.ca/rss2.xml",
-    "https://policyoptions.irpp.org/feed/",
     
-    "https://rss.cbc.ca/lineup/canada.xml",
-    "https://www.ctvnews.ca/rss/canada",
+    "https://feeds.feedburner.com/DRRINews",
+    "https://www.un.org/development/desa/disabilities/news/rss.xml",
+    "https://www.internationaldisabilityalliance.org/feed/",
     
-    "https://feeds.google.com/reader/public/com.google.reader/label/disability-rights",
-    "https://feeds.google.com/reader/public/com.google.reader/label/workers-rights",
-    "https://feeds.google.com/reader/public/com.google.reader/label/government-policy"
+    "https://www.irpp.org/feed/",
+    "https://policyoptions.irpp.org/feed/"
   ],
   
   "scoringKeywords": {

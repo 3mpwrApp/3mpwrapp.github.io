@@ -6,7 +6,7 @@ description: Our commitment to inclusive, accessible design and development for 
 
 # Accessibility Statement
 
-3mpowr is committed to inclusive design. We aim to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA, and we adopt selected AAA practices where feasible.
+3mpwrApp is committed to inclusive design. We aim to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA, and we adopt selected AAA practices where feasible.
 
 ## Our approach
 - Design with semantic HTML, proper landmarks, and descriptive headings
@@ -32,7 +32,7 @@ For detailed information about accessibility features in the 3mpwrApp itself, in
 
 ## Feedback and support
 If you encounter accessibility issues:
-- **App accessibility:** accessibility@3mpwr.app
+- **App accessibility:** empowrapp08162025@gmail.com
 - **Website accessibility:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
 - Subject: "Accessibility Feedback"
 - Please include page URL, assistive tech/browser details, and steps to reproduce.

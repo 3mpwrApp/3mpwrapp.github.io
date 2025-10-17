@@ -172,8 +172,8 @@ We support **every type of disability:**
 
 ### Getting Help
 - **In-App Support:** Settings → Contact Support
-- **Email:** support@3mpwrapp.ca
-- **Accessibility Issues:** accessibility@3mpwrapp.ca
+- **Email:** empowrapp08162025@gmail.com
+- **Accessibility Issues:** empowrapp08162025@gmail.com
 - **Website:** [3mpwrapp.github.io](https://3mpwrapp.github.io)
 
 ### Response Times

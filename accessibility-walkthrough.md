@@ -170,7 +170,7 @@ Use the Settings → Dyslexia screen to configure fonts, spacing, overlays, and 
 
 **How to Provide Feedback:**
 - **In-App:** Settings → About → Feedback
-- **Email:** accessibility@3mpwr.app
+- **Email:** empowrapp08162025@gmail.com
 - **Community:** #accessibility channel (planned)
 - **Testing:** Sign-up prompt coming to Settings → Cognitive Accessibility
 
@@ -263,6 +263,6 @@ Use the Settings → Dyslexia screen to configure fonts, spacing, overlays, and 
 
 ---
 
-**Prepared By:** 3mpwr Accessibility Engineering
+**Prepared By:** 3mpwrApp Accessibility Engineering
 
 *Feedback welcome. This document will iterate as new features go live.*
