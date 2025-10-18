@@ -2,12 +2,12 @@
 layout: default
 title: Newsletter
 permalink: /newsletter/
-description: Subscribe for weekly updates, community stories, resource highlights, events, and advocacy news from 3mpowr App.
+description: Subscribe for weekly updates, community stories, resource highlights, events, and advocacy news from 3mpwr App.
 ---
 
 # Newsletter
 
-Stay informed about product updates, early access, and beta invites. We’ll only email you about 3mpowr App. You can unsubscribe any time.
+Stay informed about product updates, early access, and beta invites. We'll only email you about 3mpwr App. You can unsubscribe any time.
 
 ## What You'll Get
 - **Weekly Updates**: Latest features and improvements
@@ -21,7 +21,7 @@ Stay informed about product updates, early access, and beta invites. We’ll onl
 <div class="newsletter-embed">
   <iframe
     id="newsletter-form"
-    title="3mpowr App newsletter signup"
+    title="3mpwr App newsletter signup"
     src="https://docs.google.com/forms/d/e/1FAIpQLSf9AHMg9pMWS2njErNXDj1W0g2rXBNabXsUnZOgRF4vfvk0kQ/viewform?embedded=true"
     loading="lazy"
     frameborder="0"
@@ -55,4 +55,4 @@ If you cannot see the embedded form, use this direct link:
 
 ---
 
-**We respect your privacy.** Your email will only be used for 3mpowr App newsletters and important updates. You can unsubscribe at any time.
+**We respect your privacy.** Your email will only be used for 3mpwr App newsletters and important updates. You can unsubscribe at any time.

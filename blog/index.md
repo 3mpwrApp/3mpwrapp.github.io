@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Blog
-description: News, updates, and stories from the 3mpowr community.
+description: News, updates, and stories from the 3mpwr community.
 ---
 
-# 3mpowr App Blog
+# 3mpwr App Blog
 
 Welcome to our blog!  
 Stay tuned for updates, stories, and news.

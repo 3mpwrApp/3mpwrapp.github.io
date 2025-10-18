@@ -5,7 +5,14 @@ description: A first update about our mission, what’s live today, and how to g
 tags: [announcement, updates]
 ---
 
-We’re excited to launch the 3mpowr App website. Here’s what you can do today:
+---
+layout: post
+title: "Welcome to the 3mpwr App site"
+date: 2025-10-03
+categories: news
+---
+
+We're excited to launch the 3mpwr App website. Here's what you can do today:
 
 - Explore our [Features]({{ '/features' | relative_url }}) and [User Guide]({{ '/user-guide' | relative_url }})
 - Join the community via our [Contact]({{ '/contact' | relative_url }}) page

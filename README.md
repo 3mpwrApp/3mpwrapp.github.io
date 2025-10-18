@@ -28,9 +28,9 @@ The guide includes:
 
 ---
 
-## About
+## 💡 What is 3mpwr?
 
-3mpowr App provides practical tools and a vibrant community to help people connect, advocate for their rights, and access valuable resources. This repository contains the source code for our informational website.
+3mpwr App provides practical tools and a vibrant community to help people connect, advocate for their rights, and access valuable resources. This repository contains the source code for our informational website.
 
 ## Contributing
 
@@ -123,7 +123,10 @@ Note: For the site to live at the root (https://3mpwrapp.github.io/), the reposi
 
 ## License
 
-© 2025 3mpowr App. All rights reserved.
+  
+---
+
+© 2025 3mpwr App. All rights reserved.
 
 ---
 

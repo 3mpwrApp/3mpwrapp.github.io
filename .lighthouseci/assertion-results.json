@@ -1,0 +1,16 @@
+[
+  {
+    "name": "auditRan",
+    "expected": 1,
+    "actual": 0,
+    "values": [
+      0
+    ],
+    "operator": ">=",
+    "passed": false,
+    "message": "\"duplicate-id\" is not a known audit.",
+    "auditId": "duplicate-id",
+    "level": "error",
+    "url": "https://3mpwrapp.pages.dev/"
+  }
+]

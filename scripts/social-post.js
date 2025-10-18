@@ -73,12 +73,66 @@ class SocialPoster {
   }
 
   /**
+   * Get time-based greeting/context
+   */
+  getTimeContext() {
+    const hour = new Date().getUTCHours();
+    
+    if (hour >= 6 && hour < 12) {
+      return {
+        greeting: '☀️ Good morning!',
+        context: 'Start your day informed with',
+        time: 'morning'
+      };
+    } else if (hour >= 12 && hour < 17) {
+      return {
+        greeting: '🌤️ Midday update!',
+        context: 'Check out what\'s happening:',
+        time: 'midday'
+      };
+    } else if (hour >= 17 && hour < 22) {
+      return {
+        greeting: '🌆 Evening digest!',
+        context: 'Catch up on today\'s news:',
+        time: 'evening'
+      };
+    } else {
+      return {
+        greeting: '🌙 Late update!',
+        context: 'Latest news:',
+        time: 'night'
+      };
+    }
+  }
+
+  /**
+   * Get random app feature to highlight
+   */
+  getFeatureHighlight() {
+    const features = [
+      'Benefits Navigator: Find & apply for disability benefits across Canada',
+      'Resource Directory: Discover accessibility services in your area',
+      'News Curation: Stay informed on disability rights & policy',
+      'Accessibility Tools: Screen reader friendly, keyboard navigation',
+      'Provincial Guides: ODSP, AISH, PWD & more benefits explained',
+      'Community Resources: Connect with advocacy groups & support',
+      'Multi-language Support: Content available in EN & FR'
+    ];
+    return features[Math.floor(Math.random() * features.length)];
+  }
+
+  /**
    * Format content for Mastodon
    */
   formatMastodonPost(content) {
     const topItems = content.items.slice(0, 3);
-    let post = `📰 Daily News Curation - ${content.date}\n\n`;
-    post += `Found ${content.count} stories from disability, accessibility & social policy sources:\n\n`;
+    const timeCtx = this.getTimeContext();
+    const feature = this.getFeatureHighlight();
+    
+    let post = `${timeCtx.greeting} 📰 ${content.date}\n\n`;
+    post += `3mpwrApp ${timeCtx.context} ${content.count} curated stories on disability, accessibility & social policy.\n\n`;
+    post += `💡 ${feature}\n\n`;
+    post += `Today's Top Stories:\n\n`;
 
     topItems.forEach((item, idx) => {
       post += `${idx + 1}. ${item.title}\n`;
@@ -88,8 +142,8 @@ class SocialPoster {
       post += '\n';
     });
 
-    post += `\n🔗 Full curation: https://3mpwrapp.pages.dev/curation-latest.json\n`;
-    post += `\n#Accessibility #DisabilityRights #News #Canada`;
+    post += `\n🔗 Visit: https://3mpwrapp.pages.dev\n`;
+    post += `\n#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
 
     return post;
   }
@@ -99,8 +153,13 @@ class SocialPoster {
    */
   formatBlueskyPost(content) {
     const topItems = content.items.slice(0, 3);
-    let post = `📰 Daily News Curation - ${content.date}\n\n`;
-    post += `Found ${content.count} stories:\n\n`;
+    const timeCtx = this.getTimeContext();
+    const feature = this.getFeatureHighlight();
+    
+    let post = `${timeCtx.greeting} 📰 ${content.date}\n\n`;
+    post += `3mpwrApp curated ${content.count} stories on disability, accessibility & benefits.\n\n`;
+    post += `🌟 ${feature}\n\n`;
+    post += `${timeCtx.context}\n\n`;
 
     topItems.forEach((item, idx) => {
       post += `${idx + 1}. ${item.title}`;
@@ -110,7 +169,8 @@ class SocialPoster {
       post += '\n\n';
     });
 
-    post += `#Accessibility #DisabilityRights #News`;
+    post += `Visit: https://3mpwrapp.pages.dev\n\n`;
+    post += `#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
 
     return post;
   }
@@ -120,14 +180,18 @@ class SocialPoster {
    */
   formatXPost(content) {
     const topItems = content.items.slice(0, 2);
-    let post = `📰 Daily News Curation\n\n`;
+    const timeCtx = this.getTimeContext();
+    
+    let post = `${timeCtx.greeting} 📰 3mpwrApp News\n\n`;
+    post += `${content.count} stories curated on disability benefits & accessibility!\n\n`;
 
     topItems.forEach((item) => {
       post += `• ${item.title}\n`;
     });
 
-    post += `\n+ ${content.count - 2} more stories\n\n`;
-    post += `#Accessibility #News https://3mpwrapp.pages.dev`;
+    post += `\n+ ${content.count - 2} more\n\n`;
+    post += `🔗 Benefits navigator & news: https://3mpwrapp.pages.dev\n\n`;
+    post += `#Accessibility #DisabilityBenefits #News #Canada`;
 
     return post;
   }

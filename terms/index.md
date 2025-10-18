@@ -2,14 +2,14 @@
 layout: default
 title: Terms of Service
 permalink: /terms/
-description: The terms and conditions for using the 3mpowr website and app.
+description: The terms and conditions for using the 3mpwr website and app.
 ---
 
 # Terms of Service
 
 Last updated: {{ site.time | date: '%B %d, %Y' }}
 
-By using the 3mpowr website or app, you agree to these terms.
+By using the 3mpwr website or app, you agree to these terms.
 
 ## Acceptable use
 - Don’t abuse, harass, or harm others.

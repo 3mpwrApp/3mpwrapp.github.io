@@ -1,11 +1,16 @@
 name: Curator (Unified)
 
 # Unified curator workflow - consolidates daily-curator and daily-curation
-# Runs daily at 9:00 AM UTC (5:00 AM EST, 6:00 AM EDT)
+# Runs 3 times daily for maximum reach while staying within free tier limits:
+# - 9:00 AM UTC (5:00 AM EST) - Morning news
+# - 3:00 PM UTC (11:00 AM EST) - Midday update  
+# - 9:00 PM UTC (5:00 PM EST) - Evening digest
 
 on:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '0 9 * * *'   # Morning (5 AM EST)
+    - cron: '0 15 * * *'  # Midday (11 AM EST)
+    - cron: '0 21 * * *'  # Evening (5 PM EST)
   workflow_dispatch:
     inputs:
       force_publish:

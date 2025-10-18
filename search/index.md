@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Search
-description: Find information quickly with on-page results and a DuckDuckGo fallback, limited to the 3mpowr site.
+description: Find information quickly with on-page results and a DuckDuckGo fallback, limited to the 3mpwr site.
 ---
 
 # Search the site

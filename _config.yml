@@ -1,4 +1,4 @@
-title: 3mpowr App
+title: 3mpwr App
 description: Practical tools and community for injured workers and persons with disabilities.
 baseurl: ""
 url: "https://3mpwrapp.pages.dev"  # Cloudflare Pages URL (also works for GitHub Pages)
@@ -23,7 +23,7 @@ kramdown:
 
 # SEO and social (jekyll-seo-tag)
 author:
-  name: "3mpowr App"
+  name: "3mpwr App"
 logo: /assets/favicon.svg
 
 defaults:
@@ -50,7 +50,7 @@ feed:
     - whats_new
 
 social:
-  name: "3mpowr App"
+  name: "3mpwr App"
   links:
     - https://github.com/3mpwrApp
     - https://www.facebook.com/3mpowrapp/

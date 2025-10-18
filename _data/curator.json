@@ -37,7 +37,9 @@
                "ODSP", "AISH", "PWD benefits", "EIA disability", "SAID", "CPP disability",
                "Canada Disability Benefit", "DTC", "Disability Tax Credit", "accessible canada act",
                "workers compensation", "WSIB", "WorkSafe", "WCB", "injured worker",
-               "workplace injury", "return to work", "vocational rehabilitation"]
+               "workplace injury", "return to work", "vocational rehabilitation",
+               "disability benefits navigator", "benefit application", "eligibility", "income assistance",
+               "accessible design", "screen reader", "WCAG", "ARIA", "keyboard navigation"]
     },
     "medium_priority": {
       "score": 2.0,  
@@ -45,7 +47,10 @@
                "deaf", "blind", "wheelchair", "mobility", "cognitive", "neurodivergent",
                "employment", "workplace", "housing", "transportation", "education",
                "healthcare", "support", "advocacy", "community", "policy", "legislation",
-               "government", "federal", "provincial", "benefits", "income support"]
+               "government", "federal", "provincial", "benefits", "income support",
+               "web accessibility", "mobile accessibility", "digital inclusion", "accessible technology",
+               "assistive devices", "adaptive equipment", "accessibility features", "user interface",
+               "social programs", "community services", "resource navigation", "advocacy tools"]
     },
     "contextual": {
       "score": 1.0,
@@ -53,7 +58,9 @@
                "study", "research", "statistics", "data", "survey", "consultation",
                "public", "canada", "canadian", "ontario", "british columbia", "alberta",
                "manitoba", "saskatchewan", "quebec", "nova scotia", "new brunswick",
-               "newfoundland", "prince edward island", "northwest territories", "yukon", "nunavut"]
+               "newfoundland", "prince edward island", "northwest territories", "yukon", "nunavut",
+               "app", "website", "platform", "digital", "online", "tool", "resource", "guide",
+               "information", "navigator", "directory", "accessible website", "responsive design"]
     }
   },
   
@@ -85,9 +92,15 @@
     "accessibility_update": ["accessibility", "barrier removal", "accommodation", "universal design", "AODA"]
   },
   
-  "minScore": 1.5,
-  "maxItems": 25,
+  "minScore": 1.0,
+  "maxItems": 30,
   "languages": ["en", "fr"],
   "excludePatterns": ["spam", "advertisement", "promotional"],
-  "requireKeywords": true
+  "requireKeywords": false,
+  
+  "postingSchedule": {
+    "daily": 3,
+    "times": ["09:00 UTC", "15:00 UTC", "21:00 UTC"],
+    "description": "3 posts daily (morning, midday, evening) - within free tier limits"
+  }
 }

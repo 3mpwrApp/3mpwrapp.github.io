@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Guide d’utilisation
+title: Guide d'utilisation
 lang: fr
-description: Guide pratique (texte uniquement) pour vous aider à naviguer dans les fonctionnalités et l’accessibilité de 3mpowr App.
+description: Guide pratique (texte uniquement) pour vous aider à naviguer dans les fonctionnalités et l'accessibilité de 3mpwr App.
 ---
 
-# Guide d’utilisation
+# Guide d'utilisation
 
-Ce guide présente, en texte uniquement, comment utiliser 3mpowr App et personnaliser l’accessibilité du site.
+Ce guide présente, en texte uniquement, comment utiliser 3mpwr App et personnaliser l'accessibilité du site.
 
 ## Accessibilité
 - Liens Passer au contenu, Passer à la navigation et Passer au pied de page

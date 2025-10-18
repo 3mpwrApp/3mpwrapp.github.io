@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Contact Us
-description: Get in touch with the 3mpowr team for questions, feedback, or collaboration opportunities.
+description: Get in touch with the 3mpwr team for questions, feedback, or collaboration opportunities.
 permalink: /contact
 ---
 
 # Contact Us
 
-We'd love to hear from you! Whether you have questions about 3mpowr, feedback to share, or collaboration opportunities, please reach out.
+We'd love to hear from you! Whether you have questions about 3mpwr, feedback to share, or collaboration opportunities, please reach out.
 
 ## Quick Links
 

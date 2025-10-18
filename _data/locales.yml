@@ -1,10 +1,10 @@
 en:
-  site_name: "3mpowr App"
+  site_name: "3mpwr App"
   language_label: "English"
   switch_label: "Français"
   switch_href: "/fr/"
 fr:
-  site_name: "3mpowr App"
+  site_name: "3mpwr App"
   language_label: "Français"
   switch_label: "English"
   switch_href: "/"

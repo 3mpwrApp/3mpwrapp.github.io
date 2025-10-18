@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Beta Test Signup
-description: Sign up to become a dedicated beta tester and help improve 3mpowr App.
+description: Sign up to become a dedicated beta tester and help improve 3mpwr App.
 ---
 
-# Become a 3mpowr Beta Tester!
+# Become a 3mpwr Beta Tester!
 
-Help us shape the future of the 3mpowr App by joining our beta tester program.  
+Help us shape the future of the 3mpwr App by joining our beta tester program.  
 **Beta testing requires dedicated people who can test the full app and provide detailed feedback, including reporting any bugs.**
 
 ## Signup Form

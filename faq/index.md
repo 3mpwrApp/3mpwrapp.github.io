@@ -2,17 +2,17 @@
 layout: default
 title: Frequently Asked Questions
 permalink: /faq/
-description: Answers to the most common questions about the 3mpowr website and app.
+description: Answers to the most common questions about the 3mpwr website and app.
 ---
 
 # Frequently Asked Questions
 
-Below you’ll find quick answers to common questions. If you don’t see what you need, please reach out via our [Contact]({{ '/contact' | relative_url }}) page.
+Below you'll find quick answers to common questions. If you don't see what you need, please reach out via our [Contact]({{ '/contact' | relative_url }}) page.
 
 ## Website FAQ
 
-### What is 3mpowr?
-3mpowr is a community-driven platform supporting injured workers and persons with disabilities across Canada. Learn more on our [About]({{ '/about' | relative_url }}) page.
+### What is 3mpwr?
+3mpwr is a community-driven platform supporting injured workers and persons with disabilities across Canada. Learn more on our [About]({{ '/about' | relative_url }}) page.
 
 ### Where can I find recent updates?
 See [What’s New]({{ '/whats-new' | relative_url }}) for the latest changes.
