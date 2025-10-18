@@ -8,9 +8,9 @@ description: Your voice, your power. Unfiltered. 3mpwrApp puts the power back in
 
 Big platforms silence stories through hidden algorithms and "relevance" scores. 3mpwrApp puts the power back in your hands - no shadow bans, no manipulation, no data mining. Just authentic connection, community, and truth.
 
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="{{ '/newsletter' | relative_url }}" class="btn btn-primary" style="margin: 0.5rem; padding: 1rem 2rem; background: #0066cc; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Join the Movement</a>
-  <a href="{{ '/beta' | relative_url }}" class="btn btn-secondary" style="margin: 0.5rem; padding: 1rem 2rem; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">App Coming Soon</a>
+<div class="button-group">
+  <a href="{{ '/newsletter' | relative_url }}" class="btn btn-primary">Join the Movement</a>
+  <a href="{{ '/beta' | relative_url }}" class="btn btn-secondary">App Coming Soon</a>
 </div>
 
 ## Built with empathy. Rooted in Accessibility. Powered by you!
