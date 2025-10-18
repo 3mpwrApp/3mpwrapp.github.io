@@ -78,6 +78,14 @@ jobs:
         echo "Generating social media sharing content..."
         node scripts/share-to-social.js || echo "Social post generation optional - continuing"
     
+    - name: Post to Mastodon
+      env:
+        MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+        MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+      run: |
+        echo "Posting to Mastodon..."
+        node scripts/post-to-mastodon.js
+    
     - name: Post to X (Twitter)
       env:
         X_API_KEY: ${{ secrets.X_API_KEY }}
