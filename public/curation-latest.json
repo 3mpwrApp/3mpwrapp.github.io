@@ -1,55 +1,13 @@
 {
-  "generated": "2025-10-17T20:25:42.180Z",
+  "generated": "2025-10-18T17:17:22.118Z",
   "minScore": 0.5,
   "forced": false,
-  "filterLangs": [],
+  "filterLangs": [
+    "en",
+    "fr"
+  ],
   "totalRanked": 25,
   "items": [
-    {
-      "title": "DTC Medical Fees Fund: Helping People Access the DTC",
-      "link": "https://disabilityalliancebc.org/dtc-medical-fees-fund-helping-people-access-the-dtc/",
-      "description": "The Disability Tax Credit (DTC) is a non-refundable tax credit that reduces the amount of income tax you owe. You might know that eligible applicants must be approved for the DTC before gaining access to other benefits, like the Registered Disability Savings Plan (RDSP) and the Canada Disability Benefit (CDB). It’s an important benefit—and many […]",
-      "score": 18.5,
-      "source": "https://disabilityalliancebc.org/feed/",
-      "lang": "en",
-      "contentType": "BENEFITS_UPDATE"
-    },
-    {
-      "title": "Ask an Expert sessions – Back by popular demand!",
-      "link": "https://disabilityalliancebc.org/ask-an-expert-sessions-back-by-popular-demand/",
-      "description": "The Access RDSP partnership between DABC, Plan Institute and BC Aboriginal Network on Disability Society (BCANDS) has had years of experience providing free navigational supports through income tax filing, the Disability Tax Credit (DTC), Registered Disability Savings Plan (RDSP) and other financial planning matters.  For RDSP Awareness Month, our team of experts are hosting two […]",
-      "score": 12.5,
-      "source": "https://disabilityalliancebc.org/feed/",
-      "lang": "en",
-      "contentType": "BENEFITS_UPDATE"
-    },
-    {
-      "title": "India's new envoy wants full-scale trade deal with Canada as relations thaw",
-      "link": "https://globalnews.ca/news/11483094/india-envoy-canada-trade-deal-interview/",
-      "description": "Indian High Commissioner Dinesh Patnaik said Canadian businesses should expand trade and investment ties with India now, without waiting for a formal trade agreement.",
-      "score": 11,
-      "source": "https://globalnews.ca/canada/feed/",
-      "lang": "en",
-      "contentType": "NEWS_ARTICLE"
-    },
-    {
-      "title": "Workshop – Disability Justice and Local Government: Tools for Change",
-      "link": "https://disabilityalliancebc.org/workshop-disability-justice-and-local-government-tools-for-change/",
-      "description": "From curb cuts to bus routes to public space accessibility, decisions made at city hall impact the lives of people living with disabilities daily. Women Transforming Cities (WTC), a grassroots organization working to reshape who cities are built by and for is partnering with Live Educate Transform Society (LET’S), a nonprofit organization active in the […]",
-      "score": 9.5,
-      "source": "https://disabilityalliancebc.org/feed/",
-      "lang": "en",
-      "contentType": "ACCESSIBILITY_UPDATE"
-    },
-    {
-      "title": "Support DABC this #DAFDay!",
-      "link": "https://disabilityalliancebc.org/support-dabc-this-dafday/",
-      "description": "It’s DAF Day Canada: a national moment encouraging donors who give through Donor Advised Funds (DAFs) to activate their generosity and support frontline work like ours. #DAFDay If you have a DAF, you can recommend a grant to Disability Alliance BC today. It’s easy—and it means we can keep showing up for people with disabilities […]",
-      "score": 9.5,
-      "source": "https://disabilityalliancebc.org/feed/",
-      "lang": "en",
-      "contentType": "SUPPORT_RESOURCE"
-    },
     {
       "title": "In/Equality Podcast – Inequality and Disability Justice with Michael Orsini Transcript",
       "link": "https://policyoptions.irpp.org/2023/05/inequality-and-disability-justice-transcript/",
@@ -64,24 +22,6 @@
       "link": "https://www.cbc.ca/news/canada/manitoba/ndp-notwithstanding-clause-legislation-9.6941041?cmp=rss",
       "description": "<img src='https://i.cbc.ca/ais/7dd6c4c1-e9b3-46e6-b7d1-53bda67d7945,1760655608514/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C831%2C7952%2C4473%29%3BResize%3D%28620%29' alt='A man in a suit speaks during a government legislative session.' width='620' height='349' title='Manitoba Premier Wab Kinew speaks during question period at the legislature on Thursday, Oct. 16, 2025.'/><p>The NDP introduced legislation in Manitoba on Thursday that the premier hopes will safeguard against the frivolous use of the notwithstanding clause, a legal measure that's been invoked by Quebec and other governments in recent years to temporarily shield provincial legislation from legal challenges under the Charter of Rights and Freedoms.</p>",
       "score": 7,
-      "source": "https://rss.cbc.ca/lineup/canada.xml",
-      "lang": "en",
-      "contentType": "NEWS_ARTICLE"
-    },
-    {
-      "title": "Ottawa says it can provide $12M loan to keep northern Ontario paper mill open",
-      "link": "https://globalnews.ca/news/11483011/ont-paper-mill-closure/",
-      "description": "The federal government is offering a one-time $12M loan to help keep Kapuskasing’s paper mill open while the company develops a long-term pivot strategy.",
-      "score": 6.5,
-      "source": "https://globalnews.ca/canada/feed/",
-      "lang": "en",
-      "contentType": "NEWS_ARTICLE"
-    },
-    {
-      "title": "Man charged with murder as remains of Samuel Bird located outside Edmonton",
-      "link": "https://www.cbc.ca/news/canada/edmonton/samuel-bird-remains-located-9.6941197?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/48734e07-774b-4730-86c4-432c8772f6cf,1760041240924/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C206%2C1180%2C663%29%3BResize%3D%28620%29' alt='A boy in black hoodie sits at a table.' width='620' height='349' title='Samuel Bird, 14, was seen on the evening of June 1, 2025, in the Canora neighbourhood in west Edmonton.'/><p>The remains of 14-year-old Samuel Bird have been located and a murder charge has been laid in his death, police said Thursday.</p>",
-      "score": 6.5,
       "source": "https://rss.cbc.ca/lineup/canada.xml",
       "lang": "en",
       "contentType": "NEWS_ARTICLE"
@@ -132,31 +72,13 @@
       "contentType": "NEWS_ARTICLE"
     },
     {
-      "title": "Ontario charity relocated residents with autism without consent, their families say",
-      "link": "https://www.cbc.ca/news/canada/toronto/autism-residents-relocated-9.6941638?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/6e0afca4-eae6-4013-b1bd-a34cc5ed60bd,1760703409919/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C32%2C1535%2C863%29%3BResize%3D%28620%29' alt='A woman and a man stand on a beach' width='620' height='349' title=''/><p>A charity for adults with developmental disabilities has relocated some residents due to a labour dispute with support workers. Concerned family members say they didn’t consent.</p>",
-      "score": 6,
-      "source": "https://rss.cbc.ca/lineup/canada.xml",
-      "lang": "en",
-      "contentType": "NEWS_ARTICLE"
-    },
-    {
-      "title": "P.E.I. calls for federal investigation into foreign interference allegations aimed at Buddhist groups",
-      "link": "https://www.cbc.ca/news/canada/prince-edward-island/pei-calls-federal-investigation-money-laundering-foreign-interference-9.6941038?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/2a001494-d641-4694-a8b6-dd05caafc904,1760635348751/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1180%2C663%29%3BResize%3D%28620%29' alt='Premier of P.E.I. stands outdoors in front of some trees' width='620' height='349' title=''Islanders deserve clarity. They deserve to know these matters are being handled by the proper investigative bodies,' says Premier Rob Lantz'/><p>P.E.I. Premier Rob Lantz is calling on the federal RCMP and Canada's anti-money-laundering agency to begin “immediate and transparent” investigations into allegations of foreign interference and money laundering involving “certain Buddhist groups” on the Island. </p>",
-      "score": 6,
-      "source": "https://rss.cbc.ca/lineup/canada.xml",
-      "lang": "en",
-      "contentType": "NEWS_ARTICLE"
-    },
-    {
-      "title": "Inside the Right-Wing Attack on Alberta's Public Education",
-      "link": "https://thetyee.ca/Analysis/2025/10/13/Right-Wing-Attack-Alberta-Public-Education/",
-      "description": "MAGA’s Project 2025 has become a blueprint for undermining Canada’s schools in the name of profit and privilege.",
+      "title": "City of Victoria says neighbouring communities need to step up when temps drop",
+      "link": "https://globalnews.ca/news/11483468/city-of-victoria-neighbouring-communities-step-up-temps-drop/",
+      "description": "The most recent homeless count in Victoria found 1,794 people experiencing homelessness across the region — 318 of them living unsheltered and 493 staying in emergency shelters.",
       "score": 5,
-      "source": "https://thetyee.ca/rss2.xml",
+      "source": "https://globalnews.ca/canada/feed/",
       "lang": "en",
-      "contentType": "GENERAL_CONTENT"
+      "contentType": "BREAKING_NEWS"
     },
     {
       "title": "The future of child care in Canada: What to expect",
@@ -186,20 +108,20 @@
       "contentType": "GENERAL_CONTENT"
     },
     {
-      "title": "Federal Court allows caretaker council in Kanesatake after cancelled election",
-      "link": "https://globalnews.ca/news/11482968/federal-court-cancelled-election/",
-      "description": "The Federal Court has ruled that 5 chiefs from the Mohawk Council of Kanesatake may form a caretaker council to provide essential services and handle administrative tasks.",
-      "score": 4.5,
-      "source": "https://globalnews.ca/canada/feed/",
+      "title": "Nova Scotia’s liquor retailer continues to warehouse American alcohol and has no plans to sell it off",
+      "link": "https://www.cbc.ca/news/canada/nova-scotia/nslc-nova-scotia-american-alcohol-u-s-trade-war-9.6942594?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/51f3ee32-1c4f-41ce-94ba-cda8a2bbad7c,1760717531045/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C6000%2C3375%29%3BResize%3D%28620%29' alt='Two liquor store employees wearing black uniforms remove American wine from a shelf.' width='620' height='349' title='Two Nova Scotia Liquor Corporation employees remove American wine earlier this year after the NSLC pulled American alcohol from its shelves as part of Canada's response to U.S. President Donald Trump's tariffs.'/><p>More than seven months after the NSLC pulled American alcohol from its shelves as part of Nova Scotia's response to the trade war with the U.S., the corporation has no plans to sell off any of that product, unlike its New Brunswick counterpart.</p>",
+      "score": 5,
+      "source": "https://rss.cbc.ca/lineup/canada.xml",
       "lang": "en",
       "contentType": "NEWS_ARTICLE"
     },
     {
-      "title": "‘Preserving our past': Winnipeg archives to return to historic library after renos",
-      "link": "https://globalnews.ca/news/11483074/winnipeg-archives-return-william-street-renovations/",
-      "description": "The City of Winnipeg's archives are going back to their downtown home, after renovations are complete to a historic building that once housed the city's first public library.",
-      "score": 4,
-      "source": "https://globalnews.ca/canada/feed/",
+      "title": "Ontario charity relocated residents with autism without consent, their families say",
+      "link": "https://www.cbc.ca/news/canada/toronto/autism-residents-relocated-9.6941638?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/6e0afca4-eae6-4013-b1bd-a34cc5ed60bd,1760703409919/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C32%2C1535%2C863%29%3BResize%3D%28620%29' alt='A woman and a man stand on a beach' width='620' height='349' title=''/><p>A charity for adults with developmental disabilities has relocated some residents due to a labour dispute with support workers. Concerned family members say they didn’t consent.</p>",
+      "score": 5,
+      "source": "https://rss.cbc.ca/lineup/canada.xml",
       "lang": "en",
       "contentType": "NEWS_ARTICLE"
     },
@@ -222,6 +144,15 @@
       "contentType": "NEWS_ARTICLE"
     },
     {
+      "title": "Striking Alberta teachers refuse to engage in talks that exclude pupil-teacher ratio",
+      "link": "https://www.cbc.ca/news/canada/edmonton/teachers-refuse-talks-pupil-teacher-ratio-government-9.6942998?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/805625b3-ee3e-453a-8419-fc5b4a0b547b,1760730515510/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C890%2C3163%2C1779%29%3BResize%3D%28620%29' alt='people at a rally, many wearing red and carrying signs' width='620' height='349' title='People gather in downtown Calgary on Oct. 5 to show support for teachers as a provincewide strike looms.'/><p>The association representing 51,000 Alberta teachers who have been off the job since Oct. 6 says employers asked them to return to classrooms voluntarily and attend talks where class-size caps and pupil-teacher ratios were off the table.</p>",
+      "score": 4,
+      "source": "https://rss.cbc.ca/lineup/canada.xml",
+      "lang": "en",
+      "contentType": "NEWS_ARTICLE"
+    },
+    {
       "title": "Bills C-2 and C-12: How Canada’s border security acts endanger refugee rights",
       "link": "https://rabble.ca/podcast/bills-c-2-and-c-12-how-canadas-border-security-acts-endanger-refugee-rights/",
       "description": "",
@@ -229,6 +160,78 @@
       "source": "https://rabble.ca/feed/",
       "lang": "en",
       "contentType": "LEGAL_RESOURCE"
+    },
+    {
+      "title": "Has Time Run Out for Canada Post?",
+      "link": "https://thetyee.ca/News/2025/10/16/Has-Time-Run-Out-Canada-Post/",
+      "description": "Inside the debate over the Crown corporation’s future as unions and management battle.",
+      "score": 3,
+      "source": "https://thetyee.ca/rss2.xml",
+      "lang": "en",
+      "contentType": "NEWS_ARTICLE"
+    },
+    {
+      "title": "2 more youths charged with first-degree murder in fatal stabbing of Toronto teen",
+      "link": "https://globalnews.ca/news/11484105/toronto-fatal-stabbing-trial/",
+      "description": "Two more teens charged with first-degree murder in the stabbing of 14-year-old Abdoul Aziz Sarr. They were set to make their first court appearance Saturday.",
+      "score": 2.5,
+      "source": "https://globalnews.ca/canada/feed/",
+      "lang": "en",
+      "contentType": "NEWS_ARTICLE"
+    },
+    {
+      "title": "Third arrest made in connection with B.C ostrich farm",
+      "link": "https://globalnews.ca/news/11484097/avian-flu-ostriches/",
+      "description": "Tensions escalated at a British Columbia ostrich farm this week as RCMP arrested a man for allegedly breaching a CFIA quarantine zone.",
+      "score": 2.5,
+      "source": "https://globalnews.ca/canada/feed/",
+      "lang": "en",
+      "contentType": "NEWS_ARTICLE"
+    },
+    {
+      "title": "Premier McLeod on the Enbridge Line 21 Pipeline",
+      "link": "https://www.gov.nt.ca/en/newsroom/news/premier-mcleod-enbridge-line-21-pipeline",
+      "description": "",
+      "score": 2,
+      "source": "https://www.gov.nt.ca/en/rss.xml",
+      "lang": "en",
+      "contentType": "NEWS_ARTICLE"
+    },
+    {
+      "title": "New clinical trial in Ontario uses magic mushrooms to treat anxiety",
+      "link": "https://globalnews.ca/news/11482518/kingston-health-anxiety/",
+      "description": "A first-of-its-kind Canadian trial is testing psilocybin, the psychedelic component found in magic mushrooms, on participants to see if it can treat anxiety.",
+      "score": 2,
+      "source": "https://globalnews.ca/canada/feed/",
+      "lang": "en",
+      "contentType": "NEWS_ARTICLE"
+    },
+    {
+      "title": "All licensed government professionals join historic BC strike",
+      "link": "https://rabble.ca/labour/all-licensed-government-professionals-join-historic-bc-strike/",
+      "description": "",
+      "score": 2,
+      "source": "https://rabble.ca/feed/",
+      "lang": "en",
+      "contentType": "GENERAL_CONTENT"
+    },
+    {
+      "title": "Suki’s: Fifty-four years of style, education, and legacy",
+      "link": "https://www.straight.com/living/sukis-fifty-four-years-of-style-education-and-legacy",
+      "description": "For 54 years, Suki’s has shaped Vancouver’s hair culture through artistry and education. Named Best Salon in the Georgia Straight’s Best of Vancouver 2025, the iconic brand continues to set the standard for innovation, collaboration, and timeless style—from its world-class Academy to its visionary team.",
+      "score": 2,
+      "source": "https://www.straight.com/rss.xml",
+      "lang": "en",
+      "contentType": "GENERAL_CONTENT"
+    },
+    {
+      "title": "What's In Your Fridge: Sally Phantom",
+      "link": "https://www.straight.com/music/whats-in-your-fridge-sally-phantom",
+      "description": "In which we reveal the favourite records, concerts, and grocery items of interesting Vancouverites.",
+      "score": 1.5,
+      "source": "https://www.straight.com/rss.xml",
+      "lang": "en",
+      "contentType": "GENERAL_CONTENT"
     }
   ]
 }
