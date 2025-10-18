@@ -21,6 +21,11 @@ on:
         required: false
         default: false
         type: boolean
+      bluesky_thread:
+        description: 'Post as thread on Bluesky (1=thread, 0=single post)'
+        required: false
+        default: '0'
+        type: string
 
 jobs:
   curate:
@@ -96,6 +101,16 @@ jobs:
       run: |
         echo "Posting to X..."
         node scripts/post-to-x.js || echo "X posting step - may require app type adjustment"
+    
+    - name: Post to Bluesky
+      env:
+        BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+        BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+        BLUESKY_PDS: ${{ secrets.BLUESKY_PDS || 'https://bsky.social' }}
+        BLUESKY_THREAD: ${{ github.event.inputs.bluesky_thread || '0' }}
+      run: |
+        echo "Posting to Bluesky..."
+        node scripts/post-to-bluesky.js || echo "Bluesky posting optional - continuing"
     
     - name: Build search index
       run: |
