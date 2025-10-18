@@ -27,6 +27,7 @@ Thumbs.db
 *.swn
 *.bak
 *.tmp
+*.code-workspace
 
 # Logs
 *.log
@@ -38,11 +39,51 @@ yarn-error.log*
 tmp/
 temp/
 *.cache
+*.tmp
+test-output/
 
-# Environment files
+# Environment files (CRITICAL - never commit credentials)
 .env
 .env.local
-.env*.local
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# Credentials and secrets (CRITICAL - never commit)
+credentials.json
+secrets.json
+*.key
+*.pem
+*.pub
 
 # Node modules (if using any Node.js tools)
 node_modules/
+package-lock.json
+yarn.lock
+
+# OS-specific files
+.AppleDouble
+.LSOverride
+*.stackdump
+
+# IDE generated files
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Build outputs
+dist/
+build/
+out/
+
+# OS temp files
+$RECYCLE.BIN/
+.Trash*
+
+# Test results and coverage
+coverage/
+.nyc_output/
+test-results/

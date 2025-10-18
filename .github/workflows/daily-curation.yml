@@ -78,6 +78,17 @@ jobs:
         echo "Generating social media sharing content..."
         node scripts/share-to-social.js || echo "Social post generation optional - continuing"
     
+    - name: Post to X (Twitter)
+      env:
+        X_API_KEY: ${{ secrets.X_API_KEY }}
+        X_API_SECRET: ${{ secrets.X_API_SECRET }}
+        X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+        X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+      run: |
+        echo "Posting to X..."
+        node scripts/post-to-x.js || echo "X posting step - may require app type adjustment"
+    
     - name: Build search index
       run: |
         echo "Building search index..."
