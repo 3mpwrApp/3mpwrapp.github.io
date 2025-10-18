@@ -1,0 +1,464 @@
+#!/usr/bin/env node
+/**
+ * CURATOR-CORE.JS
+ * Unified news curation engine for 3mpwrApp
+ * Replaces: daily-curator.js + unified-curation-engine.js
+ * 
+ * Features:
+ * - Multi-source RSS feed aggregation
+ * - Multi-factor scoring algorithm
+ * - Language filtering (EN/FR)
+ * - Deduplication by URL
+ * - HTML entity decoding
+ * - CDATA section handling
+ * - Structured JSON output
+ * - Markdown output for blog posts
+ */
+
+const fs = require('fs');
+const path = require('path');
+const https = require('https');
+const { parseISO, format } = require('date-fns');
+
+class CuratorCore {
+  constructor(configPath = null) {
+    this.configPath = configPath || path.join(process.cwd(), '_data', 'curator.json');
+    this.config = this.loadConfig();
+    this.items = [];
+    this.scoredItems = [];
+    this.selectedItems = [];
+  }
+
+  /**
+   * Load configuration from curator.json
+   */
+  loadConfig() {
+    let config = {
+      rssFeeds: [],
+      scoring: {
+        high_priority: { score: 3.0, terms: [] },
+        medium_priority: { score: 2.0, terms: [] },
+        contextual: { score: 1.0, terms: [] },
+        critical: { score: 4.0, terms: [] },
+        provincial: { score: 2.5, terms: [] }
+      },
+      minScore: 2.5,
+      maxItems: 25,
+      languages: ['en', 'fr'],
+      excludePatterns: []
+    };
+
+    if (fs.existsSync(this.configPath)) {
+      try {
+        const fileConfig = JSON.parse(fs.readFileSync(this.configPath, 'utf8'));
+        config = { ...config, ...fileConfig };
+        this.log(`✅ Loaded config from ${this.configPath}`);
+      } catch (err) {
+        this.log(`⚠️ Config load error: ${err.message}, using defaults`);
+      }
+    } else {
+      this.log(`⚠️ Config not found at ${this.configPath}, using defaults`);
+    }
+
+    return config;
+  }
+
+  /**
+   * Logging with timestamp
+   */
+  log(msg) {
+    if (process.env.DEBUG_CURATOR) {
+      console.log(`[${new Date().toISOString()}] ${msg}`);
+    }
+  }
+
+  /**
+   * HTTP GET with timeout
+   */
+  httpGet(url, timeoutMs = 15000) {
+    return new Promise((resolve, reject) => {
+      const req = https.get(url, (res) => {
+        let data = '';
+        res.on('data', (chunk) => (data += chunk));
+        res.on('end', () => resolve({ status: res.statusCode, data }));
+      });
+      req.on('error', reject);
+      req.setTimeout(timeoutMs, () => {
+        req.destroy(new Error('Request timeout'));
+        reject(new Error(`Timeout fetching ${url}`));
+      });
+    });
+  }
+
+  /**
+   * Decode HTML entities and numeric character references
+   */
+  decodeHtmlEntities(text) {
+    if (!text) return '';
+    
+    const entities = {
+      '&nbsp;': ' ', '&lt;': '<', '&gt;': '>', '&quot;': '"',
+      '&apos;': "'", '&amp;': '&', '&#039;': "'", '&#8217;': "'",
+      '&#038;': '&', '&#8211;': '–', '&#8212;': '—', '&mdash;': '—',
+      '&ndash;': '–'
+    };
+
+    let result = text;
+    for (const [ent, ch] of Object.entries(entities)) {
+      result = result.replace(new RegExp(ent, 'g'), ch);
+    }
+    
+    // Numeric entities
+    result = result.replace(/&#(\d+);/g, (_, code) => String.fromCharCode(code));
+    result = result.replace(/&#x([A-Fa-f0-9]+);/g, (_, code) => String.fromCharCode(parseInt(code, 16)));
+    
+    return result;
+  }
+
+  /**
+   * Parse RSS feed (both RSS and Atom formats)
+   */
+  parseRSS(xml) {
+    const items = [];
+
+    // Try RSS <item> format
+    const rssRe = /<item[^>]*>([\s\S]*?)<\/item>/gi;
+    let match;
+
+    while ((match = rssRe.exec(xml))) {
+      const chunk = match[1];
+      const item = this.extractItemFields(chunk, 'rss');
+      if (item.title || item.link) {
+        items.push(item);
+      }
+    }
+
+    // If no items, try Atom <entry> format
+    if (items.length === 0) {
+      const atomRe = /<entry[^>]*>([\s\S]*?)<\/entry>/gi;
+      while ((match = atomRe.exec(xml))) {
+        const chunk = match[1];
+        const item = this.extractItemFields(chunk, 'atom');
+        if (item.title || item.link) {
+          items.push(item);
+        }
+      }
+    }
+
+    return items;
+  }
+
+  /**
+   * Extract fields from item/entry chunk
+   */
+  extractItemFields(chunk, format) {
+    const getField = (tag) => {
+      // CDATA first
+      const cdataRe = new RegExp(`<${tag}[^>]*>\\s*<!\\[CDATA\\[(.*?)\\]\\]>\\s*</${tag}>`, 'i');
+      let m = cdataRe.exec(chunk);
+      if (m) return this.decodeHtmlEntities(m[1].trim());
+
+      // Regular tags
+      const tagRe = new RegExp(`<${tag}[^>]*>(.*?)</${tag}>`, 'i');
+      m = tagRe.exec(chunk);
+      if (m) {
+        let content = m[1];
+        if (['description', 'summary', 'content', 'content:encoded'].includes(tag.toLowerCase())) {
+          content = content.replace(/<[^>]+>/g, '').trim();
+        }
+        return this.decodeHtmlEntities(content.trim());
+      }
+      return '';
+    };
+
+    const title = getField('title');
+    const description = getField('description') || getField('content:encoded') || getField('summary');
+    const pubDate = getField('pubDate') || getField('updated');
+
+    let link = getField('link');
+    if (!link && format === 'atom') {
+      const linkMatch = chunk.match(/<link[^>]*href=["']([^"']+)["']/i);
+      link = linkMatch ? linkMatch[1] : '';
+    }
+
+    return { title, link, description, pubDate };
+  }
+
+  /**
+   * Fetch and parse single feed
+   */
+  async fetchFeed(feedUrl) {
+    try {
+      this.log(`📡 Fetching: ${feedUrl}`);
+      const { status, data } = await this.httpGet(feedUrl);
+      
+      if (status !== 200) {
+        this.log(`⚠️ Feed returned ${status}: ${feedUrl}`);
+        return [];
+      }
+
+      const items = this.parseRSS(data);
+      this.log(`✅ Got ${items.length} items from ${feedUrl}`);
+      return items;
+    } catch (err) {
+      this.log(`❌ Error fetching ${feedUrl}: ${err.message}`);
+      return [];
+    }
+  }
+
+  /**
+   * Fetch all feeds
+   */
+  async fetchAllFeeds() {
+    this.log(`📚 Fetching ${this.config.rssFeeds.length} feeds...`);
+    
+    const results = await Promise.all(
+      this.config.rssFeeds.map((url) => this.fetchFeed(url))
+    );
+
+    this.items = results.flat();
+    this.log(`📊 Total items fetched: ${this.items.length}`);
+    return this.items;
+  }
+
+  /**
+   * Calculate score for an item
+   */
+  calculateScore(item) {
+    let score = 0;
+    const text = `${item.title} ${item.description}`.toLowerCase();
+
+    // Critical terms (highest priority)
+    for (const term of this.config.scoring.critical.terms || []) {
+      if (text.includes(term.toLowerCase())) {
+        score += this.config.scoring.critical.score;
+      }
+    }
+
+    // High priority
+    for (const term of this.config.scoring.high_priority.terms || []) {
+      if (text.includes(term.toLowerCase())) {
+        score += this.config.scoring.high_priority.score;
+      }
+    }
+
+    // Medium priority
+    for (const term of this.config.scoring.medium_priority.terms || []) {
+      if (text.includes(term.toLowerCase())) {
+        score += this.config.scoring.medium_priority.score;
+      }
+    }
+
+    // Provincial programs
+    for (const term of this.config.scoring.provincial.terms || []) {
+      if (text.includes(term.toLowerCase())) {
+        score += this.config.scoring.provincial.score;
+      }
+    }
+
+    // Contextual (lowest priority)
+    for (const term of this.config.scoring.contextual.terms || []) {
+      if (text.includes(term.toLowerCase())) {
+        score += this.config.scoring.contextual.score;
+      }
+    }
+
+    return score;
+  }
+
+  /**
+   * Score all items
+   */
+  scoreItems() {
+    this.scoredItems = this.items.map((item) => ({
+      ...item,
+      score: this.calculateScore(item)
+    }));
+
+    // Sort by score descending
+    this.scoredItems.sort((a, b) => b.score - a.score);
+    this.log(`✅ Scored ${this.scoredItems.length} items`);
+  }
+
+  /**
+   * Deduplicate items by URL
+   */
+  deduplicate() {
+    const seen = new Set();
+    const deduped = [];
+
+    for (const item of this.scoredItems) {
+      const url = item.link?.trim();
+      if (url && !seen.has(url)) {
+        seen.add(url);
+        deduped.push(item);
+      }
+    }
+
+    this.scoredItems = deduped;
+    this.log(`✅ Deduplicated to ${this.scoredItems.length} unique items`);
+  }
+
+  /**
+   * Filter by language
+   */
+  filterLanguages() {
+    const minScore = this.config.minScore || 2.5;
+    this.selectedItems = this.scoredItems.filter((item) => {
+      // Keep items above min score
+      if (item.score < minScore) return false;
+
+      // If no languages specified, keep all
+      if (!this.config.languages || this.config.languages.length === 0) return true;
+
+      // Simple language detection (check for common French words)
+      const text = `${item.title} ${item.description}`.toLowerCase();
+      const frenchWords = ['le', 'la', 'les', 'de', 'des', 'et', 'que', 'qui'];
+      const frenchCount = frenchWords.filter((w) => text.includes(w)).length;
+
+      // If predominantly French
+      if (frenchCount >= 3 && this.config.languages.includes('fr')) return true;
+      // Default to English
+      if (this.config.languages.includes('en')) return true;
+
+      return false;
+    });
+
+    // Limit to maxItems
+    const max = this.config.maxItems || 25;
+    this.selectedItems = this.selectedItems.slice(0, max);
+    this.log(`✅ Selected ${this.selectedItems.length} items above score ${minScore}`);
+  }
+
+  /**
+   * Generate markdown output
+   */
+  generateMarkdown() {
+    const today = format(new Date(), 'yyyy-MM-dd');
+    const lines = [
+      `# Daily News Curation - ${today}`,
+      '',
+      `Curated ${this.selectedItems.length} items from disability, accessibility, and social policy sources.`,
+      ''
+    ];
+
+    this.selectedItems.forEach((item, idx) => {
+      lines.push(`## ${idx + 1}. ${item.title}`);
+      if (item.description) {
+        lines.push(`${item.description}`);
+      }
+      if (item.link) {
+        lines.push(`📍 [Source](${item.link})`);
+      }
+      lines.push(`**Score:** ${item.score.toFixed(2)}`);
+      lines.push('');
+    });
+
+    return lines.join('\n');
+  }
+
+  /**
+   * Generate JSON output
+   */
+  generateJSON() {
+    return {
+      date: format(new Date(), 'yyyy-MM-dd'),
+      timestamp: new Date().toISOString(),
+      count: this.selectedItems.length,
+      minScore: this.config.minScore,
+      items: this.selectedItems.map((item) => ({
+        title: item.title,
+        link: item.link,
+        description: item.description,
+        score: item.score,
+        pubDate: item.pubDate
+      }))
+    };
+  }
+
+  /**
+   * Save outputs
+   */
+  saveOutputs(outputDir = null) {
+    const today = format(new Date(), 'yyyy-MM-dd');
+    const outDir = outputDir || process.cwd();
+
+    // Create directories if needed
+    const curDir = path.join(outDir, '_curation');
+    const postDir = path.join(outDir, '_posts');
+    const pubDir = path.join(outDir, 'public');
+
+    [curDir, postDir, pubDir].forEach((dir) => {
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    });
+
+    // Save markdown
+    const markdown = this.generateMarkdown();
+    const mdPath = path.join(curDir, `${today}-curated.md`);
+    fs.writeFileSync(mdPath, markdown);
+    this.log(`✅ Saved markdown: ${mdPath}`);
+
+    // Save blog post format
+    const blogPost = `---
+layout: post
+title: "Daily News Curation - ${today}"
+date: ${today}
+categories: curation news
+---
+
+${markdown}`;
+    const blogPath = path.join(postDir, `${today}-daily-curation.md`);
+    fs.writeFileSync(blogPath, blogPost);
+    this.log(`✅ Saved blog post: ${blogPath}`);
+
+    // Save JSON
+    const json = this.generateJSON();
+    const jsonPath = path.join(pubDir, 'curation-latest.json');
+    fs.writeFileSync(jsonPath, JSON.stringify(json, null, 2));
+    this.log(`✅ Saved JSON API: ${jsonPath}`);
+
+    // Also save to archive for historical data
+    const archivePath = path.join(pubDir, `curation-${today}.json`);
+    fs.writeFileSync(archivePath, JSON.stringify(json, null, 2));
+    this.log(`✅ Saved archive: ${archivePath}`);
+
+    return { mdPath, blogPath, jsonPath, archivePath };
+  }
+
+  /**
+   * Run complete curation
+   */
+  async run() {
+    try {
+      console.log('\n🚀 Starting CURATOR-CORE v2.0\n');
+      
+      await this.fetchAllFeeds();
+      this.scoreItems();
+      this.deduplicate();
+      this.filterLanguages();
+      
+      const outputs = this.saveOutputs();
+      
+      console.log(`\n✅ CURATION COMPLETE`);
+      console.log(`   Items: ${this.selectedItems.length}`);
+      console.log(`   Files: Markdown, Blog Post, JSON API`);
+      console.log(`\n🎯 Ready for social media posting\n`);
+      
+      return outputs;
+    } catch (err) {
+      console.error(`\n❌ CURATOR ERROR: ${err.message}\n`);
+      process.exit(1);
+    }
+  }
+}
+
+// Run if called directly
+if (require.main === module) {
+  const curator = new CuratorCore();
+  curator.run().catch((err) => {
+    console.error(`Fatal error: ${err.message}`);
+    process.exit(1);
+  });
+}
+
+module.exports = CuratorCore;

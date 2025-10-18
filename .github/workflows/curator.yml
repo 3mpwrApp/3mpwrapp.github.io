@@ -1,0 +1,206 @@
+name: Curator (Unified)
+
+# Unified curator workflow - consolidates daily-curator and daily-curation
+# Runs daily at 9:00 AM UTC (5:00 AM EST, 6:00 AM EDT)
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    inputs:
+      force_publish:
+        description: 'Force publish even with low score items'
+        required: false
+        default: false
+        type: boolean
+      min_score:
+        description: 'Minimum score threshold (default: 2.5)'
+        required: false
+        default: '2.5'
+        type: string
+      debug_mode:
+        description: 'Enable debug logging'
+        required: false
+        default: false
+        type: boolean
+      bluesky_thread:
+        description: 'Post as thread on Bluesky (1=thread, 0=single)'
+        required: false
+        default: '0'
+        type: string
+
+env:
+  NODE_VERSION: '18'
+  DEBUG_CURATOR: ${{ github.event.inputs.debug_mode == 'true' && '1' || '0' }}
+
+jobs:
+  curate_and_post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --production
+
+      - name: Validate configuration
+        run: |
+          echo "📋 Validating curator configuration..."
+          node scripts/curator-config.js validate
+          node scripts/curator-config.js summary
+
+      - name: Run curation (curator-core.js)
+        env:
+          MIN_SCORE: ${{ github.event.inputs.min_score || '2.5' }}
+          FORCE_PUBLISH: ${{ github.event.inputs.force_publish == 'true' && '1' || '0' }}
+          DEBUG_CURATOR: ${{ env.DEBUG_CURATOR }}
+          WRITE_JSON: '1'
+          FILTER_LANGS: 'en,fr'
+        run: |
+          echo "🚀 Starting curation with curator-core.js"
+          echo "  Min Score: $MIN_SCORE"
+          echo "  Force Publish: $FORCE_PUBLISH"
+          echo "  Debug Mode: $DEBUG_CURATOR"
+          echo ""
+          
+          node scripts/curator-core.js
+          
+          if [ ! -f "public/curation-latest.json" ]; then
+            echo "❌ Curation failed - no output file"
+            exit 1
+          fi
+
+      - name: Post to social media (social-post.js)
+        if: success()
+        env:
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_VISIBILITY: 'public'
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_PDS: 'https://bsky.social'
+          BLUESKY_THREAD: ${{ github.event.inputs.bluesky_thread || '0' }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: |
+          echo "📤 Posting to social media..."
+          node scripts/social-post.js
+          
+          if [ -f "public/posting-results.json" ]; then
+            echo ""
+            echo "📊 Posting results:"
+            cat public/posting-results.json
+          fi
+
+      - name: Build search index
+        if: always()
+        continue-on-error: true
+        run: |
+          echo "🔍 Building search index..."
+          node scripts/build-search-index.js || echo "⚠️ Search index build optional"
+
+      - name: Update git configuration
+        if: always()
+        run: |
+          git config --local user.email "empowrapp08162025@gmail.com"
+          git config --local user.name "3mpwrApp Curator Bot"
+
+      - name: Commit and push changes
+        if: always()
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          
+          # Check if there are changes
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "✅ No changes to commit"
+            exit 0
+          fi
+          
+          # Add files
+          git add _curation/ _posts/ public/ || true
+          
+          # Verify staged changes
+          if git diff --staged --quiet; then
+            echo "✅ No staged changes to commit"
+            exit 0
+          fi
+          
+          # Commit
+          COMMIT_MSG="📰 Daily curation ($TODAY): News aggregation, content scoring, and multi-platform posting"
+          git commit -m "$COMMIT_MSG"
+          
+          # Push
+          git push origin main || echo "⚠️ Push failed (may have no changes)"
+
+      - name: Create job summary
+        if: always()
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          
+          echo "# 📰 Daily Curator - $TODAY" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f "public/curation-latest.json" ]; then
+            ITEM_COUNT=$(jq '.count' public/curation-latest.json 2>/dev/null || echo "0")
+            echo "✅ **Curation:** $ITEM_COUNT items curated" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            echo "**Top 3 Stories:**" >> $GITHUB_STEP_SUMMARY
+            jq -r '.items[0:3][] | "• \(.title)"' public/curation-latest.json 2>/dev/null >> $GITHUB_STEP_SUMMARY || true
+            echo "" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Curation:** Failed or no items" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ -f "public/posting-results.json" ]; then
+            MASTODON=$(jq -r '.mastodon.success' public/posting-results.json)
+            BLUESKY=$(jq -r '.bluesky.success' public/posting-results.json)
+            X=$(jq -r '.x.success' public/posting-results.json)
+            
+            echo "**Social Media Posting:**" >> $GITHUB_STEP_SUMMARY
+            echo "- Mastodon: $([ "$MASTODON" = "true" ] && echo "✅" || echo "❌")" >> $GITHUB_STEP_SUMMARY
+            echo "- Bluesky: $([ "$BLUESKY" = "true" ] && echo "✅" || echo "❌")" >> $GITHUB_STEP_SUMMARY
+            echo "- X: $([ "$X" = "true" ] && echo "✅" || echo "❌")" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "**Workflow Status:** ✅ Complete" >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: curation-artifacts-${{ github.run_id }}
+          path: |
+            _curation/
+            public/curation-latest.json
+            public/posting-results.json
+          retention-days: 7
+
+      - name: Failure notification
+        if: failure()
+        run: |
+          echo "❌ Curator workflow failed"
+          echo ""
+          echo "Check logs for details:"
+          echo "- Curation step: Check curator-core.js output"
+          echo "- Posting step: Check social-post.js output"
+          echo "- Search index: Optional step, may fail safely"
