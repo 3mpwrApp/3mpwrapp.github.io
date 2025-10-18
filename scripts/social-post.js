@@ -10,11 +10,16 @@
  * - Retry logic with exponential backoff
  * - Platform-specific content formatting
  * - Structured logging
+ * - A/B testing & analytics integration
+ * - Bluesky threading support
  */
 
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+
+// Load analytics module
+const CuratorAnalytics = require('./curator-analytics');
 
 class SocialPoster {
   constructor() {
@@ -24,6 +29,9 @@ class SocialPoster {
       bluesky: { success: false, message: '' },
       x: { success: false, message: '' }
     };
+    this.analytics = new CuratorAnalytics();
+    this.currentFeature = null;
+    this.currentTimeSlot = null;
   }
 
   /**
@@ -78,31 +86,35 @@ class SocialPoster {
   getTimeContext() {
     const hour = new Date().getUTCHours();
     
+    let context;
     if (hour >= 6 && hour < 12) {
-      return {
+      context = {
         greeting: '☀️ Good morning!',
         context: 'Start your day informed with',
         time: 'morning'
       };
     } else if (hour >= 12 && hour < 17) {
-      return {
+      context = {
         greeting: '🌤️ Midday update!',
         context: 'Check out what\'s happening:',
         time: 'midday'
       };
     } else if (hour >= 17 && hour < 22) {
-      return {
+      context = {
         greeting: '🌆 Evening digest!',
         context: 'Catch up on today\'s news:',
         time: 'evening'
       };
     } else {
-      return {
+      context = {
         greeting: '🌙 Late update!',
         context: 'Latest news:',
         time: 'night'
       };
     }
+    
+    this.currentTimeSlot = context.time;
+    return context;
   }
 
   /**
@@ -118,7 +130,9 @@ class SocialPoster {
       'Community Resources: Connect with advocacy groups & support',
       'Multi-language Support: Content available in EN & FR'
     ];
-    return features[Math.floor(Math.random() * features.length)];
+    const feature = features[Math.floor(Math.random() * features.length)];
+    this.currentFeature = feature;
+    return feature;
   }
 
   /**
@@ -262,6 +276,7 @@ class SocialPoster {
           message: `✅ Mastodon: Posted successfully (${res.body.id})`
         };
         console.log(this.results.mastodon.message);
+        this.analytics.trackPostingResult('mastodon', true);
       } else {
         throw new Error(`HTTP ${res.status}: ${res.body.error || 'Unknown error'}`);
       }
@@ -271,6 +286,7 @@ class SocialPoster {
         message: `❌ Mastodon: ${err.message}`
       };
       console.error(this.results.mastodon.message);
+      this.analytics.trackPostingResult('mastodon', false);
     }
   }
 
@@ -306,9 +322,101 @@ class SocialPoster {
       }
 
       const session = authRes.body;
-      const post = this.formatBlueskyPost(content);
 
-      // Post
+      // Check if threading is enabled and content is long
+      if (this.config.bluesky.threadFormat && content.items.length > 3) {
+        await this.postBlueskyThread(session, content);
+      } else {
+        await this.postBlueskySimple(session, content);
+      }
+
+      // Track analytics
+      this.analytics.trackPostingResult('bluesky', true);
+    } catch (err) {
+      this.results.bluesky = {
+        success: false,
+        message: `❌ Bluesky: ${err.message}`
+      };
+      console.error(this.results.bluesky.message);
+      this.analytics.trackPostingResult('bluesky', false);
+    }
+  }
+
+  /**
+   * Post simple (single post) to Bluesky
+   */
+  async postBlueskySimple(session, content) {
+    const post = this.formatBlueskyPost(content);
+
+    const postOptions = {
+      hostname: new URL(this.config.bluesky.pds).hostname,
+      port: 443,
+      path: '/xrpc/com.atproto.repo.createRecord',
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${session.accessJwt}`,
+        'Content-Type': 'application/json',
+        'User-Agent': '3mpwrApp-Curator/2.0'
+      }
+    };
+
+    const postBody = {
+      repo: session.did,
+      collection: 'app.bsky.feed.post',
+      record: {
+        text: post,
+        createdAt: new Date().toISOString(),
+        langs: ['en']
+      }
+    };
+
+    const postRes = await this.httpRequest(postOptions, postBody);
+
+    if (postRes.status >= 200 && postRes.status < 300) {
+      this.results.bluesky = {
+        success: true,
+        message: `✅ Bluesky: Posted successfully (${postRes.body.uri})`
+      };
+      console.log(this.results.bluesky.message);
+    } else {
+      throw new Error(`HTTP ${postRes.status}: ${postRes.body.message || 'Unknown error'}`);
+    }
+  }
+
+  /**
+   * Post as thread to Bluesky
+   */
+  async postBlueskyThread(session, content) {
+    const timeCtx = this.getTimeContext();
+    const feature = this.getFeatureHighlight();
+    
+    // First post (intro)
+    const introPost = `${timeCtx.greeting} 📰 ${content.date}\n\n` +
+                     `3mpwrApp curated ${content.count} stories on disability, accessibility & benefits.\n\n` +
+                     `🌟 ${feature}\n\n` +
+                     `Thread with top stories 🧵👇`;
+
+    let previousPost = null;
+    const posts = [introPost];
+
+    // Add top 5 stories as individual posts in thread
+    const topItems = content.items.slice(0, 5);
+    topItems.forEach((item, idx) => {
+      const storyPost = `${idx + 1}/${topItems.length}: ${item.title}\n\n` +
+                       `${item.description ? item.description.substring(0, 200) + '...\n\n' : ''}` +
+                       `🔗 ${item.link}`;
+      posts.push(storyPost);
+    });
+
+    // Final post (CTA)
+    const finalPost = `✨ That's ${topItems.length}/${content.count} curated stories!\n\n` +
+                     `Visit 3mpwr App for all stories, resources & benefits navigator:\n` +
+                     `https://3mpwrapp.pages.dev\n\n` +
+                     `#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
+    posts.push(finalPost);
+
+    // Post each in sequence, linking to previous
+    for (const postText of posts) {
       const postOptions = {
         hostname: new URL(this.config.bluesky.pds).hostname,
         port: 443,
@@ -321,34 +429,54 @@ class SocialPoster {
         }
       };
 
+      const record = {
+        text: postText,
+        createdAt: new Date().toISOString(),
+        langs: ['en']
+      };
+
+      // Link to previous post in thread
+      if (previousPost) {
+        record.reply = {
+          root: {
+            uri: posts[0] === postText ? null : posts[0].uri,
+            cid: posts[0] === postText ? null : posts[0].cid
+          },
+          parent: {
+            uri: previousPost.uri,
+            cid: previousPost.cid
+          }
+        };
+      }
+
       const postBody = {
         repo: session.did,
         collection: 'app.bsky.feed.post',
-        record: {
-          text: post,
-          createdAt: new Date().toISOString(),
-          langs: ['en']
-        }
+        record
       };
 
       const postRes = await this.httpRequest(postOptions, postBody);
 
       if (postRes.status >= 200 && postRes.status < 300) {
-        this.results.bluesky = {
-          success: true,
-          message: `✅ Bluesky: Posted successfully (${postRes.body.uri})`
-        };
-        console.log(this.results.bluesky.message);
+        previousPost = postRes.body;
+        // Store root reference
+        if (!record.reply) {
+          posts[0].uri = postRes.body.uri;
+          posts[0].cid = postRes.body.cid;
+        }
       } else {
-        throw new Error(`HTTP ${postRes.status}: ${postRes.body.message || 'Unknown error'}`);
+        throw new Error(`Thread post failed: HTTP ${postRes.status}`);
       }
-    } catch (err) {
-      this.results.bluesky = {
-        success: false,
-        message: `❌ Bluesky: ${err.message}`
-      };
-      console.error(this.results.bluesky.message);
+
+      // Small delay between posts
+      await new Promise(resolve => setTimeout(resolve, 1000));
     }
+
+    this.results.bluesky = {
+      success: true,
+      message: `✅ Bluesky: Posted thread with ${posts.length} posts`
+    };
+    console.log(this.results.bluesky.message);
   }
 
   /**
@@ -388,6 +516,7 @@ class SocialPoster {
           message: `✅ X: Posted successfully (${res.body.data?.id})`
         };
         console.log(this.results.x.message);
+        this.analytics.trackPostingResult('x', true);
       } else {
         throw new Error(`HTTP ${res.status}: ${JSON.stringify(res.body.errors || res.body)}`);
       }
@@ -397,6 +526,7 @@ class SocialPoster {
         message: `❌ X: ${err.message}`
       };
       console.error(this.results.x.message);
+      this.analytics.trackPostingResult('x', false);
     }
   }
 
@@ -405,21 +535,48 @@ class SocialPoster {
    */
   async postAll() {
     try {
-      console.log('\n📤 SOCIAL-POST v2.0\n');
+      console.log('\n📤 SOCIAL-POST v2.0 (Enhanced)\n');
 
       const content = this.getLatestContent();
       console.log(`📋 Found ${content.count} curated items\n`);
+
+      // Get time context and feature (for analytics)
+      const timeCtx = this.getTimeContext();
+      const feature = this.getFeatureHighlight();
 
       // Post in sequence
       await this.postToMastodon(content);
       await this.postToBluesky(content);
       await this.postToX(content);
 
+      // Track analytics
+      const platforms = [];
+      if (this.results.mastodon.success) platforms.push('mastodon');
+      if (this.results.bluesky.success) platforms.push('bluesky');
+      if (this.results.x.success) platforms.push('x');
+
+      // Track feature highlight usage
+      if (this.currentFeature && this.currentTimeSlot) {
+        platforms.forEach(platform => {
+          this.analytics.trackFeatureHighlight(this.currentFeature, this.currentTimeSlot, platform);
+        });
+      }
+
+      // Track time slot performance
+      if (this.currentTimeSlot) {
+        this.analytics.trackTimeSlot(this.currentTimeSlot, content.count, platforms);
+      }
+
+      // Save analytics
+      this.analytics.saveAnalytics();
+
       // Summary
       const successCount = Object.values(this.results).filter((r) => r.success).length;
       const totalCount = Object.values(this.results).filter((r) => r.message !== 'Not configured').length;
 
-      console.log(`\n📊 Results: ${successCount}/${totalCount} platforms succeeded\n`);
+      console.log(`\n📊 Results: ${successCount}/${totalCount} platforms succeeded`);
+      console.log(`⏰ Time slot: ${this.currentTimeSlot}`);
+      console.log(`🌟 Feature: ${this.currentFeature ? this.currentFeature.split(':')[0] : 'N/A'}\n`);
 
       // Save results
       const resultsPath = path.join(process.cwd(), 'public', 'posting-results.json');

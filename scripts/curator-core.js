@@ -13,12 +13,20 @@
  * - CDATA section handling
  * - Structured JSON output
  * - Markdown output for blog posts
+ * - Trending topics detection & scoring boost
+ * - RSS feed generation
+ * - Social media card generation
  */
 
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const { parseISO, format } = require('date-fns');
+
+// Load enhancement modules
+const TrendingTopics = require('./curator-trending');
+const CuratorRSS = require('./curator-rss');
+const CuratorImages = require('./curator-images');
 
 class CuratorCore {
   constructor(configPath = null) {
@@ -27,6 +35,9 @@ class CuratorCore {
     this.items = [];
     this.scoredItems = [];
     this.selectedItems = [];
+    this.trending = new TrendingTopics();
+    this.rssGen = new CuratorRSS();
+    this.imageGen = new CuratorImages();
   }
 
   /**
@@ -430,18 +441,39 @@ ${markdown}`;
    */
   async run() {
     try {
-      console.log('\n🚀 Starting CURATOR-CORE v2.0\n');
+      console.log('\n🚀 Starting CURATOR-CORE v2.0 (Enhanced)\n');
       
       await this.fetchAllFeeds();
       this.scoreItems();
+      
+      // Apply trending topics boost
+      console.log('🔥 Applying trending topics boost...');
+      this.scoredItems = this.trending.applyTrendingBoosts(
+        this.scoredItems, 
+        this.config.scoringKeywords
+      );
+      
       this.deduplicate();
       this.filterLanguages();
       
+      // Update trending topics tracking
+      this.trending.updateFromItems(this.selectedItems, this.config.scoringKeywords);
+      
+      // Save core outputs
       const outputs = this.saveOutputs();
+      
+      // Generate RSS feed
+      console.log('📡 Generating RSS feed...');
+      this.rssGen.generateFromLatest();
+      
+      // Generate social media cards
+      console.log('🎨 Generating social media cards...');
+      this.imageGen.generateCards();
       
       console.log(`\n✅ CURATION COMPLETE`);
       console.log(`   Items: ${this.selectedItems.length}`);
-      console.log(`   Files: Markdown, Blog Post, JSON API`);
+      console.log(`   Files: Markdown, Blog Post, JSON API, RSS Feed, Social Cards`);
+      console.log(`   Trending: ${this.trending.trending.currentTrending.length} keywords`);
       console.log(`\n🎯 Ready for social media posting\n`);
       
       return outputs;
