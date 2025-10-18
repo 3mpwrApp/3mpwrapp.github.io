@@ -92,17 +92,43 @@ function httpsRequest(options, body = null) {
 }
 
 /**
- * X (Twitter) API v2 Integration
+ * X (Twitter) API v1.1 Integration with OAuth 1.0a
+ * Uses OAuth 1.0a for reliable posting to native apps
  */
 class XApiClient {
-  constructor(bearerToken) {
-    this.bearerToken = bearerToken;
+  constructor(apiKey, apiSecret, accessToken, accessTokenSecret) {
+    this.apiKey = apiKey;
+    this.apiSecret = apiSecret;
+    this.accessToken = accessToken;
+    this.accessTokenSecret = accessTokenSecret;
     this.endpoint = 'https://api.twitter.com';
   }
 
+  buildOAuthSignature(method, url, params) {
+    const crypto = require('crypto');
+    
+    // Sort parameters
+    const sortedParams = Object.keys(params)
+      .sort()
+      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+      .join('&');
+
+    // Build signature base string
+    const baseString = `${method}&${encodeURIComponent(url)}&${encodeURIComponent(sortedParams)}`;
+
+    // Generate signature
+    const signingKey = `${encodeURIComponent(this.apiSecret)}&${encodeURIComponent(this.accessTokenSecret)}`;
+    const signature = crypto
+      .createHmac('sha1', signingKey)
+      .update(baseString)
+      .digest('base64');
+
+    return signature;
+  }
+
   async postTweet(text) {
-    if (!this.bearerToken) {
-      console.warn('[X API] No bearer token configured');
+    if (!this.apiKey || !this.apiSecret || !this.accessToken || !this.accessTokenSecret) {
+      console.warn('[X API] Missing OAuth 1.0a credentials');
       return null;
     }
 
@@ -112,25 +138,50 @@ class XApiClient {
     }
 
     try {
+      const crypto = require('crypto');
+      const timestamp = Math.floor(Date.now() / 1000).toString();
+      const nonce = crypto.randomBytes(16).toString('hex');
+
+      const oauthParams = {
+        'oauth_consumer_key': this.apiKey,
+        'oauth_nonce': nonce,
+        'oauth_signature_method': 'HMAC-SHA1',
+        'oauth_timestamp': timestamp,
+        'oauth_token': this.accessToken,
+        'oauth_version': '1.0',
+        'status': text,
+      };
+
+      const url = 'https://api.twitter.com/1.1/statuses/update.json';
+      const signature = this.buildOAuthSignature('POST', url, oauthParams);
+      
+      oauthParams['oauth_signature'] = signature;
+
+      const authHeader = 'OAuth ' + Object.keys(oauthParams)
+        .filter(key => key.startsWith('oauth_'))
+        .map(key => `${key}="${encodeURIComponent(oauthParams[key])}"`)
+        .join(', ');
+
       const options = {
         hostname: 'api.twitter.com',
-        path: '/2/tweets',
+        path: `/1.1/statuses/update.json?status=${encodeURIComponent(text)}`,
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.bearerToken}`,
-          'Content-Type': 'application/json',
+          'Authorization': authHeader,
           'User-Agent': '3mpwrApp/1.0',
         },
       };
 
-      const body = { text };
-      const res = await httpsRequest(options, body);
+      const res = await httpsRequest(options);
 
-      if (res.status === 201) {
-        console.log(`[X API] ✓ Tweet posted: ${res.data.data?.id}`);
-        return res.data.data;
+      if (res.status === 200) {
+        console.log(`[X API] ✓ Tweet posted: ${res.data.id_str}`);
+        return res.data;
       } else {
-        console.error(`[X API] Failed to post tweet: ${res.status} - ${res.data}`);
+        console.error(`[X API] Failed to post tweet: ${res.status}`);
+        if (res.data.errors) {
+          console.error(`[X API] Error: ${res.data.errors[0].message}`);
+        }
         return null;
       }
     } catch (e) {
@@ -339,7 +390,12 @@ class InstagramApiClient {
  */
 class SocialMediaManager {
   constructor() {
-    this.x = new XApiClient(process.env.X_API_KEY);
+    this.x = new XApiClient(
+      process.env.X_API_KEY,
+      process.env.X_API_SECRET,
+      process.env.X_ACCESS_TOKEN,
+      process.env.X_ACCESS_TOKEN_SECRET
+    );
     this.mastodon = new MastodonApiClient(
       process.env.MASTODON_INSTANCE,
       process.env.MASTODON_ACCESS_TOKEN
