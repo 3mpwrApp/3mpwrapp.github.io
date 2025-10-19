@@ -22,7 +22,7 @@ Stay informed about product updates, early access, and beta invites. We'll only 
   <iframe
     id="newsletter-form"
     title="3mpwr App newsletter signup"
-    src="https://docs.google.com/forms/d/e/1FAIpQLSf9AHMg9pMWS2njErNXDj1W0g2rXBNabXsUnZOgRF4vfvk0kQ/viewform?embedded=true"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfuItjmtWlUW3L8irmSe8QN129_GJDLAF4f5n-QHPcj_FFoyg/viewform?embedded=true"
     loading="lazy"
     frameborder="0"
     marginheight="0"
@@ -51,7 +51,7 @@ Stay informed about product updates, early access, and beta invites. We'll only 
 </script>
 
 If you cannot see the embedded form, use this direct link:
-- [Open the signup form](https://docs.google.com/forms/d/e/1FAIpQLSf9AHMg9pMWS2njErNXDj1W0g2rXBNabXsUnZOgRF4vfvk0kQ/viewform)
+- [Open the signup form](https://docs.google.com/forms/d/e/1FAIpQLSfuItjmtWlUW3L8irmSe8QN129_GJDLAF4f5n-QHPcj_FFoyg/viewform)
 
 ---
 
