@@ -1702,7 +1702,7 @@
         "helpful": "Helpful",
         "not_relevant": "Not relevant to me",
         "misleading": "Misleading or incorrect",
-        "other": "Other reason"
+        "other_option": "Other reason"
       },
       "submitError": "Failed to submit feedback. Please try again.",
       "reasonRequired": "Please select a reason"
