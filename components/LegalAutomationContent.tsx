@@ -682,7 +682,8 @@ Sincerely,
 
   const handleCreateProcess = () => {
     // Reserved for future implementation - process creation flow
-    const _newProcess: Partial<LegalProcess> = {
+    /*
+    const newProcess: Partial<LegalProcess> = {
       type: selectedProcessType,
       jurisdiction: selectedJurisdiction,
       status: 'planning',
@@ -697,6 +698,7 @@ Sincerely,
       culturalConsiderations: settings.ceremonialConsiderations ? 
         ['Traditional consultation protocols will be observed'] : undefined
     };
+    */
 
     // In production, this would navigate to a detailed creation flow
     Alert.alert(

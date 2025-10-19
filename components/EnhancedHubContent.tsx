@@ -1,6 +1,5 @@
 // Enhanced Community Features for Disability Advocacy Networks
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import {
   Alert,
@@ -136,7 +135,8 @@ interface AccessibilityFeature {
 // Enhanced Community Hub Component
 export default function EnhancedHubContent() {
   const insets = useSafeAreaInsets();
-  const _router = useRouter(); // Reserved for future navigation features
+  // Reserved for future navigation features
+  // const router = useRouter();
   const textColor = useThemeColor({}, 'text');
   const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();
