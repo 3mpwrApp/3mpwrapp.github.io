@@ -74,7 +74,12 @@
         </li>
         <li>
           <a href="{{ lang_prefix | append: '/user-guide' | relative_url }}" {% if page.url contains '/user-guide' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Guide d’utilisation{% else %}User Guide{% endif %}
+            {% if page.lang == 'fr' %}Guide d'utilisation{% else %}User Guide{% endif %}
+          </a>
+        </li>
+        <li>
+          <a href="{{ lang_prefix | append: '/roadmap' | relative_url }}" {% if page.url contains '/roadmap' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Feuille de route{% else %}Roadmap{% endif %}
           </a>
         </li>
         <li>
