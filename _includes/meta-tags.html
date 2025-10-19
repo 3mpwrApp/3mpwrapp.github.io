@@ -1,0 +1,106 @@
+<!-- Open Graph Meta Tags -->
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description | truncate: 200 }}">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:locale" content="{% if page.lang == 'fr' %}fr_CA{% else %}en_CA{% endif %}">
+{% if page.lang == 'fr' %}
+<meta property="og:locale:alternate" content="en_CA">
+{% else %}
+<meta property="og:locale:alternate" content="fr_CA">
+{% endif %}
+
+<!-- Open Graph Image -->
+{% if page.image %}
+<meta property="og:image" content="{{ page.image | absolute_url }}">
+<meta property="og:image:secure_url" content="{{ page.image | absolute_url }}">
+<meta property="og:image:alt" content="{{ page.image_alt | default: page.title }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{% else %}
+<meta property="og:image" content="{{ '/assets/empowrapp-logo.png' | absolute_url }}">
+<meta property="og:image:secure_url" content="{{ '/assets/empowrapp-logo.png' | absolute_url }}">
+<meta property="og:image:alt" content="3mpwrApp - Empowering Individuals, Building Community">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{% endif %}
+
+<!-- Article-specific Open Graph -->
+{% if page.layout == 'post' %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:author" content="3mpwrApp">
+{% if page.modified_date %}
+<meta property="article:modified_time" content="{{ page.modified_date | date_to_xmlschema }}">
+{% endif %}
+{% if page.categories %}
+{% for category in page.categories %}
+<meta property="article:section" content="{{ category }}">
+{% endfor %}
+{% endif %}
+{% if page.tags %}
+{% for tag in page.tags %}
+<meta property="article:tag" content="{{ tag }}">
+{% endfor %}
+{% endif %}
+{% endif %}
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:site" content="@3mpowrapp0816">
+<meta name="twitter:creator" content="@3mpowrapp0816">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.description | default: site.description | truncate: 200 }}">
+{% if page.image %}
+<meta name="twitter:image" content="{{ page.image | absolute_url }}">
+<meta name="twitter:image:alt" content="{{ page.image_alt | default: page.title }}">
+{% else %}
+<meta name="twitter:image" content="{{ '/assets/empowrapp-logo.png' | absolute_url }}">
+<meta name="twitter:image:alt" content="3mpwrApp - Empowering Individuals, Building Community">
+{% endif %}
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="3mpwrApp">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+{% if page.lang == 'fr' %}
+<meta name="language" content="French">
+{% else %}
+<meta name="language" content="English">
+{% endif %}
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- Alternate Language Links (hreflang) -->
+{% assign current_path = page.url | remove_first: '/fr' %}
+{% if page.lang == 'fr' %}
+<link rel="alternate" hreflang="en" href="{{ current_path | absolute_url }}">
+<link rel="alternate" hreflang="fr" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ current_path | absolute_url }}">
+{% else %}
+<link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}">
+{% if page.has_french_version != false %}
+<link rel="alternate" hreflang="fr" href="{{ '/fr' | append: page.url | absolute_url }}">
+{% endif %}
+<link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+{% endif %}
+
+<!-- PWA and Mobile Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="3mpwrApp">
+<meta name="application-name" content="3mpwrApp">
+<meta name="theme-color" content="#2A9D8F">
+<meta name="msapplication-TileColor" content="#2A9D8F">
+<meta name="msapplication-navbutton-color" content="#2A9D8F">
+
+<!-- Manifest -->
+<link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+
+<!-- Favicons and Touch Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/icons/icon-192.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/icons/icon-512.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
+<link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">

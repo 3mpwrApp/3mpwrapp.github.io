@@ -2,8 +2,8 @@
 # If using GitHub Pages, add these as meta tags in default.html
 
 /*
-  # Content Security Policy
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.googletagmanager.com https://gc.zgo.at 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src https://docs.google.com; base-uri 'self'; form-action 'self' https://duckduckgo.com https://docs.google.com; frame-ancestors 'none'; upgrade-insecure-requests
+  # Content Security Policy - Enhanced with additional directives
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.googletagmanager.com https://gc.zgo.at 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src https://docs.google.com; base-uri 'self'; form-action 'self' https://duckduckgo.com https://docs.google.com; frame-ancestors 'none'; object-src 'none'; media-src 'self'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests
   
   # Prevent clickjacking
   X-Frame-Options: DENY
@@ -18,10 +18,15 @@
   Referrer-Policy: strict-origin-when-cross-origin
   
   # Permissions policy (restrict dangerous features)
-  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), interest-cohort=()
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), ambient-light-sensor=(), interest-cohort=()
   
-  # HSTS (only if using HTTPS)
+  # HSTS (2 years with preload)
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  
+  # Cross-Origin Policies for enhanced security
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
   
   # Cache control for static assets
   Cache-Control: public, max-age=31536000, immutable
