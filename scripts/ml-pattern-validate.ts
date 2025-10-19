@@ -41,6 +41,7 @@ function test(name: string, condition: boolean, failMessage: string, isWarning =
 }
 
 async function runValidation() {
+  // eslint-disable-next-line no-console
   console.log('🔍 Running ML Pattern Validation Tests...\n');
 
   // Test 1: Pattern service exists
@@ -80,7 +81,8 @@ async function runValidation() {
       serviceContent.includes('export.*analyzePattern'),
       'analyzePattern not exported'
     );
-  } catch (error) {
+  } catch (err) {
+    const error = err as Error;
     console.error('Error reading service file:', error);
   }
 
@@ -97,11 +99,13 @@ async function runValidation() {
       hookContent.includes('interface UsePatternAnalysisResult'),
       'UsePatternAnalysisResult interface not defined'
     );
-  } catch (error) {
+  } catch (err) {
+    const error = err as Error;
     console.error('Error reading hook file:', error);
   }
 
   // Test 5: TypeScript compilation
+  // eslint-disable-next-line no-console
   console.log('\n📋 Checking TypeScript compilation...');
   test(
     'Files are TypeScript-compatible',
@@ -119,8 +123,9 @@ async function runValidation() {
       'Pattern-related i18n strings should be added',
       true // Warning only
     );
-  } catch (error) {
-    console.warn('Could not check i18n file');
+  } catch (err) {
+    const error = err as Error;
+    console.warn('Could not check i18n file:', error.message);
   }
 
   // Test 7: Pattern types are defined
@@ -141,7 +146,8 @@ async function runValidation() {
       serviceContent.includes('interface PatternAnalysis'),
       'PatternAnalysis interface not found'
     );
-  } catch (error) {
+  } catch (err) {
+    const error = err as Error;
     console.error('Error checking interfaces:', error);
   }
 
@@ -176,33 +182,44 @@ async function runValidation() {
   };
 
   // Print results
+  // eslint-disable-next-line no-console
   console.log('\n' + '='.repeat(60));
+  // eslint-disable-next-line no-console
   console.log('📊 VALIDATION REPORT');
+  // eslint-disable-next-line no-console
   console.log('='.repeat(60));
 
   tests.forEach(test => {
     const icon = test.status === 'PASS' ? '✓' : test.status === 'WARNING' ? '⚠' : '✗';
     const color =
       test.status === 'PASS' ? '\x1b[32m' : test.status === 'WARNING' ? '\x1b[33m' : '\x1b[31m';
+    // eslint-disable-next-line no-console
     console.log(`${color}${icon}\x1b[0m ${test.name}: ${test.message}`);
     if (test.details) {
+      // eslint-disable-next-line no-console
       console.log(`  ${test.details}`);
     }
   });
 
+  // eslint-disable-next-line no-console
   console.log('\n' + '='.repeat(60));
+  // eslint-disable-next-line no-console
   console.log(`Summary: ${report.summary.passed}/${report.summary.totalTests} tests passed`);
   if (report.summary.warnings > 0) {
+    // eslint-disable-next-line no-console
     console.log(`⚠️  ${report.summary.warnings} warnings`);
   }
   if (report.summary.failed > 0) {
+    // eslint-disable-next-line no-console
     console.log(`❌ ${report.summary.failed} tests failed`);
   }
+  // eslint-disable-next-line no-console
   console.log('='.repeat(60) + '\n');
 
   // Save report
   const reportPath = path.join(__dirname, '../ml-patterns-validation.json');
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  // eslint-disable-next-line no-console
   console.log(`📄 Report saved to: ${reportPath}\n`);
 
   // Exit with appropriate code
