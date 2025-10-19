@@ -91,6 +91,7 @@ export function usePatternAnalysis(
       const interval = setInterval(loadPatterns, autoRefresh);
       return () => clearInterval(interval);
     }
+    return undefined; // Explicit return for consistency
   }, [userId, autoRefresh, loadPatterns]);
 
   const patternsByType: { [key in PatternType]?: Pattern } = patterns.reduce(

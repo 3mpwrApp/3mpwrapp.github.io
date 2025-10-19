@@ -377,7 +377,7 @@ function calculateConfidence(
 function generateReasoningString(
   predictedLevel: number,
   patternPrediction: number | null | undefined,
-  timeOfDayAdjustment: number | null | undefined,
+  _timeOfDayAdjustment: number | null | undefined, // Prefixed with _ to indicate intentionally unused
   recentTrend: number | null | undefined
 ): string {
   const reasons: string[] = [];

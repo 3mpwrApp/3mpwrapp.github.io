@@ -118,6 +118,7 @@ export function usePredictedEnergy(
       const interval = setInterval(loadPredictions, refreshInterval);
       return () => clearInterval(interval);
     }
+    return undefined; // Explicit return for consistency
   }, [userId, refreshInterval, loadPredictions]);
 
   const setCurrentEnergy = useCallback((level: number) => {

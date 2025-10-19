@@ -53,12 +53,16 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
   }
 
   const chartWidth = width - 32; // Padding
+  // Calculate min/max for scaling (reserved for future normalization)
   const _maxEnergyInForecast = Math.max(
     ...forecast.predictions.map(p => p.level)
   );
   const _minEnergyInForecast = Math.min(
     ...forecast.predictions.map(p => p.level)
   );
+  // These values are intentionally unused but kept for future scaling implementation
+  void _maxEnergyInForecast;
+  void _minEnergyInForecast;
 
   // Generate accessibility label
   const a11yLabel = `Energy forecast for next ${forecast.predictions.length} hours. ${
