@@ -15,8 +15,9 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 - Persons with Disabilities across all provinces and territories
 - Injured Workers navigating WSIB, WCB, and provincial systems
 - Supporters, Allies, and Advocates
-- Labour Unions representing injured and disabled workers
-- Indigenous communities with disabilities
+- Labour movement representing injured workers, Persons with Disabilities, and all workers fighting for accessibility and inclusion
+- Indigenous communities with disabilities, respecting sovereignty and traditional knowledge
+- Allies in the broader social justice movement working toward systemic change
 
 **Our immediate mission**: Build the strongest, most accessible disability rights platform in Canada, then expand globally with lessons learned and proven features.
 
