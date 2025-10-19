@@ -27,10 +27,11 @@ jobs:
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
-            https://3mpwrapp.github.io/
-            https://3mpwrapp.github.io/features
-            https://3mpwrapp.github.io/user-guide
-            https://3mpwrapp.github.io/blog
-            https://3mpwrapp.github.io/beta
+            https://3mpwrapp.pages.dev/
+            https://3mpwrapp.pages.dev/features
+            https://3mpwrapp.pages.dev/user-guide
+            https://3mpwrapp.pages.dev/blog
+            https://3mpwrapp.pages.dev/beta
+          configPath: './.lighthouserc.json'
           uploadArtifacts: true
           temporaryPublicStorage: true
