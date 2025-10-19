@@ -109,6 +109,14 @@ Quick reference: Deep-link seeding with q param is documented in `docs/deep-link
 
 ## Documentation
 
+### 🚀 Beta Testing (START HERE!)
+- **Beta Readiness Report**: `CLOSED_BETA_READINESS_REPORT.md` - Complete audit results
+- **Beta Launch Checklist**: `BETA_LAUNCH_CHECKLIST.md` - Pre-launch tasks and monitoring
+- **Feature List**: `docs/FEATURES_COMPLETE.md` - All features by tab (Beta vs Coming Soon)
+- **Quick Feature Summary**: `docs/BETA_FEATURE_SUMMARY.md` - Quick reference for testers
+- **Final Audit Summary**: `FINAL_AUDIT_SUMMARY.md` - Executive summary of readiness
+
+### 📖 Main Documentation
 - **Phase 3 Optimization**:
   - Architecture Overview: `docs/PHASE3_OPTIMIZATION_ARCHITECTURE.md`
   - Lazy Loading Guide: `docs/LAZY_LOADING_GUIDE.md`

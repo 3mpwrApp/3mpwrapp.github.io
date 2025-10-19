@@ -3,13 +3,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import {
-    Alert,
-    FlatList,
-    Modal,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View
+  Alert,
+  FlatList,
+  Modal,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -136,8 +136,7 @@ interface AccessibilityFeature {
 // Enhanced Community Hub Component
 export default function EnhancedHubContent() {
   const insets = useSafeAreaInsets();
-  // @ts-expect-error - router reserved for future navigation features
-  const _router = useRouter();
+  const _router = useRouter(); // Reserved for future navigation features
   const textColor = useThemeColor({}, 'text');
   const backgroundColor = useThemeColor({}, 'background');
   const { t: _t } = useTranslation();

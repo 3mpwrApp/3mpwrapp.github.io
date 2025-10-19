@@ -5,12 +5,12 @@ import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import type { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import {
-  Alert,
-  Modal,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View
+    Alert,
+    Modal,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -681,7 +681,7 @@ Sincerely,
   };
 
   const handleCreateProcess = () => {
-    // @ts-expect-error - process creation reserved for future implementation
+    // Reserved for future implementation - process creation flow
     const _newProcess: Partial<LegalProcess> = {
       type: selectedProcessType,
       jurisdiction: selectedJurisdiction,
