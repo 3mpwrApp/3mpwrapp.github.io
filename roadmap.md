@@ -9,6 +9,17 @@ permalink: /roadmap/
 
 We're constantly improving 3mpwrApp based on your feedback and the community's needs. Here's what we're working on and what's coming next.
 
+## 🇨🇦 Current Scope: Canada-Wide
+
+**3mpwrApp is currently focused on serving the Canadian disability community**, including:
+- Persons with Disabilities across all provinces and territories
+- Injured Workers navigating WSIB, WCB, and provincial systems
+- Supporters, Allies, and Advocates
+- Labour Unions representing injured and disabled workers
+- Indigenous communities with disabilities
+
+**Our immediate mission**: Build the strongest, most accessible disability rights platform in Canada, then expand globally with lessons learned and proven features.
+
 ---
 
 ## 🎯 Coming Very Soon (Next 3-6 Months)
@@ -176,6 +187,234 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 
 ## 🚀 Future Innovations (2026 and Beyond)
 
+### 🌍 Global Expansion: From Canada to the World
+**Who it helps:** Disability rights movements worldwide  
+**Status:** Strategic planning phase, launching after Canadian success
+
+**Vision:** Take 3mpwrApp's proven Canadian model global, adapting to regional laws, cultures, and disability systems worldwide.
+
+**Phase 1: International English Markets (2026 Q1-Q2)**
+- 🌐 **United Kingdom**: Adapt for DWP, PIP, ESA, tribunals
+- 🌐 **Australia**: Support NDIS, Centrelink, Fair Work Commission
+- 🌐 **New Zealand**: ACC injury claims, disability support
+- 🌐 **Ireland**: Adapt for Irish disability systems
+- 🌐 **United States**: 50-state compliance (ADA, SSDI, state workers' comp)
+
+**Phase 2: Multilingual Expansion (2026 Q3-Q4)**
+- 🌐 **European Union**: GDPR compliance, 24 official languages
+  - Priority: French, German, Spanish, Dutch, Italian
+- 🌐 **Latin America**: Spanish/Portuguese adaptation
+  - Focus: Mexico, Brazil, Argentina, Colombia
+- 🌐 **Asia-Pacific**: Key markets with strong disability movements
+  - Priority: Japan, South Korea, India, Philippines
+
+**Phase 3: Global South & Underserved Regions (2027+)**
+- 🌐 **Africa**: Mobile-first design for limited connectivity
+- 🌐 **Middle East**: Arabic localization, cultural adaptation
+- 🌐 **Southeast Asia**: Low-bandwidth optimization
+- 🌐 **Indigenous Global Network**: Connect First Nations worldwide
+
+**Technical Requirements for Global Launch:**
+- Multi-jurisdiction legal framework engine
+- 200+ language support with community translations
+- Offline-first architecture for low-connectivity regions
+- Currency and date/time localization
+- Regional data residency (EU, China, Russia compliance)
+- Cultural accessibility adaptations per region
+- Partnership with international disability organizations
+
+**Expected Impact:**
+- 100+ countries served by 2028
+- 50 million+ users globally
+- United global disability rights movement
+- Cross-border solidarity and advocacy
+
+---
+
+### 🏆 Revolutionary Movement-Building Features
+
+These are **never-before-seen innovations** designed specifically to advance disability rights:
+
+#### 1. **Collective Bargaining Intelligence Network** 🤝
+**WORLD FIRST:** AI-powered collective action coordinator for disability rights
+
+- **Pattern Recognition**: Anonymously aggregate denial patterns across thousands of cases
+  - "347 people with fibromyalgia denied by the same adjudicator in 6 months"
+  - "This employer has 89% denial rate for mental health claims"
+- **Strategic Action Alerts**: Notify unions and advocates when systemic discrimination detected
+- **Class Action Builder**: Auto-identify cases suitable for group legal action
+- **Union Power Dashboard**: Real-time data for labor negotiations
+  - "12 workers injured at this workplace in 3 months - negotiate safety changes"
+- **Solidarity Matching**: Connect workers facing same employer/insurer
+- **Legislative Pressure Maps**: Show politicians how many constituents affected
+- **Media Kit Generator**: Auto-create press releases when patterns reach threshold
+
+**Impact:** Transform individual struggles into collective power. Expose systemic discrimination. Force policy change through data.
+
+---
+
+#### 2. **Accessibility Innovation Lab** 🔬
+**WORLD FIRST:** Crowdsourced accessibility R&D platform
+
+- **Community-Invented Solutions**: Users submit custom accessibility hacks
+  - "I taped a stylus to my head brace for phone use"
+  - "I use voice commands + eye-tracking combo"
+- **Solution Marketplace**: Share adaptations with community (free + open source)
+- **DIY Assistive Tech Library**: 3D-printable designs, code snippets, hardware mods
+- **Corporate Challenge Program**: Companies compete to solve user-submitted barriers
+- **Patent-Free Zone**: All innovations shared as creative commons
+- **Maker Space Connector**: Link users to local hackerspaces for builds
+- **Medical Professional Portal**: Occupational therapists can browse solutions for patients
+
+**Impact:** Democratize assistive technology. Break corporate monopolies. Foster innovation from lived experience.
+
+---
+
+#### 3. **Trauma-Informed AI Companion** 🧠
+**WORLD FIRST:** Mental health-aware advocacy assistant
+
+- **Emotional Check-ins**: "How are you feeling about your case today?"
+- **Trigger Detection**: Recognizes when tasks might be overwhelming
+  - "This involves your accident. Would you like to take a break first?"
+- **Pacing Suggestions**: "You've been working for 45 min. Time for a reset?"
+- **Victory Celebration**: Marks milestones with encouragement
+- **Crisis Detection**: Recognizes distress signals, offers resources
+  - "It sounds like today is really hard. Here's the crisis line: 988"
+- **Gentle Reminders**: Uses supportive language, never punitive
+  - "When you're ready" instead of "You must"
+- **Energy Banking**: Tracks your capacity, suggests lighter tasks on low days
+- **Peer Support Matching**: "3 people in similar situations want to connect"
+
+**Impact:** Reduce re-traumatization. Support mental health during advocacy. Recognize that legal battles take emotional toll.
+
+---
+
+#### 4. **Evidence Blockchain** ⛓️
+**WORLD FIRST:** Tamper-proof disability evidence preservation
+
+- **Immutable Timeline**: Every document timestamped on blockchain
+- **Cannot Be Altered**: Employers/insurers can't claim "we never received that"
+- **Third-Party Verification**: Independent proof of submission
+- **Audit Trail**: Show exactly when evidence was collected, submitted, accessed
+- **Medical Record Protection**: Hash medical files to prove authenticity
+- **Photo/Video Authentication**: Prove surveillance footage wasn't edited
+- **Legal Admissibility**: Blockchain evidence accepted in tribunals
+- **Decentralized Storage**: Your evidence survives even if app shuts down
+- **Smart Contracts**: Auto-trigger actions when conditions met
+  - "If insurer doesn't respond in 30 days, auto-escalate to ombudsman"
+
+**Impact:** End "lost paperwork" excuses. Provide irrefutable proof. Level playing field against institutional power.
+
+---
+
+#### 5. **Union Solidarity Network** 🪧
+**WORLD FIRST:** Cross-union disabled worker advocacy platform
+
+- **Inter-Union Communication**: Connect CUPE, Unifor, OPSEU, provincial unions
+- **Strike Support for Disabled Workers**: Accessible picket lines, virtual solidarity
+- **Collective Agreement Database**: Search 10,000+ CBAs for disability clauses
+- **Best Practice Sharing**: "This local won 100% pay during recovery"
+- **Bargaining Support**: AI suggests contract language based on wins elsewhere
+- **Workplace Accommodation Tracker**: Anonymous database of successful accommodations
+  - "Employer XYZ approved home office for chronic pain"
+- **Shop Steward Training**: Built-in disability rights education for union reps
+- **Political Action Coordinator**: Mobilize members for disability legislation
+- **Injured Worker Mentor Program**: Connect new injuries with experienced advocates
+
+**Impact:** Amplify union power. Share knowledge across locals. Protect disabled workers' rights. Build labor-disability solidarity.
+
+---
+
+#### 6. **Accessibility Compliance Scoreboard** 📊
+**WORLD FIRST:** Public accountability for employers and insurers
+
+- **Public Ratings**: Every employer/insurer gets accessibility score (1-100)
+  - Based on: Accommodation success rate, claim approval rate, response time, accessibility barriers
+- **Searchable Database**: "Don't work for Company X - 23% accessibility score"
+- **Employer Leaderboard**: Rank companies by disability-friendliness
+- **Union Negotiation Tool**: "Your score is 31%. We need changes."
+- **Consumer Boycott Power**: "This insurer denies 87% of mental health claims"
+- **Investor Pressure**: ESG investors see disability discrimination data
+- **Award Program**: "Top 100 Disability-Friendly Employers"
+- **Improvement Tracking**: Show if company getting better or worse over time
+- **Verified Reviews**: Only actual employees/claimants can rate
+
+**Impact:** Force corporate accountability. Empower consumer choice. Reward good actors. Shame bad actors. Drive systemic change.
+
+---
+
+#### 7. **Peer-to-Peer Evidence Sharing** 🔄
+**WORLD FIRST:** Crowdsourced legal strategy library
+
+- **Winning Templates**: "This exact letter got me approved - use it!"
+- **Medical Evidence Library**: "These test results convinced my doctor"
+- **Appeal Success Stories**: Full case files (anonymized) with outcomes
+- **Adjudicator Intelligence**: "This person approves 73% of appeals - good odds"
+- **Lawyer Ratings**: Community reviews of disability lawyers
+- **Question Banks**: "Ask your doctor these 15 questions for your IME"
+- **Strategy Guides**: Step-by-step wins from similar cases
+- **Red Flag Database**: "Watch out for this trick insurers use"
+- **Expert Witness Directory**: Find doctors who understand your condition
+- **Translation Help**: Medical jargon → plain language
+
+**Impact:** Democratize legal knowledge. Share winning strategies. Build on each other's victories. Reduce reliance on expensive lawyers.
+
+---
+
+#### 8. **Intersectional Justice Framework** 🌈
+**WORLD FIRST:** Recognize overlapping oppressions in disability advocacy
+
+- **Identity Mapping**: Track how race, gender, sexuality, class affect outcomes
+  - "Black disabled women approved 40% less often than white disabled men"
+- **Bias Detection**: Flag discriminatory patterns in decisions
+- **Culturally-Specific Resources**: Legal help for 2SLGBTQIA+ disabled folks, BIPOC communities
+- **Language Justice**: 100+ languages including Indigenous languages, ASL, LSQ
+- **Religious Accommodation**: Track faith-based discrimination in disability claims
+- **Immigration Status Protection**: Resources for disabled migrants, refugees
+- **Anti-Oppression Training**: Educate employers on intersectionality
+- **Coalition Building Tools**: Connect disability rights with racial justice, LGBTQ+ rights, climate justice
+- **Privilege Awareness**: "Your demographic has 2.3x approval rate - here's why"
+
+**Impact:** Center most marginalized. Expose compounded discrimination. Build broader social justice coalitions. Achieve true equity.
+
+---
+
+#### 9. **Legislative Change Engine** ⚖️
+**WORLD FIRST:** Transform cases into policy advocacy
+
+- **Auto-Generate Policy Briefs**: Your case becomes data for law reform
+  - "5,000 people denied due to outdated medical criteria - here's the bill to fix it"
+- **Politician Targeting**: "Your MP voted against disability rights 8 times"
+- **Constituent Pressure Campaigns**: One-click emails to elected officials
+- **Public Hearing Prep**: AI drafts your testimony for legislative committees
+- **Ballot Initiative Builder**: Launch referendums for disability rights
+- **Media Amplification**: Connect your story with journalists
+- **Coalition Coordination**: Unite advocacy groups for major campaigns
+- **International Solidarity**: Connect with global disability movements
+- **Victory Tracker**: Celebrate when your advocacy changes the law
+
+**Impact:** Turn pain into policy. Make your struggle count for systemic change. Hold politicians accountable. Win for everyone.
+
+---
+
+#### 10. **Mutual Aid Network** 💚
+**WORLD FIRST:** Disability community economic solidarity
+
+- **Skills Exchange**: "I'll edit your appeal if you help me shop"
+- **Resource Sharing**: "I have a spare wheelchair - who needs it?"
+- **Crowdfunding Integration**: Community fundraising for legal fees, medical costs
+- **Time Banking**: Earn credits for helping others, spend when you need help
+- **Emergency Response**: "I need a ride to tribunal tomorrow - who can help?"
+- **Housing Network**: Find accessible, affordable housing through community
+- **Food Security**: Connect surplus food with disabled folks in need
+- **Ride Sharing**: Accessible transportation organized by community
+- **Equipment Library**: Borrow assistive devices instead of buying
+- **Community Care Circles**: Organize support pods for high-needs times
+
+**Impact:** Build disability economic justice. Reduce dependence on broken systems. Foster community resilience. Mutual aid > charity.
+
+---
+
 ### AI Assistant (On Your Device)
 - Conversational AI that runs on your phone (no internet needed)
 - Answers legal questions in plain language
@@ -229,14 +468,72 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 
 1. **Safety First** - Features that protect vulnerable users
 2. **Accessibility Gaps** - Barriers that exclude people
-3. **Most Requested** - What the community asks for most
-4. **Cultural Respect** - Indigenous protocols and sovereignty
-5. **Legal Impact** - Tools that help you win your case
-6. **Community Input** - Advisory groups guide decisions
+3. **Canadian Priority** - Build and perfect features for Canada first, then adapt globally
+4. **Most Requested** - What the community asks for most
+5. **Cultural Respect** - Indigenous protocols and sovereignty
+6. **Legal Impact** - Tools that help you win your case
+7. **Movement Building** - Features that advance collective disability rights
+8. **Union & Worker Power** - Tools that strengthen organized labor
+9. **Community Input** - Advisory groups guide decisions
+10. **Global Readiness** - Design for future international expansion
+
+**Our Philosophy:**
+- 🇨🇦 **Perfect it in Canada** - Get it right for Canadian disability rights community
+- 🌍 **Then go global** - Adapt proven features to international contexts
+- 🤝 **Community-led** - Disabled people design for disabled people
+- ⚖️ **Justice-oriented** - Every feature should shift power toward users
+- 🔓 **Open & Transparent** - Our roadmap is public, our code will be too (future)
 
 ---
 
-## 📣 Have Ideas? We Want to Hear!
+## � Building a Movement, Not Just an App
+
+**3mpwrApp isn't just technology - it's a tool for collective liberation.**
+
+### Our Vision for Disability Rights
+
+Traditional disability apps treat advocacy as an **individual problem**. 3mpwrApp recognizes it as a **systemic justice issue** that requires **collective action**.
+
+**What makes us different:**
+
+- **Power Analysis** - We know employers and insurers have structural advantages. Our features are designed to shift power back to workers and disabled people.
+- **Collective Action** - Individual cases become data. Data becomes evidence. Evidence becomes policy change.
+- **Solidarity Focus** - Connect disabled workers with unions, allies, and each other. Isolation is a tactic of oppression.
+- **Justice Framework** - We center the most marginalized: BIPOC disabled folks, 2SLGBTQIA+ community, Indigenous peoples, low-income workers.
+- **Abolitionist Approach** - Question why disabled people must constantly prove their worth. Advocate for systemic change, not just individual accommodations.
+
+### Why This Matters
+
+**Disabled people and injured workers face:**
+- Adversarial systems designed to deny claims
+- Employers who view accommodation as burden
+- Medical "experts" who dismiss lived experience
+- Legal processes that re-traumatize
+- Isolation from others in similar situations
+- Lack of resources to fight well-funded institutions
+
+**3mpwrApp fights back by:**
+- Aggregating individual struggles into collective power
+- Exposing patterns of discrimination through data
+- Connecting people to build solidarity
+- Democratizing legal knowledge and winning strategies
+- Providing tools to organize and mobilize
+- Amplifying voices for legislative change
+- Building economic alternatives through mutual aid
+
+### The Long Game
+
+**2025-2026:** Build the strongest disability rights platform in Canada  
+**2027-2028:** Expand globally, connecting movements worldwide  
+**2029-2030:** 50 million users. Undeniable political force. Real power.
+
+**Ultimate Goal:** Make ourselves obsolete by winning the fights that make our app unnecessary - universal basic income, guaranteed housing, free healthcare, accessible everything, disability justice.
+
+Until then, we build tools for the revolution. 🔥
+
+---
+
+## �📣 Have Ideas? We Want to Hear!
 
 **Tell us what you need:**
 
