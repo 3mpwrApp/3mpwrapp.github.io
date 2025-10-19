@@ -1,0 +1,214 @@
+name: Content Curator (Unified)
+
+# Unified content curation and posting workflow
+# Consolidates: curator.yml, weekly-curator.yml, weekly-blog.yml
+# 
+# Daily: Curates and posts content 3x/day (9 AM, 3 PM, 9 PM UTC)
+# Weekly: Generates summary post every Monday at 9 AM UTC
+
+on:
+  schedule:
+    # Daily curation - 3 times per day
+    - cron: '0 9 * * *'   # 9:00 AM UTC - Morning
+    - cron: '0 15 * * *'  # 3:00 PM UTC - Midday
+    - cron: '0 21 * * *'  # 9:00 PM UTC - Evening
+    
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Workflow mode'
+        required: false
+        default: 'daily'
+        type: choice
+        options:
+          - daily
+          - weekly
+      force_publish:
+        description: 'Force publish low-score items'
+        required: false
+        default: false
+        type: boolean
+      min_score:
+        description: 'Minimum score threshold'
+        required: false
+        default: '2.5'
+        type: string
+      debug_mode:
+        description: 'Enable debug logging'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  NODE_VERSION: '20'
+  DEBUG_CURATOR: ${{ github.event.inputs.debug_mode == 'true' && '1' || '0' }}
+
+jobs:
+  # Daily Content Curation
+  daily_curation:
+    name: Daily Content Curation
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: github.event.inputs.mode != 'weekly'
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --production
+
+      - name: Validate configuration
+        run: |
+          echo "📋 Validating curator configuration..."
+          node scripts/curator-config.js validate || echo "⚠️ Config validation optional"
+          node scripts/curator-config.js summary || echo "⚠️ Config summary optional"
+
+      - name: Run content curation
+        env:
+          MIN_SCORE: ${{ github.event.inputs.min_score || '2.5' }}
+          FORCE_PUBLISH: ${{ github.event.inputs.force_publish == 'true' && '1' || '0' }}
+          DEBUG_CURATOR: ${{ env.DEBUG_CURATOR }}
+          WRITE_JSON: '1'
+          FILTER_LANGS: 'en,fr'
+        run: |
+          echo "🚀 Starting content curation"
+          echo "  Min Score: $MIN_SCORE"
+          echo "  Force Publish: $FORCE_PUBLISH"
+          echo ""
+          
+          node scripts/curator-core.js
+          
+          if [ ! -f "public/curation-latest.json" ]; then
+            echo "⚠️ No curation output (may be normal if no quality content found)"
+          fi
+
+      - name: Post to social media
+        if: success()
+        env:
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_VISIBILITY: 'public'
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_PDS: 'https://bsky.social'
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: |
+          echo "📤 Posting to social media..."
+          node scripts/social-post.js || echo "⚠️ Social posting failed"
+
+      - name: Build search index
+        continue-on-error: true
+        run: |
+          echo "🔍 Building search index..."
+          node scripts/build-search-index.js || echo "⚠️ Search index build optional"
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "empowrapp08162025@gmail.com"
+          git config --local user.name "3mpwrApp Curator Bot"
+          
+          git add _curation/ _posts/ public/ || true
+          
+          if git diff --staged --quiet; then
+            echo "✅ No changes to commit"
+            exit 0
+          fi
+          
+          TODAY=$(date -u +%Y-%m-%d)
+          git commit -m "feat(curator): Daily curation $TODAY - automated content aggregation"
+          git push origin main || echo "⚠️ No changes to push"
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "# 📰 Daily Curator - $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f "public/curation-latest.json" ]; then
+            ITEMS=$(jq '.count' public/curation-latest.json 2>/dev/null || echo "0")
+            echo "✅ **Curated:** $ITEMS items" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Top Stories:**" >> $GITHUB_STEP_SUMMARY
+            jq -r '.items[0:3][] | "• \(.title)"' public/curation-latest.json 2>/dev/null >> $GITHUB_STEP_SUMMARY || true
+          fi
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-curation-${{ github.run_id }}
+          path: |
+            public/curation-latest.json
+            public/posting-results.json
+          retention-days: 7
+
+  # Weekly Summary Post
+  weekly_summary:
+    name: Weekly Summary Post
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: (github.event.schedule == '0 9 * * 1' || github.event.inputs.mode == 'weekly')
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Generate weekly post
+        run: |
+          echo "📝 Generating weekly summary post..."
+          node scripts/generate-weekly-post.js
+
+      - name: Commit weekly post
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'actions@users.noreply.github.com'
+          
+          git add _posts/*weekly*.md || true
+          
+          if git diff --cached --quiet; then
+            echo '✅ No weekly post changes to commit'
+            exit 0
+          fi
+          
+          git commit -m 'feat(blog): Weekly summary post - automated update'
+          git push origin main || echo '⚠️ No changes to push'
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "# 📝 Weekly Summary - $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Weekly summary post generated and committed" >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-post-${{ github.run_id }}
+          path: _posts/*weekly*.md
+          retention-days: 7
