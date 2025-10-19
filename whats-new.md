@@ -13,11 +13,12 @@ Stay up to date with the latest features, improvements, and fixes to 3mpwrApp.
 
 ## Recent Updates (Last 30 Days)
 
-{% assign thirty_days_ago = site.time | date: '%s' | minus: 2592000 %}
+{% assign current_time = site.time | date: '%s' | plus: 0 %}
+{% assign thirty_days_ago = current_time | minus: 2592000 %}
 
 <div class="updates-list">
 {% for update in site.data.updates %}
-  {% assign update_timestamp = update.date | date: '%s' %}
+  {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}
   {% if update_timestamp >= thirty_days_ago %}
   <article class="update-item" data-date="{{ update.date }}">
     <header class="update-header">
