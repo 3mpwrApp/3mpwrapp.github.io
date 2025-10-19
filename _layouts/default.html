@@ -12,6 +12,19 @@
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   
+  <!-- Resource Hints for Performance -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="{{ "/assets/css/style.css" | relative_url }}" as="style">
+  <link rel="preload" href="{{ "/assets/empowrapp-logo.png" | relative_url }}" as="image">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
+  
   {%- include meta-tags.html -%}
   {%- include custom-head.html -%}
   {%- seo -%}
@@ -589,5 +602,52 @@
   >
     ↑ Back to top
   </button>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}')
+          .then(function(registration) {
+            console.log('[SW] Registration successful:', registration.scope);
+            
+            // Check for updates every hour
+            setInterval(function() {
+              registration.update();
+            }, 3600000);
+            
+            // Show update notification when new service worker is waiting
+            registration.addEventListener('updatefound', function() {
+              var newWorker = registration.installing;
+              if (!newWorker) return;
+              
+              newWorker.addEventListener('statechange', function() {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // New service worker available
+                  if (confirm('A new version of 3mpwrApp is available! Reload to update?')) {
+                    newWorker.postMessage({ action: 'skipWaiting' });
+                    window.location.reload();
+                  }
+                }
+              });
+            });
+          })
+          .catch(function(error) {
+            console.log('[SW] Registration failed:', error);
+          });
+        
+        // Auto-reload when new service worker takes control
+        var refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', function() {
+          if (refreshing) return;
+          refreshing = true;
+          window.location.reload();
+        });
+      });
+    }
+  </script>
+
+  <!-- Lazy Loading Script -->
+  <script src="{{ "/assets/js/lazy-load.js" | relative_url }}" defer></script>
 </body>
 </html>

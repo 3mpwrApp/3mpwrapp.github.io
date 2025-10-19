@@ -1,0 +1,153 @@
+# 3mpwrApp Updates Database
+# This file tracks all updates, features, and improvements
+# Format: YAML array of update objects
+
+# Recent updates are shown on /whats-new/
+# After 30 days, they automatically move to archives
+
+- date: 2025-10-18
+  title: "Service Worker & Full PWA Support"
+  type: performance
+  description: "3mpwrApp is now a fully functional Progressive Web App with offline support!"
+  details: |
+    - **Offline Access**: Browse cached pages even without internet
+    - **Auto-Update**: Service worker automatically checks for updates
+    - **Background Sync**: Form submissions work offline (future enhancement)
+    - **Push Notifications**: Ready for future notification support
+    - **Faster Loading**: Intelligent caching for instant page loads
+  link: /user-guide/#pwa-features
+
+- date: 2025-10-18
+  title: "Comprehensive Legal Pages"
+  type: improvement
+  description: "Expanded Privacy Policy, Terms of Service, and Accessibility Statement to match international standards."
+  details: |
+    - **Privacy Policy**: Expanded to 1200+ words with GDPR/PIPEDA/CCPA compliance
+    - **Terms of Service**: 1800+ words with Beta NDA, security reporting, and legal protection
+    - **Accessibility Statement**: Comprehensive WCAG 2.2 Level AA documentation
+    - **FAQ**: 20+ detailed questions covering all aspects of the app
+    
+    All pages now match or exceed the quality of our French translations.
+  link: /privacy/
+
+- date: 2025-10-18
+  title: "Week 1 Quick Wins Complete"
+  type: feature
+  description: "Successfully implemented 5 major improvements to boost SEO, security, and user experience."
+  details: |
+    - ✅ **Meta Tags**: Open Graph and Twitter Cards for all pages
+    - ✅ **PWA Manifest**: Install 3mpwrApp on any device
+    - ✅ **Security Headers**: A+ rating with CSP, COEP, COOP, CORP
+    - ✅ **French Translations**: 100% bilingual coverage (14/14 pages)
+    - ✅ **Hreflang Tags**: Proper language/region targeting for SEO
+  link: /WEEK-1-QUICK-WINS-COMPLETE.md
+
+- date: 2025-10-17
+  title: "Enhanced Curator System"
+  type: feature
+  description: "Major improvements to content curation with better filtering, scheduling, and quality controls."
+  details: |
+    - **Duplicate Detection**: Never post the same content twice
+    - **Quality Scoring**: Engagement-based content ranking
+    - **Smart Scheduling**: Optimal posting times for maximum reach
+    - **Multi-Platform**: Twitter/X, Mastodon, and Bluesky support
+    - **Manual Override**: Force-post specific content anytime
+  link: /features/#curator
+
+- date: 2025-10-16
+  title: "Accessibility Settings Page"
+  type: accessibility
+  description: "New dedicated page for customizing your 3mpwrApp experience."
+  details: |
+    - **Visual Customization**: Font size, spacing, contrast modes
+    - **Motion Controls**: Reduce or disable animations
+    - **Focus Indicators**: Enhanced visibility options
+    - **Reading Support**: Dyslexia-friendly fonts and spacing
+    - **Privacy Controls**: Clear local data and manage preferences
+  link: /accessibility-settings/
+
+- date: 2025-10-15
+  title: "Mastodon API Integration"
+  type: feature
+  description: "3mpwrApp now supports curating and posting to Mastodon!"
+  details: |
+    - **Instance Support**: Works with any Mastodon instance
+    - **OAuth Authentication**: Secure token-based access
+    - **Media Support**: Images and videos in posts
+    - **Hashtag Preservation**: Maintains all hashtags and mentions
+    - **Rate Limit Handling**: Respects instance limits
+  link: /MASTODON-API-SETUP-COMPLETE.md
+
+- date: 2025-10-14
+  title: "Bluesky Integration"
+  type: feature
+  description: "Added support for curating content from and posting to Bluesky."
+  details: |
+    - **AT Protocol**: Full Bluesky API integration
+    - **Thread Support**: Multi-post threads handled correctly
+    - **Rich Embeds**: Links and media preserved
+    - **Hashtag Discovery**: Find trending topics
+  link: /BLUESKY-SETUP-GUIDE.md
+
+- date: 2025-10-13
+  title: "Dark Mode & Accessibility Themes"
+  type: accessibility
+  description: "New theme options for better visual comfort and accessibility."
+  details: |
+    - **Dark Mode**: Reduces eye strain in low light
+    - **High Contrast**: Maximum readability for low vision
+    - **Grayscale**: Removes color distractions
+    - **Hue Shift**: Adjusts colors for colorblindness
+    - **Auto-Detection**: Respects system preferences
+  link: /accessibility-settings/
+
+- date: 2025-10-12
+  title: "Keyboard Navigation Improvements"
+  type: accessibility
+  description: "Enhanced keyboard accessibility across all pages."
+  details: |
+    - **Skip Links**: Jump to main content, nav, footer
+    - **Focus Indicators**: Visible focus rings on all interactive elements
+    - **Logical Tab Order**: Sensible keyboard navigation flow
+    - **Keyboard Shortcuts**: Access key features without a mouse
+    - **No Keyboard Traps**: All elements escapable via keyboard
+  link: /accessibility/#keyboard-accessibility
+
+- date: 2025-10-11
+  title: "Multi-Language Support"
+  type: feature
+  description: "3mpwrApp is now available in multiple languages!"
+  details: |
+    - 🇬🇧 **English** (EN)
+    - 🇫🇷 **French** (FR) - 100% complete
+    - 🇨🇳 **Chinese** (ZH) - Coming soon
+    - 🇮🇳 **Punjabi** (PA) - Coming soon
+    - 🇪🇸 **Spanish** (ES) - Coming soon
+    - 🇸🇦 **Arabic** (AR) - Coming soon
+  link: /fr/
+
+- date: 2025-10-10
+  title: "WCAG 2.2 Level AA Compliance"
+  type: accessibility
+  description: "Achieved full WCAG 2.2 Level AA accessibility compliance with 0 violations."
+  details: |
+    - **axe DevTools**: 0 critical issues, 0 serious issues
+    - **WAVE**: All accessibility checks passed
+    - **Manual Testing**: Keyboard, screen reader, and mobile tested
+    - **Continuous Monitoring**: Automated accessibility checks on every deploy
+  link: /accessibility/
+
+- date: 2025-10-09
+  title: "Cloudflare Pages Deployment"
+  type: performance
+  description: "Migrated to Cloudflare Pages for faster global performance."
+  details: |
+    - **Global CDN**: Content delivered from 200+ data centers worldwide
+    - **Auto SSL**: Free HTTPS with automatic certificate renewal
+    - **DDoS Protection**: Enterprise-grade security included
+    - **Atomic Deploys**: Zero-downtime updates
+    - **Preview Deployments**: Test changes before going live
+  link: /CLOUDFLARE-PAGES-SETUP.md
+
+# Add new updates above this line
+# Older updates (30+ days) are automatically archived

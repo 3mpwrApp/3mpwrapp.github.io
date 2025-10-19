@@ -1,0 +1,71 @@
+---
+layout: default
+title: Offline - 3mpwrApp
+permalink: /offline.html
+description: You're currently offline. 3mpwrApp will work again when you reconnect.
+---
+
+<div style="text-align: center; padding: 4rem 1rem;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.3; margin: 0 auto;">
+    <line x1="1" y1="1" x2="23" y2="23"></line>
+    <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+    <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+    <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
+    <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+    <line x1="12" y1="20" x2="12.01" y2="20"></line>
+  </svg>
+
+  <h1 style="margin-top: 2rem;">You're Offline</h1>
+  
+  <p style="font-size: 1.25rem; color: #666; max-width: 600px; margin: 1rem auto;">
+    It looks like you've lost your internet connection. Don't worry - 3mpwrApp will work again as soon as you reconnect.
+  </p>
+
+  <div style="margin-top: 3rem;">
+    <h2 style="font-size: 1.5rem;">What you can do:</h2>
+    <ul style="list-style: none; padding: 0; max-width: 500px; margin: 1rem auto; text-align: left;">
+      <li style="padding: 0.5rem 0;">✅ Browse cached pages</li>
+      <li style="padding: 0.5rem 0;">✅ Review previously loaded content</li>
+      <li style="padding: 0.5rem 0;">✅ Check your network connection</li>
+      <li style="padding: 0.5rem 0;">✅ Try refreshing when back online</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 3rem;">
+    <button onclick="location.reload()" style="background: #007bff; color: white; border: none; padding: 1rem 2rem; font-size: 1.1rem; border-radius: 8px; cursor: pointer;">
+      Try Again
+    </button>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <a href="/" style="color: #007bff; text-decoration: none;">← Go to Homepage</a>
+  </div>
+</div>
+
+<script>
+  // Auto-refresh when connection restored
+  window.addEventListener('online', function() {
+    console.log('Connection restored! Reloading...');
+    setTimeout(function() {
+      location.reload();
+    }, 1000);
+  });
+
+  // Check connection status
+  function updateOnlineStatus() {
+    if (navigator.onLine) {
+      document.body.innerHTML += '<div style="position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 1rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Connection restored! Refreshing...</div>';
+      setTimeout(function() { location.reload(); }, 1500);
+    }
+  }
+
+  window.addEventListener('online', updateOnlineStatus);
+  
+  // Periodic connectivity check
+  setInterval(function() {
+    if (navigator.onLine) {
+      updateOnlineStatus();
+    }
+  }, 3000);
+</script>
