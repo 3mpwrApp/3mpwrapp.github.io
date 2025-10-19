@@ -28,14 +28,71 @@
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
   
-  # Cache control for static assets
+  # Cache control for static assets (1 year)
   Cache-Control: public, max-age=31536000, immutable
 
-# Different cache for HTML pages
-/*.html
-  Cache-Control: public, max-age=3600, must-revalidate
+# Service Worker - must be fresh
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+  Service-Worker-Allowed: /
 
-# No cache for API responses
+# PWA Manifest - cache for 1 week
+/manifest.json
+  Cache-Control: public, max-age=604800, must-revalidate
+
+# HTML pages - cache for 1 hour, allow stale while revalidating
+/*.html
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400, must-revalidate
+
+# CSS - cache for 1 year (versioned via filename)
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript - cache for 1 year (versioned via filename)
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - cache for 1 month with stale-while-revalidate
+/*.jpg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.png
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.webp
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.svg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.gif
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+# Fonts - cache for 1 year
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.eot
+  Cache-Control: public, max-age=31536000, immutable
+
+# JSON data - cache for 5 minutes
+/public/*.json
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Updates database - cache for 10 minutes
+/_data/updates.yml
+  Cache-Control: public, max-age=600, must-revalidate
+
+# No cache for dynamic search results
 /search.json
   Cache-Control: no-cache, no-store, must-revalidate
   Pragma: no-cache
