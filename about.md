@@ -17,6 +17,14 @@ Big platforms silence stories through hidden algorithms and "relevance" scores. 
 
 3mpwrApp is designed to offer advocacy, resources, and community support for injured workers and persons with disabilities across Canada. Our tools simplify complex processes, connect you with advocates, and empower you to take action.
 
+### 🇨🇦 Currently Serving Canada-Wide
+
+**3mpwrApp is built for the Canadian disability rights community** - supporting persons with disabilities, injured workers, supporters, allies, and unions across all provinces and territories. We understand Canadian systems (WSIB, WCB, provincial disability programs), Indigenous sovereignty and OCAP principles, and the unique challenges faced by disabled and injured workers navigating Canadian legal and healthcare systems.
+
+**Our approach:** Perfect our platform for Canada first, building the strongest disability rights tool in the nation. Once we've proven our model works and serves our community effectively, we'll expand globally to support disability rights movements worldwide.
+
+**What's next?** Check out our **[Roadmap](/roadmap/)** to see our vision for global expansion (2026-2028), including plans to serve 100+ countries and connect disability rights movements internationally. From Canada to the world - building collective power for persons with disabilities everywhere.
+
 ### Why 3mpwrApp is Different
 
 **🚫 No Algorithm Manipulation**  
