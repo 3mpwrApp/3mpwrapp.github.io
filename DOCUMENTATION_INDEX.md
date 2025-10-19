@@ -12,6 +12,7 @@
 - 📖 [User Guide - Complete Feature Guide](docs/user-guide.md) - All 50+ features explained simply
 - 🗓️ **NEW!** [7-Day Onboarding Walkthrough](docs/user-guide.md#7-day-onboarding-walkthrough) - Your first week experience with daily scenarios
 - 🗂️ **NEW!** [7-Day Quick Reference](docs/7-DAY_ONBOARDING_QUICK_REFERENCE.md) - Print-friendly daily checklist and feature guide
+- 🗺️ **NEW!** [Roadmap](docs/ROADMAP.md) - What's coming next, global expansion vision, and revolutionary features
 - 🎓 [Accessibility Walkthrough](docs/ACCESSIBILITY_WALKTHROUGH.md) - How to enable accessibility features
 - 🔐 [Privacy & Security](docs/DATA_OWNERSHIP_STATEMENT.md) - Your data, your control
 - 🚀 [Getting Started](docs/user-guide.md#getting-started-in-5-minutes) - First 5 minutes guide
@@ -19,6 +20,7 @@
 ### For Developers
 - 📋 [CHANGELOG.md](CHANGELOG.md) - All commits and changes (50+ commits)
 - 🛠️ **NEW!** [7-Day Onboarding Implementation Guide](docs/7-DAY_ONBOARDING_IMPLEMENTATION_GUIDE.md) - Technical specs for developers & designers
+- 🗺️ **NEW!** [Roadmap](docs/ROADMAP.md) - Development roadmap with implementation timelines
 - 🏗️ [Architecture Guide](docs/COMPREHENSIVE_ANALYSIS_REPORT.md) - System architecture
 - 📊 [Implementation Roadmap](docs/IMPLEMENTATION_ROADMAP.md) - Features by phase
 - 🔍 [Code Structure](docs/ROUTE_MAP.md) - File organization and routing
@@ -27,6 +29,7 @@
 ### For Project Managers
 - 📈 [Session Summary](SESSION_SUMMARY_OCTOBER_2025.md) - Complete October 2025 work summary
 - 📦 **NEW!** [7-Day Onboarding Complete Package](docs/7-DAY_ONBOARDING_SUMMARY.md) - Cross-functional overview and implementation roadmap
+- 🗺️ **NEW!** [Roadmap](docs/ROADMAP.md) - Complete development roadmap with timelines and global expansion strategy
 - ✅ [Phase 6 Complete](PHASE_6_COMPLETE.md) - ML-Driven Personalization delivery
 - 🚀 [Deployment Manifest](DEPLOYMENT_MANIFEST.md) - Production deployment checklist
 - 📝 [Unfinished Work](unfinishedwork.md) - Current status and remaining items
