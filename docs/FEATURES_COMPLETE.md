@@ -730,8 +730,8 @@ All AI processing happens on-device for privacy.
 
 ### How to Report Issues:
 - **In-App:** Settings → About → Feedback
-- **Email:** support@3mpwrapp.com
-- **For Security Issues:** security@3mpwrapp.com
+- **Email:** empowrapp08162025@gmail.com
+- **For Security Issues:** empowrapp08162025@gmail.com
 
 ---
 
@@ -789,7 +789,7 @@ All AI processing happens on-device for privacy.
 
 ### Get Help
 - **In-App Support:** Settings → FAQs / Feedback
-- **Email:** support@3mpwrapp.com
+- **Email:** empowrapp08162025@gmail.com
 - **Response Time:** Within 48 hours
 - **Beta Tester Chat:** In-app community feature
 - **Emergency Issues:** Priority response
@@ -823,7 +823,7 @@ All AI processing happens on-device for privacy.
 - Bug fixes
 - Feature refinements
 
-**Target Public Launch:** 4-6 weeks after beta start
+**Target Public Launch:** 5-10 weeks after beta start
 
 ---
 
