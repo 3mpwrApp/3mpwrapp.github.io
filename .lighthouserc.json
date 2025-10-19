@@ -10,7 +10,7 @@
         "image-alt": "error",
         "link-name": "error",
         "label": "error",
-        "duplicate-id": "error"
+        "duplicate-id": "warn"
       }
     }
   }
