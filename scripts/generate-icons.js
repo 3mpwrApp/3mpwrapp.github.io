@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const sourceLogo = path.join(__dirname, '..', 'assets', 'empowrapp-logo.png');
+const sourceLogo = path.join(__dirname, '..', 'assets', 'empwrapp-logo.png');
 const iconsDir = path.join(__dirname, '..', 'assets', 'icons');
 const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
 const shortcuts = ['guide', 'features', 'contact', 'beta'];
@@ -31,7 +31,7 @@ console.log(`${colors.cyan}╚════════════════�
 // Check if source logo exists
 if (!fs.existsSync(sourceLogo)) {
   console.error(`${colors.red}❌ Error: Source logo not found at ${sourceLogo}${colors.reset}`);
-  console.log(`${colors.yellow}Please ensure assets/empowrapp-logo.png exists${colors.reset}`);
+  console.log(`${colors.yellow}Please ensure assets/empwrapp-logo.png exists${colors.reset}`);
   process.exit(1);
 }
 
