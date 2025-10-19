@@ -1,15 +1,27 @@
 /* 3mpowr App – Global Styles
-   Accessibility-first: WCAG-compliant contrast, visible focus outlines,
+   Accessibility-first: WCAG AAA-compliant contrast, visible focus outlines,
    keyboard-friendly controls, reduced motion support, and user toggles
    for High-contrast and Dark mode.
 */
 
-/* Base */
+/* Base - CSS Custom Properties for Light/Dark Mode */
 :root {
   color-scheme: light dark;
   --font-scale: 1;
   --line-height: 1.6;
   --letter-spacing: 0;
+  
+  /* Light mode colors (WCAG AAA compliant - 7:1 contrast minimum) */
+  --bg-color: #fafbfd;
+  --text-color: #222222;
+  --header-bg: #183c65;
+  --header-text: #ffffff;
+  --main-bg: #ffffff;
+  --link-color: #0052a3;
+  --link-hover: #003d7a;
+  --nav-hover: #285e93;
+  --border-color: #d1d5db;
+  --focus-outline: #0066cc;
 }
 
 html {
@@ -18,20 +30,49 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   margin: 0;
-  background: #fafbfd;
-  color: #222;
+  background: var(--bg-color);
+  color: var(--text-color);
   line-height: var(--line-height);
   font-size: calc(16px * var(--font-scale));
   letter-spacing: var(--letter-spacing);
 }
 
+/* Links - WCAG AAA compliant */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
 /* Header */
 header {
-  background: #183c65;
-  color: #fff;
+  background: var(--header-bg);
+  color: var(--header-text);
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -43,18 +84,25 @@ header {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
-  border: 1px solid currentColor;
+  border: 2px solid var(--header-text);
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--header-text);
+  transition: background 0.2s ease;
 }
-.site-brand:visited { color: #ffffff; }
-.site-brand span { color: inherit; }
+.site-brand:visited { 
+  color: var(--header-text); 
+}
+.site-brand span { 
+  color: inherit; 
+}
 .site-brand:hover,
 .site-brand:focus-visible {
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.15);
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
 }
 
 /* Ensure high-contrast mode keeps strong contrast for brand */
@@ -528,44 +576,157 @@ body[data-contrast="high"] .store-badge {
   border: 3px solid #000 !important;
 }
 
-/* Dark mode (user-controlled) */
+/* ========================================
+   DARK MODE (User-Controlled)
+   WCAG AAA Compliant: 7:1+ contrast ratio
+   ======================================== */
 body[data-theme="dark"] {
-  background: #0e1726;
-  color: #f2f5f9;
+  --bg-color: #0e1726;
+  --text-color: #f2f5f9;
+  --header-bg: #0b2545;
+  --header-text: #ffffff;
+  --main-bg: #111a2b;
+  --link-color: #a8c7ff;
+  --link-hover: #cfe8ff;
+  --nav-hover: #183c65;
+  --border-color: #355c7d;
+  --focus-outline: #82aaff;
+  
+  background: var(--bg-color);
+  color: var(--text-color);
 }
+
 body[data-theme="dark"] header {
-  background: #0b2545;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
 }
+
 body[data-theme="dark"] main {
-  background: #111a2b;
-  color: #f2f5f9;
-  box-shadow: 0 2px 8px #0006;
+  background: var(--main-bg);
+  color: var(--text-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
+
+/* Dark mode: Home button (site-brand) with strong visibility */
+body[data-theme="dark"] .site-brand {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body[data-theme="dark"] .site-brand:hover,
+body[data-theme="dark"] .site-brand:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #ffffff !important;
+  outline-color: #82aaff;
+}
+
+/* Dark mode: Navigation links */
 body[data-theme="dark"] .nav-list a {
   color: #e6edf6;
 }
+
 body[data-theme="dark"] .nav-list a:hover,
 body[data-theme="dark"] .nav-list a:focus {
-  background: #183c65;
+  background: var(--nav-hover);
+  color: #ffffff;
 }
+
+body[data-theme="dark"] .nav-list a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode: Content links */
 body[data-theme="dark"] main a {
-  color: #a8c7ff; /* maintain strong contrast on dark */
+  color: var(--link-color);
+  text-decoration-color: var(--link-color);
 }
+
+body[data-theme="dark"] main a:hover,
+body[data-theme="dark"] main a:focus-visible {
+  color: var(--link-hover);
+}
+
+/* Dark mode: Social links */
 body[data-theme="dark"] .social-links a {
   color: #cfe8ff;
   border-color: #82aaff;
 }
+
 body[data-theme="dark"] .social-links a:hover,
 body[data-theme="dark"] .social-links a:focus-visible {
-  background: #183c65;
-  color: #fff;
+  background: var(--nav-hover);
+  color: #ffffff;
+  border-color: #ffffff;
 }
+
+/* Dark mode: Footer */
 body[data-theme="dark"] footer {
   color: #d1d5db;
+  background: var(--header-bg);
 }
+
+body[data-theme="dark"] footer a {
+  color: #a8c7ff;
+}
+
+body[data-theme="dark"] footer a:hover,
+body[data-theme="dark"] footer a:focus-visible {
+  color: #cfe8ff;
+}
+
+/* Dark mode: Buttons and controls */
 body[data-theme="dark"] .store-badge {
   background: #0f2037;
   border-color: #355c7d;
+  color: #e6edf6;
+}
+
+body[data-theme="dark"] button,
+body[data-theme="dark"] .btn {
+  background: #1a3a5c;
+  color: #ffffff;
+  border-color: #355c7d;
+}
+
+body[data-theme="dark"] button:hover,
+body[data-theme="dark"] .btn:hover {
+  background: #254d7a;
+  border-color: #4a7dba;
+}
+
+/* Dark mode: Forms and inputs */
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea,
+body[data-theme="dark"] select {
+  background: #1a2332;
+  color: #f2f5f9;
+  border-color: #355c7d;
+}
+
+body[data-theme="dark"] input:focus,
+body[data-theme="dark"] textarea:focus,
+body[data-theme="dark"] select:focus {
+  border-color: #82aaff;
+  outline-color: #82aaff;
+}
+
+/* Dark mode: Tables */
+body[data-theme="dark"] table {
+  border-color: #355c7d;
+}
+
+body[data-theme="dark"] th {
+  background: #1a3a5c;
+  color: #ffffff;
+}
+
+body[data-theme="dark"] td {
+  border-color: #355c7d;
+}
+
+body[data-theme="dark"] tr:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Back to top button */
@@ -629,9 +790,31 @@ body.no-scroll {
 }
 
 /* Newsletter page embed */
-.newsletter-embed { position: relative; width: 100%; }
-.newsletter-embed iframe { width: 100%; height: min(1600px, 86vh); background: #fff; border: 0; border-radius: 8px; }
-.newsletter-redirecting { opacity: 0.4; transition: opacity 200ms ease-in-out; pointer-events: none; }
+.newsletter-embed { 
+  position: relative; 
+  width: 100%; 
+  margin: 2rem 0;
+}
+.newsletter-embed iframe { 
+  width: 100%; 
+  height: min(1600px, 86vh); 
+  background: #fff; 
+  border: 0; 
+  border-radius: 8px; 
+  display: block;
+  min-height: 800px;
+}
+/* Dark mode: Make newsletter form visible */
+body[data-theme="dark"] .newsletter-embed iframe {
+  background: #ffffff;
+  border: 2px solid #355c7d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.newsletter-redirecting { 
+  opacity: 0.4; 
+  transition: opacity 200ms ease-in-out; 
+  pointer-events: none; 
+}
 
 /* Newsletter modal styling */
 .modal-dialog.newsletter-dialog {
