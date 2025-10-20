@@ -62,7 +62,7 @@ export default function Header() {
         <Pressable
           onPress={() =>
             openLink(
-              "https://x.com/empowrapp0816?fbclid=IwY2xjawMcTXZleHRuA2FlbQIxMABicmlkETFrQ2NrdUVNRkkyZEwyQzl3AR61C332JUq1rDfsHDqrSzlKvJCynRvFEsD3UkM5ChPwJnRrPC6ChjgkAmqKGQ_aem_zrX0dQO1QeE3I6yquzlCeA",
+              "https://x.com/3mpowrApp0816",
             )
           }
           accessibilityRole="link"

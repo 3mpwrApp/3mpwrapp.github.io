@@ -3,13 +3,13 @@ import * as Linking from "expo-linking";
 import { router, usePathname, type Href } from "expo-router";
 import React from "react";
 import {
-  Image,
-  Pressable,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
+    Image,
+    Pressable,
+    SafeAreaView,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
 
 import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
@@ -76,7 +76,7 @@ export default function ThemedHeader() {
           accessible
         >
           <Pressable
-            onPress={() => Linking.openURL("https://x.com/empowrapp0816")}
+            onPress={() => Linking.openURL("https://x.com/3mpowrApp0816")}
             accessibilityRole="link"
             accessibilityLabel="Open 3mpwr on X (formerly Twitter)"
             hitSlop={HIT_SLOP_8}

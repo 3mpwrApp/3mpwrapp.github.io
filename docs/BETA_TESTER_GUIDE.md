@@ -384,7 +384,7 @@ Together, we're creating something special. 💪
 **Questions?** Reach out anytime:
 - 📧 empowrapp08162025@gmail.com
 - 💬 Community → Beta Testers Chat
-- 🐦 @3mpwr on social media
+- 🐦 X (Twitter): [@3mpowrApp0816](https://x.com/3mpowrApp0816)
 
 **Happy Testing!**
 — The 3mpwr Team
