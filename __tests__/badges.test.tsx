@@ -111,7 +111,7 @@ describe('useBetaTesterBadge Hook', () => {
       <ProfileLocalProvider>{children}</ProfileLocalProvider>
     );
 
-    const { result } = renderHook(() => useBetaTesterBadge(), { wrapper });
+    renderHook(() => useBetaTesterBadge(), { wrapper });
 
     // Wait for effect to complete
     await act(async () => {
@@ -133,7 +133,7 @@ describe('useBetaTesterBadge Hook', () => {
       <ProfileLocalProvider>{children}</ProfileLocalProvider>
     );
 
-    const { result } = renderHook(() => useBetaTesterBadge(), { wrapper });
+    renderHook(() => useBetaTesterBadge(), { wrapper });
 
     await act(async () => {
       await new Promise((resolve) => setTimeout(resolve, 100));
@@ -159,7 +159,7 @@ describe('useBetaTesterBadge Hook', () => {
       <ProfileLocalProvider>{children}</ProfileLocalProvider>
     );
 
-    const { result } = renderHook(() => useBetaTesterBadge(), { wrapper });
+    renderHook(() => useBetaTesterBadge(), { wrapper });
 
     await act(async () => {
       await new Promise((resolve) => setTimeout(resolve, 100));

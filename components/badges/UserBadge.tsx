@@ -25,11 +25,14 @@ const BADGE_ICONS: Record<BadgeType, string> = {
   verified: '✅',
 };
 
+// Badge colors - using standard web colors that work across themes
+// These are intentionally hardcoded as they represent badge identity/branding
+ 
 const BADGE_COLORS: Record<BadgeType, string> = {
-  betaTester: '#FF6B35',
-  earlyAdopter: '#FFD700',
-  contributor: '#4ECDC4',
-  verified: '#4CAF50',
+  betaTester: '#FF6B35', // Orange for beta
+  earlyAdopter: '#FFD700', // Gold for early adopters
+  contributor: '#4ECDC4', // Teal for contributors
+  verified: '#4CAF50', // Green for verified
 };
 
 export default function UserBadge({ 
@@ -39,7 +42,6 @@ export default function UserBadge({
   showLabel = true 
 }: UserBadgeProps) {
   const textColor = useThemeColor({}, 'text');
-  const backgroundColor = useThemeColor({}, 'background');
   const { t } = useTranslation();
 
   const sizeStyles = {
