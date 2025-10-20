@@ -38,7 +38,7 @@ export default function TabsLayout() {
       >
   {/* Visible tabs (curated) */}
         <Tabs.Screen
-          name="whatsnew/index"
+          name="whatsnew"
           options={{
             title: "What's New",
             tabBarLabel: "What's New",
