@@ -11,10 +11,12 @@ import { Alert, Button, Image, Linking, ScrollView, StyleSheet, Text, TextInput,
 import A11yPressable from '../../../components/A11yPressable';
 import AccessibilityToggle from '../../../components/AccessibilityToggle';
 import LanguageSelector from '../../../components/LanguageSelector';
+import UserBadgesDisplay from '../../../components/badges/UserBadgesDisplay';
 import { HIT_SLOP_8 } from '../../../constants/a11y';
 import { useAuth } from '../../../context/AuthContext';
 import { auth, db, storage } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useBetaTesterBadge } from '../../../hooks/useBetaTesterBadge';
 import { useTranslation } from '../../../i18n';
 import { useDevPrefs } from '../../../services/devPrefs';
 import { useNetwork } from '../../../store/network';
@@ -38,6 +40,9 @@ export default function SettingsScreen() {
   const { setOffline } = useNetwork();
   useAnnounceOnMount(t('settings.title', 'Settings'));
   useFocusOnRefOnMount(titleRef);
+  
+  // Auto-award beta tester badge on first launch (if in beta)
+  useBetaTesterBadge();
 
   const [displayName, setDisplayName] = useState('');
   const [photoURL, setPhotoURL] = useState<string | null>(null);
@@ -256,6 +261,9 @@ export default function SettingsScreen() {
           <>
             {photoURL ? <Image source={{ uri: photoURL }} style={styles.avatar} accessibilityLabel={t('settings.account.photo','Profile picture')} /> : <View style={styles.avatarPlaceholder}><Ionicons name='person' size={40} color={palette.text} /></View>}
             <Button title={t('settings.account.changePhoto','Change Profile Picture')} onPress={handleUploadPhoto} />
+            
+            <UserBadgesDisplay />
+            
             <Text style={styles.rowLabel}>{t('settings.account.displayName','Display Name')}</Text>
             <TextInput style={styles.input} placeholder={t('settings.account.displayNamePlaceholder','Enter display name')} value={displayName} onChangeText={setDisplayName} accessibilityLabel={t('settings.account.displayName','Display Name')} />
             <Button title={t('settings.account.updateName','Update Name')} onPress={handleUpdateDisplayName} />

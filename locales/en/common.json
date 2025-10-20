@@ -968,6 +968,19 @@
       "rightsExplainer": "Rights Explainer",
       "translator": "Advocate Translator",
       "settings": "Settings"
+    },
+    "badges": {
+      "title": "Badges",
+      "description": "Recognition for your participation and contributions",
+      "scrollLabel": "Scroll through your badges",
+      "betaTester": "Beta Tester",
+      "betaTesterDesc": "Participated in beta testing",
+      "earlyAdopter": "Early Adopter",
+      "earlyAdopterDesc": "Joined during early access",
+      "contributor": "Contributor",
+      "contributorDesc": "Contributed to the app",
+      "verified": "Verified",
+      "verifiedDesc": "Verified user"
     }
   },
   "translator": {
