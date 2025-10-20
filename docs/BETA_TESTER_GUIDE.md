@@ -3,6 +3,8 @@
 
 Welcome! Thank you for being a beta tester. Your feedback is invaluable in making 3mpwr the best advocacy and wellness app for Canadians living with disabilities.
 
+> **Quick Start:** New to beta testing? Start with the [Quick Testing Guide](#-quick-testing-guide) below for a fast 5-minute test.
+
 ---
 
 ## 📱 Getting Started
@@ -106,7 +108,7 @@ Choose **one** method:
    - Post a message with your issue
    - Other testers may have solutions
    
-3. **Email**: beta@3mpwr.ca
+3. **Email**: empowrapp08162025@gmail.com
    - Subject: [BETA] Short bug description
    - Include details below
 
@@ -189,8 +191,7 @@ Choose **one** method:
 
 1. **In-App**: Settings → About & Feedback → "Send Feedback"
 2. **Chat**: Community → Beta Testers Chat
-3. **Email**: beta@3mpwr.ca
-4. **Survey**: Check your email for periodic surveys
+3. **Email**: empowrapp08162025@gmail.com
 
 ---
 
@@ -282,7 +283,7 @@ A: Your beta app will update to the production version automatically.
 A: Restart the app and report the bug. Include what you were doing when it crashed.
 
 **Q: I found a security issue. Who do I tell?**
-A: Email security@3mpwr.ca immediately. Do NOT post publicly.
+A: Email empowrapp08162025@gmail.com immediately. Do NOT post publicly.
 
 **Q: Can I test on multiple devices?**
 A: Yes! Testing on different devices helps us a lot.
@@ -362,8 +363,8 @@ A: Yes. Settings → Privacy → Disable "Anonymous Usage Data" and "Crash Repor
 
 1. **In-App Help**: Settings → About & Feedback → "Help & Support"
 2. **Beta Testers Chat**: Community → Beta Testers Chat
-3. **Email Support**: support@3mpwr.ca
-4. **Emergency**: For urgent security issues: security@3mpwr.ca
+3. **Email Support**: empowrapp08162025@gmail.com
+4. **Emergency**: For urgent security issues: empowrapp08162025@gmail.com
 
 ### Response Times
 - **Critical Bugs**: Within 4 hours
@@ -381,12 +382,50 @@ Your participation in beta testing makes a real difference. Every bug you find, 
 Together, we're creating something special. 💪
 
 **Questions?** Reach out anytime:
-- 📧 beta@3mpwr.ca
+- 📧 empowrapp08162025@gmail.com
 - 💬 Community → Beta Testers Chat
 - 🐦 @3mpwr on social media
 
 **Happy Testing!**
 — The 3mpwr Team
+
+---
+
+## ⚡ Quick Testing Guide
+
+**For busy testers: Complete this 5-minute test to catch the most common issues.**
+
+### Step 1: Install & Launch (1 min)
+1. Install the app via TestFlight (iOS) or Play Beta (Android)
+2. Open the app and let it warm up for ~1 minute (caches loading)
+3. Complete Terms & Conditions acceptance
+
+### Step 2: Navigation Test (2 min)
+1. **Tap every tab** in the bottom navigation:
+   - Home, Campaigns, Community, Resources, Wellness, Advocacy, Settings, What's New
+2. **Check for**:
+   - No dead links or crashes
+   - No error messages  
+   - Loading states appear for lists
+   - Back button works intuitively
+3. **Try airplane mode**: Toggle airplane mode ON, verify app shows offline banner and cached content works
+
+### Step 3: Key Feature Test (2 min)
+Pick ONE feature to test thoroughly:
+- **Letter Wizard**: Resources → Letter Wizard → Start a letter
+- **Evidence Locker**: Advocacy → Evidence Locker → Upload test file
+- **Mood Tracker**: Wellness → Mood Tracker → Log a mood
+- **Community**: Community → Browse channels → Read a post
+
+### Step 4: Report Issues
+- **Settings → About & Feedback → Send Feedback**
+- Or email: empowrapp08162025@gmail.com with subject "Beta: [feature name]"
+- Include: What you tapped, what happened, what you expected
+
+### Known Issues (Skip Testing These)
+- iOS remote push notifications disabled (pending APNs setup)
+- Some features labeled "Coming Soon"
+- First launch may feel slow (caches warming up)
 
 ---
 
