@@ -31,12 +31,12 @@ export default function Profile() {
 
       {/* DEV ONLY: Sentry Test Button - MOVED TO TOP FOR VISIBILITY */}
       {__DEV__ && (
-        <View style={[styles.card, { backgroundColor: '#FFF3CD', borderWidth: 3, borderColor: '#FFA500', marginBottom: 12 }]}>
-          <Text style={{ fontWeight: "700", marginBottom: 8, color: '#000', fontSize: 16 }}>
+        <View style={[styles.card, { backgroundColor: palette.warning || '#FFF3CD', borderWidth: 3, borderColor: palette.primary, marginBottom: 12 }]}>
+          <Text style={{ fontWeight: "700", marginBottom: 8, color: palette.text, fontSize: 16 }}>
             🧪 DEV ONLY - Sentry Testing
           </Text>
           <Pressable
-            style={[styles.cta, { backgroundColor: '#FFA500', minHeight: 48 }]}
+            style={[styles.cta, { backgroundColor: palette.primary, minHeight: 48 }]}
             onPress={async () => {
               try {
                 // Dynamically import Sentry
@@ -58,11 +58,11 @@ export default function Profile() {
             accessibilityRole="button"
             accessibilityLabel="Test Sentry error reporting"
           >
-            <Text style={{ color: '#000', fontWeight: '700', textAlign: 'center', fontSize: 16 }}>
+            <Text style={{ color: palette.background, fontWeight: '700', textAlign: 'center', fontSize: 16 }}>
               🧪 SEND TEST ERROR TO SENTRY
             </Text>
           </Pressable>
-          <Text style={{ fontSize: 12, color: '#000', marginTop: 8, fontStyle: 'italic' }}>
+          <Text style={{ fontSize: 12, color: palette.text, marginTop: 8, fontStyle: 'italic' }}>
             ⚠️ Enable error reporting in Settings → Privacy first
           </Text>
         </View>
