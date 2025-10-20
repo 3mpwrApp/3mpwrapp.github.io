@@ -159,7 +159,7 @@ export default function TabsLayout() {
     <Tabs.Screen name="settings.sections" options={{ href: null }} />
     
     {/* Hide onboarding (should only be shown via routing logic) */}
-    <Tabs.Screen name="onboarding/index" options={{ href: null }} />
+    <Tabs.Screen name="onboarding" options={{ href: null }} />
 
     {/* Keep nested resource tools managed by resources stack; no need to declare here */}
 
