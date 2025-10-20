@@ -157,12 +157,6 @@ export default function TabsLayout() {
     
     {/* Hide internal settings sections aggregator and all section files */}
     <Tabs.Screen name="settings.sections" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/index" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/BookmarksSection" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/EnhancedPrivacySection" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/LocalProfileSection" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/MediaLockerSection" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/WellnessPrefsSection" options={{ href: null }} />
     
     {/* Hide onboarding (should only be shown via routing logic) */}
     <Tabs.Screen name="onboarding/index" options={{ href: null }} />
