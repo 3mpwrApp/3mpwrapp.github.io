@@ -89,20 +89,23 @@ header {
   text-decoration: none;
   font-weight: 700;
   color: var(--header-text);
-  transition: background 0.2s ease;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 .site-brand:visited { 
   color: var(--header-text); 
 }
 .site-brand span { 
-  color: inherit; 
+  color: inherit;
+  font-size: 1rem;
 }
 .site-brand:hover,
 .site-brand:focus-visible {
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   outline: 3px solid var(--focus-outline);
   outline-offset: 2px;
+  transform: scale(1.05);
 }
 
 /* Ensure high-contrast mode keeps strong contrast for brand */
@@ -266,10 +269,20 @@ main {
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+.breadcrumbs a {
+  color: var(--text-color);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  color: var(--link-color);
+}
 .breadcrumbs li::after {
   content: '/';
   margin: 0 0.25rem;
-  color: #6b7280;
+  color: var(--text-color);
+  opacity: 0.6;
 }
 .breadcrumbs li:last-child::after { content: ''; }
 .breadcrumbs [aria-current="page"] { font-weight: 700; }
@@ -946,15 +959,23 @@ a[target="_blank"]:after {
 .highlight-banner {
   display: grid;
   gap: 0.75rem;
-  padding: 1rem 1rem;
+  padding: 1.25rem 1.25rem;
   border-radius: 12px;
-  border: 2px solid #183c65;
-  background: linear-gradient(180deg, #e9f5ff 0%, #ffffff 100%);
+  border: 2px solid #0b2545;
+  background: linear-gradient(180deg, #d4e9ff 0%, #f0f7ff 100%);
 }
 .highlight-banner h2,
 .highlight-banner h3 {
   margin: 0;
   color: #0b2545;
+  font-weight: 700;
+}
+.highlight-banner p,
+.highlight-banner a {
+  color: #0b2545;
+}
+.highlight-banner a:hover {
+  color: #183c65;
 }
 .badge {
   display: inline-block;
@@ -1021,11 +1042,18 @@ a[target="_blank"]:after {
 /* Dark mode variants */
 body[data-theme="dark"] .highlight-banner {
   background: linear-gradient(180deg, #0f2037 0%, #111a2b 100%);
-  border-color: #355c7d;
+  border-color: #82aaff;
 }
 body[data-theme="dark"] .highlight-banner h2,
 body[data-theme="dark"] .highlight-banner h3 {
-  color: #cfe8ff;
+  color: #f2f5f9;
+}
+body[data-theme="dark"] .highlight-banner p,
+body[data-theme="dark"] .highlight-banner a {
+  color: #f2f5f9;
+}
+body[data-theme="dark"] .highlight-banner a:hover {
+  color: #a8c7ff;
 }
 body[data-theme="dark"] .badge--new {
   background: #4b3f00;
