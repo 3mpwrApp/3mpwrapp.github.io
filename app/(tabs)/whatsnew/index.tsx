@@ -40,8 +40,9 @@ export default function WhatsNewScreen() {
   const AsyncStorageRef = React.useRef<any>(null);
   const [items, setItems] = React.useState(defaultWN);
   const [activity, setActivity] = React.useState<AnyActivityEvent[]>([]);
-  const [title, setTitle] = React.useState("");
-  const [summary, setSummary] = React.useState("");
+  // Unused while add form is commented out - prefix with _ to suppress ESLint warnings
+  const [_title, _setTitle] = React.useState("");
+  const [_summary, _setSummary] = React.useState("");
   React.useEffect(() => {
     (async () => {
       try {
