@@ -31,7 +31,7 @@ export default function Profile() {
 
       {/* DEV ONLY: Sentry Test Button - MOVED TO TOP FOR VISIBILITY */}
       {__DEV__ && (
-        <View style={[styles.card, { backgroundColor: palette.accent, borderWidth: 3, borderColor: palette.primary, marginBottom: 12 }]}>
+        <View style={[styles.card, { backgroundColor: palette.warning, borderWidth: 3, borderColor: palette.primary, marginBottom: 12 }]}>
           <Text style={{ fontWeight: "700", marginBottom: 8, color: palette.text, fontSize: 16 }}>
             🧪 DEV ONLY - Sentry Testing
           </Text>
