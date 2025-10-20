@@ -29,6 +29,45 @@ export default function Profile() {
     >
       <Text style={styles.title}>{t("nav.profile")}</Text>
 
+      {/* DEV ONLY: Sentry Test Button - MOVED TO TOP FOR VISIBILITY */}
+      {__DEV__ && (
+        <View style={[styles.card, { backgroundColor: '#FFF3CD', borderWidth: 3, borderColor: '#FFA500', marginBottom: 12 }]}>
+          <Text style={{ fontWeight: "700", marginBottom: 8, color: '#000', fontSize: 16 }}>
+            🧪 DEV ONLY - Sentry Testing
+          </Text>
+          <Pressable
+            style={[styles.cta, { backgroundColor: '#FFA500', minHeight: 48 }]}
+            onPress={async () => {
+              try {
+                // Dynamically import Sentry
+                const sentryModule = await import('sentry-expo');
+                // Get the Native module which has the actual Sentry SDK
+                const Sentry = sentryModule.Native;
+                
+                if (Sentry && Sentry.captureException) {
+                  const testError = new Error('🧪 TEST ERROR from Profile screen - Check Sentry dashboard!');
+                  Sentry.captureException(testError);
+                  alert('✅ Test error sent to Sentry!\n\nCheck your dashboard at:\nsentry.io');
+                } else {
+                  alert('⚠️ Sentry not initialized.\n\nGo to Settings → Privacy and enable "Error Reporting" first.');
+                }
+              } catch (error) {
+                alert('❌ Sentry error:\n' + (error as Error).message);
+              }
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Test Sentry error reporting"
+          >
+            <Text style={{ color: '#000', fontWeight: '700', textAlign: 'center', fontSize: 16 }}>
+              🧪 SEND TEST ERROR TO SENTRY
+            </Text>
+          </Pressable>
+          <Text style={{ fontSize: 12, color: '#000', marginTop: 8, fontStyle: 'italic' }}>
+            ⚠️ Enable error reporting in Settings → Privacy first
+          </Text>
+        </View>
+      )}
+
       <View style={styles.card}>
         <Row
           label={t("settings.account.title", "Account")}
@@ -120,45 +159,6 @@ export default function Profile() {
           <QuickLink label={t('profile.quickLinks.settings','Settings')} onPress={() => router.push('/(tabs)/settings' as Href)} palette={palette} />
         </View>
       </View>
-
-      {/* DEV ONLY: Sentry Test Button */}
-      {__DEV__ && (
-        <View style={[styles.card, { backgroundColor: palette.surface, borderWidth: 2, borderColor: palette.primary }]}>
-          <Text style={{ fontWeight: "700", marginBottom: 8, color: palette.text }}>
-            🐛 DEV ONLY - Sentry Testing
-          </Text>
-          <Pressable
-            style={[styles.cta, { backgroundColor: palette.primary }]}
-            onPress={async () => {
-              try {
-                // Dynamically import Sentry
-                const sentryModule = await import('sentry-expo');
-                // Get the Native module which has the actual Sentry SDK
-                const Sentry = sentryModule.Native;
-                
-                if (Sentry && Sentry.captureException) {
-                  const testError = new Error('🧪 TEST ERROR from Profile screen - Check Sentry dashboard!');
-                  Sentry.captureException(testError);
-                  alert('✅ Test error sent to Sentry!\n\nCheck your dashboard at:\nsentry.io');
-                } else {
-                  alert('⚠️ Sentry not initialized.\n\nGo to Settings → Privacy and enable "Error Reporting" first.');
-                }
-              } catch (error) {
-                alert('❌ Sentry error:\n' + (error as Error).message);
-              }
-            }}
-            accessibilityRole="button"
-            accessibilityLabel="Test Sentry error reporting"
-          >
-            <Text style={[styles.primaryText, { textAlign: 'center' }]}>
-              🧪 Send Test Error to Sentry
-            </Text>
-          </Pressable>
-          <Text style={{ fontSize: 12, color: palette.text, marginTop: 8 }}>
-            Make sure error reporting is enabled in Settings → Privacy
-          </Text>
-        </View>
-      )}
 
       {user ? (
         <>
