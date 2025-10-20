@@ -1,40 +1,40 @@
-# Auto-Translation Report
+# Auto-Translation Report (DeepL)
 
-**Generated:** 2025-10-20T02:20:12.127Z
+Generated: 2025-10-20T19:50:43.737Z
 
 ## Summary
+- Total missing keys: 428
+- Successfully translated: 410 (96%)
+- Failed (English fallback): 18 (4%)
 
-- **English keys:** 2769
-- **Spanish translations added:** 214
-- **French translations added:** 214
+## By Language
 
-## Output Files
+### ES
+- Missing: 214
+- Translated: 209
+- Failed: 5
 
-1. `i18n-auto-translated/es-common.json` - Updated Spanish translations (for review)
-2. `i18n-auto-translated/fr-common.json` - Updated French translations (for review)
-3. `i18n-auto-translated/review-translations.csv` - CSV for community review
+### FR
+- Missing: 214
+- Translated: 201
+- Failed: 13
+
 
 ## Next Steps
+1. Review translations in `review-translations.csv`
+2. Test translations in app
+3. Have native speakers verify accuracy
+4. Update baseline files in `locales/` directory
+5. Run `npm run i18n:validate` to verify
 
-1. **Review translations** - Auto-translate is 70-80% accurate, needs human review
-2. **Community feedback** - Share CSV with Spanish/French speakers
-3. **Test in app** - Copy reviewed files to `locales/es/` and `locales/fr/`
-4. **Validate** - Run `npm run i18n:validate`
+## Quality Expectations
+DeepL typically provides:
+- 85-95% accuracy for technical content
+- 90-98% accuracy for general content
+- Better context awareness than Google Translate
+- High quality for ES/FR language pairs
 
-## Important Notes
-
-⚠️ **Auto-translated content requires review for:**
-- Disability-specific terminology
-- Cultural sensitivity
-- Context accuracy
-- Grammatical correctness
-
-## Quality Estimate
-
-- **Auto-translate:** 70-80% accurate
-- **With community review:** 90-95% accurate
-- **With native speaker polish:** 95-98% accurate
-
----
-
-**Cost:** $0 (free Google Translate API)
+## Notes
+- All translations generated with DeepL API (free tier)
+- Character count: ~141550 used
+- API usage tracked in DeepL dashboard

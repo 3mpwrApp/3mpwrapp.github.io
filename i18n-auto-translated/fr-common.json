@@ -2690,63 +2690,63 @@
       "show": " settings.emergencyWallet.show"
     },
     "editor": {
-      "title": "Profile Settings",
+      "title": "Paramètres du profil",
       "role": {
-        "title": "Your Role",
-        "description": "How do you use 3mpwr App?",
-        "pwd": "Person with Disability",
-        "supporter": "Supporter or Family Member",
-        "ally": "Advocate or Ally"
+        "title": "Votre rôle",
+        "description": "Comment utilisez-vous l'application 3mpwr ?",
+        "pwd": "Personne handicapée",
+        "supporter": "Soutien ou membre de la famille",
+        "ally": "Défenseur ou allié"
       },
       "disability": {
-        "title": "Disability Categories",
-        "description": "Select all that apply"
+        "title": "Catégories de handicap",
+        "description": "Cochez toutes les cases qui s'appliquent"
       },
       "accommodations": {
-        "title": "Accommodations",
-        "description": "Select accommodations you need"
+        "title": "Hébergement",
+        "description": "Sélectionnez les aménagements dont vous avez besoin"
       },
       "energy": {
-        "title": "Energy Patterns",
-        "description": "When are you typically most energetic?",
-        "morning": "Morning",
-        "afternoon": "Afternoon",
-        "evening": "Evening"
+        "title": "Modèles d'énergie",
+        "description": "À quel moment de la journée êtes-vous le plus énergique ?",
+        "morning": "Matin",
+        "afternoon": "Après-midi",
+        "evening": "Soirée"
       },
       "notifications": {
         "title": "Notifications",
-        "toggle": "Enable notifications",
-        "description": "Receive push notifications and reminders"
+        "toggle": "Activer les notifications",
+        "description": "Recevoir des notifications push et des rappels"
       },
-      "save": "Save Changes",
-      "saved": "Your profile has been updated.",
-      "unsavedChanges": "You have unsaved changes",
+      "save": "Enregistrer les modifications",
+      "saved": "Votre profil a été mis à jour.",
+      "unsavedChanges": "Vous avez des changements non sauvegardés",
       "revert": {
-        "title": "Discard Changes?",
-        "message": "All unsaved changes will be lost."
+        "title": "Changements dans les rejets ?",
+        "message": "Toutes les modifications non enregistrées seront perdues."
       },
       "error": {
-        "roleRequired": "Please select a role",
-        "disabilityRequired": "Please select at least one disability category"
+        "roleRequired": "Veuillez sélectionner un rôle",
+        "disabilityRequired": "Veuillez sélectionner au moins une catégorie de handicap"
       }
     },
     "feedback": {
-      "title": "Share Your Feedback",
-      "prompt": "How did this suggestion help you?",
-      "thumbsUp": "This suggestion was helpful",
-      "thumbsDown": "This suggestion was not helpful",
-      "thankYou": "Thank you!",
-      "thankYouMessage": "Your feedback helps us improve",
-      "comment": "Add a comment (optional)",
-      "commentPlaceholder": "Tell us more...",
+      "title": "Faites-nous part de vos commentaires",
+      "prompt": "En quoi cette suggestion vous a-t-elle aidé ?",
+      "thumbsUp": "Cette suggestion a été utile",
+      "thumbsDown": "Cette suggestion n'a pas été utile",
+      "thankYou": "Merci de votre attention !",
+      "thankYouMessage": "Vos commentaires nous aident à améliorer",
+      "comment": "Ajouter un commentaire (facultatif)",
+      "commentPlaceholder": "En savoir plus...",
       "reasons": {
-        "helpful": "Helpful",
-        "not_relevant": "Not relevant to me",
-        "misleading": "Misleading or incorrect",
-        "other_option": "Other reason"
+        "helpful": "Utile",
+        "not_relevant": "Sans objet pour moi",
+        "misleading": "Incompréhensibles ou incorrects",
+        "other_option": "Autre raison"
       },
-      "submitError": "Failed to submit feedback. Please try again.",
-      "reasonRequired": "Please select a reason"
+      "submitError": "L'envoi des commentaires a échoué. Veuillez réessayer.",
+      "reasonRequired": "Veuillez sélectionner une raison"
     }
   },
   "jurisdiction": {
@@ -3401,250 +3401,250 @@
   "tools": {
     "registry": {
       "energyForecast": {
-        "name": "Energy Forecast",
-        "description": "AI-powered prediction of your energy levels for the next 24 hours"
+        "name": "Prévisions énergétiques",
+        "description": "Prédiction par l'IA de votre niveau d'énergie pour les prochaines 24 heures"
       },
       "moodTrendAnalyzer": {
-        "name": "Mood Trend Analyzer",
-        "description": "Analyze mood patterns and predict emotional cycles"
+        "name": "Analyseur de tendances des humeurs",
+        "description": "Analyser les schémas d'humeur et prévoir les cycles émotionnels"
       },
       "personalizedSuggestionEngine": {
-        "name": "Smart Suggestions",
-        "description": "Get personalized tool recommendations based on your patterns"
+        "name": "Suggestions intelligentes",
+        "description": "Obtenir des recommandations d'outils personnalisées en fonction de vos habitudes"
       },
       "activityOptimizer": {
-        "name": "Activity Optimizer",
-        "description": "Adaptive suggestions for activities based on your energy and mood"
+        "name": "Optimiseur d'activité",
+        "description": "Suggestions d'activités adaptables en fonction de votre énergie et de votre humeur"
       },
       "energyLevelIndicator": {
-        "name": "Energy Level Indicator",
-        "description": "Real-time indicator of current energy level with smart recommendations"
+        "name": "Indicateur de niveau d'énergie",
+        "description": "Indicateur en temps réel du niveau d'énergie actuel avec des recommandations intelligentes"
       },
       "lowEnergyMode": {
-        "name": "Low Energy Mode",
-        "description": "Simplified interface and reduced notifications during low energy periods"
+        "name": "Mode basse consommation",
+        "description": "Interface simplifiée et réduction des notifications pendant les périodes de faible consommation d'énergie"
       },
       "wellnessDashboard": {
-        "name": "Wellness Dashboard",
-        "description": "AI-enhanced dashboard showing wellness insights and recommendations"
+        "name": "Tableau de bord du bien-être",
+        "description": "Tableau de bord amélioré par l'IA présentant des informations et des recommandations en matière de bien-être"
       },
       "smartNotifications": {
-        "name": "Smart Notifications",
-        "description": "Intelligent notifications delivered at optimal times based on your energy"
+        "name": "Notifications intelligentes",
+        "description": "Notifications intelligentes délivrées à des moments optimaux en fonction de votre énergie"
       },
       "aiCompanion": {
-        "name": "AI Wellness Companion",
-        "description": "Personalized AI assistant that learns your wellness patterns"
+        "name": "Compagnon de bien-être de l'IA",
+        "description": "Un assistant d'IA personnalisé qui apprend à connaître vos habitudes en matière de bien-être"
       }
     },
     "categories": {
-      "predictive": "Predictive",
-      "adaptive": "Adaptive",
-      "mlEnhanced": "AI-Enhanced",
-      "energyAware": "Energy-Aware"
+      "predictive": "Prédictif",
+      "adaptive": "Adaptatif",
+      "mlEnhanced": "Amélioration de l'IA",
+      "energyAware": "Conscience de l'énergie"
     },
     "badges": {
-      "beta": "Beta",
+      "beta": "Bêta",
       "ai": "AI",
-      "learns": "Learns",
-      "personalized": "Personalized",
-      "lowEnergy": "Low energy",
-      "mediumEnergy": "Medium energy",
-      "highEnergy": "High energy"
+      "learns": "Apprend",
+      "personalized": "Personnalisé",
+      "lowEnergy": "Faible énergie",
+      "mediumEnergy": "Énergie moyenne",
+      "highEnergy": "Haute énergie"
     },
     "metadata": {
-      "requiresFeedback": "Your feedback improves this tool",
-      "mlPowered": "AI-powered learning engine",
-      "personalizable": "Personalized to your needs",
-      "energyOptimal": "Optimal for {{energy}} energy levels",
-      "accessibility": "Accessibility: {{features}}"
+      "requiresFeedback": "Vos commentaires permettent d'améliorer cet outil",
+      "mlPowered": "Moteur d'apprentissage alimenté par l'IA",
+      "personalizable": "Personnalisé en fonction de vos besoins",
+      "energyOptimal": "Optimal pour les niveaux d'énergie {{énergie}}",
+      "accessibility": "Accessibilité : {{fonctionnalités}}"
     }
   },
   "patterns": {
     "activity": {
-      "title": "Activity Patterns",
-      "description": "Patterns of when and how you do activities",
-      "recordDataPoint": "Record activity",
-      "viewHistory": "View activity history",
-      "insights": "Activity insights"
+      "title": "Modèles d'activité",
+      "description": "Modes d'exécution des activités (quand et comment)",
+      "recordDataPoint": "Enregistrer l'activité",
+      "viewHistory": "Consulter l'historique des activités",
+      "insights": "Aperçu des activités"
     },
     "energy": {
-      "title": "Energy Patterns",
-      "description": "When your energy levels are highest and lowest",
-      "morning": "Morning energy",
-      "afternoon": "Afternoon energy",
-      "evening": "Evening energy",
-      "night": "Night energy",
-      "predictedEnergy": "Predicted energy"
+      "title": "Modèles d'énergie",
+      "description": "Quand vos niveaux d'énergie sont-ils les plus élevés et les plus bas ?",
+      "morning": "L'énergie du matin",
+      "afternoon": "L'énergie de l'après-midi",
+      "evening": "L'énergie du soir",
+      "night": "Énergie nocturne",
+      "predictedEnergy": "Énergie prévue"
     },
     "mood": {
-      "title": "Mood Patterns",
-      "description": "Your emotional patterns and cycles",
-      "moodBefore": "Mood before",
-      "moodAfter": "Mood after",
-      "moodTrend": "Mood trend",
-      "emotionalCycle": "Emotional cycle"
+      "title": "Modèles d'humeur",
+      "description": "Vos schémas et cycles émotionnels",
+      "moodBefore": "Humeur avant",
+      "moodAfter": "L'humeur après",
+      "moodTrend": "Tendance de l'humeur",
+      "emotionalCycle": "Cycle émotionnel"
     },
     "recovery": {
-      "title": "Recovery Patterns",
-      "description": "What helps you recover and feel better",
-      "whatHelps": "What helps you recover",
-      "recoveryTips": "Recovery tips",
-      "fastestRecovery": "Fastest recovery"
+      "title": "Modèles de récupération",
+      "description": "Ce qui vous aide à récupérer et à vous sentir mieux",
+      "whatHelps": "Ce qui vous aide à récupérer",
+      "recoveryTips": "Conseils de récupération",
+      "fastestRecovery": "Récupération la plus rapide"
     },
     "engagement": {
       "title": "Engagement Patterns",
-      "description": "When you're most engaged and productive",
-      "peakTime": "Peak engagement time",
+      "description": "Lorsque vous êtes le plus engagé et le plus productif",
+      "peakTime": "Période d'engagement maximale",
       "engagementLevel": "Engagement level",
       "recommendations": "Engagement recommendations"
     },
     "analysis": {
-      "strength": "Pattern strength",
-      "confidence": "Confidence level",
-      "occurrences": "Pattern occurrences",
-      "lastSeen": "Last occurred",
-      "nextPredicted": "Predicted next occurrence",
+      "strength": "Résistance du modèle",
+      "confidence": "Niveau de confiance",
+      "occurrences": "Occurrences de motifs",
+      "lastSeen": "Dernier événement",
+      "nextPredicted": "Prochaine occurrence prévue",
       "recommendation": "Recommendation",
-      "insight": "Insight",
-      "bestTime": "Best time for this pattern",
-      "worstTime": "Challenging time for this pattern",
-      "noPatterns": "No patterns recorded yet. Start recording activities to build patterns."
+      "insight": "Aperçu",
+      "bestTime": "Meilleure période pour ce modèle",
+      "worstTime": "Une période difficile pour ce modèle",
+      "noPatterns": "Aucun modèle n'a encore été enregistré. Commencez à enregistrer des activités pour construire des modèles."
     },
     "labels": {
-      "recordedInstances": "Recorded {{count}} time{{plural}}",
-      "mostCommon": "Most common on {{day}}s",
-      "dataCollecting": "Data collecting...",
-      "patternStrengthHigh": "Strong pattern identified",
-      "patternStrengthMedium": "Moderate pattern detected",
-      "patternStrengthLow": "Pattern forming (more data needed)"
+      "recordedInstances": "Enregistré {{count}} time{{plural}}",
+      "mostCommon": "Plus fréquente le {{jour}}",
+      "dataCollecting": "Collecte de données...",
+      "patternStrengthHigh": "Identification d'un modèle fort",
+      "patternStrengthMedium": "Modèle modéré détecté",
+      "patternStrengthLow": "Formation d'un modèle (davantage de données sont nécessaires)"
     }
   },
   "energyPrediction": {
-    "title": "Energy Forecast",
-    "currentEnergy": "Current Energy",
-    "forecast": "24-Hour Forecast",
-    "bestTime": "Best Time",
-    "worstTime": "Lowest Energy",
-    "trending": "Trending",
-    "trendingUp": "Energy increasing",
-    "trendingDown": "Energy decreasing",
-    "stable": "Energy stable",
+    "title": "Prévisions énergétiques",
+    "currentEnergy": "Énergie actuelle",
+    "forecast": "Prévisions à 24 heures",
+    "bestTime": "Meilleur moment",
+    "worstTime": "Énergie la plus basse",
+    "trending": "Tendance",
+    "trendingUp": "Augmentation de l'énergie",
+    "trendingDown": "Diminution de l'énergie",
+    "stable": "Stabilité énergétique",
     "predictions": {
-      "high": "High energy expected",
-      "medium": "Moderate energy expected",
-      "low": "Low energy expected",
-      "peakTime": "Peak energy time",
-      "lowEnergyTime": "Challenging time",
+      "high": "Une énergie élevée est attendue",
+      "medium": "Énergie modérée attendue",
+      "low": "Faible consommation d'énergie attendue",
+      "peakTime": "Durée de l'énergie de pointe",
+      "lowEnergyTime": "Une période difficile",
       "recommendation": "Recommendation"
     },
     "factors": {
-      "averageEnergy": "Historical average",
-      "patternBased": "Based on your patterns",
-      "timeOfDay": "Time of day effect",
-      "recentTrend": "Recent trend"
+      "averageEnergy": "Moyenne historique",
+      "patternBased": "Sur la base de vos modèles",
+      "timeOfDay": "Effet de l'heure",
+      "recentTrend": "Tendance récente"
     },
     "recommendations": {
-      "planRest": "Plan rest during low-energy times",
-      "demandingTasks": "Best time for demanding tasks",
-      "recoveryStrategies": "Use recovery strategies during low-energy periods",
-      "needsRest": "Your energy is low. Consider getting more rest."
+      "planRest": "Prévoir des périodes de repos pendant les périodes de baisse d'énergie",
+      "demandingTasks": "Meilleur moment pour les tâches exigeantes",
+      "recoveryStrategies": "Utiliser des stratégies de récupération pendant les périodes de faible énergie",
+      "needsRest": "Vous manquez d'énergie. Pensez à vous reposer davantage."
     },
     "chart": {
       "hourLabel": "{{hour}}h",
-      "energyLevel": "{{level}}% energy",
-      "accessibility": "Energy level chart showing predicted energy for each hour of the day"
+      "energyLevel": "{{niveau}}% d'énergie",
+      "accessibility": "Tableau des niveaux d'énergie indiquant l'énergie prévue pour chaque heure de la journée"
     }
   },
   "smartNotifications": {
-    "title": "Smart Notification Settings",
-    "description": "Control when notifications reach you based on your energy levels",
-    "quietHours": "Quiet Hours",
-    "enableQuietHours": "Enable Quiet Hours",
-    "enableQuietHoursDescription": "Pause non-urgent notifications during your rest times",
-    "quietHoursEnabled": "Quiet hours enabled",
-    "quietHoursDisabled": "Quiet hours disabled",
-    "startTime": "Start Time",
-    "startTimeA11y": "Set quiet hours start time",
-    "endTime": "End Time",
-    "endTimeA11y": "Set quiet hours end time",
-    "allowHighPriority": "Allow Urgent Notifications",
-    "allowHighPriorityDescription": "Send high-priority notifications even during quiet hours",
-    "timeZone": "Time Zone",
-    "current": "Current Time Zone",
-    "saved": "Settings saved successfully",
+    "title": "Paramètres de notification intelligente",
+    "description": "Contrôlez le moment où les notifications vous parviennent en fonction de votre niveau d'énergie",
+    "quietHours": "Heures calmes",
+    "enableQuietHours": "Activer les heures de silence",
+    "enableQuietHoursDescription": "Mettez en pause les notifications non urgentes pendant vos temps de repos",
+    "quietHoursEnabled": "Heures calmes activées",
+    "quietHoursDisabled": "Heures calmes désactivées",
+    "startTime": "Heure de début",
+    "startTimeA11y": "Définir l'heure de début des heures calmes",
+    "endTime": "L'heure de la fin",
+    "endTimeA11y": "Définir l'heure de fin des heures calmes",
+    "allowHighPriority": "Autoriser les notifications urgentes",
+    "allowHighPriorityDescription": "Envoi de notifications prioritaires même pendant les heures creuses",
+    "timeZone": "Fuseau horaire",
+    "current": "Fuseau horaire actuel",
+    "saved": "Les paramètres ont été sauvegardés avec succès",
     "errors": {
-      "loadingFailed": "Could not load notification settings",
-      "savingFailed": "Could not save notification settings"
+      "loadingFailed": "Impossible de charger les paramètres de notification",
+      "savingFailed": "Impossible d'enregistrer les paramètres de notification"
     },
-    "saveHint": "Save your notification preferences"
+    "saveHint": "Sauvegarder vos préférences de notification"
   },
   "weeklySummary": {
-    "title": "Weekly Summary",
-    "generatedOn": "Generated on {{date}}",
-    "weekOf": "Week of {{startDate}} - {{endDate}}",
-    "energyMetrics": "Energy Analysis",
-    "averageEnergy": "Average Energy",
-    "bestDay": "Best Day",
-    "worstDay": "Lowest Energy Day",
-    "trend": "Trend",
-    "trendImproving": "📈 Improving",
-    "trendDeclining": "📉 Declining",
+    "title": "Résumé hebdomadaire",
+    "generatedOn": "Généré le {{date}}",
+    "weekOf": "Semaine du {{début}} - {{endDate}}",
+    "energyMetrics": "Analyse énergétique",
+    "averageEnergy": "Énergie moyenne",
+    "bestDay": "Meilleur jour",
+    "worstDay": "Jour de l'énergie la plus basse",
+    "trend": "Tendance",
+    "trendImproving": "📈 Amélioration",
+    "trendDeclining": "📉 Déclinant",
     "trendStable": "➡️ Stable",
-    "recoveryRate": "Recovery Time",
-    "moodMetrics": "Mood Patterns",
-    "dominantMood": "Most Common Mood",
-    "moodVariance": "Mood Variability",
-    "toolUsage": "Tool Usage",
+    "recoveryRate": "Délai de récupération",
+    "moodMetrics": "Modèles d'humeur",
+    "dominantMood": "Humeur la plus fréquente",
+    "moodVariance": "Variabilité de l'humeur",
+    "toolUsage": "Utilisation des outils",
     "totalSessions": "Total Sessions",
-    "mostUsedTools": "Most Used Tools",
-    "categoriesUsed": "Categories Explored",
-    "timeSpent": "Time in Wellness",
-    "achievements": "Achievements",
-    "streakDays": "Day Streak",
-    "goalsCompleted": "Goals Completed",
-    "newAchievements": "New Achievements",
-    "wellnessScore": "Wellness Score",
-    "insights": "Insights",
+    "mostUsedTools": "Outils les plus utilisés",
+    "categoriesUsed": "Catégories explorées",
+    "timeSpent": "Le temps du bien-être",
+    "achievements": "Réalisations",
+    "streakDays": "Traînée de jours",
+    "goalsCompleted": "Objectifs atteints",
+    "newAchievements": "Nouvelles réalisations",
+    "wellnessScore": "Score de bien-être",
+    "insights": "Perspectives",
     "recommendations": "Recommendations",
-    "deliveryStatus": "Delivery Status",
-    "scheduledForDelivery": "Scheduled for next Monday morning",
-    "delivered": "Delivered on {{date}}"
+    "deliveryStatus": "État de la livraison",
+    "scheduledForDelivery": "Programmée pour lundi matin prochain",
+    "delivered": "Livré le {{date}}"
   },
   "mlModels": {
-    "title": "ML Model Management",
-    "description": "Track and optimize machine learning models",
+    "title": "Gestion du modèle ML",
+    "description": "Suivre et optimiser les modèles d'apprentissage automatique",
     "modelTypes": {
-      "energyPrediction": "Energy Prediction",
-      "patternLearning": "Pattern Learning",
-      "smartNotifications": "Smart Notifications"
+      "energyPrediction": "Prévision énergétique",
+      "patternLearning": "Apprentissage par patrons",
+      "smartNotifications": "Notifications intelligentes"
     },
     "status": {
-      "development": "Development",
-      "testing": "Testing",
+      "development": "Développement",
+      "testing": "Essais",
       "production": "Production",
-      "deprecated": "Deprecated"
+      "deprecated": "Déclassé"
     },
     "metrics": {
-      "accuracy": "Accuracy",
-      "precision": "Precision",
-      "recall": "Recall",
+      "accuracy": "Précision",
+      "precision": "Précision",
+      "recall": "Rappel",
       "f1Score": "F1 Score"
     },
     "abTesting": {
-      "title": "A/B Testing",
-      "controlGroup": "Current Model",
-      "treatmentGroup": "New Model",
-      "status": "Status"
+      "title": "Tests A/B",
+      "controlGroup": "Modèle actuel",
+      "treatmentGroup": "Nouveau modèle",
+      "status": "Statut"
     },
     "feedback": {
-      "rating": "Rating",
-      "yourFeedback": "Your Feedback"
+      "rating": "Evaluation",
+      "yourFeedback": "Votre avis"
     },
     "statistics": {
-      "totalModels": "Total Models",
-      "production": "In Production",
-      "testing": "Testing"
+      "totalModels": "Total des modèles",
+      "production": "En production",
+      "testing": "Essais"
     }
   }
 }
