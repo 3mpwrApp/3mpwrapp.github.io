@@ -27,13 +27,14 @@ const BADGE_ICONS: Record<BadgeType, string> = {
 
 // Badge colors - using standard web colors that work across themes
 // These are intentionally hardcoded as they represent badge identity/branding
- 
+/* eslint-disable no-restricted-syntax */
 const BADGE_COLORS: Record<BadgeType, string> = {
   betaTester: '#FF6B35', // Orange for beta
   earlyAdopter: '#FFD700', // Gold for early adopters
   contributor: '#4ECDC4', // Teal for contributors
   verified: '#4CAF50', // Green for verified
 };
+/* eslint-enable no-restricted-syntax */
 
 export default function UserBadge({ 
   type, 
