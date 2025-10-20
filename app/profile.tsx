@@ -123,12 +123,12 @@ export default function Profile() {
 
       {/* DEV ONLY: Sentry Test Button */}
       {__DEV__ && (
-        <View style={[styles.card, { backgroundColor: '#fff3cd', borderWidth: 2, borderColor: '#ffc107' }]}>
-          <Text style={{ fontWeight: "700", marginBottom: 8, color: '#856404' }}>
+        <View style={[styles.card, { backgroundColor: palette.surface, borderWidth: 2, borderColor: palette.primary }]}>
+          <Text style={{ fontWeight: "700", marginBottom: 8, color: palette.text }}>
             🐛 DEV ONLY - Sentry Testing
           </Text>
           <Pressable
-            style={[styles.cta, { backgroundColor: '#0066cc' }]}
+            style={[styles.cta, { backgroundColor: palette.primary }]}
             onPress={async () => {
               try {
                 // Dynamically import Sentry
@@ -154,7 +154,7 @@ export default function Profile() {
               🧪 Send Test Error to Sentry
             </Text>
           </Pressable>
-          <Text style={{ fontSize: 12, color: '#856404', marginTop: 8 }}>
+          <Text style={{ fontSize: 12, color: palette.text, marginTop: 8 }}>
             Make sure error reporting is enabled in Settings → Privacy
           </Text>
         </View>
