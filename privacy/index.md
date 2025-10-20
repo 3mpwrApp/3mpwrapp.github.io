@@ -1,76 +1,46 @@
-------
+---
+layout: default
+title: Privacy Policy
+permalink: /privacy/
+description: Our commitment to your privacy and how we handle your data.
+---
 
-layout: defaultlayout: default
+# Privacy Policy
 
-title: Privacy Policytitle: Privacy Policy
+Last updated: {{ site.time | date: '%B %d, %Y' }}
 
-permalink: /privacy/permalink: /privacy/
+We respect your privacy. This policy explains what data we collect, how we use it, and your choices.
 
-description: Our commitment to your privacy and how we handle your data.description: Our commitment to your privacy and how we handle your data.
+## What we collect
 
-------
+- Website analytics (aggregated, non-identifying)
+- Newsletter signup information (if you subscribe)
+- Contact messages you send us
 
+## How we use data
 
+- To improve the website and app
+- To send newsletters you opt into
+- To respond to your messages
 
-# Privacy Policy# Privacy Policy
+## Data retention
 
+- We keep data only as long as necessary for its purpose or as required by law
+- You may request deletion of your personal data by contacting us
 
+## Cookies
 
-Last updated: {{ site.time | date: '%B %d, %Y' }}Last updated: {{ site.time | date: '%B %d, %Y' }}
+- We use essential cookies for site functionality
+- We may use analytics cookies to understand usage (you can opt out via your browser or a banner where applicable)
 
+## Your rights
 
+- Access, correct, or delete your data
+- Withdraw consent for communications at any time
 
-We respect your privacy. This policy explains what data we collect, how we use it, and your choices.We respect your privacy. This policy explains what data we collect, how we use it, and your choices.
+## Contact
 
-
-
-## What we collect## What we collect
-
-- Website analytics (aggregated, non-identifying)- Website analytics (aggregated, non-identifying)
-
-- Newsletter signup information (if you subscribe)- Newsletter signup information (if you subscribe)
-
-- Contact messages you send us- Contact messages you send us
-
-
-
-## How we use data## How we use data
-
-- To improve the website and app- To improve the website and app
-
-- To send newsletters you opt into- To send newsletters you opt into
-
-- To respond to your messages- To respond to your messages
-
-
-
-## Data retention## Data retention
-
-- We keep data only as long as necessary for its purpose or as required by law- We keep data only as long as necessary for its purpose or as required by law
-
-- You may request deletion of your personal data by contacting us- You may request deletion of your personal data by contacting us
-
-
-
-## Cookies## Cookies
-
-- We use essential cookies for site functionality- We use essential cookies for site functionality
-
-- We may use analytics cookies to understand usage (you can opt out via your browser or a banner where applicable)- We may use analytics cookies to understand usage (you can opt out via your browser or a banner where applicable)
-
-
-
-## Your rights## Your rights
-
-- Access, correct, or delete your data- Access, correct, or delete your data
-
-- Withdraw consent for communications at any time- Withdraw consent for communications at any time
-
-
-
-## Contact## Contact
-
-If you have questions about this policy, contact us at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).If you have questions about this policy, contact us at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).
+If you have questions about this policy, contact us at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).
 
 
 ---
