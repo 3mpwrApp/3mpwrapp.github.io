@@ -1,0 +1,3650 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "campaigns": "Campagnes",
+    "community": "Communauté",
+    "advocacy": "Défense",
+    "podcasts": "Balados et récits",
+    "resources": "Ressources",
+    "events": "Événements",
+    "wellness": "Bien-être",
+    "profile": "Profil",
+    "saved": "Enregistré",
+    "settings": "Paramètres",
+    "inbox": "Boîte de réception",
+    "about": "À propos / Contact",
+    "faqs": "FAQs",
+    "research": "Recherche"
+  },
+  "loading": {
+    "generic": "Chargement…",
+    "community": "Chargement de la communauté…",
+    "deadlines": "Chargement des échéances…",
+    "evidence": "Chargement du casier de preuves…",
+    "reflections": "Chargement des réflexions…",
+    "advocacy": "Chargement des outils de défense…",
+    "wellness": "Chargement des outils bien‑être…",
+    "resources": "Chargement des ressources…"
+  },
+  "inbox": {
+    "itemRead": "Lu",
+    "itemUnread": "Non lu",
+    "markAll": "Tout marquer comme lus"
+  },
+  "header": {
+    "favorites": "Favs",
+    "items": "Éléments",
+    "openProfile": "Ouvrir le profil",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "refresh": "Tout actualiser"
+  },
+  "home": {
+    "title": "Bienvenue sur 3mpwr App",
+    "subtitle": "Soutien. Défense. Autonomisation.",
+    "welcome": "Bienvenue ! Votre hub pour communauté, éducation, outils de défense et balados — tout au même endroit !",
+    "personalization": {
+      "note": "Suggestions propulsées par le moteur de personnalisation (bêta)."
+    },
+    "quick": {
+      "betaChat": {
+        "title": "Chat des bêta‑testeurs",
+        "label": "Ouvrir le chat testeurs",
+        "cta": "Rejoindre",
+        "hint": "Opens the beta testers community chat",
+        "section": "Beta testers section"
+      }
+    },
+    "guide": {
+      "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
+      "snapshotPlaceholder": "(Mood tracking available on Wellness tab)",
+      "header": "Today's Guide",
+      "snapshot": "Snapshot",
+      "suggested": "Suggested",
+      "open": "Open",
+      "noSuggestions": "No suggestions yet",
+      "feedback": {
+        "up": "Helpful suggestion",
+        "down": "Not relevant"
+      }
+    },
+    "announcement": "Home screen loaded. Beta features available.",
+    "screenLabel": "Home screen"
+  },
+  "system": {
+    "changelog": {
+      "title": "Nouveautés de 3mpwr App",
+      "body": "Découvrez les dernières mises à jour et améliorations."
+    }
+  },
+  "petition": {
+    "signed": {
+      "title": "Pétition signée",
+      "body": "Vous avez signé \"{{petition}}\""
+    }
+  },
+  "faq": {
+    "created": {
+      "title": "FAQ ajoutée",
+      "body": "Créé : {{question}}"
+    }
+  },
+  "collective": {
+    "title": "Collective Legal Action Hub",
+    "subtitle": "If multiple users report the same violation, 3mpwr App groups cases for union / class-action leverage.",
+    "typeLabel": "Violation type",
+    "type": {
+      "deniedModified": "denied modified duties",
+      "refusedAccommodation": "refused accommodation",
+      "retaliation": "retaliation",
+      "benefitDenial": "benefit denial"
+    },
+    "provinceLabel": "Province (optional)",
+    "provincePlaceholder": "ON, BC, ...",
+    "detailsLabel": "Details (optional)",
+    "detailsPlaceholder": "Short summary; do not include identifiers.",
+    "submit": "Submit report",
+    "aggregatedHeader": "Aggregated reports",
+    "none": "No reports yet.",
+    "note": "Note: Submissions are anonymous; contact details are not collected.",
+    "submittedTitle": "Submitted",
+    "submittedBody": "Report added anonymously. Aggregated counts help build leverage."
+  },
+  "finder": {
+    "title": "Lawyer & Advocate Finder",
+    "modeList": "List",
+    "modeMap": "Map",
+    "searchPlaceholder": "Search by name, city, org",
+    "issuePlaceholder": "Issue (e.g., WSIB)",
+    "provincePlaceholder": "Province (e.g., ON)",
+    "proBonoOnly": "Pro bono only",
+    "includePaid": "Include paid",
+    "locationUnknown": "—",
+    "issuesLabel": "Issues",
+    "openWebsite": "Open website",
+    "email": "Email",
+    "openOnMap": "Open on Map",
+    "saved": "★ Saved",
+    "save": "☆ Save",
+    "mapHint": "Tap a listing in List mode to open maps."
+  },
+  "support": {
+    "title": "Support Directory",
+    "screenLabel": "Support directory screen",
+    "subtitle": "Organizations that may help with claims, accommodations, and advocacy.",
+    "accessible": "Accessible",
+    "phoneIcon": "☎",
+    "openWebsiteLabel": "Open {{name}} website",
+    "website": "Website",
+    "suggestHeader": "Suggest a correction",
+    "suggestPlaceholder": "Org ID and your suggestion",
+    "submitSuggestion": "Submit suggestion"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "accessibility": {
+      "title": "Accessibilité",
+      "subtitle": "Faites en sorte que l'application fonctionne mieux pour vous",
+      "highContrast": "Contraste élevé",
+      "highContrastDesc": "Augmente le contraste pour une meilleure lisibilité",
+      "textSize": "Taille du texte",
+      "textSizeDesc": "Ajustez la taille du texte dans toute l'application",
+      "screenReader": "Optimisé pour lecteur d'écran",
+      "screenReaderDesc": "Optimise le contenu pour les lecteurs d'écran",
+      "reduceMotion": "Réduire les mouvements",
+      "reduceMotionDesc": "Minimise les animations et transitions",
+      "focusIndicator": "Indicateurs de focus améliorés",
+      "focusIndicatorDesc": "Rend la navigation au clavier plus visible",
+      "tapTarget": "Taille minimale de zone tactile",
+      "tapTargetDesc": "Assure que les boutons sont faciles à toucher",
+      "dyslexiaFriendly": "Police adaptée à la dyslexie",
+      "dyslexiaFriendlyDesc": "Améliore l'espacement des lettres et la lisibilité",
+      "plainLanguage": "Langage simple",
+      "plainLanguageDesc": "Utilise un texte plus simple et plus clair",
+      "captions": "Sous-titres préférés",
+      "captionsDesc": "Affiche les sous-titres quand disponibles",
+      "voiceMode": "Mode vocal",
+      "voiceModeDesc": "Active la navigation vocale (bêta)",
+      "dyslexia": "Police adaptée à la dyslexie",
+      "dyslexiaDesc": "Améliore l'espacement et la lisibilité",
+      "assistantPill": "Afficher la pastille Assistant",
+      "assistantPillDesc": "Raccourci flottant vers le hub Assistant",
+      "assistantDock": "Position de la pastille"
+    },
+    "bookmarks": {
+      "title": "Signets",
+      "subtitle": "Enregistrez des liens rapides vers les fonctionnalités",
+      "description": "Ajoutez des signets pour ouvrir rapidement les outils et écrans fréquemment utilisés.",
+      "search": "Rechercher ou filtrer les routes",
+      "searchPlaceholder": "Tapez pour filtrer les suggestions",
+      "suggestions": "Suggestions",
+      "addSuggestion": "Ajouter un signet pour",
+      "route": "Chemin de route",
+      "routePlaceholder": "ex. /(tabs)/resources/index",
+      "label": "Libellé",
+      "labelPlaceholder": "Mes ressources",
+      "add": "Ajouter un signet",
+      "remove": "Supprimer le signet",
+      "empty": "Aucun signet pour l'instant.",
+      "clearAll": "Tout effacer",
+      "errEmptyRoute": "Chemin requis",
+      "errInvalid": "Chemin non signetable",
+      "errDuplicate": "Déjà enregistré"
+    },
+    "language": {
+      "title": "Langue",
+      "subtitle": "Choisissez votre langue préférée",
+      "english": "Anglais",
+      "french": "Français",
+      "spanish": "Espagnol"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Choisissez les alertes que vous recevez",
+      "enabled": "Activer les notifications",
+      "enabledDesc": "Recevoir les notifications de l'application",
+      "sound": "Son de notification",
+      "soundDesc": "Jouer un son avec les notifications",
+      "vibration": "Vibration",
+      "vibrationDesc": "Vibrer pour les notifications",
+      "emergency": "Alertes d'urgence",
+      "emergencyDesc": "Notifications de sécurité critiques",
+      "wellness": "Rappels de bien-être",
+      "wellnessDesc": "Vérifications quotidiennes de bien-être",
+      "events": "Rappels d'événements",
+      "eventsDesc": "Notifications d'événements à venir",
+      "quietHoursEnabled": "Quiet Hours Enabled",
+      "quietHoursEnabledDesc": "Silence push notifications during configured hours",
+      "quietHoursWindow": "Quiet Hours Window",
+      "quietHoursWindowDesc": "Current window",
+      "quietHoursStart": "Toggle Start Hour",
+      "quietHoursStartDesc": "Cycles through preset start times",
+      "quietHoursEnd": "Toggle End Hour",
+      "quietHoursEndDesc": "Cycles through preset end times",
+      "moodNudges": "Mood Nudges",
+      "moodNudgesDesc": "Evening reminder to log how you feel"
+    },
+    "emergency": {
+      "title": "Carte d'urgence portefeuille",
+      "subtitle": "Accès rapide aux informations importantes",
+      "description": "Créez une carte d'urgence numérique avec vos informations clés pour un accès rapide en cas de besoin",
+      "openLabel": "Ouvrir la carte d'urgence",
+      "manage": "Gérer les infos d'urgence"
+    },
+    "privacy": {
+      "title": "Confidentialité et sécurité",
+      "subtitle": "Contrôlez vos données et votre sécurité",
+      "passcode": "Exiger un code d'accès",
+      "passcodeDesc": "Verrouiller l'application avec un code d'accès",
+      "autoLock": "Délai de verrouillage automatique",
+      "autoLockDesc": "Minutes avant le verrouillage de l'application",
+      "analytics": "Refuser les analyses",
+      "analyticsDesc": "Ne pas partager les données d'utilisation"
+    },
+    "account": {
+      "title": "Gestion du compte",
+      "subtitle": "Gérez votre profil et vos préférences",
+      "displayName": "Nom d'affichage",
+      "displayNamePlaceholder": "Saisir le nom d'affichage",
+      "changePhoto": "Changer la photo de profil",
+      "updateName": "Mettre à jour le nom",
+      "resetPassword": "Envoyer un e-mail de réinitialisation",
+      "resetPasswordSent": "E-mail envoyé",
+      "resetPasswordSentDesc": "Vérifiez votre boîte de réception pour les instructions.",
+      "resetPasswordFailed": "Échec de la réinitialisation",
+      "password": "Changer le mot de passe",
+      "preferences": "Préférences",
+      "delete": "Supprimer le compte",
+      "deleteConfirmTitle": "Supprimer le compte",
+      "deleteConfirmBody": "Cette action supprimera définitivement votre compte. Cette action est irréversible.",
+      "deleteConfirmPasswordTitle": "Confirmer la suppression",
+      "deleteConfirmPasswordBody": "Entrez votre mot de passe pour supprimer définitivement votre compte.",
+      "deleted": "Compte supprimé",
+      "deleteFailed": "Suppression échouée",
+      "passwordPlaceholder": "Mot de passe",
+      "reauthFailed": "Échec de la ré-authentification",
+      "confirmDelete": "Confirmer",
+      "updatedName": "Nom d'affichage mis à jour",
+      "photoUpdated": "Photo de profil mise à jour",
+      "guestNotice": "Mode invité. Créez un compte pour synchroniser.",
+      "createAccount": "Créer un compte",
+      "photo": "Photo",
+      "deleteNoPassword": "Aucun mot de passe défini; suppression non confirmable."
+    },
+    "emergencyWallet": {
+      "title": "Carte d'urgence",
+      "subtitle": "Accès rapide aux infos médicales et contacts essentiels.",
+      "hide": "Masquer la carte",
+      "show": "Afficher la carte"
+    },
+    "wellness": "Bien-être",
+    "mood": {
+      "nudges": "Mood Nudges",
+      "nudgesHelp": "Evening reminder to log mood if you skipped today."
+    },
+    "cognitiveAccessibility": "Cognitive Accessibility Settings - Simplified mode, auto-save, and navigation memory for ADHD, autism, and learning disabilities",
+    "cognitiveAccessibilityTitle": "Cognitive Accessibility",
+    "cognitive": {
+      "settingsTitle": "Cognitive Accessibility",
+      "modeTitle": "Cognitive Mode",
+      "modeDescription": "Choose how the app should adapt to your cognitive needs. Simplified modes reduce choices, enhance auto-save, and provide more guidance.",
+      "modeChanged": "Cognitive mode changed to {{mode}}",
+      "modeChangeTitle": "Mode Changed",
+      "modeChangeMessage": "Cognitive accessibility mode is now set to {{mode}}. {{description}}",
+      "modeChangeError": "Failed to change cognitive mode. Please try again.",
+      "maxItems": "Max {{count}} items per screen",
+      "autoSaveEvery": "Auto-save every {{seconds}}s",
+      "featuresTitle": "Features",
+      "navigationMemory": "Navigation Memory",
+      "navigationMemoryDesc": "Remember where you were and offer to go back",
+      "toggleNavigationMemory": "Toggle navigation memory",
+      "scrollMemory": "Scroll Position Memory",
+      "scrollMemoryDesc": "Return to where you were scrolling on each screen",
+      "toggleScrollMemory": "Toggle scroll position memory",
+      "breadcrumbs": "Progress Breadcrumbs",
+      "breadcrumbsDesc": "Show \"You are here\" navigation breadcrumbs",
+      "toggleBreadcrumbs": "Toggle breadcrumbs",
+      "complexityIndicators": "Task Complexity Indicators",
+      "complexityIndicatorsDesc": "Show how complex or time-consuming tasks are",
+      "toggleComplexityIndicators": "Toggle complexity indicators",
+      "stepByStep": "Step-by-Step Guidance",
+      "stepByStepDesc": "Break complex tasks into smaller steps",
+      "toggleStepByStep": "Toggle step-by-step guidance",
+      "actionsTitle": "Actions",
+      "viewIncompleteTasks": "View incomplete tasks",
+      "viewTasks": "View Incomplete Tasks",
+      "viewTasksDesc": "See tasks you started but didn't finish",
+      "clearAllData": "Clear all saved data",
+      "clearData": "Clear All Data",
+      "clearDataDesc": "Remove all navigation history, saved forms, and tasks",
+      "clearDataTitle": "Clear Saved Data?",
+      "clearDataMessage": "This will clear all navigation history, scroll positions, saved forms, and incomplete tasks. This cannot be undone.",
+      "dataCleared": "All cognitive accessibility data has been cleared",
+      "dataClearedMessage": "All saved data has been cleared.",
+      "clearDataError": "Failed to clear data. Please try again.",
+      "noTasksTitle": "No Incomplete Tasks",
+      "noTasksMessage": "You have no incomplete tasks at the moment.",
+      "incompleteTasksTitle": "Incomplete Tasks ({{count}})",
+      "clearTasks": "Clear All Tasks",
+      "tasksCleared": "All tasks have been cleared",
+      "preferenceUpdated": "Preference updated",
+      "saving": "Saving...",
+      "savedJustNow": "Saved just now",
+      "savedMinutesAgo": "Saved {{count}} minute ago",
+      "savedMinutesAgo_other": "Saved {{count}} minutes ago",
+      "savedHoursAgo": "Saved {{count}} hour ago",
+      "savedHoursAgo_other": "Saved {{count}} hours ago",
+      "youWereHere": "You were here last:",
+      "backToWhereYouWere": "Go back to {{location}}",
+      "showMoreItems": "Show {{count}} more items",
+      "showMore": "Show {{count}} more",
+      "showLess": "Show less",
+      "helpText": "Cognitive accessibility features help users with ADHD, autism, learning disabilities, and anyone who benefits from simplified interfaces, memory aids, and step-by-step guidance."
+    },
+    "dyslexia": {
+      "settingsTitle": "Dyslexia Support",
+      "custom": "Custom",
+      "presets": "Quick Presets",
+      "presetsDesc": "Start with a preset and fine-tune",
+      "presetError": "Failed to apply preset",
+      "font": "Font",
+      "fontDesc": "Choose a font that improves readability",
+      "loadingFonts": "Loading fonts...",
+      "fontSize": "Font Size (%)",
+      "spacing": "Spacing",
+      "spacingDesc": "Adjust spacing to reduce visual crowding",
+      "letterSpacing": "Letter Spacing",
+      "wordSpacing": "Word Spacing",
+      "lineHeight": "Line Height",
+      "visual": "Visual",
+      "visualDesc": "Overlays and contrast for comfort",
+      "overlay": "Colored Overlay",
+      "contrast": "Contrast",
+      "readingRuler": "Reading Ruler",
+      "advanced": "Advanced",
+      "advancedDesc": "Experimental and assistive options",
+      "wordHighlighting": "Word Highlighting",
+      "wordHighlightingDesc": "Tap words to highlight them",
+      "syllableBreaks": "Syllable Breaks",
+      "syllableBreaksDesc": "Show hyphenation markers (experimental)",
+      "autoScrolling": "Auto Scrolling",
+      "autoScrollingDesc": "Slow automatic scroll for continuous reading",
+      "actions": "Actions",
+      "reset": "Reset to defaults",
+      "resetTitle": "Reset Dyslexia Settings?",
+      "resetMessage": "This will restore default reading settings.",
+      "help": "These tools support readers with dyslexia by reducing visual stress, improving letter differentiation, and enhancing tracking. Experiment to find what feels best for you."
+    }
+  },
+  "admin": {
+    "onlyTitle": "Administrateur uniquement",
+    "onlyDescription": "Vous devez être administrateur pour accéder à cette zone.",
+    "pending": "En attente",
+    "trash": "Corbeille"
+  },
+  "bookmark": {
+    "add": "Ajouter un signet",
+    "remove": "Supprimer le signet",
+    "save": "Enregistrer",
+    "saved": "Enregistré"
+  },
+  "a11y": {
+    "shareCampaign": "Partager la campagne {{title}}",
+    "joinCampaign": "Rejoindre {{title}}",
+    "leaveCampaign": "Quitter {{title}}",
+    "supportCampaign": "Soutenir cette campagne",
+    "openCampaignRoom": "Ouvrir la salle de campagne",
+    "saveCampaign": "Ajouter aux favoris",
+    "removeCampaign": "Retirer des favoris",
+    "toggleCreateEventFormOpen": "Afficher le formulaire d'événement",
+    "toggleCreateEventFormClose": "Masquer le formulaire d'événement",
+    "scheduleEventReminder": "Programmer le rappel de l'événement",
+    "removeEventReminder": "Supprimer le rappel de l'événement",
+    "addToCalendar": "Ajouter au calendrier externe",
+    "toggleMoodNudges": "Basculer les rappels d'humeur",
+    "tool": {
+      "coach": "Ouvrir l'outil Coach de plaidoyer",
+      "translator": "Ouvrir l'outil Traducteur IA",
+      "policy_simplifier": "Ouvrir l'outil Simplificateur de politique",
+      "wellness_mood": "Ouvrir l'outil Suivi d'humeur",
+      "resources_search": "Ouvrir le Hub de ressources"
+    },
+    "navigation": {
+      "screen": "Navigation vers {{screen}}",
+      "screenWithContext": "Navigation vers {{screen}}. {{context}}"
+    },
+    "input": {
+      "required": "requis",
+      "errorAnnouncement": "Erreur : {{error}}",
+      "characterLimit": "{{count}} sur {{max}} caractères",
+      "errorWithField": "Erreur dans {{field}} : {{error}}",
+      "characterCount": "{{current}} sur {{max}} caractères",
+      "requiredField": "Champ requis",
+      "optionalField": "Champ facultatif"
+    },
+    "focus": {
+      "button": "Focus sur le bouton {{name}}",
+      "textInput": "Focus sur la saisie de texte {{name}}",
+      "heading": "Focus sur le titre {{name}}",
+      "link": "Focus sur le lien {{name}}"
+    },
+    "hints": {
+      "tap": "Appuyez deux fois pour activer",
+      "swipe": "Balayez vers la droite ou la gauche pour naviguer",
+      "hold": "Appuyez deux fois et maintenez",
+      "navigate": "Utilisez les gestes de balayage pour naviguer",
+      "withTarget": "{{hint}} {{target}}",
+      "withContext": "{{hint}}. {{context}}"
+    },
+    "roles": {
+      "button": "bouton",
+      "link": "lien",
+      "heading": "titre",
+      "textInput": "saisie de texte",
+      "slider": "curseur",
+      "switch": "commutateur",
+      "radioButton": "bouton radio",
+      "checkbox": "case à cocher",
+      "tab": "onglet",
+      "list": "liste",
+      "listItem": "élément de liste"
+    },
+    "states": {
+      "selected": "sélectionné",
+      "checked": "coché",
+      "unchecked": "décoché",
+      "expanded": "développé",
+      "collapsed": "réduit",
+      "disabled": "désactivé",
+      "loading": "chargement",
+      "error": "contient une erreur"
+    },
+    "position": "{{index}} sur {{total}}",
+    "labelWithRole": "{{label}}, {{role}}",
+    "labelWithState": "{{label}}, {{state}}",
+    "labelWithPosition": "{{label}}, {{position}}",
+    "labelWithValue": "{{label}}, valeur {{value}}",
+    "loading": {
+      "announcement": "Chargement de {{content}}",
+      "complete": "Chargement terminé"
+    },
+    "form": {
+      "validationError": "Le formulaire contient des erreurs",
+      "submissionSuccess": "Formulaire soumis avec succès",
+      "submissionError": "Échec de la soumission du formulaire"
+    }
+  },
+  "deadlines": {
+    "prevMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "reloadShort": "Actualiser",
+    "today": "Aujourd'hui"
+  },
+  "eventsFeature": {
+    "itemsLoaded": {
+      "one": "{{count}} événement chargé",
+      "other": "{{count}} événements chargés"
+    },
+    "empty": "Aucun événement ne correspond à vos filtres",
+    "search": {
+      "placeholder": "Rechercher événements, tags, lieux"
+    },
+    "section": {
+      "community": "Événements communautaires",
+      "observances": "Jours fériés et observances"
+    },
+    "createTitle": "Créer événement",
+    "create": "Créer",
+    "close": "Fermer",
+    "titlePlaceholder": "Titre",
+    "descriptionPlaceholder": "Description",
+    "datePlaceholder": "Date (AAAA-MM-JJ HH:MM)",
+    "locationPlaceholder": "Lieu (optionnel)",
+    "virtual": "Virtuel",
+    "asl": "ASL",
+    "captions": "Sous-titres",
+    "stepFree": "Sans marches",
+    "sensory": "Sensoriel",
+    "addReminder": "Ajouter rappel",
+    "removeReminder": "Retirer rappel",
+    "reminderScheduled": "Rappel programmé",
+    "reminderRemoved": "Rappel retiré",
+    "addToCalendar": "Ajouter au calendrier",
+    "createToggleOpen": "Créer un événement",
+    "createToggleClose": "Fermer le formulaire",
+    "subtitle": "Événements communautaires, ateliers et rencontres.",
+    "tbd": "À déterminer",
+    "tags": {
+      "holiday": "Jour férié",
+      "provincial": "Provincial",
+      "observance": "Observance"
+    },
+    "hasEvents": "a des événements",
+    "loadedCount": "{{n}} événements chargés",
+    "shareTitle": "Événement",
+    "detailTitle": "Événement",
+    "detailUnavailable": "Détails indisponibles.",
+    "whenLabel": "Quand :",
+    "whereLabel": "Où :",
+    "form": {
+      "titlePlaceholder": "Titre",
+      "descriptionPlaceholder": "Description",
+      "datePlaceholder": "Date (AAAA-MM-JJ HH:MM)",
+      "locationPlaceholder": "Lieu (optionnel)",
+      "add": "Ajouter un événement",
+      "invalidDate": "Date invalide",
+      "added": "Événement ajouté"
+    },
+    "chips": {
+      "virtual": "Virtuel",
+      "asl": "ASL",
+      "captions": "Sous-titres",
+      "stepFree": "Sans marches",
+      "sensory": "Sensoriel"
+    },
+    "reminders": {
+      "add": "Ajouter un rappel",
+      "remove": "Retirer le rappel",
+      "disabledTitle": "Rappels désactivés",
+      "disabledBody": "Activez les rappels d'événements dans les Paramètres pour programmer des notifications locales.",
+      "scheduled": "Rappel prévu 60 minutes avant le début.",
+      "removed": "Rappel d'événement supprimé.",
+      "tooSoon": "L'événement commence trop tôt pour un rappel.",
+      "invalidDate": "Impossible de lire la date de l'événement.",
+      "failed": "Impossible de programmer le rappel.",
+      "addCalendar": "Ajouter au calendrier"
+    },
+    "loadFailed": "Échec du chargement des événements"
+  },
+  "privacyGate": {
+    "title": "Déverrouiller 3mpwr App",
+    "subtitle": "Entrez votre code pour continuer.",
+    "placeholder": "Entrer le code",
+    "unlock": "Déverrouiller",
+    "incorrectTitle": "Code incorrect",
+    "incorrectBody": "Veuillez réessayer."
+  },
+  "emergencyWalletCard": {
+    "a11y": {
+      "form": "Formulaire de carte d'urgence"
+    },
+    "personalInfo": "Informations personnelles",
+    "fullName": "Nom complet",
+    "fullNamePh": "Entrez votre nom complet",
+    "fullNameHint": "Entrez votre nom légal complet",
+    "dob": "Date de naissance",
+    "dobPh": "JJ/MM/AAAA",
+    "dobHint": "Entrez la date (jour, mois, année)",
+    "blood": "Groupe sanguin (si connu)",
+    "bloodPh": "ex. A+, O-, AB+",
+    "bloodHint": "Entrez votre groupe si connu",
+    "medicalInfo": "Informations médicales",
+    "conditions": "Affections médicales",
+    "conditionsPh": "Listez affections, handicaps, maladies chroniques",
+    "conditionsHint": "Ce que les secours devraient savoir",
+    "meds": "Médicaments actuels",
+    "medsPh": "Listez médicaments et dosages",
+    "medsHint": "Tous les médicaments pris",
+    "allergies": "Allergies",
+    "allergiesPh": "Listez allergies ou réactions",
+    "allergiesHint": "Allergies connues ou réactions",
+    "contacts": "Contacts d'urgence",
+    "contactN": "Contact {{n}}",
+    "removeContactN": "Supprimer contact {{n}}",
+    "name": "Nom",
+    "namePh": "Nom du contact",
+    "contactNameN": "Nom du contact {{n}}",
+    "relationship": "Lien",
+    "relationshipPh": "ex. Conjoint, Parent, Ami",
+    "contactRelationshipN": "Lien du contact {{n}}",
+    "phone": "Téléphone",
+    "phonePh": "Numéro de téléphone",
+    "contactPhoneN": "Téléphone du contact {{n}}",
+    "addContact": "Ajouter un autre contact d'urgence",
+    "addContactBtn": "Ajouter un contact",
+    "notes": "Notes supplémentaires",
+    "notesPh": "Toute info utile en cas d'urgence",
+    "notesHint": "Ajoutez toute autre information utile",
+    "save": "Sauvegarder les infos d'urgence",
+    "saveHint": "Sauvegarde locale et sécurisée",
+    "saveBtn": "Enregistrer les informations d'urgence",
+    "savedBody": "Informations d'urgence sauvegardées sur l'appareil.",
+    "saveFailed": "Échec de la sauvegarde.",
+    "privacy": "Toutes les informations restent sur votre appareil. Rien n'est partagé."
+  },
+  "wellness": {
+    "quick": {
+      "sleep": "Sommeil & Énergie",
+      "balance": "Équilibre travail/repos (IA)"
+    },
+    "search": "Rechercher des outils bien‑être...",
+    "sections": {
+      "sleep": "Sommeil & Énergie",
+      "tracking": "Suivi",
+      "cognitive": "Cognitif & Humeur",
+      "movement": "Mouvement & Physio"
+    },
+    "tools": {
+      "symptom": "Symptom & Pain Tracker (exportable report)",
+      "sleep": "Sleep & Energy Tracker (legal/medical summary)",
+      "selfcare": "Accessible Self‑Care Library",
+      "work_balance": "Wellness + Work Balance AI",
+      "grief": "Grief + Identity Support Hub",
+      "adaptive_meditation": "Adaptive Meditation & Relaxation",
+      "rehab_games": "Virtual Rehab Games (gentle movement)",
+      "daily_planner": "Adaptive Daily Planner"
+    },
+    "rehab": {
+      "subtitle": "Fun, accessible mini-games to encourage gentle movement and physio-style exercises. Always adapt to comfort and stop if pain increases.",
+      "title": "Virtual Rehab Games"
+    },
+    "achievements": {
+      "subtitle": "Earn badges as you build healthy routines.",
+      "title": "Achievements"
+    },
+    "intro": "Créez des routines de soutien et suivez votre bien‑être.",
+    "hub": {
+      "title": "Wellness & Recovery",
+      "subtitle": "Evidence-based tools for mood, pain, resilience, and recovery."
+    },
+    "breathing": "Breathing",
+    "dbt": {
+      "title": "DBT Skill Matcher",
+      "tools": {
+        "coach": "Coach",
+        "translator": "Traducteur",
+        "policy": "Politique",
+        "mood": "Humeur",
+        "resources": "Ressources"
+      },
+      "desc": "Instant skill suggestions for current emotion.",
+      "sad": "Sad",
+      "angry": "Angry",
+      "anxious": "Anxious",
+      "overwhelmed": "Overwhelmed",
+      "numb": "Numb"
+    },
+    "dreams": {
+      "title": "Dream Tracker & Interpreter",
+      "desc": "Log dreams and get symbolic interpretations.",
+      "placeholder": "Describe your dream..."
+    },
+    "ambience": {
+      "title": "Ambience Sync AI",
+      "desc": "Match background, color, soundscape to your mood.",
+      "current": "Suggestion: {{palette}}, {{soundscape}}, {{brightness}}",
+      "apply": "Apply in app"
+    },
+    "opposite": {
+      "title": "Opposite Action Companion",
+      "desc": "When emotions suggest unhelpful actions, try the opposite in small, safe steps.",
+      "what": "Name the emotion and urge.",
+      "check": "Check the facts: Is the urge justified?",
+      "choose": "Choose a small opposite action.",
+      "do": "Do it briefly. Notice the effect."
+    },
+    "acceptance": {
+      "title": "Radical Acceptance",
+      "desc": "A brief guide to reduce suffering by accepting reality as it is, while taking wise action.",
+      "line1": "This moment is as it is (not approval).",
+      "line2": "Name what’s in your control and what isn’t.",
+      "line3": "Take the next kind action within your control."
+    },
+    "cbt": {
+      "title": "CBT Virtual Coach",
+      "desc": "Reframe thoughts with evidence.",
+      "thought": "Automatic thought",
+      "evidenceFor": "Evidence supporting",
+      "evidenceAgainst": "Evidence against",
+      "generate": "Generate",
+      "alt": "Alternate view",
+      "prompt": "Given",
+      "consider": "consider evidence",
+      "try": "Try a balanced statement."
+    },
+    "sleepReframe": {
+      "title": "Sleep Reframe",
+      "desc": "Support better sleep with kind, practical reframes and routines.",
+      "tip1": "Can’t sleep → It’s okay to rest quietly; rest still helps.",
+      "tip2": "If awake >20m, reset: dim lights, gentle stretch, return.",
+      "tip3": "Anchor wake time; short daytime rest if needed."
+    },
+    "painForecast": {
+      "title": "Pain Forecast",
+      "desc": "Simple trend-based suggestions for pacing.",
+      "avg7d": "7‑day average pain: {{n}}",
+      "trend": "Trend: {{t}}",
+      "next": "Next 3 days",
+      "tips": "Tips"
+    },
+    "micro": {
+      "title": "Micro‑Movement Coach",
+      "desc": "Gentle, chair‑friendly movements. Stop if uncomfortable."
+    },
+    "energy": {
+      "title": "Daily Energy Coins",
+      "desc": "Set a daily budget and spend coins on tasks. Pace kindly.",
+      "today": "Today: {{date}}",
+      "remaining": "Remaining coins: {{n}}",
+      "daily": "Daily coins",
+      "set": "Set",
+      "label": "Task label",
+      "cost": "Cost",
+      "spend": "Spend",
+      "reset": "Reset day",
+      "history": "History"
+    },
+    "distress": {
+      "title": "Distress Tolerance",
+      "desc": "Reduce crisis intensity with brief, practical skills. Adapt to your body.",
+      "tipp1": "T: Temperature — cool face/neck (safe cold pack).",
+      "tipp2": "I: Intense (gentle) exercise — brief walk, arm circles.",
+      "tipp3": "P: Paced breathing — 4 in, 6 out, 2–3 minutes.",
+      "tipp4": "P: Progressive relax — tense/release muscle groups."
+    },
+    "belief": {
+      "title": "Belief Strength Meter",
+      "desc": "Rate how strongly you believe a thought (0–100). Track change after a reframe.",
+      "thought": "Thought",
+      "rating": "Belief strength (0–100)",
+      "now": "Now: {{n}}",
+      "after": "After a reframe, consider if strength shifts",
+      "hint": "Tip: pair with CBT Coach to generate reframes.",
+      "measure": "Measure"
+    },
+    "mini": {
+      "title": "CBT Mini‑Games",
+      "desc": "Quick grounding games to shift attention and calm.",
+      "fiveSenses": "5‑4‑3‑2‑1 grounding (senses).",
+      "nameColors": "Name colors in the room.",
+      "countBack": "Count backwards by 7s from 100."
+    },
+    "triggers": {
+      "title": "Trigger Detector",
+      "desc": "Suggests possible correlations from recent logs.",
+      "maybe": "Possible trigger",
+      "none": "No strong correlations found. Keep logging."
+    },
+    "harm": {
+      "title": "Harm Reduction Guide",
+      "desc": "Practical steps to reduce harm and increase safety.",
+      "plan": "Make a safety plan and keep it visible.",
+      "delay": "Delay + Distract: set a 10‑minute timer and switch tasks.",
+      "connection": "Connection: text a friend or peer support.",
+      "crisis": "Crisis: know local lines and emergency steps."
+    },
+    "acceptFn": {
+      "title": "Acceptance & Function",
+      "desc": "Track acceptance and daily functioning to notice supportive patterns.",
+      "date": "Date (YYYY-MM-DD)",
+      "acceptance": "Acceptance (0–10)",
+      "function": "Function (0–10)",
+      "note": "Note (optional)",
+      "recent": "Recent"
+    },
+    "resilience": {
+      "title": "Points de résilience",
+      "desc": "Gagnez des points pour des actions positives",
+      "points": "Points : {{points}}"
+    },
+    "sleepEnergy": {
+      "title": "Sommeil & Énergie",
+      "desc": "Suivez sommeil et énergie; résumé partageable."
+    },
+    "symptomTracker": {
+      "title": "Suivi symptômes & douleur",
+      "desc": "Notez symptômes/douleur; exportez un rapport."
+    },
+    "selfCare": {
+      "title": "Autosoins accessibles",
+      "desc": "Idées simples et adaptables pour jours à faible énergie."
+    },
+    "workBalance": {
+      "title": "Équilibre bien‑être/travail (IA)",
+      "desc": "Planifiez alternance travail/repos avec conseils doux."
+    },
+    "griefSupport": {
+      "title": "Soutien deuil & identité",
+      "desc": "Réflexions et invites pour changements d'identité."
+    },
+    "adaptiveMeditation": {
+      "title": "Méditation adaptative",
+      "desc": "Méditations courtes et ajustables."
+    },
+    "rehabGames": {
+      "title": "Jeux de rééducation",
+      "desc": "Mini‑jeux de mouvement doux. Adaptez au confort."
+    },
+    "dailyPlanner": {
+      "title": "Planificateur quotidien adaptatif",
+      "desc": "Priorisez tâches selon l'énergie."
+    },
+    "aiCompanion": {
+      "title": "Compagnon IA bien‑être",
+      "desc": "Aide douce pour coaching et recadrages."
+    },
+    "exerciseHub": {
+      "title": "Hub exercice & mouvement",
+      "desc": "Routines sur chaise et conseils de rythme.",
+      "shortFilter": "<3m",
+      "shortFilterOnly": "Afficher uniquement les courtes (<3 min)",
+      "shortFilterAll": "Afficher toutes les durées"
+    },
+    "nutrition": {
+      "title": "Nutrition & hydratation",
+      "desc": "Guides légers et rappels pour bien s'alimenter."
+    },
+    "pacingPartner": {
+      "title": "Partenaire de rythme",
+      "desc": "Découpez tâches en petites étapes et micro‑pauses."
+    },
+    "reflections": {
+      "title": "Calendrier de réflexions",
+      "desc": "Saisissez des notes et réussites; voyez les tendances."
+    },
+    "classicHub": {
+      "title": "Hub bien‑être classique",
+      "desc": "Ensemble original d'outils regroupés."
+    }
+  },
+  "resources": {
+    "itemsLoaded": {
+      "one": "{{count}} ressource chargée",
+      "other": "{{count}} ressources chargées"
+    },
+    "appeal_coach": "Coach d’appel (bientôt)",
+    "prepare_appeal": "Préparation de l’appel (bientôt)",
+    "tools": {
+      "deadlines": "Calculateur d'échéances + rappels",
+      "evidence": "Générateur de liste de preuves",
+      "voice_notes": "Notes vocales vers notes de dossier",
+      "templates": "Galerie de modèles",
+      "rtw": "Plan de retour au travail",
+      "meds": "Suivi des médicaments et traitements",
+      "chronic": "Suivi des affections chroniques",
+      "body_mech": "Conseiller en biomécanique (IA)",
+      "policy_sim": "Simulateur de politiques (interactif)",
+      "accommodation": "Générateur de demande d'aménagement"
+    },
+    "intro": "Vous trouverez ici des outils, guides et soutiens pratiques — des demandes de prestations aux contacts d’urgence. Ce hub vous fait gagner du temps et vous aide à vous défendre efficacement.",
+    "filters": {
+      "all": "Tout",
+      "canada": "Canada",
+      "work_financial": "Travail et finances",
+      "tools_downloads": "Outils et téléchargements",
+      "emergency_crisis": "Urgence et crise"
+    },
+    "search": "Rechercher des ressources"
+  },
+  "podcasts": {
+    "itemsLoaded": {
+      "one": "{{count}} vidéo chargée",
+      "other": "{{count}} vidéos chargées"
+    },
+    "empty": "Aucune vidéo ne correspond à vos filtres"
+  },
+  "community": {
+    "itemsLoaded": {
+      "one": "{{count}} canal chargé",
+      "other": "{{count}} canaux chargés"
+    },
+    "empty": "Aucun canal ne correspond à vos filtres",
+    "toolsEmpty": "Aucun outil ne correspond à votre recherche",
+    "myPosts": {
+      "title": "Mes publications",
+      "open": "Ouvrir",
+      "empty": "Vous n'avez pas encore publié."
+    }
+  },
+  "campaigns": {
+    "itemsLoaded": {
+      "one": "{{count}} campagne chargée",
+      "other": "{{count}} campagnes chargées"
+    },
+    "empty": "Aucune campagne ne correspond à vos filtres"
+  },
+  "intro": "Here you’ll find practical tools, guides, and supports — everything from benefits applications to emergency contacts. This hub is designed to save you time and help you advocate for yourself effectively.",
+  "filters": {
+    "all": "Tout",
+    "canada": "Canada",
+    "work_financial": "Work & Financial",
+    "tools_downloads": "Tools & Downloads",
+    "emergency_crisis": "Emergency & Crisis"
+  },
+  "templates": {
+    "voice": {
+      "title": "Notes vocales du dossier",
+      "infoTitle": "Capturer et transcrire",
+      "info1": "Enregistrez des notes et ajoutez le contexte (qui, sujet).",
+      "info2": "Transcrivez l'audio et partagez des journaux formatés.",
+      "info3": "Utilisez pour visites médicales ou réunions.",
+      "subtitle": "Enregistrez des notes audio et créez des journaux.",
+      "date": "Date",
+      "whoField": "Qui (médecin, gestionnaire, RH)",
+      "topic": "Sujet",
+      "summaryField": "Résumé / Transcription",
+      "record": "Enregistrer audio",
+      "stop": "Arrêter",
+      "transcribe": "Transcrire",
+      "saveNote": "Enregistrer la note",
+      "savedNotes": "Notes enregistrées",
+      "none": "Aucune note pour l'instant.",
+      "note": "Note",
+      "recordUnavailable": "Enregistrement indisponible",
+      "recordUnavailableBody": "Recompiler avec expo-av pour activer.",
+      "noteSaved": "Note enregistrée",
+      "copiedBody": "Journal copié dans le presse-papiers.",
+      "shareTitle": "Journal de dossier",
+      "shareTitleDoc": "Journal de dossier (.doc)",
+      "pdfUnavailable": "PDF indisponible",
+      "pdfUnavailableBody": "Installez expo-print dans une build de dev.",
+      "exportFailed": "Export échoué",
+      "exportFailedBody": "Impossible de créer le fichier .doc",
+      "recording": "Enregistrement...",
+      "recordingStopped": "Enregistrement arrêté",
+      "who": "Qui",
+      "summary": "Résumé",
+      "audio": "Audio",
+      "show": "Afficher",
+      "save": "Enregistrer",
+      "saveAll": "Tout enregistrer",
+      "processQueue": "Traiter la file",
+      "load": "Charger",
+      "loadMore": "Charger plus",
+      "openQueue": "Ouvrir la file de téléversement",
+      "cloudItems": "Éléments cloud",
+      "deleteAll": "Tout supprimer",
+      "deleteSelected": "Supprimer la sélection",
+      "delete": "Supprimer",
+      "cancel": "Annuler",
+      "filter": "filtre rapide",
+      "errorTitle": "Erreur",
+      "ok": "OK",
+      "hidden": "Masqué",
+      "shown": "Affiché",
+      "copyAll": "Tout copier",
+      "share": "Partager",
+      "exportDoc": "Exporter DOC",
+      "reset": "Réinitialiser",
+      "loading": "Chargement…",
+      "edit": "Modifier",
+      "previewImage": "Aperçu image",
+      "closePreview": "Fermer aperçu",
+      "preview": "Aperçu",
+      "copied": "Copié",
+      "copy": "Copier",
+      "pdf": "PDF",
+      "doc": "DOC",
+      "success": "Succès",
+      "error": "Erreur",
+      "working": "Traitement…"
+    },
+    "timeline": {
+      "title": "Chronologie du dossier",
+      "infoTitle": "Suivi du dossier",
+      "infoLine1": "Consignez les événements clés comme formulaires, visites, appels.",
+      "infoLine2": "Utilisez lors de la rédaction de lettres ou appels.",
+      "infoLine3": "Exporter ou copier pour partager.",
+      "newEntry": "Nouvelle entrée",
+      "date": "Date",
+      "titleField": "Titre",
+      "detailsField": "Détails",
+      "addEntry": "Ajouter",
+      "entriesTitle": "Entrées de la chronologie",
+      "entryAdded": "Entrée ajoutée",
+      "copied": "Copié",
+      "copiedBody": "Chronologie copiée",
+      "missingTitle": "Titre requis",
+      "missingTitleBody": "Saisissez un titre pour ajouter une entrée.",
+      "copyFailed": "Copie échouée",
+      "copyFailedBody": "Impossible de copier la chronologie.",
+      "shareTitle": "Chronologie du dossier",
+      "exportFailed": "Export échoué",
+      "exportFailedBody": "Impossible de créer le fichier d'export.",
+      "resetTitle": "Réinitialiser la chronologie",
+      "resetBody": "Effacer toutes les entrées ? Action irréversible.",
+      "screenLabel": "Écran chronologie du dossier",
+      "toggleInfo": "Afficher/masquer les instructions",
+      "resetTimeline": "Réinitialiser la chronologie",
+      "subtitle": "Suivez les événements importants de votre dossier.",
+      "openDeadlines": "Ouvrir Échéances",
+      "addDocuments": "Ajouter des documents",
+      "caseDocuments": "Documents du dossier",
+      "addedToLocker": "Ajouté au Coffre de preuves",
+      "addFailed": "Ajout échoué",
+      "addFailedBody": "Impossible d'ajouter au Coffre de preuves.",
+      "addDocsBtn": "Ajouter des documents"
+    },
+    "evidenceLocker": {
+      "title": "Coffre de preuves",
+      "screenLabel": "Écran coffre de preuves",
+      "subtitle": "Stockez en toute sécurité des notes et des fichiers.",
+      "howToUse": "Utilisation du coffre",
+      "toggleInfo": "Afficher/masquer les instructions",
+      "infoTitle": "Mode d'emploi",
+      "infoLine1": "Stockez notes et fichiers liés au dossier (local jusqu'à export).",
+      "infoLine2": "Ajoutez notes ou fichiers. Export pour un lot, Copier pour réutiliser, Partager pour un résumé.",
+      "infoLine3": "Gardez concis pour aider chronologies / appels.",
+      "notes": "Notes",
+      "files": "Fichiers",
+      "emptyNotes": "Aucune note",
+      "emptyFiles": "Aucun fichier",
+      "addNote": "Ajouter note",
+      "addFile": "Ajouter fichier",
+      "export": "Exporter",
+      "exportLabel": "Exporter lot",
+      "exportHint": "Crée un lot JSON/texte partageable.",
+      "copy": "Copier",
+      "copyLabel": "Copier notes",
+      "copyHint": "Copie toutes les notes texte.",
+      "share": "Partager",
+      "shareLabel": "Partager résumé",
+      "shareHint": "Ouvre le partage système avec fichier résumé.",
+      "reset": "Réinitialiser",
+      "resetLabel": "Vider coffre",
+      "resetHint": "Efface toutes les notes (fichiers exclus sauf export).",
+      "resetConfirm": "Effacer toutes les notes ? Action irréversible.",
+      "resetAnnounce": "Coffre vidé",
+      "hintTags": "Utilisez des étiquettes pour retrouver plus vite. Essayez d'étiqueter appels, lettres ou décisions.",
+      "copied": "Copié",
+      "copiedBody": "Notes copiées.",
+      "clipboardMissingTitle": "Presse-papiers indisponible",
+      "clipboardMissingMsg": "Installez expo-clipboard pour copier.",
+      "shareUnavailable": "Partage indisponible",
+      "shareUnavailableBody": "Feuille système indisponible.",
+      "shareError": "Partage échoué",
+      "shareErrorBody": "Impossible de partager fichier.",
+      "exportError": "Export échoué",
+      "exportErrorBody": "Impossible de créer export.",
+      "exportReady": "Export prêt",
+      "exportEncrypted": "Exporter chiffré",
+      "exportSavedCache": "Fichier chiffré enregistré en cache.",
+      "importEncrypted": "Importer chiffré",
+      "importFailedTitle": "Échec de l'import",
+      "importFailedBody": "Impossible d'importer les données chiffrées.",
+      "importedNotes": "{{count}} notes importées.",
+      "summaryRegion": "Région résumé preuves",
+      "queueTitle": "File de téléversement",
+      "queueScreenLabel": "Écran file de téléversement du Coffre",
+      "processing": "Traitement des téléversements...",
+      "processingPct": "Traitement file:",
+      "queueSubtitle": "Vérifiez les envois en attente, réessayez les échecs ou videz les éléments traités.",
+      "emptyQueue": "Aucun élément dans la file de téléversement.",
+      "queueNoPending": "Aucun élément en attente.",
+      "queueProcessed": "Tous les éléments ont été traités.",
+      "queueProcessedSome": "Certains éléments n'ont pas pu être traités.",
+      "showTrash": "Afficher corbeille",
+      "showingTrash": "Affichage corbeille",
+      "tag": {
+        "call": "appel",
+        "letter": "lettre",
+        "medical": "médical",
+        "decision": "décision",
+        "payment": "paiement",
+        "email": "courriel",
+        "mood": {
+          "nudge": {
+            "evening": {
+              "title": "Log mood?",
+              "body": "Quick 5‑second check‑in helps spot trends. {{streak}} day streak?"
+            }
+          },
+          "streak": {
+            "milestone": {
+              "title": "Mood streak milestone!",
+              "body": "You've logged {{streak}} days in a row. Small steps add up."
+            }
+          }
+        },
+        "evidence": {
+          "reminder": {
+            "daily": {
+              "title": "Add today's evidence?",
+              "body": "You have {{count}} new notes/files to capture before the day ends."
+            }
+          },
+          "upload": {
+            "failed": {
+              "title": "Uploads queued",
+              "body": "{{queued}} item(s) waiting for connection. We'll retry soon."
+            }
+          }
+        },
+        "accountability": {
+          "case": {
+            "created": {
+              "title": "Case created",
+              "body": "New case: {{case}}"
+            },
+            "updated": {
+              "title": "Case updated",
+              "body": "Recent activity on: {{case}}"
+            }
+          },
+          "deadline": {
+            "upcoming": {
+              "title": "Deadline approaching",
+              "body": "{{case}} due in {{days}} day(s). Review and act."
+            }
+          }
+        }
+      },
+      "attachFile": "Joindre un fichier",
+      "attachFiles": "Joindre des fichiers",
+      "attachPhotos": "Joindre des photos",
+      "photosPermission": "Autorisation Photos requise.",
+      "imagePickerUnavailable": "Sélecteur d'images non disponible dans cette build.",
+      "saveCloud": "Enregistrer dans le Cloud",
+      "noteSaved": "Note enregistrée dans votre coffre cloud.",
+      "queuedUpload": "Ajouté à la file pour téléverser plus tard.",
+      "saveAllDone": "Enregistrement des notes terminé (échecs ajoutés à la file).",
+      "saveSomeFailed": "Impossible d'enregistrer certains éléments.",
+      "loadedCount": "{{count}} éléments chargés.",
+      "loadCloudFailed": "Échec du chargement",
+      "loadCloudFailedBody": "Impossible de charger les éléments cloud",
+      "loadMoreFailed": "Échec du chargement",
+      "loadMoreFailedBody": "Impossible de charger davantage",
+      "csvSavedCache": "CSV enregistré en cache.",
+      "csvSavedCacheNoShare": "CSV enregistré en cache (partage indisponible).",
+      "exportFailedTitle": "Échec de l'export",
+      "exportFailedBodyCsv": "Impossible de créer le CSV.",
+      "deleteAllConfirmTitle": "Tout supprimer ?",
+      "deleteAllConfirmBody": "Cela supprimera tous les éléments cloud de votre Coffre de preuves.",
+      "deletedAll": "Tous les éléments cloud supprimés.",
+      "deleteAllFailed": "Échec de la suppression",
+      "deleteAllFailedBody": "Impossible de tout supprimer.",
+      "deletedSelected": "Éléments sélectionnés supprimés.",
+      "deleteSelectedFailed": "Échec de la suppression",
+      "deleteSelectedFailedBody": "Impossible de supprimer les éléments sélectionnés.",
+      "previewUnavailable": "Aperçu indisponible"
+    },
+    "gallery": {
+      "title": "Galerie de modèles",
+      "screenLabel": "Écran galerie modèles",
+      "subtitle": "Exemples pour démarrer.",
+      "toggleInfo": "Afficher/masquer instructions",
+      "howToUse": "Utilisation de la galerie",
+      "infoTitle": "Mode d'emploi",
+      "infoLine1": "Renseignez vos données pour mettre à jour les marqueurs.",
+      "infoLine2": "Copier, enregistrer brouillon, exporter ou insérer dans Coffre.",
+      "infoLine3": "Adapter le texte; pas un avis juridique.",
+      "exportAll": "Tout exporter",
+      "exportAllLabel": "Exporter tous modèles",
+      "exportAllHint": "Crée un fichier texte.",
+      "shareUnavailable": "Partage indisponible",
+      "shareUnavailableBody": "Feuille système indisponible.",
+      "shareError": "Partage échoué",
+      "shareErrorBody": "Impossible de partager fichier.",
+      "copyExample": "Copier exemple",
+      "saveDraft": "Enregistrer brouillon",
+      "saveDraftLabel": "Sauvegarder localement",
+      "shareLabel": "Partager modèle",
+      "share": "Partager",
+      "insert": "Insérer dans coffre",
+      "insertLabel": "Insérer dans coffre",
+      "inserted": "Ajouté",
+      "insertedBody": "Ajouté au coffre de preuves.",
+      "insertFailed": "Non ajouté",
+      "insertFailedBody": "Impossible d'ajouter.",
+      "drafts": "Brouillons",
+      "delete": "Supprimer",
+      "deleteDraft": "Supprimer brouillon",
+      "shareDraft": "Partager brouillon",
+      "toLocker": "Au coffre",
+      "toLockerShort": "Coffre",
+      "varName": "Votre nom",
+      "varContact": "Contact",
+      "varProvince": "Province (ex. ON)",
+      "varClaim": "ID dossier",
+      "varDate": "date (AAAA-MM-JJ)"
+    },
+    "letters": {
+      "common": {
+        "toggleInfo": "Afficher/masquer instructions",
+        "infoTitle": "Mode d'emploi",
+        "infoLine1": "Remplissez les champs; les marqueurs se mettent à jour.",
+        "infoLine2": "Copier, partager, exporter ou insérer dans Coffre.",
+        "infoLine3": "Adapter au dossier; pas un avis juridique.",
+        "share": "Partager",
+        "copy": "Copier",
+        "insertTrackers": "Insérer depuis suivis",
+        "exportPdf": "Exporter PDF",
+        "exportDoc": "Exporter .doc",
+        "insertLocker": "Insérer dans coffre",
+        "inserted": "Ajouté",
+        "insertedBody": "Ajouté au coffre.",
+        "insertFailed": "Non ajouté",
+        "insertFailedBody": "Impossible d'ajouter.",
+        "copied": "Copié",
+        "copiedBody": "Lettre copiée.",
+        "clipboardNA": "Presse-papiers indisponible",
+        "clipboardNABody": "Installez expo-clipboard pour copier.",
+        "pdfNA": "PDF indisponible",
+        "pdfNABody": "Installez expo-print pour PDF.",
+        "exportFailed": "Export échoué",
+        "exportFailedBody": "Impossible de créer fichier.",
+        "shareUnavailable": "Partage indisponible",
+        "shareUnavailableBody": "Feuille système indisponible.",
+        "shareError": "Partage échoué",
+        "shareErrorBody": "Impossible de partager fichier."
+      },
+      "accommodation": {
+        "title": "Demande d'aménagement",
+        "screenLabel": "Écran lettre aménagement",
+        "subtitle": "Remplir, vérifier, puis partager ou copier.",
+        "employer": "Employeur",
+        "jobTitle": "Intitulé poste",
+        "date": "Date (optionnel)",
+        "limitations": "Limitations (bref)",
+        "accommodations": "Aménagements demandés"
+      },
+      "appeal": {
+        "title": "Lettre d'appel",
+        "screenLabel": "Écran lettre appel",
+        "subtitle": "Remplir puis partager ou exporter.",
+        "claim": "Numéro de dossier",
+        "decisionDate": "Date décision",
+        "decisionSummary": "Résumé décision",
+        "arguments": "Arguments / preuves",
+        "contact": "Contact"
+      },
+      "reconsideration": {
+        "title": "Lettre de réexamen",
+        "screenLabel": "Écran lettre réexamen",
+        "name": "Votre nom",
+        "claim": "Numéro dossier",
+        "points": "Points / preuves",
+        "date": "Date"
+      },
+      "union": {
+        "title": "Lettre représentation syndicale",
+        "screenLabel": "Écran lettre syndicat",
+        "name": "Votre nom",
+        "position": "Poste",
+        "workplace": "Lieu / service",
+        "issue": "Résumé problème",
+        "accommodation": "Aménagement / mesure",
+        "evidence": "Preuves (optionnel)",
+        "contact": "Contact",
+        "subtitle": "Remplir puis partager ou exporter."
+      },
+      "rtw": {
+        "title": "Plan de retour",
+        "screenLabel": "Écran plan retour",
+        "name": "Votre nom",
+        "employer": "Employeur",
+        "duties": "Tâches proposées",
+        "accommodations": "Aménagements",
+        "date": "Date"
+      }
+    },
+    "checklist": {
+      "title": "Liste de preuves",
+      "screenLabel": "Écran liste preuves",
+      "toggleInfo": "Afficher/masquer instructions",
+      "infoTitle": "Mode d'emploi",
+      "infoLine1": "Choisissez un type pour charger les éléments suggérés.",
+      "infoLine2": "Touchez pour marquer fait; le progrès est annoncé.",
+      "infoLine3": "Copier ou Exporter pour réutiliser; Reset efface.",
+      "subtitle": "Choisissez un processus pour liste adaptée.",
+      "copy": "Copier résumé",
+      "export": "Exporter",
+      "reset": "Reset",
+      "progressAnnounce": "Progrès mis à jour",
+      "progressLabel": "Progrès liste",
+      "progress": "Progrès : {{done}} / {{total}} ({{pct}}%)",
+      "summaryHeader": "Résumé liste preuves",
+      "copied": "Copié",
+      "copiedBody": "Résumé copié.",
+      "clipboardNA": "Presse-papiers indisponible",
+      "clipboardNABody": "Installez expo-clipboard pour copier.",
+      "shareUnavailable": "Partage indisponible",
+      "shareUnavailableBody": "Feuille système indisponible.",
+      "shareError": "Partage échoué",
+      "shareErrorBody": "Impossible de partager fichier.",
+      "resetAnnounce": "Liste réinitialisée",
+      "kindChanged": "Type changé",
+      "tip": "Astuce : Les suivis Bien‑être peuvent aider."
+    },
+    "deadlines": {
+      "title": "Échéances",
+      "itemsLoaded": {
+        "one": "{{count}} échéance chargée",
+        "other": "{{count}} échéances chargées"
+      },
+      "duplicate": "Dupliquer",
+      "duplicated": "Dupliqué",
+      "duplicateFailed": "Échec de la duplication",
+      "duplicateFailedBody": "Impossible de dupliquer.",
+      "duplicateDeadline": "Dupliquer l'échéance",
+      "screenLabel": "Écran échéances",
+      "toggleInfo": "Afficher/masquer instructions",
+      "infoTitle": "Mode d'emploi",
+      "infoLine1": "Suivez dates importantes (appels, suivis) en calendrier ou liste.",
+      "infoLine2": "Import ICS, rappels récurrents et export (ICS/CSV).",
+      "infoLine3": "Utilisez snooze, marquage groupé ou export calendrier.",
+      "calendarTab": "Calendrier",
+      "listTab": "Liste",
+      "monthView": "Mois",
+      "weekView": "Semaine",
+      "importICS": "Importer ICS",
+      "importICSShort": "Importer",
+      "imported": "Importé",
+      "importedBody": "{{count}} échéances ajoutées.",
+      "importFailed": "Échec import",
+      "importFailedBody": "Impossible d'importer ICS.",
+      "recurringTitle": "Ajouter récurrent",
+      "recurringPrefix": "Préfixe titre",
+      "recurringStart": "Date début (AAAA-MM-JJ)",
+      "recurringWeekly": "Hebdo",
+      "recurringMonthly": "Mensuel",
+      "recurringCount": "Compteur",
+      "recurringCreate": "Créer",
+      "recurringAdded": "Ajouté",
+      "recurringAddedBody": "{{count}} échéances récurrentes ajoutées.",
+      "recurringFailed": "Échec",
+      "recurringFailedBody": "Impossible d'ajouter échéances.",
+      "infoLine4": "Heures affichées selon le fuseau horaire de votre appareil sauf indication contraire.",
+      "undoDelete": "Annuler suppression",
+      "restored": "Restauré",
+      "undoFailed": "Échec annulation",
+      "undoFailedBody": "Impossible de restaurer.",
+      "monthLabel": "Mois",
+      "today": "Aujourd'hui",
+      "weekLabel": "Semaine",
+      "selectedDate": "Sélectionné :",
+      "myDeadlines": "Mes échéances",
+      "loading": "(chargement...)",
+      "reload": "Recharger",
+      "exportAllIcs": "Tout ICS",
+      "exportAllCsv": "Tout CSV",
+      "bulkMarkDone": "Tout fait",
+      "bulkMarkUndone": "Tout non fait",
+      "addWeekly4": "Hebdo x4",
+      "addMonthly6": "Mensuel x6",
+      "none": "Aucune échéance.",
+      "editTitle": "Modifier titre",
+      "editDate": "Modifier date (AAAA-MM-JJ)",
+      "save": "Sauver",
+      "cancel": "Annuler",
+      "snooze24": "Reporter 24h",
+      "snooze7": "Reporter 7j",
+      "markDone": "Marquer fait",
+      "markUndone": "Marquer non fait",
+      "edit": "Modifier",
+      "calendarAdd": "Calendrier",
+      "icsOne": "ICS",
+      "delete": "Supprimer",
+      "bulkUpdateFailed": "Échec maj groupée",
+      "bulkUpdateFailedBody": "Impossible de mettre à jour.",
+      "addFailed": "Échec ajout",
+      "addFailedWeeklyBody": "Ajout hebdo impossible.",
+      "addFailedMonthlyBody": "Ajout mensuel impossible.",
+      "exportFailed": "Export échoué",
+      "exportFailedBodyIcs": "Impossible de créer ICS.",
+      "exportFailedBodyCsv": "Impossible de créer CSV.",
+      "savedCache": "Sauvegardé",
+      "savedCacheBody": "Fichier en cache.",
+      "savedCacheShareNA": "Fichier en cache (partage indisponible).",
+      "calendarAdded": "Ajouté",
+      "calendarAddedBody": "Événement ajouté.",
+      "calendarNotAdded": "Non ajouté",
+      "calendarNotAddedBody": "Impossible d'ajouter événement.",
+      "snoozed": "Reporté",
+      "snoozed24Body": "Rappel dans 24h.",
+      "snoozed7Body": "Rappel dans 7j.",
+      "notScheduled": "Non programmé",
+      "notScheduledBody": "Impossible de programmer.",
+      "updateFailed": "Mise à jour échouée",
+      "updateFailedBody": "Impossible de mettre à jour.",
+      "deleteFailed": "Suppression échouée",
+      "deleteFailedBody": "Impossible de supprimer.",
+      "loadFailed": "Chargement échoué",
+      "loadFailedBody": "Impossible de charger échéances.",
+      "importedFromICS": "{{count}} ajoutées depuis ICS",
+      "importFailedBodyList": "Impossible d'importer fichier ICS.",
+      "listTitle": "Liste",
+      "reloadShort": "Actualiser",
+      "exportAllICS": "Tout exporter en ICS",
+      "exportAllCSV": "Tout exporter en CSV",
+      "bulkMarkedDone": "Tout marqué fait",
+      "markAllDone": "Marquer tout fait",
+      "bulkMarkedUndone": "Tout marqué non fait",
+      "markAllNotDone": "Marquer tout non fait",
+      "followUp": "Suivi",
+      "weekShort": "Sem",
+      "addWeekly": "Ajouter hebdo",
+      "monthShort": "Mois",
+      "addMonthly": "Ajouter mensuel",
+      "empty": "Aucune échéance pour l'instant.",
+      "updated": "Mis à jour",
+      "snoozedDeadline": "Échéance reportée",
+      "reminder24h": "Rappel dans 24 heures",
+      "unableSchedule": "Impossible de programmer",
+      "snooze24h": "Reporter 24h",
+      "reminder7d": "Rappel dans 7 jours",
+      "snooze7d": "Reporter 7j",
+      "markedUndone": "Marqué non fait",
+      "markedDone": "Marqué fait",
+      "eventAdded": "Événement ajouté",
+      "eventNotAdded": "Événement non ajouté",
+      "eventAddedBody": "Événement ajouté au calendrier.",
+      "eventNotAddedBody": "Impossible d'ajouter l'événement.",
+      "saved": "Sauvegardé",
+      "icsSaved": "ICS enregistré en cache.",
+      "exportFailedBody": "Impossible de créer le fichier d'export.",
+      "icsBtn": "ICS",
+      "deleted": "Supprimé",
+      "prevMonth": "Mois précédent",
+      "nextMonth": "Mois suivant",
+      "dayCell": "Jour",
+      "emptyDay": "Aucun événement",
+      "csvHeaderDate": "date",
+      "csvHeaderTitle": "titre",
+      "csvHeaderNotes": "notes",
+      "csvHeaderDone": "fait",
+      "csvSaved": "Sauvegardé",
+      "csvSavedBody": "CSV enregistré en cache.",
+      "csvSavedShareNA": "CSV en cache (partage indisponible)."
+    }
+  },
+  "advocacy": {
+    "search": "Rechercher des outils de défense...",
+    "sections": {
+      "ai": "Outils IA",
+      "coaching": "Coaching",
+      "directories": "Annuaires et évaluations",
+      "collective": "Collectif et reddition de comptes"
+    },
+    "tools": {
+      "self_coach": "Self-Advocacy Coach (micro-lessons)",
+      "ai_translator": "AI Advocate Translator",
+      "collective": "Collective Legal Action Hub",
+      "policy_simple": "Policy Made Simple",
+      "ai_gov": "AI Government Navigator",
+      "ai_case": "AI Case Interpreter",
+      "ally_hub": "Ally Hub",
+      "finder": "Lawyer & Advocate Finder",
+      "ratings": "Disability Justice Ratings",
+      "accountability": "Coach de Redevabilité",
+      "accountability_cases": "Dossiers de redevabilité"
+    },
+    "hub": {
+      "title": "Hub Défense",
+      "subtitle": "Accès unifié aux outils IA, annuaires, coaching, évaluations, ressources alliées et actions collectives. Choisissez un outil ci‑dessous."
+    },
+    "ratings": {
+      "title": "Évaluations de justice du handicap",
+      "filter": {
+        "all": "Tous",
+        "approved": "Approuvés",
+        "pending": "En attente",
+        "trash": "Corbeille"
+      },
+      "admin": {
+        "pending": "Admin – En attente",
+        "approved": "Admin – Approuvés",
+        "trash": "Admin – Corbeille"
+      },
+      "targetPlaceholder": "Cible (nom)",
+      "typePlaceholder": "Type (hôpital, clinique, droit, employeur, syndicat)",
+      "sort": {
+        "latest": "Récents",
+        "top": "Meilleures"
+      },
+      "average": "Note moyenne : {{avg}} ({{count}})",
+      "scorePlaceholder": "Note 1‑5",
+      "commentPlaceholder": "Commentaire (optionnel)",
+      "slowDownTitle": "Ralentissez",
+      "slowDownBody": "Veuillez attendre avant de soumettre à nouveau.",
+      "submitFailed": "Soumission impossible",
+      "submit": "Soumettre une évaluation",
+      "flag": "Signaler",
+      "flaggedTitle": "Signalé",
+      "flaggedBody": "Merci pour votre signalement."
+    },
+    "ally": {
+      "intro": "Ressources de solidarité inter‑mouvements et invites rapides pour alliés soutenant des personnes handicapées / travailleuses blessées.",
+      "linksHeader": "Liens mouvements",
+      "coachHeader": "Invite de coaching",
+      "coachHelp": "Décrivez ce que vous voulez aider à faire (ex. lettre de soutien, préparation réunion, réduire la surcharge).",
+      "generate": "Générer étapes",
+      "generating": "Génération..."
+    },
+    "policy": {
+      "aiHeader": "Simplificateur IA",
+      "aiHelp": "Collez le texte de politique/décision ci‑dessous. Traitement local sauf serveur configuré.",
+      "copy": "Copier",
+      "copiedBody": "Résumé copié.",
+      "share": "Partager",
+      "exportPdf": "Exporter en PDF",
+      "exportDoc": "Exporter en .doc",
+      "clipboardNA": "Presse-papiers indisponible",
+      "clipboardNABody": "Installez expo-clipboard dans une build de dev pour activer la copie.",
+      "simplify": "Simplifier",
+      "simplifying": "Simplification...",
+      "summary": "Résumé",
+      "keyPoints": "Points clés",
+      "sectionRights": "Droits de la personne & obligation d'accommodement",
+      "linkDuty": "Qu'est-ce que l'obligation d'accommodement?",
+      "linkOHRC": "Commission ontarienne des droits de la personne",
+      "sectionAccessibility": "Lois sur l'accessibilité",
+      "linkAccessibleCanada": "Loi canadienne sur l'accessibilité",
+      "linkAoda": "LAPHO (Ontario)",
+      "sectionBenefits": "Prestations d'invalidité",
+      "linkCppd": "RPC-I (CPP-D)",
+      "linkEmploymentStandards": "Normes d'emploi (ON)",
+      "placeholder": "Collez ou tapez un extrait de politique / décision à simplifier.",
+      "subtitle": "Guides en langage clair sur l'accessibilité, les droits et prestations.",
+      "obligations": "Obligations",
+      "suggestedActions": "Suggested Actions"
+    },
+    "collective": {
+      "title": " Collective Legal Action Hub",
+      "subtitle": " If multiple users report the same violation, 3mpwr App groups cases for union / class-action leverage.",
+      "typeLabel": " Violation type",
+      "type": {
+        "deniedModified": " denied modified duties",
+        "refusedAccommodation": " refused accommodation",
+        "retaliation": " retaliation",
+        "benefitDenial": " benefit denial"
+      },
+      "provinceLabel": " Province (optional)",
+      "provincePlaceholder": " ON, BC, ...",
+      "detailsLabel": " Details (optional)",
+      "detailsPlaceholder": " Short summary; do not include identifiers.",
+      "submit": " Submit report",
+      "aggregatedHeader": " Aggregated reports",
+      "none": " No reports yet.",
+      "note": " Note: Submissions are anonymous; contact details are not collected.",
+      "submittedTitle": " Submitted",
+      "submittedBody": " Report added anonymously. Aggregated counts help build leverage."
+    },
+    "finder": {
+      "title": "Annuaire avocats et défenseurs",
+      "modeList": "Liste",
+      "modeMap": "Carte",
+      "searchPlaceholder": "Rechercher par nom, ville, org",
+      "issuePlaceholder": "Problème (p. ex., WSIB)",
+      "provincePlaceholder": "Province (p. ex., ON)",
+      "proBonoOnly": "Pro bono seulement",
+      "includePaid": "Inclure payant",
+      "locationUnknown": "—",
+      "issuesLabel": "Enjeux",
+      "openWebsite": "Ouvrir le site",
+      "email": "Courriel",
+      "openOnMap": "Ouvrir dans la carte",
+      "saved": "★ Enregistré",
+      "save": "☆ Enregistrer",
+      "mapHint": "Touchez une fiche en mode Liste pour ouvrir la carte."
+    },
+    "support": {
+      "title": " Support Directory",
+      "screenLabel": " Support directory screen",
+      "subtitle": " Organizations that may help with claims, accommodations, and advocacy.",
+      "accessible": " Accessible",
+      "phoneIcon": "☎",
+      "openWebsiteLabel": " Open {{name}} website",
+      "website": " Website",
+      "suggestHeader": " Suggest a correction",
+      "suggestPlaceholder": " Org ID and your suggestion",
+      "submitSuggestion": " Submit suggestion"
+    },
+    "ask": {
+      "title": " Ask an Advocate",
+      "formLabel": " Ask an Advocate form",
+      "subtitle": " Briefly describe your issue. Do not include personal identifiers.",
+      "category": " Category",
+      "titleLabel": " Title",
+      "titlePlaceholder": " Short title",
+      "detailsLabel": " Details",
+      "detailsPlaceholder": " What happened? What help do you need?",
+      "submit": " Submit",
+      "submittedTitle": " Submitted",
+      "submittedBody": " Your request has been posted. Community advocates may respond.",
+      "rateTitle": " Slow down",
+      "rateBody": " Please wait a few seconds before posting again.",
+      "missingTitleTitle": " Title required",
+      "missingTitleBody": " Please enter a short title."
+    },
+    "world": {
+      "title": "Carte mondiale du handicap",
+      "filter": {
+        "all": "Tous",
+        "law": "Droit",
+        "protest": "Manifestation",
+        "update": "Mise à jour"
+      },
+      "hint": "Touchez une carte pour ouvrir Google Maps"
+    },
+    "coach": {
+      "practiceHeader": "Invite d'entraînement",
+      "practiceHelp": "Décrivez un besoin ou objectif. Le coach renvoie des étapes structurées.",
+      "generate": "Générer entraînement",
+      "generating": "Génération...",
+      "subtitle": "Micro-leçons pour confiance, expression claire et assertivité.",
+      "defaultPrompt": "Demander une pause de 10 minutes chaque heure à cause de la douleur",
+      "generateError": "Impossible de générer les étapes.",
+      "practiceInputLabel": "Saisie invite entraînement",
+      "practiceGenerateLabel": "Générer coaching entraînement",
+      "practiceOutputLabel": "Résultat coaching entraînement",
+      "lesson": {
+        "conf-1": {
+          "title": "Bases de confiance",
+          "b1": "Respirer lentement et bas (4-4-4-4)",
+          "b2": "Posture ancrée; relâcher les épaules",
+          "b3": "Préparer une phrase d'objectif"
+        },
+        "speak-1": {
+          "title": "Parler clairement",
+          "b1": "Phrases courtes; une idée à la fois",
+          "b2": "Demander répétition/clarification",
+          "b3": "Marquer une pause avant répondre"
+        },
+        "assert-1": {
+          "title": "Assertivité santé/travail",
+          "b1": "Nommer le besoin : 'J'ai besoin de…'",
+          "b2": "Expliquer brièvement l'impact",
+          "b3": "Proposer options, inviter à collaborer"
+        },
+        "docs-1": {
+          "title": "Documentation",
+          "b1": "Résumer appel/réunion par courriel",
+          "b2": "Joindre seulement preuves clés",
+          "b3": "Suivre dates et échéances"
+        }
+      },
+      "complete": "complete",
+      "deadlineInDays": "Complete within {{d}} days",
+      "evidenceNeeded": "Evidence needed"
+    },
+    "disclaimer": {
+      "notLegal": "Éducatif uniquement — pas un avis juridique. Vérifiez sources officielles.",
+      "privacy": "Entrées traitées localement sauf backend configuré."
+    }
+  },
+  "assistant": {
+    "pill": {
+      "open": "Ouvrir l’assistant",
+      "cta": "🤖 Demander"
+    },
+    "home": {
+      "recentPrompts": "Invites utilisées récemment",
+      "recentPromptsRegion": "Recent prompts section",
+      "promptsList": "List of recent prompts",
+      "promptAccessibilityLabel": "Recent prompt: {{prompt}}",
+      "promptHint": "Double tap to use this prompt again"
+    },
+    "tools": {
+      "coach": "Coach",
+      "translator": "Traducteur",
+      "policy": "Politique",
+      "mood": "Humeur",
+      "resources": "Ressources"
+    },
+    "hub": {
+      "title": "Assistant",
+      "subtitle": "Choisissez un outil ci-dessous ou revenez à votre dernière tâche à tout moment.",
+      "screenLabel": "Hub de l’assistant",
+      "searchPlaceholder": "Tapez ce dont vous avez besoin (p. ex., ‘lettre d’appel’, ‘script RH’)",
+      "searchLabel": "Rechercher des outils ou actions",
+      "searchHint": "Tapez pour voir les outils correspondants à ouvrir",
+      "suggestions": "Suggestions",
+      "open": "Ouvrir",
+      "noMatches": "Aucun résultat — essayez d’autres mots",
+      "selfCoach": "Coach d’auto‑défense",
+      "selfCoachDesc": "Posez des questions et obtenez les prochaines étapes",
+      "translator": "Traducteur de plaidoyer",
+      "translatorDesc": "Transformez vos mots en langage de plaidoyer convaincant",
+      "policy": "Simplificateur de politiques",
+      "policyDesc": "Résumer des politiques complexes en langage simple",
+      "gov": "Navigateur gouvernemental",
+      "govDesc": "Trouver à qui s’adresser et quoi dire",
+      "case": "Interprète de dossier",
+      "caseDesc": "Clarifier formulaires, lettres et décisions",
+      "directory": "Annuaire de soutien",
+      "directoryDesc": "Se connecter à des défenseur·e·s et services",
+      "ally": "Hub des alliés",
+      "allyDesc": "Coordonner des actions avec des alliés",
+      "quickPrompts": "Invites rapides",
+      "recent": "Récents",
+      "openRecent": "Ouvrir l’outil récent",
+      "openRecentHint": "Ouvre l’outil récent",
+      "quickPromptHint": "Ouvre l’outil avec une invite suggérée",
+      "clearRecents": "Effacer les outils récents",
+      "clearRecentsHint": "Efface la liste des outils récents",
+      "clear": "Effacer",
+      "clearConfirm": {
+        "title": "Effacer les outils récents ?",
+        "body": "Cela supprimera votre liste d'outils récents. Cela n'affectera pas vos données.",
+        "confirm": "Effacer",
+        "cancel": "Annuler"
+      }
+    },
+    "prompt": {
+      "simplifyDecision": "Simplifier une lettre de décision",
+      "exampleDecision": "Veuillez simplifier cette lettre de décision et lister les délais :",
+      "callScript": "Rédiger un script d’appel aux RH",
+      "exampleCall": "Rédigez un bref script d’appel aux RH pour demander des aménagements :",
+      "policyPlain": "Expliquer cette politique en langage clair",
+      "examplePolicy": "Résumez les points clés et les actions de cette politique :"
+    }
+  },
+  "accountability": {
+    "title": "Coach de Redevabilité",
+    "subtitle": "Détecter des violations, rédiger des lettres, suivre des réponses et mobiliser des alliés — en langage simple.",
+    "targetLabel": "Cible (agence/organisation)",
+    "targetPlaceholder": "ex. Commission des accidents du travail, Service du logement",
+    "issueLabel": "Description du problème",
+    "issuePlaceholder": "Ce qui s’est passé et le résultat souhaité",
+    "generate": "Générer le plan",
+    "generating": "Génération...",
+    "outputLabel": "Plan de redevabilité",
+    "generateError": "Impossible de générer le plan.",
+    "detect": "Détecter les violations",
+    "draftLetter": "Rédiger une lettre",
+    "track": "Suivre une réponse",
+    "ally": "Brief allié",
+    "casesTitle": "Dossiers de redevabilité",
+    "casesEmpty": "Aucun dossier pour l'instant. Utilisez le coach pour en créer un.",
+    "unknownTarget": "Cible inconnue",
+    "latestEvent": "Dernier événement",
+    "generateHint": "Creates a plain-language plan you can review and edit.",
+    "detectHint": "Checks for potential rights or policy violations based on your issue.",
+    "detectError": "Could not run detection.",
+    "detected": "Potential violations detected",
+    "draftHint": "Produces a polite, assertive letter you can copy or export.",
+    "draftError": "Could not draft a letter.",
+    "letter": "Letter draft",
+    "trackHint": "Record dates and responses to keep a paper trail.",
+    "tracked": "Tracked",
+    "responseRecorded": "Response recorded",
+    "responseNoted": "Response noted",
+    "allyBrief": "Ally Brief",
+    "allyHint": "Generate a short brief to help allies support you.",
+    "allyError": "Could not generate ally brief.",
+    "noneFound": "None found"
+  },
+  "network": {
+    "online": "En ligne",
+    "offline": "Hors ligne (local seulement)",
+    "checking": "Vérification..."
+  },
+  "justiceService": {
+    "header": "3mpwr App — Local Advocacy Snapshot",
+    "evidenceLine": "Evidence Locker: {{noteCount}} notes, {{docCount}} file(s)",
+    "resourcesViewed": "Resources viewed this session: ~{{resourcesCount}}",
+    "signals": "Signals:",
+    "signal1": "- Increase access to plain-language decisions",
+    "signal2": "- Add navigators for tight appeal windows",
+    "signal3": "- Expand accommodations for sustained earnings",
+    "generatedAnnounce": "Advocacy snapshot generated",
+    "generateError": "Unable to generate a local report.",
+    "errorTitle": "Generation failed",
+    "errorBody": "Could not build snapshot.",
+    "generate": "Generate",
+    "generating": "Generating...",
+    "copy": "Copy",
+    "copyHint": "Copies the generated snapshot to the clipboard.",
+    "share": "Share",
+    "shareHint": "Opens the system share dialog with a snapshot text file.",
+    "shareUnavailable": "Share unavailable",
+    "shareUnavailableBody": "System share sheet not available.",
+    "shareError": "Share failed",
+    "shareErrorBody": "Could not share snapshot file.",
+    "reset": "Reset",
+    "resetHint": "Clears the generated snapshot text.",
+    "resetAnnounce": "Snapshot cleared",
+    "copied": "Copied",
+    "copiedBody": "Snapshot copied to clipboard.",
+    "clipboardMissingTitle": "Clipboard not available",
+    "clipboardMissingMsg": "Install expo-clipboard in a dev build to enable copy.",
+    "screenLabel": "Justice-as-a-Service screen",
+    "howToUse": "How to use Justice-as-a-Service",
+    "toggleInfo": "Toggle instructions",
+    "infoTitle": "How to Use",
+    "infoLine1": "Generate a local advocacy snapshot using only on-device cached data (notes and counts).",
+    "infoLine2": "Use Generate to build a snapshot, Copy to reuse, Share to export a file, and Reset to clear it.",
+    "infoLine3": "Data stays local; no network calls are made.",
+    "title": "Justice-as-a-Service",
+    "snapshotRegion": "Generated snapshot",
+    "generateBtnLabel": "Generate snapshot",
+    "hide": "Masquer l'instantané",
+    "show": "Afficher l'instantané",
+    "generateHint": "Générer un instantané local à partir des données en cache.",
+    "copyLabel": "Copier l'instantané",
+    "shareLabel": "Partager le fichier d'instantané",
+    "resetLabel": "Réinitialiser l'instantané",
+    "leaveCampaign": "Leave {{title}}",
+    "supportCampaign": "Support this campaign",
+    "openCampaignRoom": "Open campaign room",
+    "saveCampaign": "Save to favorites",
+    "removeCampaign": "Remove from favorites",
+    "toggleCreateEventFormOpen": "Show create event form",
+    "toggleCreateEventFormClose": "Hide create event form",
+    "scheduleEventReminder": "Schedule event reminder",
+    "removeEventReminder": "Remove event reminder",
+    "addToCalendar": "Add to external calendar"
+  },
+  "rightsChecker": {
+    "title": "Vérificateur de droits automatisé",
+    "screenLabel": "Écran du vérificateur de droits automatisé",
+    "subtitle": "Répondez à quelques questions pour obtenir un aperçu en langage clair de vos droits et options.",
+    "q1": "Êtes-vous présentement employé(e)?",
+    "q2": "Êtes-vous membre d'un syndicat?",
+    "q3": "Avez-vous une incapacité ou une condition de santé nécessitant des accommodements?",
+    "q4": "Avez-vous été privé(e) de prestations (p. ex., CNESST, assurance invalidité)?",
+    "q5": "Subissez-vous du harcèlement ou de la discrimination?",
+    "protected": "Vous êtes protégé(e) par les lois sur les droits de la personne, y compris l'obligation d'accommodement.",
+    "workplaceRights": "Vous avez des droits en milieu de travail: sécurité, accommodement, et protection contre la discrimination.",
+    "union": "Contactez votre syndicat pour obtenir de la représentation.",
+    "noUnion": "Si vous n'avez pas de syndicat, envisagez de contacter une clinique juridique ou un groupe de défense des droits.",
+    "appeal": "Vous pourriez être admissible à contester le refus de prestations. Rassemblez des preuves médicales et déposez dans les délais.",
+    "workplaceDeadline": "⚠️ DÉLAI: {{board}} - Déposez dans les {{days}} jours pour la plupart des décisions.",
+    "workplaceNotes": "⚠️ {{board}}: {{notes}}",
+    "humanRightsDeadline": "⚠️ DÉLAI: {{body}} - Déposez une plainte dans les {{months}} mois suivant le dernier incident.",
+    "limitationNotes": "📌 Note: {{notes}}",
+    "templates": "Utilisez nos modèles de lettres dans Ressources pour demander un réexamen ou un appel.",
+    "harassment": "Le harcèlement est interdit. Documentez les incidents et signalez-les par les voies appropriées.",
+    "general": "Selon vos réponses, vous conservez des droits humains généraux. Consultez les Ressources pour obtenir des conseils.",
+    "summaryReady": "Résumé des droits prêt",
+    "reset": "Réinitialiser",
+    "resetAnswers": "Réinitialiser les réponses",
+    "resetHint": "Efface toutes les réponses sélectionnées.",
+    "copy": "Copier",
+    "copySummary": "Copier le résumé des droits",
+    "copySummaryHint": "Copie le résumé actuel des droits dans le presse-papiers.",
+    "export": "Exporter",
+    "exportSummary": "Partager ou exporter le fichier de résumé",
+    "exportSummaryHint": "Ouvre la feuille de partage système avec un fichier texte de votre résumé des droits.",
+    "copied": "Copié",
+    "copiedBody": "Résumé copié dans le presse-papiers.",
+    "clipboardMissingTitle": "Presse-papiers non disponible",
+    "clipboardMissingMsg": "Installez expo-clipboard dans un dev build pour activer la copie.",
+    "shareUnavailable": "Partage non disponible",
+    "shareUnavailableBody": "La feuille de partage système n'est pas disponible.",
+    "shareError": "Échec du partage",
+    "shareErrorBody": "Impossible de partager le fichier de résumé.",
+    "howToUse": "Comment utiliser le vérificateur de droits",
+    "toggleInfo": "Afficher/masquer les instructions",
+    "infoTitle": "Comment utiliser",
+    "infoLine1": "Répondez à chaque question. Un résumé en langage clair apparaît lorsque toutes sont répondues.",
+    "infoLine2": "Utilisez Copier pour réutiliser le résumé, Exporter pour générer un fichier texte, et Réinitialiser pour effacer les réponses.",
+    "infoLine3": "Cet outil ne donne pas de conseils juridiques; consultez les sources officielles.",
+    "choiceLabel": "Option de réponse {{label}}",
+    "yourSummary": "Votre résumé",
+    "summaryRegion": "Résumé des droits",
+    "resetAnnounce": "Réponses effacées",
+    "hide": "Masquer",
+    "show": "Afficher"
+  },
+  "rightsExplainer": {
+    "hintPlain": "Utilisez le mode langage simple pour simplifier le texte sur cet écran.",
+    "screenLabel": "Rights Explainer screen",
+    "howToUse": "How to use Rights Explainer",
+    "toggleInfo": "Toggle instructions",
+    "infoTitle": "How to Use",
+    "infoLine1": "Select a language and region to view simplified rights statements.",
+    "infoLine2": "Use Copy or Share to reuse the current list; Reset returns to English / Canada default.",
+    "infoLine3": "This is an educational tool, not legal advice. Reference official sources for decisions.",
+    "heading": "Multi‑Language Rights Explainer",
+    "subhead": "Plain‑language summaries of basic rights. Select language and region.",
+    "provincial": "Provincial Rights",
+    "federal": "Canada – Federal Rights",
+    "international": "Global – International Rights",
+    "langChanged": "Language changed",
+    "regionChanged": "Region changed",
+    "provinceChanged": "Province changed",
+    "copy": "Copy",
+    "copyLabel": "Copy rights explainer",
+    "copyHint": "Copies the current rights statements.",
+    "share": "Share",
+    "shareLabel": "Share rights explainer file",
+    "shareHint": "Opens system share sheet with a text file of current statements.",
+    "reset": "Reset",
+    "resetLabel": "Reset explainer",
+    "resetHint": "Restores default language and region.",
+    "resetAnnounce": "Explainer reset to defaults",
+    "copied": "Copied",
+    "copiedBody": "Current rights explainer copied.",
+    "clipboardMissingTitle": "Clipboard not available",
+    "clipboardMissingMsg": "Install expo-clipboard in a dev build to enable copy.",
+    "shareUnavailable": "Share unavailable",
+    "shareUnavailableBody": "System share sheet not available.",
+    "shareError": "Share failed",
+    "shareErrorBody": "Could not share rights explainer file.",
+    "provinceChip": "Province {{code}}",
+    "langChip": "Language {{code}}",
+    "regionChip": "Region {{code}}",
+    "hide": "Masquer",
+    "show": "Afficher"
+  },
+  "common": {
+    "guest": "Invité",
+    "resetFilters": "Réinitialiser les filtres",
+    "on": "Activé",
+    "off": "Désactivé",
+    "failed": "Échec",
+    "export": "Exporter",
+    "import": "Importer",
+    "imported": "Importé",
+    "uploading": "Téléversement",
+    "uploadingItem": "Téléversement de {{name}}",
+    "hide": "Masquer",
+    "show": "Afficher",
+    "save": "Enregistrer",
+    "saveAll": "Tout enregistrer",
+    "processQueue": "Traiter la file",
+    "load": "Charger",
+    "loadMore": "Charger plus",
+    "openQueue": "Ouvrir la file de téléversement",
+    "cloudItems": "Éléments cloud",
+    "deleteAll": "Tout supprimer",
+    "deleteSelected": "Supprimer la sélection",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "filter": "filtre rapide",
+    "errorTitle": "Erreur",
+    "ok": "OK",
+    "hidden": "Masqué",
+    "shown": "Affiché",
+    "copyAll": "Tout copier",
+    "share": "Partager",
+    "exportDoc": ".doc",
+    "reset": "Réinitialiser",
+    "loading": "Chargement...",
+    "edit": "Modifier",
+    "previewImage": "Aperçu de l'image",
+    "closePreview": "Fermer l'aperçu",
+    "preview": "Aperçu",
+    "copied": "Copié",
+    "copy": "Copier",
+    "pdf": "PDF",
+    "doc": ".doc",
+    "success": "Succès",
+    "error": "Erreur",
+    "working": "Traitement...",
+    "all": "Tous",
+    "attachUnavailableTitle": "Pièce jointe indisponible",
+    "attachUnavailableBody": "Sélecteur de documents non disponible dans cette build.",
+    "attachMultiUnavailable": "Sélecteur multi‑fichiers non disponible dans cette build.",
+    "permissionDenied": "Permission refusée",
+    "saved": "Enregistré",
+    "saveFailed": "Échec de l'enregistrement",
+    "search": "Rechercher",
+    "clearSearch": "Effacer la recherche",
+    "clear": "Effacer",
+    "results": "résultats",
+    "cloud": "Cloud",
+    "open": "Ouvrir",
+    "close": "Fermer",
+    "add": "Ajouter",
+    "next": "Suivant",
+    "deleted": "Supprimé",
+    "comingSoon": "Cette fonctionnalité sera bientôt disponible. Nous y travaillons.",
+    "submit": "Soumettre",
+    "left": "Gauche",
+    "right": "Droite",
+    "select": "Sélectionner",
+    "unread": "Non lu",
+    "empty": "Vide"
+  },
+  "test": {
+    "badge": "BadgeMarque"
+  },
+  "demoPlural": {
+    "item": {
+      "one": "{{count}} item",
+      "other": "{{count}} items"
+    }
+  },
+  "masterIndex": {
+    "title": "Index maître de recherche",
+    "screenLabel": "Écran index maître recherche",
+    "intro": "Carte hiérarchique des sources de données faisant autorité, hubs de recherche, analyses thématiques, cadres historiques et stratégies de recherche au Canada et globalement.",
+    "results": {
+      "one": "{{count}} lien",
+      "other": "{{count}} liens"
+    },
+    "filterLabel": "Filtrer les sources",
+    "searchPlaceholder": "Rechercher thèmes, portails, hubs...",
+    "sections": {
+      "canada": "Index maître — Canada",
+      "global": "Index maître — Global & Régional",
+      "themes": "Analyses thématiques",
+      "landmarks": "Cadres historiques",
+      "search": "Portails de recherche",
+      "howTo": "Comment utiliser cette carte"
+    },
+    "chipsAnnounce": "Filtre rapide défini sur {{label}}"
+  },
+  "research": {
+    "search": "Rechercher des hubs de recherche...",
+    "chips": {
+      "uncrpd": "UNCRPD",
+      "advocacy": "Plaidoyer",
+      "poverty": "Pauvreté",
+      "suppression": "Suppression"
+    },
+    "card": {
+      "uncrpdGuideTitle": "Guide et cadre UNCRPD",
+      "uncrpdGuideDesc": "Parcourez articles, Observations générales, outils d'implémentation et voies de suivi nationales."
+    },
+    "landing": {
+      "screenLabel": "Écran recherche",
+      "title": "Recherche",
+      "subtitle": "Accédez à études, rapports, articles, frise historique et délais de dossiers.",
+      "studiesTitle": "Études",
+      "studiesDesc": "Accès à des études cliniques et en milieu de travail",
+      "reportsTitle": "Rapports",
+      "reportsDesc": "Rapports communautaires et gouvernementaux simplifiés",
+      "articlesTitle": "Articles",
+      "articlesDesc": "Analyses sur handicap, droits au travail et plaidoyer",
+      "timelineTitle": "Frise Historique",
+      "timelineDesc": "Suivre les étapes marquantes des droits du handicap et du travail",
+      "waitTitle": "Délais Dossier / Instance",
+      "waitDesc": "Estimer la durée probable des processus",
+      "masterIndexTitle": "Index Principal",
+      "masterIndexDesc": "Cartographie complète des sources de données & recherche",
+      "hubsHeader": "Hubs de Données et Recherche",
+      "hubsIntro": "Sources nationales et mondiales sur handicap, retour au travail, accessibilité, technologies d’assistance et protection sociale.",
+      "regionCanada": "Canada",
+      "regionWorldwide": "Monde"
+    }
+  },
+  "uncrpd": {
+    "screenLabel": "Écran informations et guide d'application UNCRPD",
+    "title": "Cadre UNCRPD et guide d'application",
+    "intro": "La Convention des Nations Unies relative aux droits des personnes handicapées (UNCRPD) définit des obligations mondiales pour respecter, protéger et réaliser les droits liés au handicap. Ce guide aide à naviguer textes de base, Observations générales, outils de suivi et voies pratiques d'application.",
+    "quickAccess": "Accès rapide",
+    "openFilteredIndex": "Ouvrir index de recherche (filtré)",
+    "sections": {
+      "coreTexts": "Textes de base et Observations générales",
+      "monitoring": "Suivi et mise en œuvre",
+      "apply": "Appliquer l'UNCRPD",
+      "canada": "Canada – Mise en œuvre Article 33"
+    },
+    "workflow": {
+      "heading": "Flux pratique",
+      "step1": "1. Identifier les articles UNCRPD pertinents et toute Observation générale clarificatrice.",
+      "step2": "2. Aligner faits et obstacles avec le texte du traité (droits touchés, obligations déclenchées).",
+      "step3": "3. Rassembler preuves de soutien (chronologies, notes médicales, dossiers d'aménagement).",
+      "step4": "4. Formuler demandes ou mémoires en citant articles + impact en langage simple.",
+      "step5": "5. Référencer guides de suivi / mise en œuvre pour suivi ou escalade.",
+      "step6": "6. Suivre résultats et itérer – mettre à jour preuves et cartographie des articles au besoin."
+    },
+    "indicator": {
+      "title": "Conseils conception indicateurs",
+      "body": "Utiliser modèle HCDH : Structure (lois/mandats), Processus (couverture programmes, participation), Résultat (maintien en emploi, délais résolution aménagements, réduction suppression réclamations)."
+    },
+    "actions": {
+      "openArticles": "Ouvrir articles et OG",
+      "openMonitoring": "Ouvrir outils de suivi",
+      "openApplication": "Ouvrir guide d'application",
+      "gcEmployment": "Emploi (OG 8)",
+      "gcLegalCapacity": "Capacité juridique (OG 1)",
+      "gcAccessibility": "Accessibilité (OG 2)"
+    }
+  },
+  "about": {
+    "title": " About & Contact",
+    "intro1": " 3mpwr App supports injured workers, the disability community, advocates and allies with tools, resources, and updates.",
+    "intro2": " Vision: a full lifecycle empowerment hub - starting with Health (tracking, medical resources), moving into Claims/Appeals (legal + advocacy tools), into Recovery (wellness + return to work), and ending in Collective Action (campaigns, systemic change). One home for both survival and transformation.",
+    "intro3": " Questions, suggestions, or requests? Reach out anytime.",
+    "betaBanner": "Ceci est une version bêta",
+    "emailLabel": " Email",
+    "subjectPlaceholder": " Subject",
+    "messagePlaceholder": " Your message",
+    "send": " Send",
+    "sendLabel": " Send email",
+    "emailNotConfiguredTitle": " Email not configured",
+    "emailNotConfiguredBody": " Please email {{email}}",
+    "validationMissing": " Subject and message required"
+  },
+  "faqs": {
+    "title": " FAQs",
+    "searchPlaceholder": " Search FAQs",
+    "searchLabel": " Search FAQs",
+    "questionPlaceholder": " Question",
+    "answerPlaceholder": " Answer",
+    "add": " Add",
+    "addLabel": " Add FAQ",
+    "empty": " No FAQs found",
+    "suggestions": " Suggestions"
+  },
+  "voiceHelp": {
+    "title": " Voice Help",
+    "intro": " Press the mic and say a command:",
+    "commands": {
+      "openResources": " Open resources",
+      "openWalletCard": " Open wallet card",
+      "logMood": " Log mood",
+      "openRatings": " Open ratings",
+      "openAdvocacy": " Open advocacy",
+      "openCommunity": " Open community",
+      "openSettings": " Open settings",
+      "openAdminPending": " Open admin pending / approved / trash",
+      "openRightsExplainer": " Open rights explainer",
+      "openDoctorPrep": " Open doctor visit prep",
+      "openA11yLog": " Open accessibility log",
+      "openRehabTracker": " Open rehab tracker",
+      "openWorldMap": " Open world map",
+      "openMediaStudio": " Open media studio",
+      "goBack": " Back / Go back"
+    }
+  },
+  "plainMode": {
+    "toggleOn": "Use plain language on this screen",
+    "toggleOff": "Use standard language on this screen",
+    "tip": "Plain mode simplifies long sentences and replaces jargon with everyday words."
+  },
+  "security": {
+    "strong": "Fort",
+    "medium": "Moyen",
+    "weak": "Faible",
+    "tooShort": "Trop court",
+    "passphrase": "Phrase secrète",
+    "confirmPassphrase": "Confirmer la phrase secrète",
+    "exportTitle": "Exporter chiffré",
+    "importTitle": "Importer chiffré",
+    "weakPassTitle": "Phrase secrète trop faible",
+    "weakPassBody": "Utilisez au moins 12 caractères avec majuscules, minuscules, chiffres et symboles.",
+    "confirmMismatch": "Les phrases ne correspondent pas",
+    "confirmMismatchBody": "Veuillez saisir de nouveau pour confirmer.",
+    "rotateKey": "Tourner la clé de chiffrement locale",
+    "rotate": "Tourner la clé",
+    "keyRotation": "Rotation de clé",
+    "keyRotationOk": "Clé locale de chiffrement tournée.",
+    "keyRotationFail": "Impossible de tourner la clé de chiffrement.",
+    "showPass": "Afficher la phrase secrète",
+    "hidePass": "Masquer la phrase secrète",
+    "strength": "Solidité"
+  },
+  "microCoach": {
+    "hint": "Tip",
+    "dismiss": "Got it"
+  },
+  "quietHours": {
+    "suggest": "Suggest quiet hours",
+    "suggestHint": "Pick a window based on your recent app usage times",
+    "applied": "Quiet hours updated"
+  },
+  "savedScreen": {
+    "itemsLoaded": {
+      "one": "{{count}} élément enregistré chargé",
+      "other": "{{count}} éléments enregistrés chargés"
+    },
+    "subtitle": "Organisez et accédez à vos contenus enregistrés",
+    "searchPlaceholder": "Rechercher des éléments enregistrés...",
+    "searchLabel": "Rechercher des éléments enregistrés",
+    "searchHint": "Filtrez vos balados, ressources et campagnes enregistrés",
+    "clearSearch": "Effacer la recherche",
+    "filters": {
+      "all": "Tout",
+      "podcast": "Balados",
+      "resource": "Ressources",
+      "campaign": "Campagnes"
+    },
+    "view": {
+      "list": "Vue liste",
+      "grid": "Vue grille"
+    },
+    "resultsCount": "{{count}} résultat(s) trouvé(s)",
+    "emptyNoneTitle": "Aucun élément enregistré pour l'instant",
+    "emptyNoneBody": "Commencez à enregistrer des balados, ressources et campagnes pour les voir ici",
+    "emptySearchTitle": "Aucun résultat",
+    "emptySearchBody": "Essayez d'ajuster votre recherche ou vos filtres",
+    "a11y": {
+      "screenLabel": "Écran des éléments enregistrés"
+    },
+    "searchA11y": {
+      "label": "Rechercher des éléments enregistrés",
+      "hint": "Filtrez vos balados, ressources et campagnes enregistrés",
+      "clear": "Effacer la recherche"
+    }
+  },
+  "appealCoach": {
+    "newResponse": " appealCoach.newResponse",
+    "transcriptTitle": " appealCoach.transcriptTitle",
+    "reset": " appealCoach.reset",
+    "screenLabel": " appealCoach.screenLabel",
+    "howToUse": " appealCoach.howToUse",
+    "howToUseTitle": " appealCoach.howToUseTitle",
+    "instructions": " appealCoach.instructions",
+    "share": " appealCoach.share",
+    "shareHint": " appealCoach.shareHint",
+    "shareBtn": " appealCoach.shareBtn",
+    "resetLabel": " appealCoach.resetLabel",
+    "resetHint": " appealCoach.resetHint",
+    "resetBtn": " appealCoach.resetBtn",
+    "skipToInput": " appealCoach.skipToInput",
+    "skipToInputHint": " appealCoach.skipToInputHint",
+    "skip": " appealCoach.skip",
+    "title": " appealCoach.title",
+    "you": " appealCoach.you",
+    "coach": " appealCoach.coach",
+    "messages": " appealCoach.messages",
+    "copied": " appealCoach.copied",
+    "lastResponseCopied": " appealCoach.lastResponseCopied",
+    "clipboardMissingTitle": " appealCoach.clipboardMissingTitle",
+    "clipboardMissingMsg": " appealCoach.clipboardMissingMsg",
+    "copyLast": " appealCoach.copyLast",
+    "copyLastHint": " appealCoach.copyLastHint",
+    "copyLastBtn": " appealCoach.copyLastBtn",
+    "conversationCopied": " appealCoach.conversationCopied",
+    "copyConversation": " appealCoach.copyConversation",
+    "copyConversationHint": " appealCoach.copyConversationHint",
+    "copyChatBtn": " appealCoach.copyChatBtn",
+    "sendBtn": " appealCoach.sendBtn",
+    "promptPlaceholder": " Saisissez une question ou collez du texte",
+    "error": " Impossible d’obtenir une réponse",
+    "shareFail": " Partage indisponible"
+  },
+  "bodyMechanics": {
+    "tipWrists": " bodyMechanics.tipWrists",
+    "tipHinge": " bodyMechanics.tipHinge",
+    "tipPacing": " bodyMechanics.tipPacing",
+    "analysisComplete": " bodyMechanics.analysisComplete",
+    "analysisFailTitle": " bodyMechanics.analysisFailTitle",
+    "analysisFailMsg": " bodyMechanics.analysisFailMsg",
+    "shareTitle": " bodyMechanics.shareTitle",
+    "shareFailTitle": " bodyMechanics.shareFailTitle",
+    "shareFailMsg": " bodyMechanics.shareFailMsg",
+    "copiedTitle": " bodyMechanics.copiedTitle",
+    "copiedMsg": " bodyMechanics.copiedMsg",
+    "clipboardFailTitle": " bodyMechanics.clipboardFailTitle",
+    "clipboardFailMsg": " bodyMechanics.clipboardFailMsg",
+    "screenLabel": " bodyMechanics.screenLabel",
+    "howToUse": " bodyMechanics.howToUse",
+    "howToUseTitle": " bodyMechanics.howToUseTitle",
+    "instructions": " bodyMechanics.instructions",
+    "export": " bodyMechanics.export",
+    "exportHint": " bodyMechanics.exportHint",
+    "exportBtn": " bodyMechanics.exportBtn",
+    "copy": " bodyMechanics.copy",
+    "copyHint": " bodyMechanics.copyHint",
+    "copyBtn": " bodyMechanics.copyBtn",
+    "reset": " bodyMechanics.reset",
+    "resetHint": " bodyMechanics.resetHint",
+    "resetBtn": " bodyMechanics.resetBtn",
+    "subtitle": " bodyMechanics.subtitle",
+    "pickFailTitle": " bodyMechanics.pickFailTitle",
+    "pickFailMsg": " bodyMechanics.pickFailMsg",
+    "pick": " bodyMechanics.pick",
+    "pickHint": " bodyMechanics.pickHint",
+    "pickBtn": " bodyMechanics.pickBtn",
+    "selectedLabel": " bodyMechanics.selectedLabel",
+    "analyzing": " bodyMechanics.analyzing",
+    "suggestions": " bodyMechanics.suggestions",
+    "noSuggestionsYet": " bodyMechanics.noSuggestionsYet"
+  },
+  "mood": {
+    "title": "Mood Tracker",
+    "subtitle": "Log how you feel to spot trends.",
+    "notePlaceholder": "Optional note",
+    "save": "Save",
+    "quick": {
+      "sleep": "Sommeil & Énergie",
+      "balance": "Équilibre travail/repos (IA)"
+    },
+    "today": "Today",
+    "emptyToday": "No entries yet today.",
+    "avg7d": "7d Avg:",
+    "total": "Total entries:",
+    "veryLow": "Very Low",
+    "low": "Low",
+    "neutral": "Neutral",
+    "good": "Good",
+    "great": "Great",
+    "addEntryLabel": "Add mood entry",
+    "scoreLabel": "Mood score {{score}}",
+    "screenAnnouncement": "Mood tracker loaded. Select a score and add optional note.",
+    "scoreSection": "Mood score selection",
+    "scoreButtons": "Mood score buttons from -2 to 2",
+    "scoreOption": "{{score}}: {{description}}",
+    "scoreHint": "Double tap to select this mood score",
+    "selectedScore": "Selected: {{description}}",
+    "noteLabel": "Optional note",
+    "noteHelper": "Add any additional details about your mood",
+    "noteAccessibility": "Mood note text input",
+    "noteHint": "Optional field to add context about your mood"
+  },
+  "homeGuide": {
+    "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
+    "snapshotPlaceholder": "(Mood tracking available on Wellness tab)",
+    "header": "Today's Guide",
+    "snapshot": "Snapshot",
+    "suggested": "Suggested",
+    "open": "Open",
+    "noSuggestions": "No suggestions yet",
+    "mood": {
+      "trendImproving": "Mood improving (last week)",
+      "trendDeclining": "Mood declining (last week)",
+      "trendStable": "Mood stable (last week)",
+      "streak": "Mood log streak: {{days}}d",
+      "nudge": "Evening check-in? Log how you feel.",
+      "nudgeAction": "Log Mood",
+      "deltaPositive": "Up {{delta}} in the last 24h",
+      "deltaNegative": "Down {{delta}} in the last 24h",
+      "deltaNeutral": "No change in the last 24h"
+    },
+    "feedback": {
+      "up": "Helpful suggestion",
+      "down": "Not relevant"
+    },
+    "reason": {
+      "novelty": "New",
+      "rotation": "Rotation",
+      "rotation_recent": "Sélection récente",
+      "rotation_memory": "Éviter les répétitions",
+      "feedback": "Commentaires",
+      "pref": "Préférence",
+      "engagement_gap": "Inactive",
+      "importance": "Important",
+      "streak": "Streak",
+      "recentUse": "Recent",
+      "tod_morning": "Morning Boost",
+      "tod_midday": "Midday Focus",
+      "tod_evening": "Evening Resource",
+      "default": "Suggested"
+    },
+    "tool": {
+      "coach": "Advocacy Coach",
+      "translator": "AI Translator",
+      "policy_simplifier": "Policy Simplifier",
+      "wellness_mood": "Mood Tracker",
+      "resources_search": "Resources Hub",
+      "default": "Tool"
+    }
+  },
+  "profile": {
+    "quickLinks": {
+      "title": "Liens rapides",
+      "evidence": "Coffre de preuves",
+      "deadlines": "Échéances",
+      "rightsChecker": "Vérificateur de droits",
+      "rightsExplainer": "Guide des droits",
+      "translator": "Traducteur de plaidoyer",
+      "settings": "Paramètres"
+    }
+  },
+  "translator": {
+    "simplify": "Simplify",
+    "summary": "Plain Summary",
+    "keyTerms": "Key Terms",
+    "deadlines": "Échéances",
+    "actions": "Actions recommandées",
+    "fullText": "Full Simplified Text",
+    "copiedTitle": "Copied",
+    "copiedBody": "Summary copied.",
+    "pdf": "PDF",
+    "doc": ".doc",
+    "shareTitle": "Translator Output",
+    "shareTitleDoc": "Translator Output (.doc)",
+    "pdfUnavailableTitle": "PDF unavailable",
+    "pdfUnavailableBody": "Install expo-print in a dev build to export PDFs.",
+    "exportFailedTitle": "Export failed",
+    "exportFailedBody": "Could not create file.",
+    "subtitle": "Assistant de traduction IA",
+    "placeholder": "Entrez le texte à traduire"
+  },
+  "whatsNew": {
+    "title": "Quoi de neuf",
+    "subtitle": "Dernières mises à jour et activité. Les éléments de plus de 30 jours passent à l’archive.",
+    "addTitle": "Ajouter un titre",
+    "addSummary": "Ajouter un résumé",
+    "addA11y": "Ajouter une nouveauté",
+    "addBtn": "Ajouter",
+    "markAllReadA11y": "Tout marquer comme lu",
+    "markAllReadBtn": "Tout marquer comme lu",
+    "badgeNew": "Nouveau",
+    "new": "Nouveau",
+    "archive": "Archive"
+  },
+  "claimsNavigator": {
+    "title": "Navigateur de réclamations",
+    "subtitle": "Transformez votre situation en plan clair.",
+    "incidentPh": "Décrivez ce qui s’est passé",
+    "limitationsPh": "Décrivez les limitations au travail",
+    "employerPh": "Employeur / contact",
+    "generateA11y": "Générer les étapes",
+    "generateBtn": "Générer les étapes",
+    "suggested": "Étapes suggérées",
+    "exportPdfA11y": "Exporter en PDF",
+    "exportPdfBtn": "Exporter PDF",
+    "shareA11y": "Partager les étapes",
+    "sharedToCache": "Enregistré dans le cache en .txt",
+    "shareFail": "Impossible de partager.",
+    "step": {
+      "report": "Rédigez un rapport détaillé de l’incident (date/heure/lieu/témoins)",
+      "notify": "Avertissez {{employer}} par écrit; demandez un accusé de réception",
+      "faf": "Demandez à votre clinicien un formulaire des capacités fonctionnelles",
+      "file": "Déposez ou mettez à jour votre réclamation; conservez des copies",
+      "track": "Consignez les communications (dates, noms, résumés) dans le casier de preuves"
+    }
+  },
+  "auth": {
+    "registerTitle": "Register",
+    "registerScreen": "Register screen",
+    "displayName": "Display Name",
+    "email": "Email",
+    "password": "Password",
+    "createAccount": "Create Account",
+    "missingFields": "All fields required",
+    "loginTitle": "Login",
+    "loginScreen": "Login screen",
+    "login": "Login"
+  },
+  "notify": {
+    "broadcast": {
+      "title": "Announcement: {{title}}",
+      "body": "{{body}}"
+    },
+    "coach": {
+      "result": {
+        "title": "Coaching session ready",
+        "body": "Your practice coaching steps are prepared."
+      },
+      "reminder": {
+        "title": "Continue your coaching journey",
+        "body": "You’ve been away for a while ({{idleHours}}h). Pick up a lesson to keep momentum."
+      }
+    },
+    "collective": {
+      "title": "Collective Legal Action Hub",
+      "subtitle": "If multiple users report the same violation, 3mpwr App groups cases for union / class-action leverage.",
+      "typeLabel": "Violation type",
+      "type": {
+        "deniedModified": "denied modified duties",
+        "refusedAccommodation": "refused accommodation",
+        "retaliation": "retaliation",
+        "benefitDenial": "benefit denial"
+      },
+      "provinceLabel": "Province (optional)",
+      "provincePlaceholder": "ON, BC, ...",
+      "detailsLabel": "Details (optional)",
+      "detailsPlaceholder": "Short summary; do not include identifiers.",
+      "submit": "Submit report",
+      "aggregatedHeader": "Aggregated reports",
+      "none": "No reports yet.",
+      "note": "Note: Submissions are anonymous; contact details are not collected.",
+      "submittedTitle": "Submitted",
+      "submittedBody": "Report added anonymously. Aggregated counts help build leverage."
+    },
+    "finder": {
+      "title": "Lawyer & Advocate Finder",
+      "modeList": "List",
+      "modeMap": "Map",
+      "searchPlaceholder": "Search by name, city, org",
+      "issuePlaceholder": "Issue (e.g., WSIB)",
+      "provincePlaceholder": "Province (e.g., ON)",
+      "proBonoOnly": "Pro bono only",
+      "includePaid": "Include paid",
+      "locationUnknown": "—",
+      "issuesLabel": "Issues",
+      "openWebsite": "Open website",
+      "email": "Email",
+      "openOnMap": "Open on Map",
+      "saved": "★ Saved",
+      "save": "☆ Save",
+      "mapHint": "Tap a listing in List mode to open maps."
+    },
+    "support": {
+      "title": "Support Directory",
+      "screenLabel": "Support directory screen",
+      "subtitle": "Organizations that may help with claims, accommodations, and advocacy.",
+      "accessible": "Accessible",
+      "phoneIcon": "☎",
+      "openWebsiteLabel": "Open {{name}} website",
+      "website": "Website",
+      "suggestHeader": "Suggest a correction",
+      "suggestPlaceholder": "Org ID and your suggestion",
+      "submitSuggestion": "Submit suggestion"
+    },
+    "evidence": {
+      "reminder": {
+        "title": "Weekly evidence check-in",
+        "body": "Add new notes or upload documents to stay organized."
+      }
+    },
+    "resource": {
+      "bookmark": {
+        "title": "Resource saved",
+        "body": "You bookmarked {{resourceTitle}}."
+      },
+      "viewed": {
+        "title": "Resource viewed",
+        "body": "You viewed {{resource}}"
+      }
+    },
+    "mood": {
+      "title": "Suivi de l'humeur",
+      "subtitle": "Enregistrez vos sentiments pour repérer les tendances.",
+      "screenAnnouncement": "Suivi de l'humeur chargé. Sélectionnez un score et ajoutez une note facultative.",
+      "scoreSection": "Sélection du score d'humeur",
+      "scoreLabel": "Sélectionnez votre score d'humeur",
+      "scoreButtons": "Boutons de score d'humeur de -2 à 2",
+      "scoreOption": "{{score}} : {{description}}",
+      "scoreHint": "Appuyez deux fois pour sélectionner ce score d'humeur",
+      "selectedScore": "Sélectionné : {{description}}",
+      "noteLabel": "Note facultative",
+      "noteHelper": "Ajoutez des détails supplémentaires sur votre humeur",
+      "noteAccessibility": "Saisie de texte pour note d'humeur",
+      "noteHint": "Champ facultatif pour ajouter du contexte à votre humeur",
+      "notePlaceholder": "Note facultative",
+      "save": "Enregistrer",
+      "addEntryLabel": "Ajouter une entrée d'humeur",
+      "quick": {
+        "sleep": "Sommeil et énergie",
+        "balance": "IA d'équilibre travail/repos"
+      },
+      "veryLow": "Très bas",
+      "low": "Bas",
+      "neutral": "Neutre",
+      "good": "Bon",
+      "great": "Excellent",
+      "today": "Aujourd'hui",
+      "emptyToday": "Aucune entrée aujourd'hui.",
+      "avg7d": "Moyenne 7j :",
+      "total": "Entrées totales :"
+    },
+    "system": {
+      "changelog": {
+        "title": "What's new in 3mpwr App",
+        "body": "Check out the latest updates and improvements."
+      }
+    },
+    "accessibility": {
+      "title": "Accessibilité",
+      "subtitle": "Améliorer l'accessibilité de l'application",
+      "highContrast": "Contraste élevé",
+      "highContrastDesc": "Augmente le contraste pour une meilleure lisibilité",
+      "textSize": "Taille du texte",
+      "textSizeDesc": "Ajuster la taille du texte dans l'application",
+      "screenReader": "Optimisé pour lecteur d'écran",
+      "screenReaderDesc": "Optimise le contenu pour les lecteurs d'écran",
+      "reduceMotion": "Réduire les animations",
+      "reduceMotionDesc": "Minimise les animations et transitions",
+      "focusIndicator": "Indicateurs de focus améliorés",
+      "focusIndicatorDesc": "Rend la navigation au clavier plus visible",
+      "tapTarget": "Taille minimale des éléments tactiles",
+      "tapTargetDesc": "Garantit que les boutons sont faciles à toucher",
+      "dyslexiaFriendly": "Police adaptée à la dyslexie",
+      "dyslexiaFriendlyDesc": "Améliore l'espacement des lettres et la lisibilité",
+      "plainLanguage": "Langage simple",
+      "plainLanguageDesc": "Utilise un texte plus simple et plus clair",
+      "captions": "Sous-titres préférés",
+      "captionsDesc": "Affiche les sous-titres quand disponibles",
+      "voiceMode": "Mode vocal",
+      "voiceModeDesc": "Active la navigation vocale (bêta)",
+      "dyslexia": "Police adaptée à la dyslexie",
+      "dyslexiaDesc": "Améliore l'espacement des lettres et la lisibilité",
+      "assistantPill": "Afficher le bouton Assistant",
+      "assistantPillDesc": "Raccourci flottant vers le hub Assistant",
+      "assistantDock": "Position du bouton Assistant"
+    },
+    "language": {
+      "title": "Language",
+      "subtitle": "Choose your preferred language",
+      "english": "English",
+      "french": "Français",
+      "spanish": "Español"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Choose what alerts you receive",
+      "enabled": "Enable Notifications",
+      "enabledDesc": "Receive app notifications",
+      "quietHoursEnabled": "Quiet Hours Enabled",
+      "quietHoursEnabledDesc": "Silence push notifications during configured hours",
+      "quietHoursWindow": "Quiet Hours Window",
+      "quietHoursWindowDesc": "Current window",
+      "quietHoursStart": "Toggle Start Hour",
+      "quietHoursStartDesc": "Cycles through preset start times",
+      "quietHoursEnd": "Toggle End Hour",
+      "quietHoursEndDesc": "Cycles through preset end times",
+      "sound": "Notification Sound",
+      "soundDesc": "Play sound with notifications",
+      "vibration": "Vibration",
+      "vibrationDesc": "Vibrate for notifications",
+      "emergency": "Emergency Alerts",
+      "emergencyDesc": "Critical safety notifications",
+      "wellness": "Wellness Reminders",
+      "wellnessDesc": "Daily wellness check-ins",
+      "moodNudges": "Mood Nudges",
+      "moodNudgesDesc": "Evening reminder to log how you feel",
+      "events": "Event Reminders",
+      "eventsDesc": "Upcoming event notifications"
+    },
+    "bookmarks": {
+      "title": "Bookmarks",
+      "subtitle": "Save quick links to app features",
+      "description": "Add bookmarks to quickly open frequently used tools and screens.",
+      "search": "Search or filter available routes",
+      "searchPlaceholder": "Type to filter suggestions",
+      "suggestions": "Suggestions",
+      "addSuggestion": "Add bookmark for",
+      "route": "Route Path",
+      "routePlaceholder": "e.g. /(tabs)/resources/index",
+      "label": "Label",
+      "labelPlaceholder": "My Resources",
+      "add": "Add Bookmark",
+      "remove": "Remove bookmark",
+      "empty": "No bookmarks yet.",
+      "clearAll": "Clear All",
+      "errEmptyRoute": "Route required",
+      "errInvalid": "Route not bookmarkable",
+      "errDuplicate": "Already bookmarked"
+    },
+    "emergency": {
+      "title": "Emergency Wallet Card",
+      "subtitle": "Quick access to important information",
+      "description": "Create a digital emergency card with your key information for quick access when needed",
+      "openLabel": " settings.emergency.openLabel",
+      "manage": " settings.emergency.manage"
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "subtitle": "Control your data and security",
+      "passcode": "Require Passcode",
+      "passcodeDesc": "Lock app with passcode",
+      "autoLock": "Auto-Lock Timeout",
+      "autoLockDesc": "Minutes before app locks",
+      "analytics": "Opt Out of Analytics",
+      "analyticsDesc": "Don't share usage data"
+    },
+    "account": {
+      "title": "Account Management",
+      "subtitle": "Manage your profile and preferences",
+      "displayName": "Display Name",
+      "displayNamePlaceholder": "Enter display name",
+      "changePhoto": "Change Profile Picture",
+      "updateName": "Update Name",
+      "resetPassword": "Send Password Reset Email",
+      "resetPasswordSent": "Email Sent",
+      "resetPasswordSentDesc": "Check your inbox for reset instructions.",
+      "resetPasswordFailed": "Reset Failed",
+      "password": "Change Password",
+      "preferences": "Preferences",
+      "delete": "Delete Account",
+      "deleteConfirmTitle": "Delete Account",
+      "deleteConfirmBody": "This will permanently delete your account. This cannot be undone.",
+      "deleteConfirmPasswordTitle": "Confirm Deletion",
+      "deleteConfirmPasswordBody": "Enter your password to permanently delete your account.",
+      "deleted": "Account deleted",
+      "deleteFailed": "Delete failed",
+      "passwordPlaceholder": "Password",
+      "reauthFailed": "Re-authentication failed",
+      "confirmDelete": "Confirm Delete",
+      "updatedName": " settings.account.updatedName",
+      "photoUpdated": " settings.account.photoUpdated",
+      "guestNotice": " settings.account.guestNotice",
+      "createAccount": " settings.account.createAccount",
+      "photo": " settings.account.photo",
+      "deleteNoPassword": " settings.account.deleteNoPassword"
+    },
+    "emergencyWallet": {
+      "title": " settings.emergencyWallet.title",
+      "subtitle": " settings.emergencyWallet.subtitle",
+      "hide": " settings.emergencyWallet.hide",
+      "show": " settings.emergencyWallet.show"
+    },
+    "editor": {
+      "title": "Profile Settings",
+      "role": {
+        "title": "Your Role",
+        "description": "How do you use 3mpwr App?",
+        "pwd": "Person with Disability",
+        "supporter": "Supporter or Family Member",
+        "ally": "Advocate or Ally"
+      },
+      "disability": {
+        "title": "Disability Categories",
+        "description": "Select all that apply"
+      },
+      "accommodations": {
+        "title": "Accommodations",
+        "description": "Select accommodations you need"
+      },
+      "energy": {
+        "title": "Energy Patterns",
+        "description": "When are you typically most energetic?",
+        "morning": "Morning",
+        "afternoon": "Afternoon",
+        "evening": "Evening"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "toggle": "Enable notifications",
+        "description": "Receive push notifications and reminders"
+      },
+      "save": "Save Changes",
+      "saved": "Your profile has been updated.",
+      "unsavedChanges": "You have unsaved changes",
+      "revert": {
+        "title": "Discard Changes?",
+        "message": "All unsaved changes will be lost."
+      },
+      "error": {
+        "roleRequired": "Please select a role",
+        "disabilityRequired": "Please select at least one disability category"
+      }
+    },
+    "feedback": {
+      "title": "Share Your Feedback",
+      "prompt": "How did this suggestion help you?",
+      "thumbsUp": "This suggestion was helpful",
+      "thumbsDown": "This suggestion was not helpful",
+      "thankYou": "Thank you!",
+      "thankYouMessage": "Your feedback helps us improve",
+      "comment": "Add a comment (optional)",
+      "commentPlaceholder": "Tell us more...",
+      "reasons": {
+        "helpful": "Helpful",
+        "not_relevant": "Not relevant to me",
+        "misleading": "Misleading or incorrect",
+        "other_option": "Other reason"
+      },
+      "submitError": "Failed to submit feedback. Please try again.",
+      "reasonRequired": "Please select a reason"
+    }
+  },
+  "jurisdiction": {
+    "label": "Juridiction",
+    "current": "Juridiction actuelle : {{name}}",
+    "change": "Changer",
+    "cycle": "Appuyez pour parcourir les juridictions",
+    "select": "Sélectionner une juridiction",
+    "evidenceFocus": "Preuve requise",
+    "accommodationGuidance": "Principes d'accommodement",
+    "limitationNotes": "Limitations / Délais",
+    "qc": {
+      "name": "Québec",
+      "workplaceInjury": {
+        "name": "CNESST (Commission des normes, de l'équité, de la santé et de la sécurité du travail)",
+        "initialClaimForm": "Réclamation du travailleur",
+        "notes": "La CNESST administre l'indemnisation des lésions professionnelles. Appel à deux niveaux : Révision administrative, puis TAT.",
+        "appealLevel1": "Révision administrative",
+        "appealLevel1Body": "CNESST - Bureau de révision",
+        "appealLevel1Notes": "Demande de révision administrative auprès de la CNESST dans les 30 jours suivant la décision.",
+        "appealLevel2": "Tribunal administratif du travail (TAT)",
+        "appealLevel2Body": "TAT - Division de la santé et de la sécurité du travail",
+        "appealLevel2Notes": "Contestation devant le TAT dans les 45 jours suivant la décision de révision."
+      },
+      "humanRights": {
+        "name": "Commission des droits de la personne et des droits de la jeunesse (CDPDJ)",
+        "notes": "Dépôt d'une plainte dans les 2 ans suivant le dernier acte ou incident discriminatoire (délai plus long que d'autres provinces)."
+      },
+      "benefitPrograms": {
+        "rqap": {
+          "name": "Régime québécois d'assurance parentale (RQAP)",
+          "subtitle": "Prestations de maternité",
+          "administeringBody": "Conseil de gestion de l'assurance parentale",
+          "description": "Prestations de remplacement du revenu pour congé de maternité et parental au Québec.",
+          "keyForm": "Demande de prestations RQAP",
+          "evidenceTip1": "Certificat médical de grossesse",
+          "evidenceTip2": "Relevés d'emploi",
+          "evidenceTip3": "Preuve de revenus assurables"
+        }
+      },
+      "accommodationGuidance": {
+        "principle1": "Obligation d'accommodement jusqu'à contrainte excessive",
+        "principle2": "Processus de dialogue coopératif",
+        "principle3": "Dignité et respect de la personne"
+      },
+      "evidenceFocus": {
+        "item1": "Restrictions fonctionnelles",
+        "item2": "Rapports médicaux détaillés",
+        "item3": "Limitations au travail",
+        "item4": "Pronostic et durée prévue"
+      },
+      "limitationNotes": {
+        "humanRights": "Plaintes de droits de la personne : 24 mois",
+        "cnesst": "Réclamations CNESST : Dès que possible, idéalement dans les jours suivant l'accident",
+        "review": "Révision administrative : 30 jours",
+        "appeal": "Appel au TAT : 45 jours"
+      }
+    },
+    "forms": {
+      "noJurisdiction": "Veuillez d'abord sélectionner une juridiction.",
+      "selectSituation": "Sélectionnez votre situation :",
+      "workplaceInjury": "Réclamation de lésion professionnelle",
+      "workplaceInjuryDesc": "Dépôt d'une nouvelle réclamation pour lésion ou maladie professionnelle",
+      "disabilityBenefit": "Demande de prestations d'invalidité",
+      "disabilityBenefitDesc": "Demande de soutien du revenu d'invalidité provincial/territorial",
+      "humanRights": "Plainte en droits de la personne",
+      "humanRightsDesc": "Plainte pour discrimination ou harcèlement",
+      "appeal": "Appel d'une décision",
+      "appealDesc": "Contestation d'une décision défavorable",
+      "formName": "Formulaire",
+      "purpose": "Objectif",
+      "required": "Requis",
+      "optional": "Optionnel",
+      "notes": "Notes importantes",
+      "disclaimer": "Avertissement : Ce sont des suggestions générales. Consultez toujours les exigences officielles de votre juridiction et envisagez l'aide d'un avocat.",
+      "noFormsAvailable": "Aucun formulaire disponible pour cette situation dans cette juridiction.",
+      "back": "Retour aux situations",
+      "purposeInitialClaim": "Soumettre à {{body}}",
+      "purposeAppeal": "Soumettre à {{body}}",
+      "notesInitialClaimDeadline": "À soumettre dès que possible après l'incident. Délais : {{notes}}",
+      "notesAppealDeadline": "Délai : {{days}} jours après la décision. {{notes}}",
+      "newEvidence": "Nouvelles preuves médicales",
+      "purposeNewEvidence": "Rapports mis à jour appuyant votre appel",
+      "notesNewEvidence": "Les appels plus solides incluent de nouvelles informations non présentes dans la décision initiale"
+    },
+    "deadline": {
+      "title": "Calculateur de délais",
+      "subtitle": "Calculez les délais d'appel importants",
+      "decisionDateLabel": "Date de la décision",
+      "decisionDatePlaceholder": "Sélectionnez la date de la décision",
+      "calculate": "Calculer les délais",
+      "clear": "Effacer",
+      "noAppealLevels": "Aucun niveau d'appel disponible pour cette juridiction.",
+      "resultsTitle": "Vos délais d'appel",
+      "level": "Niveau",
+      "deadline": "Délai",
+      "daysRemaining": "Jours restants",
+      "urgencyCritical": "Urgent",
+      "urgencyWarning": "Avertissement",
+      "urgencyNormal": "Normal",
+      "disclaimer": "Avertissement : Ce sont des estimations. Vérifiez toujours les délais officiels avec l'organisme compétent."
+    },
+    "filter": {
+      "label": "Filtrer par juridiction",
+      "all": "Toutes les juridictions",
+      "canada": "National (Canada)",
+      "selectPlaceholder": "Choisir...",
+      "noResults": "Aucun résultat pour cette juridiction"
+    }
+  },
+  "letterWizard": {
+    "title": "Générateur de lettres maître",
+    "subtitle": "Créez des lettres professionnelles pour toute situation de défense des droits liés au handicap.",
+    "screenLabel": "Écran du générateur de lettres maître",
+    "step1Title": "Étape 1 : Quelle est votre situation?",
+    "step1Desc": "Sélectionnez la situation qui correspond le mieux à vos besoins.",
+    "step2Title": "Étape 2 : Choisissez le type de lettre",
+    "step2Desc": "En fonction de votre situation, ces lettres sont recommandées :",
+    "step3Title": "Étape 3 : Remplissez les détails",
+    "step4Title": "Étape 4 : Révision et exportation",
+    "back": "Retour",
+    "preview": "Aperçu",
+    "edit": "Modifier",
+    "startOver": "Recommencer",
+    "insertTrackers": "Insérer des preuves",
+    "editLetter": "Modifier la lettre",
+    "copied": "Copié",
+    "copiedBody": "Lettre copiée dans le presse-papiers.",
+    "clipboardNA": "Presse-papiers non disponible",
+    "clipboardNABody": "Installez expo-clipboard dans un dev build pour activer la copie.",
+    "shareUnavailable": "Partage non disponible",
+    "shareUnavailableBody": "La feuille de partage système n'est pas disponible.",
+    "pdfNA": "PDF non disponible",
+    "pdfNABody": "Installez expo-print dans un dev build pour exporter des PDFs.",
+    "exportFailed": "Échec de l'exportation",
+    "exportFailedBody": "Impossible de créer le fichier.",
+    "inserted": "Ajouté",
+    "insertedBody": "Preuves insérées depuis vos suivis.",
+    "infoTitle": "Comment utiliser",
+    "infoLine1": "Révisez votre lettre ci-dessous. Utilisez les boutons Copier, PDF ou Doc pour exporter.",
+    "infoLine2": "Adaptez le texte à vos faits spécifiques. Ceci n'est pas un conseil juridique.",
+    "situations": {
+      "accommodation": {
+        "title": "Besoin d'accommodement au travail",
+        "desc": "Demandez des accommodements pour vos besoins liés au handicap au travail"
+      },
+      "benefitDenied": {
+        "title": "Prestations refusées",
+        "desc": "Faites appel ou demandez un réexamen des prestations d'invalidité refusées"
+      },
+      "returningWork": {
+        "title": "Retour au travail",
+        "desc": "Planifiez un retour progressif avec accommodements après un congé médical"
+      },
+      "unionHelp": {
+        "title": "Besoin du soutien syndical",
+        "desc": "Demandez la représentation syndicale pour des problèmes en milieu de travail"
+      },
+      "other": {
+        "title": "Autre situation",
+        "desc": "Parcourez tous les types de lettres"
+      },
+      "medicalLeave": {
+        "title": "Congé médical nécessaire",
+        "desc": "Demandez un congé pour des raisons médicales ou prolongez un congé existant"
+      },
+      "workplaceIssues": {
+        "title": "Discrimination/harcèlement au travail",
+        "desc": "Signalez du harcèlement, un congédiement abusif ou de la discrimination"
+      },
+      "insuranceDispute": {
+        "title": "Litige d'assurance",
+        "desc": "Contestez un refus d'ALI ou contestez un rapport d'EMI"
+      },
+      "medicalSupport": {
+        "title": "Documentation médicale nécessaire",
+        "desc": "Demandez des lettres médicales ou des dossiers auprès des fournisseurs de soins"
+      },
+      "housingAccessibility": {
+        "title": "Accessibilité du logement",
+        "desc": "Demandez des modifications domiciliaires, l'approbation d'un animal d'assistance ou un permis de stationnement"
+      },
+      "humanRights": {
+        "title": "Action juridique requise",
+        "desc": "Déposez une plainte pour droits de la personne ou envoyez une mise en demeure"
+      }
+    },
+    "types": {
+      "accommodation": {
+        "title": "Demande d'accommodement",
+        "desc": "Demandez des accommodements en milieu de travail pour vos besoins liés au handicap"
+      },
+      "appeal": {
+        "title": "Lettre d'appel",
+        "desc": "Faites appel d'un refus de CNESST ou de prestations d'invalidité"
+      },
+      "reconsideration": {
+        "title": "Demande de réexamen",
+        "desc": "Demandez un réexamen de la décision sur les prestations avant l'appel formel"
+      },
+      "rtwPlan": {
+        "title": "Plan de retour au travail",
+        "desc": "Proposez un retour progressif avec restrictions médicales"
+      },
+      "unionRequest": {
+        "title": "Demande d'aide syndicale",
+        "desc": "Demandez le soutien syndical pour des problèmes en milieu de travail"
+      },
+      "medicalLeaveRequest": {
+        "title": "Demande de congé médical",
+        "desc": "Demandez un congé de travail pour traitement médical ou rétablissement"
+      },
+      "leaveExtension": {
+        "title": "Demande de prolongation de congé",
+        "desc": "Prolongez un congé médical existant en raison de besoins de santé continus"
+      },
+      "wsibClaim": {
+        "title": "Rapport de blessure CNESST",
+        "desc": "Signalez une blessure au travail pour une réclamation d'indemnisation"
+      },
+      "harassmentComplaint": {
+        "title": "Plainte pour harcèlement",
+        "desc": "Déposez une plainte formelle concernant du harcèlement au travail"
+      },
+      "wrongfulTermination": {
+        "title": "Lettre de congédiement abusif",
+        "desc": "Contestez un congédiement fondé sur la discrimination liée au handicap"
+      },
+      "ltdAppeal": {
+        "title": "Appel de refus d'ALI",
+        "desc": "Contestez un refus d'assurance invalidité de longue durée"
+      },
+      "imeObjection": {
+        "title": "Objection au rapport d'EMI",
+        "desc": "Contestez un examen médical indépendant biaisé"
+      },
+      "doctorSupportRequest": {
+        "title": "Demande de lettre d'appui médical",
+        "desc": "Demandez une lettre médicale à votre médecin"
+      },
+      "medicalRecordsRequest": {
+        "title": "Demande de dossiers médicaux",
+        "desc": "Demandez des copies de vos dossiers médicaux complets"
+      },
+      "prescriptionCoverageAppeal": {
+        "title": "Appel de couverture de médicaments",
+        "desc": "Contestez un refus de couverture de médicaments"
+      },
+      "housingAccommodation": {
+        "title": "Demande de modification de logement",
+        "desc": "Demandez des modifications d'accessibilité à votre domicile"
+      },
+      "serviceAnimalApproval": {
+        "title": "Approbation d'animal d'assistance",
+        "desc": "Demandez l'approbation d'un animal d'assistance ou de soutien émotionnel"
+      },
+      "parkingPermitAppeal": {
+        "title": "Appel de permis de stationnement",
+        "desc": "Contestez un refus de permis de stationnement accessible"
+      },
+      "humanRightsComplaint": {
+        "title": "Plainte pour droits de la personne",
+        "desc": "Déposez une plainte de discrimination auprès du tribunal des droits de la personne"
+      },
+      "ceaseAndDesist": {
+        "title": "Lettre de mise en demeure",
+        "desc": "Exigez l'arrêt immédiat d'un comportement préjudiciable"
+      },
+      "demandLetter": {
+        "title": "Lettre de mise en demeure formelle",
+        "desc": "Exigez une action ou une indemnisation pour des torts"
+      }
+    },
+    "fields": {
+      "name": "Votre nom",
+      "namePlaceholder": "Entrez votre nom complet",
+      "employer": "Employeur",
+      "employerPlaceholder": "Entrez le nom de l'employeur",
+      "jobTitle": "Titre du poste",
+      "jobTitlePlaceholder": "Votre poste ou titre de fonction",
+      "date": "Date",
+      "datePlaceholder": "Laissez vide pour utiliser la date d'aujourd'hui",
+      "limitations": "Limitations",
+      "limitationsPlaceholder": "Décrivez brièvement vos limitations (pas de diagnostics)",
+      "accommodations": "Accommodements demandés",
+      "accommodationsPlaceholder": "Listez les accommodements dont vous avez besoin",
+      "claimNumber": "Numéro de réclamation",
+      "claimNumberPlaceholder": "Votre numéro de réclamation ou de dossier",
+      "decisionDate": "Date de décision",
+      "decisionDatePlaceholder": "Date de la décision que vous contestez",
+      "decisionSummary": "Résumé de la décision",
+      "decisionSummaryPlaceholder": "Résumez brièvement la décision",
+      "appealArgs": "Vos arguments/preuves",
+      "appealArgsPlaceholder": "Énoncez vos arguments clés et preuves à l'appui",
+      "contact": "Coordonnées",
+      "contactPlaceholder": "Votre numéro de téléphone et/ou courriel",
+      "keyPoints": "Points clés",
+      "keyPointsPlaceholder": "Énumérez les faits et preuves pour le réexamen",
+      "position": "Poste",
+      "positionPlaceholder": "Votre poste de travail",
+      "returnDate": "Date de retour",
+      "returnDatePlaceholder": "Date prévue pour le retour au travail",
+      "restrictions": "Restrictions",
+      "restrictionsPlaceholder": "Listez toute restriction ou limitation médicale",
+      "gradualReturn": "Plan de retour progressif",
+      "gradualReturnPlaceholder": "Décrivez votre horaire de retour progressif proposé",
+      "union": "Syndicat",
+      "unionPlaceholder": "Votre section locale ou nom du représentant syndical",
+      "issue": "Problème",
+      "issuePlaceholder": "Décrivez le problème en milieu de travail",
+      "assistance": "Aide nécessaire",
+      "assistancePlaceholder": "Décrivez le soutien que vous demandez",
+      "leaveStartDate": "Date de début du congé",
+      "leaveStartDatePlaceholder": "Quand vous avez besoin que le congé commence",
+      "leaveDuration": "Durée prévue",
+      "leaveDurationPlaceholder": "p. ex., 2 semaines, 3 mois",
+      "medicalReason": "Raison médicale (générale)",
+      "medicalReasonPlaceholder": "Brève raison sans diagnostic détaillé",
+      "originalEndDate": "Date de fin originale",
+      "originalEndDatePlaceholder": "Date de retour actuellement prévue",
+      "newReturnDate": "Nouvelle date de retour",
+      "newReturnDatePlaceholder": "Nouvelle date de retour demandée",
+      "medicalUpdate": "Mise à jour médicale",
+      "medicalUpdatePlaceholder": "Brève mise à jour sur les progrès de rétablissement",
+      "incidentDate": "Date de l'incident",
+      "incidentDatePlaceholder": "Date de la blessure au travail",
+      "incidentDescription": "Description de l'incident",
+      "incidentDescriptionPlaceholder": "Description détaillée de la façon dont la blessure s'est produite",
+      "injuries": "Blessures subies",
+      "injuriesPlaceholder": "Description des blessures",
+      "witnesses": "Témoins",
+      "witnessesPlaceholder": "Noms des témoins (le cas échéant)",
+      "harasserName": "Nom/titre du harceleur",
+      "harasserNamePlaceholder": "Nom ou titre de la personne causant le harcèlement",
+      "incidentDetails": "Détails de l'incident",
+      "incidentDetailsPlaceholder": "Dates, heures, lieux et description des incidents",
+      "desiredResolution": "Résolution souhaitée",
+      "desiredResolutionPlaceholder": "Quelle action vous voulez qui soit prise",
+      "terminationDate": "Date de cessation d'emploi",
+      "terminationDatePlaceholder": "Date à laquelle vous avez été congédié",
+      "reasonGiven": "Raison donnée",
+      "reasonGivenPlaceholder": "Raison donnée pour le congédiement",
+      "discriminationEvidence": "Preuve de discrimination",
+      "discriminationEvidencePlaceholder": "Énumérez les preuves appuyant la plainte de discrimination",
+      "desiredOutcome": "Résultat souhaité",
+      "desiredOutcomePlaceholder": "Ce que vous recherchez (réintégration, indemnité de départ, etc.)",
+      "policyNumber": "Numéro de police",
+      "policyNumberPlaceholder": "Votre numéro de police d'assurance",
+      "denialDate": "Date de refus",
+      "denialDatePlaceholder": "Date à laquelle les prestations ont été refusées",
+      "denialReasons": "Raisons du refus",
+      "denialReasonsPlaceholder": "Raisons données pour le refus",
+      "appealArguments": "Arguments d'appel",
+      "appealArgumentsPlaceholder": "Vos arguments détaillés avec preuves",
+      "imeDate": "Date de l'EMI",
+      "imeDatePlaceholder": "Date de l'examen médical indépendant",
+      "imeDoctorName": "Nom du médecin de l'EMI",
+      "imeDoctorNamePlaceholder": "Nom du médecin examinateur",
+      "objections": "Objections",
+      "objectionsPlaceholder": "Pourquoi le rapport d'EMI est biaisé ou inexact",
+      "doctorName": "Nom du médecin",
+      "doctorNamePlaceholder": "Le nom de votre médecin",
+      "purposeOfLetter": "Objectif de la lettre",
+      "purposeOfLetterPlaceholder": "Pourquoi vous avez besoin de la lettre médicale",
+      "specificPoints": "Points spécifiques à aborder",
+      "specificPointsPlaceholder": "Ce que la lettre devrait couvrir",
+      "deadline": "Date limite",
+      "deadlinePlaceholder": "Quand vous en avez besoin",
+      "dateOfBirth": "Date de naissance",
+      "dateOfBirthPlaceholder": "Votre date de naissance",
+      "recordsPeriod": "Période des dossiers",
+      "recordsPeriodPlaceholder": "p. ex., 2020-présent",
+      "purposeOfRequest": "Objectif de la demande",
+      "purposeOfRequestPlaceholder": "Pourquoi vous avez besoin de vos dossiers",
+      "drugName": "Nom du médicament",
+      "drugNamePlaceholder": "Nom du médicament prescrit",
+      "prescribingDoctor": "Médecin prescripteur",
+      "prescribingDoctorPlaceholder": "Médecin qui a prescrit le médicament",
+      "denialReason": "Raison du refus",
+      "denialReasonPlaceholder": "Pourquoi la couverture a été refusée",
+      "medicalNecessity": "Nécessité médicale",
+      "medicalNecessityPlaceholder": "Pourquoi c'est médicalement nécessaire",
+      "landlordName": "Nom du propriétaire",
+      "landlordNamePlaceholder": "Votre propriétaire ou gestionnaire immobilier",
+      "address": "Adresse",
+      "addressPlaceholder": "Votre adresse de location",
+      "modificationsRequested": "Modifications demandées",
+      "modificationsRequestedPlaceholder": "Quels changements d'accessibilité vous avez besoin",
+      "animalType": "Type d'animal",
+      "animalTypePlaceholder": "Type et race de l'animal d'assistance",
+      "training": "Formation et certification",
+      "trainingPlaceholder": "Formation et certifications de l'animal",
+      "mobilityLimitations": "Limitations de mobilité",
+      "mobilityLimitationsPlaceholder": "Décrivez les limitations de marche/mobilité",
+      "functionalImpact": "Impact fonctionnel",
+      "functionalImpactPlaceholder": "Comment le manque de stationnement affecte votre vie",
+      "respondentName": "Nom du défendeur",
+      "respondentNamePlaceholder": "Personne ou organisation contre qui vous vous plaignez",
+      "attemptedResolution": "Tentative de résolution",
+      "attemptedResolutionPlaceholder": "Étapes que vous avez prises pour résoudre de manière informelle",
+      "desiredRemedy": "Recours souhaité",
+      "desiredRemedyPlaceholder": "Ce que vous voulez que le tribunal ordonne",
+      "recipientName": "Nom du destinataire",
+      "recipientNamePlaceholder": "Personne ou organisation recevant cette lettre",
+      "harmfulBehavior": "Comportement préjudiciable",
+      "harmfulBehaviorPlaceholder": "Description détaillée du comportement à arrêter",
+      "legalBasis": "Base juridique",
+      "legalBasisPlaceholder": "Lois ou droits violés",
+      "wrongDescription": "Description du tort",
+      "wrongDescriptionPlaceholder": "Quel tort vous a été fait",
+      "demandedAction": "Action exigée",
+      "demandedActionPlaceholder": "Actions spécifiques que vous exigez",
+      "compensationRequested": "Indemnisation demandée",
+      "compensationRequestedPlaceholder": "Montant d'argent demandé"
+    }
+  },
+  "cultural": {
+    "title": "Cultural Safety & Respect",
+    "subtitle": "Ensure culturally safe and respectful experiences that honor diverse ways of knowing and being",
+    "profiles": {
+      "title": "Cultural Profile Setup",
+      "description": "Quick setup for specific cultural contexts and needs",
+      "indigenous": "Indigenous Cultural Protocols",
+      "indigenousDesc": "Traditional knowledge respect, ceremonial considerations, land acknowledgment",
+      "religious": "Faith-Based Accommodations",
+      "religiousDesc": "Religious practices, spiritual wellness, faith-based resources",
+      "newcomer": "Newcomer & Immigrant Support",
+      "newcomerDesc": "Cultural navigation, interpretation services, settlement resources"
+    },
+    "indigenous": {
+      "title": "Indigenous Cultural Protocols",
+      "description": "Respect for Indigenous ways of knowing, being, and healing",
+      "profileTitle": "Indigenous Cultural Safety",
+      "profileMessage": "Enable protocols that respect Indigenous ways of knowing, ceremonial considerations, and traditional approaches to wellness and advocacy?",
+      "protocols": "Indigenous Protocols",
+      "protocolsDesc": "Apply Indigenous-specific protocols for wellness and advocacy",
+      "traditionalKnowledge": "Traditional Knowledge Respect",
+      "traditionalDesc": "Honor traditional healing and wellness practices alongside Western approaches",
+      "ceremonial": "Ceremonial Considerations",
+      "ceremonialDesc": "Acknowledge ceremonial time, sacred practices, and spiritual obligations",
+      "landAcknowledgment": "Land Acknowledgment",
+      "landDesc": "Show acknowledgment of traditional territories and relationships to land"
+    },
+    "communication": {
+      "title": "Cultural Communication",
+      "description": "Respectful and culturally appropriate communication approaches",
+      "contextAwareness": "Cultural Context Awareness",
+      "contextDesc": "Consider cultural context in all information and recommendations",
+      "respectfulLanguage": "Respectful Language",
+      "respectfulDesc": "Use culturally appropriate and respectful terminology",
+      "competentResources": "Culturally Competent Resources",
+      "competentDesc": "Prioritize culturally competent service providers and resources",
+      "communityGuidance": "Community-Specific Guidance",
+      "communityDesc": "Provide guidance specific to cultural communities and contexts"
+    },
+    "religious": {
+      "title": "Religious & Spiritual Considerations",
+      "description": "Accommodations for faith-based approaches to wellness and advocacy",
+      "profileTitle": "Faith-Based Cultural Safety",
+      "profileMessage": "Enable accommodations for religious practices, spiritual wellness approaches, and faith-based resources?",
+      "accommodations": "Religious Accommodations",
+      "accommodationsDesc": "Provide accommodations for religious practices and observances",
+      "spiritualSupport": "Spiritual Practice Support",
+      "spiritualDesc": "Include spiritual wellness practices and considerations",
+      "faithResources": "Faith-Based Resources",
+      "faithDesc": "Include faith-based support services and resources"
+    },
+    "newcomer": {
+      "profileTitle": "Newcomer Cultural Safety",
+      "profileMessage": "Enable supports for newcomers including interpretation services, cultural navigation, and settlement-specific resources?"
+    },
+    "intersectional": {
+      "title": "Intersectional Identity Support",
+      "description": "Recognition of multiple, intersecting identities and experiences",
+      "awareness": "Intersectional Awareness",
+      "awarenessDesc": "Consider how cultural, racial, and other identities intersect with disability",
+      "disabilityModels": "Cultural Disability Models",
+      "modelsDesc": "Acknowledge different cultural understandings of disability and wellness",
+      "familyCentered": "Family-Centered Approach",
+      "familyDesc": "Recognize the role of family and community in cultural contexts"
+    },
+    "language": {
+      "title": "Language & Interpretation",
+      "description": "Language access and cultural mediation support",
+      "mediators": "Cultural Mediators",
+      "mediatorsDesc": "Access to cultural mediators who understand both disability and cultural contexts",
+      "interpretation": "Interpretation Services",
+      "interpretationDesc": "Include information about interpretation services and language access"
+    },
+    "privacy": {
+      "title": "Cultural Privacy & Consent",
+      "description": "Respect for cultural approaches to privacy, consent, and data sharing",
+      "culturalPrivacy": "Cultural Privacy Practices",
+      "privacyDesc": "Apply cultural protocols for privacy and information sharing",
+      "communityConsent": "Community Consent Protocols",
+      "consentDesc": "Consider community consent protocols for sensitive cultural information",
+      "dataGovernance": "Cultural Data Governance",
+      "governanceDesc": "Respect cultural data governance principles and community ownership"
+    }
+  },
+  "neurodivergent": {
+    "title": "Neurodivergent Support",
+    "subtitle": "Customize your experience for optimal comfort and accessibility",
+    "profile": {
+      "confirmTitle": "Apply Profile Settings?",
+      "confirmMessage": "This will override your current preferences with optimized settings for {{profile}}."
+    },
+    "reset": {
+      "title": "Reset All Settings?",
+      "message": "This will restore all neurodivergent preferences to their default values.",
+      "button": "Reset All Settings",
+      "accessibility": "Reset all neurodivergent settings to defaults"
+    },
+    "profiles": {
+      "title": "Quick Setup Profiles",
+      "description": "Apply optimized settings for common neurodivergent needs",
+      "adhd": "ADHD Support",
+      "adhdDesc": "Focus aids, time awareness, task management",
+      "autism": "Autism Support",
+      "autismDesc": "Sensory-friendly, clear communication, predictable interface",
+      "dyslexia": "Dyslexia Support",
+      "dyslexiaDesc": "Reading aids, alternative formats, clear typography",
+      "sensory": "Sensory Processing Support",
+      "sensoryDesc": "Reduced stimulation, minimal interface, gentle interactions"
+    },
+    "themes": {
+      "title": "Sensory-Friendly Themes",
+      "description": "Choose colors that work best for your visual processing"
+    },
+    "sensory": {
+      "title": "Sensory Preferences",
+      "description": "Adjust visual and interaction elements for comfort",
+      "reducedMotion": "Reduced Motion",
+      "reducedMotionDesc": "Minimize animations and transitions",
+      "highContrast": "High Contrast",
+      "highContrastDesc": "Stronger color contrasts for better visibility",
+      "colorBlindFriendly": "Color Blind Friendly",
+      "colorBlindDesc": "Use patterns and shapes in addition to color",
+      "sensoryFriendly": "Sensory-Friendly Mode",
+      "sensoryFriendlyDesc": "Reduce overstimulating elements",
+      "minimal": "Minimal Interface",
+      "minimalDesc": "Hide non-essential interface elements"
+    },
+    "focus": {
+      "title": "Focus & Attention",
+      "description": "Tools to help maintain focus and manage attention",
+      "focusMode": "Focus Mode",
+      "focusModeDesc": "Hide distracting elements while working",
+      "distractionReduction": "Distraction Reduction",
+      "distractionDesc": "Minimize notifications and visual noise",
+      "breakReminders": "Task Break Reminders",
+      "breakDesc": "Gentle reminders to take breaks during long tasks",
+      "timeAwareness": "Time Awareness",
+      "timeDesc": "Show time estimates and progress indicators"
+    },
+    "executive": {
+      "title": "Executive Function Support",
+      "description": "Tools to help with planning, organization, and task completion",
+      "stepByStep": "Step-by-Step Guidance",
+      "stepByStepDesc": "Break complex tasks into clear steps",
+      "visualProgress": "Visual Progress Indicators",
+      "visualProgressDesc": "Show clear progress through tasks and forms",
+      "taskChunking": "Task Chunking",
+      "taskChunkingDesc": "Break large tasks into smaller, manageable pieces",
+      "priorityHighlighting": "Priority Highlighting",
+      "priorityDesc": "Clearly mark important or urgent items"
+    },
+    "cognitive": {
+      "title": "Cognitive Load Management",
+      "description": "Reduce mental processing demands",
+      "simplifiedLanguage": "Simplified Language",
+      "simplifiedDesc": "Use clear, direct language throughout the app",
+      "extraTime": "Extra Processing Time",
+      "extraTimeDesc": "Allow more time for reading and decision-making",
+      "confirmations": "Confirmation Dialogs",
+      "confirmationsDesc": "Ask for confirmation before important actions",
+      "undo": "Undo Available",
+      "undoDesc": "Provide undo options for reversible actions"
+    },
+    "communication": {
+      "title": "Communication Preferences",
+      "description": "Adjust how information is presented and communicated",
+      "literal": "Literal Language",
+      "literalDesc": "Avoid idioms, metaphors, and unclear expressions",
+      "clearInstructions": "Clear Instructions",
+      "clearDesc": "Provide explicit, detailed instructions for all tasks",
+      "alternativeFormats": "Alternative Formats",
+      "alternativeDesc": "Offer information in multiple formats (text, audio, visual)"
+    },
+    "interaction": {
+      "title": "Interaction Preferences",
+      "description": "Customize how you interact with the app",
+      "extendedTargets": "Extended Touch Targets",
+      "extendedDesc": "Make buttons and links easier to tap accurately",
+      "gestureAlternatives": "Gesture Alternatives",
+      "gestureDesc": "Provide button alternatives to gesture controls",
+      "voiceControl": "Voice Control Friendly",
+      "voiceDesc": "Optimize interface for voice control users"
+    }
+  },
+  "disclaimers": {
+    "legal": {
+      "title": "Legal Disclaimer",
+      "compact": "Educational only — not legal advice. Consult official sources and qualified legal professionals.",
+      "full": "This information is for educational purposes only and does not constitute legal advice. Laws vary by jurisdiction and change over time. Always verify information with official sources and consult qualified legal professionals for your specific situation."
+    },
+    "medical": {
+      "title": "Medical Disclaimer",
+      "compact": "Not medical advice. Consult healthcare providers for medical decisions.",
+      "full": "This app does not provide medical advice, diagnosis, or treatment. Information is for educational purposes only. Always consult qualified healthcare providers for medical decisions. In medical emergencies, call 911 or your local emergency number immediately."
+    },
+    "wellness": {
+      "title": "Wellness Disclaimer",
+      "compact": "Adapt activities to your abilities. Stop if experiencing pain or distress.",
+      "full": "Wellness tools are suggestions only. Always adapt activities to your current abilities and stop immediately if you experience pain, distress, or worsening symptoms. These tools do not replace professional healthcare or crisis intervention services."
+    },
+    "emergency": {
+      "title": "Emergency Services",
+      "compact": "For emergencies, call 911 or your local emergency number immediately.",
+      "full": "This app is not for emergency situations. If you are in immediate danger or experiencing a medical emergency, call 911 (Canada) or your local emergency number immediately. For mental health crisis, go to your nearest emergency department or call a crisis line."
+    },
+    "ai": {
+      "title": "AI Tools Disclaimer",
+      "compact": "AI suggestions are not professional advice. Review and verify all outputs.",
+      "full": "AI-generated content is for informational purposes only and may contain errors. AI suggestions are not professional legal, medical, or other advice. Always review, verify, and adapt AI outputs for your specific situation. Human professional judgment supersedes AI recommendations."
+    },
+    "community": {
+      "title": "Community Disclaimer",
+      "compact": "Community content reflects individual experiences, not professional advice.",
+      "full": "Community discussions reflect individual experiences and opinions, not professional advice. The app does not endorse user-generated content. Use community information as starting points for your own research and professional consultation."
+    },
+    "data": {
+      "title": "Data Export Disclaimer",
+      "compact": "Protect exported data. Remove personal identifiers before sharing.",
+      "full": "Exported data may contain sensitive personal information. Protect files with strong passwords, store securely, and remove personal identifiers before sharing. You are responsible for data security after export."
+    },
+    "cultural": {
+      "title": "Cultural Safety",
+      "compact": "Approach cultural information with respect and consult community-specific resources.",
+      "full": "Cultural information is provided for general awareness. Approach with respect, recognize diversity within communities, and consult community-specific resources and leaders for culturally appropriate guidance."
+    },
+    "crisis": {
+      "title": "Crisis Support",
+      "compact": "Crisis tools are not emergency services. Get immediate help if in danger.",
+      "full": "Crisis support tools are supplementary only and not emergency intervention services. If you are in immediate danger, having thoughts of self-harm, or experiencing a mental health crisis, seek immediate professional help through emergency services or crisis lines."
+    },
+    "general": {
+      "title": "Important Information",
+      "text": "This information is provided for educational purposes. Consult appropriate professionals for your specific situation."
+    }
+  },
+  "tools": {
+    "registry": {
+      "energyForecast": {
+        "name": "Energy Forecast",
+        "description": "AI-powered prediction of your energy levels for the next 24 hours"
+      },
+      "moodTrendAnalyzer": {
+        "name": "Mood Trend Analyzer",
+        "description": "Analyze mood patterns and predict emotional cycles"
+      },
+      "personalizedSuggestionEngine": {
+        "name": "Smart Suggestions",
+        "description": "Get personalized tool recommendations based on your patterns"
+      },
+      "activityOptimizer": {
+        "name": "Activity Optimizer",
+        "description": "Adaptive suggestions for activities based on your energy and mood"
+      },
+      "energyLevelIndicator": {
+        "name": "Energy Level Indicator",
+        "description": "Real-time indicator of current energy level with smart recommendations"
+      },
+      "lowEnergyMode": {
+        "name": "Low Energy Mode",
+        "description": "Simplified interface and reduced notifications during low energy periods"
+      },
+      "wellnessDashboard": {
+        "name": "Wellness Dashboard",
+        "description": "AI-enhanced dashboard showing wellness insights and recommendations"
+      },
+      "smartNotifications": {
+        "name": "Smart Notifications",
+        "description": "Intelligent notifications delivered at optimal times based on your energy"
+      },
+      "aiCompanion": {
+        "name": "AI Wellness Companion",
+        "description": "Personalized AI assistant that learns your wellness patterns"
+      }
+    },
+    "categories": {
+      "predictive": "Predictive",
+      "adaptive": "Adaptive",
+      "mlEnhanced": "AI-Enhanced",
+      "energyAware": "Energy-Aware"
+    },
+    "badges": {
+      "beta": "Beta",
+      "ai": "AI",
+      "learns": "Learns",
+      "personalized": "Personalized",
+      "lowEnergy": "Low energy",
+      "mediumEnergy": "Medium energy",
+      "highEnergy": "High energy"
+    },
+    "metadata": {
+      "requiresFeedback": "Your feedback improves this tool",
+      "mlPowered": "AI-powered learning engine",
+      "personalizable": "Personalized to your needs",
+      "energyOptimal": "Optimal for {{energy}} energy levels",
+      "accessibility": "Accessibility: {{features}}"
+    }
+  },
+  "patterns": {
+    "activity": {
+      "title": "Activity Patterns",
+      "description": "Patterns of when and how you do activities",
+      "recordDataPoint": "Record activity",
+      "viewHistory": "View activity history",
+      "insights": "Activity insights"
+    },
+    "energy": {
+      "title": "Energy Patterns",
+      "description": "When your energy levels are highest and lowest",
+      "morning": "Morning energy",
+      "afternoon": "Afternoon energy",
+      "evening": "Evening energy",
+      "night": "Night energy",
+      "predictedEnergy": "Predicted energy"
+    },
+    "mood": {
+      "title": "Mood Patterns",
+      "description": "Your emotional patterns and cycles",
+      "moodBefore": "Mood before",
+      "moodAfter": "Mood after",
+      "moodTrend": "Mood trend",
+      "emotionalCycle": "Emotional cycle"
+    },
+    "recovery": {
+      "title": "Recovery Patterns",
+      "description": "What helps you recover and feel better",
+      "whatHelps": "What helps you recover",
+      "recoveryTips": "Recovery tips",
+      "fastestRecovery": "Fastest recovery"
+    },
+    "engagement": {
+      "title": "Engagement Patterns",
+      "description": "When you're most engaged and productive",
+      "peakTime": "Peak engagement time",
+      "engagementLevel": "Engagement level",
+      "recommendations": "Engagement recommendations"
+    },
+    "analysis": {
+      "strength": "Pattern strength",
+      "confidence": "Confidence level",
+      "occurrences": "Pattern occurrences",
+      "lastSeen": "Last occurred",
+      "nextPredicted": "Predicted next occurrence",
+      "recommendation": "Recommendation",
+      "insight": "Insight",
+      "bestTime": "Best time for this pattern",
+      "worstTime": "Challenging time for this pattern",
+      "noPatterns": "No patterns recorded yet. Start recording activities to build patterns."
+    },
+    "labels": {
+      "recordedInstances": "Recorded {{count}} time{{plural}}",
+      "mostCommon": "Most common on {{day}}s",
+      "dataCollecting": "Data collecting...",
+      "patternStrengthHigh": "Strong pattern identified",
+      "patternStrengthMedium": "Moderate pattern detected",
+      "patternStrengthLow": "Pattern forming (more data needed)"
+    }
+  },
+  "energyPrediction": {
+    "title": "Energy Forecast",
+    "currentEnergy": "Current Energy",
+    "forecast": "24-Hour Forecast",
+    "bestTime": "Best Time",
+    "worstTime": "Lowest Energy",
+    "trending": "Trending",
+    "trendingUp": "Energy increasing",
+    "trendingDown": "Energy decreasing",
+    "stable": "Energy stable",
+    "predictions": {
+      "high": "High energy expected",
+      "medium": "Moderate energy expected",
+      "low": "Low energy expected",
+      "peakTime": "Peak energy time",
+      "lowEnergyTime": "Challenging time",
+      "recommendation": "Recommendation"
+    },
+    "factors": {
+      "averageEnergy": "Historical average",
+      "patternBased": "Based on your patterns",
+      "timeOfDay": "Time of day effect",
+      "recentTrend": "Recent trend"
+    },
+    "recommendations": {
+      "planRest": "Plan rest during low-energy times",
+      "demandingTasks": "Best time for demanding tasks",
+      "recoveryStrategies": "Use recovery strategies during low-energy periods",
+      "needsRest": "Your energy is low. Consider getting more rest."
+    },
+    "chart": {
+      "hourLabel": "{{hour}}h",
+      "energyLevel": "{{level}}% energy",
+      "accessibility": "Energy level chart showing predicted energy for each hour of the day"
+    }
+  },
+  "smartNotifications": {
+    "title": "Smart Notification Settings",
+    "description": "Control when notifications reach you based on your energy levels",
+    "quietHours": "Quiet Hours",
+    "enableQuietHours": "Enable Quiet Hours",
+    "enableQuietHoursDescription": "Pause non-urgent notifications during your rest times",
+    "quietHoursEnabled": "Quiet hours enabled",
+    "quietHoursDisabled": "Quiet hours disabled",
+    "startTime": "Start Time",
+    "startTimeA11y": "Set quiet hours start time",
+    "endTime": "End Time",
+    "endTimeA11y": "Set quiet hours end time",
+    "allowHighPriority": "Allow Urgent Notifications",
+    "allowHighPriorityDescription": "Send high-priority notifications even during quiet hours",
+    "timeZone": "Time Zone",
+    "current": "Current Time Zone",
+    "saved": "Settings saved successfully",
+    "errors": {
+      "loadingFailed": "Could not load notification settings",
+      "savingFailed": "Could not save notification settings"
+    },
+    "saveHint": "Save your notification preferences"
+  },
+  "weeklySummary": {
+    "title": "Weekly Summary",
+    "generatedOn": "Generated on {{date}}",
+    "weekOf": "Week of {{startDate}} - {{endDate}}",
+    "energyMetrics": "Energy Analysis",
+    "averageEnergy": "Average Energy",
+    "bestDay": "Best Day",
+    "worstDay": "Lowest Energy Day",
+    "trend": "Trend",
+    "trendImproving": "📈 Improving",
+    "trendDeclining": "📉 Declining",
+    "trendStable": "➡️ Stable",
+    "recoveryRate": "Recovery Time",
+    "moodMetrics": "Mood Patterns",
+    "dominantMood": "Most Common Mood",
+    "moodVariance": "Mood Variability",
+    "toolUsage": "Tool Usage",
+    "totalSessions": "Total Sessions",
+    "mostUsedTools": "Most Used Tools",
+    "categoriesUsed": "Categories Explored",
+    "timeSpent": "Time in Wellness",
+    "achievements": "Achievements",
+    "streakDays": "Day Streak",
+    "goalsCompleted": "Goals Completed",
+    "newAchievements": "New Achievements",
+    "wellnessScore": "Wellness Score",
+    "insights": "Insights",
+    "recommendations": "Recommendations",
+    "deliveryStatus": "Delivery Status",
+    "scheduledForDelivery": "Scheduled for next Monday morning",
+    "delivered": "Delivered on {{date}}"
+  },
+  "mlModels": {
+    "title": "ML Model Management",
+    "description": "Track and optimize machine learning models",
+    "modelTypes": {
+      "energyPrediction": "Energy Prediction",
+      "patternLearning": "Pattern Learning",
+      "smartNotifications": "Smart Notifications"
+    },
+    "status": {
+      "development": "Development",
+      "testing": "Testing",
+      "production": "Production",
+      "deprecated": "Deprecated"
+    },
+    "metrics": {
+      "accuracy": "Accuracy",
+      "precision": "Precision",
+      "recall": "Recall",
+      "f1Score": "F1 Score"
+    },
+    "abTesting": {
+      "title": "A/B Testing",
+      "controlGroup": "Current Model",
+      "treatmentGroup": "New Model",
+      "status": "Status"
+    },
+    "feedback": {
+      "rating": "Rating",
+      "yourFeedback": "Your Feedback"
+    },
+    "statistics": {
+      "totalModels": "Total Models",
+      "production": "In Production",
+      "testing": "Testing"
+    }
+  }
+}
