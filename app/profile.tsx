@@ -9,6 +9,7 @@ import { useAuth } from "../context/AuthContext";
 import type { Lang } from "../i18n";
 import { useTranslation } from "../i18n";
 import { useA11ySettings } from "../store/a11ySettings";
+import { usePrivacy } from "../store/privacy";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 
@@ -19,6 +20,7 @@ export default function Profile() {
   const { lang, setLanguage, t } = useTranslation();
   const [name, setName] = React.useState(user?.displayName ?? "");
   const { state: a11y, toggleHighContrast } = useA11ySettings();
+  const { state: privacy } = usePrivacy();
   const [showEmergencyCard, setShowEmergencyCard] = React.useState(false);
 
   return (
@@ -39,20 +41,40 @@ export default function Profile() {
             style={[styles.cta, { backgroundColor: palette.primary, minHeight: 48 }]}
             onPress={async () => {
               try {
-                // Dynamically import Sentry
+                // Import telemetry service to check initialization
+                const featureFlags = await import('../services/featureFlags');
+                
+                // Check if Sentry is enabled in feature flags
+                if (!featureFlags.FLAGS.sentry) {
+                  alert('❌ Sentry Disabled\n\nReason: Missing EXPO_PUBLIC_SENTRY_DSN in .env file or FREE_MODE is enabled.\n\nCheck .env file and restart Metro.');
+                  return;
+                }
+                
+                // Check if error reporting is enabled
+                if (!privacy.errorReportingEnabled) {
+                  alert('⚠️ Error Reporting Disabled\n\nGo to Settings → Privacy → Enable Error Reporting');
+                  return;
+                }
+                
+                // Try to import and use Sentry
                 const sentryModule = await import('sentry-expo');
-                // Get the Native module which has the actual Sentry SDK
                 const Sentry = sentryModule.Native;
                 
-                if (Sentry && Sentry.captureException) {
-                  const testError = new Error('🧪 TEST ERROR from Profile screen - Check Sentry dashboard!');
-                  Sentry.captureException(testError);
-                  alert('✅ Test error sent to Sentry!\n\nCheck your dashboard at:\nsentry.io');
-                } else {
-                  alert('⚠️ Sentry not initialized.\n\nGo to Settings → Privacy and enable "Error Reporting" first.');
+                if (!Sentry || !Sentry.captureException) {
+                  alert('⚠️ Sentry Not Initialized\n\nTry:\n1. Restart Metro bundler\n2. Reload app\n3. Check console for errors');
+                  return;
                 }
+                
+                // Send test error
+                const testError = new Error('🧪 TEST ERROR from Profile screen - Check Sentry dashboard!');
+                testError.stack = 'Test stack trace from Profile.tsx';
+                Sentry.captureException(testError);
+                
+                alert('✅ Test Error Sent!\n\nCheck your Sentry dashboard:\nhttps://sentry.io\n\nIt may take 10-30 seconds to appear.');
+                
               } catch (error) {
-                alert('❌ Sentry error:\n' + (error as Error).message);
+                const errorMsg = (error as Error).message;
+                alert('❌ Sentry Test Failed\n\nError: ' + errorMsg + '\n\nTry restarting Metro bundler with:\nnpx expo start');
               }
             }}
             accessibilityRole="button"
@@ -72,6 +94,7 @@ export default function Profile() {
         <Row
           label={t("settings.account.title", "Account")}
           value={user?.email ?? user?.displayName ?? t("common.guest", "Guest")}
+          palette={palette}
         />
         <Pressable
           onPress={() => setShowEmergencyCard(v => !v)}
@@ -97,7 +120,7 @@ export default function Profile() {
       </View>
 
       <View style={styles.card}>
-        <Text style={{ fontWeight: "700", marginBottom: 8 }}>
+        <Text style={{ fontWeight: "700", marginBottom: 8, color: palette.text }}>
           {t("settings.accessibility.title")}
         </Text>
         <Pressable
@@ -121,7 +144,7 @@ export default function Profile() {
       {/* Notifications test removed at user's request */}
 
       <View style={styles.card}>
-        <Text style={{ fontWeight: "700", marginBottom: 8 }}>
+        <Text style={{ fontWeight: "700", marginBottom: 8, color: palette.text }}>
           {t("settings.language.title")}
         </Text>
         <View style={{ flexDirection: "row", gap: 8 }}>
@@ -147,7 +170,7 @@ export default function Profile() {
       </View>
 
       <View style={styles.card}>
-        <Text style={{ fontWeight: "700", marginBottom: 8 }}>
+        <Text style={{ fontWeight: "700", marginBottom: 8, color: palette.text }}>
           {t("profile.quickLinks.title", "Quick links")}
         </Text>
         <View style={{ flexDirection: 'row', flexWrap:'wrap', gap:8 }}>
@@ -196,7 +219,7 @@ export default function Profile() {
   );
 }
 
-function Row({ label, value }: { label: string; value: string }) {
+function Row({ label, value, palette }: { label: string; value: string; palette: Palette }) {
   return (
     <View
       style={{
@@ -205,8 +228,8 @@ function Row({ label, value }: { label: string; value: string }) {
         marginBottom: 8,
       }}
     >
-      <Text style={{ fontWeight: "600" }}>{label}</Text>
-      <Text>{value}</Text>
+      <Text style={{ fontWeight: "600", color: palette.text }}>{label}</Text>
+      <Text style={{ color: palette.text }}>{value}</Text>
     </View>
   );
 }
