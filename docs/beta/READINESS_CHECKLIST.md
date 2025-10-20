@@ -23,14 +23,17 @@ This checklist ensures we can run a stable closed beta without paid accounts.
 - [x] Jurisdiction coverage doc expanded (UNCRPD, Charter, provincial)
 
 ## Feedback & Support
-- [x] Contact channel set: beta@empowr.app or GitHub Issues
+- [x] Contact channel set: empowrapp08162025@gmail.com or GitHub Issues
 - [x] Triage labels: bug, performance, accessibility, translation, UX
-- [x] Lightweight release notes via What’s New
+- [x] Lightweight release notes via What's New
+- [x] Comprehensive Beta Tester Guide created and published (see docs/COMPREHENSIVE_BETA_TESTER_GUIDE.md)
 
 ## Nice-to-have (optional)
-- [ ] Weekly “What’s New” summary in Notifications (silent, auto-expire)
+- [ ] Weekly "What's New" summary in Notifications (silent, auto-expire)
 - [ ] Minimal crash labeling via Sentry DSN in .env (local only)
 - [ ] CI job to run analytics report and attach as artifact
+- [ ] Beta tester badge implementation (documented as "coming soon")
 
 ---
-Prepared: 2025-10-06
+**Prepared:** 2025-10-06  
+**Last Updated:** 2025-10-20 (Beta Documentation Consolidation)

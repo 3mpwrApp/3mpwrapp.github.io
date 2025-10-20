@@ -6,21 +6,24 @@ Hi <Name>,
 
 You’re invited to try the Empowr App in our closed beta. It’s free and runs through Expo Go on iOS and Android.
 
-What you’ll do (about 10 minutes):
+What you'll do (about 10 minutes):
 - Explore Wellness (Daily Planner, Reflections, a couple of exercises)
 - Check Resources (Deadlines, Rights, Evidence basics)
 - Try one Advocacy page (Policy Made Simple) and read the disclaimer
-- Open What’s New and Settings → About
+- Open What's New and Settings → About
+
+**📖 Full Testing Guide:** https://github.com/empowrapp/empowrapp-new/blob/main/docs/COMPREHENSIVE_BETA_TESTER_GUIDE.md
 
 How to join (free):
-1) Install “Expo Go”
-   - iOS: App Store → search “Expo Go” (by Expo)
-   - Android: Play Store → search “Expo Go”
+1) Install "Expo Go"
+   - iOS: App Store → search "Expo Go" (by Expo)
+   - Android: Play Store → search "Expo Go"
 2) Open our private link or scan the QR
    - Link: <PASTE_UNLISTED_EXPO_LINK_HERE>
    - QR: attach/insert QR image generated from the link (see QR tips below)
 3) Sign in or use Guest
-   - You can explore the app as a Guest—no account needed.
+   - You can explore the app as a Guest—no account needed
+   - 🏅 Beta testers will receive a special badge once the badge system is live
 
 Share feedback (please):
 - Email: empowrapp08162025@gmail.com (screenshots welcome)
