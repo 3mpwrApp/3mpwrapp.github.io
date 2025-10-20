@@ -114,19 +114,19 @@ export function HomeGuide() {
                   {idx===0 ? '⭐ ' : ''}{renderIcon(meta?.icon)} {t(meta?.i18nLabelKey || 'homeGuide.tool.default', meta?.id || sug.toolId)}
                 </Text>
                 <View style={{ flexDirection:'row', flexWrap:'wrap', gap:4, marginTop:4 }}>
-                  {(sug.reason ?? []).map(r => {
+                  {(sug.reason ?? []).map((r, rIdx) => {
                     const label = t(`homeGuide.reason.${r.key}`, t('homeGuide.reason.default','Suggested'));
                     return (
-                      <Text key={r.key} style={{ backgroundColor: palette.primary, color: palette.onPrimary, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 }}>{label}</Text>
+                      <Text key={`${r.key}-${rIdx}`} style={{ backgroundColor: palette.primary, color: palette.onPrimary, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 }}>{label}</Text>
                     );
                   })}
                 </View>
-                <View style={{ flexDirection:'row', marginTop:6, gap:8 }}>
-                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
-                    <Text style={{ color: palette.text }}>👍</Text>
+                <View style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6, gap:8 }}>
+                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ minWidth: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+                    <Text style={{ color: palette.text, textAlign:'center' }}>👍</Text>
                   </Pressable>
-                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down')} style={{ paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
-                    <Text style={{ color: palette.text }}>👎</Text>
+                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down')} style={{ minWidth: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+                    <Text style={{ color: palette.text, textAlign:'center' }}>👎</Text>
                   </Pressable>
                   <Link
                     href={resolveToolRoute(sug.toolId) as any}
@@ -141,8 +141,8 @@ export function HomeGuide() {
                       });
                     }}
                   >
-                    <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6 }}>
-                      <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{t('home.guide.open','Open')}</Text>
+                    <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ minWidth: 80, flex: 1, backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6 }}>
+                      <Text style={{ color: palette.onPrimary, fontWeight:'700', textAlign:'center' }}>{t('home.guide.open','Open')}</Text>
                     </Pressable>
                   </Link>
                 </View>

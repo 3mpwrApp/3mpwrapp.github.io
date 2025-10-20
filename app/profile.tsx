@@ -3,8 +3,8 @@ import { router } from "expo-router";
 import React from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
-import { HIT_SLOP_8 } from "../constants/a11y";
 import EmergencyWalletCard from "../components/EmergencyWalletCard";
+import { HIT_SLOP_8 } from "../constants/a11y";
 import { useAuth } from "../context/AuthContext";
 import type { Lang } from "../i18n";
 import { useTranslation } from "../i18n";
@@ -120,6 +120,45 @@ export default function Profile() {
           <QuickLink label={t('profile.quickLinks.settings','Settings')} onPress={() => router.push('/(tabs)/settings' as Href)} palette={palette} />
         </View>
       </View>
+
+      {/* DEV ONLY: Sentry Test Button */}
+      {__DEV__ && (
+        <View style={[styles.card, { backgroundColor: '#fff3cd', borderWidth: 2, borderColor: '#ffc107' }]}>
+          <Text style={{ fontWeight: "700", marginBottom: 8, color: '#856404' }}>
+            🐛 DEV ONLY - Sentry Testing
+          </Text>
+          <Pressable
+            style={[styles.cta, { backgroundColor: '#0066cc' }]}
+            onPress={async () => {
+              try {
+                // Dynamically import Sentry
+                const sentryModule = await import('sentry-expo');
+                // Get the Native module which has the actual Sentry SDK
+                const Sentry = sentryModule.Native;
+                
+                if (Sentry && Sentry.captureException) {
+                  const testError = new Error('🧪 TEST ERROR from Profile screen - Check Sentry dashboard!');
+                  Sentry.captureException(testError);
+                  alert('✅ Test error sent to Sentry!\n\nCheck your dashboard at:\nsentry.io');
+                } else {
+                  alert('⚠️ Sentry not initialized.\n\nGo to Settings → Privacy and enable "Error Reporting" first.');
+                }
+              } catch (error) {
+                alert('❌ Sentry error:\n' + (error as Error).message);
+              }
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Test Sentry error reporting"
+          >
+            <Text style={[styles.primaryText, { textAlign: 'center' }]}>
+              🧪 Send Test Error to Sentry
+            </Text>
+          </Pressable>
+          <Text style={{ fontSize: 12, color: '#856404', marginTop: 8 }}>
+            Make sure error reporting is enabled in Settings → Privacy
+          </Text>
+        </View>
+      )}
 
       {user ? (
         <>

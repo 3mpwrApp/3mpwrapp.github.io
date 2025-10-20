@@ -107,7 +107,7 @@ export default function VoiceController() {
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    wrap: { position: 'absolute', right: 16, bottom: 24, zIndex: 1000 },
+    wrap: { position: 'absolute', right: 16, bottom: 84, zIndex: 1000 },
     mic: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 24, paddingHorizontal: 14, paddingVertical: 10 },
     micRec: { backgroundColor: palette.primary, borderColor: palette.primary },
     micText: { color: palette.text, fontWeight: '700' },

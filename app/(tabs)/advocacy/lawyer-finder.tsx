@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Linking, StyleSheet, Text, TextInput, View } from 'react-native';
+import { FlatList, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import MapEmbed from '../../../components/MapEmbed';
@@ -28,7 +28,7 @@ export default function LawyerFinder() {
   const [province, setProvince] = React.useState('');
   const [proBono, setProBono] = React.useState(false);
   const [savedOnly, setSavedOnly] = React.useState(false);
-  const [mode, setMode] = React.useState<'list'|'map'>('list');
+  const [mode, setMode] = React.useState<'list' | 'map'>('list' as 'list' | 'map');
   const { state, toggle } = useFavorites();
 
   const [page, setPage] = React.useState(1);
@@ -65,26 +65,34 @@ export default function LawyerFinder() {
   const filtered = savedOnly ? base.filter((a)=> state.advocate.has(a.id)) : base;
 
   return (
-    <View style={s.container}>
-      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.finder.title','Lawyer & Advocate Finder')}</Text>
-      <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
-        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('list')} style={[s.chip, mode==='list'&&s.chipActive]}><Text style={{ color: mode==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeList','List')}</Text></A11yPressable>
-        <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('map')} style={[s.chip, mode==='map'&&s.chipActive]}><Text style={{ color: mode==='map'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeMap','Map')}</Text></A11yPressable>
-      </View>
-      <TextInput placeholder={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} placeholderTextColor={palette.text+"77"} value={query} onChangeText={setQuery} style={s.input} accessibilityLabel={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} />
-      <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
-        <TextInput placeholder={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} placeholderTextColor={palette.text+"77"} value={issue} onChangeText={setIssue} style={[s.input,{flex:1}]} accessibilityLabel={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} />
-        <View style={{ flexBasis: '100%' }} />
-        <ProvincePicker value={province} onChange={(p)=> setProvince(p as any)} />
-        <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setProBono(v=>!v)} style={[s.chip, proBono && s.chipActive]}>
-          <Text style={{ color: proBono? palette.onPrimary: palette.text, fontWeight:'700' }}>{proBono? t('advocacy.finder.proBonoOnly','Pro bono only'): t('advocacy.finder.includePaid','Include paid')}</Text>
-        </A11yPressable>
-        <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSavedOnly(v=>!v)} style={[s.chip, savedOnly && s.chipActive]}>
-          <Text style={{ color: savedOnly? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('common.saved','Saved')}</Text>
-        </A11yPressable>
-      </View>
+    <View style={{ flex: 1, backgroundColor: palette.background }}>
       {mode==='list' ? (
-      <FlatList data={filtered} keyExtractor={(a)=>a.id} renderItem={({item}) => (
+      <FlatList
+        style={{ flex: 1 }}
+        data={filtered}
+        keyExtractor={(a)=>a.id}
+        ListHeaderComponent={
+          <View style={{ padding: 20, paddingBottom: 12 }}>
+            <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.finder.title','Lawyer & Advocate Finder')}</Text>
+            <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('list')} style={[s.chip, mode==='list'&&s.chipActive]}><Text style={{ color: mode==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeList','List')}</Text></A11yPressable>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('map')} style={[s.chip, mode==='map'&&s.chipActive]}><Text style={{ color: mode==='map'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeMap','Map')}</Text></A11yPressable>
+            </View>
+            <TextInput placeholder={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} placeholderTextColor={palette.text+"77"} value={query} onChangeText={setQuery} style={s.input} accessibilityLabel={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} />
+            <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
+              <TextInput placeholder={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} placeholderTextColor={palette.text+"77"} value={issue} onChangeText={setIssue} style={[s.input,{flex:1}]} accessibilityLabel={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} />
+              <View style={{ flexBasis: '100%' }} />
+              <ProvincePicker value={province} onChange={(p)=> setProvince(p as any)} />
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setProBono(v=>!v)} style={[s.chip, proBono && s.chipActive]}>
+                <Text style={{ color: proBono? palette.onPrimary: palette.text, fontWeight:'700' }}>{proBono? t('advocacy.finder.proBonoOnly','Pro bono only'): t('advocacy.finder.includePaid','Include paid')}</Text>
+              </A11yPressable>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSavedOnly(v=>!v)} style={[s.chip, savedOnly && s.chipActive]}>
+                <Text style={{ color: savedOnly? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('common.saved','Saved')}</Text>
+              </A11yPressable>
+            </View>
+          </View>
+        }
+        renderItem={({item}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{item.name}{item.org? ` • ${item.org}`: ''}</Text>
           <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || t('advocacy.finder.locationUnknown','—')}</Text>
@@ -103,20 +111,28 @@ export default function LawyerFinder() {
           </View>
         </View>
       )}
-      ListFooterComponent={
-        total > filtered.length ? (
-          <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => load(false)} style={[s.btn,{ alignSelf:'center', marginVertical: 12 }]}> 
-            <Text style={s.btnText}>{loading? t('common.loading','Loading…'): t('common.loadMore','Load more')}</Text>
-          </A11yPressable>
-        ) : null
-  }
-  {...nativeOnly({ initialNumToRender: Math.min(10, filtered.length || 10) })}
-  />) : (
-        <View style={s.mapWrap}>
-          <Text style={s.cardTitle}>{t('advocacy.finder.modeMap','Map')}</Text>
-          <MapEmbed points={filtered.slice(0,20).map((item)=> ({ id: item.id, title: item.name, ...placeToCoords(item.city, item.province) }))} />
-          <Text style={s.cardText}>{t('advocacy.finder.mapHint','Tap a listing in List mode to open maps.')}</Text>
-        </View>
+        ListFooterComponent={
+          total > filtered.length ? (
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => load(false)} style={[s.btn,{ alignSelf:'center', marginVertical: 12 }]}> 
+              <Text style={s.btnText}>{loading? t('common.loading','Loading…'): t('common.loadMore','Load more')}</Text>
+            </A11yPressable>
+          ) : null
+        }
+        contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 20 }}
+        {...nativeOnly({ initialNumToRender: Math.min(10, filtered.length || 10) })}
+      />) : (
+        <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 20 }}>
+          <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.finder.title','Lawyer & Advocate Finder')}</Text>
+          <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('list')} style={[s.chip, mode==='list'&&s.chipActive]}><Text style={{ color: mode==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeList','List')}</Text></A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('map')} style={[s.chip, mode==='map'&&s.chipActive]}><Text style={{ color: mode==='map'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeMap','Map')}</Text></A11yPressable>
+          </View>
+          <View style={s.mapWrap}>
+            <Text style={s.cardTitle}>{t('advocacy.finder.modeMap','Map')}</Text>
+            <MapEmbed points={filtered.slice(0,20).map((item)=> ({ id: item.id, title: item.name, ...placeToCoords(item.city, item.province) }))} />
+            <Text style={s.cardText}>{t('advocacy.finder.mapHint','Tap a listing in List mode to open maps.')}</Text>
+          </View>
+        </ScrollView>
       )}
     </View>
   );

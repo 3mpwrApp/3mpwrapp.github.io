@@ -38,7 +38,7 @@ export default function TabsLayout() {
       >
   {/* Visible tabs (curated) */}
         <Tabs.Screen
-          name="whatsnew"
+          name="whatsnew/index"
           options={{
             title: "What's New",
             tabBarLabel: "What's New",
@@ -46,28 +46,6 @@ export default function TabsLayout() {
             tabBarBadge: wnBadge,
             tabBarIcon: ({ color, size, focused }) => (
               <Ionicons name={focused ? "star" : "star-outline"} color={color} size={size + 2} />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="faqs"
-          options={{
-            title: t("nav.faqs", "FAQs"),
-            tabBarLabel: t("nav.faqs", "FAQs"),
-            tabBarAccessibilityLabel: `${t("nav.faqs", "FAQs")} tab`,
-            tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "help-circle" : "help-circle-outline"} color={color} size={size + 2} />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="about"
-          options={{
-            title: t("nav.about", "About / Contact"),
-            tabBarLabel: t("nav.about", "About"),
-            tabBarAccessibilityLabel: `${t("nav.about", "About / Contact")} tab`,
-            tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "information-circle" : "information-circle-outline"} color={color} size={size + 2} />
             ),
           }}
         />
@@ -172,8 +150,22 @@ export default function TabsLayout() {
     <Tabs.Screen name="voice-help" options={{ href: null }} />
     <Tabs.Screen name="admin" options={{ href: null }} />
     <Tabs.Screen name="archive" options={{ href: null }} />
-    {/* Hide internal settings sections aggregator */}
+    
+    {/* Move FAQs and About to menu (accessible via settings menu) */}
+    <Tabs.Screen name="faqs" options={{ href: null }} />
+    <Tabs.Screen name="about" options={{ href: null }} />
+    
+    {/* Hide internal settings sections aggregator and all section files */}
     <Tabs.Screen name="settings.sections" options={{ href: null }} />
+    <Tabs.Screen name="settings.sections/index" options={{ href: null }} />
+    <Tabs.Screen name="settings.sections/BookmarksSection" options={{ href: null }} />
+    <Tabs.Screen name="settings.sections/EnhancedPrivacySection" options={{ href: null }} />
+    <Tabs.Screen name="settings.sections/LocalProfileSection" options={{ href: null }} />
+    <Tabs.Screen name="settings.sections/MediaLockerSection" options={{ href: null }} />
+    <Tabs.Screen name="settings.sections/WellnessPrefsSection" options={{ href: null }} />
+    
+    {/* Hide onboarding (should only be shown via routing logic) */}
+    <Tabs.Screen name="onboarding/index" options={{ href: null }} />
 
     {/* Keep nested resource tools managed by resources stack; no need to declare here */}
 

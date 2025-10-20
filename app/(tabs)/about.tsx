@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert, Linking, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, Linking, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";
@@ -49,7 +49,7 @@ export default function AboutScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <Text
         ref={titleRef}
         style={styles.title}
@@ -113,7 +113,7 @@ export default function AboutScreen() {
       >
         <Text style={styles.buttonText}>{t("about.send","Send")}</Text>
       </Pressable>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -122,7 +122,8 @@ function createStyles(
   factor: number,
 ) {
   return StyleSheet.create({
-    container: { flex: 1, padding: 20, backgroundColor: palette.background },
+    container: { flex: 1, backgroundColor: palette.background },
+    contentContainer: { padding: 20 },
     title: {
       fontSize: Math.round(24 * factor),
       fontWeight: "700",
