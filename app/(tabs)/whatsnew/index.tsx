@@ -1,27 +1,25 @@
 import { useFocusEffect } from "@react-navigation/native";
 import React from "react";
 import {
-  Pressable,
-  SectionList,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Pressable,
+    SectionList,
+    StyleSheet,
+    Text,
+    View
 } from "react-native";
 
 import ContrastToggle from "../../../components/ContrastToggle";
 import SettingsLink from "../../../components/SettingsLink";
 import { whatsnew as defaultWN } from "../../../data/whatsnew";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { subscribeToActivityFeed } from "../../../services/activity";
 import {
-  addLocalWhatsNew,
-  getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
+    getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
 } from "../../../services/localContent";
 import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -156,6 +154,7 @@ export default function WhatsNewScreen() {
           "Latest updates & live activity (bookmarks, petitions, resources). Older than 30 days move to Archive.",
         )}
       </Text>
+      {/* TEMP: Add form hidden to save screen space - uncomment to restore
       <View style={{ marginBottom: 8 }}>
         <TextInput
           value={title}
@@ -195,6 +194,7 @@ export default function WhatsNewScreen() {
           <Text style={styles.buttonText}>{t("whatsNew.addBtn", "Add")}</Text>
         </Pressable>
       </View>
+      */}
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={t("whatsNew.markAllReadA11y", "Mark all as read")}
