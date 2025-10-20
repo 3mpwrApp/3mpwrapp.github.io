@@ -26,34 +26,34 @@ export default function First7Screen(){
   const chipStyle = React.useMemo(() => ({ paddingVertical: 8, paddingHorizontal: 12, borderRadius: 9999, borderWidth: 1, borderColor: palette.muted, backgroundColor: palette.surface } as const), [palette]);
   return (
     <View style={{ flex: 1, padding: 16, gap: 12 }} accessibilityRole="summary" accessibilityLabel="First 7 days onboarding">
-      <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '700' }}>Your first 7 days</Text>
-      <Text>Get oriented with a few quick wins. Your progress is private to your device.</Text>
+      <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '700', color: palette.text }}>Your first 7 days</Text>
+      <Text style={{ color: palette.text }}>Get oriented with a few quick wins. Your progress is private to your device.</Text>
       <View style={{ gap: 8 }}>
         {steps.map(s => (
           <Pressable key={s.id} accessibilityRole="checkbox" accessibilityState={{ checked: !!state.completed[s.id as Step] }} onPress={()=>toggle(s.id as Step)} style={{ padding: 12, borderRadius: 10, borderWidth: 1, borderColor: palette.muted, backgroundColor: state.completed[s.id as Step]? palette.card: palette.surface }} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-            <Text style={{ fontWeight: '600' }}>{s.label}</Text>
+            <Text style={{ fontWeight: '600', color: palette.text }}>{s.label}</Text>
             <Text style={{ color: palette.text, opacity: 0.8 }}>{s.hint}</Text>
           </Pressable>
         ))}
       </View>
       <View style={{ height: 1, backgroundColor: palette.muted, marginVertical: 8 }} />
-      <Text style={{ fontWeight: '600' }}>Quick links</Text>
+      <Text style={{ fontWeight: '600', color: palette.text }}>Quick links</Text>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
         <Link href="/(tabs)/resources/evidence-locker" asChild>
-          <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text>Evidence Locker</Text></Pressable>
+          <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text style={{ color: palette.text }}>Evidence Locker</Text></Pressable>
         </Link>
         <Link href="/(tabs)/resources" asChild>
-          <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text>Resources</Text></Pressable>
+          <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text style={{ color: palette.text }}>Resources</Text></Pressable>
         </Link>
         <Link href="/(tabs)/advocacy" asChild>
-          <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text>Advocacy Hub</Text></Pressable>
+          <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text style={{ color: palette.text }}>Advocacy Hub</Text></Pressable>
         </Link>
         <Link href="/profile" asChild>
-          <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text>Profile</Text></Pressable>
+          <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text style={{ color: palette.text }}>Profile</Text></Pressable>
         </Link>
         {Platform.OS !== 'web' && (
           <Link href="/modal" asChild>
-            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text>Notifications</Text></Pressable>
+            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text style={{ color: palette.text }}>Notifications</Text></Pressable>
           </Link>
         )}
       </View>

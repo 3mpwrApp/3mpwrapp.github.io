@@ -34,7 +34,7 @@ export default function HomeScreen() {
         style={[styles.title, { color: palette.text, fontSize: Math.round(20 * factor) }]}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        {t('home.title','Home')} <Text style={{ fontSize: Math.round(14 * factor), opacity: 0.8 }}>(Beta)</Text>
+        {t('home.title','Home')} <Text style={{ fontSize: Math.round(14 * factor), opacity: 0.8, color: palette.text }}>(Beta)</Text>
       </Text>
       
       {/* Disability Wizard - Personalized Recommendations */}
