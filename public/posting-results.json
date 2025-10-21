@@ -1,7 +1,7 @@
 {
   "mastodon": {
     "success": false,
-    "message": "❌ Mastodon: getaddrinfo ENOTFOUND https://mastodon.social"
+    "message": "❌ Mastodon: HTTP 422: Validation failed: Text character limit of 500 exceeded"
   },
   "bluesky": {
     "success": false,

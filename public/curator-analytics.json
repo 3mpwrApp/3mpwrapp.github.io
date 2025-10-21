@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "startDate": "2025-10-21T02:18:23.548Z",
-  "lastUpdated": "2025-10-21T20:00:37.113Z",
+  "lastUpdated": "2025-10-21T20:03:06.483Z",
   "featureHighlights": {
     "Resource Directory": {
       "uses": 2,
@@ -87,7 +87,7 @@
       "totalItems": 0
     },
     "evening": {
-      "posts": 1,
+      "posts": 2,
       "avgItems": "30.0",
       "platforms": {
         "mastodon": 0,
@@ -95,19 +95,19 @@
         "x": 0
       },
       "successRate": 0,
-      "totalItems": 30
+      "totalItems": 60
     }
   },
   "platforms": {
     "mastodon": {
-      "posts": 5,
+      "posts": 6,
       "successes": 0,
-      "failures": 5
+      "failures": 6
     },
     "bluesky": {
-      "posts": 5,
+      "posts": 6,
       "successes": 4,
-      "failures": 1
+      "failures": 2
     },
     "x": {
       "posts": 0,
@@ -115,6 +115,6 @@
       "failures": 0
     }
   },
-  "totalPosts": 10,
-  "successRate": "40.00"
+  "totalPosts": 12,
+  "successRate": "33.33"
 }
