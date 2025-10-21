@@ -67,8 +67,8 @@ All energy prediction happens **on your device**:
 
 ### Learn More
 
-[Open Energy Forecasting Feature →](/features#energy-forecast)  
-[View Wellness Dashboard →](/wellness)  
+[View All App Features →](/features#-wellness-tab)  
+[Explore Wellness Tools →](/wellness)  
 [Read the Complete User Guide →](/user-guide)
 
 ---
