@@ -113,6 +113,12 @@ Pick ONE feature to test thoroughly:
 - Additional testers will be invited in Phase 2 (Open Beta)
 - Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) to express interest for future phases
 
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; text-align: center;">
+  <h3 style="color: white; margin: 0 0 0.5rem;">📝 Sign Up for Beta Testing</h3>
+  <p style="color: rgba(255,255,255,0.95); margin: 0 0 1rem;">Interested in becoming a beta tester? Fill out our sign-up form and we'll contact you when spots become available!</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #667eea; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Complete Beta Sign-Up Form →</a>
+</div>
+
 ---
 
 ## 🧪 What to Test
