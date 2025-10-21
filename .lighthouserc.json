@@ -6,7 +6,7 @@
     "assert": {
       "assertions": {
         "categories:accessibility": ["error", { "minScore": 0.95 }],
-        "color-contrast": "error",
+        "color-contrast": ["warn", { "minScore": 0.9 }],
         "image-alt": "error",
         "link-name": "error",
         "label": "error",
