@@ -65,7 +65,11 @@
                "government", "federal", "provincial", "benefits", "income support",
                "web accessibility", "mobile accessibility", "digital inclusion", "accessible technology",
                "assistive devices", "adaptive equipment", "accessibility features", "user interface",
-               "social programs", "community services", "resource navigation", "advocacy tools"]
+               "social programs", "community services", "resource navigation", "advocacy tools",
+               "living with disability", "people with disabilities", "handicap", "special needs",
+               "reasonable accommodation", "disability rights", "disability advocate", "accessibility audit",
+               "barrier", "barriers", "inclusive design", "accessible format", "sign language",
+               "braille", "captions", "subtitles", "audio description", "alternative text"]
     },
     "contextual": {
       "score": 1.0,
@@ -75,7 +79,10 @@
                "manitoba", "saskatchewan", "quebec", "nova scotia", "new brunswick",
                "newfoundland", "prince edward island", "northwest territories", "yukon", "nunavut",
                "app", "website", "platform", "digital", "online", "tool", "resource", "guide",
-               "information", "navigator", "directory", "accessible website", "responsive design"]
+               "information", "navigator", "directory", "accessible website", "responsive design",
+               "health", "medical", "patient", "treatment", "diagnosis", "condition", "therapy",
+               "rehabilitation", "support group", "peer support", "self-advocacy", "empowerment",
+               "independent living", "quality of life", "wellbeing", "wellness", "care", "caregiver"]
     }
   },
   
@@ -90,8 +97,8 @@
     "accessibility_update": ["accessibility", "barrier removal", "accommodation", "universal design", "AODA"]
   },
   
-  "minScore": 1.5,
-  "maxItems": 30,
+  "minScore": 0.5,
+  "maxItems": 50,
   "languages": ["en", "fr"],
   "excludePatterns": ["spam", "advertisement", "promotional"],
   "requireKeywords": false,
