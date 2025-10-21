@@ -32,7 +32,7 @@ Thank you for helping us build the best advocacy and wellness app for people liv
 
 **Short on time? Complete this quick test to help us catch the most common issues.**
 
-> ⚠️ **BETA NOT YET ACTIVE**: Installation instructions will be provided when the beta testing period begins. Please wait for official instructions before attempting to install.
+> 📧 **PHASE 1 BETA UNDERWAY**: If you've been selected as a Phase 1 beta tester, you'll receive installation instructions via email or message. Please wait for your personalized invitation with setup details.
 
 ### Step 1: Launch the App (1 minute)
 
@@ -96,17 +96,22 @@ Pick ONE feature to test thoroughly:
 
 ## 📱 Getting Started
 
-> ⚠️ **BETA NOT YET ACTIVE**: Installation instructions for iOS (TestFlight) and Android (Google Play Beta) will be provided via email when the beta testing period begins. Please wait for official instructions.
+> 📧 **PHASE 1 BETA UNDERWAY**: Selected Phase 1 testers will receive installation instructions via email or direct message. Check your inbox for your personalized invitation.
 
-**What you'll need when beta starts:**
+**What you'll need when you receive your invitation:**
 - A compatible iOS (13.0+) or Android (6.0+) device
 - Your email address (for beta invitation)
 - At least 500 MB of free storage space
 
-**You'll receive:**
-- Email invitation with installation link
+**Your invitation will include:**
+- Installation link (TestFlight for iOS or Play Beta for Android)
 - Step-by-step setup instructions
-- Beta tester welcome email with support contacts
+- Beta tester welcome message with support contacts
+
+**Haven't received your invitation yet?**
+- Phase 1 is limited to 20-50 testers
+- Additional testers will be invited in Phase 2 (Open Beta)
+- Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) to express interest for future phases
 
 ---
 
