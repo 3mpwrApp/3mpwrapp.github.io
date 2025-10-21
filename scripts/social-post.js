@@ -166,25 +166,26 @@ class SocialPoster {
    * Format content for Bluesky
    */
   formatBlueskyPost(content) {
-    const topItems = content.items.slice(0, 3);
+    const topItems = content.items.slice(0, 2); // Reduced from 3 to 2 items
     const timeCtx = this.getTimeContext();
-    const feature = this.getFeatureHighlight();
     
-    let post = `${timeCtx.greeting} 📰 ${content.date}\n\n`;
-    post += `3mpwrApp curated ${content.count} stories on disability, accessibility & benefits.\n\n`;
-    post += `🌟 ${feature}\n\n`;
-    post += `${timeCtx.context}\n\n`;
+    // Build post with strict character limit (300 max)
+    let post = `${timeCtx.greeting} 📰\n\n`;
+    post += `${content.count} stories on disability, accessibility & benefits.\n\n`;
 
     topItems.forEach((item, idx) => {
-      post += `${idx + 1}. ${item.title}`;
-      if (item.link) {
-        post += `\n${item.link}`;
-      }
-      post += '\n\n';
+      // Truncate title to ~60 chars
+      const title = item.title.length > 60 ? item.title.substring(0, 57) + '...' : item.title;
+      post += `${idx + 1}. ${title}\n`;
     });
 
-    post += `Visit: https://3mpwrapp.pages.dev\n\n`;
-    post += `#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
+    post += `\nhttps://3mpwrapp.pages.dev\n`;
+    post += `#Accessibility #DisabilityBenefits`;
+
+    // Safety check: truncate if still too long
+    if (post.length > 300) {
+      post = post.substring(0, 297) + '...';
+    }
 
     return post;
   }
