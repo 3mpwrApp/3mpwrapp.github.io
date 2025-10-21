@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>3mpwr App - Curated Disability News</title>
+    <link>https://3mpwrapp.pages.dev/blog/</link>
+    <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
+    <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
+    <language>en-ca</language>
+    <lastBuildDate>Tue, 21 Oct 2025 02:18:23 GMT</lastBuildDate>
+    <pubDate>Tue, 21 Oct 2025 02:18:23 GMT</pubDate>
+    <generator>3mpwr App Curator v2.0</generator>
+    <image>
+      <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
+      <title>3mpwr App</title>
+      <link>https://3mpwrapp.pages.dev</link>
+    </image>
+    <category>Disability Rights</category>
+    <category>Accessibility</category>
+    <category>Social Policy</category>
+    <category>Benefits</category>
+
+  </channel>
+</rss>

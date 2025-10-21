@@ -1,0 +1,14 @@
+{
+  "mastodon": {
+    "success": false,
+    "message": "❌ Mastodon: getaddrinfo ENOTFOUND https://mastodon.social"
+  },
+  "bluesky": {
+    "success": true,
+    "message": "✅ Bluesky: Posted successfully (at://did:plc:qnmnt55gza5lo4fs32hqywpo/app.bsky.feed.post/3m3obcc4pou24)"
+  },
+  "x": {
+    "success": false,
+    "message": "X: Not configured"
+  }
+}

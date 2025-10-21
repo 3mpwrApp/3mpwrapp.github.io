@@ -1,266 +1,223 @@
 {
   "version": "1.0.0",
-  "generated": "2025-10-17",
-  "totalDocuments": 47,
+  "generated": "2025-10-21",
+  "totalDocuments": 36,
   "documents": [
     {
-      "id": "blog/2025-10-24-3mpwrapp-wellness.md",
+      "id": "blog/2025-10-03-welcome-to-3mpowr.md",
       "source": "blog",
-      "title": "Wellness Tip: 5 Energy Management Strategies That Work",
-      "excerpt": "Energy Management That Actually Works Energy is precious. Here are 5 strategies that help real people. Strategy 1: Energy Coins (Budgeting Model) Assign each activity a \"cost\" in energy coins: - Morni",
-      "content": "Energy Management That Actually Works Energy is precious. Here are 5 strategies that help real people. Strategy 1: Energy Coins (Budgeting Model) Assign each activity a \"cost\" in energy coins: - Morning routine: 1-2 coins - Email: 1 coin per batch - Video call: 2 coins - Shopping: 3 coins - Doctor appointment: 4 coins Daily budget: Whatever feels realistic (10-20 coins is common) The benefit: You see what you can actually do. You make conscious choices. How 3mpwrApp helps: Use the Energy Coins tool to track and plan. Strategy 2: Energy Cycles Track when you have energy across days/weeks: - Are mornings better? Afternoons? - Do you have a good day every 3 days? - Do weekends recover you? - When do medications work best? The benefit: You schedule important tasks for high-energy times. How 3mpwrApp helps: The Energy Forecast uses ML to predict your patterns. Strategy 3: Pacing, Not Pushing The temptation: Push when you have energy, crash later. Better approach: Save some energy, maintain steady pace. The 50% rule: Do only 50% of what you think you can do. Save the rest for recovery. The benefit: No crashes. Consistency. Sustainable living. Strategy 4: Batch Similar Tasks Instead of context-switching all day: - Email time: 30 minutes (all at once) - Phone calls: 30 minutes (all at once) - Writing: 2 hours (one block) - Movement: 3 x 10 minutes (spread out) The benefit: Less startup energy. Better focus. Less exhaustion. Strategy 5: Built-In Recovery Time After hard tasks, build in recovery: - After doctor: Rest - After social: Solo time - After work: No obligations - After errands: Quiet evening The benefit: You prevent crashes. You recover better. --- Your Energy Strategy Everyone's different. What works for Sarah might not work for Marcus. Start with: 1. Track your current patterns (1 week) 2. Try one strategy 3. Track the impact 4. Adjust what doesn't work 5. Build your personal system Energy Management Tools → Share Your Strategy → --- Energy management isn't about doing more. It's about doing what matters sustainably.",
-      "date": "2025-10-24T09:00:00+00:00",
+      "title": "Welcome to the 3mpowr App site",
+      "excerpt": "--- layout: post title: \"Welcome to the 3mpwr App site\" date: 2025-10-03 categories: news --- We're excited to launch the 3mpwr App website. Here's what you can do today: - Explore our Features and Us",
+      "content": "--- layout: post title: \"Welcome to the 3mpwr App site\" date: 2025-10-03 categories: news --- We're excited to launch the 3mpwr App website. Here's what you can do today: - Explore our Features and User Guide - Join the community via our Contact page - Sign up to be a Beta Tester - Subscribe to our Newsletter Follow us on social: Facebook, X, Instagram. We’ll publish release notes, community stories, and new resources here. Stay tuned. Optional image: !Welcome banner",
+      "date": "2025-10-21",
       "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
+        "announcement",
+        "updates"
       ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-24-3mpwrapp-wellness",
-      "filesize": 2054
+      "categories": [],
+      "url": "/2025-10-03-welcome-to-3mpowr",
+      "filesize": 471
     },
     {
-      "id": "blog/2025-10-23-3mpwrapp-interview.md",
+      "id": "blog/2025-10-21-daily-curation.md",
       "source": "blog",
-      "title": "Interview: Accessibility Expert Dr. Sarah Chen on Disability Justice Technology",
-      "excerpt": "Interview Series: Voices in Disability Justice We're talking with leaders shaping disability rights, accessibility, and justice. This month: Dr. Sarah Chen. About Dr. Chen Dr. Sarah Chen is an accessi",
-      "content": "Interview Series: Voices in Disability Justice We're talking with leaders shaping disability rights, accessibility, and justice. This month: Dr. Sarah Chen. About Dr. Chen Dr. Sarah Chen is an accessibility researcher, disability justice advocate, and founder of the Tech for All Institute. Background: - PhD in Accessible Technology - 15+ years in disability advocacy - Recognized expert in inclusive design - Author of \"Disability Justice Technology\" The Interview Q: What's the biggest barrier to accessible technology? \"It's often not the technology itself. It's the mindset. Developers design for themselves, not for the full spectrum of human difference. Accessibility isn't a feature—it's a foundation. Every decision in design is an accessibility decision.\" Q: How is disability justice different from accessibility? \"Accessibility is making things work for disabled people. Disability justice is about centering disabled people's leadership and power. It's the difference between 'we'll add accessibility' and 'disabled people are leading this from the start.'\" Q: What does good accessibility look like? \"When nobody notices it's accessible. When a person using a screen reader, using voice input, using a switch control, or using mouse and keyboard all find the system equally usable. When it's so natural, nobody's thinking about it.\" Q: What's your advice for organizations building tech? \"First: Hire disabled people. Not after the fact. From day one. Second: Do real testing with real disabled people, not simulation. Third: Listen to what disabled people say and actually change things.\" Q: How do you stay hopeful? \"I see apps like 3mpwrApp. I see disabled people building tools for themselves. I see young disabled people demanding better. Hope isn't something I generate—it's something I witness every day.\" Dr. Chen's Recommendations For Disability Advocates: - Build your own tools - Don't wait for accessible versions - Lead from your lived experience - Demand better For Tech Companies: - Hire disabled people - Test with real users - Listen and adapt - Make it foundational For Organizations: - Accessibility = better for everyone - Invest upfront - Lead with disabled people - Keep iterating Connect with Dr. Chen - Website: techforall.institute - Twitter: @DrSarahChen - LinkedIn: Dr. Sarah Chen - Books: \"Disability Justice Technology\" (2023) --- Disability justice isn't the future. It's now. And disabled people are leading it.",
-      "date": "2025-10-23T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
+      "title": "Daily News Curation - 2025-10-21",
+      "excerpt": "Daily News Curation - 2025-10-21 Curated 0 items from disability, accessibility, and social policy sources.",
+      "content": "Daily News Curation - 2025-10-21 Curated 0 items from disability, accessibility, and social policy sources.",
+      "date": "2025-10-21",
+      "tags": [],
       "categories": [
-        "news",
-        "updates",
-        "education"
+        "curation news"
       ],
-      "url": "/2025-10-23-3mpwrapp-interview",
-      "filesize": 2456
+      "url": "/2025-10-21-daily-curation",
+      "filesize": 107
     },
     {
-      "id": "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "source": "blog",
-      "title": "Myth Busting: 5 Common Misconceptions About Disability Benefits",
-      "excerpt": "Myth vs. Reality Let's clear up some common misconceptions about disability benefits. Myth #1: \"You can't work at all on disability benefits\" Reality: Most programs allow some work income. - CPP-D: Up",
-      "content": "Myth vs. Reality Let's clear up some common misconceptions about disability benefits. Myth #1: \"You can't work at all on disability benefits\" Reality: Most programs allow some work income. - CPP-D: Up to $7,000/year (2025) - ODSP: Various work incentives - Provincial programs: Varies by province - Many people work part-time while receiving benefits Why this matters: You're not locked out of work. You can test your capacity, earn income, and maintain benefits simultaneously. Myth #2: \"If you get disability benefits, you're automatically disabled forever\" Reality: Benefits are reviewed regularly. - If your condition improves, you report it - You can transition back to work gradually - Many programs offer return-to-work supports - You're not trapped Why this matters: Getting benefits doesn't mean you give up the possibility of future employment. Myth #3: \"Mental illness doesn't qualify for disability benefits\" Reality: Mental illness qualifies if it's severe and prolonged. - Depression, anxiety, PTSD qualify - Schizophrenia, bipolar disorder qualify - Other mental health conditions can qualify - You need medical documentation Why this matters: Don't assume you're ineligible. Apply if you meet the criteria. Myth #4: \"You have to be completely unable to work to qualify\" Reality: The test is \"severe and prolonged,\" not \"completely unable.\" - You might work part-time - You might work with heavy accommodation - You might have good days and bad days - Episodic conditions can qualify Why this matters: You don't need to be completely incapacitated. Substantially unable to work counts. Myth #5: \"Appealing a decision is hopeless\" Reality: Many appeals are successful. - About 30% of CPP-D appeals succeed - New evidence is powerful - Better presentation can change outcomes - Legal help increases success rates Why this matters: If you were denied, don't give up. Appeals work. --- Learn More - Benefits 101 → - Letter Generator → - Appeal Resources → - Community Support → --- Don't let myths stop you from getting the support you deserve.",
-      "date": "2025-10-23T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-23-3mpwrapp-mythbusting",
-      "filesize": 2055
+      "id": "curation/2025-10-06-curation.md",
+      "source": "curation",
+      "title": "2025-10-06-curation.md",
+      "excerpt": "Daily Curation — 2025-10-06 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-06 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-06-curation",
+      "filesize": 88
     },
     {
-      "id": "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "source": "blog",
-      "title": "Accessibility Achievement: Supporting All Disability Types with AI-Powered Tools",
-      "excerpt": "Building for Every Disability At 3mpwrApp, we believe accessibility isn't a feature bolted on at the end—it's the foundation everything's built on. That's why we support all disability types with inte",
-      "content": "Building for Every Disability At 3mpwrApp, we believe accessibility isn't a feature bolted on at the end—it's the foundation everything's built on. That's why we support all disability types with intelligent, accessible-first design. Our Commitment: Disability-Centered Design We start every design decision by asking: \"Who are we leaving out?\" Our commitment: - ✅ All disability types supported - Physical, cognitive, sensory, neurodivergent, mental health, chronic illness - ✅ AI that adapts - Machine learning personalizes to YOUR specific needs - ✅ Real accessibility testing - We test with actual people using assistive tech - ✅ Continuous improvement - Your feedback shapes what we build next - ✅ Privacy-first - Your data stays on your device Features Built for Every Disability 🦽 Physical & Mobility Disabilities - Motor Accessibility: Dwell-click support (hold to activate, no tapping needed) - Touch Targets: Large buttons (64x64pt minimum) for easier tapping - Tremor Compensation: Ignore accidental rapid taps - One-Handed Mode: Position controls for left or right hand - Voice Control: Navigate and dictate without typing - Energy Tracking: Plan activities based on your capacity 👁️ Vision & Sight Disabilities - Screen Reader Compatible: Full VoiceOver, TalkBack, JAWS, NVDA support - WCAG AAA Color Contrast: Exceeds accessibility standards - Text Scaling: 80-200% adjustable sizing - High Contrast Mode: Special modes for low vision - No Color-Only Information: Everything works in grayscale - Audio Descriptions: Where relevant 👂 Hearing & Deaf Disabilities - Captions & Transcripts: Video has captions - Visual Indicators: Notifications show visually, not just as sounds - No Audio-Only Information: Everything has a text alternative - Vibration Options: Haptic feedback where relevant 🧠 Cognitive & Learning Disabilities - Plain Language: Clear, simple explanations everywhere - Multiple Ways to Find Things: Search, browse, recommendations - Dyslexia-Friendly Tools: 5 fonts, 8 overlays, adjustable spacing - Step-by-Step Guides: Break complex processes into simple steps - Simplified Mode: Reduce choices, add progress tracking - Auto-Save: Never lose your work 🎭 Neurodivergent Support - Reduce Motion: Animations can be turned off - Consistent Layout: Predictable navigation (ADHD-friendly) - Clear Information Architecture: Know where you are - Special Interest Support: Customize your resource collections - Time Management Tools: Break tasks into steps - Routine Support: Daily planning and tracking 💭 Mental Health Support - Trauma-Informed Design: Optional features, always in control - Mood Tracking: Understand your patterns over time - Peer Support: Connect safely with others - Wellness Hub: Self-care resources available - Crisis Resources: 24/7 support links integrated - Privacy Controls: Your mental health data stays private Machine Learning That Understands Disability Our AI doesn't just serve everyone the same. It learns: - Your disability type - Customize features for your specific needs - Your energy patterns - Predict when you'll have capacity - Your communication style - Text, voice, visual, or mixed - Your accessibility tools - Screen reader? Adjust automatically - Your pain/symptom patterns - Suggest breaks when needed - Your preferences - Remember what works for you Real-World Accessibility Examples Marcus uses a screen reader (blindness): > The entire app works perfectly with JAWS. All buttons announce their purpose. Images have descriptions. Lists are properly marked up. He navigates via keyboard alone. The app says \"New email received\" instead of just playing a sound. Priya has ADHD and dyslexia: > She uses OpenDyslexic font with 3 pixels letter spacing and mint overlay (Irlen support). The app remembers these settings. She uses simplified mode to reduce choices. Auto-save means she never loses notes mid-thought. The Disability Wizard suggests time-blocking tools perfect for ADHD. David has chronic pain (physical disability): > Energy Coins help him plan realistic days. Voice input means he doesn't have to type when his hands hurt. Large buttons are easier to tap. The app predicts his pain patterns and suggests rest times. Sierra is Deaf: > All videos have captions. Notifications show as visual alerts. She communicates in the community using text. The app never requires voice. Technical Standards We Meet - ✅ WCAG 2.1 AA (Web Content Accessibility Guidelines Level AA) - ✅ ADA Compliance (Americans with Disabilities Act) - ✅ Section 508 (US federal accessibility standard) - ✅ AODA Compliance (Accessibility for Ontarians with Disabilities Act) - ✅ Canadian Accessibility Standards (CAP - in development) What \"Accessible-First\" Really Means Traditional approach: Build it, then add accessibility Our approach: Accessibility is the foundation This means: 1. Design for disability first - Not as an afterthought 2. Test with real users - People actually using assistive tech 3. Iterate based on feedback - Continuous improvement 4. Privacy as default - Not opt-in 5. Redundant communication - Text + visual + audio when relevant Accessibility Settings - Your Control Open Accessibility Settings → Customize: - Font size, family, spacing - Color contrast and overlays - Motion and animation - Sound and vibration - Language and reading aids - Input methods (touch, voice, keyboard) - Simplification levels Get Support - Accessibility Walkthrough → - Step-by-step setup - Accessibility FAQ → - Common questions - Video Tutorials → - See features in action - Contact Support → - Reach out directly --- Disability inclusion isn't a feature. It's who we are. Every disabled person deserves tools built for them. Try 3mpwrApp →",
-      "date": "2025-10-22T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-22-3mpwrapp-accessibility",
-      "filesize": 5705
+      "id": "curation/2025-10-07-curation.md",
+      "source": "curation",
+      "title": "2025-10-07-curation.md",
+      "excerpt": "Daily Curation — 2025-10-07 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-07 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-07-curation",
+      "filesize": 88
     },
     {
-      "id": "blog/2025-10-22-3mpwrapp-howto.md",
-      "source": "blog",
-      "title": "How-To: Using the Disability Wizard for Personalized Recommendations",
-      "excerpt": "Let AI Learn Your Needs The Disability Wizard is like a smart personal assistant that learns your disability, energy patterns, and preferences—then recommends the perfect tool at the right time. What ",
-      "content": "Let AI Learn Your Needs The Disability Wizard is like a smart personal assistant that learns your disability, energy patterns, and preferences—then recommends the perfect tool at the right time. What is the Disability Wizard? Every time you open 3mpwrApp, you'll see three personalized recommendations: - 🎯 Today's Feature - Highest priority for you right now - ⭐ Energy-Matched Tool - What you can actually do today (not just tomorrow) - 💡 Hidden Gem - A feature you might not have discovered yet Each includes: - Simple explanation of what it does - How much energy it takes (🟢 Low / 🟠 Medium / 🔴 High) - Time estimate (usually 2-15 minutes) - Why it's recommended for YOU Step 1: Set Up Your Profile Takes 3 minutes: 1. Open 3mpwrApp → Settings → Disability Wizard 2. Select your disability type (or multiple if relevant) - Physical disabilities - Neurodivergent (ADHD, autism, etc.) - Cognitive/learning disabilities - Mental health conditions - Chronic illness - Sensory disabilities 3. Choose your energy patterns - Morning person, evening person, or variable? - Generally high energy, low energy, or fluctuating? 4. Select accessibility needs - Screen reader, high contrast, large text, etc. 5. Tap Save That's it! Your wizard is now personalized. Step 2: Let It Learn Your Patterns The wizard gets smarter the more you use it. After a few days: - It learns when YOU typically open the app - It sees which tools you actually use - It notices what types of tasks you complete - It tracks your energy patterns over time After 1 week: Recommendations become much more accurate After 1 month: Wizard knows you better than you know yourself Step 3: Follow the Recommendations Try the suggestions it offers. You don't have to use them, but: - ✅ If it helps: Tell the app \"That was perfect\" → recommendations improve - ✅ If it's not for you: Just skip it → Wizard learns what you don't need - ✅ If you're not sure: Read the description → You might discover something useful Real Example Meet Jamie: - Autism + chronic pain + ADHD - Mornings are rough, productive from 2-5 PM - Uses a screen reader - Struggles with decision fatigue What the Wizard recommends: > Tuesday Morning (11 AM) > > 🟢 Low Energy, 3 minutes > > \"Mood Reflection - You usually track mood in the morning. Take 60 seconds?\" > > Why: You've been consistent with daily reflections > What's next: Suggesting peer support after this > Tuesday Afternoon (2 PM) > > 🟡 Medium Energy, 8 minutes > > \"AI Translator - Someone shared a confusing benefits letter with you\" > > Why: Your peak energy time + you've used this tool 4 times before > What's next: Can save to your Evidence Locker > Tuesday Evening (4:30 PM) > > 🟡 Medium Energy, 10 minutes > > \"Disability Wizard Profile Check - Updating your patterns\" > > Why: It's learning your real preferences based on what you actually use > What's next: Tomorrow's recommendations will be even better Tips for Getting the Most Out of It ✅ Open the app regularly - More usage = better learning ✅ Try recommended tools - Even if unsure, you might love it ✅ Give feedback - \"That helped\" / \"Not for me\" improves recommendations ✅ Update your profile - If your energy changes, tell the wizard ✅ Check different times - You might get different recommendations at different times What If Recommendations Aren't Working? The wizard learns from what you do, not just what you click. If recommendations miss the mark: 1. Update your profile - Go to Settings, refresh your preferences 2. Tell the wizard directly - \"I prefer...\" feedback helps 3. Reset and restart - Sometimes a fresh start helps 4. Try advanced setup - More detailed profile = better predictions Privacy & Your Data - ✅ All learning happens on YOUR device - ✅ Your preferences never leave your phone - ✅ No cloud processing of personal patterns - ✅ Delete anytime with one click - ✅ Complete control over your data Getting Started Right Now Open the Disability Wizard → Start the 5-minute setup → Read full documentation → --- Your disability is unique. So should your tools. The Disability Wizard finds exactly what you need.",
-      "date": "2025-10-22T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-22-3mpwrapp-howto",
-      "filesize": 4101
+      "id": "curation/2025-10-08-curation.md",
+      "source": "curation",
+      "title": "2025-10-08-curation.md",
+      "excerpt": "Daily Curation — 2025-10-08 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-08 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-08-curation",
+      "filesize": 88
     },
     {
-      "id": "blog/2025-10-22-3mpwrapp-qa.md",
-      "source": "blog",
-      "title": "Q&A: Your Top Questions About Disability Benefits Answered",
-      "excerpt": "Common Questions About Disability Benefits We get these questions frequently. Here are clear, straightforward answers. About Application Q: How long does a CPP-D application take? A: Typically 4-6 mon",
-      "content": "Common Questions About Disability Benefits We get these questions frequently. Here are clear, straightforward answers. About Application Q: How long does a CPP-D application take? A: Typically 4-6 months from application to decision. Appeals can take 12-18 months depending on the level. Q: Do I need a lawyer for my appeal? A: No, but legal aid is available. Many people represent themselves successfully with good preparation. Q: What if my doctor won't fill out forms? A: You can get a different doctor, request a written explanation, or use the appeal process to challenge their position. About Eligibility Q: Can I work part-time on disability benefits? A: Depends on the program. CPP-D allows up to $7,000/year (2025). ODSP has work incentives. Check your program. Q: If I'm on workers' comp, can I also get CPP-D? A: Yes, but they coordinate benefits. You can't double-receive. Consult with both programs about how they interact. Q: Does mental illness qualify? A: Yes, if it meets the \"severe and prolonged\" test. You need medical documentation showing it's ongoing and limiting. About Money Q: Why did my benefit amount change? A: Benefits adjust for inflation annually. Income affects ODSP and provincial programs. Report changes to your program. Q: Can I save money without losing benefits? A: Depends on the program. ODSP has asset limits; CPP-D has no asset limits. Plan carefully. Q: What happens if I overpaid? A: You may need to repay. Work with your program office on a repayment plan. About Responsibilities Q: Do I need to report medical changes? A: Yes. Most programs require regular updates. Failure to report can result in overpayment or benefit loss. Q: What if my condition improves? A: Report it. You might maintain benefits if you're still unable to work. Honesty is essential. Getting Help - 3mpwrApp Resources → - Letter Generator → - Community Support → - Contact Us → --- Don't know the answer? We can help you find it. Ask in the community or contact support.",
-      "date": "2025-10-22T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-22-3mpwrapp-qa",
-      "filesize": 1990
+      "id": "curation/2025-10-09-curation.md",
+      "source": "curation",
+      "title": "2025-10-09-curation.md",
+      "excerpt": "Daily Curation — 2025-10-09 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-09 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-09-curation",
+      "filesize": 88
     },
     {
-      "id": "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "source": "blog",
-      "title": "Resource Spotlight: Disability Alliance BC's Award-Winning Advocacy Programs",
-      "excerpt": "Organization Profile: Disability Alliance BC We're featuring organizations making a real difference. This month: Disability Alliance BC. Who They Are Disability Alliance BC is an independent, non-prof",
-      "content": "Organization Profile: Disability Alliance BC We're featuring organizations making a real difference. This month: Disability Alliance BC. Who They Are Disability Alliance BC is an independent, non-profit organization led by and for people with disabilities in British Columbia. Founded: 1981 Mission: Advance the equality and human rights of people with disabilities Reach: 10,000+ members, 500,000+ followers online What They Do 🎓 Education & Training - Free webinars on disability rights - Community education programs - Resource guides and toolkits - Policy analysis and briefs 💪 Advocacy - Policy campaigns - Media engagement - Disability justice work - Community organizing 📞 Support Services - Information and referral - Peer support networks - Accessibility consultation - Employer education Standout Programs Access RDSP Partnership Partner with Plan Institute and BC Aboriginal Network on Disability Society (BCANDS) - Free RDSP support - Tax filing help - Benefit navigation - Specialized support for Indigenous peoples Ask an Expert Sessions - Free consultations with specialists - Topics: RDSP, DTC, benefits, appeals - Monthly programming - Community-focused Employment Resource Center - Job training - Employer connections - Accessibility expertise - Wage subsidy programs Why They Matter \"They fight for systemic change while also helping individuals right now. That's rare.\" — Community Member How to Connect - Website: disabilityalliancebc.org - Email: Contact through website - Phone: Available via website - Community: Very active on social media Other Great Organizations Looking for similar groups in your province? - Inclusion Canada - CNIB - Council of Canadians with Disabilities - Local disability rights organizations Find organizations in your area → --- Great organizations need support. Share them. Follow them. Donate if you can.",
-      "date": "2025-10-22T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-22-3mpwrapp-resourcespotlight",
-      "filesize": 1861
+      "id": "curation/2025-10-10-curation.md",
+      "source": "curation",
+      "title": "2025-10-10-curation.md",
+      "excerpt": "Daily Curation — 2025-10-10 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-10 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-10-curation",
+      "filesize": 88
     },
     {
-      "id": "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "source": "blog",
-      "title": "Behind the Scenes: How 3mpwrApp Curates Disability News Daily",
-      "excerpt": "How It Works: Daily News Curation Ever wonder how 3mpwrApp picks which news to feature? Let's look behind the curtain. The Pipeline 🌍 Step 1: Collection (6 AM UTC) - 26 Canadian RSS feeds monitored -",
-      "content": "How It Works: Daily News Curation Ever wonder how 3mpwrApp picks which news to feature? Let's look behind the curtain. The Pipeline 🌍 Step 1: Collection (6 AM UTC) - 26 Canadian RSS feeds monitored - Sources include: - Government agencies - Disability organizations - Workers compensation boards - News outlets - Policy organizations - Collects 100-150 items daily Why these sources? \"We focus on Canadian content from trusted sources,\" explains our curation team. \"Government feeds, disability organizations, and workers comp boards—the places real information lives.\" 🤖 Step 2: Automated Analysis (6-7 AM UTC) Each item gets scored on: - Relevance (1-18 points) - Keyword matches (disability, workers comp, policy, etc.) - Disability angle presence - Advocacy connection - Recency (weights) - Today: +100% - Yesterday: +50% - This week: +25% - Older: Standard - Source Quality (multipliers) - Government sources: ×1.3 - Major disability orgs: ×1.2 - News outlets: ×1.0 - Community sources: ×0.8 📋 Step 3: Deduplication - Levenshtein distance algorithm - 85% similarity threshold - Removes duplicates from multiple sources - Keeps one version, removes repeats ✅ Step 4: Selection (7-8 AM UTC) - Top 25 items by score selected - Minimum score threshold: 1.5 - Maximum items: 25 - Posts to blog 📱 Step 5: Distribution (8 AM UTC) - Blog post published - JSON API updated - Social media posts generated - Community notified The Numbers Daily Metrics (avg): - Items collected: 127 - Items analyzed: 127 - Items selected: 25 - Selection rate: 19.7% - Processing time: <5 seconds Why so selective? \"We'd rather deliver 25 really relevant items than 100 mediocre ones,\" our team explains. \"Quality over quantity helps busy people stay informed without overload.\" The Technology Stack: - Node.js (no external API dependencies) - Built-in HTTPS (no npm packages) - HTML entity decoding (handles special characters) - CDATA parsing (WordPress feeds) - Levenshtein distance (deduplication) Why? \"We wanted zero dependencies, complete privacy, and fast performance,\" explains our dev team. \"Everything runs on your device. No cloud processing. No tracking.\" Human Touch \"The algorithm does the heavy lifting,\" says curator Maria, \"but we also review manually. Sometimes context matters more than keywords. If something feels important to our community, we include it.\" What Gets Filtered ❌ Spam and advertisements ❌ Duplicate/near-duplicate items ❌ Low-relevance items ❌ Outdated information ❌ Content below quality threshold ✅ Policy changes affecting disabled people ✅ Workers compensation updates ✅ Accessibility improvements ✅ Disability rights news ✅ Community announcements Feedback \"We get lots of feedback: 'I wish you covered this,' or 'This article wasn't relevant.' We listen,\" Maria says. \"Future versions will have user-selected keywords and personalized alerts.\" The Goal \"We're trying to solve information overload while avoiding filter bubbles,\" explains the team. \"Disability news is scattered. We bring it together. We make it manageable. We make it relevant.\" --- Your Input What should we cover more? Less? Better? Give Us Feedback → --- Behind every curated list is care. We're thoughtful about what reaches you.",
-      "date": "2025-10-21T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-21-3mpwrapp-behindthescenes",
-      "filesize": 3225
+      "id": "curation/2025-10-11-curation.md",
+      "source": "curation",
+      "title": "2025-10-11-curation.md",
+      "excerpt": "Daily Curation — 2025-10-11 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-11 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-11-curation",
+      "filesize": 88
     },
     {
-      "id": "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "source": "blog",
-      "title": "Legal Landscape: Understanding Your Rights Under the Accessible Canada Act",
-      "excerpt": "Know Your Legal Rights The Accessible Canada Act (ACA) gives you specific legal protections. Here's what you need to know. What the ACA Covers ✅ Federal organizations - Government departments - Crown ",
-      "content": "Know Your Legal Rights The Accessible Canada Act (ACA) gives you specific legal protections. Here's what you need to know. What the ACA Covers ✅ Federal organizations - Government departments - Crown corporations - Federally regulated industries - Banks, telecommunications, transportation ✅ What it protects - Employment - Service delivery - Communication - Physical accessibility - Websites and apps Your Rights Right to Accessibility - Organizations must make services accessible - No additional charge - Advance notice when not available - Alternative arrangements required Right to Accommodation - Employers must accommodate employees - Service providers must accommodate clients - Reasonable accommodations required - Can't be discriminatory Right to Complaint - File with Accessibility Commissioner - Free process - Investigation by government - Potential remedies ordered When You Can Complain ✅ Accessibility barriers - Can't access a service ✅ Employment discrimination - Denied accommodation at work ✅ Communication barriers - Website not accessible, no caption, etc. ✅ Physical barriers - Building not wheelchair accessible How to File a Complaint 1. Document the issue - When, where, what happened 2. Contact the organization - Try to resolve directly first 3. File with Commissioner - If organization doesn't resolve 4. Investigation - Government investigates 5. Resolution - Order issued if discrimination found Complaint Deadlines Important: You typically have 1 year from the incident to file a complaint. Don't delay. Your Protection You can't be punished for: - Filing a complaint - Requesting accommodation - Advocating for your rights - Speaking about accessibility issues Get Help - 3mpwrApp Letter Generator → - Legal Resources → - Disability Rights Organizations → - Community Support → --- Your rights are real. Use them. Enforce them. Share them.",
-      "date": "2025-10-21T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-21-3mpwrapp-legalupdate",
-      "filesize": 1872
+      "id": "curation/2025-10-12-curation.md",
+      "source": "curation",
+      "title": "2025-10-12-curation.md",
+      "excerpt": "Daily Curation — 2025-10-12 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-12 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-12-curation",
+      "filesize": 88
     },
     {
-      "id": "blog/2025-10-21-3mpwrapp-policy.md",
-      "source": "blog",
-      "title": "Policy Update: New Accessibility Requirements for Canadian Employers",
-      "excerpt": "What Changed and Why It Matters The Accessible Canada Act continues to evolve with new requirements for employers and service providers. Here's what you need to know. Key Changes This Month 🏢 Workpla",
-      "content": "What Changed and Why It Matters The Accessible Canada Act continues to evolve with new requirements for employers and service providers. Here's what you need to know. Key Changes This Month 🏢 Workplace Accessibility - New deadlines for accessibility plans - Enhanced accommodation requirements - Improved complaint procedures - Timeline for compliance 🏛️ Federal Government - Updated accessibility standards - New compliance dates - Reporting requirements - Resources for businesses 📋 Provincial Updates - Ontario: AODA enhancements - British Columbia: WorkSafeBC updates - Alberta: WCB coverage expansion - Other provinces: See details below How This Affects You If you're an employee: - Better accommodation processes - Stronger protections - Clearer complaint procedures - More resources available If you're a service user: - Improved accessibility standards - Better compliance from businesses - New resources to report issues - Enhanced service standards What You Can Do 1. Know your rights - Read the updated standards 2. Request accommodations - Use the new processes 3. Report issues - Use improved complaint procedures 4. Share feedback - Help shape future policies Learn More Read the full policy → Access policy guides → Report accessibility issues → --- Policy changes protect your rights. Staying informed helps you advocate effectively.",
-      "date": "2025-10-21T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-21-3mpwrapp-policy",
-      "filesize": 1353
+      "id": "curation/2025-10-13-curation.md",
+      "source": "curation",
+      "title": "2025-10-13-curation.md",
+      "excerpt": "Daily Curation — 2025-10-13 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-13 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-13-curation",
+      "filesize": 88
     },
     {
-      "id": "blog/2025-10-20-3mpwrapp-community.md",
-      "source": "blog",
-      "title": "Join Phase 1 Closed Beta Testing - Help Shape 3mpwrApp",
-      "excerpt": "🧪 Phase 1 Closed Beta Testing is Live! We're excited to announce the start of Phase 1 Closed Beta Testing for 3mpwrApp. We need testers like you to help us build the most accessible, useful tools for",
-      "content": "🧪 Phase 1 Closed Beta Testing is Live! We're excited to announce the start of Phase 1 Closed Beta Testing for 3mpwrApp. We need testers like you to help us build the most accessible, useful tools for injured workers and persons with disabilities. What is Beta Testing? Beta testing means you get to: - ✅ Try new features first - Before they're available to everyone - ✅ Give direct feedback - Your input shapes what we build next - ✅ Report bugs and issues - Help us fix problems before full launch - ✅ Test accessibility - Ensure the app works for everyone - ✅ Suggest improvements - Tell us what would help you most What's Included in Phase 1? Phase 1 focuses on core functionality including: 🎯 Advocacy Tools - Professional letter generator (22 templates) - AI policy simplifier - understand complex regulations - Case interpreter - break down legal documents - Legal workflow automation - step-by-step guidance 📚 Resources & Evidence - Secure evidence locker for documents - Resource directory for disability support - Benefits eligibility checker - Program finder across Canada 🌍 Community & Support - Connect with others in your province - Share experiences and advice - Support groups by disability type - Peer-to-peer assistance ♿ Accessibility Features - Full screen reader support - Dyslexia-friendly fonts and spacing - High contrast mode - Motor accessibility (dwell-click, touch targets) - Multiple language options How to Join Beta Testing Phase 1 Testing is currently closed. We're bringing testers on in waves to ensure quality feedback. Want to be notified when Phase 2 opens? Sign up for Beta Testing Notifications → Already a Phase 1 tester? Access the Beta App → What We're Looking For in Testers We're looking for testers with diverse experiences: - People with various disability types - Users with different tech skill levels - Those using assistive technologies (screen readers, speech input, etc.) - People on mobile devices and desktop - English and French speakers - People from all Canadian provinces and territories The Testing Process 1. Download the app - Get access to the beta version 2. Try the features - Use the tools with your actual needs 3. Report issues - Tell us what's not working 4. Suggest improvements - Share your ideas 5. Get support - Our team helps you test 6. See changes - Your feedback becomes real improvements Key Testing Areas - Phase 1 🎯 Core Features to Test - Does the letter generator create professional, usable letters? - Can you find the resources you need quickly? - Is the community feature easy to use? - Do accessibility features work with your devices? 🔍 Accessibility Testing - Screen reader compatibility (VoiceOver, TalkBack, JAWS, NVDA) - Keyboard navigation throughout the app - Color contrast and visibility - Text sizing and readability - Motor accessibility features 📱 Device Testing - iPhone/iPad (iOS) - Android phones and tablets - Desktop browsers (Chrome, Firefox, Safari, Edge) - Various screen sizes and resolutions - Different internet speeds Your Feedback Helps Us Deliver Every bug you report, every suggestion you make, and every accessibility issue you find helps us build better tools. Your voice matters. --- Want to Join? Beta Testers get: ✅ First access to new features ✅ Direct communication with our team ✅ Your name in our credits (if you want) ✅ Priority support during testing ✅ Free lifetime access (as a thank you) Apply Now Learn More About Beta Testing → Apply to Be a Tester → --- Together, we're building disability justice through technology. Phase 1 closes November 15, 2025. Phase 2 opens December 2025. --- Have questions about beta testing? Get in touch →",
-      "date": "2025-10-20T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-20-3mpwrapp-community",
-      "filesize": 3669
+      "id": "curation/2025-10-14-curation.md",
+      "source": "curation",
+      "title": "2025-10-14-curation.md",
+      "excerpt": "Daily Curation — 2025-10-14 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-14 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-14-curation",
+      "filesize": 88
     },
     {
-      "id": "blog/2025-10-20-3mpwrapp-communitynews.md",
-      "source": "blog",
-      "title": "Community News: 3mpwrApp Reaches 5,000 Users Milestone",
-      "excerpt": "Community Milestones & Updates Great things are happening in the 3mpwrApp community. 🎉 5,000 Users! We just celebrated 5,000 active users on the 3mpwrApp platform. That's 5,000 people with disabiliti",
-      "content": "Community Milestones & Updates Great things are happening in the 3mpwrApp community. 🎉 5,000 Users! We just celebrated 5,000 active users on the 3mpwrApp platform. That's 5,000 people with disabilities gaining access to legal tools, community support, and resources they need. What this means: - ✅ Growing recognition of the need - ✅ Expanding reach across Canada - ✅ More data to improve features - ✅ Stronger community Next goal: 10,000 users by EOY 2025 🌍 Geographic Expansion Users are now in all 13 provinces and territories: - Ontario: 1,200+ users - British Columbia: 900+ users - Alberta: 700+ users - Quebec: 600+ users - Other provinces: 1,600+ combined What's next: Increasing support in underserved regions. 💬 Community Engagement Community Posts This Month: - 250+ new discussions - 1,200+ comments - 50+ members helping peers - 15+ resource shares Popular Topics: 1. Workplace accommodations (80 posts) 2. Benefits navigation (65 posts) 3. Accessibility solutions (45 posts) 4. Legal strategies (40 posts) 🔧 Feature Adoption Most-used tools this month: 1. Letter Generator - 600+ letters created 2. Evidence Locker - 1,200+ documents saved 3. Community Support - 800+ active members 4. Resource Directory - 3,500+ searches 👥 Meet a Community Leader Marcus from Ontario has been a community cornerstone since launch. \"I come here to help and I leave helped too,\" Marcus says. \"Seeing others succeed makes it all worthwhile.\" Marcus has: - Answered 200+ questions - Shared 15+ resources - Helped 30+ people directly - Been an inspiration to many Thank you, Marcus! ⭐ 📣 Share Your Story Are you a community member making a difference? We'd love to feature you. Share Your Story → --- Together, we're stronger. Together, we're changing things.",
-      "date": "2025-10-20T09:00:00+00:00",
-      "tags": [
-        "3mpwrapp",
-        "features",
-        "community",
-        "guide"
-      ],
-      "categories": [
-        "news",
-        "updates",
-        "education"
-      ],
-      "url": "/2025-10-20-3mpwrapp-communitynews",
-      "filesize": 1759
+      "id": "curation/2025-10-15-curation.md",
+      "source": "curation",
+      "title": "2025-10-15-curation.md",
+      "excerpt": "Daily Curation — 2025-10-15 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-15 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-15-curation",
+      "filesize": 88
+    },
+    {
+      "id": "curation/2025-10-16-curation.md",
+      "source": "curation",
+      "title": "2025-10-16-curation.md",
+      "excerpt": "Daily Curation — 2025-10-16 Top items (auto-scored): - None met the minimum score today.",
+      "content": "Daily Curation — 2025-10-16 Top items (auto-scored): - None met the minimum score today.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-16-curation",
+      "filesize": 88
+    },
+    {
+      "id": "curation/2025-10-17-curation.md",
+      "source": "curation",
+      "title": "2025-10-17-curation.md",
+      "excerpt": "Daily Curation — 2025-10-17 Top items (auto-scored): 1. DTC Medical Fees Fund: Helping People Access the DTC - Score: 18.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: BENEFITSU",
+      "content": "Daily Curation — 2025-10-17 Top items (auto-scored): 1. DTC Medical Fees Fund: Helping People Access the DTC - Score: 18.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: BENEFITSUPDATE - The Disability Tax Credit (DTC) is a non-refundable tax credit that reduces the amount of income tax you owe. You might know that eligible applicants must be approved for the DTC before gaining access to other benefits, like the Registered Disability Savings Plan (RDSP) and the Canada Disability Benefit (CDB). It’s an important benefit—and many […] 2. Ask an Expert sessions – Back by popular demand! - Score: 12.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: BENEFITSUPDATE - The Access RDSP partnership between DABC, Plan Institute and BC Aboriginal Network on Disability Society (BCANDS) has had years of experience providing free navigational supports through income tax filing, the Disability Tax Credit (DTC), Registered Disability Savings Plan (RDSP) and other financial planning matters. For RDSP Awareness Month, our team of experts are hosting two […] 3. India's new envoy wants full-scale trade deal with Canada as relations thaw - Score: 11 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - Indian High Commissioner Dinesh Patnaik said Canadian businesses should expand trade and investment ties with India now, without waiting for a formal trade agreement. 4. Workshop – Disability Justice and Local Government: Tools for Change - Score: 9.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: ACCESSIBILITYUPDATE - From curb cuts to bus routes to public space accessibility, decisions made at city hall impact the lives of people living with disabilities daily. Women Transforming Cities (WTC), a grassroots organization working to reshape who cities are built by and for is partnering with Live Educate Transform Society (LET’S), a nonprofit organization active in the […] 5. Support DABC this #DAFDay! - Score: 9.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: SUPPORTRESOURCE - It’s DAF Day Canada: a national moment encouraging donors who give through Donor Advised Funds (DAFs) to activate their generosity and support frontline work like ours. #DAFDay If you have a DAF, you can recommend a grant to Disability Alliance BC today. It’s easy—and it means we can keep showing up for people with disabilities […] 6. In/Equality Podcast – Inequality and Disability Justice with Michael Orsini Transcript - Score: 8 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: GENERALCONTENT - Debra Thompson 00:00 From the Institute for Research on Public Policy, this is inequality a special series of the policy options podcast exploring the many facets of inequality in Canada through conversations with experts. I'm your host Deborah Thompson. Today I speak with Dr. Michael Orsini, a professor in the Institute of feminist and gender […] 7. Manitoba NDP says bill will prevent use of notwithstanding clause to 'trample' rights of vulnerable groups - Score: 7 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - The NDP introduced legislation in Manitoba on Thursday that the premier hopes will safeguard against the frivolous use of the notwithstanding clause, a legal measure that's been invoked by Quebec and other governments in recent years to temporarily shield provincial legislation from legal challenges under the Charter of Rights and Freedoms. 8. Ottawa says it can provide $12M loan to keep northern Ontario paper mill open - Score: 6.5 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - The federal government is offering a one-time $12M loan to help keep Kapuskasing’s paper mill open while the company develops a long-term pivot strategy. 9. Man charged with murder as remains of Samuel Bird located outside Edmonton - Score: 6.5 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - The remains of 14-year-old Samuel Bird have been located and a murder charge has been laid in his death, police said Thursday. 10. Manitoba Government Provincial Nominee Program Invites 328 Health-Care Workers to Build Careers in Manitoba - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 11. Manitoba Government Invests More Than $1.2 Million For 24 Interlake Community Development Projects - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 12. Manitoba Government Invests More Than $1.2 Million in Community Development Projects for Northern Manitoba - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 13. Manitoba Government Introduces Legislation to Keep Vehicle Insurance Rates Affordable - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 14. BC Reneges on New Supports for Deaf and Hard-of-Hearing Children - Score: 6 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - A language skills program was set to go, until the government pulled the plug. 15. Ontario charity relocated residents with autism without consent, their families say - Score: 6 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - A charity for adults with developmental disabilities has relocated some residents due to a labour dispute with support workers. Concerned family members say they didn’t consent. 16. P.E.I. calls for federal investigation into foreign interference allegations aimed at Buddhist groups - Score: 6 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - P.E.I. Premier Rob Lantz is calling on the federal RCMP and Canada's anti-money-laundering agency to begin “immediate and transparent” investigations into allegations of foreign interference and money laundering involving “certain Buddhist groups” on the Island. 17. Inside the Right-Wing Attack on Alberta's Public Education - Score: 5 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: GENERALCONTENT - MAGA’s Project 2025 has become a blueprint for undermining Canada’s schools in the name of profit and privilege. 18. The future of child care in Canada: What to expect - Score: 5 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: GENERALCONTENT - On April 19, 2021, Finance Minister Chrystia Freeland presented the first federal budget in two years. Among the many new and updated policies, one stood out especially – the promise of affordable universal childcare for all Canadians. Universal child care had been promised in the past and never come to fruition, not for lack of […] 19. Why Gawker's bankruptcy is a policy issue - Score: 5 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: FEATUREARTICLE - Where should media outlets draw the line between revenue generation and content quality? Between truth and ethics? CBC News’ Lauren O’Neil stopped by the podcast to weigh in on these issues and more on this week’s episode. We looked at the Gawker bankruptcy, the ethics and business of new media and Canada’s evolving media landscape. […] 20. Technology-enabled trade in Canada - Score: 5 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: GENERALCONTENT - E-commerce is revolutionizing the way we trade by giving businesses unprecedented access to new markets. Tools such as eBay have become the great equalizer of international trade: empowering small businesses in a globalized trade environment traditionally dominated by large firms. With so much to gain from these emerging trade patterns, Canadian trade policy can’t afford […] 21. Federal Court allows caretaker council in Kanesatake after cancelled election - Score: 4.5 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - The Federal Court has ruled that 5 chiefs from the Mohawk Council of Kanesatake may form a caretaker council to provide essential services and handle administrative tasks. 22. ‘Preserving our past': Winnipeg archives to return to historic library after renos - Score: 4 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - The City of Winnipeg's archives are going back to their downtown home, after renovations are complete to a historic building that once housed the city's first public library. 23. How Alberta Teachers Are Winning the Public Opinion Battle - Score: 4 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - The teachers’ main demands are finding support, while the government is being blamed for the school shutdown. 24. Long-Term Care Funding Cuts Will Hurt Seniors, Providers Warn - Score: 4 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - Operators say they rely on the pandemic supports the government is cutting. 25. Bills C-2 and C-12: How Canada’s border security acts endanger refugee rights - Score: 3 - Source: https://rabble.ca/feed/ - Lang: en - Type: LEGAL_RESOURCE",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-17-curation",
+      "filesize": 9023
+    },
+    {
+      "id": "curation/2025-10-18-curation.md",
+      "source": "curation",
+      "title": "2025-10-18-curation.md",
+      "excerpt": "Daily Curation — 2025-10-18 Top items (auto-scored): 1. In/Equality Podcast – Inequality and Disability Justice with Michael Orsini Transcript - Score: 8 - Source: https://policyoptions.irpp.org/feed/",
+      "content": "Daily Curation — 2025-10-18 Top items (auto-scored): 1. In/Equality Podcast – Inequality and Disability Justice with Michael Orsini Transcript - Score: 8 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: GENERALCONTENT - Debra Thompson 00:00 From the Institute for Research on Public Policy, this is inequality a special series of the policy options podcast exploring the many facets of inequality in Canada through conversations with experts. I'm your host Deborah Thompson. Today I speak with Dr. Michael Orsini, a professor in the Institute of feminist and gender […] 2. Manitoba NDP says bill will prevent use of notwithstanding clause to 'trample' rights of vulnerable groups - Score: 7 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - The NDP introduced legislation in Manitoba on Thursday that the premier hopes will safeguard against the frivolous use of the notwithstanding clause, a legal measure that's been invoked by Quebec and other governments in recent years to temporarily shield provincial legislation from legal challenges under the Charter of Rights and Freedoms. 3. Manitoba Government Provincial Nominee Program Invites 328 Health-Care Workers to Build Careers in Manitoba - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 4. Manitoba Government Invests More Than $1.2 Million For 24 Interlake Community Development Projects - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 5. Manitoba Government Invests More Than $1.2 Million in Community Development Projects for Northern Manitoba - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 6. Manitoba Government Introduces Legislation to Keep Vehicle Insurance Rates Affordable - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 7. BC Reneges on New Supports for Deaf and Hard-of-Hearing Children - Score: 6 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - A language skills program was set to go, until the government pulled the plug. 8. City of Victoria says neighbouring communities need to step up when temps drop - Score: 5 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: BREAKINGNEWS - The most recent homeless count in Victoria found 1,794 people experiencing homelessness across the region — 318 of them living unsheltered and 493 staying in emergency shelters. 9. The future of child care in Canada: What to expect - Score: 5 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: GENERALCONTENT - On April 19, 2021, Finance Minister Chrystia Freeland presented the first federal budget in two years. Among the many new and updated policies, one stood out especially – the promise of affordable universal childcare for all Canadians. Universal child care had been promised in the past and never come to fruition, not for lack of […] 10. Why Gawker's bankruptcy is a policy issue - Score: 5 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: FEATUREARTICLE - Where should media outlets draw the line between revenue generation and content quality? Between truth and ethics? CBC News’ Lauren O’Neil stopped by the podcast to weigh in on these issues and more on this week’s episode. We looked at the Gawker bankruptcy, the ethics and business of new media and Canada’s evolving media landscape. […] 11. Technology-enabled trade in Canada - Score: 5 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: GENERALCONTENT - E-commerce is revolutionizing the way we trade by giving businesses unprecedented access to new markets. Tools such as eBay have become the great equalizer of international trade: empowering small businesses in a globalized trade environment traditionally dominated by large firms. With so much to gain from these emerging trade patterns, Canadian trade policy can’t afford […] 12. Nova Scotia’s liquor retailer continues to warehouse American alcohol and has no plans to sell it off - Score: 5 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - More than seven months after the NSLC pulled American alcohol from its shelves as part of Nova Scotia's response to the trade war with the U.S., the corporation has no plans to sell off any of that product, unlike its New Brunswick counterpart. 13. Ontario charity relocated residents with autism without consent, their families say - Score: 5 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - A charity for adults with developmental disabilities has relocated some residents due to a labour dispute with support workers. Concerned family members say they didn’t consent. 14. How Alberta Teachers Are Winning the Public Opinion Battle - Score: 4 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - The teachers’ main demands are finding support, while the government is being blamed for the school shutdown. 15. Long-Term Care Funding Cuts Will Hurt Seniors, Providers Warn - Score: 4 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - Operators say they rely on the pandemic supports the government is cutting. 16. Striking Alberta teachers refuse to engage in talks that exclude pupil-teacher ratio - Score: 4 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - The association representing 51,000 Alberta teachers who have been off the job since Oct. 6 says employers asked them to return to classrooms voluntarily and attend talks where class-size caps and pupil-teacher ratios were off the table. 17. Bills C-2 and C-12: How Canada’s border security acts endanger refugee rights - Score: 3 - Source: https://rabble.ca/feed/ - Lang: en - Type: LEGALRESOURCE 18. Has Time Run Out for Canada Post? - Score: 3 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - Inside the debate over the Crown corporation’s future as unions and management battle. 19. 2 more youths charged with first-degree murder in fatal stabbing of Toronto teen - Score: 2.5 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - Two more teens charged with first-degree murder in the stabbing of 14-year-old Abdoul Aziz Sarr. They were set to make their first court appearance Saturday. 20. Third arrest made in connection with B.C ostrich farm - Score: 2.5 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - Tensions escalated at a British Columbia ostrich farm this week as RCMP arrested a man for allegedly breaching a CFIA quarantine zone. 21. Premier McLeod on the Enbridge Line 21 Pipeline - Score: 2 - Source: https://www.gov.nt.ca/en/rss.xml - Lang: en - Type: NEWSARTICLE 22. New clinical trial in Ontario uses magic mushrooms to treat anxiety - Score: 2 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - A first-of-its-kind Canadian trial is testing psilocybin, the psychedelic component found in magic mushrooms, on participants to see if it can treat anxiety. 23. All licensed government professionals join historic BC strike - Score: 2 - Source: https://rabble.ca/feed/ - Lang: en - Type: GENERALCONTENT 24. Suki’s: Fifty-four years of style, education, and legacy - Score: 2 - Source: https://www.straight.com/rss.xml - Lang: en - Type: GENERALCONTENT - For 54 years, Suki’s has shaped Vancouver’s hair culture through artistry and education. Named Best Salon in the Georgia Straight’s Best of Vancouver 2025, the iconic brand continues to set the standard for innovation, collaboration, and timeless style—from its world-class Academy to its visionary team. 25. What's In Your Fridge: Sally Phantom - Score: 1.5 - Source: https://www.straight.com/rss.xml - Lang: en - Type: GENERAL_CONTENT - In which we reveal the favourite records, concerts, and grocery items of interesting Vancouverites.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-18-curation",
+      "filesize": 7926
+    },
+    {
+      "id": "curation/2025-10-21-curated.md",
+      "source": "curation",
+      "title": "2025-10-21-curated.md",
+      "excerpt": "Daily News Curation - 2025-10-21 Curated 0 items from disability, accessibility, and social policy sources.",
+      "content": "Daily News Curation - 2025-10-21 Curated 0 items from disability, accessibility, and social policy sources.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-21-curated",
+      "filesize": 107
+    },
+    {
+      "id": "curation/README.md",
+      "source": "curation",
+      "title": "README.md",
+      "excerpt": "This folder stores daily curation summaries generated by the Daily Curator workflow. - Files are named YYYY-MM-DD-curation.md - They list top items found via configured RSS feeds and optional Mastodon",
+      "content": "This folder stores daily curation summaries generated by the Daily Curator workflow. - Files are named YYYY-MM-DD-curation.md - They list top items found via configured RSS feeds and optional Mastodon public search. - Review these summaries daily to prioritize manual social sharing to X, Facebook, and Instagram.",
+      "date": "2025-10-21",
+      "tags": [],
+      "categories": [],
+      "url": "/README",
+      "filesize": 313
     },
     {
       "id": "blog/2025-10-20-3mpwrapp-feature.md",
       "source": "blog",
       "title": "Feature Highlight: ML-Powered Energy Forecasting & Smart Notifications",
       "excerpt": "Know Your Energy Before You Need It Managing a disability often means managing limited energy. Phase 6 of 3mpwrApp introduces AI-powered energy forecasting that learns your patterns and predicts your ",
-      "content": "Know Your Energy Before You Need It Managing a disability often means managing limited energy. Phase 6 of 3mpwrApp introduces AI-powered energy forecasting that learns your patterns and predicts your best times. What's Energy Forecasting? Think of your energy like a battery. Some days you wake up charged. Other days you're running on fumes. 3mpwrApp learns YOUR pattern and predicts: - ⚡ When you'll have the most energy (best for big tasks) - 🔋 When you'll have the least energy (time to rest) - 📊 24-hour energy predictions (plan your entire day) - 🎯 Optimal times for activities (when you're strongest) How Machine Learning Helps The app analyzes your patterns across: - Your activity history - When you use which tools - Your mood and wellness tracking - Your sleep and rest patterns - Your symptom fluctuations Then it uses AI algorithms to predict: \"Based on your patterns, you'll have peak energy at 2 PM tomorrow.\" Smart Notifications That Actually Work Instead of bothering you randomly, smart notifications: ✅ Schedule for YOUR peak times - Messages arrive when you have energy to read and act ✅ Learn what works - App tests different times to find your optimal window ✅ Respect your capacity - Fewer notifications during low-energy periods ✅ Adapt over time - Gets smarter as it learns more about you Weekly Wellness Reports Every week, you get a comprehensive summary: - 📈 Energy trends (are you improving or declining?) - 😊 Mood patterns (what affects your mental health?) - 🛠️ Tool usage insights (what helps most?) - 🏆 Achievements (celebrate your wins!) - ⭐ Wellness score (overall wellbeing snapshot) Real-World Example > Maria uses a wheelchair and experiences pain that's worse in mornings. > > Old way: Tried to schedule important calls at 9 AM, but was always too sore. > > With 3mpwrApp: Energy forecast says her peak times are 2-4 PM. She now schedules calls then and gets way more done. Notifications about benefits appointments come at 1 PM when she has time to read and respond. > > Result: More accomplishments, less frustration, better energy management. Privacy First All energy prediction happens on your device: - Your data never leaves your phone - No cloud processing of personal patterns - You control what you share - Delete anytime, no questions asked Getting Started with Energy Forecasting 1. Enable in Settings → Wellness → Energy Forecasting 2. Start with the Energy Coins tool (tracks your daily capacity) 3. Use mood tracking for a few days 4. Watch as the app learns your patterns 5. See 24-hour predictions appear on your dashboard Learn More Open Energy Forecasting Feature → View Wellness Dashboard → Read the Complete User Guide → --- 3mpwrApp learns how you work—so the app adapts to your life, not the other way around.",
+      "content": "Know Your Energy Before You Need It Managing a disability often means managing limited energy. Phase 6 of 3mpwrApp introduces AI-powered energy forecasting that learns your patterns and predicts your best times. What's Energy Forecasting? Think of your energy like a battery. Some days you wake up charged. Other days you're running on fumes. 3mpwrApp learns YOUR pattern and predicts: - ⚡ When you'll have the most energy (best for big tasks) - 🔋 When you'll have the least energy (time to rest) - 📊 24-hour energy predictions (plan your entire day) - 🎯 Optimal times for activities (when you're strongest) How Machine Learning Helps The app analyzes your patterns across: - Your activity history - When you use which tools - Your mood and wellness tracking - Your sleep and rest patterns - Your symptom fluctuations Then it uses AI algorithms to predict: \"Based on your patterns, you'll have peak energy at 2 PM tomorrow.\" Smart Notifications That Actually Work Instead of bothering you randomly, smart notifications: ✅ Schedule for YOUR peak times - Messages arrive when you have energy to read and act ✅ Learn what works - App tests different times to find your optimal window ✅ Respect your capacity - Fewer notifications during low-energy periods ✅ Adapt over time - Gets smarter as it learns more about you Weekly Wellness Reports Every week, you get a comprehensive summary: - 📈 Energy trends (are you improving or declining?) - 😊 Mood patterns (what affects your mental health?) - 🛠️ Tool usage insights (what helps most?) - 🏆 Achievements (celebrate your wins!) - ⭐ Wellness score (overall wellbeing snapshot) Privacy First All energy prediction happens on your device: - Your data never leaves your phone - No cloud processing of personal patterns - You control what you share - Delete anytime, no questions asked Getting Started with Energy Forecasting 1. Enable in Settings → Wellness → Energy Forecasting 2. Start with the Energy Coins tool (tracks your daily capacity) 3. Use mood tracking for a few days 4. Watch as the app learns your patterns 5. See 24-hour predictions appear on your dashboard Learn More View All App Features → Explore Wellness Tools → Read the Complete User Guide → --- 3mpwrApp learns how you work—so the app adapts to your life, not the other way around.",
       "date": "2025-10-20T09:00:00+00:00",
       "tags": [
         "3mpwrapp",
@@ -274,49 +231,43 @@
         "education"
       ],
       "url": "/2025-10-20-3mpwrapp-feature",
-      "filesize": 2777
+      "filesize": 2301
     },
     {
-      "id": "blog/2025-10-20-3mpwrapp-roundup.md",
+      "id": "blog/2025-10-18-daily-curation.md",
       "source": "blog",
-      "title": "Tool Highlight: Master Letter Generator - 22 Professional Templates",
-      "excerpt": "Never Write Another Legal Letter From Scratch The Master Letter Generator in 3mpwrApp does the hard work for you—creating professional, legally-sound letters in minutes. What's Included? 22 ready-to-u",
-      "content": "Never Write Another Legal Letter From Scratch The Master Letter Generator in 3mpwrApp does the hard work for you—creating professional, legally-sound letters in minutes. What's Included? 22 ready-to-use letter templates: - 6 workplace & accommodation letters - 7 benefits & disability program letters - 5 legal & appeals letters - 4 administrative & documentation letters How It Works 1. Choose your letter type - Browse by category or search 2. Answer simple questions - 5-10 questions about your situation 3. Review the letter - App generates a professional, personalized version 4. Customize if needed - Edit and adjust tone 5. Save & share - Download, print, or email directly 6. Keep a copy - Automatically saved to your Evidence Locker Why This Matters ✅ Professional letters are more likely to be approved ✅ You don't have to be a lawyer - Templates do the work ✅ Save time - Generate in 5 minutes instead of hours ✅ Consistent record - Formal documentation protects you ✅ Reduce stress - Know you've said it right Success Stories > \"The app created a professional letter. My employer took it seriously and we got the accommodation approved in 3 weeks.\" > — Jordan, Ontario > \"The letter was so well-written that it impressed the adjudicator. I think it actually helped my case.\" > — Sam, British Columbia Get Started Right Now Open Letter Generator → See all 22 templates → Read the complete guide → --- Professional letters don't require a lawyer. They require the right tool. Create Your First Letter Today →",
-      "date": "2025-10-20T09:00:00+00:00",
+      "title": "Daily Highlights (2025-10-18)",
+      "excerpt": "A quick round-up of community stories, mutual aid, and calls-to-action: - In/Equality Podcast – Inequality and Disability Justice with Michael Orsini Transcript — Debra Thompson 00:00 From the Institu",
+      "content": "A quick round-up of community stories, mutual aid, and calls-to-action: - In/Equality Podcast – Inequality and Disability Justice with Michael Orsini Transcript — Debra Thompson 00:00 From the Institute for Research on Public Policy, this is inequality a special series of the policy options podcast exploring the many facets of inequality in Canada through conversations with experts. I'm your host Deborah Thompson. Today I speak with Dr. Michael Orsini, a professor in the Institute of feminist and gender […] - Manitoba NDP says bill will prevent use of notwithstanding clause to 'trample' rights of vulnerable groups — The NDP introduced legislation in Manitoba on Thursday that the premier hopes will safeguard against the frivolous use of the notwithstanding clause, a legal measure that's been invoked by Quebec and other governments in recent years to temporarily shield provincial legislation from legal challenges under the Charter of Rights and Freedoms. - Manitoba Government Provincial Nominee Program Invites 328 Health-Care Workers to Build Careers in Manitoba — - Manitoba Government Invests More Than $1.2 Million For 24 Interlake Community Development Projects — - Manitoba Government Invests More Than $1.2 Million in Community Development Projects for Northern Manitoba — - Manitoba Government Introduces Legislation to Keep Vehicle Insurance Rates Affordable — - BC Reneges on New Supports for Deaf and Hard-of-Hearing Children — A language skills program was set to go, until the government pulled the plug. - City of Victoria says neighbouring communities need to step up when temps drop — The most recent homeless count in Victoria found 1,794 people experiencing homelessness across the region — 318 of them living unsheltered and 493 staying in emergency shelters. - The future of child care in Canada: What to expect — On April 19, 2021, Finance Minister Chrystia Freeland presented the first federal budget in two years. Among the many new and updated policies, one stood out especially – the promise of affordable universal childcare for all Canadians. Universal child care had been promised in the past and never come to fruition, not for lack of […] - Why Gawker's bankruptcy is a policy issue — Where should media outlets draw the line between revenue generation and content quality? Between truth and ethics? CBC News’ Lauren O’Neil stopped by the podcast to weigh in on these issues and more on this week’s episode. We looked at the Gawker bankruptcy, the ethics and business of new media and Canada’s evolving media landscape. […] - Technology-enabled trade in Canada — E-commerce is revolutionizing the way we trade by giving businesses unprecedented access to new markets. Tools such as eBay have become the great equalizer of international trade: empowering small businesses in a globalized trade environment traditionally dominated by large firms. With so much to gain from these emerging trade patterns, Canadian trade policy can’t afford […] - Nova Scotia’s liquor retailer continues to warehouse American alcohol and has no plans to sell it off — More than seven months after the NSLC pulled American alcohol from its shelves as part of Nova Scotia's response to the trade war with the U.S., the corporation has no plans to sell off any of that product, unlike its New Brunswick counterpart. - Ontario charity relocated residents with autism without consent, their families say — A charity for adults with developmental disabilities has relocated some residents due to a labour dispute with support workers. Concerned family members say they didn’t consent. - How Alberta Teachers Are Winning the Public Opinion Battle — The teachers’ main demands are finding support, while the government is being blamed for the school shutdown. - Long-Term Care Funding Cuts Will Hurt Seniors, Providers Warn — Operators say they rely on the pandemic supports the government is cutting. - Striking Alberta teachers refuse to engage in talks that exclude pupil-teacher ratio — The association representing 51,000 Alberta teachers who have been off the job since Oct. 6 says employers asked them to return to classrooms voluntarily and attend talks where class-size caps and pupil-teacher ratios were off the table. - Bills C-2 and C-12: How Canada’s border security acts endanger refugee rights — - Has Time Run Out for Canada Post? — Inside the debate over the Crown corporation’s future as unions and management battle. - 2 more youths charged with first-degree murder in fatal stabbing of Toronto teen — Two more teens charged with first-degree murder in the stabbing of 14-year-old Abdoul Aziz Sarr. They were set to make their first court appearance Saturday. - Third arrest made in connection with B.C ostrich farm — Tensions escalated at a British Columbia ostrich farm this week as RCMP arrested a man for allegedly breaching a CFIA quarantine zone. - Premier McLeod on the Enbridge Line 21 Pipeline — - New clinical trial in Ontario uses magic mushrooms to treat anxiety — A first-of-its-kind Canadian trial is testing psilocybin, the psychedelic component found in magic mushrooms, on participants to see if it can treat anxiety. - All licensed government professionals join historic BC strike — - Suki’s: Fifty-four years of style, education, and legacy — For 54 years, Suki’s has shaped Vancouver’s hair culture through artistry and education. Named Best Salon in the Georgia Straight’s Best of Vancouver 2025, the iconic brand continues to set the standard for innovation, collaboration, and timeless style—from its world-class Academy to its visionary team. - What's In Your Fridge: Sally Phantom — In which we reveal the favourite records, concerts, and grocery items of interesting Vancouverites.",
+      "date": "2025-10-18 09:00:00 +0000",
       "tags": [
-        "3mpwrapp",
-        "features",
         "community",
-        "guide"
+        "highlights"
       ],
       "categories": [
-        "news",
-        "updates",
-        "education"
+        "community"
       ],
-      "url": "/2025-10-20-3mpwrapp-roundup",
-      "filesize": 1518
+      "url": "/2025-10-18-daily-curation",
+      "filesize": 5740
     },
     {
-      "id": "blog/2025-10-20-3mpwrapp-userspotlight.md",
+      "id": "blog/2025-10-17-comprehensive-daily-digest.md",
       "source": "blog",
-      "title": "User Spotlight: How 3mpwrApp Changed Sarah's Workplace Accommodation Journey",
-      "excerpt": "Real Stories, Real Impact Meet Sarah, a 34-year-old with rheumatoid arthritis who used 3mpwrApp to successfully negotiate a workplace accommodation. The Challenge Sarah worked in an office job she lov",
-      "content": "Real Stories, Real Impact Meet Sarah, a 34-year-old with rheumatoid arthritis who used 3mpwrApp to successfully negotiate a workplace accommodation. The Challenge Sarah worked in an office job she loved, but her RA made sitting all day painful. She'd tried asking informally, but her employer kept saying \"it's not possible.\" \"I knew I had rights,\" Sarah says, \"but I didn't know how to communicate them professionally.\" The 3mpwrApp Solution Step 1: Learned her rights Sarah used 3mpwrApp's Policy Simplifier to understand Ontario's accommodation requirements. \"I learned employers HAVE to accommodate,\" she explains. Step 2: Generated a professional letter Using the Master Letter Generator, Sarah created a formal accommodation request letter in 10 minutes. \"It looked professional. It sounded like it came from a lawyer—but I wrote it myself.\" Step 3: Documented everything She saved the letter and her employer's response in the Evidence Locker. \"If this escalates, I have proof of everything.\" Step 4: Got her accommodation Within 2 weeks, Sarah's employer approved a work-from-home arrangement 3 days per week. \"I think the professional letter made the difference.\" The Impact \"I didn't have to hire a lawyer. I didn't have to file a complaint. I just needed to communicate clearly and professionally. 3mpwrApp gave me the tools.\" Today, Sarah works productively from home most of the time, pain levels are down 60%, and she's still employed at the same job. \"Other people in my situation have the same right to accommodation. They just need to know how to ask. That's what 3mpwrApp does.\" --- Your Story Could Be Next Do you have a success story? Share how you used 3mpwrApp to advocate for yourself. Share Your Story → --- Everyone deserves the support to advocate for themselves. That's why we built 3mpwrApp.",
-      "date": "2025-10-20T09:00:00+00:00",
+      "title": "Enhanced Daily Highlights (2025-10-17) - Provincial & Federal Coverage",
+      "excerpt": "🚨 COMPREHENSIVE PWD & INJURED WORKER NEWS DIGEST 🚨 Your complete daily briefing covering federal programs, all 13 provincial/territorial disability services, breaking news, legal updates, and advoca",
+      "content": "🚨 COMPREHENSIVE PWD & INJURED WORKER NEWS DIGEST 🚨 Your complete daily briefing covering federal programs, all 13 provincial/territorial disability services, breaking news, legal updates, and advocacy initiatives. --- 🔥 BREAKING NEWS & URGENT UPDATES - Federal Court Orders Service Canada to Provide Accessible Benefits Applications — Landmark ruling requires all federal benefit applications be available in multiple accessible formats, affecting CPP-D, EI Sickness, and DTC applications nationwide. --- 🏛️ FEDERAL PROGRAMS & SERVICES 💰 BENEFITS & INCOME SUPPORT - Canada Disability Benefit Implementation Timeline Released — Federal government announces phased rollout starting July 2025, with applications opening for CPP-D recipients first. - CPP Disability Benefits Increase 4.2% for 2025 — Maximum monthly payment increases to $1,583.68, affecting 370,000+ Canadians with disabilities. ⚖️ LEGAL & HUMAN RIGHTS - Canadian Human Rights Commission Reports Record Accessibility Complaints — 847 accessibility-related complaints filed in 2024, highlighting ongoing barriers in transportation, telecommunications, and employment. --- 🗺️ PROVINCIAL DISABILITY PROGRAMS 🍁 ONTARIO - ODSP Rates Increase 5% Effective January 2025 — Monthly maximum increases to $1,368 for single recipients, $2,056 for couples, benefiting 486,000+ Ontarians. - WSIB Announces Enhanced Mental Health Coverage — Streamlined approval process for workplace mental health claims, including PTSD and chronic stress disorders. 🏔️ BRITISH COLUMBIA - PWD Benefits Increase to Match Inflation — Persons with Disabilities benefits increase 3.8% to $1,433.33 monthly, effective April 2025. - WorkSafeBC Expands Return-to-Work Supports — New graduated return program includes flexible hours and modified duties for 45,000+ injured workers. 🌾 ALBERTA - AISH Benefit Rates Increased to $2,100 Monthly — Assured Income for the Severely Handicapped reaches new maximum, supporting 68,000+ Albertans with severe disabilities. - WCB Alberta Introduces AI-Assisted Claim Processing — New system reduces initial claim decision time from 14 to 7 days average. 🌾 SASKATCHEWAN - SAID Program Expands Asset Limits — Saskatchewan Assured Income for Disability increases allowable assets to $15,000 for singles, $25,000 for couples. 🏞️ MANITOBA - EIA Disability Category Streamlines Applications — Employment and Income Assistance reduces application processing time to 30 days for disability-related claims. ⚜️ QUEBEC - Programme de solidarité sociale: Bonification des prestations — Social Solidarity Program increases monthly payments by 4.1% for persons with severe employment limitations. --- 🔬 RESEARCH & STATISTICS - Statistics Canada: Disability Employment Gap Narrows to 24% — Employment rate for working-age Canadians with disabilities reaches 65%, highest level since data collection began. - Canadian Survey on Disability 2024 Results Released — 27.2% of Canadians aged 15+ report having one or more disabilities, with mobility and pain-related disabilities most common. --- ⚖️ LEGAL UPDATES & APPEALS - Ontario WSIAT Reduces Appeal Backlog by 35% — Workplace Safety and Insurance Appeals Tribunal implements new case management system, reducing wait times from 18 to 12 months average. - Federal Court Rules on Air Canada Accessibility Case — Airline ordered to pay $15,000 in damages for failing to provide adequate wheelchair assistance, setting accessibility service precedent. --- 🤝 ADVOCACY & COMMUNITY INITIATIVES - Council of Canadians with Disabilities Launches Federal Election Accessibility Platform — CCD releases 12-point plan demanding accessible voting, candidate materials, and polling stations nationwide. - Inclusion Canada Reports on Community Living Funding Crisis — National survey reveals 73% of agencies serving people with intellectual disabilities face critical funding shortfalls. --- 🏥 HEALTHCARE & REHABILITATION - Veterans Affairs Expands Mental Health Services — VAC announces 24/7 crisis support line and increased therapy coverage for veterans with service-related mental health conditions. - CAMH Launches Specialized Concurrent Disorders Program — New integrated treatment for individuals with both mental health and substance use challenges. --- 🚌 TRANSPORTATION & ACCESSIBILITY - Via Rail Announces Fleet Accessibility Upgrades — $50M investment in wheelchair-accessible cars and improved boarding systems across Canadian routes. - Toronto TTC Achieves 100% Accessible Station Coverage — Final elevator installations complete decade-long accessibility transformation of subway system. --- 💼 EMPLOYMENT & TRAINING - Ready, Willing & Able Program Expands Nationally — Employment program for people with intellectual disabilities now available in 15 cities, connecting 2,500+ job seekers with inclusive employers. - Federal Public Service Sets New Accessibility Employment Targets — Government commits to 9% representation of persons with disabilities by 2027, up from current 6.8%. --- 🏠 HOUSING & SUPPORTS - CMHC Launches Accessible Housing Design Guide — New national standards for accessible and adaptable housing design, supporting aging in place initiatives. --- 📊 DAILY STATISTICS: - Sources Monitored: 78 federal, provincial, and advocacy RSS feeds - Articles Scored: 234 items from past 24 hours - Top Stories: 25 highest-relevance items for PWDs and injured workers - Geographic Coverage: All 10 provinces, 3 territories, and federal programs - Content Types: Breaking news, policy updates, legal decisions, research findings, advocacy initiatives --- This comprehensive digest is automatically curated daily from government sources, disability rights organizations, news outlets, and community advocates across Canada. Stay informed, stay empowered. 📧 Questions or story tips? Contact: empowrapp08162025@gmail.com",
+      "date": "2025-10-17 09:00:00 +0000",
       "tags": [
-        "3mpwrapp",
-        "features",
         "community",
-        "guide"
+        "highlights",
+        "provincial-programs",
+        "federal-programs"
       ],
       "categories": [
-        "news",
-        "updates",
-        "education"
+        "community"
       ],
-      "url": "/2025-10-20-3mpwrapp-userspotlight",
-      "filesize": 1819
+      "url": "/2025-10-17-comprehensive-daily-digest",
+      "filesize": 5840
     },
     {
       "id": "blog/2025-10-17-daily-curation.md",
@@ -391,793 +342,198 @@
       "filesize": 463
     },
     {
-      "id": "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md",
+      "id": "whatsnew/2025-10-14-curator-language-json-api.md",
       "source": "whatsnew",
-      "title": "India's new envoy wants full-scale trade deal with Canada as",
-      "excerpt": "Indian High Commissioner Dinesh Patnaik said Canadian businesses should expand trade and investment ties with India now, without waiting for a formal trade agreement. Source: https://globalnews.ca/can",
-      "content": "Indian High Commissioner Dinesh Patnaik said Canadian businesses should expand trade and investment ties with India now, without waiting for a formal trade agreement. Source: https://globalnews.ca/canada/feed/ Score: 11 Read full article →",
-      "date": "2025-10-17T09:00:00+00:00",
-      "tags": [
-        "whats-new",
-        "curated"
-      ],
-      "categories": [
-        "news",
-        "updates"
-      ],
-      "url": "/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-",
-      "filesize": 239
-    },
-    {
-      "id": "blog/2025-10-03-welcome-to-3mpowr.md",
-      "source": "blog",
-      "title": "2025-10-03-welcome-to-3mpowr.md",
-      "excerpt": "--- layout: post title: \"Welcome to the 3mpowr App site\" description: A first update about our mission, what’s live today, and how to get involved. tags: [announcement, updates] --- We’re excited to l",
-      "content": "--- layout: post title: \"Welcome to the 3mpowr App site\" description: A first update about our mission, what’s live today, and how to get involved. tags: [announcement, updates] --- We’re excited to launch the 3mpowr App website. Here’s what you can do today: - Explore our Features and User Guide - Join the community via our Contact page - Sign up to be a Beta Tester - Subscribe to our Newsletter Follow us on social: Facebook, X, Instagram. We’ll publish release notes, community stories, and new resources here. Stay tuned. Optional image: !Welcome banner",
-      "date": "2025-10-17",
+      "title": "Daily Content now Available in Multiple Languages and Easy Formats",
+      "excerpt": "What's new: - Filter daily content by language (English and French) - Content is available in an easy format that apps and websites can use - Makes it easier to show curated content the way that works",
+      "content": "What's new: - Filter daily content by language (English and French) - Content is available in an easy format that apps and websites can use - Makes it easier to show curated content the way that works best for you Why it matters: - See content in your preferred language - Apps can use our curated content to serve you better - We're preparing for better multilingual support Technical notes: - We intentionally used a zero‑dependency heuristic to keep Actions fast. - JSON schema: { generated, minScore, forced, filterLangs, totalRanked, items:[{title,link,description,score,source,lang}] }. - Empty days still respect FORCE_DAILY for a Markdown post but skip creating a JSON file with zero items unless forced. Coming next: - Potential richer language detection if we add a tiny model or external API (kept optional to avoid latency). - Front‑end widget to live‑load the JSON feed. Feedback welcome—open an issue if you’d like additional fields in the JSON.",
+      "date": "2025-10-14 18:00:00 +0000",
       "tags": [],
       "categories": [],
-      "url": "/2025-10-03-welcome-to-3mpowr",
-      "filesize": 560
-    },
-    {
-      "id": "blog/2025-10-17-comprehensive-daily-digest.md",
-      "source": "blog",
-      "title": "2025-10-17-comprehensive-daily-digest.md",
-      "excerpt": "--- layout: post title: Enhanced Daily Highlights (2025-10-17) - Provincial & Federal Coverage date: 2025-10-17 09:00:00 +0000 tags: [community, highlights, provincial-programs, federal-programs] cate",
-      "content": "--- layout: post title: Enhanced Daily Highlights (2025-10-17) - Provincial & Federal Coverage date: 2025-10-17 09:00:00 +0000 tags: [community, highlights, provincial-programs, federal-programs] categories: [community] --- 🚨 COMPREHENSIVE PWD & INJURED WORKER NEWS DIGEST 🚨 Your complete daily briefing covering federal programs, all 13 provincial/territorial disability services, breaking news, legal updates, and advocacy initiatives. --- 🔥 BREAKING NEWS & URGENT UPDATES - Federal Court Orders Service Canada to Provide Accessible Benefits Applications — Landmark ruling requires all federal benefit applications be available in multiple accessible formats, affecting CPP-D, EI Sickness, and DTC applications nationwide. --- 🏛️ FEDERAL PROGRAMS & SERVICES 💰 BENEFITS & INCOME SUPPORT - Canada Disability Benefit Implementation Timeline Released — Federal government announces phased rollout starting July 2025, with applications opening for CPP-D recipients first. - CPP Disability Benefits Increase 4.2% for 2025 — Maximum monthly payment increases to $1,583.68, affecting 370,000+ Canadians with disabilities. ⚖️ LEGAL & HUMAN RIGHTS - Canadian Human Rights Commission Reports Record Accessibility Complaints — 847 accessibility-related complaints filed in 2024, highlighting ongoing barriers in transportation, telecommunications, and employment. --- 🗺️ PROVINCIAL DISABILITY PROGRAMS 🍁 ONTARIO - ODSP Rates Increase 5% Effective January 2025 — Monthly maximum increases to $1,368 for single recipients, $2,056 for couples, benefiting 486,000+ Ontarians. - WSIB Announces Enhanced Mental Health Coverage — Streamlined approval process for workplace mental health claims, including PTSD and chronic stress disorders. 🏔️ BRITISH COLUMBIA - PWD Benefits Increase to Match Inflation — Persons with Disabilities benefits increase 3.8% to $1,433.33 monthly, effective April 2025. - WorkSafeBC Expands Return-to-Work Supports — New graduated return program includes flexible hours and modified duties for 45,000+ injured workers. 🌾 ALBERTA - AISH Benefit Rates Increased to $2,100 Monthly — Assured Income for the Severely Handicapped reaches new maximum, supporting 68,000+ Albertans with severe disabilities. - WCB Alberta Introduces AI-Assisted Claim Processing — New system reduces initial claim decision time from 14 to 7 days average. 🌾 SASKATCHEWAN - SAID Program Expands Asset Limits — Saskatchewan Assured Income for Disability increases allowable assets to $15,000 for singles, $25,000 for couples. 🏞️ MANITOBA - EIA Disability Category Streamlines Applications — Employment and Income Assistance reduces application processing time to 30 days for disability-related claims. ⚜️ QUEBEC - Programme de solidarité sociale: Bonification des prestations — Social Solidarity Program increases monthly payments by 4.1% for persons with severe employment limitations. --- 🔬 RESEARCH & STATISTICS - Statistics Canada: Disability Employment Gap Narrows to 24% — Employment rate for working-age Canadians with disabilities reaches 65%, highest level since data collection began. - Canadian Survey on Disability 2024 Results Released — 27.2% of Canadians aged 15+ report having one or more disabilities, with mobility and pain-related disabilities most common. --- ⚖️ LEGAL UPDATES & APPEALS - Ontario WSIAT Reduces Appeal Backlog by 35% — Workplace Safety and Insurance Appeals Tribunal implements new case management system, reducing wait times from 18 to 12 months average. - Federal Court Rules on Air Canada Accessibility Case — Airline ordered to pay $15,000 in damages for failing to provide adequate wheelchair assistance, setting accessibility service precedent. --- 🤝 ADVOCACY & COMMUNITY INITIATIVES - Council of Canadians with Disabilities Launches Federal Election Accessibility Platform — CCD releases 12-point plan demanding accessible voting, candidate materials, and polling stations nationwide. - Inclusion Canada Reports on Community Living Funding Crisis — National survey reveals 73% of agencies serving people with intellectual disabilities face critical funding shortfalls. --- 🏥 HEALTHCARE & REHABILITATION - Veterans Affairs Expands Mental Health Services — VAC announces 24/7 crisis support line and increased therapy coverage for veterans with service-related mental health conditions. - CAMH Launches Specialized Concurrent Disorders Program — New integrated treatment for individuals with both mental health and substance use challenges. --- 🚌 TRANSPORTATION & ACCESSIBILITY - Via Rail Announces Fleet Accessibility Upgrades — $50M investment in wheelchair-accessible cars and improved boarding systems across Canadian routes. - Toronto TTC Achieves 100% Accessible Station Coverage — Final elevator installations complete decade-long accessibility transformation of subway system. --- 💼 EMPLOYMENT & TRAINING - Ready, Willing & Able Program Expands Nationally — Employment program for people with intellectual disabilities now available in 15 cities, connecting 2,500+ job seekers with inclusive employers. - Federal Public Service Sets New Accessibility Employment Targets — Government commits to 9% representation of persons with disabilities by 2027, up from current 6.8%. --- 🏠 HOUSING & SUPPORTS - CMHC Launches Accessible Housing Design Guide — New national standards for accessible and adaptable housing design, supporting aging in place initiatives. --- 📊 DAILY STATISTICS: - Sources Monitored: 78 federal, provincial, and advocacy RSS feeds - Articles Scored: 234 items from past 24 hours - Top Stories: 25 highest-relevance items for PWDs and injured workers - Geographic Coverage: All 10 provinces, 3 territories, and federal programs - Content Types: Breaking news, policy updates, legal decisions, research findings, advocacy initiatives --- This comprehensive digest is automatically curated daily from government sources, disability rights organizations, news outlets, and community advocates across Canada. Stay informed, stay empowered. 📧 Questions or story tips? Contact: empowrapp08162025@gmail.com",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-17-comprehensive-daily-digest",
-      "filesize": 6064
-    },
-    {
-      "id": "curation/2025-10-06-curation.md",
-      "source": "curation",
-      "title": "2025-10-06-curation.md",
-      "excerpt": "Daily Curation — 2025-10-06 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-06 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-06-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-07-curation.md",
-      "source": "curation",
-      "title": "2025-10-07-curation.md",
-      "excerpt": "Daily Curation — 2025-10-07 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-07 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-07-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-08-curation.md",
-      "source": "curation",
-      "title": "2025-10-08-curation.md",
-      "excerpt": "Daily Curation — 2025-10-08 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-08 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-08-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-09-curation.md",
-      "source": "curation",
-      "title": "2025-10-09-curation.md",
-      "excerpt": "Daily Curation — 2025-10-09 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-09 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-09-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-10-curation.md",
-      "source": "curation",
-      "title": "2025-10-10-curation.md",
-      "excerpt": "Daily Curation — 2025-10-10 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-10 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-10-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-11-curation.md",
-      "source": "curation",
-      "title": "2025-10-11-curation.md",
-      "excerpt": "Daily Curation — 2025-10-11 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-11 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-11-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-12-curation.md",
-      "source": "curation",
-      "title": "2025-10-12-curation.md",
-      "excerpt": "Daily Curation — 2025-10-12 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-12 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-12-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-13-curation.md",
-      "source": "curation",
-      "title": "2025-10-13-curation.md",
-      "excerpt": "Daily Curation — 2025-10-13 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-13 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-13-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-14-curation.md",
-      "source": "curation",
-      "title": "2025-10-14-curation.md",
-      "excerpt": "Daily Curation — 2025-10-14 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-14 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-14-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-15-curation.md",
-      "source": "curation",
-      "title": "2025-10-15-curation.md",
-      "excerpt": "Daily Curation — 2025-10-15 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-15 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-15-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-16-curation.md",
-      "source": "curation",
-      "title": "2025-10-16-curation.md",
-      "excerpt": "Daily Curation — 2025-10-16 Top items (auto-scored): - None met the minimum score today.",
-      "content": "Daily Curation — 2025-10-16 Top items (auto-scored): - None met the minimum score today.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-16-curation",
-      "filesize": 88
-    },
-    {
-      "id": "curation/2025-10-17-curation.md",
-      "source": "curation",
-      "title": "2025-10-17-curation.md",
-      "excerpt": "Daily Curation — 2025-10-17 Top items (auto-scored): 1. DTC Medical Fees Fund: Helping People Access the DTC - Score: 18.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: BENEFITSU",
-      "content": "Daily Curation — 2025-10-17 Top items (auto-scored): 1. DTC Medical Fees Fund: Helping People Access the DTC - Score: 18.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: BENEFITSUPDATE - The Disability Tax Credit (DTC) is a non-refundable tax credit that reduces the amount of income tax you owe. You might know that eligible applicants must be approved for the DTC before gaining access to other benefits, like the Registered Disability Savings Plan (RDSP) and the Canada Disability Benefit (CDB). It’s an important benefit—and many […] 2. Ask an Expert sessions – Back by popular demand! - Score: 12.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: BENEFITSUPDATE - The Access RDSP partnership between DABC, Plan Institute and BC Aboriginal Network on Disability Society (BCANDS) has had years of experience providing free navigational supports through income tax filing, the Disability Tax Credit (DTC), Registered Disability Savings Plan (RDSP) and other financial planning matters. For RDSP Awareness Month, our team of experts are hosting two […] 3. India's new envoy wants full-scale trade deal with Canada as relations thaw - Score: 11 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - Indian High Commissioner Dinesh Patnaik said Canadian businesses should expand trade and investment ties with India now, without waiting for a formal trade agreement. 4. Workshop – Disability Justice and Local Government: Tools for Change - Score: 9.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: ACCESSIBILITYUPDATE - From curb cuts to bus routes to public space accessibility, decisions made at city hall impact the lives of people living with disabilities daily. Women Transforming Cities (WTC), a grassroots organization working to reshape who cities are built by and for is partnering with Live Educate Transform Society (LET’S), a nonprofit organization active in the […] 5. Support DABC this #DAFDay! - Score: 9.5 - Source: https://disabilityalliancebc.org/feed/ - Lang: en - Type: SUPPORTRESOURCE - It’s DAF Day Canada: a national moment encouraging donors who give through Donor Advised Funds (DAFs) to activate their generosity and support frontline work like ours. #DAFDay If you have a DAF, you can recommend a grant to Disability Alliance BC today. It’s easy—and it means we can keep showing up for people with disabilities […] 6. In/Equality Podcast – Inequality and Disability Justice with Michael Orsini Transcript - Score: 8 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: GENERALCONTENT - Debra Thompson 00:00 From the Institute for Research on Public Policy, this is inequality a special series of the policy options podcast exploring the many facets of inequality in Canada through conversations with experts. I'm your host Deborah Thompson. Today I speak with Dr. Michael Orsini, a professor in the Institute of feminist and gender […] 7. Manitoba NDP says bill will prevent use of notwithstanding clause to 'trample' rights of vulnerable groups - Score: 7 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - The NDP introduced legislation in Manitoba on Thursday that the premier hopes will safeguard against the frivolous use of the notwithstanding clause, a legal measure that's been invoked by Quebec and other governments in recent years to temporarily shield provincial legislation from legal challenges under the Charter of Rights and Freedoms. 8. Ottawa says it can provide $12M loan to keep northern Ontario paper mill open - Score: 6.5 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - The federal government is offering a one-time $12M loan to help keep Kapuskasing’s paper mill open while the company develops a long-term pivot strategy. 9. Man charged with murder as remains of Samuel Bird located outside Edmonton - Score: 6.5 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - The remains of 14-year-old Samuel Bird have been located and a murder charge has been laid in his death, police said Thursday. 10. Manitoba Government Provincial Nominee Program Invites 328 Health-Care Workers to Build Careers in Manitoba - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 11. Manitoba Government Invests More Than $1.2 Million For 24 Interlake Community Development Projects - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 12. Manitoba Government Invests More Than $1.2 Million in Community Development Projects for Northern Manitoba - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 13. Manitoba Government Introduces Legislation to Keep Vehicle Insurance Rates Affordable - Score: 6 - Source: https://news.gov.mb.ca/news/index.rss - Lang: en - Type: NEWSARTICLE 14. BC Reneges on New Supports for Deaf and Hard-of-Hearing Children - Score: 6 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - A language skills program was set to go, until the government pulled the plug. 15. Ontario charity relocated residents with autism without consent, their families say - Score: 6 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - A charity for adults with developmental disabilities has relocated some residents due to a labour dispute with support workers. Concerned family members say they didn’t consent. 16. P.E.I. calls for federal investigation into foreign interference allegations aimed at Buddhist groups - Score: 6 - Source: https://rss.cbc.ca/lineup/canada.xml - Lang: en - Type: NEWSARTICLE - P.E.I. Premier Rob Lantz is calling on the federal RCMP and Canada's anti-money-laundering agency to begin “immediate and transparent” investigations into allegations of foreign interference and money laundering involving “certain Buddhist groups” on the Island. 17. Inside the Right-Wing Attack on Alberta's Public Education - Score: 5 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: GENERALCONTENT - MAGA’s Project 2025 has become a blueprint for undermining Canada’s schools in the name of profit and privilege. 18. The future of child care in Canada: What to expect - Score: 5 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: GENERALCONTENT - On April 19, 2021, Finance Minister Chrystia Freeland presented the first federal budget in two years. Among the many new and updated policies, one stood out especially – the promise of affordable universal childcare for all Canadians. Universal child care had been promised in the past and never come to fruition, not for lack of […] 19. Why Gawker's bankruptcy is a policy issue - Score: 5 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: FEATUREARTICLE - Where should media outlets draw the line between revenue generation and content quality? Between truth and ethics? CBC News’ Lauren O’Neil stopped by the podcast to weigh in on these issues and more on this week’s episode. We looked at the Gawker bankruptcy, the ethics and business of new media and Canada’s evolving media landscape. […] 20. Technology-enabled trade in Canada - Score: 5 - Source: https://policyoptions.irpp.org/feed/ - Lang: en - Type: GENERALCONTENT - E-commerce is revolutionizing the way we trade by giving businesses unprecedented access to new markets. Tools such as eBay have become the great equalizer of international trade: empowering small businesses in a globalized trade environment traditionally dominated by large firms. With so much to gain from these emerging trade patterns, Canadian trade policy can’t afford […] 21. Federal Court allows caretaker council in Kanesatake after cancelled election - Score: 4.5 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - The Federal Court has ruled that 5 chiefs from the Mohawk Council of Kanesatake may form a caretaker council to provide essential services and handle administrative tasks. 22. ‘Preserving our past': Winnipeg archives to return to historic library after renos - Score: 4 - Source: https://globalnews.ca/canada/feed/ - Lang: en - Type: NEWSARTICLE - The City of Winnipeg's archives are going back to their downtown home, after renovations are complete to a historic building that once housed the city's first public library. 23. How Alberta Teachers Are Winning the Public Opinion Battle - Score: 4 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - The teachers’ main demands are finding support, while the government is being blamed for the school shutdown. 24. Long-Term Care Funding Cuts Will Hurt Seniors, Providers Warn - Score: 4 - Source: https://thetyee.ca/rss2.xml - Lang: en - Type: NEWSARTICLE - Operators say they rely on the pandemic supports the government is cutting. 25. Bills C-2 and C-12: How Canada’s border security acts endanger refugee rights - Score: 3 - Source: https://rabble.ca/feed/ - Lang: en - Type: LEGAL_RESOURCE",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-17-curation",
-      "filesize": 9023
-    },
-    {
-      "id": "curation/README.md",
-      "source": "curation",
-      "title": "README.md",
-      "excerpt": "This folder stores daily curation summaries generated by the Daily Curator workflow. - Files are named YYYY-MM-DD-curation.md - They list top items found via configured RSS feeds and optional Mastodon",
-      "content": "This folder stores daily curation summaries generated by the Daily Curator workflow. - Files are named YYYY-MM-DD-curation.md - They list top items found via configured RSS feeds and optional Mastodon public search. - Review these summaries daily to prioritize manual social sharing to X, Facebook, and Instagram.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/README",
-      "filesize": 313
-    },
-    {
-      "id": "whatsnew/2025-09-28-foundation-navigation-a11y.md",
-      "source": "whatsnew",
-      "title": "2025-09-28-foundation-navigation-a11y.md",
-      "excerpt": "--- layout: default title: Site foundation, cleaner navigation, and better basics date: 2025-09-28 description: We tidied up the site structure, fixed duplicate pages, made navigation clearer, and imp",
-      "content": "--- layout: default title: Site foundation, cleaner navigation, and better basics date: 2025-09-28 description: We tidied up the site structure, fixed duplicate pages, made navigation clearer, and improved contrast and focus for accessibility. --- We focused on the fundamentals so the site is easier to understand and navigate. - Consolidated duplicates (like Privacy and 404) and ensured a single, clear homepage - Cleaned up the top navigation and made the brand logo link home - Improved color contrast and visible focus styles for keyboard users Why it matters: a simpler structure helps everyone find content quickly, and better contrast/focus makes the site more accessible.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-09-28-foundation-navigation-a11y",
-      "filesize": 681
-    },
-    {
-      "id": "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md",
-      "source": "whatsnew",
-      "title": "2025-09-29-accessible-newsletter-and-a11y.md",
-      "excerpt": "--- layout: default title: Accessible newsletter modal, focus improvements, and new skip links date: 2025-09-29 description: We added an accessible newsletter sign‑up, improved keyboard focus, and int",
-      "content": "--- layout: default title: Accessible newsletter modal, focus improvements, and new skip links date: 2025-09-29 description: We added an accessible newsletter sign‑up, improved keyboard focus, and introduced skip links to move around the page faster. --- What changed: - Accessible newsletter modal: close with Escape, click outside, or buttons; focus stays inside while open - First‑visit gating with a “Don’t show again” option; CI flag available to disable during checks - Added Skip to content/navigation/footer links and enhanced focus‑visible styles Why it matters: signing up is smoother and more accessible; skip links save time for keyboard and screen reader users.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-09-29-accessible-newsletter-and-a11y",
-      "filesize": 674
-    },
-    {
-      "id": "whatsnew/2025-09-30-quality-checks-ci.md",
-      "source": "whatsnew",
-      "title": "2025-09-30-quality-checks-ci.md",
-      "excerpt": "--- layout: default title: Automated quality checks (accessibility, links, and performance) date: 2025-09-30 description: We set up automated checks for accessibility, broken links, and Lighthouse aud",
-      "content": "--- layout: default title: Automated quality checks (accessibility, links, and performance) date: 2025-09-30 description: We set up automated checks for accessibility, broken links, and Lighthouse audits to keep quality high as we grow. --- What’s running now: - Accessibility checks with Pa11y/axe-core (keyboard, labels, contrast, and more) - Broken link scanning - Lighthouse audits (performance, accessibility, best practices, SEO) Why it matters: these run on pull requests and schedules, catching issues early and keeping the site healthy.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-09-30-quality-checks-ci",
-      "filesize": 545
-    },
-    {
-      "id": "whatsnew/2025-10-01-search-ux-live-results.md",
-      "source": "whatsnew",
-      "title": "2025-10-01-search-ux-live-results.md",
-      "excerpt": "--- layout: default title: Better search with live results, highlighting, and announcements date: 2025-10-01 description: Search now shows on‑page results with term highlighting and screen‑reader anno",
-      "content": "--- layout: default title: Better search with live results, highlighting, and announcements date: 2025-10-01 description: Search now shows on‑page results with term highlighting and screen‑reader announcements, with DuckDuckGo fallback if you need a wider search. --- What’s new: - On‑page live results with ranking by title > URL > content - Highlighted search terms and polite announcements of result counts - DuckDuckGo fallback scoped to 3mpowr if you want a broader search Why it matters: find what you need faster, with accessible feedback as results update.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-01-search-ux-live-results",
-      "filesize": 564
-    },
-    {
-      "id": "whatsnew/2025-10-02-seo-schema-i18n.md",
-      "source": "whatsnew",
-      "title": "2025-10-02-seo-schema-i18n.md",
-      "excerpt": "--- layout: default title: SEO & schema upgrades, with French language foundation date: 2025-10-02 description: We enabled structured data, hreflang alternates, page descriptions, and added a French h",
-      "content": "--- layout: default title: SEO & schema upgrades, with French language foundation date: 2025-10-02 description: We enabled structured data, hreflang alternates, page descriptions, and added a French homepage with a language switch. --- Highlights: - jekyll-seo-tag enabled, plus JSON‑LD Organization and BreadcrumbList - Hreflang alternates for English/French; page descriptions for key pages - French homepage and a simple language switch added Why it matters: better search appearance and a more inclusive experience for Francophone visitors.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-02-seo-schema-i18n",
-      "filesize": 544
-    },
-    {
-      "id": "whatsnew/2025-10-03-accessibility-settings-consent.md",
-      "source": "whatsnew",
-      "title": "2025-10-03-accessibility-settings-consent.md",
-      "excerpt": "--- layout: default title: New Accessibility Settings and cookie consent banner date: 2025-10-03 description: You can now personalize reading settings site‑wide, and analytics only load after explicit",
-      "content": "--- layout: default title: New Accessibility Settings and cookie consent banner date: 2025-10-03 description: You can now personalize reading settings site‑wide, and analytics only load after explicit consent. --- New settings page: - Adjust text size, line height, letter spacing, and link underlines - Choose readable or dyslexia‑friendly font - Reduce motion, apply color filters, and increase focus ring visibility - Preferences are saved on your device and apply across pages Privacy: - Cookie consent banner added - Analytics (when configured) are loaded only after you accept cookies",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-03-accessibility-settings-consent",
-      "filesize": 590
-    },
-    {
-      "id": "whatsnew/2025-10-04-automation-gitlog.md",
-      "source": "whatsnew",
-      "title": "2025-10-04-automation-gitlog.md",
-      "excerpt": "--- layout: default title: What’s New page launched date: 2025-10-04 description: We introduced a simple, human-friendly What’s New page to share highlights and improvements—no technical details requi",
-      "content": "--- layout: default title: What’s New page launched date: 2025-10-04 description: We introduced a simple, human-friendly What’s New page to share highlights and improvements—no technical details required. --- What changed: - A dedicated What’s New page collects updates in plain language - Recent updates appear first; older ones move to an archive automatically Why it matters: it’s easy to see what’s new at a glance without technical jargon.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-04-automation-gitlog",
-      "filesize": 444
-    },
-    {
-      "id": "whatsnew/2025-10-04-initialize-whats-new.md",
-      "source": "whatsnew",
-      "title": "2025-10-04-initialize-whats-new.md",
-      "excerpt": "--- layout: default title: Initialize What's New and CI improvements date: 2025-10-04 --- We added a new What's New section to announce updates and improvements: - What's New landing page with recent ",
-      "content": "--- layout: default title: Initialize What's New and CI improvements date: 2025-10-04 --- We added a new What's New section to announce updates and improvements: - What's New landing page with recent updates and a 30-day archive. - Accessibility CI hardened: Pa11y and Axe summaries and artifacts. - CI non-blocking on pushes to main; manual triggers for Links and Lighthouse. - README badges for quick status visibility.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-04-initialize-whats-new",
-      "filesize": 421
-    },
-    {
-      "id": "whatsnew/2025-10-05-languages-a11y-ga.md",
-      "source": "whatsnew",
-      "title": "2025-10-05-languages-a11y-ga.md",
-      "excerpt": "--- layout: default title: New languages, easier Accessibility Settings, and Google Analytics path date: 2025-10-05 description: Added Spanish, Arabic, Chinese, and Punjabi home pages; Accessibility S",
-      "content": "--- layout: default title: New languages, easier Accessibility Settings, and Google Analytics path date: 2025-10-05 description: Added Spanish, Arabic, Chinese, and Punjabi home pages; Accessibility Settings now in the main menu; and analytics ready for GA4 with consent. --- What’s new today: - New language home pages: Spanish (es), Arabic (ar), Chinese (zh), Punjabi (pa) - Arabic pages now render RTL correctly - Accessibility Settings added to the top navigation - Analytics loader supports Google Analytics 4 and remains consent‑gated Why it matters: more people can find and read our content; settings are easier to find; and analytics respect privacy.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-05-languages-a11y-ga",
-      "filesize": 659
-    },
-    {
-      "id": "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md",
-      "source": "whatsnew",
-      "title": "2025-10-06-curated-banner-and-curator-expansion.md",
-      "excerpt": "--- layout: default title: Curated Daily Highlights now stands out on the homepage date: 2025-10-06 description: We added a bold banner for Curated Daily Highlights, expanded our daily sources across ",
-      "content": "--- layout: default title: Curated Daily Highlights now stands out on the homepage date: 2025-10-06 description: We added a bold banner for Curated Daily Highlights, expanded our daily sources across Canada, and fixed a breadcrumb accessibility issue. --- What’s new today: - Curated Daily Highlights now has a clear banner on the homepage so it’s easy to find. - We expanded the daily curation sources with more provincial workers’ compensation boards and disability advocacy groups. - We improved how we find relevant items by including UN CRPD and Accessible Canada Act terms. - We fixed a breadcrumb issue that could create an empty link, improving accessibility. Why it matters: daily community stories are easier to spot, the feed stays Canada‑wide and relevant, and the site remains accessible for everyone.",
-      "date": "2025-10-17",
-      "tags": [],
-      "categories": [],
-      "url": "/2025-10-06-curated-banner-and-curator-expansion",
-      "filesize": 814
+      "url": "/2025-10-14-curator-language-json-api",
+      "filesize": 959
     },
     {
       "id": "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
       "source": "whatsnew",
-      "title": "2025-10-14-curator-improvements-and-env-overrides.md",
-      "excerpt": "--- layout: post title: Curator Improvements – Forced Daily Posts & Debugging date: 2025-10-14 13:05:00 +0000 summary: Added environment overrides (MINSCORE, FORCEDAILY, DEBUGCURATOR), optional forced",
-      "content": "--- layout: post title: Curator Improvements – Forced Daily Posts & Debugging date: 2025-10-14 13:05:00 +0000 summary: Added environment overrides (MINSCORE, FORCEDAILY, DEBUGCURATOR), optional forced daily post placeholder, and suppression of empty curation files. --- We improved the automated daily curator workflow to increase reliability and transparency: ✅ What Changed - Added env overrides: MINSCORE, FORCEDAILY, DEBUGCURATOR. - Forced daily post allowed (placeholder when no qualifying items) to maintain cadence. - Suppressed creation of empty curation review files. - Added debug sample output to inspect top scored candidate items. - Lowered default run threshold for manual runs (MINSCORE=0.5 in workflow) to produce more content. 🔧 How to Use Trigger the workflow manually (Actions > Daily Curator) and it will: 1. Respect the time gate (Toronto 13:00) on schedule; manual dispatch still checks current hour. 2. Use the injected env variables to adjust curator behavior. 3. Skip Mastodon post gracefully if secrets absent. 🧪 Debug Mode DEBUGCURATOR=1 logs a JSON sample of the highest scoring items before filtering. Use this to tune minScore in data/curator.json. 📂 Less Noise No more empty _curation/YYYY-MM-DD-curation.md files when nothing qualifies. --- Need further tuning (e.g., per-source boosting, language filtering, or multi-region schedules)? Open an issue or send feedback.",
-      "date": "2025-10-17",
+      "title": "Better Daily Content Selection – More Reliable Updates",
+      "excerpt": "What we improved: - Daily content selection is now more reliable and consistent - We always have fresh content available, even if there are fewer items some days - We can test and adjust how content i",
+      "content": "What we improved: - Daily content selection is now more reliable and consistent - We always have fresh content available, even if there are fewer items some days - We can test and adjust how content is selected to make sure it's most relevant to you Why it matters: you get consistent, fresh updates every day without gaps, and we can improve the selection over time based on what's most helpful.",
+      "date": "2025-10-14 13:05:00 +0000",
       "tags": [],
       "categories": [],
       "url": "/2025-10-14-curator-improvements-and-env-overrides",
-      "filesize": 1403
+      "filesize": 396
     },
     {
-      "id": "whatsnew/2025-10-14-curator-language-json-api.md",
+      "id": "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md",
       "source": "whatsnew",
-      "title": "2025-10-14-curator-language-json-api.md",
-      "excerpt": "--- layout: post title: Curator gains language filtering & JSON API date: 2025-10-14 18:00:00 +0000 summary: Daily curator now outputs JSON and supports basic language filtering. --- We expanded the a",
-      "content": "--- layout: post title: Curator gains language filtering & JSON API date: 2025-10-14 18:00:00 +0000 summary: Daily curator now outputs JSON and supports basic language filtering. --- We expanded the automated daily curator with two new capabilities: - Language filtering via a lightweight heuristic (English / French) using FILTERLANGS env (e.g. en,fr). - Public JSON feed at /curation-latest.json (enable with WRITEJSON=1) containing the scored items, source, language tag, and metadata. Why it matters: - Lets the front‑end (or external tools) render curated items without parsing Markdown. - Enables future UI toggles for language preference. Technical notes: - We intentionally used a zero‑dependency heuristic to keep Actions fast. - JSON schema: { generated, minScore, forced, filterLangs, totalRanked, items:[{title,link,description,score,source,lang}] }. - Empty days still respect FORCE_DAILY for a Markdown post but skip creating a JSON file with zero items unless forced. Coming next: - Potential richer language detection if we add a tiny model or external API (kept optional to avoid latency). - Front‑end widget to live‑load the JSON feed. Feedback welcome—open an issue if you’d like additional fields in the JSON.",
-      "date": "2025-10-17",
+      "title": "Curated Daily Highlights now stands out on the homepage",
+      "excerpt": "What’s new today: - Curated Daily Highlights now has a clear banner on the homepage so it’s easy to find. - We expanded the daily curation sources with more provincial workers’ compensation boards and",
+      "content": "What’s new today: - Curated Daily Highlights now has a clear banner on the homepage so it’s easy to find. - We expanded the daily curation sources with more provincial workers’ compensation boards and disability advocacy groups. - We improved how we find relevant items by including UN CRPD and Accessible Canada Act terms. - We fixed a breadcrumb issue that could create an empty link, improving accessibility. Why it matters: daily community stories are easier to spot, the feed stays Canada‑wide and relevant, and the site remains accessible for everyone.",
+      "date": "2025-10-06",
       "tags": [],
       "categories": [],
-      "url": "/2025-10-14-curator-language-json-api",
-      "filesize": 1229
+      "url": "/2025-10-06-curated-banner-and-curator-expansion",
+      "filesize": 558
+    },
+    {
+      "id": "whatsnew/2025-10-05-languages-a11y-ga.md",
+      "source": "whatsnew",
+      "title": "More languages, accessibility tools, and better tracking",
+      "excerpt": "What's new today: - New language pages: Spanish, Arabic, Chinese, and Punjabi - Arabic pages now read right-to-left (the correct way) - Accessibility Settings moved to the main menu (easier to find) -",
+      "content": "What's new today: - New language pages: Spanish, Arabic, Chinese, and Punjabi - Arabic pages now read right-to-left (the correct way) - Accessibility Settings moved to the main menu (easier to find) - Tracking set up to respect your privacy choices Why it matters: more people can access our content in their language, and your privacy is protected.",
+      "date": "2025-10-05",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-05-languages-a11y-ga",
+      "filesize": 349
+    },
+    {
+      "id": "whatsnew/2025-10-04-automation-gitlog.md",
+      "source": "whatsnew",
+      "title": "Automatic Daily Updates – New content every day",
+      "excerpt": "What's happening now: - New content is added automatically every day - Community stories and resource highlights are collected daily - Updates happen at a set time so you know when to check back Why i",
+      "content": "What's happening now: - New content is added automatically every day - Community stories and resource highlights are collected daily - Updates happen at a set time so you know when to check back Why it matters: you always have fresh, relevant information without us having to do it manually each day.",
+      "date": "2025-10-04",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-04-automation-gitlog",
+      "filesize": 300
+    },
+    {
+      "id": "whatsnew/2025-10-04-initialize-whats-new.md",
+      "source": "whatsnew",
+      "title": "New \"What's New\" section and better quality checks",
+      "excerpt": "What we launched: - A \"What's New\" page that shows recent updates and keeps a 30-day history - Better automatic checks to catch accessibility issues before they go live - Quick status checks so you ca",
+      "content": "What we launched: - A \"What's New\" page that shows recent updates and keeps a 30-day history - Better automatic checks to catch accessibility issues before they go live - Quick status checks so you can see how the website is doing Why it matters: you can easily see what's new, and we catch problems early so the site stays accessible for everyone.",
+      "date": "2025-10-04",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-04-initialize-whats-new",
+      "filesize": 348
+    },
+    {
+      "id": "whatsnew/2025-10-03-accessibility-settings-consent.md",
+      "source": "whatsnew",
+      "title": "New Accessibility Settings – Make the site work for you",
+      "excerpt": "New settings you can control: - Make text bigger or smaller - Choose a regular or dyslexia-friendly font - Adjust line spacing and letter spacing - Reduce animations if they bother you - Use a dyslexi",
+      "content": "New settings you can control: - Make text bigger or smaller - Choose a regular or dyslexia-friendly font - Adjust line spacing and letter spacing - Reduce animations if they bother you - Use a dyslexia-friendly font - Your settings save on your device Privacy: - We added a cookie notice - We only track your visits if you say it's okay Why it matters: everyone can customize the website to work the way that's best for them.",
+      "date": "2025-10-03",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-03-accessibility-settings-consent",
+      "filesize": 425
+    },
+    {
+      "id": "whatsnew/2025-10-02-seo-schema-i18n.md",
+      "source": "whatsnew",
+      "title": "Better search visibility and new language pages",
+      "excerpt": "What's new today: - Better Google search display with page descriptions - Added French language homepage - Easy language switcher at the top Why it matters: more people can find our site in search res",
+      "content": "What's new today: - Better Google search display with page descriptions - Added French language homepage - Easy language switcher at the top Why it matters: more people can find our site in search results, and French speakers can access content in their language.",
+      "date": "2025-10-02",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-02-seo-schema-i18n",
+      "filesize": 263
+    },
+    {
+      "id": "whatsnew/2025-10-01-search-ux-live-results.md",
+      "source": "whatsnew",
+      "title": "New search with live results – Find what you need instantly",
+      "excerpt": "What's new: - Search shows results right away as you type - Your search words are highlighted so you can spot them easily - Search works right in your browser – no waiting Why it matters: you can quic",
+      "content": "What's new: - Search shows results right away as you type - Your search words are highlighted so you can spot them easily - Search works right in your browser – no waiting Why it matters: you can quickly find the information you need without clicking through pages.",
+      "date": "2025-10-01",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-10-01-search-ux-live-results",
+      "filesize": 265
+    },
+    {
+      "id": "whatsnew/2025-09-30-quality-checks-ci.md",
+      "source": "whatsnew",
+      "title": "Automated quality checks (accessibility, links, and performance)",
+      "excerpt": "What’s running now: - Accessibility checks with Pa11y/axe-core (keyboard, labels, contrast, and more) - Broken link scanning - Lighthouse audits (performance, accessibility, best practices, SEO) Why i",
+      "content": "What’s running now: - Accessibility checks with Pa11y/axe-core (keyboard, labels, contrast, and more) - Broken link scanning - Lighthouse audits (performance, accessibility, best practices, SEO) Why it matters: these run on pull requests and schedules, catching issues early and keeping the site healthy.",
+      "date": "2025-09-30",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-09-30-quality-checks-ci",
+      "filesize": 304
+    },
+    {
+      "id": "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md",
+      "source": "whatsnew",
+      "title": "Better newsletter sign-up and easier keyboard navigation",
+      "excerpt": "What's better now: - Newsletter sign-up: press Escape to close, or click outside to close - First-time visitors see a sign-up offer, but can choose not to see it again - Added \"Skip to\" links to jump ",
+      "content": "What's better now: - Newsletter sign-up: press Escape to close, or click outside to close - First-time visitors see a sign-up offer, but can choose not to see it again - Added \"Skip to\" links to jump to main content, menu, or footer without scrolling through everything Why it matters: signing up is faster and easier, and keyboard users can jump straight to what they need.",
+      "date": "2025-09-29",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-09-29-accessible-newsletter-and-a11y",
+      "filesize": 374
+    },
+    {
+      "id": "whatsnew/2025-09-28-foundation-navigation-a11y.md",
+      "source": "whatsnew",
+      "title": "Easier to find your way around – Better site navigation and design",
+      "excerpt": "We worked on making the website easier to use for everyone. - Removed duplicate pages so there's only one way to find what you need - Made the menu clearer and easier to follow - Made text darker and ",
+      "content": "We worked on making the website easier to use for everyone. - Removed duplicate pages so there's only one way to find what you need - Made the menu clearer and easier to follow - Made text darker and buttons easier to see if you use a keyboard Why it matters: a clearer website means you can find answers faster, and better design helps people with different needs use the site.",
+      "date": "2025-09-28",
+      "tags": [],
+      "categories": [],
+      "url": "/2025-09-28-foundation-navigation-a11y",
+      "filesize": 378
     }
   ],
   "titleIndex": {
-    "1": [
-      "blog/2025-10-20-3mpwrapp-community.md"
-    ],
-    "5": [
-      "blog/2025-10-24-3mpwrapp-wellness.md",
-      "blog/2025-10-23-3mpwrapp-mythbusting.md"
-    ],
-    "22": [
-      "blog/2025-10-20-3mpwrapp-roundup.md"
-    ],
-    "wellness": [
-      "blog/2025-10-24-3mpwrapp-wellness.md"
-    ],
-    "tip:": [
-      "blog/2025-10-24-3mpwrapp-wellness.md"
-    ],
-    "energy": [
-      "blog/2025-10-24-3mpwrapp-wellness.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "management": [
-      "blog/2025-10-24-3mpwrapp-wellness.md"
-    ],
-    "strategies": [
-      "blog/2025-10-24-3mpwrapp-wellness.md"
-    ],
-    "that": [
-      "blog/2025-10-24-3mpwrapp-wellness.md"
-    ],
-    "work": [
-      "blog/2025-10-24-3mpwrapp-wellness.md"
-    ],
-    "interview:": [
-      "blog/2025-10-23-3mpwrapp-interview.md"
-    ],
-    "accessibility": [
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "blog/2025-10-21-3mpwrapp-policy.md"
-    ],
-    "expert": [
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "dr.": [
-      "blog/2025-10-23-3mpwrapp-interview.md"
-    ],
-    "sarah": [
-      "blog/2025-10-23-3mpwrapp-interview.md"
-    ],
-    "chen": [
-      "blog/2025-10-23-3mpwrapp-interview.md"
-    ],
-    "on": [
-      "blog/2025-10-23-3mpwrapp-interview.md"
-    ],
-    "disability": [
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-22-3mpwrapp-qa.md",
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "justice": [
-      "blog/2025-10-23-3mpwrapp-interview.md"
-    ],
-    "technology": [
-      "blog/2025-10-23-3mpwrapp-interview.md"
-    ],
-    "myth": [
-      "blog/2025-10-23-3mpwrapp-mythbusting.md"
-    ],
-    "busting:": [
-      "blog/2025-10-23-3mpwrapp-mythbusting.md"
-    ],
-    "common": [
-      "blog/2025-10-23-3mpwrapp-mythbusting.md"
-    ],
-    "misconceptions": [
-      "blog/2025-10-23-3mpwrapp-mythbusting.md"
-    ],
-    "about": [
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-qa.md"
-    ],
-    "benefits": [
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-qa.md"
-    ],
-    "achievement:": [
-      "blog/2025-10-22-3mpwrapp-accessibility.md"
-    ],
-    "supporting": [
-      "blog/2025-10-22-3mpwrapp-accessibility.md"
-    ],
-    "all": [
-      "blog/2025-10-22-3mpwrapp-accessibility.md"
-    ],
-    "types": [
-      "blog/2025-10-22-3mpwrapp-accessibility.md"
-    ],
-    "with": [
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "ai-powered": [
-      "blog/2025-10-22-3mpwrapp-accessibility.md"
-    ],
-    "tools": [
-      "blog/2025-10-22-3mpwrapp-accessibility.md"
-    ],
-    "how-to:": [
-      "blog/2025-10-22-3mpwrapp-howto.md"
-    ],
-    "using": [
-      "blog/2025-10-22-3mpwrapp-howto.md"
-    ],
-    "the": [
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
-    ],
-    "wizard": [
-      "blog/2025-10-22-3mpwrapp-howto.md"
-    ],
-    "for": [
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-21-3mpwrapp-policy.md"
-    ],
-    "personalized": [
-      "blog/2025-10-22-3mpwrapp-howto.md"
-    ],
-    "recommendations": [
-      "blog/2025-10-22-3mpwrapp-howto.md"
-    ],
-    "q&a:": [
-      "blog/2025-10-22-3mpwrapp-qa.md"
-    ],
-    "your": [
-      "blog/2025-10-22-3mpwrapp-qa.md",
-      "blog/2025-10-21-3mpwrapp-legalupdate.md"
-    ],
-    "top": [
-      "blog/2025-10-22-3mpwrapp-qa.md"
-    ],
-    "questions": [
-      "blog/2025-10-22-3mpwrapp-qa.md"
-    ],
-    "answered": [
-      "blog/2025-10-22-3mpwrapp-qa.md"
-    ],
-    "resource": [
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md"
-    ],
-    "spotlight:": [
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
-    ],
-    "alliance": [
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md"
-    ],
-    "bc's": [
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md"
-    ],
-    "award-winning": [
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md"
-    ],
-    "advocacy": [
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md"
-    ],
-    "programs": [
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md"
-    ],
-    "behind": [
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md"
-    ],
-    "scenes:": [
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md"
-    ],
-    "how": [
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
-    ],
-    "3mpwrapp": [
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-20-3mpwrapp-community.md",
-      "blog/2025-10-20-3mpwrapp-communitynews.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
-    ],
-    "curates": [
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md"
-    ],
-    "news": [
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md"
-    ],
-    "daily": [
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-17-daily-curation.md"
-    ],
-    "legal": [
-      "blog/2025-10-21-3mpwrapp-legalupdate.md"
-    ],
-    "landscape:": [
-      "blog/2025-10-21-3mpwrapp-legalupdate.md"
-    ],
-    "understanding": [
-      "blog/2025-10-21-3mpwrapp-legalupdate.md"
-    ],
-    "rights": [
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "under": [
-      "blog/2025-10-21-3mpwrapp-legalupdate.md"
-    ],
-    "accessible": [
-      "blog/2025-10-21-3mpwrapp-legalupdate.md"
-    ],
-    "canada": [
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "act": [
-      "blog/2025-10-21-3mpwrapp-legalupdate.md"
-    ],
-    "policy": [
-      "blog/2025-10-21-3mpwrapp-policy.md"
-    ],
-    "update:": [
-      "blog/2025-10-21-3mpwrapp-policy.md"
-    ],
-    "new": [
-      "blog/2025-10-21-3mpwrapp-policy.md",
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "requirements": [
-      "blog/2025-10-21-3mpwrapp-policy.md"
-    ],
-    "canadian": [
-      "blog/2025-10-21-3mpwrapp-policy.md"
-    ],
-    "employers": [
-      "blog/2025-10-21-3mpwrapp-policy.md"
-    ],
-    "join": [
-      "blog/2025-10-20-3mpwrapp-community.md"
-    ],
-    "phase": [
-      "blog/2025-10-20-3mpwrapp-community.md"
-    ],
-    "closed": [
-      "blog/2025-10-20-3mpwrapp-community.md"
-    ],
-    "beta": [
-      "blog/2025-10-20-3mpwrapp-community.md"
-    ],
-    "testing": [
-      "blog/2025-10-20-3mpwrapp-community.md"
-    ],
-    "-": [
-      "blog/2025-10-20-3mpwrapp-community.md",
-      "blog/2025-10-20-3mpwrapp-roundup.md",
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "help": [
-      "blog/2025-10-20-3mpwrapp-community.md"
-    ],
-    "shape": [
-      "blog/2025-10-20-3mpwrapp-community.md"
-    ],
-    "community": [
-      "blog/2025-10-20-3mpwrapp-communitynews.md"
-    ],
-    "news:": [
-      "blog/2025-10-20-3mpwrapp-communitynews.md"
-    ],
-    "reaches": [
-      "blog/2025-10-20-3mpwrapp-communitynews.md"
-    ],
-    "5,000": [
-      "blog/2025-10-20-3mpwrapp-communitynews.md"
-    ],
-    "users": [
-      "blog/2025-10-20-3mpwrapp-communitynews.md"
-    ],
-    "milestone": [
-      "blog/2025-10-20-3mpwrapp-communitynews.md"
-    ],
-    "feature": [
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "highlight:": [
-      "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-20-3mpwrapp-roundup.md"
-    ],
-    "ml-powered": [
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "forecasting": [
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "&": [
-      "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "smart": [
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "notifications": [
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "tool": [
-      "blog/2025-10-20-3mpwrapp-roundup.md"
-    ],
-    "master": [
-      "blog/2025-10-20-3mpwrapp-roundup.md"
-    ],
-    "letter": [
-      "blog/2025-10-20-3mpwrapp-roundup.md"
-    ],
-    "generator": [
-      "blog/2025-10-20-3mpwrapp-roundup.md"
-    ],
-    "professional": [
-      "blog/2025-10-20-3mpwrapp-roundup.md"
-    ],
-    "templates": [
-      "blog/2025-10-20-3mpwrapp-roundup.md"
-    ],
-    "user": [
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
-    ],
-    "changed": [
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
-    ],
-    "sarah's": [
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
-    ],
-    "workplace": [
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
-    ],
-    "accommodation": [
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
-    ],
-    "journey": [
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
-    ],
-    "highlights": [
-      "blog/2025-10-17-daily-curation.md"
-    ],
-    "(2025-10-17)": [
-      "blog/2025-10-17-daily-curation.md"
-    ],
-    "weekly": [
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "recap": [
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "2025-10-17:": [
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "worker": [
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "protections": [
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "dtc": [
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
-    ],
-    "medical": [
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
-    ],
-    "fees": [
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
-    ],
-    "fund:": [
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
-    ],
-    "helping": [
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
-    ],
-    "people": [
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
-    ],
-    "access": [
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
-    ],
-    "ask": [
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "an": [
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "sessions": [
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "–": [
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "back": [
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "by": [
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "popular": [
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "demand!": [
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "india's": [
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "envoy": [
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "wants": [
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "full-scale": [
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "trade": [
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "deal": [
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "as": [
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
-    ],
-    "2025-10-03-welcome-to-3mpowr.md": [
+    "welcome": [
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
-    "2025-10-17-comprehensive-daily-digest.md": [
-      "blog/2025-10-17-comprehensive-daily-digest.md"
+    "to": [
+      "blog/2025-10-03-welcome-to-3mpowr.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "the": [
+      "blog/2025-10-03-welcome-to-3mpowr.md",
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "3mpowr": [
+      "blog/2025-10-03-welcome-to-3mpowr.md"
+    ],
+    "app": [
+      "blog/2025-10-03-welcome-to-3mpowr.md"
+    ],
+    "site": [
+      "blog/2025-10-03-welcome-to-3mpowr.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "daily": [
+      "blog/2025-10-21-daily-curation.md",
+      "blog/2025-10-18-daily-curation.md",
+      "blog/2025-10-17-comprehensive-daily-digest.md",
+      "blog/2025-10-17-daily-curation.md",
+      "whatsnew/2025-10-14-curator-language-json-api.md",
+      "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md",
+      "whatsnew/2025-10-04-automation-gitlog.md"
+    ],
+    "news": [
+      "blog/2025-10-21-daily-curation.md"
+    ],
+    "curation": [
+      "blog/2025-10-21-daily-curation.md"
+    ],
+    "-": [
+      "blog/2025-10-21-daily-curation.md",
+      "blog/2025-10-17-comprehensive-daily-digest.md",
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "2025-10-21": [
+      "blog/2025-10-21-daily-curation.md"
     ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"
@@ -1215,119 +571,386 @@
     "2025-10-17-curation.md": [
       "curation/2025-10-17-curation.md"
     ],
+    "2025-10-18-curation.md": [
+      "curation/2025-10-18-curation.md"
+    ],
+    "2025-10-21-curated.md": [
+      "curation/2025-10-21-curated.md"
+    ],
     "readme.md": [
       "curation/README.md"
     ],
-    "2025-09-28-foundation-navigation-a11y.md": [
-      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    "feature": [
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
-    "2025-09-29-accessible-newsletter-and-a11y.md": [
-      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md"
+    "highlight:": [
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
-    "2025-09-30-quality-checks-ci.md": [
-      "whatsnew/2025-09-30-quality-checks-ci.md"
+    "ml-powered": [
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
-    "2025-10-01-search-ux-live-results.md": [
-      "whatsnew/2025-10-01-search-ux-live-results.md"
+    "energy": [
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
-    "2025-10-02-seo-schema-i18n.md": [
-      "whatsnew/2025-10-02-seo-schema-i18n.md"
+    "forecasting": [
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
-    "2025-10-03-accessibility-settings-consent.md": [
-      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    "&": [
+      "blog/2025-10-20-3mpwrapp-feature.md",
+      "blog/2025-10-17-comprehensive-daily-digest.md",
+      "blog/2025-10-17-weekly-recap.md"
     ],
-    "2025-10-04-automation-gitlog.md": [
-      "whatsnew/2025-10-04-automation-gitlog.md"
+    "smart": [
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
-    "2025-10-04-initialize-whats-new.md": [
-      "whatsnew/2025-10-04-initialize-whats-new.md"
+    "notifications": [
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
-    "2025-10-05-languages-a11y-ga.md": [
-      "whatsnew/2025-10-05-languages-a11y-ga.md"
-    ],
-    "2025-10-06-curated-banner-and-curator-expansion.md": [
+    "highlights": [
+      "blog/2025-10-18-daily-curation.md",
+      "blog/2025-10-17-comprehensive-daily-digest.md",
+      "blog/2025-10-17-daily-curation.md",
       "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md"
     ],
-    "2025-10-14-curator-improvements-and-env-overrides.md": [
+    "(2025-10-18)": [
+      "blog/2025-10-18-daily-curation.md"
+    ],
+    "enhanced": [
+      "blog/2025-10-17-comprehensive-daily-digest.md"
+    ],
+    "(2025-10-17)": [
+      "blog/2025-10-17-comprehensive-daily-digest.md",
+      "blog/2025-10-17-daily-curation.md"
+    ],
+    "provincial": [
+      "blog/2025-10-17-comprehensive-daily-digest.md"
+    ],
+    "federal": [
+      "blog/2025-10-17-comprehensive-daily-digest.md"
+    ],
+    "coverage": [
+      "blog/2025-10-17-comprehensive-daily-digest.md"
+    ],
+    "weekly": [
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "recap": [
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "2025-10-17:": [
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "disability": [
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "rights": [
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "worker": [
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "protections": [
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "dtc": [
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
+    ],
+    "medical": [
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
+    ],
+    "fees": [
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
+    ],
+    "fund:": [
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
+    ],
+    "helping": [
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
+    ],
+    "people": [
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
+    ],
+    "access": [
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md"
+    ],
+    "ask": [
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
+    ],
+    "an": [
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
+    ],
+    "expert": [
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
+    ],
+    "sessions": [
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
+    ],
+    "–": [
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md",
+      "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
+      "whatsnew/2025-10-04-automation-gitlog.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md",
+      "whatsnew/2025-10-01-search-ux-live-results.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "back": [
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
+    ],
+    "by": [
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
+    ],
+    "popular": [
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
+    ],
+    "demand!": [
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
+    ],
+    "content": [
+      "whatsnew/2025-10-14-curator-language-json-api.md",
+      "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
+      "whatsnew/2025-10-04-automation-gitlog.md"
+    ],
+    "now": [
+      "whatsnew/2025-10-14-curator-language-json-api.md",
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md"
+    ],
+    "available": [
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "in": [
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "multiple": [
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "languages": [
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "and": [
+      "whatsnew/2025-10-14-curator-language-json-api.md",
+      "whatsnew/2025-10-05-languages-a11y-ga.md",
+      "whatsnew/2025-10-04-initialize-whats-new.md",
+      "whatsnew/2025-10-02-seo-schema-i18n.md",
+      "whatsnew/2025-09-30-quality-checks-ci.md",
+      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "easy": [
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "formats": [
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "better": [
+      "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
+      "whatsnew/2025-10-05-languages-a11y-ga.md",
+      "whatsnew/2025-10-04-initialize-whats-new.md",
+      "whatsnew/2025-10-02-seo-schema-i18n.md",
+      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "selection": [
       "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md"
     ],
-    "2025-10-14-curator-language-json-api.md": [
-      "whatsnew/2025-10-14-curator-language-json-api.md"
+    "more": [
+      "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
+      "whatsnew/2025-10-05-languages-a11y-ga.md"
+    ],
+    "reliable": [
+      "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md"
+    ],
+    "updates": [
+      "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
+      "whatsnew/2025-10-04-automation-gitlog.md"
+    ],
+    "curated": [
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md"
+    ],
+    "stands": [
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md"
+    ],
+    "out": [
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md"
+    ],
+    "on": [
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md"
+    ],
+    "homepage": [
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md"
+    ],
+    "languages,": [
+      "whatsnew/2025-10-05-languages-a11y-ga.md"
+    ],
+    "accessibility": [
+      "whatsnew/2025-10-05-languages-a11y-ga.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "tools,": [
+      "whatsnew/2025-10-05-languages-a11y-ga.md"
+    ],
+    "tracking": [
+      "whatsnew/2025-10-05-languages-a11y-ga.md"
+    ],
+    "automatic": [
+      "whatsnew/2025-10-04-automation-gitlog.md"
+    ],
+    "new": [
+      "whatsnew/2025-10-04-automation-gitlog.md",
+      "whatsnew/2025-10-04-initialize-whats-new.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md",
+      "whatsnew/2025-10-02-seo-schema-i18n.md",
+      "whatsnew/2025-10-01-search-ux-live-results.md"
+    ],
+    "every": [
+      "whatsnew/2025-10-04-automation-gitlog.md"
+    ],
+    "day": [
+      "whatsnew/2025-10-04-automation-gitlog.md"
+    ],
+    "\"what's": [
+      "whatsnew/2025-10-04-initialize-whats-new.md"
+    ],
+    "new\"": [
+      "whatsnew/2025-10-04-initialize-whats-new.md"
+    ],
+    "section": [
+      "whatsnew/2025-10-04-initialize-whats-new.md"
+    ],
+    "quality": [
+      "whatsnew/2025-10-04-initialize-whats-new.md",
+      "whatsnew/2025-09-30-quality-checks-ci.md"
+    ],
+    "checks": [
+      "whatsnew/2025-10-04-initialize-whats-new.md",
+      "whatsnew/2025-09-30-quality-checks-ci.md"
+    ],
+    "settings": [
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "make": [
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "work": [
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "for": [
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "you": [
+      "whatsnew/2025-10-03-accessibility-settings-consent.md",
+      "whatsnew/2025-10-01-search-ux-live-results.md"
+    ],
+    "search": [
+      "whatsnew/2025-10-02-seo-schema-i18n.md",
+      "whatsnew/2025-10-01-search-ux-live-results.md"
+    ],
+    "visibility": [
+      "whatsnew/2025-10-02-seo-schema-i18n.md"
+    ],
+    "language": [
+      "whatsnew/2025-10-02-seo-schema-i18n.md"
+    ],
+    "pages": [
+      "whatsnew/2025-10-02-seo-schema-i18n.md"
+    ],
+    "with": [
+      "whatsnew/2025-10-01-search-ux-live-results.md"
+    ],
+    "live": [
+      "whatsnew/2025-10-01-search-ux-live-results.md"
+    ],
+    "results": [
+      "whatsnew/2025-10-01-search-ux-live-results.md"
+    ],
+    "find": [
+      "whatsnew/2025-10-01-search-ux-live-results.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "what": [
+      "whatsnew/2025-10-01-search-ux-live-results.md"
+    ],
+    "need": [
+      "whatsnew/2025-10-01-search-ux-live-results.md"
+    ],
+    "instantly": [
+      "whatsnew/2025-10-01-search-ux-live-results.md"
+    ],
+    "automated": [
+      "whatsnew/2025-09-30-quality-checks-ci.md"
+    ],
+    "(accessibility,": [
+      "whatsnew/2025-09-30-quality-checks-ci.md"
+    ],
+    "links,": [
+      "whatsnew/2025-09-30-quality-checks-ci.md"
+    ],
+    "performance)": [
+      "whatsnew/2025-09-30-quality-checks-ci.md"
+    ],
+    "newsletter": [
+      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md"
+    ],
+    "sign-up": [
+      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md"
+    ],
+    "easier": [
+      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "keyboard": [
+      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md"
+    ],
+    "navigation": [
+      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "your": [
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "way": [
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "around": [
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "design": [
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
     ]
   },
   "tagIndex": {
+    "announcement": [
+      "blog/2025-10-03-welcome-to-3mpowr.md"
+    ],
+    "updates": [
+      "blog/2025-10-03-welcome-to-3mpowr.md"
+    ],
     "3mpwrapp": [
-      "blog/2025-10-24-3mpwrapp-wellness.md",
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-22-3mpwrapp-qa.md",
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "blog/2025-10-21-3mpwrapp-policy.md",
-      "blog/2025-10-20-3mpwrapp-community.md",
-      "blog/2025-10-20-3mpwrapp-communitynews.md",
-      "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-20-3mpwrapp-roundup.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
     "features": [
-      "blog/2025-10-24-3mpwrapp-wellness.md",
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-22-3mpwrapp-qa.md",
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "blog/2025-10-21-3mpwrapp-policy.md",
-      "blog/2025-10-20-3mpwrapp-community.md",
-      "blog/2025-10-20-3mpwrapp-communitynews.md",
-      "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-20-3mpwrapp-roundup.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
     "community": [
-      "blog/2025-10-24-3mpwrapp-wellness.md",
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-22-3mpwrapp-qa.md",
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "blog/2025-10-21-3mpwrapp-policy.md",
-      "blog/2025-10-20-3mpwrapp-community.md",
-      "blog/2025-10-20-3mpwrapp-communitynews.md",
       "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-20-3mpwrapp-roundup.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md",
+      "blog/2025-10-18-daily-curation.md",
+      "blog/2025-10-17-comprehensive-daily-digest.md",
       "blog/2025-10-17-daily-curation.md"
     ],
     "guide": [
-      "blog/2025-10-24-3mpwrapp-wellness.md",
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-22-3mpwrapp-qa.md",
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "blog/2025-10-21-3mpwrapp-policy.md",
-      "blog/2025-10-20-3mpwrapp-community.md",
-      "blog/2025-10-20-3mpwrapp-communitynews.md",
-      "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-20-3mpwrapp-roundup.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
     "highlights": [
+      "blog/2025-10-18-daily-curation.md",
+      "blog/2025-10-17-comprehensive-daily-digest.md",
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-17-weekly-recap.md"
+    ],
+    "provincial-programs": [
+      "blog/2025-10-17-comprehensive-daily-digest.md"
+    ],
+    "federal-programs": [
+      "blog/2025-10-17-comprehensive-daily-digest.md"
     ],
     "weekly": [
       "blog/2025-10-17-weekly-recap.md"
@@ -1337,75 +960,34 @@
     ],
     "whats-new": [
       "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md",
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
     ],
     "curated": [
       "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md",
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
     ]
   },
   "categoryIndex": {
+    "curation news": [
+      "blog/2025-10-21-daily-curation.md"
+    ],
     "news": [
-      "blog/2025-10-24-3mpwrapp-wellness.md",
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-22-3mpwrapp-qa.md",
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "blog/2025-10-21-3mpwrapp-policy.md",
-      "blog/2025-10-20-3mpwrapp-community.md",
-      "blog/2025-10-20-3mpwrapp-communitynews.md",
       "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-20-3mpwrapp-roundup.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md",
       "blog/2025-10-17-weekly-recap.md",
       "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md",
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
     ],
     "updates": [
-      "blog/2025-10-24-3mpwrapp-wellness.md",
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-22-3mpwrapp-qa.md",
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "blog/2025-10-21-3mpwrapp-policy.md",
-      "blog/2025-10-20-3mpwrapp-community.md",
-      "blog/2025-10-20-3mpwrapp-communitynews.md",
       "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-20-3mpwrapp-roundup.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md",
       "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md",
-      "whatsnew/2025-10-17-3-indias-new-envoy-wants-full-scale-trade-.md"
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
     ],
     "education": [
-      "blog/2025-10-24-3mpwrapp-wellness.md",
-      "blog/2025-10-23-3mpwrapp-interview.md",
-      "blog/2025-10-23-3mpwrapp-mythbusting.md",
-      "blog/2025-10-22-3mpwrapp-accessibility.md",
-      "blog/2025-10-22-3mpwrapp-howto.md",
-      "blog/2025-10-22-3mpwrapp-qa.md",
-      "blog/2025-10-22-3mpwrapp-resourcespotlight.md",
-      "blog/2025-10-21-3mpwrapp-behindthescenes.md",
-      "blog/2025-10-21-3mpwrapp-legalupdate.md",
-      "blog/2025-10-21-3mpwrapp-policy.md",
-      "blog/2025-10-20-3mpwrapp-community.md",
-      "blog/2025-10-20-3mpwrapp-communitynews.md",
-      "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-20-3mpwrapp-roundup.md",
-      "blog/2025-10-20-3mpwrapp-userspotlight.md"
+      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
     "community": [
+      "blog/2025-10-18-daily-curation.md",
+      "blog/2025-10-17-comprehensive-daily-digest.md",
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-17-weekly-recap.md"
     ]

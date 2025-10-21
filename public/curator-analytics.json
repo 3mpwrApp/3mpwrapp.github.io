@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "startDate": "2025-10-21T02:18:23.548Z",
+  "lastUpdated": "2025-10-21T02:18:23.976Z",
+  "featureHighlights": {
+    "Resource Directory": {
+      "uses": 1,
+      "platforms": {
+        "mastodon": 0,
+        "bluesky": 1,
+        "x": 0
+      },
+      "timeSlots": {
+        "morning": 0,
+        "midday": 0,
+        "evening": 0,
+        "night": 1
+      },
+      "firstUsed": "2025-10-21T02:18:23.975Z",
+      "lastUsed": "2025-10-21T02:18:23.975Z"
+    }
+  },
+  "timeSlots": {
+    "night": {
+      "posts": 1,
+      "avgItems": "0.0",
+      "platforms": {
+        "mastodon": 0,
+        "bluesky": 1,
+        "x": 0
+      },
+      "successRate": 0,
+      "totalItems": 0
+    }
+  },
+  "platforms": {
+    "mastodon": {
+      "posts": 1,
+      "successes": 0,
+      "failures": 1
+    },
+    "bluesky": {
+      "posts": 1,
+      "successes": 1,
+      "failures": 0
+    },
+    "x": {
+      "posts": 0,
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "totalPosts": 2,
+  "successRate": "50.00"
+}
