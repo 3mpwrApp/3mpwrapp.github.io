@@ -32,16 +32,12 @@ Thank you for helping us build the best advocacy and wellness app for people liv
 
 **Short on time? Complete this quick test to help us catch the most common issues.**
 
-### Step 1: Install & Launch (1 minute)
+> ⚠️ **BETA NOT YET ACTIVE**: Installation instructions will be provided when the beta testing period begins. Please wait for official instructions before attempting to install.
 
-**⚠️ DON'T DO THIS YET - WAIT FOR INSTRUCTIONS!**
+### Step 1: Launch the App (1 minute)
 
-1. **Install the app**:
-   - **iOS**: Use TestFlight (see [iOS Setup](#ios-testflight) for details)
-   - **Android**: Use Play Beta (see [Android Setup](#android-google-play-beta) for details)
-   
-2. **Open the app** and wait ~1 minute for caches to load
-3. **Accept Terms & Conditions** when prompted
+1. **Open the app** and wait ~1 minute for caches to load
+2. **Accept Terms & Conditions** when prompted
 
 ### Step 2: Navigate & Explore (2 minutes)
 
@@ -100,76 +96,17 @@ Pick ONE feature to test thoroughly:
 
 ## 📱 Getting Started
 
-### iOS (TestFlight)
+> ⚠️ **BETA NOT YET ACTIVE**: Installation instructions for iOS (TestFlight) and Android (Google Play Beta) will be provided via email when the beta testing period begins. Please wait for official instructions.
 
-#### First-Time Setup
+**What you'll need when beta starts:**
+- A compatible iOS (13.0+) or Android (6.0+) device
+- Your email address (for beta invitation)
+- At least 500 MB of free storage space
 
-1. **Install TestFlight**:
-   - Open the App Store on your iPhone or iPad
-   - Search for "TestFlight" (by Apple)
-   - Download and install it (it's free)
-
-2. **Accept Your Beta Invitation**:
-   - Check your email for the TestFlight invitation from 3mpwrApp
-   - Tap the **"View in TestFlight"** button in the email
-   - Or manually open TestFlight and enter your invitation code
-
-3. **Install 3mpwrApp Beta**:
-   - In TestFlight, find "3mpwrApp" in your apps list
-   - Tap **"Accept"** then **"Install"**
-   - Wait for the download to complete
-   - Tap **"Open"** to launch the app
-
-4. **Enable Auto-Updates** (Recommended):
-   - Open TestFlight
-   - Tap on the 3mpwrApp
-   - Turn ON **"Automatic Updates"**
-   - You'll get new beta versions automatically
-
-#### Getting Updates
-- New beta builds are usually released 1-2 times per week
-- You'll get a notification when an update is available
-- Or open TestFlight to manually check for updates
-
-#### Troubleshooting
-- **Invitation expired?** Email us for a new code
-- **App won't install?** Make sure you have at least 500MB free space
-- **Stuck loading?** Delete and reinstall from TestFlight
-
----
-
-### Android (Google Play Beta)
-
-#### First-Time Setup
-
-1. **Join the Beta Program**:
-   - Open the beta invitation link sent to your email
-   - Sign in with your Google Account
-   - Tap **"Become a tester"**
-   - Wait 5-10 minutes for access to be granted
-
-2. **Install 3mpwrApp Beta**:
-   - Open the Google Play Store
-   - Search for "3mpwrApp" or tap the link in your invitation
-   - You'll see **"You're a beta tester"** banner at the top
-   - Tap **"Install"** or **"Update"** if you have an older version
-
-3. **Enable Auto-Updates** (Recommended):
-   - In Play Store, go to the 3mpwrApp page
-   - Tap the ⋮ (three dots) menu in the top right
-   - Select **"Enable auto-update"**
-
-4. **Permissions**:
-   - When first opening the app, you may be asked for permissions:
-     - **Storage**: For Evidence Locker (uploading documents)
-     - **Notifications**: For reminders and alerts
-     - **Camera** (optional): For quick photo uploads
-   - You can change these later in Android Settings
-
-#### Getting Updates
-- New beta builds are usually released 1-2 times per week
-- Play Store will notify you when updates are available
-- Or check manually: Play Store → My Apps → Updates
+**You'll receive:**
+- Email invitation with installation link
+- Step-by-step setup instructions
+- Beta tester welcome email with support contacts
 
 ---
 
