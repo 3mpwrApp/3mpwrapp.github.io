@@ -127,7 +127,7 @@ jobs:
           git config --local user.email "empowrapp08162025@gmail.com"
           git config --local user.name "3mpwrApp Curator Bot"
           
-          git add _curation/ _posts/ public/ || true
+          git add _curation/ _posts/ public/ _data/curator.json || true
           
           if git diff --staged --quiet; then
             echo "✅ No changes to commit"
@@ -135,7 +135,14 @@ jobs:
           fi
           
           TODAY=$(date -u +%Y-%m-%d)
-          git commit -m "feat(curator): Daily curation $TODAY - automated content aggregation"
+          
+          # Check if curator.json changed (auto-learning)
+          if git diff --staged --name-only | grep -q "curator.json"; then
+            git commit -m "feat(curator): Daily curation $TODAY + auto-learned keywords"
+          else
+            git commit -m "feat(curator): Daily curation $TODAY - automated content aggregation"
+          fi
+          
           git push origin main || echo "⚠️ No changes to push"
 
       - name: Create summary

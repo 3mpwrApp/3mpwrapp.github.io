@@ -453,6 +453,34 @@ ${markdown}`;
         this.config.scoring
       );
       
+      // Apply social media trends boost
+      try {
+        const CuratorSocialTrends = require('./curator-social-trends.js');
+        const socialTrends = new CuratorSocialTrends();
+        
+        this.scoredItems = this.scoredItems.map(item => {
+          const text = `${item.title} ${item.description || ''}`.toLowerCase();
+          let socialBoost = 1.0;
+          
+          // Check for emerging social topics
+          socialTrends.trends.emergingTopics.forEach(topic => {
+            if (text.includes(topic.keyword.toLowerCase())) {
+              socialBoost = Math.max(socialBoost, socialTrends.getSocialBoost(topic.keyword));
+            }
+          });
+          
+          if (socialBoost > 1.0) {
+            const oldScore = item.score;
+            item.score *= socialBoost;
+            this.log(`   📱 Social boost: "${item.title.substring(0, 50)}" ${oldScore.toFixed(2)} → ${item.score.toFixed(2)} (${socialBoost.toFixed(2)}x)`);
+          }
+          
+          return item;
+        });
+      } catch (socialErr) {
+        console.warn(`⚠️ Social trends boost skipped: ${socialErr.message}`);
+      }
+      
       this.deduplicate();
       this.filterLanguages();
       
@@ -480,6 +508,20 @@ ${markdown}`;
     } catch (err) {
       console.error(`\n❌ CURATOR ERROR: ${err.message}\n`);
       process.exit(1);
+    } finally {
+      // Auto-learning: Discover new keywords from this curation
+      try {
+        const CuratorAutoLearn = require('./curator-auto-learn.js');
+        const learner = new CuratorAutoLearn();
+        
+        const curationPath = path.join(process.cwd(), 'public', 'curation-latest.json');
+        if (fs.existsSync(curationPath)) {
+          const curationData = JSON.parse(fs.readFileSync(curationPath, 'utf8'));
+          learner.learnFromCuration(curationData);
+        }
+      } catch (learningErr) {
+        console.warn(`⚠️ Auto-learning skipped: ${learningErr.message}`);
+      }
     }
   }
 }
