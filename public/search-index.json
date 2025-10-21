@@ -1,8 +1,25 @@
 {
   "version": "1.0.0",
   "generated": "2025-10-21",
-  "totalDocuments": 36,
+  "totalDocuments": 37,
   "documents": [
+    {
+      "id": "blog/2025-10-21-weekly-update-week-43.md",
+      "source": "blog",
+      "title": "Weekly Update — Week 43 (2025-10-21)",
+      "excerpt": "Here’s what changed this week, in simple terms: - No major changes were published this week. Want updates in your inbox? Subscribe on the Newsletter page.",
+      "content": "Here’s what changed this week, in simple terms: - No major changes were published this week. Want updates in your inbox? Subscribe on the Newsletter page.",
+      "date": "2025-10-21 09:00:00 +0000",
+      "tags": [
+        "weekly",
+        "updates"
+      ],
+      "categories": [
+        "updates"
+      ],
+      "url": "/2025-10-21-weekly-update-week-43",
+      "filesize": 154
+    },
     {
       "id": "blog/2025-10-03-welcome-to-3mpowr.md",
       "source": "blog",
@@ -487,6 +504,25 @@
     }
   ],
   "titleIndex": {
+    "43": [
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
+    "weekly": [
+      "blog/2025-10-21-weekly-update-week-43.md",
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "update": [
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
+    "—": [
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
+    "week": [
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
+    "(2025-10-21)": [
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
     "welcome": [
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
@@ -630,9 +666,6 @@
     ],
     "coverage": [
       "blog/2025-10-17-comprehensive-daily-digest.md"
-    ],
-    "weekly": [
-      "blog/2025-10-17-weekly-recap.md"
     ],
     "recap": [
       "blog/2025-10-17-weekly-recap.md"
@@ -919,10 +952,15 @@
     ]
   },
   "tagIndex": {
-    "announcement": [
-      "blog/2025-10-03-welcome-to-3mpowr.md"
+    "weekly": [
+      "blog/2025-10-21-weekly-update-week-43.md",
+      "blog/2025-10-17-weekly-recap.md"
     ],
     "updates": [
+      "blog/2025-10-21-weekly-update-week-43.md",
+      "blog/2025-10-03-welcome-to-3mpowr.md"
+    ],
+    "announcement": [
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
     "3mpwrapp": [
@@ -952,9 +990,6 @@
     "federal-programs": [
       "blog/2025-10-17-comprehensive-daily-digest.md"
     ],
-    "weekly": [
-      "blog/2025-10-17-weekly-recap.md"
-    ],
     "recap": [
       "blog/2025-10-17-weekly-recap.md"
     ],
@@ -968,17 +1003,18 @@
     ]
   },
   "categoryIndex": {
+    "updates": [
+      "blog/2025-10-21-weekly-update-week-43.md",
+      "blog/2025-10-20-3mpwrapp-feature.md",
+      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
+      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
+    ],
     "curation news": [
       "blog/2025-10-21-daily-curation.md"
     ],
     "news": [
       "blog/2025-10-20-3mpwrapp-feature.md",
       "blog/2025-10-17-weekly-recap.md",
-      "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
-      "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
-    ],
-    "updates": [
-      "blog/2025-10-20-3mpwrapp-feature.md",
       "whatsnew/2025-10-17-1-dtc-medical-fees-fund-helping-people-acc.md",
       "whatsnew/2025-10-17-2-ask-an-expert-sessions-back-by-popular-d.md"
     ],
