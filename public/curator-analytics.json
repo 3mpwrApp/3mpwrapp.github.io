@@ -1,23 +1,23 @@
 {
   "version": "1.0",
   "startDate": "2025-10-21T02:18:23.548Z",
-  "lastUpdated": "2025-10-21T09:23:50.315Z",
+  "lastUpdated": "2025-10-21T15:25:56.159Z",
   "featureHighlights": {
     "Resource Directory": {
-      "uses": 1,
+      "uses": 2,
       "platforms": {
         "mastodon": 0,
-        "bluesky": 1,
+        "bluesky": 2,
         "x": 0
       },
       "timeSlots": {
         "morning": 0,
-        "midday": 0,
+        "midday": 1,
         "evening": 0,
         "night": 1
       },
       "firstUsed": "2025-10-21T02:18:23.975Z",
-      "lastUsed": "2025-10-21T02:18:23.975Z"
+      "lastUsed": "2025-10-21T15:25:56.159Z"
     },
     "Benefits Navigator": {
       "uses": 1,
@@ -74,17 +74,28 @@
       },
       "successRate": 0,
       "totalItems": 0
+    },
+    "midday": {
+      "posts": 1,
+      "avgItems": "0.0",
+      "platforms": {
+        "mastodon": 0,
+        "bluesky": 1,
+        "x": 0
+      },
+      "successRate": 0,
+      "totalItems": 0
     }
   },
   "platforms": {
     "mastodon": {
-      "posts": 3,
+      "posts": 4,
       "successes": 0,
-      "failures": 3
+      "failures": 4
     },
     "bluesky": {
-      "posts": 3,
-      "successes": 3,
+      "posts": 4,
+      "successes": 4,
       "failures": 0
     },
     "x": {
@@ -93,6 +104,6 @@
       "failures": 0
     }
   },
-  "totalPosts": 6,
+  "totalPosts": 8,
   "successRate": "50.00"
 }
