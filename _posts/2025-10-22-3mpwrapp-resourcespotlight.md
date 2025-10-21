@@ -62,7 +62,7 @@ Partner with Plan Institute and BC Aboriginal Network on Disability Society (BCA
 
 ### Why They Matter
 
-"They fight for systemic change while also helping individuals right now. That's rare." — Community Member
+Disability Alliance BC combines systemic advocacy with direct individual support, addressing both immediate needs and long-term policy change.
 
 ### How to Connect
 
