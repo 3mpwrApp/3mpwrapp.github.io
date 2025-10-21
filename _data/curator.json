@@ -28,7 +28,14 @@
     "https://www.openparliament.ca/feeds/recent-bills/"
   ],
   
-  "scoringKeywords": {
+  "scoring": {
+    "critical": {
+      "score": 4.0,
+      "terms": ["breaking", "urgent", "immediate", "emergency", "crisis", "lawsuit", "court decision",
+               "ruling", "verdict", "settlement", "class action", "discrimination case", "human rights complaint",
+               "accessibility violation", "barrier removal", "policy change", "new legislation",
+               "budget announcement", "funding increase", "program expansion", "benefit increase"]
+    },
     "high_priority": {
       "score": 3.0,
       "terms": ["accessibility", "disability", "disabled", "PWD", "persons with disabilities", 
@@ -40,6 +47,14 @@
                "workplace injury", "return to work", "vocational rehabilitation",
                "disability benefits navigator", "benefit application", "eligibility", "income assistance",
                "accessible design", "screen reader", "WCAG", "ARIA", "keyboard navigation"]
+    },
+    "provincial": {
+      "score": 2.5,
+      "terms": ["ODSP", "Ontario Disability Support Program", "AISH", "Assured Income for the Severely Handicapped",
+               "PWD benefits", "Persons with Disabilities benefits", "EIA disability", "Employment and Income Assistance",
+               "SAID", "Saskatchewan Assured Income for Disability", "Income Support", "disability assistance",
+               "provincial disability", "disability pension", "disability allowance", "special needs",
+               "medical benefits", "prescription coverage", "mobility allowance", "transportation subsidy"]
     },
     "medium_priority": {
       "score": 2.0,  
@@ -64,23 +79,6 @@
     }
   },
   
-  "provincialPrograms": {
-    "score": 2.5,
-    "terms": ["ODSP", "Ontario Disability Support Program", "AISH", "Assured Income for the Severely Handicapped",
-             "PWD benefits", "Persons with Disabilities benefits", "EIA disability", "Employment and Income Assistance",
-             "SAID", "Saskatchewan Assured Income for Disability", "Income Support", "disability assistance",
-             "provincial disability", "disability pension", "disability allowance", "special needs",
-             "medical benefits", "prescription coverage", "mobility allowance", "transportation subsidy"]
-  },
-  
-  "criticalTerms": {
-    "score": 4.0,
-    "terms": ["breaking", "urgent", "immediate", "emergency", "crisis", "lawsuit", "court decision",
-             "ruling", "verdict", "settlement", "class action", "discrimination case", "human rights complaint",
-             "accessibility violation", "barrier removal", "policy change", "new legislation",
-             "budget announcement", "funding increase", "program expansion", "benefit increase"]
-  },
-  
   "contentTypes": {
     "breaking_news": ["breaking", "urgent", "just in", "developing", "live updates"],
     "government_announcement": ["announces", "government", "minister", "federal", "provincial", "policy", "budget"],
@@ -92,7 +90,7 @@
     "accessibility_update": ["accessibility", "barrier removal", "accommodation", "universal design", "AODA"]
   },
   
-  "minScore": 1.0,
+  "minScore": 1.5,
   "maxItems": 30,
   "languages": ["en", "fr"],
   "excludePatterns": ["spam", "advertisement", "promotional"],
