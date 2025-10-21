@@ -4,8 +4,8 @@
     "message": "❌ Mastodon: getaddrinfo ENOTFOUND https://mastodon.social"
   },
   "bluesky": {
-    "success": true,
-    "message": "✅ Bluesky: Posted successfully (at://did:plc:qnmnt55gza5lo4fs32hqywpo/app.bsky.feed.post/3m3pncjc2p724)"
+    "success": false,
+    "message": "❌ Bluesky: HTTP 400: Invalid app.bsky.feed.post record: Record/text must not be longer than 300 graphemes"
   },
   "x": {
     "success": false,

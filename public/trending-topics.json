@@ -1,6 +1,308 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-10-21T15:25:55.504Z",
-  "keywords": {},
-  "currentTrending": []
+  "lastUpdated": "2025-10-21T20:00:36.101Z",
+  "keywords": {
+    "emergency": {
+      "totalMentions": 3,
+      "recentMentions": 3,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 3
+    },
+    "crisis": {
+      "totalMentions": 2,
+      "recentMentions": 2,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 2
+    },
+    "government": {
+      "totalMentions": 14,
+      "recentMentions": 14,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 14
+    },
+    "public": {
+      "totalMentions": 3,
+      "recentMentions": 3,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 3
+    },
+    "manitoba": {
+      "totalMentions": 9,
+      "recentMentions": 9,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 9
+    },
+    "disability": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "ADA": {
+      "totalMentions": 12,
+      "recentMentions": 12,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 12
+    },
+    "policy": {
+      "totalMentions": 3,
+      "recentMentions": 3,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 3
+    },
+    "research": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "canada": {
+      "totalMentions": 12,
+      "recentMentions": 12,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 12
+    },
+    "SAID": {
+      "totalMentions": 6,
+      "recentMentions": 6,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 6
+    },
+    "report": {
+      "totalMentions": 3,
+      "recentMentions": 3,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 3
+    },
+    "federal": {
+      "totalMentions": 2,
+      "recentMentions": 2,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 2
+    },
+    "update": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "canadian": {
+      "totalMentions": 5,
+      "recentMentions": 5,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 5
+    },
+    "tool": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "social": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "statistics": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "data": {
+      "totalMentions": 2,
+      "recentMentions": 2,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 2
+    },
+    "british columbia": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "service": {
+      "totalMentions": 2,
+      "recentMentions": 2,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 2
+    },
+    "deaf": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "support": {
+      "totalMentions": 2,
+      "recentMentions": 2,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 2
+    },
+    "program": {
+      "totalMentions": 3,
+      "recentMentions": 3,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 3
+    },
+    "news": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "provincial": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "housing": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "inclusive": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "online": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "community": {
+      "totalMentions": 2,
+      "recentMentions": 2,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 2
+    },
+    "legislation": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "education": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "ontario": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "nova scotia": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    },
+    "verdict": {
+      "totalMentions": 1,
+      "recentMentions": 1,
+      "firstSeen": "2025-10-21T20:00:36.099Z",
+      "lastSeen": "2025-10-21T20:00:36.099Z",
+      "peakMentions": 1
+    }
+  },
+  "currentTrending": [
+    {
+      "keyword": "government",
+      "mentions": 14,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "ADA",
+      "mentions": 12,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "canada",
+      "mentions": 12,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "manitoba",
+      "mentions": 9,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "SAID",
+      "mentions": 6,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "canadian",
+      "mentions": 5,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "emergency",
+      "mentions": 3,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "public",
+      "mentions": 3,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "policy",
+      "mentions": 3,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "report",
+      "mentions": 3,
+      "velocity": "rising"
+    },
+    {
+      "keyword": "program",
+      "mentions": 3,
+      "velocity": "rising"
+    }
+  ]
 }
