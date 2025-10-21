@@ -1,13 +1,8 @@
 ---
-layout: post
-title: Weekly Update — Week 43 (2025)
-date: 2025-10-21 09:00:00 +0000
-tags: [weekly, updates]
-categories: [updates]
-excerpt: This week's updates to 3mpwrApp features, content, and improvements.
+layout: whats_new
+title: Week 43 Updates (2025)
+date: 2025-10-21
 ---
-
-Here's what changed this week, in simple terms:
 
 ## ✨ New Features
 

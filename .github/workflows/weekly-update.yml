@@ -1,0 +1,91 @@
+name: Weekly Update Post
+
+# Generate weekly update summary
+# Runs every Monday at 9 AM UTC
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # 9:00 AM UTC every Monday
+    
+  workflow_dispatch:
+    inputs:
+      force_generate:
+        description: 'Force generate even if already done this week'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  weekly_update:
+    name: Generate Weekly Update
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # Need full history for git log
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate weekly update
+        run: |
+          echo "📝 Generating weekly update post..."
+          node scripts/weekly-update-generator.js
+
+      - name: Commit update
+        run: |
+          git config --local user.email "empowrapp08162025@gmail.com"
+          git config --local user.name "3mpwrApp Content Bot"
+          
+          git add _posts/ _whats_new/ || true
+          
+          if git diff --staged --quiet; then
+            echo "✅ No changes to commit"
+            exit 0
+          fi
+          
+          WEEK=$(date -u +%V)
+          YEAR=$(date -u +%Y)
+          git commit -m "feat(blog): Weekly update - Week $WEEK ($YEAR)"
+          git push origin main
+
+      - name: Create summary
+        if: always()
+        run: |
+          WEEK=$(date -u +%V)
+          YEAR=$(date -u +%Y)
+          
+          echo "# 📅 Weekly Update - Week $WEEK ($YEAR)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Generated:** $(date -u +"%Y-%m-%d %H:%M UTC")" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Show recent commits
+          echo "**Recent commits:**" >> $GITHUB_STEP_SUMMARY
+          git log --since="7 days ago" --pretty=format:"- %s" >> $GITHUB_STEP_SUMMARY || echo "No commits in past week" >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-update-${{ github.run_id }}
+          path: |
+            _posts/*weekly-update*.md
+            _whats_new/*updates.md
+          retention-days: 30

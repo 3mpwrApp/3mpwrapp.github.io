@@ -1,0 +1,110 @@
+name: Daily Feature Article
+
+# Generate and post daily feature spotlight articles
+# Runs every day at 10 AM UTC (after main curator runs)
+
+on:
+  schedule:
+    - cron: '0 10 * * *'  # 10:00 AM UTC daily
+    
+  workflow_dispatch:
+    inputs:
+      force_post:
+        description: 'Force generate and post even if already done today'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  daily_feature:
+    name: Generate Daily Feature Article
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate daily feature article
+        run: |
+          echo "📝 Generating daily feature article..."
+          node scripts/daily-feature-generator.js
+
+      - name: Post to social media
+        env:
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_PDS: 'https://bsky.social'
+        run: |
+          echo "📱 Posting to social media..."
+          node scripts/post-daily-feature.js
+
+      - name: Commit article
+        run: |
+          git config --local user.email "empowrapp08162025@gmail.com"
+          git config --local user.name "3mpwrApp Content Bot"
+          
+          git add _posts/ public/ || true
+          
+          if git diff --staged --quiet; then
+            echo "✅ No changes to commit"
+            exit 0
+          fi
+          
+          TODAY=$(date -u +%Y-%m-%d)
+          git commit -m "feat(blog): Daily feature article - $TODAY"
+          git push origin main
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "# 📝 Daily Feature Article" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Date:** $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f "public/daily-feature-social.json" ]; then
+            FEATURE=$(jq -r '.feature' public/daily-feature-social.json)
+            URL=$(jq -r '.url' public/daily-feature-social.json)
+            echo "**Feature:** $FEATURE" >> $GITHUB_STEP_SUMMARY
+            echo "**Article:** $URL" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ -f "public/feature-posting-results.json" ]; then
+            echo "**Social Media:**" >> $GITHUB_STEP_SUMMARY
+            MASTO_SUCCESS=$(jq -r '.results.mastodon.success' public/feature-posting-results.json)
+            BLUE_SUCCESS=$(jq -r '.results.bluesky.success' public/feature-posting-results.json)
+            echo "- Mastodon: $([ "$MASTO_SUCCESS" = "true" ] && echo "✅" || echo "❌")" >> $GITHUB_STEP_SUMMARY
+            echo "- Bluesky: $([ "$BLUE_SUCCESS" = "true" ] && echo "✅" || echo "❌")" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-feature-${{ github.run_id }}
+          path: |
+            _posts/*feature-spotlight*.md
+            public/daily-feature-social.json
+            public/feature-posting-results.json
+          retention-days: 7
