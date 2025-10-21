@@ -11,7 +11,7 @@ We'd love to hear from you! Whether you have questions about 3mpwr, feedback to 
 
 ## Quick Links
 
-- **Email:** [contact@3mpowr.com](mailto:contact@3mpowr.com)
+- **Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
 - **GitHub:** [github.com/3mpowrApp](https://github.com/3mpowrApp)
 - **Documentation:** [Read our user guide](/user-guide)
 - **Report a Bug:** [GitHub Issues](https://github.com/3mpowrApp/3mpwrapp.github.io/issues)
@@ -210,11 +210,11 @@ Please fill out the form below and we'll get back to you within 24 hours:
 - **GitHub:** [@3mpowrApp](https://github.com/3mpowrApp)
 
 ### Accessibility
-If you have accessibility issues viewing or using this form, please email us directly at [contact@3mpowr.com](mailto:contact@3mpowr.com) and we'll assist you promptly.
+If you have accessibility issues viewing or using this form, please email us directly at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) and we'll assist you promptly.
 
 ### Response Time
 We aim to respond to all inquiries within 24 hours during business days (Monday-Friday, 9 AM-5 PM UTC).
 
 ---
 
-**Note:** This form requires JavaScript to function. If you're having issues, you can email us directly at [contact@3mpowr.com](mailto:contact@3mpowr.com).
+**Note:** This form requires JavaScript to function. If you're having issues, you can email us directly at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).
