@@ -450,14 +450,14 @@ ${markdown}`;
       console.log('🔥 Applying trending topics boost...');
       this.scoredItems = this.trending.applyTrendingBoosts(
         this.scoredItems, 
-        this.config.scoringKeywords
+        this.config.scoring
       );
       
       this.deduplicate();
       this.filterLanguages();
       
       // Update trending topics tracking
-      this.trending.updateFromItems(this.selectedItems, this.config.scoringKeywords);
+      this.trending.updateFromItems(this.selectedItems, this.config.scoring);
       
       // Save core outputs
       const outputs = this.saveOutputs();
