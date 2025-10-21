@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://3mpwrapp.github.io/</loc>
+    <loc>https://3mpwrapp.pages.dev/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/features</loc>
+    <loc>https://3mpwrapp.pages.dev/features</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/blog</loc>
+    <loc>https://3mpwrapp.pages.dev/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/contact</loc>
+    <loc>https://3mpwrapp.pages.dev/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/about</loc>
+    <loc>https://3mpwrapp.pages.dev/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/user-guide</loc>
+    <loc>https://3mpwrapp.pages.dev/user-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/newsletter</loc>
+    <loc>https://3mpwrapp.pages.dev/newsletter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/accessibility</loc>
+    <loc>https://3mpwrapp.pages.dev/accessibility</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/privacy</loc>
+    <loc>https://3mpwrapp.pages.dev/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/terms</loc>
+    <loc>https://3mpwrapp.pages.dev/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/beta</loc>
+    <loc>https://3mpwrapp.pages.dev/beta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.github.io/resources</loc>
+    <loc>https://3mpwrapp.pages.dev/resources</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
