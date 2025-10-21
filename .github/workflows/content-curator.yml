@@ -67,7 +67,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --production
+        run: npm ci
 
       - name: Validate configuration
         run: |
