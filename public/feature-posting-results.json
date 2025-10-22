@@ -1,0 +1,18 @@
+{
+  "feature": "Disability Wizard",
+  "date": "2025-10-22",
+  "articleUrl": "https://3mpwrapp.github.io/blog/2025-10-22-feature-spotlight-disability-wizard/",
+  "timestamp": "2025-10-22T10:21:15.449Z",
+  "results": {
+    "mastodon": {
+      "success": true,
+      "message": "Posted successfully",
+      "url": "https://mastodon.social/@3mpwrApp/115417315530733329"
+    },
+    "bluesky": {
+      "success": true,
+      "message": "Posted successfully",
+      "url": "https://bsky.app/profile/3mpwrapp.bsky.social/post/3m3rmqmvtss2w"
+    }
+  }
+}
