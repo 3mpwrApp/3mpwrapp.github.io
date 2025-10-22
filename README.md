@@ -208,8 +208,16 @@ set EXPO_PUBLIC_DATA_POLICY=strict_byoc
 - **Zero Cloud Dependencies**: Optional cloud integration only - user's choice of provider
 - **Local Data Storage**: All data encrypted and stored locally with AES-256
 - **Privacy by Design**: No tracking, no telemetry, no unnecessary data collection
+- **User Privacy Controls** 🆕: Easy in-app toggles for analytics, crash reporting, and search history (Settings → Privacy & Security)
+- **All Data Collection Optional**: Every data type can be opted out - no required tracking
 - **Real-Time Security**: Continuous monitoring and automatic threat response across entire 3mpwr infrastructure
 - **Enterprise-Grade**: Military-grade encryption and hardware-backed security for all systems
+
+**Privacy Toggles (All Optional):**
+- ✅ Opt Out of Analytics (disables Firebase Analytics)
+- ✅ Error Reporting (disables Sentry crash logs)
+- ✅ Save Search History (disables search autocomplete tracking)
+- ✅ Cloud Features (disables Firebase chat/sync)
 
 Policy: When you make a user-visible change (labels, flows, notable behavior), update the User Guide and add an entry to the Changelog in the same PR. If you add or deprecate a feature, also update the "Where you'll see 'Coming soon' today" section in the User Guide.
 

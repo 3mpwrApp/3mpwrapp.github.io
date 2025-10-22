@@ -45,6 +45,7 @@ export type SettingsState = {
   requirePasscodeOnLaunch: boolean;
   autoLockTimeout: number; // minutes
   analyticsOptOut: boolean;
+  saveSearchHistory: boolean; // NEW: Allow users to opt-out of search history
   moodNudgesEnabled: boolean;
   quietHoursEnabled?: boolean;
   quietHoursStart?: string; // '22:00'
@@ -81,6 +82,7 @@ type Ctx = SettingsState & {
   setRequirePasscodeOnLaunch: (v: boolean) => void;
   setAutoLockTimeout: (v: number) => void;
   setAnalyticsOptOut: (v: boolean) => void;
+  setSaveSearchHistory: (v: boolean) => void;
   setMoodNudgesEnabled: (v: boolean) => void;
   setQuietHoursEnabled: (v: boolean) => void;
   setQuietHoursStart: (v: string) => void;
@@ -117,6 +119,7 @@ const DEFAULTS: SettingsState = {
   requirePasscodeOnLaunch: false,
   autoLockTimeout: 5,
   analyticsOptOut: false,
+  saveSearchHistory: true, // NEW: Default to saving search history (opt-out available)
   moodNudgesEnabled: true,
   quietHoursEnabled: true,
   quietHoursStart: '22:00',
@@ -218,6 +221,8 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setState((s) => ({ ...s, autoLockTimeout: v }));
   const setAnalyticsOptOut = (v: boolean) =>
     setState((s) => ({ ...s, analyticsOptOut: v }));
+  const setSaveSearchHistory = (v: boolean) =>
+    setState((s) => ({ ...s, saveSearchHistory: v }));
   const setMoodNudgesEnabled = (v: boolean) =>
     setState((s) => ({ ...s, moodNudgesEnabled: v }));
   const setQuietHoursEnabled = (v: boolean) =>
@@ -257,6 +262,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     setRequirePasscodeOnLaunch,
     setAutoLockTimeout,
     setAnalyticsOptOut,
+    setSaveSearchHistory,
     setMoodNudgesEnabled,
     setQuietHoursEnabled,
     setQuietHoursStart,

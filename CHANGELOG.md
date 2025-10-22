@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] - 2025-10-21
+
+### Added
+
+#### 🔒 **Privacy Controls Enhancement** ✅
+- **User-Controlled Privacy Toggles** (Settings → Privacy & Security):
+  - **"Opt Out of Analytics"** - Disable Firebase Analytics and diagnostics tracking
+  - **"Error Reporting"** - Control Sentry crash log collection
+  - **"Save Search History"** - Control search autocomplete/history storage (NEW!)
+  
+- **Google Play Data Safety Improvements**:
+  - Changed 4 data types from "Required" to "Optional"
+  - All tracking/analytics data now user-controlled
+  - Improved store listing transparency
+  
+- **Implementation**:
+  - Added `saveSearchHistory` setting to `store/settings.tsx`
+  - Added "Save Search History" toggle in Privacy Settings UI
+  - Updated all Google Play Console documentation
+  - Default: Opt-out model (features enabled, user can disable)
+
+- **Impact**:
+  - ✅ ALL 11 data types are now optional
+  - ✅ Zero required tracking
+  - ✅ Better user privacy and transparency
+  - ✅ Improved Google Play Store compliance
+
+- **Documentation**:
+  - `docs/SEARCH_HISTORY_OPT_OUT_FEATURE.md` - Implementation details
+  - `docs/GOOGLE_PLAY_PRIVACY_CONTROLS_SUMMARY.md` - Comprehensive overview
+  - `docs/GOOGLE_PLAY_DATA_USAGE_HANDLING.md` - Updated answers
+  - `docs/GOOGLE_PLAY_DATA_TYPES_GUIDE.md` - Updated data types
+
 ## [Unreleased] - 2025-10-17
 
 ### Added

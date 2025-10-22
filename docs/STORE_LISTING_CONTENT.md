@@ -88,7 +88,7 @@ Unlike other apps, 3mpwr never owns your data. Everything stays on your device u
 - Organizations supporting the disability community
 
 **📖 LEARN MORE**
-Visit empowrapp.com for tutorials, guides, and community resources.
+Visit https://3mpwrapp.pages.dev/ for tutorials, guides, and community resources.
 
 **💬 SUPPORT**
 Questions? Email empowrapp08162025@gmail.com or use in-app support (Settings → About & Contact).
@@ -252,7 +252,7 @@ https://github.com/empowrapp/empowrapp-new/blob/main/docs/release-prep/legal/pri
 ## 📧 Support URL
 **Required for both stores:**
 - Email: empowrapp08162025@gmail.com
-- Website: https://empowrapp.com/support (placeholder - redirect to email or GitHub for now)
+- Website: https://3mpwrapp.pages.dev/
 
 ## 📱 App Configuration
 

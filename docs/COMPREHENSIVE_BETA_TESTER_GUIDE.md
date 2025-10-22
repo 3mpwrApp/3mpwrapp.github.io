@@ -24,13 +24,12 @@ Thank you for helping us build the best advocacy and wellness app for Canadians 
 
 **Short on time? Complete this quick test to help us catch the most common issues.**
 
-### Step 1: Install & Launch (1 minute)
-1. **Install the app**:
-   - **iOS**: Use TestFlight (see [iOS Setup](#ios-testflight) for details)
-   - **Android**: Use Play Beta (see [Android Setup](#android-google-play-beta) for details)
-   
-2. **Open the app** and wait ~1 minute for caches to load
-3. **Accept Terms & Conditions** when prompted
+> 📧 **PHASE 1 BETA UNDERWAY**: If you've been selected as a Phase 1 beta tester, you'll receive installation instructions via email or message. Please wait for your personalized invitation with setup details.
+
+### Step 1: Launch the App (1 minute)
+
+1. **Open the app** and wait ~1 minute for caches to load
+2. **Accept Terms & Conditions** when prompted
 
 ### Step 2: Navigate & Explore (2 minutes)
 1. **Tap every tab** at the bottom:
@@ -86,106 +85,22 @@ Pick ONE feature to test thoroughly:
 
 ## 📱 Getting Started
 
-### iOS (TestFlight)
+> 📧 **PHASE 1 BETA UNDERWAY**: Selected Phase 1 testers will receive installation instructions via email or direct message. Check your inbox for your personalized invitation.
 
-#### First-Time Setup
+**What you'll need when you receive your invitation:**
+- A compatible iOS (13.0+) or Android (6.0+) device
+- Your email address (for beta invitation)
+- At least 500 MB of free storage space
 
-1. **Install TestFlight**:
-   - Open the App Store on your iPhone or iPad
-   - Search for "TestFlight" (by Apple)
-   - Download and install it (it's free)
+**Your invitation will include:**
+- Installation link (TestFlight for iOS or Play Beta for Android)
+- Step-by-step setup instructions
+- Beta tester welcome message with support contacts
 
-2. **Accept Your Beta Invitation**:
-   - Check your email for the TestFlight invitation from 3mpwr
-   - Tap the **"View in TestFlight"** button in the email
-   - Or manually open TestFlight and enter your invitation code
-
-3. **Install 3mpwr Beta**:
-   - In TestFlight, find "3mpwr" in your apps list
-   - Tap **"Accept"** then **"Install"**
-   - Wait for the download to complete
-   - Tap **"Open"** to launch the app
-
-4. **Enable Auto-Updates** (Recommended):
-   - Open TestFlight
-   - Tap on the 3mpwr app
-   - Turn ON **"Automatic Updates"**
-   - You'll get new beta versions automatically
-
-#### Getting Updates
-- New beta builds are usually released 1-2 times per week
-- You'll get a notification when an update is available
-- Or open TestFlight to manually check for updates
-
-#### Troubleshooting
-- **Invitation expired?** Email us for a new code
-- **App won't install?** Make sure you have at least 500MB free space
-- **Stuck loading?** Delete and reinstall from TestFlight
-
----
-
-### Android (Google Play Beta)
-
-#### First-Time Setup
-
-1. **Join the Beta Program**:
-   - Open the beta invitation link sent to your email
-   - Sign in with your Google Account
-   - Tap **"Become a tester"**
-   - Wait 5-10 minutes for access to be granted
-
-2. **Install 3mpwr Beta**:
-   - Open the Google Play Store
-   - Search for "3mpwr" or tap the link in your invitation
-   - You'll see **"You're a beta tester"** banner at the top
-   - Tap **"Install"** or **"Update"** if you have an older version
-
-3. **Enable Auto-Updates** (Recommended):
-   - In Play Store, go to the 3mpwr app page
-   - Tap the ⋮ (three dots) menu in the top right
-   - Select **"Enable auto-update"**
-
-4. **Permissions**:
-   - When first opening the app, you may be asked for permissions:
-     - **Storage**: For Evidence Locker (uploading documents)
-     - **Notifications**: For reminders and alerts
-     - **Camera** (optional): For quick photo uploads
-   - You can change these later in Android Settings
-
-#### Getting Updates
-- New beta builds are usually released 1-2 times per week
-- Play Store will notify you when updates are available
-- Or check manually: Play Store → My Apps → Updates
-
-#### Leaving Beta (if needed)
-- Return to your beta invitation link
-- Tap **"Leave the program"**
-- Uninstall the app and reinstall from Play Store for the public version
-
-#### Troubleshooting
-- **Can't see beta option?** Wait 10-15 minutes after joining, then restart Play Store
-- **Update won't install?** Clear Play Store cache (Settings → Apps → Play Store → Clear Cache)
-- **Permission issues?** Go to Android Settings → Apps → 3mpwr → Permissions
-
----
-
-### Using Expo Go (Alternative Method)
-
-If you're testing via Expo Go instead of TestFlight/Play Beta:
-
-1. **Install Expo Go**:
-   - iOS: App Store → Search "Expo Go"
-   - Android: Play Store → Search "Expo Go"
-
-2. **Open Beta Project**:
-   - We'll send you a QR code or project link
-   - Open it in Expo Go
-   - Create a free Expo account if prompted
-
-3. **Limitations**:
-   - ⚠️ Push notifications won't work in Expo Go
-   - ⚠️ Some features may behave differently
-   - ✅ Great for testing core functionality
+**Haven't received your invitation yet?**
+- Phase 1 is limited to 20-50 testers
+- Additional testers will be invited in Phase 2 (Open Beta)
+- Email empowrapp08162025@gmail.com to express interest for future phases
 
 ---
 
@@ -579,7 +494,7 @@ If you experience something else, please report it!
 Use this checklist to track your progress. No pressure to complete everything - test what you can!
 
 ### Week 1: Getting Started
-- [ ] Install app via TestFlight or Play Beta
+- [ ] Receive beta installation instructions via email
 - [ ] Complete onboarding (all 7 days) OR skip onboarding
 - [ ] Create account or continue as guest
 - [ ] Set up profile with your info
@@ -661,7 +576,7 @@ A: Yes, but be aware that bugs may occur and data could be lost. Back up importa
 A: We aim for 1-2 updates per week during active beta. You'll get a notification when updates are available.
 
 **Q: What happens after beta ends?**
-A: Your TestFlight/Play Beta app will automatically update to the production version. You won't need to reinstall.
+A: Your beta app will automatically update to the production version. You won't need to reinstall.
 
 **Q: Can I test on multiple devices?**
 A: Yes! In fact, testing on different devices (phone, tablet, old phone, etc.) helps us a lot.
@@ -684,7 +599,7 @@ A: Email empowrapp08162025@gmail.com immediately with subject "SECURITY ISSUE". 
 A: We prefer testing on real devices, but emulator testing is better than nothing!
 
 **Q: What if I want to leave the beta?**
-A: **iOS**: Delete the app from TestFlight. **Android**: Leave the beta program in Play Store settings.
+A: Contact us at empowrapp08162025@gmail.com and we'll remove you from the beta program.
 
 **Q: The app is asking for permissions. Are they safe to grant?**
 A: Yes. We only request necessary permissions:
@@ -831,8 +746,7 @@ You're not just testing an app. You're helping build a movement. 💪
 ## 📖 Quick Reference
 
 ### Important Links
-- **TestFlight (iOS)**: Check your email for invitation
-- **Play Beta (Android)**: Check your email for invitation
+- **Beta Installation**: Check your email for invitation when beta begins
 - **Support Email**: empowrapp08162025@gmail.com
 - **In-App Feedback**: Settings → About & Feedback
 - **Beta Chat**: Community → Beta Testers Chat
@@ -852,6 +766,6 @@ You're not just testing an app. You're helping build a movement. 💪
 ---
 
 *Last Updated: October 20, 2025*  
-*Guide Version: 2.0 (Consolidated)*  
-*App Version: 1.0.0-rc.1*  
+*Guide Version: 2.1 (Installation details removed - awaiting beta launch)*  
+*App Version: Pre-beta*  
 *For questions about this guide: empowrapp08162025@gmail.com*
