@@ -1,41 +1,41 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-10-22T06:17:13.434Z",
+  "lastUpdated": "2025-10-22T12:22:11.597Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 50,
+      "totalPosts": 75,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T06:17:04.839Z"
+      "lastSeen": "2025-10-22T12:22:01.987Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 50,
+      "totalPosts": 75,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T06:17:06.601Z"
+      "lastSeen": "2025-10-22T12:22:04.192Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 50,
+      "totalPosts": 75,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T06:17:08.799Z"
+      "lastSeen": "2025-10-22T12:22:06.144Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 50,
+      "totalPosts": 75,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T06:17:10.468Z"
+      "lastSeen": "2025-10-22T12:22:08.363Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 50,
+      "totalPosts": 75,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T06:17:12.430Z"
+      "lastSeen": "2025-10-22T12:22:10.594Z"
     }
   },
   "viralPosts": [
@@ -122,6 +122,42 @@
       "author": "demsabroadcanada.bsky.social",
       "engagement": 15,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I’m one of 20 million+ people in the U.S. living with #LongCOVID.\nThis fight isn’t just personal—it’s part of a long struggle for health justice in a nation that’s never been healthy for all.\n\nMy new @Truthout piece:\n👉 truthout.org/articles/i-a...\n\n#DisabilityJustice #HealthEquity #PublicHealth",
+      "author": "jessehagopian.bsky.social",
+      "engagement": 113,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "400 behind on rent. Facing eviction. Bills stacking up.\n\nThis isn’t “struggling.” It’s legislated poverty.\nODSP keeps people poor by design = $1,368/month to “live” in 2025.\n\n💸e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #MutualAidRequest  #MutualAid  #DisabilityJustice",
+      "author": "cycletherapyham.bsky.social",
+      "engagement": 30,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "This isn’t “struggling.”\nThis is legislated poverty.\nODSP keeps people poor by design — $1,368/month to live on in 2025.\n\nSupport if you can.\n💸e-transfer: manderson4@gmail.com\n☕ ko-fi.com/sharpieguy/g...\n#ODSPoverty #MutualAid #MutualAidRequest #DisabilityJustice",
+      "author": "cycletherapyham.bsky.social",
+      "engagement": 40,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Please join the Democrats Abroad Disability/Seniors/Military Caucuses, for a look at the dynamics of voter engagement by people with disabilities in the 2024 elections.\nSeptember 8 at 12pm ET\nwww.democratsabroad.org/disability_v...\n#cripthevote #disabilityawareness",
+      "author": "demsabroadcanada.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -131,11 +167,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 33
+      "count": 34
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 29
     },
     {
       "keyword": "cripthevote",
@@ -170,39 +206,39 @@
       "count": 10
     },
     {
-      "keyword": "wpad2025",
-      "count": 8
-    },
-    {
-      "keyword": "wpa11yday",
-      "count": 8
-    },
-    {
-      "keyword": "accessibility 2025",
-      "count": 8
-    },
-    {
-      "keyword": "wpa11yday accessibility",
-      "count": 8
-    },
-    {
       "keyword": "foxtakedown",
       "count": 8
-    },
-    {
-      "keyword": "nokings",
-      "count": 7
     },
     {
       "keyword": "mutualaid",
       "count": 7
     },
     {
-      "keyword": "2025 wpaccessibility",
-      "count": 7
+      "keyword": "inclusion",
+      "count": 6
     },
     {
-      "keyword": "inclusion",
+      "keyword": "odspoverty",
+      "count": 6
+    },
+    {
+      "keyword": "mutualaidrequest",
+      "count": 6
+    },
+    {
+      "keyword": "nokings",
+      "count": 6
+    },
+    {
+      "keyword": "stoptheliesfox",
+      "count": 6
+    },
+    {
+      "keyword": "foxlies",
+      "count": 6
+    },
+    {
+      "keyword": "wearetheflood",
       "count": 6
     }
   ]
