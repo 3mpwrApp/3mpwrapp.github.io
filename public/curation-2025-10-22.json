@@ -1,6 +1,6 @@
 {
   "date": "2025-10-22",
-  "timestamp": "2025-10-22T09:24:27.789Z",
+  "timestamp": "2025-10-22T15:27:17.643Z",
   "count": 50,
   "minScore": 0.5,
   "items": [
@@ -15,7 +15,7 @@
       "title": "Manitoba Government Introduces Bill That Would Respond to Meth Crisis, Reduce Pressure on Emergency Rooms and Keep Public Safe",
       "link": "https://news.gov.mb.ca/news/index.html?item=70942",
       "description": "",
-      "score": 28.8,
+      "score": 30,
       "pubDate": "Thu, 02 Oct 2025 14:46:00 CDT"
     },
     {
@@ -36,15 +36,8 @@
       "title": "Manitoba Government Provincial Nominee Program Invites 328 Health-Care Workers to Build Careers in Manitoba",
       "link": "https://news.gov.mb.ca/news/index.html?item=71157",
       "description": "",
-      "score": 23.4,
+      "score": 23.6,
       "pubDate": "Tue, 14 Oct 2025 10:58:00 CDT"
-    },
-    {
-      "title": "‘Significant gaps' in government's cybersecurity services: auditor general",
-      "link": "https://globalnews.ca/news/11488366/canada-government-cybersecurity-auditor-general/",
-      "description": "Auditor General Karen Hogan said the federal government must continually bolster its defences as cyberattacks become more sophisticated, pervasive and harmful.",
-      "score": 17,
-      "pubDate": "Tue, 21 Oct 2025 22:41:11 +0000"
     },
     {
       "title": "Technology-enabled trade in Canada",
@@ -54,10 +47,17 @@
       "pubDate": "Tue, 26 Jul 2016 23:30:00 +0000"
     },
     {
+      "title": "Canada cancels plan to donate refurbished armour to Ukraine: defence minister",
+      "link": "https://www.cbc.ca/news/politics/canada-ukraine-light-armoured-vehicles-9.6947629?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/d659afe9-311f-4243-accc-7502cd59e0f1,1761085781177/full/max/0/default.jpg?im=Crop%2Crect%3D%286%2C49%2C5016%2C2821%29%3BResize%3D%28620%29' alt='A man in a suit and others in camoflage uniforms stand or sit atop an armoured vehicle.' width='620' height='349' title='Prime Minister Justin Trudeau talks with soldiers around a Light Armoured Vehicle in the Combat Training Center at 5th Canadian Division Support Base Gagetown in Oromocto, New Brunswick on Tuesday November 8, 2022.  '/><p>A contract to supply Ukraine with refurbished light armoured vehicles is officially dead, the defence minister told a House of Commons committee on Tuesday.</p>",
+      "score": 18,
+      "pubDate": "Tue, 21 Oct 2025 18:50:34 EDT"
+    },
+    {
       "title": "Why Gawker's bankruptcy is a policy issue",
       "link": "https://policyoptions.irpp.org/2016/08/policy-options-podcast-18-gawker-bankruptcy/",
       "description": "Where should media outlets draw the line between revenue generation and content quality? Between truth and ethics? CBC News’ Lauren O’Neil stopped by the podcast to weigh in on these issues and more on this week’s episode. We looked at the Gawker bankruptcy, the ethics and business of new media and Canada’s evolving media landscape. […]",
-      "score": 16.4,
+      "score": 17,
       "pubDate": "Wed, 24 Aug 2016 17:42:58 +0000"
     },
     {
@@ -85,22 +85,15 @@
       "title": "Canadian exporters and eBay: How technology is changing trade",
       "link": "https://policyoptions.irpp.org/2016/07/canadian-exporters-and-ebay-how-technology-is-changing-trade/",
       "description": "The latest chapter in the IRPP’s trade volume describes the emerging phenomenon of technology-enabled (‘online’) trade. In this chapter, authors Usman Ahmed and Hanne Melin (eBay Inc.) analyze a unique dataset of Canadian firms using eBay in 2008-13. The experiences of these businesses demonstrate that technology-enabled trade is broader and more inclusive than traditional trade. […]",
-      "score": 15.8,
+      "score": 15.899999999999999,
       "pubDate": "Tue, 26 Jul 2016 16:00:12 +0000"
     },
     {
       "title": "Charities hit hard as Canada Post labour dispute disrupts donations",
       "link": "https://globalnews.ca/news/11488453/canada-post-dispute-disrupts-charity-donations/",
       "description": "Rotating strikes and service delays have left many organizations struggling, particularly as they head into the critical holiday donation season.",
-      "score": 13.4,
-      "pubDate": "Wed, 22 Oct 2025 01:22:49 +0000"
-    },
-    {
-      "title": "Parks Canada releases two reports on Jasper fire confirming cause, development",
-      "link": "https://globalnews.ca/news/11488144/parks-canada-releases-reports-jasper-fire-cause/",
-      "description": "The fire destroyed a third of the town in July 2024 and forced 25,000 residents and visitors to flee.",
       "score": 14,
-      "pubDate": "Tue, 21 Oct 2025 21:14:14 +0000"
+      "pubDate": "Wed, 22 Oct 2025 01:22:49 +0000"
     },
     {
       "title": "Refocusing Canada’s international security agenda",
@@ -117,25 +110,25 @@
       "pubDate": "Fri, 15 Jul 2016 14:30:37 +0000"
     },
     {
-      "title": "'We're going to do better,' CRA secretary of state says in response to scathing AG report",
-      "link": "https://www.cbc.ca/news/politics/ag-fall-2025-cra-military-9.6946672?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/aa4bda43-e354-424f-b4a5-01c19c7c1207,1761088266528/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A Canada Revenue Agency sign.' width='620' height='349' title=''/><p></p>",
-      "score": 14,
-      "pubDate": "Fri, 22 Aug 2025 05:58:08 EDT"
-    },
-    {
-      "title": "Liberal House leader ‘starting to worry’ about support for upcoming budget",
-      "link": "https://www.cbc.ca/news/politics/liberal-budget-support-vote-9.6947268?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/4644be69-e5f6-4dfa-b7bf-b88babf951fb,1761073707252/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C7388%2C4155%29%3BResize%3D%28620%29' alt='man speaks to reporters' width='620' height='349' title='Minister of Transport and Leader of the Government in the House of Commons Steven MacKinnon speaks to reporters ahead of a cabinet meeting on Parliament Hill in Ottawa, on Tuesday, Oct. 21, 2025. THE CANADIAN PRESS/Spencer Colby'/><p></p>",
-      "score": 14.6,
-      "pubDate": "Sun, 11 May 2025 11:48:19 EDT"
+      "title": "Saskatchewan to unveil throne speech as legislative session kicks off",
+      "link": "https://globalnews.ca/news/11489267/saskatchewan-to-unveil-throne-speech-as-legislative-session-kicks-off/",
+      "description": "Saskatchewan Premier Scott Moe has not shared details of the plan but has said the speech would touch on economic and community safety issues.",
+      "score": 11.1,
+      "pubDate": "Wed, 22 Oct 2025 14:54:55 +0000"
     },
     {
       "title": "What's In Your Fridge: Josh Santos of VIFF's Composer Filmmaker Accelerator program",
       "link": "https://www.straight.com/music/whats-in-your-fridge-josh-santos-of-viffs-composer-filmmaker-accelerator-program",
       "description": "<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href=\"http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up for our free newsletter</a>. </h3><p data-slot-rendered-content=\"true\"><em></em></p>",
-      "score": 12.9,
+      "score": 13.5,
       "pubDate": "2025-10-04T10:00:41-07:00"
+    },
+    {
+      "title": "Crypto exchange Cryptomus fined record $177M by Canada's financial crime watchdog",
+      "link": "https://www.cbc.ca/news/business/cryptomus-fined-177-million-fintrac-9.6948338?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/11bf1759-f71b-4bc4-b0c8-a550ce952ca6,1761140004135/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C208%2C4000%2C2250%29%3BResize%3D%28620%29' alt='A pile of tokens representing different cryptocurrencies are shown.' width='620' height='349' title='A representation of cryptocurrencies in this illustration taken on January 24, 2022. '/><p>A cryptocurrency exchange has been slapped with a fine of almost $177 million — the largest-ever penalty by Canada's financial intelligence agency — for infractions including failing to flag more than 1,000 transactions with suspected links to criminal activity.</p>",
+      "score": 10.5,
+      "pubDate": "Wed, 22 Oct 2025 09:47:20 EDT"
     },
     {
       "title": "Manitoba Government Making Continued Progress Through Investment to Hip and Knee Surgeries at Selkirk Regional Health Centre",
@@ -155,15 +148,15 @@
       "title": "Manitoba Government Invests in Training for Child and Family Service Workers",
       "link": "https://news.gov.mb.ca/news/index.html?item=70944",
       "description": "",
-      "score": 11.4,
+      "score": 12,
       "pubDate": "Fri, 03 Oct 2025 15:30:00 CDT"
     },
     {
-      "title": "Minister won't say why Ottawa cancelled Ukraine armoured vehicle contract",
-      "link": "https://globalnews.ca/news/11488099/david-mcguinty-ukraine-armoured-vehicles-nullified/",
-      "description": "Defence Minister David McGuinty was pressed about the contract at the House of Commons national defence committee while speaking on Canada's defence spending and NATO commitments.",
-      "score": 9.5,
-      "pubDate": "Tue, 21 Oct 2025 22:43:44 +0000"
+      "title": "Carney to address Canadians on economy as budget questions grow",
+      "link": "https://globalnews.ca/news/11489014/mark-carney-economic-speech-budget/",
+      "description": "Prime Minister Mark Carney's speech will come as a new report from Desjardins estimates the federal budget deficit could be the highest in 30 years.",
+      "score": 11.6,
+      "pubDate": "Wed, 22 Oct 2025 13:52:31 +0000"
     },
     {
       "title": "Q&amp;A: Director Alireza Khatami on making Canada’s Oscar submission, The Things You Kill",
@@ -183,22 +176,22 @@
       "title": "CONTEST: Win Tickets to ‘East Van Panto: West Van Story’",
       "link": "https://thetyee.ca/Presents/2025/10/20/Contest-East-Van-Panto-West-Van-Story/",
       "description": "This year, East Van’s favourite holiday show features star-crossed lovers in a housing crisis.",
-      "score": 10.4,
+      "score": 11.6,
       "pubDate": "Mon, 20 Oct 2025 07:30:00 +0000"
     },
     {
-      "title": "Canada's annual inflation rate rose to 2.4% in September as grocery prices keep creeping up",
-      "link": "https://www.cbc.ca/news/business/canada-inflation-rate-september-2025-9.6946556?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/58d86990-b300-4d6e-97e4-64f3920f81f3,1761050874208/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C233%2C4474%2C2516%29%3BResize%3D%28620%29' alt='A person pushing a shopping cart reaches for a box at a grocery store.' width='620' height='349' title='A shopper picks out groceries at a Toronto-area Costco on Sept. 29, 2025.'/><p></p>",
+      "title": "With Bill C-2’s fate uncertain, spy agency argues its ability to do its job ‘eroding’",
+      "link": "https://www.cbc.ca/news/politics/csis-lawful-access-bill-c2-9.6931987?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/b3078288-b3cd-4a8f-99c1-1c7bb2267731,1748980222993/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='NDP MP Jenny Kwan is concerned by the Liberal border bill and the effects it could have on people immigrating to, and seeking asylum in Canada.' width='620' height='349' title=''/><p></p>",
       "score": 9.5,
-      "pubDate": "Tue, 21 Oct 2025 09:27:22 EDT"
+      "pubDate": "Wed, 11 Jun 2025 22:58:53 EDT"
     },
     {
-      "title": "Cenovus delays MEG Energy shareholder vote of takeover offer",
-      "link": "https://globalnews.ca/news/11488105/cenovus-delays-meg-energy-shareholder-vote/",
-      "description": "The company said at the time of the postponement that about 63 per cent of the MEG shares represented by proxy or expected to be voted in person at the meeting backed the bid.",
+      "title": "Suspect in alleged child abduction, fatal Brampton shooting dead after 'officer-involved shooting': police",
+      "link": "https://www.cbc.ca/news/canada/toronto/niagara-police-suspect-abduction-fatal-shooting-is-dead-9.6948248?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1c3fa429-af4e-4f10-ab34-42152f1f83f9,1761138585224/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C811%2C456%29%3BResize%3D%28620%29' alt='Head shot of a white man in his 30s in a grey hoodie against a grey background' width='620' height='349' title='Police were looking for 38-year-old Anthony Deschepper in connection with a fatal shooting and alleged child abduction Tuesday. Police said he died early Wednesday morning after an interaction with officers in Niagara Falls.'/><p>The man, 38, died after an \"interaction\" with officers early Wednesday, Niagara police say.</p>",
       "score": 7.5,
-      "pubDate": "Tue, 21 Oct 2025 20:56:08 +0000"
+      "pubDate": "Wed, 22 Oct 2025 08:51:33 EDT"
     },
     {
       "title": "Calf with deep gash identified as humpback struck by ferry off Vancouver",
@@ -271,10 +264,17 @@
       "pubDate": "Fri, 03 Oct 2025 12:21:00 CDT"
     },
     {
+      "title": "N.S. still failing to consult on law blocking protests on Crown land: Mi'kmaq leaders",
+      "link": "https://globalnews.ca/news/11489303/mikmaq-leader-nova-scotia-crown-land/",
+      "description": "A Mi’kmaq leader says the provincial government continues to ignore First Nations' concerns on a new law they say targets their community's ability to protect its territory.",
+      "score": 8.2,
+      "pubDate": "Wed, 22 Oct 2025 15:16:22 +0000"
+    },
+    {
       "title": "PQ insists Quebec needs another referendum, despite lack of public support",
       "link": "https://globalnews.ca/news/11488486/pq-insists-quebec-needs-referendum/",
       "description": "Despite 65 per cent of Quebecers indicating they would vote 'No' in a sovereignty vote, Paul St-Pierre Plamondon is pushing forward with the promise of a third referendum.",
-      "score": 8.1,
+      "score": 8.5,
       "pubDate": "Wed, 22 Oct 2025 01:52:19 +0000"
     },
     {
@@ -295,7 +295,7 @@
       "title": "Manitoba Grants Support Newcomers, Low-Income Manitobans Through Endowment Fund",
       "link": "https://news.gov.mb.ca/news/index.html?item=71257",
       "description": "",
-      "score": 7.1,
+      "score": 7.5,
       "pubDate": "Tue, 21 Oct 2025 11:00:00 CDT"
     },
     {
