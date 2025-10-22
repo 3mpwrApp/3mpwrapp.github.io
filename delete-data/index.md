@@ -25,6 +25,8 @@ This is perfect if you:
 
 ## 🎛️ What You Can Delete
 
+**📝 Note on Voice Data:** Voice commands are processed in real-time only and never stored, so there's no voice data to delete.
+
 ### In-App Data Management
 **Location:** Settings → Privacy & Security → Data Management
 
@@ -98,7 +100,31 @@ This is perfect if you:
 
 ---
 
-#### 4. Search History
+#### 4. Calendar Events
+**Delete:**
+- Events you created
+- Event details and reminders
+- Calendar sync data
+
+**How:**
+
+**Option A: Delete Individual Events**
+1. Open Calendar
+2. Select the event
+3. Tap "Delete Event"
+4. Confirm deletion
+
+**Option B: Delete All Calendar Data**
+1. Open Settings → Privacy & Security
+2. Tap "Data Management"
+3. Select "Clear Calendar Events"
+4. Confirm deletion
+
+**Result:** Your calendar events are deleted from the app. Note: Events synced to your device calendar may need to be deleted separately there.
+
+---
+
+#### 5. Search History
 **Delete:**
 - Recent searches
 - Search suggestions
@@ -114,7 +140,7 @@ This is perfect if you:
 
 ---
 
-#### 5. Cached Data
+#### 6. Cached Data
 **Delete:**
 - Temporary files
 - Downloaded resources
@@ -131,7 +157,7 @@ This is perfect if you:
 
 ---
 
-#### 6. Local App Settings
+#### 7. Local App Settings
 **Delete:**
 - Theme preferences
 - Notification settings
@@ -160,6 +186,7 @@ Want to delete everything but keep your account?
    - Wellness tracking
    - Evidence locker
    - Community posts
+   - Calendar events
    - Search history
    - Cache
    - Local settings
@@ -168,8 +195,10 @@ Want to delete everything but keep your account?
 
 **What gets deleted:**
 - ✅ All wellness data
-- ✅ All evidence
-- ✅ All community content
+- ✅ All evidence (photos, videos, documents)
+- ✅ All community content (posts, messages)
+- ✅ All calendar events
+- ✅ All search history
 - ✅ All local app data
 - ✅ All cached files
 
@@ -250,6 +279,8 @@ For security, you must **re-authenticate** (enter password or use Google/Apple l
 | **Wellness Data** | Deleted | Deleted |
 | **Evidence** | Deleted | Deleted |
 | **Community Posts** | Deleted | Deleted |
+| **Calendar Events** | Deleted | Deleted |
+| **Search History** | Deleted | Deleted |
 | **Account** | **Kept** | **Deleted** |
 | **Login Access** | **Yes** | **No** |
 | **Can Re-use** | **Yes** | **No** |

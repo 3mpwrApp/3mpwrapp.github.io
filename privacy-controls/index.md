@@ -143,20 +143,23 @@ All privacy settings are in one place: **Settings → Privacy & Security**
 - ✅ **Email:** Only if you create an account
 - ✅ **Wellness Data:** Mood, energy, reflections (stays on your device)
 - ✅ **Evidence:** Photos, videos, documents you upload
+- ✅ **Community Messages:** Posts, comments, and chat (if you use community features)
+- ✅ **Calendar Events:** Events you create or add to your calendar
+- ✅ **Voice Input:** Voice commands for accessibility (processed in real-time, not stored)
 - ✅ **Analytics:** Can be disabled with toggle
 - ✅ **Crash Reports:** Can be disabled with toggle
 - ✅ **Search History:** Can be disabled with toggle
 
 ### Never Collected
 - ❌ **GPS/Precise Location:** No exact coordinates or tracking
-- ❌ Contacts
-- ❌ Calendar
-- ❌ SMS/Text Messages
-- ❌ Phone Calls
-- ❌ Microphone (unless you use voice features)
-- ❌ Advertising IDs
-- ❌ Device tracking
-- ❌ Web browsing history
+- ❌ **Contacts:** We don't access your contact list
+- ❌ **SMS/Text Messages:** No access to your messages
+- ❌ **Phone Calls:** No call history or phone access
+- ❌ **Stored Voice Recordings:** Voice commands are processed in real-time only, never saved
+- ❌ **Advertising IDs:** No tracking or advertising identifiers
+- ❌ **Device Tracking:** No device fingerprinting or tracking
+- ❌ **Web Browsing History:** We don't track your web activity
+- ❌ **Financial Information:** No credit cards, bank info, or payment data
 
 ---
 

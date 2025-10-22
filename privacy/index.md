@@ -70,7 +70,19 @@ This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and prote
 - Reactions, profile details
 - Campaign coordination activities
 
-**Evidence Locker Notes**:
+**Calendar Events** (if you use this feature):
+- Events you create in the app
+- Event details, dates, reminders
+- Events may be synced to your device calendar
+
+**Voice Input** (if you use accessibility features):
+- Voice commands for navigation
+- Speech input processed in real-time
+- Audio is NOT stored - processed ephemerally only
+- Converted to text immediately and audio discarded
+
+**Evidence Locker Contents**:
+- Photos, videos, documents you upload
 - Stored locally on your device unless you explicitly export or share them
 - ⚠️ Privacy tip: Avoid storing personal identifiers in notes where possible
 
