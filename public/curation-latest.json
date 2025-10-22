@@ -1,16 +1,9 @@
 {
   "date": "2025-10-22",
-  "timestamp": "2025-10-22T15:27:17.643Z",
+  "timestamp": "2025-10-22T21:19:32.669Z",
   "count": 50,
   "minScore": 0.5,
   "items": [
-    {
-      "title": "Tens of thousands mistakenly approved for dental coverage, Health Canada says",
-      "link": "https://www.cbc.ca/news/politics/system-error-health-canada-dental-insurance-plan-9.6947506?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/9cf63253-e070-42c6-bbef-5505a33b3434,1761077799439/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C210%2C3478%2C1956%29%3BResize%3D%28620%29' alt='Dental instruments sit on a try inside a dental office.' width='620' height='349' title='Roughly 28,000 people received care after they were given an inaccurate assessment under the national dental insurance plan.'/><p>Roughly 70,000 people were approved for coverage under the public dental insurance program, but were later deemed ineligible or had been assessed for an incorrect copayment level, Health Canada said Tuesday.</p>",
-      "score": 36,
-      "pubDate": "Tue, 21 Oct 2025 16:37:07 EDT"
-    },
     {
       "title": "Manitoba Government Introduces Bill That Would Respond to Meth Crisis, Reduce Pressure on Emergency Rooms and Keep Public Safe",
       "link": "https://news.gov.mb.ca/news/index.html?item=70942",
@@ -22,14 +15,14 @@
       "title": "In/Equality Podcast – Inequality and Disability Justice with Michael Orsini Transcript",
       "link": "https://policyoptions.irpp.org/2023/05/inequality-and-disability-justice-transcript/",
       "description": "Debra Thompson  00:00 From the Institute for Research on Public Policy, this is inequality a special series of the policy options podcast exploring the many facets of inequality in Canada through conversations with experts. I'm your host Deborah Thompson. Today I speak with Dr. Michael Orsini, a professor in the Institute of feminist and gender […]",
-      "score": 23.8,
+      "score": 24.2,
       "pubDate": "Fri, 05 May 2023 18:19:36 +0000"
     },
     {
       "title": "The future of child care in Canada: What to expect",
       "link": "https://policyoptions.irpp.org/2021/04/the-future-of-child-care-in-canada-what-to-expect/",
       "description": "On April 19, 2021, Finance Minister Chrystia Freeland presented the first federal budget in two years. Among the many new and updated policies, one stood out especially – the promise of affordable universal childcare for all Canadians. Universal child care had been promised in the past and never come to fruition, not for lack of […]",
-      "score": 22.3,
+      "score": 22.8,
       "pubDate": "Thu, 29 Apr 2021 02:26:55 +0000"
     },
     {
@@ -43,7 +36,7 @@
       "title": "Technology-enabled trade in Canada",
       "link": "https://policyoptions.irpp.org/2016/07/policy-options-podcast-16-technology-enabled-trade-in-canada/",
       "description": "E-commerce is revolutionizing the way we trade by giving businesses unprecedented access to new markets. Tools such as eBay have become the great equalizer of international trade: empowering small businesses in a globalized trade environment traditionally dominated by large firms. With so much to gain from these emerging trade patterns, Canadian trade policy can’t afford […]",
-      "score": 18.2,
+      "score": 18.3,
       "pubDate": "Tue, 26 Jul 2016 23:30:00 +0000"
     },
     {
@@ -68,6 +61,13 @@
       "pubDate": "Wed, 13 Jul 2016 23:15:19 +0000"
     },
     {
+      "title": "COVID-19 class-action application denied as abuse of process by B.C. judge",
+      "link": "https://www.cbc.ca/news/canada/british-columbia/covid-19-class-action-application-denied-9.6948651?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.6775601,1740417129000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C69%2C2938%2C1652%29%3BResize%3D%28620%29' alt='A white woman with short blonde hair is shown from the shoulders up. She's wearing a pink leopard print shirt.' width='620' height='349' title='Provincial Health Officer Dr. Bonnie Henry during a news conference in Vancouver, B.C., on Friday, Mar. 10, 2023. '/><p>A B.C. Supreme Court justice has ruled that a class-action lawsuit meant to represent all adults in the province whose rights were allegedly violated by provincial orders during the COVID-19 pandemic can’t proceed because of “so many self-inflicted problems.”</p>",
+      "score": 16.8,
+      "pubDate": "Wed, 22 Oct 2025 11:55:33 EDT"
+    },
+    {
       "title": "Smith Still Faces Questions in the Dodgy Contracts Scandal",
       "link": "https://thetyee.ca/Opinion/2025/10/20/Smith-Still-Faces-Questions-Contracts-Scandal/",
       "description": "The premier said a report on AHS procurement practices cleared her government. It didn’t.",
@@ -75,25 +75,25 @@
       "pubDate": "Mon, 20 Oct 2025 07:10:00 +0000"
     },
     {
-      "title": "Manitoba Legislative Session Resumes with Focus on Health Care, Affordability and Public Safety",
-      "link": "https://news.gov.mb.ca/news/index.html?item=70938",
-      "description": "",
-      "score": 18,
-      "pubDate": "Wed, 01 Oct 2025 13:28:00 CDT"
+      "title": "Canadian trips to the U.S. fell for the 8th straight month: StatCan",
+      "link": "https://globalnews.ca/news/11489771/canada-united-states-travel-report-august-2025/",
+      "description": "Statistics Canada says the number of Canadians returning from travel to the U.S. declined for the eighth straight month amid the ongoing trade war.",
+      "score": 15.2,
+      "pubDate": "Wed, 22 Oct 2025 20:10:48 +0000"
+    },
+    {
+      "title": "Report finds tenants' rights at risk in Nova Scotia, issues go unaddressed",
+      "link": "https://globalnews.ca/news/11489714/tenants-rights-nova-scotia-report/",
+      "description": "Dalhousie Legal Aid Service conducted a survey of more than 1,200 tenants, and also analyzed decisions by the provincial body that enforces residential tenancy legislation.",
+      "score": 16.2,
+      "pubDate": "Wed, 22 Oct 2025 18:19:35 +0000"
     },
     {
       "title": "Canadian exporters and eBay: How technology is changing trade",
       "link": "https://policyoptions.irpp.org/2016/07/canadian-exporters-and-ebay-how-technology-is-changing-trade/",
       "description": "The latest chapter in the IRPP’s trade volume describes the emerging phenomenon of technology-enabled (‘online’) trade. In this chapter, authors Usman Ahmed and Hanne Melin (eBay Inc.) analyze a unique dataset of Canadian firms using eBay in 2008-13. The experiences of these businesses demonstrate that technology-enabled trade is broader and more inclusive than traditional trade. […]",
-      "score": 15.899999999999999,
+      "score": 16.2,
       "pubDate": "Tue, 26 Jul 2016 16:00:12 +0000"
-    },
-    {
-      "title": "Charities hit hard as Canada Post labour dispute disrupts donations",
-      "link": "https://globalnews.ca/news/11488453/canada-post-dispute-disrupts-charity-donations/",
-      "description": "Rotating strikes and service delays have left many organizations struggling, particularly as they head into the critical holiday donation season.",
-      "score": 14,
-      "pubDate": "Wed, 22 Oct 2025 01:22:49 +0000"
     },
     {
       "title": "Refocusing Canada’s international security agenda",
@@ -110,11 +110,11 @@
       "pubDate": "Fri, 15 Jul 2016 14:30:37 +0000"
     },
     {
-      "title": "Saskatchewan to unveil throne speech as legislative session kicks off",
-      "link": "https://globalnews.ca/news/11489267/saskatchewan-to-unveil-throne-speech-as-legislative-session-kicks-off/",
-      "description": "Saskatchewan Premier Scott Moe has not shared details of the plan but has said the speech would touch on economic and community safety issues.",
-      "score": 11.1,
-      "pubDate": "Wed, 22 Oct 2025 14:54:55 +0000"
+      "title": "Ford wants to revisit ending ticket scalping amid Blue Jays ‘gouging'",
+      "link": "https://globalnews.ca/news/11489635/ticket-scalping-doug-ford-toronto-blue-jays-world-series/",
+      "description": "Ontario Premier Doug Ford said he wants to look into options to tackle scalping, including potential legislation, as Toronto Blue Jays ticket prices skyrocket.",
+      "score": 11.3,
+      "pubDate": "Wed, 22 Oct 2025 19:54:47 +0000"
     },
     {
       "title": "What's In Your Fridge: Josh Santos of VIFF's Composer Filmmaker Accelerator program",
@@ -127,8 +127,15 @@
       "title": "Crypto exchange Cryptomus fined record $177M by Canada's financial crime watchdog",
       "link": "https://www.cbc.ca/news/business/cryptomus-fined-177-million-fintrac-9.6948338?cmp=rss",
       "description": "<img src='https://i.cbc.ca/ais/11bf1759-f71b-4bc4-b0c8-a550ce952ca6,1761140004135/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C208%2C4000%2C2250%29%3BResize%3D%28620%29' alt='A pile of tokens representing different cryptocurrencies are shown.' width='620' height='349' title='A representation of cryptocurrencies in this illustration taken on January 24, 2022. '/><p>A cryptocurrency exchange has been slapped with a fine of almost $177 million — the largest-ever penalty by Canada's financial intelligence agency — for infractions including failing to flag more than 1,000 transactions with suspected links to criminal activity.</p>",
-      "score": 10.5,
+      "score": 10.7,
       "pubDate": "Wed, 22 Oct 2025 09:47:20 EDT"
+    },
+    {
+      "title": "‘Unreasonable' to cancel election won by single vote, lawyer for Liberal MP says",
+      "link": "https://globalnews.ca/news/11489917/unreasonable-to-cancel-election-won-single-vote-liberal-mp-terrebonne/",
+      "description": "\"To cancel the election is to deny the right to vote that was expressed by these 61,115 people,\" the lawyer for the Quebec Liberal MP said in Superior Court.",
+      "score": 8.5,
+      "pubDate": "Wed, 22 Oct 2025 19:59:57 +0000"
     },
     {
       "title": "Manitoba Government Making Continued Progress Through Investment to Hip and Knee Surgeries at Selkirk Regional Health Centre",
@@ -150,13 +157,6 @@
       "description": "",
       "score": 12,
       "pubDate": "Fri, 03 Oct 2025 15:30:00 CDT"
-    },
-    {
-      "title": "Carney to address Canadians on economy as budget questions grow",
-      "link": "https://globalnews.ca/news/11489014/mark-carney-economic-speech-budget/",
-      "description": "Prime Minister Mark Carney's speech will come as a new report from Desjardins estimates the federal budget deficit could be the highest in 30 years.",
-      "score": 11.6,
-      "pubDate": "Wed, 22 Oct 2025 13:52:31 +0000"
     },
     {
       "title": "Q&amp;A: Director Alireza Khatami on making Canada’s Oscar submission, The Things You Kill",
@@ -187,53 +187,46 @@
       "pubDate": "Wed, 11 Jun 2025 22:58:53 EDT"
     },
     {
-      "title": "Suspect in alleged child abduction, fatal Brampton shooting dead after 'officer-involved shooting': police",
-      "link": "https://www.cbc.ca/news/canada/toronto/niagara-police-suspect-abduction-fatal-shooting-is-dead-9.6948248?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/1c3fa429-af4e-4f10-ab34-42152f1f83f9,1761138585224/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C811%2C456%29%3BResize%3D%28620%29' alt='Head shot of a white man in his 30s in a grey hoodie against a grey background' width='620' height='349' title='Police were looking for 38-year-old Anthony Deschepper in connection with a fatal shooting and alleged child abduction Tuesday. Police said he died early Wednesday morning after an interaction with officers in Niagara Falls.'/><p>The man, 38, died after an \"interaction\" with officers early Wednesday, Niagara police say.</p>",
+      "title": "Vehicle recovered, person still missing after June crash into Squamish River",
+      "link": "https://globalnews.ca/news/11489629/vehicle-recovered-person-missing-june-crash-squamish-river/",
+      "description": "The Sea to Sky General Investigation Section (GIS) said the vehicle was recovered on Saturday, marking a \"significant step in the ongoing investigation.\"",
       "score": 7.5,
-      "pubDate": "Wed, 22 Oct 2025 08:51:33 EDT"
+      "pubDate": "Wed, 22 Oct 2025 18:24:09 +0000"
     },
     {
-      "title": "Calf with deep gash identified as humpback struck by ferry off Vancouver",
-      "link": "https://www.cbc.ca/news/canada/british-columbia/baby-humpback-whale-injured-off-vancouver-9.6947647?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/f51860ed-2d0e-433e-89e4-3ae75b9ca2e2,1761082100197/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C106%2C2048%2C1152%29%3BResize%3D%28620%29' alt='A humpback whale has a large gash below its dorsal fin ' width='620' height='349' title='The very deep gash on the baby humpback whale is consistent with an injury from a vessel strike. '/><p>\"Given the seriousness of the injury, it will be important to monitor the animal’s healing progress,\" a DFO spokesperson said.</p>",
+      "title": "Suspect in alleged child abduction and Brampton, Ont., slaying fatally shot by police",
+      "link": "https://www.cbc.ca/news/canada/toronto/niagara-police-suspect-abduction-fatal-shooting-is-dead-9.6948248?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1c3fa429-af4e-4f10-ab34-42152f1f83f9,1761138585224/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C811%2C456%29%3BResize%3D%28620%29' alt='Head shot of a white man in his 30s in a grey hoodie against a grey background' width='620' height='349' title='Police were looking for 38-year-old Anthony Deschepper in connection with a fatal shooting and alleged child abduction Tuesday. Police said he died early Wednesday morning after an interaction with officers in Niagara Falls.'/><p>The man, 38, died after an \"interaction\" with officers early Wednesday, Niagara police say. The man was shot multiple times by an officer, and the SIU is investigating, according to a spokesperson for the province's police watchdog.</p>",
       "score": 7.5,
-      "pubDate": "Tue, 21 Oct 2025 20:18:43 EDT"
+      "pubDate": "Wed, 22 Oct 2025 08:51:33 EDT"
     },
     {
       "title": "Manitoba Government Invests More Than $1.2 Million For 24 Interlake Community Development Projects",
       "link": "https://news.gov.mb.ca/news/index.html?item=71117",
       "description": "",
-      "score": 10.1,
+      "score": 10.5,
       "pubDate": "Fri, 10 Oct 2025 11:00:00 CDT"
     },
     {
       "title": "Manitoba Government Invests More Than $1.2 Million in Community Development Projects for Northern Manitoba",
       "link": "https://news.gov.mb.ca/news/index.html?item=71058",
       "description": "",
-      "score": 10.1,
+      "score": 10.5,
       "pubDate": "Wed, 08 Oct 2025 10:26:00 CDT"
     },
     {
       "title": "Manitoba Government Introduces Legislation to Keep Vehicle Insurance Rates Affordable",
       "link": "https://news.gov.mb.ca/news/index.html?item=70977",
       "description": "",
-      "score": 9.9,
+      "score": 10.1,
       "pubDate": "Mon, 06 Oct 2025 14:10:00 CDT"
     },
     {
       "title": "Manitoba Government Opens Nominations for Excellence in Education Awards",
       "link": "https://news.gov.mb.ca/news/index.html?item=70945",
       "description": "",
-      "score": 9.9,
+      "score": 10.1,
       "pubDate": "Sun, 05 Oct 2025 10:00:00 CDT"
-    },
-    {
-      "title": "Health care, safety among Saskatchewan premier's top priorities this fall",
-      "link": "https://globalnews.ca/news/11488372/health-care-safety-top-priorities-saskatchewan-premier/",
-      "description": "As Saskatchewan's legislature returns for the fall, the province's premier and Opposition leader share what their main priorities are.",
-      "score": 10,
-      "pubDate": "Wed, 22 Oct 2025 00:12:20 +0000"
     },
     {
       "title": "Choose: More nurses per patient or worse health care",
@@ -241,6 +234,20 @@
       "description": "",
       "score": 10,
       "pubDate": "Fri, 17 Oct 2025 13:18:02 +0000"
+    },
+    {
+      "title": "Ingersoll, Ont., residents react to 'awful news' GM is ending CAMI plant's electric van production",
+      "link": "https://www.cbc.ca/news/canada/london/gm-bright-drop-ingesoll-9.6947432?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/a8d61794-a68c-42ec-9130-0f3be89c3f03,1761076603041/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Ingersoll Mayor Brian Petrie outside the UNIFOR office in Ingersoll, Ont.' width='620' height='349' title='Mayor Brian Petrie called the decision to end production of the BrightDrop delivery vehicle 'devastating' for Ingersoll, Ont.'/><p>People in Ingersoll, Ont., are trying to come to terms with news that General Motors is halting production of the BrightDrop delivery vehicle at the CAMI assembly plant, Ingersoll's largest employer. \"It means a lot to people in this town, so it's kind of heartbreaking. It's one of the backbones of this town,\" says one business owner.</p>",
+      "score": 8.5,
+      "pubDate": "Wed, 22 Oct 2025 05:00:00 EDT"
+    },
+    {
+      "title": "Manitoba Supports Families with New Parenting Website",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71278",
+      "description": "",
+      "score": 8.5,
+      "pubDate": "Wed, 22 Oct 2025 12:30:00 CDT"
     },
     {
       "title": "Manitoba Protects Indigenous Languages with New Teaching Degree Programs",
@@ -262,27 +269,6 @@
       "description": "",
       "score": 9,
       "pubDate": "Fri, 03 Oct 2025 12:21:00 CDT"
-    },
-    {
-      "title": "N.S. still failing to consult on law blocking protests on Crown land: Mi'kmaq leaders",
-      "link": "https://globalnews.ca/news/11489303/mikmaq-leader-nova-scotia-crown-land/",
-      "description": "A Mi’kmaq leader says the provincial government continues to ignore First Nations' concerns on a new law they say targets their community's ability to protect its territory.",
-      "score": 8.2,
-      "pubDate": "Wed, 22 Oct 2025 15:16:22 +0000"
-    },
-    {
-      "title": "PQ insists Quebec needs another referendum, despite lack of public support",
-      "link": "https://globalnews.ca/news/11488486/pq-insists-quebec-needs-referendum/",
-      "description": "Despite 65 per cent of Quebecers indicating they would vote 'No' in a sovereignty vote, Paul St-Pierre Plamondon is pushing forward with the promise of a third referendum.",
-      "score": 8.5,
-      "pubDate": "Wed, 22 Oct 2025 01:52:19 +0000"
-    },
-    {
-      "title": "Family of Manitoba crash victim to speak to parliamentary committee on bail reform",
-      "link": "https://globalnews.ca/news/11488150/family-manitoba-crash-victim-bail-reform/",
-      "description": "Meechelle and Ron Best plan to travel to Ottawa to advocate for bail reform in front of the House of Commons' Standing Committee on Justice and Human Rights.",
-      "score": 7.5,
-      "pubDate": "Tue, 21 Oct 2025 23:44:40 +0000"
     },
     {
       "title": "Photos: Matt Maltese caresses the keys at the Vogue Theatre",
@@ -348,11 +334,25 @@
       "pubDate": "Thu, 02 Oct 2025 10:40:00 CDT"
     },
     {
+      "title": "ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December!",
+      "link": "https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december",
+      "description": "\"We're there to bring joy, connect people, and engage with our audience.\"",
+      "score": 5,
+      "pubDate": "2025-10-22T10:25:20-07:00"
+    },
+    {
       "title": "Photos: Electronic powerhouses Kaytranada and Justice co-headline Rogers Arena",
       "link": "https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena",
       "description": "The DJ and the French duo combined for a memorable show.",
       "score": 5,
       "pubDate": "2025-10-21T11:48:57-07:00"
+    },
+    {
+      "title": "Scrolling Through the Aftermath of the Assassination of Charlie Kirk",
+      "link": "https://thetyee.ca/Opinion/2025/10/21/Scrolling-Aftermath-Assassination-Charlie-Kirk/",
+      "description": "Why I’m studying how Canadian social media users responded to the MAGA figure’s death.",
+      "score": 6.8,
+      "pubDate": "Tue, 21 Oct 2025 07:30:00 +0000"
     }
   ]
 }

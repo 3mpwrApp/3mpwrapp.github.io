@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Wed, 22 Oct 2025 15:27:17 GMT</lastBuildDate>
-    <pubDate>Wed, 22 Oct 2025 15:27:17 GMT</pubDate>
+    <lastBuildDate>Wed, 22 Oct 2025 21:19:32 GMT</lastBuildDate>
+    <pubDate>Wed, 22 Oct 2025 21:19:32 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -18,16 +18,6 @@
     <category>Accessibility</category>
     <category>Social Policy</category>
     <category>Benefits</category>
-
-    <item>
-      <title>Tens of thousands mistakenly approved for dental coverage, Health Canada says</title>
-      <link>https://www.cbc.ca/news/politics/system-error-health-canada-dental-insurance-plan-9.6947506?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/politics/system-error-health-canada-dental-insurance-plan-9.6947506?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/9cf63253-e070-42c6-bbef-5505a33b3434,1761077799439/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C210%2C3478%2C1956%29%3BResize%3D%28620%29' alt='Dental instruments sit on a try inside a dental office.' width='620' height='349' title='Roughly 28,000 people received care after they were given an inaccurate assessment under the national dental insurance plan.'/><p>Roughly 70,000 people were approved for coverage under the public dental insurance program, but were later deemed ineligible or had been assessed for an incorrect copayment level, Health Canada said Tuesday.</p>]]></description>
-      <pubDate>Tue, 21 Oct 2025 20:37:07 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
 
     <item>
       <title>Manitoba Government Introduces Bill That Would Respond to Meth Crisis, Reduce Pressure on Emergency Rooms and Keep Public Safe</title>
@@ -108,6 +98,16 @@
     </item>
 
     <item>
+      <title>COVID-19 class-action application denied as abuse of process by B.C. judge</title>
+      <link>https://www.cbc.ca/news/canada/british-columbia/covid-19-class-action-application-denied-9.6948651?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/british-columbia/covid-19-class-action-application-denied-9.6948651?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.6775601,1740417129000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C69%2C2938%2C1652%29%3BResize%3D%28620%29' alt='A white woman with short blonde hair is shown from the shoulders up. She's wearing a pink leopard print shirt.' width='620' height='349' title='Provincial Health Officer Dr. Bonnie Henry during a news conference in Vancouver, B.C., on Friday, Mar. 10, 2023. '/><p>A B.C. Supreme Court justice has ruled that a class-action lawsuit meant to represent all adults in the province whose rights were allegedly violated by provincial orders during the COVID-19 pandemic can’t proceed because of “so many self-inflicted problems.”</p>]]></description>
+      <pubDate>Wed, 22 Oct 2025 15:55:33 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
       <title>Smith Still Faces Questions in the Dodgy Contracts Scandal</title>
       <link>https://thetyee.ca/Opinion/2025/10/20/Smith-Still-Faces-Questions-Contracts-Scandal/</link>
       <guid isPermaLink="true">https://thetyee.ca/Opinion/2025/10/20/Smith-Still-Faces-Questions-Contracts-Scandal/</guid>
@@ -118,10 +118,21 @@
     </item>
 
     <item>
-      <title>Manitoba Legislative Session Resumes with Focus on Health Care, Affordability and Public Safety</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=70938</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=70938</guid>
-      <pubDate>Wed, 01 Oct 2025 18:28:00 GMT</pubDate>
+      <title>Canadian trips to the U.S. fell for the 8th straight month: StatCan</title>
+      <link>https://globalnews.ca/news/11489771/canada-united-states-travel-report-august-2025/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11489771/canada-united-states-travel-report-august-2025/</guid>
+      <description><![CDATA[Statistics Canada says the number of Canadians returning from travel to the U.S. declined for the eighth straight month amid the ongoing trade war.]]></description>
+      <pubDate>Wed, 22 Oct 2025 20:10:48 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Report finds tenants&apos; rights at risk in Nova Scotia, issues go unaddressed</title>
+      <link>https://globalnews.ca/news/11489714/tenants-rights-nova-scotia-report/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11489714/tenants-rights-nova-scotia-report/</guid>
+      <description><![CDATA[Dalhousie Legal Aid Service conducted a survey of more than 1,200 tenants, and also analyzed decisions by the provincial body that enforces residential tenancy legislation.]]></description>
+      <pubDate>Wed, 22 Oct 2025 18:19:35 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -132,16 +143,6 @@
       <guid isPermaLink="true">https://policyoptions.irpp.org/2016/07/canadian-exporters-and-ebay-how-technology-is-changing-trade/</guid>
       <description><![CDATA[The latest chapter in the IRPP’s trade volume describes the emerging phenomenon of technology-enabled (‘online’) trade. In this chapter, authors Usman Ahmed and Hanne Melin (eBay Inc.) analyze a unique dataset of Canadian firms using eBay in 2008-13. The experiences of these businesses demonstrate that technology-enabled trade is broader and more inclusive than traditional trade. […]]]></description>
       <pubDate>Tue, 26 Jul 2016 16:00:12 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Charities hit hard as Canada Post labour dispute disrupts donations</title>
-      <link>https://globalnews.ca/news/11488453/canada-post-dispute-disrupts-charity-donations/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11488453/canada-post-dispute-disrupts-charity-donations/</guid>
-      <description><![CDATA[Rotating strikes and service delays have left many organizations struggling, particularly as they head into the critical holiday donation season.]]></description>
-      <pubDate>Wed, 22 Oct 2025 01:22:49 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -167,11 +168,11 @@
     </item>
 
     <item>
-      <title>Saskatchewan to unveil throne speech as legislative session kicks off</title>
-      <link>https://globalnews.ca/news/11489267/saskatchewan-to-unveil-throne-speech-as-legislative-session-kicks-off/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11489267/saskatchewan-to-unveil-throne-speech-as-legislative-session-kicks-off/</guid>
-      <description><![CDATA[Saskatchewan Premier Scott Moe has not shared details of the plan but has said the speech would touch on economic and community safety issues.]]></description>
-      <pubDate>Wed, 22 Oct 2025 14:54:55 GMT</pubDate>
+      <title>Ford wants to revisit ending ticket scalping amid Blue Jays ‘gouging&apos;</title>
+      <link>https://globalnews.ca/news/11489635/ticket-scalping-doug-ford-toronto-blue-jays-world-series/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11489635/ticket-scalping-doug-ford-toronto-blue-jays-world-series/</guid>
+      <description><![CDATA[Ontario Premier Doug Ford said he wants to look into options to tackle scalping, including potential legislation, as Toronto Blue Jays ticket prices skyrocket.]]></description>
+      <pubDate>Wed, 22 Oct 2025 19:54:47 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -192,6 +193,16 @@
       <guid isPermaLink="true">https://www.cbc.ca/news/business/cryptomus-fined-177-million-fintrac-9.6948338?cmp=rss</guid>
       <description><![CDATA[<img src='https://i.cbc.ca/ais/11bf1759-f71b-4bc4-b0c8-a550ce952ca6,1761140004135/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C208%2C4000%2C2250%29%3BResize%3D%28620%29' alt='A pile of tokens representing different cryptocurrencies are shown.' width='620' height='349' title='A representation of cryptocurrencies in this illustration taken on January 24, 2022. '/><p>A cryptocurrency exchange has been slapped with a fine of almost $177 million — the largest-ever penalty by Canada's financial intelligence agency — for infractions including failing to flag more than 1,000 transactions with suspected links to criminal activity.</p>]]></description>
       <pubDate>Wed, 22 Oct 2025 13:47:20 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>‘Unreasonable&apos; to cancel election won by single vote, lawyer for Liberal MP says</title>
+      <link>https://globalnews.ca/news/11489917/unreasonable-to-cancel-election-won-single-vote-liberal-mp-terrebonne/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11489917/unreasonable-to-cancel-election-won-single-vote-liberal-mp-terrebonne/</guid>
+      <description><![CDATA["To cancel the election is to deny the right to vote that was expressed by these 61,115 people," the lawyer for the Quebec Liberal MP said in Superior Court.]]></description>
+      <pubDate>Wed, 22 Oct 2025 19:59:57 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -219,16 +230,6 @@
       <link>https://news.gov.mb.ca/news/index.html?item=70944</link>
       <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=70944</guid>
       <pubDate>Fri, 03 Oct 2025 20:30:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Carney to address Canadians on economy as budget questions grow</title>
-      <link>https://globalnews.ca/news/11489014/mark-carney-economic-speech-budget/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11489014/mark-carney-economic-speech-budget/</guid>
-      <description><![CDATA[Prime Minister Mark Carney's speech will come as a new report from Desjardins estimates the federal budget deficit could be the highest in 30 years.]]></description>
-      <pubDate>Wed, 22 Oct 2025 13:52:31 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -274,21 +275,21 @@
     </item>
 
     <item>
-      <title>Suspect in alleged child abduction, fatal Brampton shooting dead after &apos;officer-involved shooting&apos;: police</title>
-      <link>https://www.cbc.ca/news/canada/toronto/niagara-police-suspect-abduction-fatal-shooting-is-dead-9.6948248?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/toronto/niagara-police-suspect-abduction-fatal-shooting-is-dead-9.6948248?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/1c3fa429-af4e-4f10-ab34-42152f1f83f9,1761138585224/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C811%2C456%29%3BResize%3D%28620%29' alt='Head shot of a white man in his 30s in a grey hoodie against a grey background' width='620' height='349' title='Police were looking for 38-year-old Anthony Deschepper in connection with a fatal shooting and alleged child abduction Tuesday. Police said he died early Wednesday morning after an interaction with officers in Niagara Falls.'/><p>The man, 38, died after an "interaction" with officers early Wednesday, Niagara police say.</p>]]></description>
-      <pubDate>Wed, 22 Oct 2025 12:51:33 GMT</pubDate>
+      <title>Vehicle recovered, person still missing after June crash into Squamish River</title>
+      <link>https://globalnews.ca/news/11489629/vehicle-recovered-person-missing-june-crash-squamish-river/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11489629/vehicle-recovered-person-missing-june-crash-squamish-river/</guid>
+      <description><![CDATA[The Sea to Sky General Investigation Section (GIS) said the vehicle was recovered on Saturday, marking a "significant step in the ongoing investigation."]]></description>
+      <pubDate>Wed, 22 Oct 2025 18:24:09 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Calf with deep gash identified as humpback struck by ferry off Vancouver</title>
-      <link>https://www.cbc.ca/news/canada/british-columbia/baby-humpback-whale-injured-off-vancouver-9.6947647?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/british-columbia/baby-humpback-whale-injured-off-vancouver-9.6947647?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/f51860ed-2d0e-433e-89e4-3ae75b9ca2e2,1761082100197/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C106%2C2048%2C1152%29%3BResize%3D%28620%29' alt='A humpback whale has a large gash below its dorsal fin ' width='620' height='349' title='The very deep gash on the baby humpback whale is consistent with an injury from a vessel strike. '/><p>"Given the seriousness of the injury, it will be important to monitor the animal’s healing progress," a DFO spokesperson said.</p>]]></description>
-      <pubDate>Wed, 22 Oct 2025 00:18:43 GMT</pubDate>
+      <title>Suspect in alleged child abduction and Brampton, Ont., slaying fatally shot by police</title>
+      <link>https://www.cbc.ca/news/canada/toronto/niagara-police-suspect-abduction-fatal-shooting-is-dead-9.6948248?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/toronto/niagara-police-suspect-abduction-fatal-shooting-is-dead-9.6948248?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1c3fa429-af4e-4f10-ab34-42152f1f83f9,1761138585224/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C811%2C456%29%3BResize%3D%28620%29' alt='Head shot of a white man in his 30s in a grey hoodie against a grey background' width='620' height='349' title='Police were looking for 38-year-old Anthony Deschepper in connection with a fatal shooting and alleged child abduction Tuesday. Police said he died early Wednesday morning after an interaction with officers in Niagara Falls.'/><p>The man, 38, died after an "interaction" with officers early Wednesday, Niagara police say. The man was shot multiple times by an officer, and the SIU is investigating, according to a spokesperson for the province's police watchdog.</p>]]></description>
+      <pubDate>Wed, 22 Oct 2025 12:51:33 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -330,20 +331,29 @@
     </item>
 
     <item>
-      <title>Health care, safety among Saskatchewan premier&apos;s top priorities this fall</title>
-      <link>https://globalnews.ca/news/11488372/health-care-safety-top-priorities-saskatchewan-premier/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11488372/health-care-safety-top-priorities-saskatchewan-premier/</guid>
-      <description><![CDATA[As Saskatchewan's legislature returns for the fall, the province's premier and Opposition leader share what their main priorities are.]]></description>
-      <pubDate>Wed, 22 Oct 2025 00:12:20 GMT</pubDate>
+      <title>Choose: More nurses per patient or worse health care</title>
+      <link>https://rabble.ca/podcast/choose-more-nurses-per-patient-or-worse-health-care/</link>
+      <guid isPermaLink="true">https://rabble.ca/podcast/choose-more-nurses-per-patient-or-worse-health-care/</guid>
+      <pubDate>Fri, 17 Oct 2025 13:18:02 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Choose: More nurses per patient or worse health care</title>
-      <link>https://rabble.ca/podcast/choose-more-nurses-per-patient-or-worse-health-care/</link>
-      <guid isPermaLink="true">https://rabble.ca/podcast/choose-more-nurses-per-patient-or-worse-health-care/</guid>
-      <pubDate>Fri, 17 Oct 2025 13:18:02 GMT</pubDate>
+      <title>Ingersoll, Ont., residents react to &apos;awful news&apos; GM is ending CAMI plant&apos;s electric van production</title>
+      <link>https://www.cbc.ca/news/canada/london/gm-bright-drop-ingesoll-9.6947432?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/london/gm-bright-drop-ingesoll-9.6947432?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/a8d61794-a68c-42ec-9130-0f3be89c3f03,1761076603041/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Ingersoll Mayor Brian Petrie outside the UNIFOR office in Ingersoll, Ont.' width='620' height='349' title='Mayor Brian Petrie called the decision to end production of the BrightDrop delivery vehicle 'devastating' for Ingersoll, Ont.'/><p>People in Ingersoll, Ont., are trying to come to terms with news that General Motors is halting production of the BrightDrop delivery vehicle at the CAMI assembly plant, Ingersoll's largest employer. "It means a lot to people in this town, so it's kind of heartbreaking. It's one of the backbones of this town," says one business owner.</p>]]></description>
+      <pubDate>Wed, 22 Oct 2025 09:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Supports Families with New Parenting Website</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71278</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71278</guid>
+      <pubDate>Wed, 22 Oct 2025 17:30:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -371,36 +381,6 @@
       <link>https://news.gov.mb.ca/news/index.html?item=70943</link>
       <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=70943</guid>
       <pubDate>Fri, 03 Oct 2025 17:21:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>N.S. still failing to consult on law blocking protests on Crown land: Mi&apos;kmaq leaders</title>
-      <link>https://globalnews.ca/news/11489303/mikmaq-leader-nova-scotia-crown-land/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11489303/mikmaq-leader-nova-scotia-crown-land/</guid>
-      <description><![CDATA[A Mi’kmaq leader says the provincial government continues to ignore First Nations' concerns on a new law they say targets their community's ability to protect its territory.]]></description>
-      <pubDate>Wed, 22 Oct 2025 15:16:22 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>PQ insists Quebec needs another referendum, despite lack of public support</title>
-      <link>https://globalnews.ca/news/11488486/pq-insists-quebec-needs-referendum/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11488486/pq-insists-quebec-needs-referendum/</guid>
-      <description><![CDATA[Despite 65 per cent of Quebecers indicating they would vote 'No' in a sovereignty vote, Paul St-Pierre Plamondon is pushing forward with the promise of a third referendum.]]></description>
-      <pubDate>Wed, 22 Oct 2025 01:52:19 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Family of Manitoba crash victim to speak to parliamentary committee on bail reform</title>
-      <link>https://globalnews.ca/news/11488150/family-manitoba-crash-victim-bail-reform/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11488150/family-manitoba-crash-victim-bail-reform/</guid>
-      <description><![CDATA[Meechelle and Ron Best plan to travel to Ottawa to advocate for bail reform in front of the House of Commons' Standing Committee on Justice and Human Rights.]]></description>
-      <pubDate>Tue, 21 Oct 2025 23:44:40 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -488,11 +468,31 @@
     </item>
 
     <item>
+      <title>ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December!</title>
+      <link>https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december</link>
+      <guid isPermaLink="true">https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december</guid>
+      <description><![CDATA["We're there to bring joy, connect people, and engage with our audience."]]></description>
+      <pubDate>Wed, 22 Oct 2025 17:25:20 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
       <title>Photos: Electronic powerhouses Kaytranada and Justice co-headline Rogers Arena</title>
       <link>https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena</link>
       <guid isPermaLink="true">https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena</guid>
       <description><![CDATA[The DJ and the French duo combined for a memorable show.]]></description>
       <pubDate>Tue, 21 Oct 2025 18:48:57 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Scrolling Through the Aftermath of the Assassination of Charlie Kirk</title>
+      <link>https://thetyee.ca/Opinion/2025/10/21/Scrolling-Aftermath-Assassination-Charlie-Kirk/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2025/10/21/Scrolling-Aftermath-Assassination-Charlie-Kirk/</guid>
+      <description><![CDATA[Why I’m studying how Canadian social media users responded to the MAGA figure’s death.]]></description>
+      <pubDate>Tue, 21 Oct 2025 07:30:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
