@@ -15,7 +15,7 @@ Big platforms silence stories through hidden algorithms and "relevance" scores. 
 
 ## Built with empathy. Rooted in Accessibility. Powered by you!
 
-3mpwrApp is designed to offer advocacy, resources, and community support for injured workers and persons with disabilities across Canada. Our tools simplify complex processes, connect you with advocates, and empower you to take action.
+**3mpwrApp is a Health & Fitness, Medical, Social, Self-help, and Personalization platform** designed to offer advocacy, resources, and community support for injured workers and persons with disabilities across Canada. Our tools simplify complex processes, connect you with advocates, and empower you to take action.
 
 ### 🇨🇦 Currently Serving Canada-Wide
 

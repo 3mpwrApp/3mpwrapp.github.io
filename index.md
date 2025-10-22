@@ -14,9 +14,13 @@ description: A community-powered hub for injured workers and persons with disabi
 
 ## Why 3mpwr?
 
+**A Health & Fitness, Medical, and Social Support Platform**
+
 3mpwr provides practical tools and a vibrant community to help you:
-- <strong>Connect</strong> with others who understand your journey
-- <strong>Advocate</strong> for your rights and meaningful change
+- <strong>Connect</strong> with others who understand your journey (Social)
+- <strong>Advocate</strong> for your rights and meaningful change (Self-help)
+- <strong>Track</strong> your wellness, medications, and health data (Health & Fitness, Medical)
+- <strong>Personalize</strong> your experience with customizable accessibility features (Personalization)
 - <strong>Learn</strong> about resources, rights, and support available to you
 - <strong>Grow</strong> through peer support and shared experiences
 
