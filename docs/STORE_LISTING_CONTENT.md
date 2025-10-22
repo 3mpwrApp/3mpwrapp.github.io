@@ -240,14 +240,20 @@ disability,rights,advocacy,benefits,accessibility,legal,evidence,wellness,commun
 - **iOS Secondary:** Health & Fitness
 - **Android:** Medical or Lifestyle
 
+## 🏷️ Play Store Tags (recommended)
+- Health & fitness
+- Medical
+- Personalization
+- Self-help
+- Social
+
 ## 🔞 Age Rating
 - **iOS:** 12+ (Infrequent/Mild Medical/Treatment Information, Infrequent/Mild Profanity or Crude Humor in user-generated content)
 - **Android:** Teen (moderate violence references in advocacy content, user-generated content)
 
 ## 🌐 Privacy Policy URL
 **Required for both stores:**
-https://github.com/empowrapp/empowrapp-new/blob/main/docs/release-prep/legal/privacy-policy.md
-*(Host this at empowrapp.com/privacy once domain is live)*
+https://3mpwrapp.pages.dev/privacy/
 
 ## 📧 Support URL
 **Required for both stores:**

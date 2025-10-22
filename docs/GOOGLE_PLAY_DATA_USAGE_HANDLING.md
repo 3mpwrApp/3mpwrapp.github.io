@@ -1114,6 +1114,30 @@ When selecting "shared with third parties," Google will ask you to name them:
 
 ---
 
+### Service Providers (Who Receives What)
+
+- **Firebase / Google LLC**
+  - Purpose: Authentication (Firebase Auth), Analytics (Firebase Analytics), optional Cloud Storage (Firestore/Storage)
+  - Data: Email (Auth), App interactions & diagnostics (Analytics), crash/diagnostic metadata (if enabled)
+  - Control: Users can opt out of analytics; BYOC mode bypasses Firebase entirely
+
+- **Functional Software, Inc. (Sentry)**
+  - Purpose: Crash reporting and error monitoring
+  - Data: Crash logs, stack traces, device model, app version (no PII by default)
+  - Control: Error reporting can be toggled off in Settings
+
+- **Expo Notifications / Push Providers**
+  - Purpose: Deliver push notifications (tokens only)
+  - Data: Push token, notification metadata
+  - Control: Users can disable notifications in Settings
+
+### Encryption Summary
+
+- **In transit:** YES — ALL user data transmitted by the app is encrypted using HTTPS/TLS (TLS 1.3 where supported).
+- **At rest:** YES — Sensitive data stored locally or in our cloud is protected with AES-256 encryption (when stored by the app or when synced to our infrastructure).
+
+---
+
 ### Data Retention
 
 Google may ask about retention periods:

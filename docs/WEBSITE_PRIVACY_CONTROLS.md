@@ -127,7 +127,7 @@ All privacy settings are in one place: **Settings → Privacy & Security**
 ## 📊 What Data Do We Collect?
 
 ### Always Optional (You Choose)
-- ✅ **Province/Territory:** For legal guidance specific to your area
+- ✅ **Province/Territory:** For legal guidance specific to your area (approximate location only — no GPS/precise coordinates)
 - ✅ **Name:** To personalize your experience
 - ✅ **Email:** Only if you create an account
 - ✅ **Wellness Data:** Mood, energy, reflections (stays on your device)
@@ -136,16 +136,16 @@ All privacy settings are in one place: **Settings → Privacy & Security**
 - ✅ **Crash Reports:** Can be disabled with toggle
 - ✅ **Search History:** Can be disabled with toggle
 
-### Never Collected
-- ❌ GPS/Precise Location
+### Never Collected (or only with explicit consent)
+- ❌ GPS/Precise Location (we do NOT collect exact coordinates)
 - ❌ Contacts
-- ❌ Calendar
 - ❌ SMS/Text Messages
 - ❌ Phone Calls
-- ❌ Microphone (unless you use voice features)
 - ❌ Advertising IDs
 - ❌ Device tracking
 - ❌ Web browsing history
++
+> Microphone / Voice input: We do not record or store microphone audio by default. If you use voice features (voice commands / speech input), audio is processed in real-time for speech-to-text and is not stored long-term (ephemeral processing). Any voice data sent to speech APIs is transient and used only to convert speech to text.
 
 ---
 
