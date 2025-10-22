@@ -69,10 +69,71 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
+// Fallback palette constants for when context is unavailable
+/* eslint-disable no-restricted-syntax */
+const FALLBACK_PALETTE = {
+  background: '#FFFFFF' as const,
+  surface: '#F5F5F5' as const,
+  text: '#000000' as const,
+  onPrimary: '#FFFFFF' as const,
+  primary: '#007AFF' as const,
+  muted: '#CCCCCC' as const,
+};
+/* eslint-enable no-restricted-syntax */
+
 /**
- * Error fallback UI component
+ * Basic error fallback without context dependencies (for early app initialization errors)
+ */
+function ErrorFallbackBasic({ error, onReset }: { error: Error | null; onReset: () => void }) {
+  const styles = createStyles(FALLBACK_PALETTE as any);
+  
+  return (
+    <View style={styles.container}>
+      <ScrollView 
+        contentContainerStyle={styles.content}
+        accessibilityRole="alert"
+        accessibilityLabel="Error occurred"
+      >
+        <Text style={styles.emoji} accessibilityLabel="Error icon">⚠️</Text>
+        <Text style={styles.title} accessibilityRole="header">Something Went Wrong</Text>
+        <Text style={styles.message}>
+          The app encountered an unexpected error. Please restart the app.
+        </Text>
+        {__DEV__ && error && (
+          <View style={styles.errorDetails}>
+            <Text style={styles.errorTitle}>Error Details (Dev Mode):</Text>
+            <Text style={styles.errorText}>{error.toString()}</Text>
+          </View>
+        )}
+        <Pressable
+          style={[styles.button, styles.primaryButton, { backgroundColor: FALLBACK_PALETTE.primary }]}
+          onPress={onReset}
+          accessibilityRole="button"
+          accessibilityLabel="Try again"
+        >
+          <Text style={[styles.buttonText, { color: FALLBACK_PALETTE.onPrimary }]}>Try Again</Text>
+        </Pressable>
+      </ScrollView>
+    </View>
+  );
+}
+
+/**
+ * Error fallback UI component wrapper that handles missing context
  */
 function ErrorFallback({ error, onReset }: { error: Error | null; onReset: () => void }) {
+  // Use ErrorBoundary to catch context errors
+  return (
+    <React.Suspense fallback={<ErrorFallbackBasic error={error} onReset={onReset} />}>
+      <ErrorFallbackWithContext error={error} onReset={onReset} />
+    </React.Suspense>
+  );
+}
+
+/**
+ * Error fallback with full context support
+ */
+function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onReset: () => void }) {
   const palette = useAppPalette();
   const router = useRouter();
   const styles = createStyles(palette);

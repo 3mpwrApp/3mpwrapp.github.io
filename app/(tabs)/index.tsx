@@ -37,6 +37,34 @@ export default function HomeScreen() {
         {t('home.title','Home')} <Text style={{ fontSize: Math.round(14 * factor), opacity: 0.8, color: palette.text }}>(Beta)</Text>
       </Text>
       
+      {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
+      <Link href={'/(tabs)/advocacy/ask' as any} asChild>
+        <A11yPressable
+          style={{
+            backgroundColor: palette.primary,
+            paddingHorizontal: 16,
+            paddingVertical: 12,
+            borderRadius: 8,
+            marginBottom: 16,
+            alignItems: 'center',
+          }}
+          accessibilityLabel={t('home.ask.label', 'Ask 3mpwr - Get help from advocates')}
+          accessibilityHint={t('home.ask.hint', 'Opens the Ask an Advocate form')}
+          hitSlop={HIT_SLOP_8}
+        >
+          <Text
+            style={{
+              color: palette.onPrimary,
+              fontWeight: '700',
+              fontSize: Math.round(16 * factor),
+            }}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            💬 {t('home.ask.button', 'Ask 3mpwr')}
+          </Text>
+        </A11yPressable>
+      </Link>
+      
       {/* Disability Wizard - Personalized Recommendations */}
       <DisabilityWizard 
         maxSuggestions={3}

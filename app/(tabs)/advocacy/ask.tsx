@@ -120,8 +120,6 @@ function Inner() {
   );
 }
 
-export const options = { href: null };
-
 export default function AskAdvocate() {
   return (
     <CommunityProvider>

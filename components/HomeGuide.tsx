@@ -195,8 +195,8 @@ function trendStyle(palette: any, trend: string) {
 // legacy helper removed; route resolution handled by registry
 
 const styles = StyleSheet.create({
-  container: { borderWidth: StyleSheet.hairlineWidth, padding:12, borderRadius:12, marginBottom:16 },
-  header: { fontSize:16, fontWeight:'700', marginBottom:8 },
-  snapshotLabel: { fontSize:13, fontWeight:'600' },
-  suggestionTitle: { fontSize:13, fontWeight:'600', marginBottom:4 }
+  container: { borderWidth: StyleSheet.hairlineWidth, padding:12, borderRadius:12, marginBottom:16, marginTop:12 },
+  header: { fontSize:16, fontWeight:'700', marginBottom:12 },
+  snapshotLabel: { fontSize:13, fontWeight:'600', marginBottom:6 },
+  suggestionTitle: { fontSize:13, fontWeight:'600', marginBottom:8 }
 });
