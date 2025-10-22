@@ -41,7 +41,7 @@ All privacy settings are in one place: **Settings → Privacy & Security**
 - Your personal information
 - Your wellness data
 - Your evidence or documents
-- Your location
+- Your GPS location or exact coordinates
 
 ---
 
@@ -138,7 +138,7 @@ All privacy settings are in one place: **Settings → Privacy & Security**
 ## 📊 What Data Do We Collect?
 
 ### Always Optional (You Choose)
-- ✅ **Province/Territory:** For legal guidance specific to your area
+- ✅ **Province/Territory:** For legal guidance specific to your area (approximate location only - no GPS)
 - ✅ **Name:** To personalize your experience
 - ✅ **Email:** Only if you create an account
 - ✅ **Wellness Data:** Mood, energy, reflections (stays on your device)
@@ -148,7 +148,7 @@ All privacy settings are in one place: **Settings → Privacy & Security**
 - ✅ **Search History:** Can be disabled with toggle
 
 ### Never Collected
-- ❌ GPS/Precise Location
+- ❌ **GPS/Precise Location:** No exact coordinates or tracking
 - ❌ Contacts
 - ❌ Calendar
 - ❌ SMS/Text Messages
