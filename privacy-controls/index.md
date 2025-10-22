@@ -163,9 +163,9 @@ All privacy settings are in one place: **Settings → Privacy & Security**
 ## 🔐 How We Protect Your Data
 
 ### Encryption
-- **In Transit:** TLS 1.3 (military-grade security)
-- **At Rest:** AES-256 encryption
-- **On Device:** Hardware-backed encryption
+- **In Transit:** ✅ **ALL user data is encrypted in transit** using TLS 1.3 (military-grade security) - Your data is protected when moving between your device and servers
+- **At Rest:** AES-256 encryption - Your data is encrypted when stored
+- **On Device:** Hardware-backed encryption - Your device's built-in security protects your data
 
 ### Storage
 - **Local First:** Data stored on YOUR device by default
@@ -175,7 +175,60 @@ All privacy settings are in one place: **Settings → Privacy & Security**
 ### Privacy
 - **No Tracking:** No advertising IDs or device tracking
 - **No Selling:** We NEVER sell your data
-- **No Sharing:** Data not shared with third parties (except Firebase/Google for authentication if you use it)
+- **No Sharing:** Data not shared with third parties except trusted service providers (see below)
+
+---
+
+## 🤝 Service Providers (Who Receives What)
+
+We only share data with essential service providers to make the app work. Here's exactly what each receives:
+
+### 📱 Expo Notifications
+**What:** Push notification delivery service  
+**Receives:** Notification token (to send you alerts)  
+**When:** Only if you enable notifications  
+**Purpose:** Deliver reminders, updates, and alerts to your device  
+**Control:** Disable in Settings → Notifications
+
+### 🔥 Firebase (Google)
+**What:** Authentication and optional cloud features  
+**Receives:**  
+- Email address (if you create an account)
+- User ID
+- App interactions (if analytics enabled)
+- Authentication tokens  
+
+**When:** If you create an account or enable cloud features  
+**Purpose:** Account management, optional sync, community features  
+**Control:** Use Guest Mode or disable analytics in Settings  
+**Note:** BYOC mode bypasses Firebase entirely
+
+### 🐛 Sentry
+**What:** Error monitoring and crash reporting  
+**Receives:**  
+- Crash logs
+- Error messages
+- Device type (e.g., "iPhone 12")
+- App version  
+
+**When:** Only if Error Reporting is enabled  
+**Purpose:** Help us fix bugs and improve app stability  
+**Control:** Toggle "Error Reporting" OFF in Settings → Privacy & Security  
+**Privacy:** No personal data, names, or content sent
+
+### 🔒 What These Services DON'T Receive
+- Your wellness data
+- Your evidence locker contents
+- Your journal entries
+- Your personal documents
+- Your precise location
+- Your contacts or photos (except what you explicitly upload)
+
+### 🛡️ Our Commitments
+- **Contractual Protection:** All service providers are bound by strict data processing agreements
+- **No Third-Party Selling:** These providers cannot sell or share your data
+- **Minimal Data:** We only send what's necessary for each service to function
+- **Your Control:** You can disable each service except essential authentication
 
 ---
 
