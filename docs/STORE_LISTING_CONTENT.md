@@ -5,58 +5,38 @@
 
 ## 🎯 Subtitle/Short Description (30 characters max for iOS, 80 for Android)
 **iOS:** Rights, Resources, Your Voice
-**Android:** Disability rights support and advocacy tools for everyone
+**Android:** Disability support, injured workers, advocacy & tools for your journey
 
 ## 📝 Full Description
 
 ### App Store Connect (4000 characters max)
 
-**Empower your rights. Own your data. Build your future.**
+**Your journey. Your rights. Your data. Your power.**
 
-3mpwr App is a free, accessible app built by and for the disability community. Whether you're navigating disability benefits, documenting workplace accommodations, or connecting with advocates, 3mpwr puts powerful tools in your hands—with complete privacy and data ownership.
+Living with a disability—whether physical, mental, cognitive, chronic, or as an injured worker—comes with unique challenges. 3mpwr App is your comprehensive companion across the entire disability spectrum, built by and for the Canadian disability and injured worker communities. We've created powerful, accessible tools to support you at every step of your journey—from diagnosis to accommodation, from crisis to advocacy, from isolation to community.
+
+**🇨🇦 Built for ALL Canadians, ALL Disabilities, ALL 14 Jurisdictions**
+Whether you're in BC navigating WCB, in Ontario with WSIB, applying for CPP-D, managing chronic pain, seeking mental health support, documenting workplace discrimination, or fighting for your rights—3mpwr provides province and territory-specific guidance tailored to YOUR location and YOUR needs (BC, AB, SK, MB, ON, QC, NB, NS, PE, NL, YT, NT, NU, Federal).
 
 **🔒 100% YOUR DATA**
 Unlike other apps, 3mpwr never owns your data. Everything stays on your device unless you choose to sync to YOUR cloud (Google Drive, iCloud, OneDrive, Dropbox, AWS S3, or WebDAV). No tracking. No hidden servers. No data sales. Ever.
 
-**✨ KEY FEATURES**
+**✨ HOW EACH FEATURE SUPPORTS YOUR JOURNEY**
 
-**🏠 Wellness Hub**
-- Daily planner with energy tracking
-- Reflection journal for mental health
-- Guided exercises (breathing, grounding, gratitude)
-- Mood tracking and wellness insights
+**🏠 Wellness Hub — Managing Daily Life with Disability**
+When chronic pain, fatigue, mental health challenges, or injury recovery make each day unpredictable, our Wellness Hub helps you track energy levels, manage symptoms, and practice self-care through guided exercises (breathing, grounding, gratitude). Whether you're pacing activities to avoid flare-ups or tracking mood patterns for your doctor, this hub centers YOUR wellness alongside your advocacy work.
 
-**⚖️ Rights & Resources**
-- Disability rights explainer (plain language)
-- Appeal coach for denied benefits
-- Deadline calculator with reminders
-- Evidence checklist for your case
-- Voice-to-text case notes
-- Template gallery (letters, forms, requests)
-- Support directory (advocates, legal aid, peer support)
+**⚖️ Rights & Resources — Fighting for What You Deserve**
+From your first denied WCB claim to your third appeal, from accommodation requests to human rights complaints—navigating disability systems is exhausting. Our Rights & Resources hub provides plain-language rights explainers, appeal coaching, deadline calculators with reminders, evidence checklists, voice-to-text case notes, letter templates, and a directory of advocates, legal aid, and peer support. You'll never miss a deadline or lose critical documentation again.
 
-**📢 Advocacy Tools**
-- Policy Made Simple: understand laws affecting you
-- Campaign coordination for community organizing
-- Legislative tracker for rights-related bills
-- Direct advocacy: contact your representatives
+**📢 Advocacy Tools — Changing Systems, Not Just Surviving Them**
+Living with disability means understanding how laws and policies directly impact your life. Our Advocacy Tools help you track legislation affecting disability rights, understand complex policies through "Policy Made Simple" summaries, coordinate campaigns with other advocates, and contact your representatives directly. Whether you're fighting for accessible transit, workplace protections, or benefit reform—3mpwr amplifies your voice.
 
-**👥 Community**
-- Safe, moderated spaces for connection
-- Beta Testers chat
-- Regional channels (coming soon)
-- Private messaging
-- Events calendar
+**👥 Community — You're Not Alone**
+Disability and injury can be isolating. Our safe, moderated Community spaces connect you with others who understand—whether you're sharing strategies for navigating WSIB, finding local support groups, coordinating regional advocacy, or simply venting about the latest denial letter. Beta Testers chat, regional channels (coming soon), private messaging, and events calendar keep you connected.
 
-**♿ Built for Accessibility**
-- Full VoiceOver, TalkBack, and NVDA support
-- High contrast mode
-- Dyslexia-friendly spacing and fonts
-- Large text scaling (up to 200%)
-- One-handed mode
-- Cognitive assistance (memory aids, simplified navigation)
-- Motor accessibility (dwell click, tremor filtering, large tap targets)
-- Multilingual: English, Español, Français, Indigenous languages
+**♿ Built for Accessibility — Every Disability, Every Need**
+We designed 3mpwr FOR the disability community, which means accessibility isn't an afterthought—it's the foundation. Full screen reader support (VoiceOver, TalkBack, NVDA), high contrast mode, dyslexia-friendly spacing/fonts, large text scaling (up to 200%), one-handed mode, cognitive assistance (memory aids, simplified navigation), motor accessibility (dwell click, tremor filtering, large tap targets), and multilingual support (English, Español, Français, Indigenous languages). If you can use a phone, you can use 3mpwr.
 
 **🤖 AI-Powered (Private & Local)**
 - Legal workflow automation (benefit applications, accommodations)
@@ -80,12 +60,13 @@ Unlike other apps, 3mpwr never owns your data. Everything stays on your device u
 - **Open & Transparent:** Verify our privacy claims through code inspection
 
 **🏅 PERFECT FOR:**
-- Individuals applying for or appealing disability benefits
+- Injured workers navigating WCB/WSIB claims and appeals
+- Individuals applying for or appealing disability benefits (CPP-D, EI Sickness, provincial programs)
 - People documenting workplace accommodations or discrimination
-- Disability rights advocates and organizers
+- Disability rights advocates and organizers across Canada
 - Anyone navigating complex legal or administrative processes
 - Community members seeking connection and peer support
-- Organizations supporting the disability community
+- Organizations supporting the disability and injured worker communities
 
 **📖 LEARN MORE**
 Visit https://3mpwrapp.pages.dev/ for tutorials, guides, and community resources.
@@ -100,52 +81,32 @@ Questions? Email empowrapp08162025@gmail.com or use in-app support (Settings →
 
 ### Google Play (4000 characters max)
 
-**Empower your rights. Own your data. Build your future.**
+**Your journey. Your rights. Your data. Your power.**
 
-3mpwr App is a free, accessible app built by and for the disability community. Whether you're navigating disability benefits, documenting workplace accommodations, or connecting with advocates, 3mpwr puts powerful tools in your hands—with complete privacy and data ownership.
+Living with a disability—whether physical, mental, cognitive, chronic, or as an injured worker—comes with unique challenges. 3mpwr App is your comprehensive companion across the entire disability spectrum, built by and for the Canadian disability and injured worker communities. We've created powerful, accessible tools to support you at every step of your journey—from diagnosis to accommodation, from crisis to advocacy, from isolation to community.
+
+**🇨🇦 Built for ALL Canadians, ALL Disabilities, ALL 14 Jurisdictions**
+Whether you're in BC navigating WCB, in Ontario with WSIB, applying for CPP-D, managing chronic pain, seeking mental health support, documenting workplace discrimination, or fighting for your rights—3mpwr provides province and territory-specific guidance tailored to YOUR location and YOUR needs (BC, AB, SK, MB, ON, QC, NB, NS, PE, NL, YT, NT, NU, Federal).
 
 **🔒 100% YOUR DATA**
 Unlike other apps, 3mpwr never owns your data. Everything stays on your device unless you choose to sync to YOUR cloud (Google Drive, iCloud, OneDrive, Dropbox, AWS S3, or WebDAV). No tracking. No hidden servers. No data sales. Ever.
 
-**✨ KEY FEATURES**
+**✨ HOW EACH FEATURE SUPPORTS YOUR JOURNEY**
 
-**🏠 Wellness Hub**
-• Daily planner with energy tracking
-• Reflection journal for mental health
-• Guided exercises (breathing, grounding, gratitude)
-• Mood tracking and wellness insights
+**🏠 Wellness Hub — Managing Daily Life with Disability**
+When chronic pain, fatigue, mental health challenges, or injury recovery make each day unpredictable, our Wellness Hub helps you track energy levels, manage symptoms, and practice self-care through guided exercises (breathing, grounding, gratitude). Whether you're pacing activities to avoid flare-ups or tracking mood patterns for your doctor, this hub centers YOUR wellness alongside your advocacy work.
 
-**⚖️ Rights & Resources**
-• Disability rights explainer (plain language)
-• Appeal coach for denied benefits
-• Deadline calculator with reminders
-• Evidence checklist for your case
-• Voice-to-text case notes
-• Template gallery (letters, forms, requests)
-• Support directory (advocates, legal aid, peer support)
+**⚖️ Rights & Resources — Fighting for What You Deserve**
+From your first denied WCB claim to your third appeal, from accommodation requests to human rights complaints—navigating disability systems is exhausting. Our Rights & Resources hub provides plain-language rights explainers, appeal coaching, deadline calculators with reminders, evidence checklists, voice-to-text case notes, letter templates, and a directory of advocates, legal aid, and peer support. You'll never miss a deadline or lose critical documentation again.
 
-**📢 Advocacy Tools**
-• Policy Made Simple: understand laws affecting you
-• Campaign coordination for community organizing
-• Legislative tracker for rights-related bills
-• Direct advocacy: contact your representatives
+**📢 Advocacy Tools — Changing Systems, Not Just Surviving Them**
+Living with disability means understanding how laws and policies directly impact your life. Our Advocacy Tools help you track legislation affecting disability rights, understand complex policies through "Policy Made Simple" summaries, coordinate campaigns with other advocates, and contact your representatives directly. Whether you're fighting for accessible transit, workplace protections, or benefit reform—3mpwr amplifies your voice.
 
-**👥 Community**
-• Safe, moderated spaces for connection
-• Beta Testers chat
-• Regional channels (coming soon)
-• Private messaging
-• Events calendar
+**👥 Community — You're Not Alone**
+Disability and injury can be isolating. Our safe, moderated Community spaces connect you with others who understand—whether you're sharing strategies for navigating WSIB, finding local support groups, coordinating regional advocacy, or simply venting about the latest denial letter. Beta Testers chat, regional channels (coming soon), private messaging, and events calendar keep you connected.
 
-**♿ Built for Accessibility**
-• Full TalkBack and screen reader support
-• High contrast mode
-• Dyslexia-friendly spacing and fonts
-• Large text scaling (up to 200%)
-• One-handed mode
-• Cognitive assistance (memory aids, simplified navigation)
-• Motor accessibility (dwell click, tremor filtering, large tap targets)
-• Multilingual: English, Español, Français, Indigenous languages
+**♿ Built for Accessibility — Every Disability, Every Need**
+We designed 3mpwr FOR the disability community, which means accessibility isn't an afterthought—it's the foundation. Full screen reader support (TalkBack), high contrast mode, dyslexia-friendly spacing/fonts, large text scaling (up to 200%), one-handed mode, cognitive assistance (memory aids, simplified navigation), motor accessibility (dwell click, tremor filtering, large tap targets), and multilingual support (English, Español, Français, Indigenous languages). If you can use a phone, you can use 3mpwr.
 
 **🤖 AI-Powered (Private & Local)**
 • Legal workflow automation (benefit applications, accommodations)
@@ -169,12 +130,13 @@ Unlike other apps, 3mpwr never owns your data. Everything stays on your device u
 • Open & Transparent: Verify our privacy claims through code inspection
 
 **🏅 PERFECT FOR:**
-• Individuals applying for or appealing disability benefits
+• Injured workers navigating WCB/WSIB claims and appeals
+• Individuals applying for or appealing disability benefits (CPP-D, EI Sickness, provincial programs)
 • People documenting workplace accommodations or discrimination
-• Disability rights advocates and organizers
+• Disability rights advocates and organizers across Canada
 • Anyone navigating complex legal or administrative processes
 • Community members seeking connection and peer support
-• Organizations supporting the disability community
+• Organizations supporting the disability and injured worker communities
 
 **📖 LEARN MORE**
 Visit empowrapp.com for tutorials, guides, and community resources.
