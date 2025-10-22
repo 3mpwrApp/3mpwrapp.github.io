@@ -1,41 +1,41 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-10-22T00:52:43.822Z",
+  "lastUpdated": "2025-10-22T06:17:13.434Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 25,
+      "totalPosts": 50,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T00:52:35.078Z"
+      "lastSeen": "2025-10-22T06:17:04.839Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 25,
+      "totalPosts": 50,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T00:52:37.043Z"
+      "lastSeen": "2025-10-22T06:17:06.601Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 25,
+      "totalPosts": 50,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T00:52:38.840Z"
+      "lastSeen": "2025-10-22T06:17:08.799Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 25,
+      "totalPosts": 50,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T00:52:40.768Z"
+      "lastSeen": "2025-10-22T06:17:10.468Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 25,
+      "totalPosts": 50,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-22T00:52:42.818Z"
+      "lastSeen": "2025-10-22T06:17:12.430Z"
     }
   },
   "viralPosts": [
@@ -80,6 +80,48 @@
       "author": "demsabroadcanada.bsky.social",
       "engagement": 15,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I’m one of 20 million+ people in the U.S. living with #LongCOVID.\nThis fight isn’t just personal—it’s part of a long struggle for health justice in a nation that’s never been healthy for all.\n\nMy new @Truthout piece:\n👉 truthout.org/articles/i-a...\n\n#DisabilityJustice #HealthEquity #PublicHealth",
+      "author": "jessehagopian.bsky.social",
+      "engagement": 101,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "400 behind on rent. Facing eviction. Bills stacking up.\n\nThis isn’t “struggling.” It’s legislated poverty.\nODSP keeps people poor by design = $1,368/month to “live” in 2025.\n\n💸e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #MutualAidRequest  #MutualAid  #DisabilityJustice",
+      "author": "cycletherapyham.bsky.social",
+      "engagement": 30,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "This isn’t “struggling.”\nThis is legislated poverty.\nODSP keeps people poor by design — $1,368/month to live on in 2025.\n\nSupport if you can.\n💸e-transfer: manderson4@gmail.com\n☕ ko-fi.com/sharpieguy/g...\n#ODSPoverty #MutualAid #MutualAidRequest #DisabilityJustice",
+      "author": "cycletherapyham.bsky.social",
+      "engagement": 40,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I'm excited to share that Art of Fauna is nominated for the Special Jury Prize of the Deutscher Entwicklerpreis! 🥳\n\nBoth because of its accessibility and the giving back initiative, where 20% of all proceeds are donated to nature preservation! 🦆\n#indiedev #a11y",
+      "author": "strasser.bsky.social",
+      "engagement": 18,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Please join the Democrats Abroad Disability/Seniors/Military Caucuses, for a look at the dynamics of voter engagement by people with disabilities in the 2024 elections.\nSeptember 8 at 12pm ET\nwww.democratsabroad.org/disability_v...\n#cripthevote #disabilityawareness",
+      "author": "demsabroadcanada.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -89,7 +131,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 33
     },
     {
       "keyword": "a11y",
