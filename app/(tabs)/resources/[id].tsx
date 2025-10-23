@@ -11,7 +11,7 @@ import {
 } from "react-native";
 
 import SettingsLink from "../../../components/SettingsLink";
-import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { resources } from "../../../data/resources";
 import { logActivity } from "../../../services/activity";
 import { useFavorites } from "../../../store/favorites";

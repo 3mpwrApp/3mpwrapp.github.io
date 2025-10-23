@@ -4,7 +4,7 @@ import { Linking, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'r
 
 import A11yPressable from '../../../components/A11yPressable';
 import SettingsLink from '../../../components/SettingsLink';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import type { ResearchSection } from '../../../data/research';
 import { researchItems } from '../../../data/research';
 import { useTextScale } from '../../../theme/typography';
