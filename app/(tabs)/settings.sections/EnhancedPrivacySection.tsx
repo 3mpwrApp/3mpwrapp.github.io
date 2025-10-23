@@ -24,7 +24,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number 
     button: { backgroundColor:palette.card, paddingHorizontal:16, paddingVertical:8, borderRadius:6, borderWidth:1, borderColor:palette.muted, minHeight:44, minWidth:60, alignItems:'center', justifyContent:'center' },
     buttonActive: { backgroundColor:palette.primary, borderColor:palette.primary },
     buttonText: { color:palette.text, fontSize:Math.round(14*factor), fontWeight:'500' },
-    buttonTextActive: { color:'white' },
+    buttonTextActive: { color:palette.onPrimary },
     rowLabel: { color:palette.text, opacity:0.9, marginTop:10, marginBottom:6, fontSize:Math.round(14*factor) },
     input: { borderWidth:1, borderColor:palette.muted, padding:12, borderRadius:8, marginBottom:10, color:palette.text, fontSize:Math.round(14*factor), minHeight:44 },
     backupSection: { marginTop:16, padding:16, backgroundColor:palette.card, borderRadius:8, borderWidth:1, borderColor:palette.muted },

@@ -221,9 +221,9 @@ export default function FeedbackModal({
                 hitSlop={HIT_SLOP_8}
               >
                 {loading ? (
-                  <ActivityIndicator size="small" color="white" />
+                  <ActivityIndicator size="small" color={palette.onPrimary} />
                 ) : (
-                  <Text style={[styles.buttonText, { color: 'white' }]}>Submit</Text>
+                  <Text style={[styles.buttonText, { color: palette.onPrimary }]}>Submit</Text>
                 )}
               </A11yPressable>
             </View>

@@ -512,11 +512,11 @@ export default function ProfileEditorScreen() {
           hitSlop={HIT_SLOP_8}
         >
           {saving ? (
-            <ActivityIndicator size="small" color="white" />
+            <ActivityIndicator size="small" color={palette.onPrimary} />
           ) : (
             <>
-              <Ionicons name="checkmark" size={20} color="white" />
-              <Text style={[styles.buttonText, { color: 'white' }]}>
+              <Ionicons name="checkmark" size={20} color={palette.onPrimary} />
+              <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
                 {t('profile.editor.save', 'Save Changes')}
               </Text>
             </>
