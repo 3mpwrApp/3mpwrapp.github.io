@@ -24,7 +24,7 @@ describe('Wellness — Work-Balance AI (smoke)', () => {
       const copyBtn = await findByText(/Copy/i, {}, { timeout: 3000 });
       (fireEvent as any).press(copyBtn);
       await waitFor(() => expect(Alert.alert).not.toHaveBeenCalledWith('Error', expect.anything()));
-    } catch (err) {
+    } catch {
       // If Copy button doesn't appear, just verify the component rendered without error
       expect(queryByText(/Work Balance AI/i)).toBeTruthy();
     }
