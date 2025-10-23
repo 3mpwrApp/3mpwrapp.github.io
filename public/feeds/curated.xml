@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Wed, 22 Oct 2025 21:19:32 GMT</lastBuildDate>
-    <pubDate>Wed, 22 Oct 2025 21:19:32 GMT</pubDate>
+    <lastBuildDate>Thu, 23 Oct 2025 09:23:53 GMT</lastBuildDate>
+    <pubDate>Thu, 23 Oct 2025 09:23:53 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -39,11 +39,31 @@
     </item>
 
     <item>
+      <title>Public health investigating salmonella outbreak linked to pistachios</title>
+      <link>https://globalnews.ca/news/11490228/public-health-investigating-salmonella-outbreak-pistachios/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11490228/public-health-investigating-salmonella-outbreak-pistachios/</guid>
+      <description><![CDATA[The Public Health Agency of Canada says 117 confirmed cases of salmonella infection have been reported in six provinces.]]></description>
+      <pubDate>Wed, 22 Oct 2025 23:56:53 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
       <title>The future of child care in Canada: What to expect</title>
       <link>https://policyoptions.irpp.org/2021/04/the-future-of-child-care-in-canada-what-to-expect/</link>
       <guid isPermaLink="true">https://policyoptions.irpp.org/2021/04/the-future-of-child-care-in-canada-what-to-expect/</guid>
       <description><![CDATA[On April 19, 2021, Finance Minister Chrystia Freeland presented the first federal budget in two years. Among the many new and updated policies, one stood out especially – the promise of affordable universal childcare for all Canadians. Universal child care had been promised in the past and never come to fruition, not for lack of […]]]></description>
       <pubDate>Thu, 29 Apr 2021 02:26:55 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Why a Canada-U.S. deal on steel and aluminum looks imminent to this trade insider</title>
+      <link>https://www.cbc.ca/news/world/canada-us-trump-trade-steel-aluminum-9.6948919?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/world/canada-us-trump-trade-steel-aluminum-9.6948919?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/d5012de4-1528-427a-834f-c72a4686653a,1761157857456/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C460%2C5712%2C3213%29%3BResize%3D%28620%29' alt='Tim Sargent stands in front a blue banner that says 'Center for Strategic & International Studies.' ' width='620' height='349' title='Tim Sargent was deputy minister of international trade in the federal government from 2016 to 2018, as the CUSMA trade deal was being negotiated with the first Trump administration. He is now director of the domestic policy program at the Macdonald-Laurier Institute.'/><p></p>]]></description>
+      <pubDate>Thu, 03 Apr 2025 04:56:51 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -68,11 +88,11 @@
     </item>
 
     <item>
-      <title>Canada cancels plan to donate refurbished armour to Ukraine: defence minister</title>
-      <link>https://www.cbc.ca/news/politics/canada-ukraine-light-armoured-vehicles-9.6947629?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/politics/canada-ukraine-light-armoured-vehicles-9.6947629?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/d659afe9-311f-4243-accc-7502cd59e0f1,1761085781177/full/max/0/default.jpg?im=Crop%2Crect%3D%286%2C49%2C5016%2C2821%29%3BResize%3D%28620%29' alt='A man in a suit and others in camoflage uniforms stand or sit atop an armoured vehicle.' width='620' height='349' title='Prime Minister Justin Trudeau talks with soldiers around a Light Armoured Vehicle in the Combat Training Center at 5th Canadian Division Support Base Gagetown in Oromocto, New Brunswick on Tuesday November 8, 2022.  '/><p>A contract to supply Ukraine with refurbished light armoured vehicles is officially dead, the defence minister told a House of Commons committee on Tuesday.</p>]]></description>
-      <pubDate>Tue, 21 Oct 2025 22:50:34 GMT</pubDate>
+      <title>How Can Canada Help Workers Through a Green Transition?</title>
+      <link>https://thetyee.ca/News/2025/10/23/How-Canada-Help-Workers-Green-Transition/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2025/10/23/How-Canada-Help-Workers-Green-Transition/</guid>
+      <description><![CDATA[Create sector-specific training programs to help fossil fuel workers transition to new jobs, policy analyst Lin Al-Akkad says.]]></description>
+      <pubDate>Thu, 23 Oct 2025 07:20:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -118,21 +138,11 @@
     </item>
 
     <item>
-      <title>Canadian trips to the U.S. fell for the 8th straight month: StatCan</title>
-      <link>https://globalnews.ca/news/11489771/canada-united-states-travel-report-august-2025/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11489771/canada-united-states-travel-report-august-2025/</guid>
-      <description><![CDATA[Statistics Canada says the number of Canadians returning from travel to the U.S. declined for the eighth straight month amid the ongoing trade war.]]></description>
-      <pubDate>Wed, 22 Oct 2025 20:10:48 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Report finds tenants&apos; rights at risk in Nova Scotia, issues go unaddressed</title>
-      <link>https://globalnews.ca/news/11489714/tenants-rights-nova-scotia-report/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11489714/tenants-rights-nova-scotia-report/</guid>
-      <description><![CDATA[Dalhousie Legal Aid Service conducted a survey of more than 1,200 tenants, and also analyzed decisions by the provincial body that enforces residential tenancy legislation.]]></description>
-      <pubDate>Wed, 22 Oct 2025 18:19:35 GMT</pubDate>
+      <title>Petition to keep Alberta in Canada ‘really close&apos; to collecting enough signatures</title>
+      <link>https://globalnews.ca/news/11489773/petition-alberta-canada-close-to-enough-signatures/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11489773/petition-alberta-canada-close-to-enough-signatures/</guid>
+      <description><![CDATA[Organizers of the 'Forever Canadian' petition say they are 'really, really close' to collecting enough signature to trigger a vote on the province's future in Canada.]]></description>
+      <pubDate>Wed, 22 Oct 2025 21:57:30 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -143,6 +153,16 @@
       <guid isPermaLink="true">https://policyoptions.irpp.org/2016/07/canadian-exporters-and-ebay-how-technology-is-changing-trade/</guid>
       <description><![CDATA[The latest chapter in the IRPP’s trade volume describes the emerging phenomenon of technology-enabled (‘online’) trade. In this chapter, authors Usman Ahmed and Hanne Melin (eBay Inc.) analyze a unique dataset of Canadian firms using eBay in 2008-13. The experiences of these businesses demonstrate that technology-enabled trade is broader and more inclusive than traditional trade. […]]]></description>
       <pubDate>Tue, 26 Jul 2016 16:00:12 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Saskatchewan health-care workers ‘at a breaking point,&apos; unions say</title>
+      <link>https://globalnews.ca/news/11490372/sask-health-care-workers-at-breaking-point/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11490372/sask-health-care-workers-at-breaking-point/</guid>
+      <description><![CDATA[Three unions representing health-care workers in Saskatchewan are speaking out about poor retention and low wages as the fall legislative session kicks off.]]></description>
+      <pubDate>Thu, 23 Oct 2025 00:26:02 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -168,11 +188,21 @@
     </item>
 
     <item>
-      <title>Ford wants to revisit ending ticket scalping amid Blue Jays ‘gouging&apos;</title>
-      <link>https://globalnews.ca/news/11489635/ticket-scalping-doug-ford-toronto-blue-jays-world-series/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11489635/ticket-scalping-doug-ford-toronto-blue-jays-world-series/</guid>
-      <description><![CDATA[Ontario Premier Doug Ford said he wants to look into options to tackle scalping, including potential legislation, as Toronto Blue Jays ticket prices skyrocket.]]></description>
-      <pubDate>Wed, 22 Oct 2025 19:54:47 GMT</pubDate>
+      <title>Text messages about Rogers class action lawsuit not a scam</title>
+      <link>https://www.cbc.ca/news/rogers-outage-class-action-9.6949298?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/rogers-outage-class-action-9.6949298?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/51546091-3c18-42de-8e76-2fb6af64267d,1761169551764/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C605%2C3910%2C2199%29%3BResize%3D%28620%29' alt='Rogers sign above a rogers store. White logo and Rogers name on red background. ' width='620' height='349' title='Rogers store signage shown in Mississauga, Ont., Monday, Dec.16, 2024. THE CANADIAN PRESS/Richard Buchan'/><p>Many Canadians received a text message notifying them of a class action lawsuit launched against Rogers in relation to an April 2021 network outage. We unpack the text. Namely, it's not a scam. </p>]]></description>
+      <pubDate>Wed, 22 Oct 2025 23:22:09 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Trump says tariffs ‘vital&apos; as U.S. Supreme Court set to test his authority</title>
+      <link>https://globalnews.ca/news/11490271/donald-trump-tariffs-supreme-court-case-vital/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11490271/donald-trump-tariffs-supreme-court-case-vital/</guid>
+      <description><![CDATA[Trump said Wednesday he may attend next month's Supreme Court hearing on his tariff policy, calling it 'one of the most important cases we've ever had.']]></description>
+      <pubDate>Wed, 22 Oct 2025 23:25:30 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -188,21 +218,11 @@
     </item>
 
     <item>
-      <title>Crypto exchange Cryptomus fined record $177M by Canada&apos;s financial crime watchdog</title>
-      <link>https://www.cbc.ca/news/business/cryptomus-fined-177-million-fintrac-9.6948338?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/business/cryptomus-fined-177-million-fintrac-9.6948338?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/11bf1759-f71b-4bc4-b0c8-a550ce952ca6,1761140004135/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C208%2C4000%2C2250%29%3BResize%3D%28620%29' alt='A pile of tokens representing different cryptocurrencies are shown.' width='620' height='349' title='A representation of cryptocurrencies in this illustration taken on January 24, 2022. '/><p>A cryptocurrency exchange has been slapped with a fine of almost $177 million — the largest-ever penalty by Canada's financial intelligence agency — for infractions including failing to flag more than 1,000 transactions with suspected links to criminal activity.</p>]]></description>
-      <pubDate>Wed, 22 Oct 2025 13:47:20 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>‘Unreasonable&apos; to cancel election won by single vote, lawyer for Liberal MP says</title>
-      <link>https://globalnews.ca/news/11489917/unreasonable-to-cancel-election-won-single-vote-liberal-mp-terrebonne/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11489917/unreasonable-to-cancel-election-won-single-vote-liberal-mp-terrebonne/</guid>
-      <description><![CDATA["To cancel the election is to deny the right to vote that was expressed by these 61,115 people," the lawyer for the Quebec Liberal MP said in Superior Court.]]></description>
-      <pubDate>Wed, 22 Oct 2025 19:59:57 GMT</pubDate>
+      <title>300 Quebec workers laid off by truck manufacturer Paccar ahead of U.S. tariffs</title>
+      <link>https://globalnews.ca/news/11489885/quebec-workers-laid-off-truck-manufacturer-paccar-us-tariffs/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11489885/quebec-workers-laid-off-truck-manufacturer-paccar-us-tariffs/</guid>
+      <description><![CDATA[Unifor Québec Director Daniel Cloutier said 'this situation is a wake-up call,' warning that the tariffs could cost the plant its American customers.]]></description>
+      <pubDate>Wed, 22 Oct 2025 21:53:25 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -245,16 +265,6 @@
     </item>
 
     <item>
-      <title>Women of the Fur Trade finds the funny in Canada&apos;s dark and complicated past</title>
-      <link>https://www.straight.com/arts/women-of-fur-trade-finds-funny-in-canadas-dark-and-complicated-past</link>
-      <guid isPermaLink="true">https://www.straight.com/arts/women-of-fur-trade-finds-funny-in-canadas-dark-and-complicated-past</guid>
-      <description><![CDATA[“It’s taking historical facts and twisting them."]]></description>
-      <pubDate>Wed, 01 Oct 2025 18:47:36 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
       <title>CONTEST: Win Tickets to ‘East Van Panto: West Van Story’</title>
       <link>https://thetyee.ca/Presents/2025/10/20/Contest-East-Van-Panto-West-Van-Story/</link>
       <guid isPermaLink="true">https://thetyee.ca/Presents/2025/10/20/Contest-East-Van-Panto-West-Van-Story/</guid>
@@ -265,21 +275,21 @@
     </item>
 
     <item>
-      <title>With Bill C-2’s fate uncertain, spy agency argues its ability to do its job ‘eroding’</title>
-      <link>https://www.cbc.ca/news/politics/csis-lawful-access-bill-c2-9.6931987?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/politics/csis-lawful-access-bill-c2-9.6931987?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/b3078288-b3cd-4a8f-99c1-1c7bb2267731,1748980222993/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='NDP MP Jenny Kwan is concerned by the Liberal border bill and the effects it could have on people immigrating to, and seeking asylum in Canada.' width='620' height='349' title=''/><p></p>]]></description>
-      <pubDate>Thu, 12 Jun 2025 02:58:53 GMT</pubDate>
+      <title>Carney says Canada should prepare for ‘sacrifices’ as he outlines plan for budget</title>
+      <link>https://www.cbc.ca/news/politics/politics-carney-address-budget-9.6948685?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/politics/politics-carney-address-budget-9.6948685?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/36bde4fa-95ca-4c65-856f-01c556ce0e8c,1761177593536/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Man in suit speaks into microphone' width='620' height='349' title=''/><p></p>]]></description>
+      <pubDate>Sun, 11 May 2025 15:48:19 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Vehicle recovered, person still missing after June crash into Squamish River</title>
-      <link>https://globalnews.ca/news/11489629/vehicle-recovered-person-missing-june-crash-squamish-river/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11489629/vehicle-recovered-person-missing-june-crash-squamish-river/</guid>
-      <description><![CDATA[The Sea to Sky General Investigation Section (GIS) said the vehicle was recovered on Saturday, marking a "significant step in the ongoing investigation."]]></description>
-      <pubDate>Wed, 22 Oct 2025 18:24:09 GMT</pubDate>
+      <title>Poilievre defends RCMP comments, denies saying Trudeau should be in jail</title>
+      <link>https://globalnews.ca/news/11490352/poilievre-rcmp-comments-trudeau-jail-denial/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11490352/poilievre-rcmp-comments-trudeau-jail-denial/</guid>
+      <description><![CDATA[On Wednesday, Poilievre said he thinks there were some scandals during Trudeau's time in office that should have resulted in criminal charges.]]></description>
+      <pubDate>Wed, 22 Oct 2025 23:41:44 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -335,16 +345,6 @@
       <link>https://rabble.ca/podcast/choose-more-nurses-per-patient-or-worse-health-care/</link>
       <guid isPermaLink="true">https://rabble.ca/podcast/choose-more-nurses-per-patient-or-worse-health-care/</guid>
       <pubDate>Fri, 17 Oct 2025 13:18:02 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Ingersoll, Ont., residents react to &apos;awful news&apos; GM is ending CAMI plant&apos;s electric van production</title>
-      <link>https://www.cbc.ca/news/canada/london/gm-bright-drop-ingesoll-9.6947432?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/london/gm-bright-drop-ingesoll-9.6947432?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/a8d61794-a68c-42ec-9130-0f3be89c3f03,1761076603041/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Ingersoll Mayor Brian Petrie outside the UNIFOR office in Ingersoll, Ont.' width='620' height='349' title='Mayor Brian Petrie called the decision to end production of the BrightDrop delivery vehicle 'devastating' for Ingersoll, Ont.'/><p>People in Ingersoll, Ont., are trying to come to terms with news that General Motors is halting production of the BrightDrop delivery vehicle at the CAMI assembly plant, Ingersoll's largest employer. "It means a lot to people in this town, so it's kind of heartbreaking. It's one of the backbones of this town," says one business owner.</p>]]></description>
-      <pubDate>Wed, 22 Oct 2025 09:00:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
