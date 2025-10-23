@@ -15,8 +15,15 @@ export async function initSentry(dsn?: string) {
     // Developer cost alert for Sentry network usage/init
     devCostAlert({ feature: 'sentry', action: 'init:sentry' });
     // Lazy-load sentry-expo to avoid loading native modules when unavailable
-    const Sentry = await import('sentry-expo');
-    Sentry.init({ dsn });
+    const sentryModule = await import('sentry-expo');
+    
+    // Check if Sentry module loaded correctly
+    if (!sentryModule || typeof sentryModule.init !== 'function') {
+      if (__DEV__) logger.warn('Sentry init skipped: Sentry.init is not a function (it is undefined)');
+      return;
+    }
+    
+    sentryModule.init({ dsn });
     initialized = true;
   } catch (e) {
     // If native module isn't available in this build/dev client, safely skip

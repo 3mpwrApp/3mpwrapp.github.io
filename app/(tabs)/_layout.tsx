@@ -38,7 +38,7 @@ export default function TabsLayout() {
       >
   {/* Visible tabs (curated) */}
         <Tabs.Screen
-          name="whatsnew/index"
+          name="whatsnew"
           options={{
             title: "What's New",
             tabBarLabel: "What's New",
@@ -146,7 +146,6 @@ export default function TabsLayout() {
     <Tabs.Screen name="settings" options={{ href: null }} />
     <Tabs.Screen name="saved" options={{ href: null }} />
     <Tabs.Screen name="saved.impl" options={{ href: null }} />
-    <Tabs.Screen name="saved-original" options={{ href: null }} />
     <Tabs.Screen name="voice-help" options={{ href: null }} />
     <Tabs.Screen name="admin" options={{ href: null }} />
     <Tabs.Screen name="archive" options={{ href: null }} />
@@ -154,17 +153,6 @@ export default function TabsLayout() {
     {/* Move FAQs and About to menu (accessible via settings menu) */}
     <Tabs.Screen name="faqs" options={{ href: null }} />
     <Tabs.Screen name="about" options={{ href: null }} />
-    
-    {/* Hide internal settings sections aggregator and all section files */}
-    <Tabs.Screen name="settings.sections/index" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/BookmarksSection" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/EnhancedPrivacySection" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/LocalProfileSection" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/MediaLockerSection" options={{ href: null }} />
-    <Tabs.Screen name="settings.sections/WellnessPrefsSection" options={{ href: null }} />
-    
-    {/* Hide onboarding (should only be shown via routing logic) */}
-    <Tabs.Screen name="onboarding/index" options={{ href: null }} />
 
     {/* Keep nested resource tools managed by resources stack; no need to declare here */}
 

@@ -150,14 +150,42 @@ export class SecureEncryption {
         return Array.from(randomBytes)
           .map(b => b.toString(16).padStart(2, '0'))
           .join('');
+      } else if (CryptoJS) {
+        // Fallback to crypto-js (less secure but works without native crypto)
+        // Use timestamp and random string for entropy
+        const timestamp = Date.now().toString(36);
+        const randomStr = Math.random().toString(36).substring(2, 15) + 
+                         Math.random().toString(36).substring(2, 15);
+        const entropy = timestamp + randomStr + Math.random().toString();
+        
+        // Hash the entropy multiple times for better randomness
+        let key = CryptoJS.SHA256(entropy).toString();
+        for (let i = 0; i < 10; i++) {
+          key = CryptoJS.SHA256(key + entropy + i).toString();
+        }
+        return key;
       } else {
-        // Fallback to crypto-js (less secure)
-        return CryptoJS.lib.WordArray.random(32).toString();
+        throw new Error('No cryptographic random source available');
       }
     } catch (error) {
       logger.error('Secure key generation failed, using fallback:', error);
-      // Last resort: crypto-js random
-      return CryptoJS.lib.WordArray.random(32).toString();
+      // Last resort: timestamp + multiple random values
+      const timestamp = Date.now().toString(36);
+      const random1 = Math.random().toString(36).substring(2, 15);
+      const random2 = Math.random().toString(36).substring(2, 15);
+      const random3 = Math.random().toString(36).substring(2, 15);
+      const entropy = timestamp + random1 + random2 + random3;
+      
+      if (CryptoJS) {
+        let key = CryptoJS.SHA256(entropy).toString();
+        for (let i = 0; i < 10; i++) {
+          key = CryptoJS.SHA256(key + entropy + i).toString();
+        }
+        return key;
+      }
+      
+      // Absolute fallback without CryptoJS (should not happen)
+      return entropy.padEnd(64, '0').substring(0, 64);
     }
   }
 

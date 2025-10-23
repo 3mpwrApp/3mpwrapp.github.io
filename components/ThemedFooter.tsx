@@ -1,4 +1,5 @@
-import { Platform, SafeAreaView, StyleSheet, Text } from "react-native";
+import { Platform, StyleSheet, Text } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
