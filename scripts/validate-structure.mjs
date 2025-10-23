@@ -31,8 +31,8 @@ const ROOT = path.resolve(__dirname, '..');
 const RULES = {
   components: {
     path: 'components',
-    pattern: /^[A-Z][a-zA-Z0-9]*(\.(ios|android|web|native))?(\.(tsx?|styles\.ts))?$/,
-    description: 'PascalCase.tsx (platform suffixes allowed: .web.tsx, .ios.tsx)',
+    pattern: /^(index|[A-Z][a-zA-Z0-9]*)(\.(ios|android|web|native))?(\.(tsx?|styles\.ts))?$/,
+    description: 'PascalCase.tsx or index.ts (barrel exports), platform suffixes allowed',
     extensions: ['.tsx', '.ts'],
   },
   hooks: {
