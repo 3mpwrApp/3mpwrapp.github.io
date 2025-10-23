@@ -238,7 +238,7 @@ export default function AdvancedSecurityOptions() {
         delegatedAccess: [],
         emergencyOverride: {
           enabled: true,
-          contacts: ['admin@empowrapp.com'],
+          contacts: ['support@example.com'], // Generic example address
           autoActivation: false,
           auditRequired: true,
           requiresJustification: true
@@ -281,7 +281,7 @@ export default function AdvancedSecurityOptions() {
           { method: 'trusted_contact', enabled: true, fallback: false }
         ],
         emergencyNotifications: [
-          { type: 'email', recipients: ['admin@3mpwrapp.com'], message: 'Emergency access granted' },
+          { type: 'email', recipients: ['support@example.com'], message: 'Emergency access granted' },
           { type: 'sms', recipients: ['+1234567890'], message: 'Emergency access alert' }
         ],
         recoveryMethods: [

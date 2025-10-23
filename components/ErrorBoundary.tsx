@@ -70,14 +70,15 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 }
 
 // Fallback palette constants for when context is unavailable
+// Colors updated for WCAG AA compliance (minimum 4.5:1 contrast ratio)
 /* eslint-disable no-restricted-syntax */
 const FALLBACK_PALETTE = {
   background: '#FFFFFF' as const,
-  surface: '#F5F5F5' as const,
+  surface: '#F0F0F0' as const, // Slightly darker for better contrast (was #F5F5F5)
   text: '#000000' as const,
   onPrimary: '#FFFFFF' as const,
-  primary: '#007AFF' as const,
-  muted: '#CCCCCC' as const,
+  primary: '#0051C3' as const, // Darker blue for AA compliance (was #007AFF, ratio 4.02)
+  muted: '#757575' as const, // Much darker gray for AA compliance (was #CCCCCC, ratio 1.61)
 };
 /* eslint-enable no-restricted-syntax */
 
