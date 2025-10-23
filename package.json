@@ -86,7 +86,10 @@
     "security:test": "node ./scripts/security-test.js",
     "security:all": "npm run security:validate && npm run security:test",
     "byoc:test": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& node ./scripts/test-byoc-private-cloud.js",
-    "byoc:validate": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& npm run security:validate"
+    "byoc:validate": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& npm run security:validate",
+    "validate:structure": "node ./scripts/validate-structure.mjs",
+    "validate:structure:verbose": "node ./scripts/validate-structure.mjs --verbose",
+    "validate:structure:report": "node ./scripts/validate-structure.mjs --report"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",

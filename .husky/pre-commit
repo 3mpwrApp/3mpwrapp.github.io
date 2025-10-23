@@ -21,3 +21,12 @@ echo "✓ lint-staged passed"
 # Advisory check: warn on bad Tabs.Screen names (does not fail commit)
 echo "→ Advisory: check Tabs.Screen names (slashes)"
 npm run --silent check:tabs:names || true
+
+# Optional: Validate folder structure (advisory only - doesn't fail commit)
+if [ "$VALIDATE_STRUCTURE" = "1" ]; then
+	echo "→ Validating folder structure"
+	npm run --silent validate:structure || {
+		echo "⚠ Structure validation failed (not blocking commit)"
+		echo "  Run 'npm run validate:structure' to see details"
+	}
+fi

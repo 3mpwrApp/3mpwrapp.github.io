@@ -39,5 +39,14 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# temporary files and build artifacts
+tsc_*.txt
+i18n-*.csv
+i18n-untranslated.snapshot.json
+missing-keys.txt
+temp-*.txt
+COMMIT_MSG.txt
+structure-report.json
+
 app-example
 firebase/serviceAccount.json
