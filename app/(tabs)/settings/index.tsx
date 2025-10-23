@@ -55,7 +55,7 @@ export default function SettingsScreen() {
   const [providerList, setProviderList] = useState<string[]>([]);
 
   useEffect(() => { 
-    if (!user) return;
+    if (!user || !db) return; // Safety check: skip if Firestore not available
     let mounted = true;
     (async () => {
       try { 
@@ -83,9 +83,9 @@ export default function SettingsScreen() {
     }
   }, [params?.open]);
 
-  const handleUpdateDisplayName = async () => { if (!user) return; try { await updateDoc(doc(db,'users',user.uid), { displayName }); Alert.alert(t('common.success','Success'), t('settings.account.updatedName','Display name updated')); } catch(e:any){ Alert.alert(t('common.error','Error'), e?.message||'Failed'); } };
+  const handleUpdateDisplayName = async () => { if (!user || !db) return; try { await updateDoc(doc(db,'users',user.uid), { displayName }); Alert.alert(t('common.success','Success'), t('settings.account.updatedName','Display name updated')); } catch(e:any){ Alert.alert(t('common.error','Error'), e?.message||'Failed'); } };
 
-  const handleUploadPhoto = async () => { if (!user) return; try { const ImagePicker = await import('expo-image-picker'); const result: any = await ImagePicker.launchImageLibraryAsync({ allowsEditing:true, aspect:[1,1], quality:0.7 }); if (result.canceled) return; const img = await fetch(result.assets[0].uri); const blob = await img.blob(); const storageRef = ref(storage, `profilePictures/${user.uid}.jpg`); await uploadBytes(storageRef, blob); const url = await getDownloadURL(storageRef); await updateDoc(doc(db,'users',user.uid), { photoURL:url }); setPhotoURL(url); Alert.alert(t('common.success','Success'), t('settings.account.photoUpdated','Profile picture updated')); } catch(e:any){ Alert.alert(t('common.error','Error'), e?.message||'Upload failed'); } };
+  const handleUploadPhoto = async () => { if (!user || !db || !storage) return; try { const ImagePicker = await import('expo-image-picker'); const result: any = await ImagePicker.launchImageLibraryAsync({ allowsEditing:true, aspect:[1,1], quality:0.7 }); if (result.canceled) return; const img = await fetch(result.assets[0].uri); const blob = await img.blob(); const storageRef = ref(storage, `profilePictures/${user.uid}.jpg`); await uploadBytes(storageRef, blob); const url = await getDownloadURL(storageRef); await updateDoc(doc(db,'users',user.uid), { photoURL:url }); setPhotoURL(url); Alert.alert(t('common.success','Success'), t('settings.account.photoUpdated','Profile picture updated')); } catch(e:any){ Alert.alert(t('common.error','Error'), e?.message||'Upload failed'); } };
 
   const beginDelete = () => {
     if (!user) return;

@@ -5,6 +5,19 @@
 
 ---
 
+## ⚠️ IMPORTANT: Use Android Device, NOT Web Browser
+
+**❌ DO NOT use web browser** - The web version has compatibility issues and crashes frequently.
+
+**✅ USE ONE OF THESE:**
+1. **Expo Go app on Android phone** (easiest)
+2. **Android Studio emulator** (most accurate)
+3. **Production APK on device** (most professional)
+
+See `SCREENSHOT_CAPTURE_INSTRUCTIONS.md` for detailed setup steps.
+
+---
+
 ## 📱 Google Play Requirements
 
 ### Screenshot Specifications

@@ -122,13 +122,29 @@ function ErrorFallbackBasic({ error, onReset }: { error: Error | null; onReset: 
 /**
  * Error fallback UI component wrapper that handles missing context
  */
+class ErrorFallbackSafe extends React.Component<
+  { error: Error | null; onReset: () => void },
+  { hasContextError: boolean }
+> {
+  constructor(props: { error: Error | null; onReset: () => void }) {
+    super(props);
+    this.state = { hasContextError: false };
+  }
+
+  componentDidCatch() {
+    this.setState({ hasContextError: true });
+  }
+
+  render() {
+    if (this.state.hasContextError) {
+      return <ErrorFallbackBasic error={this.props.error} onReset={this.props.onReset} />;
+    }
+    return <ErrorFallbackWithContext error={this.props.error} onReset={this.props.onReset} />;
+  }
+}
+
 function ErrorFallback({ error, onReset }: { error: Error | null; onReset: () => void }) {
-  // Use ErrorBoundary to catch context errors
-  return (
-    <React.Suspense fallback={<ErrorFallbackBasic error={error} onReset={onReset} />}>
-      <ErrorFallbackWithContext error={error} onReset={onReset} />
-    </React.Suspense>
-  );
+  return <ErrorFallbackSafe error={error} onReset={onReset} />;
 }
 
 /**
