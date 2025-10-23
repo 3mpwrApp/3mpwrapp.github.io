@@ -59,7 +59,7 @@ export default function DisabilityWizard({
       {/* Header */}
       <View style={styles.header}>
         <View style={styles.headerIcon}>
-          <Ionicons name="sparkles" size={28} color={palette.primary} />
+          <Ionicons name="color-wand" size={28} color={palette.primary} />
         </View>
         <View style={styles.headerText}>
           <Text style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>

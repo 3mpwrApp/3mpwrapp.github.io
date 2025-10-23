@@ -36,19 +36,27 @@ export default function TabsLayout() {
           tabBarAllowFontScaling: true,
         }}
       >
-  {/* Visible tabs (curated) */}
+  {/* 
+    OPTIMIZED TAB BAR STRUCTURE (Oct 23, 2025)
+    - Focus on core user journeys
+    - Logical feature grouping
+    - Maximum 5-6 visible tabs for usability
+  */}
+        
+        {/* Primary Tab: Home - Central hub and personalized content */}
         <Tabs.Screen
-          name="whatsnew"
+          name="index"
           options={{
-            title: "What's New",
-            tabBarLabel: "What's New",
-            tabBarAccessibilityLabel: `What's New tab`,
-            tabBarBadge: wnBadge,
+            title: t("nav.home", "Home"),
+            tabBarLabel: t("nav.home", "Home"),
+            tabBarAccessibilityLabel: `${t("nav.home", "Home")} tab`,
             tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "star" : "star-outline"} color={color} size={size + 2} />
+              <Ionicons name={focused ? "home" : "home-outline"} color={color} size={size + 2} />
             ),
           }}
         />
+
+        {/* Core Tab: Wellness - Health & wellbeing tools */}
         <Tabs.Screen
           name="wellness"
           options={{
@@ -60,6 +68,8 @@ export default function TabsLayout() {
             ),
           }}
         />
+        
+        {/* Core Tab: Resources - Tools, letters, evidence */}
         <Tabs.Screen
           name="resources"
           options={{
@@ -67,65 +77,12 @@ export default function TabsLayout() {
             tabBarLabel: t("nav.resources"),
             tabBarAccessibilityLabel: `${t("nav.resources")} tab`,
             tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "book" : "book-outline"} color={color} size={size + 2} />
+              <Ionicons name={focused ? "briefcase" : "briefcase-outline"} color={color} size={size + 2} />
             ),
           }}
         />
-        <Tabs.Screen
-          name="research"
-          options={{
-            title: t("nav.research", "Research"),
-            tabBarLabel: t("nav.research", "Research"),
-            tabBarAccessibilityLabel: `${t("nav.research", "Research")} tab`,
-            tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "flask" : "flask-outline"} color={color} size={size + 2} />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="podcasts"
-          options={{
-            title: t("nav.podcasts", "Podcasts"),
-            tabBarLabel: t("nav.podcasts", "Podcasts"),
-            tabBarAccessibilityLabel: `${t("nav.podcasts", "Podcasts")} tab`,
-            tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "mic" : "mic-outline"} color={color} size={size + 2} />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="events"
-          options={{
-            title: t("nav.events", "Events"),
-            tabBarLabel: t("nav.events", "Events"),
-            tabBarAccessibilityLabel: `${t("nav.events", "Events")} tab`,
-            tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "calendar" : "calendar-outline"} color={color} size={size + 2} />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="community"
-          options={{
-            title: t("nav.community"),
-            tabBarLabel: t("nav.community"),
-            tabBarAccessibilityLabel: `${t("nav.community")} tab`,
-            tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} color={color} size={size + 2} />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="campaigns"
-          options={{
-            title: t("nav.campaigns"),
-            tabBarLabel: t("nav.campaigns"),
-            tabBarAccessibilityLabel: `${t("nav.campaigns")} tab`,
-            tabBarIcon: ({ color, size, focused }) => (
-              <Ionicons name={focused ? "notifications" : "notifications-outline"} color={color} size={size + 2} />
-            ),
-          }}
-        />
+
+        {/* Core Tab: Advocacy - Legal help, support, rights */}
         <Tabs.Screen
           name="advocacy"
           options={{
@@ -138,37 +95,44 @@ export default function TabsLayout() {
           }}
         />
 
-  {/* Hidden routes (resources, advocacy, campaigns, community, misc, and deprioritized tabs) */}
-        {/* Hide Home, Inbox, Settings, Saved, Voice Help as tabs but keep routes */}
-    <Tabs.Screen name="index" options={{ href: null }} />
+        {/* Core Tab: Community - Chat, events, campaigns */}
+        <Tabs.Screen
+          name="community"
+          options={{
+            title: t("nav.community"),
+            tabBarLabel: t("nav.community"),
+            tabBarAccessibilityLabel: `${t("nav.community")} tab`,
+            tabBarIcon: ({ color, size, focused }) => (
+              <Ionicons name={focused ? "people" : "people-outline"} color={color} size={size + 2} />
+            ),
+          }}
+        />
+
+  {/* Hidden routes - accessible via menu or internal navigation */}
+        
+        {/* Research & Learning (moved to menu - secondary feature) */}
+        <Tabs.Screen name="research" options={{ href: null }} />
+        <Tabs.Screen name="podcasts" options={{ href: null }} />
+        <Tabs.Screen name="whatsnew" options={{ href: null }} />
+        
+        {/* Events (now part of Community section) */}
+        <Tabs.Screen name="events" options={{ href: null }} />
+        
+        {/* Campaigns (now part of Community section) */}
+        <Tabs.Screen name="campaigns" options={{ href: null }} />
+        
+        {/* Utility routes */}
     <Tabs.Screen name="inbox" options={{ href: null }} />
-    {/* settings/ folder contains the main settings screen and sub-pages */}
     <Tabs.Screen name="settings" options={{ href: null }} />
     <Tabs.Screen name="saved" options={{ href: null }} />
     <Tabs.Screen name="saved.impl" options={{ href: null }} />
     <Tabs.Screen name="voice-help" options={{ href: null }} />
     <Tabs.Screen name="admin" options={{ href: null }} />
     <Tabs.Screen name="archive" options={{ href: null }} />
-    
-    {/* Move FAQs and About to menu (accessible via settings menu) */}
     <Tabs.Screen name="faqs" options={{ href: null }} />
     <Tabs.Screen name="about" options={{ href: null }} />
-
-    {/* Keep nested resource tools managed by resources stack; no need to declare here */}
-
-    {/* (additional routes grouped below) */}
-
-    {/* Advocacy routes are handled by its own stack */}
-
-  {/* Campaigns nested routes handled by campaigns stack */}
-
-    {/* Community nested routes handled by community stack */}
-
-    {/* Wellness top-level helpers (direct children) */}
     <Tabs.Screen name="wellness.mood" options={{ href: null }} />
-
-          {/* Misc nested routes are handled by their respective stacks */}
-    {/* Research routes hide themselves; no need to list here */}
+    <Tabs.Screen name="onboarding" options={{ href: null }} />
       </Tabs>
       <VoiceController />
     </>

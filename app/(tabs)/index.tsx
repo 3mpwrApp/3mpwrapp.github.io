@@ -1,106 +1,21 @@
 import { Link } from 'expo-router';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
 import DisabilityWizard from '../../components/DisabilityWizard';
 import GapView from '../../components/GapView';
 import { HomeGuide } from '../../components/HomeGuide';
+import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
 import { useTextScale } from '../../theme/typography';
+import { createTextStyles } from '../../theme/typography.enhanced';
 import { useAppPalette } from '../../theme/usePalette';
 
-export default function HomeScreen() {
-  const { t } = useTranslation();
-  const palette = useAppPalette();
-  const { factor } = useTextScale();
-  const titleRef = React.useRef<Text>(null);
-  
-  // Announce page load and focus title for screen readers
-  useAnnounceOnMount(t('home.announcement', 'Home screen loaded. Beta features available.'));
-  useFocusOnRefOnMount(titleRef);
-  
-  return (
-    <ScrollView 
-      style={styles.container} 
-      contentContainerStyle={{ padding: 16 }}
-      accessibilityLabel={t('home.screenLabel', 'Home screen')}
-      accessible
-    >
-      <Text 
-        ref={titleRef}
-        accessibilityRole="header" 
-        style={[styles.title, { color: palette.text, fontSize: Math.round(20 * factor) }]}
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
-      >
-        {t('home.title','Home')} <Text style={{ fontSize: Math.round(14 * factor), opacity: 0.8, color: palette.text }}>(Beta)</Text>
-      </Text>
-      
-      {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
-      <Link href={'/(tabs)/advocacy/ask' as any} asChild>
-        <A11yPressable
-          style={{
-            backgroundColor: palette.primary,
-            paddingHorizontal: 16,
-            paddingVertical: 12,
-            borderRadius: 8,
-            marginBottom: 16,
-            alignItems: 'center',
-          }}
-          accessibilityLabel={t('home.ask.label', 'Ask 3mpwr - Get help from advocates')}
-          accessibilityHint={t('home.ask.hint', 'Opens the Ask an Advocate form')}
-          hitSlop={HIT_SLOP_8}
-        >
-          <Text
-            style={{
-              color: palette.onPrimary,
-              fontWeight: '700',
-              fontSize: Math.round(16 * factor),
-            }}
-            maxFontSizeMultiplier={MAX_FONT_SCALE}
-          >
-            💬 {t('home.ask.button', 'Ask 3mpwr')}
-          </Text>
-        </A11yPressable>
-      </Link>
-      
-      {/* Disability Wizard - Personalized Recommendations */}
-      <DisabilityWizard 
-        maxSuggestions={3}
-        title={t('wizard.homeTitle', 'Recommended For You')}
-        subtitle={t('wizard.homeSubtitle', 'Based on your needs and energy level')}
-        showReasons
-      />
-      
-      <RecentPrompts />
-      <BetaTestersQuickLink />
-      <HomeGuide />
-      <Text 
-        style={[styles.noteText, { color: palette.text, fontSize: Math.round(14 * factor) }]}
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
-      >
-        {t('home.personalization.note','Suggestions powered by the Disability Wizard (beta).')}
-      </Text>
-    </ScrollView>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-  title: {
-    fontWeight: '700',
-    marginBottom: 12,
-  },
-  noteText: {
-    opacity: 0.7,
-    marginTop: 8,
-    lineHeight: 20,
-  },
-});
-
-function RecentPrompts(){
+// Memoize subcomponents for better performance
+const RecentPrompts = React.memo(() => {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const { t } = useTranslation();
@@ -177,9 +92,10 @@ function RecentPrompts(){
       </GapView>
     </View>
   );
-}
+});
+RecentPrompts.displayName = 'RecentPrompts';
 
-function BetaTestersQuickLink() {
+const BetaTestersQuickLink = React.memo(() => {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const { t } = useTranslation();
@@ -229,4 +145,90 @@ function BetaTestersQuickLink() {
       </Link>
     </View>
   );
-}
+});
+BetaTestersQuickLink.displayName = 'BetaTestersQuickLink';
+
+// Main home screen component (memoized for performance)
+const HomeScreen = React.memo(() => {
+  const { t } = useTranslation();
+  const palette = useAppPalette();
+  const textStyles = createTextStyles(palette);
+  const { factor } = useTextScale();
+  const titleRef = React.useRef<Text>(null);
+  
+  // Announce page load and focus title for screen readers
+  useAnnounceOnMount(t('home.announcement', 'Home screen loaded. Beta features available.'));
+  useFocusOnRefOnMount(titleRef);
+  
+  return (
+    <ResponsiveScreenWrapper 
+      scrollable
+      testID="home-screen"
+    >
+      <Text 
+        ref={titleRef}
+        accessibilityRole="header" 
+        style={[textStyles.h3, { marginBottom: 16 }]}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
+        {t('home.title','Home')} <Text style={[textStyles.bodySmall, { opacity: 0.8 }]}>(Beta)</Text>
+      </Text>
+      
+      {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
+      <Link href={'/(tabs)/advocacy/ask' as any} asChild>
+        <A11yPressable
+          style={[
+            styles.askButton,
+            { backgroundColor: palette.primary }
+          ]}
+          accessibilityLabel={t('home.ask.label', 'Ask 3mpwr - Get help from advocates')}
+          accessibilityHint={t('home.ask.hint', 'Opens the Ask an Advocate form')}
+          hitSlop={HIT_SLOP_8}
+        >
+          <Text
+            style={[
+              textStyles.button,
+              { fontSize: Math.round(16 * factor) }
+            ]}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            💬 {t('home.ask.button', 'Ask 3mpwr')}
+          </Text>
+        </A11yPressable>
+      </Link>
+      
+      {/* Disability Wizard - Personalized Recommendations */}
+      <DisabilityWizard 
+        maxSuggestions={3}
+        title={t('wizard.homeTitle', 'Recommended For You')}
+        subtitle={t('wizard.homeSubtitle', 'Based on your needs and energy level')}
+        showReasons
+      />
+      
+      <RecentPrompts />
+      <BetaTestersQuickLink />
+      <HomeGuide />
+      <Text 
+        style={[textStyles.caption, { opacity: 0.7, marginTop: 12 }]}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
+        {t('home.personalization.note','Suggestions powered by the Disability Wizard (beta).')}
+      </Text>
+    </ResponsiveScreenWrapper>
+  );
+});
+HomeScreen.displayName = 'HomeScreen';
+
+export default HomeScreen;
+
+const styles = StyleSheet.create({
+  askButton: {
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    borderRadius: 8,
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 48, // Accessibility tap target
+  },
+});

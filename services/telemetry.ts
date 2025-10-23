@@ -14,6 +14,21 @@ export async function initSentry(dsn?: string) {
   try {
     // Developer cost alert for Sentry network usage/init
     devCostAlert({ feature: 'sentry', action: 'init:sentry' });
+    
+    // Pre-check: Ensure tslib is available (sentry-expo dependency)
+    // This prevents the "__extends is undefined" error in some environments
+    try {
+      // @ts-ignore - checking for global tslib
+      if (typeof global.tslib === 'undefined') {
+        // Polyfill minimal tslib if missing (prevents sentry-expo from crashing)
+        // @ts-ignore
+        global.tslib = await import('tslib');
+      }
+    } catch (tslibErr) {
+      if (__DEV__) logger.warn('Sentry init skipped: tslib unavailable');
+      return;
+    }
+    
     // Lazy-load sentry-expo to avoid loading native modules when unavailable
     const sentryModule = await import('sentry-expo');
     

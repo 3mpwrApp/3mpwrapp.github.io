@@ -24,7 +24,102 @@ import { useAppPalette } from "../theme/usePalette";
 
 import A11yQuickSettings from "./A11yQuickSettings";
 
-export default function ThemedHeader() {
+// Memoize menu items to prevent recreation on every render
+// Organized to align with new 5-tab structure (Home, Wellness, Resources, Advocacy, Community)
+const MENU_SECTIONS = {
+  wellness: [
+    { label: "Wellness Hub", path: "/(tabs)/wellness" },
+    { label: "Exercise Hub", path: "/(tabs)/wellness/exercise-hub" },
+    { label: "Nutrition Guides", path: "/(tabs)/wellness/nutrition-guides" },
+    { label: "AI Companion", path: "/(tabs)/wellness/ai-companion" },
+    { label: "Pacing Partner", path: "/(tabs)/wellness/pacing-partner" },
+    { label: "Mood Tracker", path: "/(tabs)/wellness/mood-tracker" },
+  ],
+  resources: [
+    { label: "Resources Hub", path: "/(tabs)/resources" },
+    { label: "Claims Navigator", path: "/(tabs)/resources/claims-navigator" },
+    { label: "Evidence Locker", path: "/(tabs)/resources/evidence-locker" },
+    { label: "Letter Templates", path: "/(tabs)/resources/letters" },
+    { label: "Support Directory", path: "/(tabs)/resources/support-directory" },
+    { label: "Research Library", path: "/(tabs)/research" },
+    { label: "Wait Times", path: "/(tabs)/research/wait-times" },
+    { label: "History Timeline", path: "/(tabs)/research/history-timeline" },
+    { label: "Podcasts", path: "/(tabs)/podcasts" },
+  ],
+  advocacy: [
+    { label: "Advocacy Hub", path: "/(tabs)/advocacy" },
+    { label: "Lawyer/Advocate Finder", path: "/(tabs)/advocacy/lawyer-finder" },
+    { label: "Ally Hub", path: "/(tabs)/advocacy/ally-hub" },
+    { label: "World Disability Map", path: "/(tabs)/advocacy/world-map" },
+    { label: "Provider Ratings", path: "/(tabs)/advocacy/ratings" },
+    { label: "Case Interpreter (AI)", path: "/(tabs)/advocacy/ai-case-interpreter" },
+    { label: "Policy Simplifier", path: "/(tabs)/advocacy/policy-simple" },
+  ],
+  community: [
+    { label: "Community Hub", path: "/(tabs)/community" },
+    { label: "Events & Meetups", path: "/(tabs)/events" },
+    { label: "Campaigns", path: "/(tabs)/campaigns" },
+    { label: "Mutual Aid", path: "/(tabs)/community/mutual-aid" },
+    { label: "Media Studio", path: "/(tabs)/community/media-studio" },
+    { label: "Peer Support", path: "/(tabs)/community/peer-support" },
+  ],
+  account: [
+    { label: "My Profile", path: "/profile" },
+    { label: "Saved Items", path: "/(tabs)/saved" },
+    { label: "Inbox", path: "/(tabs)/inbox" },
+    { label: "Settings", path: "/(tabs)/settings" },
+  ],
+  about: [
+    { label: "What's New", path: "/(tabs)/whatsnew" },
+    { label: "FAQs", path: "/(tabs)/faqs" },
+    { label: "About & Contact", path: "/(tabs)/about" },
+  ],
+} as const;
+
+// Memoized menu item component for better performance
+const MenuItem = React.memo<{
+  label: string;
+  path: string;
+  onPress: () => void;
+  palette: Palette;
+}>(({ label, path, onPress, palette }) => (
+  <Pressable
+    onPress={onPress}
+    accessibilityRole="button"
+    accessibilityLabel={`Go to ${label}`}
+    style={({ pressed }) => [
+      { paddingVertical: 8, paddingHorizontal: 14 },
+      pressed && { opacity: 0.7 },
+    ]}
+  >
+    <Text style={{ color: palette.text, fontSize: 15, lineHeight: 22 }}>{label}</Text>
+  </Pressable>
+));
+MenuItem.displayName = 'MenuItem';
+
+// Memoized section header
+const MenuSection = React.memo<{ title: string; palette: Palette }>(
+  ({ title, palette }) => (
+    <Text
+      style={{
+        color: palette.text,
+        opacity: 0.7,
+        paddingHorizontal: 14,
+        paddingTop: 12,
+        paddingBottom: 6,
+        fontWeight: "700",
+        fontSize: 13,
+        textTransform: 'uppercase',
+        letterSpacing: 0.5,
+      }}
+    >
+      {title}
+    </Text>
+  )
+);
+MenuSection.displayName = 'MenuSection';
+
+const ThemedHeader = React.memo(() => {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const { state } = useFavorites();
@@ -42,7 +137,26 @@ export default function ThemedHeader() {
 
   const [menuOpen, setMenuOpen] = React.useState(false);
   const pathname = usePathname();
-  // Close menu when route changes, but don't close immediately after opening
+  
+  // Memoize menu item press handler
+  const handleMenuItemPress = React.useCallback((path: string) => {
+    setMenuOpen(false);
+    router.push(path as Href);
+  }, []);
+
+  // Memoize refresh admin handler
+  const handleRefreshAdmin = React.useCallback(() => {
+    setMenuOpen(false);
+    refreshClaims();
+  }, [refreshClaims]);
+
+  // Memoize admin panel handler
+  const handleAdminPanel = React.useCallback(() => {
+    setMenuOpen(false);
+    router.push('/(tabs)/admin' as Href);
+  }, []);
+
+  // Close menu when route changes
   React.useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
@@ -273,175 +387,112 @@ export default function ThemedHeader() {
             style={styles.menuWrap}
           >
             <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>
-            <Text style={styles.menuSection}>Essentials</Text>
-            {[{ label: "Resources", path: "/(tabs)/resources" }].map((item) => (
+              <MenuSection title="Wellness" palette={palette} />
+              {MENU_SECTIONS.wellness.map((item) => (
+                <MenuItem
+                  key={item.path}
+                  label={item.label}
+                  path={item.path}
+                  onPress={() => handleMenuItemPress(item.path)}
+                  palette={palette}
+                />
+              ))}
+
+              <MenuSection title="Resources & Research" palette={palette} />
+              {MENU_SECTIONS.resources.map((item) => (
+                <MenuItem
+                  key={item.path}
+                  label={item.label}
+                  path={item.path}
+                  onPress={() => handleMenuItemPress(item.path)}
+                  palette={palette}
+                />
+              ))}
+
+              <MenuSection title="Advocacy" palette={palette} />
+              {MENU_SECTIONS.advocacy.map((item) => (
+                <MenuItem
+                  key={item.path}
+                  label={item.label}
+                  path={item.path}
+                  onPress={() => handleMenuItemPress(item.path)}
+                  palette={palette}
+                />
+              ))}
+
+              <MenuSection title="Community" palette={palette} />
+              {MENU_SECTIONS.community.map((item) => (
+                <MenuItem
+                  key={item.path}
+                  label={item.label}
+                  path={item.path}
+                  onPress={() => handleMenuItemPress(item.path)}
+                  palette={palette}
+                />
+              ))}
+
+              <MenuSection title="Account" palette={palette} />
+              {MENU_SECTIONS.account.map((item) => (
+                <MenuItem
+                  key={item.path}
+                  label={item.label}
+                  path={item.path}
+                  onPress={() => handleMenuItemPress(item.path)}
+                  palette={palette}
+                />
+              ))}
+
+              <MenuSection title="About" palette={palette} />
+              {MENU_SECTIONS.about.map((item) => (
+                <MenuItem
+                  key={item.path}
+                  label={item.label}
+                  path={item.path}
+                  onPress={() => handleMenuItemPress(item.path)}
+                  palette={palette}
+                />
+              ))}
+
+              <MenuSection title="Admin" palette={palette} />
               <Pressable
-                key={item.path}
-                onPress={() => {
-                  setMenuOpen(false);
-                  router.push(item.path as Href);
-                }}
+                onPress={handleRefreshAdmin}
                 accessibilityRole="button"
-                accessibilityLabel={`Go to ${item.label}`}
+                accessibilityLabel="Refresh admin status"
                 style={({ pressed }) => [
-                  { paddingVertical: 10, paddingHorizontal: 14 },
+                  { paddingVertical: 8, paddingHorizontal: 14 },
                   pressed && { opacity: 0.7 },
                 ]}
               >
-                <Text style={{ color: palette.text, fontWeight: "700" }}>
-                  {item.label}
+                <Text style={{ color: palette.text, fontSize: 15, lineHeight: 22 }}>
+                  Refresh admin status
                 </Text>
               </Pressable>
-            ))}
-            <Text style={styles.menuSection}>Tools</Text>
-            {[
-              {
-                label: "Claims Navigator",
-                path: "/(tabs)/resources/claims-navigator",
-              },
-              {
-                label: "Evidence Locker",
-                path: "/(tabs)/resources/evidence-locker",
-              },
-              { label: "Letters", path: "/(tabs)/resources" },
-            ].map((item) => (
-              <Pressable
-                key={item.path}
-                onPress={() => {
-                  setMenuOpen(false);
-                  router.push(item.path as Href);
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={`Go to ${item.label}`}
-                style={({ pressed }) => [
-                  { paddingVertical: 8, paddingHorizontal: 14 },
-                  pressed && { opacity: 0.7 },
-                ]}
-              >
-                <Text style={{ color: palette.text }}>{item.label}</Text>
-              </Pressable>
-            ))}
-            <Text style={styles.menuSection}>Advocacy</Text>
-            {[
-              { label: "Advocacy Hub", path: "/(tabs)/advocacy" },
-              { label: "Lawyer/Advocate Finder", path: "/(tabs)/advocacy/lawyer-finder" },
-              { label: "Ally Hub", path: "/(tabs)/advocacy/ally-hub" },
-              { label: "World Disability Map", path: "/(tabs)/advocacy/world-map" },
-              { label: "Ratings", path: "/(tabs)/advocacy/ratings" },
-              {
-                label: "Support Directory",
-                path: "/(tabs)/resources/support-directory",
-              },
-            ].map((item) => (
-              <Pressable
-                key={item.path}
-                onPress={() => {
-                  setMenuOpen(false);
-                  router.push(item.path as Href);
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={`Go to ${item.label}`}
-                style={({ pressed }) => [
-                  { paddingVertical: 8, paddingHorizontal: 14 },
-                  pressed && { opacity: 0.7 },
-                ]}
-              >
-                <Text style={{ color: palette.text }}>{item.label}</Text>
-              </Pressable>
-            ))}
-            <Text style={styles.menuSection}>Info</Text>
-            {[
-              { label: "Research", path: "/(tabs)/research" },
-              { label: "Wait Times", path: "/(tabs)/research/wait-times" },
-              { label: "History Timeline", path: "/(tabs)/research/history-timeline" },
-              { label: "What's New", path: "/(tabs)/whatsnew" },
-              { label: "FAQs", path: "/(tabs)/faqs" },
-              { label: "Wellness", path: "/(tabs)/wellness" },
-              { label: "Exercise Hub", path: "/(tabs)/wellness/exercise-hub" },
-              { label: "Nutrition Guides", path: "/(tabs)/wellness/nutrition-guides" },
-              { label: "AI Companion", path: "/(tabs)/wellness/ai-companion" },
-              { label: "Pacing Partner", path: "/(tabs)/wellness/pacing-partner" },
-              { label: "Accessible Events", path: "/(tabs)/events/finder" },
-              { label: "About & Contact", path: "/(tabs)/about" },
-            ].map((item) => (
-              <Pressable
-                key={item.path}
-                onPress={() => {
-                  setMenuOpen(false);
-                  router.push(item.path as Href);
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={`Go to ${item.label}`}
-                style={({ pressed }) => [
-                  { paddingVertical: 8, paddingHorizontal: 14 },
-                  pressed && { opacity: 0.7 },
-                ]}
-              >
-                <Text style={{ color: palette.text }}>{item.label}</Text>
-              </Pressable>
-            ))}
-            <Text style={styles.menuSection}>Profile</Text>
-            {[
-              { label: "Saved", path: "/(tabs)/saved" },
-              { label: "Settings", path: "/(tabs)/settings" },
-              { label: "Mutual Aid", path: "/(tabs)/community/mutual-aid" },
-              { label: "Media Studio", path: "/(tabs)/community/media-studio" },
-            ].map((item) => (
-              <Pressable
-                key={item.path}
-                onPress={() => {
-                  setMenuOpen(false);
-                  router.push(item.path as Href);
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={`Go to ${item.label}`}
-                style={({ pressed }) => [
-                  { paddingVertical: 8, paddingHorizontal: 14 },
-                  pressed && { opacity: 0.7 },
-                ]}
-              >
-                <Text style={{ color: palette.text }}>{item.label}</Text>
-              </Pressable>
-            ))}
-            {/* Admin controls */}
-            <Text style={styles.menuSection}>Admin</Text>
-            <Pressable
-              onPress={() => {
-                setMenuOpen(false);
-                refreshClaims();
-              }}
-              accessibilityRole="button"
-              accessibilityLabel={`Refresh admin status`}
-              style={({ pressed }) => [
-                { paddingVertical: 8, paddingHorizontal: 14 },
-                pressed && { opacity: 0.7 },
-              ]}
-            >
-              <Text style={{ color: palette.text }}>Refresh admin status</Text>
-            </Pressable>
-            {isAdmin && (
-              <Pressable
-                onPress={() => {
-                  setMenuOpen(false);
-                  router.push('/(tabs)/admin' as Href);
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={`Go to Admin Panel`}
-                style={({ pressed }) => [
-                  { paddingVertical: 8, paddingHorizontal: 14 },
-                  pressed && { opacity: 0.7 },
-                ]}
-              >
-                <Text style={{ color: palette.text }}>Admin Panel</Text>
-              </Pressable>
-            )}
+              {isAdmin && (
+                <Pressable
+                  onPress={handleAdminPanel}
+                  accessibilityRole="button"
+                  accessibilityLabel="Go to Admin Panel"
+                  style={({ pressed }) => [
+                    { paddingVertical: 8, paddingHorizontal: 14 },
+                    pressed && { opacity: 0.7 },
+                  ]}
+                >
+                  <Text style={{ color: palette.text, fontSize: 15, lineHeight: 22 }}>
+                    Admin Panel
+                  </Text>
+                </Pressable>
+              )}
             </ScrollView>
           </View>
         </>
       )}
     </SafeAreaView>
   );
-}
+});
+
+ThemedHeader.displayName = 'ThemedHeader';
+
+export default ThemedHeader;
 
 function createStyles(palette: Palette) {
   return StyleSheet.create({

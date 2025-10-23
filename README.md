@@ -749,6 +749,44 @@ Commands:
 - `npm run lint:ci` – Direct `eslint . --quiet` for authoritative results.
 - `npm run typecheck:strict` – Runs `tsconfig.strict.json` (no emit) for deeper TS diagnostics.
 
+## Troubleshooting
+
+### Common Development Warnings
+
+#### Sentry TypeScript Error (`Cannot read property '__extends' of undefined`)
+**Fixed** - The app now pre-checks for `tslib` availability before loading `sentry-expo`. This warning is benign but has been suppressed with proper error handling.
+
+#### Expo Go Push Notification Limitations
+**Expected** - As of Expo SDK 53+, push notifications don't work in Expo Go. Solutions:
+- For testing: Use `npx expo start --dev-client` with a development build
+- For production: Build with EAS: `eas build --profile development --platform android`
+- Local testing: The app includes local notification support which works in Expo Go
+
+#### Keep Awake Error (`Unable to activate keep awake`)
+**Optional** - This feature prevents the screen from sleeping. It's an optional enhancement and the app works normally without it. To enable:
+```bash
+npx expo install expo-keep-awake
+```
+
+#### Metro ENOENT: `InternalBytecode.js` not found
+**Fixed** - A placeholder file has been added to prevent Metro bundler symbolication errors. This is a Metro internal issue and doesn't affect functionality.
+
+#### "No route named 'whatsnew' exists" Warning
+**Fixed** - Added proper `_layout.tsx` for the whatsnew tab to satisfy Expo Router's file-based routing requirements.
+
+#### Firestore WebChannel Transport Errors
+**Expected in Expo Go** - Firestore may show connection warnings in Expo Go due to network restrictions. These are informational and don't affect offline-first functionality. Connections work normally in production builds.
+
+#### SafeAreaView Deprecated Warning
+**Known Issue** - We use `react-native-safe-area-context` for safe areas. Some third-party dependencies may still reference the old `SafeAreaView`. This doesn't affect the app's functionality.
+
+### Getting More Help
+
+- Check `docs/` for detailed guides
+- Review `CHANGELOG.md` for recent changes
+- Email: empowrapp08162025@gmail.com
+
+
 Suggested workflow:
 1. Feature dev: `npm run lint`.
 2. Pre-commit/PR: `npm run lint:ci && npm run typecheck:strict`.

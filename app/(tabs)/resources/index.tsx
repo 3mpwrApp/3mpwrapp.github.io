@@ -6,6 +6,7 @@ import { Linking, RefreshControl, SectionList, StyleSheet, Text, View } from "re
 import A11yPressable from "../../../components/A11yPressable";
 import Card from "../../../components/Card";
 import ContrastToggle from "../../../components/ContrastToggle";
+import ResponsiveScreenWrapper from "../../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
@@ -19,10 +20,10 @@ import { useCounts } from "../../../store/counts";
 import { useJurisdiction } from "../../../store/jurisdiction";
 import { useNetwork } from "../../../store/network";
 import { useRefresh } from "../../../store/refresh";
-import { useSettings } from "../../../store/settings";
+import { useSettings, type ResourceFormat } from "../../../store/settings";
+import { createTextStyles } from "../../../theme/typography.enhanced";
 import { useAppPalette } from "../../../theme/usePalette";
 import type { Resource, ResourceCategory } from "../../../types/models";
-// eslint-disable-next-line import/order
 import { filterResources, groupByRegion, presentProvinceCodes } from "../../../utils/resources";
 
 const PROVINCE_NAMES: Record<string, string> = {
@@ -44,9 +45,29 @@ const PROVINCE_NAMES: Record<string, string> = {
 type RegionFilter = "all" | "canada" | keyof typeof PROVINCE_NAMES;
 type CategoryFilter = "all" | ResourceCategory;
 
+// Memoized resource link component
+const ResourceLink = React.memo<{ href: string; title: string; badge?: string }>(
+  ({ href, title, badge }) => {
+    const palette = useAppPalette();
+    return (
+      <Link href={href as Href} asChild>
+        <A11yPressable hitSlop={HIT_SLOP_8} style={{ marginBottom: 8 }}>
+          <Text
+            style={{ color: palette.primary, textDecorationLine: "underline", fontSize: 15, lineHeight: 22.5 }}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            {title} {badge && <Text style={{ opacity: 0.8 }}>({badge})</Text>}
+          </Text>
+        </A11yPressable>
+      </Link>
+    );
+  }
+);
+ResourceLink.displayName = 'ResourceLink';
+
 export default function ResourcesScreen() {
   const palette = useAppPalette();
-  const styles = createStyles(palette);
+  const textStyles = React.useMemo(() => createTextStyles(palette), [palette]);
   const { t } = useTranslation();
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Resources");
@@ -143,248 +164,93 @@ export default function ResourcesScreen() {
     if (canada.length) result.push({ title: "Canada", data: canada });
     return result.concat(provSections);
   }, [filtered, region]);
-
+  
+  const styles = React.useMemo(() => createStyles(palette), [palette]);
+  
   return (
-    <View
-      style={styles.container}
-      accessibilityLabel="Resources screen"
-      accessible
-    >
-      <Text
-        ref={titleRef}
-        nativeID="resources-title"
-        accessibilityRole="header"
-        style={styles.title}
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
+    <ResponsiveScreenWrapper scrollable={false}>
+      {/* Header */}
+      <View
+        style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}
+        accessibilityLabel="Resources screen"
+        accessible
       >
-        Resources
-      </Text>
-      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
-      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
+        <Text
+          ref={titleRef}
+          nativeID="resources-title"
+          accessibilityRole="header"
+          style={textStyles.h1}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
+          Resources
+        </Text>
+        <View style={{ marginLeft: 'auto', flexDirection: 'row', gap: 8 }}>
+          <ContrastToggle />
+          <SettingsLink />
+        </View>
+      </View>
 
-      <Text style={styles.subtitle}>
+      <Text style={textStyles.body} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t("resources.intro", "Find helpful guides and materials.")}
       </Text>
       {region === "all" && !province && (
-        <Text style={[styles.subtitle, { opacity: 0.75 }]}>
+        <Text style={[textStyles.bodySmall, { opacity: 0.75, marginBottom: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
           Tip: Set your province in Settings to filter resources.
         </Text>
       )}
 
       {/* 1. AI Tools */}
-      <Text
-        accessibilityRole="header"
-        style={[styles.sectionTitle, { marginTop: 4 }]}
-      >
+      <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 16 }]}>
         🤖 AI Tools
       </Text>
-      <Link href={"/(tabs)/resources/ai-decision-simplifier" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          AI Decision Simplifier (Coming soon)
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/appeal-coach" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Appeal Coach (Beta)
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/body-mechanics-advisor" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Body Mechanics Advisor
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/justice-as-a-service" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Justice as a Service
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/rights-checker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Rights Checker
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/rights-explainer" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Rights Explained
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/voice-notes" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Voice-to-Case Notes Tool
-        </Text>
-      </Link>
+      <ResourceLink href="/(tabs)/resources/ai-decision-simplifier" title="AI Decision Simplifier" badge="Coming soon" />
+      <ResourceLink href="/(tabs)/resources/appeal-coach" title="Appeal Coach" badge="Beta" />
+      <ResourceLink href="/(tabs)/resources/body-mechanics-advisor" title="Body Mechanics Advisor" />
+      <ResourceLink href="/(tabs)/resources/justice-as-a-service" title="Justice as a Service" />
+      <ResourceLink href="/(tabs)/resources/rights-checker" title="Rights Checker" />
+      <ResourceLink href="/(tabs)/resources/rights-explainer" title="Rights Explained" />
+      <ResourceLink href="/(tabs)/resources/voice-notes" title="Voice-to-Case Notes Tool" />
 
       {/* 2. Templates & Documents */}
-      <Text
-        accessibilityRole="header"
-        style={[styles.sectionTitle, { marginTop: 20 }]}
-      >
+      <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
         📄 Templates & Documents
       </Text>
-      <Link href={"/(tabs)/resources/accessibility-log" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Accessibility Log
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/templates-gallery" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Template Gallery
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/letter-accommodation" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Template Letter: Accommodation
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/accommodation-request" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Accommodation Request Builder
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/letter-appeal" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Template Letter: Appeal
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/letter-reconsideration" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Template Letter: Reconsideration
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/letter-rtw-plan" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Template Letter: RTW Plan
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/letter-union-request" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Template Letter: Union Request
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/case-timeline" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Case Timeline
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/claims-navigator" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Claims Navigator (Beta)
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/evidence-checklist" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Evidence Checklist
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/evidence-locker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Evidence Locker (Beta)
-        </Text>
-      </Link>
+      <ResourceLink href="/(tabs)/resources/letter-wizard" title="Letter Wizard - Generate Any Letter" badge="All Templates" />
+      <ResourceLink href="/(tabs)/resources/accessibility-log" title="Accessibility Log" />
+      <ResourceLink href="/(tabs)/resources/templates-gallery" title="Template Gallery" />
+      <ResourceLink href="/(tabs)/resources/accommodation-request" title="Accommodation Request Builder" />
+      <ResourceLink href="/(tabs)/resources/case-timeline" title="Case Timeline" />
+      <ResourceLink href="/(tabs)/resources/claims-navigator" title="Claims Navigator" badge="Beta" />
+      <ResourceLink href="/(tabs)/resources/evidence-checklist" title="Evidence Checklist" />
+      <ResourceLink href="/(tabs)/resources/evidence-locker" title="Evidence Locker" badge="Beta" />
 
       {/* 3. Trackers & Planners */}
-      <Text
-        accessibilityRole="header"
-        style={[styles.sectionTitle, { marginTop: 20 }]}
-      >
+      <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
         📊 Trackers & Planners
       </Text>
-      <Link href={"/(tabs)/resources/chronic-tracker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Chronic Tracker (Beta)
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/deadlines" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-            Deadline Calculator + Reminders (Beta)
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/deadlines-list" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Deadlines List
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/denial-decoder" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Denial Decoder (Beta)
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/prepare-appeal" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>Prepare to Appeal (Beta)</Text>
-      </Link>
-      <Link href={"/(tabs)/resources/doctor-visit-prep" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}> 
-          Doctor Visit Prep (Beta)
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/financial-safety-net" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Financial Safety Net
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/impact-simulator" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Impact Simulator
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/meds-tracker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Meds Tracker
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/rtw-planner" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Return-to-Work Planner (Beta)
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/rehab-tracker" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Rehab Progress Tracker (Beta)
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/policy-simulator" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Interactive Policy Simulator
-        </Text>
-      </Link>
+      <ResourceLink href="/(tabs)/resources/chronic-tracker" title="Chronic Tracker" badge="Beta" />
+      <ResourceLink href="/(tabs)/resources/deadlines" title="Deadline Calculator + Reminders" badge="Beta" />
+      <ResourceLink href="/(tabs)/resources/deadlines-list" title="Deadlines List" />
+      <ResourceLink href="/(tabs)/resources/denial-decoder" title="Denial Decoder" badge="Beta" />
+      <ResourceLink href="/(tabs)/resources/prepare-appeal" title="Prepare to Appeal" badge="Beta" />
+      <ResourceLink href="/(tabs)/resources/doctor-visit-prep" title="Doctor Visit Prep" badge="Beta" />
+      <ResourceLink href="/(tabs)/resources/financial-safety-net" title="Financial Safety Net" />
+      <ResourceLink href="/(tabs)/resources/impact-simulator" title="Impact Simulator" />
+      <ResourceLink href="/(tabs)/resources/meds-tracker" title="Meds Tracker" />
+      <ResourceLink href="/(tabs)/resources/rtw-planner" title="Return-to-Work Planner" badge="Beta" />
+      <ResourceLink href="/(tabs)/resources/rehab-tracker" title="Rehab Progress Tracker" badge="Beta" />
+      <ResourceLink href="/(tabs)/resources/policy-simulator" title="Interactive Policy Simulator" />
 
       {/* 4. Support & Directories */}
-      <Text
-        accessibilityRole="header"
-        style={[styles.sectionTitle, { marginTop: 20 }]}
-      >
+      <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
         🤝 Support & Directories
       </Text>
-      <Link href={"/(tabs)/resources/adaptive-tech-library" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Adaptive Tech Library
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/allyship-playbook" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Allyship Playbook
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/solidarity-toolkit" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Solidarity Toolkit
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/support-directory" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Support Directory
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/resources/myth-busting-hub" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Myth-Busting Knowledge Hub
-        </Text>
-      </Link>
-      <Link href={"/(tabs)/settings?open=emergencyCard" as Href} asChild>
-        <Text style={[styles.toggleText, { marginBottom: 8 }]}>
-          Emergency Info Wallet Card
-        </Text>
-      </Link>
+      <ResourceLink href="/(tabs)/resources/adaptive-tech-library" title="Adaptive Tech Library" />
+      <ResourceLink href="/(tabs)/resources/allyship-playbook" title="Allyship Playbook" />
+      <ResourceLink href="/(tabs)/resources/solidarity-toolkit" title="Solidarity Toolkit" />
+      <ResourceLink href="/(tabs)/resources/support-directory" title="Support Directory" />
+      <ResourceLink href="/(tabs)/resources/myth-busting-hub" title="Myth-Busting Knowledge Hub" />
+      <ResourceLink href="/(tabs)/settings?open=emergencyCard" title="Emergency Info Wallet Card" />
 
       <View
         style={styles.filters}
@@ -634,7 +500,7 @@ export default function ResourcesScreen() {
         }
         contentContainerStyle={{ paddingBottom: 40 }}
       />
-    </View>
+    </ResponsiveScreenWrapper>
   );
 }
 
@@ -687,8 +553,6 @@ function simplify(text: string) {
   const firstSentence = end > 0 ? text.slice(0, end + 1) : text;
   return firstSentence.length > 120 ? firstSentence.slice(0, 117) + "..." : firstSentence;
 }
-
-import type { ResourceFormat } from "../../../store/settings";
 
 function openResource(item: Resource, pref: ResourceFormat) {
   // Prefer specific format URLs when present; fall back to default url
