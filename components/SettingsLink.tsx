@@ -3,7 +3,7 @@ import { Pressable } from "react-native";
 import { Link } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
-import { HIT_SLOP_8 } from "../constants/a11y";
+import { HIT_SLOP_8 } from "../constants/A11Y";
 import { useAppPalette } from "../theme/usePalette";
 
 export default function SettingsLink({ style }: { style?: ViewStyle }) {

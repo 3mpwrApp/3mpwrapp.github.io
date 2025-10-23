@@ -5,7 +5,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
 import { auth, db, storage } from '../../../firebase/config';
 import { useAppPalette } from '../../../theme/usePalette';

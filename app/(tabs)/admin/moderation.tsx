@@ -4,7 +4,7 @@ import { Alert, FlatList, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import AdminGuard from '../../../components/AdminGuard';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useAppPalette } from '../../../theme/usePalette';

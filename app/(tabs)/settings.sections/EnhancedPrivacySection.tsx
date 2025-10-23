@@ -5,7 +5,7 @@ import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
 import AccessibilityToggle from '../../../components/AccessibilityToggle';
 import DataOwnershipStatement from '../../../components/DataOwnershipStatement';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { clearAllData, exportBackup, importBackup } from '../../../services/backup';
 import { isCloudConsentEnabled, setCloudConsent, setTelemetryConsent } from '../../../services/consent';

@@ -29,7 +29,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle } from '../../../components/A11yWrapper';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
 import { db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';

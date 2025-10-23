@@ -2,11 +2,11 @@ import { Stack, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
-import type { AccCase } from '../../../services/accountability.tracker';
-import { addEvent, deleteEvent, getCaseById, updateEvent } from '../../../services/accountability.tracker';
+import type { AccCase } from '../../../services/accountabilityTracker';
+import { addEvent, deleteEvent, getCaseById, updateEvent } from '../../../services/accountabilityTracker';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };

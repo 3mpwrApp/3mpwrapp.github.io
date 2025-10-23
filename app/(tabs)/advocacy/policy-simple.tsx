@@ -14,7 +14,7 @@ import {
  
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { DyslexiaText } from '../../../components/DyslexiaText';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,

@@ -3,7 +3,7 @@ import { Alert, Linking, Pressable, ScrollView, StyleSheet, Text, TextInput, Vie
 
 import ContrastToggle from "../../components/ContrastToggle";
 import SettingsLink from "../../components/SettingsLink";
-import { HIT_SLOP_8 } from "../../constants/a11y";
+import { HIT_SLOP_8 } from "../../constants/A11Y";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,

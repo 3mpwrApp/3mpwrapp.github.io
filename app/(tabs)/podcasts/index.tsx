@@ -23,7 +23,7 @@ import { useTextScale } from "../../../theme/typography";
 import { useAppPalette } from "../../../theme/usePalette";
 // Stories mirror YouTube list; we render a single combined list (podcasts only)
 import Card from "../../../components/Card";
-import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { fetchPodcasts } from "../../../services/podcasts";
 import { useCounts } from "../../../store/counts";
 // Link not needed; we open externally via Linking

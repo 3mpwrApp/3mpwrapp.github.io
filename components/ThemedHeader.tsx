@@ -12,7 +12,7 @@ import {
     View,
 } from "react-native";
 
-import { HIT_SLOP_8, touchTarget } from "../constants/a11y";
+import { HIT_SLOP_8, touchTarget } from "../constants/A11Y";
 import { useAuth } from "../context/AuthContext";
 import { useTranslation } from "../i18n";
 import { useCounts } from "../store/counts";

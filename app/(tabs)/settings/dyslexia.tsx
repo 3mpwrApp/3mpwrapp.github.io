@@ -32,7 +32,7 @@ import {
     type ReadingRulerKey,
     type TextContrastKey,
     type WordSpacingKey,
-} from '../../../constants/dyslexia';
+} from '../../../constants/Dyslexia';
 import { useDyslexia } from '../../../context/DyslexiaContext';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useDyslexiaFont } from '../../../hooks/useDyslexiaFont';

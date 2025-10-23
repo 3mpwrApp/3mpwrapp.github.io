@@ -3,7 +3,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import * as Notifier from '../../../services/notifications';
 import { useAppPalette } from '../../../theme/usePalette';

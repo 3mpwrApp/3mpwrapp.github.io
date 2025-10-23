@@ -3,7 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-nati
 
 import A11yPressable from '../../../components/A11yPressable';
 import AIDisclaimer from '../../../components/AIDisclaimer';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { aiCoachPrompt } from '../../../services/aiAdvocacy';

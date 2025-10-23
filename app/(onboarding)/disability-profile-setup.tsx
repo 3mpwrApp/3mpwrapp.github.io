@@ -11,7 +11,7 @@ import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from 'react-nat
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import A11yPressable from '../../components/A11yPressable';
-import { HIT_SLOP_8 } from '../../constants/a11y';
+import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
 import { updateDisabilityProfile } from '../../services/disabilityWizard';

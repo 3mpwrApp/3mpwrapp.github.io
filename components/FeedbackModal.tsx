@@ -26,7 +26,7 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { HIT_SLOP_8 } from '../constants/a11y';
+import { HIT_SLOP_8 } from '../constants/A11Y';
 import { useAppPalette } from '../theme/usePalette';
 
 import A11yPressable from './A11yPressable';

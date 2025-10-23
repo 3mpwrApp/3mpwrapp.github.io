@@ -9,7 +9,7 @@ import ContrastToggle from "../../../components/ContrastToggle";
 import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
-import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { resources as localResources } from "../../../data/resources";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";

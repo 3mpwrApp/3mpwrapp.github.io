@@ -5,7 +5,7 @@ import { SectionList, StyleSheet, Text, useColorScheme, View } from "react-nativ
 
 import A11yPressable from '../../../components/A11yPressable';
 import SearchBar from '../../../components/SearchBar';
-import { HIT_SLOP_8, touchTarget } from "../../../constants/a11y";
+import { HIT_SLOP_8, touchTarget } from "../../../constants/A11Y";
 import { channels, seedComments, seedThreads } from "../../../data/community";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";

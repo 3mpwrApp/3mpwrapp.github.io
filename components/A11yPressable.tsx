@@ -1,7 +1,7 @@
 import type { Insets, PressableProps, ViewStyle } from "react-native";
 import { Platform, Pressable } from "react-native";
 
-import { touchTarget } from "../constants/a11y";
+import { touchTarget } from "../constants/A11Y";
 import { useReduceMotionEnabled, useScreenReaderEnabled } from "../hooks/useA11y";
 
 // Enhanced props with better accessibility support

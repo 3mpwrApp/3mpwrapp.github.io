@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import { useCoachProgress } from '../store/coachProgress';
 
-import { useNotificationDispatcher } from './notifications.dispatcher';
+import { useNotificationDispatcher } from './notificationsDispatcher';
 
 // Simple inactivity reminder: if no lesson completed in thresholdMs schedule reminder notification.
 const THRESHOLD_MS = 72 * 60 * 60 * 1000; // 72h

@@ -4,15 +4,15 @@ import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { logActivity } from '../../../services/activity';
 import { aiCoachPrompt } from '../../../services/aiAdvocacy';
 import { useCoachInactivityReminder } from '../../../services/coachReminder';
-import { useNotificationDispatcher } from '../../../services/notifications.dispatcher';
+import { useNotificationDispatcher } from '../../../services/notificationsDispatcher';
 import { usage } from '../../../services/usage';
 import { useCoachProgress } from '../../../store/coachProgress';
 import { useJurisdiction } from '../../../store/jurisdiction';

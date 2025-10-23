@@ -15,7 +15,7 @@ jest.mock('expo-notifications', () => ({
   setNotificationChannelAsync: async () => {},
 }));
 
-import { useNotificationDispatcher } from '../services/notifications.dispatcher';
+import { useNotificationDispatcher } from '../services/notificationsDispatcher';
 import { NotificationsProvider, useNotifications } from '../store/notifications';
 
 // Mock i18n to avoid needing a provider; return the fallback or the key

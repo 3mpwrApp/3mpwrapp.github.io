@@ -7,7 +7,7 @@ jest.mock('../hooks/useA11y', () => ({
   useReduceMotionEnabled: () => false,
 }));
 
-jest.mock('../constants/a11y', () => ({
+jest.mock('../constants/A11Y', () => ({
   touchTarget: {
     min: { minWidth: 44, minHeight: 44, alignItems: 'center', justifyContent: 'center' },
     enhanced: { minWidth: 48, minHeight: 48, alignItems: 'center', justifyContent: 'center' },

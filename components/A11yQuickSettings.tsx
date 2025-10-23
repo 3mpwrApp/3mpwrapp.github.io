@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useAppPalette } from "../theme/usePalette";
 import type { TextScale, ResourceFormat } from "../store/settings";
 import { useSettings } from "../store/settings";
-import { touchTarget } from "../constants/a11y";
+import { touchTarget } from "../constants/A11Y";
 
 import A11yPressable from "./A11yPressable";
 

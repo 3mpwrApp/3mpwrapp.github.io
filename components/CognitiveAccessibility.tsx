@@ -8,8 +8,8 @@ import { Ionicons } from '@expo/vector-icons';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import type { TaskComplexity } from '../constants/cognitive';
-import { BREADCRUMB_CONFIG, COGNITIVE_MODES, COMPLEXITY_INDICATORS, PROGRESS_STYLES } from '../constants/cognitive';
+import type { TaskComplexity } from '../constants/Cognitive';
+import { BREADCRUMB_CONFIG, COGNITIVE_MODES, COMPLEXITY_INDICATORS, PROGRESS_STYLES } from '../constants/Cognitive';
 import { useCognitiveAccessibility } from '../context/CognitiveAccessibilityContext';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';

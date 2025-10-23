@@ -4,7 +4,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-nati
 
 import A11yPressable from '../../../components/A11yPressable';
 import SimpleBarChart from '../../../components/SimpleBarChart';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { waitTimes } from '../../../data/wait-times';
 import { db } from '../../../firebase/config';
 import { submitWaitTime } from '../../../services/waits';

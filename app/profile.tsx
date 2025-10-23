@@ -4,7 +4,7 @@ import React from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 import EmergencyWalletCard from "../components/EmergencyWalletCard";
-import { HIT_SLOP_8 } from "../constants/a11y";
+import { HIT_SLOP_8 } from "../constants/A11Y";
 import { useAuth } from "../context/AuthContext";
 import type { Lang } from "../i18n";
 import { useTranslation } from "../i18n";

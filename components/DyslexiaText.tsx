@@ -20,7 +20,7 @@ import {
     LETTER_SPACING,
     LINE_HEIGHT,
     TEXT_CONTRAST
-} from '../constants/dyslexia';
+} from '../constants/Dyslexia';
 import { useDyslexiaOptional } from '../context/DyslexiaContext';
 
 // ============================================================================

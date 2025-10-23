@@ -31,27 +31,27 @@ const ROOT = path.resolve(__dirname, '..');
 const RULES = {
   components: {
     path: 'components',
-    pattern: /^[A-Z][a-zA-Z0-9]*\.tsx?$/,
-    description: 'PascalCase.tsx',
+    pattern: /^[A-Z][a-zA-Z0-9]*(\.(ios|android|web|native))?(\.(tsx?|styles\.ts))?$/,
+    description: 'PascalCase.tsx (platform suffixes allowed: .web.tsx, .ios.tsx)',
     extensions: ['.tsx', '.ts'],
   },
   hooks: {
     path: 'hooks',
-    pattern: /^use[A-Z][a-zA-Z0-9]*\.tsx?$/,
-    description: 'useCamelCase.ts',
+    pattern: /^use[A-Z][a-zA-Z0-9]*(\.(ios|android|web|native))?\.tsx?$/,
+    description: 'useCamelCase.ts (platform suffixes allowed)',
     extensions: ['.ts', '.tsx'],
   },
   utils: {
     path: 'utils',
-    pattern: /^[a-z][a-zA-Z0-9]*\.ts$/,
-    description: 'camelCase.ts',
-    extensions: ['.ts'],
+    pattern: /^[a-z][a-zA-Z0-9]*\.tsx?$/,
+    description: 'camelCase.ts or camelCase.tsx (if JSX)',
+    extensions: ['.ts', '.tsx'],
   },
   services: {
     path: 'services',
-    pattern: /^[a-z][a-zA-Z0-9]*\.ts$/,
-    description: 'camelCase.ts',
-    extensions: ['.ts'],
+    pattern: /^[a-z][a-zA-Z0-9]*(\.(d\.ts|ts))$/,
+    description: 'camelCase.ts or camelCase.d.ts',
+    extensions: ['.ts', '.d.ts'],
   },
   constants: {
     path: 'constants',
@@ -61,21 +61,39 @@ const RULES = {
   },
   types: {
     path: 'types',
-    pattern: /^[A-Za-z][a-zA-Z0-9]*\.ts$/,
-    description: 'PascalCase.ts or camelCase.ts',
+    pattern: /^([A-Z][a-zA-Z0-9]*|[a-z][a-zA-Z0-9]*|[a-z][a-z0-9-]+)(\.d)?\.ts$/,
+    description: 'PascalCase.ts, camelCase.ts, or kebab-case.d.ts',
     extensions: ['.ts', '.d.ts'],
   },
   scripts: {
     path: 'scripts',
-    pattern: /^[a-z][a-z0-9-]*\.(m?js|ts)$/,
-    description: 'kebab-case.js/mjs/ts',
-    extensions: ['.js', '.mjs', '.ts'],
+    pattern: /^[a-z][a-z0-9-]*\.(m?js|ts|ps1|sh)$/,
+    description: 'kebab-case.js/mjs/ts/ps1/sh',
+    extensions: ['.js', '.mjs', '.ts', '.ps1', '.sh'],
   },
   tests: {
     path: '__tests__',
-    pattern: /^[a-z][a-zA-Z0-9.-]*\.(test|spec)\.(tsx?|jsx?)$/,
-    description: '*.test.ts or *.spec.ts',
-    extensions: ['.test.ts', '.test.tsx', '.spec.ts', '.spec.tsx'],
+    pattern: /^([a-z][a-zA-Z0-9.-]*\.(test|spec)\.(tsx?|jsx?)|[A-Z][a-zA-Z0-9]*\.tsx?)$/,
+    description: '*.test.ts, *.spec.ts, or PascalCase.tsx (test helpers)',
+    extensions: ['.test.ts', '.test.tsx', '.spec.ts', '.spec.tsx', '.ts', '.tsx'],
+  },
+  testHelpers: {
+    path: '__tests__/helpers',
+    pattern: /^[A-Z][a-zA-Z0-9]*\.tsx?$/,
+    description: 'PascalCase.ts/tsx (test utilities)',
+    extensions: ['.ts', '.tsx'],
+  },
+  testMocks: {
+    path: '__tests__/mocks',
+    pattern: /^[a-z][a-zA-Z0-9]*\.mock\.ts$/,
+    description: 'camelCase.mock.ts',
+    extensions: ['.ts', '.tsx'],
+  },
+  testHelpersGeneric: {
+    path: '__tests__/__helpers__',
+    pattern: /^[a-z][a-zA-Z0-9]*\.ts$/,
+    description: 'camelCase.ts (test setup helpers)',
+    extensions: ['.ts', '.tsx'],
   },
 };
 
@@ -212,6 +230,13 @@ function getFolderForFile(filePath) {
     return 'app';
   }
   
+  // Check for test helpers/mocks subfolders first
+  if (parts[0] === '__tests__') {
+    if (parts[1] === 'helpers') return '__tests__/helpers';
+    if (parts[1] === 'mocks') return '__tests__/mocks';
+    if (parts[1] === '__helpers__') return '__tests__/__helpers__';
+  }
+  
   // Check if in a known folder
   for (const [folderName, rule] of Object.entries(RULES)) {
     if (parts[0] === rule.path) {
@@ -223,8 +248,8 @@ function getFolderForFile(filePath) {
 }
 
 function suggestCorrectFolder(fileName, currentFolder) {
-  // Component files
-  if (/^[A-Z][a-zA-Z0-9]*\.tsx$/.test(fileName)) {
+  // Component files (but not test helpers)
+  if (/^[A-Z][a-zA-Z0-9]*\.tsx$/.test(fileName) && currentFolder !== '__tests__') {
     return 'components';
   }
   

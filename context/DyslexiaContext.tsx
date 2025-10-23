@@ -21,7 +21,7 @@ import {
     DYSLEXIA_STORAGE_KEYS,
     type DyslexiaPreferences,
     type DyslexiaPresetKey,
-} from '../constants/dyslexia';
+} from '../constants/Dyslexia';
 
 // ============================================================================
 // Context Interface

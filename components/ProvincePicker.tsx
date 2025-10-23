@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-import { HIT_SLOP_8 } from '../constants/a11y';
+import { HIT_SLOP_8 } from '../constants/A11Y';
 import { useAppPalette } from '../theme/usePalette';
 import type { ProvinceCode } from '../types/models';
 

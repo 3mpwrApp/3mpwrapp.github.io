@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { HIT_SLOP_8 } from '../constants/a11y';
+import { HIT_SLOP_8 } from '../constants/A11Y';
 import { useTranslation } from '../i18n';
 import { trackEvent } from '../services/analyticsClient';
 import { ANALYTICS_EVENTS } from '../services/analyticsEvents';

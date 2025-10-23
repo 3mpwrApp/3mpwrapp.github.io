@@ -4,7 +4,7 @@ import { FlatList, Linking, ScrollView, StyleSheet, Text, TextInput, View } from
 import A11yPressable from '../../../components/A11yPressable';
 import MapEmbed from '../../../components/MapEmbed';
 import ProvincePicker from '../../../components/ProvincePicker';
-import { HIT_SLOP_8 } from '../../../constants/a11y';
+import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { advocates } from '../../../data/lawyers';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';

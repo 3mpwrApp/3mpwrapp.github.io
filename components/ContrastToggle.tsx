@@ -2,7 +2,7 @@ import type { ViewStyle } from "react-native";
 import { Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-import { HIT_SLOP_8 } from "../constants/a11y";
+import { HIT_SLOP_8 } from "../constants/A11Y";
 import { useSettings } from "../store/settings";
 import { useAppPalette } from "../theme/usePalette";
 

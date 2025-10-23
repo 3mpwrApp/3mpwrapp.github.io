@@ -1,4 +1,4 @@
-import { addEvent, getCaseByKey, listCases, upsertCase } from '../services/accountability.tracker';
+import { addEvent, getCaseByKey, listCases, upsertCase } from '../services/accountabilityTracker';
 
 jest.mock('@react-native-async-storage/async-storage', () => {
   const mem = new Map<string, string>();

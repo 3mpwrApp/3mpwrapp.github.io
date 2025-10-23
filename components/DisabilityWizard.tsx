@@ -9,7 +9,7 @@ import { Link } from 'expo-router';
 import { useState } from 'react';
 import { ActivityIndicator, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { HIT_SLOP_8 } from '../constants/a11y';
+import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import type { WizardSuggestion } from '../services/disabilityWizard';

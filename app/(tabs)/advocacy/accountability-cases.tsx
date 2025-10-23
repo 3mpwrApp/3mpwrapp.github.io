@@ -4,8 +4,8 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
-import type { AccCase } from '../../../services/accountability.tracker';
-import { listCases } from '../../../services/accountability.tracker';
+import type { AccCase } from '../../../services/accountabilityTracker';
+import { listCases } from '../../../services/accountabilityTracker';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };

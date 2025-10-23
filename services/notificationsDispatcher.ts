@@ -3,7 +3,7 @@ import { useNotifications } from '../store/notifications';
 import type { DeliveredNotification, NotificationPreferences } from '../types/notifications';
 
 import { ensureNotificationPermission, scheduleLocal } from './notifications';
-import { getNotificationTemplate, getTemplatesForEvent } from './notifications.templates';
+import { getNotificationTemplate, getTemplatesForEvent } from './notificationsTemplates';
 
 export interface DispatchOptions {
   force?: boolean;

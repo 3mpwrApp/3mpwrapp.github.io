@@ -2,7 +2,7 @@ import React from 'react';
 import type { ViewProps } from 'react-native';
 import { View } from 'react-native';
 
-import { A11Y_ROLES } from '../constants/a11y';
+import { A11Y_ROLES } from '../constants/A11Y';
 import { useLiveRegion } from '../hooks/useA11y';
 
 type A11yContainerProps = ViewProps & {

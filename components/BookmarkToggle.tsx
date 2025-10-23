@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 
 import { useTranslation } from '../i18n';
 import { logActivity } from '../services/activity';
-import { useNotificationDispatcher } from '../services/notifications.dispatcher';
+import { useNotificationDispatcher } from '../services/notificationsDispatcher';
 import { useBookmarks } from '../store/bookmarks';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';

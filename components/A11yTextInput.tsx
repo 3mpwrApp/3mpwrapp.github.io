@@ -2,7 +2,7 @@ import React from 'react';
 import type { TextInputProps, TextStyle, ViewStyle } from 'react-native';
 import { Text, TextInput, View } from 'react-native';
 
-import { HIT_SLOP_8 } from '../constants/a11y';
+import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import { useTextScale } from '../theme/typography';

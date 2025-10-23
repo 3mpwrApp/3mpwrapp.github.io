@@ -1,4 +1,4 @@
-import * as real from '../../services/notifications.templates';
+import * as real from '../../services/notificationsTemplates';
 
 // Allow tests to extend the registry with ephemeral templates
 let extra: ReturnType<typeof real.listNotificationTemplates> = [];

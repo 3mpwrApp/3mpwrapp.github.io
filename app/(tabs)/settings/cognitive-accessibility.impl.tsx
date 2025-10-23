@@ -18,11 +18,11 @@ import A11yPressable from '../../../components/A11yPressable';
 import { AutoSaveIndicator } from '../../../components/CognitiveAccessibility';
 import type {
     CognitiveMode,
-    TaskReminder} from '../../../constants/cognitive';
+    TaskReminder} from '../../../constants/Cognitive';
 import {
     COGNITIVE_MODES,
     COMPLEXITY_INDICATORS
-} from '../../../constants/cognitive';
+} from '../../../constants/Cognitive';
 import { useCognitiveAccessibility } from '../../../context/CognitiveAccessibilityContext';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';

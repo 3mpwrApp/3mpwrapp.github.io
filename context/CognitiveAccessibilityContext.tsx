@@ -12,12 +12,12 @@ import type {
     CognitiveMode,
     CognitivePreferences,
     TaskReminder
-} from '../constants/cognitive';
+} from '../constants/Cognitive';
 import {
     COGNITIVE_MODES,
     COGNITIVE_STORAGE_KEYS,
     DEFAULT_COGNITIVE_PREFERENCES
-} from '../constants/cognitive';
+} from '../constants/Cognitive';
 import { announce } from '../utils/announce';
 
 interface CognitiveAccessibilityContextType {

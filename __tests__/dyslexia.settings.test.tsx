@@ -12,7 +12,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import React from 'react';
 
-import { DYSLEXIA_PRESETS, DYSLEXIA_STORAGE_KEYS, type DyslexiaPresetKey } from '../constants/dyslexia';
+import { DYSLEXIA_PRESETS, DYSLEXIA_STORAGE_KEYS, type DyslexiaPresetKey } from '../constants/Dyslexia';
 import { DyslexiaProvider, useDyslexia } from '../context/DyslexiaContext';
 
 describe('Dyslexia Settings', () => {

@@ -9,7 +9,7 @@ import {
 
 import A11yPressable from "../../../components/A11yPressable";
 import { DyslexiaText } from "../../../components/DyslexiaText";
-import { HIT_SLOP_8 } from "../../../constants/a11y";
+import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
