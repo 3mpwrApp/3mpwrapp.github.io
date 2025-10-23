@@ -21,7 +21,7 @@
     "prepare": "husky",
     "typecheck:strict": "tsc -p tsconfig.strict.json --noEmit",
     "a11y:scan": "node scripts/a11y-scan.js",
-    "wcag:audit": "node scripts/wcag_compliance_audit.js",
+    "wcag:audit": "node scripts/wcag-compliance-audit.js",
     "clean:win": "if exist node_modules rmdir /s /q node_modules && if exist package-lock.json del /f /q package-lock.json && if exist yarn.lock del /f /q yarn.lock && if exist pnpm-lock.yaml del /f /q pnpm-lock.yaml && npx expo install",
     "metro:clear": "set EXPO_NO_METRO_CACHE=1&& npx expo start -c",
     "align:expo": "npx expo install && npx expo install react-native@0.79.5",
