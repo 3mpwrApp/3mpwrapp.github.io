@@ -32,7 +32,7 @@ Welcome! This guide shows how to try the app in a private beta using Expo Go (fr
 
 ## How to report feedback
 
-- Email: beta@empowr.app (attach screenshots if helpful)
+- Email: empowrapp08162025@gmail.com (attach screenshots if helpful)
 - Or open a GitHub Issue (if invited): include steps to reproduce and your phone model/OS.
 - Include the app version shown in Settings → About (or the date/time you opened the beta link).
 

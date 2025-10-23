@@ -1,10 +1,10 @@
-Subject: Empowr App — Closed Beta Invite (Expo Go)
+Subject: 3mpwr App — Closed Beta Invite (Expo Go)
 From: empowrapp08162025@gmail.com
 To: <Tester Name/Group>
 
 Hi <Name>,
 
-You’re invited to try the Empowr App in our closed beta. It’s free and runs through Expo Go on iOS and Android.
+You're invited to try the 3mpwr App in our closed beta. It's free and runs through Expo Go on iOS and Android.
 
 What you'll do (about 10 minutes):
 - Explore Wellness (Daily Planner, Reflections, a couple of exercises)
@@ -35,7 +35,7 @@ Privacy & safety:
 - You can clear local data in Settings → Privacy at any time.
 
 Thank you!
-— The Empowr Team
+— The 3mpwr Team
 
 ---
 

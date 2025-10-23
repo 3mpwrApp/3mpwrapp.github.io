@@ -1,4 +1,4 @@
-# Empowr App — Release Notes for Testers (One Page)
+# 3mpwr App — Release Notes for Testers (One Page)
 
 Date: <YYYY-MM-DD>
 Version: <short tag or commit hash>

@@ -1,4 +1,4 @@
-# Empowr App — Release Notes for Testers
+# 3mpwr App — Release Notes for Testers
 
 Date: 2025-10-06
 Version: main (auto-generated notes)
