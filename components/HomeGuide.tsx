@@ -14,6 +14,8 @@ import { useSettings } from '../store/settings';
 import { useAppPalette } from '../theme/usePalette';
 import { announce } from '../utils/announce';
 
+import GapView from './GapView';
+
 export function HomeGuide() {
   const suggestions = useSuggestions() ?? [];
   const palette = useAppPalette();
@@ -61,7 +63,7 @@ export function HomeGuide() {
       <View style={{ marginBottom:8 }}>
         <Text style={[styles.snapshotLabel,{ color: palette.text }]}>{t('home.guide.snapshot','Snapshot')}</Text>
         {mood ? (
-          <View style={{ gap:4 }}>
+          <GapView style={{ gap:4 }}>
             <Text style={{ color: palette.text, fontSize:12 }}>
               {t('home.guide.moodSummary','Mood 7d avg: {{avg}} • Today entries: {{count}}',{ avg: mood.avg==null? '—' : mood.avg.toFixed(2), count: mood.count })}
             </Text>
@@ -75,7 +77,7 @@ export function HomeGuide() {
               </Text>
             )}
             {mood.insights && (
-              <View style={{ flexDirection:'row', flexWrap:'wrap', gap:6 }}>
+              <GapView style={{ flexDirection:'row', flexWrap:'wrap', gap:6 }}>
                 {mood.insights.trend !== 'none' && (
                   <Text style={trendStyle(palette, mood.insights.trend)}>
                     {t(`homeGuide.mood.trend${cap(mood.insights.trend)}`, mood.insights.trend)}
@@ -86,9 +88,9 @@ export function HomeGuide() {
                     {t('homeGuide.mood.streak','Mood log streak: {{days}}d',{ days: mood.insights.streakDays })}
                   </Text>
                 )}
-              </View>
+              </GapView>
             )}
-          </View>
+          </GapView>
         ) : (
           <Text style={{ color: palette.text, fontSize:12 }}>{t('home.guide.snapshotPlaceholder','(Mood tracking available on Wellness tab)')}</Text>
         )}
@@ -104,7 +106,7 @@ export function HomeGuide() {
         </View>
       ); })()}
       {top3.length ? (
-        <View style={{ gap:12 }}>
+        <GapView style={{ gap:12 }}>
           <Text style={[styles.suggestionTitle,{ color: palette.text }]}>{t('home.guide.suggested','Suggested')}</Text>
           {top3.map((sug, idx) => {
             const meta = getToolMeta(sug.toolId);
@@ -113,15 +115,15 @@ export function HomeGuide() {
                 <Text style={{ color: palette.text, fontWeight:'600', flexWrap:'wrap' }}>
                   {idx===0 ? '⭐ ' : ''}{renderIcon(meta?.icon)} {t(meta?.i18nLabelKey || 'homeGuide.tool.default', meta?.id || sug.toolId)}
                 </Text>
-                <View style={{ flexDirection:'row', flexWrap:'wrap', gap:4, marginTop:4 }}>
+                <GapView style={{ flexDirection:'row', flexWrap:'wrap', gap:4, marginTop:4 }}>
                   {(sug.reason ?? []).map((r, rIdx) => {
                     const label = t(`homeGuide.reason.${r.key}`, t('homeGuide.reason.default','Suggested'));
                     return (
                       <Text key={`${r.key}-${rIdx}`} style={{ backgroundColor: palette.primary, color: palette.onPrimary, paddingHorizontal:6, paddingVertical:2, borderRadius:12, fontSize:11 }}>{label}</Text>
                     );
                   })}
-                </View>
-                <View style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6, gap:8 }}>
+                </GapView>
+                <GapView style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6, gap:8 }}>
                   <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ minWidth: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
                     <Text style={{ color: palette.text, textAlign:'center' }}>👍</Text>
                   </Pressable>
@@ -145,11 +147,11 @@ export function HomeGuide() {
                       <Text style={{ color: palette.onPrimary, fontWeight:'700', textAlign:'center' }}>{t('home.guide.open','Open')}</Text>
                     </Pressable>
                   </Link>
-                </View>
+                </GapView>
               </View>
             );
           })}
-        </View>
+        </GapView>
       ) : (
         <Text style={{ color: palette.text }}>{t('home.guide.noSuggestions','No suggestions yet')}</Text>
       )}

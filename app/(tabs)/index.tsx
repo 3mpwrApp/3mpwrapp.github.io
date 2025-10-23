@@ -4,6 +4,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
 import DisabilityWizard from '../../components/DisabilityWizard';
+import GapView from '../../components/GapView';
 import { HomeGuide } from '../../components/HomeGuide';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
@@ -142,7 +143,7 @@ function RecentPrompts(){
       >
         {t('assistant.home.recentPrompts','Recently used prompts')}
       </Text>
-      <View 
+      <GapView 
         style={{ flexDirection:'row', flexWrap:'wrap', gap:8 }}
         accessibilityLabel={t('assistant.home.promptsList', 'List of recent prompts')}
       >
@@ -173,7 +174,7 @@ function RecentPrompts(){
             </A11yPressable>
           </Link>
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }

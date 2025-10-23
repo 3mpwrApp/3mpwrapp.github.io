@@ -2,6 +2,7 @@ import { Stack, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -103,7 +104,7 @@ export default function AccountabilityCase() {
             <Text style={s.meta}>{formatDate(caze.updatedAt)}</Text>
             <Text style={s.issue}>{caze.issue}</Text>
 
-            <View style={[s.section,{ flexDirection:'row', gap:8, flexWrap:'wrap' }]}>
+            <GapView style={[s.section,{ flexDirection:'row', gap:8, flexWrap:'wrap' }]}>
               <Pressable onPress={copyAll} disabled={working} style={[s.secondaryBtn, working && { opacity: 0.6 }]} accessibilityRole="button" accessibilityLabel={t('common.copy','Copy')} hitSlop={HIT_SLOP_8}>
                 <Text style={s.secondaryBtnText}>{t('common.copy','Copy')}</Text>
               </Pressable>
@@ -113,7 +114,7 @@ export default function AccountabilityCase() {
               <Pressable onPress={insertLocker} disabled={working} style={[s.secondaryBtn, working && { opacity: 0.6 }]} accessibilityRole="button" accessibilityLabel={t('templates.letters.common.insertLocker','Insert into Evidence Locker')} hitSlop={HIT_SLOP_8}>
                 <Text style={s.secondaryBtnText}>{t('templates.letters.common.insertLocker','Insert into Evidence Locker')}</Text>
               </Pressable>
-            </View>
+            </GapView>
 
             <View style={s.section}>
               <Text style={s.sectionTitle}>{t('accountability.latestEvent','Latest event')}</Text>
@@ -124,10 +125,10 @@ export default function AccountabilityCase() {
                 <View key={evt.id} style={s.eventRow}>
                   <Text style={s.eventMeta}>{formatDate(evt.ts)} • {evt.type.toUpperCase()}</Text>
                   <Text style={s.eventText}>{evt.text}</Text>
-                  <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+                  <GapView style={{ flexDirection:'row', gap:8, marginTop:6 }}>
                     <Pressable onPress={async()=>{ const next = promptEdit(evt.text); if (next!=null) { await updateEvent(caze.id, evt.id, next); const updated = await getCaseById(caze.id); setCase(updated||caze); } }} style={s.linkBtn} accessibilityRole="button" accessibilityLabel={t('common.edit','Edit')} hitSlop={HIT_SLOP_8}><Text style={s.linkBtnText}>{t('common.edit','Edit')}</Text></Pressable>
                     <Pressable onPress={async()=>{ const ok = confirmDelete(); if (ok) { await deleteEvent(caze.id, evt.id); const updated = await getCaseById(caze.id); setCase(updated||caze); } }} style={s.linkBtn} accessibilityRole="button" accessibilityLabel={t('common.delete','Delete')} hitSlop={HIT_SLOP_8}><Text style={s.linkBtnText}>{t('common.delete','Delete')}</Text></Pressable>
-                  </View>
+                  </GapView>
                 </View>
               ))}
             </View>
