@@ -1,8 +1,8 @@
 import { ScrollView, StyleSheet, Text } from 'react-native';
 
-import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
-import { useTextScale } from '../../../theme/typography';
-import { useAppPalette } from '../../../theme/usePalette';
+import { MAX_FONT_SCALE } from '../../hooks/useA11y';
+import { useTextScale } from '../../theme/typography';
+import { useAppPalette } from '../../theme/usePalette';
 
 export const options = { href: null };
 

@@ -2,13 +2,13 @@ import { collection, getDocs } from 'firebase/firestore';
 import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import SimpleBarChart from '../../../components/SimpleBarChart';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { waitTimes } from '../../../data/wait-times';
-import { db } from '../../../firebase/config';
-import { submitWaitTime } from '../../../services/waits';
-import { useAppPalette } from '../../../theme/usePalette';
+import A11yPressable from '../../components/A11yPressable';
+import SimpleBarChart from '../../components/SimpleBarChart';
+import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { waitTimes } from '../../data/wait-times';
+import { db } from '../../firebase/config';
+import { submitWaitTime } from '../../services/waits';
+import { useAppPalette } from '../../theme/usePalette';
 
 export const options = { href: null };
 

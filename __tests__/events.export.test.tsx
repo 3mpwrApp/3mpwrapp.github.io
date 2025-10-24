@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import * as RN from 'react-native';
 
-import EventsScreen from '../app/(tabs)/events';
+import EventsScreen from '../app/events';
 // Mock expo-router Link to avoid bringing in native stack/assets
 jest.mock('expo-router', () => ({ Link: ({ children }: any) => children, usePathname: () => '/', useLocalSearchParams: () => ({}) }));
 

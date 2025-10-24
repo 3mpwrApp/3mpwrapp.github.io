@@ -3,16 +3,16 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import ContrastToggle from '../../../components/ContrastToggle';
-import SearchBar from '../../../components/SearchBar';
-import SettingsLink from '../../../components/SettingsLink';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { researchHubs } from '../../../data/research-hubs';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { useTranslation } from '../../../i18n';
-import { useTextScale } from '../../../theme/typography';
-import { useAppPalette } from '../../../theme/usePalette';
+import A11yPressable from '../../components/A11yPressable';
+import ContrastToggle from '../../components/ContrastToggle';
+import SearchBar from '../../components/SearchBar';
+import SettingsLink from '../../components/SettingsLink';
+import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { researchHubs } from '../../data/research-hubs';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
+import { useTranslation } from '../../i18n';
+import { useTextScale } from '../../theme/typography';
+import { useAppPalette } from '../../theme/usePalette';
 
 export const options = { href: null };
 

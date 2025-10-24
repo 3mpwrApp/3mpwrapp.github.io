@@ -1,11 +1,11 @@
 import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import SimpleBarChart from '../../../components/SimpleBarChart';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { addEntry, listEntries } from '../../../services/timeline';
-import { useAppPalette } from '../../../theme/usePalette';
+import A11yPressable from '../../components/A11yPressable';
+import SimpleBarChart from '../../components/SimpleBarChart';
+import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { addEntry, listEntries } from '../../services/timeline';
+import { useAppPalette } from '../../theme/usePalette';
 
 export const options = { href: null };
 

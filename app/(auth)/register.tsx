@@ -45,7 +45,8 @@ export default function RegisterScreen() {
         displayName: displayName.trim(),
         createdAt: serverTimestamp(),
       });
-      router.replace('/(tabs)');
+      // Route to personalized onboarding wizard
+      router.replace('/onboarding');
     } catch (err: any) {
       setError(err?.message || 'Registration failed');
       Alert.alert(t('common.errorTitle', 'Error'), err?.message || 'Registration failed');

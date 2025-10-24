@@ -2,19 +2,19 @@ import { Stack, useLocalSearchParams } from "expo-router";
 import React from "react";
 import { Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
-import A11yPressable from "../../../../components/A11yPressable";
-import { useAuth } from "../../../../context/AuthContext";
-import { getCachedJSON, setCachedJSON } from "../../../../services/cache";
+import A11yPressable from "../../../components/A11yPressable";
+import { useAuth } from "../../../context/AuthContext";
+import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import {
-  fsRoomAcceptInvite,
-  fsRoomAddTask,
-  fsRoomCreateInvite,
-  fsRoomEnsureMeta,
-  fsRoomSetNotes,
-  fsRoomSubscribe,
-  fsRoomToggleTask,
-} from "../../../../services/firestore";
-import { useAppPalette } from "../../../../theme/usePalette";
+    fsRoomAcceptInvite,
+    fsRoomAddTask,
+    fsRoomCreateInvite,
+    fsRoomEnsureMeta,
+    fsRoomSetNotes,
+    fsRoomSubscribe,
+    fsRoomToggleTask,
+} from "../../../services/firestore";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Task = {
   id: string;

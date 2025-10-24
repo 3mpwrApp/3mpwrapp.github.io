@@ -8,22 +8,22 @@ import {
     View
 } from "react-native";
 
-import ContrastToggle from "../../../components/ContrastToggle";
-import SettingsLink from "../../../components/SettingsLink";
-import { whatsnew as defaultWN } from "../../../data/whatsnew";
+import ContrastToggle from "../../components/ContrastToggle";
+import SettingsLink from "../../components/SettingsLink";
+import { whatsnew as defaultWN } from "../../data/whatsnew";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
     useFocusOnRefOnMount,
-} from "../../../hooks/useA11y";
-import { useTranslation } from "../../../i18n";
-import { subscribeToActivityFeed } from "../../../services/activity";
+} from "../../hooks/useA11y";
+import { useTranslation } from "../../i18n";
+import { subscribeToActivityFeed } from "../../services/activity";
 import {
     getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
-} from "../../../services/localContent";
-import { useTextScale } from "../../../theme/typography";
-import { useAppPalette } from "../../../theme/usePalette";
-import type { AnyActivityEvent } from "../../../types/activity";
+} from "../../services/localContent";
+import { useTextScale } from "../../theme/typography";
+import { useAppPalette } from "../../theme/usePalette";
+import type { AnyActivityEvent } from "../../types/activity";
 
 export default function WhatsNewScreen() {
   const palette = useAppPalette();

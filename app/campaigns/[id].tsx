@@ -1,28 +1,28 @@
 import { Stack, router, useLocalSearchParams } from "expo-router";
 import {
-  Pressable,
-  Share,
-  StyleSheet,
-  Text,
-  View,
-  useColorScheme,
+    Pressable,
+    Share,
+    StyleSheet,
+    Text,
+    View,
+    useColorScheme,
 } from "react-native";
 
-import SettingsLink from "../../../components/SettingsLink";
-import { useAuth } from "../../../context/AuthContext";
-import { campaigns } from "../../../data/campaigns";
-import { useTranslation } from "../../../i18n";
-import { fsJoinCampaign, fsLeaveCampaign } from "../../../services/firestore";
+import SettingsLink from "../../components/SettingsLink";
+import { useAuth } from "../../context/AuthContext";
+import { campaigns } from "../../data/campaigns";
+import { useTranslation } from "../../i18n";
+import { fsJoinCampaign, fsLeaveCampaign } from "../../services/firestore";
 import {
-  CampaignsLocalProvider,
-  useCampaignsLocal,
-} from "../../../store/campaignsLocal";
-import { useFavorites } from "../../../store/favorites";
-import { colors, type Palette } from "../../../theme/colors";
-import { useTextScale } from "../../../theme/typography";
+    CampaignsLocalProvider,
+    useCampaignsLocal,
+} from "../../store/campaignsLocal";
+import { useFavorites } from "../../store/favorites";
+import { colors, type Palette } from "../../theme/colors";
+import { useTextScale } from "../../theme/typography";
 
  
-const { trackEvent } = require("../../../services/analyticsClient");
+const { trackEvent } = require("../../services/analyticsClient");
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();

@@ -1,8 +1,8 @@
-import { View, Text, StyleSheet, useColorScheme } from "react-native";
-import { useLocalSearchParams, Stack } from "expo-router";
+import { Stack, useLocalSearchParams } from "expo-router";
+import { StyleSheet, Text, useColorScheme, View } from "react-native";
 
-import { colors, type Palette } from "../../../../theme/colors";
-import { stories } from "../../../../data/stories";
+import { stories } from "../../../data/stories";
+import { colors, type Palette } from "../../../theme/colors";
 
 export const options = { href: null };
 

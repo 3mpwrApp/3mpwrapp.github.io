@@ -108,20 +108,7 @@ export default function TabsLayout() {
           }}
         />
 
-  {/* Hidden routes - accessible via menu or internal navigation */}
-        
-        {/* Research & Learning (moved to menu - secondary feature) */}
-        <Tabs.Screen name="research" options={{ href: null }} />
-        <Tabs.Screen name="podcasts" options={{ href: null }} />
-        <Tabs.Screen name="whatsnew" options={{ href: null }} />
-        
-        {/* Events (now part of Community section) */}
-        <Tabs.Screen name="events" options={{ href: null }} />
-        
-        {/* Campaigns (now part of Community section) */}
-        <Tabs.Screen name="campaigns" options={{ href: null }} />
-        
-        {/* Utility routes */}
+  {/* Hidden utility routes - accessible via menu */}
     <Tabs.Screen name="inbox" options={{ href: null }} />
     <Tabs.Screen name="settings" options={{ href: null }} />
     <Tabs.Screen name="saved" options={{ href: null }} />
@@ -132,7 +119,6 @@ export default function TabsLayout() {
     <Tabs.Screen name="faqs" options={{ href: null }} />
     <Tabs.Screen name="about" options={{ href: null }} />
     <Tabs.Screen name="wellness.mood" options={{ href: null }} />
-    <Tabs.Screen name="onboarding" options={{ href: null }} />
       </Tabs>
       <VoiceController />
     </>

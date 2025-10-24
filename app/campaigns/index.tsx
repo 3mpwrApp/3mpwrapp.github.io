@@ -13,35 +13,35 @@ import {
   View,
 } from "react-native";
 
-import Card from "../../../components/Card";
-import SearchBar from "../../../components/SearchBar";
-import SkeletonRow from "../../../components/SkeletonRow";
-import { useAuth } from "../../../context/AuthContext";
-import { campaigns as localCampaigns } from "../../../data/campaigns";
-import { petitions } from "../../../data/petitions";
+import Card from "../../components/Card";
+import SearchBar from "../../components/SearchBar";
+import SkeletonRow from "../../components/SkeletonRow";
+import { useAuth } from "../../context/AuthContext";
+import { campaigns as localCampaigns } from "../../data/campaigns";
+import { petitions } from "../../data/petitions";
 import {
   MAX_FONT_SCALE,
   useAnnounceOnMount,
   useFocusOnRefOnMount,
-} from "../../../hooks/useA11y";
-import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
-import { useTranslation } from "../../../i18n";
-import { logActivity } from "../../../services/activity";
-import { fetchCampaigns } from "../../../services/campaigns";
+} from "../../hooks/useA11y";
+import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
+import { useTranslation } from "../../i18n";
+import { logActivity } from "../../services/activity";
+import { fetchCampaigns } from "../../services/campaigns";
 import {
   fsAddCampaign,
   fsIncrementCampaignMembers,
   fsJoinCampaign,
   fsLeaveCampaign,
-} from "../../../services/firestore";
+} from "../../services/firestore";
 import {
   CampaignsLocalProvider,
   useCampaignsLocal,
-} from "../../../store/campaignsLocal";
-import { useCounts } from "../../../store/counts";
-import { useNetwork } from "../../../store/network";
-import { useRefresh } from "../../../store/refresh";
-import { colors, type Palette } from "../../../theme/colors";
+} from "../../store/campaignsLocal";
+import { useCounts } from "../../store/counts";
+import { useNetwork } from "../../store/network";
+import { useRefresh } from "../../store/refresh";
+import { colors, type Palette } from "../../theme/colors";
 
  
 const { trackEvent } = require("../../../services/analyticsClient");

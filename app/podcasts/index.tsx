@@ -12,31 +12,31 @@ import {
     View,
 } from "react-native";
 
-import { podcasts as localPodcasts } from "../../../data/podcasts";
+import { podcasts as localPodcasts } from "../../data/podcasts";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
     useFocusOnRefOnMount,
-} from "../../../hooks/useA11y";
-import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
-import { useTextScale } from "../../../theme/typography";
-import { useAppPalette } from "../../../theme/usePalette";
+} from "../../hooks/useA11y";
+import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
+import { useTextScale } from "../../theme/typography";
+import { useAppPalette } from "../../theme/usePalette";
 // Stories mirror YouTube list; we render a single combined list (podcasts only)
-import Card from "../../../components/Card";
-import { HIT_SLOP_8 } from "../../../constants/A11Y";
-import { fetchPodcasts } from "../../../services/podcasts";
-import { useCounts } from "../../../store/counts";
+import Card from "../../components/Card";
+import { HIT_SLOP_8 } from "../../constants/A11Y";
+import { fetchPodcasts } from "../../services/podcasts";
+import { useCounts } from "../../store/counts";
 // Link not needed; we open externally via Linking
-import ContrastToggle from "../../../components/ContrastToggle";
-import SearchBar from "../../../components/SearchBar";
-import SettingsLink from "../../../components/SettingsLink";
-import SkeletonRow from "../../../components/SkeletonRow";
-import { useTranslation } from "../../../i18n";
-import { useFavorites } from "../../../store/favorites";
-import { useNetwork } from "../../../store/network";
-import { useRefresh } from "../../../store/refresh";
-import { useSettings } from "../../../store/settings";
-import { logger } from '../../../utils/logger';
+import ContrastToggle from "../../components/ContrastToggle";
+import SearchBar from "../../components/SearchBar";
+import SettingsLink from "../../components/SettingsLink";
+import SkeletonRow from "../../components/SkeletonRow";
+import { useTranslation } from "../../i18n";
+import { useFavorites } from "../../store/favorites";
+import { useNetwork } from "../../store/network";
+import { useRefresh } from "../../store/refresh";
+import { useSettings } from "../../store/settings";
+import { logger } from '../../utils/logger';
 
 export default function PodcastsScreen() {
   const palette = useAppPalette();

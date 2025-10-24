@@ -4,12 +4,15 @@ export type RouteEntry = { route: string; tKey: string; fallback: string };
 
 export const BOOKMARKABLE_ROUTES: RouteEntry[] = [
   { route: '/(tabs)/resources/index', tKey: 'nav.resources', fallback: 'Resources' },
-  { route: '/(tabs)/campaigns/index', tKey: 'nav.campaigns', fallback: 'Campaigns' },
+  { route: '/campaigns/index', tKey: 'nav.campaigns', fallback: 'Campaigns' },
   { route: '/(tabs)/community/index', tKey: 'nav.community', fallback: 'Community' },
   { route: '/(tabs)/wellness', tKey: 'nav.wellness', fallback: 'Wellness' },
   { route: '/(tabs)/advocacy/index', tKey: 'nav.advocacy', fallback: 'Advocacy' },
   { route: '/(tabs)/settings', tKey: 'nav.settings', fallback: 'Settings' },
-  { route: '/(tabs)/whatsnew/index', tKey: 'nav.whatsnew', fallback: "What's New" },
+  { route: '/whatsnew/index', tKey: 'nav.whatsnew', fallback: "What's New" },
+  { route: '/research', tKey: 'nav.research', fallback: 'Research' },
+  { route: '/podcasts', tKey: 'nav.podcasts', fallback: 'Podcasts' },
+  { route: '/events', tKey: 'nav.events', fallback: 'Events' },
   { route: '/(tabs)/profile', tKey: 'nav.profile', fallback: 'Profile' },
 ];
 

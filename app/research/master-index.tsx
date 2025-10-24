@@ -2,15 +2,15 @@ import { Stack, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { AccessibilityInfo, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import ContrastToggle from '../../../components/ContrastToggle';
-import SettingsLink from '../../../components/SettingsLink';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { masterIndex } from '../../../data/research-master-index';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { useTranslation } from '../../../i18n';
-import { useTextScale } from '../../../theme/typography';
-import { useAppPalette } from '../../../theme/usePalette';
+import A11yPressable from '../../components/A11yPressable';
+import ContrastToggle from '../../components/ContrastToggle';
+import SettingsLink from '../../components/SettingsLink';
+import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { masterIndex } from '../../data/research-master-index';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
+import { useTranslation } from '../../i18n';
+import { useTextScale } from '../../theme/typography';
+import { useAppPalette } from '../../theme/usePalette';
 let AsyncStorage: any; try { AsyncStorage = require('@react-native-async-storage/async-storage').default; } catch {}
 
 export const options = { href: null };

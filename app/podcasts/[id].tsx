@@ -9,12 +9,12 @@ import {
     useColorScheme,
 } from "react-native";
 
-import { useFavorites } from "../../../store/favorites";
-import { colors, type Palette } from "../../../theme/colors";
-import { useTextScale } from "../../../theme/typography";
+import { useFavorites } from "../../store/favorites";
+import { colors, type Palette } from "../../theme/colors";
+import { useTextScale } from "../../theme/typography";
 
  
-const { trackEvent } = require("../../../services/analyticsClient");
+const { trackEvent } = require("../../services/analyticsClient");
 
 export const options = { href: null };
 

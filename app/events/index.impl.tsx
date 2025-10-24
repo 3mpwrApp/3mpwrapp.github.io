@@ -1,45 +1,45 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-  FlatList,
-  RefreshControl,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    FlatList,
+    RefreshControl,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
-import A11yPressable from '../../../components/A11yPressable';
-import Card from "../../../components/Card";
-import ContrastToggle from "../../../components/ContrastToggle";
-import SearchBar from "../../../components/SearchBar";
-import SettingsLink from "../../../components/SettingsLink";
-import SkeletonRow from "../../../components/SkeletonRow";
-import { HIT_SLOP_8 } from "../../../constants/A11Y";
-import { generateDisabilityObservances } from "../../../data/disability-observances";
-import { events as localEvents } from "../../../data/events";
 import {
-  generateCanadianHolidays,
-  generateProvincialHolidays,
-} from "../../../data/holidays-ca";
+    generateCanadianHolidays,
+    generateProvincialHolidays,
+} from "../../data/holidays-ca";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
-} from "../../../hooks/useA11y";
-import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
-import { useTranslation } from "../../../i18n";
-import { ANALYTICS_EVENTS, trackEvent } from "../../../services/analyticsClient";
-import { fetchEvents } from "../../../services/events";
-import { fsAddEvent } from "../../../services/firestore";
-import { useCounts } from "../../../store/counts";
-import { useNetwork } from "../../../store/network";
-import { useRefresh } from "../../../store/refresh";
-import { useSettings } from "../../../store/settings";
-import { useTextScale } from "../../../theme/typography";
-import { useAppPalette } from "../../../theme/usePalette";
-import { makeCSVRow, makeICS, shareText } from "../../../utils/eventsExport";
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
+} from "../../hooks/useA11y";
+import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
+import { useTranslation } from "../../i18n";
+import { ANALYTICS_EVENTS, trackEvent } from "../../services/analyticsClient";
+import { fetchEvents } from "../../services/events";
+import { fsAddEvent } from "../../services/firestore";
+import { useCounts } from "../../store/counts";
+import { useNetwork } from "../../store/network";
+import { useRefresh } from "../../store/refresh";
+import { useSettings } from "../../store/settings";
+import { useTextScale } from "../../theme/typography";
+import { useAppPalette } from "../../theme/usePalette";
+import { makeCSVRow, makeICS, shareText } from "../../utils/eventsExport";
+import A11yPressable from '../../components/A11yPressable';
+import Card from "../../components/Card";
+import ContrastToggle from "../../components/ContrastToggle";
+import SearchBar from "../../components/SearchBar";
+import SettingsLink from "../../components/SettingsLink";
+import SkeletonRow from "../../components/SkeletonRow";
+import { HIT_SLOP_8 } from "../../constants/A11Y";
+import { generateDisabilityObservances } from "../../data/disability-observances";
+import { events as localEvents } from "../../data/events";
 
 export default function EventsScreen() {
   const palette = useAppPalette();

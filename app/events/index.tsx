@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 
-import ScreenSkeleton from '../../../components/ScreenSkeleton';
+import ScreenSkeleton from '../../components/ScreenSkeleton';
 
 export const options = { href: null };
 
