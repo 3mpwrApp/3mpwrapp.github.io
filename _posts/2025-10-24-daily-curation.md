@@ -1,0 +1,237 @@
+---
+layout: post
+title: "Daily News Curation - 2025-10-24"
+date: 2025-10-24
+categories: curation news
+---
+
+# Daily News Curation - 2025-10-24
+
+Curated 50 items from disability, accessibility, and social policy sources.
+
+## 1. Manitoba Government Introduces Bill That Would Respond to Meth Crisis, Reduce Pressure on Emergency Rooms and Keep Public Safe
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=70942)
+**Score:** 30.00
+
+## 2. In/Equality Podcast – Inequality and Disability Justice with Michael Orsini Transcript
+Debra Thompson  00:00 From the Institute for Research on Public Policy, this is inequality a special series of the policy options podcast exploring the many facets of inequality in Canada through conversations with experts. I'm your host Deborah Thompson. Today I speak with Dr. Michael Orsini, a professor in the Institute of feminist and gender […]
+📍 [Source](https://policyoptions.irpp.org/2023/05/inequality-and-disability-justice-transcript/)
+**Score:** 29.76
+
+## 3. ‘No one was getting any better’: When private addiction treatment centres put patients in danger
+<img src='https://i.cbc.ca/ais/0fbf1deb-72fe-4dc2-a8e8-7b6140a71dfb,1761252267875/full/max/0/default.jpg?im=Crop%2Crect%3D%28946%2C468%2C1166%2C655%29%3BResize%3D%28620%29' alt='A person sits in a chair.' width='620' height='349' title=''/><p>For-profit, privately owned residential substance use treatment facilities provide a vital health service, but across Canada they operate with little government regulation or oversight, putting lives of patients at risk, an investigation by CBC’s the fifth estate has found.</p>
+📍 [Source](https://www.cbc.ca/news/canada/private-addiction-treatment-centres-unregulated-danger-9.6948952?cmp=rss)
+**Score:** 23.80
+
+## 4. The future of child care in Canada: What to expect
+On April 19, 2021, Finance Minister Chrystia Freeland presented the first federal budget in two years. Among the many new and updated policies, one stood out especially – the promise of affordable universal childcare for all Canadians. Universal child care had been promised in the past and never come to fruition, not for lack of […]
+📍 [Source](https://policyoptions.irpp.org/2021/04/the-future-of-child-care-in-canada-what-to-expect/)
+**Score:** 22.80
+
+## 5. Manitoba Government Provincial Nominee Program Invites 328 Health-Care Workers to Build Careers in Manitoba
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71157)
+**Score:** 24.00
+
+## 6. Canada Post can survive but fixing it is ‘not going to be easy': minister
+Joël Lightbound, the minister responsible for Canada Post, defended his announced changes to the company's mail delivery business and said they're a 'first step' to saving it.
+📍 [Source](https://globalnews.ca/news/11491781/canada-post-changes-mail-service-business-minister/)
+**Score:** 17.00
+
+## 7. Back-to-work legislation to end Alberta teachers’ strike coming Monday, says premier
+<img src='https://i.cbc.ca/ais/4f49eb96-87a2-4a95-81a4-f44194b72046,1761242062522/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C168%2C1606%2C903%29%3BResize%3D%28620%29' alt='A person standing behind a desk.' width='620' height='349' title='Alberta Premier Danielle Smith speaks to reporters on Oct. 23, 2025.'/><p>The Alberta government will table back-to-work legislation on Monday that seeks to end the provincewide teachers’ strike, Premier Danielle Smith said Thursday morning.</p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/back-to-work-legislation-to-end-alberta-teachers-strike-coming-monday-says-premier-9.6949884?cmp=rss)
+**Score:** 19.20
+
+## 8. Manitoba Government's Connected Approach Supporting Primary Care, Faster Discharges: CIHI Report
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71279)
+**Score:** 20.80
+
+## 9. Technology-enabled trade in Canada
+E-commerce is revolutionizing the way we trade by giving businesses unprecedented access to new markets. Tools such as eBay have become the great equalizer of international trade: empowering small businesses in a globalized trade environment traditionally dominated by large firms. With so much to gain from these emerging trade patterns, Canadian trade policy can’t afford […]
+📍 [Source](https://policyoptions.irpp.org/2016/07/policy-options-podcast-16-technology-enabled-trade-in-canada/)
+**Score:** 18.30
+
+## 10. Alberta to pay $95M settlement to another coal company over policy change
+<img src='https://i.cbc.ca/ais/c6f79d29-2666-4a08-a15b-aced1ea2ed30,1761157489810/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C23%2C1050%2C590%29%3BResize%3D%28620%29' alt='An aerial view of Tent Mountain in southwestern Alberta, which was the site of an open-pit coal mine that was active decades ago but has since been abandoned.' width='620' height='349' title='An aerial view of Tent Mountain in southwestern Alberta, which was the site of an open-pit coal mine that was active decades ago but has since been abandoned. Evolve Power (formerly known as Montem Resources) now aims to use the site for a pumped-hydro energy storage project.  It has given up other coal leases as part of a $95-million settlement with the Government of Alberta.'/><p>Details of another settlement between the Government of Alberta and a coal company have been released. This time, the province has agreed to pay $95 million to Evolve Power.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-coal-settlement-95-million-evolve-power-montem-resources-9.6948924?cmp=rss)
+**Score:** 16.20
+
+## 11. Joly gives GM 15 days to detail ‘next steps' for workers at Ontario plant
+'Canadian workers deserve clarity and action, not uncertainty,' Joly said after meeting with representatives from GM, Unifor and the Ontario government Thursday.
+📍 [Source](https://globalnews.ca/news/11491973/canada-gm-autoworkers-joly-us/)
+**Score:** 16.30
+
+## 12. How Can Canada Help Workers Through a Green Transition?
+Create sector-specific training programs to help fossil fuel workers transition to new jobs, policy analyst Lin Al-Akkad says.
+📍 [Source](https://thetyee.ca/News/2025/10/23/How-Canada-Help-Workers-Green-Transition/)
+**Score:** 17.00
+
+## 13. Why Gawker's bankruptcy is a policy issue
+Where should media outlets draw the line between revenue generation and content quality? Between truth and ethics? CBC News’ Lauren O’Neil stopped by the podcast to weigh in on these issues and more on this week’s episode. We looked at the Gawker bankruptcy, the ethics and business of new media and Canada’s evolving media landscape. […]
+📍 [Source](https://policyoptions.irpp.org/2016/08/policy-options-podcast-18-gawker-bankruptcy/)
+**Score:** 17.00
+
+## 14. Book Excerpt Brand Command: Canadian Politics and Democracy in the Age of Message Control
+The dark side of branding must be reined in. New rules are needed to contain nefarious behaviour and curtail the most despicable acts. In Democratizing the Constitution: Reforming Responsible Government, Peter Aucoin, Mark Jarvis, and Lori Turnbull argue that proposals for democratic reform in Canada must establish clear objectives, place formal constraints on prime ministerial […]
+📍 [Source](https://policyoptions.irpp.org/2016/07/book-excerpt-brand-command-canadian-politics-and-democracy-in-the-age-of-message-control/)
+**Score:** 17.00
+
+## 15. Canadian exporters and eBay: How technology is changing trade
+The latest chapter in the IRPP’s trade volume describes the emerging phenomenon of technology-enabled (‘online’) trade. In this chapter, authors Usman Ahmed and Hanne Melin (eBay Inc.) analyze a unique dataset of Canadian firms using eBay in 2008-13. The experiences of these businesses demonstrate that technology-enabled trade is broader and more inclusive than traditional trade. […]
+📍 [Source](https://policyoptions.irpp.org/2016/07/canadian-exporters-and-ebay-how-technology-is-changing-trade/)
+**Score:** 17.00
+
+## 16. Quebecers pay millions each year for health care in other provinces
+Unlike other provinces, Quebec��has opted not to adopt reciprocal billing agreements with other jurisdictions for most medical services.
+📍 [Source](https://globalnews.ca/news/11492431/quebecers-pay-millions-health-care-other-provinces/)
+**Score:** 15.70
+
+## 17. Refocusing Canada’s international security agenda
+This week, we spoke with James Fergusson, director of the Centre for Defence and Security Studies at the University of Manitoba, about the changing international security landscape and how it affects Canada. We look at the lessons from Canada’s involvement in Afghanistan, our  relationship with NATO, and whether Canada is equipped to deal with the […]
+📍 [Source](https://policyoptions.irpp.org/2016/08/po-podcast-17-refocusing-canadas-international-security-agenda/)
+**Score:** 14.00
+
+## 18. Demystifying the role of parliamentary staffers
+Much has been written about the roles members of Parliament play, but surprisingly little is publicly known or discussed about Canada’s parliamentary staffers. The pejorative label “the boys in short pants” has recently been used to describe some staffers; others have been called  “ruthless, cutthroat psychopaths” and “25-year-old jihadis.” (Those latter two quotes were from […]
+📍 [Source](https://policyoptions.irpp.org/2016/07/demystifying-the-role-of-parliamentary-staffers/)
+**Score:** 14.00
+
+## 19. Alberta teen faces new charges after terrorism peace bond for alleged online extremism ties
+<img src='https://i.cbc.ca/ais/c7860102-498d-437e-8ac5-11a0373007a7,1761251298620/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C521%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A closeup shows hands on a computer keyboard in a darkened room.' width='620' height='349' title='A survey of parents and teachers found that online misogynistic comments have been making their way into classrooms in Canada.'/><p>The youth was initially arrested in May, with investigators saying they believed the 15-year-old would commit terrorism offences related to the 764 online network, which targets vulnerable children by prowling gaming sites like Minecraft and Roblox and lures victims into private online chats.</p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-teen-terrorism-peace-bond-charges-9.6950809?cmp=rss)
+**Score:** 13.20
+
+## 20. We analyzed 200 cancer and autism videos on TikTok and found the majority contain misinformation
+<img src='https://i.cbc.ca/ais/3c4d3b89-82f2-4c77-9246-c820ccf7cf42,1761251808505/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C234%2C4500%2C2531%29%3BResize%3D%28620%29' alt='A hand holds up a phone with the TikTok logo on it.' width='620' height='349' title='LONDON, UK - April 27 2020: Tik Tok social media app icon on a mobile device'/><p>TikTok is flooded with videos promising miracle treatments for autism and cancer, but how many of them are true? Marketplace investigated 200 health videos on the platform and uncovered a troubling trend: misinformation is not only widespread, it’s thriving. </p>
+📍 [Source](https://www.cbc.ca/news/marketplace/tiktok-health-claims-marketplace-9.6949928?cmp=rss)
+**Score:** 12.10
+
+## 21. Canada Post workers union loses challenge of back-to-work order
+<img src='https://i.cbc.ca/ais/35191d1d-04cd-4627-bf87-3d390c355b36,1761222043426/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C253%2C4860%2C2733%29%3BResize%3D%28620%29' alt='A workers wears a strike sign.' width='620' height='349' title='Canada Post workers are pictured on strike at the Canada Post processing centre in Richmond, B.C., on Friday, Sept. 26, 2025.'/><p>The Canada Industrial Relations Board has dismissed an argument from the Canada Post workers union that a government back-to-work order was unconstitutional.</p>
+📍 [Source](https://www.cbc.ca/news/politics/politics-canada-post-section107-9.6949818?cmp=rss)
+**Score:** 12.50
+
+## 22. Most of Calgary's new city council promised repeal of citywide rezoning
+Jeromy Farkas, Calgary's mayor-elect, said the pledge to repeal citywide rezoning is a priority but must include a plan to replace the contentious policy.
+📍 [Source](https://globalnews.ca/news/11492112/calgary-new-city-council-repeal-citywide-rezoning/)
+**Score:** 10.50
+
+## 23. What's In Your Fridge: Josh Santos of VIFF's Composer Filmmaker Accelerator program
+<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>. </h3><p data-slot-rendered-content="true"><em></em></p>
+📍 [Source](https://www.straight.com/music/whats-in-your-fridge-josh-santos-of-viffs-composer-filmmaker-accelerator-program)
+**Score:** 13.50
+
+## 24. Manitoba Government Making Continued Progress Through Investment to Hip and Knee Surgeries at Selkirk Regional Health Centre
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71198)
+**Score:** 12.00
+
+## 25. Manitoba Government Opens Renewed Security Rebate Program For Homeowners and Tenants
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71057)
+**Score:** 12.00
+
+## 26. Manitoba Government Invests in Training for Child and Family Service Workers
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=70944)
+**Score:** 12.00
+
+## 27. World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year
+The Richmond restaurant took home the honours once again.
+📍 [Source](https://www.straight.com/food/world-culinary-awards-names-baan-lao-best-restaurant-in-canada-for-second-straight-year)
+**Score:** 9.50
+
+## 28. Q&amp;A: Director Alireza Khatami on making Canada’s Oscar submission, The Things You Kill
+“I showed the depth of my darkness, hoping people would look at their own.”
+📍 [Source](https://www.straight.com/movies/qa-director-alireza-khatami-on-making-canadas-oscar-submission-things-you-kill)
+**Score:** 9.50
+
+## 29. CONTEST: Win Tickets to ‘East Van Panto: West Van Story’
+This year, East Van’s favourite holiday show features star-crossed lovers in a housing crisis.
+📍 [Source](https://thetyee.ca/Presents/2025/10/20/Contest-East-Van-Panto-West-Van-Story/)
+**Score:** 12.00
+
+## 30. Air Canada announces 4 new U.S. routes out of Toronto's Billy Bishop airport
+<img src='https://i.cbc.ca/ais/89eadbfa-f9c0-4fb5-a371-1563f70850c0,1761245851635/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C279%2C5356%2C3012%29%3BResize%3D%28620%29' alt='The silhouette of a man looking out a window at two small grounded airplanes and the Toronto city skyline' width='620' height='349' title='An employee is pictured at Billy Bishop airport in Toronto, on Aug. 29, 2025.'/><p>Air Canada is introducing new daily routes from Billy Bishop Toronto City Airport to four U.S. cities — New York, Boston, Chicago and Washington, D.C.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/air-canada-us-flights-billy-bishop-9.6950710?cmp=rss)
+**Score:** 9.50
+
+## 31. Manitoba Government Invests More Than $1.2 Million For 24 Interlake Community Development Projects
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71117)
+**Score:** 10.50
+
+## 32. Manitoba Government Invests More Than $1.2 Million in Community Development Projects for Northern Manitoba
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71058)
+**Score:** 10.50
+
+## 33. Manitoba Government Introduces Legislation to Keep Vehicle Insurance Rates Affordable
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=70977)
+**Score:** 10.50
+
+## 34. Manitoba Government Opens Nominations for Excellence in Education Awards
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=70945)
+**Score:** 10.10
+
+## 35. Manitoba Supports Families with New Parenting Website
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71278)
+**Score:** 8.70
+
+## 36. Manitoba Protects Indigenous Languages with New Teaching Degree Programs
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71237)
+**Score:** 9.00
+
+## 37. Construction of $10-A-Day Child-Care Centre Begins at Riverview Health Centre
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71118)
+**Score:** 9.00
+
+## 38. New Victoria Emergency Department Project to Start in January 2026
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=70943)
+**Score:** 9.00
+
+## 39. Pointe-Claire mayor to appeal ethics ruling of city car misuse, cleared of 3 allegations
+Pointe-Claire mayor Tim Thomas has been mostly cleared in an ethics investigation into his use of city resources.
+📍 [Source](https://globalnews.ca/news/11491521/pointe-claire-mayor-ethics-ruling/)
+**Score:** 6.30
+
+## 40. Federal scientific research underfunded, report says
+📍 [Source](https://rabble.ca/labour/federal-scientific-research-underfunded-report-says/)
+**Score:** 8.80
+
+## 41. Photos: Matt Maltese caresses the keys at the Vogue Theatre
+A multi-hyphenate British-Canadian singer-songwriter.
+📍 [Source](https://www.straight.com/music/photos-matt-maltese-caresses-keys-at-vogue-theatre)
+**Score:** 9.00
+
+## 42. Thinking about cancelling prom? Ontario education minister says 'think again'
+<img src='https://i.cbc.ca/ais/f09d5c74-0d64-41d4-a6b7-054390aa0dd5,1761240757696/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C428%2C8192%2C4608%29%3BResize%3D%28620%29' alt='A man in a blue suit stands in front of other seated people' width='620' height='349' title='PC MPP Paul Calandra speaks during Question Period  at Queen's Park in Toronto on Tuesday, May 13, 2025. THE CANADIAN PRESS/Cole Burston'/><p>Education Minister Paul Calandra says if an Ontario school board doesn't restore prom plans for three of its high schools that cancelled them, he will step in and do it.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/education-minister-urges-prom-be-restored-9.6950452?cmp=rss)
+**Score:** 8.40
+
+## 43. Manitoba Grants Support Newcomers, Low-Income Manitobans Through Endowment Fund
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71257)
+**Score:** 7.50
+
+## 44. Manitoba Government Acts to Protect Democracy and Fundamental Freedoms
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71199)
+**Score:** 7.50
+
+## 45. Manitoba Government Welcomes Review of North Dakota Dairy Projects Near Red River
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71097)
+**Score:** 7.50
+
+## 46. Manitoba Government Extends Rent Freeze for Agricultural Crown Lands
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71059)
+**Score:** 7.50
+
+## 47. Manitoba Government Invests $1.2 Million in Mineral Exploration
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71060)
+**Score:** 7.50
+
+## 48. Manitoba Government's U.S. Trade Council to Ensure Province's Voice Heard During Trade Negotiations
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71017)
+**Score:** 7.50
+
+## 49. Manitoba Government's Path to Net Zero Will Protect Environment and Create Jobs
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=70957)
+**Score:** 7.50
+
+## 50. Manitoba Government Invests in New 24-7 Safe Space for Indigenous Women
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=70941)
+**Score:** 7.50
