@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-10-24T12:21:57.241Z",
+  "lastUpdated": "2025-10-24T18:16:17.390Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 275,
+      "totalPosts": 300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-24T12:21:48.020Z"
+      "lastSeen": "2025-10-24T18:16:07.295Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 275,
+      "totalPosts": 300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-24T12:21:50.091Z"
+      "lastSeen": "2025-10-24T18:16:09.463Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 275,
+      "totalPosts": 300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-24T12:21:52.336Z"
+      "lastSeen": "2025-10-24T18:16:11.977Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 275,
+      "totalPosts": 300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-24T12:21:54.286Z"
+      "lastSeen": "2025-10-24T18:16:14.266Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 275,
+      "totalPosts": 300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-24T12:21:56.237Z"
+      "lastSeen": "2025-10-24T18:16:16.386Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Please join the Democrats Abroad Disability/Seniors/Military Caucuses, for a look at the dynamics of voter engagement by people with disabilities in the 2024 elections.\nSeptember 8 at 12pm ET\nwww.democratsabroad.org/disability_v...\n#cripthevote #disabilityawareness",
-      "author": "demsabroadcanada.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "400 behind on rent. Facing eviction. Bills stacking up.\n\nThis isn’t “struggling.” It’s legislated poverty.\nODSP keeps people poor by design = $1,368/month to “live” in 2025.\n\n💸e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #MutualAidRequest  #MutualAid  #DisabilityJustice",
-      "author": "cycletherapyham.bsky.social",
-      "engagement": 21,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I’m one of 20 million+ people in the U.S. living with #LongCOVID.\nThis fight isn’t just personal—it’s part of a long struggle for health justice in a nation that’s never been healthy for all.\n\nMy new @Truthout piece:\n👉 truthout.org/articles/i-a...\n\n#DisabilityJustice #HealthEquity #PublicHealth",
-      "author": "jessehagopian.bsky.social",
-      "engagement": 115,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "400 behind on rent. Facing eviction. Bills stacking up.\n\nThis isn’t “struggling.” It’s legislated poverty.\nODSP keeps people poor by design = $1,368/month to “live” in 2025.\n\n💸e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #MutualAidRequest  #MutualAid  #DisabilityJustice",
-      "author": "cycletherapyham.bsky.social",
-      "engagement": 30,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "W3C Web Content Accessibility Guidelines 2.2 approved as ISO/IEC international standard\n\nwww.w3.org/press-releas...\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
       "author": "embeessem.bsky.social",
@@ -338,28 +296,70 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Civic duty done. 🗳 Remember, polls don't win elections. Votes do.\n#Áras2025 #Connolly4President #DisabilityRights #CarersRights #SpéirGorm",
+      "author": "niamhnicheallaigh.bsky.social",
+      "engagement": 21,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Invisible Disabilities Week\nOct. 20th - 26th\n\n#InvisibleDisabilitiesWeek #HiddenDisabilities #DisabilityAdvocacy #DisabilityRights #Disabilities #ChronicPain #Fibro #Fatigue #Neurodiversity #LivingWithDisability",
+      "author": "capucinep.bsky.social",
+      "engagement": 53,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "DEADLINE RIGHT NOWWWWWWW\n\nI need everyone in #MutualAid and/or #DisabilityJustice circles to PLEASE see this as a horrendous live example of the system AND PEOPLE failing the most multiply marginalised.",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 23,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "400 behind on rent. Facing eviction. Bills stacking up.\n\nThis isn’t “struggling.” It’s legislated poverty.\nODSP keeps people poor by design = $1,368/month to “live” in 2025.\n\n💸e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #MutualAidRequest  #MutualAid  #DisabilityJustice",
+      "author": "cycletherapyham.bsky.social",
+      "engagement": 41,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’m one of 20 million+ people in the U.S. living with #LongCOVID.\nThis fight isn’t just personal—it’s part of a long struggle for health justice in a nation that’s never been healthy for all.\n\nMy new @Truthout piece:\n👉 truthout.org/articles/i-a...\n\n#DisabilityJustice #HealthEquity #PublicHealth",
+      "author": "jessehagopian.bsky.social",
+      "engagement": 130,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 46
+      "count": 45
     },
     {
       "keyword": "accessibility",
-      "count": 40
+      "count": 37
+    },
+    {
+      "keyword": "a11y",
+      "count": 28
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 27
     },
     {
       "keyword": "cripthevote",
       "count": 26
-    },
-    {
-      "keyword": "a11y",
-      "count": 25
     },
     {
       "keyword": "altcitizen",
@@ -411,14 +411,14 @@
     },
     {
       "keyword": "mutualaid",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "nokings",
       "count": 6
     },
     {
-      "keyword": "humanrights",
+      "keyword": "bcpoli",
       "count": 5
     }
   ]
