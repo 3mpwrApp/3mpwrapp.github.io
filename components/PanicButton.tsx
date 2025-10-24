@@ -1,9 +1,10 @@
-import React from 'react';
-import { Pressable, StyleSheet, View, AccessibilityInfo } from 'react-native';
-import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { useAppPalette } from '../theme/usePalette';
 import * as Haptics from 'expo-haptics';
+import { useRouter } from 'expo-router';
+import React from 'react';
+import { AccessibilityInfo, Pressable, StyleSheet, View } from 'react-native';
+
+import { useAppPalette } from '../theme/usePalette';
 
 /**
  * PanicButton - Trauma-informed emergency exit
@@ -17,6 +18,7 @@ import * as Haptics from 'expo-haptics';
 export function PanicButton() {
   const router = useRouter();
   const palette = useAppPalette();
+  const styles = React.useMemo(() => createStyles(palette), [palette]);
   const [pressed, setPressed] = React.useState(false);
 
   const handlePress = async () => {
@@ -25,7 +27,7 @@ export function PanicButton() {
     // Haptic feedback (vibration) for confirmation
     try {
       await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
-    } catch (e) {
+    } catch {
       // Haptics not available on all devices
     }
 
@@ -36,7 +38,7 @@ export function PanicButton() {
 
     // Navigate to safe landing page immediately
     // Use replace to prevent back navigation
-    router.replace('/safe-landing');
+    router.replace('/safe-landing' as any);
   };
 
   return (
@@ -66,23 +68,25 @@ export function PanicButton() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    position: 'absolute',
-    bottom: 24,
-    right: 24,
-    zIndex: 9999,
-  },
-  button: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 8, // Android shadow
-  },
-});
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
+  return StyleSheet.create({
+    container: {
+      position: 'absolute',
+      bottom: 24,
+      right: 24,
+      zIndex: 9999,
+    },
+    button: {
+      width: 64,
+      height: 64,
+      borderRadius: 32,
+      justifyContent: 'center',
+      alignItems: 'center',
+      shadowColor: palette.text,
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 8, // Android shadow
+    },
+  });
+}

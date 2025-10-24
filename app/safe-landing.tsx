@@ -1,24 +1,29 @@
-import React, { useEffect, useRef } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  Pressable,
-  Animated,
-  Linking,
-  Platform,
-} from 'react-native';
-import { useRouter } from 'expo-router';
+// Safe Landing Page - Crisis/Panic Exit Screen
+// Uses therapeutic green color palette intentionally (not app theme colors)
+/* eslint-disable no-restricted-syntax */
+
 import { Ionicons } from '@expo/vector-icons';
-import { useAppPalette } from '../theme/usePalette';
+import { useRouter } from 'expo-router';
+import { useEffect, useRef } from 'react';
+import {
+    Animated,
+    Linking,
+    Platform,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
+} from 'react-native';
+
 import { useReduceMotionEnabled } from '../hooks/useA11y';
+import { useAppPalette } from '../theme/usePalette';
 
 export default function SafeLandingPage() {
   const router = useRouter();
   const palette = useAppPalette();
   const reduceMotion = useReduceMotionEnabled();
-  const styles = createStyles(palette);
+  const styles = createStyles();
 
   // Animated breathing circle
   const breatheAnim = useRef(new Animated.Value(0)).current;
@@ -94,10 +99,8 @@ export default function SafeLandingPage() {
         {reduceMotion ? (
           <View style={styles.staticBreathing}>
             <Text style={styles.breathingText}>
-              Breathe in for 4 seconds{'
-'}
-              Hold for 7 seconds{'
-'}
+              Breathe in for 4 seconds{'\n'}
+              Hold for 7 seconds{'\n'}
               Breathe out for 8 seconds
             </Text>
           </View>
@@ -210,7 +213,9 @@ export default function SafeLandingPage() {
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>) {
+function createStyles(_palette?: ReturnType<typeof useAppPalette>) {
+  // Intentionally using calming green theme colors for crisis situations
+  // These are not palette tokens - this is a safe space with specific therapeutic colors
   return StyleSheet.create({
     container: {
       flex: 1,

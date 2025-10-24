@@ -1,16 +1,16 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-  Alert,
-  Pressable,
-  RefreshControl,
-  SectionList,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  useColorScheme,
-  View,
+    Alert,
+    Pressable,
+    RefreshControl,
+    SectionList,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    useColorScheme,
+    View,
 } from "react-native";
 
 import Card from "../../components/Card";
@@ -20,23 +20,23 @@ import { useAuth } from "../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../data/campaigns";
 import { petitions } from "../../data/petitions";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
 import { logActivity } from "../../services/activity";
 import { fetchCampaigns } from "../../services/campaigns";
 import {
-  fsAddCampaign,
-  fsIncrementCampaignMembers,
-  fsJoinCampaign,
-  fsLeaveCampaign,
+    fsAddCampaign,
+    fsIncrementCampaignMembers,
+    fsJoinCampaign,
+    fsLeaveCampaign,
 } from "../../services/firestore";
 import {
-  CampaignsLocalProvider,
-  useCampaignsLocal,
+    CampaignsLocalProvider,
+    useCampaignsLocal,
 } from "../../store/campaignsLocal";
 import { useCounts } from "../../store/counts";
 import { useNetwork } from "../../store/network";
@@ -44,7 +44,7 @@ import { useRefresh } from "../../store/refresh";
 import { colors, type Palette } from "../../theme/colors";
 
  
-const { trackEvent } = require("../../../services/analyticsClient");
+const { trackEvent } = require("../../services/analyticsClient");
 
 function ScreenInner() {
   const scheme = useColorScheme();

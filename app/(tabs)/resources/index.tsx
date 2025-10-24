@@ -168,7 +168,7 @@ export default function ResourcesScreen() {
   const styles = React.useMemo(() => createStyles(palette), [palette]);
   
   return (
-    <ResponsiveScreenWrapper scrollable={false}>
+    <ResponsiveScreenWrapper>
       {/* Header */}
       <View
         style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}
