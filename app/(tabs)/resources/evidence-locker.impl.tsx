@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { usePostLoadAnnounce } from '../../../hooks/usePostLoadAnnounce';
 import { useTranslation } from '../../../i18n';
 import { s } from '../../../theme/spacing';
@@ -22,6 +23,7 @@ export default function EvidenceLockerImpl() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{t('templates.evidenceLocker.title', 'Evidence Locker')}</Text>
+      <DisclaimerBanner type="legal" compact />
       <View style={styles.row}>
         <A11yPressable style={styles.button} onPress={() => setPassModal({ mode: 'export' })}>
           <Text style={styles.buttonText}>{t('common.export', 'Export')}</Text>

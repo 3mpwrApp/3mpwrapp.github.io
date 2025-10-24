@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
 import { forecastPain } from '../../../services/wellness/painForecast';
@@ -17,6 +18,7 @@ export default function PainForecast(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.painForecast.title','Pain Forecast')}</Text>
+      <DisclaimerBanner type="medical" compact />
       {state && (
         <View style={s.card}>
           <Text style={s.text}>{t('wellness.painForecast.avg7d','7‑day average pain: {{n}}',{ n: state.avg7d.toFixed ? state.avg7d.toFixed(1) : state.avg7d })}</Text>

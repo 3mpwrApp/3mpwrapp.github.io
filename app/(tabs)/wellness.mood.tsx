@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import A11yTextInput from '../../components/A11yTextInput';
+import DisclaimerBanner from '../../components/DisclaimerBanner';
 import { ThemedText } from '../../components/ThemedText';
 import { ThemedView } from '../../components/ThemedView';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
@@ -75,6 +76,8 @@ function MoodInner() {
       >
         {t('mood.subtitle','Log how you feel to spot trends.')}
       </Text>
+
+      <DisclaimerBanner type="medical" compact />
 
       {/* Quick access wellness chips */}
       <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8 }}>

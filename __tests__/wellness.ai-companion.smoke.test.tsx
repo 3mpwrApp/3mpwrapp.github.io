@@ -3,7 +3,20 @@ import { fireEvent, render } from '@testing-library/react';
 // Minimal mocks
 jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ text:'#111', onPrimary:'#fff', primary:'#06f', muted:'#ddd', background:'#fff', surface:'#fafafa' }) }));
 // Use the complete mock from __mocks__/useA11y.js instead of partial inline mock
-jest.mock('../hooks/useA11y');
+jest.mock('../hooks/useA11y', () => ({
+  MAX_FONT_SCALE: 2,
+  useAnnounceOnMount: jest.fn(),
+  useFocusOnRefOnMount: jest.fn(),
+}));
+jest.mock('../i18n', () => ({
+  useTranslation: () => ({ t: (key: string, fb?: string) => fb || key })
+}));
+jest.mock('../components/A11yPressable', () => {
+  const { Pressable } = require('react-native');
+  return ({ children, onPress, style, ...props }: any) => (
+    require('react').createElement(Pressable, { onPress, style, ...props }, children)
+  );
+});
 
 jest.mock('../services/companion', () => ({
   addMood: jest.fn(async ()=>{}),

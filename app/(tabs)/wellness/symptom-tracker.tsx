@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
@@ -206,6 +207,7 @@ export default function SymptomTracker() {
       style={styles.container}
       contentContainerStyle={{ padding: 16 }}
     >
+      <DisclaimerBanner type="medical" compact />
       <View style={[styles.preview, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
         <Text style={[styles.title, { color: palette.primary }]}>How to Use Symptom Tracker</Text>
         <Text style={styles.previewText}>

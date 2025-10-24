@@ -10,6 +10,10 @@ jest.mock('../hooks/useA11y', () => ({
   useScreenReaderEnabled: () => false,
   useReduceMotionEnabled: () => false
 }));
+jest.mock('../i18n', () => ({
+  useTranslation: () => ({ t: (key: string, fb?: string) => fb || key }),
+  useTranslationSafe: () => ({ t: (key: string, fb?: string) => fb || key })
+}));
 
 // Router mock for favorites navigation
 jest.mock('expo-router', () => ({

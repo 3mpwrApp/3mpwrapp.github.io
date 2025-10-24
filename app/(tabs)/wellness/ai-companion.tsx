@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { addMood, listMoods } from '../../../services/companion';
@@ -60,6 +61,8 @@ export default function AICompanion() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Adaptive AI Companion screen">Adaptive AI Companion</Text>
+      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="ai" compact />
       <Text style={s.text} accessibilityLabel="Quick check-in prompt">Quick check-in: How are you today?</Text>
       <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
         {[['good','😊'],['ok','😐'],['bad','😔']].map(([m, emoji]) => (

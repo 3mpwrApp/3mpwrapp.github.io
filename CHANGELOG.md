@@ -6,7 +6,55 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-#### 🛡️ **Comprehensive Multi-Step Legal Acceptance Flow** ✅ **NEW**
+#### 🛡️ **Disclaimer Coverage Expansion - Phase 1** ✅ **NEW**
+- **Individual Feature Disclaimers** - Started systematic rollout of DisclaimerBanner to all feature screens:
+  - **Wellness Features (7 completed)**:
+    - ✅ Symptom Tracker - medical disclaimer
+    - ✅ Mood Tracker - medical disclaimer
+    - ✅ Pain Forecast - medical disclaimer
+    - ✅ Sleep & Energy Tracker - medical disclaimer
+    - ✅ Exercise Hub - medical disclaimer
+    - ✅ DBT Skills Matcher - medical disclaimer
+    - ✅ AI Companion - medical + AI disclaimers (dual protection)
+  - **Legal/Advocacy Features (3 completed)**:
+    - ✅ Evidence Locker - legal disclaimer
+    - ✅ AI Case Interpreter - AI + legal disclaimers (dual protection)
+    - ✅ Lawyer Finder - legal disclaimer
+  - **Hub Screens (4 already complete)**:
+    - ✅ Home - general disclaimer
+    - ✅ Wellness Hub - medical disclaimer
+    - ✅ Resources Hub - legal + AI disclaimers
+    - ✅ Advocacy Hub - legal disclaimer
+  - **Total: 14 screens with disclaimers** (Hub: 4, Wellness: 7, Legal: 3)
+  - **Remaining: 72 screens** to add disclaimers before launch (see disclaimer-coverage-audit.md)
+
+- **Legal Documentation Package** (`docs/release-prep/legal/`):
+  - ✅ **All Disclaimers Summary** (`all-disclaimers-summary.md`) - Website-ready FAQ format with:
+    - 10 comprehensive disclaimer sections (medical, legal, financial, AI, crisis, no warranty, liability, user responsibility, data privacy, third-party services)
+    - Quick checklist for users
+    - Crisis resources (911, 988, Crisis Text Line)
+    - Links to full Terms, Privacy, Community Guidelines
+    - Contact information (empowrapp08162025@gmail.com)
+  - ✅ **Disclaimer Coverage Audit** (`disclaimer-coverage-audit.md`) - Internal tracking document with:
+    - Complete audit of all 326 app screens
+    - 86 screens identified needing disclaimers by type (medical: 36, legal: 22, AI: 15, financial: 8, crisis: 5)
+    - Implementation checklist with code examples
+    - Success criteria and testing validation plan
+    - 8-10 hours estimated remaining work
+  - ✅ **Additional Legal Requirements** (`additional-legal-requirements.md`) - Compliance audit identifying 10 missing aspects:
+    - HIGH PRIORITY: COPPA compliance (age 18+), Community Guidelines ✅, Third-party disclosures
+    - MEDIUM PRIORITY: IP rights, Data export process, GDPR/CCPA compliance
+    - LOW PRIORITY: Accessibility statement, Arbitration clause, Cookie policy
+  - ✅ **Community Guidelines** (`community-guidelines.md`) - User-facing moderation policies, website-ready
+  - ✅ **User Guide** (`user-guide.md`) - 80+ page comprehensive documentation, website-ready
+
+- **Test Coverage** - Fixed smoke tests for disclaimer integration:
+  - ✅ Updated `wellness.exercise-hub.smoke.test.tsx` - Added i18n mock
+  - ✅ Updated `wellness.sleep-energy.smoke.test.tsx` - Added i18n + A11yPressable mocks
+  - ✅ Updated `wellness.ai-companion.smoke.test.tsx` - Added i18n + A11yPressable mocks
+  - **All 315 tests passing, 109 suites** ✅
+
+#### 🛡️ **Comprehensive Multi-Step Legal Acceptance Flow** ✅ **COMPLETED**
 - **Enhanced TermsGate Component** (`components/TermsGate.tsx`):
   - **9-step acceptance flow** requiring users to review ALL legal terms before app access
   - **Individual checkboxes** for each critical disclaimer (medical, legal, financial, AI, crisis, emergency, responsibility, data ownership)

@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
@@ -237,6 +238,8 @@ export default function SleepEnergyTracker() {
 			<Text style={styles.subtitle}>
 				Track sleep and energy; export summaries for clinicians or claims.
 			</Text>
+
+			<DisclaimerBanner type="medical" compact />
 
 			<Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} accessibilityLabel="Date input" accessibilityHint="Enter the date for your sleep entry." />
 			<Field label="Sleep hours" value={sleepHours} onChangeText={setSleepHours} keyboardType="numeric" accessibilityLabel="Sleep hours input" accessibilityHint="Enter the number of hours you slept." />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, Linking, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { exercises } from '../../../data/exercises';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
@@ -71,6 +72,7 @@ export default function ExerciseHub() {
   const combined = shortOnly ? baseList.filter(e => (e.minutes||0) <= 3) : baseList;
   return (
     <View style={s.container}>
+      <DisclaimerBanner type="medical" compact />
       <View style={[s.card, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
         <Text style={[s.cardTitle, { color: palette.primary }]}>How to Use Exercise Hub</Text>
         <Text style={{ color: palette.text, opacity: 0.95 }}>

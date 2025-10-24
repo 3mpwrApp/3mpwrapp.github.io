@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import MapEmbed from '../../../components/MapEmbed';
 import ProvincePicker from '../../../components/ProvincePicker';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
@@ -81,6 +82,7 @@ export default function LawyerFinder() {
         ListHeaderComponent={
           <View style={{ padding: 20, paddingBottom: 12 }}>
             <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.finder.title','Lawyer & Advocate Finder')}</Text>
+            <DisclaimerBanner type="legal" compact />
             {modeButtons}
             <TextInput placeholder={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} placeholderTextColor={palette.text+"77"} value={query} onChangeText={setQuery} style={s.input} accessibilityLabel={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} />
             <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>

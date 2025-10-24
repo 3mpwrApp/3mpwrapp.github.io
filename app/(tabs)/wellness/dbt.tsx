@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { matchDBTSkills } from '../../../services/wellness/dbtMatcher';
@@ -15,6 +16,7 @@ export default function DBTMatcher() {
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.dbt.title','DBT Skill Matcher')}</Text>
+      <DisclaimerBanner type="medical" compact />
       <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom:8 }}>
         {(['sad','angry','anxious','overwhelmed','numb'] as const).map(k => (
           <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" key={k} onPress={()=> setState(k)} style={[s.chip, state===k && { backgroundColor: palette.primary }]}>

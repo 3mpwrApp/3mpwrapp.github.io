@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
     MAX_FONT_SCALE,
@@ -64,6 +65,8 @@ export default function AiCaseInterpreter() {
         AI Case Interpreter
       </Text>
       <OnlineStatusBadge />
+      <DisclaimerBanner type="ai" compact />
+      <DisclaimerBanner type="legal" compact />
       <Text
         style={[
           s.subtitle,
