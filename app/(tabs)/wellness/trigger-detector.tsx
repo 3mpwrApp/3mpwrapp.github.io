@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
 import { getCachedJSON } from '../../../services/cache';
@@ -35,6 +36,7 @@ export default function TriggerDetector(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.triggers.title','Trigger Detector')}</Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.desc}>{t('wellness.triggers.desc','Suggests possible correlations from recent logs.')}</Text>
       {insights.map((l,i)=>(<Text key={i} style={s.line}>• {l}</Text>))}
     </View>

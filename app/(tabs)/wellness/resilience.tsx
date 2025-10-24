@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { useResilience } from '../../../store/resilience';
@@ -13,6 +14,7 @@ export default function ResiliencePoints() {
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.resilience.title','Resilience Points')}</Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.points}>{t('wellness.resilience.points','Points: {{points}}',{ points: rs.points })}</Text>
       <View style={{ gap:8 }}>
         {rs.actions.map(a => (

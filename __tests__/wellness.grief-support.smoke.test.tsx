@@ -9,6 +9,9 @@ jest.mock('../hooks/useA11y', () => ({
   useScreenReaderEnabled: () => false,
   useReduceMotionEnabled: () => false
 }));
+jest.mock('../i18n', () => ({
+  useTranslation: () => ({ t: (key: string, fb?: string) => fb || key })
+}));
 
 // File export mocks
 jest.mock('expo-file-system', () => {

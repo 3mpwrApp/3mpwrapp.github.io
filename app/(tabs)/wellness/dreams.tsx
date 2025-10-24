@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { interpretDream, useDreams } from '../../../services/wellness/dreams';
@@ -15,6 +16,7 @@ export default function Dreams() {
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.dreams.title','Dream Tracker & Interpreter')}</Text>
+      <DisclaimerBanner type="medical" compact />
       <TextInput style={s.input} placeholder={t('wellness.dreams.placeholder','Describe your dream...')} value={text} onChangeText={setText} multiline />
       <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" style={s.button} onPress={()=> { if (!text.trim()) return; add(text); setText(''); }}>
         <Text style={s.buttonText}>{t('common.save','Save')}</Text>

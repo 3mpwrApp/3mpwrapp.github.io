@@ -2,6 +2,7 @@ import React from "react";
 import { Linking, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { DyslexiaText } from "../../../components/DyslexiaText";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
@@ -133,6 +134,7 @@ export default function GriefSupport() {
       >
         Grief + Identity Support Hub
       </Text>
+      <DisclaimerBanner type="medical" compact />
       <DyslexiaText style={s.subtitle}>
         Resources for the loss of identity and purpose that can follow injury or
         disability.

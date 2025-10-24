@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { DyslexiaText } from '../../../components/DyslexiaText';
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
@@ -22,6 +23,7 @@ export default function HarmReduction(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.harm.title','Harm Reduction Guide')}</Text>
+      <DisclaimerBanner type="crisis" compact />
       <DyslexiaText style={s.desc}>{t('wellness.harm.desc','Practical steps to reduce harm and increase safety.')}</DyslexiaText>
       {items.map((x,i)=>(<DyslexiaText key={i} style={s.line}>• {x}</DyslexiaText>))}
     </View>

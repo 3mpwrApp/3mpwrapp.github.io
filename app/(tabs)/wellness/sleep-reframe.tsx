@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -17,6 +18,7 @@ export default function SleepReframe(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.sleepReframe.title','Sleep Reframe')}</Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.desc}>{t('wellness.sleepReframe.desc','Support better sleep with kind, practical reframes and routines.')}</Text>
       {tips.map((l,i)=>(<Text key={i} style={s.line}>• {l}</Text>))}
     </View>
