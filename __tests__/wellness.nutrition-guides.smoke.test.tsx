@@ -9,6 +9,9 @@ jest.mock('../hooks/useA11y', () => ({
   useScreenReaderEnabled: () => false,
   useReduceMotionEnabled: () => false
 }));
+jest.mock('../i18n', () => ({
+  useTranslation: () => ({ t: (key: string, fb?: string) => fb || key })
+}));
 
 // AsyncStorage mock
 jest.mock('@react-native-async-storage/async-storage', () => ({ __esModule: true, default: { getItem: jest.fn(async () => null), setItem: jest.fn(async () => {}), removeItem: jest.fn(async () => {}) } }));

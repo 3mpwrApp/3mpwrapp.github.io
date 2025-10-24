@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, Linking, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { recipes } from '../../../data/recipes';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
@@ -45,6 +46,7 @@ export default function NutritionGuides() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Diet & Nutrition Guides screen">Diet & Nutrition Guides</Text>
+      <DisclaimerBanner type="medical" compact />
       <A11yPressable
         onPress={exportFavorites}
         style={[s.btn,{ alignSelf:'flex-start', marginTop: 6 }]}

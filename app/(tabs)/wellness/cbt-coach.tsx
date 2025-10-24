@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
@@ -25,6 +26,7 @@ export default function CBTCoach(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.cbt.title','CBT Virtual Coach')}</Text>
+      <DisclaimerBanner type="medical" compact />
       <TextInput value={thought} onChangeText={setThought} placeholder={t('wellness.cbt.thought','Automatic thought')} placeholderTextColor={palette.text+'77'} style={s.input}/>
       <TextInput value={evidenceFor} onChangeText={setEvidenceFor} placeholder={t('wellness.cbt.evidenceFor','Evidence supporting')} placeholderTextColor={palette.text+'77'} style={s.input}/>
       <TextInput value={evidenceAgainst} onChangeText={setEvidenceAgainst} placeholder={t('wellness.cbt.evidenceAgainst','Evidence against')} placeholderTextColor={palette.text+'77'} style={s.input}/>

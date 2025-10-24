@@ -2,6 +2,7 @@ import React from "react";
 import { Alert, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -116,6 +117,7 @@ export default function AdaptiveMeditation() {
       >
         Adaptive Meditation & Relaxation
       </Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.subtitle}>
         Gentle guidance for chronic pain and limited mobility.
       </Text>

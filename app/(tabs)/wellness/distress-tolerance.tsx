@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { DyslexiaText } from '../../../components/DyslexiaText';
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
@@ -22,6 +23,7 @@ export default function DistressTolerance(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.distress.title','Distress Tolerance')}</Text>
+      <DisclaimerBanner type="medical" compact />
       <DyslexiaText style={s.desc}>{t('wellness.distress.desc','Reduce crisis intensity with brief, practical skills. Adapt to your body.')}</DyslexiaText>
       {lines.map((l,i)=>(<DyslexiaText key={i} style={s.line}>• {l}</DyslexiaText>))}
     </View>

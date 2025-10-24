@@ -2,6 +2,9 @@ import { fireEvent, render, waitFor } from '@testing-library/react';
 
 jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ text:'#111', onPrimary:'#fff', primary:'#06f', muted:'#ddd', background:'#fff', surface:'#fafafa' }) }));
 jest.mock('../hooks/useA11y', () => ({ MAX_FONT_SCALE: 2, useAnnounceOnMount: () => {}, useFocusOnRefOnMount: () => {}, useScreenReaderEnabled: () => false, useReduceMotionEnabled: () => false }));
+jest.mock('../i18n', () => ({
+  useTranslation: () => ({ t: (key: string, fb?: string) => fb || key })
+}));
 
 // File export mocks
 jest.mock('expo-file-system', () => {
