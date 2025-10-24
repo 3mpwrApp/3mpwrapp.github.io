@@ -1,14 +1,14 @@
 # Analytics Event Report
 
-Generated: 2025-10-23T20:01:30.729Z
+Generated: 2025-10-24T03:49:17.351Z
 
 ## Summary
 
 - Registry events: 43
-- Unique events referenced in code: 27
-- Total literal emissions (static scan): 33
+- Unique events referenced in code: 26
+- Total literal emissions (static scan): 28
 - Missing (used not registered): 0
-- Unused (registered not used): 16
+- Unused (registered not used): 17
 - Sensitive field occurrences (schema): 2
 - Classification counts: secret=1, pii=1
 
@@ -19,6 +19,7 @@ Generated: 2025-10-23T20:01:30.729Z
 - advocacy.finder.email
 - advocacy.finder.open_map
 - advocacy.finder.save_toggle
+- letter_insert_from_trackers
 - events.export.ics
 - events.export.csv
 - evidence.export.encrypted
@@ -64,7 +65,6 @@ Generated: 2025-10-23T20:01:30.729Z
 
 | Event | Count | Status |
 |-------|------:|--------|
-| letter_insert_from_trackers | 5 | OK |
 | tracker_add_entry | 2 | OK |
 | tracker_share | 2 | OK |
 | advocacy.ask.submitted | 1 | OK |
@@ -73,17 +73,17 @@ Generated: 2025-10-23T20:01:30.729Z
 | assistant.quick_prompt | 1 | OK |
 | assistant.recents.clear | 1 | OK |
 | advocacy.world.view | 1 | OK |
-| campaign_create | 1 | OK |
-| campaign_leave | 1 | OK |
-| campaign_join | 1 | OK |
-| campaign_share | 1 | OK |
-| podcast_share | 1 | OK |
 | account_delete | 1 | OK |
 | account_delete_failed | 1 | OK |
 | energy_set_daily | 1 | OK |
 | energy_spend | 1 | OK |
 | energy_reset_day | 1 | OK |
 | wellness_opposite_next_step | 1 | OK |
+| campaign_create | 1 | OK |
+| campaign_leave | 1 | OK |
+| campaign_join | 1 | OK |
+| campaign_share | 1 | OK |
+| podcast_share | 1 | OK |
 | letter_wizard_insert_trackers | 1 | OK |
 | notification.delivered | 1 | OK |
 | notification.quiet_suppressed | 1 | OK |
