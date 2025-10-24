@@ -4,21 +4,49 @@ A privacy-first empowerment app with enterprise-grade security, Indigenous langu
 
 **Status**: Production Ready (99/100) | **Bundle Size**: 3.0 MB | **Tests**: 315 passing | **Email**: empowrapp08162025@gmail.com
 
-## ⚠️ IMPORTANT DISCLAIMERS
+## ⚠️ IMPORTANT LEGAL DISCLAIMERS
 
-**THIS APP DOES NOT PROVIDE:**
-- ⚕️ **Medical advice, diagnosis, or treatment** - Wellness tools are informational only. Always consult healthcare providers.
-- ⚖️ **Legal advice or attorney-client relationship** - Legal resources are educational only. Consult licensed attorneys.
-- 💰 **Financial, investment, or tax advice** - Benefits information is general. Consult financial advisors.
-- 🤖 **Guaranteed accuracy from AI** - AI-generated content may contain errors. Always verify with professionals.
-- 🆘 **Emergency or crisis intervention** - Call 911 or 988 (Suicide & Crisis Lifeline) for emergencies.
+**BEFORE USING THIS APP, YOU MUST ACCEPT:**
 
-**YOU ARE RESPONSIBLE FOR:**
+### 📋 **9-Step Comprehensive Legal Acceptance Flow**
+Upon first opening the app, ALL users are required to:
+1. **Review Welcome Screen** - Overview of all legal requirements
+2. **Scroll Through Terms of Service v3.0** - Cannot proceed until scrolled to bottom
+3. **Scroll Through Privacy Policy v2.0** - Cannot proceed until scrolled to bottom
+4. ✅ **Accept Medical Disclaimer** - Checkbox required
+5. ✅ **Accept Legal Disclaimer** - Checkbox required
+6. ✅ **Accept Financial Disclaimer** - Checkbox required
+7. ✅ **Accept AI Content Disclaimer** - Checkbox required
+8. ✅ **Accept Crisis & Emergency Disclaimer** - 2 checkboxes required
+9. ✅ **Accept Final Agreement** - User responsibility + data ownership
+
+**YOU CANNOT USE THE APP UNTIL ALL STEPS ARE COMPLETED.**
+
+### **THIS APP DOES NOT PROVIDE:**
+- ⚕️ **Medical advice, diagnosis, or treatment** - Wellness tools are informational only. Always consult healthcare providers. IN EMERGENCIES, CALL 911.
+- ⚖️ **Legal advice or attorney-client relationship** - Legal resources are educational only. Consult licensed attorneys. Filing errors can have serious consequences.
+- 💰 **Financial, investment, or tax advice** - Benefits information is general. Consult qualified financial advisors and tax professionals.
+- 🤖 **Guaranteed accuracy from AI** - AI-generated content may contain errors, biases, or outdated information. ALWAYS verify with professionals.
+- 🆘 **Emergency or crisis intervention** - This app CANNOT detect, prevent, or respond to emergencies. Call 911 or 988 (Suicide & Crisis Lifeline) immediately.
+
+### **LIMITATION OF LIABILITY:**
+- Maximum developer liability: **$100 USD or $0 for free users**
+- App provided **"AS IS"** with **NO WARRANTY** of any kind
+- No guarantee of accuracy, completeness, or fitness for any purpose
+- Developer not responsible for medical, legal, financial, or technical outcomes
+
+### **YOU ARE RESPONSIBLE FOR:**
 - All decisions and actions based on app content
-- Independently verifying information with qualified professionals
+- Independently verifying all information with qualified professionals
 - Understanding limitations of app features and tools
+- Not relying on this app as a substitute for professional services
 
-**See** `docs/release-prep/legal/terms-of-service.md` **for complete legal protections and disclaimers.**
+### **Version Tracking:**
+- Current Terms: **v3.0** (October 24, 2025)
+- Current Privacy Policy: **v2.0** (October 12, 2025)
+- **When terms are updated, you must re-accept** on next app open
+
+**See** `docs/release-prep/legal/terms-of-service.md` **and** `docs/release-prep/legal/privacy-policy.md` **for complete legal protections.**
 
 ---
 

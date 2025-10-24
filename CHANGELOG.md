@@ -6,6 +6,32 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+#### 🛡️ **Comprehensive Multi-Step Legal Acceptance Flow** ✅ **NEW**
+- **Enhanced TermsGate Component** (`components/TermsGate.tsx`):
+  - **9-step acceptance flow** requiring users to review ALL legal terms before app access
+  - **Individual checkboxes** for each critical disclaimer (medical, legal, financial, AI, crisis, emergency, responsibility, data ownership)
+  - **Scroll-to-bottom requirement** for Terms and Privacy Policy to prevent accidental acceptance
+  - **Version tracking** (Terms v3.0, Privacy v2.0) - users must re-accept when terms are updated
+  - **Comprehensive coverage**:
+    1. Welcome screen explaining all requirements
+    2. Terms of Service (must scroll to bottom)
+    3. Privacy Policy (must scroll to bottom)
+    4. Medical Disclaimer (checkbox required)
+    5. Legal Disclaimer (checkbox required)
+    6. Financial Disclaimer (checkbox required)
+    7. AI Content Disclaimer (checkbox required)
+    8. Crisis & Emergency Services Disclaimer (2 checkboxes required)
+    9. Final Agreement (2 checkboxes for user responsibility + data ownership)
+  - **Cannot proceed** until ALL disclaimers are read and ALL checkboxes are checked
+  - **Persistent storage** via AsyncStorage with version validation
+  - **Full i18n support** for all disclaimer text (100+ new translation keys)
+
+- **Complete i18n Coverage** (`locales/en/common.json`):
+  - Added `termsGate` namespace with 100+ translation keys
+  - All disclaimer text, acceptance prompts, warnings fully translatable
+  - Prepared for Spanish/French translations
+  - Structured by step: welcome, terms, privacy, medical, legal, financial, ai, crisis, final
+
 #### 🛡️ **Comprehensive Legal Disclaimers & Protections** ✅
 - **DisclaimerBanner Component** (`components/DisclaimerBanner.tsx`):
   - Reusable disclaimer component with 6 types: medical, legal, financial, AI, crisis, general
@@ -26,11 +52,13 @@ All notable changes to this project will be documented in this file.
   - **Maximum liability limitations** ($100 or $0 for free users)
   - **Developer protection** from medical, legal, financial, and technical outcomes
 
-- **Enhanced TermsGate** (`components/TermsGate.tsx`):
-  - Updated first-launch terms screen with prominent disclaimers
-  - Clear bullet points for what app does NOT provide
-  - Emphasized limitations and user responsibility
-  - Link to full Terms of Service
+- **Privacy Policy v2.0** (`docs/release-prep/legal/privacy-policy.md`):
+  - **100% User Data Ownership Guarantee** prominently displayed
+  - Local-first, air-gapped architecture explained in detail
+  - AES-256 encryption, hardware-backed keys, zero tracking
+  - Phase 2 updates: Legal workflow automation, indigenous languages, advanced security
+  - Complete disclosure of what data is collected and how it's used
+  - User rights and controls clearly documented
 
 - **Disclaimer Integration**:
   - **Home screen**: General disclaimer on landing page
@@ -53,12 +81,17 @@ All notable changes to this project will be documented in this file.
   - Instant navigation to safe landing page (no questions asked)
   - Privacy-respecting (no usage logging)
 
+### Changed
+- **Legal Acceptance Flow**: Upgraded from simple single-screen acceptance to comprehensive 9-step multi-screen flow with individual disclaimers and version tracking
+- **AsyncStorage Key**: Changed from `empowr.terms.accepted.v1` to `empowr.legal.acceptance.v3` for new acceptance state tracking
+
 ### Fixed
 
 - ✅ Import path error in `app/campaigns/index.tsx` (analyticsClient path corrected)
 - ✅ Resources screen scrolling issue (removed `scrollable={false}`)
 - ✅ All lint warnings in new safety features
 - ✅ JurisdictionPanel import in advocacy screen
+- ✅ Inline hex color in TermsGate replaced with palette token
 
 ### Documentation
 
