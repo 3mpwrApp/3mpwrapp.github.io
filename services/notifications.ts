@@ -115,7 +115,7 @@ export async function getExpoPushToken(): Promise<string | null> {
   const Constants = getConstants();
   if (Constants?.default?.appOwnership === "expo" || Constants?.appOwnership === "expo") {
     if (__DEV__) {
-      console.info('[expo-notifications] Push tokens not available in Expo Go. Use a development build for full push notification support.');
+      console.warn('[expo-notifications] Push tokens not available in Expo Go. Use a development build for full push notification support.');
     }
     return null;
   }
@@ -128,7 +128,7 @@ export async function getExpoPushToken(): Promise<string | null> {
     if (__DEV__) {
       const err = error as Error;
       if (err?.message?.includes('Expo Go')) {
-        console.info('[expo-notifications] Expo Go detected - push tokens unavailable');
+        console.warn('[expo-notifications] Expo Go detected - push tokens unavailable');
       } else if (err?.message?.includes('projectId')) {
         console.warn('[expo-notifications] Missing projectId in app config');
       }

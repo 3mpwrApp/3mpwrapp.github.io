@@ -3,7 +3,6 @@ import { Tabs } from "expo-router";
 import { StyleSheet, useColorScheme } from "react-native";
 
 import VoiceController from "../../components/VoiceController";
-import { useWhatsNewBadge } from "../../hooks/useWhatsNewBadge";
 import { useTranslation } from "../../i18n";
 import { colors } from "../../theme/colors";
 
@@ -13,7 +12,6 @@ export default function TabsLayout() {
   const activeTint = palette.primary;
   const inactiveTint = palette.muted;
   const { t } = useTranslation();
-  const wnBadge = useWhatsNewBadge();
   // Unread badge for Inbox (tab hidden) — not used currently
 
   return (

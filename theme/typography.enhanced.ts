@@ -13,9 +13,8 @@ import { Platform } from 'react-native';
 
 import type { Palette } from './colors';
 
-// Minimum WCAG AAA contrast ratios
-const MIN_CONTRAST = 7; // AAA for normal text
-const MIN_CONTRAST_LARGE = 4.5; // AAA for large text (18pt+)
+// Note: Minimum WCAG AAA contrast ratios: 7:1 for normal text, 4.5:1 for large text (18pt+)
+// These will be used when implementing proper contrast calculation
 
 /**
  * Calculate optimal line height for given font size
@@ -146,16 +145,16 @@ export function createTextStyles(palette: Palette) {
  * Returns true if contrast meets WCAG AAA standards
  */
 export function hasGoodContrast(
-  textColor: string,
-  backgroundColor: string,
-  fontSize: number
+  _textColor: string,
+  _backgroundColor: string,
+  _fontSize: number
 ): boolean {
   // This is a simplified check - in production, use a proper contrast calculation library
-  const isLargeText = fontSize >= fontSizes.lg;
-  const requiredRatio = isLargeText ? MIN_CONTRAST_LARGE : MIN_CONTRAST;
+  // const isLargeText = fontSize >= fontSizes.lg;
+  // const requiredRatio = isLargeText ? MIN_CONTRAST_LARGE : MIN_CONTRAST;
   
   // For now, assume our palette has good contrast
-  // In production, calculate actual contrast ratio
+  // In production, calculate actual contrast ratio and use the parameters above
   return true;
 }
 

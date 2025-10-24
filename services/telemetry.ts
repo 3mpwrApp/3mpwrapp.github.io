@@ -24,7 +24,7 @@ export async function initSentry(dsn?: string) {
         // @ts-ignore
         global.tslib = await import('tslib');
       }
-    } catch (tslibErr) {
+    } catch {
       if (__DEV__) logger.warn('Sentry init skipped: tslib unavailable');
       return;
     }

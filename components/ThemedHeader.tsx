@@ -82,7 +82,7 @@ const MenuItem = React.memo<{
   path: string;
   onPress: () => void;
   palette: Palette;
-}>(({ label, path, onPress, palette }) => (
+}>(({ label, onPress, palette }) => (
   <Pressable
     onPress={onPress}
     accessibilityRole="button"
