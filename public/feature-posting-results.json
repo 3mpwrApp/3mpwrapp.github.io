@@ -1,18 +1,18 @@
 {
-  "feature": "Master Letter Generator",
-  "date": "2025-10-23",
-  "articleUrl": "https://3mpwrapp.github.io/blog/2025-10-23-feature-spotlight-master-letter-generator/",
-  "timestamp": "2025-10-23T10:20:59.015Z",
+  "feature": "Evidence Locker",
+  "date": "2025-10-24",
+  "articleUrl": "https://3mpwrapp.github.io/blog/2025-10-24-feature-spotlight-evidence-locker/",
+  "timestamp": "2025-10-24T10:21:21.857Z",
   "results": {
     "mastodon": {
       "success": true,
       "message": "Posted successfully",
-      "url": "https://mastodon.social/@3mpwrApp/115422976807957328"
+      "url": "https://mastodon.social/@3mpwrApp/115428640573718500"
     },
     "bluesky": {
       "success": true,
       "message": "Posted successfully",
-      "url": "https://bsky.app/profile/3mpwrapp.bsky.social/post/3m3u572ppvj2w"
+      "url": "https://bsky.app/profile/3mpwrapp.bsky.social/post/3m3wnonwr4h24"
     }
   }
 }
