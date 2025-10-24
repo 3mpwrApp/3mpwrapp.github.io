@@ -2,6 +2,7 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../../components/SearchBar';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
@@ -130,6 +131,9 @@ export default function WellnessHub() {
       <Text style={textStyles.body} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('wellness.hub.subtitle', 'Evidence-based tools for mood, pain, resilience, and recovery.')}
       </Text>
+      
+      <DisclaimerBanner type="medical" compact />
+      
       <SearchBar
         value={query}
         onChangeText={setQuery}

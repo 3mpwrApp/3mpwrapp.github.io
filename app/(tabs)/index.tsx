@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
 import DisabilityWizard from '../../components/DisabilityWizard';
+import DisclaimerBanner from '../../components/DisclaimerBanner';
 import GapView from '../../components/GapView';
 import { HomeGuide } from '../../components/HomeGuide';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
@@ -173,6 +174,8 @@ const HomeScreen = React.memo(() => {
       >
         {t('home.title','Home')} <Text style={[textStyles.bodySmall, { opacity: 0.8 }]}>(Beta)</Text>
       </Text>
+      
+      <DisclaimerBanner type="general" compact />
       
       {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
       <Link href={'/(tabs)/advocacy/ask' as any} asChild>

@@ -4,6 +4,24 @@ A privacy-first empowerment app with enterprise-grade security, Indigenous langu
 
 **Status**: Production Ready (99/100) | **Bundle Size**: 3.0 MB | **Tests**: 315 passing | **Email**: empowrapp08162025@gmail.com
 
+## ⚠️ IMPORTANT DISCLAIMERS
+
+**THIS APP DOES NOT PROVIDE:**
+- ⚕️ **Medical advice, diagnosis, or treatment** - Wellness tools are informational only. Always consult healthcare providers.
+- ⚖️ **Legal advice or attorney-client relationship** - Legal resources are educational only. Consult licensed attorneys.
+- 💰 **Financial, investment, or tax advice** - Benefits information is general. Consult financial advisors.
+- 🤖 **Guaranteed accuracy from AI** - AI-generated content may contain errors. Always verify with professionals.
+- 🆘 **Emergency or crisis intervention** - Call 911 or 988 (Suicide & Crisis Lifeline) for emergencies.
+
+**YOU ARE RESPONSIBLE FOR:**
+- All decisions and actions based on app content
+- Independently verifying information with qualified professionals
+- Understanding limitations of app features and tools
+
+**See** `docs/release-prep/legal/terms-of-service.md` **for complete legal protections and disclaimers.**
+
+---
+
 ## 🎯 Google Play Readiness - October 2025
 
 ### ✅ Launch Preparation Complete

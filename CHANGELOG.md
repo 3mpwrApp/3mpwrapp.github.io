@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] - 2025-10-24
+
+### Added
+
+#### 🛡️ **Comprehensive Legal Disclaimers & Protections** ✅
+- **DisclaimerBanner Component** (`components/DisclaimerBanner.tsx`):
+  - Reusable disclaimer component with 6 types: medical, legal, financial, AI, crisis, general
+  - Compact and full display modes
+  - Accessible with proper ARIA labels and screen reader support
+  - Integrated across key screens
+
+- **Updated Terms of Service** (`docs/release-prep/legal/terms-of-service.md` v3.0):
+  - **Comprehensive disclaimers** covering:
+    - ⚕️ NOT MEDICAL ADVICE - Wellness tools are informational only
+    - ⚖️ NOT LEGAL ADVICE - Legal resources are educational only  
+    - 💰 NOT FINANCIAL ADVICE - Benefits info is general information only
+    - 🤖 AI-GENERATED CONTENT - May contain errors, requires verification
+    - 🆘 CRISIS SERVICES - Not a substitute for 911/emergency services
+    - ⚠️ NO WARRANTY - "As is" basis with no guarantees
+    - 🚫 LIMITATION OF LIABILITY - Maximum protection from all claims
+  - **User responsibility clauses** for informed consent
+  - **Maximum liability limitations** ($100 or $0 for free users)
+  - **Developer protection** from medical, legal, financial, and technical outcomes
+
+- **Enhanced TermsGate** (`components/TermsGate.tsx`):
+  - Updated first-launch terms screen with prominent disclaimers
+  - Clear bullet points for what app does NOT provide
+  - Emphasized limitations and user responsibility
+  - Link to full Terms of Service
+
+- **Disclaimer Integration**:
+  - **Home screen**: General disclaimer on landing page
+  - **Wellness Hub**: Medical disclaimer for all health tools
+  - **Resources**: Legal disclaimer + AI disclaimer for AI tools section
+  - **Advocacy Hub**: Legal disclaimer for all legal resources
+
+#### 🆘 **Trauma-Informed Safety Features** (From GitHub)
+- **Safe Landing Page** (`app/safe-landing.tsx`):
+  - Calming green therapeutic color scheme (intentional, not palette colors)
+  - 4-7-8 breathing exercise with animated circle
+  - Crisis resource listings (988, Crisis Text Line, DV Hotline)
+  - Grounding exercises (5-4-3-2-1 technique)
+  - Exit options (continue to app or close)
+
+- **PanicButton Component** (`components/PanicButton.tsx`):
+  - Floating emergency exit button (always visible)
+  - Haptic feedback confirmation
+  - Screen reader announcement: "Emergency exit activated. You are safe."
+  - Instant navigation to safe landing page (no questions asked)
+  - Privacy-respecting (no usage logging)
+
+### Fixed
+
+- ✅ Import path error in `app/campaigns/index.tsx` (analyticsClient path corrected)
+- ✅ Resources screen scrolling issue (removed `scrollable={false}`)
+- ✅ All lint warnings in new safety features
+- ✅ JurisdictionPanel import in advocacy screen
+
+### Documentation
+
+- `docs/release-prep/legal/terms-of-service.md` - Comprehensive legal protections (v3.0)
+- Updated terms gate with clear disclaimers
+- All screens now display appropriate disclaimers
+
 ## [Unreleased] - 2025-10-21
 
 ### Added

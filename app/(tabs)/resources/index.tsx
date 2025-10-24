@@ -6,6 +6,7 @@ import { Linking, RefreshControl, SectionList, StyleSheet, Text, View } from "re
 import A11yPressable from "../../../components/A11yPressable";
 import Card from "../../../components/Card";
 import ContrastToggle from "../../../components/ContrastToggle";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import ResponsiveScreenWrapper from "../../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
@@ -193,6 +194,9 @@ export default function ResourcesScreen() {
       <Text style={textStyles.body} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t("resources.intro", "Find helpful guides and materials.")}
       </Text>
+      
+      <DisclaimerBanner type="legal" compact />
+      
       {region === "all" && !province && (
         <Text style={[textStyles.bodySmall, { opacity: 0.75, marginBottom: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
           Tip: Set your province in Settings to filter resources.
@@ -203,6 +207,7 @@ export default function ResourcesScreen() {
       <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 16 }]}>
         🤖 AI Tools
       </Text>
+      <DisclaimerBanner type="ai" compact />
       <ResourceLink href="/(tabs)/resources/ai-decision-simplifier" title="AI Decision Simplifier" badge="Coming soon" />
       <ResourceLink href="/(tabs)/resources/appeal-coach" title="Appeal Coach" badge="Beta" />
       <ResourceLink href="/(tabs)/resources/body-mechanics-advisor" title="Body Mechanics Advisor" />

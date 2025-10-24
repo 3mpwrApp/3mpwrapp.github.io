@@ -2,6 +2,7 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import JurisdictionDeadlineCalculator from '../../../components/JurisdictionDeadlineCalculator';
 import JurisdictionFormHelper from '../../../components/JurisdictionFormHelper';
 import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
@@ -76,6 +77,9 @@ export default function AdvocacyHub() {
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
     <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.hub.title','Advocacy Hub')}</Text>
     <Text style={s.subtitle}>{t('advocacy.hub.subtitle','Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.')}</Text>
+  
+  <DisclaimerBanner type="legal" compact />
+  
   <JurisdictionPanel />
   <JurisdictionDeadlineCalculator />
   <JurisdictionFormHelper />
