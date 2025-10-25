@@ -2,11 +2,12 @@ import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useJurisdiction } from "../../../store/jurisdiction";
@@ -196,6 +197,7 @@ export default function RightsChecker() {
       >
         {t('rightsChecker.title','Automated Rights Checker')}
       </Text>
+      <DisclaimerBanner type="legal" compact />
       <Text style={styles.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.subtitle','Answer a few questions to get a plain-language overview of your rights and options.')}</Text>
 
       <Question title={t('rightsChecker.q1','Are you currently employed?')}>

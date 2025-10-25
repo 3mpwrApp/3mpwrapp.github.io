@@ -2,6 +2,7 @@ import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { DyslexiaText } from "../../../components/DyslexiaText";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
@@ -78,7 +79,10 @@ export default function EvidenceChecklist() {
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }} accessibilityLabel={t('templates.checklist.screenLabel','Evidence checklist screen')}>
-      <Text ref={titleRef} accessibilityRole='header' style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('templates.checklist.title','Evidence Checklist')}</Text>
+            <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        {t('templates.checklist.title','Evidence Checklist')}
+      </Text>
+      <DisclaimerBanner type="legal" compact />
       <View style={s.actionsRow}>
   <A11yPressable onPress={()=>{ setShowInfo(v=>!v); announce(showInfo? t('common.hide','Hide') : t('templates.checklist.toggleInfo','Toggle instructions')); }} style={s.infoBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.toggleInfo','Toggle instructions')}><Text style={s.infoBtnText}>{showInfo ? t('common.hide','Hide') : t('common.show','Show')}</Text></A11yPressable>
         <A11yPressable onPress={copySummary} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.copy','Copy summary')}><Text style={s.secondaryBtnText}>{t('templates.checklist.copy','Copy summary')}</Text></A11yPressable>

@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -47,6 +48,7 @@ export default function ImpactSimulator() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Impact Simulator
       </Text>
+      <DisclaimerBanner type="legal" compact />
       <Text style={styles.subtitle}>
         Data-driven empathy: simulate how changes in law or workplace policy could affect real disabled/injured people.
         Configure scenarios, then view estimated impacts across income, timelines, appeals, and health outcomes.

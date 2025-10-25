@@ -2,6 +2,7 @@ import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useAppPalette } from "../../../theme/usePalette";
  
@@ -97,6 +98,8 @@ export default function AIDecisionSimplifier() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         AI Decision Simplifier
       </Text>
+      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="ai" compact />
       <Text style={styles.subtitle}>
         Upload a decision letter to get a plain-language summary of what it means, the next steps, and deadlines.
         Your document stays on your device unless you explicitly opt in to share.

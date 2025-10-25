@@ -4,6 +4,7 @@ import React from 'react';
 import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -70,6 +71,7 @@ export default function RehabTracker() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Rehab Progress Tracker</Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.text}>Log small wins to boost morale and share with providers.</Text>
       <View style={{ flexDirection:'row', gap:8, marginBottom: 6 }}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setView('local')} accessibilityRole='button' accessibilityState={{ selected: view==='local' }} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></A11yPressable>

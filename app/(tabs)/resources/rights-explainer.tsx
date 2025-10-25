@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -118,6 +119,7 @@ export default function RightsExplainer() {
         </View>
       </View>
       <Text style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.heading','Multi‑Language Rights Explainer')}</Text>
+      <DisclaimerBanner type="legal" compact />
       <View style={{ flexDirection:'row', gap:8, marginTop: 8, alignItems:'center', flexWrap:'wrap' }}>
         <A11yPressable
           onPress={async()=>{ const next = !plainHere; setPlainHere(next); try { await AsyncStorage?.setItem?.('rightsExplainer:plain:v1', next ? '1' : '0'); } catch{} }}

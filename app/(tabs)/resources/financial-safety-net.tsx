@@ -2,6 +2,7 @@ import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useAppPalette } from "../../../theme/usePalette";
 
@@ -80,6 +81,7 @@ export default function FinancialSafetyNetNavigator() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Financial Safety Net Navigator
       </Text>
+      <DisclaimerBanner type="financial" compact />
       <Text style={styles.subtitle}>
         Step-by-step guidance to combine Workers’ Comp, CPP‑D, ODSP/provincial supports, and EI without overlap penalties.
         This is a planning tool — verify specifics with official program rules.
