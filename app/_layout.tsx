@@ -18,7 +18,7 @@ import Footer from "../components/ThemedFooter";
 import Header from "../components/ThemedHeader";
 import { channels } from "../data/community";
 import { setSessionSeed } from "../services/session";
-import { useCommunity , CommunityProvider } from "../store/community";
+import { CommunityProvider, useCommunity } from "../store/community";
 import { CountsProvider } from "../store/counts";
 import { FavoritesProvider } from "../store/favorites";
 import { NetworkProvider, useNetwork } from "../store/network";
@@ -292,7 +292,7 @@ function CommunityPreload() {
     }
     
     // Optional: Send to analytics in production
-    // logEvent('community_preload', { channels: channels.length, duration_ms: duration });
+    // trackEvent('community_preload', { channels: channels.length, duration_ms: duration });
   }, [seed]);
   return null;
 }
