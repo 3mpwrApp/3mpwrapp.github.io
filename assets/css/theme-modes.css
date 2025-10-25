@@ -1,0 +1,282 @@
+/**
+ * THEME MODES - Dark, Light, and High Contrast Support
+ * Global CSS variables and styles for all modes
+ * Apply to all pages automatically via CSS variables
+ * 
+ * Usage: The main style.css already handles body[data-theme="dark"] and body[data-contrast="high"]
+ * This file provides additional support for custom page elements
+ */
+
+/* ========================================
+   CSS VARIABLES FOR ALL THEME MODES
+   ======================================== */
+
+:root {
+  /* Light mode (default) */
+  --bg-color: #fafbfd;
+  --text-color: #222222;
+  --text-secondary: #555;
+  --main-bg: #ffffff;
+  --card-bg: #f9f9f9;
+  --border-color: #ddd;
+  --link-color: #007bff;
+  --link-hover: #0056b3;
+  --header-bg: #ffffff;
+  --header-text: #222222;
+  --nav-hover: #f5f5f5;
+  --focus-outline: #0066cc;
+  
+  /* Button colors */
+  --btn-primary-bg: #007bff;
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #6c757d;
+  --btn-secondary-text: #ffffff;
+  
+  /* Status colors */
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --error-color: #dc3545;
+  --info-color: #17a2b8;
+}
+
+/* ========================================
+   DARK MODE VARIABLES
+   ======================================== */
+
+body[data-theme="dark"] {
+  --bg-color: #0e1726;
+  --text-color: #f2f5f9;
+  --text-secondary: #b8c1cc;
+  --main-bg: #111a2b;
+  --card-bg: #1a2332;
+  --border-color: #355c7d;
+  --link-color: #a8c7ff;
+  --link-hover: #cfe8ff;
+  --header-bg: #0b2545;
+  --header-text: #ffffff;
+  --nav-hover: #183c65;
+  --focus-outline: #82aaff;
+  
+  /* Button colors for dark mode */
+  --btn-primary-bg: #4a7dba;
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #355c7d;
+  --btn-secondary-text: #f2f5f9;
+  
+  /* Status colors for dark mode */
+  --success-color: #4ade80;
+  --warning-color: #fbbf24;
+  --error-color: #f87171;
+  --info-color: #60a5fa;
+}
+
+/* ========================================
+   HIGH CONTRAST MODE OVERRIDES
+   ======================================== */
+
+body[data-contrast="high"] {
+  --bg-color: #ffffff !important;
+  --text-color: #000000 !important;
+  --text-secondary: #000000 !important;
+  --main-bg: #ffffff !important;
+  --card-bg: #ffffff !important;
+  --border-color: #000000 !important;
+  --link-color: #0000ee !important;
+  --link-hover: #0000aa !important;
+  --focus-outline: #000000 !important;
+  
+  /* High contrast buttons */
+  --btn-primary-bg: #000000 !important;
+  --btn-primary-text: #ffffff !important;
+  --btn-secondary-bg: #ffffff !important;
+  --btn-secondary-text: #000000 !important;
+}
+
+/* High contrast dark mode */
+body[data-theme="dark"][data-contrast="high"] {
+  --bg-color: #000000 !important;
+  --text-color: #ffffff !important;
+  --text-secondary: #ffffff !important;
+  --main-bg: #000000 !important;
+  --card-bg: #000000 !important;
+  --border-color: #ffffff !important;
+  --link-color: #ffff00 !important;
+  --link-hover: #ffff99 !important;
+}
+
+/* ========================================
+   UNIVERSAL ELEMENT STYLES
+   ======================================== */
+
+/* Cards and containers */
+.card,
+.box,
+.panel,
+.section-box {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Text elements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+p, li, td, th, span {
+  color: var(--text-color);
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover);
+}
+
+/* Buttons */
+.btn,
+button:not([class*="close"]):not([class*="toggle"]) {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: 1px solid var(--btn-primary-bg);
+}
+
+.btn:hover,
+button:not([class*="close"]):not([class*="toggle"]):hover {
+  opacity: 0.9;
+}
+
+.btn-secondary,
+button.secondary {
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--border-color);
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  background: var(--main-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--link-color);
+  outline: 2px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Tables */
+table {
+  background: var(--main-bg);
+  border: 1px solid var(--border-color);
+}
+
+th {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+td {
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Code blocks */
+code,
+pre {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Blockquotes */
+blockquote {
+  background: var(--card-bg);
+  border-left: 4px solid var(--link-color);
+  color: var(--text-color);
+}
+
+/* Horizontal rules */
+hr {
+  border-color: var(--border-color);
+}
+
+/* ========================================
+   HIGH CONTRAST SPECIFIC OVERRIDES
+   ======================================== */
+
+body[data-contrast="high"] * {
+  border-width: 2px !important;
+}
+
+body[data-contrast="high"] a {
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+body[data-contrast="high"] button,
+body[data-contrast="high"] .btn {
+  border: 3px solid #000 !important;
+  font-weight: 700 !important;
+}
+
+body[data-contrast="high"] input,
+body[data-contrast="high"] textarea,
+body[data-contrast="high"] select {
+  border: 3px solid #000 !important;
+}
+
+/* ========================================
+   ACCESSIBILITY: REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY: PREFERS COLOR SCHEME
+   Auto dark mode support for users with OS preference
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-color: #0e1726;
+    --text-color: #f2f5f9;
+    --text-secondary: #b8c1cc;
+    --main-bg: #111a2b;
+    --card-bg: #1a2332;
+    --border-color: #355c7d;
+    --link-color: #a8c7ff;
+    --link-hover: #cfe8ff;
+  }
+}
+
+/* ========================================
+   PRINT STYLES - Force light mode for printing
+   ======================================== */
+
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+    border-color: black !important;
+  }
+}

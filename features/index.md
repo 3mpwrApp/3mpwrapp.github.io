@@ -12,6 +12,8 @@ description: Explore 3mpwrApp's comprehensive 133+ features designed to empower 
 
 Welcome to 3mpwrApp - your complete toolkit for disability advocacy, community connection, and system navigation. With **133 features available in beta** and 35 more coming soon, every tool is designed to empower you while protecting your privacy.
 
+> 📖 **Looking for detailed instructions?** Check our [User Guide](/user-guide) for step-by-step tutorials on how to use each feature effectively.
+
 ---
 
 ## 📑 Table of Contents

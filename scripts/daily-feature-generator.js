@@ -416,7 +416,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
    * Generate social media post content
    */
   generateSocialPost(feature, articleUrl) {
-    const fullUrl = `https://3mpwrapp.github.io${articleUrl}`;
+    const fullUrl = `https://3mpwrapp.pages.dev${articleUrl}`;
     
     // Short version for Twitter/Bluesky (< 280 chars with link)
     const shortPost = `🌟 Feature Spotlight: ${feature.name}

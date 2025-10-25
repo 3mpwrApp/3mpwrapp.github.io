@@ -42,14 +42,32 @@ description: Find information quickly with on-page results and a DuckDuckGo fall
 <style>
   #results { margin-top: 1rem; }
   #results-list { display: grid; gap: 0.75rem; padding-left: 1.25rem; }
-  .result-title a { text-decoration: underline; }
+  .result-title a { 
+    text-decoration: underline;
+    color: var(--link-color, #007bff);
+  }
+  .result-title a:hover {
+    color: var(--link-hover-color, #0056b3);
+  }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .secondary { color: #555; font-size: 0.9em; }
-  @media (prefers-color-scheme: dark) { .secondary { color: #aaa; } }
-  @media (prefers-contrast: more) { .result-title a { text-decoration-thickness: 3px; } }
+  .secondary { color: var(--text-secondary, #555); font-size: 0.9em; }
   .result-item { margin-bottom: 0.25rem; }
-  .result-excerpt { margin: 0.25rem 0 0 0; }
-  
+  .result-excerpt { 
+    margin: 0.25rem 0 0 0;
+    color: var(--text-color, #222);
+  }
+  mark.mark {
+    background-color: var(--highlight-bg, #ffeb3b);
+    color: var(--highlight-text, #000);
+    padding: 0 2px;
+  }
+  @media (prefers-contrast: more) { 
+    .result-title a { text-decoration-thickness: 3px; }
+    mark.mark {
+      border: 2px solid var(--text-color, #000);
+      font-weight: bold;
+    }
+  }
 </style>
 
 <noscript>

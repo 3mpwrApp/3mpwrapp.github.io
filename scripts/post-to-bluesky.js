@@ -238,7 +238,7 @@ function formatBlueskyThread(items) {
   });
 
   // Final post - link to full curation
-  let finalPost = `🔗 See full curation:\nhttps://3mpwrapp.github.io/curation-latest.json\n\n#news #curation #accessibility #disability #workers`;
+  let finalPost = `🔗 See full curation:\nhttps://3mpwrapp.pages.dev/curation-latest.json\n\n#news #curation #accessibility #disability #workers`;
   posts.push(finalPost);
 
   return posts;

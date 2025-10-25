@@ -118,7 +118,7 @@ function httpsGet(url, timeoutMs = 20000) {
   return new Promise((resolve, reject) => {
     const req = https.get(url, {
       headers: {
-        'User-Agent': '3mpwrApp/1.0 (+https://3mpwrapp.github.io)',
+        'User-Agent': '3mpwrApp/1.0 (+https://3mpwrapp.pages.dev/)',
         'Accept': 'application/json'
       }
     }, (res) => {

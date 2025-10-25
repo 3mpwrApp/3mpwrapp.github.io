@@ -32,18 +32,22 @@ description: A community-powered hub for injured workers and persons with disabi
   <li role="listitem">
     <h3>Community Support</h3>
     <p>Connect with others, share stories, and build solidarity in province-specific spaces.</p>
+    <p><small><a href="{{ '/user-guide#community' | relative_url }}">📖 Learn more in User Guide →</a></small></p>
   </li>
   <li role="listitem">
     <h3>Advocacy & Campaigns</h3>
     <p>Access campaign resources and tools to help drive change in policies and workplaces.</p>
+    <p><small><a href="{{ '/user-guide#advocacy-tools' | relative_url }}">📖 Learn more in User Guide →</a></small></p>
   </li>
   <li role="listitem">
     <h3>Educational Resources</h3>
     <p>Learn your rights, access guides and templates, and stay informed about important issues.</p>
+    <p><small><a href="{{ '/user-guide#resources' | relative_url }}">📖 Learn more in User Guide →</a></small></p>
   </li>
   <li role="listitem">
     <h3>Podcasts & Updates</h3>
     <p>Listen to stories, insights, and conversations from the community.</p>
+    <p><small><a href="{{ '/user-guide#podcasts' | relative_url }}">📖 Learn more in User Guide →</a></small></p>
   </li>
 </ul>
 
@@ -192,11 +196,53 @@ Ready to join the movement? Here's how you can get started:
 <style>
 .weekly-swiper { margin: 1.5rem 0; }
 .weekly-track { display: grid; grid-auto-flow: column; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory;}
-.weekly-card { min-width: 280px; max-width: 420px; padding: 1rem; border: 1px solid var(--border,#ddd); border-radius: 8px; scroll-snap-align: start; background: var(--bg,#fff);}
-.weekly-card__title { margin: 0 0 .25rem; font-size: 1.1rem; }
-.weekly-card__meta { margin: 0 0 .5rem; color: #666; font-size: .9rem; }
+.weekly-card { 
+  min-width: 280px; 
+  max-width: 420px; 
+  padding: 1rem; 
+  border: 1px solid var(--border-color, #ddd); 
+  border-radius: 8px; 
+  scroll-snap-align: start; 
+  background: var(--card-bg, #fff);
+}
+.weekly-card__title { 
+  margin: 0 0 .25rem; 
+  font-size: 1.1rem; 
+}
+.weekly-card__title a {
+  color: var(--link-color, #007bff);
+  text-decoration: none;
+}
+.weekly-card__title a:hover {
+  text-decoration: underline;
+}
+.weekly-card__meta { 
+  margin: 0 0 .5rem; 
+  color: var(--text-secondary, #666); 
+  font-size: .9rem; 
+}
+.weekly-card__excerpt {
+  color: var(--text-color, #222);
+}
 .weekly-controls { display: flex; align-items: center; gap: .5rem; margin-top: .5rem; }
-.weekly-btn { padding: .25rem .5rem; }
+.weekly-btn { 
+  padding: .25rem .5rem;
+  background: var(--button-bg, #007bff);
+  color: var(--button-text, #fff);
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.weekly-btn:hover {
+  background: var(--button-hover-bg, #0056b3);
+}
+.weekly-all {
+  color: var(--link-color, #007bff);
+  text-decoration: none;
+}
+.weekly-all:hover {
+  text-decoration: underline;
+}
 @media (prefers-reduced-motion: no-preference) {
   .weekly-track { scroll-behavior: smooth; }
 }

@@ -4,7 +4,7 @@
 async function main() {
   const instance = process.env.MASTO_INSTANCE; // e.g., https://mastodon.social
   const token = process.env.MASTO_TOKEN;       // user access token with write:statuses
-  const siteUrl = process.env.SITE_URL || 'https://3mpwrapp.github.io/';
+  const siteUrl = process.env.SITE_URL || 'https://3mpwrapp.pages.dev/';
   const visibility = process.env.MASTO_VISIBILITY || 'public';
 
   if (!instance || !token) {

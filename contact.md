@@ -110,9 +110,9 @@ Please fill out the form below and we'll get back to you within 24 hours:
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus {
-    outline: 3px solid #0066CC;
+    outline: 3px solid var(--focus-color, #0066CC);
     outline-offset: 2px;
-    border-color: #0066CC;
+    border-color: var(--focus-color, #0066CC);
     background-color: var(--input-bg-focus, #f0f7ff);
   }
 
@@ -139,18 +139,18 @@ Please fill out the form below and we'll get back to you within 24 hours:
   }
 
   .btn-primary {
-    background-color: #0066CC;
-    color: white;
+    background-color: var(--button-bg, #0066CC);
+    color: var(--button-text, white);
   }
 
   .btn-primary:hover {
-    background-color: #0052a3;
+    background-color: var(--button-hover-bg, #0052a3);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
   }
 
   .btn-primary:focus {
-    outline: 3px solid #0066CC;
+    outline: 3px solid var(--focus-color, #0066CC);
     outline-offset: 2px;
   }
 
