@@ -4,6 +4,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { useAuth } from '../../../context/AuthContext';
 import { channels as seedChannels } from '../../../data/community';
 import { auth, db } from '../../../firebase/config';
@@ -49,6 +50,7 @@ export default function CommunityCompose() {
   return (
     <View style={s.container} accessibilityLabel="Compose post" accessible>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Compose Post</Text>
+      <DisclaimerBanner type="general" compact />
   <Text style={s.label}>Channel</Text>
   <TextInput value={channelSlug} onChangeText={setChannelSlug} style={s.input} placeholder="general" placeholderTextColor={palette.text} />
       <Text style={s.label}>Title</Text>

@@ -5,6 +5,7 @@ import React from 'react';
 import { FlatList, StyleSheet, Text, useColorScheme, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8, touchTarget } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
 import { db } from '../../../firebase/config';
@@ -40,6 +41,7 @@ export default function MyPostsScreen() {
   return (
     <View style={s.container} accessibilityLabel={t('community.myPosts.title','My Posts')} accessible>
       <Text ref={titleRef} style={s.title} accessibilityRole='header' maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('community.myPosts.title','My Posts')}</Text>
+      <DisclaimerBanner type="general" compact />
       <FlatList
         data={items}
         keyExtractor={(it)=> it.id}

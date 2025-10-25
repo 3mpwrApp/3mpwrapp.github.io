@@ -3,6 +3,7 @@ import React from 'react';
 import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { auth, db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { setLastRead, setTyping, touchPresence } from '../../../services/community';
@@ -95,6 +96,7 @@ export default function TestersChatImpl() {
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Testers Chat {unread > 0 ? `(${unread} new)` : ''}
       </Text>
+      <DisclaimerBanner type="general" compact />
       <Text style={s.meta}>Online: {present}{typing > 0 ? ` — typing…` : ''}</Text>
       <FlatList
         inverted

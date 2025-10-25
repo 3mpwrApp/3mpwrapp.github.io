@@ -4,6 +4,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import { isCloudConsentEnabled } from '../../../services/consent';
@@ -82,6 +83,7 @@ export default function MutualChatImpl() {
   return (
     <View style={s.container}>
       <Text style={s.title}>{chatId === 'general' ? 'Mutual Chat' : 'Mutual Aid Chat'}</Text>
+      <DisclaimerBanner type="general" compact />
       <View style={{ marginBottom: 8 }}>
         <Text style={s.text}>Present: {roster.map(r => r.id).join(', ') || '—'}</Text>
         {!!roster.some(r => r.typing) && <Text style={s.text}>Someone is typing…</Text>}

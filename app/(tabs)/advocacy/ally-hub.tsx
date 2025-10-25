@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-nati
 
 import A11yPressable from '../../../components/A11yPressable';
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -44,6 +45,7 @@ export default function AllyHub() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }}>
   <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.tools.ally_hub')}</Text>
+  <DisclaimerBanner type="general" compact />
   <Text style={s.text}>{t('advocacy.ally.intro')}</Text>
   <Text style={[s.sectionLabel,{marginTop:12}]}>{t('advocacy.ally.linksHeader')}</Text>
       {links.map(l => (

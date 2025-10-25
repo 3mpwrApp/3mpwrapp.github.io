@@ -16,8 +16,9 @@ import { useIndigenousLanguage } from '../context/IndigenousLanguageContext';
 import { useThemeColor } from '../hooks/useThemeColor';
 import { useTranslation } from '../i18n';
 
-import { A11yTitle, A11yWrapper } from './A11yWrapper';
 import A11yPressable from './A11yPressable';
+import { A11yTitle, A11yWrapper } from './A11yWrapper';
+import DisclaimerBanner from './DisclaimerBanner';
 
 interface PeerProfile {
   id: string;
@@ -914,6 +915,8 @@ export default function PeerSupportContent() {
           Peer Support
         </A11yTitle>
       </View>
+
+      <DisclaimerBanner type="general" compact />
 
       {settings.primaryLanguage && settings.communityCenteredApproach && (
         <View style={[styles.culturalBanner, { backgroundColor: colors.warning + '10', borderColor: colors.warning }]}>

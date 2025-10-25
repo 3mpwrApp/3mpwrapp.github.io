@@ -2,6 +2,7 @@ import React from "react";
 import { Alert, Linking, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import ContrastToggle from "../../components/ContrastToggle";
+import DisclaimerBanner from "../../components/DisclaimerBanner";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
 import {
@@ -58,6 +59,7 @@ export default function AboutScreen() {
       >
         {t("about.title","About & Contact")}
       </Text>
+      <DisclaimerBanner type="general" compact />
       {process.env.EXPO_PUBLIC_BETA ? (
         <View accessibilityRole="text" style={{ padding: 8, borderRadius: 6, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, marginBottom: 8 }}>
           <Text style={{ color: palette.text, fontSize: 12 }}>{t('about.betaBanner','This is a beta build')}</Text>
