@@ -17,6 +17,20 @@ Big platforms silence stories through hidden algorithms and "relevance" scores. 
 
 **3mpwrApp is a Health & Fitness, Medical, Social, Self-help, and Personalization platform** designed to offer advocacy, resources, and community support for injured workers and persons with disabilities across Canada. Our tools simplify complex processes, connect you with advocates, and empower you to take action.
 
+### 💚 Grassroots & Community-Funded
+
+**3mpwrApp is 100% free and always will be.** We're a grassroots, community-focused initiative with a mission-driven approach focused on empowerment, not profit. No paid tiers. No subscriptions. No in-app purchases. Ever.
+
+We're built BY the disability community, FOR the disability community, funded through community support and driven by our shared values of accessibility, dignity, and collective power.
+
+**Our funding model:**
+- 💚 Community donations (optional, never required)
+- 🤝 Grants focused on disability rights and accessibility
+- 🎯 Mission-aligned partnerships that respect our values
+- ❌ NO venture capital, NO corporate interests, NO profit motive
+
+**Every decision we make prioritizes community needs over revenue.**
+
 ### 🇨🇦 Currently Serving Canada-Wide
 
 **3mpwrApp is built for the Canadian disability rights community** - supporting persons with disabilities, injured workers, supporters, allies, and unions across all provinces and territories. We understand Canadian systems (WSIB, WCB, provincial disability programs), Indigenous sovereignty and OCAP principles, and the unique challenges faced by disabled and injured workers navigating Canadian legal and healthcare systems.

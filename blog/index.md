@@ -49,7 +49,7 @@ Welcome to our blog! Stay informed with daily curated news, feature articles, co
 
 ## <span id="feature-articles">📝 Feature Articles</span>
 
-<p class="section-description">In-depth articles exploring important disability topics - benefits, rights, accessibility, advocacy, and community empowerment. These comprehensive guides help you understand complex issues, navigate systems, and advocate for change. <em>(Note: These are educational articles, not about app features)</em></p>
+<p class="section-description">In-depth spotlights on 3mpwrApp features - Evidence Locker, Letter Wizard, Disability Wizard, Legal Workflow Automation, and more. Learn how each tool empowers you to advocate for your rights, navigate systems, and connect with community.</p>
 
 {% assign feature_articles = site.posts | where_exp: 'p', "p.tags contains 'feature'" %}
 {% if feature_articles and feature_articles.size > 0 %}

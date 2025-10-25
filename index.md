@@ -8,7 +8,9 @@ description: A community-powered hub for injured workers and persons with disabi
 
 <strong>Connecting voices, empowering change.</strong>
 
-3mpwr App is a community-driven platform built for injured workers and persons with disabilities across Canada. We're creating a safe, inclusive space where people can connect, share experiences, and advocate for change.
+3mpwr App is a **grassroots, community-driven platform** built for injured workers and persons with disabilities across Canada. We're creating a safe, inclusive space where people can connect, share experiences, and advocate for change.
+
+**💚 100% Free Forever** – No paid tiers, no subscriptions, no profit motive. Built BY the community, FOR the community.
 
 ---
 
