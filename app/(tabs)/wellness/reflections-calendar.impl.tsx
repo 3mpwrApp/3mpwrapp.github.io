@@ -2,6 +2,7 @@
 import React from 'react';
 import { Alert, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { useAppPalette } from '../../../theme/usePalette';
 
 // Lightweight, test-focused implementation to satisfy the smoke test
@@ -59,6 +60,7 @@ export default function ReflectionsCalendarTestImpl() {
 	return (
 		<View style={[s.container, { backgroundColor: palette.background }]} accessibilityLabel="Reflections Calendar" accessible>
 			<Text style={[s.title, { color: palette.text }]} accessibilityRole="header">Reflections Calendar</Text>
+			<DisclaimerBanner type="medical" compact />
 
 			<Pressable
 				accessibilityRole="button"

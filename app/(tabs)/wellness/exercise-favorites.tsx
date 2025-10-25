@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList, Linking, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -47,6 +48,7 @@ export default function ExerciseFavorites() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Exercise Favorites</Text>
+      <DisclaimerBanner type="medical" compact />
       <FlatList
         data={items}
         keyExtractor={i=>i.id}

@@ -1,14 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, Alert, ScrollView } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
-import { useAppPalette } from "../../../theme/usePalette";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { getCachedJSON } from "../../../services/cache";
+import { useAppPalette } from "../../../theme/usePalette";
 
 type Mood = "low" | "ok" | "high";
 
@@ -74,6 +75,8 @@ export default function WorkBalanceAI() {
       >
         Wellness + Work Balance AI
       </Text>
+      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="ai" compact />
       <Text style={s.subtitle}>
         Tracks pain, sleep/energy, and mood to suggest when to rest, when to
         work, and when to advocate.
