@@ -290,9 +290,6 @@ function CommunityPreload() {
     if (__DEV__) {
       logger.log('🌐 Community channels pre-loaded:', channels.length, `(${duration.toFixed(2)}ms)`);
     }
-    
-    // Optional: Send to analytics in production
-    // trackEvent('community_preload', { channels: channels.length, duration_ms: duration });
   }, [seed]);
   return null;
 }
