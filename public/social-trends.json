@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-10-25T00:49:10.960Z",
+  "lastUpdated": "2025-10-25T06:14:42.047Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 325,
+      "totalPosts": 350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-25T00:49:03.351Z"
+      "lastSeen": "2025-10-25T06:14:33.794Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 325,
+      "totalPosts": 350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-25T00:49:04.989Z"
+      "lastSeen": "2025-10-25T06:14:35.634Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 325,
+      "totalPosts": 350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-25T00:49:06.670Z"
+      "lastSeen": "2025-10-25T06:14:37.398Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 325,
+      "totalPosts": 350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-25T00:49:08.333Z"
+      "lastSeen": "2025-10-25T06:14:39.295Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 325,
+      "totalPosts": 350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-25T00:49:09.957Z"
+      "lastSeen": "2025-10-25T06:14:41.045Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "400 behind on rent. Facing eviction. Bills stacking up.\n\nThis isn’t “struggling.” It’s legislated poverty.\nODSP keeps people poor by design = $1,368/month to “live” in 2025.\n\n💸e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #MutualAidRequest  #MutualAid  #DisabilityJustice",
-      "author": "cycletherapyham.bsky.social",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I’m one of 20 million+ people in the U.S. living with #LongCOVID.\nThis fight isn’t just personal—it’s part of a long struggle for health justice in a nation that’s never been healthy for all.\n\nMy new @Truthout piece:\n👉 truthout.org/articles/i-a...\n\n#DisabilityJustice #HealthEquity #PublicHealth",
-      "author": "jessehagopian.bsky.social",
-      "engagement": 120,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "400 behind on rent. Facing eviction. Bills stacking up.\n\nThis isn’t “struggling.” It’s legislated poverty.\nODSP keeps people poor by design = $1,368/month to “live” in 2025.\n\n💸e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #MutualAidRequest  #MutualAid  #DisabilityJustice",
-      "author": "cycletherapyham.bsky.social",
-      "engagement": 30,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "‪@jeuxvideomagazine.bsky.social‬ ‪@journaldugeek.com‬ @actugaming.net @jvcom.bsky.social‬ ‪@canardpc.com‬ @gamekult.com @handicap.fr @talenteo.bsky.social\n‬ ‪@apfhandicap.bsky.social‬ @handigamer.bsky.social @fab-yt.bsky.social\n  #InclusionNumérique #Handicap #Accessibilité #A11y #gamedev",
-      "author": "capgame.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "400 behind on rent. Facing eviction. Bills stacking up.\n\nThis isn’t “struggling.” It’s legislated poverty.\nODSP keeps people poor by design = $1,368/month to “live” in 2025.\n\n💸e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #MutualAidRequest  #MutualAid  #DisabilityJustice",
-      "author": "cycletherapyham.bsky.social",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "I’m one of 20 million+ people in the U.S. living with #LongCOVID.\nThis fight isn’t just personal—it’s part of a long struggle for health justice in a nation that’s never been healthy for all.\n\nMy new @Truthout piece:\n👉 truthout.org/articles/i-a...\n\n#DisabilityJustice #HealthEquity #PublicHealth",
       "author": "jessehagopian.bsky.social",
@@ -338,6 +296,48 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Civic duty done. 🗳 Remember, polls don't win elections. Votes do.\n#Áras2025 #Connolly4President #DisabilityRights #CarersRights #SpéirGorm",
+      "author": "niamhnicheallaigh.bsky.social",
+      "engagement": 22,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Invisible Disabilities Week\nOct. 20th - 26th\n\n#InvisibleDisabilitiesWeek #HiddenDisabilities #DisabilityAdvocacy #DisabilityRights #Disabilities #ChronicPain #Fibro #Fatigue #Neurodiversity #LivingWithDisability",
+      "author": "capucinep.bsky.social",
+      "engagement": 63,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "DEADLINE RIGHT NOWWWWWWW\n\nI need everyone in #MutualAid and/or #DisabilityJustice circles to PLEASE see this as a horrendous live example of the system AND PEOPLE failing the most multiply marginalised.",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 23,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "400 behind on rent. Facing eviction. Bills stacking up.\n\nThis isn’t “struggling.” It’s legislated poverty.\nODSP keeps people poor by design = $1,368/month to “live” in 2025.\n\n💸e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #MutualAidRequest  #MutualAid  #DisabilityJustice",
+      "author": "cycletherapyham.bsky.social",
+      "engagement": 41,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’m one of 20 million+ people in the U.S. living with #LongCOVID.\nThis fight isn’t just personal—it’s part of a long struggle for health justice in a nation that’s never been healthy for all.\n\nMy new @Truthout piece:\n👉 truthout.org/articles/i-a...\n\n#DisabilityJustice #HealthEquity #PublicHealth",
+      "author": "jessehagopian.bsky.social",
+      "engagement": 172,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -359,35 +359,31 @@
     },
     {
       "keyword": "cripthevote",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "altcitizen",
-      "count": 20
+      "count": 19
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 20
+      "count": 19
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 20
+      "count": 19
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 20
+      "count": 19
     },
     {
       "keyword": "virtual",
-      "count": 16
+      "count": 15
     },
     {
       "keyword": "stoptrump",
-      "count": 12
-    },
-    {
-      "keyword": "foxtakedown",
-      "count": 10
+      "count": 11
     },
     {
       "keyword": "wpad2025",
@@ -406,20 +402,24 @@
       "count": 9
     },
     {
+      "keyword": "foxtakedown",
+      "count": 9
+    },
+    {
+      "keyword": "mutualaid",
+      "count": 7
+    },
+    {
       "keyword": "stoptheliesfox",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "foxlies",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "wearetheflood",
-      "count": 8
-    },
-    {
-      "keyword": "50501movement",
-      "count": 8
+      "count": 7
     }
   ]
 }
