@@ -9,6 +9,7 @@ jest.mock('../hooks/useA11y', () => ({
   useScreenReaderEnabled: () => false,
   useReduceMotionEnabled: () => false
 }));
+jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (key: string, fb?: string) => fb || key }) }));
 
 // Firebase config and firestore mocks
 jest.mock('../firebase/config', () => ({ auth: { currentUser: { uid: 'u1' } }, db: {} }));

@@ -2,6 +2,7 @@ import React from "react";
 import { Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -215,6 +216,7 @@ export default function DailyPlanner() {
       >
         Adaptive Daily Planner
       </Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.subtitle}>
         Smart scheduling that factors in fatigue, pain flares, and appointments,
         with suggested rest breaks.

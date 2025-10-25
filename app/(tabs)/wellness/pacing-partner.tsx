@@ -3,6 +3,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import * as Notifier from '../../../services/notifications';
@@ -87,6 +88,7 @@ export default function PacingPartner() {
         </A11yPressable>
       </View>
       <Text style={s.title} accessibilityRole="header" maxFontSizeMultiplier={1.3}>AI Pacing Partner</Text>
+      <DisclaimerBanner type="ai" compact />
       <TextInput
         placeholder="Minutes"
         placeholderTextColor={palette.text+'77'}

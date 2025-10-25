@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { computeAmbience } from '../../../services/ambience';
@@ -20,6 +21,7 @@ export default function AmbienceSync(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.ambience.title','Ambience Sync AI')}</Text>
+      <DisclaimerBanner type="ai" compact />
       <Text style={s.sub}>{t('wellness.ambience.desc','Match background, color, soundscape to your mood.')}</Text>
       <View style={[s.card,{ borderColor: amb.color }]}> 
         <Text style={{ color: palette.text }}>{t('wellness.ambience.current','Suggestion: {{palette}}, {{soundscape}}, {{brightness}}',{ palette: amb.palette, soundscape: amb.soundscape, brightness: amb.brightness })}</Text>

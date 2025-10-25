@@ -9,6 +9,7 @@ jest.mock('../hooks/useA11y', () => ({
   useScreenReaderEnabled: () => false,
   useReduceMotionEnabled: () => false
 }));
+jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (key: string, fb?: string) => fb || key }) }));
 jest.mock('../services/cache', () => ({ getCachedJSON: jest.fn(async()=>null), setCachedJSON: jest.fn(async()=>{}) }));
 jest.mock('../services/calendar', () => ({ addEvent: jest.fn(async ()=> true) }));
 jest.mock('../services/ics', () => ({ buildICSMany: () => 'BEGIN:VCALENDAR\nEND:VCALENDAR' }));

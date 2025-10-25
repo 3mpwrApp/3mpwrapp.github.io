@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
@@ -28,6 +29,7 @@ export default function AcceptanceFunction(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.acceptFn.title','Acceptance & Function')}</Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.desc}>{t('wellness.acceptFn.desc','Track acceptance and daily functioning to notice supportive patterns.')}</Text>
       <TextInput value={date} onChangeText={setDate} placeholder={t('wellness.acceptFn.date','Date (YYYY-MM-DD)')} placeholderTextColor={palette.text+'77'} style={s.input}/>
       <TextInput value={acc} onChangeText={setAcc} placeholder={t('wellness.acceptFn.acceptance','Acceptance (0–10)')} placeholderTextColor={palette.text+'77'} style={s.input}/>

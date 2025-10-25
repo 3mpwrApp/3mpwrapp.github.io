@@ -1,6 +1,7 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { DyslexiaText } from "../../../components/DyslexiaText";
 import {
     MAX_FONT_SCALE,
@@ -90,10 +91,11 @@ export default function Achievements() {
       >
         {t("wellness.achievements.title", "Achievements")}
       </Text>
+      <DisclaimerBanner type="medical" compact />
       <DyslexiaText style={s.subtitle}>
         {t(
           "wellness.achievements.subtitle",
-          "Earn badges as you build healthy routines.",
+          "Track your progress and unlock badges as you complete rehab and wellness activities.",
         )}
       </DyslexiaText>
       <Text style={s.points}>

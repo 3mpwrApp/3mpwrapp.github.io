@@ -8,6 +8,7 @@ import {
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { DyslexiaText } from "../../../components/DyslexiaText";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
@@ -157,6 +158,7 @@ export default function SelfCareLibrary() {
       >
         Accessible SelfÃ¢â‚¬â€˜Care Library
       </Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={styles.subtitle}>
         Audio, video, and easyÃ¢â‚¬â€˜read guides curated for accessibility.
       </Text>

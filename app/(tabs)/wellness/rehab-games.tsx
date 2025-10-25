@@ -8,6 +8,7 @@ import {
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
     MAX_FONT_SCALE,
@@ -127,6 +128,7 @@ export default function RehabGames() {
       >
         {t("wellness.rehab.title", "Virtual Rehab Games")}
       </Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.subtitle}>
         {t(
           "wellness.rehab.subtitle",

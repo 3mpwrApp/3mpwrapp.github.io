@@ -2,6 +2,7 @@ import React from 'react';
 import { Platform, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { logView } from '../../../services/analytics';
@@ -30,6 +31,7 @@ function Inner(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.energy.title','Daily Energy Coins')}</Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.desc}>{t('wellness.energy.desc','Set a daily budget and spend coins on tasks. Pace kindly.')}</Text>
       <Text style={s.text}>{t('wellness.energy.today','Today: {{date}}',{ date })}</Text>
       <Text style={s.text}>{t('wellness.energy.remaining','Remaining coins: {{n}}',{ n: coins })}</Text>
