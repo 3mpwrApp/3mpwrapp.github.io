@@ -89,7 +89,9 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
           if (isStale) {
             // Cache is stale - trigger background refresh
             // The Firestore listeners will update the data automatically
-            console.log('🔄 Community cache is stale, background refresh will occur via Firestore');
+            if (__DEV__) {
+              console.warn('🔄 Community cache is stale, background refresh will occur via Firestore');
+            }
           }
         }
       } catch (e) {
