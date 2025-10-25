@@ -44,7 +44,9 @@ We're built BY the disability community, FOR the disability community.
 
 ### How much does 3mpwrApp cost?
 
-3mpwrApp is **free during beta testing**. Our long-term pricing model will be affordable and accessible, with a free tier always available for core features.
+**3mpwrApp is completely FREE.** There are no paid tiers, no subscriptions, no in-app purchases - ever.
+
+We're building this for the disability community, funded by the community. Our mission is accessibility and empowerment, not profit. All features will always be free for everyone.
 
 ### Is 3mpwrApp available now?
 
@@ -502,11 +504,9 @@ The Evidence Locker:
 
 **Always consult your attorney** about evidence admissibility.
 
-### What's your refund policy?
+### Is there a cost to use 3mpwrApp?
 
-Currently, 3mpwrApp is **free during beta testing** - no payments, no refunds needed.
-
-When we launch paid tiers, our refund policy will be clearly stated in Terms of Service.
+**No, 3mpwrApp is completely FREE.** There are no paid tiers, subscriptions, or in-app purchases. All features are free for everyone, forever. We're a community-funded project focused on disability empowerment, not profit.
 
 **[See Terms of Service →](/terms/)**
 
