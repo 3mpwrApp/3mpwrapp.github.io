@@ -144,14 +144,22 @@ We also work toward compliance with:
 
 ## Related Pages
 
-- [Accessibility Settings](/accessibility-settings/) - Customize your accessibility preferences
-- [Accessibility Walkthrough](/accessibility-walkthrough/) - Guided tour of features
-- [User Guide](/user-guide/) - Complete platform documentation
-- [Roadmap](/roadmap/) - Planned features and improvements
-- [Contact](/contact/) - Get in touch with us
+### Documentation
+- **[Accessibility Settings](/accessibility-settings/)** - Customize your accessibility preferences
+- **[Accessibility Walkthrough](/accessibility-walkthrough/)** - Guided tour of features
+- **[User Guide](/user-guide/)** - Complete platform documentation
+- **[Roadmap](/roadmap/)** - Planned features and improvements
+- **[Features](/features/)** - See all available features
+
+### Legal & Privacy
+- **[Privacy Policy](/privacy/)** - How we protect your data
+- **[Terms of Service](/terms/)** - Terms with accessibility commitments
+- **[Community Guidelines](/community/guidelines/)** - Inclusive community standards
+- **[Contact](/contact/)** - Get in touch with us
 
 ---
 
 **Last updated**: {{ site.time | date: '%B %d, %Y' }}
 
 *3mpwrApp - Accessibility First, Always.* ♿💚
+

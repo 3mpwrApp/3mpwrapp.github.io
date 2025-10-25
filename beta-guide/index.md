@@ -404,8 +404,16 @@ You're not just testing an app. You're helping build a movement. 💪
 - **In-App Feedback**: Settings → About & Feedback
 - **Beta Chat**: Community → Beta Testers Chat
 - **Features List**: [View All Features](/features/)
-- **Privacy Policy**: [Read Privacy Policy](/privacy/)
-- **Data Ownership**: [Data Ownership Statement](/data-ownership/)
+- **User Guide**: [Complete User Guide](/user-guide/)
+- **Roadmap**: [Development Roadmap](/roadmap/)
+
+### Legal & Privacy
+- **[Terms of Service](/terms/)** - Terms and comprehensive disclaimers
+- **[Privacy Policy](/privacy/)** - How we protect your data
+- **[Data Ownership](/data-ownership/)** - Your 100% data sovereignty
+- **[Privacy Controls](/privacy-controls/)** - Manage your privacy settings
+- **[Community Guidelines](/community/guidelines/)** - Community standards
+- **[Legal Disclaimers](/legal/disclaimers/)** - Medical, legal, financial disclaimers
 
 ### Key Settings Locations
 - **Language**: Settings → Language
@@ -416,7 +424,8 @@ You're not just testing an app. You're helping build a movement. 💪
 
 ---
 
-*Last Updated: October 20, 2025*  
-*Guide Version: 2.0*  
+*Last Updated: October 25, 2025*  
+*Guide Version: 2.1*  
 *App Version: 1.0.0-rc.1*  
 *Questions: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)*
+

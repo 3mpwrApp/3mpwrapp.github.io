@@ -47,3 +47,36 @@ Every tool serves one goal: empowering your voice and strengthening your advocac
 We believe every person deserves to have their voice heard, their rights protected, and their community accessible. 3mpwrApp provides the tools, resources, and connections you need to navigate systems, advocate for change, and build the inclusive world we all deserve.
 
 Learn more in our [User Guide]({{ '/user-guide' | relative_url }}) or explore our [Features]({{ '/features' | relative_url }}).
+
+---
+
+## 🔒 Privacy & Data Ownership
+
+Your data belongs to **you**. Period.
+
+- **100% User Data Ownership** - All data you create is yours, not ours
+- **Local-First Architecture** - Data stays on your device by default
+- **BYOC (Bring Your Own Cloud)** - Optional sync to YOUR chosen cloud provider
+- **No Tracking** - No analytics, no advertising IDs, no data mining
+- **Military-Grade Encryption** - AES-256 encryption, TLS 1.3, hardware-backed keys
+
+**Learn more:**
+- **[Privacy Policy](/privacy/)** - Comprehensive privacy details
+- **[Data Ownership Statement](/data-ownership/)** - Technical guarantees
+- **[Privacy Controls](/privacy-controls/)** - Manage your settings
+- **[Terms of Service](/terms/)** - Full terms with disclaimers
+
+---
+
+## ⚖️ Important Disclaimers
+
+3mpwrApp provides information and tools, but:
+
+- ❌ **NOT Medical Advice** - Always consult healthcare professionals
+- ❌ **NOT Legal Advice** - Always consult licensed attorneys
+- ❌ **NOT Financial Advice** - Always consult financial advisors
+- ⚠️ **AI Content** - All AI-generated content must be verified
+- 🚨 **Emergencies** - Call 911, not the app
+
+**[Read all disclaimers →](/legal/disclaimers/)**
+

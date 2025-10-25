@@ -145,6 +145,19 @@ Ready to join the movement? Here's how you can get started:
 </section>
 ---
 
+## 📄 Legal & Privacy
+
+We're committed to transparency and protecting your rights:
+
+- **[Terms of Service](/terms/)** - Our terms and comprehensive disclaimers
+- **[Privacy Policy](/privacy/)** - How we handle your data
+- **[Data Ownership](/data-ownership/)** - Your 100% data sovereignty guarantee
+- **[Privacy Controls](/privacy-controls/)** - Manage your privacy settings
+- **[Community Guidelines](/community/guidelines/)** - Community standards
+- **[Legal Disclaimers](/legal/disclaimers/)** - All disclaimers in one place
+
+---
+
 {% if site.posts.size > 0 %}
 <section aria-labelledby="latest-posts">
   <h2 id="latest-posts">Latest from the blog</h2>

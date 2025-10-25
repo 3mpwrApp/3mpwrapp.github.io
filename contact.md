@@ -16,6 +16,12 @@ We'd love to hear from you! Whether you have questions about 3mpwr, feedback to 
 - **Documentation:** [Read our user guide](/user-guide)
 - **Report a Bug:** [GitHub Issues](https://github.com/3mpowrApp/3mpwrapp.github.io/issues)
 
+### Legal & Privacy
+- **[Privacy Policy](/privacy/)** - How we handle your data
+- **[Terms of Service](/terms/)** - Terms and disclaimers
+- **[Community Guidelines](/community/guidelines/)** - Community standards
+- **[Legal Disclaimers](/legal/disclaimers/)** - All disclaimers
+
 ## Contact Form
 
 Please fill out the form below and we'll get back to you within 24 hours:
