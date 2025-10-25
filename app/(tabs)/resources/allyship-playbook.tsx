@@ -1,5 +1,6 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
@@ -10,6 +11,7 @@ export default function AllyshipPlaybook() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Allyship Playbook</Text>
+      <DisclaimerBanner type="general" compact />
       <Text style={s.text}>Mini‑guides for friends, family, and coworkers on supporting injured workers and people with disabilities.</Text>
       <Text style={[s.text,{ marginTop: 8 }]}>Examples: how to offer help, respectful language, accessibility checklists for events, and solidarity best practices.</Text>
     </View>

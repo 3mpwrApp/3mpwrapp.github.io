@@ -2,6 +2,7 @@ import React from "react";
 import { Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
@@ -61,6 +62,7 @@ export default function VoiceNotes() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }}>
       <Text ref={titleRef} accessibilityRole='header' style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('templates.voice.title','Voice-to-Case Notes')}</Text>
+      <DisclaimerBanner type="legal" compact />
       <View style={s.infoCard} accessibilityRole='summary'>
         <Text style={s.infoTitle}>{t('templates.voice.infoTitle','Capture and Transcribe')}</Text>
         <Text style={s.infoLine}>{t('templates.voice.info1','Record conversations or notes and add quick context (who, topic).')}</Text>

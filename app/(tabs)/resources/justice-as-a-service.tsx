@@ -85,6 +85,7 @@ export default function JusticeAsAService() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 16 }} accessibilityLabel={t('justiceService.screenLabel','Justice-as-a-Service screen')}>
+      <DisclaimerBanner type="legal" compact />
       <View style={styles.infoCard} accessibilityRole="summary" accessible accessibilityLabel={t('justiceService.howToUse','How to use Justice-as-a-Service')}>
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setShowInfo(s=>!s)} accessibilityRole="button" accessibilityLabel={t('justiceService.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={styles.infoHeader}>
           <Text style={styles.infoTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.infoTitle','How to Use')}</Text>

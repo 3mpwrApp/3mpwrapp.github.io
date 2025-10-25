@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { DyslexiaText } from '../../../components/DyslexiaText';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -12,6 +13,7 @@ export default function SolidarityToolkit() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Union & Worker Solidarity Toolkit</Text>
+      <DisclaimerBanner type="general" compact />
       <DyslexiaText style={s.text}>Step‑by‑step resources for organizing workplace support, including accommodation campaigns. This section will grow with templates, checklists, and guides.</DyslexiaText>
       <View style={{ height: 12 }} />
       <Text style={s.h2}>Templates & Kits</Text>

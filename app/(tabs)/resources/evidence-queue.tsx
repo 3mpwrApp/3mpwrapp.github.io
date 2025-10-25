@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { clearQueue, getQueue, processQueue } from '../../../services/evidenceQueue';
@@ -32,6 +33,7 @@ export default function EvidenceQueueScreen() {
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('templates.evidenceLocker.queueTitle', 'Upload Queue')}
       </Text>
+      <DisclaimerBanner type="legal" compact />
       <View style={s.actionsRow}>
         <A11yPressable
           onPress={() => { setShowInfo(v=>!v); announce(showInfo ? t('common.hide') : t('templates.evidenceLocker.toggleInfo','Toggle instructions')); }}

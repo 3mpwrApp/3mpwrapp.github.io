@@ -3,6 +3,7 @@ import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 import Card from "../../../components/Card";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { DyslexiaText } from "../../../components/DyslexiaText";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -19,6 +20,7 @@ export default function MythBustingHub() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Myth-Busting Knowledge Hub
       </Text>
+      <DisclaimerBanner type="general" compact />
       <DyslexiaText style={styles.subtitle}>
         Break down complex policies in plain language — with interactive explainers for Workers' Comp, Canada-wide and
         provincial programs, CPP-D, EI Sickness, and more.

@@ -4,6 +4,7 @@ import React from 'react';
 import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -62,6 +63,7 @@ export default function AccessibilityLog() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Workplace Accessibility Log</Text>
+      <DisclaimerBanner type="legal" compact />
       <Text style={s.text}>Log daily barriers with timestamps for future evidence.</Text>
       <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setView('local')} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></A11yPressable>

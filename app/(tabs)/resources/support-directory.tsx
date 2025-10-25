@@ -9,6 +9,7 @@ import {
     View,
 } from "react-native";
 
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { supportOrgs } from "../../../data/support";
 import {
     MAX_FONT_SCALE,
@@ -60,6 +61,7 @@ export default function SupportDirectory() {
       >
         {t('advocacy.support.title','Support Directory')}
       </Text>
+      <DisclaimerBanner type="general" compact />
       <Text style={styles.subtitle}>
         {t('advocacy.support.subtitle','Organizations that may help with claims, accommodations, and advocacy.')}
       </Text>

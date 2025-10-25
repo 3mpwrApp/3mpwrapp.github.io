@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 import Card from "../../../components/Card";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useAppPalette } from "../../../theme/usePalette";
 
@@ -17,6 +18,7 @@ export default function AdaptiveTechLibrary() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Adaptive Tech Library
       </Text>
+      <DisclaimerBanner type="general" compact />
       <Text style={styles.subtitle}>
         Tutorials and reviews of accessibility tools: screen readers, speech‑to‑text, mobility aids, captioning, and
         everyday apps that make life easier.
