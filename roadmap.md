@@ -3,13 +3,66 @@ layout: default
 title: Roadmap
 description: Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations
 permalink: /roadmap/
+lastUpdated: 2025-10-25
 ---
 
 # 🗺️ 3mpwrApp Roadmap
 
+**Current Status: Phase 1 - Closed Beta Testing**
+
 We're constantly improving 3mpwrApp based on your feedback and the community's needs. Here's what we're working on and what's coming next.
 
-## 🇨🇦 Current Scope: Canada-Wide
+---
+
+## 🚀 **Current Phase: Closed Beta (October 2025)**
+
+### **What's Happening Now:**
+
+**3mpwrApp is in Phase 1 - Closed Beta Testing** with selected beta testers across Canada. We're focusing on:
+
+✅ **Core Functionality Testing:**
+- Evidence Locker (document storage & encryption)
+- Letter Wizard (22 professional templates)
+- Wellness trackers (mood, energy, symptoms)
+- ML energy predictions & smart notifications
+- Community features (forums, DMs, peer support)
+- Legal workflow automation
+
+✅ **Accessibility Validation:**
+- Screen reader compatibility (VoiceOver, TalkBack)
+- High contrast mode (WCAG AAA)
+- Text scaling and cognitive accessibility
+- Motor accessibility features
+- Dyslexia support
+
+✅ **Security & Privacy:**
+- AES-256 encryption
+- Biometric authentication
+- Local-first architecture
+- BYOC (Bring Your Own Cloud) sync
+
+**Beta Tester Focus Areas:**
+1. Authentication & onboarding (9-step acceptance)
+2. Evidence Locker functionality
+3. Letter generation and PDF export
+4. Wellness tracking accuracy
+5. ML personalization features
+
+**Not a beta tester yet?** [Sign up to join the closed beta](/beta)
+
+---
+
+**3mpwrApp is currently focused on serving the Canadian disability community**, including:
+- Persons with Disabilities across all provinces and territories
+- Injured Workers navigating WSIB, WCB, and provincial systems
+- Supporters, Allies, and Advocates
+- Labour movement representing injured workers, Persons with Disabilities, and all workers fighting for accessibility and inclusion
+- Indigenous communities with disabilities, respecting sovereignty and traditional knowledge
+- Allies in the broader social justice movement working toward systemic change
+
+---
+
+## 🇨🇦 **Current Scope: Canada-Wide**
 
 **3mpwrApp is currently focused on serving the Canadian disability community**, including:
 - Persons with Disabilities across all provinces and territories
@@ -23,109 +76,132 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 
 ---
 
+## 📅 **Launch Timeline**
+
+### **Phase 1: Closed Beta Testing** (October - November 2025) 🔄 *Current Phase*
+- Selected beta testers across Canada
+- Core feature testing and validation
+- Bug fixes and performance optimization
+- Accessibility validation with real users
+- Security audits and penetration testing
+- Community guidelines enforcement testing
+
+### **Phase 2: Open Beta** (December 2025 - January 2026)
+- Expand to more Canadian users
+- Public sign-ups accepted
+- Additional features based on closed beta feedback
+- Continued refinement and optimization
+- Community growth and engagement
+
+### **Phase 3: Public Launch** (February 2026)
+- General availability via app stores
+- Full marketing campaign
+- Media outreach
+- Partnership announcements
+- Version 1.0 release
+
+### **Phase 4: Feature Expansion** (March 2026+)
+- New features based on community feedback
+- Additional language support
+- Enhanced ML personalization
+- Advanced legal automation
+- Global expansion planning
+
+---
+
 ## 🎯 Coming Very Soon (Next 3-6 Months)
 
-### ✅ Enhanced Cognitive Accessibility (40% COMPLETE)
+### ✅ **Enhanced Cognitive Accessibility** (In Beta Testing)
 **Who it helps:** People with ADHD, autism, learning disabilities, memory challenges  
-**Status:** Core infrastructure complete, app integration in progress
+**Status:** Available in closed beta for testing
 
-**What's available NOW:**
+**What's available NOW in beta:**
 - ✅ 3 cognitive modes: Standard, Simplified (max 5 items), Minimal (max 3 items)
 - ✅ Enhanced auto-save with configurable intervals (5min/30s/15s based on mode)
 - ✅ "Back to where I was" button to restore your place
 - ✅ Visual progress indicators and breadcrumb navigation
-- ✅ Step-by-step guidance components (ProgressBar, StepIndicator)
+- ✅ Step-by-step guidance components
 - ✅ Task complexity badges showing time and difficulty
-- ✅ SimplifiedView component (integrated into Letter Wizard)
-- ✅ Settings screen with full configuration options
+- ✅ SimplifiedView integrated into Letter Wizard
+- ✅ Full settings screen with configuration options
 
-**In Progress:**
-- ⏳ Integration into remaining screens (Wellness, Community, Resources)
-- ⏳ User testing with 20 ADHD/autism community members
+**Being tested:**
+- ⏳ User experience across all app sections
+- ⏳ Effectiveness with ADHD/autism community members
+- ⏳ Performance impact and optimization
 
-**To try it now:** Go to Settings → Cognitive Accessibility → Enable Simplified Mode
+**To try it in beta:** Settings → Cognitive Accessibility → Enable Simplified Mode
 
 ---
 
-### ✅ Dyslexia Support Features (70% COMPLETE)
+### ✅ **Dyslexia Support Features** (In Beta Testing)
 **Who it helps:** People with dyslexia and reading challenges  
-**Status:** Core infrastructure complete, app-wide integration pending
+**Status:** Core features available in closed beta
 
-**What's available NOW:**
-- ✅ 5 dyslexia-friendly fonts: OpenDyslexic, Lexend, Comic Sans, Arial, System default
+**What's available NOW in beta:**
+- ✅ 5 dyslexia-friendly fonts: OpenDyslexic, Lexend, Arial, System default
 - ✅ Adjustable letter spacing (0 to 0.2em extra spacing)
 - ✅ Line height control (1.2x to 2.0x normal)
-- ✅ 8 colored overlay options (Cream, Aqua, Rose, Peach, Yellow, Blue, Green, Mint)
-- ✅ 5 text contrast presets (Normal to Maximum)
+- ✅ 8 colored overlay options (Cream, Peach, Mint, Sky, Rose, Lavender, etc.)
+- ✅ Text contrast presets (Normal to Maximum)
 - ✅ 4 quick presets: Standard, Recommended, High Contrast, Dark Mode
-- ✅ DyslexiaText component (drop-in replacement for Text component)
+- ✅ DyslexiaText component across major screens
 
-**In Progress:**
-- ⏳ Settings UI screen for font/overlay selection
-- ⏳ Font file loading for OpenDyslexic and Lexend
-- ⏳ App-wide Text component replacement
-- ⏳ User testing with 15 dyslexia community members
-
-**Coming soon:** Full settings screen (estimated 2 weeks)
+**Being refined:**
+- ⏳ Font rendering optimization
+- ⏳ Settings UI improvements
+- ⏳ User feedback integration
 
 ---
 
-### 📋 Motor Disability Enhancements (PLANNING COMPLETE)
+### � **Motor Disability Enhancements**
 **Who it helps:** People with limited fine motor control, tremors, mobility challenges  
-**Status:** Comprehensive implementation plan created, development starting soon
+**Status:** Planning complete, development starting after beta
 
 **What's planned:**
-- 🔜 Dwell-click: Hover over buttons to activate them (no clicking needed)
-- 🔜 Sticky keys for one-finger typing (sequential key presses)
-- 🔜 Voice commands for 30+ common actions
-- 🔜 One-handed mode with reachable UI
-- 🔜 Increased touch targets (48-64px minimum)
-- 🔜 Gesture simplification with alternative actions
-- 🔜 Tremor compensation with motion filtering
+- Dwell-click: Hover over buttons to activate them (no clicking needed)
+- Sticky keys for one-finger typing
+- Voice commands for 30+ common actions
+- One-handed mode with reachable UI
+- Increased touch targets (48-64px minimum)
+- Gesture simplification
+- Tremor compensation with motion filtering
 
-**Timeline:**
-- Estimated completion: 2-3 months
-- Testing plan: 10 users (CP, MS, arthritis, Parkinson's, injuries)
+**Timeline:** Development starts post-beta, estimated 2-3 months
 
 ---
 
-### 📋 Stronger Community Safety (PLANNED)
+### � **Stronger Community Safety**
 **Who it helps:** Everyone, especially vulnerable community members  
-**Status:** Planning complete, development estimated 3 weeks
+**Status:** Planning complete, development during open beta
 
 **What's planned:**
-- 🔜 Content warnings for potentially triggering topics
-- 🔜 Safe word protocol for emergency stops
-- 🔜 Sentiment analysis for hostile language detection
-- 🔜 Enhanced moderation tools and mod dashboard
-- 🔜 Reporting system with 24-hour response time
-- 🔜 Trauma-informed design patterns
+- Content warnings for potentially triggering topics
+- Safe word protocol for emergency stops
+- Enhanced moderation tools and mod dashboard
+- Improved reporting system with faster response
+- Trauma-informed design patterns
+- Community moderator training
 
-**Expected impact:**
-- 50% of users feel safer
-- 20% reduction in harmful incidents
+**Expected impact:** 50% of users feel safer, 20% reduction in harmful incidents
 
-**Estimated completion:** 3 months
+**Timeline:** Implementation during open beta phase
 
 ---
 
-### 📋 Indigenous Cultural Protections (PLANNED)
+### � **Indigenous Cultural Protections**
 **Who it helps:** Indigenous peoples and communities  
 **Status:** Planning complete, requires Indigenous elder consultation
 
 **What's planned:**
-- 🔜 Sacred data encryption with AES-256
-- 🔜 Ceremony time-locks (auto-lock during sacred times)
-- 🔜 Elder permission workflow for ceremonial content
-- 🔜 OCAP compliance dashboard (Ownership, Control, Access, Possession)
-- 🔜 Data residency controls (keep Canadian Indigenous data in Canada)
-- 🔜 Seasonal restrictions and traditional protocols
+- Sacred data encryption with enhanced AES-256
+- Ceremony time-locks (auto-lock during sacred times)
+- Elder permission workflow for ceremonial content
+- OCAP compliance dashboard (Ownership, Control, Access, Possession)
+- Data residency controls (keep Canadian Indigenous data in Canada)
+- Seasonal restrictions and traditional protocols
 
-**Expected impact:**
-- 100% OCAP compliance
-- 20-25% adoption of cultural features
-
-**Estimated completion:** 2-3 months after elder consultation
+**Timeline:** Elder consultation phase starting Q1 2026, estimated 2-3 months after approval
 
 ---
 
@@ -575,7 +651,9 @@ This roadmap is updated regularly based on:
 - Accessibility audits
 - Security requirements
 
-**Last updated:** {{ site.time | date: '%B %d, %Y' }}
+**Last updated:** October 25, 2025  
+**Current Phase:** Closed Beta Testing  
+**Next Update:** After open beta launch (December 2025)
 
 ---
 
