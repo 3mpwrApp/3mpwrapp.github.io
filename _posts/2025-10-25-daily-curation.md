@@ -35,7 +35,7 @@ On April 19, 2021, Finance Minister Chrystia Freeland presented the first federa
 ## 6. Canada's measles outbreak control challenged by disinformation and distrust, doctors say
 <img src='https://i.cbc.ca/ais/42a76a57-2af3-417c-892f-1ef5c6d25985,1761343323786/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C208%2C4000%2C2250%29%3BResize%3D%28620%29' alt='People are stopped in a hospital with a sign that says "measles screening."' width='620' height='349' title='A nurse demonstrates how to put on a mask at a measles screening point at Victoria Hospital in London, Ontario on July 9, 2025. Canada, which officially eradicated measles in 1998, has recorded more cases of the virus this year than any other Western country, according to World Health Organization figures updated this month. Different communities have been hit, but experts link the severity of the outbreak primarily to conservative Mennonite communities in the provinces of Ontario and Alberta long been opposed to vaccines. '/><p>A year since measles started raging in Canada, the outbreak's subsided, but the virus shows no signs of being stamped out. Doctors say problems here  — from distrust of medical officials in vulnerable communities, to broader vaccine disinformation — could set the stage for future outbreaks. Here’s what they’d like to see change.</p>
 📍 [Source](https://www.cbc.ca/news/health/measles-canada251027-9.6952804?cmp=rss)
-**Score:** 20.70
+**Score:** 20.80
 
 ## 7. Manitoba Government's Connected Approach Supporting Primary Care, Faster Discharges: CIHI Report
 📍 [Source](https://news.gov.mb.ca/news/index.html?item=71279)
@@ -81,25 +81,25 @@ Colorado wolves must come from Northern Rockies states, the head of the U.S. Fis
 📍 [Source](https://globalnews.ca/news/11493979/colorado-grey-wolf-import-canada-trump/)
 **Score:** 14.00
 
-## 16. Canada needs new Indo-Pacific strategy as it seeks deeper Asia ties: Anand
-Anand says she has told Global Affairs Canada to update the Indo-Pacific strategy that the Trudeau government released three years ago.
-📍 [Source](https://globalnews.ca/news/11493820/canada-indo-pacific-strategy-anand-update/)
-**Score:** 14.00
-
-## 17. Refocusing Canada’s international security agenda
+## 16. Refocusing Canada’s international security agenda
 This week, we spoke with James Fergusson, director of the Centre for Defence and Security Studies at the University of Manitoba, about the changing international security landscape and how it affects Canada. We look at the lessons from Canada’s involvement in Afghanistan, our  relationship with NATO, and whether Canada is equipped to deal with the […]
 📍 [Source](https://policyoptions.irpp.org/2016/08/po-podcast-17-refocusing-canadas-international-security-agenda/)
 **Score:** 14.00
 
-## 18. Demystifying the role of parliamentary staffers
+## 17. Demystifying the role of parliamentary staffers
 Much has been written about the roles members of Parliament play, but surprisingly little is publicly known or discussed about Canada’s parliamentary staffers. The pejorative label “the boys in short pants” has recently been used to describe some staffers; others have been called  “ruthless, cutthroat psychopaths” and “25-year-old jihadis.” (Those latter two quotes were from […]
 📍 [Source](https://policyoptions.irpp.org/2016/07/demystifying-the-role-of-parliamentary-staffers/)
 **Score:** 14.00
 
-## 19. We analyzed 200 cancer and autism videos on TikTok and found the majority contain misinformation
-<img src='https://i.cbc.ca/ais/3c4d3b89-82f2-4c77-9246-c820ccf7cf42,1761251808505/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C234%2C4500%2C2531%29%3BResize%3D%28620%29' alt='A hand holds up a phone with the TikTok logo on it.' width='620' height='349' title='LONDON, UK - April 27 2020: Tik Tok social media app icon on a mobile device'/><p>TikTok is flooded with videos promising miracle treatments for autism and cancer, but how many of them are true? Marketplace investigated 200 health videos on the platform and uncovered a troubling trend: misinformation is not only widespread, it’s thriving. </p>
-📍 [Source](https://www.cbc.ca/news/marketplace/tiktok-health-claims-marketplace-9.6949928?cmp=rss)
-**Score:** 13.00
+## 18. Social worker tells murder trial of 2 Ontario women that boy’s zip-tied pyjamas made her ‘uncomfortable’
+<img src='https://i.cbc.ca/ais/e03b78ce-e202-4343-be6e-053075f81330,1761337339700/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C143%2C3803%2C2139%29%3BResize%3D%28620%29' alt='A courtroom sketch shows two women in separate prisoner boxes with a police officer between them and three people in lawyer's robes seated before them.  ' width='620' height='349' title='Becky Hamber, left, and Cooney, centre, sat in separate boxes at their murder trial in Milton, Ont., on Monday as shown in this court sketch. Cooney's lawyer is Kim Edward, third from right. Hamber's lawyers are Monte MacGregor, second from right, and  Nabeel Sheiban.'/><p>The trial for two Burlington, Ont., women charged in the death of a 12-year-old boy in their care heard this week from several people involved in treating his and his younger brother’s mental health. </p>
+📍 [Source](https://www.cbc.ca/news/canada/hamilton/hamber-cooney-trial-9.6952509?cmp=rss)
+**Score:** 14.00
+
+## 19. Say goodbye to rent control, indefinite leases if Ontario passes new housing bill: advocates
+<img src='https://i.cbc.ca/ais/fd16b390-f32c-45ea-812f-b7ddfc9d4bb5,1752002455326/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C6720%2C3780%29%3BResize%3D%28620%29' alt='Man in a red shirt walks outside of a home with a red 'For Rent' sign' width='620' height='349' title='A for rent sign outside a home in Toronto on Tuesday July 12, 2022. THE CANADIAN PRESS/Cole Burston'/><p>Ontario's planned new housing legislation could open the door to ending rent control and indefinite leases across the province, advocates warn after a recent proposal by Premier Doug Ford's government.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/proposal-rent-control-removal-ontario-9.6952992?cmp=rss)
+**Score:** 15.00
 
 ## 20. What's In Your Fridge: Josh Santos of VIFF's Composer Filmmaker Accelerator program
 <h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>. </h3><p data-slot-rendered-content="true"><em></em></p>
@@ -169,16 +169,16 @@ The Richmond restaurant took home the honours once again.
 ## 35. Alberta government plans to allow residents to privately pay for any diagnostic or screening service
 <img src='https://i.cbc.ca/ais/3f679924-c696-4a55-bfac-aeb77395385f,1761326611694/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C55%2C1000%2C562%29%3BResize%3D%28620%29' alt='A scan of a brain on a computer screen, with a person lying on a platform in the background.' width='620' height='349' title='MRI machine and screens with doctor and nurse.'/><p>Alberta is planning legislative changes that would let people pay out of pocket for diagnostic and preventive tests, such as MRIs, CT scans and full-body scans — without a doctor’s order.</p>
 📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-paul-parks-mri-diagnostics-adriana-lagrange-9.6952189?cmp=rss)
-**Score:** 10.00
+**Score:** 10.20
 
 ## 36. Alberta parents still struggling to book COVID shots for kids as doctors raise alarm about access
 <img src='https://i.cbc.ca/ais/21e69190-57d6-4f57-afd8-762618aac175,1761264990614/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A close-up on hands in purple gloves extracting vaccine from a vial with a syringe' width='620' height='349' title='Parents have to call Health Link to book COVID-19 vaccines for children under 12. But the health information line has been overwhelmed this week and some parents have been unable to book'/><p>Parents and doctors continue to push back against the Alberta government’s controversial COVID-19 vaccine rollout. Determining who is eligible for free vaccines has not been straightforward, and the booking process has been criticized as complicated and confusing.</p>
 📍 [Source](https://www.cbc.ca/news/canada/calgary/covid-vaccine-booking-challenges-alberta-9.6951352?cmp=rss)
-**Score:** 10.20
+**Score:** 10.30
 
 ## 37. Manitoba Government Opens Downtown Resource Corner at Millennium Library
 📍 [Source](https://news.gov.mb.ca/news/index.html?item=71280)
-**Score:** 8.70
+**Score:** 8.80
 
 ## 38. Manitoba Supports Families with New Parenting Website
 📍 [Source](https://news.gov.mb.ca/news/index.html?item=71278)
