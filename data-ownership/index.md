@@ -7,7 +7,7 @@ description: Our unwavering commitment to 100% user data ownership and sovereign
 
 # 3mpwrApp — Data Ownership and Security Statement
 
-**Last updated:** October 20, 2025
+**Last updated:** October 25, 2025
 
 ## Our Commitment to 100% User Data Ownership
 
@@ -205,5 +205,5 @@ For questions about data ownership or to verify these claims:
 
 *This statement represents our core commitment to user data sovereignty. Your privacy and data ownership are not just promises—they're technically guaranteed by our architecture.*
 
-**Version:** 1.0  
-**Effective:** October 20, 2025
+**Version:** 2.0  
+**Effective:** October 25, 2025

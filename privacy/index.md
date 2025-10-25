@@ -7,13 +7,8 @@ description: Our commitment to your privacy and 100% user data ownership.
 
 # 3mpwrApp Privacy Policy
 
-**Last updated: October 20, 2025**  
-**Version: 2.0**
-
-This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and protects information in the 3mpwrApp mobile application and website. By using our services, you agree to these practices.
-
-**Last updated: October 20, 2025**  
-**Version: 2.0**
+**Last updated: October 25, 2025**  
+**Version: 3.0**
 
 This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and protects information in the 3mpwrApp mobile application and website. By using our services, you agree to these practices.
 
@@ -318,4 +313,4 @@ This policy reflects our actual technical implementation. You can verify our pri
 
 ---
 
-*Version 2.0 - Updated October 20, 2025*
+*Version 3.0 - Updated October 25, 2025*

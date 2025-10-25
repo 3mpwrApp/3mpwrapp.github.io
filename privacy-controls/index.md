@@ -277,8 +277,8 @@ Want 100% control? Enable BYOC mode:
 
 ---
 
-**Last Updated:** October 21, 2025  
-**App Version:** 3.1+
+**Last Updated:** October 25, 2025  
+**App Version:** 3.2+
 
 ---
 

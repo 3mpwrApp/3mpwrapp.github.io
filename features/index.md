@@ -8,11 +8,25 @@ description: Explore 3mpwrApp's comprehensive 133+ features designed to empower 
 
 **Version:** 1.0.0-rc.1 (Closed Beta)  
 **Status:** Ready for Beta Testing  
-**Last Updated:** October 19, 2025
+**Last Updated:** October 25, 2025
 
 Welcome to 3mpwrApp - your complete toolkit for disability advocacy, community connection, and system navigation. With **133 features available in beta** and 35 more coming soon, every tool is designed to empower you while protecting your privacy.
 
 > 📖 **Looking for detailed instructions?** Check our [User Guide](/user-guide) for step-by-step tutorials on how to use each feature effectively.
+
+---
+
+## ⚠️ **IMPORTANT LEGAL DISCLAIMERS**
+
+Before using 3mpwrApp features, please understand:
+
+- ⚕️ **NOT Medical Advice** - Wellness tools provide information only. This app does not diagnose, treat, or prevent any medical condition. Always consult qualified healthcare providers.
+- ⚖️ **NOT Legal Advice** - Legal resources are educational only. This app does not create an attorney-client relationship. Always consult licensed attorneys for legal matters.
+- 💰 **NOT Financial Advice** - Benefits and financial information is general guidance only. Consult qualified financial advisors and tax professionals.
+- 🤖 **AI May Contain Errors** - All AI-generated content must be verified with qualified professionals. AI is a tool, not a replacement for professional judgment.
+- 🆘 **NOT Emergency Services** - This app cannot detect or respond to emergencies. In emergencies, call 911 immediately.
+
+**[Read all disclaimers →](/legal/disclaimers/)**
 
 ---
 
