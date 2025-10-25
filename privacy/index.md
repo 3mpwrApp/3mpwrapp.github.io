@@ -26,11 +26,15 @@ This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and prote
 - **🔍 Verifiable Privacy:** Our codebase contains no hidden data-logging functions. You can inspect and verify our claims.
 
 ### Technical Implementation:
-- **BYOC Strict Mode:** When enabled, completely disables Firebase and all cloud storage, allowing you to connect ANY cloud provider you want
-- **Session-Only Credentials:** Your storage credentials are never saved by the app
+- **Three Privacy Modes:** Default (easy), Hybrid BYOC (easy login + your cloud), or Strict BYOC (maximum privacy)
+- **Hybrid BYOC:** Firebase handles login only, ALL your data goes to YOUR cloud (we never see it)
+- **Strict BYOC:** Complete air-gap - Firebase completely disabled, connect ANY cloud provider you want
+- **Session-Only Credentials:** Your storage credentials are never saved by the app (in BYOC modes)
 - **Hardware Security:** Encryption keys stored in your device's secure enclave
-- **Network Protection:** Certificate pinning and encrypted connections for all network traffic
+- **Network Protection:** Secure encrypted connections for all network traffic
 - **Air-Gapped Operation:** Works 100% offline with no mandatory internet connections
+
+**[Learn more about privacy modes →](/privacy-controls/#choose-your-privacy-mode)**
 
 ---
 

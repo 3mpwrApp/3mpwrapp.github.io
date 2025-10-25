@@ -432,7 +432,7 @@ These features work across the entire app:
 ## 📖 Feature Highlights
 
 ### Evidence Locker - Your Secure Document Vault
-**Available in Beta** ✅
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#evidence-locker)**
 
 The Evidence Locker is your encrypted, private document storage system:
 
@@ -458,7 +458,7 @@ The Evidence Locker is your encrypted, private document storage system:
 ---
 
 ### Letter Wizard - 22 Professional Letter Templates
-**Available in Beta** ✅
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#letter-wizard)**
 
 Generate professional, legally-sound letters in minutes with auto-populate from your profile, field validation, bilingual generation (English/French), and PDF export.
 
@@ -497,7 +497,7 @@ Generate professional, legally-sound letters in minutes with auto-populate from 
 ---
 
 ### Wellness Tools - 36 Features for Mental & Physical Health
-**Available in Beta** ✅
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#wellness-tools)**
 
 Comprehensive wellness support across multiple dimensions:
 
@@ -512,7 +512,7 @@ Comprehensive wellness support across multiple dimensions:
 ---
 
 ### Legal Automation - Streamlined Legal Processes
-**Available in Beta** ✅
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#legal-workflow-automation)**
 
 Automated workflows for common legal processes with step-by-step guidance, auto-filled forms, document generation, deadline tracking, and bilingual support.
 
@@ -527,7 +527,7 @@ Automated workflows for common legal processes with step-by-step guidance, auto-
 ---
 
 ### Community - Connect & Support
-**Available in Beta** ✅
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#community-features)**
 
 Safe, moderated spaces for disability community with discussion threads, direct messaging, peer support matching (94% accuracy), safety controls, and 12+ disability-specific communities.
 
@@ -538,14 +538,14 @@ Safe, moderated spaces for disability community with discussion threads, direct 
 ---
 
 ### Campaign Coordination - Organize for Change
-**Available in Beta** ✅
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#campaign-coordination)**
 
 Tools for organizing advocacy campaigns with pre-built templates for workplace accessibility, Indigenous disability rights, transit accessibility, healthcare access, and housing rights campaigns.
 
 ---
 
 ### AI-Powered Advocacy Tools
-**Available in Beta** ✅
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#ai-advocacy-coach)**
 
 Intelligent tools to navigate complex systems:
 

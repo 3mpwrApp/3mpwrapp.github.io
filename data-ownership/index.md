@@ -25,8 +25,9 @@ description: Our unwavering commitment to 100% user data ownership and sovereign
 - Users maintain complete sovereignty over all personal information, notes, preferences, and content
 
 ### Technical Implementation:
-- Local-first architecture with AsyncStorage for device-only persistence
-- BYOC (Bring Your Own Cloud) strict mode available for users who want 100% user-owned storage
+- **Local-first architecture** - Your data stays on your device first, always
+- **Device storage** - Uses secure local storage built into your phone/tablet
+- **BYOC (Bring Your Own Cloud)** modes available - Choose your preferred privacy level
 - No default cloud storage or remote data collection
 - All data persistence controlled by user choices and settings
 
@@ -43,26 +44,49 @@ description: Our unwavering commitment to 100% user data ownership and sovereign
 
 ### Technical Verification:
 - Evidence Locker uses encrypted local storage only
-- Settings and preferences stored in AsyncStorage (device-only)
-- Wellness data and tracking kept in local context stores
+- Settings and preferences stored on your device only (never sent anywhere)
+- Wellness data and tracking kept in local storage on your device
 - Analytics and telemetry disabled by default (opt-in only)
 
 ---
 
-## 3. User Cloud, User Control
+## 3. User Cloud, User Control — Three Privacy Modes
 
-**If you enable backup or sync features, you connect only to your chosen storage service.**
+**You choose how 3mpwrApp handles your data with three privacy modes:**
 
-- Backup/sync connects to user's own services: ANY cloud provider you want (Google Drive, iCloud, WebDAV, Nextcloud, Dropbox, OneDrive, AWS S3, Azure Storage, or any other service)
-- **No data passes through or is accessible by 3mpwrApp or its developers**
-- User authenticates directly with their chosen cloud provider
-- App acts only as a client, never as an intermediary or data handler
+### 🔵 **Default Mode** (Easiest)
+- Your data stays on your device by default
+- Optional backup to Firebase (our secure cloud) if you want
+- Easy login with email, Google, or Apple
+- **Best for:** Most users who want convenience + privacy
 
-### BYOC Strict Mode:
-- When `EXPO_PUBLIC_DATA_POLICY=strict_byoc` is enabled, Firebase and all app-owned storage are completely disabled
-- Users can connect ANY storage provider they want (WebDAV, Nextcloud, Google Drive, Dropbox, OneDrive, AWS S3, iCloud, or any other cloud service) for 100% user-owned storage
-- Credentials are session-only and never persisted by the app
-- All writes go directly to user's endpoint, bypassing any app infrastructure
+### 🟢 **Hybrid BYOC Mode** (Best of Both Worlds) ⭐ **RECOMMENDED**
+- **Easy login:** Use email, Google, or Apple to sign in (handled by Firebase)
+- **Your data, your cloud:** ALL your data goes to YOUR chosen cloud storage (not ours!)
+- **Zero data on our servers:** We only handle your login, never your content
+- **Best for:** Users who want easy login BUT 100% control of their data
+
+**What this means:** You get the convenience of easy sign-in, but 3mpwrApp never sees or stores your posts, evidence, wellness data, or anything personal. It all goes directly to YOUR cloud (Google Drive, Dropbox, Nextcloud, iCloud, OneDrive, etc.).
+
+### 🟣 **Strict BYOC Mode** (Maximum Privacy)
+- **Complete air-gap:** Firebase completely disabled (no Firebase at all)
+- **100% user-owned storage:** Connect ANY cloud provider you want
+- **Session-only credentials:** Your cloud password never saved by the app
+- **Best for:** Maximum privacy advocates, healthcare settings, sensitive legal work
+
+**What this means:** The app becomes a tool on your device that only talks to YOUR cloud. No Firebase, no third-party services at all.
+
+---
+
+### How to Choose Your Mode
+
+| Mode | Login Method | Data Storage | Our Access | Best For |
+|------|-------------|--------------|------------|----------|
+| **Default** | Firebase | Device + Optional Firebase | Only if you enable backup | Most users |
+| **Hybrid BYOC** ⭐ | Firebase | YOUR cloud only | Never (auth only) | Privacy + Convenience |
+| **Strict BYOC** | Custom/None | YOUR cloud only | Never | Maximum privacy |
+
+**Note:** Backup/sync connects to user's own services: ANY cloud provider you want (Google Drive, iCloud, WebDAV, Nextcloud, Dropbox, OneDrive, AWS S3, Azure Storage, or any other service). No data passes through or is accessible by 3mpwrApp or its developers.
 
 ---
 
@@ -93,10 +117,10 @@ description: Our unwavering commitment to 100% user data ownership and sovereign
 - No 3mpwrApp keys, backdoors, or access mechanisms to user data
 
 ### Current Encryption Features:
-- Device AsyncStorage respects OS-level encryption settings
-- Evidence Locker content encryption (Argon2id KDF + AES-GCM)
-- HTTPS/TLS for any optional network communications
-- No plaintext storage of sensitive information
+- Device storage respects your phone's built-in encryption settings
+- Evidence Locker uses **military-grade encryption** (bank-level security)
+- Secure HTTPS connections for any optional cloud sync
+- No storage of sensitive information in readable plain text
 
 ---
 
@@ -110,10 +134,12 @@ description: Our unwavering commitment to 100% user data ownership and sovereign
 - Privacy-by-design architecture documented and maintained
 
 ### Technical Verification Methods:
-1. **Build Inspection:** Check that `EXPO_PUBLIC_DATA_POLICY=strict_byoc` disables Firebase completely
-2. **Runtime Verification:** Confirm `require('firebase/config').db === null` in strict mode
-3. **Network Monitoring:** Verify only user-chosen endpoints are contacted for storage
-4. **Code Audit:** Review `services/firestore.ts`, `services/storageProviders.ts`, and data governance implementations
+1. **Build Inspection:** Verify Strict Privacy Mode completely disables Firebase
+2. **Runtime Verification:** Confirm no Firebase database connection in strict mode
+3. **Network Monitoring:** Verify only your chosen cloud storage is contacted
+4. **Code Audit:** Review our open-source storage and data governance code
+
+**For developers:** Check that `EXPO_PUBLIC_DATA_POLICY=strict_byoc` disables Firebase, confirm `require('firebase/config').db === null` in strict mode, and review `services/firestore.ts` and `services/storageProviders.ts`.
 
 ---
 

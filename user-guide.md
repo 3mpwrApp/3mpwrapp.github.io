@@ -252,6 +252,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 ---
 
 ## 🧘 **Wellness Tools (Detailed)**
+**[⚙️ See all 36 Wellness features →](/features#wellness-tools---36-features-for-mental--physical-health)**
 
 ### **⚕️ Medical Disclaimer:**
 > **ALL wellness tools are informational only. This app does NOT provide medical advice. Always consult qualified healthcare providers for medical decisions. In emergencies, call 911.**
@@ -313,6 +314,8 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 > **ALL legal resources are educational only. This app does NOT provide legal advice. Laws vary by jurisdiction. Always consult a licensed attorney for legal matters specific to your situation.**
 
 ### **Evidence Locker (Document Vault)**
+**[⚙️ See all Evidence Locker features →](/features#evidence-locker---your-secure-document-vault)**
+
 - Securely store documents, photos, audio
 - AES-256 encryption
 - Organize by tags & categories
@@ -321,6 +324,8 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Tamper detection
 
 ### **Letter Wizard (22 Templates)**
+**[⚙️ See all Letter Wizard features →](/features#letter-wizard---22-professional-letter-templates)**
+
 1. Accommodation Request (Workplace)
 2. Medical Leave Request
 3. FMLA Application
@@ -334,6 +339,8 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 ...and 12 more!
 
 ### **Legal Workflow Automation**
+**[⚙️ See all Legal Automation features →](/features#legal-automation---streamlined-legal-processes)**
+
 - Canada Disability Benefit (CDB) application
 - Workplace accommodation process
 - Appeals process automation
@@ -358,6 +365,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 ---
 
 ## 🤝 **Community Features**
+**[⚙️ See all Community features →](/features#community---connect--support)**
 
 ### **Peer Support Matching**
 - Match with others (disability type, experiences)
@@ -367,6 +375,8 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - **Not therapy** - peer support only
 
 ### **Campaign Coordination**
+**[⚙️ See Campaign Coordination features →](/features#campaign-coordination---organize-for-change)**
+
 - Organize advocacy campaigns
 - Coordinate with other users
 - Share resources & strategies

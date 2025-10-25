@@ -41,7 +41,7 @@ All privacy settings are in one place: **Settings → Privacy & Security**
 - Your personal information
 - Your wellness data
 - Your evidence or documents
-- Your GPS location or exact coordinates
+- Your location (where you are)
 
 ---
 
@@ -235,22 +235,82 @@ We only share data with essential service providers to make the app work. Here's
 
 ---
 
-## 🌟 Bring Your Own Cloud (BYOC)
+## 🌟 Choose Your Privacy Mode
 
-Want 100% control? Enable BYOC mode:
+3mpwrApp offers **three privacy modes** to match your needs:
 
-**Settings → Privacy & Security → Data Management**
+### Settings → Privacy & Security → Privacy Mode
 
-**Configure ANY cloud provider:**
+---
+
+### 🔵 **Default Mode** (Easy & Private)
+
+**How it works:**
+- Your data stays on your device by default
+- Optional backup to our secure cloud (Firebase) if you enable it
+- Easy login with email, Google, or Apple
+
+**Best for:** Most users who want both convenience and privacy
+
+**What we can access:** Only what you choose to backup
+
+---
+
+### 🟢 **Hybrid Mode** (Recommended) ⭐
+
+**How it works:**
+- **Easy login:** Sign in with email, Google, or Apple (we handle authentication)
+- **Your data, your cloud:** ALL your content goes to YOUR chosen cloud storage
+- **We only see your login:** Never your posts, evidence, wellness data, or files
+
+**Best for:** Users who want easy sign-in BUT total control of their data
+
+**What we can access:** Only your authentication (login credentials) - never your content
+
+**Configure your cloud:**
+- Google Drive
+- Dropbox  
+- OneDrive
+- iCloud
+- Nextcloud
+- Your own server
+- Any cloud storage you choose
+
+---
+
+### 🟣 **Strict BYOC Mode** (Maximum Privacy)
+
+**How it works:**
+- **No Firebase at all:** Complete air-gap, we're completely disconnected
+- **100% your cloud:** Connect ANY storage provider you want
+- **Session-only:** Your cloud credentials are never saved by the app
+
+**Best for:** Maximum privacy advocates, healthcare settings, legal professionals
+
+**What we can access:** Nothing - the app only talks to YOUR cloud
+
+**Configure your cloud:**
 - Google Drive
 - Dropbox
 - OneDrive
 - iCloud
 - Nextcloud
-- Your own server
-- Any WebDAV-compatible service
+- Your own server (WebDAV)
+- Any cloud storage provider
 
-**Result:** All your data syncs to YOUR chosen cloud, not ours.
+---
+
+### 📊 Quick Comparison
+
+| What You Get | Default Mode | Hybrid Mode ⭐ | Strict Mode |
+|--------------|-------------|--------------|-------------|
+| Easy login (Google, Apple, Email) | ✅ Yes | ✅ Yes | ❌ No |
+| Data on your device | ✅ Yes | ✅ Yes | ✅ Yes |
+| Data on your cloud | 🔄 Optional | ✅ Yes (required) | ✅ Yes (required) |
+| Data on our servers | 🔄 Optional backup only | ❌ Never | ❌ Never |
+| Setup difficulty | 🟢 Easy | 🟡 Medium | 🔴 Advanced |
+
+**Result:** No matter which mode you choose, you control your data. The difference is how much convenience vs. privacy you want.
 
 ---
 
