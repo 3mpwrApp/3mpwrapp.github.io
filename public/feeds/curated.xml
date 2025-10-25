@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 21 Oct 2025 21:22:46 GMT</lastBuildDate>
-    <pubDate>Tue, 21 Oct 2025 21:22:46 GMT</pubDate>
+    <lastBuildDate>Sat, 25 Oct 2025 21:20:49 GMT</lastBuildDate>
+    <pubDate>Sat, 25 Oct 2025 21:20:49 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -20,11 +20,10 @@
     <category>Benefits</category>
 
     <item>
-      <title>Tens of thousands mistakenly approved for dental coverage, Health Canada says</title>
-      <link>https://www.cbc.ca/news/politics/system-error-health-canada-dental-insurance-plan-9.6947506?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/politics/system-error-health-canada-dental-insurance-plan-9.6947506?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/9cf63253-e070-42c6-bbef-5505a33b3434,1761077799439/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C210%2C3478%2C1956%29%3BResize%3D%28620%29' alt='Dental instruments sit on a try inside a dental office.' width='620' height='349' title='Roughly 28,000 people received care after they were given an inaccurate assessment under the national dental insurance plan.'/><p>Roughly 70,000 people were approved for coverage under the public dental insurance program, but were later deemed ineligible or had been assessed for an incorrect copayment level, Health Canada said Tuesday.</p>]]></description>
-      <pubDate>Tue, 21 Oct 2025 20:37:07 GMT</pubDate>
+      <title>Manitoba Government Introduces Bill That Would Respond to Meth Crisis, Reduce Pressure on Emergency Rooms and Keep Public Safe</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=70942</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=70942</guid>
+      <pubDate>Thu, 02 Oct 2025 19:46:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -40,30 +39,49 @@
     </item>
 
     <item>
-      <title>Manitoba Government Introduces Bill That Would Respond to Meth Crisis, Reduce Pressure on Emergency Rooms and Keep Public Safe</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=70942</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=70942</guid>
-      <pubDate>Thu, 02 Oct 2025 19:46:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>As Canada nears submarine deal, Germany and Norway pitch partnership</title>
-      <link>https://globalnews.ca/news/11487721/germany-norway-defence-ministers-canada-submarines/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11487721/germany-norway-defence-ministers-canada-submarines/</guid>
-      <description><![CDATA[German Defence Minister Boris Pistorius said TKMS, one of two finalists for the contract, could build some of the subs or parts for them in Canada.]]></description>
-      <pubDate>Tue, 21 Oct 2025 18:38:29 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
       <title>The future of child care in Canada: What to expect</title>
       <link>https://policyoptions.irpp.org/2021/04/the-future-of-child-care-in-canada-what-to-expect/</link>
       <guid isPermaLink="true">https://policyoptions.irpp.org/2021/04/the-future-of-child-care-in-canada-what-to-expect/</guid>
       <description><![CDATA[On April 19, 2021, Finance Minister Chrystia Freeland presented the first federal budget in two years. Among the many new and updated policies, one stood out especially – the promise of affordable universal childcare for all Canadians. Universal child care had been promised in the past and never come to fruition, not for lack of […]]]></description>
       <pubDate>Thu, 29 Apr 2021 02:26:55 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Alberta ends hybrid work model for government employees, effective February</title>
+      <link>https://www.cbc.ca/news/canada/edmonton/alta-government-employee-back-in-office-9.6952160?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/edmonton/alta-government-employee-back-in-office-9.6952160?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/fd8c8e48-06a1-425b-9c95-798627d636a1,1761324520990/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C290%2C5295%2C2978%29%3BResize%3D%28620%29' alt='A large government legislature building.' width='620' height='349' title='More than 12,000 Alberta government workers will return to full-time, in-office work starting February, the province said Friday.'/><p>Alberta government employees will return to full-time, in-office work starting February, the province said Friday. Since 2022, Alberta Public Service employees have been eligible to work from home up to two days per week. </p>]]></description>
+      <pubDate>Fri, 24 Oct 2025 16:53:20 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Provincial Nominee Program Invites 328 Health-Care Workers to Build Careers in Manitoba</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71157</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71157</guid>
+      <pubDate>Tue, 14 Oct 2025 15:58:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Canada&apos;s measles outbreak control challenged by disinformation and distrust, doctors say</title>
+      <link>https://www.cbc.ca/news/health/measles-canada251027-9.6952804?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/health/measles-canada251027-9.6952804?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/42a76a57-2af3-417c-892f-1ef5c6d25985,1761343323786/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C208%2C4000%2C2250%29%3BResize%3D%28620%29' alt='People are stopped in a hospital with a sign that says "measles screening."' width='620' height='349' title='A nurse demonstrates how to put on a mask at a measles screening point at Victoria Hospital in London, Ontario on July 9, 2025. Canada, which officially eradicated measles in 1998, has recorded more cases of the virus this year than any other Western country, according to World Health Organization figures updated this month. Different communities have been hit, but experts link the severity of the outbreak primarily to conservative Mennonite communities in the provinces of Ontario and Alberta long been opposed to vaccines. '/><p>A year since measles started raging in Canada, the outbreak's subsided, but the virus shows no signs of being stamped out. Doctors say problems here  — from distrust of medical officials in vulnerable communities, to broader vaccine disinformation — could set the stage for future outbreaks. Here’s what they’d like to see change.</p>]]></description>
+      <pubDate>Sat, 25 Oct 2025 08:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government&apos;s Connected Approach Supporting Primary Care, Faster Discharges: CIHI Report</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71279</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71279</guid>
+      <pubDate>Thu, 23 Oct 2025 21:50:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -79,21 +97,21 @@
     </item>
 
     <item>
-      <title>&apos;We&apos;re going to do better,&apos; CRA secretary of state says in response to scathing AG report</title>
-      <link>https://www.cbc.ca/news/politics/ag-fall-2025-cra-military-9.6946672?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/politics/ag-fall-2025-cra-military-9.6946672?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/e410cb49-8d2b-48e4-9001-354f2d845fb8,1761069797803/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C278%2C4356%2C2450%29%3BResize%3D%28620%29' alt='Auditor General of Canada Karen Hogan speaks in front of Canadian flags' width='620' height='349' title='Auditor General of Canada Karen Hogan speaks at a press conference after tabling performance audit reports in Parliament, in Ottawa, on Tuesday, Oct. 21, 2025. THE CANADIAN PRESS/Patrick Doyle'/><p></p>]]></description>
-      <pubDate>Fri, 22 Aug 2025 09:58:08 GMT</pubDate>
+      <title>How Can Canada Help Workers Through a Green Transition?</title>
+      <link>https://thetyee.ca/News/2025/10/23/How-Canada-Help-Workers-Green-Transition/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2025/10/23/How-Canada-Help-Workers-Green-Transition/</guid>
+      <description><![CDATA[Create sector-specific training programs to help fossil fuel workers transition to new jobs, policy analyst Lin Al-Akkad says.]]></description>
+      <pubDate>Thu, 23 Oct 2025 07:20:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>4 out of 5 teens aren’t getting enough physical activity in Canada</title>
-      <link>https://www.cbc.ca/news/health/teens-physical-activity-study-statistics-canada-9.6946105?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/health/teens-physical-activity-study-statistics-canada-9.6946105?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/93662778-fb86-4efb-a105-037e225722ee,1761002845886/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C4410%2C2480%29%3BResize%3D%28620%29' alt='A slightly aerial or upper level view of a field shows a number of teenagers running around. A white frisbee is visible flying through the air.' width='620' height='349' title='A group of teenagers play ultimate frisbee in Vancouver, British Columbia on Tuesday, May 2, 2023.'/><p>Four out of five teenagers aren’t meeting physical activity recommendations, according to new data from Statistics Canada, and experts say without big changes, physical activity will keep losing out to screens and social media when it comes to teens. </p>]]></description>
-      <pubDate>Tue, 21 Oct 2025 08:00:00 GMT</pubDate>
+      <title>Why Gawker&apos;s bankruptcy is a policy issue</title>
+      <link>https://policyoptions.irpp.org/2016/08/policy-options-podcast-18-gawker-bankruptcy/</link>
+      <guid isPermaLink="true">https://policyoptions.irpp.org/2016/08/policy-options-podcast-18-gawker-bankruptcy/</guid>
+      <description><![CDATA[Where should media outlets draw the line between revenue generation and content quality? Between truth and ethics? CBC News’ Lauren O’Neil stopped by the podcast to weigh in on these issues and more on this week’s episode. We looked at the Gawker bankruptcy, the ethics and business of new media and Canada’s evolving media landscape. […]]]></description>
+      <pubDate>Wed, 24 Aug 2016 17:42:58 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -109,20 +127,11 @@
     </item>
 
     <item>
-      <title>Smith Still Faces Questions in the Dodgy Contracts Scandal</title>
-      <link>https://thetyee.ca/Opinion/2025/10/20/Smith-Still-Faces-Questions-Contracts-Scandal/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Opinion/2025/10/20/Smith-Still-Faces-Questions-Contracts-Scandal/</guid>
-      <description><![CDATA[The premier said a report on AHS procurement practices cleared her government. It didn’t.]]></description>
-      <pubDate>Mon, 20 Oct 2025 07:10:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Provincial Nominee Program Invites 328 Health-Care Workers to Build Careers in Manitoba</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=71157</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71157</guid>
-      <pubDate>Tue, 14 Oct 2025 15:58:00 GMT</pubDate>
+      <title>Supreme Court of Canada affirms Sask. man&apos;s acquittal in use of Good Samaritan law</title>
+      <link>https://www.cbc.ca/news/canada/saskatchewan/supreme-court-good-samaritan-law-9.6952103?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/saskatchewan/supreme-court-good-samaritan-law-9.6952103?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/f3db194d-4062-433d-89da-d6e9985a2b68,1761327027165/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C433%2C8318%2C4678%29%3BResize%3D%28620%29' alt='People take a break on the front lawn in front of a large stone building' width='620' height='349' title='People take a break on the front lawn of the Supreme Court of Canada in Ottawa on Monday, Oct. 6, 2025.'/><p>The Supreme Court of Canada has affirmed the acquittal of a man who was arrested at the scene of a drug overdose, a ruling that clarifies the application of a law intended to reduce substance use deaths.</p>]]></description>
+      <pubDate>Fri, 24 Oct 2025 17:33:24 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -138,31 +147,11 @@
     </item>
 
     <item>
-      <title>Parks Canada releases two reports on Jasper fire confirming cause, development</title>
-      <link>https://globalnews.ca/news/11488144/parks-canada-releases-reports-jasper-fire-cause/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11488144/parks-canada-releases-reports-jasper-fire-cause/</guid>
-      <description><![CDATA[The fire destroyed a third of the town in July 2024 and forced 25,000 residents and visitors to flee.]]></description>
-      <pubDate>Tue, 21 Oct 2025 21:14:14 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Waffles sold at Dollarama recalled across Canada due to mold</title>
-      <link>https://globalnews.ca/news/11487749/dollarama-biskwi-waffles-recall-mold/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11487749/dollarama-biskwi-waffles-recall-mold/</guid>
-      <description><![CDATA[Some waffle dessert items sold at Dollarama stores have been recalled by government health officials for a risk of mold contamination.]]></description>
-      <pubDate>Tue, 21 Oct 2025 19:27:43 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Why Gawker&apos;s bankruptcy is a policy issue</title>
-      <link>https://policyoptions.irpp.org/2016/08/policy-options-podcast-18-gawker-bankruptcy/</link>
-      <guid isPermaLink="true">https://policyoptions.irpp.org/2016/08/policy-options-podcast-18-gawker-bankruptcy/</guid>
-      <description><![CDATA[Where should media outlets draw the line between revenue generation and content quality? Between truth and ethics? CBC News’ Lauren O’Neil stopped by the podcast to weigh in on these issues and more on this week’s episode. We looked at the Gawker bankruptcy, the ethics and business of new media and Canada’s evolving media landscape. […]]]></description>
-      <pubDate>Wed, 24 Aug 2016 17:42:58 GMT</pubDate>
+      <title>Richmond restaurant out thousands due to Canada Post strike</title>
+      <link>https://globalnews.ca/news/11494094/richmond-restaurant-canada-post-strike/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11494094/richmond-restaurant-canada-post-strike/</guid>
+      <description><![CDATA[Canada Post says that while postal services have resumed, "uncertainty and instability in the postal service will continue with the union's decision to conduct rotating strikes.]]></description>
+      <pubDate>Sat, 25 Oct 2025 05:17:21 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -188,21 +177,50 @@
     </item>
 
     <item>
-      <title>Liberal House leader ‘starting to worry’ about support for upcoming budget</title>
-      <link>https://www.cbc.ca/news/politics/liberal-budget-support-vote-9.6947268?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/politics/liberal-budget-support-vote-9.6947268?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/4644be69-e5f6-4dfa-b7bf-b88babf951fb,1761073707252/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C7388%2C4155%29%3BResize%3D%28620%29' alt='man speaks to reporters' width='620' height='349' title='Minister of Transport and Leader of the Government in the House of Commons Steven MacKinnon speaks to reporters ahead of a cabinet meeting on Parliament Hill in Ottawa, on Tuesday, Oct. 21, 2025. THE CANADIAN PRESS/Spencer Colby'/><p></p>]]></description>
-      <pubDate>Sun, 11 May 2025 15:48:19 GMT</pubDate>
+      <title>Trump says he&apos;s raising &apos;tariff on Canada&apos; by 10% &apos;over and above what they are paying now&apos;</title>
+      <link>https://www.cbc.ca/news/politics/trump-says-he-s-raising-tariff-on-canada-by-10-over-and-above-what-they-are-paying-now-9.6953786?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/politics/trump-says-he-s-raising-tariff-on-canada-by-10-over-and-above-what-they-are-paying-now-9.6953786?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.7500266,1743622190000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Composite illustration featuring U.S. President Donald Trump, left, and Canadian Prime Minister Mark Carney.' width='620' height='349' title='U.S. President Donald Trump, left, and Canadian Prime Minister Mark Carney.'/><p></p>]]></description>
+      <pubDate>Wed, 22 Oct 2025 21:19:35 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>BC Reneges on New Supports for Deaf and Hard-of-Hearing Children</title>
-      <link>https://thetyee.ca/News/2025/10/16/BC-Reneges-Deaf-Hard-Hearing-Children/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2025/10/16/BC-Reneges-Deaf-Hard-Hearing-Children/</guid>
-      <description><![CDATA[A language skills program was set to go, until the government pulled the plug.]]></description>
-      <pubDate>Thu, 16 Oct 2025 07:20:00 GMT</pubDate>
+      <title>Social worker tells murder trial of 2 Ontario women that boy’s zip-tied pyjamas made her ‘uncomfortable’</title>
+      <link>https://www.cbc.ca/news/canada/hamilton/hamber-cooney-trial-9.6952509?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/hamilton/hamber-cooney-trial-9.6952509?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/e03b78ce-e202-4343-be6e-053075f81330,1761337339700/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C143%2C3803%2C2139%29%3BResize%3D%28620%29' alt='A courtroom sketch shows two women in separate prisoner boxes with a police officer between them and three people in lawyer's robes seated before them.  ' width='620' height='349' title='Becky Hamber, left, and Cooney, centre, sat in separate boxes at their murder trial in Milton, Ont., on Monday as shown in this court sketch. Cooney's lawyer is Kim Edward, third from right. Hamber's lawyers are Monte MacGregor, second from right, and  Nabeel Sheiban.'/><p>The trial for two Burlington, Ont., women charged in the death of a 12-year-old boy in their care heard this week from several people involved in treating his and his younger brother’s mental health. </p>]]></description>
+      <pubDate>Sat, 25 Oct 2025 08:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Say goodbye to rent control, indefinite leases if Ontario passes housing proposal: advocates</title>
+      <link>https://www.cbc.ca/news/canada/toronto/proposal-rent-control-removal-ontario-9.6952992?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/toronto/proposal-rent-control-removal-ontario-9.6952992?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/fd16b390-f32c-45ea-812f-b7ddfc9d4bb5,1752002455326/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C6720%2C3780%29%3BResize%3D%28620%29' alt='Man in a red shirt walks outside of a home with a red 'For Rent' sign' width='620' height='349' title='A for rent sign outside a home in Toronto on Tuesday July 12, 2022. THE CANADIAN PRESS/Cole Burston'/><p>Ontario's planned new housing legislation could open the door to ending rent control and indefinite leases across the province, advocates warn after a recent proposal by Premier Doug Ford's government.</p>]]></description>
+      <pubDate>Fri, 24 Oct 2025 22:56:33 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>What&apos;s In Your Fridge: Josh Santos of VIFF&apos;s Composer Filmmaker Accelerator program</title>
+      <link>https://www.straight.com/music/whats-in-your-fridge-josh-santos-of-viffs-composer-filmmaker-accelerator-program</link>
+      <guid isPermaLink="true">https://www.straight.com/music/whats-in-your-fridge-josh-santos-of-viffs-composer-filmmaker-accelerator-program</guid>
+      <description><![CDATA[<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>. </h3><p data-slot-rendered-content="true"><em></em></p>]]></description>
+      <pubDate>Sat, 04 Oct 2025 17:00:41 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Making Continued Progress Through Investment to Hip and Knee Surgeries at Selkirk Regional Health Centre</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71198</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71198</guid>
+      <pubDate>Thu, 16 Oct 2025 15:11:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -217,10 +235,39 @@
     </item>
 
     <item>
-      <title>Manitoba Legislative Session Resumes with Focus on Health Care, Affordability and Public Safety</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=70938</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=70938</guid>
-      <pubDate>Wed, 01 Oct 2025 18:28:00 GMT</pubDate>
+      <title>Manitoba Government Invests in Training for Child and Family Service Workers</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=70944</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=70944</guid>
+      <pubDate>Fri, 03 Oct 2025 20:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Kelowna victim&apos;s family says bail reform does little to combat intimate partner violence</title>
+      <link>https://globalnews.ca/news/11493960/kelowna-victim-family-bail-reform-intimate-partner-violence/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11493960/kelowna-victim-family-bail-reform-intimate-partner-violence/</guid>
+      <description><![CDATA[On Thursday, Canada's justice minister announced tougher bail and sentencing laws are on the way.]]></description>
+      <pubDate>Sat, 25 Oct 2025 01:24:56 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Prince Andrew’s latest scandal begs the question: Why does Canada still have a monarchy?</title>
+      <link>https://rabble.ca/politics/canadian-politics/prince-andrews-latest-scandal-begs-the-question-why-does-canada-still-have-a-monarchy/</link>
+      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/prince-andrews-latest-scandal-begs-the-question-why-does-canada-still-have-a-monarchy/</guid>
+      <pubDate>Fri, 24 Oct 2025 16:17:44 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year</title>
+      <link>https://www.straight.com/food/world-culinary-awards-names-baan-lao-best-restaurant-in-canada-for-second-straight-year</link>
+      <guid isPermaLink="true">https://www.straight.com/food/world-culinary-awards-names-baan-lao-best-restaurant-in-canada-for-second-straight-year</guid>
+      <description><![CDATA[The Richmond restaurant took home the honours once again.]]></description>
+      <pubDate>Thu, 23 Oct 2025 22:47:58 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -236,60 +283,10 @@
     </item>
 
     <item>
-      <title>Women of the Fur Trade finds the funny in Canada&apos;s dark and complicated past</title>
-      <link>https://www.straight.com/arts/women-of-fur-trade-finds-funny-in-canadas-dark-and-complicated-past</link>
-      <guid isPermaLink="true">https://www.straight.com/arts/women-of-fur-trade-finds-funny-in-canadas-dark-and-complicated-past</guid>
-      <description><![CDATA[“It’s taking historical facts and twisting them."]]></description>
-      <pubDate>Wed, 01 Oct 2025 18:47:36 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Has Time Run Out for Canada Post?</title>
-      <link>https://thetyee.ca/News/2025/10/16/Has-Time-Run-Out-Canada-Post/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2025/10/16/Has-Time-Run-Out-Canada-Post/</guid>
-      <description><![CDATA[Inside the debate over the Crown corporation’s future as unions and management battle.]]></description>
-      <pubDate>Thu, 16 Oct 2025 07:10:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Amber Alert in place for one-year-old girl missing in Brampton, Ont.: OPP</title>
-      <link>https://www.cbc.ca/news/canada/toronto/toronto-breaking-amber-alert-9.6947614?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/toronto/toronto-breaking-amber-alert-9.6947614?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/733e61bd-da6f-4fd6-9e5a-7d6d01ef145b,1759950963931/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1180%2C663%29%3BResize%3D%28620%29' alt='Breaking news.' width='620' height='349' title=''/><p>Ontario Provincial Police have issued an Amber Alert for a missing one-year-old girl last seen in Brampton.</p>]]></description>
-      <pubDate>Tue, 21 Oct 2025 21:08:54 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Canada&apos;s annual inflation rate rose to 2.4% in September as grocery prices keep creeping up</title>
-      <link>https://www.cbc.ca/news/business/canada-inflation-rate-september-2025-9.6946556?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/business/canada-inflation-rate-september-2025-9.6946556?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/58d86990-b300-4d6e-97e4-64f3920f81f3,1761050874208/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C233%2C4474%2C2516%29%3BResize%3D%28620%29' alt='A person pushing a shopping cart reaches for a box at a grocery store.' width='620' height='349' title='A shopper picks out groceries at a Toronto-area Costco on Sept. 29, 2025.'/><p></p>]]></description>
-      <pubDate>Tue, 21 Oct 2025 13:27:22 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Indigenous artifacts held in Vatican Museums finally heading back to Canada</title>
-      <link>https://www.cbc.ca/news/vatican-museums-indigenous-artifacts-canada-9.6946597?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/vatican-museums-indigenous-artifacts-canada-9.6946597?cmp=rss</guid>
-      <pubDate>Tue, 21 Oct 2025 14:23:51 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Cenovus delays MEG Energy shareholder vote of takeover offer</title>
-      <link>https://globalnews.ca/news/11488105/cenovus-delays-meg-energy-shareholder-vote/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11488105/cenovus-delays-meg-energy-shareholder-vote/</guid>
-      <description><![CDATA[The company said at the time of the postponement that about 63 per cent of the MEG shares represented by proxy or expected to be voted in person at the meeting backed the bid.]]></description>
-      <pubDate>Tue, 21 Oct 2025 20:56:08 GMT</pubDate>
+      <title>Manitoba Government Opens New Permanent Rest Stop on Provincial Trunk Highway 6</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71281</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71281</guid>
+      <pubDate>Fri, 24 Oct 2025 18:53:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -331,11 +328,29 @@
     </item>
 
     <item>
-      <title>What&apos;s In Your Fridge: Josh Santos of VIFF&apos;s Composer Filmmaker Accelerator program</title>
-      <link>https://www.straight.com/music/whats-in-your-fridge-josh-santos-of-viffs-composer-filmmaker-accelerator-program</link>
-      <guid isPermaLink="true">https://www.straight.com/music/whats-in-your-fridge-josh-santos-of-viffs-composer-filmmaker-accelerator-program</guid>
-      <description><![CDATA[<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>. </h3><p data-slot-rendered-content="true"><em></em></p>]]></description>
-      <pubDate>Sat, 04 Oct 2025 17:00:41 GMT</pubDate>
+      <title>Alberta government plans to allow residents to privately pay for any diagnostic or screening service</title>
+      <link>https://www.cbc.ca/news/canada/calgary/alberta-paul-parks-mri-diagnostics-adriana-lagrange-9.6952189?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/calgary/alberta-paul-parks-mri-diagnostics-adriana-lagrange-9.6952189?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/3f679924-c696-4a55-bfac-aeb77395385f,1761326611694/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C55%2C1000%2C562%29%3BResize%3D%28620%29' alt='A scan of a brain on a computer screen, with a person lying on a platform in the background.' width='620' height='349' title='MRI machine and screens with doctor and nurse.'/><p>Alberta is planning legislative changes that would let people pay out of pocket for diagnostic and preventive tests, such as MRIs, CT scans and full-body scans — without a doctor’s order.</p>]]></description>
+      <pubDate>Fri, 24 Oct 2025 17:58:26 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Opens Downtown Resource Corner at Millennium Library</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71280</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71280</guid>
+      <pubDate>Fri, 24 Oct 2025 16:43:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Supports Families with New Parenting Website</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71278</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71278</guid>
+      <pubDate>Wed, 22 Oct 2025 17:30:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -350,19 +365,10 @@
     </item>
 
     <item>
-      <title>Manitoba Government Making Continued Progress Through Investment to Hip and Knee Surgeries at Selkirk Regional Health Centre</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=71198</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71198</guid>
-      <pubDate>Thu, 16 Oct 2025 15:11:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Invests in Training for Child and Family Service Workers</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=70944</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=70944</guid>
-      <pubDate>Fri, 03 Oct 2025 20:30:00 GMT</pubDate>
+      <title>Construction of $10-A-Day Child-Care Centre Begins at Riverview Health Centre</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71118</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71118</guid>
+      <pubDate>Fri, 10 Oct 2025 18:26:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -377,21 +383,30 @@
     </item>
 
     <item>
-      <title>Ontario advocates ask for child care certainty as federal deal nears expiration</title>
-      <link>https://globalnews.ca/news/11487805/ontario-child-care-deal-expiration/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11487805/ontario-child-care-deal-expiration/</guid>
-      <description><![CDATA[Ontario child-care advocates are urging the province to provide certainty as its deal with the federal government for $10-a-day-child care is set to expire in five months.]]></description>
-      <pubDate>Tue, 21 Oct 2025 18:59:48 GMT</pubDate>
+      <title>Federal scientific research underfunded, report says</title>
+      <link>https://rabble.ca/labour/federal-scientific-research-underfunded-report-says/</link>
+      <guid isPermaLink="true">https://rabble.ca/labour/federal-scientific-research-underfunded-report-says/</guid>
+      <pubDate>Thu, 23 Oct 2025 20:15:10 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>CONTEST: Win Tickets to ‘East Van Panto: West Van Story’</title>
-      <link>https://thetyee.ca/Presents/2025/10/20/Contest-East-Van-Panto-West-Van-Story/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Presents/2025/10/20/Contest-East-Van-Panto-West-Van-Story/</guid>
-      <description><![CDATA[This year, East Van’s favourite holiday show features star-crossed lovers in a housing crisis.]]></description>
-      <pubDate>Mon, 20 Oct 2025 07:30:00 GMT</pubDate>
+      <title>Photos: Matt Maltese caresses the keys at the Vogue Theatre</title>
+      <link>https://www.straight.com/music/photos-matt-maltese-caresses-keys-at-vogue-theatre</link>
+      <guid isPermaLink="true">https://www.straight.com/music/photos-matt-maltese-caresses-keys-at-vogue-theatre</guid>
+      <description><![CDATA[A multi-hyphenate British-Canadian singer-songwriter.]]></description>
+      <pubDate>Mon, 20 Oct 2025 23:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Here’s the Book to Buy in Bulk for Public Health Officials</title>
+      <link>https://thetyee.ca/Culture/2025/10/24/Book-Buy-Bulk-Public-Health-Officials/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Culture/2025/10/24/Book-Buy-Bulk-Public-Health-Officials/</guid>
+      <description><![CDATA[‘The Big One’ charts the path forward for future pandemics and the current ‘infodemic.’]]></description>
+      <pubDate>Sat, 25 Oct 2025 00:30:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
@@ -460,40 +475,21 @@
     </item>
 
     <item>
-      <title>Manitoba Government Invests in New 24-7 Safe Space for Indigenous Women</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=70941</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=70941</guid>
-      <pubDate>Thu, 02 Oct 2025 15:40:00 GMT</pubDate>
+      <title>You Nearly Missed: Ada Lea promises to inspire at LanaLou&apos;s in Vancouver</title>
+      <link>https://www.straight.com/music/you-nearly-missed-ada-lea-promises-to-inspire-at-lanalous-in-vancouver</link>
+      <guid isPermaLink="true">https://www.straight.com/music/you-nearly-missed-ada-lea-promises-to-inspire-at-lanalous-in-vancouver</guid>
+      <description><![CDATA["Because anyone can, you can also do it."]]></description>
+      <pubDate>Thu, 23 Oct 2025 21:25:06 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Photos: Electronic powerhouses Kaytranada and Justice co-headline Rogers Arena</title>
-      <link>https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena</link>
-      <guid isPermaLink="true">https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena</guid>
-      <description><![CDATA[The DJ and the French duo combined for a memorable show.]]></description>
-      <pubDate>Tue, 21 Oct 2025 18:48:57 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Scrolling Through the Aftermath of the Assassination of Charlie Kirk</title>
-      <link>https://thetyee.ca/Opinion/2025/10/21/Scrolling-Aftermath-Assassination-Charlie-Kirk/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Opinion/2025/10/21/Scrolling-Aftermath-Assassination-Charlie-Kirk/</guid>
-      <description><![CDATA[Why I’m studying how Canadian social media users responded to the MAGA figure’s death.]]></description>
-      <pubDate>Tue, 21 Oct 2025 07:30:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Auditor general uncovers unsafe drinking water, toilets that don&apos;t work in military housing</title>
-      <link>https://www.cbc.ca/news/politics/auditor-general-report-military-housing-issues-recruitment-9.6947013?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/politics/auditor-general-report-military-housing-issues-recruitment-9.6947013?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/41c19248-77a7-4917-82a0-f76a124a0874,1761072115254/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C372%2C6115%2C3439%29%3BResize%3D%28620%29' alt='Man stands in small group of people at door of House of Commons speaking at microphone' width='620' height='349' title='Minister of National Defence David McGuinty speaks during a press conference in the Foyer of the House of Commons on Parliament Hill in Ottawa, on Tuesday, Oct. 21, 2025. THE CANADIAN PRESS/Spencer Colby'/><p></p>]]></description>
-      <pubDate>Tue, 21 Oct 2025 14:21:11 GMT</pubDate>
+      <title>ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December!</title>
+      <link>https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december</link>
+      <guid isPermaLink="true">https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december</guid>
+      <description><![CDATA["We're there to bring joy, connect people, and engage with our audience."]]></description>
+      <pubDate>Wed, 22 Oct 2025 17:25:20 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>

@@ -1,0 +1,18 @@
+{
+  "feature": "Legal Workflow Automation",
+  "date": "2025-10-25",
+  "articleUrl": "https://3mpwrapp.github.io/blog/2025-10-25-feature-spotlight-legal-workflow-automation/",
+  "timestamp": "2025-10-25T10:17:43.833Z",
+  "results": {
+    "mastodon": {
+      "success": true,
+      "message": "Posted successfully",
+      "url": "https://mastodon.social/@3mpwrApp/115434288633605125"
+    },
+    "bluesky": {
+      "success": true,
+      "message": "Posted successfully",
+      "url": "https://bsky.app/profile/3mpwrapp.bsky.social/post/3m3z5x3ivoc2i"
+    }
+  }
+}
