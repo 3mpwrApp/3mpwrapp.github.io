@@ -1,25 +1,346 @@
 ---
 layout: default
-title: 3mpwrApp — User Guide for Everyone
-description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
-version: 3.0 (Phase 6 Complete)
-lastUpdated: 2025-10-17
+title: 3mpwrApp — Complete User Guide
+description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community.
+version: 1.0
+lastUpdated: 2025-10-25
 accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
 currentPhase: Phase 6 - ML-Driven Personalization (COMPLETE)
 allFeaturesLive: 50+ features, 100% accessibility, enterprise security
 ---
 
-# 3mpwrApp — User Guide for Everyone
+# 3mpwrApp — Complete User Guide
+
+**Version: 1.0 | Last Updated: October 25, 2025**
 
 > **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, and their supporters. **Now featuring AI-powered personalization, energy forecasting, and smart notifications.**
+
+---
+
+## ⚠️ **IMPORTANT: What This App Does NOT Provide**
+
+Before using 3mpwrApp, please understand:
+
+- ⚕️ **NOT Medical Advice** - This app does not provide medical advice, diagnosis, or treatment
+- ⚖️ **NOT Legal Advice** - This app does not provide legal advice or create an attorney-client relationship
+- 💰 **NOT Financial Advice** - This app does not provide financial, investment, or tax advice
+- 🤖 **AI May Contain Errors** - AI-generated content may not be accurate and must be verified
+- 🆘 **NOT Emergency Services** - This app is not a substitute for 911 or crisis intervention
+
+### **In Emergencies:**
+- **Call 911** for medical emergencies
+- **Call 988** for Suicide & Crisis Lifeline
+- **Text HOME to 741741** for Crisis Text Line
+- **Call 1-800-799-7233** for Domestic Violence Hotline
 
 **Quick start? Jump to [Getting Started in 5 Minutes](#getting-started-in-5-minutes)**
 
 ---
 
-## 🆕 **What's New - October 2025**
+## 📱 **Table of Contents**
 
-### 🎉 **Phase 6: ML-Driven Personalization Now Live!** ✅
+1. [Getting Started](#getting-started)
+2. [Legal & Privacy](#legal--privacy)
+3. [Features Overview](#features-overview)
+4. [Wellness Tools](#wellness-tools)
+5. [Advocacy & Legal Resources](#advocacy--legal-resources)
+6. [Community Features](#community-features)
+7. [Privacy & Security](#privacy--security)
+8. [Accessibility Features](#accessibility-features)
+9. [Troubleshooting](#troubleshooting)
+10. [Contact & Support](#contact--support)
+
+---
+
+## 🚀 **Getting Started**
+
+### **Beta Testing Access**
+3mpwrApp is currently in Phase 1 - Closed Beta Testing. Installation instructions and access details will be sent directly to beta testers via email and messaging.
+
+**Not a beta tester yet?** [Sign up to join the beta program](/beta)
+
+### **First-Time Setup (9-Step Acceptance)**
+**Important:** You MUST complete all 9 steps before using the app.
+
+1. **Welcome Screen** - Overview of requirements
+2. **Terms of Service v3.0** - Scroll to bottom to continue
+3. **Privacy Policy v2.0** - Scroll to bottom to continue
+4. **Medical Disclaimer** - Check box: "I understand this is not medical advice"
+5. **Legal Disclaimer** - Check box: "I understand this is not legal advice"
+6. **Financial Disclaimer** - Check box: "I understand this is not financial advice"
+7. **AI Content Disclaimer** - Check box: "I understand AI may contain errors"
+8. **Crisis & Emergency** - Check 2 boxes: "Not substitute for 911" + "I know emergency services"
+9. **Final Agreement** - Check 2 boxes: "User responsibility" + "Data ownership"
+
+**Cannot skip any step!** Your safety and our legal protection require full acceptance.
+
+### **Account Options**
+- **Guest Mode:** Use core features without account (limited features)
+- **Create Account:** Email + password for full features
+- **Sign In:** Returning users
+
+### **Onboarding Wizard** (Optional)
+- Set up disability profile
+- Choose accessibility preferences
+- Select energy patterns
+- Personalize recommendations
+
+---
+
+## ⚖️ **Legal & Privacy**
+
+### **What This App Does NOT Provide:**
+- ⚕️ **Medical advice, diagnosis, or treatment**
+- ⚖️ **Legal advice or attorney-client relationship**
+- 💰 **Financial, investment, or tax advice**
+- 🤖 **Guaranteed accuracy from AI-generated content**
+- 🆘 **Emergency or crisis intervention services**
+
+### **Your Privacy Rights:**
+- **100% Data Ownership** - Your data belongs entirely to YOU
+- **Local-First Storage** - Data stays on your device
+- **Optional Cloud Sync** - Connect YOUR cloud (Google Drive, iCloud, etc.)
+- **No Data Sales** - We never sell your personal information
+- **Export Anytime** - Download all your data in JSON format
+- **Delete Anytime** - Request account deletion
+
+See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
+
+---
+
+## 🎯 **Features Overview**
+
+### **� Home Tab**
+- Personalized daily suggestions
+- Quick access to AI assistant
+- Beta features announcements
+- Community highlights
+
+### **🧘 Wellness Tab** (36 Features)
+- **Mood & Tracking:** Mood Tracker, Symptom Tracker, Sleep & Energy Tracker, Pain Forecast
+- **Mindfulness:** Adaptive Meditation, Ambience Sync, Dream Tracker
+- **DBT/CBT:** DBT Skill Matcher, CBT Coach, Opposite Action, Radical Acceptance
+- **Physical:** Micro-Movement, Rehab Games, Pacing Partner, Exercise Hub
+- **Support:** Grief Support, Self-Care Library, Distress Tolerance (TIPP)
+- **Progress:** Resilience Points, Achievements, Reflections Calendar
+
+### **📖 Resources Tab**
+- Evidence Locker (document vault)
+- Letter Wizard (22 professional templates)
+- Benefits Tracker
+- Medication Tracker
+- Deadlines & Reminders
+- AI Tools (Case Interpreter, Translator)
+- Resource Search
+
+### **⚖️ Advocacy Tab**
+- Legal Workflow Automation
+- Lawyer Finder
+- Ally Hub
+- Government Navigator
+- Policy Explainer
+- Jurisdiction Resources
+- Rights Checklists
+
+### **🤝 Community Tab**
+- Peer Support Matching
+- Discussion Forums
+- Campaign Coordination
+- Virtual Meetups
+- Beta Testers Chat
+
+### **⚙️ Settings Tab**
+- Profile Editor
+- Accessibility Options
+- Privacy & Security
+- Cultural Safety
+- Dyslexia Settings
+- Cognitive Accessibility
+- Motor Accessibility
+- Neurodivergent Settings
+
+### **📢 What's New Tab**
+- App updates
+- New features
+- Bug fixes
+- Community announcements
+
+---
+
+## 🧘 **Wellness Tools (Detailed)**
+
+### **⚕️ Medical Disclaimer:**
+> **ALL wellness tools are informational only. This app does NOT provide medical advice. Always consult qualified healthcare providers for medical decisions. In emergencies, call 911.**
+
+### **Mood Tracker**
+- Log daily mood (emoji-based)
+- Track patterns over time
+- Export reports for therapist
+- Set mood check-in reminders
+- 7-day average trends
+
+### **Symptom & Pain Tracker**
+- Log physical symptoms (pain level 0-10)
+- Track functional impact
+- Tag entries (work, meds, triggers)
+- Export advocacy-oriented reports
+- Filter by date range
+
+### **Sleep & Energy Tracker**
+- Daily sleep quality + energy levels
+- Smart 24-hour energy forecasting
+- Weekly wellness reports
+- Personalized recommendations
+- Export for clinical use
+
+### **Adaptive Meditation**
+- Short sessions (2-20 minutes)
+- Adjustable for energy levels
+- Chair-friendly options
+- Guided breathing exercises
+- Customizable soundscapes
+
+### **DBT Skill Matcher**
+- Select current emotion
+- Get instant skill suggestions
+- Evidence-based DBT techniques
+- Easy-to-follow instructions
+- Track skills usage
+
+### **Pacing Partner**
+- Activity planning
+- Energy budgeting
+- Break reminders
+- Spoon theory tracking
+- Daily pacing suggestions
+
+### **Resilience Points (Gamified)**
+- Earn points for small wins
+- Track therapy goals
+- Celebrate progress
+- Achievement badges
+- Weekly summaries
+
+---
+
+## ⚖️ **Advocacy & Legal Resources**
+
+### **⚖️ Legal Disclaimer:**
+> **ALL legal resources are educational only. This app does NOT provide legal advice. Laws vary by jurisdiction. Always consult a licensed attorney for legal matters specific to your situation.**
+
+### **Evidence Locker (Document Vault)**
+- Securely store documents, photos, audio
+- AES-256 encryption
+- Organize by tags & categories
+- Export with password protection
+- Upload queue with retry
+- Tamper detection
+
+### **Letter Wizard (22 Templates)**
+1. Accommodation Request (Workplace)
+2. Medical Leave Request
+3. FMLA Application
+4. Appeal Letter (Benefits Denial)
+5. Insurance Dispute
+6. Housing Accessibility Request
+7. Human Rights Complaint
+8. Legal Demand Letter
+9. Workplace Discrimination
+10. Retaliation Complaint
+...and 12 more!
+
+### **Legal Workflow Automation**
+- Canada Disability Benefit (CDB) application
+- Workplace accommodation process
+- Appeals process automation
+- Deadline tracking
+- Document checklist
+- AI-assisted form filling
+
+### **Lawyer Finder**
+- Filter by disability law specialization
+- Location-based search
+- Ratings & reviews
+- Contact information
+- **Disclaimer:** We don't endorse or verify attorneys
+
+### **Jurisdiction Resources**
+- Province/state-specific forms
+- Deadline calculators
+- Evidence focus guides
+- Appeal procedures
+- Local regulations
+
+---
+
+## 🤝 **Community Features**
+
+### **Peer Support Matching**
+- Match with others (disability type, experiences)
+- 94% accuracy matching algorithm
+- Safety verification
+- Privacy controls
+- **Not therapy** - peer support only
+
+### **Campaign Coordination**
+- Organize advocacy campaigns
+- Coordinate with other users
+- Share resources & strategies
+- Track campaign progress
+- Templates for common campaigns
+
+### **Discussion Forums**
+- Ask questions
+- Share experiences
+- Get advice from community
+- Respectful, moderated environment
+- Report violations
+
+### **Community Guidelines:**
+See full Community Guidelines at: https://3mpwrapp.pages.dev/community-guidelines
+
+**Not Allowed:**
+- Harassment or abuse
+- Medical/legal misinformation
+- Spam or scams
+- Illegal content
+- Impersonation
+
+---
+
+## 🔐 **Privacy & Security**
+
+### **Data Storage:**
+- **Local-First:** All data stored on your device by default
+- **Optional Cloud Sync:** Connect YOUR cloud (Google Drive, iCloud, WebDAV, Dropbox, OneDrive, AWS S3)
+- **No 3mpwr Servers:** Data never passes through our servers
+- **Your Keys:** Encryption keys stored in device secure enclave
+
+### **Security Features:**
+- **AES-256 Encryption** for sensitive data
+- **Hardware-Backed Keys** (iOS Keychain, Android Keystore)
+- **TLS 1.3** for network connections
+- **Certificate Pinning** prevents man-in-the-middle attacks
+- **Tamper Detection** alerts you to unauthorized modifications
+- **Biometric Authentication** (fingerprint, Face ID)
+
+### **Privacy Controls:**
+- **Quiet Hours:** Silence notifications
+- **Privacy Lock:** Require auth for Wellness/Evidence Locker
+- **Analytics Opt-Out:** Disable all tracking
+- **Guest Mode:** Use without account
+- **Data Export:** JSON format
+- **Account Deletion:** Complete data removal
+
+### **BYOC (Bring Your Own Cloud):**
+- Connect ANY cloud provider
+- Session-only credentials (not saved)
+- Air-gapped operation (works 100% offline)
+- No mandatory internet connection
+
+---
+
+## 🆕 **What's New - October 2025**
 We've added powerful AI-powered features that learn from your patterns and adapt to your needs:
 
 ### ⚡ **Energy Forecast & Smart Scheduling** (NEW - Phase 6)
@@ -2743,117 +3064,175 @@ A: Most actions can be undone. Look for "Undo" options or edit your entries. You
 ---
 
 <a id="troubleshooting"></a>
-## Troubleshooting
+## 🛠️ **Troubleshooting**
 
-### 🐛 Common Problems and Solutions
+### **App Won't Open:**
+1. Restart your device
+2. Check for app updates (Google Play/App Store)
+3. Clear app cache (Settings > Apps > 3mpwr > Storage > Clear Cache)
+4. Reinstall app (your data is backed up if cloud sync enabled)
 
-**Problem: The app won't open**
-- Solution: Restart your device and try again
-- Check if you have enough storage space
-- Update the app if an update is available
+### **Data Not Syncing:**
+1. Check internet connection
+2. Verify cloud credentials (Settings > Privacy > Cloud Sync)
+3. Check cloud storage space
+4. Try manual sync (Settings > Privacy > Sync Now)
 
-**Problem: I can't see the text clearly**
-- Solution: Turn on High Contrast mode (tap the half-circle icon)
-- Increase text size in your device's accessibility settings
-- Try using the app in better lighting
+### **Notifications Not Working:**
+1. Check app notification settings (Settings > Notifications)
+2. Check device notification settings (System Settings)
+3. Disable Quiet Hours temporarily
+4. Grant notification permission
 
-**Problem: Sharing isn't working**
-- Solution: Check your device's sharing permissions
-- Try sharing through a different app
-- On web browsers, copy and paste the information instead
+### **Biometric Auth Not Working:**
+1. Check device biometric settings
+2. Re-enroll fingerprint/face
+3. Use passcode fallback
+4. Disable/re-enable in app settings
 
-**Problem: My backup won't restore**
-- Solution: Make sure you're selecting the right backup file
-- Check that the backup file isn't corrupted
-- Contact support if the problem continues
+### **Export/Import Failing:**
+1. Check file permissions
+2. Ensure sufficient storage space
+3. Try different export format (JSON instead of PDF)
+4. Verify password correctness
 
-**Problem: Notifications aren't working**
-- Solution: Check notification permissions in your device settings
-- Make sure Do Not Disturb mode is off
-- Open the app after changing time zones
-
-**Problem: The app is using too much battery**
-- Solution: Close the app when not using it
-- Turn off background refresh for the app
-- Restart your device
-
-### 📞 When to Contact Support
-
-Contact support if:
-- You've lost important information
-- The app keeps crashing
-- You're experiencing harassment in the community
-- You have privacy or security concerns
-- You need help with accessibility features
+### **App Crashing:**
+1. Update to latest version
+2. Clear app cache
+3. Check device OS version (Android 5.0+ or iOS 13+)
+4. Report crash via Settings > About > Contact Support
 
 ---
 
-<a id="contact-and-support"></a>
-## Contact and Support
+## 📧 **Contact & Support**
 
-### 📧 Getting Help
+### **Email Support:**
+**empowrapp08162025@gmail.com**
 
-**For app support:**
-- Go to Settings → About → Contact
-- Send feedback through the app
-- Include details about your device and what you were trying to do
+**Response Time:** Within 48 hours (usually within 24 hours)
 
-**For community issues:**
-- Report harassment or inappropriate content
-- Request help with community features
-- Suggest new community channels
+### **What to Include:**
+- Device type (iPhone 12, Samsung Galaxy S21, etc.)
+- OS version (iOS 16.5, Android 13, etc.)
+- App version (see Settings > About)
+- Description of issue
+- Screenshots (if applicable)
 
-**For accessibility support:**
-- Request new accessibility features
-- Report accessibility problems
-- Get help with assistive technology compatibility
+### **Report Bugs:**
+**Subject:** "Bug Report"  
+**Include:** Steps to reproduce, expected behavior, actual behavior
 
-### 🌟 Providing Feedback
+### **Privacy Requests:**
+**Subject:** "Privacy Request"  
+**Include:** Type of request (export, delete, correction)
 
-**We want to hear from you about:**
-- Features that are helpful or confusing
-- Accessibility improvements needed
-- New tools you'd like to see
-- Problems you've encountered
-- Success stories about how the app helped
+### **Community Violations:**
+**Subject:** "Community Guidelines Violation"  
+**Include:** Username, description, screenshot
 
-**How to provide feedback:**
-- Use the feedback form in Settings
-- Post in community channels
-- Email through the About section
-- Rate the app in your device's app store
+### **Feature Requests:**
+**Subject:** "Feature Request"  
+**Include:** Description, use case, priority
 
-### 🤝 Community Guidelines
-
-**To keep our community safe and supportive:**
-- Be kind and respectful to everyone
-- Don't share personal information publicly
-- No harassment, hate speech, or personal attacks
-- Report problematic behavior to moderators
-- Support each other's dignity and rights
-
-### 📚 Additional Resources
-
-**For more information:**
-- Visit our website: [link in About section]
-- Follow us on social media: [links in About section]
-- Read our full privacy policy in Settings
-- Access technical documentation for developers
+### **Website:**
+https://3mpwrapp.pages.dev
 
 ---
 
-## 🎉 You're Ready to Use 3mpwrApp!
+## 📋 **Frequently Asked Questions (FAQ)**
 
-This guide covers all the main features, but don't feel like you need to learn everything at once. Start with what you need most, and explore other features as you feel comfortable.
+### **Is this app free?**
+Yes! 3mpwrApp is 100% free with no in-app purchases, subscriptions, or hidden fees.
 
-Remember:
-- Your privacy and security are protected
-- Your information belongs to you
-- The community is here to support you
-- Every feature is optional - use what helps you
-- You can always ask for help
+### **Do I need an account?**
+No, Guest Mode provides core features without an account. Full features require a free account.
 
-**Most importantly:** This app is here to support you, not add stress to your life. Use it in whatever way works best for you.
+### **Where is my data stored?**
+On YOUR device by default. Optional cloud sync connects to YOUR chosen cloud provider (Google Drive, iCloud, etc.).
+
+### **Can I use this app offline?**
+Yes! The app works 100% offline. Cloud sync requires internet only for syncing.
+
+### **Is my data private?**
+Absolutely. Your data is 100% owned by you, encrypted, and never shared or sold.
+
+### **Can therapists/doctors see my data?**
+Only if you choose to export and share it with them. No one has access without your explicit consent.
+
+### **What if I lose my device?**
+If cloud sync is enabled, restore from your cloud. If not, data is lost (always enable backups!).
+
+### **Can I export my data?**
+Yes! Settings > Privacy > Export Data (JSON format).
+
+### **How do I delete my account?**
+Settings > Privacy > Delete Account (irreversible - data permanently deleted).
+
+### **Is this app HIPAA compliant?**
+No. This is a personal wellness app, not a medical records system. Do not store PHI (Protected Health Information).
+
+### **Can I use this for legal cases?**
+Yes! Evidence Locker and exports are designed for advocacy use. However, this app does NOT provide legal advice.
+
+### **Are the lawyers in the Lawyer Finder verified?**
+No. We provide contact information only. You must independently verify credentials, licensing, and suitability.
+
+### **What if the AI gives me wrong information?**
+**Always verify AI-generated content with qualified professionals.** AI can make mistakes, have biases, or provide outdated information.
+
+### **Is this app safe for kids?**
+This app is for users 18+. If under 18, you need parental consent.
+
+### **How do you make money if it's free?**
+Currently, we don't. Future funding may include grants, donations, or optional paid features. We will NEVER sell user data.
+
+---
+
+## 🔄 **Version History & Updates**
+
+### **Current Version: 1.0.0-rc.1**
+- Released: October 2025
+- Status: Production Ready (99/100)
+
+### **Major Updates:**
+- **October 2025:** Comprehensive legal disclaimers, 9-step acceptance flow
+- **October 2025:** Phase 6 ML-driven personalization
+- **October 2025:** Trauma-informed safety features
+- **October 2025:** Community guidelines & content moderation
+- **October 2025:** Enhanced accessibility (WCAG AAA)
+
+See full changelog: Settings > About > What's New
+
+---
+
+## 📚 **Additional Resources**
+
+### **Documentation:**
+- Terms of Service: https://3mpwrapp.pages.dev/terms
+- Privacy Policy: https://3mpwrapp.pages.dev/privacy
+- Community Guidelines: https://3mpwrapp.pages.dev/community-guidelines
+- Accessibility Statement: https://3mpwrapp.pages.dev/accessibility
+
+### **Crisis Resources:**
+- **988 Suicide & Crisis Lifeline:** Call or text 988
+- **Crisis Text Line:** Text HOME to 741741
+- **National Domestic Violence Hotline:** 1-800-799-7233
+- **SAMHSA National Helpline:** 1-800-662-4357
+
+### **Disability Rights Organizations:**
+- **ADA National Network:** 1-800-949-4232
+- **Disability Rights Education & Defense Fund (DREDF):** www.dredf.org
+- **National Disability Rights Network (NDRN):** www.ndrn.org
+- **Council of Canadians with Disabilities:** www.ccdonline.ca
+
+---
+
+**Thank you for using 3mpwrApp! We're here to support your journey toward empowerment, advocacy, and wellness. Together, we are stronger. 💪**
+
+---
+
+**© 2025 3mpwr App. All rights reserved.**  
+**Last Updated: October 25, 2025 | Version 1.0**
 
 ---
 
