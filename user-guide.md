@@ -85,6 +85,90 @@ Before using 3mpwrApp, please understand:
 - Select energy patterns
 - Personalize recommendations
 
+### **First Week Checklist** ✅
+
+Complete these steps in your first week to get the most out of 3mpwrApp:
+
+**Essential Setup:**
+- ✅ Accept Terms and set Display Name (Settings → Profile)
+- ✅ Complete the Disability Wizard profile setup for personalized recommendations
+- ✅ Set your province/territory (Settings → Local Profile) for region-aware resources
+- ✅ Enable accessibility features you need (Settings → Accessibility)
+
+**Try Key Features:**
+- ✅ Add one note to Evidence Locker and tag it
+- ✅ Add one deadline with a reminder
+- ✅ Try the AI Advocate Translator with a confusing letter
+- ✅ Track your mood for 2-3 days
+- ✅ Generate one letter using the Letter Wizard
+
+**Safety & Privacy:**
+- ✅ Export a backup (Settings → Privacy & Backups)
+- ✅ Review privacy settings
+- ✅ Set up biometric authentication (optional)
+
+**Community:**
+- ✅ Browse your provincial community channel
+- ✅ Save one helpful resource or video
+- ✅ Read the Community Guidelines
+
+**Pro Tip:** Don't feel pressured to do everything at once. Small, consistent steps beat big leaps. The app adapts to your pace!
+
+### **Beta Testing Priorities** 🧪
+
+**If you're a beta tester, please focus on:**
+
+**High Priority - Test Thoroughly:**
+1. **Authentication & Onboarding**
+   - Sign up, sign in, guest mode
+   - 9-step acceptance flow
+   - Disability Wizard profile setup
+   - First-time user experience
+
+2. **Evidence Locker**
+   - Take photos and upload documents
+   - Organize with tags and categories
+   - Search for saved items
+   - Export and share functionality
+
+3. **Letter Wizard**
+   - Generate all 22 letter types
+   - Fill in forms accurately
+   - PDF export and formatting
+   - Save drafts and edit
+
+4. **Wellness Trackers**
+   - Mood, energy, symptom tracking
+   - Chart visualization and trends
+   - Export reports
+   - Daily Energy Coins system
+
+5. **ML Features**
+   - Energy predictions accuracy
+   - Smart notification timing
+   - Personalized suggestions
+   - Weekly wellness reports
+
+**Medium Priority:**
+- Community features (threads, DMs, safety controls)
+- Campaign coordination tools
+- Advocacy AI tools (translator, interpreter, policy simplifier)
+- Legal automation workflows
+- All accessibility features
+
+**Lower Priority (Polish):**
+- UI/UX feedback and visual design
+- Performance on older devices
+- Battery consumption
+- Minor visual bugs
+- Feature suggestions
+
+**How to Report Issues:**
+- Use Settings → About → Contact Support
+- Include: Device type, OS version, steps to reproduce
+- Screenshots are very helpful!
+- Mark priority: Critical, High, Medium, Low
+
 ---
 
 ## ⚖️ **Legal & Privacy**
