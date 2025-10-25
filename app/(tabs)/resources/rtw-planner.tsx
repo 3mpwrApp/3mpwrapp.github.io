@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Alert, FlatList } from 'react-native';
+import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
-import { useAppPalette } from '../../../theme/usePalette';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
-import { addGoal, listGoals, updateGoal, deleteGoal, type RTWGoal } from '../../../services/rtw';
+import { addGoal, deleteGoal, listGoals, updateGoal, type RTWGoal } from '../../../services/rtw';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -27,6 +28,8 @@ export default function RTWPlanner() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Return-to-Work Planner</Text>
+      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="medical" compact />
       <TextInput placeholder="Goal title (e.g., 4-hour shifts)" placeholderTextColor={palette.text+"77"} value={title} onChangeText={setTitle} style={s.input} />
       <TextInput placeholder="Supports (comma-separated)" placeholderTextColor={palette.text+"77"} value={supports} onChangeText={setSupports} style={s.input} />
       <TextInput placeholder="Steps (comma-separated)" placeholderTextColor={palette.text+"77"} value={steps} onChangeText={setSteps} style={s.input} />

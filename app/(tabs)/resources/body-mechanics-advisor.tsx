@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, Share, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { analyzeBodyVideo } from '../../../services/body';
@@ -91,6 +92,8 @@ export default function BodyMechanicsAdvisor() {
         </View>
       </View>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>AI Body Mechanics Advisor</Text>
+      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="ai" compact />
       <Text style={s.text}>{t('bodyMechanics.subtitle','Upload a short video of a daily task to receive accessibility-focused movement suggestions. Not medical advice.')}</Text>
       <A11yPressable onPress={async()=>{
         try {

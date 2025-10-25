@@ -1,6 +1,7 @@
 import React from "react";
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -47,6 +48,7 @@ export default function ClaimsNavigator() {
       >
         {t("claimsNavigator.title", "Guided Claims Navigator")}
       </Text>
+      <DisclaimerBanner type="legal" compact />
       <Text style={styles.subtitle}>
         {t("claimsNavigator.subtitle", "Turn your situation into a clear plan.")}
       </Text>

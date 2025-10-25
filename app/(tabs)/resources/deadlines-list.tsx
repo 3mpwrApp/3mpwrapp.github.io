@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { MAX_FONT_SCALE, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { usePostLoadAnnounce } from '../../../hooks/usePostLoadAnnounce';
 import { useTranslation } from '../../../i18n';
@@ -113,6 +114,7 @@ export default function DeadlinesList() {
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('templates.deadlines.myDeadlines','My Deadlines')} {loading ? t('common.loading','(loading...)') : ''}
       </Text>
+      <DisclaimerBanner type="legal" compact />
   <A11yPressable onPress={() => load()} style={s.button} accessibilityLabel={t('templates.deadlines.reload','Reload deadlines')}><Text style={s.buttonText}>{t('templates.deadlines.reloadShort','Reload')}</Text></A11yPressable>
       <A11yPressable onPress={async () => {
         try {

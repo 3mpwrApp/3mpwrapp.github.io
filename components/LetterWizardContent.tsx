@@ -31,6 +31,7 @@ import { buildCombinedEvidenceSummary, buildSymptomSummary } from "../services/i
 import { useProfileLocal } from "../store/profileLocal";
 import { useAppPalette } from "../theme/usePalette";
 
+import DisclaimerBanner from "./DisclaimerBanner";
 import A11yPressable from "./A11yPressable";
 import { ComplexityBadge, SimplifiedView } from "./CognitiveAccessibility";
 import { DyslexiaText } from './DyslexiaText';
@@ -1164,6 +1165,7 @@ export default function LetterWizardContent() {
       <DyslexiaText style={s.subtitle}>
         {t('letterWizard.subtitle', 'Create professional letters for any disability advocacy situation.')}
       </DyslexiaText>
+      <DisclaimerBanner type="legal" compact />
       
       {step === 'situation' && renderSituationStep()}
       {step === 'letter_type' && renderLetterTypeStep()}

@@ -9,6 +9,7 @@ jest.mock('../hooks/useA11y', () => ({
   useScreenReaderEnabled: () => false,
   useReduceMotionEnabled: () => false
 }));
+jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (key: string, fb?: string) => fb || key }) }));
 
 // Mock chronic services to avoid storage
 jest.mock('../services/chronic', () => ({

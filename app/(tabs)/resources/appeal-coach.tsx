@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -49,6 +50,8 @@ export default function AppealCoach() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }} accessibilityLabel={t('appealCoach.screenLabel','Appeal Coach screen')}>
       <Text ref={titleRef} style={s.title} accessibilityRole='header' maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('appealCoach.title','Appeal Coach')}</Text>
+      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="ai" compact />
       <Text style={s.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('appealCoach.instructions','Paste your denial letter or ask a question to get step-by-step guidance. Use Copy to reuse the assistant\'s last response.')}</Text>
       <View style={s.actionsRow}>
         <A11yPressable onPress={share} hitSlop={HIT_SLOP_8} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('appealCoach.shareBtn','Share conversation')}><Text style={s.secondaryBtnText}>{t('appealCoach.share','Share')}</Text></A11yPressable>

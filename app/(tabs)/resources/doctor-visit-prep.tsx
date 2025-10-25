@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TextInput } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -36,6 +37,7 @@ export default function DoctorVisitPrep() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }}>
       <Text style={s.title}>Doctor Visit Prep</Text>
+      <DisclaimerBanner type="medical" compact />
       <Text style={s.text}>Generate a one‑page summary to bring to appointments.</Text>
       <TextInput placeholder="Your name" placeholderTextColor={palette.text+'77'} value={name} onChangeText={setName} style={s.input} />
       <TextInput placeholder="Condition(s)" placeholderTextColor={palette.text+'77'} value={condition} onChangeText={setCondition} style={s.input} />
