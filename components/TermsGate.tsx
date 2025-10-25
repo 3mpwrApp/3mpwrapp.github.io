@@ -11,6 +11,8 @@ import {
 
 import { useAppPalette } from "../theme/usePalette";
 
+import GapView from "./GapView";
+
 let AsyncStorage: any;
 try {
   AsyncStorage = require("@react-native-async-storage/async-storage").default;
@@ -175,7 +177,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         return (
           <View style={styles.card}>
             <Text style={styles.title}>⚠️ Welcome to 3mpwrApp</Text>
-            <ScrollView style={{ maxHeight: 400 }} contentContainerStyle={{ paddingBottom: 12 }}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontSize: 16, fontWeight: "600", marginBottom: 12 }]}>
                 Before you begin, you must review and accept our legal terms and disclaimers.
               </Text>
@@ -214,7 +216,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
           <View style={styles.card}>
             <Text style={styles.title}>Terms of Service v{CURRENT_TERMS_VERSION}</Text>
             <ScrollView
-              style={{ maxHeight: 400 }}
+              style={styles.scrollView}
               contentContainerStyle={{ paddingBottom: 12 }}
               onScroll={(e) => handleScroll(e, "terms")}
               scrollEventThrottle={400}
@@ -249,7 +251,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 <Text style={styles.linkText}>📄 Read Full Terms of Service</Text>
               </Pressable>
             </ScrollView>
-            <View style={styles.buttonRow}>
+            <GapView style={styles.buttonRow}>
               <Pressable
                 onPress={() => setCurrentStep("welcome")}
                 style={[styles.button, styles.buttonSecondary]}
@@ -265,7 +267,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                   {termsScrolledToBottom ? "Next" : "Scroll to Bottom"}
                 </Text>
               </Pressable>
-            </View>
+            </GapView>
           </View>
         );
 
@@ -274,7 +276,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
           <View style={styles.card}>
             <Text style={styles.title}>Privacy Policy v{CURRENT_PRIVACY_VERSION}</Text>
             <ScrollView
-              style={{ maxHeight: 400 }}
+              style={styles.scrollView}
               contentContainerStyle={{ paddingBottom: 12 }}
               onScroll={(e) => handleScroll(e, "privacy")}
               scrollEventThrottle={400}
@@ -314,7 +316,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 <Text style={styles.linkText}>📄 Read Full Privacy Policy</Text>
               </Pressable>
             </ScrollView>
-            <View style={styles.buttonRow}>
+            <GapView style={styles.buttonRow}>
               <Pressable
                 onPress={() => setCurrentStep("terms")}
                 style={[styles.button, styles.buttonSecondary]}
@@ -330,7 +332,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                   {privacyScrolledToBottom ? "Next" : "Scroll to Bottom"}
                 </Text>
               </Pressable>
-            </View>
+            </GapView>
           </View>
         );
 
@@ -338,7 +340,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         return (
           <View style={styles.card}>
             <Text style={styles.title}>🏥 Medical Disclaimer</Text>
-            <ScrollView style={{ maxHeight: 400 }} contentContainerStyle={{ paddingBottom: 12 }}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ THIS APP DOES NOT PROVIDE MEDICAL ADVICE
               </Text>
@@ -360,7 +362,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               () => setMedicalChecked(!medicalChecked),
               "I understand this app does not provide medical advice and I will consult healthcare professionals for medical decisions."
             )}
-            <View style={styles.buttonRow}>
+            <GapView style={styles.buttonRow}>
               <Pressable
                 onPress={() => setCurrentStep("privacy")}
                 style={[styles.button, styles.buttonSecondary]}
@@ -374,7 +376,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               >
                 <Text style={styles.buttonText}>Next</Text>
               </Pressable>
-            </View>
+            </GapView>
           </View>
         );
 
@@ -382,7 +384,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         return (
           <View style={styles.card}>
             <Text style={styles.title}>⚖️ Legal Disclaimer</Text>
-            <ScrollView style={{ maxHeight: 400 }} contentContainerStyle={{ paddingBottom: 12 }}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ THIS APP DOES NOT PROVIDE LEGAL ADVICE
               </Text>
@@ -405,7 +407,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               () => setLegalChecked(!legalChecked),
               "I understand this app does not provide legal advice and I will consult licensed attorneys for legal matters."
             )}
-            <View style={styles.buttonRow}>
+            <GapView style={styles.buttonRow}>
               <Pressable
                 onPress={() => setCurrentStep("medical")}
                 style={[styles.button, styles.buttonSecondary]}
@@ -419,7 +421,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               >
                 <Text style={styles.buttonText}>Next</Text>
               </Pressable>
-            </View>
+            </GapView>
           </View>
         );
 
@@ -427,7 +429,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         return (
           <View style={styles.card}>
             <Text style={styles.title}>💰 Financial Disclaimer</Text>
-            <ScrollView style={{ maxHeight: 400 }} contentContainerStyle={{ paddingBottom: 12 }}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ THIS APP DOES NOT PROVIDE FINANCIAL ADVICE
               </Text>
@@ -448,7 +450,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               () => setFinancialChecked(!financialChecked),
               "I understand this app does not provide financial advice and I will consult financial professionals for financial decisions."
             )}
-            <View style={styles.buttonRow}>
+            <GapView style={styles.buttonRow}>
               <Pressable
                 onPress={() => setCurrentStep("legal")}
                 style={[styles.button, styles.buttonSecondary]}
@@ -462,7 +464,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               >
                 <Text style={styles.buttonText}>Next</Text>
               </Pressable>
-            </View>
+            </GapView>
           </View>
         );
 
@@ -470,7 +472,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         return (
           <View style={styles.card}>
             <Text style={styles.title}>🤖 AI Content Disclaimer</Text>
-            <ScrollView style={{ maxHeight: 400 }} contentContainerStyle={{ paddingBottom: 12 }}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ AI-GENERATED CONTENT MAY CONTAIN ERRORS
               </Text>
@@ -492,7 +494,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               () => setAiChecked(!aiChecked),
               "I understand AI-generated content may contain errors and I will verify all AI output with qualified professionals."
             )}
-            <View style={styles.buttonRow}>
+            <GapView style={styles.buttonRow}>
               <Pressable
                 onPress={() => setCurrentStep("financial")}
                 style={[styles.button, styles.buttonSecondary]}
@@ -506,7 +508,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               >
                 <Text style={styles.buttonText}>Next</Text>
               </Pressable>
-            </View>
+            </GapView>
           </View>
         );
 
@@ -514,7 +516,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         return (
           <View style={styles.card}>
             <Text style={styles.title}>🚨 Crisis & Emergency Disclaimer</Text>
-            <ScrollView style={{ maxHeight: 400 }} contentContainerStyle={{ paddingBottom: 12 }}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ THIS APP IS NOT A SUBSTITUTE FOR EMERGENCY SERVICES
               </Text>
@@ -545,7 +547,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               () => setEmergencyChecked(!emergencyChecked),
               "I confirm I know how to access emergency services in my location (911 or equivalent)."
             )}
-            <View style={styles.buttonRow}>
+            <GapView style={styles.buttonRow}>
               <Pressable
                 onPress={() => setCurrentStep("ai")}
                 style={[styles.button, styles.buttonSecondary]}
@@ -559,7 +561,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               >
                 <Text style={styles.buttonText}>Next</Text>
               </Pressable>
-            </View>
+            </GapView>
           </View>
         );
 
@@ -567,7 +569,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         return (
           <View style={styles.card}>
             <Text style={styles.title}>✅ Final Agreement</Text>
-            <ScrollView style={{ maxHeight: 350 }} contentContainerStyle={{ paddingBottom: 12 }}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "600", marginBottom: 8 }]}>
                 Please confirm you understand and accept:
               </Text>
@@ -585,7 +587,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             <Text style={[styles.text, { marginTop: 12, fontSize: 12, opacity: 0.8 }]}>
               By clicking "I Accept All Terms", you agree to our Terms of Service (v{CURRENT_TERMS_VERSION}), Privacy Policy (v{CURRENT_PRIVACY_VERSION}), and all disclaimers above.
             </Text>
-            <View style={styles.buttonRow}>
+            <GapView style={styles.buttonRow}>
               <Pressable
                 onPress={() => setCurrentStep("crisis")}
                 style={[styles.button, styles.buttonSecondary]}
@@ -599,7 +601,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               >
                 <Text style={styles.buttonText}>I Accept All Terms</Text>
               </Pressable>
-            </View>
+            </GapView>
           </View>
         );
 
@@ -632,6 +634,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     card: {
       width: "100%",
       maxWidth: 560,
+      maxHeight: "90%", // Allow card to grow but not exceed screen
       backgroundColor: palette.card,
       borderRadius: 12,
       padding: 20,
@@ -640,6 +643,10 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       shadowOpacity: 0.3,
       shadowRadius: 8,
       elevation: 8,
+    },
+    scrollView: {
+      flexGrow: 1,
+      flexShrink: 1,
     },
     title: { 
       fontSize: 20, 
@@ -694,7 +701,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     buttonRow: {
       flexDirection: "row",
-      gap: 12,
       marginTop: 16,
     },
     checkboxRow: {

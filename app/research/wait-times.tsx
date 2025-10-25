@@ -10,9 +10,7 @@ import { db } from '../../firebase/config';
 import { submitWaitTime } from '../../services/waits';
 import { useAppPalette } from '../../theme/usePalette';
 
-export const options = { href: null };
-
-export default function WaitTimes() {
+export default function WaitTimesScreen() {
   const palette = useAppPalette();
   const s = styles(palette);
   const [prov, setProv] = React.useState('');

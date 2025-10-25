@@ -14,8 +14,6 @@ import { useTranslation } from '../../i18n';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 
-export const options = { href: null };
-
 export default function ResearchScreen() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
@@ -65,7 +63,7 @@ export default function ResearchScreen() {
       ) : null}
       <View style={styles.sectionGrid}>
         {matchesText(t('research.landing.studiesTitle','Studies')) && (
-        <Link href="/(tabs)/research/studies" asChild>
+        <Link href="/research/studies" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
@@ -79,7 +77,7 @@ export default function ResearchScreen() {
         </Link>
         )}
         {matchesText(t('research.landing.reportsTitle','Reports')) && (
-        <Link href="/(tabs)/research/reports" asChild>
+        <Link href="/research/reports" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
@@ -93,7 +91,7 @@ export default function ResearchScreen() {
         </Link>
         )}
         {matchesText(t('research.landing.articlesTitle','Articles')) && (
-        <Link href="/(tabs)/research/articles" asChild>
+        <Link href="/research/articles" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
@@ -107,7 +105,7 @@ export default function ResearchScreen() {
         </Link>
         )}
         {matchesText(t('research.landing.timelineTitle','History Timeline')) && (
-        <Link href="/(tabs)/research/history-timeline" asChild>
+        <Link href="/research/history-timeline" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
@@ -121,7 +119,7 @@ export default function ResearchScreen() {
         </Link>
         )}
         {matchesText(t('research.landing.waitTitle','Case/File Wait-Times')) && (
-        <Link href="/(tabs)/research/wait-times" asChild>
+        <Link href="/research/wait-times" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
@@ -135,7 +133,7 @@ export default function ResearchScreen() {
         </Link>
         )}
         {matchesText(t('research.landing.masterIndexTitle','Master Index')) && (
-        <Link href="/(tabs)/research/master-index" asChild>
+        <Link href="/research/master-index" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"
@@ -149,7 +147,7 @@ export default function ResearchScreen() {
         </Link>
         )}
         {matchesText(t('research.card.uncrpdGuideTitle')) && (
-        <Link href="/(tabs)/research/uncrpd-info" asChild>
+        <Link href="/research/uncrpd-info" asChild>
           <A11yPressable
             style={styles.sectionCard}
             accessibilityRole="button"

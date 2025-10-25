@@ -13,8 +13,6 @@ import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 let AsyncStorage: any; try { AsyncStorage = require('@react-native-async-storage/async-storage').default; } catch {}
 
-export const options = { href: null };
-
 const buildRegionOrder = (t: any) => ([
   { key: 'canada', title: t('masterIndex.sections.canada') },
   { key: 'global', title: t('masterIndex.sections.global') },

@@ -20,12 +20,14 @@ type State = {
   channels: CommunityChannel[];
   threads: CommunityThread[];
   comments: CommunityComment[];
+  lastUpdated?: number; // Timestamp for cache freshness tracking
 };
 
-const DEFAULT_STATE: State = { channels: [], threads: [], comments: [] };
+const DEFAULT_STATE: State = { channels: [], threads: [], comments: [], lastUpdated: 0 };
 
-const KEY = "empowr.community.v1";
+const KEY = "empowr.community.v2"; // Bumped version for cache migration
 const QUEUE_KEY = "empowr.community.queue.v1";
+const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours cache expiration
 type QueueItem =
   | {
       kind: "thread";
@@ -68,11 +70,31 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
   const { setOffline, setSyncing } = useNetwork();
   const flushingRef = React.useRef(false);
 
+  // Load cached data from AsyncStorage on mount
   React.useEffect(() => {
     (async () => {
       if (!AsyncStorage) return;
-      const raw = await AsyncStorage.getItem(KEY);
-      if (raw) setState(JSON.parse(raw));
+      try {
+        const raw = await AsyncStorage.getItem(KEY);
+        if (raw) {
+          const cached: State = JSON.parse(raw);
+          // Always load cached data immediately (stale-while-revalidate)
+          setState(cached);
+          
+          // Check if cache is stale
+          const now = Date.now();
+          const lastUpdated = cached.lastUpdated || 0;
+          const isStale = now - lastUpdated > CACHE_TTL_MS;
+          
+          if (isStale) {
+            // Cache is stale - trigger background refresh
+            // The Firestore listeners will update the data automatically
+            console.log('🔄 Community cache is stale, background refresh will occur via Firestore');
+          }
+        }
+      } catch (e) {
+        console.warn('Failed to load community cache:', e);
+      }
       // try flush any queued writes on startup
       flushQueue();
     })();
@@ -95,6 +117,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
             setState((prev) => ({
               ...prev,
               threads: mergeById(prev.threads, list),
+              lastUpdated: Date.now(),
             }));
             setOffline(false);
           },
@@ -110,6 +133,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
             setState((prev) => ({
               ...prev,
               comments: mergeById(prev.comments, list),
+              lastUpdated: Date.now(),
             }));
             setOffline(false);
           },
@@ -191,6 +215,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
       channels: s.channels ?? prev.channels,
       threads: s.threads ?? prev.threads,
       comments: s.comments ?? prev.comments,
+      lastUpdated: Date.now(), // Track when data was last seeded/updated
     }));
 
   // basic rate limit: at most 1 action per 5s per author
@@ -221,6 +246,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
         ...prev.threads,
         { id, channelId, title, author, createdAt: Date.now() },
       ],
+      lastUpdated: Date.now(),
     }));
     fsAddThread({ id, channelId, title, author, createdAt: Date.now() });
     // queue for retry if offline
@@ -241,6 +267,7 @@ export function CommunityProvider({ children }: { children: React.ReactNode }) {
         ...prev.comments,
         { id, threadId, author, content, createdAt: Date.now() },
       ],
+      lastUpdated: Date.now(),
     }));
     fsAddComment({ id, threadId, author, content, createdAt: Date.now() });
     enqueue({

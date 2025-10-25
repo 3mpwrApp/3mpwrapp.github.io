@@ -25,7 +25,7 @@ import { useSettings } from '../../../store/settings';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
 import { sendFeedbackEmailInternal } from '../../../utils/feedback';
-import * as SettingsLazy from '../settings.sections';
+import * as SettingsLazy from '../_settings.sections';
 const NotificationPreferences = React.lazy(() => import('../../../components/NotificationPreferences'));
 const EmergencyWalletCard = React.lazy(() => import('../../../components/EmergencyWalletCard'));
 
@@ -314,13 +314,6 @@ export default function SettingsScreen() {
           </View>
         )}
       </Section>
-      <Section title={t('settings.emergency.title','Emergency Wallet Card')} subtitle={t('settings.emergency.subtitle','Quick access to important information')} styles={styles}>
-        <Text style={styles.description}>{t('settings.emergency.description','Create a digital emergency card with your key information for quick access when needed')}</Text>
-        <A11yPressable style={styles.emergencyButton} onPress={()=> setShowEmergencyCard(true)} accessibilityRole='button' accessibilityLabel={t('settings.emergency.openLabel','Open emergency wallet card')} hitSlop={HIT_SLOP_8}>
-          <Ionicons name='medical' size={20} color='white' />
-          <Text style={styles.emergencyButtonText}>{t('settings.emergency.manage','Manage Emergency Card')}</Text>
-        </A11yPressable>
-      </Section>
       <Section title='Local Profile (for templates)' styles={styles}>
         <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
           <SettingsLazy.LocalProfileSection />
@@ -334,11 +327,6 @@ export default function SettingsScreen() {
       <Section title='Media & Locker' styles={styles}>
         <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
           <SettingsLazy.MediaLockerSection />
-        </React.Suspense>
-      </Section>
-      <Section title={t('settings.privacy.title','Privacy & Security')} subtitle={t('settings.privacy.subtitle','Control your data and security')} styles={styles}>
-        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading privacy…</Text></View>}>
-          <SettingsLazy.EnhancedPrivacySection />
         </React.Suspense>
       </Section>
       <DeveloperSection styles={styles} />

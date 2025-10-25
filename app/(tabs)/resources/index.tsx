@@ -7,7 +7,6 @@ import A11yPressable from "../../../components/A11yPressable";
 import Card from "../../../components/Card";
 import ContrastToggle from "../../../components/ContrastToggle";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
-import ResponsiveScreenWrapper from "../../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
@@ -168,8 +167,9 @@ export default function ResourcesScreen() {
   
   const styles = React.useMemo(() => createStyles(palette), [palette]);
   
-  return (
-    <ResponsiveScreenWrapper>
+  // Move all header content into a component for ListHeaderComponent
+  const ListHeader = React.useMemo(() => (
+    <View style={{ paddingHorizontal: 16, paddingTop: 16 }}>
       {/* Header */}
       <View
         style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}
@@ -469,43 +469,51 @@ export default function ResourcesScreen() {
       <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Download key resources for offline use" onPress={reload} style={{ alignSelf:'flex-start', paddingHorizontal:10, paddingVertical:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 8 }}>
         <Text style={{ color: palette.text }}>Download key resources for offline use</Text>
       </A11yPressable>
-
-      <SectionList<Resource>
-        sections={sections}
-        keyExtractor={(item) => item.id}
-        renderSectionHeader={({ section }) => (
-          <Text accessibilityRole="header" style={styles.sectionTitle}>
-            {section.title}
+    </View>
+  ), [titleRef, textStyles, t, region, province, palette, styles, category, jurisdictionFilter, allJurisdictions, items, query, setCategory, setJurisdictionFilter, setRegion, setQuery, reload]);
+  
+  return (
+    <SectionList<Resource>
+      sections={sections}
+      keyExtractor={(item) => item.id}
+      ListHeaderComponent={ListHeader}
+      renderSectionHeader={({ section }) => (
+        <Text accessibilityRole="header" style={[styles.sectionTitle, { paddingHorizontal: 16 }]}>
+          {section.title}
+        </Text>
+      )}
+      renderItem={({ item }) => {
+        const subtitle = plainLanguage
+          ? simplify(item.description)
+          : item.description;
+        const onOpen = () => openResource(item, resourcePreferredFormat);
+        return (
+          <View style={{ paddingHorizontal: 16 }}>
+            <Card title={item.title} subtitle={subtitle} onPress={onOpen} />
+          </View>
+        );
+      }}
+      ListEmptyComponent={
+        loading ? (
+          <View style={{ paddingHorizontal: 16 }}>
+            {Array.from({ length: 6 }).map((_, i) => (
+              <SkeletonRow key={i} />
+            ))}
+          </View>
+        ) : error ? (
+          <Text accessibilityRole="alert" style={[styles.error, { paddingHorizontal: 16 }]}>
+            {error}
           </Text>
-        )}
-        renderItem={({ item }) => {
-          const subtitle = plainLanguage
-            ? simplify(item.description)
-            : item.description;
-          const onOpen = () => openResource(item, resourcePreferredFormat);
-          return <Card title={item.title} subtitle={subtitle} onPress={onOpen} />;
-        }}
-        ListEmptyComponent={
-          loading ? (
-            <View>
-              {Array.from({ length: 6 }).map((_, i) => (
-                <SkeletonRow key={i} />
-              ))}
-            </View>
-          ) : error ? (
-            <Text accessibilityRole="alert" style={styles.error}>
-              {error}
-            </Text>
-          ) : (
-            <Text style={styles.empty}>No resources found</Text>
-          )
-        }
-        refreshControl={
-          <RefreshControl refreshing={loading} onRefresh={reload} />
-        }
-        contentContainerStyle={{ paddingBottom: 40 }}
-      />
-    </ResponsiveScreenWrapper>
+        ) : (
+          <Text style={[styles.empty, { paddingHorizontal: 16 }]}>No resources found</Text>
+        )
+      }
+      refreshControl={
+        <RefreshControl refreshing={loading} onRefresh={reload} />
+      }
+      contentContainerStyle={{ paddingBottom: 40 }}
+      style={{ flex: 1, backgroundColor: palette.background }}
+    />
   );
 }
 

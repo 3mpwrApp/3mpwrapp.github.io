@@ -56,8 +56,8 @@ const ResponsiveScreenWrapper = React.memo<ResponsiveScreenWrapperProps>(
     };
 
     const contentStyle: ViewStyle = {
-      flexGrow: 1,
       ...(padded && { padding: 16 }),
+      paddingBottom: 40, // Ensure content is fully scrollable
       ...contentContainerStyle,
     };
 

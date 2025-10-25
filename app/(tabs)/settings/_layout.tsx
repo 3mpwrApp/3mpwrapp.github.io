@@ -14,7 +14,15 @@ export default function SettingsLayout() {
       }}
     >
       <Stack.Screen
+        name="index"
+        options={{ title: 'Settings' }}
+      />
+      <Stack.Screen
         name="advanced-accessibility"
+        options={{ title: 'Advanced Accessibility' }}
+      />
+      <Stack.Screen
+        name="advanced-accessibility.impl"
         options={{ title: 'Advanced Accessibility' }}
       />
       <Stack.Screen
@@ -22,16 +30,44 @@ export default function SettingsLayout() {
         options={{ title: 'Advanced Security' }}
       />
       <Stack.Screen
+        name="advanced-security.impl"
+        options={{ title: 'Advanced Security' }}
+      />
+      <Stack.Screen
+        name="cognitive-accessibility"
+        options={{ title: 'Cognitive Accessibility' }}
+      />
+      <Stack.Screen
+        name="cognitive-accessibility.impl"
+        options={{ title: 'Cognitive Accessibility' }}
+      />
+      <Stack.Screen
         name="cultural-safety"
         options={{ title: 'Cultural Safety' }}
+      />
+      <Stack.Screen
+        name="dyslexia"
+        options={{ title: 'Dyslexia Settings' }}
+      />
+      <Stack.Screen
+        name="indigenous-language"
+        options={{ title: 'Indigenous Languages' }}
+      />
+      <Stack.Screen
+        name="motor-accessibility"
+        options={{ title: 'Motor Accessibility' }}
       />
       <Stack.Screen
         name="neurodivergent"
         options={{ title: 'Neurodivergent Support' }}
       />
       <Stack.Screen
-        name="indigenous-language"
-        options={{ title: 'Indigenous Languages' }}
+        name="neurodivergent.impl"
+        options={{ title: 'Neurodivergent Support' }}
+      />
+      <Stack.Screen
+        name="profile-editor"
+        options={{ title: 'Profile Editor' }}
       />
     </Stack>
   );

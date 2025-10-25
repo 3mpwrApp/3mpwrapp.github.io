@@ -16,7 +16,9 @@ import GlobalAssistant from "../components/GlobalAssistant";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
 import Header from "../components/ThemedHeader";
+import { channels } from "../data/community";
 import { setSessionSeed } from "../services/session";
+import { useCommunity , CommunityProvider } from "../store/community";
 import { CountsProvider } from "../store/counts";
 import { FavoritesProvider } from "../store/favorites";
 import { NetworkProvider, useNetwork } from "../store/network";
@@ -152,9 +154,10 @@ export default function RootLayout() {
                   <CountsProvider>
                     <NetworkProvider>
                       <RefreshProvider>
-                        {/* Ensure a single root element (avoid Fragment) */}
-                        <BlocksProvider>
-                        <JurisdictionProvider>
+                        <CommunityProvider>
+                          {/* Ensure a single root element (avoid Fragment) */}
+                          <BlocksProvider>
+                          <JurisdictionProvider>
                         <View style={{ flex: 1 }}>
                           <View>
                             <OfflineBanner />
@@ -164,6 +167,7 @@ export default function RootLayout() {
                             <ChangelogGate>
                               <TelemetryInit />
                               <SecurityInit />
+                              <CommunityPreload />
                               <NotificationsProvider>
                               <First7Provider>
                                 <Stack
@@ -200,6 +204,7 @@ export default function RootLayout() {
                         </View>
                         </JurisdictionProvider>
                         </BlocksProvider>
+                        </CommunityProvider>
                       </RefreshProvider>
                     </NetworkProvider>
                   </CountsProvider>
@@ -266,6 +271,29 @@ function SecurityInit() {
       }
     });
   }, []);
+  return null;
+}
+
+function CommunityPreload() {
+  const { seed } = useCommunity();
+  React.useEffect(() => {
+    // Performance monitoring: track community preload time
+    const startTime = performance.now();
+    
+    // Pre-load community channels on app startup for faster initial load
+    // Threads and comments will load from Firestore in real-time
+    seed({ channels, threads: [], comments: [] });
+    
+    const endTime = performance.now();
+    const duration = endTime - startTime;
+    
+    if (__DEV__) {
+      logger.log('🌐 Community channels pre-loaded:', channels.length, `(${duration.toFixed(2)}ms)`);
+    }
+    
+    // Optional: Send to analytics in production
+    // logEvent('community_preload', { channels: channels.length, duration_ms: duration });
+  }, [seed]);
   return null;
 }
 

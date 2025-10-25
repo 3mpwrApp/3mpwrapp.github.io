@@ -7,9 +7,7 @@ import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { addEntry, listEntries } from '../../services/timeline';
 import { useAppPalette } from '../../theme/usePalette';
 
-export const options = { href: null };
-
-export default function HistoryTimeline() {
+export default function HistoryTimelineScreen() {
   const palette = useAppPalette();
   const s = styles(palette);
   const [title, setTitle] = React.useState('');

@@ -109,6 +109,7 @@ export default function TabsLayout() {
   {/* Hidden utility routes - accessible via menu */}
     <Tabs.Screen name="inbox" options={{ href: null }} />
     <Tabs.Screen name="settings" options={{ href: null }} />
+    <Tabs.Screen name="_settings.sections" options={{ href: null }} />
     <Tabs.Screen name="saved" options={{ href: null }} />
     <Tabs.Screen name="saved.impl" options={{ href: null }} />
     <Tabs.Screen name="voice-help" options={{ href: null }} />

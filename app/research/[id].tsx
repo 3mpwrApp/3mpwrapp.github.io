@@ -10,8 +10,6 @@ import { researchItems } from '../../data/research';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 
-export const options = { href: null };
-
 export default function ResearchDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const palette = useAppPalette();

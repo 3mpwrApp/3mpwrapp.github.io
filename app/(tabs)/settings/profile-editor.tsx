@@ -29,6 +29,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle } from '../../../components/A11yWrapper';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
 import { db } from '../../../firebase/config';
@@ -437,7 +438,7 @@ export default function ProfileEditorScreen() {
             <Text style={styles.energyLabel}>
               {t(`profile.editor.energy.${timeOfDay}`, timeOfDay.charAt(0).toUpperCase() + timeOfDay.slice(1))}
             </Text>
-            <View style={styles.energyButtons}>
+            <GapView style={styles.energyButtons}>
               {ENERGY_LEVELS.map(level => (
                 <A11yPressable
                   key={level}
@@ -461,7 +462,7 @@ export default function ProfileEditorScreen() {
                   </Text>
                 </A11yPressable>
               ))}
-            </View>
+            </GapView>
           </View>
         ))}
       </View>
@@ -486,7 +487,7 @@ export default function ProfileEditorScreen() {
       </View>
 
       {/* Action Buttons */}
-      <View style={styles.buttonContainer}>
+      <GapView style={styles.buttonContainer}>
         {hasChanges && (
           <A11yPressable
             onPress={handleRevert}
@@ -522,7 +523,7 @@ export default function ProfileEditorScreen() {
             </>
           )}
         </A11yPressable>
-      </View>
+      </GapView>
     </ScrollView>
   );
 }
@@ -645,7 +646,6 @@ function createStyles(palette: any, factor: number, insets: any) {
     },
     energyButtons: {
       flexDirection: 'row',
-      gap: 8,
     },
     energyButton: {
       paddingVertical: 6,
@@ -689,7 +689,6 @@ function createStyles(palette: any, factor: number, insets: any) {
     },
     buttonContainer: {
       flexDirection: 'row',
-      gap: 12,
       marginTop: 24,
       marginBottom: insets.bottom + 16,
     },

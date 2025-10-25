@@ -28,7 +28,6 @@ import A11yQuickSettings from "./A11yQuickSettings";
 // Organized to align with new 5-tab structure (Home, Wellness, Resources, Advocacy, Community)
 const MENU_SECTIONS = {
   wellness: [
-    { label: "Wellness Hub", path: "/(tabs)/wellness" },
     { label: "Exercise Hub", path: "/(tabs)/wellness/exercise-hub" },
     { label: "Nutrition Guides", path: "/(tabs)/wellness/nutrition-guides" },
     { label: "AI Companion", path: "/(tabs)/wellness/ai-companion" },
@@ -36,7 +35,6 @@ const MENU_SECTIONS = {
     { label: "Mood Tracker", path: "/(tabs)/wellness/mood-tracker" },
   ],
   resources: [
-    { label: "Resources Hub", path: "/(tabs)/resources" },
     { label: "Claims Navigator", path: "/(tabs)/resources/claims-navigator" },
     { label: "Evidence Locker", path: "/(tabs)/resources/evidence-locker" },
     { label: "Letter Templates", path: "/(tabs)/resources/letters" },
@@ -47,7 +45,6 @@ const MENU_SECTIONS = {
     { label: "Podcasts", path: "/podcasts" },
   ],
   advocacy: [
-    { label: "Advocacy Hub", path: "/(tabs)/advocacy" },
     { label: "Lawyer/Advocate Finder", path: "/(tabs)/advocacy/lawyer-finder" },
     { label: "Ally Hub", path: "/(tabs)/advocacy/ally-hub" },
     { label: "World Disability Map", path: "/(tabs)/advocacy/world-map" },
