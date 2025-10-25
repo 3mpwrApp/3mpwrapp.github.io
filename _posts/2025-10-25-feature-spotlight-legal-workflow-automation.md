@@ -2,7 +2,7 @@
 layout: post
 title: "Feature Spotlight: Legal Workflow Automation"
 date: 2025-10-25 09:00:00 +0000
-tags: [features, spotlight, phase-4:-legal-core]
+tags: [feature]
 categories: [features]
 excerpt: Step-by-step guided processes for benefits applications, appeals, and workplace accommodations
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Feature Spotlight: Disability Wizard"
 date: 2025-10-22 09:00:00 +0000
-tags: [features, spotlight, phase-2:-personalization]
+tags: [feature]
 categories: [features]
 excerpt: Your personal guide that recommends the right tools at the right time based on your specific needs
 ---

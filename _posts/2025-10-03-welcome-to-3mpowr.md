@@ -1,15 +1,10 @@
 ---
 layout: post
 title: "Welcome to the 3mpowr App site"
-description: A first update about our mission, what’s live today, and how to get involved.
-tags: [announcement, updates]
----
-
----
-layout: post
-title: "Welcome to the 3mpwr App site"
 date: 2025-10-03
-categories: news
+tags: [announcement]
+categories: [news]
+excerpt: "A first update about our mission, what's live today, and how to get involved."
 ---
 
 We're excited to launch the 3mpwr App website. Here's what you can do today:

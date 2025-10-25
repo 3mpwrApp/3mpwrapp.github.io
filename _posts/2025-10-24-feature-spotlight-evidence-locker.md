@@ -2,7 +2,7 @@
 layout: post
 title: "Feature Spotlight: Evidence Locker"
 date: 2025-10-24 09:00:00 +0000
-tags: [features, spotlight, core-feature]
+tags: [feature]
 categories: [features]
 excerpt: Securely store important documents with AES-256 encryption and organized categories
 ---

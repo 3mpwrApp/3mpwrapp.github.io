@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Enhanced Daily Highlights (2025-10-17) - Provincial & Federal Coverage
+title: "Comprehensive Daily Digest - October 17, 2025"
 date: 2025-10-17 09:00:00 +0000
-tags: [community, highlights, provincial-programs, federal-programs]
-categories: [community]
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Comprehensive daily briefing covering federal programs, all 13 provincial/territorial disability services, and advocacy initiatives."
 ---
 
 🚨 **COMPREHENSIVE PWD & INJURED WORKER NEWS DIGEST** 🚨

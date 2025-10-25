@@ -2,7 +2,9 @@
 layout: post
 title: "Daily News Curation - 2025-10-22"
 date: 2025-10-22
-categories: curation news
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Curated 50 items from disability, accessibility, and social policy sources across Canada."
 ---
 
 # Daily News Curation - 2025-10-22

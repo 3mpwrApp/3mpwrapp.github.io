@@ -2,7 +2,7 @@
 layout: post
 title: "Feature Spotlight: Master Letter Generator"
 date: 2025-10-23 09:00:00 +0000
-tags: [features, spotlight, phase-2:-legal-tools]
+tags: [feature]
 categories: [features]
 excerpt: 22 professional letter templates for workplace accommodations, benefits applications, and appeals
 ---

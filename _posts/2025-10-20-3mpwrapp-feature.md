@@ -2,8 +2,8 @@
 layout: post
 title: "Feature Highlight: ML-Powered Energy Forecasting & Smart Notifications"
 date: 2025-10-20T09:00:00+00:00
-tags: [3mpwrapp, features, community, guide]
-categories: [news, updates, education]
+tags: [feature]
+categories: [features]
 excerpt: "Discover how 3mpwrApp's AI-powered energy prediction helps you plan your day and manage your capacity with personalized smart notifications."
 ---
 

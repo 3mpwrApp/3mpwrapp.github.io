@@ -2,7 +2,7 @@
 layout: post
 title: "Feature Spotlight: Energy Forecast & Smart Scheduling"
 date: 2025-10-21 09:00:00 +0000
-tags: [features, spotlight, phase-6:-ml-powered]
+tags: [feature]
 categories: [features]
 excerpt: 24-hour energy prediction that learns your patterns and schedules notifications for optimal times
 ---
