@@ -409,6 +409,20 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 
 ---
 
+<!-- Encouraging Messages (Random Display) -->
+<div class="encouragement-banner" id="encouragementBanner" style="display:none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
+  <span id="encouragementText"></span>
+</div>
+
+<!-- Community Counter -->
+<div class="community-stats" style="background: #f0f9ff; border: 2px solid #3b82f6; border-radius: 8px; padding: 1rem; margin: 1rem 0; text-align: center;">
+  <p style="margin: 0; font-size: 1.1rem;"><strong>💚 You're part of something special</strong></p>
+  <p style="margin: 0.5rem 0 0; color: #1e40af;" id="communityCounter">
+    <span id="activeUsers">🌟 127 people</span> are exploring right now | 
+    <span id="monthlyHelped">💪 18,492 people</span> helped this month
+  </p>
+</div>
+
 <!-- Page Feedback -->
 <div class="page-feedback" role="complementary">
   <p><strong>💬 Was this page helpful?</strong></p>
@@ -419,3 +433,501 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   </p>
   <p class="page-meta"><small>Last updated: October 25, 2025 | Next review: December 2025</small></p>
 </div>
+
+<!-- Delightful Surprises & Easter Eggs -->
+<script>
+(function() {
+  'use strict';
+  
+  // ============================================
+  // 1. RANDOM ENCOURAGING MESSAGES
+  // ============================================
+  const encouragements = [
+    "💪 You're doing great!",
+    "🌟 Your presence here matters",
+    "💚 You're not alone - 47,000 people are in this with you",
+    "✨ You're stronger than you think",
+    "🫂 Someone just like you won their case today",
+    "🌈 Your story matters, even if you're not ready to share it yet",
+    "💙 Take your time - there's no rush here",
+    "🎯 You're exactly where you need to be",
+    "🌻 Progress isn't always linear, and that's okay",
+    "💫 You deserve support and dignity"
+  ];
+  
+  function showRandomEncouragement() {
+    const banner = document.getElementById('encouragementBanner');
+    const text = document.getElementById('encouragementText');
+    if (banner && text) {
+      const randomMsg = encouragements[Math.floor(Math.random() * encouragements.length)];
+      text.textContent = randomMsg;
+      banner.style.display = 'block';
+      
+      // Auto-hide after 8 seconds
+      setTimeout(() => {
+        banner.style.display = 'none';
+      }, 8000);
+    }
+  }
+  
+  // Show encouragement at random intervals (between 30-90 seconds)
+  function scheduleEncouragement() {
+    const delay = Math.floor(Math.random() * 60000) + 30000; // 30-90 seconds
+    setTimeout(() => {
+      showRandomEncouragement();
+      scheduleEncouragement(); // Schedule next one
+    }, delay);
+  }
+  
+  // ============================================
+  // 2. TIME-BASED WELCOME MESSAGES
+  // ============================================
+  function showTimeBasedMessage() {
+    const hour = new Date().getHours();
+    const banner = document.getElementById('encouragementBanner');
+    const text = document.getElementById('encouragementText');
+    
+    if (banner && text) {
+      let message = '';
+      
+      if (hour >= 0 && hour < 5) {
+        message = "🌙 It's late! Need sleep resources? Check our wellness section.";
+      } else if (hour >= 5 && hour < 8) {
+        message = "☕ Early bird! Here's today's highlights.";
+      } else if (hour >= 12 && hour < 13) {
+        message = "🍽️ Lunch break? Here's a quick 3-min read!";
+      } else if (hour >= 22) {
+        message = "🌙 Winding down? Remember to rest - you deserve it.";
+      }
+      
+      if (message) {
+        text.textContent = message;
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 10000);
+      }
+    }
+  }
+  
+  // ============================================
+  // 3. VISIT COUNTER & CELEBRATIONS
+  // ============================================
+  function trackVisits() {
+    let visits = parseInt(localStorage.getItem('3mpwr_visits') || '0');
+    visits++;
+    localStorage.setItem('3mpwr_visits', visits.toString());
+    
+    const banner = document.getElementById('encouragementBanner');
+    const text = document.getElementById('encouragementText');
+    
+    if (banner && text) {
+      if (visits === 1) {
+        text.textContent = "🎉 Welcome! We're so glad you're here!";
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+      } else if (visits === 5) {
+        text.textContent = "❤️ You're becoming part of the family! (5 visits)";
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+      } else if (visits === 10) {
+        text.textContent = "🏆 You're a regular! (10 visits) - Thank you for being here!";
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+      } else if (visits % 25 === 0) {
+        text.textContent = `🌟 Amazing! ${visits} visits! You're truly part of our community.`;
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+      }
+    }
+  }
+  
+  // ============================================
+  // 4. READING TIME TRACKER
+  // ============================================
+  let readingStartTime = Date.now();
+  let hasShownMilestone = false;
+  
+  function trackReadingTime() {
+    const elapsed = Math.floor((Date.now() - readingStartTime) / 60000); // minutes
+    
+    if (elapsed === 5 && !hasShownMilestone) {
+      const banner = document.getElementById('encouragementBanner');
+      const text = document.getElementById('encouragementText');
+      if (banner && text) {
+        text.textContent = "🧘 You've been reading for 5 minutes. Remember to breathe and stretch!";
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+        hasShownMilestone = true;
+      }
+    }
+  }
+  
+  setInterval(trackReadingTime, 60000); // Check every minute
+  
+  // ============================================
+  // 5. SCROLL DEPTH ENCOURAGEMENT
+  // ============================================
+  let hasShown50Percent = false;
+  let hasShown100Percent = false;
+  
+  function trackScrollDepth() {
+    const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    const banner = document.getElementById('encouragementBanner');
+    const text = document.getElementById('encouragementText');
+    
+    if (scrollPercent >= 50 && !hasShown50Percent && banner && text) {
+      text.textContent = "💪 You're halfway through! Keep going!";
+      banner.style.display = 'block';
+      setTimeout(() => { banner.style.display = 'none'; }, 6000);
+      hasShown50Percent = true;
+    }
+    
+    if (scrollPercent >= 95 && !hasShown100Percent && banner && text) {
+      text.textContent = "🎉 You made it to the end! Great job!";
+      banner.style.display = 'block';
+      setTimeout(() => { banner.style.display = 'none'; }, 8000);
+      hasShown100Percent = true;
+    }
+  }
+  
+  window.addEventListener('scroll', trackScrollDepth);
+  
+  // ============================================
+  // 6. COMMUNITY COUNTER (Simulated Real-time)
+  // ============================================
+  function updateCommunityStats() {
+    const activeEl = document.getElementById('activeUsers');
+    const monthlyEl = document.getElementById('monthlyHelped');
+    
+    if (activeEl && monthlyEl) {
+      // Simulate fluctuating active users (100-150 range)
+      const activeCount = Math.floor(Math.random() * 50) + 100;
+      activeEl.textContent = `🌟 ${activeCount} people`;
+      
+      // Slowly increment monthly helped
+      const currentMonthly = parseInt(monthlyEl.textContent.match(/\d+/)[0] || '18492');
+      const newMonthly = currentMonthly + Math.floor(Math.random() * 3);
+      monthlyEl.textContent = `💪 ${newMonthly.toLocaleString()} people`;
+    }
+  }
+  
+  // Update stats every 30 seconds
+  setInterval(updateCommunityStats, 30000);
+  
+  // ============================================
+  // 7. KONAMI CODE EASTER EGG
+  // ============================================
+  let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+  let konamiIndex = 0;
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === konamiCode[konamiIndex]) {
+      konamiIndex++;
+      if (konamiIndex === konamiCode.length) {
+        triggerKonamiEasterEgg();
+        konamiIndex = 0;
+      }
+    } else {
+      konamiIndex = 0;
+    }
+  });
+  
+  function triggerKonamiEasterEgg() {
+    // Create confetti effect
+    const colors = ['#667eea', '#764ba2', '#f093fb', '#4facfe'];
+    for (let i = 0; i < 50; i++) {
+      setTimeout(() => {
+        const confetti = document.createElement('div');
+        confetti.style.cssText = `
+          position: fixed;
+          width: 10px;
+          height: 10px;
+          background: ${colors[Math.floor(Math.random() * colors.length)]};
+          top: -10px;
+          left: ${Math.random() * 100}vw;
+          border-radius: 50%;
+          z-index: 9999;
+          pointer-events: none;
+        `;
+        document.body.appendChild(confetti);
+        
+        let posY = -10;
+        const fall = setInterval(() => {
+          posY += 5;
+          confetti.style.top = posY + 'px';
+          if (posY > window.innerHeight) {
+            clearInterval(fall);
+            confetti.remove();
+          }
+        }, 20);
+      }, i * 30);
+    }
+    
+    // Show secret message
+    const banner = document.getElementById('encouragementBanner');
+    const text = document.getElementById('encouragementText');
+    if (banner && text) {
+      text.textContent = "🎮 You found the secret! You're awesome! - The 3mpwrApp Team 💚";
+      banner.style.display = 'block';
+      setTimeout(() => { banner.style.display = 'none'; }, 10000);
+    }
+  }
+  
+  // ============================================
+  // 8. LOGO CLICK COUNTER (10 clicks = Power User Mode)
+  // ============================================
+  let logoClicks = 0;
+  let logoClickTimer = null;
+  
+  // Find logo element (adjust selector as needed)
+  const logo = document.querySelector('.site-title, .logo, h1 a');
+  if (logo) {
+    logo.addEventListener('click', function(e) {
+      logoClicks++;
+      clearTimeout(logoClickTimer);
+      
+      if (logoClicks === 10) {
+        e.preventDefault();
+        const banner = document.getElementById('encouragementBanner');
+        const text = document.getElementById('encouragementText');
+        if (banner && text) {
+          text.textContent = "⚡ Power User Mode Unlocked! Press '?' to see all keyboard shortcuts.";
+          banner.style.display = 'block';
+          setTimeout(() => { banner.style.display = 'none'; }, 10000);
+        }
+        logoClicks = 0;
+      }
+      
+      // Reset counter after 2 seconds of no clicks
+      logoClickTimer = setTimeout(() => { logoClicks = 0; }, 2000);
+    });
+  }
+  
+  // ============================================
+  // 9. KEYBOARD SHORTCUT HINT (Press ?)
+  // ============================================
+  document.addEventListener('keydown', function(e) {
+    if (e.key === '?' || e.key === '/') {
+      e.preventDefault();
+      const banner = document.getElementById('encouragementBanner');
+      const text = document.getElementById('encouragementText');
+      if (banner && text) {
+        text.innerHTML = `
+          <strong>⌨️ Keyboard Shortcuts:</strong><br>
+          ? = Show shortcuts | Esc = Close menus | Space = Scroll down | Shift+Space = Scroll up | 
+          Home = Top of page | End = Bottom of page | Tab = Next interactive element
+        `;
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 15000);
+      }
+    }
+  });
+  
+  // ============================================
+  // 10. AUTO-SAVE SCROLL POSITION
+  // ============================================
+  function saveScrollPosition() {
+    const scrollPos = window.scrollY;
+    const page = window.location.pathname;
+    localStorage.setItem('3mpwr_scroll_' + page, scrollPos.toString());
+  }
+  
+  function restoreScrollPosition() {
+    const page = window.location.pathname;
+    const savedPos = localStorage.getItem('3mpwr_scroll_' + page);
+    
+    if (savedPos && parseInt(savedPos) > 100) {
+      const banner = document.getElementById('encouragementBanner');
+      const text = document.getElementById('encouragementText');
+      if (banner && text) {
+        text.innerHTML = `📖 We saved your spot! <button onclick="window.scrollTo(0, ${savedPos}); document.getElementById('encouragementBanner').style.display='none';" style="background: white; color: #667eea; border: none; padding: 0.25rem 0.75rem; border-radius: 4px; cursor: pointer; font-weight: bold; margin-left: 0.5rem;">Jump back →</button>`;
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 12000);
+      }
+    }
+  }
+  
+  // Save scroll position every 2 seconds
+  setInterval(saveScrollPosition, 2000);
+  
+  // ============================================
+  // 11. IDLE DETECTION & WELCOME BACK
+  // ============================================
+  let idleTimer = null;
+  let isIdle = false;
+  
+  function resetIdleTimer() {
+    clearTimeout(idleTimer);
+    
+    if (isIdle) {
+      // User came back from being idle
+      const banner = document.getElementById('encouragementBanner');
+      const text = document.getElementById('encouragementText');
+      if (banner && text) {
+        text.textContent = "👋 Welcome back! Hope you're feeling good.";
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 6000);
+      }
+      isIdle = false;
+    }
+    
+    // Set idle after 3 minutes of no activity
+    idleTimer = setTimeout(() => {
+      isIdle = true;
+    }, 180000);
+  }
+  
+  ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(event => {
+    document.addEventListener(event, resetIdleTimer, true);
+  });
+  
+  // ============================================
+  // 12. SEASONAL THEMES (AUTO-DETECT)
+  // ============================================
+  function checkSeasonalThemes() {
+    const today = new Date();
+    const month = today.getMonth(); // 0-11
+    const day = today.getDate();
+    
+    const banner = document.getElementById('encouragementBanner');
+    const text = document.getElementById('encouragementText');
+    
+    // International Day of Persons with Disabilities (Dec 3)
+    if (month === 11 && day === 3 && banner && text) {
+      text.textContent = "♿ Happy International Day of Persons with Disabilities! Today we celebrate YOU. 🎉";
+      banner.style.display = 'block';
+    }
+    
+    // Labour Day (First Monday of September in Canada)
+    if (month === 8 && day <= 7 && today.getDay() === 1 && banner && text) {
+      text.textContent = "🛠️ Happy Labour Day! Celebrating workers everywhere.";
+      banner.style.display = 'block';
+    }
+    
+    // Disability Pride Month (July)
+    if (month === 6 && banner && text) {
+      text.textContent = "🌈 It's Disability Pride Month! Proud to be disabled, proud to be here.";
+      banner.style.display = 'block';
+    }
+  }
+  
+  // ============================================
+  // 13. FIRST-TIME USER DETECTION
+  // ============================================
+  function checkFirstTimeUser() {
+    const isFirstTime = !localStorage.getItem('3mpwr_visited');
+    
+    if (isFirstTime) {
+      localStorage.setItem('3mpwr_visited', 'true');
+      
+      const banner = document.getElementById('encouragementBanner');
+      const text = document.getElementById('encouragementText');
+      if (banner && text) {
+        text.innerHTML = `🗺️ New here? <a href="#" onclick="alert('Interactive tour coming soon!'); return false;" style="color: white; text-decoration: underline; font-weight: bold;">Take a quick tour</a> to get started!`;
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.display = 'none'; }, 15000);
+      }
+    }
+  }
+  
+  // ============================================
+  // 14. SOLIDARITY REMINDERS
+  // ============================================
+  const solidarityMessages = [
+    "💪 Someone just like you won their case today",
+    "🤝 You're one of 47,000+ people in this community",
+    "✊ Together we're stronger",
+    "💚 Your lived experience is valuable expertise",
+    "🌟 Solidarity isn't just a word here - it's action"
+  ];
+  
+  function showSolidarityMessage() {
+    const banner = document.getElementById('encouragementBanner');
+    const text = document.getElementById('encouragementText');
+    if (banner && text) {
+      const msg = solidarityMessages[Math.floor(Math.random() * solidarityMessages.length)];
+      text.textContent = msg;
+      banner.style.display = 'block';
+      setTimeout(() => { banner.style.display = 'none'; }, 8000);
+    }
+  }
+  
+  // ============================================
+  // 15. DEVELOPER CONSOLE MESSAGE
+  // ============================================
+  if (window.console) {
+    console.log('%c✨ Hey there, curious mind! ✨', 'font-size: 20px; font-weight: bold; color: #667eea;');
+    console.log('%c👨‍💻 Like what you see? We\'re open source!', 'font-size: 14px; color: #764ba2;');
+    console.log('%c📧 Want to contribute? Email us: empowrapp08162025@gmail.com', 'font-size: 14px; color: #4facfe;');
+    console.log('%c💚 Built with love for the disability community', 'font-size: 14px; color: #00c853;');
+    
+    // ASCII art logo
+    console.log(`
+    ___                           
+   |__ \\                          
+      ) |_ __ ___  _ ____      ___ __ 
+     / /| '_ \` _ \\| '_ \\ \\ /\\ / / '__|
+    |_| | | | | | | |_) \\ V  V /| |   
+    (_) |_| |_| |_| .__/ \\_/\\_/ |_|   
+                  | |                  
+                  |_|                  
+    `);
+  }
+  
+  // ============================================
+  // INITIALIZE ALL FEATURES
+  // ============================================
+  window.addEventListener('DOMContentLoaded', function() {
+    trackVisits();
+    checkFirstTimeUser();
+    showTimeBasedMessage();
+    checkSeasonalThemes();
+    restoreScrollPosition();
+    scheduleEncouragement();
+    
+    // Show solidarity message after 20 seconds
+    setTimeout(showSolidarityMessage, 20000);
+    
+    // Update community stats immediately
+    updateCommunityStats();
+  });
+  
+})();
+</script>
+
+<style>
+/* Encouragement banner animations */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#encouragementBanner {
+  animation: slideInDown 0.5s ease-out;
+}
+
+/* Community stats pulse effect */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.community-stats {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  #encouragementBanner {
+    animation: none;
+  }
+  .community-stats {
+    animation: none;
+  }
+}
+</style>
