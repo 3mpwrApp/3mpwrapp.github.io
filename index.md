@@ -210,6 +210,8 @@ description: A community-powered hub for injured workers and persons with disabi
       <img
         src="{{ '/assets/images/app-store-coming-soon.svg' | relative_url }}"
         alt="App Store — coming soon"
+        loading="lazy"
+        decoding="async"
       >
       <figcaption class="sr-only">App Store — coming soon</figcaption>
     </figure>
@@ -219,6 +221,8 @@ description: A community-powered hub for injured workers and persons with disabi
       <img
         src="{{ '/assets/images/google-play-coming-soon.svg' | relative_url }}"
         alt="Google Play — coming soon"
+        loading="lazy"
+        decoding="async"
       >
       <figcaption class="sr-only">Google Play — coming soon</figcaption>
     </figure>
