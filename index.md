@@ -22,6 +22,9 @@ description: A community-powered hub for injured workers and persons with disabi
     <button id="overwhelmedBtn" class="toolbar-btn" aria-label="Switch to simplified version">
       😰 I'm overwhelmed
     </button>
+    <button id="freezeFrameBtn" class="toolbar-btn" aria-label="Freeze all animations and movement">
+      ❄️ Freeze animations
+    </button>
   </div>
   <div class="toolbar-section">
     <button id="tooMuchTextBtn" class="toolbar-btn" aria-label="Show bullet points only">
@@ -32,6 +35,20 @@ description: A community-powered hub for injured workers and persons with disabi
     </button>
     <button id="resumeReadingBtn" class="toolbar-btn" style="display:none;" aria-label="Resume where you left off">
       📖 Resume reading
+    </button>
+    <button id="spatialMemoryBtn" class="toolbar-btn" aria-label="Show where you've been on this page">
+      🔍 I saw it somewhere...
+    </button>
+  </div>
+  <div class="toolbar-section">
+    <button id="chunkingBtn" class="toolbar-btn" aria-label="Break content into smaller chunks">
+      🧩 Chunk content
+    </button>
+    <button id="decisionHelperBtn" class="toolbar-btn" aria-label="Help me decide what to do">
+      🎯 Decision helper
+    </button>
+    <button id="groundingBtn" class="toolbar-btn" aria-label="Quick grounding exercise for anxiety">
+      🧘 Grounding exercise
     </button>
   </div>
   <div class="toolbar-section">
@@ -50,10 +67,27 @@ description: A community-powered hub for injured workers and persons with disabi
       <option value="simple">Simple language</option>
     </select>
   </div>
+  <div class="toolbar-section">
+    <label for="dyslexiaMode" class="toolbar-label">📖 Dyslexia:</label>
+    <select id="dyslexiaMode" class="toolbar-select" aria-label="Dyslexia-friendly formatting">
+      <option value="off">Off</option>
+      <option value="font">Font only</option>
+      <option value="spacing">Extra spacing</option>
+      <option value="full">Full mode</option>
+    </select>
+  </div>
   <div class="toolbar-section spoon-counter">
     <span class="spoon-label">🥄 Energy used:</span>
     <span id="spoonCount" class="spoon-count" aria-live="polite">0</span>
     <button id="resetSpoons" class="toolbar-btn-small" aria-label="Reset energy counter">Reset</button>
+  </div>
+  <div class="toolbar-section">
+    <button id="cognitiveLoadBtn" class="toolbar-btn-indicator" aria-label="Cognitive load indicator" aria-live="polite">
+      🌡️ <span id="cognitiveStatus">Ready</span>
+    </button>
+    <button id="timeBlindnessBtn" class="toolbar-btn-small" aria-label="Time tracking helper">
+      ⏰ <span id="timeSpent">0m</span>
+    </button>
   </div>
 </div>
 
