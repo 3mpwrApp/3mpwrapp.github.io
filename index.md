@@ -109,6 +109,48 @@ description: A community-powered hub for injured workers and persons with disabi
 
 ---
 
+## ✨ Experience the Magic
+
+<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+  <h3 style="color: white; margin: 0 0 1rem; font-size: 1.3rem;">🎯 Built Different</h3>
+  <p style="color: rgba(255,255,255,0.95); margin: 0 0 1rem; font-size: 1.05rem;">
+    3mpwrApp isn't just accessible—it's <strong>revolutionary</strong>. We've created features you won't find anywhere else:
+  </p>
+  
+  <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem;">
+    <li style="padding-left: 1.5rem; position: relative;">
+      <span style="position: absolute; left: 0;">🧠</span>
+      <strong>Smart cognitive support</strong> that adapts to how you're feeling
+    </li>
+    <li style="padding-left: 1.5rem; position: relative;">
+      <span style="position: absolute; left: 0;">💙</span>
+      <strong>Thoughtful surprises</strong> that show we care about your wellbeing
+    </li>
+    <li style="padding-left: 1.5rem; position: relative;">
+      <span style="position: absolute; left: 0;">⏰</span>
+      <strong>Time-aware features</strong> that check in when you need it most
+    </li>
+    <li style="padding-left: 1.5rem; position: relative;">
+      <span style="position: absolute; left: 0;">🎯</span>
+      <strong>Hidden helpers</strong> that activate when you're overwhelmed
+    </li>
+    <li style="padding-left: 1.5rem; position: relative;">
+      <span style="position: absolute; left: 0;">🌟</span>
+      <strong>Celebrations</strong> for your progress, big and small
+    </li>
+    <li style="padding-left: 1.5rem; position: relative;">
+      <span style="position: absolute; left: 0;">🎮</span>
+      <strong>Easter eggs</strong> for the curious (yes, really!)
+    </li>
+  </ul>
+  
+  <p style="color: rgba(255,255,255,0.9); margin: 1rem 0 0; font-size: 0.95rem; font-style: italic;">
+    💡 <strong>Tip:</strong> The more you explore, the more magic you'll discover. This site is full of thoughtful surprises designed to make you smile.
+  </p>
+</div>
+
+---
+
 ## Why 3mpwr?
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
