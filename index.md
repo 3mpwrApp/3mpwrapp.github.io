@@ -170,6 +170,14 @@ description: A community-powered hub for injured workers and persons with disabi
 
 ---
 
+<!-- Disability Justice Facts - On Home Page (Advocacy/Social Justice Context) -->
+<div class="encouragement-banner encouragement-facts" id="encouragementFacts" style="display:none; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
+  <span class="category-label">✊ Disability Justice Facts</span><br>
+  <span id="encouragementFactsText"></span>
+</div>
+
+---
+
 ## Features
 
 <span class="energy-cost" data-energy="3" aria-label="Energy cost: medium">🔋🔋🔋 Energy: Medium</span>
@@ -444,29 +452,16 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 
 ---
 
-<!-- Crisis Resources Banner -->
-<div class="crisis-resources" role="complementary" aria-label="Crisis support resources">
-  <strong>🆘 In Crisis?</strong> 
-  <a href="{{ '/crisis-resources' | relative_url }}">Get immediate help</a> | 
-  📞 <strong>Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a> (24/7, Free & Confidential)
-</div>
-
----
-
-<!-- Encouraging Messages (3 Rotating Boxes) -->
-<div class="encouragement-banner encouragement-support" id="encouragementSupport" style="display:none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
-  <span class="category-label" style="display: block; font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.25rem;">💚 Words of Support</span>
-  <span id="encouragementSupportText"></span>
-</div>
-
+<!-- Did You Know? - Website & App Features (On Home Page) -->
 <div class="encouragement-banner encouragement-tidbits" id="encouragementTidbits" style="display:none; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
-  <span class="category-label" style="display: block; font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.25rem;">💡 Did You Know?</span>
+  <span class="category-label">💡 Did You Know?</span><br>
   <span id="encouragementTidbitsText"></span>
 </div>
 
-<div class="encouragement-banner encouragement-facts" id="encouragementFacts" style="display:none; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
-  <span class="category-label" style="display: block; font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.25rem;">✊ Disability Justice Facts</span>
-  <span id="encouragementFactsText"></span>
+<!-- Words of Support - In Community Section -->
+<div class="encouragement-banner encouragement-support" id="encouragementSupport" style="display:none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
+  <span class="category-label">💚 Words of Support</span><br>
+  <span id="encouragementSupportText"></span>
 </div>
 
 <!-- Community Counter -->
@@ -1231,3 +1226,12 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   }
 }
 </style>
+
+---
+
+<!-- Crisis Resources Footer -->
+<div class="crisis-resources" role="complementary" aria-label="Crisis support resources">
+  <strong>🆘 In Crisis?</strong> 
+  <a href="{{ '/crisis-resources' | relative_url }}">Get immediate help</a> | 
+  📞 <strong>Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a> (24/7, Free & Confidential)
+</div>
