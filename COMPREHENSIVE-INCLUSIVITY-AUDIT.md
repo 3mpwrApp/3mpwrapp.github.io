@@ -409,7 +409,7 @@ Persons with disabilities • Injured workers • Family supporters • Caregive
 ### Recommended Standard Opening for Major Pages:
 
 ```markdown
-<div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0;">
+<div class="info-box">
   <strong>👥 This page is for everyone:</strong> Whether you're a person with a disability, injured worker, family supporter, union member, healthcare provider, legal advocate, ally, or member of the general public—this information is for you. Disability justice is everyone's responsibility.
 </div>
 ```

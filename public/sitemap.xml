@@ -1,63 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
     <loc>https://3mpwrapp.pages.dev/</loc>
+    <lastmod>2025-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://3mpwrapp.pages.dev/features</loc>
+    <lastmod>2025-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.pages.dev/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://3mpwrapp.pages.dev/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://3mpwrapp.pages.dev/about</loc>
+    <lastmod>2025-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://3mpwrapp.pages.dev/user-guide</loc>
+    <lastmod>2025-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.pages.dev/newsletter</loc>
+    <loc>https://3mpwrapp.pages.dev/blog</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- New Priority Pages -->
+  <url>
+    <loc>https://3mpwrapp.pages.dev/crisis-resources</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/app-waitlist</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/faq</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/accessibility</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Community & Resources -->
+  <url>
+    <loc>https://3mpwrapp.pages.dev/contact</loc>
+    <lastmod>2025-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.pages.dev/accessibility</loc>
+    <loc>https://3mpwrapp.pages.dev/newsletter</loc>
+    <lastmod>2025-10-20</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/resources</loc>
+    <lastmod>2025-10-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://3mpwrapp.pages.dev/beta</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Legal & Policy -->
+  <url>
     <loc>https://3mpwrapp.pages.dev/privacy</loc>
-    <changefreq>yearly</changefreq>
+    <lastmod>2025-10-20</lastmod>
+    <changefreq>quarterly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://3mpwrapp.pages.dev/terms</loc>
-    <changefreq>yearly</changefreq>
+    <lastmod>2025-10-20</lastmod>
+    <changefreq>quarterly</changefreq>
     <priority>0.4</priority>
   </url>
+  
+  <!-- Blog Posts (Recent) -->
   <url>
-    <loc>https://3mpwrapp.pages.dev/beta</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/28/pain-flare-mode-deep-dive</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://3mpwrapp.pages.dev/resources</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/27/app-vs-website-comparison</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/26/spoon-theory-meets-web-design</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/26/feature-spotlight-indigenous-language-support</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/26/daily-curation</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/25/groundbreaking-website-accessibility-features</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/25/feature-spotlight-legal-workflow-automation</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/25/daily-curation</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/24/feature-spotlight-evidence-locker</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/24/daily-curation</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/23/feature-spotlight-master-letter-generator</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/23/daily-curation</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/22/feature-spotlight-disability-wizard</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/22/daily-curation</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/21/weekly-update-week-43</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/21/feature-spotlight-energy-forecast-smart-scheduling</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/21/daily-curation</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/20/3mpwrapp-feature</loc>
+    <lastmod>2025-10-20</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/18/daily-curation</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/17/weekly-recap</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/17/daily-curation</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/17/comprehensive-daily-digest</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://3mpwrapp.pages.dev/blog/2025/10/03/welcome-to-3mpowr</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

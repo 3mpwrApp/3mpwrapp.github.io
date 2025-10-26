@@ -38,6 +38,7 @@ Quick answers to common questions about 3mpwrApp. Can't find what you're looking
 ## 📑 Table of Contents
 
 - [Getting Started](#getting-started)
+- [Common Concerns & Trust Questions](#common-concerns--trust-questions)
 - [Privacy & Data](#privacy--data)
 - [BYOC Modes Explained](#byoc-modes-explained)
 - [Features & Functionality](#features--functionality)
@@ -63,6 +64,179 @@ Quick answers to common questions about 3mpwrApp. Can't find what you're looking
 - **Healthcare providers** supporting disabled clients
 
 We're built BY the disability community, FOR the disability community.
+
+---
+
+## Common Concerns & Trust Questions
+
+### How is 3mpwrApp different from other disability apps?
+
+**Key Differences:**
+
+| 3mpwrApp | Other Apps |
+|----------|------------|
+| 🆓 **100% free forever** | Often have paid tiers, subscriptions |
+| 🔒 **You own your data** (BYOC options) | They own your data |
+| 🇨🇦 **Canadian-focused** (all provinces) | Often US-focused |
+| ♿ **Built BY disabled people** | Often built by corporations |
+| 🔓 **Open about limitations** | Often overpromise capabilities |
+| 💚 **Community-funded mission** | Profit-driven |
+| 🏛️ **Advocacy-focused** | Health tracking only |
+
+**Bottom line:** We're not trying to make money off the disability community—we're trying to empower it.
+
+### If it's free, how do you make money? What's the catch?
+
+**Great question!** Here's our honest answer:
+
+**How We're Funded (Currently):**
+- 💰 Personal funds from founder
+- 🤝 Community donations (optional, not required)
+- 🎯 Grants for disability advocacy (applied for, not guaranteed)
+
+**Future Funding (Being Explored):**
+- 🏢 Institutional partnerships (unions, advocacy orgs) - they pay, members use free
+- 💼 Optional professional tools (lawyers, case workers) - NOT required for users
+- 🎓 Training/workshops for organizations - again, users always free
+
+**What We'll NEVER Do:**
+- ❌ Charge users a subscription
+- ❌ Sell your data to third parties
+- ❌ Show you ads
+- ❌ Require payment for core features
+- ❌ Create "premium" tiers
+
+**The Catch?** There isn't one. We're a grassroots community project, not a Silicon Valley startup looking for an exit strategy. We survive on donations and founder's personal investment because we believe in this mission.
+
+**[Read our funding transparency statement →](/about#funding-transparency)**
+
+### How can I trust you with my sensitive data?
+
+**We understand this concern completely. Here's how we've addressed it:**
+
+**1. You Don't Have to Trust Us**
+- Use **Strict BYOC Mode** - your data never touches our servers
+- Your data stays on YOUR device and YOUR cloud provider
+- We literally can't access it even if we wanted to
+
+**2. Technical Safeguards**
+- Military-grade encryption (AES-256)
+- Open-source security audit (coming Q1 2026)
+- Third-party penetration testing
+- Regular security audits
+
+**3. Legal Commitments**
+- Detailed privacy policy with no loopholes
+- GDPR and Canadian privacy law compliance
+- Data deletion on request (within 30 days)
+- No data sales - ever (written into Terms of Service)
+
+**4. Community Accountability**
+- Built with input from disability advocates
+- Transparent about what we collect and why
+- Regular community updates
+- Open to audits from disability rights organizations
+
+**[Read our detailed security documentation →](/privacy#security-measures)**
+
+### What if 3mpwrApp shuts down? Will I lose my data?
+
+**No, your data is safe!**
+
+**If you use Default Mode:**
+- Export all your data anytime (Settings → Export Data)
+- Download JSON, PDF, or CSV formats
+- Data remains on your device until you delete it
+
+**If you use BYOC Modes (Hybrid or Strict):**
+- Your data lives in YOUR cloud storage (Google Drive, Dropbox, etc.)
+- You have complete copies independent of 3mpwrApp
+- Even if we shut down tomorrow, you keep everything
+
+**Our Shutdown Promise:**
+- ✅ 90-day advance notice before any shutdown
+- ✅ Tools to export all community posts/resources
+- ✅ Open-source the app code so community can continue
+- ✅ Provide migration guide to alternatives
+
+**Bottom Line:** You're not locked in. Your data is portable. You can leave anytime with everything you created.
+
+### What about privacy? Can employers/insurance companies see my data?
+
+**Absolutely NOT - unless YOU choose to share it.**
+
+**Default Privacy Protections:**
+- 🔒 All data encrypted on your device
+- 🔒 Only you have the decryption keys
+- 🔒 We cannot access your Evidence Locker, wellness logs, or personal notes
+- 🔒 No backdoors for law enforcement, employers, or insurance companies
+
+**Community Privacy:**
+- Use anonymous usernames (no real names required)
+- Control what you share publicly vs. privately
+- Delete your posts anytime
+- Opt out of public community entirely (still use tools)
+
+**Legal Requests:**
+- We fight subpoenas for user data
+- We comply only when legally required (with notice to you)
+- We collect minimal data, so there's little to hand over
+- BYOC modes mean we literally don't have your data to share
+
+**[Read our Privacy Policy →](/privacy)**  
+**[Read our Data Warrant Transparency Report →](/transparency-report)** (coming Q1 2026)
+
+### What if I can't afford a smartphone or data plan?
+
+**We hear you. Digital divide is a real accessibility barrier.**
+
+**Current Solutions:**
+- 📱 App works 100% offline (no data needed after download)
+- 💻 Web version coming Phase 3 (use library computers)
+- 📄 Printable resources available (download PDFs)
+
+**Future Solutions (Advocating For):**
+- 📞 Partnership with free phone programs (SafeLink, Assurance Wireless)
+- 📡 Lobbying for disability tech subsidies
+- 🏢 Institutional access (union halls, community centers provide devices)
+
+**Right Now:**
+- Check if you qualify for [Connecting Families](https://ised-isde.canada.ca/site/connecting-families/en) (Canada) - $20/month internet
+- Ask local library about device lending programs
+- Contact your provincial disability program about tech assistance
+
+**We're working on this. Digital access IS a disability justice issue.**
+
+### How do I know this isn't a scam or data harvesting scheme?
+
+**Healthy skepticism is smart! Here's how to verify we're legitimate:**
+
+**Transparency Markers:**
+- ✅ Detailed [Terms of Service](/terms) and [Privacy Policy](/privacy) (no vague corporate speak)
+- ✅ Real person contact: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
+- ✅ Active social media with real community engagement
+- ✅ Open about limitations and what we DON'T do
+- ✅ Beta testing with real community members
+- ✅ Source code available for security audit (upon request during beta)
+
+**Red Flags We DON'T Have:**
+- ❌ No "too good to be true" promises
+- ❌ No pressure to upgrade or pay
+- ❌ No vague privacy policies
+- ❌ No requests for banking info or SIN numbers
+- ❌ No multi-level marketing or "refer 5 friends" schemes
+
+**You Can Verify:**
+- Google our app name + "reviews" or "scam"
+- Check our social media for real user interactions
+- Join beta and test with dummy data first
+- Ask questions in our public community forums
+
+**If something feels off, trust your gut.** We want informed, empowered users - not victims.
+
+---
+
+## Getting Started
 
 ### How much does 3mpwrApp cost?
 
