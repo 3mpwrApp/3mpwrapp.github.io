@@ -3,6 +3,7 @@ import { Alert, Linking, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { recipes } from '../../../data/recipes';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
@@ -56,12 +57,12 @@ export default function NutritionGuides() {
       >
         <Text style={s.btnText}>Export Favorites (CSV)</Text>
       </A11yPressable>
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 8 }} gap={8}>
         <A11yPressable onPress={()=>setTag('all')} style={[s.chip, tag==='all' && s.chipActive]} accessibilityRole="button" accessibilityLabel="Show all recipes" hitSlop={HIT_SLOP_8}><Text style={{ color: tag==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>all</Text></A11yPressable>
         {tags.map(t => (
           <A11yPressable key={t} onPress={()=>setTag(t)} style={[s.chip, tag===t && s.chipActive]} accessibilityRole="button" accessibilityLabel={`Filter recipes by tag: ${t}`} hitSlop={HIT_SLOP_8}><Text style={{ color: tag===t? palette.onPrimary: palette.text, fontWeight:'700' }}>{t}</Text></A11yPressable>
         ))}
-      </View>
+      </GapView>
       {filtered.map(r => (
         <View key={r.id} style={s.card}>
           <Text style={s.cardTitle} accessibilityLabel={`Recipe: ${r.title}`}>{r.title}</Text>

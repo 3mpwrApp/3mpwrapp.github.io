@@ -3,6 +3,7 @@ import React from 'react';
 import { Alert, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { useAppPalette } from '../../../theme/usePalette';
 
 // Lightweight, test-focused implementation to satisfy the smoke test
@@ -71,7 +72,7 @@ export default function ReflectionsCalendarTestImpl() {
 				<Text style={[s.secondaryText, { color: palette.text }]}>Add Mood</Text>
 			</Pressable>
 
-			<View style={{ flexDirection: 'row', gap: 8 }}>
+			<GapView style={{ flexDirection: 'row' }} gap={8}>
 				<Pressable
 					hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
 					onPress={() => setView('grid')}
@@ -92,7 +93,7 @@ export default function ReflectionsCalendarTestImpl() {
 				>
 					<Text style={[s.chipText, { color: view==='list' ? palette.onPrimary : palette.text }]}>LIST</Text>
 				</Pressable>
-			</View>
+			</GapView>
 
 			<View style={{ height: 8 }} />
 
@@ -138,7 +139,7 @@ export default function ReflectionsCalendarTestImpl() {
 				<View style={[s.modalBackdrop, { backgroundColor: 'rgba(0,0,0,0.5)' }]}>
 					<View style={[s.modalCard, { backgroundColor: palette.surface }]}>
 						<Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>Details</Text>
-						<View style={{ flexDirection: 'row', gap: 8, marginBottom: 8 }}>
+						<GapView style={{ flexDirection: 'row', marginBottom: 8 }} gap={8}>
 							<Pressable
 								accessibilityRole="button"
 								accessibilityLabel="Add reflection"
@@ -155,7 +156,7 @@ export default function ReflectionsCalendarTestImpl() {
 							>
 								<Text style={[s.secondaryText, { color: palette.text }]}>Close</Text>
 							</Pressable>
-						</View>
+						</GapView>
 
 						{editorOpen && (
 							<View>

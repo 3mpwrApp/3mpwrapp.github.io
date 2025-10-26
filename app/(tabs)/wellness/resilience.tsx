@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { useResilience } from '../../../store/resilience';
@@ -16,13 +17,13 @@ export default function ResiliencePoints() {
       <Text accessibilityRole="header" style={s.header}>{t('wellness.resilience.title','Resilience Points')}</Text>
       <DisclaimerBanner type="medical" compact />
       <Text style={s.points}>{t('wellness.resilience.points','Points: {{points}}',{ points: rs.points })}</Text>
-      <View style={{ gap:8 }}>
+      <GapView gap={8}>
         {rs.actions.map(a => (
           <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" key={a.id} style={s.action} onPress={()=> rs.award(a.id)}>
             <Text style={{ color: palette.text }}>{a.icon} {t(a.tKey, a.name)} (+{a.points})</Text>
           </Pressable>
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
