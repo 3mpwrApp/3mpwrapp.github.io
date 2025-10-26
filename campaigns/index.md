@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Campaigns & Events
-description: Active campaigns, rallies, and events for disability rights and injured workers. Join us in advocating for change across Canada.
+description: Community-created campaigns and events for disability rights and injured workers. Organizing for change across Canada.
 permalink: /campaigns/
 ---
 
@@ -22,14 +22,6 @@ permalink: /campaigns/
       😰 I'm overwhelmed
     </button>
   </div>
-  <div class="toolbar-section">
-    <button id="tooMuchTextBtn" class="toolbar-btn" aria-label="Show bullet points only">
-      📝 Too much text?
-    </button>
-    <button id="brainFogBtn" class="toolbar-btn" aria-label="Show quick summary">
-      🧠 Brain fog helper
-    </button>
-  </div>
   <div class="toolbar-section spoon-counter">
     <span class="spoon-label">🥄 Energy used:</span>
     <span id="spoonCount" class="spoon-count" aria-live="polite">0</span>
@@ -45,94 +37,42 @@ permalink: /campaigns/
 
 # 📣 Campaigns & Events
 
-📖 **6 minute read** | 🔋🔋🔋 **Energy: Medium**
+📖 **3 minute read** | 🔋🔋 **Energy: Light**
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
   <ul>
-    <li><strong>Active Campaigns:</strong> Current advocacy efforts you can join</li>
-    <li><strong>Upcoming Events:</strong> Rallies, gatherings, virtual town halls</li>
-    <li><strong>Past Successes:</strong> What we've achieved together</li>
-    <li><strong>How to Participate:</strong> Online, in-person, or behind-the-scenes</li>
-    <li><strong>Auto-Sync:</strong> App events automatically appear here when app is live</li>
+    <li><strong>Coming Soon:</strong> When our app launches, community members can create campaigns and events</li>
+    <li><strong>Auto-Sync:</strong> Campaigns created in-app will automatically appear here</li>
+    <li><strong>Grassroots Power:</strong> Anyone can start a campaign for disability rights or workers' issues</li>
+    <li><strong>All Accessible:</strong> Every event includes accessibility features and virtual options</li>
   </ul>
 </details>
 
-<div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
-  💙 <strong>Accessibility Note:</strong> All events offer virtual participation options. Physical events include accessibility information (wheelchair access, ASL interpretation, quiet rooms, etc.)
+<div style="background: #dcfce7; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
+  🚀 <strong>App-Powered Organizing:</strong> This page will automatically sync with campaigns and events created in our app. Community-led, instantly published, fully accessible.
 </div>
 
 ---
 
-## 🔴 Active Campaigns
+## 📣 Active Campaigns
 
-<span class="energy-cost" data-energy="3" aria-label="Energy cost: medium">🔋🔋🔋 Energy: Medium</span>
+<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-### Campaign 1: Fair WSIB/WCB Appeals Process
-
-**Status:** 🟢 Active - Ongoing  
-**Started:** September 2025  
-**Goal:** Reform the workers' compensation appeals process across all provinces
-
-**What we're fighting for:**
-- ⚖️ Fair, transparent appeals process
-- 📞 Direct access to decision-makers
-- ⏱️ Reasonable timelines (60 days max for initial decision)
-- 📝 Plain-language decisions (no legal jargon)
-- 🤝 Right to representation at all stages
-
-**How to participate:**
-- 📧 **Email your MPP/MLA** - [Use our template](mailto:?subject=Fair%20WSIB%20Appeals&body=Template%20coming%20soon)
-- 📝 **Sign the petition** - [Sign here](#) (2,847 signatures so far)
-- 📱 **Share on social media** - Use hashtag #FairAppealsNow
-- 💬 **Join the discussion** - [Campaign forum](/community/campaigns/fair-appeals)
-
-**Latest update:** October 25, 2025 - Meeting scheduled with Ontario Ministry of Labour for Nov 15
-
----
-
-### Campaign 2: Accessible Healthcare for All
-
-**Status:** 🟢 Active - Phase 2  
-**Started:** August 2025  
-**Goal:** Remove barriers to healthcare for disabled and injured workers
-
-**What we're fighting for:**
-- 🏥 Mandatory accessibility in all healthcare facilities
-- 🗣️ ASL interpretation provided at all appointments
-- 🧠 Cognitive accessibility (simple forms, plain language)
-- ⏰ Flexible appointment times for energy management
-- 🚗 Transportation assistance for medical appointments
-
-**How to participate:**
-- 📋 **Submit your story** - Share healthcare barriers you've faced
-- 🏛️ **Advocate locally** - Contact your health authority
-- 📸 **Document barriers** - Photo submissions for our advocacy package
-- 💰 **Support the campaign** - [Community fund](#)
-
-**Latest update:** October 20, 2025 - Collected 156 stories, preparing advocacy package
-
----
-
-### Campaign 3: Living Wage for Disabled Workers
-
-**Status:** 🟡 Planning - Launch Nov 2025  
-**Goal:** End sub-minimum wage for workers with disabilities
-
-**What we're fighting for:**
-- 💵 Equal pay for equal work - NO exceptions
-- 🚫 Ban on sheltered workshop sub-minimum wages
-- 📈 Career advancement opportunities
-- 🎓 Employer training on disability inclusion
-- 🏆 Incentives for employers who hire disabled workers
-
-**How to participate:**
-- 📅 **Mark your calendar** - Official launch November 10, 2025
-- 📢 **Spread the word** - Tell your network
-- 🤝 **Partner with us** - Organizations welcome
-- 💡 **Share ideas** - Join the planning committee
-
-**Latest update:** October 25, 2025 - Campaign materials in development
+<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center;">
+  <h3 style="margin-top: 0;">🚀 Campaigns Coming Soon!</h3>
+  <p style="font-size: 1.1rem; margin-bottom: 1rem;"><strong>When our app launches, this space will come alive with community-created campaigns!</strong></p>
+  <p>Community members will be able to:</p>
+  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+    <li>🎯 Create campaigns directly in the app</li>
+    <li>📱 Set campaigns as public to appear here automatically</li>
+    <li>📊 Track petition signatures and participation</li>
+    <li>📣 Organize rallies and events</li>
+    <li>🤝 Connect with other advocates</li>
+    <li>💪 Amplify grassroots movements</li>
+  </ul>
+  <p style="margin-top: 1.5rem;"><em>Stay tuned - powerful organizing tools are on the way!</em></p>
+</div>
 
 ---
 
@@ -140,197 +80,202 @@ permalink: /campaigns/
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-<!-- Auto-sync section - will populate from app when live -->
-<div id="app-events-sync" class="events-list">
-  <p><em>🔄 This section will automatically sync with in-app events when the app is live. For now, events are manually added.</em></p>
-</div>
-
-### November 2025
-
-**Nov 5 - Virtual Town Hall: WSIB Appeals Reform**
-- 🕐 **Time:** 7:00pm - 8:30pm EST
-- 🌐 **Location:** Virtual (Zoom link sent to registrants)
-- ♿ **Accessibility:** ASL interpretation, live captions, recorded for later viewing
-- 📝 **Register:** [Click here](#) (Free)
-- 🔋 **Energy Cost:** Light (can watch recording if too much)
-
-**Who should attend:** Anyone navigating WSIB/WCB appeals, supporters, advocates
-
----
-
-**Nov 12 - Rally: Accessible Healthcare Now (Toronto)**
-- 🕐 **Time:** 1:00pm - 3:00pm EST
-- 📍 **Location:** Queen's Park, Toronto, ON
-- ♿ **Accessibility:** 
-  - Wheelchair accessible
-  - ASL interpreters on-site
-  - Quiet room available
-  - Seating provided
-  - Accessible washrooms nearby
-  - Virtual participation option
-- 🚗 **Transportation:** Accessible transit info provided
-- 📝 **RSVP:** [Click here](#) (Optional but appreciated)
-
-**What to bring:** Signs welcome (we'll have extras), water, sun protection
-
----
-
-**Nov 18 - Webinar: Know Your Rights - Workers' Compensation 101**
-- 🕐 **Time:** 6:00pm - 7:00pm EST
-- 🌐 **Location:** Virtual (YouTube Live + Zoom)
-- ♿ **Accessibility:** ASL, captions, Q&A via chat (no need to speak)
-- 📚 **Materials:** Downloadable guide provided
-- 🎓 **Certificate:** Participation certificate available
-- 🔋 **Energy Cost:** Medium (but recorded for later)
-
-**Topics covered:** Filing claims, understanding decisions, appeal process, legal rights
-
----
-
-**Nov 25 - Community Gathering: Virtual Coffee Chat**
-- 🕐 **Time:** 3:00pm - 4:00pm EST
-- 🌐 **Location:** Virtual (informal Zoom)
-- 💬 **Format:** Casual conversation, no agenda
-- ♿ **Accessibility:** Camera optional, mic optional (chat only fine)
-- ☕ **Vibe:** Low-key, supportive, community building
-- 🔋 **Energy Cost:** Very Light (drop in/out as needed)
-
-**No RSVP needed - just show up!**
-
----
-
-### December 2025
-
-**Dec 3 - International Day of Persons with Disabilities - National Campaign**
-- 📍 **Multiple cities across Canada**
-- 🌐 **Virtual participation available**
-- 📅 **Details coming soon**
-
----
-
-## 📊 Campaign Auto-Sync (Coming Soon)
-
-<div style="background: #fef3c7; border: 2px solid #f59e0b; border-radius: 8px; padding: 1.25rem; margin: 2rem 0;">
-  <h3 style="margin-top: 0;">🔄 When the App is Live:</h3>
-  <p><strong>This page will automatically sync with in-app campaign events!</strong></p>
-  
-  <p><strong>How it will work:</strong></p>
-  <ul>
-    <li>✅ Create an event in the app</li>
-    <li>✅ Set it as "public campaign event"</li>
-    <li>✅ It instantly appears on this page</li>
-    <li>✅ Updates in real-time (RSVP counts, location changes, etc.)</li>
-    <li>✅ Past events automatically archive</li>
+<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center;">
+  <h3 style="margin-top: 0;">📆 Events Auto-Sync</h3>
+  <p style="font-size: 1.1rem;"><strong>This section will automatically populate with community events!</strong></p>
+  <p>Once the app is live, any event created in-app and marked as "public" will instantly appear here, complete with:</p>
+  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+    <li>📍 Location and virtual attendance options</li>
+    <li>♿ Full accessibility details (wheelchair access, ASL, quiet rooms, etc.)</li>
+    <li>🔋 Energy cost indicators</li>
+    <li>📱 Easy registration and RSVP</li>
+    <li>📅 Automatic calendar sync</li>
+    <li>🔔 Event reminders and updates</li>
   </ul>
-  
-  <p><strong>Benefits:</strong></p>
-  <ul>
-    <li>📱 Manage events from one place (the app)</li>
-    <li>🌐 Automatically reach website visitors too</li>
-    <li>🔄 No duplicate data entry</li>
-    <li>⚡ Real-time updates for everyone</li>
-  </ul>
+  <p style="margin-top: 1.5rem;"><em>Community-organized, automatically synced, fully accessible.</em></p>
 </div>
 
 ---
 
-## 🏆 Past Campaign Successes
+## 🔄 How Auto-Sync Works
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-### ✅ What We've Achieved Together:
+**When the app launches, organizing becomes effortless:**
 
-**September 2025 - Petition Success: 5,000 Signatures**
-- 📝 Petition for accessible healthcare delivered to provincial health ministers
-- 🎯 Exceeded goal by 250%
-- 📰 Media coverage in 3 major outlets
+**For Campaign Creators:**
+1. 📱 Open the 3mpwrApp
+2. ➕ Create a campaign or event
+3. 🌐 Toggle "Make Public"
+4. ✅ It instantly appears on this website
 
-**August 2025 - Policy Win: Ontario WSIB**
-- 📧 Email campaign resulted in meeting with WSIB leadership
-- 🤝 Agreement to review appeals timeline
-- 📊 Pilot program starting Q1 2026
+**For Community Members:**
+- 👀 See all active campaigns without downloading the app
+- 📱 Click to join, sign, or participate
+- 📊 Watch real-time participation grow
+- 🔔 Get notified of new campaigns that match your interests
 
-**July 2025 - Community Growth: 1,000 Members**
-- 🎉 Reached 1,000 active community members
-- 🇨🇦 Represented in all 10 provinces + 3 territories
-- 💪 Collective advocacy power increasing
+**Benefits:**
+- ✅ No duplicate data entry
+- ✅ Real-time updates
+- ✅ Website visitors can discover campaigns without app
+- ✅ Seamless cross-platform experience
+- ✅ All accessibility features built-in
 
 ---
 
-## 🤝 How to Get Involved
+## 🎯 Campaign Ideas You Can Start
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-### Different Ways to Participate (Choose What Works for You!)
+**Need inspiration? Here are campaigns our community might create:**
 
-**🌐 Online Activism (Low Energy)**
-- Sign petitions (2 minutes)
-- Share posts on social media (5 minutes)
-- Email your representatives using our templates (10 minutes)
-- Join virtual events (attend from home)
+**🏛️ Workers' Rights:**
+- Fair WSIB/WCB appeals processes
+- Living wage for disabled workers
+- Workplace accommodation funding
+- Return-to-work policy reform
 
-**📝 Behind the Scenes (Medium Energy)**
-- Write your story for advocacy packages
-- Provide feedback on campaign materials
-- Join planning committees (virtual meetings)
-- Research and fact-checking
+**♿ Accessibility:**
+- Accessible public transit
+- Barrier-free healthcare facilities
+- ASL interpretation as standard
+- Accessible housing initiatives
 
-**📢 Front-Line Activism (Higher Energy)**
+**🏥 Healthcare:**
+- Pain management access
+- Mental health support for injured workers
+- Chronic illness recognition in compensation
+- Accessible telehealth as permanent option
+
+**💼 Employment:**
+- End sub-minimum wage for disabled workers
+- Flexible work policies
+- Disability hiring initiatives
+- Entrepreneurship support
+
+**📣 Awareness:**
+- Invisible disability recognition
+- Chronic pain education
+- Spoon theory public awareness
+- Anti-ableism campaigns
+
+*These are just ideas - you can create a campaign about any issue affecting disabled people, injured workers, or the broader community!*
+
+---
+
+## 💡 How to Get Involved
+
+<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
+
+### Ways to Participate (All Energy Levels Welcome!)
+
+**🌐 Online Activism (Low Energy - 🔋):**
+- Sign petitions
+- Share campaigns on social media
+- Email templates to representatives
+- Join virtual town halls from bed
+- Post supportive comments
+
+**🤝 Behind-the-Scenes Support (Medium Energy - 🔋🔋):**
+- Help draft campaign materials
+- Research policy positions
+- Design graphics
+- Moderate forums
+- Coordinate with partner organizations
+
+**📢 Front-Line Organizing (Higher Energy - 🔋🔋🔋🔋):**
 - Attend rallies and protests
 - Speak at events
-- Media interviews
-- Organize local gatherings
+- Meet with elected officials
+- Give media interviews
+- Lead organizing committees
 
-**💰 Financial Support (Any Energy Level)**
-- [Donate to campaign funds](#)
-- Sponsor event accessibility features (ASL, transportation, etc.)
-- Support community members' travel to events
+**💰 Financial Support (Any Energy Level):**
+- Contribute to campaign funds
+- Sponsor accessibility features at events
+- Support travel costs for attendees
+- Fund legal challenges
 
-**All contributions matter - do what you can, when you can!**
+**Remember:** ALL participation is valuable. Do what you can, when you can. Rest is resistance too.
 
 ---
 
-## 📣 Start Your Own Campaign
+## 🏆 Community Impact
 
-<div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 8px; padding: 1.25rem; margin: 2rem 0;">
-  <h3 style="margin-top: 0;">💡 Have an Issue You Want to Address?</h3>
-  
-  <p><strong>We support grassroots campaigns started by community members!</strong></p>
-  
-  <p><strong>We can help with:</strong></p>
-  <ul>
-    <li>📋 Campaign strategy and planning</li>
-    <li>📝 Template letters and materials</li>
-    <li>📢 Amplifying your message</li>
-    <li>🤝 Connecting you with others who care</li>
-    <li>🎓 Advocacy training and resources</li>
-  </ul>
-  
-  <p><strong>Get started:</strong></p>
-  <p>📧 Email: <a href="mailto:campaigns@3mpwrapp.com">campaigns@3mpwrapp.com</a></p>
-  <p>📝 Or fill out our <a href="/start-campaign">campaign proposal form</a></p>
+<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
+
+**As our community grows, this section will showcase:**
+
+- ✅ Petition signatures and campaign wins
+- ✅ Policy changes we've influenced
+- ✅ Rallies and events organized
+- ✅ Media coverage and public awareness
+- ✅ Individual success stories
+- ✅ Partnerships formed
+- ✅ Lives changed
+
+*This space will grow with every victory - big and small!*
+
+---
+
+## 📋 Campaign Guidelines
+
+<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
+
+**When creating campaigns in the app, we follow these principles:**
+
+**✅ Community-Centered:**
+- Led by disabled people and injured workers
+- "Nothing About Us Without Us"
+- Diverse perspectives welcomed
+- Grassroots-driven
+
+**✅ Accessible:**
+- All events include accessibility information
+- Virtual participation always available
+- Multiple ways to engage
+- Respect for varying energy levels
+
+**✅ Evidence-Based:**
+- Backed by research and lived experience
+- Clear, achievable goals
+- Measurable outcomes
+- Transparent about progress
+
+**✅ Inclusive:**
+- Welcoming to all disability types
+- Intersectional approach
+- Language accessibility
+- No gatekeeping
+
+**✅ Sustainable:**
+- Pacing for organizers with disabilities
+- Shared leadership
+- Burnout prevention
+- Long-term thinking
+
+---
+
+## 📞 Questions About Campaigns?
+
+**Have an idea for a campaign?**  
+📧 Email: [campaigns@3mpwrapp.com](mailto:campaigns@3mpwrapp.com)
+
+**Want to organize an event?**  
+📧 Email: [events@3mpwrapp.com](mailto:events@3mpwrapp.com)
+
+**Need organizing support?**  
+💬 Join our organizers' forum: [/community/organizers](/community/organizers)
+
+**Partnership inquiries?**  
+📝 Visit our [Partnerships page](/partnerships/)
+
+---
+
+<div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
+  💙 <strong>Accessibility Commitment:</strong> Every campaign and event will include full accessibility details - wheelchair access, ASL interpretation, quiet rooms, virtual options, energy costs, and more. Accessibility is not optional; it's mandatory.
 </div>
-
----
-
-## 💬 Campaign Forum
-
-Join discussions about active campaigns:
-- [Fair WSIB Appeals Campaign Discussion](/community/campaigns/fair-appeals)
-- [Accessible Healthcare Campaign](/community/campaigns/accessible-healthcare)
-- [Living Wage Campaign Planning](/community/campaigns/living-wage)
-
----
-
-## 📰 Campaign Updates
-
-**Get notified about campaign progress:**
-- 📧 [Subscribe to campaign newsletter](#)
-- 📱 Enable app notifications (when app is live)
-- 🔔 Follow us on social media:
-  - [Facebook](https://www.facebook.com/3mpowrapp)
-  - [X/Twitter](https://x.com/3mpowrApp0816)
-  - [Instagram](https://www.instagram.com/3mpowrapp/)
 
 ---
 
@@ -344,9 +289,9 @@ Join discussions about active campaigns:
   <a href="/feedback?page=campaigns&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
   <a href="/feedback?page=campaigns&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
   <a href="/feedback?page=campaigns&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  <p class="page-meta">Last updated: October 25, 2025 | Next review: November 2025</p>
+  <p class="page-meta">Last updated: October 25, 2025 | Next review: When app launches</p>
 </div>
 
 ---
 
-**💚 Together, we create change. Join us.**
+**💪 Together, we organize. Together, we win.**

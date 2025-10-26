@@ -37,16 +37,15 @@ permalink: /community-spotlight/
 
 # 🌟 Community Spotlight
 
-📖 **5 minute read** | 🔋🔋 **Energy: Light**
+📖 **2 minute read** | 🔋 **Energy: Very Light**
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
   <ul>
-    <li><strong>Featured Members:</strong> Meet active community advocates and activists</li>
-    <li><strong>Social Media Activism:</strong> Who's making noise online</li>
-    <li><strong>Rally Organizers:</strong> People bringing us together in person</li>
-    <li><strong>Behind-the-Scenes Heroes:</strong> Quiet contributors making big impacts</li>
-    <li><strong>Get Featured:</strong> Share your activism and be highlighted!</li>
+    <li><strong>Purpose:</strong> Celebrate community members making a difference</li>
+    <li><strong>Who We Feature:</strong> Advocates, activists, organizers, supporters, allies</li>
+    <li><strong>All Activism Counts:</strong> Online, in-person, behind-the-scenes, creative</li>
+    <li><strong>Get Featured:</strong> Submit your story or nominate someone</li>
   </ul>
 </details>
 
@@ -56,267 +55,87 @@ permalink: /community-spotlight/
 
 ---
 
-## 🎉 This Month's Featured Advocates
+## 🎉 Featured Community Members
 
-<span class="energy-cost" data-energy="3" aria-label="Energy cost: medium">🔋🔋🔋 Energy: Medium</span>
+<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
-### 💪 Sarah M. - WSIB Appeals Advocate (Ontario)
-
-**Active Since:** June 2025  
-**Platform:** Facebook, Community Forums  
-**Impact:** Helped 23 people navigate WSIB appeals
-
-**Her Story:**
-Sarah was injured at work in 2022. After navigating the frustrating WSIB system herself, she decided to help others. She runs a Facebook group with 347 members where she shares templates, deadlines, and moral support.
-
-**Recent Activism:**
-- 📝 Posted weekly "WSIB Tips Tuesday" threads
-- 🤝 Paired 15 new members with experienced navigators
-- 📣 Spoke at September's Virtual Town Hall
-- 📧 Wrote 50+ appeal letters using our Letter Wizard
-
-**In Her Words:**
-> "I was lost in the system. 3mpwrApp gave me tools, and this community gave me purpose. Now I help others find their way."
-
-**Follow Sarah:**
-- Facebook: [@WSIBHelpON](#) (public group)
-- Community Forum: [@SarahAdvocate](/community/members/sarah)
-
----
-
-### 🔥 Marcus L. - Chronic Pain Activist (British Columbia)
-
-**Active Since:** August 2025  
-**Platform:** Instagram, X/Twitter, TikTok  
-**Impact:** 2.3K followers, viral post reached 45K people
-
-**His Story:**
-Marcus lives with chronic back pain from a workplace injury. He uses social media to raise awareness about invisible disabilities and chronic pain discrimination.
-
-**Recent Activism:**
-- 📸 Instagram series: "What My Pain Looks Like" (28 posts)
-- 🎥 TikTok: "Things People Say to Chronic Pain Warriors" (145K views)
-- 🐦 Twitter thread on WorkSafeBC delays (1.2K retweets)
-- 🎤 Interviewed on local podcast about pain management
-
-**In His Words:**
-> "Social media lets me advocate from bed on my bad days. That's accessibility in action."
-
-**Follow Marcus:**
-- Instagram: [@PainWarriorBC](#)
-- X/Twitter: [@MarcusAdvocates](#)
-- TikTok: [@ChronicPainTruth](#)
+<div style="background: #dcfce7; border-left: 4px solid #22c55e; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center;">
+  <h3 style="margin-top: 0;">🌟 Community Profiles Coming Soon!</h3>
+  <p style="font-size: 1.1rem; margin-bottom: 1rem;"><strong>This space is reserved for YOU and your fellow advocates!</strong></p>
+  <p>We'll be featuring:</p>
+  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+    <li>🎤 Disability rights activists</li>
+    <li>💪 Injured worker advocates</li>
+    <li>📱 Social media champions</li>
+    <li>📣 Rally and event organizers</li>
+    <li>🤝 Peer support leaders</li>
+    <li>💙 Behind-the-scenes contributors</li>
+    <li>🎨 Creative activists (artists, writers, designers)</li>
+    <li>👥 Union organizers and labor activists</li>
+    <li>🌐 Community builders</li>
+  </ul>
+  <p style="margin-top: 1.5rem;"><strong>Profiles will include:</strong></p>
+  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+    <li>📖 Your story and impact</li>
+    <li>🔗 Links to your website/social media</li>
+    <li>🎯 Your advocacy focus areas</li>
+    <li>💬 Quotes and insights</li>
+    <li>📊 Your contributions to the movement</li>
+  </ul>
+  <p style="margin-top: 1.5rem;"><em>Real people, real stories, real impact. <a href="#submit-your-story">Be the first to be featured!</a></em></p>
+</div>
 
 ---
 
-### 🌈 Alex K. - Accessibility Activist (Alberta)
+## 📱 What We Celebrate
 
-**Active Since:** July 2025  
-**Platform:** Rally Organizer, In-Person Advocacy  
-**Impact:** Organized 3 rallies, 200+ attendees total
+<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
-**Their Story:**
-Alex is a wheelchair user and disability rights activist. They organize accessible rallies and protests, ensuring everyone can participate regardless of mobility, sensory needs, or energy levels.
+### ALL Forms of Activism Are Valid
 
-**Recent Activism:**
-- 📍 Organized "Accessible Healthcare Now" rally (Calgary, 85 attendees)
-- ♿ Created accessibility checklist for event organizers
-- 🎤 Secured ASL interpreters for all events
-- 🚗 Coordinated accessible transportation for attendees
+**🌐 Online Activism:**
+- Social media advocacy (Twitter/X, Instagram, TikTok, Facebook)
+- Blog writing and content creation
+- Forum participation and peer support
+- Email campaigns to representatives
+- Online petition organizing
 
-**In Their Words:**
-> "If disabled people can't attend the disability rights rally, we've failed. Accessibility isn't optional—it's mandatory."
+**📣 Public Advocacy:**
+- Rally and protest organizing
+- Public speaking at events
+- Media interviews and op-eds
+- Testifying at government hearings
+- Community presentations
 
-**Follow Alex:**
-- Twitter: [@AccessibleYYC](#)
-- Forum: [@AlexOrganizer](/community/members/alex)
+**🤝 Peer Support:**
+- Mentoring newly injured workers
+- Moderating support groups
+- Answering questions in forums
+- One-on-one advocacy support
+- Crisis support and check-ins
 
----
+**💼 Workplace/Union Organizing:**
+- Union steward activism
+- Workplace accommodation advocacy
+- Collective bargaining for disability rights
+- Training other workers on rights
+- Grievance support
 
-### 💼 Jennifer T. - Union Advocate (Manitoba)
+**🎨 Creative Activism:**
+- Art, photography, design for campaigns
+- Video and podcast creation
+- Infographic and educational content
+- Music and performance
+- Storytelling and narrative work
 
-**Active Since:** September 2025  
-**Platform:** Union Meetings, Workplace Advocacy  
-**Impact:** Negotiated disability accommodations for 12 members
+**💙 Behind-the-Scenes Work:**
+- Research and documentation
+- Policy analysis
+- Technical support
+- Translation and language access
+- Administrative and coordination work
 
-**Her Story:**
-Jennifer is a union steward who specializes in disability and injury accommodations. She uses 3mpwrApp to educate union members about their rights and coordinate collective advocacy.
-
-**Recent Activism:**
-- 📋 Created "Know Your Rights" workshop (presented to 3 locals)
-- 🤝 Negotiated return-to-work plans with employers
-- 📝 Submitted 8 grievances (6 won, 2 pending)
-- 🎓 Training other stewards on disability advocacy
-
-**In Her Words:**
-> "Unions are strongest when we protect our most vulnerable members. Disabled and injured workers deserve fierce representation."
-
-**Connect with Jennifer:**
-- Email: [jennifer.advocate@unionlocal123.ca](#)
-- Forum: [@UnionJen](/community/members/jennifer)
-
----
-
-## 📱 Social Media Activists
-
-<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
-
-### Making Noise Online
-
-**Twitter/X Warriors:**
-- 🐦 **@DisabilityRightsTO** - Daily disability rights content (4.5K followers)
-- 🐦 **@InjuredNotBroken** - Injured worker advocacy (2.1K followers)
-- 🐦 **@AccessibleCA** - Calling out inaccessible spaces (1.8K followers)
-
-**Instagram Advocates:**
-- 📸 **@ChronicIllnessLife** - Chronic illness education (3.2K followers)
-- 📸 **@WorkplaceInjuryStories** - Sharing survivor stories (1.5K followers)
-- 📸 **@DisabledAndProud** - Disability pride content (2.8K followers)
-
-**TikTok Educators:**
-- 🎥 **@SpoonieExplains** - Spoon theory education (12K followers)
-- 🎥 **@WorkersCompTips** - Quick WCB/WSIB tips (8K followers)
-- 🎥 **@InvisibleDisabilities** - Raising awareness (15K followers)
-
-**Facebook Group Leaders:**
-- 👥 **BC WorkSafe Support Group** - 892 members
-- 👥 **Alberta WCB Help & Advice** - 654 members
-- 👥 **Ontario WSIB Warriors** - 1,247 members
-
-*Want your profile added? [Submit here](#submit-your-story)*
-
----
-
-## 🎤 Rally & Event Organizers
-
-<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
-
-### People Bringing Us Together IRL
-
-**Toronto - Accessibility Advocates Collective**
-- 👤 **Organizer:** Priya S.
-- 📅 **Events:** Monthly accessibility audits, quarterly rallies
-- 📍 **Recent:** Queen's Park rally (Oct 15, 120 attendees)
-- 📧 **Contact:** [torontoaccessibility@email.com](#)
-
-**Vancouver - Injured Workers Action Network**
-- 👤 **Organizer:** David L.
-- 📅 **Events:** Bi-monthly support meetups, annual march
-- 📍 **Recent:** WorkSafeBC protest (Sept 22, 85 attendees)
-- 📧 **Contact:** [vaninjuredworkers@email.com](#)
-
-**Montreal - Droits des Travailleurs Blessés**
-- 👤 **Organizer:** Marie D.
-- 📅 **Events:** Weekly café meetups, advocacy workshops
-- 📍 **Recent:** CNESST info session (Oct 10, 45 attendees)
-- 📧 **Contact:** [montrealtravailleurs@email.com](#)
-
-**Halifax - Maritime Disability Coalition**
-- 👤 **Organizer:** James R.
-- 📅 **Events:** Quarterly community gatherings
-- 📍 **Recent:** Accessible transit rally (Sept 30, 60 attendees)
-- 📧 **Contact:** [halifaxdisability@email.com](#)
-
-*Organizing events in your city? [Let us know →](#submit-your-story)*
-
----
-
-## 💙 Behind-the-Scenes Heroes
-
-<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
-
-### Quiet Contributors Making Big Impacts
-
-**Research & Documentation:**
-- 📊 **Lisa W.** - Compiled provincial WCB comparison guide (300+ hours)
-- 📝 **Tom H.** - Documented 50+ successful appeal strategies
-- 📚 **Raj P.** - Created accessibility audit template (used by 23 orgs)
-
-**Peer Support:**
-- 💬 **Donna M.** - Answered 500+ forum questions in 3 months
-- 🤗 **Kevin S.** - Weekly "check-in" threads for community wellbeing
-- 💙 **Angela F.** - Runs private support group for trauma survivors (42 members)
-
-**Technical Contributors:**
-- 💻 **Sam T.** - Beta testing lead (found 67 bugs, suggested 23 features)
-- 🎨 **Jordan L.** - Created accessibility graphics library (free for community use)
-- 🔧 **Pat R.** - Troubleshooting guru (helps with technical issues daily)
-
-**Translation & Language Access:**
-- 🌐 **Chen W.** - Translating resources to Mandarin
-- 🌐 **Maria G.** - Spanish language support
-- 🌐 **Deepak S.** - Punjabi community outreach
-
-*We see you, we appreciate you! [Tell us about your contributions →](#submit-your-story)*
-
----
-
-## 🏆 Community Achievements
-
-<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
-
-### What We've Accomplished Together
-
-**October 2025:**
-- 🎉 Reached 1,500 active community members
-- 📝 Collected 3,200 petition signatures
-- 📣 8 rallies/events across 6 provinces
-- 💪 23 successful appeals with community support
-- 🎤 4 media appearances by community members
-
-**September 2025:**
-- 📊 Published first community impact report
-- 🤝 Formed partnerships with 5 local disability orgs
-- 🎓 Trained 12 new peer support facilitators
-- 📧 Sent 500+ advocacy emails to representatives
-
-**August 2025:**
-- 🚀 Launched Community Spotlight page
-- 📸 Started social media activism tracking
-- 🌟 Featured first 10 community advocates
-- 💬 Opened province-specific forums
-
----
-
-## 🎯 Get Involved
-
-<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
-
-### Ways to Participate (All Activism is Valid!)
-
-**🌐 Online Activism (Low Energy):**
-- Post about disability rights on social media
-- Share our campaigns with your network
-- Participate in Twitter/X advocacy threads
-- Join Facebook groups and support others
-- Write blog posts about your experiences
-
-**🤝 Peer Support (Medium Energy):**
-- Answer questions in community forums
-- Start a local Facebook support group
-- Offer to pair with newly injured workers
-- Share your successful strategies
-- Provide emotional support
-
-**📢 Public Advocacy (Higher Energy):**
-- Attend rallies and protests
-- Speak at events
-- Give media interviews
-- Organize local events
-- Present at union meetings
-
-**🎨 Creative Contributions (Flexible Energy):**
-- Design graphics for campaigns
-- Write educational content
-- Create TikTok/Instagram content
-- Translate resources
-- Document your journey
-
-**💰 Financial Support (Any Energy):**
-- [Support community members' activism](#)
-- Sponsor event accessibility features
-- Fund transportation for rally attendees
-- Contribute to legal fund for appeals
+*No contribution is too small. Every voice matters.*
 
 ---
 
@@ -325,72 +144,155 @@ Jennifer is a union steward who specializes in disability and injury accommodati
 <div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 8px; padding: 1.25rem; margin: 2rem 0;">
   <h3 style="margin-top: 0;">🌟 Want to Be Featured?</h3>
   
-  <p><strong>We celebrate ALL forms of activism!</strong></p>
+  <p><strong>We want to hear about YOUR activism!</strong></p>
   
-  <p><strong>Tell us about your:</strong></p>
+  <p><strong>Tell us about:</strong></p>
   <ul>
-    <li>📱 Social media advocacy</li>
-    <li>📣 Rally/event organizing</li>
-    <li>🤝 Peer support work</li>
-    <li>📝 Content creation</li>
+    <li>📱 Your social media advocacy work</li>
+    <li>📣 Rallies or events you've organized</li>
+    <li>🤝 Peer support you've provided</li>
+    <li>📝 Content you've created</li>
     <li>💙 Behind-the-scenes contributions</li>
-    <li>🎤 Public speaking</li>
-    <li>💼 Workplace advocacy</li>
+    <li>🎤 Public speaking or media work</li>
+    <li>💼 Workplace or union organizing</li>
     <li>🎓 Educational efforts</li>
+  </ul>
+  
+  <p><strong>What to include:</strong></p>
+  <ul>
+    <li>📖 Your name and pronouns (if comfortable sharing)</li>
+    <li>📍 Your location (city/province is fine)</li>
+    <li>🎯 Your advocacy focus areas</li>
+    <li>💪 What you've accomplished or contributed</li>
+    <li>🔗 Links to your website, social media, or work</li>
+    <li>📸 Optional: Photo or image</li>
+    <li>💬 A quote about why you do this work</li>
   </ul>
   
   <p><strong>Submit your story:</strong></p>
   <p>📧 Email: <a href="mailto:community@3mpwrapp.com">community@3mpwrapp.com</a></p>
-  <p>📝 Or use our <a href="/community-spotlight/submit">submission form</a></p>
+  <p>📝 Subject line: "Community Spotlight Submission"</p>
   
-  <p><em>We feature new advocates monthly. Don't be shy—your story matters!</em></p>
+  <p><em>We feature new advocates monthly. Your story inspires others!</em></p>
 </div>
 
 ---
 
 ## 📢 Nominate Someone
 
+<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
+
 **Know someone doing amazing work?**
 
 Nominate them for Community Spotlight:
-- 📧 Email their name and why they should be featured
-- 📝 Include their social media handles or contact info
-- 💙 Tell us what impact they've made
 
-We'll reach out to them and get their permission before featuring.
+**What to include:**
+- 👤 Their name and how to contact them
+- 🎯 What they do and why it matters
+- 💡 Why you're nominating them
+- 🔗 Links to their work or social media
 
-**Nominate:** [community@3mpwrapp.com](mailto:community@3mpwrapp.com?subject=Community%20Spotlight%20Nomination)
+**How to nominate:**
+📧 Email: [community@3mpwrapp.com](mailto:community@3mpwrapp.com?subject=Community%20Spotlight%20Nomination)  
+📝 Subject line: "Community Spotlight Nomination"
+
+*We'll reach out to them for permission before featuring.*
 
 ---
 
-## 🔔 Follow Community Members
+## 🏆 Types of Recognition
 
-**Stay connected with featured advocates:**
+<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
-- 📱 Follow their social media accounts (linked in each profile)
-- 💬 Join their Facebook groups or forums
-- 📧 Subscribe to their newsletters
-- 🎉 Attend their events
-- 🤝 Offer to help with their initiatives
+### How We Celebrate Community Members
 
-**Support each other—that's what community is all about!**
+**🌟 Monthly Spotlights:**
+- In-depth profile on this page
+- Shared on all social media platforms
+- Featured in newsletter
+- Links to your work/website
+
+**📱 Social Media Shoutouts:**
+- Regular recognition posts
+- Sharing your content
+- Amplifying your campaigns
+- Community appreciation threads
+
+**📰 Newsletter Features:**
+- Longer-form profiles
+- Interview-style pieces
+- "Day in the life" features
+- Impact stories
+
+**🎤 Speaking Opportunities:**
+- Invitations to speak at virtual events
+- Podcast guest appearances
+- Panel discussions
+- Webinar presentations
 
 ---
 
 ## 📊 Community Stats
 
-**By the Numbers:**
+<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
-- 👥 **1,500+** Active community members
-- 🌍 **13** Provinces/territories represented
-- 📱 **50+** Social media activists tracked
-- 🎤 **12** Rally organizers
-- 💬 **25** Peer support facilitators
-- 🌐 **5** Language accessibility volunteers
-- 📝 **200+** Community forum posts per week
-- 🎉 **8** Events this month
+**As our community grows, we'll track:**
 
-*Updated: October 25, 2025*
+- 👥 Active community members
+- 🌍 Geographic reach across Canada
+- 📱 Social media advocates
+- 🎤 Event organizers
+- 💬 Peer supporters
+- 🌐 Content creators
+- 📝 Forum contributors
+
+*Updated regularly as community expands*
+
+---
+
+## 💙 Why We Do This
+
+<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
+
+**Recognition matters because:**
+
+- ✅ **Visibility:** Your work deserves to be seen
+- ✅ **Inspiration:** Others are motivated by your example
+- ✅ **Connection:** Build networks with other activists
+- ✅ **Amplification:** We boost your reach and impact
+- ✅ **Validation:** Your contribution matters and is valued
+- ✅ **Movement Building:** We're stronger when we celebrate each other
+
+**This isn't about ego - it's about showing what's possible when disabled people and injured workers organize together.**
+
+---
+
+## 🔔 Follow Featured Members
+
+<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
+
+**When we feature community members, we'll include:**
+
+- 📱 Their social media handles
+- 🌐 Their website or blog
+- 💬 How to connect with them
+- 🎯 Campaigns they're working on
+- 🤝 Ways to support their work
+
+**Stay connected, support each other, build the movement!**
+
+---
+
+## 📞 Questions?
+
+**About Community Spotlight:**  
+📧 Email: [community@3mpwrapp.com](mailto:community@3mpwrapp.com)
+
+**Want to get more involved:**  
+💬 Visit our [Campaigns page](/campaigns/)
+
+**Partnership inquiries:**  
+📝 Visit our [Partnerships page](/partnerships/)
 
 ---
 
@@ -404,7 +306,7 @@ We'll reach out to them and get their permission before featuring.
   <a href="/feedback?page=community-spotlight&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
   <a href="/feedback?page=community-spotlight&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
   <a href="/feedback?page=community-spotlight&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  <p class="page-meta">Last updated: October 25, 2025 | Next review: November 2025</p>
+  <p class="page-meta">Last updated: October 25, 2025 | Next review: Monthly</p>
 </div>
 
 ---
