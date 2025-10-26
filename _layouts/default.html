@@ -130,7 +130,22 @@
         </li>
         <li>
           <a href="{{ lang_prefix | append: '/accessibility-settings' | relative_url }}" {% if page.url contains '/accessibility-settings' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Paramètres d’accessibilité{% else %}Accessibility Settings{% endif %}
+            {% if page.lang == 'fr' %}Paramètres d'accessibilité{% else %}Accessibility Settings{% endif %}
+          </a>
+        </li>
+        <li>
+          <a href="{{ lang_prefix | append: '/campaigns' | relative_url }}" {% if page.url contains '/campaigns' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Campagnes{% else %}Campaigns{% endif %}
+          </a>
+        </li>
+        <li>
+          <a href="{{ lang_prefix | append: '/community-spotlight' | relative_url }}" {% if page.url contains '/community-spotlight' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Communauté{% else %}Community{% endif %}
+          </a>
+        </li>
+        <li>
+          <a href="{{ lang_prefix | append: '/partnerships' | relative_url }}" {% if page.url contains '/partnerships' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Partenariats{% else %}Partnerships{% endif %}
           </a>
         </li>
       </ul>
