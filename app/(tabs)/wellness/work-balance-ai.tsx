@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-nati
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import GapView from "../../../components/GapView";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -82,7 +83,7 @@ export default function WorkBalanceAI() {
         work, and when to advocate.
       </Text>
       <Text style={s.label}>Mood</Text>
-      <View style={{ flexDirection: "row", gap: 8, marginBottom: 8 }}>
+      <GapView style={{ flexDirection: "row", marginBottom: 8 }} gap={8}>
         {(["low", "ok", "high"] as Mood[]).map((m) => (
           <A11yPressable
             key={m}
@@ -94,7 +95,7 @@ export default function WorkBalanceAI() {
             </Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
       <Text style={s.label}>Notes (optional)</Text>
       <TextInput
         style={s.input}

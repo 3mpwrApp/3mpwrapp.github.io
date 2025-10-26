@@ -1,8 +1,9 @@
 import { Link } from 'expo-router';
 import React from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text } from 'react-native';
 
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../../components/SearchBar';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
@@ -144,7 +145,7 @@ export default function WellnessHub() {
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
         {t('wellness.sections.movement', 'Movement')}
       </Text>
-      <View style={{ gap: 12 }}>
+      <GapView gap={12}>
         {matches('/wellness/micro-movement') && (
           <Card
             href="/wellness/micro-movement"
@@ -187,13 +188,13 @@ export default function WellnessHub() {
             desc={t('wellness.workBalance.desc', 'Balance work demands with health.')}
           />
         )}
-      </View>
+      </GapView>
 
       {/* Sleep */}
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
         {t('wellness.sections.sleep', 'Sleep')}
       </Text>
-      <View style={{ gap: 12 }}>
+      <GapView gap={12}>
         {matches('/wellness/sleep-reframe') && (
           <Card
             href="/wellness/sleep-reframe"
@@ -208,13 +209,13 @@ export default function WellnessHub() {
             desc={t('wellness.sleepEnergy.desc', 'Track rest, energy, and patterns.')}
           />
         )}
-      </View>
+      </GapView>
 
       {/* Cognitive */}
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
         {t('wellness.sections.cognitive', 'Cognitive')}
       </Text>
-      <View style={{ gap: 12 }}>
+      <GapView gap={12}>
         {matches('/wellness/cbt-coach') && (
           <Card
             href="/wellness/cbt-coach"
@@ -313,13 +314,13 @@ export default function WellnessHub() {
             desc={t('wellness.classicHub.desc', 'Alternate, compact entry point.')}
           />
         )}
-      </View>
+      </GapView>
 
       {/* Tracking */}
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
         {t('wellness.sections.tracking', 'Tracking')}
       </Text>
-      <View style={{ gap: 12 }}>
+      <GapView gap={12}>
         {matches('/wellness/symptom-tracker') && (
           <Card
             href="/wellness/symptom-tracker"
@@ -369,7 +370,7 @@ export default function WellnessHub() {
             desc={t('wellness.selfCare.desc', 'Curated self-care practices.')}
           />
         )}
-      </View>
+      </GapView>
     </ResponsiveScreenWrapper>
   );
 }

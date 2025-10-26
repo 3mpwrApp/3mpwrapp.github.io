@@ -4,6 +4,7 @@ import React from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 import EmergencyWalletCard from "../components/EmergencyWalletCard";
+import GapView from "../components/GapView";
 import { HIT_SLOP_8 } from "../constants/A11Y";
 import { useAuth } from "../context/AuthContext";
 import type { Lang } from "../i18n";
@@ -147,7 +148,7 @@ export default function Profile() {
         <Text style={{ fontWeight: "700", marginBottom: 8, color: palette.text }}>
           {t("settings.language.title")}
         </Text>
-        <View style={{ flexDirection: "row", gap: 8 }}>
+        <GapView style={{ flexDirection: "row" }} gap={8}>
           {(["en", "fr", "es"] as Lang[]).map((code) => (
             <Pressable
               key={code}
@@ -166,21 +167,21 @@ export default function Profile() {
               </Text>
             </Pressable>
           ))}
-        </View>
+        </GapView>
       </View>
 
       <View style={styles.card}>
         <Text style={{ fontWeight: "700", marginBottom: 8, color: palette.text }}>
           {t("profile.quickLinks.title", "Quick links")}
         </Text>
-        <View style={{ flexDirection: 'row', flexWrap:'wrap', gap:8 }}>
+        <GapView style={{ flexDirection: 'row', flexWrap:'wrap' }} gap={8}>
           <QuickLink label={t('profile.quickLinks.evidence','Evidence Locker')} onPress={() => router.push('/(tabs)/resources/evidence-locker' as Href)} palette={palette} />
           <QuickLink label={t('profile.quickLinks.deadlines','Deadlines')} onPress={() => router.push('/(tabs)/resources/deadlines' as Href)} palette={palette} />
           <QuickLink label={t('profile.quickLinks.rightsChecker','Rights Checker')} onPress={() => router.push('/(tabs)/resources/rights-checker' as Href)} palette={palette} />
           <QuickLink label={t('profile.quickLinks.rightsExplainer','Rights Explainer')} onPress={() => router.push('/(tabs)/resources/rights-explainer' as Href)} palette={palette} />
           <QuickLink label={t('profile.quickLinks.translator','Advocate Translator')} onPress={() => router.push('/(tabs)/advocacy/ai-advocate-translator' as Href)} palette={palette} />
           <QuickLink label={t('profile.quickLinks.settings','Settings')} onPress={() => router.push('/(tabs)/settings' as Href)} palette={palette} />
-        </View>
+        </GapView>
       </View>
 
       {user ? (
