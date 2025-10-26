@@ -60,7 +60,8 @@ const RecentPrompts = React.memo(() => {
         {t('assistant.home.recentPrompts','Recently used prompts')}
       </Text>
       <GapView 
-        style={{ flexDirection:'row', flexWrap:'wrap', gap:8 }}
+        style={{ flexDirection:'row', flexWrap:'wrap' }}
+        gap={8}
         accessibilityLabel={t('assistant.home.promptsList', 'List of recent prompts')}
       >
         {items.map((it, _index) => (

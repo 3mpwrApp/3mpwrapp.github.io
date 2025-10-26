@@ -3,6 +3,7 @@ import { FlatList, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../components/A11yPressable";
 import ContrastToggle from "../../components/ContrastToggle";
+import GapView from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
 import { faqs as defaultFaqs } from "../../data/faqs";
@@ -74,7 +75,7 @@ export default function FaqsScreen() {
       </Text>
       <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
       <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
-      <View style={{ flexDirection:'row', gap:8, alignItems:'center', marginBottom:6 }}>
+      <GapView style={{ flexDirection:'row', alignItems:'center', marginBottom:6 }} gap={8}>
         <TextInput
           style={[styles.input, { flex:1, marginBottom:0 }]}
           value={query}
@@ -89,7 +90,7 @@ export default function FaqsScreen() {
             <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.clear','Clear')}</Text>
           </A11yPressable>
         )}
-      </View>
+      </GapView>
       <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 8 }} accessibilityLiveRegion="polite">{t('eventsFeature.loadedCount','{{n}} events loaded', { n: filtered.length }).replace('events','FAQs')}</Text>
       <View style={{ marginBottom: 8 }}>
         <TextInput

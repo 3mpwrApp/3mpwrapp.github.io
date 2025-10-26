@@ -63,7 +63,7 @@ export function HomeGuide() {
       <View style={{ marginBottom:8 }}>
         <Text style={[styles.snapshotLabel,{ color: palette.text }]}>{t('home.guide.snapshot','Snapshot')}</Text>
         {mood ? (
-          <GapView style={{ gap:4 }}>
+          <GapView gap={4}>
             <Text style={{ color: palette.text, fontSize:12 }}>
               {t('home.guide.moodSummary','Mood 7d avg: {{avg}} • Today entries: {{count}}',{ avg: mood.avg==null? '—' : mood.avg.toFixed(2), count: mood.count })}
             </Text>
@@ -77,7 +77,7 @@ export function HomeGuide() {
               </Text>
             )}
             {mood.insights && (
-              <GapView style={{ flexDirection:'row', flexWrap:'wrap', gap:6 }}>
+              <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={6}>
                 {mood.insights.trend !== 'none' && (
                   <Text style={trendStyle(palette, mood.insights.trend)}>
                     {t(`homeGuide.mood.trend${cap(mood.insights.trend)}`, mood.insights.trend)}
@@ -106,7 +106,7 @@ export function HomeGuide() {
         </View>
       ); })()}
       {top3.length ? (
-        <GapView style={{ gap:12 }}>
+        <GapView gap={12}>
           <Text style={[styles.suggestionTitle,{ color: palette.text }]}>{t('home.guide.suggested','Suggested')}</Text>
           {top3.map((sug, idx) => {
             const meta = getToolMeta(sug.toolId);
@@ -115,7 +115,7 @@ export function HomeGuide() {
                 <Text style={{ color: palette.text, fontWeight:'600', flexWrap:'wrap' }}>
                   {idx===0 ? '⭐ ' : ''}{renderIcon(meta?.icon)} {t(meta?.i18nLabelKey || 'homeGuide.tool.default', meta?.id || sug.toolId)}
                 </Text>
-                <GapView style={{ flexDirection:'row', flexWrap:'wrap', gap:4, marginTop:4 }}>
+                <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop:4 }} gap={4}>
                   {(sug.reason ?? []).map((r, rIdx) => {
                     const label = t(`homeGuide.reason.${r.key}`, t('homeGuide.reason.default','Suggested'));
                     return (
@@ -123,7 +123,7 @@ export function HomeGuide() {
                     );
                   })}
                 </GapView>
-                <GapView style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6, gap:8 }}>
+                <GapView style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6 }} gap={8}>
                   <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ minWidth: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
                     <Text style={{ color: palette.text, textAlign:'center' }}>👍</Text>
                   </Pressable>

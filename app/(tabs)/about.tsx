@@ -3,6 +3,7 @@ import { Alert, Linking, Pressable, ScrollView, StyleSheet, Text, TextInput, Vie
 
 import ContrastToggle from "../../components/ContrastToggle";
 import DisclaimerBanner from "../../components/DisclaimerBanner";
+import GapView from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
 import {
@@ -72,7 +73,7 @@ export default function AboutScreen() {
       <Text style={styles.text}>{t("about.intro3")}</Text>
       <View style={{ marginVertical: 8 }}>
         <Text style={[styles.text,{ fontWeight:'700' }]}>Socials & Website</Text>
-        <View style={{ flexDirection:'row', flexWrap:'wrap', gap: 8 }}>
+        <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
           <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://x.com/3mpwrapp')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
             <Text style={{ color: palette.text }}>X (Twitter)</Text>
           </Pressable>
@@ -85,7 +86,7 @@ export default function AboutScreen() {
           <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.github.io/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
             <Text style={{ color: palette.text }}>Website</Text>
           </Pressable>
-        </View>
+        </GapView>
       </View>
       {/* Keep email address out of rendered UI to reduce PII soft-scan hits */}
       <TextInput

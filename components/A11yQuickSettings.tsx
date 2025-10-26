@@ -1,13 +1,14 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-import { useAppPalette } from "../theme/usePalette";
-import type { TextScale, ResourceFormat } from "../store/settings";
-import { useSettings } from "../store/settings";
 import { touchTarget } from "../constants/A11Y";
+import type { ResourceFormat, TextScale } from "../store/settings";
+import { useSettings } from "../store/settings";
+import { useAppPalette } from "../theme/usePalette";
 
 import A11yPressable from "./A11yPressable";
+import GapView from "./GapView";
 
 export default function A11yQuickSettings() {
   const palette = useAppPalette();
@@ -87,10 +88,10 @@ function Row({ icon, label, onPress }: { icon: keyof typeof Ionicons.glyphMap; l
   const palette = useAppPalette();
   return (
     <A11yPressable onPress={onPress} accessibilityLabel={label} style={({ pressed }) => [{ paddingVertical: 8, paddingHorizontal: 10 }, pressed && { opacity: 0.7 }]}>
-      <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+      <GapView style={{ flexDirection: "row", alignItems: "center" }} gap={8}>
         <Ionicons name={icon} size={18} color={palette.text} />
         <Text style={{ color: palette.text }}>{label}</Text>
-      </View>
+      </GapView>
     </A11yPressable>
   );
 }
@@ -101,7 +102,7 @@ function FormatRow({ value, onChange }: { value: ResourceFormat; onChange: (v: R
   return (
     <View style={{ paddingVertical: 8, paddingHorizontal: 10 }}>
       <Text style={{ color: palette.text, fontWeight: "700", marginBottom: 6 }}>Preferred format</Text>
-      <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
+      <GapView style={{ flexDirection: "row", flexWrap: "wrap" }} gap={8}>
         {opts.map((opt) => (
           <A11yPressable
             key={opt}
@@ -124,7 +125,7 @@ function FormatRow({ value, onChange }: { value: ResourceFormat; onChange: (v: R
             </Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }

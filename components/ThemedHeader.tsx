@@ -23,6 +23,7 @@ import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 
 import A11yQuickSettings from "./A11yQuickSettings";
+import GapView from "./GapView";
 
 // Memoize menu items to prevent recreation on every render
 // Organized to align with new 5-tab structure (Home, Wellness, Resources, Advocacy, Community)
@@ -179,10 +180,11 @@ const ThemedHeader = React.memo(() => {
       </Pressable>
 
       {/* Right side controls */}
-      <View style={styles.right}>
+      <GapView style={styles.right} gap={12}>
         {/* Social media links */}
-        <View
+        <GapView
           style={styles.social}
+          gap={12}
           accessibilityLabel="Social media links"
           accessible
         >
@@ -236,7 +238,7 @@ const ThemedHeader = React.memo(() => {
           >
             <Ionicons name="logo-facebook" size={20} color={palette.text} />
           </Pressable>
-        </View>
+        </GapView>
 
         {/* Counts */}
         <Text
@@ -367,7 +369,7 @@ const ThemedHeader = React.memo(() => {
             <Ionicons name="log-in" size={20} color={palette.text} />
           </Pressable>
         )}
-      </View>
+      </GapView>
 
       {menuOpen && (
         <>
@@ -503,8 +505,8 @@ function createStyles(palette: Palette) {
       justifyContent: "space-between",
       alignItems: "center",
     },
-    brand: { flexDirection: "row", alignItems: "center", gap: 8 },
-  logo: { height: 24, width: 24 },
+    brand: { flexDirection: "row", alignItems: "center" },
+  logo: { height: 24, width: 24, marginRight: 8 },
     title: {
       color: palette.text,
       fontSize: 22,
@@ -513,7 +515,6 @@ function createStyles(palette: Palette) {
     },
     right: {
       flexDirection: "row",
-      gap: 12,
       alignItems: "center",
       flexShrink: 1,
       flexWrap: "wrap",
@@ -551,7 +552,7 @@ function createStyles(palette: Palette) {
       backgroundColor: "rgba(0,0,0,0.2)",
       zIndex: 998,
     },
-    social: { flexDirection: "row", gap: 12, marginEnd: 8 },
+    social: { flexDirection: "row", marginEnd: 8 },
     countText: { color: palette.text, opacity: 1, fontSize: 14 },
   });
 }

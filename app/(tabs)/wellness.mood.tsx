@@ -4,6 +4,7 @@ import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import A11yTextInput from '../../components/A11yTextInput';
 import DisclaimerBanner from '../../components/DisclaimerBanner';
+import GapView from '../../components/GapView';
 import { ThemedText } from '../../components/ThemedText';
 import { ThemedView } from '../../components/ThemedView';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
@@ -80,7 +81,7 @@ function MoodInner() {
       <DisclaimerBanner type="medical" compact />
 
       {/* Quick access wellness chips */}
-      <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8 }}>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
         {[{ label: t('wellness.quick.sleep','Sleep & Energy'), href: '/(tabs)/wellness/sleep-energy-tracker' }, { label: t('wellness.quick.balance','Work/Rest Balance AI'), href: '/(tabs)/wellness/work-balance-ai' }].map((c) => (
           <Link key={c.href} href={(c.href as any)} asChild>
             <View style={{ borderWidth: 1, borderRadius: 999, paddingHorizontal: 10, paddingVertical: 6, borderColor: palette.muted }}>
@@ -88,7 +89,7 @@ function MoodInner() {
             </View>
           </Link>
         ))}
-      </View>
+      </GapView>
 
       {/* Mood Score Selection */}
       <View 
@@ -103,8 +104,9 @@ function MoodInner() {
         >
           {t('mood.scoreLabel', 'Select your mood score')}
         </Text>
-        <View 
+        <GapView 
           style={styles.row}
+          gap={8}
           accessibilityLabel={t('mood.scoreButtons', 'Mood score buttons from -2 to 2')}
           accessibilityRole="radiogroup"
         >
@@ -134,7 +136,7 @@ function MoodInner() {
               <Text style={[styles.scoreText, { color: score===s ? palette.onPrimary : palette.text }]}>{s}</Text>
             </Pressable>
           ))}
-        </View>
+        </GapView>
         <Text 
           style={[styles.scoreLabel, { color: palette.text, fontSize: Math.round(14 * factor) }]}
           maxFontSizeMultiplier={MAX_FONT_SCALE}
@@ -203,12 +205,12 @@ export default function MoodScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, gap: 12 },
-  title: { fontSize: 20, fontWeight: '700' },
-  subtitle: { fontSize: 14, opacity: 0.8 },
+  container: { flex: 1, padding: 16 },
+  title: { fontSize: 20, fontWeight: '700', marginBottom: 12 },
+  subtitle: { fontSize: 14, opacity: 0.8, marginBottom: 12 },
   scoreSection: { marginVertical: 16 },
   sectionLabel: { fontSize: 16, fontWeight: '600', marginBottom: 12 },
-  row: { flexDirection: 'row', gap: 8, justifyContent: 'center' },
+  row: { flexDirection: 'row', justifyContent: 'center' },
   scoreBtn: { 
     width: 48, 
     height: 48, 
@@ -230,8 +232,8 @@ const styles = StyleSheet.create({
   },
   addBtnText: { fontWeight: '600', fontSize: 16 },
   section: { marginTop: 16 },
-  entry: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 6 },
-  entryScore: { width: 28, textAlign: 'center', fontWeight: '700' },
+  entry: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6 },
+  entryScore: { width: 28, textAlign: 'center', fontWeight: '700', marginRight: 8 },
   entryNote: { flex: 1 },
   empty: { fontStyle: 'italic', paddingVertical: 16 },
   avg: { marginTop: 12, fontWeight: '600' },

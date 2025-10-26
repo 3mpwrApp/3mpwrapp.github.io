@@ -2,6 +2,7 @@ import { router, type Href } from 'expo-router';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
+import GapView from '../../components/GapView';
 import { MAX_FONT_SCALE } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
 import { useNotifications } from '../../store/notifications';
@@ -18,14 +19,14 @@ export default function InboxScreen() {
   return (
     <View style={s.container} accessibilityLabel={t('nav.inbox','Inbox screen')}>
       <Text accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('nav.inbox','Inbox')}</Text>
-      <View style={{ flexDirection:'row', gap:8 }}>
+      <GapView style={{ flexDirection:'row' }} gap={8}>
         <Text style={s.subtitle}>{unread} {t('common.unread','unread')}</Text>
         {unread > 0 && (
           <A11yPressable onPress={markAllRead} style={s.markAll} accessibilityRole="button" accessibilityLabel={t('inbox.markAll','Mark all read')}>
             <Text style={s.markAllText}>{t('inbox.markAll','Mark all read')}</Text>
           </A11yPressable>
         )}
-      </View>
+      </GapView>
       <FlatList
         data={inbox}
         keyExtractor={(n) => n.id}
@@ -61,7 +62,7 @@ function styles(palette: ReturnType<typeof useAppPalette>, factor: number) {
     subtitle: { color: palette.text, opacity:0.8 },
     markAll: { marginLeft: 'auto', paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 },
     markAllText: { color: palette.text, fontWeight:'700' },
-    row: { paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted, flexDirection:'row', gap:8 },
+    row: { paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted, flexDirection:'row', paddingRight: 8 },
     rowTitle: { color: palette.text, fontWeight:'700' },
     rowBody: { color: palette.text, opacity:0.9 },
     rowMeta: { color: palette.text, opacity:0.6, fontSize: 12 },

@@ -4,6 +4,8 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
 
+import GapView from './GapView';
+
 interface ErrorBoundaryProps {
   children: React.ReactNode;
 }
@@ -194,7 +196,7 @@ function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onR
           </View>
         )}
 
-        <View style={styles.buttonContainer}>
+        <GapView style={styles.buttonContainer} gap={12}>
           <Pressable
             style={[styles.button, styles.primaryButton, { backgroundColor: palette.primary }]}
             onPress={handleReload}
@@ -218,7 +220,7 @@ function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onR
               Go to Home
             </Text>
           </Pressable>
-        </View>
+        </GapView>
 
         <Text style={styles.supportText}>
           If this problem persists, please contact support with the error details above.
@@ -288,7 +290,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     buttonContainer: {
       width: '100%',
-      gap: 12,
     },
     button: {
       paddingVertical: 16,

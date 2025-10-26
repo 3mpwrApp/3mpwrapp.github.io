@@ -4,14 +4,14 @@ import {
     SafeAreaView,
     StyleSheet,
     Text,
-    View,
-    useColorScheme,
+    useColorScheme
 } from "react-native";
 
 import { colors, type Palette } from "../theme/colors";
 import { openExternalUrl } from "../utils/linking";
 
 import BookmarkToggle from "./BookmarkToggle";
+import GapView from "./GapView";
 
 export default function Header() {
   const scheme = useColorScheme();
@@ -30,7 +30,7 @@ export default function Header() {
       3mpwr App
       </Text>
 
-      <View style={styles.icons}>
+      <GapView style={styles.icons} gap={15}>
         <BookmarkToggle />
         {/* Facebook */}
         <Pressable
@@ -81,7 +81,7 @@ export default function Header() {
         >
           <Ionicons name="mail" size={22} color={palette.primary} />
         </Pressable>
-      </View>
+      </GapView>
     </SafeAreaView>
   );
 }
@@ -106,7 +106,6 @@ function createStyles(palette: Palette) {
     },
     icons: {
       flexDirection: "row",
-      gap: 15,
     },
   });
 }

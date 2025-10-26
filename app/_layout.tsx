@@ -290,7 +290,8 @@ function CommunityPreload() {
     if (__DEV__) {
       logger.log('🌐 Community channels pre-loaded:', channels.length, `(${duration.toFixed(2)}ms)`);
     }
-  }, [seed]);
+     
+  }, []); // Only run once on mount - seed function is stable but not memoized
   return null;
 }
 
