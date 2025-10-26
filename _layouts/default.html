@@ -85,13 +85,33 @@
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/contact' | relative_url }}" {% if page.url contains '/contact' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Contact{% else %}Contact{% endif %}
+          <a href="{{ lang_prefix | append: '/blog' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Blog{% else %}Blog{% endif %}
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/blog' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Blog{% else %}Blog{% endif %}
+          <a href="{{ lang_prefix | append: '/faq' | relative_url }}" {% if page.url contains '/faq' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}FAQ{% else %}FAQ{% endif %}
+          </a>
+        </li>
+        <li>
+          <a href="{{ lang_prefix | append: '/accessibility' | relative_url }}" {% if page.url contains '/accessibility' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Accessibilité{% else %}Accessibility{% endif %}
+          </a>
+        </li>
+        <li>
+          <a href="{{ lang_prefix | append: '/app-waitlist' | relative_url }}" {% if page.url contains '/app-waitlist' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Liste d'attente{% else %}App Waitlist{% endif %}
+          </a>
+        </li>
+        <li>
+          <a href="{{ lang_prefix | append: '/crisis-resources' | relative_url }}" {% if page.url contains '/crisis-resources' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Ressources de crise{% else %}Crisis Help{% endif %}
+          </a>
+        </li>
+        <li>
+          <a href="{{ lang_prefix | append: '/contact' | relative_url }}" {% if page.url contains '/contact' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Contact{% else %}Contact{% endif %}
           </a>
         </li>
         <li>
