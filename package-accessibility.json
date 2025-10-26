@@ -1,0 +1,22 @@
+{
+  "name": "3mpwrapp-accessibility-tests",
+  "version": "1.0.0",
+  "description": "Automated accessibility testing for 3mpwrApp",
+  "scripts": {
+    "test:a11y": "node scripts/test-accessibility.js",
+    "test:contrast": "node scripts/test-contrast.js",
+    "test:lighthouse": "lighthouse http://localhost:4000 --only-categories=accessibility --output=html --output-path=./reports/lighthouse-report.html",
+    "test:pa11y": "pa11y http://localhost:4000 --standard WCAG2AAA --reporter cli",
+    "test:axe": "node scripts/test-axe.js",
+    "test:all": "npm run test:a11y && npm run test:contrast && npm run test:axe",
+    "report": "npm run test:all && npm run test:lighthouse"
+  },
+  "devDependencies": {
+    "@axe-core/puppeteer": "^4.8.1",
+    "axe-core": "^4.8.2",
+    "chalk": "^4.1.2",
+    "lighthouse": "^11.3.0",
+    "pa11y": "^7.0.0",
+    "puppeteer": "^21.5.2"
+  }
+}
