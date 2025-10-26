@@ -32,11 +32,11 @@ allFeaturesLive: 50+ features, 100% accessibility, enterprise security
   </ul>
 </details>
 
-<div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
+<div class="info-box-light">
   ⚠️ <strong>Content Note:</strong> This guide discusses legal processes, workplace injuries, medical documentation, and system navigation. These topics may be triggering. Take breaks as needed - this page will be here when you're ready.
 </div>
 
-<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
+<div class="warning-box">
   💙 <strong>Rest Reminder:</strong> This is a long guide. You don't need to read it all at once. Bookmark the sections you need and come back when you have energy. Your wellbeing comes first.
 </div>
 

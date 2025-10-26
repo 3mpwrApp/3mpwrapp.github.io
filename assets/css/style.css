@@ -1937,3 +1937,164 @@ body[data-contrast="high"] .email-section-btn {
     transition: none;
   }
 }
+
+/* ============================================
+   THEMED BOXES & BANNERS (Dark Mode Compatible)
+   ============================================ */
+
+/* Gradient Banner (Purple/Blue gradient) */
+.gradient-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white !important;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.gradient-banner h2,
+.gradient-banner h3,
+.gradient-banner strong {
+  color: white !important;
+}
+
+.gradient-banner p,
+.gradient-banner li {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Pink Gradient Banner */
+.gradient-banner-pink {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white !important;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+.gradient-banner-pink h2,
+.gradient-banner-pink h3,
+.gradient-banner-pink strong {
+  color: white !important;
+}
+
+.gradient-banner-pink p,
+.gradient-banner-pink li {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Success Box (Green) */
+.success-box {
+  background: var(--success-box-bg, #dcfce7);
+  border-left: 4px solid var(--success-border, #22c55e);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+/* Warning Box (Yellow/Orange) */
+.warning-box {
+  background: var(--warning-box-bg, #fef3c7);
+  border-left: 4px solid var(--warning-border, #f59e0b);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Info Box (Blue) */
+.info-box {
+  background: var(--info-box-bg, #f0f9ff);
+  border-left: 4px solid var(--info-border, #3b82f6);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+/* Info Box with Border (Blue) */
+.info-box-bordered {
+  background: var(--info-box-bg, #dbeafe);
+  border: 2px solid var(--info-border, #3b82f6);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 2rem 0;
+  color: var(--text-color);
+}
+
+/* Light Blue Box */
+.info-box-light {
+  background: var(--info-box-light-bg, #eff6ff);
+  border-left: 4px solid var(--info-border, #3b82f6);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+/* Community Stats Box */
+.community-stats-box {
+  background: var(--info-box-bg, #f0f9ff);
+  border: 2px solid var(--info-border, #3b82f6);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* Dark Mode Overrides for Boxes */
+[data-theme="dark"] .success-box {
+  --success-box-bg: #0f3722;
+  --success-border: #22c55e;
+}
+
+[data-theme="dark"] .warning-box {
+  --warning-box-bg: #4a3010;
+  --warning-border: #f59e0b;
+}
+
+[data-theme="dark"] .info-box,
+[data-theme="dark"] .community-stats-box {
+  --info-box-bg: #0c2642;
+  --info-border: #3b82f6;
+}
+
+[data-theme="dark"] .info-box-bordered {
+  --info-box-bg: #0c2642;
+  --info-border: #3b82f6;
+}
+
+[data-theme="dark"] .info-box-light {
+  --info-box-light-bg: #0c2642;
+  --info-border: #3b82f6;
+}
+
+/* Prefers Dark Color Scheme */
+@media (prefers-color-scheme: dark) {
+  body:not([data-theme="light"]) .success-box {
+    --success-box-bg: #0f3722;
+    --success-border: #22c55e;
+  }
+
+  body:not([data-theme="light"]) .warning-box {
+    --warning-box-bg: #4a3010;
+    --warning-border: #f59e0b;
+  }
+
+  body:not([data-theme="light"]) .info-box,
+  body:not([data-theme="light"]) .community-stats-box {
+    --info-box-bg: #0c2642;
+    --info-border: #3b82f6;
+  }
+
+  body:not([data-theme="light"]) .info-box-bordered {
+    --info-box-bg: #0c2642;
+    --info-border: #3b82f6;
+  }
+
+  body:not([data-theme="light"]) .info-box-light {
+    --info-box-light-bg: #0c2642;
+    --info-border: #3b82f6;
+  }
+}

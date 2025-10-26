@@ -7,12 +7,12 @@ permalink: /contact
 
 # Contact Us
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
-  <h2 style="color: white; margin: 0 0 1rem; font-size: 1.5rem;">🫂 Everyone Is Welcome to Contact Us</h2>
-  <p style="color: rgba(255,255,255,0.95); margin: 0.5rem 0; line-height: 1.6;">
+<div class="gradient-banner">
+  <h2 style="margin: 0 0 1rem; font-size: 1.5rem;">🫂 Everyone Is Welcome to Contact Us</h2>
+  <p style="margin: 0.5rem 0; line-height: 1.6;">
     <strong>3mpwrApp is here for:</strong>
   </p>
-  <ul style="color: rgba(255,255,255,0.95); margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
+  <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
     <li>🦽 <strong>Persons with disabilities</strong> seeking platform support or sharing feedback</li>
     <li>🏗️ <strong>Injured workers</strong> navigating compensation systems or needing resources</li>
     <li>💙 <strong>Family supporters and caregivers</strong> helping loved ones</li>
@@ -24,7 +24,7 @@ permalink: /contact
     <li>🏢 <strong>Employers</strong> committed to genuine accessibility</li>
     <li>🌍 <strong>General public</strong> curious about disability justice and social justice</li>
   </ul>
-  <p style="color: rgba(255,255,255,0.95); margin: 1rem 0 0; font-weight: 600;">
+  <p style="margin: 1rem 0 0; font-weight: 600;">
     Whatever your role in the disability rights and social justice movement, we want to hear from you!
   </p>
 </div>

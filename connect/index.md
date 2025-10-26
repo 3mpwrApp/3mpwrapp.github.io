@@ -49,7 +49,7 @@ permalink: /connect/
   </ul>
 </details>
 
-<div style="background: #dcfce7; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 4px; color: #000;">
+<div class="success-box">
   🌱 <strong>We're Growing:</strong> 3mpwrApp is a grassroots project built BY disabled people and injured workers FOR the community. We're just getting started and open to meaningful connections!
 </div>
 
@@ -59,7 +59,7 @@ permalink: /connect/
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
-<div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 4px; color: #000;">
+<div class="info-box">
   <strong>👥 Everyone is welcome to connect:</strong> Whether you're a person with a disability, injured worker, family supporter, union member, healthcare provider, legal advocate, ally, or member of the general public—we want to hear from you.
 </div>
 

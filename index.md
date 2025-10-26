@@ -113,9 +113,9 @@ description: A community-powered hub for injured workers and persons with disabi
 
 ## ✨ Experience the Magic
 
-<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-  <h3 style="color: white; margin: 0 0 1rem; font-size: 1.3rem;">🎯 Built Different</h3>
-  <p style="color: rgba(255,255,255,0.95); margin: 0 0 1rem; font-size: 1.05rem;">
+<div class="gradient-banner-pink">
+  <h3 style="margin: 0 0 1rem; font-size: 1.3rem;">🎯 Built Different</h3>
+  <p style="margin: 0 0 1rem; font-size: 1.05rem;">
     3mpwrApp isn't just accessible—it's <strong>revolutionary</strong>. We've created features you won't find anywhere else:
   </p>
   
@@ -146,7 +146,7 @@ description: A community-powered hub for injured workers and persons with disabi
     </li>
   </ul>
   
-  <p style="color: rgba(255,255,255,0.9); margin: 1rem 0 0; font-size: 0.95rem; font-style: italic;">
+  <p style="margin: 1rem 0 0; font-size: 0.95rem; font-style: italic;">
     💡 <strong>Tip:</strong> The more you explore, the more magic you'll discover. This site is full of thoughtful surprises designed to make you smile.
   </p>
 </div>
@@ -237,11 +237,11 @@ description: A community-powered hub for injured workers and persons with disabi
 
 Ready to join the movement? Here's how you can get started:
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 8px; margin: 1rem 0 1.5rem; text-align: center;">
-  <h3 style="color: white; margin: 0 0 0.5rem;">🚀 Phase 1 Beta Testing Underway!</h3>
-  <p style="color: rgba(255,255,255,0.95); margin: 0 0 1rem;">Be among the first to test 3mpwrApp and help shape its future. Limited spots available!</p>
+<div class="gradient-banner">
+  <h3 style="margin: 0 0 0.5rem;">🚀 Phase 1 Beta Testing Underway!</h3>
+  <p style="margin: 0 0 1rem;">Be among the first to test 3mpwrApp and help shape its future. Limited spots available!</p>
   <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #5568d3; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
-  <p style="color: rgba(255,255,255,0.9); margin: 1rem 0 0; font-size: 0.9rem;"><a href="{{ '/beta-guide' | relative_url }}" style="color: white; text-decoration: underline; font-weight: 500;">Learn more about beta testing</a></p>
+  <p style="margin: 1rem 0 0; font-size: 0.9rem;"><a href="{{ '/beta-guide' | relative_url }}" style="color: white; text-decoration: underline; font-weight: 500;">Learn more about beta testing</a></p>
 </div>
 
 - <a href="{{ '/user-guide' | relative_url }}"><strong>📖 Read Our Complete User Guide</strong></a> – **NEW Phase 2!** Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more ([Download PDF](/assets/downloads/3mpwrapp-user-guide-full.pdf))
@@ -459,9 +459,9 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 </div>
 
 <!-- Community Counter -->
-<div class="community-stats" style="background: #f0f9ff; border: 2px solid #3b82f6; border-radius: 8px; padding: 1rem; margin: 1rem 0; text-align: center;">
+<div class="community-stats-box">
   <p style="margin: 0; font-size: 1.1rem;"><strong>💚 You're part of something special</strong></p>
-  <p style="margin: 0.5rem 0 0; color: #1e40af;" id="communityCounter">
+  <p style="margin: 0.5rem 0 0;" id="communityCounter">
     <span id="activeUsers">🌟 127 people</span> are exploring right now | 
     <span id="monthlyHelped">💪 18,492 people</span> helped this month
   </p>
@@ -961,7 +961,7 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   50% { transform: scale(1.02); }
 }
 
-.community-stats {
+.community-stats-box {
   animation: pulse 3s ease-in-out infinite;
 }
 
@@ -970,7 +970,7 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   #encouragementBanner {
     animation: none;
   }
-  .community-stats {
+  .community-stats-box {
     animation: none;
   }
 }
