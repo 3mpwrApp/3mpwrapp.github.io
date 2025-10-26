@@ -1,0 +1,47 @@
+/**
+ * Homepage Animation Styles
+ * Encouragement banners and interactive elements
+ */
+
+/* Encouragement banner animations */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.encouragement-banner {
+  animation: slideInDown 0.5s ease-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Community stats pulse effect */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.community-stats-box {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .encouragement-banner {
+    animation: none;
+  }
+  .community-stats-box {
+    animation: none;
+  }
+}
