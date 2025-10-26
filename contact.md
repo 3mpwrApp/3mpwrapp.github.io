@@ -7,6 +7,27 @@ permalink: /contact
 
 # Contact Us
 
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+  <h2 style="color: white; margin: 0 0 1rem; font-size: 1.5rem;">🫂 Everyone Is Welcome to Contact Us</h2>
+  <p style="color: rgba(255,255,255,0.95); margin: 0.5rem 0; line-height: 1.6;">
+    <strong>3mpwrApp is here for:</strong>
+  </p>
+  <ul style="color: rgba(255,255,255,0.95); margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
+    <li>🦽 <strong>Persons with disabilities</strong> seeking platform support or sharing feedback</li>
+    <li>🏗️ <strong>Injured workers</strong> navigating compensation systems or needing resources</li>
+    <li>💙 <strong>Family supporters and caregivers</strong> helping loved ones</li>
+    <li>🤝 <strong>Allies and advocates</strong> wanting to get involved or learn more</li>
+    <li>🛠️ <strong>Union members</strong> exploring partnership opportunities</li>
+    <li>🏥 <strong>Healthcare providers</strong> interested in patient resources</li>
+    <li>⚖️ <strong>Legal advocates</strong> looking for client tools and information</li>
+    <li>🏢 <strong>Employers</strong> committed to genuine accessibility</li>
+    <li>🌍 <strong>General public</strong> curious about disability justice</li>
+  </ul>
+  <p style="color: rgba(255,255,255,0.95); margin: 1rem 0 0; font-weight: 600;">
+    Whatever your role in the disability rights movement, we want to hear from you!
+  </p>
+</div>
+
 We'd love to hear from you! Whether you have questions about 3mpwr, feedback to share, or collaboration opportunities, please reach out.
 
 ## Quick Links
@@ -57,10 +78,18 @@ Please fill out the form below and we'll get back to you within 24 hours:
       <select id="subject" name="subject" required aria-describedby="subject-help">
         <option value="">-- Select a subject --</option>
         <option value="general">General Inquiry</option>
-        <option value="bug">Bug Report</option>
+        <option value="accessibility">Accessibility Issue or Suggestion</option>
+        <option value="injured-worker">Injured Worker Support Question</option>
+        <option value="disability">Disability Rights or Advocacy</option>
+        <option value="union">Union/Labour Organization Partnership</option>
+        <option value="healthcare">Healthcare Provider Inquiry</option>
+        <option value="legal">Legal Advocate Resources</option>
+        <option value="employer">Employer Accessibility Partnership</option>
+        <option value="bug">Technical Bug Report</option>
         <option value="feature">Feature Request</option>
-        <option value="feedback">Feedback</option>
-        <option value="partnership">Partnership</option>
+        <option value="feedback">General Feedback</option>
+        <option value="volunteer">I Want to Get Involved</option>
+        <option value="media">Media/Research Inquiry</option>
         <option value="other">Other</option>
       </select>
       <small id="subject-help">Choose the topic that best describes your message</small>

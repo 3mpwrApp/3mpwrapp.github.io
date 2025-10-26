@@ -55,6 +55,155 @@ permalink: /connect/
 
 ---
 
+## 🌟 Who We Want to Hear From
+
+<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
+
+<div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 4px; color: #000;">
+  <strong>👥 Everyone is welcome to connect:</strong> Whether you're a person with a disability, injured worker, family supporter, union member, healthcare provider, legal advocate, ally, or member of the general public—we want to hear from you.
+</div>
+
+### 🦽 Persons with Disabilities & Injured Workers
+
+**You are the heart of 3mpwrApp.**
+
+Connect with us to:
+- 💬 Share your lived experience
+- 💡 Suggest features that would help you
+- 🧪 Beta test the platform
+- 🎯 Join our advisory board
+- ✅ Tell us what's working (or not!)
+- 📣 Start or join campaigns
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
+
+---
+
+### 💙 Family Supporters & Caregivers
+
+**Your perspective matters.**
+
+Connect with us to:
+- 🗣️ Share how we can support YOU in supporting your loved ones
+- 📚 Suggest resources that would help families navigate systems
+- 💡 Help us understand challenges we might not see
+- 🌟 Recommend family-focused features
+- 🤝 Connect with other supporters
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Family%20Supporter%20Connection)
+
+---
+
+### 🛠️ Unions & Labour Organizations
+
+**Let's fight together.**
+
+Connect with us about:
+- 🤝 Partnership opportunities
+- 📣 Joint campaigns for workers' rights
+- ♿ Disability inclusion in collective bargaining
+- 🏭 Workplace accessibility initiatives
+- 📚 Member resources and support
+- 💪 Organizing injured worker advocacy
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Union%20Partnership)
+
+---
+
+### 🤝 Non-Disabled Allies & Advocates
+
+**Solidarity is action.**
+
+Connect with us to:
+- 📢 Learn how to amplify disabled voices (not speak over them)
+- 🌍 Find community organizing opportunities
+- 📣 Collaborate on awareness campaigns
+- 📚 Access learning resources on disability justice
+- 💪 Support community-led initiatives
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Ally%20Connection)
+
+---
+
+### 🏥 Healthcare Providers
+
+**Bridge the gap between medicine and advocacy.**
+
+Connect with us about:
+- 🤝 Patient resource partnerships
+- 🗺️ System navigation tools
+- 📚 Medical information in plain language
+- 🎓 Provider education on disability rights
+- 💡 Clinical perspective on community needs
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Healthcare%20Provider%20Inquiry)
+
+---
+
+### ⚖️ Legal Advocates & Community Legal Workers
+
+**Justice for all.**
+
+Connect with us about:
+- 📚 Client resources and tools
+- 🤝 Legal information partnerships
+- 📝 Know-your-rights content
+- ⚖️ Plain-language legal guides
+- 💡 Legal clinic collaboration
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Legal%20Advocate%20Partnership)
+
+---
+
+### 🏢 Progressive Employers
+
+**Real accessibility, not performative.**
+
+Connect with us about:
+- ♿ Genuine accommodation partnerships
+- 🎓 Workplace accessibility consulting
+- 📚 Employee resource development
+- 💡 Disability inclusion training (led by disabled people)
+- 🤝 Learning from disabled and injured workers directly
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Employer%20Partnership)
+
+**Note:** We center disabled and injured workers' voices. Employers must approach with humility and willingness to listen.
+
+---
+
+### 🌍 General Public
+
+**Curious about disability justice? Welcome!**
+
+Connect with us to:
+- 📚 Learn about ableism and workers' rights
+- 🔍 Understand systemic barriers
+- 💪 Become a better ally
+- 🤝 Support the movement
+- 💡 Ask questions respectfully
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=General%20Public%20Inquiry)
+
+---
+
+### 📰 Media & Researchers
+
+**Tell our stories accurately.**
+
+Connect with us about:
+- 🎤 Interview requests (we connect you with community members who choose to participate)
+- 📊 Research partnerships centered on disability justice
+- 📺 Accurate representation in media
+- 📖 Community-led storytelling
+- 💡 Ethical research with community benefit
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Media/Research%20Inquiry)
+
+**Important:** No inspiration porn. No exploitation. Community control over narratives.
+
+---
+
 ## 💡 We're Building Something Special
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
@@ -72,49 +221,6 @@ permalink: /connect/
 - ✅ Community benefit over everything
 - ✅ Transparency in all operations
 - ✅ Authentic inclusion, not tokenism
-
----
-
-## 🤝 Open to Connections
-
-<span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
-
-### We're Interested in Hearing From:
-
-**🏛️ Unions & Labour Organizations**
-- Interested in supporting injured workers?
-- Want to collaborate on workers' rights?
-- Have resources to share with community?
-
-**♿ Disability Rights Organizations**
-- Working on similar missions?
-- Want to cross-promote resources?
-- Interested in joint advocacy?
-
-**⚖️ Legal Clinics & Advocates**
-- Provide services for injured workers?
-- Want to connect with our community?
-- Offer pro-bono support?
-
-**🎓 Researchers & Academics**
-- Studying disability, accessibility, workers' rights?
-- Interested in our innovative features?
-- Want to collaborate on research?
-
-**💼 Values-Aligned Organizations**
-- Support disability rights and workers' rights?
-- Committed to accessibility?
-- Community-centered approach?
-
-**📰 Media & Press**
-- Want to cover our story?
-- Interview our community?
-- Feature our innovations?
-
-**💚 Supporters & Allies**
-- Want to help spread the word?
-- Have skills or expertise to share?
-- Passionate about our mission?
 
 ---
 

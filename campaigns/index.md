@@ -39,6 +39,26 @@ permalink: /campaigns/
 
 📖 **3 minute read** | 🔋🔋 **Energy: Light**
 
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+  <h2 style="color: white; margin: 0 0 1rem; font-size: 1.5rem;">💪 Power to the People: ALL People</h2>
+  <p style="color: rgba(255,255,255,0.95); margin: 0.5rem 0; line-height: 1.6;">
+    <strong>Campaigns and events are created by and for:</strong>
+  </p>
+  <ul style="color: rgba(255,255,255,0.95); margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
+    <li>🦽 <strong>Persons with disabilities</strong> - Fight for your rights, organize your community</li>
+    <li>🏗️ <strong>Injured workers</strong> - Demand justice, support each other</li>
+    <li>💙 <strong>Family supporters & caregivers</strong> - Advocate for your loved ones</li>
+    <li>🤝 <strong>Non-disabled allies</strong> - Stand in solidarity, amplify voices</li>
+    <li>🛠️ <strong>Union members</strong> - Organize collectively for workers' rights</li>
+    <li>🏥 <strong>Healthcare providers</strong> - Advocate for better systems</li>
+    <li>⚖️ <strong>Legal advocates</strong> - Fight for justice alongside community</li>
+    <li>🌍 <strong>General public</strong> - Learn, support, take action</li>
+  </ul>
+  <p style="color: rgba(255,255,255,0.95); margin: 1rem 0 0; font-weight: 600; font-size: 1.1rem;">
+    ✊ You don't need to be disabled to fight for disability justice. You don't need to be injured to support injured workers. ALL are welcome to organize!
+  </p>
+</div>
+
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
   <ul>
@@ -46,6 +66,7 @@ permalink: /campaigns/
     <li><strong>Auto-Sync:</strong> Campaigns created in-app will automatically appear here</li>
     <li><strong>Grassroots Power:</strong> Anyone can start a campaign for disability rights or workers' issues</li>
     <li><strong>All Accessible:</strong> Every event includes accessibility features and virtual options</li>
+    <li><strong>Everyone Welcome:</strong> PWDs, injured workers, supporters, allies, unions, and general public can organize</li>
   </ul>
 </details>
 
@@ -260,7 +281,142 @@ permalink: /campaigns/
 
 ---
 
-## 💡 How to Get Involved
+## � Campaign Ideas By Organizer Type
+
+<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
+
+<div style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 4px; color: #000;">
+  <strong>🎯 Different perspectives, same goal:</strong> Here are campaign ideas tailored to different organizers. Pick what resonates with YOUR experience and position!
+</div>
+
+### 🦽 For Persons with Disabilities
+
+**You know what needs to change - here's how to organize it:**
+- 📱 Accessible transportation campaigns (based on YOUR daily barriers)
+- 🏠 Housing accessibility improvements in YOUR neighbourhood
+- 🏥 Healthcare access for YOUR condition/disability
+- 💼 Employment discrimination YOU'VE faced
+- 🚫 Anti-ableism awareness from YOUR lived experience
+- ♿ Accessibility audits of YOUR local businesses
+
+**Your expertise:** Lived experience of disability, direct knowledge of barriers
+
+---
+
+### 🏗️ For Injured Workers
+
+**You understand the system's failures - fight back:**
+- ⚖️ WSIB/WCB reform (appeal process, benefit levels, claim delays)
+- 🏭 Workplace safety enforcement
+- 💪 Return-to-work rights and protections
+- 🏢 Employer accountability for workplace injuries
+- 🧠 Mental health injury recognition
+- 💰 Fair compensation for permanent impairments
+
+**Your expertise:** Workers' comp system navigation, workplace injury reality
+
+---
+
+### 💙 For Family Supporters & Caregivers
+
+**You see gaps others miss - fill them:**
+- 👨‍👩‍👧‍👦 Caregiver support program campaigns
+- 💵 Respite care funding
+- 📚 Family navigation resource development
+- 🏫 Disability education in schools
+- 🏥 Family inclusion in healthcare decisions
+- 💼 Caregiver employment protections
+
+**Your expertise:** Family perspective, caregiver challenges, system navigation from outside
+
+---
+
+### 🛠️ For Unions & Labour Organizations
+
+**You have collective power - use it:**
+- 📋 Disability inclusion in collective agreements
+- ♿ Workplace accessibility audits and fixes
+- 🤝 Accommodations enforcement
+- 💪 Joint campaigns with disability organizations
+- 🏭 Workplace injury prevention programs
+- 📊 Disability data tracking in workplaces
+- 🎓 Anti-ableism training for members
+
+**Your expertise:** Collective organizing, bargaining power, worker solidarity
+
+---
+
+### 🤝 For Non-Disabled Allies
+
+**Solidarity means action - here's how:**
+- 📢 Amplify disabled-led campaigns (share, don't lead)
+- ♿ Community accessibility audits (business compliance checks)
+- 🏢 Corporate accountability campaigns
+- 🎓 Public education on disability justice
+- 💰 Fundraising for disabled-led organizations
+- 🏛️ Political advocacy on behalf of community asks
+
+**Your role:** Support, amplify, take direction from disabled leadership
+
+---
+
+### 🏥 For Healthcare Providers
+
+**You see system failures daily - advocate for change:**
+- 🏥 Patient-centered care policy reforms
+- 📚 Disability-competent medical training
+- 💊 Pain management access without stigma
+- ⚕️ Healthcare accessibility improvements
+- 🧠 Mental health parity in treatment
+- 📋 Plain-language medical information
+
+**Your expertise:** Clinical perspective, system knowledge, patient advocacy
+
+---
+
+### ⚖️ For Legal Advocates
+
+**You understand legal barriers - dismantle them:**
+- 📝 Accessible legal information campaigns
+- ⚖️ Disability discrimination case support
+- 📋 Know-your-rights workshops
+- 🏛️ Accessibility legislation strengthening
+- 💼 Employment law reform
+- 🏠 Housing rights enforcement
+
+**Your expertise:** Legal knowledge, rights-based advocacy, policy interpretation
+
+---
+
+### 🏢 For Progressive Employers
+
+**Show genuine commitment - not performance:**
+- ♿ Workplace accessibility beyond minimum compliance
+- 💼 Inclusive hiring from disability community
+- 🎓 Authentic accommodation training
+- 📊 Disability inclusion metrics and transparency
+- 🤝 Partnership with disability organizations
+- 💡 Innovation in accessible workplace design
+
+**Your role:** Leadership by example, resource commitment, humility
+
+---
+
+### 🌍 For General Public
+
+**Education is activism - start here:**
+- 📚 Ableism awareness campaigns
+- ♿ Local accessibility advocacy
+- 🤝 Community inclusion initiatives
+- 📢 Social media education campaigns
+- 🎓 Disability justice learning circles
+- 💪 Bystander intervention training
+
+**Your role:** Learn, unlearn ableism, show up, listen, support
+
+---
+
+## �💡 How to Get Involved
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
