@@ -2249,6 +2249,7 @@ body[data-contrast="high"] .email-section-btn {
   padding: 1.5rem;
   border-radius: 8px;
   border: 2px solid;
+  background: var(--card-bg, #f9fafb);
   transition: all 0.3s ease;
 }
 
@@ -2304,6 +2305,7 @@ body[data-contrast="high"] .email-section-btn {
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 4px;
+  background: var(--card-bg, #f9fafb);
   transition: all 0.3s ease;
 }
 
@@ -2326,11 +2328,16 @@ body[data-theme="dark"] .crisis-alert {
 body[data-theme="dark"] .crisis-option {
   background: var(--card-bg, #1e293b) !important;
   border-color: var(--border-color, #475569);
+  color: #e5e7eb;
 }
 
-body[data-theme="dark"] .crisis-option h3,
+body[data-theme="dark"] .crisis-option h3 {
+  color: #60a5fa !important;
+}
+
 body[data-theme="dark"] .crisis-option p,
-body[data-theme="dark"] .crisis-option strong {
+body[data-theme="dark"] .crisis-option strong,
+body[data-theme="dark"] .crisis-option a {
   color: #e5e7eb;
 }
 
@@ -2347,6 +2354,14 @@ body[data-theme="dark"] .phase-tracker strong {
 
 body[data-theme="dark"] .feature-box {
   background: var(--card-bg, #1e293b);
+  color: #e5e7eb;
+}
+
+body[data-theme="dark"] .feature-box strong {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .feature-box p {
   color: #e5e7eb;
 }
 

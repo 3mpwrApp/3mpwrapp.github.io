@@ -24,22 +24,22 @@ permalink: /app-waitlist/
 
 <div style="display: grid; gap: 1rem; margin: 2rem 0;">
 
-<div class="feature-box" style="border-color: #10b981; background: #f0fdf4;">
+<div class="feature-box" style="border-color: #10b981;">
   <strong>💚 100% Free Forever</strong>
   <p>No subscriptions, no paid tiers, no hidden costs. Ever.</p>
 </div>
 
-<div class="feature-box" style="border-color: #3b82f6; background: #eff6ff;">
+<div class="feature-box" style="border-color: #3b82f6;">
   <strong>🔒 You Own Your Data</strong>
   <p>BYOC (Bring Your Own Cloud) modes mean your data stays with YOU.</p>
 </div>
 
-<div class="feature-box" style="border-color: #f59e0b; background: #fffbeb;">
+<div class="feature-box" style="border-color: #f59e0b;">
   <strong>♿ Built BY Disabled People</strong>
   <p>Not for us without us - every feature designed with lived experience.</p>
 </div>
 
-<div class="feature-box" style="border-color: #8b5cf6; background: #f5f3ff;">
+<div class="feature-box" style="border-color: #8b5cf6;">
   <strong>🇨🇦 Canadian-Focused</strong>
   <p>All provinces/territories, including Indigenous languages and cultural protocols.</p>
 </div>

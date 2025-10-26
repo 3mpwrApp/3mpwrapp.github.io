@@ -23,14 +23,14 @@ permalink: /crisis-resources/
 
 <div class="decision-tree">
 
-<div class="crisis-option" style="border-color: #dc2626; background: #fef2f2;">
+<div class="crisis-option" style="border-color: #dc2626;">
   <h3 style="color: #991b1b;">🚨 Immediate Danger</h3>
   <p>You or someone else is at risk of harm right now</p>
   <p style="font-size: 1.2rem;"><strong>Call 911 immediately</strong></p>
   <p style="font-size: 0.9rem;">Or go to nearest emergency room</p>
 </div>
 
-<div class="crisis-option" style="border-color: #ea580c; background: #fff7ed;">
+<div class="crisis-option" style="border-color: #ea580c;">
   <h3 style="color: #9a3412;">💔 Suicide Crisis</h3>
   <p>Having thoughts of ending your life</p>
   <p><strong>Canada Suicide Prevention Service:</strong></p>
@@ -43,21 +43,21 @@ permalink: /crisis-resources/
   </p>
 </div>
 
-<div class="crisis-option" style="border-color: #f59e0b; background: #fffbeb;">
+<div class="crisis-option" style="border-color: #f59e0b;">
   <h3 style="color: #92400e;">⚖️ Legal Emergency</h3>
   <p>Eviction notice, workplace termination, benefits cut off</p>
   <p><strong>Legal Aid Ontario (24/7):</strong> <a href="tel:1-800-668-8258">1-800-668-8258</a></p>
   <p style="margin-top: 0.5rem;"><a href="#provincial-legal-aid">See your province's legal aid →</a></p>
 </div>
 
-<div class="crisis-option" style="border-color: #3b82f6; background: #eff6ff;">
+<div class="crisis-option" style="border-color: #3b82f6;">
   <h3 style="color: #1e40af;">🏠 Basic Needs</h3>
   <p>Need food, shelter, or safety from abuse</p>
   <p><strong>211 Canada:</strong> <a href="tel:211">Dial 211</a></p>
   <p style="font-size: 0.9rem;">Connects to local services (food banks, shelters, support)</p>
 </div>
 
-<div class="crisis-option" style="border-color: #8b5cf6; background: #f5f3ff;">
+<div class="crisis-option" style="border-color: #8b5cf6;">
   <h3 style="color: #5b21b6;">🧠 Mental Health Support</h3>
   <p>Anxiety, depression, panic attacks, PTSD</p>
   <p><strong>Wellness Together Canada:</strong></p>
@@ -65,7 +65,7 @@ permalink: /crisis-resources/
   <p style="font-size: 0.9rem;"><a href="https://wellnesstogether.ca" target="_blank" rel="noopener noreferrer">Free counselling at wellnesstogether.ca →</a></p>
 </div>
 
-<div class="crisis-option" style="border-color: #ec4899; background: #fdf2f8;">
+<div class="crisis-option" style="border-color: #ec4899;">
   <h3 style="color: #9f1239;">🤜 Domestic Violence</h3>
   <p>Experiencing abuse or violence at home</p>
   <p><strong>Canadian Domestic Violence Hotline:</strong></p>
