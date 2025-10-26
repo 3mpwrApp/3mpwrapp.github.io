@@ -9,7 +9,36 @@ currentPhase: Phase 6 - ML-Driven Personalization (COMPLETE)
 allFeaturesLive: 50+ features, 100% accessibility, enterprise security
 ---
 
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+</div>
+
 # 3mpwrApp — Complete User Guide
+
+**Version: 1.0 | Last Updated: October 25, 2025**
+
+📖 **20 minute read** | ⚡ Key sections linked below
+
+<details class="tldr-box" open>
+  <summary>⚡ Quick Summary (60 seconds)</summary>
+  <ul>
+    <li><strong>Evidence Locker:</strong> Secure digital vault for all your documents, photos, and medical records</li>
+    <li><strong>Letter Wizard:</strong> AI-powered tool generates professional legal/medical letters in minutes</li>
+    <li><strong>Wellness Tools:</strong> Energy forecasting, rest reminders, spoon tracking, and personalized wellness plans</li>
+    <li><strong>Community:</strong> Connect with others, share experiences, find local resources</li>
+    <li><strong>Legal Automation:</strong> Track deadlines, organize case timelines, document everything</li>
+    <li><strong>100% Private:</strong> Your data stays on YOUR device - we can't see it, ever</li>
+    <li><strong>100% Accessible:</strong> Built by and for the disability community</li>
+  </ul>
+</details>
+
+<div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
+  ⚠️ <strong>Content Note:</strong> This guide discusses legal processes, workplace injuries, medical documentation, and system navigation. These topics may be triggering. Take breaks as needed - this page will be here when you're ready.
+</div>
+
+<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
+  💙 <strong>Rest Reminder:</strong> This is a long guide. You don't need to read it all at once. Bookmark the sections you need and come back when you have energy. Your wellbeing comes first.
+</div>
 
 **Version: 1.0 | Last Updated: October 25, 2025**
 

@@ -4,7 +4,15 @@ title: Features
 description: Explore 3mpwrApp's comprehensive 133+ features designed to empower your advocacy, connect with community, and navigate systems with confidence. Beta Version 1.0.0-rc.1
 ---
 
+<!-- Status Banner -->
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator">✅</span> 
+  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+</div>
+
 # 3mpwrApp Features
+
+📖 **12 minute read** | ⚡ **Feature highlights below**
 
 **Version:** 1.0.0-rc.1 (Closed Beta)  
 **Status:** Ready for Beta Testing  
@@ -12,7 +20,25 @@ description: Explore 3mpwrApp's comprehensive 133+ features designed to empower 
 
 Welcome to 3mpwrApp - your complete toolkit for disability advocacy, community connection, and system navigation. With **133 features available in beta** and 35 more coming soon, every tool is designed to empower you while protecting your privacy.
 
+<!-- TL;DR Summary -->
+<details class="tldr-box" open>
+  <summary><strong>⚡ Quick Overview (1 minute)</strong></summary>
+  <ul>
+    <li><strong>133 features available now</strong> in closed beta</li>
+    <li><strong>Evidence Locker:</strong> Secure document storage with military-grade encryption</li>
+    <li><strong>Letter Wizard:</strong> 22 professional letter templates for appeals & advocacy</li>
+    <li><strong>Wellness Tools:</strong> Track health, energy, mood with 36 specialized features</li>
+    <li><strong>Legal Automation:</strong> Step-by-step guidance for appeals & complaints</li>
+    <li><strong>Community:</strong> Connect with others in safe, moderated spaces</li>
+    <li><strong>100% accessible:</strong> WCAG AAA compliant with screen reader support</li>
+  </ul>
+</details>
+
 > 📖 **Looking for detailed instructions?** Check our [User Guide](/user-guide) for step-by-step tutorials on how to use each feature effectively.
+
+---
+
+> ⚠️ **Content Note**: This page discusses legal processes, workplace injuries, and system navigation. Take breaks as needed.
 
 ---
 
@@ -704,6 +730,40 @@ All AI processing happens on-device for privacy.
 **🎉 Thank you for being part of 3mpwrApp beta! Your feedback will help us create the best possible empowerment app for the disability community.**
 
 **Remember**: 3mpwrApp is built with your privacy and security as top priorities. All features are designed to empower you while protecting your sensitive information.
+
+---
+
+<!-- Alternative Formats -->
+<div class="alternative-formats" role="complementary">
+  <p><strong>📱 Need this in a different format?</strong></p>
+  <p>
+    <a href="/pdfs/features-guide.pdf" class="format-link">📄 Download as PDF</a>
+    <a href="/print/features" class="format-link">🖨️ Print-friendly version</a>
+    <a href="mailto:?subject=3mpwrApp Features&body=Check out all the features: https://3mpwrapp.pages.dev/features/" class="format-link">📧 Email to yourself</a>
+  </p>
+</div>
+
+---
+
+<!-- Crisis Resources Banner -->
+<div class="crisis-resources" role="complementary" aria-label="Crisis support resources">
+  <strong>🆘 In Crisis?</strong> 
+  <a href="{{ '/crisis-resources' | relative_url }}">Get immediate help</a> | 
+  📞 <strong>Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a> (24/7, Free & Confidential)
+</div>
+
+---
+
+<!-- Page Feedback -->
+<div class="page-feedback" role="complementary">
+  <p><strong>💬 Was this page helpful?</strong></p>
+  <p>
+    <a href="{{ '/feedback?page=features&helpful=yes' | relative_url }}" class="feedback-btn feedback-yes">👍 Yes</a>
+    <a href="{{ '/feedback?page=features&helpful=no' | relative_url }}" class="feedback-btn feedback-no">👎 No</a>
+    <a href="{{ '/feedback?page=features' | relative_url }}" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  </p>
+  <p class="page-meta"><small>Last updated: October 25, 2025 | Next review: December 2025</small></p>
+</div>
 
 ---
 

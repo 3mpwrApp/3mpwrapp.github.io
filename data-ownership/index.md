@@ -5,9 +5,27 @@ permalink: /data-ownership/
 description: Our unwavering commitment to 100% user data ownership and sovereignty.
 ---
 
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+</div>
+
 # 3mpwrApp — Data Ownership and Security Statement
 
 **Last updated:** October 25, 2025
+
+📖 **8 minute read** | ⚡ Quick summary below
+
+<details class="tldr-box" open>
+  <summary>⚡ Quick Summary (30 seconds)</summary>
+  <ul>
+    <li><strong>100% Ownership:</strong> Your data belongs entirely to YOU - not us, not anyone else</li>
+    <li><strong>Local-First:</strong> Everything stays on YOUR device by default</li>
+    <li><strong>We Can't See It:</strong> We don't collect, store, or access your data - ever</li>
+    <li><strong>BYOC Options:</strong> Choose your own cloud storage if you want backup</li>
+    <li><strong>Military Encryption:</strong> AES-256 encryption protects your data</li>
+    <li><strong>Delete Anytime:</strong> Full control to export or delete everything instantly</li>
+  </ul>
+</details>
 
 ## Our Commitment to 100% User Data Ownership
 
@@ -229,7 +247,29 @@ For questions about data ownership or to verify these claims:
 
 ---
 
+<div class="alternative-formats">
+  <p><strong>📄 Alternative Formats</strong></p>
+  <p>
+    <a href="/downloads/data-ownership.pdf" class="format-link">📄 Download as PDF</a>
+    <a href="javascript:window.print()" class="format-link">🖨️ Print-friendly version</a>
+    <a href="mailto:?subject=3mpwrApp Data Ownership Statement&body=Read about data ownership: https://3mpwrapp.pages.dev/data-ownership" class="format-link">📧 Email to yourself</a>
+  </p>
+</div>
+
+<div class="crisis-resources" role="alert">
+  <p><strong>🆘 Need immediate help?</strong></p>
+  <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
+</div>
+
+<div class="page-feedback">
+  <p><strong>Was this statement helpful?</strong></p>
+  <a href="/feedback?page=data-ownership&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
+  <a href="/feedback?page=data-ownership&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
+  <a href="/feedback?page=data-ownership&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  <p class="page-meta">Last updated: October 25, 2025 | Next review: December 2025</p>
+</div>
+
 *This statement represents our core commitment to user data sovereignty. Your privacy and data ownership are not just promises—they're technically guaranteed by our architecture.*
 
-**Version:** 2.0  
+**Version:** 2.0
 **Effective:** October 25, 2025

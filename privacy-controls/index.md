@@ -5,9 +5,27 @@ description: Take control of your privacy with 3mpwr App. Manage analytics, cras
 permalink: /privacy-controls/
 ---
 
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+</div>
+
 # Your Privacy & Data Controls
 
 **3mpwr App - Privacy First Design**
+
+📖 **7 minute read** | ⚡ Quick summary below
+
+<details class="tldr-box" open>
+  <summary>⚡ Quick Summary (30 seconds)</summary>
+  <ul>
+    <li><strong>One Place:</strong> All privacy settings in Settings → Privacy & Security</li>
+    <li><strong>You Choose:</strong> Toggle analytics, crash reports, search history on/off</li>
+    <li><strong>Opt-Out Anytime:</strong> Change your mind? Toggle instantly</li>
+    <li><strong>BYOC Control:</strong> Choose which cloud services to use (if any)</li>
+    <li><strong>Delete Everything:</strong> Export or delete all data with one tap</li>
+    <li><strong>Privacy by Default:</strong> Most restrictive settings are always available</li>
+  </ul>
+</details>
 
 ---
 
@@ -337,9 +355,29 @@ We only share data with essential service providers to make the app work. Here's
 
 ---
 
-**Last Updated:** October 25, 2025  
+<div class="alternative-formats">
+  <p><strong>📄 Alternative Formats</strong></p>
+  <p>
+    <a href="/downloads/privacy-controls.pdf" class="format-link">📄 Download as PDF</a>
+    <a href="javascript:window.print()" class="format-link">🖨️ Print-friendly version</a>
+    <a href="mailto:?subject=3mpwrApp Privacy Controls&body=Learn about privacy controls: https://3mpwrapp.pages.dev/privacy-controls" class="format-link">📧 Email to yourself</a>
+  </p>
+</div>
+
+<div class="crisis-resources" role="alert">
+  <p><strong>🆘 Need immediate help?</strong></p>
+  <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
+</div>
+
+<div class="page-feedback">
+  <p><strong>Was this guide helpful?</strong></p>
+  <a href="/feedback?page=privacy-controls&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
+  <a href="/feedback?page=privacy-controls&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
+  <a href="/feedback?page=privacy-controls&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  <p class="page-meta">Last updated: October 25, 2025 | Next review: December 2025</p>
+</div>
+
+**Last Updated:** October 25, 2025
 **App Version:** 3.2+
 
----
-
-*3mpwr App is committed to user privacy and data sovereignty. You control your data, always.*
+---*3mpwr App is committed to user privacy and data sovereignty. You control your data, always.*

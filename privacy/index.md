@@ -5,10 +5,37 @@ permalink: /privacy/
 description: Our commitment to your privacy and 100% user data ownership.
 ---
 
+<!-- Status Banner -->
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator">✅</span> 
+  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+</div>
+
 # 3mpwrApp Privacy Policy
+
+📖 **10 minute read** | ⚡ **Quick summary below**
 
 **Last updated: October 25, 2025**  
 **Version: 3.0**
+
+<!-- TL;DR Summary -->
+<details class="tldr-box" open>
+  <summary><strong>⚡ Quick Summary (30 seconds)</strong></summary>
+  <ul>
+    <li><strong>Your data = Your property.</strong> We never own, access, or sell your information.</li>
+    <li><strong>Everything stays on YOUR device</strong> unless you choose to sync to YOUR cloud.</li>
+    <li><strong>No tracking, no analytics, no hidden data collection.</strong></li>
+    <li><strong>Military-grade encryption</strong> protects everything.</li>
+    <li><strong>You can delete everything anytime</strong> - no questions asked.</li>
+    <li><strong>We can't see your data even if we wanted to</strong> - that's by design.</li>
+  </ul>
+</details>
+
+---
+
+> 💙 **Taking a break?** This page will be here when you're ready. Your wellbeing comes first.
+
+---
 
 This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and protects information in the 3mpwrApp mobile application and website. By using our services, you agree to these practices.
 
@@ -314,6 +341,40 @@ This policy reflects our actual technical implementation. You can verify our pri
 - Maintain local-first, privacy-by-design architecture
 - Give you full control over your information
 - Enable you to verify our privacy claims
+
+---
+
+<!-- Alternative Formats -->
+<div class="alternative-formats" role="complementary">
+  <p><strong>📱 Need this in a different format?</strong></p>
+  <p>
+    <a href="/pdfs/privacy-policy.pdf" class="format-link">📄 Download as PDF</a>
+    <a href="/print/privacy" class="format-link">🖨️ Print-friendly version</a>
+    <a href="mailto:?subject=3mpwrApp Privacy Policy&body=Check out the privacy policy: https://3mpwrapp.pages.dev/privacy/" class="format-link">📧 Email to yourself</a>
+  </p>
+</div>
+
+---
+
+<!-- Crisis Resources Banner -->
+<div class="crisis-resources" role="complementary" aria-label="Crisis support resources">
+  <strong>🆘 In Crisis?</strong> 
+  <a href="{{ '/crisis-resources' | relative_url }}">Get immediate help</a> | 
+  📞 <strong>Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a> (24/7, Free & Confidential)
+</div>
+
+---
+
+<!-- Page Feedback -->
+<div class="page-feedback" role="complementary">
+  <p><strong>💬 Was this page helpful?</strong></p>
+  <p>
+    <a href="{{ '/feedback?page=privacy&helpful=yes' | relative_url }}" class="feedback-btn feedback-yes">👍 Yes</a>
+    <a href="{{ '/feedback?page=privacy&helpful=no' | relative_url }}" class="feedback-btn feedback-no">👎 No</a>
+    <a href="{{ '/feedback?page=privacy' | relative_url }}" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  </p>
+  <p class="page-meta"><small>Last updated: October 25, 2025 | Next review: December 2025</small></p>
+</div>
 
 ---
 

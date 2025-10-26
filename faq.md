@@ -5,6 +5,28 @@ description: Common questions about 3mpwrApp - privacy, features, accessibility,
 permalink: /faq/
 ---
 
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+</div>
+
+# Frequently Asked Questions (FAQ)
+
+**Last Updated:** October 25, 2025
+
+📖 **15 minute read** | ⚡ Use table of contents to jump to your question
+
+<details class="tldr-box" open>
+  <summary>⚡ Most Common Questions</summary>
+  <ul>
+    <li><strong>Is it really free?</strong> Yes, 100% free forever - no subscriptions, no hidden costs</li>
+    <li><strong>Is my data private?</strong> Absolutely - your data stays on YOUR device, we can't see it</li>
+    <li><strong>Do I need to be tech-savvy?</strong> No - designed for all skill levels with step-by-step guides</li>
+    <li><strong>What about accessibility?</strong> 100% accessible - built by and for the disability community</li>
+    <li><strong>When can I join?</strong> Currently in closed beta - sign up at <a href="/beta">/beta</a></li>
+    <li><strong>Works in my province?</strong> Yes - supports all Canadian provinces and territories</li>
+  </ul>
+</details>
+
 # Frequently Asked Questions (FAQ)
 
 **Last Updated:** October 25, 2025
@@ -541,6 +563,28 @@ Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
 - [Roadmap](/roadmap) - What's coming next
 
 ---
+
+<div class="alternative-formats">
+  <p><strong>📄 Alternative Formats</strong></p>
+  <p>
+    <a href="/downloads/faq.pdf" class="format-link">📄 Download as PDF</a>
+    <a href="javascript:window.print()" class="format-link">🖨️ Print-friendly version</a>
+    <a href="mailto:?subject=3mpwrApp FAQ&body=Check out these FAQs: https://3mpwrapp.pages.dev/faq" class="format-link">📧 Email to yourself</a>
+  </p>
+</div>
+
+<div class="crisis-resources" role="alert">
+  <p><strong>🆘 Need immediate help?</strong></p>
+  <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
+</div>
+
+<div class="page-feedback">
+  <p><strong>Was this FAQ helpful?</strong></p>
+  <a href="/feedback?page=faq&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
+  <a href="/feedback?page=faq&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
+  <a href="/feedback?page=faq&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  <p class="page-meta">Last updated: October 25, 2025 | Next review: December 2025</p>
+</div>
 
 **3mpwrApp - Your voice, your power, your data.**
 

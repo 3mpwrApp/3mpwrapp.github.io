@@ -4,6 +4,26 @@ title: About
 description: Your voice, your power. Unfiltered. 3mpwrApp puts the power back in your hands - no shadow bans, no manipulation, no data mining.
 ---
 
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+</div>
+
+# Your voice, your power. Unfiltered.
+
+📖 **5 minute read**
+
+<details class="tldr-box" open>
+  <summary>⚡ Quick Summary (30 seconds)</summary>
+  <ul>
+    <li><strong>100% Free Forever:</strong> No subscriptions, no in-app purchases, no paid tiers - ever</li>
+    <li><strong>Community-Funded:</strong> Built BY the disability community, FOR the community</li>
+    <li><strong>Canadian Focus First:</strong> Serving all provinces/territories, understanding Canadian systems (WSIB/WCB)</li>
+    <li><strong>No Corporate Control:</strong> No venture capital, no profit motive - just community empowerment</li>
+    <li><strong>Privacy First:</strong> Your data stays on YOUR device - we can't see it</li>
+    <li><strong>Global Vision:</strong> Perfect it for Canada, then expand worldwide by 2026-2028</li>
+  </ul>
+</details>
+
 # Your voice, your power. Unfiltered.
 
 Big platforms silence stories through hidden algorithms and "relevance" scores. 3mpwrApp puts the power back in your hands - no shadow bans, no manipulation, no data mining. Just authentic connection, community, and truth.

@@ -4,7 +4,15 @@ title: Home
 description: A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.
 ---
 
+<!-- Status Banner -->
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator">✅</span> 
+  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+</div>
+
 # Welcome to 3mpwr App
+
+📖 **3 minute read**
 
 <strong>Connecting voices, empowering change.</strong>
 
@@ -295,4 +303,26 @@ Follow 3mpwr on social media to stay connected and be part of the community:
 
 <strong>Stay informed, empowered, and connected!</strong>
 
-Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we’re here to help.
+Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're here to help.
+
+---
+
+<!-- Crisis Resources Banner -->
+<div class="crisis-resources" role="complementary" aria-label="Crisis support resources">
+  <strong>🆘 In Crisis?</strong> 
+  <a href="{{ '/crisis-resources' | relative_url }}">Get immediate help</a> | 
+  📞 <strong>Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a> (24/7, Free & Confidential)
+</div>
+
+---
+
+<!-- Page Feedback -->
+<div class="page-feedback" role="complementary">
+  <p><strong>💬 Was this page helpful?</strong></p>
+  <p>
+    <a href="{{ '/feedback?page=home&helpful=yes' | relative_url }}" class="feedback-btn feedback-yes">👍 Yes</a>
+    <a href="{{ '/feedback?page=home&helpful=no' | relative_url }}" class="feedback-btn feedback-no">👎 No</a>
+    <a href="{{ '/feedback?page=home' | relative_url }}" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  </p>
+  <p class="page-meta"><small>Last updated: October 25, 2025 | Next review: December 2025</small></p>
+</div>
