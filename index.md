@@ -484,8 +484,10 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   'use strict';
   
   // ============================================
-  // 1. RANDOM ENCOURAGING MESSAGES
+  // 1. RANDOM ENCOURAGING MESSAGES (3 CATEGORIES)
   // ============================================
+  
+  // Category 1: Supportive Encouragements
   const encouragements = [
     "💪 You're doing great!",
     "🌟 Your presence here matters",
@@ -496,21 +498,67 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     "💙 Take your time - there's no rush here",
     "🎯 You're exactly where you need to be",
     "🌻 Progress isn't always linear, and that's okay",
-    "💫 You deserve support and dignity"
+    "💫 You deserve support and dignity",
+    "🦋 Your healing isn't a race",
+    "🌱 Small steps forward are still progress",
+    "💖 You're worthy exactly as you are",
+    "🎨 Your unique perspective makes our community stronger",
+    "🌺 Rest is productive too"
   ];
+  
+  // Category 2: Website & App Fun Facts
+  const websiteTidbits = [
+    "💡 Did you know? This site has 15+ hidden accessibility features!",
+    "🎯 Fun fact: We track your reading progress so you never lose your place",
+    "✨ Secret: Try the Konami Code (↑↑↓↓←→←→BA) for a surprise!",
+    "🔍 Tip: Click the logo 10 times fast to unlock Power User Mode",
+    "🧠 Feature: Our Brain Fog Helper condenses info when you're overwhelmed",
+    "💙 Built with love: Every feature was requested by community members like you",
+    "🎮 Easter egg alert: This site has 8 hidden surprises waiting to be found!",
+    "📱 Coming soon: The mobile app will have voice-to-text for easier navigation",
+    "🌙 Smart feature: We remember if you prefer dark mode across visits",
+    "⚡ Pro tip: Press '?' to see all keyboard shortcuts",
+    "🎨 Design choice: Our color palette was tested for optimal accessibility",
+    "💚 Community-driven: Over 200 features suggested and implemented by users",
+    "🧩 Helpful: The Chunking feature breaks long content into bite-sized pieces",
+    "🥄 Spoon counter: We track your energy usage as you browse - it's okay to take breaks!",
+    "🔔 Thoughtful: Our time-aware features check in based on how long you've been reading"
+  ];
+  
+  // Category 3: Disability Movement Facts & Current Issues
+  const movementFacts = [
+    "📊 Fact: 1 in 4 Canadian adults live with a disability - that's 6.2 million people",
+    "✊ History: The disability rights movement coined 'Nothing About Us Without Us' in the 1990s",
+    "🏛️ Progress: The AODA was passed in 2005, but full accessibility isn't required until 2025",
+    "💼 Reality: Disabled Canadians face a 59% employment rate vs 80% for non-disabled people",
+    "🌍 Movement: October is Disability Employment Awareness Month across Canada",
+    "⚖️ Know your rights: Workplace accommodation is legally required under human rights law",
+    "📈 Change happening: Federal accessibility legislation (ACA) passed in 2019",
+    "💪 Solidarity: The labour movement and disability rights movement are natural allies",
+    "🎓 Did you know: Disabled people are more likely to have post-secondary education than the general population",
+    "🏥 Healthcare gap: Disabled Canadians report more unmet healthcare needs than others",
+    "💰 Income disparity: Median income for disabled Canadians is 28% lower than non-disabled",
+    "🏗️ Workplace injury: 1,000+ Canadian workers are injured on the job every day",
+    "📜 Historic win: BC's WorkSafeBC recently expanded mental health injury coverage",
+    "🌟 Representation matters: Only 5% of Canadian elected officials identify as disabled",
+    "🚀 Future focus: AI and automation could create more inclusive job opportunities - or more barriers"
+  ];
+  
+  // Combine all messages into one pool
+  const allMessages = [...encouragements, ...websiteTidbits, ...movementFacts];
   
   function showRandomEncouragement() {
     const banner = document.getElementById('encouragementBanner');
     const text = document.getElementById('encouragementText');
     if (banner && text) {
-      const randomMsg = encouragements[Math.floor(Math.random() * encouragements.length)];
+      const randomMsg = allMessages[Math.floor(Math.random() * allMessages.length)];
       text.textContent = randomMsg;
       banner.style.display = 'block';
       
-      // Auto-hide after 8 seconds
+      // Auto-hide after 10 seconds (longer for facts)
       setTimeout(() => {
         banner.style.display = 'none';
-      }, 8000);
+      }, 10000);
     }
   }
   
