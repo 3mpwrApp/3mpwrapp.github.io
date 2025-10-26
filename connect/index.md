@@ -49,7 +49,7 @@ permalink: /connect/
   </ul>
 </details>
 
-<div style="background: #dcfce7; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
+<div style="background: #dcfce7; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 4px; color: #000;">
   🌱 <strong>We're Growing:</strong> 3mpwrApp is a grassroots project built BY disabled people and injured workers FOR the community. We're just getting started and open to meaningful connections!
 </div>
 

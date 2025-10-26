@@ -49,8 +49,8 @@ permalink: /community-spotlight/
   </ul>
 </details>
 
-<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
-  ⭐ <strong>Want to be featured?</strong> We celebrate all forms of activism - online posts, rally attendance, peer support, storytelling, and more. <a href="#submit-your-story">Submit your story →</a>
+<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 4px; color: #000;">
+  ⭐ <strong>Want to be featured?</strong> We celebrate all forms of activism - online posts, rally attendance, peer support, storytelling, and more. <a href="#submit-your-story" style="color: #0066cc;">Submit your story →</a>
 </div>
 
 ---
@@ -59,11 +59,11 @@ permalink: /community-spotlight/
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
-<div style="background: #dcfce7; border-left: 4px solid #22c55e; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center;">
-  <h3 style="margin-top: 0;">🌟 Community Profiles Coming Soon!</h3>
-  <p style="font-size: 1.1rem; margin-bottom: 1rem;"><strong>This space is reserved for YOU and your fellow advocates!</strong></p>
-  <p>We'll be featuring:</p>
-  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+<div style="background: #dcfce7; border-left: 4px solid #22c55e; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center; color: #000;">
+  <h3 style="margin-top: 0; color: #000;">🌟 Community Profiles Coming Soon!</h3>
+  <p style="font-size: 1.1rem; margin-bottom: 1rem; color: #000;"><strong>This space is reserved for YOU and your fellow advocates!</strong></p>
+  <p style="color: #000;">We'll be featuring:</p>
+  <ul style="text-align: left; max-width: 600px; margin: 1rem auto; color: #000;">
     <li>🎤 Disability rights activists</li>
     <li>💪 Injured worker advocates</li>
     <li>📱 Social media champions</li>
@@ -74,15 +74,15 @@ permalink: /community-spotlight/
     <li>👥 Union organizers and labor activists</li>
     <li>🌐 Community builders</li>
   </ul>
-  <p style="margin-top: 1.5rem;"><strong>Profiles will include:</strong></p>
-  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+  <p style="margin-top: 1.5rem; color: #000;"><strong>Profiles will include:</strong></p>
+  <ul style="text-align: left; max-width: 600px; margin: 1rem auto; color: #000;">
     <li>📖 Your story and impact</li>
     <li>🔗 Links to your website/social media</li>
     <li>🎯 Your advocacy focus areas</li>
     <li>💬 Quotes and insights</li>
     <li>📊 Your contributions to the movement</li>
   </ul>
-  <p style="margin-top: 1.5rem;"><em>Real people, real stories, real impact. <a href="#submit-your-story">Be the first to be featured!</a></em></p>
+  <p style="margin-top: 1.5rem; color: #000;"><em>Real people, real stories, real impact. <a href="#submit-your-story" style="color: #0066cc;">Be the first to be featured!</a></em></p>
 </div>
 
 ---
@@ -141,13 +141,13 @@ permalink: /community-spotlight/
 
 ## 📝 Submit Your Story {#submit-your-story}
 
-<div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 8px; padding: 1.25rem; margin: 2rem 0;">
-  <h3 style="margin-top: 0;">🌟 Want to Be Featured?</h3>
+<div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 8px; padding: 1.25rem; margin: 2rem 0; color: #000;">
+  <h3 style="margin-top: 0; color: #000;">🌟 Want to Be Featured?</h3>
   
-  <p><strong>We want to hear about YOUR activism!</strong></p>
+  <p style="color: #000;"><strong>We want to hear about YOUR activism!</strong></p>
   
-  <p><strong>Tell us about:</strong></p>
-  <ul>
+  <p style="color: #000;"><strong>Tell us about:</strong></p>
+  <ul style="color: #000;">
     <li>📱 Your social media advocacy work</li>
     <li>📣 Rallies or events you've organized</li>
     <li>🤝 Peer support you've provided</li>
@@ -158,8 +158,8 @@ permalink: /community-spotlight/
     <li>🎓 Educational efforts</li>
   </ul>
   
-  <p><strong>What to include:</strong></p>
-  <ul>
+  <p style="color: #000;"><strong>What to include:</strong></p>
+  <ul style="color: #000;">
     <li>📖 Your name and pronouns (if comfortable sharing)</li>
     <li>📍 Your location (city/province is fine)</li>
     <li>🎯 Your advocacy focus areas</li>
@@ -169,11 +169,11 @@ permalink: /community-spotlight/
     <li>💬 A quote about why you do this work</li>
   </ul>
   
-  <p><strong>Submit your story:</strong></p>
-  <p>📧 Email: <a href="mailto:empowrapp08162025@gmail.com">empowrapp08162025@gmail.com</a></p>
-  <p>📝 Subject line: "Community Spotlight Submission"</p>
+  <p style="color: #000;"><strong>Submit your story:</strong></p>
+  <p style="color: #000;">📧 Email: <a href="mailto:empowrapp08162025@gmail.com" style="color: #0066cc;">empowrapp08162025@gmail.com</a></p>
+  <p style="color: #000;">📝 Subject line: "Community Spotlight Submission"</p>
   
-  <p><em>We feature new advocates monthly. Your story inspires others!</em></p>
+  <p style="color: #000;"><em>We feature new advocates monthly. Your story inspires others!</em></p>
 </div>
 
 ---

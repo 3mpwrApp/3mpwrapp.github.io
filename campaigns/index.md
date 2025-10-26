@@ -49,7 +49,7 @@ permalink: /campaigns/
   </ul>
 </details>
 
-<div style="background: #dcfce7; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
+<div style="background: #dcfce7; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 4px; color: #000;">
   🚀 <strong>App-Powered Organizing:</strong> This page will automatically sync with campaigns and events created in our app. Community-led, instantly published, fully accessible.
 </div>
 
@@ -59,11 +59,11 @@ permalink: /campaigns/
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center;">
-  <h3 style="margin-top: 0;">🚀 Campaigns Coming Soon!</h3>
-  <p style="font-size: 1.1rem; margin-bottom: 1rem;"><strong>When our app launches, this space will come alive with community-created campaigns!</strong></p>
+<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center; color: #000;">
+  <h3 style="margin-top: 0; color: #000;">🚀 Campaigns Coming Soon!</h3>
+  <p style="font-size: 1.1rem; margin-bottom: 1rem; color: #000;"><strong>When our app launches, this space will come alive with community-created campaigns!</strong></p>
   <p>Community members will be able to:</p>
-  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+  <ul style="text-align: left; max-width: 600px; margin: 1rem auto; color: #000;">
     <li>🎯 Create campaigns directly in the app</li>
     <li>📱 Set campaigns as public to appear here automatically</li>
     <li>📊 Track petition signatures and participation</li>
@@ -71,7 +71,7 @@ permalink: /campaigns/
     <li>🤝 Connect with other advocates</li>
     <li>💪 Amplify grassroots movements</li>
   </ul>
-  <p style="margin-top: 1.5rem;"><em>Stay tuned - powerful organizing tools are on the way!</em></p>
+  <p style="margin-top: 1.5rem; color: #000;"><em>Stay tuned - powerful organizing tools are on the way!</em></p>
 </div>
 
 ---
@@ -80,11 +80,11 @@ permalink: /campaigns/
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center;">
-  <h3 style="margin-top: 0;">📆 Events Auto-Sync</h3>
-  <p style="font-size: 1.1rem;"><strong>This section will automatically populate with community events!</strong></p>
+<div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; text-align: center; color: #000;">
+  <h3 style="margin-top: 0; color: #000;">📆 Events Auto-Sync</h3>
+  <p style="font-size: 1.1rem; color: #000;"><strong>This section will automatically populate with community events!</strong></p>
   <p>Once the app is live, any event created in-app and marked as "public" will instantly appear here, complete with:</p>
-  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+  <ul style="text-align: left; max-width: 600px; margin: 1rem auto; color: #000;">
     <li>📍 Location and virtual attendance options</li>
     <li>♿ Full accessibility details (wheelchair access, ASL, quiet rooms, etc.)</li>
     <li>🔋 Energy cost indicators</li>
@@ -92,7 +92,7 @@ permalink: /campaigns/
     <li>📅 Automatic calendar sync</li>
     <li>🔔 Event reminders and updates</li>
   </ul>
-  <p style="margin-top: 1.5rem;"><em>Community-organized, automatically synced, fully accessible.</em></p>
+  <p style="margin-top: 1.5rem; color: #000;"><em>Community-organized, automatically synced, fully accessible.</em></p>
 </div>
 
 ---
@@ -128,11 +128,11 @@ permalink: /campaigns/
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-<div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 8px; padding: 1.25rem; margin: 2rem 0;">
-  <h3 style="margin-top: 0;">📍 Who Represents You?</h3>
+<div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 8px; padding: 1.25rem; margin: 2rem 0; color: #000;">
+  <h3 style="margin-top: 0; color: #000;">📍 Who Represents You?</h3>
   
-  <p><strong>When our app launches, Rep Tracker will automatically:</strong></p>
-  <ul>
+  <p style="color: #000;"><strong>When our app launches, Rep Tracker will automatically:</strong></p>
+  <ul style="color: #000;">
     <li>🗺️ Detect your location</li>
     <li>👤 Show your federal MP, provincial MPP/MLA, and municipal councillor</li>
     <li>📊 Display their voting record on disability/workers' rights issues</li>
@@ -142,8 +142,8 @@ permalink: /campaigns/
     <li>📈 Track response rates: "This MPP responds to 78% of disability rights emails"</li>
   </ul>
   
-  <p><strong>Make advocacy effortless:</strong></p>
-  <ul>
+  <p style="color: #000;"><strong>Make advocacy effortless:</strong></p>
+  <ul style="color: #000;">
     <li>✅ No more searching for who to contact</li>
     <li>✅ Know their track record before you reach out</li>
     <li>✅ Pre-written messages save your energy</li>
@@ -151,9 +151,9 @@ permalink: /campaigns/
     <li>✅ Coordinate community campaigns targeting same reps</li>
   </ul>
   
-  <p style="margin-top: 1.5rem;"><strong>Example:</strong> "Your MPP is Jane Smith. She voted FOR accessible transit bill. Here's a thank-you email template to send."</p>
+  <p style="margin-top: 1.5rem; color: #000;"><strong>Example:</strong> "Your MPP is Jane Smith. She voted FOR accessible transit bill. Here's a thank-you email template to send."</p>
   
-  <p><em>Coming soon in the app - political advocacy made accessible!</em></p>
+  <p style="color: #000;"><em>Coming soon in the app - political advocacy made accessible!</em></p>
 </div>
 
 ### Manual Representative Search (While We Build)
@@ -369,7 +369,7 @@ permalink: /campaigns/
 
 ---
 
-<div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1.5rem 0; border-radius: 4px;">
+<div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1.5rem 0; border-radius: 4px; color: #000;">
   💙 <strong>Accessibility Commitment:</strong> Every campaign and event will include full accessibility details - wheelchair access, ASL interpretation, quiet rooms, virtual options, energy costs, and more. Accessibility is not optional; it's mandatory.
 </div>
 
