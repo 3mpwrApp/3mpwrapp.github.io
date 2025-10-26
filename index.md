@@ -453,9 +453,20 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 
 ---
 
-<!-- Encouraging Messages (Random Display) -->
-<div class="encouragement-banner" id="encouragementBanner" style="display:none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
-  <span id="encouragementText"></span>
+<!-- Encouraging Messages (3 Rotating Boxes) -->
+<div class="encouragement-banner encouragement-support" id="encouragementSupport" style="display:none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
+  <span class="category-label" style="display: block; font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.25rem;">💚 Words of Support</span>
+  <span id="encouragementSupportText"></span>
+</div>
+
+<div class="encouragement-banner encouragement-tidbits" id="encouragementTidbits" style="display:none; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
+  <span class="category-label" style="display: block; font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.25rem;">💡 Did You Know?</span>
+  <span id="encouragementTidbitsText"></span>
+</div>
+
+<div class="encouragement-banner encouragement-facts" id="encouragementFacts" style="display:none; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-size: 1.1rem;" role="status" aria-live="polite">
+  <span class="category-label" style="display: block; font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.25rem;">✊ Disability Justice Facts</span>
+  <span id="encouragementFactsText"></span>
 </div>
 
 <!-- Community Counter -->
@@ -484,10 +495,10 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   'use strict';
   
   // ============================================
-  // 1. RANDOM ENCOURAGING MESSAGES (3 CATEGORIES)
+  // 1. RANDOM ENCOURAGING MESSAGES (3 SEPARATE BOXES)
   // ============================================
   
-  // Category 1: Supportive Encouragements
+  // Category 1: Supportive Encouragements (Purple/Pink Box)
   const encouragements = [
     "💪 You're doing great!",
     "🌟 Your presence here matters",
@@ -503,71 +514,145 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     "🌱 Small steps forward are still progress",
     "💖 You're worthy exactly as you are",
     "🎨 Your unique perspective makes our community stronger",
-    "🌺 Rest is productive too"
+    "🌺 Rest is productive too",
+    "🏆 Every small win counts - celebrate yourself",
+    "🤗 You're doing better than you think",
+    "💝 Be gentle with yourself today",
+    "🌸 Your journey is uniquely yours",
+    "⭐ You're more resilient than you realize",
+    "💕 Self-compassion is a superpower",
+    "🎭 It's okay to not be okay sometimes",
+    "🌻 Your feelings are valid",
+    "🦋 Breathe. You've got this.",
+    "💚 You're exactly where you need to be right now"
   ];
   
-  // Category 2: Website & App Fun Facts
+  // Category 2: Website & App Features (Blue/Cyan Box) - REAL FEATURES FROM THIS SITE
   const websiteTidbits = [
-    "💡 Did you know? This site has 15+ hidden accessibility features!",
-    "🎯 Fun fact: We track your reading progress so you never lose your place",
-    "✨ Secret: Try the Konami Code (↑↑↓↓←→←→BA) for a surprise!",
-    "🔍 Tip: Click the logo 10 times fast to unlock Power User Mode",
-    "🧠 Feature: Our Brain Fog Helper condenses info when you're overwhelmed",
-    "💙 Built with love: Every feature was requested by community members like you",
-    "🎮 Easter egg alert: This site has 8 hidden surprises waiting to be found!",
-    "📱 Coming soon: The mobile app will have voice-to-text for easier navigation",
-    "🌙 Smart feature: We remember if you prefer dark mode across visits",
-    "⚡ Pro tip: Press '?' to see all keyboard shortcuts",
-    "🎨 Design choice: Our color palette was tested for optimal accessibility",
-    "💚 Community-driven: Over 200 features suggested and implemented by users",
-    "🧩 Helpful: The Chunking feature breaks long content into bite-sized pieces",
-    "🥄 Spoon counter: We track your energy usage as you browse - it's okay to take breaks!",
-    "🔔 Thoughtful: Our time-aware features check in based on how long you've been reading"
+    "� Feature: 'Need a break?' button dims your screen for 5 minutes - found at top of page",
+    "🔥 Feature: 'Pain flare mode' switches to minimal interaction - perfect for tough days",
+    "😰 Feature: 'I'm overwhelmed' simplifies the entire page instantly",
+    "❄️ Feature: 'Freeze animations' stops all movement on the page for sensory relief",
+    "� Feature: 'Too much text?' shows only bullet points - cognitive load helper",
+    "🧠 Feature: 'Brain fog helper' gives you quick summaries when you can't focus",
+    "📖 Feature: 'Resume reading' remembers where you left off - never lose your place",
+    "� Feature: 'I saw it somewhere...' shows everywhere you've been on this page",
+    "🧩 Feature: 'Chunk content' breaks long pages into bite-sized pieces",
+    "� Feature: 'Decision helper' guides you when you're feeling stuck",
+    "🧘 Feature: 'Grounding exercise' provides quick anxiety relief - try it when stressed",
+    "✨ Feature: Sensory preferences include reduced motion, high contrast & minimal modes",
+    "📚 Feature: Reading level toggle switches between detailed and simple language",
+    "📖 Feature: Dyslexia mode with custom font, spacing & full dyslexia-friendly formatting",
+    "🥄 Feature: Spoon counter tracks your energy usage as you browse - built-in pacing",
+    "🌡️ Feature: Cognitive load indicator changes color based on how long you've been reading",
+    "⏰ Feature: Time tracking shows minutes spent on page - time blindness support",
+    "📊 Feature: Progress bar shows how far through the page you are",
+    "📧 Feature: 'Email this section' buttons let you send info to yourself",
+    "🔋 Feature: Energy cost indicators on each section - plan your reading",
+    "💾 Feature: We auto-save your scroll position every 2 seconds",
+    "🎮 Secret: Try the Konami Code (↑↑↓↓←→←→BA) for confetti celebration!",
+    "� Secret: Click the logo 10 times fast to unlock Power User Mode",
+    "⌨️ Secret: Press '?' to see all keyboard shortcuts",
+    "🌙 Smart: We remember your dark mode preference across visits"
   ];
   
-  // Category 3: Disability Movement Facts & Current Issues
+  // Category 3: Disability Movement Facts (Pink/Red Box) - VERIFIED CANADIAN STATISTICS
   const movementFacts = [
-    "📊 Fact: 1 in 4 Canadian adults live with a disability - that's 6.2 million people",
-    "✊ History: The disability rights movement coined 'Nothing About Us Without Us' in the 1990s",
-    "🏛️ Progress: The AODA was passed in 2005, but full accessibility isn't required until 2025",
-    "💼 Reality: Disabled Canadians face a 59% employment rate vs 80% for non-disabled people",
-    "🌍 Movement: October is Disability Employment Awareness Month across Canada",
-    "⚖️ Know your rights: Workplace accommodation is legally required under human rights law",
-    "📈 Change happening: Federal accessibility legislation (ACA) passed in 2019",
-    "💪 Solidarity: The labour movement and disability rights movement are natural allies",
-    "🎓 Did you know: Disabled people are more likely to have post-secondary education than the general population",
-    "🏥 Healthcare gap: Disabled Canadians report more unmet healthcare needs than others",
-    "💰 Income disparity: Median income for disabled Canadians is 28% lower than non-disabled",
-    "🏗️ Workplace injury: 1,000+ Canadian workers are injured on the job every day",
-    "📜 Historic win: BC's WorkSafeBC recently expanded mental health injury coverage",
-    "🌟 Representation matters: Only 5% of Canadian elected officials identify as disabled",
-    "🚀 Future focus: AI and automation could create more inclusive job opportunities - or more barriers"
+    "📊 Fact: 6.2 million Canadians (22% of adults) live with disability - that's 1 in 4 people (Stats Canada 2017)",
+    "💼 Fact: Disabled Canadians face 59% employment rate vs 80% for non-disabled (Stats Canada)",
+    "💰 Fact: Median income for disabled working-age Canadians is 28% lower ($28,600 vs $40,000)",
+    "🏥 Fact: 33% of disabled Canadians report unmet healthcare needs vs 18% of non-disabled",
+    "📉 Fact: Disabled Canadians are 1.9x more likely to live in poverty than non-disabled",
+    "🎓 Fact: 41% of disabled Canadians have post-secondary education - higher than you'd think!",
+    "�️ Fact: Over 250,000 workplace injuries happen in Canada annually (AWCBC)",
+    "⚖️ History: The AODA (Accessibility for Ontarians with Disabilities Act) passed in 2005",
+    "📜 History: Canada's Accessible Canada Act (Bill C-81) passed in 2019",
+    "✊ History: 'Nothing About Us Without Us' coined by disability rights movement in 1990s",
+    "🏛️ Progress: Full AODA compliance not required until 2025 - 20 years after passage",
+    "� Reality: Disabled people face 2x unemployment rate even with same qualifications",
+    "🏥 Reality: Mental health conditions are the #1 cause of workplace disability in Canada",
+    "📈 Change: BC's WorkSafeBC expanded mental health injury coverage in recent years",
+    "🌍 Awareness: October is Disability Employment Awareness Month across Canada",
+    "🎯 Rights: Workplace accommodation is legally required under Canadian human rights law",
+    "� Gap: Only 34% of employers have formal accommodation policies (Conference Board)",
+    "🏢 Barrier: 60% of disabled Canadians report workplace discrimination (Angus Reid)",
+    "� Representation: Only 5% of Canadian elected officials identify as disabled",
+    "🤝 Alliance: Labour unions and disability rights movements share common goals",
+    "� ODSP: Ontario Disability Support provides max $1,308/month - below poverty line",
+    "💸 CPP-D: Canada Pension Plan Disability averages $1,100/month after years of contributions",
+    "⏰ Wait times: ODSP applications take 90-120 days; CPP-D takes 120+ days on average",
+    "📉 Approval: CPP-D approval rate is only 50% on first application - many need appeals",
+    "🚀 Future: AI and automation could create OR eliminate accessible job opportunities"
   ];
   
-  // Combine all messages into one pool
-  const allMessages = [...encouragements, ...websiteTidbits, ...movementFacts];
-  
+  // Show messages in separate colored boxes
   function showRandomEncouragement() {
-    const banner = document.getElementById('encouragementBanner');
-    const text = document.getElementById('encouragementText');
-    if (banner && text) {
-      const randomMsg = allMessages[Math.floor(Math.random() * allMessages.length)];
-      text.textContent = randomMsg;
-      banner.style.display = 'block';
+    const supportBanner = document.getElementById('encouragementSupport');
+    const supportText = document.getElementById('encouragementSupportText');
+    
+    if (supportBanner && supportText) {
+      const randomMsg = encouragements[Math.floor(Math.random() * encouragements.length)];
+      supportText.textContent = randomMsg;
+      supportBanner.style.display = 'block';
       
-      // Auto-hide after 10 seconds (longer for facts)
       setTimeout(() => {
-        banner.style.display = 'none';
+        supportBanner.style.display = 'none';
       }, 10000);
     }
   }
   
-  // Show encouragement at random intervals (between 30-90 seconds)
+  function showRandomTidbit() {
+    const tidbitsBanner = document.getElementById('encouragementTidbits');
+    const tidbitsText = document.getElementById('encouragementTidbitsText');
+    
+    if (tidbitsBanner && tidbitsText) {
+      const randomMsg = websiteTidbits[Math.floor(Math.random() * websiteTidbits.length)];
+      tidbitsText.textContent = randomMsg;
+      tidbitsBanner.style.display = 'block';
+      
+      setTimeout(() => {
+        tidbitsBanner.style.display = 'none';
+      }, 12000); // Longer for reading features
+    }
+  }
+  
+  function showRandomFact() {
+    const factsBanner = document.getElementById('encouragementFacts');
+    const factsText = document.getElementById('encouragementFactsText');
+    
+    if (factsBanner && factsText) {
+      const randomMsg = movementFacts[Math.floor(Math.random() * movementFacts.length)];
+      factsText.textContent = randomMsg;
+      factsBanner.style.display = 'block';
+      
+      setTimeout(() => {
+        factsBanner.style.display = 'none';
+      }, 15000); // Longest for reading statistics
+    }
+  }
+  
+  // Schedule different boxes at different intervals
   function scheduleEncouragement() {
-    const delay = Math.floor(Math.random() * 60000) + 30000; // 30-90 seconds
+    const delay = Math.floor(Math.random() * 45000) + 30000; // 30-75 seconds
     setTimeout(() => {
       showRandomEncouragement();
-      scheduleEncouragement(); // Schedule next one
+      scheduleEncouragement();
+    }, delay);
+  }
+  
+  function scheduleTidbits() {
+    const delay = Math.floor(Math.random() * 50000) + 40000; // 40-90 seconds
+    setTimeout(() => {
+      showRandomTidbit();
+      scheduleTidbits();
+    }, delay);
+  }
+  
+  function scheduleFacts() {
+    const delay = Math.floor(Math.random() * 55000) + 50000; // 50-105 seconds
+    setTimeout(() => {
+      showRandomFact();
+      scheduleFacts();
     }, delay);
   }
   
@@ -576,10 +661,10 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   // ============================================
   function showTimeBasedMessage() {
     const hour = new Date().getHours();
-    const banner = document.getElementById('encouragementBanner');
-    const text = document.getElementById('encouragementText');
+    const supportBanner = document.getElementById('encouragementSupport');
+    const supportText = document.getElementById('encouragementSupportText');
     
-    if (banner && text) {
+    if (supportBanner && supportText) {
       let message = '';
       
       if (hour >= 0 && hour < 5) {
@@ -593,9 +678,9 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
       }
       
       if (message) {
-        text.textContent = message;
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 10000);
+        supportText.textContent = message;
+        supportBanner.style.display = 'block';
+        setTimeout(() => { supportBanner.style.display = 'none'; }, 10000);
       }
     }
   }
@@ -608,26 +693,26 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     visits++;
     localStorage.setItem('3mpwr_visits', visits.toString());
     
-    const banner = document.getElementById('encouragementBanner');
-    const text = document.getElementById('encouragementText');
+    const supportBanner = document.getElementById('encouragementSupport');
+    const supportText = document.getElementById('encouragementSupportText');
     
-    if (banner && text) {
+    if (supportBanner && supportText) {
       if (visits === 1) {
-        text.textContent = "🎉 Welcome! We're so glad you're here!";
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+        supportText.textContent = "🎉 Welcome! We're so glad you're here!";
+        supportBanner.style.display = 'block';
+        setTimeout(() => { supportBanner.style.display = 'none'; }, 8000);
       } else if (visits === 5) {
-        text.textContent = "❤️ You're becoming part of the family! (5 visits)";
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+        supportText.textContent = "❤️ You're becoming part of the family! (5 visits)";
+        supportBanner.style.display = 'block';
+        setTimeout(() => { supportBanner.style.display = 'none'; }, 8000);
       } else if (visits === 10) {
-        text.textContent = "🏆 You're a regular! (10 visits) - Thank you for being here!";
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+        supportText.textContent = "🏆 You're a regular! (10 visits) - Thank you for being here!";
+        supportBanner.style.display = 'block';
+        setTimeout(() => { supportBanner.style.display = 'none'; }, 8000);
       } else if (visits % 25 === 0) {
-        text.textContent = `🌟 Amazing! ${visits} visits! You're truly part of our community.`;
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+        supportText.textContent = `🌟 Amazing! ${visits} visits! You're truly part of our community.`;
+        supportBanner.style.display = 'block';
+        setTimeout(() => { supportBanner.style.display = 'none'; }, 8000);
       }
     }
   }
@@ -642,12 +727,12 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     const elapsed = Math.floor((Date.now() - readingStartTime) / 60000); // minutes
     
     if (elapsed === 5 && !hasShownMilestone) {
-      const banner = document.getElementById('encouragementBanner');
-      const text = document.getElementById('encouragementText');
-      if (banner && text) {
-        text.textContent = "🧘 You've been reading for 5 minutes. Remember to breathe and stretch!";
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 8000);
+      const supportBanner = document.getElementById('encouragementSupport');
+      const supportText = document.getElementById('encouragementSupportText');
+      if (supportBanner && supportText) {
+        supportText.textContent = "🧘 You've been reading for 5 minutes. Remember to breathe and stretch!";
+        supportBanner.style.display = 'block';
+        setTimeout(() => { supportBanner.style.display = 'none'; }, 8000);
         hasShownMilestone = true;
       }
     }
@@ -663,20 +748,20 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   
   function trackScrollDepth() {
     const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-    const banner = document.getElementById('encouragementBanner');
-    const text = document.getElementById('encouragementText');
+    const supportBanner = document.getElementById('encouragementSupport');
+    const supportText = document.getElementById('encouragementSupportText');
     
-    if (scrollPercent >= 50 && !hasShown50Percent && banner && text) {
-      text.textContent = "💪 You're halfway through! Keep going!";
-      banner.style.display = 'block';
-      setTimeout(() => { banner.style.display = 'none'; }, 6000);
+    if (scrollPercent >= 50 && !hasShown50Percent && supportBanner && supportText) {
+      supportText.textContent = "💪 You're halfway through! Keep going!";
+      supportBanner.style.display = 'block';
+      setTimeout(() => { supportBanner.style.display = 'none'; }, 6000);
       hasShown50Percent = true;
     }
     
-    if (scrollPercent >= 95 && !hasShown100Percent && banner && text) {
-      text.textContent = "🎉 You made it to the end! Great job!";
-      banner.style.display = 'block';
-      setTimeout(() => { banner.style.display = 'none'; }, 8000);
+    if (scrollPercent >= 95 && !hasShown100Percent && supportBanner && supportText) {
+      supportText.textContent = "🎉 You made it to the end! Great job!";
+      supportBanner.style.display = 'block';
+      setTimeout(() => { supportBanner.style.display = 'none'; }, 8000);
       hasShown100Percent = true;
     }
   }
@@ -755,12 +840,12 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     }
     
     // Show secret message
-    const banner = document.getElementById('encouragementBanner');
-    const text = document.getElementById('encouragementText');
-    if (banner && text) {
-      text.textContent = "🎮 You found the secret! You're awesome! - The 3mpwrApp Team 💚";
-      banner.style.display = 'block';
-      setTimeout(() => { banner.style.display = 'none'; }, 10000);
+    const supportBanner = document.getElementById('encouragementSupport');
+    const supportText = document.getElementById('encouragementSupportText');
+    if (supportBanner && supportText) {
+      supportText.textContent = "🎮 You found the secret! You're awesome! - The 3mpwrApp Team 💚";
+      supportBanner.style.display = 'block';
+      setTimeout(() => { supportBanner.style.display = 'none'; }, 10000);
     }
   }
   
@@ -779,12 +864,12 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
       
       if (logoClicks === 10) {
         e.preventDefault();
-        const banner = document.getElementById('encouragementBanner');
-        const text = document.getElementById('encouragementText');
-        if (banner && text) {
-          text.textContent = "⚡ Power User Mode Unlocked! Press '?' to see all keyboard shortcuts.";
-          banner.style.display = 'block';
-          setTimeout(() => { banner.style.display = 'none'; }, 10000);
+        const tidbitsBanner = document.getElementById('encouragementTidbits');
+        const tidbitsText = document.getElementById('encouragementTidbitsText');
+        if (tidbitsBanner && tidbitsText) {
+          tidbitsText.textContent = "⚡ Power User Mode Unlocked! Press '?' to see all keyboard shortcuts.";
+          tidbitsBanner.style.display = 'block';
+          setTimeout(() => { tidbitsBanner.style.display = 'none'; }, 10000);
         }
         logoClicks = 0;
       }
@@ -800,16 +885,16 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   document.addEventListener('keydown', function(e) {
     if (e.key === '?' || e.key === '/') {
       e.preventDefault();
-      const banner = document.getElementById('encouragementBanner');
-      const text = document.getElementById('encouragementText');
-      if (banner && text) {
-        text.innerHTML = `
+      const tidbitsBanner = document.getElementById('encouragementTidbits');
+      const tidbitsText = document.getElementById('encouragementTidbitsText');
+      if (tidbitsBanner && tidbitsText) {
+        tidbitsText.innerHTML = `
           <strong>⌨️ Keyboard Shortcuts:</strong><br>
           ? = Show shortcuts | Esc = Close menus | Space = Scroll down | Shift+Space = Scroll up | 
           Home = Top of page | End = Bottom of page | Tab = Next interactive element
         `;
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 15000);
+        tidbitsBanner.style.display = 'block';
+        setTimeout(() => { tidbitsBanner.style.display = 'none'; }, 15000);
       }
     }
   });
@@ -828,12 +913,12 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     const savedPos = localStorage.getItem('3mpwr_scroll_' + page);
     
     if (savedPos && parseInt(savedPos) > 100) {
-      const banner = document.getElementById('encouragementBanner');
-      const text = document.getElementById('encouragementText');
-      if (banner && text) {
-        text.innerHTML = `📖 We saved your spot! <button onclick="window.scrollTo(0, ${savedPos}); document.getElementById('encouragementBanner').style.display='none';" style="background: white; color: #667eea; border: none; padding: 0.25rem 0.75rem; border-radius: 4px; cursor: pointer; font-weight: bold; margin-left: 0.5rem;">Jump back →</button>`;
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 12000);
+      const tidbitsBanner = document.getElementById('encouragementTidbits');
+      const tidbitsText = document.getElementById('encouragementTidbitsText');
+      if (tidbitsBanner && tidbitsText) {
+        tidbitsText.innerHTML = `📖 We saved your spot! <button onclick="window.scrollTo(0, ${savedPos}); document.getElementById('encouragementTidbits').style.display='none';" style="background: white; color: #4facfe; border: none; padding: 0.25rem 0.75rem; border-radius: 4px; cursor: pointer; font-weight: bold; margin-left: 0.5rem;">Jump back →</button>`;
+        tidbitsBanner.style.display = 'block';
+        setTimeout(() => { tidbitsBanner.style.display = 'none'; }, 12000);
       }
     }
   }
@@ -852,12 +937,12 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     
     if (isIdle) {
       // User came back from being idle
-      const banner = document.getElementById('encouragementBanner');
-      const text = document.getElementById('encouragementText');
-      if (banner && text) {
-        text.textContent = "👋 Welcome back! Hope you're feeling good.";
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 6000);
+      const supportBanner = document.getElementById('encouragementSupport');
+      const supportText = document.getElementById('encouragementSupportText');
+      if (supportBanner && supportText) {
+        supportText.textContent = "👋 Welcome back! Hope you're feeling good.";
+        supportBanner.style.display = 'block';
+        setTimeout(() => { supportBanner.style.display = 'none'; }, 6000);
       }
       isIdle = false;
     }
@@ -880,25 +965,25 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     const month = today.getMonth(); // 0-11
     const day = today.getDate();
     
-    const banner = document.getElementById('encouragementBanner');
-    const text = document.getElementById('encouragementText');
+    const factsBanner = document.getElementById('encouragementFacts');
+    const factsText = document.getElementById('encouragementFactsText');
     
     // International Day of Persons with Disabilities (Dec 3)
-    if (month === 11 && day === 3 && banner && text) {
-      text.textContent = "♿ Happy International Day of Persons with Disabilities! Today we celebrate YOU. 🎉";
-      banner.style.display = 'block';
+    if (month === 11 && day === 3 && factsBanner && factsText) {
+      factsText.textContent = "♿ Happy International Day of Persons with Disabilities! Today we celebrate YOU. 🎉";
+      factsBanner.style.display = 'block';
     }
     
     // Labour Day (First Monday of September in Canada)
-    if (month === 8 && day <= 7 && today.getDay() === 1 && banner && text) {
-      text.textContent = "🛠️ Happy Labour Day! Celebrating workers everywhere.";
-      banner.style.display = 'block';
+    if (month === 8 && day <= 7 && today.getDay() === 1 && factsBanner && factsText) {
+      factsText.textContent = "🛠️ Happy Labour Day! Celebrating workers everywhere.";
+      factsBanner.style.display = 'block';
     }
     
     // Disability Pride Month (July)
-    if (month === 6 && banner && text) {
-      text.textContent = "🌈 It's Disability Pride Month! Proud to be disabled, proud to be here.";
-      banner.style.display = 'block';
+    if (month === 6 && factsBanner && factsText) {
+      factsText.textContent = "🌈 It's Disability Pride Month! Proud to be disabled, proud to be here.";
+      factsBanner.style.display = 'block';
     }
   }
   
@@ -911,12 +996,12 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     if (isFirstTime) {
       localStorage.setItem('3mpwr_visited', 'true');
       
-      const banner = document.getElementById('encouragementBanner');
-      const text = document.getElementById('encouragementText');
-      if (banner && text) {
-        text.innerHTML = `🗺️ New here? <a href="#" onclick="alert('Interactive tour coming soon!'); return false;" style="color: white; text-decoration: underline; font-weight: bold;">Take a quick tour</a> to get started!`;
-        banner.style.display = 'block';
-        setTimeout(() => { banner.style.display = 'none'; }, 15000);
+      const tidbitsBanner = document.getElementById('encouragementTidbits');
+      const tidbitsText = document.getElementById('encouragementTidbitsText');
+      if (tidbitsBanner && tidbitsText) {
+        tidbitsText.innerHTML = `🗺️ New here? <a href="#" onclick="alert('Interactive tour coming soon!'); return false;" style="color: white; text-decoration: underline; font-weight: bold;">Take a quick tour</a> to get started!`;
+        tidbitsBanner.style.display = 'block';
+        setTimeout(() => { tidbitsBanner.style.display = 'none'; }, 15000);
       }
     }
   }
@@ -933,13 +1018,13 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   ];
   
   function showSolidarityMessage() {
-    const banner = document.getElementById('encouragementBanner');
-    const text = document.getElementById('encouragementText');
-    if (banner && text) {
+    const supportBanner = document.getElementById('encouragementSupport');
+    const supportText = document.getElementById('encouragementSupportText');
+    if (supportBanner && supportText) {
       const msg = solidarityMessages[Math.floor(Math.random() * solidarityMessages.length)];
-      text.textContent = msg;
-      banner.style.display = 'block';
-      setTimeout(() => { banner.style.display = 'none'; }, 8000);
+      supportText.textContent = msg;
+      supportBanner.style.display = 'block';
+      setTimeout(() => { supportBanner.style.display = 'none'; }, 8000);
     }
   }
   
@@ -975,6 +1060,8 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
     checkSeasonalThemes();
     restoreScrollPosition();
     scheduleEncouragement();
+    scheduleTidbits();
+    scheduleFacts();
     
     // Show solidarity message after 20 seconds
     setTimeout(showSolidarityMessage, 20000);
@@ -999,8 +1086,15 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
   }
 }
 
-#encouragementBanner {
+.encouragement-banner {
   animation: slideInDown 0.5s ease-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Community stats pulse effect */
@@ -1015,7 +1109,7 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  #encouragementBanner {
+  .encouragement-banner {
     animation: none;
   }
   .community-stats-box {
