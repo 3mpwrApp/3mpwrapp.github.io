@@ -1198,7 +1198,7 @@ body[data-contrast="high"] .badge--new {
   cursor: pointer;
   font-weight: 600;
   font-size: 1.1rem;
-  color: var(--primary-color, #3b82f6);
+  color: var(--primary-color, #1e40af);
   list-style: none;
   display: flex;
   align-items: center;
@@ -1306,39 +1306,39 @@ body[data-contrast="high"] .badge--new {
 }
 
 .feedback-yes {
-  background: #10b981;
+  background: #059669;
   color: white;
-  border: 2px solid #10b981;
+  border: 2px solid #059669;
 }
 
 .feedback-yes:hover {
-  background: #059669;
+  background: #047857;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 8px rgba(5, 150, 105, 0.3);
 }
 
 .feedback-no {
-  background: #ef4444;
+  background: #dc2626;
   color: white;
-  border: 2px solid #ef4444;
+  border: 2px solid #dc2626;
 }
 
 .feedback-no:hover {
-  background: #dc2626;
+  background: #b91c1c;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
 }
 
 .feedback-suggest {
-  background: #3b82f6;
+  background: #2563eb;
   color: white;
-  border: 2px solid #3b82f6;
+  border: 2px solid #2563eb;
 }
 
 .feedback-suggest:hover {
-  background: #2563eb;
+  background: #1d4ed8;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
 }
 
 .page-meta {
