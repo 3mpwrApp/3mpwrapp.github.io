@@ -50,12 +50,13 @@ permalink: /campaigns/
     <li>💙 <strong>Family supporters & caregivers</strong> - Advocate for your loved ones</li>
     <li>🤝 <strong>Non-disabled allies</strong> - Stand in solidarity, amplify voices</li>
     <li>🛠️ <strong>Union members</strong> - Organize collectively for workers' rights</li>
+    <li>✊ <strong>Social justice activists</strong> - Build intersectional movements</li>
     <li>🏥 <strong>Healthcare providers</strong> - Advocate for better systems</li>
     <li>⚖️ <strong>Legal advocates</strong> - Fight for justice alongside community</li>
     <li>🌍 <strong>General public</strong> - Learn, support, take action</li>
   </ul>
   <p style="color: rgba(255,255,255,0.95); margin: 1rem 0 0; font-weight: 600; font-size: 1.1rem;">
-    ✊ You don't need to be disabled to fight for disability justice. You don't need to be injured to support injured workers. ALL are welcome to organize!
+    ✊ Disability justice IS social justice. You don't need to be disabled to fight for disability justice. You don't need to be injured to support injured workers. ALL are welcome to organize!
   </p>
 </div>
 
@@ -413,6 +414,23 @@ permalink: /campaigns/
 - 💪 Bystander intervention training
 
 **Your role:** Learn, unlearn ableism, show up, listen, support
+
+---
+
+### ✊ For Social Justice Organizations
+
+**Cross-movement solidarity builds power:**
+- 🌈 Intersectional campaigns (disability + race + gender + class)
+- 🏘️ Housing justice with accessibility requirements
+- � Anti-poverty campaigns centered on disabled people
+- ⚖️ Criminal justice reform for disabled prisoners
+- 🌍 Environmental justice with accessibility focus
+- 📣 Coalition building across movements
+- 🤝 Mutual aid networks
+
+**Your role:** Build bridges, center marginalized voices, fight interconnected oppression
+
+**We believe:** All liberation movements are connected. You can't fight racism without fighting ableism. You can't fight poverty without fighting for disability rights. We're stronger together.
 
 ---
 

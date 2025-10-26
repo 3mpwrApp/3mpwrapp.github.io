@@ -20,11 +20,12 @@ permalink: /contact
     <li>🛠️ <strong>Union members</strong> exploring partnership opportunities</li>
     <li>🏥 <strong>Healthcare providers</strong> interested in patient resources</li>
     <li>⚖️ <strong>Legal advocates</strong> looking for client tools and information</li>
+    <li>✊ <strong>Social justice activists</strong> fighting for systemic change</li>
     <li>🏢 <strong>Employers</strong> committed to genuine accessibility</li>
-    <li>🌍 <strong>General public</strong> curious about disability justice</li>
+    <li>🌍 <strong>General public</strong> curious about disability justice and social justice</li>
   </ul>
   <p style="color: rgba(255,255,255,0.95); margin: 1rem 0 0; font-weight: 600;">
-    Whatever your role in the disability rights movement, we want to hear from you!
+    Whatever your role in the disability rights and social justice movement, we want to hear from you!
   </p>
 </div>
 
@@ -81,6 +82,7 @@ Please fill out the form below and we'll get back to you within 24 hours:
         <option value="accessibility">Accessibility Issue or Suggestion</option>
         <option value="injured-worker">Injured Worker Support Question</option>
         <option value="disability">Disability Rights or Advocacy</option>
+        <option value="social-justice">Social Justice Partnership</option>
         <option value="union">Union/Labour Organization Partnership</option>
         <option value="healthcare">Healthcare Provider Inquiry</option>
         <option value="legal">Legal Advocate Resources</option>

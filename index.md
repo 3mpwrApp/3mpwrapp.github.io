@@ -105,6 +105,8 @@ description: A community-powered hub for injured workers and persons with disabi
 
 3mpwr App is a **grassroots, community-driven platform** built for injured workers, persons with disabilities, supporters, allies, unions, and anyone navigating workplace injury or disability systems across Canada. Whether you identify as disabled or are still figuring things out, you belong here. We're creating a safe, inclusive space where people can connect, share experiences, and advocate for change.
 
+**We believe disability justice IS social justice** – fighting ableism, workplace exploitation, systemic barriers, and inequality in all its forms.
+
 **💚 100% Free Forever** – No paid tiers, no subscriptions, no profit motive. Built BY the community, FOR the community.
 
 ---

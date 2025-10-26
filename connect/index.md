@@ -187,6 +187,25 @@ Connect with us to:
 
 ---
 
+### ✊ Social Justice Organizations & Activists
+
+**Disability justice is social justice.**
+
+Connect with us about:
+- 🤝 Cross-movement solidarity and coalition building
+- 📣 Joint campaigns against systemic oppression
+- 🌈 Intersectional organizing (disability + race + gender + class)
+- 💪 Anti-poverty and economic justice collaborations
+- 🏘️ Housing justice and accessibility
+- ⚖️ Criminal justice reform for disabled people
+- 🌍 Anti-oppression framework partnerships
+
+**📧 Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Social%20Justice%20Partnership)
+
+**We believe:** All oppression is connected. Fighting ableism means fighting racism, classism, sexism, homophobia, transphobia, and all forms of systemic injustice.
+
+---
+
 ### 📰 Media & Researchers
 
 **Tell our stories accurately.**
