@@ -119,7 +119,7 @@ body[data-contrast="high"] .site-brand {
   position: absolute;
   top: -40px;
   left: 8px;
-  background: #fff;
+  background: var(--main-bg, #ffffff);
   color: #183c65;
   padding: 8px 12px;
   border-radius: 4px;
@@ -172,7 +172,7 @@ nav {
 /* Mobile navigation */
 .menu-toggle {
   display: none;
-  background: #ffffff;
+  background: var(--main-bg, #ffffff);
   color: #183c65;
   border: 2px solid #183c65;
   /* WCAG 2.2 2.5.8: Minimum target size */
@@ -207,7 +207,7 @@ nav {
 }
 .lang-switch {
   color: #183c65;
-  background: #fff;
+  background: var(--main-bg, #ffffff);
   border: 2px solid #183c65;
   /* WCAG 2.2 2.5.8: Minimum target size */
   min-height: 44px;
@@ -224,7 +224,7 @@ nav {
 .lang-switch:focus-visible { background: #183c65; color: #fff; }
 .contrast-toggle,
 .theme-toggle {
-  background: #ffffff;
+  background: var(--main-bg, #ffffff);
   color: #183c65;
   border: 2px solid #183c65;
   /* WCAG 2.2 2.5.8: Minimum target size */
@@ -251,7 +251,7 @@ main {
   max-width: 700px;
   margin: 2em auto;
   padding: 1em;
-  background: #fff;
+  background: var(--main-bg, #ffffff);
   border-radius: 9px;
   box-shadow: 0 2px 8px #0001;
 }
@@ -809,11 +809,11 @@ body.no-scroll {
   width: 100%; 
   margin: 2rem 0;
 }
-.newsletter-embed iframe { 
-  width: 100%; 
-  height: min(1600px, 86vh); 
-  background: #fff; 
-  border: 0; 
+.newsletter-embed iframe {
+  width: 100%;
+  height: min(1600px, 86vh);
+  background: var(--main-bg, #ffffff);
+  border: 0;
   border-radius: 8px; 
   display: block;
   min-height: 800px;
@@ -834,7 +834,7 @@ body[data-theme="dark"] .newsletter-embed iframe {
 .modal-dialog.newsletter-dialog {
   max-width: 640px;
   width: 100%;
-  background: #fff;
+  background: var(--main-bg, #ffffff);
   color: #111;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
