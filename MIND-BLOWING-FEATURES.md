@@ -376,4 +376,4 @@ We're not just helping individuals - we're building the operating system for dis
 
 *Want to prioritize different features? Have more ideas? Let's discuss!*
 
-📧 **Feedback:** [innovation@3mpwrapp.com](mailto:innovation@3mpwrapp.com)
+📧 **Feedback:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Feature%20Ideas)

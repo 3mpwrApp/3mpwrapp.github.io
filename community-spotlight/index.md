@@ -170,7 +170,7 @@ permalink: /community-spotlight/
   </ul>
   
   <p><strong>Submit your story:</strong></p>
-  <p>📧 Email: <a href="mailto:community@3mpwrapp.com">community@3mpwrapp.com</a></p>
+  <p>📧 Email: <a href="mailto:empowrapp08162025@gmail.com">empowrapp08162025@gmail.com</a></p>
   <p>📝 Subject line: "Community Spotlight Submission"</p>
   
   <p><em>We feature new advocates monthly. Your story inspires others!</em></p>
@@ -193,7 +193,7 @@ Nominate them for Community Spotlight:
 - 🔗 Links to their work or social media
 
 **How to nominate:**
-📧 Email: [community@3mpwrapp.com](mailto:community@3mpwrapp.com?subject=Community%20Spotlight%20Nomination)  
+📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Community%20Spotlight%20Nomination)  
 📝 Subject line: "Community Spotlight Nomination"
 
 *We'll reach out to them for permission before featuring.*
@@ -286,7 +286,7 @@ Nominate them for Community Spotlight:
 ## 📞 Questions?
 
 **About Community Spotlight:**  
-📧 Email: [community@3mpwrapp.com](mailto:community@3mpwrapp.com)
+📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
 
 **Want to get more involved:**  
 💬 Visit our [Campaigns page](/campaigns/)

@@ -124,6 +124,65 @@ permalink: /campaigns/
 
 ---
 
+## 🎯 Rep Tracker - Find Your Representatives
+
+<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
+
+<div style="background: #dbeafe; border: 2px solid #3b82f6; border-radius: 8px; padding: 1.25rem; margin: 2rem 0;">
+  <h3 style="margin-top: 0;">📍 Who Represents You?</h3>
+  
+  <p><strong>When our app launches, Rep Tracker will automatically:</strong></p>
+  <ul>
+    <li>🗺️ Detect your location</li>
+    <li>👤 Show your federal MP, provincial MPP/MLA, and municipal councillor</li>
+    <li>📊 Display their voting record on disability/workers' rights issues</li>
+    <li>📧 Provide pre-written email templates for advocacy</li>
+    <li>☎️ Give you phone scripts for calling their office</li>
+    <li>📱 Show their social media for public advocacy</li>
+    <li>📈 Track response rates: "This MPP responds to 78% of disability rights emails"</li>
+  </ul>
+  
+  <p><strong>Make advocacy effortless:</strong></p>
+  <ul>
+    <li>✅ No more searching for who to contact</li>
+    <li>✅ Know their track record before you reach out</li>
+    <li>✅ Pre-written messages save your energy</li>
+    <li>✅ See which representatives are responsive</li>
+    <li>✅ Coordinate community campaigns targeting same reps</li>
+  </ul>
+  
+  <p style="margin-top: 1.5rem;"><strong>Example:</strong> "Your MPP is Jane Smith. She voted FOR accessible transit bill. Here's a thank-you email template to send."</p>
+  
+  <p><em>Coming soon in the app - political advocacy made accessible!</em></p>
+</div>
+
+### Manual Representative Search (While We Build)
+
+**For now, you can find your representatives here:**
+
+**Federal (MP):**
+- 🔍 [Find Your MP](https://www.ourcommons.ca/members/en)
+- 📧 Contact template: [Email Your MP About Disability Rights]
+
+**Provincial:**
+- 🔍 **Ontario:** [Find Your MPP](https://www.ola.org/en/members/current)
+- 🔍 **British Columbia:** [Find Your MLA](https://www.leg.bc.ca/learn-about-us/members)
+- 🔍 **Alberta:** [Find Your MLA](https://www.assembly.ab.ca/members/members-of-the-legislative-assembly)
+- 🔍 **Quebec:** [Find Your MNA](https://www.assnat.qc.ca/en/deputes/index.html)
+- 🔍 **All Provinces:** [Provincial Legislature Websites](https://www.canada.ca/en/government/dept.html)
+
+**Municipal:**
+- 🔍 Search "[Your City] city councillor" to find your local representative
+
+**What to Say:**
+- ✅ State your issue clearly
+- ✅ Share your personal story (if comfortable)
+- ✅ Make a specific ask (support Bill X, oppose Bill Y, meet with community)
+- ✅ Be respectful but firm
+- ✅ Follow up if no response in 2 weeks
+
+---
+
 ## 🎯 Campaign Ideas You Can Start
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
@@ -260,16 +319,16 @@ permalink: /campaigns/
 ## 📞 Questions About Campaigns?
 
 **Have an idea for a campaign?**  
-📧 Email: [campaigns@3mpwrapp.com](mailto:campaigns@3mpwrapp.com)
+📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Campaign%20Idea)
 
 **Want to organize an event?**  
-📧 Email: [events@3mpwrapp.com](mailto:events@3mpwrapp.com)
+📧 Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Event%20Organization)
 
 **Need organizing support?**  
-💬 Join our organizers' forum: [/community/organizers](/community/organizers)
+� Email: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com?subject=Organizing%20Support)
 
 **Partnership inquiries?**  
-📝 Visit our [Partnerships page](/partnerships/)
+📝 Visit our [Connect page](/connect/)
 
 ---
 
