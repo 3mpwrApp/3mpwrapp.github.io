@@ -194,30 +194,67 @@ permalink: /campaigns/
 - Living wage for disabled workers
 - Workplace accommodation funding
 - Return-to-work policy reform
+- End employer retaliation against injured workers
+- Mandatory ergonomic assessments
+- Workers' compensation coverage for mental health injuries
 
-**♿ Accessibility:**
-- Accessible public transit
+**♿ Disability Rights & Accessibility:**
+- Accessible public transit (buses, trains, stations)
 - Barrier-free healthcare facilities
-- ASL interpretation as standard
+- ASL interpretation as standard in healthcare
 - Accessible housing initiatives
+- Automatic door openers on all public buildings
+- Audio crosswalk signals province-wide
+- Accessible voting locations and materials
+- Disability representation in government
+- End subminimum wage for disabled workers
+- Accessible emergency services and shelters
+- Disability-inclusive education policies
 
 **🏥 Healthcare:**
-- Pain management access
+- Pain management access without stigma
 - Mental health support for injured workers
 - Chronic illness recognition in compensation
 - Accessible telehealth as permanent option
+- Home care funding increases
+- Disability-competent medical training
+- Patient advocates in hospitals
+- Prescription coverage for disability-related medications
 
 **💼 Employment:**
 - End sub-minimum wage for disabled workers
 - Flexible work policies
 - Disability hiring initiatives
-- Entrepreneurship support
+- Entrepreneurship support for disabled business owners
+- Job protection during flare-ups
+- Paid sick days for chronic conditions
+- Remote work accommodation rights
 
 **📣 Awareness:**
 - Invisible disability recognition
 - Chronic pain education
 - Spoon theory public awareness
 - Anti-ableism campaigns
+- Disability pride celebrations
+- Mental health destigmatization
+- Neurodiversity acceptance
+
+**🏘️ Community & Social:**
+- Accessible recreation facilities
+- Disability-inclusive event planning
+- Accessible restaurant compliance
+- Service animal rights protection
+- Companion care funding
+- Disability dating app safety
+- Accessible tourism initiatives
+
+**⚖️ Legal & Policy:**
+- Strengthen accessibility legislation
+- Enforce existing disability rights laws
+- Criminal justice reform for disabled people
+- End institutionalization
+- Disability impact assessments for all new policies
+- Legal aid for disability discrimination cases
 
 *These are just ideas - you can create a campaign about any issue affecting disabled people, injured workers, or the broader community!*
 
