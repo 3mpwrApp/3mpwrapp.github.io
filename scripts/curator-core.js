@@ -311,6 +311,91 @@ class CuratorCore {
   }
 
   /**
+   * Filter out items that were posted in the last N days
+   */
+  filterPreviouslyPosted(daysToCheck = 7) {
+    const postsDir = path.join(process.cwd(), '_posts');
+    if (!fs.existsSync(postsDir)) {
+      this.log(`⚠️ Posts directory not found: ${postsDir}`);
+      return;
+    }
+
+    // Get the last N days of daily-curation posts
+    const cutoffDate = new Date();
+    cutoffDate.setDate(cutoffDate.getDate() - daysToCheck);
+    
+    const previousUrls = new Set();
+    
+    try {
+      const files = fs.readdirSync(postsDir)
+        .filter(f => f.includes('daily-curation') && f.endsWith('.md'))
+        .sort()
+        .reverse()
+        .slice(0, daysToCheck);
+
+      this.log(`📚 Checking ${files.length} previous daily curation posts for duplicates...`);
+
+      for (const file of files) {
+        const content = fs.readFileSync(path.join(postsDir, file), 'utf8');
+        // Extract URLs from markdown links [text](url)
+        const urlMatches = content.matchAll(/\[Source\]\((https?:\/\/[^\)]+)\)/g);
+        for (const match of urlMatches) {
+          previousUrls.add(match[1].trim());
+        }
+      }
+
+      this.log(`📊 Found ${previousUrls.size} URLs in previous ${daysToCheck} days`);
+
+      // Filter out items with URLs that were already posted
+      const beforeCount = this.scoredItems.length;
+      this.scoredItems = this.scoredItems.filter(item => {
+        const url = item.link?.trim();
+        return url && !previousUrls.has(url);
+      });
+
+      const filteredCount = beforeCount - this.scoredItems.length;
+      this.log(`✅ Filtered out ${filteredCount} previously posted items`);
+      
+    } catch (err) {
+      this.log(`⚠️ Error checking previous posts: ${err.message}`);
+    }
+  }
+
+  /**
+   * Filter items by publication date (only recent articles)
+   */
+  filterByDate(maxDaysOld = 30) {
+    const cutoffDate = new Date();
+    cutoffDate.setDate(cutoffDate.getDate() - maxDaysOld);
+    
+    const beforeCount = this.scoredItems.length;
+    
+    this.scoredItems = this.scoredItems.filter(item => {
+      if (!item.pubDate) {
+        // If no pubDate, keep it (might be a government press release)
+        return true;
+      }
+
+      try {
+        const pubDate = new Date(item.pubDate);
+        const isRecent = pubDate >= cutoffDate;
+        
+        if (!isRecent) {
+          this.log(`🗑️ Filtering old article (${item.pubDate}): ${item.title.substring(0, 60)}...`);
+        }
+        
+        return isRecent;
+      } catch (err) {
+        // If date parsing fails, keep the item
+        return true;
+      }
+    });
+
+    const filteredCount = beforeCount - this.scoredItems.length;
+    this.log(`✅ Filtered out ${filteredCount} articles older than ${maxDaysOld} days`);
+  }
+
+  /**
    * Filter by language
    */
   filterLanguages() {
@@ -414,10 +499,13 @@ class CuratorCore {
 layout: post
 title: "Daily News Curation - ${today}"
 date: ${today}
-categories: curation news
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
 ---
 
-${markdown}`;
+${markdown}
+`;
     const blogPath = path.join(postDir, `${today}-daily-curation.md`);
     fs.writeFileSync(blogPath, blogPost);
     this.log(`✅ Saved blog post: ${blogPath}`);
@@ -445,6 +533,10 @@ ${markdown}`;
       
       await this.fetchAllFeeds();
       this.scoreItems();
+      
+      // Filter by date first (only recent articles)
+      console.log('📅 Filtering by publication date...');
+      this.filterByDate(30); // Only articles from last 30 days
       
       // Apply trending topics boost
       console.log('🔥 Applying trending topics boost...');
@@ -482,6 +574,11 @@ ${markdown}`;
       }
       
       this.deduplicate();
+      
+      // Filter out previously posted articles
+      console.log('🔍 Checking for previously posted articles...');
+      this.filterPreviouslyPosted(7); // Check last 7 days of posts
+      
       this.filterLanguages();
       
       // Update trending topics tracking
