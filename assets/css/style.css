@@ -1098,6 +1098,10 @@ body[data-contrast="high"] .badge--new {
 .cookie-banner[hidden] {
   display: none;
 }
+.cookie-banner h2,
+.cookie-banner p {
+  color: #ffffff !important; /* Ensure WCAG AA compliance: white text on dark background */
+}
 .cookie-banner a { 
   color: #60A5FA; 
   text-decoration: underline;
