@@ -1415,3 +1415,524 @@ body[data-contrast="high"] .feedback-btn {
     transform: none;
   }
 }
+
+/* ============================================
+   INNOVATIVE ACCESSIBILITY FEATURES
+   Never-before-seen website details
+   ============================================ */
+
+/* Accessibility Toolbar */
+.accessibility-toolbar {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem;
+}
+
+.toolbar-btn {
+  background: white;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e40af;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toolbar-btn:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.toolbar-btn:active {
+  transform: translateY(0);
+}
+
+.toolbar-btn-small {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toolbar-btn-small:hover {
+  background: #e5e7eb;
+}
+
+.toolbar-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.toolbar-select {
+  background: white;
+  border: 2px solid #3b82f6;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.spoon-counter {
+  background: #fef3c7;
+  border: 2px solid #f59e0b;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spoon-label {
+  font-weight: 600;
+  color: #78350f;
+  font-size: 0.9rem;
+}
+
+.spoon-count {
+  background: white;
+  border: 1px solid #f59e0b;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-weight: bold;
+  color: #92400e;
+  min-width: 2rem;
+  text-align: center;
+}
+
+/* Page Progress Bar */
+.page-progress-container {
+  background: #e5e7eb;
+  border-radius: 8px;
+  height: 32px;
+  margin: 1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-progress-bar {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 8px;
+}
+
+.page-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+  z-index: 1;
+}
+
+/* Energy Cost Indicators */
+.energy-cost {
+  display: inline-block;
+  background: #fef3c7;
+  border: 2px solid #f59e0b;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #92400e;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Email Section Button */
+.email-section-btn {
+  background: #dbeafe;
+  border: 2px solid #3b82f6;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e40af;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+
+.email-section-btn:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Break Mode Overlay */
+.break-mode-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.break-mode-content {
+  max-width: 600px;
+}
+
+.break-mode-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #93c5fd;
+}
+
+.break-mode-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.break-timer {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #60a5fa;
+  margin-bottom: 2rem;
+}
+
+.break-mode-btn {
+  background: #3b82f6;
+  border: 2px solid #60a5fa;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.break-mode-btn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Pain Flare Mode */
+body.pain-flare-mode {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+body.pain-flare-mode .accessibility-toolbar,
+body.pain-flare-mode .features-grid,
+body.pain-flare-mode .socials-list,
+body.pain-flare-mode img,
+body.pain-flare-mode video {
+  display: none;
+}
+
+body.pain-flare-mode h1,
+body.pain-flare-mode h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+}
+
+body.pain-flare-mode p,
+body.pain-flare-mode li {
+  margin-bottom: 1.5rem;
+}
+
+/* Overwhelmed Mode */
+body.overwhelmed-mode {
+  background: #f9fafb !important;
+}
+
+body.overwhelmed-mode * {
+  animation: none !important;
+  transition: none !important;
+}
+
+body.overwhelmed-mode .accessibility-toolbar,
+body.overwhelmed-mode .page-progress-container,
+body.overwhelmed-mode .features-grid,
+body.overwhelmed-mode .socials-list,
+body.overwhelmed-mode img,
+body.overwhelmed-mode video,
+body.overwhelmed-mode .status-banner {
+  display: none !important;
+}
+
+body.overwhelmed-mode h1 {
+  font-size: 1.75rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+body.overwhelmed-mode h2 {
+  font-size: 1.25rem;
+  color: #374151;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+body.overwhelmed-mode p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+/* Bullet Points Only Mode */
+body.bullets-only-mode h1,
+body.bullets-only-mode h2,
+body.bullets-only-mode h3 {
+  display: block;
+}
+
+body.bullets-only-mode p,
+body.bullets-only-mode div:not(.toolbar-section):not(.page-progress-container):not(.accessibility-toolbar) {
+  display: none;
+}
+
+body.bullets-only-mode ul,
+body.bullets-only-mode ol,
+body.bullets-only-mode li {
+  display: block;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Brain Fog Summary */
+.brain-fog-summary {
+  background: #fef3c7;
+  border: 3px solid #f59e0b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #78350f;
+  font-weight: 600;
+}
+
+.brain-fog-summary::before {
+  content: "🧠 Quick Summary: ";
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #92400e;
+}
+
+/* Voice Fatigue Mode */
+body.voice-fatigue-mode {
+  font-size: 1.3rem;
+}
+
+body.voice-fatigue-mode a,
+body.voice-fatigue-mode button {
+  min-height: 48px;
+  min-width: 48px;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+
+body.voice-fatigue-mode .accessibility-toolbar {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+body.voice-fatigue-mode .toolbar-section {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Time-of-Day Suggestions */
+.time-suggestion {
+  background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+  color: white;
+  border: 2px solid #6366f1;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.time-suggestion button {
+  background: #6366f1;
+  border: 2px solid #818cf8;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.time-suggestion button:hover {
+  background: #4f46e5;
+}
+
+/* Triggering Content Fade */
+.trigger-warning-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.trigger-warning-content::before {
+  content: "⚠️ Hover to reveal - May contain triggering content";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(239, 68, 68, 0.95);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  transition: opacity 0.3s ease;
+}
+
+.trigger-warning-content:hover::before {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Dark Mode Adjustments */
+body[data-theme="dark"] .accessibility-toolbar {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-color: #60a5fa;
+}
+
+body[data-theme="dark"] .toolbar-btn {
+  background: #334155;
+  color: #93c5fd;
+}
+
+body[data-theme="dark"] .toolbar-btn:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+body[data-theme="dark"] .spoon-counter {
+  background: #422006;
+  border-color: #f59e0b;
+}
+
+body[data-theme="dark"] .spoon-count {
+  background: #78350f;
+  color: #fef3c7;
+}
+
+body[data-theme="dark"] .page-progress-container {
+  background: #374151;
+}
+
+body[data-theme="dark"] .page-progress-text {
+  color: #e5e7eb;
+}
+
+body[data-theme="dark"] .energy-cost {
+  background: #422006;
+  color: #fef3c7;
+}
+
+body[data-theme="dark"] .email-section-btn {
+  background: #1e3a8a;
+  color: #93c5fd;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .accessibility-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .toolbar-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .toolbar-btn,
+  .toolbar-select {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .spoon-counter {
+    justify-content: space-between;
+  }
+  
+  .page-progress-text {
+    font-size: 0.8rem;
+  }
+  
+  .energy-cost,
+  .email-section-btn {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .break-mode-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .break-timer {
+    font-size: 2rem;
+  }
+}
+
+/* High Contrast Mode */
+body[data-contrast="high"] .accessibility-toolbar,
+body[data-contrast="high"] .toolbar-btn,
+body[data-contrast="high"] .toolbar-select,
+body[data-contrast="high"] .spoon-counter,
+body[data-contrast="high"] .page-progress-container,
+body[data-contrast="high"] .energy-cost,
+body[data-contrast="high"] .email-section-btn {
+  border: 3px solid #000 !important;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .toolbar-btn:hover,
+  .email-section-btn:hover {
+    transform: none;
+  }
+  
+  .page-progress-bar {
+    transition: none;
+  }
+}

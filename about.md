@@ -10,13 +10,13 @@ description: Your voice, your power. Unfiltered. 3mpwrApp puts the power back in
 
 # Your voice, your power. Unfiltered.
 
-📖 **5 minute read**
+📖 **5 minute read** 🔋🔋 **Energy: Light**
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
   <ul>
     <li><strong>100% Free Forever:</strong> No subscriptions, no in-app purchases, no paid tiers - ever</li>
-    <li><strong>Community-Funded:</strong> Built BY the disability community, FOR the community</li>
+    <li><strong>Community-Funded:</strong> Built BY injured workers, persons with disabilities, supporters, and allies FOR the community</li>
     <li><strong>Canadian Focus First:</strong> Serving all provinces/territories, understanding Canadian systems (WSIB/WCB)</li>
     <li><strong>No Corporate Control:</strong> No venture capital, no profit motive - just community empowerment</li>
     <li><strong>Privacy First:</strong> Your data stays on YOUR device - we can't see it</li>
@@ -26,7 +26,7 @@ description: Your voice, your power. Unfiltered. 3mpwrApp puts the power back in
 
 # Your voice, your power. Unfiltered.
 
-Big platforms silence stories through hidden algorithms and "relevance" scores. 3mpwrApp puts the power back in your hands - no shadow bans, no manipulation, no data mining. Just authentic connection, community, and truth.
+Big platforms silence stories through hidden algorithms and "relevance" scores. 3mpwrApp puts the power back in your hands - no shadow bans, no manipulation, no data mining. Just authentic connection, community, and truth for injured workers, persons with disabilities, supporters, allies, unions, and anyone navigating these systems.
 
 <div class="button-group">
   <a href="{{ '/newsletter' | relative_url }}" class="btn btn-primary">Join the Movement</a>

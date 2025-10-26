@@ -10,19 +10,75 @@ description: A community-powered hub for injured workers and persons with disabi
   <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
 </div>
 
+<!-- Innovative Accessibility Controls -->
+<div class="accessibility-toolbar" role="toolbar" aria-label="Page accessibility controls">
+  <div class="toolbar-section">
+    <button id="needBreakBtn" class="toolbar-btn" aria-label="Take a break - dims screen for 5 minutes">
+      💙 Need a break?
+    </button>
+    <button id="painFlareBtn" class="toolbar-btn" aria-label="Switch to minimal interaction mode">
+      🔥 Pain flare mode
+    </button>
+    <button id="overwhelmedBtn" class="toolbar-btn" aria-label="Switch to simplified version">
+      😰 I'm overwhelmed
+    </button>
+  </div>
+  <div class="toolbar-section">
+    <button id="tooMuchTextBtn" class="toolbar-btn" aria-label="Show bullet points only">
+      📝 Too much text?
+    </button>
+    <button id="brainFogBtn" class="toolbar-btn" aria-label="Show quick summary">
+      🧠 Brain fog helper
+    </button>
+    <button id="resumeReadingBtn" class="toolbar-btn" style="display:none;" aria-label="Resume where you left off">
+      📖 Resume reading
+    </button>
+  </div>
+  <div class="toolbar-section">
+    <label for="sensoryToggle" class="toolbar-label">✨ Sensory:</label>
+    <select id="sensoryToggle" class="toolbar-select" aria-label="Adjust sensory preferences">
+      <option value="default">Default</option>
+      <option value="reduced-motion">Reduced motion</option>
+      <option value="high-contrast">High contrast</option>
+      <option value="minimal">Minimal (text only)</option>
+    </select>
+  </div>
+  <div class="toolbar-section">
+    <label for="readingLevel" class="toolbar-label">📚 Reading:</label>
+    <select id="readingLevel" class="toolbar-select" aria-label="Adjust reading complexity">
+      <option value="detailed">Detailed</option>
+      <option value="simple">Simple language</option>
+    </select>
+  </div>
+  <div class="toolbar-section spoon-counter">
+    <span class="spoon-label">🥄 Energy used:</span>
+    <span id="spoonCount" class="spoon-count" aria-live="polite">0</span>
+    <button id="resetSpoons" class="toolbar-btn-small" aria-label="Reset energy counter">Reset</button>
+  </div>
+</div>
+
+<!-- Progress indicator -->
+<div class="page-progress-container" role="progressbar" aria-label="Page reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+  <div class="page-progress-bar" id="pageProgressBar"></div>
+  <span class="page-progress-text" id="pageProgressText">0% through page</span>
+</div>
+
 # Welcome to 3mpwr App
 
-📖 **3 minute read**
+📖 **3 minute read** 🔋🔋 **Energy: Light**
 
 <strong>Connecting voices, empowering change.</strong>
 
-3mpwr App is a **grassroots, community-driven platform** built for injured workers and persons with disabilities across Canada. We're creating a safe, inclusive space where people can connect, share experiences, and advocate for change.
+3mpwr App is a **grassroots, community-driven platform** built for injured workers, persons with disabilities, supporters, allies, unions, and anyone navigating workplace injury or disability systems across Canada. Whether you identify as disabled or are still figuring things out, you belong here. We're creating a safe, inclusive space where people can connect, share experiences, and advocate for change.
 
 **💚 100% Free Forever** – No paid tiers, no subscriptions, no profit motive. Built BY the community, FOR the community.
 
 ---
 
 ## Why 3mpwr?
+
+<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
+<button class="email-section-btn" data-section="why-3mpwr" aria-label="Email this section to yourself">📧 Email this section</button>
 
 **A Health & Fitness, Medical, and Social Support Platform**
 
@@ -37,6 +93,9 @@ description: A community-powered hub for injured workers and persons with disabi
 ---
 
 ## Features
+
+<span class="energy-cost" data-energy="3" aria-label="Energy cost: medium">🔋🔋🔋 Energy: Medium</span>
+<button class="email-section-btn" data-section="features" aria-label="Email this section to yourself">📧 Email this section</button>
 
 <ul class="features-grid" role="list" aria-label="Key features">
   <li role="listitem">
