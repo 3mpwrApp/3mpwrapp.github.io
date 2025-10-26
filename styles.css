@@ -65,6 +65,6 @@ a:hover { text-decoration: underline; }
 .card { background: var(--panel); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
 
 .embed-wrap { position: relative; width: 100%; }
-.embed-wrap iframe { width: 100%; height: min(1600px, 86vh); border: 0; background: #fff; border-radius: 8px; }
+.embed-wrap iframe { width: 100%; height: min(1600px, 86vh); border: 0; background: var(--card-bg, #ffffff); border-radius: 8px; }
 
 .site-footer { padding: 2rem 0 3rem; color: var(--muted); }

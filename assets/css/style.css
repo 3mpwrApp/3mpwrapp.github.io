@@ -820,7 +820,7 @@ body.no-scroll {
 }
 /* Dark mode: Make newsletter form visible */
 body[data-theme="dark"] .newsletter-embed iframe {
-  background: #ffffff;
+  background: var(--card-bg, #ffffff);
   border: 2px solid #355c7d;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
@@ -2381,7 +2381,7 @@ body[data-contrast="high"] .crisis-alert {
 }
 
 body[data-contrast="high"] .crisis-option {
-  background: #fff;
+  background: #fff !important;
   color: #000;
 }
 

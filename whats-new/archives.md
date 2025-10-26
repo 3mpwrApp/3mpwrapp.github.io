@@ -199,7 +199,7 @@ We believe in **radical transparency**. Every change, no matter how small, is do
 }
 
 .update-item {
-  background: white;
+  background: var(--card-bg, #ffffff);
   border: 1px solid var(--border-color, #ddd);
   border-radius: 8px;
   padding: 1.5rem;

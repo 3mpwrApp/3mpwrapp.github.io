@@ -116,7 +116,7 @@ Pick ONE feature to test thoroughly:
 <div class="gradient-banner" style="text-align: center;">
   <h3 style="margin: 0 0 0.5rem;">📝 Sign Up for Beta Testing</h3>
   <p style="margin: 0 0 1rem;">Interested in becoming a beta tester? Fill out our sign-up form and we'll contact you when spots become available!</p>
-  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #5568d3; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Complete Beta Sign-Up Form →</a>
+  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: var(--card-bg, #ffffff); color: #5568d3; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Complete Beta Sign-Up Form →</a>
 </div>
 
 ---

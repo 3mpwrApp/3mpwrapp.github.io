@@ -97,7 +97,7 @@ Have an idea for a new feature? We'd love to hear it!
 }
 
 .btn-primary {
-  background: white;
+  background: var(--card-bg, #ffffff);
   color: #667eea;
 }
 
@@ -108,12 +108,12 @@ Have an idea for a new feature? We'd love to hear it!
 
 .btn-secondary {
   background: rgba(255,255,255,0.2);
-  color: white;
-  border: 2px solid white;
+  color: var(--text-color, #ffffff);
+  border: 2px solid var(--border-color, #ffffff);
 }
 
 .btn-secondary:hover {
-  background: white;
+  background: var(--card-bg, #ffffff);
   color: #667eea;
 }
 

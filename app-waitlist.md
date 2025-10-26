@@ -100,11 +100,11 @@ permalink: /app-waitlist/
 
 <div class="beta-cta">
   
-  <h3 style="color: white; margin: 0 0 1rem; font-size: 1.5rem;">Ready to Make History?</h3>
+  <h3 style="color: var(--text-color, #ffffff); margin: 0 0 1rem; font-size: 1.5rem;">Ready to Make History?</h3>
   
   <p style="margin: 0 0 1.5rem; font-size: 1.1rem;">Join Phase 1 Closed Beta and help shape the future of disability advocacy tech.</p>
   
-  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #5b21b6; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; font-size: 1.1rem; text-decoration: none; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: var(--card-bg, #ffffff); color: #5b21b6; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; font-size: 1.1rem; text-decoration: none; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     📋 Sign Up for Beta Testing →
   </a>
   
@@ -407,7 +407,7 @@ Before joining beta, explore what 3mpwrApp offers:
     Join hundreds of Canadians with disabilities who are shaping the future of advocacy technology.
   </p>
   
-  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #be123c; padding: 1.25rem 3rem; border-radius: 8px; font-weight: bold; font-size: 1.2rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 15px rgba(0,0,0,0.2);" onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 12px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 15px rgba(0,0,0,0.2)'">
+  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: var(--card-bg, #ffffff); color: #be123c; padding: 1.25rem 3rem; border-radius: 8px; font-weight: bold; font-size: 1.2rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 15px rgba(0,0,0,0.2);" onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 12px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 15px rgba(0,0,0,0.2)'">
     🚀 Join Beta Testing Now
   </a>
   

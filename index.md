@@ -244,8 +244,8 @@ Ready to join the movement? Here's how you can get started:
 <div class="gradient-banner">
   <h3 style="margin: 0 0 0.5rem;">🚀 Phase 1 Beta Testing Underway!</h3>
   <p style="margin: 0 0 1rem;">Be among the first to test 3mpwrApp and help shape its future. Limited spots available!</p>
-  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #5568d3; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
-  <p style="margin: 1rem 0 0; font-size: 0.9rem;"><a href="{{ '/app-waitlist' | relative_url }}" style="color: white; text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="{{ '/beta-guide' | relative_url }}" style="color: white; text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
+  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: var(--card-bg, #ffffff); color: #5568d3; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
+  <p style="margin: 1rem 0 0; font-size: 0.9rem;"><a href="{{ '/app-waitlist' | relative_url }}" style="color: var(--text-color, #ffffff); text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="{{ '/beta-guide' | relative_url }}" style="color: var(--text-color, #ffffff); text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
 </div>
 
 - <a href="{{ '/user-guide' | relative_url }}"><strong>📖 Read Our Complete User Guide</strong></a> – **NEW Phase 2!** Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more ([Download PDF](/assets/downloads/3mpwrapp-user-guide-full.pdf))
