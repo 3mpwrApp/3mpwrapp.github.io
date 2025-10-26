@@ -1,308 +1,613 @@
----------
+------------
 
 layout: default
 
-title: What's Newlayout: defaultlayout: default
+title: What's Newlayout: default
 
 description: Latest updates, features, and improvements to 3mpwrApp
 
+permalink: /whats-new/title: What's Newlayout: defaultlayout: default
+
+---
+
+description: Latest updates, features, and improvements to 3mpwrApp
+
+# What's New 🎉
+
 permalink: /whats-new/title: What's Newtitle: What's New
+
+Stay up to date with the latest features, improvements, and fixes to 3mpwrApp.
+
+---
 
 ---
 
 description: Latest updates, features, and improvements to 3mpwrAppdescription: Latest updates, features, and improvements to 3mpwrApp
 
+## Recent Updates (Last 30 Days)
+
 # What's New at 3mpwr App 🎉
-
-permalink: /whats-new/permalink: /whats-new/
-
-See what's changed recently! We're constantly improving 3mpwr App to better serve the disability and injured workers community.
-
-------
-
----
-
-
-
-## 🆕 Recent Updates (Last 30 Days)
-
-# What's New at 3mpwr App 🎉# What's New 🎉
 
 <p class="intro-text">Here's what we've been working on this month:</p>
 
-
+permalink: /whats-new/permalink: /whats-new/
 
 {% assign current_time = site.time | date: '%s' | plus: 0 %}
 
-{% assign thirty_days_ago = current_time | minus: 2592000 %}See what's changed recently! We're constantly improving 3mpwr App to better serve the disability and injured workers community.Stay up to date with the latest features, improvements, and fixes to 3mpwrApp.
-
-{% assign recent_updates = "" | split: "" %}
+{% assign thirty_days_ago = current_time | minus: 2592000 %}See what's changed recently! We're constantly improving 3mpwr App to better serve the disability and injured workers community.
 
 
+
+<div class="updates-list">------
+
+
+
+{% assign recent_updates = "" | split: "" %}---
 
 {% for update in site.data.updates %}
 
-  {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}------
+  {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}
 
   {% if update_timestamp >= thirty_days_ago %}
 
-    {% assign recent_updates = recent_updates | push: update %}
+    {% assign recent_updates = recent_updates | push: update %}## 🆕 Recent Updates (Last 30 Days)
 
   {% endif %}
 
-{% endfor %}## 🆕 Recent Updates (Last 30 Days)## Recent Updates (Last 30 Days)
+{% endfor %}# What's New at 3mpwr App 🎉# What's New 🎉
 
 
 
-{% if recent_updates.size > 0 %}
+{% if recent_updates.size > 0 %}<p class="intro-text">Here's what we've been working on this month:</p>
 
-<div class="updates-simple">
+  {% for update in recent_updates %}
 
-{% for update in recent_updates %}<p class="intro-text">Here's what we've been working on this month:</p>{% assign current_time = site.time | date: '%s' | plus: 0 %}
+  <article class="update-item" data-date="{{ update.date }}">
 
-  <div class="update-card">
+    <header class="update-header">
 
-    <div class="update-icon">{% assign thirty_days_ago = current_time | minus: 2592000 %}
+      <h3>{{ update.title }}</h3>{% assign current_time = site.time | date: '%s' | plus: 0 %}
 
-      {% if update.type == 'feature' %}✨
+      <time datetime="{{ update.date | date: '%Y-%m-%d' }}">
 
-      {% elsif update.type == 'improvement' %}🚀{% assign current_time = site.time | date: '%s' | plus: 0 %}
+        {{ update.date | date: '%B %d, %Y' }}{% assign thirty_days_ago = current_time | minus: 2592000 %}See what's changed recently! We're constantly improving 3mpwr App to better serve the disability and injured workers community.Stay up to date with the latest features, improvements, and fixes to 3mpwrApp.
 
-      {% elsif update.type == 'fix' %}🔧
+      </time>
 
-      {% elsif update.type == 'security' %}🔒{% assign thirty_days_ago = current_time | minus: 2592000 %}<div class="updates-list">
+      {% if update.type %}{% assign recent_updates = "" | split: "" %}
 
-      {% elsif update.type == 'accessibility' %}♿
+      <span class="update-type update-type-{{ update.type }}">
 
-      {% elsif update.type == 'performance' %}⚡{% assign recent_updates = "" | split: "" %}{% for update in site.data.updates %}
+        {% if update.type == 'feature' %}✨ Feature
 
-      {% else %}📝
+        {% elsif update.type == 'improvement' %}🚀 Improvement
 
-      {% endif %}  {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}
+        {% elsif update.type == 'fix' %}🐛 Fix{% for update in site.data.updates %}
 
-    </div>
+        {% elsif update.type == 'security' %}🔒 Security
 
-    <div class="update-content">{% for update in site.data.updates %}  {% if update_timestamp >= thirty_days_ago %}
+        {% elsif update.type == 'accessibility' %}♿ Accessibility  {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}------
 
-      <h3 class="update-title">{{ update.title }}</h3>
+        {% elsif update.type == 'performance' %}⚡ Performance
 
-      <p class="update-date">{{ update.date | date: '%B %d, %Y' }}</p>  {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}  <article class="update-item" data-date="{{ update.date }}">
+        {% else %}📝 Update  {% if update_timestamp >= thirty_days_ago %}
 
-      <p class="update-description">{{ update.description }}</p>
+        {% endif %}
 
-      {% if update.details %}  {% if update_timestamp >= thirty_days_ago %}    <header class="update-header">
-
-      <details class="update-more">
-
-        <summary>More details</summary>    {% assign recent_updates = recent_updates | push: update %}      <h3>{{ update.title }}</h3>
-
-        <div class="update-details-text">{{ update.details | markdownify }}</div>
-
-      </details>  {% endif %}      <time datetime="{{ update.date | date: '%Y-%m-%d' }}">
+      </span>    {% assign recent_updates = recent_updates | push: update %}
 
       {% endif %}
 
-      {% if update.link %}{% endfor %}        {{ update.date | date: '%B %d, %Y' }}
+    </header>  {% endif %}
 
-      <a href="{{ update.link }}" class="update-learn-more">Learn more →</a>
+    
 
-      {% endif %}      </time>
+    <div class="update-content">{% endfor %}## 🆕 Recent Updates (Last 30 Days)## Recent Updates (Last 30 Days)
+
+      {{ update.description | markdownify }}
 
     </div>
 
-  </div>{% if recent_updates.size > 0 %}      {% if update.type %}
+    
 
-{% endfor %}
+    {% if update.details %}{% if recent_updates.size > 0 %}
 
-</div><div class="updates-simple">      <span class="update-type update-type-{{ update.type }}">
+    <details class="update-details">
 
-{% else %}
+      <summary>View Details</summary><div class="updates-simple">
 
-<div class="empty-message">{% for update in recent_updates %}        {% if update.type == 'feature' %}✨ Feature
+      <div class="update-details-content">
 
-  <p>🎯 <strong>You're all caught up!</strong></p>
+        {{ update.details | markdownify }}{% for update in recent_updates %}<p class="intro-text">Here's what we've been working on this month:</p>{% assign current_time = site.time | date: '%s' | plus: 0 %}
 
-  <p>No new updates in the last 30 days, but we're always working on improvements behind the scenes.</p>  <div class="update-card">        {% elsif update.type == 'improvement' %}🚀 Improvement
+      </div>
+
+    </details>  <div class="update-card">
+
+    {% endif %}
+
+        <div class="update-icon">{% assign thirty_days_ago = current_time | minus: 2592000 %}
+
+    {% if update.link and update.link != "" %}
+
+    <a href="{{ update.link }}" class="update-link">Learn More →</a>      {% if update.type == 'feature' %}✨
+
+    {% endif %}
+
+  </article>      {% elsif update.type == 'improvement' %}🚀{% assign current_time = site.time | date: '%s' | plus: 0 %}
+
+  {% endfor %}
+
+{% else %}      {% elsif update.type == 'fix' %}🔧
+
+<div class="empty-message">
+
+  <p>🎯 <strong>You're all caught up!</strong></p>      {% elsif update.type == 'security' %}🔒{% assign thirty_days_ago = current_time | minus: 2592000 %}<div class="updates-list">
+
+  <p>No new updates in the last 30 days, but we're always working on improvements behind the scenes.</p>
+
+</div>      {% elsif update.type == 'accessibility' %}♿
+
+{% endif %}
+
+      {% elsif update.type == 'performance' %}⚡{% assign recent_updates = "" | split: "" %}{% for update in site.data.updates %}
 
 </div>
 
-{% endif %}    <div class="update-icon">        {% elsif update.type == 'fix' %}🐛 Fix
+      {% else %}📝
 
+---
 
+      {% endif %}  {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}
 
----      {% if update.type == 'feature' %}✨        {% elsif update.type == 'security' %}🔒 Security
+## Archives
 
-
-
-## 📚 What Do These Updates Mean?      {% elsif update.type == 'improvement' %}🚀        {% elsif update.type == 'accessibility' %}♿ Accessibility
-
-
-
-<div class="update-types-guide">      {% elsif update.type == 'fix' %}🔧        {% elsif update.type == 'performance' %}⚡ Performance
-
-  <div class="type-card">
-
-    <span class="type-icon">✨</span>      {% elsif update.type == 'security' %}🔒        {% else %}📝 Update
-
-    <strong>New Feature</strong>
-
-    <p>Brand new tools or capabilities added to 3mpwr App</p>      {% elsif update.type == 'accessibility' %}♿        {% endif %}
-
-  </div>
-
-        {% elsif update.type == 'performance' %}⚡      </span>
-
-  <div class="type-card">
-
-    <span class="type-icon">🚀</span>      {% else %}📝      {% endif %}
-
-    <strong>Improvement</strong>
-
-    <p>We made something work better or easier to use</p>      {% endif %}    </header>
-
-  </div>
-
-      </div>    
-
-  <div class="type-card">
-
-    <span class="type-icon">🔧</span>    <div class="update-content">    <div class="update-content">
-
-    <strong>Bug Fix</strong>
-
-    <p>We fixed something that wasn't working properly</p>      <h3 class="update-title">{{ update.title }}</h3>      {{ update.description | markdownify }}
-
-  </div>
-
-        <p class="update-date">{{ update.date | date: '%B %d, %Y' }}</p>    </div>
-
-  <div class="type-card">
-
-    <span class="type-icon">♿</span>      <p class="update-description">{{ update.description }}</p>    
-
-    <strong>Accessibility</strong>
-
-    <p>Better support for screen readers and assistive technology</p>      {% if update.details %}    {% if update.details %}
-
-  </div>
-
-        <details class="update-more">    <details class="update-details">
-
-  <div class="type-card">
-
-    <span class="type-icon">🔒</span>        <summary>More details</summary>      <summary>View Details</summary>
-
-    <strong>Security</strong>
-
-    <p>Enhanced protection for your data and privacy</p>        <div class="update-details-text">{{ update.details | markdownify }}</div>      <div class="update-details-content">
-
-  </div>
-
-        </details>        {{ update.details | markdownify }}
-
-  <div class="type-card">
-
-    <span class="type-icon">⚡</span>      {% endif %}      </div>
-
-    <strong>Performance</strong>
-
-    <p>Faster loading and smoother experience</p>      {% if update.link %}    </details>
-
-  </div>
-
-</div>      <a href="{{ update.link }}" class="update-learn-more">Learn more →</a>    {% endif %}
-
-
-
----      {% endif %}    
-
-
-
-## 🔔 Stay Updated    </div>    {% if update.link %}
-
-
-
-<div class="stay-updated-box">  </div>    <a href="{{ update.link }}" class="update-link">Learn More →</a>
-
-  <h3>Never miss an update!</h3>
-
-  <p>Choose how you'd like to hear about new features and improvements:</p>{% endfor %}    {% endif %}
-
-  
-
-  <div class="subscription-buttons"></div>  </article>
-
-    <a href="/newsletter/" class="btn btn-primary">
-
-      <span class="btn-icon">📧</span>{% else %}  {% endif %}
-
-      Email Newsletter
-
-    </a><div class="empty-message">{% endfor %}
-
-    <a href="https://github.com/3mpowrApp/3mpwrapp.github.io/releases" class="btn btn-secondary" target="_blank" rel="noopener">
-
-      <span class="btn-icon">👀</span>  <p>🎯 <strong>You're all caught up!</strong></p></div>
-
-      GitHub Updates
-
-    </a>  <p>No new updates in the last 30 days, but we're always working on improvements behind the scenes.</p>
-
-  </div>
-
-  </div>---
-
-  <p class="follow-social">
-
-    Or follow us on social media:{% endif %}
-
-    <a href="https://www.facebook.com/3mpowrapp">Facebook</a> •
-
-    <a href="https://x.com/3mpowrApp0816">X</a> •## Archives
-
-    <a href="https://www.instagram.com/3mpowrapp/">Instagram</a>
-
-  </p>---
-
-</div>
+    </div>
 
 View updates from previous months to see how 3mpwrApp has evolved.
 
----
-
-## 📚 What Do These Updates Mean?
-
-## 💡 Have a Suggestion?
+    <div class="update-content">{% for update in site.data.updates %}  {% if update_timestamp >= thirty_days_ago %}
 
 <div class="archives-list">
 
-<div class="suggestion-box">
-
-  <p><strong>We'd love to hear your ideas!</strong></p><div class="update-types-guide">  <a href="/whats-new/archives/" class="archive-link">📦 View All Archives →</a>
-
-  <p>Have a feature request or suggestion for how we can improve 3mpwr App? Let us know!</p>
-
-  <a href="/contact/?subject=Feature Request" class="btn btn-accent">💡 Share Your Idea</a>  <div class="type-card"></div>
+  <a href="/whats-new/archives/" class="archive-link">📦 View All Archives →</a>      <h3 class="update-title">{{ update.title }}</h3>
 
 </div>
 
-    <span class="type-icon">✨</span>
+      <p class="update-date">{{ update.date | date: '%B %d, %Y' }}</p>  {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}  <article class="update-item" data-date="{{ update.date }}">
 
 ---
 
-    <strong>New Feature</strong>---
+      <p class="update-description">{{ update.description }}</p>
 
-## 📦 View Older Updates
+## Stay Updated
 
-    <p>Brand new tools or capabilities added to 3mpwr App</p>
+      {% if update.details %}  {% if update_timestamp >= thirty_days_ago %}    <header class="update-header">
 
-<details class="archives-dropdown">
+<div class="update-subscription">
 
-  <summary>View update history from previous months</summary>  </div>## Stay Updated
+  <h3>Never Miss an Update</h3>      <details class="update-more">
 
-  <div class="archives-content">
+  <p>Get notified when we release new features and improvements.</p>
 
-    <p>Coming soon: Archive of all past updates organized by month and year.</p>  
+          <summary>More details</summary>    {% assign recent_updates = recent_updates | push: update %}      <h3>{{ update.title }}</h3>
+
+  <div class="subscription-options">
+
+    <a href="/newsletter/" class="btn btn-primary">📧 Subscribe to Newsletter</a>        <div class="update-details-text">{{ update.details | markdownify }}</div>
+
+    <a href="https://github.com/3mpowrApp/3mpwrapp.github.io/releases" class="btn btn-secondary" target="_blank">👀 Watch on GitHub</a>
+
+  </div>      </details>  {% endif %}      <time datetime="{{ update.date | date: '%Y-%m-%d' }}">
+
+</div>
+
+      {% endif %}
+
+---
+
+      {% if update.link %}{% endfor %}        {{ update.date | date: '%B %d, %Y' }}
+
+## Suggest a Feature
+
+      <a href="{{ update.link }}" class="update-learn-more">Learn more →</a>
+
+Have an idea for a new feature? We'd love to hear it!
+
+      {% endif %}      </time>
+
+<a href="/contact/?subject=Feature Request" class="btn btn-secondary">💡 Submit Your Idea</a>
+
+    </div>
+
+<style>
+
+.updates-list {  </div>{% if recent_updates.size > 0 %}      {% if update.type %}
+
+  margin: 2rem 0;
+
+}{% endfor %}
+
+
+
+.update-item {</div><div class="updates-simple">      <span class="update-type update-type-{{ update.type }}">
+
+  background: var(--card-bg, #f9f9f9);
+
+  border: 1px solid var(--border-color, #ddd);{% else %}
+
+  border-radius: 8px;
+
+  padding: 1.5rem;<div class="empty-message">{% for update in recent_updates %}        {% if update.type == 'feature' %}✨ Feature
+
+  margin-bottom: 1.5rem;
+
+  transition: box-shadow 0.3s ease;  <p>🎯 <strong>You're all caught up!</strong></p>
+
+}
+
+  <p>No new updates in the last 30 days, but we're always working on improvements behind the scenes.</p>  <div class="update-card">        {% elsif update.type == 'improvement' %}🚀 Improvement
+
+.update-item:hover {
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);</div>
+
+}
+
+{% endif %}    <div class="update-icon">        {% elsif update.type == 'fix' %}🐛 Fix
+
+.update-header {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;---      {% if update.type == 'feature' %}✨        {% elsif update.type == 'security' %}🔒 Security
+
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+
+}
+
+## 📚 What Do These Updates Mean?      {% elsif update.type == 'improvement' %}🚀        {% elsif update.type == 'accessibility' %}♿ Accessibility
+
+.update-header h3 {
+
+  margin: 0;
+
+  flex: 1;
+
+}<div class="update-types-guide">      {% elsif update.type == 'fix' %}🔧        {% elsif update.type == 'performance' %}⚡ Performance
+
+
+
+.update-header time {  <div class="type-card">
+
+  color: var(--text-secondary, #666);
+
+  font-size: 0.9rem;    <span class="type-icon">✨</span>      {% elsif update.type == 'security' %}🔒        {% else %}📝 Update
+
+}
+
+    <strong>New Feature</strong>
+
+.update-type {
+
+  display: inline-block;    <p>Brand new tools or capabilities added to 3mpwr App</p>      {% elsif update.type == 'accessibility' %}♿        {% endif %}
+
+  padding: 0.25rem 0.75rem;
+
+  border-radius: 12px;  </div>
+
+  font-size: 0.85rem;
+
+  font-weight: 600;        {% elsif update.type == 'performance' %}⚡      </span>
+
+}
+
+  <div class="type-card">
+
+.update-type-feature {
+
+  background: #e3f2fd;    <span class="type-icon">🚀</span>      {% else %}📝      {% endif %}
+
+  color: #1976d2;
+
+}    <strong>Improvement</strong>
+
+
+
+.update-type-improvement {    <p>We made something work better or easier to use</p>      {% endif %}    </header>
+
+  background: #f3e5f5;
+
+  color: #7b1fa2;  </div>
+
+}
+
+      </div>    
+
+.update-type-fix {
+
+  background: #fff3e0;  <div class="type-card">
+
+  color: #e65100;
+
+}    <span class="type-icon">🔧</span>    <div class="update-content">    <div class="update-content">
+
+
+
+.update-type-security {    <strong>Bug Fix</strong>
+
+  background: #ffebee;
+
+  color: #c62828;    <p>We fixed something that wasn't working properly</p>      <h3 class="update-title">{{ update.title }}</h3>      {{ update.description | markdownify }}
+
+}
+
+  </div>
+
+.update-type-accessibility {
+
+  background: #e8f5e9;        <p class="update-date">{{ update.date | date: '%B %d, %Y' }}</p>    </div>
+
+  color: #2e7d32;
+
+}  <div class="type-card">
+
+
+
+.update-type-performance {    <span class="type-icon">♿</span>      <p class="update-description">{{ update.description }}</p>    
+
+  background: #fff9c4;
+
+  color: #f57f17;    <strong>Accessibility</strong>
+
+}
+
+    <p>Better support for screen readers and assistive technology</p>      {% if update.details %}    {% if update.details %}
+
+.update-content {
+
+  margin: 1rem 0;  </div>
+
+  line-height: 1.6;
+
+}        <details class="update-more">    <details class="update-details">
+
+
+
+.update-details {  <div class="type-card">
+
+  margin-top: 1rem;
+
+  border-top: 1px solid var(--border-color, #ddd);    <span class="type-icon">🔒</span>        <summary>More details</summary>      <summary>View Details</summary>
+
+  padding-top: 1rem;
+
+}    <strong>Security</strong>
+
+
+
+.update-details summary {    <p>Enhanced protection for your data and privacy</p>        <div class="update-details-text">{{ update.details | markdownify }}</div>      <div class="update-details-content">
+
+  cursor: pointer;
+
+  font-weight: 600;  </div>
+
+  color: var(--primary-color, #007bff);
+
+}        </details>        {{ update.details | markdownify }}
+
+
+
+.update-details-content {  <div class="type-card">
+
+  margin-top: 1rem;
+
+  padding-left: 1rem;    <span class="type-icon">⚡</span>      {% endif %}      </div>
+
+}
+
+    <strong>Performance</strong>
+
+.update-link {
+
+  display: inline-block;    <p>Faster loading and smoother experience</p>      {% if update.link %}    </details>
+
+  margin-top: 1rem;
+
+  color: var(--primary-color, #007bff);  </div>
+
+  text-decoration: none;
+
+  font-weight: 600;</div>      <a href="{{ update.link }}" class="update-learn-more">Learn more →</a>    {% endif %}
+
+}
+
+
+
+.update-link:hover {
+
+  text-decoration: underline;---      {% endif %}    
+
+}
+
+
+
+.archives-list {
+
+  text-align: center;## 🔔 Stay Updated    </div>    {% if update.link %}
+
+  margin: 2rem 0;
+
+}
+
+
+
+.archive-link {<div class="stay-updated-box">  </div>    <a href="{{ update.link }}" class="update-link">Learn More →</a>
+
+  display: inline-block;
+
+  padding: 1rem 2rem;  <h3>Never miss an update!</h3>
+
+  background: var(--card-bg, #f9f9f9);
+
+  border: 2px solid var(--border-color, #ddd);  <p>Choose how you'd like to hear about new features and improvements:</p>{% endfor %}    {% endif %}
+
+  border-radius: 8px;
+
+  color: var(--text-color, #333);  
+
+  text-decoration: none;
+
+  font-weight: 600;  <div class="subscription-buttons"></div>  </article>
+
+  transition: all 0.3s ease;
+
+}    <a href="/newsletter/" class="btn btn-primary">
+
+
+
+.archive-link:hover {      <span class="btn-icon">📧</span>{% else %}  {% endif %}
+
+  background: var(--primary-color, #007bff);
+
+  color: white;      Email Newsletter
+
+  border-color: var(--primary-color, #007bff);
+
+}    </a><div class="empty-message">{% endfor %}
+
+
+
+.update-subscription {    <a href="https://github.com/3mpowrApp/3mpwrapp.github.io/releases" class="btn btn-secondary" target="_blank" rel="noopener">
+
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  color: white;      <span class="btn-icon">👀</span>  <p>🎯 <strong>You're all caught up!</strong></p></div>
+
+  padding: 2rem;
+
+  border-radius: 12px;      GitHub Updates
+
+  text-align: center;
+
+  margin: 2rem 0;    </a>  <p>No new updates in the last 30 days, but we're always working on improvements behind the scenes.</p>
+
+}
+
+  </div>
+
+.update-subscription h3 {
+
+  margin-top: 0;  </div>---
+
+  color: white;
+
+}  <p class="follow-social">
+
+
+
+.subscription-options {    Or follow us on social media:{% endif %}
+
+  display: flex;
+
+  gap: 1rem;    <a href="https://www.facebook.com/3mpowrapp">Facebook</a> •
+
+  justify-content: center;
+
+  flex-wrap: wrap;    <a href="https://x.com/3mpowrApp0816">X</a> •## Archives
+
+  margin-top: 1.5rem;
+
+}    <a href="https://www.instagram.com/3mpowrapp/">Instagram</a>
+
+
+
+.btn {  </p>---
+
+  display: inline-block;
+
+  padding: 0.75rem 1.5rem;</div>
+
+  border-radius: 8px;
+
+  text-decoration: none;View updates from previous months to see how 3mpwrApp has evolved.
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;---
+
+}
+
+## 📚 What Do These Updates Mean?
+
+.btn-primary {
+
+  background: white;## 💡 Have a Suggestion?
+
+  color: #667eea;
+
+}<div class="archives-list">
+
+
+
+.btn-primary:hover {<div class="suggestion-box">
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);  <p><strong>We'd love to hear your ideas!</strong></p><div class="update-types-guide">  <a href="/whats-new/archives/" class="archive-link">📦 View All Archives →</a>
+
+}
+
+  <p>Have a feature request or suggestion for how we can improve 3mpwr App? Let us know!</p>
+
+.btn-secondary {
+
+  background: rgba(255,255,255,0.2);  <a href="/contact/?subject=Feature Request" class="btn btn-accent">💡 Share Your Idea</a>  <div class="type-card"></div>
+
+  color: white;
+
+  border: 2px solid white;</div>
+
+}
+
+    <span class="type-icon">✨</span>
+
+.btn-secondary:hover {
+
+  background: white;---
+
+  color: #667eea;
+
+}    <strong>New Feature</strong>---
+
+
+
+@media (max-width: 768px) {## 📦 View Older Updates
+
+  .update-header {
+
+    flex-direction: column;    <p>Brand new tools or capabilities added to 3mpwr App</p>
+
+    align-items: flex-start;
+
+  }<details class="archives-dropdown">
+
+  
+
+  .subscription-options {  <summary>View update history from previous months</summary>  </div>## Stay Updated
+
+    flex-direction: column;
+
+  }  <div class="archives-content">
+
+}
+
+</style>    <p>Coming soon: Archive of all past updates organized by month and year.</p>  
+
 
     <p>For now, you can view all updates on our <a href="https://github.com/3mpowrApp/3mpwrapp.github.io/releases">GitHub Releases page</a>.</p>
 
