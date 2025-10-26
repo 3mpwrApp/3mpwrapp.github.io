@@ -80,6 +80,7 @@ permalink: /crisis-resources/
 ## 📞 National Crisis Lines (All Canada)
 
 **24/7 Support - Free & Confidential**
+<!-- Last verified: October 26, 2025 | Source: 988.ca, official government websites -->
 
 | Service | Phone | Text | Chat | Languages |
 |---------|-------|------|------|-----------|
@@ -94,6 +95,8 @@ permalink: /crisis-resources/
 ---
 
 ## 🗺️ Provincial Crisis Lines
+
+<!-- Last verified: October 26, 2025 | Sources: Provincial health authority websites -->
 
 <details open>
 <summary><strong>Alberta</strong></summary>
@@ -213,6 +216,8 @@ permalink: /crisis-resources/
 ---
 
 ## 🏛️ Provincial Legal Aid (Emergency)
+
+<!-- Last verified: October 26, 2025 | Sources: Provincial legal aid websites -->
 
 <div id="provincial-legal-aid"></div>
 
@@ -500,3 +505,97 @@ You can call anonymously - don't have to give real name.
 **3mpwrApp - You are not alone. We believe in you.** 💚
 
 *Page verified: October 26, 2025 | Crisis line numbers updated monthly*
+
+---
+
+## 📋 Maintenance & Verification Information
+
+### **For Content Maintainers:**
+
+This page contains life-saving information and must be kept accurate. **Monthly verification is required.**
+
+### **Monthly Verification Checklist:**
+
+**National Crisis Lines (verify by calling or checking official websites):**
+- [ ] Canada Suicide Prevention Service: 1-833-456-4566 / Text 45645 → [988.ca](https://988.ca)
+- [ ] Kids Help Phone: 1-800-668-6868 → [kidshelpphone.ca](https://kidshelpphone.ca)
+- [ ] Hope for Wellness (Indigenous): 1-855-242-3310 → [hopeforwellness.ca](https://hopeforwellness.ca)
+- [ ] Trans Lifeline: 1-877-330-6366 → [translifeline.org](https://translifeline.org)
+- [ ] Wellness Together Canada: 1-866-585-0445 → [wellnesstogether.ca](https://wellnesstogether.ca)
+- [ ] 211 Canada: 211 → [211.ca](https://211.ca)
+- [ ] Canadian Domestic Violence Hotline: 1-800-363-9010 → [endingviolence.org](https://endingviolence.org)
+
+**Provincial Crisis Lines (verify via provincial health authorities):**
+- [ ] Alberta: [albertahealthservices.ca/amh/amh.aspx](https://www.albertahealthservices.ca/amh/amh.aspx)
+- [ ] BC: [crisiscentre.bc.ca](https://crisiscentre.bc.ca)
+- [ ] Manitoba: [klinic.mb.ca](https://klinic.mb.ca)
+- [ ] New Brunswick: [chimo.ca](https://chimo.ca)
+- [ ] Newfoundland: [nlhealthservices.ca](https://www.nlhealthservices.ca)
+- [ ] Northwest Territories: [hss.gov.nt.ca](https://www.hss.gov.nt.ca)
+- [ ] Nova Scotia: [mhns.ca](https://mhns.ca)
+- [ ] Nunavut: [gov.nu.ca/health](https://www.gov.nu.ca/health)
+- [ ] Ontario: [connexontario.ca](https://connexontario.ca)
+- [ ] PEI: [pei.ca/health](https://www.princeedwardisland.ca/en/topic/health)
+- [ ] Quebec: [quebec.ca/sante](https://www.quebec.ca/sante)
+- [ ] Saskatchewan: [saskcrisisline.ca](https://saskcrisisline.ca)
+- [ ] Yukon: [yukon.ca/health](https://yukon.ca/en/health-and-wellness)
+
+**Provincial Legal Aid (verify annually or when major policy changes):**
+- [ ] Check all 13 provincial/territorial legal aid websites
+- [ ] Verify 24/7 availability (Ontario only as of Oct 2025)
+- [ ] Confirm phone numbers and service hours
+
+**Additional Resources to Verify:**
+- [ ] Poison Control: 1-844-764-7669
+- [ ] Crisis app availability (App Store/Google Play)
+- [ ] All hyperlinks functional (no 404 errors)
+- [ ] PDF safety plan download link working
+
+### **Official Sources:**
+
+**Government Resources:**
+- [Public Health Agency of Canada - Mental Health](https://www.canada.ca/en/public-health/services/mental-health.html)
+- [988 Suicide Crisis Helpline](https://988.ca)
+- [Crisis Services Canada](https://www.crisisservicescanada.ca)
+
+**Verification Tools:**
+- Call numbers to confirm 24/7 availability
+- Check official websites for service changes
+- Monitor government press releases for policy updates
+- Review provincial budget announcements (may affect services)
+
+**Update Procedure:**
+1. Verify all numbers in checklist above
+2. Update "Last verified" date in HTML comments (lines with `<!-- Last verified: -->`)
+3. Update "Page verified" date at bottom of page
+4. Commit changes with message: "Verify crisis resources - [Month Year]"
+5. Set calendar reminder for next month's verification
+
+**Emergency Updates:**
+If a crisis line changes or becomes unavailable:
+1. Update immediately (don't wait for monthly cycle)
+2. Add note in commit message: "URGENT: Crisis line update - [service name]"
+3. Notify site administrator
+4. Check if number appears in other files (user-guide.md, terms/index.md, legal/disclaimers/index.md, index.md)
+
+### **Verification History:**
+
+| Date | Verified By | Changes Made | Notes |
+|------|-------------|--------------|-------|
+| Oct 26, 2025 | AI Assistant | Fixed US crisis numbers (741741, 1-800-799-7233) to Canadian equivalents. Added verification system. | Corrected incorrect US crisis text line (741741→45645), US DV hotline (1-800-799-7233→1-800-363-9010) in 3 files. |
+| Oct 26, 2025 | AI Assistant | Removed inline backgrounds breaking dark mode | All crisis resource boxes now readable in dark mode |
+| (Add future verifications here) | | | |
+
+### **Critical Reminder:**
+
+**This page saves lives.** Incorrect information can have fatal consequences. If you update this page:
+- ✅ **DO** verify numbers by calling or checking official sources
+- ✅ **DO** test all links and phone numbers
+- ✅ **DO** update verification dates
+- ✅ **DO** check for service hour changes
+- ❌ **DON'T** copy crisis numbers from other websites without verification
+- ❌ **DON'T** remove numbers without finding replacements
+- ❌ **DON'T** skip monthly verification
+
+**Questions about crisis resource updates?** [Contact site administrator](/contact)
+

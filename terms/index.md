@@ -108,11 +108,11 @@ description: The terms and conditions for using the 3mpwr website and app.
 - The panic button and safe landing page are support tools only—they do not alert emergency services
 - We are not responsible for delays, failures, or consequences related to emergency situations
 
-**Crisis Resources:**
-- **988 Suicide & Crisis Lifeline (US/Canada):** Call or text 988
-- **Crisis Text Line:** Text HOME to 741741
-- **Emergency:** Call 911 (US/Canada) or your local emergency number
-- **Domestic Violence:** National Domestic Violence Hotline 1-800-799-7233
+**Crisis Resources (Canada):**
+- **Canada Suicide Prevention Service:** Call [1-833-456-4566](tel:1-833-456-4566) or text [45645](sms:45645) (24/7)
+- **Emergency:** Call 911 or your local emergency number
+- **Canadian Domestic Violence Hotline:** [1-800-363-9010](tel:1-800-363-9010) (24/7)
+- **[Complete crisis resources →](/crisis-resources)**
 
 ---
 

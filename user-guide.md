@@ -58,9 +58,9 @@ Before using 3mpwrApp, please understand:
 
 ### **In Emergencies:**
 - **Call 911** for medical emergencies
-- **Call 988** for Suicide & Crisis Lifeline
-- **Text HOME to 741741** for Crisis Text Line
-- **Call 1-800-799-7233** for Domestic Violence Hotline
+- **Call 1-833-456-4566** for Canada Suicide Prevention Service (24/7)
+- **Text 45645** for Crisis Text Line (4pm-12am ET)
+- **Call 1-800-363-9010** for Canadian Domestic Violence Hotline (24/7)
 
 **Quick start? Jump to [Getting Started in 5 Minutes](#getting-started-in-5-minutes)**
 
@@ -3337,16 +3337,21 @@ See full changelog: Settings > About > What's New
 - Accessibility Statement: https://3mpwrapp.pages.dev/accessibility
 
 ### **Crisis Resources:**
-- **988 Suicide & Crisis Lifeline:** Call or text 988
-- **Crisis Text Line:** Text HOME to 741741
-- **National Domestic Violence Hotline:** 1-800-799-7233
-- **SAMHSA National Helpline:** 1-800-662-4357
+- **Canada Suicide Prevention Service:** Call [1-833-456-4566](tel:1-833-456-4566) or text [45645](sms:45645) (24/7)
+- **Wellness Together Canada:** Call [1-866-585-0445](tel:1-866-585-0445) or text WELLNESS to 686868
+- **Canadian Domestic Violence Hotline:** [1-800-363-9010](tel:1-800-363-9010) (24/7, TTY: 1-800-567-5803)
+- **Kids Help Phone (under 30):** Call [1-800-668-6868](tel:1-800-668-6868) or text [686868](sms:686868)
+- **Hope for Wellness (Indigenous):** [1-855-242-3310](tel:1-855-242-3310) or chat at hopeforwellness.ca
+- **211 Canada (community services):** Dial [211](tel:211)
 
-### **Disability Rights Organizations:**
-- **ADA National Network:** 1-800-949-4232
-- **Disability Rights Education & Defense Fund (DREDF):** www.dredf.org
-- **National Disability Rights Network (NDRN):** www.ndrn.org
-- **Council of Canadians with Disabilities:** www.ccdonline.ca
+**[Complete crisis resources list →](/crisis-resources)**
+
+### **Canadian Disability Rights Organizations:**
+- **Council of Canadians with Disabilities:** [www.ccdonline.ca](https://www.ccdonline.ca)
+- **Disability Rights Coalition of Canada:** [www.disabilityrights.ca](https://www.disabilityrights.ca)
+- **Canadian Association for Community Living:** [www.cacl.ca](https://www.cacl.ca)
+- **Inclusion Canada:** [www.inclusioncanada.ca](https://www.inclusioncanada.ca)
+- **DisAbled Women's Network Canada (DAWN):** [www.dawncanada.net](https://www.dawncanada.net)
 
 ---
 

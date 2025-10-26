@@ -151,10 +151,10 @@ THIS APP IS NOT A SUBSTITUTE FOR EMERGENCY SERVICES OR CRISIS INTERVENTION. IF Y
 - Do not delay seeking emergency help to use this app
 
 ### **Crisis Resources (Not Emergency Services):**
-- **988 Suicide & Crisis Lifeline (US/Canada):** Call or text 988
-- **Crisis Text Line:** Text HOME to 741741
-- **Emergency:** Call 911 (US/Canada) or your local emergency number
-- **Domestic Violence:** National Domestic Violence Hotline 1-800-799-7233
+- **Canada Suicide Prevention Service:** Call [1-833-456-4566](tel:1-833-456-4566) or text [45645](sms:45645) (24/7)
+- **Emergency:** Call 911 or your local emergency number
+- **Canadian Domestic Violence Hotline:** [1-800-363-9010](tel:1-800-363-9010) (24/7)
+- **[Complete crisis resources →](/crisis-resources)**
 
 ### **Features Covered:**
 - Safe Landing Page
