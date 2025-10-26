@@ -87,6 +87,8 @@ When you see "Energy used: 8" and realize you've used more spoons than you inten
 
 ## Real-World Use Cases
 
+**NOTE:** These are conceptual examples of how the Spoon Counter is designed to work. We're currently preparing for Phase 1 Closed Beta testing (launching soon). Real user feedback and testimonials will be collected during beta testing with participant permission.
+
 ### Case Study 1: Morning Browser with Limited Spoons
 **Sarah has fibromyalgia. She wakes up with 10 spoons for the entire day.**
 
@@ -182,20 +184,6 @@ Track your patterns:
 - Tuesday average: 12 spoons
 - Best browsing time: 10am-12pm (lowest cost)
 - Highest cost pages: Legal documents (avg 6 spoons)
-
----
-
-## Community Feedback
-
-### What Beta Testers Are Saying:
-
-> "This is EXACTLY what I needed. I can finally budget my energy like I budget money." - Alex, Beta Tester
-
-> "I showed my doctor the spoon counter and she finally understood why I can't 'just google' things some days." - Maria, Beta Tester
-
-> "As someone with ADHD and chronic pain, seeing the numbers helps me pace myself. Game-changer." - Jordan, Beta Tester
-
-> "My kid asks 'how many spoons do I have today?' Now we can track it together." - Parent of disabled teen
 
 ---
 

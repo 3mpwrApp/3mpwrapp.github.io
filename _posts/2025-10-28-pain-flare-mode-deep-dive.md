@@ -230,30 +230,9 @@ Pain Flare Mode is already an accessibility feature. But we made it even more ac
 
 ---
 
-## What Users Say
+## Design Philosophy
 
-> "I didn't realize how much websites overwhelm me on bad pain days until I tried Pain Flare Mode. This is what accessibility actually looks like." - Beta Tester
-
-> "I keep Pain Mode on 4 days out of 7. It's not just for flares—it's for daily pain management." - Chronic Pain User
-
-> "As an occupational therapist, I recommend this to my clients with workplace injuries. It lets them stay engaged with their cases even on bad days." - OT Professional
-
----
-
-## Combining with Other Features
-
-### Pain Flare Mode + Spoon Counter
-Turn on Pain Mode, watch how much fewer spoons you use. Sections that cost 3 spoons in regular mode might only cost 1 spoon in Pain Mode.
-
-### Pain Flare Mode + Break Button
-Activate both: simplified view + scheduled breaks = maximum pain management.
-
-### Pain Flare Mode + Brain Fog Helper
-Can't process even simplified text? Add the 10-word summary for absolute clarity.
-
----
-
-## The Bigger Picture
+**NOTE:** Pain Flare Mode is currently in development for Phase 1 Closed Beta testing. The conceptual examples below illustrate how we expect this feature to help users once deployed. Real user testimonials will be collected during beta testing with participant permission.
 
 ### Why This Matters Beyond Our Site
 
