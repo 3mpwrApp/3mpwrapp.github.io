@@ -291,8 +291,8 @@ Nominate them for Community Spotlight:
 **Want to get more involved:**  
 💬 Visit our [Campaigns page](/campaigns/)
 
-**Partnership inquiries:**  
-📝 Visit our [Partnerships page](/partnerships/)
+**Connect with us:**  
+📝 Visit our [Connect page](/connect/)
 
 ---
 
