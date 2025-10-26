@@ -16,8 +16,8 @@ description: Your voice, your power. Unfiltered. 3mpwrApp puts the power back in
   <summary>⚡ Quick Summary (30 seconds)</summary>
   <ul>
     <li><strong>100% Free Forever:</strong> No subscriptions, no in-app purchases, no paid tiers - ever</li>
-    <li><strong>Community-Funded:</strong> Built BY injured workers, persons with disabilities, supporters, and allies FOR the community</li>
-    <li><strong>Canadian Focus First:</strong> Serving all provinces/territories, understanding Canadian systems (WSIB/WCB)</li>
+    <li><strong>Community-Funded:</strong> Built BY persons with disabilities, injured workers, supporters, allies, unions, and advocates FOR everyone</li>
+    <li><strong>Canadian Focus First:</strong> Serving all people across all provinces/territories - whether you're disabled, injured, a supporter, or an ally</li>
     <li><strong>No Corporate Control:</strong> No venture capital, no profit motive - just community empowerment</li>
     <li><strong>Privacy First:</strong> Your data stays on YOUR device - we can't see it</li>
     <li><strong>Global Vision:</strong> Perfect it for Canada, then expand worldwide by 2026-2028</li>
@@ -41,7 +41,7 @@ Big platforms silence stories through hidden algorithms and "relevance" scores. 
 
 **3mpwrApp is 100% free and always will be.** We're a grassroots, community-focused initiative with a mission-driven approach focused on empowerment, not profit. No paid tiers. No subscriptions. No in-app purchases. Ever.
 
-We're built BY the disability community, FOR the disability community, funded through community support and driven by our shared values of accessibility, dignity, and collective power.
+We're built BY the disability and injured workers community, FOR everyone who cares about disability justice and workers' rights - funded through community support and driven by our shared values of accessibility, dignity, and collective power.
 
 **Our funding model:**
 - 💚 Community donations (optional, never required)
@@ -53,11 +53,25 @@ We're built BY the disability community, FOR the disability community, funded th
 
 ### 🇨🇦 Currently Serving Canada-Wide
 
-**3mpwrApp is built for the Canadian disability rights community** - supporting persons with disabilities, injured workers, supporters, allies, and unions across all provinces and territories. We understand Canadian systems (WSIB, WCB, provincial disability programs), Indigenous sovereignty and OCAP principles, and the unique challenges faced by disabled and injured workers navigating Canadian legal and healthcare systems.
+**3mpwrApp welcomes everyone across Canada** - persons with disabilities, injured workers, family supporters, caregivers, allies, union members, healthcare providers, legal advocates, social justice activists, employers committed to accessibility, and anyone passionate about disability rights and workers' rights.
 
-**Our approach:** Perfect our platform for Canada first, building the strongest disability rights tool in the nation. Once we've proven our model works and serves our community effectively, we'll expand globally to support disability rights movements worldwide.
+**We understand Canadian systems** (WSIB/WCB, provincial disability programs, EI Sickness Benefits, CPP Disability, ODSP, AISH, and more), Indigenous sovereignty and OCAP principles, French/English language services, and the unique challenges faced by disabled people, injured workers, and their supporters navigating Canadian legal, healthcare, and compensation systems.
 
-**What's next?** Check out our **[Roadmap](/roadmap/)** to see our vision for global expansion (2026-2028), including plans to serve 100+ countries and connect disability rights movements internationally. From Canada to the world - building collective power for persons with disabilities everywhere.
+**Everyone belongs here:**
+- 🦽 **Persons with disabilities** - All disabilities welcomed: physical, cognitive, mental health, chronic illness, invisible disabilities, and more
+- 🏗️ **Injured workers** - Workplace injuries, occupational diseases, repetitive strain, psychological injuries
+- 💙 **Family supporters & caregivers** - Parents, spouses, partners, siblings, chosen family
+- 🤝 **Allies** - Non-disabled people committed to disability justice and accessibility
+- 🛠️ **Union members** - Collective organizing for workers' rights and disability accommodations
+- 🏥 **Healthcare providers** - Doctors, nurses, therapists, social workers supporting patients
+- ⚖️ **Legal advocates** - Lawyers, paralegals, advocates supporting disability/injury claims
+- ✊ **Social justice activists** - Fighting ableism, workplace exploitation, systemic barriers
+- 🏢 **Employers** - Businesses genuinely committed to accessibility and inclusion
+- 🌍 **General public** - Anyone learning about disability rights, wanting to support, or seeking resources
+
+**Our approach:** Perfect our platform for Canada first, building the strongest disability rights and workers' rights tool in the nation - serving ALL people who care about these issues. Once we've proven our model works and serves our diverse community effectively, we'll expand globally to support disability rights movements worldwide.
+
+**What's next?** Check out our **[Roadmap](/roadmap/)** to see our vision for global expansion (2026-2028), including plans to serve 100+ countries and connect disability rights movements internationally. From Canada to the world - building collective power for persons with disabilities, injured workers, and everyone who stands with us.
 
 ### Why 3mpwrApp is Different
 
