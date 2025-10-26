@@ -5,7 +5,7 @@ description: Join the 3mpwrApp mobile app waitlist and be among the first to tes
 permalink: /app-waitlist/
 ---
 
-<div class="status-banner" role="status" aria-live="polite" style="background: linear-gradient(135deg, #5568d3 0%, #6c5ce7 100%); color: white; padding: 1.5rem; text-align: center; border-radius: 8px; margin-bottom: 2rem;">
+<div class="status-banner" role="status" aria-live="polite">
   <span class="status-indicator">🚀</span> 
   <strong>Phase 1 Beta Testing Now Open!</strong> Limited spots available
 </div>
@@ -24,24 +24,24 @@ permalink: /app-waitlist/
 
 <div style="display: grid; gap: 1rem; margin: 2rem 0;">
 
-<div style="border-left: 4px solid #10b981; padding: 1rem; background: #f0fdf4;">
+<div class="feature-box" style="border-color: #10b981; background: #f0fdf4;">
   <strong>💚 100% Free Forever</strong>
-  <p style="margin: 0.5rem 0 0;">No subscriptions, no paid tiers, no hidden costs. Ever.</p>
+  <p>No subscriptions, no paid tiers, no hidden costs. Ever.</p>
 </div>
 
-<div style="border-left: 4px solid #3b82f6; padding: 1rem; background: #eff6ff;">
+<div class="feature-box" style="border-color: #3b82f6; background: #eff6ff;">
   <strong>🔒 You Own Your Data</strong>
-  <p style="margin: 0.5rem 0 0;">BYOC (Bring Your Own Cloud) modes mean your data stays with YOU.</p>
+  <p>BYOC (Bring Your Own Cloud) modes mean your data stays with YOU.</p>
 </div>
 
-<div style="border-left: 4px solid #f59e0b; padding: 1rem; background: #fffbeb;">
+<div class="feature-box" style="border-color: #f59e0b; background: #fffbeb;">
   <strong>♿ Built BY Disabled People</strong>
-  <p style="margin: 0.5rem 0 0;">Not for us without us - every feature designed with lived experience.</p>
+  <p>Not for us without us - every feature designed with lived experience.</p>
 </div>
 
-<div style="border-left: 4px solid #8b5cf6; padding: 1rem; background: #f5f3ff;">
+<div class="feature-box" style="border-color: #8b5cf6; background: #f5f3ff;">
   <strong>🇨🇦 Canadian-Focused</strong>
-  <p style="margin: 0.5rem 0 0;">All provinces/territories, including Indigenous languages and cultural protocols.</p>
+  <p>All provinces/territories, including Indigenous languages and cultural protocols.</p>
 </div>
 
 </div>
@@ -52,7 +52,7 @@ permalink: /app-waitlist/
 
 ## 🎯 Current Development Phase
 
-<div class="phase-tracker" style="background: #f3f4f6; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+<div class="phase-tracker">
 
 ### Phase 1: Closed Beta (October - December 2025)
 **Status:** 🟢 **ACTIVE NOW**
@@ -98,7 +98,7 @@ permalink: /app-waitlist/
 
 ## 🚀 Join Beta Testing Now
 
-<div class="beta-cta" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; text-align: center; margin: 2rem 0;">
+<div class="beta-cta">
   
   <h3 style="color: white; margin: 0 0 1rem; font-size: 1.5rem;">Ready to Make History?</h3>
   

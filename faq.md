@@ -11,9 +11,11 @@ permalink: /faq/
 
 # Frequently Asked Questions (FAQ)
 
-**Last Updated:** October 25, 2025
+**Last Updated:** October 26, 2025
 
 📖 **15 minute read** | ⚡ Use table of contents to jump to your question
+
+Quick answers to common questions about 3mpwrApp. Can't find what you're looking for? [Contact us](/contact).
 
 <details class="tldr-box" open>
   <summary>⚡ Most Common Questions</summary>
@@ -26,12 +28,6 @@ permalink: /faq/
     <li><strong>Works in my province?</strong> Yes - supports all Canadian provinces and territories</li>
   </ul>
 </details>
-
-# Frequently Asked Questions (FAQ)
-
-**Last Updated:** October 25, 2025
-
-Quick answers to common questions about 3mpwrApp. Can't find what you're looking for? [Contact us](/contact).
 
 ---
 

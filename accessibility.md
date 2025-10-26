@@ -188,7 +188,7 @@ We meet **all** WCAG 2.2 Level AA success criteria and exceed to Level AAA in se
 - Monthly manual audits by accessibility team
 - Quarterly community feedback reviews
 
-**[View Latest Accessibility Report →](/ACCESSIBILITY-STATUS-2025.html)**
+**[View Latest Accessibility Report →](/ACCESSIBILITY-STATUS-2025)**
 
 ---
 

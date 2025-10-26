@@ -1169,9 +1169,16 @@ body[data-contrast="high"] .badge--new {
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   font-size: 0.95rem;
   box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-banner strong {
+  color: white;
 }
 
 .status-indicator {
@@ -2111,5 +2118,204 @@ body[data-contrast="high"] .email-section-btn {
   body:not([data-theme="light"]) .info-box-light {
     --info-box-light-bg: #0c2642;
     --info-border: #3b82f6;
+  }
+}
+
+/* ============================================
+   CRISIS RESOURCES & NEW PAGES STYLING
+   Accessible across all themes (light/dark/high-contrast)
+   ============================================ */
+
+/* Crisis Alert Box */
+.crisis-alert {
+  background: var(--crisis-alert-bg, #dc2626);
+  color: var(--crisis-alert-text, #ffffff);
+  border: 3px solid var(--crisis-alert-border, #991b1b);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.crisis-alert h2 {
+  color: var(--crisis-alert-text, #ffffff);
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.crisis-alert a {
+  color: var(--crisis-alert-text, #ffffff);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.crisis-alert a:hover {
+  text-decoration: none;
+}
+
+/* Decision Tree / Crisis Options Grid */
+.decision-tree {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.crisis-option {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid;
+  transition: all 0.3s ease;
+}
+
+.crisis-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Crisis option color variants */
+.crisis-option h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.crisis-option p {
+  margin: 0 0 1rem;
+}
+
+.crisis-option p:last-child {
+  margin-bottom: 0;
+}
+
+/* Phase Tracker / Beta CTA boxes */
+.phase-tracker,
+.beta-cta {
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.phase-tracker {
+  background: var(--phase-tracker-bg, #f3f4f6);
+  border: 2px solid var(--border-color, #d1d5db);
+}
+
+.beta-cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  border: 3px solid #5a67d8;
+}
+
+.beta-cta h2,
+.beta-cta h3,
+.beta-cta p,
+.beta-cta strong {
+  color: white !important;
+}
+
+/* Feature Highlight Boxes */
+.feature-box {
+  border-left: 4px solid;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateX(4px);
+}
+
+.feature-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Dark Mode Overrides */
+body[data-theme="dark"] .crisis-alert {
+  --crisis-alert-bg: #7f1d1d;
+  --crisis-alert-border: #991b1b;
+}
+
+body[data-theme="dark"] .crisis-option {
+  background: var(--card-bg, #1e293b) !important;
+  border-color: var(--border-color, #475569);
+}
+
+body[data-theme="dark"] .crisis-option h3,
+body[data-theme="dark"] .crisis-option p,
+body[data-theme="dark"] .crisis-option strong {
+  color: #e5e7eb;
+}
+
+body[data-theme="dark"] .phase-tracker {
+  --phase-tracker-bg: #1e293b;
+  --border-color: #475569;
+  color: #e5e7eb;
+}
+
+body[data-theme="dark"] .phase-tracker h3,
+body[data-theme="dark"] .phase-tracker strong {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .feature-box {
+  background: var(--card-bg, #1e293b);
+  color: #e5e7eb;
+}
+
+/* High Contrast Mode */
+body[data-contrast="high"] .crisis-alert,
+body[data-contrast="high"] .crisis-option,
+body[data-contrast="high"] .phase-tracker,
+body[data-contrast="high"] .beta-cta,
+body[data-contrast="high"] .feature-box {
+  border-width: 3px !important;
+  border-color: #000 !important;
+}
+
+body[data-contrast="high"] .crisis-alert {
+  background: #000;
+  color: #fff;
+}
+
+body[data-contrast="high"] .crisis-option {
+  background: #fff;
+  color: #000;
+}
+
+body[data-contrast="high"] .crisis-option h3,
+body[data-contrast="high"] .crisis-option p {
+  color: #000 !important;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .crisis-option:hover,
+  .feature-box:hover {
+    transform: none;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .crisis-alert {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .crisis-alert h2 {
+    font-size: 1.2rem;
+  }
+  
+  .decision-tree {
+    gap: 0.75rem;
+  }
+  
+  .crisis-option,
+  .phase-tracker,
+  .beta-cta {
+    padding: 1rem;
   }
 }

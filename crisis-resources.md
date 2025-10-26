@@ -5,9 +5,9 @@ description: Immediate crisis support resources for persons with disabilities ac
 permalink: /crisis-resources/
 ---
 
-<div class="crisis-alert" role="alert" style="background: #dc2626; color: white; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; text-align: center;">
-  <h2 style="margin: 0 0 1rem; color: white; font-size: 1.5rem;">🆘 If you're in immediate danger, call 911</h2>
-  <p style="margin: 0; font-size: 1.1rem;"><strong>24/7 National Crisis Line:</strong> <a href="tel:1-833-456-4566" style="color: white; font-weight: bold; text-decoration: underline;">1-833-456-4566</a></p>
+<div class="crisis-alert" role="alert">
+  <h2>🆘 If you're in immediate danger, call 911</h2>
+  <p style="margin: 0; font-size: 1.1rem;"><strong>24/7 National Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a></p>
   <p style="margin: 0.5rem 0 0; font-size: 0.95rem;">Free, confidential, available 24/7 in English and French</p>
 </div>
 
@@ -21,56 +21,56 @@ permalink: /crisis-resources/
 
 **Choose what describes your situation right now:**
 
-<div class="decision-tree" style="display: grid; gap: 1rem; margin: 2rem 0;">
+<div class="decision-tree">
 
-<div class="crisis-option" style="border: 2px solid #dc2626; padding: 1.5rem; border-radius: 8px; background: #fef2f2;">
-  <h3 style="margin: 0 0 0.5rem; color: #991b1b;">🚨 Immediate Danger</h3>
-  <p style="margin: 0 0 1rem;">You or someone else is at risk of harm right now</p>
-  <p style="margin: 0; font-size: 1.2rem;"><strong>Call 911 immediately</strong></p>
-  <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Or go to nearest emergency room</p>
+<div class="crisis-option" style="border-color: #dc2626; background: #fef2f2;">
+  <h3 style="color: #991b1b;">🚨 Immediate Danger</h3>
+  <p>You or someone else is at risk of harm right now</p>
+  <p style="font-size: 1.2rem;"><strong>Call 911 immediately</strong></p>
+  <p style="font-size: 0.9rem;">Or go to nearest emergency room</p>
 </div>
 
-<div class="crisis-option" style="border: 2px solid #ea580c; padding: 1.5rem; border-radius: 8px; background: #fff7ed;">
-  <h3 style="margin: 0 0 0.5rem; color: #9a3412;">💔 Suicide Crisis</h3>
-  <p style="margin: 0 0 1rem;">Having thoughts of ending your life</p>
-  <p style="margin: 0;"><strong>Canada Suicide Prevention Service:</strong></p>
-  <p style="margin: 0.25rem 0 0; font-size: 1.1rem;">
+<div class="crisis-option" style="border-color: #ea580c; background: #fff7ed;">
+  <h3 style="color: #9a3412;">💔 Suicide Crisis</h3>
+  <p>Having thoughts of ending your life</p>
+  <p><strong>Canada Suicide Prevention Service:</strong></p>
+  <p style="font-size: 1.1rem;">
     📞 <a href="tel:1-833-456-4566"><strong>1-833-456-4566</strong></a> (24/7) | 
     💬 <a href="sms:45645"><strong>Text 45645</strong></a> (4pm-12am ET)
   </p>
-  <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">
+  <p style="font-size: 0.9rem;">
     <a href="https://988.ca" target="_blank" rel="noopener noreferrer">Chat online at 988.ca →</a>
   </p>
 </div>
 
-<div class="crisis-option" style="border: 2px solid #f59e0b; padding: 1.5rem; border-radius: 8px; background: #fffbeb;">
-  <h3 style="margin: 0 0 0.5rem; color: #92400e;">⚖️ Legal Emergency</h3>
-  <p style="margin: 0 0 1rem;">Eviction notice, workplace termination, benefits cut off</p>
-  <p style="margin: 0;"><strong>Legal Aid Ontario (24/7):</strong> <a href="tel:1-800-668-8258">1-800-668-8258</a></p>
-  <p style="margin: 0.5rem 0 0;"><a href="#provincial-legal-aid">See your province's legal aid →</a></p>
+<div class="crisis-option" style="border-color: #f59e0b; background: #fffbeb;">
+  <h3 style="color: #92400e;">⚖️ Legal Emergency</h3>
+  <p>Eviction notice, workplace termination, benefits cut off</p>
+  <p><strong>Legal Aid Ontario (24/7):</strong> <a href="tel:1-800-668-8258">1-800-668-8258</a></p>
+  <p style="margin-top: 0.5rem;"><a href="#provincial-legal-aid">See your province's legal aid →</a></p>
 </div>
 
-<div class="crisis-option" style="border: 2px solid #3b82f6; padding: 1.5rem; border-radius: 8px; background: #eff6ff;">
-  <h3 style="margin: 0 0 0.5rem; color: #1e40af;">🏠 Basic Needs</h3>
-  <p style="margin: 0 0 1rem;">Need food, shelter, or safety from abuse</p>
-  <p style="margin: 0;"><strong>211 Canada:</strong> <a href="tel:211">Dial 211</a></p>
-  <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Connects to local services (food banks, shelters, support)</p>
+<div class="crisis-option" style="border-color: #3b82f6; background: #eff6ff;">
+  <h3 style="color: #1e40af;">🏠 Basic Needs</h3>
+  <p>Need food, shelter, or safety from abuse</p>
+  <p><strong>211 Canada:</strong> <a href="tel:211">Dial 211</a></p>
+  <p style="font-size: 0.9rem;">Connects to local services (food banks, shelters, support)</p>
 </div>
 
-<div class="crisis-option" style="border: 2px solid #8b5cf6; padding: 1.5rem; border-radius: 8px; background: #f5f3ff;">
-  <h3 style="margin: 0 0 0.5rem; color: #5b21b6;">🧠 Mental Health Support</h3>
-  <p style="margin: 0 0 1rem;">Anxiety, depression, panic attacks, PTSD</p>
-  <p style="margin: 0;"><strong>Wellness Together Canada:</strong></p>
-  <p style="margin: 0.25rem 0 0;">📞 <a href="tel:1-866-585-0445">1-866-585-0445</a> | 💬 Text WELLNESS to 686868</p>
-  <p style="margin: 0.5rem 0 0; font-size: 0.9rem;"><a href="https://wellnesstogether.ca" target="_blank" rel="noopener noreferrer">Free counselling at wellnesstogether.ca →</a></p>
+<div class="crisis-option" style="border-color: #8b5cf6; background: #f5f3ff;">
+  <h3 style="color: #5b21b6;">🧠 Mental Health Support</h3>
+  <p>Anxiety, depression, panic attacks, PTSD</p>
+  <p><strong>Wellness Together Canada:</strong></p>
+  <p>📞 <a href="tel:1-866-585-0445">1-866-585-0445</a> | 💬 Text WELLNESS to 686868</p>
+  <p style="font-size: 0.9rem;"><a href="https://wellnesstogether.ca" target="_blank" rel="noopener noreferrer">Free counselling at wellnesstogether.ca →</a></p>
 </div>
 
-<div class="crisis-option" style="border: 2px solid #ec4899; padding: 1.5rem; border-radius: 8px; background: #fdf2f8;">
-  <h3 style="margin: 0 0 0.5rem; color: #9f1239;">🤜 Domestic Violence</h3>
-  <p style="margin: 0 0 1rem;">Experiencing abuse or violence at home</p>
-  <p style="margin: 0;"><strong>Canadian Domestic Violence Hotline:</strong></p>
-  <p style="margin: 0.25rem 0 0; font-size: 1.1rem;">📞 <a href="tel:1-800-363-9010"><strong>1-800-363-9010</strong></a> (24/7)</p>
-  <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">TTY: <a href="tel:1-800-567-5803">1-800-567-5803</a></p>
+<div class="crisis-option" style="border-color: #ec4899; background: #fdf2f8;">
+  <h3 style="color: #9f1239;">🤜 Domestic Violence</h3>
+  <p>Experiencing abuse or violence at home</p>
+  <p><strong>Canadian Domestic Violence Hotline:</strong></p>
+  <p style="font-size: 1.1rem;">📞 <a href="tel:1-800-363-9010"><strong>1-800-363-9010</strong></a> (24/7)</p>
+  <p style="font-size: 0.9rem;">TTY: <a href="tel:1-800-567-5803">1-800-567-5803</a></p>
 </div>
 
 </div>
