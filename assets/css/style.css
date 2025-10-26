@@ -2041,6 +2041,11 @@ body[data-contrast="high"] .email-section-btn {
   padding: 1rem;
   margin: 1rem 0;
   text-align: center;
+  color: var(--text-color, #222);
+}
+
+.community-stats-box strong {
+  color: var(--text-color, #222);
 }
 
 /* Dark Mode Overrides for Boxes */
@@ -2058,6 +2063,11 @@ body[data-contrast="high"] .email-section-btn {
 [data-theme="dark"] .community-stats-box {
   --info-box-bg: #0c2642;
   --info-border: #3b82f6;
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .community-stats-box strong {
+  color: #ffffff;
 }
 
 [data-theme="dark"] .info-box-bordered {
@@ -2086,6 +2096,11 @@ body[data-contrast="high"] .email-section-btn {
   body:not([data-theme="light"]) .community-stats-box {
     --info-box-bg: #0c2642;
     --info-border: #3b82f6;
+    color: #e5e7eb;
+  }
+
+  body:not([data-theme="light"]) .community-stats-box strong {
+    color: #ffffff;
   }
 
   body:not([data-theme="light"]) .info-box-bordered {
