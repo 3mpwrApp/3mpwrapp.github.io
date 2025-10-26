@@ -12,6 +12,7 @@ import {
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import GapView from "../../../components/GapView";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
@@ -244,7 +245,7 @@ export default function SymptomTracker() {
       <Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} accessibilityLabel="Tags input" accessibilityHint="Add tags to help categorize your entry." />
 
       {editingId ? (
-        <View style={{ flexDirection: "row", gap: 8 }}>
+        <GapView style={{ flexDirection: "row" }} gap={8}>
           <A11yPressable
             style={[styles.button, { flex: 1 }]}
             onPress={saveEdit}
@@ -263,7 +264,7 @@ export default function SymptomTracker() {
           >
             <Text style={[styles.buttonText, { color: palette.text }]}>Cancel</Text>
           </A11yPressable>
-        </View>
+        </GapView>
       ) : (
         <A11yPressable
           style={styles.button}
@@ -280,13 +281,13 @@ export default function SymptomTracker() {
         Recent entries
       </Text>
       <Text style={[styles.sectionTitle, { marginTop: 12 }]}>Quick tags</Text>
-      <View
+      <GapView
         style={{
           flexDirection: "row",
           flexWrap: "wrap",
-          gap: 8,
           marginBottom: 8,
         }}
+        gap={8}
       >
         {["flare", "med-change", "work", "sleep", "stress"].map((tg) => (
           <A11yPressable
@@ -326,7 +327,7 @@ export default function SymptomTracker() {
             </Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
       {filtered.length === 0 ? (
         <Text style={styles.empty}>No entries yet.</Text>
       ) : (
@@ -336,10 +337,10 @@ export default function SymptomTracker() {
               style={styles.entryText}
             >{`${e.date} Ã¢â‚¬â€ pain ${e.pain || "?"}`}</Text>
             {!!e.symptoms && (
-              <Text style={styles.entryNote}>Ã¢â‚¬Â¢ {e.symptoms}</Text>
+              <Text style={styles.entryNote}>• {e.symptoms}</Text>
             )}
             {!!e.tags && <Text style={styles.entryNote}>tags: {e.tags}</Text>}
-            <View style={{ flexDirection: "row", gap: 8, marginTop: 6 }}>
+            <GapView style={{ flexDirection: "row", marginTop: 6 }} gap={8}>
               <A11yPressable
                 onPress={() => startEdit(e)}
                 accessibilityRole="button"
@@ -365,7 +366,7 @@ export default function SymptomTracker() {
               >
                 <Text style={[styles.smallBtnText, { color: palette.onPrimary }]}>Delete</Text>
               </A11yPressable>
-            </View>
+            </GapView>
           </View>
         ))
       )}

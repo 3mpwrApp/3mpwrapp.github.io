@@ -12,6 +12,7 @@ import {
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import GapView from "../../../components/GapView";
 import PrivacyGate from "../../../components/PrivacyGate";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
@@ -248,7 +249,7 @@ export default function SleepEnergyTracker() {
 			<Field label="Notes (insomnia, naps, pain, etc.)" value={notes} onChangeText={setNotes} multiline accessibilityLabel="Notes input" accessibilityHint="Add any notes about your sleep, naps, pain, or other factors." />
 			<Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} accessibilityLabel="Tags input" accessibilityHint="Add tags to help categorize your entry." />
 			{editingId ? (
-				<View style={{ flexDirection: "row", gap: 8 }}>
+				<GapView style={{ flexDirection: "row" }} gap={8}>
 					<A11yPressable
 						style={[styles.button, { flex: 1 }]}
 						onPress={saveEdit}
@@ -267,7 +268,7 @@ export default function SleepEnergyTracker() {
 					>
 						<Text style={[styles.buttonText, { color: palette.text }]}>Cancel</Text>
 					</A11yPressable>
-				</View>
+				</GapView>
 			) : (
 				<A11yPressable
 					style={styles.button}
@@ -284,13 +285,13 @@ export default function SleepEnergyTracker() {
 				Recent entries
 			</Text>
 			<Text style={[styles.sectionTitle, { marginTop: 12 }]}>Quick tags</Text>
-			<View
+			<GapView
 				style={{
 					flexDirection: "row",
 					flexWrap: "wrap",
-					gap: 8,
 					marginBottom: 8,
 				}}
+				gap={8}
 			>
 				{["insomnia", "nap", "fatigue", "pain", "stress"].map((tg) => (
 					<A11yPressable
@@ -330,7 +331,7 @@ export default function SleepEnergyTracker() {
 						</Text>
 					</A11yPressable>
 				))}
-			</View>
+			</GapView>
 			{filtered.length === 0 ? (
 				<Text style={styles.empty}>No entries yet.</Text>
 			) : (
@@ -338,8 +339,8 @@ export default function SleepEnergyTracker() {
 					<View key={e.id} style={styles.entryRow}>
 						<Text
 							style={styles.entryText}
-						>{`${e.date} Ã¢â‚¬â€ ${e.sleepHours || "?"}h, q${e.sleepQuality || "?"}, e${e.energy || "?"}`}</Text>
-						<View style={{ flexDirection: "row", gap: 8, marginTop: 6 }}>
+						>{`${e.date} – ${e.sleepHours || "?"}h, q${e.sleepQuality || "?"}, e${e.energy || "?"}`}</Text>
+						<GapView style={{ flexDirection: "row", marginTop: 6 }} gap={8}>
 							<A11yPressable
 								onPress={() => startEdit(e)}
 								accessibilityRole="button"
@@ -365,7 +366,7 @@ export default function SleepEnergyTracker() {
 							>
 								<Text style={[styles.smallBtnText, { color: palette.onPrimary }]}>Delete</Text>
 							</A11yPressable>
-						</View>
+						</GapView>
 					</View>
 				))
 			)}
