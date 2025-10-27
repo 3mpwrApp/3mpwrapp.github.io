@@ -5,6 +5,9 @@ permalink: /privacy/
 description: Our commitment to your privacy and 100% user data ownership.
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/privacy.css' | relative_url }}">
+
 <!-- Status Banner -->
 <div class="status-banner" role="status" aria-live="polite">
   <span class="status-indicator">✅</span> 
@@ -21,14 +24,32 @@ description: Our commitment to your privacy and 100% user data ownership.
 <!-- TL;DR Summary -->
 <details class="tldr-box" open>
   <summary><strong>⚡ Quick Summary (30 seconds)</strong></summary>
-  <ul>
-    <li><strong>Your data = Your property.</strong> We never own, access, or sell your information.</li>
-    <li><strong>Everything stays on YOUR device</strong> unless you choose to sync to YOUR cloud.</li>
-    <li><strong>No tracking, no analytics, no hidden data collection.</strong></li>
-    <li><strong>Military-grade encryption</strong> protects everything.</li>
-    <li><strong>You can delete everything anytime</strong> - no questions asked.</li>
-    <li><strong>We can't see your data even if we wanted to</strong> - that's by design.</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">🏠</span>
+      <strong>Your data = Your property.</strong> We never own, access, or sell your information.
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📱</span>
+      <strong>Everything stays on YOUR device</strong> unless you choose to sync to YOUR cloud.
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🚫</span>
+      <strong>No tracking, no analytics, no hidden data collection.</strong>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔒</span>
+      <strong>Military-grade encryption</strong> protects everything.
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🗑️</span>
+      <strong>You can delete everything anytime</strong> - no questions asked.
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">👁️</span>
+      <strong>We can't see your data even if we wanted to</strong> - that's by design.
+    </div>
+  </div>
 </details>
 
 ---
@@ -43,37 +64,143 @@ This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and prote
 
 ## 🔐 100% User Data Ownership Guarantee
 
-**Your data belongs entirely to you.** 3mpwrApp is built on the fundamental principle of complete user data sovereignty:
+<div class="guarantee-hero">
+  <h3>Your data belongs entirely to you.</h3>
+  <p>3mpwrApp is built on the fundamental principle of complete user data sovereignty:</p>
+</div>
 
-- **🏠 100% User Ownership:** All data created in 3mpwrApp belongs entirely to you. We never own, claim, or retain your personal information.
-- **🔒 Local-First & Air-Gapped:** All processing happens on your device. Data stays in your possession unless you choose to sync to your own cloud.
-- **☁️ Your Cloud, Your Control:** Optional sync connects only to your chosen services (Google Drive, iCloud, WebDAV, Dropbox, OneDrive, AWS S3). No data passes through our servers.
-- **🚫 Zero Tracking:** No embedded analytics, trackers, or third-party data collection without your explicit consent.
-- **🛡️ Military-Grade Security:** AES-256 encryption, hardware-backed key storage, TLS 1.3 network security, and anti-tampering protection.
-- **🔍 Verifiable Privacy:** Our codebase contains no hidden data-logging functions. You can inspect and verify our claims.
+<div class="guarantee-grid">
+
+<div class="guarantee-card ownership">
+  <div class="guarantee-icon">🏠</div>
+  <h4>100% User Ownership</h4>
+  <p>All data created in 3mpwrApp belongs entirely to you. We never own, claim, or retain your personal information.</p>
+</div>
+
+<div class="guarantee-card local-first">
+  <div class="guarantee-icon">🔒</div>
+  <h4>Local-First & Air-Gapped</h4>
+  <p>All processing happens on your device. Data stays in your possession unless you choose to sync to your own cloud.</p>
+</div>
+
+<div class="guarantee-card cloud-control">
+  <div class="guarantee-icon">☁️</div>
+  <h4>Your Cloud, Your Control</h4>
+  <p>Optional sync connects only to your chosen services (Google Drive, iCloud, WebDAV, Dropbox, OneDrive, AWS S3). No data passes through our servers.</p>
+</div>
+
+<div class="guarantee-card no-tracking">
+  <div class="guarantee-icon">🚫</div>
+  <h4>Zero Tracking</h4>
+  <p>No embedded analytics, trackers, or third-party data collection without your explicit consent.</p>
+</div>
+
+<div class="guarantee-card security">
+  <div class="guarantee-icon">🛡️</div>
+  <h4>Military-Grade Security</h4>
+  <p>AES-256 encryption, hardware-backed key storage, TLS 1.3 network security, and anti-tampering protection.</p>
+</div>
+
+<div class="guarantee-card verifiable">
+  <div class="guarantee-icon">🔍</div>
+  <h4>Verifiable Privacy</h4>
+  <p>Our codebase contains no hidden data-logging functions. You can inspect and verify our claims.</p>
+</div>
+
+</div>
 
 ### Technical Implementation:
-- **Three Privacy Modes:** Default (easy), Hybrid BYOC (easy login + your cloud), or Strict BYOC (maximum privacy)
-- **Hybrid BYOC:** Firebase handles login only, ALL your data goes to YOUR cloud (we never see it)
-- **Strict BYOC:** Complete air-gap - Firebase completely disabled, connect ANY cloud provider you want
-- **Session-Only Credentials:** Your storage credentials are never saved by the app (in BYOC modes)
-- **Hardware Security:** Encryption keys stored in your device's secure enclave
-- **Network Protection:** Secure encrypted connections for all network traffic
-- **Air-Gapped Operation:** Works 100% offline with no mandatory internet connections
 
-**[Learn more about privacy modes →](/privacy-controls/#choose-your-privacy-mode)**
+<div class="implementation-cards">
+
+<div class="implementation-card">
+  <h5>Three Privacy Modes</h5>
+  <p>Default (easy), Hybrid BYOC (easy login + your cloud), or Strict BYOC (maximum privacy)</p>
+</div>
+
+<div class="implementation-card">
+  <h5>Hybrid BYOC</h5>
+  <p>Firebase handles login only, ALL your data goes to YOUR cloud (we never see it)</p>
+</div>
+
+<div class="implementation-card">
+  <h5>Strict BYOC</h5>
+  <p>Complete air-gap - Firebase completely disabled, connect ANY cloud provider you want</p>
+</div>
+
+<div class="implementation-card">
+  <h5>Session-Only Credentials</h5>
+  <p>Your storage credentials are never saved by the app (in BYOC modes)</p>
+</div>
+
+<div class="implementation-card">
+  <h5>Hardware Security</h5>
+  <p>Encryption keys stored in your device's secure enclave</p>
+</div>
+
+<div class="implementation-card">
+  <h5>Network Protection</h5>
+  <p>Secure encrypted connections for all network traffic</p>
+</div>
+
+<div class="implementation-card">
+  <h5>Air-Gapped Operation</h5>
+  <p>Works 100% offline with no mandatory internet connections</p>
+</div>
+
+</div>
+
+<a href="/privacy-controls/#choose-your-privacy-mode" class="privacy-link">Learn more about privacy modes →</a>
 
 ---
 
 ## 📋 Privacy Summary
 
-- **🏠 Local-first architecture:** All data stored on your device by default with optional user-controlled sync
-- **☁️ BYOC (Bring Your Own Cloud):** Connect ANY storage provider you want for 100% user-owned data
-- **🔒 Data minimization:** We store only what's necessary
-- **💰 No data sales:** We do not sell personal data under any circumstances
-- **👤 Guest Mode:** Use without creating an account (limited features)
-- **⚙️ Full control:** You control notifications, analytics, and all data sharing
-- **🔄 Data portability:** Request access, correction, or deletion anytime
+<div class="summary-grid">
+
+<div class="summary-card">
+  <span class="summary-icon">🏠</span>
+  <strong>Local-first architecture</strong>
+  <p>All data stored on your device by default with optional user-controlled sync</p>
+</div>
+
+<div class="summary-card">
+  <span class="summary-icon">☁️</span>
+  <strong>BYOC (Bring Your Own Cloud)</strong>
+  <p>Connect ANY storage provider you want for 100% user-owned data</p>
+</div>
+
+<div class="summary-card">
+  <span class="summary-icon">🔒</span>
+  <strong>Data minimization</strong>
+  <p>We store only what's necessary</p>
+</div>
+
+<div class="summary-card">
+  <span class="summary-icon">💰</span>
+  <strong>No data sales</strong>
+  <p>We do not sell personal data under any circumstances</p>
+</div>
+
+<div class="summary-card">
+  <span class="summary-icon">👤</span>
+  <strong>Guest Mode</strong>
+  <p>Use without creating an account (limited features)</p>
+</div>
+
+<div class="summary-card">
+  <span class="summary-icon">⚙️</span>
+  <strong>Full control</strong>
+  <p>You control notifications, analytics, and all data sharing</p>
+</div>
+
+<div class="summary-card">
+  <span class="summary-icon">🔄</span>
+  <strong>Data portability</strong>
+  <p>Request access, correction, or deletion anytime</p>
+</div>
+
+</div>
 
 ---
 
@@ -379,3 +506,6 @@ This policy reflects our actual technical implementation. You can verify our pri
 ---
 
 *Version 3.0 - Updated October 25, 2025*
+
+<script src="{{ '/assets/js/page-enhancements.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/privacy.js' | relative_url }}"></script>
