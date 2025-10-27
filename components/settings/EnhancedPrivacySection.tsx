@@ -2,19 +2,19 @@ import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import AccessibilityToggle from '../../../components/AccessibilityToggle';
-import DataOwnershipStatement from '../../../components/DataOwnershipStatement';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { useTranslation } from '../../../i18n';
-import { clearAllData, exportBackup, importBackup } from '../../../services/backup';
-import { isCloudConsentEnabled, setCloudConsent, setTelemetryConsent } from '../../../services/consent';
-import { getBYOCConfig, isStrictBYOC, setBYOCConfig, testBYOCConnection } from '../../../services/dataPolicy';
-import { runRetentionSweep } from '../../../services/retention';
-import { usePrivacy } from '../../../store/privacy';
-import { useSettings } from '../../../store/settings';
-import { useTextScale } from '../../../theme/typography';
-import { useAppPalette } from '../../../theme/usePalette';
+import A11yPressable from '../../components/A11yPressable';
+import AccessibilityToggle from '../../components/AccessibilityToggle';
+import DataOwnershipStatement from '../../components/DataOwnershipStatement';
+import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { useTranslation } from '../../i18n';
+import { clearAllData, exportBackup, importBackup } from '../../services/backup';
+import { isCloudConsentEnabled, setCloudConsent, setTelemetryConsent } from '../../services/consent';
+import { getBYOCConfig, isStrictBYOC, setBYOCConfig, testBYOCConnection } from '../../services/dataPolicy';
+import { runRetentionSweep } from '../../services/retention';
+import { usePrivacy } from '../../store/privacy';
+import { useSettings } from '../../store/settings';
+import { useTextScale } from '../../theme/typography';
+import { useAppPalette } from '../../theme/usePalette';
 
 function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number = 1) {
   return StyleSheet.create({

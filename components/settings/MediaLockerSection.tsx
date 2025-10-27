@@ -2,9 +2,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import { useSettings } from '../../../store/settings';
-import { useAppPalette } from '../../../theme/usePalette';
+import A11yPressable from '../../components/A11yPressable';
+import { useSettings } from '../../store/settings';
+import { useAppPalette } from '../../theme/usePalette';
 
 export default function MediaLockerSection() {
   const palette = useAppPalette();

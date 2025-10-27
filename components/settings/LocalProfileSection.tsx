@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
 import { Button, Text, TextInput, View } from 'react-native';
 
-import { useProfileLocal } from '../../../store/profileLocal';
-import { useAppPalette } from '../../../theme/usePalette';
+import { useProfileLocal } from '../../store/profileLocal';
+import { useAppPalette } from '../../theme/usePalette';
 
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return {

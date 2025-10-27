@@ -2,14 +2,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { useMemo, useState } from 'react';
 import { Button, Text, TextInput, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
-import { useTranslation } from '../../../i18n';
-import { useBookmarks } from '../../../store/bookmarks';
-import { useTextScale } from '../../../theme/typography';
-import { useAppPalette } from '../../../theme/usePalette';
-import { a11yLiveRegion } from '../../../utils/platform';
+import A11yPressable from '../../components/A11yPressable';
+import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { MAX_FONT_SCALE } from '../../hooks/useA11y';
+import { useTranslation } from '../../i18n';
+import { useBookmarks } from '../../store/bookmarks';
+import { useTextScale } from '../../theme/typography';
+import { useAppPalette } from '../../theme/usePalette';
+import { a11yLiveRegion } from '../../utils/platform';
 
 function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number = 1) {
   return {

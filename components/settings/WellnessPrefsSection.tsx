@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect, useState } from 'react';
 import { Button, Text, View } from 'react-native';
 
-import { useAppPalette } from '../../../theme/usePalette';
+import { useAppPalette } from '../../theme/usePalette';
 
 export default function WellnessPrefsSection() {
   const palette = useAppPalette();
