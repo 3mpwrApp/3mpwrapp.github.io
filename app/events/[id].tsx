@@ -4,6 +4,7 @@ import React from 'react';
 import { Alert, Share, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
+import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { events } from "../../data/events";
@@ -97,7 +98,7 @@ export default function EventDetail() {
           {t('eventsFeature.whereLabel','Where:')} {event?.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event?.location ?? t('eventsFeature.tbd','TBD'))}
         </Text>
         {!!event && (
-          <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom: 8 }}>
+          <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom: 8 }}>
             {event.isVirtual && (
               <Chip label={t('eventsFeature.chips.virtual','Virtual')} />
             )}
@@ -113,7 +114,7 @@ export default function EventDetail() {
             {event.sensorySpace && (
               <Chip label={t('eventsFeature.chips.sensory','Sensory')} />
             )}
-          </View>
+          </GapView>
         )}
         {!!event && (
           <>

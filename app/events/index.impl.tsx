@@ -10,6 +10,16 @@ import {
     View,
 } from "react-native";
 
+import A11yPressable from '../../components/A11yPressable';
+import Card from "../../components/Card";
+import ContrastToggle from "../../components/ContrastToggle";
+import { GapView } from "../../components/GapView";
+import SearchBar from "../../components/SearchBar";
+import SettingsLink from "../../components/SettingsLink";
+import SkeletonRow from "../../components/SkeletonRow";
+import { HIT_SLOP_8 } from "../../constants/A11Y";
+import { generateDisabilityObservances } from "../../data/disability-observances";
+import { events as localEvents } from "../../data/events";
 import {
     generateCanadianHolidays,
     generateProvincialHolidays,
@@ -31,15 +41,6 @@ import { useSettings } from "../../store/settings";
 import { useTextScale } from "../../theme/typography";
 import { useAppPalette } from "../../theme/usePalette";
 import { makeCSVRow, makeICS, shareText } from "../../utils/eventsExport";
-import A11yPressable from '../../components/A11yPressable';
-import Card from "../../components/Card";
-import ContrastToggle from "../../components/ContrastToggle";
-import SearchBar from "../../components/SearchBar";
-import SettingsLink from "../../components/SettingsLink";
-import SkeletonRow from "../../components/SkeletonRow";
-import { HIT_SLOP_8 } from "../../constants/A11Y";
-import { generateDisabilityObservances } from "../../data/disability-observances";
-import { events as localEvents } from "../../data/events";
 
 export default function EventsScreen() {
   const palette = useAppPalette();
@@ -219,7 +220,7 @@ export default function EventsScreen() {
         placeholder={t('eventsFeature.search.placeholder','Search events, tags, places')}
       />
 
-      <View style={{ flexDirection:'row', gap:8, marginBottom:8 }}>
+      <GapView gap={8} style={{ flexDirection:'row', marginBottom:8 }}>
         <A11yPressable
           accessibilityRole="button"
           accessibilityLabel={t('deadlines.today','Today')}
@@ -236,7 +237,7 @@ export default function EventsScreen() {
         >
           <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>{t('common.resetFilters','Reset filters')}</Text>
         </A11yPressable>
-      </View>
+      </GapView>
 
       <A11yPressable
         accessibilityRole="button"
@@ -248,11 +249,11 @@ export default function EventsScreen() {
       </A11yPressable>
 
       {/* Filter chips */}
-      <View style={{ flexDirection:'row', gap:8, marginBottom:8 }}>
+      <GapView gap={8} style={{ flexDirection:'row', marginBottom:8 }}>
         <FilterChip label={t('common.all','All')} active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
         <FilterChip label={t('eventsFeature.section.community','Community Events')} active={mode==='community'} onPress={() => setMode('community')} palette={palette} />
         <FilterChip label={t('eventsFeature.section.observances','Holidays & Observances')} active={mode==='observances'} onPress={() => setMode('observances')} palette={palette} />
-      </View>
+      </GapView>
 
       {showCreate && (
         <CreateEventBox onCreate={handleCreate} palette={palette} />
@@ -403,7 +404,7 @@ export default function EventsScreen() {
                 testID={`event-${item.id}`}
               />
             </Link>
-            <View style={{ flexDirection:'row', marginTop:4, gap:8 }}>
+            <GapView gap={8} style={{ flexDirection:'row', marginTop:4 }}>
               <A11yPressable
                 onPress={async () => {
                   try {
@@ -444,7 +445,7 @@ export default function EventsScreen() {
               >
                 <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>CSV</Text>
               </A11yPressable>
-            </View>
+            </GapView>
           </View>
         )}
         contentContainerStyle={{ paddingTop: 12 }}
@@ -453,7 +454,7 @@ export default function EventsScreen() {
         }
         ListHeaderComponent={(
           <View style={{ marginBottom: 8 }}>
-            <View style={{ flexDirection:'row', gap:8 }}>
+            <GapView gap={8} style={{ flexDirection:'row' }}>
               <A11yPressable
                 onPress={async () => {
                   // Export all filtered as single ICS concatenation
@@ -483,7 +484,7 @@ export default function EventsScreen() {
               >
                 <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
               </A11yPressable>
-            </View>
+            </GapView>
           </View>
         )}
       />
@@ -574,13 +575,13 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
       <TextInput placeholder={t('eventsFeature.form.descriptionPlaceholder','Description')} placeholderTextColor={palette.muted} value={description} onChangeText={setDescription} style={[fieldStyle,{ minHeight:60 }]} multiline />
       <TextInput placeholder={t('eventsFeature.form.datePlaceholder','Date (YYYY-MM-DD HH:MM)')} placeholderTextColor={palette.muted} value={date} onChangeText={setDate} style={fieldStyle} />
       <TextInput placeholder={t('eventsFeature.form.locationPlaceholder','Location (optional)')} placeholderTextColor={palette.muted} value={location} onChangeText={setLocation} style={fieldStyle} />
-      <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom:8 }}>
+      <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom:8 }}>
         <ToggleChip label={t('eventsFeature.chips.virtual','Virtual')} active={isVirtual} onToggle={()=>setIsVirtual(v=>!v)} palette={palette} />
         <ToggleChip label={t('eventsFeature.chips.asl','ASL')} active={asl} onToggle={()=>setAsl(v=>!v)} palette={palette} />
         <ToggleChip label={t('eventsFeature.chips.captions','Captions')} active={captions} onToggle={()=>setCaptions(v=>!v)} palette={palette} />
         <ToggleChip label={t('eventsFeature.chips.stepFree','Step-free')} active={stepFree} onToggle={()=>setStepFree(v=>!v)} palette={palette} />
         <ToggleChip label={t('eventsFeature.chips.sensory','Sensory')} active={sensorySpace} onToggle={()=>setSensory(v=>!v)} palette={palette} />
-      </View>
+      </GapView>
       <A11yPressable
         accessibilityRole="button"
         accessibilityLabel={t('eventsFeature.createToggleOpen','Create Event')}

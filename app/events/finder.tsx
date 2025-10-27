@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
+import { GapView } from '../../components/GapView';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { events } from '../../data/events';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
@@ -24,12 +25,12 @@ export default function AccessibleEventFinder() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Accessible Event Finder</Text>
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
+      <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 8 }}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setAsl(v=>!v)} style={[s.chip, asl && s.chipActive]}><Text style={{ color: asl? palette.onPrimary: palette.text, fontWeight:'700' }}>ASL</Text></A11yPressable>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setCaptions(v=>!v)} style={[s.chip, captions && s.chipActive]}><Text style={{ color: captions? palette.onPrimary: palette.text, fontWeight:'700' }}>Captions</Text></A11yPressable>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setStepFree(v=>!v)} style={[s.chip, stepFree && s.chipActive]}><Text style={{ color: stepFree? palette.onPrimary: palette.text, fontWeight:'700' }}>Step-free</Text></A11yPressable>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSensory(v=>!v)} style={[s.chip, sensory && s.chipActive]}><Text style={{ color: sensory? palette.onPrimary: palette.text, fontWeight:'700' }}>Sensory</Text></A11yPressable>
-      </View>
+      </GapView>
       {filtered.map(e => (
         <View key={e.id} style={s.card}>
           <Text style={s.cardTitle}>{e.title} • {new Date(e.date).toLocaleString()}</Text>
