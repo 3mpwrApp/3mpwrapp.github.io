@@ -33,10 +33,10 @@ permalink: /connect/
   <p style="margin: 0;">3mpwrApp is a grassroots project built BY disabled people and injured workers FOR the community. We're just getting started and open to meaningful connections!</p>
 </div>
 
-<div class="button-group">
-  <a href="mailto:empowrapp08162025@gmail.com" class="btn btn-primary">📧 Email Us</a>
-  <a href="#social-media" class="btn btn-secondary">📱 Follow on Social</a>
-  <a href="/partnerships/" class="btn btn-secondary">🤝 Partnerships</a>
+<div class="button-group" role="navigation" aria-label="Contact methods">
+  <a href="mailto:empowrapp08162025@gmail.com" class="btn btn-primary" aria-label="Send us an email at empowrapp08162025@gmail.com">📧 Email Us</a>
+  <a href="#social-media" class="btn btn-secondary" aria-label="Jump to social media links section">📱 Follow on Social</a>
+  <a href="/partnerships/" class="btn btn-secondary" aria-label="Learn about partnership opportunities">🤝 Partnerships</a>
 </div>
 
 ---

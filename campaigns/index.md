@@ -29,27 +29,28 @@ permalink: /campaigns/
   </ul>
 </details>
 
-<div class="gradient-banner">
+<div class="gradient-banner" role="region" aria-labelledby="campaigns-intro-heading">
+  <h2 id="campaigns-intro-heading" class="sr-only">Who can organize campaigns</h2>
   <h3 style="margin: 0 0 0.5rem;">💪 Power to the People: ALL People</h3>
   <p style="margin: 0 0 1rem;">Campaigns and events are created by and for everyone fighting for disability justice and workers' rights.</p>
   
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.75rem; margin: 1rem 0;">
-    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.75rem; margin: 1rem 0;" role="list">
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;" role="listitem">
       🦽 <strong>Persons with disabilities</strong>
     </div>
-    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;" role="listitem">
       🏗️ <strong>Injured workers</strong>
     </div>
-    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;" role="listitem">
       💙 <strong>Family & caregivers</strong>
     </div>
-    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;" role="listitem">
       🤝 <strong>Allies & advocates</strong>
     </div>
-    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;" role="listitem">
       🛠️ <strong>Union members</strong>
     </div>
-    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;" role="listitem">
       🌍 <strong>General public</strong>
     </div>
   </div>
@@ -59,10 +60,10 @@ permalink: /campaigns/
   </p>
 </div>
 
-<div class="button-group">
-  <a href="/beta/" class="btn btn-primary">Join Beta Testing</a>
-  <a href="/user-guide#advocacy-tools" class="btn btn-secondary">Learn About Tools</a>
-  <a href="/contact/?subject=Campaign Idea" class="btn btn-secondary">Suggest a Campaign</a>
+<div class="button-group" role="navigation" aria-label="Campaign actions">
+  <a href="/beta/" class="btn btn-primary" aria-label="Join Beta Testing to create campaigns">Join Beta Testing</a>
+  <a href="/user-guide#advocacy-tools" class="btn btn-secondary" aria-label="Learn about advocacy tools and features">Learn About Tools</a>
+  <a href="/contact/?subject=Campaign Idea" class="btn btn-secondary" aria-label="Contact us to suggest a campaign idea">Suggest a Campaign</a>
 </div>
 
 ---
