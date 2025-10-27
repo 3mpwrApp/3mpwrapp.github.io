@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "generated": "2025-10-27",
-  "totalDocuments": 60,
+  "totalDocuments": 61,
   "documents": [
     {
       "id": "blog/2025-10-28-pain-flare-mode-deep-dive.md",
@@ -24,6 +24,24 @@
       ],
       "url": "/2025-10-28-pain-flare-mode-deep-dive",
       "filesize": 8606
+    },
+    {
+      "id": "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "source": "blog",
+      "title": "Feature Spotlight: Campaign Coordination",
+      "excerpt": "Feature Spotlight: Campaign Coordination Category: Phase 3: Community Organize advocacy campaigns with task management, collaboration tools, and campaign rooms --- What Is Campaign Coordination? Campa",
+      "content": "Feature Spotlight: Campaign Coordination Category: Phase 3: Community Organize advocacy campaigns with task management, collaboration tools, and campaign rooms --- What Is Campaign Coordination? Campaign Coordination is designed to organize advocacy campaigns with task management, collaboration tools, and campaign rooms. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- Key Highlights - Create and manage advocacy campaigns - Private campaign rooms for team collaboration - Task assignment and progress tracking - Document sharing and collaborative notes - Campaign templates for common advocacy goals - Real-time collaboration features --- How It Works Here are real examples of how you can use Campaign Coordination: 1. Organize petition campaign for accessibility improvements 2. Coordinate letter-writing campaign to government 3. Plan advocacy event with community members 4. Track progress on systemic change initiatives 5. Share resources and strategies with campaign team --- Why Campaign Coordination Matters - Amplify your voice through collective action - Stay organized with multiple campaigns - Build community around shared goals - Track impact of advocacy efforts --- Getting Started Ready to try Campaign Coordination? Here's how to get started: 1. Download the app - Available on iOS and Android (coming soon) 2. Complete setup - Takes just 5 minutes 3. Find the feature - Look for \"Campaign Coordination\" in your app 4. Follow the guide - In-app tutorials walk you through each step --- Learn More For complete information about Campaign Coordination and all other features: - 📖 Read the Complete User Guide - ✨ Explore All Features - 🧪 Join Beta Testing - 📬 Subscribe to Updates --- About 3mpwrApp 3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core. All features are: - ✅ Fully accessible (WCAG 2.2 AA+) - 🔒 Privacy-first (local-first architecture) - 🇨🇦 Canadian-focused (all provinces/territories) - 🌍 Culturally inclusive (Indigenous languages supported)",
+      "date": "2025-10-27 09:00:00 +0000",
+      "tags": [
+        "features",
+        "spotlight",
+        "phase-3:-community"
+      ],
+      "categories": [
+        "features"
+      ],
+      "url": "/2025-10-27-feature-spotlight-campaign-coordination",
+      "filesize": 2306
     },
     {
       "id": "blog/2025-10-27-weekly-update-week-44.md",
@@ -66,8 +84,8 @@
       "id": "blog/2025-10-27-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2025-10-27",
-      "excerpt": "Daily News Curation - 2025-10-27 Curated 13 items from disability, accessibility, and social policy sources. 1. ‘Pure Chaos’: Warnings of an Alberta Health-Care Crisis Experts say AHS data obtained by",
-      "content": "Daily News Curation - 2025-10-27 Curated 13 items from disability, accessibility, and social policy sources. 1. ‘Pure Chaos’: Warnings of an Alberta Health-Care Crisis Experts say AHS data obtained by The Tyee further indicates the system faces being overwhelmed. 📍 Source Score: 27.00 2. The assassination target ‘betrayed' by Carney's India policy Warned by RCMP three times he was to be killed, Moninder Singh said Sikhs feel let down by Canada's decision to resume ties with India. 📍 Source Score: 20.00 3. Housing crisis, cost of living fuelling Nunavut voter apathy Ahead of Nunavut’s 7th territorial election, there is concern about a decline in voter turnout, something experts say is likely caused by slow progress to tackle issues such as the housing crisis and cost of living. 📍 Source Score: 15.60 4. Canada's men beat U.S. for Pan Continental curling gold medal 📍 Source Score: 9.50 5. After daughter attacked by dogs, Alberta mother calls on First Nation for regulations The Alberta mother of a five-year-old who was attacked by dogs and says she wants First Nations communities to put regulations in place to prevent similar incidents from happening. 📍 Source Score: 6.00 6. Some Canadian communities make it mandatory for homeowners to replace lead pipes. Do such bylaws work? 📍 Source Score: 4.50 7. Tim Cook, chief historian at Canadian War Museum, dies at 54 Tim Cook, the chief historian at the Canadian War Museum and the country’s “pre-eminent military historian,” has died, the museum announced Sunday. 📍 Source Score: 4.50 8. Best of Vancouver award winners 2025: Wellness Your Best of Vancouver winners in the Wellness category. 📍 Source Score: 1.00 9. The Georgia Straight's guide to the 2025 Vancouver International Film Festival Thank us later. 📍 Source Score: 1.00 10. ‘Between Breaths’ Comes to the Firehall The critically acclaimed play about Newfoundland’s ‘Whale Man’ sails into Vancouver. 📍 Source Score: 1.00 11. $32M case against Ontario developer falls apart at regulator hearing 📍 Source Score: 1.50 12. What’s in a name? Sask. town looking to find out by selling naming rights to highest bidder The small Saskatchewan town of Duck Lake could soon bear a new name, after its council voted to move forward with putting the town's permanent naming rights up for sale. Mayor Jason Anderson says he's hoping corporations or anyone willing to pay a minimum of $10 million will see the value of putting their mark on the map. 📍 Source Score: 1.20 13. Mayor in northern Ontario says bank putting shareholders ahead of consumers as town’s last branch set to close Banks are closing branches in smaller communities across northwestern Ontario, leaving residents concerned about a lack of options to get cash or change. 📍 Source Score: 1.50",
+      "excerpt": "Daily News Curation - 2025-10-27 Curated 11 items from disability, accessibility, and social policy sources. 1. Canada could lose its status as a measles-free country amid outbreak With measles spread",
+      "content": "Daily News Curation - 2025-10-27 Curated 11 items from disability, accessibility, and social policy sources. 1. Canada could lose its status as a measles-free country amid outbreak With measles spreading to more than 5,000 Canadians in the past year, Canada is poised to lose its measles-free status from the Pan-American Health Organization. 📍 Source Score: 18.50 2. Will Bank of Canada cut interest rates again this week? What economists say Most economists expect the Bank of Canada to cut borrowing rates this week after mixed economic gauges on inflation and the job market. 📍 Source Score: 9.50 3. Ontario city to fine homeowners who block public paths with loose leaves Burlington council has approved fines for residents who leave piles of leaves blocking sidewalks, bike lanes, roads or storm drains, citing safety and flooding risks. 📍 Source Score: 7.50 4. Carney to discuss ‘resetting of expectations' with Chinese president Prime Minister Carney says he plans to meet with China's president this week for discussions, a move that comes after four Canadians were executed this year in China. 📍 Source Score: 4.50 5. $32M case against Ontario developer falls apart at provincial regulator hearing 📍 Source Score: 4.50 6. Residents displaced by wildfire race to rebuild in Denare Beach, Sask., before snow flies Earlier this year, wildfire destroyed more than 200 homes in Denare Beach, including 24 on the adjacent Peter Ballantyne Cree Nation reserve. Rebuilding is underway but anxiety is high as some wonder if enough is being done to prepare the community for next year's wildfire season. 📍 Source Score: 3.00 7. Construction without permits, entry without proper notice drove some from Winnipeg block, tenants allege Several tenants in a building in Winnipeg's West Broadway neighbourhood say their privacy, rights and safety were violated during months of non-permitted construction, prompting some to leave. The new owner argues the aging complex needs upgrades and says tenants were notified. 📍 Source Score: 2.60 8. A tale of 3 Lynwood Drives: Halifax’s plan to rename duplicated street riles some residents Lynwood Drive in Halifax's Rockingham neighbourhood was a key part of life for the city's early Lebanese immigrant community, one resident says, and should retain its original name. 📍 Source Score: 3.00 9. B.C. man dies three weeks after fighting off grizzly bear A British Columbia man who fought off a grizzly bear in the East Kootenay region this month has died of his injuries, more than three weeks after the attack. 📍 Source Score: 1.00 10. Newborn dies after being found in bus shelter in Longueuil, Que. Longueuil police posted on their social media that they found a newborn in a bus shelter located on Chambly Road, near Briggs Street, on Monday morning. 📍 Source Score: 1.50 11. Nova Scotia Power hasn’t paid some contractors in months Multiple contractors that have done recent jobs for Nova Scotia Power haven’t been paid in months — some with outstanding bills in the hundreds of thousands, CBC has learned. 📍 Source Score: 1.20",
       "date": "2025-10-27",
       "tags": [
         "highlights"
@@ -77,7 +95,7 @@
         "news"
       ],
       "url": "/2025-10-27-daily-curation",
-      "filesize": 2781
+      "filesize": 3081
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -311,13 +329,13 @@
       "id": "curation/2025-10-27-curated.md",
       "source": "curation",
       "title": "2025-10-27-curated.md",
-      "excerpt": "Daily News Curation - 2025-10-27 Curated 13 items from disability, accessibility, and social policy sources. 1. ‘Pure Chaos’: Warnings of an Alberta Health-Care Crisis Experts say AHS data obtained by",
-      "content": "Daily News Curation - 2025-10-27 Curated 13 items from disability, accessibility, and social policy sources. 1. ‘Pure Chaos’: Warnings of an Alberta Health-Care Crisis Experts say AHS data obtained by The Tyee further indicates the system faces being overwhelmed. 📍 Source Score: 27.00 2. The assassination target ‘betrayed' by Carney's India policy Warned by RCMP three times he was to be killed, Moninder Singh said Sikhs feel let down by Canada's decision to resume ties with India. 📍 Source Score: 20.00 3. Housing crisis, cost of living fuelling Nunavut voter apathy Ahead of Nunavut’s 7th territorial election, there is concern about a decline in voter turnout, something experts say is likely caused by slow progress to tackle issues such as the housing crisis and cost of living. 📍 Source Score: 15.60 4. Canada's men beat U.S. for Pan Continental curling gold medal 📍 Source Score: 9.50 5. After daughter attacked by dogs, Alberta mother calls on First Nation for regulations The Alberta mother of a five-year-old who was attacked by dogs and says she wants First Nations communities to put regulations in place to prevent similar incidents from happening. 📍 Source Score: 6.00 6. Some Canadian communities make it mandatory for homeowners to replace lead pipes. Do such bylaws work? 📍 Source Score: 4.50 7. Tim Cook, chief historian at Canadian War Museum, dies at 54 Tim Cook, the chief historian at the Canadian War Museum and the country’s “pre-eminent military historian,” has died, the museum announced Sunday. 📍 Source Score: 4.50 8. Best of Vancouver award winners 2025: Wellness Your Best of Vancouver winners in the Wellness category. 📍 Source Score: 1.00 9. The Georgia Straight's guide to the 2025 Vancouver International Film Festival Thank us later. 📍 Source Score: 1.00 10. ‘Between Breaths’ Comes to the Firehall The critically acclaimed play about Newfoundland’s ‘Whale Man’ sails into Vancouver. 📍 Source Score: 1.00 11. $32M case against Ontario developer falls apart at regulator hearing 📍 Source Score: 1.50 12. What’s in a name? Sask. town looking to find out by selling naming rights to highest bidder The small Saskatchewan town of Duck Lake could soon bear a new name, after its council voted to move forward with putting the town's permanent naming rights up for sale. Mayor Jason Anderson says he's hoping corporations or anyone willing to pay a minimum of $10 million will see the value of putting their mark on the map. 📍 Source Score: 1.20 13. Mayor in northern Ontario says bank putting shareholders ahead of consumers as town’s last branch set to close Banks are closing branches in smaller communities across northwestern Ontario, leaving residents concerned about a lack of options to get cash or change. 📍 Source Score: 1.50",
+      "excerpt": "Daily News Curation - 2025-10-27 Curated 11 items from disability, accessibility, and social policy sources. 1. Canada could lose its status as a measles-free country amid outbreak With measles spread",
+      "content": "Daily News Curation - 2025-10-27 Curated 11 items from disability, accessibility, and social policy sources. 1. Canada could lose its status as a measles-free country amid outbreak With measles spreading to more than 5,000 Canadians in the past year, Canada is poised to lose its measles-free status from the Pan-American Health Organization. 📍 Source Score: 18.50 2. Will Bank of Canada cut interest rates again this week? What economists say Most economists expect the Bank of Canada to cut borrowing rates this week after mixed economic gauges on inflation and the job market. 📍 Source Score: 9.50 3. Ontario city to fine homeowners who block public paths with loose leaves Burlington council has approved fines for residents who leave piles of leaves blocking sidewalks, bike lanes, roads or storm drains, citing safety and flooding risks. 📍 Source Score: 7.50 4. Carney to discuss ‘resetting of expectations' with Chinese president Prime Minister Carney says he plans to meet with China's president this week for discussions, a move that comes after four Canadians were executed this year in China. 📍 Source Score: 4.50 5. $32M case against Ontario developer falls apart at provincial regulator hearing 📍 Source Score: 4.50 6. Residents displaced by wildfire race to rebuild in Denare Beach, Sask., before snow flies Earlier this year, wildfire destroyed more than 200 homes in Denare Beach, including 24 on the adjacent Peter Ballantyne Cree Nation reserve. Rebuilding is underway but anxiety is high as some wonder if enough is being done to prepare the community for next year's wildfire season. 📍 Source Score: 3.00 7. Construction without permits, entry without proper notice drove some from Winnipeg block, tenants allege Several tenants in a building in Winnipeg's West Broadway neighbourhood say their privacy, rights and safety were violated during months of non-permitted construction, prompting some to leave. The new owner argues the aging complex needs upgrades and says tenants were notified. 📍 Source Score: 2.60 8. A tale of 3 Lynwood Drives: Halifax’s plan to rename duplicated street riles some residents Lynwood Drive in Halifax's Rockingham neighbourhood was a key part of life for the city's early Lebanese immigrant community, one resident says, and should retain its original name. 📍 Source Score: 3.00 9. B.C. man dies three weeks after fighting off grizzly bear A British Columbia man who fought off a grizzly bear in the East Kootenay region this month has died of his injuries, more than three weeks after the attack. 📍 Source Score: 1.00 10. Newborn dies after being found in bus shelter in Longueuil, Que. Longueuil police posted on their social media that they found a newborn in a bus shelter located on Chambly Road, near Briggs Street, on Monday morning. 📍 Source Score: 1.50 11. Nova Scotia Power hasn’t paid some contractors in months Multiple contractors that have done recent jobs for Nova Scotia Power haven’t been paid in months — some with outstanding bills in the hundreds of thousands, CBC has learned. 📍 Source Score: 1.20",
       "date": "2025-10-27",
       "tags": [],
       "categories": [],
       "url": "/2025-10-27-curated",
-      "filesize": 2781
+      "filesize": 3081
     },
     {
       "id": "curation/README.md",
@@ -922,6 +940,31 @@
     "information": [
       "blog/2025-10-28-pain-flare-mode-deep-dive.md"
     ],
+    "feature": [
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "spotlight:": [
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
+    ],
+    "campaign": [
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md"
+    ],
+    "coordination": [
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md"
+    ],
     "weekly": [
       "blog/2025-10-27-weekly-update-week-44.md",
       "blog/2025-10-21-weekly-update-week-43.md",
@@ -1103,23 +1146,6 @@
       "whatsnew/2025-10-21-week-43-updates.md",
       "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
       "whatsnew/2025-10-04-automation-gitlog.md"
-    ],
-    "feature": [
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "spotlight:": [
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
     ],
     "indigenous": [
       "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
@@ -1529,6 +1555,17 @@
     "minimal-design": [
       "blog/2025-10-28-pain-flare-mode-deep-dive.md"
     ],
+    "features": [
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
+    ],
+    "spotlight": [
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
+    ],
+    "phase-3:-community": [
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md"
+    ],
     "weekly": [
       "blog/2025-10-27-weekly-update-week-44.md",
       "blog/2025-10-21-weekly-update-week-43.md",
@@ -1562,12 +1599,6 @@
       "blog/2025-10-17-comprehensive-daily-digest.md",
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
-    ],
-    "features": [
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
-    ],
-    "spotlight": [
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
     ],
     "phase-2:-cultural": [
       "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
@@ -1630,14 +1661,8 @@
     "chronic-pain": [
       "blog/2025-10-28-pain-flare-mode-deep-dive.md"
     ],
-    "updates": [
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md"
-    ],
-    "platform-comparison": [
-      "blog/2025-10-27-app-vs-website-comparison.md"
-    ],
     "features": [
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
       "blog/2025-10-27-app-vs-website-comparison.md",
       "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
       "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
@@ -1646,6 +1671,13 @@
       "blog/2025-10-22-feature-spotlight-disability-wizard.md",
       "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "updates": [
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
+    "platform-comparison": [
+      "blog/2025-10-27-app-vs-website-comparison.md"
     ],
     "curation": [
       "blog/2025-10-27-daily-curation.md",
