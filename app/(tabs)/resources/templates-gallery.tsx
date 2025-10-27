@@ -162,7 +162,7 @@ export default function TemplatesGallery() {
               <Text style={s.cardText}>{d.body}</Text>
               <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap' }}>
                 <A11yPressable onPress={async()=>{ try { const arr = drafts.filter(x=>x.id!==d.id); setDrafts(arr); await AsyncStorage?.setItem?.('templates:drafts', JSON.stringify(arr)); } catch {} }} style={s.secondary} accessibilityRole="button" accessibilityLabel={t("templates.gallery.deleteDraft","Delete draft")}> <Text style={s.secondaryText}>{t("templates.gallery.delete","Delete")}</Text></A11yPressable>
-                <A11yPressable onPress={()=>shareTex(d.title,d.body)} style={s.secondary} accessibilityRole="button" accessibilityLabel={t("templates.gallery.shareDraft","Share draft")}> <Text style={s.secondaryText}>{t("templates.gallery.share","Share")}</Text></A11yPressable>
+                <A11yPressable onPress={()=>shareText(d.title,d.body)} style={s.secondary} accessibilityRole="button" accessibilityLabel={t("templates.gallery.shareDraft","Share draft")}> <Text style={s.secondaryText}>{t("templates.gallery.share","Share")}</Text></A11yPressable>
                 <A11yPressable onPress={()=>insertIntoLocker(d.body)} style={s.secondary} accessibilityRole="button" accessibilityLabel={t("templates.gallery.toLocker","Add draft to Evidence Locker")}> <Text style={s.secondaryText}>{t("templates.gallery.toLockerShort","To Locker")}</Text></A11yPressable>
               </GapView>
             </View>

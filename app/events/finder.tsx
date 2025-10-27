@@ -35,7 +35,7 @@ export default function AccessibleEventFinder() {
         <View key={e.id} style={s.card}>
           <Text style={s.cardTitle}>{e.title} • {new Date(e.date).toLocaleString()}</Text>
           <Text style={s.cardText}>{e.isVirtual? 'Online': (e.location || '')}</Text>
-          <Link href={`/(tabs)/events/${e.id}`} asChild>
+          <Link ref={`/(tabs)/events/${e.id}`} asChild>
             <A11yPressable hitSlop={HIT_SLOP_8} style={s.btn}><Text style={s.btnText}>Details</Text></A11yPressable>
           </Link>
         </View>

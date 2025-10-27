@@ -13,6 +13,7 @@ import AccessibilityToggle from '../../../components/AccessibilityToggle';
 import { GapView } from '../../../components/GapView';
 import LanguageSelector from '../../../components/LanguageSelector';
 import UserBadgesDisplay from '../../../components/badges/UserBadgesDisplay';
+import * as SettingsLazy from '../../../components/settings';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
 import { auth, db, storage } from '../../../firebase/config';
@@ -26,7 +27,6 @@ import { useSettings } from '../../../store/settings';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
 import { sendFeedbackEmailInternal } from '../../../utils/feedback';
-import * as SettingsLazy from '../_settings.sections';
 const NotificationPreferences = React.lazy(() => import('../../../components/NotificationPreferences'));
 const EmergencyWalletCard = React.lazy(() => import('../../../components/EmergencyWalletCard'));
 

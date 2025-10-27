@@ -6,20 +6,19 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useEffect, useRef } from 'react';
 import {
-    Animated,
-    Linking,
-    Platform,
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  Animated,
+  Linking,
+  Platform,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 
 import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useAppPalette } from '../theme/usePalette';
-
-import { GapView } from '@/components/GapView';
+import { GapView } from '../components/GapView';
 
 export default function SafeLandingPage() {
   const router = useRouter();
