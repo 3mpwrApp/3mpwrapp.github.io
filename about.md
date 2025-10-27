@@ -48,31 +48,31 @@ description: Empowering Canada's disability and injured worker community with 10
 
 <div class="funding-grid">
   <div class="funding-card highlight">
-    <div class="funding-icon">🎯</div>
+    <div class="funding-icon" aria-hidden="true">🎯</div>
     <h4>100% Free Forever</h4>
     <p>No paid tiers. No subscriptions. No in-app purchases. Ever.</p>
   </div>
   
   <div class="funding-card">
-    <div class="funding-icon">💚</div>
+    <div class="funding-icon" aria-hidden="true">💚</div>
     <h4>Community Donations</h4>
     <p>Optional support from those who can, never required</p>
   </div>
   
   <div class="funding-card">
-    <div class="funding-icon">🤝</div>
+    <div class="funding-icon" aria-hidden="true">🤝</div>
     <h4>Mission-Aligned Grants</h4>
     <p>Focused on disability rights and accessibility</p>
   </div>
   
   <div class="funding-card">
-    <div class="funding-icon">🎯</div>
+    <div class="funding-icon" aria-hidden="true">🎯</div>
     <h4>Values-First Partnerships</h4>
     <p>Only with organizations that respect our mission</p>
   </div>
   
   <div class="funding-card reject">
-    <div class="funding-icon">❌</div>
+    <div class="funding-icon" aria-hidden="true">❌</div>
     <h4>NO Corporate Control</h4>
     <p>No venture capital, no profit motive, no exploitation</p>
   </div>
@@ -108,31 +108,31 @@ description: Empowering Canada's disability and injured worker community with 10
 
 <div class="difference-grid">
   <div class="difference-card">
-    <div class="difference-icon">🚫</div>
+    <div class="difference-icon" aria-hidden="true">🚫</div>
     <h4>No Algorithm Manipulation</h4>
     <p>Your content reaches your community - no hidden suppression or "relevance" filtering.</p>
   </div>
   
   <div class="difference-card">
-    <div class="difference-icon">🔒</div>
+    <div class="difference-icon" aria-hidden="true">🔒</div>
     <h4>Your Data Stays Yours</h4>
     <p>We don't mine, sell, or monetize your personal information. Your privacy is non-negotiable.</p>
   </div>
   
   <div class="difference-card">
-    <div class="difference-icon">♿</div>
+    <div class="difference-icon" aria-hidden="true">♿</div>
     <h4>Accessibility First</h4>
     <p>Every feature is designed from the ground up to work for all disabilities and abilities.</p>
   </div>
   
   <div class="difference-card">
-    <div class="difference-icon">🤝</div>
+    <div class="difference-icon" aria-hidden="true">🤝</div>
     <h4>Community Powered</h4>
     <p>Real people supporting real people - not corporate interests driving engagement.</p>
   </div>
   
   <div class="difference-card">
-    <div class="difference-icon">🎯</div>
+    <div class="difference-icon" aria-hidden="true">🎯</div>
     <h4>Purpose Built</h4>
     <p>Every tool serves one goal: empowering your voice and strengthening your advocacy.</p>
   </div>
@@ -168,31 +168,31 @@ description: Empowering Canada's disability and injured worker community with 10
   
   <div class="privacy-features-grid">
     <div class="privacy-feature">
-      <div class="feature-icon">💾</div>
+      <div class="feature-icon" aria-hidden="true">💾</div>
       <h4>100% User Data Ownership</h4>
       <p>All data you create is yours, not ours</p>
     </div>
     
     <div class="privacy-feature">
-      <div class="feature-icon">📱</div>
+      <div class="feature-icon" aria-hidden="true">📱</div>
       <h4>Local-First Architecture</h4>
       <p>Data stays on your device by default</p>
     </div>
     
     <div class="privacy-feature">
-      <div class="feature-icon">☁️</div>
+      <div class="feature-icon" aria-hidden="true">☁️</div>
       <h4>BYOC (Bring Your Own Cloud)</h4>
       <p>Optional sync to YOUR chosen cloud provider</p>
     </div>
     
     <div class="privacy-feature">
-      <div class="feature-icon">🚫</div>
+      <div class="feature-icon" aria-hidden="true">🚫</div>
       <h4>No Tracking</h4>
       <p>No analytics, no advertising IDs, no data mining</p>
     </div>
     
     <div class="privacy-feature">
-      <div class="feature-icon">🔐</div>
+      <div class="feature-icon" aria-hidden="true">🔐</div>
       <h4>Military-Grade Encryption</h4>
       <p>AES-256 encryption, TLS 1.3, hardware-backed keys</p>
     </div>
@@ -212,31 +212,31 @@ description: Empowering Canada's disability and injured worker community with 10
 
 <div class="disclaimers-grid">
   <div class="disclaimer-card warning">
-    <div class="disclaimer-icon">❌</div>
+    <div class="disclaimer-icon" aria-hidden="true">❌</div>
     <h4>NOT Medical Advice</h4>
     <p>Always consult healthcare professionals</p>
   </div>
   
   <div class="disclaimer-card warning">
-    <div class="disclaimer-icon">❌</div>
+    <div class="disclaimer-icon" aria-hidden="true">❌</div>
     <h4>NOT Legal Advice</h4>
     <p>Always consult licensed attorneys</p>
   </div>
   
   <div class="disclaimer-card warning">
-    <div class="disclaimer-icon">❌</div>
+    <div class="disclaimer-icon" aria-hidden="true">❌</div>
     <h4>NOT Financial Advice</h4>
     <p>Always consult financial advisors</p>
   </div>
   
   <div class="disclaimer-card caution">
-    <div class="disclaimer-icon">⚠️</div>
+    <div class="disclaimer-icon" aria-hidden="true">⚠️</div>
     <h4>AI Content</h4>
     <p>All AI-generated content must be verified</p>
   </div>
   
   <div class="disclaimer-card emergency">
-    <div class="disclaimer-icon">🚨</div>
+    <div class="disclaimer-icon" aria-hidden="true">🚨</div>
     <h4>Emergencies</h4>
     <p>Call 911, not the app</p>
   </div>

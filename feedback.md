@@ -10,8 +10,8 @@ permalink: /feedback/
 
 # Thank You for Your Feedback! 💚
 
-<div class="success-banner">
-  <div class="success-icon">✅</div>
+<div class="success-banner" role="status" aria-live="polite">
+  <div class="success-icon" aria-hidden="true">✅</div>
   <div class="success-content">
     <p class="success-title"><strong>Your feedback has been received!</strong></p>
     <p class="success-message">We read every response and use your input to improve 3mpwrApp for everyone.</p>
@@ -22,25 +22,25 @@ permalink: /feedback/
 
 <div class="impact-grid">
   <div class="impact-card">
-    <div class="impact-icon">♿</div>
+    <div class="impact-icon" aria-hidden="true">♿</div>
     <h3>Improve Accessibility</h3>
     <p>Your feedback helps us enhance user experience for all abilities</p>
   </div>
   
   <div class="impact-card">
-    <div class="impact-icon">🐛</div>
+    <div class="impact-icon" aria-hidden="true">🐛</div>
     <h3>Fix Bugs</h3>
     <p>We identify and resolve issues quickly to keep the app running smoothly</p>
   </div>
   
   <div class="impact-card">
-    <div class="impact-icon">🎯</div>
+    <div class="impact-icon" aria-hidden="true">🎯</div>
     <h3>Prioritize Features</h3>
     <p>We focus on what matters most to our community</p>
   </div>
   
   <div class="impact-card">
-    <div class="impact-icon">💡</div>
+    <div class="impact-icon" aria-hidden="true">💡</div>
     <h3>Make Better Decisions</h3>
     <p>Your input guides the app's direction and future development</p>
   </div>
@@ -53,22 +53,22 @@ permalink: /feedback/
 We'd love to hear from you! Here's how:
 
 <div class="contact-options-grid">
-  <a href="/contact" class="contact-option-card">
-    <div class="option-icon">📧</div>
+  <a href="/contact" class="contact-option-card" aria-label="Contact us for detailed feedback or questions">
+    <div class="option-icon" aria-hidden="true">📧</div>
     <h3>Contact Us</h3>
     <p>Have more detailed feedback or questions?</p>
     <span class="option-cta">Send us a message →</span>
   </a>
 
-  <a href="/connect" class="contact-option-card">
-    <div class="option-icon">💬</div>
+  <a href="/connect" class="contact-option-card" aria-label="Join the community to share experiences">
+    <div class="option-icon" aria-hidden="true">💬</div>
     <h3>Join the Community</h3>
     <p>Share your experiences and connect with others</p>
     <span class="option-cta">Community spaces →</span>
   </a>
 
-  <a href="/beta" class="contact-option-card">
-    <div class="option-icon">🚀</div>
+  <a href="/beta" class="contact-option-card" aria-label="Sign up for beta testing program">
+    <div class="option-icon" aria-hidden="true">🚀</div>
     <h3>Beta Testing</h3>
     <p>Want to test new features before anyone else?</p>
     <span class="option-cta">Sign up for beta →</span>
