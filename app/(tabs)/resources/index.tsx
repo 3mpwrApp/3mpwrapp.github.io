@@ -5,6 +5,9 @@ import { Linking, RefreshControl, SectionList, StyleSheet, Text, View } from "re
 
 import A11yPressable from "../../../components/A11yPressable";
 import Card from "../../../components/Card";
+import ContrastToggle from "../../../components/ContrastToggle";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import { GapView } from "../../../components/GapView";
 import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
@@ -23,9 +26,6 @@ import { createTextStyles } from "../../../theme/typography.enhanced";
 import { useAppPalette } from "../../../theme/usePalette";
 import type { Resource, ResourceCategory } from "../../../types/models";
 import { filterResources, groupByRegion, presentProvinceCodes } from "../../../utils/resources";
-import ContrastToggle from "../../components/ContrastToggle";
-import DisclaimerBanner from "../../components/DisclaimerBanner";
-import { GapView } from "../../components/GapView";
 
 const PROVINCE_NAMES: Record<string, string> = {
   AB: "Alberta",
