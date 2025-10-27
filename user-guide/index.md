@@ -4,20 +4,18 @@ title: 3mpwrApp — Complete User Guide
 description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community.
 version: 1.0
 lastUpdated: 2025-10-25
-accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
-currentPhase: Phase 6 - ML-Driven Personalization (COMPLETE)
-allFeaturesLive: 50+ features, 100% accessibility, enterprise security
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+
 <div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+  <span class="status-indicator">✅</span> 
+  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
 </div>
 
 # 3mpwrApp — Complete User Guide
 
-**Version: 1.0 | Last Updated: October 25, 2025**
-
-📖 **20 minute read** | ⚡ Key sections linked below
+📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 1.0** — October 25, 2025
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (60 seconds)</summary>
@@ -33,72 +31,164 @@ allFeaturesLive: 50+ features, 100% accessibility, enterprise security
 </details>
 
 <div class="info-box-light">
-  ⚠️ <strong>Content Note:</strong> This guide discusses legal processes, workplace injuries, medical documentation, and system navigation. These topics may be triggering. Take breaks as needed - this page will be here when you're ready.
+  ⚠️ <strong>Content Note:</strong> This guide discusses legal processes, workplace injuries, medical documentation, and system navigation. These topics may be triggering. Take breaks as needed.
 </div>
+
+<div class="gradient-banner">
+  <h3 style="margin: 0 0 0.5rem;">💙 Rest Reminder</h3>
+  <p style="margin: 0;">This is a long guide. You don't need to read it all at once. Bookmark the sections you need and come back when you have energy. Your wellbeing comes first.</p>
+</div>
+
+<div class="button-group">
+  <a href="#getting-started-in-5-minutes" class="btn btn-primary">Quick Start Guide</a>
+  <a href="#features-overview" class="btn btn-secondary">Browse Features</a>
+  <a href="/beta" class="btn btn-secondary">Join Beta Testing</a>
+</div>
+
+---
+
+---
+
+## ⚠️ Important: What This App Does NOT Provide
 
 <div class="warning-box">
-  💙 <strong>Rest Reminder:</strong> This is a long guide. You don't need to read it all at once. Bookmark the sections you need and come back when you have energy. Your wellbeing comes first.
+  <p style="margin: 0 0 1rem;"><strong>Before using 3mpwrApp, please understand:</strong></p>
+  
+  <ul style="margin: 0 0 1rem; padding-left: 1.5rem;">
+    <li><strong>NOT Medical Advice</strong> - This app does not provide medical advice, diagnosis, or treatment</li>
+    <li><strong>NOT Legal Advice</strong> - This app does not provide legal advice or create an attorney-client relationship</li>
+    <li><strong>NOT Financial Advice</strong> - This app does not provide financial, investment, or tax advice</li>
+    <li><strong>AI May Contain Errors</strong> - AI-generated content may not be accurate and must be verified</li>
+    <li><strong>NOT Emergency Services</strong> - This app is not a substitute for 911 or crisis intervention</li>
+  </ul>
+  
+  <p style="margin: 0;"><strong>In Emergencies:</strong></p>
+  <ul style="margin: 0.5rem 0 0; padding-left: 1.5rem; font-size: 0.95rem;">
+    <li><strong>Call 911</strong> for medical emergencies</li>
+    <li><strong>Call 1-833-456-4566</strong> for Canada Suicide Prevention Service (24/7)</li>
+    <li><strong>Text 45645</strong> for Crisis Text Line (4pm-12am ET)</li>
+    <li><strong>Call 1-800-363-9010</strong> for Canadian Domestic Violence Hotline (24/7)</li>
+  </ul>
 </div>
 
-**Version: 1.0 | Last Updated: October 25, 2025**
+---
 
-> **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, and their supporters. **Now featuring AI-powered personalization, energy forecasting, and smart notifications.**
+## � Table of Contents
+
+<div class="features-grid">
+  <div class="feature-box">
+    <h3>🚀 <a href="#getting-started">Getting Started</a></h3>
+    <p>Beta access, first-time setup, and quick start guide</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>⚖️ <a href="#legal--privacy">Legal & Privacy</a></h3>
+    <p>Terms, disclaimers, and data protection</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>✨ <a href="#features-overview">Features Overview</a></h3>
+    <p>All tools and capabilities at a glance</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>💚 <a href="#wellness-tools">Wellness Tools</a></h3>
+    <p>Energy tracking, rest reminders, and self-care</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>🏛️ <a href="#advocacy--legal-resources">Advocacy & Legal</a></h3>
+    <p>Letter wizard, evidence locker, deadline tracking</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>🤝 <a href="#community-features">Community</a></h3>
+    <p>Connect, share, and support each other</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>🔒 <a href="#privacy--security">Privacy & Security</a></h3>
+    <p>How we protect your data and rights</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>♿ <a href="#accessibility-features">Accessibility</a></h3>
+    <p>Cognitive, motor, visual, and sensory support</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>🔧 <a href="#troubleshooting">Troubleshooting</a></h3>
+    <p>Common issues and solutions</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>💬 <a href="#contact--support">Contact & Support</a></h3>
+    <p>Get help when you need it</p>
+  </div>
+</div>
 
 ---
 
-## ⚠️ **IMPORTANT: What This App Does NOT Provide**
+## 🚀 Getting Started
 
-Before using 3mpwrApp, please understand:
+<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-- ⚕️ **NOT Medical Advice** - This app does not provide medical advice, diagnosis, or treatment
-- ⚖️ **NOT Legal Advice** - This app does not provide legal advice or create an attorney-client relationship
-- 💰 **NOT Financial Advice** - This app does not provide financial, investment, or tax advice
-- 🤖 **AI May Contain Errors** - AI-generated content may not be accurate and must be verified
-- 🆘 **NOT Emergency Services** - This app is not a substitute for 911 or crisis intervention
+### Beta Testing Access
 
-### **In Emergencies:**
-- **Call 911** for medical emergencies
-- **Call 1-833-456-4566** for Canada Suicide Prevention Service (24/7)
-- **Text 45645** for Crisis Text Line (4pm-12am ET)
-- **Call 1-800-363-9010** for Canadian Domestic Violence Hotline (24/7)
-
-**Quick start? Jump to [Getting Started in 5 Minutes](#getting-started-in-5-minutes)**
-
----
-
-## 📱 **Table of Contents**
-
-1. [Getting Started](#getting-started)
-2. [Legal & Privacy](#legal--privacy)
-3. [Features Overview](#features-overview)
-4. [Wellness Tools](#wellness-tools)
-5. [Advocacy & Legal Resources](#advocacy--legal-resources)
-6. [Community Features](#community-features)
-7. [Privacy & Security](#privacy--security)
-8. [Accessibility Features](#accessibility-features)
-9. [Troubleshooting](#troubleshooting)
-10. [Contact & Support](#contact--support)
-
----
-
-## 🚀 **Getting Started**
-
-### **Beta Testing Access**
-3mpwrApp is currently in Phase 1 - Closed Beta Testing. Installation instructions and access details will be sent directly to beta testers via email and messaging.
+<div class="info-box-light">
+  <p style="margin: 0 0 0.5rem;"><strong>3mpwrApp is currently in Phase 1 - Closed Beta Testing.</strong></p>
+  <p style="margin: 0;">Installation instructions and access details will be sent directly to beta testers via email and messaging.</p>
+</div>
 
 **Not a beta tester yet?** [Sign up to join the beta program](/beta)
 
-### **First-Time Setup (9-Step Acceptance)**
-**Important:** You MUST complete all 9 steps before using the app.
+### First-Time Setup (9-Step Acceptance)
 
-1. **Welcome Screen** - Overview of requirements
-2. **Terms of Service v3.0** - Scroll to bottom to continue
-3. **Privacy Policy v2.0** - Scroll to bottom to continue
-4. **Medical Disclaimer** - Check box: "I understand this is not medical advice"
-5. **Legal Disclaimer** - Check box: "I understand this is not legal advice"
-6. **Financial Disclaimer** - Check box: "I understand this is not financial advice"
-7. **AI Content Disclaimer** - Check box: "I understand AI may contain errors"
-8. **Crisis & Emergency** - Check 2 boxes: "Not substitute for 911" + "I know emergency services"
+<div class="warning-box">
+  <p style="margin: 0 0 0.5rem;"><strong>⚠️ Important:</strong> You MUST complete all 9 steps before using the app.</p>
+</div>
+
+<div class="features-grid">
+  <div class="feature-box">
+    <h4>Step 1: Welcome Screen</h4>
+    <p>Overview of requirements</p>
+  </div>
+  
+  <div class="feature-box">
+    <h4>Step 2: Terms of Service</h4>
+    <p>v3.0 - Scroll to bottom to continue</p>
+  </div>
+  
+  <div class="feature-box">
+    <h4>Step 3: Privacy Policy</h4>
+    <p>v2.0 - Scroll to bottom to continue</p>
+  </div>
+  
+  <div class="feature-box">
+    <h4>Step 4: Medical Disclaimer</h4>
+    <p>Check: "I understand this is not medical advice"</p>
+  </div>
+  
+  <div class="feature-box">
+    <h4>Step 5: Legal Disclaimer</h4>
+    <p>Check: "I understand this is not legal advice"</p>
+  </div>
+  
+  <div class="feature-box">
+    <h4>Step 6: Financial Disclaimer</h4>
+    <p>Check: "I understand this is not financial advice"</p>
+  </div>
+  
+  <div class="feature-box">
+    <h4>Step 7: AI Content Disclaimer</h4>
+    <p>Check: "I understand AI may contain errors"</p>
+  </div>
+  
+  <div class="feature-box">
+    <h4>Step 8: Crisis & Emergency</h4>
+    <p>Check 2 boxes about 911 and emergency services</p>
+  </div>
+
 9. **Final Agreement** - Check 2 boxes: "User responsibility" + "Data ownership"
 
 **Cannot skip any step!** Your safety and our legal protection require full acceptance.
