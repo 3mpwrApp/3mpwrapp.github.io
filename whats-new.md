@@ -1,7 +1,9 @@
 ---
 layout: default
 title: "What's New"
-description: Latest updates, features, and improvements to 3mpwrApp
+description: "Discover the latest updates, features, and improvements to 3mpwrApp. Stay informed about new releases, bug fixes, and community-driven enhancements. Updated weekly with transparency and detail."
+image: /assets/empwrapp-logo.png
+image_alt: "3mpwrApp What's New - Latest updates and features"
 permalink: /whats-new/
 ---
 

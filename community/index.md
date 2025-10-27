@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Community
-description: Join our inclusive community of injured workers and persons with disabilities to learn, advocate, and connect.
+description: "Join an inclusive, grassroots community of injured workers, persons with disabilities, and allies. Safe spaces for peer support, advocacy, learning, and collective action. Everyone welcome."
+image: /assets/empwrapp-logo.png
+image_alt: "3mpwrApp Community - Inclusive peer support and advocacy"
+permalink: /community/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">

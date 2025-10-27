@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Campaigns & Events
-description: Community-created campaigns and events for disability rights and injured workers. Organizing for change across Canada.
+description: "Join community-driven campaigns and events for disability rights, worker justice, and social change across Canada. Grassroots organizing, advocacy tools, and collective action for systemic transformation."
+image: /assets/empwrapp-logo.png
+image_alt: "3mpwrApp Campaigns - Community organizing and disability rights advocacy"
 permalink: /campaigns/
 ---
 

@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Connect With Us
-description: Get in touch with 3mpwrApp. Partnership inquiries, collaboration opportunities, media requests, and general contact.
+description: "Connect with 3mpwrApp for partnerships, collaborations, media inquiries, or general questions. We're building community-driven mental health support together. Email, social media, and partnership opportunities."
+image: /assets/empwrapp-logo.png
+image_alt: "3mpwrApp Connect - Get in touch for partnerships and support"
 permalink: /connect/
 ---
 

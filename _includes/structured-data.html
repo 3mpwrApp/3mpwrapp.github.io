@@ -1,0 +1,228 @@
+<!-- Schema.org Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}#organization",
+      "name": "3mpwrApp",
+      "alternateName": "EmpowrApp",
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "{{ site.url }}#logo",
+        "url": "{{ '/assets/empowrapp-logo.png' | absolute_url }}",
+        "width": 512,
+        "height": 512,
+        "caption": "3mpwrApp Logo"
+      },
+      "description": "{{ site.description | escape }}",
+      "foundingDate": "2024",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "empowrapp08162025@gmail.com",
+        "contactType": "Customer Support",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/3mpowrapp/",
+        "https://x.com/3mpowrapp0816",
+        "https://www.instagram.com/3mpwrapp/",
+        "https://www.youtube.com/3mpwrApp",
+        "https://www.tiktok.com/@3mpwrapp",
+        "https://mastodon.social/@3mpwrApp",
+        "https://bsky.app/profile/3mpwrapp.bsky.social",
+        "https://github.com/3mpwrApp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}#website",
+      "url": "{{ site.url }}",
+      "name": "3mpwrApp",
+      "description": "{{ site.description | escape }}",
+      "publisher": {
+        "@id": "{{ site.url }}#organization"
+      },
+      "inLanguage": "{% if page.lang == 'fr' %}fr-CA{% else %}en-CA{% endif %}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ '/search' | absolute_url }}?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "{% if page.layout == 'post' %}BlogPosting{% else %}WebPage{% endif %}",
+      "@id": "{{ page.url | absolute_url }}#webpage",
+      "url": "{{ page.url | absolute_url }}",
+      "name": "{{ page.title | escape }}",
+      "headline": "{{ page.title | escape }}",
+      "description": "{{ page.description | default: site.description | escape | truncate: 200 }}",
+      "isPartOf": {
+        "@id": "{{ site.url }}#website"
+      },
+      "inLanguage": "{% if page.lang == 'fr' %}fr-CA{% else %}en-CA{% endif %}",
+      {% if page.image %}
+      "image": {
+        "@type": "ImageObject",
+        "@id": "{{ page.url | absolute_url }}#primaryimage",
+        "url": "{{ page.image | absolute_url }}",
+        "width": 1200,
+        "height": 630,
+        "caption": "{{ page.image_alt | default: page.title | escape }}"
+      },
+      "primaryImageOfPage": {
+        "@id": "{{ page.url | absolute_url }}#primaryimage"
+      },
+      {% endif %}
+      {% if page.layout == 'post' %}
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      {% if page.modified_date %}
+      "dateModified": "{{ page.modified_date | date_to_xmlschema }}",
+      {% else %}
+      "dateModified": "{{ page.date | date_to_xmlschema }}",
+      {% endif %}
+      "author": {
+        "@id": "{{ site.url }}#organization"
+      },
+      "publisher": {
+        "@id": "{{ site.url }}#organization"
+      },
+      {% endif %}
+      "breadcrumb": {
+        "@id": "{{ page.url | absolute_url }}#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page.url | absolute_url }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}"
+        }
+        {% assign segments = page.url | split: '/' | where_exp: 's', 's != ""' %}
+        {% if segments.size > 0 %}
+        {% assign path = '' %}
+        {% assign position = 2 %}
+        {% for seg in segments %}
+          {% if seg == '' %}{% continue %}{% endif %}
+          {% assign path = path | append: '/' | append: seg %}
+          {% if forloop.last %}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position }},
+          "name": "{{ page.title | default: seg | replace: '-', ' ' | capitalize | escape }}",
+          "item": "{{ path | absolute_url }}"
+        }
+          {% else %}
+          {% assign seg_label = seg | replace: '-', ' ' | capitalize %}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position }},
+          "name": "{{ seg_label | escape }}",
+          "item": "{{ path | absolute_url }}"
+        }
+          {% assign position = position | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        {% endif %}
+      ]
+    }
+    {% if page.layout == 'post' and page.categories contains 'faq' %}
+    ,{
+      "@type": "FAQPage",
+      "mainEntity": []
+    }
+    {% endif %}
+  ]
+}
+</script>
+
+<!-- Additional Schema for Accessibility Features -->
+{% if page.url contains '/accessibility' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.description | default: 'Accessibility features and settings for 3mpwrApp' | escape }}",
+  "accessibilityFeature": [
+    "alternativeText",
+    "audioDescription",
+    "captions",
+    "highContrastDisplay",
+    "largePrint",
+    "keyboardNavigation",
+    "readingOrder",
+    "screenReaderSupport",
+    "synchronizedAudioText",
+    "tableOfContents",
+    "timingControl",
+    "unlocked"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl",
+    "fullTouchControl"
+  ],
+  "accessibilityHazard": "noFlashingHazard"
+}
+</script>
+{% endif %}
+
+<!-- Software Application Schema for App Pages -->
+{% if page.url contains '/features' or page.url == '/' or page.url contains '/about' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "3mpwrApp",
+  "alternateName": "EmpowrApp",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "iOS, Android",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "description": "{{ site.description | escape }}",
+  "url": "{{ site.url }}",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "ratingCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "Peer support communities",
+    "Mental health resources",
+    "Crisis support tools",
+    "Privacy-first design",
+    "Accessibility features",
+    "Multi-language support"
+  ],
+  "screenshot": "{{ '/assets/empowrapp-logo.png' | absolute_url }}",
+  "softwareVersion": "Beta",
+  "releaseNotes": "{{ '/whats-new' | absolute_url }}",
+  "author": {
+    "@id": "{{ site.url }}#organization"
+  }
+}
+</script>
+{% endif %}
