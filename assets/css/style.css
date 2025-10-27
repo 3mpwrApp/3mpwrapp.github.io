@@ -8,26 +8,27 @@
 :root {
   color-scheme: light dark;
   --font-scale: 1;
-  --line-height: 1.7; /* Improved from 1.6 for better readability */
+  --line-height: 1.6;
   --letter-spacing: 0;
   
-  /* Light mode colors (WCAG AAA compliant - 7:1 contrast minimum) */
-  --bg-color: #fafbfd;
-  --text-color: #222222;
+  /* Light mode colors (WCAG compliant) */
+  --bg-color: #FFFFFF;
+  --text-color: #111111;
   --header-bg: #183c65;
   --header-text: #ffffff;
   --main-bg: #ffffff;
-  --link-color: #3b82f6; /* Lighter, more visible blue */
-  --link-hover: #2563eb; /* Lighter hover state */
+  --link-color: #004A99; /* Light mode blue */
+  --link-hover: #0066CC; /* Light mode hover */
   --nav-hover: #285e93;
   --border-color: #d1d5db;
-  --focus-outline: #0066cc;
-  --focus-ring-width: 3px; /* Consistent focus ring width */
+  --focus-outline: #FFB300; /* Yellow for light mode */
+  --focus-ring-width: 3px;
 }
 
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -43,34 +44,48 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
   margin: 0;
   background: var(--bg-color);
   color: var(--text-color);
-  line-height: var(--line-height);
-  font-size: 16px; /* Guaranteed 16px minimum for all users */
+  line-height: 1.6;
+  font-size: 16px;
   letter-spacing: var(--letter-spacing);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Links - WCAG AAA compliant with improved visibility */
+/* Links - accessible with proper contrast */
 a {
   color: var(--link-color);
   text-decoration: underline;
   text-underline-offset: 0.2em;
-  text-decoration-thickness: 2px; /* Thicker underline for better visibility */
-  transition: all 0.2s ease;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration-thickness 0.3s ease;
 }
 
 a:hover,
-a:focus-visible {
+a:focus {
   color: var(--link-hover);
-  text-decoration-thickness: 3px; /* Even thicker on hover/focus */
+  text-decoration-thickness: 2px;
 }
 
-a:focus-visible {
-  outline: var(--focus-ring-width) solid var(--focus-outline);
-  outline-offset: 2px;
-  border-radius: 2px;
+/* Focus Ring (visible for keyboard users) */
+a:focus-visible,
+:focus-visible {
+  outline: 3px solid #FFD54F;
+  outline-offset: 3px;
+}
+
+/* Buttons */
+button,
+.btn,
+input[type="submit"] {
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75em 1.5em;
+  border: none;
+  cursor: pointer;
 }
 
 /* ========================================
@@ -87,9 +102,8 @@ select:focus-visible,
 [tabindex]:focus-visible,
 summary:focus-visible,
 details:focus-visible {
-  outline: var(--focus-ring-width) solid var(--focus-outline);
-  outline-offset: 2px;
-  border-radius: 2px;
+  outline: 3px solid #FFD54F;
+  outline-offset: 3px;
 }
 
 /* Enhanced focus for primary interactive elements */
@@ -97,9 +111,8 @@ details:focus-visible {
 .button:focus-visible,
 .toolbar-btn:focus-visible,
 .email-section-btn:focus-visible {
-  outline: var(--focus-ring-width) solid var(--focus-outline);
+  outline: 3px solid #FFD54F;
   outline-offset: 3px;
-  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.15);
 }
 
 /* ======================================== */
@@ -306,16 +319,16 @@ nav {
 
 /* Paragraphs - comfortable spacing */
 p {
-  margin-bottom: 1.25em;
-  line-height: 1.7;
+  font-size: 1rem;
+  max-width: 70ch;
+  margin-bottom: 1em;
 }
 
 /* Headings - proper hierarchy and spacing */
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 2em;
-  margin-bottom: 0.75em;
+  font-weight: 600;
   line-height: 1.3;
-  font-weight: 700;
+  margin-bottom: 0.6em;
 }
 
 h1 {
@@ -693,20 +706,20 @@ body[data-contrast="high"] .store-badge {
 }
 
 /* ========================================
-   DARK MODE (User-Controlled)
-   WCAG AAA Compliant: 7:1+ contrast ratio
+   DARK MODE (default)
+   WCAG Compliant
    ======================================== */
 body[data-theme="dark"] {
-  --bg-color: #0e1726;
-  --text-color: #f2f5f9;
+  --bg-color: #0B1423;
+  --text-color: #FFFFFF;
   --header-bg: #0b2545;
   --header-text: #ffffff;
-  --main-bg: #111a2b;
-  --link-color: #7eb7ff; /* Lighter, more visible blue in dark mode */
-  --link-hover: #a8c7ff; /* Even lighter on hover */
+  --main-bg: #0B1423;
+  --link-color: #66B2FF;
+  --link-hover: #99D0FF;
   --nav-hover: #183c65;
   --border-color: #355c7d;
-  --focus-outline: #82aaff;
+  --focus-outline: #FFD54F;
   
   background: var(--bg-color);
   color: var(--text-color);
@@ -885,6 +898,34 @@ body[data-contrast="high"] .back-to-top {
   color: #fff;
   border-color: #fff;
 }
+
+/* ========================================
+   ENERGY BAR & GRADIENT SECTION COMPONENTS
+   ======================================== */
+
+/* Energy Bar - Dark Mode (default) */
+.energy-bar {
+  background-color: #4E2F00;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+}
+
+.energy-bar .icon {
+  vertical-align: middle;
+  margin-right: 0.3em;
+  filter: brightness(1.2);
+}
+
+/* Gradient Section - Dark Mode (default) */
+.gradient-section {
+  background: linear-gradient(135deg, #FF7597, #FFB4D2);
+  color: #2C2C2C;
+  padding: 1.5em;
+  border-radius: 1rem;
+}
+
 
 /* Modal utilities */
 body.no-scroll {
@@ -2565,4 +2606,110 @@ body[data-contrast="high"] .crisis-option p {
   .beta-cta {
     padding: 1rem;
   }
+}
+
+/* ==========================================================
+   LIGHT MODE (system preference or manual toggle)
+   ========================================================== */
+
+@media (prefers-color-scheme: light) {
+  body:not([data-theme="dark"]) {
+    background-color: #FFFFFF;
+    color: #111111;
+  }
+
+  body:not([data-theme="dark"]) h1,
+  body:not([data-theme="dark"]) h2,
+  body:not([data-theme="dark"]) h3,
+  body:not([data-theme="dark"]) h4,
+  body:not([data-theme="dark"]) h5,
+  body:not([data-theme="dark"]) h6 {
+    color: #111111;
+  }
+
+  body:not([data-theme="dark"]) a {
+    color: #004A99;
+  }
+
+  body:not([data-theme="dark"]) a:hover,
+  body:not([data-theme="dark"]) a:focus {
+    color: #0066CC;
+  }
+
+  body:not([data-theme="dark"]) .energy-bar {
+    background-color: #EDE3D1;
+    color: #3B2600;
+    border: 1px solid #D4C2A6;
+  }
+
+  body:not([data-theme="dark"]) .energy-bar .icon {
+    filter: brightness(0.8);
+  }
+
+  body:not([data-theme="dark"]) .gradient-section {
+    background: linear-gradient(135deg, #FFD8E1, #FFF0F6);
+    color: #333333;
+  }
+
+  body:not([data-theme="dark"]) :focus-visible {
+    outline: 3px solid #FFB300;
+  }
+}
+
+/* Manual light theme toggle support */
+body.theme-light {
+  background-color: #FFFFFF;
+  color: #111111;
+}
+
+body.theme-light h1,
+body.theme-light h2,
+body.theme-light h3,
+body.theme-light h4,
+body.theme-light h5,
+body.theme-light h6 {
+  color: #111111;
+}
+
+body.theme-light a {
+  color: #004A99;
+}
+
+body.theme-light a:hover,
+body.theme-light a:focus {
+  color: #0066CC;
+}
+
+body.theme-light .energy-bar {
+  background-color: #EDE3D1;
+  color: #3B2600;
+  border: 1px solid #D4C2A6;
+}
+
+body.theme-light .energy-bar .icon {
+  filter: brightness(0.8);
+}
+
+body.theme-light .gradient-section {
+  background: linear-gradient(135deg, #FFD8E1, #FFF0F6);
+  color: #333333;
+}
+
+body.theme-light :focus-visible {
+  outline: 3px solid #FFB300;
+}
+
+/* Manual dark theme toggle support */
+body.theme-dark {
+  background-color: #0B1423;
+  color: #FFFFFF;
+}
+
+body.theme-dark a {
+  color: #66B2FF;
+}
+
+body.theme-dark a:hover,
+body.theme-dark a:focus {
+  color: #99D0FF;
 }
