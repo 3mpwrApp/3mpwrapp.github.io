@@ -5,34 +5,11 @@ description: Get in touch with 3mpwrApp. Partnership inquiries, collaboration op
 permalink: /connect/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+
 <div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
-</div>
-
-<!-- Innovative Accessibility Controls -->
-<div class="accessibility-toolbar" role="toolbar" aria-label="Page accessibility controls">
-  <div class="toolbar-section">
-    <button id="needBreakBtn" class="toolbar-btn" aria-label="Take a break - dims screen for 5 minutes">
-      💙 Need a break?
-    </button>
-    <button id="painFlareBtn" class="toolbar-btn" aria-label="Switch to minimal interaction mode">
-      🔥 Pain flare mode
-    </button>
-    <button id="overwhelmedBtn" class="toolbar-btn" aria-label="Switch to simplified version">
-      😰 I'm overwhelmed
-    </button>
-  </div>
-  <div class="toolbar-section spoon-counter">
-    <span class="spoon-label">🥄 Energy used:</span>
-    <span id="spoonCount" class="spoon-count" aria-live="polite">0</span>
-    <button id="resetSpoons" class="toolbar-btn-small" aria-label="Reset energy counter">Reset</button>
-  </div>
-</div>
-
-<!-- Progress indicator -->
-<div class="page-progress-container" role="progressbar" aria-label="Page reading progress">
-  <div class="page-progress-bar" id="pageProgressBar"></div>
-  <span class="page-progress-text" id="pageProgressText">0% through page</span>
+  <span class="status-indicator">✅</span> 
+  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
 </div>
 
 # 🤝 Connect With Us
@@ -49,8 +26,15 @@ permalink: /connect/
   </ul>
 </details>
 
-<div class="success-box">
-  🌱 <strong>We're Growing:</strong> 3mpwrApp is a grassroots project built BY disabled people and injured workers FOR the community. We're just getting started and open to meaningful connections!
+<div class="gradient-banner">
+  <h3 style="margin: 0 0 0.5rem;">🌱 We're Growing</h3>
+  <p style="margin: 0;">3mpwrApp is a grassroots project built BY disabled people and injured workers FOR the community. We're just getting started and open to meaningful connections!</p>
+</div>
+
+<div class="button-group">
+  <a href="mailto:empowrapp08162025@gmail.com" class="btn btn-primary">📧 Email Us</a>
+  <a href="#social-media" class="btn btn-secondary">📱 Follow on Social</a>
+  <a href="/partnerships/" class="btn btn-secondary">🤝 Partnerships</a>
 </div>
 
 ---

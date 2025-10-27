@@ -5,60 +5,16 @@ description: Community-created campaigns and events for disability rights and in
 permalink: /campaigns/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+
 <div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
-</div>
-
-<!-- Innovative Accessibility Controls -->
-<div class="accessibility-toolbar" role="toolbar" aria-label="Page accessibility controls">
-  <div class="toolbar-section">
-    <button id="needBreakBtn" class="toolbar-btn" aria-label="Take a break - dims screen for 5 minutes">
-      💙 Need a break?
-    </button>
-    <button id="painFlareBtn" class="toolbar-btn" aria-label="Switch to minimal interaction mode">
-      🔥 Pain flare mode
-    </button>
-    <button id="overwhelmedBtn" class="toolbar-btn" aria-label="Switch to simplified version">
-      😰 I'm overwhelmed
-    </button>
-  </div>
-  <div class="toolbar-section spoon-counter">
-    <span class="spoon-label">🥄 Energy used:</span>
-    <span id="spoonCount" class="spoon-count" aria-live="polite">0</span>
-    <button id="resetSpoons" class="toolbar-btn-small" aria-label="Reset energy counter">Reset</button>
-  </div>
-</div>
-
-<!-- Progress indicator -->
-<div class="page-progress-container" role="progressbar" aria-label="Page reading progress">
-  <div class="page-progress-bar" id="pageProgressBar"></div>
-  <span class="page-progress-text" id="pageProgressText">0% through page</span>
+  <span class="status-indicator">✅</span> 
+  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
 </div>
 
 # 📣 Campaigns & Events
 
 📖 **3 minute read** | 🔋🔋 **Energy: Light**
-
-<div class="gradient-banner">
-  <h2 style="margin: 0 0 1rem; font-size: 1.5rem;">💪 Power to the People: ALL People</h2>
-  <p style="margin: 0.5rem 0; line-height: 1.6;">
-    <strong>Campaigns and events are created by and for:</strong>
-  </p>
-  <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
-    <li>🦽 <strong>Persons with disabilities</strong> - Fight for your rights, organize your community</li>
-    <li>🏗️ <strong>Injured workers</strong> - Demand justice, support each other</li>
-    <li>💙 <strong>Family supporters & caregivers</strong> - Advocate for your loved ones</li>
-    <li>🤝 <strong>Non-disabled allies</strong> - Stand in solidarity, amplify voices</li>
-    <li>🛠️ <strong>Union members</strong> - Organize collectively for workers' rights</li>
-    <li>✊ <strong>Social justice activists</strong> - Build intersectional movements</li>
-    <li>🏥 <strong>Healthcare providers</strong> - Advocate for better systems</li>
-    <li>⚖️ <strong>Legal advocates</strong> - Fight for justice alongside community</li>
-    <li>🌍 <strong>General public</strong> - Learn, support, take action</li>
-  </ul>
-  <p style="margin: 1rem 0 0; font-weight: 600; font-size: 1.1rem;">
-    ✊ Disability justice IS social justice. You don't need to be disabled to fight for disability justice. You don't need to be injured to support injured workers. ALL are welcome to organize!
-  </p>
-</div>
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
@@ -71,8 +27,40 @@ permalink: /campaigns/
   </ul>
 </details>
 
-<div class="success-box">
-  🚀 <strong>App-Powered Organizing:</strong> This page will automatically sync with campaigns and events created in our app. Community-led, instantly published, fully accessible.
+<div class="gradient-banner">
+  <h3 style="margin: 0 0 0.5rem;">💪 Power to the People: ALL People</h3>
+  <p style="margin: 0 0 1rem;">Campaigns and events are created by and for everyone fighting for disability justice and workers' rights.</p>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.75rem; margin: 1rem 0;">
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+      🦽 <strong>Persons with disabilities</strong>
+    </div>
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+      🏗️ <strong>Injured workers</strong>
+    </div>
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+      💙 <strong>Family & caregivers</strong>
+    </div>
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+      🤝 <strong>Allies & advocates</strong>
+    </div>
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+      🛠️ <strong>Union members</strong>
+    </div>
+    <div style="padding: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem;">
+      🌍 <strong>General public</strong>
+    </div>
+  </div>
+  
+  <p style="margin: 1rem 0 0; font-weight: 600;">
+    ✊ Disability justice IS social justice. Everyone can organize!
+  </p>
+</div>
+
+<div class="button-group">
+  <a href="/beta/" class="btn btn-primary">Join Beta Testing</a>
+  <a href="/user-guide#advocacy-tools" class="btn btn-secondary">Learn About Tools</a>
+  <a href="/contact/?subject=Campaign Idea" class="btn btn-secondary">Suggest a Campaign</a>
 </div>
 
 ---
