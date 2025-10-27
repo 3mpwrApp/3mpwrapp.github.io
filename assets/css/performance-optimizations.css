@@ -1,0 +1,533 @@
+/**
+ * 3mpwrApp - Performance Optimizations
+ * Critical CSS and performance enhancements
+ * Last updated: October 27, 2025
+ */
+
+/* ==========================================================
+   CRITICAL CSS - Above the fold rendering
+   ========================================================== */
+
+/* Inline critical styles to avoid render-blocking */
+:root {
+  --bg-color: #0B1423;
+  --text-color: #FFFFFF;
+  --link-color: #66B2FF;
+  --focus-outline: #FFD54F;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Skip link - critical for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--focus-outline);
+  color: #000;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - above the fold */
+header {
+  background: var(--bg-color);
+  padding: 1rem;
+  border-bottom: 2px solid rgba(102, 178, 255, 0.2);
+}
+
+/* ==========================================================
+   IMAGE OPTIMIZATION - Lazy loading hints
+   ========================================================== */
+
+/* Use aspect ratio boxes to prevent layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Placeholder for lazy images */
+img[loading="lazy"] {
+  background: rgba(102, 178, 255, 0.1);
+  min-height: 200px;
+}
+
+/* ==========================================================
+   FONT OPTIMIZATION - System fonts first
+   ========================================================== */
+
+body {
+  font-family: 
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+  font-display: swap;
+}
+
+/* Prevent invisible text while webfonts load */
+/* All @font-face rules should include font-display: swap */
+
+/* ==========================================================
+   REDUCE LAYOUT SHIFT - Reserve space for elements
+   ========================================================== */
+
+/* Reserve space for navigation */
+nav {
+  min-height: 48px;
+}
+
+/* Reserve space for footer */
+footer {
+  min-height: 200px;
+}
+
+/* ==========================================================
+   JAVASCRIPT HINTS - Resource prioritization
+   ========================================================== */
+
+/* Preloaded resources are defined in HTML <head> */
+/* Example: <link rel="preload" href="/assets/css/style.css" as="style"> */
+
+/* ==========================================================
+   PERFORMANCE BUDGETS - Limits
+   ========================================================== */
+
+/* 
+  Target metrics:
+  - First Contentful Paint: < 1.8s
+  - Largest Contentful Paint: < 2.5s
+  - First Input Delay: < 100ms
+  - Cumulative Layout Shift: < 0.1
+  - Time to Interactive: < 3.8s
+*/
+
+/* ==========================================================
+   CACHING STRATEGY - Service Worker
+   ========================================================== */
+
+/* 
+  Cache-first for static assets:
+  - CSS files: 1 year
+  - JavaScript files: 1 year
+  - Images: 1 year
+  - Fonts: 1 year
+  
+  Network-first for HTML:
+  - HTML pages: 1 hour
+*/
+
+/* ==========================================================
+   MINIMIZE MAIN THREAD WORK
+   ========================================================== */
+
+/* Use CSS instead of JavaScript where possible */
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Hardware acceleration for animations */
+.animated {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* ==========================================================
+   CRITICAL THIRD-PARTY SCRIPTS - Defer non-critical
+   ========================================================== */
+
+/* Analytics should be deferred */
+/* Service Worker should be registered after page load */
+/* Social media widgets should be lazy-loaded */
+
+/* ==========================================================
+   RESPONSIVE IMAGES - Provide multiple sizes
+   ========================================================== */
+
+/* Use srcset for responsive images */
+img[srcset] {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========================================================
+   REMOVE UNUSED CSS - Tree shaking
+   ========================================================== */
+
+/* This file contains only critical CSS */
+/* Non-critical CSS should be loaded asynchronously */
+
+/* ==========================================================
+   COMPRESSION - Enable gzip/brotli
+   ========================================================== */
+
+/* Ensure server sends:
+   Content-Encoding: gzip
+   or
+   Content-Encoding: br
+*/
+
+/* ==========================================================
+   MINIMIZE CRITICAL REQUEST DEPTH
+   ========================================================== */
+
+/* Reduce chain of resources */
+/* Inline critical CSS */
+/* Defer non-critical JavaScript */
+/* Use preconnect for third-party domains */
+
+/* ==========================================================
+   EFFICIENT CACHE POLICY
+   ========================================================== */
+
+/* Static assets should have long cache times */
+/* Use versioning or hashing in filenames */
+
+/* ==========================================================
+   AVOID LARGE LAYOUT SHIFTS
+   ========================================================== */
+
+/* Set explicit width and height on images */
+/* Reserve space for ads and embeds */
+/* Use CSS aspect-ratio */
+
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+/* ==========================================================
+   PRELOAD KEY RESOURCES
+   ========================================================== */
+
+/* Defined in HTML head:
+   <link rel="preload" href="/assets/css/style.css" as="style">
+   <link rel="preload" href="/assets/empwrapp-logo.png" as="image">
+*/
+
+/* ==========================================================
+   MINIMIZE JAVASCRIPT EXECUTION TIME
+   ========================================================== */
+
+/* Use defer or async for non-critical scripts */
+/* Break up long-running JavaScript tasks */
+/* Use requestIdleCallback for low-priority work */
+
+/* ==========================================================
+   SERVE STATIC ASSETS WITH EFFICIENT CACHE POLICY
+   ========================================================== */
+
+/*
+  Recommended cache headers:
+  
+  For versioned assets (style.abc123.css):
+  Cache-Control: public, max-age=31536000, immutable
+  
+  For HTML pages:
+  Cache-Control: public, max-age=3600, must-revalidate
+*/
+
+/* ==========================================================
+   USE VIDEO FORMATS FOR ANIMATED CONTENT
+   ========================================================== */
+
+/* Replace GIFs with video for better performance */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================
+   ELIMINATE RENDER-BLOCKING RESOURCES
+   ========================================================== */
+
+/* Critical CSS should be inlined */
+/* Non-critical CSS loaded with media="print" onload="this.media='all'" */
+/* JavaScript should use defer or async */
+
+/* ==========================================================
+   REDUCE SERVER RESPONSE TIME (TTFB)
+   ========================================================== */
+
+/* GitHub Pages TTFB: ~200-500ms (acceptable) */
+/* Use CDN for static assets if needed */
+
+/* ==========================================================
+   AVOID CHAINING CRITICAL REQUESTS
+   ========================================================== */
+
+/* Minimize dependency chains */
+/* Use HTTP/2 server push where available */
+
+/* ==========================================================
+   KEEP REQUEST COUNTS LOW AND TRANSFER SIZES SMALL
+   ========================================================== */
+
+/* Combine CSS files where possible */
+/* Combine JavaScript files */
+/* Use SVG instead of icon fonts */
+/* Minify and compress all assets */
+
+/* ==========================================================
+   MINIMIZE MAIN THREAD WORK
+   ========================================================== */
+
+/* Offload work to Web Workers where possible */
+/* Use CSS instead of JavaScript for animations */
+/* Debounce expensive operations */
+
+/* ==========================================================
+   REDUCE JAVASCRIPT EXECUTION TIME
+   ========================================================== */
+
+/* Remove console.log in production */
+/* Use production builds of libraries */
+/* Code split large bundles */
+
+/* ==========================================================
+   MINIMIZE THIRD-PARTY USAGE
+   ========================================================== */
+
+/* Audit third-party scripts */
+/* Use facade patterns for heavy widgets */
+/* Lazy load third-party content */
+
+/* ==========================================================
+   LAZY LOAD OFFSCREEN IMAGES
+   ========================================================== */
+
+/* Use loading="lazy" attribute */
+/* Use Intersection Observer API */
+
+/* ==========================================================
+   PROPERLY SIZE IMAGES
+   ========================================================== */
+
+/* Serve appropriately-sized images */
+/* Use responsive images with srcset */
+/* Compress images (WebP, AVIF) */
+
+/* ==========================================================
+   DEFER OFFSCREEN IMAGES
+   ========================================================== */
+
+img[data-src] {
+  background: rgba(102, 178, 255, 0.1);
+}
+
+/* ==========================================================
+   MINIFY CSS
+   ========================================================== */
+
+/* Production build should minify all CSS */
+/* Remove comments and whitespace */
+/* Use cssnano or similar */
+
+/* ==========================================================
+   MINIFY JAVASCRIPT
+   ========================================================== */
+
+/* Production build should minify all JavaScript */
+/* Use terser or similar */
+/* Enable tree-shaking */
+
+/* ==========================================================
+   REMOVE UNUSED JAVASCRIPT
+   ========================================================== */
+
+/* Use code coverage tools */
+/* Remove dead code */
+/* Use dynamic imports for features */
+
+/* ==========================================================
+   EFFICIENTLY ENCODE IMAGES
+   ========================================================== */
+
+/* Use modern formats: WebP, AVIF */
+/* Compress images without losing quality */
+/* Use appropriate quality settings */
+
+/* ==========================================================
+   SERVE IMAGES IN NEXT-GEN FORMATS
+   ========================================================== */
+
+/* Provide WebP with JPEG/PNG fallback */
+picture {
+  display: block;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========================================================
+   ENABLE TEXT COMPRESSION
+   ========================================================== */
+
+/* Server should compress:
+   - HTML
+   - CSS
+   - JavaScript
+   - JSON
+   - SVG
+*/
+
+/* ==========================================================
+   PRECONNECT TO REQUIRED ORIGINS
+   ========================================================== */
+
+/* Defined in HTML head:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://www.google-analytics.com">
+*/
+
+/* ==========================================================
+   REDUCE THE IMPACT OF THIRD-PARTY CODE
+   ========================================================== */
+
+/* Self-host critical third-party scripts */
+/* Use facade for YouTube embeds */
+/* Lazy load social media widgets */
+
+/* ==========================================================
+   AVOID ENORMOUS NETWORK PAYLOADS
+   ========================================================== */
+
+/* Target: Total page size < 1.6 MB */
+/* Lazy load images and videos */
+/* Code split JavaScript */
+
+/* ==========================================================
+   USE HTTP/2 WHERE POSSIBLE
+   ========================================================== */
+
+/* GitHub Pages supports HTTP/2 */
+/* Enables multiplexing and header compression */
+
+/* ==========================================================
+   USE PASSIVE EVENT LISTENERS
+   ========================================================== */
+
+/* Improves scrolling performance */
+/* Defined in JavaScript */
+
+/* ==========================================================
+   MINIMIZE DOM SIZE
+   ========================================================== */
+
+/* Target: < 1,500 DOM nodes */
+/* Avoid deep nesting */
+/* Use virtual scrolling for long lists */
+
+/* ==========================================================
+   AVOID NON-COMPOSITED ANIMATIONS
+   ========================================================== */
+
+/* Only animate transform and opacity */
+.optimized-animation {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Avoid animating layout properties */
+/* Don't animate: width, height, top, left, margin, padding */
+
+/* ==========================================================
+   IMAGE ASPECT RATIOS - Prevent layout shift
+   ========================================================== */
+
+.logo {
+  aspect-ratio: 1 / 1;
+  width: 32px;
+  height: 32px;
+}
+
+.banner-image {
+  aspect-ratio: 16 / 9;
+}
+
+/* ==========================================================
+   CONTENT VISIBILITY - Virtualize offscreen content
+   ========================================================== */
+
+.offscreen-content {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* ==========================================================
+   CSS CONTAINMENT - Improve rendering performance
+   ========================================================== */
+
+.contained-section {
+  contain: layout style paint;
+}
+
+.feature-box {
+  contain: layout paint;
+}
+
+/* ==========================================================
+   WILL-CHANGE - Optimize animations
+   ========================================================== */
+
+.will-animate {
+  will-change: transform;
+}
+
+/* Remove will-change after animation */
+.animated-complete {
+  will-change: auto;
+}
+
+/* ==========================================================
+   INTERSECTION OBSERVER - Lazy load everything
+   ========================================================== */
+
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}
