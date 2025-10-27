@@ -3,6 +3,7 @@ import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
+import { GapView } from '../../components/GapView';
 import SimpleBarChart from '../../components/SimpleBarChart';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { waitTimes } from '../../data/wait-times';
@@ -50,12 +51,12 @@ export default function WaitTimesScreen() {
     <ScrollView style={s.container} contentContainerStyle={{ paddingBottom: 24 }}>
       <Text style={s.title}>Compensation Wait-Time Tracker</Text>
       <Text style={s.text}>Anonymized community-reported timelines by province (seed data shown).</Text>
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8, flexWrap:'wrap' }}>
+      <GapView gap={8} style={{ flexDirection:'row', marginTop: 8, flexWrap:'wrap' }}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></A11yPressable>
         {merged.map(w => w.province).map(p => (
           <A11yPressable hitSlop={HIT_SLOP_8} key={p} onPress={()=>setFilter(p)} style={[s.chip, filter===p&&s.chipActive]}><Text style={{ color: filter===p? palette.onPrimary: palette.text, fontWeight:'700' }}>{p}</Text></A11yPressable>
         ))}
-      </View>
+      </GapView>
       <View style={{ marginTop: 8 }}>
         <SimpleBarChart data={data} labelKey="province" valueKey="medianDays" />
       </View>
