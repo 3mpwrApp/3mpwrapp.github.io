@@ -7,87 +7,126 @@ description: A community-powered hub for injured workers and persons with disabi
 <!-- Status Banner -->
 <div class="status-banner" role="status" aria-live="polite">
   <span class="status-indicator">✅</span> 
-  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+  <strong>App Status:</strong> Testing Phase - Limited Spots Available | All systems running smoothly | Brief updates: 2-4am EST
 </div>
 
 <!-- Innovative Accessibility Controls -->
-<div class="accessibility-toolbar" role="toolbar" aria-label="Page accessibility controls">
-  <div class="toolbar-section">
-    <button id="needBreakBtn" class="toolbar-btn" aria-label="Take a break - dims screen for 5 minutes">
-      💙 Need a break?
-    </button>
-    <button id="painFlareBtn" class="toolbar-btn" aria-label="Switch to minimal interaction mode">
-      🔥 Pain flare mode
-    </button>
-    <button id="overwhelmedBtn" class="toolbar-btn" aria-label="Switch to simplified version">
-      😰 I'm overwhelmed
-    </button>
-    <button id="freezeFrameBtn" class="toolbar-btn" aria-label="Freeze all animations and movement">
-      ❄️ Freeze animations
-    </button>
-  </div>
-  <div class="toolbar-section">
-    <button id="tooMuchTextBtn" class="toolbar-btn" aria-label="Show bullet points only">
-      📝 Too much text?
-    </button>
-    <button id="brainFogBtn" class="toolbar-btn" aria-label="Show quick summary">
-      🧠 Brain fog helper
-    </button>
-    <button id="resumeReadingBtn" class="toolbar-btn" style="display:none;" aria-label="Resume where you left off">
-      📖 Resume reading
-    </button>
-    <button id="spatialMemoryBtn" class="toolbar-btn" aria-label="Show where you've been on this page">
-      🔍 I saw it somewhere...
-    </button>
-  </div>
-  <div class="toolbar-section">
-    <button id="chunkingBtn" class="toolbar-btn" aria-label="Break content into smaller chunks">
-      🧩 Chunk content
-    </button>
-    <button id="decisionHelperBtn" class="toolbar-btn" aria-label="Help me decide what to do">
-      🎯 Decision helper
-    </button>
-    <button id="groundingBtn" class="toolbar-btn" aria-label="Quick grounding exercise for anxiety">
-      🧘 Grounding exercise
-    </button>
-  </div>
-  <div class="toolbar-section">
-    <label for="sensoryToggle" class="toolbar-label">✨ Sensory:</label>
-    <select id="sensoryToggle" class="toolbar-select" aria-label="Adjust sensory preferences">
-      <option value="default">Default</option>
-      <option value="reduced-motion">Reduced motion</option>
-      <option value="high-contrast">High contrast</option>
-      <option value="minimal">Minimal (text only)</option>
-    </select>
-  </div>
-  <div class="toolbar-section">
-    <label for="readingLevel" class="toolbar-label">📚 Reading:</label>
-    <select id="readingLevel" class="toolbar-select" aria-label="Adjust reading complexity">
-      <option value="detailed">Detailed</option>
-      <option value="simple">Simple language</option>
-    </select>
-  </div>
-  <div class="toolbar-section">
-    <label for="dyslexiaMode" class="toolbar-label">📖 Dyslexia:</label>
-    <select id="dyslexiaMode" class="toolbar-select" aria-label="Dyslexia-friendly formatting">
-      <option value="off">Off</option>
-      <option value="font">Font only</option>
-      <option value="spacing">Extra spacing</option>
-      <option value="full">Full mode</option>
-    </select>
-  </div>
-  <div class="toolbar-section spoon-counter">
-    <span class="spoon-label">🥄 Energy used:</span>
-    <span id="spoonCount" class="spoon-count" aria-live="polite">0</span>
-    <button id="resetSpoons" class="toolbar-btn-small" aria-label="Reset energy counter">Reset</button>
-  </div>
-  <div class="toolbar-section">
-    <button id="cognitiveLoadBtn" class="toolbar-btn-indicator" aria-label="Cognitive load indicator" aria-live="polite">
-      🌡️ <span id="cognitiveStatus">Ready</span>
-    </button>
-    <button id="timeBlindnessBtn" class="toolbar-btn-small" aria-label="Time tracking helper">
-      ⏰ <span id="timeSpent">0m</span>
-    </button>
+<div class="accessibility-toolbar collapsed" role="toolbar" aria-label="Page accessibility controls">
+  <!-- Toggle Button -->
+  <button class="toolbar-toggle" aria-expanded="false" aria-controls="toolbar-content" id="toolbarToggle">
+    <span class="toggle-icon" aria-hidden="true">♿</span>
+    <span class="toggle-text">Accessibility Tools</span>
+    <span class="badge" aria-label="13 accessibility features available">13 features</span>
+    <span class="toggle-arrow" aria-hidden="true">▼</span>
+  </button>
+  
+  <!-- Collapsible Content -->
+  <div id="toolbar-content" class="toolbar-content" hidden>
+    <!-- Quick Relief Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Quick Relief</h3>
+      <div class="toolbar-buttons">
+        <button id="needBreakBtn" class="toolbar-btn" aria-label="Take a break - dims screen for 5 minutes">
+          💙 Need a break?
+        </button>
+        <button id="painFlareBtn" class="toolbar-btn" aria-label="Switch to minimal interaction mode">
+          🔥 Pain flare mode
+        </button>
+        <button id="overwhelmedBtn" class="toolbar-btn" aria-label="Switch to simplified version">
+          😰 I'm overwhelmed
+        </button>
+        <button id="freezeFrameBtn" class="toolbar-btn" aria-label="Freeze all animations and movement">
+          ❄️ Freeze animations
+        </button>
+      </div>
+    </div>
+    
+    <!-- Reading Aids Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Reading Aids</h3>
+      <div class="toolbar-buttons">
+        <button id="tooMuchTextBtn" class="toolbar-btn" aria-label="Show bullet points only">
+          📝 Too much text?
+        </button>
+        <button id="brainFogBtn" class="toolbar-btn" aria-label="Show quick summary">
+          🧠 Brain fog helper
+        </button>
+        <button id="resumeReadingBtn" class="toolbar-btn" style="display:none;" aria-label="Resume where you left off">
+          📖 Resume reading
+        </button>
+        <button id="spatialMemoryBtn" class="toolbar-btn" aria-label="Show where you've been on this page">
+          🔍 I saw it somewhere...
+        </button>
+      </div>
+    </div>
+    
+    <!-- Content Tools Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Content Tools</h3>
+      <div class="toolbar-buttons">
+        <button id="chunkingBtn" class="toolbar-btn" aria-label="Break content into smaller chunks">
+          🧩 Chunk content
+        </button>
+        <button id="decisionHelperBtn" class="toolbar-btn" aria-label="Help me decide what to do">
+          🎯 Decision helper
+        </button>
+        <button id="groundingBtn" class="toolbar-btn" aria-label="Quick grounding exercise for anxiety">
+          🧘 Grounding exercise
+        </button>
+      </div>
+    </div>
+    
+    <!-- Settings Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Display Settings</h3>
+      <div class="toolbar-settings">
+        <div class="toolbar-setting">
+          <label for="sensoryToggle" class="toolbar-label">✨ Sensory:</label>
+          <select id="sensoryToggle" class="toolbar-select" aria-label="Adjust sensory preferences">
+            <option value="default">Default</option>
+            <option value="reduced-motion">Reduced motion</option>
+            <option value="high-contrast">High contrast</option>
+            <option value="minimal">Minimal (text only)</option>
+          </select>
+        </div>
+        <div class="toolbar-setting">
+          <label for="readingLevel" class="toolbar-label">📚 Reading:</label>
+          <select id="readingLevel" class="toolbar-select" aria-label="Adjust reading complexity">
+            <option value="detailed">Detailed</option>
+            <option value="simple">Simple language</option>
+          </select>
+        </div>
+        <div class="toolbar-setting">
+          <label for="dyslexiaMode" class="toolbar-label">📖 Dyslexia:</label>
+          <select id="dyslexiaMode" class="toolbar-select" aria-label="Dyslexia-friendly formatting">
+            <option value="off">Off</option>
+            <option value="font">Font only</option>
+            <option value="spacing">Extra spacing</option>
+            <option value="full">Full mode</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tracking Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Energy & Time Tracking</h3>
+      <div class="toolbar-tracking">
+        <div class="spoon-counter">
+          <span class="spoon-label">🥄 Energy used:</span>
+          <span id="spoonCount" class="spoon-count" aria-live="polite">0</span>
+          <button id="resetSpoons" class="toolbar-btn-small" aria-label="Reset energy counter">Reset</button>
+        </div>
+        <div class="toolbar-indicators">
+          <button id="cognitiveLoadBtn" class="toolbar-btn-indicator" aria-label="Cognitive load indicator" aria-live="polite">
+            🌡️ <span id="cognitiveStatus">Ready</span>
+          </button>
+          <button id="timeBlindnessBtn" class="toolbar-btn-small" aria-label="Time tracking helper">
+            ⏰ <span id="timeSpent">0m</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -97,57 +136,57 @@ description: A community-powered hub for injured workers and persons with disabi
   <span class="page-progress-text" id="pageProgressText">0% through page</span>
 </div>
 
-# Welcome to 3mpwr App
+# You're Not Alone. Your Voice Matters.
 
 📖 **3 minute read** 🔋🔋 **Energy: Light**
 
-<strong>Connecting voices, empowering change.</strong>
+**Be part of building something meaningful.**
 
-3mpwr App is a **grassroots, community-driven platform** built for injured workers, persons with disabilities, supporters, allies, unions, and anyone navigating workplace injury or disability systems across Canada. Whether you identify as disabled or are still figuring things out, you belong here. We're creating a safe, inclusive space where people can connect, share experiences, and advocate for change.
+3mpwr App is a **free, community-powered platform** where injured workers, persons with disabilities, supporters, and allies come together. Whether you identify as disabled or are still figuring things out—**you belong here.**
 
-**We believe disability justice IS social justice** – fighting ableism, workplace exploitation, systemic barriers, and inequality in all its forms.
+We're building a safe space to connect, share experiences, and advocate for real change.
 
-**💚 100% Free Forever** – No paid tiers, no subscriptions, no profit motive. Built BY the community, FOR the community.
+**💚 100% Free Forever** – No subscriptions. No hidden costs. Built BY the community, FOR the community.
 
 ---
 
-## ✨ Experience the Magic
+## ✨ Built Different—By Design
 
 <div class="gradient-banner-pink">
-  <h3 style="margin: 0 0 1rem; font-size: 1.3rem;">🎯 Built Different</h3>
+  <h3 style="margin: 0 0 1rem; font-size: 1.3rem;">🎯 Thoughtfully Designed for Real Lives</h3>
   <p style="margin: 0 0 1rem; font-size: 1.05rem;">
-    3mpwrApp isn't just accessible—it's <strong>revolutionary</strong>. We've created features you won't find anywhere else:
+    3mpwrApp isn't just accessible—it's **thoughtfully built** with features you won't find anywhere else:
   </p>
   
   <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem;">
     <li style="padding-left: 1.5rem; position: relative;">
       <span style="position: absolute; left: 0;">🧠</span>
-      <strong>Smart cognitive support</strong> that adapts to how you're feeling
+      <strong>Adaptive cognitive support</strong> that responds to how you're feeling right now
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
       <span style="position: absolute; left: 0;">💙</span>
-      <strong>Thoughtful surprises</strong> that show we care about your wellbeing
+      <strong>Wellness-first features</strong> designed with your wellbeing in mind
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
       <span style="position: absolute; left: 0;">⏰</span>
-      <strong>Time-aware features</strong> that check in when you need it most
+      <strong>Smart check-ins</strong> that respect your time and energy
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
       <span style="position: absolute; left: 0;">🎯</span>
-      <strong>Hidden helpers</strong> that activate when you're overwhelmed
+      <strong>Hidden helpers</strong> that appear when you need support most
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
       <span style="position: absolute; left: 0;">🌟</span>
-      <strong>Celebrations</strong> for your progress, big and small
+      <strong>Progress celebrations</strong> for every step forward, big or small
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
       <span style="position: absolute; left: 0;">🎮</span>
-      <strong>Easter eggs</strong> for the curious (yes, really!)
+      <strong>Thoughtful surprises</strong> that make using the app a positive experience
     </li>
   </ul>
   
   <p style="margin: 1rem 0 0; font-size: 0.95rem; font-style: italic;">
-    💡 <strong>Tip:</strong> The more you explore, the more magic you'll discover. This site is full of thoughtful surprises designed to make you smile.
+    💡 <strong>Note:</strong> The more you use 3mpwrApp, the more helpful features you'll discover—all designed to support you.
   </p>
 </div>
 
@@ -450,10 +489,9 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 
 <!-- Community Counter -->
 <div class="community-stats-box">
-  <p style="margin: 0; font-size: 1.1rem;"><strong>💚 You're part of something special</strong></p>
-  <p style="margin: 0.5rem 0 0;" id="communityCounter">
-    <span id="activeUsers">🌟 127 people</span> are exploring right now | 
-    <span id="monthlyHelped">💪 18,492 people</span> helped this month
+  <p style="margin: 0; font-size: 1.1rem;"><strong>💚 Join Our Growing Community</strong></p>
+  <p style="margin: 0.5rem 0 0;">
+    Currently in closed beta testing - <a href="{{ '/beta' | relative_url }}">limited spots available</a>
   </p>
 </div>
 
@@ -469,7 +507,9 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 </div>
 
 <!-- Homepage Styles & Scripts (external for performance) -->
+<link rel="stylesheet" href="{{ '/assets/css/design-system.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/homepage-animations.css' | relative_url }}">
+<script src="{{ '/assets/js/accessibility-toolbar.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/homepage-features.js' | relative_url }}" defer></script>
 
 <!-- REMOVED: 700+ lines of inline JavaScript moved to external file -->

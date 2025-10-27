@@ -1,14 +1,14 @@
 ---
 layout: default
 title: About
-description: Your voice, your power. Unfiltered. 3mpwrApp puts the power back in your hands - no shadow bans, no manipulation, no data mining.
+description: Empowering Canada's disability and injured worker community with 100% free advocacy tools, resources, and connection.
 ---
 
 <div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+  <span class="status-indicator">✅</span> App Status: Testing Phase - Limited Spots Available | All systems running smoothly | Brief updates: 2-4am EST
 </div>
 
-# Your voice, your power. Unfiltered.
+# Empowering Canada's Disability & Injured Worker Community
 
 📖 **5 minute read** 🔋🔋 **Energy: Light**
 
@@ -24,14 +24,18 @@ description: Your voice, your power. Unfiltered. 3mpwrApp puts the power back in
   </ul>
 </details>
 
-# Your voice, your power. Unfiltered.
+## 100% Free. Community-Funded. Built by People Who Understand.
 
-Big platforms silence stories through hidden algorithms and "relevance" scores. 3mpwrApp puts the power back in your hands - no shadow bans, no manipulation, no data mining. Just authentic connection, community, and truth for injured workers, persons with disabilities, supporters, allies, unions, and anyone navigating these systems.
+**A platform for advocacy, connection, and support—with no corporate interests.**
+
+3mpwrApp puts power in your hands—not algorithms. Connect authentically, advocate effectively, and own your data completely. Whether you're a person with disabilities, injured worker, family supporter, ally, or advocate—**you belong here.**
 
 <div class="button-group">
-  <a href="{{ '/newsletter' | relative_url }}" class="btn btn-primary">Join the Movement</a>
-  <a href="{{ '/beta' | relative_url }}" class="btn btn-secondary">App Coming Soon</a>
+  <a href="{{ '/beta' | relative_url }}" class="btn btn-primary">Join Beta Testing</a>
+  <a href="{{ '/user-guide' | relative_url }}" class="btn btn-secondary">Learn How It Works</a>
 </div>
+
+---
 
 ## Built with empathy. Rooted in Accessibility. Powered by you!
 
@@ -39,9 +43,11 @@ Big platforms silence stories through hidden algorithms and "relevance" scores. 
 
 ### 💚 Grassroots & Community-Funded
 
-**3mpwrApp is 100% free and always will be.** We're a grassroots, community-focused initiative with a mission-driven approach focused on empowerment, not profit. No paid tiers. No subscriptions. No in-app purchases. Ever.
+**3mpwrApp is 100% free and always will be.** We're a grassroots, community-focused initiative with a mission-driven approach focused on empowerment, not profit.
 
-We're built BY the disability and injured workers community, FOR everyone who cares about disability justice and workers' rights - funded through community support and driven by our shared values of accessibility, dignity, and collective power.
+**No paid tiers. No subscriptions. No in-app purchases. Ever.**
+
+We're built BY the disability and injured workers community, FOR everyone who cares about disability justice and workers' rights.
 
 **Our funding model:**
 - 💚 Community donations (optional, never required)
