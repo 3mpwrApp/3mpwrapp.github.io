@@ -12,6 +12,166 @@ lastUpdated: 2025-10-25
 
 We're constantly improving 3mpwrApp based on your feedback and the community's needs. Here's what we're working on and what's coming next.
 
+<!-- Interactive Timeline -->
+<div class="roadmap-timeline">
+  <h2 class="timeline-title">📅 Development Timeline</h2>
+  <p class="timeline-subtitle">Track our progress from closed beta to global expansion</p>
+  
+  <div class="timeline">
+    <!-- Phase 1 - Current -->
+    <div class="timeline-item current" data-phase="1">
+      <div class="timeline-marker">
+        <span class="marker-dot"></span>
+        <span class="marker-line"></span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-badge current-badge">🔄 Current Phase</div>
+        <h3 class="timeline-heading">Phase 1: Closed Beta Testing</h3>
+        <p class="timeline-date">October - November 2025</p>
+        <div class="timeline-details">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 35%"></div>
+          </div>
+          <p class="progress-label">35% Complete</p>
+          <ul class="timeline-features">
+            <li>✅ Core feature testing (Evidence Locker, Letter Wizard, Wellness)</li>
+            <li>✅ Accessibility validation with screen readers</li>
+            <li>🔄 Security audits and penetration testing</li>
+            <li>🔄 Bug fixes and performance optimization</li>
+            <li>⏳ Community guidelines enforcement testing</li>
+          </ul>
+          <button class="timeline-expand" aria-expanded="false">
+            <span class="expand-text">Show Details</span>
+            <span class="expand-icon">▼</span>
+          </button>
+          <div class="timeline-extra" hidden>
+            <h4>What We're Testing:</h4>
+            <ul>
+              <li><strong>Authentication:</strong> 9-step onboarding acceptance</li>
+              <li><strong>Evidence Locker:</strong> Document security and organization</li>
+              <li><strong>Letter Generation:</strong> Template accuracy and PDF export</li>
+              <li><strong>Wellness Tracking:</strong> ML prediction accuracy</li>
+              <li><strong>Community Features:</strong> Safety and moderation</li>
+            </ul>
+            <p><strong>Beta Testers:</strong> Selected users across all Canadian provinces</p>
+            <a href="/beta" class="timeline-cta">Join Beta Testing →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 2 - Upcoming -->
+    <div class="timeline-item upcoming" data-phase="2">
+      <div class="timeline-marker">
+        <span class="marker-dot"></span>
+        <span class="marker-line"></span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-badge upcoming-badge">📅 Coming Soon</div>
+        <h3 class="timeline-heading">Phase 2: Open Beta</h3>
+        <p class="timeline-date">December 2025 - January 2026</p>
+        <div class="timeline-details">
+          <ul class="timeline-features">
+            <li>📋 Expand to more Canadian users</li>
+            <li>📋 Public sign-ups accepted</li>
+            <li>📋 Additional features based on closed beta feedback</li>
+            <li>📋 Continued refinement and optimization</li>
+            <li>📋 Community growth and engagement</li>
+          </ul>
+          <button class="timeline-expand" aria-expanded="false">
+            <span class="expand-text">Show Details</span>
+            <span class="expand-icon">▼</span>
+          </button>
+          <div class="timeline-extra" hidden>
+            <h4>New Features Planned:</h4>
+            <ul>
+              <li>Motor disability enhancements (dwell-click, voice commands)</li>
+              <li>Stronger community safety features</li>
+              <li>Enhanced moderation tools</li>
+              <li>Content warnings and trauma-informed design</li>
+              <li>Campaign creation tools</li>
+            </ul>
+            <p><strong>Goal:</strong> Open to all Canadians who want to join</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3 - Public Launch -->
+    <div class="timeline-item future" data-phase="3">
+      <div class="timeline-marker">
+        <span class="marker-dot"></span>
+        <span class="marker-line"></span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-badge future-badge">🎯 Planned</div>
+        <h3 class="timeline-heading">Phase 3: Public Launch</h3>
+        <p class="timeline-date">February 2026</p>
+        <div class="timeline-details">
+          <ul class="timeline-features">
+            <li>📋 General availability via app stores</li>
+            <li>📋 Full marketing campaign</li>
+            <li>📋 Media outreach</li>
+            <li>📋 Partnership announcements</li>
+            <li>📋 Version 1.0 release</li>
+          </ul>
+          <button class="timeline-expand" aria-expanded="false">
+            <span class="expand-text">Show Details</span>
+            <span class="expand-icon">▼</span>
+          </button>
+          <div class="timeline-extra" hidden>
+            <h4>Launch Goals:</h4>
+            <ul>
+              <li>Available on iOS App Store and Google Play</li>
+              <li>Web version for desktop users</li>
+              <li>Partnership with disability organizations</li>
+              <li>Media coverage and awareness campaign</li>
+              <li>Community of 1,000+ active users</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 4 - Expansion -->
+    <div class="timeline-item future" data-phase="4">
+      <div class="timeline-marker">
+        <span class="marker-dot"></span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-badge future-badge">🚀 Future</div>
+        <h3 class="timeline-heading">Phase 4: Feature Expansion</h3>
+        <p class="timeline-date">March 2026+</p>
+        <div class="timeline-details">
+          <ul class="timeline-features">
+            <li>📋 New features based on community feedback</li>
+            <li>📋 Additional language support</li>
+            <li>📋 Enhanced ML personalization</li>
+            <li>📋 Advanced legal automation</li>
+            <li>📋 Global expansion planning</li>
+          </ul>
+          <button class="timeline-expand" aria-expanded="false">
+            <span class="expand-text">Show Details</span>
+            <span class="expand-icon">▼</span>
+          </button>
+          <div class="timeline-extra" hidden>
+            <h4>Long-term Vision:</h4>
+            <ul>
+              <li>Photo-to-form technology</li>
+              <li>Smarter disability wizard with ML</li>
+              <li>Indigenous cultural protections</li>
+              <li>Traditional calendar integration</li>
+              <li>Expansion to other countries</li>
+              <li>Partnership with healthcare systems</li>
+            </ul>
+            <p><strong>Mission:</strong> Become the leading disability rights platform globally</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 ---
 
 ## 🚀 **Current Phase: Closed Beta (October 2025)**
@@ -677,3 +837,432 @@ This roadmap is updated regularly based on:
 **Building the future together** 💚
 
 *Your feedback shapes our roadmap. Let us know what matters most to you!*
+
+<style>
+/* Roadmap Timeline Styles */
+.roadmap-timeline {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.timeline-title {
+  margin: 0 0 0.5rem;
+  color: #333;
+  font-size: 2rem;
+}
+
+.timeline-subtitle {
+  margin: 0 0 2rem;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Timeline Structure */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 3rem;
+}
+
+/* Timeline Marker */
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marker-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: 4px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.timeline-item.current .marker-dot {
+  background-color: #0066CC;
+  width: 32px;
+  height: 32px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.timeline-item.upcoming .marker-dot {
+  background-color: #4DB8FF;
+}
+
+.timeline-item.future .marker-dot {
+  background-color: #b3d9ff;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.4);
+  }
+  50% {
+    box-shadow: 0 2px 16px rgba(0, 102, 204, 0.8);
+  }
+}
+
+.marker-line {
+  width: 3px;
+  height: 100%;
+  min-height: 80px;
+  background: linear-gradient(to bottom, #ddd 0%, transparent 100%);
+  margin-top: 4px;
+}
+
+.timeline-item:last-child .marker-line {
+  display: none;
+}
+
+/* Timeline Content */
+.timeline-content {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  box-shadow: 0 8px 20px rgba(0, 102, 204, 0.2);
+  transform: translateY(-2px);
+}
+
+.timeline-badge {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.current-badge {
+  background-color: #0066CC;
+  color: white;
+}
+
+.upcoming-badge {
+  background-color: #4DB8FF;
+  color: white;
+}
+
+.future-badge {
+  background-color: #e3f2fd;
+  color: #0066CC;
+}
+
+.timeline-heading {
+  margin: 0 0 0.5rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.timeline-date {
+  margin: 0 0 1rem;
+  color: #666;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0066CC 0%, #4DB8FF 100%);
+  transition: width 0.6s ease;
+  animation: progress-shimmer 2s ease-in-out infinite;
+}
+
+@keyframes progress-shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.progress-label {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #0066CC;
+  font-weight: 600;
+}
+
+/* Timeline Features */
+.timeline-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.timeline-features li {
+  padding: 0.5rem 0;
+  padding-left: 1.75rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.timeline-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+}
+
+/* Expand/Collapse Button */
+.timeline-expand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.timeline-expand:hover {
+  background-color: #e0e0e0;
+  border-color: #0066CC;
+}
+
+.timeline-expand:focus {
+  outline: 3px solid rgba(0, 102, 204, 0.5);
+  outline-offset: 2px;
+}
+
+.timeline-expand[aria-expanded="true"] .expand-icon {
+  transform: rotate(180deg);
+}
+
+.expand-icon {
+  transition: transform 0.3s ease;
+  font-size: 0.85rem;
+}
+
+/* Timeline Extra Content */
+.timeline-extra {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.timeline-extra[hidden] {
+  display: none;
+}
+
+.timeline-extra h4 {
+  margin: 0 0 0.75rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.timeline-extra ul {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.timeline-extra li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.timeline-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #0066CC;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.timeline-cta:hover {
+  background-color: #0052a3;
+  transform: translateX(4px);
+}
+
+.timeline-cta:focus {
+  outline: 3px solid rgba(0, 102, 204, 0.5);
+  outline-offset: 2px;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .roadmap-timeline {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  }
+
+  .timeline-title {
+    color: #e0e0e0;
+  }
+
+  .timeline-subtitle {
+    color: #aaa;
+  }
+
+  .timeline-content {
+    background-color: #2d2d2d;
+  }
+
+  .timeline-heading {
+    color: #e0e0e0;
+  }
+
+  .timeline-date {
+    color: #aaa;
+  }
+
+  .progress-bar {
+    background-color: #444;
+  }
+
+  .timeline-expand {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #e0e0e0;
+  }
+
+  .timeline-expand:hover {
+    background-color: #444;
+    border-color: #4DB8FF;
+  }
+
+  .timeline-extra {
+    border-top-color: #444;
+  }
+
+  .timeline-extra h4 {
+    color: #e0e0e0;
+  }
+
+  .marker-dot {
+    border-color: #2d2d2d;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .marker-dot,
+  .progress-fill,
+  .timeline-content,
+  .timeline-cta {
+    animation: none;
+    transition: none;
+  }
+
+  .timeline-content:hover {
+    transform: none;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .roadmap-timeline {
+    padding: 1.5rem 1rem;
+  }
+
+  .timeline-title {
+    font-size: 1.5rem;
+  }
+
+  .timeline-subtitle {
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 45px;
+  }
+
+  .timeline-heading {
+    font-size: 1.25rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-item.current .marker-dot {
+    width: 24px;
+    height: 24px;
+  }
+}
+</style>
+
+<script>
+// Roadmap Timeline Interactivity
+(function() {
+  const expandButtons = document.querySelectorAll('.timeline-expand');
+  
+  expandButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      const extraContent = this.nextElementSibling;
+      
+      if (isExpanded) {
+        // Collapse
+        this.setAttribute('aria-expanded', 'false');
+        this.querySelector('.expand-text').textContent = 'Show Details';
+        extraContent.hidden = true;
+      } else {
+        // Expand
+        this.setAttribute('aria-expanded', 'true');
+        this.querySelector('.expand-text').textContent = 'Hide Details';
+        extraContent.hidden = false;
+        
+        // Scroll into view smoothly
+        setTimeout(() => {
+          extraContent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    });
+  });
+  
+  // Keyboard accessibility (Enter and Space)
+  expandButtons.forEach(button => {
+    button.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+})();
+</script>
