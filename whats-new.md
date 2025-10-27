@@ -5,18 +5,34 @@ description: Latest updates, features, and improvements to 3mpwrApp
 permalink: /whats-new/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/whats-new.css' | relative_url }}">
+
 # What's New 🎉
 
-Stay up to date with the latest features, improvements, and fixes to 3mpwrApp.
+<div class="intro-banner">
+  <p>Stay up to date with the latest features, improvements, and fixes to 3mpwrApp.</p>
+  <div class="beta-badge">
+    <span class="badge-icon">🚀</span>
+    <span class="badge-text">Closed Beta Phase 1</span>
+  </div>
+</div>
 
 ---
 
 ## Archives
 
-View updates from previous months to see how 3mpwrApp has evolved.
-
-<div class="archives-list">
-  <p><a href="/blog/" class="archive-link">📦 View Feature Articles & Updates →</a></p>
+<div class="archives-section">
+  <p class="archives-description">View updates from previous months to see how 3mpwrApp has evolved.</p>
+  
+  <a href="/blog/" class="archive-card">
+    <div class="archive-icon">📦</div>
+    <div class="archive-content">
+      <h3>Feature Articles & Updates</h3>
+      <p>Explore detailed feature announcements and development updates</p>
+      <span class="archive-cta">View Archives →</span>
+    </div>
+  </a>
 </div>
 
 ---
@@ -24,12 +40,21 @@ View updates from previous months to see how 3mpwrApp has evolved.
 ## Stay Updated
 
 <div class="update-subscription">
-  <h3>Never Miss an Update</h3>
-  <p>Get notified when we release new features and improvements.</p>
+  <div class="subscription-header">
+    <div class="subscription-icon">🔔</div>
+    <h3>Never Miss an Update</h3>
+    <p>Get notified when we release new features and improvements.</p>
+  </div>
   
   <div class="subscription-options">
-    <a href="/newsletter/" class="btn btn-primary">📧 Subscribe to Newsletter</a>
-    <a href="https://github.com/3mpowrApp/3mpwrapp.github.io/releases" class="btn btn-secondary" target="_blank">👀 Watch on GitHub</a>
+    <a href="/newsletter/" class="subscription-btn primary">
+      <span class="btn-icon">📧</span>
+      <span class="btn-text">Subscribe to Newsletter</span>
+    </a>
+    <a href="https://github.com/3mpowrApp/3mpwrapp.github.io/releases" class="subscription-btn secondary" target="_blank" rel="noopener noreferrer">
+      <span class="btn-icon">👀</span>
+      <span class="btn-text">Watch on GitHub</span>
+    </a>
   </div>
 </div>
 
@@ -37,89 +62,17 @@ View updates from previous months to see how 3mpwrApp has evolved.
 
 ## Suggest a Feature
 
-Have an idea for a new feature? We'd love to hear it!
+<div class="feature-suggestion">
+  <div class="suggestion-icon">💡</div>
+  <div class="suggestion-content">
+    <h3>Have an idea for a new feature?</h3>
+    <p>We'd love to hear it! Your feedback helps shape the future of 3mpwrApp.</p>
+    <a href="/contact/?subject=Feature Request" class="suggestion-btn">
+      <span class="btn-icon">✨</span>
+      <span class="btn-text">Submit Your Idea</span>
+    </a>
+  </div>
+</div>
 
-<a href="/contact/?subject=Feature Request" class="btn btn-secondary">💡 Submit Your Idea</a>
-
-<style>
-.archives-list {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.archive-link {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: var(--card-bg, #f9f9f9);
-  border: 2px solid var(--border-color, #ddd);
-  border-radius: 8px;
-  color: var(--text-color, #333);
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.archive-link:hover {
-  background: var(--primary-color, #007bff);
-  color: white;
-  border-color: var(--primary-color, #007bff);
-}
-
-.update-subscription {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.update-subscription h3 {
-  margin-top: 0;
-  color: white;
-}
-
-.subscription-options {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background: var(--card-bg, #ffffff);
-  color: #667eea;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.btn-secondary {
-  background: rgba(255,255,255,0.2);
-  color: var(--text-color, #ffffff);
-  border: 2px solid var(--border-color, #ffffff);
-}
-
-.btn-secondary:hover {
-  background: var(--card-bg, #ffffff);
-  color: #667eea;
-}
-
-@media (max-width: 768px) {
-  .subscription-options {
-    flex-direction: column;
-  }
-}
-</style>
+<script src="{{ '/assets/js/page-enhancements.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/whats-new.js' | relative_url }}" defer></script>
