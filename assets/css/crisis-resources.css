@@ -1,0 +1,401 @@
+/* Crisis Resources Page Styles */
+
+/* Enhanced Crisis Alert */
+.crisis-alert p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.crisis-alert .crisis-subtitle {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.crisis-alert a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.crisis-alert a:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* National Services Grid */
+.national-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Service Cards */
+.service-card {
+  background: white;
+  border: 3px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: currentColor;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Card Variants */
+.service-card.suicide-prevention {
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+.service-card.kids-help {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.service-card.indigenous {
+  color: #059669;
+  border-color: #059669;
+}
+
+.service-card.domestic-violence {
+  color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+.service-card.community {
+  color: #0891b2;
+  border-color: #0891b2;
+}
+
+.service-card.wellness {
+  color: #10b981;
+  border-color: #10b981;
+}
+
+/* Service Card Elements */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse-icon 2s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.service-card h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.service-label {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: currentColor;
+}
+
+.service-phone {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: currentColor !important;
+  text-decoration: none;
+  margin: 0.75rem 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.service-phone:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.service-phone:focus {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+.service-detail {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.5rem 0 1rem;
+}
+
+.service-detail a {
+  color: currentColor;
+  font-weight: 600;
+}
+
+/* Copy Button */
+.copy-btn {
+  background: currentColor;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.copy-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copy-btn:focus {
+  outline: 3px solid rgba(0, 0, 0, 0.3);
+  outline-offset: 2px;
+}
+
+.copy-btn.copied {
+  background-color: #10b981 !important;
+}
+
+/* Provincial Sections Enhancement */
+details {
+  margin: 1rem 0;
+}
+
+details summary strong {
+  font-size: 1.15rem;
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+}
+
+details ul,
+details ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+details li {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+}
+
+details a {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Legal Aid Table Enhancement */
+.quick-access-table {
+  margin: 1.5rem 0;
+}
+
+.quick-access-table a {
+  font-size: 1.1rem;
+}
+
+/* Important Information Box */
+.important-info {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  border: 3px solid #0891b2;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.important-info h2 {
+  color: #075985;
+  margin: 0 0 1rem;
+}
+
+.important-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.important-info li {
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+}
+
+.important-info li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+}
+
+.important-info p {
+  margin: 1rem 0 0;
+  font-weight: 600;
+  color: #075985;
+}
+
+/* Crisis Footer */
+.crisis-footer {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin: 2rem 0;
+  border: 3px solid #f59e0b;
+}
+
+.crisis-footer p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #92400e;
+}
+
+.crisis-footer .crisis-phone {
+  margin: 1rem 0 0;
+}
+
+.crisis-footer a {
+  color: #dc2626;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.crisis-footer a:hover {
+  background-color: rgba(220, 38, 38, 0.1);
+  text-decoration: underline;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .service-card {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
+
+  .service-card h3 {
+    color: #e0e0e0;
+  }
+
+  .service-detail {
+    color: #aaa;
+  }
+
+  .service-phone:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .important-info {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    border-color: #3b82f6;
+  }
+
+  .important-info h2,
+  .important-info p {
+    color: #dbeafe;
+  }
+
+  .crisis-footer {
+    background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+    border-color: #f59e0b;
+  }
+
+  .crisis-footer p {
+    color: #fef3c7;
+  }
+
+  .crisis-footer a {
+    color: #fca5a5;
+  }
+
+  .crisis-footer a:hover {
+    background-color: rgba(252, 165, 165, 0.2);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .service-icon {
+    animation: none;
+  }
+
+  .service-card:hover,
+  .copy-btn:hover {
+    transform: none;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .national-services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-phone {
+    font-size: 1.3rem;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+
+  .crisis-footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .crisis-footer a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .service-card {
+    break-inside: avoid;
+    border: 2px solid black;
+    box-shadow: none;
+  }
+
+  .copy-btn {
+    display: none;
+  }
+
+  .service-phone {
+    color: black !important;
+    font-weight: 900;
+  }
+
+  .crisis-alert,
+  .crisis-footer {
+    background: white !important;
+    border: 3px solid black !important;
+  }
+}

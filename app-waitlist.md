@@ -5,6 +5,9 @@ description: Join the 3mpwrApp mobile app waitlist and be among the first to tes
 permalink: /app-waitlist/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/app-waitlist.css' | relative_url }}">
+
 <div class="status-banner" role="status" aria-live="polite">
   <span class="status-indicator">🚀</span> 
   <strong>Phase 1 Beta Testing Now Open!</strong> Limited spots available
@@ -22,24 +25,24 @@ permalink: /app-waitlist/
 
 ### What Makes 3mpwrApp Different:
 
-<div style="display: grid; gap: 1rem; margin: 2rem 0;">
+<div class="feature-cards-container">
 
-<div class="feature-box" style="border-color: #10b981;">
+<div class="feature-box" style="color: #10b981;">
   <strong>💚 100% Free Forever</strong>
   <p>No subscriptions, no paid tiers, no hidden costs. Ever.</p>
 </div>
 
-<div class="feature-box" style="border-color: #3b82f6;">
+<div class="feature-box" style="color: #3b82f6;">
   <strong>🔒 You Own Your Data</strong>
   <p>BYOC (Bring Your Own Cloud) modes mean your data stays with YOU.</p>
 </div>
 
-<div class="feature-box" style="border-color: #f59e0b;">
+<div class="feature-box" style="color: #f59e0b;">
   <strong>♿ Built BY Disabled People</strong>
   <p>Not for us without us - every feature designed with lived experience.</p>
 </div>
 
-<div class="feature-box" style="border-color: #8b5cf6;">
+<div class="feature-box" style="color: #8b5cf6;">
   <strong>🇨🇦 Canadian-Focused</strong>
   <p>All provinces/territories, including Indigenous languages and cultural protocols.</p>
 </div>
@@ -55,7 +58,8 @@ permalink: /app-waitlist/
 <div class="phase-tracker">
 
 ### Phase 1: Closed Beta (October - December 2025)
-**Status:** 🟢 **ACTIVE NOW**
+
+<span class="progress-indicator active">ACTIVE NOW</span>
 
 ✅ **Core Features Available:**
 - Evidence Locker (secure document storage)
@@ -73,7 +77,8 @@ permalink: /app-waitlist/
 ---
 
 ### Phase 2: Open Beta (Q1 2026)
-**Status:** ⏳ Coming Soon
+
+<span class="progress-indicator coming-soon">COMING SOON</span>
 
 - Expanded features (168 total)
 - Web version launch
@@ -84,7 +89,8 @@ permalink: /app-waitlist/
 ---
 
 ### Phase 3: Public Launch (Q2 2026)
-**Status:** 🗓️ Planned
+
+<span class="progress-indicator planned">PLANNED</span>
 
 - Full public release
 - App Store & Google Play
@@ -100,15 +106,15 @@ permalink: /app-waitlist/
 
 <div class="beta-cta">
   
-  <h3 style="color: var(--text-color, #ffffff); margin: 0 0 1rem; font-size: 1.5rem;">Ready to Make History?</h3>
+  <h2>Ready to Make History?</h2>
   
-  <p style="margin: 0 0 1.5rem; font-size: 1.1rem;">Join Phase 1 Closed Beta and help shape the future of disability advocacy tech.</p>
+  <p>Join Phase 1 Closed Beta and help shape the future of disability advocacy tech.</p>
   
-  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: var(--card-bg, #ffffff); color: #5b21b6; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; font-size: 1.1rem; text-decoration: none; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="btn-primary">
     📋 Sign Up for Beta Testing →
   </a>
   
-  <p style="margin: 1.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">
+  <p class="cta-footer">
     ⏱️ Takes 5 minutes | 📧 Confirmation email sent within 48 hours
   </p>
   
@@ -176,36 +182,36 @@ permalink: /app-waitlist/
 
 **Thank you for being an early supporter! Here's what you get:**
 
-<div style="display: grid; gap: 1rem; margin: 2rem 0;">
+<div class="feature-cards-container">
 
-<div style="background: #fef3c7; padding: 1rem; border-radius: 8px;">
+<div class="benefit-card founding">
   <strong>🏆 Founding Member Status</strong>
-  <p style="margin: 0.5rem 0 0;">Special badge and recognition as a founding community member</p>
+  <p>Special badge and recognition as a founding community member</p>
 </div>
 
-<div style="background: #dbeafe; padding: 1rem; border-radius: 8px;">
+<div class="benefit-card early-access">
   <strong>🚀 Early Access</strong>
-  <p style="margin: 0.5rem 0 0;">Try new features weeks before public release</p>
+  <p>Try new features weeks before public release</p>
 </div>
 
-<div style="background: #e0e7ff; padding: 1rem; border-radius: 8px;">
+<div class="benefit-card input">
   <strong>🗣️ Direct Input</strong>
-  <p style="margin: 0.5rem 0 0;">Your feedback directly shapes development priorities</p>
+  <p>Your feedback directly shapes development priorities</p>
 </div>
 
-<div style="background: #f3e8ff; padding: 1rem; border-radius: 8px;">
+<div class="benefit-card community">
   <strong>💬 Beta Community</strong>
-  <p style="margin: 0.5rem 0 0;">Private forum to connect with other beta testers</p>
+  <p>Private forum to connect with other beta testers</p>
 </div>
 
-<div style="background: #f0fdf4; padding: 1rem; border-radius: 8px;">
+<div class="benefit-card resources">
   <strong>📚 Beta Resources</strong>
-  <p style="margin: 0.5rem 0 0;">Exclusive guides, tutorials, and support</p>
+  <p>Exclusive guides, tutorials, and support</p>
 </div>
 
-<div style="background: #fef2f2; padding: 1rem; border-radius: 8px;">
+<div class="benefit-card perks">
   <strong>🎁 Surprise Perks</strong>
-  <p style="margin: 0.5rem 0 0;">Random acts of kindness and special surprises for active testers</p>
+  <p>Random acts of kindness and special surprises for active testers</p>
 </div>
 
 </div>
@@ -374,12 +380,32 @@ We understand spoons are limited. Use the app when you can.
 
 Before joining beta, explore what 3mpwrApp offers:
 
-- **[Complete User Guide](/user-guide)** - Comprehensive 175+ page guide to every feature
-- **[Features List](/features)** - See all 133+ features in detail
-- **[Accessibility Statement](/accessibility)** - Our commitment to universal access
-- **[Privacy Policy](/privacy)** - How we protect your data
-- **[Beta Testing Guide](/beta-guide)** - What to expect as a beta tester
-- **[FAQ](/faq)** - Common questions answered
+<div class="resource-links">
+  <a href="/user-guide" class="resource-link">
+    <span class="link-text">📖 Complete User Guide - 175+ pages</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/features" class="resource-link">
+    <span class="link-text">✨ Features List - All 133+ features</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/accessibility" class="resource-link">
+    <span class="link-text">♿ Accessibility Statement</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/privacy" class="resource-link">
+    <span class="link-text">🔒 Privacy Policy</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/beta-guide" class="resource-link">
+    <span class="link-text">🧪 Beta Testing Guide</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/faq" class="resource-link">
+    <span class="link-text">❓ FAQ - Common questions</span>
+    <span class="link-arrow">→</span>
+  </a>
+</div>
 
 ---
 
@@ -399,25 +425,26 @@ Before joining beta, explore what 3mpwrApp offers:
 
 ---
 
-<div class="final-cta" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 3rem 2rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
+<div class="final-cta">
   
-  <h2 style="color: white; margin: 0 0 1rem; font-size: 2rem;">Ready to Be Part of the Movement?</h2>
+  <h2>Ready to Be Part of the Movement?</h2>
   
-  <p style="margin: 0 0 2rem; font-size: 1.2rem; line-height: 1.6;">
-    Join hundreds of Canadians with disabilities who are shaping the future of advocacy technology.
-  </p>
+  <p>Join hundreds of Canadians with disabilities who are shaping the future of advocacy technology.</p>
   
-  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: var(--card-bg, #ffffff); color: #be123c; padding: 1.25rem 3rem; border-radius: 8px; font-weight: bold; font-size: 1.2rem; text-decoration: none; transition: all 0.3s; box-shadow: 0 8px 15px rgba(0,0,0,0.2);" onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 12px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 15px rgba(0,0,0,0.2)'">
+  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="btn-primary">
     🚀 Join Beta Testing Now
   </a>
   
-  <p style="margin: 2rem 0 0; font-size: 1rem; opacity: 0.95;">
+  <p class="cta-footer">
     <strong>100% Free</strong> • <strong>No Credit Card</strong> • <strong>5 Minute Signup</strong>
   </p>
   
 </div>
 
 ---
+
+<script src="{{ '/assets/js/page-enhancements.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/app-waitlist.js' | relative_url }}"></script>
 
 <div class="page-feedback">
   <p><strong>Was this page helpful?</strong></p>

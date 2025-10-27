@@ -5,10 +5,13 @@ description: Essential crisis support numbers across Canada - 24/7 helplines for
 permalink: /crisis-resources/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/crisis-resources.css' | relative_url }}">
+
 <div class="crisis-alert" role="alert">
   <h2>🆘 Emergency: Call 911</h2>
-  <p style="margin: 0; font-size: 1.1rem;"><strong>24/7 Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a></p>
-  <p style="margin: 0.5rem 0 0;">Free, confidential, available in English and French</p>
+  <p><strong>24/7 Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a></p>
+  <p class="crisis-subtitle">Free, confidential, available in English and French</p>
 </div>
 
 # Crisis Resources
@@ -19,14 +22,60 @@ permalink: /crisis-resources/
 
 ## 🇨🇦 National Crisis Lines
 
-| Service | Phone | Text/Chat |
-|---------|-------|-----------|
-| **Suicide Prevention** | [1-833-456-4566](tel:1-833-456-4566) | Text [45645](sms:45645) or [988.ca](https://988.ca) |
-| **Kids Help Phone** (under 30) | [1-800-668-6868](tel:1-800-668-6868) | Text [686868](sms:686868) |
-| **Hope for Wellness** (Indigenous) | [1-855-242-3310](tel:1-855-242-3310) | [hopeforwellness.ca](https://hopeforwellness.ca) |
-| **Domestic Violence** | [1-800-363-9010](tel:1-800-363-9010) | TTY: [1-800-567-5803](tel:1-800-567-5803) |
-| **211 Canada** (community services) | [211](tel:211) | [211.ca](https://211.ca) |
-| **Wellness Together** | [1-866-585-0445](tel:1-866-585-0445) | Text WELLNESS to 686868 |
+<div class="national-services-grid">
+
+<div class="service-card suicide-prevention">
+  <div class="service-icon">🆘</div>
+  <h3>Suicide Prevention</h3>
+  <a href="tel:1-833-456-4566" class="service-phone" data-copy="1-833-456-4566">1-833-456-4566</a>
+  <p class="service-detail">Text <a href="sms:45645">45645</a> or visit <a href="https://988.ca" target="_blank" rel="noopener">988.ca</a></p>
+  <button class="copy-btn" data-copy="1-833-456-4566" aria-label="Copy phone number">📋 Copy</button>
+</div>
+
+<div class="service-card kids-help">
+  <div class="service-icon">👶</div>
+  <h3>Kids Help Phone</h3>
+  <p class="service-label">Ages 5-30</p>
+  <a href="tel:1-800-668-6868" class="service-phone" data-copy="1-800-668-6868">1-800-668-6868</a>
+  <p class="service-detail">Text <a href="sms:686868">686868</a></p>
+  <button class="copy-btn" data-copy="1-800-668-6868" aria-label="Copy phone number">📋 Copy</button>
+</div>
+
+<div class="service-card indigenous">
+  <div class="service-icon">🪶</div>
+  <h3>Hope for Wellness</h3>
+  <p class="service-label">Indigenous Peoples</p>
+  <a href="tel:1-855-242-3310" class="service-phone" data-copy="1-855-242-3310">1-855-242-3310</a>
+  <p class="service-detail">Visit <a href="https://hopeforwellness.ca" target="_blank" rel="noopener">hopeforwellness.ca</a></p>
+  <button class="copy-btn" data-copy="1-855-242-3310" aria-label="Copy phone number">📋 Copy</button>
+</div>
+
+<div class="service-card domestic-violence">
+  <div class="service-icon">🛡️</div>
+  <h3>Domestic Violence</h3>
+  <a href="tel:1-800-363-9010" class="service-phone" data-copy="1-800-363-9010">1-800-363-9010</a>
+  <p class="service-detail">TTY: <a href="tel:1-800-567-5803">1-800-567-5803</a></p>
+  <button class="copy-btn" data-copy="1-800-363-9010" aria-label="Copy phone number">📋 Copy</button>
+</div>
+
+<div class="service-card community">
+  <div class="service-icon">🏘️</div>
+  <h3>211 Canada</h3>
+  <p class="service-label">Community Services</p>
+  <a href="tel:211" class="service-phone" data-copy="211">211</a>
+  <p class="service-detail">Visit <a href="https://211.ca" target="_blank" rel="noopener">211.ca</a></p>
+  <button class="copy-btn" data-copy="211" aria-label="Copy phone number">📋 Copy</button>
+</div>
+
+<div class="service-card wellness">
+  <div class="service-icon">💚</div>
+  <h3>Wellness Together</h3>
+  <a href="tel:1-866-585-0445" class="service-phone" data-copy="1-866-585-0445">1-866-585-0445</a>
+  <p class="service-detail">Text WELLNESS to 686868</p>
+  <button class="copy-btn" data-copy="1-866-585-0445" aria-label="Copy phone number">📋 Copy</button>
+</div>
+
+</div>
 
 ---
 
@@ -171,12 +220,15 @@ permalink: /crisis-resources/
 
 ---
 
-<div class="crisis-footer" style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-  <p style="margin: 0;"><strong>You matter. Help is available 24/7.</strong></p>
-  <p style="margin: 0.5rem 0 0;">National Crisis Line: <a href="tel:1-833-456-4566" style="font-size: 1.2rem; font-weight: bold;">1-833-456-4566</a></p>
+<div class="crisis-footer">
+  <p><strong>You matter. Help is available 24/7.</strong></p>
+  <p class="crisis-phone">National Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a></p>
 </div>
 
 ---
+
+<script src="{{ '/assets/js/page-enhancements.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/crisis-resources.js' | relative_url }}"></script>
 
 *Last verified: October 26, 2025 | Numbers verified monthly*
 
