@@ -37,6 +37,16 @@ Quick answers to common questions about 3mpwrApp. Can't find what you're looking
   </button>
 </div>
 
+<!-- Expand/Collapse All Controls -->
+<div class="accordion-controls">
+  <button type="button" id="expand-all-btn" class="accordion-control-btn">
+    <span class="icon">📖</span> Expand All Questions
+  </button>
+  <button type="button" id="collapse-all-btn" class="accordion-control-btn">
+    <span class="icon">📕</span> Collapse All Questions
+  </button>
+</div>
+
 <details class="tldr-box" open>
   <summary>⚡ Most Common Questions</summary>
   <ul>
@@ -85,7 +95,15 @@ We're built BY the disability community, FOR the disability community.
 
 ## Common Concerns & Trust Questions
 
-### How is 3mpwrApp different from other disability apps?
+<div class="faq-accordion-section">
+
+<details class="faq-accordion" id="faq-different">
+  <summary class="faq-question">
+    <span class="question-icon">❓</span>
+    <span class="question-text">How is 3mpwrApp different from other disability apps?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
 
 **Key Differences:**
 
@@ -101,7 +119,16 @@ We're built BY the disability community, FOR the disability community.
 
 **Bottom line:** We're not trying to make money off the disability community—we're trying to empower it.
 
-### If it's free, how do you make money? What's the catch?
+  </div>
+</details>
+
+<details class="faq-accordion" id="faq-funding">
+  <summary class="faq-question">
+    <span class="question-icon">💰</span>
+    <span class="question-text">If it's free, how do you make money? What's the catch?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
 
 **Great question!** Here's our honest answer:
 
@@ -126,7 +153,16 @@ We're built BY the disability community, FOR the disability community.
 
 **[Read our funding transparency statement →](/about#funding-transparency)**
 
-### How can I trust you with my sensitive data?
+  </div>
+</details>
+
+<details class="faq-accordion" id="faq-trust">
+  <summary class="faq-question">
+    <span class="question-icon">🔒</span>
+    <span class="question-text">How can I trust you with my sensitive data?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
 
 **We understand this concern completely. Here's how we've addressed it:**
 
@@ -155,7 +191,16 @@ We're built BY the disability community, FOR the disability community.
 
 **[Read our detailed security documentation →](/privacy#security-measures)**
 
-### What if 3mpwrApp shuts down? Will I lose my data?
+  </div>
+</details>
+
+<details class="faq-accordion" id="faq-shutdown">
+  <summary class="faq-question">
+    <span class="question-icon">💾</span>
+    <span class="question-text">What if 3mpwrApp shuts down? Will I lose my data?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
 
 **No, your data is safe!**
 
@@ -177,7 +222,16 @@ We're built BY the disability community, FOR the disability community.
 
 **Bottom Line:** You're not locked in. Your data is portable. You can leave anytime with everything you created.
 
-### What about privacy? Can employers/insurance companies see my data?
+  </div>
+</details>
+
+<details class="faq-accordion" id="faq-privacy">
+  <summary class="faq-question">
+    <span class="question-icon">🕵️</span>
+    <span class="question-text">What about privacy? Can employers/insurance companies see my data?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
 
 **Absolutely NOT - unless YOU choose to share it.**
 
@@ -202,7 +256,16 @@ We're built BY the disability community, FOR the disability community.
 **[Read our Privacy Policy →](/privacy)**  
 **[Read our Data Warrant Transparency Report →](/transparency-report)** (coming Q1 2026)
 
-### What if I can't afford a smartphone or data plan?
+  </div>
+</details>
+
+<details class="faq-accordion" id="faq-afford">
+  <summary class="faq-question">
+    <span class="question-icon">📱</span>
+    <span class="question-text">What if I can't afford a smartphone or data plan?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
 
 **We hear you. Digital divide is a real accessibility barrier.**
 
@@ -223,7 +286,16 @@ We're built BY the disability community, FOR the disability community.
 
 **We're working on this. Digital access IS a disability justice issue.**
 
-### How do I know this isn't a scam or data harvesting scheme?
+  </div>
+</details>
+
+<details class="faq-accordion" id="faq-scam">
+  <summary class="faq-question">
+    <span class="question-icon">🔍</span>
+    <span class="question-text">How do I know this isn't a scam or data harvesting scheme?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
 
 **Healthy skepticism is smart! Here's how to verify we're legitimate:**
 
@@ -245,6 +317,17 @@ We're built BY the disability community, FOR the disability community.
 **You Can Verify:**
 - Google our app name + "reviews" or "scam"
 - Check our social media for real user interactions
+- Join beta and test with dummy data first
+- Ask questions in our public community forums
+
+**If something feels off, trust your gut.** We want informed, empowered users - not victims.
+
+  </div>
+</details>
+
+</div>
+
+---
 - Join beta and test with dummy data first
 - Ask questions in our public community forums
 
@@ -866,6 +949,152 @@ Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
     outline-offset: 2px;
   }
 
+  /* Accordion Controls */
+  .accordion-controls {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+  }
+
+  .accordion-control-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border: 2px solid #0066CC;
+    border-radius: 6px;
+    color: #0066CC;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 44px;
+  }
+
+  .accordion-control-btn:hover {
+    background-color: #0066CC;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .accordion-control-btn:focus {
+    outline: 3px solid rgba(0, 102, 204, 0.5);
+    outline-offset: 2px;
+  }
+
+  .accordion-control-btn .icon {
+    font-size: 1.2rem;
+  }
+
+  /* FAQ Accordion */
+  .faq-accordion-section {
+    margin: 2rem 0;
+  }
+
+  .faq-accordion {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: white;
+    transition: all 0.2s ease;
+  }
+
+  .faq-accordion:hover {
+    border-color: #0066CC;
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+  }
+
+  .faq-accordion[open] {
+    border-color: #0066CC;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    transition: background-color 0.2s ease;
+  }
+
+  .faq-question:hover {
+    background-color: #f5f7fa;
+  }
+
+  .faq-question:focus {
+    outline: 3px solid rgba(0, 102, 204, 0.5);
+    outline-offset: -3px;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .question-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+
+  .question-text {
+    flex-grow: 1;
+  }
+
+  .accordion-arrow {
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
+    color: #0066CC;
+  }
+
+  .faq-accordion[open] .accordion-arrow {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.5rem 4rem;
+    line-height: 1.7;
+    color: #444;
+  }
+
+  .faq-answer h4 {
+    margin: 1rem 0 0.5rem;
+    color: #333;
+  }
+
+  .faq-answer ul, .faq-answer ol {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .faq-answer li {
+    margin: 0.5rem 0;
+  }
+
+  .faq-answer table {
+    margin: 1rem 0;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .faq-answer table th,
+  .faq-answer table td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .faq-answer table th {
+    background-color: #f5f7fa;
+    font-weight: 600;
+  }
+
   /* FAQ Section Styling */
   .faq-section {
     margin-bottom: 2rem;
@@ -955,13 +1184,74 @@ Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
     .no-results-message p {
       color: #ddd;
     }
+
+    /* Accordion Dark Mode */
+    .accordion-control-btn {
+      background-color: #2d2d2d;
+      border-color: #4DB8FF;
+      color: #4DB8FF;
+    }
+
+    .accordion-control-btn:hover {
+      background-color: #0066CC;
+      color: white;
+    }
+
+    .faq-accordion {
+      background-color: #2d2d2d;
+      border-color: #444;
+    }
+
+    .faq-accordion:hover {
+      border-color: #4DB8FF;
+    }
+
+    .faq-accordion[open] {
+      border-color: #4DB8FF;
+    }
+
+    .faq-question {
+      color: #e0e0e0;
+    }
+
+    .faq-question:hover {
+      background-color: #3a3a3a;
+    }
+
+    .accordion-arrow {
+      color: #4DB8FF;
+    }
+
+    .faq-answer {
+      color: #bbb;
+    }
+
+    .faq-answer h4 {
+      color: #e0e0e0;
+    }
+
+    .faq-answer table th {
+      background-color: #3a3a3a;
+    }
+
+    .faq-answer table th,
+    .faq-answer table td {
+      border-color: #555;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .faq-search-input,
     .clear-search-btn,
-    .faq-section {
+    .faq-section,
+    .accordion-control-btn,
+    .faq-accordion,
+    .accordion-arrow {
       transition: none;
+    }
+
+    .accordion-control-btn:hover {
+      transform: none;
     }
   }
 
@@ -978,6 +1268,30 @@ Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
 
     .faq-search-input {
       padding-right: 1rem;
+    }
+
+    .accordion-controls {
+      flex-direction: column;
+    }
+
+    .accordion-control-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .faq-question {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    .question-icon {
+      font-size: 1.2rem;
+      margin-right: 0.75rem;
+    }
+
+    .faq-answer {
+      padding: 0 1rem 1rem 3rem;
+      font-size: 0.95rem;
     }
   }
 </style>
@@ -1202,6 +1516,93 @@ Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
+  }
+})();
+
+// FAQ Accordion Functionality
+(function() {
+  const expandAllBtn = document.getElementById('expand-all-btn');
+  const collapseAllBtn = document.getElementById('collapse-all-btn');
+  const accordions = document.querySelectorAll('.faq-accordion');
+  
+  if (!expandAllBtn || !collapseAllBtn || !accordions.length) return;
+  
+  // Expand all accordions
+  expandAllBtn.addEventListener('click', function() {
+    accordions.forEach(accordion => {
+      accordion.open = true;
+    });
+    announceToScreenReader('All questions expanded');
+  });
+  
+  // Collapse all accordions
+  collapseAllBtn.addEventListener('click', function() {
+    accordions.forEach(accordion => {
+      accordion.open = false;
+    });
+    announceToScreenReader('All questions collapsed');
+  });
+  
+  // Deep linking - open accordion if URL hash matches
+  function handleDeepLink() {
+    const hash = window.location.hash;
+    if (!hash) return;
+    
+    const targetAccordion = document.querySelector(hash);
+    if (targetAccordion && targetAccordion.classList.contains('faq-accordion')) {
+      targetAccordion.open = true;
+      
+      // Scroll to accordion smoothly
+      setTimeout(() => {
+        targetAccordion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
+  
+  // Handle deep linking on page load
+  handleDeepLink();
+  
+  // Handle deep linking on hash change
+  window.addEventListener('hashchange', handleDeepLink);
+  
+  // Track accordion open/close for analytics
+  accordions.forEach(accordion => {
+    accordion.addEventListener('toggle', function() {
+      const questionText = this.querySelector('.question-text')?.textContent || 'Unknown';
+      const action = this.open ? 'expanded' : 'collapsed';
+      
+      // Could send to analytics here
+      console.log(`FAQ ${action}: ${questionText}`);
+    });
+  });
+  
+  // Keyboard accessibility enhancement
+  accordions.forEach(accordion => {
+    const summary = accordion.querySelector('summary');
+    if (!summary) return;
+    
+    summary.addEventListener('keydown', function(e) {
+      // Allow Enter and Space to toggle
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        accordion.open = !accordion.open;
+      }
+    });
+  });
+  
+  // Screen reader announcement helper
+  function announceToScreenReader(message) {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('role', 'status');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    announcement.style.cssText = 'position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;';
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
   }
 })();
 </script>
