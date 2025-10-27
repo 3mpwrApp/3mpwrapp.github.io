@@ -13,9 +13,29 @@ permalink: /faq/
 
 **Last Updated:** October 26, 2025
 
-📖 **15 minute read** | ⚡ Use table of contents to jump to your question
+📖 **15 minute read** | ⚡ Use search or table of contents to jump to your question
 
 Quick answers to common questions about 3mpwrApp. Can't find what you're looking for? [Contact us](/contact).
+
+<!-- FAQ Search -->
+<div class="faq-search-container">
+  <label for="faq-search" class="search-label">
+    <span class="search-icon" aria-hidden="true">🔍</span>
+    Search FAQs
+  </label>
+  <input 
+    type="search" 
+    id="faq-search" 
+    class="faq-search-input"
+    placeholder="Type keywords to search FAQs..."
+    aria-describedby="search-help search-results-count"
+    autocomplete="off">
+  <small id="search-help" class="search-help">Try searching: "privacy", "cost", "beta testing"</small>
+  <div id="search-results-count" class="search-results-count" role="status" aria-live="polite" style="display: none;"></div>
+  <button type="button" id="clear-search" class="clear-search-btn" style="display: none;" aria-label="Clear search">
+    ✕ Clear
+  </button>
+</div>
 
 <details class="tldr-box" open>
   <summary>⚡ Most Common Questions</summary>
@@ -759,3 +779,429 @@ Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
 **3mpwrApp - Your voice, your power, your data.**
 
 *Last Updated: October 25, 2025*
+
+<style>
+  /* FAQ Search Styles */
+  .faq-search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .search-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+
+  .search-icon {
+    font-size: 1.5rem;
+  }
+
+  .faq-search-input {
+    width: 100%;
+    padding: 0.875rem 3rem 0.875rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    min-height: 48px;
+    transition: all 0.2s ease;
+  }
+
+  .faq-search-input:focus {
+    outline: none;
+    border-color: #0066CC;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+  }
+
+  .search-help {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #555;
+    font-style: italic;
+  }
+
+  .search-results-count {
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background-color: #e3f2fd;
+    border-left: 4px solid #0066CC;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #0066CC;
+  }
+
+  .clear-search-btn {
+    position: absolute;
+    top: 3.25rem;
+    right: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    min-height: 36px;
+  }
+
+  .clear-search-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+  }
+
+  .clear-search-btn:focus {
+    outline: 3px solid rgba(220, 53, 69, 0.5);
+    outline-offset: 2px;
+  }
+
+  /* FAQ Section Styling */
+  .faq-section {
+    margin-bottom: 2rem;
+    transition: opacity 0.2s ease;
+  }
+
+  .faq-section.hidden {
+    display: none;
+  }
+
+  .faq-section h2,
+  .faq-section h3 {
+    scroll-margin-top: 2rem;
+  }
+
+  /* Highlight matching text */
+  .search-highlight {
+    background-color: #fff59d;
+    padding: 0.125rem 0.25rem;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+
+  /* No results message */
+  .no-results-message {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  .no-results-message h3 {
+    color: #856404;
+    margin-top: 0;
+  }
+
+  .no-results-message p {
+    color: #664d03;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .faq-search-container {
+      background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    }
+
+    .search-label {
+      color: #e0e0e0;
+    }
+
+    .faq-search-input {
+      background-color: #2d2d2d;
+      color: #e0e0e0;
+      border-color: #444;
+    }
+
+    .faq-search-input:focus {
+      border-color: #4DB8FF;
+      box-shadow: 0 0 0 3px rgba(77, 184, 255, 0.2);
+    }
+
+    .search-help {
+      color: #aaa;
+    }
+
+    .search-results-count {
+      background-color: #1a2a3a;
+      border-left-color: #4DB8FF;
+      color: #4DB8FF;
+    }
+
+    .search-highlight {
+      background-color: #b39c00;
+      color: #000;
+    }
+
+    .no-results-message {
+      background-color: #3a2f1a;
+      border-color: #ffc107;
+    }
+
+    .no-results-message h3 {
+      color: #ffc107;
+    }
+
+    .no-results-message p {
+      color: #ddd;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-search-input,
+    .clear-search-btn,
+    .faq-section {
+      transition: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .faq-search-container {
+      padding: 1rem;
+    }
+
+    .clear-search-btn {
+      position: static;
+      width: 100%;
+      margin-top: 0.75rem;
+    }
+
+    .faq-search-input {
+      padding-right: 1rem;
+    }
+  }
+</style>
+
+<script>
+// FAQ Search Functionality
+(function() {
+  const searchInput = document.getElementById('faq-search');
+  const clearBtn = document.getElementById('clear-search');
+  const resultsCount = document.getElementById('search-results-count');
+  
+  if (!searchInput) return;
+  
+  let searchTimeout;
+  let allSections = [];
+  let noResultsMsg = null;
+  
+  // Initialize - get all FAQ sections
+  function init() {
+    // Get all h2 and h3 sections
+    const headings = document.querySelectorAll('h2, h3');
+    headings.forEach(heading => {
+      // Skip the main title and TOC
+      if (heading.textContent.includes('Table of Contents') || 
+          heading.textContent.includes('Frequently Asked Questions')) {
+        return;
+      }
+      
+      // Get content until next heading
+      let content = '';
+      let element = heading.nextElementSibling;
+      const elements = [heading];
+      
+      while (element && !element.matches('h2, h3')) {
+        elements.push(element);
+        content += element.textContent + ' ';
+        element = element.nextElementSibling;
+      }
+      
+      allSections.push({
+        heading: heading,
+        elements: elements,
+        text: (heading.textContent + ' ' + content).toLowerCase(),
+        visible: true
+      });
+    });
+  }
+  
+  // Perform search
+  function performSearch(query) {
+    query = query.toLowerCase().trim();
+    
+    // Clear previous highlights
+    clearHighlights();
+    
+    if (!query) {
+      // Show all sections
+      allSections.forEach(section => {
+        section.elements.forEach(el => {
+          el.classList.remove('hidden');
+          el.style.display = '';
+        });
+        section.visible = true;
+      });
+      
+      if (noResultsMsg) {
+        noResultsMsg.remove();
+        noResultsMsg = null;
+      }
+      
+      resultsCount.style.display = 'none';
+      clearBtn.style.display = 'none';
+      return;
+    }
+    
+    // Search sections
+    let matchCount = 0;
+    const terms = query.split(/\s+/).filter(t => t.length > 0);
+    
+    allSections.forEach(section => {
+      const matches = terms.every(term => section.text.includes(term));
+      
+      if (matches) {
+        matchCount++;
+        section.elements.forEach(el => {
+          el.classList.remove('hidden');
+          el.style.display = '';
+        });
+        section.visible = true;
+        
+        // Highlight matching terms
+        highlightTerms(section.elements, terms);
+      } else {
+        section.elements.forEach(el => {
+          el.classList.add('hidden');
+        });
+        section.visible = false;
+      }
+    });
+    
+    // Show results count
+    if (matchCount > 0) {
+      resultsCount.textContent = `Found ${matchCount} section${matchCount !== 1 ? 's' : ''} matching "${query}"`;
+      resultsCount.style.display = 'block';
+      
+      if (noResultsMsg) {
+        noResultsMsg.remove();
+        noResultsMsg = null;
+      }
+    } else {
+      resultsCount.style.display = 'none';
+      showNoResults(query);
+    }
+    
+    clearBtn.style.display = 'block';
+  }
+  
+  // Highlight matching terms
+  function highlightTerms(elements, terms) {
+    elements.forEach(el => {
+      // Skip if element contains form or script
+      if (el.querySelector('form, script, style')) return;
+      
+      const walker = document.createTreeWalker(
+        el,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+      );
+      
+      const textNodes = [];
+      while (walker.nextNode()) {
+        if (walker.currentNode.parentElement.closest('a, code, pre')) continue;
+        textNodes.push(walker.currentNode);
+      }
+      
+      textNodes.forEach(node => {
+        const text = node.textContent;
+        let html = text;
+        
+        terms.forEach(term => {
+          const regex = new RegExp(`(${escapeRegex(term)})`, 'gi');
+          html = html.replace(regex, '<span class="search-highlight">$1</span>');
+        });
+        
+        if (html !== text) {
+          const span = document.createElement('span');
+          span.innerHTML = html;
+          node.parentNode.replaceChild(span, node);
+        }
+      });
+    });
+  }
+  
+  // Clear highlights
+  function clearHighlights() {
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const text = el.textContent;
+      el.parentNode.replaceChild(document.createTextNode(text), el);
+    });
+  }
+  
+  // Show no results message
+  function showNoResults(query) {
+    if (noResultsMsg) {
+      noResultsMsg.remove();
+    }
+    
+    noResultsMsg = document.createElement('div');
+    noResultsMsg.className = 'no-results-message';
+    noResultsMsg.innerHTML = `
+      <h3>🔍 No results found for "${escapeHtml(query)}"</h3>
+      <p><strong>Try these tips:</strong></p>
+      <ul style="text-align: left; max-width: 400px; margin: 1rem auto;">
+        <li>Use different keywords</li>
+        <li>Check for typos</li>
+        <li>Try shorter or more general terms</li>
+        <li><a href="/contact">Contact us</a> if you can't find what you need</li>
+      </ul>
+    `;
+    
+    const mainContent = document.querySelector('main') || document.body;
+    const toc = document.querySelector('details.tldr-box');
+    if (toc && toc.nextElementSibling) {
+      toc.nextElementSibling.after(noResultsMsg);
+    } else {
+      mainContent.insertBefore(noResultsMsg, mainContent.querySelector('h2'));
+    }
+  }
+  
+  // Utility functions
+  function escapeRegex(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+  
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+  
+  // Event listeners
+  searchInput.addEventListener('input', function() {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      performSearch(this.value);
+    }, 300);
+  });
+  
+  searchInput.addEventListener('search', function() {
+    performSearch(this.value);
+  });
+  
+  clearBtn.addEventListener('click', function() {
+    searchInput.value = '';
+    searchInput.focus();
+    performSearch('');
+  });
+  
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
