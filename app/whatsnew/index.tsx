@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 import ContrastToggle from "../../components/ContrastToggle";
+import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { whatsnew as defaultWN } from "../../data/whatsnew";
 import {
@@ -236,8 +237,9 @@ export default function WhatsNewScreen() {
                 }}
               >
                 <Text style={styles.itemTitle}>{item.title}</Text>
-                <View
-                  style={{ flexDirection: "row", alignItems: "center", gap: 8 }}
+                <GapView
+                  gap={8}
+                  style={{ flexDirection: "row", alignItems: "center" }}
                 >
                   <Text style={[styles.itemDate]}>
                     {new Date(item.date).toLocaleDateString()}
@@ -256,7 +258,7 @@ export default function WhatsNewScreen() {
                       {t("whatsNew.badgeNew", "New")}
                     </Text>
                   )}
-                </View>
+                </GapView>
               </View>
               <Text style={styles.itemText}>{item.summary}</Text>
             </View>

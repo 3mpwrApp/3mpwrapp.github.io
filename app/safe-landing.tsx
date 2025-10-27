@@ -19,6 +19,8 @@ import {
 import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useAppPalette } from '../theme/usePalette';
 
+import { GapView } from '@/components/GapView';
+
 export default function SafeLandingPage() {
   const router = useRouter();
   const palette = useAppPalette();
@@ -190,7 +192,7 @@ export default function SafeLandingPage() {
       </View>
 
       {/* Action Buttons */}
-      <View style={styles.actions}>
+      <GapView gap={16} style={styles.actions}>
         <Pressable
           style={styles.continueButton}
           onPress={handleContinue}
@@ -208,7 +210,7 @@ export default function SafeLandingPage() {
         >
           <Text style={styles.exitButtonText}>Exit App</Text>
         </Pressable>
-      </View>
+      </GapView>
     </ScrollView>
   );
 }
@@ -339,7 +341,6 @@ function createStyles(_palette?: ReturnType<typeof useAppPalette>) {
     },
     actions: {
       marginTop: 32,
-      gap: 16,
     },
     continueButton: {
       backgroundColor: '#66BB6A',

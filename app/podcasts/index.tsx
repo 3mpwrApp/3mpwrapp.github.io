@@ -12,6 +12,7 @@ import {
     View,
 } from "react-native";
 
+import { GapView } from "../../components/GapView";
 import { podcasts as localPodcasts } from "../../data/podcasts";
 import {
     MAX_FONT_SCALE,
@@ -237,10 +238,10 @@ export default function PodcastsScreen() {
         Listen to community stories and insights.
       </Text>
 
-      <View style={{ flexDirection:'row', gap:8, marginBottom:8 }}>
+      <GapView gap={8} style={{ flexDirection:'row', marginBottom:8 }}>
         <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
         <FilterChip label="Saved" active={mode==='saved'} onPress={() => setMode('saved')} palette={palette} />
-      </View>
+      </GapView>
 
       <SearchBar
         value={query}

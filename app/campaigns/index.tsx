@@ -14,6 +14,7 @@ import {
 } from "react-native";
 
 import Card from "../../components/Card";
+import { GapView } from "../../components/GapView";
 import SearchBar from "../../components/SearchBar";
 import SkeletonRow from "../../components/SkeletonRow";
 import { useAuth } from "../../context/AuthContext";
@@ -213,7 +214,7 @@ function ScreenInner() {
                 subtitle={`${item.summary}${item.membersCount ? ` - ${item.membersCount} supporters` : ""}`}
               />
             </Link>
-            <View style={{ flexDirection:'row', marginTop:6, gap:8 }}>
+            <GapView gap={8} style={{ flexDirection:'row', marginTop:6 }}>
               <Pressable
                 onPress={async () => {
                   try {
@@ -282,7 +283,7 @@ function ScreenInner() {
               >
                 <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>+1</Text>
               </Pressable>
-            </View>
+            </GapView>
           </View>
         )}
         ListEmptyComponent={!loading && !error ? (
