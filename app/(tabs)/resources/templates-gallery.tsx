@@ -4,6 +4,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-nati
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import { GapView } from "../../../components/GapView";
 import { MAX_FONT_SCALE, useAnnounceOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -130,13 +131,13 @@ export default function TemplatesGallery() {
         </View>
       )}
       <Text style={s.subtitle}>{t("templates.gallery.subtitle","Example outputs to help you get started.")}</Text>
-      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
+      <GapView gap={8} style={{ flexDirection: "row", flexWrap: "wrap", marginBottom: 12 }}>
         <TextInput style={s.input} placeholder={t("templates.gallery.varName","Your name")} value={vars.name} onChangeText={v=>setVars({...vars,name:v})} />
         <TextInput style={s.input} placeholder={t("templates.gallery.varContact","Contact")} value={vars.contact} onChangeText={v=>setVars({...vars,contact:v})} />
         <TextInput style={s.input} placeholder={t("templates.gallery.varProvince","Province (e.g., ON)")} value={vars.province} onChangeText={v=>setVars({...vars,province:v})} />
         <TextInput style={s.input} placeholder={t("templates.gallery.varClaim","Claim ID")} value={vars.claim} onChangeText={v=>setVars({...vars,claim:v})} />
         <TextInput style={s.input} placeholder={t("templates.gallery.varDate","date (YYYY-MM-DD)")} value={vars.date} onChangeText={v=>setVars({...vars,date:v})} />
-      </View>
+      </GapView>
 
       {EXAMPLES.map(ex => {
         const body = applyVars(ex.body);
@@ -159,11 +160,11 @@ export default function TemplatesGallery() {
             <View key={d.id} style={{ marginBottom: 10 }}>
               <Text style={s.cardTitle}>{d.title}</Text>
               <Text style={s.cardText}>{d.body}</Text>
-              <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8 }}>
+              <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap' }}>
                 <A11yPressable onPress={async()=>{ try { const arr = drafts.filter(x=>x.id!==d.id); setDrafts(arr); await AsyncStorage?.setItem?.('templates:drafts', JSON.stringify(arr)); } catch {} }} style={s.secondary} accessibilityRole="button" accessibilityLabel={t("templates.gallery.deleteDraft","Delete draft")}> <Text style={s.secondaryText}>{t("templates.gallery.delete","Delete")}</Text></A11yPressable>
-                <A11yPressable onPress={()=>shareText(d.title,d.body)} style={s.secondary} accessibilityRole="button" accessibilityLabel={t("templates.gallery.shareDraft","Share draft")}> <Text style={s.secondaryText}>{t("templates.gallery.share","Share")}</Text></A11yPressable>
+                <A11yPressable onPress={()=>shareTex(d.title,d.body)} style={s.secondary} accessibilityRole="button" accessibilityLabel={t("templates.gallery.shareDraft","Share draft")}> <Text style={s.secondaryText}>{t("templates.gallery.share","Share")}</Text></A11yPressable>
                 <A11yPressable onPress={()=>insertIntoLocker(d.body)} style={s.secondary} accessibilityRole="button" accessibilityLabel={t("templates.gallery.toLocker","Add draft to Evidence Locker")}> <Text style={s.secondaryText}>{t("templates.gallery.toLockerShort","To Locker")}</Text></A11yPressable>
-              </View>
+              </GapView>
             </View>
           ))}
         </View>
@@ -185,7 +186,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     buttonText: { color: palette.onPrimary, fontWeight: "700" },
     secondary: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingVertical: 8, borderRadius: 8, alignItems: 'center', paddingHorizontal: 10 },
     secondaryText: { color: palette.text, fontWeight: '700' },
-    actionsRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 12, marginBottom: 4 },
+    actionsRow: { flexDirection: 'row', flexWrap: 'wrap', marginTop: 12, marginBottom: 4 },
     infoBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 6 },
     infoBtnText: { color: palette.text, fontWeight: '600', fontSize: 13 },
     exportBtn: { backgroundColor: palette.primary, paddingHorizontal: 14, paddingVertical: 10, borderRadius: 6 },

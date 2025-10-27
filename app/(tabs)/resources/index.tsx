@@ -5,8 +5,6 @@ import { Linking, RefreshControl, SectionList, StyleSheet, Text, View } from "re
 
 import A11yPressable from "../../../components/A11yPressable";
 import Card from "../../../components/Card";
-import ContrastToggle from "../../../components/ContrastToggle";
-import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
@@ -25,6 +23,9 @@ import { createTextStyles } from "../../../theme/typography.enhanced";
 import { useAppPalette } from "../../../theme/usePalette";
 import type { Resource, ResourceCategory } from "../../../types/models";
 import { filterResources, groupByRegion, presentProvinceCodes } from "../../../utils/resources";
+import ContrastToggle from "../../components/ContrastToggle";
+import DisclaimerBanner from "../../components/DisclaimerBanner";
+import { GapView } from "../../components/GapView";
 
 const PROVINCE_NAMES: Record<string, string> = {
   AB: "Alberta",
@@ -185,10 +186,10 @@ export default function ResourcesScreen() {
         >
           Resources
         </Text>
-        <View style={{ marginLeft: 'auto', flexDirection: 'row', gap: 8 }}>
+        <GapView gap={8} style={{ marginLeft: 'auto', flexDirection: 'row' }}>
           <ContrastToggle />
           <SettingsLink />
-        </View>
+        </GapView>
       </View>
 
       <Text style={textStyles.body} maxFontSizeMultiplier={MAX_FONT_SCALE}>
@@ -334,11 +335,11 @@ export default function ResourcesScreen() {
       <Text style={styles.subtitle}>
         {t("jurisdiction.filter.label", "Filter by jurisdiction")}
       </Text>
-      <View
+      <GapView
+        gap={8}
         style={{
           flexDirection: "row",
           flexWrap: "wrap",
-          gap: 8,
           marginBottom: 8,
         }}
       >
@@ -392,16 +393,16 @@ export default function ResourcesScreen() {
               </Text>
             </A11yPressable>
           ))}
-      </View>
+      </GapView>
 
       <Text style={styles.subtitle}>
         {t("resources.filters.canada", "Canada")} / provinces
       </Text>
-      <View
+      <GapView
+        gap={8}
         style={{
           flexDirection: "row",
           flexWrap: "wrap",
-          gap: 8,
           marginBottom: 8,
         }}
       >
@@ -447,7 +448,7 @@ export default function ResourcesScreen() {
             </Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
 
       <SearchBar
         value={query}
@@ -537,7 +538,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     filters: {
       flexDirection: "row",
       flexWrap: "wrap",
-      gap: 8,
       marginTop: 8,
       marginBottom: 8,
     },

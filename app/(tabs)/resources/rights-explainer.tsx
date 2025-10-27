@@ -1,8 +1,9 @@
 import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import A11yPressable from "../../../components/A11yPressable";
+import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import { GapView } from "../../../components/GapView";
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -82,7 +83,7 @@ export default function RightsExplainer() {
         <View style={s.hintCard} accessibilityRole="summary">
           <Text style={s.hintTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('microCoach.hint','Tip')}</Text>
           <Text style={s.hintText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.hintPlain','Use plain language mode to simplify text on this screen.')}</Text>
-          <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+          <GapView gap={8} style={{ flexDirection:'row', marginTop:6 }}>
             <A11yPressable
               style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}
               onPress={async()=>{ setHintSeen(true); try{ await AsyncStorage?.setItem?.('rightsExplainer:hintSeen:v1','1'); } catch{} }}
@@ -91,7 +92,7 @@ export default function RightsExplainer() {
             >
               <Text style={[s.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('microCoach.dismiss','Got it')}</Text>
             </A11yPressable>
-          </View>
+          </GapView>
         </View>
       )}
       <View style={s.infoCard} accessibilityRole="summary" accessibilityLabel={t('rightsExplainer.howToUse','How to use Rights Explainer')}>
@@ -106,7 +107,7 @@ export default function RightsExplainer() {
             <Text style={s.infoText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.infoLine3','This is an educational tool, not legal advice. Reference official sources for decisions.')}</Text>
           </View>
         )}
-        <View style={s.actionRow}>
+        <GapView gap={8} style={s.actionRow}>
           <A11yPressable hitSlop={HIT_SLOP_8} onPress={copyCurrent} accessibilityRole='button' accessibilityLabel={t('rightsExplainer.copyLabel','Copy rights explainer')} accessibilityHint={t('rightsExplainer.copyHint','Copies the current rights statements.')} style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
             <Text style={[s.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.copy','Copy')}</Text>
           </A11yPressable>
@@ -116,11 +117,11 @@ export default function RightsExplainer() {
           <A11yPressable hitSlop={HIT_SLOP_8} onPress={reset} accessibilityRole='button' accessibilityLabel={t('rightsExplainer.resetLabel','Reset explainer')} accessibilityHint={t('rightsExplainer.resetHint','Restores default language and region.')} style={[s.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
             <Text style={[s.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.reset','Reset')}</Text>
           </A11yPressable>
-        </View>
+        </GapView>
       </View>
       <Text style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.heading','Multi‑Language Rights Explainer')}</Text>
       <DisclaimerBanner type="legal" compact />
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8, alignItems:'center', flexWrap:'wrap' }}>
+      <GapView gap={8} style={{ flexDirection:'row', marginTop: 8, alignItems:'center', flexWrap:'wrap' }}>
         <A11yPressable
           onPress={async()=>{ const next = !plainHere; setPlainHere(next); try { await AsyncStorage?.setItem?.('rightsExplainer:plain:v1', next ? '1' : '0'); } catch{} }}
           accessibilityRole='button'
@@ -131,33 +132,33 @@ export default function RightsExplainer() {
             {plainHere ? t('plainMode.toggleOff','Use standard language on this screen') : t('plainMode.toggleOn','Use plain language on this screen')}
           </Text>
         </A11yPressable>
-      </View>
+      </GapView>
       <Text style={s.text} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.subhead','Plain‑language summaries of basic rights. Select language and region.')}</Text>
 
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
+      <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 8 }}>
         {(['en','fr','es'] as Lang[]).map(l => (
           <A11yPressable hitSlop={HIT_SLOP_8} key={l} onPress={()=>setLang(l)} accessibilityRole='button' accessibilityState={{ selected: lang===l }} accessibilityLabel={t('rightsExplainer.langChip','Language ' + l.toUpperCase())} style={[s.chip, lang===l&&s.chipActive]}>
             <Text style={{ color: lang===l? palette.onPrimary: palette.text, fontWeight:'700' }} maxFontSizeMultiplier={MAX_FONT_SCALE}>{l.toUpperCase()}</Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
 
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
+      <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 8 }}>
         {(['canada','province','world'] as Region[]).map(r => (
           <A11yPressable hitSlop={HIT_SLOP_8} key={r} onPress={()=>setRegion(r)} accessibilityRole='button' accessibilityState={{ selected: region===r }} accessibilityLabel={t('rightsExplainer.regionChip', `Region ${r}`)} style={[s.chip, region===r&&s.chipActive]}>
             <Text style={{ color: region===r? palette.onPrimary: palette.text, fontWeight:'700' }} maxFontSizeMultiplier={MAX_FONT_SCALE}>{r}</Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
 
       {region==='province' && (
-        <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
+        <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 8 }}>
           {PROVINCES.map(p => (
             <A11yPressable hitSlop={HIT_SLOP_8} key={p} onPress={()=>setProv(p)} accessibilityRole='button' accessibilityState={{ selected: prov===p }} accessibilityLabel={t('rightsExplainer.provinceChip','Province '+p)} style={[s.chip, prov===p&&s.chipActive]}>
               <Text style={{ color: prov===p? palette.onPrimary: palette.text, fontWeight:'700' }} maxFontSizeMultiplier={MAX_FONT_SCALE}>{p}</Text>
             </A11yPressable>
           ))}
-        </View>
+        </GapView>
       )}
 
       <Text ref={contentRef as any} accessibilityRole='header' style={[s.title,{ fontSize:18, marginTop: 12 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{sectionTitle}</Text>
@@ -217,7 +218,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     infoTitle: { color: palette.primary, fontWeight:'700', fontSize:16 },
     infoToggle: { color: palette.text, fontSize:12 },
     infoText: { color: palette.text, marginTop:4 },
-    actionRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:8 },
+    actionRow: { flexDirection:'row', flexWrap:'wrap', marginTop:8 },
     smallBtn: { backgroundColor: palette.primary, paddingHorizontal:14, paddingVertical:10, borderRadius:8 },
     smallBtnText: { color: palette.onPrimary, fontWeight:'700' },
     hintCard: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.card, padding:12, borderRadius:10, marginBottom:12 },

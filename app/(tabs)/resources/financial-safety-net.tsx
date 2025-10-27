@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-nati
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import { GapView } from "../../../components/GapView";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useAppPalette } from "../../../theme/usePalette";
 
@@ -173,7 +174,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
 function RowChips({ value, onChange, options }: { value: string; onChange: (v: any) => void; options: string[] }) {
   const palette = useAppPalette();
   return (
-    <View style={{ flexDirection: "row", gap: 8, marginVertical: 6, flexWrap: "wrap" }}>
+    <GapView gap={8} style={{ flexDirection: "row", marginVertical: 6, flexWrap: "wrap" }}>
       {options.map((opt) => {
         const active = value === opt;
         return (
@@ -193,14 +194,14 @@ function RowChips({ value, onChange, options }: { value: string; onChange: (v: a
           </A11yPressable>
         );
       })}
-    </View>
+    </GapView>
   );
 }
 
 function NavButtons({ onBack, onNext }: { onBack?: () => void; onNext?: () => void }) {
   const palette = useAppPalette();
   return (
-    <View style={{ flexDirection: "row", gap: 10, marginTop: 8 }}>
+    <GapView gap={10} style={{ flexDirection: "row", marginTop: 8 }}>
       {onBack && (
         <A11yPressable onPress={onBack} style={{ paddingVertical: 10, paddingHorizontal: 14, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8 }}>
           <Text style={{ color: palette.text }}>Back</Text>
@@ -211,6 +212,6 @@ function NavButtons({ onBack, onNext }: { onBack?: () => void; onNext?: () => vo
           <Text style={{ color: palette.text }}>Next</Text>
         </A11yPressable>
       )}
-    </View>
+    </GapView>
   );
 }
