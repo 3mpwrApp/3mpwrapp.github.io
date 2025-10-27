@@ -1,0 +1,414 @@
+/* ============================================
+   ABOUT PAGE STYLES
+   Enhanced UX/UI for the About page
+   ============================================ */
+
+/* Funding Grid */
+.funding-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.funding-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+}
+
+.funding-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.funding-card.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+}
+
+.funding-card.highlight h4,
+.funding-card.highlight p {
+  color: white;
+}
+
+.funding-card.reject {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  border-color: #dc3545;
+}
+
+.funding-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.funding-card h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.funding-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.mission-statement {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Difference Grid */
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.difference-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.difference-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-left-width: 6px;
+}
+
+.difference-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.difference-card h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.difference-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+/* Mission Box */
+.mission-box {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+  border: 2px solid #2196f3;
+}
+
+.mission-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #1565c0;
+  margin: 0 0 2rem 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Privacy Highlights */
+.privacy-highlights {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.2);
+}
+
+.privacy-guarantee {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-guarantee h3 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #6a1b9a;
+}
+
+.privacy-guarantee strong {
+  color: #4a148c;
+  font-size: 2rem;
+}
+
+.privacy-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.privacy-feature {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.privacy-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.privacy-feature .feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.privacy-feature h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6a1b9a;
+}
+
+.privacy-feature p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #34495e;
+  line-height: 1.5;
+}
+
+/* Disclaimers Grid */
+.disclaimers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.disclaimer-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid;
+}
+
+.disclaimer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.disclaimer-card.warning {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+  border-color: #ffc107;
+}
+
+.disclaimer-card.caution {
+  background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+  border-color: #ff9800;
+}
+
+.disclaimer-card.emergency {
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border-color: #f44336;
+}
+
+.disclaimer-icon {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.disclaimer-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.disclaimer-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #34495e;
+  font-weight: 500;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .funding-card:not(.highlight):not(.reject) {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  }
+  
+  .funding-card:not(.highlight):not(.reject) h4,
+  .funding-card:not(.highlight):not(.reject) p {
+    color: #e2e8f0;
+  }
+  
+  .difference-card {
+    background: #2d3748;
+    border-left-color: #667eea;
+  }
+  
+  .difference-card h4 {
+    color: #f7fafc;
+  }
+  
+  .difference-card p {
+    color: #cbd5e0;
+  }
+  
+  .mission-box {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+    border-color: #3182ce;
+  }
+  
+  .mission-text {
+    color: #90cdf4;
+  }
+  
+  .privacy-highlights {
+    background: linear-gradient(135deg, #44337a 0%, #6b46c1 100%);
+  }
+  
+  .privacy-guarantee {
+    background: #2d3748;
+  }
+  
+  .privacy-guarantee h3 {
+    color: #d6bcfa;
+  }
+  
+  .privacy-guarantee strong {
+    color: #e9d8fd;
+  }
+  
+  .privacy-feature {
+    background: #2d3748;
+  }
+  
+  .privacy-feature h4 {
+    color: #d6bcfa;
+  }
+  
+  .privacy-feature p {
+    color: #cbd5e0;
+  }
+  
+  .disclaimer-card.warning {
+    background: linear-gradient(135deg, #744210 0%, #975a16 100%);
+    border-color: #d69e2e;
+  }
+  
+  .disclaimer-card.caution {
+    background: linear-gradient(135deg, #7c2d12 0%, #9c4221 100%);
+    border-color: #ed8936;
+  }
+  
+  .disclaimer-card.emergency {
+    background: linear-gradient(135deg, #742a2a 0%, #9b2c2c 100%);
+    border-color: #f56565;
+  }
+  
+  .disclaimer-card h4,
+  .disclaimer-card p {
+    color: #f7fafc;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .funding-card,
+  .difference-card,
+  .privacy-feature,
+  .disclaimer-card {
+    transition: none;
+  }
+  
+  .funding-card:hover,
+  .difference-card:hover,
+  .privacy-feature:hover,
+  .disclaimer-card:hover {
+    transform: none;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .funding-grid,
+  .difference-grid,
+  .privacy-features-grid,
+  .disclaimers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .funding-card,
+  .difference-card,
+  .privacy-feature,
+  .disclaimer-card {
+    padding: 1.5rem;
+  }
+  
+  .mission-box,
+  .privacy-highlights {
+    padding: 1.5rem;
+  }
+  
+  .mission-text {
+    font-size: 1.1rem;
+  }
+  
+  .privacy-guarantee h3 {
+    font-size: 1.4rem;
+  }
+  
+  .privacy-guarantee strong {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .funding-icon,
+  .disclaimer-icon {
+    font-size: 2.5rem;
+  }
+  
+  .difference-icon,
+  .privacy-feature .feature-icon {
+    font-size: 2rem;
+  }
+  
+  .funding-card h4,
+  .difference-card h4 {
+    font-size: 1.1rem;
+  }
+  
+  .mission-text {
+    font-size: 1rem;
+  }
+}

@@ -4,6 +4,9 @@ title: About
 description: Empowering Canada's disability and injured worker community with 100% free advocacy tools, resources, and connection.
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+
 <div class="status-banner" role="status" aria-live="polite">
   <span class="status-indicator">✅</span> App Status: Testing Phase - Limited Spots Available | All systems running smoothly | Brief updates: 2-4am EST
 </div>
@@ -43,19 +46,41 @@ description: Empowering Canada's disability and injured worker community with 10
 
 ### 💚 Grassroots & Community-Funded
 
-**3mpwrApp is 100% free and always will be.** We're a grassroots, community-focused initiative with a mission-driven approach focused on empowerment, not profit.
+<div class="funding-grid">
+  <div class="funding-card highlight">
+    <div class="funding-icon">🎯</div>
+    <h4>100% Free Forever</h4>
+    <p>No paid tiers. No subscriptions. No in-app purchases. Ever.</p>
+  </div>
+  
+  <div class="funding-card">
+    <div class="funding-icon">💚</div>
+    <h4>Community Donations</h4>
+    <p>Optional support from those who can, never required</p>
+  </div>
+  
+  <div class="funding-card">
+    <div class="funding-icon">🤝</div>
+    <h4>Mission-Aligned Grants</h4>
+    <p>Focused on disability rights and accessibility</p>
+  </div>
+  
+  <div class="funding-card">
+    <div class="funding-icon">🎯</div>
+    <h4>Values-First Partnerships</h4>
+    <p>Only with organizations that respect our mission</p>
+  </div>
+  
+  <div class="funding-card reject">
+    <div class="funding-icon">❌</div>
+    <h4>NO Corporate Control</h4>
+    <p>No venture capital, no profit motive, no exploitation</p>
+  </div>
+</div>
 
-**No paid tiers. No subscriptions. No in-app purchases. Ever.**
-
-We're built BY the disability and injured workers community, FOR everyone who cares about disability justice and workers' rights.
-
-**Our funding model:**
-- 💚 Community donations (optional, never required)
-- 🤝 Grants focused on disability rights and accessibility
-- 🎯 Mission-aligned partnerships that respect our values
-- ❌ NO venture capital, NO corporate interests, NO profit motive
-
-**Every decision we make prioritizes community needs over revenue.**
+<div class="mission-statement">
+  <strong>Every decision we make prioritizes community needs over revenue.</strong>
+</div>
 
 ### 🇨🇦 Currently Serving Canada-Wide
 
@@ -81,56 +106,146 @@ We're built BY the disability and injured workers community, FOR everyone who ca
 
 ### Why 3mpwrApp is Different
 
-**🚫 No Algorithm Manipulation**  
-Your content reaches your community - no hidden suppression or "relevance" filtering.
-
-**🔒 Your Data Stays Yours**  
-We don't mine, sell, or monetize your personal information. Your privacy is non-negotiable.
-
-**♿ Accessibility First**  
-Every feature is designed from the ground up to work for all disabilities and abilities.
-
-**🤝 Community Powered**  
-Real people supporting real people - not corporate interests driving engagement.
-
-**🎯 Purpose Built**  
-Every tool serves one goal: empowering your voice and strengthening your advocacy.
+<div class="difference-grid">
+  <div class="difference-card">
+    <div class="difference-icon">🚫</div>
+    <h4>No Algorithm Manipulation</h4>
+    <p>Your content reaches your community - no hidden suppression or "relevance" filtering.</p>
+  </div>
+  
+  <div class="difference-card">
+    <div class="difference-icon">🔒</div>
+    <h4>Your Data Stays Yours</h4>
+    <p>We don't mine, sell, or monetize your personal information. Your privacy is non-negotiable.</p>
+  </div>
+  
+  <div class="difference-card">
+    <div class="difference-icon">♿</div>
+    <h4>Accessibility First</h4>
+    <p>Every feature is designed from the ground up to work for all disabilities and abilities.</p>
+  </div>
+  
+  <div class="difference-card">
+    <div class="difference-icon">🤝</div>
+    <h4>Community Powered</h4>
+    <p>Real people supporting real people - not corporate interests driving engagement.</p>
+  </div>
+  
+  <div class="difference-card">
+    <div class="difference-icon">🎯</div>
+    <h4>Purpose Built</h4>
+    <p>Every tool serves one goal: empowering your voice and strengthening your advocacy.</p>
+  </div>
+</div>
 
 ### Our Mission
 
-We believe every person deserves to have their voice heard, their rights protected, and their community accessible. 3mpwrApp provides the tools, resources, and connections you need to navigate systems, advocate for change, and build the inclusive world we all deserve.
-
-Learn more in our [User Guide]({{ '/user-guide' | relative_url }}) or explore our [Features]({{ '/features' | relative_url }}).
+<div class="mission-box">
+  <p class="mission-text">
+    We believe every person deserves to have their voice heard, their rights protected, and their community accessible. 
+    3mpwrApp provides the tools, resources, and connections you need to navigate systems, advocate for change, 
+    and build the inclusive world we all deserve.
+  </p>
+  
+  <div class="resource-links">
+    <a href="{{ '/user-guide' | relative_url }}" class="resource-link">
+      User Guide →
+    </a>
+    <a href="{{ '/features' | relative_url }}" class="resource-link">
+      Explore Features →
+    </a>
+  </div>
+</div>
 
 ---
 
 ## 🔒 Privacy & Data Ownership
 
-Your data belongs to **you**. Period.
-
-- **100% User Data Ownership** - All data you create is yours, not ours
-- **Local-First Architecture** - Data stays on your device by default
-- **BYOC (Bring Your Own Cloud)** - Optional sync to YOUR chosen cloud provider
-- **No Tracking** - No analytics, no advertising IDs, no data mining
-- **Military-Grade Encryption** - AES-256 encryption, TLS 1.3, hardware-backed keys
-
-**Learn more:**
-- **[Privacy Policy](/privacy/)** - Comprehensive privacy details
-- **[Data Ownership Statement](/data-ownership/)** - Technical guarantees
-- **[Privacy Controls](/privacy-controls/)** - Manage your settings
-- **[Terms of Service](/terms/)** - Full terms with disclaimers
+<div class="privacy-highlights">
+  <div class="privacy-guarantee">
+    <h3>Your data belongs to <strong>you</strong>. Period.</h3>
+  </div>
+  
+  <div class="privacy-features-grid">
+    <div class="privacy-feature">
+      <div class="feature-icon">💾</div>
+      <h4>100% User Data Ownership</h4>
+      <p>All data you create is yours, not ours</p>
+    </div>
+    
+    <div class="privacy-feature">
+      <div class="feature-icon">📱</div>
+      <h4>Local-First Architecture</h4>
+      <p>Data stays on your device by default</p>
+    </div>
+    
+    <div class="privacy-feature">
+      <div class="feature-icon">☁️</div>
+      <h4>BYOC (Bring Your Own Cloud)</h4>
+      <p>Optional sync to YOUR chosen cloud provider</p>
+    </div>
+    
+    <div class="privacy-feature">
+      <div class="feature-icon">🚫</div>
+      <h4>No Tracking</h4>
+      <p>No analytics, no advertising IDs, no data mining</p>
+    </div>
+    
+    <div class="privacy-feature">
+      <div class="feature-icon">🔐</div>
+      <h4>Military-Grade Encryption</h4>
+      <p>AES-256 encryption, TLS 1.3, hardware-backed keys</p>
+    </div>
+  </div>
+  
+  <div class="resource-links">
+    <a href="/privacy/" class="resource-link">Privacy Policy →</a>
+    <a href="/data-ownership/" class="resource-link">Data Ownership Statement →</a>
+    <a href="/privacy-controls/" class="resource-link">Privacy Controls →</a>
+    <a href="/terms/" class="resource-link">Terms of Service →</a>
+  </div>
+</div>
 
 ---
 
 ## ⚖️ Important Disclaimers
 
-3mpwrApp provides information and tools, but:
+<div class="disclaimers-grid">
+  <div class="disclaimer-card warning">
+    <div class="disclaimer-icon">❌</div>
+    <h4>NOT Medical Advice</h4>
+    <p>Always consult healthcare professionals</p>
+  </div>
+  
+  <div class="disclaimer-card warning">
+    <div class="disclaimer-icon">❌</div>
+    <h4>NOT Legal Advice</h4>
+    <p>Always consult licensed attorneys</p>
+  </div>
+  
+  <div class="disclaimer-card warning">
+    <div class="disclaimer-icon">❌</div>
+    <h4>NOT Financial Advice</h4>
+    <p>Always consult financial advisors</p>
+  </div>
+  
+  <div class="disclaimer-card caution">
+    <div class="disclaimer-icon">⚠️</div>
+    <h4>AI Content</h4>
+    <p>All AI-generated content must be verified</p>
+  </div>
+  
+  <div class="disclaimer-card emergency">
+    <div class="disclaimer-icon">🚨</div>
+    <h4>Emergencies</h4>
+    <p>Call 911, not the app</p>
+  </div>
+</div>
 
-- ❌ **NOT Medical Advice** - Always consult healthcare professionals
-- ❌ **NOT Legal Advice** - Always consult licensed attorneys
-- ❌ **NOT Financial Advice** - Always consult financial advisors
-- ⚠️ **AI Content** - All AI-generated content must be verified
-- 🚨 **Emergencies** - Call 911, not the app
+<div class="resource-links">
+  <a href="/legal/disclaimers/" class="resource-link">Read all disclaimers →</a>
+</div>
 
-**[Read all disclaimers →](/legal/disclaimers/)**
+<script src="{{ '/assets/js/page-enhancements.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/about.js' | relative_url }}" defer></script>
 
