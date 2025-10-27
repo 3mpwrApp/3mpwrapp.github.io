@@ -38,6 +38,143 @@ Welcome to 3mpwrApp - your complete toolkit for disability advocacy, community c
 
 ---
 
+<!-- Feature Filter & Visual Cards -->
+<div class="features-filter-section">
+  <h2 class="filter-title">🔍 Explore Features by Category</h2>
+  <p class="filter-description">Browse our 133 features organized by your needs. Click any category to filter, or search for specific features.</p>
+  
+  <!-- Search Box -->
+  <div class="feature-search-container">
+    <label for="feature-search" class="sr-only">Search features</label>
+    <input 
+      type="search" 
+      id="feature-search" 
+      class="feature-search-input"
+      placeholder="Search features... (e.g., 'evidence', 'wellness', 'letter')"
+      aria-describedby="feature-search-help">
+    <span id="feature-search-help" class="search-help">Type to find features instantly</span>
+  </div>
+
+  <!-- Category Filter Buttons -->
+  <div class="category-filters" role="group" aria-label="Feature categories">
+    <button class="filter-btn active" data-category="all">
+      All Features <span class="count">133</span>
+    </button>
+    <button class="filter-btn" data-category="advocacy">
+      📝 Advocacy <span class="count">18</span>
+    </button>
+    <button class="filter-btn" data-category="wellness">
+      🧘 Wellness <span class="count">36</span>
+    </button>
+    <button class="filter-btn" data-category="evidence">
+      📁 Evidence <span class="count">7</span>
+    </button>
+    <button class="filter-btn" data-category="letters">
+      ✉️ Letters <span class="count">22</span>
+    </button>
+    <button class="filter-btn" data-category="community">
+      💬 Community <span class="count">8</span>
+    </button>
+    <button class="filter-btn" data-category="resources">
+      📚 Resources <span class="count">42</span>
+    </button>
+  </div>
+
+  <!-- Feature Cards Grid -->
+  <div id="feature-cards-grid" class="feature-cards-grid">
+    <!-- Advocacy Card -->
+    <div class="feature-card" data-category="advocacy">
+      <div class="card-icon">📝</div>
+      <h3 class="card-title">Advocacy Tools</h3>
+      <p class="card-description">Professional letter templates, legal automation, and workflow tools to advocate for your rights</p>
+      <ul class="card-features">
+        <li>✅ 22 letter templates</li>
+        <li>✅ Appeal automation</li>
+        <li>✅ Legal checklists</li>
+        <li>✅ Deadline tracking</li>
+      </ul>
+      <a href="#-advocacy-tab" class="card-link">Explore Advocacy →</a>
+    </div>
+
+    <!-- Wellness Card -->
+    <div class="feature-card" data-category="wellness">
+      <div class="card-icon">🧘</div>
+      <h3 class="card-title">Wellness & Health</h3>
+      <p class="card-description">Track your physical and mental health with 36 specialized wellness features designed for chronic conditions</p>
+      <ul class="card-features">
+        <li>✅ Mood & energy tracking</li>
+        <li>✅ Symptom journals</li>
+        <li>✅ Pain mapping</li>
+        <li>✅ ML predictions</li>
+      </ul>
+      <a href="#-wellness-tab" class="card-link">Explore Wellness →</a>
+    </div>
+
+    <!-- Evidence Locker Card -->
+    <div class="feature-card" data-category="evidence">
+      <div class="card-icon">🔒</div>
+      <h3 class="card-title">Evidence Locker</h3>
+      <p class="card-description">Military-grade encrypted storage for all your documents, photos, and evidence. Your data, your control</p>
+      <ul class="card-features">
+        <li>✅ AES-256 encryption</li>
+        <li>✅ Biometric protection</li>
+        <li>✅ Auto-organize</li>
+        <li>✅ Case timeline</li>
+      </ul>
+      <a href="#evidence-locker---your-secure-document-vault" class="card-link">Explore Evidence →</a>
+    </div>
+
+    <!-- Letter Wizard Card -->
+    <div class="feature-card" data-category="letters">
+      <div class="card-icon">✉️</div>
+      <h3 class="card-title">Letter Wizard</h3>
+      <p class="card-description">Generate professional letters in minutes with 22 templates covering workplace, legal, and benefits issues</p>
+      <ul class="card-features">
+        <li>✅ 22 templates</li>
+        <li>✅ Auto-fill data</li>
+        <li>✅ Legal formatting</li>
+        <li>✅ Export as PDF</li>
+      </ul>
+      <a href="#letter-wizard---22-professional-letter-templates" class="card-link">Explore Letters →</a>
+    </div>
+
+    <!-- Community Card -->
+    <div class="feature-card" data-category="community">
+      <div class="card-icon">💬</div>
+      <h3 class="card-title">Community & Support</h3>
+      <p class="card-description">Connect with peers, share experiences, and find support in safe, moderated spaces built for the community</p>
+      <ul class="card-features">
+        <li>✅ 12+ communities</li>
+        <li>✅ Direct messaging</li>
+        <li>✅ Peer matching</li>
+        <li>✅ Safety controls</li>
+      </ul>
+      <a href="#-community-tab" class="card-link">Explore Community →</a>
+    </div>
+
+    <!-- Resources Card -->
+    <div class="feature-card" data-category="resources">
+      <div class="card-icon">📚</div>
+      <h3 class="card-title">Resources & Learning</h3>
+      <p class="card-description">Comprehensive guides, legal resources, and educational content for every Canadian province</p>
+      <ul class="card-features">
+        <li>✅ Provincial guides</li>
+        <li>✅ Legal resources</li>
+        <li>✅ Forms & templates</li>
+        <li>✅ Crisis support</li>
+      </ul>
+      <a href="#-resources-tab" class="card-link">Explore Resources →</a>
+    </div>
+  </div>
+
+  <!-- Results Counter -->
+  <div id="filter-results" class="filter-results" role="status" aria-live="polite">
+    Showing all 133 features
+  </div>
+</div>
+
+---
+
 > ⚠️ **Content Note**: This page discusses legal processes, workplace injuries, and system navigation. Take breaks as needed.
 
 ---
@@ -771,3 +908,435 @@ All AI processing happens on-device for privacy.
 **Last Updated:** October 19, 2025  
 **Next Update:** Weekly during beta period  
 **Status:** Beta Testing Active
+
+<style>
+/* Features Filter Section */
+.features-filter-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.filter-title {
+  margin: 0 0 0.5rem;
+  color: #333;
+  font-size: 1.75rem;
+}
+
+.filter-description {
+  margin: 0 0 1.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Feature Search */
+.feature-search-container {
+  margin-bottom: 1.5rem;
+}
+
+.feature-search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  min-height: 48px;
+}
+
+.feature-search-input:focus {
+  outline: none;
+  border-color: #0066CC;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+.search-help {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Category Filter Buttons */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.25rem;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+}
+
+.filter-btn:hover {
+  border-color: #0066CC;
+  background-color: #f0f7ff;
+  transform: translateY(-2px);
+}
+
+.filter-btn:focus {
+  outline: 3px solid rgba(0, 102, 204, 0.5);
+  outline-offset: 2px;
+}
+
+.filter-btn.active {
+  background-color: #0066CC;
+  border-color: #0066CC;
+  color: white;
+}
+
+.filter-btn .count {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.125rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.filter-btn.active .count {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Feature Cards Grid */
+.feature-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  border-color: #0066CC;
+  box-shadow: 0 8px 20px rgba(0, 102, 204, 0.15);
+  transform: translateY(-4px);
+}
+
+.feature-card.hidden {
+  display: none;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.card-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.card-description {
+  margin: 0 0 1rem;
+  color: #666;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.card-features {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  color: #555;
+}
+
+.card-features li {
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #0066CC;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.card-link:hover {
+  background-color: #0052a3;
+  transform: translateX(4px);
+}
+
+.card-link:focus {
+  outline: 3px solid rgba(0, 102, 204, 0.5);
+  outline-offset: 2px;
+}
+
+/* Filter Results */
+.filter-results {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #0066CC;
+  background-color: #e3f2fd;
+  border-radius: 6px;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .features-filter-section {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  }
+
+  .filter-title {
+    color: #e0e0e0;
+  }
+
+  .filter-description {
+    color: #aaa;
+  }
+
+  .feature-search-input {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #444;
+  }
+
+  .feature-search-input:focus {
+    border-color: #4DB8FF;
+    box-shadow: 0 0 0 3px rgba(77, 184, 255, 0.2);
+  }
+
+  .search-help {
+    color: #aaa;
+  }
+
+  .filter-btn {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+  }
+
+  .filter-btn:hover {
+    border-color: #4DB8FF;
+    background-color: #1a2a3a;
+  }
+
+  .filter-btn.active {
+    background-color: #0066CC;
+    border-color: #0066CC;
+  }
+
+  .feature-card {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
+
+  .feature-card:hover {
+    border-color: #4DB8FF;
+  }
+
+  .card-title {
+    color: #e0e0e0;
+  }
+
+  .card-description {
+    color: #aaa;
+  }
+
+  .card-features {
+    color: #bbb;
+  }
+
+  .filter-results {
+    background-color: #1a2a3a;
+    color: #4DB8FF;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .filter-btn,
+  .feature-card,
+  .card-link,
+  .feature-search-input {
+    transition: none;
+  }
+
+  .filter-btn:hover,
+  .feature-card:hover {
+    transform: none;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .features-filter-section {
+    padding: 1rem;
+  }
+
+  .filter-title {
+    font-size: 1.4rem;
+  }
+
+  .category-filters {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.625rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .feature-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>
+
+<script>
+// Feature Cards Filtering and Search
+(function() {
+  const searchInput = document.getElementById('feature-search');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.feature-card');
+  const resultsDiv = document.getElementById('filter-results');
+  
+  if (!searchInput || !cards.length) return;
+  
+  let activeCategory = 'all';
+  let searchTimeout;
+  
+  // Category counts for each filter
+  const categoryCounts = {
+    'all': 133,
+    'advocacy': 18,
+    'wellness': 36,
+    'evidence': 7,
+    'letters': 22,
+    'community': 8,
+    'resources': 42
+  };
+  
+  // Filter cards
+  function filterCards() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+    
+    cards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
+      const description = card.querySelector('.card-description')?.textContent.toLowerCase() || '';
+      const features = card.querySelector('.card-features')?.textContent.toLowerCase() || '';
+      const searchableText = title + ' ' + description + ' ' + features;
+      
+      // Check category match
+      const categoryMatch = activeCategory === 'all' || category === activeCategory;
+      
+      // Check search match
+      const searchMatch = !searchTerm || searchableText.includes(searchTerm);
+      
+      if (categoryMatch && searchMatch) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    
+    // Update results counter
+    updateResultsCount(visibleCount);
+  }
+  
+  // Update results counter
+  function updateResultsCount(count) {
+    if (!resultsDiv) return;
+    
+    if (count === 0) {
+      resultsDiv.textContent = 'No features found. Try a different search or category.';
+      resultsDiv.style.backgroundColor = '#fff3cd';
+      resultsDiv.style.color = '#856404';
+    } else {
+      const categoryText = activeCategory === 'all' ? '' : ` in ${activeCategory}`;
+      resultsDiv.textContent = `Showing ${count} feature${count !== 1 ? 's' : ''}${categoryText}`;
+      resultsDiv.style.backgroundColor = '#e3f2fd';
+      resultsDiv.style.color = '#0066CC';
+    }
+  }
+  
+  // Category button click
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remove active from all buttons
+      filterBtns.forEach(b => b.classList.remove('active'));
+      
+      // Add active to clicked button
+      this.classList.add('active');
+      
+      // Update active category
+      activeCategory = this.getAttribute('data-category');
+      
+      // Filter cards
+      filterCards();
+      
+      // Announce to screen readers
+      const announcement = `Filtering to show ${this.textContent.trim()}`;
+      announceToScreenReader(announcement);
+    });
+  });
+  
+  // Search input
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(filterCards, 300);
+    });
+    
+    searchInput.addEventListener('search', filterCards);
+  }
+  
+  // Screen reader announcement
+  function announceToScreenReader(message) {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('role', 'status');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  }
+  
+  // Initialize
+  updateResultsCount(cards.length);
+})();
+</script>
