@@ -15,6 +15,7 @@ import { useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
+import { GapView } from '../../components/GapView';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
@@ -116,7 +117,7 @@ export default function OnboardingWizard() {
       </View>
       
       {/* Progress */}
-      <View style={styles.progress}>
+      <GapView gap={8} style={styles.progress}>
         {Array.from({ length: totalSteps }).map((_, i) => (
           <View
             key={i}
@@ -127,7 +128,7 @@ export default function OnboardingWizard() {
             ]}
           />
         ))}
-      </View>
+      </GapView>
       
       {/* Content */}
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
@@ -145,7 +146,7 @@ export default function OnboardingWizard() {
       
       {/* Navigation */}
       <View style={styles.navigation}>
-        <View style={styles.navButtons}>
+        <GapView gap={12} style={styles.navButtons}>
           {step > 1 && (
             <A11yPressable
               style={[styles.button, styles.buttonSecondary]}
@@ -154,10 +155,12 @@ export default function OnboardingWizard() {
               accessibilityLabel={t('common.back', 'Back')}
               hitSlop={HIT_SLOP_8}
             >
-              <Ionicons name="arrow-back" size={20} color={palette.text} />
-              <Text style={[styles.buttonText, { color: palette.text }]}>
-                {t('common.back', 'Back')}
-              </Text>
+              <GapView gap={8} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                <Ionicons name="arrow-back" size={20} color={palette.text} />
+                <Text style={[styles.buttonText, { color: palette.text }]}>
+                  {t('common.back', 'Back')}
+                </Text>
+              </GapView>
             </A11yPressable>
           )}
           
@@ -169,12 +172,14 @@ export default function OnboardingWizard() {
             accessibilityLabel={step < totalSteps ? t('common.next', 'Next') : t('common.finish', 'Finish')}
             hitSlop={HIT_SLOP_8}
           >
-            <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
-              {saving ? t('common.saving', 'Saving...') : step < totalSteps ? t('common.next', 'Next') : t('common.finish', 'Finish')}
-            </Text>
-            {!saving && <Ionicons name={step < totalSteps ? "arrow-forward" : "checkmark"} size={20} color={palette.onPrimary} />}
+            <GapView gap={8} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+              <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
+                {saving ? t('common.saving', 'Saving...') : step < totalSteps ? t('common.next', 'Next') : t('common.finish', 'Finish')}
+              </Text>
+              {!saving && <Ionicons name={step < totalSteps ? "arrow-forward" : "checkmark"} size={20} color={palette.onPrimary} />}
+            </GapView>
           </A11yPressable>
-        </View>
+        </GapView>
         
         <A11yPressable
           style={styles.skipButton}
@@ -239,7 +244,7 @@ function RoleStep({ role, setRole, palette, t, styles }: any) {
         {t('onboarding.role.help', 'This helps us show you the most relevant features')}
       </Text>
       
-      <View style={styles.optionsGrid}>
+      <GapView gap={12} style={styles.optionsGrid}>
         {roles.map((r) => (
           <OptionCard
             key={r.value}
@@ -252,7 +257,7 @@ function RoleStep({ role, setRole, palette, t, styles }: any) {
             styles={styles}
           />
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -285,7 +290,7 @@ function DisabilityTypesStep({ types, setTypes, palette, t, styles }: any) {
         {t('onboarding.disability.help', 'Select all that apply. This helps us personalize tools.')}
       </Text>
       
-      <View style={styles.chipGrid}>
+      <GapView gap={10} style={styles.chipGrid}>
         {disabilityOptions.map((option) => (
           <Chip
             key={option.value}
@@ -297,7 +302,7 @@ function DisabilityTypesStep({ types, setTypes, palette, t, styles }: any) {
             styles={styles}
           />
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -339,7 +344,7 @@ function EnergyPatternStep({ pattern, setPattern, palette, t, styles }: any) {
         {t('onboarding.energy.help', 'We\'ll suggest features at your best times')}
       </Text>
       
-      <View style={styles.optionsGrid}>
+      <GapView gap={12} style={styles.optionsGrid}>
         {patterns.map((p) => (
           <OptionCard
             key={p.value}
@@ -352,7 +357,7 @@ function EnergyPatternStep({ pattern, setPattern, palette, t, styles }: any) {
             styles={styles}
           />
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -414,7 +419,7 @@ function PrimaryNeedsStep({ needs, setNeeds, palette, t, styles }: any) {
         {t('onboarding.needs.help', 'Select all that interest you')}
       </Text>
       
-      <View style={styles.optionsGrid}>
+      <GapView gap={12} style={styles.optionsGrid}>
         {needsOptions.map((need) => (
           <OptionCard
             key={need.value}
@@ -428,7 +433,7 @@ function PrimaryNeedsStep({ needs, setNeeds, palette, t, styles }: any) {
             small
           />
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -480,10 +485,12 @@ function Chip({ icon, label, selected, onPress, palette, styles }: any) {
       accessibilityState={{ selected }}
       hitSlop={HIT_SLOP_8}
     >
-      <Ionicons name={icon as any} size={18} color={selected ? palette.primary : palette.text} />
-      <Text style={[styles.chipLabel, { color: selected ? palette.primary : palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        {label}
-      </Text>
+      <GapView gap={6} style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <Ionicons name={icon as any} size={18} color={selected ? palette.primary : palette.text} />
+        <Text style={[styles.chipLabel, { color: selected ? palette.primary : palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          {label}
+        </Text>
+      </GapView>
     </Pressable>
   );
 }
@@ -542,7 +549,6 @@ function createStyles(palette: any) {
     progress: {
       flexDirection: 'row',
       justifyContent: 'center',
-      gap: 8,
       paddingHorizontal: 20,
       marginBottom: 24,
     },
@@ -576,7 +582,6 @@ function createStyles(palette: any) {
       marginBottom: 24,
     },
     optionsGrid: {
-      gap: 12,
     },
     optionCard: {
       padding: 16,
@@ -617,12 +622,8 @@ function createStyles(palette: any) {
     chipGrid: {
       flexDirection: 'row',
       flexWrap: 'wrap',
-      gap: 10,
     },
     chip: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      gap: 6,
       paddingHorizontal: 12,
       paddingVertical: 8,
       borderRadius: 20,
@@ -641,15 +642,10 @@ function createStyles(palette: any) {
     },
     navButtons: {
       flexDirection: 'row',
-      gap: 12,
       marginBottom: 12,
     },
     button: {
       flex: 1,
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 8,
       paddingVertical: 14,
       borderRadius: 12,
     },

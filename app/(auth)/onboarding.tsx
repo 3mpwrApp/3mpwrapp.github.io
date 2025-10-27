@@ -3,16 +3,17 @@ import type { Href } from 'expo-router';
 import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import {
-  ScrollView,
-  StyleSheet,
-  Switch,
-  Text,
-  View
+    ScrollView,
+    StyleSheet,
+    Switch,
+    Text,
+    View
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import A11yPressable from '../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../components/A11yWrapper';
+import { GapView } from '../../components/GapView';
 import { useThemeColor } from '../../hooks/useThemeColor';
 
 interface AccessibilityPreferences {
@@ -229,7 +230,7 @@ export default function OnboardingScreen() {
         </Text>
       </A11yPressable>
 
-      <View style={styles.buttonsContainer}>
+      <GapView gap={12} style={styles.buttonsContainer}>
         <A11yPressable
           onPress={() => userRole && setStep('welcome')}
           accessibilityRole="button"
@@ -254,7 +255,7 @@ export default function OnboardingScreen() {
         >
           <Text style={[styles.buttonSecondaryText, { color: colors.primary }]}>Skip for Now</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </ScrollView>
   );
 
@@ -294,7 +295,7 @@ export default function OnboardingScreen() {
         </Text>
       </View>
 
-      <View style={styles.buttonsContainer}>
+      <GapView gap={12} style={styles.buttonsContainer}>
         <A11yPressable
           onPress={() => setStep('accessibility')}
           accessibilityRole="button"
@@ -312,7 +313,7 @@ export default function OnboardingScreen() {
         >
           <Text style={[styles.buttonSecondaryText, { color: colors.primary }]}>Skip for Now</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </ScrollView>
   );
 
@@ -453,7 +454,7 @@ export default function OnboardingScreen() {
         </View>
       </View>
 
-      <View style={styles.buttonsContainer}>
+      <GapView gap={12} style={styles.buttonsContainer}>
         <A11yPressable
           onPress={() => setStep(userRole === 'pwd' ? 'disability' : userRole === 'supporter' ? 'supporter-info' : 'ally-info')}
           accessibilityRole="button"
@@ -469,7 +470,7 @@ export default function OnboardingScreen() {
         >
           <Text style={[styles.buttonSecondaryText, { color: colors.primary }]}>Back</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </ScrollView>
   );
 
@@ -580,7 +581,7 @@ export default function OnboardingScreen() {
         ))}
       </View>
 
-      <View style={styles.buttonsContainer}>
+      <GapView gap={12} style={styles.buttonsContainer}>
         <A11yPressable
           onPress={() => setStep('ready')}
           accessibilityRole="button"
@@ -596,7 +597,7 @@ export default function OnboardingScreen() {
         >
           <Text style={[styles.buttonSecondaryText, { color: colors.primary }]}>Back</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </ScrollView>
   );
 
@@ -704,7 +705,7 @@ export default function OnboardingScreen() {
         ))}
       </View>
 
-      <View style={styles.buttonsContainer}>
+      <GapView gap={12} style={styles.buttonsContainer}>
         <A11yPressable
           onPress={() => setStep('ready')}
           accessibilityRole="button"
@@ -720,7 +721,7 @@ export default function OnboardingScreen() {
         >
           <Text style={[styles.buttonSecondaryText, { color: colors.primary }]}>Back</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </ScrollView>
   );
 
@@ -810,7 +811,7 @@ export default function OnboardingScreen() {
         ))}
       </View>
 
-      <View style={styles.buttonsContainer}>
+      <GapView gap={12} style={styles.buttonsContainer}>
         <A11yPressable
           onPress={() => setStep('ready')}
           accessibilityRole="button"
@@ -826,7 +827,7 @@ export default function OnboardingScreen() {
         >
           <Text style={[styles.buttonSecondaryText, { color: colors.primary }]}>Back</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </ScrollView>
   );
 
@@ -848,7 +849,7 @@ export default function OnboardingScreen() {
           </Text>
         </View>
 
-        <View style={styles.buttonsContainer}>
+        <GapView gap={12} style={styles.buttonsContainer}>
           <A11yPressable
             onPress={proceedToLogin}
             accessibilityRole="button"
@@ -864,7 +865,7 @@ export default function OnboardingScreen() {
           >
             <Text style={[styles.buttonSecondaryText, { color: colors.primary }]}>Create Account</Text>
           </A11yPressable>
-        </View>
+        </GapView>
       </View>
     </ScrollView>
   );
@@ -1036,7 +1037,6 @@ const styles = StyleSheet.create({
     marginLeft: 12,
   },
   buttonsContainer: {
-    gap: 12,
     marginTop: 24,
   },
   button: {

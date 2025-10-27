@@ -2,6 +2,7 @@ import { Link, useRouter } from 'expo-router';
 import React from 'react';
 import { Platform, Pressable, Text, View } from 'react-native';
 
+import { GapView } from '../../components/GapView';
 import { useFirst7 } from '../../store/onboardingFirst7';
 import { useAppPalette } from '../../theme/usePalette';
 
@@ -25,20 +26,20 @@ export default function First7Screen(){
   React.useEffect(()=>{ start(); }, [start]);
   const chipStyle = React.useMemo(() => ({ paddingVertical: 8, paddingHorizontal: 12, borderRadius: 9999, borderWidth: 1, borderColor: palette.muted, backgroundColor: palette.surface } as const), [palette]);
   return (
-    <View style={{ flex: 1, padding: 16, gap: 12 }} accessibilityRole="summary" accessibilityLabel="First 7 days onboarding">
+    <GapView gap={12} style={{ flex: 1, padding: 16 }} accessibilityRole="summary" accessibilityLabel="First 7 days onboarding">
       <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '700', color: palette.text }}>Your first 7 days</Text>
       <Text style={{ color: palette.text }}>Get oriented with a few quick wins. Your progress is private to your device.</Text>
-      <View style={{ gap: 8 }}>
+      <GapView gap={8}>
         {steps.map(s => (
           <Pressable key={s.id} accessibilityRole="checkbox" accessibilityState={{ checked: !!state.completed[s.id as Step] }} onPress={()=>toggle(s.id as Step)} style={{ padding: 12, borderRadius: 10, borderWidth: 1, borderColor: palette.muted, backgroundColor: state.completed[s.id as Step]? palette.card: palette.surface }} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
             <Text style={{ fontWeight: '600', color: palette.text }}>{s.label}</Text>
             <Text style={{ color: palette.text, opacity: 0.8 }}>{s.hint}</Text>
           </Pressable>
         ))}
-      </View>
+      </GapView>
       <View style={{ height: 1, backgroundColor: palette.muted, marginVertical: 8 }} />
       <Text style={{ fontWeight: '600', color: palette.text }}>Quick links</Text>
-      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+      <GapView gap={8} style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
         <Link href="/(tabs)/resources/evidence-locker" asChild>
           <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text style={{ color: palette.text }}>Evidence Locker</Text></Pressable>
         </Link>
@@ -56,11 +57,11 @@ export default function First7Screen(){
             <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}> <Text style={{ color: palette.text }}>Notifications</Text></Pressable>
           </Link>
         )}
-      </View>
+      </GapView>
       <Pressable accessibilityRole="button" style={{ marginTop: 'auto', padding: 14, backgroundColor: palette.primary, borderRadius: 12 }} onPress={()=>router.back()} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
         <Text style={{ color: palette.onPrimary, textAlign: 'center', fontWeight: '700' }}>Done</Text>
       </Pressable>
-    </View>
+    </GapView>
   );
 }
 
