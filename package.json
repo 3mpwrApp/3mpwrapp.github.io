@@ -6,6 +6,8 @@
     "playwright": "^1.55.1"
   },
   "devDependencies": {
-    "sharp": "^0.34.4"
+    "clean-css": "^5.3.3",
+    "sharp": "^0.34.4",
+    "terser": "^5.44.0"
   }
 }

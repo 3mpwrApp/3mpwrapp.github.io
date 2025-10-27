@@ -20,8 +20,8 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   
   <!-- Preload critical resources -->
-  <link rel="preload" href="{{ "/assets/css/style.css" | relative_url }}" as="style">
-  <link rel="preload" href="{{ "/assets/css/design-system.css" | relative_url }}" as="style">
+  <link rel="preload" href="{{ "/assets/css/style.min.css" | relative_url }}" as="style">
+  <link rel="preload" href="{{ "/assets/css/design-system.min.css" | relative_url }}" as="style">
   <link rel="preload" href="{{ "/assets/empwrapp-logo.png" | relative_url }}" as="image">
   
   <!-- PWA Manifest -->
@@ -31,15 +31,15 @@
   {%- include structured-data.html -%}
   {%- include custom-head.html -%}
   {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | relative_url }}">
   <!-- WCAG AAA Compliant Color System -->
-  <link rel="stylesheet" href="{{ "/assets/css/accessibility-tokens.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/accessibility-tokens.min.css" | relative_url }}">
   <!-- WCAG 2.2 AA and Beyond Accessibility Enhancements -->
-  <link rel="stylesheet" href="{{ "/assets/css/accessibility-enhancements.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/accessibility-enhancements.min.css" | relative_url }}">
   <!-- Performance Optimizations: Critical CSS, Lazy Loading, Font Optimization -->
-  <link rel="stylesheet" href="{{ "/assets/css/performance-optimizations.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/performance-optimizations.min.css" | relative_url }}">
   <!-- Lighthouse Audit Fixes: Touch targets, contrast, aspect ratios -->
-  <link rel="stylesheet" href="{{ "/assets/css/lighthouse-fixes.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/lighthouse-fixes.min.css" | relative_url }}">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -277,17 +277,17 @@
   </script>
 
   <!-- Utilities and controls -->
-  <script src="{{ '/assets/js/a11y.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/contrast.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/back-to-top.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/settings.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/a11y.min.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/contrast.min.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/theme.min.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/back-to-top.min.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/settings.min.js' | relative_url }}" defer></script>
   
   <!-- Innovative Accessibility Features - Low Priority -->
-  <script src="{{ '/assets/js/accessibility-innovations.js' | relative_url }}" defer async></script>
+  <script src="{{ '/assets/js/accessibility-innovations.min.js' | relative_url }}" defer async></script>
   
   <!-- WCAG 2.2 AA+ Compliance Features -->
-  <script src="{{ '/assets/js/wcag-compliance.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/wcag-compliance.min.js' | relative_url }}" defer></script>
 
   <script>
     // Mobile menu toggle accessibility
@@ -710,9 +710,9 @@
   </script>
 
   <!-- Lazy Loading Script -->
-  <script src="{{ "/assets/js/lazy-load.js" | relative_url }}" defer></script>
+  <script src="{{ "/assets/js/lazy-load.min.js" | relative_url }}" defer></script>
 
   <!-- Performance Monitoring (development only - disable in production if needed) -->
-  <script src="{{ "/assets/js/performance-monitor.js" | relative_url }}" defer></script>
+  <script src="{{ "/assets/js/performance-monitor.min.js" | relative_url }}" defer></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+{% comment %}
+  WebP Picture Element with Fallback
+  
+  Usage:
+  {% include webp-picture.html 
+     src="assets/images/hero.png" 
+     alt="Hero image" 
+     width="1200" 
+     height="630" 
+     class="hero-image" 
+     loading="lazy" %}
+{% endcomment %}
+
+{% assign image_path = include.src %}
+{% assign image_ext = image_path | split: "." | last %}
+{% assign image_base = image_path | replace: "." | append: image_ext, "" %}
+{% assign webp_path = image_base | append: ".webp" %}
+
+{% assign img_width = include.width | default: "auto" %}
+{% assign img_height = include.height | default: "auto" %}
+{% assign img_alt = include.alt | default: "" %}
+{% assign img_class = include.class | default: "" %}
+{% assign img_loading = include.loading | default: "lazy" %}
+{% assign img_sizes = include.sizes | default: "100vw" %}
+
+<picture>
+  <source 
+    type="image/webp" 
+    srcset="{{ webp_path | relative_url }}"
+    {% if include.srcset_webp %}srcset="{{ include.srcset_webp }}"{% endif %}
+  >
+  <source 
+    type="image/{{ image_ext }}" 
+    srcset="{{ image_path | relative_url }}"
+    {% if include.srcset %}srcset="{{ include.srcset }}"{% endif %}
+  >
+  <img 
+    src="{{ image_path | relative_url }}" 
+    alt="{{ img_alt }}" 
+    {% if img_width != "auto" %}width="{{ img_width }}"{% endif %}
+    {% if img_height != "auto" %}height="{{ img_height }}"{% endif %}
+    {% if img_class != "" %}class="{{ img_class }}"{% endif %}
+    loading="{{ img_loading }}"
+    {% if include.sizes %}sizes="{{ img_sizes }}"{% endif %}
+    decoding="async"
+  >
+</picture>
