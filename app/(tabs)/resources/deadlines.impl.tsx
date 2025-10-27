@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import { GapView } from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -37,10 +38,10 @@ export default function DeadlinesScreen() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }} accessibilityLabel={t('templates.deadlines.screenLabel','Deadlines screen')}>
       <Text ref={titleRef} style={s.title} accessibilityRole='header' maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('templates.deadlines.title','Deadlines')}</Text>
-      <View style={s.actionsRow}>
+      <GapView gap={8} style={s.actionsRow}>
   <A11yPressable onPress={()=>{ setShowInfo(v=>!v); announce(showInfo? t('common.hide','Hide'): t('templates.deadlines.toggleInfo','Toggle instructions')); }} style={s.infoBtn} accessibilityRole='button' accessibilityLabel={t('templates.deadlines.toggleInfo','Toggle instructions')}><Text style={s.infoBtnText}>{showInfo? t('common.hide','Hide'): t('common.show','Show')}</Text></A11yPressable>
         <A11yPressable onPress={importICS} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.deadlines.importICS','Import ICS to Calendar')}><Text style={s.secondaryBtnText}>{t('templates.deadlines.importICS','Import ICS to Calendar')}</Text></A11yPressable>
-      </View>
+      </GapView>
       {showInfo && (
         <View style={s.infoCard} accessibilityRole='summary'>
           <Text style={s.infoTitle}>{t('templates.deadlines.infoTitle','How to Use')}</Text>
@@ -50,7 +51,7 @@ export default function DeadlinesScreen() {
           <Text style={s.infoLine}>{t('templates.deadlines.infoLine4','Times shown in your device timezone unless otherwise noted.')}</Text>
         </View>
       )}
-      <View style={s.tabRow}>
+      <GapView gap={8} style={s.tabRow}>
         <A11yPressable
           onPress={()=>changeTab('calendar')}
           accessibilityRole='tab'
@@ -71,7 +72,7 @@ export default function DeadlinesScreen() {
         >
           <Text style={[s.chipLabel, tab==='list'&&s.chipLabelActive]}>{t('templates.deadlines.listTab','List')}</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       {tab==='calendar'? <DeadlinesCalendar/> : <DeadlinesList/>}
       {tab==='calendar' && <RecurringBuilder/>}
     </ScrollView>
@@ -108,7 +109,7 @@ function DeadlinesCalendar() {
             hitSlop={HIT_SLOP_8}
         ><Text style={{ color: palette.text }}>{'>'}</Text></A11yPressable>
       </View>
-      <View style={{ flexDirection:'row', gap:8, marginBottom: 6 }}>
+      <GapView gap={8} style={{ flexDirection:'row', marginBottom: 6 }}>
         <A11yPressable
           onPress={()=>changeView('month')}
           style={[s.chip, view==='month'&&s.chipActive]}
@@ -125,7 +126,7 @@ function DeadlinesCalendar() {
           accessibilityLabel={t('templates.deadlines.weekView','Week view')}
           hitSlop={HIT_SLOP_8}
         ><Text style={{ color: view==='week'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.weekView','Week')}</Text></A11yPressable>
-      </View>
+      </GapView>
       {(view==='month'? matrix : [currentWeekFromMatrix(matrix)]).map((week, wi) => (
         <View key={wi} style={{ flexDirection:'row', justifyContent:'space-between', marginBottom: 4 }}>
           {week.map((day, di) => {
@@ -172,7 +173,7 @@ function RecurringBuilder() {
       <Text style={s.cardTitle}>{t('templates.deadlines.recurringTitle','Add Recurring')}</Text>
       <TextInput placeholder={t('templates.deadlines.recurringPrefix','Title prefix')} placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
       <TextInput placeholder={t('templates.deadlines.recurringStart','Start date (YYYY-MM-DD)')} placeholderTextColor={palette.text+'77'} value={start} onChangeText={setStart} style={s.input} />
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
+      <GapView gap={8} style={{ flexDirection:'row', marginTop: 8 }}>
         <A11yPressable
           onPress={()=>setFreq('weekly')}
           style={[s.chip, freq==='weekly'&&s.chipActive]}
@@ -189,7 +190,7 @@ function RecurringBuilder() {
           accessibilityLabel={t('templates.deadlines.recurringMonthly','Monthly frequency')}
           hitSlop={HIT_SLOP_8}
         ><Text style={{ color: freq==='monthly'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('templates.deadlines.recurringMonthly','Monthly')}</Text></A11yPressable>
-      </View>
+      </GapView>
       <TextInput placeholder={t('templates.deadlines.recurringCount','Count')} placeholderTextColor={palette.text+'77'} value={count} onChangeText={setCount} style={s.input} />
       <A11yPressable onPress={async()=>{
         try {
@@ -214,7 +215,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: '700', color: palette.text },
-    tabRow: { flexDirection:'row', gap:8, marginBottom:8 },
+    tabRow: { flexDirection:'row', marginBottom:8 },
     chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
     chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
     chipLabel: { color: palette.text, fontWeight:'700' },
@@ -223,7 +224,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems:'center' },
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
     cardTitle: { color: palette.text, fontWeight: '700', marginTop: 10 },
-    actionsRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:12, marginBottom:8 },
+    actionsRow: { flexDirection:'row', flexWrap:'wrap', marginTop:12, marginBottom:8 },
     infoBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:12, paddingVertical:8, borderRadius:6 },
     infoBtnText: { color: palette.text, fontWeight:'600', fontSize:13 },
     secondaryBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:8, borderRadius:6 },

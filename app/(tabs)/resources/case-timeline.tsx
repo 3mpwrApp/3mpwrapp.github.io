@@ -4,6 +4,7 @@ import { Alert, ScrollView, Share, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import { GapView } from "../../../components/GapView";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
@@ -74,7 +75,7 @@ export default function CaseTimelineTracker() {
         </View>
       )}
       <Text style={styles.subtitle}>{t('templates.timeline.subtitle','Organize documents, deadlines, hearings, and appointments. Export timelines for your case file or representative.')}</Text>
-      <View style={{ gap: 8 }}>
+      <GapView gap={8}>
         <Link href={("/(tabs)/resources/deadlines" as any)} asChild>
           <A11yPressable style={styles.cta} accessibilityLabel={t('templates.timeline.openDeadlines','Open Deadline Calculator')}>
             <Text style={styles.ctaText}>{t('templates.timeline.openDeadlines','Open Deadline Calculator')}</Text>
@@ -100,7 +101,7 @@ export default function CaseTimelineTracker() {
         >
           <Text style={styles.ctaSecondaryText}>{t('templates.timeline.addDocsBtn','Add Documents to Locker')}</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       <View style={{ marginTop:16 }}>
         <Text style={styles.entryLabel}>{t('templates.timeline.newEntry','New Entry')}</Text>
         <Text style={styles.fieldLabel}>{t('templates.timeline.date','Date')}</Text>
@@ -109,9 +110,9 @@ export default function CaseTimelineTracker() {
         <Text style={styles.entryInput} accessibilityLabel={t('templates.timeline.titleField','Title')}>{newTitle}</Text>
         <Text style={styles.fieldLabel}>{t('templates.timeline.detailsField','Details')}</Text>
         <Text style={[styles.entryInput,{ minHeight:60 }]} accessibilityLabel={t('templates.timeline.detailsField','Details')}>{newDetails}</Text>
-        <View style={styles.entryActions}>
+        <GapView gap={8} style={styles.entryActions}>
           <A11yPressable onPress={addEntry} style={styles.addBtn}><Text style={styles.addBtnText}>{t('templates.timeline.addEntry','Add')}</Text></A11yPressable>
-        </View>
+        </GapView>
       </View>
       {entries.length>0 && (
         <View style={{ marginTop:24 }}>
@@ -150,7 +151,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       alignItems: "center",
     },
     ctaSecondaryText: { color: palette.text, fontWeight: "600" },
-    actionsRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom:8 },
+    actionsRow: { flexDirection:'row', flexWrap:'wrap', marginBottom:8 },
     secondaryBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:12, paddingVertical:8, borderRadius:6 },
     secondaryBtnText: { color: palette.text, fontWeight:'600', fontSize:13 },
     infoCard: { backgroundColor: palette.card, borderRadius:8, padding:12, borderWidth:1, borderColor:palette.muted, marginBottom:12 },
@@ -160,7 +161,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     fieldLabel: { color: palette.text, fontWeight:'600', marginTop:8, marginBottom:4 },
     readOnlyField: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:6, padding:8, color: palette.text },
     entryInput: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:6, padding:8, color: palette.text, backgroundColor: palette.surface },
-    entryActions: { flexDirection:'row', gap:8, marginTop:8 },
+    entryActions: { flexDirection:'row', marginTop:8 },
     addBtn: { backgroundColor: palette.primary, paddingVertical:10, paddingHorizontal:16, borderRadius:8 },
     addBtnText: { color: palette.onPrimary, fontWeight:'700' },
     entryCard: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, padding:12, marginTop:8, backgroundColor: palette.surface },

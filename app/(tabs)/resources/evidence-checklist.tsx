@@ -4,6 +4,7 @@ import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { DyslexiaText } from "../../../components/DyslexiaText";
+import { GapView } from "../../../components/GapView";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
@@ -83,12 +84,12 @@ export default function EvidenceChecklist() {
         {t('templates.checklist.title','Evidence Checklist')}
       </Text>
       <DisclaimerBanner type="legal" compact />
-      <View style={s.actionsRow}>
+      <GapView gap={8} style={s.actionsRow}>
   <A11yPressable onPress={()=>{ setShowInfo(v=>!v); announce(showInfo? t('common.hide','Hide') : t('templates.checklist.toggleInfo','Toggle instructions')); }} style={s.infoBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.toggleInfo','Toggle instructions')}><Text style={s.infoBtnText}>{showInfo ? t('common.hide','Hide') : t('common.show','Show')}</Text></A11yPressable>
         <A11yPressable onPress={copySummary} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.copy','Copy summary')}><Text style={s.secondaryBtnText}>{t('templates.checklist.copy','Copy summary')}</Text></A11yPressable>
         <A11yPressable onPress={exportSummary} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.export','Export')}><Text style={s.secondaryBtnText}>{t('templates.checklist.export','Export')}</Text></A11yPressable>
         <A11yPressable onPress={reset} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.reset','Reset')}><Text style={s.secondaryBtnText}>{t('templates.checklist.reset','Reset')}</Text></A11yPressable>
-      </View>
+      </GapView>
       {showInfo && (
         <View style={s.infoCard} accessibilityRole='summary'>
           <Text style={s.infoTitle}>{t('templates.checklist.infoTitle','How to Use')}</Text>
@@ -98,19 +99,21 @@ export default function EvidenceChecklist() {
         </View>
       )}
       <DyslexiaText style={s.subtitle}>{t('templates.checklist.subtitle','Pick a process to view a tailored checklist.')}</DyslexiaText>
-      <View style={s.chipRow}>
+      <GapView gap={8} style={s.chipRow}>
         {(['WCB','LTD','CPP-D','Accommodation'] as Kind[]).map(k => (
           <A11yPressable hitSlop={HIT_SLOP_8} key={k} onPress={()=>{ setKind(k); announce(t('templates.checklist.kindChanged','Checklist type changed')); }} accessibilityRole='button' accessibilityState={{ selected: kind===k }} style={[s.chip, kind===k && s.chipActive]}>
             <Text style={[s.chipText, kind===k && s.chipTextActive]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{k}</Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
   <Text style={s.progress} accessibilityLabel={t('templates.checklist.progressLabel','Checklist progress')} accessibilityValue={{ text: `${completed.current.size}/${lines.length}` }}>{t('templates.checklist.progress','Progress: {{done}} / {{total}} ({{pct}}%)').replace('{{done}}', String(completed.current.size)).replace('{{total}}', String(lines.length)).replace('{{pct}}', String(progressPct))}</Text>
       {lines.map((line,i)=>(
-        <A11yPressable hitSlop={HIT_SLOP_8} key={i} onPress={()=>toggleLine(i)} accessibilityRole='checkbox' accessibilityState={{ checked: completed.current.has(i) }} style={s.itemRow}>
-          <View style={[s.checkbox, completed.current.has(i) && s.checkboxChecked]} />
+        <GapView gap={10} key={i} style={s.itemRow}>
+          <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>toggleLine(i)} accessibilityRole='checkbox' accessibilityState={{ checked: completed.current.has(i) }}>
+            <View style={[s.checkbox, completed.current.has(i) && s.checkboxChecked]} />
+          </A11yPressable>
           <Text style={[s.itemText, completed.current.has(i) && s.itemTextDone]} maxFontSizeMultiplier={MAX_FONT_SCALE}>• {line}</Text>
-        </A11yPressable>
+        </GapView>
       ))}
       <Text style={[s.tip,{ marginTop:12 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('templates.checklist.tip','Tip: Summaries from Wellness trackers can support your evidence.')}</Text>
     </ScrollView>
@@ -122,12 +125,12 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     container: { flex:1, backgroundColor: palette.background },
     title: { fontSize:22, fontWeight:'700', color: palette.text },
     subtitle: { color: palette.text, opacity:0.9, marginBottom:8 },
-    chipRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom:8 },
+    chipRow: { flexDirection:'row', flexWrap:'wrap', marginBottom:8 },
     chip: { borderWidth:StyleSheet.hairlineWidth, borderColor:palette.muted, borderRadius:16, paddingHorizontal:12, paddingVertical:6 },
     chipActive: { backgroundColor:palette.primary, borderColor:palette.primary },
     chipText: { color: palette.text },
     chipTextActive: { color: palette.onPrimary, fontWeight:'700' },
-    actionsRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom:12 },
+    actionsRow: { flexDirection:'row', flexWrap:'wrap', marginBottom:12 },
     infoBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:12, paddingVertical:8, borderRadius:6 },
     infoBtnText: { color: palette.text, fontWeight:'600', fontSize:13 },
     secondaryBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:8, borderRadius:6 },
@@ -136,7 +139,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     infoTitle: { fontWeight:'700', color: palette.text, marginBottom:4 },
     infoLine: { color: palette.text, opacity:0.85, marginBottom:2, fontSize:13 },
     progress: { color: palette.text, fontWeight:'600', marginBottom:8 },
-    itemRow: { flexDirection:'row', alignItems:'center', gap:10, paddingVertical:6 },
+    itemRow: { flexDirection:'row', alignItems:'center', paddingVertical:6 },
     checkbox: { width:20, height:20, borderRadius:4, borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor:'transparent' },
     checkboxChecked: { backgroundColor: palette.primary, borderColor: palette.primary },
     itemText: { color: palette.text, flex:1 },

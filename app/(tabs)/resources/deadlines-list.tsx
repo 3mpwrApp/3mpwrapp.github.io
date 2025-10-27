@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import { GapView } from '../../../components/GapView';
 import { MAX_FONT_SCALE, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { usePostLoadAnnounce } from '../../../hooks/usePostLoadAnnounce';
 import { useTranslation } from '../../../i18n';
@@ -146,7 +147,7 @@ export default function DeadlinesList() {
         </A11yPressable>
       )}
       {items.length > 0 && (
-        <View style={{ flexDirection: 'row', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
+        <GapView gap={8} style={{ flexDirection: 'row', marginTop: 8, flexWrap: 'wrap' }}>
           <A11yPressable
             onPress={async () => {
               try {
@@ -173,9 +174,9 @@ export default function DeadlinesList() {
           >
             <Text style={s.buttonText}>{t('templates.deadlines.markAllNotDone','Mark all not-done')}</Text>
           </A11yPressable>
-        </View>
+        </GapView>
       )}
-      <View style={{ flexDirection: 'row', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
+      <GapView gap={8} style={{ flexDirection: 'row', marginTop: 8, flexWrap: 'wrap' }}>
         <A11yPressable
           onPress={async () => {
             try {
@@ -215,7 +216,7 @@ export default function DeadlinesList() {
         >
           <Text style={s.buttonText}>{t('templates.deadlines.addMonthly','Add monthly x6')}</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       {items.length === 0 ? (
         <Text style={{ color: palette.text, marginTop: 8 }}>{t('templates.deadlines.empty','No deadlines saved.')}</Text>
       ) : (
@@ -236,7 +237,7 @@ export default function DeadlinesList() {
                     <View style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 6 }}>
                       <Text style={{ color: palette.text, padding: 6 }}>{editDate}</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', gap: 8 }}>
+                    <GapView gap={8} style={{ flexDirection: 'row' }}>
                       <A11yPressable
                         onPress={async () => {
                           try { await updateDeadline(d.id!, { title: editTitle, dueAt: new Date(editDate).toISOString() }); setEditingId(null); load(); announce(t('templates.deadlines.updated','Updated')); setTimeout(()=> titleRef.current?.focus?.(), 30); }
@@ -249,10 +250,10 @@ export default function DeadlinesList() {
                       <A11yPressable onPress={() => setEditingId(null)} style={s.smallBtn}>
                         <Text style={s.smallBtnText}>{t('common.cancel','Cancel')}</Text>
                       </A11yPressable>
-                    </View>
+                    </GapView>
                   </View>
                 ) : null}
-                <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
+                <GapView gap={8} style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
                   <A11yPressable
                     onPress={async () => {
                       const ok = await Notifier.scheduleAt(new Date(Date.now() + 24*60*60*1000), t('templates.deadlines.snoozedDeadline','Snoozed deadline'), d.title);
@@ -341,7 +342,7 @@ export default function DeadlinesList() {
                   >
                     <Text style={s.smallBtnText}>{t('common.delete','Delete')}</Text>
                   </A11yPressable>
-                </View>
+                </GapView>
               </View>
             ))}
           </View>
