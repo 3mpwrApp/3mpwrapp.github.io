@@ -5,6 +5,7 @@ import { Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
 import ContrastToggle from '../../components/ContrastToggle';
+import { GapView } from '../../components/GapView';
 import SearchBar from '../../components/SearchBar';
 import SettingsLink from '../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
@@ -61,7 +62,7 @@ export default function ResearchScreen() {
       {q ? (
         <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 8 }} accessibilityLiveRegion="polite">{`${count} ${t('common.results') || 'results'}`}</Text>
       ) : null}
-      <View style={styles.sectionGrid}>
+      <GapView gap={16} style={styles.sectionGrid}>
         {matchesText(t('research.landing.studiesTitle','Studies')) && (
         <Link href="/research/studies" asChild>
           <A11yPressable
@@ -160,8 +161,8 @@ export default function ResearchScreen() {
           </A11yPressable>
         </Link>
         )}
-      </View>
-      <View style={styles.hubsContainer} accessibilityRole="summary">
+      </GapView>
+      <GapView gap={16} style={styles.hubsContainer} accessibilityRole="summary">
   <Text style={styles.hubsHeader} accessibilityRole="header">{t('research.landing.hubsHeader','Research & Data Hubs')}</Text>
   <Text style={styles.hubsIntro}>{t('research.landing.hubsIntro','Trusted national and global sources for disability, return-to-work, accessibility, assistive tech, and social protection evidence.')}</Text>
         {(['canada','world'] as const).map(region => {
@@ -170,13 +171,13 @@ export default function ResearchScreen() {
           );
           if (!hubs.length) return null;
           return (
-            <View key={region} style={styles.hubRegion} accessibilityRole="header" accessibilityLabel={region === 'canada' ? 'Canada hubs' : 'Worldwide hubs'}>
+            <GapView gap={12} key={region} style={styles.hubRegion} accessibilityRole="header" accessibilityLabel={region === 'canada' ? 'Canada hubs' : 'Worldwide hubs'}>
               <Text style={styles.regionTitle}>{region === 'canada' ? t('research.landing.regionCanada','Canada') : t('research.landing.regionWorldwide','Worldwide')}</Text>
               {hubs.map(h => (
-                <View key={h.id} style={styles.hubCard} accessibilityRole="summary">
+                <GapView gap={8} key={h.id} style={styles.hubCard} accessibilityRole="summary">
                   <Text style={styles.hubName}>{h.name}</Text>
                   <Text style={styles.hubDescription}>{h.description}</Text>
-                  <View style={styles.linksRow}>
+                  <GapView gap={12} style={styles.linksRow}>
                     {h.links.map(l => (
                       <A11yPressable
                         key={l.url}
@@ -189,22 +190,22 @@ export default function ResearchScreen() {
                         <Text style={styles.hubLinkText}>{l.label}</Text>
                       </A11yPressable>
                     ))}
-                  </View>
+                  </GapView>
                   {h.tags && (
-                    <View style={styles.tagRow}>
+                    <GapView gap={6} style={styles.tagRow}>
                       {h.tags.map(t => (
                         <View key={t} style={styles.tagChip}>
                           <Text style={styles.tagText}>{t}</Text>
                         </View>
                       ))}
-                    </View>
+                    </GapView>
                   )}
-                </View>
+                </GapView>
               ))}
-            </View>
+            </GapView>
           );
         })}
-      </View>
+      </GapView>
     </ScrollView>
   );
 }
@@ -214,22 +215,22 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     container: { flex: 1, padding: 20, backgroundColor: palette.background },
     title: { fontSize: Math.round(24 * factor), fontWeight: '700', marginBottom: 8, color: palette.text },
     subtitle: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.9, marginBottom: 16 },
-    sectionGrid: { gap: 16, paddingBottom: 20 },
+    sectionGrid: { paddingBottom: 20 },
     sectionCard: { backgroundColor: palette.surface, borderRadius: 12, padding: 20, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, alignItems: 'center', minHeight: 140, justifyContent: 'center' },
     sectionTitle: { fontSize: Math.round(18 * factor), fontWeight: '700', color: palette.text, marginTop: 12, marginBottom: 8, textAlign: 'center' },
     sectionDescription: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.8, textAlign: 'center' },
-    hubsContainer: { marginTop: 24, paddingTop: 8, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted, gap: 16, paddingBottom: 40 },
+    hubsContainer: { marginTop: 24, paddingTop: 8, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted, paddingBottom: 40 },
     hubsHeader: { fontSize: Math.round(20 * factor), fontWeight: '700', color: palette.text },
     hubsIntro: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.85 },
-    hubRegion: { gap: 12 },
+    hubRegion: { },
     regionTitle: { fontSize: Math.round(18 * factor), fontWeight: '600', color: palette.text, marginTop: 8 },
-    hubCard: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, padding: 16, borderRadius: 10, gap: 8 },
+    hubCard: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, padding: 16, borderRadius: 10 },
     hubName: { fontSize: Math.round(15 * factor), fontWeight: '600', color: palette.text },
     hubDescription: { fontSize: Math.round(13 * factor), color: palette.text, opacity: 0.85, lineHeight: 18 },
-    linksRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
+    linksRow: { flexDirection: 'row', flexWrap: 'wrap' },
     hubLinkPress: { paddingVertical: 4 },
     hubLinkText: { fontSize: Math.round(13 * factor), color: palette.primary, textDecorationLine: 'underline' },
-    tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+    tagRow: { flexDirection: 'row', flexWrap: 'wrap' },
     tagChip: { backgroundColor: palette.card, paddingHorizontal: 8, paddingVertical: 3, borderRadius: 12 },
     tagText: { fontSize: 11, color: palette.text, opacity: 0.8 },
   });
