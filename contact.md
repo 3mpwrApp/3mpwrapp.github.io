@@ -163,12 +163,107 @@ Please fill out the form below and we'll get back to you within 24 hours:
   const messageTextarea = document.getElementById('message');
   const messageCount = document.getElementById('message-count');
   
+  // Auto-save configuration
+  const AUTOSAVE_KEY = '3mpwr_contact_form_draft';
+  const AUTOSAVE_INTERVAL = 10000; // 10 seconds
+  let autosaveTimeout;
+  let hasUnsavedChanges = false;
+  
   // Character counter
   if (messageTextarea && messageCount) {
     messageTextarea.addEventListener('input', function() {
       const count = this.value.length;
       messageCount.textContent = count + ' character' + (count !== 1 ? 's' : '');
     });
+  }
+  
+  // Auto-save functionality
+  function saveFormDraft() {
+    if (!form) return;
+    
+    const formData = {
+      name: document.getElementById('name')?.value || '',
+      email: document.getElementById('email')?.value || '',
+      subject: document.getElementById('subject')?.value || '',
+      message: document.getElementById('message')?.value || '',
+      timestamp: new Date().toISOString()
+    };
+    
+    // Only save if there's actual content
+    if (formData.name || formData.email || formData.message) {
+      localStorage.setItem(AUTOSAVE_KEY, JSON.stringify(formData));
+      hasUnsavedChanges = true;
+      showAutoSaveIndicator();
+    }
+  }
+  
+  function loadFormDraft() {
+    const savedData = localStorage.getItem(AUTOSAVE_KEY);
+    if (!savedData) return;
+    
+    try {
+      const formData = JSON.parse(savedData);
+      const savedDate = new Date(formData.timestamp);
+      const now = new Date();
+      const hoursSince = (now - savedDate) / (1000 * 60 * 60);
+      
+      // Only restore if saved within last 24 hours
+      if (hoursSince > 24) {
+        localStorage.removeItem(AUTOSAVE_KEY);
+        return;
+      }
+      
+      // Ask user if they want to restore
+      if (confirm('We found a saved draft of your message from ' + savedDate.toLocaleString() + '. Would you like to restore it?')) {
+        document.getElementById('name').value = formData.name || '';
+        document.getElementById('email').value = formData.email || '';
+        document.getElementById('subject').value = formData.subject || '';
+        document.getElementById('message').value = formData.message || '';
+        
+        // Update character count
+        if (messageTextarea && messageCount) {
+          const count = messageTextarea.value.length;
+          messageCount.textContent = count + ' character' + (count !== 1 ? 's' : '');
+        }
+        
+        showMessage('✅ Draft restored successfully!', 'success');
+        setTimeout(() => {
+          formMessages.style.display = 'none';
+        }, 3000);
+      } else {
+        localStorage.removeItem(AUTOSAVE_KEY);
+      }
+    } catch (e) {
+      localStorage.removeItem(AUTOSAVE_KEY);
+    }
+  }
+  
+  function showAutoSaveIndicator() {
+    // Create temporary indicator
+    const indicator = document.createElement('div');
+    indicator.className = 'autosave-indicator';
+    indicator.textContent = '💾 Draft saved';
+    indicator.style.cssText = 'position: fixed; bottom: 20px; right: 20px; background: #4caf50; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000; animation: fadeInOut 2s ease;';
+    
+    document.body.appendChild(indicator);
+    
+    setTimeout(() => {
+      indicator.remove();
+    }, 2000);
+  }
+  
+  // Auto-save on input change
+  const formInputs = form?.querySelectorAll('input, select, textarea');
+  formInputs?.forEach(input => {
+    input.addEventListener('input', function() {
+      clearTimeout(autosaveTimeout);
+      autosaveTimeout = setTimeout(saveFormDraft, AUTOSAVE_INTERVAL);
+    });
+  });
+  
+  // Load draft on page load
+  if (form) {
+    loadFormDraft();
   }
   
   // Real-time validation
@@ -267,6 +362,10 @@ Please fill out the form below and we'll get back to you within 24 hours:
           showMessage('✅ Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
           form.reset();
           messageCount.textContent = '0 characters';
+          
+          // Clear saved draft
+          localStorage.removeItem(AUTOSAVE_KEY);
+          hasUnsavedChanges = false;
         } else {
           throw new Error('Form submission failed');
         }
@@ -280,7 +379,34 @@ Please fill out the form below and we'll get back to you within 24 hours:
         submitBtn.querySelector('.btn-spinner').style.display = 'none';
       });
     });
+    
+    // Clear draft on form reset
+    form.addEventListener('reset', function() {
+      localStorage.removeItem(AUTOSAVE_KEY);
+      hasUnsavedChanges = false;
+      // Clear validation states
+      fields.forEach(fieldName => {
+        const field = document.getElementById(fieldName);
+        if (field) {
+          field.setAttribute('aria-invalid', 'false');
+          field.classList.remove('field-error');
+          const errorElement = document.getElementById(field.id + '-error');
+          if (errorElement) {
+            errorElement.textContent = '';
+            errorElement.style.display = 'none';
+          }
+        }
+      });
+    });
   }
+  
+  // Warn before leaving with unsaved changes
+  window.addEventListener('beforeunload', function(e) {
+    if (hasUnsavedChanges) {
+      // Save one last time
+      saveFormDraft();
+    }
+  });
   
   function showMessage(message, type) {
     if (!formMessages) return;
@@ -296,6 +422,18 @@ Please fill out the form below and we'll get back to you within 24 hours:
       }, 10000);
     }
   }
+  
+  // Add fade in/out animation
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(20px); }
+      20% { opacity: 1; transform: translateY(0); }
+      80% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+  `;
+  document.head.appendChild(style);
 })();
 </script>
 
