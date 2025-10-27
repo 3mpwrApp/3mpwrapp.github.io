@@ -15,6 +15,7 @@ import React, { useState } from 'react';
 import { Alert, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import { GapView } from '../../../components/GapView';
 import {
     COLORED_OVERLAYS,
     DYSLEXIA_FONTS,
@@ -177,17 +178,19 @@ export default function DyslexiaSettingsScreen() {
             accessibilityRole="button"
             accessibilityLabel={t('dyslexia.reset', 'Reset to defaults')}
           >
-            <Ionicons name="refresh" size={20} color={palette.error} />
-            <Text style={[styles.actionLabel, { color: palette.error }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('dyslexia.reset', 'Reset to defaults')}</Text>
+            <GapView gap={8} style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Ionicons name="refresh" size={20} color={palette.error} />
+              <Text style={[styles.actionLabel, { color: palette.error }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('dyslexia.reset', 'Reset to defaults')}</Text>
+            </GapView>
           </A11yPressable>
         </Section>
 
-        <View style={[styles.helpBox, { backgroundColor: palette.info + '20', borderColor: palette.info }]}>
+        <GapView gap={10} style={[styles.helpBox, { backgroundColor: palette.info + '20', borderColor: palette.info }]}>
           <Ionicons name="information-circle" size={20} color={palette.info} />
           <Text style={[styles.helpText, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
             {t('dyslexia.help', 'These tools support readers with dyslexia by reducing visual stress, improving letter differentiation, and enhancing tracking. Experiment to find what feels best for you.')}
           </Text>
-        </View>
+        </GapView>
       </ScrollView>
     </>
   );
@@ -209,7 +212,7 @@ function Section({ title, description, children }: { title: string; description?
 
 function RowChoices<T extends string>({ current, onSelect, items, getLabel, palette }: { current: T; onSelect: (v: T) => void; items: T[]; getLabel: (k: T) => string; palette: ReturnType<typeof useAppPalette>; t?: any }) {
   return (
-    <View style={styles.rowChoicesWrap}>
+    <GapView gap={8} style={styles.rowChoicesWrap}>
       {items.map(item => {
         const active = item === current;
         return (
@@ -224,7 +227,7 @@ function RowChoices<T extends string>({ current, onSelect, items, getLabel, pale
           </A11yPressable>
         );
       })}
-    </View>
+    </GapView>
   );
 }
 
@@ -232,7 +235,7 @@ function ChoiceRow<T extends string>({ title, current, items, onSelect, palette 
   return (
     <View style={styles.choiceRow}>
       <Text style={[styles.choiceRowTitle, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{title}</Text>
-      <View style={styles.choiceRowChips}>
+      <GapView gap={8} style={styles.choiceRowChips}>
         {items.map(item => {
           const active = item === current;
           return (
@@ -247,7 +250,7 @@ function ChoiceRow<T extends string>({ title, current, items, onSelect, palette 
             </A11yPressable>
           );
         })}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -295,7 +298,7 @@ const styles = StyleSheet.create({
   section: { marginBottom: 32 },
   sectionTitle: { fontSize: 18, fontWeight: '600', marginBottom: 6 },
   sectionDesc: { fontSize: 14, marginBottom: 12 },
-  rowChoicesWrap: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  rowChoicesWrap: { flexDirection: 'row', flexWrap: 'wrap' },
   choicePill: { paddingVertical: 8, paddingHorizontal: 14, borderRadius: 999, borderWidth: 1 },
   choicePillText: { fontSize: 14, fontWeight: '500' },
   card: { borderWidth: 1, borderRadius: 12, padding: 14, marginBottom: 12 },
@@ -304,15 +307,15 @@ const styles = StyleSheet.create({
   cardDesc: { fontSize: 13, lineHeight: 18 },
   choiceRow: { marginBottom: 18 },
   choiceRowTitle: { fontSize: 15, fontWeight: '600', marginBottom: 6 },
-  choiceRowChips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  choiceRowChips: { flexDirection: 'row', flexWrap: 'wrap' },
   chip: { paddingVertical: 6, paddingHorizontal: 12, borderRadius: 999, borderWidth: 1 },
   chipText: { fontSize: 13 },
   toggleRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingVertical: 12, borderBottomWidth: 1 },
   toggleInfo: { flex: 1, paddingRight: 12 },
   toggleLabel: { fontSize: 15, fontWeight: '600', marginBottom: 2 },
   toggleDesc: { fontSize: 13 },
-  actionBtn: { flexDirection: 'row', alignItems: 'center', gap: 8, padding: 14, borderRadius: 10, borderWidth: 1 },
+  actionBtn: { flexDirection: 'row', alignItems: 'center', padding: 14, borderRadius: 10, borderWidth: 1 },
   actionLabel: { fontSize: 14, fontWeight: '600' },
-  helpBox: { borderWidth: 1, padding: 12, borderRadius: 8, flexDirection: 'row', gap: 10, marginBottom: 64 },
+  helpBox: { borderWidth: 1, padding: 12, borderRadius: 8, flexDirection: 'row', marginBottom: 64 },
   helpText: { flex: 1, fontSize: 13, lineHeight: 18 },
 });

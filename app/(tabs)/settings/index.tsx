@@ -10,6 +10,7 @@ import { Alert, Button, Image, Linking, ScrollView, StyleSheet, Text, TextInput,
 
 import A11yPressable from '../../../components/A11yPressable';
 import AccessibilityToggle from '../../../components/AccessibilityToggle';
+import { GapView } from '../../../components/GapView';
 import LanguageSelector from '../../../components/LanguageSelector';
 import UserBadgesDisplay from '../../../components/badges/UserBadgesDisplay';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
@@ -283,14 +284,14 @@ export default function SettingsScreen() {
                     <Text style={{ color:palette.error, fontWeight:'600', marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordTitle','Confirm Deletion')}</Text>
                     <Text style={{ color:palette.text, opacity:0.8, marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordBody','Enter your password to permanently delete your account.')}</Text>
                     <TextInput style={styles.input} secureTextEntry value={password} onChangeText={setPassword} placeholder={t('settings.account.passwordPlaceholder','Password')} accessibilityLabel={t('settings.account.passwordPlaceholder','Password')} />
-                    <View style={{ flexDirection:'row', gap:8 }}>
+                    <GapView gap={8} style={{ flexDirection:'row' }}>
                       <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting || !password} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}>
                         <Text style={{ color:palette.onPrimary, fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text>
                       </A11yPressable>
                       <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}>
                         <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
                       </A11yPressable>
-                    </View>
+                    </GapView>
                   </>
                 ) : (
                   <>
@@ -298,14 +299,14 @@ export default function SettingsScreen() {
                     <Text style={{ color:palette.text, opacity:0.8, marginBottom:12 }}>
                       {t('settings.account.deleteNoPassword','This account uses a third-party sign-in method. Sign in again with your provider (e.g. Google/Apple) recently, then press Continue to delete.')}
                     </Text>
-                    <View style={{ flexDirection:'row', gap:8 }}>
+                    <GapView gap={8} style={{ flexDirection:'row' }}>
                       <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}>
                         <Text style={{ color:palette.onPrimary, fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text>
                       </A11yPressable>
                       <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}>
                         <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
                       </A11yPressable>
-                    </View>
+                    </GapView>
                     {!!providerList.length && <Text style={{ color:palette.text, opacity:0.6, marginTop:8, fontSize:12 }}>Providers: {providerList.join(', ')}</Text>}
                   </>
                 )}
@@ -375,32 +376,32 @@ function EnhancedA11ySettingsSection() {
       {showAssistantPill && (
         <View style={{ marginTop: 8 }}>
           <Text style={styles.sectionSubtitle} accessibilityRole='header'>{t('settings.accessibility.assistantDock','Assistant Pill Position')}</Text>
-          <View style={styles.buttonRow}>
+          <GapView gap={8} style={styles.buttonRow}>
             {(['left','right'] as const).map(pos => (
               <A11yPressable key={pos} accessibilityRole='button' accessibilityState={{ selected: assistantPillPosition === pos }} onPress={() => setAssistantPillPosition(pos)} style={[styles.button, assistantPillPosition === pos && styles.buttonActive]} hitSlop={HIT_SLOP_8}>
                 <Text style={[styles.buttonText, assistantPillPosition === pos && styles.buttonTextActive]}>{pos === 'left' ? t('common.left','Left') : t('common.right','Right')}</Text>
               </A11yPressable>
             ))}
-          </View>
+          </GapView>
         </View>
       )}
       <View style={styles.textSizeSection}>
         <Text style={styles.sectionSubtitle} accessibilityRole='header'>{t('settings.accessibility.textSize','Text Size')}</Text>
         <Text style={styles.description}>{t('settings.accessibility.textSizeDesc','Adjust text size throughout the app')}</Text>
-        <View style={styles.buttonRow}>
+        <GapView gap={8} style={styles.buttonRow}>
           <ScaleButton label='Normal' value='normal' />
           <ScaleButton label='Large' value='large' />
           <ScaleButton label='X-Large' value='xlarge' />
-        </View>
+        </GapView>
       </View>
       <View style={styles.formatSection}>
         <Text style={styles.sectionSubtitle} accessibilityRole='header'>Preferred Resource Format</Text>
-        <View style={styles.buttonRow}>
+        <GapView gap={8} style={styles.buttonRow}>
           <FormatButton label='Text' value='text' />
           <FormatButton label='Audio' value='audio' />
           <FormatButton label='ASL' value='asl' />
           <FormatButton label='Easy-Read' value='easy' />
-        </View>
+        </GapView>
       </View>
       <View style={styles.voiceHelpSection}>
         <Link href={'/(tabs)/voice-help' as any} asChild>
@@ -502,7 +503,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number 
     textSizeSection: { marginTop:16, padding:16, backgroundColor:palette.card, borderRadius:8, borderWidth:1, borderColor:palette.muted },
     formatSection: { marginTop:16, padding:16, backgroundColor:palette.card, borderRadius:8, borderWidth:1, borderColor:palette.muted },
     voiceHelpSection: { marginTop:16 },
-    buttonRow: { flexDirection:'row', gap:8, flexWrap:'wrap' },
+    buttonRow: { flexDirection:'row', flexWrap:'wrap' },
     button: { backgroundColor:palette.card, paddingHorizontal:16, paddingVertical:8, borderRadius:6, borderWidth:1, borderColor:palette.muted, minHeight:44, minWidth:60, alignItems:'center', justifyContent:'center' },
     buttonActive: { backgroundColor:palette.primary, borderColor:palette.primary },
     buttonText: { color:palette.text, fontSize:Math.round(14*factor), fontWeight:'500' },
@@ -512,7 +513,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number 
     autoLockSection: { marginTop:8, marginBottom:8 },
     backupSection: { marginTop:16, padding:16, backgroundColor:palette.card, borderRadius:8, borderWidth:1, borderColor:palette.muted },
     passcodeSection: { marginBottom:16 },
-    backupButtons: { marginTop:16, gap:8 },
+    backupButtons: { marginTop:16 },
     backupButton: { flexDirection:'row', alignItems:'center', justifyContent:'center', padding:12, borderWidth:1, borderColor:palette.primary, borderRadius:8, minHeight:44 },
     backupButtonText: { color:palette.primary, fontSize:Math.round(14*factor), fontWeight:'500', marginLeft:8 },
     dangerButton: { borderColor:palette.error },
