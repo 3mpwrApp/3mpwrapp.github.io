@@ -5,26 +5,29 @@ description: Get in touch with the 3mpwr team for questions, feedback, or collab
 permalink: /contact
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
+
 # Contact Us
 
-<div class="gradient-banner">
-  <h2 style="margin: 0 0 1rem; font-size: 1.5rem;">🫂 Everyone Is Welcome to Contact Us</h2>
-  <p style="margin: 0.5rem 0; line-height: 1.6;">
+<div class="welcome-banner">
+  <h2>🫂 Everyone Is Welcome to Contact Us</h2>
+  <p class="banner-intro">
     <strong>3mpwrApp is here for:</strong>
   </p>
-  <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
-    <li>🦽 <strong>Persons with disabilities</strong> seeking platform support or sharing feedback</li>
-    <li>🏗️ <strong>Injured workers</strong> navigating compensation systems or needing resources</li>
-    <li>💙 <strong>Family supporters and caregivers</strong> helping loved ones</li>
-    <li>🤝 <strong>Allies and advocates</strong> wanting to get involved or learn more</li>
-    <li>🛠️ <strong>Union members</strong> exploring partnership opportunities</li>
-    <li>🏥 <strong>Healthcare providers</strong> interested in patient resources</li>
-    <li>⚖️ <strong>Legal advocates</strong> looking for client tools and information</li>
-    <li>✊ <strong>Social justice activists</strong> fighting for systemic change</li>
-    <li>🏢 <strong>Employers</strong> committed to genuine accessibility</li>
-    <li>🌍 <strong>General public</strong> curious about disability justice and social justice</li>
-  </ul>
-  <p style="margin: 1rem 0 0; font-weight: 600;">
+  <div class="audience-grid">
+    <div class="audience-item">🦽 <strong>Persons with disabilities</strong> seeking platform support or sharing feedback</div>
+    <div class="audience-item">🏗️ <strong>Injured workers</strong> navigating compensation systems or needing resources</div>
+    <div class="audience-item">💙 <strong>Family supporters and caregivers</strong> helping loved ones</div>
+    <div class="audience-item">🤝 <strong>Allies and advocates</strong> wanting to get involved or learn more</div>
+    <div class="audience-item">🛠️ <strong>Union members</strong> exploring partnership opportunities</div>
+    <div class="audience-item">🏥 <strong>Healthcare providers</strong> interested in patient resources</div>
+    <div class="audience-item">⚖️ <strong>Legal advocates</strong> looking for client tools and information</div>
+    <div class="audience-item">✊ <strong>Social justice activists</strong> fighting for systemic change</div>
+    <div class="audience-item">🏢 <strong>Employers</strong> committed to genuine accessibility</div>
+    <div class="audience-item">🌍 <strong>General public</strong> curious about disability justice and social justice</div>
+  </div>
+  <p class="banner-footer">
     Whatever your role in the disability rights and social justice movement, we want to hear from you!
   </p>
 </div>
@@ -33,16 +36,49 @@ We'd love to hear from you! Whether you have questions about 3mpwr, feedback to 
 
 ## Quick Links
 
-- **Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- **GitHub:** [github.com/3mpowrApp](https://github.com/3mpowrApp)
-- **Documentation:** [Read our user guide](/user-guide)
-- **Report a Bug:** [GitHub Issues](https://github.com/3mpowrApp/3mpwrapp.github.io/issues)
+<div class="quick-links-grid">
+  <a href="mailto:empowrapp08162025@gmail.com" class="quick-link-card email">
+    <span class="link-icon">📧</span>
+    <strong>Email Us</strong>
+    <span class="link-detail">empowrapp08162025@gmail.com</span>
+  </a>
+  <a href="https://github.com/3mpowrApp" class="quick-link-card github">
+    <span class="link-icon">💻</span>
+    <strong>GitHub</strong>
+    <span class="link-detail">View our code & projects</span>
+  </a>
+  <a href="/user-guide" class="quick-link-card docs">
+    <span class="link-icon">📖</span>
+    <strong>Documentation</strong>
+    <span class="link-detail">Read our user guide</span>
+  </a>
+  <a href="https://github.com/3mpowrApp/3mpwrapp.github.io/issues" class="quick-link-card bug">
+    <span class="link-icon">🐛</span>
+    <strong>Report a Bug</strong>
+    <span class="link-detail">GitHub Issues</span>
+  </a>
+</div>
 
 ### Legal & Privacy
-- **[Privacy Policy](/privacy/)** - How we handle your data
-- **[Terms of Service](/terms/)** - Terms and disclaimers
-- **[Community Guidelines](/community/guidelines/)** - Community standards
-- **[Legal Disclaimers](/legal/disclaimers/)** - All disclaimers
+
+<div class="resource-links">
+  <a href="/privacy/" class="resource-link">
+    <span class="link-text">🔒 Privacy Policy - How we handle your data</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/terms/" class="resource-link">
+    <span class="link-text">📄 Terms of Service - Terms and disclaimers</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/community/guidelines/" class="resource-link">
+    <span class="link-text">👥 Community Guidelines - Community standards</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/legal/disclaimers/" class="resource-link">
+    <span class="link-text">⚖️ Legal Disclaimers - All disclaimers</span>
+    <span class="link-arrow">→</span>
+  </a>
+</div>
 
 ## Contact Form
 
@@ -153,289 +189,6 @@ Please fill out the form below and we'll get back to you within 24 hours:
     </div>
   </fieldset>
 </form>
-
-<script>
-// Enhanced form validation and submission
-(function() {
-  const form = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('submit-btn');
-  const formMessages = document.getElementById('form-messages');
-  const messageTextarea = document.getElementById('message');
-  const messageCount = document.getElementById('message-count');
-  
-  // Auto-save configuration
-  const AUTOSAVE_KEY = '3mpwr_contact_form_draft';
-  const AUTOSAVE_INTERVAL = 10000; // 10 seconds
-  let autosaveTimeout;
-  let hasUnsavedChanges = false;
-  
-  // Character counter
-  if (messageTextarea && messageCount) {
-    messageTextarea.addEventListener('input', function() {
-      const count = this.value.length;
-      messageCount.textContent = count + ' character' + (count !== 1 ? 's' : '');
-    });
-  }
-  
-  // Auto-save functionality
-  function saveFormDraft() {
-    if (!form) return;
-    
-    const formData = {
-      name: document.getElementById('name')?.value || '',
-      email: document.getElementById('email')?.value || '',
-      subject: document.getElementById('subject')?.value || '',
-      message: document.getElementById('message')?.value || '',
-      timestamp: new Date().toISOString()
-    };
-    
-    // Only save if there's actual content
-    if (formData.name || formData.email || formData.message) {
-      localStorage.setItem(AUTOSAVE_KEY, JSON.stringify(formData));
-      hasUnsavedChanges = true;
-      showAutoSaveIndicator();
-    }
-  }
-  
-  function loadFormDraft() {
-    const savedData = localStorage.getItem(AUTOSAVE_KEY);
-    if (!savedData) return;
-    
-    try {
-      const formData = JSON.parse(savedData);
-      const savedDate = new Date(formData.timestamp);
-      const now = new Date();
-      const hoursSince = (now - savedDate) / (1000 * 60 * 60);
-      
-      // Only restore if saved within last 24 hours
-      if (hoursSince > 24) {
-        localStorage.removeItem(AUTOSAVE_KEY);
-        return;
-      }
-      
-      // Ask user if they want to restore
-      if (confirm('We found a saved draft of your message from ' + savedDate.toLocaleString() + '. Would you like to restore it?')) {
-        document.getElementById('name').value = formData.name || '';
-        document.getElementById('email').value = formData.email || '';
-        document.getElementById('subject').value = formData.subject || '';
-        document.getElementById('message').value = formData.message || '';
-        
-        // Update character count
-        if (messageTextarea && messageCount) {
-          const count = messageTextarea.value.length;
-          messageCount.textContent = count + ' character' + (count !== 1 ? 's' : '');
-        }
-        
-        showMessage('✅ Draft restored successfully!', 'success');
-        setTimeout(() => {
-          formMessages.style.display = 'none';
-        }, 3000);
-      } else {
-        localStorage.removeItem(AUTOSAVE_KEY);
-      }
-    } catch (e) {
-      localStorage.removeItem(AUTOSAVE_KEY);
-    }
-  }
-  
-  function showAutoSaveIndicator() {
-    // Create temporary indicator
-    const indicator = document.createElement('div');
-    indicator.className = 'autosave-indicator';
-    indicator.textContent = '💾 Draft saved';
-    indicator.style.cssText = 'position: fixed; bottom: 20px; right: 20px; background: #4caf50; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000; animation: fadeInOut 2s ease;';
-    
-    document.body.appendChild(indicator);
-    
-    setTimeout(() => {
-      indicator.remove();
-    }, 2000);
-  }
-  
-  // Auto-save on input change
-  const formInputs = form?.querySelectorAll('input, select, textarea');
-  formInputs?.forEach(input => {
-    input.addEventListener('input', function() {
-      clearTimeout(autosaveTimeout);
-      autosaveTimeout = setTimeout(saveFormDraft, AUTOSAVE_INTERVAL);
-    });
-  });
-  
-  // Load draft on page load
-  if (form) {
-    loadFormDraft();
-  }
-  
-  // Real-time validation
-  const fields = ['name', 'email', 'subject', 'message'];
-  fields.forEach(fieldName => {
-    const field = document.getElementById(fieldName);
-    if (!field) return;
-    
-    field.addEventListener('blur', function() {
-      validateField(this);
-    });
-    
-    field.addEventListener('input', function() {
-      if (this.getAttribute('aria-invalid') === 'true') {
-        validateField(this);
-      }
-    });
-  });
-  
-  function validateField(field) {
-    const errorElement = document.getElementById(field.id + '-error');
-    let isValid = true;
-    let errorMessage = '';
-    
-    if (field.hasAttribute('required') && !field.value.trim()) {
-      isValid = false;
-      errorMessage = 'This field is required';
-    } else if (field.type === 'email' && field.value) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(field.value)) {
-        isValid = false;
-        errorMessage = 'Please enter a valid email address';
-      }
-    } else if (field.tagName === 'SELECT' && !field.value) {
-      isValid = false;
-      errorMessage = 'Please select an option';
-    }
-    
-    if (!isValid) {
-      field.setAttribute('aria-invalid', 'true');
-      field.classList.add('field-error');
-      if (errorElement) {
-        errorElement.textContent = errorMessage;
-        errorElement.style.display = 'block';
-      }
-    } else {
-      field.setAttribute('aria-invalid', 'false');
-      field.classList.remove('field-error');
-      if (errorElement) {
-        errorElement.textContent = '';
-        errorElement.style.display = 'none';
-      }
-    }
-    
-    return isValid;
-  }
-  
-  // Form submission
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Validate all fields
-      let isFormValid = true;
-      fields.forEach(fieldName => {
-        const field = document.getElementById(fieldName);
-        if (field && !validateField(field)) {
-          isFormValid = false;
-        }
-      });
-      
-      if (!isFormValid) {
-        showMessage('Please correct the errors before submitting', 'error');
-        // Focus first error
-        const firstError = form.querySelector('[aria-invalid="true"]');
-        if (firstError) firstError.focus();
-        return;
-      }
-      
-      // Show loading state
-      submitBtn.disabled = true;
-      submitBtn.querySelector('.btn-text').textContent = 'Sending...';
-      submitBtn.querySelector('.btn-spinner').style.display = 'inline';
-      
-      // Submit form via AJAX
-      const formData = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          showMessage('✅ Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
-          form.reset();
-          messageCount.textContent = '0 characters';
-          
-          // Clear saved draft
-          localStorage.removeItem(AUTOSAVE_KEY);
-          hasUnsavedChanges = false;
-        } else {
-          throw new Error('Form submission failed');
-        }
-      })
-      .catch(error => {
-        showMessage('❌ Oops! There was a problem sending your message. Please try again or email us directly at empowrapp08162025@gmail.com', 'error');
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.querySelector('.btn-text').textContent = 'Send Message';
-        submitBtn.querySelector('.btn-spinner').style.display = 'none';
-      });
-    });
-    
-    // Clear draft on form reset
-    form.addEventListener('reset', function() {
-      localStorage.removeItem(AUTOSAVE_KEY);
-      hasUnsavedChanges = false;
-      // Clear validation states
-      fields.forEach(fieldName => {
-        const field = document.getElementById(fieldName);
-        if (field) {
-          field.setAttribute('aria-invalid', 'false');
-          field.classList.remove('field-error');
-          const errorElement = document.getElementById(field.id + '-error');
-          if (errorElement) {
-            errorElement.textContent = '';
-            errorElement.style.display = 'none';
-          }
-        }
-      });
-    });
-  }
-  
-  // Warn before leaving with unsaved changes
-  window.addEventListener('beforeunload', function(e) {
-    if (hasUnsavedChanges) {
-      // Save one last time
-      saveFormDraft();
-    }
-  });
-  
-  function showMessage(message, type) {
-    if (!formMessages) return;
-    formMessages.textContent = message;
-    formMessages.className = 'form-messages ' + type;
-    formMessages.style.display = 'block';
-    formMessages.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    
-    // Auto-hide success messages after 10 seconds
-    if (type === 'success') {
-      setTimeout(() => {
-        formMessages.style.display = 'none';
-      }, 10000);
-    }
-  }
-  
-  // Add fade in/out animation
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes fadeInOut {
-      0% { opacity: 0; transform: translateY(20px); }
-      20% { opacity: 1; transform: translateY(0); }
-      80% { opacity: 1; transform: translateY(0); }
-      100% { opacity: 0; transform: translateY(-20px); }
-    }
-  `;
-  document.head.appendChild(style);
-})();
-</script>
 
 <style>
   .contact-form {
@@ -681,6 +434,8 @@ Please fill out the form below and we'll get back to you within 24 hours:
     }
   }
 </style>
+
+<script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
 
 ## Other Ways to Reach Us
 
