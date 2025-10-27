@@ -4,25 +4,40 @@
    for High-contrast and Dark mode.
 */
 
-/* Base - CSS Custom Properties for Light/Dark Mode */
+/* Base - CSS Custom Properties for Dark Mode (Default) */
 :root {
   color-scheme: light dark;
   --font-scale: 1;
   --line-height: 1.6;
   --letter-spacing: 0;
   
-  /* Light mode colors (WCAG compliant) */
-  --bg-color: #FFFFFF;
-  --text-color: #111111;
-  --header-bg: #183c65;
+  /* Dark mode colors (Default) */
+  --bg-color: #0B1423;
+  --text-color: #FFFFFF;
+  --header-bg: #0b2545;
   --header-text: #ffffff;
-  --main-bg: #ffffff;
-  --link-color: #004A99; /* Light mode blue */
-  --link-hover: #0066CC; /* Light mode hover */
-  --nav-hover: #285e93;
-  --border-color: #d1d5db;
-  --focus-outline: #FFB300; /* Yellow for light mode */
+  --main-bg: #0B1423;
+  --link-color: #66B2FF; /* Dark mode blue */
+  --link-hover: #99D0FF; /* Dark mode hover */
+  --nav-hover: #183c65;
+  --border-color: #355c7d;
+  --focus-outline: #FFD54F; /* Yellow for dark mode */
   --focus-ring-width: 3px;
+}
+
+/* Light Mode Override */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #FFFFFF;
+    --text-color: #111111;
+    --header-bg: #183c65;
+    --main-bg: #ffffff;
+    --link-color: #004A99;
+    --link-hover: #0066CC;
+    --nav-hover: #285e93;
+    --border-color: #d1d5db;
+    --focus-outline: #FFB300;
+  }
 }
 
 html {
