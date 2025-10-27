@@ -5,9 +5,14 @@ description: Our commitment to inclusive accessible design
 permalink: /accessibility/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/accessibility.css' | relative_url }}">
+
 # Accessibility Statement
 
-3mpwrApp is committed to inclusive design. We aim to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA, and we adopt selected AAA practices where feasible.
+<div class="hero-banner">
+  <p class="hero-text">3mpwrApp is committed to inclusive design. We aim to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA, and we adopt selected AAA practices where feasible.</p>
+</div>
 
 ---
 
@@ -15,10 +20,33 @@ permalink: /accessibility/
 
 We believe accessibility isn't just compliance—it's a core value. Our platform is designed to serve **persons with disabilities, injured workers, and everyone** navigating complex systems. We prioritize:
 
-- ✅ **Universal Access** - Everyone should be able to use 3mpwrApp, regardless of ability
-- ✅ **Continuous Improvement** - We regularly audit and enhance our accessibility features
-- ✅ **User-Centered Design** - We listen to feedback from our community and implement changes
-- ✅ **Transparency** - We document our progress and acknowledge areas for improvement
+<div class="commitment-grid">
+
+<div class="commitment-card universal">
+  <div class="commitment-icon">🌍</div>
+  <h3>Universal Access</h3>
+  <p>Everyone should be able to use 3mpwrApp, regardless of ability</p>
+</div>
+
+<div class="commitment-card improvement">
+  <div class="commitment-icon">📈</div>
+  <h3>Continuous Improvement</h3>
+  <p>We regularly audit and enhance our accessibility features</p>
+</div>
+
+<div class="commitment-card user-centered">
+  <div class="commitment-icon">👥</div>
+  <h3>User-Centered Design</h3>
+  <p>We listen to feedback from our community and implement changes</p>
+</div>
+
+<div class="commitment-card transparency">
+  <div class="commitment-icon">📋</div>
+  <h3>Transparency</h3>
+  <p>We document our progress and acknowledge areas for improvement</p>
+</div>
+
+</div>
 
 ---
 
@@ -26,10 +54,33 @@ We believe accessibility isn't just compliance—it's a core value. Our platform
 
 We strive to ensure 3mpwrApp is accessible to all users, including those with:
 
-- ✅ **Visual impairments** - Screen reader support, high contrast modes, keyboard navigation
-- ✅ **Cognitive disabilities** - Simplified modes, clear language, predictable navigation
-- ✅ **Motor disabilities** - Keyboard-only navigation, large click targets, no time limits
-- ✅ **Hearing impairments** - Captions on videos, visual alternatives for audio content
+<div class="goals-grid">
+
+<div class="goal-card visual">
+  <div class="goal-icon">👁️</div>
+  <h3>Visual Impairments</h3>
+  <p>Screen reader support, high contrast modes, keyboard navigation</p>
+</div>
+
+<div class="goal-card cognitive">
+  <div class="goal-icon">🧠</div>
+  <h3>Cognitive Disabilities</h3>
+  <p>Simplified modes, clear language, predictable navigation</p>
+</div>
+
+<div class="goal-card motor">
+  <div class="goal-icon">🖱️</div>
+  <h3>Motor Disabilities</h3>
+  <p>Keyboard-only navigation, large click targets, no time limits</p>
+</div>
+
+<div class="goal-card hearing">
+  <div class="goal-icon">👂</div>
+  <h3>Hearing Impairments</h3>
+  <p>Captions on videos, visual alternatives for audio content</p>
+</div>
+
+</div>
 
 ---
 
@@ -53,22 +104,56 @@ Additional resources:
 
 ## Compliance Status
 
-**Current Status**: WCAG 2.2 Level AA - Full Conformance ✅
+<div class="compliance-badge-container">
+  <div class="compliance-badge wcag-aa">
+    <div class="badge-icon">✅</div>
+    <div class="badge-content">
+      <h3>WCAG 2.2 Level AA</h3>
+      <p>Full Conformance</p>
+    </div>
+  </div>
+</div>
 
-**Last Audit**: October 26, 2025  
-**Testing Method**: Automated (axe-core, pa11y, Lighthouse) + Manual Testing  
-**Pages Tested**: 15 pages  
-**Violations Found**: 0
+<div class="audit-info">
+  <div class="audit-item">
+    <strong>Last Audit:</strong> October 26, 2025
+  </div>
+  <div class="audit-item">
+    <strong>Testing Method:</strong> Automated (axe-core, pa11y, Lighthouse) + Manual Testing
+  </div>
+  <div class="audit-item">
+    <strong>Pages Tested:</strong> 15 pages
+  </div>
+  <div class="audit-item violations-zero">
+    <strong>Violations Found:</strong> 0
+  </div>
+</div>
 
 ### WCAG 2.2 Level AA Conformance
 
 We meet **all** WCAG 2.2 Level AA success criteria and exceed to Level AAA in several areas:
 
-**Level AAA Achievements:**
-- ✅ **Color Contrast**: 7:1+ ratios (AAA requires 7:1, AA requires 4.5:1)
-- ✅ **Enhanced Contrast**: High contrast modes exceed AAA requirements
-- ✅ **Focus Indicators**: Enhanced visual focus (2px minimum)
-- ✅ **Target Size**: 44x44px minimum (exceeds AA 24x24px requirement)
+<div class="aaa-achievements">
+  <h4>Level AAA Achievements:</h4>
+  <div class="achievement-grid">
+    <div class="achievement-item">
+      <span class="achievement-icon">🎨</span>
+      <strong>Color Contrast:</strong> 7:1+ ratios (AAA requires 7:1, AA requires 4.5:1)
+    </div>
+    <div class="achievement-item">
+      <span class="achievement-icon">🔆</span>
+      <strong>Enhanced Contrast:</strong> High contrast modes exceed AAA requirements
+    </div>
+    <div class="achievement-item">
+      <span class="achievement-icon">🎯</span>
+      <strong>Focus Indicators:</strong> Enhanced visual focus (2px minimum)
+    </div>
+    <div class="achievement-item">
+      <span class="achievement-icon">📏</span>
+      <strong>Target Size:</strong> 44x44px minimum (exceeds AA 24x24px requirement)
+    </div>
+  </div>
+</div>
 
 **Full AA Compliance Checklist:**
 
@@ -174,21 +259,28 @@ We meet **all** WCAG 2.2 Level AA success criteria and exceed to Level AAA in se
 </details>
 
 ### What we've tested:
-- ✅ Automated accessibility scanning (axe-core 4.10, pa11y, Lighthouse)
-- ✅ Manual keyboard navigation testing (Tab, Shift+Tab, Enter, Escape)
-- ✅ Screen reader testing (NVDA, JAWS, VoiceOver, TalkBack)
-- ✅ Color contrast analysis (WCAG Contrast Checker, manual verification)
-- ✅ User testing with community members (ongoing)
-- ✅ Mobile device testing (iOS Safari, Android Chrome)
-- ✅ Browser testing (Chrome, Firefox, Safari, Edge)
 
-**Continuous Monitoring:**
-- GitHub Actions CI/CD runs axe-core on every commit
-- Weekly full-site accessibility scans (15 pages)
-- Monthly manual audits by accessibility team
-- Quarterly community feedback reviews
+<div class="testing-grid">
+  <div class="test-item">✅ Automated accessibility scanning (axe-core 4.10, pa11y, Lighthouse)</div>
+  <div class="test-item">✅ Manual keyboard navigation testing (Tab, Shift+Tab, Enter, Escape)</div>
+  <div class="test-item">✅ Screen reader testing (NVDA, JAWS, VoiceOver, TalkBack)</div>
+  <div class="test-item">✅ Color contrast analysis (WCAG Contrast Checker, manual verification)</div>
+  <div class="test-item">✅ User testing with community members (ongoing)</div>
+  <div class="test-item">✅ Mobile device testing (iOS Safari, Android Chrome)</div>
+  <div class="test-item">✅ Browser testing (Chrome, Firefox, Safari, Edge)</div>
+</div>
 
-**[View Latest Accessibility Report →](/ACCESSIBILITY-STATUS-2025)**
+<div class="monitoring-section">
+  <h4>Continuous Monitoring:</h4>
+  <ul>
+    <li>GitHub Actions CI/CD runs axe-core on every commit</li>
+    <li>Weekly full-site accessibility scans (15 pages)</li>
+    <li>Monthly manual audits by accessibility team</li>
+    <li>Quarterly community feedback reviews</li>
+  </ul>
+</div>
+
+<a href="/ACCESSIBILITY-STATUS-2025" class="report-link">View Latest Accessibility Report →</a>
 
 ---
 
@@ -325,21 +417,57 @@ We also work toward compliance with:
 ## Related Pages
 
 ### Documentation
-- **[Accessibility Settings](/accessibility-settings/)** - Customize your accessibility preferences
-- **[Accessibility Walkthrough](/accessibility-walkthrough/)** - Guided tour of features
-- **[User Guide](/user-guide/)** - Complete platform documentation
-- **[Roadmap](/roadmap/)** - Planned features and improvements
-- **[Features](/features/)** - See all available features
+
+<div class="resource-links">
+  <a href="/accessibility-settings/" class="resource-link">
+    <span class="link-text">⚙️ Accessibility Settings - Customize your preferences</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/accessibility-walkthrough/" class="resource-link">
+    <span class="link-text">🚶 Accessibility Walkthrough - Guided tour</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/user-guide/" class="resource-link">
+    <span class="link-text">📖 User Guide - Complete documentation</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/roadmap/" class="resource-link">
+    <span class="link-text">🗺️ Roadmap - Planned improvements</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/features/" class="resource-link">
+    <span class="link-text">✨ Features - See all features</span>
+    <span class="link-arrow">→</span>
+  </a>
+</div>
 
 ### Legal & Privacy
-- **[Privacy Policy](/privacy/)** - How we protect your data
-- **[Terms of Service](/terms/)** - Terms with accessibility commitments
-- **[Community Guidelines](/community/guidelines/)** - Inclusive community standards
-- **[Contact](/contact/)** - Get in touch with us
+
+<div class="resource-links">
+  <a href="/privacy/" class="resource-link">
+    <span class="link-text">🔒 Privacy Policy - Data protection</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/terms/" class="resource-link">
+    <span class="link-text">📄 Terms of Service - Accessibility commitments</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/community/guidelines/" class="resource-link">
+    <span class="link-text">👥 Community Guidelines - Inclusive standards</span>
+    <span class="link-arrow">→</span>
+  </a>
+  <a href="/contact/" class="resource-link">
+    <span class="link-text">📧 Contact - Get in touch</span>
+    <span class="link-arrow">→</span>
+  </a>
+</div>
 
 ---
 
 **Last updated**: {{ site.time | date: '%B %d, %Y' }}
 
 *3mpwrApp - Accessibility First, Always.* ♿💚
+
+<script src="{{ '/assets/js/page-enhancements.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/accessibility.js' | relative_url }}"></script>
 

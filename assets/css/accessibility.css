@@ -1,0 +1,479 @@
+/* Accessibility Statement Page Styles */
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #0066CC 0%, #4DB8FF 100%);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3);
+  border: 3px solid #0052a3;
+}
+
+.hero-text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Commitment Grid */
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.commitment-card {
+  background: white;
+  border: 3px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.commitment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: currentColor;
+}
+
+.commitment-card.universal {
+  color: #10b981;
+}
+
+.commitment-card.improvement {
+  color: #3b82f6;
+}
+
+.commitment-card.user-centered {
+  color: #8b5cf6;
+}
+
+.commitment-card.transparency {
+  color: #f59e0b;
+}
+
+.commitment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: currentColor;
+}
+
+.commitment-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.commitment-card h3 {
+  margin: 0 0 0.75rem;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.commitment-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Goals Grid */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.goal-card {
+  background: white;
+  border: 3px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.goal-card.visual {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.goal-card.cognitive {
+  border-color: #7c3aed;
+  color: #7c3aed;
+}
+
+.goal-card.motor {
+  border-color: #0891b2;
+  color: #0891b2;
+}
+
+.goal-card.hearing {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.goal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.goal-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.goal-card h3 {
+  margin: 0 0 0.75rem;
+  color: #333;
+  font-size: 1.15rem;
+}
+
+.goal-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Compliance Badge */
+.compliance-badge-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.compliance-badge {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+  border: 4px solid #047857;
+}
+
+.badge-icon {
+  font-size: 3.5rem;
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.badge-content h3 {
+  margin: 0 0 0.5rem;
+  color: white;
+  font-size: 1.75rem;
+}
+
+.badge-content p {
+  margin: 0;
+  font-size: 1.15rem;
+  opacity: 0.95;
+}
+
+/* Audit Info */
+.audit-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  border: 2px solid #e5e7eb;
+}
+
+.audit-item {
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+}
+
+.audit-item strong {
+  display: block;
+  color: #0066CC;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.audit-item.violations-zero {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border-color: #10b981;
+}
+
+.audit-item.violations-zero strong {
+  color: #065f46;
+}
+
+/* AAA Achievements */
+.aaa-achievements {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  border: 3px solid #f59e0b;
+}
+
+.aaa-achievements h4 {
+  margin: 0 0 1.5rem;
+  color: #92400e;
+  font-size: 1.25rem;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.achievement-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #f59e0b;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.achievement-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.achievement-item strong {
+  color: #92400e;
+}
+
+/* Testing Grid */
+.testing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.test-item {
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  border-left: 4px solid #10b981;
+  transition: all 0.2s ease;
+}
+
+.test-item:hover {
+  border-left-color: #0066CC;
+  border-left-width: 6px;
+  transform: translateX(4px);
+}
+
+/* Monitoring Section */
+.monitoring-section {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  border: 3px solid #6366f1;
+}
+
+.monitoring-section h4 {
+  margin: 0 0 1rem;
+  color: #3730a3;
+}
+
+.monitoring-section ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.monitoring-section li {
+  margin: 0.5rem 0;
+  color: #3730a3;
+}
+
+/* Report Link */
+.report-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #0066CC 0%, #4DB8FF 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.report-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+}
+
+.report-link:focus {
+  outline: 3px solid rgba(0, 102, 204, 0.5);
+  outline-offset: 2px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .commitment-card,
+  .goal-card,
+  .test-item {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
+
+  .commitment-card h3,
+  .goal-card h3 {
+    color: #e0e0e0;
+  }
+
+  .commitment-card p,
+  .goal-card p {
+    color: #aaa;
+  }
+
+  .audit-info {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .audit-item {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
+
+  .audit-item strong {
+    color: #4DB8FF;
+  }
+
+  .aaa-achievements {
+    background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+    border-color: #f59e0b;
+  }
+
+  .aaa-achievements h4 {
+    color: #fef3c7;
+  }
+
+  .achievement-item {
+    background-color: #2d2d2d;
+    border-color: #f59e0b;
+  }
+
+  .achievement-item strong {
+    color: #fde68a;
+  }
+
+  .monitoring-section {
+    background: linear-gradient(135deg, #312e81 0%, #3730a3 100%);
+    border-color: #6366f1;
+  }
+
+  .monitoring-section h4,
+  .monitoring-section li {
+    color: #e0e7ff;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .commitment-icon,
+  .badge-icon {
+    animation: none;
+  }
+
+  .commitment-card:hover,
+  .goal-card:hover,
+  .test-item:hover,
+  .report-link:hover {
+    transform: none;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+  }
+
+  .commitment-grid,
+  .goals-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .compliance-badge {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .badge-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .audit-info {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-grid,
+  .testing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .hero-banner,
+  .compliance-badge {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black;
+  }
+
+  .commitment-card,
+  .goal-card {
+    break-inside: avoid;
+    border: 1px solid black;
+  }
+
+  .report-link {
+    display: none;
+  }
+}
