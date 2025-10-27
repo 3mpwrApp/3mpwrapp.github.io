@@ -1,0 +1,75 @@
+---
+layout: post
+title: "Daily News Curation - 2025-10-27"
+date: 2025-10-27
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-10-27
+
+Curated 13 items from disability, accessibility, and social policy sources.
+
+## 1. ‘Pure Chaos’: Warnings of an Alberta Health-Care Crisis
+Experts say AHS data obtained by The Tyee further indicates the system faces being overwhelmed.
+📍 [Source](https://thetyee.ca/News/2025/10/27/Warnings-Alberta-Health-Care-Crisis/)
+**Score:** 27.00
+
+## 2. The assassination target ‘betrayed' by Carney's India policy
+Warned by RCMP three times he was to be killed, Moninder Singh said Sikhs feel let down by Canada's decision to resume ties with India.
+📍 [Source](https://globalnews.ca/news/11493529/assassination-target-betrayed-carney-return-to-india/)
+**Score:** 20.00
+
+## 3. Housing crisis, cost of living fuelling Nunavut voter apathy
+<img src='https://i.cbc.ca/ais/00ad2359-dcea-4cda-b41d-49c3268ba4a9,1761500128625/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='An aerial view of a community with colourful buildings near water. ' width='620' height='349' title=''/><p>Ahead of Nunavut’s 7th territorial election, there is concern about a decline in voter turnout, something experts say is likely caused by slow progress to tackle issues such as the housing crisis and cost of living.</p>
+📍 [Source](https://www.cbc.ca/player/play/9.6954316?cmp=rss)
+**Score:** 15.60
+
+## 4. Canada's men beat U.S. for Pan Continental curling gold medal
+📍 [Source](https://www.cbc.ca/sports/olympics/winter/curling/brad-jacobs-gold-medal-pan-continental-curling-homan-virginia-9.6954375?cmp=rss)
+**Score:** 9.50
+
+## 5. After daughter attacked by dogs, Alberta mother calls on First Nation for regulations
+The Alberta mother of a five-year-old who was attacked by dogs and says she wants First Nations communities to put regulations in place to prevent similar incidents from happening.
+📍 [Source](https://globalnews.ca/news/11495686/dog-attack-mother-regulations-sucker-creek-first-nation/)
+**Score:** 6.00
+
+## 6. Some Canadian communities make it mandatory for homeowners to replace lead pipes. Do such bylaws work?
+📍 [Source](https://www.cbc.ca/news/canada/thunder-bay/lead-pipes-thunder-bay-9.6952443?cmp=rss)
+**Score:** 4.50
+
+## 7. Tim Cook, chief historian at Canadian War Museum, dies at 54
+<img src='https://i.cbc.ca/ais/6e9d7335-b57f-47c5-96f3-308ba459f474,1761513492450/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C222%2C4624%2C2601%29%3BResize%3D%28620%29' alt='A man in a suit poses for a photo in front of a small rendering of a memorial.' width='620' height='349' title='Canadian military historian Tim Cook poses next to a maquette of the memorial at Vimy Ridge in the centre of the exhibition "Vimy - Beyond the Battle," at the Canadian War Museum, Wednesday April 5, 2017 in Ottawa. THE CANADIAN PRESS/'/><p>Tim Cook, the chief historian at the Canadian War Museum and the country’s “pre-eminent military historian,” has died, the museum announced Sunday. </p>
+📍 [Source](https://www.cbc.ca/news/canada/ottawa/canadian-war-museum-tim-cook-dies-9.6954386?cmp=rss)
+**Score:** 4.50
+
+## 8. Best of Vancouver award winners 2025: Wellness
+Your Best of Vancouver winners in the Wellness category.
+📍 [Source](https://www.straight.com/living/best-of-vancouver-award-winners-2025-wellness)
+**Score:** 1.00
+
+## 9. The Georgia Straight's guide to the 2025 Vancouver International Film Festival
+Thank us later.
+📍 [Source](https://www.straight.com/movies/georgia-straights-guide-to-2025-vancouver-international-film-festival)
+**Score:** 1.00
+
+## 10. ‘Between Breaths’ Comes to the Firehall
+The critically acclaimed play about Newfoundland’s ‘Whale Man’ sails into Vancouver.
+📍 [Source](https://thetyee.ca/Presents/2025/10/27/Between-Breaths-Firehall/)
+**Score:** 1.00
+
+## 11. $32M case against Ontario developer falls apart at regulator hearing
+📍 [Source](https://www.cbc.ca/news/canada/toronto/32m-case-against-ontario-developer-falls-apart-at-regulator-hearing-9.6952185?cmp=rss)
+**Score:** 1.50
+
+## 12. What’s in a name? Sask. town looking to find out by selling naming rights to highest bidder
+<img src='https://i.cbc.ca/ais/bedc834d-8cbb-4f12-b94f-a195185fa824,1761350198992/full/max/0/default.jpg?im=Crop%2Crect%3D%28353%2C77%2C1098%2C617%29%3BResize%3D%28620%29' alt='A sign next to pine trees and a farm field reads Welcome to Duck Lake' width='620' height='349' title='Duck Lake Mayor Jason Anderson says selling the town's name to pay for infrastructure upgrades is worth a conversation.'/><p>The small Saskatchewan town of Duck Lake could soon bear a new name, after its council voted to move forward with putting the town's permanent naming rights up for sale. Mayor Jason Anderson says he's hoping corporations or anyone willing to pay a minimum of $10 million will see the value of putting their mark on the map.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/duck-lake-naming-rights-sale-9.6952202?cmp=rss)
+**Score:** 1.20
+
+## 13. Mayor in northern Ontario says bank putting shareholders ahead of consumers as town’s last branch set to close
+<img src='https://i.cbc.ca/ais/eadf8c86-c249-4464-b386-51acfa9ce9ff,1761326638719/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C136%2C480%2C270%29%3BResize%3D%28620%29' alt='The exterior of a Scotiabank in a mall.' width='620' height='349' title='The Scotiabank branch in Marathon is closing in the spring.'/><p>Banks are closing branches in smaller communities across northwestern Ontario, leaving residents concerned about a lack of options to get cash or change.</p>
+📍 [Source](https://www.cbc.ca/news/canada/thunder-bay/bank-closures-nwo-9.6950933?cmp=rss)
+**Score:** 1.50
+
