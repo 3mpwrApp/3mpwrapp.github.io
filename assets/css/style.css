@@ -8,7 +8,7 @@
 :root {
   color-scheme: light dark;
   --font-scale: 1;
-  --line-height: 1.6;
+  --line-height: 1.7; /* Improved from 1.6 for better readability */
   --letter-spacing: 0;
   
   /* Light mode colors (WCAG AAA compliant - 7:1 contrast minimum) */
@@ -17,11 +17,12 @@
   --header-bg: #183c65;
   --header-text: #ffffff;
   --main-bg: #ffffff;
-  --link-color: #0052a3;
-  --link-hover: #003d7a;
+  --link-color: #3b82f6; /* Lighter, more visible blue */
+  --link-hover: #2563eb; /* Lighter hover state */
   --nav-hover: #285e93;
   --border-color: #d1d5db;
   --focus-outline: #0066cc;
+  --focus-ring-width: 3px; /* Consistent focus ring width */
 }
 
 html {
@@ -47,27 +48,61 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   line-height: var(--line-height);
-  font-size: calc(16px * var(--font-scale));
+  font-size: 16px; /* Guaranteed 16px minimum for all users */
   letter-spacing: var(--letter-spacing);
 }
 
-/* Links - WCAG AAA compliant */
+/* Links - WCAG AAA compliant with improved visibility */
 a {
   color: var(--link-color);
   text-decoration: underline;
   text-underline-offset: 0.2em;
+  text-decoration-thickness: 2px; /* Thicker underline for better visibility */
+  transition: all 0.2s ease;
 }
 
 a:hover,
 a:focus-visible {
   color: var(--link-hover);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 3px; /* Even thicker on hover/focus */
 }
 
 a:focus-visible {
-  outline: 3px solid var(--focus-outline);
+  outline: var(--focus-ring-width) solid var(--focus-outline);
   outline-offset: 2px;
+  border-radius: 2px;
 }
+
+/* ========================================
+   GLOBAL FOCUS STYLES - WCAG 2.4.7
+   Visible focus indicators for all interactive elements
+   ======================================== */
+
+/* Universal focus styles for keyboard navigation */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible,
+summary:focus-visible,
+details:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-outline);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Enhanced focus for primary interactive elements */
+.btn:focus-visible,
+.button:focus-visible,
+.toolbar-btn:focus-visible,
+.email-section-btn:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-outline);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.15);
+}
+
+/* ======================================== */
 
 /* Header */
 header {
@@ -103,9 +138,10 @@ header {
 .site-brand:focus-visible {
   text-decoration: none;
   background: rgba(255, 255, 255, 0.2);
-  outline: 3px solid var(--focus-outline);
-  outline-offset: 2px;
+  outline: var(--focus-ring-width) solid var(--focus-outline);
+  outline-offset: 3px;
   transform: scale(1.05);
+  border-radius: 0.5rem;
 }
 
 /* Ensure high-contrast mode keeps strong contrast for brand */
@@ -163,10 +199,13 @@ nav {
 .nav-list a:hover,
 .nav-list a:focus-visible {
   background: #285e93;
+  outline: var(--focus-ring-width) solid #ffffff;
+  outline-offset: 2px;
 }
 .nav-list a[aria-current="page"] {
   text-decoration: underline;
   text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
 }
 
 /* Mobile navigation */
@@ -184,7 +223,12 @@ nav {
   cursor: pointer;
 }
 .menu-toggle:hover,
-.menu-toggle:focus-visible { background: #183c65; color: #fff; }
+.menu-toggle:focus-visible { 
+  background: #183c65; 
+  color: #fff;
+  outline: var(--focus-ring-width) solid var(--focus-outline);
+  outline-offset: 2px;
+}
 
 @media (max-width: 768px) {
   header { padding: 0.75rem 0; }
@@ -221,7 +265,12 @@ nav {
   justify-content: center;
 }
 .lang-switch:hover,
-.lang-switch:focus-visible { background: #183c65; color: #fff; }
+.lang-switch:focus-visible { 
+  background: #183c65; 
+  color: #fff;
+  outline: var(--focus-ring-width) solid var(--focus-outline);
+  outline-offset: 2px;
+}
 .contrast-toggle,
 .theme-toggle {
   background: var(--main-bg, #ffffff);
@@ -244,7 +293,60 @@ nav {
 .theme-toggle:focus-visible {
   background: #183c65;
   color: #fff;
+  outline: var(--focus-ring-width) solid var(--focus-outline);
+  outline-offset: 2px;
 }
+
+/* ======================================== */
+
+/* ========================================
+   TYPOGRAPHY & SPACING
+   Comfortable reading with proper spacing
+   ======================================== */
+
+/* Paragraphs - comfortable spacing */
+p {
+  margin-bottom: 1.25em;
+  line-height: 1.7;
+}
+
+/* Headings - proper hierarchy and spacing */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.25rem; /* 36px */
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.875rem; /* 30px */
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px */
+}
+
+/* Lists - improved spacing */
+ul, ol {
+  margin-bottom: 1.5em;
+  padding-left: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  line-height: 1.7;
+}
+
+/* ======================================== */
 
 /* Content shell */
 main {
@@ -600,8 +702,8 @@ body[data-theme="dark"] {
   --header-bg: #0b2545;
   --header-text: #ffffff;
   --main-bg: #111a2b;
-  --link-color: #a8c7ff;
-  --link-hover: #cfe8ff;
+  --link-color: #7eb7ff; /* Lighter, more visible blue in dark mode */
+  --link-hover: #a8c7ff; /* Even lighter on hover */
   --nav-hover: #183c65;
   --border-color: #355c7d;
   --focus-outline: #82aaff;
@@ -654,11 +756,13 @@ body[data-theme="dark"] .nav-list a[aria-current="page"] {
 body[data-theme="dark"] main a {
   color: var(--link-color);
   text-decoration-color: var(--link-color);
+  text-decoration-thickness: 2px;
 }
 
 body[data-theme="dark"] main a:hover,
 body[data-theme="dark"] main a:focus-visible {
   color: var(--link-hover);
+  text-decoration-thickness: 3px;
 }
 
 /* Dark mode: Social links */
@@ -2041,37 +2145,67 @@ body[data-contrast="high"] .email-section-btn {
   padding: 1.5rem;
   border-radius: 8px;
   margin: 1.5rem 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .gradient-banner h2,
 .gradient-banner h3,
 .gradient-banner strong {
   color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .gradient-banner p,
 .gradient-banner li {
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: rgba(255, 255, 255, 0.98) !important;
 }
 
-/* Pink Gradient Banner */
+.gradient-banner a {
+  color: #ffffff !important;
+  text-decoration-color: rgba(255, 255, 255, 0.9);
+  text-decoration-thickness: 2px;
+  font-weight: 600;
+}
+
+.gradient-banner a:hover,
+.gradient-banner a:focus-visible {
+  text-decoration-thickness: 3px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Pink Gradient Banner - Enhanced text contrast */
 .gradient-banner-pink {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #d946a6 0%, #e63946 100%); /* Darker pink/red for better contrast */
   color: white !important;
   padding: 1.5rem;
   border-radius: 12px;
   margin: 1.5rem 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
 }
 
 .gradient-banner-pink h2,
 .gradient-banner-pink h3,
 .gradient-banner-pink strong {
   color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .gradient-banner-pink p,
 .gradient-banner-pink li {
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: rgba(255, 255, 255, 0.98) !important; /* Improved from 0.95 */
+}
+
+.gradient-banner-pink a {
+  color: #ffffff !important;
+  text-decoration-color: rgba(255, 255, 255, 0.9);
+  text-decoration-thickness: 2px;
+  font-weight: 600;
+}
+
+.gradient-banner-pink a:hover,
+.gradient-banner-pink a:focus-visible {
+  text-decoration-thickness: 3px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 /* Success Box (Green) */
@@ -2084,7 +2218,7 @@ body[data-contrast="high"] .email-section-btn {
   color: var(--text-color);
 }
 
-/* Warning Box (Yellow/Orange) */
+/* Warning Box (Yellow/Orange) - Enhanced contrast */
 .warning-box {
   background: var(--warning-box-bg, #fef3c7);
   border-left: 4px solid var(--warning-border, #f59e0b);
@@ -2092,7 +2226,13 @@ body[data-contrast="high"] .email-section-btn {
   margin: 2rem 0;
   border-radius: 4px;
   text-align: center;
-  color: var(--text-color);
+  color: #78350f; /* Dark brown text for strong contrast on yellow */
+}
+
+.warning-box strong,
+.warning-box h2,
+.warning-box h3 {
+  color: #78350f; /* Ensure headings also have strong contrast */
 }
 
 /* Info Box (Blue) */
@@ -2147,8 +2287,15 @@ body[data-contrast="high"] .email-section-btn {
 }
 
 [data-theme="dark"] .warning-box {
-  --warning-box-bg: #4a3010;
-  --warning-border: #f59e0b;
+  --warning-box-bg: #44260a; /* Darker brown background for better contrast */
+  --warning-border: #fb923c;
+  color: #fef3c7; /* Light yellow text for strong contrast */
+}
+
+[data-theme="dark"] .warning-box strong,
+[data-theme="dark"] .warning-box h2,
+[data-theme="dark"] .warning-box h3 {
+  color: #fef3c7;
 }
 
 [data-theme="dark"] .info-box,
