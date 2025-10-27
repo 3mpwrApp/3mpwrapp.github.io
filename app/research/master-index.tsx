@@ -4,6 +4,7 @@ import { AccessibilityInfo, Linking, ScrollView, StyleSheet, Text, TextInput, Vi
 
 import A11yPressable from '../../components/A11yPressable';
 import ContrastToggle from '../../components/ContrastToggle';
+import { GapView } from '../../components/GapView';
 import SettingsLink from '../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { masterIndex } from '../../data/research-master-index';
@@ -126,7 +127,7 @@ export default function MasterIndexScreen() {
         <ContrastToggle style={{ position: 'absolute', right: 56, top: 20 }} />
         <Text style={styles.intro}>{t('masterIndex.intro')}</Text>
         <View style={styles.searchWrap} accessibilityRole="search">
-          <View style={styles.filterChipsRow} accessibilityRole="tablist">
+          <GapView gap={8} style={styles.filterChipsRow} accessibilityRole="tablist">
             {[t('research.chips.uncrpd'), t('research.chips.advocacy'), t('research.chips.poverty'), t('research.chips.suppression')].map(chip => {
               const active = quickFilter === chip.toLowerCase();
               return (
@@ -147,7 +148,7 @@ export default function MasterIndexScreen() {
                 </A11yPressable>
               );
             })}
-          </View>
+          </GapView>
           <Text style={styles.searchLabel}>{t('masterIndex.filterLabel')}</Text>
           <TextInput
             value={query}
@@ -233,7 +234,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     title: { fontSize: Math.round(24 * factor), fontWeight: '700', marginBottom: 12, color: palette.text },
     intro: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.85, lineHeight: 20, marginBottom: 24 },
     searchWrap: { marginBottom: 28, backgroundColor: palette.surface, padding: 12, borderRadius: 12, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
-  filterChipsRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 10 },
+  filterChipsRow: { flexDirection: 'row', flexWrap: 'wrap', marginBottom: 10 },
   filterChip: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 16, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
   filterChipActive: { backgroundColor: palette.primary },
   filterChipText: { fontSize: Math.round(12 * factor), color: palette.text },
