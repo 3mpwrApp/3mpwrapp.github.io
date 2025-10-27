@@ -467,7 +467,9 @@ Read the full article: ${fullUrl}
     console.log(`✅ Created article: ${filepath}`);
 
     // Generate social posts
-    const articleUrl = `/blog/${dateStr}-feature-spotlight-${slug}/`;
+    // Jekyll permalink: pretty converts YYYY-MM-DD-title.md to /YYYY/MM/DD/title/
+    const [year, month, day] = dateStr.split('-');
+    const articleUrl = `/${year}/${month}/${day}/feature-spotlight-${slug}/`;
     const social = this.generateSocialPost(feature, articleUrl);
 
     // Save social post content for posting script

@@ -237,11 +237,14 @@ ${content}
     fs.writeFileSync(whatsNewPath, whatsNewContent);
     console.log(`✅ Created What's New entry: ${whatsNewPath}`);
 
+    // Jekyll permalink: pretty converts YYYY-MM-DD-title.md to /YYYY/MM/DD/title/
+    const [year_part, month, day] = dateStr.split('-');
+    
     return {
       postPath,
       whatsNewPath,
       title: `Weekly Update — Week ${weekNumber} (${year})`,
-      url: `/blog/${dateStr}-weekly-update-week-${weekNumber}/`,
+      url: `/${year_part}/${month}/${day}/weekly-update-week-${weekNumber}/`,
       excerpt: `This week's updates to 3mpwrApp features, content, and improvements.`
     };
   }
