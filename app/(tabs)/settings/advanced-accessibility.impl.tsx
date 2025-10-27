@@ -13,6 +13,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import ComprehensiveDisclaimer from '../../../components/ComprehensiveDisclaimer';
+import { GapView } from '../../../components/GapView';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -277,7 +278,7 @@ export default function AdvancedAccessibilityScreen() {
             {description}
           </Text>
         )}
-        <View style={styles.optionsContainer}>
+        <GapView gap={8} style={styles.optionsContainer}>
           {options.map((option) => (
             <TouchableOpacity
               key={option.value}
@@ -297,7 +298,7 @@ export default function AdvancedAccessibilityScreen() {
               </Text>
             </TouchableOpacity>
           ))}
-        </View>
+        </GapView>
       </View>
     </View>
   );
@@ -750,7 +751,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     optionsContainer: {
       flexDirection: 'row',
       flexWrap: 'wrap',
-      gap: 8,
       marginTop: 8,
     },
     optionButton: {

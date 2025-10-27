@@ -11,6 +11,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import ComprehensiveDisclaimer from '../../../components/ComprehensiveDisclaimer';
+import { GapView } from '../../../components/GapView';
 import { neurodivergentThemes, useNeurodivergent } from '../../../context/NeurodivergentContext';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -214,11 +215,11 @@ export default function NeurodivergentSettingsScreen() {
           description={t('neurodivergent.themes.description', 'Choose colors that work best for your visual processing')}
         />
         
-        <View style={styles.themeGrid}>
+        <GapView gap={8} style={styles.themeGrid}>
           {Object.entries(neurodivergentThemes).map(([key, theme]) => (
             <ThemeButton key={key} themeKey={key} theme={theme} />
           ))}
-        </View>
+        </GapView>
 
         {/* Sensory Preferences */}
         <SectionHeader 
@@ -538,7 +539,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       lineHeight: 18,
     },
     themeGrid: {
-      gap: 8,
     },
     themeButton: {
       padding: 16,

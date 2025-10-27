@@ -16,6 +16,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
+import { GapView } from '../../../components/GapView';
 import { useAuth } from '../../../context/AuthContext';
 import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
 import { useThemeColor } from '../../../hooks/useThemeColor';
@@ -675,7 +676,7 @@ export default function AdvancedSecurityOptions() {
           <Text style={[styles.culturalSecurityDescription, { color: colors.textSecondary }]}>
             Traditional protocols are integrated into all security measures to protect sacred and cultural data according to Indigenous data sovereignty principles.
           </Text>
-          <View style={styles.culturalFeatures}>
+          <GapView gap={8} style={styles.culturalFeatures}>
             <View style={styles.culturalFeature}>
               <Ionicons name="checkmark-circle" size={16} color={colors.success} />
               <Text style={[styles.culturalFeatureText, { color: colors.textSecondary }]}>
@@ -694,7 +695,7 @@ export default function AdvancedSecurityOptions() {
                 Elder consultation rights respected
               </Text>
             </View>
-          </View>
+          </GapView>
         </View>
       )}
     </ScrollView>
@@ -829,7 +830,7 @@ export default function AdvancedSecurityOptions() {
         <Text style={[styles.accessibilityAuthDescription, { color: colors.textSecondary }]}>
           Alternative authentication methods for users with disabilities
         </Text>
-        <View style={styles.accessibilityFeatures}>
+        <GapView gap={8} style={styles.accessibilityFeatures}>
           <View style={styles.accessibilityFeature}>
             <Ionicons name="checkmark-circle" size={16} color={colors.success} />
             <Text style={[styles.accessibilityFeatureText, { color: colors.textSecondary }]}>
@@ -848,7 +849,7 @@ export default function AdvancedSecurityOptions() {
               Cognitive assistance for complex authentication
             </Text>
           </View>
-        </View>
+        </GapView>
       </View>
     </ScrollView>
   );
@@ -1127,7 +1128,6 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   culturalFeatures: {
-    gap: 8,
   },
   culturalFeature: {
     flexDirection: 'row',
@@ -1189,7 +1189,6 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   accessibilityFeatures: {
-    gap: 8,
   },
   accessibilityFeature: {
     flexDirection: 'row',
