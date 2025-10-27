@@ -221,11 +221,6 @@
   - Performance budgets
 
 ### Priority 4: Community Features
-- [ ] **Beta Tester Testimonials**
-  - Real quotes from testers (with permission)
-  - Photo placeholders or avatars
-  - Link to beta signup
-  
 - [ ] **Blog/News Section**
   - Update feed for community
   - Development progress posts
