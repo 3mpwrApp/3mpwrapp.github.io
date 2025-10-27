@@ -10,6 +10,7 @@ import {
 
 import A11yPressable from '../../../components/A11yPressable';
 import { DwellProgressIndicator } from '../../../components/DwellProgressIndicator';
+import { GapView } from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useMotorAccessibility } from '../../../context/MotorAccessibilityContext';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
@@ -191,7 +192,7 @@ export default function MotorAccessibilityScreen() {
           {t('motorAccessibility.oneHandedHelp', 'Position controls for one-handed use (left or right hand).')}
         </Text>
         
-        <View style={styles.radioGroup}>
+        <GapView gap={8} style={styles.radioGroup}>
           {(['both', 'left', 'right'] as const).map((mode) => (
             <A11yPressable
               key={mode}
@@ -218,7 +219,7 @@ export default function MotorAccessibilityScreen() {
               </Text>
             </A11yPressable>
           ))}
-        </View>
+        </GapView>
       </View>
 
       {/* Coming Soon Features */}
@@ -338,7 +339,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     radioGroup: {
       flexDirection: 'row',
-      gap: 8,
       marginTop: 8,
     },
     radioButton: {
