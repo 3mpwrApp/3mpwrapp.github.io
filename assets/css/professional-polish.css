@@ -995,10 +995,48 @@ table {
    COMPREHENSIVE THEME SUPPORT FOR ALL ELEMENTS
    ============================================ */
 
+/* ===== SKIP LINK ===== */
+.skip-link {
+  background: var(--light-link, #0056b3) !important;
+  color: #ffffff !important;
+}
+
+.skip-link:focus {
+  background: var(--light-link, #0056b3) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .skip-link {
+  background: var(--dark-bg-primary, #000000) !important;
+  color: var(--dark-link, #66b2ff) !important;
+}
+
+[data-theme="dark"] .skip-link:focus {
+  background: var(--dark-bg-primary, #000000) !important;
+  color: var(--dark-link, #66b2ff) !important;
+}
+
+[data-contrast="high"] .skip-link {
+  background: #ffffff !important;
+  color: #0000ee !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .skip-link {
+  background: #000000 !important;
+  color: #ffff00 !important;
+  border: 3px solid #ffffff !important;
+}
+
 /* ===== FEATURES GRID (homepage feature cards) ===== */
 /* Light mode - dark text on light backgrounds */
 .features-grid li {
   background: var(--light-bg-tertiary, #e9ecef) !important;
+  color: var(--light-text-primary, #000000) !important;
+}
+
+.features-grid li h3 {
   color: var(--light-text-primary, #000000) !important;
 }
 
@@ -1013,6 +1051,10 @@ table {
 /* Dark mode - light text on dark backgrounds */
 [data-theme="dark"] .features-grid li {
   background: var(--dark-bg-tertiary, #2d2d2d) !important;
+  color: var(--dark-text-primary, #ffffff) !important;
+}
+
+[data-theme="dark"] .features-grid li h3 {
   color: var(--dark-text-primary, #ffffff) !important;
 }
 
@@ -1031,6 +1073,10 @@ table {
   border: 3px solid #000000 !important;
 }
 
+[data-contrast="high"] .features-grid li h3 {
+  color: #000000 !important;
+}
+
 [data-contrast="high"] .features-grid li p {
   color: #000000 !important;
 }
@@ -1045,6 +1091,10 @@ table {
   background: #000000 !important;
   color: #ffffff !important;
   border: 3px solid #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .features-grid li h3 {
+  color: #ffffff !important;
 }
 
 [data-theme="dark"][data-contrast="high"] .features-grid li p {
@@ -1268,10 +1318,19 @@ a:not(.btn):not(.button):not(.nav-link) {
 .feedback-btn {
   font-weight: 700 !important;
   text-decoration: none !important;
+  display: inline-block !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 4px !important;
 }
 
 .feedback-yes {
   background: #047857 !important;
+  color: #ffffff !important;
+}
+
+.feedback-yes:visited,
+.feedback-yes:hover,
+.feedback-yes:focus {
   color: #ffffff !important;
 }
 
@@ -1280,8 +1339,20 @@ a:not(.btn):not(.button):not(.nav-link) {
   color: #ffffff !important;
 }
 
+.feedback-no:visited,
+.feedback-no:hover,
+.feedback-no:focus {
+  color: #ffffff !important;
+}
+
 .feedback-suggest {
   background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+.feedback-suggest:visited,
+.feedback-suggest:hover,
+.feedback-suggest:focus {
   color: #ffffff !important;
 }
 
@@ -1290,13 +1361,31 @@ a:not(.btn):not(.button):not(.nav-link) {
   color: #000000 !important;
 }
 
+[data-theme="dark"] .feedback-yes:visited,
+[data-theme="dark"] .feedback-yes:hover,
+[data-theme="dark"] .feedback-yes:focus {
+  color: #000000 !important;
+}
+
 [data-theme="dark"] .feedback-no {
   background: #fca5a5 !important;
   color: #000000 !important;
 }
 
+[data-theme="dark"] .feedback-no:visited,
+[data-theme="dark"] .feedback-no:hover,
+[data-theme="dark"] .feedback-no:focus {
+  color: #000000 !important;
+}
+
 [data-theme="dark"] .feedback-suggest {
   background: #60a5fa !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .feedback-suggest:visited,
+[data-theme="dark"] .feedback-suggest:hover,
+[data-theme="dark"] .feedback-suggest:focus {
   color: #000000 !important;
 }
 
