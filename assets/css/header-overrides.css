@@ -117,7 +117,7 @@ body:not([data-theme=dark]) .info-box-light a {
 /* Feature filter count on medium blue: use dark text */
 .filter-btn .count,
 .active > .count {
-  color: #0b2545 !important;
+  color: #000000 !important;
 }
 
 /* Feature card links on medium blue tiles: white text for contrast */
