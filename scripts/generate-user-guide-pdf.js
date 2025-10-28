@@ -12,7 +12,7 @@ const fs = require('fs');
   const page = await browser.newPage();
   
   // Load the rendered HTML from the live site
-  const url = 'https://3mpwrapp.pages.dev/user-guide';
+  const url = 'https://3mpwrapp.pages.dev/user-guide/';
   console.log(`📄 Loading page: ${url}`);
   
   await page.goto(url, { waitUntil: 'networkidle' });
