@@ -500,3 +500,50 @@ p {
   border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
   font-weight: 600 !important;
 }
+
+/* ===== QUICK SUMMARY BOX ===== */
+.quick-summary {
+  background: var(--bg-elevated);
+  border: 2px solid var(--success);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin: var(--space-xl) 0 var(--space-2xl);
+}
+
+.quick-summary h2 {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+  color: var(--success);
+  font-size: var(--font-size-xl);
+}
+
+.quick-summary ul {
+  margin: var(--space-md) 0;
+  padding-left: var(--space-lg);
+}
+
+.quick-summary li {
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.quick-summary p {
+  margin-top: var(--space-lg);
+  margin-bottom: 0;
+}
+
+.quick-summary strong {
+  color: var(--brand-primary);
+}
+
+.quick-summary a {
+  color: var(--brand-primary);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.quick-summary a:hover,
+.quick-summary a:focus {
+  color: var(--brand-primary-hover);
+}
+

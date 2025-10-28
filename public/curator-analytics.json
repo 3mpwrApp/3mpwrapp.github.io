@@ -1,25 +1,9 @@
 {
   "version": "1.0",
   "startDate": "2025-10-21T02:18:23.548Z",
-  "lastUpdated": "2025-10-27T21:22:13.746Z",
+  "lastUpdated": "2025-10-28T15:29:12.745Z",
   "featureHighlights": {
     "Resource Directory": {
-      "uses": 3,
-      "platforms": {
-        "mastodon": 0,
-        "bluesky": 3,
-        "x": 0
-      },
-      "timeSlots": {
-        "morning": 0,
-        "midday": 1,
-        "evening": 1,
-        "night": 1
-      },
-      "firstUsed": "2025-10-21T02:18:23.975Z",
-      "lastUsed": "2025-10-25T21:20:50.595Z"
-    },
-    "Benefits Navigator": {
       "uses": 4,
       "platforms": {
         "mastodon": 0,
@@ -27,13 +11,29 @@
         "x": 0
       },
       "timeSlots": {
-        "morning": 1,
+        "morning": 0,
+        "midday": 2,
+        "evening": 1,
+        "night": 1
+      },
+      "firstUsed": "2025-10-21T02:18:23.975Z",
+      "lastUsed": "2025-10-28T15:29:12.745Z"
+    },
+    "Benefits Navigator": {
+      "uses": 5,
+      "platforms": {
+        "mastodon": 0,
+        "bluesky": 5,
+        "x": 0
+      },
+      "timeSlots": {
+        "morning": 2,
         "midday": 0,
         "evening": 2,
         "night": 1
       },
       "firstUsed": "2025-10-21T02:21:47.744Z",
-      "lastUsed": "2025-10-27T21:22:13.746Z"
+      "lastUsed": "2025-10-28T09:23:13.811Z"
     },
     "News Curation": {
       "uses": 3,
@@ -129,26 +129,26 @@
       "totalItems": 0
     },
     "morning": {
-      "posts": 7,
-      "avgItems": "37.6",
+      "posts": 8,
+      "avgItems": "34.6",
       "platforms": {
         "mastodon": 0,
-        "bluesky": 7,
+        "bluesky": 8,
         "x": 0
       },
       "successRate": 0,
-      "totalItems": 263
+      "totalItems": 277
     },
     "midday": {
-      "posts": 7,
-      "avgItems": "30.9",
+      "posts": 8,
+      "avgItems": "27.4",
       "platforms": {
         "mastodon": 0,
-        "bluesky": 7,
+        "bluesky": 8,
         "x": 0
       },
       "successRate": 0,
-      "totalItems": 216
+      "totalItems": 219
     },
     "evening": {
       "posts": 10,
@@ -164,13 +164,13 @@
   },
   "platforms": {
     "mastodon": {
-      "posts": 26,
+      "posts": 28,
       "successes": 0,
-      "failures": 26
+      "failures": 28
     },
     "bluesky": {
-      "posts": 26,
-      "successes": 24,
+      "posts": 28,
+      "successes": 26,
       "failures": 2
     },
     "x": {
@@ -179,6 +179,6 @@
       "failures": 0
     }
   },
-  "totalPosts": 52,
-  "successRate": "46.15"
+  "totalPosts": 56,
+  "successRate": "46.43"
 }

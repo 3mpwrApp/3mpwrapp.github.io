@@ -14,6 +14,19 @@ permalink: /accessibility/
   <p class="hero-text">3mpwrApp is committed to inclusive design. We aim to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA, and we adopt selected AAA practices where feasible.</p>
 </div>
 
+<div class="quick-summary">
+  <h2>Quick Summary</h2>
+  <ul>
+    <li>✅ WCAG 2.2 Level AA compliant</li>
+    <li>✅ Screen reader optimized (JAWS, NVDA, VoiceOver tested)</li>
+    <li>✅ Full keyboard navigation support</li>
+    <li>✅ High contrast & dark mode options</li>
+    <li>✅ Dyslexia-friendly fonts & overlays</li>
+    <li>✅ No time limits on any actions</li>
+  </ul>
+  <p><strong>Need help?</strong> <a href="/accessibility-settings/">Customize your accessibility settings</a> or <a href="/contact/">contact our accessibility team</a>.</p>
+</div>
+
 ---
 
 ## Our Commitment

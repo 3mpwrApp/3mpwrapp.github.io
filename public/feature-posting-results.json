@@ -1,18 +1,18 @@
 {
-  "feature": "Campaign Coordination",
-  "date": "2025-10-27",
-  "articleUrl": "https://3mpwrapp.pages.dev/blog/2025-10-27-feature-spotlight-campaign-coordination/",
-  "timestamp": "2025-10-27T10:22:29.923Z",
+  "feature": "Wellness Hub",
+  "date": "2025-10-28",
+  "articleUrl": "https://3mpwrapp.pages.dev/2025/10/28/feature-spotlight-wellness-hub/",
+  "timestamp": "2025-10-28T10:21:28.728Z",
   "results": {
     "mastodon": {
       "success": true,
       "message": "Posted successfully",
-      "url": "https://mastodon.social/@3mpwrApp/115445632018311946"
+      "url": "https://mastodon.social/@3mpwrApp/115451290321766589"
     },
     "bluesky": {
       "success": true,
       "message": "Posted successfully",
-      "url": "https://bsky.app/profile/3mpwrapp.bsky.social/post/3m4675haznb2p"
+      "url": "https://bsky.app/profile/3mpwrapp.bsky.social/post/3m4apkke4pn2x"
     }
   }
 }
