@@ -57,3 +57,65 @@ header {
 main { 
   max-width: 1100px !important; 
 }
+
+/* --- axe-core color-contrast fixes (WCAG 2.1 AA, 1.4.3) --- */
+/* Make skip links always high contrast and consistent */
+.skip-link {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+/* Ensure brand text contrasts against dark header */
+header .site-brand,
+header .site-brand span {
+  color: #ffffff !important;
+}
+
+/* Accessibility toolbar toggle label on dark backgrounds */
+.toggle-text,
+.toolbar-label {
+  color: #ffffff !important;
+}
+
+/* Badges: use dark text on light blue backgrounds */
+.badge {
+  color: #0b2545 !important;
+}
+
+/* Night mode suggestion buttons: make background slightly darker for contrast */
+#acceptNightMode,
+#dismissNightSuggestion {
+  background-color: #4f46e5 !important; /* darker than #6366f1 */
+  color: #ffffff !important;
+}
+
+/* Feedback buttons: ensure white text on colored backgrounds */
+.feedback-yes,
+.feedback-no,
+.feedback-suggest {
+  color: #ffffff !important;
+}
+
+/* Community stats/info boxes on light theme: use dark text on very light backgrounds */
+body:not([data-theme=dark]) .community-stats-box,
+body:not([data-theme=dark]) .community-stats-box p,
+body:not([data-theme=dark]) .community-stats-box strong,
+body:not([data-theme=dark]) .community-stats-box a,
+body:not([data-theme=dark]) .info-box-light,
+body:not([data-theme=dark]) .info-box-light p,
+body:not([data-theme=dark]) .info-box-light strong,
+body:not([data-theme=dark]) .info-box-light a {
+  color: #0b2545 !important;
+}
+
+/* Feature filter count on medium blue: use dark text */
+.filter-btn .count,
+.active > .count {
+  color: #0b2545 !important;
+}
+
+/* Feature card links on medium blue tiles: white text for contrast */
+.card-link {
+  color: #ffffff !important;
+}
