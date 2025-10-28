@@ -198,12 +198,13 @@ body[data-contrast="high"] .site-brand {
 /* Navigation */
 nav { 
   display: flex; 
-  justify-content: center; 
+  justify-content: center;
+  overflow-x: auto; /* Allow horizontal scroll on small screens */
 }
 .nav-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  flex-wrap: nowrap; /* Prevent wrapping - keep in single row */
+  gap: 0.5rem; /* Reduced gap for compact display */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -215,13 +216,14 @@ nav {
   letter-spacing: 0.03em;
   /* WCAG 2.2 2.5.8: Minimum 24x24px, recommend 44x44px for touch */
   min-height: 44px;
-  min-width: 44px;
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 0.7rem; /* Reduced padding for compact display */
   border-radius: 6px;
   transition: background 0.2s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap; /* Prevent text wrapping */
+  font-size: 0.9rem; /* Slightly smaller text */
 }
 .nav-list a:visited { color: #fff; }
 .nav-list a:hover,
