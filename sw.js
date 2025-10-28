@@ -1,7 +1,7 @@
-// 3mpwrApp Service Worker v2.0
+// 3mpwrApp Service Worker v2.1
 // Implements offline-first caching for PWA functionality
 
-const CACHE_NAME = '3mpwr-v2.0';
+const CACHE_NAME = '3mpwr-v2.1';
 const OFFLINE_URL = '/offline.html';
 
 // Resources to cache on installation
@@ -60,7 +60,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event
 self.addEventListener('fetch', (event) => {
   // Skip non-GET requests
   if (event.request.method !== 'GET') return;
@@ -68,52 +68,43 @@ self.addEventListener('fetch', (event) => {
   // Skip Chrome extensions and other schemes
   if (!event.request.url.startsWith('http')) return;
 
+  // 1) Network-first for navigation requests (pages/HTML)
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          // Cache a copy of the fresh HTML for offline use
+          const copy = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+          return networkResponse;
+        })
+        .catch(async () => {
+          // Fall back to cached page, else offline page
+          const cached = await caches.match(event.request);
+          return cached || caches.match(OFFLINE_URL);
+        })
+    );
+    return;
+  }
+
+  // 2) Cache-first for other GETs (CSS/JS/images), with background update
   event.respondWith(
-    caches.match(event.request)
-      .then((cachedResponse) => {
-        // Return cached version if available
-        if (cachedResponse) {
-          console.log('[Service Worker] Serving from cache:', event.request.url);
-          return cachedResponse;
-        }
-
-        // Otherwise fetch from network
-        return fetch(event.request)
-          .then((networkResponse) => {
-            // Don't cache non-successful responses
-            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-              return networkResponse;
-            }
-
-            // Clone the response (can only be consumed once)
-            const responseToCache = networkResponse.clone();
-
-            // Cache successful responses
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                // Only cache same-origin requests
-                if (event.request.url.startsWith(self.location.origin)) {
-                  cache.put(event.request, responseToCache);
-                }
-              });
-
-            return networkResponse;
-          })
-          .catch(() => {
-            // Network failed - serve offline page for navigation requests
-            if (event.request.mode === 'navigate') {
-              return caches.match(OFFLINE_URL);
-            }
-            
-            // Return offline fallback for images
-            if (event.request.destination === 'image') {
-              return new Response(
-                '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><text x="50%" y="50%" text-anchor="middle" fill="#999">Offline</text></svg>',
-                { headers: { 'Content-Type': 'image/svg+xml' } }
-              );
-            }
-          });
-      })
+    caches.match(event.request).then((cached) => {
+      const fetchPromise = fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200 && networkResponse.type !== 'opaque') {
+            const copy = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              if (event.request.url.startsWith(self.location.origin)) {
+                cache.put(event.request, copy);
+              }
+            });
+          }
+          return networkResponse;
+        })
+        .catch(() => cached);
+      return cached || fetchPromise;
+    })
   );
 });
 
@@ -156,4 +147,4 @@ self.addEventListener('notificationclick', (event) => {
   );
 });
 
-console.log('[Service Worker] v2.0 loaded successfully');
+console.log('[Service Worker] v2.1 loaded successfully');
