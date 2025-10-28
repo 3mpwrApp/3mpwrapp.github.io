@@ -137,8 +137,8 @@ header {
   background: var(--header-bg);
   color: var(--header-text);
   padding: 1rem 0;
-  position: sticky;
-  top: 0;
+  /* position: sticky; */ /* Disabled - header was too tall and taking up too much space */
+  /* top: 0; */
   z-index: 1000;
 }
 
