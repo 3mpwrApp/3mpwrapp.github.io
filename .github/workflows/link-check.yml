@@ -1,0 +1,32 @@
+name: Link Checker (lychee)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+  schedule:
+    - cron: '23 4 * * *'  # Daily at 04:23 UTC
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run lychee on deployed site
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --config ./lychee.toml --verbose --no-progress https://3mpwrapp.pages.dev
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Upload lychee raw results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-results
+          path: |
+            lychee/out.md
+            lychee/out.json
+            lychee/*
