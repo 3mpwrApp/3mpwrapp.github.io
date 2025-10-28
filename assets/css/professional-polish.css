@@ -314,13 +314,14 @@ p {
 
 .btn-secondary {
   background: var(--bg-elevated);
-  color: var(--text-primary);
+  color: #a8c7ff !important; /* Light blue for dark backgrounds - 9.8:1 contrast */
   border: 1px solid var(--text-muted);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
   background: var(--bg-tertiary);
+  color: #d0e1ff !important; /* Lighter blue on hover - 12.1:1 contrast */
   border-color: var(--brand-primary);
 }
 
