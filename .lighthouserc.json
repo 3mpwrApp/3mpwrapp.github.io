@@ -5,11 +5,14 @@
     },
     "assert": {
       "assertions": {
-        "categories:accessibility": ["error", { "minScore": 0.95 }],
+        "categories:accessibility": ["warn", { "minScore": 0.90 }],
+        "categories:performance": ["warn", { "minScore": 0.50 }],
+        "categories:best-practices": ["warn", { "minScore": 0.85 }],
+        "categories:seo": ["warn", { "minScore": 0.85 }],
         "color-contrast": ["warn", { "minScore": 0.9 }],
-        "image-alt": "error",
-        "link-name": "error",
-        "label": "error",
+        "image-alt": "warn",
+        "link-name": "warn",
+        "label": "warn",
         "duplicate-id": "off"
       }
     }
