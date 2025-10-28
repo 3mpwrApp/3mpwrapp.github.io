@@ -1100,14 +1100,16 @@ table {
 
 /* ===== BADGES ===== */
 .badge--new {
-  background: var(--success, #28a745) !important;
+  background: #28a745 !important;
   color: #ffffff !important;
   font-weight: 700 !important;
+  font-size: 14px !important; /* Increase from 12px to meet 4.5:1 at 3:1 threshold */
 }
 
 [data-theme="dark"] .badge--new {
   background: #10b981 !important;
   color: #000000 !important;
+  font-weight: 700 !important;
 }
 
 [data-contrast="high"] .badge--new {
@@ -1259,6 +1261,163 @@ a:not(.btn):not(.button):not(.nav-link) {
 [data-theme="dark"][data-contrast="high"] .resource-card {
   background: #000000 !important;
   color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+}
+
+/* ===== FEEDBACK BUTTONS ===== */
+.feedback-btn {
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+.feedback-yes {
+  background: #047857 !important;
+  color: #ffffff !important;
+}
+
+.feedback-no {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+.feedback-suggest {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .feedback-yes {
+  background: #10b981 !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .feedback-no {
+  background: #fca5a5 !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .feedback-suggest {
+  background: #60a5fa !important;
+  color: #000000 !important;
+}
+
+[data-contrast="high"] .feedback-yes {
+  background: #00ff00 !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-contrast="high"] .feedback-no {
+  background: #ff0000 !important;
+  color: #ffffff !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-contrast="high"] .feedback-suggest {
+  background: #0000ff !important;
+  color: #ffffff !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .feedback-yes {
+  background: #00ff00 !important;
+  color: #000000 !important;
+  border: 3px solid #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .feedback-no {
+  background: #ff0000 !important;
+  color: #000000 !important;
+  border: 3px solid #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .feedback-suggest {
+  background: #0000ff !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+}
+
+/* ===== CARD LINKS ===== */
+.card-link {
+  color: #ffffff !important;
+  background: #0056b3 !important;
+  padding: 0.5rem 1rem !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
+}
+
+.card-link:hover,
+.card-link:focus {
+  background: #003d82 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .card-link {
+  background: #66b2ff !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .card-link:hover,
+[data-theme="dark"] .card-link:focus {
+  background: #99ccff !important;
+  color: #000000 !important;
+}
+
+[data-contrast="high"] .card-link {
+  background: #0000ee !important;
+  color: #ffffff !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .card-link {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border: 3px solid #ffffff !important;
+}
+
+/* ===== HIGHLIGHT BANNER BUTTON ===== */
+.highlight-banner__button {
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  padding: 0.75rem 1.5rem !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  display: inline-block !important;
+}
+
+.highlight-banner__button:hover,
+.highlight-banner__button:focus {
+  background: #f0f0f0 !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .highlight-banner__button {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .highlight-banner__button:hover,
+[data-theme="dark"] .highlight-banner__button:focus {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+[data-contrast="high"] .highlight-banner__button {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .highlight-banner__button {
+  background: #ffff00 !important;
+  color: #000000 !important;
   border: 3px solid #ffffff !important;
 }
 
