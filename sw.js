@@ -147,7 +147,7 @@ self.addEventListener('notificationclick', (event) => {
   );
 });
 
-console.log('[Service Worker] v2.1 loaded successfully');
+// (removed old v2.1 log)
 // Support messages from the page (e.g., to activate update ASAP)
 self.addEventListener('message', (event) => {
   try {
