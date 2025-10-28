@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-10-28T06:17:36.470Z",
+  "lastUpdated": "2025-10-28T12:21:20.057Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 615,
+      "totalPosts": 639,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-10-28T06:17:28.002Z"
+      "lastSeen": "2025-10-28T12:21:10.724Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 625,
+      "totalPosts": 650,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-28T06:17:29.889Z"
+      "lastSeen": "2025-10-28T12:21:12.745Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 616,
+      "totalPosts": 641,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-28T06:17:31.796Z"
+      "lastSeen": "2025-10-28T12:21:15.103Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 625,
+      "totalPosts": 650,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-28T06:17:33.661Z"
+      "lastSeen": "2025-10-28T12:21:17.114Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 625,
+      "totalPosts": 650,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-28T06:17:35.467Z"
+      "lastSeen": "2025-10-28T12:21:19.053Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "🎉 Just 3 days away! Join us Tuesday (Oct 28) at Svelte Chicago! RSVP 👇\n\n🎤 @mikerourke.bsky.social will show how to build accessible Svelte apps – covering roving tabindex, focus traps & more.\n\nThanks to @8thlight.bsky.social for hosting & @storyblok.com for sponsoring! 🙌\n\n#Svelte #A11y #ChicagoTech",
-      "author": "kenthropic.com",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
-      "author": "byrneout44.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "He didn’t hurt anyone—he just loved trains.\nDarius McCollum, an autistic man, spent decades in jail for following his passion instead of being offered support or a job. The system punished difference instead of understanding it.\n#AutismAwareness #DisabilityJustice #Inclusion #Pink #Momsky",
-      "author": "urbanmodernism.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Upturn savagely unmasks Medicaid's algorithmic gatekeepers as cynical ploys to starve disabled folks of home care, dialing eligibility via vendor whispers to slash costs over needs—time for rebel coders to hijack these sham equations. #DisabilityJustice",
-      "author": "youranona.bsky.social",
-      "engagement": 478,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "I like this. People with disabilities are able to do many things, especially when we create environments for everyone. Disabled doesn't necessarily mean unhealthy. And many people are strong and fit. I'm going to stop using able-bodied and just use non-disabled. \n\n#WordsMatter #DisabilityJustice",
       "author": "drtaragoddard.com",
@@ -338,6 +302,42 @@
       "author": "byrneout44.bsky.social",
       "engagement": 11,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Many seem to think #disabled people \"should just work\", but they don't understand/care that:\n\n1. Workplaces systemically discriminate against us \n\n2. We're often paid less than the non-disabled\n\n3. Accommodations that would enable us to work are often denied\n\nand it makes me mad.\n#DisabilityJustice",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 88,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "He didn’t hurt anyone—he just loved trains.\nDarius McCollum, an autistic man, spent decades in jail for following his passion instead of being offered support or a job. The system punished difference instead of understanding it.\n#AutismAwareness #DisabilityJustice #Inclusion #Pink #Momsky",
+      "author": "urbanmodernism.bsky.social",
+      "engagement": 43,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Upturn savagely unmasks Medicaid's algorithmic gatekeepers as cynical ploys to starve disabled folks of home care, dialing eligibility via vendor whispers to slash costs over needs—time for rebel coders to hijack these sham equations. #DisabilityJustice",
+      "author": "youranona.bsky.social",
+      "engagement": 560,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
+      "author": "byrneout44.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 41
+      "count": 38
     },
     {
       "keyword": "a11y",
-      "count": 28
+      "count": 29
     },
     {
       "keyword": "disabilityjustice",
@@ -414,12 +414,12 @@
       "count": 10
     },
     {
-      "keyword": "foxtakedown",
+      "keyword": "accessibility a11y",
       "count": 9
     },
     {
-      "keyword": "disability",
-      "count": 7
+      "keyword": "foxtakedown",
+      "count": 9
     }
   ]
 }
