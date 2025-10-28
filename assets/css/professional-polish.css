@@ -1314,6 +1314,96 @@ a:not(.btn):not(.button):not(.nav-link) {
   border: 3px solid #ffffff !important;
 }
 
+/* ===== BADGE FIX - Better contrast ===== */
+.badge--new {
+  background: #0a7c3f !important; /* Darker green for better contrast */
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
+
+/* ===== SUMMARY/DETAILS ELEMENTS (TLDR boxes) ===== */
+summary {
+  color: var(--light-text-primary, #000000) !important;
+  font-weight: 700 !important;
+}
+
+.tldr-box summary,
+details summary {
+  color: var(--light-text-primary, #000000) !important;
+  background: var(--light-bg-secondary, #f0f0f0) !important;
+}
+
+[data-theme="dark"] summary {
+  color: var(--dark-text-primary, #ffffff) !important;
+}
+
+[data-theme="dark"] .tldr-box summary,
+[data-theme="dark"] details summary {
+  color: var(--dark-text-primary, #ffffff) !important;
+  background: var(--dark-bg-secondary, #1a1a1a) !important;
+}
+
+[data-contrast="high"] summary {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] summary {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
+/* ===== FORMAT LINKS (Download PDF, Print, etc.) ===== */
+.format-link {
+  color: var(--light-link, #0056b3) !important;
+  background: var(--light-bg-secondary, #f0f0f0) !important;
+  padding: 0.5rem 1rem !important;
+  display: inline-block !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .format-link {
+  color: var(--dark-link, #66b2ff) !important;
+  background: var(--dark-bg-secondary, #1a1a1a) !important;
+}
+
+[data-contrast="high"] .format-link {
+  color: #0000ee !important;
+  background: #ffffff !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .format-link {
+  color: #ffff00 !important;
+  background: #000000 !important;
+  border: 3px solid #ffffff !important;
+  font-weight: 900 !important;
+}
+
+/* ===== SEARCH LABELS ===== */
+.search-label,
+label[for*="search"] {
+  color: var(--light-text-primary, #000000) !important;
+}
+
+[data-theme="dark"] .search-label,
+[data-theme="dark"] label[for*="search"] {
+  color: var(--dark-text-primary, #ffffff) !important;
+}
+
+[data-contrast="high"] .search-label {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .search-label,
+[data-theme="dark"][data-contrast="high"] label[for*="search"] {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
 /* ===== FEEDBACK BUTTONS ===== */
 .feedback-btn {
   font-weight: 700 !important;
