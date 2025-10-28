@@ -86,7 +86,7 @@
 
   <nav id="primary-nav" aria-label="Primary">
       {% if page.lang == 'fr' %}{% assign lang_prefix = '/fr' %}{% else %}{% assign lang_prefix = '' %}{% endif %}
-      <ul class="nav-list">
+  <ul class="nav-list" style="flex-wrap: nowrap; gap: .5rem;">
         <li>
           <a href="{{ lang_prefix | append: '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' or page.url == '/fr/' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Accueil{% else %}Home{% endif %}
@@ -293,7 +293,11 @@
 
   <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
     <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
-  <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}"></script>
+  {%- comment -%}
+    Cookie consent UI is provided inline below. Remove JS injector to avoid
+    duplicate banners (it inserts a second banner with a different id).
+  {%- endcomment -%}
+  
 
   {%- if jekyll.environment == "production" -%}
 
