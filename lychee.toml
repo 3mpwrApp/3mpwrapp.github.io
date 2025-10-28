@@ -1,5 +1,8 @@
 # Lychee config for built-site scanning
 
+# Base URL for resolving absolute paths in offline mode
+base = "https://3mpwrapp.pages.dev"
+
 # Exclude domains that frequently block bots or are managed externally.
 exclude = [
   "https://x.com/.*",

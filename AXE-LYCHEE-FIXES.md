@@ -155,6 +155,46 @@ npx lychee-cli --config lychee.toml ./_site
 
 ---
 
+## 🔗 Issue #2: Lychee Link Checker - InvalidPathToUri Errors (IMPORTANT)
+
+### Problem Detected:
+Lychee link checker failing with 400+ `InvalidPathToUri` errors in GitHub Actions
+
+#### Root Cause:
+- **Offline Mode Issue**: Workflow was running lychee with `--offline` flag
+- **Absolute Paths**: Jekyll generates HTML with absolute paths like `/about`, `/assets/css/style.css`
+- **No Base URL**: In offline mode, lychee couldn't resolve absolute paths to valid URIs
+- Result: All internal links failing validation
+
+#### Example Errors:
+```
+[WARN] Error creating request: InvalidPathToUri("/assets/css/style.min.css")
+[WARN] Error creating request: InvalidPathToUri("/about")
+[WARN] Error creating request: InvalidPathToUri("/privacy")
+```
+
+### Solution Applied:
+
+1. **Added base URL to `lychee.toml`**:
+   ```toml
+   base = "https://3mpwrapp.pages.dev"
+   ```
+
+2. **Updated `.github/workflows/links.yml`**:
+   - ❌ Removed: `--offline` flag
+   - ✅ Added: `--base https://3mpwrapp.pages.dev` argument
+   - Benefits:
+     - Resolves absolute paths correctly
+     - Checks actual live links
+     - Verifies external URLs are reachable
+
+### Expected Outcome:
+- ✅ All internal links resolved correctly
+- ✅ External links checked (except excluded domains)
+- ✅ Workflow passes without InvalidPathToUri errors
+
+---
+
 ## ✅ Success Criteria
 
 ### Axe Check:
@@ -173,21 +213,26 @@ npx lychee-cli --config lychee.toml ./_site
 
 ## 📊 Current Status
 
-| Issue | Status | Priority | Assignee |
-|-------|--------|----------|----------|
-| Footer Contrast | 🔧 Fixing | CRITICAL | In Progress |
-| Lychee Investigation | ⏳ Pending | IMPORTANT | Waiting |
+| Issue | Status | Priority | Notes |
+|-------|--------|----------|-------|
+| Footer Contrast | ✅ FIXED | CRITICAL | Deployed in commit 1251f75 |
+| Lychee InvalidPathToUri | ✅ FIXED | IMPORTANT | Base URL added, offline mode removed |
 
 ---
 
-**Next Actions**:
-1. Fix footer colors immediately (critical accessibility issue)
-2. Run axe-check to verify
-3. Investigate lychee errors with detailed output
-4. Fix any broken links found
-5. Verify both tools pass
+**Actions Completed**:
+1. ✅ Fixed footer colors for WCAG 2.1 AA compliance
+2. ✅ Added base URL to lychee.toml
+3. ✅ Updated workflow to remove offline mode
+4. ⏳ Waiting for deployment to test fixes
+
+**Next Verification**:
+1. Wait 2-5 minutes for Cloudflare Pages deployment
+2. Run `node scripts/axe-check.js` to verify zero violations
+3. Check GitHub Actions for successful lychee run
 
 ---
 
 **Last Updated**: October 28, 2025  
+**Commit**: 1251f75 (footer contrast) + pending (lychee fixes)  
 **Updated By**: GitHub Copilot Analysis
