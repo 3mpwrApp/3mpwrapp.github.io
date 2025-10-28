@@ -45,6 +45,8 @@
 
   <!-- Header/nav footprint overrides moved to external CSS (CSP-safe) -->
   <link rel="stylesheet" href="{{ "/assets/css/header-overrides.css" | relative_url }}">
+  <!-- Professional polish & design system (UX/UI audit improvements) -->
+  <link rel="stylesheet" href="{{ "/assets/css/professional-polish.css" | relative_url }}">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -238,24 +240,72 @@
   </main>
 
   <footer id="site-footer" role="contentinfo">
-    <div class="social-links">
-      <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} Facebook</a>
-      <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='x' -%} X (Twitter)</a>
-      <a href="https://www.instagram.com/3mpwrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='instagram' -%} Instagram</a>
-      <a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='youtube' -%} YouTube</a>
-      <a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='tiktok' -%} TikTok</a>
-      <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="me noopener noreferrer">{%- include social-icons.html name='mastodon' -%} Mastodon</a>
-      <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='bluesky' -%} Bluesky</a>
-      <a href="{{ '/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="Subscribe to RSS feed">{%- include social-icons.html name='rss' -%} RSS</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">Beta Testers Sign Up</a>
+    <div class="footer-grid">
+      <!-- About Column -->
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="{{ '/about' | relative_url }}">Our Mission</a></li>
+          <li><a href="{{ '/user-guide' | relative_url }}">User Guide</a></li>
+          <li><a href="{{ '/features' | relative_url }}">Features</a></li>
+          <li><a href="{{ '/roadmap' | relative_url }}">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Started Column -->
+      <div class="footer-column">
+        <h3>Get Started</h3>
+        <ul>
+          <li><a href="{{ '/beta' | relative_url }}">Beta Testing</a></li>
+          <li><a href="{{ '/faq' | relative_url }}">FAQ</a></li>
+          <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+          <li><a href="{{ '/accessibility-walkthrough' | relative_url }}">Accessibility Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3>Legal & Privacy</h3>
+        <ul>
+          <li><a href="{{ '/privacy' | relative_url }}">Privacy Policy</a></li>
+          <li><a href="{{ '/terms' | relative_url }}">Terms of Service</a></li>
+          <li><a href="{{ '/data-ownership' | relative_url }}">Data Ownership</a></li>
+          <li><a href="{{ '/community/guidelines' | relative_url }}">Community Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Column -->
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="{{ '/accessibility' | relative_url }}">Accessibility Statement</a></li>
+          <li><a href="{{ '/accessibility-settings' | relative_url }}">Accessibility Settings</a></li>
+          <li><a href="{{ '/site-map' | relative_url }}">Site Map</a></li>
+          <li><a href="{{ '/delete-data' | relative_url }}">Delete My Data</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect Column -->
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">{%- include social-icons.html name='facebook' -%}</a>
+          <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">{%- include social-icons.html name='x' -%}</a>
+          <a href="https://www.instagram.com/3mpwrapp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">{%- include social-icons.html name='instagram' -%}</a>
+          <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="me noopener noreferrer" aria-label="Mastodon">{%- include social-icons.html name='mastodon' -%}</a>
+          <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">{%- include social-icons.html name='bluesky' -%}</a>
+        </div>
+        <ul style="margin-top: 1rem;">
+          <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/whats-new/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+        </ul>
+      </div>
     </div>
-  <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | relative_url }}">3mpwrApp</a> • <a href="{{ '/user-guide/' | relative_url }}">User Guide</a> • <a href="{{ '/features/' | relative_url }}">Features</a> • <a href="{{ '/roadmap/' | relative_url }}">Roadmap</a></p>
-  <p><strong>Legal & Privacy:</strong> <a href="{{ '/terms/' | relative_url }}">Terms of Service</a> • <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a> • <a href="{{ '/data-ownership/' | relative_url }}">Data Ownership</a> • <a href="{{ '/privacy-controls/' | relative_url }}">Privacy Controls</a> • <a href="{{ '/community/guidelines/' | relative_url }}">Community Guidelines</a> • <a href="{{ '/legal/disclaimers/' | relative_url }}">Legal Disclaimers</a> • <a href="{{ '/cookies/' | relative_url }}">Cookies</a></p>
-  <p><strong>Help & Support:</strong> <a href="{{ '/faq/' | relative_url }}">FAQ</a> • <a href="{{ '/contact/' | relative_url }}">Contact</a> • <a href="{{ '/delete-account' | relative_url }}">Delete Account</a> • <a href="{{ '/delete-data/' | relative_url }}">Delete Data</a></p>
-  <p><strong>Accessibility:</strong> <a href="{{ '/accessibility' | relative_url }}">Accessibility Statement</a> • <a href="{{ '/accessibility-settings/' | relative_url }}">Accessibility Settings</a> • <a href="{{ '/accessibility-walkthrough/' | relative_url }}">Accessibility Walkthrough</a></p>
-  <p><strong>Resources:</strong> <a href="{{ '/site-map/' | relative_url }}">Site Map</a> • <a href="{{ '/whats-new/feed.xml' | relative_url }}" rel="alternate" type="application/rss+xml" aria-label="What's New RSS feed">What's New RSS</a></p>
-  <p><strong>Contact:</strong> <a href="mailto:empowrapp08162025@gmail.com">empowrapp08162025@gmail.com</a> • <strong>Company:</strong> 3mpwrApp — Canada</p>
-  <p style="font-size: 0.9em; margin-top: 1rem; color: var(--text-secondary, #666);">💚 <strong>Grassroots & Community-Funded</strong> • 100% Free Forever • No Corporate Interests • Mission-Driven, Not Profit-Driven</p>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ site.time | date: '%Y' }} 3mpwrApp — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
+      <p class="footer-mission">💚 Grassroots & Community-Funded • 100% Free Forever • Mission-Driven, Not Profit-Driven</p>
+    </div>
   </footer>
 
   <!-- Skip link and mobile menu functionality -->
