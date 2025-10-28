@@ -584,3 +584,34 @@ p {
   color: var(--brand-primary-hover);
 }
 
+/* ===== STATUS BANNER FIX ===== */
+.status-banner {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 8px !important;
+  margin-bottom: 1.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  font-size: 0.95rem !important;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2) !important;
+  text-align: center !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.status-banner * {
+  color: #ffffff !important;
+}
+
+.status-banner strong {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.status-indicator {
+  font-size: 1.2rem !important;
+  color: #ffffff !important;
+}
+
