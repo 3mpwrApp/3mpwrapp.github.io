@@ -126,7 +126,7 @@ main {
   font-size: var(--font-size-sm);
   font-weight: 600;
   margin-bottom: var(--space-sm);
-  color: var(--text-primary);
+  color: #e6e8ee !important; /* Light gray for dark backgrounds - 12.6:1 contrast */
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -142,7 +142,7 @@ main {
 }
 
 .footer-column a {
-  color: var(--text-secondary);
+  color: #a8c7ff !important; /* Light blue for dark backgrounds - 9.8:1 contrast */
   text-decoration: none;
   transition: color 0.2s ease;
   font-size: var(--font-size-sm);
@@ -152,7 +152,7 @@ main {
 
 .footer-column a:hover,
 .footer-column a:focus {
-  color: var(--brand-primary);
+  color: #d0e1ff !important; /* Lighter blue on hover - 12.1:1 contrast */
   text-decoration: underline;
 }
 
@@ -174,11 +174,15 @@ main {
   border-top: 1px solid var(--bg-elevated);
   padding-top: var(--space-sm);
   text-align: center;
-  color: var(--text-muted);
+  color: #a6adbb !important; /* Medium light gray for dark backgrounds - 6.8:1 contrast */
   font-size: var(--font-size-xs);
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+}
+
+.footer-bottom a {
+  color: #a8c7ff !important; /* Light blue - consistent with footer links */
 }
 
 .footer-bottom p {
