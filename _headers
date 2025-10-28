@@ -2,8 +2,8 @@
 # If using GitHub Pages, add these as meta tags in default.html
 
 /*
-  # Content Security Policy - Strict security without unsafe-inline + Turnstile support
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.googletagmanager.com https://gc.zgo.at https://challenges.cloudflare.com; style-src 'self'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://challenges.cloudflare.com; frame-src https://docs.google.com https://challenges.cloudflare.com; base-uri 'self'; form-action 'self' https://duckduckgo.com https://docs.google.com https://formspree.io; frame-ancestors 'none'; object-src 'none'; media-src 'self'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests
+  # Content Security Policy - Strict security without unsafe-inline + Turnstile support + Cloudflare Analytics
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.googletagmanager.com https://gc.zgo.at https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://challenges.cloudflare.com https://cloudflareinsights.com; frame-src https://docs.google.com https://challenges.cloudflare.com; base-uri 'self'; form-action 'self' https://duckduckgo.com https://docs.google.com https://formspree.io; frame-ancestors 'none'; object-src 'none'; media-src 'self'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests
   
   # Prevent clickjacking
   X-Frame-Options: DENY
