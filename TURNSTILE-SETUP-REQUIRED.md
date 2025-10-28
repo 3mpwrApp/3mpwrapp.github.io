@@ -19,17 +19,17 @@ The contact form has been updated with Cloudflare Turnstile, but you need to get
 1. In the left sidebar, click **"Turnstile"**
 2. Or visit: https://dash.cloudflare.com/?to=/:account/turnstile
 
-#### Step 3: Add Your Site
-1. Click **"Add site"** button
+#### Step 3: Add Widget
+1. Click **"Add widget"** button (not "Add site" - the UI changed!)
 2. Fill in the details:
-   - **Site name**: 3mpwrApp Contact Form
-   - **Domain**: `3mpwrapp.pages.dev` (add `3mpwrapp.github.io` if using both)
+   - **Widget name**: 3mpwrApp Contact Form
+   - **Domain**: `3mpwrapp.pages.dev` (you can add `3mpwrapp.github.io` later if needed)
    - **Widget Mode**: Select **"Managed"** (recommended)
      * Managed = Invisible unless suspicious (best UX)
      * Non-interactive = Always visible but no puzzle
      * Invisible = Completely hidden
 
-3. Click **"Create"**
+3. Click **"Create"** or **"Add"**
 
 #### Step 4: Copy Your Keys
 You'll see two keys:

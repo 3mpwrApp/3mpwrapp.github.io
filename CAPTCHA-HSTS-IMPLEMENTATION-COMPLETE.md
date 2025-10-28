@@ -118,9 +118,9 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 **Quick Steps**:
 1. Log in to https://dash.cloudflare.com/
 2. Navigate to **Turnstile** (left sidebar)
-3. Click **"Add site"**
+3. Click **"Add widget"** (Note: The button says "Add widget", not "Add site")
 4. Fill in:
-   - Site name: "3mpwrApp Contact Form"
+   - Widget name: "3mpwrApp Contact Form"
    - Domain: `3mpwrapp.pages.dev`
    - Widget Mode: "Managed"
 5. Click **"Create"**

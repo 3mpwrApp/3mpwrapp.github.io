@@ -41,8 +41,9 @@ You need to generate keys in Cloudflare Dashboard.
    - Sidebar: Click "Turnstile"
    - Or visit: https://dash.cloudflare.com/?to=/:account/turnstile
 
-3. **Add Site**
-   - Click "Add site"
+3. **Add Widget** (Note: Button says "Add widget", not "Add site")
+   - Click "Add widget"
+   - **Widget name**: 3mpwrApp Contact Form
    - **Domain**: `3mpwrapp.pages.dev` (and `3mpwrapp.github.io` if used)
    - **Widget Mode**: Select "Managed" (recommended for best UX)
      * Invisible: No interaction unless suspicious
