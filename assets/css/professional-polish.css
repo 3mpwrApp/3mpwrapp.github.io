@@ -449,17 +449,17 @@ p {
 
 /* Light Mode (default) */
 .btn-secondary {
-  background: var(--light-btn-secondary-bg, #212529);
-  color: var(--light-btn-secondary-text, #ffffff);
-  border: 1px solid var(--light-btn-secondary-bg, #212529);
+  background: var(--light-btn-secondary-bg, #212529) !important;
+  color: var(--light-btn-secondary-text, #ffffff) !important;
+  border: 1px solid var(--light-btn-secondary-bg, #212529) !important;
   font-weight: 500;
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background: var(--light-btn-secondary-hover, #000000);
-  color: #ffffff;
-  border-color: var(--light-btn-secondary-hover, #000000);
+  background: var(--light-btn-secondary-hover, #000000) !important;
+  color: #ffffff !important;
+  border-color: var(--light-btn-secondary-hover, #000000) !important;
 }
 
 /* Dark Mode */
