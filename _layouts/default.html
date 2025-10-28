@@ -49,7 +49,10 @@
     <!-- Brand: clicking this takes you home -->
     <div class="brand header-bar">
       <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
-        <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="" width="28" height="28" aria-hidden="true" loading="eager" />
+        <picture>
+          <source type="image/webp" srcset="{{ '/assets/empwrapp-logo.webp' | relative_url }}">
+          <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="" width="28" height="28" aria-hidden="true" loading="eager" />
+        </picture>
         <span>{{ site.title }}</span>
       </a>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
