@@ -15,12 +15,20 @@ header {
   align-items: center; 
   justify-content: space-between; 
   gap: .75rem; 
-  padding: 0 .75rem; 
+  padding: 0 .75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Collapse navigation by default on all viewports; open via Menu toggle */
 #primary-nav { 
-  min-height: 0 !important; 
+  min-height: 0 !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #primary-nav .nav-list { 
@@ -30,7 +38,10 @@ header {
 #primary-nav.is-open .nav-list { 
   display: flex !important; 
   flex-wrap: wrap !important; 
-  gap: .5rem !important; 
+  gap: .5rem !important;
+  padding: 0.5rem 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .menu-toggle { 
@@ -51,11 +62,10 @@ header {
     flex-wrap: wrap;
     margin: .25rem 0;
   }
-}
-
-/* Make content area wider on laptops/desktops */
-main { 
-  max-width: 1100px !important; 
+  
+  .header-bar {
+    padding: 0 var(--space-md, 0.5rem);
+  }
 }
 
 /* --- axe-core color-contrast fixes (WCAG 2.1 AA, 1.4.3) --- */

@@ -72,12 +72,31 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
+/* ===== GLOBAL LAYOUT CONSTRAINTS ===== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* ===== IMPROVED FOOTER ===== */
 #site-footer {
   background: var(--bg-tertiary);
   border-top: 2px solid var(--bg-elevated);
   padding: var(--space-3xl) var(--space-lg) var(--space-xl);
   margin-top: var(--space-4xl);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-grid {
@@ -86,6 +105,7 @@
   gap: var(--space-2xl);
   max-width: 1200px;
   margin: 0 auto var(--space-2xl);
+  width: 100%;
 }
 
 .footer-column h3 {
@@ -137,6 +157,9 @@
   text-align: center;
   color: var(--text-muted);
   font-size: var(--font-size-sm);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .footer-bottom p {
@@ -152,7 +175,11 @@
 
 /* ===== IMPROVED SPACING & HIERARCHY ===== */
 main {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: var(--space-2xl) var(--space-lg);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 section {
@@ -380,16 +407,20 @@ p {
 .section-alternate {
   background: var(--bg-secondary);
   padding: var(--space-3xl) var(--space-lg);
-  margin: var(--space-4xl) -1rem;
+  margin: var(--space-4xl) 0;
   border-radius: var(--radius-xl);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-highlight {
   background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
   padding: var(--space-3xl) var(--space-lg);
-  margin: var(--space-4xl) -1rem;
+  margin: var(--space-4xl) 0;
   border-radius: var(--radius-xl);
   color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-highlight h2,
@@ -456,14 +487,20 @@ p {
   
   main {
     padding: var(--space-lg) var(--space-md);
+    max-width: 100%;
   }
   
   .section-alternate,
   .section-highlight {
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: var(--space-md);
     padding-right: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+  
+  .header-bar {
+    padding: 0 var(--space-md);
   }
 }
 
