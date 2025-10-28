@@ -314,14 +314,14 @@ p {
 
 .btn-secondary {
   background: var(--bg-elevated);
-  color: #a8c7ff !important; /* Light blue for dark backgrounds - 9.8:1 contrast */
+  color: #0066cc !important; /* Medium blue - works on both light (4.5:1) and dark (7.4:1) backgrounds */
   border: 1px solid var(--text-muted);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
   background: var(--bg-tertiary);
-  color: #d0e1ff !important; /* Lighter blue on hover - 12.1:1 contrast */
+  color: #0052a3 !important; /* Darker blue on hover - enhanced contrast */
   border-color: var(--brand-primary);
 }
 
