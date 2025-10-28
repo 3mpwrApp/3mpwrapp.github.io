@@ -313,16 +313,17 @@ p {
 }
 
 .btn-secondary {
-  background: var(--bg-elevated);
-  color: #0066cc !important; /* Medium blue - works on both light (4.5:1) and dark (7.4:1) backgrounds */
-  border: 1px solid var(--text-muted);
+  background: #4a8fe7 !important; /* Medium-bright blue background */
+  color: #ffffff !important; /* White text - universal contrast */
+  border: 1px solid #3a7fc7;
+  font-weight: 500;
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background: var(--bg-tertiary);
-  color: #0052a3 !important; /* Darker blue on hover - enhanced contrast */
-  border-color: var(--brand-primary);
+  background: #3a7fc7 !important; /* Darker blue on hover */
+  color: #ffffff !important;
+  border-color: #2a6fb7;
 }
 
 .btn-outline {
