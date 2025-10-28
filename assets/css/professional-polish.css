@@ -912,18 +912,52 @@ table {
 }
 
 .quick-summary strong {
-  color: var(--brand-primary);
+  color: var(--light-link, #0056b3) !important;
 }
 
 .quick-summary a {
-  color: var(--brand-primary);
+  color: var(--light-link, #0056b3) !important;
   font-weight: 500;
   text-decoration: underline;
 }
 
 .quick-summary a:hover,
 .quick-summary a:focus {
-  color: var(--brand-primary-hover);
+  color: var(--light-link-hover, #003d82) !important;
+}
+
+/* Dark mode quick-summary */
+[data-theme="dark"] .quick-summary strong {
+  color: var(--dark-link, #66b2ff) !important;
+}
+
+[data-theme="dark"] .quick-summary a {
+  color: var(--dark-link, #66b2ff) !important;
+}
+
+[data-theme="dark"] .quick-summary a:hover,
+[data-theme="dark"] .quick-summary a:focus {
+  color: var(--dark-link-hover, #99ccff) !important;
+}
+
+/* High contrast quick-summary */
+[data-contrast="high"] .quick-summary strong {
+  color: #0000ee !important;
+  font-weight: 700 !important;
+}
+
+[data-contrast="high"] .quick-summary a {
+  color: #0000ee !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .quick-summary strong {
+  color: #ffff00 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .quick-summary a {
+  color: #ffff00 !important;
 }
 
 /* ===== STATUS BANNER FIX ===== */
@@ -955,5 +989,276 @@ table {
 .status-indicator {
   font-size: 1.2rem !important;
   color: #ffffff !important;
+}
+
+/* ============================================
+   COMPREHENSIVE THEME SUPPORT FOR ALL ELEMENTS
+   ============================================ */
+
+/* ===== FEATURES GRID (homepage feature cards) ===== */
+/* Light mode - dark text on light backgrounds */
+.features-grid li {
+  background: var(--light-bg-tertiary, #e9ecef) !important;
+  color: var(--light-text-primary, #000000) !important;
+}
+
+.features-grid li p {
+  color: var(--light-text-secondary, #212529) !important;
+}
+
+.features-grid li a {
+  color: var(--light-link, #0056b3) !important;
+}
+
+/* Dark mode - light text on dark backgrounds */
+[data-theme="dark"] .features-grid li {
+  background: var(--dark-bg-tertiary, #2d2d2d) !important;
+  color: var(--dark-text-primary, #ffffff) !important;
+}
+
+[data-theme="dark"] .features-grid li p {
+  color: var(--dark-text-secondary, #f0f0f0) !important;
+}
+
+[data-theme="dark"] .features-grid li a {
+  color: var(--dark-link, #66b2ff) !important;
+}
+
+/* High contrast light mode */
+[data-contrast="high"] .features-grid li {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+}
+
+[data-contrast="high"] .features-grid li p {
+  color: #000000 !important;
+}
+
+[data-contrast="high"] .features-grid li a {
+  color: #0000ee !important;
+  font-weight: 700 !important;
+}
+
+/* High contrast dark mode */
+[data-theme="dark"][data-contrast="high"] .features-grid li {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .features-grid li p {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .features-grid li a {
+  color: #ffff00 !important;
+  font-weight: 700 !important;
+}
+
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switch {
+  color: var(--light-link, #0056b3) !important;
+  background: var(--light-bg-secondary, #f8f9fa) !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .lang-switch {
+  color: var(--dark-link, #66b2ff) !important;
+  background: var(--dark-bg-secondary, #1a1a1a) !important;
+}
+
+[data-contrast="high"] .lang-switch {
+  color: #0000ee !important;
+  background: #ffffff !important;
+  border: 3px solid #000000 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .lang-switch {
+  color: #ffff00 !important;
+  background: #000000 !important;
+  border: 3px solid #ffffff !important;
+}
+
+/* ===== BREADCRUMB NAVIGATION ===== */
+.breadcrumb a {
+  color: var(--light-link, #0056b3) !important;
+}
+
+[data-theme="dark"] .breadcrumb a {
+  color: var(--dark-link, #66b2ff) !important;
+}
+
+[data-contrast="high"] .breadcrumb a {
+  color: #0000ee !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .breadcrumb a {
+  color: #ffff00 !important;
+}
+
+/* ===== BADGES ===== */
+.badge--new {
+  background: var(--success, #28a745) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .badge--new {
+  background: #10b981 !important;
+  color: #000000 !important;
+}
+
+[data-contrast="high"] .badge--new {
+  background: #00ff00 !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .badge--new {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border: 3px solid #ffffff !important;
+}
+
+/* ===== TIMELINE BADGES (roadmap page) ===== */
+.timeline-badge {
+  font-weight: 700 !important;
+}
+
+.upcoming-badge {
+  background: var(--info, #17a2b8) !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .upcoming-badge {
+  background: #22d3ee !important;
+  color: #000000 !important;
+}
+
+[data-contrast="high"] .upcoming-badge {
+  background: #00ffff !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .upcoming-badge {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border: 3px solid #ffffff !important;
+}
+
+/* ===== DATE/TIME SMALL TEXT ===== */
+small {
+  color: var(--light-text-secondary, #495057) !important;
+}
+
+[data-theme="dark"] small {
+  color: var(--dark-text-secondary, #f0f0f0) !important;
+}
+
+[data-contrast="high"] small {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] small {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* ===== CRISIS RESOURCES SERVICE PHONE ===== */
+.service-phone {
+  color: currentColor !important;
+  font-weight: 700 !important;
+}
+
+.service-card.mental-health .service-phone {
+  color: #dc2626 !important;
+}
+
+.service-card.substance .service-phone {
+  color: #0891b2 !important;
+}
+
+.service-card.wellness .service-phone {
+  color: #059669 !important;
+}
+
+[data-theme="dark"] .service-card.mental-health .service-phone {
+  color: #fca5a5 !important;
+}
+
+[data-theme="dark"] .service-card.substance .service-phone {
+  color: #67e8f9 !important;
+}
+
+[data-theme="dark"] .service-card.wellness .service-phone {
+  color: #6ee7b7 !important;
+}
+
+[data-contrast="high"] .service-card .service-phone {
+  color: #0000ee !important;
+  font-weight: 900 !important;
+  text-decoration: underline !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .service-card .service-phone {
+  color: #ffff00 !important;
+  font-weight: 900 !important;
+}
+
+/* ===== GENERAL LINK IMPROVEMENTS ===== */
+/* Ensure all links have proper contrast in all modes */
+a:not(.btn):not(.button):not(.nav-link) {
+  color: var(--light-link, #0056b3) !important;
+}
+
+[data-theme="dark"] a:not(.btn):not(.button):not(.nav-link) {
+  color: var(--dark-link, #66b2ff) !important;
+}
+
+[data-contrast="high"] a:not(.btn):not(.button):not(.nav-link) {
+  color: #0000ee !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+
+[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):not(.nav-link) {
+  color: #ffff00 !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+
+/* ===== CARDS AND CONTAINERS ===== */
+.card, .feature-card, .resource-card {
+  background: var(--light-bg-secondary, #f8f9fa) !important;
+  color: var(--light-text-primary, #000000) !important;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .resource-card {
+  background: var(--dark-bg-secondary, #1a1a1a) !important;
+  color: var(--dark-text-primary, #ffffff) !important;
+}
+
+[data-contrast="high"] .card,
+[data-contrast="high"] .feature-card,
+[data-contrast="high"] .resource-card {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .card,
+[data-theme="dark"][data-contrast="high"] .feature-card,
+[data-theme="dark"][data-contrast="high"] .resource-card {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
 }
 
