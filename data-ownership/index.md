@@ -250,7 +250,8 @@ For questions about data ownership or to verify these claims:
 <div class="alternative-formats">
   <p><strong>📄 Alternative Formats</strong></p>
   <p>
-    <a href="/downloads/data-ownership.pdf" class="format-link">📄 Download as PDF</a>
+        <!-- PDF download removed - generate if needed -->
+  </div>
     <a href="javascript:window.print()" class="format-link">🖨️ Print-friendly version</a>
     <a href="mailto:?subject=3mpwrApp Data Ownership Statement&body=Read about data ownership: https://3mpwrapp.pages.dev/data-ownership" class="format-link">📧 Email to yourself</a>
   </p>

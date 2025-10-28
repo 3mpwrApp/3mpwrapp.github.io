@@ -364,7 +364,7 @@ Both are 100% free, forever. Both are built for you. Use what works for your nee
 ## Related Posts
 - [Complete User Guide](/user-guide)
 - [All Features List](/features)
-- [15 Groundbreaking Website Accessibility Features](/blog/2025/10/25/groundbreaking-website-accessibility-features.html)
+- [15 Groundbreaking Website Accessibility Features](/blog/2025/10/25/groundbreaking-website-accessibility-features)
 
 ---
 

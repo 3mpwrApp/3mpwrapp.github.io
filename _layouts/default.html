@@ -97,7 +97,7 @@
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/roadmap' | relative_url }}" {% if page.url contains '/roadmap' %}aria-current="page"{% endif %}>
+          <a href="{% if page.lang == 'fr' %}/roadmap{% else %}{{ lang_prefix | append: '/roadmap' | relative_url }}{% endif %}" {% if page.url contains '/roadmap' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Feuille de route{% else %}Roadmap{% endif %}
           </a>
         </li>
@@ -112,17 +112,17 @@
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/accessibility' | relative_url }}" {% if page.url contains '/accessibility' %}aria-current="page"{% endif %}>
+          <a href="{% if page.lang == 'fr' %}/accessibility{% else %}{{ lang_prefix | append: '/accessibility' | relative_url }}{% endif %}" {% if page.url contains '/accessibility' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Accessibilité{% else %}Accessibility{% endif %}
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/app-waitlist' | relative_url }}" {% if page.url contains '/app-waitlist' %}aria-current="page"{% endif %}>
+          <a href="{% if page.lang == 'fr' %}/app-waitlist{% else %}{{ lang_prefix | append: '/app-waitlist' | relative_url }}{% endif %}" {% if page.url contains '/app-waitlist' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Liste d'attente{% else %}App Waitlist{% endif %}
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/crisis-resources' | relative_url }}" {% if page.url contains '/crisis-resources' %}aria-current="page"{% endif %}>
+          <a href="{% if page.lang == 'fr' %}/crisis-resources{% else %}{{ lang_prefix | append: '/crisis-resources' | relative_url }}{% endif %}" {% if page.url contains '/crisis-resources' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Ressources de crise{% else %}Crisis Help{% endif %}
           </a>
         </li>
@@ -142,7 +142,7 @@
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/beta-guide' | relative_url }}" {% if page.url contains '/beta' %}aria-current="page"{% endif %}>
+          <a href="{% if page.lang == 'fr' %}/beta-guide{% else %}{{ lang_prefix | append: '/beta-guide' | relative_url }}{% endif %}" {% if page.url contains '/beta' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Guide des testeurs bêta{% else %}Beta Testers Guide{% endif %}
           </a>
         </li>
@@ -152,12 +152,12 @@
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/events' | relative_url }}" {% if page.url contains '/events' %}aria-current="page"{% endif %}>
+          <a href="{% if page.lang == 'fr' %}/events{% else %}{{ lang_prefix | append: '/events' | relative_url }}{% endif %}" {% if page.url contains '/events' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Événements{% else %}Events{% endif %}
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/site-map' | relative_url }}" {% if page.url contains '/site-map' %}aria-current="page"{% endif %}>
+          <a href="{% if page.lang == 'fr' %}/site-map{% else %}{{ lang_prefix | append: '/site-map' | relative_url }}{% endif %}" {% if page.url contains '/site-map' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Plan du site{% else %}Site Map{% endif %}
           </a>
         </li>

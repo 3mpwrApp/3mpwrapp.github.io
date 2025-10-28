@@ -358,7 +358,8 @@ We only share data with essential service providers to make the app work. Here's
 <div class="alternative-formats">
   <p><strong>📄 Alternative Formats</strong></p>
   <p>
-    <a href="/downloads/privacy-controls.pdf" class="format-link">📄 Download as PDF</a>
+        <!-- PDF download removed - generate if needed -->
+  </div>
     <a href="javascript:window.print()" class="format-link">🖨️ Print-friendly version</a>
     <a href="mailto:?subject=3mpwrApp Privacy Controls&body=Learn about privacy controls: https://3mpwrapp.pages.dev/privacy-controls" class="format-link">📧 Email to yourself</a>
   </p>

@@ -475,7 +475,8 @@ This policy reflects our actual technical implementation. You can verify our pri
 <div class="alternative-formats" role="complementary">
   <p><strong>📱 Need this in a different format?</strong></p>
   <p>
-    <a href="/pdfs/privacy-policy.pdf" class="format-link">📄 Download as PDF</a>
+        <!-- PDF download removed - generate if needed -->
+  </div>
     <a href="/print/privacy" class="format-link">🖨️ Print-friendly version</a>
     <a href="mailto:?subject=3mpwrApp Privacy Policy&body=Check out the privacy policy: https://3mpwrapp.pages.dev/privacy/" class="format-link">📧 Email to yourself</a>
   </p>

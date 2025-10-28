@@ -295,8 +295,8 @@ Imagine:
 
 ## Related Reading
 
-- [15 Groundbreaking Accessibility Features](/blog/2025/10/25/groundbreaking-website-accessibility-features.html)
-- [Spoon Theory Meets Web Design](/blog/2025/10/26/spoon-theory-meets-web-design.html)
+- [15 Groundbreaking Accessibility Features](/blog/2025/10/25/groundbreaking-website-accessibility-features)
+- [Spoon Theory Meets Web Design](/blog/2025/10/26/spoon-theory-meets-web-design)
 - [Complete User Guide](/user-guide)
 
 ---
