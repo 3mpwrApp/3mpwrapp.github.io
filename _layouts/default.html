@@ -46,11 +46,15 @@
   <!-- Quick overrides to shrink header/nav footprint without touching minified bundles -->
   <style>
     /* Keep header compact and non-sticky */
-    header { position: static !important; top: auto !important; }
+    header { position: static !important; top: auto !important; padding: .6rem 0 !important; }
     /* Prevent multi-row wrapping of the large menu; allow horizontal scroll when needed */
-    nav { overflow-x: auto; }
-    .nav-list { flex-wrap: nowrap !important; gap: .5rem !important; }
-    .nav-list a { padding: .4rem .7rem !important; white-space: nowrap !important; font-size: .9rem !important; }
+    #primary-nav { overflow-x: auto !important; }
+    #primary-nav .nav-list { display:flex !important; flex-wrap: nowrap !important; gap: .5rem !important; }
+    #primary-nav .nav-list a { padding: .35rem .6rem !important; white-space: nowrap !important; font-size: .92rem !important; }
+    /* Avoid any accidental column layout on mobile toggle */
+    @media (max-width: 768px) {
+      #primary-nav.is-open .nav-list { display: flex !important; flex-direction: column !important; }
+    }
   </style>
 </head>
 <body>
