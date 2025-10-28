@@ -1,7 +1,7 @@
-// 3mpwrApp Service Worker v2.1
+// 3mpwrApp Service Worker v2.2
 // Implements offline-first caching for PWA functionality
 
-const CACHE_NAME = '3mpwr-v2.1';
+const CACHE_NAME = '3mpwr-v2.2';
 const OFFLINE_URL = '/offline.html';
 
 // Resources to cache on installation
@@ -30,7 +30,7 @@ const PRECACHE_URLS = [
 
 // Install event - cache essential resources
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing v2.0...');
+  console.log('[Service Worker] Installing v2.2...');
   
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -44,7 +44,7 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('[Service Worker] Activating v2.0...');
+  console.log('[Service Worker] Activating v2.2...');
   
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -148,3 +148,16 @@ self.addEventListener('notificationclick', (event) => {
 });
 
 console.log('[Service Worker] v2.1 loaded successfully');
+// Support messages from the page (e.g., to activate update ASAP)
+self.addEventListener('message', (event) => {
+  try {
+    if (!event || !event.data) return;
+    if (event.data.action === 'skipWaiting') {
+      self.skipWaiting();
+    }
+  } catch (e) {
+    // no-op
+  }
+});
+
+console.log('[Service Worker] v2.2 loaded successfully');
