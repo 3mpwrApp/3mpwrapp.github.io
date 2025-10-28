@@ -174,7 +174,7 @@
           </button>
           <ul class="nav-dropdown-menu">
             <li>
-              <a href="{{ lang_prefix | append: '/accessibility' | relative_url }}" {% if page.url contains '/accessibility' and not page.url contains '/accessibility-settings' %}aria-current="page"{% endif %}>
+              <a href="{{ lang_prefix | append: '/accessibility' | relative_url }}" {% if page.url == '/accessibility/' or page.url == '/accessibility' %}aria-current="page"{% endif %}>
                 {% if page.lang == 'fr' %}Déclaration{% else %}Statement{% endif %}
               </a>
             </li>
