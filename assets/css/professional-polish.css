@@ -1521,6 +1521,11 @@ a:not(.btn):not(.button):not(.nav-link) {
   color: #ffffff !important;
 }
 
+/* Force all containers to have black backgrounds */
+[data-theme="dark"][data-contrast="high"] *:not(a):not(button):not(input):not(select):not(textarea) {
+  background-color: #000000 !important;
+}
+
 /* All text elements - force white text */
 [data-theme="dark"][data-contrast="high"] body,
 [data-theme="dark"][data-contrast="high"] p,
@@ -1755,6 +1760,11 @@ a:not(.btn):not(.button):not(.nav-link) {
 [data-contrast="high"]:not([data-theme="dark"]) {
   background: #ffffff !important;
   color: #000000 !important;
+}
+
+/* Force all containers to have white backgrounds */
+[data-contrast="high"]:not([data-theme="dark"]) *:not(a):not(button):not(input):not(select):not(textarea) {
+  background-color: #ffffff !important;
 }
 
 /* All text elements - force black text */
