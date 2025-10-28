@@ -87,69 +87,73 @@ Turn it on once, it stays on across all pages and future visits (saved to localS
 
 ## Real-World Use Cases
 
-### Case Study 1: Sarah's WSIB Deadline
+### Scenario 1: Checking Deadline with High Pain
 
-**Situation:** Sarah has a workplace back injury. Today her pain is 9/10. She has a WSIB deadline tomorrow and needs to check what documents she still needs to submit.
-
-**Without Pain Flare Mode:**
-- Opens website
-- Overwhelmed by images, toolbars, features grid
-- Pain increases from visual processing
-- Scrolls slowly (each scroll hurts)
-- Struggles to find the deadline info among all the content
-- Gives up after 5 minutes, too exhausted
-- Misses deadline
-
-**With Pain Flare Mode:**
-- Opens website
-- Clicks "🔥 Pain flare mode" (or Alt+P)
-- Sees only: page title, simple text, key links
-- Immediately finds "Deadlines" section (no visual clutter)
-- Reads big text without straining
-- Finds answer in 2 minutes
-- Doesn't miss deadline
-
-**Outcome:** Pain didn't stop her from getting what she needed.
-
-### Case Study 2: Marcus's Research Day
-
-**Situation:** Marcus is researching his appeal rights but he's having a pain flare from his repetitive strain injury. Every click makes his hand throb.
+**Situation:** You have a workplace injury and a WSIB/workers' comp deadline tomorrow. Today your pain level is 9/10, but you need to check what documents are still required for submission.
 
 **Without Pain Flare Mode:**
-- Needs to click 10+ times to navigate
-- Each click = pain spike
-- Scrolls extensively (wrist pain)
-- Decides between multiple options (mental load)
-- Too painful, stops research
+- Open the website
+- Immediately overwhelmed by images, toolbars, and feature displays
+- Visual processing increases pain levels
+- Scroll slowly through content (each movement hurts)
+- Struggle to locate deadline information among all the visual elements
+- Give up after 5 minutes, too exhausted to continue
+- Risk missing the deadline
 
 **With Pain Flare Mode:**
-- Activates mode: Alt+P (one keypress)
-- Sees simplified navigation
-- Minimal clicking required
-- Large text = less scrolling needed
-- Simple choices = less decision fatigue
-- Completes research despite pain
+- Open the website
+- Click "🔥 Pain flare mode" (or press Alt+P)
+- See only: page title, essential text, and key links
+- Quickly locate "Deadlines" section without visual clutter
+- Read large text without eye strain
+- Find the needed information in 2 minutes
+- Complete task successfully
 
-**Outcome:** Maintained agency over his case even on a bad day.
+**Outcome:** Access critical information despite high pain levels.
 
-### Case Study 3: Jennifer's Emergency Access
+---
 
-**Situation:** Jennifer fell at work. In the ER, she needs to access her medical history stored in Evidence Locker. Her phone screen is hard to see through the pain and fluorescent lights.
+### Scenario 2: Researching Appeal Rights with Limited Mobility
+
+**Situation:** You're researching your appeal rights during a pain flare from repetitive strain injury. Every mouse click causes discomfort and hand pain.
 
 **Without Pain Flare Mode:**
-- Squints at normal-sized text
-- Overwhelmed by regular website layout
-- Can't focus through pain
-- Asks nurse for help (feels helpless)
+- Navigate through multiple menus (10+ clicks required)
+- Each click triggers pain response
+- Extensive scrolling needed (increases wrist strain)
+- Choose between multiple navigation options (mental fatigue)
+- Pain becomes too intense, abandon research
 
 **With Pain Flare Mode:**
-- Alt+P keyboard shortcut
-- Giant text, simple layout
-- Easy to navigate even in pain
-- Finds medical history quickly
-- Maintains independence
+- Activate with keyboard: Alt+P (single keypress)
+- See simplified navigation structure
+- Minimal clicking required to find information
+- Larger text reduces scrolling needs
+- Clear, simple choices minimize decision fatigue
+- Complete research task despite pain
 
-**Outcome:** Kept control of her information during a crisis.
+**Outcome:** Access needed information with minimal physical strain.
+
+---
+
+### Scenario 3: Emergency Information Access
+
+**Situation:** After a workplace incident requiring medical attention, you need to quickly access your medical history documentation. Pain levels are high and bright medical facility lighting makes focusing difficult.
+
+**Without Pain Flare Mode:**
+- Struggle to read normal-sized text on phone screen
+- Regular website layout is overwhelming with multiple elements
+- Cannot focus through pain and environmental distractions
+- Need to request assistance (lose independence)
+
+**With Pain Flare Mode:**
+- Use Alt+P keyboard shortcut for instant activation
+- Large, clear text improves readability
+- Simplified layout reduces cognitive load
+- Navigate efficiently despite pain and distractions
+- Locate medical documentation independently
+
+**Outcome:** Maintain control over personal information during a crisis situation.
 
 ---
 
