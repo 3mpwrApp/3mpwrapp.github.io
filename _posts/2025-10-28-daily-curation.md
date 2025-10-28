@@ -9,20 +9,160 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-10-28
 
-Curated 3 items from disability, accessibility, and social policy sources.
+Curated 32 items from disability, accessibility, and social policy sources.
 
-## 1. Repatriation of Indigenous items held at the Vatican needs to be done the right way, say First Nations
-<img src='https://i.cbc.ca/ais/1.7398275,1733080301000/full/max/0/default.jpg?im=Crop%2Crect%3D%282%2C0%2C1193%2C671%29%3BResize%3D%28620%29' alt='An elderly man stands in front of a green forest.' width='620' height='349' title='Gilbert Whiteduck is a former chief of the Algonquin community Kitigan Zibi Anishinābeg, in western Quebec.'/><p>Indigenous communities in Canada believe the return of cultural objects from the Vatican Museum is a step towards reconciliation, but some stress that the items must be returned in a manner that reflects their sacred nature, including holding ceremonies for objects before they leave for Canada.</p>
-📍 [Source](https://www.cbc.ca/news/canada/ottawa/kitigan-zibi-akwesasne-vatican-indigenous-artifacts-9.6955840?cmp=rss)
-**Score:** 13.70
+## 1. Canada Post says layoffs aim to ‘align our management team' amid overhaul
+The company said the changes 'will align with the government’s expectation that leadership and structural change from within the Corporation is essential.'
+📍 [Source](https://globalnews.ca/news/11498257/canada-post-cuts-service-managers-cupw-mps/)
+**Score:** 20.00
 
-## 2. Keurig lawsuit settlement means you might be eligible for up to $50
-Keurig customers may be entitled to a payout from the company of up to $50 after a class-action lawsuit claiming it misrepresented the recyclability of its products.
-📍 [Source](https://globalnews.ca/news/11497889/keurig-lawsuit-settlement-canada/)
-**Score:** 8.00
+## 2. Interior Health deals with 2 waves of resignations, BC Conservatives call for action
+Health Minister Josie Osborne said the province is focused on supporting doctors and other health care professionals during a time of mounting pressure.
+📍 [Source](https://globalnews.ca/news/11497418/interior-health-resignations-bc-conservatives-call-for-action/)
+**Score:** 19.50
 
-## 3. Danielle Smith Brings Down the Hammer on Alberta’s Teachers
-The government rams through a back-to-work law and removes their Charter rights.
-📍 [Source](https://thetyee.ca/Opinion/2025/10/28/Smith-Brings-Down-Hammer-Alberta-Teachers/)
+## 3. First Nation and Canada begin legal battle over ‘grossly underfunded’ on-reserve schools
+<img src='https://i.cbc.ca/ais/83d64442-32a2-4bba-91b2-a997e301fb5d,1761590103496/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C3000%2C1687%29%3BResize%3D%28620%29' alt='A close up of an orange "Every Child Matters" flag.' width='620' height='349' title='Every Child Matters flag during the second annual South Island Powwow at Royal Athletic Park in Victoria, Saturday, Sept. 30, 2023.'/><p>The Canadian Human Rights Tribunal has begun hearing a potentially precedent-setting legal battle between Canada and the Mississaugas of the Credit First Nation about the alleged systemic underfunding of on-reserve schooling in Ontario. </p>
+📍 [Source](https://www.cbc.ca/news/indigenous/mississaugas-chrt-education-complaint-9.6955346?cmp=rss)
+**Score:** 18.50
+
+## 4. Drug to slow early-stage Alzheimer's disease approved by Health Canada
+<img src='https://i.cbc.ca/ais/56592e3d-5ab9-4157-82c2-6f687a601a4e,1761663701647/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C267%2C5566%2C3130%29%3BResize%3D%28620%29' alt='Tests for people with Alzheimer's disease with blocks and pegs' width='620' height='349' title='A view shows tests for patients suffering from Alzheimer's disease at the Memory Centre Department of Readaptation and Geriatrics of the University Hospital (HUG), in Geneva, Switzerland, June 6, 2023.  REUTERS/Denis Balibouse'/><p>Lecanemab is the first medication approved in Canada that targets the buildup of amyloid plaque in the brain, which is believed to be an underlying cause of Alzheimer's disease.</p>
+📍 [Source](https://www.cbc.ca/news/health/alzheimer-lecanemab-9.6956567?cmp=rss)
+**Score:** 19.50
+
+## 5. People who lived at Ontario Training Schools seek closure 8 years after start of class action alleging abuse
+<img src='https://i.cbc.ca/ais/375d80d5-a08a-49a2-8c72-50821b1e1f43,1761243202805/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C366%2C4277%2C2405%29%3BResize%3D%28620%29' alt='A blond woman sits at her kitchen table with photos of a blond man spread out in front of her.  ' width='620' height='349' title='Paula Lacosse says her late brother, Kirk Keeping, checked the news every day until he died, waiting to hear of a provincial apology or settlement for survivors of Ontario Training Schools.'/><p>People who lived at Ontario Training Schools are suing the province, alleging abuse was rampant at the children's detention centres. Nearly eight years after a class action was launched, the case is still stuck in the civil system. Lawyers say it’s another casualty of underfunded courts. </p>
+📍 [Source](https://www.cbc.ca/news/canada/thunder-bay/people-who-lived-at-ontario-training-schools-seek-closure-8-years-after-start-of-class-action-alleging-abuse-9.6948647?cmp=rss)
+**Score:** 17.00
+
+## 6. Governments Of Canada and Manitoba Strengthening Justice for Canada's First Responders
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71298)
+**Score:** 17.00
+
+## 7. Canadian studies set to be conducted on ISS. What to know
+The studies will examine such things as astronauts' mental health and how their bodies adapt to microgravity and cope with space anemia.
+📍 [Source](https://globalnews.ca/news/11499048/canada-studies-international-space-station/)
+**Score:** 16.00
+
+## 8. As tastes change, Alberta’s craft brewers expand their offerings
+<img src='https://i.cbc.ca/ais/f1fc5705-462d-4d7f-a94e-4a32cc8f7d25,1761593657752/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A bartender pours a pint of cider at Cold Garden, a Calgary brewery and taphouse.' width='620' height='349' title='A bartender pours a pint of cider at Cold Garden, a Calgary brewery and taphouse.'/><p>According to Statistics Canada, beer consumption in Alberta has declined over the past decade. During the same time period, the market share of ciders, coolers and ready-to-drink cocktails has doubled. </p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-craft-beer-industry-9.6955374?cmp=rss)
+**Score:** 15.00
+
+## 9. The Bank of Canada could cut rates again. It likely won't help food prices
+As many Canadians struggle with affording essentials like food, experts say an interest rate cut by the Bank of Canada could help consumers, but not as much for grocery prices.
+📍 [Source](https://globalnews.ca/news/11498632/food-inflation-bank-of-canada/)
+**Score:** 14.00
+
+## 10. Ford government to limit debate, skip public hearings on bill to scrap speed cameras
+<img src='https://i.cbc.ca/ais/778b0244-69ea-41a2-a801-13ca92704e8f,1761671451200/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C69%2C3418%2C1922%29%3BResize%3D%28620%29' alt='A man in a blue suit stands behind a podium with a sign on the front' width='620' height='349' title='Premier Doug Ford is joined by David Piccini, Minister of Labour, Immigration, Training and Skills Development, to provide remarks and hold a media availability, announcing measures intended to protect Ontario workers in the face of U.S. tariffs. Hamilton, Ontario, on August 20, 2025'/><p>Ontario Premier Doug Ford's government is proposing to limit debate and avoid public input on three pieces of legislation, including one that would end the province's speed camera program.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/ford-limit-speed-camera-debate-skip-public-hearings-9.6956840?cmp=rss)
+**Score:** 16.50
+
+## 11. How Canadian charities fund illegal West Bank settlements
+<img src='https://i.cbc.ca/ais/031664a4-c1ed-4384-aaf1-08933b1a0624,1761604312349/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C238%2C4578%2C2575%29%3BResize%3D%28620%29' alt='Rugged hills in the foreground, punctuated with several small, simple structures; in the middle distance, dozens of mid-rise apartment buildings' width='620' height='349' title='Makeshift houses of the Palestinian Bedouin Jahalin community, bottom, are seen next to the West Bank Israeli settlement of Maale Adumim, Monday, June 2, 2025.'/><p>An investigation from CBC's the fifth estate follows the trail of millions of dollars in tax-deductible donations sent through Canadian charities to support Israeli settlements deemed illegal under international law.</p>
+📍 [Source](https://www.cbc.ca/radio/frontburner/how-canadian-charities-fund-illegal-west-bank-settlements-9.6955753?cmp=rss)
+**Score:** 14.50
+
+## 12. As Carney set for key China talks, Poilievre urges ‘results' on tariffs
+Conservative Leader Pierre Poilievre said Canadians expect Prime Minister Mark Carney to get some results from his upcoming meeting with Chinese President Xi Jinping.
+📍 [Source](https://globalnews.ca/news/11498347/mark-carney-china-meeting-tariffs-pierre-poilievre/)
+**Score:** 12.00
+
+## 13. Manitoba Government Expands Care for Dialysis Patients and Mothers in Norway House Cree Nation
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71297)
+**Score:** 13.00
+
+## 14. Could ‘Plan México’ be the guide for ‘Plan Canada’
+📍 [Source](https://rabble.ca/columnists/could-plan-mexico-be-the-guide-for-plan-canada/)
+**Score:** 10.50
+
+## 15. How Certified Canadian Publishers Keep Our Stories Close to Home
+A new national program helps readers easily spot and support Canadian-owned book publishers.
+📍 [Source](https://thetyee.ca/Presents/2025/10/28/Certified-Canadian-Publisher-Program/)
+**Score:** 12.00
+
+## 16. Carney mum on whether he saw Ontario's anti-tariff ad beforehand
+<img src='https://i.cbc.ca/ais/f20a630e-3e7b-45ca-8f26-f59ad05e85c9,1761647313634/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C581%2C7594%2C4271%29%3BResize%3D%28620%29' alt='A man in a suit holds his hand up as he speaks at a microphone' width='620' height='349' title='Prime Minister Mark Carney is seen during a news conference following the ASEAN summit in Kuala Lumpur, Malaysia, Monday, Oct. 27, 2025. THE CANADIAN PRESS/Adrian Wyld'/><p></p>
+📍 [Source](https://www.cbc.ca/news/politics/carney-trump-trade-tariffs-ad-9.6956269?cmp=rss)
+**Score:** 10.50
+
+## 17. ‘Forever Canadian' petition surpasses goal, collects 456K signatures
+The final tally is far greater than the required 294,000 signatures to initiate a possible referendum in Alberta.
+📍 [Source](https://globalnews.ca/news/11498519/forever-canadian-petition-signatures/)
+**Score:** 9.00
+
+## 18. Return to office for Ontario civil servants 'unnecessarily confusing,' unions say
+<img src='https://i.cbc.ca/ais/6d731b33-b734-4a53-b52c-18b0e6cc02db,1761587864692/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C248%2C4720%2C2655%29%3BResize%3D%28620%29' alt='A man walks out from an office filled with shadow to a sunny hallway at Queen's Park.' width='620' height='349' title='Ontario Premier Doug Ford arrives in the legislative chamber for his government’s tabling of the budget at Queen’s Park on May 15, 2025.    '/><p>The return to office last week by thousands of Ontario public servants has been "disrespectful,”  “piecemeal” and filled with “unnecessary confusion,” say the workers' unions, who point out some ministries and agencies still don't have enough space to meet Premier Doug Ford’s order.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/ontario-civil-servants-return-to-office-9.6955285?cmp=rss)
+**Score:** 9.00
+
+## 19. BC’s Government Employee Strike Is Over. Here’s What Comes Next
+The tentative deal clears the way for other public sector unions to fight for better wages.
+📍 [Source](https://thetyee.ca/News/2025/10/28/BC-Government-Employee-Strike-Over/)
 **Score:** 7.50
+
+## 20. N.B. business in trademark tangle with Alberta government over licence plates
+📍 [Source](https://www.cbc.ca/news/canada/new-brunswick/alberta-licence-plate-motto-dispute-9.6952073?cmp=rss)
+**Score:** 7.50
+
+## 21. Say cheese? Why you'll soon have to take photos when entering, exiting U.S.
+Travellers will soon be required to have their photograph taken when entering or leaving the U.S. by air, sea or land — including Canadians and even American citizens.
+📍 [Source](https://globalnews.ca/news/11496690/us-entry-exit-photos-biometrics-travel-explainer/)
+**Score:** 4.50
+
+## 22. B.C. sees 1st avian flu outbreaks since January as 9 confirmed in poultry stocks
+A list published by the Canadian Food Inspection Agency shows the virus has been detected in nine commercial poultry flocks in the region over the last two weeks.
+📍 [Source](https://globalnews.ca/news/11498626/bc-avian-flu-outbreaks-october-2025/)
+**Score:** 4.50
+
+## 23. The Beaches make a play for Canadian rock royalty at Doug Mitchell
+The Beaches are making more than just waves.
+📍 [Source](https://www.straight.com/the-beaches-review-vancouver-2025)
+**Score:** 4.50
+
+## 24. Vancouver May Get a Major New City Plan. It’s Not Enough
+Council will vote on an approach that assumes just building more will spur affordability, even though that’s not true.
+📍 [Source](https://thetyee.ca/Opinion/2025/10/28/Vancouver-New-City-Plan-Not-Enough/)
+**Score:** 4.50
+
+## 25. BC Residents May Have to Cover a Property Tax Break for Pipelines
+After lobbying, BC Assessment slashed its appraisals of the industry’s infrastructure.
+📍 [Source](https://thetyee.ca/News/2025/10/28/BC-Property-Tax-Break-Pipelines/)
+**Score:** 4.50
+
+## 26. Which industry in each province is most threatened by tariffs?
+<img src='https://i.cbc.ca/ais/d81275d0-f2c2-4b58-9553-b243f034c231,1760100552645/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C282%2C5407%2C3041%29%3BResize%3D%28620%29' alt='A worker in a fluorescent shirt is shown from behind working with a large machine.' width='620' height='349' title='A worker uses a machine to stamp out vehicle components at Martinrea auto parts, in Woodbridge, Ont., on Feb. 3, 2025.'/><p>As tariffs make an impact, Canadian industries are finding themselves competing for priority in trade negotiations. Here are the industries under threat in each province. </p>
+📍 [Source](https://www.cbc.ca/news/politics/tariffs-industries-canadian-provinces-9.6950272?cmp=rss)
+**Score:** 4.50
+
+## 27. More Alberta parents pushing back against vitamin K injection for newborns, some doctors say
+<img src='https://i.cbc.ca/ais/a1168de7-8a6a-4f22-b26a-f9f265c1320d,1761673251890/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C52%2C1000%2C562%29%3BResize%3D%28620%29' alt='A baby is yawning and swaddled in a woman's arms' width='620' height='349' title='Mother holding cute newborn baby boy in here arms. Sleepy baby yawning.; Shutterstock ID 1033088542'/><p>Some Alberta doctors say they're seeing a recent and concerning trend of new parents either questioning or refusing vitamin K injections, which have been given to newborns as standard practice for decades.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/standard-preventative-treatment-newborns-alberta-9.6956922?cmp=rss)
+**Score:** 4.50
+
+## 28. 86-year-old man with Alzheimer's walks out of Saskatoon care home undetected, dies days later
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/care-home-long-term-care-seniors-health-alzheimers-9.6955102?cmp=rss)
+**Score:** 4.50
+
+## 29. Halloween costumes don't have to come from a store. Here are some tricks to make your own
+<img src='https://i.cbc.ca/ais/ac27fd99-7241-498e-9e30-d63f2c4f9eee,1761663913907/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C201%2C2048%2C1152%29%3BResize%3D%28620%29' alt='A woman stands in a sewing studio next to witch hats' width='620' height='349' title='Riley Papp is the co-owner of Sew It Goes sewing studio in London, Ont. Her advice for first-time costume makers is to start with a plan, use affordable supplies and bring extra safety pins on Halloween night.'/><p>Some people are trading in store-bought Halloween costumes for do-it-yourself options. Hot glue, dollar-store materials and items that can be found at home are all you need to create affordable, high-quality get-ups.</p>
+📍 [Source](https://www.cbc.ca/news/canada/london/diy-halloween-costumes-9.6955553?cmp=rss)
+**Score:** 4.50
+
+## 30. AI 'hallucinations' could prove real problem for owner of fire-ravaged Vancouver property
+<img src='https://i.cbc.ca/ais/0d3e2780-3523-4dbd-b3af-081b06d662a0,1761583550555/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C15%2C603%2C339%29%3BResize%3D%28620%29' alt='A man walks across an empty residential lot.' width='620' height='349' title='The owner of an empty lot in East Vancouver wanted his property's assessed value cut in half from $19 million to $10 million. Unfortunately, he allegedly relied on artificial intelligence to bolster his case'/><p>As the owner of a fire-ravaged Vancouver property he's been accused of neglecting, Fu De Ren has defended himself in civil proceedings and bylaw trials. But his inclusion of alleged AI "hallucinations" as part of a self-represented bid to cut his property's assessed value in half may end up costing him money.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/artificial-intelligence-appeal-property-9.6950415?cmp=rss)
+**Score:** 2.00
+
+## 31. Arctic fossil is northern-most rhino species ever found
+<img src='https://i.cbc.ca/ais/ea0cbe6e-c0a0-421f-9523-5da61f4a7d0d,1761657542415/full/max/0/default.jpg?im=Crop%2Crect%3D%28222%2C0%2C3555%2C1999%29%3BResize%3D%28620%29' alt='Illustration of furry rhino by a lake' width='620' height='349' title='Artist's recreation of Epiatheracerium itjilik in its forested lake habitat, Devon Island, Early Miocene. The plants and animals shown are based on fossils found at the site, including the transitional seal Puijila darwini.'/><p>Millions of years ago, a pony-sized, hornless rhino wandered through the woods and munched on leaves in what is now northern Nunavut. A new study identities it as a new species, and offers an intriguing explanation for how it got there.</p>
+📍 [Source](https://www.cbc.ca/news/science/arctic-rhino-fossil-9.6956379?cmp=rss)
+**Score:** 2.00
+
+## 32. Calgary recount confirms Jeromy Farkas elected as mayor
+<img src='https://i.cbc.ca/ais/7a40f524-1dbc-4150-858e-d7b7abccc907,1761082919511/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A man in a suit' width='620' height='349' title='Farkas'/><p>On Tuesday, Elections Calgary released updated numbers, which show that Jeromy Farkas won the election with 91,112 votes to Sharp's 90,496, a difference of 616 votes.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/jeromy-farkas-recount-calgary-election-9.6955039?cmp=rss)
+**Score:** 1.50
 
