@@ -78,110 +78,152 @@
             {% if page.lang == 'fr' %}Accueil{% else %}Home{% endif %}
           </a>
         </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/about' | relative_url }}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}À propos{% else %}About{% endif %}
-          </a>
+        
+        <!-- About Dropdown -->
+        <li class="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            {% if page.lang == 'fr' %}À propos{% else %}About{% endif %} <span aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li>
+              <a href="{{ lang_prefix | append: '/about' | relative_url }}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}À propos{% else %}About{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/roadmap' | relative_url }}" {% if page.url contains '/roadmap' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Feuille de route{% else %}Roadmap{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/whats-new' | relative_url }}" {% if page.url contains '/whats-new' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Quoi de neuf{% else %}What's New{% endif %}
+              </a>
+            </li>
+          </ul>
         </li>
+        
         <li>
           <a href="{{ lang_prefix | append: '/features' | relative_url }}" {% if page.url contains '/features' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Fonctionnalités{% else %}Features{% endif %}
           </a>
         </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/user-guide' | relative_url }}" {% if page.url contains '/user-guide' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Guide d'utilisation{% else %}User Guide{% endif %}
-          </a>
+        
+        <!-- Resources Dropdown -->
+        <li class="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            {% if page.lang == 'fr' %}Ressources{% else %}Resources{% endif %} <span aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li>
+              <a href="{{ lang_prefix | append: '/user-guide' | relative_url }}" {% if page.url contains '/user-guide' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Guide d'utilisation{% else %}User Guide{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/beta-guide' | relative_url }}" {% if page.url contains '/beta' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Guide des testeurs bêta{% else %}Beta Guide{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/faq' | relative_url }}" {% if page.url contains '/faq' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}FAQ{% else %}FAQ{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/crisis-resources' | relative_url }}" {% if page.url contains '/crisis-resources' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Ressources de crise{% else %}Crisis Help{% endif %}
+              </a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/roadmap' | relative_url }}" {% if page.url contains '/roadmap' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Feuille de route{% else %}Roadmap{% endif %}
-          </a>
+        
+        <!-- Community Dropdown -->
+        <li class="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            {% if page.lang == 'fr' %}Communauté{% else %}Community{% endif %} <span aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li>
+              <a href="{{ lang_prefix | append: '/blog' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Blog{% else %}Blog{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/events' | relative_url }}" {% if page.url contains '/events' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Événements{% else %}Events{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/campaigns' | relative_url }}" {% if page.url contains '/campaigns' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Campagnes{% else %}Campaigns{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/community-spotlight' | relative_url }}" {% if page.url contains '/community-spotlight' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Communauté en vedette{% else %}Community Spotlight{% endif %}
+              </a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/blog' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Blog{% else %}Blog{% endif %}
-          </a>
+        
+        <!-- Accessibility Dropdown -->
+        <li class="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            {% if page.lang == 'fr' %}Accessibilité{% else %}Accessibility{% endif %} <span aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li>
+              <a href="{{ lang_prefix | append: '/accessibility' | relative_url }}" {% if page.url contains '/accessibility' and not page.url contains '/accessibility-settings' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Déclaration{% else %}Statement{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/accessibility-settings' | relative_url }}" {% if page.url contains '/accessibility-settings' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Paramètres{% else %}Settings{% endif %}
+              </a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/faq' | relative_url }}" {% if page.url contains '/faq' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}FAQ{% else %}FAQ{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/accessibility' | relative_url }}" {% if page.url contains '/accessibility' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Accessibilité{% else %}Accessibility{% endif %}
-          </a>
-        </li>
+        
         <li>
           <a href="{{ lang_prefix | append: '/app-waitlist' | relative_url }}" {% if page.url contains '/app-waitlist' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Liste d'attente{% else %}App Waitlist{% endif %}
+            {% if page.lang == 'fr' %}Liste d'attente{% else %}Join Waitlist{% endif %}
           </a>
         </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/crisis-resources' | relative_url }}" {% if page.url contains '/crisis-resources' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Ressources de crise{% else %}Crisis Help{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/contact' | relative_url }}" {% if page.url contains '/contact' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Contact{% else %}Contact{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/newsletter' | relative_url }}" {% if page.url contains '/newsletter' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Infolettre{% else %}Newsletter{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/whats-new' | relative_url }}" {% if page.url contains '/whats-new' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Quoi de neuf{% else %}What's New{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/beta-guide' | relative_url }}" {% if page.url contains '/beta' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Guide des testeurs bêta{% else %}Beta Testers Guide{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/search' | relative_url }}" {% if page.url contains '/search' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Recherche{% else %}Search{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/events' | relative_url }}" {% if page.url contains '/events' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Événements{% else %}Events{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/site-map' | relative_url }}" {% if page.url contains '/site-map' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Plan du site{% else %}Site Map{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/faq' | relative_url }}" {% if page.url contains '/faq' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}FAQ{% else %}FAQ{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/accessibility-settings' | relative_url }}" {% if page.url contains '/accessibility-settings' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Paramètres d'accessibilité{% else %}Accessibility Settings{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/campaigns' | relative_url }}" {% if page.url contains '/campaigns' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Campagnes{% else %}Campaigns{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/community-spotlight' | relative_url }}" {% if page.url contains '/community-spotlight' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Communauté{% else %}Community{% endif %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ lang_prefix | append: '/connect' | relative_url }}" {% if page.url contains '/connect' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}Connecter{% else %}Connect{% endif %}
-          </a>
+        
+        <!-- More Dropdown -->
+        <li class="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            {% if page.lang == 'fr' %}Plus{% else %}More{% endif %} <span aria-hidden="true">▾</span>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li>
+              <a href="{{ lang_prefix | append: '/contact' | relative_url }}" {% if page.url contains '/contact' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Contact{% else %}Contact{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/newsletter' | relative_url }}" {% if page.url contains '/newsletter' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Infolettre{% else %}Newsletter{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/connect' | relative_url }}" {% if page.url contains '/connect' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Connecter{% else %}Connect{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/search' | relative_url }}" {% if page.url contains '/search' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Recherche{% else %}Search{% endif %}
+              </a>
+            </li>
+            <li>
+              <a href="{{ lang_prefix | append: '/site-map' | relative_url }}" {% if page.url contains '/site-map' %}aria-current="page"{% endif %}>
+                {% if page.lang == 'fr' %}Plan du site{% else %}Site Map{% endif %}
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
@@ -263,6 +305,7 @@
   <!-- Skip link and mobile menu functionality -->
   <script src="{{ '/assets/js/skip-links.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/mobile-menu.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/dropdown-nav.js' | relative_url }}" defer></script>
 
   <!-- Utilities and controls -->
   <script src="{{ '/assets/js/a11y.min.js' | relative_url }}" defer></script>
