@@ -45,13 +45,19 @@
 
   <!-- Quick overrides to shrink header/nav footprint without touching minified bundles -->
   <style>
-    /* Keep header compact and non-sticky */
-    header { position: static !important; top: auto !important; padding: .6rem 0 !important; }
+    /* Keep header compact and non-sticky on all pages */
+    header { position: static !important; top: auto !important; padding: .45rem 0 !important; }
+    .header-bar { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: 0 .75rem; }
 
     /* Collapse navigation by default on all viewports; open via Menu toggle */
-    #primary-nav .nav-list { display: none !important; }
+  #primary-nav { min-height: 0 !important; }
+  #primary-nav .nav-list { display: none !important; }
     #primary-nav.is-open .nav-list { display: flex !important; flex-wrap: wrap !important; gap: .5rem !important; }
     .menu-toggle { display: inline-block !important; }
+
+    /* Show contrast/dark-mode buttons only when menu is open */
+    .header-controls { display: none !important; }
+    #primary-nav.is-open + .header-controls { display: flex !important; justify-content: center; gap: .5rem; padding: .25rem .75rem; }
 
     /* Make content area wider on laptops/desktops */
     main { max-width: 1100px !important; }
