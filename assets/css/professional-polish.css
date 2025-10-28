@@ -87,6 +87,20 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Center all major containers */
+header,
+main,
+footer {
+  width: 100%;
+}
+
+main {
+  flex: 1;
 }
 
 /* ===== IMPROVED FOOTER ===== */
@@ -198,8 +212,30 @@ main {
   box-sizing: border-box;
 }
 
+/* Ensure all content sections are centered */
+section,
+article,
+.container,
+.content-wrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 section {
   margin-bottom: var(--space-4xl);
+}
+
+/* Center text content but allow lists and tables to align left within their containers */
+main > p,
+main > h1,
+main > h2,
+main > h3,
+main > h4,
+main > h5,
+main > h6 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Typography Hierarchy */
@@ -541,6 +577,51 @@ p {
   }
 }
 
+/* ===== TABLET OPTIMIZATION ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    max-width: 90%;
+    padding: var(--space-xl) var(--space-md);
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== LARGE DESKTOP OPTIMIZATION ===== */
+@media (min-width: 1400px) {
+  main {
+    max-width: 1400px;
+  }
+  
+  .footer-grid,
+  .header-bar,
+  #primary-nav.is-open .nav-list,
+  .footer-bottom {
+    max-width: 1400px;
+  }
+}
+
+/* ===== EXTRA SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  main {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
 /* ===== ACCESSIBILITY ENHANCEMENTS ===== */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -573,6 +654,48 @@ p {
   padding: var(--space-md) var(--space-lg) !important;
   border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
   font-weight: 600 !important;
+}
+
+/* ===== UTILITY CLASSES FOR CENTERING ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* Ensure images and media are responsive */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make tables responsive */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+@media (min-width: 769px) {
+  table {
+    display: table;
+  }
 }
 
 /* ===== QUICK SUMMARY BOX ===== */
