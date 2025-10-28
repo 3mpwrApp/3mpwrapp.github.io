@@ -183,7 +183,7 @@ Please fill out the form below and we'll get back to you within 24 hours:
     <!-- Cloudflare Turnstile CAPTCHA (Privacy-Friendly) -->
     <div class="form-group">
       <div class="cf-turnstile" 
-           data-sitekey="0x4AAAAAAAzSMj8KHlVXlegitkey"
+           data-sitekey="0x4AAAAAAB9B0vt5JojxnybB"
            data-theme="auto"
            data-size="normal"
            data-callback="onTurnstileSuccess"
