@@ -40,9 +40,16 @@
 /manifest.json
   Cache-Control: public, max-age=604800, must-revalidate
 
-# HTML pages - cache for 1 hour, allow stale while revalidating
+# HTML pages - prefer fresh to avoid UI getting stuck
+/*
+  Content-Type: text/html; charset=utf-8
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# Explicit rule for .html as well (some hosts require extension match)
 /*.html
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400, must-revalidate
+  Cache-Control: no-cache, no-store, must-revalidate
 
 # CSS - cache for 1 year (versioned via filename)
 /*.css
