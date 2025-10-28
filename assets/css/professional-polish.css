@@ -313,17 +313,17 @@ p {
 }
 
 .btn-secondary {
-  background: #4a8fe7 !important; /* Medium-bright blue background */
+  background: #2e6db5 !important; /* Dark blue background - 4.5:1 with white */
   color: #ffffff !important; /* White text - universal contrast */
-  border: 1px solid #3a7fc7;
+  border: 1px solid #265a9a;
   font-weight: 500;
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background: #3a7fc7 !important; /* Darker blue on hover */
+  background: #265a9a !important; /* Even darker blue on hover - 5.9:1 */
   color: #ffffff !important;
-  border-color: #2a6fb7;
+  border-color: #1e4a7f;
 }
 
 .btn-outline {
