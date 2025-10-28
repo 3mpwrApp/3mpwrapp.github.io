@@ -19,8 +19,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 {% else %}
-<meta property="og:image" content="{{ '/assets/empowrapp-logo.png' | absolute_url }}">
-<meta property="og:image:secure_url" content="{{ '/assets/empowrapp-logo.png' | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/empwrapp-logo.png' | absolute_url }}">
+<meta property="og:image:secure_url" content="{{ '/assets/empwrapp-logo.png' | absolute_url }}">
 <meta property="og:image:alt" content="3mpwrApp - Empowering Individuals, Building Community">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -55,7 +55,7 @@
 <meta name="twitter:image" content="{{ page.image | absolute_url }}">
 <meta name="twitter:image:alt" content="{{ page.image_alt | default: page.title }}">
 {% else %}
-<meta name="twitter:image" content="{{ '/assets/empowrapp-logo.png' | absolute_url }}">
+<meta name="twitter:image" content="{{ '/assets/empwrapp-logo.png' | absolute_url }}">
 <meta name="twitter:image:alt" content="3mpwrApp - Empowering Individuals, Building Community">
 {% endif %}
 
@@ -80,7 +80,7 @@
 <link rel="alternate" hreflang="x-default" href="{{ current_path | absolute_url }}">
 {% else %}
 <link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}">
-{% if page.has_french_version != false %}
+{% if page.has_french_version == true %}
 <link rel="alternate" hreflang="fr" href="{{ '/fr' | append: page.url | absolute_url }}">
 {% endif %}
 <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
@@ -102,5 +102,4 @@
 <!-- Favicons and Touch Icons -->
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/icons/icon-192.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/icons/icon-512.png' | relative_url }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
-<link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icons/icon-192.png' | relative_url }}">

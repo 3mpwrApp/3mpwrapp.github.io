@@ -95,9 +95,9 @@ permalink: /whats-new/
 <div class="page-feedback" role="complementary">
   <p><strong>💬 Was this page helpful?</strong></p>
   <p>
-    <a href="/feedback?page=whats-new&helpful=yes" class="feedback-btn feedback-yes">👍 Yes</a>
-    <a href="/feedback?page=whats-new&helpful=no" class="feedback-btn feedback-no">👎 No</a>
-    <a href="/feedback?page=whats-new" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  <a href="/feedback/" class="feedback-btn feedback-yes">👍 Yes</a>
+  <a href="/feedback/" class="feedback-btn feedback-no">👎 No</a>
+  <a href="/feedback/" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
   </p>
 </div>
 

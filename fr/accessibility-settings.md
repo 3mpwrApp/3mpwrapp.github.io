@@ -289,8 +289,8 @@ Envoyez vos suggestions à [empowrapp08162025@gmail.com](mailto:empowrapp0816202
 ## Ressources supplémentaires
 
 ### Notre engagement
-- [Politique d'accessibilité](/fr/accessibility/) - Notre engagement WCAG 2.2 AA
-- [Guide d'accessibilité](/fr/accessibility-walkthrough/) - Visite guidée des fonctionnalités
+- [Politique d'accessibilité](/accessibility/) - Notre engagement WCAG 2.2 AA
+- [Guide d'accessibilité](/accessibility-walkthrough/) - Visite guidée des fonctionnalités
 
 ### Outils externes
 - **Lecteurs d'écran** : NVDA (Windows), JAWS, VoiceOver (Mac/iOS), TalkBack (Android)

@@ -86,7 +86,7 @@ Oui ! Nous visons la conformité WCAG 2.2 Niveau AA et offrons :
 - Navigation au clavier complète
 - Support des lecteurs d'écran
 - [Paramètres d'accessibilité personnalisables](/fr/accessibility-settings/)
-- Consultez notre [Politique d'accessibilité](/fr/accessibility/)
+- Consultez notre [Politique d'accessibilité](/accessibility/)
 
 ### Puis-je utiliser 3mpwrApp sur mon téléphone ?
 Oui ! Notre site Web est entièrement responsive et fonctionne sur :

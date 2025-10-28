@@ -392,9 +392,9 @@ Every connection, every conversation, every shared idea helps us build something
 
 <div class="page-feedback">
   <p><strong>Was this page helpful?</strong></p>
-  <a href="/feedback?page=connect&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
-  <a href="/feedback?page=connect&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
-  <a href="/feedback?page=connect&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  <a href="/feedback/" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
+  <a href="/feedback/" class="feedback-btn feedback-no">👎 Needs improvement</a>
+  <a href="/feedback/" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
   <p class="page-meta">Last updated: October 25, 2025</p>
 </div>
 

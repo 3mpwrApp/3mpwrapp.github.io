@@ -55,14 +55,7 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
 <!-- Main site RSS feed autodiscovery -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }} — Site Feed" href="{{ '/feed.xml' | relative_url }}">
 
-{%- comment -%} Internationalization: hreflang alternates {%- endcomment -%}
-<link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
-<link rel="alternate" hreflang="fr" href="{{ '/fr/' | absolute_url }}">
-<link rel="alternate" hreflang="es" href="{{ '/es/' | absolute_url }}">
-<link rel="alternate" hreflang="ar" href="{{ '/ar/' | absolute_url }}">
-<link rel="alternate" hreflang="zh" href="{{ '/zh/' | absolute_url }}">
-<link rel="alternate" hreflang="pa" href="{{ '/pa/' | absolute_url }}">
-<link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+{%- comment -%} Internationalization: hreflang alternates are added per-page in meta-tags.html {%- endcomment -%}
 {%- comment -%}
 Per-page alternates for About, Features, and User Guide
 {%- endcomment -%}

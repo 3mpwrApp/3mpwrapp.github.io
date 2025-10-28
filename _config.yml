@@ -30,7 +30,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/empowrapp-logo.png
+      image: /assets/empwrapp-logo.png
       lang: en
       seo:
         type: WebSite

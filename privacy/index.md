@@ -496,9 +496,9 @@ This policy reflects our actual technical implementation. You can verify our pri
 <div class="page-feedback" role="complementary">
   <p><strong>💬 Was this page helpful?</strong></p>
   <p>
-    <a href="{{ '/feedback?page=privacy&helpful=yes' | relative_url }}" class="feedback-btn feedback-yes">👍 Yes</a>
-    <a href="{{ '/feedback?page=privacy&helpful=no' | relative_url }}" class="feedback-btn feedback-no">👎 No</a>
-    <a href="{{ '/feedback?page=privacy' | relative_url }}" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  <a href="{{ '/feedback/' | relative_url }}" class="feedback-btn feedback-yes">👍 Yes</a>
+  <a href="{{ '/feedback/' | relative_url }}" class="feedback-btn feedback-no">👎 No</a>
+  <a href="{{ '/feedback/' | relative_url }}" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
   </p>
   <p class="page-meta"><small>Last updated: October 25, 2025 | Next review: December 2025</small></p>
 </div>

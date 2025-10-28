@@ -159,7 +159,7 @@ Les testeurs bêta acceptent de :
 Nous nous engageons à rendre notre site accessible à tous. Si vous rencontrez des obstacles :
 
 - Contactez-nous à [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- Consultez notre [Politique d'accessibilité](/fr/accessibility/)
+- Consultez notre [Politique d'accessibilité](/accessibility/)
 - Utilisez nos [Paramètres d'accessibilité](/fr/accessibility-settings/)
 
 Nous visons la conformité WCAG 2.2 Niveau AA.

@@ -371,9 +371,9 @@ We only share data with essential service providers to make the app work. Here's
 
 <div class="page-feedback">
   <p><strong>Was this guide helpful?</strong></p>
-  <a href="/feedback?page=privacy-controls&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
-  <a href="/feedback?page=privacy-controls&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
-  <a href="/feedback?page=privacy-controls&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
+  <a href="/feedback/" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
+  <a href="/feedback/" class="feedback-btn feedback-no">👎 Needs improvement</a>
+  <a href="/feedback/" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
   <p class="page-meta">Last updated: October 25, 2025 | Next review: December 2025</p>
 </div>
 
