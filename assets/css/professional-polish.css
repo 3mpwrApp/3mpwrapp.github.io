@@ -445,6 +445,34 @@ p {
   box-shadow: var(--shadow-md);
 }
 
+/* Dark mode btn-primary */
+[data-theme="dark"] .btn-primary {
+  background: #66b2ff !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-primary:focus {
+  background: #99ccff !important;
+  color: #000000 !important;
+}
+
+/* Light+HC btn-primary */
+[data-contrast="high"] .btn-primary {
+  background: #0000ee !important;
+  color: #ffffff !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* Dark+HC btn-primary */
+[data-theme="dark"][data-contrast="high"] .btn-primary {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border: 3px solid #ffffff !important;
+  font-weight: 900 !important;
+}
+
 /* ===== SECONDARY BUTTON - THEME-AWARE ===== */
 
 /* Light Mode (default) */
