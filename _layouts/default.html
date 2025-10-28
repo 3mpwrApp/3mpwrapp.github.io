@@ -47,14 +47,14 @@
   <style>
     /* Keep header compact and non-sticky */
     header { position: static !important; top: auto !important; padding: .6rem 0 !important; }
-    /* Prevent multi-row wrapping of the large menu; allow horizontal scroll when needed */
-    #primary-nav { overflow-x: auto !important; }
-    #primary-nav .nav-list { display:flex !important; flex-wrap: nowrap !important; gap: .5rem !important; }
-    #primary-nav .nav-list a { padding: .35rem .6rem !important; white-space: nowrap !important; font-size: .92rem !important; }
-    /* Avoid any accidental column layout on mobile toggle */
-    @media (max-width: 768px) {
-      #primary-nav.is-open .nav-list { display: flex !important; flex-direction: column !important; }
-    }
+
+    /* Collapse navigation by default on all viewports; open via Menu toggle */
+    #primary-nav .nav-list { display: none !important; }
+    #primary-nav.is-open .nav-list { display: flex !important; flex-wrap: wrap !important; gap: .5rem !important; }
+    .menu-toggle { display: inline-block !important; }
+
+    /* Make content area wider on laptops/desktops */
+    main { max-width: 1100px !important; }
   </style>
 </head>
 <body>
@@ -86,7 +86,7 @@
 
   <nav id="primary-nav" aria-label="Primary">
       {% if page.lang == 'fr' %}{% assign lang_prefix = '/fr' %}{% else %}{% assign lang_prefix = '' %}{% endif %}
-  <ul class="nav-list" style="flex-wrap: nowrap; gap: .5rem;">
+  <ul class="nav-list">
         <li>
           <a href="{{ lang_prefix | append: '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' or page.url == '/fr/' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Accueil{% else %}Home{% endif %}
