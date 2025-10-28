@@ -42,6 +42,16 @@
   <link rel="stylesheet" href="{{ "/assets/css/lighthouse-fixes.min.css" | relative_url }}">
   <!-- Cookie Consent Banner (GDPR Compliance) -->
   <link rel="stylesheet" href="{{ "/assets/css/cookie-consent.css" | relative_url }}">
+
+  <!-- Quick overrides to shrink header/nav footprint without touching minified bundles -->
+  <style>
+    /* Keep header compact and non-sticky */
+    header { position: static !important; top: auto !important; }
+    /* Prevent multi-row wrapping of the large menu; allow horizontal scroll when needed */
+    nav { overflow-x: auto; }
+    .nav-list { flex-wrap: nowrap !important; gap: .5rem !important; }
+    .nav-list a { padding: .4rem .7rem !important; white-space: nowrap !important; font-size: .9rem !important; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
