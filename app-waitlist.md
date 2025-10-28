@@ -10,7 +10,7 @@ permalink: /app-waitlist/
 
 <div class="status-banner" role="status" aria-live="polite">
   <span class="status-indicator">🚀</span> 
-  <strong>Phase 1 Beta Testing Now Open!</strong> Limited spots available
+  <strong>Phase 1 Beta Testing - Now Accepting Signups!</strong> Be among the first testers
 </div>
 
 # Join the 3mpwrApp Waitlist
@@ -81,12 +81,12 @@ permalink: /app-waitlist/
     
     <div class="phase-stats">
       <div class="stat-item">
-        <span class="stat-number">133</span>
-        <span class="stat-label">Features Live</span>
+        <span class="stat-number">NOW</span>
+        <span class="stat-label">Accepting Testers</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">35</span>
-        <span class="stat-label">In Development</span>
+        <span class="stat-number">0</span>
+        <span class="stat-label">Testers (Starting)</span>
       </div>
       <div class="stat-item">
         <span class="stat-number">100%</span>
@@ -608,17 +608,17 @@ We understand spoons are limited. Use the app when you can.
 
 <div>
   <div style="font-size: 2rem; font-weight: bold; color: #5b21b6;">Phase 1</div>
-  <div style="color: #6b7280; font-size: 0.9rem;">Active Now</div>
+  <div style="color: #6b7280; font-size: 0.9rem;">Now Accepting Signups</div>
 </div>
 
 <div>
-  <div style="font-size: 2rem; font-weight: bold; color: #0891b2;">133+</div>
-  <div style="color: #6b7280; font-size: 0.9rem;">Features Available</div>
+  <div style="font-size: 2rem; font-weight: bold; color: #0891b2;">Oct 2025</div>
+  <div style="color: #6b7280; font-size: 0.9rem;">Beta Launch Month</div>
 </div>
 
 <div>
   <div style="font-size: 2rem; font-weight: bold; color: #059669;">All 🇨🇦</div>
-  <div style="color: #6b7280; font-size: 0.9rem;">Provinces Supported</div>
+  <div style="color: #6b7280; font-size: 0.9rem;">Provinces Welcome</div>
 </div>
 
 <div>
@@ -629,7 +629,7 @@ We understand spoons are limited. Use the app when you can.
 </div>
 
 <p style="text-align: center; margin: 1.5rem 0 0; color: #6b7280; font-size: 0.9rem;">
-  Updated daily | Next batch invites: Rolling basis
+  Starting Phase 1 Now | First invites sent on rolling basis
 </p>
 
 </div>
