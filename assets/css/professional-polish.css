@@ -1510,3 +1510,466 @@ a:not(.btn):not(.button):not(.nav-link) {
   border: 3px solid #ffffff !important;
 }
 
+/* ============================================
+   NUCLEAR OPTION: DARK + HIGH CONTRAST MODE
+   Maximum contrast overrides for ALL elements
+   ============================================ */
+
+[data-theme="dark"][data-contrast="high"] {
+  /* Force maximum contrast on body */
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* All text elements - force white text */
+[data-theme="dark"][data-contrast="high"] body,
+[data-theme="dark"][data-contrast="high"] p,
+[data-theme="dark"][data-contrast="high"] li,
+[data-theme="dark"][data-contrast="high"] span,
+[data-theme="dark"][data-contrast="high"] div,
+[data-theme="dark"][data-contrast="high"] article,
+[data-theme="dark"][data-contrast="high"] section {
+  color: #ffffff !important;
+}
+
+/* All headings - force white text with bold */
+[data-theme="dark"][data-contrast="high"] h1,
+[data-theme="dark"][data-contrast="high"] h2,
+[data-theme="dark"][data-contrast="high"] h3,
+[data-theme="dark"][data-contrast="high"] h4,
+[data-theme="dark"][data-contrast="high"] h5,
+[data-theme="dark"][data-contrast="high"] h6 {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
+/* All links - force yellow with underline */
+[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button) {
+  color: #ffff00 !important;
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):visited {
+  color: #ffff00 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):hover,
+[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):focus {
+  color: #ffff00 !important;
+  background: rgba(255, 255, 0, 0.2) !important;
+}
+
+/* All buttons - force high contrast colors */
+[data-theme="dark"][data-contrast="high"] button,
+[data-theme="dark"][data-contrast="high"] .btn,
+[data-theme="dark"][data-contrast="high"] .button,
+[data-theme="dark"][data-contrast="high"] input[type="submit"],
+[data-theme="dark"][data-contrast="high"] input[type="button"] {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border: 3px solid #ffffff !important;
+  font-weight: 900 !important;
+}
+
+/* All cards and containers - force black background */
+[data-theme="dark"][data-contrast="high"] .card,
+[data-theme="dark"][data-contrast="high"] .feature-card,
+[data-theme="dark"][data-contrast="high"] .resource-card,
+[data-theme="dark"][data-contrast="high"] .info-box,
+[data-theme="dark"][data-contrast="high"] .content-box {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+}
+
+/* Tables - force high contrast */
+[data-theme="dark"][data-contrast="high"] table {
+  border: 3px solid #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] th,
+[data-theme="dark"][data-contrast="high"] td {
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  background: #000000 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] thead {
+  background: #000000 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] th {
+  font-weight: 900 !important;
+}
+
+/* Code blocks - force contrast */
+[data-theme="dark"][data-contrast="high"] code,
+[data-theme="dark"][data-contrast="high"] pre {
+  background: #000000 !important;
+  color: #00ff00 !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Badges and labels - force high visibility */
+[data-theme="dark"][data-contrast="high"] .badge,
+[data-theme="dark"][data-contrast="high"] .label,
+[data-theme="dark"][data-contrast="high"] .tag {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  font-weight: 900 !important;
+}
+
+/* Forms - force high contrast */
+[data-theme="dark"][data-contrast="high"] input,
+[data-theme="dark"][data-contrast="high"] textarea,
+[data-theme="dark"][data-contrast="high"] select {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] input::placeholder,
+[data-theme="dark"][data-contrast="high"] textarea::placeholder {
+  color: #ffffff !important;
+  opacity: 0.7 !important;
+}
+
+/* Focus states - force maximum visibility */
+[data-theme="dark"][data-contrast="high"] *:focus {
+  outline: 4px solid #ffff00 !important;
+  outline-offset: 2px !important;
+}
+
+/* Specific problematic elements */
+[data-theme="dark"][data-contrast="high"] .feature-box,
+[data-theme="dark"][data-contrast="high"] .step-card,
+[data-theme="dark"][data-contrast="high"] .timeline-item,
+[data-theme="dark"][data-contrast="high"] .faq-item,
+[data-theme="dark"][data-contrast="high"] .blog-post,
+[data-theme="dark"][data-contrast="high"] .post-card {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .feature-box h3,
+[data-theme="dark"][data-contrast="high"] .step-card h3,
+[data-theme="dark"][data-contrast="high"] .timeline-item h3,
+[data-theme="dark"][data-contrast="high"] .faq-item h3,
+[data-theme="dark"][data-contrast="high"] .blog-post h3,
+[data-theme="dark"][data-contrast="high"] .post-card h3 {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
+/* Lists - force white text */
+[data-theme="dark"][data-contrast="high"] ul,
+[data-theme="dark"][data-contrast="high"] ol {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] li {
+  color: #ffffff !important;
+}
+
+/* Strong and emphasis - force bold white */
+[data-theme="dark"][data-contrast="high"] strong,
+[data-theme="dark"][data-contrast="high"] b {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] em,
+[data-theme="dark"][data-contrast="high"] i {
+  color: #ffffff !important;
+  font-style: italic !important;
+}
+
+/* Small text - force white but bold */
+[data-theme="dark"][data-contrast="high"] small {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Blockquotes - force high contrast */
+[data-theme="dark"][data-contrast="high"] blockquote {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-left: 5px solid #ffff00 !important;
+}
+
+/* Images - force borders for visibility */
+[data-theme="dark"][data-contrast="high"] img {
+  border: 3px solid #ffffff !important;
+}
+
+/* Navigation - force high contrast */
+[data-theme="dark"][data-contrast="high"] nav,
+[data-theme="dark"][data-contrast="high"] .nav-list {
+  background: #000000 !important;
+}
+
+[data-theme="dark"][data-contrast="high"] nav a,
+[data-theme="dark"][data-contrast="high"] .nav-list a {
+  color: #ffff00 !important;
+  font-weight: 900 !important;
+}
+
+/* Footer - force high contrast */
+[data-theme="dark"][data-contrast="high"] footer,
+[data-theme="dark"][data-contrast="high"] #site-footer {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-top: 3px solid #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] footer *,
+[data-theme="dark"][data-contrast="high"] #site-footer * {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"][data-contrast="high"] footer a,
+[data-theme="dark"][data-contrast="high"] #site-footer a {
+  color: #ffff00 !important;
+  font-weight: 700 !important;
+}
+
+/* Horizontal rules */
+[data-theme="dark"][data-contrast="high"] hr {
+  border-color: #ffffff !important;
+  border-width: 3px !important;
+}
+
+/* Ensure all child elements inherit properly */
+[data-theme="dark"][data-contrast="high"] * {
+  border-color: #ffffff !important;
+}
+
+/* ============================================
+   LIGHT + HIGH CONTRAST MODE - Comprehensive
+   Maximum contrast overrides for ALL elements
+   ============================================ */
+
+[data-contrast="high"]:not([data-theme="dark"]) {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* All text elements - force black text */
+[data-contrast="high"]:not([data-theme="dark"]) body,
+[data-contrast="high"]:not([data-theme="dark"]) p,
+[data-contrast="high"]:not([data-theme="dark"]) li,
+[data-contrast="high"]:not([data-theme="dark"]) span,
+[data-contrast="high"]:not([data-theme="dark"]) div,
+[data-contrast="high"]:not([data-theme="dark"]) article,
+[data-contrast="high"]:not([data-theme="dark"]) section {
+  color: #000000 !important;
+}
+
+/* All headings - force black text with extra bold */
+[data-contrast="high"]:not([data-theme="dark"]) h1,
+[data-contrast="high"]:not([data-theme="dark"]) h2,
+[data-contrast="high"]:not([data-theme="dark"]) h3,
+[data-contrast="high"]:not([data-theme="dark"]) h4,
+[data-contrast="high"]:not([data-theme="dark"]) h5,
+[data-contrast="high"]:not([data-theme="dark"]) h6 {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* All links - force blue with underline */
+[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button) {
+  color: #0000ee !important;
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
+
+[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):visited {
+  color: #0000ee !important;
+}
+
+[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):hover,
+[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):focus {
+  color: #0000ee !important;
+  background: rgba(0, 0, 238, 0.1) !important;
+}
+
+/* All buttons - force high contrast */
+[data-contrast="high"]:not([data-theme="dark"]) button,
+[data-contrast="high"]:not([data-theme="dark"]) .btn,
+[data-contrast="high"]:not([data-theme="dark"]) .button,
+[data-contrast="high"]:not([data-theme="dark"]) input[type="submit"],
+[data-contrast="high"]:not([data-theme="dark"]) input[type="button"] {
+  background: #0000ee !important;
+  color: #ffffff !important;
+  border: 3px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* All cards - force white background with black borders */
+[data-contrast="high"]:not([data-theme="dark"]) .card,
+[data-contrast="high"]:not([data-theme="dark"]) .feature-card,
+[data-contrast="high"]:not([data-theme="dark"]) .resource-card,
+[data-contrast="high"]:not([data-theme="dark"]) .info-box,
+[data-contrast="high"]:not([data-theme="dark"]) .content-box {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+}
+
+/* Tables */
+[data-contrast="high"]:not([data-theme="dark"]) table {
+  border: 3px solid #000000 !important;
+}
+
+[data-contrast="high"]:not([data-theme="dark"]) th,
+[data-contrast="high"]:not([data-theme="dark"]) td {
+  border: 2px solid #000000 !important;
+  color: #000000 !important;
+  background: #ffffff !important;
+}
+
+[data-contrast="high"]:not([data-theme="dark"]) th {
+  font-weight: 900 !important;
+}
+
+/* Code blocks */
+[data-contrast="high"]:not([data-theme="dark"]) code,
+[data-contrast="high"]:not([data-theme="dark"]) pre {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+/* Badges */
+[data-contrast="high"]:not([data-theme="dark"]) .badge,
+[data-contrast="high"]:not([data-theme="dark"]) .label,
+[data-contrast="high"]:not([data-theme="dark"]) .tag {
+  background: #0000ee !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* Forms */
+[data-contrast="high"]:not([data-theme="dark"]) input,
+[data-contrast="high"]:not([data-theme="dark"]) textarea,
+[data-contrast="high"]:not([data-theme="dark"]) select {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+}
+
+/* Focus states */
+[data-contrast="high"]:not([data-theme="dark"]) *:focus {
+  outline: 4px solid #0000ee !important;
+  outline-offset: 2px !important;
+}
+
+/* Specific elements */
+[data-contrast="high"]:not([data-theme="dark"]) .feature-box,
+[data-contrast="high"]:not([data-theme="dark"]) .step-card,
+[data-contrast="high"]:not([data-theme="dark"]) .timeline-item,
+[data-contrast="high"]:not([data-theme="dark"]) .faq-item,
+[data-contrast="high"]:not([data-theme="dark"]) .blog-post,
+[data-contrast="high"]:not([data-theme="dark"]) .post-card {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+}
+
+/* Strong elements */
+[data-contrast="high"]:not([data-theme="dark"]) strong,
+[data-contrast="high"]:not([data-theme="dark"]) b {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* Small text */
+[data-contrast="high"]:not([data-theme="dark"]) small {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* Blockquotes */
+[data-contrast="high"]:not([data-theme="dark"]) blockquote {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-left: 5px solid #0000ee !important;
+}
+
+/* Images */
+[data-contrast="high"]:not([data-theme="dark"]) img {
+  border: 3px solid #000000 !important;
+}
+
+/* Navigation */
+[data-contrast="high"]:not([data-theme="dark"]) nav a,
+[data-contrast="high"]:not([data-theme="dark"]) .nav-list a {
+  color: #0000ee !important;
+  font-weight: 900 !important;
+}
+
+/* Footer */
+[data-contrast="high"]:not([data-theme="dark"]) footer,
+[data-contrast="high"]:not([data-theme="dark"]) #site-footer {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-top: 3px solid #000000 !important;
+}
+
+[data-contrast="high"]:not([data-theme="dark"]) footer *,
+[data-contrast="high"]:not([data-theme="dark"]) #site-footer * {
+  color: #000000 !important;
+}
+
+[data-contrast="high"]:not([data-theme="dark"]) footer a,
+[data-contrast="high"]:not([data-theme="dark"]) #site-footer a {
+  color: #0000ee !important;
+  font-weight: 700 !important;
+}
+
+/* ============================================
+   DARK MODE - Additional comprehensive fixes
+   ============================================ */
+
+/* Ensure all dark mode elements have proper contrast */
+[data-theme="dark"]:not([data-contrast="high"]) {
+  background: #0b0d12 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"]:not([data-contrast="high"]) body,
+[data-theme="dark"]:not([data-contrast="high"]) p,
+[data-theme="dark"]:not([data-contrast="high"]) li,
+[data-theme="dark"]:not([data-contrast="high"]) span,
+[data-theme="dark"]:not([data-contrast="high"]) div {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"]:not([data-contrast="high"]) h1,
+[data-theme="dark"]:not([data-contrast="high"]) h2,
+[data-theme="dark"]:not([data-contrast="high"]) h3,
+[data-theme="dark"]:not([data-contrast="high"]) h4,
+[data-theme="dark"]:not([data-contrast="high"]) h5,
+[data-theme="dark"]:not([data-contrast="high"]) h6 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"]:not([data-contrast="high"]) a:not(.btn):not(.button) {
+  color: #66b2ff !important;
+}
+
+[data-theme="dark"]:not([data-contrast="high"]) .card,
+[data-theme="dark"]:not([data-contrast="high"]) .feature-card,
+[data-theme="dark"]:not([data-contrast="high"]) .resource-card {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"]:not([data-contrast="high"]) small {
+  color: #f0f0f0 !important;
+}
+
