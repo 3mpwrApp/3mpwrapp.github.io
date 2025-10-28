@@ -37,16 +37,20 @@ header {
   display: inline-block !important; 
 }
 
-/* Show contrast/dark-mode buttons only when menu is open */
+/* Keep contrast/dark-mode buttons always visible */
 .header-controls { 
-  display: none !important; 
-}
-
-#primary-nav.is-open + .header-controls { 
   display: flex !important; 
   justify-content: center; 
   gap: .5rem; 
   padding: .25rem .75rem; 
+}
+
+/* Mobile refinements: ensure controls wrap nicely */
+@media (max-width: 768px) {
+  .header-controls {
+    flex-wrap: wrap;
+    margin: .25rem 0;
+  }
 }
 
 /* Make content area wider on laptops/desktops */
