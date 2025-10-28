@@ -1,0 +1,1187 @@
+{
+  "totalTests": 60,
+  "passedTests": 29,
+  "failedTests": 27,
+  "totalViolations": 27,
+  "timestamp": "2025-10-28T23:33:04.675Z",
+  "baseUrl": "https://3mpwrapp.pages.dev",
+  "results": [
+    {
+      "url": "/",
+      "mode": "Light Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=home&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #0056b3, background color: #047857, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=home&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.45 (foreground color: #0056b3, background color: #dc2626, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=home\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.36 (foreground color: #0056b3, background color: #2563eb, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "mode": "Light Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/features",
+      "mode": "Light Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=features&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #0056b3, background color: #047857, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=features&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.45 (foreground color: #0056b3, background color: #dc2626, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=features\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.36 (foreground color: #0056b3, background color: #2563eb, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/user-guide",
+      "mode": "Light Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/blog",
+      "mode": "Light Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 1,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"#all-curated\" class=\"btn-secondary\">View All Daily Highlights →</a>",
+              "target": [
+                ".btn-secondary"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.19 (foreground color: #0056b3, background color: #212529, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/contact",
+      "mode": "Light Mode",
+      "violations": -1,
+      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://3mpwrapp.pages.dev/contact?no-modal=1\", waiting until \"networkidle\"\u001b[22m\n"
+    },
+    {
+      "url": "/privacy",
+      "mode": "Light Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-yes\">👍 Yes</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #0056b3, background color: #047857, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.45 (foreground color: #0056b3, background color: #dc2626, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.36 (foreground color: #0056b3, background color: #2563eb, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/terms",
+      "mode": "Light Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/accessibility",
+      "mode": "Light Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/faq",
+      "mode": "Light Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes, very helpful</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #0056b3, background color: #047857, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 Needs improvement</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.45 (foreground color: #0056b3, background color: #dc2626, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;type=suggestion\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.36 (foreground color: #0056b3, background color: #2563eb, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/roadmap",
+      "mode": "Light Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/beta",
+      "mode": "Light Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/crisis-resources",
+      "mode": "Light Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/accessibility-settings",
+      "mode": "Light Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/app-waitlist",
+      "mode": "Light Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes, signing up!</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.28 (foreground color: #0056b3, background color: #047857, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 Have concerns</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.45 (foreground color: #0056b3, background color: #dc2626, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;type=suggestion\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.36 (foreground color: #0056b3, background color: #2563eb, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/",
+      "mode": "Dark Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 5,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<span class=\"badge\" aria-label=\"13 accessibility features available\">13 features</span>",
+              "target": [
+                "#toolbarToggle > .badge"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.21 (foreground color: #ffffff, background color: #4f8cff, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"badge badge--new\" aria-label=\"New update in the last 24 hours\">New!</span>",
+              "target": [
+                ".badge--new"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.53 (foreground color: #ffffff, background color: #10b981, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=home&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #10b981, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=home&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.17 (foreground color: #66b2ff, background color: #fca5a5, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=home\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #60a5fa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "mode": "Dark Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 7,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/user-guide\" class=\"resource-link\">\n      User Guide →\n    </a>",
+              "target": [
+                ".resource-link[href$=\"user-guide\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/features\" class=\"resource-link\">\n      Explore Features →\n    </a>",
+              "target": [
+                ".resource-link[href$=\"features\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/privacy/\" class=\"resource-link\">Privacy Policy →</a>",
+              "target": [
+                "a[href$=\"privacy/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/data-ownership/\" class=\"resource-link\">Data Ownership Statement →</a>",
+              "target": [
+                "a[href$=\"data-ownership/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/privacy-controls/\" class=\"resource-link\">Privacy Controls →</a>",
+              "target": [
+                "a[href$=\"privacy-controls/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/terms/\" class=\"resource-link\">Terms of Service →</a>",
+              "target": [
+                "a[href$=\"terms/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/legal/disclaimers/\" class=\"resource-link\">Read all disclaimers →</a>",
+              "target": [
+                "a[href$=\"disclaimers/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/features",
+      "mode": "Dark Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 5,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<span class=\"count\">133</span>",
+              "target": [
+                ".active > .count"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.84 (foreground color: #ffffff, background color: #3385d6, font size: 10.2pt (13.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div id=\"filter-results\" class=\"filter-results\" role=\"status\" aria-live=\"polite\" style=\"background-color: rgb(227, 242, 253); color: rgb(0, 102, 204);\">Showing 6 features</div>",
+              "target": [
+                "#filter-results"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.14 (foreground color: #ffffff, background color: #e3f2fd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=features&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #10b981, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=features&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.17 (foreground color: #66b2ff, background color: #fca5a5, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=features\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #60a5fa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/user-guide",
+      "mode": "Dark Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/blog",
+      "mode": "Dark Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/contact",
+      "mode": "Dark Mode",
+      "violations": -1,
+      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://3mpwrapp.pages.dev/contact?no-modal=1\", waiting until \"networkidle\"\u001b[22m\n"
+    },
+    {
+      "url": "/privacy",
+      "mode": "Dark Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-yes\">👍 Yes</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #10b981, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.17 (foreground color: #66b2ff, background color: #fca5a5, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #60a5fa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/terms",
+      "mode": "Dark Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/accessibility",
+      "mode": "Dark Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/faq",
+      "mode": "Dark Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes, very helpful</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #10b981, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 Needs improvement</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.17 (foreground color: #66b2ff, background color: #fca5a5, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;type=suggestion\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #60a5fa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/roadmap",
+      "mode": "Dark Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<div class=\"timeline-badge upcoming-badge\">📅 Coming Soon</div>",
+              "target": [
+                ".upcoming-badge"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.8 (foreground color: #ffffff, background color: #22d3ee, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"timeline-badge future-badge\">🎯 Planned</div>",
+              "target": [
+                "div[data-phase=\"3\"] > .timeline-content > .future-badge.timeline-badge"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.14 (foreground color: #ffffff, background color: #e3f2fd, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"timeline-badge future-badge\">🚀 Future</div>",
+              "target": [
+                "div[data-phase=\"4\"] > .timeline-content > .future-badge.timeline-badge"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.14 (foreground color: #ffffff, background color: #e3f2fd, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/beta",
+      "mode": "Dark Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/crisis-resources",
+      "mode": "Dark Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 7,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"tel:1-833-456-4566\" class=\"service-phone phone-link\" data-copy=\"1-833-456-4566\" aria-label=\"Call 1-833-456-4566\">1-833-456-4566</a>",
+              "target": [
+                "a[data-copy=\"1-833-456-4566\"][href=\"tel:1-833-456-4566\"][aria-label=\"Call 1-833-456-4566\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+            },
+            {
+              "html": "<a href=\"tel:1-800-668-6868\" class=\"service-phone phone-link\" data-copy=\"1-800-668-6868\" aria-label=\"Call 1-800-668-6868\">1-800-668-6868</a>",
+              "target": [
+                "a[href=\"tel:1-800-668-6868\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+            },
+            {
+              "html": "<a href=\"tel:1-855-242-3310\" class=\"service-phone phone-link\" data-copy=\"1-855-242-3310\" aria-label=\"Call 1-855-242-3310\">1-855-242-3310</a>",
+              "target": [
+                "a[href=\"tel:1-855-242-3310\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+            },
+            {
+              "html": "<a href=\"https://hopeforwellness.ca\" target=\"_blank\" rel=\"noopener noreferrer\">hopeforwellness.ca<span class=\"sr-only\"> (opens in a new tab)</span></a>",
+              "target": [
+                "a[href$=\"hopeforwellness.ca\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"tel:1-800-363-9010\" class=\"service-phone phone-link\" data-copy=\"1-800-363-9010\" aria-label=\"Call 1-800-363-9010\">1-800-363-9010</a>",
+              "target": [
+                "a[href=\"tel:1-800-363-9010\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+            },
+            {
+              "html": "<a href=\"tel:211\" class=\"service-phone phone-link\" data-copy=\"211\" aria-label=\"Call 211\">211</a>",
+              "target": [
+                "a[href$=\"tel:211\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+            },
+            {
+              "html": "<a href=\"tel:1-866-585-0445\" class=\"service-phone phone-link\" data-copy=\"1-866-585-0445\" aria-label=\"Call 1-866-585-0445\">1-866-585-0445</a>",
+              "target": [
+                "a[href=\"tel:1-866-585-0445\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/accessibility-settings",
+      "mode": "Dark Mode",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/app-waitlist",
+      "mode": "Dark Mode",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes, signing up!</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #10b981, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 Have concerns</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.17 (foreground color: #66b2ff, background color: #fca5a5, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;type=suggestion\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #66b2ff, background color: #60a5fa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/",
+      "mode": "Light + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 3,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a class=\"highlight-banner__button\" href=\"/blog/#curated-daily\" aria-describedby=\"curated-daily-desc\">\n      Check out today’s curated feed →\n    </a>",
+              "target": [
+                ".highlight-banner__button"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #0000ee, background color: #000000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=home&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #0000ee, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=home\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.09 (foreground color: #0000ee, background color: #0000ff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "mode": "Light + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/features",
+      "mode": "Light + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 2,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=features&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #0000ee, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=features\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.09 (foreground color: #0000ee, background color: #0000ff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/user-guide",
+      "mode": "Light + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/blog",
+      "mode": "Light + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 1,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"#all-curated\" class=\"btn-secondary\">View All Daily Highlights →</a>",
+              "target": [
+                ".btn-secondary"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #0000ee, background color: #000000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/contact",
+      "mode": "Light + High Contrast",
+      "violations": -1,
+      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://3mpwrapp.pages.dev/contact?no-modal=1\", waiting until \"networkidle\"\u001b[22m\n"
+    },
+    {
+      "url": "/privacy",
+      "mode": "Light + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 2,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #0000ee, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.09 (foreground color: #0000ee, background color: #0000ff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/terms",
+      "mode": "Light + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/accessibility",
+      "mode": "Light + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/faq",
+      "mode": "Light + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 2,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 Needs improvement</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #0000ee, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;type=suggestion\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.09 (foreground color: #0000ee, background color: #0000ff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/roadmap",
+      "mode": "Light + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/beta",
+      "mode": "Light + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/crisis-resources",
+      "mode": "Light + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/accessibility-settings",
+      "mode": "Light + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/app-waitlist",
+      "mode": "Light + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 2,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 Have concerns</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.35 (foreground color: #0000ee, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;type=suggestion\" class=\"feedback-btn feedback-suggest\">📝 Suggest improvements</a>",
+              "target": [
+                ".feedback-suggest"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.09 (foreground color: #0000ee, background color: #0000ff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/",
+      "mode": "Dark + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 2,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=home&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.27 (foreground color: #ffff00, background color: #00ff00, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=home&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #ffff00, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/about",
+      "mode": "Dark + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 7,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/user-guide\" class=\"resource-link\">\n      User Guide →\n    </a>",
+              "target": [
+                ".resource-link[href$=\"user-guide\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #ffff00, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/features\" class=\"resource-link\">\n      Explore Features →\n    </a>",
+              "target": [
+                ".resource-link[href$=\"features\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #ffff00, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/privacy/\" class=\"resource-link\">Privacy Policy →</a>",
+              "target": [
+                "a[href$=\"privacy/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #ffff00, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/data-ownership/\" class=\"resource-link\">Data Ownership Statement →</a>",
+              "target": [
+                "a[href$=\"data-ownership/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #ffff00, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/privacy-controls/\" class=\"resource-link\">Privacy Controls →</a>",
+              "target": [
+                "a[href$=\"privacy-controls/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #ffff00, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/terms/\" class=\"resource-link\">Terms of Service →</a>",
+              "target": [
+                "a[href$=\"terms/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #ffff00, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/legal/disclaimers/\" class=\"resource-link\">Read all disclaimers →</a>",
+              "target": [
+                "a[href$=\"disclaimers/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #ffff00, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/features",
+      "mode": "Dark + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 2,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=features&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.27 (foreground color: #ffff00, background color: #00ff00, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=features&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #ffff00, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/user-guide",
+      "mode": "Dark + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/blog",
+      "mode": "Dark + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 1,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"#all-curated\" class=\"btn-secondary\">View All Daily Highlights →</a>",
+              "target": [
+                ".btn-secondary"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #ffff00, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/contact",
+      "mode": "Dark + High Contrast",
+      "violations": -1,
+      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://3mpwrapp.pages.dev/contact?no-modal=1\", waiting until \"networkidle\"\u001b[22m\n"
+    },
+    {
+      "url": "/privacy",
+      "mode": "Dark + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 2,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-yes\">👍 Yes</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.27 (foreground color: #ffff00, background color: #00ff00, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback/\" class=\"feedback-btn feedback-no\">👎 No</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #ffff00, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/terms",
+      "mode": "Dark + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/accessibility",
+      "mode": "Dark + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/faq",
+      "mode": "Dark + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 2,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes, very helpful</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.27 (foreground color: #ffff00, background color: #00ff00, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=faq&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 Needs improvement</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #ffff00, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/roadmap",
+      "mode": "Dark + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/beta",
+      "mode": "Dark + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/crisis-resources",
+      "mode": "Dark + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/accessibility-settings",
+      "mode": "Dark + High Contrast",
+      "violations": 0,
+      "issues": []
+    },
+    {
+      "url": "/app-waitlist",
+      "mode": "Dark + High Contrast",
+      "violations": 1,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "count": 2,
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;helpful=yes\" class=\"feedback-btn feedback-yes\">👍 Yes, signing up!</a>",
+              "target": [
+                ".feedback-yes"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.27 (foreground color: #ffff00, background color: #00ff00, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<a href=\"/feedback?page=app-waitlist&amp;helpful=no\" class=\"feedback-btn feedback-no\">👎 Have concerns</a>",
+              "target": [
+                ".feedback-no"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #ffff00, background color: #ff0000, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
