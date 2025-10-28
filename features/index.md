@@ -7,7 +7,7 @@ description: Explore 3mpwrApp's comprehensive 133+ features designed to empower 
 <!-- Status Banner -->
 <div class="status-banner" role="status" aria-live="polite">
   <span class="status-indicator">✅</span> 
-  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+  <strong>App Status:</strong> Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
 </div>
 
 # 3mpwrApp Features

@@ -279,8 +279,8 @@ We're building a safe space to connect, share experiences, and advocate for real
 Ready to join the movement? Here's how you can get started:
 
 <div class="gradient-banner">
-  <h3 style="margin: 0 0 0.5rem;">🚀 Phase 1 Beta Testing Underway!</h3>
-  <p style="margin: 0 0 1rem;">Be among the first to test 3mpwrApp and help shape its future. Limited spots available!</p>
+  <h3 style="margin: 0 0 0.5rem;">🚀 Phase 1 Beta Testing - Now Accepting Signups!</h3>
+  <p style="margin: 0 0 1rem; font-size: 1rem;">Be among the first testers to shape the future of disability advocacy technology.</p>
   <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: var(--card-bg, #ffffff); color: #5568d3; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
   <p style="margin: 1rem 0 0; font-size: 0.9rem;"><a href="{{ '/app-waitlist' | relative_url }}" style="color: var(--text-color, #ffffff); text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="{{ '/beta-guide' | relative_url }}" style="color: var(--text-color, #ffffff); text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
 </div>
@@ -489,7 +489,7 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 <div class="community-stats-box">
   <p style="margin: 0; font-size: 1.1rem;"><strong>💚 Join Our Growing Community</strong></p>
   <p style="margin: 0.5rem 0 0;">
-    Currently in closed beta testing - <a href="{{ '/beta' | relative_url }}">limited spots available</a>
+    Currently launching Phase 1 closed beta - <a href="{{ '/beta' | relative_url }}">sign up to be among the first testers</a>
   </p>
 </div>
 

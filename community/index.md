@@ -11,7 +11,7 @@ permalink: /community/
 
 <div class="status-banner" role="status" aria-live="polite">
   <span class="status-indicator">✅</span> 
-  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+  <strong>App Status:</strong> Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
 </div>
 
 # 🤝 Community

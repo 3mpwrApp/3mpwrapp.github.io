@@ -6,7 +6,7 @@ permalink: /faq/
 ---
 
 <div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> App Status: Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
+  <span class="status-indicator">✅</span> App Status: Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
 </div>
 
 # Frequently Asked Questions (FAQ)

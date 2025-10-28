@@ -8,7 +8,7 @@ description: Empowering Canada's disability and injured worker community with 10
 <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
 
 <div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> App Status: Testing Phase - Limited Spots Available | All systems running smoothly | Brief updates: 2-4am EST
+  <span class="status-indicator">✅</span> App Status: Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
 </div>
 
 # Empowering Canada's Disability & Injured Worker Community
