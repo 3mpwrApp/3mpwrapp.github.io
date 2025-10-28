@@ -57,48 +57,308 @@ permalink: /app-waitlist/
 
 <div class="phase-tracker">
 
-### Phase 1: Closed Beta (October - December 2025)
+<div class="phase-card phase-active">
+  <div class="phase-header">
+    <h3>Phase 1: Closed Beta</h3>
+    <span class="phase-badge active">🔴 ACTIVE NOW</span>
+  </div>
+  
+  <div class="phase-timeline">
+    <strong>📅 Timeline:</strong> October - December 2025
+  </div>
+  
+  <div class="phase-content">
+    <h4>✅ Available Features:</h4>
+    <ul>
+      <li><strong>Evidence Locker</strong> - Secure document storage with military-grade encryption</li>
+      <li><strong>Letter Wizard</strong> - 22 professional templates for appeals & advocacy</li>
+      <li><strong>Wellness Tracking</strong> - Monitor mood, symptoms, medications, energy levels</li>
+      <li><strong>Community Forums</strong> - Province-specific safe spaces to connect</li>
+      <li><strong>Legal Workflow Automation</strong> - Step-by-step guidance for appeals</li>
+      <li><strong>Indigenous Language Support</strong> - 6 languages with cultural protocols</li>
+      <li><strong>Accessibility Toolbar</strong> - Revolutionary features for all disabilities</li>
+    </ul>
+    
+    <div class="phase-stats">
+      <div class="stat-item">
+        <span class="stat-number">133</span>
+        <span class="stat-label">Features Live</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">35</span>
+        <span class="stat-label">In Development</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Free Forever</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="phase-action">
+    <strong>🎫 How to Join:</strong>
+    <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="btn-primary">
+      Sign Up for Phase 1 Beta →
+    </a>
+  </div>
+</div>
 
-<span class="progress-indicator active">ACTIVE NOW</span>
+<div class="phase-card phase-upcoming">
+  <div class="phase-header">
+    <h3>Phase 2: Open Beta</h3>
+    <span class="phase-badge coming-soon">🟡 COMING Q1 2026</span>
+  </div>
+  
+  <div class="phase-timeline">
+    <strong>📅 Timeline:</strong> January - March 2026
+  </div>
+  
+  <div class="phase-content">
+    <h4>🚀 What's New:</h4>
+    <ul>
+      <li><strong>Expanded Features</strong> - 168 total features (35 new additions)</li>
+      <li><strong>Web Version Launch</strong> - Access from any browser</li>
+      <li><strong>Enhanced AI Assistance</strong> - Smart suggestions and automation</li>
+      <li><strong>Advanced Advocacy Tools</strong> - More letter templates and workflows</li>
+      <li><strong>Video Tutorials</strong> - Visual guides for every feature</li>
+      <li><strong>Public Invitations</strong> - Anyone can join without waitlist</li>
+    </ul>
+  </div>
+  
+  <div class="phase-action">
+    <strong>📋 How to Prepare:</strong>
+    <p>Sign up now to get priority access when Phase 2 opens!</p>
+  </div>
+</div>
 
-✅ **Core Features Available:**
-- Evidence Locker (secure document storage)
-- Letter Wizard (22 professional templates)
-- Wellness Tracking (mood, symptoms, medications)
-- Community Forums (province-specific)
-- Legal Workflow Automation
-- Indigenous Language Support (6 languages)
-- Revolutionary Accessibility Toolbar
-
-📊 **Progress:** 133 features live, 35 more in development
-
-🎫 **How to Join:** Sign up via beta testing form below
-
----
-
-### Phase 2: Open Beta (Q1 2026)
-
-<span class="progress-indicator coming-soon">COMING SOON</span>
-
-- Expanded features (168 total)
-- Web version launch
-- Enhanced AI assistance
-- Advanced advocacy tools
-- Video tutorials
-
----
-
-### Phase 3: Public Launch (Q2 2026)
-
-<span class="progress-indicator planned">PLANNED</span>
-
-- Full public release
-- App Store & Google Play
-- All features finalized
-- Community showcase
-- Success stories & testimonials
+<div class="phase-card phase-planned">
+  <div class="phase-header">
+    <h3>Phase 3: Public Launch</h3>
+    <span class="phase-badge planned">🟢 PLANNED Q2 2026</span>
+  </div>
+  
+  <div class="phase-timeline">
+    <strong>📅 Timeline:</strong> April - June 2026
+  </div>
+  
+  <div class="phase-content">
+    <h4>🎉 Launch Features:</h4>
+    <ul>
+      <li><strong>Full Public Release</strong> - Available to everyone across Canada</li>
+      <li><strong>App Store & Google Play</strong> - Official store listings</li>
+      <li><strong>All Features Finalized</strong> - Complete feature set based on beta feedback</li>
+      <li><strong>Community Showcase</strong> - Highlight amazing users and success stories</li>
+      <li><strong>Success Stories</strong> - Real testimonials from real users</li>
+      <li><strong>Media Campaign</strong> - Spread awareness nationwide</li>
+    </ul>
+  </div>
+  
+  <div class="phase-action">
+    <strong>🏆 Beta Tester Benefits:</strong>
+    <p>Early testers get founding member status and special recognition!</p>
+  </div>
+</div>
 
 </div>
+
+<style>
+.phase-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.phase-card {
+  background: var(--bg-elevated, #23262f);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 2px solid var(--border-color, #444);
+  transition: all 0.3s ease;
+}
+
+.phase-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.phase-active {
+  border-color: #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+}
+
+.phase-upcoming {
+  border-color: #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.05) 100%);
+}
+
+.phase-planned {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+}
+
+.phase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.phase-header h3 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: var(--text-primary, #fff);
+}
+
+.phase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+.phase-badge.active {
+  background: #10b981;
+  color: white;
+}
+
+.phase-badge.coming-soon {
+  background: #f59e0b;
+  color: #000;
+}
+
+.phase-badge.planned {
+  background: #3b82f6;
+  color: white;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.phase-timeline {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid currentColor;
+}
+
+.phase-active .phase-timeline { border-left-color: #10b981; }
+.phase-upcoming .phase-timeline { border-left-color: #f59e0b; }
+.phase-planned .phase-timeline { border-left-color: #3b82f6; }
+
+.phase-timeline strong {
+  color: var(--text-primary, #fff);
+}
+
+.phase-content h4 {
+  color: var(--text-primary, #fff);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.phase-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.phase-content li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.phase-content li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+.phase-content li strong {
+  color: var(--brand-primary, #4f8cff);
+}
+
+.phase-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #10b981;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary, #a6adbb);
+}
+
+.phase-action {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.phase-action strong {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--text-primary, #fff);
+  font-size: 1.125rem;
+}
+
+.phase-action p {
+  margin: 1rem 0 0;
+  color: var(--text-secondary, #a6adbb);
+}
+
+.phase-action .btn-primary {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .phase-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .phase-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+</style>
 
 ---
 
