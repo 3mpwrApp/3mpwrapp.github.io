@@ -97,6 +97,11 @@ header .site-brand span {
   color: #ffffff !important;
 }
 
+/* Ensure feedback backgrounds are dark enough for white text */
+.feedback-yes { background-color: #047857 !important; }
+.feedback-no { background-color: #dc2626 !important; }
+.feedback-suggest { background-color: #2563eb !important; }
+
 /* Community stats/info boxes on light theme: use dark text on very light backgrounds */
 body:not([data-theme=dark]) .community-stats-box,
 body:not([data-theme=dark]) .community-stats-box p,
