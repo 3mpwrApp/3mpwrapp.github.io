@@ -162,11 +162,6 @@
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/faq' | relative_url }}" {% if page.url contains '/faq' %}aria-current="page"{% endif %}>
-            {% if page.lang == 'fr' %}FAQ{% else %}FAQ{% endif %}
-          </a>
-        </li>
-        <li>
           <a href="{{ lang_prefix | append: '/accessibility-settings' | relative_url }}" {% if page.url contains '/accessibility-settings' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Paramètres d'accessibilité{% else %}Accessibility Settings{% endif %}
           </a>
