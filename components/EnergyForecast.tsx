@@ -16,6 +16,7 @@ import type { EnergyForecast as EnergyForecastType } from '../services/energyPre
 import type { Palette } from '../theme/usePalette';
 import { useAppPalette } from '../theme/usePalette';
 
+import { GapView } from './GapView';
 import { ThemedText } from './ThemedText';
 
 interface EnergyForecastComponentProps {
@@ -72,20 +73,21 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
   }:00 with ${forecast.bestTime?.level}% energy.`;
 
   return (
-    <View
+    <GapView
       style={styles.container}
+      gap={16}
       accessible
       accessibilityLabel={a11yLabel}
       accessibilityRole="list"
     >
       {/* Header */}
       <View style={styles.header}>
-        <View style={styles.titleRow}>
+        <GapView style={styles.titleRow} gap={8}>
           <Ionicons name="flash" size={20} color={palette.warning} />
           <ThemedText style={styles.title}>
             Energy Forecast
           </ThemedText>
-        </View>
+        </GapView>
         <TrendBadge
           trend={forecast.trend}
           palette={palette}
@@ -94,7 +96,7 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
 
       {/* Current Energy */}
       {currentEnergy !== undefined && (
-        <View style={styles.currentEnergySection}>
+        <GapView style={styles.currentEnergySection} gap={8}>
           <ThemedText style={styles.sectionLabel}>
             Current Energy
           </ThemedText>
@@ -106,7 +108,7 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
           <ThemedText style={styles.energyValue}>
             {currentEnergy}%
           </ThemedText>
-        </View>
+        </GapView>
       )}
 
       {/* Chart */}
@@ -118,11 +120,12 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
         accessibilityLabel="Energy level chart for next 24 hours"
         accessibilityRole="image"
       >
-        <View style={styles.chart}>
+        <GapView style={styles.chart} gap={8}>
           {forecast.predictions.map((prediction, index) => (
-            <View
+            <GapView
               key={index}
               style={styles.chartBar}
+              gap={4}
               accessible
               accessibilityLabel={`${prediction.hourOfDay}:00 - ${prediction.level}% energy`}
             >
@@ -148,13 +151,13 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
               >
                 {prediction.hourOfDay}h
               </ThemedText>
-            </View>
+            </GapView>
           ))}
-        </View>
+        </GapView>
       </ScrollView>
 
       {/* Summary */}
-      <View style={styles.summary}>
+      <GapView style={styles.summary} gap={16}>
         <SummaryItem
           label="Best Time"
           value={`${forecast.bestTime?.hour}:00`}
@@ -169,18 +172,19 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
           icon="trending-down"
           palette={palette}
         />
-      </View>
+      </GapView>
 
       {/* Recommendations */}
       {forecast.recommendations.length > 0 && (
-        <View style={styles.recommendations}>
+        <GapView style={styles.recommendations} gap={8}>
           <ThemedText style={styles.sectionLabel}>
             Recommendations
           </ThemedText>
           {forecast.recommendations.map((rec, index) => (
-            <View
+            <GapView
               key={index}
               style={styles.recommendationItem}
+              gap={8}
               accessible
               accessibilityLabel={`Recommendation ${index + 1}: ${rec}`}
             >
@@ -193,11 +197,11 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
               <ThemedText style={styles.recText}>
                 {rec}
               </ThemedText>
-            </View>
+            </GapView>
           ))}
-        </View>
+        </GapView>
       )}
-    </View>
+    </GapView>
   );
 };
 
@@ -277,22 +281,22 @@ function TrendBadge({ trend, palette }: TrendBadgeProps) {
   const info = getTrendInfo(trend);
 
   return (
-    <View
+    <GapView
       style={{
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 4,
         paddingHorizontal: 8,
         paddingVertical: 4,
         backgroundColor: `${info.color}20`,
         borderRadius: 6,
       }}
+      gap={4}
     >
       <Ionicons name={info.icon} size={14} color={info.color} />
       <ThemedText style={{ color: info.color, fontWeight: '600' }}>
         {info.label}
       </ThemedText>
-    </View>
+    </GapView>
   );
 }
 
@@ -308,7 +312,7 @@ function SummaryItem({ label, value, subValue, icon, palette }: SummaryItemProps
   const iconColor = palette.primary;
   
   return (
-    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+    <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={12}>
       <Ionicons name={icon as any} size={24} color={iconColor} />
       <View style={{ flex: 1 }}>
         <ThemedText style={{ color: palette.textSecondary }}>
@@ -323,7 +327,7 @@ function SummaryItem({ label, value, subValue, icon, palette }: SummaryItemProps
           {subValue}
         </ThemedText>
       </View>
-    </View>
+    </GapView>
   );
 }
 
@@ -335,7 +339,6 @@ const createStyles = (palette: Palette) =>
       borderColor: palette.border,
       borderRadius: 12,
       padding: 16,
-      gap: 16,
     },
     header: {
       flexDirection: 'row',
@@ -345,13 +348,11 @@ const createStyles = (palette: Palette) =>
     titleRow: {
       flexDirection: 'row',
       alignItems: 'center',
-      gap: 8,
     },
     title: {
       color: palette.text,
     },
     currentEnergySection: {
-      gap: 8,
     },
     sectionLabel: {
       color: palette.textSecondary,
@@ -366,31 +367,26 @@ const createStyles = (palette: Palette) =>
     },
     chart: {
       flexDirection: 'row',
-      gap: 8,
     },
     chartBar: {
       alignItems: 'center',
-      gap: 4,
     },
     barLabel: {
       fontWeight: '500',
     },
     summary: {
       flexDirection: 'row',
-      gap: 16,
       paddingVertical: 12,
       borderTopWidth: 1,
       borderTopColor: palette.border,
     },
     recommendations: {
-      gap: 8,
       paddingTop: 8,
       borderTopWidth: 1,
       borderTopColor: palette.border,
     },
     recommendationItem: {
       flexDirection: 'row',
-      gap: 8,
       alignItems: 'flex-start',
     },
     recIcon: {
