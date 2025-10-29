@@ -11,6 +11,7 @@ import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
 
 import A11yPressable from './A11yPressable';
+import { GapView } from './GapView';
 
 type SituationType = 'workplace_injury' | 'disability_benefit' | 'human_rights' | 'appeal';
 
@@ -203,19 +204,19 @@ export default function JurisdictionFormHelper() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
+      <GapView style={styles.header} gap={8}>
         <Ionicons name="document-text-outline" size={24} color={palette.primary} />
         <Text style={styles.title}>
           {t('jurisdiction.forms.helper', 'Form Helper - {{jurisdiction}}', { jurisdiction: jurisdiction.name })}
         </Text>
-      </View>
+      </GapView>
 
       <Text style={styles.description}>
         {t('jurisdiction.forms.helperDesc', 'Select your situation to see which forms you need.')}
       </Text>
 
       {!selectedSituation ? (
-        <View style={styles.situationsContainer}>
+        <GapView style={styles.situationsContainer} gap={12}>
           {situations.map((situation) => (
             <A11yPressable
               key={situation.type}
@@ -224,22 +225,26 @@ export default function JurisdictionFormHelper() {
               accessibilityLabel={`${situation.title}: ${situation.description}`}
               hitSlop={HIT_SLOP_8}
             >
-              <View style={styles.situationIconContainer}>
-                <Ionicons name={situation.icon as any} size={32} color={palette.primary} />
-              </View>
-              <View style={styles.situationContent}>
-                <Text style={styles.situationTitle}>{situation.title}</Text>
-                <Text style={styles.situationDescription}>{situation.description}</Text>
-              </View>
+              <GapView style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }} gap={12}>
+                <View style={styles.situationIconContainer}>
+                  <Ionicons name={situation.icon as any} size={32} color={palette.primary} />
+                </View>
+                <View style={styles.situationContent}>
+                  <Text style={styles.situationTitle}>{situation.title}</Text>
+                  <Text style={styles.situationDescription}>{situation.description}</Text>
+                </View>
+              </GapView>
               <Ionicons name="chevron-forward" size={20} color={palette.muted} />
             </A11yPressable>
           ))}
-        </View>
+        </GapView>
       ) : (
         <View style={styles.resultsContainer}>
-          <A11yPressable
+          <GapView
             onPress={clearSelection}
             style={styles.backButton}
+            gap={8}
+            accessibilityRole="button"
             accessibilityLabel={t('jurisdiction.forms.back', 'Back to situations')}
             hitSlop={HIT_SLOP_8}
           >
@@ -247,7 +252,7 @@ export default function JurisdictionFormHelper() {
             <Text style={styles.backButtonText}>
               {t('jurisdiction.forms.changeSelection', 'Change Selection')}
             </Text>
-          </A11yPressable>
+          </GapView>
 
           <ScrollView style={styles.recommendationsScroll}>
             {recommendations.length > 0 ? (
@@ -269,10 +274,10 @@ export default function JurisdictionFormHelper() {
                   <Text style={styles.formName}>{rec.formName}</Text>
                   <Text style={styles.formPurpose}>{rec.purpose}</Text>
                   {rec.notes && (
-                    <View style={styles.notesBox}>
+                    <GapView style={styles.notesBox} gap={6}>
                       <Ionicons name="information-circle" size={16} color={palette.muted} />
                       <Text style={styles.notesText}>{rec.notes}</Text>
-                    </View>
+                    </GapView>
                   )}
                 </View>
               ))
@@ -283,14 +288,14 @@ export default function JurisdictionFormHelper() {
             )}
           </ScrollView>
 
-          <View style={styles.disclaimerBox}>
+          <GapView style={styles.disclaimerBox} gap={8}>
             <Ionicons name="alert-circle-outline" size={16} color={palette.warning} />
             <Text style={styles.disclaimerText}>
               {t('jurisdiction.forms.disclaimer', 
                 'Always check with the official website for the most current forms. Form numbers and requirements may change.'
               )}
             </Text>
-          </View>
+          </GapView>
         </View>
       )}
     </View>
@@ -309,7 +314,6 @@ function makeStyles(palette: any, factor: number) {
       flexDirection: 'row',
       alignItems: 'center',
       marginBottom: 12,
-      gap: 8,
     },
     title: {
       fontSize: Math.round(18 * factor),
@@ -324,7 +328,6 @@ function makeStyles(palette: any, factor: number) {
       lineHeight: Math.round(20 * factor),
     },
     situationsContainer: {
-      gap: 12,
     },
     situationCard: {
       flexDirection: 'row',
@@ -332,7 +335,6 @@ function makeStyles(palette: any, factor: number) {
       backgroundColor: palette.card,
       borderRadius: 12,
       padding: 16,
-      gap: 12,
       borderWidth: 1,
       borderColor: palette.muted + '20',
     },
@@ -364,7 +366,6 @@ function makeStyles(palette: any, factor: number) {
     backButton: {
       flexDirection: 'row',
       alignItems: 'center',
-      gap: 8,
       marginBottom: 16,
       padding: 8,
     },
@@ -421,7 +422,6 @@ function makeStyles(palette: any, factor: number) {
     },
     notesBox: {
       flexDirection: 'row',
-      gap: 6,
       padding: 10,
       backgroundColor: palette.primary + '08',
       borderRadius: 6,
@@ -434,7 +434,6 @@ function makeStyles(palette: any, factor: number) {
     },
     disclaimerBox: {
       flexDirection: 'row',
-      gap: 8,
       padding: 12,
       backgroundColor: palette.warning + '10',
       borderRadius: 8,
