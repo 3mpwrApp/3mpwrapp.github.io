@@ -506,8 +506,13 @@ img:not([width]):not([height]) {
   /* Reserve consistent space for content */
   min-height: 200px !important;
   
-  /* Prevent children from causing shifts */
-  contain: layout !important;
+  /* REMOVED: contain: layout causes main content to collapse to 0 height!
+     This was causing CLS P50: 0.368 with height: 715px → 0px collapse
+     Instead, use contain: style paint for less aggressive containment */
+  contain: style paint !important;
+  
+  /* Ensure content can grow naturally */
+  height: auto !important;
 }
 
 #main-content > p:first-of-type,
@@ -543,13 +548,16 @@ main#main-content > h1 {
   margin-top: 0 !important;
   margin-bottom: 1.5rem !important;
   
-  /* Prevent from affecting layout */
-  contain: layout !important;
+  /* REMOVED: contain: layout can cause collapse
+     Use less aggressive containment */
+  contain: style !important;
 }
 
 /* ===== CRITICAL: USE CSS CONTAINMENT ===== */
 
-/* Apply layout containment to prevent cross-contamination */
+/* Apply layout containment to prevent cross-contamination
+   WARNING: Only apply to elements with FIXED dimensions
+   DO NOT apply to main content areas that need to grow dynamically */
 header,
 .header-bar,
 .header-controls,
@@ -558,6 +566,8 @@ nav,
   /* Isolate layout changes */
   contain: layout style !important;
 }
+
+/* DO NOT apply contain: layout to #main-content - it will collapse to 0 height! */
 
 /* ===== PRELOAD CRITICAL STYLES ===== */
 

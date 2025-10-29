@@ -20,13 +20,23 @@ Cloudflare Real User Monitoring (RUM) reported **poor CLS scores** for the homep
 
 **Element:** `#main-content>p` (first paragraph)
 
-### Issue #3: Toolbar Toggle Badge ⚠️ NEW
+### Issue #3: Toolbar Toggle Badge ✅ FIXED
 - **CLS P50:** 0.123
 - **CLS P75:** 0.123
 - **CLS P90:** 0.129
 - **CLS P99:** 0.141
 
 **Element:** `#toolbarToggle>span.badge`
+
+### Issue #4: Main Content Collapse 🚨 CRITICAL
+- **CLS P50:** 0.368 (POOR)
+- **CLS P75:** 0.367
+- **CLS P90:** 0.368
+- **CLS P99:** 0.368
+
+**Element:** `#main-content`
+
+**Critical Bug:** Height collapse from 715px → 0px!
 
 **Good CLS:** < 0.1  
 **Needs Improvement:** 0.1 - 0.25  
@@ -48,20 +58,25 @@ The first paragraph in `#main-content` is shifting:
 1. **Height changes:** 77px → 80px (3px increase)
 2. **Vertical position shift:** y: 633 → 659 (26px downward shift)
 
-### Root Cause - Issue #3 (Toolbar Badge)
+### Root Cause - Issue #4 (Main Content Collapse) 🚨
 
-The badge in the accessibility toolbar toggle button `#toolbarToggle>span.badge` is experiencing **massive horizontal layout shifts**:
+**CRITICAL BUG in previous CLS fix!**
 
-1. **Width changes:** 91px → 83px (8px shrink)
-2. **Horizontal position jump:** x: 240 → 1118 (878px shift!) - likely mobile → desktop transition
-3. **Minor vertical shift:** y: 356 → 358 (2px)
+The CSS property `contain: layout` applied to `#main-content` is causing the entire main content area to collapse:
 
-**Causes:**
-- Flexbox layout without fixed badge dimensions
-- Badge width changing based on text content
-- Responsive layout transitions causing horizontal repositioning
-- No `flex-shrink: 0` on badge element
-- Missing explicit width constraints
+1. **Height collapse:** 715px → 246px → **0px** (complete disappearance!)
+2. **Content vanishing:** width: 1172px → 0px
+3. **Page becomes unusable**
+
+**Root cause:**
+- `contain: layout` prevents an element from expanding to fit its dynamic content
+- When applied to a container with variable content height, it collapses
+- This is the OPPOSITE of what we want for main content
+
+**Fix:**
+- Change `contain: layout` to `contain: style paint` for #main-content
+- This provides some isolation without preventing natural growth
+- Only use `contain: layout` on fixed-dimension elements (header, nav, buttons)
 
 ### Why This Happened
 
@@ -213,6 +228,17 @@ header {
 .toolbar-toggle .toggle-arrow { width: 20px !important; flex-shrink: 0 !important; }
 ```
 
+### 14. Main Content Collapse Fix (Issue #4) 🚨 CRITICAL
+```css
+#main-content {
+  /* CHANGED: contain: layout → contain: style paint
+     The layout value was causing complete collapse (715px → 0px)
+     style paint provides isolation without preventing growth */
+  contain: style paint !important;
+  height: auto !important;
+}
+```
+
 ## 📊 Expected Improvements
 
 | Element | Metric | Before | Target | Status |
@@ -223,7 +249,8 @@ header {
 | Main Content | CLS P90 | 0.133 | < 0.1 | ✅ Fix #2 applied |
 | Toolbar Badge | CLS P50 | 0.123 | < 0.1 | ✅ Fix #3 applied |
 | Toolbar Badge | CLS P90 | 0.129 | < 0.1 | ✅ Fix #3 applied |
-| **Overall Page** | **CLS** | **> 0.25** | **< 0.1** | **🎯 All 3 fixes applied** |
+| **Main Collapse** | **CLS P50** | **0.368** | **< 0.1** | **🚨 Fix #4 applied (CRITICAL)** |
+| **Overall Page** | **CLS** | **> 0.25** | **< 0.1** | **🎯 All 4 fixes applied** |
 
 ## 🧪 Testing Required
 
@@ -333,7 +360,18 @@ Track these metrics in Cloudflare RUM:
 
 - **Initial commit (aa55430):** Fixed header-controls CLS (Issue #1)
 - **Second commit (ef99a8a):** Fixed main content paragraph CLS (Issue #2)
-- **Third commit (pending):** Fixed toolbar badge CLS (Issue #3)
+- **Third commit (464144d):** Fixed toolbar badge CLS (Issue #3)
+- **Fourth commit (pending):** 🚨 CRITICAL FIX - Removed `contain: layout` from #main-content (Issue #4)
+
+## ⚠️ Critical Bug Found & Fixed
+
+**Bug:** The `contain: layout` property applied to `#main-content` in Fix #2 caused the entire page to collapse to 0 height!
+
+**Impact:** CLS increased from 0.125 to **0.368** (MUCH WORSE) - page became unusable
+
+**Fix:** Changed `contain: layout` to `contain: style paint` - provides isolation without preventing natural content growth
+
+**Lesson:** CSS containment is powerful but dangerous - only use `contain: layout` on fixed-dimension elements!
 
 ## 🚀 Deployment
 
