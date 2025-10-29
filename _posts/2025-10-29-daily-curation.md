@@ -9,84 +9,136 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-10-29
 
-Curated 16 items from disability, accessibility, and social policy sources.
+Curated 27 items from disability, accessibility, and social policy sources.
 
-## 1. Ford wants U.S. envoy to apologize for ‘unacceptable' comments to Ontario trade rep
-Premier Doug Ford says U.S. Ambassador to Canada Pete Hoekstra should apologize to Ontario's trade representative over a reported expletive-laden tirade.
-📍 [Source](https://globalnews.ca/news/11500129/doug-ford-pete-hoekstra-comments-apology/)
+## 1. 'Devastating' funding crisis in Canadian sport is reaching a breaking point
+<img src='https://i.cbc.ca/ais/e6e23221-4668-403d-965b-bd9fab6d5325,1761575810926/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C287%2C5505%2C3096%29%3BResize%3D%28620%29' alt='Canadian female luger.' width='620' height='349' title='Canadian luger Caitlin Nash will pay $25,000 in team fees for this Olympic season.'/><p>For 20 years, core funding for sport from the federal government has not increased — even though inflation has caused prices to rise by more than 50 per cent. In recent months, some national sport organizations have been informed that their federal funding is set to be slashed.</p>
+📍 [Source](https://www.cbc.ca/sports/olympics/canada-sport-funding-crisis-reaching-breaking-point-9.6955069?cmp=rss)
+**Score:** 23.50
+
+## 2. On Student Absences, Race-Based Data, Private Schools and More
+A Q&A with academic Kelly Gallagher-Mackay on some big questions facing public education in Canada.
+📍 [Source](https://thetyee.ca/News/2025/10/29/Kelly-Gallagher-Mackay-Interview/)
+**Score:** 21.50
+
+## 3. ‘This is a big deal’: Health Canada approves 1st drug to slow Alzheimer's disease
+The treatment, lecanemab, has already been approved in some other countries, including the U.S., the U.K., Japan, Mexico and China.
+📍 [Source](https://globalnews.ca/news/11500367/health-canada-approves-alzheimers-treatment/)
+**Score:** 19.50
+
+## 4. B.C. man charged in Ontario serial sexual assault cold case
+<img src='https://i.cbc.ca/ais/59477ac8-63c0-49d7-843f-2fe3fa71ebd8,1761751154233/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Officer at a podium at OPP news announcement.' width='620' height='349' title='OPP Detective Inspector Michael Moore announces arrest of Jason Timothy Davidson, 52, of Campbell River, B.C., in alleged historial sexual assaults in southwestern Ontairo.'/><p>Ontario Provincial Police say a British Columbia man has been charged in connection with a series of violent sexual assaults that happened nearly three decades ago across southwestern Ontario.</p>
+📍 [Source](https://www.cbc.ca/news/canada/london/b-c-man-charged-in-ontario-serial-sexual-assault-cold-case-9.6958336?cmp=rss)
 **Score:** 18.50
 
-## 2. Ontario, Webequie First Nation sign deal on Ring of Fire road construction
-Webequie First Nation Chief Cornelius Wabasse says the deal will also provide his community with badly needed mental health resources and support.
-📍 [Source](https://globalnews.ca/news/11500323/ontario-webequie-first-nation-deal-to-speed-up-ring-of-fire-road-construction/)
-**Score:** 18.00
+## 5. Ontario government signs agreement with Webequie First Nation for road to Ring of Fire
+<img src='https://i.cbc.ca/ais/8a14c0d3-6915-47a8-8ba1-311977bc3b3f,1761765118848/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C663%2C4800%2C2700%29%3BResize%3D%28620%29' alt='A person is seen speaking at a podium with a sign that says "Protect Ontario."' width='620' height='349' title='Webequie First Nation Chief Cornelius Wabasse speaks after the signing of an agreement with the Ontario government that aims to speed up construction on a road to the mineral-rich Ring of Fire. Wabasse and Premier Doug Ford, right, were among those at the announcement at Queen's Park in Toronto on Wednesday.'/><p>Ontario has signed a community partnership agreement with Webequie First Nation in an effort to speed up development in the Ring of Fire. The huge mineral deposit in the James Bay lowlands has long been a key source for the EV battery industry, but a First Nations alliance has been critical of the government’s approach. Here's what we know about the new agreement and what it means for development.</p>
+📍 [Source](https://www.cbc.ca/news/canada/thunder-bay/webequie-first-nation-agreement-9.6958739?cmp=rss)
+**Score:** 16.00
 
-## 3. U.S. ambassador to Canada goes on expletive-laced tirade at Ontario’s trade representative, witnesses say
-<img src='https://i.cbc.ca/ais/821531be-e51f-4dc7-b65a-812b790b3ad1,1761722812024/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C322%2C6167%2C3468%29%3BResize%3D%28620%29' alt='A man in a suit wearing blue glasses sits on a chair with a U.S. flag behind him.' width='620' height='349' title='The U.S. Ambassador to Canada Pete Hoekstra speaks during an event at the Halifax Chamber of Commerce in Halifax on Thursday, Sept. 18. '/><p></p>
-📍 [Source](https://www.cbc.ca/news/politics/ambassador-hoekstra-rant-9.6957854?cmp=rss)
-**Score:** 14.00
+## 6. Sask. NDP calls for public inquiry into wildfire response as public safety minister faces calls to resign
+<img src='https://i.cbc.ca/ais/91efdd5c-1e65-4c9b-9bc9-6db41c8c78a7,1761754947205/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C453%2C3688%2C2074%29%3BResize%3D%28620%29' alt='A woman in a pink shirt and black blazer speaks into a microphone. A woman in a black suit stands next to her. In the background a trio of people look on. ' width='620' height='349' title='Tasha Young, a resident of Denare Beach, Saskatchewan, speaks to media during a news conference at the Saskatchewan legislature on Oct. 28, 2025. Beside Young is Saskatchewan NDP Leader Carla Beck. Other residents of Denare Beach look on.'/><p>The Opposition NDP's effort to establish an independent public inquiry into the government's response to a wildfire that ravaged a northern Saskatchewan village this summer has been blocked. </p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/wildfire-denare-beach-public-inquiry-9.6958580?cmp=rss)
+**Score:** 13.30
 
-## 4. This mom’s son was asking Tesla’s Grok AI chatbot about soccer. It told him to send nude pics, she says
-<img src='https://i.cbc.ca/ais/6d0ba67a-3ef6-49ec-afda-19863dc236e0,1761673792174/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C223%2C4240%2C2385%29%3BResize%3D%28620%29' alt='Grok sign-in screen inside a Tesla on a display monitor' width='620' height='349' title='Grok – the generative AI chatbot created by Elon Musk's xAI – is a new feature that was automatically installed in some Tesla vehicles in Canada earlier this month.'/><p>A Toronto woman is sounding the alarm about Grok, Tesla's generative AI chatbot that was recently installed in Tesla vehicles in Canada. Farah Nasser says Grok asked her 12-year-old son to send it nude photos during an innocent conversation about soccer.  Tesla and xAI didn't respond to CBC's questions about the interaction, sending what appeared to be an auto-generated response stating, "Legacy media lies."</p>
-📍 [Source](https://www.cbc.ca/news/investigates/tesla-grok-mom-9.6956930?cmp=rss)
-**Score:** 14.00
+## 7. Quebec's pain, Ontario and N.B.'s gain? Doctors look to leave province over new forced deal
+<img src='https://i.cbc.ca/ais/f261854d-bea8-403a-9350-6d1559037d57,1730910679252/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1179%2C663%29%3BResize%3D%28620%29' alt='A woman with blonde hair in a white lab coat with a stethoscope around her neck. ' width='620' height='349' title='The Newfoundland and Labrador Medical Association says a survey it commissioned shows 163,000 people are without a family doctor. '/><p>The fallout continues after the Quebec government invoked closure over the weekend to force a new remuneration system on doctors, with many physicians already inquiring about opportunities in other provinces.</p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/doctors-special-law-exodus-quebec-new-brunswick-9.6958356?cmp=rss)
+**Score:** 11.80
 
-## 5. The Bank of Canada just cut interest rates to 2.25%
-The Bank of Canada delivered another rate cut Wednesday, lowering its overnight benchmark by 25 basis points to 2.25 per cent and marking its second cut since March.
-📍 [Source](https://globalnews.ca/news/11500081/bank-of-canada-interest-rates-october-2025/)
+## 8. N.S. man charged in sex assault dating back almost 22 years: RCMP
+RCMP said a Nova Scotia man has been arrested and charged for a sexual assault that police allege took place almost 22 years ago when the victim was a child.
+📍 [Source](https://globalnews.ca/news/11500798/rcmp-charge-nova-scotia-man-historic-sex-assault/)
+**Score:** 8.70
+
+## 9. Canada Post Minister Says He’s Ready to Allow Big Job Cuts
+Experts say at least 10,000 jobs could be lost to changes at the Crown corporation.
+📍 [Source](https://thetyee.ca/News/2025/10/29/Canada-Post-Minister-Ready-Allow-Big-Job-Cuts/)
 **Score:** 9.50
 
-## 6. Carney had ‘very good’ conversation with Trump at South Korea dinner
-It marks the first time Prime Minister Mark Carney has been in the same room as Donald Trump since the U.S. president cut off trade talks with Canada last week.
-📍 [Source](https://globalnews.ca/news/11500055/carney-trump-south-korean-president-dinner/)
+## 10. Bank of Canada has lowered its key interest rate. What does it mean for you?
+<img src='https://i.cbc.ca/ais/d59c1050-d86a-4a64-b6cd-e943109d115d,1761691157994/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C8248%2C4639%29%3BResize%3D%28620%29' alt='Exterior of the Bank of Canada in Ottawa.' width='620' height='349' title='Exterior of the Bank of Canada in Ottawa.'/><p></p>
+📍 [Source](https://www.cbc.ca/news/business/interest-rates-explainer-bank-of-canada-9.6955129?cmp=rss)
 **Score:** 9.50
 
-## 7. Regina library program fosters healing, community building through song and dance
-<img src='https://i.cbc.ca/ais/0e5db3c6-d893-4b2a-a433-281e92a8ff0b,1761321115213/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C961%2C4284%2C2409%29%3BResize%3D%28620%29' alt='A girl and her father standing together for a photo' width='620' height='349' title='For over a year, David Brass and his daughter, Meilani, have found a welcoming community through their participation in the Culture Connect program.'/><p>The Culture Connect: Indigenous Teachings program at Regina Public Library's downtown branch is open to everyone to learn more about dance and find a sense of belonging.</p>
-📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/rpl-culture-connect-library-regina-indigenous-9.6951107?cmp=rss)
-**Score:** 12.00
-
-## 8. Ottawa woman injured in Lisbon funicular crash shocked by investigation findings
-<img src='https://i.cbc.ca/ais/d509ac60-02a7-41a4-8104-9bade5cb2751,1761685505918/full/max/0/default.jpg?im=Crop%2Crect%3D%28386%2C150%2C1213%2C682%29%3BResize%3D%28620%29' alt='A man and a woman pose for a photo in front of a body of water.' width='620' height='349' title='Hind Iguernane and her husband, Aziz Benharref, were among the passengers on one of the trams that derailed after its cable snapped, leaving their vehicle to descend rapidly, crashing into a building. Sixteen people died, including Benharref, with many others injured.  '/><p>An Ottawa resident and survivor of a deadly funicular crash in Lisbon last month says she’s "shocked" by the findings of a recent report on the incident, and is calling for greater accountability from Portuguese officials.  </p>
-📍 [Source](https://www.cbc.ca/news/canada/ottawa/ottawa-woman-injured-in-lisbon-funicular-crash-shocked-by-investigation-findings-9.6957076?cmp=rss)
+## 11. Ontario premier urges U.S. ambassador to ‘bury the hatchet,’ apologize after profane tirade
+<img src='https://i.cbc.ca/ais/0672eeee-57d3-421e-b751-beb290f8d42b,1761751378469/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C62%2C4800%2C2700%29%3BResize%3D%28620%29' alt='Man stands at podium with microphone in front of a few people and Canadian flags behind' width='620' height='349' title='Ontario Premier Doug Ford speaks after signing an agreement with the Webequie First Nation at Queen's Park in Toronto on Wednesday, October 29, 2025. A northern Ontario First Nation has signed a partnership deal with the province designed to speed up construction of a road to the mineral-rich Ring of Fire. THE CANADIAN PRESS/Nathan Denette'/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/doug-ford-us-ambassador-apology-ad-9.6958531?cmp=rss)
 **Score:** 9.00
 
-## 9. Measles outbreak expected to continue in northeast B.C., health officials say
-<img src='https://i.cbc.ca/ais/b36712e5-d158-481b-8d85-aca603a3eaa0,1760798743877/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C512%2C288%29%3BResize%3D%28620%29' alt='A child lies on its stomach, with its back showing the rash that is characteristic of a measles infection. ' width='620' height='349' title='A child's back shows the rash that is characteristic of a measles infection. '/><p>Despite a surge in summer vaccinations, health officials say the measles outbreak in northeastern British Columbia shows no sign of slowing down.</p>
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/fort-st-john-measles-outbreak-transmission-still-high-9.6957484?cmp=rss)
+## 12. Why some farmers are turning old grain bins into guest houses
+<img src='https://i.cbc.ca/ais/af7554b5-1afc-4c45-a859-16f0df82fe16,1761601938172/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A woman stands at the entrance of a converted grain bin with a sign reading 'The Cattleman.'' width='620' height='349' title='Breanna Morrison bought five retired grain bins at an auction and transformed them into guest houses at her ranch near Pincher Creek in southwest Alberta.'/><p>Some Alberta ranchers hope that branching into tourism will help shore up their family farms to last another generation — though the accommodations might seem a little quirky.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/bakx-grain-bins-silos-twin-butte-saddle-hill-ranch-agritourism-9.6956915?cmp=rss)
+**Score:** 7.50
+
+## 13. Manitoba Government Accepts All Recommendations From Independent Review of The Planning Amendment Act and The City of Winnipeg Charter Amendment Act (Bill 37)
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71300)
+**Score:** 7.50
+
+## 14. Manitoba Government Adds 800 Teachers in Two Years
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71299)
+**Score:** 7.50
+
+## 15. More than 500 people pack Richmond hotel to learn about Cowichan Nation land ruling
+In August, British Columbia's Supreme Court granted the Quw’utsun Nation (Cowichan Nation) Aboriginal title over 5.7 km of land in Richmond.
+📍 [Source](https://globalnews.ca/news/11500779/500-people-pack-richmond-hotel-cowichan-nation-land-ruling/)
+**Score:** 5.00
+
+## 16. There's still time to win a Canadian getaway—and support B.C.’s hospitality workers
+Two days left to support BC hospitality workers.
+📍 [Source](https://www.straight.com/news/theres-still-time-to-win-a-canadian-getaway-and-support-bcs-hospitality-workers)
+**Score:** 7.50
+
+## 17. Danielle Smith Brings Down the Hammer on Alberta’s Teachers
+The government rams through a back-to-work law and removes their Charter rights.
+📍 [Source](https://thetyee.ca/Opinion/2025/10/28/Smith-Brings-Down-Hammer-Alberta-Teachers/)
+**Score:** 7.50
+
+## 18. Alberta's plan to add ‘Strong and Free' on licence plates hits trademark speed bump
+The change of slogan on Alberta's licence plates from 'Wild Rose Country' to 'Strong and Free' could possibly violate the trademark a New Brunswick business has held since 2022.
+📍 [Source](https://globalnews.ca/news/11501112/alberta-icence-plates-strong-and-free-trademark/)
 **Score:** 5.50
 
-## 10. Montreal doctor convicted of sex assault shielded assets from victims before suicide, lawsuits allege
-<img src='https://i.cbc.ca/ais/f280cff1-8077-4fa9-8ba3-032158514e2d,1761584580198/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C6000%2C3375%29%3BResize%3D%28620%29' alt='building' width='620' height='349' title='Montreal Courthouse building sign, exterior view'/><p>A Montreal doctor convicted of sexual assault — and accused of sexually assaulting another seven women — attempted to shield his assets from his victims before dying by suicide, according to two lawsuits.</p>
-📍 [Source](https://www.cbc.ca/news/canada/montreal/montreal-doctor-lawsuits-stephan-probst-9.6955161?cmp=rss)
-**Score:** 4.00
+## 19. Ford to Quebec doctors amid compensation dispute: ‘Call me'
+Ontario Premier Doug Ford is telling Quebec doctors to give him a call as some consider moving to other provinces over a compensation dispute.
+📍 [Source](https://globalnews.ca/news/11500428/ontario-doug-ford-quebec-doctors-compensation-dispute/)
+**Score:** 5.80
 
-## 11. $40M Lotto Max jackpot ticket sold in Ontario for 6th time this year
-Another lucky person who bought their ticket in Ontario is the winner of Tuesday night's $40-million Lotto Max jackpot.
-📍 [Source](https://globalnews.ca/news/11500061/lotto-max-jackpot-ticket-sold-ontario-october-28/)
+## 20. Billion-dollar government deals with Stellantis, NextStar for EV battery plant revealed
+<img src='https://i.cbc.ca/ais/aa744d8c-9a5b-43d9-a8bd-53af121719e2,1760742628604/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Large building as seen from a drone.' width='620' height='349' title='Provincial inspectors have visited the site of the plant work site, which is shown on July 17, dozens of times since construction broke ground, the documents show.'/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/windsor/stellantis-nextstar-contracts-federal-government-battery-ev-pdf-9.6956627?cmp=rss)
+**Score:** 6.00
+
+## 21. $510M in lawyers' fees in treaty case unreasonable, judge says
+The Ontario judge ruled the $510 million in lawyer fees for the treaty case was unreasonable and ordered it scaled back to $23 million.
+📍 [Source](https://globalnews.ca/news/11501057/ontario-first-nations-treaty-case-lawyer-fees/)
 **Score:** 4.50
 
-## 12. Rents easing ‘rapidly' near universities due to foreign student cap: report
-Cities with high concentrations of students have seen the steepest declines in rents since Ottawa placed a cap on international students, a report by Rentals.ca showed on Tuesday.
-📍 [Source](https://globalnews.ca/news/11498829/international-student-cap-canada-rent-prices/)
+## 22. Danielle Smith uses notwithstanding clause to end Alberta teachers' strike
+📍 [Source](https://rabble.ca/labour/danielle-smith-uses-notwithstanding-clause-to-end-alberta-teachers-strike/)
 **Score:** 4.50
 
-## 13. The economic fallout of the Alberta teachers’ strike and what comes next
-<img src='https://i.cbc.ca/ais/d2c435f2-aed7-4425-b06f-91f16658ff8f,1761695446942/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C2%2C1110%2C624%29%3BResize%3D%28620%29' alt='The front of a one-story business.' width='620' height='349' title='Uncle Fatih Pizza in Calgary has felt the impact of the Alberta teachers' strike.'/><p>Business groups in Alberta say the teachers’ strike has hit the province’s economy — and while there’s optimism about students heading back to school Wednesday, the way the dispute was resolved means more uncertainty about what’s to come. </p>
-📍 [Source](https://www.cbc.ca/news/canada/calgary/business-impact-alberta-teachers-strike-9.6957229?cmp=rss)
+## 23. Why hundreds of GM employees picked today to protest outside Ontario auto plants
+📍 [Source](https://www.cbc.ca/news/canada/london/why-hundreds-of-general-motors-employees-picked-today-to-protest-outside-ontario-auto-plants-9.6958220?cmp=rss)
 **Score:** 4.50
 
-## 14. Large class sizes remain unresolved in Alberta — and that's just where the issue begins
-📍 [Source](https://www.cbc.ca/news/canada/education-class-size-9.6956192?cmp=rss)
-**Score:** 4.50
+## 24. Heart of the City Festival showcases the Downtown Eastside's commitment to building community
+"These are real people, with real feelings.”
+📍 [Source](https://www.straight.com/arts/heart-of-city-festival-showcases-downtown-eastsides-commitment-to-building-community)
+**Score:** 3.00
 
-## 15. As drought persists, some rural Nova Scotians turn to drilled wells
-<img src='https://i.cbc.ca/ais/8f57ec6e-4bd9-48be-86f6-ff56c402297b,1761661515910/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1%2C4000%2C2250%29%3BResize%3D%28620%29' alt='A woman sitting near a well' width='620' height='349' title='Nancy Grove’s 200-year-old well dried out, leaving her with no water in their home in Baxters Harbour. '/><p>When the dug well on their property ran dry for the first time in its 200 years, Nancy Grove and Peter Gale had to weigh two options: wait out a drought with no end in sight or spend around $20,000 on a drilled well.</p>
-📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/drought-drilled-wells-rural-nova-scotians-9.6956541?cmp=rss)
+## 25. Tony Wakeham sworn in as N.L’.s 16th premier
+<img src='https://i.cbc.ca/ais/8e27a47a-b85c-4d64-89ad-69835ae0b04a,1761748421248/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Man at a desk signing paper, a woman is seated next to him.' width='620' height='349' title='Tony Wakeham, seated next to Lt. Gov Joan Marie Aylward, has been sworn in as N.L.'s newest premier.'/><p>Premier Tony Wakeham and his cabinet were sworn in on Wednesday morning at Government House in St. John's.</p>
+📍 [Source](https://www.cbc.ca/news/canada/newfoundland-labrador/nl-swearing-in-9.6958014?cmp=rss)
+**Score:** 3.00
+
+## 26. ‘This is not a joke': New Brunswick city reschedules Halloween, draws mixed reaction
+A New Brunswick city has made the decision to postpone trick-or-treating this year because of a wet and windy forecast, but not everyone is in agreement.
+📍 [Source](https://globalnews.ca/news/11500780/new-brunswick-halloween-postponed-weather/)
 **Score:** 1.00
 
-## 16. A year after defeat, former premier Higgs haunt debate over future of N.B. PC Party
-<img src='https://i.cbc.ca/ais/e7b01584-b8e0-44c2-b3a0-dc849955b221,1761681136136/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A man speaks with others' width='620' height='349' title='Former Premier Blaine Higgs attended the Progressive Conservative party’s annual general meeting and weighed in on possible leadership candidates, on the 2023 caucus rebellion against him and even on whether to rename the party.'/><p>In New Brunswick politics, most defeated premiers exit quietly, staying out of debates within their parties about what future direction to take or who should be the next leader.</p>
-📍 [Source](https://www.cbc.ca/news/canada/new-brunswick/progressive-conservatives-blaine-higgs-move-ob-9.6957145?cmp=rss)
+## 27. New N.L. premier promises to launch review of Hydro-Québec deal within weeks
+Newfoundland and Labrador Premier Tony Wakeham says a review of the proposed Hydro-Québec energy deal will begin within weeks to ensure it’s the best deal for the province.
+📍 [Source](https://globalnews.ca/news/11500710/nl-new-premier/)
 **Score:** 1.00
 
