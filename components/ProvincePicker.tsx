@@ -5,6 +5,7 @@ import { useAppPalette } from '../theme/usePalette';
 import type { ProvinceCode } from '../types/models';
 
 import A11yPressable from './A11yPressable';
+import { GapView } from './GapView';
 
 const CODES: ProvinceCode[] = [
   'AB','BC','MB','NB','NL','NS','NT','NU','ON','PE','QC','SK','YT'
@@ -16,7 +17,7 @@ export function ProvincePicker({ value, onChange }: { value?: string | null; onC
   return (
     <View style={s.wrap} accessibilityLabel="Province picker">
       <Text style={s.label}>Province</Text>
-      <View style={s.row}>
+      <GapView style={s.row} gap={6}>
         <A11yPressable
           hitSlop={HIT_SLOP_8}
           accessibilityRole="button"
@@ -38,7 +39,7 @@ export function ProvincePicker({ value, onChange }: { value?: string | null; onC
             <Text style={[s.text, value === code && s.textActive]}>{code}</Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -47,7 +48,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     wrap: { marginBottom: 8 },
     label: { color: palette.text, opacity: 0.8, marginBottom: 4 },
-    row: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+    row: { flexDirection: 'row', flexWrap: 'wrap' },
     chip: { paddingVertical: 6, paddingHorizontal: 10, borderRadius: 999, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface },
     active: { backgroundColor: palette.primary, borderColor: palette.primary },
     text: { color: palette.text, fontWeight: '700' },

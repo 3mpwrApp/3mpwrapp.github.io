@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useThemeColor } from '../../hooks/useThemeColor';
 import { useTranslation } from '../../i18n';
 import { useProfileLocal } from '../../store/profileLocal';
+import { GapView } from '../GapView';
 
 import type { BadgeType } from './UserBadge';
 import UserBadge from './UserBadge';
@@ -44,15 +45,17 @@ export default function UserBadgesDisplay() {
           'Scroll through your badges'
         )}
       >
-        {badgeEntries.map(([type, data]) => (
-          <UserBadge
-            key={type}
-            type={type}
-            data={data}
-            size="medium"
-            showLabel
-          />
-        ))}
+        <GapView gap={12} style={{ flexDirection: 'row', paddingVertical: 4 }}>
+          {badgeEntries.map(([type, data]) => (
+            <UserBadge
+              key={type}
+              type={type}
+              data={data}
+              size="medium"
+              showLabel
+            />
+          ))}
+        </GapView>
       </ScrollView>
     </View>
   );
@@ -72,7 +75,6 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   scrollContent: {
-    gap: 12,
     paddingVertical: 4,
   },
 });

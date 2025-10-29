@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import { useThemeColor } from '../hooks/useThemeColor';
 
 import A11yPressable from './A11yPressable';
+import { GapView } from './GapView';
 
 /**
  * Guest Mode Badge Component
@@ -72,7 +73,7 @@ export default function GuestModeBadge() {
         </View>
       </View>
 
-      <View style={styles.actions}>
+      <GapView style={styles.actions} gap={8}>
         <A11yPressable
           onPress={handleSignIn}
           accessibilityRole="button"
@@ -92,7 +93,7 @@ export default function GuestModeBadge() {
         >
           <Text style={styles.buttonText}>Create Account</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -125,7 +126,6 @@ const styles = StyleSheet.create({
   },
   actions: {
     flexDirection: 'row',
-    gap: 8,
   },
   button: {
     flex: 1,
