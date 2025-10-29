@@ -1481,15 +1481,17 @@ a:not(.btn):not(.button):not(.nav-link):not(.feedback-btn):not(.btn-primary):not
   color: var(--light-link, #0056b3) !important;
 }
 
-[data-theme="dark"] a:not(.btn):not(.button):not(.nav-link):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone):not(.service-card a):not(.service-detail a) {
-  color: var(--dark-link, #66b2ff) !important;
+[data-theme="dark"] a:not(.btn):not(.button):not(.nav-link):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone) {
+  color: #66b2ff !important; /* Light blue for dark backgrounds */
 }
 
 /* CRITICAL OVERRIDE: Service card links MUST use dark blue on white backgrounds */
-[data-theme="dark"] .service-card a,
+/* This MUST come after the general dark link rule above */
+[data-theme="dark"] .service-card a:not(.service-phone),
 [data-theme="dark"] .service-card .service-detail a,
 [data-theme="dark"] .service-detail a {
-  color: #0056b3 !important;
+  color: #0056b3 !important; /* Dark blue for white containers - 4.6:1 contrast */
+  font-weight: 600 !important;
 }
 
 [data-contrast="high"] a:not(.btn):not(.button):not(.nav-link):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone) {
