@@ -1,22 +1,22 @@
 # Theme Accessibility Test Report
 
-**Date**: 2025-10-28, 8:33:20 p.m.
+**Date**: 2025-10-28, 8:53:07 p.m.
 **Base URL**: https://3mpwrapp.pages.dev
 **Total Tests**: 60
-**Passed**: 54
-**Failed**: 2
-**Total Violations**: 2
+**Passed**: 55
+**Failed**: 1
+**Total Violations**: 1
 
 ## ⚠️ Issues Found
 
-2 test(s) failed with 2 total violation(s).
+1 test(s) failed with 1 total violation(s).
 
 ## Results by Mode
 
 | Mode | Passed | Failed | Violations |
 |------|--------|--------|------------|
 | ✅ Light Mode | 14 | 0 | 0 |
-| ❌ Dark Mode | 12 | 2 | 2 |
+| ❌ Dark Mode | 13 | 1 | 1 |
 | ✅ Light + High Contrast | 14 | 0 | 0 |
 | ✅ Dark + High Contrast | 14 | 0 | 0 |
 
@@ -34,27 +34,13 @@
 | /terms | ✅ | ✅ | ✅ | ✅ |
 | /accessibility | ✅ | ✅ | ✅ | ✅ |
 | /faq | ✅ | ✅ | ✅ | ✅ |
-| /roadmap | ✅ | ❌ | ✅ | ✅ |
+| /roadmap | ✅ | ✅ | ✅ | ✅ |
 | /beta | ✅ | ✅ | ✅ | ✅ |
 | /crisis-resources | ✅ | ❌ | ✅ | ✅ |
 | /accessibility-settings | ✅ | ✅ | ✅ | ✅ |
 | /app-waitlist | ✅ | ✅ | ✅ | ✅ |
 
 ## Detailed Violations
-
-### /roadmap - Dark Mode
-
-#### color-contrast (serious)
-- **Description**: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
-- **Affected elements**: 1
-
-**Element 1**:
-```html
-<div class="timeline-badge upcoming-badge">📅 Coming Soon</div>
-```
-- Target: `[".upcoming-badge"]`
-- Issue: Fix any of the following:
-  Element has insufficient color contrast of 3.68 (foreground color: #ffffff, background color: #0891b2, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1
 
 ### /crisis-resources - Dark Mode
 

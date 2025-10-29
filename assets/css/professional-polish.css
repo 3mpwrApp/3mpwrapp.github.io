@@ -1468,9 +1468,11 @@ small {
   text-decoration: underline !important;
 }
 
-/* Extra specificity for service-detail links */
-[data-theme="dark"] .service-detail a {
+/* Extra specificity for service-detail links (inside white cards) */
+[data-theme="dark"] .service-detail a,
+[data-theme="dark"] .service-card .service-detail a {
   color: #0056b3 !important;
+  font-weight: 600 !important;
 }
 
 /* ===== GENERAL LINK IMPROVEMENTS ===== */
@@ -1479,8 +1481,15 @@ a:not(.btn):not(.button):not(.nav-link):not(.feedback-btn):not(.btn-primary):not
   color: var(--light-link, #0056b3) !important;
 }
 
-[data-theme="dark"] a:not(.btn):not(.button):not(.nav-link):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone) {
+[data-theme="dark"] a:not(.btn):not(.button):not(.nav-link):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone):not(.service-card a):not(.service-detail a) {
   color: var(--dark-link, #66b2ff) !important;
+}
+
+/* CRITICAL OVERRIDE: Service card links MUST use dark blue on white backgrounds */
+[data-theme="dark"] .service-card a,
+[data-theme="dark"] .service-card .service-detail a,
+[data-theme="dark"] .service-detail a {
+  color: #0056b3 !important;
 }
 
 [data-contrast="high"] a:not(.btn):not(.button):not(.nav-link):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone) {

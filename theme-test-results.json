@@ -1,9 +1,9 @@
 {
   "totalTests": 60,
-  "passedTests": 54,
-  "failedTests": 2,
-  "totalViolations": 2,
-  "timestamp": "2025-10-29T00:33:20.585Z",
+  "passedTests": 55,
+  "failedTests": 1,
+  "totalViolations": 1,
+  "timestamp": "2025-10-29T00:53:07.213Z",
   "baseUrl": "https://3mpwrapp.pages.dev",
   "results": [
     {
@@ -159,24 +159,8 @@
     {
       "url": "/roadmap",
       "mode": "Dark Mode",
-      "violations": 1,
-      "issues": [
-        {
-          "id": "color-contrast",
-          "impact": "serious",
-          "count": 1,
-          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-          "nodes": [
-            {
-              "html": "<div class=\"timeline-badge upcoming-badge\">📅 Coming Soon</div>",
-              "target": [
-                ".upcoming-badge"
-              ],
-              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #ffffff, background color: #0891b2, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1"
-            }
-          ]
-        }
-      ]
+      "violations": 0,
+      "issues": []
     },
     {
       "url": "/beta",
