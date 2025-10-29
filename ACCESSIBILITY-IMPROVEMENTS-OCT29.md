@@ -191,7 +191,7 @@ Created comprehensive Node.js test script (`test-accessibility.js`) covering:
 ### Level AA
 - ✅ 1.4.3 Contrast (Minimum) - Previously completed
 - ✅ 2.4.7 Focus Visible
-- ✅ 2.4.11 Focus Not Obscured (Minimum) - WCAG 2.2
+- ✅ 1.4.11 Non-text Contrast - WCAG 2.1
 
 ## Accessibility Score Projection
 
