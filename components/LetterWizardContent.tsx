@@ -31,10 +31,11 @@ import { buildCombinedEvidenceSummary, buildSymptomSummary } from "../services/i
 import { useProfileLocal } from "../store/profileLocal";
 import { useAppPalette } from "../theme/usePalette";
 
-import DisclaimerBanner from "./DisclaimerBanner";
 import A11yPressable from "./A11yPressable";
 import { ComplexityBadge, SimplifiedView } from "./CognitiveAccessibility";
+import DisclaimerBanner from "./DisclaimerBanner";
 import { DyslexiaText } from './DyslexiaText';
+import { GapView } from './GapView';
 import LetterActionsBar from "./letters/LetterActionsBar";
 
 const { trackEvent } = require("../services/analyticsClient");
@@ -923,7 +924,7 @@ export default function LetterWizardContent() {
       <Text style={s.stepDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('letterWizard.step1Desc', 'Select the situation that best matches your needs.')}
       </Text>
-      <View style={s.optionsGrid}>
+      <GapView style={s.optionsGrid} gap={12}>
         {SITUATIONS.map(situation => (
           <A11yPressable
             key={situation.id}
@@ -943,7 +944,7 @@ export default function LetterWizardContent() {
             </Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
     </View>
   );
 
@@ -1034,7 +1035,7 @@ export default function LetterWizardContent() {
           </View>
         ))}
         
-        <View style={s.formActions}>
+        <GapView style={s.formActions} gap={12}>
           <A11yPressable
             onPress={() => setStep('letter_type')}
             hitSlop={HIT_SLOP_8}
@@ -1070,7 +1071,7 @@ export default function LetterWizardContent() {
               {t('letterWizard.preview', 'Preview')} →
             </Text>
           </A11yPressable>
-        </View>
+        </GapView>
       </View>
     );
   };
@@ -1114,7 +1115,7 @@ export default function LetterWizardContent() {
           </Text>
         </View>
         
-        <View style={s.formActions}>
+        <GapView style={s.formActions} gap={12}>
           <A11yPressable
             onPress={() => setStep('form')}
             hitSlop={HIT_SLOP_8}
@@ -1138,7 +1139,7 @@ export default function LetterWizardContent() {
               {t('letterWizard.startOver', 'Start Over')}
             </Text>
           </A11yPressable>
-        </View>
+        </GapView>
       </View>
     );
   };
@@ -1210,7 +1211,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       marginBottom: 16,
     },
     optionsGrid: {
-      gap: 12,
       marginBottom: 16,
     },
     optionCard: {
@@ -1260,7 +1260,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     formActions: {
       flexDirection: 'row',
       flexWrap: 'wrap',
-      gap: 12,
       marginTop: 20,
     },
     primaryBtn: {
