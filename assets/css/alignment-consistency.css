@@ -1,0 +1,468 @@
+/**
+ * ALIGNMENT CONSISTENCY FIX
+ * October 29, 2025
+ * 
+ * Purpose: Ensure consistent, professional alignment across all pages
+ * Strategy: Left-align content for readability, center only special UI elements
+ * Priority: Clean, organized, professional appearance
+ */
+
+/* ===== CORE CONTENT ALIGNMENT ===== */
+/* Default: All body content should be left-aligned for readability */
+#main-content,
+main,
+article,
+section {
+  text-align: left !important;
+}
+
+/* All text elements default to left alignment */
+p,
+li,
+dd,
+dt,
+blockquote,
+pre,
+code {
+  text-align: left !important;
+}
+
+/* Headings: Professional left alignment */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: left !important;
+}
+
+/* Lists: Always left-aligned for readability */
+ul,
+ol,
+dl {
+  text-align: left !important;
+  margin-left: 1.5rem;
+  padding-left: 0;
+}
+
+/* ===== CENTERED EXCEPTIONS (UI Elements Only) ===== */
+/* These are intentionally centered for UI/design purposes */
+
+/* Status banners: Centered for visibility */
+.status-banner,
+.alert-banner,
+.notification-banner {
+  text-align: center !important;
+}
+
+/* Page headers with hero content */
+.page-hero,
+.hero-section,
+.intro-section {
+  text-align: center !important;
+}
+
+/* Call-to-action sections */
+.cta-section,
+.cta-banner,
+.button-group,
+.action-buttons {
+  text-align: center !important;
+}
+
+/* Navigation elements */
+nav,
+.nav-menu,
+.breadcrumb,
+header nav {
+  text-align: center !important;
+}
+
+/* Footer elements */
+footer,
+.footer-content,
+.footer-bottom {
+  text-align: center !important;
+}
+
+/* Modal/dialog content */
+.modal-header,
+.dialog-header {
+  text-align: center !important;
+}
+
+/* Cards that are designed to be centered */
+.card-header {
+  text-align: center !important;
+}
+
+/* ===== SPECIFIC COMPONENT FIXES ===== */
+
+/* Feature boxes: Headers centered, content left */
+.feature-box h2,
+.feature-box h3,
+.feature-box h4 {
+  text-align: center !important;
+}
+
+.feature-box p,
+.feature-box ul,
+.feature-box ol {
+  text-align: left !important;
+}
+
+/* TLDR/Summary boxes: Content left-aligned */
+.tldr-box,
+.summary-box,
+details {
+  text-align: left !important;
+}
+
+.tldr-box summary,
+.summary-box summary {
+  text-align: left !important;
+}
+
+/* Funding/pricing cards: Centered headers, left content */
+.funding-card,
+.pricing-card,
+.plan-card {
+  text-align: center !important;
+}
+
+.funding-card p,
+.funding-card ul,
+.pricing-card p,
+.pricing-card ul,
+.plan-card p,
+.plan-card ul {
+  text-align: left !important;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Privacy/legal content: Always left-aligned */
+.privacy-content,
+.legal-content,
+.terms-content {
+  text-align: left !important;
+}
+
+/* FAQ content: Questions and answers left-aligned */
+.faq-item,
+.faq-question,
+.faq-answer {
+  text-align: left !important;
+}
+
+/* Forms: Left-aligned labels, centered submit buttons */
+form {
+  text-align: left !important;
+}
+
+form label,
+form input,
+form textarea,
+form select {
+  text-align: left !important;
+}
+
+form button[type="submit"],
+form input[type="submit"],
+.form-actions {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== TABLE ALIGNMENT ===== */
+table {
+  text-align: left !important;
+}
+
+th {
+  text-align: left !important;
+  font-weight: 600;
+}
+
+td {
+  text-align: left !important;
+}
+
+/* Numeric columns can be right-aligned */
+td.numeric,
+th.numeric,
+.table-numeric {
+  text-align: right !important;
+}
+
+/* ===== ACCESSIBILITY TOOLBAR ===== */
+.accessibility-toolbar {
+  text-align: center !important;
+}
+
+.toolbar-group {
+  text-align: center !important;
+}
+
+.toolbar-group-title {
+  text-align: center !important;
+}
+
+/* ===== CRISIS RESOURCES SPECIFIC ===== */
+.crisis-alert,
+.emergency-banner {
+  text-align: center !important;
+}
+
+.resource-list,
+.resource-item {
+  text-align: left !important;
+}
+
+/* ===== BLOG/ARTICLE CONTENT ===== */
+.blog-post,
+.article-content,
+.post-content {
+  text-align: left !important;
+}
+
+.post-header,
+.article-header {
+  text-align: center !important;
+}
+
+.post-meta,
+.article-meta {
+  text-align: center !important;
+}
+
+/* ===== WAITLIST/FORM PAGES ===== */
+.waitlist-intro,
+.signup-intro {
+  text-align: center !important;
+}
+
+.form-container {
+  text-align: left !important;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-intro {
+  text-align: center !important;
+}
+
+.contact-methods,
+.contact-form {
+  text-align: left !important;
+}
+
+/* ===== ROADMAP/TIMELINE ===== */
+.phase-tracker,
+.timeline {
+  text-align: left !important;
+}
+
+.phase-card,
+.timeline-item {
+  text-align: left !important;
+}
+
+.phase-card h3,
+.timeline-item h3 {
+  text-align: left !important;
+}
+
+/* ===== MISSION/ABOUT SECTIONS ===== */
+.mission-statement,
+.mission-box {
+  text-align: center !important;
+}
+
+.mission-statement p,
+.mission-box p {
+  text-align: center !important;
+}
+
+.difference-card,
+.value-card {
+  text-align: left !important;
+}
+
+.difference-card h4,
+.value-card h4 {
+  text-align: left !important;
+}
+
+/* ===== ICONS & BADGES ===== */
+.icon-section {
+  text-align: center !important;
+}
+
+.icon-item {
+  text-align: center !important;
+}
+
+.badge,
+.label,
+.tag {
+  text-align: center !important;
+}
+
+/* ===== OVERRIDES FOR CONFLICTING STYLES ===== */
+/* Containers should not force child alignment - let children control their own alignment */
+
+/* ===== RESPONSIVE MOBILE ALIGNMENT ===== */
+@media (max-width: 768px) {
+  /* On mobile, keep left alignment for readability */
+  #main-content,
+  main,
+  article,
+  section {
+    text-align: left !important;
+  }
+  
+  /* Mobile navigation can stack center */
+  nav,
+  .nav-menu {
+    text-align: center !important;
+  }
+  
+  /* Mobile buttons: Center for thumb reach */
+  .button-group,
+  .action-buttons {
+    text-align: center !important;
+  }
+  
+  /* Mobile forms: Still left-aligned */
+  form {
+    text-align: left !important;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  /* Everything left-aligned for print */
+  * {
+    text-align: left !important;
+  }
+  
+  /* Except headers which can be centered */
+  h1 {
+    text-align: center !important;
+  }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+body[data-contrast="high"] h1,
+body[data-contrast="high"] h2,
+body[data-contrast="high"] h3,
+body[data-contrast="high"] h4,
+body[data-contrast="high"] h5,
+body[data-contrast="high"] h6,
+body[data-contrast="high"] p,
+body[data-contrast="high"] li {
+  text-align: left !important;
+}
+
+/* ===== DARK MODE ===== */
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h3,
+body[data-theme="dark"] h4,
+body[data-theme="dark"] h5,
+body[data-theme="dark"] h6,
+body[data-theme="dark"] p,
+body[data-theme="dark"] li {
+  text-align: left !important;
+}
+
+/* ===== SPECIFIC PAGE OVERRIDES ===== */
+
+/* Contact page: Keep contact info right-aligned block as designed */
+.contact-info-block {
+  text-align: right !important;
+}
+
+/* FAQ search: Center the search UI */
+.faq-search-container {
+  text-align: center !important;
+}
+
+.faq-search-container input,
+.faq-search-container label {
+  text-align: left !important;
+}
+
+/* Disclaimer cards: Center for emphasis */
+.disclaimer-card,
+.warning-card,
+.alert-card {
+  text-align: center !important;
+}
+
+/* Privacy features grid: Center icons, left text */
+.privacy-feature,
+.feature-icon-card {
+  text-align: center !important;
+}
+
+.privacy-feature p,
+.feature-icon-card p {
+  text-align: left !important;
+}
+
+/* ===== BUTTON ALIGNMENT ===== */
+/* Buttons inherit text-align from their containers */
+
+/* Button groups: Centered collection */
+.btn-group,
+.button-group,
+.action-group {
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===== LEGACY OVERRIDE REMOVAL ===== */
+/* Remove any old conflicting center alignment */
+body.center-align,
+.text-center:not(.status-banner):not(.cta-section):not(.button-group) {
+  /* Override old center-align classes */
+  text-align: left !important;
+}
+
+/* Explicitly allow intended center classes */
+.text-center.status-banner,
+.text-center.cta-section,
+.text-center.button-group,
+.text-center.hero-section,
+.text-center.intro-section {
+  text-align: center !important;
+}
+
+/* ===== FINAL QUALITY ASSURANCE ===== */
+/* Ensure critical readability elements are NEVER centered */
+main > p:not(.text-center),
+main > ul:not(.text-center),
+main > ol:not(.text-center),
+main > dl:not(.text-center),
+article > p:not(.text-center),
+article > ul:not(.text-center),
+article > ol:not(.text-center),
+section > p:not(.text-center),
+section > ul:not(.text-center),
+section > ol:not(.text-center) {
+  text-align: left !important;
+}
+
+/* Professional standard: Body text is ALWAYS left-aligned */
+.prose,
+.content,
+.body-text,
+.description {
+  text-align: left !important;
+}
