@@ -11,6 +11,7 @@ import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from 'react-nat
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import A11yPressable from '../../components/A11yPressable';
+import { GapView } from '../../components/GapView';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
@@ -196,20 +197,24 @@ export default function DisabilityProfileSetup() {
       </ScrollView>
       
       {/* Navigation Buttons */}
-      <View style={styles.footer}>
+      <GapView style={styles.footer} gap={12}>
         {step > 0 && (
           <A11yPressable
-            style={[styles.button, styles.buttonSecondary, { borderColor: palette.primary }]}
             onPress={handleBack}
             accessibilityRole="button"
             accessibilityLabel={t('wizard.setup.back', 'Go back')}
             hitSlop={HIT_SLOP_8}
             disabled={saving}
           >
-            <Ionicons name="arrow-back" size={20} color={palette.primary} />
-            <Text style={[styles.buttonText, styles.buttonTextSecondary, { color: palette.primary }]}>
-              {t('wizard.setup.back', 'Back')}
-            </Text>
+            <GapView
+              style={[styles.button, styles.buttonSecondary, { borderColor: palette.primary }]}
+              gap={8}
+            >
+              <Ionicons name="arrow-back" size={20} color={palette.primary} />
+              <Text style={[styles.buttonText, styles.buttonTextSecondary, { color: palette.primary }]}>
+                {t('wizard.setup.back', 'Back')}
+              </Text>
+            </GapView>
           </A11yPressable>
         )}
         
@@ -241,15 +246,15 @@ export default function DisabilityProfileSetup() {
           {saving ? (
             <ActivityIndicator color={palette.onPrimary} />
           ) : (
-            <>
+            <GapView style={{flexDirection: 'row', alignItems: 'center'}} gap={8}>
               <Text style={styles.buttonText}>
                 {step < totalSteps - 1 ? t('wizard.setup.next', 'Next') : t('wizard.setup.finish', 'Finish')}
               </Text>
               <Ionicons name={step < totalSteps - 1 ? 'arrow-forward' : 'checkmark'} size={20} color={palette.onPrimary} />
-            </>
+            </GapView>
           )}
         </A11yPressable>
-      </View>
+      </GapView>
     </SafeAreaView>
   );
 }
@@ -376,7 +381,7 @@ function DisabilityTypesStep({ styles, palette, selected, onToggle }: any) {
         {t('wizard.setup.disability.subtitle', 'Select all that apply. This helps us recommend tools that match your needs.')}
       </Text>
       
-      <View style={styles.optionsGrid}>
+      <GapView style={styles.optionsGrid} gap={12}>
         {options.map((option) => (
           <OptionCard
             key={option.value}
@@ -388,7 +393,7 @@ function DisabilityTypesStep({ styles, palette, selected, onToggle }: any) {
             palette={palette}
           />
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -458,7 +463,7 @@ function EnergyPatternsStep({ styles, palette, selected, onSelect, cognitiveLoad
         {t('wizard.setup.energy.subtitle', "We'll suggest activities when you're most likely to have energy for them.")}
       </Text>
       
-      <View style={styles.optionsGrid}>
+      <GapView style={styles.optionsGrid} gap={12}>
         {energyOptions.map((option) => (
           <OptionCard
             key={option.value}
@@ -470,13 +475,13 @@ function EnergyPatternsStep({ styles, palette, selected, onSelect, cognitiveLoad
             palette={palette}
           />
         ))}
-      </View>
+      </GapView>
       
       <Text style={[styles.stepTitle, { marginTop: 24 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('wizard.setup.cognitive.title', 'How much mental energy do you usually have?')}
       </Text>
       
-      <View style={styles.optionsGrid}>
+      <GapView style={styles.optionsGrid} gap={12}>
         {cognitiveOptions.map((option) => (
           <OptionCard
             key={option.value}
@@ -488,7 +493,7 @@ function EnergyPatternsStep({ styles, palette, selected, onSelect, cognitiveLoad
             palette={palette}
           />
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -549,7 +554,7 @@ function AccessibilityNeedsStep({ styles, palette, selected, onToggle }: any) {
         {t('wizard.setup.a11y.subtitle', "We'll optimize the interface for your needs.")}
       </Text>
       
-      <View style={styles.optionsGrid}>
+      <GapView style={styles.optionsGrid} gap={12}>
         {options.map((option) => (
           <OptionCard
             key={option.value}
@@ -561,7 +566,7 @@ function AccessibilityNeedsStep({ styles, palette, selected, onToggle }: any) {
             palette={palette}
           />
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -702,7 +707,6 @@ function createStyles(palette: any, factor: number) {
       flexDirection: 'row',
       flexWrap: 'wrap',
       justifyContent: 'space-between',
-      gap: 12,
     },
     
     // Footer
@@ -713,7 +717,6 @@ function createStyles(palette: any, factor: number) {
       paddingVertical: 16,
       borderTopWidth: 1,
       borderTopColor: palette.muted,
-      gap: 12,
     },
     button: {
       flexDirection: 'row',
@@ -722,7 +725,6 @@ function createStyles(palette: any, factor: number) {
       paddingHorizontal: 24,
       paddingVertical: 14,
       borderRadius: 12,
-      gap: 8,
     },
     buttonPrimary: {
       minWidth: 120,

@@ -4,6 +4,7 @@ import { Alert, FlatList, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import AdminGuard from '../../../components/AdminGuard';
+import { GapView } from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
@@ -46,7 +47,7 @@ export default function ModerationQueue() {
           renderItem={({ item }) => (
             <View style={s.row}>
               <Text style={s.text}>{item.title || '(no title)'} {item.flagged ? '— flagged' : ''} {item.hidden ? '— hidden' : ''}</Text>
-              <View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+              <GapView style={{ flexDirection:'row', marginTop:6 }} gap={8}>
                 <A11yPressable
                   onPress={async()=>{ try { await updateDoc(doc(db,'threads', item.id), { flagged: !(item.flagged===true) }); load(); } catch {} }}
                   style={s.btn}
@@ -74,7 +75,7 @@ export default function ModerationQueue() {
                 >
                   <Text style={s.btnText}>Delete</Text>
                 </A11yPressable>
-              </View>
+              </GapView>
             </View>
           )}
           ListEmptyComponent={<Text style={s.text}>No items.</Text>}

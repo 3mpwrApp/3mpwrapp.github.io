@@ -1,6 +1,7 @@
 import React from 'react';
 import { Alert, Modal, Pressable, Text, View } from 'react-native';
 
+import { GapView } from '../../../components/GapView';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export default function ReflectionsCalendarJestImpl() {
@@ -18,7 +19,7 @@ export default function ReflectionsCalendarJestImpl() {
     <View accessibilityLabel="Reflections Calendar" accessible style={{ flex: 1, padding: 16, backgroundColor: palette.background }}>
       <Text accessibilityRole="header" style={{ color: palette.text, fontSize: 20, fontWeight: '700' }}>Reflections Calendar</Text>
 
-      <View style={{ flexDirection: 'row', columnGap: 8, marginTop: 4 }}>
+      <GapView style={{ flexDirection: 'row', marginTop: 4 }} gap={8}>
         <Pressable
           onPress={() => setView('grid')}
           accessibilityRole="button"
@@ -37,7 +38,7 @@ export default function ReflectionsCalendarJestImpl() {
         >
           <Text style={{ color: view==='list' ? palette.onPrimary : palette.text, fontWeight: '700' }}>LIST</Text>
         </Pressable>
-      </View>
+      </GapView>
 
       <View style={{ height: 12 }} />
 
@@ -78,7 +79,7 @@ export default function ReflectionsCalendarJestImpl() {
         <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center' }}>
           <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '90%', maxWidth: 520 }}>
             <Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>Details</Text>
-            <View style={{ flexDirection: 'row', columnGap: 8, marginBottom: 8 }}>
+            <GapView style={{ flexDirection: 'row', marginBottom: 8 }} gap={8}>
               <Pressable
                 accessibilityRole="button"
                 accessibilityLabel="Add reflection"
@@ -95,7 +96,7 @@ export default function ReflectionsCalendarJestImpl() {
               >
                 <Text style={{ color: palette.text, fontWeight: '700' }}>Close</Text>
               </Pressable>
-            </View>
+            </GapView>
 
             {editorOpen && (
               <View>

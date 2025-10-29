@@ -3,6 +3,7 @@ import { Modal, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import { GapView } from '../../../components/GapView';
 import { usePostLoadAnnounce } from '../../../hooks/usePostLoadAnnounce';
 import { useTranslation } from '../../../i18n';
 import { s } from '../../../theme/spacing';
@@ -24,7 +25,7 @@ export default function EvidenceLockerImpl() {
     <View style={styles.container}>
       <Text style={styles.title}>{t('templates.evidenceLocker.title', 'Evidence Locker')}</Text>
       <DisclaimerBanner type="legal" compact />
-      <View style={styles.row}>
+      <GapView style={styles.row} gap={s('sm')}>
         <A11yPressable style={styles.button} onPress={() => setPassModal({ mode: 'export' })}>
           <Text style={styles.buttonText}>{t('common.export', 'Export')}</Text>
         </A11yPressable>
@@ -34,7 +35,7 @@ export default function EvidenceLockerImpl() {
         <A11yPressable style={styles.button} onPress={() => { const label = t('templates.evidenceLocker.addNote','Note'); const newLabel = label + ' ' + (notes.length+1); setNotes(n=>[...n,newLabel]); setLastAdded(newLabel); }} accessibilityLabel={t('templates.evidenceLocker.addNote','Add note')}>
           <Text style={styles.buttonText}>{t('templates.evidenceLocker.addNote','Add Note')}</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       {lastAdded && (
         <View style={{ marginTop: s('md') }} accessibilityLiveRegion="polite">
           <Text style={{ color: palette.text }}>{t('templates.evidenceLocker.noteSaved','Note saved to your cloud locker.')}</Text>
@@ -61,7 +62,7 @@ export default function EvidenceLockerImpl() {
                 secureTextEntry
                 style={styles.input}
               />
-              <View style={styles.rowRight}>
+              <GapView style={styles.rowRight} gap={s('sm')}>
                 <A11yPressable style={styles.secondary} onPress={() => setPassModal(null)}>
                   <Text style={styles.secondaryText}>{t('common.cancel', 'Cancel')}</Text>
                 </A11yPressable>
@@ -75,7 +76,7 @@ export default function EvidenceLockerImpl() {
                 >
                   <Text style={styles.buttonText}>{t('common.ok', 'OK')}</Text>
                 </A11yPressable>
-              </View>
+              </GapView>
             </View>
           </View>
         </Modal>
@@ -88,8 +89,8 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background, padding: s('lg') },
     title: { color: palette.text, fontSize: 20, fontWeight: '700' },
-    row: { flexDirection: 'row', gap: s('sm'), marginTop: s('md') },
-    rowRight: { flexDirection: 'row', gap: s('sm'), marginTop: s('md'), justifyContent: 'flex-end' },
+    row: { flexDirection: 'row', marginTop: s('md') },
+    rowRight: { flexDirection: 'row', marginTop: s('md'), justifyContent: 'flex-end' },
     button: { backgroundColor: palette.primary, paddingVertical: s('sm'), paddingHorizontal: s('md'), borderRadius: s('lg') },
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
     secondary: { backgroundColor: palette.surface, paddingVertical: s('sm'), paddingHorizontal: s('md'), borderRadius: s('lg'), borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
