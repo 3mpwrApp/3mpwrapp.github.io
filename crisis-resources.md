@@ -28,7 +28,7 @@ permalink: /crisis-resources/
   <div class="service-icon">🆘</div>
   <h3>Suicide Prevention</h3>
   <a href="tel:1-833-456-4566" class="service-phone" data-copy="1-833-456-4566">1-833-456-4566</a>
-  <p class="service-detail">Text <a href="sms:45645">45645</a> or visit <a href="https://988.ca" target="_blank" rel="noopener">988.ca</a></p>
+  <p class="service-detail">Text 45645 for support</p>
   <button class="copy-btn" data-copy="1-833-456-4566" aria-label="Copy phone number">📋 Copy</button>
 </div>
 
@@ -37,7 +37,7 @@ permalink: /crisis-resources/
   <h3>Kids Help Phone</h3>
   <p class="service-label">Ages 5-30</p>
   <a href="tel:1-800-668-6868" class="service-phone" data-copy="1-800-668-6868">1-800-668-6868</a>
-  <p class="service-detail">Text <a href="sms:686868">686868</a></p>
+  <p class="service-detail">Text 686868 for support</p>
   <button class="copy-btn" data-copy="1-800-668-6868" aria-label="Copy phone number">📋 Copy</button>
 </div>
 
@@ -46,7 +46,7 @@ permalink: /crisis-resources/
   <h3>Hope for Wellness</h3>
   <p class="service-label">Indigenous Peoples</p>
   <a href="tel:1-855-242-3310" class="service-phone" data-copy="1-855-242-3310">1-855-242-3310</a>
-  <p class="service-detail">Visit <a href="https://hopeforwellness.ca" target="_blank" rel="noopener">hopeforwellness.ca</a></p>
+  <p class="service-detail">24/7 support in English and French</p>
   <button class="copy-btn" data-copy="1-855-242-3310" aria-label="Copy phone number">📋 Copy</button>
 </div>
 
@@ -54,7 +54,7 @@ permalink: /crisis-resources/
   <div class="service-icon">🛡️</div>
   <h3>Domestic Violence</h3>
   <a href="tel:1-800-363-9010" class="service-phone" data-copy="1-800-363-9010">1-800-363-9010</a>
-  <p class="service-detail">TTY: <a href="tel:1-800-567-5803">1-800-567-5803</a></p>
+  <p class="service-detail">TTY: 1-800-567-5803</p>
   <button class="copy-btn" data-copy="1-800-363-9010" aria-label="Copy phone number">📋 Copy</button>
 </div>
 
@@ -63,7 +63,7 @@ permalink: /crisis-resources/
   <h3>211 Canada</h3>
   <p class="service-label">Community Services</p>
   <a href="tel:211" class="service-phone" data-copy="211">211</a>
-  <p class="service-detail">Visit <a href="https://211.ca" target="_blank" rel="noopener">211.ca</a></p>
+  <p class="service-detail">Free referral services</p>
   <button class="copy-btn" data-copy="211" aria-label="Copy phone number">📋 Copy</button>
 </div>
 
