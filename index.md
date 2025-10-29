@@ -513,9 +513,3 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 <!-- REMOVED: 700+ lines of inline JavaScript moved to external file -->
 <!-- This improves: page load speed, caching, parsing performance -->
 
-<!-- Crisis Resources Footer -->
-<div class="crisis-resources" role="complementary" aria-label="Crisis support resources">
-  <strong>🆘 In Crisis?</strong> 
-  <a href="{{ '/crisis-resources' | relative_url }}">Get immediate help</a> | 
-  📞 <strong>Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a> (24/7, Free & Confidential)
-</div>

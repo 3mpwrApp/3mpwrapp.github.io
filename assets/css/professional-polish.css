@@ -1243,7 +1243,7 @@ table {
 }
 
 [data-theme="dark"] .upcoming-badge {
-  background: #0891b2 !important; /* Darker cyan for better contrast */
+  background: #047481 !important; /* Even darker cyan: 4.5:1 with white text */
   color: #ffffff !important;
 }
 
@@ -1466,6 +1466,11 @@ small {
 [data-theme="dark"] .service-card a:not(.btn):not(.button):not(.phone-link):not(.service-phone):focus {
   color: #0056b3 !important;
   text-decoration: underline !important;
+}
+
+/* Extra specificity for service-detail links */
+[data-theme="dark"] .service-detail a {
+  color: #0056b3 !important;
 }
 
 /* ===== GENERAL LINK IMPROVEMENTS ===== */

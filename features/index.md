@@ -882,15 +882,6 @@ All AI processing happens on-device for privacy.
 
 ---
 
-<!-- Crisis Resources Banner -->
-<div class="crisis-resources" role="complementary" aria-label="Crisis support resources">
-  <strong>🆘 In Crisis?</strong> 
-  <a href="{{ '/crisis-resources' | relative_url }}">Get immediate help</a> | 
-  📞 <strong>Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a> (24/7, Free & Confidential)
-</div>
-
----
-
 <!-- Page Feedback -->
 <div class="page-feedback" role="complementary">
   <p><strong>💬 Was this page helpful?</strong></p>
