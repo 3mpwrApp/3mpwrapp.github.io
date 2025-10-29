@@ -5,6 +5,7 @@ import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -65,16 +66,16 @@ export default function AccessibilityLog() {
       <Text style={s.title}>Workplace Accessibility Log</Text>
       <DisclaimerBanner type="legal" compact />
       <Text style={s.text}>Log daily barriers with timestamps for future evidence.</Text>
-      <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
+      <GapView style={{ flexDirection:'row', marginTop: 6 }} gap={8}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setView('local')} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></A11yPressable>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { setView('cloud'); loadCloud(false); }} style={[s.chip, view==='cloud' && s.chipActive]}><Text style={{ color: view==='cloud'? palette.onPrimary: palette.text, fontWeight:'700' }}>Cloud</Text></A11yPressable>
-      </View>
+      </GapView>
       <TextInput placeholder="Barrier or incident (e.g., no breaks, stairs)" placeholderTextColor={palette.text+'77'} value={description} onChangeText={setDescription} style={s.input} />
       <TextInput placeholder="Location / context (optional)" placeholderTextColor={palette.text+'77'} value={location} onChangeText={setLocation} style={s.input} />
-      {view==='local' && (<View style={{ flexDirection:'row', gap:8 }}>
+      {view==='local' && (<GapView style={{ flexDirection:'row' }} gap={8}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={add} style={[s.button,{ flex:1 }]}><Text style={s.buttonText}>Add Entry</Text></A11yPressable>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Sync</Text></A11yPressable>
-      </View>)}
+      </GapView>)}
       {view==='local' ? (
       <FlatList data={items} keyExtractor={i=>i.id} renderItem={({item:i})=> (
         <View style={s.card}>

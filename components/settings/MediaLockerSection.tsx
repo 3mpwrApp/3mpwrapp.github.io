@@ -5,6 +5,7 @@ import { Text, View } from 'react-native';
 import A11yPressable from '../../components/A11yPressable';
 import { useSettings } from '../../store/settings';
 import { useAppPalette } from '../../theme/usePalette';
+import GapView from '../GapView';
 
 export default function MediaLockerSection() {
   const palette = useAppPalette();
@@ -21,7 +22,7 @@ export default function MediaLockerSection() {
       <Text style={{ color:palette.text, opacity:0.8, marginTop:6 }}>When enabled, the app may request thumbnails from YouTube or an optional server (if configured).</Text>
       <View style={{ height:12 }} />
       <Text style={{ color: palette.text, opacity:0.9, marginTop:10, marginBottom:6 }}>Open YouTube links in</Text>
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
         {(['ask','app','browser'] as const).map(mode => (
           <A11yPressable
             key={mode}
@@ -35,7 +36,7 @@ export default function MediaLockerSection() {
             </Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }

@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import GapView from "../../../components/GapView";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -63,29 +64,29 @@ export default function ImpactSimulator() {
         <Text style={styles.blockTitle}>Configure</Text>
         <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginBottom: 6 }}>
           <Text style={styles.text}>Benefit rate</Text>
-          <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
+          <GapView style={{ flexDirection:'row', alignItems:'center' }} gap={8}>
             <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Decrease benefit rate" onPress={()=> setRate(r=> Math.max(50, r-5))} style={styles.tiny}><Text style={styles.tinyText}>-</Text></A11yPressable>
             <Text style={styles.text}>{rate}%</Text>
             <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Increase benefit rate" onPress={()=> setRate(r=> Math.min(100, r+5))} style={styles.tiny}><Text style={styles.tinyText}>+</Text></A11yPressable>
-          </View>
+          </GapView>
         </View>
         <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginBottom: 6 }}>
           <Text style={styles.text}>Waiting period</Text>
-          <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
+          <GapView style={{ flexDirection:'row', alignItems:'center' }} gap={8}>
             <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Decrease waiting period" onPress={()=> setWait(w=> Math.max(0, w-1))} style={styles.tiny}><Text style={styles.tinyText}>-</Text></A11yPressable>
             <Text style={styles.text}>{wait}d</Text>
             <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Increase waiting period" onPress={()=> setWait(w=> Math.min(30, w+1))} style={styles.tiny}><Text style={styles.tinyText}>+</Text></A11yPressable>
-          </View>
+          </GapView>
         </View>
         <View style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between' }}>
           <Text style={styles.text}>Accommodations</Text>
-          <View style={{ flexDirection:'row', gap:8 }}>
+          <GapView style={{ flexDirection:'row' }} gap={8}>
             {(['none','basic','robust'] as const).map(v => (
               <A11yPressable hitSlop={HIT_SLOP_8} key={v} accessibilityRole="button" accessibilityState={{ selected: accom===v }} accessibilityLabel={`Select ${v} accommodations`} onPress={()=> setAccom(v)} style={[styles.chip, accom===v && { backgroundColor: palette.primary, borderColor: palette.primary }]}>
                 <Text style={[styles.text, accom===v && { color: palette.onPrimary, fontWeight:'700' }]}>{v}</Text>
               </A11yPressable>
             ))}
-          </View>
+          </GapView>
         </View>
       </View>
       <View style={styles.block}>

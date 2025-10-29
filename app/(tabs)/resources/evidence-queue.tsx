@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { clearQueue, getQueue, processQueue } from '../../../services/evidenceQueue';
@@ -34,7 +35,7 @@ export default function EvidenceQueueScreen() {
         {t('templates.evidenceLocker.queueTitle', 'Upload Queue')}
       </Text>
       <DisclaimerBanner type="legal" compact />
-      <View style={s.actionsRow}>
+      <GapView style={s.actionsRow} gap={8}>
         <A11yPressable
           onPress={() => { setShowInfo(v=>!v); announce(showInfo ? t('common.hide') : t('templates.evidenceLocker.toggleInfo','Toggle instructions')); }}
           style={s.infoBtn}
@@ -59,7 +60,7 @@ export default function EvidenceQueueScreen() {
         >
           <Text style={s.clearBtnText}>{t('common.deleteAll','Delete All')}</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       {showInfo && (
         <View style={s.infoCard} accessibilityRole="summary">
           <Text style={s.infoTitle}>{t('templates.evidenceLocker.infoTitle','How to Use')}</Text>
@@ -94,7 +95,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     meta: { color: palette.text, opacity: 0.7 },
     button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center', marginTop: 8 },
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
-    actionsRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 12 },
+    actionsRow: { flexDirection: 'row', flexWrap: 'wrap', marginTop: 12 },
     infoBtn: { paddingHorizontal: 12, paddingVertical: 8, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
     infoBtnText: { color: palette.text, fontWeight: '600', fontSize: 13 },
     processBtn: { backgroundColor: palette.primary, paddingHorizontal: 14, paddingVertical: 10, borderRadius: 6 },

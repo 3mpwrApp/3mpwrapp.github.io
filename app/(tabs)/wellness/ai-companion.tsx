@@ -3,6 +3,7 @@ import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { addMood, listMoods } from '../../../services/companion';
@@ -64,7 +65,7 @@ export default function AICompanion() {
       <DisclaimerBanner type="medical" compact />
       <DisclaimerBanner type="ai" compact />
       <Text style={s.text} accessibilityLabel="Quick check-in prompt">Quick check-in: How are you today?</Text>
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
+      <GapView style={{ flexDirection:'row', marginTop: 8 }} gap={8}>
         {[['good','😊'],['ok','😐'],['bad','😔']].map(([m, emoji]) => (
           <A11yPressable
             key={m}
@@ -77,7 +78,7 @@ export default function AICompanion() {
             <Text style={{ color: palette.text, fontWeight:'700' }}>{emoji} {m}</Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
       <TextInput
         placeholder="Notes (optional)"
         placeholderTextColor={palette.text+'77'}
@@ -86,7 +87,7 @@ export default function AICompanion() {
         style={s.input}
         accessibilityLabel="Mood notes input"
       />
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8, flexWrap:'wrap' }}>
+      <GapView style={{ flexDirection:'row', marginTop: 8, flexWrap:'wrap' }} gap={8}>
         <A11yPressable
           onPress={scheduleChecks}
           style={s.button}
@@ -114,7 +115,7 @@ export default function AICompanion() {
         >
           <Text style={{ color: palette.text, fontWeight:'700' }}>Export moods (CSV)</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       <Text style={[s.text,{ marginTop: 12, fontWeight:'700' }]} accessibilityLabel="Recent moods">Recent moods</Text>
       {moods.slice(0,10).map(m => (
         <Text key={m.id} style={s.text} accessibilityLabel={`Mood entry: ${m.mood}${m.notes? `, notes: ${m.notes}`:''}`}>• {new Date(m.createdAt?.toDate?.()||Date.now()).toLocaleString()} — {m.mood}{m.notes? `: ${m.notes}`:''}</Text>

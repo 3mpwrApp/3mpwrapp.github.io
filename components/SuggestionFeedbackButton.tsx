@@ -14,12 +14,12 @@ import { useState } from 'react';
 import {
     ActivityIndicator,
     StyleSheet,
-    Text,
-    View,
+    Text
 } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
 
+import GapView from './GapView';
 import A11yPressable from './A11yPressable';
 
 export interface SuggestionFeedbackButtonProps {
@@ -56,15 +56,15 @@ export default function SuggestionFeedbackButton({
 
   if (showConfirmation) {
     return (
-      <View style={styles.confirmationContainer}>
+      <GapView style={styles.confirmationContainer} gap={6}>
         <Ionicons name="checkmark-circle" size={20} color={palette.success} />
         <Text style={[styles.confirmationText, { color: palette.success }]}>Thank you!</Text>
-      </View>
+      </GapView>
     );
   }
 
   return (
-    <View style={styles.container}>
+    <GapView style={styles.container} gap={12}>
       <A11yPressable
         onPress={handleThumbsUp}
         disabled={disabled || loading}
@@ -106,14 +106,13 @@ export default function SuggestionFeedbackButton({
           color={feedback === 'down' ? palette.error : palette.muted}
         />
       </A11yPressable>
-    </View>
+    </GapView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    gap: 12,
     alignItems: 'center',
   },
   button: {
@@ -126,7 +125,6 @@ const styles = StyleSheet.create({
   confirmationContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
   },
   confirmationText: {
     fontSize: 14,

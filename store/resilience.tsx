@@ -1,5 +1,12 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
+
+let AsyncStorage: any;
+try {
+  AsyncStorage = require('@react-native-async-storage/async-storage').default;
+} catch {
+  // Fallback for web or environments without AsyncStorage
+  AsyncStorage = null;
+}
 
 export type ResilienceEvent = { id: string; ts: number; kind: string; points: number; note?: string };
 export interface ResilienceState {
@@ -22,10 +29,13 @@ export function ResilienceProvider({ children }: { children: React.ReactNode }) 
   const [total, setTotal] = React.useState(0);
   const [events, setEvents] = React.useState<ResilienceEvent[]>([]);
   React.useEffect(()=>{ (async()=>{
+    if (!AsyncStorage) return;
     try { const raw = await AsyncStorage.getItem(KEY); if (raw){ const d = JSON.parse(raw); setTotal(d.total||0); setEvents(d.events||[]);} } catch {}
   })(); },[]);
   const persist = async (t: number, ev: ResilienceEvent[]) => {
-    setTotal(t); setEvents(ev); try { await AsyncStorage.setItem(KEY, JSON.stringify({ total:t, events:ev })); } catch {}
+    setTotal(t); setEvents(ev);
+    if (!AsyncStorage) return;
+    try { await AsyncStorage.setItem(KEY, JSON.stringify({ total:t, events:ev })); } catch {}
   };
   const add: ResilienceState['add'] = async (e) => {
     const entry: ResilienceEvent = { id: Math.random().toString(36).slice(2), ts: Date.now(), kind: e.kind, points: e.points, note: e.note };

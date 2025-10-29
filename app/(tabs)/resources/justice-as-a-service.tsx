@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import GapView from "../../../components/GapView";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
@@ -99,7 +100,7 @@ export default function JusticeAsAService() {
             <Text style={styles.infoText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.infoLine3','Data stays local; no network calls are made.')}</Text>
           </View>
         )}
-        <View style={styles.actionRow}>
+        <GapView style={styles.actionRow} gap={8}>
           <A11yPressable hitSlop={HIT_SLOP_8} onPress={generate} disabled={generating} accessibilityRole="button" accessibilityLabel={t('justiceService.generateBtnLabel','Generate snapshot')} accessibilityHint={t('justiceService.generateHint','Builds a local advocacy snapshot from cached notes and counts.')} style={[styles.smallBtn, { opacity: generating?0.6:1 }]}> 
             <Text style={styles.smallBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{generating? t('justiceService.generating','Generating...'): t('justiceService.generate','Generate')}</Text>
           </A11yPressable>
@@ -112,7 +113,7 @@ export default function JusticeAsAService() {
           <A11yPressable hitSlop={HIT_SLOP_8} onPress={reset} disabled={!report} accessibilityRole="button" accessibilityLabel={t('justiceService.resetLabel','Reset snapshot')} accessibilityHint={t('justiceService.resetHint','Clears the generated snapshot text.')} style={[styles.smallBtn, { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, opacity: !report?0.5:1 }]}> 
             <Text style={[styles.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.reset','Reset')}</Text>
           </A11yPressable>
-        </View>
+        </GapView>
       </View>
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.title','Justice-as-a-Service')}</Text>
       {!!report && (
@@ -134,7 +135,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     infoTitle: { color: palette.primary, fontWeight:'700', fontSize:16 },
     infoToggle: { color: palette.text, fontSize: 12 },
     infoText: { color: palette.text, marginTop: 4 },
-    actionRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginTop: 8 },
+    actionRow: { flexDirection:'row', flexWrap:'wrap', marginTop: 8 },
     smallBtn: { backgroundColor: palette.primary, paddingHorizontal:14, paddingVertical:10, borderRadius:8 },
     smallBtnText: { color: palette.onPrimary, fontWeight:'700' },
   });

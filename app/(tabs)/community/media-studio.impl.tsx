@@ -5,6 +5,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
 import { auth, db, storage } from '../../../firebase/config';
@@ -40,10 +41,10 @@ export default function MediaStudioImpl() {
     <View style={s.container}>
       <Text style={s.title}>Disability + Worker Media Studio</Text>
       {isAdmin && (
-        <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+        <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
       <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.chip}><Text style={s.chipText}>Pending</Text></A11yPressable>
       <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.chip}><Text style={s.chipText}>Trash</Text></A11yPressable>
-        </View>
+        </GapView>
       )}
       <TextInput placeholder="Title" placeholderTextColor={palette.text+'77'} value={title} onChangeText={setTitle} style={s.input} />
       <TextInput placeholder="Caption / text" placeholderTextColor={palette.text+'77'} value={text} onChangeText={setText} style={s.input} />

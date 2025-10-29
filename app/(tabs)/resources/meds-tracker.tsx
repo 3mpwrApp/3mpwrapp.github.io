@@ -4,6 +4,7 @@ import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native
 import A11yPressable from '../../../components/A11yPressable';
 import DateTimeField from '../../../components/DateTimeField';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { addMedication, addMedLog, deleteMedication, listLogs, listMedications, type Medication, type MedLog } from '../../../services/meds';
 import * as Notifier from '../../../services/notifications';
@@ -92,11 +93,11 @@ export default function MedsTracker() {
       <DateTimeField label="Refill date (optional)" mode="date" value={refill} onChange={setRefill} />
       <A11yPressable onPress={async()=>{ try { await addMedication({ name: name.trim(), dose, schedule, reminderTime: remind || undefined, refillAt: refill || undefined }); setName(''); setDose(''); setSchedule(''); setRemind(''); setRefill(''); load(); } catch { Alert.alert('Add failed','Unable to add med'); } }} style={s.button}><Text style={s.buttonText}>Add Medication</Text></A11yPressable>
 
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 6 }}>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 6 }} gap={8}>
         <A11yPressable onPress={exportCSV} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text></A11yPressable>
         <A11yPressable onPress={exportJSON} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export JSON</Text></A11yPressable>
         <A11yPressable onPress={importTemplate} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Import Template</Text></A11yPressable>
-      </View>
+      </GapView>
       <FlatList data={items} keyExtractor={m=>m.id!} renderItem={({item}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{item.name}</Text>
@@ -104,7 +105,7 @@ export default function MedsTracker() {
           <Text style={s.cardText}>Schedule: {item.schedule || '-'}</Text>
           <Text style={s.cardText}>Reminder: {item.reminderTime || '-'}</Text>
           <Text style={s.cardText}>Refill: {item.refillAt ? new Date(item.refillAt).toLocaleDateString() : '-'}</Text>
-          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
             <A11yPressable onPress={()=> setSelectedMed(item.id!)} style={s.smallBtn}><Text style={s.smallBtnText}>Logs</Text></A11yPressable>
             <A11yPressable onPress={async()=>{
               // Schedule 7 days of daily reminders at given HH:MM
@@ -125,7 +126,7 @@ export default function MedsTracker() {
               } catch { Alert.alert('Failed','Could not schedule refill'); }
             }} style={s.smallBtn}><Text style={s.smallBtnText}>Refill alert</Text></A11yPressable>
             <A11yPressable onPress={async()=>{ try { await deleteMedication(item.id!); setItems(prev=>prev.filter(x=>x.id!==item.id)); if (selectedMed===item.id) setSelectedMed(''); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Delete</Text></A11yPressable>
-          </View>
+          </GapView>
         </View>
       )} />
 

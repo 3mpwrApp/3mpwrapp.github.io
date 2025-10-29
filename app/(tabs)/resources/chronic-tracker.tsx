@@ -3,6 +3,7 @@ import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { addEntry, deleteEntry, listEntries, type ChronicEntry } from '../../../services/chronic';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -71,11 +72,11 @@ export default function ChronicTracker() {
       <TextInput placeholder="Accommodations needed (optional)" placeholderTextColor={palette.text+"77"} value={accom} onChangeText={setAccom} style={s.input} />
       <TextInput placeholder="Notes (optional)" placeholderTextColor={palette.text+"77"} value={notes} onChangeText={setNotes} style={s.input} />
       <A11yPressable onPress={async()=>{ try { await addEntry({ date: new Date().toISOString(), symptom: symptom.trim(), severity: Number(severity)||undefined, trigger, accommodations: accom, notes }); setSymptom(''); setSeverity(''); setTrigger(''); setAccom(''); setNotes(''); load(); } catch { Alert.alert('Add failed','Unable to save entry'); } }} style={s.button}><Text style={s.buttonText}>Add Entry</Text></A11yPressable>
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
         <A11yPressable onPress={exportCSV} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text></A11yPressable>
         <A11yPressable onPress={exportJSON} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export JSON</Text></A11yPressable>
         <A11yPressable onPress={importTemplate} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Import Template</Text></A11yPressable>
-      </View>
+      </GapView>
       <FlatList data={items} keyExtractor={i => i.id!} renderItem={({item}) => (
         <View style={s.card}>
           <Text style={s.cardTitle}>{new Date(item.date).toLocaleString()} — {item.symptom} (sev {item.severity ?? '-'})</Text>

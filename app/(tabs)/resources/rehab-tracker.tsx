@@ -5,6 +5,7 @@ import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -73,28 +74,28 @@ export default function RehabTracker() {
       <Text style={s.title}>Rehab Progress Tracker</Text>
       <DisclaimerBanner type="medical" compact />
       <Text style={s.text}>Log small wins to boost morale and share with providers.</Text>
-      <View style={{ flexDirection:'row', gap:8, marginBottom: 6 }}>
+      <GapView style={{ flexDirection:'row', marginBottom: 6 }} gap={8}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setView('local')} accessibilityRole='button' accessibilityState={{ selected: view==='local' }} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></A11yPressable>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { setView('cloud'); loadCloud(false); }} accessibilityRole='button' accessibilityState={{ selected: view==='cloud' }} style={[s.chip, view==='cloud' && s.chipActive]}><Text style={{ color: view==='cloud'? palette.onPrimary: palette.text, fontWeight:'700' }}>Cloud</Text></A11yPressable>
-      </View>
+      </GapView>
       {view==='local' && (
       <>
       <TextInput placeholder="Walking distance (e.g., 300m)" placeholderTextColor={palette.text+'77'} value={walk} onChangeText={setWalk} style={s.input} />
       <TextInput placeholder="Grip strength (e.g., 20kg)" placeholderTextColor={palette.text+'77'} value={grip} onChangeText={setGrip} style={s.input} />
       <TextInput placeholder="Pain‑reduced days this week" placeholderTextColor={palette.text+'77'} value={painFree} onChangeText={setPainFree} style={s.input} />
       <TextInput placeholder="Notes" placeholderTextColor={palette.text+'77'} value={note} onChangeText={setNote} style={s.input} />
-      <View style={{ flexDirection:'row', gap:8 }}>
+      <GapView style={{ flexDirection:'row' }} gap={8}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={add} style={[s.button,{ flex:1 }]} accessibilityLabel='Log progress entry'><Text style={s.buttonText}>Log Progress</Text></A11yPressable>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Sync local logs to cloud'><Text style={[s.buttonText,{ color: palette.text }]}>Sync</Text></A11yPressable>
-      </View>
+      </GapView>
       </>
       )}
       {view==='local' ? (
       <View>
-      <View style={{ flexDirection:'row', gap:8 }}>
+      <GapView style={{ flexDirection:'row' }} gap={8}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={exportJSON} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Export logs to JSON'><Text style={[s.buttonText,{ color: palette.text }]}>Export JSON</Text></A11yPressable>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={importTemplate} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Import template JSON'><Text style={[s.buttonText,{ color: palette.text }]}>Import Template</Text></A11yPressable>
-      </View>
+      </GapView>
       <FlatList data={items} keyExtractor={i=>i.id} renderItem={({item:i})=> (
         <View style={s.card}>
           <Text style={s.cardTitle}>{i.date}</Text>

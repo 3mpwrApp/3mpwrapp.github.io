@@ -1,5 +1,12 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
+
+let AsyncStorage: any;
+try {
+  AsyncStorage = require('@react-native-async-storage/async-storage').default;
+} catch {
+  // Fallback for web or environments without AsyncStorage
+  AsyncStorage = null;
+}
 
 export type First7StepId =
   | 'capture_basics'
@@ -52,8 +59,8 @@ export const First7Context = React.createContext<Ctx>({
 
 export function First7Provider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<First7State>(defaultState);
-  React.useEffect(() => { (async()=>{ try { const raw = await AsyncStorage.getItem(KEY); if (raw) setState({ ...defaultState, ...JSON.parse(raw) }); } catch {} })(); }, []);
-  const persist = React.useCallback(async(next: First7State)=>{ setState(next); try{ await AsyncStorage.setItem(KEY, JSON.stringify(next)); } catch {} },[]);
+  React.useEffect(() => { (async()=>{ if (!AsyncStorage) return; try { const raw = await AsyncStorage.getItem(KEY); if (raw) setState({ ...defaultState, ...JSON.parse(raw) }); } catch {} })(); }, []);
+  const persist = React.useCallback(async(next: First7State)=>{ setState(next); if (!AsyncStorage) return; try{ await AsyncStorage.setItem(KEY, JSON.stringify(next)); } catch {} },[]);
   const toggle = React.useCallback(async(id: First7StepId, done?: boolean)=>{
     const next = { ...state, completed: { ...state.completed, [id]: typeof done==='boolean'? done: !state.completed[id] } };
     await persist(next);

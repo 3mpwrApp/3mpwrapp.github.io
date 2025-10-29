@@ -3,6 +3,7 @@ import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { addGoal, deleteGoal, listGoals, updateGoal, type RTWGoal } from '../../../services/rtw';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -44,10 +45,10 @@ export default function RTWPlanner() {
           <Text style={s.cardTitle}>{item.title}</Text>
           {!!item.supports?.length && <Text style={s.cardText}>Supports: {item.supports.join(', ')}</Text>}
           {!!item.steps?.length && <Text style={s.cardText}>Steps: {item.steps.join(' → ')}</Text>}
-          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
             <A11yPressable onPress={async()=>{ try{ await updateGoal(item.id!, { done: !item.done }); load(); } catch{} }} style={s.smallBtn}><Text style={s.smallBtnText}>{item.done? 'Mark not-done':'Mark done'}</Text></A11yPressable>
             <A11yPressable onPress={async()=>{ try{ await deleteGoal(item.id!); setItems(prev=>prev.filter(x=>x.id!==item.id)); } catch{} }} style={s.smallBtn}><Text style={s.smallBtnText}>Delete</Text></A11yPressable>
-          </View>
+          </GapView>
         </View>
       )} />
     </View>

@@ -16,9 +16,9 @@ import {
   View,
 } from 'react-native';
 
+import { GapView } from '../components/GapView';
 import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useAppPalette } from '../theme/usePalette';
-import { GapView } from '../components/GapView';
 
 export default function SafeLandingPage() {
   const router = useRouter();

@@ -4,6 +4,7 @@ import React from "react";
 import { SectionList, StyleSheet, Text, useColorScheme, View } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
+import GapView from '../../../components/GapView';
 import SearchBar from '../../../components/SearchBar';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/A11Y";
 import { channels, seedComments, seedThreads } from "../../../data/community";
@@ -68,11 +69,11 @@ function ScreenInner() {
       </Text>
       <Text style={styles.subtitle}>Connect, share, and support each other through various community features.</Text>
 
-      <View style={{ flexDirection:'row', gap:8, marginBottom:8 }}>
+      <GapView style={{ flexDirection:'row', marginBottom:8 }} gap={8}>
         <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
         <FilterChip label="Provinces" active={mode==='provinces'} onPress={() => setMode('provinces')} palette={palette} />
         <FilterChip label="Topics" active={mode==='topics'} onPress={() => setMode('topics')} palette={palette} />
-      </View>
+      </GapView>
 
       <SearchBar
         value={query}
@@ -107,7 +108,7 @@ function ScreenInner() {
           const rows: Feature[][] = [];
           for (let i = 0; i < fMatches.length; i += 2) rows.push(fMatches.slice(i, i + 2));
           return rows.map((row, idx) => (
-            <View key={`feat-row-${idx}`} style={styles.featuresRow}>
+            <GapView key={`feat-row-${idx}`} style={styles.featuresRow} gap={12}>
               {row.map((f) => (
                 <A11yPressable
                   key={f.key}
@@ -121,7 +122,7 @@ function ScreenInner() {
                 </A11yPressable>
               ))}
               {row.length === 1 && <View style={[styles.featureButton, { opacity: 0 }]} />}
-            </View>
+            </GapView>
           ));
         })()}
       </View>
@@ -218,7 +219,6 @@ function createStyles(palette: Palette) {
     featuresContainer: { marginBottom: 16 },
     featuresRow: { 
       flexDirection: 'row', 
-      gap: 12, 
       marginBottom: 12,
       justifyContent: 'space-between'
     },

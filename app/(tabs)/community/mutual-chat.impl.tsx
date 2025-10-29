@@ -5,6 +5,7 @@ import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import { isCloudConsentEnabled } from '../../../services/consent';
@@ -89,7 +90,7 @@ export default function MutualChatImpl() {
         {!!roster.some(r => r.typing) && <Text style={s.text}>Someone is typing…</Text>}
       </View>
       {items.map(i => (<Text key={i.id} style={s.text}>• {new Date(i.createdAt?.toDate?.()||Date.now()).toLocaleTimeString()} — {i.message || i.text}</Text>))}
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
+      <GapView style={{ flexDirection:'row', marginTop: 8 }} gap={8}>
         <TextInput 
           placeholder="Message" 
           placeholderTextColor={palette.text+'77'} 
@@ -135,7 +136,7 @@ export default function MutualChatImpl() {
         }} style={s.button}>
           <Text style={s.buttonText}>Send</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </View>
   );
 }

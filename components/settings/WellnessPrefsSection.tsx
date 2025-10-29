@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Button, Text, View } from 'react-native';
 
 import { useAppPalette } from '../../theme/usePalette';
+import GapView from '../GapView';
 
 export default function WellnessPrefsSection() {
   const palette = useAppPalette();
@@ -14,10 +15,10 @@ export default function WellnessPrefsSection() {
   return (
     <View>
       <Text style={{ color: palette.text, opacity: 0.9, marginTop: 10, marginBottom: 6 }}>Reflections Calendar: default tap action</Text>
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
         <Button title={`Details ${tap==='details'?'✓':''}`} onPress={()=> saveTap('details')} />
         <Button title={`Editor ${tap==='editor'?'✓':''}`} onPress={()=> saveTap('editor')} />
-      </View>
+      </GapView>
       <View style={{ height:10 }} />
       <Text style={{ color: palette.text, opacity: 0.9, marginTop: 10, marginBottom: 6 }}>Backdate via server (when adding past days)</Text>
       <Button title={backdate? 'Disable backdating' : 'Enable backdating'} onPress={()=> saveBackdate(!backdate)} />

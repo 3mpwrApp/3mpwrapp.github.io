@@ -12,6 +12,7 @@ import {
 } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/A11Y";
 import { useAuth } from "../../../context/AuthContext";
 import { channels as seedChannels } from "../../../data/community";
@@ -118,7 +119,7 @@ function ChannelInner() {
 								return new Date(ms).toLocaleString();
 							})()}
 						</Text>
-						<View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+						<GapView style={{ flexDirection:'row', marginTop:6 }} gap={8}>
 							{!!item.authorUid && item.authorUid !== (require('../../../firebase/config').auth.currentUser?.uid || 'anon') && !isBlocked(item.authorUid) && (
 								<A11yPressable onPress={() => { const me = require('../../../firebase/config').auth.currentUser?.uid || 'anon'; const parts = [String(me), String(item.authorUid)].sort(); const threadId = parts.join('__'); router.push(`/(tabs)/community/dms/${threadId}` as Href); }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}> 
 									<Text style={{ color: palette.text, fontWeight:'700' }}>Start DM</Text>
@@ -129,16 +130,16 @@ function ChannelInner() {
 									<Text style={{ color: palette.text, fontWeight:'700' }}>Block</Text>
 								</A11yPressable>
 							)}
-						</View>
+						</GapView>
 						{isAdmin && (
-							<View style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+							<GapView style={{ flexDirection:'row', marginTop:6 }} gap={8}>
 								<A11yPressable onPress={async () => { try { await updateDoc(doc(db,'threads', item.id), { flagged: !(item.flagged===true) }); } catch {} }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}>
 									<Text style={{ color: palette.text }}>{item.flagged ? 'Unflag' : 'Flag'}</Text>
 								</A11yPressable>
 								<A11yPressable onPress={async () => { try { await updateDoc(doc(db,'threads', item.id), { hidden: !(item.hidden===true) }); } catch {} }} style={({pressed})=>[{ borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal:10, paddingVertical:6, borderRadius:6 }, pressed && {opacity:0.8}]}>
 									<Text style={{ color: palette.text }}>{item.hidden ? 'Unhide' : 'Hide'}</Text>
 								</A11yPressable>
-							</View>
+							</GapView>
 						)}
 					</A11yPressable>
 				)}

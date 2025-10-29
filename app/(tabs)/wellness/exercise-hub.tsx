@@ -3,6 +3,7 @@ import { Alert, Linking, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { exercises } from '../../../data/exercises';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
@@ -101,7 +102,7 @@ export default function ExerciseHub() {
       >
         <Text style={s.btnText}>Export Favorites (CSV)</Text>
       </A11yPressable>
-      <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 8 }}>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 8 }} gap={8}>
         {(['all','wheelchair','limited-mobility','sensory-friendly'] as const).map(k => (
           <A11yPressable
             key={k}
@@ -125,7 +126,7 @@ export default function ExerciseHub() {
         >
           <Text style={{ color: shortOnly? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('wellness.exerciseHub.shortFilter','<3m')}</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       {combined.map((e: any) => (
         <View key={e.id} style={s.card}>
           <Text style={s.cardTitle} accessibilityLabel={`Exercise: ${e.title}, ${e.minutes} minutes`}>{e.title} • {e.minutes} min</Text>

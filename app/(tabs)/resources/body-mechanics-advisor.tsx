@@ -3,6 +3,7 @@ import { Alert, Share, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { analyzeBodyVideo } from '../../../services/body';
@@ -79,7 +80,7 @@ export default function BodyMechanicsAdvisor() {
       <View style={s.infoCard} accessibilityLabel={t('bodyMechanics.howToUse','How to use Body Mechanics Advisor')} accessibilityRole="summary">
         <Text style={[s.cardTitle,{ color: palette.primary }]}>{t('bodyMechanics.howToUseTitle','How to Use')}</Text>
         <Text style={s.text}>{t('bodyMechanics.instructions','Pick a short video of a daily task (typing, lifting, posture). The tool offers accessibility-first ergonomic suggestions. Not medical advice.')}</Text>
-        <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop:8 }}>
+        <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop:8 }} gap={8}>
           <A11yPressable onPress={shareAdvice} disabled={!advice.length} style={[s.smallBtn, !advice.length && { opacity:0.5 }]} accessibilityLabel={t('bodyMechanics.export','Export suggestions')} accessibilityHint={t('bodyMechanics.exportHint','Shares current suggestions as a text file.')} accessibilityRole="button">
             <Text style={s.smallBtnText}>{t('bodyMechanics.exportBtn','Share')}</Text>
           </A11yPressable>
@@ -89,7 +90,7 @@ export default function BodyMechanicsAdvisor() {
           <A11yPressable onPress={()=>{ setAdvice([]); setVideoName(''); }} style={s.smallBtn} accessibilityLabel={t('bodyMechanics.reset','Reset advisor')} accessibilityHint={t('bodyMechanics.resetHint','Clears selected video and suggestions.')} accessibilityRole="button">
             <Text style={s.smallBtnText}>{t('bodyMechanics.resetBtn','Reset')}</Text>
           </A11yPressable>
-        </View>
+        </GapView>
       </View>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>AI Body Mechanics Advisor</Text>
       <DisclaimerBanner type="medical" compact />

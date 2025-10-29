@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import GapView from "../../../components/GapView";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
     MAX_FONT_SCALE,
@@ -177,7 +178,7 @@ export default function RightsChecker() {
             <Text style={styles.infoText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.infoLine3','This tool does not give legal advice; consult official sources.')}</Text>
           </View>
         )}
-        <View style={styles.actionRow}>
+        <GapView style={styles.actionRow} gap={8}>
           <A11yPressable hitSlop={HIT_SLOP_8} onPress={reset} accessibilityRole="button" accessibilityLabel={t('rightsChecker.resetAnswers','Reset answers')} accessibilityHint={t('rightsChecker.resetHint','Clears all selected answers.')} style={[styles.smallBtn,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}>
             <Text style={[styles.smallBtnText,{ color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.reset','Reset')}</Text>
           </A11yPressable>
@@ -187,7 +188,7 @@ export default function RightsChecker() {
           <A11yPressable hitSlop={HIT_SLOP_8} onPress={exportSummary} disabled={!summary} accessibilityRole="button" accessibilityLabel={t('rightsChecker.exportSummary','Share or export summary file')} accessibilityHint={t('rightsChecker.exportSummaryHint','Opens system share sheet with a text file of your rights summary.')} style={[styles.smallBtn,{ opacity: summary?1:0.5 }]}>
             <Text style={styles.smallBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.export','Export')}</Text>
           </A11yPressable>
-        </View>
+        </GapView>
       </View>
       <Text
         ref={titleRef}
@@ -289,12 +290,12 @@ function Question({ title, children }: { title: string; children: React.ReactNod
       marginTop: 10,
       marginBottom: 6,
     },
-    row: { flexDirection: "row", gap: 8, marginBottom: 6, flexWrap: "wrap" },
+    row: { flexDirection: "row", marginBottom: 6, flexWrap: "wrap" },
   });
   return (
     <View>
       <Text style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{title}</Text>
-      <View style={s.row}>{children}</View>
+      <GapView style={s.row} gap={8}>{children}</GapView>
     </View>
   );
 }
@@ -331,7 +332,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     infoTitle: { color: palette.primary, fontWeight:'700', fontSize:16 },
     infoToggle: { color: palette.text, fontSize:12 },
     infoText: { color: palette.text, marginTop:4 },
-    actionRow: { flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:8 },
+    actionRow: { flexDirection:'row', flexWrap:'wrap', marginTop:8 },
     smallBtn: { backgroundColor: palette.primary, paddingHorizontal:14, paddingVertical:10, borderRadius:8 },
     smallBtnText: { color: palette.onPrimary, fontWeight:'700' },
   });

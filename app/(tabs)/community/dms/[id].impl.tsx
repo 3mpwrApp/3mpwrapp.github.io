@@ -3,6 +3,7 @@ import React from 'react';
 import { FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../../components/A11yPressable';
+import GapView from '../../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../../constants/A11Y';
 import { useAuth } from '../../../../context/AuthContext';
 import { useBlocks } from '../../../../store/blocks';
@@ -79,12 +80,12 @@ export default function DmThreadScreenImpl() {
         )}
         contentContainerStyle={{ paddingTop: 8 }}
       />
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
+      <GapView style={{ flexDirection:'row', marginTop: 8 }} gap={8}>
         <TextInput style={[s.input,{ flex:1 }]} placeholder="Message" placeholderTextColor={palette.text+'77'} value={text} onChangeText={setText} />
         <A11yPressable accessibilityRole="button" accessibilityLabel="Send" hitSlop={HIT_SLOP_8} onPress={send} style={s.button}>
           <Text style={s.buttonText}>Send</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </View>
   );
 }

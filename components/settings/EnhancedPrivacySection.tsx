@@ -15,12 +15,13 @@ import { usePrivacy } from '../../store/privacy';
 import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
+import GapView from '../GapView';
 
 function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number = 1) {
   return StyleSheet.create({
     sectionSubtitle: { color:palette.text, fontSize:Math.round(14*factor), opacity:0.7, marginBottom:16, lineHeight:Math.round(20*factor) },
     description: { color:palette.text, fontSize:Math.round(14*factor), opacity:0.8, marginBottom:12, lineHeight:Math.round(20*factor) },
-    buttonRow: { flexDirection:'row', gap:8, flexWrap:'wrap' },
+    buttonRow: { flexDirection:'row', flexWrap:'wrap' },
     button: { backgroundColor:palette.card, paddingHorizontal:16, paddingVertical:8, borderRadius:6, borderWidth:1, borderColor:palette.muted, minHeight:44, minWidth:60, alignItems:'center', justifyContent:'center' },
     buttonActive: { backgroundColor:palette.primary, borderColor:palette.primary },
     buttonText: { color:palette.text, fontSize:Math.round(14*factor), fontWeight:'500' },
@@ -28,7 +29,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number 
     rowLabel: { color:palette.text, opacity:0.9, marginTop:10, marginBottom:6, fontSize:Math.round(14*factor) },
     input: { borderWidth:1, borderColor:palette.muted, padding:12, borderRadius:8, marginBottom:10, color:palette.text, fontSize:Math.round(14*factor), minHeight:44 },
     backupSection: { marginTop:16, padding:16, backgroundColor:palette.card, borderRadius:8, borderWidth:1, borderColor:palette.muted },
-    backupButtons: { marginTop:16, gap:8 },
+    backupButtons: { marginTop:16 },
     backupButton: { flexDirection:'row', alignItems:'center', justifyContent:'center', padding:12, borderWidth:1, borderColor:palette.primary, borderRadius:8, minHeight:44 },
     backupButtonText: { color:palette.primary, fontSize:Math.round(14*factor), fontWeight:'500', marginLeft:8 },
     dangerButton: { borderColor:palette.error },
@@ -98,13 +99,13 @@ export default function EnhancedPrivacySection() {
       <View style={{ marginTop:8, marginBottom:8 }}>
         <Text style={s.sectionSubtitle} accessibilityRole='header'>{t('settings.privacy.autoLock','Auto-Lock Timeout')}</Text>
         <Text style={s.description}>{t('settings.privacy.autoLockDesc','Minutes before app locks')}</Text>
-        <View style={s.buttonRow}>
+        <GapView style={s.buttonRow} gap={8}>
           {[1,5,15,30].map(m => (
             <A11yPressable key={m} style={[s.button, autoLockTimeout === m && s.buttonActive]} onPress={()=> setAutoLockTimeout(m)} accessibilityRole='button' accessibilityState={{ selected: autoLockTimeout === m }} accessibilityLabel={`Set auto-lock to ${m} minutes`} hitSlop={HIT_SLOP_8}>
               <Text style={[s.buttonText, autoLockTimeout === m && s.buttonTextActive]}>{m}m</Text>
             </A11yPressable>
           ))}
-        </View>
+        </GapView>
       </View>
   <AccessibilityToggle title={t('settings.privacy.analytics','Opt Out of Analytics')} description={t('settings.privacy.analyticsDesc',"Don't share usage data")} value={analyticsOptOut} onValueChange={(v)=>{ setAnalyticsOptOut(v); try { setTelemetryConsent(!v); } catch {} }} icon='analytics' testID='analytics-toggle' />
   <AccessibilityToggle title='Cloud Features (Chat & Sync)' description='Allow optional cloud features like community chat and device tokens' value={cloudOn} onValueChange={(v)=>{ setCloudOn(!!v); try { setCloudConsent(!!v); } catch {} }} icon='cloud-outline' testID='cloud-consent-toggle' />
@@ -121,10 +122,10 @@ export default function EnhancedPrivacySection() {
             <TextInput style={s.input} placeholder='Username' value={username} onChangeText={setUsername} autoCapitalize='none' autoCorrect={false} accessibilityLabel='WebDAV username' />
             <Text style={s.rowLabel}>Password (optional)</Text>
             <TextInput style={s.input} placeholder='Password' value={password} onChangeText={setPassword} secureTextEntry accessibilityLabel='WebDAV password' />
-            <View style={s.buttonRow}>
+            <GapView style={s.buttonRow} gap={8}>
               <A11yPressable style={s.backupButton} onPress={onConnectBYOC} accessibilityRole='button' accessibilityLabel='Connect personal storage' hitSlop={HIT_SLOP_8}><Ionicons name='cloud-done' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Connect Storage</Text></A11yPressable>
               <A11yPressable style={[s.backupButton, s.dangerButton]} onPress={onClearBYOC} accessibilityRole='button' accessibilityLabel='Clear storage session' hitSlop={HIT_SLOP_8}><Ionicons name='close' size={16} color={palette.error} /><Text style={[s.backupButtonText, s.dangerButtonText]}>Clear Session</Text></A11yPressable>
-            </View>
+            </GapView>
             {probe && (<Text style={[s.description, { marginTop:8 }]}>Connection: {probe.ok ? 'OK' : 'Failed'}{typeof probe.status==='number' ? ` (HTTP ${probe.status})` : ''}</Text>)}
           </View>
         )}
@@ -133,12 +134,12 @@ export default function EnhancedPrivacySection() {
           <TextInput style={s.input} placeholder='New passcode' secureTextEntry onSubmitEditing={(e)=> setPasscode(e.nativeEvent.text || undefined)} accessibilityLabel='New passcode' accessibilityHint='Enter a new passcode for the app' />
         </View>
         <AccessibilityToggle title='Wellness Lock' description='Require passcode to access wellness features' value={state.lockWellness ?? false} onValueChange={setLockWellness} icon='heart-outline' testID='wellness-lock-toggle' />
-        <View style={s.backupButtons}>
+        <GapView style={s.backupButtons} gap={8}>
           <A11yPressable style={s.backupButton} onPress={onExport} accessibilityRole='button' accessibilityLabel='Export backup' hitSlop={HIT_SLOP_8}><Ionicons name='download' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Export Backup</Text></A11yPressable>
           <A11yPressable style={s.backupButton} onPress={onImport} accessibilityRole='button' accessibilityLabel='Import backup' hitSlop={HIT_SLOP_8}><Ionicons name='cloud-upload' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Import Backup</Text></A11yPressable>
           <A11yPressable style={[s.backupButton, s.dangerButton]} onPress={onClear} accessibilityRole='button' accessibilityLabel='Clear all data' hitSlop={HIT_SLOP_8}><Ionicons name='trash' size={16} color={palette.error} /><Text style={[s.backupButtonText, s.dangerButtonText]}>Clear All Data</Text></A11yPressable>
           <A11yPressable style={s.backupButton} onPress={onRetention} accessibilityRole='button' accessibilityLabel='Run retention sweep' hitSlop={HIT_SLOP_8}><Ionicons name='time-outline' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Prune Old Cache</Text></A11yPressable>
-        </View>
+        </GapView>
       </View>
     </View>
   );

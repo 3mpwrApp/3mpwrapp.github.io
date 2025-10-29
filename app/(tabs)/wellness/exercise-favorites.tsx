@@ -3,6 +3,7 @@ import { FlatList, Linking, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -55,10 +56,10 @@ export default function ExerciseFavorites() {
         renderItem={({ item }) => (
           <View style={s.row}>
             <Text style={s.rowText}>{item.title}</Text>
-            <View style={{ flexDirection:'row', gap:8 }}>
+            <GapView style={{ flexDirection:'row' }} gap={8}>
               <A11yPressable onPress={()=> Linking.openURL(item.url)} style={s.btn} accessibilityRole="button" accessibilityLabel={`Open exercise link for ${item.title}`} hitSlop={HIT_SLOP_8}><Text style={s.btnText}>Open</Text></A11yPressable>
               <A11yPressable onPress={()=> remove(item.id)} style={s.btn} accessibilityRole="button" accessibilityLabel={`Remove ${item.title} from favorites`} hitSlop={HIT_SLOP_8}><Text style={s.btnText}>Remove</Text></A11yPressable>
-            </View>
+            </GapView>
           </View>
         )}
         ListEmptyComponent={<Text style={{ color: palette.text, opacity: 0.9 }}>No favorites yet.</Text>}

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -46,11 +47,11 @@ export default function PolicySimulator() {
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Interactive Policy Simulator</Text>
       <DisclaimerBanner type="legal" compact />
       <Text style={s.text}>{step.text}</Text>
-      <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
+      <GapView style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 8 }} gap={8}>
         {step.choices.map((c) => (
           <A11yPressable hitSlop={HIT_SLOP_8} key={c.id} onPress={() => choose(c)} accessibilityRole='button' accessibilityLabel={c.label} style={s.chip}><Text style={s.chipText}>{c.label}</Text></A11yPressable>
         ))}
-      </View>
+      </GapView>
       {!!log.length && (
         <View style={{ marginTop: 12 }}>
           <Text style={s.cardTitle}>Impacts</Text>

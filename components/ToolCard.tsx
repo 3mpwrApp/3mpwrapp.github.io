@@ -6,10 +6,12 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useMemo } from 'react';
-import { Pressable, StyleSheet, View, Text } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import type { ToolMetadata } from '../services/phase6ToolRegistry';
 import { useAppPalette } from '../theme/usePalette';
+
+import GapView from './GapView';
 
 // Lightweight local TextV2 fallback used by ToolCard when a shared TextV2 module isn't available
 // Keeps API small: variant, style, numberOfLines
@@ -114,7 +116,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
           />
         </View>
         <View style={styles.titleContainer}>
-          <View style={styles.titleRow}>
+          <GapView style={styles.titleRow} gap={8}>
             <TextV2 variant="subtitle2" style={styles.title}>
               {tool.name}
             </TextV2>
@@ -129,7 +131,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
                 </TextV2>
               </View>
             )}
-          </View>
+          </GapView>
         </View>
       </View>
 
@@ -138,10 +140,11 @@ export const ToolCard: React.FC<ToolCardProps> = ({
       </TextV2>
 
       {showMetadata && (
-        <View style={styles.metadataContainer}>
+        <GapView style={styles.metadataContainer} gap={8}>
           {/* Tool Type Badge */}
-          <View
+          <GapView
             style={[styles.badge, styles.categoryBadge]}
+            gap={4}
             accessible
             accessibilityLabel={`Tool type: ${tool.category}`}
           >
@@ -154,12 +157,13 @@ export const ToolCard: React.FC<ToolCardProps> = ({
             <TextV2 variant="caption" style={styles.categoryText}>
               {tool.category}
             </TextV2>
-          </View>
+          </GapView>
 
           {/* ML Status Badge */}
           {tool.mlModels && tool.mlModels.length > 0 && (
-            <View
+            <GapView
               style={[styles.badge, styles.mlBadge]}
+              gap={4}
               accessible
               accessibilityLabel={`AI-powered with ${tool.mlModels.length} model${tool.mlModels.length > 1 ? 's' : ''}`}
             >
@@ -172,13 +176,14 @@ export const ToolCard: React.FC<ToolCardProps> = ({
               <TextV2 variant="caption" style={styles.mlText}>
                 AI
               </TextV2>
-            </View>
+            </GapView>
           )}
 
           {/* Energy Level Badge */}
           {tool.energyOptimal && tool.energyOptimal !== 'any' && (
-            <View
+            <GapView
               style={[styles.badge, styles.energyBadge]}
+              gap={4}
               accessible
               accessibilityLabel={`Optimal for ${tool.energyOptimal} energy levels`}
             >
@@ -191,13 +196,14 @@ export const ToolCard: React.FC<ToolCardProps> = ({
               <TextV2 variant="caption" style={styles.energyText}>
                 {tool.energyOptimal}
               </TextV2>
-            </View>
+            </GapView>
           )}
 
           {/* Feedback Badge */}
           {tool.requiresFeedback && (
-            <View
+            <GapView
               style={[styles.badge, styles.feedbackBadge]}
+              gap={4}
               accessible
               accessibilityLabel="Your feedback improves this tool"
             >
@@ -210,13 +216,14 @@ export const ToolCard: React.FC<ToolCardProps> = ({
               <TextV2 variant="caption" style={styles.feedbackText}>
                 Learns
               </TextV2>
-            </View>
+            </GapView>
           )}
 
           {/* Personalization Badge */}
           {tool.isPersonalizable && (
-            <View
+            <GapView
               style={[styles.badge, styles.personalizableBadge]}
+              gap={4}
               accessible
               accessibilityLabel="Personalized to you"
             >
@@ -229,9 +236,9 @@ export const ToolCard: React.FC<ToolCardProps> = ({
               <TextV2 variant="caption" style={styles.personalizableText}>
                 Personalized
               </TextV2>
-            </View>
+            </GapView>
           )}
-        </View>
+        </GapView>
       )}
 
       {/* Accessibility Features */}
@@ -310,7 +317,6 @@ const createStyles = (palette: any) =>
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-      gap: 8,
     },
     title: {
       color: palette.text.primary,
@@ -324,7 +330,6 @@ const createStyles = (palette: any) =>
     metadataContainer: {
       flexDirection: 'row',
       flexWrap: 'wrap',
-      gap: 8,
       marginBottom: 8,
     },
     badge: {
@@ -333,7 +338,6 @@ const createStyles = (palette: any) =>
       paddingHorizontal: 8,
       paddingVertical: 4,
       borderRadius: 6,
-      gap: 4,
     },
     badgeIcon: {
       marginRight: 2,

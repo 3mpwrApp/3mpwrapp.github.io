@@ -3,6 +3,7 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-nati
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -53,14 +54,14 @@ export default function AppealCoach() {
       <DisclaimerBanner type="legal" compact />
       <DisclaimerBanner type="ai" compact />
       <Text style={s.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('appealCoach.instructions','Paste your denial letter or ask a question to get step-by-step guidance. Use Copy to reuse the assistant\'s last response.')}</Text>
-      <View style={s.actionsRow}>
+      <GapView style={s.actionsRow} gap={8}>
         <A11yPressable onPress={share} hitSlop={HIT_SLOP_8} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('appealCoach.shareBtn','Share conversation')}><Text style={s.secondaryBtnText}>{t('appealCoach.share','Share')}</Text></A11yPressable>
         <A11yPressable onPress={reset} hitSlop={HIT_SLOP_8} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('appealCoach.resetBtn','Clear')}><Text style={s.secondaryBtnText}>{t('appealCoach.reset','Reset')}</Text></A11yPressable>
-      </View>
-      <View style={s.inputRow}>
+      </GapView>
+      <GapView style={s.inputRow} gap={8}>
         <TextInput value={input} onChangeText={setInput} placeholder={t('appealCoach.promptPlaceholder','Ask a question or paste text')} placeholderTextColor={palette.text+'77'} style={s.input} accessibilityLabel={t('appealCoach.promptPlaceholder','Ask a question or paste text')} />
         <A11yPressable onPress={send} style={s.sendBtn} accessibilityRole='button' accessibilityLabel={t('appealCoach.sendBtn','Send')} hitSlop={HIT_SLOP_8}><Text style={s.sendBtnText}>{t('appealCoach.sendBtn','Send')}</Text></A11yPressable>
-      </View>
+      </GapView>
       {messages.map((m, i) => (
         <View key={i} style={[s.msg, m.role==='coach' ? s.msgCoach : s.msgUser]}>
           <Text style={s.msgLabel}>{m.role==='coach' ? t('appealCoach.coach','Coach') : t('appealCoach.you','You')}</Text>
@@ -76,10 +77,10 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     container: { flex:1, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: '700', color: palette.text },
     subtitle: { color: palette.text, opacity: 0.9, marginVertical: 8 },
-    actionsRow: { flexDirection: 'row', gap: 8, marginBottom: 8 },
+    actionsRow: { flexDirection: 'row', marginBottom: 8 },
     secondaryBtn: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingVertical: 10, paddingHorizontal: 12, backgroundColor: palette.surface },
     secondaryBtnText: { color: palette.text, fontWeight: '700' },
-    inputRow: { flexDirection: 'row', gap: 8, alignItems: 'center', marginTop: 8 },
+    inputRow: { flexDirection: 'row', alignItems: 'center', marginTop: 8 },
     input: { flex: 1, borderWidth: 1, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, color: palette.text },
     sendBtn: { backgroundColor: palette.primary, paddingHorizontal: 16, paddingVertical: 12, borderRadius: 8 },
     sendBtnText: { color: palette.onPrimary, fontWeight: '700' },

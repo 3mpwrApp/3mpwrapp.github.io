@@ -2,6 +2,7 @@ import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { matchDBTSkills } from '../../../services/wellness/dbtMatcher';
@@ -17,18 +18,18 @@ export default function DBTMatcher() {
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.dbt.title','DBT Skill Matcher')}</Text>
       <DisclaimerBanner type="medical" compact />
-      <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginBottom:8 }}>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginBottom:8 }} gap={8}>
         {(['sad','angry','anxious','overwhelmed','numb'] as const).map(k => (
           <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" key={k} onPress={()=> setState(k)} style={[s.chip, state===k && { backgroundColor: palette.primary }]}>
             <Text style={{ color: state===k? palette.onPrimary : palette.text }}>{t(`wellness.dbt.${k}`, k)}</Text>
           </Pressable>
         ))}
-      </View>
-      <View style={{ gap:8 }}>
+      </GapView>
+      <GapView style={{}} gap={8}>
         {skills.map((sug,i)=> (
           <View key={i} style={s.card}><Text style={{ color: palette.text }}>{sug}</Text></View>
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }

@@ -3,6 +3,7 @@ import { FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useBlocks } from '../../../store/blocks';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -17,12 +18,12 @@ export default function CommunitySafety() {
       <Text style={s.title}>Community Safety</Text>
       <DisclaimerBanner type="general" compact />
       <Text style={s.text}>Manage your blocked users. Blocking hides content and prevents DMs from those users. Coming soon: report and moderation tools.</Text>
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
+      <GapView style={{ flexDirection:'row', marginTop: 8 }} gap={8}>
         <TextInput value={uid} onChangeText={setUid} placeholder="User ID" placeholderTextColor={palette.text+'77'} style={[s.input,{ flex:1 }]} />
         <A11yPressable accessibilityRole="button" accessibilityLabel="Block user" hitSlop={HIT_SLOP_8} onPress={async()=>{ if (uid.trim()) { await blockUser(uid.trim()); setUid(''); } }} style={s.button}>
           <Text style={s.buttonText}>Block</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       <FlatList
         data={blocked}
         keyExtractor={(i) => i}

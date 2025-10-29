@@ -3,6 +3,7 @@ import { Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "rea
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import GapView from "../../../components/GapView";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
@@ -92,12 +93,12 @@ export default function VoiceNotes() {
         <View key={n.id} style={s.card}>
           <Text style={s.cardTitle}>{n.date} — {n.topic || t('templates.voice.note','Note')}</Text>
           <Text style={s.cardText}>{caseLog(n)}</Text>
-          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
             <A11yPressable onPress={()=>copyNote(n)} style={s.smallBtn}><Text style={s.smallBtnText}>{t('common.copy','Copy')}</Text></A11yPressable>
             <A11yPressable onPress={()=>shareNote(n)} style={s.smallBtn}><Text style={s.smallBtnText}>{t('common.share','Share')}</Text></A11yPressable>
             <A11yPressable onPress={()=>pdfNote(n)} style={s.smallBtn}><Text style={s.smallBtnText}>{t('common.pdf','PDF')}</Text></A11yPressable>
             <A11yPressable onPress={()=>docNote(n)} style={s.smallBtn}><Text style={s.smallBtnText}>{t('common.doc','DOC')}</Text></A11yPressable>
-          </View>
+          </GapView>
         </View>
       ))}
     </ScrollView>

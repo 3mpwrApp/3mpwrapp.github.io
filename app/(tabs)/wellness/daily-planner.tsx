@@ -3,6 +3,7 @@ import { Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "rea
 
 import A11yPressable from "../../../components/A11yPressable";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
+import GapView from "../../../components/GapView";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -296,7 +297,7 @@ export default function DailyPlanner() {
         accessibilityHint="Generates your adaptive daily plan based on appointments and averages."
        />
       <View style={{ height: 8 }} />
-      <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
+      <GapView style={{ flexDirection: "row", flexWrap: "wrap" }} gap={8}>
         <A11yPressable onPress={morningTemplate} style={s.button}>
           <Text style={s.buttonText}>Morning template</Text>
         </A11yPressable>
@@ -317,7 +318,7 @@ export default function DailyPlanner() {
           accessibilityLabel="Add afternoon template"
           accessibilityHint="Adds an afternoon routine template to your appointments."
          />
-      </View>
+      </GapView>
       {!!plan && (
         <View style={s.card}>
           <Text style={s.cardTitle}>Plan</Text>

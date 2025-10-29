@@ -3,6 +3,7 @@ import React from 'react';
 import { FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../../components/A11yPressable';
+import GapView from '../../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../../constants/A11Y';
 import { useAuth } from '../../../../context/AuthContext';
 import { useBlocks } from '../../../../store/blocks';
@@ -66,7 +67,7 @@ export default function DMListScreenImpl() {
   return (
     <View style={s.container} accessibilityLabel="Direct Messages list" accessible>
       <Text style={s.title} accessibilityRole='header'>Direct Messages</Text>
-      <View style={{ flexDirection:'row', gap:8 }}>
+      <GapView style={{ flexDirection:'row' }} gap={8}>
         <TextInput
           accessibilityLabel="Enter user ID to start a direct message"
           style={[s.input, { flex:1 }]} placeholder="Enter exact user ID (prototype)"
@@ -74,7 +75,7 @@ export default function DMListScreenImpl() {
         <A11yPressable accessibilityRole="button" accessibilityLabel="Start direct message" hitSlop={HIT_SLOP_8} onPress={startDM} style={s.button}>
           <Text style={s.buttonText}>Start</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       <FlatList
         data={items}
         keyExtractor={(i) => i.id}

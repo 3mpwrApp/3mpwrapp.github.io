@@ -3,6 +3,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
 import { flagItem } from '../../../services/moderation';
@@ -26,19 +27,19 @@ export default function MutualAidImpl() {
     <View style={s.container}>
   <Text style={s.title}>Mutual Aid Engine (Beta)</Text>
       {isAdmin && (
-        <View style={{ gap:8 }}>
-          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+        <GapView style={{}} gap={8}>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>All</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>Approved</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>Pending</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>Trash</Text></A11yPressable>
-          </View>
-          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+          </GapView>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>Admin Pending</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>Admin Approved</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>Admin Trash</Text></A11yPressable>
-          </View>
-        </View>
+          </GapView>
+        </GapView>
       )}
       <TextInput placeholder="Type (rides, groceries, tutoring...)" placeholderTextColor={palette.text+'77'} value={type} onChangeText={setType} style={s.input} />
       <TextInput placeholder="Description" placeholderTextColor={palette.text+'77'} value={desc} onChangeText={setDesc} style={s.input} />
@@ -60,7 +61,7 @@ export default function MutualAidImpl() {
           <Text style={s.cardTitle}>{p.type} {p.city? `• ${p.city}`:''}</Text>
           <Text style={s.cardText}>{p.description}</Text>
           {!!p.contact && <Text style={s.cardText}>Contact: {p.contact}</Text>}
-          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap', marginTop: 6 }}>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 6 }} gap={8}>
             <TextInput placeholder="Reply..." placeholderTextColor={palette.text+'77'} value={reply} onChangeText={setReply} style={[s.input,{ flex:1 }]} />
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await respondToPost(p.id, reply); setReply(''); Alert.alert('Sent','Your response was sent.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Send</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await softDeletePost(p.id); setItems(prev=>prev.map(x=> x.id===p.id? { ...x, deleted: true }: x)); } catch{} }} style={s.smallBtn}><Text style={s.smallBtnText}>Delete</Text></A11yPressable>
@@ -68,7 +69,7 @@ export default function MutualAidImpl() {
             <Link href={{ pathname: '/(tabs)/community/mutual-chat', params: { id: p.id } }} asChild>
               <A11yPressable hitSlop={HIT_SLOP_8} style={s.smallBtn}><Text style={s.smallBtnText}>Open chat</Text></A11yPressable>
             </Link>
-          </View>
+          </GapView>
         </View>
       ))}
     </View>

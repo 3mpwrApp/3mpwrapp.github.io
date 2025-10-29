@@ -4,6 +4,7 @@ import React from "react";
 import { FlatList, StyleSheet, Text, TextInput, useColorScheme, View } from "react-native";
 
 import A11yPressable from '../../../../components/A11yPressable';
+import GapView from '../../../../components/GapView';
 import { HIT_SLOP_8, touchTarget } from "../../../../constants/A11Y";
 import { useAuth } from "../../../../context/AuthContext";
 import { db } from "../../../../firebase/config";
@@ -70,7 +71,7 @@ function ThreadInner() {
           <View style={styles.comment}>
             <Text style={styles.commentAuthor}>{item.authorUid || "User"}</Text>
             <Text style={styles.commentText}>{item.text}</Text>
-            <View style={{ flexDirection:'row', gap:8, marginTop: 4 }}>
+            <GapView style={{ flexDirection:'row', marginTop: 4 }} gap={8}>
               {!!item.authorUid && item.authorUid !== user?.uid && !isBlocked(item.authorUid) && (
                 <A11yPressable accessibilityRole="button" accessibilityLabel="Start DM" onPress={() => {
                   const parts = [String(user?.uid||'anon'), String(item.authorUid)].sort();
@@ -85,7 +86,7 @@ function ThreadInner() {
                   <Text style={styles.chipText}>Block</Text>
                 </A11yPressable>
               )}
-            </View>
+            </GapView>
           </View>
         )}
         contentContainerStyle={{ paddingTop: 8 }}

@@ -10,6 +10,7 @@ import {
     View,
 } from "react-native";
 
+import GapView from "../../../components/GapView";
 import SettingsLink from "../../../components/SettingsLink";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { resources } from "../../../data/resources";
@@ -73,7 +74,7 @@ export default function ResourceDetail() {
         <Text style={styles.title}>{resource?.title ?? "Resource"}</Text>
 
         {/* Meta chips */}
-        <View style={{ flexDirection: "row", gap: 8, marginBottom: 8 }}>
+        <GapView style={{ flexDirection: "row", marginBottom: 8 }} gap={8}>
           {!!catLabel && (
             <View
               style={styles.metaChip}
@@ -109,7 +110,7 @@ export default function ResourceDetail() {
               <Text style={styles.metaChipText}>{regionLabel}</Text>
             </View>
           )}
-        </View>
+        </GapView>
 
         <Text style={styles.text}>
           {resource?.description ?? "Details unavailable."}

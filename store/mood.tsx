@@ -1,7 +1,14 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
 import { usage } from '../services/usage';
+
+let AsyncStorage: any;
+try {
+  AsyncStorage = require('@react-native-async-storage/async-storage').default;
+} catch {
+  // Fallback for web or environments without AsyncStorage
+  AsyncStorage = null;
+}
 
 export interface MoodEntry {
   id: string;
@@ -35,6 +42,7 @@ export const MoodProvider: React.FC<{children: React.ReactNode}> = ({ children }
 
   useEffect(() => {
     (async () => {
+      if (!AsyncStorage) return;
       try {
         const raw = await AsyncStorage.getItem(STORAGE_KEY);
         if (raw) setEntries(JSON.parse(raw));
@@ -44,6 +52,7 @@ export const MoodProvider: React.FC<{children: React.ReactNode}> = ({ children }
 
   const persist = useCallback(async (next: MoodEntry[]) => {
     setEntries(next);
+    if (!AsyncStorage) return;
     try { await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch {}
   }, []);
 
