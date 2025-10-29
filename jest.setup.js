@@ -224,15 +224,3 @@ console.error = function(...args){
   if (shouldFilter(args[0], args)) return;
   return originalError.apply(this,args);
 };
-
-// Mock GapView component for tests
-jest.mock('./components/GapView', () => {
-  const React = require('react');
-  const { View } = require('react-native');
-  const GapViewMock = (props) => React.createElement(View, props, props.children);
-  return {
-    __esModule: true,
-    GapView: GapViewMock,
-    default: GapViewMock,
-  };
-});

@@ -1,10 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Link, useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
-import GapView from '../../../components/GapView';
+import { GapView } from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -102,8 +102,7 @@ export default function AssistantHub() {
       <Text style={s.sectionHeader}>{t('assistant.hub.quickPrompts','Quick prompts')}</Text>
       
       {/* What should I do today - Disability Wizard integration */}
-      <GapView
-        gap={12}
+      <Pressable
         hitSlop={HIT_SLOP_8}
         accessibilityRole="button"
         accessibilityLabel={t('assistant.hub.wizardCta','What should I do today? Get personalized suggestions')}
@@ -115,19 +114,21 @@ export default function AssistantHub() {
           router.push('/(tabs)/index' as any);
         }}
       >
-        <View style={s.wizardIconWrap}>
-          <Ionicons name="sparkles" size={24} color={palette.primary} />
-        </View>
-        <View style={{ flex: 1 }}>
-          <Text style={s.wizardTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            {t('assistant.hub.wizardTitle','What should I do today?')}
-          </Text>
-          <Text style={s.wizardDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            {t('assistant.hub.wizardDesc','Get personalized suggestions based on your energy, needs, and goals')}
-          </Text>
-        </View>
-        <Ionicons name="arrow-forward" size={20} color={palette.primary} />
-      </GapView>
+        <GapView style={{ flexDirection: 'row' }} gap={12}>
+          <View style={s.wizardIconWrap}>
+            <Ionicons name="sparkles" size={24} color={palette.primary} />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={s.wizardTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              {t('assistant.hub.wizardTitle','What should I do today?')}
+            </Text>
+            <Text style={s.wizardDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              {t('assistant.hub.wizardDesc','Get personalized suggestions based on your energy, needs, and goals')}
+            </Text>
+          </View>
+          <Ionicons name="arrow-forward" size={20} color={palette.primary} />
+        </GapView>
+      </Pressable>
       
       <GapView style={s.promptRow} gap={8}>
         {[
