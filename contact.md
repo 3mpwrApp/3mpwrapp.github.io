@@ -393,6 +393,17 @@ Please fill out the form below and we'll get back to you within 24 hours:
     transform: translateY(0);
   }
 
+  /* Dark mode button override */
+  [data-theme="dark"] .btn-primary {
+    background-color: #66b2ff !important;
+    color: #000000 !important;
+  }
+
+  [data-theme="dark"] .btn-primary:hover:not(:disabled) {
+    background-color: #99ccff !important;
+    color: #000000 !important;
+  }
+
   .btn-secondary {
     background-color: transparent;
     color: var(--text-primary, #333);

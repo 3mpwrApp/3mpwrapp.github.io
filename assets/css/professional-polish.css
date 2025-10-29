@@ -1150,8 +1150,8 @@ table {
 }
 
 [data-theme="dark"] .lang-switch {
-  color: var(--dark-link, #66b2ff) !important;
-  background: var(--dark-bg-secondary, #1a1a1a) !important;
+  color: #ffffff !important; /* White for dark background - 11.4:1 contrast */
+  background: #1a1a1a !important;
 }
 
 [data-contrast="high"] .lang-switch {
@@ -1551,18 +1551,18 @@ summary {
 
 .tldr-box summary,
 details summary {
-  color: var(--light-text-primary, #000000) !important;
-  background: var(--light-bg-secondary, #f0f0f0) !important;
+  color: #000000 !important; /* Black text for light backgrounds */
+  background: #f0f0f0 !important;
 }
 
 [data-theme="dark"] summary {
-  color: var(--dark-text-primary, #ffffff) !important;
+  color: #ffffff !important; /* White text for dark backgrounds */
 }
 
 [data-theme="dark"] .tldr-box summary,
 [data-theme="dark"] details summary {
-  color: var(--dark-text-primary, #ffffff) !important;
-  background: var(--dark-bg-secondary, #1a1a1a) !important;
+  color: #ffffff !important; /* White text for dark backgrounds - 11.4:1 contrast */
+  background: #1a1a1a !important;
 }
 
 [data-contrast="high"] summary {
