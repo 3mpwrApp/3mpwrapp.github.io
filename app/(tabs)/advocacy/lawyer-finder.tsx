@@ -3,6 +3,7 @@ import { FlatList, Linking, ScrollView, StyleSheet, Text, TextInput, View } from
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import MapEmbed from '../../../components/MapEmbed';
 import ProvincePicker from '../../../components/ProvincePicker';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
@@ -66,10 +67,10 @@ export default function LawyerFinder() {
   const filtered = savedOnly ? base.filter((a)=> state.advocate.has(a.id)) : base;
 
   const modeButtons = (
-    <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
+    <GapView style={{ flexDirection:'row', marginBottom: 8 }} gap={8}>
       <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('list')} style={[s.chip, mode==='list'&&s.chipActive]}><Text style={{ color: mode==='list'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeList','List')}</Text></A11yPressable>
       <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setMode('map')} style={[s.chip, mode==='map'&&s.chipActive]}><Text style={{ color: mode==='map'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.finder.modeMap','Map')}</Text></A11yPressable>
-    </View>
+    </GapView>
   );
 
   return (
@@ -85,7 +86,7 @@ export default function LawyerFinder() {
             <DisclaimerBanner type="legal" compact />
             {modeButtons}
             <TextInput placeholder={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} placeholderTextColor={palette.text+"77"} value={query} onChangeText={setQuery} style={s.input} accessibilityLabel={t('advocacy.finder.searchPlaceholder','Search by name, city, org')} />
-            <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
+            <GapView style={{ flexDirection: 'row', flexWrap: 'wrap' }} gap={8}>
               <TextInput placeholder={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} placeholderTextColor={palette.text+"77"} value={issue} onChangeText={setIssue} style={[s.input,{flex:1}]} accessibilityLabel={t('advocacy.finder.issuePlaceholder','Issue (e.g., WSIB)')} />
               <View style={{ flexBasis: '100%' }} />
               <ProvincePicker value={province} onChange={(p)=> setProvince(p as any)} />
@@ -95,7 +96,7 @@ export default function LawyerFinder() {
               <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSavedOnly(v=>!v)} style={[s.chip, savedOnly && s.chipActive]}>
                 <Text style={{ color: savedOnly? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('common.saved','Saved')}</Text>
               </A11yPressable>
-            </View>
+            </GapView>
           </View>
         }
         renderItem={({item}) => (
@@ -109,12 +110,12 @@ export default function LawyerFinder() {
           {item.email && (
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => { trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_EMAIL, { id: item.id }); Linking.openURL(`mailto:${item.email}`); }} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.email','Email')}</Text></A11yPressable>
           )}
-          <View style={{ flexDirection:'row', gap:8, marginTop: 6 }}>
+          <GapView style={{ flexDirection:'row', marginTop: 6 }} gap={8}>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_OPEN_MAP, { id: item.id }); Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`); }} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openOnMap','Open on Map')}</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { const next = !state.advocate.has(item.id); trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_SAVE_TOGGLE, { id: item.id, next }); toggle('advocate', item.id); }} style={s.btn}>
               <Text style={s.btnText}>{state.advocate.has(item.id) ? t('advocacy.finder.saved','★ Saved') : t('advocacy.finder.save','☆ Save')}</Text>
             </A11yPressable>
-          </View>
+          </GapView>
         </View>
       )}
         ListFooterComponent={

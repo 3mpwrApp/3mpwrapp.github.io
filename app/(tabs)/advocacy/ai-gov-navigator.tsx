@@ -11,6 +11,7 @@ import {
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { DyslexiaText } from '../../../components/DyslexiaText';
+import GapView from '../../../components/GapView';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
     MAX_FONT_SCALE,
@@ -99,13 +100,13 @@ export default function AiGovNavigator() {
         Conversational, step-by-step guidance through forms with
         accessibility in mind.
       </Text>
-      <View
+      <GapView
         style={{
           flexDirection: "row",
-          gap: 8,
           flexWrap: "wrap",
           marginBottom: 8,
         }}
+        gap={8}
       >
         {(Object.keys(STEPS) as Flow[]).map((f) => (
           <Pressable
@@ -130,13 +131,13 @@ export default function AiGovNavigator() {
             </Text>
           </Pressable>
         ))}
-      </View>
+      </GapView>
       <View style={s.card}>
         <Text style={s.cardTitle}>
           Step {step + 1} of {list.length}
         </Text>
         <DyslexiaText style={s.cardText}>{list[step]}</DyslexiaText>
-        <View style={{ flexDirection: "row", gap: 8, marginTop: 8 }}>
+        <GapView style={{ flexDirection: "row", marginTop: 8 }} gap={8}>
           <Pressable
             onPress={prev}
             style={[s.button, { opacity: step === 0 ? 0.6 : 1 }]}
@@ -151,7 +152,7 @@ export default function AiGovNavigator() {
           >
             <Text style={s.buttonText}>Next</Text>
           </Pressable>
-        </View>
+        </GapView>
         <View style={{ height: 8 }} />
         <Pressable
           onPress={() =>

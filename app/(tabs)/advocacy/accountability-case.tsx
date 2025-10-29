@@ -104,7 +104,7 @@ export default function AccountabilityCase() {
             <Text style={s.meta}>{formatDate(caze.updatedAt)}</Text>
             <Text style={s.issue}>{caze.issue}</Text>
 
-            <GapView style={[s.section,{ flexDirection:'row', gap:8, flexWrap:'wrap' }]}>
+            <GapView style={[s.section,{ flexDirection:'row', flexWrap:'wrap' }]} gap={8}>
               <Pressable onPress={copyAll} disabled={working} style={[s.secondaryBtn, working && { opacity: 0.6 }]} accessibilityRole="button" accessibilityLabel={t('common.copy','Copy')} hitSlop={HIT_SLOP_8}>
                 <Text style={s.secondaryBtnText}>{t('common.copy','Copy')}</Text>
               </Pressable>
@@ -125,7 +125,7 @@ export default function AccountabilityCase() {
                 <View key={evt.id} style={s.eventRow}>
                   <Text style={s.eventMeta}>{formatDate(evt.ts)} • {evt.type.toUpperCase()}</Text>
                   <Text style={s.eventText}>{evt.text}</Text>
-                  <GapView style={{ flexDirection:'row', gap:8, marginTop:6 }}>
+                  <GapView style={{ flexDirection:'row', marginTop:6 }} gap={8}>
                     <Pressable onPress={async()=>{ const next = promptEdit(evt.text); if (next!=null) { await updateEvent(caze.id, evt.id, next); const updated = await getCaseById(caze.id); setCase(updated||caze); } }} style={s.linkBtn} accessibilityRole="button" accessibilityLabel={t('common.edit','Edit')} hitSlop={HIT_SLOP_8}><Text style={s.linkBtnText}>{t('common.edit','Edit')}</Text></Pressable>
                     <Pressable onPress={async()=>{ const ok = confirmDelete(); if (ok) { await deleteEvent(caze.id, evt.id); const updated = await getCaseById(caze.id); setCase(updated||caze); } }} style={s.linkBtn} accessibilityRole="button" accessibilityLabel={t('common.delete','Delete')} hitSlop={HIT_SLOP_8}><Text style={s.linkBtnText}>{t('common.delete','Delete')}</Text></Pressable>
                   </GapView>

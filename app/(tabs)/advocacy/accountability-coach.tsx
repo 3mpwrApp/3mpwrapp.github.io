@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import { GapView } from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -124,7 +125,7 @@ export default function AccountabilityCoach() {
   <Pressable onPress={run} style={s.button} accessibilityRole="button" accessibilityHint={t('accountability.generateHint','Generate a step-by-step plan')} disabled={loading} hitSlop={HIT_SLOP_8}>
         <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{loading ? t('accountability.generating') : t('accountability.generate')}</Text>
       </Pressable>
-      <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginTop:8 }}>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop:8 }} gap={8}>
   <Pressable onPress={onDetect} style={[s.button, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityHint={t('accountability.detectHint','Analyze issue and list potential violations')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.detect','Detect violations')}</Text>
         </Pressable>
@@ -137,7 +138,7 @@ export default function AccountabilityCoach() {
   <Pressable onPress={onAlly} style={[s.button, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityHint={t('accountability.allyHint','Create a brief you can share with allies')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.ally','Ally brief')}</Text>
         </Pressable>
-      </View>
+      </GapView>
 
       {!!parsed && (
         <View style={{ marginTop: 12 }} accessibilityRole="summary" accessibilityLabel={t('accountability.outputLabel')}>

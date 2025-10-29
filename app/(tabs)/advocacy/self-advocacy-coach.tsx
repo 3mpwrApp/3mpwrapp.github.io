@@ -2,6 +2,7 @@ import React from "react";
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
+import { GapView } from '../../../components/GapView';
 import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
 import {
     MAX_FONT_SCALE,
@@ -86,13 +87,13 @@ export default function SelfAdvocacyCoach() {
       <Text style={s.subtitle}>{t('advocacy.coach.subtitle')}</Text>
     <Text style={[s.subtitle,{ marginTop:4, fontSize:12 }]}>{percentComplete}% {t('advocacy.coach.complete','complete')}</Text>
   <JurisdictionPanel />
-      <View
+      <GapView
         style={{
           flexDirection: "row",
           flexWrap: "wrap",
-          gap: 8,
           marginBottom: 8,
         }}
+        gap={8}
       >
         {lessons.map((l) => (
           <Pressable
@@ -106,7 +107,7 @@ export default function SelfAdvocacyCoach() {
             </Text>
           </Pressable>
         ))}
-      </View>
+      </GapView>
       {lessons.filter((l) => l.id === active).map((l) => {
         const deadlineLabel = l.suggestedDeadlineDays ? t('advocacy.coach.deadlineInDays','Complete within {{d}} days',{ d: l.suggestedDeadlineDays }) : null;
         return (

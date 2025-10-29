@@ -9,6 +9,7 @@ import {
     View,
 } from "react-native";
 
+import GapView from '../../../components/GapView';
 import { channels as seedChannels } from "../../../data/community";
 import {
     MAX_FONT_SCALE,
@@ -67,13 +68,13 @@ function Inner() {
       </Text>
 
       <Text style={styles.label}>{t('advocacy.ask.category','Category')}</Text>
-      <View
+      <GapView
         style={{
           flexDirection: "row",
           flexWrap: "wrap",
-          gap: 8,
           marginBottom: 8,
         }}
+        gap={8}
       >
         {topicChannels.map((c) => (
           <Pressable
@@ -92,7 +93,7 @@ function Inner() {
             </Text>
           </Pressable>
         ))}
-      </View>
+      </GapView>
       <Text style={styles.label}>{t('advocacy.ask.titleLabel','Title')}</Text>
       <TextInput
         style={styles.input}

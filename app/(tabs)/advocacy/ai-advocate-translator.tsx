@@ -13,6 +13,7 @@ import {
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { DyslexiaText } from '../../../components/DyslexiaText';
+import GapView from '../../../components/GapView';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
     MAX_FONT_SCALE,
@@ -131,13 +132,13 @@ export default function AiAdvocateTranslator() {
             </View>
           )}
           <DyslexiaText style={{ color: palette.text }}>{output}</DyslexiaText>
-          <View
+          <GapView
             style={{
               flexDirection: "row",
-              gap: 8,
               marginTop: 8,
               flexWrap: "wrap",
             }}
+            gap={8}
           >
             <Pressable
               onPress={async () => {
@@ -205,7 +206,7 @@ export default function AiAdvocateTranslator() {
             >
               <Text style={s.buttonText}>{t('translator.doc','DOC')}</Text>
             </Pressable>
-          </View>
+          </GapView>
         </View>
       )}
       <AIDisclaimer />

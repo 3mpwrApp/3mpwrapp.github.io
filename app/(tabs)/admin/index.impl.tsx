@@ -1,27 +1,28 @@
 // import { useLocalSearchParams } from "expo-router";
 import {
-  collection,
-  doc,
-  getCountFromServer,
-  getDocs,
-  limit,
-  query,
-  startAfter,
-  updateDoc,
-  where
+    collection,
+    doc,
+    getCountFromServer,
+    getDocs,
+    limit,
+    query,
+    startAfter,
+    updateDoc,
+    where
 } from "firebase/firestore";
 import React from "react";
 import {
-  Alert,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View
+    Alert,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View
 } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
 import AdminGuard from "../../../components/AdminGuard";
+import GapView from "../../../components/GapView";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { db } from "../../../firebase/config";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
@@ -170,13 +171,13 @@ export default function AdminPanel() {
         {/* Activity Metrics */}
         <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Activity Metrics</Text>
         <Text style={s.text}>Events (last 24h / total): {activityStats.since24h} / {activityStats.total}</Text>
-        <View style={{ flexDirection:'row', flexWrap:'wrap', gap:6 }}>
+        <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={6}>
           {Object.entries(activityStats.byType).slice(0,12).map(([k,v])=> (
             <View key={k} style={{ backgroundColor: palette.surface, paddingHorizontal:8, paddingVertical:4, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
               <Text style={{ color: palette.text, fontSize:12 }}>{k}: {v}</Text>
             </View>
           ))}
-        </View>
+        </GapView>
 
         {/* Broadcast Tool */}
         <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Broadcast Announcement</Text>
@@ -193,7 +194,7 @@ export default function AdminPanel() {
           multiline
           style={{ borderWidth: StyleSheet.hairlineWidth, minHeight:70, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
         />
-        <View style={{ flexDirection:'row', gap:8 }}>
+        <GapView style={{ flexDirection:'row' }} gap={8}>
           <A11yPressable
             accessibilityRole="button"
             accessibilityLabel="Send broadcast announcement"
@@ -216,7 +217,7 @@ export default function AdminPanel() {
           >
             <Text style={{ color: palette.text, fontWeight:'700' }}>Clear</Text>
           </A11yPressable>
-        </View>
+        </GapView>
 
         <React.Suspense fallback={<Text style={[s.text, { marginTop: 16 }]}>Loading FAQs…</Text>}>
           <AdminLazy.FaqEditor />
@@ -226,7 +227,7 @@ export default function AdminPanel() {
           <>
             {/* User Lookup */}
             <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>User Lookup</Text>
-        <View style={{ flexDirection: "row", gap: 8, alignItems: "center" }}>
+        <GapView style={{ flexDirection: "row", alignItems: "center" }} gap={8}>
           <TextInput
             value={email}
             onChangeText={setEmail}
@@ -252,13 +253,13 @@ export default function AdminPanel() {
           >
             <Text style={{ color: palette.onPrimary, fontWeight: "700" }}>Search</Text>
           </A11yPressable>
-        </View>
+        </GapView>
         {!!result && (
           <View style={{ marginTop: 10, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 10 }}>
             <Text style={s.text}>UID: {result.id}</Text>
             <Text style={s.text}>Email: {result.email || "-"}</Text>
             <Text style={s.text}>Name: {result.displayName || "-"}</Text>
-            <View style={{ flexDirection: "row", gap: 8, marginTop: 8 }}>
+            <GapView style={{ flexDirection: "row", marginTop: 8 }} gap={8}>
               <A11yPressable
                 onPress={async () => {
                   try {
@@ -283,13 +284,13 @@ export default function AdminPanel() {
               >
                 <Text style={{ color: palette.text, fontWeight: "700" }}>{result.verified ? "Unverify" : "Verify"}</Text>
               </A11yPressable>
-            </View>
+            </GapView>
           </View>
         )}
 
         {/* Users list */}
         <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>Users</Text>
-        <View style={{ flexDirection: "row", gap: 8, flexWrap: "wrap" }}>
+        <GapView style={{ flexDirection: "row", flexWrap: "wrap" }} gap={8}>
           <A11yPressable
             onPress={async () => {
               try {
@@ -312,7 +313,7 @@ export default function AdminPanel() {
           >
             <Text style={{ color: palette.text, fontWeight: "700" }}>Reset</Text>
           </A11yPressable>
-        </View>
+        </GapView>
         {sortedUsers.map((u) => (
           <View key={u.id} style={{ marginBottom: 6 }}>
             <Text style={s.text}>{u.email || u.id} - {u.displayName || '-'}</Text>
@@ -325,20 +326,20 @@ export default function AdminPanel() {
           <Text style={s.text}>No flags.</Text>
         ) : (
           <>
-            <View style={{ flexDirection: 'row', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
+            <GapView style={{ flexDirection: 'row', marginBottom: 8, flexWrap: 'wrap' }} gap={8}>
               <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSelectedFlags(Object.fromEntries(flags.map((f: any) => [f.id, true])))} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Select all</Text></A11yPressable>
               <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSelectedFlags({})} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Clear</Text></A11yPressable>
               <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(Object.keys(selectedFlags).filter(id=>selectedFlags[id]).map(id=> resolveFlag(id))); setSelectedFlags({}); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Resolve selected</Text></A11yPressable>
               <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const sel = flags.filter((f: any)=> selectedFlags[f.id]); for (const f of sel) { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } } const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map((f: any)=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Delete items</Text></A11yPressable>
-            </View>
+            </GapView>
             {flags.map((f: any) => (
               <View key={f.id} style={{ marginBottom: 6 }}>
-                <View style={{ flexDirection:'row', alignItems:'center', gap:8 }}>
+                <GapView style={{ flexDirection:'row', alignItems:'center' }} gap={8}>
                   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setSelectedFlags(prev=> ({ ...prev, [f.id]: !prev[f.id] }))} style={{ width: 18, height: 18, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems:'center', justifyContent:'center', backgroundColor: selectedFlags[f.id]? palette.primary: 'transparent' }}>
                     {selectedFlags[f.id] ? <View style={{ width: 10, height: 10, backgroundColor: palette.onPrimary, borderRadius: 2 }} /> : null}
                   </A11yPressable>
                   <Text style={s.text}>[{f.type}] {f.targetId} - {f.reason}</Text>
-                </View>
+                </GapView>
                 <View style={{ marginLeft: 26 }}>
                   {f.type === 'mutual' ? (
                     <FlagPreviewMutual targetId={f.targetId} />
@@ -346,7 +347,7 @@ export default function AdminPanel() {
                     <FlagPreviewRating targetId={f.targetId} />
                   ) : null}
                 </View>
-                <View style={{ flexDirection: 'row', gap: 8 }}>
+                <GapView style={{ flexDirection: 'row' }} gap={8}>
                   <A11yPressable
                     accessibilityLabel={`Resolve flag ${f.id}`}
                     hitSlop={HIT_SLOP_8}
@@ -361,7 +362,7 @@ export default function AdminPanel() {
                     style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
                     <Text style={{ color: palette.text, fontWeight: '700' }}>Delete Item</Text>
                   </A11yPressable>
-                </View>
+                </GapView>
               </View>
             ))}
           </>

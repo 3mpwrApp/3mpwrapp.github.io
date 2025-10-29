@@ -14,6 +14,7 @@ import {
  
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import { DyslexiaText } from '../../../components/DyslexiaText';
+import { GapView } from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import {
     MAX_FONT_SCALE,
@@ -159,12 +160,12 @@ export default function PolicySimple() {
             {obligations.map((p,i)=>(<DyslexiaText key={i} style={s.resultText}>• {p}</DyslexiaText>))}
             {actions.length>0 && <Text style={[s.resultTitle,{marginTop:8}]}>{t('advocacy.policy.suggestedActions','Suggested Actions')}</Text>}
             {actions.map((p,i)=>(<DyslexiaText key={i} style={s.resultText}>• {p}</DyslexiaText>))}
-            <View style={{ flexDirection:'row', flexWrap:'wrap', gap:8, marginTop: 12 }}>
+            <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 12 }} gap={8}>
               <Pressable onPress={copySummary} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.copy','Copy summary')} hitSlop={HIT_SLOP_8}><Text style={[s.buttonText,{ color: palette.text }]}>{t('advocacy.policy.copy','Copy')}</Text></Pressable>
               <Pressable onPress={shareSummary} style={s.button} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.share','Share summary')} hitSlop={HIT_SLOP_8}><Text style={s.buttonText}>{t('advocacy.policy.share','Share')}</Text></Pressable>
               <Pressable onPress={exportPdf} style={s.button} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.exportPdf','Export as PDF')} hitSlop={HIT_SLOP_8}><Text style={s.buttonText}>{t('advocacy.policy.exportPdf','Export as PDF')}</Text></Pressable>
               <Pressable onPress={exportDoc} style={s.button} accessibilityRole="button" accessibilityLabel={t('advocacy.policy.exportDoc','Export as .doc')} hitSlop={HIT_SLOP_8}><Text style={s.buttonText}>{t('advocacy.policy.exportDoc','Export as .doc')}</Text></Pressable>
-            </View>
+            </GapView>
           </View>
         )}
         <AIDisclaimer />

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -101,7 +102,8 @@ export default function AssistantHub() {
       <Text style={s.sectionHeader}>{t('assistant.hub.quickPrompts','Quick prompts')}</Text>
       
       {/* What should I do today - Disability Wizard integration */}
-      <A11yPressable
+      <GapView
+        gap={12}
         hitSlop={HIT_SLOP_8}
         accessibilityRole="button"
         accessibilityLabel={t('assistant.hub.wizardCta','What should I do today? Get personalized suggestions')}
@@ -125,9 +127,9 @@ export default function AssistantHub() {
           </Text>
         </View>
         <Ionicons name="arrow-forward" size={20} color={palette.primary} />
-      </A11yPressable>
+      </GapView>
       
-      <View style={s.promptRow}>
+      <GapView style={s.promptRow} gap={8}>
         {[
           { label: t('assistant.prompt.simplifyDecision','Simplify a decision letter'), route: '/(tabs)/advocacy/ai-advocate-translator', q: t('assistant.prompt.exampleDecision','Please simplify this decision letter and list deadlines:') },
           { label: t('assistant.prompt.callScript','Draft a call script to HR'), route: '/(tabs)/advocacy/self-advocacy-coach', q: t('assistant.prompt.exampleCall','Draft a brief call script to HR asking for accommodations:') },
@@ -149,11 +151,11 @@ export default function AssistantHub() {
             <Text style={s.promptText}>{p.label}</Text>
           </A11yPressable>
         ))}
-      </View>
+      </GapView>
 
       {/* Recent tools */}
       <RecentTools />
-      <View style={s.grid}>
+      <GapView style={s.grid} gap={12}>
         {items.map((it) => (
           <Link key={String(it.href)} href={it.href as any} asChild>
             <A11yPressable
@@ -170,7 +172,7 @@ export default function AssistantHub() {
             </A11yPressable>
           </Link>
         ))}
-      </View>
+      </GapView>
     </ScrollView>
   );
 }
@@ -246,7 +248,7 @@ function RecentTools() {
           <Text style={[s.promptText, { fontSize: Math.round(12 * factor) }]}>{t('assistant.hub.clear','Clear')}</Text>
         </A11yPressable>
       </View>
-      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+      <GapView style={{ flexDirection: 'row', flexWrap: 'wrap' }} gap={8}>
         {items.map((it) => (
           <Link key={it.tool} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild>
             <A11yPressable
@@ -260,7 +262,7 @@ function RecentTools() {
             </A11yPressable>
           </Link>
         ))}
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -288,16 +290,16 @@ function styles(palette: ReturnType<typeof useAppPalette>, factor = 1) {
   suggestionDesc: { color: palette.text, opacity: 0.7, fontSize: Math.round(12 * factor) },
   noResults: { color: palette.text, opacity: 0.7, marginBottom: 12, fontSize: Math.round(12 * factor) },
   sectionHeader: { color: palette.text, fontWeight: '700', marginBottom: 6, marginTop: 8, fontSize: Math.round(14 * factor) },
-  wizardButton: { flexDirection: 'row', alignItems: 'center', backgroundColor: palette.surface, borderWidth: 2, borderColor: palette.primary, borderRadius: 12, padding: 12, marginBottom: 12, gap: 12 },
+  wizardButton: { flexDirection: 'row', alignItems: 'center', backgroundColor: palette.surface, borderWidth: 2, borderColor: palette.primary, borderRadius: 12, padding: 12, marginBottom: 12 },
   wizardIconWrap: { width: 44, height: 44, borderRadius: 22, backgroundColor: palette.surface, alignItems: 'center', justifyContent: 'center' },
   wizardTitle: { fontSize: Math.round(16 * factor), fontWeight: '700', color: palette.text, marginBottom: 2 },
   wizardDesc: { fontSize: Math.round(13 * factor), color: palette.muted, lineHeight: Math.round(18 * factor) },
-  promptRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 8 },
+  promptRow: { flexDirection: 'row', flexWrap: 'wrap', marginBottom: 8 },
   promptChip: { backgroundColor: palette.card, borderWidth: 1, borderColor: palette.muted, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 999 },
   promptText: { color: palette.text, fontSize: Math.round(13 * factor) },
   recentChip: { backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 999 },
   recentText: { color: palette.text, fontSize: Math.round(12 * factor) },
-    grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
+    grid: { flexDirection: 'row', flexWrap: 'wrap' },
     card: { backgroundColor: palette.card, borderRadius: 12, borderWidth: 1, borderColor: palette.muted, padding: 12, width: '48%' },
     iconWrap: { width: 36, height: 36, borderRadius: 18, backgroundColor: palette.surface, alignItems: 'center', justifyContent: 'center', marginBottom: 8 },
     cardTitle: { color: palette.text, fontWeight: '700', fontSize: Math.round(14 * factor), marginBottom: 4 },

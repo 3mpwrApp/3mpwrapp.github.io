@@ -12,6 +12,7 @@ import {
 
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import GapView from '../../../components/GapView';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
     MAX_FONT_SCALE,
@@ -123,13 +124,13 @@ export default function AiCaseInterpreter() {
           >
             <Text style={s.buttonText}>Share</Text>
           </Pressable>
-          <View
+          <GapView
             style={{
               flexDirection: "row",
-              gap: 8,
               marginTop: 8,
               flexWrap: "wrap",
             }}
+            gap={8}
           >
             <Pressable
               onPress={async () => {
@@ -186,7 +187,7 @@ export default function AiCaseInterpreter() {
             >
               <Text style={s.buttonText}>DOC</Text>
             </Pressable>
-          </View>
+          </GapView>
         </View>
       )}
       <AIDisclaimer />

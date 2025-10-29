@@ -4,6 +4,7 @@ import React from 'react';
 import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import { GapView } from '../../../components/GapView';
 import SimpleBarChart from '../../../components/SimpleBarChart';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
@@ -46,19 +47,19 @@ export default function Ratings() {
     <View style={s.container}>
       <Text style={s.title}>{t('advocacy.ratings.title','Disability Justice Ratings')}</Text>
       {isAdmin && (
-        <View style={{ gap:8, marginBottom: 8 }}>
-          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+        <GapView style={{ marginBottom: 8 }} gap={8}>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('all')} style={[s.chip, filter==='all'&&s.chipActive]}><Text style={{ color: filter==='all'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.filter.all','All')}</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('approved')} style={[s.chip, filter==='approved'&&s.chipActive]}><Text style={{ color: filter==='approved'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.filter.approved','Approved')}</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('pending')} style={[s.chip, filter==='pending'&&s.chipActive]}><Text style={{ color: filter==='pending'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.filter.pending','Pending')}</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setFilter('trash')} style={[s.chip, filter==='trash'&&s.chipActive]}><Text style={{ color: filter==='trash'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.filter.trash','Trash')}</Text></A11yPressable>
-          </View>
-          <View style={{ flexDirection:'row', gap:8, flexWrap:'wrap' }}>
+          </GapView>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=pending' as any)} style={s.button}><Text style={s.buttonText}>{t('advocacy.ratings.admin.pending','Admin Pending')}</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=approved' as any)} style={s.button}><Text style={s.buttonText}>{t('advocacy.ratings.admin.approved','Admin Approved')}</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> router.push('/(tabs)/admin?tab=trash' as any)} style={s.button}><Text style={s.buttonText}>{t('advocacy.ratings.admin.trash','Admin Trash')}</Text></A11yPressable>
-          </View>
-        </View>
+          </GapView>
+        </GapView>
       )}
       <View>
         <TextInput
@@ -79,10 +80,10 @@ export default function Ratings() {
         )}
       </View>
       <TextInput placeholder={t('advocacy.ratings.typePlaceholder','Type (hospital, clinic, law, employer, union)')} placeholderTextColor={palette.text+'77'} value={kind} onChangeText={setKind} style={s.input} />
-      <View style={{ flexDirection:'row', gap:8, marginTop: 8 }}>
+      <GapView style={{ flexDirection:'row', marginTop: 8 }} gap={8}>
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSort('latest')} style={[s.chip, sort==='latest'&&s.chipActive]}><Text style={{ color: sort==='latest'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.sort.latest','Latest')}</Text></A11yPressable>
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSort('score')} style={[s.chip, sort==='score'&&s.chipActive]}><Text style={{ color: sort==='score'? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('advocacy.ratings.sort.top','Top')}</Text></A11yPressable>
-      </View>
+      </GapView>
       <Text style={s.text}>{t('advocacy.ratings.average','Average rating: {{avg}} ({{count}})',{ avg, count: items.length })}</Text>
       <View style={{ marginTop: 8 }}>
         <SimpleBarChart data={dist} labelKey="n" valueKey="c" />

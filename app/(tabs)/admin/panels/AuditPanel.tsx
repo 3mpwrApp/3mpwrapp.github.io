@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../../components/A11yPressable';
+import GapView from '../../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../../constants/A11Y';
 import { listAdminAudit, listAdminAuditAll, subscribeAdminAudit } from '../../../../services/adminAudit';
 import { useAppPalette } from '../../../../theme/usePalette';
@@ -24,7 +25,7 @@ export default function AuditPanel() {
   return (
     <View style={s.card}>
       <Text style={s.cardTitle}>Admin Audit (latest)</Text>
-      <View style={{ flexDirection:'row', gap:8, marginBottom: 8 }}>
+      <GapView style={{ flexDirection:'row', marginBottom: 8 }} gap={8}>
         <A11yPressable
           accessibilityRole="button"
           accessibilityLabel="Export admin audit events as CSV"
@@ -96,7 +97,7 @@ export default function AuditPanel() {
         >
           <Text style={{ color: palette.text, fontWeight:'700' }}>Export JSON (All)</Text>
         </A11yPressable>
-      </View>
+      </GapView>
       {auditEvents.length === 0 ? (
         <Text style={{ color: palette.text }}>No recent admin actions.</Text>
       ) : (
