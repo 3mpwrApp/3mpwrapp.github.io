@@ -5,6 +5,9 @@ description: Delete specific data from 3mpwr App without deleting your account. 
 permalink: /delete-data/
 ---
 
+
+{%- include status-banner.html -%}
+
 # 🗂️ Delete Your Data
 
 **Keep Your Account, Clear Your Data**
@@ -315,3 +318,5 @@ For security, you must **re-authenticate** (enter password or use Google/Apple l
 ---
 
 *3mpwr App - Your data, your choice, always.*
+
+{%- include page-feedback.html -%}

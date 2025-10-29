@@ -5,6 +5,9 @@ description: Customize your viewing experience with accessibility options includ
 permalink: /accessibility-settings/
 ---
 
+
+{%- include status-banner.html -%}
+
 # Accessibility Settings
 
 Use these controls to customize your viewing experience. Your preferences are saved in your browser on this device.
@@ -99,3 +102,5 @@ If you want to reset your saved preferences, use the “Reset to defaults” but
 If any setting isn’t working as expected, contact us at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with your browser and device information.
 
 <script src="{{ '/assets/js/settings.js' | relative_url }}" defer></script>
+
+{%- include page-feedback.html -%}

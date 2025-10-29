@@ -4,6 +4,9 @@ title: Wellness
 description: Peer support, self-advocacy tips, and accessibility resources to support your wellbeing.
 ---
 
+
+{%- include status-banner.html -%}
+
 # Wellness
 
 Peer support, self-advocacy, and accessibility tips for your wellbeing.
@@ -59,3 +62,5 @@ Peer support, self-advocacy, and accessibility tips for your wellbeing.
 ---
 
 **Privacy First**: All wellness data stays on your device. No cloud storage required.
+
+{%- include page-feedback.html -%}

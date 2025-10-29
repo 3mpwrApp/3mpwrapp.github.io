@@ -5,6 +5,9 @@ permalink: /terms/
 description: The terms and conditions for using the 3mpwr website and app.
 ---
 
+
+{%- include status-banner.html -%}
+
 # 3mpwrApp — Terms of Service
 
 **Last Updated: October 25, 2025**  
@@ -491,3 +494,5 @@ See our **[Accessibility](/accessibility/)** page or email with "Accessibility" 
 ---
 
 **© 2025 3mpwrApp. All rights reserved.**
+
+{%- include page-feedback.html -%}

@@ -8,10 +8,7 @@ lastUpdated: 2025-10-25
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> 
-  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
-</div>
+{%- include status-banner.html -%}
 
 # 3mpwrApp — Complete User Guide
 
@@ -3715,3 +3712,5 @@ We're constantly improving based on your feedback. See what we're working on and
 *For the most current information, check the What's New section in the app or visit our website.*
 
 *For detailed accessibility implementation status, see: `docs/ACCESSIBILITY_MASTER_ROADMAP.md`*
+
+{%- include page-feedback.html -%}

@@ -5,6 +5,9 @@ lang: fr
 description: Guide pratique (texte uniquement) pour vous aider à naviguer dans les fonctionnalités et l'accessibilité de 3mpwr App.
 ---
 
+
+{%- include status-banner.html -%}
+
 # Guide d'utilisation
 
 Ce guide présente, en texte uniquement, comment utiliser 3mpwr App et personnaliser l'accessibilité du site.
@@ -28,3 +31,5 @@ Ce guide présente, en texte uniquement, comment utiliser 3mpwr App et personnal
 - Les mesures d’audience (si activées) ne se chargent qu’après consentement
 
 Pour la version anglaise, rendez-vous sur le [User Guide]({{ '/user-guide' | relative_url }}).
+
+{%- include page-feedback.html -%}

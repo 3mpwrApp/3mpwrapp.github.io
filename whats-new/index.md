@@ -5,6 +5,9 @@ description: Track all updates and improvements to 3mpwrApp. Stay informed about
 permalink: /whats-new/
 ---
 
+
+{%- include status-banner.html -%}
+
 # What's New
 
 Track all updates to the site in one place. Entries from the last 30 days appear first; older items automatically move to the Archive below. We summarize meaningful changes in plain language without showing technical commit IDs.
@@ -87,3 +90,5 @@ Updates older than 30 days are archived here, grouped by month.
   {% endfor %}
   </ul>
 </details>
+
+{%- include page-feedback.html -%}

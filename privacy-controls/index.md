@@ -5,9 +5,7 @@ description: Take control of your privacy with 3mpwr App. Manage analytics, cras
 permalink: /privacy-controls/
 ---
 
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> App Status: Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
-</div>
+{%- include status-banner.html -%}
 
 # Your Privacy & Data Controls
 
@@ -370,13 +368,9 @@ We only share data with essential service providers to make the app work. Here's
   <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
 </div>
 
-<div class="page-feedback">
-  <p><strong>Was this guide helpful?</strong></p>
-  <a href="/feedback/" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
-  <a href="/feedback/" class="feedback-btn feedback-no">👎 Needs improvement</a>
-  <a href="/feedback/" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  <p class="page-meta">Last updated: October 25, 2025 | Next review: December 2025</p>
-</div>
+
+
+{%- include page-feedback.html -%}
 
 **Last Updated:** October 25, 2025
 **App Version:** 3.2+

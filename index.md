@@ -5,10 +5,7 @@ description: A community-powered hub for injured workers and persons with disabi
 ---
 
 <!-- Status Banner -->
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> 
-  <strong>App Status:</strong> Testing Phase - Limited Spots Available | All systems running smoothly | Brief updates: 2-4am EST
-</div>
+{%- include status-banner.html -%}
 
 <!-- Innovative Accessibility Controls -->
 <div class="accessibility-toolbar collapsed" role="toolbar" aria-label="Page accessibility controls">
@@ -494,15 +491,9 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 </div>
 
 <!-- Page Feedback -->
-<div class="page-feedback" role="complementary">
-  <p><strong>💬 Was this page helpful?</strong></p>
-  <p>
-    <a href="{{ '/feedback?page=home&helpful=yes' | relative_url }}" class="feedback-btn feedback-yes">👍 Yes</a>
-    <a href="{{ '/feedback?page=home&helpful=no' | relative_url }}" class="feedback-btn feedback-no">👎 No</a>
-    <a href="{{ '/feedback?page=home' | relative_url }}" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  </p>
-  <p class="page-meta"><small>Last updated: October 25, 2025 | Next review: December 2025</small></p>
-</div>
+
+
+{%- include page-feedback.html -%}
 
 <!-- Homepage Styles & Scripts (external for performance) -->
 <link rel="stylesheet" href="{{ '/assets/css/design-system.css' | relative_url }}">

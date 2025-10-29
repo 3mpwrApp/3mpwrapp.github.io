@@ -9,6 +9,9 @@ format: PDF/Print Version
 pages: Approximately 75 pages
 ---
 
+
+{%- include status-banner.html -%}
+
 # 3mpwrApp — Complete User Guide for Everyone
 
 **Version 2.1 (Phase 2) • October 13, 2025**
@@ -808,3 +811,5 @@ Read through sections in order. Each builds on previous information.
 *For the complete 15,000-word guide with all sections fully detailed, download the PDF version from: [3mpwrapp.github.io/downloads/user-guide-full.pdf](https://3mpwrapp.github.io/downloads/user-guide-full.pdf)*
 
 *© 2025 3mpwrApp. This guide is licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). You are free to share and adapt this guide with attribution.*
+
+{%- include page-feedback.html -%}

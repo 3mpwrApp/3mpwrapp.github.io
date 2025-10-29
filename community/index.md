@@ -9,10 +9,7 @@ permalink: /community/
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> 
-  <strong>App Status:</strong> Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
-</div>
+{%- include status-banner.html -%}
 
 # 🤝 Community
 
@@ -124,11 +121,6 @@ permalink: /community/
 
 ---
 
-<div class="page-feedback" role="complementary">
-  <p><strong>💬 Was this page helpful?</strong></p>
-  <p>
-    <a href="/feedback?page=community&helpful=yes" class="feedback-btn feedback-yes">👍 Yes</a>
-    <a href="/feedback?page=community&helpful=no" class="feedback-btn feedback-no">👎 No</a>
-    <a href="/feedback?page=community" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  </p>
-</div>
+
+
+{%- include page-feedback.html -%}

@@ -6,6 +6,9 @@ description: Comment nous utilisons les témoins (cookies) et comment vous pouve
 lang: fr
 ---
 
+
+{%- include status-banner.html -%}
+
 # Politique relative aux témoins (Cookies)
 
 Dernière mise à jour : {{ site.time | date: '%d %B %Y' }}
@@ -248,3 +251,5 @@ Pour des questions sur les témoins :
 **Date d'entrée en vigueur** : En vigueur depuis le lancement du site.
 
 Merci d'utiliser 3mpwrApp de manière éclairée ! 🍪
+
+{%- include page-feedback.html -%}

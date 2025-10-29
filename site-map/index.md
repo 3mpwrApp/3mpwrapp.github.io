@@ -4,6 +4,9 @@ title: Site Map
 description: Human-readable overview of pages available on the site.
 ---
 
+
+{%- include status-banner.html -%}
+
 # Site Map
 
 - [Home]({{ '/' | relative_url }})
@@ -31,3 +34,5 @@ Privacy & Data:
 Resources:
 - [Robots.txt]({{ '/robots.txt' | relative_url }})
 - [Sitemap (XML)]({{ '/sitemap.xml' | relative_url }})
+
+{%- include page-feedback.html -%}

@@ -5,6 +5,9 @@ description: Get in touch with the 3mpwr team for questions, feedback, or collab
 permalink: /contact
 ---
 
+
+{%- include status-banner.html -%}
+
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
 
@@ -669,3 +672,5 @@ We aim to respond to all inquiries within 24 hours during business days (Monday-
 ---
 
 **Note:** This form requires JavaScript to function. If you're having issues, you can email us directly at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).
+
+{%- include page-feedback.html -%}

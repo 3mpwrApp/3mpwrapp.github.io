@@ -621,3 +621,5 @@ We typically respond within 2-3 business days.
 ---
 
 *Last updated: January 2025*
+
+{%- include page-feedback.html -%}

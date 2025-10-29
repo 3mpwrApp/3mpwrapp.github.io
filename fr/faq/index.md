@@ -6,6 +6,9 @@ description: Réponses aux questions les plus courantes sur le site Web et l'app
 lang: fr
 ---
 
+
+{%- include status-banner.html -%}
+
 # Foire aux questions (FAQ)
 
 Vous trouverez ci-dessous des réponses rapides aux questions courantes. Si vous ne trouvez pas ce dont vous avez besoin, veuillez nous contacter via notre page [Contact](/fr/contact/).
@@ -187,3 +190,5 @@ Pas pour le moment. Si vous êtes un développeur intéressé par l'intégration
 Merci d'utiliser 3mpwrApp ! 💚
 
 *Dernière mise à jour : {{ site.time | date: "%-d %B %Y" }}*
+
+{%- include page-feedback.html -%}

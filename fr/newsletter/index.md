@@ -6,6 +6,9 @@ description: Abonnez-vous pour recevoir des mises à jour hebdomadaires, des his
 lang: fr
 ---
 
+
+{%- include status-banner.html -%}
+
 # Infolettre
 
 Restez informé des mises à jour de produits, des accès anticipés et des invitations bêta. Nous vous enverrons uniquement des courriels concernant 3mpwrApp. Vous pouvez vous désabonner à tout moment.
@@ -143,3 +146,5 @@ Pour des questions sur l'infolettre :
 - **Sujet** : "Question infolettre"
 
 Merci de faire partie de notre communauté ! 💚
+
+{%- include page-feedback.html -%}

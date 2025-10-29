@@ -5,6 +5,9 @@ description: Our commitment to inclusive accessible design
 permalink: /accessibility/
 ---
 
+
+{%- include status-banner.html -%}
+
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/accessibility.css' | relative_url }}">
 
@@ -484,3 +487,4 @@ We also work toward compliance with:
 <script src="{{ '/assets/js/page-enhancements.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/accessibility.js' | relative_url }}"></script>
 
+{%- include page-feedback.html -%}

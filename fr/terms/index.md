@@ -6,6 +6,9 @@ description: Conditions d'utilisation pour 3mpwrApp et notre site Web.
 lang: fr
 ---
 
+
+{%- include status-banner.html -%}
+
 # Conditions d'utilisation
 
 Dernière mise à jour : {{ site.time | date: '%d %B %Y' }}
@@ -208,3 +211,5 @@ Pour toute question concernant ces conditions :
 **Traductions** : Disponible en [anglais](/terms/) et en français.
 
 Merci d'utiliser 3mpwrApp ! 🌟
+
+{%- include page-feedback.html -%}

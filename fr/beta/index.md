@@ -6,6 +6,9 @@ lang: fr
 permalink: /fr/beta/
 ---
 
+
+{%- include status-banner.html -%}
+
 # Devenez testeur bêta 3mpwrApp !
 
 Aidez-nous à façonner l'avenir de l'application 3mpwrApp en rejoignant notre programme de testeurs bêta.  
@@ -188,3 +191,5 @@ Pour toute question :
 - **Sujet** : "Question programme bêta"
 
 Merci de nous aider à créer une meilleure application pour tous ! 💚
+
+{%- include page-feedback.html -%}

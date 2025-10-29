@@ -6,6 +6,9 @@ lang: fr
 permalink: /fr/blog/
 ---
 
+
+{%- include status-banner.html -%}
+
 # Blog 3mpwrApp
 
 Bienvenue sur notre blog !  
@@ -84,3 +87,5 @@ Contactez-nous à [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.c
 ---
 
 Merci de faire partie de notre communauté ! 💚
+
+{%- include page-feedback.html -%}

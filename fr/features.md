@@ -5,6 +5,9 @@ lang: fr
 description: Découvrez les fonctionnalités clés de 3mpowr pour vous aider à vous connecter, défendre vos droits et apprendre.
 ---
 
+
+{%- include status-banner.html -%}
+
 # Fonctionnalités
 
 Découvrez les outils principaux de 3mpowr. Nous privilégions l’accessibilité, la confidentialité et la simplicité d’utilisation.
@@ -16,3 +19,5 @@ Découvrez les outils principaux de 3mpowr. Nous privilégions l’accessibilit�
 - Infos et mises à jour
 
 Pour en savoir plus, consultez le [Guide d’utilisation]({{ '/fr/user-guide' | relative_url }}).
+
+{%- include page-feedback.html -%}

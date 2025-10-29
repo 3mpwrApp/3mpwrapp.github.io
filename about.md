@@ -7,9 +7,7 @@ description: Empowering Canada's disability and injured worker community with 10
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
 
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> App Status: Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
-</div>
+{%- include status-banner.html -%}
 
 # Empowering Canada's Disability & Injured Worker Community
 
@@ -249,3 +247,4 @@ description: Empowering Canada's disability and injured worker community with 10
 <script src="{{ '/assets/js/page-enhancements.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/about.js' | relative_url }}" defer></script>
 
+{%- include page-feedback.html -%}

@@ -5,6 +5,9 @@ permalink: /legal/disclaimers/
 description: Important disclaimers about medical, legal, financial advice, AI content, and liability.
 ---
 
+
+{%- include status-banner.html -%}
+
 # 3mpwrApp — All Disclaimers
 
 **For Website FAQ / Legal Section**  
@@ -328,3 +331,5 @@ Before using this app, confirm you understand:
 
 **© 2025 3mpwrApp. All rights reserved.**  
 **Last Updated: October 25, 2025 | Version 3.0**
+
+{%- include page-feedback.html -%}

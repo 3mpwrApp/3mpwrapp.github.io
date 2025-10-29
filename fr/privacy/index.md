@@ -6,6 +6,9 @@ description: Notre engagement envers votre vie privée et comment nous gérons v
 lang: fr
 ---
 
+
+{%- include status-banner.html -%}
+
 # Politique de confidentialité
 
 Dernière mise à jour : {{ site.time | date: '%d %B %Y' }}
@@ -171,3 +174,5 @@ Si vous pensez que vos droits en matière de confidentialité ont été violés,
 **Historique des versions** : Les versions précédentes de cette politique sont disponibles sur demande.
 
 **Traduction** : Cette politique est disponible en [anglais](/privacy/) et en français. En cas de divergence, la version anglaise prévaut.
+
+{%- include page-feedback.html -%}

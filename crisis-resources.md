@@ -5,6 +5,9 @@ description: Essential crisis support numbers across Canada - 24/7 helplines for
 permalink: /crisis-resources/
 ---
 
+
+{%- include status-banner.html -%}
+
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/crisis-resources.css' | relative_url }}">
 
@@ -233,3 +236,5 @@ permalink: /crisis-resources/
 *Last verified: October 26, 2025 | Numbers verified monthly*
 
 **[Back to home](/)** | **[Contact us](/contact)**
+
+{%- include page-feedback.html -%}

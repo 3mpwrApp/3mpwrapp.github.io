@@ -5,6 +5,9 @@ description: A practical guide to using 3mpwrApp's accessibility features - what
 permalink: /accessibility-walkthrough/
 ---
 
+
+{%- include status-banner.html -%}
+
 # Accessibility Walkthrough & Quick Start
 
 Last Updated: 2025-10-14  
@@ -266,3 +269,5 @@ Use the Settings → Dyslexia screen to configure fonts, spacing, overlays, and 
 **Prepared By:** 3mpwrApp Accessibility Engineering
 
 *Feedback welcome. This document will iterate as new features go live.*
+
+{%- include page-feedback.html -%}

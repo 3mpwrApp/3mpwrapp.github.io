@@ -10,10 +10,7 @@ permalink: /whats-new/
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/whats-new.css' | relative_url }}">
 
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> 
-  <strong>App Status:</strong> Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
-</div>
+{%- include status-banner.html -%}
 
 # What's New
 
@@ -92,14 +89,9 @@ permalink: /whats-new/
 
 ---
 
-<div class="page-feedback" role="complementary">
-  <p><strong>💬 Was this page helpful?</strong></p>
-  <p>
-  <a href="/feedback/" class="feedback-btn feedback-yes">👍 Yes</a>
-  <a href="/feedback/" class="feedback-btn feedback-no">👎 No</a>
-  <a href="/feedback/" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  </p>
-</div>
+
+
+{%- include page-feedback.html -%}
 
 <script src="{{ '/assets/js/page-enhancements.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/whats-new.js' | relative_url }}" defer></script>

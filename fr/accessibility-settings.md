@@ -6,6 +6,9 @@ permalink: /fr/accessibility-settings/
 lang: fr
 ---
 
+
+{%- include status-banner.html -%}
+
 # Paramètres d'accessibilité
 
 Utilisez ces contrôles pour personnaliser votre expérience de visualisation. Vos préférences sont enregistrées dans votre navigateur sur cet appareil.
@@ -309,3 +312,5 @@ Envoyez vos suggestions à [empowrapp08162025@gmail.com](mailto:empowrapp0816202
 Merci d'utiliser nos paramètres d'accessibilité ! 💚
 
 Ensemble, nous construisons un Web plus accessible pour tous.
+
+{%- include page-feedback.html -%}

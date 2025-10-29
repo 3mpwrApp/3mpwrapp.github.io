@@ -8,10 +8,7 @@ permalink: /app-waitlist/
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/app-waitlist.css' | relative_url }}">
 
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">🚀</span> 
-  <strong>Phase 1 Beta Testing - Now Accepting Signups!</strong> Be among the first testers
-</div>
+{%- include status-banner.html -%}
 
 # Join the 3mpwrApp Waitlist
 
@@ -706,13 +703,9 @@ Before joining beta, explore what 3mpwrApp offers:
 <script src="{{ '/assets/js/page-enhancements.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/app-waitlist.js' | relative_url }}"></script>
 
-<div class="page-feedback">
-  <p><strong>Was this page helpful?</strong></p>
-  <a href="/feedback?page=app-waitlist&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, signing up!</a>
-  <a href="/feedback?page=app-waitlist&helpful=no" class="feedback-btn feedback-no">👎 Have concerns</a>
-  <a href="/feedback?page=app-waitlist&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  <p class="page-meta">Last updated: October 26, 2025 | Next review: Weekly</p>
-</div>
+
+
+{%- include page-feedback.html -%}
 
 **3mpwrApp - Your voice, your power, your data.**
 
