@@ -78,6 +78,7 @@ function parseFrontmatter(content) {
 async function translateFrontmatter(frontmatter) {
   const lines = frontmatter.split('\n');
   const translated = [];
+  let hasLang = false;
 
   for (const line of lines) {
     // Skip empty lines
@@ -88,25 +89,28 @@ async function translateFrontmatter(frontmatter) {
 
     // Translate title, description, image_alt
     if (line.match(/^title:/)) {
-      const match = line.match(/^title:\s*["'](.+?)["']\s*$/);
-      if (match) {
-        const translatedValue = await translateText(match[1]);
+      const match = line.match(/^title:\s*(.+?)\s*$/);
+      const value = match ? match[1].replace(/^["']|["']$/g, '') : '';
+      if (value) {
+        const translatedValue = await translateText(value);
         translated.push(`title: "${translatedValue}"`);
       } else {
         translated.push(line);
       }
     } else if (line.match(/^description:/)) {
-      const match = line.match(/^description:\s*["'](.+?)["']\s*$/);
-      if (match) {
-        const translatedValue = await translateText(match[1]);
+      const match = line.match(/^description:\s*(.+?)\s*$/);
+      const value = match ? match[1].replace(/^["']|["']$/g, '') : '';
+      if (value) {
+        const translatedValue = await translateText(value);
         translated.push(`description: "${translatedValue}"`);
       } else {
         translated.push(line);
       }
     } else if (line.match(/^image_alt:/)) {
-      const match = line.match(/^image_alt:\s*["'](.+?)["']\s*$/);
-      if (match) {
-        const translatedValue = await translateText(match[1]);
+      const match = line.match(/^image_alt:\s*(.+?)\s*$/);
+      const value = match ? match[1].replace(/^["']|["']$/g, '') : '';
+      if (value) {
+        const translatedValue = await translateText(value);
         translated.push(`image_alt: "${translatedValue}"`);
       } else {
         translated.push(line);
@@ -122,10 +126,16 @@ async function translateFrontmatter(frontmatter) {
     } else if (line.match(/^lang:/)) {
       // Change language to fr
       translated.push('lang: fr');
+      hasLang = true;
     } else {
       // Keep other fields as-is
       translated.push(line);
     }
+  }
+
+  // Add lang: fr if not present
+  if (!hasLang && translated.length > 0) {
+    translated.splice(1, 0, 'lang: fr');
   }
 
   return translated.join('\n');
@@ -206,22 +216,38 @@ async function translateFile(sourcePath, targetPath) {
  */
 async function main() {
   const files = [
-    {
-      source: 'whats-new.md',
-      target: 'fr/whats-new.md'
-    },
-    {
-      source: 'campaigns/index.md',
-      target: 'fr/campaigns/index.md'
-    },
-    {
-      source: 'connect/index.md',
-      target: 'fr/connect/index.md'
-    },
-    {
-      source: 'community-spotlight/index.md',
-      target: 'fr/community-spotlight/index.md'
-    }
+    // Root pages
+    { source: 'index.md', target: 'fr/index.md' },
+    { source: 'about.md', target: 'fr/about.md' },
+    { source: 'contact.md', target: 'fr/contact.md' },
+    { source: 'accessibility.md', target: 'fr/accessibility.md' },
+    { source: 'privacy.md', target: 'fr/privacy.md' },
+    { source: 'faq.md', target: 'fr/faq.md' },
+    { source: 'roadmap.md', target: 'fr/roadmap.md' },
+    { source: 'whats-new.md', target: 'fr/whats-new.md' },
+    { source: 'features.md', target: 'fr/features.md' },
+    
+    // Subdirectory index pages
+    { source: 'user-guide/index.md', target: 'fr/user-guide.md' },
+    { source: 'events/index.md', target: 'fr/events/index.md' },
+    { source: 'site-map/index.md', target: 'fr/site-map/index.md' },
+    { source: 'wellness/index.md', target: 'fr/wellness/index.md' },
+    { source: 'resources/index.md', target: 'fr/resources/index.md' },
+    { source: 'community/index.md', target: 'fr/community/index.md' },
+    { source: 'campaigns/index.md', target: 'fr/campaigns/index.md' },
+    { source: 'connect/index.md', target: 'fr/connect/index.md' },
+    { source: 'community-spotlight/index.md', target: 'fr/community-spotlight/index.md' },
+    { source: 'newsletter/index.md', target: 'fr/newsletter/index.md' },
+    { source: 'blog/index.md', target: 'fr/blog/index.md' },
+    { source: 'terms/index.md', target: 'fr/terms/index.md' },
+    { source: 'cookies/index.md', target: 'fr/cookies/index.md' },
+    { source: 'privacy/index.md', target: 'fr/privacy/index.md' },
+    { source: 'data-ownership/index.md', target: 'fr/data-ownership/index.md' },
+    { source: 'privacy-controls/index.md', target: 'fr/privacy-controls/index.md' },
+    { source: 'delete-data/index.md', target: 'fr/delete-data/index.md' },
+    { source: 'beta/index.md', target: 'fr/beta/index.md' },
+    { source: 'beta-guide/index.md', target: 'fr/beta-guide/index.md' },
+    { source: 'search/index.md', target: 'fr/search/index.md' }
   ];
 
   console.log('\n🌍 DeepL Translation Script');
