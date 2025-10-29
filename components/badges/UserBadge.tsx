@@ -2,6 +2,7 @@ import { StyleSheet, Text } from 'react-native';
 
 import { useThemeColor } from '../../hooks/useThemeColor';
 import { useTranslation } from '../../i18n';
+import { GapView } from '../GapView';
 
 
 export type BadgeType = 'betaTester' | 'earlyAdopter' | 'contributor' | 'verified';

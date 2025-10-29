@@ -4,6 +4,7 @@ import { StyleSheet, Text } from 'react-native';
 import { useTranslation } from '../../i18n';
 import { announce } from '../../utils/announce';
 import A11yPressable from '../A11yPressable';
+import { GapView } from '../GapView';
 
 export interface LetterActionsBarProps {
   showInfo: boolean;

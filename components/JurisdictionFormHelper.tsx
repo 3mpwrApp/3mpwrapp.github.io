@@ -240,19 +240,20 @@ export default function JurisdictionFormHelper() {
         </GapView>
       ) : (
         <View style={styles.resultsContainer}>
-          <GapView
+          <A11yPressable
             onPress={clearSelection}
             style={styles.backButton}
-            gap={8}
             accessibilityRole="button"
             accessibilityLabel={t('jurisdiction.forms.back', 'Back to situations')}
             hitSlop={HIT_SLOP_8}
           >
-            <Ionicons name="arrow-back" size={20} color={palette.primary} />
-            <Text style={styles.backButtonText}>
-              {t('jurisdiction.forms.changeSelection', 'Change Selection')}
-            </Text>
-          </GapView>
+            <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={8}>
+              <Ionicons name="arrow-back" size={20} color={palette.primary} />
+              <Text style={styles.backButtonText}>
+                {t('jurisdiction.forms.changeSelection', 'Change Selection')}
+              </Text>
+            </GapView>
+          </A11yPressable>
 
           <ScrollView style={styles.recommendationsScroll}>
             {recommendations.length > 0 ? (

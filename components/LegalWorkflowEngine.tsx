@@ -16,6 +16,7 @@ import { useTranslation } from '../i18n';
 
 import A11yPressable from './A11yPressable';
 import { A11yTitle, A11yWrapper } from './A11yWrapper';
+import { GapView } from './GapView';
 
 // Workflow Engine - using imported types from types/phase2.ts
 
