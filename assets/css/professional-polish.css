@@ -1404,6 +1404,70 @@ small {
   font-weight: 900 !important;
 }
 
+/* ===== PHONE LINKS (crisis alert, standalone) ===== */
+.phone-link {
+  color: var(--light-link, #0056b3) !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+.phone-link:visited,
+.phone-link:hover,
+.phone-link:focus {
+  color: var(--light-link, #0056b3) !important;
+  text-decoration: underline !important;
+}
+
+[data-theme="dark"] .phone-link {
+  color: #0056b3 !important; /* Dark blue for white containers */
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .phone-link:visited,
+[data-theme="dark"] .phone-link:hover,
+[data-theme="dark"] .phone-link:focus {
+  color: #0056b3 !important;
+  text-decoration: underline !important;
+}
+
+[data-contrast="high"] .phone-link {
+  color: #0000ee !important;
+  font-weight: 900 !important;
+  text-decoration: underline !important;
+}
+
+[data-contrast="high"] .phone-link:visited,
+[data-contrast="high"] .phone-link:hover,
+[data-contrast="high"] .phone-link:focus {
+  color: #0000ee !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .phone-link {
+  color: #ffff00 !important;
+  font-weight: 900 !important;
+  text-decoration: underline !important;
+}
+
+[data-theme="dark"][data-contrast="high"] .phone-link:visited,
+[data-theme="dark"][data-contrast="high"] .phone-link:hover,
+[data-theme="dark"][data-contrast="high"] .phone-link:focus {
+  color: #ffff00 !important;
+}
+
+/* ===== LINKS IN WHITE CONTAINERS (dark mode) ===== */
+/* Service cards have white backgrounds in dark mode, so links need dark colors */
+[data-theme="dark"] .service-card a:not(.btn):not(.button):not(.phone-link):not(.service-phone) {
+  color: #0056b3 !important; /* Dark blue for white background */
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .service-card a:not(.btn):not(.button):not(.phone-link):not(.service-phone):visited,
+[data-theme="dark"] .service-card a:not(.btn):not(.button):not(.phone-link):not(.service-phone):hover,
+[data-theme="dark"] .service-card a:not(.btn):not(.button):not(.phone-link):not(.service-phone):focus {
+  color: #0056b3 !important;
+  text-decoration: underline !important;
+}
+
 /* ===== GENERAL LINK IMPROVEMENTS ===== */
 /* Ensure all links have proper contrast in all modes */
 a:not(.btn):not(.button):not(.nav-link):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone) {
