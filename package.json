@@ -191,7 +191,8 @@
   },
   "overrides": {
     "@sentry/browser": "^7.119.1",
-    "@sentry/react": "^7.119.1"
+    "@sentry/react": "^7.119.1",
+    "react": "19.1.0"
   },
   "engines": {
     "node": ">=20.19.4"

@@ -31,7 +31,9 @@
           "NSAllowsArbitraryLoads": false,
           "NSExceptionDomains": {}
         },
-        "UIBackgroundModes": ["background-processing"]
+        "UIBackgroundModes": [
+          "background-processing"
+        ]
       },
       "config": {
         "usesNonExemptEncryption": true
@@ -66,9 +68,7 @@
         "android.permission.SEND_SMS",
         "android.permission.CALL_PHONE",
         "android.permission.READ_PHONE_STATE"
-      ],
-      "usesCleartextTraffic": false,
-      "requestLegacyExternalStorage": false
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -101,7 +101,8 @@
           "mode": "production"
         }
       ],
-      "expo-audio"
+      "expo-audio",
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true
@@ -110,9 +111,7 @@
       "router": {},
       "eas": {
         "projectId": "6dd0264f-d796-4f63-9590-f82284a48354"
-      }
-    },
-    "env": {
+      },
       "EXPO_PUBLIC_DATA_POLICY": "strict_byoc"
     }
   }

@@ -45,8 +45,14 @@ jest.mock('../components/A11yPressable', () => {
   return ({ children, onPress }: any) => React.createElement('button', { onClick: onPress }, children);
 });
 
+jest.mock('../components/GapView', () => {
+  const React = require('react');
+  const GapView = ({ children, style, ...props }: any) => React.createElement('div', { style, ...props }, children);
+  return { GapView };
+});
+
 jest.mock('react-native', () => ({
-  StyleSheet: { create: (o: any) => o },
+  StyleSheet: { create: (o: any) => o, hairlineWidth: 1 },
   ScrollView: ({ children }: any) => <div>{children}</div>,
   Text: ({ children }: any) => <span>{children}</span>,
   TextInput: ({ value, onChangeText, placeholder }: any) => (
@@ -57,6 +63,7 @@ jest.mock('react-native', () => ({
     />
   ),
   View: ({ children }: any) => <div>{children}</div>,
+  Pressable: ({ children, onPress }: any) => <button onClick={onPress}>{children}</button>,
 }));
 
 import { render, screen } from '@testing-library/react';
