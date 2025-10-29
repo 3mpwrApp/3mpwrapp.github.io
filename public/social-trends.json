@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-10-29T12:22:25.897Z",
+  "lastUpdated": "2025-10-29T18:16:41.680Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 735,
-      "recentPosts": 24,
+      "totalPosts": 760,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-29T12:22:16.569Z"
+      "lastSeen": "2025-10-29T18:16:32.590Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 750,
+      "totalPosts": 775,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-29T12:22:18.564Z"
+      "lastSeen": "2025-10-29T18:16:34.630Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 738,
-      "recentPosts": 24,
+      "totalPosts": 763,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-29T12:22:20.840Z"
+      "lastSeen": "2025-10-29T18:16:36.596Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 750,
+      "totalPosts": 775,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-29T12:22:22.905Z"
+      "lastSeen": "2025-10-29T18:16:38.670Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 750,
+      "totalPosts": 775,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-10-29T12:22:24.893Z"
+      "lastSeen": "2025-10-29T18:16:40.676Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "He didn’t hurt anyone—he just loved trains.\nDarius McCollum, an autistic man, spent decades in jail for following his passion instead of being offered support or a job. The system punished difference instead of understanding it.\n#AutismAwareness #DisabilityJustice #Inclusion #Pink #Momsky",
-      "author": "urbanmodernism.bsky.social",
-      "engagement": 43,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Upturn savagely unmasks Medicaid's algorithmic gatekeepers as cynical ploys to starve disabled folks of home care, dialing eligibility via vendor whispers to slash costs over needs—time for rebel coders to hijack these sham equations. #DisabilityJustice",
-      "author": "youranona.bsky.social",
-      "engagement": 559,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I like this. People with disabilities are able to do many things, especially when we create environments for everyone. Disabled doesn't necessarily mean unhealthy. And many people are strong and fit. I'm going to stop using able-bodied and just use non-disabled. \n\n#WordsMatter #DisabilityJustice",
-      "author": "drtaragoddard.com",
-      "engagement": 62,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "So part of my job is making lists of accessibility tools to help students find what works for their needs. This week, it's screen readers for visually impaired folks. I don't use one, so I'm looking for suggestions/recs/warnings/etc.\n\nWhich screen reader do you love (or loathe)? #Accessibility",
-      "author": "aivalentin.bsky.social",
-      "engagement": 19,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
-      "author": "byrneout44.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Many seem to think #disabled people \"should just work\", but they don't understand/care that:\n\n1. Workplaces systemically discriminate against us \n\n2. We're often paid less than the non-disabled\n\n3. Accommodations that would enable us to work are often denied\n\nand it makes me mad.\n#DisabilityJustice",
       "author": "ellatholmes.bsky.social",
@@ -338,27 +296,69 @@
       "author": "byrneout44.bsky.social",
       "engagement": 11,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#disabilityjustice  Our disabled comrades need your helping hands!",
+      "author": "alsvid.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disability justice is economic justice. In 2023, 24.2% of disabled adults 18–64 lived in poverty vs 9.9% of nondisabled peers. That gap isn’t grit; it’s policy, access, bias. Enforce ADA, end subminimum wage, raise SSI asset limits, and fund real access. #DisabilityJustice #TruthBombTuesday ",
+      "author": "mrskgrady.bsky.social",
+      "engagement": 63,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Many seem to think #disabled people \"should just work\", but they don't understand/care that:\n\n1. Workplaces systemically discriminate against us \n\n2. We're often paid less than the non-disabled\n\n3. Accommodations that would enable us to work are often denied\n\nand it makes me mad.\n#DisabilityJustice",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 192,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Games for Blind Gamers 5 starts Feb 2026! Our community supports developers in making games accessible through planning and research. Join the jam and the challenge! itch.io/jam/games-fo... #GameJam #GameDev #Accessibility #BlindGaming #IndieDev #AudioGames #A11y",
+      "author": "ericbomb.bsky.social",
+      "engagement": 26,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
+      "author": "byrneout44.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 46
+      "count": 45
     },
     {
       "keyword": "accessibility",
-      "count": 38
-    },
-    {
-      "keyword": "disabilityjustice",
-      "count": 27
+      "count": 36
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 31
     },
     {
       "keyword": "cripthevote",
+      "count": 26
+    },
+    {
+      "keyword": "disabilityjustice",
       "count": 26
     },
     {
@@ -390,10 +390,6 @@
       "count": 11
     },
     {
-      "keyword": "disability",
-      "count": 10
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 9
     },
@@ -414,11 +410,15 @@
       "count": 9
     },
     {
-      "keyword": "wsbhd25",
-      "count": 6
+      "keyword": "disability",
+      "count": 7
     },
     {
       "keyword": "a11y accessibility",
+      "count": 7
+    },
+    {
+      "keyword": "inclusion",
       "count": 6
     }
   ]
