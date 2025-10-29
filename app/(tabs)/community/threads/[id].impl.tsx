@@ -4,7 +4,7 @@ import React from "react";
 import { FlatList, StyleSheet, Text, TextInput, useColorScheme, View } from "react-native";
 
 import A11yPressable from '../../../../components/A11yPressable';
-import GapView from '../../../../components/GapView';
+import { GapView } from '../../../../components/GapView';
 import { HIT_SLOP_8, touchTarget } from "../../../../constants/A11Y";
 import { useAuth } from "../../../../context/AuthContext";
 import { db } from "../../../../firebase/config";
@@ -91,7 +91,7 @@ function ThreadInner() {
         )}
         contentContainerStyle={{ paddingTop: 8 }}
       />
-      <View style={styles.newBox}>
+      <GapView style={styles.newBox} gap={8}>
         <TextInput
           style={styles.input}
           placeholder="Write a comment"
@@ -110,7 +110,7 @@ function ThreadInner() {
         >
           <Text style={styles.ctaText}>Send</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -129,7 +129,7 @@ function createStyles(palette: Palette) {
     comment: { paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
     commentAuthor: { color: palette.text, fontWeight: '600', marginBottom: 4 },
     commentText: { color: palette.text },
-    newBox: { flexDirection: 'row', gap: 8, alignItems: 'center', marginTop: 12, paddingVertical: 8 },
+    newBox: { flexDirection: 'row', alignItems: 'center', marginTop: 12, paddingVertical: 8 },
     input: { flex: 1, borderWidth: 1, borderColor: palette.muted, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, color: palette.text },
     cta: { backgroundColor: palette.primary, borderRadius: 10, paddingHorizontal: 16, paddingVertical: 10 },
     ctaText: { color: palette.onPrimary, fontWeight: '700' },

@@ -12,7 +12,7 @@ import {
 } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
-import GapView from '../../../components/GapView';
+import { GapView } from '../../../components/GapView';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/A11Y";
 import { useAuth } from "../../../context/AuthContext";
 import { channels as seedChannels } from "../../../data/community";
@@ -170,7 +170,6 @@ function createStyles(palette: Palette) {
 		title: { fontSize: 22, fontWeight: "700", color: palette.text },
 		newBox: {
 			flexDirection: "row",
-			gap: 8,
 			alignItems: "center",
 			marginTop: 12,
 			paddingVertical: 8,

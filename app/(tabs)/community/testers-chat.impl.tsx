@@ -4,6 +4,7 @@ import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
+import { GapView } from '../../../components/GapView';
 import { auth, db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { setLastRead, setTyping, touchPresence } from '../../../services/community';
@@ -111,7 +112,7 @@ export default function TestersChatImpl() {
         contentContainerStyle={{ paddingVertical: 8 }}
         style={{ flex: 1 }}
       />
-      <View style={s.inputRow}>
+      <GapView style={s.inputRow} gap={8}>
         <TextInput
           value={text}
           onChangeText={setText}
@@ -125,7 +126,7 @@ export default function TestersChatImpl() {
         <A11yPressable onPress={send} style={s.sendBtn}>
           <Text style={s.sendText}>Send</Text>
         </A11yPressable>
-      </View>
+      </GapView>
     </View>
   );
 }
@@ -138,7 +139,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     msgText: { color: palette.text },
     msgMeta: { color: palette.text, opacity: 0.6, fontSize: 12 },
     meta: { color: palette.text, opacity: 0.7, paddingHorizontal: 16, marginBottom: 4 },
-    inputRow: { flexDirection: 'row', padding: 12, alignItems: 'center', gap: 8 },
+    inputRow: { flexDirection: 'row', padding: 12, alignItems: 'center' },
     input: { flex: 1, borderWidth: 1, borderColor: palette.muted, borderRadius: 999, paddingHorizontal: 12, color: palette.text },
     sendBtn: { backgroundColor: palette.primary, borderRadius: 999, paddingHorizontal: 16, paddingVertical: 10 },
     sendText: { color: palette.onPrimary, fontWeight: '700' },

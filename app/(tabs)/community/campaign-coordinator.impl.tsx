@@ -15,6 +15,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
+import { GapView } from '../../../components/GapView';
 import { useAuth } from '../../../context/AuthContext';
 import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
 import { useThemeColor } from '../../../hooks/useThemeColor';
@@ -716,7 +717,7 @@ export default function AdvocacyCampaignCoordinator() {
 
           <View style={styles.formSection}>
             <Text style={[styles.fieldLabel, { color: colors.text }]}>Category</Text>
-            <View style={styles.categoryPicker}>
+            <GapView style={styles.categoryPicker} gap={8}>
               {[
                 { value: 'accessibility_rights', label: 'Accessibility Rights' },
                 { value: 'employment_equality', label: 'Employment Equality' },
@@ -746,7 +747,7 @@ export default function AdvocacyCampaignCoordinator() {
                   </Text>
                 </A11yPressable>
               ))}
-            </View>
+            </GapView>
           </View>
 
           <View style={styles.formSection}>
@@ -785,10 +786,10 @@ export default function AdvocacyCampaignCoordinator() {
                   accessibilityLabel={`Goal ${index + 1} description`}
                 />
 
-                <View style={styles.goalOptions}>
-                  <View style={styles.prioritySection}>
+                <GapView style={styles.goalOptions} gap={12}>
+                  <GapView style={styles.prioritySection} gap={12}>
                     <Text style={[styles.optionLabel, { color: colors.text }]}>Priority:</Text>
-                    <View style={styles.priorityButtons}>
+                    <GapView style={styles.priorityButtons} gap={8}>
                       {['high', 'medium', 'low'].map(priority => (
                         <A11yPressable
                           key={priority}
@@ -811,9 +812,9 @@ export default function AdvocacyCampaignCoordinator() {
                           </Text>
                         </A11yPressable>
                       ))}
-                    </View>
-                  </View>
-                </View>
+                    </GapView>
+                  </GapView>
+                </GapView>
               </View>
             ))}
           </View>
@@ -834,7 +835,7 @@ export default function AdvocacyCampaignCoordinator() {
             </View>
           )}
 
-          <View style={styles.modalFooter}>
+          <GapView style={styles.modalFooter} gap={12}>
             <A11yPressable
               onPress={() => {
                 setShowCreateModal(false);
@@ -852,7 +853,7 @@ export default function AdvocacyCampaignCoordinator() {
             >
               <Text style={styles.createButtonText}>Create Campaign</Text>
             </A11yPressable>
-          </View>
+          </GapView>
         </ScrollView>
       </View>
     </Modal>
@@ -1237,7 +1238,6 @@ const styles = StyleSheet.create({
     textAlignVertical: 'top',
   },
   categoryPicker: {
-    gap: 8,
   },
   categoryOption: {
     borderWidth: 1,
@@ -1288,12 +1288,10 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   goalOptions: {
-    gap: 12,
   },
   prioritySection: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
   },
   optionLabel: {
     fontSize: 14,
@@ -1301,7 +1299,6 @@ const styles = StyleSheet.create({
   },
   priorityButtons: {
     flexDirection: 'row',
-    gap: 8,
   },
   priorityButton: {
     borderWidth: 1,
@@ -1337,7 +1334,6 @@ const styles = StyleSheet.create({
   },
   modalFooter: {
     flexDirection: 'row',
-    gap: 12,
     paddingTop: 20,
   },
   cancelButton: {
