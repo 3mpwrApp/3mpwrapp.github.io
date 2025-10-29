@@ -321,7 +321,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Beta features announcements
 - Community highlights
 
-### **🧘 Wellness Tab** (36 Features)
+### 🧘 Wellness Tab (36 Features)
 - **Mood & Tracking:** Mood Tracker, Symptom Tracker, Sleep & Energy Tracker, Pain Forecast
 - **Mindfulness:** Adaptive Meditation, Ambience Sync, Dream Tracker
 - **DBT/CBT:** DBT Skill Matcher, CBT Coach, Opposite Action, Radical Acceptance
@@ -329,7 +329,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - **Support:** Grief Support, Self-Care Library, Distress Tolerance (TIPP)
 - **Progress:** Resilience Points, Achievements, Reflections Calendar
 
-### **📖 Resources Tab**
+### 📖 Resources Tab
 - Evidence Locker (document vault)
 - Letter Wizard (22 professional templates)
 - Benefits Tracker
@@ -338,7 +338,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - AI Tools (Case Interpreter, Translator)
 - Resource Search
 
-### **⚖️ Advocacy Tab**
+### ⚖️ Advocacy Tab
 - Legal Workflow Automation
 - Lawyer Finder
 - Ally Hub
@@ -347,14 +347,14 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Jurisdiction Resources
 - Rights Checklists
 
-### **🤝 Community Tab**
+### 🤝 Community Tab
 - Peer Support Matching
 - Discussion Forums
 - Campaign Coordination
 - Virtual Meetups
 - Beta Testers Chat
 
-### **⚙️ Settings Tab**
+### ⚙️ Settings Tab
 - Profile Editor
 - Accessibility Options
 - Privacy & Security
@@ -364,7 +364,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Motor Accessibility
 - Neurodivergent Settings
 
-### **📢 What's New Tab**
+### 📢 What's New Tab
 - App updates
 - New features
 - Bug fixes
@@ -375,52 +375,52 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 ## 🧘 Wellness Tools (Detailed)
 **[⚙️ See all 36 Wellness features →](/features#wellness-tools---36-features-for-mental--physical-health)**
 
-### **⚕️ Medical Disclaimer:**
+### ⚕️ Medical Disclaimer:
 > **ALL wellness tools are informational only. This app does NOT provide medical advice. Always consult qualified healthcare providers for medical decisions. In emergencies, call 911.**
 
-### **Mood Tracker**
+### Mood Tracker
 - Log daily mood (emoji-based)
 - Track patterns over time
 - Export reports for therapist
 - Set mood check-in reminders
 - 7-day average trends
 
-### **Symptom & Pain Tracker**
+### Symptom & Pain Tracker
 - Log physical symptoms (pain level 0-10)
 - Track functional impact
 - Tag entries (work, meds, triggers)
 - Export advocacy-oriented reports
 - Filter by date range
 
-### **Sleep & Energy Tracker**
+### Sleep & Energy Tracker
 - Daily sleep quality + energy levels
 - Smart 24-hour energy forecasting
 - Weekly wellness reports
 - Personalized recommendations
 - Export for clinical use
 
-### **Adaptive Meditation**
+### Adaptive Meditation
 - Short sessions (2-20 minutes)
 - Adjustable for energy levels
 - Chair-friendly options
 - Guided breathing exercises
 - Customizable soundscapes
 
-### **DBT Skill Matcher**
+### DBT Skill Matcher
 - Select current emotion
 - Get instant skill suggestions
 - Evidence-based DBT techniques
 - Easy-to-follow instructions
 - Track skills usage
 
-### **Pacing Partner**
+### Pacing Partner
 - Activity planning
 - Energy budgeting
 - Break reminders
 - Spoon theory tracking
 - Daily pacing suggestions
 
-### **Resilience Points (Gamified)**
+### Resilience Points (Gamified)
 - Earn points for small wins
 - Track therapy goals
 - Celebrate progress
@@ -431,10 +431,10 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ## ⚖️ Advocacy & Legal Resources
 
-### **⚖️ Legal Disclaimer:**
+### ⚖️ Legal Disclaimer:
 > **ALL legal resources are educational only. This app does NOT provide legal advice. Laws vary by jurisdiction. Always consult a licensed attorney for legal matters specific to your situation.**
 
-### **Evidence Locker (Document Vault)**
+### Evidence Locker (Document Vault)
 **[⚙️ See all Evidence Locker features →](/features#evidence-locker---your-secure-document-vault)**
 
 - Securely store documents, photos, audio
@@ -444,7 +444,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Upload queue with retry
 - Tamper detection
 
-### **Letter Wizard (22 Templates)**
+### Letter Wizard (22 Templates)
 **[⚙️ See all Letter Wizard features →](/features#letter-wizard---22-professional-letter-templates)**
 
 1. Accommodation Request (Workplace)
@@ -459,7 +459,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 10. Retaliation Complaint
 ...and 12 more!
 
-### **Legal Workflow Automation**
+### Legal Workflow Automation
 **[⚙️ See all Legal Automation features →](/features#legal-automation---streamlined-legal-processes)**
 
 - Canada Disability Benefit (CDB) application
@@ -469,14 +469,14 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Document checklist
 - AI-assisted form filling
 
-### **Lawyer Finder**
+### Lawyer Finder
 - Filter by disability law specialization
 - Location-based search
 - Ratings & reviews
 - Contact information
 - **Disclaimer:** We don't endorse or verify attorneys
 
-### **Jurisdiction Resources**
+### Jurisdiction Resources
 - Province/state-specific forms
 - Deadline calculators
 - Evidence focus guides
@@ -488,14 +488,14 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 ## 🤝 Community Features
 **[⚙️ See all Community features →](/features#community---connect--support)**
 
-### **Peer Support Matching**
+### Peer Support Matching
 - Match with others (disability type, experiences)
 - 94% accuracy matching algorithm
 - Safety verification
 - Privacy controls
 - **Not therapy** - peer support only
 
-### **Campaign Coordination**
+### Campaign Coordination
 **[⚙️ See Campaign Coordination features →](/features#campaign-coordination---organize-for-change)**
 
 - Organize advocacy campaigns
@@ -504,14 +504,14 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Track campaign progress
 - Templates for common campaigns
 
-### **Discussion Forums**
+### Discussion Forums
 - Ask questions
 - Share experiences
 - Get advice from community
 - Respectful, moderated environment
 - Report violations
 
-### **Community Guidelines:**
+### Community Guidelines:
 See full Community Guidelines at: https://3mpwrapp.pages.dev/community-guidelines
 
 **Not Allowed:**
