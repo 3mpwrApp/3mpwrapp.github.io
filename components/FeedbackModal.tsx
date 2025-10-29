@@ -30,6 +30,7 @@ import { HIT_SLOP_8 } from '../constants/A11Y';
 import { useAppPalette } from '../theme/usePalette';
 
 import A11yPressable from './A11yPressable';
+import { GapView } from './GapView';
 
 export type FeedbackReason = 'helpful' | 'not_relevant' | 'misleading' | 'other';
 
@@ -147,7 +148,7 @@ export default function FeedbackModal({
                   accessibilityLabel={reason.label}
                   hitSlop={HIT_SLOP_8}
                 >
-                  <View style={styles.reasonContent}>
+                  <GapView style={styles.reasonContent} gap={12}>
                     <Ionicons
                       name={selectedReason === reason.value ? 'radio-button-on' : 'radio-button-off'}
                       size={24}
@@ -163,7 +164,7 @@ export default function FeedbackModal({
                     >
                       {reason.label}
                     </Text>
-                  </View>
+                  </GapView>
                 </A11yPressable>
               ))}
 
@@ -195,7 +196,7 @@ export default function FeedbackModal({
             </ScrollView>
 
             {/* Action Buttons */}
-            <View style={[styles.footer, { paddingBottom: insets.bottom }]}>
+            <GapView style={[styles.footer, { paddingBottom: insets.bottom }]} gap={12}>
               <A11yPressable
                 onPress={handleClose}
                 style={[styles.button, styles.cancelButton]}
@@ -226,7 +227,7 @@ export default function FeedbackModal({
                   <Text style={[styles.buttonText, { color: palette.onPrimary }]}>Submit</Text>
                 )}
               </A11yPressable>
-            </View>
+            </GapView>
           </View>
         </View>
       </KeyboardAvoidingView>
@@ -289,7 +290,6 @@ function createStyles(palette: any, _insets: any) {
     reasonContent: {
       flexDirection: 'row',
       alignItems: 'center',
-      gap: 12,
     },
     reasonLabel: {
       fontSize: 16,
@@ -333,7 +333,6 @@ function createStyles(palette: any, _insets: any) {
     },
     footer: {
       flexDirection: 'row',
-      gap: 12,
       paddingHorizontal: 20,
       paddingTop: 16,
       borderTopWidth: 1,

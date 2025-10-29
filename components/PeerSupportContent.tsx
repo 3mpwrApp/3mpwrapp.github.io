@@ -19,6 +19,7 @@ import { useTranslation } from '../i18n';
 import A11yPressable from './A11yPressable';
 import { A11yTitle, A11yWrapper } from './A11yWrapper';
 import DisclaimerBanner from './DisclaimerBanner';
+import { GapView } from './GapView';
 
 interface PeerProfile {
   id: string;
@@ -517,7 +518,7 @@ export default function PeerSupportContent() {
                 {Math.round(match.matchScore * 100)}% match
               </Text>
             </View>
-            <View style={styles.matchActions}>
+            <GapView style={styles.matchActions} gap={8}>
               <A11yPressable
                 onPress={() => handleDeclineMatch(match.id)}
                 accessibilityRole="button"
@@ -534,7 +535,7 @@ export default function PeerSupportContent() {
               >
                 <Ionicons name="checkmark" size={20} color="white" />
               </A11yPressable>
-            </View>
+            </GapView>
           </View>
 
           <View style={styles.matchReasons}>
@@ -680,7 +681,7 @@ export default function PeerSupportContent() {
             ))}
           </View>
 
-          <View style={styles.connectionActions}>
+          <GapView style={styles.connectionActions} gap={12}>
             <A11yPressable
               onPress={() => handleStartConversation(connection.id)}
               accessibilityRole="button"
@@ -697,7 +698,7 @@ export default function PeerSupportContent() {
               <Ionicons name="calendar" size={20} color={colors.primary} />
               <Text style={[styles.meetButtonText, { color: colors.primary }]}>Schedule</Text>
             </A11yPressable>
-          </View>
+          </GapView>
         </View>
       ))}
 
@@ -1048,7 +1049,6 @@ const styles = StyleSheet.create({
   },
   matchActions: {
     flexDirection: 'row',
-    gap: 8,
   },
   declineButton: {
     width: 40,
@@ -1220,7 +1220,6 @@ const styles = StyleSheet.create({
   },
   connectionActions: {
     flexDirection: 'row',
-    gap: 12,
   },
   chatButton: {
     flex: 1,
