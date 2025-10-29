@@ -1705,7 +1705,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingTop: 20,
   },
-  cancelButton: {al: 14,
+  cancelButton: {
+    flex: 1,
+    paddingVertical: 14,
     borderWidth: 1,
     borderRadius: 8,
     alignItems: 'center',
