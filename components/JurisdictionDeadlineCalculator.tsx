@@ -11,6 +11,7 @@ import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
 
 import A11yPressable from './A11yPressable';
+import { GapView } from './GapView';
 
 interface DeadlineInfo {
   level: string;
@@ -133,12 +134,12 @@ export default function JurisdictionDeadlineCalculator() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
+      <GapView style={styles.header} gap={8}>
         <Ionicons name="calendar-outline" size={24} color={palette.primary} />
         <Text style={styles.title}>
           {t('jurisdiction.deadline.calculator', 'Appeal Deadline Calculator')}
         </Text>
-      </View>
+      </GapView>
 
       <Text style={styles.description}>
         {t('jurisdiction.deadline.description', 
@@ -151,7 +152,7 @@ export default function JurisdictionDeadlineCalculator() {
         <Text style={styles.label}>
           {t('jurisdiction.deadline.decisionDate', 'Decision Date')}
         </Text>
-        <View style={styles.inputRow}>
+        <GapView style={styles.inputRow} gap={8}>
           <TextInput
             style={styles.input}
             value={decisionDate}
@@ -171,7 +172,7 @@ export default function JurisdictionDeadlineCalculator() {
               <Ionicons name="close-circle" size={24} color={palette.muted} />
             </A11yPressable>
           )}
-        </View>
+        </GapView>
         <Text style={styles.hint}>
           {t('jurisdiction.deadline.hint', 'Example: 2025-10-01 for October 1, 2025')}
         </Text>
@@ -184,14 +185,14 @@ export default function JurisdictionDeadlineCalculator() {
           </Text>
           {calculatedDeadlines.map((item, index) => (
             <View key={index} style={styles.deadlineCard}>
-              <View style={styles.deadlineHeader}>
+              <GapView style={styles.deadlineHeader} gap={8}>
                 <Ionicons
                   name={getUrgencyIcon(item.urgency)}
                   size={20}
                   color={getUrgencyColor(item.urgency)}
                 />
                 <Text style={styles.levelName}>{item.level}</Text>
-              </View>
+              </GapView>
               <View style={styles.deadlineDetails}>
                 <Text style={styles.deadlineLabel}>
                   {t('jurisdiction.deadline.appealBy', 'Appeal by:')}
@@ -209,14 +210,14 @@ export default function JurisdictionDeadlineCalculator() {
             </View>
           ))}
           
-          <View style={styles.disclaimerBox}>
+          <GapView style={styles.disclaimerBox} gap={8}>
             <Ionicons name="information-circle-outline" size={16} color={palette.muted} />
             <Text style={styles.disclaimerText}>
               {t('jurisdiction.deadline.disclaimer', 
                 'These are typical deadlines. Always verify specific deadlines with the board or tribunal. Some jurisdictions may accept late appeals in certain circumstances.'
               )}
             </Text>
-          </View>
+          </GapView>
         </View>
       )}
     </View>
@@ -235,7 +236,6 @@ function makeStyles(palette: any, factor: number) {
       flexDirection: 'row',
       alignItems: 'center',
       marginBottom: 12,
-      gap: 8,
     },
     title: {
       fontSize: Math.round(18 * factor),
@@ -260,7 +260,6 @@ function makeStyles(palette: any, factor: number) {
     inputRow: {
       flexDirection: 'row',
       alignItems: 'center',
-      gap: 8,
     },
     input: {
       flex: 1,
@@ -301,7 +300,6 @@ function makeStyles(palette: any, factor: number) {
     deadlineHeader: {
       flexDirection: 'row',
       alignItems: 'center',
-      gap: 8,
       marginBottom: 8,
     },
     levelName: {
@@ -336,7 +334,6 @@ function makeStyles(palette: any, factor: number) {
     },
     disclaimerBox: {
       flexDirection: 'row',
-      gap: 8,
       padding: 12,
       backgroundColor: palette.warning + '10',
       borderRadius: 8,
