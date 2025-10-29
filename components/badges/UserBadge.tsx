@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
 import { useThemeColor } from '../../hooks/useThemeColor';
 import { useTranslation } from '../../i18n';
+
 
 export type BadgeType = 'betaTester' | 'earlyAdopter' | 'contributor' | 'verified';
 
@@ -46,9 +47,9 @@ export default function UserBadge({
   const { t } = useTranslation();
 
   const sizeStyles = {
-    small: { iconSize: 16, fontSize: 12, padding: 4, gap: 4 },
-    medium: { iconSize: 20, fontSize: 14, padding: 6, gap: 6 },
-    large: { iconSize: 24, fontSize: 16, padding: 8, gap: 8 },
+    small: { iconSize: 16, fontSize: 12, padding: 4, gapSize: 4 },
+    medium: { iconSize: 20, fontSize: 14, padding: 6, gapSize: 6 },
+    large: { iconSize: 24, fontSize: 16, padding: 8, gapSize: 8 },
   };
 
   const currentSize = sizeStyles[size];
@@ -88,16 +89,16 @@ export default function UserBadge({
   };
 
   return (
-    <View
+    <GapView
       style={[
         styles.container,
         {
           padding: currentSize.padding,
-          gap: currentSize.gap,
           borderColor: badgeColor,
           backgroundColor: `${badgeColor}20`, // Slightly more opaque for visibility
         },
       ]}
+      gap={currentSize.gapSize}
       accessible
       accessibilityRole="text"
       accessibilityLabel={`${getBadgeName()} badge. ${getBadgeDescription()}`}
@@ -140,7 +141,7 @@ export default function UserBadge({
           ({data.phase})
         </Text>
       )}
-    </View>
+    </GapView>
   );
 }
 

@@ -18,6 +18,7 @@ import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
 
 import A11yPressable from './A11yPressable';
+import { GapView } from './GapView';
 
 interface DisabilityWizardProps {
   maxSuggestions?: number;
@@ -123,10 +124,12 @@ export default function DisabilityWizard({
           accessibilityLabel={t('wizard.customize', 'Customize wizard preferences')}
           hitSlop={HIT_SLOP_8}
         >
-          <Ionicons name="settings-outline" size={18} color={palette.primary} />
-          <Text style={styles.customizeText}>
-            {t('wizard.customize', 'Customize preferences')}
-          </Text>
+          <GapView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} gap={6}>
+            <Ionicons name="settings-outline" size={18} color={palette.primary} />
+            <Text style={styles.customizeText}>
+              {t('wizard.customize', 'Customize preferences')}
+            </Text>
+          </GapView>
         </A11yPressable>
       </Link>
     </View>
@@ -178,12 +181,12 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette }: S
       >
         {/* Featured Badge */}
         {suggestion.dayOfRotation !== undefined && (
-          <View style={styles.featuredBadge}>
+          <GapView style={styles.featuredBadge} gap={4}>
             <Ionicons name="star" size={14} color={palette.warning || palette.primary} />
             <Text style={styles.featuredText}>
               {t('wizard.featured', "Today's Pick")}
             </Text>
-          </View>
+          </GapView>
         )}
         
         {/* Icon */}
@@ -201,28 +204,28 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette }: S
           </Text>
           
           {/* Metadata */}
-          <View style={styles.cardMetadata}>
-            <View style={styles.metadataItem}>
+          <GapView style={styles.cardMetadata} gap={12}>
+            <GapView style={styles.metadataItem} gap={4}>
               <Ionicons name="time-outline" size={14} color={palette.text} style={{ opacity: 0.7 }} />
               <Text style={styles.metadataText}>{suggestion.estimatedTime}min</Text>
-            </View>
-            <View style={styles.metadataItem}>
+            </GapView>
+            <GapView style={styles.metadataItem} gap={4}>
               <Ionicons name={energy.icon as any} size={14} color={energy.color} />
               <Text style={[styles.metadataText, { color: energy.color }]}>{energy.label}</Text>
-            </View>
-            <View style={styles.metadataItem}>
+            </GapView>
+            <GapView style={styles.metadataItem} gap={4}>
               <Ionicons name={cognitive.icon as any} size={14} color={palette.text} style={{ opacity: 0.7 }} />
               <Text style={styles.metadataText}>{cognitive.label}</Text>
-            </View>
-          </View>
+            </GapView>
+          </GapView>
           
           {/* Reasons */}
           {showReasons && suggestion.reasoning.length > 0 && (
-            <View style={styles.reasonsContainer}>
+            <GapView style={styles.reasonsContainer} gap={6}>
               {suggestion.reasoning.slice(0, 2).map((reason, idx) => (
                 <ReasonChip key={idx} reason={reason} palette={palette} styles={styles} />
               ))}
-            </View>
+            </GapView>
           )}
         </View>
       </A11yPressable>
@@ -292,12 +295,12 @@ function ReasonChip({ reason, palette, styles }: ReasonChipProps) {
   const icon = iconMap[reason.type] || 'information-circle';
   
   return (
-    <View style={[styles.reasonChip, { borderColor: palette.primary + '40' }]}>
+    <GapView style={[styles.reasonChip, { borderColor: palette.primary + '40' }]} gap={4}>
       <Ionicons name={icon as any} size={12} color={palette.primary} />
       <Text style={styles.reasonText} maxFontSizeMultiplier={MAX_FONT_SCALE} numberOfLines={1}>
         {reason.label}
       </Text>
-    </View>
+    </GapView>
   );
 }
 
@@ -371,7 +374,6 @@ function createStyles(palette: any, factor: number) {
     // Suggestions
     suggestionsScroll: {
       paddingRight: 16,
-      gap: 12,
     },
     suggestionCard: {
       width: 280,
@@ -395,7 +397,6 @@ function createStyles(palette: any, factor: number) {
       paddingVertical: 4,
       borderRadius: 12,
       marginBottom: 12,
-      gap: 4,
     },
     featuredText: {
       fontSize: Math.round(12 * factor),
@@ -429,13 +430,11 @@ function createStyles(palette: any, factor: number) {
     cardMetadata: {
       flexDirection: 'row',
       flexWrap: 'wrap',
-      gap: 12,
       marginBottom: 12,
     },
     metadataItem: {
       flexDirection: 'row',
       alignItems: 'center',
-      gap: 4,
     },
     metadataText: {
       fontSize: Math.round(12 * factor),
@@ -445,12 +444,10 @@ function createStyles(palette: any, factor: number) {
     reasonsContainer: {
       flexDirection: 'row',
       flexWrap: 'wrap',
-      gap: 6,
     },
     reasonChip: {
       flexDirection: 'row',
       alignItems: 'center',
-      gap: 4,
       paddingHorizontal: 8,
       paddingVertical: 4,
       borderRadius: 12,
@@ -477,7 +474,6 @@ function createStyles(palette: any, factor: number) {
       marginBottom: 12,
     },
     nextStepsScroll: {
-      gap: 12,
       paddingRight: 16,
     },
     nextStepCard: {
@@ -517,7 +513,6 @@ function createStyles(palette: any, factor: number) {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 6,
       marginTop: 16,
       paddingVertical: 10,
     },
