@@ -248,6 +248,156 @@ img:not([width]):not([height]) {
   z-index: 100 !important;
 }
 
+/* ===== TOOLBAR TOGGLE BUTTON FIX (CLS Issue #3) ===== */
+
+/* Fix toolbar toggle button to prevent massive horizontal shifts */
+.toolbar-toggle,
+#toolbarToggle {
+  /* Fixed dimensions */
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 44px !important;
+  
+  /* Prevent flexbox from causing shifts */
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  
+  /* Consistent padding */
+  padding: 1rem 1.5rem !important;
+  
+  /* Prevent from affecting layout */
+  contain: layout !important;
+  
+  /* No transitions that cause shifts */
+  transition: background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+/* Toolbar badge fix - prevent horizontal shifts */
+.toolbar-toggle .badge,
+#toolbarToggle .badge,
+#toolbarToggle > span.badge {
+  /* Fixed dimensions to prevent width changes (91px → 83px) */
+  min-width: 90px !important;
+  width: auto !important;
+  max-width: 100px !important;
+  
+  /* Fixed height */
+  height: 24px !important;
+  min-height: 24px !important;
+  
+  /* Consistent padding */
+  padding: 0.25rem 0.5rem !important;
+  
+  /* Prevent from growing/shrinking */
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  
+  /* Center text */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Prevent text wrapping */
+  white-space: nowrap !important;
+  
+  /* Consistent font */
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  
+  /* Prevent layout shifts */
+  contain: layout !important;
+  
+  /* Position explicitly */
+  position: relative !important;
+  
+  /* No margin that could cause shifts */
+  margin: 0 !important;
+}
+
+/* Toggle text - prevent from causing shifts */
+.toolbar-toggle .toggle-text,
+#toolbarToggle .toggle-text {
+  /* Allow to flex but don't shrink */
+  flex: 1 1 auto !important;
+  flex-shrink: 0 !important;
+  
+  /* Consistent sizing */
+  font-size: 1.125rem !important;
+  line-height: 1.2 !important;
+  
+  /* Prevent wrapping */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  
+  /* Left align */
+  text-align: left !important;
+}
+
+/* Toggle icon - fixed size */
+.toolbar-toggle .toggle-icon,
+#toolbarToggle .toggle-icon {
+  /* Fixed dimensions */
+  width: 32px !important;
+  min-width: 32px !important;
+  height: 32px !important;
+  
+  /* Prevent from growing/shrinking */
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  
+  /* Center the icon */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Consistent font size */
+  font-size: 2rem !important;
+  line-height: 1 !important;
+}
+
+/* Toggle arrow - fixed size */
+.toolbar-toggle .toggle-arrow,
+#toolbarToggle .toggle-arrow {
+  /* Fixed dimensions */
+  width: 20px !important;
+  min-width: 20px !important;
+  height: 20px !important;
+  
+  /* Prevent from growing/shrinking */
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  
+  /* Center */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Consistent font size */
+  font-size: 0.875rem !important;
+  line-height: 1 !important;
+  
+  /* Use transform for rotation (GPU accelerated) */
+  transition: transform 0.2s ease !important;
+}
+
+/* When expanded, only rotate the arrow (no layout change) */
+.toolbar-toggle[aria-expanded="true"] .toggle-arrow,
+#toolbarToggle[aria-expanded="true"] .toggle-arrow {
+  transform: rotate(180deg) !important;
+}
+
+/* Hover/focus - only change colors, not layout */
+.toolbar-toggle:hover,
+.toolbar-toggle:focus,
+#toolbarToggle:hover,
+#toolbarToggle:focus {
+  /* Do NOT change padding, margin, or dimensions */
+  transform: none !important;
+}
+
 /* Status banner - prevent from causing shifts */
 .status-banner {
   /* Fixed height */
@@ -301,6 +451,34 @@ img:not([width]):not([height]) {
   /* Consistent spacing */
   padding: 1.25rem !important;
   margin: 2rem 0 !important;
+}
+
+/* ===== MOBILE TOOLBAR FIX ===== */
+
+@media (max-width: 768px) {
+  .toolbar-toggle,
+  #toolbarToggle {
+    /* Reduce padding on mobile but keep consistent */
+    padding: 0.75rem 1rem !important;
+    
+    /* Ensure badge doesn't wrap */
+    flex-wrap: nowrap !important;
+  }
+  
+  .toolbar-toggle .badge,
+  #toolbarToggle .badge,
+  #toolbarToggle > span.badge {
+    /* Smaller on mobile but consistent */
+    min-width: 70px !important;
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+  
+  .toolbar-toggle .toggle-text,
+  #toolbarToggle .toggle-text {
+    /* Allow more flexibility on mobile */
+    font-size: 1rem !important;
+  }
 }
 
 /* ===== BREADCRUMBS FIX ===== */

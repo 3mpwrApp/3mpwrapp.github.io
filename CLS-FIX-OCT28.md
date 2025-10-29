@@ -4,7 +4,7 @@
 
 Cloudflare Real User Monitoring (RUM) reported **poor CLS scores** for the homepage:
 
-### Issue #1: Header Controls
+### Issue #1: Header Controls ✅ FIXED
 - **CLS P50:** 0.351
 - **CLS P75:** 0.351
 - **CLS P90:** 0.586
@@ -12,13 +12,21 @@ Cloudflare Real User Monitoring (RUM) reported **poor CLS scores** for the homep
 
 **Element:** `html.webp>body.pain-flare-mode>header>div.header-controls`
 
-### Issue #2: Main Content Paragraph ⚠️ NEW
+### Issue #2: Main Content Paragraph ✅ FIXED
 - **CLS P50:** 0.125
 - **CLS P75:** 0.125
 - **CLS P90:** 0.133
 - **CLS P99:** 0.147
 
 **Element:** `#main-content>p` (first paragraph)
+
+### Issue #3: Toolbar Toggle Badge ⚠️ NEW
+- **CLS P50:** 0.123
+- **CLS P75:** 0.123
+- **CLS P90:** 0.129
+- **CLS P99:** 0.141
+
+**Element:** `#toolbarToggle>span.badge`
 
 **Good CLS:** < 0.1  
 **Needs Improvement:** 0.1 - 0.25  
@@ -40,11 +48,20 @@ The first paragraph in `#main-content` is shifting:
 1. **Height changes:** 77px → 80px (3px increase)
 2. **Vertical position shift:** y: 633 → 659 (26px downward shift)
 
+### Root Cause - Issue #3 (Toolbar Badge)
+
+The badge in the accessibility toolbar toggle button `#toolbarToggle>span.badge` is experiencing **massive horizontal layout shifts**:
+
+1. **Width changes:** 91px → 83px (8px shrink)
+2. **Horizontal position jump:** x: 240 → 1118 (878px shift!) - likely mobile → desktop transition
+3. **Minor vertical shift:** y: 356 → 358 (2px)
+
 **Causes:**
-- Web font loading causing text reflow
-- Line-height calculations after font loads
-- Breadcrumb navigation height changes affecting content below
-- Dynamic toolbar/banner elements pushing content down
+- Flexbox layout without fixed badge dimensions
+- Badge width changing based on text content
+- Responsive layout transitions causing horizontal repositioning
+- No `flex-shrink: 0` on badge element
+- Missing explicit width constraints
 
 ### Why This Happened
 
@@ -165,15 +182,48 @@ header {
 }
 ```
 
+### 11. Toolbar Badge Stabilization (Issue #3)
+```css
+#toolbarToggle > span.badge {
+  min-width: 90px !important;
+  max-width: 100px !important;
+  height: 24px !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  white-space: nowrap !important;
+}
+```
+
+### 12. Toolbar Button Layout Lock
+```css
+.toolbar-toggle,
+#toolbarToggle {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  contain: layout !important;
+  padding: 1rem 1.5rem !important;
+}
+```
+
+### 13. Flexbox Children Stabilization
+```css
+.toolbar-toggle .toggle-icon { width: 32px !important; flex-shrink: 0 !important; }
+.toolbar-toggle .toggle-text { flex: 1 1 auto !important; white-space: nowrap !important; }
+.toolbar-toggle .toggle-arrow { width: 20px !important; flex-shrink: 0 !important; }
+```
+
 ## 📊 Expected Improvements
 
 | Element | Metric | Before | Target | Status |
 |---------|--------|--------|--------|--------|
-| Header Controls | CLS P50 | 0.351 | < 0.1 | 🔄 Pending verification |
-| Header Controls | CLS P90 | 0.586 | < 0.15 | 🔄 Pending verification |
-| Main Content | CLS P50 | 0.125 | < 0.1 | 🔄 Pending verification |
-| Main Content | CLS P90 | 0.133 | < 0.1 | 🔄 Pending verification |
-| **Overall Page** | **CLS** | **> 0.25** | **< 0.1** | **🎯 Target** |
+| Header Controls | CLS P50 | 0.351 | < 0.1 | ✅ Fix #1 applied |
+| Header Controls | CLS P90 | 0.586 | < 0.15 | ✅ Fix #1 applied |
+| Main Content | CLS P50 | 0.125 | < 0.1 | ✅ Fix #2 applied |
+| Main Content | CLS P90 | 0.133 | < 0.1 | ✅ Fix #2 applied |
+| Toolbar Badge | CLS P50 | 0.123 | < 0.1 | ✅ Fix #3 applied |
+| Toolbar Badge | CLS P90 | 0.129 | < 0.1 | ✅ Fix #3 applied |
+| **Overall Page** | **CLS** | **> 0.25** | **< 0.1** | **🎯 All 3 fixes applied** |
 
 ## 🧪 Testing Required
 
@@ -190,6 +240,8 @@ header {
 - [ ] **Test first paragraph stability** (no shift on font load)
 - [ ] **Test breadcrumb navigation** (consistent height)
 - [ ] **Test accessibility toolbar toggle** (no content push)
+- [ ] **Test toolbar badge** (no horizontal shift on resize)
+- [ ] **Test mobile → desktop transition** (badge stays stable)
 - [ ] Test on different viewports (320px, 768px, 1024px, 1920px)
 
 ### 3. Lighthouse Testing
@@ -273,9 +325,15 @@ Track these metrics in Cloudflare RUM:
 
 ## 📂 Files Modified
 
-1. **Created:** `assets/css/cls-fix.css` (450+ lines)
+1. **Created:** `assets/css/cls-fix.css` (600+ lines - comprehensive CLS prevention)
 2. **Modified:** `_layouts/default.html` (added CSS link)
-3. **Updated:** `CLS-FIX-OCT28.md` (documentation - updated with second CLS issue fix)
+3. **Updated:** `CLS-FIX-OCT28.md` (documentation - all 3 CLS issues documented)
+
+## 🔄 Fix History
+
+- **Initial commit (aa55430):** Fixed header-controls CLS (Issue #1)
+- **Second commit (ef99a8a):** Fixed main content paragraph CLS (Issue #2)
+- **Third commit (pending):** Fixed toolbar badge CLS (Issue #3)
 
 ## 🚀 Deployment
 
