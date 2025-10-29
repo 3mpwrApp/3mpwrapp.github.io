@@ -399,6 +399,11 @@ Please fill out the form below and we'll get back to you within 24 hours:
     color: #000000 !important;
   }
 
+  [data-theme="dark"] .btn-primary .btn-text,
+  [data-theme="dark"] .btn-primary .btn-spinner {
+    color: #000000 !important;
+  }
+
   [data-theme="dark"] .btn-primary:hover:not(:disabled) {
     background-color: #99ccff !important;
     color: #000000 !important;
