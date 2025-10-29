@@ -28,7 +28,7 @@ Cloudflare Real User Monitoring (RUM) reported **poor CLS scores** for the homep
 
 **Element:** `#toolbarToggle>span.badge`
 
-### Issue #4: Main Content Collapse 🚨 CRITICAL
+### Issue #4: Main Content Collapse 🚨 CRITICAL (FIXED)
 - **CLS P50:** 0.368 (POOR)
 - **CLS P75:** 0.367
 - **CLS P90:** 0.368
@@ -37,6 +37,15 @@ Cloudflare Real User Monitoring (RUM) reported **poor CLS scores** for the homep
 **Element:** `#main-content`
 
 **Critical Bug:** Height collapse from 715px → 0px!
+
+### Issue #5: FAQ Search Container ⚠️ NEW
+- **CLS P50:** 0.143 (needs improvement)
+- **CLS P75:** 0.143
+- **CLS P90:** 0.143
+- **CLS P99:** 0.143
+
+**Element:** `#main-content>div.faq-search-container`
+**Page:** `/faq/`
 
 **Good CLS:** < 0.1  
 **Needs Improvement:** 0.1 - 0.25  
@@ -77,6 +86,20 @@ The CSS property `contain: layout` applied to `#main-content` is causing the ent
 - Change `contain: layout` to `contain: style paint` for #main-content
 - This provides some isolation without preventing natural growth
 - Only use `contain: layout` on fixed-dimension elements (header, nav, buttons)
+
+### Root Cause - Issue #5 (FAQ Search Container)
+
+The FAQ search container on `/faq/` is growing when dynamic elements appear:
+
+1. **Height increase:** 105px → 161px (56px growth, 53% increase!)
+2. **Width change:** 1100px → 1124px (24px increase)
+3. **Position shift:** x: 90 → 78 (12px), y: 572 → 578 (6px)
+
+**Causes:**
+- Search results count div appears with `display: none` → `display: block`
+- Clear search button appears dynamically
+- Container doesn't reserve space for these elements
+- No min-height set to accommodate dynamic content
 
 ### Why This Happened
 
@@ -239,6 +262,32 @@ header {
 }
 ```
 
+### 15. FAQ Search Container Stabilization (Issue #5)
+```css
+.faq-search-container {
+  min-height: 165px !important; /* Reserve space for dynamic content */
+  contain: layout !important;
+  width: 100% !important;
+  padding: 1.5rem !important;
+}
+```
+
+### 16. FAQ Dynamic Elements - Visibility Trick
+```css
+/* Use visibility: hidden instead of display: none to preserve space */
+.search-results-count[style*="display: none"] {
+  display: block !important;
+  visibility: hidden !important;
+  height: 32px !important;
+}
+
+.clear-search-btn[style*="display: none"] {
+  display: block !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+```
+
 ## 📊 Expected Improvements
 
 | Element | Metric | Before | Target | Status |
@@ -249,8 +298,9 @@ header {
 | Main Content | CLS P90 | 0.133 | < 0.1 | ✅ Fix #2 applied |
 | Toolbar Badge | CLS P50 | 0.123 | < 0.1 | ✅ Fix #3 applied |
 | Toolbar Badge | CLS P90 | 0.129 | < 0.1 | ✅ Fix #3 applied |
-| **Main Collapse** | **CLS P50** | **0.368** | **< 0.1** | **🚨 Fix #4 applied (CRITICAL)** |
-| **Overall Page** | **CLS** | **> 0.25** | **< 0.1** | **🎯 All 4 fixes applied** |
+| **Main Collapse** | **CLS P50** | **0.368** | **< 0.1** | **✅ Fix #4 applied (CRITICAL)** |
+| **FAQ Search** | **CLS P50** | **0.143** | **< 0.1** | **✅ Fix #5 applied** |
+| **Overall Page** | **CLS** | **> 0.25** | **< 0.1** | **🎯 All 5 fixes applied** |
 
 ## 🧪 Testing Required
 

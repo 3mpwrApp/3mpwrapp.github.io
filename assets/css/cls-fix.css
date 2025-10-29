@@ -453,6 +453,137 @@ img:not([width]):not([height]) {
   margin: 2rem 0 !important;
 }
 
+/* ===== FAQ SEARCH CONTAINER FIX (CLS Issue #5) ===== */
+
+/* Fix FAQ search container layout shifts on /faq/ page
+   Issue: Height 105px → 161px (56px growth) when search results/clear button appear
+   CLS: 0.143 (needs improvement) */
+.faq-search-container {
+  /* Reserve space for dynamic elements (search results count, clear button) */
+  min-height: 165px !important;
+  
+  /* Prevent from affecting siblings */
+  contain: layout !important;
+  
+  /* Fixed width to prevent horizontal shifts */
+  width: 100% !important;
+  max-width: 100% !important;
+  
+  /* Consistent padding that doesn't change */
+  padding: 1.5rem !important;
+  
+  /* Consistent margins */
+  margin: 2rem 0 !important;
+  
+  /* Box sizing for predictable dimensions */
+  box-sizing: border-box !important;
+}
+
+/* Search input - fixed dimensions */
+.faq-search-input {
+  /* Prevent from changing size */
+  width: 100% !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  
+  /* Consistent padding */
+  padding: 0.875rem 3rem 0.875rem 1rem !important;
+  
+  /* Box sizing */
+  box-sizing: border-box !important;
+  
+  /* Prevent font changes from affecting layout */
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Search label - fixed dimensions */
+.search-label {
+  /* Fixed height */
+  min-height: 32px !important;
+  height: 32px !important;
+  
+  /* Prevent from changing */
+  margin-bottom: 0.75rem !important;
+  
+  /* No flex grow/shrink */
+  flex-shrink: 0 !important;
+}
+
+/* Search help text - reserve space even when hidden */
+.search-help {
+  /* Fixed height to prevent shifts */
+  min-height: 20px !important;
+  height: 20px !important;
+  
+  /* Display block to reserve space */
+  display: block !important;
+  
+  /* Consistent margin */
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Search results count - reserve space even when hidden */
+.search-results-count {
+  /* Reserve space even when display: none */
+  min-height: 32px !important;
+  
+  /* When hidden, still take up space (use visibility instead of display) */
+  visibility: visible !important;
+  
+  /* Consistent margin */
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.search-results-count[style*="display: none"] {
+  /* Override display: none with visibility to preserve space */
+  display: block !important;
+  visibility: hidden !important;
+  height: 32px !important;
+}
+
+/* Clear search button - reserve space */
+.clear-search-btn {
+  /* Reserve space even when hidden */
+  min-height: 36px !important;
+  height: 36px !important;
+  
+  /* Position absolutely to not affect layout */
+  position: absolute !important;
+  right: 1.5rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  
+  /* When hidden, use visibility instead of display */
+  visibility: visible !important;
+}
+
+.clear-search-btn[style*="display: none"] {
+  /* Override display: none */
+  display: block !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Mobile FAQ search fixes */
+@media (max-width: 600px) {
+  .faq-search-container {
+    /* Adjust min-height for mobile */
+    min-height: 180px !important;
+    padding: 1rem !important;
+  }
+  
+  .clear-search-btn {
+    /* On mobile, button is below input, not absolute */
+    position: static !important;
+    width: 100% !important;
+    margin-top: 0.75rem !important;
+    transform: none !important;
+  }
+}
+
 /* ===== MOBILE TOOLBAR FIX ===== */
 
 @media (max-width: 768px) {
