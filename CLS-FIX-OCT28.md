@@ -3,16 +3,28 @@
 ## 🚨 Issue Identified
 
 Cloudflare Real User Monitoring (RUM) reported **poor CLS scores** for the homepage:
+
+### Issue #1: Header Controls
 - **CLS P50:** 0.351
 - **CLS P75:** 0.351
 - **CLS P90:** 0.586
 - **CLS P99:** 0.588
 
+**Element:** `html.webp>body.pain-flare-mode>header>div.header-controls`
+
+### Issue #2: Main Content Paragraph ⚠️ NEW
+- **CLS P50:** 0.125
+- **CLS P75:** 0.125
+- **CLS P90:** 0.133
+- **CLS P99:** 0.147
+
+**Element:** `#main-content>p` (first paragraph)
+
 **Good CLS:** < 0.1  
 **Needs Improvement:** 0.1 - 0.25  
 **Poor:** > 0.25 ⚠️
 
-### Root Cause
+### Root Cause - Issue #1 (Header)
 
 The DOM element `html.webp>body.pain-flare-mode>header>div.header-controls` was experiencing multiple layout shifts:
 
@@ -20,6 +32,19 @@ The DOM element `html.webp>body.pain-flare-mode>header>div.header-controls` was 
 2. **Vertical position jumps:**
    - y: 390 → 450 (60px shift)
    - y: 390 → 574 (184px shift!)
+
+### Root Cause - Issue #2 (Main Content)
+
+The first paragraph in `#main-content` is shifting:
+
+1. **Height changes:** 77px → 80px (3px increase)
+2. **Vertical position shift:** y: 633 → 659 (26px downward shift)
+
+**Causes:**
+- Web font loading causing text reflow
+- Line-height calculations after font loads
+- Breadcrumb navigation height changes affecting content below
+- Dynamic toolbar/banner elements pushing content down
 
 ### Why This Happened
 
@@ -98,14 +123,57 @@ header {
 }
 ```
 
+### 7. Main Content Paragraph Stabilization
+```css
+#main-content > p:first-of-type {
+  min-height: 80px !important;
+  line-height: 1.7 !important;
+  font-size: 1rem !important;
+  margin-top: 0 !important;
+  padding-top: 0.25rem !important;
+}
+```
+
+### 8. Font Loading Prevention
+```css
+* {
+  text-size-adjust: 100% !important;
+  font-synthesis: none !important;
+  transform: translateZ(0) !important;
+}
+```
+
+### 9. Dynamic Content Stabilization
+```css
+.accessibility-toolbar.collapsed {
+  min-height: 48px !important;
+  height: 48px !important;
+}
+
+.status-banner {
+  min-height: 44px !important;
+  contain: layout !important;
+}
+```
+
+### 10. Breadcrumb Navigation Fix
+```css
+.breadcrumbs {
+  min-height: 32px !important;
+  height: 32px !important;
+  contain: layout !important;
+}
+```
+
 ## 📊 Expected Improvements
 
-| Metric | Before | Target | Status |
-|--------|--------|--------|--------|
-| CLS P50 | 0.351 | < 0.1 | 🔄 Pending verification |
-| CLS P75 | 0.351 | < 0.1 | 🔄 Pending verification |
-| CLS P90 | 0.586 | < 0.15 | 🔄 Pending verification |
-| CLS P99 | 0.588 | < 0.20 | 🔄 Pending verification |
+| Element | Metric | Before | Target | Status |
+|---------|--------|--------|--------|--------|
+| Header Controls | CLS P50 | 0.351 | < 0.1 | 🔄 Pending verification |
+| Header Controls | CLS P90 | 0.586 | < 0.15 | 🔄 Pending verification |
+| Main Content | CLS P50 | 0.125 | < 0.1 | 🔄 Pending verification |
+| Main Content | CLS P90 | 0.133 | < 0.1 | 🔄 Pending verification |
+| **Overall Page** | **CLS** | **> 0.25** | **< 0.1** | **🎯 Target** |
 
 ## 🧪 Testing Required
 
@@ -119,6 +187,9 @@ header {
 - [ ] Test theme toggle (no layout shift)
 - [ ] Test contrast toggle (no layout shift)
 - [ ] Test menu toggle on mobile (header stays stable)
+- [ ] **Test first paragraph stability** (no shift on font load)
+- [ ] **Test breadcrumb navigation** (consistent height)
+- [ ] **Test accessibility toolbar toggle** (no content push)
 - [ ] Test on different viewports (320px, 768px, 1024px, 1920px)
 
 ### 3. Lighthouse Testing
@@ -144,6 +215,10 @@ lighthouse https://3mpwrapp.pages.dev --only-categories=performance --view
 6. **`transform` for animations** - Uses compositor, not layout
 7. **`will-change: auto`** - Hints browser about animation properties
 8. **GPU acceleration** - Offloads rendering to GPU
+9. **`text-size-adjust: 100%`** - Prevents mobile browser text scaling
+10. **Font synthesis prevention** - Stops browser from generating missing font weights
+11. **Explicit min-height reservations** - Pre-allocates space for dynamic content
+12. **System font fallbacks** - Immediate rendering to prevent FOIT
 
 ## 📝 Additional Recommendations
 
@@ -198,8 +273,9 @@ Track these metrics in Cloudflare RUM:
 
 ## 📂 Files Modified
 
-1. **Created:** `assets/css/cls-fix.css` (360 lines)
+1. **Created:** `assets/css/cls-fix.css` (450+ lines)
 2. **Modified:** `_layouts/default.html` (added CSS link)
+3. **Updated:** `CLS-FIX-OCT28.md` (documentation - updated with second CLS issue fix)
 
 ## 🚀 Deployment
 

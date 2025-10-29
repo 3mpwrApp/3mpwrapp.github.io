@@ -140,6 +140,33 @@ body {
   /* This is typically defined in @font-face rules in the main stylesheet */
 }
 
+/* Force immediate font rendering to prevent layout shifts */
+* {
+  /* Use system fonts initially */
+  font-synthesis: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  
+  /* Prevent text size adjust that can cause shifts */
+  text-size-adjust: 100% !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+/* Ensure all text has consistent rendering */
+p, h1, h2, h3, h4, h5, h6, span, div, li, a {
+  /* Prevent subpixel rendering differences */
+  transform: translateZ(0) !important;
+  
+  /* Force consistent font rendering */
+  font-feature-settings: normal !important;
+  font-variant-ligatures: none !important;
+  
+  /* Prevent text from causing layout shifts */
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  hyphens: none !important;
+}
+
 /* ===== PREVENT IMAGE LOADING SHIFTS ===== */
 
 /* Ensure all images have explicit dimensions */
@@ -203,6 +230,77 @@ img:not([width]):not([height]) {
   
   /* Prevent from affecting layout */
   contain: layout !important;
+  
+  /* When collapsed, don't take up space */
+  transition: none !important; /* Remove transitions that cause shifts */
+}
+
+.accessibility-toolbar.collapsed {
+  /* Reserve minimal space when collapsed */
+  min-height: 48px !important;
+  height: 48px !important;
+  overflow: hidden !important;
+}
+
+.accessibility-toolbar:not(.collapsed) {
+  /* When expanded, use absolute positioning to avoid pushing content */
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+/* Status banner - prevent from causing shifts */
+.status-banner {
+  /* Fixed height */
+  min-height: 44px !important;
+  height: auto !important;
+  
+  /* Prevent from affecting layout */
+  contain: layout !important;
+  
+  /* Consistent padding */
+  padding: 0.75rem 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Page progress bar - prevent shifts */
+.page-progress-container {
+  /* Fixed position to not affect layout */
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 99 !important;
+  
+  /* Don't affect document flow */
+  height: 4px !important;
+  min-height: 4px !important;
+  
+  /* Prevent from causing shifts */
+  contain: strict !important;
+}
+
+/* Gradient banners that appear dynamically */
+.gradient-banner,
+.gradient-banner-pink {
+  /* Reserve minimum space */
+  min-height: 100px !important;
+  
+  /* Prevent from affecting siblings */
+  contain: layout !important;
+  
+  /* Consistent margins */
+  margin: 2rem 0 !important;
+}
+
+/* Community stats box */
+.community-stats-box {
+  /* Fixed dimensions */
+  min-height: 80px !important;
+  
+  /* Prevent layout shifts */
+  contain: layout !important;
+  
+  /* Consistent spacing */
+  padding: 1.25rem !important;
+  margin: 2rem 0 !important;
 }
 
 /* ===== BREADCRUMBS FIX ===== */
@@ -210,9 +308,65 @@ img:not([width]):not([height]) {
 .breadcrumbs {
   /* Fixed height to prevent shifts */
   min-height: 32px !important;
+  height: 32px !important;
   
   /* Prevent from affecting header */
   margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  
+  /* Prevent layout containment */
+  contain: layout !important;
+  
+  /* Consistent padding */
+  padding: 0.5rem 0 !important;
+}
+
+/* ===== MAIN CONTENT FIRST PARAGRAPH FIX ===== */
+
+/* The first paragraph is causing CLS: y:633→659 (26px shift), height:77→80 (3px) */
+#main-content {
+  /* Reserve consistent space for content */
+  min-height: 200px !important;
+  
+  /* Prevent children from causing shifts */
+  contain: layout !important;
+}
+
+#main-content > p:first-of-type,
+#main-content > h1 + p,
+main#main-content > p:first-child {
+  /* Fixed line-height to prevent font loading shifts */
+  line-height: 1.7 !important;
+  
+  /* Reserve explicit minimum height */
+  min-height: 80px !important;
+  
+  /* Prevent margin collapse */
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+  padding-top: 0.25rem !important;
+  
+  /* Prevent font size changes from affecting layout */
+  font-size: 1rem !important;
+  
+  /* Use system font initially to prevent FOIT */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+  
+  /* Prevent text wrapping changes */
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+
+/* Ensure heading before first paragraph is stable */
+#main-content > h1:first-child,
+main#main-content > h1 {
+  /* Fixed dimensions */
+  line-height: 1.2 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+  
+  /* Prevent from affecting layout */
+  contain: layout !important;
 }
 
 /* ===== CRITICAL: USE CSS CONTAINMENT ===== */
