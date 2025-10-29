@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Paramètres d'accessibilité
+description: Personnalisez votre expérience de navigation avec les options d'accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.
 permalink: /fr/accessibility-settings/
 lang: fr
 ---

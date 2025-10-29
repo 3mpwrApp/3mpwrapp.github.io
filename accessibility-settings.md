@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Accessibility Settings
+description: Customize your viewing experience with accessibility options including text size, contrast, dark mode, and reading preferences.
 permalink: /accessibility-settings/
 ---
 

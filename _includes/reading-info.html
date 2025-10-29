@@ -1,0 +1,9 @@
+<!-- Reading Information - Consistent formatting -->
+{% if include.reading_time %}
+<p class="reading-info">
+  📖 <strong>{{ include.reading_time }} minute read</strong>
+  {% if include.energy_level %}
+    | 🔋 <strong>Energy:</strong> {{ include.energy_level }}
+  {% endif %}
+</p>
+{% endif %}

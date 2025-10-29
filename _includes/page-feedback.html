@@ -1,0 +1,10 @@
+<!-- Page Feedback Section - Consistent across all pages -->
+<div class="page-feedback" role="complementary">
+  <p><strong>💬 Was this page helpful?</strong></p>
+  <p>
+    <a href="{{ '/feedback?page=' | append: page.url | append: '&helpful=yes' | relative_url }}" class="feedback-btn feedback-yes" aria-label="Yes, this page was helpful">👍 Yes</a>
+    <a href="{{ '/feedback?page=' | append: page.url | append: '&helpful=no' | relative_url }}" class="feedback-btn feedback-no" aria-label="No, this page needs improvement">👎 No</a>
+    <a href="{{ '/feedback?page=' | append: page.url | relative_url }}" class="feedback-btn feedback-suggest" aria-label="Suggest improvements for this page">📝 Suggest improvements</a>
+  </p>
+  <p class="page-meta"><small>Last updated: {{ page.last_updated | default: "October 29, 2025" }} | Next review: {{ page.next_review | default: "December 2025" }}</small></p>
+</div>
