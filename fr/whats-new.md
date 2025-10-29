@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Nouveautés"
+lang: fr
 description: "Découvrez les dernières mises à jour, fonctionnalités et améliorations de 3mpwrApp. Restez informé des nouvelles versions, des corrections de bugs et des améliorations apportées par la communauté. Mise à jour hebdomadaire transparente et détaillée."
 image: /assets/empwrapp-logo.png
 image_alt: "3mpwrApp Quoi de neuf - Dernières mises à jour et fonctionnalités"

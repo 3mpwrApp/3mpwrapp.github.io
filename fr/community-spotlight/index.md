@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Community Spotlight
+lang: fr
 description: Celebrating our community members, advocates, activists, and allies making a difference for disability rights and injured workers across Canada.
 permalink: /fr/community-spotlight/
 ---

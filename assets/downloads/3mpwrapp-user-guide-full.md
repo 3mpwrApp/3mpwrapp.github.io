@@ -1,4 +1,5 @@
 ---
+layout: default
 title: 3mpwrApp — Complete User Guide for Everyone
 description: Comprehensive guide to using 3mpwrApp's tools and community features. Written for the disability community, Indigenous peoples, injured workers, and their supporters.
 version: 2.1 (Phase 2)

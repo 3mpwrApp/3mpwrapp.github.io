@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Connect With Us
+lang: fr
 description: "Contactez 3mpwrApp pour des partenariats, des collaborations, des demandes de renseignements de la part des médias ou des questions d'ordre général. Nous construisons ensemble un soutien à la santé mentale axé sur la communauté. Courriel, médias sociaux et opportunités de partenariat."
 image: /assets/empwrapp-logo.png
 image_alt: "3mpwrApp Connect - Contactez-nous pour des partenariats et du soutien"

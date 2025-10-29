@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Campaigns & Events
+lang: fr
 description: "Participez à des campagnes et à des événements communautaires pour les droits des personnes handicapées, la justice pour les travailleurs et le changement social à travers le Canada. Organisations de base, outils de plaidoyer et action collective pour une transformation systémique."
 image: /assets/empwrapp-logo.png
 image_alt: "3mpwrApp Campaigns - Organisation communautaire et défense des droits des personnes handicapées"
