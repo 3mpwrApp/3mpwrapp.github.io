@@ -8,7 +8,8 @@ const { View } = require('react-native');
 // Mock GapView as a simple View wrapper that accepts gap props but renders as View
 const GapView = (props) => {
   // Destructure gap props to avoid passing them to View (they're not valid View props)
-  const { gap, rowGap, columnGap, children, ...viewProps } = props;
+  // Prefix with _ to indicate intentionally unused in mock
+  const { gap: _gap, rowGap: _rowGap, columnGap: _columnGap, children, ...viewProps } = props;
   return React.createElement(View, viewProps, children);
 };
 
