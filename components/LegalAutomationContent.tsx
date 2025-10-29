@@ -20,6 +20,7 @@ import { useThemeColor } from '../hooks/useThemeColor';
 import { useTranslation } from '../i18n';
 
 import A11yPressable from './A11yPressable';
+import { GapView } from './GapView';
 
 const A11yWrapper = ({ style, children }: { style?: StyleProp<ViewStyle>; children: ReactNode }) => (
   <View style={style} accessibilityElementsHidden={false} importantForAccessibility="yes">
@@ -841,7 +842,7 @@ Sincerely,
         <A11yTitle level={2} style={[styles.cardTitle, { color: colors.text }]}>
           Quick Actions
         </A11yTitle>
-        <View style={styles.quickActionsGrid}>
+        <GapView style={styles.quickActionsGrid} gap={12}>
           <A11yPressable
             onPress={() => setShowCreateModal(true)}
             accessibilityRole="button"
@@ -882,7 +883,7 @@ Sincerely,
               Legal Resources
             </Text>
           </A11yPressable>
-        </View>
+        </GapView>
       </View>
     </ScrollView>
   );
@@ -937,7 +938,7 @@ Sincerely,
             </Text>
           </View>
 
-          <View style={styles.processActions}>
+          <GapView style={styles.processActions} gap={12}>
             <A11yPressable
               onPress={() => Alert.alert('Process Details', 'Detailed process view would open here.')}
               accessibilityRole="button"
@@ -952,7 +953,7 @@ Sincerely,
             >
               <Text style={[styles.actionButtonText, { color: colors.primary }]}>Update</Text>
             </A11yPressable>
-          </View>
+          </GapView>
 
           {process.culturalConsiderations && process.culturalConsiderations.length > 0 && (
             <View style={styles.culturalNote}>
@@ -1089,7 +1090,7 @@ Sincerely,
         <ScrollView style={styles.modalContent}>
           <View style={styles.formSection}>
             <Text style={[styles.fieldLabel, { color: colors.text }]}>Process Type</Text>
-            <View style={styles.processTypeGrid}>
+            <GapView style={styles.processTypeGrid} gap={8}>
               {[
                 { value: 'disability_benefits_application', label: 'Disability Benefits Application' },
                 { value: 'workplace_accommodation_request', label: 'Workplace Accommodation' },
@@ -1119,12 +1120,12 @@ Sincerely,
                   </Text>
                 </A11yPressable>
               ))}
-            </View>
+            </GapView>
           </View>
 
           <View style={styles.formSection}>
             <Text style={[styles.fieldLabel, { color: colors.text }]}>Jurisdiction</Text>
-            <View style={styles.jurisdictionGrid}>
+            <GapView style={styles.jurisdictionGrid} gap={8}>
               {[
                 { value: 'federal', label: 'Federal' },
                 { value: 'ontario', label: 'Ontario' },
@@ -1154,7 +1155,7 @@ Sincerely,
                   </Text>
                 </A11yPressable>
               ))}
-            </View>
+            </GapView>
           </View>
 
           {settings.ceremonialConsiderations && (
@@ -1171,7 +1172,7 @@ Sincerely,
             </View>
           )}
 
-          <View style={styles.modalFooter}>
+          <GapView style={styles.modalFooter} gap={12}>
             <A11yPressable
               onPress={() => setShowCreateModal(false)}
               accessibilityRole="button"
@@ -1186,7 +1187,7 @@ Sincerely,
             >
               <Text style={styles.createButtonText}>Start Process</Text>
             </A11yPressable>
-          </View>
+          </GapView>
         </ScrollView>
       </View>
     </Modal>
@@ -1405,7 +1406,6 @@ const styles = StyleSheet.create({
   quickActionsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 12,
   },
   quickActionButton: {
     flex: 1,
@@ -1491,7 +1491,6 @@ const styles = StyleSheet.create({
   },
   processActions: {
     flexDirection: 'row',
-    gap: 12,
     marginBottom: 12,
   },
   actionButton: {
@@ -1659,7 +1658,6 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   processTypeGrid: {
-    gap: 8,
   },
   processTypeOption: {
     borderWidth: 1,
@@ -1667,16 +1665,15 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   processTypeText: {
+  processTypeText: {
     fontSize: 14,
     fontWeight: '500',
   },
   jurisdictionGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 8,
   },
   jurisdictionOption: {
-    borderWidth: 1,
     borderRadius: 8,
     padding: 12,
     minWidth: 100,
@@ -1700,16 +1697,15 @@ const styles = StyleSheet.create({
   },
   culturalGuidanceText: {
     fontSize: 14,
+  culturalGuidanceText: {
+    fontSize: 14,
     lineHeight: 20,
   },
   modalFooter: {
     flexDirection: 'row',
-    gap: 12,
     paddingTop: 20,
   },
-  cancelButton: {
-    flex: 1,
-    paddingVertical: 14,
+  cancelButton: {al: 14,
     borderWidth: 1,
     borderRadius: 8,
     alignItems: 'center',
