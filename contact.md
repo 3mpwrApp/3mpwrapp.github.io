@@ -182,7 +182,7 @@ Please fill out the form below and we'll get back to you within 24 hours:
 
     <!-- Cloudflare Turnstile CAPTCHA (Privacy-Friendly) -->
     <div class="form-group">
-      <div class="cf-turnstile" 
+      <div id="turnstile-container" class="cf-turnstile" 
            data-sitekey="0x4AAAAAAB9B0vt5JojxnybB"
            data-theme="auto"
            data-size="normal"
@@ -192,6 +192,9 @@ Please fill out the form below and we'll get back to you within 24 hours:
            data-language="auto"
            aria-label="Security verification to prevent spam"
            role="complementary">
+        <div class="captcha-placeholder">
+          <p>🔒 Security verification will load when you start filling the form</p>
+        </div>
       </div>
       <small class="field-help">Security check to prevent spam (privacy-friendly, no tracking)</small>
       <p class="sr-only" id="turnstile-instructions">
@@ -319,6 +322,20 @@ Please fill out the form below and we'll get back to you within 24 hours:
     justify-content: center;
   }
 
+  .captcha-placeholder {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .captcha-placeholder p {
+    margin: 0;
+  }
+
   .sr-only {
     position: absolute;
     width: 1px;
@@ -397,6 +414,12 @@ Please fill out the form below and we'll get back to you within 24 hours:
   }
 
   @media (prefers-color-scheme: dark) {
+    .captcha-placeholder {
+      background-color: #2d2d2d;
+      border-color: #555;
+      color: #aaa;
+    }
+
     .form-messages.success {
       background-color: #1b4332;
       color: #d8f3dc;
@@ -475,12 +498,80 @@ Please fill out the form below and we'll get back to you within 24 hours:
   }
 </style>
 
-<!-- Cloudflare Turnstile Script -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<!-- Cloudflare Turnstile Script - Lazy Loaded -->
+<script>
+  // Global variables for Turnstile
+  let turnstileVerified = false;
+  let turnstileLoaded = false;
+  let formInteracted = false;
+
+  // Lazy load Turnstile when user interacts with form
+  function loadTurnstile() {
+    if (turnstileLoaded) return;
+    
+    turnstileLoaded = true;
+    const placeholder = document.querySelector('.captcha-placeholder');
+    if (placeholder) {
+      placeholder.innerHTML = '<p>⏳ Loading security verification...</p>';
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    script.async = true;
+    script.defer = true;
+    script.onload = function() {
+      if (placeholder) {
+        placeholder.remove();
+      }
+    };
+    script.onerror = function() {
+      if (placeholder) {
+        placeholder.innerHTML = '<p style="color: #d32f2f;">⚠️ Failed to load verification. Please refresh the page.</p>';
+      }
+    };
+    document.head.appendChild(script);
+  }
+
+  // Detect form interaction
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const inputs = form.querySelectorAll('input, select, textarea');
+    
+    // Disable submit button initially
+    const submitBtn = document.getElementById('submit-btn');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-label', 'Send Message - Please start filling the form');
+    }
+
+    // Load Turnstile on first interaction with any form field
+    inputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        if (!formInteracted) {
+          formInteracted = true;
+          loadTurnstile();
+          if (submitBtn) {
+            submitBtn.setAttribute('aria-label', 'Send Message - Loading security verification');
+          }
+        }
+      }, { once: true });
+    });
+
+    // Also load on first input
+    inputs.forEach(input => {
+      input.addEventListener('input', function() {
+        if (!formInteracted) {
+          formInteracted = true;
+          loadTurnstile();
+        }
+      }, { once: true });
+    });
+  });
+</script>
 
 <script>
   // Turnstile callback functions
-  let turnstileVerified = false;
+  // Note: turnstileVerified is now declared above in the lazy-load script
 
   function onTurnstileSuccess(token) {
     turnstileVerified = true;
@@ -528,15 +619,6 @@ Please fill out the form below and we'll get back to you within 24 hours:
     
     alert('Security verification expired. Please verify again.');
   }
-
-  // Disable submit button initially until Turnstile verifies
-  document.addEventListener('DOMContentLoaded', function() {
-    const submitBtn = document.getElementById('submit-btn');
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.setAttribute('aria-label', 'Send Message - Please complete security verification first');
-    }
-  });
 </script>
 
 <script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
