@@ -1,9 +1,9 @@
 {
   "totalTests": 60,
-  "passedTests": 55,
-  "failedTests": 1,
-  "totalViolations": 1,
-  "timestamp": "2025-10-29T00:53:07.213Z",
+  "passedTests": 60,
+  "failedTests": 0,
+  "totalViolations": 0,
+  "timestamp": "2025-10-29T03:40:02.371Z",
   "baseUrl": "https://3mpwrapp.pages.dev",
   "results": [
     {
@@ -39,8 +39,8 @@
     {
       "url": "/contact",
       "mode": "Light Mode",
-      "violations": -1,
-      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://3mpwrapp.pages.dev/contact?no-modal=1\", waiting until \"networkidle\"\u001b[22m\n"
+      "violations": 0,
+      "issues": []
     },
     {
       "url": "/privacy",
@@ -129,8 +129,8 @@
     {
       "url": "/contact",
       "mode": "Dark Mode",
-      "violations": -1,
-      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://3mpwrapp.pages.dev/contact?no-modal=1\", waiting until \"networkidle\"\u001b[22m\n"
+      "violations": 0,
+      "issues": []
     },
     {
       "url": "/privacy",
@@ -171,24 +171,8 @@
     {
       "url": "/crisis-resources",
       "mode": "Dark Mode",
-      "violations": 1,
-      "issues": [
-        {
-          "id": "color-contrast",
-          "impact": "serious",
-          "count": 1,
-          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-          "nodes": [
-            {
-              "html": "<a href=\"https://hopeforwellness.ca\" target=\"_blank\" rel=\"noopener noreferrer\">hopeforwellness.ca<span class=\"sr-only\"> (opens in a new tab)</span></a>",
-              "target": [
-                "a[href$=\"hopeforwellness.ca\"]"
-              ],
-              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #66b2ff, background color: #ffffff, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ]
-        }
-      ]
+      "violations": 0,
+      "issues": []
     },
     {
       "url": "/accessibility-settings",
@@ -235,8 +219,8 @@
     {
       "url": "/contact",
       "mode": "Light + High Contrast",
-      "violations": -1,
-      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://3mpwrapp.pages.dev/contact?no-modal=1\", waiting until \"networkidle\"\u001b[22m\n"
+      "violations": 0,
+      "issues": []
     },
     {
       "url": "/privacy",
@@ -325,8 +309,8 @@
     {
       "url": "/contact",
       "mode": "Dark + High Contrast",
-      "violations": -1,
-      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://3mpwrapp.pages.dev/contact?no-modal=1\", waiting until \"networkidle\"\u001b[22m\n"
+      "violations": 0,
+      "issues": []
     },
     {
       "url": "/privacy",
