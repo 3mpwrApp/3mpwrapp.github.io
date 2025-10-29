@@ -154,6 +154,12 @@
   font-weight: 600;
 }
 
+/* Dark mode override: service cards have WHITE backgrounds, so links need DARK color */
+[data-theme="dark"] .service-detail a {
+  color: #0056b3 !important; /* Dark blue for 4.6:1 contrast on white */
+  font-weight: 700 !important;
+}
+
 /* Copy Button */
 .copy-btn {
   background: currentColor;
