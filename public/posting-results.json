@@ -1,11 +1,11 @@
 {
   "mastodon": {
     "success": false,
-    "message": "❌ Mastodon: HTTP 503: Unknown error"
+    "message": "❌ Mastodon: HTTP 422: Validation failed: Text character limit of 500 exceeded"
   },
   "bluesky": {
     "success": true,
-    "message": "✅ Bluesky: Posted successfully (at://did:plc:qnmnt55gza5lo4fs32hqywpo/app.bsky.feed.post/3m4d4qm7z6i24)"
+    "message": "✅ Bluesky: Posted successfully (at://did:plc:qnmnt55gza5lo4fs32hqywpo/app.bsky.feed.post/3m4draxq4ey23)"
   },
   "x": {
     "success": false,
