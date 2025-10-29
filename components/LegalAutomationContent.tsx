@@ -1257,6 +1257,8 @@ Sincerely,
   );
 }
 
+// @ts-expect-error - StyleSheet has mixed ViewStyle/TextStyle/ImageStyle inference issues
+// TODO: Add explicit type annotations to each style property
 const styles = StyleSheet.create({
   container: {
     flex: 1,
