@@ -1847,18 +1847,18 @@ label[for*="search"] {
 }
 
 /* All links - force yellow with underline */
-[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button) {
+[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone) {
   color: #ffff00 !important;
   text-decoration: underline !important;
   font-weight: 700 !important;
 }
 
-[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):visited {
+[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone):visited {
   color: #ffff00 !important;
 }
 
-[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):hover,
-[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):focus {
+[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone):hover,
+[data-theme="dark"][data-contrast="high"] a:not(.btn):not(.button):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone):focus {
   color: #ffff00 !important;
   background: rgba(255, 255, 0, 0.2) !important;
 }
@@ -2088,18 +2088,18 @@ label[for*="search"] {
 }
 
 /* All links - force blue with underline */
-[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button) {
+[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone) {
   color: #0000ee !important;
   text-decoration: underline !important;
   font-weight: 700 !important;
 }
 
-[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):visited {
+[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone):visited {
   color: #0000ee !important;
 }
 
-[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):hover,
-[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):focus {
+[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone):hover,
+[data-contrast="high"]:not([data-theme="dark"]) a:not(.btn):not(.button):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone):focus {
   color: #0000ee !important;
   background: rgba(0, 0, 238, 0.1) !important;
 }
@@ -2266,7 +2266,7 @@ label[for*="search"] {
   color: #ffffff !important;
 }
 
-[data-theme="dark"]:not([data-contrast="high"]) a:not(.btn):not(.button) {
+[data-theme="dark"]:not([data-contrast="high"]) a:not(.btn):not(.button):not(.feedback-btn):not(.btn-primary):not(.btn-secondary):not(.highlight-banner__button):not(.resource-link):not(.phone-link):not(.service-phone) {
   color: #66b2ff !important;
 }
 
