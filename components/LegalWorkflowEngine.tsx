@@ -1014,7 +1014,7 @@ export default function LegalWorkflowEngine() {
               </View>
             )}
 
-            <View style={styles.executionActions}>
+            <GapView style={styles.executionActions} gap={12}>
               <A11yPressable
                 onPress={() => Alert.alert('Execution Details', 'Detailed execution view would open here.')}
                 accessibilityRole="button"
@@ -1029,7 +1029,7 @@ export default function LegalWorkflowEngine() {
               >
                 <Text style={[styles.actionButtonText, { color: colors.warning }]}>Pause</Text>
               </A11yPressable>
-            </View>
+            </GapView>
           </View>
         );
       })}
@@ -1416,7 +1416,6 @@ const styles = StyleSheet.create({
   },
   executionActions: {
     flexDirection: 'row',
-    gap: 12,
   },
   actionButton: {
     flex: 1,

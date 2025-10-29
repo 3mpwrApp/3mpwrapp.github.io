@@ -2,13 +2,13 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
 import {
-  Alert,
-  FlatList,
-  Modal,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View
+    Alert,
+    FlatList,
+    Modal,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -19,6 +19,7 @@ import { useTranslation } from '../i18n';
 
 import A11yPressable from './A11yPressable';
 import { A11yTitle, A11yWrapper } from './A11yWrapper';
+import { GapView } from './GapView';
 
 // Types for enhanced community features
 interface AdvocacyGroup {
@@ -600,7 +601,7 @@ export default function EnhancedHubContent() {
               </View>
             )}
 
-            <View style={styles.matchActions}>
+            <GapView style={styles.matchActions} gap={12}>
               <A11yPressable
                 onPress={() => handleAcceptMatch(match.id)}
                 accessibilityRole="button"
@@ -619,7 +620,7 @@ export default function EnhancedHubContent() {
                   Maybe Later
                 </Text>
               </A11yPressable>
-            </View>
+            </GapView>
           </View>
         )}
         ListEmptyComponent={
@@ -1153,7 +1154,6 @@ const styles = StyleSheet.create({
   },
   matchActions: {
     flexDirection: 'row',
-    gap: 12,
   },
   acceptButton: {
     flex: 1,

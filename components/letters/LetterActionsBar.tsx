@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
 import { useTranslation } from '../../i18n';
 import { announce } from '../../utils/announce';
@@ -19,7 +19,7 @@ export function LetterActionsBar({ showInfo, onToggleInfo, onCopy, onInsertTrack
   const { t } = useTranslation();
   const s = React.useMemo(() => createStyles(palette), [palette]);
   return (
-    <View style={s.actionsRow}>
+    <GapView style={s.actionsRow} gap={8}>
       <A11yPressable
         onPress={() => { onToggleInfo(); announce(showInfo ? t('common.hide','Hide') : t('templates.letters.common.toggleInfo','Toggle instructions')); }}
         style={s.infoBtn}
@@ -46,13 +46,13 @@ export function LetterActionsBar({ showInfo, onToggleInfo, onCopy, onInsertTrack
           <Text testID="letterActionDoc" style={s.secondaryBtnText}>{t('templates.letters.common.exportDoc','Export as .doc')}</Text>
         </A11yPressable>
       )}
-    </View>
+    </GapView>
   );
 }
 
 function createStyles(palette: any) {
   return StyleSheet.create({
-    actionsRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 12 },
+    actionsRow: { flexDirection: 'row', flexWrap: 'wrap', marginBottom: 12 },
     infoBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 6 },
     infoBtnText: { color: palette.text, fontWeight: '600', fontSize: 13 },
     secondaryBtn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingHorizontal: 10, paddingVertical: 8, borderRadius: 6 },
