@@ -296,7 +296,7 @@ We meet **all** WCAG 2.2 Level AA success criteria and exceed to Level AAA in se
   </ul>
 </div>
 
-<a href="/ACCESSIBILITY-STATUS-2025" class="report-link">View Latest Accessibility Report →</a>
+<a href="/WCAG-COMPLIANCE-CHECKLIST" class="report-link">View Latest Accessibility Report →</a>
 
 ---
 
