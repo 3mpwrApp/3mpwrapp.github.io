@@ -451,6 +451,12 @@ p {
   color: #000000 !important;
 }
 
+[data-theme="dark"] .btn-primary .btn-text,
+[data-theme="dark"] .btn-primary .btn-spinner,
+[data-theme="dark"] .btn-primary span {
+  color: #000000 !important;
+}
+
 [data-theme="dark"] .btn-primary:hover,
 [data-theme="dark"] .btn-primary:focus {
   background: #99ccff !important;
