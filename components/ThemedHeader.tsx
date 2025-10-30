@@ -26,40 +26,15 @@ import A11yQuickSettings from "./A11yQuickSettings";
 import GapView from "./GapView";
 
 // Memoize menu items to prevent recreation on every render
-// Organized to align with new 5-tab structure (Home, Wellness, Resources, Advocacy, Community)
+// NOTE: Bottom tabs (Home, Wellness, Resources, Advocacy, Community, Campaigns, Events, Research) are NOT in menu
+// Only deep links to sub-pages and utility screens
 const MENU_SECTIONS = {
-  wellness: [
-    { label: "Exercise Hub", path: "/(tabs)/wellness/exercise-hub" },
-    { label: "Nutrition Guides", path: "/(tabs)/wellness/nutrition-guides" },
-    { label: "AI Companion", path: "/(tabs)/wellness/ai-companion" },
-    { label: "Pacing Partner", path: "/(tabs)/wellness/pacing-partner" },
-    { label: "Mood Tracker", path: "/(tabs)/wellness/mood-tracker" },
-  ],
-  resources: [
+  tools: [
     { label: "Claims Navigator", path: "/(tabs)/resources/claims-navigator" },
     { label: "Evidence Locker", path: "/(tabs)/resources/evidence-locker" },
     { label: "Letter Templates", path: "/(tabs)/resources/letters" },
     { label: "Support Directory", path: "/(tabs)/resources/support-directory" },
-    { label: "Research Library", path: "/research" },
-    { label: "Wait Times", path: "/research/wait-times" },
-    { label: "History Timeline", path: "/research/history-timeline" },
     { label: "Podcasts", path: "/podcasts" },
-  ],
-  advocacy: [
-    { label: "Lawyer/Advocate Finder", path: "/(tabs)/advocacy/lawyer-finder" },
-    { label: "Ally Hub", path: "/(tabs)/advocacy/ally-hub" },
-    { label: "World Disability Map", path: "/(tabs)/advocacy/world-map" },
-    { label: "Provider Ratings", path: "/(tabs)/advocacy/ratings" },
-    { label: "Case Interpreter (AI)", path: "/(tabs)/advocacy/ai-case-interpreter" },
-    { label: "Policy Simplifier", path: "/(tabs)/advocacy/policy-simple" },
-  ],
-  community: [
-    { label: "Community Hub", path: "/(tabs)/community" },
-    { label: "Events & Meetups", path: "/events" },
-    { label: "Campaigns", path: "/campaigns" },
-    { label: "Mutual Aid", path: "/(tabs)/community/mutual-aid" },
-    { label: "Media Studio", path: "/(tabs)/community/media-studio" },
-    { label: "Peer Support", path: "/(tabs)/community/peer-support" },
   ],
   account: [
     { label: "My Profile", path: "/profile" },
@@ -386,41 +361,8 @@ const ThemedHeader = React.memo(() => {
             style={styles.menuWrap}
           >
             <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>
-              <MenuSection title="Wellness" palette={palette} />
-              {MENU_SECTIONS.wellness.map((item) => (
-                <MenuItem
-                  key={item.path}
-                  label={item.label}
-                  path={item.path}
-                  onPress={() => handleMenuItemPress(item.path)}
-                  palette={palette}
-                />
-              ))}
-
-              <MenuSection title="Resources & Research" palette={palette} />
-              {MENU_SECTIONS.resources.map((item) => (
-                <MenuItem
-                  key={item.path}
-                  label={item.label}
-                  path={item.path}
-                  onPress={() => handleMenuItemPress(item.path)}
-                  palette={palette}
-                />
-              ))}
-
-              <MenuSection title="Advocacy" palette={palette} />
-              {MENU_SECTIONS.advocacy.map((item) => (
-                <MenuItem
-                  key={item.path}
-                  label={item.label}
-                  path={item.path}
-                  onPress={() => handleMenuItemPress(item.path)}
-                  palette={palette}
-                />
-              ))}
-
-              <MenuSection title="Community" palette={palette} />
-              {MENU_SECTIONS.community.map((item) => (
+              <MenuSection title="Tools & Resources" palette={palette} />
+              {MENU_SECTIONS.tools.map((item) => (
                 <MenuItem
                   key={item.path}
                   label={item.label}

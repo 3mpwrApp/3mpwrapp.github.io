@@ -35,10 +35,11 @@ export default function TabsLayout() {
         }}
       >
   {/* 
-    OPTIMIZED TAB BAR STRUCTURE (Oct 23, 2025)
-    - Focus on core user journeys
-    - Logical feature grouping
-    - Maximum 5-6 visible tabs for usability
+    OPTIMIZED TAB BAR STRUCTURE (Oct 29, 2025)
+    - 8 primary bottom tabs for core features
+    - Wellness, Resources, Advocacy are tabs (not in menu)
+    - Community features accessed via Community tab
+    - Research, Events, Campaigns are dedicated tabs
   */}
         
         {/* Primary Tab: Home - Central hub and personalized content */}
@@ -93,7 +94,7 @@ export default function TabsLayout() {
           }}
         />
 
-        {/* Core Tab: Community - Chat, events, campaigns */}
+        {/* Core Tab: Community - Chat, mutual aid, peer support */}
         <Tabs.Screen
           name="community"
           options={{
@@ -103,6 +104,48 @@ export default function TabsLayout() {
             tabBarIcon: ({ color, size, focused }) => (
               <Ionicons name={focused ? "people" : "people-outline"} color={color} size={size + 2} />
             ),
+          }}
+        />
+
+        {/* Core Tab: Campaigns - Organize and join campaigns */}
+        <Tabs.Screen
+          name="campaigns"
+          options={{
+            title: t("nav.campaigns", "Campaigns"),
+            tabBarLabel: t("nav.campaigns", "Campaigns"),
+            tabBarAccessibilityLabel: `${t("nav.campaigns", "Campaigns")} tab`,
+            tabBarIcon: ({ color, size, focused }) => (
+              <Ionicons name={focused ? "megaphone" : "megaphone-outline"} color={color} size={size + 2} />
+            ),
+            href: "/campaigns" as any,
+          }}
+        />
+
+        {/* Core Tab: Events - Community events and calendar */}
+        <Tabs.Screen
+          name="events"
+          options={{
+            title: t("nav.events", "Events"),
+            tabBarLabel: t("nav.events", "Events"),
+            tabBarAccessibilityLabel: `${t("nav.events", "Events")} tab`,
+            tabBarIcon: ({ color, size, focused }) => (
+              <Ionicons name={focused ? "calendar" : "calendar-outline"} color={color} size={size + 2} />
+            ),
+            href: "/events" as any,
+          }}
+        />
+
+        {/* Core Tab: Research - Studies, articles, and resources */}
+        <Tabs.Screen
+          name="research"
+          options={{
+            title: t("nav.research", "Research"),
+            tabBarLabel: t("nav.research", "Research"),
+            tabBarAccessibilityLabel: `${t("nav.research", "Research")} tab`,
+            tabBarIcon: ({ color, size, focused }) => (
+              <Ionicons name={focused ? "flask" : "flask-outline"} color={color} size={size + 2} />
+            ),
+            href: "/research" as any,
           }}
         />
 
