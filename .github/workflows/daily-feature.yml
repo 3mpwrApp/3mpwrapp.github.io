@@ -47,17 +47,6 @@ jobs:
           echo "📝 Generating daily feature article..."
           node scripts/daily-feature-generator.js
 
-      - name: Post to social media
-        env:
-          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
-          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
-          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
-          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
-          BLUESKY_PDS: 'https://bsky.social'
-        run: |
-          echo "📱 Posting to social media..."
-          node scripts/post-daily-feature.js
-
       - name: Commit article
         run: |
           git config --local user.email "empowrapp08162025@gmail.com"
@@ -73,6 +62,22 @@ jobs:
           TODAY=$(date -u +%Y-%m-%d)
           git commit -m "feat(blog): Daily feature article - $TODAY"
           git push origin main
+
+      - name: Wait for deployment
+        run: |
+          echo "⏳ Waiting 2 minutes for Cloudflare Pages to deploy..."
+          sleep 120
+
+      - name: Post to social media
+        env:
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_PDS: 'https://bsky.social'
+        run: |
+          echo "📱 Posting to social media..."
+          node scripts/post-daily-feature.js
 
       - name: Create summary
         if: always()
