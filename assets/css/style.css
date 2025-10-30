@@ -109,25 +109,61 @@ input[type="submit"] {
    ======================================== */
 
 /* Universal focus styles for keyboard navigation */
+a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 [role="button"]:focus-visible,
-[tabindex]:focus-visible,
+[role="link"]:focus-visible,
+[role="menuitem"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible,
 summary:focus-visible,
-details:focus-visible {
+details:focus-visible,
+label:has(input:focus-visible),
+.nav-list a:focus-visible,
+.menu-toggle:focus-visible,
+.theme-toggle:focus-visible,
+.contrast-toggle:focus-visible {
   outline: 3px solid #FFD54F;
   outline-offset: 3px;
+  border-radius: 2px;
 }
 
 /* Enhanced focus for primary interactive elements */
 .btn:focus-visible,
 .button:focus-visible,
 .toolbar-btn:focus-visible,
-.email-section-btn:focus-visible {
+.toolbar-btn-small:focus-visible,
+.toolbar-btn-indicator:focus-visible,
+.email-section-btn:focus-visible,
+.feedback-btn:focus-visible,
+.cta-button:focus-visible,
+.store-link:focus-visible {
   outline: 3px solid #FFD54F;
   outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(255, 213, 79, 0.2);
+}
+
+/* Dark mode focus - use lighter color */
+@media (prefers-color-scheme: dark) {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [role="button"]:focus-visible,
+  [role="link"]:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible,
+  .nav-list a:focus-visible {
+    outline-color: #FFD54F;
+  }
+}
+
+/* Ensure focus is never hidden */
+*:focus-visible {
+  outline: 3px solid #FFD54F;
+  outline-offset: 2px;
 }
 
 /* ======================================== */
@@ -178,21 +214,28 @@ body[data-contrast="high"] .site-brand {
   border-color: #ffffff !important;
 }
 
-/* Skip link (WCAG 2.4.1) */
+/* Skip link (WCAG 2.4.1) - Enhanced visibility */
 .skip-link {
   position: absolute;
   top: -40px;
   left: 8px;
-  background: var(--main-bg, #ffffff);
-  color: #183c65;
-  padding: 8px 12px;
+  background: #FFFFFF;
+  color: #000000;
+  padding: 12px 16px;
   border-radius: 4px;
-  border: 2px solid #183c65;
+  border: 3px solid #000000;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
   transition: top 0.2s;
-  z-index: 1000;
+  z-index: 10000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
   top: 8px;
+  outline: 3px solid #FFD54F;
+  outline-offset: 3px;
 }
 
 /* Navigation */
