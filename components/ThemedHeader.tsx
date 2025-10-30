@@ -3,13 +3,13 @@ import * as Linking from "expo-linking";
 import { router, usePathname, type Href } from "expo-router";
 import React from "react";
 import {
-    Image,
-    Pressable,
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  Image,
+  Pressable,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 
 import { HIT_SLOP_8, touchTarget } from "../constants/A11Y";
@@ -155,7 +155,7 @@ const ThemedHeader = React.memo(() => {
       </Pressable>
 
       {/* Right side controls */}
-      <GapView style={styles.right} gap={8}>
+      <GapView style={styles.right} gap={4}>
         {/* Social media links - hidden on smaller screens to prevent overlap */}
         <GapView
           style={[styles.social, { display: 'none' }]}
@@ -257,7 +257,7 @@ const ThemedHeader = React.memo(() => {
             { opacity: pressed ? 0.7 : 1 },
           ]}
         >
-          <Ionicons name="refresh" size={20} color={palette.text} />
+          <Ionicons name="refresh" size={18} color={palette.text} />
         </Pressable>
 
         {/* A11y quick settings */}
@@ -275,7 +275,7 @@ const ThemedHeader = React.memo(() => {
             { opacity: pressed ? 0.7 : 1 },
           ]}
         >
-          <Ionicons name="menu" size={22} color={palette.text} />
+          <Ionicons name="menu" size={20} color={palette.text} />
         </Pressable>
 
         {/* Settings */}
@@ -290,7 +290,7 @@ const ThemedHeader = React.memo(() => {
             { opacity: pressed ? 0.7 : 1 },
           ]}
         >
-          <Ionicons name="settings-outline" size={20} color={palette.text} />
+          <Ionicons name="settings-outline" size={18} color={palette.text} />
         </Pressable>
 
         {/* Profile */}
@@ -307,7 +307,7 @@ const ThemedHeader = React.memo(() => {
         >
           <Ionicons
             name="person-circle-outline"
-            size={22}
+            size={20}
             color={palette.text}
           />
         </Pressable>
@@ -325,7 +325,7 @@ const ThemedHeader = React.memo(() => {
               { opacity: pressed ? 0.7 : 1 },
             ]}
           >
-            <Ionicons name="log-out" size={20} color={palette.text} />
+            <Ionicons name="log-out" size={18} color={palette.text} />
           </Pressable>
         ) : (
           <Pressable
@@ -341,7 +341,7 @@ const ThemedHeader = React.memo(() => {
               { opacity: pressed ? 0.7 : 1 },
             ]}
           >
-            <Ionicons name="log-in" size={20} color={palette.text} />
+            <Ionicons name="log-in" size={18} color={palette.text} />
           </Pressable>
         )}
       </GapView>
@@ -441,25 +441,24 @@ function createStyles(palette: Palette) {
       backgroundColor: palette.background,
       borderBottomWidth: StyleSheet.hairlineWidth,
       borderBottomColor: palette.muted,
-      paddingHorizontal: 16,
-      paddingVertical: 12,
+      paddingHorizontal: 12,
+      paddingVertical: 10,
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
     },
-    brand: { flexDirection: "row", alignItems: "center" },
-  logo: { height: 24, width: 24, marginRight: 8 },
+    brand: { flexDirection: "row", alignItems: "center", flexShrink: 1, minWidth: 0 },
+  logo: { height: 22, width: 22, marginRight: 6 },
     title: {
       color: palette.text,
-      fontSize: 22,
+      fontSize: 20,
       fontWeight: "700",
       fontFamily: "System",
     },
     right: {
       flexDirection: "row",
       alignItems: "center",
-      flexShrink: 1,
-      flexWrap: "wrap",
+      flexShrink: 0,
     },
     menuWrap: {
       position: "absolute",
