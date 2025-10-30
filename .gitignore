@@ -79,6 +79,10 @@ dist/
 build/
 out/
 
+# Generated social media content (temporary reference files)
+public/social-posts-*.json
+public/social-posts-*.md
+
 # OS temp files
 $RECYCLE.BIN/
 .Trash*
