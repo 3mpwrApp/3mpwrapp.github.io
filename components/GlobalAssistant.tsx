@@ -102,10 +102,20 @@ export default function GlobalAssistant() {
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    wrap: { position: 'absolute', bottom: 72, zIndex: 1000 },
+    wrap: { position: 'absolute', bottom: 90, zIndex: 1000 }, // Increased from 72 to 90 to clear tab bar
     left: { left: 16 },
     right: { right: 16 },
-    btn: { backgroundColor: palette.primary, borderRadius: 22, paddingHorizontal: 14, paddingVertical: 10 },
+    btn: { 
+      backgroundColor: palette.primary, 
+      borderRadius: 22, 
+      paddingHorizontal: 14, 
+      paddingVertical: 10, 
+      shadowColor: palette.text, 
+      shadowOffset: { width: 0, height: 2 }, 
+      shadowOpacity: 0.25, 
+      shadowRadius: 3.84, 
+      elevation: 5 
+    },
     text: { color: palette.onPrimary, fontWeight: '700' },
   });
 }

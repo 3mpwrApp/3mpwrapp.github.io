@@ -5,11 +5,11 @@ import {
     Pressable,
     StyleSheet,
     Text,
-    TextInput,
-    View,
+    TextInput
 } from "react-native";
 
 import GapView from '../../../components/GapView';
+import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { channels as seedChannels } from "../../../data/community";
 import {
     MAX_FONT_SCALE,
@@ -50,10 +50,9 @@ function Inner() {
   };
 
   return (
-    <View
-      style={styles.container}
-      accessibilityLabel={t('advocacy.ask.formLabel','Ask an Advocate form')}
-      accessible
+    <ResponsiveScreenWrapper 
+      scrollable
+      testID="ask-advocate-screen"
     >
       <Text
         ref={titleRef}
@@ -117,7 +116,7 @@ function Inner() {
       >
         <Text style={styles.buttonText}>{t('advocacy.ask.submit','Submit')}</Text>
       </Pressable>
-    </View>
+    </ResponsiveScreenWrapper>
   );
 }
 
