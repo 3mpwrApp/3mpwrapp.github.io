@@ -155,11 +155,11 @@ const ThemedHeader = React.memo(() => {
       </Pressable>
 
       {/* Right side controls */}
-      <GapView style={styles.right} gap={12}>
-        {/* Social media links */}
+      <GapView style={styles.right} gap={8}>
+        {/* Social media links - hidden on smaller screens to prevent overlap */}
         <GapView
-          style={styles.social}
-          gap={12}
+          style={[styles.social, { display: 'none' }]}
+          gap={8}
           accessibilityLabel="Social media links"
           accessible
         >
@@ -215,9 +215,9 @@ const ThemedHeader = React.memo(() => {
           </Pressable>
         </GapView>
 
-        {/* Counts */}
+        {/* Counts - hidden to save space with 8 tabs */}
         <Text
-          style={styles.countText}
+          style={[styles.countText, { display: 'none' }]}
           testID="header-favorites-count"
           accessibilityLabel={`${t("header.favorites")} ${favTotal}`}
         >
@@ -225,7 +225,7 @@ const ThemedHeader = React.memo(() => {
         </Text>
 
         <Text
-          style={styles.countText}
+          style={[styles.countText, { display: 'none' }]}
           testID="header-items-count"
           accessibilityLabel={`${t("header.items")} ${
             counts.campaigns +

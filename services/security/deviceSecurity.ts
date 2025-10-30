@@ -3,10 +3,17 @@
  * Detects: rooting/jailbreaking, emulators, debugging, unsafe environments
  */
 
-import * as LocalAuthentication from 'expo-local-authentication';
 import { Platform } from 'react-native';
 
 import { logger } from '../../utils/logger';
+
+// Optional import - gracefully handle missing native module
+let LocalAuthentication: any = null;
+try {
+  LocalAuthentication = require('expo-local-authentication');
+} catch {
+  // Module not available - biometric features will be disabled
+}
 
 
 export interface SecurityEnvironment {
@@ -191,6 +198,10 @@ export class DeviceSecurityValidator {
    */
   private async checkBiometricCapability(): Promise<boolean> {
     try {
+      if (!LocalAuthentication) {
+        return false;
+      }
+      
       const hasHardware = await LocalAuthentication.hasHardwareAsync();
       const isEnrolled = await LocalAuthentication.isEnrolledAsync();
       

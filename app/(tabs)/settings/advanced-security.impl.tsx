@@ -1,6 +1,5 @@
 // Advanced Security Options for 3mpwrApp - Route-based lazy loaded component (Phase 4.5)
 import { Ionicons } from '@expo/vector-icons';
-import * as LocalAuthentication from 'expo-local-authentication';
 import { useRouter } from 'expo-router';
 // import * as SecureStore from 'expo-secure-store'; // Commented out due to missing dependency
 import { useEffect, useState } from 'react';
@@ -13,6 +12,14 @@ import {
     View
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+// Optional import - gracefully handle missing native module
+let LocalAuthentication: any = null;
+try {
+  LocalAuthentication = require('expo-local-authentication');
+} catch {
+  // Module not available - biometric features will be disabled
+}
 
 import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
@@ -81,22 +88,28 @@ export default function AdvancedSecurityOptions() {
       setIsLoading(true);
 
       // Check biometric capabilities
-      const biometricAuth = await LocalAuthentication.hasHardwareAsync();
-      const supportedTypes = await LocalAuthentication.supportedAuthenticationTypesAsync();
-      
-      setBiometricAvailable(biometricAuth);
-      setBiometricTypes(supportedTypes.map(type => {
-        switch (type) {
-          case LocalAuthentication.AuthenticationType.FINGERPRINT:
-            return 'Fingerprint';
-          case LocalAuthentication.AuthenticationType.FACIAL_RECOGNITION:
-            return 'Face Recognition';
-          case LocalAuthentication.AuthenticationType.IRIS:
-            return 'Iris Scan';
-          default:
-            return 'Biometric';
-        }
-      }));
+      if (LocalAuthentication) {
+        const biometricAuth = await LocalAuthentication.hasHardwareAsync();
+        const supportedTypes = await LocalAuthentication.supportedAuthenticationTypesAsync();
+        
+        setBiometricAvailable(biometricAuth);
+        setBiometricTypes(supportedTypes.map((type: any) => {
+          switch (type) {
+            case LocalAuthentication.AuthenticationType.FINGERPRINT:
+              return 'Fingerprint';
+            case LocalAuthentication.AuthenticationType.FACIAL_RECOGNITION:
+              return 'Face Recognition';
+            case LocalAuthentication.AuthenticationType.IRIS:
+              return 'Iris Scan';
+            default:
+              return 'Biometric';
+          }
+        }));
+      } else {
+        // Biometric authentication not available
+        setBiometricAvailable(false);
+        setBiometricTypes([]);
+      }
 
       // Load existing security configuration
       const existingConfig = await loadSecurityConfig();
@@ -511,6 +524,11 @@ export default function AdvancedSecurityOptions() {
   };
 
   const enableBiometricAuth = async () => {
+    if (!LocalAuthentication) {
+      Alert.alert('Not Available', 'Biometric authentication is not available on this device.');
+      return;
+    }
+    
     try {
       const result = await LocalAuthentication.authenticateAsync({
         promptMessage: 'Verify your identity to enable biometric authentication',

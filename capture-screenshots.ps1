@@ -20,7 +20,7 @@ function Capture-Screenshot {
         [string]$description
     )
     
-    Write-Host "📸 Ready to capture: $description" -ForegroundColor Green
+    Write-Host "Ready to capture: $description" -ForegroundColor Green
     Write-Host "   Press ENTER when ready..." -ForegroundColor Yellow
     Read-Host
     
@@ -33,11 +33,11 @@ function Capture-Screenshot {
     adb exec-out screencap -p > $localPath
     
     if (Test-Path $localPath) {
-        Write-Host "   ✓ Saved: $filename" -ForegroundColor Green
+        Write-Host "   Saved: $filename" -ForegroundColor Green
         Write-Host ""
         return $true
     } else {
-        Write-Host "   ✗ Failed to capture screenshot" -ForegroundColor Red
+        Write-Host "   Failed to capture screenshot" -ForegroundColor Red
         Write-Host ""
         return $false
     }
@@ -50,7 +50,7 @@ function Start-VideoRecording {
         [int]$duration = 30
     )
     
-    Write-Host "🎥 Ready to record: $description" -ForegroundColor Green
+    Write-Host "Ready to record: $description" -ForegroundColor Green
     Write-Host "   Duration: $duration seconds" -ForegroundColor Yellow
     Write-Host "   Press ENTER to start recording..." -ForegroundColor Yellow
     Read-Host
@@ -60,7 +60,7 @@ function Start-VideoRecording {
     $devicePath = "/sdcard/$filename"
     $localPath = "$videoDir\$filename"
     
-    Write-Host "   🔴 Recording... (${duration}s)" -ForegroundColor Red
+    Write-Host "   Recording... ($duration seconds)" -ForegroundColor Red
     adb shell screenrecord --time-limit $duration $devicePath
     
     Write-Host "   Downloading video..." -ForegroundColor Yellow
@@ -68,11 +68,11 @@ function Start-VideoRecording {
     adb shell rm $devicePath
     
     if (Test-Path $localPath) {
-        Write-Host "   ✓ Saved: $filename" -ForegroundColor Green
+        Write-Host "   Saved: $filename" -ForegroundColor Green
         Write-Host ""
         return $true
     } else {
-        Write-Host "   ✗ Failed to capture video" -ForegroundColor Red
+        Write-Host "   Failed to capture video" -ForegroundColor Red
         Write-Host ""
         return $false
     }
@@ -96,20 +96,20 @@ while ($true) {
     
     switch ($choice) {
         "1" {
-            Write-Host "📱 Starting guided screenshot capture..." -ForegroundColor Cyan
+            Write-Host "Starting guided screenshot capture..." -ForegroundColor Cyan
             Write-Host "Navigate to each screen on your device and press ENTER to capture." -ForegroundColor Yellow
             Write-Host ""
             
             Capture-Screenshot "01-home-dashboard" "Home Screen / Dashboard"
             Capture-Screenshot "02-wellness-hub" "Wellness Hub"
-            Capture-Screenshot "03-resources" "Resources - Deadlines & Rights"
+            Capture-Screenshot "03-resources" "Resources - Deadlines and Rights"
             Capture-Screenshot "04-advocacy-tools" "Advocacy Tools - AI Assistant"
-            Capture-Screenshot "05-community" "Community & Campaigns"
+            Capture-Screenshot "05-community" "Community and Campaigns"
             Capture-Screenshot "06-accessibility" "Settings - Accessibility Features"
             Capture-Screenshot "07-daily-planner" "Daily Planner / Wellness Tool"
-            Capture-Screenshot "08-privacy-security" "Privacy & Security"
+            Capture-Screenshot "08-privacy-security" "Privacy and Security"
             
-            Write-Host "✓ All screenshots captured!" -ForegroundColor Green
+            Write-Host "All screenshots captured!" -ForegroundColor Green
             Write-Host "   Location: $screenshotDir" -ForegroundColor Yellow
             Write-Host ""
         }
@@ -133,11 +133,11 @@ while ($true) {
             $filename = "screenshot-$timestamp.png"
             $localPath = "$screenshotDir\$filename"
             
-            Write-Host "📸 Capturing screenshot..." -ForegroundColor Yellow
+            Write-Host "Capturing screenshot..." -ForegroundColor Yellow
             adb exec-out screencap -p > $localPath
             
             if (Test-Path $localPath) {
-                Write-Host "✓ Saved: $filename" -ForegroundColor Green
+                Write-Host "Saved: $filename" -ForegroundColor Green
                 Write-Host ""
             }
         }

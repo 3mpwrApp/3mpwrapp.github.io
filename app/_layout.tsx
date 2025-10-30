@@ -252,24 +252,32 @@ function TelemetryInit() {
 function SecurityInit() {
   React.useEffect(() => {
     // Initialize security framework on app startup
-    import("../services/security").then(({ initializeSecurity }) => {
-      return initializeSecurity({
-        enableTamperDetection: true,
-        enableRootJailbreakCheck: true,
-        enableIntegrityValidation: true,
-        enableSecureStorage: true,
-        strictBYOCMode: process.env.EXPO_PUBLIC_DATA_POLICY === 'strict_byoc',
-        allowDebugging: __DEV__
+    import("../services/security")
+      .then((module) => {
+        if (module && typeof module.initializeSecurity === 'function') {
+          return module.initializeSecurity({
+            enableTamperDetection: true,
+            enableRootJailbreakCheck: true,
+            enableIntegrityValidation: true,
+            enableSecureStorage: true,
+            strictBYOCMode: process.env.EXPO_PUBLIC_DATA_POLICY === 'strict_byoc',
+            allowDebugging: __DEV__
+          });
+        } else {
+          throw new Error('initializeSecurity is not a function (module may have failed to load)');
+        }
+      })
+      .then((success: boolean) => {
+        if (__DEV__) {
+          logger.log('🔒 Security framework initialized:', success ? 'SUCCESS' : 'FAILED');
+        }
+      })
+      .catch((error: Error) => {
+        // Log error but don't crash the app - security is optional enhancement
+        if (__DEV__) {
+          console.error('🔒 Security initialization error:', error);
+        }
       });
-    }).then((success: boolean) => {
-      if (__DEV__) {
-        logger.log('🔒 Security framework initialized:', success ? 'SUCCESS' : 'FAILED');
-      }
-    }).catch((error: Error) => {
-      if (__DEV__) {
-        console.error('🔒 Security initialization error:', error);
-      }
-    });
   }, []);
   return null;
 }
