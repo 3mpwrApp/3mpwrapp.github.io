@@ -1800,7 +1800,7 @@ body[data-contrast="high"] .toolbar-btn:hover {
   transform: translate(-50%, -50%);
   font-weight: 600;
   font-size: 0.9rem;
-  color: #374151;
+  color: #1f2937; /* Darker color for better contrast (7.89:1 ratio) */
   z-index: 1;
 }
 
