@@ -1,12 +1,12 @@
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import {
-  Linking,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
+    Linking,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
 
 import { useAppPalette } from "../theme/usePalette";
@@ -148,8 +148,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
   const openFullDocument = (type: "terms" | "privacy") => {
     const url =
       type === "terms"
-        ? "https://empowr.app/terms"
-        : "https://empowr.app/privacy";
+        ? "https://3mpwrapp.pages.dev/terms/"
+        : "https://3mpwrapp.pages.dev/privacy/";
     Linking.openURL(url).catch(() => {});
   };
 

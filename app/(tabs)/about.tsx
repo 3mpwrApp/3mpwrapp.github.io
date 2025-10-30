@@ -74,20 +74,42 @@ export default function AboutScreen() {
       <View style={{ marginVertical: 8 }}>
         <Text style={[styles.text,{ fontWeight:'700' }]}>Socials & Website</Text>
         <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
-          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://x.com/3mpwrapp')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://x.com/3mpowrApp0816')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
             <Text style={{ color: palette.text }}>X (Twitter)</Text>
           </Pressable>
-          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://instagram.com/3mpwrapp')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://www.instagram.com/empowrapp/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
             <Text style={{ color: palette.text }}>Instagram</Text>
           </Pressable>
-          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://facebook.com/3mpwrapp')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://www.facebook.com/profile.php?id=61579428783083')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
             <Text style={{ color: palette.text }}>Facebook</Text>
           </Pressable>
-          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.github.io/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
             <Text style={{ color: palette.text }}>Website</Text>
           </Pressable>
         </GapView>
       </View>
+      
+      <View style={{ marginVertical: 8 }}>
+        <Text style={[styles.text,{ fontWeight:'700' }]}>Legal & Policies</Text>
+        <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={8}>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/terms/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Terms of Service</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/privacy/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Privacy Policy</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/data-ownership/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Data Ownership</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/community/guidelines/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Community Guidelines</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/delete-data/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Delete My Data</Text>
+          </Pressable>
+        </GapView>
+      </View>
+      
       {/* Keep email address out of rendered UI to reduce PII soft-scan hits */}
       <TextInput
         style={styles.input}

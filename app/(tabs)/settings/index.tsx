@@ -417,11 +417,23 @@ function EnhancedA11ySettingsSection() {
 
 
 function TermsSection() {
-  const openTerms = () => { Linking.openURL('https://empowr.app/terms').catch(()=>{}); };
+  const openTerms = () => { Linking.openURL('https://3mpwrapp.pages.dev/terms/').catch(()=>{}); };
+  const openPrivacy = () => { Linking.openURL('https://3mpwrapp.pages.dev/privacy/').catch(()=>{}); };
+  const openDataOwnership = () => { Linking.openURL('https://3mpwrapp.pages.dev/data-ownership/').catch(()=>{}); };
+  const openCommunityGuidelines = () => { Linking.openURL('https://3mpwrapp.pages.dev/community/guidelines/').catch(()=>{}); };
+  const openDeleteData = () => { Linking.openURL('https://3mpwrapp.pages.dev/delete-data/').catch(()=>{}); };
   const reset = async () => { try { await AsyncStorage.removeItem('empowr.terms.accepted.v1'); Alert.alert('Reset','You will be asked to accept Terms on next launch.'); } catch {} };
   return (
     <View>
-      <Button title='View Terms' onPress={openTerms} />
+      <Button title='Terms of Service' onPress={openTerms} />
+      <View style={{ height:8 }} />
+      <Button title='Privacy Policy' onPress={openPrivacy} />
+      <View style={{ height:8 }} />
+      <Button title='Data Ownership' onPress={openDataOwnership} />
+      <View style={{ height:8 }} />
+      <Button title='Community Guidelines' onPress={openCommunityGuidelines} />
+      <View style={{ height:8 }} />
+      <Button title='Delete My Data' onPress={openDeleteData} />
       <View style={{ height:8 }} />
       <Button title='Require re-acceptance' onPress={reset} />
     </View>
