@@ -61,6 +61,32 @@ app.get('/health', async (_req, res) => {
   }
 });
 
+// JSON API: Events data for website sync
+app.get('/api/events', async (_req, res) => {
+  try {
+    const local = (await import('../data/events.js')).events;
+    res.set('Content-Type', 'application/json');
+    res.set('Cache-Control', 'public, max-age=300'); // 5 minutes
+    res.set('Access-Control-Allow-Origin', '*'); // CORS for website
+    return res.json(local || []);
+  } catch (e) {
+    return res.status(500).json({ error: 'Failed to load events' });
+  }
+});
+
+// JSON API: Campaigns data for website sync
+app.get('/api/campaigns', async (_req, res) => {
+  try {
+    const local = (await import('../data/campaigns.js')).campaigns;
+    res.set('Content-Type', 'application/json');
+    res.set('Cache-Control', 'public, max-age=300'); // 5 minutes
+    res.set('Access-Control-Allow-Origin', '*'); // CORS for website
+    return res.json(local || []);
+  } catch (e) {
+    return res.status(500).json({ error: 'Failed to load campaigns' });
+  }
+});
+
 // iCalendar feed for events (for website sync)
 app.get('/events.ics', async (_req, res) => {
   try {
