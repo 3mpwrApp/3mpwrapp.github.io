@@ -29,7 +29,7 @@ export default function BookmarksSection() {
   const [label, setLabel] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState('');
-  const registry = require('../../../utils/routeRegistry') as any;
+  const registry = require('../../utils/routeRegistry') as any;
   const all: any[] = registry.BOOKMARKABLE_ROUTES || [];
   const bookmarked = new Set(items.map(b => b.route));
   const suggestions = all.filter(r => !bookmarked.has(r.route)).filter(r => { if (!query.trim()) return true; const q = query.trim().toLowerCase(); return r.route.toLowerCase().includes(q) || r.fallback.toLowerCase().includes(q) || r.tKey.toLowerCase().includes(q); }).slice(0,8);
