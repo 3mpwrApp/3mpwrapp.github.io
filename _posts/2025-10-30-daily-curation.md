@@ -9,90 +9,97 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-10-30
 
-Curated 17 items from disability, accessibility, and social policy sources.
+Curated 19 items from disability, accessibility, and social policy sources.
 
-## 1. Canada, U.S. still talking despite Trump ending trade negotiations: envoy
-Kirsten Hillman, who also serves as Canada's top negotiator with the U.S., said her people have spoken with officials in the White House and other departments since last week.
-📍 [Source](https://globalnews.ca/news/11501410/donald-trump-tariffs-canada-us-talks-hillman/)
-**Score:** 17.00
+## 1. U.S. Senate passes non-binding vote against Trump’s tariffs on Canada
+Sen. Tim Kaine of Virginia, the Democrat pushing the resolutions, said that higher prices caused by tariffs would force Republicans to break with Trump.
+📍 [Source](https://globalnews.ca/news/11502160/u-s-senate-passes-non-binding-vote-against-trumps-tariffs-on-canada/)
+**Score:** 21.50
 
-## 2. Negotiators were taking ‘important steps’ before Trump halted talks, ambassador says
-<img src='https://i.cbc.ca/ais/239e8990-0f56-4422-8deb-54f432ec6768,1761773650235/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C6000%2C3375%29%3BResize%3D%28620%29' alt='Woman speaking at microphone in black shirt with brown trench coat' width='620' height='349' title='Canada's Ambassador to the U.S. Kirsten Hillman speaks to reporters during a cabinet retreat at Chateau Montebello in Montebello, Que., on Tuesday, Jan. 21, 2025. THE CANADIAN PRESS/Sean Kilpatrick'/><p></p>
-📍 [Source](https://www.cbc.ca/news/politics/trade-talks-progress-before-trump-halts-negotiations-9.6959238?cmp=rss)
+## 2. Job vacancies plummet to lowest point since 2017: StatCan
+New data from Statistics Canada suggests there may be more people looking for work than there are jobs available as many businesses report not feeling a need to hire more.
+📍 [Source](https://globalnews.ca/news/11502179/canada-job-vacancies-payroll-employment-august-2025/)
+**Score:** 19.50
+
+## 3. Wildlife photographer helps save elk trapped in netting in Prince Albert National Park
+<img src='https://i.cbc.ca/ais/5646445c-2f28-4434-a0d2-990e4de3b976,1761780778597/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C13%2C1817%2C1022%29%3BResize%3D%28620%29' alt='A bull elk with its horns wrapped up unintentionally in black man-made netting.' width='620' height='349' title='A bull elk near the Heart Lakes in Prince Albert National Park was spotted by wildlife photographer Rod Young who reported it to Parks Canada.'/><p>Avid wildlife photographer Rod Young reported a bull elk in distress to Prince Albert National Park staff, who then tranquilized the animal and freed it from the man-made netting.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/elk-prince-albert-national-park-9.6959258?cmp=rss)
 **Score:** 18.50
 
-## 3. The Winter Olympics are 100 days away — here are 10 Canadians to watch
-<img src='https://i.cbc.ca/ais/7aa2f58e-ef34-4fd3-984f-95926802d6e6,1761771886014/full/max/0/default.jpg?im=Crop%2Crect%3D%2820%2C0%2C1139%2C640%29%3BResize%3D%28620%29' alt='Canada forward Connor McDavid celebrates after defeating the United States in overtime in the NHL 4 Nations Face-Off title game in Boston on February 20, 2025.' width='620' height='349' title='After his dramatic OT goal to win the 4 Nations Face-Off title game against the United States, Connor McDavid is set to compete in the Olympics for the first time.'/><p>CBC Sports' daily newsletter presents some top Canadian athletes to follow on the road to the upcoming Winter Olympic Games in Italy.</p>
-📍 [Source](https://www.cbc.ca/sports/basketball/nba/the-buzzer-newsletter-canadians-to-watch-olympics-100-days-9.6959081?cmp=rss)
-**Score:** 18.50
-
-## 4. Penticton, B.C. city council to consider tiny home community
-'One of our permanent shelters has individuals who’ve been there for more than 600 days,' said Julie Czeck, the city’s general manager of public safety.
-📍 [Source](https://globalnews.ca/news/11501411/penticton-bc-city-council-tiny-home-community/)
+## 4. Brad Marchand comes home to support a grieving N.S. coach and friend
+<img src='https://i.cbc.ca/ais/58623e71-a340-480c-b253-33fcde390f0a,1761788793300/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Man in black jacket' width='620' height='349' title='Florida Panthers forward Brad Marchand was in Halifax on Wednesday night to coach a U18 hockey team. The head coach of the March and Mill Company Hunters is taking some time away after the passing of his 10-year-old daughter.'/><p>The Florida Panthers forward, who is from Hammonds Plains, N.S., made a surprise appearance at a minor hockey game in Halifax on Wednesday night. Marchand said he didn't hesitate to come home once he learned his friend's 10-year-old daughter died after a battle with cancer.</p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/brad-marchand-jp-maccallum-selah-hockey-fundraiser-cancer-9.6959421?cmp=rss)
 **Score:** 15.00
 
-## 5. Canada’s U17 women’s soccer squad to meet Brazil in World Cup quarterfinal
-<img src='https://i.cbc.ca/ais/3c1d6af7-7b6e-4d7e-b87b-c2c74e159670,1761779208313/full/max/0/default.jpg?im=Crop%2Crect%3D%2820%2C0%2C1139%2C640%29%3BResize%3D%28620%29' alt='Canadian Under-17 soccer players Daniela Feria-Estrada and Mya Angus celebrate a goal in their team’s 6-0 win over Zambia in Round of 16 play at the FIFA World Cup in Sale, Morocco on October 29, 2025.' width='620' height='349' title='From left: Daniela Feria-Estrada and Mya Angus combined for three goals in Wednesday’s 6-0 drubbing of Zambia in FIFA Women’s U17 World Cup action in Sale, Morocco.'/><p>Canada scored three goals in each half en route to a comfortable 6-0 win over Zambia in Round of 16 play Wednesday, setting up a quarterfinal date with Brazil at the FIFA Women's U17 World Cup in Sale, Morocco.</p>
-📍 [Source](https://www.cbc.ca/sports/soccer/canada-under17-womens-soccer-world-cup-quarterfinal-berth-brazil-9.6959316?cmp=rss)
+## 5. Carney tours newly completed South Korean sub as Canada weighs multi-billion dollar order
+<img src='https://i.cbc.ca/ais/56b36055-ab31-4531-ad2f-e0a65002f1cb,1761818766014/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C897%2C7783%2C4377%29%3BResize%3D%28620%29' alt='Men in suit stand atop a sleek, shiny submarine aside large ships.' width='620' height='349' title='National Defence Minister David McGuinty, South Korea Prime Minister Kim Min-seok, Prime Minister Mark Carney and Hahnwa Group Vice-Chariman Kim Dong Kwan speak amongst themselves after touring a submarine at the Hanwha Ocean Shipyard in Geoje Island, South Korea, Thursday Oct. 30, 2025. '/><p>South Korea's prime minister put his political weight behind his country's multi-billion dollar bid to sell Canada submarines. Kim Min-seok accompanied his Canadian counterpart, Mark Carney, on a tour of the Hanwha Ocean Ltd. yard ahead of the APEC summit. </p>
+📍 [Source](https://www.cbc.ca/news/politics/canada-submarines-carney-south-korea-9.6959659?cmp=rss)
 **Score:** 14.00
 
-## 6. Avoid travel to parts of Caribbean as Hurricane Melissa storms through region, GAC says
-<img src='https://i.cbc.ca/ais/89f67a0b-061d-4f23-a5a5-efb3c013305d,1761778577767/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C207%2C3977%2C2237%29%3BResize%3D%28620%29' alt='A wave splashes up on a landing as a palm tree leans to one side, pushed by a heavy wind.' width='620' height='349' title='Waves splash in Kingston, Jamaica, as Hurricane Melissa approaches, Tuesday, Oct. 28, 2025.'/><p>The federal government is advising Canadians to avoid travelling to certain areas in the Caribbean as Hurricane Melissa rips through the region.</p>
-📍 [Source](https://www.cbc.ca/news/politics/avoid-travel-caribbean-hurricane-melissa-9.6959305?cmp=rss)
-**Score:** 15.00
+## 6. MPs urge Carney government to release special agency governing documents
+<img src='https://i.cbc.ca/ais/95b341ae-abe6-4a6a-a37b-2e2a2dea2de5,1761780121832/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C268%2C4788%2C2693%29%3BResize%3D%28620%29' alt='Prime Minister Mark Carney' width='620' height='349' title='Prime Minister Mark Carney is seen during a news conference following the ASEAN summit in Kuala Lumpur, Malaysia, Monday, Oct. 27, 2025. THE CANADIAN PRESS/Adrian Wyld'/><p>Opposition MPs are calling on Prime Minister Mark Carney’s government to make public the documents that govern three special agencies it has created to manage billions of dollars for major projects, defence procurement and the construction of affordable homes.</p>
+📍 [Source](https://www.cbc.ca/news/politics/special-operating-agency-secret-documents-9.6959134?cmp=rss)
+**Score:** 16.50
 
-## 7. Parks Canada warns of increasingly ‘bold’ wolves stalking dogs near Tofino, B.C.
-<img src='https://i.cbc.ca/ais/38779a85-5e86-4c05-8a23-82f518f6f3f6,1761772237925/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C860%2C483%29%3BResize%3D%28620%29' alt='Two wolves' width='620' height='349' title='This 2014 photo from Parks Canada shows two wolves roaming near Tofino, B.C. Wolf conflicts with dogs and humans aren't uncommon in the area. '/><p>Visitors to Pacific Rim National Park Reserve on Vancouver Island are being urged to leave their dogs at home and keep their children close after several incidents of wolves stalking people's pets near Tofino.</p>
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/tofino-pacific-rim-national-park-wolves-9.6959093?cmp=rss)
+## 7. Wait for core Ontario autism services tops 5 years: advocates
+When Ashley Ferreira's five-year-old son was diagnosed with autism in 2020 she never imagined that a five-year for him to get access to government-funded core therapies.
+📍 [Source](https://globalnews.ca/news/11502066/wait-ontario-autism-services-tops-5-years-advocates/)
+**Score:** 14.00
+
+## 8. 1 minute of silence: Inside the Quebec ER that cared for abandoned newborn who died
+<img src='https://i.cbc.ca/ais/59e078fd-4044-4cc1-b8f7-40e1ccbdd46f,1761774440995/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C82%2C5712%2C3213%29%3BResize%3D%28620%29' alt='A man in a black windbreaker poses outside a hospital' width='620' height='349' title='Dr. Marc-Antoine Pigeon is an emergency physician at Charles Le-Moyne hospital in Longueuil, Que.'/><p>A team of doctors ending and starting their shifts at a Longueuil, Que., hospital spent an hour trying to resuscitate a newborn that was abandoned at a bus shelter in the early hours of Monday.</p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/doctors-longueuil-efforts-to-save-abandoned-newborn-9.6958593?cmp=rss)
+**Score:** 13.00
+
+## 9. O Canada! Summer tourism numbers hit all-time high
+📍 [Source](https://www.cbc.ca/news/canada/calgary/bakx-tourism-travel-destination-canada-record-2025-9.6959500?cmp=rss)
 **Score:** 9.50
 
-## 8. Halloween enthusiasts warned fireworks illegal in many Okanagan cities, including Kelowna
-Johnson said burning and fireworks complaints are common on Halloween but he added that the fire activity isn't only illegal--it's also dangerous.
-📍 [Source](https://globalnews.ca/news/11500989/halloween-enthusiasts-warned-fireworks-illegal-okanagan/)
+## 10. Canadians are delaying long-term goals to keep up with cost of living: data
+Canadians say it's getting more challenging to save for the future because of the economy and high cost of living, according to new survey data.
+📍 [Source](https://globalnews.ca/news/11500713/cost-of-living-delaying-saving-for-retirement-and-house/)
+**Score:** 10.00
+
+## 11. Zellers aims to make ‘cultural comeback' as first store reopens in Edmonton
+Iconic Canadian retailer Zellers returns with a new Edmonton store, blending nostalgia with modern design and curated apparel, home, and lifestyle goods.
+📍 [Source](https://globalnews.ca/news/11501106/zellers-cultural-comeback-edmonton/)
+**Score:** 9.00
+
+## 12. Young, proud, online: Quebec's newest sovereigntists hope to revive an aging movement
+The self-described CEO of the next generation of Quebec sovereigntists is a 17-year-old rapper and TikTok sensation who claims to be more influential than Premier François Legault.
+📍 [Source](https://globalnews.ca/news/11502085/quebec-newest-sovereigntists-hope-to-revive-aging-movement/)
+**Score:** 7.00
+
+## 13. Photos: Electronic powerhouses Kaytranada and Justice co-headline Rogers Arena
+The DJ and the French duo combined for a memorable show.
+📍 [Source](https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena)
+**Score:** 5.00
+
+## 14. Why the Canadian sport system is in financial disarray
+<img src='https://i.cbc.ca/ais/2a48d77d-7d71-434d-b2f2-b489aef398e6,1761788350126/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C150%2C8640%2C4860%29%3BResize%3D%28620%29' alt='Canadian Olympic Committee male CEO.' width='620' height='349' title='Limited government funding is one major issue Canadian Olympic Committee CEO David Shoemaker has to deal with.'/><p>Limited government funding is among many factors contributing to the state of financial disarray currently embroiling Canadian sport. As a result, National Sports Organizations have had to significantly tighten their belts, making cuts and slashing expenses wherever possible.</p>
+📍 [Source](https://www.cbc.ca/sports/olympics/why-the-canadian-sport-system-finds-itself-in-financial-disarray-9.6957865?cmp=rss)
 **Score:** 7.50
 
-## 9. Ottawa woman speaks out against former head of Manitoba Inuit Association
-<img src='https://i.cbc.ca/ais/434c70ec-dde9-421d-b03d-b8c662cb1e19,1761769721059/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C101%2C733%2C412%29%3BResize%3D%28620%29' alt='Ruth Gustaw' width='620' height='349' title='Ruth Gustaw is one of the women coming forward will allegations of sexual abuse involving the former head of the Manitoba Inuit Association, Nastania Mullin.'/><p>Inuit women and gender-diverse people say a grassroots social media movement publicizing allegations of sexual and physical assault against the CEO of the Manitoba Inuit Association is giving them the courage to come forward with their own accusations against him.</p>
-📍 [Source](https://www.cbc.ca/news/canada/manitoba/assault-allegation-ottawa-woman-9.6959010?cmp=rss)
-**Score:** 10.20
+## 15. Energy minister hints at support for carbon capture in climate strategy, no mention of emissions cap
+<img src='https://i.cbc.ca/ais/472c2fe5-c483-45aa-9f65-bdb90100b0a6,1761783323377/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C93%2C2784%2C1566%29%3BResize%3D%28620%29' alt='A man in a navy suit and red tie' width='620' height='349' title='Minister of Energy and Natural Resources Tim Hodgson at a battery investment announcement in Montreal, on Friday, Oct. 3, 2025.'/><p>Ahead of the release of Prime Minister Mark Carney’s climate competitiveness strategy, his energy minister offered some hints of what will be included when it's introduced in Tuesday’s budget. </p>
+📍 [Source](https://www.cbc.ca/news/politics/hodgson-climate-competitiveness-strategy-9.6959105?cmp=rss)
+**Score:** 5.00
 
-## 10. Cost estimate more than triples to $1.3B for new federal inmate hospital
-<img src='https://i.cbc.ca/ais/bc84b9b2-5a84-4d49-9651-4d7c18c0c11f,1761752196871/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C934%2C525%29%3BResize%3D%28620%29' alt='Dorchester Penitentiary' width='620' height='349' title='Dorchester Penitentiary in New Brunswick.'/><p>The budget for a new hospital for inmates in federal facilities is now estimated at $1.3 billion, over three times an estimate made public in 2021.</p>
-📍 [Source](https://www.cbc.ca/news/politics/federal-inmates-hospital-cost-9.6958472?cmp=rss)
-**Score:** 8.70
-
-## 11. Five things to know about the fight between Quebec doctors and the government
-Here are five things to know about the ongoing battle between physicians and the provincial government.
-📍 [Source](https://globalnews.ca/news/11501802/what-to-know-quebec-doctors-bill-2/)
-**Score:** 7.30
-
-## 12. ‘Forever Canadian’ Results Shock the UCP Government
-Thomas Lukaszuk delivers petitions signed by over 456,000 citizens, upsetting separatist referendum plans.
-📍 [Source](https://thetyee.ca/Opinion/2025/10/30/Forever-Canadian-Results-Shock-UCP/)
-**Score:** 7.50
-
-## 13. Young entrepreneurs find success in Winnipeg ice cream shops
-Some young entrepreneurs take advantage of Manitoba's brief summer and run successful ice cream shops that only open for a short and sweet part of the year.
-📍 [Source](https://globalnews.ca/news/11501099/young-entrepreneurs-find-success-in-winnipeg-ice-cream-shops/)
+## 16. This Alberta mountain town plays a big role in the fitness watch craze
+📍 [Source](https://www.cbc.ca/news/canada/calgary/garmin-canada-cochrane-fitness-watches-wearables-9.6958774?cmp=rss)
 **Score:** 4.50
 
-## 14. Alberta’s Big Payouts to Spurned Australian Coal Miners
-Two firms that invested far less are getting $235 million. Taxpayers face more such hits.
-📍 [Source](https://thetyee.ca/Analysis/2025/10/30/Alberta-Big-Payouts-Australian-Coal-Miners/)
+## 17. Alberta labour leaders gauge interest in general strike after suspension of teachers' bargaining rights
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-teacher-strike-labour-groups-9.6959380?cmp=rss)
 **Score:** 4.50
 
-## 15. Eby Threatens Snap Election over North Coast Transmission Line
-If opposition MLAs block legislation on the project, voters could be heading to the polls.
-📍 [Source](https://thetyee.ca/News/2025/10/30/Eby-Threatens-Snap-Election-North-Coast-Transmission-Line/)
-**Score:** 2.60
+## 18. Residents prepared for a fight as golf course developer eyes Cape Breton park
+Some in Cape Breton are angry and preparing to fight as a nearby golf course developer eyes the windswept beaches of West Mabou Beach Provincial Park.
+📍 [Source](https://globalnews.ca/news/11502087/golf-course-developer-eyes-cape-breton-park/)
+**Score:** 3.00
 
-## 16. Saskatchewan filmmaker documents 77-year-old plane wreck for first time
-A Saskatchewan filmmaker highlights the forgotten tale of a U.S. Navy plane that went down in 1948, prompting the largest search and rescue mission at the time.
-📍 [Source](https://globalnews.ca/news/11501452/saskatchewan-filmmaker-documents-plane-wreck/)
+## 19. Helping Quebec non-profits below ‘cybersecurity poverty line' strengthen networks
+Facing the threat of cyberattacks and with limited budgets, non-profit organizations across Quebec are being offered free cybersecurity consulting sessions.
+📍 [Source](https://globalnews.ca/news/11502075/quebec-cybersecurity-poverty-line-strengthen-networks/)
 **Score:** 1.30
-
-## 17. Meet the artist who carved the Toronto Blue Jays logo into the Art Gallery of Nova Scotia
-<img src='https://i.cbc.ca/ais/8284d254-c704-49e8-949e-d1dc39934d93,1761752934140/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A logo of a blue jay on stone' width='620' height='349' title='The gallery's director of marketing says the logo was most likely carved by a stone mason when they were restoring the building. '/><p>The mystery of who carved a Toronto Blue Jays logo into the sandstone of the Art Gallery of Nova Scotia has been solved.</p>
-📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/blue-jays-logo-at-halifax-gallery-9.6958504?cmp=rss)
-**Score:** 1.20
 
