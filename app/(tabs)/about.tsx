@@ -104,6 +104,12 @@ export default function AboutScreen() {
           <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/community/guidelines/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
             <Text style={{ color: palette.text }}>Community Guidelines</Text>
           </Pressable>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/legal/disclaimers/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Legal Disclaimers</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/privacy-controls/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
+            <Text style={{ color: palette.text }}>Privacy & Controls</Text>
+          </Pressable>
           <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_8} onPress={()=>openExternalUrl('https://3mpwrapp.pages.dev/delete-data/')} style={({ pressed }) => [{ paddingHorizontal:10, paddingVertical:6, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor: palette.surface }, pressed && { opacity:0.8 }]}>
             <Text style={{ color: palette.text }}>Delete My Data</Text>
           </Pressable>

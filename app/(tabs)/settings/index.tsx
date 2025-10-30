@@ -422,6 +422,8 @@ function TermsSection() {
   const openDataOwnership = () => { Linking.openURL('https://3mpwrapp.pages.dev/data-ownership/').catch(()=>{}); };
   const openCommunityGuidelines = () => { Linking.openURL('https://3mpwrapp.pages.dev/community/guidelines/').catch(()=>{}); };
   const openDeleteData = () => { Linking.openURL('https://3mpwrapp.pages.dev/delete-data/').catch(()=>{}); };
+  const openLegalDisclaimers = () => { Linking.openURL('https://3mpwrapp.pages.dev/legal/disclaimers/').catch(()=>{}); };
+  const openPrivacyControls = () => { Linking.openURL('https://3mpwrapp.pages.dev/privacy-controls/').catch(()=>{}); };
   const reset = async () => { try { await AsyncStorage.removeItem('empowr.terms.accepted.v1'); Alert.alert('Reset','You will be asked to accept Terms on next launch.'); } catch {} };
   return (
     <View>
@@ -432,6 +434,10 @@ function TermsSection() {
       <Button title='Data Ownership' onPress={openDataOwnership} />
       <View style={{ height:8 }} />
       <Button title='Community Guidelines' onPress={openCommunityGuidelines} />
+      <View style={{ height:8 }} />
+      <Button title='Legal Disclaimers' onPress={openLegalDisclaimers} />
+      <View style={{ height:8 }} />
+      <Button title='Privacy & Controls' onPress={openPrivacyControls} />
       <View style={{ height:8 }} />
       <Button title='Delete My Data' onPress={openDeleteData} />
       <View style={{ height:8 }} />
