@@ -21,7 +21,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.empowrapp2.empowrapp",
+      "bundleIdentifier": "com.app3mpwr.app3mpwr",
       "infoPlist": {
         "NSCameraUsageDescription": "Used to capture evidence photos for your personal records",
         "NSPhotoLibraryUsageDescription": "Used to import evidence from your photo library",
@@ -45,7 +45,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.empowrapp2.empowrapp",
+      "package": "com.app3mpwr.app3mpwr",
       "allowBackup": false,
       "permissions": [
         "android.permission.INTERNET",
