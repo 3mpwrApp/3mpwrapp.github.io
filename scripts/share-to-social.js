@@ -78,7 +78,20 @@ function getBlogPosts(limit = 5) {
 
       const date = dateMatch ? new Date(dateMatch[1].split('T')[0]) : new Date();
       const slug = file.replace('.md', '');
-      const postPath = `/whats-new/${slug}/` || `/blog/${slug}/`;
+      
+      // Generate correct Jekyll permalink format for posts in _posts directory
+      // Format: /YYYY/MM/DD/title-without-date/
+      // Example: 2025-10-29-feature-spotlight-dyslexia-support-mode.md -> /2025/10/29/feature-spotlight-dyslexia-support-mode/
+      let postPath;
+      const datePrefix = slug.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/);
+      if (datePrefix) {
+        // Post has date prefix in filename (standard Jekyll _posts format)
+        const [, year, month, day, title] = datePrefix;
+        postPath = `/${year}/${month}/${day}/${title}/`;
+      } else {
+        // Fallback for posts without date prefix (shouldn't happen in _posts)
+        postPath = `/blog/${slug}/`;
+      }
 
       return {
         filename: file,

@@ -24,16 +24,16 @@ description: A community-powered hub for injured workers and persons with disabi
       <h3 class="toolbar-group-title">Quick Relief</h3>
       <div class="toolbar-buttons">
         <button id="needBreakBtn" class="toolbar-btn" aria-label="Take a break - dims screen for 5 minutes">
-          💙 Need a break?
+          <span aria-hidden="true">💙</span> Need a break?
         </button>
         <button id="painFlareBtn" class="toolbar-btn" aria-label="Switch to minimal interaction mode">
-          🔥 Pain flare mode
+          <span aria-hidden="true">🔥</span> Pain flare mode
         </button>
         <button id="overwhelmedBtn" class="toolbar-btn" aria-label="Switch to simplified version">
-          😰 I'm overwhelmed
+          <span aria-hidden="true">😰</span> I'm overwhelmed
         </button>
         <button id="freezeFrameBtn" class="toolbar-btn" aria-label="Freeze all animations and movement">
-          ❄️ Freeze animations
+          <span aria-hidden="true">❄️</span> Freeze animations
         </button>
       </div>
     </div>
@@ -43,16 +43,16 @@ description: A community-powered hub for injured workers and persons with disabi
       <h3 class="toolbar-group-title">Reading Aids</h3>
       <div class="toolbar-buttons">
         <button id="tooMuchTextBtn" class="toolbar-btn" aria-label="Show bullet points only">
-          📝 Too much text?
+          <span aria-hidden="true">📝</span> Too much text?
         </button>
         <button id="brainFogBtn" class="toolbar-btn" aria-label="Show quick summary">
-          🧠 Brain fog helper
+          <span aria-hidden="true">🧠</span> Brain fog helper
         </button>
         <button id="resumeReadingBtn" class="toolbar-btn" style="display:none;" aria-label="Resume where you left off">
-          📖 Resume reading
+          <span aria-hidden="true">📖</span> Resume reading
         </button>
         <button id="spatialMemoryBtn" class="toolbar-btn" aria-label="Show where you've been on this page">
-          🔍 I saw it somewhere...
+          <span aria-hidden="true">🔍</span> I saw it somewhere...
         </button>
       </div>
     </div>
@@ -62,13 +62,13 @@ description: A community-powered hub for injured workers and persons with disabi
       <h3 class="toolbar-group-title">Content Tools</h3>
       <div class="toolbar-buttons">
         <button id="chunkingBtn" class="toolbar-btn" aria-label="Break content into smaller chunks">
-          🧩 Chunk content
+          <span aria-hidden="true">🧩</span> Chunk content
         </button>
         <button id="decisionHelperBtn" class="toolbar-btn" aria-label="Help me decide what to do">
-          🎯 Decision helper
+          <span aria-hidden="true">🎯</span> Decision helper
         </button>
         <button id="groundingBtn" class="toolbar-btn" aria-label="Quick grounding exercise for anxiety">
-          🧘 Grounding exercise
+          <span aria-hidden="true">🧘</span> Grounding exercise
         </button>
       </div>
     </div>
@@ -78,7 +78,7 @@ description: A community-powered hub for injured workers and persons with disabi
       <h3 class="toolbar-group-title">Display Settings</h3>
       <div class="toolbar-settings">
         <div class="toolbar-setting">
-          <label for="sensoryToggle" class="toolbar-label">✨ Sensory:</label>
+          <label for="sensoryToggle" class="toolbar-label"><span aria-hidden="true">✨</span> Sensory:</label>
           <select id="sensoryToggle" class="toolbar-select" aria-label="Adjust sensory preferences">
             <option value="default">Default</option>
             <option value="reduced-motion">Reduced motion</option>
@@ -87,14 +87,14 @@ description: A community-powered hub for injured workers and persons with disabi
           </select>
         </div>
         <div class="toolbar-setting">
-          <label for="readingLevel" class="toolbar-label">📚 Reading:</label>
+          <label for="readingLevel" class="toolbar-label"><span aria-hidden="true">📚</span> Reading:</label>
           <select id="readingLevel" class="toolbar-select" aria-label="Adjust reading complexity">
             <option value="detailed">Detailed</option>
             <option value="simple">Simple language</option>
           </select>
         </div>
         <div class="toolbar-setting">
-          <label for="dyslexiaMode" class="toolbar-label">📖 Dyslexia:</label>
+          <label for="dyslexiaMode" class="toolbar-label"><span aria-hidden="true">📖</span> Dyslexia:</label>
           <select id="dyslexiaMode" class="toolbar-select" aria-label="Dyslexia-friendly formatting">
             <option value="off">Off</option>
             <option value="font">Font only</option>
@@ -110,16 +110,16 @@ description: A community-powered hub for injured workers and persons with disabi
       <h3 class="toolbar-group-title">Energy & Time Tracking</h3>
       <div class="toolbar-tracking">
         <div class="spoon-counter">
-          <span class="spoon-label">🥄 Energy used:</span>
+          <span class="spoon-label"><span aria-hidden="true">🥄</span> Energy used:</span>
           <span id="spoonCount" class="spoon-count" aria-live="polite">0</span>
           <button id="resetSpoons" class="toolbar-btn-small" aria-label="Reset energy counter">Reset</button>
         </div>
         <div class="toolbar-indicators">
           <button id="cognitiveLoadBtn" class="toolbar-btn-indicator" aria-label="Cognitive load indicator" aria-live="polite">
-            🌡️ <span id="cognitiveStatus">Ready</span>
+            <span aria-hidden="true">🌡️</span> <span id="cognitiveStatus">Ready</span>
           </button>
           <button id="timeBlindnessBtn" class="toolbar-btn-small" aria-label="Time tracking helper">
-            ⏰ <span id="timeSpent">0m</span>
+            <span aria-hidden="true">⏰</span> <span id="timeSpent">0m</span>
           </button>
         </div>
       </div>
@@ -135,7 +135,7 @@ description: A community-powered hub for injured workers and persons with disabi
 
 # You're Not Alone. Your Voice Matters.
 
-📖 **3 minute read** 🔋🔋 **Energy: Light**
+<span aria-hidden="true">📖</span> **3 minute read** <span aria-hidden="true">🔋🔋</span> **Energy: Light**
 
 **Be part of building something meaningful.**
 
@@ -143,47 +143,47 @@ description: A community-powered hub for injured workers and persons with disabi
 
 We're building a safe space to connect, share experiences, and advocate for real change.
 
-**💚 100% Free Forever** – No subscriptions. No hidden costs. Built BY the community, FOR the community.
+**<span aria-hidden="true">💚</span> 100% Free Forever** – No subscriptions. No hidden costs. Built BY the community, FOR the community.
 
 ---
 
-## ✨ Built Different—By Design
+## <span aria-hidden="true">✨</span> Built Different—By Design
 
 <div class="gradient-banner-pink">
-  <h3 style="margin: 0 0 1rem; font-size: 1.3rem;">🎯 Thoughtfully Designed for Real Lives</h3>
+  <h3 style="margin: 0 0 1rem; font-size: 1.3rem;"><span aria-hidden="true">🎯</span> Thoughtfully Designed for Real Lives</h3>
   <p style="margin: 0 0 1rem; font-size: 1.05rem;">
     3mpwrApp isn't just accessible—it's **thoughtfully built** with features you won't find anywhere else:
   </p>
   
   <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem;">
     <li style="padding-left: 1.5rem; position: relative;">
-      <span style="position: absolute; left: 0;">🧠</span>
+      <span style="position: absolute; left: 0;" aria-hidden="true">🧠</span>
       <strong>Adaptive cognitive support</strong> that responds to how you're feeling right now
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
-      <span style="position: absolute; left: 0;">💙</span>
+      <span style="position: absolute; left: 0;" aria-hidden="true">💙</span>
       <strong>Wellness-first features</strong> designed with your wellbeing in mind
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
-      <span style="position: absolute; left: 0;">⏰</span>
+      <span style="position: absolute; left: 0;" aria-hidden="true">⏰</span>
       <strong>Smart check-ins</strong> that respect your time and energy
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
-      <span style="position: absolute; left: 0;">🎯</span>
+      <span style="position: absolute; left: 0;" aria-hidden="true">🎯</span>
       <strong>Hidden helpers</strong> that appear when you need support most
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
-      <span style="position: absolute; left: 0;">🌟</span>
+      <span style="position: absolute; left: 0;" aria-hidden="true">🌟</span>
       <strong>Progress celebrations</strong> for every step forward, big or small
     </li>
     <li style="padding-left: 1.5rem; position: relative;">
-      <span style="position: absolute; left: 0;">🎮</span>
+      <span style="position: absolute; left: 0;" aria-hidden="true">🎮</span>
       <strong>Thoughtful surprises</strong> that make using the app a positive experience
     </li>
   </ul>
   
   <p style="margin: 1rem 0 0; font-size: 0.95rem; font-style: italic;">
-    💡 <strong>Note:</strong> The more you use 3mpwrApp, the more helpful features you'll discover—all designed to support you.
+    <span aria-hidden="true">💡</span> <strong>Note:</strong> The more you use 3mpwrApp, the more helpful features you'll discover—all designed to support you.
   </p>
 </div>
 
@@ -276,13 +276,13 @@ We're building a safe space to connect, share experiences, and advocate for real
 Ready to join the movement? Here's how you can get started:
 
 <div class="gradient-banner">
-  <h3 style="margin: 0 0 0.5rem;">🚀 Phase 1 Beta Testing - Now Accepting Signups!</h3>
+  <h3 style="margin: 0 0 0.5rem;"><span aria-hidden="true">🚀</span> Phase 1 Beta Testing - Now Accepting Signups!</h3>
   <p style="margin: 0 0 1rem; font-size: 1rem;">Be among the first testers to shape the future of disability advocacy technology.</p>
   <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: var(--card-bg, #ffffff); color: #5568d3; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
   <p style="margin: 1rem 0 0; font-size: 0.9rem;"><a href="{{ '/app-waitlist' | relative_url }}" style="color: var(--text-color, #ffffff); text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="{{ '/beta-guide' | relative_url }}" style="color: var(--text-color, #ffffff); text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
 </div>
 
-- <a href="{{ '/user-guide' | relative_url }}"><strong>📖 Read Our Complete User Guide</strong></a> – **NEW Phase 2!** Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more ([Download PDF](/assets/downloads/3mpwrapp-user-guide-full.pdf))
+- <a href="{{ '/user-guide' | relative_url }}"><strong><span aria-hidden="true">📖</span> Read Our Complete User Guide</strong></a> – **NEW Phase 2!** Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more ([Download PDF](/assets/downloads/3mpwrapp-user-guide-full.pdf))
 - <a href="{{ '/features' | relative_url }}">Explore All Features</a> – Detailed step-by-step guides for every feature
 - <a href="{{ '/newsletter' | relative_url }}">Subscribe to Our Newsletter</a> – Stay updated with the latest news and resources
 - <a href="{{ '/blog' | relative_url }}">Explore Our Blog</a> – Read stories, updates, and important information
@@ -330,7 +330,7 @@ Ready to join the movement? Here's how you can get started:
 </section>
 ---
 
-## 📄 Legal & Privacy
+## <span aria-hidden="true">📄</span> Legal & Privacy
 
 We're committed to transparency and protecting your rights:
 
@@ -484,7 +484,7 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 
 <!-- Community Counter -->
 <div class="community-stats-box">
-  <p style="margin: 0; font-size: 1.1rem;"><strong>💚 Join Our Growing Community</strong></p>
+  <p style="margin: 0; font-size: 1.1rem;"><strong><span aria-hidden="true">💚</span> Join Our Growing Community</strong></p>
   <p style="margin: 0.5rem 0 0;">
     Currently launching Phase 1 closed beta - <a href="{{ '/beta' | relative_url }}">sign up to be among the first testers</a>
   </p>

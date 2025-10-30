@@ -44,8 +44,6 @@ lastUpdated: 2025-10-25
 
 ---
 
----
-
 ## ⚠️ Important: What This App Does NOT Provide
 
 <div class="warning-box">
@@ -70,7 +68,7 @@ lastUpdated: 2025-10-25
 
 ---
 
-## � Table of Contents
+## 📚 Table of Contents
 
 <div class="features-grid">
   <div class="feature-box">
@@ -185,23 +183,27 @@ lastUpdated: 2025-10-25
     <h4>Step 8: Crisis & Emergency</h4>
     <p>Check 2 boxes about 911 and emergency services</p>
   </div>
-
-9. **Final Agreement** - Check 2 boxes: "User responsibility" + "Data ownership"
+  
+  <div class="feature-box">
+    <h4>Step 9: Final Agreement</h4>
+    <p>Check 2 boxes: "User responsibility" + "Data ownership"</p>
+  </div>
+</div>
 
 **Cannot skip any step!** Your safety and our legal protection require full acceptance.
 
-### **Account Options**
+### Account Options
 - **Guest Mode:** Use core features without account (limited features)
 - **Create Account:** Email + password for full features
 - **Sign In:** Returning users
 
-### **Onboarding Wizard** (Optional)
+### Onboarding Wizard (Optional)
 - Set up disability profile
 - Choose accessibility preferences
 - Select energy patterns
 - Personalize recommendations
 
-### **First Week Checklist** ✅
+### First Week Checklist ✅
 
 Complete these steps in your first week to get the most out of 3mpwrApp:
 
@@ -230,7 +232,7 @@ Complete these steps in your first week to get the most out of 3mpwrApp:
 
 **Pro Tip:** Don't feel pressured to do everything at once. Small, consistent steps beat big leaps. The app adapts to your pace!
 
-### **Beta Testing Priorities** 🧪
+### Beta Testing Priorities 🧪
 
 **If you're a beta tester, please focus on:**
 
@@ -287,16 +289,16 @@ Complete these steps in your first week to get the most out of 3mpwrApp:
 
 ---
 
-## ⚖️ **Legal & Privacy**
+## ⚖️ Legal & Privacy
 
-### **What This App Does NOT Provide:**
+### What This App Does NOT Provide:
 - ⚕️ **Medical advice, diagnosis, or treatment**
 - ⚖️ **Legal advice or attorney-client relationship**
 - 💰 **Financial, investment, or tax advice**
 - 🤖 **Guaranteed accuracy from AI-generated content**
 - 🆘 **Emergency or crisis intervention services**
 
-### **Your Privacy Rights:**
+### Your Privacy Rights:
 - **100% Data Ownership** - Your data belongs entirely to YOU
 - **Local-First Storage** - Data stays on your device
 - **Optional Cloud Sync** - Connect YOUR cloud (Google Drive, iCloud, etc.)
@@ -308,15 +310,15 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ---
 
-## 🎯 **Features Overview**
+## 🎯 Features Overview
 
-### **� Home Tab**
+### 🏠 Home Tab
 - Personalized daily suggestions
 - Quick access to AI assistant
 - Beta features announcements
 - Community highlights
 
-### **🧘 Wellness Tab** (36 Features)
+### 🧘 Wellness Tab (36 Features)
 - **Mood & Tracking:** Mood Tracker, Symptom Tracker, Sleep & Energy Tracker, Pain Forecast
 - **Mindfulness:** Adaptive Meditation, Ambience Sync, Dream Tracker
 - **DBT/CBT:** DBT Skill Matcher, CBT Coach, Opposite Action, Radical Acceptance
@@ -324,7 +326,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - **Support:** Grief Support, Self-Care Library, Distress Tolerance (TIPP)
 - **Progress:** Resilience Points, Achievements, Reflections Calendar
 
-### **📖 Resources Tab**
+### 📖 Resources Tab
 - Evidence Locker (document vault)
 - Letter Wizard (22 professional templates)
 - Benefits Tracker
@@ -333,7 +335,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - AI Tools (Case Interpreter, Translator)
 - Resource Search
 
-### **⚖️ Advocacy Tab**
+### ⚖️ Advocacy Tab
 - Legal Workflow Automation
 - Lawyer Finder
 - Ally Hub
@@ -342,14 +344,14 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Jurisdiction Resources
 - Rights Checklists
 
-### **🤝 Community Tab**
+### 🤝 Community Tab
 - Peer Support Matching
 - Discussion Forums
 - Campaign Coordination
 - Virtual Meetups
 - Beta Testers Chat
 
-### **⚙️ Settings Tab**
+### ⚙️ Settings Tab
 - Profile Editor
 - Accessibility Options
 - Privacy & Security
@@ -359,7 +361,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Motor Accessibility
 - Neurodivergent Settings
 
-### **📢 What's New Tab**
+### 📢 What's New Tab
 - App updates
 - New features
 - Bug fixes
@@ -367,55 +369,55 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ---
 
-## 🧘 **Wellness Tools (Detailed)**
+## 🧘 Wellness Tools (Detailed)
 **[⚙️ See all 36 Wellness features →](/features#wellness-tools---36-features-for-mental--physical-health)**
 
-### **⚕️ Medical Disclaimer:**
+### ⚕️ Medical Disclaimer:
 > **ALL wellness tools are informational only. This app does NOT provide medical advice. Always consult qualified healthcare providers for medical decisions. In emergencies, call 911.**
 
-### **Mood Tracker**
+### Mood Tracker
 - Log daily mood (emoji-based)
 - Track patterns over time
 - Export reports for therapist
 - Set mood check-in reminders
 - 7-day average trends
 
-### **Symptom & Pain Tracker**
+### Symptom & Pain Tracker
 - Log physical symptoms (pain level 0-10)
 - Track functional impact
 - Tag entries (work, meds, triggers)
 - Export advocacy-oriented reports
 - Filter by date range
 
-### **Sleep & Energy Tracker**
+### Sleep & Energy Tracker
 - Daily sleep quality + energy levels
 - Smart 24-hour energy forecasting
 - Weekly wellness reports
 - Personalized recommendations
 - Export for clinical use
 
-### **Adaptive Meditation**
+### Adaptive Meditation
 - Short sessions (2-20 minutes)
 - Adjustable for energy levels
 - Chair-friendly options
 - Guided breathing exercises
 - Customizable soundscapes
 
-### **DBT Skill Matcher**
+### DBT Skill Matcher
 - Select current emotion
 - Get instant skill suggestions
 - Evidence-based DBT techniques
 - Easy-to-follow instructions
 - Track skills usage
 
-### **Pacing Partner**
+### Pacing Partner
 - Activity planning
 - Energy budgeting
 - Break reminders
 - Spoon theory tracking
 - Daily pacing suggestions
 
-### **Resilience Points (Gamified)**
+### Resilience Points (Gamified)
 - Earn points for small wins
 - Track therapy goals
 - Celebrate progress
@@ -424,12 +426,12 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ---
 
-## ⚖️ **Advocacy & Legal Resources**
+## ⚖️ Advocacy & Legal Resources
 
-### **⚖️ Legal Disclaimer:**
+### ⚖️ Legal Disclaimer:
 > **ALL legal resources are educational only. This app does NOT provide legal advice. Laws vary by jurisdiction. Always consult a licensed attorney for legal matters specific to your situation.**
 
-### **Evidence Locker (Document Vault)**
+### Evidence Locker (Document Vault)
 **[⚙️ See all Evidence Locker features →](/features#evidence-locker---your-secure-document-vault)**
 
 - Securely store documents, photos, audio
@@ -439,7 +441,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Upload queue with retry
 - Tamper detection
 
-### **Letter Wizard (22 Templates)**
+### Letter Wizard (22 Templates)
 **[⚙️ See all Letter Wizard features →](/features#letter-wizard---22-professional-letter-templates)**
 
 1. Accommodation Request (Workplace)
@@ -454,7 +456,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 10. Retaliation Complaint
 ...and 12 more!
 
-### **Legal Workflow Automation**
+### Legal Workflow Automation
 **[⚙️ See all Legal Automation features →](/features#legal-automation---streamlined-legal-processes)**
 
 - Canada Disability Benefit (CDB) application
@@ -464,14 +466,14 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Document checklist
 - AI-assisted form filling
 
-### **Lawyer Finder**
+### Lawyer Finder
 - Filter by disability law specialization
 - Location-based search
 - Ratings & reviews
 - Contact information
 - **Disclaimer:** We don't endorse or verify attorneys
 
-### **Jurisdiction Resources**
+### Jurisdiction Resources
 - Province/state-specific forms
 - Deadline calculators
 - Evidence focus guides
@@ -480,17 +482,17 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ---
 
-## 🤝 **Community Features**
+## 🤝 Community Features
 **[⚙️ See all Community features →](/features#community---connect--support)**
 
-### **Peer Support Matching**
+### Peer Support Matching
 - Match with others (disability type, experiences)
 - 94% accuracy matching algorithm
 - Safety verification
 - Privacy controls
 - **Not therapy** - peer support only
 
-### **Campaign Coordination**
+### Campaign Coordination
 **[⚙️ See Campaign Coordination features →](/features#campaign-coordination---organize-for-change)**
 
 - Organize advocacy campaigns
@@ -499,14 +501,14 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Track campaign progress
 - Templates for common campaigns
 
-### **Discussion Forums**
+### Discussion Forums
 - Ask questions
 - Share experiences
 - Get advice from community
 - Respectful, moderated environment
 - Report violations
 
-### **Community Guidelines:**
+### Community Guidelines:
 See full Community Guidelines at: https://3mpwrapp.pages.dev/community-guidelines
 
 **Not Allowed:**
@@ -518,15 +520,15 @@ See full Community Guidelines at: https://3mpwrapp.pages.dev/community-guideline
 
 ---
 
-## 🔐 **Privacy & Security**
+## 🔐 Privacy & Security
 
-### **Data Storage:**
+### Data Storage:
 - **Local-First:** All data stored on your device by default
 - **Optional Cloud Sync:** Connect YOUR cloud (Google Drive, iCloud, WebDAV, Dropbox, OneDrive, AWS S3)
 - **No 3mpwr Servers:** Data never passes through our servers
 - **Your Keys:** Encryption keys stored in device secure enclave
 
-### **Security Features:**
+### Security Features:
 - **AES-256 Encryption** for sensitive data
 - **Hardware-Backed Keys** (iOS Keychain, Android Keystore)
 - **TLS 1.3** for network connections
@@ -534,7 +536,7 @@ See full Community Guidelines at: https://3mpwrapp.pages.dev/community-guideline
 - **Tamper Detection** alerts you to unauthorized modifications
 - **Biometric Authentication** (fingerprint, Face ID)
 
-### **Privacy Controls:**
+### Privacy Controls:
 - **Quiet Hours:** Silence notifications
 - **Privacy Lock:** Require auth for Wellness/Evidence Locker
 - **Analytics Opt-Out:** Disable all tracking
@@ -542,7 +544,7 @@ See full Community Guidelines at: https://3mpwrapp.pages.dev/community-guideline
 - **Data Export:** JSON format
 - **Account Deletion:** Complete data removal
 
-### **BYOC (Bring Your Own Cloud):**
+### BYOC (Bring Your Own Cloud):
 - Connect ANY cloud provider
 - Session-only credentials (not saved)
 - Air-gapped operation (works 100% offline)
@@ -550,10 +552,10 @@ See full Community Guidelines at: https://3mpwrapp.pages.dev/community-guideline
 
 ---
 
-## 🆕 **What's New - October 2025**
+## 🆕 What's New - October 2025
 We've added powerful AI-powered features that learn from your patterns and adapt to your needs:
 
-### ⚡ **Energy Forecast & Smart Scheduling** (NEW - Phase 6)
+### ⚡ Energy Forecast & Smart Scheduling (NEW - Phase 6)
 - **24-hour energy prediction** - See when you'll have the most and least energy throughout the day
 - **Personalized forecasting** - Uses your actual patterns to predict future energy levels using advanced ML algorithms
 - **Smart notifications** - The app learns when you have energy and schedules messages for optimal times
@@ -562,14 +564,14 @@ We've added powerful AI-powered features that learn from your patterns and adapt
 - **Privacy-first** - All predictions happen on your device using your own data (no cloud processing)
 - **Beautiful visualization** - 24-hour energy chart with trend indicators, best/worst time predictions, and recommendations
 
-### � **ML-Powered Personalization** (Phase 6)
+### 🤖 ML-Powered Personalization (Phase 6)
 - **Pattern recognition** - App analyzes your activity, energy, mood, recovery, and engagement patterns
 - **Profile editor** - Customize your disability type, accommodations, energy patterns, and preferences
 - **Tool recommendations** - 9 ML-enhanced tools that adapt to your specific needs
 - **Feedback loop** - Your feedback helps improve recommendations over time
 - **A/B testing** - App tests different notification times and recommendations to find what works best for you
 
-### ✨ **Disability Wizard - Your Personal Guide** (Phase 2)
+### ✨ Disability Wizard - Your Personal Guide (Phase 2)
 - **Smart recommendations** - The app learns what works for you and suggests the right tools at the right time
 - **Daily variety** - Fresh feature suggestions every day, never repetitive
 - **Energy-aware** - Matches activities to when you have the most energy
@@ -577,58 +579,7 @@ We've added powerful AI-powered features that learn from your patterns and adapt
 - **Natural flows** - Get suggestions for what to do next after completing a task
 - **Fully accessible** - Works perfectly with screen readers, reduced motion, and high contrast
 
-### 📝 **Master Letter Generator - 22 Professional Letters** (Phase 2)
-
----
-
-## Table of Contents
-
-### 🏠 Getting Started
-- [Getting Started in 5 Minutes](#getting-started-in-5-minutes)
-- [Your Privacy and Security (Simple Explanation)](#your-privacy-and-security)
-- [How to Navigate the App](#how-to-navigate)
-
-### � **Complete Features Inventory** ✅
-- [All 50+ Features Available](#all-features-available)
-- [Phase 6: ML-Driven Personalization](#phase-6-ml-personalization)
-- [Phase 5.5: Advanced Features](#phase-55-advanced)
-- [Phase 4: Core Tools](#phase-4-core)
-- [Phase 2-3: Community & Legal](#phase-2-3-community)
-
-### �🛠️ Main Features
-- [Disability Wizard](#disability-wizard) **(NEW)** - Personalized recommendations just for you
-- [Advocacy Tools](#advocacy-tools) - Get help with letters, appeals, and legal issues
-- [Legal Workflow Automation](#legal-workflow-automation) **(NEW)** - Automated guidance for legal processes
-- [Community](#community) - Connect with others who understand
-- [Campaign Coordination](#campaign-coordination) **(NEW)** - Organize community advocacy efforts
-- [Wellness Support](#wellness-support) - Take care of yourself
-- [Energy Forecast & Smart Scheduling](#energy-forecast-smart-scheduling) **(NEW - Phase 6)** - 24-hour energy prediction and smart notifications
-- [Resources](#resources) - Tools and information you need
-- [Evidence Locker](#evidence-locker) - Save important documents safely
-- [Indigenous Languages](#indigenous-languages) **(NEW)** - Multilingual support with cultural protocols
-- [Advanced Security](#advanced-security-features) **(NEW)** - Enhanced protection options
-
-### ♿ Comprehensive Disability Support
-- [All Disability Types Supported](#all-disability-types-supported) - How we support every disability
-- [Neurodivergent and Learning Disabilities](#neurodivergent-support) - ADHD, Autism, Learning differences
-- [Mental Health and Invisible Disabilities](#mental-health-support) - Depression, anxiety, chronic conditions
-- [Cultural and Identity Intersections](#cultural-intersections) - Supporting diverse communities
-
-### 🇨🇦 Legal Coverage Across Canada
-- [Federal Rights and Benefits](#federal-rights-benefits) - Canada-wide laws and programs
-- [Provincial and Territorial Coverage](#provincial-territorial-coverage) - All provinces and territories
-- [Indigenous Rights and Treaty Protections](#indigenous-rights) - First Nations, Métis, and Inuit rights
-- [Legal Resources by Region](#legal-resources-by-region) - Find help in your area
-
-### 📱 Using the App
-- [Settings and Accessibility](#settings-and-accessibility)
-- [Saving and Sharing](#saving-and-sharing)
-- [Working Offline](#working-offline)
-- [Common Questions](#common-questions)
-
-### 🆘 Getting Help
-- [Troubleshooting](#troubleshooting)
-- [Contact and Support](#contact-and-support)
+### 📝 Master Letter Generator - 22 Professional Letters (Phase 2)
 
 ---
 
@@ -639,7 +590,7 @@ We've added powerful AI-powered features that learn from your patterns and adapt
 
 ### ✅ Available Now (Phase 1 - October 2025)
 
-#### **Cognitive Accessibility Modes** (Phase 1.1 - 100% Complete)
+#### Cognitive Accessibility Modes (Phase 1.1 - 100% Complete)
 - **Standard / Simplified / Minimal Modes** – Reduce choices, add progress + breadcrumbs, auto-save state
 - **Auto-Save System** – Configurable intervals (5min/30s/15s based on mode)
 - **Navigation Memory** – "Back to where I was" button
@@ -647,7 +598,7 @@ We've added powerful AI-powered features that learn from your patterns and adapt
 - **Letter Wizard Integration** – SimplifiedView + ComplexityBadge (40% complete)
 - **Expected Impact:** 25% adoption rate (ADHD, autism, learning disabilities)
 
-#### **Dyslexia Support** (Phase 1.2 - 100% Complete - October 14, 2025)
+#### Dyslexia Support (Phase 1.2 - 100% Complete - October 14, 2025)
 - **DyslexiaText Component** – Drop-in Text replacement with auto-styling applied to 14 high-traffic screens
 - **Interactive Features** – Tap words to highlight, drag reading ruler to reposition
 - **5 Font Options** – System default, OpenDyslexic, Lexend, Arial, Helvetica
@@ -657,7 +608,7 @@ We've added powerful AI-powered features that learn from your patterns and adapt
 - **14 Screens Using DyslexiaText** – Letter wizard, policy simplifier, AI translator, self-care library, grief support, wellness hub, achievements, gov navigator, evidence checklist, solidarity toolkit, myth-busting hub, radical acceptance, distress tolerance, harm reduction
 - **Expected Impact:** 15% adoption rate (1.4M+ Canadians), 25-40% faster reading speed
 
-#### **Motor Disabilities Support** (Phase 1.3 - 40% Complete - October 14, 2025)
+#### Motor Disabilities Support (Phase 1.3 - 40% Complete - October 14, 2025)
 - **Dwell-Click** – Hold press for 1-5 seconds to activate (no tap required) - perfect for tremors
 - **Visual Progress Indicator** – Circular progress shows when dwell-click will activate
 - **Increased Touch Targets** – Auto-scale buttons to 64x64pt for easier tapping
@@ -1446,7 +1397,7 @@ Pick what you need most right now:
 
 ---
 
-### 📅 **Day 1: Getting Started & Your First Save** ⭐
+### 📅 Day 1: Getting Started & Your First Save ⭐
 
 **Theme:** Understanding what 3mpwrApp can do for you  
 **Time:** 15 minutes  
@@ -1515,7 +1466,7 @@ Pick what you need most right now:
 
 ---
 
-### 📅 **Day 2: Wellness Check-In & Energy Tracking** 🌟
+### 📅 Day 2: Wellness Check-In & Energy Tracking 🌟
 
 **Theme:** Understanding your own patterns  
 **Time:** 15 minutes  
@@ -1582,7 +1533,7 @@ Pick what you need most right now:
 
 ---
 
-### 📅 **Day 3: Understanding Your Rights & Documents** ⚖️
+### 📅 Day 3: Understanding Your Rights & Documents ⚖️
 
 **Theme:** Knowing what you're entitled to  
 **Time:** 20 minutes  
@@ -1659,7 +1610,7 @@ Sincerely,
 
 ---
 
-### 📅 **Day 4: Building Your Support Network** 🤝
+### 📅 Day 4: Building Your Support Network 🤝
 
 **Theme:** You're not alone—connect with others  
 **Time:** 20 minutes  
@@ -1723,7 +1674,7 @@ Sincerely,
 
 ---
 
-### 📅 **Day 5: Making Your Documents Count** 📋
+### 📅 Day 5: Making Your Documents Count 📋
 
 **Theme:** Building a strong evidence file for your case  
 **Time:** 25 minutes  
@@ -1801,7 +1752,7 @@ Questions for Doctor:
 
 ---
 
-### 📅 **Day 6: Advocacy in Action** 💪
+### 📅 Day 6: Advocacy in Action 💪
 
 **Theme:** Taking steps toward the changes you need  
 **Time:** 25 minutes  
@@ -1868,7 +1819,7 @@ Disability Accommodation Request
 
 ---
 
-### 📅 **Day 7: Celebration & Building Your Habit** 🎉
+### 📅 Day 7: Celebration & Building Your Habit 🎉
 
 **Theme:** You've done so much—acknowledge progress and plan to keep going  
 **Time:** 20 minutes  
@@ -3274,39 +3225,39 @@ A: Most actions can be undone. Look for "Undo" options or edit your entries. You
 ---
 
 <a id="troubleshooting"></a>
-## 🛠️ **Troubleshooting**
+## 🛠️ Troubleshooting
 
-### **App Won't Open:**
+### App Won't Open:
 1. Restart your device
 2. Check for app updates (Google Play/App Store)
 3. Clear app cache (Settings > Apps > 3mpwr > Storage > Clear Cache)
 4. Reinstall app (your data is backed up if cloud sync enabled)
 
-### **Data Not Syncing:**
+### Data Not Syncing:
 1. Check internet connection
 2. Verify cloud credentials (Settings > Privacy > Cloud Sync)
 3. Check cloud storage space
 4. Try manual sync (Settings > Privacy > Sync Now)
 
-### **Notifications Not Working:**
+### Notifications Not Working:
 1. Check app notification settings (Settings > Notifications)
 2. Check device notification settings (System Settings)
 3. Disable Quiet Hours temporarily
 4. Grant notification permission
 
-### **Biometric Auth Not Working:**
+### Biometric Auth Not Working:
 1. Check device biometric settings
 2. Re-enroll fingerprint/face
 3. Use passcode fallback
 4. Disable/re-enable in app settings
 
-### **Export/Import Failing:**
+### Export/Import Failing:
 1. Check file permissions
 2. Ensure sufficient storage space
 3. Try different export format (JSON instead of PDF)
 4. Verify password correctness
 
-### **App Crashing:**
+### App Crashing:
 1. Update to latest version
 2. Clear app cache
 3. Check device OS version (Android 5.0+ or iOS 13+)
@@ -3314,97 +3265,97 @@ A: Most actions can be undone. Look for "Undo" options or edit your entries. You
 
 ---
 
-## 📧 **Contact & Support**
+## 📧 Contact & Support
 
-### **Email Support:**
+### Email Support:
 **empowrapp08162025@gmail.com**
 
 **Response Time:** Within 48 hours (usually within 24 hours)
 
-### **What to Include:**
+### What to Include:
 - Device type (iPhone 12, Samsung Galaxy S21, etc.)
 - OS version (iOS 16.5, Android 13, etc.)
 - App version (see Settings > About)
 - Description of issue
 - Screenshots (if applicable)
 
-### **Report Bugs:**
+### Report Bugs:
 **Subject:** "Bug Report"  
 **Include:** Steps to reproduce, expected behavior, actual behavior
 
-### **Privacy Requests:**
+### Privacy Requests:
 **Subject:** "Privacy Request"  
 **Include:** Type of request (export, delete, correction)
 
-### **Community Violations:**
+### Community Violations:
 **Subject:** "Community Guidelines Violation"  
 **Include:** Username, description, screenshot
 
-### **Feature Requests:**
+### Feature Requests:
 **Subject:** "Feature Request"  
 **Include:** Description, use case, priority
 
-### **Website:**
+### Website:
 https://3mpwrapp.pages.dev
 
 ---
 
-## 📋 **Frequently Asked Questions (FAQ)**
+## 📋 Frequently Asked Questions (FAQ)
 
-### **Is this app free?**
+### Is this app free?
 Yes! 3mpwrApp is 100% free with no in-app purchases, subscriptions, or hidden fees.
 
-### **Do I need an account?**
+### Do I need an account?
 No, Guest Mode provides core features without an account. Full features require a free account.
 
-### **Where is my data stored?**
+### Where is my data stored?
 On YOUR device by default. Optional cloud sync connects to YOUR chosen cloud provider (Google Drive, iCloud, etc.).
 
-### **Can I use this app offline?**
+### Can I use this app offline?
 Yes! The app works 100% offline. Cloud sync requires internet only for syncing.
 
-### **Is my data private?**
+### Is my data private?
 Absolutely. Your data is 100% owned by you, encrypted, and never shared or sold.
 
-### **Can therapists/doctors see my data?**
+### Can therapists/doctors see my data?
 Only if you choose to export and share it with them. No one has access without your explicit consent.
 
-### **What if I lose my device?**
+### What if I lose my device?
 If cloud sync is enabled, restore from your cloud. If not, data is lost (always enable backups!).
 
-### **Can I export my data?**
+### Can I export my data?
 Yes! Settings > Privacy > Export Data (JSON format).
 
-### **How do I delete my account?**
+### How do I delete my account?
 Settings > Privacy > Delete Account (irreversible - data permanently deleted).
 
-### **Is this app HIPAA compliant?**
+### Is this app HIPAA compliant?
 No. This is a personal wellness app, not a medical records system. Do not store PHI (Protected Health Information).
 
-### **Can I use this for legal cases?**
+### Can I use this for legal cases?
 Yes! Evidence Locker and exports are designed for advocacy use. However, this app does NOT provide legal advice.
 
-### **Are the lawyers in the Lawyer Finder verified?**
+### Are the lawyers in the Lawyer Finder verified?
 No. We provide contact information only. You must independently verify credentials, licensing, and suitability.
 
-### **What if the AI gives me wrong information?**
+### What if the AI gives me wrong information?
 **Always verify AI-generated content with qualified professionals.** AI can make mistakes, have biases, or provide outdated information.
 
-### **Is this app safe for kids?**
+### Is this app safe for kids?
 This app is for users 18+. If under 18, you need parental consent.
 
-### **How do you make money if it's free?**
+### How do you make money if it's free?
 Currently, we don't. Future funding may include grants, donations, or optional paid features. We will NEVER sell user data.
 
 ---
 
-## 🔄 **Version History & Updates**
+## 🔄 Version History & Updates
 
-### **Current Version: 1.0.0-rc.1**
+### Current Version: 1.0.0-rc.1
 - Released: October 2025
 - Status: Production Ready (99/100)
 
-### **Major Updates:**
+### Major Updates:
 - **October 2025:** Comprehensive legal disclaimers, 9-step acceptance flow
 - **October 2025:** Phase 6 ML-driven personalization
 - **October 2025:** Trauma-informed safety features
@@ -3415,15 +3366,15 @@ See full changelog: Settings > About > What's New
 
 ---
 
-## 📚 **Additional Resources**
+## 📚 Additional Resources
 
-### **Documentation:**
+### Documentation:
 - Terms of Service: https://3mpwrapp.pages.dev/terms
 - Privacy Policy: https://3mpwrapp.pages.dev/privacy
 - Community Guidelines: https://3mpwrapp.pages.dev/community-guidelines
 - Accessibility Statement: https://3mpwrapp.pages.dev/accessibility
 
-### **Crisis Resources:**
+### Crisis Resources:
 - **Canada Suicide Prevention Service:** Call [1-833-456-4566](tel:1-833-456-4566) or text [45645](sms:45645) (24/7)
 - **Wellness Together Canada:** Call [1-866-585-0445](tel:1-866-585-0445) or text WELLNESS to 686868
 - **Canadian Domestic Violence Hotline:** [1-800-363-9010](tel:1-800-363-9010) (24/7, TTY: 1-800-567-5803)
@@ -3433,7 +3384,7 @@ See full changelog: Settings > About > What's New
 
 **[Complete crisis resources list →](/crisis-resources)**
 
-### **Canadian Disability Rights Organizations:**
+### Canadian Disability Rights Organizations:
 - **Council of Canadians with Disabilities:** [www.ccdonline.ca](https://www.ccdonline.ca)
 - **Disability Rights Coalition of Canada:** [www.disabilityrights.ca](https://www.disabilityrights.ca)
 - **Canadian Association for Community Living:** [www.cacl.ca](https://www.cacl.ca)

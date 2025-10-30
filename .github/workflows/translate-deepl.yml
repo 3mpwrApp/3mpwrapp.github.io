@@ -1,0 +1,53 @@
+name: Translate Website to French with DeepL
+
+on:
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: 'Pages to translate (comma-separated, or "all" for all pages)'
+        required: false
+        default: 'all'
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Run translation script
+        run: |
+          echo "🌍 Starting translation process..."
+          node scripts/translate-deepl.js
+          
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet || echo "changes=true" >> $GITHUB_OUTPUT
+          
+      - name: Commit and push translations
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add fr/
+          git commit -m "🌍 Automated French translations via DeepL API"
+          git push
+          
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Translation Summary 🌍" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Translation job completed. Check the logs above for details." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Translated Files" >> $GITHUB_STEP_SUMMARY
+          find fr/ -name "*.md" -type f | wc -l | xargs -I {} echo "Total French pages: {}" >> $GITHUB_STEP_SUMMARY

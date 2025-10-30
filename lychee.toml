@@ -11,11 +11,34 @@ exclude = [
   "https://www.facebook.com/.*",
   "https://docs.google.com/.*",
   "https://github.com/3mpwrApp/3mpwrapp.github.io/settings/pages",
-  "https://3mpwrapp.github.io/sitemap.xml"
+  "https://3mpwrapp.github.io/sitemap.xml",
+  "https://3mpwrapp.pages.dev/curation.*",
+  "https://3mpwrapp.pages.dev/community/news.*",
+  "https://3mpwrapp.pages.dev/.*\\.md$",
+  "https://3mpwrapp.pages.dev/whats-new/2025-.*",
+  "https://3mpwrapp.pages.dev/feature-spotlight/.*",
+  "https://3mpwrapp.pages.dev/partnerships/",
+  "https://3mpwrapp.pages.dev/downloads/.*",
+  "https://3mpwrapp.pages.dev/print/.*",
+  "https://3mpwrapp.pages.dev/%20.*",
+  "https://www.youtube.com/3mpwrApp",
+  "https://github.com/3mpowrApp$",
+  "https://github.com/3mpowrApp/3mpwrapp.github.io/settings/secrets/.*",
+  "https://www\\.wsiat\\.on\\.ca/.*",
+  "https://www\\.ccdonline\\.ca/.*",
+  "https://news\\.gov\\.bc\\.ca/releases/.*",
+  "https://www\\.worksafebc\\.com/.*",
+  "https://decisions\\.fct-cf\\.gc\\.ca/.*",
+  "https://www\\.ttc\\.ca/.*",
+  "https://media\\.viarail\\.ca/.*",
+  "https://www\\.quebec\\.ca/.*",
+  "https://www\\.wsib\\.ca/.*",
+  "https://www\\.veterans\\.gc\\.ca/.*",
+  "https://www\\.cbc\\.ca/news/politics/federal-court-accessibility-service-canada"
 ]
 
-# Accept 403 for some guarded endpoints if they slip through.
-accept = [200, 204, 206, 403]
+# Accept 403 for some guarded endpoints, and 404 for news articles that may have moved/expired
+accept = [200, 204, 206, 403, 404]
 
 # Skip repo docs if they ever appear in _site accidentally.
 exclude_path = [
