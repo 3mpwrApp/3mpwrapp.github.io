@@ -4,6 +4,9 @@ title: Blog
 description: News, updates, and stories from the 3mpwr community.
 ---
 
+
+{%- include status-banner.html -%}
+
 # 3mpwr App Blog
 
 Welcome to our blog! Stay informed with daily curated news, feature articles, community updates, and weekly recaps.
@@ -457,3 +460,5 @@ body[data-contrast="high"] .btn-secondary {
 <!-- Use tags: 'highlights' for daily curation, 'weekly' for recaps, 'feature' for articles -->
 
 ```
+
+{%- include page-feedback.html -%}

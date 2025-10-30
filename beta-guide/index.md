@@ -5,6 +5,9 @@ permalink: /beta-guide/
 description: Comprehensive guide for 3mpwrApp beta testers - everything you need to know to help us build the best advocacy app.
 ---
 
+
+{%- include status-banner.html -%}
+
 # 3mpwrApp Beta Tester Guide
 
 **Welcome to the 3mpwrApp Beta Testing Program!**
@@ -429,3 +432,4 @@ You're not just testing an app. You're helping build a movement. 💪
 *App Version: 1.0.0-rc.1*  
 *Questions: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)*
 
+{%- include page-feedback.html -%}

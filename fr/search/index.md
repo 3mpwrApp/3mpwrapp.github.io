@@ -6,6 +6,9 @@ lang: fr
 permalink: /fr/search/
 ---
 
+
+{%- include status-banner.html -%}
+
 # Rechercher sur le site
 
 <form id="site-search" action="https://duckduckgo.com/" method="get" role="search" aria-describedby="search-help">
@@ -286,3 +289,5 @@ Des problèmes ? Contactez [empowrapp08162025@gmail.com](mailto:empowrapp0816202
 ---
 
 Bonne recherche ! 🔍
+
+{%- include page-feedback.html -%}

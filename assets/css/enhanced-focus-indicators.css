@@ -1,0 +1,254 @@
+/* ============================================
+   Enhanced Focus Indicators - WCAG 2.2 AAA
+   Ensures 3:1 contrast, 2px minimum thickness
+   ============================================ */
+
+/* Default focus indicator for all focusable elements */
+*:focus-visible {
+  outline: 3px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 3px;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 0 0 6px rgba(255, 213, 79, 0.2);
+  transition: outline 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Enhanced focus for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[role="link"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 4px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 8px rgba(255, 213, 79, 0.25);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  *:focus-visible {
+    outline-width: 4px !important;
+    outline-color: #FFFF00 !important;
+    outline-style: solid !important;
+  }
+}
+
+/* Dark backgrounds need brighter focus indicators */
+[data-theme="dark"] *:focus-visible,
+body:not([data-theme="light"]) *:focus-visible {
+  outline-color: #FFE97D !important;
+  box-shadow: 0 0 0 8px rgba(255, 233, 125, 0.3);
+}
+
+/* Light backgrounds need darker focus indicators for contrast */
+[data-theme="light"] *:focus-visible {
+  outline-color: #FFA500 !important;
+  box-shadow: 0 0 0 8px rgba(255, 165, 0, 0.3);
+}
+
+/* Skip links - extra prominent focus */
+.skip-link:focus,
+.skip-link:focus-visible {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--focus-color, #FFD54F);
+  color: #000000;
+  padding: 1.5rem;
+  text-align: center;
+  z-index: 10000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: 4px solid #000000 !important;
+  outline-offset: -4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation links - clear focus */
+nav a:focus-visible {
+  outline: 3px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 4px;
+  background: rgba(255, 213, 79, 0.1);
+  border-radius: 4px;
+}
+
+/* Button focus - matches interaction */
+.btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+button:focus-visible {
+  outline: 4px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 4px;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 0 8px rgba(255, 213, 79, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Form inputs - clear boundary */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 2px;
+  border-color: var(--focus-color, #FFD54F);
+  box-shadow: 
+    0 0 0 6px rgba(255, 213, 79, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkbox and radio - circular focus */
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+  outline: 3px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 8px rgba(255, 213, 79, 0.25);
+}
+
+/* Card/panel interactive elements */
+.card:focus-visible,
+.panel:focus-visible,
+[role="article"]:focus-visible {
+  outline: 3px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 4px;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 0 8px rgba(255, 213, 79, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal and dialog focus */
+[role="dialog"]:focus-visible,
+.modal:focus-visible {
+  outline: 4px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: -8px;
+}
+
+/* Menu and dropdown items */
+[role="menuitem"]:focus-visible,
+[role="option"]:focus-visible {
+  outline: 3px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: -3px;
+  background: rgba(255, 213, 79, 0.15);
+}
+
+/* Accordion headers */
+[role="button"][aria-expanded]:focus-visible,
+details summary:focus-visible {
+  outline: 3px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 4px;
+  background: rgba(255, 213, 79, 0.1);
+}
+
+/* Tabs */
+[role="tab"]:focus-visible {
+  outline: 3px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 4px;
+  z-index: 10;
+}
+
+/* Ensure focus is visible on all interactive SVG */
+svg:focus-visible,
+svg [role="button"]:focus-visible,
+svg a:focus-visible {
+  outline: 3px solid var(--focus-color, #FFD54F) !important;
+  outline-offset: 4px;
+}
+
+/* ============================================
+   Keyboard-Only Focus Indicators
+   Shows focus ring only when using keyboard
+   ============================================ */
+
+/* Remove focus outline for mouse users */
+body:not(.user-is-tabbing) *:focus {
+  outline: none;
+}
+
+/* Add back for keyboard users */
+body.user-is-tabbing *:focus-visible {
+  outline: 4px dashed var(--focus-color, #FFD54F) !important;
+  outline-offset: 4px;
+}
+
+/* Script to detect keyboard usage */
+<script>
+(function() {
+  function handleFirstTab(e) {
+    if (e.key === 'Tab') {
+      document.body.classList.add('user-is-tabbing');
+      window.removeEventListener('keydown', handleFirstTab);
+      window.addEventListener('mousedown', handleMouseDown);
+    }
+  }
+  
+  function handleMouseDown() {
+    document.body.classList.remove('user-is-tabbing');
+    window.removeEventListener('mousedown', handleMouseDown);
+    window.addEventListener('keydown', handleFirstTab);
+  }
+  
+  window.addEventListener('keydown', handleFirstTab);
+})();
+</script>
+
+/* ============================================
+   Focus-within for containers
+   ============================================ */
+
+/* Highlight parent containers when child has focus */
+.form-group:focus-within,
+.input-group:focus-within {
+  background: rgba(255, 213, 79, 0.05);
+  border-radius: 8px;
+  padding: 0.25rem;
+  margin: -0.25rem;
+}
+
+/* ============================================
+   Reduced Motion Support
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *:focus-visible {
+    transition: none !important;
+  }
+  
+  button:focus-visible,
+  .btn:focus-visible {
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  *:focus,
+  *:focus-visible {
+    outline: 2px solid #000000 !important;
+    outline-offset: 2px;
+  }
+}
+
+/* ============================================
+   Forced Colors Mode Support (Windows High Contrast)
+   ============================================ */
+
+@media (forced-colors: active) {
+  *:focus-visible {
+    outline: 3px solid ButtonText !important;
+    outline-offset: 3px;
+  }
+  
+  .skip-link:focus-visible {
+    background: ButtonFace;
+    color: ButtonText;
+    outline: 4px solid ButtonText !important;
+  }
+}

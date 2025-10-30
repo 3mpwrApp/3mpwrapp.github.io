@@ -5,6 +5,9 @@ description: Historical record of all 3mpwrApp updates, features, and improvemen
 permalink: /whats-new/archives/
 ---
 
+
+{%- include status-banner.html -%}
+
 # Update Archives 📦
 
 A complete historical record of all updates to 3mpwrApp. Browse by year and month to see how we've evolved.
@@ -358,3 +361,5 @@ We believe in **radical transparency**. Every change, no matter how small, is do
   }
 }
 </style>
+
+{%- include page-feedback.html -%}

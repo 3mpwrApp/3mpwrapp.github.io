@@ -5,6 +5,9 @@ permalink: /community/guidelines/
 description: Our community standards for a safe, supportive space for people with disabilities.
 ---
 
+
+{%- include status-banner.html -%}
+
 # 3mpwrApp — Community Guidelines
 
 **Last Updated: October 25, 2025**  
@@ -247,3 +250,5 @@ We're committed to maintaining a supportive, safe community where everyone feels
 ---
 
 **© 2025 3mpwrApp. All rights reserved.**
+
+{%- include page-feedback.html -%}

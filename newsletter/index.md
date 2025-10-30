@@ -5,6 +5,9 @@ permalink: /newsletter/
 description: Subscribe for weekly updates, community stories, resource highlights, events, and advocacy news from 3mpwr App.
 ---
 
+
+{%- include status-banner.html -%}
+
 # Newsletter
 
 Stay informed about product updates, early access, and beta invites. We'll only email you about 3mpwr App. You can unsubscribe any time.
@@ -56,3 +59,5 @@ If you cannot see the embedded form, use this direct link:
 ---
 
 **We respect your privacy.** Your email will only be used for 3mpwr App newsletters and important updates. You can unsubscribe at any time.
+
+{%- include page-feedback.html -%}

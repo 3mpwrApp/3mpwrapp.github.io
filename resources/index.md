@@ -4,6 +4,9 @@ title: Resources
 description: Comprehensive guides, rights information, templates, and helpful links to empower your journey.
 ---
 
+
+{%- include status-banner.html -%}
+
 # Resources
 
 **Comprehensive guides, legal information, and practical tools to support your advocacy journey.**
@@ -251,3 +254,5 @@ All resources are:
 **Questions?** [Contact us]({{ '/contact' | relative_url }}) — we're here to help.
 
 **Stay informed, empowered, and connected!**
+
+{%- include page-feedback.html -%}

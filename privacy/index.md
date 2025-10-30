@@ -9,10 +9,7 @@ description: Our commitment to your privacy and 100% user data ownership.
 <link rel="stylesheet" href="{{ '/assets/css/privacy.css' | relative_url }}">
 
 <!-- Status Banner -->
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> 
-  <strong>App Status:</strong> Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
-</div>
+{%- include status-banner.html -%}
 
 # 3mpwrApp Privacy Policy
 
@@ -485,15 +482,9 @@ This policy reflects our actual technical implementation. You can verify our pri
 ---
 
 <!-- Page Feedback -->
-<div class="page-feedback" role="complementary">
-  <p><strong>💬 Was this page helpful?</strong></p>
-  <p>
-  <a href="{{ '/feedback/' | relative_url }}" class="feedback-btn feedback-yes">👍 Yes</a>
-  <a href="{{ '/feedback/' | relative_url }}" class="feedback-btn feedback-no">👎 No</a>
-  <a href="{{ '/feedback/' | relative_url }}" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  </p>
-  <p class="page-meta"><small>Last updated: October 25, 2025 | Next review: December 2025</small></p>
-</div>
+
+
+{%- include page-feedback.html -%}
 
 ---
 

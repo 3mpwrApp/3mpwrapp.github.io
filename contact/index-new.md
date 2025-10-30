@@ -4,6 +4,9 @@ title: Contact
 description: Get in touch with 3mpwrApp - we're here to help and listen to your feedback.
 ---
 
+
+{%- include status-banner.html -%}
+
 # We're Here to Help
 
 📖 **2 minute read** 🔋 **Energy: Light**
@@ -106,10 +109,6 @@ Whether you're a person with disabilities, injured worker, family supporter, all
   <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
 </div>
 
-<div class="page-feedback">
-  <p><strong>Was this page helpful?</strong></p>
-  <a href="/feedback?page=contact&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
-  <a href="/feedback?page=contact&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
-  <a href="/feedback?page=contact" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  <p class="page-meta">Last updated: October 28, 2025 | Next review: December 2025</p>
-</div>
+
+
+{%- include page-feedback.html -%}

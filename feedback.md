@@ -5,6 +5,9 @@ description: Thank you for your feedback on 3mpwrApp
 permalink: /feedback/
 ---
 
+
+{%- include status-banner.html -%}
+
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/feedback.css' | relative_url }}">
 
@@ -104,3 +107,5 @@ We'd love to hear from you! Here's how:
 
 <script src="{{ '/assets/js/page-enhancements.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/feedback.js' | relative_url }}" defer></script>
+
+{%- include page-feedback.html -%}

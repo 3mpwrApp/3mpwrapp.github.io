@@ -5,6 +5,9 @@ description: Our commitment to inclusive accessible design
 permalink: /accessibility/
 ---
 
+
+{%- include status-banner.html -%}
+
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/accessibility.css' | relative_url }}">
 
@@ -293,7 +296,7 @@ We meet **all** WCAG 2.2 Level AA success criteria and exceed to Level AAA in se
   </ul>
 </div>
 
-<a href="/ACCESSIBILITY-STATUS-2025" class="report-link">View Latest Accessibility Report →</a>
+<a href="/WCAG-COMPLIANCE-CHECKLIST" class="report-link">View Latest Accessibility Report →</a>
 
 ---
 
@@ -484,3 +487,4 @@ We also work toward compliance with:
 <script src="{{ '/assets/js/page-enhancements.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/accessibility.js' | relative_url }}"></script>
 
+{%- include page-feedback.html -%}

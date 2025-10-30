@@ -6,6 +6,9 @@ lang: fr
 permalink: /fr/contact
 ---
 
+
+{%- include status-banner.html -%}
+
 # Contactez-nous
 
 Nous serions ravis d'avoir de vos nouvelles ! Que vous ayez des questions sur 3mpwrApp, des commentaires à partager ou des opportunités de collaboration, n'hésitez pas à nous contacter.
@@ -222,3 +225,5 @@ Nous nous efforçons de répondre à toutes les demandes dans les 24 heures pend
 ---
 
 **Note :** Ce formulaire nécessite JavaScript pour fonctionner. Si vous rencontrez des problèmes, vous pouvez nous envoyer un courriel directement à [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).
+
+{%- include page-feedback.html -%}

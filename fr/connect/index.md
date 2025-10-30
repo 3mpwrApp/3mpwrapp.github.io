@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Connect With Us
+lang: fr
 description: "Contactez 3mpwrApp pour des partenariats, des collaborations, des demandes de renseignements de la part des médias ou des questions d'ordre général. Nous construisons ensemble un soutien à la santé mentale axé sur la communauté. Courriel, médias sociaux et opportunités de partenariat."
 image: /assets/empwrapp-logo.png
 image_alt: "3mpwrApp Connect - Contactez-nous pour des partenariats et du soutien"
@@ -9,10 +10,7 @@ permalink: /fr/connect/
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> 
-  <strong>App Status:</strong> Closed Beta - Phase 1 | All systems operational | Daily maintenance: 2-4am EST
-</div>
+{%- include status-banner.html -%}
 
 # 🤝 Connect With Us
 
@@ -390,13 +388,9 @@ Every connection, every conversation, every shared idea helps us build something
   <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
 </div>
 
-<div class="page-feedback">
-  <p><strong>Was this page helpful?</strong></p>
-  <a href="/feedback/" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
-  <a href="/feedback/" class="feedback-btn feedback-no">👎 Needs improvement</a>
-  <a href="/feedback/" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  <p class="page-meta">Last updated: October 25, 2025</p>
-</div>
+
+
+{%- include page-feedback.html -%}
 
 ---
 

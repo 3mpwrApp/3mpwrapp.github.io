@@ -5,6 +5,9 @@ description: Immediate crisis support resources for persons with disabilities ac
 permalink: /crisis-resources/
 ---
 
+
+{%- include status-banner.html -%}
+
 <div class="crisis-alert" role="alert">
   <h2>🆘 If you're in immediate danger, call 911</h2>
   <p style="margin: 0; font-size: 1.1rem;"><strong>24/7 National Crisis Line:</strong> <a href="tel:1-833-456-4566">1-833-456-4566</a></p>
@@ -494,13 +497,9 @@ You can call anonymously - don't have to give real name.
 
 ---
 
-<div class="page-feedback">
-  <p><strong>Was this page helpful?</strong></p>
-  <a href="/feedback?page=crisis-resources&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
-  <a href="/feedback?page=crisis-resources&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
-  <a href="/feedback?page=crisis-resources&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest resources</a>
-  <p class="page-meta">Last updated: October 26, 2025 | Next review: Monthly</p>
-</div>
+
+
+{%- include page-feedback.html -%}
 
 **3mpwrApp - You are not alone. We believe in you.** 💚
 

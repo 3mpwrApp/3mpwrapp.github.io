@@ -1,9 +1,13 @@
 ---
 layout: default
 title: Paramètres d'accessibilité
+description: Personnalisez votre expérience de navigation avec les options d'accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.
 permalink: /fr/accessibility-settings/
 lang: fr
 ---
+
+
+{%- include status-banner.html -%}
 
 # Paramètres d'accessibilité
 
@@ -308,3 +312,5 @@ Envoyez vos suggestions à [empowrapp08162025@gmail.com](mailto:empowrapp0816202
 Merci d'utiliser nos paramètres d'accessibilité ! 💚
 
 Ensemble, nous construisons un Web plus accessible pour tous.
+
+{%- include page-feedback.html -%}

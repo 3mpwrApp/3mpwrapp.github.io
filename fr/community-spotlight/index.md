@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Community Spotlight
+lang: fr
 description: Celebrating our community members, advocates, activists, and allies making a difference for disability rights and injured workers across Canada.
 permalink: /fr/community-spotlight/
 ---
 
-<div class="status-banner" role="status" aria-live="polite">
-  ✅ <span class="status-indicator">S</span> tatut de l'application : Bêta fermée - Phase 1 | Tous les systèmes sont opérationnels | Maintenance quotidienne : 2-4am EST</div>
+{%- include status-banner.html -%}
 
 <!-- Innovative Accessibility Controls -->
 <div class="accessibility-toolbar" role="toolbar" aria-label="Page accessibility controls">
@@ -101,9 +101,8 @@ permalink: /fr/community-spotlight/
   <p>ligne de crise 24/7 : <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">Plus de ressources →</a></p>
 </div>
 
-<div class="page-feedback">
-  <p><strong>Cette page a-t-elle été utile ?</strong></p>
-  👍 <a href="/feedback?page=community-spotlight&helpful=yes" class="feedback-btn feedback-yes">Oui, très utile</a> <a href="/feedback?page=community-spotlight&helpful=no" class="feedback-btn feedback-no">👎 A améliorer</a> <a href="/feedback?page=community-spotlight&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggérer des améliorations</a><p class="page-meta">Dernière mise à jour : 25 octobre 2025 | Prochaine révision : Mensuel</p>
-</div>
+
+
+{%- include page-feedback.html -%}
 
 -**💚 Chaque voix compte. Chaque action compte. Vous êtes le mouvement

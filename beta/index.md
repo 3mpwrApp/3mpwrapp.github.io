@@ -4,6 +4,9 @@ title: Beta Test Signup
 description: Sign up to become a dedicated beta tester and help improve 3mpwr App.
 ---
 
+
+{%- include status-banner.html -%}
+
 # Become a 3mpwr Beta Tester!
 
 Help us shape the future of the 3mpwr App by joining our beta tester program.  
@@ -87,3 +90,5 @@ Help us shape the future of the 3mpwr App by joining our beta tester program.
 </script>
 
 *We will contact selected testers by email. Thank you for your interest!*
+
+{%- include page-feedback.html -%}

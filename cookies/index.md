@@ -5,6 +5,9 @@ permalink: /cookies/
 description: Cookie consent, analytics, and data retention practices.
 ---
 
+
+{%- include status-banner.html -%}
+
 # Cookies & Data Retention
 
 Last updated: {{ site.time | date: '%B %d, %Y' }}
@@ -21,3 +24,5 @@ Last updated: {{ site.time | date: '%B %d, %Y' }}
 
 ## Contact
 For questions about cookies or data retention, contact us at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com).
+
+{%- include page-feedback.html -%}

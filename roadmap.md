@@ -6,6 +6,9 @@ permalink: /roadmap/
 lastUpdated: 2025-10-25
 ---
 
+
+{%- include status-banner.html -%}
+
 # 🗺️ 3mpwrApp Roadmap
 
 **Current Status: Phase 1 - Closed Beta Testing**
@@ -841,3 +844,5 @@ This roadmap is updated regularly based on:
 <link rel="stylesheet" href="/assets/css/roadmap.css">
 
 <script src="/assets/js/roadmap.js" defer></script>
+
+{%- include page-feedback.html -%}

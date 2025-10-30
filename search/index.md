@@ -4,6 +4,9 @@ title: Search
 description: Find information quickly with on-page results and a DuckDuckGo fallback, limited to the 3mpwr site.
 ---
 
+
+{%- include status-banner.html -%}
+
 # Search the site
 
 <form id="site-search" action="https://duckduckgo.com/" method="get" role="search" aria-describedby="search-help">
@@ -291,3 +294,5 @@ description: Find information quickly with on-page results and a DuckDuckGo fall
     }
   })();
 </script>
+
+{%- include page-feedback.html -%}

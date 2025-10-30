@@ -1,8 +1,12 @@
 ---
 layout: default
 title: What's New
+description: Track all updates and improvements to 3mpwrApp. Stay informed about new features, bug fixes, and site enhancements.
 permalink: /whats-new/
 ---
+
+
+{%- include status-banner.html -%}
 
 # What's New
 
@@ -86,3 +90,5 @@ Updates older than 30 days are archived here, grouped by month.
   {% endfor %}
   </ul>
 </details>
+
+{%- include page-feedback.html -%}

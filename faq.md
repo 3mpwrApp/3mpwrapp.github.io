@@ -5,9 +5,7 @@ description: Common questions about 3mpwrApp - privacy, features, accessibility,
 permalink: /faq/
 ---
 
-<div class="status-banner" role="status" aria-live="polite">
-  <span class="status-indicator">✅</span> App Status: Phase 1 Beta - Now Accepting Signups | Website live | Daily updates
-</div>
+{%- include status-banner.html -%}
 
 # Frequently Asked Questions (FAQ)
 
@@ -851,13 +849,9 @@ Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
   <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
 </div>
 
-<div class="page-feedback">
-  <p><strong>Was this FAQ helpful?</strong></p>
-  <a href="/feedback?page=faq&helpful=yes" class="feedback-btn feedback-yes">👍 Yes, very helpful</a>
-  <a href="/feedback?page=faq&helpful=no" class="feedback-btn feedback-no">👎 Needs improvement</a>
-  <a href="/feedback?page=faq&type=suggestion" class="feedback-btn feedback-suggest">📝 Suggest improvements</a>
-  <p class="page-meta">Last updated: October 25, 2025 | Next review: December 2025</p>
-</div>
+
+
+{%- include page-feedback.html -%}
 
 **3mpwrApp - Your voice, your power, your data.**
 
