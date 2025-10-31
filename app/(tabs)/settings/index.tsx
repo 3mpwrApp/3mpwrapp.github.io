@@ -12,6 +12,7 @@ import A11yPressable from '../../../components/A11yPressable';
 import AccessibilityToggle from '../../../components/AccessibilityToggle';
 import { GapView } from '../../../components/GapView';
 import LanguageSelector from '../../../components/LanguageSelector';
+import UpdateChecker from '../../../components/UpdateChecker';
 import UserBadgesDisplay from '../../../components/badges/UserBadgesDisplay';
 import * as SettingsLazy from '../../../components/settings';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
@@ -203,6 +204,10 @@ export default function SettingsScreen() {
             <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
           </A11yPressable>
         </Link>
+      </Section>
+      
+      <Section title={t('updates.title', 'App Updates')} subtitle={t('updates.subtitle', 'Check for and install the latest features')} styles={styles}>
+        <UpdateChecker />
       </Section>
       
       <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading notification preferences…</Text></View>}>

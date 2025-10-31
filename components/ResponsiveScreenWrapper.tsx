@@ -13,13 +13,15 @@ import React from 'react';
 import {
     KeyboardAvoidingView,
     Platform,
+    RefreshControl,
     ScrollView,
     StyleSheet,
     View,
-    type ViewStyle,
+    type ViewStyle
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { useRefreshWithUpdates } from '../hooks/useRefreshWithUpdates';
 import { useAppPalette } from '../theme/usePalette';
 
 interface ResponsiveScreenWrapperProps {
@@ -36,6 +38,12 @@ interface ResponsiveScreenWrapperProps {
   padded?: boolean;
   /** Test ID for automation */
   testID?: string;
+  /** Enable pull-to-refresh (default: true) */
+  refreshable?: boolean;
+  /** Custom refresh handler (default: checks for updates) */
+  onRefresh?: () => Promise<void> | void;
+  /** Disable automatic update checking on refresh (default: false) */
+  disableUpdateCheck?: boolean;
 }
 
 const ResponsiveScreenWrapper = React.memo<ResponsiveScreenWrapperProps>(
@@ -47,8 +55,17 @@ const ResponsiveScreenWrapper = React.memo<ResponsiveScreenWrapperProps>(
     noSafeArea = false,
     padded = true,
     testID,
+    refreshable = true,
+    onRefresh,
+    disableUpdateCheck = false,
   }) => {
     const palette = useAppPalette();
+
+    // Setup pull-to-refresh with update checking
+    const { refreshing, refresh } = useRefreshWithUpdates({
+      onRefresh,
+      checkForUpdates: refreshable && !disableUpdateCheck,
+    });
 
     const containerStyle: ViewStyle = {
       flex: 1,
@@ -70,6 +87,16 @@ const ResponsiveScreenWrapper = React.memo<ResponsiveScreenWrapperProps>(
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator
             testID={testID ? `${testID}-scrollview` : undefined}
+            refreshControl={
+              refreshable ? (
+                <RefreshControl
+                  refreshing={refreshing}
+                  onRefresh={refresh}
+                  tintColor={palette.primary}
+                  colors={[palette.primary]}
+                />
+              ) : undefined
+            }
           >
             {children}
           </ScrollView>
