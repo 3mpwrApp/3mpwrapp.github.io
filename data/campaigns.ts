@@ -1,19 +1,10 @@
 import type { Campaign } from "../types/models";
 
 export const campaigns: Campaign[] = [
+  // Example campaign - replace with your real campaigns
   {
-    id: "c1",
-    title: "Empower Youth Education",
-    summary: "Support after-school programs and mentorship.",
-  },
-  {
-    id: "c2",
-    title: "Community Health Outreach",
-    summary: "Increase access to wellness resources.",
-  },
-  {
-    id: "c3",
-    title: "Advocacy Training",
-    summary: "Workshops to train local advocates.",
+    id: "campaign-example",
+    title: "Accessible Transit for All",
+    summary: "Advocating for improved accessibility on public transportation. Join our campaign to push for wheelchair-accessible buses and stations across the city.",
   },
 ];
