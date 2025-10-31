@@ -135,7 +135,7 @@ function ScreenInner() {
   }, [query, allItems, local.myCampaigns, isJoined]);
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { flex: 1 }]}>
       <Text
         ref={titleRef}
         nativeID="campaigns-title"

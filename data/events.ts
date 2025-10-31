@@ -12,7 +12,12 @@ export type Event = {
 };
 
 export const events: Event[] = [
-  // Example event - replace with your real events
+  // Intentionally empty: sample events removed.
+  // System holidays and disability observances are generated at runtime
+  // by `data/holidays-ca.ts` and shown as system items in the Events screen.
+  // If you want to add a sample/example event for reference, uncomment and
+  // adapt the block below.
+  /*
   {
     id: "evt-example",
     title: "Community Accessibility Workshop",
@@ -24,6 +29,5 @@ export const events: Event[] = [
     captions: true,
     stepFree: true,
   },
-  // Note: Canadian holidays and disability observances are automatically generated
-  // See data/holidays-ca.ts for the holiday generation system
+  */
 ];

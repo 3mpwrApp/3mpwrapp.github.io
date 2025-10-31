@@ -1,13 +1,13 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-    FlatList,
-    RefreshControl,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  FlatList,
+  RefreshControl,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
@@ -21,13 +21,13 @@ import { HIT_SLOP_8 } from "../../constants/A11Y";
 import { generateDisabilityObservances } from "../../data/disability-observances";
 import { events as localEvents } from "../../data/events";
 import {
-    generateCanadianHolidays,
-    generateProvincialHolidays,
+  generateCanadianHolidays,
+  generateProvincialHolidays,
 } from "../../data/holidays-ca";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
@@ -193,7 +193,7 @@ export default function EventsScreen() {
 
   return (
     <View
-      style={styles.container}
+      style={[styles.container, { flex: 1 }]}
       accessibilityLabel="Events screen"
       accessible
     >
