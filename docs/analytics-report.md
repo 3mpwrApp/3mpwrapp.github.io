@@ -1,12 +1,12 @@
 # Analytics Event Report
 
-Generated: 2025-10-31T04:26:44.365Z
+Generated: 2025-10-31T18:31:29.709Z
 
 ## Summary
 
-- Registry events: 43
-- Unique events referenced in code: 26
-- Total literal emissions (static scan): 28
+- Registry events: 46
+- Unique events referenced in code: 29
+- Total literal emissions (static scan): 31
 - Missing (used not registered): 0
 - Unused (registered not used): 17
 - Sensitive field occurrences (schema): 2
@@ -54,7 +54,10 @@ Generated: 2025-10-31T04:26:44.365Z
 | evidence | 6 |
 | jurisdiction | 3 |
 | letter_insert_from_trackers | 1 |
+| letter_wizard_delete | 1 |
 | letter_wizard_insert_trackers | 1 |
+| letter_wizard_load | 1 |
+| letter_wizard_save | 1 |
 | notification | 2 |
 | podcast_share | 1 |
 | tracker_add_entry | 1 |
@@ -84,6 +87,9 @@ Generated: 2025-10-31T04:26:44.365Z
 | campaign_join | 1 | OK |
 | campaign_share | 1 | OK |
 | podcast_share | 1 | OK |
+| letter_wizard_save | 1 | OK |
+| letter_wizard_load | 1 | OK |
+| letter_wizard_delete | 1 | OK |
 | letter_wizard_insert_trackers | 1 | OK |
 | notification.delivered | 1 | OK |
 | notification.quiet_suppressed | 1 | OK |
