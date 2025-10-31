@@ -519,8 +519,8 @@ function createStyles(
       minWidth: 44,
     },
     calHeader: {
-      marginTop: 8,
-      marginBottom: 8,
+      marginTop: 6,
+      marginBottom: 4,
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",
@@ -535,24 +535,25 @@ function createStyles(
     weekRow: {
       flexDirection: "row",
       justifyContent: "space-between",
-      marginBottom: 4,
+      marginBottom: 2,
     },
     weekHdr: {
-      width: 36,
+      width: 32,
       textAlign: "center",
       color: palette.text,
       opacity: 0.7,
+      fontSize: 12,
     },
     dayCell: {
-      width: 36,
-      height: 36,
-      borderRadius: 8,
+      width: 32,
+      height: 32,
+      borderRadius: 6,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
       alignItems: "center",
       justifyContent: "center",
     },
-    dayText: { color: palette.text },
+    dayText: { color: palette.text, fontSize: 13 },
   });
 }
 

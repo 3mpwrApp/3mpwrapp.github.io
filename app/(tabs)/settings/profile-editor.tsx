@@ -112,35 +112,45 @@ export default function ProfileEditorScreen() {
   useAnnounceOnMount(t('profile.editor.title', 'Profile Editor'));
   useFocusOnRefOnMount(titleRef);
 
-  // Load profile from Firestore on mount
+  // Load profile from Firestore or AsyncStorage on mount
   useEffect(() => {
-    if (!user?.uid) {
-      setLoading(false);
-      return;
-    }
-
     let mounted = true;
     (async () => {
       try {
-        const userDoc = await getDoc(doc(db, 'users', user.uid));
-        if (!mounted) return;
+        // Try AsyncStorage first (local fallback)
+        const AsyncStorage = require('@react-native-async-storage/async-storage').default;
+        const localProfile = await AsyncStorage.getItem('user:profile:v1');
+        
+        if (localProfile && mounted) {
+          const parsed = JSON.parse(localProfile);
+          setProfile(parsed);
+          setOriginalProfile(parsed);
+        }
+        
+        // If user is authenticated, try to load from Firestore
+        if (user?.uid) {
+          const userDoc = await getDoc(doc(db, 'users', user.uid));
+          if (!mounted) return;
 
-        if (userDoc.exists()) {
-          const data = userDoc.data();
-          const loadedProfile: ProfileState = {
-            role: data.role || undefined,
-            disabilityCategories: data.disabilityCategories || [],
-            accommodations: data.accommodations || [],
-            energyPatterns: data.energyPatterns || {
-              morning: null,
-              afternoon: null,
-              evening: null,
-            },
-            preferredLanguage: data.preferredLanguage || 'en',
-            notificationsEnabled: data.notificationsEnabled !== false,
-          };
-          setProfile(loadedProfile);
-          setOriginalProfile(loadedProfile);
+          if (userDoc.exists()) {
+            const data = userDoc.data();
+            const loadedProfile: ProfileState = {
+              role: data.role || undefined,
+              disabilityCategories: data.disabilityCategories || [],
+              accommodations: data.accommodations || [],
+              energyPatterns: data.energyPatterns || {
+                morning: null,
+                afternoon: null,
+                evening: null,
+              },
+              preferredLanguage: data.preferredLanguage || 'en',
+              notificationsEnabled: data.notificationsEnabled !== false,
+            };
+            setProfile(loadedProfile);
+            setOriginalProfile(loadedProfile);
+            // Save to local storage as backup
+            await AsyncStorage.setItem('user:profile:v1', JSON.stringify(loadedProfile));
+          }
         }
       } catch (err: any) {
         logger.error('[ProfileEditor] Failed to load profile:', err);
@@ -230,11 +240,6 @@ export default function ProfileEditorScreen() {
   };
 
   const handleSave = async () => {
-    if (!user?.uid) {
-      setError('Not authenticated');
-      return;
-    }
-
     // Validation
     if (!profile.role) {
       setError(t('profile.editor.error.roleRequired', 'Please select a role'));
@@ -260,7 +265,18 @@ export default function ProfileEditorScreen() {
         profileUpdatedAt: new Date().toISOString(),
       };
 
-      await updateDoc(doc(db, 'users', user.uid), updateData);
+      // Save to AsyncStorage (local fallback)
+      const AsyncStorage = require('@react-native-async-storage/async-storage').default;
+      await AsyncStorage.setItem('user:profile:v1', JSON.stringify(updateData));
+
+      // If user is authenticated, also save to Firestore
+      if (user?.uid) {
+        try {
+          await updateDoc(doc(db, 'users', user.uid), updateData);
+        } catch (firebaseErr: any) {
+          logger.error('[ProfileEditor] Failed to save to Firestore, but local save succeeded:', firebaseErr);
+        }
+      }
 
       // Update original profile to mark changes as saved
       setOriginalProfile(profile);

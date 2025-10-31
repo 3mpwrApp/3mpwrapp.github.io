@@ -62,7 +62,7 @@ export async function initSentry(dsn?: string) {
         debug: __DEV__, // Enable debug mode in dev
       });
       initialized = true;
-      if (__DEV__) logger.info('Sentry initialized successfully');
+      if (__DEV__) logger.log('Sentry initialized successfully');
     } catch (initError) {
       if (__DEV__) logger.error('Sentry init failed:', initError);
       // Don't set initialized = true if init failed

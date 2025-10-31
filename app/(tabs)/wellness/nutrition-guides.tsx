@@ -22,8 +22,43 @@ export default function NutritionGuides() {
   const filtered = recipes.filter(r => tag==='all' || r.tags.includes(tag));
   const [favs, setFavs] = React.useState<Set<string>>(new Set());
   const FAVS_KEY = 'nutrition.favs.v1';
+  
+  // Hydration tracking
+  const [hydrationGoal, setHydrationGoal] = React.useState(8); // cups/day
+  const [hydrationLog, setHydrationLog] = React.useState<{date: string, cups: number}[]>([]);
+  const HYDRATION_KEY = 'nutrition.hydration.v1';
+  const HYDRATION_GOAL_KEY = 'nutrition.hydrationGoal.v1';
+  const today = new Date().toISOString().split('T')[0];
+  const todayCups = hydrationLog.find(l => l.date === today)?.cups || 0;
+  
   React.useEffect(()=>{ (async()=>{ try { const a = require('@react-native-async-storage/async-storage').default; const raw = await a.getItem(FAVS_KEY); if (raw) setFavs(new Set(JSON.parse(raw))); } catch {} })(); },[]);
+  React.useEffect(()=>{ (async()=>{ try { const a = require('@react-native-async-storage/async-storage').default; const raw = await a.getItem(HYDRATION_KEY); if (raw) setHydrationLog(JSON.parse(raw)); const goalRaw = await a.getItem(HYDRATION_GOAL_KEY); if (goalRaw) setHydrationGoal(parseInt(goalRaw, 10)); } catch {} })(); },[]);
+  
   const saveFavs = async (next: Set<string>) => { setFavs(new Set(next)); try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(FAVS_KEY, JSON.stringify(Array.from(next))); } catch {} };
+  
+  const addWater = async (cups: number) => {
+    const updated = [...hydrationLog];
+    const todayEntry = updated.find(l => l.date === today);
+    if (todayEntry) {
+      todayEntry.cups += cups;
+    } else {
+      updated.push({ date: today, cups });
+    }
+    setHydrationLog(updated);
+    try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(HYDRATION_KEY, JSON.stringify(updated)); } catch {}
+  };
+  
+  const resetToday = async () => {
+    const updated = hydrationLog.filter(l => l.date !== today);
+    setHydrationLog(updated);
+    try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(HYDRATION_KEY, JSON.stringify(updated)); } catch {}
+  };
+  
+  const saveGoal = async (newGoal: number) => {
+    setHydrationGoal(newGoal);
+    try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(HYDRATION_GOAL_KEY, newGoal.toString()); } catch {}
+  };
+  
   const exportFavorites = async () => {
     try {
       const favList = recipes.filter(r => favs.has(r.id));
@@ -48,6 +83,38 @@ export default function NutritionGuides() {
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Diet & Nutrition Guides screen">Diet & Nutrition Guides</Text>
       <DisclaimerBanner type="medical" compact />
+      
+      {/* Hydration Tracker */}
+      <View style={[s.card, { marginTop: 12, backgroundColor: palette.primary + '15' }]}>
+        <Text style={[s.cardTitle, { fontSize: 18 }]}>💧 Daily Hydration</Text>
+        <Text style={s.cardText}>Goal: {hydrationGoal} cups/day</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 8 }}>
+          <View style={{ flex: 1, height: 12, backgroundColor: palette.muted, borderRadius: 6, overflow: 'hidden' }}>
+            <View style={{ width: `${Math.min(100, (todayCups / hydrationGoal) * 100)}%`, height: '100%', backgroundColor: palette.primary }} />
+          </View>
+          <Text style={[s.cardText, { marginLeft: 8, marginBottom: 0 }]}>{todayCups}/{hydrationGoal}</Text>
+        </View>
+        <GapView style={{ flexDirection: 'row', marginTop: 6 }} gap={6}>
+          <A11yPressable onPress={() => addWater(1)} style={s.btn} accessibilityRole="button" accessibilityLabel="Add 1 cup of water" hitSlop={HIT_SLOP_8}>
+            <Text style={s.btnText}>+1 cup</Text>
+          </A11yPressable>
+          <A11yPressable onPress={() => addWater(0.5)} style={s.btn} accessibilityRole="button" accessibilityLabel="Add half cup of water" hitSlop={HIT_SLOP_8}>
+            <Text style={s.btnText}>+½ cup</Text>
+          </A11yPressable>
+          <A11yPressable onPress={resetToday} style={[s.btn, { backgroundColor: palette.error + '20' }]} accessibilityRole="button" accessibilityLabel="Reset today's water intake" hitSlop={HIT_SLOP_8}>
+            <Text style={[s.btnText, { color: palette.error }]}>Reset</Text>
+          </A11yPressable>
+        </GapView>
+        <GapView style={{ flexDirection: 'row', marginTop: 8 }} gap={6}>
+          <Text style={[s.cardText, { marginBottom: 0 }]}>Daily goal:</Text>
+          {[6, 8, 10, 12].map(g => (
+            <A11yPressable key={g} onPress={() => saveGoal(g)} style={[s.btn, hydrationGoal === g && { backgroundColor: palette.primary, borderColor: palette.primary }]} accessibilityRole="button" accessibilityLabel={`Set goal to ${g} cups`} hitSlop={HIT_SLOP_8}>
+              <Text style={[s.btnText, hydrationGoal === g && { color: palette.onPrimary }]}>{g}</Text>
+            </A11yPressable>
+          ))}
+        </GapView>
+      </View>
+      
       <A11yPressable
         onPress={exportFavorites}
         style={[s.btn,{ alignSelf:'flex-start', marginTop: 6 }]}

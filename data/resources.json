@@ -20,7 +20,7 @@
   { "id": "wf-dtc", "title": "Disability Tax Credit", "description": "CRA Disability Tax Credit information.", "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/persons-disabilities/disability-tax-credit.html", "scope": "canada", "category": "work_financial" },
 
   { "id": "wf-ow", "title": "Ontario Works (OW)", "description": "Financial and employment assistance.", "url": "https://www.ontario.ca/page/ontario-works", "scope": "province", "province": "ON", "category": "work_financial" },
-  { "id": "wf-odsp", "title": "ODSP", "description": "Ontario Disability Support Program.", "url": "https://www.ontario.ca/page/ontario-disability-support-program-odsp", "scope": "province", "province": "ON", "category": "work_financial" },
+  { "id": "wf-odsp", "title": "ODSP", "description": "Ontario Disability Support Program.", "url": "https://www.ontario.ca/page/ontario-disability-support-program", "scope": "province", "province": "ON", "category": "work_financial" },
   { "id": "wf-on-esa", "title": "Employment Standards (ON)", "description": "Guide to the Employment Standards Act.", "url": "https://www.ontario.ca/document/your-guide-employment-standards-act-0", "scope": "province", "province": "ON", "category": "work_financial" },
   { "id": "wf-on-ohrc", "title": "Human Rights (ON)", "description": "Ontario Human Rights Commission.", "url": "https://www.ohrc.on.ca/", "scope": "province", "province": "ON", "category": "work_financial" },
   { "id": "wf-on-aoda", "title": "Accessibility (ON)", "description": "Accessibility for Ontarians with Disabilities Act (AODA).", "url": "https://www.ontario.ca/page/accessibility-laws", "scope": "province", "province": "ON", "category": "work_financial" },
