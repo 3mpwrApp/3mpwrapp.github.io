@@ -9,59 +9,129 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-10-31
 
-Curated 11 items from disability, accessibility, and social policy sources.
+Curated 26 items from disability, accessibility, and social policy sources.
 
-## 1. Crate & Barrel recalls 3K chairs in Canada after multiple U.S. injuries
-Crate & Barrel has sold 3,175 units of the affected products in Canada and 54,932 in the United States, Health Canada said in a recall notice.
-📍 [Source](https://globalnews.ca/news/11504425/crate-and-barrel-recalls-dining-chairs/)
-**Score:** 21.50
+## 1. Vaccine records aren't up to date for more than half of Ottawa, Toronto students assessed: public health
+Over half of Toronto and Ottawa students lack up-to-date vaccine records, exposing flaws in Ontario’s outdated reporting system as measles threatens Canada’s elimination status.
+📍 [Source](https://globalnews.ca/news/11504783/ont-vaccine-suspensions/)
+**Score:** 27.50
 
-## 2. Canada's economy shrank by 0.3% in August
-<img src='https://i.cbc.ca/ais/76b3b2f4-63c2-431b-a5e1-74d9bd2830b9,1761914484086/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C396%2C7597%2C4273%29%3BResize%3D%28620%29' alt='A worker walks in front of a large plant.' width='620' height='349' title='The smelter of Glencore subsidiary Canadian Electrolytic Zinc Limited is seen in Valleyfield, Quebec on March 17, 2025.'/><p>Canada's economy shrank in August against widespread expectations of no growth, Statistics Canada data showed on Friday, but an advanced estimate pointed out the economy might escape a recession in the third quarter.</p>
-📍 [Source](https://www.cbc.ca/news/business/canada-gdp-august-9.6961337?cmp=rss)
-**Score:** 21.00
+## 2. How Canadian sport can begin to climb out of financial crisis
+<img src='https://i.cbc.ca/ais/2a7b089b-bdc5-4a67-872a-c926a63a569d,1761925069692/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C92%2C4000%2C2250%29%3BResize%3D%28620%29' alt='Three Canadian male speed skaters.' width='620' height='349' title='Canada's Connor Howe, front to back, Antoine Gelinas-Beaulieu, and Hayden Mayeur skate during the men's team pursuit event at the ISU World Speed Skating Championships in Calgary, Alta., Friday, Feb. 16, 2024.THE CANADIAN PRESS/Jeff McIntosh'/><p></p>
+📍 [Source](https://www.cbc.ca/sports/olympics/how-canadian-sports-can-begin-to-climb-out-of-financial-crisis-9.6959619?cmp=rss)
+**Score:** 21.80
 
-## 3. Supreme Court rules against mandatory minimum child pornography sentences
-The decision affirms a ruling of the Quebec Court of Appeal, which said the mandatory minimum sentences violated the Charter guarantee against cruel or unusual punishment.
-📍 [Source](https://globalnews.ca/news/11504673/supreme-court-mandatory-minimum-child-pornography-sentences/)
-**Score:** 17.50
+## 3. Is Alberta headed for a general strike?
+<img src='https://i.cbc.ca/ais/7e1c3502-7755-4711-bd9a-250fc9df7f20,1761857047485/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C346%2C6636%2C3732%29%3BResize%3D%28620%29' alt='Teachers and supporters take part in a rally on World Teachers' Day in Edmonton on Sunday October 5, 2025. Alberta Teachers Association members voted 89.5% to reject the latest contract offer from the province of Alberta. THE CANADIAN PRESS/Jason Fra' width='620' height='349' title='Teachers and supporters take part in a rally on World Teachers' Day in Edmonton on Sunday October 5, 2025. Alberta Teachers Association members voted 89.5% to reject the latest contract offer from the province of Alberta. THE CANADIAN PRESS/Jason Franson'/><p>Organized labour in Alberta sets the wheels in motion for a potential general strike after Danielle Smith’s UCP government forced Alberta teachers back to work using the notwithstanding clause.</p>
+📍 [Source](https://www.cbc.ca/radio/frontburner/is-alberta-headed-for-a-general-strike-9.6960445?cmp=rss)
+**Score:** 15.00
 
-## 4. At Issue | Canada-U.S. trade negotiations go off the rails
-<img src='https://i.cbc.ca/ais/67911f4d-03a0-44df-a0f4-ce26c6b6a420,1761860029512/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A man in a suit' width='620' height='349' title='Prime Minister Mark Carney is seen during a bilateral meeting with South Korean President Lee Jae Myung in Gyeongju, South Korea, Thursday Oct. 30, 2025. '/><p>At Issue this week: Canada-U.S. trade negotiations go off the rails after an anti-tariff ad angers Trump. Parties accuse each other of trying to force an election over the budget. And was Alberta justified in using the notwithstanding clause to get teachers back to work?</p>
-📍 [Source](https://www.cbc.ca/player/play/9.6961043?cmp=rss)
-**Score:** 14.00
+## 4. Boy in care of Burlington, Ont., couple 'would be alive' if taken to hospital as urged, psychiatrist testifies
+<img src='https://i.cbc.ca/ais/0ad4f86f-37de-4c45-8485-a48affe584e6,1761930276026/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C3750%2C2109%29%3BResize%3D%28620%29' alt='A courtroom sketch of three people seated wearing lawyer robes.' width='620' height='349' title='Brandy Cooney's lawyer is Kim Edward, left. Becky Hamber's lawyers are Monte MacGregor, centre, and Nabeel Sheiban. Cooney and Hamber have pleaded not guilty at their murder trial in Milton, Ont.'/><p>The psychiatrist for a 12-year-old found dead in 2022 has testified at the weeks-long murder trial for two Burlington, Ont., women who were aiming to adopt him. “If the family brought him to the emergency department, we wouldn’t be going through this and the boy would be alive,” Dr. Shelinderjit Dhaliwal told Superior Court in Milton.</p>
+📍 [Source](https://www.cbc.ca/news/canada/hamilton/cooney-hamber-trial-9.6961836?cmp=rss)
+**Score:** 11.70
 
-## 5. 13 Canadian books to read with your kids this Halloween
-<img src='https://i.cbc.ca/ais/f8a01d64-7daf-4572-a262-c58a703923ca,1761672238833/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1085%2C610%29%3BResize%3D%28620%29' alt='Haunted Canada Graphic Novel, Volume 2 by Joel A. Sutherland. Illustrated book cover of a man's head with glowing white eyes overlooking a snowy forest at night. Author headshot.' width='620' height='349' title='Haunted Canada Graphic Novel, Volume 2 is the second collection of illustrated tales by Joel A. Sutherland'/><p>Whether you're looking for a not-so-scary picture book to read with your kids, or an eerie mystery for your avid teen reader, CBC Books has put together a list of our favourite kids' and YA books this Halloween. </p>
-📍 [Source](https://www.cbc.ca/books/kids/13-canadian-books-to-read-with-your-kids-this-halloween-9.6956909?cmp=rss)
-**Score:** 14.00
-
-## 6. Economy shrank slightly in August with GDP falling 0.3%, StatCan says
-Canada's gross domestic product contracted slightly in August after an increase of 0.2 per cent in July, according to Statistics Canada.
-📍 [Source](https://globalnews.ca/news/11504318/canada-gross-domestic-product-august-2025/)
-**Score:** 10.50
-
-## 7. Carney and Xi agree to tackle 'irritants' in Canada-China relationship
-<img src='https://i.cbc.ca/ais/fa5f0d96-32a2-43c4-9fce-1cc54e0916e5,1761911918365/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Carney calls meeting with Xi a 'turning point' in Canada-China relations' width='620' height='349' title='Carney calls meeting with Xi a 'turning point' in Canada-China relations'/><p></p>
-📍 [Source](https://www.cbc.ca/news/world/canada-china-carney-trade-talks-9.6961276?cmp=rss)
-**Score:** 9.50
-
-## 8. Conservative, NDP caucuses weighing a budget vote that could trigger an election: sources
-<img src='https://i.cbc.ca/ais/db26cde7-257f-42c3-be48-16dbff75ed40,1761856795184/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C307%2C7314%2C4114%29%3BResize%3D%28620%29' alt='A man in a suit standing in the House of Commons.' width='620' height='349' title='Leader of the Conservative Party Pierre Poilievre rises in the House of Commons during Question Period on Parliament Hill in Ottawa, on Tuesday, Oct. 28, 2025.'/><p>The Conservative and NDP caucuses are grappling with what to do about the upcoming federal budget and whether they want to be part of an effort to trigger an election by voting it down, multiple sources told CBC News.</p>
-📍 [Source](https://www.cbc.ca/news/politics/conservative-ndp-budget-election-vote-9.6960615?cmp=rss)
+## 5. Air ambulance takes average of nearly 4 hours to reach patients in northern Ontario, inquest told
+<img src='https://i.cbc.ca/ais/d7b094f0-391a-4fe4-8067-557f486400e1,1761926156249/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C288%2C5533%2C3112%29%3BResize%3D%28620%29' alt='A small plane painted orange is parked on a runway' width='620' height='349' title='Ornge uses Pilatus PC-12 aircraft such as this one in northern Ontario.'/><p>Representatives of the Ontario's air ambulance operation, Ornge, told a coroner's inquest that it’s still impossible to meet the Ministry of Health’s timelines for transportation of critically ill patients in the north, although response times have improved since 2021.</p>
+📍 [Source](https://www.cbc.ca/news/canada/sudbury/indigenous-air-ambulance-emergency-critically-ill-blastomycosis-inquest-9.6960598?cmp=rss)
 **Score:** 12.00
 
-## 9. Ford government amalgamating Ontario's conservation authorities
-The minister of the environment, conservation and parks announced the changes Friday morning, along with the creation of the Ontario Provincial Conservation Authority.
-📍 [Source](https://globalnews.ca/news/11504619/ford-government-conservation-authority-changes/)
-**Score:** 10.50
+## 6. Manitoba Government Receives Report on Future of Technology, Innovation and Productivity
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71303)
+**Score:** 12.00
 
-## 10. General strike in Alberta possible after back-to-work legislation
-📍 [Source](https://rabble.ca/labour/general-strike-in-alberta-possible-after-back-to-work-legislation/)
+## 7. Trump's ‘Golden Dome' is not something Canada should be a part of
+📍 [Source](https://rabble.ca/columnists/trumps-golden-dome-is-not-something-canada-should-be-a-part-of/)
+**Score:** 9.50
+
+## 8. Rob Ashton: Canada needs bold action for workers now
+📍 [Source](https://rabble.ca/podcast/rob-ashton-canada-needs-bold-action-for-workers-now/)
+**Score:** 9.50
+
+## 9. Only Unionized Amazon Warehouse in Canada Starts Negotiating
+Both sides have unresolved legal challenges before courts and labour relations tribunals.
+📍 [Source](https://thetyee.ca/News/2025/10/31/Unionized-Amazon-Warehouse-Negotiating-Collective-Agreement/)
+**Score:** 9.50
+
+## 10. Supreme Court striking down minimum sentences for child pornography called 'disgusting' by Conservatives
+<img src='https://i.cbc.ca/ais/2fbcc6f5-2bfb-477b-9092-6215a236600d,1761942655418/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C433%2C8318%2C4678%29%3BResize%3D%28620%29' alt='Leaves in front of the Supreme Court ' width='620' height='349' title='People take a break on the front lawn of the Supreme Court of Canada in Ottawa on Monday, Oct. 6, 2025. '/><p>In a divisive decision, the country’s top court struck down the mandatory minimum jail sentences for accessing or possessing child pornography — deeming them unconstitutional. </p>
+📍 [Source](https://www.cbc.ca/news/politics/supreme-court-child-pornography-9.6961728?cmp=rss)
+**Score:** 9.50
+
+## 11. Saint John police chief discusses future of force amid harassment claims
+Amidst questions around the leadership at Saint John Police Force and allegations of harassment, Chief Robert Bruce said he intends to continue in his role.
+📍 [Source](https://globalnews.ca/news/11504600/saint-john-police-chief-leadership-questions/)
 **Score:** 7.50
 
-## 11. A photographer captured a Windsor, Ont., woman in the 'roughest time.' The family can't get the pics deleted
-<img src='https://i.cbc.ca/ais/3f870ca2-3b57-490a-a212-ddfdfe5be405,1761766514588/full/max/0/default.jpg?im=Crop%2Crect%3D%2850%2C0%2C1844%2C1037%29%3BResize%3D%28620%29' alt='Two people are sitting and looking straight ahead.' width='620' height='349' title='Devin, left, and Kathleen, right, Newman say they want the photo of Alicia taken down, but feel like they're out of options.'/><p>Loved ones of a Windsor woman want photos taken of her on the city’s streets, during an active drug addiction, removed from social media. The woman in the photos is Alicia Newman and she died several years ago.</p>
-📍 [Source](https://www.cbc.ca/news/canada/windsor/photo-windsor-street-photography-ethics-9.6955403?cmp=rss)
-**Score:** 1.20
+## 12. Trump says Carney ‘apologized' for TV ad that scuttled U.S. trade talks
+Trump said 'no' when asked if the U.S. will resume trade negotiations, but praised Carney and said the two still have a 'good relationship.'
+📍 [Source](https://globalnews.ca/news/11504828/donald-trump-tariffs-tv-ad-carney-apologized/)
+**Score:** 7.50
+
+## 13. Police Presence at Health Sciences Centre 24-7 to Protect Health-Care Workers and Patients
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71304)
+**Score:** 10.00
+
+## 14. Judge suggests better addiction supports after Winnipeg overdose death
+A Winnipeg judge is recommending improved addiction supports after examining the overdose death of a man living in a tent who had faced barriers in accessing treatment.
+📍 [Source](https://globalnews.ca/news/11505141/judge-addiction-supports-winnipeg-overdose/)
+**Score:** 8.00
+
+## 15. Vaccine records aren't up-to-date for more than half of Ottawa, Toronto students assessed: public health
+<img src='https://i.cbc.ca/ais/5e35790b-762b-4268-b8fc-0a6f45e6c35d,1761933724175/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C93%2C1783%2C1002%29%3BResize%3D%28620%29' alt='A nurse provides a band aid after delivering a COVID-19 vaccination to a child during the first week of immunization for children between 6 months and 4 years old at a Vancouver Coastal Health clinic in Vancouver, British Columbia on Thursday, August' width='620' height='349' title=''/><p>Public health records for Ottawa and Toronto schools show that among the cohorts assessed this year, more than half of the students did not have up-to-date immunization records, which experts say exposes an antiquated system that's unhelpful in the race to boost vaccination rates.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/toronto-ottawa-student-vaccine-records-not-up-to-date-9.6962023?cmp=rss)
+**Score:** 10.00
+
+## 16. BC Confesses Concerns about a Pipeline Property Tax Cut
+After a Tyee report, the legislature grapples with a change that could cost homeowners.
+📍 [Source](https://thetyee.ca/News/2025/10/31/BC-Confesses-Concerns-Pipeline-Property-Tax-Cut/)
+**Score:** 9.00
+
+## 17. Alberta Teachers’ Association might take the government to court. Here’s what we know
+<img src='https://i.cbc.ca/ais/1.7630257,1757546918000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C107%2C1224%2C688%29%3BResize%3D%28620%29' alt='A person behind a podium.' width='620' height='349' title='Alberta Teachers' Association president Jason Schilling made the strike announcement on Wednesday.'/><p>What avenues for legal recourse actually exist? CBC spoke to lawyers and civil liberty associations to get a sense of whether the back-to-work order could be challenged in court.</p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-teachers-association-notwithstanding-clause-9.6961007?cmp=rss)
+**Score:** 8.50
+
+## 18. Photos: Electronic powerhouses Kaytranada and Justice co-headline Rogers Arena
+The DJ and the French duo combined for a memorable show.
+📍 [Source](https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena)
+**Score:** 5.00
+
+## 19. B.C. grape grower left with unsold fruit as wineries allowed to import U.S. grapes
+<img src='https://i.cbc.ca/ais/13ce9de6-e13a-4bfc-aeb5-eeb0def36c92,1761877033399/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C87%2C3078%2C1731%29%3BResize%3D%28620%29' alt='A farmer inspects red wine grapes hanging on the vines in his vineyard. The grapes look like they have started to spoil' width='620' height='349' title='Grape grower Amarjeet Gill is struggling to find a buyer for his nearly 100 tonnes of red wine grapes at his vineyard near Osoyoos, B.C. '/><p>Some farmers say a provincial program that allows wineries to import grapes from the United States is crowding the market, leaving them with fruit they can't sell.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/b-c-wine-grape-growers-winery-2024-winter-kill-crop-loss-u-s-imports-9.6961112?cmp=rss)
+**Score:** 7.50
+
+## 20. From escaping war to building businesses: How some Ukrainians are investing in their future in Manitoba
+<img src='https://i.cbc.ca/ais/434229fe-a366-4173-bfb3-df3d1e59b672,1761836080388/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C31%2C5712%2C3213%29%3BResize%3D%28620%29' alt='Woman with dark red hair stands between two clothing racks. ' width='620' height='349' title='Olha Zolotkova arrived in Winnipeg with her daughter in May 2022, just months after Russia's mass invasion of Ukraine. Now she's working as an educational assistant and has launched her own business. '/><p>When Olha Zolotkova arrived in Winnipeg just months after Russia’s mass invasion of Ukraine in 2022, she didn’t speak English. Now, she’s building her own business.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/ukraine-war-business-winnipeg-9.6959965?cmp=rss)
+**Score:** 7.10
+
+## 21. Only 10% of Canadian boomers say they'll travel to U.S. this winter: survey
+The survey found most Canadians are going to be skipping U.S. travel this winter, with only 26 per cent saying they will head south this winter
+📍 [Source](https://globalnews.ca/news/11504753/canadian-boomers-snowbirds-travel-us-winter/)
+**Score:** 5.50
+
+## 22. What to know about Cowichan land title case in B.C. and push for ‘clarity'
+A landmark court ruling has ignited fierce debate and uncertainty over the future of private property rights in the province and across the country.
+📍 [Source](https://globalnews.ca/news/11502751/cowichan-land-title-case-bc-richmond-explainer/)
+**Score:** 4.00
+
+## 23. Upset with new doctor law, students at all four Quebec medical schools vote to strike
+Students at Quebec's four medical schools have voted for an unlimited general strike mandate over a new provincial law that ties part of doctors' remuneration to performance.
+📍 [Source](https://globalnews.ca/news/11504732/que-doctors-law/)
+**Score:** 5.50
+
+## 24. Reviewing Muslim representation in Canadian media
+📍 [Source](https://rabble.ca/podcast/reviewing-muslim-representation-in-canadian-media/)
+**Score:** 4.50
+
+## 25. Saskatoon police tactical team officer fired after hot tub party now charged with assault
+<img src='https://i.cbc.ca/ais/ca48a187-8469-4005-8e82-f8cdf1fd10a6,1761933672133/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C523%2C294%29%3BResize%3D%28620%29' alt='Former Saskatoon police officer Dylan Kemp' width='620' height='349' title='Former Saskatoon police officer Dylan Kemp'/><p>A former Saskatoon police officer, fired in September with two other officers after an off-duty hot tub party in his backyard, is now charged with assault. Dylan Kemp is appealing his firing.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatoon/police-dylan-kemp-quiet-fight-hot-tub-party-assault-charge-9.6962058?cmp=rss)
+**Score:** 4.50
+
+## 26. Measles Update #42
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71302)
+**Score:** 1.00
 
