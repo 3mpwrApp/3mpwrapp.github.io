@@ -93,6 +93,9 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
   [E.JURISDICTION_FORM_HELPER_USED]: { situationType: { type: 'string', required: true } },
   [E.ASSISTANT_DISABILITY_WIZARD_CTA]: { step: { type: 'string', required: true } },
   [E.LETTER_WIZARD_INSERT_TRACKERS]: { letterType: { type: 'string', required: true } },
+  [E.LETTER_WIZARD_SAVE]: { letterType: { type: 'string', required: true }, isUpdate: { type: 'boolean', required: true } },
+  [E.LETTER_WIZARD_LOAD]: { letterType: { type: 'string', required: true } },
+  [E.LETTER_WIZARD_DELETE]: {},
 };
 
 export interface ValidationResult {

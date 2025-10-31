@@ -41,5 +41,8 @@
   "JURISDICTION_DEADLINE_CALCULATED": "jurisdiction.deadline_calculated",
   "JURISDICTION_FORM_HELPER_USED": "jurisdiction.form_helper_used",
   "ASSISTANT_DISABILITY_WIZARD_CTA": "assistant.disability_wizard_cta",
-  "LETTER_WIZARD_INSERT_TRACKERS": "letter_wizard_insert_trackers"
+  "LETTER_WIZARD_INSERT_TRACKERS": "letter_wizard_insert_trackers",
+  "LETTER_WIZARD_SAVE": "letter_wizard_save",
+  "LETTER_WIZARD_LOAD": "letter_wizard_load",
+  "LETTER_WIZARD_DELETE": "letter_wizard_delete"
 }
