@@ -37,9 +37,35 @@ export default function DisabilityWizard({
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
-  
-  const { suggestions, loading } = useDisabilityWizard();
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
+  
+  // Always call hooks - wrap wizard data loading in try-catch
+  let suggestions = [];
+  let loading = false;
+  let hasError = false;
+  
+  try {
+    const wizardData = useDisabilityWizard();
+    suggestions = wizardData.suggestions;
+    loading = wizardData.loading;
+  } catch (e) {
+    console.error('[DisabilityWizard] Error loading wizard:', e);
+    hasError = true;
+  }
+  
+  // Show error fallback if wizard failed to load
+  if (hasError) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          {title || t('wizard.title', 'Disability Wizard')}
+        </Text>
+        <Text style={styles.subtitle}>
+          {t('wizard.error', 'Unable to load personalized suggestions right now')}
+        </Text>
+      </View>
+    );
+  }
   
   const topSuggestions = suggestions.slice(0, maxSuggestions);
   const nextSteps = selectedTool ? findNextSteps(selectedTool) : [];
