@@ -11,7 +11,8 @@
     "userInterfaceStyle": "automatic",
     "jsEngine": "hermes",
     "updates": {
-      "checkAutomatically": "ON_ERROR_RECOVERY",
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0,
       "url": "https://u.expo.dev/6dd0264f-d796-4f63-9590-f82284a48354"
     },
     "runtimeVersion": {
