@@ -864,6 +864,7 @@ export default function LetterWizardContent() {
 
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [formData, selectedLetterType, DRAFT_KEY]);
 
   // Get current template
