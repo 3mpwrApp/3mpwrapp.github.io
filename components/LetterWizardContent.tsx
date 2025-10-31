@@ -40,6 +40,100 @@ import LetterActionsBar from "./letters/LetterActionsBar";
 
 const { trackEvent } = require("../services/analyticsClient");
 
+// AsyncStorage for saved letters
+let AsyncStorage: any;
+try {
+  AsyncStorage = require("@react-native-async-storage/async-storage").default;
+} catch {}
+
+// ============================================================================
+// Saved Letters Storage
+// ============================================================================
+
+const SAVED_LETTERS_KEY = 'letterWizard:savedLetters:v1';
+
+export interface SavedLetter {
+  id: string; // UUID
+  letterType: LetterType;
+  title: string; // User-provided title
+  formData: Record<string, string>;
+  preview: string;
+  savedAt: string; // ISO date
+  updatedAt?: string; // ISO date
+}
+
+/**
+ * Save a letter to AsyncStorage
+ */
+export async function saveLetter(letter: Omit<SavedLetter, 'id' | 'savedAt'>): Promise<SavedLetter> {
+  try {
+    const id = `letter_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    const savedLetter: SavedLetter = {
+      ...letter,
+      id,
+      savedAt: new Date().toISOString(),
+    };
+
+    const raw = await AsyncStorage?.getItem?.(SAVED_LETTERS_KEY);
+    const existing: SavedLetter[] = raw ? JSON.parse(raw) : [];
+    existing.push(savedLetter);
+
+    await AsyncStorage?.setItem?.(SAVED_LETTERS_KEY, JSON.stringify(existing));
+    return savedLetter;
+  } catch (error) {
+    console.error('[saveLetter] Failed to save letter:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get all saved letters
+ */
+export async function getSavedLetters(): Promise<SavedLetter[]> {
+  try {
+    const raw = await AsyncStorage?.getItem?.(SAVED_LETTERS_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Delete a saved letter by ID
+ */
+export async function deleteSavedLetter(id: string): Promise<void> {
+  try {
+    const raw = await AsyncStorage?.getItem?.(SAVED_LETTERS_KEY);
+    const existing: SavedLetter[] = raw ? JSON.parse(raw) : [];
+    const filtered = existing.filter(l => l.id !== id);
+    await AsyncStorage?.setItem?.(SAVED_LETTERS_KEY, JSON.stringify(filtered));
+  } catch (error) {
+    console.error('[deleteSavedLetter] Failed to delete letter:', error);
+  }
+}
+
+/**
+ * Update a saved letter
+ */
+export async function updateSavedLetter(id: string, updates: Partial<SavedLetter>): Promise<void> {
+  try {
+    const raw = await AsyncStorage?.getItem?.(SAVED_LETTERS_KEY);
+    const existing: SavedLetter[] = raw ? JSON.parse(raw) : [];
+    const index = existing.findIndex(l => l.id === id);
+    
+    if (index !== -1) {
+      existing[index] = {
+        ...existing[index],
+        ...updates,
+        updatedAt: new Date().toISOString(),
+      };
+      await AsyncStorage?.setItem?.(SAVED_LETTERS_KEY, JSON.stringify(existing));
+    }
+  } catch (error) {
+    console.error('[updateSavedLetter] Failed to update letter:', error);
+  }
+}
+
 // ============================================================================
 // Letter Types & Situations
 // ============================================================================
@@ -742,31 +836,81 @@ export default function LetterWizardContent() {
   useFocusOnRefOnMount(titleRef);
   
   // Wizard state
-  const [step, setStep] = React.useState<'situation' | 'letter_type' | 'form' | 'preview'>('situation');
+  const [step, setStep] = React.useState<'situation' | 'letter_type' | 'form' | 'preview' | 'saved_list'>('situation');
   const [selectedSituation, setSelectedSituation] = React.useState<string | null>(null);
   const [selectedLetterType, setSelectedLetterType] = React.useState<LetterType | null>(null);
   const [formData, setFormData] = React.useState<Record<string, string>>({});
   const [showInfo, setShowInfo] = React.useState(false);
+  const [savedLetters, setSavedLetters] = React.useState<SavedLetter[]>([]);
+  const [saveTitle, setSaveTitle] = React.useState('');
+  const [loadedLetterId, setLoadedLetterId] = React.useState<string | null>(null);
+  const [showValidation, setShowValidation] = React.useState(false);
+
+  // Auto-save draft key
+  const DRAFT_KEY = `letterWizard:draft:${selectedLetterType || 'none'}`;
+
+  // Auto-save draft whenever form data changes
+  React.useEffect(() => {
+    if (selectedLetterType && Object.keys(formData).length > 0) {
+      const timer = setTimeout(async () => {
+        try {
+          await AsyncStorage?.setItem?.(DRAFT_KEY, JSON.stringify({
+            letterType: selectedLetterType,
+            formData,
+            timestamp: Date.now(),
+          }));
+        } catch {}
+      }, 1000); // Debounce 1 second
+
+      return () => clearTimeout(timer);
+    }
+  }, [formData, selectedLetterType, DRAFT_KEY]);
 
   // Get current template
   const currentTemplate = selectedLetterType ? LETTER_TEMPLATES[selectedLetterType] : null;
 
-  // Initialize form data with profile defaults
+  // Load saved letters on mount
   React.useEffect(() => {
-    if (currentTemplate && Object.keys(formData).length === 0) {
-      const initialData: Record<string, string> = {};
-      currentTemplate.fields.forEach(field => {
-        if (field.defaultFromProfile === 'name' && profile.name) {
-          initialData[field.key] = profile.name;
-        } else if (field.defaultFromProfile === 'contact' && profile.contact) {
-          initialData[field.key] = profile.contact;
-        } else {
-          initialData[field.key] = '';
-        }
-      });
-      setFormData(initialData);
+    (async () => {
+      const letters = await getSavedLetters();
+      setSavedLetters(letters.sort((a, b) => 
+        new Date(b.savedAt).getTime() - new Date(a.savedAt).getTime()
+      ));
+    })();
+  }, []);
+
+  // Initialize form data with profile defaults or load draft
+  React.useEffect(() => {
+    if (currentTemplate && Object.keys(formData).length === 0 && !loadedLetterId) {
+      (async () => {
+        // Try to load draft first
+        try {
+          const draftRaw = await AsyncStorage?.getItem?.(DRAFT_KEY);
+          if (draftRaw) {
+            const draft = JSON.parse(draftRaw);
+            // Only load if draft is less than 7 days old
+            if (draft.timestamp && Date.now() - draft.timestamp < 7 * 24 * 60 * 60 * 1000) {
+              setFormData(draft.formData || {});
+              return;
+            }
+          }
+        } catch {}
+
+        // Otherwise initialize with profile defaults
+        const initialData: Record<string, string> = {};
+        currentTemplate.fields.forEach(field => {
+          if (field.defaultFromProfile === 'name' && profile.name) {
+            initialData[field.key] = profile.name;
+          } else if (field.defaultFromProfile === 'contact' && profile.contact) {
+            initialData[field.key] = profile.contact;
+          } else {
+            initialData[field.key] = '';
+          }
+        });
+        setFormData(initialData);
+      })();
     }
-  }, [currentTemplate]);
+  }, [currentTemplate, DRAFT_KEY, loadedLetterId]);
 
   // Generate preview
   const preview = React.useMemo(() => {
@@ -783,6 +927,123 @@ export default function LetterWizardContent() {
     setSelectedSituation(null);
     setSelectedLetterType(null);
     setFormData({});
+    setLoadedLetterId(null);
+    setSaveTitle('');
+  };
+
+  const saveCurrentLetter = async () => {
+    if (!currentTemplate) return;
+    
+    try {
+      // Prompt for title if not editing existing letter
+      if (!saveTitle && !loadedLetterId) {
+        // Use simple Alert.alert with text input workaround (Alert.prompt is iOS-only)
+        const defaultTitle = `${currentTemplate.type}_${new Date().toLocaleDateString()}`;
+        
+        // For now, use a default title and allow editing later
+        // In future, could add a TextInput modal for cross-platform title entry
+        Alert.alert(
+          t('letterWizard.saveTitle', 'Save Letter'),
+          t('letterWizard.saveTitleAuto', `This letter will be saved as: "${defaultTitle}"`),
+          [
+            { text: t('common.cancel', 'Cancel'), style: 'cancel' },
+            {
+              text: t('common.save', 'Save'),
+              onPress: async () => {
+                await performSave(defaultTitle);
+              },
+            },
+          ]
+        );
+        return;
+      }
+      
+      await performSave(saveTitle || `${currentTemplate.type}_${Date.now()}`);
+    } catch {
+      Alert.alert(
+        t('letterWizard.saveFailed', 'Save Failed'),
+        t('letterWizard.saveFailedMsg', 'Could not save letter. Please try again.')
+      );
+    }
+  };
+
+  const performSave = async (title: string) => {
+    if (!currentTemplate) return;
+    
+    try {
+      if (loadedLetterId) {
+        // Update existing letter
+        await updateSavedLetter(loadedLetterId, {
+          title,
+          formData,
+          preview,
+        });
+        Alert.alert(
+          t('letterWizard.updated', 'Updated'),
+          t('letterWizard.updatedMsg', 'Your letter has been updated.')
+        );
+      } else {
+        // Save new letter
+        const saved = await saveLetter({
+          letterType: currentTemplate.type,
+          title,
+          formData,
+          preview,
+        });
+        setLoadedLetterId(saved.id);
+        setSaveTitle(title);
+        Alert.alert(
+          t('letterWizard.saved', 'Saved'),
+          t('letterWizard.savedMsg', 'Your letter has been saved.')
+        );
+      }
+      
+      // Refresh saved letters list
+      const letters = await getSavedLetters();
+      setSavedLetters(letters.sort((a, b) => 
+        new Date(b.savedAt).getTime() - new Date(a.savedAt).getTime()
+      ));
+      
+      trackEvent('letter_wizard_save', { letterType: currentTemplate.type, isUpdate: !!loadedLetterId });
+    } catch (error) {
+      console.error('[saveCurrentLetter] Error:', error);
+      throw error;
+    }
+  };
+
+  const loadSavedLetter = (letter: SavedLetter) => {
+    setSelectedLetterType(letter.letterType);
+    setFormData(letter.formData);
+    setLoadedLetterId(letter.id);
+    setSaveTitle(letter.title);
+    setStep('preview');
+    trackEvent('letter_wizard_load', { letterType: letter.letterType });
+  };
+
+  const deleteLetter = async (id: string) => {
+    Alert.alert(
+      t('letterWizard.deleteTitle', 'Delete Letter'),
+      t('letterWizard.deleteMsg', 'Are you sure you want to delete this letter?'),
+      [
+        { text: t('common.cancel', 'Cancel'), style: 'cancel' },
+        {
+          text: t('common.delete', 'Delete'),
+          style: 'destructive',
+          onPress: async () => {
+            await deleteSavedLetter(id);
+            const letters = await getSavedLetters();
+            setSavedLetters(letters.sort((a, b) => 
+              new Date(b.savedAt).getTime() - new Date(a.savedAt).getTime()
+            ));
+            if (loadedLetterId === id) {
+              setLoadedLetterId(null);
+              setSaveTitle('');
+            }
+            trackEvent('letter_wizard_delete', {});
+          },
+        },
+      ]
+    );
   };
 
   const selectSituation = (situationId: string) => {
@@ -1008,6 +1269,10 @@ export default function LetterWizardContent() {
   const renderFormStep = () => {
     if (!currentTemplate) return null;
 
+    // Check if all required fields are filled
+    const emptyFields = currentTemplate.fields.filter(f => !formData[f.key]?.trim());
+    const isFormComplete = emptyFields.length === 0;
+
     return (
       <View>
         <Text style={s.stepTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
@@ -1017,23 +1282,49 @@ export default function LetterWizardContent() {
           {t(currentTemplate.titleKey, currentTemplate.titleKey)}
         </Text>
         
-        {currentTemplate.fields.map(field => (
-          <View key={field.key} style={s.fieldContainer}>
-            <Text style={s.fieldLabel} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-              {t(field.labelKey, field.labelKey)}
+        {showValidation && !isFormComplete && (
+          <View style={s.validationWarning}>
+            <Text style={s.validationText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              ⚠️ {t('letterWizard.validationWarning', `${emptyFields.length} ${emptyFields.length === 1 ? 'field is' : 'fields are'} empty`)}
             </Text>
-            <TextInput
-              style={[s.input, field.multiline && s.inputMultiline]}
-              placeholder={t(field.placeholderKey, field.placeholderKey)}
-              placeholderTextColor={placeholderColor}
-              value={formData[field.key] || ''}
-              onChangeText={(text) => setFormData(prev => ({ ...prev, [field.key]: text }))}
-              multiline={field.multiline}
-              numberOfLines={field.multiline ? 4 : 1}
-              maxFontSizeMultiplier={MAX_FONT_SCALE}
-            />
           </View>
-        ))}
+        )}
+        
+        {currentTemplate.fields.map(field => {
+          const value = formData[field.key] || '';
+          const isEmpty = !value.trim();
+          const charCount = value.length;
+          
+          return (
+            <View key={field.key} style={s.fieldContainer}>
+              <View style={s.fieldLabelRow}>
+                <Text style={s.fieldLabel} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                  {t(field.labelKey, field.labelKey)}
+                  {isEmpty && showValidation && <Text style={s.requiredIndicator}> *</Text>}
+                </Text>
+                {field.multiline && charCount > 0 && (
+                  <Text style={s.charCounter} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                    {charCount} {t('letterWizard.characters', 'characters')}
+                  </Text>
+                )}
+              </View>
+              <TextInput
+                style={[
+                  s.input,
+                  field.multiline && s.inputMultiline,
+                  isEmpty && showValidation && s.inputEmpty,
+                ]}
+                placeholder={t(field.placeholderKey, field.placeholderKey)}
+                placeholderTextColor={placeholderColor}
+                value={value}
+                onChangeText={(text) => setFormData(prev => ({ ...prev, [field.key]: text }))}
+                multiline={field.multiline}
+                numberOfLines={field.multiline ? 4 : 1}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              />
+            </View>
+          );
+        })}
         
         <GapView style={s.formActions} gap={12}>
           <A11yPressable
@@ -1061,7 +1352,16 @@ export default function LetterWizardContent() {
           </A11yPressable>
           
           <A11yPressable
-            onPress={goToPreview}
+            onPress={() => {
+              if (!isFormComplete) {
+                setShowValidation(true);
+                Alert.alert(
+                  t('letterWizard.incompleteForm', 'Incomplete Form'),
+                  t('letterWizard.incompleteFormMsg', 'Some fields are empty. Fill them in or continue with placeholders.')
+                );
+              }
+              goToPreview();
+            }}
             hitSlop={HIT_SLOP_8}
             style={s.primaryBtn}
             accessibilityRole="button"
@@ -1129,17 +1429,117 @@ export default function LetterWizardContent() {
           </A11yPressable>
           
           <A11yPressable
+            onPress={saveCurrentLetter}
+            hitSlop={HIT_SLOP_8}
+            style={[s.primaryBtn, { backgroundColor: palette.success }]}
+            accessibilityRole="button"
+            accessibilityLabel={loadedLetterId ? t('letterWizard.updateLetter', 'Update saved letter') : t('letterWizard.saveLetter', 'Save letter')}
+          >
+            <Text style={s.primaryBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              {loadedLetterId ? '💾 ' + t('letterWizard.update', 'Update') : '⭐ ' + t('letterWizard.save', 'Save')}
+            </Text>
+          </A11yPressable>
+          
+          <A11yPressable
             onPress={resetWizard}
             hitSlop={HIT_SLOP_8}
-            style={s.primaryBtn}
+            style={s.secondaryBtn}
             accessibilityRole="button"
             accessibilityLabel={t('letterWizard.startOver', 'Start over with new letter')}
           >
-            <Text style={s.primaryBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Text style={s.secondaryBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
               {t('letterWizard.startOver', 'Start Over')}
             </Text>
           </A11yPressable>
         </GapView>
+      </View>
+    );
+  };
+
+  const renderSavedLettersStep = () => {
+    return (
+      <View>
+        <Text style={s.stepTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          {t('letterWizard.savedLetters', 'Saved Letters')}
+        </Text>
+        <Text style={s.stepDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          {t('letterWizard.savedLettersDesc', `You have ${savedLetters.length} saved ${savedLetters.length === 1 ? 'letter' : 'letters'}.`)}
+        </Text>
+        
+        {savedLetters.length === 0 ? (
+          <View style={s.emptyState}>
+            <Text style={s.emptyStateIcon}>📝</Text>
+            <Text style={s.emptyStateText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              {t('letterWizard.noSavedLetters', 'No saved letters yet.')}
+            </Text>
+            <Text style={s.emptyStateSubtext} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              {t('letterWizard.noSavedLettersDesc', 'Create a letter and save it to access later.')}
+            </Text>
+          </View>
+        ) : (
+          <GapView style={s.savedLettersList} gap={12}>
+            {savedLetters.map(letter => {
+              const template = LETTER_TEMPLATES[letter.letterType];
+              return (
+                <View key={letter.id} style={s.savedLetterCard}>
+                  <View style={s.savedLetterHeader}>
+                    <Text style={s.savedLetterIcon}>{template.icon}</Text>
+                    <View style={s.savedLetterInfo}>
+                      <Text style={s.savedLetterTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                        {letter.title}
+                      </Text>
+                      <Text style={s.savedLetterMeta} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                        {t(template.titleKey, template.titleKey)}
+                      </Text>
+                      <Text style={s.savedLetterDate} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                        {t('letterWizard.saved', 'Saved')} {new Date(letter.savedAt).toLocaleDateString()}
+                        {letter.updatedAt && ` • ${t('letterWizard.updated', 'Updated')} ${new Date(letter.updatedAt).toLocaleDateString()}`}
+                      </Text>
+                    </View>
+                  </View>
+                  
+                  <GapView style={s.savedLetterActions} gap={8}>
+                    <A11yPressable
+                      onPress={() => loadSavedLetter(letter)}
+                      hitSlop={HIT_SLOP_8}
+                      style={[s.secondaryBtn, { flex: 1 }]}
+                      accessibilityRole="button"
+                      accessibilityLabel={t('letterWizard.loadLetter', 'Load letter')}
+                    >
+                      <Text style={s.secondaryBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                        {t('letterWizard.load', 'Load')}
+                      </Text>
+                    </A11yPressable>
+                    
+                    <A11yPressable
+                      onPress={() => deleteLetter(letter.id)}
+                      hitSlop={HIT_SLOP_8}
+                      style={[s.secondaryBtn, { borderColor: palette.error }]}
+                      accessibilityRole="button"
+                      accessibilityLabel={t('letterWizard.deleteLetter', 'Delete letter')}
+                    >
+                      <Text style={[s.secondaryBtnText, { color: palette.error }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                        {t('common.delete', 'Delete')}
+                      </Text>
+                    </A11yPressable>
+                  </GapView>
+                </View>
+              );
+            })}
+          </GapView>
+        )}
+        
+        <A11yPressable
+          onPress={() => setStep('situation')}
+          hitSlop={HIT_SLOP_8}
+          style={[s.primaryBtn, { marginTop: 16 }]}
+          accessibilityRole="button"
+          accessibilityLabel={t('letterWizard.createNew', 'Create new letter')}
+        >
+          <Text style={s.primaryBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            {t('letterWizard.createNew', 'Create New Letter')}
+          </Text>
+        </A11yPressable>
       </View>
     );
   };
@@ -1168,10 +1568,25 @@ export default function LetterWizardContent() {
       </DyslexiaText>
       <DisclaimerBanner type="legal" compact />
       
+      {savedLetters.length > 0 && step === 'situation' && (
+        <A11yPressable
+          onPress={() => setStep('saved_list')}
+          hitSlop={HIT_SLOP_8}
+          style={[s.secondaryBtn, { marginBottom: 16 }]}
+          accessibilityRole="button"
+          accessibilityLabel={t('letterWizard.viewSaved', `View ${savedLetters.length} saved ${savedLetters.length === 1 ? 'letter' : 'letters'}`)}
+        >
+          <Text style={s.secondaryBtnText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            📂 {t('letterWizard.viewSaved', `View Saved Letters (${savedLetters.length})`)}
+          </Text>
+        </A11yPressable>
+      )}
+      
       {step === 'situation' && renderSituationStep()}
       {step === 'letter_type' && renderLetterTypeStep()}
       {step === 'form' && renderFormStep()}
       {step === 'preview' && renderPreviewStep()}
+      {step === 'saved_list' && renderSavedLettersStep()}
     </ScrollView>
   );
 }
@@ -1238,11 +1653,25 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     fieldContainer: {
       marginBottom: 16,
     },
+    fieldLabelRow: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginBottom: 6,
+    },
     fieldLabel: {
       fontSize: 15,
       fontWeight: '600',
       color: palette.text,
-      marginBottom: 6,
+    },
+    requiredIndicator: {
+      color: palette.error,
+      fontWeight: '700',
+    },
+    charCounter: {
+      fontSize: 12,
+      color: palette.text,
+      opacity: 0.6,
     },
     input: {
       borderWidth: StyleSheet.hairlineWidth,
@@ -1256,6 +1685,23 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     inputMultiline: {
       minHeight: 80,
       textAlignVertical: 'top',
+    },
+    inputEmpty: {
+      borderColor: palette.error,
+      borderWidth: 1,
+    },
+    validationWarning: {
+      backgroundColor: palette.error + '20',
+      borderWidth: 1,
+      borderColor: palette.error,
+      borderRadius: 8,
+      padding: 12,
+      marginBottom: 16,
+    },
+    validationText: {
+      color: palette.error,
+      fontSize: 14,
+      fontWeight: '600',
     },
     formActions: {
       flexDirection: 'row',
@@ -1328,6 +1774,71 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       color: palette.text,
       fontSize: 14,
       marginTop: 4,
+    },
+    emptyState: {
+      alignItems: 'center',
+      paddingVertical: 40,
+      paddingHorizontal: 20,
+    },
+    emptyStateIcon: {
+      fontSize: 48,
+      marginBottom: 12,
+    },
+    emptyStateText: {
+      fontSize: 18,
+      fontWeight: '600',
+      color: palette.text,
+      marginBottom: 8,
+      textAlign: 'center',
+    },
+    emptyStateSubtext: {
+      fontSize: 14,
+      color: palette.text,
+      opacity: 0.7,
+      textAlign: 'center',
+    },
+    savedLettersList: {
+      marginTop: 8,
+    },
+    savedLetterCard: {
+      backgroundColor: palette.surface,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 12,
+      padding: 16,
+    },
+    savedLetterHeader: {
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+      marginBottom: 12,
+    },
+    savedLetterIcon: {
+      fontSize: 32,
+      marginRight: 12,
+    },
+    savedLetterInfo: {
+      flex: 1,
+    },
+    savedLetterTitle: {
+      fontSize: 17,
+      fontWeight: '700',
+      color: palette.text,
+      marginBottom: 4,
+    },
+    savedLetterMeta: {
+      fontSize: 14,
+      color: palette.text,
+      opacity: 0.75,
+      marginBottom: 4,
+    },
+    savedLetterDate: {
+      fontSize: 12,
+      color: palette.text,
+      opacity: 0.6,
+    },
+    savedLetterActions: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
     },
   });
 }

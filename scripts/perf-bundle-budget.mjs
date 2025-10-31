@@ -18,7 +18,7 @@ import path from 'path';
 const ROOT = process.cwd();
 const EXT_RE = /\.(tsx?|jsx?)$/;
 const SOFT = parseInt(process.env.PERF_BUDGET_SOFT || '2500000',10); // ~2.5MB soft (adjusted for feature-rich app)
-const HARD = parseInt(process.env.PERF_BUDGET_HARD || '3100000',10); // ~3.1MB hard (accounts for lazy-loaded .impl.tsx files + comprehensive legal protections)
+const HARD = parseInt(process.env.PERF_BUDGET_HARD || '3200000',10); // ~3.2MB hard (updated for letter wizard save functionality + comprehensive legal protections)
 
 function walk(dir, out=[]) {
   for (const ent of fs.readdirSync(dir, { withFileTypes:true })) {
