@@ -136,9 +136,9 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
           <h3 style="margin-top: 0;">⚠️ Connection Issue</h3>
           <p>Unable to load events from the app right now. This could mean:</p>
           <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
-            <li>The app is still in development</li>
-            <li>Temporary network issue</li>
             <li>No events have been created yet</li>
+            <li>Temporary network issue</li>
+            <li>Please refresh the page</li>
           </ul>
           <p style="margin-top: 1rem;">Please check back later or <a href="/contact/">contact us</a> if the problem persists.</p>
         </div>

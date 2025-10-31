@@ -62,7 +62,7 @@ permalink: /campaigns/
 </div>
 
 <div class="button-group" role="navigation" aria-label="Campaign actions">
-  <a href="/beta/" class="btn btn-primary" aria-label="Join Beta Testing to create campaigns">Join Beta Testing</a>
+  <a href="/beta/" class="btn btn-primary" aria-label="Sign up for Phase 1 to create campaigns">Sign Up for Phase 1</a>
   <a href="/user-guide#advocacy-tools" class="btn btn-secondary" aria-label="Learn about advocacy tools and features">Learn About Tools</a>
   <a href="/contact/?subject=Campaign Idea" class="btn btn-secondary" aria-label="Contact us to suggest a campaign idea">Suggest a Campaign</a>
 </div>
@@ -179,9 +179,9 @@ permalink: /campaigns/
           <h3 style="margin-top: 0;">⚠️ Connection Issue</h3>
           <p>Unable to load campaigns from the app right now. This could mean:</p>
           <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
-            <li>The app is still in development</li>
-            <li>Temporary network issue</li>
             <li>No campaigns have been created yet</li>
+            <li>Temporary network issue</li>
+            <li>Please refresh the page</li>
           </ul>
           <p style="margin-top: 1rem;">Please check back later or <a href="/contact/">contact us</a> if the problem persists.</p>
         </div>
@@ -235,7 +235,7 @@ permalink: /campaigns/
 </script>
 
 <div class="info-box" style="margin: 2rem 0;">
-  <p><strong>💡 Want to create a campaign?</strong> Download the 3mpwrApp during beta testing and start organizing! <a href="/beta/">Join the waitlist →</a></p>
+  <p><strong>💡 Want to create a campaign?</strong> Sign up for Phase 1 and start organizing today! <a href="/beta/">Sign up now →</a></p>
 </div>
 
 ---
