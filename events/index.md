@@ -422,11 +422,6 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 
 ---
 
-<div class="crisis-resources" role="alert">
-  <p><strong>🆘 Need immediate help?</strong></p>
-  <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
-</div>
-
 {%- include page-feedback.html -%}
 
 ---
