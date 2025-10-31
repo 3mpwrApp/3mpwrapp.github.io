@@ -174,6 +174,7 @@ const HomeScreen = React.memo(() => {
       window.addEventListener('error', handleError);
       return () => window.removeEventListener('error', handleError);
     }
+    return undefined;
   }, []);
   
   if (hasError) {

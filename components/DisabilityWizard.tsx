@@ -40,7 +40,7 @@ export default function DisabilityWizard({
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
   
   // Always call hooks - wrap wizard data loading in try-catch
-  let suggestions = [];
+  let suggestions: WizardSuggestion[] = [];
   let loading = false;
   let hasError = false;
   
