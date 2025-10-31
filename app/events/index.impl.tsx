@@ -1,6 +1,7 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
+  Alert,
   FlatList,
   RefreshControl,
   Share,
@@ -586,9 +587,26 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
       <A11yPressable
         accessibilityRole="button"
         accessibilityLabel={t('eventsFeature.createToggleOpen','Create Event')}
-        disabled={!valid}
-        onPress={() => { if(!valid) return; onCreate({ title: title.trim(), description: description.trim(), date: date.trim(), location: location.trim()||undefined, isVirtual, asl, captions, stepFree, sensorySpace }); setTitle(''); setDescription(''); setDate(''); setLocation(''); setIsVirtual(false); setAsl(false); setCaptions(false); setStepFree(false); setSensory(false); }}
-        style={{ backgroundColor: valid ? palette.primary : palette.muted, paddingVertical:10, borderRadius:8, alignItems:'center' }}
+        onPress={() => { 
+          if(!valid) {
+            Alert.alert(
+              t('eventsFeature.form.incomplete','Incomplete Form'),
+              t('eventsFeature.form.incompleteMsg','Please fill in title (3+ chars), description (5+ chars), and date fields.')
+            );
+            return;
+          }
+          onCreate({ title: title.trim(), description: description.trim(), date: date.trim(), location: location.trim()||undefined, isVirtual, asl, captions, stepFree, sensorySpace }); 
+          setTitle(''); 
+          setDescription(''); 
+          setDate(''); 
+          setLocation(''); 
+          setIsVirtual(false); 
+          setAsl(false); 
+          setCaptions(false); 
+          setStepFree(false); 
+          setSensory(false);
+        }}
+        style={{ backgroundColor: valid ? palette.primary : palette.muted, paddingVertical:10, borderRadius:8, alignItems:'center', minHeight: 44 }}
       >
         <Text style={{ color: valid ? palette.onPrimary : palette.text, fontWeight:'700' }}>{t('eventsFeature.form.add','Add Event')}</Text>
       </A11yPressable>

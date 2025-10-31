@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, Linking, StyleSheet, Text, View } from 'react-native';
+import { Alert, Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
@@ -80,7 +80,7 @@ export default function NutritionGuides() {
     }
   };
   return (
-    <View style={s.container}>
+    <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Diet & Nutrition Guides screen">Diet & Nutrition Guides</Text>
       <DisclaimerBanner type="medical" compact />
       
@@ -169,13 +169,13 @@ export default function NutritionGuides() {
           ))}
         </View>
       )}
-    </View>
+    </ScrollView>
   );
 }
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    container: { flex: 1, backgroundColor: palette.background, padding: 16 },
+    container: { flex: 1, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: '700', color: palette.text },
     chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 6 },
     chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },

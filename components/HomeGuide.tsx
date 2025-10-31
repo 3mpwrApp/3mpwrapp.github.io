@@ -123,11 +123,11 @@ export function HomeGuide() {
                     );
                   })}
                 </GapView>
-                <GapView style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6 }} gap={8}>
-                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ minWidth: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+                <GapView style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6 }} gap={8} pointerEvents="box-none">
+                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ minWidth: 44, minHeight: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
                     <Text style={{ color: palette.text, textAlign:'center' }}>👍</Text>
                   </Pressable>
-                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down')} style={{ minWidth: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6 }}>
+                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down')} style={{ minWidth: 44, minHeight: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
                     <Text style={{ color: palette.text, textAlign:'center' }}>👎</Text>
                   </Pressable>
                   <Link
@@ -143,7 +143,7 @@ export function HomeGuide() {
                       });
                     }}
                   >
-                    <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ minWidth: 80, flex: 1, backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6 }}>
+                    <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ minWidth: 80, minHeight: 44, flex: 1, backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
                       <Text style={{ color: palette.onPrimary, fontWeight:'700', textAlign:'center' }}>{t('home.guide.open','Open')}</Text>
                     </Pressable>
                   </Link>
