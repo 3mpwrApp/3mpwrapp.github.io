@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "startDate": "2025-10-21T02:18:23.548Z",
-  "lastUpdated": "2025-10-31T09:23:24.644Z",
+  "lastUpdated": "2025-10-31T15:26:00.814Z",
   "featureHighlights": {
     "Resource Directory": {
       "uses": 4,
@@ -68,20 +68,20 @@
       "lastUsed": "2025-10-27T09:26:48.723Z"
     },
     "Accessibility Tools": {
-      "uses": 7,
+      "uses": 8,
       "platforms": {
         "mastodon": 0,
-        "bluesky": 7,
+        "bluesky": 8,
         "x": 0
       },
       "timeSlots": {
         "morning": 3,
-        "midday": 2,
+        "midday": 3,
         "evening": 2,
         "night": 0
       },
       "firstUsed": "2025-10-21T21:22:47.426Z",
-      "lastUsed": "2025-10-31T09:23:24.644Z"
+      "lastUsed": "2025-10-31T15:26:00.814Z"
     },
     "Provincial Guides": {
       "uses": 6,
@@ -140,15 +140,15 @@
       "totalItems": 334
     },
     "midday": {
-      "posts": 10,
-      "avgItems": "25.4",
+      "posts": 11,
+      "avgItems": "24.1",
       "platforms": {
         "mastodon": 0,
-        "bluesky": 10,
+        "bluesky": 11,
         "x": 0
       },
       "successRate": 0,
-      "totalItems": 254
+      "totalItems": 265
     },
     "evening": {
       "posts": 13,
@@ -164,13 +164,13 @@
   },
   "platforms": {
     "mastodon": {
-      "posts": 36,
+      "posts": 37,
       "successes": 0,
-      "failures": 36
+      "failures": 37
     },
     "bluesky": {
-      "posts": 36,
-      "successes": 34,
+      "posts": 37,
+      "successes": 35,
       "failures": 2
     },
     "x": {
@@ -179,6 +179,6 @@
       "failures": 0
     }
   },
-  "totalPosts": 72,
-  "successRate": "47.22"
+  "totalPosts": 74,
+  "successRate": "47.30"
 }
