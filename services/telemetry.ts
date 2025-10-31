@@ -8,9 +8,19 @@ import { FLAGS } from './featureFlags';
 let initialized = false;
 
 export async function initSentry(dsn?: string) {
-  if (initialized) return;
-  if (!dsn) return;
-  if (!FLAGS.sentry) return; // disabled in Free Mode or DSN not set
+  if (initialized) {
+    if (__DEV__) logger.debug('Sentry already initialized, skipping');
+    return;
+  }
+  if (!dsn) {
+    if (__DEV__) logger.warn('Sentry init skipped: no DSN provided');
+    return;
+  }
+  if (!FLAGS.sentry) {
+    if (__DEV__) logger.warn('Sentry init skipped: disabled by feature flag');
+    return;
+  }
+  
   try {
     // Developer cost alert for Sentry network usage/init
     devCostAlert({ feature: 'sentry', action: 'init:sentry' });
@@ -24,25 +34,44 @@ export async function initSentry(dsn?: string) {
         // @ts-ignore
         global.tslib = await import('tslib');
       }
-    } catch {
-      if (__DEV__) logger.warn('Sentry init skipped: tslib unavailable');
+    } catch (tslibError) {
+      if (__DEV__) logger.warn('Sentry init skipped: tslib unavailable', tslibError);
       return;
     }
     
     // Lazy-load sentry-expo to avoid loading native modules when unavailable
-    const sentryModule = await import('sentry-expo');
-    
-    // Check if Sentry module loaded correctly
-    if (!sentryModule || typeof sentryModule.init !== 'function') {
-      if (__DEV__) logger.warn('Sentry init skipped: Sentry.init is not a function (it is undefined)');
+    let sentryModule;
+    try {
+      sentryModule = await import('sentry-expo');
+    } catch (importError) {
+      if (__DEV__) logger.warn('Sentry init skipped: failed to import sentry-expo', importError);
       return;
     }
     
-    sentryModule.init({ dsn });
-    initialized = true;
+    // Check if Sentry module loaded correctly
+    if (!sentryModule || typeof sentryModule.init !== 'function') {
+      if (__DEV__) logger.warn('Sentry init skipped: Sentry.init is not a function');
+      return;
+    }
+    
+    // Wrap the actual initialization in a try-catch to prevent crashes
+    try {
+      await sentryModule.init({ 
+        dsn,
+        enableInExpoDevelopment: false, // Disable in development
+        debug: __DEV__, // Enable debug mode in dev
+      });
+      initialized = true;
+      if (__DEV__) logger.info('Sentry initialized successfully');
+    } catch (initError) {
+      if (__DEV__) logger.error('Sentry init failed:', initError);
+      // Don't set initialized = true if init failed
+      return;
+    }
   } catch (e) {
     // If native module isn't available in this build/dev client, safely skip
-    if (__DEV__) logger.warn('Sentry init skipped:', (e as Error)?.message);
+    const error = e as Error;
+    if (__DEV__) logger.error('Sentry init error:', error?.message, error?.stack);
   }
 }
 

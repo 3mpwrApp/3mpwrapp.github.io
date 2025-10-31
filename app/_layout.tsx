@@ -238,7 +238,14 @@ function TelemetryInit() {
   React.useEffect(() => {
     if (state.errorReportingEnabled) {
       const dsn = process.env.EXPO_PUBLIC_SENTRY_DSN as string | undefined;
-      if (dsn) initSentry(dsn);
+      if (dsn) {
+        initSentry(dsn).catch((error) => {
+          // Silent fail - don't crash the app if Sentry init fails
+          if (__DEV__) {
+            console.error('Failed to initialize Sentry:', error);
+          }
+        });
+      }
     }
   }, [state.errorReportingEnabled]);
   React.useEffect(() => {
