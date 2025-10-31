@@ -164,7 +164,12 @@ type LetterType =
   // Human Rights & Legal
   | 'human_rights_complaint'
   | 'cease_and_desist'
-  | 'demand_letter';
+  | 'demand_letter'
+  // Quality of Life
+  | 'flexible_schedule_request'
+  | 'remote_work_request'
+  | 'equipment_request'
+  | 'break_accommodation';
 
 interface SituationOption {
   id: string;
@@ -244,6 +249,13 @@ const SITUATIONS: SituationOption[] = [
     titleKey: 'letterWizard.situations.humanRights.title',
     descKey: 'letterWizard.situations.humanRights.desc',
     recommendedLetters: ['human_rights_complaint', 'cease_and_desist', 'demand_letter'],
+  },
+  {
+    id: 'quality_of_life',
+    icon: '🌟',
+    titleKey: 'letterWizard.situations.qualityOfLife.title',
+    descKey: 'letterWizard.situations.qualityOfLife.desc',
+    recommendedLetters: ['flexible_schedule_request', 'remote_work_request', 'equipment_request', 'break_accommodation'],
   },
   {
     id: 'other',
@@ -817,6 +829,175 @@ const LETTER_TEMPLATES: Record<LetterType, LetterTemplate> = {
       `- Public disclosure of discriminatory conduct\n\n` +
       `This letter is sent without prejudice to all rights and remedies.\n\n` +
       `${fields.name || "[Your Name]"}`
+    ),
+  },
+  
+  // ============================================================================
+  // Quality of Life Letters
+  // ============================================================================
+  
+  flexible_schedule_request: {
+    type: 'flexible_schedule_request',
+    titleKey: 'letterWizard.types.flexibleSchedule.title',
+    descKey: 'letterWizard.types.flexibleSchedule.desc',
+    icon: '🕐',
+    complexity: { 
+      level: 'simple', 
+      steps: 5, 
+      estimatedMinutes: 10,
+      requiresDecisions: 1,
+      requiresReading: 'light',
+      requiresWriting: true
+    },
+    fields: [
+      { key: 'name', labelKey: 'letterWizard.fields.name', placeholderKey: 'letterWizard.fields.namePlaceholder', defaultFromProfile: 'name' },
+      { key: 'position', labelKey: 'letterWizard.fields.position', placeholderKey: 'letterWizard.fields.positionPlaceholder' },
+      { key: 'currentSchedule', labelKey: 'letterWizard.fields.currentSchedule', placeholderKey: 'letterWizard.fields.currentSchedulePlaceholder' },
+      { key: 'proposedSchedule', labelKey: 'letterWizard.fields.proposedSchedule', placeholderKey: 'letterWizard.fields.proposedSchedulePlaceholder', multiline: true },
+      { key: 'medicalReason', labelKey: 'letterWizard.fields.medicalReason', placeholderKey: 'letterWizard.fields.medicalReasonPlaceholder', multiline: true },
+    ],
+    generatePreview: (fields) => (
+      `Date: ${new Date().toLocaleDateString()}\n\n` +
+      `Re: Request for Flexible Work Schedule Accommodation\n\n` +
+      `Dear Employer,\n\n` +
+      `I am writing to request a flexible work schedule as a disability accommodation. I currently work ${fields.currentSchedule || "[Current Schedule - e.g., Monday-Friday 9am-5pm]"} as ${fields.position || "[Your Position]"}.\n\n` +
+      `Due to disability-related medical needs: ${fields.medicalReason || "[Brief description - e.g., medical appointments, fatigue management, medication schedule]"}, I am requesting the following schedule modification:\n\n` +
+      `${fields.proposedSchedule || "[Proposed Schedule - e.g., 10am-6pm, compressed work week, or specific days off]"}\n\n` +
+      `This flexible schedule will enable me to:\n` +
+      `- Manage medical appointments and treatments effectively\n` +
+      `- Optimize my productivity during peak energy periods\n` +
+      `- Maintain consistent work performance and meet all job requirements\n\n` +
+      `I am committed to completing all my work duties and responsibilities. The proposed schedule will not affect my ability to meet deadlines or collaborate with team members.\n\n` +
+      `I would welcome the opportunity to discuss this accommodation request and explore any questions or concerns you may have. I can provide medical documentation if required.\n\n` +
+      `Thank you for considering this request.\n\n` +
+      `Sincerely,\n${fields.name || "[Your Name]"}`
+    ),
+  },
+  
+  remote_work_request: {
+    type: 'remote_work_request',
+    titleKey: 'letterWizard.types.remoteWork.title',
+    descKey: 'letterWizard.types.remoteWork.desc',
+    icon: '🏡',
+    complexity: { 
+      level: 'simple', 
+      steps: 5, 
+      estimatedMinutes: 12,
+      requiresDecisions: 1,
+      requiresReading: 'light',
+      requiresWriting: true
+    },
+    fields: [
+      { key: 'name', labelKey: 'letterWizard.fields.name', placeholderKey: 'letterWizard.fields.namePlaceholder', defaultFromProfile: 'name' },
+      { key: 'position', labelKey: 'letterWizard.fields.position', placeholderKey: 'letterWizard.fields.positionPlaceholder' },
+      { key: 'remoteArrangement', labelKey: 'letterWizard.fields.remoteArrangement', placeholderKey: 'letterWizard.fields.remoteArrangementPlaceholder', multiline: true },
+      { key: 'medicalNeed', labelKey: 'letterWizard.fields.medicalNeed', placeholderKey: 'letterWizard.fields.medicalNeedPlaceholder', multiline: true },
+      { key: 'homeSetup', labelKey: 'letterWizard.fields.homeSetup', placeholderKey: 'letterWizard.fields.homeSetupPlaceholder', multiline: true },
+    ],
+    generatePreview: (fields) => (
+      `Date: ${new Date().toLocaleDateString()}\n\n` +
+      `Re: Request for Remote Work Accommodation\n\n` +
+      `Dear Employer,\n\n` +
+      `I am writing to request a remote work arrangement as a reasonable disability accommodation. I am currently employed as ${fields.position || "[Your Position]"}.\n\n` +
+      `Medical Need:\n${fields.medicalNeed || "[Explain how disability affects commuting/office attendance - e.g., mobility limitations, immune system concerns, sensory sensitivities, chronic pain from commuting]"}\n\n` +
+      `Proposed Remote Arrangement:\n${fields.remoteArrangement || "[Specify arrangement - e.g., full-time remote, hybrid 3 days/week, temporary remote during flare-ups]"}\n\n` +
+      `Home Office Setup:\n${fields.homeSetup || "[Describe your home workspace - e.g., dedicated office space, high-speed internet, necessary equipment, accessible workspace]"}\n\n` +
+      `This accommodation will enable me to:\n` +
+      `- Eliminate disability-related barriers to commuting and office attendance\n` +
+      `- Maintain consistent productivity and work quality\n` +
+      `- Reduce disability-related absences and health setbacks\n` +
+      `- Continue meeting all job duties and performance expectations\n\n` +
+      `I am fully prepared to maintain regular communication with my team through video calls, instant messaging, and email. I will remain available during core business hours and attend virtual meetings as required.\n\n` +
+      `Many of my job responsibilities can be performed remotely without any impact on quality or productivity. I am committed to demonstrating that this arrangement supports both my health needs and business objectives.\n\n` +
+      `I would appreciate the opportunity to discuss this request and address any concerns. I can provide medical documentation supporting this accommodation need.\n\n` +
+      `Thank you for your consideration.\n\n` +
+      `Sincerely,\n${fields.name || "[Your Name]"}`
+    ),
+  },
+  
+  equipment_request: {
+    type: 'equipment_request',
+    titleKey: 'letterWizard.types.equipmentRequest.title',
+    descKey: 'letterWizard.types.equipmentRequest.desc',
+    icon: '🖥️',
+    complexity: { 
+      level: 'simple', 
+      steps: 4, 
+      estimatedMinutes: 8,
+      requiresDecisions: 1,
+      requiresReading: 'light',
+      requiresWriting: true
+    },
+    fields: [
+      { key: 'name', labelKey: 'letterWizard.fields.name', placeholderKey: 'letterWizard.fields.namePlaceholder', defaultFromProfile: 'name' },
+      { key: 'position', labelKey: 'letterWizard.fields.position', placeholderKey: 'letterWizard.fields.positionPlaceholder' },
+      { key: 'equipment', labelKey: 'letterWizard.fields.equipment', placeholderKey: 'letterWizard.fields.equipmentPlaceholder', multiline: true },
+      { key: 'functionalNeed', labelKey: 'letterWizard.fields.functionalNeed', placeholderKey: 'letterWizard.fields.functionalNeedPlaceholder', multiline: true },
+    ],
+    generatePreview: (fields) => (
+      `Date: ${new Date().toLocaleDateString()}\n\n` +
+      `Re: Request for Adaptive Equipment Accommodation\n\n` +
+      `Dear Employer,\n\n` +
+      `I am writing to request adaptive workplace equipment as a reasonable accommodation. I am employed as ${fields.position || "[Your Position]"}.\n\n` +
+      `Requested Equipment:\n${fields.equipment || "[List specific equipment - e.g., ergonomic chair, sit-stand desk, voice recognition software, screen reader, large monitors, ergonomic keyboard/mouse, footrest, task lighting, noise-canceling headphones]"}\n\n` +
+      `Functional Need:\n${fields.functionalNeed || "[Explain how equipment addresses functional limitations - e.g., reduces pain from prolonged sitting, enables computer access despite vision/mobility limitations, reduces sensory overload]"}\n\n` +
+      `This equipment will:\n` +
+      `- Enable me to perform essential job functions effectively\n` +
+      `- Reduce disability-related barriers to productivity\n` +
+      `- Prevent health complications from unsuitable workspace setup\n` +
+      `- Support sustained work performance throughout the day\n\n` +
+      `Under human rights and accessibility legislation, employers have a duty to provide reasonable accommodations, including necessary adaptive equipment. The cost of this equipment is typically tax-deductible and may qualify for government grants or tax credits.\n\n` +
+      `I am happy to:\n` +
+      `- Research cost-effective options and provide vendor information\n` +
+      `- Assist with grant applications if applicable\n` +
+      `- Demonstrate how the equipment will be used\n` +
+      `- Provide medical documentation supporting the need\n\n` +
+      `I would welcome the opportunity to discuss this request and explore options that work for both of us.\n\n` +
+      `Thank you for your consideration.\n\n` +
+      `Sincerely,\n${fields.name || "[Your Name]"}`
+    ),
+  },
+  
+  break_accommodation: {
+    type: 'break_accommodation',
+    titleKey: 'letterWizard.types.breakAccommodation.title',
+    descKey: 'letterWizard.types.breakAccommodation.desc',
+    icon: '☕',
+    complexity: { 
+      level: 'simple', 
+      steps: 4, 
+      estimatedMinutes: 8,
+      requiresDecisions: 1,
+      requiresReading: 'light',
+      requiresWriting: true
+    },
+    fields: [
+      { key: 'name', labelKey: 'letterWizard.fields.name', placeholderKey: 'letterWizard.fields.namePlaceholder', defaultFromProfile: 'name' },
+      { key: 'position', labelKey: 'letterWizard.fields.position', placeholderKey: 'letterWizard.fields.positionPlaceholder' },
+      { key: 'breakRequest', labelKey: 'letterWizard.fields.breakRequest', placeholderKey: 'letterWizard.fields.breakRequestPlaceholder', multiline: true },
+      { key: 'medicalReason', labelKey: 'letterWizard.fields.medicalReason', placeholderKey: 'letterWizard.fields.medicalReasonPlaceholder', multiline: true },
+    ],
+    generatePreview: (fields) => (
+      `Date: ${new Date().toLocaleDateString()}\n\n` +
+      `Re: Request for Additional Break Accommodation\n\n` +
+      `Dear Employer,\n\n` +
+      `I am writing to request additional rest breaks as a disability accommodation. I am currently employed as ${fields.position || "[Your Position]"}.\n\n` +
+      `Requested Break Schedule:\n${fields.breakRequest || "[Specify breaks needed - e.g., 10-minute break every 2 hours, ability to take unscheduled breaks as needed, extended lunch break, frequent short movement breaks]"}\n\n` +
+      `Medical Reason:\n${fields.medicalReason || "[Explain medical need for breaks - e.g., pain management, medication timing, blood sugar monitoring, fatigue management, bathroom access needs, mobility/circulation needs]"}\n\n` +
+      `These additional breaks will enable me to:\n` +
+      `- Manage disability-related symptoms effectively\n` +
+      `- Maintain focus and productivity throughout the workday\n` +
+      `- Prevent health complications from extended work periods\n` +
+      `- Meet all job performance expectations\n\n` +
+      `I am committed to:\n` +
+      `- Using break time efficiently for medical management\n` +
+      `- Communicating with my supervisor about break needs\n` +
+      `- Completing all assigned work within scheduled hours (or adjusting schedule if needed)\n` +
+      `- Maintaining productivity and work quality\n\n` +
+      `Providing reasonable break accommodations is required under disability rights legislation. This low-cost accommodation will significantly improve my ability to sustain work performance.\n\n` +
+      `I would be happy to discuss this request and provide medical documentation if required. I am open to exploring different approaches that meet both my medical needs and operational requirements.\n\n` +
+      `Thank you for considering this accommodation request.\n\n` +
+      `Sincerely,\n${fields.name || "[Your Name]"}`
     ),
   },
 };
