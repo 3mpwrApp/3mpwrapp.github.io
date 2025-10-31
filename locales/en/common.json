@@ -3159,6 +3159,10 @@
       "humanRights": {
         "title": "Legal Action Required",
         "desc": "File human rights complaint or send legal demand"
+      },
+      "qualityOfLife": {
+        "title": "Quality of Life at Work",
+        "desc": "Request workplace accommodations for better work-life balance and daily comfort"
       }
     },
     "types": {
@@ -3245,6 +3249,26 @@
       "demandLetter": {
         "title": "Formal Demand Letter",
         "desc": "Demand action or compensation for wrongs"
+      },
+      "flexibleSchedule": {
+        "title": "Flexible Schedule Request",
+        "desc": "Request modified work hours for medical needs"
+      },
+      "remoteWork": {
+        "title": "Remote Work Request",
+        "desc": "Request work-from-home accommodation"
+      },
+      "equipmentRequest": {
+        "title": "Equipment Request",
+        "desc": "Request adaptive workplace equipment"
+      },
+      "breakAccommodation": {
+        "title": "Break Accommodation",
+        "desc": "Request additional rest breaks for medical needs"
+      },
+      "sensoryAccommodation": {
+        "title": "Sensory Accommodation Request",
+        "desc": "Request accommodations for sensory sensitivities (lighting, noise, scents)"
       }
     },
     "fields": {
@@ -3387,7 +3411,27 @@
       "demandedAction": "Demanded Action",
       "demandedActionPlaceholder": "Specific actions you're demanding",
       "compensationRequested": "Compensation Requested",
-      "compensationRequestedPlaceholder": "Amount of money sought"
+      "compensationRequestedPlaceholder": "Amount of money sought",
+      "currentSchedule": "Current Schedule",
+      "currentSchedulePlaceholder": "Your current work schedule (e.g., Monday-Friday 9am-5pm)",
+      "proposedSchedule": "Proposed Schedule",
+      "proposedSchedulePlaceholder": "Your requested schedule (e.g., 10am-6pm, compressed work week)",
+      "remoteArrangement": "Remote Arrangement",
+      "remoteArrangementPlaceholder": "Specify arrangement (full-time remote, hybrid, temporary)",
+      "medicalNeed": "Medical Need",
+      "medicalNeedPlaceholder": "Explain how disability affects commuting/office attendance",
+      "homeSetup": "Home Office Setup",
+      "homeSetupPlaceholder": "Describe your home workspace capabilities",
+      "equipment": "Equipment Needed",
+      "equipmentPlaceholder": "List specific equipment (ergonomic chair, software, monitors, etc.)",
+      "functionalNeed": "Functional Need",
+      "functionalNeedPlaceholder": "Explain how equipment addresses your limitations",
+      "breakRequest": "Break Schedule Request",
+      "breakRequestPlaceholder": "Specify breaks needed (e.g., 10-min every 2 hours)",
+      "sensoryNeeds": "Sensory Sensitivities",
+      "sensoryNeedsPlaceholder": "Describe sensory sensitivities (lighting, noise, scents, temperature)",
+      "requestedAccommodations": "Requested Accommodations",
+      "requestedAccommodationsPlaceholder": "List specific accommodations (e.g., noise-canceling headphones, quiet workspace)"
     }
   },
   "tools": {

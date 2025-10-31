@@ -169,7 +169,8 @@ type LetterType =
   | 'flexible_schedule_request'
   | 'remote_work_request'
   | 'equipment_request'
-  | 'break_accommodation';
+  | 'break_accommodation'
+  | 'sensory_accommodation_request';
 
 interface SituationOption {
   id: string;
@@ -255,7 +256,7 @@ const SITUATIONS: SituationOption[] = [
     icon: '🌟',
     titleKey: 'letterWizard.situations.qualityOfLife.title',
     descKey: 'letterWizard.situations.qualityOfLife.desc',
-    recommendedLetters: ['flexible_schedule_request', 'remote_work_request', 'equipment_request', 'break_accommodation'],
+    recommendedLetters: ['flexible_schedule_request', 'remote_work_request', 'equipment_request', 'break_accommodation', 'sensory_accommodation_request'],
   },
   {
     id: 'other',
@@ -997,6 +998,47 @@ const LETTER_TEMPLATES: Record<LetterType, LetterTemplate> = {
       `Providing reasonable break accommodations is required under disability rights legislation. This low-cost accommodation will significantly improve my ability to sustain work performance.\n\n` +
       `I would be happy to discuss this request and provide medical documentation if required. I am open to exploring different approaches that meet both my medical needs and operational requirements.\n\n` +
       `Thank you for considering this accommodation request.\n\n` +
+      `Sincerely,\n${fields.name || "[Your Name]"}`
+    ),
+  },
+  
+  sensory_accommodation_request: {
+    type: 'sensory_accommodation_request',
+    titleKey: 'letterWizard.types.sensoryAccommodation.title',
+    descKey: 'letterWizard.types.sensoryAccommodation.desc',
+    icon: '🎧',
+    complexity: { 
+      level: 'simple', 
+      steps: 5, 
+      estimatedMinutes: 10,
+      requiresDecisions: 1,
+      requiresReading: 'light',
+      requiresWriting: true
+    },
+    fields: [
+      { key: 'name', labelKey: 'letterWizard.fields.name', placeholderKey: 'letterWizard.fields.namePlaceholder', defaultFromProfile: 'name' },
+      { key: 'position', labelKey: 'letterWizard.fields.position', placeholderKey: 'letterWizard.fields.positionPlaceholder' },
+      { key: 'sensoryNeeds', labelKey: 'letterWizard.fields.sensoryNeeds', placeholderKey: 'letterWizard.fields.sensoryNeedsPlaceholder', multiline: true },
+      { key: 'requestedAccommodations', labelKey: 'letterWizard.fields.requestedAccommodations', placeholderKey: 'letterWizard.fields.requestedAccommodationsPlaceholder', multiline: true },
+      { key: 'functionalImpact', labelKey: 'letterWizard.fields.functionalImpact', placeholderKey: 'letterWizard.fields.functionalImpactPlaceholder', multiline: true },
+    ],
+    generatePreview: (fields) => (
+      `Date: ${new Date().toLocaleDateString()}\n\n` +
+      `Re: Request for Sensory Accommodation\n\n` +
+      `Dear Employer,\n\n` +
+      `I am writing to request sensory accommodations as a reasonable disability accommodation. I am employed as ${fields.position || "[Your Position]"}.\n\n` +
+      `Sensory Needs:\n${fields.sensoryNeeds || "[Describe sensory sensitivities - e.g., sensitivity to fluorescent lighting, loud noise, strong scents, visual clutter, temperature extremes, tactile sensitivities]"}\n\n` +
+      `Requested Accommodations:\n${fields.requestedAccommodations || "[List specific accommodations - e.g., natural/soft lighting, noise-canceling headphones, quiet workspace/remote work, scent-free environment, temperature control, reduced visual stimulation, flexible dress code]"}\n\n` +
+      `Functional Impact:\n${fields.functionalImpact || "[Explain how sensory barriers affect work - e.g., reduced concentration, increased fatigue, sensory overload leading to shutdowns/meltdowns, physical pain, migraine triggers, inability to process information effectively]"}\n\n` +
+      `These sensory accommodations will enable me to:\n` +
+      `- Reduce disability-related barriers to productivity and focus\n` +
+      `- Prevent sensory overload and associated health complications\n` +
+      `- Maintain consistent work performance throughout the day\n` +
+      `- Fully participate in work activities without sensory distress\n\n` +
+      `Sensory accommodations are recognized as reasonable accommodations under disability rights legislation. Many of these modifications are low-cost or no-cost (e.g., allowing headphones, adjusting lighting, designating quiet spaces).\n\n` +
+      `I am committed to working collaboratively to find solutions that meet both my sensory needs and operational requirements. I understand that some accommodations may require phased implementation or creative problem-solving.\n\n` +
+      `I would welcome the opportunity to discuss these accommodation requests in detail. I can provide medical documentation supporting these sensory needs if required.\n\n` +
+      `Thank you for your consideration and support.\n\n` +
       `Sincerely,\n${fields.name || "[Your Name]"}`
     ),
   },
