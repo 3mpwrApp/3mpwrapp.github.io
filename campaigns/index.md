@@ -57,6 +57,10 @@ permalink: /campaigns/
   </p>
 </div>
 
+<div class="info-box" style="margin-bottom: 1.5rem;">
+  <p><strong>🔗 Related:</strong> Looking for the events calendar? Visit <a href="/events/">Events</a> to subscribe to our ICS feed and get automatic updates on all community events.</p>
+</div>
+
 <div class="button-group" role="navigation" aria-label="Campaign actions">
   <a href="/beta/" class="btn btn-primary" aria-label="Join Beta Testing to create campaigns">Join Beta Testing</a>
   <a href="/user-guide#advocacy-tools" class="btn btn-secondary" aria-label="Learn about advocacy tools and features">Learn About Tools</a>
@@ -65,23 +69,173 @@ permalink: /campaigns/
 
 ---
 
-## 📣 Active Campaigns
+## 📣 Active Campaigns (Live from App)
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-<div class="warning-box">
-  <h3 style="margin-top: 0;">🚀 Campaigns Coming Soon!</h3>
-  <p style="font-size: 1.1rem; margin-bottom: 1rem;"><strong>When our app launches, this space will come alive with community-created campaigns!</strong></p>
-  <p>Community members will be able to:</p>
-  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
-    <li>🎯 Create campaigns directly in the app</li>
-    <li>📱 Set campaigns as public to appear here automatically</li>
-    <li>📊 Track petition signatures and participation</li>
-    <li>📣 Organize rallies and events</li>
-    <li>🤝 Connect with other advocates</li>
-    <li>💪 Amplify grassroots movements</li>
-  </ul>
-  <p style="margin-top: 1.5rem;"><em>Stay tuned - powerful organizing tools are on the way!</em></p>
+<div class="info-box">
+  <p><strong>🔄 Auto-Synced:</strong> Campaigns created in the 3mpwrApp automatically appear below. Updates every 5 minutes.</p>
+</div>
+
+<section id="campaigns">
+  <div id="campaigns-list" style="margin: 2rem 0;">
+    <div style="text-align: center; padding: 2rem;">
+      <p style="font-size: 1.2rem;">⏳ Loading campaigns...</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Fetch and display campaigns from app
+  async function loadCampaigns() {
+    try {
+      const response = await fetch('https://3mpwrapp.pages.dev/api/campaigns.json');
+      const campaigns = await response.json();
+      
+      const container = document.getElementById('campaigns-list');
+      
+      if (campaigns.length === 0) {
+        container.innerHTML = `
+          <div class="warning-box">
+            <h3 style="margin-top: 0;">🚀 Campaigns Coming Soon!</h3>
+            <p style="font-size: 1.1rem;"><strong>No active campaigns yet - but when our app launches, this space will come alive with community-created campaigns!</strong></p>
+            <p>Community members will be able to:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+              <li>🎯 Create campaigns directly in the app</li>
+              <li>📱 Set campaigns as public to appear here automatically</li>
+              <li>📊 Track petition signatures and participation</li>
+              <li>📣 Organize rallies and events</li>
+              <li>🤝 Connect with other advocates</li>
+              <li>💪 Amplify grassroots movements</li>
+            </ul>
+            <p style="margin-top: 1.5rem;"><em>Stay tuned - powerful organizing tools are on the way!</em></p>
+          </div>
+        `;
+        return;
+      }
+      
+      // Display campaigns
+      container.innerHTML = campaigns.map(campaign => `
+        <article class="campaign-card" style="border: 2px solid #dbeafe; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h3 style="margin-top: 0; color: #1e40af; font-size: 1.5rem;">
+            ${campaign.icon || '📣'} ${campaign.title}
+          </h3>
+          
+          ${campaign.summary ? `<p style="color: #555; margin: 1rem 0; font-size: 1.05rem;">${campaign.summary}</p>` : ''}
+          
+          ${campaign.goal ? `
+            <div style="margin: 1rem 0;">
+              <p style="margin: 0.5rem 0; color: #333; font-weight: 600;">
+                🎯 <strong>Goal:</strong> ${campaign.goal}
+              </p>
+              ${campaign.progress ? `
+                <div style="background: #e5e7eb; border-radius: 8px; height: 24px; overflow: hidden; margin: 0.5rem 0;">
+                  <div style="background: linear-gradient(90deg, #10b981 0%, #059669 100%); height: 100%; width: ${campaign.progress}%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.85rem;">
+                    ${campaign.progress}%
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+          ` : ''}
+          
+          ${campaign.organizer ? `<p style="color: #666; font-size: 0.95rem; margin: 0.5rem 0;">👤 <strong>Organized by:</strong> ${campaign.organizer}</p>` : ''}
+          
+          ${campaign.tags && campaign.tags.length > 0 ? `
+            <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              ${campaign.tags.map(tag => `
+                <span style="display: inline-block; padding: 4px 10px; background: #fef3c7; border-radius: 6px; font-size: 0.85em; font-weight: 600;">
+                  ${tag}
+                </span>
+              `).join('')}
+            </div>
+          ` : ''}
+          
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button 
+              onclick="joinCampaign('${campaign.id}', '${campaign.title}')" 
+              class="btn btn-primary"
+              style="padding: 10px 20px; background: #0066cc; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 1rem;"
+            >
+              💪 Join Campaign
+            </button>
+            
+            ${campaign.shareLink ? `
+              <button 
+                onclick="shareCampaign('${campaign.shareLink}', '${campaign.title}')" 
+                class="btn btn-secondary"
+                style="padding: 10px 20px; background: #6b7280; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 1rem;"
+              >
+                📢 Share
+              </button>
+            ` : ''}
+          </div>
+        </article>
+      `).join('');
+      
+    } catch (error) {
+      console.error('Failed to load campaigns:', error);
+      document.getElementById('campaigns-list').innerHTML = `
+        <div class="warning-box">
+          <h3 style="margin-top: 0;">⚠️ Connection Issue</h3>
+          <p>Unable to load campaigns from the app right now. This could mean:</p>
+          <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+            <li>The app is still in development</li>
+            <li>Temporary network issue</li>
+            <li>No campaigns have been created yet</li>
+          </ul>
+          <p style="margin-top: 1rem;">Please check back later or <a href="/contact/">contact us</a> if the problem persists.</p>
+        </div>
+      `;
+    }
+  }
+  
+  // Handle campaign join
+  function joinCampaign(campaignId, campaignTitle) {
+    // Try to deep link to app
+    const appUrl = 'empowrapp://campaigns/' + campaignId;
+    
+    // Attempt to open app
+    window.location.href = appUrl;
+    
+    // If app doesn't open after 2 seconds, show download options
+    setTimeout(() => {
+      if (confirm('3mpwrApp is required to join campaigns. Would you like to learn more about the app?')) {
+        window.location.href = '/beta/';
+      }
+    }, 2000);
+  }
+  
+  // Handle campaign share
+  function shareCampaign(shareLink, campaignTitle) {
+    if (navigator.share) {
+      navigator.share({
+        title: campaignTitle,
+        text: 'Join this campaign on 3mpwrApp!',
+        url: shareLink
+      }).catch(err => console.log('Share cancelled'));
+    } else {
+      // Fallback: copy to clipboard
+      navigator.clipboard.writeText(shareLink).then(() => {
+        alert('Campaign link copied to clipboard! Share it with your network.');
+      }).catch(() => {
+        prompt('Copy this link to share:', shareLink);
+      });
+    }
+  }
+  
+  // Load campaigns when page loads
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadCampaigns);
+  } else {
+    loadCampaigns();
+  }
+  
+  // Auto-refresh every 5 minutes
+  setInterval(loadCampaigns, 5 * 60 * 1000);
+</script>
+
+<div class="info-box" style="margin: 2rem 0;">
+  <p><strong>💡 Want to create a campaign?</strong> Download the 3mpwrApp during beta testing and start organizing! <a href="/beta/">Join the waitlist →</a></p>
 </div>
 
 ---
