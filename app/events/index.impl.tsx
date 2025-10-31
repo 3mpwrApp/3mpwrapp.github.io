@@ -588,9 +588,9 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
         accessibilityLabel={t('eventsFeature.createToggleOpen','Create Event')}
         disabled={!valid}
         onPress={() => { if(!valid) return; onCreate({ title: title.trim(), description: description.trim(), date: date.trim(), location: location.trim()||undefined, isVirtual, asl, captions, stepFree, sensorySpace }); setTitle(''); setDescription(''); setDate(''); setLocation(''); setIsVirtual(false); setAsl(false); setCaptions(false); setStepFree(false); setSensory(false); }}
-        style={{ backgroundColor: palette.primary, opacity: valid?1:0.5, paddingVertical:10, borderRadius:8, alignItems:'center' }}
+        style={{ backgroundColor: valid ? palette.primary : palette.muted, paddingVertical:10, borderRadius:8, alignItems:'center' }}
       >
-        <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{t('eventsFeature.form.add','Add Event')}</Text>
+        <Text style={{ color: valid ? palette.onPrimary : palette.text, fontWeight:'700' }}>{t('eventsFeature.form.add','Add Event')}</Text>
       </A11yPressable>
     </View>
   );
