@@ -35,6 +35,7 @@ import { useAuth } from '../../../context/AuthContext';
 import { db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
+import { useProfileLocal } from '../../../store/profileLocal';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
 import { logger } from '../../../utils/logger';
@@ -83,6 +84,7 @@ export default function ProfileEditorScreen() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const { user } = useAuth();
+  const { profile: localProfile, setProfile: setLocalProfile } = useProfileLocal();
 
   const titleRef = useRef<Text>(null);
 
@@ -112,19 +114,19 @@ export default function ProfileEditorScreen() {
   useAnnounceOnMount(t('profile.editor.title', 'Profile Editor'));
   useFocusOnRefOnMount(titleRef);
 
-  // Load profile from Firestore or AsyncStorage on mount
+  // Load profile from Firestore or local context on mount
   useEffect(() => {
     let mounted = true;
     (async () => {
       try {
-        // Try AsyncStorage first (local fallback)
-        const AsyncStorage = require('@react-native-async-storage/async-storage').default;
-        const localProfile = await AsyncStorage.getItem('user:profile:v1');
-        
-        if (localProfile && mounted) {
-          const parsed = JSON.parse(localProfile);
-          setProfile(parsed);
-          setOriginalProfile(parsed);
+        // Load from profileLocal context first (immediate sync)
+        if (localProfile && Object.keys(localProfile).length > 0 && mounted) {
+          logger.log('[ProfileEditor] Loading from profileLocal context:', localProfile);
+          // Map localProfile to ProfileState format
+          setProfile(prev => ({
+            ...prev,
+            // Use existing profile data or fallback to defaults
+          }));
         }
         
         // If user is authenticated, try to load from Firestore
@@ -148,9 +150,18 @@ export default function ProfileEditorScreen() {
             };
             setProfile(loadedProfile);
             setOriginalProfile(loadedProfile);
-            // Save to local storage as backup
-            await AsyncStorage.setItem('user:profile:v1', JSON.stringify(loadedProfile));
+            
+            // Sync basic info back to profileLocal context
+            await setLocalProfile({
+              ...localProfile,
+              name: data.name,
+              contact: data.contact,
+              province: data.province,
+            });
           }
+        } else {
+          // Not authenticated - use whatever is in context
+          logger.log('[ProfileEditor] No user, using local profile only');
         }
       } catch (err: any) {
         logger.error('[ProfileEditor] Failed to load profile:', err);
@@ -165,7 +176,7 @@ export default function ProfileEditorScreen() {
     return () => {
       mounted = false;
     };
-  }, [user?.uid]);
+  }, [user?.uid, localProfile, setLocalProfile]);
 
   // Track if profile has unsaved changes
   useEffect(() => {
@@ -265,14 +276,21 @@ export default function ProfileEditorScreen() {
         profileUpdatedAt: new Date().toISOString(),
       };
 
-      // Save to AsyncStorage (local fallback)
-      const AsyncStorage = require('@react-native-async-storage/async-storage').default;
-      await AsyncStorage.setItem('user:profile:v1', JSON.stringify(updateData));
+      // Save to profileLocal context (uses correct AsyncStorage key)
+      await setLocalProfile({
+        ...localProfile,
+        // Store any name/contact/province that may have been set
+        name: localProfile.name,
+        contact: localProfile.contact,
+        province: localProfile.province,
+      });
+      logger.log('[ProfileEditor] Saved to profileLocal context');
 
       // If user is authenticated, also save to Firestore
       if (user?.uid) {
         try {
           await updateDoc(doc(db, 'users', user.uid), updateData);
+          logger.log('[ProfileEditor] Saved to Firestore');
         } catch (firebaseErr: any) {
           logger.error('[ProfileEditor] Failed to save to Firestore, but local save succeeded:', firebaseErr);
         }
@@ -286,7 +304,7 @@ export default function ProfileEditorScreen() {
         t('profile.editor.saved', 'Your profile has been updated.')
       );
 
-      logger.warn('[ProfileEditor] Profile saved successfully');
+      logger.log('[ProfileEditor] Profile saved successfully');
     } catch (err: any) {
       logger.error('[ProfileEditor] Failed to save profile:', err);
       const errorMsg = err?.message || 'Failed to save profile';

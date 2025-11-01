@@ -36,6 +36,7 @@ export const colors = {
 } as const;
 
 export type Palette = {
+  [x: string]: string;
   primary: string;
   background: string;
   text: string;
