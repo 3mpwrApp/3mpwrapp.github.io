@@ -13,6 +13,7 @@ import ChangelogGate from "../components/ChangelogGate";
 import DyslexiaVisualLayer from "../components/DyslexiaVisualLayer";
 import ErrorBoundary from "../components/ErrorBoundary";
 import GlobalAssistant from "../components/GlobalAssistant";
+import { SafeProviderWrapper } from "../components/SafeProviderWrapper";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
 import Header from "../components/ThemedHeader";
@@ -168,32 +169,36 @@ export default function RootLayout() {
                               <TelemetryInit />
                               <SecurityInit />
                               <CommunityPreload />
-                              <NotificationsProvider>
-                              <First7Provider>
-                                <Stack
-                                  screenOptions={{
-                                    animation: reduceMotion ? "none" : "default",
-                                  }}
-                                >
-                                  <Stack.Screen
-                                    name="profile"
-                                    options={{ headerShown: false }}
-                                  />
-                                  <Stack.Screen
-                                    name="(auth)"
-                                    options={{ headerShown: false }}
-                                  />
-                                  <Stack.Screen
-                                    name="(tabs)"
-                                    options={{ headerShown: false }}
-                                  />
-                                  <Stack.Screen
-                                    name="modal"
-                                    options={{ presentation: "modal" }}
-                                  />
-                                </Stack>
-                              </First7Provider>
-                              </NotificationsProvider>
+                              <SafeProviderWrapper providerName="NotificationsProvider">
+                                <NotificationsProvider>
+                                  <SafeProviderWrapper providerName="First7Provider">
+                                    <First7Provider>
+                                      <Stack
+                                        screenOptions={{
+                                          animation: reduceMotion ? "none" : "default",
+                                        }}
+                                      >
+                                        <Stack.Screen
+                                          name="profile"
+                                          options={{ headerShown: false }}
+                                        />
+                                        <Stack.Screen
+                                          name="(auth)"
+                                          options={{ headerShown: false }}
+                                        />
+                                        <Stack.Screen
+                                          name="(tabs)"
+                                          options={{ headerShown: false }}
+                                        />
+                                        <Stack.Screen
+                                          name="modal"
+                                          options={{ presentation: "modal" }}
+                                        />
+                                      </Stack>
+                                    </First7Provider>
+                                  </SafeProviderWrapper>
+                                </NotificationsProvider>
+                              </SafeProviderWrapper>
                             </ChangelogGate>
                           </TermsGate>
                           <GlobalAssistant />

@@ -63,67 +63,117 @@ export const First7Context = React.createContext<Ctx>({
 
 export function First7Provider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<First7State>(defaultState);
+  const [error, setError] = React.useState<Error | null>(null);
   
+  // Load persisted state on mount
   React.useEffect(() => { 
     (async()=>{ 
-      if (!AsyncStorage) return; 
-      try { 
+      try {
+        if (!AsyncStorage) return; 
         const raw = await AsyncStorage.getItem(KEY); 
-        if (raw) setState({ ...defaultState, ...JSON.parse(raw) }); 
-      } catch {} 
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          setState({ ...defaultState, ...parsed }); 
+        }
+      } catch (err) {
+        console.error('[First7Provider] Failed to load state:', err);
+        setError(err as Error);
+        // Silently fail - keep using default state
+      }
     })(); 
   }, []);
   
+  // Persist state whenever it changes
   const persist = React.useCallback(async(next: First7State)=>{ 
-    setState(next); 
-    if (!AsyncStorage) return; 
-    try{ 
+    try {
+      setState(next); 
+      if (!AsyncStorage) return;
       await AsyncStorage.setItem(KEY, JSON.stringify(next)); 
-    } catch {} 
-  },[]);
+    } catch (err) {
+      console.error('[First7Provider] Failed to persist state:', err);
+      // Don't crash - just log
+    }
+  }, []);
   
   const toggle = React.useCallback(async(id: First7StepId, done?: boolean)=>{
-    setState(prevState => {
-      const next = { 
-        ...prevState, 
-        completed: { 
-          ...prevState.completed, 
-          [id]: typeof done==='boolean'? done: !prevState.completed[id] 
-        } 
-      };
-      // Persist asynchronously
-      if (AsyncStorage) {
-        AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(()=>{});
-      }
-      return next;
-    });
+    try {
+      setState(prevState => {
+        const next = { 
+          ...prevState, 
+          completed: { 
+            ...prevState.completed, 
+            [id]: typeof done==='boolean'? done: !prevState.completed[id] 
+          } 
+        };
+        // Persist asynchronously in background
+        if (AsyncStorage) {
+          AsyncStorage.setItem(KEY, JSON.stringify(next)).catch((err: any) => {
+            console.error('[First7Provider] Toggle persist failed:', err);
+          });
+        }
+        return next;
+      });
+    } catch (err) {
+      console.error('[First7Provider] Toggle failed:', err);
+    }
   }, []);
   
   const start = React.useCallback(async()=>{ 
-    setState(prevState => {
-      const next = { ...prevState, startedAt: prevState.startedAt ?? Date.now(), dismissed: false };
-      if (AsyncStorage) {
-        AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(()=>{});
-      }
-      return next;
-    });
+    try {
+      setState(prevState => {
+        const next = { ...prevState, startedAt: prevState.startedAt ?? Date.now(), dismissed: false };
+        if (AsyncStorage) {
+          AsyncStorage.setItem(KEY, JSON.stringify(next)).catch((err: any) => {
+            console.error('[First7Provider] Start persist failed:', err);
+          });
+        }
+        return next;
+      });
+    } catch (err) {
+      console.error('[First7Provider] Start failed:', err);
+    }
   }, []);
   
   const reset = React.useCallback(async()=>{ 
-    await persist(defaultState); 
+    try {
+      await persist(defaultState); 
+    } catch (err) {
+      console.error('[First7Provider] Reset failed:', err);
+    }
   }, [persist]);
   
   const dismiss = React.useCallback(async()=>{ 
-    setState(prevState => {
-      const next = { ...prevState, dismissed: true };
-      if (AsyncStorage) {
-        AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(()=>{});
-      }
-      return next;
-    });
+    try {
+      setState(prevState => {
+        const next = { ...prevState, dismissed: true };
+        if (AsyncStorage) {
+          AsyncStorage.setItem(KEY, JSON.stringify(next)).catch((err: any) => {
+            console.error('[First7Provider] Dismiss persist failed:', err);
+          });
+        }
+        return next;
+      });
+    } catch (err) {
+      console.error('[First7Provider] Dismiss failed:', err);
+    }
   }, []);
   
-  return <First7Context.Provider value={{ state, toggle, start, reset, dismiss }}>{children}</First7Context.Provider>;
+  if (error) {
+    console.error('[First7Provider] Provider has error state - still rendering with default state');
+  }
+  
+  // Render state always - never throw
+  try {
+    return <First7Context.Provider value={{ state, toggle, start, reset, dismiss }}>{children}</First7Context.Provider>;
+  } catch (err) {
+    console.error('[First7Provider] Render error:', err);
+    // Emergency fallback - render children with empty provider
+    return (
+      <First7Context.Provider value={{ state: defaultState, toggle: async () => {}, start: async () => {}, reset: async () => {}, dismiss: async () => {} }}>
+        {children}
+      </First7Context.Provider>
+    );
+  }
 }
 
 export function useFirst7(){
