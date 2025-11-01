@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-01T12:18:33.232Z",
+  "lastUpdated": "2025-11-01T18:13:40.157Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 1035,
+      "totalPosts": 1060,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T12:18:25.963Z"
+      "lastSeen": "2025-11-01T18:13:33.637Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 1050,
+      "totalPosts": 1075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T12:18:27.532Z"
+      "lastSeen": "2025-11-01T18:13:35.033Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 1038,
+      "totalPosts": 1063,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T12:18:29.190Z"
+      "lastSeen": "2025-11-01T18:13:36.343Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 1050,
+      "totalPosts": 1075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T12:18:30.675Z"
+      "lastSeen": "2025-11-01T18:13:37.762Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 1050,
+      "totalPosts": 1075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T12:18:32.228Z"
+      "lastSeen": "2025-11-01T18:13:39.154Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "You know what's *really* sexy?\n\nCreating alt text for visual media you post 😘 \n\n#tip #lifetip #giveitup #alttext #accessibility #communityservice",
-      "author": "mmmtho.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Just like web performance work, accessibility winds up being less expensive the earlier you implement it. Build accessibility in from the start, rather than bolting it on - make it part of the process.\n\n@marcysutton.com #webperf #PerfNow #a11y",
-      "author": "riccardomargiotta.co.uk",
-      "engagement": 22,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "@perfnow.nl I have #a11y #accessiblity related stickers with me from @lloydi.com come find me if you’d like one\nCc @marcysutton.com",
-      "author": "letorey.co.uk",
-      "engagement": 31,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
-      "author": "byrneout44.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "#disabilityjustice  Our disabled comrades need your helping hands!",
-      "author": "alsvid.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Disability justice is economic justice. In 2023, 24.2% of disabled adults 18–64 lived in poverty vs 9.9% of nondisabled peers. That gap isn’t grit; it’s policy, access, bias. Enforce ADA, end subminimum wage, raise SSI asset limits, and fund real access. #DisabilityJustice #TruthBombTuesday ",
       "author": "mrskgrady.bsky.social",
@@ -277,6 +235,48 @@
       "text": "They personally don't need them \"yet\".\n\nThey're basically advocating against their older selves' needs.\n\nSlower reaction times, lower vision, arthritis, shorter memory, smaller attention span, you name it.\n\nThey'll come around one day and thank us when they can still play.\n\n#a11y #GamesAccessibility",
       "author": "tisseranddavid.bsky.social",
       "engagement": 28,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
+      "author": "byrneout44.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#disabilityjustice  Our disabled comrades need your helping hands!",
+      "author": "alsvid.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disability justice is economic justice. In 2023, 24.2% of disabled adults 18–64 lived in poverty vs 9.9% of nondisabled peers. That gap isn’t grit; it’s policy, access, bias. Enforce ADA, end subminimum wage, raise SSI asset limits, and fund real access. #DisabilityJustice #TruthBombTuesday ",
+      "author": "mrskgrady.bsky.social",
+      "engagement": 65,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "“Given how many people with disabilities rely on benefits from government programs, this shutdown is especially harmful for the disability community” - @mariatown.bsky.social, @aapd.com \n\n#DisabilityJustice \nwww.disabilityscoop.com/2025/10/28/g...",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "They personally don't need them \"yet\".\n\nThey're basically advocating against their older selves' needs.\n\nSlower reaction times, lower vision, arthritis, shorter memory, smaller attention span, you name it.\n\nThey'll come around one day and thank us when they can still play.\n\n#a11y #GamesAccessibility",
+      "author": "tisseranddavid.bsky.social",
+      "engagement": 31,
       "hashtag": "A11y"
     },
     {
