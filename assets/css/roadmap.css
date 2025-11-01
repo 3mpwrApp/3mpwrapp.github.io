@@ -13,12 +13,14 @@
   margin: 0 0 0.5rem;
   color: #333;
   font-size: 2rem;
+  text-align: center;
 }
 
 .timeline-subtitle {
   margin: 0 0 2rem;
   color: #555;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 /* Timeline Structure */
@@ -134,6 +136,7 @@
   margin: 0 0 0.5rem;
   color: #333;
   font-size: 1.5rem;
+  text-align: left;
 }
 
 .timeline-date {
@@ -141,6 +144,7 @@
   color: #666;
   font-weight: 600;
   font-size: 1rem;
+  text-align: left;
 }
 
 /* Progress Bar */
@@ -174,6 +178,7 @@
   font-size: 0.9rem;
   color: #0066CC;
   font-weight: 600;
+  text-align: left;
 }
 
 /* Timeline Features */
@@ -188,6 +193,7 @@
   padding-left: 1.75rem;
   position: relative;
   line-height: 1.6;
+  text-align: left;
 }
 
 .timeline-features li::before {
@@ -251,16 +257,19 @@
   margin: 0 0 0.75rem;
   color: #333;
   font-size: 1.1rem;
+  text-align: left;
 }
 
 .timeline-extra ul {
   margin: 0 0 1rem;
   padding-left: 1.5rem;
+  text-align: left;
 }
 
 .timeline-extra li {
   margin: 0.5rem 0;
   line-height: 1.6;
+  text-align: left;
 }
 
 .timeline-cta {

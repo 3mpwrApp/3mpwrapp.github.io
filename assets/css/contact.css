@@ -81,6 +81,7 @@
 .quick-link-icon {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .quick-link-card h3 {
@@ -88,6 +89,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #2c3e50;
+  text-align: center;
 }
 
 .quick-link-card p {
@@ -95,6 +97,7 @@
   font-size: 0.95rem;
   color: #34495e;
   opacity: 0.9;
+  text-align: left;
 }
 
 /* Contact Form Styles */
