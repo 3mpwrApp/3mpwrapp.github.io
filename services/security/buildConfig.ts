@@ -68,7 +68,7 @@ export function validateBuildSecurity(): boolean {
       }
     }
 
-    console.log('✅ Build security configuration validated');
+    // Build security configuration validated successfully
     return true;
   } catch (error) {
     console.error('❌ Build security validation failed:', error);
