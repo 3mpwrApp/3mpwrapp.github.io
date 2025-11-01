@@ -685,7 +685,7 @@ class SecurityTester {
   async runBuildSecurityAnalysis() {
     console.log('🏗️ Running build security analysis...');
 
-    const buildConfig = 'security/buildConfig.ts';
+    const buildConfig = 'services/security/buildConfig.ts';
     const passed = fs.existsSync(buildConfig);
 
     this.results.tests.buildSecurity = {

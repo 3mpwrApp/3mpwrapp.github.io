@@ -1,0 +1,52 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "tar": {
+      "name": "tar",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1109463,
+          "name": "tar",
+          "dependency": "tar",
+          "title": "node-tar has a race condition leading to uninitialized memory exposure",
+          "url": "https://github.com/advisories/GHSA-29xp-372q-xqph",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-362"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "=7.5.1"
+        }
+      ],
+      "effects": [],
+      "range": "7.5.1",
+      "nodes": [
+        "node_modules/tar"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 1,
+      "high": 0,
+      "critical": 0,
+      "total": 1
+    },
+    "dependencies": {
+      "prod": 989,
+      "dev": 734,
+      "optional": 66,
+      "peer": 11,
+      "peerOptional": 0,
+      "total": 1737
+    }
+  }
+}

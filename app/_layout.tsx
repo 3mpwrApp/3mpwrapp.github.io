@@ -59,7 +59,7 @@ import { ToastViewport } from "../utils/toast";
 
 export default function RootLayout() {
   // Ensure vector icon fonts are loaded before rendering UI
-  const [fontsLoaded] = useFonts({
+  const [fontsLoaded, fontsError] = useFonts({
     ...Ionicons.font,
     ...MaterialCommunityIcons.font,
   });
@@ -134,101 +134,120 @@ export default function RootLayout() {
     };
   }, []);
 
-  return (
-    // Avoid rendering until fonts are available to prevent missing glyphs (X boxes)
-    fontsLoaded ? (
-    <ErrorBoundary>
-    <I18nProvider>
-  <CognitiveAccessibilityProvider>
-    <DyslexiaProvider>
-    <A11ySettingsProvider>
-      <NeurodivergentProvider>
-        <SettingsProvider>
-          <CoachProgressProvider>
-          <ResilienceProvider>
-          <BookmarksProvider>
-          <ProfileLocalProvider>
-            <PrivacyProvider>
-              {/* Ã°Å¸â€Â¹ Firebase Auth Provider wraps the app */}
-              <AuthProvider>
-                <FavoritesProvider>
-                  <CountsProvider>
-                    <NetworkProvider>
-                      <RefreshProvider>
-                        <CommunityProvider>
-                          {/* Ensure a single root element (avoid Fragment) */}
-                          <BlocksProvider>
-                          <JurisdictionProvider>
-                        <View style={{ flex: 1 }}>
-                          <View>
-                            <OfflineBanner />
-                            <Header />
+  // Render with fallback if fonts fail to load
+  const shouldRender = fontsLoaded || fontsError;
+  
+  if (fontsError) {
+    console.error('[RootLayout] Font loading failed:', fontsError);
+  }
+
+  try {
+    return (
+      // Render even if fonts fail to load - prevent white screen
+      shouldRender ? (
+      <ErrorBoundary>
+      <SafeProviderWrapper providerName="RootProviderTree">
+      <I18nProvider>
+    <CognitiveAccessibilityProvider>
+      <DyslexiaProvider>
+      <A11ySettingsProvider>
+        <NeurodivergentProvider>
+          <SettingsProvider>
+            <CoachProgressProvider>
+            <ResilienceProvider>
+            <BookmarksProvider>
+            <ProfileLocalProvider>
+              <PrivacyProvider>
+                {/* Ã°Å¸â€Â¹ Firebase Auth Provider wraps the app */}
+                <AuthProvider>
+                  <FavoritesProvider>
+                    <CountsProvider>
+                      <NetworkProvider>
+                        <RefreshProvider>
+                          <CommunityProvider>
+                            {/* Ensure a single root element (avoid Fragment) */}
+                            <BlocksProvider>
+                            <JurisdictionProvider>
+                          <View style={{ flex: 1 }}>
+                            <View>
+                              <OfflineBanner />
+                              <Header />
+                            </View>
+                            <TermsGate>
+                              <ChangelogGate>
+                                <TelemetryInit />
+                                <SecurityInit />
+                                <CommunityPreload />
+                                <SafeProviderWrapper providerName="NotificationsProvider">
+                                  <NotificationsProvider>
+                                    <SafeProviderWrapper providerName="First7Provider">
+                                      <First7Provider>
+                                        <Stack
+                                          screenOptions={{
+                                            animation: reduceMotion ? "none" : "default",
+                                          }}
+                                        >
+                                          <Stack.Screen
+                                            name="profile"
+                                            options={{ headerShown: false }}
+                                          />
+                                          <Stack.Screen
+                                            name="(auth)"
+                                            options={{ headerShown: false }}
+                                          />
+                                          <Stack.Screen
+                                            name="(tabs)"
+                                            options={{ headerShown: false }}
+                                          />
+                                          <Stack.Screen
+                                            name="modal"
+                                            options={{ presentation: "modal" }}
+                                          />
+                                        </Stack>
+                                      </First7Provider>
+                                    </SafeProviderWrapper>
+                                  </NotificationsProvider>
+                                </SafeProviderWrapper>
+                              </ChangelogGate>
+                            </TermsGate>
+                            <GlobalAssistant />
+                            <DyslexiaVisualLayer />
+                            <ToastViewport />
+                            {/* Show footer only on web to avoid overlapping native tab bar */}
+                            {Platform.OS === 'web' ? <Footer /> : null}
                           </View>
-                          <TermsGate>
-                            <ChangelogGate>
-                              <TelemetryInit />
-                              <SecurityInit />
-                              <CommunityPreload />
-                              <SafeProviderWrapper providerName="NotificationsProvider">
-                                <NotificationsProvider>
-                                  <SafeProviderWrapper providerName="First7Provider">
-                                    <First7Provider>
-                                      <Stack
-                                        screenOptions={{
-                                          animation: reduceMotion ? "none" : "default",
-                                        }}
-                                      >
-                                        <Stack.Screen
-                                          name="profile"
-                                          options={{ headerShown: false }}
-                                        />
-                                        <Stack.Screen
-                                          name="(auth)"
-                                          options={{ headerShown: false }}
-                                        />
-                                        <Stack.Screen
-                                          name="(tabs)"
-                                          options={{ headerShown: false }}
-                                        />
-                                        <Stack.Screen
-                                          name="modal"
-                                          options={{ presentation: "modal" }}
-                                        />
-                                      </Stack>
-                                    </First7Provider>
-                                  </SafeProviderWrapper>
-                                </NotificationsProvider>
-                              </SafeProviderWrapper>
-                            </ChangelogGate>
-                          </TermsGate>
-                          <GlobalAssistant />
-                          <DyslexiaVisualLayer />
-                          <ToastViewport />
-                          {/* Show footer only on web to avoid overlapping native tab bar */}
-                          {Platform.OS === 'web' ? <Footer /> : null}
-                        </View>
-                        </JurisdictionProvider>
-                        </BlocksProvider>
-                        </CommunityProvider>
-                      </RefreshProvider>
-                    </NetworkProvider>
-                  </CountsProvider>
-                </FavoritesProvider>
-              </AuthProvider>
-            </PrivacyProvider>
-          </ProfileLocalProvider>
-          </BookmarksProvider>
-          </ResilienceProvider>
-          </CoachProgressProvider>
-        </SettingsProvider>
-        </NeurodivergentProvider>
-      </A11ySettingsProvider>
-    </DyslexiaProvider>
-    </CognitiveAccessibilityProvider>
-    </I18nProvider>
-    </ErrorBoundary>
-  ) : null
-  );
+                          </JurisdictionProvider>
+                          </BlocksProvider>
+                          </CommunityProvider>
+                        </RefreshProvider>
+                      </NetworkProvider>
+                    </CountsProvider>
+                  </FavoritesProvider>
+                </AuthProvider>
+              </PrivacyProvider>
+            </ProfileLocalProvider>
+            </BookmarksProvider>
+            </ResilienceProvider>
+            </CoachProgressProvider>
+          </SettingsProvider>
+          </NeurodivergentProvider>
+        </A11ySettingsProvider>
+      </DyslexiaProvider>
+      </CognitiveAccessibilityProvider>
+      </I18nProvider>
+      </SafeProviderWrapper>
+      </ErrorBoundary>
+    ) : null
+    );
+  } catch (error) {
+    console.error('[RootLayout] Render error:', error);
+    // Emergency fallback - render a basic loading screen
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
 }
 
 function TelemetryInit() {

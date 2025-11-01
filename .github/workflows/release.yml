@@ -2,12 +2,8 @@ name: Release
 
 on:
   push:
-    branches: [main]
-    paths-ignore:
-      - '**.md'
-      - 'docs/**'
-      - '.github/**'
-      - '!.github/workflows/release.yml'
+    tags:
+      - 'v*'
   workflow_dispatch:
     inputs:
       version:

@@ -202,7 +202,7 @@ function validateBYOCMode() {
 function validateBuildSecurity() {
   console.log('🏗️ Validating build security...');
   
-  const buildConfig = 'security/buildConfig.ts';
+  const buildConfig = 'services/security/buildConfig.ts';
   if (fs.existsSync(buildConfig)) {
     const content = fs.readFileSync(buildConfig, 'utf8');
     

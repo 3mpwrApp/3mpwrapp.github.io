@@ -48,6 +48,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
+      "usesCleartextTraffic": false,
       "package": "com.app3mpwr.app3mpwr",
       "allowBackup": false,
       "permissions": [
