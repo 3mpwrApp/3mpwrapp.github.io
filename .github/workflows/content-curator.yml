@@ -134,7 +134,7 @@ jobs:
         run: |
           echo "⏳ Waiting for Jekyll to build and deploy..."
           echo "This ensures blog posts are live before social media posts go out"
-          sleep 180  # Wait 3 minutes for GitHub Pages + Cloudflare Pages deployment
+          sleep 600  # Wait 10 minutes for GitHub Pages + Cloudflare Pages deployment
           echo "✅ Deployment should be complete"
 
       - name: Post to social media

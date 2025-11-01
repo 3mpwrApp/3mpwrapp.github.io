@@ -783,31 +783,28 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
       content += `3. **Find the feature** - Look for "${feature.name}" in the accessibility toolbar or main navigation\n`;
       content += `4. **Start using it** - No setup needed, just click and go\n\n`;
     } else {
-      content += `**Note: 3mpwrApp is currently in Phase 1 - Closed Beta Testing**\n\n`;
-      content += `${feature.name} is part of the mobile app currently in development. To access this feature:\n\n`;
-      content += `1. **Join the beta** - [Sign up for beta testing](/beta/) to get early access\n`;
-      content += `2. **Get invited** - Beta invitations are sent in phases as features are ready\n`;
-      content += `3. **Download the app** - iOS and Android (beta testers only)\n`;
-      content += `4. **Complete setup** - First-time setup takes about 5-10 minutes\n`;
-      content += `5. **Find the feature** - Look for "${feature.name}" in your app\n`;
-      content += `6. **Follow the guide** - In-app tutorials walk you through each step\n\n`;
-      content += `_Not a beta tester yet? The app is in active development. [Join our beta program](/beta/) to get access when this feature is ready._\n\n`;
+      content += `**Note: 3mpwrApp is currently in Phase 1 - Closed Beta Development**\n\n`;
+      content += `${feature.name} is part of the mobile app currently in development. The app is not yet available to the public.\n\n`;
+      content += `**To be notified when the app launches:**\n\n`;
+      content += `1. **Express interest** - [Sign up for updates](/beta/) to be notified when the app is ready\n`;
+      content += `2. **Stay informed** - Get notified when features are released and testing begins\n`;
+      content += `3. **Early access** - Be among the first to know when the app becomes available\n\n`;
+      content += `_The app is in active development. [Join our mailing list](/beta/) to be notified when ${feature.name} and other features launch._\n\n`;
     }
 
     content += `---\n\n## Learn More\n\n`;
     content += `For complete information about ${feature.name} and all other features:\n\n`;
     content += `- 📖 [Read the Complete User Guide](/user-guide/#${feature.userGuideSection})\n`;
     content += `- ✨ [Explore All Features](/features/)\n`;
-    content += `- 🧪 [Join Beta Testing](/beta/)\n`;
     content += `- 📬 [Subscribe to Updates](/newsletter/)\n\n`;
 
     content += `---\n\n## About 3mpwrApp\n\n`;
     content += `3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.\n\n`;
     
     if (feature.websiteFeature) {
-      content += `**The website is live now** at [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/) with many accessibility features. The mobile app is in **Phase 1 - Closed Beta Testing** with new features being added regularly.\n\n`;
+      content += `**The website is live now** at [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/) with many accessibility features. The mobile app is in **Phase 1 - Closed Beta Development** with new features being added regularly.\n\n`;
     } else {
-      content += `**The mobile app is currently in Phase 1 - Closed Beta Testing.** Join the [beta program](/beta/) to get early access as features are released.\n\n`;
+      content += `**The mobile app is currently in Phase 1 - Closed Beta Development.** [Subscribe to updates](/newsletter/) to be notified when features are released.\n\n`;
     }
     
     content += `**All features are:**\n`;
