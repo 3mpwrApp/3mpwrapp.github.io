@@ -129,7 +129,7 @@ export default function First7Screen(){
                   borderRadius: 10, 
                   borderWidth: 1, 
                   borderColor: state.completed[s.id as Step] ? palette.success || palette.primary : palette.muted, 
-                  backgroundColor: state.completed[s.id as Step] ? palette.successBg || palette.card : palette.surface 
+                  backgroundColor: state.completed[s.id as Step] ? (palette.success || palette.primary) + '20' : palette.surface 
                 }}
               >
                 <GapView gap={4} style={{ flexDirection: 'row', alignItems: 'center' }}>

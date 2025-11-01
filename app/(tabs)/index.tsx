@@ -15,6 +15,45 @@ import { useTextScale } from '../../theme/typography';
 import { createTextStyles } from '../../theme/typography.enhanced';
 import { useAppPalette } from '../../theme/usePalette';
 
+// Safe wrapper for optional components - prevents crashes from non-critical features
+const SafeOptionalComponent = ({ children, fallback = null }: { children: React.ReactNode; fallback?: React.ReactNode }) => {
+  const [error, setError] = React.useState(false);
+  
+  if (error) return <>{fallback}</>;
+  
+  return (
+    <ErrorBoundaryWrapper onError={() => setError(true)}>
+      {children}
+    </ErrorBoundaryWrapper>
+  );
+};
+
+class ErrorBoundaryWrapper extends React.Component<
+  { children: React.ReactNode; onError: () => void },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; onError: () => void }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error) {
+    console.error('[Home] Optional component error:', error);
+    this.props.onError();
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return null;
+    }
+    return this.props.children;
+  }
+}
+
 // Memoize subcomponents for better performance
 const RecentPrompts = React.memo(() => {
   const palette = useAppPalette();
@@ -279,17 +318,24 @@ const HomeScreen = React.memo(() => {
         </A11yPressable>
       </Link>
       
-      {/* Disability Wizard - Personalized Recommendations */}
-      <DisabilityWizard 
-        maxSuggestions={3}
-        title={t('wizard.homeTitle', 'Recommended For You')}
-        subtitle={t('wizard.homeSubtitle', 'Based on your needs and energy level')}
-        showReasons
-      />
+      {/* Disability Wizard - Personalized Recommendations (optional feature) */}
+      <SafeOptionalComponent>
+        <DisabilityWizard 
+          maxSuggestions={3}
+          title={t('wizard.homeTitle', 'Recommended For You')}
+          subtitle={t('wizard.homeSubtitle', 'Based on your needs and energy level')}
+          showReasons
+        />
+      </SafeOptionalComponent>
       
       <RecentPrompts />
       <BetaTestersQuickLink />
-      <HomeGuide />
+      
+      {/* Home Guide - optional feature */}
+      <SafeOptionalComponent>
+        <HomeGuide />
+      </SafeOptionalComponent>
+      
       <Text 
         style={[textStyles.caption, { opacity: 0.7, marginTop: 12 }]}
         maxFontSizeMultiplier={MAX_FONT_SCALE}

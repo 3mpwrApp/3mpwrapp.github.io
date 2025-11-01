@@ -63,15 +63,66 @@ export const First7Context = React.createContext<Ctx>({
 
 export function First7Provider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<First7State>(defaultState);
-  React.useEffect(() => { (async()=>{ if (!AsyncStorage) return; try { const raw = await AsyncStorage.getItem(KEY); if (raw) setState({ ...defaultState, ...JSON.parse(raw) }); } catch {} })(); }, []);
-  const persist = React.useCallback(async(next: First7State)=>{ setState(next); if (!AsyncStorage) return; try{ await AsyncStorage.setItem(KEY, JSON.stringify(next)); } catch {} },[]);
+  
+  React.useEffect(() => { 
+    (async()=>{ 
+      if (!AsyncStorage) return; 
+      try { 
+        const raw = await AsyncStorage.getItem(KEY); 
+        if (raw) setState({ ...defaultState, ...JSON.parse(raw) }); 
+      } catch {} 
+    })(); 
+  }, []);
+  
+  const persist = React.useCallback(async(next: First7State)=>{ 
+    setState(next); 
+    if (!AsyncStorage) return; 
+    try{ 
+      await AsyncStorage.setItem(KEY, JSON.stringify(next)); 
+    } catch {} 
+  },[]);
+  
   const toggle = React.useCallback(async(id: First7StepId, done?: boolean)=>{
-    const next = { ...state, completed: { ...state.completed, [id]: typeof done==='boolean'? done: !state.completed[id] } };
-    await persist(next);
-  }, [state, persist]);
-  const start = React.useCallback(async()=>{ const next = { ...state, startedAt: state.startedAt ?? Date.now(), dismissed: false }; await persist(next); }, [state, persist]);
-  const reset = React.useCallback(async()=>{ await persist(defaultState); }, [persist]);
-  const dismiss = React.useCallback(async()=>{ const next = { ...state, dismissed: true }; await persist(next); }, [state, persist]);
+    setState(prevState => {
+      const next = { 
+        ...prevState, 
+        completed: { 
+          ...prevState.completed, 
+          [id]: typeof done==='boolean'? done: !prevState.completed[id] 
+        } 
+      };
+      // Persist asynchronously
+      if (AsyncStorage) {
+        AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(()=>{});
+      }
+      return next;
+    });
+  }, []);
+  
+  const start = React.useCallback(async()=>{ 
+    setState(prevState => {
+      const next = { ...prevState, startedAt: prevState.startedAt ?? Date.now(), dismissed: false };
+      if (AsyncStorage) {
+        AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(()=>{});
+      }
+      return next;
+    });
+  }, []);
+  
+  const reset = React.useCallback(async()=>{ 
+    await persist(defaultState); 
+  }, [persist]);
+  
+  const dismiss = React.useCallback(async()=>{ 
+    setState(prevState => {
+      const next = { ...prevState, dismissed: true };
+      if (AsyncStorage) {
+        AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(()=>{});
+      }
+      return next;
+    });
+  }, []);
+  
   return <First7Context.Provider value={{ state, toggle, start, reset, dismiss }}>{children}</First7Context.Provider>;
 }
 
