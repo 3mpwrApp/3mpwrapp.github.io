@@ -5,10 +5,10 @@ import React, { useState } from "react";
 import { Alert, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../components/A11yPressable";
+import { useAuth } from "../../context/AuthContext";
 import { auth } from "../../firebase/config";
 import { MAX_FONT_SCALE } from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
-import { useAuth } from "../../store/auth";
 import { useAppPalette } from "../../theme/usePalette";
 
 export default function LoginScreen() {
@@ -16,7 +16,7 @@ export default function LoginScreen() {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const styles = React.useMemo(() => createStyles(palette), [palette]);
-  const { continueAnonymously } = useAuth();
+  const { signInGuest } = useAuth();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -65,7 +65,7 @@ export default function LoginScreen() {
   const handleGuestMode = async () => {
     try {
       setWorking(true);
-      await continueAnonymously();
+      await signInGuest();
       router.replace("/(tabs)" as Href);
     } catch {
       Alert.alert(t("common.errorTitle", "Error"), t("auth.guestModeFailed", "Failed to enter guest mode"));

@@ -93,7 +93,7 @@ export default function WhatsNewScreen() {
     }));
   }, [activity]);
 
-  // Mark as seen when visiting this tab
+  // Mark as seen when visiting this tab and refresh content
   useFocusEffect(
     React.useCallback(() => {
       (async () => {
@@ -101,6 +101,15 @@ export default function WhatsNewScreen() {
           const mod = await import("@react-native-async-storage/async-storage");
           const AsyncStorage = mod.default;
           await AsyncStorage.setItem("whatsnew:lastSeen:v1", new Date().toISOString());
+          
+          // Refresh items from local storage on focus
+          const local = await getLocalWhatsNew();
+          const { current } = await getWhatsNewSplit();
+          if (current?.length) {
+            setItems(current);
+          } else if (local.length) {
+            setItems([...local, ...defaultWN]);
+          }
         } catch {}
       })();
     }, []),
@@ -201,17 +210,20 @@ export default function WhatsNewScreen() {
         accessibilityRole="button"
         accessibilityLabel={t("whatsNew.markAllReadA11y", "Mark all as read")}
         onPress={async () => {
-          const newest = items.reduce(
+          // Get the newest date from combined list (activity + items)
+          const combined = [...activityItems, ...items];
+          const newest = combined.reduce(
             (acc, cur) => Math.max(acc, new Date(cur.date).getTime()),
             0,
           );
           const AsyncStorage = AsyncStorageRef.current;
           if (AsyncStorage && newest) {
+            const newSeenDate = new Date(newest).toISOString();
             await AsyncStorage.setItem(
               "whatsnew:lastSeen:v1",
-              new Date(newest).toISOString(),
+              newSeenDate,
             );
-            setLastSeen(new Date(newest).toISOString());
+            setLastSeen(newSeenDate);
           }
         }}
         style={({ pressed }) => [styles.button, pressed && { opacity: 0.7 }]}

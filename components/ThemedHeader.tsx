@@ -3,14 +3,14 @@ import * as Linking from "expo-linking";
 import { router, usePathname, type Href } from "expo-router";
 import React from "react";
 import {
-  Image,
-  Pressable,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
+    Image,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { HIT_SLOP_8, touchTarget } from "../constants/A11Y";
 import { useAuth } from "../context/AuthContext";
@@ -94,7 +94,8 @@ MenuSection.displayName = 'MenuSection';
 
 const ThemedHeader = React.memo(() => {
   const palette = useAppPalette();
-  const styles = createStyles(palette);
+  const insets = useSafeAreaInsets();
+  const styles = createStyles(palette, insets);
   const { state } = useFavorites();
   const { counts } = useCounts();
   const { refreshAll } = useRefresh();
@@ -134,7 +135,7 @@ const ThemedHeader = React.memo(() => {
     setMenuOpen(false);
   }, [pathname]);
   return (
-    <SafeAreaView style={styles.container} accessibilityRole="header">
+    <View style={styles.container} accessibilityRole="header">
       {/* Brand */}
       <Pressable
         style={styles.brand}
@@ -427,7 +428,7 @@ const ThemedHeader = React.memo(() => {
           </View>
         </>
       )}
-    </SafeAreaView>
+    </View>
   );
 });
 
@@ -435,14 +436,15 @@ ThemedHeader.displayName = 'ThemedHeader';
 
 export default ThemedHeader;
 
-function createStyles(palette: Palette) {
+function createStyles(palette: Palette, insets: { top: number; right: number; bottom: number; left: number }) {
   return StyleSheet.create({
     container: {
       backgroundColor: palette.background,
       borderBottomWidth: StyleSheet.hairlineWidth,
       borderBottomColor: palette.muted,
+      paddingTop: Math.max(insets.top, 10), // Ensure minimum padding, use safe area top
       paddingHorizontal: 12,
-      paddingVertical: 10,
+      paddingBottom: 10,
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
@@ -463,7 +465,7 @@ function createStyles(palette: Palette) {
     menuWrap: {
       position: "absolute",
       right: 12,
-      top: 52,
+      top: Math.max(insets.top, 10) + 42, // Dynamic positioning based on safe area
       backgroundColor: palette.surface ?? palette.background,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,

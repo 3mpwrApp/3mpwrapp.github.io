@@ -65,6 +65,7 @@ export default function TabsLayout() {
             tabBarIcon: ({ color, size, focused }) => (
               <Ionicons name={focused ? "heart" : "heart-outline"} color={color} size={size + 2} />
             ),
+            href: "/wellness" as any,
           }}
         />
         
@@ -78,6 +79,7 @@ export default function TabsLayout() {
             tabBarIcon: ({ color, size, focused }) => (
               <Ionicons name={focused ? "briefcase" : "briefcase-outline"} color={color} size={size + 2} />
             ),
+            href: "/resources" as any,
           }}
         />
 
@@ -91,6 +93,7 @@ export default function TabsLayout() {
             tabBarIcon: ({ color, size, focused }) => (
               <Ionicons name={focused ? "ribbon" : "ribbon-outline"} color={color} size={size + 2} />
             ),
+            href: "/advocacy" as any,
           }}
         />
 

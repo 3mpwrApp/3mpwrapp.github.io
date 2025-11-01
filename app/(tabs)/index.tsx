@@ -198,6 +198,13 @@ const HomeScreen = React.memo(() => {
   const titleRef = React.useRef<Text>(null);
   const [hasError, setHasError] = React.useState(false);
   
+  // Debug logging to track rendering
+  React.useEffect(() => {
+    console.log('[HomeScreen] Mounted successfully');
+    console.log('[HomeScreen] Palette:', palette);
+    console.log('[HomeScreen] TextScale factor:', factor);
+  }, [palette, factor]);
+  
   // Announce page load and focus title for screen readers
   useAnnounceOnMount(t('home.announcement', 'Home screen loaded. Beta features available.'));
   useFocusOnRefOnMount(titleRef);
@@ -217,6 +224,7 @@ const HomeScreen = React.memo(() => {
   }, []);
   
   if (hasError) {
+    console.log('[HomeScreen] Rendering error fallback');
     return (
       <ResponsiveScreenWrapper testID="home-screen-error">
         <Text 
@@ -242,6 +250,8 @@ const HomeScreen = React.memo(() => {
       </ResponsiveScreenWrapper>
     );
   }
+  
+  console.log('[HomeScreen] Rendering main content');
   
   return (
     <ResponsiveScreenWrapper 
