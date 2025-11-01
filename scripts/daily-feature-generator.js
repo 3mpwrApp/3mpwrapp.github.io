@@ -822,7 +822,12 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
   generateSocialPost(feature, articleUrl) {
     const fullUrl = `https://3mpwrapp.pages.dev${articleUrl}`;
     
-    const availability = feature.websiteFeature ? '🌐 Live on website now!' : '📱 Coming in app beta';
+    const availability = feature.websiteFeature ? '🌐 Live on website now!' : '📱 Coming in app (in development)';
+    
+    // Add context about who it's for
+    const audienceContext = feature.websiteFeature 
+      ? 'Try it now at 3mpwrapp.pages.dev - no download needed!' 
+      : 'Sign up for updates to be notified when available.';
     
     // Short version for Twitter/Bluesky (< 280 chars with link)
     const shortPost = `🌟 Feature Spotlight: ${feature.name}
@@ -844,6 +849,8 @@ ${availability}
 
 Key highlights:
 ${feature.highlights.slice(0, 2).map(h => `✓ ${h}`).join('\n')}
+
+${audienceContext}
 
 Read the full article: ${fullUrl}
 
