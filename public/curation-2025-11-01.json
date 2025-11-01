@@ -1,99 +1,176 @@
 {
   "date": "2025-11-01",
-  "timestamp": "2025-11-01T09:19:37.881Z",
-  "count": 13,
+  "timestamp": "2025-11-01T15:21:50.858Z",
+  "count": 24,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Canada's economy shrank by 0.3% in August",
-      "link": "https://www.cbc.ca/news/business/canada-gdp-august-9.6961337?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/76b3b2f4-63c2-431b-a5e1-74d9bd2830b9,1761914484086/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C396%2C7597%2C4273%29%3BResize%3D%28620%29' alt='A worker walks in front of a large plant.' width='620' height='349' title='The smelter of Glencore subsidiary Canadian Electrolytic Zinc Limited is seen in Valleyfield, Quebec on March 17, 2025.'/><p>Canada's economy shrank in August against widespread expectations of no growth, Statistics Canada data showed on Friday, but an advanced estimate pointed out the economy might escape a recession in the third quarter.</p>",
-      "score": 21.2,
-      "pubDate": "Fri, 31 Oct 2025 09:03:12 EDT"
+      "title": "Manitoba Government's Connected Approach Supporting Primary Care, Faster Discharges: CIHI Report",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71279",
+      "description": "",
+      "score": 24,
+      "pubDate": "Thu, 23 Oct 2025 16:50:00 CDT"
     },
     {
-      "title": "Canada announces first critical minerals projects under G7 partnership",
-      "link": "https://globalnews.ca/news/11505563/critical-minerals-canada-g7-projects/",
-      "description": "The 25 initiatives include purchase agreements for a Quebec graphite mine and investments to scale up a rare earth elements refinery in Ontario.",
-      "score": 15.5,
-      "pubDate": "Fri, 31 Oct 2025 22:36:13 +0000"
+      "title": "Manitoba Government Provincial Nominee Program Invites 328 Health-Care Workers to Build Careers in Manitoba",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71157",
+      "description": "",
+      "score": 24,
+      "pubDate": "Tue, 14 Oct 2025 10:58:00 CDT"
     },
     {
-      "title": "At Issue | Canada-U.S. trade negotiations go off the rails",
-      "link": "https://www.cbc.ca/player/play/9.6961043?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/67911f4d-03a0-44df-a0f4-ce26c6b6a420,1761860029512/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A man in a suit' width='620' height='349' title='Prime Minister Mark Carney is seen during a bilateral meeting with South Korean President Lee Jae Myung in Gyeongju, South Korea, Thursday Oct. 30, 2025. '/><p>At Issue this week: Canada-U.S. trade negotiations go off the rails after an anti-tariff ad angers Trump. Parties accuse each other of trying to force an election over the budget. And was Alberta justified in using the notwithstanding clause to get teachers back to work?</p>",
-      "score": 14,
-      "pubDate": "Thu, 30 Oct 2025 20:59:50 EDT"
+      "title": "What's In Your Fridge: Josh Santos of VIFF's Composer Filmmaker Accelerator program",
+      "link": "https://www.straight.com/music/whats-in-your-fridge-josh-santos-of-viffs-composer-filmmaker-accelerator-program",
+      "description": "<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href=\"http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up for our free newsletter</a>. </h3><p data-slot-rendered-content=\"true\"><em></em></p>",
+      "score": 13.5,
+      "pubDate": "2025-10-04T10:00:41-07:00"
     },
     {
-      "title": "Carney and Xi agree to tackle 'irritants' in Canada-China relationship",
-      "link": "https://www.cbc.ca/news/world/canada-china-carney-trade-talks-9.6961276?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/fa5f0d96-32a2-43c4-9fce-1cc54e0916e5,1761911918365/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Carney calls meeting with Xi a 'turning point' in Canada-China relations' width='620' height='349' title='Carney calls meeting with Xi a 'turning point' in Canada-China relations'/><p></p>",
-      "score": 9.5,
-      "pubDate": "Fri, 31 Oct 2025 07:15:58 EDT"
-    },
-    {
-      "title": "Conservative, NDP caucuses weighing a budget vote that could trigger an election: sources",
-      "link": "https://www.cbc.ca/news/politics/conservative-ndp-budget-election-vote-9.6960615?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/db26cde7-257f-42c3-be48-16dbff75ed40,1761856795184/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C307%2C7314%2C4114%29%3BResize%3D%28620%29' alt='A man in a suit standing in the House of Commons.' width='620' height='349' title='Leader of the Conservative Party Pierre Poilievre rises in the House of Commons during Question Period on Parliament Hill in Ottawa, on Tuesday, Oct. 28, 2025.'/><p>The Conservative and NDP caucuses are grappling with what to do about the upcoming federal budget and whether they want to be part of an effort to trigger an election by voting it down, multiple sources told CBC News.</p>",
+      "title": "Manitoba Government Making Continued Progress Through Investment to Hip and Knee Surgeries at Selkirk Regional Health Centre",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71198",
+      "description": "",
       "score": 12,
-      "pubDate": "Thu, 30 Oct 2025 16:31:12 EDT"
+      "pubDate": "Thu, 16 Oct 2025 10:11:00 CDT"
     },
     {
-      "title": "Summerland B.C. winery says imported fruit is hurting the local market",
-      "link": "https://globalnews.ca/news/11505531/summerland-bc-winery-imported-fruit-hurting-local-market/",
-      "description": "“There are still quite a bit of grapes left on the vines,” Gill said. “We’re still getting inquiries, we’re turning people away at this point.”",
-      "score": 7.5,
-      "pubDate": "Sat, 01 Nov 2025 02:28:10 +0000"
+      "title": "Manitoba Government Opens Renewed Security Rebate Program For Homeowners and Tenants",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71057",
+      "description": "",
+      "score": 12,
+      "pubDate": "Wed, 08 Oct 2025 10:00:00 CDT"
     },
     {
-      "title": "Penticton accused of too little public consultation on proposed tiny home development",
-      "link": "https://globalnews.ca/news/11505440/city-of-penticton-consultation-tiny-homes-development-unhoused-population/",
-      "description": "The City of Penticton wants to build a tiny home community for the unhoused population on a piece of land along Dartmouth Road.",
+      "title": "World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year",
+      "link": "https://www.straight.com/food/world-culinary-awards-names-baan-lao-best-restaurant-in-canada-for-second-straight-year",
+      "description": "The Richmond restaurant took home the honours once again.",
+      "score": 9.5,
+      "pubDate": "2025-10-23T15:47:58-07:00"
+    },
+    {
+      "title": "Q&amp;A: Director Alireza Khatami on making Canada’s Oscar submission, The Things You Kill",
+      "link": "https://www.straight.com/movies/qa-director-alireza-khatami-on-making-canadas-oscar-submission-things-you-kill",
+      "description": "“I showed the depth of my darkness, hoping people would look at their own.”",
+      "score": 9.5,
+      "pubDate": "2025-10-10T11:13:20-07:00"
+    },
+    {
+      "title": "Manitoba Government Opens New Permanent Rest Stop on Provincial Trunk Highway 6",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71281",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Fri, 24 Oct 2025 13:53:00 CDT"
+    },
+    {
+      "title": "Manitoba Government Invests More Than $1.2 Million For 24 Interlake Community Development Projects",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71117",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Fri, 10 Oct 2025 11:00:00 CDT"
+    },
+    {
+      "title": "Manitoba Government Invests More Than $1.2 Million in Community Development Projects for Northern Manitoba",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71058",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Wed, 08 Oct 2025 10:26:00 CDT"
+    },
+    {
+      "title": "Manitoba Government Opens Downtown Resource Corner at Millennium Library",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71280",
+      "description": "",
       "score": 8.5,
-      "pubDate": "Sat, 01 Nov 2025 02:28:34 +0000"
+      "pubDate": "Fri, 24 Oct 2025 11:43:00 CDT"
     },
     {
-      "title": "General strike in Alberta possible after back-to-work legislation",
-      "link": "https://rabble.ca/labour/general-strike-in-alberta-possible-after-back-to-work-legislation/",
+      "title": "Manitoba Supports Families with New Parenting Website",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71278",
+      "description": "",
+      "score": 8.5,
+      "pubDate": "Wed, 22 Oct 2025 12:30:00 CDT"
+    },
+    {
+      "title": "Manitoba Protects Indigenous Languages with New Teaching Degree Programs",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71237",
+      "description": "",
+      "score": 9,
+      "pubDate": "Mon, 20 Oct 2025 11:12:00 CDT"
+    },
+    {
+      "title": "Construction of $10-A-Day Child-Care Centre Begins at Riverview Health Centre",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71118",
+      "description": "",
+      "score": 9,
+      "pubDate": "Fri, 10 Oct 2025 13:26:00 CDT"
+    },
+    {
+      "title": "Photos: Matt Maltese caresses the keys at the Vogue Theatre",
+      "link": "https://www.straight.com/music/photos-matt-maltese-caresses-keys-at-vogue-theatre",
+      "description": "A multi-hyphenate British-Canadian singer-songwriter.",
+      "score": 9,
+      "pubDate": "2025-10-20T16:00:00-07:00"
+    },
+    {
+      "title": "Manitoba Grants Support Newcomers, Low-Income Manitobans Through Endowment Fund",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71257",
       "description": "",
       "score": 7.5,
-      "pubDate": "Thu, 30 Oct 2025 19:24:01 +0000"
+      "pubDate": "Tue, 21 Oct 2025 11:00:00 CDT"
     },
     {
-      "title": "‘No change to property sale procedures' B.C. gov't says of Richmond homes in Cowichan land ruling",
-      "link": "https://globalnews.ca/news/11505545/property-sale-procedures-bc-govt-richmond-homes-cowichan-land-ruling/",
-      "description": "Debate over the ruling was reignited earlier this month after the City of Richmond sent a letter to a group of 150 property owners in the land claim area.",
-      "score": 4,
-      "pubDate": "Sat, 01 Nov 2025 02:27:46 +0000"
+      "title": "Manitoba Government Acts to Protect Democracy and Fundamental Freedoms",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71199",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Thu, 16 Oct 2025 13:42:00 CDT"
     },
     {
-      "title": "‘I've kind of done it all': Zamboni driver from Halifax retiring after 50 years",
-      "link": "https://globalnews.ca/news/11505039/halifax-zamboni-driver-retirement-kelly-saunders-mooseheads-scotiabank/",
-      "description": "Kelly Saunders is hanging up the keys after a multi-decade career, which saw him play an integral role in some of Halifax's biggest moments on ice.",
+      "title": "Manitoba Government Welcomes Review of North Dakota Dairy Projects Near Red River",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71097",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Thu, 09 Oct 2025 14:13:00 CDT"
+    },
+    {
+      "title": "Manitoba Government Extends Rent Freeze for Agricultural Crown Lands",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71059",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 08 Oct 2025 13:15:00 CDT"
+    },
+    {
+      "title": "Manitoba Government Invests $1.2 Million in Mineral Exploration",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71060",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 08 Oct 2025 12:10:00 CDT"
+    },
+    {
+      "title": "Manitoba Government's U.S. Trade Council to Ensure Province's Voice Heard During Trade Negotiations",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71017",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Tue, 07 Oct 2025 11:30:00 CDT"
+    },
+    {
+      "title": "You Nearly Missed: Ada Lea promises to inspire at LanaLou's in Vancouver",
+      "link": "https://www.straight.com/music/you-nearly-missed-ada-lea-promises-to-inspire-at-lanalous-in-vancouver",
+      "description": "\"Because anyone can, you can also do it.\"",
+      "score": 5,
+      "pubDate": "2025-10-23T14:25:06-07:00"
+    },
+    {
+      "title": "ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December!",
+      "link": "https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december",
+      "description": "\"We're there to bring joy, connect people, and engage with our audience.\"",
+      "score": 5,
+      "pubDate": "2025-10-22T10:25:20-07:00"
+    },
+    {
+      "title": "With Día de Muertos, Mexican Quebecers keep traditions — and the dead — alive",
+      "link": "https://www.cbc.ca/news/canada/montreal/mexican-quebecers-day-of-the-dead-9.6959234?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/cbf769b0-b689-433f-99ab-444149df1887,1761948564265/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C126%2C1859%2C1045%29%3BResize%3D%28620%29' alt='Karla Frey' width='620' height='349' title=''/><p>During this multi-day commemoration, Mexicans and the diaspora reflect on life, death, and memories they shared with their late loved ones. Some Mexican Quebecers have channeled that grief to share their culture with wider audiences. </p>",
       "score": 4.5,
-      "pubDate": "Sat, 01 Nov 2025 04:00:25 +0000"
-    },
-    {
-      "title": "Saskatoon police officer faces assault charge after ‘off-duty social gathering'",
-      "link": "https://globalnews.ca/news/11505591/saskatoon-officer-assault-charge/",
-      "description": "A Saskatoon police officer is facing an assault charge after the Saskatchewan police watchdog's investigation into an off-duty social gathering from last fall.",
-      "score": 2.5,
-      "pubDate": "Sat, 01 Nov 2025 00:49:33 +0000"
-    },
-    {
-      "title": "A Guide to the Modern-Day Scaries of 2025",
-      "link": "https://thetyee.ca/Culture/2025/10/31/Definitive-Guide-Modern-Day-Scaries-2025/",
-      "description": "Here’s a spooky list of the real-life frights that keep us up at night.",
-      "score": 1,
-      "pubDate": "Sat, 01 Nov 2025 00:20:00 +0000"
-    },
-    {
-      "title": "A photographer captured a Windsor, Ont., woman in the 'roughest time.' The family can't get the pics deleted",
-      "link": "https://www.cbc.ca/news/canada/windsor/photo-windsor-street-photography-ethics-9.6955403?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/3f870ca2-3b57-490a-a212-ddfdfe5be405,1761766514588/full/max/0/default.jpg?im=Crop%2Crect%3D%2850%2C0%2C1844%2C1037%29%3BResize%3D%28620%29' alt='Two people are sitting and looking straight ahead.' width='620' height='349' title='Devin, left, and Kathleen, right, Newman say they want the photo of Alicia taken down, but feel like they're out of options.'/><p>Loved ones of a Windsor woman want photos taken of her on the city’s streets, during an active drug addiction, removed from social media. The woman in the photos is Alicia Newman and she died several years ago.</p>",
-      "score": 1.2,
-      "pubDate": "Fri, 31 Oct 2025 04:00:00 EDT"
+      "pubDate": "Sat, 01 Nov 2025 04:00:00 EDT"
     }
   ]
 }
