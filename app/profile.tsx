@@ -28,7 +28,7 @@ export default function Profile() {
     <View
       style={styles.container}
       accessibilityLabel={t("header.openProfile", "Open profile")}
-      accessible
+      accessible={true}
     >
       <Text style={styles.title}>{t("nav.profile")}</Text>
 

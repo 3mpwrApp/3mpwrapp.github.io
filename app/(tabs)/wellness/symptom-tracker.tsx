@@ -208,7 +208,7 @@ export default function SymptomTracker() {
       style={styles.container}
       contentContainerStyle={{ padding: 16 }}
     >
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <View style={[styles.preview, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
         <Text style={[styles.title, { color: palette.primary }]}>How to Use Symptom Tracker</Text>
         <Text style={styles.previewText}>
@@ -239,9 +239,9 @@ export default function SymptomTracker() {
 
       <Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} accessibilityLabel="Date input" accessibilityHint="Enter the date for your symptom entry." />
       <Field label="Pain (0-10)" value={pain} onChangeText={setPain} keyboardType="numeric" accessibilityLabel="Pain input" accessibilityHint="Enter your pain level from 0 to 10." />
-      <Field label="Symptoms" value={symptoms} onChangeText={setSymptoms} multiline accessibilityLabel="Symptoms input" accessibilityHint="Describe your symptoms for this entry." />
-      <Field label="Impact on work/daily life" value={impact} onChangeText={setImpact} multiline accessibilityLabel="Impact input" accessibilityHint="Describe how symptoms affected your work or daily life." />
-      <Field label="Meds taken / changes" value={meds} onChangeText={setMeds} multiline accessibilityLabel="Meds input" accessibilityHint="List any medications taken or changes." />
+      <Field label="Symptoms" value={symptoms} onChangeText={setSymptoms} multiline={true} accessibilityLabel="Symptoms input" accessibilityHint="Describe your symptoms for this entry." />
+      <Field label="Impact on work/daily life" value={impact} onChangeText={setImpact} multiline={true} accessibilityLabel="Impact input" accessibilityHint="Describe how symptoms affected your work or daily life." />
+      <Field label="Meds taken / changes" value={meds} onChangeText={setMeds} multiline={true} accessibilityLabel="Meds input" accessibilityHint="List any medications taken or changes." />
       <Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} accessibilityLabel="Tags input" accessibilityHint="Add tags to help categorize your entry." />
 
       {editingId ? (

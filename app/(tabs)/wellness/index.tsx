@@ -17,7 +17,7 @@ const Card = React.memo<{ href: string; title: string; desc: string }>(
   ({ href, title, desc }) => {
     const palette = useAppPalette();
     return (
-      <Link href={href as any} asChild>
+      <Link href={href as any} asChild={true}>
         <Pressable
           hitSlop={HIT_SLOP_8}
           accessibilityRole="button"
@@ -133,7 +133,7 @@ export default function WellnessHub() {
         {t('wellness.hub.subtitle', 'Evidence-based tools for mood, pain, resilience, and recovery.')}
       </Text>
       
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       
       <SearchBar
         value={query}

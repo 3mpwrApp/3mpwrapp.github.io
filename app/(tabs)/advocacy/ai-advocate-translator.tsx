@@ -84,7 +84,7 @@ export default function AiAdvocateTranslator() {
         value={input}
         onChangeText={setInput}
   placeholder={t('translator.placeholder','Paste text here')}
-        multiline
+        multiline={true}
       />
       <Pressable
         onPress={async () => {

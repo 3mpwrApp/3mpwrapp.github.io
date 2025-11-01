@@ -117,7 +117,7 @@ export default function AdaptiveMeditation() {
       >
         Adaptive Meditation & Relaxation
       </Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.subtitle}>
         Gentle guidance for chronic pain and limited mobility.
       </Text>

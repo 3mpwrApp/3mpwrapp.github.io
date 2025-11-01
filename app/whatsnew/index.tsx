@@ -138,7 +138,7 @@ export default function WhatsNewScreen() {
     <View
       style={styles.container}
       accessibilityLabel="What's New screen"
-      accessible
+      accessible={true}
     >
       <Text
         ref={titleRef}

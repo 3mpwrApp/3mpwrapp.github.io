@@ -113,7 +113,7 @@ export default function AccountabilityCoach() {
         <Text style={s.label}>{t('accountability.issueLabel')}</Text>
         <TextInput
           style={[s.input, { minHeight: 90, textAlignVertical: 'top' }]}
-          multiline
+          multiline={true}
           value={issue}
           onChangeText={setIssue}
           placeholder={t('accountability.issuePlaceholder')}

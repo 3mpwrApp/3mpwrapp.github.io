@@ -136,7 +136,7 @@ function ScreenInner() {
   }, [query, allItems, local.myCampaigns, isJoined]);
 
   return (
-    <ResponsiveScreenWrapper scrollable>
+    <ResponsiveScreenWrapper>
       <View style={[styles.container, { flex: 1 }]}>
         <Text
           ref={titleRef}
@@ -209,7 +209,7 @@ function ScreenInner() {
             <View style={{ marginBottom:12 }}>
               <Link
                 href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any}
-                asChild
+                asChild={true}
               >
                 <Card
                   title={item.title + ((item as any).kind === 'petition' ? ' (Petition)' : '')}

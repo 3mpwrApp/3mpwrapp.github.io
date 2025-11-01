@@ -44,7 +44,7 @@ export default function ChangelogGate({
   return (
     <View
       style={styles.overlay}
-      accessibilityViewIsModal
+      accessibilityViewIsModal={true}
       accessibilityLabel="What’s new"
     >
       <View style={styles.card}>

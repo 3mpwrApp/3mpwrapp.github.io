@@ -23,7 +23,7 @@ export default function HarmReduction(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.harm.title','Harm Reduction Guide')}</Text>
-      <DisclaimerBanner type="crisis" compact />
+      <DisclaimerBanner type="crisis" compact={true} />
       <DyslexiaText style={s.desc}>{t('wellness.harm.desc','Practical steps to reduce harm and increase safety.')}</DyslexiaText>
       {items.map((x,i)=>(<DyslexiaText key={i} style={s.line}>• {x}</DyslexiaText>))}
     </View>

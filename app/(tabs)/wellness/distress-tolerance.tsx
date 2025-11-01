@@ -23,7 +23,7 @@ export default function DistressTolerance(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.distress.title','Distress Tolerance')}</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <DyslexiaText style={s.desc}>{t('wellness.distress.desc','Reduce crisis intensity with brief, practical skills. Adapt to your body.')}</DyslexiaText>
       {lines.map((l,i)=>(<DyslexiaText key={i} style={s.line}>• {l}</DyslexiaText>))}
     </View>

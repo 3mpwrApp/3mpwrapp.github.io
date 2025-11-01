@@ -83,7 +83,7 @@ export default function EvidenceChecklist() {
             <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('templates.checklist.title','Evidence Checklist')}
       </Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <GapView gap={8} style={s.actionsRow}>
   <A11yPressable onPress={()=>{ setShowInfo(v=>!v); announce(showInfo? t('common.hide','Hide') : t('templates.checklist.toggleInfo','Toggle instructions')); }} style={s.infoBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.toggleInfo','Toggle instructions')}><Text style={s.infoBtnText}>{showInfo ? t('common.hide','Hide') : t('common.show','Show')}</Text></A11yPressable>
         <A11yPressable onPress={copySummary} style={s.secondaryBtn} accessibilityRole='button' accessibilityLabel={t('templates.checklist.copy','Copy summary')}><Text style={s.secondaryBtnText}>{t('templates.checklist.copy','Copy summary')}</Text></A11yPressable>

@@ -37,12 +37,12 @@ export default function DoctorVisitPrep() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }}>
       <Text style={s.title}>Doctor Visit Prep</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.text}>Generate a one‑page summary to bring to appointments.</Text>
       <TextInput placeholder="Your name" placeholderTextColor={palette.text+'77'} value={name} onChangeText={setName} style={s.input} />
       <TextInput placeholder="Condition(s)" placeholderTextColor={palette.text+'77'} value={condition} onChangeText={setCondition} style={s.input} />
-      <TextInput placeholder="Current medications (one per line)" multiline placeholderTextColor={palette.text+'77'} value={meds} onChangeText={setMeds} style={[s.input,{ height: 120 }]} />
-      <TextInput placeholder="Key questions for your provider (one per line)" multiline placeholderTextColor={palette.text+'77'} value={questions} onChangeText={setQuestions} style={[s.input,{ height: 140 }]} />
+      <TextInput placeholder="Current medications (one per line)" multiline={true} placeholderTextColor={palette.text+'77'} value={meds} onChangeText={setMeds} style={[s.input,{ height: 120 }]} />
+      <TextInput placeholder="Key questions for your provider (one per line)" multiline={true} placeholderTextColor={palette.text+'77'} value={questions} onChangeText={setQuestions} style={[s.input,{ height: 140 }]} />
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={generate} style={s.button}><Text style={s.buttonText}>Generate Summary</Text></A11yPressable>
     </ScrollView>
   );

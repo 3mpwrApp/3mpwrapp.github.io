@@ -29,8 +29,8 @@ export default function RTWPlanner() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Return-to-Work Planner</Text>
-      <DisclaimerBanner type="legal" compact />
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="legal" compact={true} />
+      <DisclaimerBanner type="medical" compact={true} />
       <TextInput placeholder="Goal title (e.g., 4-hour shifts)" placeholderTextColor={palette.text+"77"} value={title} onChangeText={setTitle} style={s.input} />
       <TextInput placeholder="Supports (comma-separated)" placeholderTextColor={palette.text+"77"} value={supports} onChangeText={setSupports} style={s.input} />
       <TextInput placeholder="Steps (comma-separated)" placeholderTextColor={palette.text+"77"} value={steps} onChangeText={setSteps} style={s.input} />

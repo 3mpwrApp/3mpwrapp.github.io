@@ -75,13 +75,13 @@ function MoodInner() {
         {t('mood.subtitle','Log how you feel to spot trends.')}
       </Text>
 
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
 
       {/* Mood Score Selection */}
       <View 
         style={styles.scoreSection}
         accessibilityLabel={t('mood.scoreSection', 'Mood score selection')}
-        accessible
+        accessible={true}
       >
         <Text 
           style={[styles.sectionLabel, { color: palette.text, fontSize: Math.round(16 * factor) }]}
@@ -141,7 +141,7 @@ function MoodInner() {
         onChangeText={setNote}
         inputType="text"
         maxLength={500}
-        showCharacterCount
+        showCharacterCount={true}
         containerStyle={{ marginVertical: 16 }}
         accessibilityLabel={t('mood.noteAccessibility', 'Mood note text input')}
         accessibilityHint={t('mood.noteHint', 'Optional field to add context about your mood')}

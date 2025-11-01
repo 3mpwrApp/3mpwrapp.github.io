@@ -41,7 +41,7 @@ export default function WellnessHub() {
 function Card({ href, title, desc }: { href: string; title: string; desc: string; }){
   const palette = useAppPalette();
   return (
-    <Link href={href as any} asChild>
+    <Link href={href as any} asChild={true}>
       <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, padding:12 }}>
         <Text style={{ color: palette.text, fontWeight:'700' }}>{title}</Text>
         <DyslexiaText style={{ color: palette.text, opacity:0.9, marginTop:4 }}>{desc}</DyslexiaText>

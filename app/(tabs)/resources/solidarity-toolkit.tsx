@@ -13,33 +13,33 @@ export default function SolidarityToolkit() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Union & Worker Solidarity Toolkit</Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       <DyslexiaText style={s.text}>Step‑by‑step resources for organizing workplace support, including accommodation campaigns. This section will grow with templates, checklists, and guides.</DyslexiaText>
       <View style={{ height: 12 }} />
       <Text style={s.h2}>Templates & Kits</Text>
-      <Link href={("/(tabs)/resources/templates-gallery" as any)} asChild>
+      <Link href={("/(tabs)/resources/templates-gallery" as any)} asChild={true}>
         <Text style={s.link}>Template Gallery (letters)</Text>
       </Link>
-      <Link href={("/(tabs)/resources/letter-accommodation" as any)} asChild>
+      <Link href={("/(tabs)/resources/letter-accommodation" as any)} asChild={true}>
         <Text style={s.link}>Accommodation Request Letter</Text>
       </Link>
-      <Link href={("/(tabs)/resources/letter-union-request" as any)} asChild>
+      <Link href={("/(tabs)/resources/letter-union-request" as any)} asChild={true}>
         <Text style={s.link}>Request Union Support/Representation</Text>
       </Link>
       <View style={{ height: 12 }} />
       <Text style={s.h2}>Meeting Aids</Text>
-      <Link href={("/(tabs)/resources/doctor-visit-prep" as any)} asChild>
+      <Link href={("/(tabs)/resources/doctor-visit-prep" as any)} asChild={true}>
         <Text style={s.link}>Doctor/Case Manager Visit Prep</Text>
       </Link>
-      <Link href={("/(tabs)/resources/case-timeline" as any)} asChild>
+      <Link href={("/(tabs)/resources/case-timeline" as any)} asChild={true}>
         <Text style={s.link}>Case Timeline & Deadlines</Text>
       </Link>
       <View style={{ height: 12 }} />
       <Text style={s.h2}>Campaign Tools</Text>
-      <Link href={("/(tabs)/resources/support-directory" as any)} asChild>
+      <Link href={("/(tabs)/resources/support-directory" as any)} asChild={true}>
         <Text style={s.link}>Support Directory (advocates)</Text>
       </Link>
-      <Link href={("/(tabs)/resources/impact-simulator" as any)} asChild>
+      <Link href={("/(tabs)/resources/impact-simulator" as any)} asChild={true}>
         <Text style={s.link}>Policy Impact Simulator</Text>
       </Link>
     </View>

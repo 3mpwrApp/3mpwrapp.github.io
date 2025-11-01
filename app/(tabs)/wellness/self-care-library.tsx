@@ -158,7 +158,7 @@ export default function SelfCareLibrary() {
       >
         Accessible SelfÃ¢â‚¬â€˜Care Library
       </Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={styles.subtitle}>
         Audio, video, and easyÃ¢â‚¬â€˜read guides curated for accessibility.
       </Text>
@@ -167,7 +167,7 @@ export default function SelfCareLibrary() {
           key={sec.title}
           style={styles.section}
           accessibilityLabel={`${sec.title} section`}
-          accessible
+          accessible={true}
         >
           <Text style={styles.sectionTitle}>{sec.title}</Text>
           {sec.items.map((it) => (

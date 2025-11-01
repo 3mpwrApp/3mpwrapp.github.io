@@ -44,8 +44,8 @@ export default function DenialDecoder() {
   return (
     <View style={s.container}>
       <Text style={s.title}>AI Claim Denial Decoder</Text>
-      <DisclaimerBanner type="legal" compact />
-      <DisclaimerBanner type="ai" compact />
+      <DisclaimerBanner type="legal" compact={true} />
+      <DisclaimerBanner type="ai" compact={true} />
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={analyze} style={s.button}><Text style={s.buttonText}>Upload denial letter</Text></A11yPressable>
       {result && (
         <View style={s.card}>

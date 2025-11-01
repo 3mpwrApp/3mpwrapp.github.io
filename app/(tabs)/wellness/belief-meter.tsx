@@ -24,7 +24,7 @@ export default function BeliefMeter(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.belief.title','Belief Strength Meter')}</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.desc}>{t('wellness.belief.desc','Rate how strongly you believe a thought (0–100). Track change after a reframe.')}</Text>
       <TextInput value={belief} onChangeText={setBelief} placeholder={t('wellness.belief.thought','Thought')} placeholderTextColor={palette.text+'77'} style={s.input}/>
   <TextInput value={rating} onChangeText={setRating} {...(Platform.OS==='web'? {} : { keyboardType: 'numeric' })} placeholder={t('wellness.belief.rating','Belief strength (0–100)')} placeholderTextColor={palette.text+'77'} style={s.input}/>

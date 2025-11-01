@@ -120,7 +120,7 @@ export default function RightsExplainer() {
         </GapView>
       </View>
       <Text style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsExplainer.heading','Multi‑Language Rights Explainer')}</Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <GapView gap={8} style={{ flexDirection:'row', marginTop: 8, alignItems:'center', flexWrap:'wrap' }}>
         <A11yPressable
           onPress={async()=>{ const next = !plainHere; setPlainHere(next); try { await AsyncStorage?.setItem?.('rightsExplainer:plain:v1', next ? '1' : '0'); } catch{} }}
@@ -171,7 +171,7 @@ function RightsContent({ lang, region, province, palette }:{ lang:Lang; region:R
   const s = styles(palette);
   const blocks = buildBlocks();
   return (
-    <View style={{ marginTop: 8 }} accessibilityLabel='Rights statements list' accessible>
+    <View style={{ marginTop: 8 }} accessibilityLabel='Rights statements list' accessible={true}>
       <Text style={[s.text,{ fontWeight:'700' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>Language: {lang.toUpperCase()}</Text>
       <Text style={s.text} maxFontSizeMultiplier={MAX_FONT_SCALE}>Region: {region==='province'? province: region}</Text>
       {blocks[lang].map((t,i)=>(<Text key={i} style={s.text} maxFontSizeMultiplier={MAX_FONT_SCALE}>• {t}</Text>))}

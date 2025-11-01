@@ -7,13 +7,13 @@
 
 import React from "react";
 
-import LazyLoadWrapper from "../../../components/LazyLoadWrapper";
+import LazyLoadWrapper from "../../../../components/LazyLoadWrapper";
 
 // Export options for Expo Router
 export const options = { href: null };
 
 // Lazy load the actual wizard content (66.5KB)
-const LetterWizardContent = React.lazy(() => import("../../../components/LetterWizardContent"));
+const LetterWizardContent = React.lazy(() => import("../../../../components/LetterWizardContent"));
 
 /**
  * Letter Wizard Route Component

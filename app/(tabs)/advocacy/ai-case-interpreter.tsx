@@ -66,8 +66,8 @@ export default function AiCaseInterpreter() {
         AI Case Interpreter
       </Text>
       <OnlineStatusBadge />
-      <DisclaimerBanner type="ai" compact />
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="ai" compact={true} />
+      <DisclaimerBanner type="legal" compact={true} />
       <Text
         style={[
           s.subtitle,
@@ -92,7 +92,7 @@ export default function AiCaseInterpreter() {
         value={input}
         onChangeText={setInput}
         placeholder="Paste text here"
-        multiline
+        multiline={true}
       />
       <Pressable
         onPress={async () => {

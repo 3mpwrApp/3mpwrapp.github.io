@@ -20,14 +20,14 @@ export default function MythBustingHub() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Myth-Busting Knowledge Hub
       </Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       <DyslexiaText style={styles.subtitle}>
         Break down complex policies in plain language — with interactive explainers for Workers' Comp, Canada-wide and
         provincial programs, CPP-D, EI Sickness, and more.
       </DyslexiaText>
       <View>
         <Text style={styles.blockTitle}>Popular explainers</Text>
-        <Link href={("/(tabs)/advocacy/policy-simple" as any)} asChild>
+        <Link href={("/(tabs)/advocacy/policy-simple" as any)} asChild={true}>
           <Card title="Policy Made Simple" subtitle="Clear guides to accessibility and benefits" />
         </Link>
         <Card title="CPP-Disability" subtitle="Eligibility, timelines, appeals — in plain language" />

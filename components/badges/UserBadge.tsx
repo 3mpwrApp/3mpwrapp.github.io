@@ -100,13 +100,13 @@ export default function UserBadge({
         },
       ]}
       gap={currentSize.gapSize}
-      accessible
+      accessible={true}
       accessibilityRole="text"
       accessibilityLabel={`${getBadgeName()} badge. ${getBadgeDescription()}`}
     >
       <Text
         style={[styles.icon, { fontSize: currentSize.iconSize }]}
-        accessibilityElementsHidden
+        accessibilityElementsHidden={true}
         importantForAccessibility="no"
       >
         {icon}

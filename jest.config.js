@@ -23,7 +23,10 @@ module.exports = {
     '^.*hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js',
     // Map GapView to a mock
     '^../../../components/GapView$': '<rootDir>/__mocks__/GapView.js',
-    '^.*/components/GapView$': '<rootDir>/__mocks__/GapView.js'
+    '^.*/components/GapView$': '<rootDir>/__mocks__/GapView.js',
+    // Map ResponsiveScreenWrapper to a mock
+    '^../../../components/ResponsiveScreenWrapper$': '<rootDir>/__mocks__/ResponsiveScreenWrapper.js',
+    '^.*/components/ResponsiveScreenWrapper$': '<rootDir>/__mocks__/ResponsiveScreenWrapper.js'
   },
   roots: ['<rootDir>'],
   testMatch: ['**/__tests__/**/*.test.tsx','**/__tests__/**/*.test.ts'],

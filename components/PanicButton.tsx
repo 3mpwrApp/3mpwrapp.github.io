@@ -61,7 +61,7 @@ export function PanicButton() {
           name="exit-outline" 
           size={28} 
           color={palette.onPrimary}
-          accessibilityElementsHidden 
+          accessibilityElementsHidden={true} 
         />
       </Pressable>
     </View>

@@ -17,7 +17,7 @@ export default function LoadingSpinner({
   return (
     <View
       style={styles.container}
-      accessible
+      accessible={true}
       accessibilityRole="progressbar"
       accessibilityLabel="Loading"
       accessibilityLiveRegion="polite"

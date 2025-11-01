@@ -79,7 +79,7 @@ export default function ResourceDetail() {
             <View
               style={styles.metaChip}
               accessibilityLabel={`Category ${catLabel}`}
-              accessible
+              accessible={true}
             >
               <MaterialCommunityIcons
                 name="briefcase-outline"
@@ -95,7 +95,7 @@ export default function ResourceDetail() {
             <View
               style={styles.metaChip}
               accessibilityLabel={`Region ${regionLabel}`}
-              accessible
+              accessible={true}
             >
               <MaterialCommunityIcons
                 name={

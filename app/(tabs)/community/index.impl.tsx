@@ -65,7 +65,7 @@ function ScreenInner() {
 
   return (
     <ResponsiveScreenWrapper scrollable={false} testID="community-screen">
-      <View style={styles.container} accessibilityLabel="Community Hub screen" accessible>
+      <View style={styles.container} accessibilityLabel="Community Hub screen" accessible={true}>
         <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
           Community Hub
         </Text>

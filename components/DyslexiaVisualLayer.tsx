@@ -71,7 +71,7 @@ export function DyslexiaVisualLayer() {
               top: `${rulerY * 100}%`,
             },
           ]}
-          accessibilityElementsHidden
+          accessibilityElementsHidden={true}
           importantForAccessibility="no-hide-descendants"
           accessibilityLabel="Reading ruler - drag to reposition"
         />

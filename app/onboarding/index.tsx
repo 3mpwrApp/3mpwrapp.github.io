@@ -430,7 +430,7 @@ function PrimaryNeedsStep({ needs, setNeeds, palette, t, styles }: any) {
             onPress={() => toggleNeed(need.value)}
             palette={palette}
             styles={styles}
-            small
+            small={true}
           />
         ))}
       </GapView>

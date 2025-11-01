@@ -49,7 +49,7 @@ export default function ExerciseFavorites() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Exercise Favorites</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <FlatList
         data={items}
         keyExtractor={i=>i.id}

@@ -36,10 +36,10 @@ export default function UserBadgesDisplay() {
       </Text>
 
       <ScrollView
-        horizontal
+        horizontal={true}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
-        accessible
+        accessible={true}
         accessibilityLabel={t(
           'profile.badges.scrollLabel',
           'Scroll through your badges'
@@ -52,7 +52,7 @@ export default function UserBadgesDisplay() {
               type={type}
               data={data}
               size="medium"
-              showLabel
+              showLabel={true}
             />
           ))}
         </GapView>

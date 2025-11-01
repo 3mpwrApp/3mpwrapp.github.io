@@ -1,13 +1,13 @@
 import React from 'react';
 import { Modal, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import DisclaimerBanner from '../../../components/DisclaimerBanner';
-import { GapView } from '../../../components/GapView';
-import { usePostLoadAnnounce } from '../../../hooks/usePostLoadAnnounce';
-import { useTranslation } from '../../../i18n';
-import { s } from '../../../theme/spacing';
-import { useAppPalette } from '../../../theme/usePalette';
+import A11yPressable from '../../../../components/A11yPressable';
+import DisclaimerBanner from '../../../../components/DisclaimerBanner';
+import { GapView } from '../../../../components/GapView';
+import { usePostLoadAnnounce } from '../../../../hooks/usePostLoadAnnounce';
+import { useTranslation } from '../../../../i18n';
+import { s } from '../../../../theme/spacing';
+import { useAppPalette } from '../../../../theme/usePalette';
 
 export default function EvidenceLockerImpl() {
   const { t } = useTranslation();
@@ -24,7 +24,7 @@ export default function EvidenceLockerImpl() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{t('templates.evidenceLocker.title', 'Evidence Locker')}</Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <GapView style={styles.row} gap={s('sm')}>
         <A11yPressable style={styles.button} onPress={() => setPassModal({ mode: 'export' })}>
           <Text style={styles.buttonText}>{t('common.export', 'Export')}</Text>
@@ -48,7 +48,7 @@ export default function EvidenceLockerImpl() {
       )}
 
       {passModal && (
-        <Modal transparent animationType="fade" onRequestClose={() => setPassModal(null)}>
+        <Modal transparent={true} animationType="fade" onRequestClose={() => setPassModal(null)}>
           <View style={styles.modalBackdrop}>
             <View style={styles.modalCard}>
               <Text style={styles.title}>
@@ -59,7 +59,7 @@ export default function EvidenceLockerImpl() {
                 placeholderTextColor={palette.text + '77'}
                 value={passValue}
                 onChangeText={setPassValue}
-                secureTextEntry
+                secureTextEntry={true}
                 style={styles.input}
               />
               <GapView style={styles.rowRight} gap={s('sm')}>

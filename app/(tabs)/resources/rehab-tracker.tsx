@@ -72,7 +72,7 @@ export default function RehabTracker() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Rehab Progress Tracker</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.text}>Log small wins to boost morale and share with providers.</Text>
       <GapView style={{ flexDirection:'row', marginBottom: 6 }} gap={8}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setView('local')} accessibilityRole='button' accessibilityState={{ selected: view==='local' }} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></A11yPressable>

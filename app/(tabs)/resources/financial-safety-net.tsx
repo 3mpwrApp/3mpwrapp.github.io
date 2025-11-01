@@ -82,7 +82,7 @@ export default function FinancialSafetyNetNavigator() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Financial Safety Net Navigator
       </Text>
-      <DisclaimerBanner type="financial" compact />
+      <DisclaimerBanner type="financial" compact={true} />
       <Text style={styles.subtitle}>
         Step-by-step guidance to combine Workers’ Comp, CPP‑D, ODSP/provincial supports, and EI without overlap penalties.
         This is a planning tool — verify specifics with official program rules.

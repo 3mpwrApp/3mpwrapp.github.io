@@ -141,7 +141,7 @@ export default function AccountabilityCase() {
                 placeholder={t('accountability.track','Track response')}
                 placeholderTextColor={palette.muted}
                 style={s.input}
-                multiline
+                multiline={true}
               />
               <Pressable
                 style={({ pressed }) => [s.button, pressed && { opacity: 0.8 }, saving && { opacity: 0.6 }]}

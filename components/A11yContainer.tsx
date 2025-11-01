@@ -179,7 +179,7 @@ export function A11yLiveRegion({
 export function A11yFocusGroup({ children, label, ...props }: Omit<A11yContainerProps, 'grouped'> & { label: string }) {
   return (
     <A11yContainer 
-      grouped 
+      grouped={true} 
       accessibilityLabel={label}
       {...props}
     >

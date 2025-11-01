@@ -17,7 +17,7 @@ export default function DBTMatcher() {
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.dbt.title','DBT Skill Matcher')}</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginBottom:8 }} gap={8}>
         {(['sad','angry','anxious','overwhelmed','numb'] as const).map(k => (
           <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" key={k} onPress={()=> setState(k)} style={[s.chip, state===k && { backgroundColor: palette.primary }]}>

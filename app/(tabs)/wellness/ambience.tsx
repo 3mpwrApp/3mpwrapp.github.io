@@ -21,7 +21,7 @@ export default function AmbienceSync(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.ambience.title','Ambience Sync AI')}</Text>
-      <DisclaimerBanner type="ai" compact />
+      <DisclaimerBanner type="ai" compact={true} />
       <Text style={s.sub}>{t('wellness.ambience.desc','Match background, color, soundscape to your mood.')}</Text>
       <View style={[s.card,{ borderColor: amb.color }]}> 
         <Text style={{ color: palette.text }}>{t('wellness.ambience.current','Suggestion: {{palette}}, {{soundscape}}, {{brightness}}',{ palette: amb.palette, soundscape: amb.soundscape, brightness: amb.brightness })}</Text>

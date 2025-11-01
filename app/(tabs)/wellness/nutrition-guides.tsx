@@ -82,7 +82,7 @@ export default function NutritionGuides() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Diet & Nutrition Guides screen">Diet & Nutrition Guides</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       
       {/* Hydration Tracker */}
       <View style={[s.card, { marginTop: 12, backgroundColor: palette.primary + '15' }]}>

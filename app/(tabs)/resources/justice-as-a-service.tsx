@@ -87,8 +87,8 @@ export default function JusticeAsAService() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ padding: 16 }} accessibilityLabel={t('justiceService.screenLabel','Justice-as-a-Service screen')}>
-      <DisclaimerBanner type="legal" compact />
-      <View style={styles.infoCard} accessibilityRole="summary" accessible accessibilityLabel={t('justiceService.howToUse','How to use Justice-as-a-Service')}>
+      <DisclaimerBanner type="legal" compact={true} />
+      <View style={styles.infoCard} accessibilityRole="summary" accessible={true} accessibilityLabel={t('justiceService.howToUse','How to use Justice-as-a-Service')}>
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setShowInfo(s=>!s)} accessibilityRole="button" accessibilityLabel={t('justiceService.toggleInfo', showInfo? 'Hide instructions':'Show instructions')} style={styles.infoHeader}>
           <Text style={styles.infoTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.infoTitle','How to Use')}</Text>
           <Text style={styles.infoToggle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{showInfo? t('justiceService.hide','Hide'): t('justiceService.show','Show')}</Text>
@@ -117,7 +117,7 @@ export default function JusticeAsAService() {
       </View>
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('justiceService.title','Justice-as-a-Service')}</Text>
       {!!report && (
-        <View style={{ marginTop: 12 }} accessibilityLabel={t('justiceService.snapshotRegion','Generated snapshot')} accessible>
+        <View style={{ marginTop: 12 }} accessibilityLabel={t('justiceService.snapshotRegion','Generated snapshot')} accessible={true}>
           <Text style={styles.text} maxFontSizeMultiplier={MAX_FONT_SCALE}>{report}</Text>
         </View>
       )}

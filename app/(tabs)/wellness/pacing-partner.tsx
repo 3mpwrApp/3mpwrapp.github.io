@@ -88,7 +88,7 @@ export default function PacingPartner() {
         </A11yPressable>
       </View>
       <Text style={s.title} accessibilityRole="header" maxFontSizeMultiplier={1.3}>AI Pacing Partner</Text>
-      <DisclaimerBanner type="ai" compact />
+      <DisclaimerBanner type="ai" compact={true} />
       <TextInput
         placeholder="Minutes"
         placeholderTextColor={palette.text+'77'}

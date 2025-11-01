@@ -62,8 +62,8 @@ export default function AICompanion() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE} accessibilityLabel="Adaptive AI Companion screen">Adaptive AI Companion</Text>
-      <DisclaimerBanner type="medical" compact />
-      <DisclaimerBanner type="ai" compact />
+      <DisclaimerBanner type="medical" compact={true} />
+      <DisclaimerBanner type="ai" compact={true} />
       <Text style={s.text} accessibilityLabel="Quick check-in prompt">Quick check-in: How are you today?</Text>
       <GapView style={{ flexDirection:'row', marginTop: 8 }} gap={8}>
         {[['good','😊'],['ok','😐'],['bad','😔']].map(([m, emoji]) => (

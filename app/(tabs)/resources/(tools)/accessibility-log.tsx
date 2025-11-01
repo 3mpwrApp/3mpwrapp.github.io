@@ -3,12 +3,12 @@ import { addDoc, collection, startAfter as fsStartAfter, getDocs, orderBy, limit
 import React from 'react';
 import { Alert, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import DisclaimerBanner from '../../../components/DisclaimerBanner';
-import GapView from '../../../components/GapView';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { auth, db } from '../../../firebase/config';
-import { useAppPalette } from '../../../theme/usePalette';
+import A11yPressable from '../../../../components/A11yPressable';
+import DisclaimerBanner from '../../../../components/DisclaimerBanner';
+import GapView from '../../../../components/GapView';
+import { HIT_SLOP_8 } from '../../../../constants/A11Y';
+import { auth, db } from '../../../../firebase/config';
+import { useAppPalette } from '../../../../theme/usePalette';
 
 export const options = { href: null };
 
@@ -64,7 +64,7 @@ export default function AccessibilityLog() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Workplace Accessibility Log</Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <Text style={s.text}>Log daily barriers with timestamps for future evidence.</Text>
       <GapView style={{ flexDirection:'row', marginTop: 6 }} gap={8}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setView('local')} style={[s.chip, view==='local' && s.chipActive]}><Text style={{ color: view==='local'? palette.onPrimary: palette.text, fontWeight:'700' }}>Local</Text></A11yPressable>

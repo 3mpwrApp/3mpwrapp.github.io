@@ -1,1 +1,2 @@
-export { default } from '../(tabs)/resources/prepare-appeal';
+export { default } from '../(tabs)/resources/(tools)/prepare-appeal';
+

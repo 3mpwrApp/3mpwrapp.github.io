@@ -142,7 +142,7 @@ export default function PolicySimple() {
         <Text style={s.helper}>{t('advocacy.policy.aiHelp')}</Text>
         <TextInput
           style={s.input}
-            multiline
+            multiline={true}
             value={raw}
             onChangeText={setRaw}
             accessibilityLabel="Policy text input"

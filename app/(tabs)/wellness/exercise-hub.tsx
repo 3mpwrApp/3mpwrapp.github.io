@@ -73,7 +73,7 @@ export default function ExerciseHub() {
   const combined = shortOnly ? baseList.filter(e => (e.minutes||0) <= 3) : baseList;
   return (
     <View style={s.container}>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <View style={[s.card, { backgroundColor: palette.surface, borderRadius: 10, marginBottom: 12 }]}> 
         <Text style={[s.cardTitle, { color: palette.primary }]}>How to Use Exercise Hub</Text>
         <Text style={{ color: palette.text, opacity: 0.95 }}>

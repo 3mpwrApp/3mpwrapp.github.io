@@ -194,11 +194,11 @@ export default function EventsScreen() {
   };
 
   return (
-    <ResponsiveScreenWrapper scrollable>
+    <ResponsiveScreenWrapper>
       <View
         style={[styles.container, { flex: 1 }]}
         accessibilityLabel="Events screen"
-        accessible
+        accessible={true}
       >
         <Text
           ref={titleRef}
@@ -384,7 +384,7 @@ export default function EventsScreen() {
             <View style={{ marginBottom:12 }}>
               <Link
                 href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any}
-                asChild
+                asChild={true}
                 accessibilityRole="link"
                 accessibilityLabel={`${t('home.guide.open','Open')} ${item.title}`}
               >
@@ -583,7 +583,7 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
   return (
     <View style={{ marginBottom:12, alignSelf:'stretch' }}>
       <TextInput placeholder={t('eventsFeature.form.titlePlaceholder','Title')} placeholderTextColor={palette.muted} value={title} onChangeText={setTitle} style={fieldStyle} />
-      <TextInput placeholder={t('eventsFeature.form.descriptionPlaceholder','Description')} placeholderTextColor={palette.muted} value={description} onChangeText={setDescription} style={[fieldStyle,{ minHeight:60 }]} multiline />
+      <TextInput placeholder={t('eventsFeature.form.descriptionPlaceholder','Description')} placeholderTextColor={palette.muted} value={description} onChangeText={setDescription} style={[fieldStyle,{ minHeight:60 }]} multiline={true} />
       <TextInput placeholder={t('eventsFeature.form.datePlaceholder','Date (YYYY-MM-DD HH:MM)')} placeholderTextColor={palette.muted} value={date} onChangeText={setDate} style={fieldStyle} />
       <TextInput placeholder={t('eventsFeature.form.locationPlaceholder','Location (optional)')} placeholderTextColor={palette.muted} value={location} onChangeText={setLocation} style={fieldStyle} />
       <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom:8 }}>

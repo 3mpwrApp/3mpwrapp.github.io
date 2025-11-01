@@ -1790,7 +1790,7 @@ export default function LetterWizardContent() {
       <DyslexiaText style={s.subtitle}>
         {t('letterWizard.subtitle', 'Create professional letters for any disability advocacy situation.')}
       </DyslexiaText>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       
       {savedLetters.length > 0 && step === 'situation' && (
         <A11yPressable

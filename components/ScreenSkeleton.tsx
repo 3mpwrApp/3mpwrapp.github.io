@@ -31,7 +31,7 @@ export default function ScreenSkeleton({
     <ThemedView
       style={[styles.container, style]}
       testID={testID}
-      accessible
+      accessible={true}
       accessibilityLabel={label}
       accessibilityRole="progressbar"
       accessibilityState={{ busy: true }}

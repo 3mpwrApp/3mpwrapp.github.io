@@ -62,7 +62,7 @@ export default function SearchBar({
           accessibilityRole="button"
           accessibilityLabel={finalClearLabel}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          focusable
+          focusable={true}
           style={({ pressed }) => [{ padding: 6 }, pressed && { opacity: 0.7 }]}
         >
           <Ionicons

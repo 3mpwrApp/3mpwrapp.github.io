@@ -146,7 +146,7 @@ export default function AccessibilityStatusDashboard() {
     <ScrollView 
       style={styles.container}
       accessibilityLabel="Accessibility status dashboard"
-      accessible
+      accessible={true}
     >
       <View style={styles.header}>
         <Ionicons name="accessibility" size={32} color={palette.primary} />

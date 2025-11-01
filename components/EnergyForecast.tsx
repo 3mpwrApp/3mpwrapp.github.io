@@ -76,7 +76,7 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
     <GapView
       style={styles.container}
       gap={16}
-      accessible
+      accessible={true}
       accessibilityLabel={a11yLabel}
       accessibilityRole="list"
     >
@@ -113,10 +113,10 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
 
       {/* Chart */}
       <ScrollView
-        horizontal
+        horizontal={true}
         showsHorizontalScrollIndicator={false}
         style={styles.chartScroll}
-        accessible
+        accessible={true}
         accessibilityLabel="Energy level chart for next 24 hours"
         accessibilityRole="image"
       >
@@ -126,7 +126,7 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
               key={index}
               style={styles.chartBar}
               gap={4}
-              accessible
+              accessible={true}
               accessibilityLabel={`${prediction.hourOfDay}:00 - ${prediction.level}% energy`}
             >
               <EnergyBar
@@ -185,7 +185,7 @@ export const EnergyForecast: React.FC<EnergyForecastComponentProps> = ({
               key={index}
               style={styles.recommendationItem}
               gap={8}
-              accessible
+              accessible={true}
               accessibilityLabel={`Recommendation ${index + 1}: ${rec}`}
             >
               <Ionicons

@@ -217,7 +217,7 @@ export default function DailyPlanner() {
       >
         Adaptive Daily Planner
       </Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.subtitle}>
         Smart scheduling that factors in fatigue, pain flares, and appointments,
         with suggested rest breaks.

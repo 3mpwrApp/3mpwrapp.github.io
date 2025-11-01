@@ -134,7 +134,7 @@ export default function GriefSupport() {
       >
         Grief + Identity Support Hub
       </Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <DyslexiaText style={s.subtitle}>
         Resources for the loss of identity and purpose that can follow injury or
         disability.
@@ -144,7 +144,7 @@ export default function GriefSupport() {
           key={sec.title}
           style={s.section}
           accessibilityLabel={`${sec.title} section`}
-          accessible
+          accessible={true}
         >
           <Text style={s.sectionTitle}>{sec.title}</Text>
           {sec.items.map((it) => (

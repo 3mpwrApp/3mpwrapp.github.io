@@ -57,8 +57,8 @@ export default function NotFoundScreen() {
 
         <Link
           href={"/" as any}
-          replace
-          asChild
+          replace={true}
+          asChild={true}
           accessibilityRole="link"
           accessibilityLabel="Go to home"
           accessibilityHint="Navigates to the home tab"

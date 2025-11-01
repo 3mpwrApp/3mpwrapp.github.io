@@ -34,7 +34,7 @@ export default function EvidenceQueueScreen() {
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('templates.evidenceLocker.queueTitle', 'Upload Queue')}
       </Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <GapView style={s.actionsRow} gap={8}>
         <A11yPressable
           onPress={() => { setShowInfo(v=>!v); announce(showInfo ? t('common.hide') : t('templates.evidenceLocker.toggleInfo','Toggle instructions')); }}

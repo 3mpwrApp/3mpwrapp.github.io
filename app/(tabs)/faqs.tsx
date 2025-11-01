@@ -9,9 +9,9 @@ import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
 import { faqs as defaultFaqs } from "../../data/faqs";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { useFaqAssistant } from "../../hooks/useFaqAssistant";
 import { useTranslation } from "../../i18n";
@@ -65,7 +65,7 @@ export default function FaqsScreen() {
   const clearSearch = React.useCallback(() => setQuery(''), []);
 
   return (
-    <ResponsiveScreenWrapper scrollable>
+    <ResponsiveScreenWrapper>
       <View style={styles.container}>
         <Text
           ref={titleRef}
@@ -108,7 +108,7 @@ export default function FaqsScreen() {
             onChangeText={setAText}
             placeholder={t("faqs.answerPlaceholder","Answer")}
             placeholderTextColor={palette.text}
-            multiline
+            multiline={true}
           />
           <A11yPressable accessibilityRole="button" hitSlop={HIT_SLOP_8}
             disabled={!qText.trim() || !aText.trim()}

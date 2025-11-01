@@ -59,9 +59,9 @@ export default function ReflectionsCalendarTestImpl() {
 		}, [firstWithEntry]);
 
 	return (
-		<View style={[s.container, { backgroundColor: palette.background }]} accessibilityLabel="Reflections Calendar" accessible>
+		<View style={[s.container, { backgroundColor: palette.background }]} accessibilityLabel="Reflections Calendar" accessible={true}>
 			<Text style={[s.title, { color: palette.text }]} accessibilityRole="header">Reflections Calendar</Text>
-			<DisclaimerBanner type="medical" compact />
+			<DisclaimerBanner type="medical" compact={true} />
 
 			<Pressable
 				accessibilityRole="button"
@@ -135,7 +135,7 @@ export default function ReflectionsCalendarTestImpl() {
 				<Text style={{ color: palette.text, opacity: 0.9 }}>Grid view</Text>
 			)}
 
-			<Modal transparent visible={detailsOpen} onRequestClose={() => setDetailsOpen(false)}>
+			<Modal transparent={true} visible={detailsOpen} onRequestClose={() => setDetailsOpen(false)}>
 				<View style={[s.modalBackdrop, { backgroundColor: 'rgba(0,0,0,0.5)' }]}>
 					<View style={[s.modalCard, { backgroundColor: palette.surface }]}>
 						<Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>Details</Text>
@@ -183,7 +183,7 @@ export default function ReflectionsCalendarTestImpl() {
 			</Modal>
 			{standaloneEditor && editorOpen && !detailsOpen && (
 				<View style={[s.modalCard, { backgroundColor: palette.surface, marginTop:16 }]}
-					accessibilityLabel="Add reflection inline" accessible>
+					accessibilityLabel="Add reflection inline" accessible={true}>
 					<Text style={{ color: palette.text, fontWeight:'700', marginBottom:8 }}>New Reflection</Text>
 					<Pressable
 						accessibilityRole="button"

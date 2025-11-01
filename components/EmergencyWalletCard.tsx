@@ -118,7 +118,7 @@ export default function EmergencyWalletCard() {
     <ScrollView 
       style={styles.container}
       accessibilityLabel={t('emergencyWalletCard.a11y.form','Emergency wallet card form')}
-      accessible
+      accessible={true}
     >
       <View style={styles.header}>
         <Ionicons name="medical" size={24} color={palette.primary} />
@@ -181,7 +181,7 @@ export default function EmergencyWalletCard() {
           value={info.medicalConditions}
           onChangeText={(text) => setInfo({ ...info, medicalConditions: text })}
           placeholder={t('emergencyWalletCard.conditionsPh','List any medical conditions, disabilities, or chronic illnesses')}
-          multiline
+          multiline={true}
           numberOfLines={3}
           accessibilityLabel={t('emergencyWalletCard.conditions','Medical Conditions')}
           accessibilityHint={t('emergencyWalletCard.conditionsHint','List any medical conditions that emergency responders should know about')}
@@ -194,7 +194,7 @@ export default function EmergencyWalletCard() {
           value={info.medications}
           onChangeText={(text) => setInfo({ ...info, medications: text })}
           placeholder={t('emergencyWalletCard.medsPh','List medications with dosages')}
-          multiline
+          multiline={true}
           numberOfLines={3}
           accessibilityLabel={t('emergencyWalletCard.meds','Current Medications')}
           accessibilityHint={t('emergencyWalletCard.medsHint','List all medications you currently take')}
@@ -207,7 +207,7 @@ export default function EmergencyWalletCard() {
           value={info.allergies}
           onChangeText={(text) => setInfo({ ...info, allergies: text })}
           placeholder={t('emergencyWalletCard.allergiesPh','List any allergies or adverse reactions')}
-          multiline
+          multiline={true}
           numberOfLines={2}
           accessibilityLabel={t('emergencyWalletCard.allergies','Allergies')}
           accessibilityHint={t('emergencyWalletCard.allergiesHint','List any known allergies or adverse reactions')}
@@ -292,7 +292,7 @@ export default function EmergencyWalletCard() {
           value={info.additionalNotes}
           onChangeText={(text) => setInfo({ ...info, additionalNotes: text })}
           placeholder={t('emergencyWalletCard.notesPh','Any additional information that might be helpful in an emergency')}
-          multiline
+          multiline={true}
           numberOfLines={4}
           accessibilityLabel={t('emergencyWalletCard.notes','Additional Notes')}
           accessibilityHint={t('emergencyWalletCard.notesHint','Add any other information that would be helpful in an emergency')}

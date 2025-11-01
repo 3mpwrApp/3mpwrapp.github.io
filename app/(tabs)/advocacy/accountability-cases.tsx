@@ -36,7 +36,7 @@ export default function AccountabilityCases() {
         <Text style={s.subtitle}>{t('accountability.casesEmpty','No cases yet. Use the coach to create one.')}</Text>
       )}
       {cases.map(cs => (
-  <Link key={cs.id} href={{ pathname: '/(tabs)/advocacy/accountability-case', params: { id: cs.id } } as any} asChild>
+  <Link key={cs.id} href={{ pathname: '/(tabs)/advocacy/accountability-case', params: { id: cs.id } } as any} asChild={true}>
           <View style={s.card} accessibilityRole="button" accessibilityLabel={t('accountability.casesTitle','Accountability Cases')}>
             <Text style={s.cardTitle}>{cs.target || t('accountability.unknownTarget','Unknown target')}</Text>
             <Text style={s.cardMeta}>{new Date(cs.updatedAt).toLocaleString()}</Text>

@@ -25,7 +25,7 @@ export default function OppositeAction(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.opposite.title','Opposite Action Companion')}</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.desc}>{t('wellness.opposite.desc','When emotions suggest unhelpful actions, try the opposite in small, safe steps.')}</Text>
       <View style={s.card}><Text style={{ color: palette.text }}>{steps[step]}</Text></View>
   <A11yPressable onPress={()=> { require('../../../services/analyticsClient').trackEvent('wellness_opposite_next_step',{ step }); setStep((step+1)%steps.length);} } style={s.button} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Next step">

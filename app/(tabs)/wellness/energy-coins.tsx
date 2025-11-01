@@ -32,7 +32,7 @@ function Inner(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.energy.title','Daily Energy Coins')}</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.desc}>{t('wellness.energy.desc','Set a daily budget and spend coins on tasks. Pace kindly.')}</Text>
       <Text style={s.text}>{t('wellness.energy.today','Today: {{date}}',{ date })}</Text>
       <Text style={s.text}>{t('wellness.energy.remaining','Remaining coins: {{n}}',{ n: coins })}</Text>

@@ -150,28 +150,28 @@ export default function First7Screen(){
         <View style={{ height: 1, backgroundColor: palette.muted, marginVertical: 8 }} />
         <Text style={{ fontWeight: '600', color: palette.text }}>Quick links</Text>
         <GapView gap={8} style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-          <Link href="/(tabs)/resources/evidence-locker" asChild>
+          <Link href="/(tabs)/resources/evidence-locker" asChild={true}>
             <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
               <Text style={{ color: palette.text }}>Evidence Locker</Text>
             </Pressable>
           </Link>
-          <Link href="/(tabs)/resources" asChild>
+          <Link href="/(tabs)/resources" asChild={true}>
             <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
               <Text style={{ color: palette.text }}>Resources</Text>
             </Pressable>
           </Link>
-          <Link href="/(tabs)/advocacy" asChild>
+          <Link href="/(tabs)/advocacy" asChild={true}>
             <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
               <Text style={{ color: palette.text }}>Advocacy Hub</Text>
             </Pressable>
           </Link>
-          <Link href="/profile" asChild>
+          <Link href="/profile" asChild={true}>
             <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
               <Text style={{ color: palette.text }}>Profile</Text>
             </Pressable>
           </Link>
           {Platform.OS !== 'web' && (
-            <Link href="/modal" asChild>
+            <Link href="/modal" asChild={true}>
               <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
                 <Text style={{ color: palette.text }}>Notifications</Text>
               </Pressable>

@@ -124,7 +124,7 @@ export function Breadcrumbs({ items, onNavigate }: BreadcrumbsProps) {
   
   return (
     <View style={styles.breadcrumbContainer} accessibilityRole="menu" accessibilityLabel="Breadcrumb navigation">
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.breadcrumbScroll}>
+      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} contentContainerStyle={styles.breadcrumbScroll}>
         {hasMore && (
           <>
             <Text style={[styles.breadcrumbText, { color: palette.textSecondary }]}>...</Text>

@@ -59,13 +59,13 @@ function ChannelInner() {
 		<View
 			style={styles.container}
 			accessibilityLabel={`Channel ${channel?.title ?? slug}`}
-			accessible
+			accessible={true}
 		>
 			<Text style={styles.title}>{channel?.title ?? String(slug)}</Text>
 
 			<View
 				style={styles.newBox}
-				accessible
+				accessible={true}
 				accessibilityLabel="Create a new thread"
 			>
 				<TextInput

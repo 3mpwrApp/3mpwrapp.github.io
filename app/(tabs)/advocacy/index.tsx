@@ -75,11 +75,11 @@ export default function AdvocacyHub() {
     'accountability_cases',
   ];
   return (
-    <ResponsiveScreenWrapper scrollable testID="advocacy-screen">
+    <ResponsiveScreenWrapper testID="advocacy-screen">
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.hub.title','Advocacy Hub')}</Text>
       <Text style={s.subtitle}>{t('advocacy.hub.subtitle','Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.')}</Text>
   
-  <DisclaimerBanner type="legal" compact />
+  <DisclaimerBanner type="legal" compact={true} />
   
   <JurisdictionPanel />
   <JurisdictionDeadlineCalculator />
@@ -96,7 +96,7 @@ export default function AdvocacyHub() {
           ? `${base} (Coming soon)`
           : `${base}\u200B`;
         return matches(f.route) ? (
-          <Link key={f.route} href={f.route as any} asChild>
+          <Link key={f.route} href={f.route as any} asChild={true}>
             <View style={s.card} accessibilityRole="button">
               <Text style={s.cardTitle}>{titleText}</Text>
             </View>
@@ -113,7 +113,7 @@ export default function AdvocacyHub() {
           ? `${base} (Coming soon)`
           : `${base}\u200B`;
         return matches(f.route) ? (
-          <Link key={f.route} href={f.route as any} asChild>
+          <Link key={f.route} href={f.route as any} asChild={true}>
             <View style={s.card} accessibilityRole="button">
               <Text style={s.cardTitle}>{titleText}</Text>
             </View>
@@ -130,7 +130,7 @@ export default function AdvocacyHub() {
           ? `${base} (Coming soon)`
           : `${base}\u200B`;
         return matches(f.route) ? (
-          <Link key={f.route} href={f.route as any} asChild>
+          <Link key={f.route} href={f.route as any} asChild={true}>
             <View style={s.card} accessibilityRole="button">
               <Text style={s.cardTitle}>{titleText}</Text>
             </View>
@@ -147,7 +147,7 @@ export default function AdvocacyHub() {
           ? `${base} (Coming soon)`
           : `${base}\u200B`;
         return matches(f.route) ? (
-          <Link key={f.route} href={f.route as any} asChild>
+          <Link key={f.route} href={f.route as any} asChild={true}>
             <View style={s.card} accessibilityRole="button">
               <Text style={s.cardTitle}>{titleText}</Text>
             </View>

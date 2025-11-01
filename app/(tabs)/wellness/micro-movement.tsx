@@ -21,7 +21,7 @@ export default function MicroMovement(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.micro.title','Micro‑Movement Coach')}</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.desc}>{t('wellness.micro.desc','Gentle, chair‑friendly movements. Stop if uncomfortable.')}</Text>
       <View style={s.card}><Text style={{ color: palette.text }}>{MOVES[idx]}</Text></View>
       <A11yPressable onPress={()=> setIdx((idx+1)%MOVES.length)} style={s.button} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Next movement"><Text style={s.buttonText}>{t('common.next','Next')}</Text></A11yPressable>

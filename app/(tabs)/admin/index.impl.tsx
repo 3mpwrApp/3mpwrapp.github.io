@@ -191,7 +191,7 @@ export default function AdminPanel() {
           value={broadcastBody}
           onChangeText={setBroadcastBody}
           placeholder="Body (optional)"
-          multiline
+          multiline={true}
           style={{ borderWidth: StyleSheet.hairlineWidth, minHeight:70, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
         />
         <GapView style={{ flexDirection:'row' }} gap={8}>

@@ -16,7 +16,7 @@ export default function ReflectionsCalendarJestImpl() {
   }, []);
 
   return (
-    <View accessibilityLabel="Reflections Calendar" accessible style={{ flex: 1, padding: 16, backgroundColor: palette.background }}>
+    <View accessibilityLabel="Reflections Calendar" accessible={true} style={{ flex: 1, padding: 16, backgroundColor: palette.background }}>
       <Text accessibilityRole="header" style={{ color: palette.text, fontSize: 20, fontWeight: '700' }}>Reflections Calendar</Text>
 
       <GapView style={{ flexDirection: 'row', marginTop: 4 }} gap={8}>
@@ -75,7 +75,7 @@ export default function ReflectionsCalendarJestImpl() {
         <Text style={{ color: palette.text, opacity: 0.9 }}>Grid view</Text>
       )}
 
-      <Modal transparent visible={detailsOpen} onRequestClose={() => setDetailsOpen(false)}>
+      <Modal transparent={true} visible={detailsOpen} onRequestClose={() => setDetailsOpen(false)}>
         <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center' }}>
           <View style={{ backgroundColor: palette.surface, padding: 14, borderRadius: 10, width: '90%', maxWidth: 520 }}>
             <Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>Details</Text>

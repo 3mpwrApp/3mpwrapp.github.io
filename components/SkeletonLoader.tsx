@@ -19,7 +19,7 @@ export default function SkeletonLoader({
   return (
     <View
       style={[styles.container, style]}
-      accessible
+      accessible={true}
       accessibilityRole="progressbar"
       accessibilityLabel="Loading content skeleton"
       accessibilityLiveRegion="polite"
@@ -61,7 +61,7 @@ export function CardSkeletonLoader({
         },
         style,
       ]}
-      accessible
+      accessible={true}
       accessibilityRole="progressbar"
       accessibilityLabel="Loading card skeleton"
     >

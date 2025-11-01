@@ -84,7 +84,7 @@ export default function MutualChatImpl() {
   return (
     <View style={s.container}>
       <Text style={s.title}>{chatId === 'general' ? 'Mutual Chat' : 'Mutual Aid Chat'}</Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       <View style={{ marginBottom: 8 }}>
         <Text style={s.text}>Present: {roster.map(r => r.id).join(', ') || '—'}</Text>
         {!!roster.some(r => r.typing) && <Text style={s.text}>Someone is typing…</Text>}

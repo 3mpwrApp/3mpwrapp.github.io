@@ -917,7 +917,7 @@ export default function PeerSupportContent() {
         </A11yTitle>
       </View>
 
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
 
       {settings.primaryLanguage && settings.communityCenteredApproach && (
         <View style={[styles.culturalBanner, { backgroundColor: colors.warning + '10', borderColor: colors.warning }]}>

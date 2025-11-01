@@ -65,7 +65,7 @@ export default function ChronicTracker() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Chronic Condition Tracker</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <TextInput placeholder="Symptom" placeholderTextColor={palette.text+"77"} value={symptom} onChangeText={setSymptom} style={s.input} />
       <TextInput placeholder="Severity 1-10" placeholderTextColor={palette.text+"77"} value={severity} onChangeText={setSeverity} style={s.input} />
       <TextInput placeholder="Trigger (optional)" placeholderTextColor={palette.text+"77"} value={trigger} onChangeText={setTrigger} style={s.input} />

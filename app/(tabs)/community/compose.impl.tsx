@@ -48,9 +48,9 @@ export default function CommunityCompose() {
   };
 
   return (
-    <View style={s.container} accessibilityLabel="Compose post" accessible>
+    <View style={s.container} accessibilityLabel="Compose post" accessible={true}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Compose Post</Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
   <Text style={s.label}>Channel</Text>
   <TextInput value={channelSlug} onChangeText={setChannelSlug} style={s.input} placeholder="general" placeholderTextColor={palette.text} />
       <Text style={s.label}>Title</Text>
@@ -67,7 +67,7 @@ export default function CommunityCompose() {
             accessibilityLabel="Post body"
             value={body}
             onChangeText={setBody}
-            style={[s.input, { minHeight: 140 }]} multiline
+            style={[s.input, { minHeight: 140 }]} multiline={true}
             placeholder="Write your post. Keep it specific. Add dates if relevant."
             placeholderTextColor={palette.text}
           />

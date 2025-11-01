@@ -709,7 +709,7 @@ export default function AdvocacyCampaignCoordinator() {
               onChangeText={(text) => setNewCampaign(prev => ({ ...prev, description: text }))}
               placeholder="Describe your campaign goals and approach"
               placeholderTextColor={colors.textSecondary}
-              multiline
+              multiline={true}
               numberOfLines={4}
               accessibilityLabel="Campaign description"
             />

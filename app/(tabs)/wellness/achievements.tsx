@@ -91,7 +91,7 @@ export default function Achievements() {
       >
         {t("wellness.achievements.title", "Achievements")}
       </Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <DyslexiaText style={s.subtitle}>
         {t(
           "wellness.achievements.subtitle",

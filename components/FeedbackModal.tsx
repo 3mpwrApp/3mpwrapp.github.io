@@ -93,7 +93,7 @@ export default function FeedbackModal({
 
   if (submitted) {
     return (
-      <Modal visible={visible} transparent animationType="fade" onRequestClose={handleClose}>
+      <Modal visible={visible} transparent={true} animationType="fade" onRequestClose={handleClose}>
         <View style={styles.centeredContainer}>
           <View style={styles.centeredContent}>
             <Ionicons name="checkmark-circle" size={64} color={palette.success} />
@@ -108,7 +108,7 @@ export default function FeedbackModal({
   }
 
   return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={handleClose}>
+    <Modal visible={visible} transparent={true} animationType="slide" onRequestClose={handleClose}>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.container}
@@ -185,7 +185,7 @@ export default function FeedbackModal({
                 placeholderTextColor={palette.muted}
                 value={comment}
                 onChangeText={setComment}
-                multiline
+                multiline={true}
                 numberOfLines={4}
                 maxLength={500}
                 accessibilityLabel="Feedback comment (optional)"

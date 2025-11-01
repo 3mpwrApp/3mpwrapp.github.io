@@ -59,7 +59,7 @@ function CampaignDetailInner() {
             onPress={() => toggle("campaign", campaign.id)}
             accessibilityRole="button"
             accessibilityLabel={saved ? t('a11y.removeCampaign') : t('a11y.saveCampaign')}
-            focusable
+            focusable={true}
           >
             <Text style={styles.buttonText}>
               {saved ? "Remove from Favorites" : "Save to Favorites"}
@@ -99,7 +99,7 @@ function CampaignDetailInner() {
             }}
             accessibilityRole="button"
             accessibilityLabel={joined ? t('a11y.leaveCampaign').replace('{{title}}', campaign.title) : t('a11y.joinCampaign').replace('{{title}}', campaign.title)}
-            focusable
+            focusable={true}
           >
             <Text style={styles.secondaryText}>
               {joined ? "Leave Campaign" : "Join Campaign"}
@@ -121,7 +121,7 @@ function CampaignDetailInner() {
             }}
             accessibilityRole="button"
             accessibilityLabel={t('a11y.openCampaignRoom')}
-            focusable
+            focusable={true}
           >
             <Text style={styles.linkText}>Open Campaign Room</Text>
           </Pressable>
@@ -140,7 +140,7 @@ function CampaignDetailInner() {
             }}
             accessibilityRole="button"
             accessibilityLabel={t('a11y.shareCampaign').replace('{{title}}', campaign.title)}
-            focusable
+            focusable={true}
           >
             <Text style={styles.linkText}>Share</Text>
           </Pressable>

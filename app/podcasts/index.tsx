@@ -218,7 +218,7 @@ export default function PodcastsScreen() {
     <View
       style={styles.container}
       accessibilityLabel="Podcasts and Stories screen"
-      accessible
+      accessible={true}
     >
       <Text
         ref={titleRef}

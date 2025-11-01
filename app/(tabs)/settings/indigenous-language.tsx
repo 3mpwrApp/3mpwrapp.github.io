@@ -110,7 +110,7 @@ const ProtocolSwitch: React.FC<ProtocolSwitchProps> = ({
   return (
     <View
       style={[styles.protocolItem, { backgroundColor: colors.card, borderColor: colors.border }]}
-      accessible
+      accessible={true}
       accessibilityRole="switch"
       accessibilityState={{ checked: value }}
       accessibilityLabel={`${title}: ${description}`}

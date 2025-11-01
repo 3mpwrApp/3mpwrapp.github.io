@@ -38,7 +38,7 @@ export default function UNCRPDInfoScreen() {
             { label: t('uncrpd.actions.gcLegalCapacity'), href: '/(tabs)/research/master-index?filter=uncrpd' },
             { label: t('uncrpd.actions.gcAccessibility'), href: '/(tabs)/research/master-index?filter=uncrpd' },
           ].map(item => (
-            <Link key={item.label} href={item.href as any} asChild>
+            <Link key={item.label} href={item.href as any} asChild={true}>
               <A11yPressable style={styles.linkPress} accessibilityRole="link" accessibilityLabel={item.label} hitSlop={HIT_SLOP_8}>
                 <Text style={styles.linkText}>{item.label}</Text>
               </A11yPressable>

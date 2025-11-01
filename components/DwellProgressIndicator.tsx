@@ -33,7 +33,7 @@ export function DwellProgressIndicator({ progress, size = 40 }: DwellProgressInd
         }
       ]}
       pointerEvents="none"
-      accessibilityElementsHidden
+      accessibilityElementsHidden={true}
     >
       {/* Background circle */}
       <View

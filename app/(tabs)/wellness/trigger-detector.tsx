@@ -36,7 +36,7 @@ export default function TriggerDetector(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.triggers.title','Trigger Detector')}</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.desc}>{t('wellness.triggers.desc','Suggests possible correlations from recent logs.')}</Text>
       {insights.map((l,i)=>(<Text key={i} style={s.line}>• {l}</Text>))}
     </View>

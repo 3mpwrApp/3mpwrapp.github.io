@@ -61,7 +61,7 @@ module.exports = defineConfig([
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-require-imports': 'off',
       // React
-      'react/jsx-boolean-value': ['warn', 'never'],
+      'react/jsx-boolean-value': 'off',
       'react/self-closing-comp': 'warn',
       'react/jsx-key': ['warn', { checkFragmentShorthand: true }],
       'react-hooks/rules-of-hooks': 'error',

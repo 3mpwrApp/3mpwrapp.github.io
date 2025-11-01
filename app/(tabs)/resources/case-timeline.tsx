@@ -58,7 +58,7 @@ export default function CaseTimelineTracker() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('templates.timeline.title','Case Timeline Tracker')}
       </Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <View style={styles.actionsRow}>
   <A11yPressable onPress={()=>{ setShowInfo(v=>!v); announce(showInfo? t('common.hidden','Hidden'): t('common.shown','Shown')); }} style={styles.secondaryBtn} accessibilityLabel={t('templates.timeline.toggleInfo','Toggle instructions')}><Text style={styles.secondaryBtnText}>{showInfo? t('common.hide','Hide'): t('common.show','Show')}</Text></A11yPressable>
         <A11yPressable onPress={copyAll} style={styles.secondaryBtn}><Text style={styles.secondaryBtnText}>{t('common.copyAll','Copy All')}</Text></A11yPressable>
@@ -76,7 +76,7 @@ export default function CaseTimelineTracker() {
       )}
       <Text style={styles.subtitle}>{t('templates.timeline.subtitle','Organize documents, deadlines, hearings, and appointments. Export timelines for your case file or representative.')}</Text>
       <GapView gap={8}>
-        <Link href={("/(tabs)/resources/deadlines" as any)} asChild>
+        <Link href={("/(tabs)/resources/deadlines" as any)} asChild={true}>
           <A11yPressable style={styles.cta} accessibilityLabel={t('templates.timeline.openDeadlines','Open Deadline Calculator')}>
             <Text style={styles.ctaText}>{t('templates.timeline.openDeadlines','Open Deadline Calculator')}</Text>
           </A11yPressable>

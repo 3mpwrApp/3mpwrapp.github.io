@@ -60,7 +60,7 @@ describe('A11yTextInput Comprehensive Accessibility', () => {
 
   it('handles required field properly', () => {
     const { getByTestId } = render(
-      <A11yTextInput {...defaultProps} required testID="required-input" />
+      <A11yTextInput {...defaultProps} required={true} testID="required-input" />
     );
     
     const input = getByTestId('required-input');
@@ -86,7 +86,7 @@ describe('A11yTextInput Comprehensive Accessibility', () => {
         {...defaultProps} 
         value="test@example.com"
         maxLength={50}
-        showCharacterCount
+        showCharacterCount={true}
         testID="count-input"
       />
     );
@@ -175,7 +175,7 @@ describe('A11yTextInput Comprehensive Accessibility', () => {
         helperText="Enter your email address"
         value="test"
         maxLength={50}
-        showCharacterCount
+        showCharacterCount={true}
         testID="combined-hint-input"
       />
     );
@@ -218,7 +218,7 @@ describe('A11yTextInput Comprehensive Accessibility', () => {
         {...defaultProps} 
         helperText="Helper text"
         error="Error message"
-        showCharacterCount
+        showCharacterCount={true}
         maxLength={100}
         testID="relationships-input"
       />
@@ -278,7 +278,7 @@ describe('A11yTextInput Comprehensive Accessibility', () => {
       <A11yTextInput 
         {...defaultProps} 
         error="Invalid email format"
-        announceErrors
+        announceErrors={true}
         testID="announced-error-input"
       />
     );

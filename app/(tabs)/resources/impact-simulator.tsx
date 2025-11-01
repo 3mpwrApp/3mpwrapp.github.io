@@ -49,7 +49,7 @@ export default function ImpactSimulator() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Impact Simulator
       </Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <Text style={styles.subtitle}>
         Data-driven empathy: simulate how changes in law or workplace policy could affect real disabled/injured people.
         Configure scenarios, then view estimated impacts across income, timelines, appeals, and health outcomes.

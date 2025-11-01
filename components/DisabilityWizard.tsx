@@ -91,7 +91,7 @@ export default function DisabilityWizard({
       
       {/* Suggestions */}
       <ScrollView 
-        horizontal
+        horizontal={true}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.suggestionsScroll}
         accessibilityLabel={t('wizard.suggestionsLabel', 'Personalized feature suggestions')}
@@ -115,7 +115,7 @@ export default function DisabilityWizard({
             {t('wizard.nextSteps', 'What comes next?')}
           </Text>
           <ScrollView
-            horizontal
+            horizontal={true}
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={styles.nextStepsScroll}
           >
@@ -132,7 +132,7 @@ export default function DisabilityWizard({
       )}
       
       {/* Customize Link */}
-      <Link href="/(tabs)/settings" asChild>
+      <Link href="/(tabs)/settings" asChild={true}>
         <A11yPressable
           style={styles.customizeButton}
           accessibilityRole="button"
@@ -185,7 +185,7 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette }: S
   const cognitive = cognitiveConfig[suggestion.cognitiveLoad];
   
   return (
-    <Link href={suggestion.route as any} asChild>
+    <Link href={suggestion.route as any} asChild={true}>
       <A11yPressable
         style={[styles.suggestionCard, suggestion.dayOfRotation !== undefined && styles.featuredCard]}
         accessibilityRole="button"
@@ -260,7 +260,7 @@ interface NextStepCardProps {
 
 function NextStepCard({ suggestion, styles, palette }: NextStepCardProps) {
   return (
-    <Link href={suggestion.route as any} asChild>
+    <Link href={suggestion.route as any} asChild={true}>
       <A11yPressable
         style={styles.nextStepCard}
         accessibilityRole="button"

@@ -24,7 +24,7 @@ export default function CBTMiniGames(){
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.mini.title','CBT Mini‑Games')}</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.desc}>{t('wellness.mini.desc','Quick grounding games to shift attention and calm.')}</Text>
       <View style={s.card}><Text style={{ color: palette.text }}>{items[idx]}</Text></View>
       <A11yPressable onPress={()=> setIdx((idx+1)%items.length)} style={s.button} hitSlop={HIT_SLOP_8}><Text style={s.buttonText}>{t('common.next','Next')}</Text></A11yPressable>

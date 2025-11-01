@@ -45,7 +45,7 @@ export default function PolicySimulator() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Interactive Policy Simulator</Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <Text style={s.text}>{step.text}</Text>
       <GapView style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 8 }} gap={8}>
         {step.choices.map((c) => (

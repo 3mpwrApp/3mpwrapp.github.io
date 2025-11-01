@@ -18,7 +18,7 @@ export default function AdaptiveTechLibrary() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Adaptive Tech Library
       </Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       <Text style={styles.subtitle}>
         Tutorials and reviews of accessibility tools: screen readers, speech‑to‑text, mobility aids, captioning, and
         everyday apps that make life easier.

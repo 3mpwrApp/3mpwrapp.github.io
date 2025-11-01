@@ -128,7 +128,7 @@ export default function RehabGames() {
       >
         {t("wellness.rehab.title", "Virtual Rehab Games")}
       </Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.subtitle}>
         {t(
           "wellness.rehab.subtitle",

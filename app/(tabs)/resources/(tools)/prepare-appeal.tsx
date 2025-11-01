@@ -1,6 +1,6 @@
-import ComingSoon from '../../../components/ComingSoon';
-import { useTranslation } from '../../../i18n';
-import { sendFeedbackEmailInternal } from '../../../utils/feedback';
+import ComingSoon from '../../../../components/ComingSoon';
+import { useTranslation } from '../../../../i18n';
+import { sendFeedbackEmailInternal } from '../../../../utils/feedback';
 
 export const options = { href: null };
 

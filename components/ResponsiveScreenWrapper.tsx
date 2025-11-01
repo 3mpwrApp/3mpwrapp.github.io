@@ -85,7 +85,7 @@ const ResponsiveScreenWrapper = React.memo<ResponsiveScreenWrapperProps>(
             style={containerStyle}
             contentContainerStyle={contentStyle}
             keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator
+            showsVerticalScrollIndicator={true}
             testID={testID ? `${testID}-scrollview` : undefined}
             refreshControl={
               refreshable ? (

@@ -39,9 +39,9 @@ export default function MyPostsScreen() {
   }, [user?.uid]);
 
   return (
-    <View style={s.container} accessibilityLabel={t('community.myPosts.title','My Posts')} accessible>
+    <View style={s.container} accessibilityLabel={t('community.myPosts.title','My Posts')} accessible={true}>
       <Text ref={titleRef} style={s.title} accessibilityRole='header' maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('community.myPosts.title','My Posts')}</Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       <FlatList
         data={items}
         keyExtractor={(it)=> it.id}

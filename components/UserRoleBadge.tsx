@@ -106,7 +106,7 @@ export default function UserRoleBadge({
           borderRadius: sizeConfig.badgeSize / 2,
         },
       ]}
-      accessible
+      accessible={true}
       accessibilityRole="image"
       accessibilityLabel={config.description}
     >

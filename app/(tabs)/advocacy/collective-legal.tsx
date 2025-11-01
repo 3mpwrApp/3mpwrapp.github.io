@@ -61,7 +61,7 @@ export default function CollectiveLegal() {
       <Text style={s.label}>{t('advocacy.collective.provinceLabel', 'Province (optional)')}</Text>
       <TextInput style={s.input} value={province} onChangeText={setProvince} placeholder={t('advocacy.collective.provincePlaceholder', 'ON, BC, ...')} accessibilityLabel={t('advocacy.collective.provinceLabel', 'Province (optional)')} />
       <Text style={s.label}>{t('advocacy.collective.detailsLabel', 'Details (optional)')}</Text>
-      <TextInput style={[s.input,{minHeight:100}]} value={details} onChangeText={setDetails} multiline placeholder={t('advocacy.collective.detailsPlaceholder','Short summary; do not include identifiers.')} accessibilityLabel={t('advocacy.collective.detailsLabel', 'Details (optional)')} />
+      <TextInput style={[s.input,{minHeight:100}]} value={details} onChangeText={setDetails} multiline={true} placeholder={t('advocacy.collective.detailsPlaceholder','Short summary; do not include identifiers.')} accessibilityLabel={t('advocacy.collective.detailsLabel', 'Details (optional)')} />
       <A11yPressable onPress={submit} style={s.button} accessibilityLabel={t('advocacy.collective.submit','Submit report')}><Text style={s.buttonText}>{t('advocacy.collective.submit','Submit report')}</Text></A11yPressable>
       <Text style={[s.subtitle,{marginTop:12}]}>{t('advocacy.collective.aggregatedHeader','Aggregated reports')}</Text>
       {Object.keys(byType).length === 0 ? <Text style={s.tip}>{t('advocacy.collective.none','No reports yet.')}</Text> : Object.entries(byType).map(([k,v]) => <Text key={k} style={s.tip} accessibilityLabel={`${k} ${v}`}>{k}: {v}</Text>)}

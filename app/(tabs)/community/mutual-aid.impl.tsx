@@ -66,7 +66,7 @@ export default function MutualAidImpl() {
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await respondToPost(p.id, reply); setReply(''); Alert.alert('Sent','Your response was sent.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Send</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try{ await softDeletePost(p.id); setItems(prev=>prev.map(x=> x.id===p.id? { ...x, deleted: true }: x)); } catch{} }} style={s.smallBtn}><Text style={s.smallBtnText}>Delete</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { await flagItem('mutual', p.id, 'inappropriate'); Alert.alert('Flagged','Thanks for reporting.'); } catch {} }} style={s.smallBtn}><Text style={s.smallBtnText}>Flag</Text></A11yPressable>
-            <Link href={{ pathname: '/(tabs)/community/mutual-chat', params: { id: p.id } }} asChild>
+            <Link href={{ pathname: '/(tabs)/community/mutual-chat', params: { id: p.id } }} asChild={true}>
               <A11yPressable hitSlop={HIT_SLOP_8} style={s.smallBtn}><Text style={s.smallBtnText}>Open chat</Text></A11yPressable>
             </Link>
           </GapView>

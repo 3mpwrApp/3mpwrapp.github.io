@@ -65,7 +65,7 @@ export default function DMListScreenImpl() {
   };
 
   return (
-    <View style={s.container} accessibilityLabel="Direct Messages list" accessible>
+    <View style={s.container} accessibilityLabel="Direct Messages list" accessible={true}>
       <Text style={s.title} accessibilityRole='header'>Direct Messages</Text>
       <GapView style={{ flexDirection:'row' }} gap={8}>
         <TextInput

@@ -240,13 +240,13 @@ export default function SleepEnergyTracker() {
 				Track sleep and energy; export summaries for clinicians or claims.
 			</Text>
 
-			<DisclaimerBanner type="medical" compact />
+			<DisclaimerBanner type="medical" compact={true} />
 
 			<Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} accessibilityLabel="Date input" accessibilityHint="Enter the date for your sleep entry." />
 			<Field label="Sleep hours" value={sleepHours} onChangeText={setSleepHours} keyboardType="numeric" accessibilityLabel="Sleep hours input" accessibilityHint="Enter the number of hours you slept." />
 			<Field label="Sleep quality (1-5)" value={sleepQuality} onChangeText={setSleepQuality} keyboardType="numeric" accessibilityLabel="Sleep quality input" accessibilityHint="Enter your sleep quality from 1 to 5." />
 			<Field label="Energy (1-5)" value={energy} onChangeText={setEnergy} keyboardType="numeric" accessibilityLabel="Energy input" accessibilityHint="Enter your energy level from 1 to 5." />
-			<Field label="Notes (insomnia, naps, pain, etc.)" value={notes} onChangeText={setNotes} multiline accessibilityLabel="Notes input" accessibilityHint="Add any notes about your sleep, naps, pain, or other factors." />
+			<Field label="Notes (insomnia, naps, pain, etc.)" value={notes} onChangeText={setNotes} multiline={true} accessibilityLabel="Notes input" accessibilityHint="Add any notes about your sleep, naps, pain, or other factors." />
 			<Field label="Tags (comma-separated)" value={tags} onChangeText={setTags} accessibilityLabel="Tags input" accessibilityHint="Add tags to help categorize your entry." />
 			{editingId ? (
 				<GapView style={{ flexDirection: "row" }} gap={8}>

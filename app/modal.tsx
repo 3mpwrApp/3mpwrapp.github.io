@@ -19,7 +19,7 @@ export default function Modal() {
   return (
     <>
       <Stack.Screen options={{ title: "Modal" }} />
-      <View style={styles.container} accessibilityViewIsModal>
+      <View style={styles.container} accessibilityViewIsModal={true}>
         <Text
           ref={titleRef}
           nativeID="modal-title"

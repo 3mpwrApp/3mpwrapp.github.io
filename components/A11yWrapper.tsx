@@ -91,7 +91,7 @@ export function A11yTitle({
     <Text
       style={style}
       accessibilityRole="header"
-      accessible
+      accessible={true}
       accessibilityLabel={`Heading level ${level}: ${typeof children === 'string' ? children : 'content'}`}
       {...titleProps}
     >
@@ -117,7 +117,7 @@ export function A11yText({
   return (
     <Text
       style={style}
-      accessible
+      accessible={true}
       accessibilityLabel={accessibilityLabel}
       importantForAccessibility={
         importance === 'high' ? 'yes' : 

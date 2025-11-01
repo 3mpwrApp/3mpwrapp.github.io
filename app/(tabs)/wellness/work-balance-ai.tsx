@@ -76,8 +76,8 @@ export default function WorkBalanceAI() {
       >
         Wellness + Work Balance AI
       </Text>
-      <DisclaimerBanner type="medical" compact />
-      <DisclaimerBanner type="ai" compact />
+      <DisclaimerBanner type="medical" compact={true} />
+      <DisclaimerBanner type="ai" compact={true} />
       <Text style={s.subtitle}>
         Tracks pain, sleep/energy, and mood to suggest when to rest, when to
         work, and when to advocate.

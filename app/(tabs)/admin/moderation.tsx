@@ -39,7 +39,7 @@ export default function ModerationQueue() {
 
   return (
     <AdminGuard>
-      <View style={s.container} accessibilityLabel="Moderation queue" accessible>
+      <View style={s.container} accessibilityLabel="Moderation queue" accessible={true}>
         <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Moderation {loading ? '(loading...)' : ''}</Text>
         <FlatList
           data={items}

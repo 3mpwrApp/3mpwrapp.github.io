@@ -158,7 +158,7 @@ export default function AssistantHub() {
       <RecentTools />
       <GapView style={s.grid} gap={12}>
         {items.map((it) => (
-          <Link key={String(it.href)} href={it.href as any} asChild>
+          <Link key={String(it.href)} href={it.href as any} asChild={true}>
             <A11yPressable
               hitSlop={HIT_SLOP_8}
               accessibilityRole="button"
@@ -251,7 +251,7 @@ function RecentTools() {
       </View>
       <GapView style={{ flexDirection: 'row', flexWrap: 'wrap' }} gap={8}>
         {items.map((it) => (
-          <Link key={it.tool} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild>
+          <Link key={it.tool} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild={true}>
             <A11yPressable
               hitSlop={HIT_SLOP_8}
               style={s.recentChip}

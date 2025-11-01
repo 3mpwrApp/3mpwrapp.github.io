@@ -46,7 +46,7 @@ export default function GuestModeBadge() {
   return (
     <View
       style={[styles.container, { backgroundColor: colors.warning + '15', borderColor: colors.warning }]}
-      accessible
+      accessible={true}
       accessibilityLiveRegion="polite"
       accessibilityLabel="Guest mode active"
     >

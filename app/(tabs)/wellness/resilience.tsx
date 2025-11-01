@@ -15,7 +15,7 @@ export default function ResiliencePoints() {
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.resilience.title','Resilience Points')}</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <Text style={s.points}>{t('wellness.resilience.points','Points: {{points}}',{ points: rs.points })}</Text>
       <GapView gap={8}>
         {rs.actions.map(a => (

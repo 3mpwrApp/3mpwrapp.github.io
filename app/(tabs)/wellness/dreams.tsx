@@ -16,8 +16,8 @@ export default function Dreams() {
   return (
     <View style={s.container}>
       <Text accessibilityRole="header" style={s.header}>{t('wellness.dreams.title','Dream Tracker & Interpreter')}</Text>
-      <DisclaimerBanner type="medical" compact />
-      <TextInput style={s.input} placeholder={t('wellness.dreams.placeholder','Describe your dream...')} value={text} onChangeText={setText} multiline />
+      <DisclaimerBanner type="medical" compact={true} />
+      <TextInput style={s.input} placeholder={t('wellness.dreams.placeholder','Describe your dream...')} value={text} onChangeText={setText} multiline={true} />
       <Pressable hitSlop={HIT_SLOP_8} accessibilityRole="button" style={s.button} onPress={()=> { if (!text.trim()) return; add(text); setText(''); }}>
         <Text style={s.buttonText}>{t('common.save','Save')}</Text>
       </Pressable>

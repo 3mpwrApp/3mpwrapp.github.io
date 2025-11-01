@@ -22,7 +22,7 @@ export default function LanguageSelector() {
   return (
     <View 
       style={styles.container}
-      accessible
+      accessible={true}
       accessibilityLabel={t("settings.language.title", "Language preferences")}
     >
       <Text style={styles.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>

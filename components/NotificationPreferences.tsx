@@ -85,7 +85,7 @@ export default function NotificationPreferences() {
   return (
     <View 
       style={styles.container}
-      accessible
+      accessible={true}
       accessibilityLabel={t("settings.notifications.title", "Notification preferences")}
     >
       <Text style={styles.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>

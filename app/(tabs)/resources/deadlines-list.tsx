@@ -115,7 +115,7 @@ export default function DeadlinesList() {
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('templates.deadlines.myDeadlines','My Deadlines')} {loading ? t('common.loading','(loading...)') : ''}
       </Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
   <A11yPressable onPress={() => load()} style={s.button} accessibilityLabel={t('templates.deadlines.reload','Reload deadlines')}><Text style={s.buttonText}>{t('templates.deadlines.reloadShort','Reload')}</Text></A11yPressable>
       <A11yPressable onPress={async () => {
         try {

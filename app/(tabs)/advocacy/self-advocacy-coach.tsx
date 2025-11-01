@@ -192,7 +192,7 @@ function PracticeCoach() {
           minHeight: 70,
           textAlignVertical: 'top',
         }}
-        multiline
+        multiline={true}
         value={prompt}
         onChangeText={setPrompt}
         accessibilityLabel={t('advocacy.coach.practiceInputLabel', 'Practice prompt input')}

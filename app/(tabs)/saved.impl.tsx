@@ -13,6 +13,7 @@ import {
 
 import Card from "../../components/Card";
 import ContrastToggle from "../../components/ContrastToggle";
+import ResponsiveScreenWrapper from "../../components/ResponsiveScreenWrapper";
 import SettingsLink from "../../components/SettingsLink";
 import type { Podcast } from "../../data/podcasts";
 import {
@@ -189,7 +190,7 @@ export default function SavedScreen() {
               duration: item.duration,
             },
           } as any}
-          asChild
+          asChild={true}
         >
           <Card
             title={item.title}
@@ -219,7 +220,7 @@ export default function SavedScreen() {
             pathname: "/(tabs)/campaigns/[id]",
             params: { id: item.id },
           } as any}
-          asChild
+          asChild={true}
         >
           <Card
             title={item.title}
@@ -235,7 +236,7 @@ export default function SavedScreen() {
           pathname: "/(tabs)/resources/[id]",
           params: { id: item.id },
         } as any}
-        asChild
+        asChild={true}
       >
         <Card title={item.title} subtitle={item.description} />
       </Link>
@@ -243,7 +244,7 @@ export default function SavedScreen() {
   };
 
   return (
-    <ResponsiveScreenWrapper scrollable>
+    <ResponsiveScreenWrapper>
       <View style={{ padding: 20 }}>
         <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
         <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />

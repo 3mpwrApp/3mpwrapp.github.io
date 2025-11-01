@@ -92,7 +92,7 @@ export default function EnhancedPrivacySection() {
         <Text style={s.description}>
           Your data belongs 100% to you. 3mpwr App is built on the fundamental principle of complete user data sovereignty.
         </Text>
-        <DataOwnershipStatement compact showHeader={false} style={{ marginTop: 8 }} />
+        <DataOwnershipStatement compact={true} showHeader={false} style={{ marginTop: 8 }} />
       </View>
 
       <AccessibilityToggle title={t('settings.privacy.passcode','Require Passcode on Launch')} description={t('settings.privacy.passcodeDesc','Lock app with passcode')} value={requirePasscodeOnLaunch} onValueChange={setRequirePasscodeOnLaunch} icon='lock-closed' testID='passcode-toggle' />
@@ -121,7 +121,7 @@ export default function EnhancedPrivacySection() {
             <Text style={s.rowLabel}>Username (optional)</Text>
             <TextInput style={s.input} placeholder='Username' value={username} onChangeText={setUsername} autoCapitalize='none' autoCorrect={false} accessibilityLabel='WebDAV username' />
             <Text style={s.rowLabel}>Password (optional)</Text>
-            <TextInput style={s.input} placeholder='Password' value={password} onChangeText={setPassword} secureTextEntry accessibilityLabel='WebDAV password' />
+            <TextInput style={s.input} placeholder='Password' value={password} onChangeText={setPassword} secureTextEntry={true} accessibilityLabel='WebDAV password' />
             <GapView style={s.buttonRow} gap={8}>
               <A11yPressable style={s.backupButton} onPress={onConnectBYOC} accessibilityRole='button' accessibilityLabel='Connect personal storage' hitSlop={HIT_SLOP_8}><Ionicons name='cloud-done' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Connect Storage</Text></A11yPressable>
               <A11yPressable style={[s.backupButton, s.dangerButton]} onPress={onClearBYOC} accessibilityRole='button' accessibilityLabel='Clear storage session' hitSlop={HIT_SLOP_8}><Ionicons name='close' size={16} color={palette.error} /><Text style={[s.backupButtonText, s.dangerButtonText]}>Clear Session</Text></A11yPressable>
@@ -131,7 +131,7 @@ export default function EnhancedPrivacySection() {
         )}
         <View style={{ marginBottom:16 }}>
           <Text style={s.rowLabel}>Set/Change Passcode</Text>
-          <TextInput style={s.input} placeholder='New passcode' secureTextEntry onSubmitEditing={(e)=> setPasscode(e.nativeEvent.text || undefined)} accessibilityLabel='New passcode' accessibilityHint='Enter a new passcode for the app' />
+          <TextInput style={s.input} placeholder='New passcode' secureTextEntry={true} onSubmitEditing={(e)=> setPasscode(e.nativeEvent.text || undefined)} accessibilityLabel='New passcode' accessibilityHint='Enter a new passcode for the app' />
         </View>
         <AccessibilityToggle title='Wellness Lock' description='Require passcode to access wellness features' value={state.lockWellness ?? false} onValueChange={setLockWellness} icon='heart-outline' testID='wellness-lock-toggle' />
         <GapView style={s.backupButtons} gap={8}>

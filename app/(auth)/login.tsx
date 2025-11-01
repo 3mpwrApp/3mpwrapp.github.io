@@ -94,7 +94,7 @@ export default function LoginScreen() {
         style={styles.input}
         placeholder={t("auth.password", "Password")}
         placeholderTextColor={palette.text + '77'}
-        secureTextEntry
+        secureTextEntry={true}
         value={password}
         onChangeText={setPassword}
         accessibilityLabel={t("auth.password", "Password")}

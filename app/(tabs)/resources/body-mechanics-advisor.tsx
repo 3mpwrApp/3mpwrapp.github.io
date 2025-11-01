@@ -76,7 +76,7 @@ export default function BodyMechanicsAdvisor() {
   };
 
   return (
-    <View style={s.container} accessibilityLabel={t('bodyMechanics.screenLabel','AI Body Mechanics Advisor screen')} accessible>
+    <View style={s.container} accessibilityLabel={t('bodyMechanics.screenLabel','AI Body Mechanics Advisor screen')} accessible={true}>
       <View style={s.infoCard} accessibilityLabel={t('bodyMechanics.howToUse','How to use Body Mechanics Advisor')} accessibilityRole="summary">
         <Text style={[s.cardTitle,{ color: palette.primary }]}>{t('bodyMechanics.howToUseTitle','How to Use')}</Text>
         <Text style={s.text}>{t('bodyMechanics.instructions','Pick a short video of a daily task (typing, lifting, posture). The tool offers accessibility-first ergonomic suggestions. Not medical advice.')}</Text>
@@ -93,8 +93,8 @@ export default function BodyMechanicsAdvisor() {
         </GapView>
       </View>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>AI Body Mechanics Advisor</Text>
-      <DisclaimerBanner type="medical" compact />
-      <DisclaimerBanner type="ai" compact />
+      <DisclaimerBanner type="medical" compact={true} />
+      <DisclaimerBanner type="ai" compact={true} />
       <Text style={s.text}>{t('bodyMechanics.subtitle','Upload a short video of a daily task to receive accessibility-focused movement suggestions. Not medical advice.')}</Text>
       <A11yPressable onPress={async()=>{
         try {

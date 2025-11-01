@@ -52,7 +52,7 @@ const ResourceLink = React.memo<{ href: string; title: string; badge?: string }>
   ({ href, title, badge }) => {
     const palette = useAppPalette();
     return (
-      <Link href={href as Href} asChild>
+      <Link href={href as Href} asChild={true}>
         <A11yPressable hitSlop={HIT_SLOP_8} style={{ marginBottom: 8 }}>
           <Text
             style={{ color: palette.primary, textDecorationLine: "underline", fontSize: 15, lineHeight: 22.5 }}
@@ -170,13 +170,13 @@ export default function ResourcesScreen() {
   const styles = React.useMemo(() => createStyles(palette), [palette]);
   
   return (
-    <ResponsiveScreenWrapper scrollable>
+    <ResponsiveScreenWrapper>
       <View style={{ paddingHorizontal: 16, paddingTop: 16 }}>
         {/* Header */}
         <View
           style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}
           accessibilityLabel="Resources screen"
-          accessible
+          accessible={true}
         >
           <Text
             ref={titleRef}
@@ -197,7 +197,7 @@ export default function ResourcesScreen() {
           {t("resources.intro", "Find helpful guides and materials.")}
         </Text>
         
-        <DisclaimerBanner type="legal" compact />
+        <DisclaimerBanner type="legal" compact={true} />
         
         {region === "all" && !province && (
           <Text style={[textStyles.bodySmall, { opacity: 0.75, marginBottom: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
@@ -209,7 +209,7 @@ export default function ResourcesScreen() {
         <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 16 }]}>
           🤖 AI Tools
         </Text>
-        <DisclaimerBanner type="ai" compact />
+        <DisclaimerBanner type="ai" compact={true} />
         <ResourceLink href="/(tabs)/resources/ai-decision-simplifier" title="AI Decision Simplifier" badge="Coming soon" />
         <ResourceLink href="/(tabs)/resources/appeal-coach" title="Appeal Coach" badge="Beta" />
         <ResourceLink href="/(tabs)/resources/body-mechanics-advisor" title="Body Mechanics Advisor" />
@@ -262,7 +262,7 @@ export default function ResourcesScreen() {
         <View
           style={styles.filters}
           accessibilityLabel="Category filters"
-          accessible
+          accessible={true}
         >
           {(
             [

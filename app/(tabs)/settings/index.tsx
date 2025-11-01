@@ -14,7 +14,7 @@ import { GapView } from '../../../components/GapView';
 import LanguageSelector from '../../../components/LanguageSelector';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import UpdateChecker from '../../../components/UpdateChecker';
-import UserBadgesDisplay from '../../../components/UserBadgesDisplay';
+// import UserBadgesDisplay from '../../../components/UserBadgesDisplay';
 import * as SettingsLazy from '../../../components/settings';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
@@ -106,7 +106,7 @@ export default function SettingsScreen() {
   const sendFeedbackEmail = () => sendFeedbackEmailInternal(t);
 
   return (
-    <ResponsiveScreenWrapper scrollable>
+    <ResponsiveScreenWrapper>
       <View style={[styles.container, { padding:20 }]} accessibilityLabel={t('settings.title','Settings screen')}>
         <Text ref={titleRef} accessibilityRole='header' style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('settings.title','Settings')}</Text>
         
@@ -114,7 +114,7 @@ export default function SettingsScreen() {
           <EnhancedA11ySettingsSection />
           
           {/* Cognitive Accessibility Settings Link */}
-          <Link href={'/(tabs)/settings/cognitive-accessibility' as any} asChild>
+          <Link href={'/(tabs)/settings/cognitive-accessibility' as any} asChild={true}>
             <A11yPressable
               style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
               accessibilityRole='button'
@@ -128,7 +128,7 @@ export default function SettingsScreen() {
           </Link>
           
           {/* Advanced Accessibility Settings Link */}
-          <Link href={'/(tabs)/settings/advanced-accessibility' as any} asChild>
+          <Link href={'/(tabs)/settings/advanced-accessibility' as any} asChild={true}>
             <A11yPressable
               style={[styles.linkButton, { justifyContent:'center', marginTop:8 }]}
               accessibilityRole='button'
@@ -144,7 +144,7 @@ export default function SettingsScreen() {
         
         <Section title="Cultural & Neurodiversity Support" subtitle="Inclusive settings for diverse communities" styles={styles}>
           {/* Neurodivergent Support Link */}
-          <Link href={'/(tabs)/settings/neurodivergent' as any} asChild>
+          <Link href={'/(tabs)/settings/neurodivergent' as any} asChild={true}>
             <A11yPressable
               style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
               accessibilityRole='button'
@@ -158,7 +158,7 @@ export default function SettingsScreen() {
           </Link>
           
           {/* Cultural Safety Link */}
-          <Link href={'/(tabs)/settings/cultural-safety' as any} asChild>
+          <Link href={'/(tabs)/settings/cultural-safety' as any} asChild={true}>
             <A11yPressable
               style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
               accessibilityRole='button'
@@ -172,7 +172,7 @@ export default function SettingsScreen() {
           </Link>
           
           {/* Indigenous Languages Link */}
-          <Link href={'/(tabs)/settings/indigenous-language' as any} asChild>
+          <Link href={'/(tabs)/settings/indigenous-language' as any} asChild={true}>
             <A11yPressable
               style={[styles.linkButton, { justifyContent:'center' }]}
               accessibilityRole='button'
@@ -194,7 +194,7 @@ export default function SettingsScreen() {
           </React.Suspense>
           
           {/* Advanced Security Link */}
-          <Link href={'/(tabs)/settings/advanced-security' as any} asChild>
+          <Link href={'/(tabs)/settings/advanced-security' as any} asChild={true}>
             <A11yPressable
               style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
               accessibilityRole='button'
@@ -240,7 +240,7 @@ export default function SettingsScreen() {
         <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>
           {/* Profile Editor Link */}
           {!isGuest && (
-            <Link href={'/(tabs)/settings/profile-editor' as any} asChild>
+            <Link href={'/(tabs)/settings/profile-editor' as any} asChild={true}>
               <A11yPressable
                 style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
                 accessibilityRole='button'
@@ -257,7 +257,7 @@ export default function SettingsScreen() {
           {isGuest && (
             <View style={{ marginBottom:16 }}>
               <Text style={[styles.description, { marginBottom:8 }]}>{t('settings.account.guestNotice','You are browsing as a guest. Create an account to sync data across devices and enable full features.')}</Text>
-              <Link href={'/(auth)/register' as any} asChild>
+              <Link href={'/(auth)/register' as any} asChild={true}>
                 <A11yPressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button' accessibilityLabel={t('settings.account.createAccount','Create Account')} hitSlop={HIT_SLOP_8}>
                   <Ionicons name='person-add' size={20} color={palette.primary} />
                   <Text style={styles.linkText}>{t('settings.account.createAccount','Create Account')}</Text>
@@ -270,7 +270,7 @@ export default function SettingsScreen() {
               {photoURL ? <Image source={{ uri: photoURL }} style={styles.avatar} accessibilityLabel={t('settings.account.photo','Profile picture')} /> : <View style={styles.avatarPlaceholder}><Ionicons name='person' size={40} color={palette.text} /></View>}
               <Button title={t('settings.account.changePhoto','Change Profile Picture')} onPress={handleUploadPhoto} />
               
-              <UserBadgesDisplay />
+              {/* <UserBadgesDisplay /> */}
               
               <Text style={styles.rowLabel}>{t('settings.account.displayName','Display Name')}</Text>
               <TextInput style={styles.input} placeholder={t('settings.account.displayNamePlaceholder','Enter display name')} value={displayName} onChangeText={setDisplayName} accessibilityLabel={t('settings.account.displayName','Display Name')} />
@@ -290,7 +290,7 @@ export default function SettingsScreen() {
                     <>
                       <Text style={{ color:palette.error, fontWeight:'600', marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordTitle','Confirm Deletion')}</Text>
                       <Text style={{ color:palette.text, opacity:0.8, marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordBody','Enter your password to permanently delete your account.')}</Text>
-                      <TextInput style={styles.input} secureTextEntry value={password} onChangeText={setPassword} placeholder={t('settings.account.passwordPlaceholder','Password')} accessibilityLabel={t('settings.account.passwordPlaceholder','Password')} />
+                      <TextInput style={styles.input} secureTextEntry={true} value={password} onChangeText={setPassword} placeholder={t('settings.account.passwordPlaceholder','Password')} accessibilityLabel={t('settings.account.passwordPlaceholder','Password')} />
                       <GapView gap={8} style={{ flexDirection:'row' }}>
                         <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting || !password} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}>
                           <Text style={{ color:palette.onPrimary, fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text>
@@ -412,7 +412,7 @@ function EnhancedA11ySettingsSection() {
         </GapView>
       </View>
       <View style={styles.voiceHelpSection}>
-        <Link href={'/(tabs)/voice-help' as any} asChild>
+        <Link href={'/(tabs)/voice-help' as any} asChild={true}>
           <A11yPressable style={styles.linkButton} accessibilityRole='button' accessibilityLabel='Open voice help guide' hitSlop={HIT_SLOP_8}>
             <Ionicons name='help-circle' size={20} color={palette.primary} />
             <Text style={styles.linkText}>Voice Help Guide</Text>
@@ -463,7 +463,7 @@ function AdminSection() {
       <Button title='Refresh admin status' onPress={refreshClaims} />
       {isAdmin && (
         <View style={{ marginTop:8 }}>
-          <Link href={'/(tabs)/admin' as any} asChild>
+          <Link href={'/(tabs)/admin' as any} asChild={true}>
             <A11yPressable accessibilityRole='link' accessibilityLabel='Open Admin Panel' hitSlop={HIT_SLOP_8} style={{ paddingVertical:4 }}>
               <Text style={{ color:palette.primary, fontWeight:'700' }}>Open Admin Panel</Text>
             </A11yPressable>

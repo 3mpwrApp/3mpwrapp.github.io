@@ -51,7 +51,7 @@ function Inner() {
 
   return (
     <ResponsiveScreenWrapper 
-      scrollable
+      scrollable={true}
       testID="ask-advocate-screen"
     >
       <Text
@@ -105,7 +105,7 @@ function Inner() {
         style={[styles.input, { minHeight: 100 }]}
         value={details}
         onChangeText={setDetails}
-        multiline
+        multiline={true}
         placeholder={t('advocacy.ask.detailsPlaceholder','What happened? What help do you need?')}
       />
 

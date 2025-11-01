@@ -12,7 +12,7 @@ export default function SkeletonRow({ testID }: { testID?: string }) {
       style={styles.container}
       testID={testID}
       accessibilityLabel="Loading item"
-      accessible
+      accessible={true}
     >
       <View style={styles.title} />
       <View style={styles.subtitle} />

@@ -13,7 +13,7 @@ export default function LoadingScreen({ message }: LoadingScreenProps) {
   return (
     <View
       style={[styles.container, { backgroundColor }]}
-      accessible
+      accessible={true}
       accessibilityRole="progressbar"
       accessibilityLabel={message || 'Loading content'}
       accessibilityLiveRegion="polite"

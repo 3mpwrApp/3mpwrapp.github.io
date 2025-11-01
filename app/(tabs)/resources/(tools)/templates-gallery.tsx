@@ -2,13 +2,13 @@
 import React from "react";
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
-import A11yPressable from "../../../components/A11yPressable";
-import DisclaimerBanner from "../../../components/DisclaimerBanner";
-import { GapView } from "../../../components/GapView";
-import { MAX_FONT_SCALE, useAnnounceOnMount } from "../../../hooks/useA11y";
-import { useTranslation } from "../../../i18n";
-import { useAppPalette } from "../../../theme/usePalette";
-import { announce } from '../../../utils/announce';
+import A11yPressable from "../../../../components/A11yPressable";
+import DisclaimerBanner from "../../../../components/DisclaimerBanner";
+import { GapView } from "../../../../components/GapView";
+import { MAX_FONT_SCALE, useAnnounceOnMount } from "../../../../hooks/useA11y";
+import { useTranslation } from "../../../../i18n";
+import { useAppPalette } from "../../../../theme/usePalette";
+import { announce } from '../../../../utils/announce';
 let AsyncStorage: any; try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
 
 const EXAMPLES = [
@@ -102,7 +102,7 @@ export default function TemplatesGallery() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }} accessibilityLabel={t("templates.gallery.screenLabel","Templates gallery screen")}>      
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t("templates.gallery.title","Template Gallery")}</Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <View style={s.actionsRow}>
         <A11yPressable
           onPress={() => { setShowInfo(v => !v); announce(showInfo ? t("common.hide","Hide") : t("templates.gallery.toggleInfo","Toggle instructions")); }}

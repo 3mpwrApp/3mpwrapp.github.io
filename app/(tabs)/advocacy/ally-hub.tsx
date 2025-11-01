@@ -45,7 +45,7 @@ export default function AllyHub() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }}>
   <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.tools.ally_hub')}</Text>
-  <DisclaimerBanner type="general" compact />
+  <DisclaimerBanner type="general" compact={true} />
   <Text style={s.text}>{t('advocacy.ally.intro')}</Text>
   <Text style={[s.sectionLabel,{marginTop:12}]}>{t('advocacy.ally.linksHeader')}</Text>
       {links.map(l => (
@@ -60,7 +60,7 @@ export default function AllyHub() {
         style={s.input}
         value={prompt}
         onChangeText={setPrompt}
-        multiline
+        multiline={true}
         accessibilityLabel="Ally coaching prompt"
       />
       <A11yPressable testID="ally-generate-btn" onPress={runCoach} style={[s.button, loading && { opacity:0.6 }]} disabled={loading} accessibilityRole="button" accessibilityLabel={t('advocacy.ally.generate')}>

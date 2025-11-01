@@ -3,6 +3,7 @@ import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
 import GapView from '../../components/GapView';
+import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import { MAX_FONT_SCALE } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
 import { useNotifications } from '../../store/notifications';
@@ -17,7 +18,7 @@ export default function InboxScreen() {
   const { inbox, unread, markAllRead, markRead } = useNotifications();
 
   return (
-    <ResponsiveScreenWrapper scrollable>
+    <ResponsiveScreenWrapper>
       <View style={s.container} accessibilityLabel={t('nav.inbox','Inbox screen')}>
         <Text accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('nav.inbox','Inbox')}</Text>
         <GapView style={{ flexDirection:'row' }} gap={8}>

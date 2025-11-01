@@ -48,7 +48,7 @@ export default function ClaimsNavigator() {
       >
         {t("claimsNavigator.title", "Guided Claims Navigator")}
       </Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <Text style={styles.subtitle}>
         {t("claimsNavigator.subtitle", "Turn your situation into a clear plan.")}
       </Text>

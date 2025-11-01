@@ -93,14 +93,14 @@ export default function TestersChatImpl() {
   };
 
   return (
-    <View style={s.container} accessibilityLabel="Testers chat" accessible>
+    <View style={s.container} accessibilityLabel="Testers chat" accessible={true}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
         Testers Chat {unread > 0 ? `(${unread} new)` : ''}
       </Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       <Text style={s.meta}>Online: {present}{typing > 0 ? ` — typing…` : ''}</Text>
       <FlatList
-        inverted
+        inverted={true}
         data={items}
         keyExtractor={(m) => m.id!}
         renderItem={({ item }) => (

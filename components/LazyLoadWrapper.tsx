@@ -42,12 +42,12 @@ function LoadingFallback({ message }: { message?: string }) {
       style={[styles.container, { backgroundColor: palette.background }]}
       accessibilityRole="progressbar"
       accessibilityLabel={loadingText}
-      accessible
+      accessible={true}
     >
       <ActivityIndicator 
         size="large" 
         color={palette.primary}
-        accessibilityElementsHidden
+        accessibilityElementsHidden={true}
         importantForAccessibility="no-hide-descendants"
       />
       <Text 
@@ -73,7 +73,7 @@ function ErrorFallback({ message }: { message?: string }) {
       style={[styles.container, { backgroundColor: palette.background }]}
       accessibilityRole="alert"
       accessibilityLabel={errorText}
-      accessible
+      accessible={true}
     >
       <Text style={[styles.text, styles.errorText, { color: palette.error }]}>
         {errorText}

@@ -231,7 +231,7 @@ export default function A11yTextInput({
           rest.onBlur?.(e);
         }}
         // Accessibility props
-        accessible
+        accessible={true}
         accessibilityLabel={enhancedLabel}
         accessibilityHint={enhancedHint}
         accessibilityRole={inputType === 'search' ? 'search' : 'text'}
@@ -240,7 +240,7 @@ export default function A11yTextInput({
         }}
         // Enhanced keyboard and input behavior
         returnKeyType={inputType === 'search' ? 'search' : 'done'}
-        enablesReturnKeyAutomatically
+        enablesReturnKeyAutomatically={true}
         autoCapitalize={inputType === 'email' || inputType === 'url' ? 'none' : 'sentences'}
         autoCorrect={inputType === 'email' || inputType === 'url' || inputType === 'password' ? false : true}
         spellCheck={inputType === 'password' ? false : true}

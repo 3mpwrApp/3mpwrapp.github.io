@@ -63,7 +63,7 @@ export default function VoiceNotes() {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding:16 }}>
       <Text ref={titleRef} accessibilityRole='header' style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('templates.voice.title','Voice-to-Case Notes')}</Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <View style={s.infoCard} accessibilityRole='summary'>
         <Text style={s.infoTitle}>{t('templates.voice.infoTitle','Capture and Transcribe')}</Text>
         <Text style={s.infoLine}>{t('templates.voice.info1','Record conversations or notes and add quick context (who, topic).')}</Text>
@@ -78,7 +78,7 @@ export default function VoiceNotes() {
       <Text style={s.label}>{t('templates.voice.topic','Topic')}</Text>
       <TextInput style={s.input} value={topic} onChangeText={setTopic} accessibilityLabel={t('templates.voice.topic','Topic')} />
       <Text style={s.label}>{t('templates.voice.summaryField','Summary / Transcript')}</Text>
-      <TextInput style={[s.input,{ minHeight:100 }]} multiline value={summary} onChangeText={setSummary} accessibilityLabel={t('templates.voice.summaryField','Summary / Transcript')} />
+      <TextInput style={[s.input,{ minHeight:100 }]} multiline={true} value={summary} onChangeText={setSummary} accessibilityLabel={t('templates.voice.summaryField','Summary / Transcript')} />
       {!recording ? (
         <A11yPressable onPress={start} style={s.button} accessibilityLabel={t('templates.voice.record','Record audio')}><Text style={s.buttonText}>{t('templates.voice.record','Record audio')}</Text></A11yPressable>
       ) : (

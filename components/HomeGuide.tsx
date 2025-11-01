@@ -98,7 +98,7 @@ export function HomeGuide() {
   {showNudge && (()=> { if (!nudgeLoggedRef.current) { usage.view('home_mood_nudge_view','/',{}); nudgeLoggedRef.current = true; } return (
         <View style={{ marginBottom:12, padding:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, backgroundColor: palette.surface }}>
           <Text style={{ color: palette.text, fontSize:12, marginBottom:6 }}>{t('homeGuide.mood.nudge','Evening check-in? Log how you feel.')}</Text>
-          <Link href={resolveToolRoute('wellness_mood') as any} asChild onPress={()=> usage.view('home_mood_nudge_tap','/',{})}>
+          <Link href={resolveToolRoute('wellness_mood') as any} asChild={true} onPress={()=> usage.view('home_mood_nudge_tap','/',{})}>
             <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:10, paddingVertical:6, alignSelf:'flex-start', borderRadius:6 }}>
               <Text style={{ color: palette.onPrimary, fontWeight:'600', fontSize:12 }}>{t('homeGuide.mood.nudgeAction','Log Mood')}</Text>
             </Pressable>
@@ -132,7 +132,7 @@ export function HomeGuide() {
                   </Pressable>
                   <Link
                     href={resolveToolRoute(sug.toolId) as any}
-                    asChild
+                    asChild={true}
                     onPress={()=> {
                       usage.view('home_guide_select', '/', {
                         tool: sug.toolId,

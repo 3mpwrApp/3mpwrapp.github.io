@@ -51,7 +51,7 @@ export default function SupportDirectory() {
     <View
       style={styles.container}
   accessibilityLabel={t('advocacy.support.screenLabel','Support directory screen')}
-      accessible
+      accessible={true}
     >
       <Text
         ref={titleRef}
@@ -61,7 +61,7 @@ export default function SupportDirectory() {
       >
         {t('advocacy.support.title','Support Directory')}
       </Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       <Text style={styles.subtitle}>
         {t('advocacy.support.subtitle','Organizations that may help with claims, accommodations, and advocacy.')}
       </Text>

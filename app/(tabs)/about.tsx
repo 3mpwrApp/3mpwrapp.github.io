@@ -60,7 +60,7 @@ export default function AboutScreen() {
       >
         {t("about.title","About & Contact")}
       </Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       {process.env.EXPO_PUBLIC_BETA ? (
         <View accessibilityRole="text" style={{ padding: 8, borderRadius: 6, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, marginBottom: 8 }}>
           <Text style={{ color: palette.text, fontSize: 12 }}>{t('about.betaBanner','This is a beta build')}</Text>
@@ -132,7 +132,7 @@ export default function AboutScreen() {
         placeholder={t("about.messagePlaceholder","Your message")}
         placeholderTextColor={palette.text}
         accessibilityLabel={t("about.messagePlaceholder","Message")}
-        multiline
+        multiline={true}
       />
   {error ? <Text style={[styles.text,{color: palette.error}]} accessibilityLiveRegion="polite">{error}</Text> : null}
       <Pressable

@@ -85,7 +85,7 @@ export default function MedsTracker() {
   return (
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Medication & Treatment Tracker</Text>
-      <DisclaimerBanner type="medical" compact />
+      <DisclaimerBanner type="medical" compact={true} />
       <TextInput placeholder="Medication name" placeholderTextColor={palette.text+"77"} value={name} onChangeText={setName} style={s.input} />
       <TextInput placeholder="Dose (e.g., 10mg)" placeholderTextColor={palette.text+"77"} value={dose} onChangeText={setDose} style={s.input} />
       <TextInput placeholder="Schedule (e.g., 2x daily)" placeholderTextColor={palette.text+"77"} value={schedule} onChangeText={setSchedule} style={s.input} />

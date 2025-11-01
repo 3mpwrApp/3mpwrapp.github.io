@@ -57,7 +57,7 @@ export default function DateTimeField({ label, mode, value, onChange }: Props) {
         <Text style={{ color: palette.text, fontWeight: '700', marginTop: 2 }}>{displayValue}</Text>
       </A11yPressable>
       {open && hasPicker && (
-        <Modal transparent animationType="fade" onRequestClose={() => setOpen(false)}>
+        <Modal transparent={true} animationType="fade" onRequestClose={() => setOpen(false)}>
           {/* Non-pressable overlay; explicit Done button below */}
           <View style={{ flex: 1, backgroundColor: (palette.text + '99') as any, alignItems: 'center', justifyContent: 'center' }}>
             <View style={{ backgroundColor: palette.surface, padding: 12, borderRadius: 8, minWidth: 260 }}>

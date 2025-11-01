@@ -173,7 +173,7 @@ export default function NeurodivergentSettingsScreen() {
           </Text>
         </View>
 
-        <ComprehensiveDisclaimer type="cultural-safety" compact />
+        <ComprehensiveDisclaimer type="cultural-safety" compact={true} />
 
         {/* Quick Profiles */}
         <SectionHeader 

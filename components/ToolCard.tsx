@@ -78,7 +78,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
       <Pressable
         style={[styles.compactContainer, styles.pressable]}
         onPress={handlePress}
-        accessible
+        accessible={true}
         accessibilityLabel={tool.name}
         accessibilityHint={tool.description}
         accessibilityRole="button"
@@ -103,7 +103,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
     <Pressable
       style={[styles.container, styles.pressable]}
       onPress={handlePress}
-      accessible
+      accessible={true}
       accessibilityLabel={accessibilityLabel}
       accessibilityRole="button"
     >
@@ -123,7 +123,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
             {tool.isBeta && (
               <View
                 style={[styles.badge, styles.betaBadge]}
-                accessible
+                accessible={true}
                 accessibilityLabel="Beta version"
               >
                 <TextV2 variant="caption" style={styles.betaText}>
@@ -145,7 +145,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
           <GapView
             style={[styles.badge, styles.categoryBadge]}
             gap={4}
-            accessible
+            accessible={true}
             accessibilityLabel={`Tool type: ${tool.category}`}
           >
             <Ionicons
@@ -164,7 +164,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
             <GapView
               style={[styles.badge, styles.mlBadge]}
               gap={4}
-              accessible
+              accessible={true}
               accessibilityLabel={`AI-powered with ${tool.mlModels.length} model${tool.mlModels.length > 1 ? 's' : ''}`}
             >
               <Ionicons
@@ -184,7 +184,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
             <GapView
               style={[styles.badge, styles.energyBadge]}
               gap={4}
-              accessible
+              accessible={true}
               accessibilityLabel={`Optimal for ${tool.energyOptimal} energy levels`}
             >
               <Ionicons
@@ -204,7 +204,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
             <GapView
               style={[styles.badge, styles.feedbackBadge]}
               gap={4}
-              accessible
+              accessible={true}
               accessibilityLabel="Your feedback improves this tool"
             >
               <Ionicons
@@ -224,7 +224,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
             <GapView
               style={[styles.badge, styles.personalizableBadge]}
               gap={4}
-              accessible
+              accessible={true}
               accessibilityLabel="Personalized to you"
             >
               <Ionicons

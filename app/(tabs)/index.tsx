@@ -84,7 +84,7 @@ const RecentPrompts = React.memo(() => {
     <View 
       style={{ marginBottom: 12 }}
       accessibilityLabel={t('assistant.home.recentPromptsRegion', 'Recent prompts section')}
-      accessible
+      accessible={true}
     >
       <Text 
         style={{ 
@@ -104,7 +104,7 @@ const RecentPrompts = React.memo(() => {
         accessibilityLabel={t('assistant.home.promptsList', 'List of recent prompts')}
       >
         {items.map((it, _index) => (
-          <Link key={it.label} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild>
+          <Link key={it.label} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild={true}>
             <A11yPressable
               style={{
                 backgroundColor: palette.card,
@@ -145,7 +145,7 @@ const BetaTestersQuickLink = React.memo(() => {
     <View 
       style={{ marginBottom: 12 }}
       accessibilityLabel={t('home.quick.betaChat.section', 'Beta testers section')}
-      accessible
+      accessible={true}
     >
       <Text 
         style={{ 
@@ -159,7 +159,7 @@ const BetaTestersQuickLink = React.memo(() => {
       >
         {t('home.quick.betaChat.title','Beta Testers Chat')}
       </Text>
-      <Link href={'/(tabs)/community/testers-chat' as any} asChild>
+      <Link href={'/(tabs)/community/testers-chat' as any} asChild={true}>
         <A11yPressable 
           accessibilityLabel={t('home.quick.betaChat.label','Join the Beta Testers Chat')} 
           accessibilityHint={t('home.quick.betaChat.hint', 'Opens the beta testers community chat')}
@@ -218,7 +218,7 @@ const HomeScreen = React.memo(() => {
   
   if (hasError) {
     return (
-      <ResponsiveScreenWrapper scrollable testID="home-screen-error">
+      <ResponsiveScreenWrapper testID="home-screen-error">
         <Text 
           accessibilityRole="header" 
           style={[textStyles.h3, { marginBottom: 16 }]}
@@ -230,7 +230,7 @@ const HomeScreen = React.memo(() => {
           <Text style={[textStyles.body, { marginBottom: 12 }]}>
             Something went wrong loading personalized content. The app is still working!
           </Text>
-          <Link href={'/(tabs)/advocacy/assistant-hub' as any} asChild>
+          <Link href={'/(tabs)/advocacy/assistant-hub' as any} asChild={true}>
             <A11yPressable
               style={[styles.askButton, { backgroundColor: palette.primary }]}
               hitSlop={HIT_SLOP_8}
@@ -245,7 +245,6 @@ const HomeScreen = React.memo(() => {
   
   return (
     <ResponsiveScreenWrapper 
-      scrollable
       testID="home-screen"
     >
       <Text 
@@ -257,10 +256,10 @@ const HomeScreen = React.memo(() => {
         {t('home.title','Home')} <Text style={[textStyles.bodySmall, { opacity: 0.8 }]}>(Beta)</Text>
       </Text>
       
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       
       {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
-      <Link href={'/(tabs)/advocacy/ask' as any} asChild>
+      <Link href={'/(tabs)/advocacy/ask' as any} asChild={true}>
         <A11yPressable
           style={[
             styles.askButton,
@@ -283,7 +282,7 @@ const HomeScreen = React.memo(() => {
       </Link>
       
       {/* 7-Day Onboarding Wizard - Quick Access */}
-      <Link href={'/onboarding/first7' as any} asChild>
+      <Link href={'/onboarding/first7' as any} asChild={true}>
         <A11yPressable
           style={[
             styles.wizardButton,
@@ -324,7 +323,7 @@ const HomeScreen = React.memo(() => {
           maxSuggestions={3}
           title={t('wizard.homeTitle', 'Recommended For You')}
           subtitle={t('wizard.homeSubtitle', 'Based on your needs and energy level')}
-          showReasons
+          showReasons={true}
         />
       </SafeOptionalComponent>
       

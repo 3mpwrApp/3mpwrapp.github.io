@@ -198,7 +198,7 @@ export default function RightsChecker() {
       >
         {t('rightsChecker.title','Automated Rights Checker')}
       </Text>
-      <DisclaimerBanner type="legal" compact />
+      <DisclaimerBanner type="legal" compact={true} />
       <Text style={styles.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.subtitle','Answer a few questions to get a plain-language overview of your rights and options.')}</Text>
 
       <Question title={t('rightsChecker.q1','Are you currently employed?')}>
@@ -272,7 +272,7 @@ export default function RightsChecker() {
         />
       </Question>
       {summary && (
-        <View style={styles.box} accessibilityLabel={t('rightsChecker.summaryRegion','Rights summary')} accessible>
+        <View style={styles.box} accessibilityLabel={t('rightsChecker.summaryRegion','Rights summary')} accessible={true}>
           <Text style={styles.resultTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('rightsChecker.yourSummary','Your summary')}</Text>
           <Text style={styles.result} maxFontSizeMultiplier={MAX_FONT_SCALE}>{summary}</Text>
         </View>

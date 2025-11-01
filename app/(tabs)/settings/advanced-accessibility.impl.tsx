@@ -418,7 +418,7 @@ export default function AdvancedAccessibilityScreen() {
           </Text>
         </View>
 
-        <ComprehensiveDisclaimer type="medical" compact />
+        <ComprehensiveDisclaimer type="medical" compact={true} />
 
         {/* Quick Setup */}
         <SectionHeader 

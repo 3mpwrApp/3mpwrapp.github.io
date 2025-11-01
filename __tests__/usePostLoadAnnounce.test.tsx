@@ -31,7 +31,7 @@ describe('usePostLoadAnnounce', () => {
   });
 
   it('announces once when loading completes with pluralization', () => {
-    const { rerender } = render(<TestComp loading count={0} ns="feature" />);
+    const { rerender } = render(<TestComp loading={true} count={0} ns="feature" />);
     rerender(<TestComp loading={false} count={1} ns="feature" />);
     // advance timers to flush setTimeout in hook
     jest.runAllTimers();
@@ -40,21 +40,21 @@ describe('usePostLoadAnnounce', () => {
   });
 
   it('uses other form for counts >1', () => {
-    const { rerender } = render(<TestComp loading count={0} ns="feature" />);
+    const { rerender } = render(<TestComp loading={true} count={0} ns="feature" />);
     rerender(<TestComp loading={false} count={5} ns="feature" />);
     jest.runAllTimers();
     expect(announce).toHaveBeenCalledWith('5 items loaded');
   });
 
   it('announces emptyKey when count is 0', () => {
-    const { rerender } = render(<TestComp loading count={0} ns="feature" emptyKey="feature.empty" />);
+    const { rerender } = render(<TestComp loading={true} count={0} ns="feature" emptyKey="feature.empty" />);
     rerender(<TestComp loading={false} count={0} ns="feature" emptyKey="feature.empty" />);
     jest.runAllTimers();
     expect(announce).toHaveBeenCalledWith('No items');
   });
 
   it('does not announce again on subsequent updates', () => {
-    const { rerender } = render(<TestComp loading count={0} ns="feature" />);
+    const { rerender } = render(<TestComp loading={true} count={0} ns="feature" />);
     rerender(<TestComp loading={false} count={3} ns="feature" />);
     rerender(<TestComp loading={false} count={10} ns="feature" />);
     jest.runAllTimers();

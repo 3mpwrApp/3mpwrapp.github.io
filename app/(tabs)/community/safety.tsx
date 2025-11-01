@@ -16,7 +16,7 @@ export default function CommunitySafety() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Community Safety</Text>
-      <DisclaimerBanner type="general" compact />
+      <DisclaimerBanner type="general" compact={true} />
       <Text style={s.text}>Manage your blocked users. Blocking hides content and prevents DMs from those users. Coming soon: report and moderation tools.</Text>
       <GapView style={{ flexDirection:'row', marginTop: 8 }} gap={8}>
         <TextInput value={uid} onChangeText={setUid} placeholder="User ID" placeholderTextColor={palette.text+'77'} style={[s.input,{ flex:1 }]} />

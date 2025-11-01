@@ -146,7 +146,7 @@ const ThemedHeader = React.memo(() => {
         <Image
           source={require("../assets/images/brand-logo.png")}
           style={styles.logo}
-          accessible
+          accessible={true}
           accessibilityLabel="3mpwr App logo"
         />
         <Text style={styles.title} accessibilityLabel="3mpwr App header">
@@ -161,7 +161,7 @@ const ThemedHeader = React.memo(() => {
           style={[styles.social, { display: 'none' }]}
           gap={8}
           accessibilityLabel="Social media links"
-          accessible
+          accessible={true}
         >
           <Pressable
             onPress={() => Linking.openURL("https://x.com/3mpowrApp0816")}
@@ -169,7 +169,7 @@ const ThemedHeader = React.memo(() => {
             accessibilityLabel="Open 3mpwr on X (formerly Twitter)"
             hitSlop={HIT_SLOP_8}
             testID="link-social-x"
-            focusable
+            focusable={true}
             style={({ pressed }) => [
               touchTarget.min,
               { opacity: pressed ? 0.7 : 1 },
@@ -186,7 +186,7 @@ const ThemedHeader = React.memo(() => {
             accessibilityLabel="Open 3mpwr on Instagram"
             hitSlop={HIT_SLOP_8}
             testID="link-social-instagram"
-            focusable
+            focusable={true}
             style={({ pressed }) => [
               touchTarget.min,
               { opacity: pressed ? 0.7 : 1 },
@@ -205,7 +205,7 @@ const ThemedHeader = React.memo(() => {
             accessibilityLabel="Open 3mpwr on Facebook"
             hitSlop={HIT_SLOP_8}
             testID="link-social-facebook"
-            focusable
+            focusable={true}
             style={({ pressed }) => [
               touchTarget.min,
               { opacity: pressed ? 0.7 : 1 },
@@ -251,7 +251,7 @@ const ThemedHeader = React.memo(() => {
           accessibilityRole="button"
           accessibilityLabel={t("header.refresh")}
           hitSlop={HIT_SLOP_8}
-          focusable
+          focusable={true}
           style={({ pressed }) => [
             touchTarget.min,
             { opacity: pressed ? 0.7 : 1 },
@@ -269,7 +269,7 @@ const ThemedHeader = React.memo(() => {
           accessibilityRole="button"
           accessibilityLabel={menuOpen ? "Close menu" : "Open menu"}
           hitSlop={HIT_SLOP_8}
-          focusable
+          focusable={true}
           style={({ pressed }) => [
             touchTarget.min,
             { opacity: pressed ? 0.7 : 1 },
@@ -284,7 +284,7 @@ const ThemedHeader = React.memo(() => {
           accessibilityRole="button"
           accessibilityLabel="Open settings"
           hitSlop={HIT_SLOP_8}
-          focusable
+          focusable={true}
           style={({ pressed }) => [
             touchTarget.min,
             { opacity: pressed ? 0.7 : 1 },
@@ -299,7 +299,7 @@ const ThemedHeader = React.memo(() => {
           accessibilityRole="button"
           accessibilityLabel={t("header.openProfile")}
           hitSlop={HIT_SLOP_8}
-          focusable
+          focusable={true}
           style={({ pressed }) => [
             touchTarget.min,
             { opacity: pressed ? 0.7 : 1 },
@@ -319,7 +319,7 @@ const ThemedHeader = React.memo(() => {
             accessibilityRole="button"
             accessibilityLabel={t("header.signOut")}
             hitSlop={HIT_SLOP_8}
-            focusable
+            focusable={true}
             style={({ pressed }) => [
               touchTarget.min,
               { opacity: pressed ? 0.7 : 1 },
@@ -335,7 +335,7 @@ const ThemedHeader = React.memo(() => {
             accessibilityRole="button"
             accessibilityLabel={t("header.signIn")}
             hitSlop={HIT_SLOP_8}
-            focusable
+            focusable={true}
             style={({ pressed }) => [
               touchTarget.min,
               { opacity: pressed ? 0.7 : 1 },
@@ -356,8 +356,8 @@ const ThemedHeader = React.memo(() => {
           />
           <View
             accessibilityLabel="Main menu"
-            accessible
-            accessibilityViewIsModal
+            accessible={true}
+            accessibilityViewIsModal={true}
             style={styles.menuWrap}
           >
             <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>

@@ -98,8 +98,8 @@ export default function AIDecisionSimplifier() {
       <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         AI Decision Simplifier
       </Text>
-      <DisclaimerBanner type="legal" compact />
-      <DisclaimerBanner type="ai" compact />
+      <DisclaimerBanner type="legal" compact={true} />
+      <DisclaimerBanner type="ai" compact={true} />
       <Text style={styles.subtitle}>
         Upload a decision letter to get a plain-language summary of what it means, the next steps, and deadlines.
         Your document stays on your device unless you explicitly opt in to share.
@@ -127,7 +127,7 @@ export default function AIDecisionSimplifier() {
       <TextInput
         style={styles.input}
         placeholder="Paste decision text here"
-        multiline
+        multiline={true}
         numberOfLines={6}
         onChangeText={(t) => setText(t)}
       />

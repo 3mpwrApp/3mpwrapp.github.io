@@ -9,7 +9,7 @@ import { useAppPalette } from "../theme/usePalette";
 export default function SettingsLink({ style }: { style?: ViewStyle }) {
   const palette = useAppPalette();
   return (
-    <Link href={"/(tabs)/settings" as any} asChild>
+    <Link href={"/(tabs)/settings" as any} asChild={true}>
       <Pressable
         accessibilityRole="link"
         accessibilityLabel="Open settings"

@@ -183,7 +183,7 @@ export default function CampaignRoom() {
         style={[s.input, { minHeight: 120 }]}
         value={notes}
         onChangeText={setNotes}
-        multiline
+        multiline={true}
         placeholder="Shared notes: announce dates, media contacts, progress, links"
       />
       <A11yPressable

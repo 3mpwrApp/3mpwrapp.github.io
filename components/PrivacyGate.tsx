@@ -33,7 +33,7 @@ export default function PrivacyGate({
         style={styles.input}
         value={code}
         onChangeText={setCode}
-        secureTextEntry
+        secureTextEntry={true}
         placeholder={t('privacyGate.placeholder','Passcode')}
       />
       <Pressable
