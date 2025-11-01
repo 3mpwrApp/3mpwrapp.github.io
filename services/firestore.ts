@@ -88,6 +88,57 @@ export async function fsAddCampaign(c: {
   }
 }
 
+export async function fsGetCampaign(id: string) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return null;
+  try {
+    const docRef = m.doc(db, "campaigns", id);
+    const snapshot = await m.getDoc(docRef);
+    if (!snapshot.exists()) return null;
+    return { id: snapshot.id, ...snapshot.data() } as any;
+  } catch (error) {
+    logger.error('[Firestore] Failed to get campaign:', error);
+    return null;
+  }
+}
+
+export async function fsUpdateCampaign(id: string, updates: Partial<{
+  title: string;
+  summary: string;
+  target?: string;
+  goalCount?: number;
+  contactEmail?: string;
+}>) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    await withRetry(() =>
+      m.updateDoc(m.doc(db, "campaigns", id), { ...updates, updatedAt: Date.now() } as any)
+    );
+    return true;
+  } catch (error) {
+    logger.error('[Firestore] Failed to update campaign:', error);
+    return false;
+  }
+}
+
+export async function fsDeleteCampaign(id: string) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    await withRetry(() =>
+      m.deleteDoc(m.doc(db, "campaigns", id))
+    );
+    return true;
+  } catch (error) {
+    logger.error('[Firestore] Failed to delete campaign:', error);
+    return false;
+  }
+}
+
 // Events
 export async function fsAddEvent(e: {
   id: string;
@@ -110,6 +161,61 @@ export async function fsAddEvent(e: {
     );
     return true;
   } catch {
+    return false;
+  }
+}
+
+export async function fsGetEvent(id: string) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return null;
+  try {
+    const docRef = m.doc(db, "events", id);
+    const snapshot = await m.getDoc(docRef);
+    if (!snapshot.exists()) return null;
+    return { id: snapshot.id, ...snapshot.data() } as any;
+  } catch (error) {
+    logger.error('[Firestore] Failed to get event:', error);
+    return null;
+  }
+}
+
+export async function fsUpdateEvent(id: string, updates: Partial<{
+  title: string;
+  description: string;
+  date: string;
+  location?: string;
+  isVirtual?: boolean;
+  asl?: boolean;
+  captions?: boolean;
+  stepFree?: boolean;
+  sensorySpace?: boolean;
+}>) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    await withRetry(() =>
+      m.updateDoc(m.doc(db, "events", id), { ...updates, updatedAt: Date.now() } as any)
+    );
+    return true;
+  } catch (error) {
+    logger.error('[Firestore] Failed to update event:', error);
+    return false;
+  }
+}
+
+export async function fsDeleteEvent(id: string) {
+  const m = await ensure();
+  const db = await getDB();
+  if (!m || !db) return false;
+  try {
+    await withRetry(() =>
+      m.deleteDoc(m.doc(db, "events", id))
+    );
+    return true;
+  } catch (error) {
+    logger.error('[Firestore] Failed to delete event:', error);
     return false;
   }
 }

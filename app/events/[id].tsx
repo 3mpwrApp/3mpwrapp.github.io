@@ -1,15 +1,17 @@
 import * as Linking from "expo-linking";
-import { Stack, useLocalSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import React from 'react';
-import { Alert, Share, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Alert, Modal, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
 import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { useAuth } from "../../context/AuthContext";
 import { events } from "../../data/events";
 import { useTranslation } from "../../i18n";
 import { isScheduled, removeReminder, scheduleForEvent } from "../../services/eventReminders";
+import { fsDeleteEvent, fsGetEvent, fsUpdateEvent } from "../../services/firestore";
 import { useSettings } from "../../store/settings";
 import { useAppPalette } from "../../theme/usePalette";
 
@@ -31,8 +33,38 @@ export default function EventDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const palette = useAppPalette();
   const styles = createStyles(palette);
+  const router = useRouter();
+  const { user, isAdmin } = useAuth();
+  const [loading, setLoading] = React.useState(true);
+  const [event, setEvent] = React.useState<any>(null);
+  const [editMode, setEditMode] = React.useState(false);
+  const [editData, setEditData] = React.useState<any>({});
 
-  const event = events.find((e) => e.id === id);
+  // Load event from Firestore or local data
+  React.useEffect(() => {
+    async function loadEvent() {
+      setLoading(true);
+      try {
+        // Try Firestore first
+        const fsEvent = await fsGetEvent(id);
+        if (fsEvent) {
+          setEvent(fsEvent);
+        } else {
+          // Fall back to local events
+          const localEvent = events.find((e) => e.id === id);
+          setEvent(localEvent || null);
+        }
+      } catch (error) {
+        console.error('[EventDetail] Failed to load event:', error);
+        const localEvent = events.find((e) => e.id === id);
+        setEvent(localEvent || null);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadEvent();
+  }, [id]);
+
   const { eventReminders } = useSettings();
   const [scheduled, setScheduled] = React.useState(false);
   const { t } = useTranslation();
@@ -41,6 +73,82 @@ export default function EventDetail() {
     if (!event?.id) return;
     isScheduled(event.id).then(setScheduled).catch(()=>{});
   }, [event?.id]);
+
+  const handleEdit = () => {
+    setEditData({
+      title: event.title,
+      description: event.description,
+      date: event.date,
+      location: event.location || '',
+      isVirtual: event.isVirtual || false,
+      asl: event.asl || false,
+      captions: event.captions || false,
+      stepFree: event.stepFree || false,
+      sensorySpace: event.sensorySpace || false,
+    });
+    setEditMode(true);
+  };
+
+  const handleSaveEdit = async () => {
+    try {
+      const success = await fsUpdateEvent(id, editData);
+      if (success) {
+        setEvent({ ...event, ...editData });
+        setEditMode(false);
+        Alert.alert(t('common.success', 'Success'), t('eventsFeature.edit.saved', 'Event updated successfully'));
+      } else {
+        Alert.alert(t('common.error', 'Error'), t('eventsFeature.edit.failed', 'Failed to update event'));
+      }
+    } catch (error) {
+      console.error('[EventDetail] Save failed:', error);
+      Alert.alert(t('common.error', 'Error'), t('eventsFeature.edit.failed', 'Failed to update event'));
+    }
+  };
+
+  const handleDelete = () => {
+    Alert.alert(
+      t('eventsFeature.delete.confirmTitle', 'Delete Event'),
+      t('eventsFeature.delete.confirmBody', 'Are you sure you want to delete this event? This cannot be undone.'),
+      [
+        { text: t('common.cancel', 'Cancel'), style: 'cancel' },
+        {
+          text: t('common.delete', 'Delete'),
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              const success = await fsDeleteEvent(id);
+              if (success) {
+                Alert.alert(
+                  t('common.success', 'Success'),
+                  t('eventsFeature.delete.success', 'Event deleted'),
+                  [{ text: t('common.ok', 'OK'), onPress: () => router.back() }]
+                );
+              } else {
+                Alert.alert(t('common.error', 'Error'), t('eventsFeature.delete.failed', 'Failed to delete event'));
+              }
+            } catch (error) {
+              console.error('[EventDetail] Delete failed:', error);
+              Alert.alert(t('common.error', 'Error'), t('eventsFeature.delete.failed', 'Failed to delete event'));
+            }
+          },
+        },
+      ]
+    );
+  };
+
+  const shareToSocials = async () => {
+    if (!event) return;
+    const message = `📅 ${event.title}\n\n${event.description || ''}\n\n📍 ${event.isVirtual ? 'Virtual Event' : (event.location || 'TBD')}\n🗓️ ${event.date}\n\nShared from 3mpwr App`;
+    
+    try {
+      await Share.share({
+        message,
+        title: event.title,
+      });
+    } catch (error) {
+      console.error('[EventDetail] Share failed:', error);
+    }
+  };
 
   const addToCalendar = async () => {
     if (!event) return;
@@ -89,35 +197,69 @@ export default function EventDetail() {
       <Stack.Screen options={{ title: event?.title ?? t('eventsFeature.detailTitle','Event') }} />
       <View style={styles.container}>
         <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
-        <Text style={styles.title}>{event?.title ?? t('eventsFeature.detailTitle','Event')}</Text>
-        <Text style={styles.text}>
-          {event?.description ?? t('eventsFeature.detailUnavailable','Details unavailable.')}
-        </Text>
-        <Text style={styles.text}>{t('eventsFeature.whenLabel','When:')} {event?.date}</Text>
-        <Text style={styles.text}>
-          {t('eventsFeature.whereLabel','Where:')} {event?.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event?.location ?? t('eventsFeature.tbd','TBD'))}
-        </Text>
-        {!!event && (
-          <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom: 8 }}>
-            {event.isVirtual && (
-              <Chip label={t('eventsFeature.chips.virtual','Virtual')} />
-            )}
-            {event.asl && (
-              <Chip label={t('eventsFeature.chips.asl','ASL')} />
-            )}
-            {event.captions && (
-              <Chip label={t('eventsFeature.chips.captions','Captions')} />
-            )}
-            {event.stepFree && (
-              <Chip label={t('eventsFeature.chips.stepFree','Step-free')} />
-            )}
-            {event.sensorySpace && (
-              <Chip label={t('eventsFeature.chips.sensory','Sensory')} />
-            )}
-          </GapView>
+        
+        {loading && (
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <ActivityIndicator size="large" color={palette.primary} />
+            <Text style={styles.text}>{t('common.loading', 'Loading...')}</Text>
+          </View>
         )}
-        {!!event && (
+        
+        {!loading && !event && (
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={styles.title}>{t('common.notFound', 'Not Found')}</Text>
+            <Text style={styles.text}>{t('eventsFeature.notFound', 'This event could not be found.')}</Text>
+          </View>
+        )}
+        
+        {!loading && event && !editMode && (
           <>
+            <Text style={styles.title}>{event.title}</Text>
+            <Text style={styles.text}>{event.description ?? t('eventsFeature.detailUnavailable','Details unavailable.')}</Text>
+            <Text style={styles.text}>{t('eventsFeature.whenLabel','When:')} {event.date}</Text>
+            <Text style={styles.text}>
+              {t('eventsFeature.whereLabel','Where:')} {event.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event.location ?? t('eventsFeature.tbd','TBD'))}
+            </Text>
+            <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom: 8 }}>
+              {event.isVirtual && <Chip label={t('eventsFeature.chips.virtual','Virtual')} />}
+              {event.asl && <Chip label={t('eventsFeature.chips.asl','ASL')} />}
+              {event.captions && <Chip label={t('eventsFeature.chips.captions','Captions')} />}
+              {event.stepFree && <Chip label={t('eventsFeature.chips.stepFree','Step-free')} />}
+              {event.sensorySpace && <Chip label={t('eventsFeature.chips.sensory','Sensory')} />}
+            </GapView>
+
+            {/* Admin Actions */}
+            {isAdmin && (
+              <GapView gap={8} style={{ marginTop: 12, marginBottom: 12 }}>
+                <A11yPressable
+                  style={({ pressed }) => [
+                    styles.adminButton,
+                    { backgroundColor: palette.warning || palette.primary },
+                    pressed && { opacity: 0.8 },
+                  ]}
+                  onPress={handleEdit}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('common.edit', 'Edit')}
+                  hitSlop={HIT_SLOP_8}
+                >
+                  <Text style={styles.buttonText}>✏️ {t('common.edit', 'Edit')}</Text>
+                </A11yPressable>
+                <A11yPressable
+                  style={({ pressed }) => [
+                    styles.adminButton,
+                    { backgroundColor: palette.destructive || '#dc2626' },
+                    pressed && { opacity: 0.8 },
+                  ]}
+                  onPress={handleDelete}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('common.delete', 'Delete')}
+                  hitSlop={HIT_SLOP_8}
+                >
+                  <Text style={styles.buttonText}>🗑️ {t('common.delete', 'Delete')}</Text>
+                </A11yPressable>
+              </GapView>
+            )}
+
             <A11yPressable
               style={({ pressed }) => [
                 styles.button,
@@ -192,24 +334,92 @@ export default function EventDetail() {
             <View style={{ height: 8 }} />
             <A11yPressable
               style={({ pressed }) => [
-                styles.secondaryButton,
+                styles.shareButton,
                 pressed && { opacity: 0.8 },
               ]}
-              onPress={async () => {
-                try {
-                  await Share.share({
-                    message: `${event.title}\n${event.date}\n${event.isVirtual? t('eventsFeature.chips.virtual','Virtual'): (event.location||t('eventsFeature.tbd','TBD'))}\n\n${event.description || ''}`.trim(),
-                    title: event.title,
-                  });
-                } catch {}
-              }}
+              onPress={shareToSocials}
               accessibilityRole="button"
-              accessibilityLabel={`${t('common.share','Share')} ${event?.title ?? ''}`}
+              accessibilityLabel={t('eventsFeature.shareToSocials', 'Share to social media')}
               hitSlop={HIT_SLOP_8}
             >
-              <Text style={styles.secondaryButtonText}>{t('common.share','Share')}</Text>
+              <Text style={styles.shareButtonText}>🔗 {t('eventsFeature.shareToSocials', 'Share to Socials')}</Text>
             </A11yPressable>
           </>
+        )}
+
+        {/* Edit Modal */}
+        {!loading && event && editMode && (
+          <Modal visible={editMode} animationType="slide" transparent={false}>
+            <View style={[styles.container, { paddingTop: 60 }]}>
+              <Text style={styles.title}>{t('eventsFeature.edit.title', 'Edit Event')}</Text>
+              <ScrollView style={{ flex: 1 }}>
+                <GapView gap={12}>
+                  <View>
+                    <Text style={styles.label}>{t('eventsFeature.create.titleLabel', 'Title')}</Text>
+                    <TextInput
+                      style={styles.input}
+                      value={editData.title}
+                      onChangeText={(text) => setEditData({ ...editData, title: text })}
+                      placeholder={t('eventsFeature.create.titlePlaceholder', 'Event title')}
+                      placeholderTextColor={palette.muted}
+                    />
+                  </View>
+                  <View>
+                    <Text style={styles.label}>{t('eventsFeature.create.descriptionLabel', 'Description')}</Text>
+                    <TextInput
+                      style={[styles.input, { minHeight: 100 }]}
+                      value={editData.description}
+                      onChangeText={(text) => setEditData({ ...editData, description: text })}
+                      placeholder={t('eventsFeature.create.descriptionPlaceholder', 'Event description')}
+                      placeholderTextColor={palette.muted}
+                      multiline
+                    />
+                  </View>
+                  <View>
+                    <Text style={styles.label}>{t('eventsFeature.create.dateLabel', 'Date/Time')}</Text>
+                    <TextInput
+                      style={styles.input}
+                      value={editData.date}
+                      onChangeText={(text) => setEditData({ ...editData, date: text })}
+                      placeholder="2025-12-31 18:00"
+                      placeholderTextColor={palette.muted}
+                    />
+                  </View>
+                  <View>
+                    <Text style={styles.label}>{t('eventsFeature.create.locationLabel', 'Location')}</Text>
+                    <TextInput
+                      style={styles.input}
+                      value={editData.location}
+                      onChangeText={(text) => setEditData({ ...editData, location: text })}
+                      placeholder={t('eventsFeature.create.locationPlaceholder', 'Address or online link')}
+                      placeholderTextColor={palette.muted}
+                    />
+                  </View>
+                </GapView>
+                <View style={{ height: 80 }} />
+              </ScrollView>
+              <GapView gap={8} style={{ paddingBottom: 20 }}>
+                <A11yPressable
+                  style={[styles.button, { backgroundColor: palette.primary }]}
+                  onPress={handleSaveEdit}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('common.save', 'Save')}
+                  hitSlop={HIT_SLOP_8}
+                >
+                  <Text style={styles.buttonText}>{t('common.save', 'Save')}</Text>
+                </A11yPressable>
+                <A11yPressable
+                  style={[styles.secondaryButton]}
+                  onPress={() => setEditMode(false)}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('common.cancel', 'Cancel')}
+                  hitSlop={HIT_SLOP_8}
+                >
+                  <Text style={styles.secondaryButtonText}>{t('common.cancel', 'Cancel')}</Text>
+                </A11yPressable>
+              </GapView>
+            </View>
+          </Modal>
         )}
       </View>
     </>
@@ -226,6 +436,17 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       color: palette.text,
     },
     text: { fontSize: 16, color: palette.text, opacity: 0.95, marginBottom: 8 },
+    label: { fontSize: 14, fontWeight: '600', color: palette.text, marginBottom: 4 },
+    input: {
+      backgroundColor: palette.surface,
+      borderWidth: 1,
+      borderColor: palette.muted,
+      borderRadius: 8,
+      paddingHorizontal: 12,
+      paddingVertical: 10,
+      color: palette.text,
+      fontSize: 16,
+    },
     button: {
       backgroundColor: palette.primary,
       paddingVertical: 10,
@@ -235,7 +456,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       minWidth: 44,
       marginTop: 12,
     },
-    buttonText: { color: palette.onPrimary, fontSize: 16 },
+    buttonText: { color: palette.onPrimary, fontSize: 16, textAlign: 'center' },
     secondaryButton: {
       backgroundColor: palette.surface,
       paddingVertical: 10,
@@ -246,7 +467,25 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
     },
-    secondaryButtonText: { color: palette.text, fontSize: 16, fontWeight: '700' },
+    secondaryButtonText: { color: palette.text, fontSize: 16, fontWeight: '700', textAlign: 'center' },
+    adminButton: {
+      paddingVertical: 10,
+      paddingHorizontal: 16,
+      borderRadius: 6,
+      minHeight: 44,
+      minWidth: 44,
+    },
+    shareButton: {
+      backgroundColor: palette.card,
+      paddingVertical: 10,
+      paddingHorizontal: 16,
+      borderRadius: 6,
+      minHeight: 44,
+      minWidth: 44,
+      borderWidth: 2,
+      borderColor: palette.primary,
+    },
+    shareButtonText: { color: palette.text, fontSize: 16, fontWeight: '700', textAlign: 'center' },
   });
 }
 
