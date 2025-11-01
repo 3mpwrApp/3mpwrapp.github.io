@@ -10,6 +10,7 @@ try {
 
 export type First7StepId =
   | 'capture_basics'
+  | 'choose_role'
   | 'first_evidence_note'
   | 'tag_key_contacts'
   | 'bookmark_resources'
@@ -22,6 +23,7 @@ export type First7State = {
   startedAt?: number;
   completed: Record<First7StepId, boolean>;
   dismissed?: boolean;
+  role?: 'self' | 'supporter' | 'ally'; // Track selected role
 };
 
 const KEY = 'onboarding:first7:v1';
@@ -30,6 +32,7 @@ const defaultState: First7State = {
   startedAt: undefined,
   completed: {
     capture_basics: false,
+    choose_role: false,
     first_evidence_note: false,
     tag_key_contacts: false,
     bookmark_resources: false,
@@ -39,6 +42,7 @@ const defaultState: First7State = {
     export_backup: false,
   },
   dismissed: false,
+  role: undefined,
 };
 
 type Ctx = {

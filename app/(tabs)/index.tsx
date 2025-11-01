@@ -243,6 +243,42 @@ const HomeScreen = React.memo(() => {
         </A11yPressable>
       </Link>
       
+      {/* 7-Day Onboarding Wizard - Quick Access */}
+      <Link href={'/onboarding/first7' as any} asChild>
+        <A11yPressable
+          style={[
+            styles.wizardButton,
+            { backgroundColor: palette.card, borderColor: palette.primary, borderWidth: 2 }
+          ]}
+          accessibilityLabel={t('home.wizard.label', 'Your First 7 Days - Onboarding wizard')}
+          accessibilityHint={t('home.wizard.hint', 'Opens interactive onboarding checklist')}
+          hitSlop={HIT_SLOP_8}
+        >
+          <GapView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} gap={8}>
+            <Text style={{ fontSize: 24 }}>🧙‍♀️</Text>
+            <View style={{ flex: 1 }}>
+              <Text
+                style={[
+                  { fontSize: Math.round(16 * factor), color: palette.text, fontWeight: '600' }
+                ]}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                {t('home.wizard.button', 'Your First 7 Days')}
+              </Text>
+              <Text
+                style={[
+                  textStyles.caption,
+                  { fontSize: Math.round(12 * factor), color: palette.text, opacity: 0.7 }
+                ]}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                {t('home.wizard.subtitle', 'Quick wins to get started')}
+              </Text>
+            </View>
+          </GapView>
+        </A11yPressable>
+      </Link>
+      
       {/* Disability Wizard - Personalized Recommendations */}
       <DisabilityWizard 
         maxSuggestions={3}
@@ -276,5 +312,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 48, // Accessibility tap target
+  },
+  wizardButton: {
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    borderRadius: 8,
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 60, // Slightly taller for the two-line content
   },
 });

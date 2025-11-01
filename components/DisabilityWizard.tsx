@@ -39,22 +39,11 @@ export default function DisabilityWizard({
   const styles = createStyles(palette, factor);
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
   
-  // Always call hooks - wrap wizard data loading in try-catch
-  let suggestions: WizardSuggestion[] = [];
-  let loading = false;
-  let hasError = false;
-  
-  try {
-    const wizardData = useDisabilityWizard();
-    suggestions = wizardData.suggestions;
-    loading = wizardData.loading;
-  } catch (e) {
-    console.error('[DisabilityWizard] Error loading wizard:', e);
-    hasError = true;
-  }
+  // Hook now handles errors internally
+  const { suggestions, loading, error } = useDisabilityWizard();
   
   // Show error fallback if wizard failed to load
-  if (hasError) {
+  if (error) {
     return (
       <View style={styles.container}>
         <Text style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>

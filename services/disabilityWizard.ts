@@ -324,6 +324,10 @@ const PROFILE_KEY = 'disabilityWizard:profile:v1';
 
 export async function getDisabilityProfile(): Promise<DisabilityProfile | null> {
   try {
+    if (!AsyncStorage || typeof AsyncStorage.getItem !== 'function') {
+      console.warn('[getDisabilityProfile] AsyncStorage not available');
+      return null;
+    }
     const raw = await AsyncStorage.getItem(PROFILE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) {
@@ -630,100 +634,106 @@ function calculateStressReliefBonus(tool: SuggestibleTool, context: UserContext)
 // ============================================================================
 
 export async function getWizardSuggestions(extra?: { coachProgress?: number }): Promise<WizardSuggestion[]> {
-  const profile = await getDisabilityProfile();
-  const context = await detectContext(profile);
-  const rotationState = await getRotationState();
-  
-  const suggestions: WizardSuggestion[] = [];
-  
-  for (const tool of WIZARD_TOOLS) {
-    // Check prerequisites
-    if (tool.prereq && !tool.prereq()) continue;
+  try {
+    const profile = await getDisabilityProfile();
+    const context = await detectContext(profile);
+    const rotationState = await getRotationState();
     
-    let score = tool.importance;
-    const reasoning: ReasonChip[] = [];
+    const suggestions: WizardSuggestion[] = [];
     
-    // 1. Disability match
-    const disabilityMatch = calculateDisabilityMatch(tool, profile);
-    if (disabilityMatch.score > 0) {
-      score += disabilityMatch.score;
-      if (disabilityMatch.reason) reasoning.push(disabilityMatch.reason);
-    }
-    
-    // 2. Energy fit
-    const energyFit = calculateEnergyFit(tool, context, profile);
-    score += energyFit.score;
-    if (energyFit.reason) reasoning.push(energyFit.reason);
-    
-    // 3. Time of day fit
-    const timeOfDayFit = calculateTimeOfDayFit(tool, context);
-    score += timeOfDayFit.score;
-    if (timeOfDayFit.reason) reasoning.push(timeOfDayFit.reason);
-    
-    // 4. Daily rotation
-    const rotationBoost = calculateRotationBoost(tool, context, rotationState);
-    score += rotationBoost.score;
-    if (rotationBoost.reason) reasoning.push(rotationBoost.reason);
-    
-    // 5. Stress relief
-    const stressRelief = calculateStressReliefBonus(tool, context);
-    score += stressRelief.score;
-    if (stressRelief.reason) reasoning.push(stressRelief.reason);
-    
-    // 6. Recency (discourage just-used tools)
-    const lastComplete = lastEvent(tool.id, ['usage.complete']);
-    const lastView = lastEvent(tool.id, ['usage.view', 'usage.start']);
-    const recencyTs = lastView?.ts || lastComplete?.ts;
-    const rf = recencyFactor(recencyTs, 720); // 12 hour half-life
-    const recencyPenalty = rf * 0.6;
-    if (recencyPenalty > 0) {
-      score -= recencyPenalty;
-    }
-    
-    // 7. Novelty bonus
-    if (!lastView && !lastComplete) {
-      score += 0.4;
-      reasoning.push({
-        type: 'new_feature',
-        label: 'New feature to explore',
-        confidence: 1.0,
+    for (const tool of WIZARD_TOOLS) {
+      // Check prerequisites
+      if (tool.prereq && !tool.prereq()) continue;
+      
+      let score = tool.importance;
+      const reasoning: ReasonChip[] = [];
+      
+      // 1. Disability match
+      const disabilityMatch = calculateDisabilityMatch(tool, profile);
+      if (disabilityMatch.score > 0) {
+        score += disabilityMatch.score;
+        if (disabilityMatch.reason) reasoning.push(disabilityMatch.reason);
+      }
+      
+      // 2. Energy fit
+      const energyFit = calculateEnergyFit(tool, context, profile);
+      score += energyFit.score;
+      if (energyFit.reason) reasoning.push(energyFit.reason);
+      
+      // 3. Time of day fit
+      const timeOfDayFit = calculateTimeOfDayFit(tool, context);
+      score += timeOfDayFit.score;
+      if (timeOfDayFit.reason) reasoning.push(timeOfDayFit.reason);
+      
+      // 4. Daily rotation
+      const rotationBoost = calculateRotationBoost(tool, context, rotationState);
+      score += rotationBoost.score;
+      if (rotationBoost.reason) reasoning.push(rotationBoost.reason);
+      
+      // 5. Stress relief
+      const stressRelief = calculateStressReliefBonus(tool, context);
+      score += stressRelief.score;
+      if (stressRelief.reason) reasoning.push(stressRelief.reason);
+      
+      // 6. Recency (discourage just-used tools)
+      const lastComplete = lastEvent(tool.id, ['usage.complete']);
+      const lastView = lastEvent(tool.id, ['usage.view', 'usage.start']);
+      const recencyTs = lastView?.ts || lastComplete?.ts;
+      const rf = recencyFactor(recencyTs, 720); // 12 hour half-life
+      const recencyPenalty = rf * 0.6;
+      if (recencyPenalty > 0) {
+        score -= recencyPenalty;
+      }
+      
+      // 7. Novelty bonus
+      if (!lastView && !lastComplete) {
+        score += 0.4;
+        reasoning.push({
+          type: 'new_feature',
+          label: 'New feature to explore',
+          confidence: 1.0,
+        });
+      }
+      
+      // 8. Continuation bonus (for partially completed tools)
+      if (tool.id === 'coach' && typeof extra?.coachProgress === 'number' && extra.coachProgress > 0 && extra.coachProgress < 1) {
+        const continuationBoost = (1 - extra.coachProgress) * 0.6;
+        score += continuationBoost;
+        reasoning.push({
+          type: 'continuation',
+          label: `Continue where you left off (${Math.round(extra.coachProgress * 100)}% complete)`,
+          confidence: 0.9,
+        });
+      }
+      
+      // 9. User pattern learning (from personalization system)
+      // TODO: Import and use existing feedback/preference data
+      
+      suggestions.push({
+        toolId: tool.id,
+        ...tool,
+        score,
+        reasoning,
+        lastShown: rotationState.shownToday.includes(tool.id) ? Date.now() : undefined,
+        timesShown: rotationState.shownToday.filter(id => id === tool.id).length,
+        dayOfRotation: tool.rotationDays?.includes(context.dayOfWeek) ? context.dayOfWeek : undefined,
       });
     }
     
-    // 8. Continuation bonus (for partially completed tools)
-    if (tool.id === 'coach' && typeof extra?.coachProgress === 'number' && extra.coachProgress > 0 && extra.coachProgress < 1) {
-      const continuationBoost = (1 - extra.coachProgress) * 0.6;
-      score += continuationBoost;
-      reasoning.push({
-        type: 'continuation',
-        label: `Continue where you left off (${Math.round(extra.coachProgress * 100)}% complete)`,
-        confidence: 0.9,
-      });
+    // Sort by score
+    suggestions.sort((a, b) => b.score - a.score);
+    
+    // Mark top suggestion as shown (for rotation tracking)
+    if (suggestions[0]) {
+      await markToolShown(suggestions[0].toolId);
     }
     
-    // 9. User pattern learning (from personalization system)
-    // TODO: Import and use existing feedback/preference data
-    
-    suggestions.push({
-      toolId: tool.id,
-      ...tool,
-      score,
-      reasoning,
-      lastShown: rotationState.shownToday.includes(tool.id) ? Date.now() : undefined,
-      timesShown: rotationState.shownToday.filter(id => id === tool.id).length,
-      dayOfRotation: tool.rotationDays?.includes(context.dayOfWeek) ? context.dayOfWeek : undefined,
-    });
+    return suggestions;
+  } catch (error) {
+    console.error('[getWizardSuggestions] Failed to generate suggestions:', error);
+    // Return empty array on any error - this prevents app crashes
+    return [];
   }
-  
-  // Sort by score
-  suggestions.sort((a, b) => b.score - a.score);
-  
-  // Mark top suggestion as shown (for rotation tracking)
-  if (suggestions[0]) {
-    await markToolShown(suggestions[0].toolId);
-  }
-  
-  return suggestions;
 }
 
 // ============================================================================
@@ -830,14 +840,22 @@ export function useDisabilityWizard() {
   const fraction = (progress?.percentComplete ?? 0) / 100;
   const [suggestions, setSuggestions] = React.useState<WizardSuggestion[]>([]);
   const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState<Error | null>(null);
   
   React.useEffect(() => {
+    setLoading(true);
+    setError(null);
     getWizardSuggestions({ coachProgress: fraction })
       .then(setSuggestions)
+      .catch((err) => {
+        console.error('[useDisabilityWizard] Error fetching suggestions:', err);
+        setError(err);
+        setSuggestions([]); // Return empty array on error
+      })
       .finally(() => setLoading(false));
   }, [fraction]);
   
-  return { suggestions, loading };
+  return { suggestions, loading, error };
 }
 
 export function useDisabilityProfile() {
