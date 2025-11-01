@@ -14,6 +14,7 @@ import { useTranslation } from '../../i18n';
 import { useTextScale } from '../../theme/typography';
 import { createTextStyles } from '../../theme/typography.enhanced';
 import { useAppPalette } from '../../theme/usePalette';
+import { logger } from '../../utils/logger';
 
 // Safe wrapper for optional components - prevents crashes from non-critical features
 const SafeOptionalComponent = ({ children, fallback = null }: { children: React.ReactNode; fallback?: React.ReactNode }) => {
@@ -200,9 +201,9 @@ const HomeScreen = React.memo(() => {
   
   // Debug logging to track rendering
   React.useEffect(() => {
-    console.log('[HomeScreen] Mounted successfully');
-    console.log('[HomeScreen] Palette:', palette);
-    console.log('[HomeScreen] TextScale factor:', factor);
+    logger.log('[HomeScreen] Mounted successfully');
+    logger.log('[HomeScreen] Palette:', palette);
+    logger.log('[HomeScreen] TextScale factor:', factor);
   }, [palette, factor]);
   
   // Announce page load and focus title for screen readers
@@ -212,7 +213,7 @@ const HomeScreen = React.memo(() => {
   // Catch any rendering errors gracefully
   React.useEffect(() => {
     const handleError = (error: ErrorEvent) => {
-      console.error('[Home] Caught error:', error);
+      logger.error('[Home] Caught error:', error);
       setHasError(true);
     };
     
@@ -224,7 +225,7 @@ const HomeScreen = React.memo(() => {
   }, []);
   
   if (hasError) {
-    console.log('[HomeScreen] Rendering error fallback');
+    logger.log('[HomeScreen] Rendering error fallback');
     return (
       <ResponsiveScreenWrapper testID="home-screen-error">
         <Text 

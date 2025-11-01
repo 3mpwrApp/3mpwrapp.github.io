@@ -34,7 +34,7 @@ export default function EventDetail() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const router = useRouter();
-  const { user, isAdmin } = useAuth();
+  const { isAdmin } = useAuth();
   const [loading, setLoading] = React.useState(true);
   const [event, setEvent] = React.useState<any>(null);
   const [editMode, setEditMode] = React.useState(false);
@@ -247,7 +247,7 @@ export default function EventDetail() {
                 <A11yPressable
                   style={({ pressed }) => [
                     styles.adminButton,
-                    { backgroundColor: palette.destructive || '#dc2626' },
+                    { backgroundColor: palette.destructive || palette.error },
                     pressed && { opacity: 0.8 },
                   ]}
                   onPress={handleDelete}

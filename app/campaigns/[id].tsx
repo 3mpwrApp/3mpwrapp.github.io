@@ -10,8 +10,7 @@ import {
     StyleSheet,
     Text,
     TextInput,
-    View,
-    useColorScheme
+    View
 } from "react-native";
 
 import A11yPressable from "../../components/A11yPressable";
@@ -36,7 +35,6 @@ const { trackEvent } = require("../../services/analyticsClient");
 
 function CampaignDetailInner() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const scheme = useColorScheme();
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
@@ -203,7 +201,7 @@ function CampaignDetailInner() {
                 <A11yPressable
                   style={({ pressed }) => [
                     styles.adminButton,
-                    { backgroundColor: palette.destructive || '#dc2626' },
+                    { backgroundColor: palette.destructive || palette.error },
                     pressed && { opacity: 0.8 },
                   ]}
                   onPress={handleDelete}

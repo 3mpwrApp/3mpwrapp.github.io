@@ -249,8 +249,8 @@ export async function clearCachedEvents(): Promise<void> {
     await AsyncStorage.removeItem(EVENTS_SYNC_KEY);
     await AsyncStorage.removeItem(SYNC_TIMESTAMP_KEY);
     logger.log('[EventSync] Cleared cached events');
-  } catch (error) {
-    logger.error('[EventSync] Failed to clear cache:', error);
+  } catch (err) {
+    logger.error('[EventSync] Failed to clear cache:', err);
   }
 }
 
