@@ -175,8 +175,8 @@ function parseICalDateTime(icalDate: string): string {
     
     // Fallback: return as-is
     return icalDate;
-  } catch (error) {
-    logger.warn('[EventSync] Failed to parse date:', icalDate);
+  } catch (err) {
+    logger.warn('[EventSync] Failed to parse date:', icalDate, err);
     return icalDate;
   }
 }
@@ -235,8 +235,8 @@ export async function getCachedSyncedEvents(): Promise<SyncedEvent[]> {
     
     const events = JSON.parse(raw);
     return Array.isArray(events) ? events : [];
-  } catch (error) {
-    logger.error('[EventSync] Failed to get cached events:', error);
+  } catch (err) {
+    logger.error('[EventSync] Failed to get cached events:', err);
     return [];
   }
 }
