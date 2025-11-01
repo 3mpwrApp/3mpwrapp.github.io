@@ -31,7 +31,6 @@ export default function First7Screen(){
   const router = useRouter();
   const palette = useAppPalette();
   const [selectedRole, setSelectedRole] = React.useState<string | null>(null);
-  const [showRoleSelector, setShowRoleSelector] = React.useState(false);
   
   React.useEffect(()=>{ start(); }, [start]);
   
