@@ -4,12 +4,15 @@
  * Automatically generates daily feature spotlight articles
  * 
  * Features:
- * - Selects a feature from user-guide.md
+ * - Selects a feature from user-guide and website
  * - Creates detailed, factual article
  * - References user guide sections
  * - Includes examples and use cases
  * - Generates social media posts
  * - Auto-posts to Bluesky & Mastodon with article link
+ * 
+ * NOTE: 3mpwrApp is in Phase 1 - Closed Beta Testing
+ * Features include both app features (in development) and website features (live now)
  */
 
 const fs = require('fs');
@@ -18,9 +21,10 @@ const path = require('path');
 class DailyFeatureGenerator {
   constructor() {
     this.postsDir = path.join(process.cwd(), '_posts');
-    this.userGuidePath = path.join(process.cwd(), 'user-guide.md');
+    this.userGuidePath = path.join(process.cwd(), 'user-guide/index.md');
     
-    // Feature library from user-guide.md - FACTUAL information only
+    // Feature library - FACTUAL information only from user guide and website
+    // Note: App is in closed beta phase 1, website features are live
     this.features = [
       {
         name: 'Energy Forecast & Smart Scheduling',
@@ -286,6 +290,387 @@ class DailyFeatureGenerator {
           'Use app independently without assistance',
           'Customize controls to match your abilities'
         ]
+      },
+      {
+        name: 'Pain Flare Mode',
+        category: 'Website Feature - Live Now',
+        description: 'One-click emergency accessibility mode that simplifies the website when you\'re in pain',
+        userGuideSection: 'accessibility-features',
+        highlights: [
+          'Activated instantly with one button click',
+          'Minimal visual stimulation to reduce cognitive load',
+          'Large, easy-to-tap buttons for reduced motor control',
+          'Removes animations and complex interactions',
+          'Dims screen brightness automatically',
+          'Available on 3mpwrapp.pages.dev website right now'
+        ],
+        examples: [
+          'Click "Pain flare mode" button when experiencing a flare-up',
+          'Interface immediately simplifies to essential information only',
+          'Large buttons reduce the need for precise tapping',
+          'Minimal visual elements prevent sensory overload'
+        ],
+        benefits: [
+          'Access information when you need it most',
+          'Reduce pain and fatigue from using technology',
+          'Continue essential tasks during difficult moments',
+          'Immediate relief without complex settings'
+        ],
+        websiteFeature: true
+      },
+      {
+        name: 'Brain Fog Helper',
+        category: 'Website Feature - Live Now',
+        description: 'Quick summary generator that condenses long text into digestible bullet points',
+        userGuideSection: 'accessibility-features',
+        highlights: [
+          'Instantly summarizes any page into key points',
+          'Plain language summaries without jargon',
+          'Available on every page of the website',
+          'One-click activation from accessibility toolbar',
+          'Helps with cognitive fatigue and information overload',
+          'Live on 3mpwrapp.pages.dev'
+        ],
+        examples: [
+          'Reading a long article? Click "Brain fog helper" for quick summary',
+          'Get the essential information without reading everything',
+          'Return to full text when you have more energy',
+          'Understand complex pages quickly'
+        ],
+        benefits: [
+          'Save cognitive energy for what matters',
+          'Understand content even on difficult days',
+          'Reduce anxiety from overwhelming text',
+          'Make informed decisions faster'
+        ],
+        websiteFeature: true
+      },
+      {
+        name: 'Mood & Symptom Tracker',
+        category: 'App Core Feature',
+        description: 'Track daily mood, symptoms, pain levels, and triggers to identify patterns and communicate with healthcare providers',
+        userGuideSection: 'wellness-tools',
+        highlights: [
+          'Customizable mood scales from 1-10',
+          'Track multiple symptoms simultaneously',
+          'Pain level tracking with body map',
+          'Identify triggers and patterns over time',
+          'Generate reports for doctor appointments',
+          'Completely private - all data stays on your device'
+        ],
+        examples: [
+          'Log morning pain levels and energy before starting your day',
+          'Track medication effects and side effects',
+          'Identify which activities trigger symptom flares',
+          'Share monthly pattern reports with your doctor',
+          'Notice connections between sleep, stress, and symptoms'
+        ],
+        benefits: [
+          'Better understand your health patterns',
+          'Provide concrete data to healthcare providers',
+          'Identify triggers to avoid or manage',
+          'Track treatment effectiveness over time'
+        ]
+      },
+      {
+        name: 'Pacing Partner',
+        category: 'App Wellness Feature',
+        description: 'Intelligent activity pacing tool that helps you balance activity and rest to avoid energy crashes',
+        userGuideSection: 'wellness-tools',
+        highlights: [
+          'Suggests rest breaks based on your energy patterns',
+          'Tracks your "energy envelope" to prevent crashes',
+          'Reminds you to pace during high-energy times',
+          'Celebrates successful pacing achievements',
+          'Adapts to your unique energy patterns',
+          'Based on spoon theory principles'
+        ],
+        examples: [
+          'Get reminder to take a break after 45 minutes of activity',
+          'Receive encouragement when you successfully pace',
+          'Learn your optimal activity-rest ratio',
+          'Prevent post-exertional malaise before it happens'
+        ],
+        benefits: [
+          'Reduce frequency and severity of energy crashes',
+          'Accomplish more by pacing yourself appropriately',
+          'Learn sustainable activity patterns',
+          'Improve quality of life through better energy management'
+        ]
+      },
+      {
+        name: 'Peer Support Matching',
+        category: 'App Community Feature',
+        description: 'Connect with others who share similar experiences, conditions, or advocacy goals',
+        userGuideSection: 'community-features',
+        highlights: [
+          'Match based on shared experiences and needs',
+          'Privacy-focused matching algorithm',
+          'Optional anonymous connections',
+          'Moderated community with clear guidelines',
+          'Connect for support, resources, or advocacy',
+          'Block and report features for safety'
+        ],
+        examples: [
+          'Find others navigating the same benefits system',
+          'Connect with people in your province facing similar challenges',
+          'Join support groups for specific conditions',
+          'Share successful strategies and resources',
+          'Build advocacy teams for systemic change'
+        ],
+        benefits: [
+          'Feel less isolated in your journey',
+          'Learn from others\' experiences',
+          'Access peer knowledge and support',
+          'Build meaningful connections'
+        ]
+      },
+      {
+        name: 'Adaptive Meditation & Breathing',
+        category: 'App Wellness Feature',
+        description: 'Meditation and breathing exercises adapted for chronic pain, PTSD, anxiety, and various disabilities',
+        userGuideSection: 'wellness-tools',
+        highlights: [
+          'Exercises adapted for physical limitations',
+          'Trauma-informed approaches for PTSD',
+          'Short options (1-5 minutes) for limited energy',
+          'Pain-aware guidance that acknowledges discomfort',
+          'Multiple modalities: audio, visual, haptic',
+          'No forced positivity or unrealistic expectations'
+        ],
+        examples: [
+          'Use 2-minute breathing exercise during panic attack',
+          'Practice pain-aware body scan that doesn\'t require lying down',
+          'Try grounding techniques during dissociation',
+          'Use haptic-only mode for sensory sensitivity',
+          'Access trauma-informed meditation without triggering language'
+        ],
+        benefits: [
+          'Self-regulation tools that actually work for disabled people',
+          'Reduce anxiety and stress safely',
+          'Manage pain and symptoms naturally',
+          'Accessible regardless of physical ability'
+        ]
+      },
+      {
+        name: 'Lawyer Finder & Legal Resources',
+        category: 'App Advocacy Feature',
+        description: 'Province-specific legal resources, lawyer directory, and guidance for finding appropriate legal help',
+        userGuideSection: 'advocacy-legal-resources',
+        highlights: [
+          'Directory of disability rights lawyers by province',
+          'Information on legal aid eligibility',
+          'Links to provincial law societies',
+          'Guidance on what to look for in legal representation',
+          'Information on pro bono services',
+          'Human rights tribunal contact information'
+        ],
+        examples: [
+          'Find disability rights lawyers in your province',
+          'Learn about legal aid eligibility criteria',
+          'Access contact information for human rights tribunals',
+          'Understand lawyer fee structures',
+          'Find pro bono legal clinics in your area'
+        ],
+        benefits: [
+          'Connect with appropriate legal help',
+          'Understand your rights and options',
+          'Navigate legal systems more effectively',
+          'Access justice regardless of income'
+        ]
+      },
+      {
+        name: 'Jurisdiction-Specific Resources',
+        category: 'App Advocacy Feature',
+        description: 'Comprehensive resources for all Canadian provinces and territories including benefits, rights, and local services',
+        userGuideSection: 'advocacy-legal-resources',
+        highlights: [
+          'Information for all 13 provinces and territories',
+          'Provincial disability benefits programs',
+          'Workers\' compensation contacts and processes',
+          'Human rights legislation by jurisdiction',
+          'Local disability organizations and services',
+          'Province-specific forms and applications'
+        ],
+        examples: [
+          'Access ODSP information if you\'re in Ontario',
+          'Find AISH resources for Alberta residents',
+          'Learn about PWD program in British Columbia',
+          'Understand workers\' comp process in your province',
+          'Locate local disability advocacy organizations'
+        ],
+        benefits: [
+          'Find resources specific to your location',
+          'Navigate your provincial systems effectively',
+          'Access local support services',
+          'Understand jurisdiction-specific rights'
+        ]
+      },
+      {
+        name: 'DBT Skill Matcher',
+        category: 'App Wellness Feature',
+        description: 'Dialectical Behavior Therapy skills matched to your current situation and emotional state',
+        userGuideSection: 'wellness-tools',
+        highlights: [
+          'Quick assessment of current emotional state',
+          'Suggests appropriate DBT skills for the situation',
+          'Step-by-step guidance for using each skill',
+          'Tracks which skills work best for you',
+          'Library of 20+ DBT techniques',
+          'Crisis skills available for emergencies'
+        ],
+        examples: [
+          'Feeling overwhelmed? Get distress tolerance skills',
+          'Struggling with emotions? Access emotion regulation techniques',
+          'Need to communicate better? Find interpersonal effectiveness skills',
+          'Experiencing crisis? Access crisis survival strategies',
+          'Track which skills help you most'
+        ],
+        benefits: [
+          'Evidence-based coping strategies at your fingertips',
+          'Learn what works for your specific situations',
+          'Build emotional regulation skills',
+          'Manage difficult moments effectively'
+        ]
+      },
+      {
+        name: 'Resilience Points System',
+        category: 'App Wellness Feature',
+        description: 'Gamified tracking system that celebrates small wins and builds motivation through positive reinforcement',
+        userGuideSection: 'wellness-tools',
+        highlights: [
+          'Earn points for self-care and advocacy actions',
+          'Celebrate small wins and daily victories',
+          'No punishment for missed days or low activity',
+          'Completely optional - use if it helps you',
+          'Points unlock encouraging messages',
+          'Track your journey without pressure'
+        ],
+        examples: [
+          'Earn points for logging your mood',
+          'Get recognition for attending appointments',
+          'Celebrate completing legal documents',
+          'Acknowledge rest days as valid achievements',
+          'Build positive momentum through small actions'
+        ],
+        benefits: [
+          'Motivation without shame or pressure',
+          'Recognition for efforts often ignored',
+          'Visual representation of your journey',
+          'Positive reinforcement for self-care'
+        ]
+      },
+      {
+        name: 'Crisis Resources Hub',
+        category: 'Website Feature - Live Now',
+        description: 'Immediate access to crisis hotlines, emergency services, and mental health support resources',
+        userGuideSection: 'crisis-resources',
+        highlights: [
+          'Available on website right now without app download',
+          'Emergency numbers prominently displayed',
+          '24/7 crisis hotlines for Canada',
+          'Mental health, suicide prevention, and domestic violence resources',
+          'Provincial-specific crisis services',
+          'Quick access from any page'
+        ],
+        examples: [
+          'Find suicide prevention hotline (1-833-456-4566)',
+          'Access crisis text line (text 45645)',
+          'Locate domestic violence support (1-800-363-9010)',
+          'Find provincial mental health crisis lines',
+          'Get help immediately without creating an account'
+        ],
+        benefits: [
+          'Life-saving resources always accessible',
+          'No barriers to accessing help',
+          'Comprehensive support options',
+          'Province-specific services included'
+        ],
+        websiteFeature: true
+      },
+      {
+        name: 'Accessibility Toolbar',
+        category: 'Website Feature - Live Now',
+        description: '13 innovative accessibility features available on the website with one click',
+        userGuideSection: 'accessibility-features',
+        highlights: [
+          '13 different accessibility tools and modes',
+          'Quick Relief options: Pain flare, Need a break, Overwhelmed mode',
+          'Reading Aids: Brain fog helper, Text chunking, Reading resume',
+          'Display Settings: Sensory preferences, Reading level, Dyslexia mode',
+          'All features available immediately on website',
+          'No download or account required'
+        ],
+        examples: [
+          'Activate pain flare mode during a bad day',
+          'Use brain fog helper to understand complex pages',
+          'Freeze animations if they\'re overwhelming',
+          'Switch to high contrast for visual clarity',
+          'Enable dyslexia-friendly fonts'
+        ],
+        benefits: [
+          'Customize your experience immediately',
+          'Access site regardless of ability',
+          'Reduce barriers to information',
+          'Control your sensory experience'
+        ],
+        websiteFeature: true
+      },
+      {
+        name: 'Comprehensive User Guide',
+        category: 'Website Feature - Live Now',
+        description: 'Detailed, accessible documentation covering all app features and website tools',
+        userGuideSection: 'getting-started',
+        highlights: [
+          'Available online at 3mpwrapp.pages.dev/user-guide/',
+          'Table of contents with energy cost indicators',
+          'Quick summaries for each section',
+          'Downloadable PDF version',
+          'Plain language explanations',
+          'Real-world examples and use cases'
+        ],
+        examples: [
+          'Learn about all features before joining beta',
+          'Reference while using the app',
+          'Share with healthcare providers or lawyers',
+          'Understand features in depth',
+          'Download for offline access'
+        ],
+        benefits: [
+          'Informed decision about joining beta',
+          'Learn at your own pace',
+          'Comprehensive feature documentation',
+          'Accessible reference material'
+        ],
+        websiteFeature: true
+      },
+      {
+        name: 'Blog & News Curation',
+        category: 'Website Feature - Live Now',
+        description: 'Daily curated news about disability rights, accessibility, and social policy across Canada',
+        userGuideSection: 'blog',
+        highlights: [
+          'Daily news curation from trusted Canadian sources',
+          'Feature spotlights explaining app capabilities',
+          'Accessibility news and policy updates',
+          'Community spotlights and success stories',
+          'Weekly updates and summaries',
+          'All available on the website now'
+        ],
+        examples: [
+          'Stay informed about disability policy changes',
+          'Learn about new app features through spotlights',
+          'Discover accessibility innovations',
+          'Read community success stories',
+          'Get weekly updates on what\'s new'
+        ],
+        benefits: [
+          'Stay informed without effort',
+          'Learn about app features',
+          'Connect with broader community',
+          'Understand policy changes affecting you'
+        ],
+        websiteFeature: true
       }
     ];
 
@@ -388,11 +773,26 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     });
 
     content += `\n---\n\n## Getting Started\n\n`;
-    content += `Ready to try ${feature.name}? Here's how to get started:\n\n`;
-    content += `1. **Download the app** - Available on iOS and Android (coming soon)\n`;
-    content += `2. **Complete setup** - Takes just 5 minutes\n`;
-    content += `3. **Find the feature** - Look for "${feature.name}" in your app\n`;
-    content += `4. **Follow the guide** - In-app tutorials walk you through each step\n\n`;
+    
+    // Different instructions for website features vs app features
+    if (feature.websiteFeature) {
+      content += `**${feature.name} is available on the website right now!**\n\n`;
+      content += `You can use this feature immediately at [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/) without downloading anything or creating an account.\n\n`;
+      content += `1. **Visit the website** - Go to [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)\n`;
+      content += `2. **No login required** - Most website features work without an account\n`;
+      content += `3. **Find the feature** - Look for "${feature.name}" in the accessibility toolbar or main navigation\n`;
+      content += `4. **Start using it** - No setup needed, just click and go\n\n`;
+    } else {
+      content += `**Note: 3mpwrApp is currently in Phase 1 - Closed Beta Testing**\n\n`;
+      content += `${feature.name} is part of the mobile app currently in development. To access this feature:\n\n`;
+      content += `1. **Join the beta** - [Sign up for beta testing](/beta/) to get early access\n`;
+      content += `2. **Get invited** - Beta invitations are sent in phases as features are ready\n`;
+      content += `3. **Download the app** - iOS and Android (beta testers only)\n`;
+      content += `4. **Complete setup** - First-time setup takes about 5-10 minutes\n`;
+      content += `5. **Find the feature** - Look for "${feature.name}" in your app\n`;
+      content += `6. **Follow the guide** - In-app tutorials walk you through each step\n\n`;
+      content += `_Not a beta tester yet? The app is in active development. [Join our beta program](/beta/) to get access when this feature is ready._\n\n`;
+    }
 
     content += `---\n\n## Learn More\n\n`;
     content += `For complete information about ${feature.name} and all other features:\n\n`;
@@ -403,6 +803,13 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
 
     content += `---\n\n## About 3mpwrApp\n\n`;
     content += `3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.\n\n`;
+    
+    if (feature.websiteFeature) {
+      content += `**The website is live now** at [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/) with many accessibility features. The mobile app is in **Phase 1 - Closed Beta Testing** with new features being added regularly.\n\n`;
+    } else {
+      content += `**The mobile app is currently in Phase 1 - Closed Beta Testing.** Join the [beta program](/beta/) to get early access as features are released.\n\n`;
+    }
+    
     content += `**All features are:**\n`;
     content += `- ✅ Fully accessible (WCAG 2.2 AA+)\n`;
     content += `- 🔒 Privacy-first (local-first architecture)\n`;
@@ -418,10 +825,14 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
   generateSocialPost(feature, articleUrl) {
     const fullUrl = `https://3mpwrapp.pages.dev${articleUrl}`;
     
+    const availability = feature.websiteFeature ? '🌐 Live on website now!' : '📱 Coming in app beta';
+    
     // Short version for Twitter/Bluesky (< 280 chars with link)
     const shortPost = `🌟 Feature Spotlight: ${feature.name}
 
 ${feature.description}
+
+${availability}
 
 Learn more: ${fullUrl}
 
@@ -432,10 +843,10 @@ Learn more: ${fullUrl}
 
 ${feature.description}
 
+${availability}
+
 Key highlights:
 ${feature.highlights.slice(0, 2).map(h => `✓ ${h}`).join('\n')}
-
-Perfect for anyone needing ${feature.category.toLowerCase()} support!
 
 Read the full article: ${fullUrl}
 

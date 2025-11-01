@@ -99,23 +99,6 @@ jobs:
             echo "⚠️ No curation output (may be normal if no quality content found)"
           fi
 
-      - name: Post to social media
-        if: success()
-        env:
-          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
-          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
-          MASTO_VISIBILITY: 'public'
-          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
-          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
-          BLUESKY_PDS: 'https://bsky.social'
-          X_CLIENT_ID: ${{ secrets.X_CLIENT_ID }}
-          X_CLIENT_SECRET: ${{ secrets.X_CLIENT_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-        run: |
-          echo "📤 Posting to social media..."
-          node scripts/social-post.js || echo "⚠️ Social posting failed"
-
       - name: Build search index
         continue-on-error: true
         run: |
@@ -131,6 +114,7 @@ jobs:
           
           if git diff --staged --quiet; then
             echo "✅ No changes to commit"
+            echo "SKIP_SOCIAL=true" >> $GITHUB_ENV
             exit 0
           fi
           
@@ -144,6 +128,31 @@ jobs:
           fi
           
           git push origin main || echo "⚠️ No changes to push"
+
+      - name: Wait for Jekyll deployment
+        if: env.SKIP_SOCIAL != 'true'
+        run: |
+          echo "⏳ Waiting for Jekyll to build and deploy..."
+          echo "This ensures blog posts are live before social media posts go out"
+          sleep 180  # Wait 3 minutes for GitHub Pages + Cloudflare Pages deployment
+          echo "✅ Deployment should be complete"
+
+      - name: Post to social media
+        if: success() && env.SKIP_SOCIAL != 'true'
+        env:
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_VISIBILITY: 'public'
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_PDS: 'https://bsky.social'
+          X_CLIENT_ID: ${{ secrets.X_CLIENT_ID }}
+          X_CLIENT_SECRET: ${{ secrets.X_CLIENT_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: |
+          echo "📤 Posting to social media..."
+          node scripts/social-post.js || echo "⚠️ Social posting failed"
 
       - name: Create summary
         if: always()
