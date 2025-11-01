@@ -1,11 +1,12 @@
 import { Link } from 'expo-router';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import JurisdictionDeadlineCalculator from '../../../components/JurisdictionDeadlineCalculator';
 import JurisdictionFormHelper from '../../../components/JurisdictionFormHelper';
 import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
+import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../../components/SearchBar';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -74,9 +75,9 @@ export default function AdvocacyHub() {
     'accountability_cases',
   ];
   return (
-    <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
-    <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.hub.title','Advocacy Hub')}</Text>
-    <Text style={s.subtitle}>{t('advocacy.hub.subtitle','Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.')}</Text>
+    <ResponsiveScreenWrapper scrollable testID="advocacy-screen">
+      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.hub.title','Advocacy Hub')}</Text>
+      <Text style={s.subtitle}>{t('advocacy.hub.subtitle','Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.')}</Text>
   
   <DisclaimerBanner type="legal" compact />
   
@@ -153,13 +154,12 @@ export default function AdvocacyHub() {
           </Link>
         ) : null;
       })}
-    </ScrollView>
+    </ResponsiveScreenWrapper>
   );
 }
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    container: { flex:1, backgroundColor: palette.background },
     title: { fontSize:24, fontWeight:'700', color: palette.text, marginBottom: 8 },
     subtitle: { color: palette.text, opacity:0.9, marginBottom: 16 },
     sectionHeader: { color: palette.text, opacity:0.9, marginTop: 16, marginBottom: 8, fontWeight: '700' },

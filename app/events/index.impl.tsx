@@ -1,20 +1,21 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-  Alert,
-  FlatList,
-  RefreshControl,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    FlatList,
+    RefreshControl,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
 import Card from "../../components/Card";
 import ContrastToggle from "../../components/ContrastToggle";
 import { GapView } from "../../components/GapView";
+import ResponsiveScreenWrapper from "../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../components/SearchBar";
 import SettingsLink from "../../components/SettingsLink";
 import SkeletonRow from "../../components/SkeletonRow";
@@ -22,13 +23,13 @@ import { HIT_SLOP_8 } from "../../constants/A11Y";
 import { generateDisabilityObservances } from "../../data/disability-observances";
 import { events as localEvents } from "../../data/events";
 import {
-  generateCanadianHolidays,
-  generateProvincialHolidays,
+    generateCanadianHolidays,
+    generateProvincialHolidays,
 } from "../../data/holidays-ca";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
@@ -193,303 +194,307 @@ export default function EventsScreen() {
   };
 
   return (
-    <View
-      style={[styles.container, { flex: 1 }]}
-      accessibilityLabel="Events screen"
-      accessible
-    >
-      <Text
-        ref={titleRef}
-        nativeID="events-title"
-        accessibilityRole="header"
-        style={styles.title}
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
+    <ResponsiveScreenWrapper scrollable>
+      <View
+        style={[styles.container, { flex: 1 }]}
+        accessibilityLabel="Events screen"
+        accessible
       >
-        {t('nav.events','Events')}
-      </Text>
-
-      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
-      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
-
-      <Text style={styles.subtitle}>
-        {t('eventsFeature.subtitle','Community events, workshops, and meetups.')}
-      </Text>
-
-      <SearchBar
-        value={query}
-        onChangeText={setQuery}
-        placeholder={t('eventsFeature.search.placeholder','Search events, tags, places')}
-      />
-
-      <GapView gap={8} style={{ flexDirection:'row', marginBottom:8 }}>
-        <A11yPressable
-          accessibilityRole="button"
-          accessibilityLabel={t('deadlines.today','Today')}
-          onPress={selectToday}
-          style={{ paddingHorizontal:10, paddingVertical:6, borderRadius:20, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+        <Text
+          ref={titleRef}
+          nativeID="events-title"
+          accessibilityRole="header"
+          style={styles.title}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
         >
-          <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>{t('deadlines.today','Today')}</Text>
-        </A11yPressable>
-        <A11yPressable
-          accessibilityRole="button"
-          accessibilityLabel={t('common.resetFilters','Reset filters')}
-          onPress={clearFilters}
-          style={{ paddingHorizontal:10, paddingVertical:6, borderRadius:20, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-        >
-          <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>{t('common.resetFilters','Reset filters')}</Text>
-        </A11yPressable>
-      </GapView>
-
-      <A11yPressable
-        accessibilityRole="button"
-        accessibilityLabel={showCreate ? t('a11y.toggleCreateEventFormClose') : t('a11y.toggleCreateEventFormOpen')}
-        onPress={() => setShowCreate(v => !v)}
-        style={{ alignSelf:'flex-start', marginBottom: 8, paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.primary }}
-      >
-        <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}</Text>
-      </A11yPressable>
-
-      {/* Filter chips */}
-      <GapView gap={8} style={{ flexDirection:'row', marginBottom:8 }}>
-        <FilterChip label={t('common.all','All')} active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
-        <FilterChip label={t('eventsFeature.section.community','Community Events')} active={mode==='community'} onPress={() => setMode('community')} palette={palette} />
-        <FilterChip label={t('eventsFeature.section.observances','Holidays & Observances')} active={mode==='observances'} onPress={() => setMode('observances')} palette={palette} />
-      </GapView>
-
-      {showCreate && (
-        <CreateEventBox onCreate={handleCreate} palette={palette} />
-      )}
-
-      {loading && (
-        <View>
-          <SkeletonRow testID="skeleton-event-1" />
-          <SkeletonRow testID="skeleton-event-2" />
-          <SkeletonRow testID="skeleton-event-3" />
-        </View>
-      )}
-
-      {error && (
-        <>
-          <Text style={styles.subtitle} accessibilityRole="alert">
-            {t('eventsFeature.loadFailed','Failed to load events')}
-          </Text>
-          <Text
-            onPress={reload}
-            accessibilityRole="button"
-            accessibilityLabel={t('deadlines.reloadShort','Reload')}
-            style={styles.subtitle}
-          >
-            {t('deadlines.reloadShort','Reload')}
-          </Text>
-        </>
-      )}
-
-      <View style={styles.calHeader}>
-        <A11yPressable
-          accessibilityRole="button"
-          accessibilityLabel={t('deadlines.prevMonth','Previous')}
-          hitSlop={HIT_SLOP_8}
-          onPress={() =>
-            setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))
-          }
-        >
-          <Text style={styles.calNav}>{"<"}</Text>
-        </A11yPressable>
-        <Text style={styles.calTitle}>{monthLabel}</Text>
-        <Text style={[styles.calTitle, { opacity:0.7 }]} accessibilityLiveRegion="polite">
-          {t('eventsFeature.loadedCount','{{n}} events loaded',{ n: filtered.length })}
+          {t('nav.events','Events')}
         </Text>
+
+        <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
+        <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
+
+        <Text style={styles.subtitle}>
+          {t('eventsFeature.subtitle','Community events, workshops, and meetups.')}
+        </Text>
+
+        <SearchBar
+          value={query}
+          onChangeText={setQuery}
+          placeholder={t('eventsFeature.search.placeholder','Search events, tags, places')}
+        />
+
+        <GapView gap={8} style={{ flexDirection:'row', marginBottom:8 }}>
+          <A11yPressable
+            accessibilityRole="button"
+            accessibilityLabel={t('deadlines.today','Today')}
+            onPress={selectToday}
+            style={{ paddingHorizontal:10, paddingVertical:6, borderRadius:20, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+          >
+            <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>{t('deadlines.today','Today')}</Text>
+          </A11yPressable>
+          <A11yPressable
+            accessibilityRole="button"
+            accessibilityLabel={t('common.resetFilters','Reset filters')}
+            onPress={clearFilters}
+            style={{ paddingHorizontal:10, paddingVertical:6, borderRadius:20, backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+          >
+            <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>{t('common.resetFilters','Reset filters')}</Text>
+          </A11yPressable>
+        </GapView>
+
         <A11yPressable
           accessibilityRole="button"
-          accessibilityLabel={t('deadlines.nextMonth','Next')}
-          hitSlop={HIT_SLOP_8}
-          onPress={() =>
-            setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))
-          }
+          accessibilityLabel={showCreate ? t('a11y.toggleCreateEventFormClose') : t('a11y.toggleCreateEventFormOpen')}
+          onPress={() => setShowCreate(v => !v)}
+          style={{ alignSelf:'flex-start', marginBottom: 8, paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.primary }}
         >
-          <Text style={styles.calNav}>{">"}</Text>
+          <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}</Text>
         </A11yPressable>
-      </View>
 
-      <View style={styles.weekRow}>
-        {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
-          <Text key={`dow-${i}`} style={styles.weekHdr}>
-            {d}
-          </Text>
-        ))}
-      </View>
+        {/* Filter chips */}
+        <GapView gap={8} style={{ flexDirection:'row', marginBottom:8 }}>
+          <FilterChip label={t('common.all','All')} active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
+          <FilterChip label={t('eventsFeature.section.community','Community Events')} active={mode==='community'} onPress={() => setMode('community')} palette={palette} />
+          <FilterChip label={t('eventsFeature.section.observances','Holidays & Observances')} active={mode==='observances'} onPress={() => setMode('observances')} palette={palette} />
+        </GapView>
 
-        {daysMatrix.map((week, wi) => (
-        <View key={wi} style={styles.weekRow}>
-          {week.map((d, di) => {
-            const key = dayKeyFromMatrix(month, d);
-            const has = !!key && eventsByDay.has(key);
-            const isSel = !!key && selectedDay === key;
-            return (
-              <A11yPressable
-                key={`${wi}-${di}`}
-                style={[
-                  styles.dayCell,
-                  isSel && { backgroundColor: palette.primary },
-                  has && { borderColor: palette.primary },
-                ]}
-                onPress={() =>
-                  key && setSelectedDay((cur) => (cur === key ? null : key))
-                }
-                accessibilityRole="button"
-                accessibilityLabel={
-                  key ? `${t('common.select','Select')} ${key}${has ? ", " + t('eventsFeature.hasEvents','has events') : ""}` : t('common.empty','Empty')
-                }
-                disabled={!key}
-              >
-                <Text
-                  style={[
-                    styles.dayText,
-                    isSel && { color: palette.onPrimary },
-                  ]}
-                >
-                  {d ?? ""}
-                </Text>
-              </A11yPressable>
-            );
-          })}
-        </View>
-      ))}
+        {showCreate && (
+          <CreateEventBox onCreate={handleCreate} palette={palette} />
+        )}
 
-      <FlatList
-        data={filtered}
-        keyExtractor={(item) => item.id}
-        ListEmptyComponent={(
-          <View style={{ paddingVertical: 16 }}>
-            <Text style={[styles.subtitle, { marginBottom: 6 }]}>
-              {t('eventsFeature.empty','No events match your filters')}
+        {loading && (
+          <View>
+            <SkeletonRow testID="skeleton-event-1" />
+            <SkeletonRow testID="skeleton-event-2" />
+            <SkeletonRow testID="skeleton-event-3" />
+          </View>
+        )}
+
+        {error && (
+          <>
+            <Text style={styles.subtitle} accessibilityRole="alert">
+              {t('eventsFeature.loadFailed','Failed to load events')}
             </Text>
-            {(selectedDay || query || mode !== 'all') && (
-              <A11yPressable
-                onPress={clearFilters}
-                accessibilityRole="button"
-                accessibilityLabel={t('common.resetFilters','Reset filters')}
-                style={{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
-              </A11yPressable>
-            )}
-          </View>
-        )}
-        renderItem={({ item }) => (
-          <View style={{ marginBottom:12 }}>
-            <Link
-              href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any}
-              asChild
-              accessibilityRole="link"
-              accessibilityLabel={`${t('home.guide.open','Open')} ${item.title}`}
+            <Text
+              onPress={reload}
+              accessibilityRole="button"
+              accessibilityLabel={t('deadlines.reloadShort','Reload')}
+              style={styles.subtitle}
             >
-              <Card
-                title={item.title}
-                subtitle={formatMeta(item.date, item.isVirtual, item.location)}
-                left={(() => {
-                  const label = item.id.startsWith("holiday-")
-                    ? t('eventsFeature.tags.holiday','Holiday')
-                    : item.id.startsWith("prov-")
-                      ? t('eventsFeature.tags.provincial','Provincial')
-                      : item.id.startsWith("obs-")
-                        ? t('eventsFeature.tags.observance','Observance')
-                        : null;
-                  if (!label) return null;
-                  return (
-                    <View style={{ backgroundColor: palette.primary, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 }}>
-                      <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: "700" }}>{label}</Text>
-                    </View>
-                  );
-                })()}
-                testID={`event-${item.id}`}
-              />
-            </Link>
-            <GapView gap={8} style={{ flexDirection:'row', marginTop:4 }}>
-              <A11yPressable
-                onPress={async () => {
-                  try {
-                    await Share.share({
-                      message: `${item.title}\n${item.date}\n${item.isVirtual? t('eventsFeature.chips.virtual','Virtual'): (item.location||t('eventsFeature.tbd','TBD'))}\n\n${item.description || ''}`.trim(),
-                      title: item.title,
-                    });
-                  } catch {}
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={`${t('common.share','Share')} ${item.title}`}
-                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>{t('common.share','Share')}</Text>
-              </A11yPressable>
-              <A11yPressable
-                onPress={async () => {
-                  const ics = makeICS(item);
-                  await shareText(`${item.title}.ics`, ics);
-                  trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { id: item.id });
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={`${t('common.export','Export')} ${item.title} ICS`}
-                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>ICS</Text>
-              </A11yPressable>
-              <A11yPressable
-                onPress={async () => {
-                  const header = '"Date","Title","Description","Location"';
-                  const row = makeCSVRow(item as any);
-                  await shareText(`${item.title}.csv`, `${header}\n${row}`);
-                  trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { id: item.id });
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={`${t('common.export','Export')} ${item.title} CSV`}
-                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>CSV</Text>
-              </A11yPressable>
-            </GapView>
-          </View>
+              {t('deadlines.reloadShort','Reload')}
+            </Text>
+          </>
         )}
-        contentContainerStyle={{ paddingTop: 12 }}
-        refreshControl={
-          <RefreshControl refreshing={loading} onRefresh={reload} />
-        }
-        ListHeaderComponent={(
-          <View style={{ marginBottom: 8 }}>
-            <GapView gap={8} style={{ flexDirection:'row' }}>
-              <A11yPressable
-                onPress={async () => {
-                  // Export all filtered as single ICS concatenation
-                  try {
-                    const payload = filtered.map(it => makeICS(it as any)).join('\n');
-                    await shareText('events.ics', payload);
-                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { count: filtered.length, mode });
-                  } catch {}
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={t('common.export','Export') + ' ICS'}
-                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export ICS</Text>
-              </A11yPressable>
-              <A11yPressable
-                onPress={async () => {
-                  // Export CSV of filtered
-                  const header = '"Date","Title","Description","Location"';
-                  const rows = filtered.map(it => makeCSVRow(it as any)).join('\n');
-                  await shareText('events.csv', `${header}\n${rows}`);
-                  trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { count: filtered.length, mode });
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={t('common.export','Export') + ' CSV'}
-                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
-              </A11yPressable>
-            </GapView>
+
+        <View style={styles.calHeader}>
+          <A11yPressable
+            accessibilityRole="button"
+            accessibilityLabel={t('deadlines.prevMonth','Previous')}
+            hitSlop={HIT_SLOP_8}
+            onPress={() =>
+              setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))
+            }
+          >
+            <Text style={styles.calNav}>{"<"}</Text>
+          </A11yPressable>
+          <Text style={styles.calTitle}>{monthLabel}</Text>
+          <Text style={[styles.calTitle, { opacity:0.7 }]} accessibilityLiveRegion="polite">
+            {t('eventsFeature.loadedCount','{{n}} events loaded',{ n: filtered.length })}
+          </Text>
+          <A11yPressable
+            accessibilityRole="button"
+            accessibilityLabel={t('deadlines.nextMonth','Next')}
+            hitSlop={HIT_SLOP_8}
+            onPress={() =>
+              setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))
+            }
+          >
+            <Text style={styles.calNav}>{">"}</Text>
+          </A11yPressable>
+        </View>
+
+        <View style={styles.weekRow}>
+          {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
+            <Text key={`dow-${i}`} style={styles.weekHdr}>
+              {d}
+            </Text>
+          ))}
+        </View>
+
+        <View style={styles.calendarContainer}>
+          {daysMatrix.map((week, wi) => (
+          <View key={wi} style={styles.weekRow}>
+            {week.map((d, di) => {
+              const key = dayKeyFromMatrix(month, d);
+              const has = !!key && eventsByDay.has(key);
+              const isSel = !!key && selectedDay === key;
+              return (
+                <A11yPressable
+                  key={`${wi}-${di}`}
+                  style={[
+                    styles.dayCell,
+                    isSel && { backgroundColor: palette.primary },
+                    has && { borderColor: palette.primary },
+                  ]}
+                  onPress={() =>
+                    key && setSelectedDay((cur) => (cur === key ? null : key))
+                  }
+                  accessibilityRole="button"
+                  accessibilityLabel={
+                    key ? `${t('common.select','Select')} ${key}${has ? ", " + t('eventsFeature.hasEvents','has events') : ""}` : t('common.empty','Empty')
+                  }
+                  disabled={!key}
+                >
+                  <Text
+                    style={[
+                      styles.dayText,
+                      isSel && { color: palette.onPrimary },
+                    ]}
+                  >
+                    {d ?? ""}
+                  </Text>
+                </A11yPressable>
+              );
+            })}
           </View>
-        )}
-      />
-    </View>
+        ))}
+        </View>
+
+        <FlatList
+          data={filtered}
+          keyExtractor={(item) => item.id}
+          ListEmptyComponent={(
+            <View style={{ paddingVertical: 16 }}>
+              <Text style={[styles.subtitle, { marginBottom: 6 }]}>
+                {t('eventsFeature.empty','No events match your filters')}
+              </Text>
+              {(selectedDay || query || mode !== 'all') && (
+                <A11yPressable
+                  onPress={clearFilters}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('common.resetFilters','Reset filters')}
+                  style={{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+                >
+                  <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
+                </A11yPressable>
+              )}
+            </View>
+          )}
+          renderItem={({ item }) => (
+            <View style={{ marginBottom:12 }}>
+              <Link
+                href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any}
+                asChild
+                accessibilityRole="link"
+                accessibilityLabel={`${t('home.guide.open','Open')} ${item.title}`}
+              >
+                <Card
+                  title={item.title}
+                  subtitle={formatMeta(item.date, item.isVirtual, item.location)}
+                  left={(() => {
+                    const label = item.id.startsWith("holiday-")
+                      ? t('eventsFeature.tags.holiday','Holiday')
+                      : item.id.startsWith("prov-")
+                        ? t('eventsFeature.tags.provincial','Provincial')
+                        : item.id.startsWith("obs-")
+                          ? t('eventsFeature.tags.observance','Observance')
+                          : null;
+                    if (!label) return null;
+                    return (
+                      <View style={{ backgroundColor: palette.primary, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 }}>
+                        <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: "700" }}>{label}</Text>
+                      </View>
+                    );
+                  })()}
+                  testID={`event-${item.id}`}
+                />
+              </Link>
+              <GapView gap={8} style={{ flexDirection:'row', marginTop:4 }}>
+                <A11yPressable
+                  onPress={async () => {
+                    try {
+                      await Share.share({
+                        message: `${item.title}\n${item.date}\n${item.isVirtual? t('eventsFeature.chips.virtual','Virtual'): (item.location||t('eventsFeature.tbd','TBD'))}\n\n${item.description || ''}`.trim(),
+                        title: item.title,
+                      });
+                    } catch {}
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${t('common.share','Share')} ${item.title}`}
+                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+                >
+                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>{t('common.share','Share')}</Text>
+                </A11yPressable>
+                <A11yPressable
+                  onPress={async () => {
+                    const ics = makeICS(item);
+                    await shareText(`${item.title}.ics`, ics);
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { id: item.id });
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${t('common.export','Export')} ${item.title} ICS`}
+                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+                >
+                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>ICS</Text>
+                </A11yPressable>
+                <A11yPressable
+                  onPress={async () => {
+                    const header = '"Date","Title","Description","Location"';
+                    const row = makeCSVRow(item as any);
+                    await shareText(`${item.title}.csv`, `${header}\n${row}`);
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { id: item.id });
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${t('common.export','Export')} ${item.title} CSV`}
+                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+                >
+                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>CSV</Text>
+                </A11yPressable>
+              </GapView>
+            </View>
+          )}
+          contentContainerStyle={{ paddingTop: 12 }}
+          refreshControl={
+            <RefreshControl refreshing={loading} onRefresh={reload} />
+          }
+          ListHeaderComponent={(
+            <View style={{ marginBottom: 8 }}>
+              <GapView gap={8} style={{ flexDirection:'row' }}>
+                <A11yPressable
+                  onPress={async () => {
+                    // Export all filtered as single ICS concatenation
+                    try {
+                      const payload = filtered.map(it => makeICS(it as any)).join('\n');
+                      await shareText('events.ics', payload);
+                      trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { count: filtered.length, mode });
+                    } catch {}
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('common.export','Export') + ' ICS'}
+                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+                >
+                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export ICS</Text>
+                </A11yPressable>
+                <A11yPressable
+                  onPress={async () => {
+                    // Export CSV of filtered
+                    const header = '"Date","Title","Description","Location"';
+                    const rows = filtered.map(it => makeCSVRow(it as any)).join('\n');
+                    await shareText('events.csv', `${header}\n${rows}`);
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { count: filtered.length, mode });
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('common.export','Export') + ' CSV'}
+                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+                >
+                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
+                </A11yPressable>
+              </GapView>
+            </View>
+          )}
+        />
+      </View>
+    </ResponsiveScreenWrapper>
   );
 }
 
@@ -537,6 +542,10 @@ function createStyles(
       flexDirection: "row",
       justifyContent: "space-between",
       marginBottom: 2,
+    },
+    calendarContainer: {
+      maxHeight: 160, // Constrain calendar to ~5 weeks height (32px * 5 + margins)
+      marginBottom: 8,
     },
     weekHdr: {
       width: 32,

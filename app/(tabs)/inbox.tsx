@@ -17,41 +17,43 @@ export default function InboxScreen() {
   const { inbox, unread, markAllRead, markRead } = useNotifications();
 
   return (
-    <View style={s.container} accessibilityLabel={t('nav.inbox','Inbox screen')}>
-      <Text accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('nav.inbox','Inbox')}</Text>
-      <GapView style={{ flexDirection:'row' }} gap={8}>
-        <Text style={s.subtitle}>{unread} {t('common.unread','unread')}</Text>
-        {unread > 0 && (
-          <A11yPressable onPress={markAllRead} style={s.markAll} accessibilityRole="button" accessibilityLabel={t('inbox.markAll','Mark all read')}>
-            <Text style={s.markAllText}>{t('inbox.markAll','Mark all read')}</Text>
-          </A11yPressable>
-        )}
-      </GapView>
-      <FlatList
-        data={inbox}
-        keyExtractor={(n) => n.id}
-        renderItem={({ item }) => (
-          <A11yPressable
-            onPress={() => {
-              markRead(item.id);
-              if (item.route) {
-                try { router.push(item.route as Href); } catch {}
-              }
-            }}
-            accessibilityRole="button"
-            accessibilityLabel={item.read ? t('inbox.itemRead','Notification (read)') : t('inbox.itemUnread','Notification (unread)')}
-            style={[s.row, !item.read && { backgroundColor: palette.card }]}
-          >
-            <View style={{ flex:1 }}>
-              <Text style={s.rowTitle}>{item.title}</Text>
-              <Text style={s.rowBody}>{item.body}</Text>
-              <Text style={s.rowMeta}>{new Date(item.createdAt).toLocaleString()} • {item.channel}</Text>
-            </View>
-          </A11yPressable>
-        )}
-        contentContainerStyle={{ paddingTop: 10 }}
-      />
-    </View>
+    <ResponsiveScreenWrapper scrollable>
+      <View style={s.container} accessibilityLabel={t('nav.inbox','Inbox screen')}>
+        <Text accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('nav.inbox','Inbox')}</Text>
+        <GapView style={{ flexDirection:'row' }} gap={8}>
+          <Text style={s.subtitle}>{unread} {t('common.unread','unread')}</Text>
+          {unread > 0 && (
+            <A11yPressable onPress={markAllRead} style={s.markAll} accessibilityRole="button" accessibilityLabel={t('inbox.markAll','Mark all read')}>
+              <Text style={s.markAllText}>{t('inbox.markAll','Mark all read')}</Text>
+            </A11yPressable>
+          )}
+        </GapView>
+        <FlatList
+          data={inbox}
+          keyExtractor={(n) => n.id}
+          renderItem={({ item }) => (
+            <A11yPressable
+              onPress={() => {
+                markRead(item.id);
+                if (item.route) {
+                  try { router.push(item.route as Href); } catch {}
+                }
+              }}
+              accessibilityRole="button"
+              accessibilityLabel={item.read ? t('inbox.itemRead','Notification (read)') : t('inbox.itemUnread','Notification (unread)')}
+              style={[s.row, !item.read && { backgroundColor: palette.card }]}
+            >
+              <View style={{ flex:1 }}>
+                <Text style={s.rowTitle}>{item.title}</Text>
+                <Text style={s.rowBody}>{item.body}</Text>
+                <Text style={s.rowMeta}>{new Date(item.createdAt).toLocaleString()} • {item.channel}</Text>
+              </View>
+            </A11yPressable>
+          )}
+          contentContainerStyle={{ paddingTop: 10 }}
+        />
+      </View>
+    </ResponsiveScreenWrapper>
   );
 }
 

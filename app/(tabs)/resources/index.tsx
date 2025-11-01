@@ -1,13 +1,14 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Link, type Href } from "expo-router";
 import React from "react";
-import { Linking, RefreshControl, SectionList, StyleSheet, Text, View } from "react-native";
+import { Linking, SectionList, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
 import Card from "../../../components/Card";
 import ContrastToggle from "../../../components/ContrastToggle";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { GapView } from "../../../components/GapView";
+import ResponsiveScreenWrapper from "../../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
 import SkeletonRow from "../../../components/SkeletonRow";
@@ -168,353 +169,347 @@ export default function ResourcesScreen() {
   
   const styles = React.useMemo(() => createStyles(palette), [palette]);
   
-  // Move all header content into a component for ListHeaderComponent
-  const ListHeader = React.useMemo(() => (
-    <View style={{ paddingHorizontal: 16, paddingTop: 16 }}>
-      {/* Header */}
-      <View
-        style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}
-        accessibilityLabel="Resources screen"
-        accessible
-      >
-        <Text
-          ref={titleRef}
-          nativeID="resources-title"
-          accessibilityRole="header"
-          style={textStyles.h1}
-          maxFontSizeMultiplier={MAX_FONT_SCALE}
+  return (
+    <ResponsiveScreenWrapper scrollable>
+      <View style={{ paddingHorizontal: 16, paddingTop: 16 }}>
+        {/* Header */}
+        <View
+          style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}
+          accessibilityLabel="Resources screen"
+          accessible
         >
-          Resources
-        </Text>
-        <GapView gap={8} style={{ marginLeft: 'auto', flexDirection: 'row' }}>
-          <ContrastToggle />
-          <SettingsLink />
-        </GapView>
-      </View>
-
-      <Text style={textStyles.body} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        {t("resources.intro", "Find helpful guides and materials.")}
-      </Text>
-      
-      <DisclaimerBanner type="legal" compact />
-      
-      {region === "all" && !province && (
-        <Text style={[textStyles.bodySmall, { opacity: 0.75, marginBottom: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-          Tip: Set your province in Settings to filter resources.
-        </Text>
-      )}
-
-      {/* 1. AI Tools */}
-      <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 16 }]}>
-        🤖 AI Tools
-      </Text>
-      <DisclaimerBanner type="ai" compact />
-      <ResourceLink href="/(tabs)/resources/ai-decision-simplifier" title="AI Decision Simplifier" badge="Coming soon" />
-      <ResourceLink href="/(tabs)/resources/appeal-coach" title="Appeal Coach" badge="Beta" />
-      <ResourceLink href="/(tabs)/resources/body-mechanics-advisor" title="Body Mechanics Advisor" />
-      <ResourceLink href="/(tabs)/resources/justice-as-a-service" title="Justice as a Service" />
-      <ResourceLink href="/(tabs)/resources/rights-checker" title="Rights Checker" />
-      <ResourceLink href="/(tabs)/resources/rights-explainer" title="Rights Explained" />
-      <ResourceLink href="/(tabs)/resources/voice-notes" title="Voice-to-Case Notes Tool" />
-
-      {/* 2. Templates & Documents */}
-      <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
-        📄 Templates & Documents
-      </Text>
-      <ResourceLink href="/(tabs)/resources/letter-wizard" title="Letter Wizard - Generate Any Letter" badge="All Templates" />
-      <ResourceLink href="/(tabs)/resources/accessibility-log" title="Accessibility Log" />
-      <ResourceLink href="/(tabs)/resources/templates-gallery" title="Template Gallery" />
-      <ResourceLink href="/(tabs)/resources/accommodation-request" title="Accommodation Request Builder" />
-      <ResourceLink href="/(tabs)/resources/case-timeline" title="Case Timeline" />
-      <ResourceLink href="/(tabs)/resources/claims-navigator" title="Claims Navigator" badge="Beta" />
-      <ResourceLink href="/(tabs)/resources/evidence-checklist" title="Evidence Checklist" />
-      <ResourceLink href="/(tabs)/resources/evidence-locker" title="Evidence Locker" badge="Beta" />
-
-      {/* 3. Trackers & Planners */}
-      <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
-        📊 Trackers & Planners
-      </Text>
-      <ResourceLink href="/(tabs)/resources/chronic-tracker" title="Chronic Tracker" badge="Beta" />
-      <ResourceLink href="/(tabs)/resources/deadlines" title="Deadline Calculator + Reminders" badge="Beta" />
-      <ResourceLink href="/(tabs)/resources/deadlines-list" title="Deadlines List" />
-      <ResourceLink href="/(tabs)/resources/denial-decoder" title="Denial Decoder" badge="Beta" />
-      <ResourceLink href="/(tabs)/resources/prepare-appeal" title="Prepare to Appeal" badge="Beta" />
-      <ResourceLink href="/(tabs)/resources/doctor-visit-prep" title="Doctor Visit Prep" badge="Beta" />
-      <ResourceLink href="/(tabs)/resources/financial-safety-net" title="Financial Safety Net" />
-      <ResourceLink href="/(tabs)/resources/impact-simulator" title="Impact Simulator" />
-      <ResourceLink href="/(tabs)/resources/meds-tracker" title="Meds Tracker" />
-      <ResourceLink href="/(tabs)/resources/rtw-planner" title="Return-to-Work Planner" badge="Beta" />
-      <ResourceLink href="/(tabs)/resources/rehab-tracker" title="Rehab Progress Tracker" badge="Beta" />
-      <ResourceLink href="/(tabs)/resources/policy-simulator" title="Interactive Policy Simulator" />
-
-      {/* 4. Support & Directories */}
-      <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
-        🤝 Support & Directories
-      </Text>
-      <ResourceLink href="/(tabs)/resources/adaptive-tech-library" title="Adaptive Tech Library" />
-      <ResourceLink href="/(tabs)/resources/allyship-playbook" title="Allyship Playbook" />
-      <ResourceLink href="/(tabs)/resources/solidarity-toolkit" title="Solidarity Toolkit" />
-      <ResourceLink href="/(tabs)/resources/support-directory" title="Support Directory" />
-      <ResourceLink href="/(tabs)/resources/myth-busting-hub" title="Myth-Busting Knowledge Hub" />
-      <ResourceLink href="/(tabs)/settings?open=emergencyCard" title="Emergency Info Wallet Card" />
-
-      <View
-        style={styles.filters}
-        accessibilityLabel="Category filters"
-        accessible
-      >
-        {(
-          [
-            "all",
-            "work_financial",
-            "tools_downloads",
-            "emergency_crisis",
-          ] as CategoryFilter[]
-        ).map((key) => (
-          <A11yPressable
-            hitSlop={HIT_SLOP_8}
-            key={key}
-            onPress={() => setCategory(key)}
-            accessibilityRole="button"
-            accessibilityLabel={
-              key === "all"
-                ? t("resources.filters.all", "All")
-                : key === "work_financial"
-                  ? t("resources.filters.work_financial", "Work & Financial")
-                  : key === "tools_downloads"
-                    ? t("resources.filters.tools_downloads", "Tools & Downloads")
-                    : t("resources.filters.emergency_crisis", "Emergency & Crisis")
-            }
-            style={[styles.chip, category === key && styles.chipActive]}
+          <Text
+            ref={titleRef}
+            nativeID="resources-title"
+            accessibilityRole="header"
+            style={textStyles.h1}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
           >
-            <View style={styles.chipInner}>
-              <MaterialCommunityIcons
-                name={
-                  key === "work_financial"
-                    ? "briefcase-outline"
-                    : key === "tools_downloads"
-                      ? "download"
-                      : key === "emergency_crisis"
-                        ? "lifebuoy"
-                        : "filter-variant"
-                }
-                size={14}
-                color={
-                  category === key
-                    ? styles.chipTextActive.color
-                    : styles.chipText.color
-                }
-                style={{ marginRight: 6 }}
-              />
-              <Text
-                style={[
-                  styles.chipText,
-                  category === key && styles.chipTextActive,
-                ]}
-              >
-                {key === "all"
+            Resources
+          </Text>
+          <GapView gap={8} style={{ marginLeft: 'auto', flexDirection: 'row' }}>
+            <ContrastToggle />
+            <SettingsLink />
+          </GapView>
+        </View>
+
+        <Text style={textStyles.body} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          {t("resources.intro", "Find helpful guides and materials.")}
+        </Text>
+        
+        <DisclaimerBanner type="legal" compact />
+        
+        {region === "all" && !province && (
+          <Text style={[textStyles.bodySmall, { opacity: 0.75, marginBottom: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            Tip: Set your province in Settings to filter resources.
+          </Text>
+        )}
+
+        {/* 1. AI Tools */}
+        <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 16 }]}>
+          🤖 AI Tools
+        </Text>
+        <DisclaimerBanner type="ai" compact />
+        <ResourceLink href="/(tabs)/resources/ai-decision-simplifier" title="AI Decision Simplifier" badge="Coming soon" />
+        <ResourceLink href="/(tabs)/resources/appeal-coach" title="Appeal Coach" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/body-mechanics-advisor" title="Body Mechanics Advisor" />
+        <ResourceLink href="/(tabs)/resources/justice-as-a-service" title="Justice as a Service" />
+        <ResourceLink href="/(tabs)/resources/rights-checker" title="Rights Checker" />
+        <ResourceLink href="/(tabs)/resources/rights-explainer" title="Rights Explained" />
+        <ResourceLink href="/(tabs)/resources/voice-notes" title="Voice-to-Case Notes Tool" />
+
+        {/* 2. Templates & Documents */}
+        <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
+          📄 Templates & Documents
+        </Text>
+        <ResourceLink href="/(tabs)/resources/letter-wizard" title="Letter Wizard - Generate Any Letter" badge="All Templates" />
+        <ResourceLink href="/(tabs)/resources/accessibility-log" title="Accessibility Log" />
+        <ResourceLink href="/(tabs)/resources/templates-gallery" title="Template Gallery" />
+        <ResourceLink href="/(tabs)/resources/accommodation-request" title="Accommodation Request Builder" />
+        <ResourceLink href="/(tabs)/resources/case-timeline" title="Case Timeline" />
+        <ResourceLink href="/(tabs)/resources/claims-navigator" title="Claims Navigator" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/evidence-checklist" title="Evidence Checklist" />
+        <ResourceLink href="/(tabs)/resources/evidence-locker" title="Evidence Locker" badge="Beta" />
+
+        {/* 3. Trackers & Planners */}
+        <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
+          📊 Trackers & Planners
+        </Text>
+        <ResourceLink href="/(tabs)/resources/chronic-tracker" title="Chronic Tracker" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/deadlines" title="Deadline Calculator + Reminders" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/deadlines-list" title="Deadlines List" />
+        <ResourceLink href="/(tabs)/resources/denial-decoder" title="Denial Decoder" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/prepare-appeal" title="Prepare to Appeal" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/doctor-visit-prep" title="Doctor Visit Prep" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/financial-safety-net" title="Financial Safety Net" />
+        <ResourceLink href="/(tabs)/resources/impact-simulator" title="Impact Simulator" />
+        <ResourceLink href="/(tabs)/resources/meds-tracker" title="Meds Tracker" />
+        <ResourceLink href="/(tabs)/resources/rtw-planner" title="Return-to-Work Planner" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/rehab-tracker" title="Rehab Progress Tracker" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/policy-simulator" title="Interactive Policy Simulator" />
+
+        {/* 4. Support & Directories */}
+        <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
+          🤝 Support & Directories
+        </Text>
+        <ResourceLink href="/(tabs)/resources/adaptive-tech-library" title="Adaptive Tech Library" />
+        <ResourceLink href="/(tabs)/resources/allyship-playbook" title="Allyship Playbook" />
+        <ResourceLink href="/(tabs)/resources/solidarity-toolkit" title="Solidarity Toolkit" />
+        <ResourceLink href="/(tabs)/resources/support-directory" title="Support Directory" />
+        <ResourceLink href="/(tabs)/resources/myth-busting-hub" title="Myth-Busting Knowledge Hub" />
+        <ResourceLink href="/(tabs)/settings?open=emergencyCard" title="Emergency Info Wallet Card" />
+
+        <View
+          style={styles.filters}
+          accessibilityLabel="Category filters"
+          accessible
+        >
+          {(
+            [
+              "all",
+              "work_financial",
+              "tools_downloads",
+              "emergency_crisis",
+            ] as CategoryFilter[]
+          ).map((key) => (
+            <A11yPressable
+              hitSlop={HIT_SLOP_8}
+              key={key}
+              onPress={() => setCategory(key)}
+              accessibilityRole="button"
+              accessibilityLabel={
+                key === "all"
                   ? t("resources.filters.all", "All")
                   : key === "work_financial"
                     ? t("resources.filters.work_financial", "Work & Financial")
                     : key === "tools_downloads"
-                      ? t(
-                          "resources.filters.tools_downloads",
-                          "Tools & Downloads",
-                        )
-                      : t(
-                          "resources.filters.emergency_crisis",
-                          "Emergency & Crisis",
-                        )}
-              </Text>
-            </View>
-          </A11yPressable>
-        ))}
-      </View>
-
-      {/* Jurisdiction Filter */}
-      <Text style={styles.subtitle}>
-        {t("jurisdiction.filter.label", "Filter by jurisdiction")}
-      </Text>
-      <GapView
-        gap={8}
-        style={{
-          flexDirection: "row",
-          flexWrap: "wrap",
-          marginBottom: 8,
-        }}
-      >
-        <A11yPressable
-          hitSlop={HIT_SLOP_8}
-          style={[styles.chip, jurisdictionFilter === "all" && styles.chipActive]}
-          onPress={() => setJurisdictionFilter("all")}
-        >
-          <Text
-            style={[
-              styles.chipText,
-              jurisdictionFilter === "all" && styles.chipTextActive,
-            ]}
-          >
-            {t("jurisdiction.filter.all", "All jurisdictions")}
-          </Text>
-        </A11yPressable>
-        <A11yPressable
-          hitSlop={HIT_SLOP_8}
-          style={[styles.chip, jurisdictionFilter === "FED" && styles.chipActive]}
-          onPress={() => setJurisdictionFilter("FED")}
-        >
-          <Text
-            style={[
-              styles.chipText,
-              jurisdictionFilter === "FED" && styles.chipTextActive,
-            ]}
-          >
-            {t("jurisdiction.filter.canada", "National (Canada)")}
-          </Text>
-        </A11yPressable>
-        {allJurisdictions
-          .filter((j) => j.code !== "FED")
-          .map((j) => (
-            <A11yPressable
-              hitSlop={HIT_SLOP_8}
-              key={j.code}
-              style={[
-                styles.chip,
-                jurisdictionFilter === j.code && styles.chipActive,
-              ]}
-              onPress={() => setJurisdictionFilter(j.code)}
+                      ? t("resources.filters.tools_downloads", "Tools & Downloads")
+                      : t("resources.filters.emergency_crisis", "Emergency & Crisis")
+              }
+              style={[styles.chip, category === key && styles.chipActive]}
             >
-              <Text
-                style={[
-                  styles.chipText,
-                  jurisdictionFilter === j.code && styles.chipTextActive,
-                ]}
-              >
-                {j.code}
-              </Text>
+              <View style={styles.chipInner}>
+                <MaterialCommunityIcons
+                  name={
+                    key === "work_financial"
+                      ? "briefcase-outline"
+                      : key === "tools_downloads"
+                      ? "download"
+                      : key === "emergency_crisis"
+                        ? "lifebuoy"
+                        : "filter-variant"
+                  }
+                  size={14}
+                  color={
+                    category === key
+                      ? styles.chipTextActive.color
+                      : styles.chipText.color
+                  }
+                  style={{ marginRight: 6 }}
+                />
+                <Text
+                  style={[
+                    styles.chipText,
+                    category === key && styles.chipTextActive,
+                  ]}
+                >
+                  {key === "all"
+                    ? t("resources.filters.all", "All")
+                    : key === "work_financial"
+                      ? t("resources.filters.work_financial", "Work & Financial")
+                      : key === "tools_downloads"
+                        ? t(
+                            "resources.filters.tools_downloads",
+                            "Tools & Downloads",
+                          )
+                        : t(
+                            "resources.filters.emergency_crisis",
+                            "Emergency & Crisis",
+                          )}
+                </Text>
+              </View>
             </A11yPressable>
           ))}
-      </GapView>
+        </View>
 
-      <Text style={styles.subtitle}>
-        {t("resources.filters.canada", "Canada")} / provinces
-      </Text>
-      <GapView
-        gap={8}
-        style={{
-          flexDirection: "row",
-          flexWrap: "wrap",
-          marginBottom: 8,
-        }}
-      >
-        <A11yPressable
-          hitSlop={HIT_SLOP_8}
-          style={[styles.chip, region === "all" && styles.chipActive]}
-          onPress={() => setRegion("all")}
+        {/* Jurisdiction Filter */}
+        <Text style={styles.subtitle}>
+          {t("jurisdiction.filter.label", "Filter by jurisdiction")}
+        </Text>
+        <GapView
+          gap={8}
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            marginBottom: 8,
+          }}
         >
-          <Text
-            style={[styles.chipText, region === "all" && styles.chipTextActive]}
-          >
-            {t("resources.filters.all", "All")}
-          </Text>
-        </A11yPressable>
-        <A11yPressable
-          hitSlop={HIT_SLOP_8}
-          style={[styles.chip, region === "canada" && styles.chipActive]}
-          onPress={() => setRegion("canada")}
-        >
-          <Text
-            style={[
-              styles.chipText,
-              region === "canada" && styles.chipTextActive,
-            ]}
-          >
-            Canada
-          </Text>
-        </A11yPressable>
-        {presentProvinceCodes(items).map((code) => (
           <A11yPressable
             hitSlop={HIT_SLOP_8}
-            key={code}
-            style={[styles.chip, region === code && styles.chipActive]}
-            onPress={() => setRegion(code as any)}
+            style={[styles.chip, jurisdictionFilter === "all" && styles.chipActive]}
+            onPress={() => setJurisdictionFilter("all")}
           >
             <Text
               style={[
                 styles.chipText,
-                region === code && styles.chipTextActive,
+                jurisdictionFilter === "all" && styles.chipTextActive,
               ]}
             >
-              {code}
+              {t("jurisdiction.filter.all", "All jurisdictions")}
             </Text>
           </A11yPressable>
-        ))}
-      </GapView>
-
-      <SearchBar
-        value={query}
-        onChangeText={setQuery}
-        placeholder={t("resources.search", "Search resources...")}
-      />
-
-      <Text style={{ color: palette.text, opacity: 0.8, marginVertical: 8 }}>
-        Tip: Use the Accessibility button in the header to choose plain language and your preferred format (Text, Audio, ASL, Easy-Read).
-      </Text>
-
-      {/* Additional Resources from External Data */}
-      <Text
-        accessibilityRole="header"
-        style={[styles.sectionTitle, { marginTop: 20 }]}
-      >
-        📚 External Resources
-      </Text>
-      <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Download key resources for offline use" onPress={reload} style={{ alignSelf:'flex-start', paddingHorizontal:10, paddingVertical:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 8 }}>
-        <Text style={{ color: palette.text }}>Download key resources for offline use</Text>
-      </A11yPressable>
-    </View>
-  ), [titleRef, textStyles, t, region, province, palette, styles, category, jurisdictionFilter, allJurisdictions, items, query, setCategory, setJurisdictionFilter, setRegion, setQuery, reload]);
-  
-  return (
-    <SectionList<Resource>
-      sections={sections}
-      keyExtractor={(item) => item.id}
-      ListHeaderComponent={ListHeader}
-      renderSectionHeader={({ section }) => (
-        <Text accessibilityRole="header" style={[styles.sectionTitle, { paddingHorizontal: 16 }]}>
-          {section.title}
-        </Text>
-      )}
-      renderItem={({ item }) => {
-        const subtitle = plainLanguage
-          ? simplify(item.description)
-          : item.description;
-        const onOpen = () => openResource(item, resourcePreferredFormat);
-        return (
-          <View style={{ paddingHorizontal: 16 }}>
-            <Card title={item.title} subtitle={subtitle} onPress={onOpen} />
-          </View>
-        );
-      }}
-      ListEmptyComponent={
-        loading ? (
-          <View style={{ paddingHorizontal: 16 }}>
-            {Array.from({ length: 6 }).map((_, i) => (
-              <SkeletonRow key={i} />
+          <A11yPressable
+            hitSlop={HIT_SLOP_8}
+            style={[styles.chip, jurisdictionFilter === "FED" && styles.chipActive]}
+            onPress={() => setJurisdictionFilter("FED")}
+          >
+            <Text
+              style={[
+                styles.chipText,
+                jurisdictionFilter === "FED" && styles.chipTextActive,
+              ]}
+            >
+              {t("jurisdiction.filter.canada", "National (Canada)")}
+            </Text>
+          </A11yPressable>
+          {allJurisdictions
+            .filter((j) => j.code !== "FED")
+            .map((j) => (
+              <A11yPressable
+                hitSlop={HIT_SLOP_8}
+                key={j.code}
+                style={[
+                  styles.chip,
+                  jurisdictionFilter === j.code && styles.chipActive,
+                ]}
+                onPress={() => setJurisdictionFilter(j.code)}
+              >
+                <Text
+                  style={[
+                    styles.chipText,
+                    jurisdictionFilter === j.code && styles.chipTextActive,
+                  ]}
+                >
+                  {j.code}
+                </Text>
+              </A11yPressable>
             ))}
-          </View>
-        ) : error ? (
-          <Text accessibilityRole="alert" style={[styles.error, { paddingHorizontal: 16 }]}>
-            {error}
+        </GapView>
+
+        <Text style={styles.subtitle}>
+          {t("resources.filters.canada", "Canada")} / provinces
+        </Text>
+        <GapView
+          gap={8}
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            marginBottom: 8,
+          }}
+        >
+          <A11yPressable
+            hitSlop={HIT_SLOP_8}
+            style={[styles.chip, region === "all" && styles.chipActive]}
+            onPress={() => setRegion("all")}
+          >
+            <Text
+              style={[styles.chipText, region === "all" && styles.chipTextActive]}
+            >
+              {t("resources.filters.all", "All")}
+            </Text>
+          </A11yPressable>
+          <A11yPressable
+            hitSlop={HIT_SLOP_8}
+            style={[styles.chip, region === "canada" && styles.chipActive]}
+            onPress={() => setRegion("canada")}
+          >
+            <Text
+              style={[
+                styles.chipText,
+                region === "canada" && styles.chipTextActive,
+              ]}
+            >
+              Canada
+            </Text>
+          </A11yPressable>
+          {presentProvinceCodes(items).map((code) => (
+            <A11yPressable
+              hitSlop={HIT_SLOP_8}
+              key={code}
+              style={[styles.chip, region === code && styles.chipActive]}
+              onPress={() => setRegion(code as any)}
+            >
+              <Text
+                style={[
+                  styles.chipText,
+                  region === code && styles.chipTextActive,
+                ]}
+              >
+                {code}
+              </Text>
+            </A11yPressable>
+          ))}
+        </GapView>
+
+        <SearchBar
+          value={query}
+          onChangeText={setQuery}
+          placeholder={t("resources.search", "Search resources...")}
+        />
+
+        <Text style={{ color: palette.text, opacity: 0.8, marginVertical: 8 }}>
+          Tip: Use the Accessibility button in the header to choose plain language and your preferred format (Text, Audio, ASL, Easy-Read).
+        </Text>
+
+        {/* Additional Resources from External Data */}
+        <Text
+          accessibilityRole="header"
+          style={[styles.sectionTitle, { marginTop: 20 }]}
+        >
+          📚 External Resources
+        </Text>
+        <A11yPressable hitSlop={HIT_SLOP_8} accessibilityLabel="Download key resources for offline use" onPress={reload} style={{ alignSelf:'flex-start', paddingHorizontal:10, paddingVertical:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6, marginBottom: 8 }}>
+          <Text style={{ color: palette.text }}>Download key resources for offline use</Text>
+        </A11yPressable>
+      </View>
+
+      <SectionList<Resource>
+        sections={sections}
+        keyExtractor={(item) => item.id}
+        renderSectionHeader={({ section }) => (
+          <Text accessibilityRole="header" style={[styles.sectionTitle, { paddingHorizontal: 16 }]}>
+            {section.title}
           </Text>
-        ) : (
-          <Text style={[styles.empty, { paddingHorizontal: 16 }]}>No resources found</Text>
-        )
-      }
-      refreshControl={
-        <RefreshControl refreshing={loading} onRefresh={reload} />
-      }
-      contentContainerStyle={{ paddingBottom: 40 }}
-      style={{ flex: 1, backgroundColor: palette.background }}
-    />
+        )}
+        renderItem={({ item }) => {
+          const subtitle = plainLanguage
+            ? simplify(item.description)
+            : item.description;
+          const onOpen = () => openResource(item, resourcePreferredFormat);
+          return (
+            <View style={{ paddingHorizontal: 16 }}>
+              <Card title={item.title} subtitle={subtitle} onPress={onOpen} />
+            </View>
+          );
+        }}
+        ListEmptyComponent={
+          loading ? (
+            <View style={{ paddingHorizontal: 16 }}>
+              {Array.from({ length: 6 }).map((_, i) => (
+                <SkeletonRow key={i} />
+              ))}
+            </View>
+          ) : error ? (
+            <Text accessibilityRole="alert" style={[styles.error, { paddingHorizontal: 16 }]}>
+              {error}
+            </Text>
+          ) : (
+            <Text style={[styles.empty, { paddingHorizontal: 16 }]}>No resources found</Text>
+          )
+        }
+        contentContainerStyle={{ paddingBottom: 40 }}
+      />
+    </ResponsiveScreenWrapper>
   );
 }
 

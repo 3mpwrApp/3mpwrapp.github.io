@@ -5,6 +5,7 @@ import { SectionList, StyleSheet, Text, useColorScheme, View } from "react-nativ
 
 import A11yPressable from '../../../components/A11yPressable';
 import GapView from '../../../components/GapView';
+import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../../components/SearchBar';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/A11Y";
 import { channels, seedComments, seedThreads } from "../../../data/community";
@@ -63,142 +64,144 @@ function ScreenInner() {
   usePostLoadAnnounce({ loading, count: totalChannels, ns: 'community', emptyKey: 'community.empty' });
 
   return (
-    <View style={styles.container} accessibilityLabel="Community Hub screen" accessible>
-      <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        Community Hub
-      </Text>
-      <Text style={styles.subtitle}>Connect, share, and support each other through various community features.</Text>
+    <ResponsiveScreenWrapper scrollable={false} testID="community-screen">
+      <View style={styles.container} accessibilityLabel="Community Hub screen" accessible>
+        <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          Community Hub
+        </Text>
+        <Text style={styles.subtitle}>Connect, share, and support each other through various community features.</Text>
 
-      <GapView style={{ flexDirection:'row', marginBottom:8 }} gap={8}>
-        <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
-        <FilterChip label="Provinces" active={mode==='provinces'} onPress={() => setMode('provinces')} palette={palette} />
-        <FilterChip label="Topics" active={mode==='topics'} onPress={() => setMode('topics')} palette={palette} />
-      </GapView>
+        <GapView style={{ flexDirection:'row', marginBottom:8 }} gap={8}>
+          <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
+          <FilterChip label="Provinces" active={mode==='provinces'} onPress={() => setMode('provinces')} palette={palette} />
+          <FilterChip label="Topics" active={mode==='topics'} onPress={() => setMode('topics')} palette={palette} />
+        </GapView>
 
-      <SearchBar
-        value={query}
-        onChangeText={setQuery}
-        placeholder="Search channels & tools"
-      />
+        <SearchBar
+          value={query}
+          onChangeText={setQuery}
+          placeholder="Search channels & tools"
+        />
 
-      {/* Community Features Navigation */}
-      <View style={styles.featuresContainer}>
-        {(() => {
-          type Feature = { key: string; title: string; desc: string; href: Href; compose?: boolean };
-          const features: Feature[] = [
-            { key: 'media', title: '🎨 Media Studio', desc: 'Create & share memes, posters, graphics (Beta)', href: '/(tabs)/community/media-studio' as Href },
-            { key: 'aid', title: '🤝 Mutual Aid', desc: 'Exchange support, resources, peer help (Beta)', href: '/(tabs)/community/mutual-aid' as Href },
-            { key: 'chat', title: '💬 Mutual Chat', desc: 'Real-time group & 1-1 conversations (Beta)', href: '/(tabs)/community/mutual-chat?id=general' as Href },
-            { key: 'testers', title: '🧪 Beta Testers Chat', desc: 'Live chat to collaborate & give feedback (Beta)', href: '/(tabs)/community/testers-chat' as Href },
-            { key: 'dm', title: '📥 Direct Messages', desc: 'Private 1‑1 conversations (beta)', href: '/(tabs)/community/dms' as Href },
-            { key: 'compose', title: '✏️ Compose Post', desc: 'Create a new forum post (Beta)', href: '/(tabs)/community/compose' as Href, compose: true },
-          ];
-          const fMatches: Feature[] = q
-            ? features.filter(f =>
-                f.title.toLowerCase().includes(q) || f.desc.toLowerCase().includes(q)
-              )
-            : features;
-          if (fMatches.length === 0 && q) {
-            return (
-              <Text style={[styles.subtitle, { marginBottom: 0, opacity: 0.7 }]}>\
-                {t('community.toolsEmpty','No tools match your search')}\
+        {/* Community Features Navigation */}
+        <View style={styles.featuresContainer}>
+          {(() => {
+            type Feature = { key: string; title: string; desc: string; href: Href; compose?: boolean };
+            const features: Feature[] = [
+              { key: 'media', title: '🎨 Media Studio', desc: 'Create & share memes, posters, graphics (Beta)', href: '/(tabs)/community/media-studio' as Href },
+              { key: 'aid', title: '🤝 Mutual Aid', desc: 'Exchange support, resources, peer help (Beta)', href: '/(tabs)/community/mutual-aid' as Href },
+              { key: 'chat', title: '💬 Mutual Chat', desc: 'Real-time group & 1-1 conversations (Beta)', href: '/(tabs)/community/mutual-chat?id=general' as Href },
+              { key: 'testers', title: '🧪 Beta Testers Chat', desc: 'Live chat to collaborate & give feedback (Beta)', href: '/(tabs)/community/testers-chat' as Href },
+              { key: 'dm', title: '📥 Direct Messages', desc: 'Private 1‑1 conversations (beta)', href: '/(tabs)/community/dms' as Href },
+              { key: 'compose', title: '✏️ Compose Post', desc: 'Create a new forum post (Beta)', href: '/(tabs)/community/compose' as Href, compose: true },
+            ];
+            const fMatches: Feature[] = q
+              ? features.filter(f =>
+                  f.title.toLowerCase().includes(q) || f.desc.toLowerCase().includes(q)
+                )
+              : features;
+            if (fMatches.length === 0 && q) {
+              return (
+                <Text style={[styles.subtitle, { marginBottom: 0, opacity: 0.7 }]}>\
+                  {t('community.toolsEmpty','No tools match your search')}\
+                </Text>
+              );
+            }
+            const rows: Feature[][] = [];
+            for (let i = 0; i < fMatches.length; i += 2) rows.push(fMatches.slice(i, i + 2));
+            return rows.map((row, idx) => (
+              <GapView key={`feat-row-${idx}`} style={styles.featuresRow} gap={12}>
+                {row.map((f) => (
+                  <A11yPressable
+                    key={f.key}
+                    accessibilityRole="button"
+                    accessibilityLabel={(f.title + ' ' + f.desc).trim()}
+                    style={({ pressed }) => [styles.featureButton, f.compose && styles.composeButton, pressed && { opacity: 0.7 }]}
+                    onPress={() => router.push(f.href)}
+                  >
+                    <Text style={[styles.featureTitle, f.compose && { color: palette.onPrimary }]}>{f.title}</Text>
+                    <Text style={[styles.featureDesc, f.compose && { color: palette.onPrimary }]}>{f.desc}</Text>
+                  </A11yPressable>
+                ))}
+                {row.length === 1 && <View style={[styles.featureButton, { opacity: 0 }]} />}
+              </GapView>
+            ));
+          })()}
+        </View>
+
+        <Text style={styles.sectionHeader}>Community Forum</Text>
+        <Text style={styles.subtitle}>Join a province or topic channel to participate in discussions.</Text>
+
+        <SectionList
+          sections={(() => {
+            const secs: { title: string; data: typeof filteredProv }[] = [];
+            if (mode === 'all' || mode === 'provinces') secs.push({ title: "Provinces & Territories", data: filteredProv });
+            if (mode === 'all' || mode === 'topics') secs.push({ title: "Topics", data: filteredTopics });
+            return secs.filter(s => s.data.length > 0);
+          })()}
+          keyExtractor={(item) => `channel-${item.id}`}
+          renderSectionHeader={({ section }) => <Text style={styles.section}>{section.title}</Text>}
+          renderItem={({ item }) => (
+            <A11yPressable
+              onPress={async () => { await setChannelLastRead(item.slug); router.push(`/(tabs)/community/${item.slug}` as Href); }}
+              accessibilityRole="button"
+              accessibilityLabel={`Open channel ${item.title}`}
+              hitSlop={HIT_SLOP_8}
+              style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            >
+              <Text style={styles.rowText}>{item.title}{unread[item.slug] ? ` (${unread[item.slug]})` : ''}</Text>
+            </A11yPressable>
+          )}
+          ListEmptyComponent={(
+            <View style={{ paddingVertical: 12 }}>
+              <Text style={[styles.subtitle, { marginBottom: 6, opacity: 0.8 }]}>\
+                {t('community.empty','No channels match your filters')}\
               </Text>
-            );
-          }
-          const rows: Feature[][] = [];
-          for (let i = 0; i < fMatches.length; i += 2) rows.push(fMatches.slice(i, i + 2));
-          return rows.map((row, idx) => (
-            <GapView key={`feat-row-${idx}`} style={styles.featuresRow} gap={12}>
-              {row.map((f) => (
+              {(query || mode !== 'all') && (
                 <A11yPressable
-                  key={f.key}
+                  onPress={() => { setQuery(''); setMode('all'); }}
                   accessibilityRole="button"
-                  accessibilityLabel={(f.title + ' ' + f.desc).trim()}
-                  style={({ pressed }) => [styles.featureButton, f.compose && styles.composeButton, pressed && { opacity: 0.7 }]}
-                  onPress={() => router.push(f.href)}
+                  accessibilityLabel={t('common.resetFilters','Reset filters')}
+                  style={({ pressed }) => [
+                    { alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
+                    pressed && { opacity: 0.8 }
+                  ]}
                 >
-                  <Text style={[styles.featureTitle, f.compose && { color: palette.onPrimary }]}>{f.title}</Text>
-                  <Text style={[styles.featureDesc, f.compose && { color: palette.onPrimary }]}>{f.desc}</Text>
+                  <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
                 </A11yPressable>
-              ))}
-              {row.length === 1 && <View style={[styles.featureButton, { opacity: 0 }]} />}
-            </GapView>
-          ));
-        })()}
-      </View>
-
-      <Text style={styles.sectionHeader}>Community Forum</Text>
-      <Text style={styles.subtitle}>Join a province or topic channel to participate in discussions.</Text>
-
-      <SectionList
-        sections={(() => {
-          const secs: { title: string; data: typeof filteredProv }[] = [];
-          if (mode === 'all' || mode === 'provinces') secs.push({ title: "Provinces & Territories", data: filteredProv });
-          if (mode === 'all' || mode === 'topics') secs.push({ title: "Topics", data: filteredTopics });
-          return secs.filter(s => s.data.length > 0);
-        })()}
-        keyExtractor={(item) => `channel-${item.id}`}
-        renderSectionHeader={({ section }) => <Text style={styles.section}>{section.title}</Text>}
-        renderItem={({ item }) => (
+              )}
+            </View>
+          )}
+          contentContainerStyle={{ paddingTop: 8 }}
+        />
+        <View style={{ marginTop: 16 }}>
           <A11yPressable
-            onPress={async () => { await setChannelLastRead(item.slug); router.push(`/(tabs)/community/${item.slug}` as Href); }}
             accessibilityRole="button"
-            accessibilityLabel={`Open channel ${item.title}`}
-            hitSlop={HIT_SLOP_8}
+            accessibilityLabel="Open My Posts"
             style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            onPress={() => router.push('/(tabs)/community/my-posts' as Href)}
           >
-            <Text style={styles.rowText}>{item.title}{unread[item.slug] ? ` (${unread[item.slug]})` : ''}</Text>
+            <Text style={styles.rowText}>My Posts</Text>
           </A11yPressable>
-        )}
-        ListEmptyComponent={(
-          <View style={{ paddingVertical: 12 }}>
-            <Text style={[styles.subtitle, { marginBottom: 6, opacity: 0.8 }]}>\
-              {t('community.empty','No channels match your filters')}\
-            </Text>
-            {(query || mode !== 'all') && (
-              <A11yPressable
-                onPress={() => { setQuery(''); setMode('all'); }}
-                accessibilityRole="button"
-                accessibilityLabel={t('common.resetFilters','Reset filters')}
-                style={({ pressed }) => [
-                  { alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
-                  pressed && { opacity: 0.8 }
-                ]}
-              >
-                <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
-              </A11yPressable>
-            )}
-          </View>
-        )}
-        contentContainerStyle={{ paddingTop: 8 }}
-      />
-      <View style={{ marginTop: 16 }}>
-        <A11yPressable
-          accessibilityRole="button"
-          accessibilityLabel="Open My Posts"
-          style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
-          onPress={() => router.push('/(tabs)/community/my-posts' as Href)}
-        >
-          <Text style={styles.rowText}>My Posts</Text>
-        </A11yPressable>
-        <A11yPressable
-          accessibilityRole="button"
-          accessibilityLabel="Open Direct Messages"
-          style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
-          onPress={() => router.push('/(tabs)/community/dms' as Href)}
-        >
-          <Text style={styles.rowText}>Direct Messages (beta)</Text>
-        </A11yPressable>
-        <A11yPressable
-          accessibilityRole="button"
-          accessibilityLabel="Open Community Safety"
-          style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
-          onPress={() => router.push('/(tabs)/community/safety' as Href)}
-        >
-          <Text style={styles.rowText}>Safety & Blocking</Text>
-        </A11yPressable>
+          <A11yPressable
+            accessibilityRole="button"
+            accessibilityLabel="Open Direct Messages"
+            style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            onPress={() => router.push('/(tabs)/community/dms' as Href)}
+          >
+            <Text style={styles.rowText}>Direct Messages (beta)</Text>
+          </A11yPressable>
+          <A11yPressable
+            accessibilityRole="button"
+            accessibilityLabel="Open Community Safety"
+            style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+            onPress={() => router.push('/(tabs)/community/safety' as Href)}
+          >
+            <Text style={styles.rowText}>Safety & Blocking</Text>
+          </A11yPressable>
+        </View>
       </View>
-    </View>
+    </ResponsiveScreenWrapper>
   );
 }
 
@@ -212,7 +215,7 @@ export default function CommunityIndex() {
 
 function createStyles(palette: Palette) {
   return StyleSheet.create({
-    container: { flex: 1, padding: 20, backgroundColor: palette.background },
+    container: { flex: 1 },
     title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
     subtitle: { fontSize: 17, color: palette.text, opacity: 1, marginBottom: 8 },
     sectionHeader: { fontSize: 20, fontWeight: "700", marginTop: 16, marginBottom: 8, color: palette.text },

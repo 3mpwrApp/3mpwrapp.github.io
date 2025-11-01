@@ -2,7 +2,7 @@ import { fireEvent, render, waitFor, within } from '@testing-library/react';
 
 jest.setTimeout(30000);
 
-import EvidenceLocker from '../app/(tabs)/resources/evidence-locker';
+import EvidenceLocker from '../app/(tabs)/resources/(tools)/evidence-locker';
 
 // Mock i18n to avoid I18nManager usage and provide simple t/tCount
 jest.mock('../i18n', () => {

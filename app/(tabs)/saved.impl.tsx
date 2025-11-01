@@ -243,143 +243,145 @@ export default function SavedScreen() {
   };
 
   return (
-    <View style={styles.container} accessibilityLabel={t("savedScreen.a11y.screenLabel", "Saved items screen")} accessible>
-      <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
-      <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
-      
-      <Text
-        ref={titleRef}
-        nativeID="saved-title"
-        accessibilityRole="header"
-        style={styles.title}
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
-      >
-        {t("nav.saved", "Saved")}
-      </Text>
-
-      <Text style={styles.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        {t("savedScreen.subtitle", "Organize and access your bookmarked content")}
-      </Text>
-
-      {/* Search Bar */}
-      <View style={styles.searchContainer}>
-        <Ionicons name="search" size={20} color={palette.text} style={styles.searchIcon} />
-        <TextInput
-          style={styles.searchInput}
-          placeholder={t("savedScreen.searchPlaceholder", "Search saved items...")}
-          value={searchQuery}
-          onChangeText={setSearchQuery}
-          accessibilityLabel={t("savedScreen.searchA11y.label", "Search saved items")}
-          accessibilityHint={t("savedScreen.searchA11y.hint", "Search through your saved podcasts, resources, and campaigns")}
+    <ResponsiveScreenWrapper scrollable>
+      <View style={{ padding: 20 }}>
+        <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
+        <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
+        
+        <Text
+          ref={titleRef}
+          nativeID="saved-title"
+          accessibilityRole="header"
+          style={styles.title}
           maxFontSizeMultiplier={MAX_FONT_SCALE}
-        />
-        {searchQuery.length > 0 && (
-          <Pressable
-            style={styles.clearButton}
-            onPress={() => setSearchQuery("")}
-            accessibilityRole="button"
-            accessibilityLabel={t("savedScreen.searchA11y.clear", "Clear search")}
-          >
-            <Ionicons name="close-circle" size={20} color={palette.text} />
-          </Pressable>
+        >
+          {t("nav.saved", "Saved")}
+        </Text>
+
+        <Text style={styles.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          {t("savedScreen.subtitle", "Organize and access your bookmarked content")}
+        </Text>
+
+        {/* Search Bar */}
+        <View style={styles.searchContainer}>
+          <Ionicons name="search" size={20} color={palette.text} style={styles.searchIcon} />
+          <TextInput
+            style={styles.searchInput}
+            placeholder={t("savedScreen.searchPlaceholder", "Search saved items...")}
+            value={searchQuery}
+            onChangeText={setSearchQuery}
+            accessibilityLabel={t("savedScreen.searchA11y.label", "Search saved items")}
+            accessibilityHint={t("savedScreen.searchA11y.hint", "Search through your saved podcasts, resources, and campaigns")}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          />
+          {searchQuery.length > 0 && (
+            <Pressable
+              style={styles.clearButton}
+              onPress={() => setSearchQuery("")}
+              accessibilityRole="button"
+              accessibilityLabel={t("savedScreen.searchA11y.clear", "Clear search")}
+            >
+              <Ionicons name="close-circle" size={20} color={palette.text} />
+            </Pressable>
+          )}
+        </View>
+
+        {/* Filter and Sort Controls */}
+        <View style={styles.controlsContainer}>
+          <View style={styles.filtersContainer}>
+            <FilterButton filter="all" label={t("savedScreen.filters.all", "All")} icon="apps" />
+            <FilterButton filter="podcast" label={t("savedScreen.filters.podcast", "Podcasts")} icon="mic" />
+            <FilterButton filter="resource" label={t("savedScreen.filters.resource", "Resources")} icon="document-text" />
+            <FilterButton filter="campaign" label={t("savedScreen.filters.campaign", "Campaigns")} icon="notifications" />
+          </View>
+
+          <View style={styles.viewControls}>
+            <Pressable
+              style={[styles.viewButton, viewMode === "list" && styles.viewButtonActive]}
+              onPress={() => setViewMode("list")}
+              accessibilityRole="button"
+              accessibilityState={{ selected: viewMode === "list" }}
+              accessibilityLabel={t("savedScreen.view.list", "List view")}
+            >
+              <Ionicons name="list" size={20} color={viewMode === "list" ? "white" : palette.text} />
+            </Pressable>
+            <Pressable
+              style={[styles.viewButton, viewMode === "grid" && styles.viewButtonActive]}
+              onPress={() => setViewMode("grid")}
+              accessibilityRole="button"
+              accessibilityState={{ selected: viewMode === "grid" }}
+              accessibilityLabel={t("savedScreen.view.grid", "Grid view")}
+            >
+              <Ionicons name="grid" size={20} color={viewMode === "grid" ? "white" : palette.text} />
+            </Pressable>
+          </View>
+        </View>
+
+        {/* Results Count */}
+        {searchQuery.trim() && (
+          <Text style={styles.resultsCount} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            {(() => {
+              const count = filteredAndSortedItems.length;
+              const template = t("savedScreen.resultsCount", "{{count}} result{{plural}} found");
+              return template
+                .replace("{{count}}", String(count))
+                .replace("{{plural}}", count === 1 ? "" : "s");
+            })()}
+          </Text>
+        )}
+
+        {/* Content */}
+        {filteredAndSortedItems.length === 0 ? (
+          <View style={styles.emptyContainer}>
+            <Ionicons name="bookmark-outline" size={64} color={palette.text} style={styles.emptyIcon} />
+            <Text style={styles.emptyTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              {searchQuery.trim() ? t("savedScreen.emptySearchTitle", "No results found") : t("savedScreen.emptyNoneTitle", "No saved items yet")}
+            </Text>
+            <Text style={styles.emptyDescription} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              {searchQuery.trim() 
+                ? t("savedScreen.emptySearchBody", "Try adjusting your search or filter criteria")
+                : t("savedScreen.emptyNoneBody", "Start saving podcasts, resources, and campaigns to access them here")
+              }
+            </Text>
+          </View>
+        ) : viewMode === "grid" ? (
+          <FlatList
+            data={filteredAndSortedItems}
+            keyExtractor={(item) => item.id}
+            renderItem={renderItem}
+            numColumns={2}
+            columnWrapperStyle={styles.gridRow}
+            contentContainerStyle={{ paddingVertical: 12 }}
+            showsVerticalScrollIndicator={false}
+          />
+        ) : (
+          <SectionList
+            sections={sections}
+            keyExtractor={(item) => item.id}
+            renderSectionHeader={({ section }) => 
+              section.title ? (
+                <View style={styles.sectionHeaderRow}>
+                  <MaterialCommunityIcons
+                    name={
+                      section.title === t("savedScreen.filters.podcast", "Podcasts") ? "microphone" : 
+                      section.title === t("savedScreen.filters.resource", "Resources") ? "book-outline" : "bullhorn"
+                    }
+                    size={18}
+                    color={palette.text}
+                    style={{ marginRight: 6 }}
+                  />
+                  <Text style={styles.sectionHeader}>{section.title}</Text>
+                  <Text style={styles.sectionCount}>({section.data.length})</Text>
+                </View>
+              ) : null
+            }
+            renderItem={renderItem}
+            contentContainerStyle={{ paddingVertical: 12 }}
+            showsVerticalScrollIndicator={false}
+          />
         )}
       </View>
-
-      {/* Filter and Sort Controls */}
-      <View style={styles.controlsContainer}>
-        <View style={styles.filtersContainer}>
-          <FilterButton filter="all" label={t("savedScreen.filters.all", "All")} icon="apps" />
-          <FilterButton filter="podcast" label={t("savedScreen.filters.podcast", "Podcasts")} icon="mic" />
-          <FilterButton filter="resource" label={t("savedScreen.filters.resource", "Resources")} icon="document-text" />
-          <FilterButton filter="campaign" label={t("savedScreen.filters.campaign", "Campaigns")} icon="notifications" />
-        </View>
-
-        <View style={styles.viewControls}>
-          <Pressable
-            style={[styles.viewButton, viewMode === "list" && styles.viewButtonActive]}
-            onPress={() => setViewMode("list")}
-            accessibilityRole="button"
-            accessibilityState={{ selected: viewMode === "list" }}
-            accessibilityLabel={t("savedScreen.view.list", "List view")}
-          >
-            <Ionicons name="list" size={20} color={viewMode === "list" ? "white" : palette.text} />
-          </Pressable>
-          <Pressable
-            style={[styles.viewButton, viewMode === "grid" && styles.viewButtonActive]}
-            onPress={() => setViewMode("grid")}
-            accessibilityRole="button"
-            accessibilityState={{ selected: viewMode === "grid" }}
-            accessibilityLabel={t("savedScreen.view.grid", "Grid view")}
-          >
-            <Ionicons name="grid" size={20} color={viewMode === "grid" ? "white" : palette.text} />
-          </Pressable>
-        </View>
-      </View>
-
-      {/* Results Count */}
-      {searchQuery.trim() && (
-        <Text style={styles.resultsCount} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-          {(() => {
-            const count = filteredAndSortedItems.length;
-            const template = t("savedScreen.resultsCount", "{{count}} result{{plural}} found");
-            return template
-              .replace("{{count}}", String(count))
-              .replace("{{plural}}", count === 1 ? "" : "s");
-          })()}
-        </Text>
-      )}
-
-      {/* Content */}
-      {filteredAndSortedItems.length === 0 ? (
-        <View style={styles.emptyContainer}>
-          <Ionicons name="bookmark-outline" size={64} color={palette.text} style={styles.emptyIcon} />
-          <Text style={styles.emptyTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            {searchQuery.trim() ? t("savedScreen.emptySearchTitle", "No results found") : t("savedScreen.emptyNoneTitle", "No saved items yet")}
-          </Text>
-          <Text style={styles.emptyDescription} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            {searchQuery.trim() 
-              ? t("savedScreen.emptySearchBody", "Try adjusting your search or filter criteria")
-              : t("savedScreen.emptyNoneBody", "Start saving podcasts, resources, and campaigns to access them here")
-            }
-          </Text>
-        </View>
-      ) : viewMode === "grid" ? (
-        <FlatList
-          data={filteredAndSortedItems}
-          keyExtractor={(item) => item.id}
-          renderItem={renderItem}
-          numColumns={2}
-          columnWrapperStyle={styles.gridRow}
-          contentContainerStyle={{ paddingVertical: 12 }}
-          showsVerticalScrollIndicator={false}
-        />
-      ) : (
-        <SectionList
-          sections={sections}
-          keyExtractor={(item) => item.id}
-          renderSectionHeader={({ section }) => 
-            section.title ? (
-              <View style={styles.sectionHeaderRow}>
-                <MaterialCommunityIcons
-                  name={
-                    section.title === t("savedScreen.filters.podcast", "Podcasts") ? "microphone" : 
-                    section.title === t("savedScreen.filters.resource", "Resources") ? "book-outline" : "bullhorn"
-                  }
-                  size={18}
-                  color={palette.text}
-                  style={{ marginRight: 6 }}
-                />
-                <Text style={styles.sectionHeader}>{section.title}</Text>
-                <Text style={styles.sectionCount}>({section.data.length})</Text>
-              </View>
-            ) : null
-          }
-          renderItem={renderItem}
-          contentContainerStyle={{ paddingVertical: 12 }}
-          showsVerticalScrollIndicator={false}
-        />
-      )}
-    </View>
+    </ResponsiveScreenWrapper>
   );
 }
 

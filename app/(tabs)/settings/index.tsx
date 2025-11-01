@@ -6,14 +6,15 @@ import { deleteUser, EmailAuthProvider, reauthenticateWithCredential, sendPasswo
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import React, { useEffect, useRef, useState } from 'react';
-import { Alert, Button, Image, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Button, Image, Linking, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import AccessibilityToggle from '../../../components/AccessibilityToggle';
 import { GapView } from '../../../components/GapView';
 import LanguageSelector from '../../../components/LanguageSelector';
+import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import UpdateChecker from '../../../components/UpdateChecker';
-import UserBadgesDisplay from '../../../components/badges/UserBadgesDisplay';
+import UserBadgesDisplay from '../../../components/UserBadgesDisplay';
 import * as SettingsLazy from '../../../components/settings';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
@@ -105,252 +106,254 @@ export default function SettingsScreen() {
   const sendFeedbackEmail = () => sendFeedbackEmailInternal(t);
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ padding:20 }} accessibilityLabel={t('settings.title','Settings screen')}>
-      <Text ref={titleRef} accessibilityRole='header' style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('settings.title','Settings')}</Text>
-      
-      <Section title={t('settings.accessibility.title','Accessibility')} subtitle={t('settings.accessibility.subtitle','Make the app work better for you')} styles={styles}>
-        <EnhancedA11ySettingsSection />
+    <ResponsiveScreenWrapper scrollable>
+      <View style={[styles.container, { padding:20 }]} accessibilityLabel={t('settings.title','Settings screen')}>
+        <Text ref={titleRef} accessibilityRole='header' style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('settings.title','Settings')}</Text>
         
-        {/* Cognitive Accessibility Settings Link */}
-        <Link href={'/(tabs)/settings/cognitive-accessibility' as any} asChild>
-          <A11yPressable
-            style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
-            accessibilityRole='button'
-            accessibilityLabel={t('settings.cognitiveAccessibility', 'Cognitive Accessibility Settings - Simplified mode, auto-save, and navigation memory for ADHD, autism, and learning disabilities')}
-            hitSlop={HIT_SLOP_8}
-          >
-            <Ionicons name='bulb-outline' size={20} color={palette.primary} />
-            <Text style={styles.linkText}>{t('settings.cognitiveAccessibilityTitle', 'Cognitive Accessibility')}</Text>
-            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-          </A11yPressable>
-        </Link>
-        
-        {/* Advanced Accessibility Settings Link */}
-        <Link href={'/(tabs)/settings/advanced-accessibility' as any} asChild>
-          <A11yPressable
-            style={[styles.linkButton, { justifyContent:'center', marginTop:8 }]}
-            accessibilityRole='button'
-            accessibilityLabel="Advanced Accessibility Settings - Additional accessibility options"
-            hitSlop={HIT_SLOP_8}
-          >
-            <Ionicons name='options' size={20} color={palette.primary} />
-            <Text style={styles.linkText}>Advanced Accessibility</Text>
-            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-          </A11yPressable>
-        </Link>
-      </Section>
-      
-      <Section title="Cultural & Neurodiversity Support" subtitle="Inclusive settings for diverse communities" styles={styles}>
-        {/* Neurodivergent Support Link */}
-        <Link href={'/(tabs)/settings/neurodivergent' as any} asChild>
-          <A11yPressable
-            style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
-            accessibilityRole='button'
-            accessibilityLabel="Neurodivergent Support Settings"
-            hitSlop={HIT_SLOP_8}
-          >
-            <Ionicons name='git-branch' size={20} color={palette.primary} />
-            <Text style={styles.linkText}>Neurodivergent Support</Text>
-            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-          </A11yPressable>
-        </Link>
-        
-        {/* Cultural Safety Link */}
-        <Link href={'/(tabs)/settings/cultural-safety' as any} asChild>
-          <A11yPressable
-            style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
-            accessibilityRole='button'
-            accessibilityLabel="Cultural Safety Settings"
-            hitSlop={HIT_SLOP_8}
-          >
-            <Ionicons name='globe' size={20} color={palette.primary} />
-            <Text style={styles.linkText}>Cultural Safety</Text>
-            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-          </A11yPressable>
-        </Link>
-        
-        {/* Indigenous Languages Link */}
-        <Link href={'/(tabs)/settings/indigenous-language' as any} asChild>
-          <A11yPressable
-            style={[styles.linkButton, { justifyContent:'center' }]}
-            accessibilityRole='button'
-            accessibilityLabel="Indigenous Languages - Traditional language support"
-            hitSlop={HIT_SLOP_8}
-          >
-            <Ionicons name='leaf' size={20} color={palette.primary} />
-            <Text style={styles.linkText}>Indigenous Languages</Text>
-            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-          </A11yPressable>
-        </Link>
-      </Section>
-      
-      <LanguageSelector />
-      
-      <Section title={t('settings.privacy.title','Privacy & Security')} subtitle={t('settings.privacy.subtitle','Control your data and security')} styles={styles}>
-        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading privacy…</Text></View>}>
-          <SettingsLazy.EnhancedPrivacySection />
-        </React.Suspense>
-        
-        {/* Advanced Security Link */}
-        <Link href={'/(tabs)/settings/advanced-security' as any} asChild>
-          <A11yPressable
-            style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
-            accessibilityRole='button'
-            accessibilityLabel="Advanced Security Settings"
-            hitSlop={HIT_SLOP_8}
-          >
-            <Ionicons name='shield-checkmark' size={20} color={palette.primary} />
-            <Text style={styles.linkText}>Advanced Security</Text>
-            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-          </A11yPressable>
-        </Link>
-      </Section>
-      
-      <Section title={t('updates.title', 'App Updates')} subtitle={t('updates.subtitle', 'Check for and install the latest features')} styles={styles}>
-        <UpdateChecker />
-      </Section>
-      
-      <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading notification preferences…</Text></View>}>
-        <NotificationPreferences />
-      </React.Suspense>
-      <Section title={t('settings.emergencyWallet.title','Emergency Wallet Card')} subtitle={t('settings.emergencyWallet.subtitle','Store key medical and emergency contact information locally')} styles={styles}>
-        <A11yPressable
-          onPress={() => setShowEmergencyCard(v => !v)}
-          accessibilityRole='button'
-          accessibilityLabel={showEmergencyCard ? t('settings.emergencyWallet.hide','Hide emergency wallet card form') : t('settings.emergencyWallet.show','Show emergency wallet card form')}
-          hitSlop={HIT_SLOP_8}
-          style={[styles.linkButton, { justifyContent:'center', marginBottom:12 }]}
-        >
-          <Ionicons name='medical' size={20} color={palette.primary} />
-          <Text style={styles.linkText}>{showEmergencyCard ? t('common.hide','Hide') : t('common.show','Show')}</Text>
-        </A11yPressable>
-        {showEmergencyCard && (
-          <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading emergency card…</Text></View>}>
-            <EmergencyWalletCard />
-          </React.Suspense>
-        )}
-      </Section>
-      <Section title={t('settings.bookmarks.title','Bookmarks')} subtitle={t('settings.bookmarks.subtitle','Save quick links to app features')} styles={styles}>
-        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading bookmarks…</Text></View>}>
-          <SettingsLazy.BookmarksSection />
-        </React.Suspense>
-      </Section>
-      <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>
-        {/* Profile Editor Link */}
-        {!isGuest && (
-          <Link href={'/(tabs)/settings/profile-editor' as any} asChild>
+        <Section title={t('settings.accessibility.title','Accessibility')} subtitle={t('settings.accessibility.subtitle','Make the app work better for you')} styles={styles}>
+          <EnhancedA11ySettingsSection />
+          
+          {/* Cognitive Accessibility Settings Link */}
+          <Link href={'/(tabs)/settings/cognitive-accessibility' as any} asChild>
             <A11yPressable
-              style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+              style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
               accessibilityRole='button'
-              accessibilityLabel="Profile Editor - Update your disability profile, role, and energy patterns"
+              accessibilityLabel={t('settings.cognitiveAccessibility', 'Cognitive Accessibility Settings - Simplified mode, auto-save, and navigation memory for ADHD, autism, and learning disabilities')}
               hitSlop={HIT_SLOP_8}
             >
-              <Ionicons name='person-circle' size={20} color={palette.primary} />
-              <Text style={styles.linkText}>Edit Profile</Text>
+              <Ionicons name='bulb-outline' size={20} color={palette.primary} />
+              <Text style={styles.linkText}>{t('settings.cognitiveAccessibilityTitle', 'Cognitive Accessibility')}</Text>
               <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
             </A11yPressable>
           </Link>
-        )}
+          
+          {/* Advanced Accessibility Settings Link */}
+          <Link href={'/(tabs)/settings/advanced-accessibility' as any} asChild>
+            <A11yPressable
+              style={[styles.linkButton, { justifyContent:'center', marginTop:8 }]}
+              accessibilityRole='button'
+              accessibilityLabel="Advanced Accessibility Settings - Additional accessibility options"
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='options' size={20} color={palette.primary} />
+              <Text style={styles.linkText}>Advanced Accessibility</Text>
+              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+            </A11yPressable>
+          </Link>
+        </Section>
         
-        {isGuest && (
-          <View style={{ marginBottom:16 }}>
-            <Text style={[styles.description, { marginBottom:8 }]}>{t('settings.account.guestNotice','You are browsing as a guest. Create an account to sync data across devices and enable full features.')}</Text>
-            <Link href={'/(auth)/register' as any} asChild>
-              <A11yPressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button' accessibilityLabel={t('settings.account.createAccount','Create Account')} hitSlop={HIT_SLOP_8}>
-                <Ionicons name='person-add' size={20} color={palette.primary} />
-                <Text style={styles.linkText}>{t('settings.account.createAccount','Create Account')}</Text>
+        <Section title="Cultural & Neurodiversity Support" subtitle="Inclusive settings for diverse communities" styles={styles}>
+          {/* Neurodivergent Support Link */}
+          <Link href={'/(tabs)/settings/neurodivergent' as any} asChild>
+            <A11yPressable
+              style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+              accessibilityRole='button'
+              accessibilityLabel="Neurodivergent Support Settings"
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='git-branch' size={20} color={palette.primary} />
+              <Text style={styles.linkText}>Neurodivergent Support</Text>
+              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+            </A11yPressable>
+          </Link>
+          
+          {/* Cultural Safety Link */}
+          <Link href={'/(tabs)/settings/cultural-safety' as any} asChild>
+            <A11yPressable
+              style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+              accessibilityRole='button'
+              accessibilityLabel="Cultural Safety Settings"
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='globe' size={20} color={palette.primary} />
+              <Text style={styles.linkText}>Cultural Safety</Text>
+              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+            </A11yPressable>
+          </Link>
+          
+          {/* Indigenous Languages Link */}
+          <Link href={'/(tabs)/settings/indigenous-language' as any} asChild>
+            <A11yPressable
+              style={[styles.linkButton, { justifyContent:'center' }]}
+              accessibilityRole='button'
+              accessibilityLabel="Indigenous Languages - Traditional language support"
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='leaf' size={20} color={palette.primary} />
+              <Text style={styles.linkText}>Indigenous Languages</Text>
+              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+            </A11yPressable>
+          </Link>
+        </Section>
+        
+        <LanguageSelector />
+        
+        <Section title={t('settings.privacy.title','Privacy & Security')} subtitle={t('settings.privacy.subtitle','Control your data and security')} styles={styles}>
+          <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading privacy…</Text></View>}>
+            <SettingsLazy.EnhancedPrivacySection />
+          </React.Suspense>
+          
+          {/* Advanced Security Link */}
+          <Link href={'/(tabs)/settings/advanced-security' as any} asChild>
+            <A11yPressable
+              style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
+              accessibilityRole='button'
+              accessibilityLabel="Advanced Security Settings"
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='shield-checkmark' size={20} color={palette.primary} />
+              <Text style={styles.linkText}>Advanced Security</Text>
+              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+            </A11yPressable>
+          </Link>
+        </Section>
+        
+        <Section title={t('updates.title', 'App Updates')} subtitle={t('updates.subtitle', 'Check for and install the latest features')} styles={styles}>
+          <UpdateChecker />
+        </Section>
+        
+        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading notification preferences…</Text></View>}>
+          <NotificationPreferences />
+        </React.Suspense>
+        <Section title={t('settings.emergencyWallet.title','Emergency Wallet Card')} subtitle={t('settings.emergencyWallet.subtitle','Store key medical and emergency contact information locally')} styles={styles}>
+          <A11yPressable
+            onPress={() => setShowEmergencyCard(v => !v)}
+            accessibilityRole='button'
+            accessibilityLabel={showEmergencyCard ? t('settings.emergencyWallet.hide','Hide emergency wallet card form') : t('settings.emergencyWallet.show','Show emergency wallet card form')}
+            hitSlop={HIT_SLOP_8}
+            style={[styles.linkButton, { justifyContent:'center', marginBottom:12 }]}
+          >
+            <Ionicons name='medical' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>{showEmergencyCard ? t('common.hide','Hide') : t('common.show','Show')}</Text>
+          </A11yPressable>
+          {showEmergencyCard && (
+            <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading emergency card…</Text></View>}>
+              <EmergencyWalletCard />
+            </React.Suspense>
+          )}
+        </Section>
+        <Section title={t('settings.bookmarks.title','Bookmarks')} subtitle={t('settings.bookmarks.subtitle','Save quick links to app features')} styles={styles}>
+          <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading bookmarks…</Text></View>}>
+            <SettingsLazy.BookmarksSection />
+          </React.Suspense>
+        </Section>
+        <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>
+          {/* Profile Editor Link */}
+          {!isGuest && (
+            <Link href={'/(tabs)/settings/profile-editor' as any} asChild>
+              <A11yPressable
+                style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+                accessibilityRole='button'
+                accessibilityLabel="Profile Editor - Update your disability profile, role, and energy patterns"
+                hitSlop={HIT_SLOP_8}
+              >
+                <Ionicons name='person-circle' size={20} color={palette.primary} />
+                <Text style={styles.linkText}>Edit Profile</Text>
+                <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
               </A11yPressable>
             </Link>
-          </View>
-        )}
-        {!isGuest && (
-          <>
-            {photoURL ? <Image source={{ uri: photoURL }} style={styles.avatar} accessibilityLabel={t('settings.account.photo','Profile picture')} /> : <View style={styles.avatarPlaceholder}><Ionicons name='person' size={40} color={palette.text} /></View>}
-            <Button title={t('settings.account.changePhoto','Change Profile Picture')} onPress={handleUploadPhoto} />
-            
-            <UserBadgesDisplay />
-            
-            <Text style={styles.rowLabel}>{t('settings.account.displayName','Display Name')}</Text>
-            <TextInput style={styles.input} placeholder={t('settings.account.displayNamePlaceholder','Enter display name')} value={displayName} onChangeText={setDisplayName} accessibilityLabel={t('settings.account.displayName','Display Name')} />
-            <Button title={t('settings.account.updateName','Update Name')} onPress={handleUpdateDisplayName} />
-          </>
-        )}
-        {user && !isGuest && (
-          <View style={{ marginTop:10 }}>
-            {user.email && hasPasswordProvider && (
-              <Button title={t('settings.account.resetPassword','Send Password Reset Email')} onPress={async()=>{ try{ await sendPasswordResetEmail(auth, user.email!); Alert.alert(t('settings.account.resetPasswordSent','Email Sent'), t('settings.account.resetPasswordSentDesc','Check your inbox for reset instructions.')); } catch(e:any){ Alert.alert(t('settings.account.resetPasswordFailed','Reset Failed'), e?.message||'Error'); } }} />
-            )}
-            <View style={{ height:8 }} />
-            {!deleteMode && <Button color={palette.error} title={t('settings.account.delete','Delete Account')} onPress={beginDelete} />}
-            {deleteMode && (
-              <View style={styles.deletePanel}>
-                {hasPasswordProvider ? (
-                  <>
-                    <Text style={{ color:palette.error, fontWeight:'600', marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordTitle','Confirm Deletion')}</Text>
-                    <Text style={{ color:palette.text, opacity:0.8, marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordBody','Enter your password to permanently delete your account.')}</Text>
-                    <TextInput style={styles.input} secureTextEntry value={password} onChangeText={setPassword} placeholder={t('settings.account.passwordPlaceholder','Password')} accessibilityLabel={t('settings.account.passwordPlaceholder','Password')} />
-                    <GapView gap={8} style={{ flexDirection:'row' }}>
-                      <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting || !password} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}>
-                        <Text style={{ color:palette.onPrimary, fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text>
-                      </A11yPressable>
-                      <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}>
-                        <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
-                      </A11yPressable>
-                    </GapView>
-                  </>
-                ) : (
-                  <>
-                    <Text style={{ color:palette.error, fontWeight:'600', marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordTitle','Confirm Deletion')}</Text>
-                    <Text style={{ color:palette.text, opacity:0.8, marginBottom:12 }}>
-                      {t('settings.account.deleteNoPassword','This account uses a third-party sign-in method. Sign in again with your provider (e.g. Google/Apple) recently, then press Continue to delete.')}
-                    </Text>
-                    <GapView gap={8} style={{ flexDirection:'row' }}>
-                      <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}>
-                        <Text style={{ color:palette.onPrimary, fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text>
-                      </A11yPressable>
-                      <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}>
-                        <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
-                      </A11yPressable>
-                    </GapView>
-                    {!!providerList.length && <Text style={{ color:palette.text, opacity:0.6, marginTop:8, fontSize:12 }}>Providers: {providerList.join(', ')}</Text>}
-                  </>
-                )}
-              </View>
-            )}
-          </View>
-        )}
-      </Section>
-      <Section title='Local Profile (for templates)' styles={styles}>
-        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
-          <SettingsLazy.LocalProfileSection />
-        </React.Suspense>
-      </Section>
-      <Section title='Wellness Preferences' styles={styles}>
-        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
-          <SettingsLazy.WellnessPrefsSection />
-        </React.Suspense>
-      </Section>
-      <Section title='Media & Locker' styles={styles}>
-        <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
-          <SettingsLazy.MediaLockerSection />
-        </React.Suspense>
-      </Section>
-      <DeveloperSection styles={styles} />
-      <Section title={t('about.title','About & Contact')} styles={styles}>
-        <A11yPressable
-          onPress={sendFeedbackEmail}
-          accessibilityRole='button'
-          accessibilityLabel={t('about.sendLabel','Send email')}
-          hitSlop={HIT_SLOP_8}
-          style={[styles.linkButton, { justifyContent:'center', marginBottom:12 }]}
-        >
-          <Ionicons name='mail' size={20} color={palette.primary} />
-          <Text style={styles.linkText}>{t('about.sendLabel','Send email')}</Text>
-        </A11yPressable>
-      </Section>
-      <Section title='Terms & Policies' styles={styles}><TermsSection /></Section>
-  {user && <Section title='Admin' styles={styles}><AdminSection /></Section>}
-    </ScrollView>
+          )}
+          
+          {isGuest && (
+            <View style={{ marginBottom:16 }}>
+              <Text style={[styles.description, { marginBottom:8 }]}>{t('settings.account.guestNotice','You are browsing as a guest. Create an account to sync data across devices and enable full features.')}</Text>
+              <Link href={'/(auth)/register' as any} asChild>
+                <A11yPressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button' accessibilityLabel={t('settings.account.createAccount','Create Account')} hitSlop={HIT_SLOP_8}>
+                  <Ionicons name='person-add' size={20} color={palette.primary} />
+                  <Text style={styles.linkText}>{t('settings.account.createAccount','Create Account')}</Text>
+                </A11yPressable>
+              </Link>
+            </View>
+          )}
+          {!isGuest && (
+            <>
+              {photoURL ? <Image source={{ uri: photoURL }} style={styles.avatar} accessibilityLabel={t('settings.account.photo','Profile picture')} /> : <View style={styles.avatarPlaceholder}><Ionicons name='person' size={40} color={palette.text} /></View>}
+              <Button title={t('settings.account.changePhoto','Change Profile Picture')} onPress={handleUploadPhoto} />
+              
+              <UserBadgesDisplay />
+              
+              <Text style={styles.rowLabel}>{t('settings.account.displayName','Display Name')}</Text>
+              <TextInput style={styles.input} placeholder={t('settings.account.displayNamePlaceholder','Enter display name')} value={displayName} onChangeText={setDisplayName} accessibilityLabel={t('settings.account.displayName','Display Name')} />
+              <Button title={t('settings.account.updateName','Update Name')} onPress={handleUpdateDisplayName} />
+            </>
+          )}
+          {user && !isGuest && (
+            <View style={{ marginTop:10 }}>
+              {user.email && hasPasswordProvider && (
+                <Button title={t('settings.account.resetPassword','Send Password Reset Email')} onPress={async()=>{ try{ await sendPasswordResetEmail(auth, user.email!); Alert.alert(t('settings.account.resetPasswordSent','Email Sent'), t('settings.account.resetPasswordSentDesc','Check your inbox for reset instructions.')); } catch(e:any){ Alert.alert(t('settings.account.resetPasswordFailed','Reset Failed'), e?.message||'Error'); } }} />
+              )}
+              <View style={{ height:8 }} />
+              {!deleteMode && <Button color={palette.error} title={t('settings.account.delete','Delete Account')} onPress={beginDelete} />}
+              {deleteMode && (
+                <View style={styles.deletePanel}>
+                  {hasPasswordProvider ? (
+                    <>
+                      <Text style={{ color:palette.error, fontWeight:'600', marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordTitle','Confirm Deletion')}</Text>
+                      <Text style={{ color:palette.text, opacity:0.8, marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordBody','Enter your password to permanently delete your account.')}</Text>
+                      <TextInput style={styles.input} secureTextEntry value={password} onChangeText={setPassword} placeholder={t('settings.account.passwordPlaceholder','Password')} accessibilityLabel={t('settings.account.passwordPlaceholder','Password')} />
+                      <GapView gap={8} style={{ flexDirection:'row' }}>
+                        <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting || !password} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}>
+                          <Text style={{ color:palette.onPrimary, fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text>
+                        </A11yPressable>
+                        <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}>
+                          <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
+                        </A11yPressable>
+                      </GapView>
+                    </>
+                  ) : (
+                    <>
+                      <Text style={{ color:palette.error, fontWeight:'600', marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordTitle','Confirm Deletion')}</Text>
+                      <Text style={{ color:palette.text, opacity:0.8, marginBottom:12 }}>
+                        {t('settings.account.deleteNoPassword','This account uses a third-party sign-in method. Sign in again with your provider (e.g. Google/Apple) recently, then press Continue to delete.')}
+                      </Text>
+                      <GapView gap={8} style={{ flexDirection:'row' }}>
+                        <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ backgroundColor:palette.error }]} onPress={confirmDelete} disabled={deleting} accessibilityRole='button' accessibilityLabel={t('settings.account.confirmDelete','Confirm account deletion')}>
+                          <Text style={{ color:palette.onPrimary, fontWeight:'700' }}>{deleting? t('common.working','Working...') : t('settings.account.confirmDelete','Confirm Delete')}</Text>
+                        </A11yPressable>
+                        <A11yPressable hitSlop={HIT_SLOP_8} style={[styles.deleteBtn,{ borderWidth:1, borderColor:palette.muted }]} onPress={cancelDelete} accessibilityRole='button' accessibilityLabel={t('common.cancel','Cancel')}>
+                          <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
+                        </A11yPressable>
+                      </GapView>
+                      {!!providerList.length && <Text style={{ color:palette.text, opacity:0.6, marginTop:8, fontSize:12 }}>Providers: {providerList.join(', ')}</Text>}
+                    </>
+                  )}
+                </View>
+              )}
+            </View>
+          )}
+        </Section>
+        <Section title='Local Profile (for templates)' styles={styles}>
+          <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
+            <SettingsLazy.LocalProfileSection />
+          </React.Suspense>
+        </Section>
+        <Section title='Wellness Preferences' styles={styles}>
+          <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
+            <SettingsLazy.WellnessPrefsSection />
+          </React.Suspense>
+        </Section>
+        <Section title='Media & Locker' styles={styles}>
+          <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
+            <SettingsLazy.MediaLockerSection />
+          </React.Suspense>
+        </Section>
+        <DeveloperSection styles={styles} />
+        <Section title={t('about.title','About & Contact')} styles={styles}>
+          <A11yPressable
+            onPress={sendFeedbackEmail}
+            accessibilityRole='button'
+            accessibilityLabel={t('about.sendLabel','Send email')}
+            hitSlop={HIT_SLOP_8}
+            style={[styles.linkButton, { justifyContent:'center', marginBottom:12 }]}
+          >
+            <Ionicons name='mail' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>{t('about.sendLabel','Send email')}</Text>
+          </A11yPressable>
+        </Section>
+        <Section title='Terms & Policies' styles={styles}><TermsSection /></Section>
+    {user && <Section title='Admin' styles={styles}><AdminSection /></Section>}
+      </View>
+    </ResponsiveScreenWrapper>
   );
 }
 
@@ -473,7 +476,14 @@ function AdminSection() {
 
 function DeveloperSection({ styles }: { styles: ReturnType<typeof createStyles> }) {
   const palette = useAppPalette();
+  const { user } = useAuth();
   const { costAlertsEnabled, setCostAlertsEnabled } = useDevPrefs();
+  
+  // Only show developer section for specific email
+  if (user?.email !== 'empowrapp08162025@gmail.com') {
+    return null;
+  }
+  
   return (
     <Section title='Developer' subtitle='Local-only toggles for development' styles={styles}>
       <View style={{ paddingVertical:8 }}>

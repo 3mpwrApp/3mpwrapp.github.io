@@ -1,6 +1,0 @@
-[
-  { "id": "w1", "title": "Accessibility Act Update", "kind": "law", "lat": 45.4215, "lng": -75.6972, "city": "Ottawa", "country": "Canada" },
-  { "id": "w2", "title": "Protest for benefits reform", "kind": "protest", "lat": 51.5074, "lng": -0.1278, "city": "London", "country": "UK" },
-  { "id": "w3", "title": "Inclusive hiring pilot", "kind": "update", "lat": 52.52, "lng": 13.405, "city": "Berlin", "country": "Germany" }
-]
-

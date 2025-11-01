@@ -15,6 +15,7 @@ import {
 
 import Card from "../../components/Card";
 import { GapView } from "../../components/GapView";
+import ResponsiveScreenWrapper from "../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../components/SearchBar";
 import SkeletonRow from "../../components/SkeletonRow";
 import { useAuth } from "../../context/AuthContext";
@@ -135,178 +136,180 @@ function ScreenInner() {
   }, [query, allItems, local.myCampaigns, isJoined]);
 
   return (
-    <View style={[styles.container, { flex: 1 }]}>
-      <Text
-        ref={titleRef}
-        nativeID="campaigns-title"
-        accessibilityRole="header"
-        style={styles.title}
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
-      >
-        Campaigns
-      </Text>
-      <Text style={styles.subtitle}>Browse, create, and join campaigns.</Text>
-      <Text style={[styles.subtitle, { fontSize:14, opacity:0.8 }]} accessibilityLabel={`You have joined ${joinedCount} campaigns`}>
-        Joined: {joinedCount} / {allItems.length}
-      </Text>
+    <ResponsiveScreenWrapper scrollable>
+      <View style={[styles.container, { flex: 1 }]}>
+        <Text
+          ref={titleRef}
+          nativeID="campaigns-title"
+          accessibilityRole="header"
+          style={styles.title}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
+          Campaigns
+        </Text>
+        <Text style={styles.subtitle}>Browse, create, and join campaigns.</Text>
+        <Text style={[styles.subtitle, { fontSize:14, opacity:0.8 }]} accessibilityLabel={`You have joined ${joinedCount} campaigns`}>
+          Joined: {joinedCount} / {allItems.length}
+        </Text>
 
-      <CreateCampaignBox
-        onCreate={async (data) => {
-          const c = createCampaign(data.title, data.summary);
-          try { trackEvent("campaign_create", { id: c.id }); } catch {}
-          await fsAddCampaign({
-            id: c.id,
-            title: data.title,
-            summary: data.summary,
-            target: data.target || undefined,
-            goalCount: data.goalCount || undefined,
-            contactEmail: data.contactEmail || undefined,
-            createdAt: Date.now(),
-          });
-        }}
-        palette={palette}
-      />
+        <CreateCampaignBox
+          onCreate={async (data) => {
+            const c = createCampaign(data.title, data.summary);
+            try { trackEvent("campaign_create", { id: c.id }); } catch {}
+            await fsAddCampaign({
+              id: c.id,
+              title: data.title,
+              summary: data.summary,
+              target: data.target || undefined,
+              goalCount: data.goalCount || undefined,
+              contactEmail: data.contactEmail || undefined,
+              createdAt: Date.now(),
+            });
+          }}
+          palette={palette}
+        />
 
-      <SearchBar
-        value={query}
-        onChangeText={setQuery}
-        placeholder="Search campaigns"
-      />
+        <SearchBar
+          value={query}
+          onChangeText={setQuery}
+          placeholder="Search campaigns"
+        />
 
-      {loading && (
-        <View>
-          <SkeletonRow />
-          <SkeletonRow />
-          <SkeletonRow />
-        </View>
-      )}
-
-      {error && (
-        <>
-          <Text accessibilityRole="alert" style={styles.subtitle}>
-            {error}
-          </Text>
-          <Text
-            onPress={reload}
-            style={[styles.subtitle, { textDecorationLine: "underline" }]}
-            accessibilityRole="button"
-            accessibilityLabel="Try again"
-          >
-            Try again
-          </Text>
-        </>
-      )}
-
-      <SectionList
-        sections={sections}
-        keyExtractor={(item) => `thread-${item.id}`}
-        renderSectionHeader={({ section }) => (
-          <Text style={[styles.subtitle, { marginTop: 8, fontWeight:'700' }]}>{section.title}</Text>
+        {loading && (
+          <View>
+            <SkeletonRow />
+            <SkeletonRow />
+            <SkeletonRow />
+          </View>
         )}
-        renderItem={({ item }) => (
-          <View style={{ marginBottom:12 }}>
-            <Link
-              href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any}
-              asChild
+
+        {error && (
+          <>
+            <Text accessibilityRole="alert" style={styles.subtitle}>
+              {error}
+            </Text>
+            <Text
+              onPress={reload}
+              style={[styles.subtitle, { textDecorationLine: "underline" }]}
+              accessibilityRole="button"
+              accessibilityLabel="Try again"
             >
-              <Card
-                title={item.title + ((item as any).kind === 'petition' ? ' (Petition)' : '')}
-                subtitle={`${item.summary}${item.membersCount ? ` - ${item.membersCount} supporters` : ""}`}
-              />
-            </Link>
-            <GapView gap={8} style={{ flexDirection:'row', marginTop:6 }}>
-              <Pressable
-                onPress={async () => {
-                  try {
-                    await Share.share({
-                      message: `${item.title}\n${item.summary}`,
-                      title: item.title,
-                    });
-                  } catch {}
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={t('a11y.shareCampaign').replace('{{title}}', item.title)}
-                style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6 }}
+              Try again
+            </Text>
+          </>
+        )}
+
+        <SectionList
+          sections={sections}
+          keyExtractor={(item) => `thread-${item.id}`}
+          renderSectionHeader={({ section }) => (
+            <Text style={[styles.subtitle, { marginTop: 8, fontWeight:'700' }]}>{section.title}</Text>
+          )}
+          renderItem={({ item }) => (
+            <View style={{ marginBottom:12 }}>
+              <Link
+                href={{ pathname: "/(tabs)/campaigns/[id]", params: { id: item.id } } as any}
+                asChild
               >
-                <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>Share</Text>
-              </Pressable>
-              <Pressable
-                onPress={async () => {
-                  const now = Date.now();
-                  if (inFlightRef.current[item.id] && now - inFlightRef.current[item.id] < 1200) return; // rate limit
-                  inFlightRef.current[item.id] = now;
-                  const joined = isJoined(item.id);
-                  if (joined) {
-                    // optimistic leave
-                    leave(item.id);
-                    const uid = user?.uid || 'anonymous';
-                    const ok = await fsLeaveCampaign(item.id, uid);
-                    if (!ok) {
-                      // rollback
-                      join(item.id);
-                      Alert.alert('Leave Failed', 'Could not leave campaign (offline?)');
-                    } else {
-                      Alert.alert('Left Campaign', 'You have left this campaign.');
-                      logActivity({ type: 'feature.use', payload: { feature: 'campaign.leave', id: item.id } });
-                    }
-                  } else {
-                    join(item.id);
-                    const uid = user?.uid || 'anonymous';
-                    const ok = await fsJoinCampaign(item.id, uid);
-                    if (!ok) {
+                <Card
+                  title={item.title + ((item as any).kind === 'petition' ? ' (Petition)' : '')}
+                  subtitle={`${item.summary}${item.membersCount ? ` - ${item.membersCount} supporters` : ""}`}
+                />
+              </Link>
+              <GapView gap={8} style={{ flexDirection:'row', marginTop:6 }}>
+                <Pressable
+                  onPress={async () => {
+                    try {
+                      await Share.share({
+                        message: `${item.title}\n${item.summary}`,
+                        title: item.title,
+                      });
+                    } catch {}
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('a11y.shareCampaign').replace('{{title}}', item.title)}
+                  style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6 }}
+                >
+                  <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>Share</Text>
+                </Pressable>
+                <Pressable
+                  onPress={async () => {
+                    const now = Date.now();
+                    if (inFlightRef.current[item.id] && now - inFlightRef.current[item.id] < 1200) return; // rate limit
+                    inFlightRef.current[item.id] = now;
+                    const joined = isJoined(item.id);
+                    if (joined) {
+                      // optimistic leave
                       leave(item.id);
-                      Alert.alert('Join Failed', 'Could not join campaign (offline?)');
-                    } else {
-                      Alert.alert('Joined Campaign', 'You are now supporting this campaign.');
-                      // Treat petitions specially for signing event.
-                      if ((item as any).kind === 'petition') {
-                        logActivity({ type: 'petition.sign', payload: { petitionId: item.id } });
+                      const uid = user?.uid || 'anonymous';
+                      const ok = await fsLeaveCampaign(item.id, uid);
+                      if (!ok) {
+                        // rollback
+                        join(item.id);
+                        Alert.alert('Leave Failed', 'Could not leave campaign (offline?)');
                       } else {
-                        logActivity({ type: 'feature.use', payload: { feature: 'campaign.join', id: item.id } });
+                        Alert.alert('Left Campaign', 'You have left this campaign.');
+                        logActivity({ type: 'feature.use', payload: { feature: 'campaign.leave', id: item.id } });
+                      }
+                    } else {
+                      join(item.id);
+                      const uid = user?.uid || 'anonymous';
+                      const ok = await fsJoinCampaign(item.id, uid);
+                      if (!ok) {
+                        leave(item.id);
+                        Alert.alert('Join Failed', 'Could not join campaign (offline?)');
+                      } else {
+                        Alert.alert('Joined Campaign', 'You are now supporting this campaign.');
+                        // Treat petitions specially for signing event.
+                        if ((item as any).kind === 'petition') {
+                          logActivity({ type: 'petition.sign', payload: { petitionId: item.id } });
+                        } else {
+                          logActivity({ type: 'feature.use', payload: { feature: 'campaign.join', id: item.id } });
+                        }
                       }
                     }
-                  }
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={isJoined(item.id) ? t('a11y.leaveCampaign').replace('{{title}}', item.title) : t('a11y.joinCampaign').replace('{{title}}', item.title)}
-                style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6, backgroundColor: isJoined(item.id)? palette.primary: 'transparent', opacity: inFlightRef.current[item.id] && Date.now()-inFlightRef.current[item.id]<400? 0.6:1 }}
-              >
-                <Text style={{ color: isJoined(item.id)? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{isJoined(item.id)? 'Joined':'Join'}</Text>
-              </Pressable>
-              <Pressable
-                onPress={async () => {
-                  try { await fsIncrementCampaignMembers(item.id, 1); } catch {}
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={t('a11y.supportCampaign')}
-                style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6 }}
-              >
-                <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>+1</Text>
-              </Pressable>
-            </GapView>
-          </View>
-        )}
-        ListEmptyComponent={!loading && !error ? (
-          <View style={{ paddingVertical: 12 }}>
-            <Text style={{ color: palette.text, opacity: 0.8, marginBottom: 6 }}>{t('campaigns.empty','No campaigns match your filters')}</Text>
-            {query ? (
-              <Pressable
-                onPress={() => setQuery('')}
-                accessibilityRole="button"
-                accessibilityLabel={t('common.resetFilters','Reset filters')}
-                style={({ pressed }) => [{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }, pressed && { opacity: 0.8 }]}
-              >
-                <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
-              </Pressable>
-            ) : null}
-          </View>
-        ) : null}
-        contentContainerStyle={{ paddingVertical: 12 }}
-        refreshControl={
-          <RefreshControl refreshing={loading} onRefresh={reload} />
-        }
-      />
-    </View>
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={isJoined(item.id) ? t('a11y.leaveCampaign').replace('{{title}}', item.title) : t('a11y.joinCampaign').replace('{{title}}', item.title)}
+                  style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6, backgroundColor: isJoined(item.id)? palette.primary: 'transparent', opacity: inFlightRef.current[item.id] && Date.now()-inFlightRef.current[item.id]<400? 0.6:1 }}
+                >
+                  <Text style={{ color: isJoined(item.id)? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{isJoined(item.id)? 'Joined':'Join'}</Text>
+                </Pressable>
+                <Pressable
+                  onPress={async () => {
+                    try { await fsIncrementCampaignMembers(item.id, 1); } catch {}
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('a11y.supportCampaign')}
+                  style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:6 }}
+                >
+                  <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>+1</Text>
+                </Pressable>
+              </GapView>
+            </View>
+          )}
+          ListEmptyComponent={!loading && !error ? (
+            <View style={{ paddingVertical: 12 }}>
+              <Text style={{ color: palette.text, opacity: 0.8, marginBottom: 6 }}>{t('campaigns.empty','No campaigns match your filters')}</Text>
+              {query ? (
+                <Pressable
+                  onPress={() => setQuery('')}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('common.resetFilters','Reset filters')}
+                  style={({ pressed }) => [{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }, pressed && { opacity: 0.8 }]}
+                >
+                  <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
+                </Pressable>
+              ) : null}
+            </View>
+          ) : null}
+          contentContainerStyle={{ paddingVertical: 12 }}
+          refreshControl={
+            <RefreshControl refreshing={loading} onRefresh={reload} />
+          }
+        />
+      </View>
+    </ResponsiveScreenWrapper>
   );
 }
 
