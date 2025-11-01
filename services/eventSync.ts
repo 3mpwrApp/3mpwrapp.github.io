@@ -263,8 +263,8 @@ export async function getLastSyncTime(): Promise<Date | null> {
     if (!timestamp) return null;
     
     return new Date(parseInt(timestamp, 10));
-  } catch (error) {
-    logger.error('[EventSync] Failed to get last sync time:', error);
+  } catch (err) {
+    logger.error('[EventSync] Failed to get last sync time:', err);
     return null;
   }
 }

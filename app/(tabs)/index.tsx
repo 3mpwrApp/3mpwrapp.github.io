@@ -252,7 +252,7 @@ const HomeScreen = React.memo(() => {
     );
   }
   
-  console.log('[HomeScreen] Rendering main content');
+  logger.log('[HomeScreen] Rendering main content');
   
   return (
     <ResponsiveScreenWrapper 
