@@ -45,7 +45,7 @@ export const onProfileUpdate = functions.firestore
     const cloudConsent = userDoc.data()?.cloudConsent || false;
     
     if (!cloudConsent) {
-      console.log(`Profile update for ${userId} - cloud consent disabled, skipping sync`);
+      console.warn(`Profile update for ${userId} - cloud consent disabled, skipping sync`);
       return null;
     }
 
@@ -60,7 +60,7 @@ export const onProfileUpdate = functions.firestore
       dataSize: JSON.stringify(after || {}).length,
     });
 
-    console.log(`Profile synced for user ${userId}`);
+    console.warn(`Profile synced for user ${userId}`);
     return null;
   });
 
@@ -87,7 +87,7 @@ export const onWellnessDataUpdate = functions.firestore
       lastBackup: admin.firestore.FieldValue.serverTimestamp(),
     }, { merge: true });
 
-    console.log(`Wellness data (${dataType}) backed up for user ${userId}`);
+    console.warn(`Wellness data (${dataType}) backed up for user ${userId}`);
     return null;
   });
 
@@ -115,7 +115,7 @@ export const onEvidenceFileUpload = functions.storage
     if (!userDoc.data()?.cloudConsent) {
       // Delete file if no consent
       await bucket.file(filePath).delete();
-      console.log(`Deleted file ${filePath} - no cloud consent`);
+      console.warn(`Deleted file ${filePath} - no cloud consent`);
       return null;
     }
 
@@ -135,7 +135,7 @@ export const onEvidenceFileUpload = functions.storage
       storagePath: filePath,
     });
 
-    console.log(`Evidence file uploaded for user ${userId}: ${fileId}`);
+    console.warn(`Evidence file uploaded for user ${userId}: ${fileId}`);
     return null;
   });
 
@@ -169,7 +169,7 @@ export const cleanupOldEvidenceFiles = functions.pubsub
     });
 
     await Promise.all(deletions);
-    console.log(`Cleaned up ${deletions.length / 2} old evidence files`);
+    console.warn(`Cleaned up ${deletions.length / 2} old evidence files`);
     return null;
   });
 
@@ -211,7 +211,7 @@ export const syncUserData = functions.https.onCall(async (data: any, context: fu
       lastSync: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    console.log(`Data synced for user ${userId}`);
+    console.warn(`Data synced for user ${userId}`);
     return syncData;
   } catch (error: any) {
     console.error('Sync error:', error);
@@ -245,7 +245,7 @@ export const deleteUserCloudData = functions.https.onCall(async (data: any, cont
     const [files] = await bucket.getFiles({ prefix: `users/${userId}/` });
     await Promise.all(files.map(file => file.delete()));
 
-    console.log(`Deleted all cloud data for user ${userId}`);
+    console.warn(`Deleted all cloud data for user ${userId}`);
     return { success: true, message: 'All cloud data deleted' };
   } catch (error: any) {
     console.error('Delete error:', error);
@@ -266,7 +266,7 @@ export const onEventCreated = functions.firestore
     const event = snap.data();
     const eventId = context.params.eventId;
 
-    console.log('New event created:', event.title);
+    console.warn('New event created:', event.title);
 
     try {
       // Get all user push tokens
@@ -291,7 +291,7 @@ export const onEventCreated = functions.firestore
       });
 
       if (messages.length === 0) {
-        console.log('No valid push tokens found');
+        console.warn('No valid push tokens found');
         return null;
       }
 
@@ -308,7 +308,7 @@ export const onEventCreated = functions.firestore
         }
       }
 
-      console.log(`Sent ${tickets.length} event notifications`);
+      console.warn(`Sent ${tickets.length} event notifications`);
       return null;
     } catch (error) {
       console.error('Error sending event notifications:', error);
@@ -325,7 +325,7 @@ export const onCampaignCreated = functions.firestore
     const campaign = snap.data();
     const campaignId = context.params.campaignId;
 
-    console.log('New campaign created:', campaign.title);
+    console.warn('New campaign created:', campaign.title);
 
     try {
       const tokensSnapshot = await db.collection('userTokens').get();
@@ -349,7 +349,7 @@ export const onCampaignCreated = functions.firestore
       });
 
       if (messages.length === 0) {
-        console.log('No valid push tokens found');
+        console.warn('No valid push tokens found');
         return null;
       }
 
@@ -365,7 +365,7 @@ export const onCampaignCreated = functions.firestore
         }
       }
 
-      console.log(`Sent ${tickets.length} campaign notifications`);
+      console.warn(`Sent ${tickets.length} campaign notifications`);
       return null;
     } catch (error) {
       console.error('Error sending campaign notifications:', error);
@@ -388,7 +388,7 @@ export const cleanupPushReceipts = functions.pubsub
       .get();
 
     if (snapshot.empty) {
-      console.log('No old push receipts to clean up');
+      console.warn('No old push receipts to clean up');
       return null;
     }
 
@@ -396,7 +396,7 @@ export const cleanupPushReceipts = functions.pubsub
     snapshot.docs.forEach((doc) => batch.delete(doc.ref));
     await batch.commit();
 
-    console.log(`Cleaned up ${snapshot.size} old push receipts`);
+    console.warn(`Cleaned up ${snapshot.size} old push receipts`);
     return null;
   });
 
@@ -447,7 +447,7 @@ export const exportUserData = functions.https.onCall(async (data: any, context: 
       created: file.metadata.timeCreated,
     }));
 
-    console.log(`Data exported for user ${userId}`);
+    console.warn(`Data exported for user ${userId}`);
     return userData;
   } catch (error: any) {
     console.error('Export error:', error);
