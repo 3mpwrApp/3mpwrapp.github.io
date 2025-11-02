@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-01T18:13:40.157Z",
+  "lastUpdated": "2025-11-02T00:55:44.749Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 1060,
+      "totalPosts": 1085,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T18:13:33.637Z"
+      "lastSeen": "2025-11-02T00:55:38.304Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 1075,
+      "totalPosts": 1100,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T18:13:35.033Z"
+      "lastSeen": "2025-11-02T00:55:39.675Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 1063,
+      "totalPosts": 1088,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T18:13:36.343Z"
+      "lastSeen": "2025-11-02T00:55:41.069Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 1075,
+      "totalPosts": 1100,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T18:13:37.762Z"
+      "lastSeen": "2025-11-02T00:55:42.430Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 1075,
+      "totalPosts": 1100,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-01T18:13:39.154Z"
+      "lastSeen": "2025-11-02T00:55:43.746Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Disability justice is economic justice. In 2023, 24.2% of disabled adults 18–64 lived in poverty vs 9.9% of nondisabled peers. That gap isn’t grit; it’s policy, access, bias. Enforce ADA, end subminimum wage, raise SSI asset limits, and fund real access. #DisabilityJustice #TruthBombTuesday ",
-      "author": "mrskgrady.bsky.social",
-      "engagement": 65,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Many seem to think #disabled people \"should just work\", but they don't understand/care that:\n\n1. Workplaces systemically discriminate against us \n\n2. We're often paid less than the non-disabled\n\n3. Accommodations that would enable us to work are often denied\n\nand it makes me mad.\n#DisabilityJustice",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 192,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "You know what's *really* sexy?\n\nCreating alt text for visual media you post 😘 \n\n#tip #lifetip #giveitup #alttext #accessibility #communityservice",
-      "author": "mmmtho.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Just like web performance work, accessibility winds up being less expensive the earlier you implement it. Build accessibility in from the start, rather than bolting it on - make it part of the process.\n\n@marcysutton.com #webperf #PerfNow #a11y",
-      "author": "riccardomargiotta.co.uk",
-      "engagement": 23,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
-      "author": "byrneout44.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "#disabilityjustice  Our disabled comrades need your helping hands!",
       "author": "alsvid.bsky.social",
@@ -338,6 +296,48 @@
       "author": "byrneout44.bsky.social",
       "engagement": 11,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#disabilityjustice  Our disabled comrades need your helping hands!",
+      "author": "alsvid.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disability justice is economic justice. In 2023, 24.2% of disabled adults 18–64 lived in poverty vs 9.9% of nondisabled peers. That gap isn’t grit; it’s policy, access, bias. Enforce ADA, end subminimum wage, raise SSI asset limits, and fund real access. #DisabilityJustice #TruthBombTuesday ",
+      "author": "mrskgrady.bsky.social",
+      "engagement": 65,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I'd love to see more #accessibility in VR Games \n\nI never bought a VR kit because I can't hold my arms up or stand for long periods of time (>5 mins) \n\nBut, I recently learned about Unseen Diplomacy 2, and it's kind of amazing how much #a11y they've added\n\nblog.triangularpixels.com/development/...",
+      "author": "radderss.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "They personally don't need them \"yet\".\n\nThey're basically advocating against their older selves' needs.\n\nSlower reaction times, lower vision, arthritis, shorter memory, smaller attention span, you name it.\n\nThey'll come around one day and thank us when they can still play.\n\n#a11y #GamesAccessibility",
+      "author": "tisseranddavid.bsky.social",
+      "engagement": 31,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
+      "author": "byrneout44.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 39
+      "count": 40
     },
     {
       "keyword": "a11y",
-      "count": 31
+      "count": 29
     },
     {
       "keyword": "cripthevote",
@@ -394,10 +394,6 @@
       "count": 8
     },
     {
-      "keyword": "disability",
-      "count": 8
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 8
     },
@@ -416,6 +412,10 @@
     {
       "keyword": "disabilityrebellion stoptrump",
       "count": 8
+    },
+    {
+      "keyword": "disability",
+      "count": 7
     },
     {
       "keyword": "digital",
