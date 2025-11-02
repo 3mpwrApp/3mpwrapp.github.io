@@ -140,11 +140,11 @@ export default function ResearchScreen() {
             <A11yPressable
               style={styles.sectionCard}
               accessibilityRole="button"
-              accessibilityLabel={`${t('research.landing.masterIndexTitle','Master Index')} (Coming soon) - ${t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}`}
+              accessibilityLabel={`${t('research.landing.masterIndexTitle','Master Index')} - ${t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}`}
               hitSlop={HIT_SLOP_8}
             >
               <Ionicons name="map-outline" size={32} color={palette.primary} />
-              <Text style={styles.sectionTitle}>{t('research.landing.masterIndexTitle','Master Index')} (Coming soon)</Text>
+              <Text style={styles.sectionTitle}>{t('research.landing.masterIndexTitle','Master Index')}</Text>
               <Text style={styles.sectionDescription}>{t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}</Text>
             </A11yPressable>
           </Link>

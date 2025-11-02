@@ -1,0 +1,274 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3mpwr App//Events Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:3mpwr App - Disability Observances & Events
+X-WR-TIMEZONE:America/Toronto
+X-WR-CALDESC:Disability observances, awareness days, and community events from 3mpwr App
+
+BEGIN:VEVENT
+UID:obs-2025-01-04-braille@3mpwr.app
+DTSTART:20250104
+DTEND:20250105
+SUMMARY:World Braille Day
+DESCRIPTION:Awareness of Braille and accessibility for blind and visually impaired individuals.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:obs-2025-03-01-wheelchair@3mpwr.app
+DTSTART:20250301
+DTEND:20250302
+SUMMARY:International Wheelchair Day
+DESCRIPTION:Celebration of wheelchair users and support for mobility accessibility.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:obs-2025-04-02-autism@3mpwr.app
+DTSTART:20250402
+DTEND:20250403
+SUMMARY:World Autism Awareness Day
+DESCRIPTION:Awareness and acceptance of autism spectrum disorders.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:obs-2025-04-28-mourning@3mpwr.app
+DTSTART:20250428
+DTEND:20250429
+SUMMARY:National Day of Mourning
+DESCRIPTION:Remembering workers killed\, injured or made ill at work.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:obs-2025-05-15-gaad@3mpwr.app
+DTSTART:20250515
+DTEND:20250516
+SUMMARY:Global Accessibility Awareness Day (GAAD)
+DESCRIPTION:Digital accessibility and inclusion awareness worldwide.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:obs-2025-06-01-injured-workers@3mpwr.app
+DTSTART:20250601
+DTEND:20250602
+SUMMARY:Injured Workers Day
+DESCRIPTION:Solidarity with injured and ill workers across Canada.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:obs-2025-06-01-deafblind-month@3mpwr.app
+DTSTART:20250601
+DTEND:20250701
+SUMMARY:Deafblind Awareness Month
+DESCRIPTION:Month-long observance raising awareness of deafblind experiences.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:obs-2025-09-23-sign-lang@3mpwr.app
+DTSTART:20250923
+DTEND:20250924
+SUMMARY:International Day of Sign Languages
+DESCRIPTION:Celebrating linguistic identity of deaf people and promoting sign languages.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:obs-2025-10-01-ndeam@3mpwr.app
+DTSTART:20251001
+DTEND:20251101
+SUMMARY:Disability Employment Awareness Month
+DESCRIPTION:National Disability Employment Awareness Month (NDEAM) in Canada.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:obs-2025-12-03-idpd@3mpwr.app
+DTSTART:20251203
+DTEND:20251204
+SUMMARY:International Day of Persons with Disabilities
+DESCRIPTION:Promoting rights and well-being of persons with disabilities worldwide.
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-01-01-newyear@3mpwr.app
+DTSTART:20250101
+DTEND:20250102
+SUMMARY:New Year's Day
+DESCRIPTION:Canadian statutory holiday
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-02-17-family@3mpwr.app
+DTSTART:20250217
+DTEND:20250218
+SUMMARY:Family Day
+DESCRIPTION:Provincial holiday in Ontario\, Alberta\, Saskatchewan\, British Columbia
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-04-18-goodfriday@3mpwr.app
+DTSTART:20250418
+DTEND:20250419
+SUMMARY:Good Friday
+DESCRIPTION:Canadian statutory holiday
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-04-21-eastermonday@3mpwr.app
+DTSTART:20250421
+DTEND:20250422
+SUMMARY:Easter Monday
+DESCRIPTION:Federal government holiday\, observed in some provinces
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-05-19-victoria@3mpwr.app
+DTSTART:20250519
+DTEND:20250520
+SUMMARY:Victoria Day
+DESCRIPTION:Canadian statutory holiday
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-06-24-stjeanbaptiste@3mpwr.app
+DTSTART:20250624
+DTEND:20250625
+SUMMARY:Saint-Jean-Baptiste Day
+DESCRIPTION:Provincial holiday in Quebec
+LOCATION:Quebec\, Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-07-01-canada@3mpwr.app
+DTSTART:20250701
+DTEND:20250702
+SUMMARY:Canada Day
+DESCRIPTION:Canadian statutory holiday celebrating Confederation
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-08-04-civic@3mpwr.app
+DTSTART:20250804
+DTEND:20250805
+SUMMARY:Civic Holiday
+DESCRIPTION:Provincial holiday in most provinces (various names)
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-09-01-labour@3mpwr.app
+DTSTART:20250901
+DTEND:20250902
+SUMMARY:Labour Day
+DESCRIPTION:Canadian statutory holiday celebrating workers' contributions
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-09-30-reconciliation@3mpwr.app
+DTSTART:20250930
+DTEND:20251001
+SUMMARY:National Day for Truth and Reconciliation
+DESCRIPTION:Federal statutory holiday honouring residential school survivors
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-10-13-thanksgiving@3mpwr.app
+DTSTART:20251013
+DTEND:20251014
+SUMMARY:Thanksgiving Day
+DESCRIPTION:Canadian statutory holiday
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-11-11-remembrance@3mpwr.app
+DTSTART:20251111
+DTEND:20251112
+SUMMARY:Remembrance Day
+DESCRIPTION:Statutory holiday in most provinces honouring veterans
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-12-25-christmas@3mpwr.app
+DTSTART:20251225
+DTEND:20251226
+SUMMARY:Christmas Day
+DESCRIPTION:Canadian statutory holiday
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+BEGIN:VEVENT
+UID:holiday-2025-12-26-boxing@3mpwr.app
+DTSTART:20251226
+DTEND:20251227
+SUMMARY:Boxing Day
+DESCRIPTION:Statutory holiday in most provinces
+LOCATION:Canada
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+END:VCALENDAR
