@@ -192,9 +192,6 @@ export async function notifyAllUsers(notification: {
 
     // TODO: Implement actual push sending via your backend
     // This requires storing user push tokens in Firestore
-    if (__DEV__) {
-      console.log('[Push Notification]', message);
-    }
 
     return { success: true, message };
   } catch (error) {
@@ -246,10 +243,10 @@ export async function sendCampaignNotification(campaign: {
  * Store user's push token in Firestore for later use
  * Call this after user logs in
  */
-export async function registerUserPushToken(userId: string) {
+export async function registerUserPushToken(_userId: string) {
   const token = await getExpoPushToken();
   if (!token) {
-    console.log('[Push] No token available');
+    // No token available in current environment
     return null;
   }
 
@@ -261,10 +258,6 @@ export async function registerUserPushToken(userId: string) {
     //   platform: Platform.OS,
     //   updatedAt: new Date().toISOString(),
     // });
-    
-    if (__DEV__) {
-      console.log('[Push] Token registered:', token.substring(0, 20) + '...');
-    }
     
     return token;
   } catch (error) {
