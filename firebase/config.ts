@@ -8,7 +8,27 @@ import { Platform } from "react-native";
 
 import { isHybridBYOC, isStrictBYOC } from "../services/dataPolicy";
 
+/**
+ * ⚠️ IMPORTANT: THIS IS THE DEFAULT DEMO FIREBASE CONFIG
+ * 
+ * DO NOT USE THIS CONFIG IN PRODUCTION!
+ * 
+ * This config points to 3mpwr's demo Firebase project for testing purposes only.
+ * 
+ * FOR PRODUCTION USE:
+ * 1. Create YOUR OWN Firebase project at https://firebase.google.com
+ * 2. Replace the config below with YOUR project's credentials
+ * 3. Deploy Cloud Functions to YOUR Firebase project
+ * 
+ * Your users' data will be stored in the Firebase project configured below.
+ * By default, this is 3mpwr's demo project. You MUST change this before deploying.
+ * 
+ * See firebase/functions/README.md for setup instructions.
+ */
+
 const firebaseConfig = {
+  // ⚠️ WARNING: Replace these with YOUR Firebase project credentials!
+  // This is 3mpwr's demo project - DO NOT use in production
   apiKey: "AIzaSyBv4rtD3it2yoIIFpxckCEXC9haKIbVjA8",
   authDomain: "empowrapp.firebaseapp.com",
   projectId: "empowrapp",
@@ -23,6 +43,30 @@ const IS_TEST = typeof process !== 'undefined' && !!process.env.JEST_WORKER_ID;
 const platformOS = (Platform as any)?.OS || 'web';
 const STRICT = isStrictBYOC();
 const HYBRID = isHybridBYOC();
+
+// Runtime check: Warn if using default 3mpwr Firebase config
+if (!STRICT && !IS_TEST && firebaseConfig.projectId === 'empowrapp') {
+  console.warn(
+    '\n' +
+    '⚠️⚠️⚠️ WARNING: USING DEFAULT 3MPWR FIREBASE PROJECT ⚠️⚠️⚠️\n' +
+    '\n' +
+    'You are using the default demo Firebase config!\n' +
+    'This config points to 3mpwr\'s demo Firebase project.\n' +
+    '\n' +
+    'DO NOT USE THIS IN PRODUCTION!\n' +
+    '\n' +
+    'Required actions:\n' +
+    '1. Create YOUR OWN Firebase project at https://firebase.google.com\n' +
+    '2. Replace config in firebase/config.ts with YOUR credentials\n' +
+    '3. Deploy Cloud Functions to YOUR Firebase project\n' +
+    '\n' +
+    'Your users\' data will be stored in the configured Firebase project.\n' +
+    'Using 3mpwr\'s project means data will be stored on our servers!\n' +
+    '\n' +
+    'See firebase/functions/README.md for setup instructions.\n' +
+    '\n'
+  );
+}
 
 // Ensure only one app is initialized (when not strict)
 export function getFirebaseApp(): FirebaseApp {

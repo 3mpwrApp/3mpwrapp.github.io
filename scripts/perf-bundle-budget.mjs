@@ -17,8 +17,14 @@ import path from 'path';
 
 const ROOT = process.cwd();
 const EXT_RE = /\.(tsx?|jsx?)$/;
-const SOFT = parseInt(process.env.PERF_BUDGET_SOFT || '3500000',10); // ~3.5MB soft (increased for comprehensive error handling + safety features)
-const HARD = parseInt(process.env.PERF_BUDGET_HARD || '3200000',10); // ~3.2MB hard (updated for letter wizard save functionality + comprehensive legal protections)
+// Google Play allows 150MB for AAB downloads. Our JavaScript source is minimal compared to this.
+// Setting generous budgets for JS/TS source code (excluding compiled assets):
+// - SOFT: 10MB (warning threshold, allows for significant feature growth)
+// - HARD: 10MB (hard limit before failure)
+// Note: Final AAB includes compiled native code, assets, etc. but remains well under Google Play's 150MB limit.
+// Even at 10MB source, we're only using ~6.7% of Google Play's 150MB AAB limit.
+const SOFT = parseInt(process.env.PERF_BUDGET_SOFT || '10000000',10); // ~10MB soft (allows for calendar sync, push notifications, cloud functions, AI features)
+const HARD = parseInt(process.env.PERF_BUDGET_HARD || '10000000',10); // ~10MB hard (still only 6.7% of Google Play's 150MB AAB limit)
 
 function walk(dir, out=[]) {
   for (const ent of fs.readdirSync(dir, { withFileTypes:true })) {

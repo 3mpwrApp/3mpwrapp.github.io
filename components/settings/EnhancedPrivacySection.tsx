@@ -45,6 +45,36 @@ export default function EnhancedPrivacySection() {
   const { state, setPasscode, setLockWellness, setErrorReportingEnabled } = usePrivacy();
   const { requirePasscodeOnLaunch, setRequirePasscodeOnLaunch, autoLockTimeout, setAutoLockTimeout, analyticsOptOut, setAnalyticsOptOut, saveSearchHistory, setSaveSearchHistory } = useSettings();
   const [cloudOn, setCloudOn] = React.useState<boolean>(isCloudConsentEnabled());
+  const [cloudProvider, setCloudProvider] = React.useState<'firebase' | 'webdav' | 'none'>('firebase');
+  
+  React.useEffect(() => {
+    // Load saved cloud provider preference
+    const loadProvider = async () => {
+      try {
+        const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
+        const saved = await AsyncStorage.getItem('empowr.cloud.provider');
+        if (saved === 'webdav' || saved === 'firebase' || saved === 'none') {
+          setCloudProvider(saved);
+        }
+      } catch {}
+    };
+    loadProvider();
+  }, []);
+  
+  const handleCloudProviderChange = async (provider: 'firebase' | 'webdav' | 'none') => {
+    setCloudProvider(provider);
+    try {
+      const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
+      await AsyncStorage.setItem('empowr.cloud.provider', provider);
+      
+      // Auto-disable cloud features if 'none' selected
+      if (provider === 'none') {
+        setCloudOn(false);
+        setCloudConsent(false);
+      }
+    } catch {}
+  };
+  
   const onExport = async () => {
      const bundle = await exportBackup();
      if (!bundle) return Alert.alert('Export failed','Storage unavailable.');
@@ -109,13 +139,136 @@ export default function EnhancedPrivacySection() {
       </View>
   <AccessibilityToggle title={t('settings.privacy.analytics','Opt Out of Analytics')} description={t('settings.privacy.analyticsDesc',"Don't share usage data")} value={analyticsOptOut} onValueChange={(v)=>{ setAnalyticsOptOut(v); try { setTelemetryConsent(!v); } catch {} }} icon='analytics' testID='analytics-toggle' />
   <AccessibilityToggle title='Cloud Features (Chat & Sync)' description='Allow optional cloud features like community chat and device tokens' value={cloudOn} onValueChange={(v)=>{ setCloudOn(!!v); try { setCloudConsent(!!v); } catch {} }} icon='cloud-outline' testID='cloud-consent-toggle' />
+      
+      {/* Cloud Provider Selection */}
+      {cloudOn && (
+        <View style={{ marginTop: 16, marginBottom: 8 }}>
+          <Text style={s.sectionSubtitle} accessibilityRole='header'>🔒 Bring Your Own Cloud (BYOC)</Text>
+          <Text style={[s.description, { fontWeight: '600', marginBottom: 8 }]}>
+            ⚠️ IMPORTANT: You must use YOUR OWN cloud storage. 3mpwr does NOT provide cloud storage.
+          </Text>
+          <Text style={s.description}>
+            Choose where YOUR data is stored. All options require your own accounts/servers. Your data will NEVER be stored on 3mpwr servers.
+          </Text>
+          <GapView style={s.buttonRow} gap={8}>
+            <A11yPressable 
+              style={[s.button, { flex: 1 }, cloudProvider === 'firebase' && s.buttonActive]} 
+              onPress={() => handleCloudProviderChange('firebase')} 
+              accessibilityRole='button' 
+              accessibilityState={{ selected: cloudProvider === 'firebase' }}
+              accessibilityLabel='Use your own Firebase project for cloud storage - not 3mpwr Firebase'
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='flame' size={18} color={cloudProvider === 'firebase' ? palette.onPrimary : palette.text} />
+              <Text style={[s.buttonText, cloudProvider === 'firebase' && s.buttonTextActive, { marginTop: 4 }]}>Firebase</Text>
+              <Text style={[{ fontSize: 10, opacity: 0.7, textAlign: 'center', marginTop: 2 }, cloudProvider === 'firebase' && { color: palette.onPrimary }]}>YOUR Project</Text>
+            </A11yPressable>
+            
+            <A11yPressable 
+              style={[s.button, { flex: 1 }, cloudProvider === 'webdav' && s.buttonActive]} 
+              onPress={() => handleCloudProviderChange('webdav')} 
+              accessibilityRole='button' 
+              accessibilityState={{ selected: cloudProvider === 'webdav' }}
+              accessibilityLabel='Use your personal WebDAV storage (Nextcloud, ownCloud, etc.)'
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='cloud' size={18} color={cloudProvider === 'webdav' ? palette.onPrimary : palette.text} />
+              <Text style={[s.buttonText, cloudProvider === 'webdav' && s.buttonTextActive, { marginTop: 4 }]}>WebDAV</Text>
+              <Text style={[{ fontSize: 10, opacity: 0.7, textAlign: 'center', marginTop: 2 }, cloudProvider === 'webdav' && { color: palette.onPrimary }]}>Your Server</Text>
+            </A11yPressable>
+            
+            <A11yPressable 
+              style={[s.button, { flex: 1 }, cloudProvider === 'none' && s.buttonActive]} 
+              onPress={() => handleCloudProviderChange('none')} 
+              accessibilityRole='button' 
+              accessibilityState={{ selected: cloudProvider === 'none' }}
+              accessibilityLabel='No cloud storage - local only'
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='phone-portrait' size={18} color={cloudProvider === 'none' ? palette.onPrimary : palette.text} />
+              <Text style={[s.buttonText, cloudProvider === 'none' && s.buttonTextActive, { marginTop: 4 }]}>Local Only</Text>
+              <Text style={[{ fontSize: 10, opacity: 0.7, textAlign: 'center', marginTop: 2 }, cloudProvider === 'none' && { color: palette.onPrimary }]}>No Cloud</Text>
+            </A11yPressable>
+          </GapView>
+          
+          {/* Provider-specific information */}
+          {cloudProvider === 'firebase' && (
+            <View style={{ marginTop: 12, padding: 12, backgroundColor: palette.card, borderRadius: 8, borderWidth: 1, borderColor: palette.warning || palette.primary }}>
+              <Text style={[s.description, { marginBottom: 8, fontWeight: '700' }]}>
+                <Ionicons name='warning' size={16} color={palette.warning || palette.primary} /> IMPORTANT: Use YOUR OWN Firebase Project
+              </Text>
+              <Text style={[s.description, { fontSize: 12, opacity: 0.9, marginBottom: 8 }]}>
+                <Text style={{ fontWeight: '700' }}>You MUST create your own Firebase project.</Text> Do NOT use 3mpwr's Firebase.{'\n\n'}
+                <Text style={{ fontWeight: '600' }}>Setup Required:{'\n'}</Text>
+                1. Create FREE Firebase account at firebase.google.com{'\n'}
+                2. Create a new Firebase project (YOUR project){'\n'}
+                3. Configure firebase/config.ts with YOUR credentials{'\n'}
+                4. Deploy Cloud Functions to YOUR project{'\n\n'}
+                <Text style={{ fontWeight: '600' }}>Your Benefits:{'\n'}</Text>
+                • 100% data ownership (your Firebase, your data){'\n'}
+                • No data on 3mpwr servers{'\n'}
+                • Free tier: 1GB storage, 10GB bandwidth/month{'\n'}
+                • Full control over security and privacy
+              </Text>
+              <A11yPressable
+                style={{ marginTop: 8, padding: 8, backgroundColor: palette.primary, borderRadius: 6, alignItems: 'center' }}
+                onPress={() => Alert.alert(
+                  'Firebase Setup Guide',
+                  'To use Firebase, you must:\n\n1. Create your own FREE Firebase project\n2. Never use 3mpwr\'s Firebase\n3. Configure YOUR credentials in firebase/config.ts\n4. Deploy Cloud Functions to YOUR project\n\nSee firebase/functions/README.md for detailed setup instructions.\n\nYour data will ONLY be stored in YOUR Firebase project.',
+                  [{ text: 'Got it!' }]
+                )}
+                accessibilityRole='button'
+                accessibilityLabel='View Firebase setup requirements'
+                hitSlop={HIT_SLOP_8}
+              >
+                <Text style={{ color: palette.onPrimary, fontSize: 12, fontWeight: '600' }}>
+                  📖 View Setup Guide
+                </Text>
+              </A11yPressable>
+            </View>
+          )}
+          
+          {cloudProvider === 'webdav' && (
+            <View style={{ marginTop: 12, padding: 12, backgroundColor: palette.card, borderRadius: 8, borderWidth: 1, borderColor: palette.muted }}>
+              <Text style={[s.description, { marginBottom: 8 }]}>
+                <Ionicons name='information-circle' size={16} color={palette.primary} /> Using WebDAV (Your Server)
+              </Text>
+              <Text style={[s.description, { fontSize: 12, opacity: 0.9, marginBottom: 8 }]}>
+                • Store data on YOUR personal server{'\n'}
+                • Compatible with Nextcloud, ownCloud, etc.{'\n'}
+                • Complete control over data location{'\n'}
+                • Configure connection details below
+              </Text>
+            </View>
+          )}
+          
+          {cloudProvider === 'none' && (
+            <View style={{ marginTop: 12, padding: 12, backgroundColor: palette.card, borderRadius: 8, borderWidth: 1, borderColor: palette.warning || palette.muted }}>
+              <Text style={[s.description, { marginBottom: 8 }]}>
+                <Ionicons name='warning' size={16} color={palette.warning || palette.text} /> Local Storage Only
+              </Text>
+              <Text style={[s.description, { fontSize: 12, opacity: 0.9, marginBottom: 0 }]}>
+                • All data stored on this device only{'\n'}
+                • No cloud backup or sync{'\n'}
+                • Data lost if device is lost/reset{'\n'}
+                • Most private option (offline-first)
+              </Text>
+            </View>
+          )}
+        </View>
+      )}
+      
       <AccessibilityToggle title='Error Reporting' description='Help improve the app by sharing crash reports' value={state.errorReportingEnabled ?? false} onValueChange={setErrorReportingEnabled} icon='bug' testID='error-reporting-toggle' />
       <AccessibilityToggle title='Save Search History' description='Remember your searches for quick access and autocomplete' value={saveSearchHistory} onValueChange={setSaveSearchHistory} icon='search' testID='search-history-toggle' />
       <View style={s.backupSection}>
         <Text style={s.sectionSubtitle} accessibilityRole='header'>Data Management</Text>
-        {strict && (
+        {(strict || cloudProvider === 'webdav') && (
           <View style={{ marginBottom:16 }}>
-            <Text style={[s.description, { marginBottom:8 }]}>Strict mode is ON: 100% user-owned storage. App/server storage is disabled.</Text>
+            <Text style={[s.description, { marginBottom:8 }]}>
+              {strict 
+                ? 'Strict mode is ON: 100% user-owned storage. App/server storage is disabled.' 
+                : 'WebDAV Storage: Connect your personal cloud storage (Nextcloud, ownCloud, etc.)'}
+            </Text>
             <Text style={s.rowLabel}>WebDAV Endpoint</Text>
             <TextInput style={s.input} placeholder='https://dav.example.com/remote.php/dav/files/username/' value={endpoint} onChangeText={setEndpoint} autoCapitalize='none' autoCorrect={false} keyboardType='url' accessibilityLabel='WebDAV endpoint' />
             <Text style={s.rowLabel}>Username (optional)</Text>
