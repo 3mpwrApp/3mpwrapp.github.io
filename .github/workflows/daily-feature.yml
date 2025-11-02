@@ -22,7 +22,7 @@ jobs:
   daily_feature:
     name: Generate Daily Feature Article
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 60  # Increased to accommodate 45-minute deployment wait
     permissions:
       contents: write
     
@@ -65,8 +65,9 @@ jobs:
 
       - name: Wait for deployment
         run: |
-          echo "⏳ Waiting 2 minutes for Cloudflare Pages to deploy..."
-          sleep 120
+          echo "⏳ Waiting 45 minutes for Cloudflare Pages to build and deploy..."
+          echo "This ensures the feature article page is live before posting to social media"
+          sleep 2700  # 45 minutes = 2700 seconds
 
       - name: Post to social media
         env:
