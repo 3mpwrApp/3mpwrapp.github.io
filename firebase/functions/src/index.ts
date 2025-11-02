@@ -181,7 +181,7 @@ export const cleanupOldEvidenceFiles = functions.pubsub
  * Sync user data across devices
  * Triggered when sync is requested from any device
  */
-export const syncUserData = functions.https.onCall(async (data: any, context: functions.https.CallableContext) => {
+export const syncUserData = functions.https.onCall(async (_data: any, context: functions.https.CallableContext) => {
   const userId = context.auth?.uid;
   if (!userId) {
     throw new functions.https.HttpsError('unauthenticated', 'User must be authenticated');
@@ -223,7 +223,7 @@ export const syncUserData = functions.https.onCall(async (data: any, context: fu
  * Delete all user cloud data
  * Callable when user disables cloud consent or deletes account
  */
-export const deleteUserCloudData = functions.https.onCall(async (data: any, context: functions.https.CallableContext) => {
+export const deleteUserCloudData = functions.https.onCall(async (_data: any, context: functions.https.CallableContext) => {
   const userId = context.auth?.uid;
   if (!userId) {
     throw new functions.https.HttpsError('unauthenticated', 'User must be authenticated');
@@ -408,7 +408,7 @@ export const cleanupPushReceipts = functions.pubsub
  * Export all user data for GDPR compliance
  * Returns a complete JSON export of user's cloud data
  */
-export const exportUserData = functions.https.onCall(async (data: any, context: functions.https.CallableContext) => {
+export const exportUserData = functions.https.onCall(async (_data: any, context: functions.https.CallableContext) => {
   const userId = context.auth?.uid;
   if (!userId) {
     throw new functions.https.HttpsError('unauthenticated', 'User must be authenticated');
