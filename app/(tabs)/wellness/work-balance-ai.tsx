@@ -59,7 +59,7 @@ export default function WorkBalanceAI() {
 
   const generate = async () => {
     if (!metrics) {
-      Alert.alert('No Data', 'Please log some sleep and symptom data first to generate a personalized plan.');
+      Alert.alert('No Data', 'Please log some sleep and symptom data in the Symptom Tracker first to generate a personalized plan.');
       return;
     }
 

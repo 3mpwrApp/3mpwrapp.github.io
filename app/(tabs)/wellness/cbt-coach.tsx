@@ -22,6 +22,8 @@ interface CBTEntry {
   timestamp: number;
 }
 
+const EXTREME_THINKING_PATTERN = /always|never|everyone|no one|worst|terrible|awful/i;
+
 export default function CBTCoach(){
   const { t } = useTranslation();
   const palette = useAppPalette();
@@ -73,7 +75,7 @@ export default function CBTCoach(){
       parts.push('');
       
       // Check for extreme thinking patterns
-      const hasExtreme = /always|never|everyone|no one|worst|terrible|awful/i.test(thought);
+      const hasExtreme = EXTREME_THINKING_PATTERN.test(thought);
       if (hasExtreme) {
         parts.push('⚠️ Notice: This thought contains absolute language (always/never). Reality is often more nuanced.');
         parts.push('');

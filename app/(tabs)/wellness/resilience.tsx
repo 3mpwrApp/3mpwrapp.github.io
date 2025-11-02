@@ -18,6 +18,8 @@ export default function ResiliencePoints() {
   useAnnounceOnMount('Resilience Points');
   useFocusOnRefOnMount(titleRef);
 
+  const MILESTONES = [100, 250, 500, 1000];
+
   const getPointsLevel = (points: number) => {
     if (points >= 1000) return { level: 'Champion', color: palette.success, icon: '🏆' };
     if (points >= 500) return { level: 'Warrior', color: palette.info, icon: '⚔️' };
@@ -27,7 +29,9 @@ export default function ResiliencePoints() {
   };
 
   const level = getPointsLevel(rs.points);
-  const nextMilestone = rs.points < 100 ? 100 : rs.points < 250 ? 250 : rs.points < 500 ? 500 : 1000;
+  
+  // Find next milestone
+  const nextMilestone = MILESTONES.find(m => m > rs.points) || MILESTONES[MILESTONES.length - 1];
   const progress = ((rs.points % nextMilestone) / nextMilestone) * 100;
 
   return (
