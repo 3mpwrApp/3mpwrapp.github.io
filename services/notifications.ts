@@ -158,3 +158,117 @@ try {
       }) as any,
   });
 } catch {}
+
+// ============================================================================
+// Push Notifications for Events & Campaigns
+// ============================================================================
+
+/**
+ * Send push notification to all users via Expo Push API
+ * Used when admin creates new events or campaigns
+ */
+export async function notifyAllUsers(notification: {
+  title: string;
+  body: string;
+  data?: Record<string, any>;
+  sound?: 'default' | null;
+  badge?: number;
+}) {
+  try {
+    // In production, you would:
+    // 1. Get all user push tokens from Firestore
+    // 2. Send to Expo Push API
+    // 3. Handle receipts
+    
+    // For now, send to a test token or use Firebase Cloud Functions
+    const message = {
+      to: 'all', // In reality, this would be an array of ExponentPushToken[...]
+      sound: notification.sound || 'default',
+      title: notification.title,
+      body: notification.body,
+      data: notification.data || {},
+      badge: notification.badge,
+    };
+
+    // TODO: Implement actual push sending via your backend
+    // This requires storing user push tokens in Firestore
+    if (__DEV__) {
+      console.log('[Push Notification]', message);
+    }
+
+    return { success: true, message };
+  } catch (error) {
+    console.error('[Push Notification Error]', error);
+    return { success: false, error };
+  }
+}
+
+/**
+ * Send notification when a new event is created
+ */
+export async function sendEventNotification(event: {
+  id: string;
+  title: string;
+  date: string;
+  location?: string;
+}) {
+  return notifyAllUsers({
+    title: '📅 New Event Added!',
+    body: `${event.title} - ${event.date}`,
+    data: {
+      type: 'event',
+      eventId: event.id,
+      screen: '/events/' + event.id,
+    },
+  });
+}
+
+/**
+ * Send notification when a new campaign is created
+ */
+export async function sendCampaignNotification(campaign: {
+  id: string;
+  title: string;
+  summary?: string;
+}) {
+  return notifyAllUsers({
+    title: '📢 New Campaign!',
+    body: campaign.summary || campaign.title,
+    data: {
+      type: 'campaign',
+      campaignId: campaign.id,
+      screen: '/campaigns/' + campaign.id,
+    },
+  });
+}
+
+/**
+ * Store user's push token in Firestore for later use
+ * Call this after user logs in
+ */
+export async function registerUserPushToken(userId: string) {
+  const token = await getExpoPushToken();
+  if (!token) {
+    console.log('[Push] No token available');
+    return null;
+  }
+
+  try {
+    // Store token in Firestore
+    // TODO: Import Firestore and save token
+    // await setDoc(doc(db, 'userTokens', userId), {
+    //   token,
+    //   platform: Platform.OS,
+    //   updatedAt: new Date().toISOString(),
+    // });
+    
+    if (__DEV__) {
+      console.log('[Push] Token registered:', token.substring(0, 20) + '...');
+    }
+    
+    return token;
+  } catch (error) {
+    console.error('[Push] Token registration failed:', error);
+    return null;
+  }
+}
