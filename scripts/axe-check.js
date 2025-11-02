@@ -4,13 +4,14 @@
 const { chromium } = require('playwright');
 const AxeBuilder = require('@axe-core/playwright').default;
 const fs = require('fs');
+const siteConfig = require('./site-config');
 
 (async () => {
   const browser = await chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  const base = process.env.SITE_URL || 'https://3mpwrapp.pages.dev';
+  const base = process.env.SITE_URL || siteConfig.url;
   const q = '?no-modal=1';
   const mode = (process.env.AXE_MODE || 'quick').toLowerCase();
   const quick = [

@@ -1,13 +1,14 @@
 // Accessibility check for French pages
 const { chromium } = require('playwright');
 const AxeBuilder = require('@axe-core/playwright').default;
+const siteConfig = require('./site-config');
 
 (async () => {
   const browser = await chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  const base = process.env.SITE_URL || 'https://3mpwrapp.pages.dev';
+  const base = process.env.SITE_URL || siteConfig.url;
   const urls = [
     `${base}/fr?no-modal=1`,
     `${base}/fr/faq?no-modal=1`,

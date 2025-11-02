@@ -4,6 +4,7 @@
 const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
+const siteConfig = require('./site-config');
 
 (async () => {
   console.log('🚀 Starting PDF generation...');
@@ -12,7 +13,7 @@ const fs = require('fs');
   const page = await browser.newPage();
   
   // Load the rendered HTML from the live site
-  const url = 'https://3mpwrapp.pages.dev/user-guide/';
+  const url = siteConfig.getAbsoluteUrl('/user-guide/');
   console.log(`📄 Loading page: ${url}`);
   
   await page.goto(url, { waitUntil: 'networkidle' });

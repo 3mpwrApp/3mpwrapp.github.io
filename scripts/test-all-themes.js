@@ -10,8 +10,9 @@
 const { chromium } = require('playwright');
 const AxeBuilder = require('@axe-core/playwright').default;
 const fs = require('fs');
+const siteConfig = require('./site-config');
 
-const BASE_URL = process.env.TEST_URL || 'https://3mpwrapp.pages.dev';
+const BASE_URL = process.env.TEST_URL || siteConfig.url;
 
 // All pages to test
 const PAGES = [
