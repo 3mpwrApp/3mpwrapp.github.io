@@ -1,7 +1,7 @@
 title: 3mpwr App
 description: Practical tools and community for injured workers and persons with disabilities.
 baseurl: ""
-url: "https://3mpwrapp.github.io"  # Official GitHub Pages URL
+url: "https://3mpwrapp.pages.dev"  # Primary Cloudflare Pages URL (GitHub Pages is backup)
 
 # Theme and markdown
 markdown: kramdown

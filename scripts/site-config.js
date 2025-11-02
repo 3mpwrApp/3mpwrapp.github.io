@@ -19,17 +19,18 @@ function loadSiteUrl() {
   try {
     const configContent = fs.readFileSync(configPath, 'utf-8');
     
-    // Parse the url line from _config.yml
-    const urlMatch = configContent.match(/^url:\s*["'](.+?)["']/m);
-    if (urlMatch && urlMatch[1]) {
-      return urlMatch[1];
+    // Parse the url line from _config.yml (handles both quoted and unquoted values)
+    const urlMatch = configContent.match(/^url:\s*(?:["'](.+?)["']|([^\s#]+))/m);
+    if (urlMatch) {
+      // Return the captured group (either quoted or unquoted)
+      return urlMatch[1] || urlMatch[2];
     }
   } catch (err) {
     console.warn('Warning: Could not read _config.yml, using default URL');
   }
   
-  // Fallback to GitHub Pages URL
-  return 'https://3mpwrapp.github.io';
+  // Fallback to Cloudflare Pages URL (primary site)
+  return 'https://3mpwrapp.pages.dev';
 }
 
 /**
