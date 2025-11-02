@@ -31,10 +31,10 @@ const BADGE_ICONS: Record<BadgeType, string> = {
 // All colors now meet 4.5:1 minimum contrast ratio on white background
 /* eslint-disable no-restricted-syntax */
 const BADGE_COLORS: Record<BadgeType, string> = {
-  betaTester: '#C23E0F', // Dark orange - AA compliant (4.5:1) (was #D14A1F)
-  earlyAdopter: '#9F7D08', // Dark gold - AA compliant (4.5:1) (was #B8960A)
-  contributor: '#1F7A73', // Dark teal - AA compliant (4.5:1) (was #2A9D94)
-  verified: '#2E7D32', // Dark green - AA compliant (4.5:1) (was #388E3C)
+  betaTester: '#A84514', // Darker orange for AA compliance (improved from #C23E0F and #D14A1F)
+  earlyAdopter: '#7D5E06', // Darker gold for AA compliance (improved from #9F7D08 and #B8960A)
+  contributor: '#1A6158', // Darker teal for AA compliance (improved from #1F7A73 and #2A9D94)
+  verified: '#1B5E20', // Darker green for AA compliance (improved from #2E7D32 and #388E3C)
 };
 /* eslint-enable no-restricted-syntax */
 
