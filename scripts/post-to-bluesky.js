@@ -13,6 +13,7 @@
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const siteConfig = require('./site-config');
 
 // Configuration
 const BLUESKY_HANDLE = process.env.BLUESKY_HANDLE || '3mpwrapp.bsky.social';
@@ -238,7 +239,7 @@ function formatBlueskyThread(items) {
   });
 
   // Final post - link to website
-  let finalPost = `🔗 Read more stories & resources:\nhttps://3mpwrapp.pages.dev/\n📖 User Guide: https://3mpwrapp.pages.dev/user-guide/\n\n#news #curation #accessibility #disability #workers`;
+  let finalPost = `🔗 Read more stories & resources:\n${siteConfig.url}/\n📖 User Guide: ${siteConfig.getAbsoluteUrl('/user-guide/')}\n\n#news #curation #accessibility #disability #workers`;
   posts.push(finalPost);
 
   return posts;

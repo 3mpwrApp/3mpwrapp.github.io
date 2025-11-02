@@ -15,10 +15,11 @@
 
 const fs = require('fs');
 const path = require('path');
+const siteConfig = require('./site-config');
 
 class CuratorImages {
   constructor() {
-    this.siteUrl = 'https://3mpwrapp.pages.dev';
+    this.siteUrl = siteConfig.url;
     this.imagesDir = path.join(process.cwd(), 'public', 'images', 'social-cards');
   }
 

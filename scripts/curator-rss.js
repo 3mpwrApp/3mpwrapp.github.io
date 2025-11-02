@@ -12,10 +12,11 @@
 
 const fs = require('fs');
 const path = require('path');
+const siteConfig = require('./site-config');
 
 class CuratorRSS {
   constructor() {
-    this.siteUrl = 'https://3mpwrapp.pages.dev';
+    this.siteUrl = siteConfig.url;
     this.feedPath = path.join(process.cwd(), 'public', 'feeds', 'curated.xml');
   }
 

@@ -29,10 +29,11 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const siteConfig = require('./site-config');
 
 // Configuration
 const CONFIG = {
-  baseUrl: 'https://3mpwrapp.pages.dev',
+  baseUrl: siteConfig.url,
   socialHandles: {
     x: '@3mpowrApp0816',
     instagram: '@3mpwrapp',

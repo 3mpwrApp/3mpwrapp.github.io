@@ -4,6 +4,7 @@
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const siteConfig = require('./site-config');
 
 // Disability organizations and advocates to monitor
 const SOCIAL_ACCOUNTS = {
@@ -135,7 +136,7 @@ function httpsGet(url, timeoutMs = 10000) {
   return new Promise((resolve, reject) => {
     const req = https.get(url, {
       headers: {
-        'User-Agent': '3mpwrApp/1.0 (+https://3mpwrapp.pages.dev/)'
+        'User-Agent': siteConfig.getUserAgent()
       }
     }, (res) => {
       let data = '';

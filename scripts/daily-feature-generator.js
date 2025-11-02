@@ -14,6 +14,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const siteConfig = require('./site-config');
 
 class DailyFeatureGenerator {
   constructor() {
@@ -416,7 +417,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
    * Generate social media post content
    */
   generateSocialPost(feature, articleUrl) {
-    const fullUrl = `https://3mpwrapp.pages.dev${articleUrl}`;
+    const fullUrl = siteConfig.getAbsoluteUrl(articleUrl);
     
     // Short version for Twitter/Bluesky (< 280 chars with link)
     const shortPost = `🌟 Feature Spotlight: ${feature.name}
