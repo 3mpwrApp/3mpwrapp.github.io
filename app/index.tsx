@@ -71,7 +71,10 @@ export default function Index() {
 
   // Handle redirect using useEffect to avoid middleware issues
   useEffect(() => {
-    if (hasNavigated) return; // Prevent re-navigation
+    if (hasNavigated) {
+      logger.debug('Already navigated, skipping');
+      return; // Prevent re-navigation
+    }
     
     // Add timeout to prevent infinite loading
     const timeout = setTimeout(() => {
@@ -86,30 +89,38 @@ export default function Index() {
       clearTimeout(timeout);
       const inAuthFlow = (segments as string[]).includes('auth');
       const inTabsFlow = (segments as string[]).includes('tabs');
+      const segmentsStr = segments.join('/');
       
-      logger.debug('Index navigation check', { 
+      logger.log('Index navigation check', { 
         user: !!user, 
         inAuthFlow, 
         inTabsFlow,
-        segments: segments.join('/'),
+        segments: segmentsStr,
         hasNavigated
       });
       
-      // Prevent navigation if we've already navigated or if we're already in the right place
-      if (!inAuthFlow && !inTabsFlow) {
+      // Only navigate if we're at the root index (no segments or just 'index')
+      // If user is already in auth or tabs flow, don't interfere
+      if (inAuthFlow || inTabsFlow) {
+        logger.log('Already in correct flow, not navigating', { inAuthFlow, inTabsFlow });
+        return;
+      }
+      
+      // We're at root index - do initial navigation
+      if (!segmentsStr || segmentsStr === 'index' || segmentsStr === '') {
         setHasNavigated(true);
         if (!user) {
-          logger.debug('Redirecting to login');
+          logger.log('No user found - Redirecting to login');
           router.replace('/(auth)/login');
         } else {
-          logger.debug('Redirecting to tabs');
+          logger.log('User authenticated - Redirecting to tabs/home');
           router.replace('/(tabs)');
         }
       }
     }
 
     return () => clearTimeout(timeout);
-  }, [loading, user, hasNavigated]); // Track hasNavigated to prevent loops
+  }, [loading, user, hasNavigated, segments]); // Track hasNavigated to prevent loops
 
   // Show loading state while auth initializes or during redirect
   return (
