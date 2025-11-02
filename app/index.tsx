@@ -1,6 +1,6 @@
 import * as Linking from 'expo-linking';
 import { useRouter, useSegments } from 'expo-router';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { ActivityIndicator, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
@@ -13,6 +13,8 @@ export default function Index() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const segments = useSegments();
+  
+  const [hasNavigated, setHasNavigated] = React.useState(false);
 
   // Store the deep link path for resuming after login
   useEffect(() => {
@@ -69,19 +71,45 @@ export default function Index() {
 
   // Handle redirect using useEffect to avoid middleware issues
   useEffect(() => {
+    if (hasNavigated) return; // Prevent re-navigation
+    
+    // Add timeout to prevent infinite loading
+    const timeout = setTimeout(() => {
+      if (loading) {
+        logger.warn('Auth loading timeout - forcing navigation to login');
+        setHasNavigated(true);
+        router.replace('/(auth)/login');
+      }
+    }, 5000);
+
     if (!loading) {
+      clearTimeout(timeout);
       const inAuthFlow = (segments as string[]).includes('auth');
       const inTabsFlow = (segments as string[]).includes('tabs');
       
-      if (!user && !inAuthFlow) {
-        // Only redirect to login if we're not already in auth flow
-        router.replace('/(auth)/login');
-      } else if (user && !inTabsFlow) {
-        // Only redirect to tabs if we're not already there
-        router.replace('/(tabs)');
+      logger.debug('Index navigation check', { 
+        user: !!user, 
+        inAuthFlow, 
+        inTabsFlow,
+        segments: segments.join('/'),
+        hasNavigated
+      });
+      
+      // Prevent navigation if we've already navigated or if we're already in the right place
+      if (!inAuthFlow && !inTabsFlow) {
+        setHasNavigated(true);
+        if (!user) {
+          logger.debug('Redirecting to login');
+          router.replace('/(auth)/login');
+        } else {
+          logger.debug('Redirecting to tabs');
+          router.replace('/(tabs)');
+        }
       }
     }
-  }, [loading, user]); // Removed router and segments from deps to prevent infinite loops
+
+    return () => clearTimeout(timeout);
+  }, [loading, user, hasNavigated]); // Track hasNavigated to prevent loops
 
   // Show loading state while auth initializes or during redirect
   return (
