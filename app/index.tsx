@@ -70,15 +70,18 @@ export default function Index() {
   // Handle redirect using useEffect to avoid middleware issues
   useEffect(() => {
     if (!loading) {
-      if (!user && !(segments as string[]).includes('auth')) {
+      const inAuthFlow = (segments as string[]).includes('auth');
+      const inTabsFlow = (segments as string[]).includes('tabs');
+      
+      if (!user && !inAuthFlow) {
         // Only redirect to login if we're not already in auth flow
         router.replace('/(auth)/login');
-      } else if (user && !(segments as string[]).includes('tabs')) {
+      } else if (user && !inTabsFlow) {
         // Only redirect to tabs if we're not already there
         router.replace('/(tabs)');
       }
     }
-  }, [loading, user, router, segments]);
+  }, [loading, user]); // Removed router and segments from deps to prevent infinite loops
 
   // Show loading state while auth initializes or during redirect
   return (
