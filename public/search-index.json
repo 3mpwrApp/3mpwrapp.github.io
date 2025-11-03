@@ -1,8 +1,26 @@
 {
   "version": "1.0.0",
   "generated": "2025-11-03",
-  "totalDocuments": 85,
+  "totalDocuments": 86,
   "documents": [
+    {
+      "id": "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "source": "blog",
+      "title": "Feature Spotlight: Evidence Locker",
+      "excerpt": "Feature Spotlight: Evidence Locker Category: Core Feature Securely store important documents with AES-256 encryption and organized categories --- What Is Evidence Locker? Evidence Locker is designed t",
+      "content": "Feature Spotlight: Evidence Locker Category: Core Feature Securely store important documents with AES-256 encryption and organized categories --- What Is Evidence Locker? Evidence Locker is designed to securely store important documents with aes-256 encryption and organized categories. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- Key Highlights - Enterprise-grade AES-256 encryption for all documents - Organized categories: Medical, Legal, Employment, Benefits, Personal - Photo scanning with automatic date stamping - Document tagging and search functionality - Offline access to all stored documents - Export options for sharing with lawyers or representatives --- How It Works Here are real examples of how you can use Evidence Locker: 1. Store medical reports and doctor's notes securely 2. Keep copies of denied benefit letters for appeals 3. Document workplace incidents with photos and notes 4. Organize employment records and accommodation requests 5. Save correspondence with government agencies --- Why Evidence Locker Matters - Never lose important documents again - Have evidence ready when you need it - Organize documents for legal processes - Access your documents offline anytime --- Getting Started Ready to try Evidence Locker? Here's how to get started: 1. Download the app - Available on iOS and Android (coming soon) 2. Complete setup - Takes just 5 minutes 3. Find the feature - Look for \"Evidence Locker\" in your app 4. Follow the guide - In-app tutorials walk you through each step --- Learn More For complete information about Evidence Locker and all other features: - 📖 Read the Complete User Guide - ✨ Explore All Features - 🧪 Join Beta Testing - 📬 Subscribe to Updates --- About 3mpwrApp 3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core. All features are: - ✅ Fully accessible (WCAG 2.2 AA+) - 🔒 Privacy-first (local-first architecture) - 🇨🇦 Canadian-focused (all provinces/territories) - 🌍 Culturally inclusive (Indigenous languages supported)",
+      "date": "2025-11-03 09:00:00 +0000",
+      "tags": [
+        "features",
+        "spotlight",
+        "core-feature"
+      ],
+      "categories": [
+        "features"
+      ],
+      "url": "/2025-11-03-feature-spotlight-evidence-locker",
+      "filesize": 2310
+    },
     {
       "id": "blog/2025-11-03-weekly-update-week-45.md",
       "source": "blog",
@@ -24,8 +42,8 @@
       "id": "blog/2025-11-03-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2025-11-03",
-      "excerpt": "Daily News Curation - 2025-11-03 Curated 32 items from disability, accessibility, and social policy sources. 1. Can the federal budget reset Canada's economy? Canada's economy is suffering. The Bank o",
-      "content": "Daily News Curation - 2025-11-03 Curated 32 items from disability, accessibility, and social policy sources. 1. Can the federal budget reset Canada's economy? Canada's economy is suffering. The Bank of Canada says interest rate cuts can only do so much. So it's passed the baton to the federal government. This week's budget can do what the central bank cannot: restructure how the Canadian economy grows. 📍 Source Score: 24.50 2. Canada collected $3B from U.S. counter-tariffs before a majority were dropped Canada had collected more than $3 billion through U.S. counter-tariffs before removing a swath of levies in September, according to the Finance Department — far less than what the Liberals had promised to rake in during the current fiscal year. 📍 Source Score: 14.00 3. Soraya Martinez Ferrada is Montreal's next mayor, CBC News projects 📍 Source Score: 9.50 4. Former federal minister Soraya Martinez Ferrada elected mayor of Montreal Montreal's new mayor has pledged to tackle homelessness and to audit the city's bike paths, which have sparked a backlash from some drivers and business owners. 📍 Source Score: 8.00 5. 'We'll be back': What's next for the Blue Jays after heartbreaking World Series loss? While the Blue Jays heal physically, general manager Ross Atkins has some work to do too. Several key players from Toronto's playoff run are set to become free agents in the off-season. 📍 Source Score: 9.30 6. Toronto transit services under fire for not extending service following World Series Game 7 Toronto public transit services and politicians are facing backlash on social media following Game 7 of the World Series because some transit services were not extended past 1:30 a.m. 📍 Source Score: 9.70 7. Albertans shouldn't expect a ‘general strike' anytime soon While Alberta labour groups promised swift retribution after the province forced teachers back to work, the head of the union admits a general strike won't happen overnight. 📍 Source Score: 9.00 8. CPKC train derails near B.C. community, officials say no danger to water system The Canadian Pacific Kansas City railway company says a locomotive and several cars, some with fuel, derailed on Saturday. TNRD officials say clean-up efforts are underway. 📍 Source Score: 7.50 9. Say Hi to Tech Bro Carney As his government heedlessly embraces artificial intelligence, the threats to Canadians are clear. 📍 Source Score: 7.50 10. After World Series loss, what's next for the Toronto Blue Jays? Following the Toronto Blue Jays' heartbreaking Game 7 loss, some of the players are set to become free agents in the off-season, so what's next for the team. 📍 Source Score: 4.80 11. Newfoundland's Between Breaths makes Western Canadian debut at the Firehall A moving look at Dr. Jon Lien’s life, from rescuing whales to facing dementia. 📍 Source Score: 5.50 12. Manitoba Adds Thousands of Jobs in September 📍 Source Score: 4.50 13. Manitoba Wildfire First Responders Inducted into Order of The Buffalo Hunt 📍 Source Score: 4.50 14. Spectre of 1995’s budget cuts has public sector unions on edge 📍 Source Score: 4.50 15. Four things on Quebec's municipal elections Here are four things to know about the province's municipal election results. 📍 Source Score: 4.50 16. Bruno Marchand wins second term as mayor of Quebec City As the incumbent mayor, Marchand had to defend his record against attacks from his opponents during the campaign. 📍 Source Score: 4.50 17. Alberta hunter recalls own grizzly bear close call, urges hunting safety A hunter is recalling how he was almost attacked by a grizzly bear in Alberta six years ago in the same location where another man was attacked earlier this week. 📍 Source Score: 4.50 18. Five underrated Halloween horror films for the spooky season's final stretch From toy rabbits to punk-club green rooms, prepare to be scared. 📍 Source Score: 4.50 19. Zappa Nite at the Rickshaw: Halloween comes early this Friday “We do work hard to play his music well.\" 📍 Source Score: 4.50 20. You Nearly Missed: Our top picks from the 2025 Chilliwack Independent Film Festival From cult cinema to queer storytelling, five standout picks from this year’s program. 📍 Source Score: 4.50 21. Photos: Shawn Mendes returns to Rogers Arena “proud to be Canadian” It was an emotional night for Mendes and his fans. 📍 Source Score: 4.50 22. The final scoop: Dolce Amore goes full service Dolce Amore levels up from gelato empire to full-blown Italian affair. 📍 Source Score: 3.90 23. B.C.'s breweries warn that unless tax rules change, the industry will suffer Get the best of Vancouver in your inbox, every Tuesday and Thursday. Sign up for our free newsletter. 📍 Source Score: 4.50 24. Wolf Alice finds a clearing in the noise Get the best of Vancouver in your inbox, every Tuesday and Thursday. Sign up for our free newsletter. 📍 Source Score: 4.50 25. Glitch Theatre debuts with neurodivergent-led premiere New name, new mandate, and a neurodivergent-led creative team define the company’s 2025 launch. 📍 Source Score: 2.00 26. Suki’s: Fifty-four years of style, education, and legacy For 54 years, Suki’s has shaped Vancouver’s hair culture through artistry and education. Named Best Salon in the Georgia Straight’s Best of Vancouver 2025, the iconic brand continues to set the standard for innovation, collaboration, and timeless style—from its world-class Academy to its visionary team. 📍 Source Score: 2.60 27. Peliplat steps up to back Vancouver's writing community \"The future of creativity is human.\" 📍 Source Score: 3.00 28. Measles Update #41 📍 Source Score: 1.20 29. Measles Update #40 📍 Source Score: 1.20 30. Man charged in fatal shooting at SUV Police in Saskatchewan say a man has been charged in a September shooting on a stretch of highway that claimed the life of Tanya Myers, a passenger in an SUV. 📍 Source Score: 1.30 31. Nova Scotia's Kate Beaton has her Ducks in a row at Vancouver Writers Fest The graphic novellist and children's book author makes her way to Vancouver. 📍 Source Score: 1.00 32. Dusty duffel bag found in Italy revives story of Cape Bretoner killed in WW II Michele Facchini, a Second World War researcher, found a duffel bag of a Cape Breton soldier in Italy. With it, Facchini unearthed the story of Hector Colin McDonald. 📍 Source Score: 1.00",
+      "excerpt": "Daily News Curation - 2025-11-03 Curated 6 items from disability, accessibility, and social policy sources. 1. Rally for defending public education got a bigger crowd than the one for Alberta separati",
+      "content": "Daily News Curation - 2025-11-03 Curated 6 items from disability, accessibility, and social policy sources. 1. Rally for defending public education got a bigger crowd than the one for Alberta separation 📍 Source Score: 11.60 2. Mark Carney’s high-stakes first budget Does Prime Minister Carney have the votes to get his first budget passed – or could we be looking at another election? 📍 Source Score: 9.00 3. Soraya Martinez Ferrada is Montreal’s new mayor. What’s next? 📍 Source Score: 5.00 4. As water dries up in northeast B.C., some want industrial users paying more to pump it Environmental groups are calling on the B.C. government to raise industrial water rates as drought deepens and demand for freshwater rises in some areas of the province. 📍 Source Score: 7.00 5. B.C., feds to kick off forestry summit amid U.S. tariff impacts B.C.'s goal for the summit is to push for more help from the federal government for an industry which employs tens of thousands of workers in the province. 📍 Source Score: 6.00 6. Fire that grew to become part of Nova Scotia’s largest wildfire started on this man’s property Court documents from last month’s sentencing of Dalton Stewart, who was charged under the Forests Act, revealed the fire was set on land owned by Mervyn Perry. Perry says it will take years for his land to get back to what it used to be like. 📍 Source Score: 1.00",
       "date": "2025-11-03",
       "tags": [
         "highlights"
@@ -35,7 +53,7 @@
         "news"
       ],
       "url": "/2025-11-03-daily-curation",
-      "filesize": 6313
+      "filesize": 1385
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -353,13 +371,13 @@
       "id": "curation/2025-11-03-curated.md",
       "source": "curation",
       "title": "2025-11-03-curated.md",
-      "excerpt": "Daily News Curation - 2025-11-03 Curated 32 items from disability, accessibility, and social policy sources. 1. Can the federal budget reset Canada's economy? Canada's economy is suffering. The Bank o",
-      "content": "Daily News Curation - 2025-11-03 Curated 32 items from disability, accessibility, and social policy sources. 1. Can the federal budget reset Canada's economy? Canada's economy is suffering. The Bank of Canada says interest rate cuts can only do so much. So it's passed the baton to the federal government. This week's budget can do what the central bank cannot: restructure how the Canadian economy grows. 📍 Source Score: 24.50 2. Canada collected $3B from U.S. counter-tariffs before a majority were dropped Canada had collected more than $3 billion through U.S. counter-tariffs before removing a swath of levies in September, according to the Finance Department — far less than what the Liberals had promised to rake in during the current fiscal year. 📍 Source Score: 14.00 3. Soraya Martinez Ferrada is Montreal's next mayor, CBC News projects 📍 Source Score: 9.50 4. Former federal minister Soraya Martinez Ferrada elected mayor of Montreal Montreal's new mayor has pledged to tackle homelessness and to audit the city's bike paths, which have sparked a backlash from some drivers and business owners. 📍 Source Score: 8.00 5. 'We'll be back': What's next for the Blue Jays after heartbreaking World Series loss? While the Blue Jays heal physically, general manager Ross Atkins has some work to do too. Several key players from Toronto's playoff run are set to become free agents in the off-season. 📍 Source Score: 9.30 6. Toronto transit services under fire for not extending service following World Series Game 7 Toronto public transit services and politicians are facing backlash on social media following Game 7 of the World Series because some transit services were not extended past 1:30 a.m. 📍 Source Score: 9.70 7. Albertans shouldn't expect a ‘general strike' anytime soon While Alberta labour groups promised swift retribution after the province forced teachers back to work, the head of the union admits a general strike won't happen overnight. 📍 Source Score: 9.00 8. CPKC train derails near B.C. community, officials say no danger to water system The Canadian Pacific Kansas City railway company says a locomotive and several cars, some with fuel, derailed on Saturday. TNRD officials say clean-up efforts are underway. 📍 Source Score: 7.50 9. Say Hi to Tech Bro Carney As his government heedlessly embraces artificial intelligence, the threats to Canadians are clear. 📍 Source Score: 7.50 10. After World Series loss, what's next for the Toronto Blue Jays? Following the Toronto Blue Jays' heartbreaking Game 7 loss, some of the players are set to become free agents in the off-season, so what's next for the team. 📍 Source Score: 4.80 11. Newfoundland's Between Breaths makes Western Canadian debut at the Firehall A moving look at Dr. Jon Lien’s life, from rescuing whales to facing dementia. 📍 Source Score: 5.50 12. Manitoba Adds Thousands of Jobs in September 📍 Source Score: 4.50 13. Manitoba Wildfire First Responders Inducted into Order of The Buffalo Hunt 📍 Source Score: 4.50 14. Spectre of 1995’s budget cuts has public sector unions on edge 📍 Source Score: 4.50 15. Four things on Quebec's municipal elections Here are four things to know about the province's municipal election results. 📍 Source Score: 4.50 16. Bruno Marchand wins second term as mayor of Quebec City As the incumbent mayor, Marchand had to defend his record against attacks from his opponents during the campaign. 📍 Source Score: 4.50 17. Alberta hunter recalls own grizzly bear close call, urges hunting safety A hunter is recalling how he was almost attacked by a grizzly bear in Alberta six years ago in the same location where another man was attacked earlier this week. 📍 Source Score: 4.50 18. Five underrated Halloween horror films for the spooky season's final stretch From toy rabbits to punk-club green rooms, prepare to be scared. 📍 Source Score: 4.50 19. Zappa Nite at the Rickshaw: Halloween comes early this Friday “We do work hard to play his music well.\" 📍 Source Score: 4.50 20. You Nearly Missed: Our top picks from the 2025 Chilliwack Independent Film Festival From cult cinema to queer storytelling, five standout picks from this year’s program. 📍 Source Score: 4.50 21. Photos: Shawn Mendes returns to Rogers Arena “proud to be Canadian” It was an emotional night for Mendes and his fans. 📍 Source Score: 4.50 22. The final scoop: Dolce Amore goes full service Dolce Amore levels up from gelato empire to full-blown Italian affair. 📍 Source Score: 3.90 23. B.C.'s breweries warn that unless tax rules change, the industry will suffer Get the best of Vancouver in your inbox, every Tuesday and Thursday. Sign up for our free newsletter. 📍 Source Score: 4.50 24. Wolf Alice finds a clearing in the noise Get the best of Vancouver in your inbox, every Tuesday and Thursday. Sign up for our free newsletter. 📍 Source Score: 4.50 25. Glitch Theatre debuts with neurodivergent-led premiere New name, new mandate, and a neurodivergent-led creative team define the company’s 2025 launch. 📍 Source Score: 2.00 26. Suki’s: Fifty-four years of style, education, and legacy For 54 years, Suki’s has shaped Vancouver’s hair culture through artistry and education. Named Best Salon in the Georgia Straight’s Best of Vancouver 2025, the iconic brand continues to set the standard for innovation, collaboration, and timeless style—from its world-class Academy to its visionary team. 📍 Source Score: 2.60 27. Peliplat steps up to back Vancouver's writing community \"The future of creativity is human.\" 📍 Source Score: 3.00 28. Measles Update #41 📍 Source Score: 1.20 29. Measles Update #40 📍 Source Score: 1.20 30. Man charged in fatal shooting at SUV Police in Saskatchewan say a man has been charged in a September shooting on a stretch of highway that claimed the life of Tanya Myers, a passenger in an SUV. 📍 Source Score: 1.30 31. Nova Scotia's Kate Beaton has her Ducks in a row at Vancouver Writers Fest The graphic novellist and children's book author makes her way to Vancouver. 📍 Source Score: 1.00 32. Dusty duffel bag found in Italy revives story of Cape Bretoner killed in WW II Michele Facchini, a Second World War researcher, found a duffel bag of a Cape Breton soldier in Italy. With it, Facchini unearthed the story of Hector Colin McDonald. 📍 Source Score: 1.00",
+      "excerpt": "Daily News Curation - 2025-11-03 Curated 6 items from disability, accessibility, and social policy sources. 1. Rally for defending public education got a bigger crowd than the one for Alberta separati",
+      "content": "Daily News Curation - 2025-11-03 Curated 6 items from disability, accessibility, and social policy sources. 1. Rally for defending public education got a bigger crowd than the one for Alberta separation 📍 Source Score: 11.60 2. Mark Carney’s high-stakes first budget Does Prime Minister Carney have the votes to get his first budget passed – or could we be looking at another election? 📍 Source Score: 9.00 3. Soraya Martinez Ferrada is Montreal’s new mayor. What’s next? 📍 Source Score: 5.00 4. As water dries up in northeast B.C., some want industrial users paying more to pump it Environmental groups are calling on the B.C. government to raise industrial water rates as drought deepens and demand for freshwater rises in some areas of the province. 📍 Source Score: 7.00 5. B.C., feds to kick off forestry summit amid U.S. tariff impacts B.C.'s goal for the summit is to push for more help from the federal government for an industry which employs tens of thousands of workers in the province. 📍 Source Score: 6.00 6. Fire that grew to become part of Nova Scotia’s largest wildfire started on this man’s property Court documents from last month’s sentencing of Dalton Stewart, who was charged under the Forests Act, revealed the fire was set on land owned by Mervyn Perry. Perry says it will take years for his land to get back to what it used to be like. 📍 Source Score: 1.00",
       "date": "2025-11-03",
       "tags": [],
       "categories": [],
       "url": "/2025-11-03-curated",
-      "filesize": 6313
+      "filesize": 1385
     },
     {
       "id": "curation/README.md",
@@ -1287,6 +1305,47 @@
       "blog/2025-10-18-daily-curation.md",
       "blog/2025-10-17-comprehensive-daily-digest.md"
     ],
+    "feature": [
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "spotlight:": [
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
+    ],
+    "evidence": [
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md"
+    ],
+    "locker": [
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md"
+    ],
     "weekly": [
       "blog/2025-11-03-weekly-update-week-45.md",
       "blog/2025-10-27-weekly-update-week-44.md",
@@ -1490,37 +1549,6 @@
       "whatsnew/2025-10-21-week-43-updates.md",
       "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
       "whatsnew/2025-10-04-automation-gitlog.md"
-    ],
-    "feature": [
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "spotlight:": [
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
     ],
     "master": [
       "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
@@ -1805,12 +1833,6 @@
     "website": [
       "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
     ],
-    "evidence": [
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md"
-    ],
-    "locker": [
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md"
-    ],
     "2025-10-24": [
       "blog/2025-10-24-daily-curation.md"
     ],
@@ -2088,6 +2110,32 @@
     ]
   },
   "tagIndex": {
+    "features": [
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
+    ],
+    "spotlight": [
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
+    ],
+    "core-feature": [
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md"
+    ],
     "weekly": [
       "blog/2025-11-03-weekly-update-week-45.md",
       "blog/2025-10-27-weekly-update-week-44.md",
@@ -2119,26 +2167,6 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
     ],
-    "features": [
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
-    ],
-    "spotlight": [
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
-    ],
     "phase-2:-legal-tools": [
       "blog/2025-11-02-feature-spotlight-master-letter-generator.md"
     ],
@@ -2152,9 +2180,6 @@
       "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
       "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
       "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
-    ],
-    "core-feature": [
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md"
     ],
     "pain-management": [
       "blog/2025-10-28-pain-flare-mode-deep-dive.md"
@@ -2264,6 +2289,24 @@
     ]
   },
   "categoryIndex": {
+    "features": [
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-27-app-vs-website-comparison.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
     "updates": [
       "blog/2025-11-03-weekly-update-week-45.md",
       "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
@@ -2309,23 +2352,6 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
-    ],
-    "features": [
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-27-app-vs-website-comparison.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
     "feature-deep-dive": [
       "blog/2025-10-28-pain-flare-mode-deep-dive.md"

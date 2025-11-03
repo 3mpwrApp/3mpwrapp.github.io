@@ -1,232 +1,50 @@
 {
   "date": "2025-11-03",
-  "timestamp": "2025-11-03T09:26:50.852Z",
-  "count": 32,
+  "timestamp": "2025-11-03T15:27:54.708Z",
+  "count": 6,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Can the federal budget reset Canada's economy?",
-      "link": "https://www.cbc.ca/news/business/armstrong-budget-bank-of-canada-9.6962087?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/0125a15f-e80f-475d-a0ef-63cca8be03ea,1761940264866/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C292%2C8363%2C4704%29%3BResize%3D%28620%29' alt='A man in a dark suit and tie gestures as he stand behind a wood podium with a maple leaf carving on it. In the background are the red-and-white flags of Canada.' width='620' height='349' title='Prime Minister Mark Carney is seen during a news conference following the ASEAN summit in Kuala Lumpur, Malaysia, Monday, Oct. 27, 2025.'/><p>Canada's economy is suffering. The Bank of Canada says interest rate cuts can only do so much. So it's passed the baton to the federal government. This week's budget can do what the central bank cannot: restructure how the Canadian economy grows.</p>",
-      "score": 24.5,
-      "pubDate": "Mon, 03 Nov 2025 04:00:00 EST"
+      "title": "Rally for defending public education got a bigger crowd than the one for Alberta separation",
+      "link": "https://rabble.ca/politics/canadian-politics/rally-for-defending-public-education-got-a-bigger-crowd-than-the-one-for-alberta-separation/",
+      "description": "",
+      "score": 11.6,
+      "pubDate": "Mon, 27 Oct 2025 20:13:37 +0000"
     },
     {
-      "title": "Canada collected $3B from U.S. counter-tariffs before a majority were dropped",
-      "link": "https://www.cbc.ca/news/politics/canada-collected-3-billion-u-s-counter-tariffs-9.6961968?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/9a5237de-ec2e-46f3-94fc-eb6e6741e6bf,1761933574499/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C279%2C5872%2C3303%29%3BResize%3D%28620%29' alt='Trucks cross a large green suspension bridge. Skyscrapers can be seen in the background.' width='620' height='349' title='Trucks drives across the Ambassador Bridge from Detroit to Windsor, Ontario, Friday, Aug. 1, 2025.'/><p>Canada had collected more than $3 billion through U.S. counter-tariffs before removing a swath of levies in September, according to the Finance Department — far less than what the Liberals had promised to rake in during the current fiscal year.</p>",
-      "score": 14,
-      "pubDate": "Mon, 03 Nov 2025 04:00:00 EST"
+      "title": "Mark Carney’s high-stakes first budget",
+      "link": "https://www.cbc.ca/radio/frontburner/mark-carneys-high-stakes-first-budget-9.6963789?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/eb89faf5-87c0-41a8-9884-49c465c3e8af,1762103115467/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C301%2C7331%2C4123%29%3BResize%3D%28620%29' alt='Prime Minister Mark Carney speaks during a news conference.' width='620' height='349' title='Prime Minister Mark Carney speaks during a news conference following the APEC Summit in Gyeongju, South Korea, Saturday, Nov.1, 2025.  THE CANADIAN PRESS/Adrian Wyld'/><p> Does Prime Minister Carney have the votes to get his first budget passed – or could we be looking at another election?</p>",
+      "score": 9,
+      "pubDate": "Mon, 03 Nov 2025 07:30:00 EST"
     },
     {
-      "title": "Soraya Martinez Ferrada is Montreal's next mayor, CBC News projects",
-      "link": "https://www.cbc.ca/news/canada/montreal/municipal-election-quebec-9.6963985?cmp=rss",
+      "title": "Soraya Martinez Ferrada is Montreal’s new mayor. What’s next?",
+      "link": "https://www.cbc.ca/news/canada/montreal/soraya-martinez-ferrada-mayor-what-now-9.6964141?cmp=rss",
       "description": "<img src='https://i.cbc.ca/ais/57a93941-9108-4969-9cb8-fa3e1cd9d731,1762148456759/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Soraya Marinez Ferrada waves to crowd before giving victory speech  ' width='620' height='349' title=''/><p></p>",
-      "score": 9.5,
+      "score": 5,
       "pubDate": "Sun, 02 Nov 2025 08:48:59 EST"
     },
     {
-      "title": "Former federal minister Soraya Martinez Ferrada elected mayor of Montreal",
-      "link": "https://globalnews.ca/news/11507695/montreal-mayor-municipal-election-results-quebec/",
-      "description": "Montreal's new mayor has pledged to tackle homelessness and to audit the city's bike paths, which have sparked a backlash from some drivers and business owners.",
-      "score": 8,
-      "pubDate": "Mon, 03 Nov 2025 01:52:58 +0000"
+      "title": "As water dries up in northeast B.C., some want industrial users paying more to pump it",
+      "link": "https://www.cbc.ca/news/canada/british-columbia/bc-drought-industrial-water-rates-9.6955740?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/b532503b-0eeb-4513-9405-dbf007754e69,1761944398669/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1800%2C1012%29%3BResize%3D%28620%29' alt='a dry river bed' width='620' height='349' title='The Kiskatinaw River near the community of Farmington, B.C., on August 6, 2025. The Kiskatinaw River is currently experiencing record low levels due to ongoing drought conditions in the region.'/><p>Environmental groups are calling on the B.C. government to raise industrial water rates as drought deepens and demand for freshwater rises in some areas of the province.</p>",
+      "score": 7,
+      "pubDate": "Sun, 02 Nov 2025 09:00:00 EST"
     },
     {
-      "title": "'We'll be back': What's next for the Blue Jays after heartbreaking World Series loss?",
-      "link": "https://www.cbc.ca/sports/baseball/mlb/blue-jays-whats-next-after-world-series-loss-9.6963943?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/704e8ff1-20e8-487f-993b-f880e967980a,1762127875019/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C256%2C4800%2C2700%29%3BResize%3D%28620%29' alt='The Los Angeles Dodgers celebrates as Toronto Blue Jays' Vladimir Guerrero Jr. (27) looks on after the Dodgers won Game 7 of the World Series in Toronto on Sunday, Nov. 2, 2025. THE CANADIAN PRESS/Nathan Denette' width='620' height='349' title='Blue Jays first baseman Vladimir Guerrero Jr. walks off as the Los Angeles Dodgers celebrate after winning Game 7 of the 2025 World Series in Toronto on Saturday.'/><p>While the Blue Jays heal physically, general manager Ross Atkins has some work to do too. Several key players from Toronto's playoff run are set to become free agents in the off-season.</p>",
-      "score": 9.3,
-      "pubDate": "Sun, 02 Nov 2025 19:05:13 EST"
+      "title": "B.C., feds to kick off forestry summit amid U.S. tariff impacts",
+      "link": "https://globalnews.ca/news/11508083/bc-federal-government-forestry-summit-us-tariffs/",
+      "description": "B.C.'s goal for the summit is to push for more help from the federal government for an industry which employs tens of thousands of workers in the province.",
+      "score": 6,
+      "pubDate": "Mon, 03 Nov 2025 13:06:47 +0000"
     },
     {
-      "title": "Toronto transit services under fire for not extending service following World Series Game 7",
-      "link": "https://www.cbc.ca/news/canada/toronto/ttc-metrolinx-complaints-service-not-extended-world-series-9.6963911?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/e183c020-042b-4b7c-bbdf-0aa0f5ed6e5d,1762119314574/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C205%2C3927%2C2208%29%3BResize%3D%28620%29' alt='Toronto Transit Commission signage is pictured on Jan. 26, 2023.' width='620' height='349' title=''/><p>Toronto public transit services and politicians are facing backlash on social media following Game 7 of the World Series because some transit services were not extended past 1:30 a.m.</p>",
-      "score": 9.7,
-      "pubDate": "Sun, 02 Nov 2025 16:44:18 EST"
-    },
-    {
-      "title": "Albertans shouldn't expect a ‘general strike' anytime soon",
-      "link": "https://globalnews.ca/news/11507651/alberta-general-strike-afl-action-plan/",
-      "description": "While Alberta labour groups promised swift retribution after the province forced teachers back to work, the head of the union admits a general strike won't happen overnight.",
-      "score": 9,
-      "pubDate": "Mon, 03 Nov 2025 02:01:10 +0000"
-    },
-    {
-      "title": "CPKC train derails near B.C. community, officials say no danger to water system",
-      "link": "https://globalnews.ca/news/11507522/bc-train-derailment-cpkc-cherry-creek/",
-      "description": "The Canadian Pacific Kansas City railway company says a locomotive and several cars, some with fuel, derailed on Saturday. TNRD officials say clean-up efforts are underway.",
-      "score": 7.5,
-      "pubDate": "Sun, 02 Nov 2025 23:41:12 +0000"
-    },
-    {
-      "title": "Say Hi to Tech Bro Carney",
-      "link": "https://thetyee.ca/Opinion/2025/11/03/Say-Hi-Tech-Bro-Carney/",
-      "description": "As his government heedlessly embraces artificial intelligence, the threats to Canadians are clear.",
-      "score": 7.5,
-      "pubDate": "Mon, 03 Nov 2025 08:40:00 +0000"
-    },
-    {
-      "title": "After World Series loss, what's next for the Toronto Blue Jays?",
-      "link": "https://globalnews.ca/news/11507629/toronto-blue-jays-whats-next/",
-      "description": "Following the Toronto Blue Jays' heartbreaking Game 7 loss, some of the players are set to become free agents in the off-season, so what's next for the team.",
-      "score": 4.8,
-      "pubDate": "Sun, 02 Nov 2025 23:44:22 +0000"
-    },
-    {
-      "title": "Newfoundland's Between Breaths makes Western Canadian debut at the Firehall",
-      "link": "https://www.straight.com/arts/newfoundlands-between-breaths-makes-western-canadian-debut-at-firehall",
-      "description": "A moving look at Dr. Jon Lien’s life, from rescuing whales to facing dementia.",
-      "score": 5.5,
-      "pubDate": "2025-10-15T13:28:43-07:00"
-    },
-    {
-      "title": "Manitoba Adds Thousands of Jobs in September",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71177",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Tue, 14 Oct 2025 13:43:00 CDT"
-    },
-    {
-      "title": "Manitoba Wildfire First Responders Inducted into Order of The Buffalo Hunt",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71077",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 09 Oct 2025 12:30:00 CDT"
-    },
-    {
-      "title": "Spectre of 1995’s budget cuts has public sector unions on edge",
-      "link": "https://globalnews.ca/news/11503124/public-sector-unions-brace-for-cuts/",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 03 Nov 2025 09:00:45 +0000"
-    },
-    {
-      "title": "Four things on Quebec's municipal elections",
-      "link": "https://globalnews.ca/news/11507907/four-things-about-quebec-municipal-elections/",
-      "description": "Here are four things to know about the province's municipal election results.",
-      "score": 4.5,
-      "pubDate": "Mon, 03 Nov 2025 05:02:33 +0000"
-    },
-    {
-      "title": "Bruno Marchand wins second term as mayor of Quebec City",
-      "link": "https://globalnews.ca/news/11507764/bruno-marchand-wins-second-term-quebec-city-mayor/",
-      "description": "As the incumbent mayor, Marchand had to defend his record against attacks from his opponents during the campaign.",
-      "score": 4.5,
-      "pubDate": "Mon, 03 Nov 2025 02:38:05 +0000"
-    },
-    {
-      "title": "Alberta hunter recalls own grizzly bear close call, urges hunting safety",
-      "link": "https://globalnews.ca/news/11507353/alberta-bear-attack-safety/",
-      "description": "A hunter is recalling how he was almost attacked by a grizzly bear in Alberta six years ago in the same location where another man was attacked earlier this week.",
-      "score": 4.5,
-      "pubDate": "Sun, 02 Nov 2025 21:55:56 +0000"
-    },
-    {
-      "title": "Five underrated Halloween horror films for the spooky season's final stretch",
-      "link": "https://www.straight.com/movies/five-underrated-halloween-horror-films-for-spooky-seasons-final-stretch-0",
-      "description": "From toy rabbits to punk-club green rooms, prepare to be scared.",
-      "score": 4.5,
-      "pubDate": "2025-10-25T14:39:28-07:00"
-    },
-    {
-      "title": "Zappa Nite at the Rickshaw: Halloween comes early this Friday",
-      "link": "https://www.straight.com/music/zappa-nite-at-rickshaw-halloween-comes-early-this-friday",
-      "description": "“We do work hard to play his music well.\"",
-      "score": 4.5,
-      "pubDate": "2025-10-23T17:57:08-07:00"
-    },
-    {
-      "title": "You Nearly Missed: Our top picks from the 2025 Chilliwack Independent Film Festival",
-      "link": "https://www.straight.com/movies/you-nearly-missed-our-top-picks-from-2025-chilliwack-independent-film-festival",
-      "description": "From cult cinema to queer storytelling, five standout picks from this year’s program.",
-      "score": 4.5,
-      "pubDate": "2025-10-20T14:09:56-07:00"
-    },
-    {
-      "title": "Photos: Shawn Mendes returns to Rogers Arena “proud to be Canadian”",
-      "link": "https://www.straight.com/music/photos-shawn-mendes-returns-to-rogers-arena-proud-to-be-canadian",
-      "description": "It was an emotional night for Mendes and his fans.",
-      "score": 4.5,
-      "pubDate": "2025-10-14T14:20:03-07:00"
-    },
-    {
-      "title": "The final scoop: Dolce Amore goes full service",
-      "link": "https://www.straight.com/food/final-scoop-dolce-amore-goes-full-service",
-      "description": "Dolce Amore levels up from gelato empire to full-blown Italian affair.",
-      "score": 3.9000000000000004,
-      "pubDate": "2025-10-14T12:16:13-07:00"
-    },
-    {
-      "title": "B.C.'s breweries warn that unless tax rules change, the industry will suffer",
-      "link": "https://www.straight.com/food/bcs-breweries-warn-that-unless-tax-rules-change-industry-will-suffer",
-      "description": "<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href=\"http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up for our free newsletter</a>.</h3><p class=\"p1\"></p>",
-      "score": 4.5,
-      "pubDate": "2025-10-10T10:02:34-07:00"
-    },
-    {
-      "title": "Wolf Alice finds a clearing in the noise",
-      "link": "https://www.straight.com/music/wolf-alice-finds-a-clearing-in-noise",
-      "description": "<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href=\"http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up for our free newsletter</a>.<br /></h3>",
-      "score": 4.5,
-      "pubDate": "2025-10-06T09:00:00-07:00"
-    },
-    {
-      "title": "Glitch Theatre debuts with neurodivergent-led premiere",
-      "link": "https://www.straight.com/arts/glitch-theatre-debuts-with-neurodivergent-led-premiere",
-      "description": "New name, new mandate, and a neurodivergent-led creative team define the company’s 2025 launch.",
-      "score": 2,
-      "pubDate": "2025-10-22T13:28:22-07:00"
-    },
-    {
-      "title": "Suki’s: Fifty-four years of style, education, and legacy",
-      "link": "https://www.straight.com/living/sukis-fifty-four-years-of-style-education-and-legacy",
-      "description": "For 54 years, Suki’s has shaped Vancouver’s hair culture through artistry and education. Named Best Salon in the Georgia Straight’s Best of Vancouver 2025, the iconic brand continues to set the standard for innovation, collaboration, and timeless style—from its world-class Academy to its visionary team.",
-      "score": 2.6,
-      "pubDate": "2025-10-15T08:50:48-07:00"
-    },
-    {
-      "title": "Peliplat steps up to back Vancouver's writing community",
-      "link": "https://www.straight.com/living/peliplat-steps-up-to-back-vancouvers-writing-community",
-      "description": "\"The future of creativity is human.\"",
-      "score": 3,
-      "pubDate": "2025-10-14T11:56:20-07:00"
-    },
-    {
-      "title": "Measles Update #41",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71217",
-      "description": "",
-      "score": 1.2,
-      "pubDate": "Fri, 17 Oct 2025 14:49:00 CDT"
-    },
-    {
-      "title": "Measles Update #40",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71037",
-      "description": "",
-      "score": 1.2,
-      "pubDate": "Tue, 07 Oct 2025 13:43:00 CDT"
-    },
-    {
-      "title": "Man charged in fatal shooting at SUV",
-      "link": "https://globalnews.ca/news/11507932/man-charged-in-fatal-shooting-at-suv/",
-      "description": "Police in Saskatchewan say a man has been charged in a September shooting on a stretch of highway that claimed the life of Tanya Myers, a passenger in an SUV.",
-      "score": 1.3,
-      "pubDate": "Mon, 03 Nov 2025 05:08:11 +0000"
-    },
-    {
-      "title": "Nova Scotia's Kate Beaton has her Ducks in a row at Vancouver Writers Fest",
-      "link": "https://www.straight.com/arts/nova-scotias-kate-beaton-has-her-ducks-in-a-row-at-vancouver-writers-fest",
-      "description": "The graphic novellist and children's book author makes her way to Vancouver.",
+      "title": "Fire that grew to become part of Nova Scotia’s largest wildfire started on this man’s property",
+      "link": "https://www.cbc.ca/news/canada/nova-scotia/tire-fire-barrington-wildfire-mervyn-perry-9.6962079?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/2f024077-a96d-442a-b4ff-02e1a05f6452,1761933706200/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A man wearing a blue tracksuit top and beige ball cap is pointing in a treed meadow.' width='620' height='349' title='Mervyn Perry points to the area where a fire was started on his land near Barrington Lake in an area known as Homer's Rock in May 2023.'/><p>Court documents from last month’s sentencing of Dalton Stewart, who was charged under the Forests Act, revealed the fire was set on land owned by Mervyn Perry. Perry says it will take years for his land to get back to what it used to be like.</p>",
       "score": 1,
-      "pubDate": "2025-10-15T08:00:00-07:00"
-    },
-    {
-      "title": "Dusty duffel bag found in Italy revives story of Cape Bretoner killed in WW II",
-      "link": "https://www.cbc.ca/news/canada/nova-scotia/dusty-duffel-bag-found-in-italy-revives-story-of-cape-bretoner-killed-in-ww-ii-9.6963161?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/1c271f6a-6f73-4bbc-9a7b-b41a75511442,1762008292145/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A duffle bag and a man holding it' width='620' height='349' title='Local researcher Michele Facchini holds up the duffle bag he discovered this summer that belonged to Cape Bretoner Hector McDonald before he was killed in action in December 1944.'/><p>Michele Facchini, a Second World War researcher, found a duffel bag of a Cape Breton soldier in Italy. With it, Facchini unearthed the story of Hector Colin McDonald. </p>",
-      "score": 1,
-      "pubDate": "Sun, 02 Nov 2025 05:00:00 EST"
+      "pubDate": "Mon, 03 Nov 2025 05:00:00 EST"
     }
   ]
 }
