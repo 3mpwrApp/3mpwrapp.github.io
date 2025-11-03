@@ -29,8 +29,21 @@ export function computeMoodInsights(entries: MoodEntry[] | undefined | null, now
   const todayKey = dayKey(now);
   // streak: consecutive days back from today (or from most recent day if no today entries)
   let streak = 0;
-  let cursor = byDay.has(todayKey)? todayKey : dayKeys[0];
-  while (byDay.has(cursor)) { streak++; cursor -= 24*3600*1000; }
+  let cursor = byDay.has(todayKey)? todayKey : (dayKeys.length > 0 ? dayKeys[0] : todayKey);
+  if (dayKeys.length === 0) {
+    return { avg7d, delta24h, trend, streakDays: streak, lastEntryAgeHours };
+  }
+  // Count streak: each day going backwards
+  while (cursor) {
+    if (!byDay.has(cursor)) break;
+    streak++;
+    // Move to previous day by creating a new Date and subtracting 1 day
+    const prevDate = new Date(cursor);
+    prevDate.setDate(prevDate.getDate() - 1);
+    cursor = dayKey(prevDate.getTime());
+    // Safety: if we've gone too far back, stop
+    if (streak > 365) break;
+  }
   // delta24h: compare today's avg (or most recent day) vs previous day
   let delta24h: number | null = null;
   if (dayKeys.length >= 2) {

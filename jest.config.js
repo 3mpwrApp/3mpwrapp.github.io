@@ -21,6 +21,10 @@ module.exports = {
     '^.*/hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js',
     '^../../../hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js',
     '^.*hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js',
+    // Map useColorScheme imports to the mock file
+    '^../hooks/useColorScheme$': '<rootDir>/__mocks__/hooks/useColorScheme.js',
+    '^.*/hooks/useColorScheme$': '<rootDir>/__mocks__/hooks/useColorScheme.js',
+    '^../../../hooks/useColorScheme$': '<rootDir>/__mocks__/hooks/useColorScheme.js',
     // Map GapView to a mock
     '^../../../components/GapView$': '<rootDir>/__mocks__/GapView.js',
     '^.*/components/GapView$': '<rootDir>/__mocks__/GapView.js',

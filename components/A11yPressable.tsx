@@ -1,6 +1,6 @@
-import type { Insets, PressableProps, ViewStyle , View } from "react-native";
-import { Platform, Pressable } from "react-native";
 import { useRef, useState } from "react";
+import type { Insets, PressableProps, View, ViewStyle } from "react-native";
+import { Platform, Pressable } from "react-native";
 
 import { touchTarget } from "../constants/A11Y";
 import { FOCUS_INDICATOR } from "../constants/FocusManagement";
