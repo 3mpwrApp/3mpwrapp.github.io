@@ -76,14 +76,14 @@ export default function Index() {
       return; // Already navigated, don't run again
     }
     
-    // Safety timeout: if loading takes too long, force navigation
+    // EMERGENCY FIX: Shorter timeout to prevent crashes
     const timeout = setTimeout(() => {
-      if (!hasNavigated && loading) {
-        logger.warn('Auth loading timeout - forcing navigation to login');
+      if (!hasNavigated) {
+        logger.warn('Emergency timeout - forcing navigation to login');
         setHasNavigated(true);
         router.replace('/(auth)/login');
       }
-    }, 8000); // 8 second timeout
+    }, 3000); // 3 second timeout - force navigate to prevent crash
     
     if (loading) {
       return () => clearTimeout(timeout); // Still loading, wait
