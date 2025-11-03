@@ -12,7 +12,6 @@ import React from 'react';
 import { useCoachProgressOptional } from '../store/coachProgress';
 import { logError } from '../utils/errorLogger';
 
-import { logError } from '../utils/errorLogger';
 import { pseudoRandom01 } from './session';
 import { usage } from './usage';
 
