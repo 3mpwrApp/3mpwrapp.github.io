@@ -1,0 +1,168 @@
+---
+layout: post
+title: "Daily News Curation - 2025-11-03"
+date: 2025-11-03
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-11-03
+
+Curated 32 items from disability, accessibility, and social policy sources.
+
+## 1. Can the federal budget reset Canada's economy?
+<img src='https://i.cbc.ca/ais/0125a15f-e80f-475d-a0ef-63cca8be03ea,1761940264866/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C292%2C8363%2C4704%29%3BResize%3D%28620%29' alt='A man in a dark suit and tie gestures as he stand behind a wood podium with a maple leaf carving on it. In the background are the red-and-white flags of Canada.' width='620' height='349' title='Prime Minister Mark Carney is seen during a news conference following the ASEAN summit in Kuala Lumpur, Malaysia, Monday, Oct. 27, 2025.'/><p>Canada's economy is suffering. The Bank of Canada says interest rate cuts can only do so much. So it's passed the baton to the federal government. This week's budget can do what the central bank cannot: restructure how the Canadian economy grows.</p>
+📍 [Source](https://www.cbc.ca/news/business/armstrong-budget-bank-of-canada-9.6962087?cmp=rss)
+**Score:** 24.50
+
+## 2. Canada collected $3B from U.S. counter-tariffs before a majority were dropped
+<img src='https://i.cbc.ca/ais/9a5237de-ec2e-46f3-94fc-eb6e6741e6bf,1761933574499/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C279%2C5872%2C3303%29%3BResize%3D%28620%29' alt='Trucks cross a large green suspension bridge. Skyscrapers can be seen in the background.' width='620' height='349' title='Trucks drives across the Ambassador Bridge from Detroit to Windsor, Ontario, Friday, Aug. 1, 2025.'/><p>Canada had collected more than $3 billion through U.S. counter-tariffs before removing a swath of levies in September, according to the Finance Department — far less than what the Liberals had promised to rake in during the current fiscal year.</p>
+📍 [Source](https://www.cbc.ca/news/politics/canada-collected-3-billion-u-s-counter-tariffs-9.6961968?cmp=rss)
+**Score:** 14.00
+
+## 3. Soraya Martinez Ferrada is Montreal's next mayor, CBC News projects
+<img src='https://i.cbc.ca/ais/57a93941-9108-4969-9cb8-fa3e1cd9d731,1762148456759/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Soraya Marinez Ferrada waves to crowd before giving victory speech  ' width='620' height='349' title=''/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/municipal-election-quebec-9.6963985?cmp=rss)
+**Score:** 9.50
+
+## 4. Former federal minister Soraya Martinez Ferrada elected mayor of Montreal
+Montreal's new mayor has pledged to tackle homelessness and to audit the city's bike paths, which have sparked a backlash from some drivers and business owners.
+📍 [Source](https://globalnews.ca/news/11507695/montreal-mayor-municipal-election-results-quebec/)
+**Score:** 8.00
+
+## 5. 'We'll be back': What's next for the Blue Jays after heartbreaking World Series loss?
+<img src='https://i.cbc.ca/ais/704e8ff1-20e8-487f-993b-f880e967980a,1762127875019/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C256%2C4800%2C2700%29%3BResize%3D%28620%29' alt='The Los Angeles Dodgers celebrates as Toronto Blue Jays' Vladimir Guerrero Jr. (27) looks on after the Dodgers won Game 7 of the World Series in Toronto on Sunday, Nov. 2, 2025. THE CANADIAN PRESS/Nathan Denette' width='620' height='349' title='Blue Jays first baseman Vladimir Guerrero Jr. walks off as the Los Angeles Dodgers celebrate after winning Game 7 of the 2025 World Series in Toronto on Saturday.'/><p>While the Blue Jays heal physically, general manager Ross Atkins has some work to do too. Several key players from Toronto's playoff run are set to become free agents in the off-season.</p>
+📍 [Source](https://www.cbc.ca/sports/baseball/mlb/blue-jays-whats-next-after-world-series-loss-9.6963943?cmp=rss)
+**Score:** 9.30
+
+## 6. Toronto transit services under fire for not extending service following World Series Game 7
+<img src='https://i.cbc.ca/ais/e183c020-042b-4b7c-bbdf-0aa0f5ed6e5d,1762119314574/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C205%2C3927%2C2208%29%3BResize%3D%28620%29' alt='Toronto Transit Commission signage is pictured on Jan. 26, 2023.' width='620' height='349' title=''/><p>Toronto public transit services and politicians are facing backlash on social media following Game 7 of the World Series because some transit services were not extended past 1:30 a.m.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/ttc-metrolinx-complaints-service-not-extended-world-series-9.6963911?cmp=rss)
+**Score:** 9.70
+
+## 7. Albertans shouldn't expect a ‘general strike' anytime soon
+While Alberta labour groups promised swift retribution after the province forced teachers back to work, the head of the union admits a general strike won't happen overnight.
+📍 [Source](https://globalnews.ca/news/11507651/alberta-general-strike-afl-action-plan/)
+**Score:** 9.00
+
+## 8. CPKC train derails near B.C. community, officials say no danger to water system
+The Canadian Pacific Kansas City railway company says a locomotive and several cars, some with fuel, derailed on Saturday. TNRD officials say clean-up efforts are underway.
+📍 [Source](https://globalnews.ca/news/11507522/bc-train-derailment-cpkc-cherry-creek/)
+**Score:** 7.50
+
+## 9. Say Hi to Tech Bro Carney
+As his government heedlessly embraces artificial intelligence, the threats to Canadians are clear.
+📍 [Source](https://thetyee.ca/Opinion/2025/11/03/Say-Hi-Tech-Bro-Carney/)
+**Score:** 7.50
+
+## 10. After World Series loss, what's next for the Toronto Blue Jays?
+Following the Toronto Blue Jays' heartbreaking Game 7 loss, some of the players are set to become free agents in the off-season, so what's next for the team.
+📍 [Source](https://globalnews.ca/news/11507629/toronto-blue-jays-whats-next/)
+**Score:** 4.80
+
+## 11. Newfoundland's Between Breaths makes Western Canadian debut at the Firehall
+A moving look at Dr. Jon Lien’s life, from rescuing whales to facing dementia.
+📍 [Source](https://www.straight.com/arts/newfoundlands-between-breaths-makes-western-canadian-debut-at-firehall)
+**Score:** 5.50
+
+## 12. Manitoba Adds Thousands of Jobs in September
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71177)
+**Score:** 4.50
+
+## 13. Manitoba Wildfire First Responders Inducted into Order of The Buffalo Hunt
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71077)
+**Score:** 4.50
+
+## 14. Spectre of 1995’s budget cuts has public sector unions on edge
+📍 [Source](https://globalnews.ca/news/11503124/public-sector-unions-brace-for-cuts/)
+**Score:** 4.50
+
+## 15. Four things on Quebec's municipal elections
+Here are four things to know about the province's municipal election results.
+📍 [Source](https://globalnews.ca/news/11507907/four-things-about-quebec-municipal-elections/)
+**Score:** 4.50
+
+## 16. Bruno Marchand wins second term as mayor of Quebec City
+As the incumbent mayor, Marchand had to defend his record against attacks from his opponents during the campaign.
+📍 [Source](https://globalnews.ca/news/11507764/bruno-marchand-wins-second-term-quebec-city-mayor/)
+**Score:** 4.50
+
+## 17. Alberta hunter recalls own grizzly bear close call, urges hunting safety
+A hunter is recalling how he was almost attacked by a grizzly bear in Alberta six years ago in the same location where another man was attacked earlier this week.
+📍 [Source](https://globalnews.ca/news/11507353/alberta-bear-attack-safety/)
+**Score:** 4.50
+
+## 18. Five underrated Halloween horror films for the spooky season's final stretch
+From toy rabbits to punk-club green rooms, prepare to be scared.
+📍 [Source](https://www.straight.com/movies/five-underrated-halloween-horror-films-for-spooky-seasons-final-stretch-0)
+**Score:** 4.50
+
+## 19. Zappa Nite at the Rickshaw: Halloween comes early this Friday
+“We do work hard to play his music well."
+📍 [Source](https://www.straight.com/music/zappa-nite-at-rickshaw-halloween-comes-early-this-friday)
+**Score:** 4.50
+
+## 20. You Nearly Missed: Our top picks from the 2025 Chilliwack Independent Film Festival
+From cult cinema to queer storytelling, five standout picks from this year’s program.
+📍 [Source](https://www.straight.com/movies/you-nearly-missed-our-top-picks-from-2025-chilliwack-independent-film-festival)
+**Score:** 4.50
+
+## 21. Photos: Shawn Mendes returns to Rogers Arena “proud to be Canadian”
+It was an emotional night for Mendes and his fans.
+📍 [Source](https://www.straight.com/music/photos-shawn-mendes-returns-to-rogers-arena-proud-to-be-canadian)
+**Score:** 4.50
+
+## 22. The final scoop: Dolce Amore goes full service
+Dolce Amore levels up from gelato empire to full-blown Italian affair.
+📍 [Source](https://www.straight.com/food/final-scoop-dolce-amore-goes-full-service)
+**Score:** 3.90
+
+## 23. B.C.'s breweries warn that unless tax rules change, the industry will suffer
+<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>.</h3><p class="p1"></p>
+📍 [Source](https://www.straight.com/food/bcs-breweries-warn-that-unless-tax-rules-change-industry-will-suffer)
+**Score:** 4.50
+
+## 24. Wolf Alice finds a clearing in the noise
+<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>.<br /></h3>
+📍 [Source](https://www.straight.com/music/wolf-alice-finds-a-clearing-in-noise)
+**Score:** 4.50
+
+## 25. Glitch Theatre debuts with neurodivergent-led premiere
+New name, new mandate, and a neurodivergent-led creative team define the company’s 2025 launch.
+📍 [Source](https://www.straight.com/arts/glitch-theatre-debuts-with-neurodivergent-led-premiere)
+**Score:** 2.00
+
+## 26. Suki’s: Fifty-four years of style, education, and legacy
+For 54 years, Suki’s has shaped Vancouver’s hair culture through artistry and education. Named Best Salon in the Georgia Straight’s Best of Vancouver 2025, the iconic brand continues to set the standard for innovation, collaboration, and timeless style—from its world-class Academy to its visionary team.
+📍 [Source](https://www.straight.com/living/sukis-fifty-four-years-of-style-education-and-legacy)
+**Score:** 2.60
+
+## 27. Peliplat steps up to back Vancouver's writing community
+"The future of creativity is human."
+📍 [Source](https://www.straight.com/living/peliplat-steps-up-to-back-vancouvers-writing-community)
+**Score:** 3.00
+
+## 28. Measles Update #41
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71217)
+**Score:** 1.20
+
+## 29. Measles Update #40
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71037)
+**Score:** 1.20
+
+## 30. Man charged in fatal shooting at SUV
+Police in Saskatchewan say a man has been charged in a September shooting on a stretch of highway that claimed the life of Tanya Myers, a passenger in an SUV.
+📍 [Source](https://globalnews.ca/news/11507932/man-charged-in-fatal-shooting-at-suv/)
+**Score:** 1.30
+
+## 31. Nova Scotia's Kate Beaton has her Ducks in a row at Vancouver Writers Fest
+The graphic novellist and children's book author makes her way to Vancouver.
+📍 [Source](https://www.straight.com/arts/nova-scotias-kate-beaton-has-her-ducks-in-a-row-at-vancouver-writers-fest)
+**Score:** 1.00
+
+## 32. Dusty duffel bag found in Italy revives story of Cape Bretoner killed in WW II
+<img src='https://i.cbc.ca/ais/1c271f6a-6f73-4bbc-9a7b-b41a75511442,1762008292145/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A duffle bag and a man holding it' width='620' height='349' title='Local researcher Michele Facchini holds up the duffle bag he discovered this summer that belonged to Cape Bretoner Hector McDonald before he was killed in action in December 1944.'/><p>Michele Facchini, a Second World War researcher, found a duffel bag of a Cape Breton soldier in Italy. With it, Facchini unearthed the story of Hector Colin McDonald. </p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/dusty-duffel-bag-found-in-italy-revives-story-of-cape-bretoner-killed-in-ww-ii-9.6963161?cmp=rss)
+**Score:** 1.00
+
