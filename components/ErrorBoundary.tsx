@@ -3,6 +3,7 @@ import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
+import { logError } from '../utils/errorLogger';
 
 import GapView from './GapView';
 
@@ -45,7 +46,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
     // Log to console in development
     if (__DEV__) {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      logError('ErrorBoundary', 'Caught an error', error);
     }
 
     // TODO: Log to Sentry in production if enabled

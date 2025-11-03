@@ -14,6 +14,7 @@ import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { useAnnounceOnMount } from "../hooks/useA11y";
 import { useTranslation } from "../i18n";
 import { useAppPalette } from "../theme/usePalette";
+import { logError } from '../utils/errorLogger';
 
 interface LazyLoadWrapperProps {
   /** The lazy-loaded component */
@@ -99,7 +100,7 @@ class LazyLoadErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error("[LazyLoadWrapper] Error loading component:", error, errorInfo);
+    logError('LazyLoadWrapper', 'Error loading component', error);
   }
 
   render() {
