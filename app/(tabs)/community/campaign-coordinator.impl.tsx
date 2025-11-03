@@ -20,6 +20,7 @@ import { useAuth } from '../../../context/AuthContext';
 import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
 import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
+import { logError } from '../../../utils/errorLogger';
 
 interface CampaignTemplate {
   id: string;
@@ -378,7 +379,7 @@ export default function AdvocacyCampaignCoordinator() {
       ];
       setCampaigns(mockCampaigns);
     } catch (error) {
-      console.error('Error loading campaigns:', error);
+      logError('CampaignCoordinator', 'loading campaigns', error);
     }
   };
 

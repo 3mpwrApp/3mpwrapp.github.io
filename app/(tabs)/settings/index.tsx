@@ -14,6 +14,7 @@ import { GapView } from '../../../components/GapView';
 import LanguageSelector from '../../../components/LanguageSelector';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import UpdateChecker from '../../../components/UpdateChecker';
+import { logError } from '../../../utils/errorLogger';
 // import UserBadgesDisplay from '../../../components/UserBadgesDisplay';
 import * as SettingsLazy from '../../../components/settings';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
@@ -73,7 +74,7 @@ export default function SettingsScreen() {
         if (mounted) {
           const msg = String(e?.message||''); 
           if (msg.toLowerCase().includes('offline')) setOffline(true); 
-          else console.error(msg); 
+          else logError('Settings', 'loading profile', e); 
         }
       }
     })();
