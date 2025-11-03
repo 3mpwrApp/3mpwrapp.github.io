@@ -9,10 +9,9 @@ import {
     Text,
     View
 } from 'react-native';
-
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { logError } from '../utils/errorLogger';
 
+import { logError } from '../utils/errorLogger';
 import { useAuth } from '../context/AuthContext';
 import { useIndigenousLanguage } from '../context/IndigenousLanguageContext';
 import { useThemeColor } from '../hooks/useThemeColor';

@@ -6,8 +6,6 @@
 
 /* eslint-disable no-console */
 
-type LogLevel = 'error' | 'warn' | 'info' | 'debug';
-
 interface ErrorLogContext {
   component?: string;
   action?: string;

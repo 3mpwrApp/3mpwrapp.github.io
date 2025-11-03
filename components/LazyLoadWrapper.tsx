@@ -99,7 +99,7 @@ class LazyLoadErrorBoundary extends React.Component<
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: Error, _errorInfo: React.ErrorInfo) {
     logError('LazyLoadWrapper', 'Error loading component', error);
   }
 
