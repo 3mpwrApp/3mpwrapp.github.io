@@ -22,6 +22,7 @@ import { useTranslation } from '../../i18n';
 import type { DisabilityProfile } from '../../services/disabilityWizard';
 import { updateDisabilityProfile } from '../../services/disabilityWizard';
 import { useAppPalette } from '../../theme/usePalette';
+import { logError } from '../../utils/errorLogger';
 
 type UserRole = 'person_with_disability' | 'supporter' | 'ally' | 'advocate' | 'prefer_not_to_say';
 
@@ -85,7 +86,7 @@ export default function OnboardingWizard() {
       // Navigate to first7 onboarding
       router.replace('/onboarding/first7');
     } catch (error) {
-      console.error('Failed to save onboarding profile:', error);
+      logError('OnboardingWizard', 'Failed to save onboarding profile', error);
       // Continue anyway
       router.replace('/onboarding/first7');
     } finally {
