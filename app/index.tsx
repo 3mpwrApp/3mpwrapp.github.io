@@ -1,6 +1,6 @@
 import * as Linking from 'expo-linking';
 import { useRouter, useSegments } from 'expo-router';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { ActivityIndicator, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
@@ -13,8 +13,6 @@ export default function Index() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const segments = useSegments();
-  
-  const [hasNavigated, setHasNavigated] = React.useState(false);
 
   // Store the deep link path for resuming after login
   useEffect(() => {
@@ -84,7 +82,6 @@ export default function Index() {
       inAuthFlow, 
       inTabsFlow,
       segments: segments.join('/'),
-      hasNavigated
     });
     
     // Determine where user should be based on auth state
@@ -92,9 +89,8 @@ export default function Index() {
     const shouldBeInTabs = !!user;
     
     // If user is authenticated but in auth flow, navigate to tabs
-    if (shouldBeInTabs && inAuthFlow && !hasNavigated) {
+    if (shouldBeInTabs && inAuthFlow) {
       logger.log('User logged in - navigating to tabs');
-      setHasNavigated(true);
       router.replace('/(tabs)');
       return;
     }
@@ -102,14 +98,12 @@ export default function Index() {
     // If user is not authenticated but in tabs flow, navigate to login
     if (shouldBeInAuth && inTabsFlow) {
       logger.log('No user in tabs - navigating to login');
-      setHasNavigated(true);
       router.replace('/(auth)/login');
       return;
     }
     
     // Initial navigation when not in any flow yet
-    if (!inAuthFlow && !inTabsFlow && !hasNavigated) {
-      setHasNavigated(true);
+    if (!inAuthFlow && !inTabsFlow) {
       if (!user) {
         logger.log('Initial - no user, navigating to login');
         router.replace('/(auth)/login');
