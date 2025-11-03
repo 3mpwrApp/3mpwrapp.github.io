@@ -10,13 +10,13 @@
  */
 
 import {
-    arrayUnion,
-    collection,
-    doc,
-    getDoc,
-    getDocs,
-    setDoc,
-    updateDoc,
+  arrayUnion,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+  updateDoc,
 } from 'firebase/firestore';
 
 import { db } from '../firebase/config';

@@ -1,4 +1,5 @@
 import React from "react";
+import { logError } from "../utils/errorLogger";
 
 let AsyncStorage: any;
 try {
@@ -92,7 +93,7 @@ export async function awardBadge(
     profile.badges = badges;
     await AsyncStorage?.setItem?.(KEY, JSON.stringify(profile));
   } catch (error) {
-    console.error('[awardBadge] Failed to award badge:', error);
+    logError('ProfileLocal', 'award badge', error);
   }
 }
 

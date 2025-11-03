@@ -1,4 +1,5 @@
 import React from 'react';
+import { logError } from '../utils/errorLogger';
 
 let AsyncStorage: any;
 try {
@@ -76,7 +77,7 @@ export function First7Provider({ children }: { children: React.ReactNode }) {
           setState({ ...defaultState, ...parsed }); 
         }
       } catch (err) {
-        console.error('[First7Provider] Failed to load state:', err);
+        logError('First7Provider', 'load state', err);
         setError(err as Error);
         // Silently fail - keep using default state
       }
@@ -90,7 +91,7 @@ export function First7Provider({ children }: { children: React.ReactNode }) {
       if (!AsyncStorage) return;
       await AsyncStorage.setItem(KEY, JSON.stringify(next)); 
     } catch (err) {
-      console.error('[First7Provider] Failed to persist state:', err);
+      logError('First7Provider', 'persist state', err);
       // Don't crash - just log
     }
   }, []);
@@ -108,13 +109,13 @@ export function First7Provider({ children }: { children: React.ReactNode }) {
         // Persist asynchronously in background
         if (AsyncStorage) {
           AsyncStorage.setItem(KEY, JSON.stringify(next)).catch((err: any) => {
-            console.error('[First7Provider] Toggle persist failed:', err);
+            logError('First7Provider', 'toggle persist', err);
           });
         }
         return next;
       });
     } catch (err) {
-      console.error('[First7Provider] Toggle failed:', err);
+      logError('First7Provider', 'toggle', err);
     }
   }, []);
   
@@ -124,13 +125,13 @@ export function First7Provider({ children }: { children: React.ReactNode }) {
         const next = { ...prevState, startedAt: prevState.startedAt ?? Date.now(), dismissed: false };
         if (AsyncStorage) {
           AsyncStorage.setItem(KEY, JSON.stringify(next)).catch((err: any) => {
-            console.error('[First7Provider] Start persist failed:', err);
+            logError('First7Provider', 'start persist', err);
           });
         }
         return next;
       });
     } catch (err) {
-      console.error('[First7Provider] Start failed:', err);
+      logError('First7Provider', 'start', err);
     }
   }, []);
   
@@ -138,7 +139,7 @@ export function First7Provider({ children }: { children: React.ReactNode }) {
     try {
       await persist(defaultState); 
     } catch (err) {
-      console.error('[First7Provider] Reset failed:', err);
+      logError('First7Provider', 'reset', err);
     }
   }, [persist]);
   
@@ -148,25 +149,25 @@ export function First7Provider({ children }: { children: React.ReactNode }) {
         const next = { ...prevState, dismissed: true };
         if (AsyncStorage) {
           AsyncStorage.setItem(KEY, JSON.stringify(next)).catch((err: any) => {
-            console.error('[First7Provider] Dismiss persist failed:', err);
+            logError('First7Provider', 'dismiss persist', err);
           });
         }
         return next;
       });
     } catch (err) {
-      console.error('[First7Provider] Dismiss failed:', err);
+      logError('First7Provider', 'dismiss', err);
     }
   }, []);
   
   if (error) {
-    console.error('[First7Provider] Provider has error state - still rendering with default state');
+    logError('First7Provider', 'Provider has error state - still rendering with default state', error);
   }
   
   // Render state always - never throw
   try {
     return <First7Context.Provider value={{ state, toggle, start, reset, dismiss }}>{children}</First7Context.Provider>;
   } catch (err) {
-    console.error('[First7Provider] Render error:', err);
+    logError('First7Provider', 'render error', err);
     // Emergency fallback - render children with empty provider
     return (
       <First7Context.Provider value={{ state: defaultState, toggle: async () => {}, start: async () => {}, reset: async () => {}, dismiss: async () => {} }}>
