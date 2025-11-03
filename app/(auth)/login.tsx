@@ -1,4 +1,3 @@
-import type { Href } from "expo-router";
 import { useRouter } from "expo-router";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
@@ -41,11 +40,9 @@ export default function LoginScreen() {
       setWorking(true);
       setError("");
       logger.log('[Login] Starting login process...');
-      const result = await signInWithEmailAndPassword(auth, email.trim(), password);
-      logger.log('[Login] Login successful!', { uid: result.user.uid });
-      logger.log('[Login] Navigating to /(tabs)...');
-      router.replace("/(tabs)" as Href);
-      logger.log('[Login] Navigation called');
+      await signInWithEmailAndPassword(auth, email.trim(), password);
+      logger.log('[Login] Login successful! Auth state will trigger navigation.');
+      // Don't manually navigate - let AuthContext handle it via app/index.tsx
     } catch (err: any) {
       logger.error('[Login] Login failed:', err);
       let msg = err?.message || "Login failed";
@@ -73,10 +70,8 @@ export default function LoginScreen() {
       setWorking(true);
       logger.log('[Login] Starting guest mode...');
       await signInGuest();
-      logger.log('[Login] Guest mode successful!');
-      logger.log('[Login] Navigating to /(tabs)...');
-      router.replace("/(tabs)" as Href);
-      logger.log('[Login] Navigation called');
+      logger.log('[Login] Guest mode successful! Auth state will trigger navigation.');
+      // Don't manually navigate - let AuthContext handle it via app/index.tsx
     } catch (err) {
       logger.error('[Login] Guest mode failed:', err);
       Alert.alert(t("common.errorTitle", "Error"), t("auth.guestModeFailed", "Failed to enter guest mode"));
