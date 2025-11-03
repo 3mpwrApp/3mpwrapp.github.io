@@ -16,6 +16,7 @@ import { useAuth } from '../context/AuthContext';
 import { useIndigenousLanguage } from '../context/IndigenousLanguageContext';
 import { useThemeColor } from '../hooks/useThemeColor';
 import { useTranslation } from '../i18n';
+import { logError } from '../utils/errorLogger';
 
 import A11yPressable from './A11yPressable';
 import { A11yTitle, A11yWrapper } from './A11yWrapper';
@@ -360,7 +361,7 @@ export default function EnhancedHubContent() {
       setMeetups(mockMeetups);
       
     } catch (error) {
-      console.error('Error loading community data:', error);
+      logError('EnhancedHubContent', 'loading community data', error);
       Alert.alert('Error', 'Failed to load community data. Please try again.');
     } finally {
       setIsLoading(false);

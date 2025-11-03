@@ -6,12 +6,12 @@ import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import type { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import {
-  Alert,
-  Modal,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View
+    Alert,
+    Modal,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -19,6 +19,7 @@ import { useAuth } from '../context/AuthContext';
 import { useIndigenousLanguage } from '../context/IndigenousLanguageContext';
 import { useThemeColor } from '../hooks/useThemeColor';
 import { useTranslation } from '../i18n';
+import { logError } from '../utils/errorLogger';
 
 import A11yPressable from './A11yPressable';
 import { GapView } from './GapView';
@@ -675,7 +676,7 @@ Sincerely,
       setDocumentTemplates(mockTemplates);
 
     } catch (error) {
-      console.error('Error loading legal data:', error);
+      logError('LegalAutomationContent', 'loading legal data', error);
       Alert.alert('Error', 'Failed to load legal process data. Please try again.');
     } finally {
       setIsLoading(false);

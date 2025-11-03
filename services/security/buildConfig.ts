@@ -3,6 +3,8 @@
  * Defines security settings for production builds
  */
 
+import { logError } from '../../utils/errorLogger';
+
 export const BUILD_SECURITY_CONFIG = {
   // Code obfuscation settings
   obfuscation: {
@@ -54,7 +56,7 @@ export function validateBuildSecurity(): boolean {
     const forbiddenVars = BUILD_SECURITY_CONFIG.environmentValidation.forbiddenVars;
     for (const varName of forbiddenVars) {
       if (process.env[varName]) {
-        console.error(`❌ Forbidden environment variable found: ${varName}`);
+        logError('BuildConfig', `Forbidden environment variable found: ${varName}`, new Error(varName));
         return false;
       }
     }
@@ -63,7 +65,7 @@ export function validateBuildSecurity(): boolean {
     const requiredVars = BUILD_SECURITY_CONFIG.environmentValidation.requiredVars;
     for (const varName of requiredVars) {
       if (!process.env[varName]) {
-        console.error(`❌ Required environment variable missing: ${varName}`);
+        logError('BuildConfig', `Required environment variable missing: ${varName}`, new Error(varName));
         return false;
       }
     }
@@ -71,7 +73,7 @@ export function validateBuildSecurity(): boolean {
     // Build security configuration validated successfully
     return true;
   } catch (error) {
-    console.error('❌ Build security validation failed:', error);
+    logError('BuildConfig', 'Build security validation failed', error);
     return false;
   }
 }

@@ -13,6 +13,7 @@ import { useAuth } from '../context/AuthContext';
 import { useIndigenousLanguage } from '../context/IndigenousLanguageContext';
 import { useThemeColor } from '../hooks/useThemeColor';
 import { useTranslation } from '../i18n';
+import { logError } from '../utils/errorLogger';
 
 import A11yPressable from './A11yPressable';
 import { A11yTitle, A11yWrapper } from './A11yWrapper';
@@ -764,7 +765,7 @@ export default function LegalWorkflowEngine() {
       setAutomationRules(mockAutomationRules);
 
     } catch (error) {
-      console.error('Error loading workflow data:', error);
+      logError('LegalWorkflowEngine', 'loading workflow data', error);
       Alert.alert('Error', 'Failed to load workflow data.');
     } finally {
       setIsLoading(false);

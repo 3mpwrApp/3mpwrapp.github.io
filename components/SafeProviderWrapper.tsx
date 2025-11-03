@@ -25,7 +25,7 @@ export class SafeProviderWrapper extends React.Component<
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     logError('SafeProviderWrapper', `${this.props.providerName || 'Provider'} failed to initialize`, error);
     if (__DEV__) {
-      console.error('Stack:', errorInfo.componentStack);
+      logError('SafeProviderWrapper', 'Stack trace', errorInfo.componentStack);
     }
   }
 

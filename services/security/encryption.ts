@@ -3,6 +3,7 @@
  * Implements: device keystore/keychain, secure key generation, encrypted storage
  */
 
+import { logError } from '../../utils/errorLogger';
 import { logger } from '../../utils/logger';
 
 
@@ -458,4 +459,4 @@ export async function decryptString(ciphertext: string, password?: string): Prom
 }
 
 // Initialize encryption on import
-secureEncryption.initialize().catch(console.error);
+secureEncryption.initialize().catch((error) => logError('Encryption', 'initialization', error));

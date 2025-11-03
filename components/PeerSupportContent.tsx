@@ -9,7 +9,9 @@ import {
     Text,
     View
 } from 'react-native';
+
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { logError } from '../utils/errorLogger';
 
 import { useAuth } from '../context/AuthContext';
 import { useIndigenousLanguage } from '../context/IndigenousLanguageContext';
@@ -292,7 +294,7 @@ export default function PeerSupportContent() {
 
       setUserProfile(mockProfile);
     } catch (error) {
-      console.error('Error loading user profile:', error);
+      logError('PeerSupportContent', 'loading user profile', error);
     }
   };
 
@@ -390,7 +392,7 @@ export default function PeerSupportContent() {
       setActiveConnections(mockActiveConnections);
 
     } catch (error) {
-      console.error('Error loading matches:', error);
+      logError('PeerSupportContent', 'loading matches', error);
       Alert.alert('Error', 'Failed to load peer matches. Please try again.');
     } finally {
       setIsLoading(false);

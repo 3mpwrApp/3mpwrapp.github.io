@@ -9,6 +9,7 @@ import { ANALYTICS_EVENTS } from '../services/analyticsEvents';
 import { useJurisdiction } from '../store/jurisdiction';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
+import { logError } from '../utils/errorLogger';
 
 import A11yPressable from './A11yPressable';
 import { GapView } from './GapView';
@@ -83,7 +84,7 @@ export default function JurisdictionDeadlineCalculator() {
         has_critical_deadline: deadlines.some(d => d.urgency === 'critical'),
       });
     } catch (error) {
-      console.error('Date calculation error:', error);
+      logError('JurisdictionDeadlineCalculator', 'date calculation', error);
       setCalculatedDeadlines([]);
     }
   };
