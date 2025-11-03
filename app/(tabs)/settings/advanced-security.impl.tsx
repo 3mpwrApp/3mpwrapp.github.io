@@ -33,6 +33,7 @@ import type {
     SecurityConfig,
     SecurityThreat
 } from '../../../types/phase2';
+import { logError } from '../../../utils/errorLogger';
 import { logger } from '../../../utils/logger';
 
 // Security Configuration Types - using imported types from types/phase2.ts
@@ -125,7 +126,7 @@ export default function AdvancedSecurityOptions() {
       await loadSecurityData();
 
     } catch (error) {
-      console.error('Error initializing security:', error);
+      logError('AdvancedSecurity', 'Error initializing security', error);
       Alert.alert('Security Error', 'Failed to initialize security settings.');
     } finally {
       setIsLoading(false);
@@ -138,7 +139,7 @@ export default function AdvancedSecurityOptions() {
       const configData = null; // Mock implementation
       return configData ? JSON.parse(configData) : null;
     } catch (error) {
-      console.error('Error loading security config:', error);
+      logError('AdvancedSecurity', 'Error loading security config', error);
       return null;
     }
   };
@@ -399,7 +400,7 @@ export default function AdvancedSecurityOptions() {
       // await SecureStore.setItemAsync('security_config', JSON.stringify(defaultConfig));
       // Mock implementation - in production would save to secure storage
     } catch (error) {
-      console.error('Error saving default security config:', error);
+      logError('AdvancedSecurity', 'Error saving default security config', error);
     }
 
     return defaultConfig;
@@ -488,7 +489,7 @@ export default function AdvancedSecurityOptions() {
       _setRecentAudits(mockAudits);
 
     } catch (error) {
-      console.error('Error loading security data:', error);
+      logError('AdvancedSecurity', 'Error loading security data', error);
     }
   };
 
@@ -518,7 +519,7 @@ export default function AdvancedSecurityOptions() {
       logger.warn(`Security setting updated: ${path} = ${value}`);
 
     } catch (error) {
-      console.error('Error updating security setting:', error);
+      logError('AdvancedSecurity', 'Error updating security setting', error);
       Alert.alert('Error', 'Failed to update security setting.');
     }
   };
@@ -543,7 +544,7 @@ export default function AdvancedSecurityOptions() {
         Alert.alert('Authentication Failed', 'Biometric authentication could not be enabled.');
       }
     } catch (error) {
-      console.error('Error enabling biometric auth:', error);
+      logError('AdvancedSecurity', 'Error enabling biometric auth', error);
       Alert.alert('Error', 'Failed to enable biometric authentication.');
     }
   };

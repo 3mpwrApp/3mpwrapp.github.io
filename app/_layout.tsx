@@ -53,8 +53,9 @@ import { PrivacyProvider, usePrivacy } from "../store/privacy";
 import { ProfileLocalProvider } from "../store/profileLocal";
 import { ResilienceProvider } from "../store/resilience";
 import { SettingsProvider } from "../store/settings";
+import { logError } from '../utils/errorLogger';
 import { ToastViewport } from "../utils/toast";
-// Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
+// Ã°Å¸â€Â¹ Use Firebase analytics init instead of custom
 // removed getFirebaseAnalytics direct import (handled via telemetry module)
 
 export default function RootLayout() {
@@ -138,7 +139,7 @@ export default function RootLayout() {
   const shouldRender = fontsLoaded || fontsError;
   
   if (fontsError) {
-    console.error('[RootLayout] Font loading failed:', fontsError);
+    logError('RootLayout', 'Font loading failed', fontsError);
   }
 
   try {
@@ -240,7 +241,7 @@ export default function RootLayout() {
     ) : null
     );
   } catch (error) {
-    console.error('[RootLayout] Render error:', error);
+    logError('RootLayout', 'Render error', error);
     // Emergency fallback - render a basic loading screen
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -266,7 +267,7 @@ function TelemetryInit() {
         initSentry(dsn).catch((error) => {
           // Silent fail - don't crash the app if Sentry init fails
           if (__DEV__) {
-            console.error('Failed to initialize Sentry:', error);
+            logError('TelemetryInit', 'Failed to initialize Sentry', error);
           }
         });
       }
@@ -306,7 +307,7 @@ function SecurityInit() {
       .catch((error: Error) => {
         // Log error but don't crash the app - security is optional enhancement
         if (__DEV__) {
-          console.error('🔒 Security initialization error:', error);
+          logError('SecurityInit', 'Security initialization error', error);
         }
       });
   }, []);

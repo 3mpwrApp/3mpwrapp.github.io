@@ -30,6 +30,8 @@ export function computeMoodInsights(entries: MoodEntry[] | undefined | null, now
   // streak: consecutive days back from today (or from most recent day if no today entries)
   let streak = 0;
   let cursor = byDay.has(todayKey)? todayKey : (dayKeys.length > 0 ? dayKeys[0] : todayKey);
+  let delta24h: number | null = null;
+  let trend: MoodInsights['trend'] = 'none';
   if (dayKeys.length === 0) {
     return { avg7d, delta24h, trend, streakDays: streak, lastEntryAgeHours };
   }
@@ -41,11 +43,8 @@ export function computeMoodInsights(entries: MoodEntry[] | undefined | null, now
     const prevDate = new Date(cursor);
     prevDate.setDate(prevDate.getDate() - 1);
     cursor = dayKey(prevDate.getTime());
-    // Safety: if we've gone too far back, stop
-    if (streak > 365) break;
   }
   // delta24h: compare today's avg (or most recent day) vs previous day
-  let delta24h: number | null = null;
   if (dayKeys.length >= 2) {
     const firstDay = dayKeys[0];
     const secondDay = dayKeys[1];
@@ -55,7 +54,6 @@ export function computeMoodInsights(entries: MoodEntry[] | undefined | null, now
   }
   // trend: compute regression-ish simple slope over last up to 7 days (daily averages)
   const recentDayKeys = dayKeys.slice(0,7).reverse(); // oldest -> newest
-  let trend: MoodInsights['trend'] = 'none';
   if (recentDayKeys.length >= 3) {
     const avgs = recentDayKeys.map(k=> byDay.get(k)!.reduce((s,e)=> s+e.score,0)/byDay.get(k)!.length);
     const n = avgs.length;

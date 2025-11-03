@@ -29,6 +29,7 @@ import { useFavorites } from "../../store/favorites";
 import { type Palette } from "../../theme/colors";
 import { useTextScale } from "../../theme/typography";
 import { useAppPalette } from "../../theme/usePalette";
+import { logError } from "../../utils/errorLogger";
 
  
 const { trackEvent } = require("../../services/analyticsClient");
@@ -64,7 +65,7 @@ function CampaignDetailInner() {
           setCampaign(localCampaign || null);
         }
       } catch (error) {
-        console.error('[CampaignDetail] Failed to load campaign:', error);
+        logError('CampaignDetail', 'Failed to load campaign', error);
         const localCampaign = campaigns.find((c) => c.id === id);
         setCampaign(localCampaign || null);
       } finally {
@@ -100,7 +101,7 @@ function CampaignDetailInner() {
         Alert.alert(t('common.error', 'Error'), 'Failed to update campaign');
       }
     } catch (error) {
-      console.error('[CampaignDetail] Save failed:', error);
+      logError('CampaignDetail', 'Save failed', error);
       Alert.alert(t('common.error', 'Error'), 'Failed to update campaign');
     }
   };
@@ -127,7 +128,7 @@ function CampaignDetailInner() {
                 Alert.alert(t('common.error', 'Error'), 'Failed to delete campaign');
               }
             } catch (error) {
-              console.error('[CampaignDetail] Delete failed:', error);
+              logError('CampaignDetail', 'Delete failed', error);
               Alert.alert(t('common.error', 'Error'), 'Failed to delete campaign');
             }
           },
@@ -147,7 +148,7 @@ function CampaignDetailInner() {
       });
       try { trackEvent("campaign_share", { id: campaign.id }); } catch {}
     } catch (error) {
-      console.error('[CampaignDetail] Share failed:', error);
+      logError('CampaignDetail', 'Share failed', error);
     }
   };
 

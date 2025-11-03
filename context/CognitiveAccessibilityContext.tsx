@@ -9,16 +9,17 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
 import type {
-    CognitiveMode,
-    CognitivePreferences,
-    TaskReminder
+  CognitiveMode,
+  CognitivePreferences,
+  TaskReminder
 } from '../constants/Cognitive';
 import {
-    COGNITIVE_MODES,
-    COGNITIVE_STORAGE_KEYS,
-    DEFAULT_COGNITIVE_PREFERENCES
+  COGNITIVE_MODES,
+  COGNITIVE_STORAGE_KEYS,
+  DEFAULT_COGNITIVE_PREFERENCES
 } from '../constants/Cognitive';
 import { announce } from '../utils/announce';
+import { logError } from '../utils/errorLogger';
 
 interface CognitiveAccessibilityContextType {
   // Preferences
@@ -124,7 +125,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
 
       setIsLoaded(true);
     } catch (error) {
-      console.error('Failed to load cognitive preferences:', error);
+      logError('CognitiveAccessibilityContext', 'Failed to load cognitive preferences', error);
       setIsLoaded(true);
     }
   };
@@ -137,7 +138,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
       );
       setPreferences(newPreferences);
     } catch (error) {
-      console.error('Failed to save cognitive preferences:', error);
+      logError('CognitiveAccessibilityContext', 'Failed to save cognitive preferences', error);
     }
   };
 
@@ -183,7 +184,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
       await AsyncStorage.setItem(COGNITIVE_STORAGE_KEYS.lastLocation, location);
       setLastLocation(location);
     } catch (error) {
-      console.error('Failed to save location:', error);
+      logError('CognitiveAccessibilityContext', 'Failed to save location', error);
     }
   }, []);
 
@@ -192,7 +193,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
       await AsyncStorage.removeItem(COGNITIVE_STORAGE_KEYS.lastLocation);
       setLastLocation(null);
     } catch (error) {
-      console.error('Failed to clear location:', error);
+      logError('CognitiveAccessibilityContext', 'Failed to clear location', error);
     }
   }, []);
 
@@ -208,7 +209,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
         );
         setScrollPositions(newPositions);
       } catch (error) {
-        console.error('Failed to save scroll position:', error);
+        logError('CognitiveAccessibilityContext', 'Failed to save scroll position', error);
       }
     },
     [preferences.saveScrollPosition, scrollPositions]
@@ -233,7 +234,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
         );
         setFormData(newFormData);
       } catch (error) {
-        console.error('Failed to save form data:', error);
+        logError('CognitiveAccessibilityContext', 'Failed to save form data', error);
       }
     },
     [preferences.rememberFormData, formData]
@@ -267,7 +268,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
         );
         setFormData(newFormData);
       } catch (error) {
-        console.error('Failed to clear form data:', error);
+        logError('CognitiveAccessibilityContext', 'Failed to clear form data', error);
       }
     },
     [formData]
@@ -296,7 +297,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
         );
         setIncompleteTasks(newTasks);
       } catch (error) {
-        console.error('Failed to save incomplete task:', error);
+        logError('CognitiveAccessibilityContext', 'Failed to save incomplete task', error);
       }
     },
     [incompleteTasks, preferences.mode]
@@ -312,7 +313,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
         );
         setIncompleteTasks(newTasks);
       } catch (error) {
-        console.error('Failed to complete task:', error);
+        logError('CognitiveAccessibilityContext', 'Failed to complete task', error);
       }
     },
     [incompleteTasks]
@@ -381,7 +382,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
       );
       setIncompleteTasks([]);
     } catch (error) {
-      console.error('Failed to clear incomplete tasks:', error);
+      logError('CognitiveAccessibilityContext', 'Failed to clear incomplete tasks', error);
     }
   }, []);
   
@@ -395,7 +396,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
         );
         setPreferences(newPreferences);
       } catch (error) {
-        console.error('Failed to update preferences:', error);
+        logError('CognitiveAccessibilityContext', 'Failed to update preferences', error);
         throw error;
       }
     },
@@ -419,7 +420,7 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
       setIncompleteTasks([]);
       setLastAutoSave({});
     } catch (error) {
-      console.error('Failed to reset cognitive accessibility:', error);
+      logError('CognitiveAccessibilityContext', 'Failed to reset cognitive accessibility', error);
       throw error;
     }
   }, []);
@@ -482,3 +483,4 @@ export function useCognitiveAccessibility() {
 export function useCognitiveAccessibilityOptional() {
   return useContext(CognitiveAccessibilityContext);
 }
+

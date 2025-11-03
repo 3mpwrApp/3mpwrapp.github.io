@@ -14,6 +14,7 @@ import { useTranslation } from '../../i18n';
 import { useTextScale } from '../../theme/typography';
 import { createTextStyles } from '../../theme/typography.enhanced';
 import { useAppPalette } from '../../theme/usePalette';
+import { logError } from '../../utils/errorLogger';
 import { logger } from '../../utils/logger';
 
 // Safe wrapper for optional components - prevents crashes from non-critical features
@@ -43,7 +44,7 @@ class ErrorBoundaryWrapper extends React.Component<
   }
 
   componentDidCatch(error: Error) {
-    console.error('[Home] Optional component error:', error);
+    logError('Home', 'Optional component render', error);
     this.props.onError();
   }
 
