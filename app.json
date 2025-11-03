@@ -136,7 +136,7 @@
       "eas": {
         "projectId": "6dd0264f-d796-4f63-9590-f82284a48354"
       },
-      "EXPO_PUBLIC_DATA_POLICY": "strict_byoc"
+      "EXPO_PUBLIC_DATA_POLICY": "default"
     }
   }
 }
