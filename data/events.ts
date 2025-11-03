@@ -9,6 +9,8 @@ export type Event = {
   captions?: boolean;
   stepFree?: boolean;
   sensorySpace?: boolean;
+  category?: string;
+  tags?: string[];
 };
 
 export const events: Event[] = [

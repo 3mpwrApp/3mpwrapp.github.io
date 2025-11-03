@@ -22,6 +22,7 @@ import SkeletonRow from "../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
 import { generateDisabilityObservances } from "../../data/disability-observances";
 import { events as localEvents } from "../../data/events";
+import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
 import {
     generateCanadianHolidays,
     generateProvincialHolidays,
@@ -65,6 +66,7 @@ export default function EventsScreen() {
     return [
       ...generateCanadianHolidays(y),
       ...generateDisabilityObservances(y),
+      ...generateHealthAwarenessEvents(y),
     ];
   });
   const { includeProvincialHolidays, province } = useSettings();
@@ -145,6 +147,7 @@ export default function EventsScreen() {
     setSystemItems([
       ...filteredNational,
       ...generateDisabilityObservances(y),
+      ...generateHealthAwarenessEvents(y),
       ...provincials,
     ]);
   }, [month, includeProvincialHolidays, province]);

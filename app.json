@@ -53,7 +53,6 @@
       "edgeToEdgeEnabled": true,
       "usesCleartextTraffic": false,
       "package": "com.app3mpwr.app3mpwr",
-      "versionCode": 5,
       "allowBackup": false,
       "permissions": [
         "android.permission.INTERNET",
