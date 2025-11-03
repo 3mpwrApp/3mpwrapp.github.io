@@ -75,7 +75,7 @@ export default function ResiliencePoints() {
       <Text style={s.sectionTitle}>Earn Points</Text>
       <GapView gap={12}>
         {rs.actions.map(a => (
-          <Pressable 
+          <Pressable // a11y-scan: attributes on following lines
             hitSlop={HIT_SLOP_8} 
             accessibilityRole="button" 
             key={a.id} 

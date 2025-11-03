@@ -91,7 +91,7 @@ function Card({ href, title, desc, icon, isBeta, palette }: { href: string; titl
   const s = cardStyles(palette);
   return (
     <Link href={href as any} asChild={true}>
-      <Pressable 
+      <Pressable // a11y-scan: attributes on following lines
         hitSlop={HIT_SLOP_8} 
         accessibilityRole="button" 
         style={[s.card, isBeta && s.betaCard]}
