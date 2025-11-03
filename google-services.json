@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "733708119893",
+    "project_id": "empowrapp",
+    "storage_bucket": "empowrapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733708119893:android:fdfb57d1be572fb3ee89dc",
+        "android_client_info": {
+          "package_name": "com.app3mpwr.app3mpwr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733708119893-vagikeh1bu36n9boma32ic2lbfvbff08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv4rtD3it2yoIIFpxckCEXC9haKIbVjA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733708119893-vagikeh1bu36n9boma32ic2lbfvbff08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
