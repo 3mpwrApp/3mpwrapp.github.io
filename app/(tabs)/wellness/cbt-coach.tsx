@@ -246,7 +246,7 @@ export default function CBTCoach(){
       {history.length > 0 && (
         <View style={s.card}>
           <Text style={s.cardTitle}>Recent Entries</Text>
-          {history.map((entry, idx) => (
+          {history.map((entry) => (
             <A11yPressable
               key={entry.id}
               onPress={() => loadFromHistory(entry)}

@@ -19,7 +19,7 @@ describe('Wellness — Work-Balance AI (smoke)', () => {
   it('generates a plan and allows copy', async () => {
     const { getByText, findByText, queryByText } = render(<WorkBalance />);
     expect(getByText(/Work Balance AI/i)).toBeTruthy();
-    (fireEvent as any).press(getByText(/Plan my day/i));
+    (fireEvent as any).press(getByText(/Generate My Plan/i));
     // After generation, a Copy button appears in the results box (or might be async rendering issue)
     try {
       const copyBtn = await findByText(/Copy/i, {}, { timeout: 3000 });

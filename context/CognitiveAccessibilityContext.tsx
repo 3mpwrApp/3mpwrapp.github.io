@@ -9,14 +9,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
 import type {
-    CognitiveMode,
-    CognitivePreferences,
-    TaskReminder
+  CognitiveMode,
+  CognitivePreferences,
+  TaskReminder
 } from '../constants/Cognitive';
 import {
-    COGNITIVE_MODES,
-    COGNITIVE_STORAGE_KEYS,
-    DEFAULT_COGNITIVE_PREFERENCES
+  COGNITIVE_MODES,
+  COGNITIVE_STORAGE_KEYS,
+  DEFAULT_COGNITIVE_PREFERENCES
 } from '../constants/Cognitive';
 import { announce } from '../utils/announce';
 

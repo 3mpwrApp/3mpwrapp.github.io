@@ -1,12 +1,12 @@
-import { Link, router } from 'expo-router';
+import { Link } from 'expo-router';
 import React from 'react';
 import { ActivityIndicator, Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useAuth } from '../../../context/AuthContext';
+import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { flagItem } from '../../../services/moderation';
 import { addAidPost, listAidPosts, respondToPost, softDeletePost } from '../../../services/mutual';
 import { useAppPalette } from '../../../theme/usePalette';

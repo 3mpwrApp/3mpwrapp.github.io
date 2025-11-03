@@ -30,10 +30,13 @@ const Screen = (Mod && Mod.default) ? Mod.default : Mod;
 
 describe('Wellness — Adaptive Meditation (smoke)', () => {
   it('exports links and triggers play without crash', async () => {
-    const { getAllByText, getByText, getByLabelText } = render(<Screen />);
+    const { getAllByText, getByLabelText } = render(<Screen />);
     expect(getAllByText(/Adaptive Meditation/i).length).toBeGreaterThan(0);
     (fireEvent as any).press(getByLabelText(/Export meditation links as CSV/i));
-    (fireEvent as any).press(getByText(/Breathing/i));
+    const breathingButtons = getAllByText(/Breathing/i);
+    if (breathingButtons.length > 0) {
+      (fireEvent as any).press(breathingButtons[0]);
+    }
     await waitFor(() => true);
   });
 });
