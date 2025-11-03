@@ -10,16 +10,17 @@
  */
 
 import {
-    arrayUnion,
-    collection,
-    doc,
-    getDoc,
-    getDocs,
-    setDoc,
-    updateDoc,
+  arrayUnion,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+  updateDoc,
 } from 'firebase/firestore';
 
 import { db } from '../firebase/config';
+import { logError } from '../utils/errorLogger';
 
 export type PatternType = 'activity' | 'energy' | 'mood' | 'recovery' | 'engagement';
 
