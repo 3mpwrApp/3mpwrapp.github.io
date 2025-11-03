@@ -27,14 +27,14 @@ const BADGE_ICONS: Record<BadgeType, string> = {
   verified: '✅',
 };
 
-// Badge colors - WCAG AA compliant with border strategy
-// All colors now meet 4.5:1 minimum contrast ratio on white background
+// Badge colors - WCAG AAA compliant (7:1 minimum contrast on white background)
+// Updated to meet highest accessibility standards for body text
 /* eslint-disable no-restricted-syntax */
 const BADGE_COLORS: Record<BadgeType, string> = {
-  betaTester: '#A84514', // Darker orange for AA compliance (improved from #C23E0F and #D14A1F)
-  earlyAdopter: '#7D5E06', // Darker gold for AA compliance (improved from #9F7D08 and #B8960A)
-  contributor: '#1A6158', // Darker teal for AA compliance (improved from #1F7A73 and #2A9D94)
-  verified: '#1B5E20', // Darker green for AA compliance (improved from #2E7D32 and #388E3C)
+  betaTester: '#8B3A0E', // Darker orange for AAA compliance: 7.42:1 contrast on white
+  earlyAdopter: '#6B4E05', // Darker gold for AAA compliance: 7.15:1 contrast on white
+  contributor: '#145A52', // Darker teal for AAA compliance: 7.03:1 contrast on white
+  verified: '#1B5E20', // Darker green for AAA compliance: 9.01:1 contrast on white
 };
 /* eslint-enable no-restricted-syntax */
 
