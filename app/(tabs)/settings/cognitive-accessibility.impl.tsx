@@ -18,7 +18,8 @@ import A11yPressable from '../../../components/A11yPressable';
 import { AutoSaveIndicator } from '../../../components/CognitiveAccessibility';
 import type {
     CognitiveMode,
-    TaskReminder} from '../../../constants/Cognitive';
+    TaskReminder
+} from '../../../constants/Cognitive';
 import {
     COGNITIVE_MODES,
     COMPLEXITY_INDICATORS
@@ -28,6 +29,7 @@ import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
 import { announce } from '../../../utils/announce';
+import { logError } from '../../../utils/errorLogger';
 
 export default function CognitiveAccessibilityScreen() {
   const { t } = useTranslation();
@@ -64,7 +66,7 @@ export default function CognitiveAccessibilityScreen() {
         [{ text: t('common.ok', 'OK') }]
       );
     } catch (error) {
-      console.error('Failed to change cognitive mode:', error);
+      logError('CognitiveAccessibility', 'Failed to change cognitive mode', error);
       Alert.alert(
         t('common.error', 'Error'),
         t('cognitive.modeChangeError', 'Failed to change cognitive mode. Please try again.'),
@@ -86,7 +88,7 @@ export default function CognitiveAccessibilityScreen() {
         t('cognitive.preferenceUpdated', 'Preference updated')
       );
     } catch (error) {
-      console.error('Failed to update preference:', error);
+      logError('CognitiveAccessibility', 'Failed to update preference', error);
     } finally {
       setIsSaving(false);
     }
@@ -118,7 +120,7 @@ export default function CognitiveAccessibilityScreen() {
                 [{ text: t('common.ok', 'OK') }]
               );
             } catch (error) {
-              console.error('Failed to clear data:', error);
+              logError('CognitiveAccessibility', 'Failed to clear data', error);
               Alert.alert(
                 t('common.error', 'Error'),
                 t('cognitive.clearDataError', 'Failed to clear data. Please try again.'),

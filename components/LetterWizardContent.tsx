@@ -30,6 +30,7 @@ import { useTranslation } from "../i18n";
 import { buildCombinedEvidenceSummary, buildSymptomSummary } from "../services/insights";
 import { useProfileLocal } from "../store/profileLocal";
 import { useAppPalette } from "../theme/usePalette";
+import { logError } from '../utils/errorLogger';
 
 import A11yPressable from "./A11yPressable";
 import { ComplexityBadge, SimplifiedView } from "./CognitiveAccessibility";
@@ -81,7 +82,7 @@ export async function saveLetter(letter: Omit<SavedLetter, 'id' | 'savedAt'>): P
     await AsyncStorage?.setItem?.(SAVED_LETTERS_KEY, JSON.stringify(existing));
     return savedLetter;
   } catch (error) {
-    console.error('[saveLetter] Failed to save letter:', error);
+    logError('LetterWizard', 'Failed to save letter', error);
     throw error;
   }
 }
@@ -108,7 +109,7 @@ export async function deleteSavedLetter(id: string): Promise<void> {
     const filtered = existing.filter(l => l.id !== id);
     await AsyncStorage?.setItem?.(SAVED_LETTERS_KEY, JSON.stringify(filtered));
   } catch (error) {
-    console.error('[deleteSavedLetter] Failed to delete letter:', error);
+    logError('LetterWizard', 'Failed to delete letter', error);
   }
 }
 
@@ -130,7 +131,7 @@ export async function updateSavedLetter(id: string, updates: Partial<SavedLetter
       await AsyncStorage?.setItem?.(SAVED_LETTERS_KEY, JSON.stringify(existing));
     }
   } catch (error) {
-    console.error('[updateSavedLetter] Failed to update letter:', error);
+    logError('LetterWizard', 'Failed to update letter', error);
   }
 }
 
@@ -1230,7 +1231,7 @@ export default function LetterWizardContent() {
       
       trackEvent('letter_wizard_save', { letterType: currentTemplate.type, isUpdate: !!loadedLetterId });
     } catch (error) {
-      console.error('[saveCurrentLetter] Error:', error);
+      logError('LetterWizard', 'Failed to save current letter', error);
       throw error;
     }
   };

@@ -45,28 +45,14 @@ const STRICT = isStrictBYOC();
 const HYBRID = isHybridBYOC();
 
 // Runtime check: Warn if using default 3mpwr Firebase config
-if (!STRICT && !IS_TEST && firebaseConfig.projectId === 'empowrapp') {
-  console.warn(
-    '\n' +
-    '⚠️⚠️⚠️ WARNING: USING DEFAULT 3MPWR FIREBASE PROJECT ⚠️⚠️⚠️\n' +
-    '\n' +
-    'You are using the default demo Firebase config!\n' +
-    'This config points to 3mpwr\'s demo Firebase project.\n' +
-    '\n' +
-    'DO NOT USE THIS IN PRODUCTION!\n' +
-    '\n' +
-    'Required actions:\n' +
-    '1. Create YOUR OWN Firebase project at https://firebase.google.com\n' +
-    '2. Replace config in firebase/config.ts with YOUR credentials\n' +
-    '3. Deploy Cloud Functions to YOUR Firebase project\n' +
-    '\n' +
-    'Your users\' data will be stored in the configured Firebase project.\n' +
-    'Using 3mpwr\'s project means data will be stored on our servers!\n' +
-    '\n' +
-    'See firebase/functions/README.md for setup instructions.\n' +
-    '\n'
-  );
-}
+/**
+ * NOTE FOR FORKERS/CONTRIBUTORS:
+ * If you're deploying this app yourself, you MUST replace the Firebase config above
+ * with your own Firebase project credentials. See README.md > Firebase Setup section.
+ * 
+ * The default config points to 3mpwr's demo project and should NOT be used in production.
+ * Your users' data will be stored in whatever Firebase project is configured here.
+ */
 
 // Ensure only one app is initialized (when not strict)
 export function getFirebaseApp(): FirebaseApp {

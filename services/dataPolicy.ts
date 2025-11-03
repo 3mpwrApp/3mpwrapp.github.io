@@ -9,7 +9,7 @@ import { fetchWithRetry, getErrorMessage, isNetworkError } from '../utils/networ
 
 export type DataPolicyMode = 'default' | 'hybrid_byoc' | 'strict_byoc';
 
-const mode: DataPolicyMode = (process.env.EXPO_PUBLIC_DATA_POLICY as DataPolicyMode) || 'default';
+const mode: DataPolicyMode = (process.env.EXPO_PUBLIC_DATA_POLICY as DataPolicyMode) || 'hybrid_byoc';
 
 export function isStrictBYOC(): boolean {
   return mode === 'strict_byoc';

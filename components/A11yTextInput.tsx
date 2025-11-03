@@ -1,6 +1,6 @@
 import React from 'react';
 import type { TextInputProps, TextStyle, ViewStyle } from 'react-native';
-import { Text, TextInput, View } from 'react-native';
+import { Platform, Text, TextInput, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
@@ -218,8 +218,8 @@ export default function A11yTextInput({
         value={value}
         onChangeText={onChangeText}
         style={[styles.input, style]}
-        keyboardType={keyboardType}
-        textContentType={textContentType}
+        {...(Platform.OS !== 'web' && { keyboardType })}
+        {...(Platform.OS !== 'web' && { textContentType })}
         secureTextEntry={inputType === 'password'}
         maxLength={maxLength}
         onFocus={(e) => {
@@ -240,9 +240,9 @@ export default function A11yTextInput({
         }}
         // Enhanced keyboard and input behavior
         returnKeyType={inputType === 'search' ? 'search' : 'done'}
-        enablesReturnKeyAutomatically={true}
+        {...(Platform.OS !== 'web' && { enablesReturnKeyAutomatically: true })}
         autoCapitalize={inputType === 'email' || inputType === 'url' ? 'none' : 'sentences'}
-        autoCorrect={inputType === 'email' || inputType === 'url' || inputType === 'password' ? false : true}
+        {...(Platform.OS !== 'web' && { autoCorrect: inputType === 'email' || inputType === 'url' || inputType === 'password' ? false : true })}
         spellCheck={inputType === 'password' ? false : true}
         hitSlop={HIT_SLOP_8}
         {...rest}

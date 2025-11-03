@@ -190,7 +190,7 @@ export async function recordPatternDataPoint(
       await setDoc(patternRef, newPattern);
     }
   } catch (error) {
-    console.error('Error recording pattern data point:', error);
+    logError('PatternLearning', 'Error recording pattern data point', error);
     throw error;
   }
 }
@@ -213,7 +213,7 @@ export async function getUserPatterns(userId: string, type?: PatternType): Promi
 
     return patterns;
   } catch (error) {
-    console.error('Error fetching user patterns:', error);
+    logError('PatternLearning', 'Error fetching user patterns', error);
     return [];
   }
 }
@@ -232,7 +232,7 @@ export async function getPattern(userId: string, patternId: string): Promise<Pat
     
     return null;
   } catch (error) {
-    console.error('Error fetching pattern:', error);
+    logError('PatternLearning', 'Error fetching pattern', error);
     return null;
   }
 }
@@ -424,7 +424,7 @@ export async function deletePattern(_userId: string, _patternId: string): Promis
     // const patternRef = doc(db, `users/${userId}/patterns/${patternId}`);
     // await deleteDoc(patternRef);
   } catch (error) {
-    console.error('Error deleting pattern:', error);
+    logError('PatternLearning', 'Error deleting pattern', error);
     throw error;
   }
 }

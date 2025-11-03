@@ -1,6 +1,6 @@
 import * as Linking from 'expo-linking';
 import { useRouter, useSegments } from 'expo-router';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { ActivityIndicator, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
@@ -13,6 +13,8 @@ export default function Index() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const segments = useSegments();
+  
+  const [hasNavigated, setHasNavigated] = React.useState(false);
 
   // Store the deep link path for resuming after login
   useEffect(() => {
@@ -68,20 +70,56 @@ export default function Index() {
   }, [user, loading, router]);
 
   // Handle redirect using useEffect to avoid middleware issues
+  // CRITICAL: Only run once when loading completes, don't track segments
   useEffect(() => {
-    if (!loading) {
-      const inAuthFlow = (segments as string[]).includes('auth');
-      const inTabsFlow = (segments as string[]).includes('tabs');
-      
-      if (!user && !inAuthFlow) {
-        // Only redirect to login if we're not already in auth flow
-        router.replace('/(auth)/login');
-      } else if (user && !inTabsFlow) {
-        // Only redirect to tabs if we're not already there
-        router.replace('/(tabs)');
-      }
+    if (hasNavigated) {
+      return; // Already navigated, don't run again
     }
-  }, [loading, user]); // Removed router and segments from deps to prevent infinite loops
+    
+    // EMERGENCY FIX: Shorter timeout to prevent crashes
+    const timeout = setTimeout(() => {
+      if (!hasNavigated) {
+        logger.warn('Emergency timeout - forcing navigation to login');
+        setHasNavigated(true);
+        router.replace('/(auth)/login');
+      }
+    }, 3000); // 3 second timeout - force navigate to prevent crash
+    
+    if (loading) {
+      return () => clearTimeout(timeout); // Still loading, wait
+    }
+    
+    clearTimeout(timeout);
+    
+    // Auth is done loading - check where we are
+    const inAuthFlow = (segments as string[]).includes('auth');
+    const inTabsFlow = (segments as string[]).includes('tabs');
+    
+    logger.log('Index initial navigation', { 
+      user: !!user, 
+      inAuthFlow, 
+      inTabsFlow,
+      segments: segments.join('/')
+    });
+    
+    // If already in auth or tabs, we're good
+    if (inAuthFlow || inTabsFlow) {
+      setHasNavigated(true);
+      return () => clearTimeout(timeout);
+    }
+    
+    // Navigate based on auth state
+    setHasNavigated(true);
+    if (!user) {
+      logger.log('No user - navigating to login');
+      router.replace('/(auth)/login');
+    } else {
+      logger.log('User authenticated - navigating to tabs');
+      router.replace('/(tabs)');
+    }
+    
+    return () => clearTimeout(timeout);
+  }, [loading, user]); // REMOVED: hasNavigated and segments from deps to prevent loop
 
   // Show loading state while auth initializes or during redirect
   return (

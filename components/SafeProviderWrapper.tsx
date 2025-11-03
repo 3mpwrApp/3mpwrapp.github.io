@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { logError } from '../utils/errorLogger';
+
 /**
  * SafeProviderWrapper prevents any provider initialization errors from crashing the app.
  * Used at the root level to wrap providers that might throw during initialization.
@@ -21,8 +23,10 @@ export class SafeProviderWrapper extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error(`[SafeProviderWrapper] ${this.props.providerName || 'Provider'} failed to initialize:`, error);
-    console.error('Stack:', errorInfo.componentStack);
+    logError('SafeProviderWrapper', `${this.props.providerName || 'Provider'} failed to initialize`, error);
+    if (__DEV__) {
+      console.error('Stack:', errorInfo.componentStack);
+    }
   }
 
   render() {

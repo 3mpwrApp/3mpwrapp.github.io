@@ -1,6 +1,8 @@
 // Optional notification helper. Uses expo-notifications if available, else no-ops.
 import { Platform } from "react-native";
 
+import { logError } from '../utils/errorLogger';
+
 // Lazy accessors to avoid loading optional native modules during tests/web
 function getConstants(): any {
   try { return require('expo-constants'); } catch { return {}; }
@@ -195,7 +197,7 @@ export async function notifyAllUsers(notification: {
 
     return { success: true, message };
   } catch (error) {
-    console.error('[Push Notification Error]', error);
+    logError('Notifications', 'Push notification error', error);
     return { success: false, error };
   }
 }
@@ -261,7 +263,7 @@ export async function registerUserPushToken(_userId: string) {
     
     return token;
   } catch (error) {
-    console.error('[Push] Token registration failed:', error);
+    logError('Notifications', 'Token registration failed', error);
     return null;
   }
 }

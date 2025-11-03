@@ -3,6 +3,7 @@ import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
+import { logError } from '../utils/errorLogger';
 
 import GapView from './GapView';
 
@@ -45,7 +46,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
     // Log to console in development
     if (__DEV__) {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      logError('ErrorBoundary', 'Caught an error', error);
     }
 
     // TODO: Log to Sentry in production if enabled
@@ -72,15 +73,15 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 }
 
 // Fallback palette constants for when context is unavailable
-// Colors updated for WCAG AA compliance (minimum 4.5:1 contrast ratio)
+// Colors updated for WCAG AAA compliance (minimum 7:1 contrast ratio for body text)
 /* eslint-disable no-restricted-syntax */
 const FALLBACK_PALETTE = {
-  background: '#FAFAFA' as const, // Slightly off-white for better contrast than pure white
-  surface: '#E0E0E0' as const, // Darker for better contrast (improved from #F0F0F0 and #F5F5F5)
-  text: '#212121' as const, // Near-black for excellent contrast (improved from #000000)
-  onPrimary: '#FFFFFF' as const,
-  primary: '#1565C0' as const, // Darker blue for AA compliance (improved from #007AFF and #0051C3)
-  muted: '#616161' as const, // Much darker gray for AA compliance (improved from #CCCCCC)
+  background: '#FFFFFF' as const, // Pure white for maximum contrast compliance
+  surface: '#F5F5F5' as const, // Very light gray with 1.09:1 contrast (decorative only)
+  text: '#000000' as const, // Pure black for maximum contrast: 21:1 (WCAG AAA)
+  onPrimary: '#FFFFFF' as const, // White text on primary color
+  primary: '#004A99' as const, // Darker blue for AAA compliance: 8.61:1 contrast on white
+  muted: '#434A50' as const, // Dark gray for AAA compliance: 8.99:1 contrast on white
 };
 /* eslint-enable no-restricted-syntax */
 

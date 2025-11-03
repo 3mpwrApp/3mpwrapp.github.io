@@ -331,7 +331,7 @@ export async function getDisabilityProfile(): Promise<DisabilityProfile | null> 
     const raw = await AsyncStorage.getItem(PROFILE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) {
-    console.error('Failed to load disability profile:', e);
+    logError('DisabilityWizard', 'Failed to load disability profile', e);
   }
   return null;
 }
@@ -347,7 +347,7 @@ export async function updateDisabilityProfile(updates: Partial<DisabilityProfile
   try {
     await AsyncStorage.setItem(PROFILE_KEY, JSON.stringify(updated));
   } catch (e) {
-    console.error('Failed to save disability profile:', e);
+    logError('DisabilityWizard', 'Failed to save disability profile', e);
   }
   
   return updated;
@@ -459,7 +459,7 @@ async function getRotationState(): Promise<RotationState> {
       return state;
     }
   } catch (e) {
-    console.error('Failed to load rotation state:', e);
+    logError('DisabilityWizard', 'Failed to load rotation state', e);
   }
   
   return {
@@ -476,7 +476,7 @@ async function markToolShown(toolId: string): Promise<void> {
     try {
       await AsyncStorage.setItem(ROTATION_KEY, JSON.stringify(state));
     } catch (e) {
-      console.error('Failed to save rotation state:', e);
+      logError('DisabilityWizard', 'Failed to save rotation state', e);
     }
   }
 }
@@ -730,7 +730,7 @@ export async function getWizardSuggestions(extra?: { coachProgress?: number }): 
     
     return suggestions;
   } catch (error) {
-    console.error('[getWizardSuggestions] Failed to generate suggestions:', error);
+    logError('DisabilityWizard', 'Failed to generate suggestions', error);
     // Return empty array on any error - this prevents app crashes
     return [];
   }
@@ -848,7 +848,7 @@ export function useDisabilityWizard() {
     getWizardSuggestions({ coachProgress: fraction })
       .then(setSuggestions)
       .catch((err) => {
-        console.error('[useDisabilityWizard] Error fetching suggestions:', err);
+        logError('DisabilityWizard', 'Error fetching suggestions', err);
         setError(err);
         setSuggestions([]); // Return empty array on error
       })

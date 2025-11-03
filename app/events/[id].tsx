@@ -14,6 +14,7 @@ import { isScheduled, removeReminder, scheduleForEvent } from "../../services/ev
 import { fsDeleteEvent, fsGetEvent, fsUpdateEvent } from "../../services/firestore";
 import { useSettings } from "../../store/settings";
 import { useAppPalette } from "../../theme/usePalette";
+import { logError } from '../../utils/errorLogger';
 
 function createICS(
   title: string,
@@ -55,7 +56,7 @@ export default function EventDetail() {
           setEvent(localEvent || null);
         }
       } catch (error) {
-        console.error('[EventDetail] Failed to load event:', error);
+        logError('EventDetail', 'Failed to load event', error);
         const localEvent = events.find((e) => e.id === id);
         setEvent(localEvent || null);
       } finally {
@@ -100,7 +101,7 @@ export default function EventDetail() {
         Alert.alert(t('common.error', 'Error'), t('eventsFeature.edit.failed', 'Failed to update event'));
       }
     } catch (error) {
-      console.error('[EventDetail] Save failed:', error);
+      logError('EventDetail', 'Save failed', error);
       Alert.alert(t('common.error', 'Error'), t('eventsFeature.edit.failed', 'Failed to update event'));
     }
   };
@@ -127,7 +128,7 @@ export default function EventDetail() {
                 Alert.alert(t('common.error', 'Error'), t('eventsFeature.delete.failed', 'Failed to delete event'));
               }
             } catch (error) {
-              console.error('[EventDetail] Delete failed:', error);
+              logError('EventDetail', 'Delete failed', error);
               Alert.alert(t('common.error', 'Error'), t('eventsFeature.delete.failed', 'Failed to delete event'));
             }
           },
@@ -146,7 +147,7 @@ export default function EventDetail() {
         title: event.title,
       });
     } catch (error) {
-      console.error('[EventDetail] Share failed:', error);
+      logError('EventDetail', 'Share failed', error);
     }
   };
 

@@ -10,6 +10,7 @@ import { auth } from "../../firebase/config";
 import { MAX_FONT_SCALE } from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
 import { useAppPalette } from "../../theme/usePalette";
+import { logger } from "../../utils/logger";
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -39,9 +40,14 @@ export default function LoginScreen() {
     try {
       setWorking(true);
       setError("");
-      await signInWithEmailAndPassword(auth, email.trim(), password);
+      logger.log('[Login] Starting login process...');
+      const result = await signInWithEmailAndPassword(auth, email.trim(), password);
+      logger.log('[Login] Login successful!', { uid: result.user.uid });
+      logger.log('[Login] Navigating to /(tabs)...');
       router.replace("/(tabs)" as Href);
+      logger.log('[Login] Navigation called');
     } catch (err: any) {
+      logger.error('[Login] Login failed:', err);
       let msg = err?.message || "Login failed";
       
       // Handle specific Firebase errors
@@ -65,9 +71,14 @@ export default function LoginScreen() {
   const handleGuestMode = async () => {
     try {
       setWorking(true);
+      logger.log('[Login] Starting guest mode...');
       await signInGuest();
+      logger.log('[Login] Guest mode successful!');
+      logger.log('[Login] Navigating to /(tabs)...');
       router.replace("/(tabs)" as Href);
-    } catch {
+      logger.log('[Login] Navigation called');
+    } catch (err) {
+      logger.error('[Login] Guest mode failed:', err);
       Alert.alert(t("common.errorTitle", "Error"), t("auth.guestModeFailed", "Failed to enter guest mode"));
     } finally {
       setWorking(false);
