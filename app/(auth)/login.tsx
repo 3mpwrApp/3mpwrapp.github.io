@@ -1,4 +1,3 @@
-import { useRouter } from "expo-router";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { Alert, StyleSheet, Text, TextInput, View } from "react-native";
@@ -12,7 +11,6 @@ import { useAppPalette } from "../../theme/usePalette";
 import { logger } from "../../utils/logger";
 
 export default function LoginScreen() {
-  const router = useRouter();
   const { t } = useTranslation();
   const palette = useAppPalette();
   const styles = React.useMemo(() => createStyles(palette), [palette]);

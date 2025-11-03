@@ -30,18 +30,27 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
       authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
       tokenEndpoint: 'https://oauth2.googleapis.com/token',
     };
-  const request = new AuthSession.AuthRequest({
+    const request = new AuthSession.AuthRequest({
       clientId,
       responseType: AuthSession.ResponseType.IdToken,
       scopes: ['openid', 'profile', 'email'],
       redirectUri: AuthSession.makeRedirectUri({ useProxy: Platform.select({ web: false, default: true }) }),
     });
-    await request.promptAsync(discovery as any);
-    if (!request?.idToken) {
+    
+    const result = await request.promptAsync(discovery as any);
+    
+    // Check if user completed the flow
+    if (result.type !== 'success') {
+      return false; // User cancelled or error occurred
+    }
+    
+    if (!result.params?.id_token) {
+      Alert.alert('Sign-In incomplete', 'Did not receive authentication token from Google.');
       return false;
     }
+    
     const { GoogleAuthProvider, signInWithCredential } = await import('firebase/auth');
-    const credential: AuthCredential = GoogleAuthProvider.credential(request.idToken);
+    const credential: AuthCredential = GoogleAuthProvider.credential(result.params.id_token);
     await signInWithCredential(auth, credential);
     return true;
   } catch (e: any) {
