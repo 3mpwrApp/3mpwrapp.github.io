@@ -70,57 +70,56 @@ export default function Index() {
   }, [user, loading, router]);
 
   // Handle redirect using useEffect to avoid middleware issues
+  // CRITICAL: Only run once when loading completes, don't track segments
   useEffect(() => {
     if (hasNavigated) {
-      logger.debug('Already navigated, skipping');
-      return; // Prevent re-navigation
+      return; // Already navigated, don't run again
     }
     
-    // Add timeout to prevent infinite loading
+    // Safety timeout: if loading takes too long, force navigation
     const timeout = setTimeout(() => {
-      if (loading) {
+      if (!hasNavigated && loading) {
         logger.warn('Auth loading timeout - forcing navigation to login');
         setHasNavigated(true);
         router.replace('/(auth)/login');
       }
-    }, 5000);
-
-    if (!loading) {
-      clearTimeout(timeout);
-      const inAuthFlow = (segments as string[]).includes('auth');
-      const inTabsFlow = (segments as string[]).includes('tabs');
-      const segmentsStr = segments.join('/');
-      
-      logger.log('Index navigation check', { 
-        user: !!user, 
-        inAuthFlow, 
-        inTabsFlow,
-        segments: segmentsStr,
-        hasNavigated
-      });
-      
-      // Only navigate if we're at the root index (no segments or just 'index')
-      // If user is already in auth or tabs flow, don't interfere
-      if (inAuthFlow || inTabsFlow) {
-        logger.log('Already in correct flow, not navigating', { inAuthFlow, inTabsFlow });
-        return;
-      }
-      
-      // We're at root index - do initial navigation
-      if (!segmentsStr || segmentsStr === 'index' || segmentsStr === '') {
-        setHasNavigated(true);
-        if (!user) {
-          logger.log('No user found - Redirecting to login');
-          router.replace('/(auth)/login');
-        } else {
-          logger.log('User authenticated - Redirecting to tabs/home');
-          router.replace('/(tabs)');
-        }
-      }
+    }, 8000); // 8 second timeout
+    
+    if (loading) {
+      return () => clearTimeout(timeout); // Still loading, wait
     }
-
+    
+    clearTimeout(timeout);
+    
+    // Auth is done loading - check where we are
+    const inAuthFlow = (segments as string[]).includes('auth');
+    const inTabsFlow = (segments as string[]).includes('tabs');
+    
+    logger.log('Index initial navigation', { 
+      user: !!user, 
+      inAuthFlow, 
+      inTabsFlow,
+      segments: segments.join('/')
+    });
+    
+    // If already in auth or tabs, we're good
+    if (inAuthFlow || inTabsFlow) {
+      setHasNavigated(true);
+      return () => clearTimeout(timeout);
+    }
+    
+    // Navigate based on auth state
+    setHasNavigated(true);
+    if (!user) {
+      logger.log('No user - navigating to login');
+      router.replace('/(auth)/login');
+    } else {
+      logger.log('User authenticated - navigating to tabs');
+      router.replace('/(tabs)');
+    }
+    
     return () => clearTimeout(timeout);
-  }, [loading, user, hasNavigated, segments]); // Track hasNavigated to prevent loops
+  }, [loading, user]); // REMOVED: hasNavigated and segments from deps to prevent loop
 
   // Show loading state while auth initializes or during redirect
   return (
