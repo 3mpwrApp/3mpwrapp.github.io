@@ -12,6 +12,8 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import { logError } from '../utils/errorLogger';
+
 export type CloudProvider = 'firebase' | 'webdav' | 'none';
 
 const STORAGE_KEY = 'empowr.cloud.provider';
@@ -39,7 +41,7 @@ export async function setCloudProvider(provider: CloudProvider): Promise<void> {
   try {
     await AsyncStorage.setItem(STORAGE_KEY, provider);
   } catch (error) {
-    console.error('[CloudProvider] Failed to save provider:', error);
+    logError('CloudProvider', 'Failed to save provider', error);
   }
 }
 
