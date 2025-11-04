@@ -1,98 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-04T00:52:09.814Z",
+  "lastUpdated": "2025-11-04T06:17:49.539Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 1285,
+      "totalPosts": 1310,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-04T00:51:59.985Z"
+      "lastSeen": "2025-11-04T06:17:40.786Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 1300,
+      "totalPosts": 1325,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-04T00:52:02.065Z"
+      "lastSeen": "2025-11-04T06:17:42.803Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 1288,
+      "totalPosts": 1313,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-04T00:52:04.304Z"
+      "lastSeen": "2025-11-04T06:17:44.688Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 1300,
+      "totalPosts": 1325,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-04T00:52:06.617Z"
+      "lastSeen": "2025-11-04T06:17:46.634Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 1300,
+      "totalPosts": 1325,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-04T00:52:08.810Z"
+      "lastSeen": "2025-11-04T06:17:48.535Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "#Intro | #Promosky\n\n👋 I'm Meg | 34 | she/her/y'all\n \nI'm into:\n#mindfulness 🧘‍♀️\n#kindness 😊 \n#hope 🤲\n#Puns 🥸\n#crochet 🧶\n#moss ⛰️\n#hiking 🥾\n#minimalism 📦\n#Appalachia 🏞\n#books 📚\n#fungi 🍄‍🟫\n#AltText🆒️\n#CozyEra 🧦\n#Photography 📷\n#MigrainePrevention 🧠\n#DisabilityRights ♿️\n#Travel 🛩\n#Inclusion 🟢\n#Empathy 🥰",
-      "author": "light-life.bsky.social",
-      "engagement": 37,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Games for Blind Gamers 5 starts Feb 2026! Our community supports developers in making games accessible through planning and research. Join the jam and the challenge! itch.io/jam/games-fo... #GameJam #GameDev #Accessibility #BlindGaming #IndieDev #AudioGames #A11y",
-      "author": "ericbomb.bsky.social",
-      "engagement": 19,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Verbose, rich live regions are a sign an author has not tested with browsers, screen readers, and users. This post has an example that I see too often in the wild. \n\n“On ARIA and Experiential Design”\njamesscholes.com/2025/10/31/o...\n\n#ARIA #accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "In this blog I share recommendations from two pieces of work on Autistic people’s experiences of accessing, or trying to access, gender identity healthcare. #Trans #Autistic #Accessibility #AutResearch 🎓🌈",
-      "author": "kmunday.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Games for Blind Gamers 5 starts Feb 2026! Our community supports developers in making games accessible through planning and research. Join the jam and the challenge! itch.io/jam/games-fo... #GameJam #GameDev #Accessibility #BlindGaming #IndieDev #AudioGames #A11y",
-      "author": "ericbomb.bsky.social",
-      "engagement": 19,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Verbose, rich live regions are a sign an author has not tested with browsers, screen readers, and users. This post has an example that I see too often in the wild. \n\n“On ARIA and Experiential Design”\njamesscholes.com/2025/10/31/o...\n\n#ARIA #accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Oh, making an accessible website is too complex for you to bother? Sounds like you aren't very good at your job then, eh?\n\n#A11y #WebDev",
-      "author": "vale.rocks",
-      "engagement": 72,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
       "author": "byrneout44.bsky.social",
@@ -338,6 +284,60 @@
       "author": "byrneout44.bsky.social",
       "engagement": 11,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "“You don’t look sick.” — okay, and you don’t look like someone I asked for medical advice. 😉💅\n\n#DisabledAndProud #InvisibleNotImaginary #ChronicPainCommunity #DisabilityRights #NormalizeRest #SpoonieLife #RadicalCompassion 💜✨",
+      "author": "adulitingishard.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "#Intro | #Promosky\n\n👋 I'm Meg | 34 | she/her/y'all\n \nI'm into:\n#mindfulness 🧘‍♀️\n#kindness 😊 \n#hope 🤲\n#Puns 🥸\n#crochet 🧶\n#moss ⛰️\n#hiking 🥾\n#minimalism 📦\n#Appalachia 🏞\n#books 📚\n#fungi 🍄‍🟫\n#AltText🆒️\n#CozyEra 🧦\n#Photography 📷\n#MigrainePrevention 🧠\n#DisabilityRights ♿️\n#Travel 🛩\n#Inclusion 🟢\n#Empathy 🥰",
+      "author": "light-life.bsky.social",
+      "engagement": 39,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "ICYMI: \nOur ancestors survived by knowing that our fate is inextricably tied to the land and the water, to one another.\n\njohnniejae.com/why-indigeno...\n\n#indigisky #nativeamericanheritagemonth #nationalindigenousdisabilityawarenessmonth #climatejustice #disabilityjustice",
+      "author": "johnniejae.bsky.social",
+      "engagement": 99,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Still fighting to stay afloat. Rent short $150 for Oct + $600 for Nov.\nODSP doesn’t cover the basics — poverty by design.\nIf you can help:\n📧e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPPoverty #DisabilityJustice #MutualAid #MutualAidRequest #MutualAidBoost",
+      "author": "cycletherapyham.bsky.social",
+      "engagement": 26,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Yes, please just use a button:\ngomakethings.com/just-use-a-b...\n\nBecause I have still not met a [React] dev who has a clue which key activates a button on which specific event:\nadrianroselli.com/2022/04/brie...\n\n(React devs don’t read my posts.)\n\n#accessibility #a11y #HTML",
+      "author": "aardrian.bsky.social",
+      "engagement": 18,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Yes, please just use a button:\ngomakethings.com/just-use-a-b...\n\nBecause I have still not met a [React] dev who has a clue which key activates a button on which specific event:\nadrianroselli.com/2022/04/brie...\n\n(React devs don’t read my posts.)\n\n#accessibility #a11y #HTML",
+      "author": "aardrian.bsky.social",
+      "engagement": 18,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "#FoxTakedown 🚨 #SinclairTakedown\nThe 50501 Movement Mike Beach\ntinyurl.com/ywwnbzut\n#Sinclair owns nearly❷⓿⓿ local #TV stations ( #ABC #CBS #NBC #FOX #CW affiliates).\nthey control local news & ads\n\n❹ STEPS TO #BOYCOTTSINCLAIR\n\n#AltCitizen #CripTheVote\n#DisabilityRights #DisabilityRebellion\n#40",
+      "author": "byrneout44.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -346,16 +346,16 @@
       "count": 45
     },
     {
+      "keyword": "accessibility",
+      "count": 35
+    },
+    {
       "keyword": "a11y",
       "count": 33
     },
     {
-      "keyword": "accessibility",
-      "count": 32
-    },
-    {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 27
     },
     {
       "keyword": "cripthevote",
@@ -390,12 +390,12 @@
       "count": 11
     },
     {
-      "keyword": "foxtakedown",
-      "count": 9
+      "keyword": "disability",
+      "count": 10
     },
     {
-      "keyword": "disability",
-      "count": 8
+      "keyword": "foxtakedown",
+      "count": 9
     },
     {
       "keyword": "digital",
