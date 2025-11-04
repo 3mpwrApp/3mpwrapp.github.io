@@ -1,11 +1,11 @@
 import { useFocusEffect } from "@react-navigation/native";
 import React from "react";
 import {
-    Pressable,
-    SectionList,
-    StyleSheet,
-    Text,
-    View
+  Pressable,
+  SectionList,
+  StyleSheet,
+  Text,
+  View
 } from "react-native";
 
 import ContrastToggle from "../../components/ContrastToggle";
@@ -13,14 +13,14 @@ import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { whatsnew as defaultWN } from "../../data/whatsnew";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
 import { subscribeToActivityFeed } from "../../services/activity";
 import {
-    getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
+  getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
 } from "../../services/localContent";
 import { useTextScale } from "../../theme/typography";
 import { useAppPalette } from "../../theme/usePalette";
@@ -138,10 +138,12 @@ export default function WhatsNewScreen() {
       } catch {}
     })();
   }, [items]);
-  const sections = [
+  
+  // Memoize sections so they update when lastSeen changes
+  const sections = React.useMemo(() => [
     ...(recent.length ? [{ title: t("whatsNew.new", "New"), data: recent }] : []),
     ...(older.length ? [{ title: t("whatsNew.archive", "Archive"), data: older }] : []),
-  ];
+  ], [recent, older, t, lastSeen]); // Add lastSeen as dependency to force re-render
 
   return (
     <View
@@ -209,6 +211,7 @@ export default function WhatsNewScreen() {
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={t("whatsNew.markAllReadA11y", "Mark all as read")}
+        disabled={!AsyncStorageRef.current} // Disable until AsyncStorage loads
         onPress={async () => {
           // Get the newest date from combined list (activity + items)
           const combined = [...activityItems, ...items];
@@ -226,7 +229,10 @@ export default function WhatsNewScreen() {
             setLastSeen(newSeenDate);
           }
         }}
-        style={({ pressed }) => [styles.button, pressed && { opacity: 0.7 }]}
+        style={({ pressed }) => [
+          styles.button,
+          (pressed || !AsyncStorageRef.current) && { opacity: 0.7 }
+        ]}
       >
         <Text style={styles.buttonText}>{t("whatsNew.markAllReadBtn", "Mark all as read")}</Text>
       </Pressable>

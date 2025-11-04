@@ -435,13 +435,16 @@ function createStyles(palette: Palette, factor: number) {
     controlsContainer: {
       flexDirection: "row",
       justifyContent: "space-between",
-      alignItems: "center",
+      alignItems: "flex-start",
       marginBottom: 16,
+      flexWrap: "wrap",
     },
     filtersContainer: {
       flexDirection: "row",
       flex: 1,
       marginRight: 16,
+      flexWrap: "wrap",
+      gap: 8,
     },
     filterButton: {
       flexDirection: "row",
@@ -450,6 +453,7 @@ function createStyles(palette: Palette, factor: number) {
       paddingVertical: 6,
       borderRadius: 16,
       marginRight: 8,
+      marginBottom: 8,
       backgroundColor: palette.card,
       borderWidth: 1,
       borderColor: palette.muted,
@@ -522,13 +526,16 @@ function createStyles(palette: Palette, factor: number) {
     sectionHeaderRow: {
       flexDirection: "row",
       alignItems: "center",
-      marginTop: 12,
-      marginBottom: 6,
+      marginTop: 20,
+      marginBottom: 12,
+      paddingBottom: 8,
+      borderBottomWidth: 2,
+      borderBottomColor: palette.primary + '40',
     },
     sectionHeader: { 
       fontWeight: "700", 
-      color: palette.text,
-      fontSize: Math.round(16 * factor),
+      color: palette.primary,
+      fontSize: Math.round(18 * factor),
       marginRight: 8,
     },
     sectionCount: {
