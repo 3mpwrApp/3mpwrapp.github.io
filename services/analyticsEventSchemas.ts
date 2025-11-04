@@ -82,6 +82,7 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
   },
   [E.EVENTS_EXPORT_ICS]: { id: { type: 'string', required: true } },
   [E.EVENTS_EXPORT_CSV]: { id: { type: 'string', required: true } },
+  [E.EVENTS_SUBSCRIBE_CALENDAR]: { source: { type: 'string' } },
   [E.EVIDENCE_EXPORT_ENCRYPTED]: { count: { type: 'number', required: true } },
   [E.EVIDENCE_IMPORT_ENCRYPTED]: { count: { type: 'number', required: true } },
   [E.EVIDENCE_SAVE_SINGLE]: { hasFiles: { type: 'boolean', required: true } },

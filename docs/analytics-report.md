@@ -1,14 +1,14 @@
 # Analytics Event Report
 
-Generated: 2025-11-04T19:29:29.440Z
+Generated: 2025-11-04T20:12:14.807Z
 
 ## Summary
 
-- Registry events: 46
+- Registry events: 47
 - Unique events referenced in code: 29
 - Total literal emissions (static scan): 31
 - Missing (used not registered): 0
-- Unused (registered not used): 17
+- Unused (registered not used): 18
 - Sensitive field occurrences (schema): 2
 - Classification counts: secret=1, pii=1
 
@@ -22,6 +22,7 @@ Generated: 2025-11-04T19:29:29.440Z
 - letter_insert_from_trackers
 - events.export.ics
 - events.export.csv
+- events.subscribe.calendar
 - evidence.export.encrypted
 - evidence.import.encrypted
 - evidence.save.single
@@ -50,7 +51,7 @@ Generated: 2025-11-04T19:29:29.440Z
 | energy_reset_day | 1 |
 | energy_set_daily | 1 |
 | energy_spend | 1 |
-| events | 2 |
+| events | 3 |
 | evidence | 6 |
 | jurisdiction | 3 |
 | letter_insert_from_trackers | 1 |
