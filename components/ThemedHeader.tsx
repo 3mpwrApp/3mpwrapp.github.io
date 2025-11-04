@@ -261,6 +261,21 @@ const ThemedHeader = React.memo(() => {
           <Ionicons name="refresh" size={18} color={palette.text} />
         </Pressable>
 
+        {/* Ask 3mpwr - Quick access to advocacy help */}
+        <Pressable
+          onPress={() => router.push('/(tabs)/advocacy/ask' as Href)}
+          accessibilityRole="button"
+          accessibilityLabel="Ask an Advocate - Get help with your case"
+          hitSlop={HIT_SLOP_8}
+          focusable={true}
+          style={({ pressed }) => [
+            touchTarget.min,
+            { opacity: pressed ? 0.7 : 1 },
+          ]}
+        >
+          <Ionicons name="help-circle-outline" size={20} color={palette.primary} />
+        </Pressable>
+
         {/* A11y quick settings */}
         <A11yQuickSettings />
 
