@@ -1,6 +1,6 @@
 import * as Linking from 'expo-linking';
 import { useRouter, useSegments } from 'expo-router';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { ActivityIndicator, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
@@ -13,6 +13,7 @@ export default function Index() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const segments = useSegments();
+  const hasNavigated = useRef(false);
 
   // Store the deep link path for resuming after login
   useEffect(() => {
@@ -73,6 +74,11 @@ export default function Index() {
       return; // Still loading, wait
     }
     
+    // Prevent multiple navigation attempts
+    if (hasNavigated.current) {
+      return;
+    }
+    
     // Auth is done loading - check where we are
     const inAuthFlow = (segments as string[]).includes('auth');
     const inTabsFlow = (segments as string[]).includes('tabs');
@@ -91,6 +97,7 @@ export default function Index() {
     // If user is authenticated but in auth flow, navigate to tabs
     if (shouldBeInTabs && inAuthFlow) {
       logger.log('User logged in - navigating to tabs');
+      hasNavigated.current = true;
       router.replace('/(tabs)');
       return;
     }
@@ -98,6 +105,7 @@ export default function Index() {
     // If user is not authenticated but in tabs flow, navigate to login
     if (shouldBeInAuth && inTabsFlow) {
       logger.log('No user in tabs - navigating to login');
+      hasNavigated.current = true;
       router.replace('/(auth)/login');
       return;
     }
@@ -106,13 +114,20 @@ export default function Index() {
     if (!inAuthFlow && !inTabsFlow) {
       if (!user) {
         logger.log('Initial - no user, navigating to login');
+        hasNavigated.current = true;
         router.replace('/(auth)/login');
       } else {
         logger.log('Initial - user exists, navigating to tabs');
+        hasNavigated.current = true;
         router.replace('/(tabs)');
       }
     }
-  }, [loading, user, segments]); // React to loading, user, and segment changes
+  }, [loading, user]); // Only react to loading and user changes, not segments
+  
+  // Reset navigation flag when user changes
+  useEffect(() => {
+    hasNavigated.current = false;
+  }, [user]);
 
   // Show loading state while auth initializes or during redirect
   return (
