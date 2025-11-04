@@ -198,7 +198,6 @@ const HomeScreen = React.memo(() => {
   const textStyles = createTextStyles(palette);
   const { factor } = useTextScale();
   const titleRef = React.useRef<Text>(null);
-  const [hasError, setHasError] = React.useState(false);
   
   // Debug logging to track rendering
   React.useEffect(() => {
@@ -211,47 +210,7 @@ const HomeScreen = React.memo(() => {
   useAnnounceOnMount(t('home.announcement', 'Home screen loaded. Beta features available.'));
   useFocusOnRefOnMount(titleRef);
   
-  // Catch any rendering errors gracefully
-  React.useEffect(() => {
-    const handleError = (error: ErrorEvent) => {
-      logger.error('[Home] Caught error:', error);
-      setHasError(true);
-    };
-    
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', handleError);
-      return () => window.removeEventListener('error', handleError);
-    }
-    return undefined;
-  }, []);
-  
-  if (hasError) {
-    logger.log('[HomeScreen] Rendering error fallback');
-    return (
-      <ResponsiveScreenWrapper testID="home-screen-error">
-        <Text 
-          accessibilityRole="header" 
-          style={[textStyles.h3, { marginBottom: 16 }]}
-          maxFontSizeMultiplier={MAX_FONT_SCALE}
-        >
-          {t('home.title','Home')}
-        </Text>
-        <View style={{ padding: 20, backgroundColor: palette.surface, borderRadius: 8 }}>
-          <Text style={[textStyles.body, { marginBottom: 12 }]}>
-            Something went wrong loading personalized content. The app is still working!
-          </Text>
-          <Link href={'/(tabs)/advocacy/assistant-hub' as any} asChild={true}>
-            <A11yPressable
-              style={[styles.askButton, { backgroundColor: palette.primary }]}
-              hitSlop={HIT_SLOP_8}
-            >
-              <Text style={[textStyles.button]}>Get Help</Text>
-            </A11yPressable>
-          </Link>
-        </View>
-      </ResponsiveScreenWrapper>
-    );
-  }
+  // Error handling is done by ErrorBoundaryWrapper and SafeOptionalComponent
   
   logger.log('[HomeScreen] Rendering main content');
   
