@@ -83,11 +83,11 @@ export default function First7Screen(){
         
         {/* Role Selector */}
         {!selectedRole && !state.completed.choose_role && (
-          <View style={{ padding: 16, backgroundColor: palette.warning + '20', borderRadius: 8, borderWidth: 2, borderColor: palette.warning || palette.primary }}>
+          <View style={{ padding: 16, backgroundColor: palette.card, borderRadius: 8, borderWidth: 2, borderColor: palette.primary }}>
             <Text style={{ fontSize: 18, fontWeight: '700', color: palette.text, marginBottom: 8 }}>
               👋 Who are you here for?
             </Text>
-            <Text style={{ color: palette.text, opacity: 0.8, marginBottom: 12 }}>
+            <Text style={{ color: palette.text, marginBottom: 12 }}>
               This helps us personalize your experience
             </Text>
             <GapView gap={8}>
@@ -105,12 +105,12 @@ export default function First7Screen(){
                     borderRadius: 10, 
                     borderWidth: 2, 
                     borderColor: selectedRole === role.id ? palette.primary : palette.muted,
-                    backgroundColor: selectedRole === role.id ? palette.primary + '20' : palette.surface 
+                    backgroundColor: selectedRole === role.id ? palette.card : palette.surface 
                   }}
                   hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 >
                   <Text style={{ fontWeight: '600', color: palette.text, fontSize: 16 }}>{role.label}</Text>
-                  <Text style={{ color: palette.text, opacity: 0.7, fontSize: 14, marginTop: 4 }}>{role.hint}</Text>
+                  <Text style={{ color: palette.text, fontSize: 14, marginTop: 4 }}>{role.hint}</Text>
                 </Pressable>
               ))}
             </GapView>
@@ -129,7 +129,7 @@ export default function First7Screen(){
                   borderRadius: 10, 
                   borderWidth: 1, 
                   borderColor: state.completed[s.id as Step] ? palette.success || palette.primary : palette.muted, 
-                  backgroundColor: state.completed[s.id as Step] ? (palette.success || palette.primary) + '20' : palette.surface 
+                  backgroundColor: state.completed[s.id as Step] ? palette.card : palette.surface 
                 }}
               >
                 <GapView gap={4} style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -138,7 +138,7 @@ export default function First7Screen(){
                   </Text>
                   <View style={{ flex: 1 }}>
                     <Text style={{ fontWeight: '600', color: palette.text }}>{s.label}</Text>
-                    <Text style={{ color: palette.text, opacity: 0.8 }}>{s.hint}</Text>
+                    <Text style={{ color: palette.text }}>{s.hint}</Text>
                   </View>
                 </GapView>
               </Pressable>

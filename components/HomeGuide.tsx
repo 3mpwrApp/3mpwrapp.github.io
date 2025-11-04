@@ -123,7 +123,7 @@ export function HomeGuide() {
                     );
                   })}
                 </GapView>
-                <GapView style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6 }} gap={8} pointerEvents="box-none">
+                <GapView style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6 }} gap={8}>
                   <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ minWidth: 44, minHeight: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
                     <Text style={{ color: palette.text, textAlign:'center' }}>👍</Text>
                   </Pressable>

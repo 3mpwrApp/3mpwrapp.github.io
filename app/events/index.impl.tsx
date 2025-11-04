@@ -1,14 +1,14 @@
-import { Link } from "expo-router";
+import { Link, useFocusEffect } from "expo-router";
 import React from "react";
 import {
-    Alert,
-    FlatList,
-    RefreshControl,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  Alert,
+  FlatList,
+  RefreshControl,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
@@ -24,13 +24,13 @@ import { generateDisabilityObservances } from "../../data/disability-observances
 import { events as localEvents } from "../../data/events";
 import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
 import {
-    generateCanadianHolidays,
-    generateProvincialHolidays,
+  generateCanadianHolidays,
+  generateProvincialHolidays,
 } from "../../data/holidays-ca";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
@@ -114,6 +114,13 @@ export default function EventsScreen() {
   React.useEffect(() => {
     reload();
   }, [reload, tick]);
+
+  // Reload events when screen comes into focus
+  useFocusEffect(
+    React.useCallback(() => {
+      reload();
+    }, [reload])
+  );
 
   React.useEffect(() => {
     setCount("events", items.length);

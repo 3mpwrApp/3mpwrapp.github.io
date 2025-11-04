@@ -38,5 +38,12 @@ const Link = ({ children, href, asChild }) => {
 function useRouter() { return router; }
 function useLocalSearchParams() { return {}; }
 function usePathname() { return '/'; }
+function useFocusEffect(callback) {
+  // In tests, immediately call the focus callback once
+  React.useEffect(() => {
+    const cleanup = callback();
+    return cleanup;
+  }, [callback]);
+}
 
-module.exports = { Link, router, useRouter, useLocalSearchParams, usePathname };
+module.exports = { Link, router, useRouter, useLocalSearchParams, usePathname, useFocusEffect };

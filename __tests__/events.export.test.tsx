@@ -3,7 +3,18 @@ import * as RN from 'react-native';
 
 import EventsScreen from '../app/events';
 // Mock expo-router Link to avoid bringing in native stack/assets
-jest.mock('expo-router', () => ({ Link: ({ children }: any) => children, usePathname: () => '/', useLocalSearchParams: () => ({}) }));
+jest.mock('expo-router', () => ({ 
+  Link: ({ children }: any) => children, 
+  usePathname: () => '/', 
+  useLocalSearchParams: () => ({}),
+  useFocusEffect: (callback: any) => {
+    const React = require('react');
+    React.useEffect(() => {
+      const cleanup = callback();
+      return cleanup;
+    }, [callback]);
+  }
+}));
 
 // Mocks: translation/palette/typography
 jest.mock('../i18n', () => {
