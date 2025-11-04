@@ -87,35 +87,71 @@ app.get('/api/campaigns', async (_req, res) => {
   }
 });
 
-// iCalendar feed for events (for website sync)
-app.get('/events.ics', async (_req, res) => {
+// iCalendar subscription feed for events (subscribable via webcal://)
+app.get('/events.ics', async (req, res) => {
   try {
-    // Load events from API service or local data
-    let events = [];
+    const year = parseInt(req.query.year) || new Date().getFullYear();
+    const includeObservances = req.query.observances !== 'false';
+    const includeHolidays = req.query.holidays !== 'false';
+    
+    // Load all events: community events + system-generated events
+    let allEvents = [];
+    
+    // Load community events from local data
     try {
-      const svc = await import('../services/events');
-      const list = await svc.fetchEvents();
-      events = (list || []).map((e) => ({
+      const local = (await import('../data/events.js')).events;
+      allEvents = allEvents.concat((local || []).map((e) => ({
         title: String(e.title || 'Event'),
         description: String(e.description || ''),
         startISO: String(e.date || new Date().toISOString()),
         durationMinutes: e.durationMinutes || 60,
-      }));
+      })));
     } catch {}
-    if (!events.length) {
-      const local = (await import('../data/events')).events;
-      events = (local || []).map((e) => ({
-        title: String(e.title || 'Event'),
-        description: String(e.description || ''),
-        startISO: String(e.date || new Date().toISOString()),
-        durationMinutes: e.durationMinutes || 60,
-      }));
+    
+    // Generate system events (observances, holidays, awareness months)
+    if (includeObservances) {
+      try {
+        const { generateDisabilityObservances } = await import('../data/disability-observances.js');
+        const { generateHealthAwarenessEvents } = await import('../data/health-awareness-months.js');
+        const observances = generateDisabilityObservances(year);
+        const awareness = generateHealthAwarenessEvents(year);
+        allEvents = allEvents.concat([...observances, ...awareness].map((e) => ({
+          title: String(e.title || 'Observance'),
+          description: String(e.description || ''),
+          startISO: String(e.date || new Date().toISOString()),
+          durationMinutes: e.durationMinutes || 1440, // All-day events
+        })));
+      } catch {}
     }
-    const ics = (await import('../services/ics')).buildICSMany(events);
+    
+    if (includeHolidays) {
+      try {
+        const { generateCanadianHolidays } = await import('../data/holidays-ca.js');
+        const holidays = generateCanadianHolidays(year);
+        allEvents = allEvents.concat(holidays.map((e) => ({
+          title: String(e.title || 'Holiday'),
+          description: String(e.description || ''),
+          startISO: String(e.date || new Date().toISOString()),
+          durationMinutes: e.durationMinutes || 1440, // All-day events
+        })));
+      } catch {}
+    }
+    
+    // Build subscribable ICS feed with auto-update metadata
+    const ics = (await import('../services/ics.js')).buildICSMany(allEvents, {
+      calendarName: '3mpwrApp Events',
+      refreshInterval: 1440, // Refresh daily (1440 minutes)
+      timezone: 'America/Toronto',
+      subscribable: true,
+    });
+    
     res.set('Content-Type', 'text/calendar; charset=utf-8');
-    res.set('Cache-Control', 'public, max-age=300'); // 5 minutes
+    res.set('Content-Disposition', 'inline; filename="3mpwrapp-events.ics"');
+    res.set('Cache-Control', 'public, max-age=3600'); // Cache for 1 hour
+    res.set('Access-Control-Allow-Origin', '*');
     return res.send(ics);
-  } catch {
+  } catch (e) {
+    console.error('events.ics error:', e);
     return res.status(500).send('');
   }
 });

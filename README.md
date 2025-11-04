@@ -560,7 +560,27 @@ Quick links to docs
 - Evidence Locker how-to: `docs/user-guide.md#evidence-locker`
 - Deadlines how-to: `docs/user-guide.md#deadlines`
 - Reflections Calendar overview: `docs/user-guide.md#reflections-calendar`
+- **Calendar Subscription Setup**: `docs/CALENDAR_SUBSCRIPTION.md` - Auto-updating events calendar
 - Full Quick Tour: `docs/quick-tour.md`
+
+### Calendar Subscription (Auto-Updating Events)
+
+Users can subscribe to an auto-updating calendar feed that syncs community events, disability observances, health awareness days, and Canadian holidays directly to their native calendar app (Apple Calendar, Google Calendar, Outlook, etc.).
+
+**Key Features**:
+- 📲 **One-click subscription** via webcal:// protocol
+- 🔄 **Automatic updates** every 24 hours (configurable)
+- 🎯 **Multiple event types**: Community events, observances, holidays
+- 🇨🇦 **Provincial support**: Filter by Canadian province
+- ✅ **No duplicates**: Stable event UIDs prevent duplicate entries
+
+**Setup**:
+1. Deploy the server (already included in `server/index.js`)
+2. Set `EXPO_PUBLIC_CALENDAR_FEED_URL=https://your-server.com/events.ics`
+3. Users tap "📲 Subscribe to Calendar" in Events tab
+4. Follow platform-specific calendar subscription instructions
+
+**See** `docs/CALENDAR_SUBSCRIPTION.md` for complete setup, deployment options, testing, and troubleshooting.
 
 ### Route Conventions (Expo Router)
 

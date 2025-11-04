@@ -40,12 +40,32 @@ export function buildICSMany(
     startISO: string;
     durationMinutes?: number;
   }[],
+  options?: {
+    calendarName?: string;
+    refreshInterval?: number; // minutes
+    timezone?: string;
+    subscribable?: boolean; // If true, adds subscription metadata
+  },
 ) {
   const dt = (iso: string) => iso.replace(/[-:]/g, "").split(".")[0] + "Z";
   const lines: string[] = [];
   lines.push("BEGIN:VCALENDAR");
   lines.push("VERSION:2.0");
   lines.push("PRODID:-//3mpwr//Calendar 1.0//EN");
+  lines.push("CALSCALE:GREGORIAN");
+  lines.push("METHOD:PUBLISH");
+  
+  // Add subscription metadata if this is a subscribable feed
+  if (options?.subscribable) {
+    lines.push(`X-WR-CALNAME:${escapeICS(options.calendarName || '3mpwrApp Events')}`);
+    lines.push(`X-WR-CALDESC:${escapeICS('Community events, disability observances, and awareness days from 3mpwrApp')}`);
+    lines.push(`X-WR-TIMEZONE:${options.timezone || 'America/Toronto'}`);
+    if (options.refreshInterval) {
+      lines.push(`X-PUBLISHED-TTL:PT${options.refreshInterval}M`);
+      lines.push(`REFRESH-INTERVAL;VALUE=DURATION:PT${options.refreshInterval}M`);
+    }
+  }
+  
   const now = dt(new Date().toISOString());
   events.forEach((ev) => {
     const start = dt(ev.startISO);
@@ -54,14 +74,20 @@ export function buildICSMany(
     ).toISOString();
     const end = dt(endDate);
     lines.push("BEGIN:VEVENT");
-    lines.push(
-  `UID:${Date.now()}_${Math.random().toString(36).slice(2)}@3mpwr`,
-    );
+    // Use stable UID for subscriptions to avoid duplicates
+    const uid = options?.subscribable 
+      ? `${ev.startISO}-${ev.title.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()}@3mpwrapp.pages.dev`
+      : `${Date.now()}_${Math.random().toString(36).slice(2)}@3mpwr`;
+    lines.push(`UID:${uid}`);
     lines.push(`DTSTAMP:${now}`);
     lines.push(`DTSTART:${start}`);
     lines.push(`DTEND:${end}`);
     lines.push(`SUMMARY:${escapeICS(ev.title)}`);
     if (ev.description) lines.push(`DESCRIPTION:${escapeICS(ev.description)}`);
+    lines.push(`URL:https://3mpwrapp.pages.dev/`);
+    lines.push(`ORGANIZER;CN=3mpwrApp:MAILTO:empowrapp08162025@gmail.com`);
+    lines.push("STATUS:CONFIRMED");
+    lines.push(`SEQUENCE:${options?.subscribable ? 0 : 0}`);
     lines.push("END:VEVENT");
   });
   lines.push("END:VCALENDAR");

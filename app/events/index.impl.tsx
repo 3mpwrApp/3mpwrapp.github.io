@@ -2,14 +2,14 @@ import * as Calendar from 'expo-calendar';
 import { Link, useFocusEffect } from "expo-router";
 import React from "react";
 import {
-    Alert,
-    FlatList,
-    RefreshControl,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  Alert,
+  FlatList,
+  RefreshControl,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
@@ -25,13 +25,13 @@ import { generateDisabilityObservances } from "../../data/disability-observances
 import { events as localEvents } from "../../data/events";
 import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
 import {
-    generateCanadianHolidays,
-    generateProvincialHolidays,
+  generateCanadianHolidays,
+  generateProvincialHolidays,
 } from "../../data/holidays-ca";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
@@ -533,6 +533,50 @@ export default function EventsScreen() {
           }
           ListHeaderComponent={(
             <View style={{ marginBottom: 8 }}>
+              {/* Calendar Subscription Card */}
+              <View style={{ marginBottom: 12, backgroundColor: palette.surface, borderRadius: 8, padding: 16, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
+                <Text style={{ fontSize: 14, fontWeight: '700', color: palette.text, marginBottom: 4 }}>
+                  📅 Subscribe to Auto-Updating Calendar
+                </Text>
+                <Text style={{ fontSize: 12, color: palette.text, opacity: 0.8, marginBottom: 8 }}>
+                  Get automatic updates for new events, observances, and holidays
+                </Text>
+                <A11yPressable
+                  onPress={() => {
+                    const subscriptionUrl = process.env.EXPO_PUBLIC_CALENDAR_FEED_URL || 'https://your-server.com/events.ics';
+                    Alert.alert(
+                      'Subscribe to Calendar',
+                      `To receive automatic updates:\n\n1. Copy this URL:\n${subscriptionUrl}\n\n2. Open your calendar app\n3. Add a new calendar subscription\n4. Paste the URL\n\nYour calendar will refresh automatically!`,
+                      [
+                        { text: 'Copy URL', onPress: () => {
+                          // Use Clipboard API
+                          Share.share({ message: subscriptionUrl });
+                          trackEvent(ANALYTICS_EVENTS.EVENTS_SUBSCRIBE_CALENDAR, { source: 'events_screen' });
+                        }},
+                        { text: 'Cancel', style: 'cancel' }
+                      ]
+                    );
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel="Subscribe to calendar feed for automatic updates"
+                  style={{ 
+                    paddingVertical: 10, 
+                    paddingHorizontal: 16, 
+                    borderRadius: 6, 
+                    backgroundColor: palette.primary,
+                    alignItems: 'center'
+                  }}
+                >
+                  <Text style={{ color: palette.buttonText || palette.background, fontSize: 14, fontWeight: '700' }}>
+                    📲 Subscribe to Calendar
+                  </Text>
+                </A11yPressable>
+              </View>
+
+              {/* One-time Export Options */}
+              <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600' }}>
+                One-time exports (no auto-updates):
+              </Text>
               <GapView gap={8} style={{ flexDirection:'row' }}>
                 <A11yPressable
                   onPress={async () => {
