@@ -104,7 +104,7 @@ export default function LetterTemplatesScreen() {
                 asChild={true}
               >
                 <Pressable
-                  accessibilityRole="button"
+                  accessibilityRole="link"
                   accessibilityLabel={`Open ${template.title} template`}
                   hitSlop={HIT_SLOP_8}
                   style={({ pressed }) => [
