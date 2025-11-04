@@ -1,0 +1,26 @@
+name = "empowrapp-calendar"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Workers configuration
+workers_dev = true
+route = ""
+zone_id = ""
+
+# Environment variables (set via wrangler secret put or dashboard)
+# [vars]
+# EXAMPLE_VAR = "value"
+
+# For production deployment, set your custom domain:
+# routes = [
+#   { pattern = "api.3mpwrapp.com/*", zone_name = "3mpwrapp.com" }
+# ]
+
+# KV namespaces (if needed for caching)
+# [[kv_namespaces]]
+# binding = "CALENDAR_CACHE"
+# id = "your_kv_namespace_id"
+
+# Cron triggers for cache warming (optional)
+# [triggers]
+# crons = ["0 0 * * *"]  # Daily at midnight UTC
