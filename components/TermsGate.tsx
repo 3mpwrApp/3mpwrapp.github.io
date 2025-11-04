@@ -1,12 +1,12 @@
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import {
-    Linking,
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  Linking,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 
 import { useAppPalette } from "../theme/usePalette";
@@ -716,9 +716,9 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       opacity: 0.5,
     },
     buttonEnabled: {
-      backgroundColor: '#10B981', // Success green color
+      backgroundColor: palette.success || palette.primary, // Success green color
       borderWidth: 2,
-      borderColor: '#059669',
+      borderColor: palette.success || palette.primary,
     },
     buttonTextEnabled: {
       fontSize: 17,

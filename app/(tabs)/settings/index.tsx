@@ -364,7 +364,7 @@ function EnhancedA11ySettingsSection() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const { textScale, setTextScale, resourcePreferredFormat, setResourcePreferredFormat } = useSettings();
-  const { dyslexiaFriendly, setDyslexiaFriendly, plainLanguage, setPlainLanguage, captionsPreferred, setCaptionsPreferred, voiceMode, setVoiceMode, showAssistantPill = true, setShowAssistantPill, assistantPillPosition = 'left', setAssistantPillPosition } = useSettings();
+  const { dyslexiaFriendly, setDyslexiaFriendly, plainLanguage, setPlainLanguage, captionsPreferred, setCaptionsPreferred, voiceMode, setVoiceMode } = useSettings();
   const ScaleButton = ({ label, value }: { label: string; value: TextScale }) => (
     <A11yPressable accessibilityRole='button' accessibilityState={{ selected: textScale === value }} onPress={() => setTextScale(value)} style={[styles.button, textScale === value && styles.buttonActive]} hitSlop={HIT_SLOP_8}>
       <Text style={[styles.buttonText, textScale === value && styles.buttonTextActive]}>{label}</Text>
