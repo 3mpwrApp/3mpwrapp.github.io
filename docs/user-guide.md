@@ -1,22 +1,436 @@
 ---
 title: 3mpwrApp — User Guide for Everyone
 description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
-version: 3.0 (Phase 6 Complete)
-lastUpdated: 2025-10-17
+version: 3.1 (November 2025 - AI Wellness Revolution)
+lastUpdated: 2025-11-04
 accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
-currentPhase: Phase 6 - ML-Driven Personalization (COMPLETE)
-allFeaturesLive: 50+ features, 100% accessibility, enterprise security
+currentPhase: AI-Powered Wellness & UX Revolution (COMPLETE)
+allFeaturesLive: 55+ features, 100% accessibility, enterprise security, AI wellness tracking
 ---
 
 # 3mpwrApp — User Guide for Everyone
 
-> **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, and their supporters. **Now featuring AI-powered personalization, energy forecasting, and smart notifications.**
+> **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, and their supporters. **Now featuring AI-powered wellness tracking, energy forecasting, pattern detection, and smart personalization.**
 
 **Quick start? Jump to [Getting Started in 5 Minutes](#getting-started-in-5-minutes)**
 
 ---
 
-## 🆕 **What's New - October 2025**
+## 🆕 **What's New - November 2025**
+
+### 🎊 **November 4, 2025 - AI-Powered Wellness & UX Revolution!** ✅ **JUST RELEASED**
+
+Major new wellness features that understand your patterns and provide proactive support:
+
+#### 🧠 **Mood Tracker 2.0 with AI** - Track mood + understand what affects it
+- AI detects if your mood is improving, declining, stable, or volatile
+- Track external factors: sleep, weather, exercise, social interactions
+- AI identifies triggers: "Low sleep linked to negative mood shifts"
+- Get 3-5 personalized coping strategies based on current mood
+- Streak tracking, volatility metrics, 24-hour mood delta
+- All AI analysis on your device (privacy-first)
+
+#### ⚡ **Pacing Partner with AI Forecasting** - Predict energy + prevent crashes  
+- Hourly energy predictions (8am, 12pm, 5pm, 8pm) based on your history
+- Adaptive suggestions when you log high fatigue/pain
+- Body-mind sync analysis (mood + activity correlation)
+- Compassion mode: "Your body is asking for rest - that's wisdom, not weakness"
+- Achievement tracking + CSV export
+
+#### 🔗 **Cross-Feature Integration** - Smooth flow between all features
+- 5 smart recommendation engines (mood, energy, wellness flow, advocacy, tool completion)
+- See 3-5 personalized suggestions after using any tool
+- Tap to jump directly to recommended features
+- Natural progressions: DBT → Distress tolerance → Mood tracker
+
+#### 🎡 **Daily Feature Rotation** - Discover all 26 beta tools
+- Featured tool changes daily (guaranteed discovery)
+- Your preferences still influence rankings
+- Proximity bonuses for related tools
+
+#### 📅 **Complete Awareness Calendar** - 30+ observances
+- Indigenous: MMIWG Day, Indigenous Peoples Day, Orange Shirt Day, Indigenous Disability Awareness Month
+- Global health: World Cancer Day, Rare Disease Day, Down Syndrome Day, Mental Health Day, Diabetes Day, World AIDS Day
+- Add to your device calendar + share awareness
+
+---
+
+## 🎉 **What's New - October 2025** (Enhanced by November Update)
+
+### 🚀 **Phase 6: ML-Driven Personalization** ✅ **LIVE + ENHANCED**
+
+These October features now work even better with November's AI wellness:
+
+#### ⚡ **Energy Forecast & Smart Scheduling** (Oct 2025)
+- 24-hour energy prediction chart
+- Smart notifications scheduled for optimal times
+- Weekly wellness reports
+- **NOW ENHANCED**: Works with Pacing Partner AI for better predictions!
+
+#### 🧠 **ML-Powered Personalization** (Oct 2025)
+- Pattern recognition across activity, energy, mood
+- Profile editor for disability type, accommodations, preferences
+- Tool recommendations adapt to your needs
+- **NOW ENHANCED**: Daily rotation of all 26 tools ensures discovery!
+
+#### ✨ **Disability Wizard** (Phase 2, Oct 2025)
+- Smart recommendations based on your patterns
+- Energy-aware activity matching
+- **NOW ENHANCED**: Cross-feature integration makes flows smoother!
+
+---
+
+### 📅 **October 31, 2025 - Calendar Subscription Feature** ✅
+
+Subscribe to disability awareness events in your phone's native calendar!
+
+#### How to Subscribe
+1. **Go to Events Tab** → Tap "Subscribe to Calendar"
+2. **Choose Your Calendar App**: Apple Calendar, Google Calendar, Outlook, etc.
+3. **Auto-Sync**: Events update automatically when we add new observances
+4. **Stay Informed**: Never miss MMIWG Day, Rare Disease Day, GAAD, NAAW, and 30+ more
+
+#### What You Get
+- 🗓️ **30+ Awareness Days/Months** automatically in your calendar
+- 🔄 **Auto-Updates** when new observances are added
+- 📲 **One-Click Subscription** via webcal:// protocol
+- 🌐 **Works Everywhere**: iOS, Android, desktop calendars
+
+**Technical**: Powered by Cloudflare Workers with industry-standard .ics format. Your calendar app checks for updates automatically.
+
+---
+
+### 🎯 **October 22, 2025 - Google Play Readiness (99/100 Score)** ✅
+
+App is production-ready and ready for public release!
+
+#### What This Means for You
+- ✅ **Production Quality**: App meets Google Play's highest standards
+- ✅ **Lightning Fast**: 3.0 MB bundle size, sub-2s startup
+- ✅ **Official Support**: Contact us at empowrapp08162025@gmail.com
+- ✅ **Consistent Branding**: "3mpwr App" across all screens
+- ✅ **Professional Screenshots**: Ready for Google Play Store listing
+
+**Status**: Awaiting only final screenshot capture before public release on Google Play Store.
+
+---
+
+### 📜 **October 24, 2025 - Comprehensive Legal & Safety Framework** ✅
+
+#### 9-Step Legal Acceptance Flow (First-Time Setup)
+
+When you first open the app, you'll complete these 9 steps:
+
+1. **Welcome Screen** - Overview of all legal requirements
+2. **Terms of Service v3.0** - Scroll to bottom before proceeding
+3. **Privacy Policy v2.0** - Scroll to bottom before proceeding
+4. **Medical Disclaimer** - Checkbox to accept (app doesn't provide medical advice)
+5. **Legal Disclaimer** - Checkbox to accept (app doesn't provide legal advice)
+6. **Financial Disclaimer** - Checkbox to accept (app doesn't provide financial advice)
+7. **AI Content Disclaimer** - Checkbox to accept (AI may contain errors)
+8. **Crisis Disclaimer** - 2 checkboxes (app can't detect/prevent emergencies)
+9. **Final Agreement** - Accept user responsibility + data ownership
+
+**Why This Matters**: You'll understand exactly what the app does and doesn't do, your responsibilities, and our limitations. This protects both you and us.
+
+**Version Tracking**: If we update terms in the future, you'll be prompted to re-accept on your next app open.
+
+#### Updated Legal Documents (October 2025)
+
+**Terms of Service v3.0**:
+- ⚕️ **Medical**: App doesn't diagnose, treat, or provide medical advice
+- ⚖️ **Legal**: App doesn't create attorney-client relationship
+- 💰 **Financial**: App doesn't provide tax or investment advice
+- 🤖 **AI Tools**: May contain errors, biases, or outdated information
+- 🆘 **Crisis**: App CANNOT detect or respond to emergencies (call 911/988)
+- 💵 **Liability**: Max $100 USD ($0 for free users) - no warranty, "AS IS"
+- 🇨🇦 **Jurisdiction**: Ontario, Canada law governs
+
+**Privacy Policy v2.0**:
+- 💯 **100% User Data Ownership**: Your data is YOURS
+- 📱 **Device-Only Storage by Default**: No cloud required
+- 🔒 **Optional Cloud Backup**: Firestore available if you want cross-device sync
+- 🔍 **Full Transparency**: Clear disclosure of Sentry, YouTube API, advocate directory
+- ✅ **User Rights**: Access, deletion, portability - you control everything
+- 🗑️ **Data Retention**: You control all deletions (no corporate retention)
+
+#### Trauma-Informed Safety Features
+
+**PanicButton** (Red button in top-right of most screens):
+- ⚡ **Quick Exit**: Instantly leave any screen if you feel overwhelmed
+- 🏖️ **Safe Landing Page**: Calming breathing exercises and crisis resources
+- 📳 **Haptic Feedback**: Gentle vibration confirms activation
+- ♿ **Fully Accessible**: Works perfectly with screen readers
+
+**Safe Landing Page** (Where PanicButton takes you):
+1. **4-7-8 Breathing Exercise**: Animated visual guide
+   - Breathe in for 4 seconds
+   - Hold for 7 seconds
+   - Breathe out for 8 seconds
+2. **Crisis Resources**: 988 (Suicide & Crisis Lifeline), Crisis Text Line, local services
+3. **Grounding Techniques**: Immediate coping strategies
+4. **Calming Colors**: Green therapy colors (WCAG AAA contrast)
+5. **Return to App**: When you're ready, tap to go back
+
+**Why This Matters**: Your mental health and safety come first. These features help you stay in control and get help when you need it.
+
+---
+
+### 🔐 **October 21, 2025 - Privacy Controls Enhancement** ✅
+
+Complete control over your data - everything is OFF by default!
+
+#### Privacy Control Toggles (Settings → Privacy)
+
+**Search History** (OFF by default):
+- ❌ **OFF**: Search history not saved, complete privacy
+- ✅ **ON**: Save recent searches for convenience
+
+**Analytics Tracking** (OFF by default):
+- ❌ **OFF**: Zero analytics data collected
+- ✅ **ON**: Anonymous usage stats to improve app
+
+**Error Reporting** (OFF by default):
+- ❌ **OFF**: No error reports sent to developers
+- ✅ **ON**: Send crash reports to Sentry (helps us fix bugs)
+
+#### How to Use Privacy Controls
+
+1. **Go to Settings Tab** → Tap "Privacy Controls"
+2. **Review Each Toggle**: See what each one does
+3. **Choose Your Comfort Level**: Toggle ON only what you're comfortable with
+4. **Changes Apply Instantly**: No need to restart app
+
+#### Google Play Data Safety
+
+With all toggles OFF:
+- 🔒 **Zero data shared with third parties**
+- 📱 **100% device-only operation**
+- 🛡️ **Maximum privacy protection**
+
+With toggles ON:
+- 🔍 Search history stored locally on your device only
+- 📊 Anonymous analytics (no personal info, device-only aggregation)
+- 🐛 Error reports include device model, OS version, stack traces (no user content)
+
+**Why This Matters**: You have granular control over every data type. Privacy-first by default, convenience available if you want it.
+
+---
+
+### 🤖 **October 17, 2025 - Phase 6 ML-Driven Personalization (2,500+ Lines)** ✅
+
+Cutting-edge AI that learns YOUR unique patterns while respecting privacy!
+
+#### User Profile Management (Settings → Profile Editor)
+
+**Tell the app about yourself** (all optional):
+
+**Disability Types** (select all that apply):
+- Chronic pain
+- Fatigue conditions (ME/CFS, Long COVID, etc.)
+- Mobility impairments
+- Cognitive disabilities
+- Mental health conditions
+
+**Symptoms to Track** (15 options):
+- Pain levels
+- Fatigue severity
+- Mobility difficulties
+- Cognitive fog
+- Anxiety/depression
+- And 10 more...
+
+**Wellness Tools** (26 tools - select your favorites):
+- Mood Tracker, Pacing Partner, DBT Skills, Medication Tracker, Pain Log, Energy Tracker, Symptom Tracker, Sleep Tracker, Distress Tolerance, and 17 more
+
+**Advocacy Needs** (6 categories):
+- Legal help
+- Benefits applications
+- Housing assistance
+- Healthcare navigation
+- Employment accommodations
+- Accessibility modifications
+
+**Cross-Device Sync**: Profile syncs via Firestore (optional) so all your devices are personalized.
+
+#### Suggestion Feedback System
+
+**See a recommendation?** Give feedback!
+- 👍 **Thumbs Up**: "This was helpful"
+- 👎 **Thumbs Down**: "Not helpful" (+ optional comment)
+
+**Why It Matters**: Your feedback trains the ML model to give better suggestions over time. The more you use it, the smarter it gets!
+
+#### Phase 6 Tool Registry (9 ML-Enhanced Tools)
+
+1. **Mood Tracker**: Detects patterns + emotional triggers (✅ NOW with AI Insights!)
+2. **Pacing Partner**: Energy forecasting + predictive analytics (✅ NOW with AI Forecasting!)
+3. **DBT Skills**: Adaptive suggestions based on distress level
+4. **Medication Tracker**: Schedule optimization + reminder timing
+5. **Pain Log**: Trigger identification + severity pattern analysis
+6. **Energy Tracker**: Predictive analytics for daily energy curves
+7. **Symptom Tracker**: Multi-symptom pattern detection
+8. **Sleep Tracker**: Sleep quality analysis + recommendations
+9. **Distress Tolerance**: Crisis prediction + proactive support
+
+**How to Use**:
+1. **Go to Wellness Tab** → See "Today's Guide" with featured tool
+2. **Tap "Tools" section** → Browse all 9 ML-enhanced tools
+3. **Use Consistently** → ML learns your patterns (7+ days for best results)
+4. **Check Insights** → See what patterns the AI detected
+
+#### Pattern Learning Engine (5 Pattern Types)
+
+The app automatically detects:
+
+1. **Temporal Patterns**: "You have more energy on Tuesdays and Thursdays"
+2. **Behavioral Patterns**: "You use DBT skills → then mood improves 2 hours later"
+3. **Symptom Patterns**: "High pain often comes with fatigue the next day"
+4. **Environmental Patterns**: "Weather changes trigger migraines for you"
+5. **Treatment Patterns**: "Medication A works better than B for your symptoms"
+
+**Confidence Levels**: Each pattern shows LOW/MEDIUM/HIGH confidence so you know reliability.
+
+**Actionable Insights**: "Based on this pattern, try [specific action] when [trigger occurs]"
+
+#### Energy Prediction System (24-Hour Forecasting)
+
+**What It Does**:
+- Predicts your energy level for each hour of the day
+- Uses weighted ensemble algorithm (learns from your history)
+- Shows color-coded predictions (red = low, yellow = medium, green = high)
+- Requires 7+ days of activity/energy logging for accuracy
+
+**How to Use**:
+1. **Log activities in Pacing Partner** for at least 7 days
+2. **Go to Pacing Partner** → See "Energy Forecast" section
+3. **Check hourly predictions**: "8am: Low (40%) | 12pm: Medium (65%) | 5pm: High (80%)"
+4. **Plan accordingly**: Schedule important tasks during predicted high-energy windows
+
+**Privacy**: All predictions happen on your device. No cloud processing.
+
+#### Smart Notifications
+
+**Energy-Aware Scheduling**:
+- App learns when you have energy
+- Sends reminders during your high-energy windows
+- Respects quiet hours and user preferences
+- Reduces notification fatigue by timing messages intelligently
+
+**Example**: Instead of sending "Log your mood" at 9pm when you're exhausted, app sends it at 2pm when you typically have more energy.
+
+#### Weekly AI Summary
+
+Every 7 days, get comprehensive analytics:
+
+**5 Dimensions Analyzed**:
+1. **Mood Trends**: Are you improving, declining, or stable?
+2. **Pacing Effectiveness**: Balance score (activity vs rest)
+3. **Tool Engagement**: Which tools you use most
+4. **Symptom Patterns**: Severity changes over the week
+5. **Progress Highlights**: Wins, challenges, achievements
+
+**Personalized Insights**: "You logged mood 6/7 days - great consistency! Your energy was highest on Tuesday afternoons. Consider scheduling important tasks then."
+
+**Next-Week Recommendations**: Specific actions to try based on your patterns.
+
+**Celebrates Small Wins**: Positive reinforcement for every bit of progress.
+
+#### ML Model Versioning & A/B Testing
+
+**Behind the Scenes**:
+- App tests different ML algorithms to find what works best
+- Statistical significance tracking ensures improvements are real
+- Confidence scoring shows prediction reliability
+- Privacy-preserving: All computation on-device with your own data
+
+**What This Means for You**: The app continuously improves its predictions and recommendations, always getting smarter while respecting your privacy.
+
+---
+
+### 🎨 **October 13-14, 2025 - Accessibility Enhancement Phases** ✅
+
+World-class accessibility across visual, motor, and cognitive disabilities!
+
+#### Phase 1.2 - Dyslexia Support (100% Complete)
+
+**Font Options** (Settings → Accessibility → Dyslexia Support):
+- **OpenDyslexic**: Specially designed font with weighted letters
+- **Lexend Deca**: High-readability sans-serif font
+- **System Default**: Your device's default font
+
+**Color Overlays** (5 tint options to reduce visual stress):
+- 🔵 Blue Tint
+- 💛 Yellow Tint
+- 💚 Green Tint
+- 🩷 Pink Tint
+- ⚫ Gray Tint
+
+**Spacing Presets**:
+- **Wide**: Increased letter spacing (1.5× default)
+- **Extra-Wide**: Maximum letter spacing (2× default) + line spacing (1.8× default)
+
+**How to Use**:
+1. **Go to Settings** → Accessibility → Dyslexia Support
+2. **Choose Font**: Try each one to see which is most comfortable
+3. **Select Overlay Color**: Pick a tint that reduces eye strain
+4. **Adjust Spacing**: Wide or Extra-Wide for maximum readability
+5. **Settings Persist**: Your choices apply across all app screens
+
+**Why This Matters**: Up to 20% of people have dyslexia. These options make reading significantly easier.
+
+#### Phase 1.3 - Motor Accessibility (40% Complete)
+
+**Dwell-Click** (Settings → Accessibility → Motor Support):
+- **What It Does**: Hover over a button → It clicks automatically after delay
+- **Configurable Delay**: 0.5s - 3.0s (choose what works for you)
+- **Great For**: Tremors, limited dexterity, single-switch users
+
+**Touch Target Expansion**:
+- **44×44dp minimum** on all interactive elements
+- **Larger tap areas** for smaller buttons
+- **Reduces accidental taps** with intelligent debouncing
+
+**Tremor Compensation**:
+- **Smart debouncing**: Ignores rapid repeated taps
+- **Reduces frustration**: Only registers intentional interactions
+
+**🔜 Coming Soon** (60% remaining):
+- Voice control integration
+- Switch control support
+- One-handed mode (all actions reachable with thumb)
+
+#### Phase 1.1 - Cognitive Accessibility (Integration in Progress)
+
+**SimplifiedView Component**:
+- **Reduced UI Complexity**: Fewer elements on screen at once
+- **Clear Visual Hierarchy**: Important info stands out
+- **Consistent Layout**: Same patterns across all screens
+
+**Breadcrumbs** (Navigation tracking):
+- **See Where You Are**: "Home → Wellness → Mood Tracker"
+- **Prevents Confusion**: Always know your location in app
+- **Tap to Go Back**: Quick navigation to previous screens
+
+**Auto-Save**:
+- **No Data Loss**: Forms save automatically every few seconds
+- **Great For**: Memory impairments, cognitive fatigue
+- **Peace of Mind**: Never lose your work if you get distracted
+
+**Step-by-Step Guidance**:
+- **Multi-Step Forms**: Broken into digestible chunks
+- **Progress Indicators**: "Step 2 of 5" shows how far you've come
+- **Clear Instructions**: Simple language at each step
+- **Can Pause & Resume**: Come back later without losing progress
+
+**Clear Language** (Ongoing):
+- **Simplified Copy**: Complex legal/medical terms explained in plain English
+- **Short Sentences**: Easier to process
+- **Visual Icons**: Reinforce text with imagery
+
+**Why This Matters**: Cognitive disabilities affect millions. These features make the app usable for everyone, regardless of cognitive capacity.
+
+---
 
 ### 🎉 **Phase 6: ML-Driven Personalization Now Live!** ✅
 We've added powerful AI-powered features that learn from your patterns and adapt to your needs:
@@ -2255,7 +2669,104 @@ Use Campaign Coordination for:
 <a id="wellness-support"></a>
 ## Wellness Support
 
-**What this section does:** Gentle tools to help you take care of yourself and manage your energy.
+**What this section does:** Gentle tools to help you take care of yourself and manage your energy. **NOW WITH AI-POWERED INSIGHTS!** (November 2025 Update)
+
+### 🆕 🧠 Mood Tracker 2.0 with AI Pattern Detection (NEW - Nov 2025)
+**What it does:** Tracks your mood AND helps you understand what affects it using AI pattern analysis
+
+**How to use it:**
+1. Go to Wellness → Mood Tracker
+2. Select your mood (-2 to +2 scale)
+3. **NEW:** Toggle "Track External Factors" to record:
+   - Sleep hours (e.g., "7.5")
+   - Weather conditions (sunny, cloudy, rainy, snowy, stormy)
+   - Exercise minutes
+   - Social interactions (0-5 scale)
+4. Add optional notes
+5. Save your mood entry
+6. **NEW:** After 3+ entries, tap "View Insights" to see:
+   - **Trend analysis**: Is your mood improving, declining, or stable?
+   - **Pattern detection**: AI identifies your mood patterns
+   - **Trigger identification**: "Low sleep linked to negative mood shifts"
+   - **Coping strategies**: Personalized suggestions based on your current mood
+   - **Streaks**: Track consecutive logging days
+   - **24-hour delta**: Quick view of mood changes in last day
+
+**AI-Powered Coping Strategies:**
+- **Low mood**: Deep breathing, grounding exercises, crisis resources, DBT skills
+- **Neutral mood**: Pacing partner, self-care library, mindfulness
+- **Good mood**: Social connection, advocacy, exercise, gratitude practices
+
+**Feature Recommendations**: After logging mood, see 3 contextual suggestions for helpful features to try next!
+
+**Privacy**: All AI analysis happens on your device. No data sent to servers.
+
+### 🆕 ⚡ Pacing Partner with AI Energy Forecasting (NEW - Nov 2025)
+**What it does:** Helps you pace activities AND predicts your energy throughout the day using AI
+
+**How to use it:**
+1. Go to Wellness → Pacing Partner
+2. **NEW:** See your **Energy Forecast**:
+   - 8am: Predicted energy level + suggestion
+   - 12pm: Predicted energy level + suggestion
+   - 5pm: Predicted energy level + suggestion
+   - 8pm: Predicted energy level + suggestion
+3. Log your activities:
+   - Activity type (work, errands, social, exercise, rest)
+   - Duration in minutes
+   - Fatigue level (0-10)
+   - Pain level (0-10)
+4. **NEW:** Get **Adaptive Suggestions** if fatigue/pain is high (>7):
+   - Immediate rest recommendations
+   - Gentle stretching exercises
+   - Breathing techniques
+5. **NEW:** See **Body-Mind Sync** status:
+   - ✅ Aligned: "Your activity and mood are in harmony"
+   - ⚠️ Misaligned: "Consider gentler activities"
+6. **NEW:** Track **Achievements**:
+   - Consistent pacing (5+ days/week logged)
+   - Balanced weeks (mix of activity and rest)
+   - Rest days honored
+7. **NEW:** **Compassion Mode** messages:
+   - "Your body is asking for rest - that's wisdom, not weakness"
+   - Reduces guilt around rest days
+8. Export activities as CSV for medical appointments
+
+**Energy Forecast**: Based on 7+ days of your activity history. Learns your patterns!
+
+**Alerts**: Info/Warning/Critical alerts help you recognize when to slow down before a crash.
+
+### 🆕 🔗 Smart Feature Recommendations (NEW - Nov 2025)
+**What it does:** Guides you to the most helpful features based on your current state
+
+**How it works:**
+- After using mood tracker, pacing, or other tools, see 3-5 personalized suggestions
+- **Mood-based**: Low mood → DBT skills; Good mood → Community
+- **Energy-based**: Low energy → Meditation; High energy → Advocacy
+- **Wellness flow**: DBT → Distress tolerance → Mood tracker (natural progression)
+- **Advocacy context**: Evidence locker → Letter wizard → Lawyer finder
+- Tap any recommendation to jump directly to that feature
+- Tap "Show More" to see additional suggestions
+
+**Example**: After logging low mood, you'll see:
+- "Try DBT Skills to manage difficult emotions" (High priority)
+- "Explore Distress Tolerance for crisis coping" (High priority)
+- "Visit Community for peer support" (Medium priority)
+
+### 🆕 📅 Complete Awareness Calendar (NEW - Nov 2025)
+**What it does:** Track 30+ disability, Indigenous, and health awareness days throughout the year
+
+**How to use it:**
+1. Go to Events or Home
+2. See upcoming awareness observances
+3. Learn about:
+   - **Indigenous observances**: MMIWG Day (May 5), Indigenous Peoples Day (June 21), Orange Shirt Day (Sept 30), Indigenous Disability Awareness Month (November)
+   - **Disability awareness**: World Braille Day, Autism Awareness, GAAD, White Cane Day, IDPD
+   - **Global health days**: World Cancer Day, Rare Disease Day, Down Syndrome Day, World Health Day, Mental Health Day, Diabetes Day, World AIDS Day
+4. Add observances to your device calendar
+5. Share awareness on social media
+
+**Cultural respect**: Indigenous observances include full descriptions and context to honor these important days.
 
 ### 🪙 Daily Energy Coins
 **What it does:** Helps you budget your energy like money
@@ -2268,6 +2779,8 @@ Use Campaign Coordination for:
 
 **Example:** Email = 1 coin, Grocery shopping = 3 coins, Doctor call = 2 coins
 
+**Tip**: Use alongside Pacing Partner's energy forecast to plan your day!
+
 ### 📅 Reflections Calendar
 **What it does:** Track your mood and thoughts over time
 
@@ -2276,6 +2789,8 @@ Use Campaign Coordination for:
 2. Long-press any day to quickly add your mood
 3. Tap a day to add more detailed notes
 4. Export your data to share with healthcare providers
+
+**Tip**: Works great with Mood Tracker 2.0's AI insights!
 
 ### 😴 Sleep & Energy Tracker
 **What it does:** Keep track of how well you sleep and your energy levels
@@ -2286,6 +2801,8 @@ Use Campaign Coordination for:
 3. Add notes about what affected them
 4. Export reports for medical appointments
 
+**Tip**: Sleep data can be tracked in Mood Tracker 2.0's external factors for pattern analysis!
+
 ### 🧘 Meditation and Calming Tools
 **What they do:** Help you relax and manage stress
 
@@ -2294,6 +2811,8 @@ Use Campaign Coordination for:
 - **CBT Mini-Games:** Quick grounding exercises (like the 5-4-3-2-1 technique)
 - **Distress Tolerance:** TIPP techniques for crisis moments
 - **Sleep Reframe:** Better rest without pressure
+
+**Tip**: Feature recommendations will suggest these when you need them most!
 
 ### 🏃 Exercise Hub
 **What it does:** Accessible movement for all bodies and abilities
@@ -2305,6 +2824,8 @@ Use Campaign Coordination for:
 4. Favorite the ones that work for you
 
 **Remember:** Stop if anything hurts. Start small and build slowly.
+
+**Tip**: Pacing Partner's energy forecast can help you pick the best time for movement!
 
 ---
 

@@ -1,8 +1,8 @@
 # 3mpwrApp - Complete Feature List
 
-**Last Updated**: October 19, 2025  
-**Version**: 1.0.0-rc.1 (Closed Beta)  
-**Status**: Ready for Beta Testing
+**Last Updated**: November 4, 2025  
+**Version**: 1.0.0-rc.2 (Closed Beta)  
+**Status**: Ready for Beta Testing + AI Wellness Enhancements
 
 ---
 
@@ -10,8 +10,17 @@
 
 Welcome to the **3mpwr App Closed Beta**! This document shows exactly what features are available now for testing, and what's coming in future updates.
 
+### 🆕 November 2025 Major Update - AI-Powered Wellness
+
+**NEW FEATURES ADDED**:
+- ✅ **Mood Tracker 2.0** with AI pattern detection, external factor tracking, coping strategies
+- ✅ **Pacing Partner AI** with energy forecasting, adaptive suggestions, compassion mode
+- ✅ **Cross-Feature Integration** with 5 smart recommendation engines
+- ✅ **Daily Feature Rotation** guaranteeing discovery of all 26 beta tools
+- ✅ **Complete Awareness Calendar** with 30+ observances including Indigenous days
+
 ### What This Document Contains:
-1. **✅ Available in Beta** - Features you can test right now
+1. **✅ Available in Beta** - Features you can test right now (138 total)
 2. **🔜 Coming Soon** - Features in development for v1.1+
 3. **📋 Feature Details** - Organized by main tab
 4. **🎯 Beta Testing Focus** - What we need you to test most
@@ -22,18 +31,20 @@ Welcome to the **3mpwr App Closed Beta**! This document shows exactly what featu
 
 ### Quick Overview
 
-| Tab | Beta Features | Coming Soon |
-|-----|---------------|-------------|
-| 🏠 **Home** | 9 features | 3 features |
-| 📢 **Campaigns** | 5 features | 4 features |
-| 💬 **Community** | 8 features | 5 features |
-| 📚 **Resources** | 42 features | 8 features |
-| 🧘 **Wellness** | 36 features | 6 features |
-| 📝 **Advocacy** | 18 features | 4 features |
-| ⚙️ **Settings** | 12 features | 3 features |
-| 🆕 **What's New** | 3 features | 2 features |
+| Tab | Beta Features | Coming Soon | Nov 2025 | Oct 2025 |
+|-----|---------------|-------------|----------|----------|
+| 🏠 **Home** | 9 features | 3 features | 0 | 0 |
+| 📢 **Campaigns** | 5 features | 4 features | 0 | 0 |
+| 💬 **Community** | 8 features | 5 features | 0 | 0 |
+| 📚 **Resources** | 43 features ⭐ | 8 features | 0 | 1 NEW |
+| 🧘 **Wellness** | 41 features ⭐⭐ | 6 features | 5 NEW | 0 |
+| 📝 **Advocacy** | 18 features | 4 features | 0 | 0 |
+| ⚙️ **Settings** | 18 features ⭐ | 3 features | 0 | 6 NEW |
+| 🆕 **What's New** | 3 features | 2 features | 0 | 0 |
 
-**Total:** 133 features available in beta, 35 coming soon
+**Total:** 145 features available in beta (+12 since September), 35 coming soon  
+**October 2025**: +7 new features (Calendar subscription, Profile editor, Privacy controls, Dyslexia/Motor/Cognitive accessibility, Legal viewer, Feedback system)  
+**November 2025**: +5 new features (Mood Tracker 2.0 AI, Pacing Partner AI, MoodInsights, FeatureRecommendations, Cross-feature integration)
 
 ---
 
@@ -49,7 +60,7 @@ Welcome to the **3mpwr App Closed Beta**! This document shows exactly what featu
 6. **Upcoming Deadlines** - Important dates and reminders
 7. **Notifications Center** - All your alerts in one place
 8. **Onboarding Welcome** - First-time user guidance
-9. **Personalized Suggestions** - ML-driven feature recommendations
+9. **Personalized Suggestions** - ML-driven feature recommendations (ENHANCED with daily rotation)
 
 ### 🔜 Coming Soon (3 Features)
 
@@ -108,7 +119,7 @@ Welcome to the **3mpwr App Closed Beta**! This document shows exactly what featu
 
 ## 📚 Resources Tab
 
-### ✅ Available in Beta (42 Features)
+### ✅ Available in Beta (43 Features) ⭐ **+1 NEW (Oct 2025)**
 
 **Evidence & Documentation (7):**
 1. **Evidence Locker** - Secure encrypted document storage
@@ -132,7 +143,7 @@ Welcome to the **3mpwr App Closed Beta**! This document shows exactly what featu
 15. **Chronic Condition Tracker** - Symptom tracking
 16. **Rehab Tracker** - Physical therapy progress
 17. **Return-to-Work Planner** - Plan work return
-18. **Deadlines List** - All important dates
+18. **Deadlines List** - All important dates with categorization
 19. **Doctor Visit Prep** - Prepare for appointments
 20. **Financial Safety Net** - Benefits and assistance
 21. **Body Mechanics Advisor** - Ergonomics guidance
@@ -149,7 +160,7 @@ Welcome to the **3mpwr App Closed Beta**! This document shows exactly what featu
 30. **Policy Simulator** - Test policy scenarios
 31. **Impact Simulator** - Predict decision impacts
 
-**Information & Support (11):**
+**Information & Support (12):**
 32. **Templates Gallery** - All letter templates
 33. **Support Directory** - Find local services
 34. **Adaptive Tech Library** - Assistive technology guide
@@ -161,6 +172,7 @@ Welcome to the **3mpwr App Closed Beta**! This document shows exactly what featu
 40. **Resource Detail View** - Full resource information
 41. **Resource Search** - Find resources quickly
 42. **Resource Bookmarks** - Save favorite resources
+43. **Calendar Subscription** ⭐ **NEW (Oct 31)** - Subscribe to 30+ disability awareness events in native calendar (Apple/Google/Outlook) with auto-updates via webcal:// protocol. Powered by Cloudflare Workers with .ics feed generation. Never miss MMIWG Day, Rare Disease Day, GAAD, Indigenous Disability Awareness Month, and more!
 
 ### 🔜 Coming Soon (8 Features)
 
@@ -177,53 +189,60 @@ Welcome to the **3mpwr App Closed Beta**! This document shows exactly what featu
 
 ## 🧘 Wellness Tab
 
-### ✅ Available in Beta (36 Features)
+### ✅ Available in Beta (41 Features) ⭐ **+5 NEW (Nov 2025)**
+
+**🆕 AI-Enhanced Wellness (5 NEW - November 2025):**
+1. **Mood Tracker 2.0 with AI** ⭐ - AI pattern detection, external factor tracking (sleep, weather, exercise, social), trigger identification, context-aware coping strategies, gamified streaks, volatility analysis, 24-hour delta
+2. **Pacing Partner with AI Forecasting** ⭐ - Hourly energy predictions, adaptive pacing suggestions, body-mind sync analysis, compassion mode, achievement system (consistent pacing, balanced weeks, rest days), alert system with urgency levels
+3. **Cross-Feature Recommendations** ⭐ - 5 smart recommendation engines (mood-based, energy-based, wellness flow, advocacy context, tool completion), horizontal scrolling UI, priority badges
+4. **Daily Feature Rotation System** ⭐ - 26 beta tools rotating daily, guaranteed discovery algorithm, featured tool boost, proximity bonuses, maintains user personalization
+5. **Complete Awareness Calendar** ⭐ - 30+ observances including 4 Indigenous days (MMIWG, Indigenous Peoples Day, Orange Shirt Day, Indigenous Disability Awareness Month) and 16 global health days
 
 **Mental Health Tools (12):**
-1. **Wellness Hub** - Central wellness dashboard
-2. **Mood Tracker** - Track emotional states
-3. **CBT Coach** - Cognitive behavioral therapy
-4. **CBT Mini-Games** - Interactive CBT exercises
-5. **DBT Skills** - Dialectical behavior therapy
-6. **Acceptance Function** - Navigate difficult emotions
-7. **Opposite Action** - DBT opposite action skill
-8. **Radical Acceptance** - Accept reality skillfully
-9. **Distress Tolerance** - Cope with crisis
-10. **Belief Meter** - Challenge negative thoughts
-11. **Grief Support** - Process loss and grief
-12. **Trigger Detector** - Identify emotional triggers
+6. **Wellness Hub** - Central wellness dashboard
+7. **Mood Tracker (Original)** - Track emotional states (now enhanced with AI)
+8. **CBT Coach** - Cognitive behavioral therapy
+9. **CBT Mini-Games** - Interactive CBT exercises
+10. **DBT Skills** - Dialectical behavior therapy
+11. **Acceptance Function** - Navigate difficult emotions
+12. **Opposite Action** - DBT opposite action skill
+13. **Radical Acceptance** - Accept reality skillfully
+14. **Distress Tolerance** - Cope with crisis
+15. **Belief Meter** - Challenge negative thoughts
+16. **Grief Support** - Process loss and grief
+17. **Trigger Detector** - Identify emotional triggers (integrated with AI insights)
 
 **Energy Management (7):**
-13. **Energy Coins** - Daily energy budgeting
-14. **Pacing Partner** - Sustainable energy pacing
-15. **Sleep-Energy Tracker** - Sleep quality tracking
-16. **Pain Forecast** - ML-powered pain prediction
-17. **Work-Balance AI** - Work-life balance assistant
-18. **Daily Planner** - Energy-aware scheduling
-19. **Predicted Energy** - 24-hour energy forecasts
+18. **Energy Coins** - Daily energy budgeting
+19. **Pacing Partner (Original)** - Sustainable energy pacing (now AI-enhanced)
+20. **Sleep-Energy Tracker** - Sleep quality tracking
+21. **Pain Forecast** - ML-powered pain prediction (integrated with pacing AI)
+22. **Work-Balance AI** - Work-life balance assistant
+23. **Daily Planner** - Energy-aware scheduling
+24. **Predicted Energy** - 24-hour energy forecasts (enhanced with AI)
 
 **Self-Care & Relaxation (8):**
-20. **Self-Care Library** - Self-care techniques
-21. **Adaptive Meditation** - Accessible meditation
-22. **Ambience** - Calming soundscapes
-23. **Grounding Techniques** - Quick anxiety relief
-24. **Micro-Movement** - Gentle exercises
-25. **Harm Reduction** - Safety-focused support
-26. **Sleep Reframe** - Improve sleep quality
-27. **Dreams Journal** - Track and interpret dreams
+25. **Self-Care Library** - Self-care techniques
+26. **Adaptive Meditation** - Accessible meditation
+27. **Ambience** - Calming soundscapes
+28. **Grounding Techniques** - Quick anxiety relief
+29. **Micro-Movement** - Gentle exercises
+30. **Harm Reduction** - Safety-focused support
+31. **Sleep Reframe** - Improve sleep quality
+32. **Dreams Journal** - Track and interpret dreams
 
 **Physical Wellness (6):**
-28. **Exercise Hub** - Accessible fitness videos
-29. **Exercise Favorites** - Save favorite workouts
-30. **Rehab Games** - Gamified physical therapy
-31. **Nutrition Guides** - Healthy eating simplified
-32. **Symptom Tracker** - Track physical symptoms
-33. **Chronic Tracker** (linked from Resources)
+33. **Exercise Hub** - Accessible fitness videos
+34. **Exercise Favorites** - Save favorite workouts
+35. **Rehab Games** - Gamified physical therapy
+36. **Nutrition Guides** - Healthy eating simplified
+37. **Symptom Tracker** - Track physical symptoms
+38. **Chronic Tracker** (linked from Resources)
 
 **Progress & Reflection (3):**
-34. **Achievements** - Wellness milestones
-35. **Reflections Calendar** - Daily reflections
-36. **Resilience Points** - Track resilience building
+39. **Achievements** - Wellness milestones
+40. **Reflections Calendar** - Daily reflections
+41. **Resilience Points** - Track resilience building
 
 ### 🔜 Coming Soon (6 Features)
 
@@ -232,7 +251,7 @@ Welcome to the **3mpwr App Closed Beta**! This document shows exactly what featu
 3. **Group Wellness Challenges** - Community wellness goals
 4. **Therapist Portal** - Share progress with therapist
 5. **Crisis Support Integration** - Direct crisis line access
-6. **Wellness Insights Report** - Weekly AI-generated insights
+6. **Wellness Insights Report** - Weekly AI-generated insights (partially implemented)
 
 ---
 
@@ -277,23 +296,31 @@ Welcome to the **3mpwr App Closed Beta**! This document shows exactly what featu
 
 ## ⚙️ Settings Tab
 
-### ✅ Available in Beta (12 Features)
+### ✅ Available in Beta (18 Features) ⭐ **+6 NEW (Oct 2025)**
 
 **Core Settings (6):**
 1. **Settings Hub** - All settings organized
-2. **Accessibility Settings** - Full a11y controls
+2. **Accessibility Settings** - Full a11y controls with WCAG AAA compliance
 3. **Language Selection** - 8 languages (en, es, fr, + 6 Indigenous)
-4. **Notification Preferences** - Customize all alerts
-5. **Privacy Controls** - Data and privacy management
+4. **Notification Preferences** - Customize all alerts with smart scheduling
+5. **Privacy Controls** ⭐ **ENHANCED (Oct 21)** - Granular data controls (search history, analytics, error reporting) - ALL OFF by default
 6. **Theme Settings** - Light/dark/high contrast modes
 
+**October 2025 Additions (6 NEW):**
+7. **Profile Editor** ⭐ **NEW (Oct 17)** - ML personalization profile (5 disability types, 15 symptoms, 26 tool preferences, 6 advocacy needs) with Firestore sync
+8. **Dyslexia Support** ⭐ **NEW (Oct 14)** - OpenDyslexic + Lexend fonts, 5 color overlays, wide/extra-wide spacing presets (Phase 1.2 - 100% complete)
+9. **Motor Accessibility** ⭐ **NEW (Oct 14)** - Dwell-click (0.5-3s), touch target expansion (44×44dp), tremor compensation (Phase 1.3 - 40% complete)
+10. **Cognitive Accessibility** ⭐ **NEW (Oct 13)** - SimplifiedView, breadcrumbs, auto-save, step-by-step guidance (Phase 1.1 - integration in progress)
+11. **Legal Document Viewer** ⭐ **NEW (Oct 24)** - View Terms v3.0, Privacy v2.0, disclaimers, version history
+12. **Feedback System** ⭐ **ENHANCED (Oct 17)** - 👍/👎 feedback on ML suggestions with comment field, Firestore storage
+
 **Advanced Features (6):**
-7. **Advanced Security** - Biometrics, 2FA, threat monitoring
-8. **Profile Management** - User profile and preferences
-9. **Data Export** - Export all your data
-10. **About Page** - App info and credits
-11. **FAQs** - Frequently asked questions
-12. **Feedback System** - Send feedback to developers
+13. **Advanced Security** - Biometrics, 2FA, threat monitoring, PanicButton configuration
+14. **Profile Management** - User profile and preferences with cross-device sync
+15. **Data Export** - Export all your data in standard formats
+16. **About Page** - App info, version, credits, official email (empowrapp08162025@gmail.com)
+17. **FAQs** - Frequently asked questions with search
+18. **Suggestion Feedback** - Rate ML recommendations to improve accuracy
 
 ### 🔜 Coming Soon (3 Features)
 

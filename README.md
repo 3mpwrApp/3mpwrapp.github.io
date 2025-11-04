@@ -2,7 +2,7 @@
 
 A privacy-first empowerment app with enterprise-grade security, Indigenous language support, complete user data ownership, and ML-driven personalization.
 
-**Status**: Production Ready (99/100) | **Bundle Size**: 3.0 MB | **Tests**: 315 passing | **Email**: empowrapp08162025@gmail.com
+**Status**: Production Ready (99/100) | **Bundle Size**: 3.0 MB | **Tests**: 315 passing | **Last Update**: Nov 4, 2025 | **Email**: empowrapp08162025@gmail.com
 
 ## ⚠️ IMPORTANT LEGAL DISCLAIMERS
 
@@ -67,6 +67,278 @@ Upon first opening the app, ALL users are required to:
 **Next Steps**: Capture screenshots → Build production APK/AAB → Submit to Google Play
 
 See `FINAL_GOOGLE_PLAY_READINESS.md` and `SCREENSHOT_GUIDE.md` for complete details.
+
+## 🧠 November 2025 - AI-Powered Wellness & UX Revolution ✅
+
+### 🎯 Mood Tracker 2.0 with AI Pattern Detection
+- **AI Pattern Recognition**: Automatically detects trends (improving, declining, stable, volatile)
+- **External Factor Tracking**: Track sleep hours, weather, exercise minutes, social interactions
+- **Trigger Identification**: AI correlates external factors with mood changes using threshold analysis
+- **Context-Aware Coping Strategies**: Personalized suggestions based on current mood:
+  - Low mood: Deep breathing, grounding, crisis resources, DBT skills
+  - Neutral: Pacing partner, self-care, mindfulness
+  - Good mood: Social connection, advocacy, exercise, gratitude
+- **Gamification**: Streak tracking for consistent logging
+- **Volatility Analysis**: Identifies mood stability patterns and 24-hour deltas
+- **Beautiful Insights UI**: MoodInsights component displays all patterns visually
+
+### ⚡ Pacing Partner with AI Energy Forecasting
+- **Smart Energy Forecasting**: Predicts hourly energy (8am, 12pm, 5pm, 8pm) from 7+ days history
+- **Adaptive Pacing Suggestions**: Real-time recommendations when fatigue/pain spike
+- **Body-Mind Sync Analysis**: Correlates mood with activity patterns
+- **Compassion Mode**: Empathetic validation ("Your body is asking for rest - that's wisdom, not weakness")
+- **Achievement System**: Tracks consistent pacing, balanced weeks, rest days honored
+- **Alert System**: Warnings for high exertion with urgency levels (info/warning/critical)
+
+### 🔗 Cross-Feature Integration System
+- **5 Smart Recommendation Engines**:
+  - Mood-based: Low mood → DBT/distress tools; Good mood → community/advocacy
+  - Energy-based: Low energy → meditation/rest; High energy → exercise/advocacy
+  - Wellness flow: DBT → Distress tolerance → Mood tracker (intelligent progression)
+  - Advocacy context: Evidence → Letter wizard → Lawyer finder (smooth workflow)
+  - Tool completion: Contextual "what's next" suggestions
+- **FeatureRecommendations Component**: Horizontal scrolling cards with tap-to-navigate
+- **Priority System**: High/medium/low priority badges guide users to most helpful features
+
+### 🎡 Daily Beta Feature Rotation (26 Tools)
+- **Guaranteed Discovery**: Each of 26 beta tools gets featured spotlight every 26 days
+- **Day-of-Year Algorithm**: Deterministic rotation ensures fairness
+- **Proximity Bonuses**: Nearby tools (distance 1-3) get discovery boost
+- **Maintains Personalization**: User feedback and preferences still influence ranking
+- **Featured Tool Boost**: +1.5 score bonus for today's spotlight tool
+
+### 📅 Complete Awareness Calendar (30+ Observances)
+- **Indigenous Observances** (4): MMIWG Day, Indigenous Peoples Day, Orange Shirt Day, Indigenous Disability Awareness Month
+- **Global Health Days** (16): World Cancer Day, Rare Disease Day, Down Syndrome Day, World Health Day, Fibromyalgia Day, PTSD Day, Suicide Prevention Day, Mental Health Day, White Cane Day, Diabetes Day, World AIDS Day, and more
+- **Existing Disability Days**: World Braille Day, Wheelchair Day, Autism Awareness, GAAD, NAAW, IDPD
+- **Dynamic Generation**: All dates generated dynamically by year with rich descriptions
+
+### 📊 Technical Achievement
+- **5 New Services/Components**: 4,349+ lines of production code added
+- **12 Files Enhanced**: Mood tracker, pacing partner, personalization, observances, integration
+- **All Tests Passing**: 315 tests, 109 suites, zero failures
+- **Zero Lint Warnings**: 100% ESLint compliance with WCAG AAA accessibility
+- **EAS Update Deployed**: Preview channel updated (Update ID: 5ca5a325-6976-4e60-a992-8d58fe9f8163)
+
+**Impact**: Smarter wellness tracking, proactive support, seamless feature discovery, cultural inclusivity, and AI-powered insights—all while maintaining privacy and accessibility.
+
+---
+
+## 📅 October 2025 - Production Foundation & ML Personalization
+
+### 🎯 **October 31, 2025 - Calendar Subscription Feature**
+- **Auto-Updating Calendar Subscriptions**: Production-ready Cloudflare Workers deployment
+- **webcal:// Protocol Support**: One-click subscription from app to native calendars
+- **Native Integration**: Works with Apple Calendar, Google Calendar, Outlook, etc.
+- **Auto-Sync Events**: Automatic updates when new observances are added
+- **Environment Variable**: `EXPO_PUBLIC_CALENDAR_FEED_URL` for feed configuration
+- **Deployed to Preview**: Fully functional in closed beta channel
+
+**Impact**: Users can sync disability awareness events directly to their phone's calendar with automatic updates.
+
+### 🎯 **October 22, 2025 - Google Play Final Readiness (99/100 Score)**
+- **Official Support Email**: Migrated all documentation to `empowrapp08162025@gmail.com`
+- **App Name Consistency**: "3mpwr App - Secure & Private" across all user-facing content
+- **Screenshot Infrastructure**: Comprehensive capture guides and 8-screenshot strategy documented
+- **Bundle Size Optimization**: Maintained 3.0 MB (97% under Google Play's 150MB limit)
+- **Final Readiness Report**: 99/100 production-ready score with detailed compliance checklist
+- **Metro Bundler Analysis**: Documented benign warning patterns for future reference
+
+**Documentation Created**:
+- `SCREENSHOT_GUIDE.md` - Complete screenshot capture instructions
+- `SCREENSHOT_CAPTURE_INSTRUCTIONS.md` - Step-by-step navigation paths for all 8 screenshots
+- `WEB_ISSUES_AND_SCREENSHOT_SOLUTION.md` - Android vs Web screenshot requirements
+- `GOOGLE_PLAY_FINAL_INSPECTION.md` - Production readiness checklist
+- `SESSION_SUMMARY_OCT22.md` - Complete session summary
+
+**Impact**: App is production-ready and compliant with all Google Play requirements. Awaiting only final screenshot capture for submission.
+
+### 📜 **October 24, 2025 - Comprehensive Legal & Safety Framework**
+
+#### 9-Step Legal Acceptance Flow (`components/TermsGate.tsx`)
+- **Welcome Screen**: First-time setup overview
+- **Terms of Service v3.0**: Full scroll-to-bottom enforcement before proceeding
+- **Privacy Policy v2.0**: Full scroll-to-bottom enforcement before proceeding
+- **6 Individual Disclaimers**: Medical, legal, financial, crisis, user content, technical
+- **Final Confirmation**: User responsibility acknowledgment
+- **Version Tracking**: Users must re-accept when terms are updated
+- **AsyncStorage Key**: `empowr.legal.acceptance.v3` for state management
+- **100+ Translation Keys**: Full i18n support in `termsGate` namespace
+
+#### Updated Legal Documents
+- **Terms of Service v3.0** (`docs/release-prep/legal/terms-of-service.md`):
+  - Comprehensive liability protections (max $100 USD, $0 for free users)
+  - Crisis resource limitations clarified (app cannot detect/prevent emergencies)
+  - Community content disclaimers (user-generated content)
+  - AI tool accuracy disclaimers (may contain errors, biases, outdated info)
+  - Third-party service boundaries (Sentry, YouTube, advocate directory)
+  - Jurisdiction and governing law (Ontario, Canada)
+
+- **Privacy Policy v2.0** (`docs/release-prep/legal/privacy-policy.md`):
+  - 100% user data ownership emphasized
+  - Device-only storage by default (no cloud required)
+  - Optional cloud backup controls (Firestore)
+  - Third-party integrations transparency (Sentry, YouTube API, advocate directory)
+  - User rights clearly defined (access, deletion, portability)
+  - Data retention policies (user controls all deletions)
+
+#### Trauma-Informed Safety Features
+- **PanicButton Component** (`components/PanicButton.tsx`):
+  - Quick emergency exit from any screen
+  - Navigates to safe landing page instantly
+  - Haptic feedback on activation
+  - Fully accessible with screen reader support
+
+- **Safe Landing Page** (`app/safe-landing.tsx`):
+  - 4-7-8 breathing exercise with animated visual guide
+  - Crisis resources (988 Suicide & Crisis Lifeline, Crisis Text Line, local services)
+  - Grounding techniques for immediate support
+  - Calming green therapy colors (WCAG AAA contrast)
+  - "Return to App" button when user is ready
+
+#### Disclaimer Coverage Expansion
+- **DisclaimerBanner Component** (`components/DisclaimerBanner.tsx`):
+  - 6 disclaimer types: medical, legal, financial, crisis, community, technical
+  - Dismissible with AsyncStorage persistence (user doesn't see repeatedly)
+  - Accessible with proper ARIA roles and labels
+- **14 Screens with Disclaimers**: 4 hub screens, 7 wellness tools, 3 legal screens
+- **72 Screens Remaining**: Documented in `disclaimer-coverage-audit.md` for future work
+
+**Impact**: Rock-solid legal protection, trauma-informed safety features, and comprehensive user consent flow. Users understand app limitations and developer liability boundaries.
+
+### 🔐 **October 21, 2025 - Privacy Controls Enhancement**
+
+#### Privacy Control Toggles (`store/settings.tsx`)
+- **saveSearchHistory**: Opt-out of search history persistence (OFF by default)
+- **optOutAnalytics**: Disable analytics tracking completely (OFF by default)
+- **errorReporting**: Control error reporting to Sentry (OFF by default)
+- **Privacy-First Defaults**: All tracking OFF until user explicitly enables
+- **Granular Control**: Users control each data type independently
+
+#### Google Play Data Safety Improvements
+- **All 11 Data Types Optional**: Users can disable every tracking feature
+- **No Data Shared**: When all toggles OFF, zero data shared with third parties
+- **Enhanced Transparency**: Clear privacy documentation in Google Play Console
+- **User Empowerment**: Full control over what data is collected and stored
+
+**Documentation Created**:
+- `docs/SEARCH_HISTORY_OPT_OUT_FEATURE.md` - Complete feature documentation
+- `docs/WEBSITE_PRIVACY_CONTROLS.md` - Privacy control UI specifications
+
+**Impact**: Industry-leading privacy controls. Users have complete transparency and control over their data. Meets strictest Google Play Data Safety requirements.
+
+### 🤖 **October 17, 2025 - Phase 6 ML-Driven Personalization (2,500+ Lines)**
+
+#### User Profile Management
+- **Profile Editor** (`app/(tabs)/settings/profile-editor.tsx`):
+  - 5 disability types: Chronic pain, Fatigue conditions, Mobility impairments, Cognitive disabilities, Mental health
+  - 15 symptoms to track (pain, fatigue, mobility issues, cognitive fog, anxiety, depression, etc.)
+  - 26 wellness tools preferences (users select which tools are most helpful)
+  - 6 advocacy needs (legal help, benefits, housing, healthcare, etc.)
+  - Firestore integration for cross-device sync
+  - Real-time validation and error handling
+
+#### Suggestion Feedback System
+- **Feedback Buttons** (`components/SuggestionFeedbackButton.tsx`):
+  - 👍/👎 buttons on all ML-generated suggestions
+  - Feedback modal with optional comment field
+  - Sentiment tracking (helpful, not-helpful, neutral)
+  - Stores feedback in Firestore for continuous ML model improvement
+  - Accessible with screen reader support
+
+#### Phase 6 Tool Registry (9 ML-Enhanced Tools)
+- **Tool Registry** (`services/phase6ToolRegistry.ts`, `components/ToolCard.tsx`):
+  1. **Mood Tracker**: Detects patterns and emotional triggers
+  2. **Pacing Partner**: Energy forecasting with predictive analytics
+  3. **DBT Skills**: Adaptive suggestions based on distress level
+  4. **Medication Tracker**: Schedule optimization and reminder timing
+  5. **Pain Log**: Trigger identification and severity pattern analysis
+  6. **Energy Tracker**: Predictive analytics for daily energy curves
+  7. **Symptom Tracker**: Multi-symptom pattern detection
+  8. **Sleep Tracker**: Sleep quality analysis and recommendations
+  9. **Distress Tolerance**: Crisis prediction and proactive support
+
+- **Tailored Descriptions**: Each tool has personalized benefits based on user profile
+- **Accessibility-First Design**: All cards meet WCAG AAA standards
+
+#### Pattern Learning Engine
+- **Pattern Detection** (`services/patternLearning.ts`, `hooks/usePatternAnalysis.ts`):
+  - **5 Pattern Types**:
+    1. **Temporal**: Time-based trends (weekly, daily rhythms)
+    2. **Behavioral**: Action sequences (tool usage order, timing)
+    3. **Symptom**: Condition correlations (pain + fatigue patterns)
+    4. **Environmental**: External triggers (weather, sleep, social)
+    5. **Treatment**: Intervention effectiveness (what works for user)
+  - **Confidence Scoring**: Each pattern has confidence level (low/medium/high)
+  - **Actionable Insights**: Generates specific recommendations based on detected patterns
+  - **Real-Time Detection**: Analyzes data as user logs entries
+
+#### Energy Prediction System
+- **24-Hour Energy Forecasting** (`services/energyPrediction.ts`, `hooks/usePredictedEnergy.ts`, `components/EnergyForecast.tsx`):
+  - Predicts energy by hour using weighted ensemble algorithm
+  - Machine learning model learns user's natural energy rhythms
+  - Suggests optimal times for activities (exercise, advocacy, socializing)
+  - Color-coded hourly predictions (red = low, yellow = medium, green = high)
+  - Confidence levels displayed (user sees prediction reliability)
+  - Requires 7+ days of data for accurate forecasting
+
+#### Smart Notifications
+- **Energy-Aware Scheduling** (`services/smartNotifications.ts`):
+  - Sends reminders during predicted high-energy windows
+  - Adaptive send times based on user's unique patterns
+  - Respects user preferences and quiet hours
+  - Learns from user engagement (when they actually use tools)
+  - Reduces notification fatigue by timing messages intelligently
+
+#### Weekly AI Summary
+- **Comprehensive Analytics** (`services/weeklySummary.ts`):
+  - **5 Dimensions Analyzed**:
+    1. **Mood Trends**: Improving, declining, stable detection
+    2. **Pacing Effectiveness**: Balance score (activity vs rest)
+    3. **Tool Engagement**: Usage frequency and patterns
+    4. **Symptom Patterns**: Severity changes over week
+    5. **Progress Highlights**: Wins, challenges, achievements
+  - **Personalized Insights**: Generated every 7 days automatically
+  - **Actionable Recommendations**: Specific next-week suggestions
+  - **Celebrates Small Wins**: Positive reinforcement for progress
+
+#### ML Model Versioning
+- **A/B Testing Framework** (`services/mlModels.ts`):
+  - Multiple ML algorithm variants can run simultaneously
+  - Statistical significance tracking for model comparison
+  - Confidence scoring for all predictions
+  - Model performance metrics (accuracy, precision, recall)
+  - Gradual rollout support (test with small % of users first)
+  - Privacy-preserving (all computation on-device with user's own data)
+
+**Impact**: Cutting-edge ML personalization that learns each user's unique patterns while respecting privacy. 2,500+ lines of production-ready ML code delivering predictive insights, smart scheduling, and personalized recommendations.
+
+### 🎨 **October 13-14, 2025 - Accessibility Enhancement Phases**
+
+#### Phase 1.2 - Dyslexia Support (100% Complete)
+- **Font Options**: OpenDyslexic and Lexend Deca fonts specifically designed for dyslexia
+- **Color Overlays**: 5 tint options (blue, yellow, green, pink, gray) to reduce visual stress
+- **Spacing Presets**: Wide and extra-wide letter/line spacing options
+- **Settings Integration**: All preferences persist across sessions via AsyncStorage
+- **Global Application**: Settings apply to entire app automatically
+- **Documentation**: Complete implementation guide in `docs/accessibility/`
+
+#### Phase 1.3 - Motor Accessibility (40% Complete)
+- **Dwell-Click**: Hover-to-click with configurable delay (0.5s - 3s)
+- **Touch Target Expansion**: 44×44dp minimum sizing across all interactive elements
+- **Tremor Compensation**: Reduces accidental taps with intelligent debouncing
+- **Remaining Work**: Voice control integration, switch control support, one-handed mode
+
+#### Phase 1.1 - Cognitive Accessibility (Integration in Progress)
+- **SimplifiedView Component**: Reduced UI complexity for cognitive disabilities
+- **Breadcrumbs**: Navigation tracking helps users understand where they are
+- **Auto-Save**: Prevents data loss for users with memory impairments
+- **Step-by-Step Guidance**: Multi-step forms broken into digestible chunks
+- **Clear Language**: Simplified copy throughout app (ongoing)
+
+**Impact**: Industry-leading accessibility across visual, motor, and cognitive disabilities. Dyslexia support is 100% complete. Motor and cognitive work continues in phases.
+
+---
 
 ## 🆕 Phase 6 - ML-Driven Personalization - NOW LIVE ✅
 
