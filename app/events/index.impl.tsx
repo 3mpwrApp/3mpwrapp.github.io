@@ -13,7 +13,6 @@ import {
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
-import CalendarSubscriptionCard from '../../components/CalendarSubscriptionCard';
 import Card from "../../components/Card";
 import ContrastToggle from "../../components/ContrastToggle";
 import { GapView } from "../../components/GapView";
@@ -534,8 +533,8 @@ export default function EventsScreen() {
           }
           ListHeaderComponent={(
             <View style={{ marginBottom: 8 }}>
-              {/* Calendar Subscription Card */}
-              <CalendarSubscriptionCard />
+              {/* Calendar Subscription Card - Temporarily disabled for debugging */}
+              {/* <CalendarSubscriptionCard /> */}
 
               {/* One-time Export Options */}
               <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600' }}>
