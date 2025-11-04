@@ -16,11 +16,21 @@ export interface MoodEntry {
   score: number; // -2..+2 simple scale
   note?: string;
   tags?: string[];
+  // External factors for pattern detection
+  sleep?: number; // hours
+  weather?: 'sunny' | 'cloudy' | 'rainy' | 'snowy' | 'stormy';
+  exercise?: number; // minutes
+  socialInteractions?: number; // 0-5 scale
 }
 
 interface MoodContextShape {
   entries: MoodEntry[];
-  addEntry: (score: number, note?: string, tags?: string[]) => void;
+  addEntry: (score: number, note?: string, tags?: string[], factors?: {
+    sleep?: number;
+    weather?: 'sunny' | 'cloudy' | 'rainy' | 'snowy' | 'stormy';
+    exercise?: number;
+    socialInteractions?: number;
+  }) => void;
   recentAverage: number | null;
   todayEntries: MoodEntry[];
 }
@@ -56,11 +66,34 @@ export const MoodProvider: React.FC<{children: React.ReactNode}> = ({ children }
     try { await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch {}
   }, []);
 
-  const addEntry = useCallback((score: number, note?: string, tags?: string[]) => {
-    const entry: MoodEntry = { id: Math.random().toString(36).slice(2), ts: Date.now(), score, note, tags };
+  const addEntry = useCallback((
+    score: number,
+    note?: string,
+    tags?: string[],
+    factors?: {
+      sleep?: number;
+      weather?: 'sunny' | 'cloudy' | 'rainy' | 'snowy' | 'stormy';
+      exercise?: number;
+      socialInteractions?: number;
+    }
+  ) => {
+    const entry: MoodEntry = {
+      id: Math.random().toString(36).slice(2),
+      ts: Date.now(),
+      score,
+      note,
+      tags,
+      ...factors,
+    };
     const next = [entry, ...entries].slice(0, 500); // cap
     persist(next);
-  usage.view('mood', '/(tabs)/wellness.mood', { event: 'add', score, hasNote: !!note, tagsCount: tags?.length || 0 });
+    usage.view('mood', '/(tabs)/wellness.mood', { 
+      event: 'add',
+      score,
+      hasNote: !!note,
+      tagsCount: tags?.length || 0,
+      hasFactors: !!(factors?.sleep || factors?.weather || factors?.exercise || factors?.socialInteractions),
+    });
   }, [entries, persist]);
 
   const todayStart = new Date(); todayStart.setHours(0,0,0,0);

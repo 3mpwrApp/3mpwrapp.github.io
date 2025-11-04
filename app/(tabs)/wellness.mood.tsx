@@ -1,12 +1,15 @@
 import { useRef, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yTextInput from '../../components/A11yTextInput';
 import DisclaimerBanner from '../../components/DisclaimerBanner';
+import FeatureRecommendations from '../../components/FeatureRecommendations';
 import GapView from '../../components/GapView';
+import MoodInsights from '../../components/MoodInsights';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
+import { getMoodBasedRecommendations } from '../../services/feature-integration';
 import { MoodProvider, useMood } from '../../store/mood';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
@@ -19,6 +22,12 @@ function MoodInner() {
   const { addEntry, entries, todayEntries, recentAverage } = useMood();
   const [score, setScore] = useState<number | null>(0);
   const [note, setNote] = useState('');
+  const [showFactors, setShowFactors] = useState(false);
+  const [sleep, setSleep] = useState('');
+  const [weather, setWeather] = useState<'sunny' | 'cloudy' | 'rainy' | 'snowy' | 'stormy' | ''>('');
+  const [exercise, setExercise] = useState('');
+  const [socialInteractions, setSocialInteractions] = useState('');
+  const [showInsights, setShowInsights] = useState(false);
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const titleRef = useRef<Text>(null);
@@ -46,8 +55,18 @@ function MoodInner() {
   // Handle mood entry saving with accessibility feedback
   const handleSaveMood = () => {
     if (score !== null) {
-      addEntry(score, note || undefined);
+      const factors: any = {};
+      if (sleep) factors.sleep = parseFloat(sleep);
+      if (weather) factors.weather = weather;
+      if (exercise) factors.exercise = parseInt(exercise);
+      if (socialInteractions) factors.socialInteractions = parseInt(socialInteractions);
+
+      addEntry(score, note || undefined, undefined, Object.keys(factors).length > 0 ? factors : undefined);
       setNote('');
+      setSleep('');
+      setWeather('');
+      setExercise('');
+      setSocialInteractions('');
       
       // Announce successful save
       announceContentChange(
@@ -146,6 +165,83 @@ function MoodInner() {
         accessibilityLabel={t('mood.noteAccessibility', 'Mood note text input')}
         accessibilityHint={t('mood.noteHint', 'Optional field to add context about your mood')}
       />
+
+      {/* External Factors Toggle */}
+      <Pressable
+        hitSlop={HIT_SLOP_8}
+        style={[styles.factorsToggle, { borderColor: palette.muted }]}
+        onPress={() => setShowFactors(!showFactors)}
+        accessibilityRole="button"
+        accessibilityLabel={showFactors ? 'Hide external factors' : 'Show external factors'}
+        accessibilityHint="Track sleep, weather, exercise, and social interactions for pattern detection"
+      >
+        <Text style={[styles.factorsToggleText, { color: palette.text }]}>
+          {showFactors ? '▼' : '▶'} Track External Factors (for pattern detection)
+        </Text>
+      </Pressable>
+
+      {/* External Factors Inputs */}
+      {showFactors && (
+        <View style={[styles.factorsContainer, { backgroundColor: palette.surface, borderColor: palette.muted }]}>
+          <Text style={[styles.factorsTitle, { color: palette.text }]}>
+            Help us detect patterns by tracking:
+          </Text>
+          
+          <Text style={[styles.factorLabel, { color: palette.text }]}>💤 Sleep (hours)</Text>
+          <TextInput
+            style={[styles.factorInput, { color: palette.text, borderColor: palette.muted }]}
+            placeholder="e.g., 7.5"
+            placeholderTextColor={palette.text + '77'}
+            value={sleep}
+            onChangeText={setSleep}
+            keyboardType="numeric"
+            maxLength={4}
+          />
+
+          <Text style={[styles.factorLabel, { color: palette.text }]}>🌤️ Weather</Text>
+          <View style={styles.weatherButtons}>
+            {['sunny', 'cloudy', 'rainy', 'snowy', 'stormy'].map((w) => (
+              <Pressable
+                key={w}
+                hitSlop={HIT_SLOP_8}
+                style={[
+                  styles.weatherBtn,
+                  { borderColor: palette.muted },
+                  weather === w && { backgroundColor: palette.primary, borderColor: palette.primary },
+                ]}
+                onPress={() => setWeather(w as any)}
+              >
+                <Text style={[styles.weatherText, { color: weather === w ? palette.onPrimary : palette.text }]}>
+                  {w}
+                </Text>
+              </Pressable>
+            ))}
+          </View>
+
+          <Text style={[styles.factorLabel, { color: palette.text }]}>🏃 Exercise (minutes)</Text>
+          <TextInput
+            style={[styles.factorInput, { color: palette.text, borderColor: palette.muted }]}
+            placeholder="e.g., 30"
+            placeholderTextColor={palette.text + '77'}
+            value={exercise}
+            onChangeText={setExercise}
+            keyboardType="numeric"
+            maxLength={3}
+          />
+
+          <Text style={[styles.factorLabel, { color: palette.text }]}>👥 Social Interactions (0-5)</Text>
+          <TextInput
+            style={[styles.factorInput, { color: palette.text, borderColor: palette.muted }]}
+            placeholder="0 = none, 5 = very social"
+            placeholderTextColor={palette.text + '77'}
+            value={socialInteractions}
+            onChangeText={setSocialInteractions}
+            keyboardType="numeric"
+            maxLength={1}
+          />
+        </View>
+      )}
+      
       <Pressable
         hitSlop={HIT_SLOP_8}
         style={[styles.addBtn, { backgroundColor: palette.primary }]}
@@ -163,6 +259,32 @@ function MoodInner() {
       >
         <Text style={[styles.addBtnText, { color: palette.onPrimary }]}>{t('mood.save','Save')}</Text>
       </Pressable>
+
+      {/* Insights Toggle */}
+      {entries.length >= 3 && (
+        <Pressable
+          hitSlop={HIT_SLOP_8}
+          style={[styles.insightsToggle, { backgroundColor: palette.surface, borderColor: palette.primary }]}
+          onPress={() => setShowInsights(!showInsights)}
+          accessibilityRole="button"
+          accessibilityLabel={showInsights ? 'Hide insights' : 'Show insights'}
+        >
+          <Text style={[styles.insightsToggleText, { color: palette.primary }]}>
+            {showInsights ? '🔽 Hide' : '🔼 Show'} Insights, Patterns & Suggestions
+          </Text>
+        </Pressable>
+      )}
+
+      {showInsights && <MoodInsights entries={entries} currentScore={score ?? undefined} />}
+
+      {/* Contextual Recommendations based on current mood */}
+      {score !== null && (
+        <FeatureRecommendations
+          recommendations={getMoodBasedRecommendations(score)}
+          title="🌟 Suggestions Based on Your Mood"
+          maxVisible={3}
+        />
+      )}
 
       <Text style={[styles.section, { color: palette.text, marginTop: 12 }]}>{t('mood.today','Today')}</Text>
       {todayEntries.length > 0 ? (
@@ -216,6 +338,65 @@ const styles = StyleSheet.create({
     minHeight: 48, // WCAG AAA touch target
   },
   addBtnText: { fontWeight: '600', fontSize: 16 },
+  factorsToggle: {
+    padding: 12,
+    borderWidth: 1,
+    borderRadius: 8,
+    marginTop: 8,
+  },
+  factorsToggleText: {
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  factorsContainer: {
+    marginTop: 12,
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  factorsTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    marginBottom: 12,
+  },
+  factorLabel: {
+    fontSize: 14,
+    fontWeight: '500',
+    marginTop: 12,
+    marginBottom: 6,
+  },
+  factorInput: {
+    borderWidth: 1,
+    padding: 8,
+    borderRadius: 6,
+    fontSize: 14,
+  },
+  weatherButtons: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  weatherBtn: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 6,
+    borderWidth: 1,
+  },
+  weatherText: {
+    fontSize: 12,
+    textTransform: 'capitalize',
+  },
+  insightsToggle: {
+    marginTop: 16,
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 2,
+    alignItems: 'center',
+  },
+  insightsToggleText: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
   section: { marginTop: 16, fontWeight: '600' },
   entry: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6 },
   entryScore: { width: 28, textAlign: 'center', fontWeight: '700', marginRight: 8 },

@@ -171,6 +171,129 @@ export function generateDisabilityObservances(year: number): Event[] {
     location: "Canada",
   });
 
+  // Indigenous observances
+  events.push({
+    id: `obs-${year}-05-05-mmiwg`,
+    title: "National Day of Awareness for Missing and Murdered Indigenous Women and Girls",
+    description: "Honoring and remembering MMIWG and 2SLGBTQQIA+ people",
+    date: ymd(year, 4, 5),
+    location: "Canada",
+  });
+  events.push({
+    id: `obs-${year}-06-21-indigenous-peoples`,
+    title: "National Indigenous Peoples Day",
+    description: "Celebrating Indigenous cultures and contributions",
+    date: ymd(year, 5, 21),
+    location: "Canada",
+  });
+  events.push({
+    id: `obs-${year}-09-30-orange-shirt`,
+    title: "Orange Shirt Day (National Day for Truth and Reconciliation)",
+    description: "Honoring residential school survivors and remembering children who never returned home",
+    date: ymd(year, 8, 30),
+    location: "Canada",
+  });
+  events.push({
+    id: `obs-${year}-11-01-indigenous-disability`,
+    title: "Indigenous Disability Awareness Month begins",
+    description: "Month-long observance recognizing Indigenous peoples with disabilities",
+    date: ymd(year, 10, 1),
+    location: "Canada",
+  });
+
+  // Additional important awareness days
+  events.push({
+    id: `obs-${year}-02-04-world-cancer`,
+    title: "World Cancer Day",
+    description: "Raising awareness about cancer and its prevention",
+    date: ymd(year, 1, 4),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-02-28-rare-disease`,
+    title: "Rare Disease Day",
+    description: "Raising awareness for rare diseases (last day of February)",
+    date: ymd(year, 1, year % 4 === 0 ? 29 : 28),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-03-21-down-syndrome`,
+    title: "World Down Syndrome Day",
+    description: "Advocating for rights and inclusion of people with Down syndrome",
+    date: ymd(year, 2, 21),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-04-07-world-health`,
+    title: "World Health Day",
+    description: "Global health awareness",
+    date: ymd(year, 3, 7),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-05-12-fibromyalgia`,
+    title: "Fibromyalgia Awareness Day",
+    description: "Raising awareness about fibromyalgia",
+    date: ymd(year, 4, 12),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-06-27-ptsd`,
+    title: "PTSD Awareness Day",
+    description: "Raising awareness about post-traumatic stress disorder",
+    date: ymd(year, 5, 27),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-07-11-world-population`,
+    title: "World Population Day",
+    description: "Focus on population issues including health and rights",
+    date: ymd(year, 6, 11),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-08-19-humanitarian`,
+    title: "World Humanitarian Day",
+    description: "Honoring humanitarian workers and those they help",
+    date: ymd(year, 7, 19),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-09-10-suicide-prevention`,
+    title: "World Suicide Prevention Day",
+    description: "Raising awareness and prevention of suicide",
+    date: ymd(year, 8, 10),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-10-10-mental-health`,
+    title: "World Mental Health Day",
+    description: "Promoting mental health awareness and support",
+    date: ymd(year, 9, 10),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-10-15-white-cane`,
+    title: "White Cane Safety Day",
+    description: "Celebrating achievements of people who are blind or visually impaired",
+    date: ymd(year, 9, 15),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-11-14-diabetes`,
+    title: "World Diabetes Day",
+    description: "Raising awareness about diabetes",
+    date: ymd(year, 10, 14),
+    location: "Global",
+  });
+  events.push({
+    id: `obs-${year}-12-01-world-aids`,
+    title: "World AIDS Day",
+    description: "Raising awareness about HIV/AIDS",
+    date: ymd(year, 11, 1),
+    location: "Global",
+  });
+
   // GAAD: Third Thursday in May
   const gaad = nthWeekdayOfMonth(year, 4, 4, 3); // May, Thu=4, 3rd
   events.push({

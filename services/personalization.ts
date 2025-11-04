@@ -20,7 +20,38 @@ const TOOLS: SuggestibleTool[] = [
   { id:'policy_simplifier', category:'advocacy', importance:2 },
   { id:'wellness_mood', category:'wellness', importance:2 },
   { id:'resources_search', category:'resources', importance:2 },
+  { id:'wellness_dbt', category:'wellness', importance:2 },
+  { id:'wellness_pacing', category:'wellness', importance:2 },
+  { id:'wellness_meditation', category:'wellness', importance:2 },
+  { id:'wellness_distress', category:'wellness', importance:2 },
+  { id:'wellness_exercise', category:'wellness', importance:2 },
+  { id:'wellness_micromovement', category:'wellness', importance:2 },
+  { id:'wellness_grief', category:'wellness', importance:2 },
+  { id:'wellness_sleep', category:'wellness', importance:2 },
+  { id:'wellness_ambience', category:'wellness', importance:2 },
+  { id:'wellness_selfcare', category:'wellness', importance:2 },
+  { id:'wellness_resilience', category:'wellness', importance:2 },
+  { id:'wellness_cbt', category:'wellness', importance:2 },
+  { id:'wellness_opposite', category:'wellness', importance:2 },
+  { id:'wellness_acceptance', category:'wellness', importance:2 },
+  { id:'community', category:'community', importance:2 },
+  { id:'advocacy_hub', category:'advocacy', importance:2 },
+  { id:'advocacy_letter', category:'advocacy', importance:2 },
+  { id:'advocacy_evidence', category:'advocacy', importance:2 },
+  { id:'advocacy_lawyer', category:'advocacy', importance:2 },
+  { id:'resources_rehab', category:'resources', importance:2 },
+  { id:'resources_rtw', category:'resources', importance:2 },
 ];
+
+// Daily rotation index based on day of year to ensure all tools get shown
+function getDailyRotationIndex() {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const diff = now.getTime() - start.getTime();
+  const oneDay = 1000 * 60 * 60 * 24;
+  const dayOfYear = Math.floor(diff / oneDay);
+  return dayOfYear % TOOLS.length;
+}
 
 interface Suggestion { toolId: string; score: number; reason: { key: string; data?: any }[]; }
 
@@ -127,9 +158,29 @@ export async function scoreTools(extra?: { coachProgress?: number }) : Promise<S
   const prefs = await loadPrefs();
   const hist = await loadHistory();
   const suggestions: Suggestion[] = [];
-  TOOLS.forEach(tool => {
+  
+  // Get daily rotation index to ensure all tools get featured
+  const dailyRotationIndex = getDailyRotationIndex();
+  const todaysFeaturedTool = TOOLS[dailyRotationIndex];
+  
+  TOOLS.forEach((tool, toolIndex) => {
     if (tool.prereq && !tool.prereq()) return;
     let score = tool.importance; const reason: Suggestion['reason'] = [];
+    
+    // Daily rotation boost: Today's featured tool gets significant boost
+    if (tool.id === todaysFeaturedTool.id) {
+      score += 1.5;
+      reason.push({ key: 'daily_featured', data: { date: new Date().toDateString() } });
+    }
+    
+    // Secondary rotation: Nearby tools in the rotation get smaller boosts
+    const rotationDistance = Math.abs(toolIndex - dailyRotationIndex);
+    if (rotationDistance > 0 && rotationDistance <= 3) {
+      const proximityBoost = 0.4 / rotationDistance;
+      score += proximityBoost;
+      reason.push({ key: 'rotation_proximity', data: { distance: rotationDistance, boost: proximityBoost.toFixed(2) } });
+    }
+    
     const lastComplete = lastEvent(tool.id, ['usage.complete']);
     const lastView = lastEvent(tool.id, ['usage.view','usage.start']);
     const recencyTs = lastView?.ts || lastComplete?.ts;
