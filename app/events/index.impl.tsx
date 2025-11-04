@@ -205,7 +205,7 @@ export default function EventsScreen() {
   };
 
   return (
-    <ResponsiveScreenWrapper>
+    <ResponsiveScreenWrapper scrollable={false} padded={false}>
       <View
         style={[styles.container, { flex: 1 }]}
         accessibilityLabel="Events screen"
@@ -475,7 +475,7 @@ export default function EventsScreen() {
                         endDate,
                         location: item.isVirtual ? 'Virtual' : (item.location || ''),
                         notes: `${item.description || ''}\n\nPowered by 3mpwrApp\nhttps://3mpwrapp.pages.dev/`,
-                        organizerEmail: 'contact@3mpwrapp.pages.dev',
+                        organizerEmail: 'empowrapp08162025@gmail.com',
                         url: 'https://3mpwrapp.pages.dev/',
                       };
                       

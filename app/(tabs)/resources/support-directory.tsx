@@ -30,13 +30,48 @@ export default function SupportDirectory() {
   useAnnounceOnMount(t('advocacy.support.title','Support Directory'));
   useFocusOnRefOnMount(titleRef);
   const { province } = useSettings();
+  
+  // Local filter state (overrides global province setting)
+  const [selectedProvince, setSelectedProvince] = React.useState<string | null>(null);
+  
+  // Available provinces from data
+  const provinces = React.useMemo(() => {
+    const unique = new Set(supportOrgs.map(o => o.province));
+    return Array.from(unique).sort((a, b) => {
+      // Sort: CA first, then alphabetically
+      if (a === 'CA') return -1;
+      if (b === 'CA') return 1;
+      return a.localeCompare(b);
+    });
+  }, []);
+  
+  const provinceLabels: Record<string, string> = {
+    'CA': 'Canada-wide',
+    'ON': 'Ontario',
+    'QC': 'Quebec',
+    'BC': 'British Columbia',
+    'AB': 'Alberta',
+    'MB': 'Manitoba',
+    'SK': 'Saskatchewan',
+    'NS': 'Nova Scotia',
+    'NB': 'New Brunswick',
+    'PE': 'Prince Edward Island',
+    'NL': 'Newfoundland',
+    'NT': 'Northwest Territories',
+    'YT': 'Yukon',
+    'NU': 'Nunavut'
+  };
+  
   const filtered = React.useMemo(
-    () =>
-      province
-        ? supportOrgs.filter((o) => o.province === province)
-        : supportOrgs,
-    [province],
+    () => {
+      const filterProv = selectedProvince || province;
+      return filterProv
+        ? supportOrgs.filter((o) => o.province === filterProv)
+        : supportOrgs;
+    },
+    [province, selectedProvince],
   );
+  
   const [suggestion, setSuggestion] = React.useState("");
   const AsyncStorageRef = React.useRef<any>(null);
   React.useEffect(() => {
@@ -65,6 +100,55 @@ export default function SupportDirectory() {
       <Text style={styles.subtitle}>
         {t('advocacy.support.subtitle','Organizations that may help with claims, accommodations, and advocacy.')}
       </Text>
+      
+      {/* Province Filter Chips */}
+      <View style={{ marginVertical: 12 }}>
+        <Text style={[styles.subtitle, { marginBottom: 8, fontWeight: '600' }]}>
+          {t('advocacy.support.filterByProvince', 'Filter by Province/Territory')}
+        </Text>
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t('advocacy.support.showAll', 'Show all organizations')}
+            accessibilityState={{ selected: !selectedProvince }}
+            onPress={() => setSelectedProvince(null)}
+            style={({ pressed }) => [
+              styles.filterChip,
+              !selectedProvince && styles.filterChipSelected,
+              pressed && { opacity: 0.7 }
+            ]}
+          >
+            <Text style={[
+              styles.filterChipText,
+              !selectedProvince && styles.filterChipTextSelected
+            ]}>
+              {t('advocacy.support.all', 'All')} ({supportOrgs.length})
+            </Text>
+          </Pressable>
+          {provinces.map(prov => (
+            <Pressable
+              key={prov}
+              accessibilityRole="button"
+              accessibilityLabel={`${t('advocacy.support.filterBy', 'Filter by')} ${provinceLabels[prov] || prov}`}
+              accessibilityState={{ selected: selectedProvince === prov }}
+              onPress={() => setSelectedProvince(prov)}
+              style={({ pressed }) => [
+                styles.filterChip,
+                selectedProvince === prov && styles.filterChipSelected,
+                pressed && { opacity: 0.7 }
+              ]}
+            >
+              <Text style={[
+                styles.filterChipText,
+                selectedProvince === prov && styles.filterChipTextSelected
+              ]}>
+                {provinceLabels[prov] || prov} ({supportOrgs.filter(o => o.province === prov).length})
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+      </View>
+      
       <FlatList
         data={filtered}
         keyExtractor={(item) => item.id}
@@ -160,6 +244,27 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 8,
       padding: 10,
       color: palette.text,
+    },
+    filterChip: {
+      paddingVertical: 8,
+      paddingHorizontal: 14,
+      borderRadius: 20,
+      borderWidth: 1.5,
+      borderColor: palette.muted,
+      backgroundColor: palette.surface,
+    },
+    filterChipSelected: {
+      backgroundColor: palette.primary,
+      borderColor: palette.primary,
+    },
+    filterChipText: {
+      color: palette.text,
+      fontSize: 13,
+      fontWeight: '500',
+    },
+    filterChipTextSelected: {
+      color: palette.onPrimary,
+      fontWeight: '600',
     },
   });
 }

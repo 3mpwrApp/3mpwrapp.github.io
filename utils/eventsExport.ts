@@ -34,7 +34,7 @@ export function makeICS(evt: SimpleEvent) {
     `DESCRIPTION:${brandedDescription}\n` +
     `LOCATION:${loc}\n` +
     `URL:https://3mpwrapp.pages.dev/\n` +
-    `ORGANIZER;CN=3mpwrApp:MAILTO:contact@3mpwrapp.pages.dev\n` +
+    `ORGANIZER;CN=3mpwrApp:MAILTO:empowrapp08162025@gmail.com\n` +
     'STATUS:CONFIRMED\n' +
     'SEQUENCE:0\n' +
     'END:VEVENT\n' +

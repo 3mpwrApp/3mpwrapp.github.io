@@ -591,15 +591,31 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               <Pressable
                 onPress={() => setCurrentStep("crisis")}
                 style={[styles.button, styles.buttonSecondary]}
+                accessibilityRole="button"
+                accessibilityLabel="Go back to previous step"
               >
                 <Text style={styles.buttonTextSecondary}>Back</Text>
               </Pressable>
               <Pressable
                 onPress={saveAcceptance}
-                style={[styles.button, !allDisclaimersAccepted && styles.buttonDisabled]}
+                style={[
+                  styles.button, 
+                  !allDisclaimersAccepted && styles.buttonDisabled,
+                  allDisclaimersAccepted && styles.buttonEnabled
+                ]}
                 disabled={!allDisclaimersAccepted}
+                accessibilityRole="button"
+                accessibilityLabel={allDisclaimersAccepted 
+                  ? "Accept all terms and continue" 
+                  : "Please check all boxes to enable this button"}
+                accessibilityState={{ disabled: !allDisclaimersAccepted }}
               >
-                <Text style={styles.buttonText}>I Accept All Terms</Text>
+                <Text style={[
+                  styles.buttonText,
+                  allDisclaimersAccepted && styles.buttonTextEnabled
+                ]}>
+                  {allDisclaimersAccepted ? '✓ I Accept All Terms' : 'I Accept All Terms'}
+                </Text>
               </Pressable>
             </GapView>
           </View>
@@ -696,8 +712,17 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       fontSize: 16
     },
     buttonDisabled: {
-      backgroundColor: palette.text,
-      opacity: 0.3,
+      backgroundColor: palette.muted,
+      opacity: 0.5,
+    },
+    buttonEnabled: {
+      backgroundColor: '#10B981', // Success green color
+      borderWidth: 2,
+      borderColor: '#059669',
+    },
+    buttonTextEnabled: {
+      fontSize: 17,
+      fontWeight: '800',
     },
     buttonRow: {
       flexDirection: "row",

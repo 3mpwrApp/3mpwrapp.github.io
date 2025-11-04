@@ -54,13 +54,13 @@ export default function First7Screen(){
   
   return (
     <ScrollView 
-      style={{ flex: 1 }} 
+      style={{ flex: 1, backgroundColor: palette.background }} 
       contentContainerStyle={{ padding: 16 }}
       accessibilityRole="summary" 
       accessibilityLabel="First 7 days onboarding"
     >
       <GapView gap={12}>
-        <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '700', color: palette.text }}>
+        <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '700', color: palette.primary }}>
           Your first 7 days
         </Text>
         <Text style={{ color: palette.text }}>
