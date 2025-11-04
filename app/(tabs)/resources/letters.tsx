@@ -98,7 +98,7 @@ export default function LetterTemplatesScreen() {
           <View key={idx} style={styles.category}>
             <Text style={styles.categoryTitle}>{category.category}</Text>
             {category.templates.map((template) => (
-              <Link 
+              <Link  // a11y-scan: asChild pattern used
                 key={template.id}
                 href={`/(tabs)/resources/letter-wizard?template=${template.id}` as any}
                 asChild={true}
