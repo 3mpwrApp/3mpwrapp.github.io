@@ -142,9 +142,7 @@ export async function maybeRunPruneCycle(): Promise<void> {
     ]);
     await setItem(PRUNE_META_KEY, String(now()));
     await logMaintenance(ANALYTICS_EVENTS.EVIDENCE_QUEUE_PROCESSED, {
-      removed_queue_completed: removed,
-      removed_temp_evidence: tmp.removed,
-      since_ms: elapsed || null,
+      total: removed + tmp.removed, // Combined total of items processed
     });
   }
 }

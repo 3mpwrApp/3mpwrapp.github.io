@@ -15,16 +15,21 @@ import { logger } from '../utils/logger';
 import A11yPressable from './A11yPressable';
 import { DyslexiaText } from './DyslexiaText';
 
-// Lazy-load expo-updates to handle cases where it's not available
+// Lazy-load expo-updates and expo-constants to handle cases where they're not available
 let Updates: any = null;
+let Constants: any = null;
 try {
   Updates = require('expo-updates');
+  Constants = require('expo-constants');
 } catch {
   // expo-updates not available (e.g., in Expo Go)
   if (__DEV__) {
     logger.warn('[UpdateChecker] expo-updates not available');
   }
 }
+
+// Check if running in Expo Go
+const isExpoGo = Constants?.default?.appOwnership === 'expo' || Constants?.appOwnership === 'expo';
 
 export default function UpdateChecker() {
   const { t } = useTranslation();
@@ -37,8 +42,8 @@ export default function UpdateChecker() {
   const [lastChecked, setLastChecked] = React.useState<string | null>(null);
   const [error, setError] = React.useState<string | null>(null);
 
-  // Check if updates are available
-  const isUpdateAvailable = Updates?.isEnabled !== false;
+  // Check if updates are available (not in Expo Go and updates module loaded)
+  const isUpdateAvailable = !isExpoGo && Updates?.isEnabled !== false;
 
   const checkForUpdates = async () => {
     if (!Updates || !isUpdateAvailable) {

@@ -199,20 +199,26 @@ const HomeScreen = React.memo(() => {
   const { factor } = useTextScale();
   const titleRef = React.useRef<Text>(null);
   
-  // Debug logging to track rendering
+  // Debug logging to track mount and re-renders (only on mount and unmount)
   React.useEffect(() => {
     logger.log('[HomeScreen] Mounted successfully');
-    logger.log('[HomeScreen] Palette:', palette);
-    logger.log('[HomeScreen] TextScale factor:', factor);
-  }, [palette, factor]);
+    return () => logger.log('[HomeScreen] Unmounted');
+  }, []);
+  
+  // Track palette and factor changes separately
+  React.useEffect(() => {
+    logger.log('[HomeScreen] Theme changed - Palette:', palette);
+  }, [palette]);
+  
+  React.useEffect(() => {
+    logger.log('[HomeScreen] TextScale changed - factor:', factor);
+  }, [factor]);
   
   // Announce page load and focus title for screen readers
   useAnnounceOnMount(t('home.announcement', 'Home screen loaded. Beta features available.'));
   useFocusOnRefOnMount(titleRef);
   
   // Error handling is done by ErrorBoundaryWrapper and SafeOptionalComponent
-  
-  logger.log('[HomeScreen] Rendering main content');
   
   return (
     <ResponsiveScreenWrapper 

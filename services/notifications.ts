@@ -7,8 +7,16 @@ import { logError } from '../utils/errorLogger';
 function getConstants(): any {
   try { return require('expo-constants'); } catch { return {}; }
 }
+
 function getNotifications(): any | null {
-  try { return require('expo-notifications'); } catch { return null; }
+  try {
+    // In Expo Go, expo-notifications will work for local notifications
+    // but will show a warning about push tokens - this is expected behavior
+    // The warning is informational and doesn't affect functionality
+    return require('expo-notifications');
+  } catch { 
+    return null; 
+  }
 }
 
 let _permissionCache: boolean | null = null;
