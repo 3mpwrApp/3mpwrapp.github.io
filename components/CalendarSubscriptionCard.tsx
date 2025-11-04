@@ -45,7 +45,7 @@ export default function CalendarSubscriptionCard() {
         accessibilityLabel="Subscribe to calendar feed for automatic updates"
         style={[styles.button, { backgroundColor: palette.primary }]}
       >
-        <Text style={[styles.buttonText, { color: palette.buttonText || palette.background }]}>
+        <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
           📲 Subscribe to Calendar
         </Text>
       </A11yPressable>
