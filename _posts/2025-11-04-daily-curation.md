@@ -9,93 +9,86 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-11-04
 
-Curated 18 items from disability, accessibility, and social policy sources.
+Curated 17 items from disability, accessibility, and social policy sources.
 
-## 1. Federal budget expected to chart a course to meet NATO's 5% spending target
-<img src='https://i.cbc.ca/ais/9a045985-c864-41dd-bb1a-37746ba3f8b8,1762217324892/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C100%2C4017%2C2259%29%3BResize%3D%28620%29' alt='A man in a dark suit and white hardhat gestures, while another man stands near him.' width='620' height='349' title='National Defence Minister David McGuinty, left, and Prime Minister Mark Carney are seen during a tour of the Hanwha Ocean Shipyard in Geoje Island, South Korea, Thursday Oct. 30, 2025.  '/><p>What will rearming the Canadian military look like? We could get a clearer in Tuesday's federal budget. At least one defence expert says the Liberal government has made a lot of vague promises and there's a need for specifics on programs like the multi-billion dollar submarine replacement plan.</p>
-📍 [Source](https://www.cbc.ca/news/politics/defence-carney-budget-military-spending-9.6965349?cmp=rss)
-**Score:** 15.00
+## 1. Governments Of Canada and Manitoba Strengthening Justice for Canada's First Responders
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71298)
+**Score:** 17.00
 
-## 2. Prince Harry headed to Toronto to attend events ahead of Remembrance Day
-<img src='https://i.cbc.ca/ais/ba5f43b0-fcdd-4c8e-9d8a-79fac97a1c51,1762205721098/full/max/0/default.jpg?im=Crop%2Crect%3D%28397%2C111%2C4408%2C2479%29%3BResize%3D%28620%29' alt='Two people, hugging one another, while standing behind a lectern' width='620' height='349' title='WHISTLER, CANADA - FEBRUARY 10: Prince Harry, the Duke of Sussex, founder and patron of the Invictus Games Foundation and Meghan, the Duchess of Sussex, deliver remarks at the Invictus Games Vancouver Whistler 2025 Nation Home Welcome Reception on February 10th, 2025. in Whistler, Canada. (Photo by Jeff Vinnick/Getty Images for Invictus Games Vancouver Whistler 2025)'/><p>Prince Harry will travel to Toronto this week, visiting the Sunnybrook Veterans Centre and attending a series of events in support of veterans ahead of Remembrance Day.</p>
-📍 [Source](https://www.cbc.ca/news/canada/prince-harry-toronto-visit-veterans-9.6965159?cmp=rss)
-**Score:** 12.50
+## 2. Who gets bail — and who doesn't? Take a look inside Manitoba's courtrooms
+<img src='https://i.cbc.ca/ais/1.3061931,1745078031000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C252%2C4368%2C2457%29%3BResize%3D%28620%29' alt='Multiple hands are seen holding bars at a prison.' width='620' height='349' title='Quebec's superior court has certified a class-action lawsuit against the province's office of the attorney general, as well as the cities of Montreal and Quebec.'/><p>An 18-year-old with severe fetal alcohol spectrum disorder accused of running drivers off the road in a stolen truck was among those denied release during recent bail hearings in Winnipeg, which CBC News watched to learn more about who gets released, who doesn’t and why.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/bail-court-look-inside-9.6965360?cmp=rss)
+**Score:** 17.50
 
-## 3. Ottawa urged to stop weapons flow to Sudan as Carney prepares UAE visit
-Human rights groups say they believe planes meant to carry humanitarian aid from the UAE to Sudan are regularly delivering weapons instead, including possibly Canadian-made arms.
-📍 [Source](https://globalnews.ca/news/11509327/canada-sudan-weapons-uae-carney/)
+## 3. Manitoba Government Expands Care for Dialysis Patients and Mothers in Norway House Cree Nation
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71297)
+**Score:** 13.00
+
+## 4. Food prices in Canada keep climbing, but these grocery items will give you sticker shock
+<img src='https://i.cbc.ca/ais/f70887cb-6f51-474f-9b4d-c4d56ce21da0,1762188740618/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A composite image shows file photos of coffee, nuts, and frozen hamburgers for sale in grocery stores' width='620' height='349' title='A composite image shows file photos of coffee, nuts, and frozen hamburgers for sale in grocery stores in Canada and the U.S. These are some of the food items that were hit hardest by inflation in September 2025, according to Statistics Canada.'/><p>Shoppers paid four per cent more at the grocery store in September. Here's what food items cost the most, and why.</p>
+📍 [Source](https://www.cbc.ca/news/canada/grocery-prices-food-cost-9.6956462?cmp=rss)
 **Score:** 10.50
 
-## 4. Hudson's Bay will give properties back to landlords after B.C. billionaire loses lease takeover bid
-<img src='https://i.cbc.ca/ais/60a38500-2993-46f2-83a4-fa7ad2f4c456,1762212612852/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C440%2C3886%2C2185%29%3BResize%3D%28620%29' alt='A man passes by an ornate crest with the words Hudson's Bay Company Incorporated 2nd May 1670.' width='620' height='349' title='A pedestrian passes Hudson's Bay department store, in Toronto, on March 13, 2025. Canadas oldest company filed for creditor protection as the company undergoes restructuring.'/><p>The Hudson's Bay Company is disclaiming the leases it had for 25 properties which B.C. billionaire Ruby Liu had tried to buy.</p>
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/ruby-liu-hudsons-bay-leases-hudsons-bay-9.6965439?cmp=rss)
+## 5. How more than 100 volunteers painted an Ontario town red to pay respect to veterans
+<img src='https://i.cbc.ca/ais/46652fa1-9280-4471-b0a0-493bc65c4b32,1762215132216/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C59%2C4240%2C2385%29%3BResize%3D%28620%29' alt='Kathy Howarth, left and Jackie Valotaire stand in front of the Royal Canadian Legion Branch 410, where the second-floor railing has been covered in poppies. ' width='620' height='349' title='Kathy Howarth, left and Jackie Valotaire stand in front of the Royal Canadian Legion Branch 410, where the second-floor railing has been covered in poppies. '/><p>Wherever you go in Port Stanley, you’re sure to be surrounded by the poppies, whether they’re pinned up on park benches, wreathes, storefronts, signs or elsewhere. It's all thanks to the efforts of 106 volunteers that made it happen.</p>
+📍 [Source](https://www.cbc.ca/news/canada/london/how-more-than-100-volunteers-painted-port-stanley-red-to-pay-respect-to-veterans-9.6965490?cmp=rss)
+**Score:** 13.50
+
+## 6. What’s an ‘Alberta whisky’? The province wants to spell it out in law
+<img src='https://i.cbc.ca/ais/ddc4f880-2677-4318-a333-2a032afa57ea,1762223029169/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A man sits at a bar, next to a whisky production line.' width='620' height='349' title='Eau Claire Distillery president and CEO David Farran is pictured at right. Farran thinks Alberta has the potential to become a premier whisky-producing region.'/><p>You've probably heard about Kentucky or Tennessee bourbon. But what makes an Alberta whisky? The provincial government wants to sort that out in legislation.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-whisky-dale-nally-david-farran-eau-claire-9.6965284?cmp=rss)
+**Score:** 13.10
+
+## 7. Montreal transit strike could be first test of new Quebec labour law
+A strike that is upending public transit in Montreal could be the first test of a new law that gives the Quebec government broad power to end labour disputes.
+📍 [Source](https://globalnews.ca/news/11509772/montreal-transit-strike-quebec-labour-law/)
+**Score:** 12.00
+
+## 8. Canada's immigration system is lost in the bushes
+📍 [Source](https://rabble.ca/politics/canadian-politics/canadas-immigration-system-is-lost-in-the-bushes/)
 **Score:** 9.50
 
-## 5. Manitoba Government's Mineral Development Fund Supports Future Mining Opportunities
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71318)
-**Score:** 10.50
+## 9. Family violence against seniors reaches record high in Canada: StatsCan
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/family-violence-against-seniors-rising-canada-9.6963939?cmp=rss)
+**Score:** 9.50
 
-## 6. Trump's tariff powers to be tested by U.S. Supreme Court. What's at stake?
-The U.S. Supreme Court on Wednesday will hear arguments on whether U.S. President Donald Trump has authority to impose tariffs under emergency powers.
-📍 [Source](https://globalnews.ca/news/11500419/donald-trump-tariffs-scotus-case-explainer/)
+## 10. McMaster research targets menstrual cup ‘mess’ with absorbent tablets to tackle period stigma
+<img src='https://i.cbc.ca/ais/057b43df-21e4-4075-b40c-0c7ac73594be,1762183700661/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C756%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A bloody piece of a cotton-like material in front of a menstrual cup. ' width='620' height='349' title='Researchers at McMaster University developed an absorbent, biodegradable tablet made from seaweed-based materials that aims to make menstrual cups more accessible and less 'messy.''/><p>McMaster University professor Zeinab Hosseinidoust worked alongside associate professor Tohid Didar to create smart tablets that work with menstrual cups to make them more accessible and reduce the “mess” that can come along with them.</p>
+📍 [Source](https://www.cbc.ca/news/canada/hamilton/menstrual-tablets-mcmaster-9.6964518?cmp=rss)
 **Score:** 6.00
 
-## 7. ‘Saves time for everybody': Saint John police launch security camera program
-Saint John police are asking the public to help them strengthen surveillance around the city by registering their private security cameras.
-📍 [Source](https://globalnews.ca/news/11509005/saint-john-security-camera-registry/)
-**Score:** 9.00
+## 11. Fox shot, paralyzed in Ontario town prompts animal cruelty investigation
+A fox that had to be euthanized because it was paralyzed after being shot multiple times has sparked an animal cruelty probe by Ontario Provincial Police (OPP).
+📍 [Source](https://globalnews.ca/news/11509879/tottenham-fox-shot-nottawasaga-opp/)
+**Score:** 7.50
 
-## 8. Trump’s Coup Plans for Venezuela Are Bad News for Alberta’s Oilsands
-A US-engineered regime change would flood the market with cheap, easily accessed bitumen.
-📍 [Source](https://thetyee.ca/Opinion/2025/11/04/Trump-Coup-Plans-Venezuela-Bad-News-Alberta-Oilsands/)
-**Score:** 9.00
+## 12. E-borrowing exceeds print at Vancouver libraries — can it keep up with the cost?
+<img src='https://i.cbc.ca/ais/1a7342be-e6fe-4bf7-a36a-80665301d322,1762229004388/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C323%2C6200%2C3487%29%3BResize%3D%28620%29' alt='The Vancouver Public Library main branch in downtown Vancouver seen from Robson Street. ' width='620' height='349' title='The Vancouver Public Library main branch in downtown Vancouver seen from Robson Street. '/><p>For the first time in its history, loans of digital materials, such as e-books, e-magazines and music, have exceeded those of physical copies at the library, although online facsimiles cost three to five times as much.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/vancouver-public-library-ebooks-exceed-physical-copy-borrows-9.6965318?cmp=rss)
+**Score:** 7.80
 
-## 9. Carney's immigration strategy comes during a shift in the economy — and public opinion on newcomers
-<img src='https://i.cbc.ca/ais/3b5dca35-633d-443d-8448-f42b8544cd0f,1762214640145/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C450%2C8640%2C4860%29%3BResize%3D%28620%29' alt='A man in a suit with a red poppy pinned to his lapel speaks into a microphone' width='620' height='349' title='Prime Minister Mark Carney speaks during a news conference following the APEC Summit in Gyeongju, South Korea, Nov. 1, 2025.'/><p></p>
-📍 [Source](https://www.cbc.ca/news/politics/new-immigration-strategy-carney-9.6964494?cmp=rss)
-**Score:** 9.00
+## 13. Who is Champagne, the minister selling Canadians on Carney's 1st budget?
+Champagne is an old-school retail politician who prefers pressing the flesh to digital communications. Liberals tend to describe him with one word: gregarious.
+📍 [Source](https://globalnews.ca/news/11509851/canada-federal-budget-2025-francois-philippe-champagne-mark-carney/)
+**Score:** 6.60
 
-## 10. Halifax housing crunch: How charities are supporting homeless as winter nears
-Nova Scotia-based charities that help unhoused populations say they're seeing growing demand as the weather cools, and the housing crunch isn't helping.
-📍 [Source](https://globalnews.ca/news/11509054/halifax-housing-winter-homeless/)
-**Score:** 6.20
-
-## 11. Push for Richmond property tax reassessments amid uncertainty around Cowichan case
-'In fairness, I think it would be hard to argue that these properties have not had their values affected by this decision,' Paul Sullivan with Ryan Tax Firm told Global News.
-📍 [Source](https://globalnews.ca/news/11509212/push-richmond-property-tax-reassessments-amid-uncertainty-cowichan/)
+## 14. The Beaches make a play for Canadian rock royalty at Doug Mitchell
+The Beaches are making more than just waves.
+📍 [Source](https://www.straight.com/the-beaches-review-vancouver-2025)
 **Score:** 4.50
 
-## 12. Police in 2 B.C. communities warn of sewing needles in Halloween candy
-Police agencies in Delta and Prince George are warning about possible Halloween candy tampering after receiving multiple reports from concerned parents.
-📍 [Source](https://globalnews.ca/news/11509161/police-bc-warn-possible-halloween-candy-sewing-needles/)
-**Score:** 4.50
-
-## 13. Water From Your Eyes bring chaotic brilliance to the Biltmore Cabaret
-<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>.</h3><p></p>
-📍 [Source](https://www.straight.com/music/water-from-your-eyes-bring-chaotic-brilliance-to-biltmore-cabaret)
-**Score:** 4.50
-
-## 14. Remembering the Quiet Brilliance of Tom Barrett
-His decades of reporting for the Vancouver Sun earned deep respect. Then he became an early pillar of The Tyee.
-📍 [Source](https://thetyee.ca/News/2025/11/04/Remembering-Quiet-Brilliance-Tom-Barrett/)
-**Score:** 4.50
-
-## 15. Child porn offenders should be buried under a prison, Manitoba premier says
-📍 [Source](https://www.cbc.ca/news/canada/manitoba/wab-kinew-court-child-pornography-9.6965133?cmp=rss)
-**Score:** 4.50
-
-## 16. Luddite Land Assembly: Weaving Sound, Storytelling and Community
-Experience this immersive project and much more at the 2025 Modulus Festival in Vancouver.
-📍 [Source](https://thetyee.ca/Presents/2025/11/04/Luddite-Land-Assembly/)
+## 15. MGBHLM First Nation grows with new attractions
+With a new fire hall, pump track and plans to relocate the Gold Eagle Casino, the MGBHLM First Nations reserve is growing its community and economy.
+📍 [Source](https://globalnews.ca/news/11509317/mgbhlm-first-nation-grows-with-new-attractions/)
 **Score:** 3.00
 
-## 17. TTC, Metrolinx defend transit confusion after Toronto Blue Jays loss
-Toronto Transit Commission Chair Jamal Myers apologized for a social media post that urged riders to scramble to make the last subway trains while the Jays were still playing.
-📍 [Source](https://globalnews.ca/news/11508883/toronto-blue-jays-transit-chaos/)
-**Score:** 1.30
+## 16. Tolls on U.S.-side of Blue Water Bridge rising in December
+The increase in tolls on the U.S. side of the Blue Water Bridge is part of a 'staggered' increase that began in 2024, according to Michigan's Department of Transportation.
+📍 [Source](https://globalnews.ca/news/11509877/blue-water-bridge-eastbound-toll-increase/)
+**Score:** 2.00
 
-## 18. Fire that grew to become part of Nova Scotia’s largest wildfire started on this man’s property
-<img src='https://i.cbc.ca/ais/2f024077-a96d-442a-b4ff-02e1a05f6452,1761933706200/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A man wearing a blue tracksuit top and beige ball cap is pointing in a treed meadow.' width='620' height='349' title='Mervyn Perry points to the area where a fire was started on his land near Barrington Lake in an area known as Homer's Rock in May 2023.'/><p>Court documents from last month’s sentencing of Dalton Stewart, who was charged under the Forests Act, revealed the fire was set on land owned by Mervyn Perry. Perry says it will take years for his land to get back to what it used to be like.</p>
-📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/tire-fire-barrington-wildfire-mervyn-perry-9.6962079?cmp=rss)
-**Score:** 1.20
+## 17. Indigenous tourism helps me share Miyo-pimatisiwin — and other lessons my dad taught me
+<img src='https://i.cbc.ca/ais/40b91199-d26d-4356-9fe4-ddca632fe1a0,1761692596436/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C511%2C4897%2C2754%29%3BResize%3D%28620%29' alt='A man wearing a ball cap and a dog sit in a canoe on a river, a tipi behind them.' width='620' height='349' title='Blaine Mirasty enjoys a paddle at Cree North Adventures, the tourism operation he launched on the banks of the Meadow River, on Treaty 6 in Saskatchewan.'/><p>Blaine Mirasty grew up learning traditional Cree ways, even while around him, prejudice was common toward Indigenous people. Now he's launched an Indigenous tourism business, which gives him a chance to show people 'Miyo-pimatisiwin,' or how to live a good life.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/first-person-indigenous-knowledge-tourism-miyo-pimatisiwin-9.6956639?cmp=rss)
+**Score:** 1.30
 
