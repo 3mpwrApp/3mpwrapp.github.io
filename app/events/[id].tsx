@@ -1,7 +1,8 @@
+import * as Calendar from 'expo-calendar';
 import * as Linking from "expo-linking";
 import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import React from 'react';
-import { ActivityIndicator, Alert, Modal, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, Alert, Modal, Platform, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
 import { GapView } from "../../components/GapView";
@@ -153,25 +154,95 @@ export default function EventDetail() {
 
   const addToCalendar = async () => {
     if (!event) return;
+    
     try {
-      // Open Google Calendar template as a simple cross-platform path
-      const start = new Date(event.date);
-      const toCalTime = (d: Date) =>
-        `${d.getUTCFullYear()}${String(d.getUTCMonth() + 1).padStart(2, "0")}${String(d.getUTCDate()).padStart(2, "0")}T${String(d.getUTCHours()).padStart(2, "0")}${String(d.getUTCMinutes()).padStart(2, "0")}00Z`;
-      const end = new Date(start.getTime() + 60 * 60 * 1000);
-      const dates = `${toCalTime(start)}/${toCalTime(end)}`;
-      const params = new URLSearchParams({
-        action: "TEMPLATE",
-        text: event.title,
-        details: event.description ?? "",
-        location: event.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event.location ?? ""),
-        dates,
+      // Request calendar permissions
+      const { status } = await Calendar.requestCalendarPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert(
+          t('common.permission', 'Permission Required'),
+          t('eventsFeature.calendar.permissionDenied', 'Calendar permission is required to add events. Please enable it in your device settings.')
+        );
+        return;
+      }
+
+      // Get default calendar or create one
+      let calendarId: string | undefined;
+      const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
+      
+      // Try to find default calendar
+      const defaultCalendar = calendars.find(cal => cal.allowsModifications && cal.source.name !== 'Holidays');
+      
+      if (defaultCalendar) {
+        calendarId = defaultCalendar.id;
+      } else {
+        // Create a new calendar if no suitable one exists
+        const defaultCalendarSource = Platform.OS === 'ios'
+          ? await Calendar.getDefaultCalendarAsync()
+          : { isLocalAccount: true, name: '3mpwr Events' };
+
+        calendarId = await Calendar.createCalendarAsync({
+          title: '3mpwr Events',
+          color: palette.primary,
+          entityType: Calendar.EntityTypes.EVENT,
+          sourceId: Platform.OS === 'ios' 
+            ? (defaultCalendarSource as any).source.id 
+            : undefined,
+          source: Platform.OS === 'android'
+            ? defaultCalendarSource as any
+            : undefined,
+          name: '3mpwr Events',
+          ownerAccount: '3mpwr',
+          accessLevel: Calendar.CalendarAccessLevel.OWNER,
+        });
+      }
+
+      // Parse event date
+      const startDate = new Date(event.date);
+      const endDate = new Date(startDate.getTime() + 60 * 60 * 1000); // 1 hour duration
+
+      // Create the event
+      await Calendar.createEventAsync(calendarId, {
+        title: event.title,
+        startDate,
+        endDate,
+        location: event.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event.location ?? ''),
+        notes: event.description ?? '',
+        timeZone: 'America/New_York', // You can make this dynamic based on user location
+        alarms: [{ relativeOffset: -60 }], // Reminder 1 hour before
       });
-      const url = `https://calendar.google.com/calendar/render?${params.toString()}`;
-      const supported = await Linking.canOpenURL(url);
-      if (supported) await Linking.openURL(url);
-      else
-        {await Share.share({
+
+      Alert.alert(
+        t('common.success', 'Success'),
+        t('eventsFeature.calendar.added', 'Event added to your calendar!')
+      );
+    } catch (error) {
+      logError('EventDetail', 'Failed to add to calendar', error);
+      
+      // Fallback to Google Calendar web link
+      try {
+        const start = new Date(event.date);
+        const toCalTime = (d: Date) =>
+          `${d.getUTCFullYear()}${String(d.getUTCMonth() + 1).padStart(2, "0")}${String(d.getUTCDate()).padStart(2, "0")}T${String(d.getUTCHours()).padStart(2, "0")}${String(d.getUTCMinutes()).padStart(2, "0")}00Z`;
+        const end = new Date(start.getTime() + 60 * 60 * 1000);
+        const dates = `${toCalTime(start)}/${toCalTime(end)}`;
+        const params = new URLSearchParams({
+          action: "TEMPLATE",
+          text: event.title,
+          details: event.description ?? "",
+          location: event.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event.location ?? ""),
+          dates,
+        });
+        const url = `https://calendar.google.com/calendar/render?${params.toString()}`;
+        const supported = await Linking.canOpenURL(url);
+        if (supported) {
+          await Linking.openURL(url);
+        } else {
+          throw new Error('Cannot open calendar');
+        }
+      } catch {
+        // Last resort: share ICS file
+        await Share.share({
           message: createICS(
             event.title,
             event.date,
@@ -179,17 +250,8 @@ export default function EventDetail() {
             event.location,
           ),
           title: t('eventsFeature.shareTitle','Event'),
-        });}
-    } catch {
-      await Share.share({
-        message: createICS(
-          event.title,
-          event.date,
-          event.description,
-          event.location,
-        ),
-        title: t('eventsFeature.shareTitle','Event'),
-      });
+        });
+      }
     }
   };
 
