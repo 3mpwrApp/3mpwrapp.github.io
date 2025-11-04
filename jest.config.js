@@ -16,6 +16,7 @@ module.exports = {
     '^@testing-library/react-native$': '@testing-library/react',
     '^@expo/vector-icons$': '<rootDir>/__mocks__/expo-vector-icons.js',
     '^expo-router$': '<rootDir>/__mocks__/expo-router.js',
+    '^expo-calendar$': '<rootDir>/__mocks__/expo-calendar.js',
     // Map all useA11y imports to the mock file
     '^../hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js',
     '^.*/hooks/useA11y$': '<rootDir>/__mocks__/useA11y.js',

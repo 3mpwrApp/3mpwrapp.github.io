@@ -1,14 +1,15 @@
+import * as Calendar from 'expo-calendar';
 import { Link, useFocusEffect } from "expo-router";
 import React from "react";
 import {
-  Alert,
-  FlatList,
-  RefreshControl,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    FlatList,
+    RefreshControl,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
@@ -24,13 +25,13 @@ import { generateDisabilityObservances } from "../../data/disability-observances
 import { events as localEvents } from "../../data/events";
 import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
 import {
-  generateCanadianHolidays,
-  generateProvincialHolidays,
+    generateCanadianHolidays,
+    generateProvincialHolidays,
 } from "../../data/holidays-ca";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
@@ -370,6 +371,13 @@ export default function EventsScreen() {
         ))}
         </View>
 
+        {/* Add spacing before event list */}
+        <View style={{ marginTop: 20, marginBottom: 12 }}>
+          <Text style={[styles.subtitle, { fontSize: Math.round(16 * factor), fontWeight: '700', marginBottom: 0 }]}>
+            {filtered.length > 0 ? t('eventsFeature.upcomingEvents', 'Events') : t('eventsFeature.empty','No events match your filters')}
+          </Text>
+        </View>
+
         <FlatList
           data={filtered}
           keyExtractor={(item) => item.id}
@@ -434,6 +442,62 @@ export default function EventsScreen() {
                   style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
                 >
                   <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>{t('common.share','Share')}</Text>
+                </A11yPressable>
+                <A11yPressable
+                  onPress={async () => {
+                    try {
+                      const { status } = await Calendar.requestCalendarPermissionsAsync();
+                      if (status !== 'granted') {
+                        Alert.alert(
+                          t('eventsFeature.permission.title', 'Calendar Permission'),
+                          t('eventsFeature.permission.message', 'Please allow calendar access to add events.')
+                        );
+                        return;
+                      }
+                      
+                      const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
+                      const defaultCalendar = calendars.find(c => c.allowsModifications) || calendars[0];
+                      
+                      if (!defaultCalendar) {
+                        Alert.alert(
+                          t('eventsFeature.noCalendar.title', 'No Calendar'),
+                          t('eventsFeature.noCalendar.message', 'No calendars found on your device.')
+                        );
+                        return;
+                      }
+                      
+                      const startDate = new Date(item.date);
+                      const endDate = new Date(startDate.getTime() + 3600000); // 1 hour duration
+                      
+                      const eventDetails = {
+                        title: item.title,
+                        startDate,
+                        endDate,
+                        location: item.isVirtual ? 'Virtual' : (item.location || ''),
+                        notes: `${item.description || ''}\n\nPowered by 3mpwrApp\nhttps://3mpwrapp.pages.dev/`,
+                        organizerEmail: 'contact@3mpwrapp.pages.dev',
+                        url: 'https://3mpwrapp.pages.dev/',
+                      };
+                      
+                      await Calendar.createEventAsync(defaultCalendar.id, eventDetails);
+                      Alert.alert(
+                        t('eventsFeature.added.title', 'Success'),
+                        t('eventsFeature.added.message', 'Event added to your calendar!')
+                      );
+                      trackEvent(ANALYTICS_EVENTS.EVENTS_ADD_TO_CALENDAR, { id: item.id });
+                    } catch (error) {
+                      console.error('Calendar error:', error);
+                      Alert.alert(
+                        t('common.error', 'Error'),
+                        t('eventsFeature.addError', 'Could not add event to calendar.')
+                      );
+                    }
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${t('eventsFeature.addToCalendar','Add to phone calendar')} ${item.title}`}
+                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.primary, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.primary }}
+                >
+                  <Text style={{ color: palette.onPrimary, fontSize:12, fontWeight:'600' }}>📅 {t('eventsFeature.addBtn','Add')}</Text>
                 </A11yPressable>
                 <A11yPressable
                   onPress={async () => {

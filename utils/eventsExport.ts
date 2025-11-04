@@ -11,17 +11,32 @@ export type SimpleEvent = {
 
 export function makeICS(evt: SimpleEvent) {
   const dt = evt.date.replace(/[-: ]/g, '');
-  const uid = `${dt}-${evt.id}`;
+  const uid = `${dt}-${evt.id}@3mpwrapp.pages.dev`;
   const loc = evt.isVirtual ? 'Virtual' : (evt.location ?? '');
+  
+  // Add 3mpwrApp branding to description
+  const brandedDescription = evt.description 
+    ? `${evt.description}\n\nPowered by 3mpwrApp\nhttps://3mpwrapp.pages.dev/`
+    : 'Powered by 3mpwrApp\nhttps://3mpwrapp.pages.dev/';
+  
   return (
     'BEGIN:VCALENDAR\n' +
     'VERSION:2.0\n' +
+    'PRODID:-//3mpwrApp//Events//EN\n' +
+    'CALSCALE:GREGORIAN\n' +
+    'METHOD:PUBLISH\n' +
+    'X-WR-CALNAME:3mpwrApp Events\n' +
+    'X-WR-TIMEZONE:America/Toronto\n' +
     'BEGIN:VEVENT\n' +
     `UID:${uid}\n` +
     `DTSTART:${dt}\n` +
     `SUMMARY:${evt.title}\n` +
-    `DESCRIPTION:${evt.description ?? ''}\n` +
+    `DESCRIPTION:${brandedDescription}\n` +
     `LOCATION:${loc}\n` +
+    `URL:https://3mpwrapp.pages.dev/\n` +
+    `ORGANIZER;CN=3mpwrApp:MAILTO:contact@3mpwrapp.pages.dev\n` +
+    'STATUS:CONFIRMED\n' +
+    'SEQUENCE:0\n' +
     'END:VEVENT\n' +
     'END:VCALENDAR'
   );

@@ -3,12 +3,12 @@ import * as Linking from "expo-linking";
 import { router, usePathname, type Href } from "expo-router";
 import React from "react";
 import {
-    Image,
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  Image,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -40,7 +40,6 @@ const MENU_SECTIONS = {
     { label: "My Profile", path: "/profile" },
     { label: "Saved Items", path: "/(tabs)/saved" },
     { label: "Inbox", path: "/(tabs)/inbox" },
-    { label: "Settings", path: "/(tabs)/settings" },
   ],
   about: [
     { label: "What's New", path: "/whatsnew" },
