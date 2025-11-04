@@ -102,9 +102,9 @@ export default function LetterTemplatesScreen() {
                 key={template.id}
                 href={`/(tabs)/resources/letter-wizard?template=${template.id}` as any}
                 asChild={true}
+                accessibilityRole="link"
               >
                 <Pressable
-                  accessibilityRole="link"
                   accessibilityLabel={`Open ${template.title} template`}
                   hitSlop={HIT_SLOP_8}
                   style={({ pressed }) => [
