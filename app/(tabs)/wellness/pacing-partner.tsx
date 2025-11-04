@@ -160,7 +160,7 @@ export default function PacingPartner() {
       {moodEntries.length > 0 && (
         <View style={[s.section, { backgroundColor: palette.surface }]}>
           <Text style={[s.sectionTitle, { color: palette.primary }]}>🧘 Body & Mind Sync</Text>
-          <View style={[s.card, { borderLeftColor: bodyMindSync.aligned ? palette.primary : '#ff9800' }]}>
+          <View style={[s.card, { borderLeftColor: bodyMindSync.aligned ? palette.primary : palette.warning }]}>
             <Text style={[s.cardText, { color: palette.text }]}>{bodyMindSync.message}</Text>
             <Text style={[s.cardSubtext, { color: palette.text }]}>{bodyMindSync.suggestion}</Text>
           </View>
@@ -384,8 +384,8 @@ export default function PacingPartner() {
 function AlertCard({ alert, palette }: { alert: PacingAlert; palette: ReturnType<typeof useAppPalette> }) {
   const colors = {
     info: palette.primary,
-    warning: '#ff9800',
-    critical: '#f44336',
+    warning: palette.warning,
+    critical: palette.error,
   };
 
   return (
@@ -439,9 +439,9 @@ function SuggestionCard({ suggestion, palette }: { suggestion: AdaptiveSuggestio
 
 function ForecastCard({ forecast, palette }: { forecast: EnergyForecast; palette: ReturnType<typeof useAppPalette> }) {
   const levelColors = {
-    low: '#ff9800',
+    low: palette.warning,
     moderate: palette.primary,
-    high: '#4caf50',
+    high: palette.success,
   };
 
   return (

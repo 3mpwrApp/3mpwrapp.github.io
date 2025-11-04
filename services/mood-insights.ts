@@ -136,7 +136,7 @@ export function detectPatterns(entries: MoodEntry[]): MoodPattern[] {
 /**
  * Suggest coping strategies based on current mood
  */
-export function suggestCopingStrategies(currentScore: number, recentEntries: MoodEntry[]): CopingStrategy[] {
+export function suggestCopingStrategies(currentScore: number, _recentEntries: MoodEntry[]): CopingStrategy[] {
   const strategies: CopingStrategy[] = [
     // Low mood strategies
     {

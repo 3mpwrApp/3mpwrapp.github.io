@@ -41,7 +41,7 @@ export interface AdaptiveSuggestion {
 /**
  * Forecast energy levels for the day/week based on past activity
  */
-export function forecastEnergyLevels(activities: ActivityLog[], targetDate?: Date): EnergyForecast[] {
+export function forecastEnergyLevels(activities: ActivityLog[], _targetDate?: Date): EnergyForecast[] {
   const forecasts: EnergyForecast[] = [];
   
   if (activities.length < 7) {

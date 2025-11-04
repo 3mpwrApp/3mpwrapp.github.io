@@ -213,8 +213,6 @@ export function getEnergyBasedRecommendations(energyLevel: 'low' | 'medium' | 'h
  * Get recommendations for wellness tools based on current tool usage
  */
 export function getWellnessFlowRecommendations(currentTool: string): FeatureRecommendation[] {
-  const recommendations: FeatureRecommendation[] = [];
-
   const toolFlows: Record<string, FeatureRecommendation[]> = {
     'dbt': [
       {
