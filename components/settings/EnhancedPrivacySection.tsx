@@ -258,7 +258,25 @@ export default function EnhancedPrivacySection() {
         </View>
       )}
       
-      <AccessibilityToggle title='Error Reporting' description='Help improve the app by sharing crash reports' value={state.errorReportingEnabled ?? false} onValueChange={setErrorReportingEnabled} icon='bug' testID='error-reporting-toggle' />
+      <AccessibilityToggle 
+        title='Error Reporting' 
+        description='Help improve the app by sharing crash reports' 
+        value={state.errorReportingEnabled ?? false} 
+        onValueChange={async (v) => {
+          try {
+            await setErrorReportingEnabled(v);
+          } catch (error) {
+            console.error('Error toggling crash reporting:', error);
+            Alert.alert(
+              'Error',
+              'Could not change error reporting setting. The app will continue to work normally.',
+              [{ text: 'OK' }]
+            );
+          }
+        }} 
+        icon='bug' 
+        testID='error-reporting-toggle' 
+      />
       <AccessibilityToggle title='Save Search History' description='Remember your searches for quick access and autocomplete' value={saveSearchHistory} onValueChange={setSaveSearchHistory} icon='search' testID='search-history-toggle' />
       <View style={s.backupSection}>
         <Text style={s.sectionSubtitle} accessibilityRole='header'>Data Management</Text>
