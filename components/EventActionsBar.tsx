@@ -43,7 +43,7 @@ export default function EventActionsBar({
   
   const handleShare = async () => {
     try {
-      const message = `${event.title}\n📅 ${event.date}\n📍 ${event.isVirtual ? 'Virtual' : (event.location || 'TBD')}\n\n${event.description || ''}`.trim();
+      const message = `${event.title}\n📅 ${event.date}\n📍 ${event.isVirtual ? 'Virtual' : (event.location || 'TBD')}\n\n${event.description || ''}\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/events/`.trim();
       await Share.share({
         message,
         title: event.title,
@@ -56,7 +56,7 @@ export default function EventActionsBar({
 
   const handleShareTwitter = async () => {
     try {
-      const text = encodeURIComponent(`${event.title}\n📅 ${event.date}\n📍 ${event.isVirtual ? 'Virtual' : (event.location || 'TBD')}\n\n#Disability #Accessibility #3mpwrApp`);
+      const text = encodeURIComponent(`${event.title}\n📅 ${event.date}\n📍 ${event.isVirtual ? 'Virtual' : (event.location || 'TBD')}\n\n#Disability #Accessibility #3mpwrApp\n\n🌐 https://3mpwrapp.pages.dev/events/`);
       const url = `https://twitter.com/intent/tweet?text=${text}`;
       await Linking.openURL(url);
       trackEvent(ANALYTICS_EVENTS.EVENTS_SHARE, { id: event.id, method: 'twitter' });
@@ -67,8 +67,8 @@ export default function EventActionsBar({
 
   const handleShareFacebook = async () => {
     try {
-      const url = encodeURIComponent('https://3mpwrapp.pages.dev/');
-      const quote = encodeURIComponent(`${event.title} - ${event.date}`);
+      const url = encodeURIComponent('https://3mpwrapp.pages.dev/events/');
+      const quote = encodeURIComponent(`${event.title} - ${event.date}\n\n🔗 Powered by 3mpwr App`);
       const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`;
       await Linking.openURL(fbUrl);
       trackEvent(ANALYTICS_EVENTS.EVENTS_SHARE, { id: event.id, method: 'facebook' });
@@ -79,9 +79,9 @@ export default function EventActionsBar({
 
   const handleShareLinkedIn = async () => {
     try {
-      const url = encodeURIComponent('https://3mpwrapp.pages.dev/');
+      const url = encodeURIComponent('https://3mpwrapp.pages.dev/events/');
       const title = encodeURIComponent(event.title);
-      const summary = encodeURIComponent(`${event.date} - ${event.description || ''}`);
+      const summary = encodeURIComponent(`${event.date} - ${event.description || ''}\n\n🔗 Powered by 3mpwr App`);
       const liUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`;
       await Linking.openURL(liUrl);
       trackEvent(ANALYTICS_EVENTS.EVENTS_SHARE, { id: event.id, method: 'linkedin' });
