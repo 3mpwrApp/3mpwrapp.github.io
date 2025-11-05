@@ -93,7 +93,7 @@ export default {
     }
 
     // Default route
-    return new Response('3mpwrApp Calendar Server - Use /events.ics for calendar feed', {
+    return new Response('3mpwrApp Calendar Server - Powered by 3mpwrApp\n\nUse /events.ics for calendar feed\nWebsite: https://3mpwrapp.pages.dev/\nCalendar: https://3mpwrapp.pages.dev/events/', {
       headers: corsHeaders,
     });
   },
@@ -158,7 +158,7 @@ function buildICSMany(events, options = {}) {
   
   if (options.subscribable) {
     lines.push(`X-WR-CALNAME:${escapeICS(options.calendarName || '3mpwrApp Events')}`);
-    lines.push(`X-WR-CALDESC:${escapeICS('Community events, disability observances, and awareness days from 3mpwrApp')}`);
+    lines.push(`X-WR-CALDESC:${escapeICS('Community events, disability observances, and awareness days - Powered by 3mpwrApp (https://3mpwrapp.pages.dev/events/)')}`);
     lines.push(`X-WR-TIMEZONE:${options.timezone || 'America/Toronto'}`);
     if (options.refreshInterval) {
       lines.push(`X-PUBLISHED-TTL:PT${options.refreshInterval}M`);
@@ -184,7 +184,7 @@ function buildICSMany(events, options = {}) {
     lines.push(`DTEND:${end}`);
     lines.push(`SUMMARY:${escapeICS(ev.title)}`);
     if (ev.description) lines.push(`DESCRIPTION:${escapeICS(ev.description)}`);
-    lines.push(`URL:https://3mpwrapp.pages.dev/`);
+    lines.push(`URL:https://3mpwrapp.pages.dev/events/`);
     lines.push(`ORGANIZER;CN=3mpwrApp:MAILTO:empowrapp08162025@gmail.com`);
     lines.push('STATUS:CONFIRMED');
     lines.push('SEQUENCE:0');

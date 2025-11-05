@@ -1,4 +1,4 @@
-name = "empowrapp-calendar"
+name = "3mpwrapp-calendar"
 main = "worker.js"
 compatibility_date = "2024-01-01"
 
