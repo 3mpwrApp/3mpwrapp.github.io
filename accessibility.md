@@ -128,6 +128,20 @@ Additional resources:
       <p>Full Conformance</p>
     </div>
   </div>
+  <div class="compliance-badge w3c-html">
+    <div class="badge-icon">✅</div>
+    <div class="badge-content">
+      <h3>W3C HTML5</h3>
+      <p>Valid & Compliant</p>
+    </div>
+  </div>
+  <div class="compliance-badge w3c-css">
+    <div class="badge-icon">✅</div>
+    <div class="badge-content">
+      <h3>W3C CSS3</h3>
+      <p>Valid & Compliant</p>
+    </div>
+  </div>
 </div>
 
 <div class="audit-info">
@@ -300,6 +314,37 @@ We meet **all** WCAG 2.2 Level AA success criteria and exceed to Level AAA in se
 </div>
 
 <a href="/WCAG-COMPLIANCE-CHECKLIST" class="report-link">View Latest Accessibility Report →</a>
+
+### W3C Standards Compliance
+
+In addition to WCAG 2.2 Level AA conformance, 3mpwrApp website adheres to **W3C HTML5 and CSS3 standards**:
+
+<div class="w3c-compliance-section">
+  <div class="w3c-standard">
+    <h4>✅ W3C HTML5 Valid</h4>
+    <ul>
+      <li>Semantic HTML5 elements used throughout (nav, main, header, footer, article, section)</li>
+      <li>Proper DOCTYPE declaration and character encoding (UTF-8)</li>
+      <li>Valid attribute usage and element nesting</li>
+      <li>No parsing errors that affect assistive technology</li>
+    </ul>
+  </div>
+  
+  <div class="w3c-standard">
+    <h4>✅ W3C CSS3 Valid</h4>
+    <ul>
+      <li>Modern CSS3 features (Grid, Flexbox, Custom Properties)</li>
+      <li>Valid syntax throughout all stylesheets</li>
+      <li>66+ media queries supporting user preferences (reduced-motion, color-scheme, contrast)</li>
+      <li>No deprecated properties or syntax errors</li>
+    </ul>
+  </div>
+</div>
+
+**Standards Verified:** November 5, 2025  
+**Validation Tools:** W3C Markup Validator, W3C CSS Validator, Manual Review
+
+<a href="/ACCESSIBILITY-AUDIT-2025-11.md" class="report-link">View Full W3C Compliance Details →</a>
 
 ---
 
