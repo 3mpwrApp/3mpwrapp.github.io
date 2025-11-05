@@ -1,11 +1,19 @@
-import * as Calendar from 'expo-calendar';
 import { Alert, Linking, Share, StyleSheet, Text, View } from 'react-native';
+this
 
 import { ANALYTICS_EVENTS, trackEvent } from '../services/analyticsClient';
 import type { Palette } from '../theme/colors';
 
 import A11yPressable from './A11yPressable';
 import { GapView } from './GapView';
+
+// Lazy load Calendar to avoid crashes if expo-calendar is not available
+let Calendar: any = null;
+try {
+  Calendar = require('expo-calendar');
+} catch (err) {
+  console.warn('[EventActionsBar] expo-calendar not available:', err);
+}
 
 interface EventActionsBarProps {
   event: {
@@ -83,6 +91,16 @@ export default function EventActionsBar({
   };
 
   const handleAddToCalendar = async () => {
+    // Check if Calendar module is available
+    if (!Calendar) {
+      Alert.alert(
+        '📅 Calendar Not Available',
+        'Calendar permissions are blocked in this build. Please use the subscription calendar feature from the Events tab instead for auto-updating events.',
+        [{ text: 'OK' }]
+      );
+      return;
+    }
+
     try {
       const { status } = await Calendar.requestCalendarPermissionsAsync();
       if (status !== 'granted') {
@@ -98,7 +116,7 @@ export default function EventActionsBar({
       }
       
       const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
-      const defaultCalendar = calendars.find(c => c.allowsModifications) || calendars[0];
+      const defaultCalendar = calendars.find((c: any) => c.allowsModifications) || calendars[0];
       
       if (!defaultCalendar) {
         Alert.alert('No Calendar', 'No calendars found on your device.');
@@ -127,7 +145,7 @@ export default function EventActionsBar({
       trackEvent(ANALYTICS_EVENTS.EVENTS_ADD_TO_CALENDAR, { id: event.id });
     } catch (error) {
       console.error('Calendar error:', error);
-      Alert.alert('Error', 'Could not add event to calendar. Please try again.');
+      Alert.alert('Error', 'Could not add event to calendar. Please try the subscription calendar feature instead.');
     }
   };
 

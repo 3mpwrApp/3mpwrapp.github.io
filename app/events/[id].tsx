@@ -1,8 +1,15 @@
-import * as Calendar from 'expo-calendar';
 import * as Linking from "expo-linking";
 import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import React from 'react';
 import { ActivityIndicator, Alert, Modal, Platform, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
+
+// Lazy load Calendar to avoid crashes if expo-calendar is not available
+let Calendar: any = null;
+try {
+  Calendar = require('expo-calendar');
+} catch (err) {
+  console.warn('[EventDetail] expo-calendar not available:', err);
+}
 
 import A11yPressable from '../../components/A11yPressable';
 import { GapView } from "../../components/GapView";
@@ -155,6 +162,15 @@ export default function EventDetail() {
   const addToCalendar = async () => {
     if (!event) return;
     
+    // Check if Calendar module is available
+    if (!Calendar) {
+      Alert.alert(
+        t('common.permission', 'Permission Required'),
+        'Calendar functionality is not available in this environment. Please try using the subscription calendar feature from the Events tab instead.'
+      );
+      return;
+    }
+    
     try {
       // Request calendar permissions
       const { status } = await Calendar.requestCalendarPermissionsAsync();
@@ -171,7 +187,7 @@ export default function EventDetail() {
       const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
       
       // Try to find default calendar
-      const defaultCalendar = calendars.find(cal => cal.allowsModifications && cal.source.name !== 'Holidays');
+      const defaultCalendar = calendars.find((cal: any) => cal.allowsModifications && cal.source.name !== 'Holidays');
       
       if (defaultCalendar) {
         calendarId = defaultCalendar.id;

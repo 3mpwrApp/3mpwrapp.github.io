@@ -20,7 +20,6 @@ import SearchBar from "../../components/SearchBar";
 import SkeletonRow from "../../components/SkeletonRow";
 import { useAuth } from "../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../data/campaigns";
-import { petitions } from "../../data/petitions";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -59,7 +58,6 @@ function ScreenInner() {
 
   const [query, setQuery] = React.useState("");
   const [items, setItems] = React.useState(localCampaigns);
-  const [localPetitions] = React.useState(petitions);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -97,27 +95,25 @@ function ScreenInner() {
   // One-time polite announcement of loaded count
   usePostLoadAnnounce({ loading, count: items.length, ns: 'campaigns' });
 
-  type Mixed = (typeof local.myCampaigns[number] & { kind?: 'campaign' | 'petition' });
+  type Mixed = (typeof local.myCampaigns[number] & { kind?: 'campaign' });
   const allItems = React.useMemo<Mixed[]>(
     () => [
       ...local.myCampaigns.map(c => ({ ...c, kind: 'campaign' as const })),
       ...items.map(c => ({ ...c, kind: 'campaign' as const })),
-      ...localPetitions.map(p => ({ ...p, kind: 'petition' as const })),
     ],
-    [local.myCampaigns, items, localPetitions],
+    [local.myCampaigns, items],
   );
 
   const joinedCount = React.useMemo(() => Object.keys(local.joined).length, [local.joined]);
 
   const sections = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    const campaigns = allItems.filter(i => (i as any).kind !== 'petition');
+    const campaigns = allItems;
     // Your campaigns: joined or created locally
     const your = campaigns.filter(i => isJoined(i.id) || local.myCampaigns.some(m => m.id === i.id));
     const yourIds = new Set(your.map(i => i.id));
     // Other campaigns (dedup your)
     const others = campaigns.filter(i => !yourIds.has(i.id));
-    const petitionsOnly = allItems.filter(i => (i as any).kind === 'petition');
 
     const match = (c: any) => {
       if (!q) return true;
@@ -130,7 +126,6 @@ function ScreenInner() {
     const sec = [
       { title: 'Your Campaigns', data: your.filter(match) },
       { title: 'All Campaigns', data: others.filter(match) },
-      { title: 'Petitions', data: petitionsOnly.filter(match) },
     ].filter(s => s.data.length > 0);
     return sec as { title: string; data: Mixed[] }[];
   }, [query, allItems, local.myCampaigns, isJoined]);
@@ -260,12 +255,7 @@ function ScreenInner() {
                         Alert.alert('Join Failed', 'Could not join campaign (offline?)');
                       } else {
                         Alert.alert('Joined Campaign', 'You are now supporting this campaign.');
-                        // Treat petitions specially for signing event.
-                        if ((item as any).kind === 'petition') {
-                          logActivity({ type: 'petition.sign', payload: { petitionId: item.id } });
-                        } else {
-                          logActivity({ type: 'feature.use', payload: { feature: 'campaign.join', id: item.id } });
-                        }
+                        logActivity({ type: 'feature.use', payload: { feature: 'campaign.join', id: item.id } });
                       }
                     }
                   }}
