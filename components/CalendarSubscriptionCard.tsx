@@ -9,8 +9,9 @@ import A11yPressable from './A11yPressable';
 let Clipboard: any = null;
 try {
   Clipboard = require('expo-clipboard');
-} catch {
-  // Clipboard not available in test environment
+} catch (err) {
+  // Clipboard not available in test environment or failed to load
+  console.warn('[CalendarSubscriptionCard] Clipboard not available:', err);
 }
 
 /**
@@ -20,6 +21,12 @@ try {
  */
 export default function CalendarSubscriptionCard() {
   const palette = useAppPalette();
+
+  // Safety check for palette
+  if (!palette || !palette.surface || !palette.primary || !palette.text) {
+    console.error('[CalendarSubscriptionCard] Invalid palette:', palette);
+    return null;
+  }
 
   const handleSubscribe = async () => {
     const subscriptionUrl = process.env.EXPO_PUBLIC_CALENDAR_FEED_URL || 'https://calendar.3mpwrapp.com/events.ics';
