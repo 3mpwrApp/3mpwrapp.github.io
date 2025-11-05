@@ -416,14 +416,14 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
    * Generate social media post content
    */
   generateSocialPost(feature, articleUrl) {
-    const fullUrl = `https://3mpwrapp.pages.dev${articleUrl}`;
+    const blogUrl = 'https://3mpwrapp.pages.dev/blog/';
     
     // Short version for Twitter/Bluesky (< 280 chars with link)
     const shortPost = `🌟 Feature Spotlight: ${feature.name}
 
 ${feature.description}
 
-Learn more: ${fullUrl}
+Learn more: ${blogUrl}
 
 #Disability #Accessibility #DisabilityRights`;
 
@@ -437,11 +437,11 @@ ${feature.highlights.slice(0, 2).map(h => `✓ ${h}`).join('\n')}
 
 Perfect for anyone needing ${feature.category.toLowerCase()} support!
 
-Read the full article: ${fullUrl}
+Read the full article: ${blogUrl}
 
 #Disability #Accessibility #DisabilityRights #DisabilityJustice #A11y`;
 
-    return { shortPost, longPost, url: fullUrl };
+    return { shortPost, longPost, url: blogUrl };
   }
 
   /**

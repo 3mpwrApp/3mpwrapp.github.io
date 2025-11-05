@@ -32,7 +32,7 @@ const https = require('https');
 
 // Configuration
 const CONFIG = {
-  baseUrl: 'https://3mpwrapp.pages.dev',
+  baseUrl: 'https://3mpwrapp.pages.dev/blog',
   socialHandles: {
     x: '@3mpowrApp0816',
     instagram: '@3mpwrapp',

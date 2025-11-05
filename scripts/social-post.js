@@ -156,8 +156,7 @@ class SocialPoster {
       post += '\n';
     });
 
-    post += `\n🔗 Visit: https://3mpwrapp.pages.dev/\n`;
-    post += `📖 Full User Guide: https://3mpwrapp.pages.dev/user-guide/\n`;
+    post += `\n🔗 Visit: https://3mpwrapp.pages.dev/blog/\n`;
     post += `\n#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
 
     return post;
@@ -180,7 +179,7 @@ class SocialPoster {
       post += `${idx + 1}. ${title}\n`;
     });
 
-    post += `\nhttps://3mpwrapp.pages.dev/\n`;
+    post += `\nhttps://3mpwrapp.pages.dev/blog/\n`;
     post += `#Accessibility #DisabilityBenefits`;
 
     // Safety check: truncate if still too long
@@ -206,7 +205,7 @@ class SocialPoster {
     });
 
     post += `\n+ ${content.count - 2} more\n\n`;
-    post += `🔗 Benefits navigator & news: https://3mpwrapp.pages.dev/\n\n`;
+    post += `🔗 Benefits navigator & news: https://3mpwrapp.pages.dev/blog/\n\n`;
     post += `#Accessibility #DisabilityBenefits #News #Canada`;
 
     return post;
@@ -413,8 +412,7 @@ class SocialPoster {
     // Final post (CTA)
     const finalPost = `✨ That's ${topItems.length}/${content.count} curated stories!\n\n` +
                      `Visit 3mpwrApp for all stories, resources & benefits navigator:\n` +
-                     `🔗 https://3mpwrapp.pages.dev/\n` +
-                     `📖 User Guide: https://3mpwrapp.pages.dev/user-guide/\n\n` +
+                     `🔗 https://3mpwrapp.pages.dev/blog/\n\n` +
                      `#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
     posts.push(finalPost);
 
