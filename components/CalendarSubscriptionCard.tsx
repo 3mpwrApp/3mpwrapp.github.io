@@ -66,7 +66,7 @@ export default function CalendarSubscriptionCard() {
         source: 'events_screen',
         platform: Platform.OS
       });
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Could not copy URL. Please try again.');
     }
   };

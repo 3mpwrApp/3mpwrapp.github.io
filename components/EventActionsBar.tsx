@@ -52,7 +52,7 @@ export default function EventActionsBar({
       const url = `https://twitter.com/intent/tweet?text=${text}`;
       await Linking.openURL(url);
       trackEvent(ANALYTICS_EVENTS.EVENTS_SHARE, { id: event.id, method: 'twitter' });
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Could not open Twitter');
     }
   };
@@ -64,7 +64,7 @@ export default function EventActionsBar({
       const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`;
       await Linking.openURL(fbUrl);
       trackEvent(ANALYTICS_EVENTS.EVENTS_SHARE, { id: event.id, method: 'facebook' });
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Could not open Facebook');
     }
   };
@@ -77,7 +77,7 @@ export default function EventActionsBar({
       const liUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`;
       await Linking.openURL(liUrl);
       trackEvent(ANALYTICS_EVENTS.EVENTS_SHARE, { id: event.id, method: 'linkedin' });
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Could not open LinkedIn');
     }
   };
@@ -187,7 +187,7 @@ export default function EventActionsBar({
             borderColor: palette.info 
           }]}
         >
-          <Text style={[styles.buttonText, { color: '#FFFFFF' }]}>
+          <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
             🌐 Socials
           </Text>
         </A11yPressable>
@@ -235,7 +235,7 @@ export default function EventActionsBar({
               borderColor: palette.error 
             }]}
           >
-            <Text style={[styles.buttonText, { color: '#FFFFFF' }]}>
+            <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
               🗑️ Delete
             </Text>
           </A11yPressable>

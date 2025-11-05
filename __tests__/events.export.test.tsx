@@ -1,5 +1,4 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import * as RN from 'react-native';
 
 import EventsScreen from '../app/events';
 // Mock expo-router Link to avoid bringing in native stack/assets
@@ -51,7 +50,6 @@ jest.mock('../store/settings', () => {
 
 describe('Events export actions', () => {
   it('creates an event and verifies action buttons exist', async () => {
-    const spy = jest.spyOn(RN.Share, 'share').mockResolvedValue({} as any);
     render(<EventsScreen />);
     
     // Open create event form
