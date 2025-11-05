@@ -206,23 +206,23 @@ export default function EventsScreen() {
 
   return (
     <View style={[styles.container, { flex: 1 }]}>
-      <View
-        style={{ paddingHorizontal: 20, paddingTop: 20 }}
-        accessibilityLabel="Events screen"
-        accessible={true}
-      >
-        <Text
-          ref={titleRef}
-          nativeID="events-title"
-          accessibilityRole="header"
-          style={styles.title}
-          maxFontSizeMultiplier={MAX_FONT_SCALE}
-        >
-          {t('nav.events','Events')}
-        </Text>
+      <View style={{ paddingHorizontal: 20, paddingTop: 20 }}>
+        <View style={{ position: 'relative', minHeight: 60, marginBottom: 8 }}>
+          <Text
+            ref={titleRef}
+            nativeID="events-title"
+            accessibilityRole="header"
+            style={styles.title}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            {t('nav.events','Events')}
+          </Text>
 
-        <SettingsLink style={{ position: "absolute", right: 20, top: 20 }} />
-        <ContrastToggle style={{ position: "absolute", right: 56, top: 20 }} />
+          <View style={{ position: "absolute", right: 0, top: 0, flexDirection: 'row' }}>
+            <ContrastToggle style={{ marginRight: 8 }} />
+            <SettingsLink />
+          </View>
+        </View>
 
         <Text style={styles.subtitle}>
           {t('eventsFeature.subtitle','Community events, workshops, and meetups.')}
@@ -296,207 +296,207 @@ export default function EventsScreen() {
             </Text>
           </>
         )}
-
-        <View style={styles.calHeader}>
-          <A11yPressable
-            accessibilityRole="button"
-            accessibilityLabel={t('deadlines.prevMonth','Previous')}
-            hitSlop={HIT_SLOP_8}
-            onPress={() =>
-              setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))
-            }
-          >
-            <Text style={styles.calNav}>{"<"}</Text>
-          </A11yPressable>
-          <Text style={styles.calTitle}>{monthLabel}</Text>
-          <Text style={[styles.calTitle, { opacity:0.7 }]} accessibilityLiveRegion="polite">
-            {t('eventsFeature.loadedCount','{{n}} events loaded',{ n: filtered.length })}
-          </Text>
-          <A11yPressable
-            accessibilityRole="button"
-            accessibilityLabel={t('deadlines.nextMonth','Next')}
-            hitSlop={HIT_SLOP_8}
-            onPress={() =>
-              setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))
-            }
-          >
-            <Text style={styles.calNav}>{">"}</Text>
-          </A11yPressable>
-        </View>
-
-        <View style={styles.weekRow}>
-          {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
-            <Text key={`dow-${i}`} style={styles.weekHdr}>
-              {d}
-            </Text>
-          ))}
-        </View>
-
-        <View style={styles.calendarContainer}>
-          {daysMatrix.map((week, wi) => (
-          <View key={wi} style={styles.weekRow}>
-            {week.map((d, di) => {
-              const key = dayKeyFromMatrix(month, d);
-              const has = !!key && eventsByDay.has(key);
-              const isSel = !!key && selectedDay === key;
-              return (
-                <A11yPressable
-                  key={`${wi}-${di}`}
-                  style={[
-                    styles.dayCell,
-                    isSel && { backgroundColor: palette.primary },
-                    has && { borderColor: palette.primary },
-                  ]}
-                  onPress={() =>
-                    key && setSelectedDay((cur) => (cur === key ? null : key))
-                  }
-                  accessibilityRole="button"
-                  accessibilityLabel={
-                    key ? `${t('common.select','Select')} ${key}${has ? ", " + t('eventsFeature.hasEvents','has events') : ""}` : t('common.empty','Empty')
-                  }
-                  disabled={!key}
-                >
-                  <Text
-                    style={[
-                      styles.dayText,
-                      isSel && { color: palette.onPrimary },
-                    ]}
-                  >
-                    {d ?? ""}
-                  </Text>
-                </A11yPressable>
-              );
-            })}
-          </View>
-        ))}
-        </View>
-
-        {/* Add spacing before event list */}
-        <View style={{ marginTop: 20, marginBottom: 12 }}>
-          <Text style={[styles.subtitle, { fontSize: Math.round(16 * factor), fontWeight: '700', marginBottom: 0 }]}>
-            {filtered.length > 0 ? t('eventsFeature.upcomingEvents', 'Events') : t('eventsFeature.empty','No events match your filters')}
-          </Text>
-        </View>
-
-        <FlatList
-          data={filtered}
-          keyExtractor={(item) => item.id}
-          ListEmptyComponent={(
-            <View style={{ paddingVertical: 16 }}>
-              <Text style={[styles.subtitle, { marginBottom: 6 }]}>
-                {t('eventsFeature.empty','No events match your filters')}
-              </Text>
-              {(selectedDay || query || mode !== 'all') && (
-                <A11yPressable
-                  onPress={clearFilters}
-                  accessibilityRole="button"
-                  accessibilityLabel={t('common.resetFilters','Reset filters')}
-                  style={{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-                >
-                  <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
-                </A11yPressable>
-              )}
-            </View>
-          )}
-          renderItem={({ item }) => (
-            <View style={{ marginBottom:12 }}>
-              <Link
-                href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any}
-                asChild={true}
-                accessibilityRole="link"
-                accessibilityLabel={`${t('home.guide.open','Open')} ${item.title}`}
+      </View>
+      
+      <FlatList
+        data={filtered}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 20 }}
+        ListHeaderComponent={(
+          <>
+            <View style={styles.calHeader}>
+              <A11yPressable
+                accessibilityRole="button"
+                accessibilityLabel={t('deadlines.prevMonth','Previous')}
+                hitSlop={HIT_SLOP_8}
+                onPress={() =>
+                  setMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1))
+                }
               >
-                <Card
-                  title={item.title}
-                  subtitle={formatMeta(item.date, item.isVirtual, item.location)}
-                  left={(() => {
-                    const label = item.id.startsWith("holiday-")
-                      ? t('eventsFeature.tags.holiday','Holiday')
-                      : item.id.startsWith("prov-")
-                        ? t('eventsFeature.tags.provincial','Provincial')
-                        : item.id.startsWith("obs-")
-                          ? t('eventsFeature.tags.observance','Observance')
-                          : null;
-                    if (!label) return null;
-                    return (
-                      <View style={{ backgroundColor: palette.primary, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 }}>
-                        <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: "700" }}>{label}</Text>
-                      </View>
-                    );
-                  })()}
-                  testID={`event-${item.id}`}
-                />
-              </Link>
-              <EventActionsBar 
-                event={item} 
-                palette={palette}
-                showEditDelete={item.id.startsWith('evt-')}
-                onEdit={() => {
-                  // TODO: Implement edit functionality
-                  Alert.alert('Edit Event', 'Edit functionality coming soon!');
-                }}
-                onDelete={async () => {
-                  // Delete from local state
-                  setBaseItems(prev => prev.filter(e => e.id !== item.id));
-                  // Try to delete from Firestore (silent fail is OK)
+                <Text style={styles.calNav}>{"<"}</Text>
+              </A11yPressable>
+              <Text style={styles.calTitle}>{monthLabel}</Text>
+              <Text style={[styles.calTitle, { opacity:0.7 }]} accessibilityLiveRegion="polite">
+                {t('eventsFeature.loadedCount','{{n}} events loaded',{ n: filtered.length })}
+              </Text>
+              <A11yPressable
+                accessibilityRole="button"
+                accessibilityLabel={t('deadlines.nextMonth','Next')}
+                hitSlop={HIT_SLOP_8}
+                onPress={() =>
+                  setMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1))
+                }
+              >
+                <Text style={styles.calNav}>{">"}</Text>
+              </A11yPressable>
+            </View>
+
+            <View style={styles.weekRow}>
+              {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
+                <Text key={`dow-${i}`} style={styles.weekHdr}>
+                  {d}
+                </Text>
+              ))}
+            </View>
+
+            <View style={styles.calendarContainer}>
+              {daysMatrix.map((week, wi) => (
+              <View key={wi} style={styles.weekRow}>
+                {week.map((d, di) => {
+                  const key = dayKeyFromMatrix(month, d);
+                  const has = !!key && eventsByDay.has(key);
+                  const isSel = !!key && selectedDay === key;
+                  return (
+                    <A11yPressable
+                      key={`${wi}-${di}`}
+                      style={[
+                        styles.dayCell,
+                        isSel && { backgroundColor: palette.primary },
+                        has && { borderColor: palette.primary },
+                      ]}
+                      onPress={() =>
+                        key && setSelectedDay((cur) => (cur === key ? null : key))
+                      }
+                      accessibilityRole="button"
+                      accessibilityLabel={
+                        key ? `${t('common.select','Select')} ${key}${has ? ", " + t('eventsFeature.hasEvents','has events') : ""}` : t('common.empty','Empty')
+                      }
+                      disabled={!key}
+                    >
+                      <Text
+                        style={[
+                          styles.dayText,
+                          isSel && { color: palette.onPrimary },
+                        ]}
+                      >
+                        {d ?? ""}
+                      </Text>
+                    </A11yPressable>
+                  );
+                })}
+              </View>
+            ))}
+            </View>
+
+            {/* Calendar Subscription Card - Auto-sync feature with error boundary */}
+            <ErrorBoundary>
+              <CalendarSubscriptionCard />
+            </ErrorBoundary>
+
+            {/* One-time Export Options */}
+            <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600', marginTop: 16 }}>
+              One-time exports (no auto-updates):
+            </Text>
+            <GapView gap={8} style={{ flexDirection:'row', marginBottom: 20 }}>
+              <A11yPressable
+                onPress={async () => {
+                  // Export all filtered as single ICS concatenation
                   try {
-                    // TODO: Implement Firestore delete
-                    Alert.alert('✅ Deleted', `"${item.title}" has been deleted.`);
+                    const payload = filtered.map(it => makeICS(it as any)).join('\n');
+                    await shareText('events.ics', payload);
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { count: filtered.length, mode });
                   } catch {}
                 }}
-              />
-            </View>
-          )}
-          contentContainerStyle={{ paddingTop: 12 }}
-          refreshControl={
-            <RefreshControl refreshing={loading} onRefresh={reload} />
-          }
-          ListHeaderComponent={(
-            <View style={{ marginBottom: 8 }}>
-              {/* Calendar Subscription Card - Auto-sync feature with error boundary */}
-              <ErrorBoundary>
-                <CalendarSubscriptionCard />
-              </ErrorBoundary>
+                accessibilityRole="button"
+                accessibilityLabel={t('common.export','Export') + ' ICS'}
+                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export ICS</Text>
+              </A11yPressable>
+              <A11yPressable
+                onPress={async () => {
+                  // Export CSV of filtered
+                  const header = '"Date","Title","Description","Location"';
+                  const rows = filtered.map(it => makeCSVRow(it as any)).join('\n');
+                  await shareText('events.csv', `${header}\n${rows}`);
+                  trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { count: filtered.length, mode });
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.export','Export') + ' CSV'}
+                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
+              </A11yPressable>
+            </GapView>
 
-              {/* One-time Export Options */}
-              <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600' }}>
-                One-time exports (no auto-updates):
+            {/* Add spacing before event list */}
+            <View style={{ marginBottom: 12 }}>
+              <Text style={[styles.subtitle, { fontSize: Math.round(16 * factor), fontWeight: '700', marginBottom: 0 }]}>
+                {filtered.length > 0 ? t('eventsFeature.upcomingEvents', 'Events') : t('eventsFeature.empty','No events match your filters')}
               </Text>
-              <GapView gap={8} style={{ flexDirection:'row' }}>
-                <A11yPressable
-                  onPress={async () => {
-                    // Export all filtered as single ICS concatenation
-                    try {
-                      const payload = filtered.map(it => makeICS(it as any)).join('\n');
-                      await shareText('events.ics', payload);
-                      trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { count: filtered.length, mode });
-                    } catch {}
-                  }}
-                  accessibilityRole="button"
-                  accessibilityLabel={t('common.export','Export') + ' ICS'}
-                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-                >
-                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export ICS</Text>
-                </A11yPressable>
-                <A11yPressable
-                  onPress={async () => {
-                    // Export CSV of filtered
-                    const header = '"Date","Title","Description","Location"';
-                    const rows = filtered.map(it => makeCSVRow(it as any)).join('\n');
-                    await shareText('events.csv', `${header}\n${rows}`);
-                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { count: filtered.length, mode });
-                  }}
-                  accessibilityRole="button"
-                  accessibilityLabel={t('common.export','Export') + ' CSV'}
-                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-                >
-                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
-                </A11yPressable>
-              </GapView>
             </View>
-          )}
-        />
-      </View>
+          </>
+        )}
+        ListEmptyComponent={(
+          <View style={{ paddingVertical: 16 }}>
+            <Text style={[styles.subtitle, { marginBottom: 6 }]}>
+              {t('eventsFeature.empty','No events match your filters')}
+            </Text>
+            {(selectedDay || query || mode !== 'all') && (
+              <A11yPressable
+                onPress={clearFilters}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.resetFilters','Reset filters')}
+                style={{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
+              </A11yPressable>
+            )}
+          </View>
+        )}
+        renderItem={({ item }) => (
+          <View style={{ marginBottom:12 }}>
+            <Link
+              href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any}
+              asChild={true}
+              accessibilityRole="link"
+              accessibilityLabel={`${t('home.guide.open','Open')} ${item.title}`}
+            >
+              <Card
+                title={item.title}
+                subtitle={formatMeta(item.date, item.isVirtual, item.location)}
+                left={(() => {
+                  const label = item.id.startsWith("holiday-")
+                    ? t('eventsFeature.tags.holiday','Holiday')
+                    : item.id.startsWith("prov-")
+                      ? t('eventsFeature.tags.provincial','Provincial')
+                      : item.id.startsWith("obs-")
+                        ? t('eventsFeature.tags.observance','Observance')
+                        : null;
+                  if (!label) return null;
+                  return (
+                    <View style={{ backgroundColor: palette.primary, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 }}>
+                      <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: "700" }}>{label}</Text>
+                    </View>
+                  );
+                })()}
+                testID={`event-${item.id}`}
+              />
+            </Link>
+            <EventActionsBar 
+              event={item} 
+              palette={palette}
+              showEditDelete={item.id.startsWith('evt-')}
+              onEdit={() => {
+                // TODO: Implement edit functionality
+                Alert.alert('Edit Event', 'Edit functionality coming soon!');
+              }}
+              onDelete={async () => {
+                // Delete from local state
+                setBaseItems(prev => prev.filter(e => e.id !== item.id));
+                // Try to delete from Firestore (silent fail is OK)
+                try {
+                  // TODO: Implement Firestore delete
+                  Alert.alert('✅ Deleted', `"${item.title}" has been deleted.`);
+                } catch {}
+              }}
+            />
+          </View>
+        )}
+        refreshControl={
+          <RefreshControl refreshing={loading} onRefresh={reload} />
+        }
+      />
     </View>
   );
 }

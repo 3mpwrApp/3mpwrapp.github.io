@@ -20,8 +20,6 @@ import { useAppPalette } from "../../../theme/usePalette";
 
 type Item = { label: string; url: string; description?: string };
 
-export const options = { href: null };
-
 export default function SelfCareLibrary() {
   // Info card for discoverability
   const openSuggestResource = () => {
