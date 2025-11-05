@@ -21,6 +21,9 @@ const https = require('https');
 // Load analytics module
 const CuratorAnalytics = require('./curator-analytics');
 
+// Blog URL constant for all social media posts
+const BLOG_URL = 'https://3mpwrapp.pages.dev/blog/';
+
 class SocialPoster {
   constructor() {
     this.config = this.loadConfig();
@@ -156,7 +159,7 @@ class SocialPoster {
       post += '\n';
     });
 
-    post += `\n🔗 Visit: https://3mpwrapp.pages.dev/blog/\n`;
+    post += `\n🔗 Visit: ${BLOG_URL}\n`;
     post += `\n#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
 
     return post;
@@ -179,7 +182,7 @@ class SocialPoster {
       post += `${idx + 1}. ${title}\n`;
     });
 
-    post += `\nhttps://3mpwrapp.pages.dev/blog/\n`;
+    post += `\n${BLOG_URL}\n`;
     post += `#Accessibility #DisabilityBenefits`;
 
     // Safety check: truncate if still too long
@@ -205,7 +208,7 @@ class SocialPoster {
     });
 
     post += `\n+ ${content.count - 2} more\n\n`;
-    post += `🔗 Benefits navigator & news: https://3mpwrapp.pages.dev/blog/\n\n`;
+    post += `🔗 Benefits navigator & news: ${BLOG_URL}\n\n`;
     post += `#Accessibility #DisabilityBenefits #News #Canada`;
 
     return post;
@@ -412,7 +415,7 @@ class SocialPoster {
     // Final post (CTA)
     const finalPost = `✨ That's ${topItems.length}/${content.count} curated stories!\n\n` +
                      `Visit 3mpwrApp for all stories, resources & benefits navigator:\n` +
-                     `🔗 https://3mpwrapp.pages.dev/blog/\n\n` +
+                     `🔗 ${BLOG_URL}\n\n` +
                      `#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
     posts.push(finalPost);
 

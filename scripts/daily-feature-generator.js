@@ -19,6 +19,7 @@ class DailyFeatureGenerator {
   constructor() {
     this.postsDir = path.join(process.cwd(), '_posts');
     this.userGuidePath = path.join(process.cwd(), 'user-guide.md');
+    this.blogUrl = 'https://3mpwrapp.pages.dev/blog/';
     
     // Feature library from user-guide.md - FACTUAL information only
     this.features = [
@@ -416,7 +417,8 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
    * Generate social media post content
    */
   generateSocialPost(feature, articleUrl) {
-    const blogUrl = 'https://3mpwrapp.pages.dev/blog/';
+    // Use blog URL for all social media posts as per requirements
+    const blogUrl = this.blogUrl;
     
     // Short version for Twitter/Bluesky (< 280 chars with link)
     const shortPost = `🌟 Feature Spotlight: ${feature.name}
