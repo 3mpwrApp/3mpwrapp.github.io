@@ -332,6 +332,7 @@ The site includes numerous accessibility features that exceed WCAG requirements:
 2. Consider AAA level enhancements for remaining areas
 3. Third-party accessibility audit (recommended annually)
 4. User testing with people who use assistive technology
+5. **Performance optimization**: Consider adding explicit width/height attributes to img tags for SVGs to prevent layout shift (CLS), though not required for accessibility compliance
 
 ---
 
@@ -360,10 +361,12 @@ The site includes numerous accessibility features that exceed WCAG requirements:
 
 ### Important Issues
 1. **FIXED**: Invalid HTML attributes on image tags
-   - Location: index.md lines 246, 256, 268
-   - Issue: `width="auto" height="auto"` is invalid HTML
-   - Fix: Removed invalid attributes
+   - Location: index.md (store badge images)
+   - Original line numbers: 246, 256, 268 (before fix)
+   - Issue: `width="auto" height="auto"` is invalid HTML5
+   - Fix: Removed invalid attributes (SVGs have intrinsic dimensions defined within the file)
    - Impact: Ensures W3C HTML5 validation compliance
+   - Note: SVG files contain proper width/height attributes internally (260x53)
 
 ### Minor Issues
 **None found** ✅
