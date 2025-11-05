@@ -32,6 +32,9 @@ type Entry = {
   impact: string; // work/daily function impact
   meds: string;
   tags?: string;
+  flareStatus?: 'flare-up' | 'flare-down' | 'baseline' | 'improving';
+  flareIntensity?: string; // 1-5 for flare ups
+  flareTrigger?: string;
 };
 
 export const options = { href: null };
@@ -53,6 +56,9 @@ export default function SymptomTracker() {
   const [meds, setMeds] = React.useState<string>("");
   const [editingId, setEditingId] = React.useState<string | null>(null);
   const [tags, setTags] = React.useState<string>("");
+  const [flareStatus, setFlareStatus] = React.useState<Entry['flareStatus']>('baseline');
+  const [flareIntensity, setFlareIntensity] = React.useState<string>('');
+  const [flareTrigger, setFlareTrigger] = React.useState<string>('');
   const [filterStart, setFilterStart] = React.useState<string>("");
   const [filterEnd, setFilterEnd] = React.useState<string>("");
   const [filterMinPain, setFilterMinPain] = React.useState<string>("");
@@ -67,11 +73,15 @@ export default function SymptomTracker() {
       impact,
       meds,
       tags,
+      flareStatus: flareStatus || 'baseline',
+      flareIntensity: flareStatus === 'flare-up' ? flareIntensity : undefined,
+      flareTrigger: flareTrigger || undefined,
     };
     setEntries((prev) => [e, ...prev]);
     try {
   require("../../../services/analyticsClient").trackEvent("tracker_add_entry", {
         kind: "symptom",
+        flareStatus: e.flareStatus,
       });
     } catch {}
     setPain("");
@@ -79,7 +89,10 @@ export default function SymptomTracker() {
     setImpact("");
     setMeds("");
     setTags("");
-  }, [date, pain, symptoms, impact, meds, tags]);
+    setFlareStatus('baseline');
+    setFlareIntensity('');
+    setFlareTrigger('');
+  }, [date, pain, symptoms, impact, meds, tags, flareStatus, flareIntensity, flareTrigger]);
 
   const startEdit = React.useCallback((e: Entry) => {
     setEditingId(e.id);
@@ -239,6 +252,60 @@ export default function SymptomTracker() {
 
       <Field label="Date (YYYY-MM-DD)" value={date} onChangeText={setDate} accessibilityLabel="Date input" accessibilityHint="Enter the date for your symptom entry." />
       <Field label="Pain (0-10)" value={pain} onChangeText={setPain} keyboardType="numeric" accessibilityLabel="Pain input" accessibilityHint="Enter your pain level from 0 to 10." />
+      
+      <Text style={[styles.sectionTitle, { marginTop: 12, fontSize: 15 }]}>Flare Status</Text>
+      <GapView style={{ flexDirection: 'row', flexWrap: 'wrap', marginBottom: 8 }} gap={8}>
+        {[
+          { value: 'baseline', label: 'Baseline', color: palette.success },
+          { value: 'flare-up', label: 'Flare Up 📈', color: palette.error },
+          { value: 'flare-down', label: 'Flare Down 📉', color: palette.warning },
+          { value: 'improving', label: 'Improving ✨', color: palette.info },
+        ].map(status => (
+          <A11yPressable
+            key={status.value}
+            onPress={() => setFlareStatus(status.value as Entry['flareStatus'])}
+            style={[
+              styles.chip,
+              { 
+                backgroundColor: flareStatus === status.value ? status.color : palette.surface,
+                borderColor: status.color,
+              }
+            ]}
+            accessibilityRole="button"
+            accessibilityState={{ selected: flareStatus === status.value }}
+            accessibilityLabel={`Flare status: ${status.label}`}
+            hitSlop={HIT_SLOP_8}
+          >
+            <Text style={[
+              styles.chipText,
+              { color: flareStatus === status.value ? palette.onPrimary : palette.text }
+            ]}>
+              {status.label}
+            </Text>
+          </A11yPressable>
+        ))}
+      </GapView>
+
+      {flareStatus === 'flare-up' && (
+        <>
+          <Field 
+            label="Flare Intensity (1-5)" 
+            value={flareIntensity} 
+            onChangeText={setFlareIntensity} 
+            keyboardType="numeric"
+            accessibilityLabel="Flare intensity" 
+            accessibilityHint="Rate flare intensity from 1 (mild) to 5 (severe)" 
+          />
+          <Field 
+            label="Suspected Trigger" 
+            value={flareTrigger} 
+            onChangeText={setFlareTrigger}
+            accessibilityLabel="Flare trigger" 
+            accessibilityHint="What might have triggered this flare?" 
+          />
+        </>
+      )}
+
       <Field label="Symptoms" value={symptoms} onChangeText={setSymptoms} multiline={true} accessibilityLabel="Symptoms input" accessibilityHint="Describe your symptoms for this entry." />
       <Field label="Impact on work/daily life" value={impact} onChangeText={setImpact} multiline={true} accessibilityLabel="Impact input" accessibilityHint="Describe how symptoms affected your work or daily life." />
       <Field label="Meds taken / changes" value={meds} onChangeText={setMeds} multiline={true} accessibilityLabel="Meds input" accessibilityHint="List any medications taken or changes." />
@@ -335,7 +402,20 @@ export default function SymptomTracker() {
           <View key={e.id} style={styles.entryRow}>
             <Text
               style={styles.entryText}
-            >{`${e.date} Ã¢â‚¬â€ pain ${e.pain || "?"}`}</Text>
+            >{`${e.date} — pain ${e.pain || "?"}`}</Text>
+            {e.flareStatus && e.flareStatus !== 'baseline' && (
+              <Text style={[styles.entryNote, { fontWeight: '600', color: 
+                e.flareStatus === 'flare-up' ? palette.error :
+                e.flareStatus === 'flare-down' ? palette.warning :
+                e.flareStatus === 'improving' ? palette.info : palette.text
+              }]}>
+                {e.flareStatus === 'flare-up' ? '📈 Flare Up' : 
+                 e.flareStatus === 'flare-down' ? '📉 Flare Down' :
+                 e.flareStatus === 'improving' ? '✨ Improving' : ''}
+                {e.flareIntensity && ` (${e.flareIntensity}/5)`}
+                {e.flareTrigger && ` - ${e.flareTrigger}`}
+              </Text>
+            )}
             {!!e.symptoms && (
               <Text style={styles.entryNote}>• {e.symptoms}</Text>
             )}
@@ -729,5 +809,19 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     buttonText: { color: palette.onPrimary, fontWeight: "700" },
     smallBtn: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 6 },
     smallBtnText: { fontWeight: "700" },
+    chip: {
+      paddingHorizontal: 12,
+      paddingVertical: 8,
+      borderRadius: 20,
+      borderWidth: 2,
+      minHeight: 44,
+      minWidth: 44,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    chipText: {
+      fontSize: 13,
+      fontWeight: '600',
+    },
   });
 }

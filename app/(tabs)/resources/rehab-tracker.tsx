@@ -12,7 +12,7 @@ import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
 
-type Entry = { id: string; date: string; walk?: string; grip?: string; painFree?: string; note?: string };
+type Entry = { id: string; date: string; walk?: string; grip?: string; painFree?: string; note?: string; frequency?: string; timesPerDay?: number; reminderTime?: string };
 
 const KEY = 'rehab.tracker.v1';
 
@@ -23,6 +23,9 @@ export default function RehabTracker() {
   const [grip, setGrip] = React.useState('');
   const [painFree, setPainFree] = React.useState('');
   const [note, setNote] = React.useState('');
+  const [frequency, setFrequency] = React.useState('');
+  const [timesPerDay, setTimesPerDay] = React.useState('');
+  const [reminderTime, setReminderTime] = React.useState('');
   const [items, setItems] = React.useState<Entry[]>([]);
   const [view, setView] = React.useState<'local'|'cloud'>('local');
   const [cloud, setCloud] = React.useState<any[]>([]);
@@ -32,8 +35,25 @@ export default function RehabTracker() {
   const save = async (next: Entry[]) => { setItems(next); try { await AsyncStorage.setItem(KEY, JSON.stringify(next)); } catch{} };
 
   const add = async () => {
-    const e: Entry = { id: String(Date.now()), date: new Date().toISOString().slice(0,10), walk, grip, painFree, note };
-    await save([e, ...items]); setWalk(''); setGrip(''); setPainFree(''); setNote('');
+    const e: Entry = { 
+      id: String(Date.now()), 
+      date: new Date().toISOString().slice(0,10), 
+      walk, 
+      grip, 
+      painFree, 
+      note,
+      frequency: frequency || undefined,
+      timesPerDay: timesPerDay ? Number(timesPerDay) : undefined,
+      reminderTime: reminderTime || undefined
+    };
+    await save([e, ...items]); 
+    setWalk(''); 
+    setGrip(''); 
+    setPainFree(''); 
+    setNote('');
+    setFrequency('');
+    setTimesPerDay('');
+    setReminderTime('');
     try {
       const uid = auth.currentUser?.uid;
       if (uid) await addDoc(collection(db,'rehab_progress'), { uid, createdAt: serverTimestamp(), ...e });
@@ -80,10 +100,42 @@ export default function RehabTracker() {
       </GapView>
       {view==='local' && (
       <>
-      <TextInput placeholder="Walking distance (e.g., 300m)" placeholderTextColor={palette.text+'77'} value={walk} onChangeText={setWalk} style={s.input} />
-      <TextInput placeholder="Grip strength (e.g., 20kg)" placeholderTextColor={palette.text+'77'} value={grip} onChangeText={setGrip} style={s.input} />
-      <TextInput placeholder="Pain‑reduced days this week" placeholderTextColor={palette.text+'77'} value={painFree} onChangeText={setPainFree} style={s.input} />
-      <TextInput placeholder="Notes" placeholderTextColor={palette.text+'77'} value={note} onChangeText={setNote} style={s.input} />
+      <Text style={[s.text, { marginTop: 8, fontWeight: '600' }]}>Progress Metrics</Text>
+      <TextInput placeholder="Walking distance (e.g., 300m)" placeholderTextColor={palette.text+'77'} value={walk} onChangeText={setWalk} style={s.input} accessibilityLabel="Walking distance" />
+      <TextInput placeholder="Grip strength (e.g., 20kg)" placeholderTextColor={palette.text+'77'} value={grip} onChangeText={setGrip} style={s.input} accessibilityLabel="Grip strength" />
+      <TextInput placeholder="Pain‑reduced days this week" placeholderTextColor={palette.text+'77'} value={painFree} onChangeText={setPainFree} style={s.input} accessibilityLabel="Pain free days" />
+      <TextInput placeholder="Notes" placeholderTextColor={palette.text+'77'} value={note} onChangeText={setNote} style={s.input} accessibilityLabel="Additional notes" />
+      
+      <Text style={[s.text, { marginTop: 12, fontWeight: '600' }]}>Exercise Reminders (Optional)</Text>
+      <TextInput 
+        placeholder="Frequency (e.g., Daily, 3x/week)" 
+        placeholderTextColor={palette.text+'77'} 
+        value={frequency} 
+        onChangeText={setFrequency} 
+        style={s.input} 
+        accessibilityLabel="Exercise frequency"
+        accessibilityHint="How often should you do these exercises?" 
+      />
+      <TextInput 
+        placeholder="Times per day (e.g., 2)" 
+        placeholderTextColor={palette.text+'77'} 
+        value={timesPerDay} 
+        onChangeText={setTimesPerDay} 
+        style={s.input}
+        keyboardType="numeric"
+        accessibilityLabel="Times per day"
+        accessibilityHint="How many times per day to exercise?" 
+      />
+      <TextInput 
+        placeholder="Reminder time (HH:MM, e.g., 09:00)" 
+        placeholderTextColor={palette.text+'77'} 
+        value={reminderTime} 
+        onChangeText={setReminderTime} 
+        style={s.input}
+        accessibilityLabel="Reminder time"
+        accessibilityHint="What time to send reminder?" 
+      />
+      
       <GapView style={{ flexDirection:'row' }} gap={8}>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={add} style={[s.button,{ flex:1 }]} accessibilityLabel='Log progress entry'><Text style={s.buttonText}>Log Progress</Text></A11yPressable>
   <A11yPressable hitSlop={HIT_SLOP_8} onPress={syncAll} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Sync local logs to cloud'><Text style={[s.buttonText,{ color: palette.text }]}>Sync</Text></A11yPressable>
@@ -102,10 +154,50 @@ export default function RehabTracker() {
           {!!i.walk && <Text style={s.text}>Walk: {i.walk}</Text>}
           {!!i.grip && <Text style={s.text}>Grip: {i.grip}</Text>}
           {!!i.painFree && <Text style={s.text}>Reduced pain days: {i.painFree}</Text>}
+          {!!i.frequency && <Text style={s.text}>Frequency: {i.frequency}</Text>}
+          {!!i.timesPerDay && <Text style={s.text}>Times/day: {i.timesPerDay}</Text>}
+          {!!i.reminderTime && <Text style={s.text}>Reminder: {i.reminderTime}</Text>}
           {!!i.note && <Text style={s.text}>{i.note}</Text>}
-          <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>remove(i.id)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Delete entry'>
-            <Text style={[s.buttonText,{ color: palette.text }]}>Delete</Text>
-          </A11yPressable>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 8 }} gap={8}>
+            {i.reminderTime && (
+              <A11yPressable 
+                hitSlop={HIT_SLOP_8} 
+                onPress={async()=>{
+                  try {
+                    const Notifier = await import('../../../services/notifications');
+                    const parts = (i.reminderTime || '').split(':');
+                    if (parts.length !== 2) {
+                      Alert.alert('Invalid time', 'Please set a valid reminder time');
+                      return;
+                    }
+                    const [hh, mm] = parts.map(x => Number(x));
+                    const days = i.frequency?.toLowerCase().includes('daily') ? 7 : 3;
+                    let scheduled = 0;
+                    for (let d = 0; d < days; d++) {
+                      const reminderDate = new Date();
+                      reminderDate.setHours(hh, mm, 0, 0);
+                      reminderDate.setDate(reminderDate.getDate() + d);
+                      if (reminderDate > new Date()) {
+                        await Notifier.scheduleAt(reminderDate, 'Rehab Exercise', `Time for your rehab exercises${i.timesPerDay ? ` (${i.timesPerDay}x today)` : ''}`);
+                        scheduled++;
+                      }
+                    }
+                    Alert.alert('Scheduled', `${scheduled} reminder${scheduled !== 1 ? 's' : ''} scheduled`);
+                  } catch (e) {
+                    console.error('Schedule error:', e);
+                    Alert.alert('Failed', 'Could not schedule reminders');
+                  }
+                }} 
+                style={[s.button, { backgroundColor: palette.primary }]} 
+                accessibilityLabel='Schedule reminders for this exercise'
+              >
+                <Text style={[s.buttonText, { fontSize: 12 }]}>Schedule Reminders</Text>
+              </A11yPressable>
+            )}
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>remove(i.id)} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]} accessibilityLabel='Delete entry'>
+              <Text style={[s.buttonText,{ color: palette.text, fontSize: 12 }]}>Delete</Text>
+            </A11yPressable>
+          </GapView>
         </View>
       )} />
       </View>

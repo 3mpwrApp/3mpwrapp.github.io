@@ -97,6 +97,14 @@ export default function AccountabilityCoach() {
       </Text>
       <Text style={s.subtitle}>{t('accountability.subtitle')}</Text>
 
+      <View style={[s.infoCard, { backgroundColor: palette.info + '11', marginBottom: 16 }]}>
+        <Text style={[s.infoTitle, { color: palette.info }]}>💪 Why This Matters</Text>
+        <Text style={s.infoText}>
+          This tool helps you hold employers, insurers, and institutions accountable when they violate your rights. 
+          You deserve respect, dignity, and fair treatment. Document everything, know your rights, and don't back down.
+        </Text>
+      </View>
+
       <View style={s.fieldGroup}>
         <Text style={s.label}>{t('accountability.targetLabel')}</Text>
         <TextInput
@@ -126,32 +134,52 @@ export default function AccountabilityCoach() {
         <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{loading ? t('accountability.generating') : t('accountability.generate')}</Text>
       </Pressable>
       <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop:8 }} gap={8}>
-  <Pressable onPress={onDetect} style={[s.button, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityHint={t('accountability.detectHint','Analyze issue and list potential violations')} disabled={loading} hitSlop={HIT_SLOP_8}>
+  <Pressable onPress={onDetect} style={[s.button, { backgroundColor: palette.primary, flex: 1, minWidth: 140 }]} accessibilityRole="button" accessibilityHint={t('accountability.detectHint','Analyze issue and list potential violations')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.detect','Detect violations')}</Text>
         </Pressable>
-  <Pressable onPress={onDraft} style={[s.button, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityHint={t('accountability.draftHint','Draft a formal accountability letter')} disabled={loading} hitSlop={HIT_SLOP_8}>
+  <Pressable onPress={onDraft} style={[s.button, { backgroundColor: palette.primary, flex: 1, minWidth: 140 }]} accessibilityRole="button" accessibilityHint={t('accountability.draftHint','Draft a formal accountability letter')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.draftLetter','Draft letter')}</Text>
         </Pressable>
-  <Pressable onPress={onTrack} style={[s.button, { backgroundColor: palette.primary, opacity: caseId ? 1 : 0.5 }]} accessibilityRole="button" accessibilityHint={t('accountability.trackHint','Record and track responses you receive')} disabled={!caseId} hitSlop={HIT_SLOP_8}>
+      </GapView>
+      <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop:8 }} gap={8}>
+  <Pressable onPress={onTrack} style={[s.button, { backgroundColor: palette.success, opacity: caseId ? 1 : 0.5, flex: 1, minWidth: 140 }]} accessibilityRole="button" accessibilityHint={t('accountability.trackHint','Record and track responses you receive')} disabled={!caseId} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.track','Track response')}</Text>
         </Pressable>
-  <Pressable onPress={onAlly} style={[s.button, { backgroundColor: palette.primary }]} accessibilityRole="button" accessibilityHint={t('accountability.allyHint','Create a brief you can share with allies')} disabled={loading} hitSlop={HIT_SLOP_8}>
+  <Pressable onPress={onAlly} style={[s.button, { backgroundColor: palette.info, flex: 1, minWidth: 140 }]} accessibilityRole="button" accessibilityHint={t('accountability.allyHint','Create a brief you can share with allies')} disabled={loading} hitSlop={HIT_SLOP_8}>
           <Text style={s.buttonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('accountability.ally','Ally brief')}</Text>
         </Pressable>
       </GapView>
 
       {!!parsed && (
-        <View style={{ marginTop: 12 }} accessibilityRole="summary" accessibilityLabel={t('accountability.outputLabel')}>
-          {parsed.steps.map((step) => (
-            <View key={step.order} style={{ marginBottom: 6 }}>
-              <Text style={{ color: palette.text, fontWeight: '600' }}>{step.order}. {step.text}</Text>
-              {step.tips?.map((tip) => (
-                <Text key={tip} style={{ color: palette.text, opacity: 0.8, fontSize: 12 }}>• {tip}</Text>
-              ))}
-            </View>
-          ))}
+        <View style={{ marginTop: 16 }} accessibilityRole="summary" accessibilityLabel={t('accountability.outputLabel')}>
+          <View style={[s.resultCard, { backgroundColor: palette.surface }]}>
+            <Text style={[s.resultTitle, { color: palette.primary }]}>📋 Action Plan</Text>
+            {parsed.steps.map((step) => (
+              <View key={step.order} style={{ marginBottom: 12, marginTop: 8 }}>
+                <Text style={{ color: palette.text, fontWeight: '700', fontSize: 16 }}>
+                  {step.order}. {step.text}
+                </Text>
+                {step.tips?.map((tip) => (
+                  <Text key={tip} style={{ color: palette.text, opacity: 0.85, fontSize: 13, marginLeft: 16, marginTop: 4 }}>
+                    • {tip}
+                  </Text>
+                ))}
+              </View>
+            ))}
+          </View>
         </View>
       )}
+
+      <View style={[s.infoCard, { backgroundColor: palette.warning + '11', marginTop: 20 }]}>
+        <Text style={[s.infoTitle, { color: palette.warning }]}>⚖️ Know Your Rights</Text>
+        <Text style={s.infoText}>
+          • You have the right to accommodations under human rights law{'\n'}
+          • Retaliation for asserting your rights is illegal{'\n'}
+          • You can file complaints with labor boards and human rights commissions{'\n'}
+          • Document EVERYTHING - dates, times, witnesses, conversations{'\n'}
+          • You don't need to face this alone - get support from unions, advocates, legal aid
+        </Text>
+      </View>
 
       <AIDisclaimer />
     </ScrollView>
@@ -162,11 +190,39 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
     title: { fontSize: 22, fontWeight: '700', color: palette.text },
-    subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8 },
+    subtitle: { color: palette.text, opacity: 0.9, marginBottom: 8, lineHeight: 20 },
     fieldGroup: { marginTop: 8 },
     label: { color: palette.text, fontWeight: '600', marginBottom: 4 },
   input: { borderWidth: 1, borderColor: palette.muted, borderRadius: 8, padding: 10, color: palette.text, backgroundColor: palette.surface },
-    button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center', marginTop: 8 },
+    button: { backgroundColor: palette.primary, paddingVertical: 12, borderRadius: 8, alignItems: 'center', marginTop: 8 },
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
+    infoCard: {
+      padding: 16,
+      borderRadius: 12,
+      borderWidth: 1,
+      borderColor: palette.muted,
+    },
+    infoTitle: {
+      fontSize: 16,
+      fontWeight: '700',
+      marginBottom: 8,
+    },
+    infoText: {
+      fontSize: 14,
+      color: palette.text,
+      lineHeight: 20,
+      opacity: 0.9,
+    },
+    resultCard: {
+      padding: 16,
+      borderRadius: 12,
+      borderWidth: 1,
+      borderColor: palette.muted,
+    },
+    resultTitle: {
+      fontSize: 18,
+      fontWeight: '700',
+      marginBottom: 8,
+    },
   });
 }

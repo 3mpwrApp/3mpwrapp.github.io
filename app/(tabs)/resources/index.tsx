@@ -257,7 +257,6 @@ export default function ResourcesScreen() {
         <ResourceLink href="/(tabs)/resources/solidarity-toolkit" title="Solidarity Toolkit" />
         <ResourceLink href="/(tabs)/resources/support-directory" title="Support Directory" />
         <ResourceLink href="/(tabs)/resources/myth-busting-hub" title="Myth-Busting Knowledge Hub" />
-        <ResourceLink href="/(tabs)/settings?open=emergencyCard" title="Emergency Info Wallet Card" />
 
         <View
           style={styles.filters}

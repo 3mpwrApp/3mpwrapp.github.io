@@ -86,12 +86,44 @@ export default function MedsTracker() {
     <View style={s.container}>
       <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Medication & Treatment Tracker</Text>
       <DisclaimerBanner type="medical" compact={true} />
-      <TextInput placeholder="Medication name" placeholderTextColor={palette.text+"77"} value={name} onChangeText={setName} style={s.input} />
-      <TextInput placeholder="Dose (e.g., 10mg)" placeholderTextColor={palette.text+"77"} value={dose} onChangeText={setDose} style={s.input} />
-      <TextInput placeholder="Schedule (e.g., 2x daily)" placeholderTextColor={palette.text+"77"} value={schedule} onChangeText={setSchedule} style={s.input} />
+      <TextInput placeholder="Medication name" placeholderTextColor={palette.text+"77"} value={name} onChangeText={setName} style={s.input} accessibilityLabel="Medication name" />
+      <TextInput placeholder="Dose (e.g., 10mg)" placeholderTextColor={palette.text+"77"} value={dose} onChangeText={setDose} style={s.input} accessibilityLabel="Dosage" />
+      <TextInput placeholder="Schedule (e.g., 2x daily)" placeholderTextColor={palette.text+"77"} value={schedule} onChangeText={setSchedule} style={s.input} accessibilityLabel="Medication schedule" />
       <DateTimeField label="Reminder time (optional)" mode="time" value={remind} onChange={setRemind} />
       <DateTimeField label="Refill date (optional)" mode="date" value={refill} onChange={setRefill} />
-      <A11yPressable onPress={async()=>{ try { await addMedication({ name: name.trim(), dose, schedule, reminderTime: remind || undefined, refillAt: refill || undefined }); setName(''); setDose(''); setSchedule(''); setRemind(''); setRefill(''); load(); } catch { Alert.alert('Add failed','Unable to add med'); } }} style={s.button}><Text style={s.buttonText}>Add Medication</Text></A11yPressable>
+      <A11yPressable 
+        onPress={async()=>{ 
+          try {
+            if (!name.trim()) {
+              Alert.alert('Name required', 'Please enter a medication name');
+              return;
+            }
+            await addMedication({ 
+              name: name.trim(), 
+              dose: dose.trim(), 
+              schedule: schedule.trim(), 
+              reminderTime: remind || undefined, 
+              refillAt: refill || undefined 
+            }); 
+            setName(''); 
+            setDose(''); 
+            setSchedule(''); 
+            setRemind(''); 
+            setRefill(''); 
+            load(); 
+            Alert.alert('Added', 'Medication added successfully');
+          } catch (e) { 
+            console.error('Add med error:', e);
+            Alert.alert('Add failed','Unable to add medication. Please check your cloud consent settings.'); 
+          } 
+        }} 
+        style={[s.button, { opacity: name.trim() ? 1 : 0.5 }]}
+        disabled={!name.trim()}
+        accessibilityLabel="Add medication"
+        accessibilityHint="Adds this medication to your tracker"
+      >
+        <Text style={s.buttonText}>Add Medication</Text>
+      </A11yPressable>
 
       <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 6 }} gap={8}>
         <A11yPressable onPress={exportCSV} style={[s.button,{ backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }]}><Text style={{ color: palette.text, fontWeight:'700' }}>Export CSV</Text></A11yPressable>
@@ -110,13 +142,35 @@ export default function MedsTracker() {
             <A11yPressable onPress={async()=>{
               // Schedule 7 days of daily reminders at given HH:MM
               try {
-                const [hh,mm] = (item.reminderTime || '09:00').split(':').map(x=>Number(x));
-                for (let i=0;i<7;i++) {
-                  const d = new Date(); d.setHours(hh, mm, 0, 0); d.setDate(d.getDate()+i);
-                  await Notifier.scheduleAt(d, 'Medication', `Time to take ${item.name}`);
+                if (!item.reminderTime) {
+                  Alert.alert('No time set', 'Please edit this medication and set a reminder time first.');
+                  return;
                 }
-                Alert.alert('Scheduled','Reminders for the next 7 days.');
-              } catch { Alert.alert('Failed','Could not schedule reminders'); }
+                const parts = item.reminderTime.split(':');
+                if (parts.length !== 2) {
+                  Alert.alert('Invalid time', 'Reminder time format is invalid');
+                  return;
+                }
+                const [hh,mm] = parts.map(x=>Number(x));
+                if (isNaN(hh) || isNaN(mm) || hh < 0 || hh > 23 || mm < 0 || mm > 59) {
+                  Alert.alert('Invalid time', 'Please set a valid time (HH:MM format)');
+                  return;
+                }
+                let scheduled = 0;
+                for (let i=0;i<7;i++) {
+                  const d = new Date(); 
+                  d.setHours(hh, mm, 0, 0); 
+                  d.setDate(d.getDate()+i);
+                  if (d > new Date()) { // Only schedule future times
+                    await Notifier.scheduleAt(d, 'Medication', `Time to take ${item.name}`);
+                    scheduled++;
+                  }
+                }
+                Alert.alert('Scheduled',`${scheduled} reminder${scheduled !== 1 ? 's' : ''} set for the next 7 days at ${item.reminderTime}`);
+              } catch (e) { 
+                console.error('Schedule reminder error:', e);
+                Alert.alert('Failed','Could not schedule reminders. Please check notification permissions.'); 
+              }
             }} style={s.smallBtn}><Text style={s.smallBtnText}>Remind daily</Text></A11yPressable>
             <A11yPressable onPress={async()=>{
               try {
