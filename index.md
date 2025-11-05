@@ -243,7 +243,7 @@ We're building a safe space to connect, share experiences, and advocate for real
 <ul class="store-badges" role="list" aria-label="App store availability">
   <li role="listitem">
     <figure class="store-badge">
-      <img src="{{ " width="auto" height="auto"/assets/images/app-store-coming-soon.svg' | relative_url }}"
+      <img src="{{ '/assets/images/app-store-coming-soon.svg' | relative_url }}"
         alt="App Store — coming soon"
         loading="lazy"
         decoding="async"
@@ -253,7 +253,7 @@ We're building a safe space to connect, share experiences, and advocate for real
   </li>
   <li role="listitem">
     <figure class="store-badge">
-      <img src="{{ " width="auto" height="auto"/assets/images/google-play-coming-soon.svg' | relative_url }}"
+      <img src="{{ '/assets/images/google-play-coming-soon.svg' | relative_url }}"
         alt="Google Play — coming soon"
         loading="lazy"
         decoding="async"
@@ -265,7 +265,7 @@ We're building a safe space to connect, share experiences, and advocate for real
 
 <!-- When live, replace the figures above with anchors like:
 <a class="store-link" href="https://apps.apple.com/app/idYOUR_ID">
-  <img src="{{ " width="auto" height="auto" loading="lazy"/assets/images/app-store-badge.svg' | relative_url }}" alt="Download on the App Store">
+  <img src="{{ '/assets/images/app-store-badge.svg' | relative_url }}" alt="Download on the App Store" loading="lazy">
 </a>
 -->
 
