@@ -1,7 +1,7 @@
 import type { Href } from "expo-router";
 import { router } from "expo-router";
 import React from "react";
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import EmergencyWalletCard from "../components/EmergencyWalletCard";
 import GapView from "../components/GapView";
@@ -25,8 +25,9 @@ export default function Profile() {
   const [showEmergencyCard, setShowEmergencyCard] = React.useState(false);
 
   return (
-    <View
+    <ScrollView
       style={styles.container}
+      contentContainerStyle={{ paddingBottom: 40 }}
       accessibilityLabel={t("header.openProfile", "Open profile")}
       accessible={true}
     >
@@ -216,7 +217,7 @@ export default function Profile() {
           </Pressable>
         </>
       )}
-    </View>
+    </ScrollView>
   );
 }
 

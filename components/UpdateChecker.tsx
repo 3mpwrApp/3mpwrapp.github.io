@@ -38,6 +38,7 @@ export default function UpdateChecker() {
 
   const [checking, setChecking] = React.useState(false);
   const [downloading, setDownloading] = React.useState(false);
+  const [downloadProgress, setDownloadProgress] = React.useState(0);
   const [updateAvailable, setUpdateAvailable] = React.useState(false);
   const [lastChecked, setLastChecked] = React.useState<string | null>(null);
   const [error, setError] = React.useState<string | null>(null);
@@ -64,11 +65,22 @@ export default function UpdateChecker() {
       if (update.isAvailable) {
         setUpdateAvailable(true);
         setDownloading(true);
+        setDownloadProgress(0);
 
-        // Download the update
-        await Updates.fetchUpdateAsync();
+        // Download the update with progress tracking
+        const downloadResumable = Updates.fetchUpdateAsync({
+          // @ts-ignore - progress callback exists but not in types
+          progressCallback: (progress: { receivedBytes: number; totalBytes: number }) => {
+            const percentage = (progress.receivedBytes / progress.totalBytes) * 100;
+            setDownloadProgress(Math.round(percentage));
+            logger.log(`[UpdateChecker] Download progress: ${percentage.toFixed(1)}%`);
+          },
+        });
+
+        await downloadResumable;
 
         setDownloading(false);
+        setDownloadProgress(100);
         setLastChecked(new Date().toISOString());
 
         // Prompt to restart
@@ -110,6 +122,7 @@ export default function UpdateChecker() {
     } finally {
       setChecking(false);
       setDownloading(false);
+      setDownloadProgress(0);
     }
   };
 
@@ -154,7 +167,7 @@ export default function UpdateChecker() {
           checking
             ? t('updates.checking', 'Checking for updates...')
             : downloading
-            ? t('updates.downloading', 'Downloading update...')
+            ? t('updates.downloading', 'Downloading update... {{progress}}%', { progress: downloadProgress })
             : t('updates.checkButton', 'Check for Updates')
         }
         accessibilityHint={t('updates.checkHint', 'Checks if a new version is available and downloads it')}
@@ -167,11 +180,22 @@ export default function UpdateChecker() {
             {checking
               ? t('updates.checking', 'Checking for updates...')
               : downloading
-              ? t('updates.downloading', 'Downloading update...')
+              ? t('updates.downloading', 'Downloading update... {{progress}}%', { progress: downloadProgress })
               : t('updates.checkButton', 'Check for Updates')}
           </DyslexiaText>
         </View>
       </A11yPressable>
+
+      {downloading && downloadProgress > 0 && (
+        <View style={s.progressContainer}>
+          <View style={s.progressBarBackground}>
+            <View style={[s.progressBarFill, { width: `${downloadProgress}%` }]} />
+          </View>
+          <DyslexiaText style={s.progressText}>
+            {t('updates.downloadProgress', '{{progress}}% complete', { progress: downloadProgress })}
+          </DyslexiaText>
+        </View>
+      )}
 
       {error && (
         <View style={s.errorContainer}>
@@ -236,6 +260,27 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>) =>
     },
     spinner: {
       marginRight: 8,
+    },
+    progressContainer: {
+      marginTop: 12,
+      gap: 4,
+    },
+    progressBarBackground: {
+      width: '100%',
+      height: 8,
+      backgroundColor: palette.muted,
+      borderRadius: 4,
+      overflow: 'hidden',
+    },
+    progressBarFill: {
+      height: '100%',
+      backgroundColor: palette.primary,
+      borderRadius: 4,
+    },
+    progressText: {
+      fontSize: 12,
+      color: palette.text,
+      textAlign: 'center',
     },
     errorContainer: {
       marginTop: 8,

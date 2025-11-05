@@ -17,7 +17,6 @@ import ContrastToggle from "../../components/ContrastToggle";
 import ErrorBoundary from '../../components/ErrorBoundary';
 import EventActionsBar from '../../components/EventActionsBar';
 import { GapView } from "../../components/GapView";
-import ResponsiveScreenWrapper from "../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../components/SearchBar";
 import SettingsLink from "../../components/SettingsLink";
 import SkeletonRow from "../../components/SkeletonRow";
@@ -206,9 +205,9 @@ export default function EventsScreen() {
   };
 
   return (
-    <ResponsiveScreenWrapper scrollable={false} padded={false}>
+    <View style={[styles.container, { flex: 1 }]}>
       <View
-        style={[styles.container, { flex: 1 }]}
+        style={{ paddingHorizontal: 20, paddingTop: 20 }}
         accessibilityLabel="Events screen"
         accessible={true}
       >
@@ -498,7 +497,7 @@ export default function EventsScreen() {
           )}
         />
       </View>
-    </ResponsiveScreenWrapper>
+    </View>
   );
 }
 
@@ -507,7 +506,7 @@ function createStyles(
   factor: number,
 ) {
   return StyleSheet.create({
-    container: { flex: 1, padding: 20, backgroundColor: palette.background },
+    container: { flex: 1, backgroundColor: palette.background },
     title: {
       fontSize: Math.round(24 * factor),
       fontWeight: "700",

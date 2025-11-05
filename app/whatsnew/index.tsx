@@ -1,11 +1,12 @@
 import { useFocusEffect } from "@react-navigation/native";
 import React from "react";
 import {
-  Pressable,
-  SectionList,
-  StyleSheet,
-  Text,
-  View
+    Pressable,
+    RefreshControl,
+    SectionList,
+    StyleSheet,
+    Text,
+    View
 } from "react-native";
 
 import ContrastToggle from "../../components/ContrastToggle";
@@ -13,14 +14,14 @@ import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { whatsnew as defaultWN } from "../../data/whatsnew";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
 import { subscribeToActivityFeed } from "../../services/activity";
 import {
-  getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
+    getLocalWhatsNew, getWhatsNewSplit, setLocalWhatsNew
 } from "../../services/localContent";
 import { useTextScale } from "../../theme/typography";
 import { useAppPalette } from "../../theme/usePalette";
@@ -41,6 +42,7 @@ export default function WhatsNewScreen() {
   const AsyncStorageRef = React.useRef<any>(null);
   const [items, setItems] = React.useState(defaultWN);
   const [activity, setActivity] = React.useState<AnyActivityEvent[]>([]);
+  const [refreshing, setRefreshing] = React.useState(false);
   // Unused while add form is commented out - prefix with _ to suppress ESLint warnings
   const [_title, _setTitle] = React.useState("");
   const [_summary, _setSummary] = React.useState("");
@@ -145,6 +147,20 @@ export default function WhatsNewScreen() {
     ...(older.length ? [{ title: t("whatsNew.archive", "Archive"), data: older }] : []),
   ], [recent, older, t, lastSeen]); // Add lastSeen as dependency to force re-render
 
+  const handleRefresh = React.useCallback(async () => {
+    setRefreshing(true);
+    try {
+      const local = await getLocalWhatsNew();
+      const { current } = await getWhatsNewSplit();
+      if (current?.length) {
+        setItems(current);
+      } else if (local.length) {
+        setItems([...local, ...defaultWN]);
+      }
+    } catch {}
+    setRefreshing(false);
+  }, []);
+
   return (
     <View
       style={styles.container}
@@ -238,11 +254,14 @@ export default function WhatsNewScreen() {
       </Pressable>
 
       <SectionList
-  sections={sections}
+        sections={sections}
         keyExtractor={(item) => item.id}
         renderSectionHeader={({ section }) => (
           <Text style={styles.section}>{section.title}</Text>
         )}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={handleRefresh} />
+        }
         renderItem={({ item }) => {
           const unread = isUnread(item.date);
           return (
