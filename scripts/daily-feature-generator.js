@@ -21,271 +21,610 @@ class DailyFeatureGenerator {
     this.userGuidePath = path.join(process.cwd(), 'user-guide.md');
     this.blogUrl = 'https://3mpwrapp.pages.dev/blog/';
     
-    // Feature library from user-guide.md - FACTUAL information only
+    // Feature library - Phase 1 Beta + Website Features  
+    // NOTE: App is in Phase 1 closed beta (no users yet), so examples reflect beta testing status
     this.features = [
+      // === WEBSITE & BLOG FEATURES (Currently Live) ===
       {
-        name: 'Energy Forecast & Smart Scheduling',
-        category: 'Phase 6: ML-Powered',
-        description: '24-hour energy prediction that learns your patterns and schedules notifications for optimal times',
-        userGuideSection: 'energy-forecast-smart-scheduling',
+        name: 'Comprehensive Blog & News Curation',
+        category: 'Website: Content',
+        description: 'Daily curated disability news from 26+ Canadian sources, feature spotlights, and weekly updates',
+        userGuideSection: 'blog',
         highlights: [
-          '24-hour energy prediction using your actual activity patterns',
-          'Personalized forecasting with advanced ML algorithms',
-          'Smart notifications scheduled when you have energy',
-          'Weekly wellness reports tracking energy trends',
-          'Privacy-first: all predictions happen on your device'
+          'Automated curation from 26+ trusted Canadian news sources',
+          '3 daily posts (morning, midday, evening) on Mastodon, Bluesky, and X',
+          'Weekly summary posts collecting the week\'s highlights',
+          'Feature spotlight articles published daily',
+          'RSS feed for easy subscription and updates'
         ],
         examples: [
-          'See when you\'ll have the most energy throughout the day',
-          'Get notified about important tasks during high-energy windows',
-          'Track your energy patterns over time with weekly reports',
-          'Receive personalized recommendations based on your energy levels'
+          'Read today\'s curated disability policy news at https://3mpwrapp.pages.dev/blog/',
+          'Subscribe to RSS feed for automatic updates on new posts',
+          'Check out daily feature spotlights explaining each app capability',
+          'Follow us on Mastodon/Bluesky/X for quick news updates 3x daily'
         ],
         benefits: [
-          'Better time management around your energy levels',
-          'Reduce burnout by working with your body\'s rhythms',
-          'Never miss important tasks due to low energy',
-          'Understand your patterns to make better decisions'
+          'Stay informed about disability rights and policy changes',
+          'Save time with pre-curated, relevant content',
+          'Discover new features through daily spotlights',
+          'Never miss important disability community news'
         ]
       },
       {
-        name: 'Disability Wizard',
-        category: 'Phase 2: Personalization',
-        description: 'Your personal guide that recommends the right tools at the right time based on your specific needs',
-        userGuideSection: 'disability-wizard',
+        name: 'Multilingual Support (EN/FR)',
+        category: 'Website: Accessibility',
+        description: 'Complete website translation in English and French for all Canadians',
+        userGuideSection: 'translations',
         highlights: [
-          'Smart recommendations that learn what works for you',
-          'Daily variety with fresh feature suggestions',
-          'Energy-aware matching of activities to your capacity',
-          'Clear explanations for why each tool is recommended',
-          'Natural flows suggesting next steps after tasks'
+          'Full English and French translations of all pages',
+          'Automated translation system using DeepL API',
+          'Language switcher in header for easy toggling',
+          'Culturally appropriate translations reviewed by community',
+          'All new content automatically translated within 24 hours'
         ],
         examples: [
-          'Morning suggestion: "Try gentle stretching" when energy is low',
-          'After documenting evidence: "Would you like to draft a letter?"',
-          'High energy detected: "Great time to work on your appeal"',
-          'Low energy day: "Focus on self-care activities today"'
+          'Switch to French with one click using the language selector',
+          'Read feature descriptions in your preferred language',
+          'Access resources and blog posts in English or French',
+          'Beta testers can provide feedback in either official language'
         ],
         benefits: [
-          'Discover features you didn\'t know existed',
-          'Get help when you need it most',
-          'Reduce cognitive load of deciding what to do',
-          'Maximize effectiveness with personalized guidance'
+          'Access information in your preferred official language',
+          'Equal access for French-speaking Canadians',
+          'Better understanding with culturally appropriate translations',
+          'Inclusive platform serving all of Canada'
+        ]
+      },
+      {
+        name: 'WCAG 2.2 AAA Accessibility',
+        category: 'Website: Accessibility',
+        description: 'Gold-standard accessibility with AAA compliance, keyboard navigation, and screen reader support',
+        userGuideSection: 'accessibility',
+        highlights: [
+          'WCAG 2.2 Level AAA compliance (exceeds legal requirements)',
+          'Full keyboard navigation throughout entire site',
+          'Screen reader tested with NVDA, JAWS, and VoiceOver',
+          'Automated daily accessibility testing with pa11y and axe-core',
+          'Skip links, ARIA labels, and semantic HTML throughout'
+        ],
+        examples: [
+          'Navigate entire website using only keyboard (Tab, Enter, Arrow keys)',
+          'Use screen reader to access all content with proper ARIA labels',
+          'Check automated accessibility reports in GitHub Actions',
+          'Beta testers with disabilities can fully access and test the site'
+        ],
+        benefits: [
+          'Usable by everyone regardless of disability',
+          'Exceeds AODA and accessibility legislation requirements',
+          'Sets standard for inclusive design in disability sector',
+          'Ensures equal access to information and resources'
+        ]
+      },
+      {
+        name: 'Beta Testing Program',
+        category: 'Website: Community',
+        description: 'Join our closed beta testing program to help shape the future of 3mpwrApp',
+        userGuideSection: 'beta',
+        highlights: [
+          'Easy signup form with device selection options',
+          'Closed beta program for dedicated testers only',
+          'Test app features before public release',
+          'Direct feedback channel to development team',
+          'Early access to new features and improvements'
+        ],
+        examples: [
+          'Sign up at https://3mpwrapp.pages.dev/beta/ to become a beta tester',
+          'Select your testing devices (Android, iOS, Windows, Mac, Tablet)',
+          'Explain why you want to test and help improve the app',
+          'Get contacted by email if selected for beta program'
+        ],
+        benefits: [
+          'Influence app development with your feedback',
+          'Get early access to features before public launch',
+          'Help create a better tool for the disability community',
+          'Be part of building something meaningful'
+        ]
+      },
+      {
+        name: 'Comprehensive FAQ System',
+        category: 'Website: Support',
+        description: 'Frequently asked questions covering app features, accessibility, privacy, and technical support',
+        userGuideSection: 'faq',
+        highlights: [
+          'Organized by category for easy navigation',
+          'Searchable FAQ database',
+          'Covers features, privacy, accessibility, and technical issues',
+          'Regular updates based on user questions',
+          'Available in English and French'
+        ],
+        examples: [
+          'Find answers about data privacy and encryption',
+          'Learn how to use specific features before beta testing',
+          'Understand system requirements for different devices',
+          'Get technical support information and contact details'
+        ],
+        benefits: [
+          'Get instant answers without waiting for email support',
+          'Learn about features before downloading',
+          'Understand privacy and security practices',
+          'Troubleshoot common issues independently'
+        ]
+      },
+      {
+        name: 'Resource Directory',
+        category: 'Website: Resources',
+        description: 'Curated directory of disability resources, organizations, and support services across Canada',
+        userGuideSection: 'resources',
+        highlights: [
+          'Province-specific disability resources',
+          'Links to benefits programs (CPP-D, ODSP, AISH, PWD, etc.)',
+          'Community organizations and advocacy groups',
+          'Crisis resources and mental health support',
+          'Legal aid and human rights resources'
+        ],
+        examples: [
+          'Find your provincial disability benefits program',
+          'Locate crisis resources for immediate support',
+          'Discover advocacy organizations in your area',
+          'Access legal aid resources for workplace issues'
+        ],
+        benefits: [
+          'One-stop directory for Canadian disability resources',
+          'Save time searching for legitimate support services',
+          'Access help during crises quickly',
+          'Connect with advocacy organizations'
+        ]
+      },
+      {
+        name: 'Privacy-First Architecture',
+        category: 'Website: Security',
+        description: 'Transparent privacy practices with local-first data storage and no user tracking',
+        userGuideSection: 'privacy',
+        highlights: [
+          'Local-first architecture: your data stays on your device',
+          'No analytics, cookies, or tracking scripts',
+          'Transparent privacy policy in plain language',
+          'GDPR and PIPEDA compliant',
+          'Open source code for community review'
+        ],
+        examples: [
+          'Read our privacy policy at https://3mpwrapp.pages.dev/privacy/',
+          'Review source code on GitHub to verify privacy claims',
+          'Your browsing and testing data never leaves your device',
+          'No corporate surveillance or data monetization'
+        ],
+        benefits: [
+          'Complete privacy and data ownership',
+          'Peace of mind about data security',
+          'Trust through transparency and open source',
+          'Protection from corporate surveillance'
+        ]
+      },
+      
+      // === PHASE 1 APP FEATURES (Coming in Beta) ===
+      {
+        name: 'Evidence Locker',
+        category: 'Phase 1: Core',
+        description: 'Securely store documents with AES-256 encryption (Beta testing feature)',
+        userGuideSection: 'evidence-locker',
+        highlights: [
+          'AES-256 encryption for all stored documents',
+          'Organized categories: Medical, Legal, Employment, Benefits',
+          'Photo scanning with automatic date stamping',
+          'Offline access to all documents',
+          'Beta testers will test document storage and retrieval'
+        ],
+        examples: [
+          'Beta testers: Store sample medical reports to test encryption',
+          'Test: Upload photos of sample documents with auto date-stamping',
+          'Demo: Organize test documents into categories',
+          'Verify: Access stored documents offline during testing'
+        ],
+        benefits: [
+          'Secure storage for sensitive documents',
+          'Never lose important paperwork',
+          'Offline access anytime',
+          'Organized system for legal processes'
         ]
       },
       {
         name: 'Master Letter Generator',
-        category: 'Phase 2: Legal Tools',
-        description: '22 professional letter templates for workplace accommodations, benefits applications, and appeals',
-        userGuideSection: 'advocacy-tools',
+        category: 'Phase 1: Advocacy',
+        description: '22 professional letter templates for accommodations and benefits (Beta testing)',
+        userGuideSection: 'letter-generator',
         highlights: [
-          '22 comprehensive letter types covering all situations',
-          '6 workplace & accommodation letter templates',
-          '7 benefits & disability program letter templates',
-          '5 legal & appeals letter templates',
-          '4 administrative & documentation letter templates',
-          'Province-specific customization for all Canadian jurisdictions',
-          'Built-in safety features and professional language'
+          '22 letter templates covering all common scenarios',
+          'Province-specific customization for all Canada',
+          'Professional language and legal references',
+          'Step-by-step guidance for each letter type',
+          'Beta testers will test template generation and customization'
         ],
         examples: [
-          'Request workplace accommodations under human rights legislation',
-          'Apply for disability benefits (CPP-D, ODSP, AISH, PWD)',
-          'Write appeals for denied benefits or accommodations',
-          'Document workplace discrimination or harassment',
-          'Request medical documentation from healthcare providers'
+          'Beta test: Generate sample accommodation request letter',
+          'Demo: Customize letter with test data for your province',
+          'Test: Export letter as PDF or text file',
+          'Verify: Check province-specific legal references are correct'
         ],
         benefits: [
-          'Save time with professional templates',
-          'Use correct legal terminology and references',
-          'Feel confident your letters are complete and professional',
-          'Get guidance on what information to include'
+          'Professional letters without hiring a lawyer',
+          'Correct legal terminology and references',
+          'Province-appropriate content',
+          'Save time with ready templates'
         ]
       },
       {
-        name: 'Evidence Locker',
-        category: 'Core Feature',
-        description: 'Securely store important documents with AES-256 encryption and organized categories',
-        userGuideSection: 'evidence-locker',
+        name: 'Wellness Tracking Hub',
+        category: 'Phase 1: Health',
+        description: 'Track mood, energy, symptoms, and medications (Beta testing feature)',
+        userGuideSection: 'wellness',
         highlights: [
-          'Enterprise-grade AES-256 encryption for all documents',
-          'Organized categories: Medical, Legal, Employment, Benefits, Personal',
-          'Photo scanning with automatic date stamping',
-          'Document tagging and search functionality',
-          'Offline access to all stored documents',
-          'Export options for sharing with lawyers or representatives'
+          'Daily mood and energy tracking',
+          'Symptom logging with custom scales',
+          'Medication reminders and tracking',
+          'Pattern recognition over time',
+          'Beta testers will test tracking and pattern features'
         ],
         examples: [
-          'Store medical reports and doctor\'s notes securely',
-          'Keep copies of denied benefit letters for appeals',
-          'Document workplace incidents with photos and notes',
-          'Organize employment records and accommodation requests',
-          'Save correspondence with government agencies'
-        ],
-        benefits: [
-          'Never lose important documents again',
-          'Have evidence ready when you need it',
-          'Organize documents for legal processes',
-          'Access your documents offline anytime'
-        ]
-      },
-      {
-        name: 'Legal Workflow Automation',
-        category: 'Phase 4: Legal Core',
-        description: 'Step-by-step guided processes for benefits applications, appeals, and workplace accommodations',
-        userGuideSection: 'legal-workflow-automation',
-        highlights: [
-          'Guided workflows for common legal processes',
-          'Step-by-step checklist with progress tracking',
-          'Deadline reminders and timeline management',
-          'Document requirements listed for each step',
-          'Province-specific guidance for all jurisdictions',
-          'Integration with Evidence Locker and Letter Generator'
-        ],
-        examples: [
-          'CPP Disability application: Complete guided process from start to finish',
-          'Workplace accommodation request: Know exactly what steps to take',
-          'Benefits appeal: Organize evidence and write effective appeal letters',
-          'Human rights complaint: Understand process and gather documentation'
-        ],
-        benefits: [
-          'Never wonder what to do next',
-          'Reduce stress of navigating complex systems',
-          'Ensure you don\'t miss critical steps',
-          'Meet all deadlines with automated reminders'
-        ]
-      },
-      {
-        name: 'Indigenous Language Support',
-        category: 'Phase 2: Cultural',
-        description: 'Support for 6+ Indigenous languages with cultural protocols and sacred knowledge protection',
-        userGuideSection: 'indigenous-languages',
-        highlights: [
-          '6+ Indigenous languages supported',
-          'Cultural protocols for handling sacred knowledge',
-          'Community-reviewed translations',
-          'Separate storage for culturally sensitive information',
-          'Respect for traditional knowledge systems',
-          'Language preservation features'
-        ],
-        examples: [
-          'Use app interface in Cree, Ojibwe, or Inuktitut',
-          'Store treaty-related documents with cultural protocols',
-          'Access Indigenous-specific legal resources',
-          'Connect with Indigenous community members in your language'
-        ],
-        benefits: [
-          'Access services in your language',
-          'Cultural safety and respect built-in',
-          'Preserve and honor traditional knowledge',
-          'Connect with your community authentically'
-        ]
-      },
-      {
-        name: 'Campaign Coordination',
-        category: 'Phase 3: Community',
-        description: 'Organize advocacy campaigns with task management, collaboration tools, and campaign rooms',
-        userGuideSection: 'campaign-coordination',
-        highlights: [
-          'Create and manage advocacy campaigns',
-          'Private campaign rooms for team collaboration',
-          'Task assignment and progress tracking',
-          'Document sharing and collaborative notes',
-          'Campaign templates for common advocacy goals',
-          'Real-time collaboration features'
-        ],
-        examples: [
-          'Organize petition campaign for accessibility improvements',
-          'Coordinate letter-writing campaign to government',
-          'Plan advocacy event with community members',
-          'Track progress on systemic change initiatives',
-          'Share resources and strategies with campaign team'
-        ],
-        benefits: [
-          'Amplify your voice through collective action',
-          'Stay organized with multiple campaigns',
-          'Build community around shared goals',
-          'Track impact of advocacy efforts'
-        ]
-      },
-      {
-        name: 'Wellness Hub',
-        category: 'Core Feature',
-        description: 'Comprehensive wellness tracking with mood journal, symptom tracking, and self-care resources',
-        userGuideSection: 'wellness-support',
-        highlights: [
-          'Daily mood and energy tracking with customizable scales',
-          'Symptom tracking with pattern recognition',
-          'Self-care library with 50+ activities',
-          'Medication tracking with reminders',
-          'Sleep tracking and quality assessment',
-          'Weekly wellness reports with insights'
-        ],
-        examples: [
-          'Track pain levels and identify triggers',
-          'Monitor medication effectiveness over time',
-          'Log mood patterns to discuss with healthcare providers',
-          'Discover self-care activities that work for you',
-          'Set medication reminders so you never miss a dose'
+          'Beta test: Log sample mood and energy levels daily',
+          'Demo: Set up test medication reminders',
+          'Test: Track sample symptoms over a week',
+          'Verify: View pattern insights from test data'
         ],
         benefits: [
           'Better understand your health patterns',
-          'Communicate effectively with healthcare providers',
-          'Identify triggers and warning signs',
-          'Take proactive approach to wellness'
+          'Never forget medications',
+          'Provide accurate health info to doctors',
+          'Identify triggers and patterns'
         ]
       },
       {
         name: 'Dyslexia Support Mode',
-        category: 'Accessibility',
-        description: 'Comprehensive dyslexia support with 5 specialized fonts, 8 color overlays, and spacing controls',
-        userGuideSection: 'settings-and-accessibility',
+        category: 'Phase 1: Accessibility',
+        description: 'Specialized fonts, color overlays, and spacing controls for dyslexia',
+        userGuideSection: 'dyslexia-mode',
         highlights: [
           '5 dyslexia-friendly fonts (OpenDyslexic, Lexend, etc.)',
           '8 color overlay options to reduce visual stress',
-          'Adjustable letter spacing, line height, and word spacing',
-          'Line focus mode highlighting current line',
-          'Reading ruler for tracking lines',
-          'Simplified layout options'
+          'Adjustable letter, line, and word spacing',
+          'Reading ruler and line focus mode',
+          'Beta testers with dyslexia will test readability'
         ],
         examples: [
-          'Choose OpenDyslexic font for easier reading',
-          'Apply blue overlay to reduce eye strain',
-          'Increase letter spacing for better letter distinction',
-          'Use reading ruler to stay focused on current line',
-          'Enable line focus mode for complex documents'
+          'Beta test: Switch between different dyslexia fonts',
+          'Demo: Apply colored overlays and test readability',
+          'Test: Adjust spacing to find comfortable settings',
+          'Verify: Use reading ruler on long documents'
         ],
         benefits: [
           'Read comfortably without fatigue',
-          'Reduce errors from letter confusion',
-          'Customize display to your specific needs',
+          'Reduce letter confusion and errors',
+          'Customize to your specific needs',
           'Access all features without barriers'
         ]
       },
       {
         name: 'Motor Accessibility Features',
-        category: 'Accessibility',
-        description: 'Dwell-click, large touch targets, tremor compensation, and switch navigation support',
-        userGuideSection: 'settings-and-accessibility',
+        category: 'Phase 1: Accessibility',
+        description: 'Dwell-click, large touch targets, and switch navigation support',
+        userGuideSection: 'motor-access',
         highlights: [
-          'Dwell-click: activate buttons by hovering',
-          'Adjustable dwell time (0.5-3.0 seconds)',
+          'Dwell-click: activate by hovering (0.5-3 second settings)',
           'Extra-large touch targets for easier tapping',
-          'Tremor compensation smoothing unintended movements',
-          'Switch navigation for single-switch users',
-          'Voice control compatibility'
+          'Tremor compensation for precise selections',
+          'Single-switch navigation support',
+          'Beta testers with motor disabilities will test all modes'
         ],
         examples: [
-          'Use dwell-click to navigate without tapping',
-          'Increase touch target size for easier use with tremors',
-          'Enable tremor compensation for precise selections',
-          'Navigate entire app with single switch',
-          'Control app with voice commands'
+          'Beta test: Navigate app using dwell-click only',
+          'Demo: Test tremor compensation with sample tasks',
+          'Test: Use single-switch navigation throughout app',
+          'Verify: Adjust dwell time to comfortable setting'
         ],
         benefits: [
           'Full app access regardless of motor ability',
-          'Reduce frustration from missed taps',
-          'Use app independently without assistance',
-          'Customize controls to match your abilities'
+          'No frustration from missed taps',
+          'Independent use without assistance',
+          'Customizable to your abilities'
+        ]
+      },
+      {
+        name: 'Screen Reader Optimization',
+        category: 'Phase 1: Accessibility',
+        description: 'WCAG AAA compliant with NVDA, JAWS, and VoiceOver testing',
+        userGuideSection: 'screen-readers',
+        highlights: [
+          'Tested with NVDA, JAWS, and VoiceOver',
+          'Proper ARIA labels on all interactive elements',
+          'Logical heading structure for navigation',
+          'Alt text on all images and icons',
+          'Beta testers using screen readers will test all features'
+        ],
+        examples: [
+          'Beta test: Navigate entire app with screen reader only',
+          'Demo: Test ARIA labels and announcements',
+          'Verify: All buttons and forms are properly labeled',
+          'Test: Image descriptions are accurate and helpful'
+        ],
+        benefits: [
+          'Complete app access for blind users',
+          'Efficient navigation with proper structure',
+          'No missed information or features',
+          'Professional-grade accessibility'
+        ]
+      },
+      {
+        name: 'Crisis Resources Quick Access',
+        category: 'Phase 1: Support',
+        description: 'Immediate access to crisis hotlines and mental health resources',
+        userGuideSection: 'crisis-resources',
+        highlights: [
+          'Quick access from anywhere in app',
+          '24/7 crisis hotlines for all provinces',
+          'Mental health resources and support lines',
+          'No login required for emergency access',
+          'Beta testers will verify resource accuracy'
+        ],
+        examples: [
+          'Beta test: Access crisis resources from main menu',
+          'Verify: Phone numbers are current and correct',
+          'Test: Emergency access works without logging in',
+          'Demo: Quick dial feature for crisis lines'
+        ],
+        benefits: [
+          'Get help during mental health crises',
+          'Immediate access when you need it most',
+          'No barriers to emergency support',
+          'Peace of mind having resources available'
+        ]
+      },
+      {
+        name: 'Offline-First Design',
+        category: 'Phase 1: Technical',
+        description: 'Full functionality without internet connection after initial setup',
+        userGuideSection: 'offline-mode',
+        highlights: [
+          'All core features work offline',
+          'Data syncs when connection restored',
+          'No cloud dependency for basic functions',
+          'Perfect for rural areas or unreliable connections',
+          'Beta testers will test offline functionality'
+        ],
+        examples: [
+          'Beta test: Use app in airplane mode',
+          'Demo: Create letters and store documents offline',
+          'Test: Track wellness data without internet',
+          'Verify: Data syncs correctly when reconnecting'
+        ],
+        benefits: [
+          'Works anywhere, even without internet',
+          'No lost work due to connection issues',
+          'Reliable for rural and remote users',
+          'Privacy benefit: less data transmission'
+        ]
+      },
+      {
+        name: 'Benefits Navigator (Phase 1)',
+        category: 'Phase 1: Benefits',
+        description: 'Guide to Canadian disability benefits programs by province',
+        userGuideSection: 'benefits-navigator',
+        highlights: [
+          'Information on all provincial programs (ODSP, AISH, PWD, etc.)',
+          'Federal programs (CPP-D, DTC, RDSP)',
+          'Eligibility requirements and application processes',
+          'Links to official application forms',
+          'Beta testers will verify information accuracy'
+        ],
+        examples: [
+          'Beta test: Search for Ontario ODSP information',
+          'Demo: Check CPP-D eligibility requirements',
+          'Test: Access Alberta AISH application links',
+          'Verify: All provincial information is current and accurate'
+        ],
+        benefits: [
+          'Understand benefits you may qualify for',
+          'Province-specific guidance',
+          'Direct links to applications',
+          'Simplified eligibility explanations'
+        ]
+      },
+      {
+        name: 'Community Forum (Beta Preview)',
+        category: 'Phase 1: Community',
+        description: 'Moderated discussion spaces for disability community (Beta testing)',
+        userGuideSection: 'community',
+        highlights: [
+          'Safe, moderated spaces for community discussion',
+          'Topic-based rooms (legal, health, advocacy)',
+          'Anonymous posting options for privacy',
+          'Community guidelines and moderation',
+          'Beta testers will create initial community culture'
+        ],
+        examples: [
+          'Beta test: Post sample discussions in different rooms',
+          'Demo: Test anonymous posting feature',
+          'Test: Report system for inappropriate content',
+          'Verify: Moderation tools work effectively'
+        ],
+        benefits: [
+          'Connect with others facing similar challenges',
+          'Share experiences and advice safely',
+          'Build supportive community',
+          'Learn from others\' experiences'
+        ]
+      },
+      {
+        name: 'Provincial Resource Guides',
+        category: 'Phase 1: Resources',
+        description: 'Detailed guides for disability programs in each Canadian province/territory',
+        userGuideSection: 'provincial-guides',
+        highlights: [
+          'Guides for all 10 provinces and 3 territories',
+          'Benefits programs, eligibility, and applications',
+          'Legal aid and advocacy resources by region',
+          'Healthcare and support services',
+          'Beta testers will verify accuracy for their province'
+        ],
+        examples: [
+          'Beta test: Review your provincial guide for accuracy',
+          'Demo: Compare benefits across provinces',
+          'Test: Access application links for your region',
+          'Verify: Contact information is current'
+        ],
+        benefits: [
+          'Province-specific information in one place',
+          'No need to search multiple government websites',
+          'Understand your local resources',
+          'Make informed decisions about benefits'
+        ]
+      },
+      {
+        name: 'User Guide & Documentation',
+        category: 'Website: Support',
+        description: 'Comprehensive 12-minute guide explaining all 133 beta features',
+        userGuideSection: 'user-guide',
+        highlights: [
+          'Detailed documentation for all 133 features',
+          'Step-by-step tutorials with screenshots',
+          'Searchable and organized by category',
+          'Available in English and French',
+          'Beta testers use this to understand features before testing'
+        ],
+        examples: [
+          'Read user guide at https://3mpwrapp.pages.dev/user-guide/',
+          'Search for specific feature documentation',
+          'Follow step-by-step tutorials for complex features',
+          'Reference guide during beta testing'
+        ],
+        benefits: [
+          'Understand features before testing',
+          'Quick reference during use',
+          'Learn advanced functionality',
+          'Maximize value from the app'
+        ]
+      },
+      {
+        name: 'Automated Testing & Quality Assurance',
+        category: 'Website: Technical',
+        description: 'Daily automated tests for accessibility, links, and performance',
+        userGuideSection: 'quality',
+        highlights: [
+          'Daily pa11y and axe-core accessibility testing',
+          'Automated link checking across entire site',
+          'Lighthouse performance audits',
+          'GitHub Actions CI/CD pipeline',
+          'Public test results visible to all'
+        ],
+        examples: [
+          'View test results in GitHub Actions tab',
+          'Check accessibility scores in automated reports',
+          'Monitor site performance over time',
+          'Review link check results for broken links'
+        ],
+        benefits: [
+          'Consistent quality and accessibility',
+          'Quick detection of issues',
+          'Transparent quality metrics',
+          'Confidence in site reliability'
+        ]
+      },
+      {
+        name: 'Open Source Transparency',
+        category: 'Website: Community',
+        description: 'Fully open source codebase for community review and contribution',
+        userGuideSection: 'opensource',
+        highlights: [
+          'All code publicly available on GitHub',
+          'Community can review, suggest, and contribute',
+          'Transparent development process',
+          'Issue tracking and feature requests public',
+          'Contributing guidelines for community participation'
+        ],
+        examples: [
+          'Review source code at github.com/3mpwrApp/',
+          'Submit feature requests via GitHub Issues',
+          'Contribute code improvements via Pull Requests',
+          'See development roadmap and progress'
+        ],
+        benefits: [
+          'Trust through transparency',
+          'Community-driven development',
+          'Anyone can verify privacy and security claims',
+          'Collaborative improvement'
+        ]
+      },
+      {
+        name: 'Responsive Mobile-First Design',
+        category: 'Website: Technical',
+        description: 'Optimized experience on mobile, tablet, and desktop devices',
+        userGuideSection: 'responsive',
+        highlights: [
+          'Mobile-first design approach',
+          'Touch-optimized for phones and tablets',
+          'Responsive layouts adapt to any screen size',
+          'Fast loading on slow connections',
+          'Beta testers will test on various devices'
+        ],
+        examples: [
+          'Browse site on phone, tablet, or desktop seamlessly',
+          'Beta test: Verify layouts work on your device',
+          'Test: Check touch targets are large enough on mobile',
+          'Demo: Site loads fast even on 3G connection'
+        ],
+        benefits: [
+          'Access from any device',
+          'Consistent experience everywhere',
+          'Works on older or budget devices',
+          'Usable on slow connections'
+        ]
+      },
+      {
+        name: 'Newsletter Subscription',
+        category: 'Website: Community',
+        description: 'Subscribe to updates, new features, and community news',
+        userGuideSection: 'newsletter',
+        highlights: [
+          'Regular updates on new features',
+          'Beta testing opportunities',
+          'Community highlights and success stories',
+          'Privacy-respecting (no spam, easy unsubscribe)',
+          'Available in English and French'
+        ],
+        examples: [
+          'Subscribe at https://3mpwrapp.pages.dev/newsletter/',
+          'Get notified when beta program opens',
+          'Receive weekly curated disability news',
+          'Stay informed about app development progress'
+        ],
+        benefits: [
+          'Stay informed about updates',
+          'Early access to new features',
+          'Community connection',
+          'Never miss important announcements'
+        ]
+      },
+      {
+        name: 'Contact & Support Channels',
+        category: 'Website: Support',
+        description: 'Multiple ways to reach the team for support and feedback',
+        userGuideSection: 'contact',
+        highlights: [
+          'Email support for beta testers',
+          'Social media presence (X, Mastodon, Bluesky)',
+          'GitHub Issues for bug reports',
+          'Contact form on website',
+          'Response within 24-48 hours'
+        ],
+        examples: [
+          'Email: empowrapp08162025@gmail.com',
+          'Submit bugs via GitHub Issues',
+          'Reach out on social media for quick questions',
+          'Use contact form for general inquiries'
+        ],
+        benefits: [
+          'Get help when you need it',
+          'Multiple communication options',
+          'Direct line to development team',
+          'Community support available'
         ]
       }
     ];
