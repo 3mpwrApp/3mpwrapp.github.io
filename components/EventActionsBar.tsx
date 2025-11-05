@@ -1,5 +1,4 @@
 import { Alert, Linking, Share, StyleSheet, Text, View } from 'react-native';
-this
 
 import { ANALYTICS_EVENTS, trackEvent } from '../services/analyticsClient';
 import type { Palette } from '../theme/colors';

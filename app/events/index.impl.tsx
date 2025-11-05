@@ -201,7 +201,24 @@ export default function EventsScreen() {
     const id = `evt-${Date.now()}`;
     const newEvt = { id, ...data } as any;
     setBaseItems(prev => [newEvt, ...prev]);
-    try { await fsAddEvent(newEvt); } catch { /* silent fail keeps local */ }
+    try { 
+      await fsAddEvent(newEvt);
+      Alert.alert(
+        t('common.success','Success'),
+        t('eventsFeature.created','Event created successfully!'),
+        [{ text: t('common.ok','OK') }]
+      );
+      setShowCreate(false);
+      trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id });
+    } catch (err) { 
+      console.error('[Events] Failed to save event to Firestore:', err);
+      // Event is still in local state even if Firestore save fails
+      Alert.alert(
+        t('common.warning','Warning'),
+        'Event created locally but could not sync to cloud. It will be available on this device only.',
+        [{ text: t('common.ok','OK') }]
+      );
+    }
   };
 
   return (
@@ -377,6 +394,9 @@ export default function EventsScreen() {
               </View>
             ))}
             </View>
+
+            {/* Add spacing after calendar matrix */}
+            <View style={{ marginTop: 24, marginBottom: 16 }} />
 
             {/* Calendar Subscription Card - Auto-sync feature with error boundary */}
             <ErrorBoundary>

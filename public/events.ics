@@ -1,0 +1,388 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3mpwr App//Events Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:3mpwr App Events
+X-WR-CALDESC:Community events, disability awareness days, and health observances
+X-WR-TIMEZONE:America/Toronto
+REFRESH-INTERVAL;VALUE=DURATION:PT24H
+X-PUBLISHED-TTL:PT24H
+BEGIN:VEVENT
+UID:evt-1@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20251115T230000Z
+DTEND:20251115T230000Z
+SUMMARY:3mpwr Community Meetup
+DESCRIPTION:Monthly community gathering for peer support and networking
+LOCATION:Virtual Event
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-01-04-braille@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20250104T000000Z
+DTEND:20250104T000000Z
+SUMMARY:World Braille Day
+DESCRIPTION:Celebrating the birth of Louis Braille and raising awareness about the importance of Braille literacy
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-02-04-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20250204T000000Z
+DTEND:20250204T000000Z
+SUMMARY:World Cancer Day
+DESCRIPTION:Raising awareness about cancer and encouraging prevention\, detection\, and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-03-21-down@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20250321T000000Z
+DTEND:20250321T000000Z
+SUMMARY:World Down Syndrome Day
+DESCRIPTION:Raising awareness and creating a single global voice for advocating for the rights of people with Down syndrome
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-04-02-autism@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20250402T000000Z
+DTEND:20250402T000000Z
+SUMMARY:World Autism Awareness Day
+DESCRIPTION:Promoting acceptance and inclusion of people with autism spectrum disorder
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-05-05-celiac@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20250505T000000Z
+DTEND:20250505T000000Z
+SUMMARY:World Celiac Disease Day
+DESCRIPTION:Raising awareness about celiac disease and gluten sensitivity
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-06-27-hiv@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20250627T000000Z
+DTEND:20250627T000000Z
+SUMMARY:National HIV Testing Day
+DESCRIPTION:Encouraging people to get tested for HIV and know their status
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-10-10-mental-health@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20251010T000000Z
+DTEND:20251010T000000Z
+SUMMARY:World Mental Health Day
+DESCRIPTION:Raising awareness about mental health issues and mobilizing efforts in support of mental health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-12-03-disability@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20251203T000000Z
+DTEND:20251203T000000Z
+SUMMARY:International Day of Persons with Disabilities
+DESCRIPTION:Promoting the rights and well-being of persons with disabilities
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-01-04-braille@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20260104T000000Z
+DTEND:20260104T000000Z
+SUMMARY:World Braille Day
+DESCRIPTION:Celebrating the birth of Louis Braille and raising awareness about the importance of Braille literacy
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-02-04-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20260204T000000Z
+DTEND:20260204T000000Z
+SUMMARY:World Cancer Day
+DESCRIPTION:Raising awareness about cancer and encouraging prevention\, detection\, and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-03-21-down@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20260321T000000Z
+DTEND:20260321T000000Z
+SUMMARY:World Down Syndrome Day
+DESCRIPTION:Raising awareness and creating a single global voice for advocating for the rights of people with Down syndrome
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-04-02-autism@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20260402T000000Z
+DTEND:20260402T000000Z
+SUMMARY:World Autism Awareness Day
+DESCRIPTION:Promoting acceptance and inclusion of people with autism spectrum disorder
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-05-05-celiac@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20260505T000000Z
+DTEND:20260505T000000Z
+SUMMARY:World Celiac Disease Day
+DESCRIPTION:Raising awareness about celiac disease and gluten sensitivity
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-06-27-hiv@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20260627T000000Z
+DTEND:20260627T000000Z
+SUMMARY:National HIV Testing Day
+DESCRIPTION:Encouraging people to get tested for HIV and know their status
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-10-10-mental-health@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20261010T000000Z
+DTEND:20261010T000000Z
+SUMMARY:World Mental Health Day
+DESCRIPTION:Raising awareness about mental health issues and mobilizing efforts in support of mental health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-12-03-disability@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20261203T000000Z
+DTEND:20261203T000000Z
+SUMMARY:International Day of Persons with Disabilities
+DESCRIPTION:Promoting the rights and well-being of persons with disabilities
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-01-01@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20250101T000000Z
+DTEND:20250101T000000Z
+SUMMARY:New Year's Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-07-01@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20250701T000000Z
+DTEND:20250701T000000Z
+SUMMARY:Canada Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-09-02@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20250902T000000Z
+DTEND:20250902T000000Z
+SUMMARY:Labour Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-10-14@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20251014T000000Z
+DTEND:20251014T000000Z
+SUMMARY:Thanksgiving
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-12-25@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20251225T000000Z
+DTEND:20251225T000000Z
+SUMMARY:Christmas Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-12-26@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20251226T000000Z
+DTEND:20251226T000000Z
+SUMMARY:Boxing Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-01-01@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20260101T000000Z
+DTEND:20260101T000000Z
+SUMMARY:New Year's Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-07-01@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20260701T000000Z
+DTEND:20260701T000000Z
+SUMMARY:Canada Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-09-02@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20260902T000000Z
+DTEND:20260902T000000Z
+SUMMARY:Labour Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-10-14@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20261014T000000Z
+DTEND:20261014T000000Z
+SUMMARY:Thanksgiving
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-12-25@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20261225T000000Z
+DTEND:20261225T000000Z
+SUMMARY:Christmas Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-12-26@3mpwrapp.pages.dev
+DTSTAMP:20251105T234314Z
+DTSTART:20261226T000000Z
+DTEND:20261226T000000Z
+SUMMARY:Boxing Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+END:VCALENDAR

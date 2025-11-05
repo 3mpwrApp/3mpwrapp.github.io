@@ -29,7 +29,9 @@ export default function CalendarSubscriptionCard() {
   }
 
   const handleSubscribe = async () => {
-    const subscriptionUrl = process.env.EXPO_PUBLIC_CALENDAR_FEED_URL || 'https://calendar.3mpwrapp.com/events.ics';
+    // Updated URL to use website's public directory
+    // The calendar feed should be generated via scripts/generate-calendar-feed.mjs and hosted at this location
+    const subscriptionUrl = process.env.EXPO_PUBLIC_CALENDAR_FEED_URL || 'https://3mpwrapp.pages.dev/events.ics';
     
     try {
       // Copy to clipboard if available
