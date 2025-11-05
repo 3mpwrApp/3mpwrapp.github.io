@@ -25,6 +25,15 @@ export async function initSentry(dsn?: string) {
     // Developer cost alert for Sentry network usage/init
     devCostAlert({ feature: 'sentry', action: 'init:sentry' });
     
+    // CRITICAL: Disable Sentry in Expo Go to prevent tslib conflicts
+    // sentry-expo has known compatibility issues with Expo Go in SDK 53+
+    // @ts-ignore - Constants is available in React Native/Expo
+    const Constants = require('expo-constants').default;
+    if (Constants?.appOwnership === 'expo') {
+      if (__DEV__) logger.warn('Sentry init skipped: not supported in Expo Go (use development build)');
+      return;
+    }
+    
     // Pre-check: Ensure tslib is available (sentry-expo dependency)
     // This prevents the "__extends is undefined" error in some environments
     try {

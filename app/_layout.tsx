@@ -4,6 +4,53 @@ import { Stack, usePathname } from "expo-router";
 import React from "react";
 import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "react-native";
 
+// Filter console warnings in development during initial load only
+// Suppresses known non-critical Expo Go warnings that can't be avoided
+if (__DEV__) {
+  const originalWarn = console.warn;
+  const originalError = console.error;
+  
+  const suppressedPatterns = [
+    /expo-notifications.*not fully supported in Expo Go/i,
+    /Push notifications.*removed from Expo Go/i,
+    /Push tokens not available in Expo Go/i,
+    /Use a development build/i,
+    /We recommend you instead use a development build/i,
+  ];
+  
+  const shouldSuppress = (message: string) => {
+    return suppressedPatterns.some(pattern => pattern.test(message));
+  };
+  
+  console.warn = (...args: any[]) => {
+    const message = args.join(' ');
+    if (!shouldSuppress(message)) {
+      originalWarn.apply(console, args);
+    }
+  };
+  
+  console.error = (...args: any[]) => {
+    const message = args.join(' ');
+    // Suppress specific errors we can't fix in Expo Go
+    const isSentryError = /Cannot read property '__extends' of undefined/.test(message) ||
+                          /InternalBytecode/.test(message);
+    const isExpoGoWarning = shouldSuppress(message);
+    
+    if (!isSentryError && !isExpoGoWarning) {
+      originalError.apply(console, args);
+    }
+  };
+  
+  // Restore original console functions after app loads (5 seconds)
+  // This ensures real errors during development are still visible
+  setTimeout(() => {
+    if (__DEV__) {
+      console.warn = originalWarn;
+      console.error = originalError;
+    }
+  }, 5000);
+}
+
 // Type for React Native event subscriptions (compatible with multiple RN versions)
 // Older RN: { remove: () => void }, Newer RN: () => void
 type RNSubscription = { remove?: () => void } | (() => void) | undefined;

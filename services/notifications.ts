@@ -8,14 +8,57 @@ function getConstants(): any {
   try { return require('expo-constants'); } catch { return {}; }
 }
 
+// Cache to avoid repeated require() calls
+let _notificationsModule: any | null | undefined = undefined;
+
 function getNotifications(): any | null {
+  if (_notificationsModule !== undefined) return _notificationsModule;
+  
   try {
-    // In Expo Go, expo-notifications will work for local notifications
-    // but will show a warning about push tokens - this is expected behavior
-    // The warning is informational and doesn't affect functionality
-    return require('expo-notifications');
-  } catch { 
-    return null; 
+    // Check if we're in Expo Go before loading expo-notifications
+    // This prevents the auto-registration warnings
+    const Constants = getConstants();
+    const isExpoGo = Constants?.default?.appOwnership === 'expo';
+    
+    if (isExpoGo && __DEV__) {
+      // In Expo Go, expo-notifications will show warnings about push tokens
+      // This is expected - local notifications still work fine
+      // Suppress the warnings by intercepting console temporarily
+      const originalWarn = console.warn;
+      const originalError = console.error;
+      
+      console.warn = (...args: any[]) => {
+        const msg = args.join(' ');
+        if (!/expo-notifications.*Expo Go|Push.*Expo Go/i.test(msg)) {
+          originalWarn.apply(console, args);
+        }
+      };
+      
+      console.error = (...args: any[]) => {
+        const msg = args.join(' ');
+        if (!/expo-notifications.*Expo Go|Push.*Expo Go/i.test(msg)) {
+          originalError.apply(console, args);
+        }
+      };
+      
+      const module = require('expo-notifications');
+      
+      // Restore console after a delay (let auto-registration complete)
+      setTimeout(() => {
+        console.warn = originalWarn;
+        console.error = originalError;
+      }, 100);
+      
+      _notificationsModule = module;
+      return module;
+    }
+    
+    // In production builds, load normally
+    _notificationsModule = require('expo-notifications');
+    return _notificationsModule;
+  } catch {
+    _notificationsModule = null;
+    return null;
   }
 }
 
