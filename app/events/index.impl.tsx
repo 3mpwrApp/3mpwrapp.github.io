@@ -1,20 +1,20 @@
-import * as Calendar from 'expo-calendar';
 import { Link, useFocusEffect } from "expo-router";
 import React from "react";
 import {
   Alert,
   FlatList,
   RefreshControl,
-  Share,
   StyleSheet,
   Text,
   TextInput,
-  View,
+  View
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
+import CalendarSubscriptionCard from '../../components/CalendarSubscriptionCard';
 import Card from "../../components/Card";
 import ContrastToggle from "../../components/ContrastToggle";
+import EventActionsBar from '../../components/EventActionsBar';
 import { GapView } from "../../components/GapView";
 import ResponsiveScreenWrapper from "../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../components/SearchBar";
@@ -427,104 +427,24 @@ export default function EventsScreen() {
                   testID={`event-${item.id}`}
                 />
               </Link>
-              <GapView gap={8} style={{ flexDirection:'row', marginTop:4 }}>
-                <A11yPressable
-                  onPress={async () => {
-                    try {
-                      await Share.share({
-                        message: `${item.title}\n${item.date}\n${item.isVirtual? t('eventsFeature.chips.virtual','Virtual'): (item.location||t('eventsFeature.tbd','TBD'))}\n\n${item.description || ''}`.trim(),
-                        title: item.title,
-                      });
-                    } catch {}
-                  }}
-                  accessibilityRole="button"
-                  accessibilityLabel={`${t('common.share','Share')} ${item.title}`}
-                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-                >
-                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>{t('common.share','Share')}</Text>
-                </A11yPressable>
-                <A11yPressable
-                  onPress={async () => {
-                    try {
-                      const { status } = await Calendar.requestCalendarPermissionsAsync();
-                      if (status !== 'granted') {
-                        Alert.alert(
-                          t('eventsFeature.permission.title', 'Calendar Permission'),
-                          t('eventsFeature.permission.message', 'Please allow calendar access to add events.')
-                        );
-                        return;
-                      }
-                      
-                      const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
-                      const defaultCalendar = calendars.find(c => c.allowsModifications) || calendars[0];
-                      
-                      if (!defaultCalendar) {
-                        Alert.alert(
-                          t('eventsFeature.noCalendar.title', 'No Calendar'),
-                          t('eventsFeature.noCalendar.message', 'No calendars found on your device.')
-                        );
-                        return;
-                      }
-                      
-                      const startDate = new Date(item.date);
-                      const endDate = new Date(startDate.getTime() + 3600000); // 1 hour duration
-                      
-                      const eventDetails = {
-                        title: item.title,
-                        startDate,
-                        endDate,
-                        location: item.isVirtual ? 'Virtual' : (item.location || ''),
-                        notes: `${item.description || ''}\n\nPowered by 3mpwrApp\nhttps://3mpwrapp.pages.dev/`,
-                        organizerEmail: 'empowrapp08162025@gmail.com',
-                        url: 'https://3mpwrapp.pages.dev/',
-                      };
-                      
-                      await Calendar.createEventAsync(defaultCalendar.id, eventDetails);
-                      Alert.alert(
-                        t('eventsFeature.added.title', 'Success'),
-                        t('eventsFeature.added.message', 'Event added to your calendar!')
-                      );
-                      trackEvent(ANALYTICS_EVENTS.EVENTS_ADD_TO_CALENDAR, { id: item.id });
-                    } catch (error) {
-                      console.error('Calendar error:', error);
-                      Alert.alert(
-                        t('common.error', 'Error'),
-                        t('eventsFeature.addError', 'Could not add event to calendar.')
-                      );
-                    }
-                  }}
-                  accessibilityRole="button"
-                  accessibilityLabel={`${t('eventsFeature.addToCalendar','Add to phone calendar')} ${item.title}`}
-                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.primary, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.primary }}
-                >
-                  <Text style={{ color: palette.onPrimary, fontSize:12, fontWeight:'600' }}>📅 {t('eventsFeature.addBtn','Add')}</Text>
-                </A11yPressable>
-                <A11yPressable
-                  onPress={async () => {
-                    const ics = makeICS(item);
-                    await shareText(`${item.title}.ics`, ics);
-                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { id: item.id });
-                  }}
-                  accessibilityRole="button"
-                  accessibilityLabel={`${t('common.export','Export')} ${item.title} ICS`}
-                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-                >
-                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>ICS</Text>
-                </A11yPressable>
-                <A11yPressable
-                  onPress={async () => {
-                    const header = '"Date","Title","Description","Location"';
-                    const row = makeCSVRow(item as any);
-                    await shareText(`${item.title}.csv`, `${header}\n${row}`);
-                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { id: item.id });
-                  }}
-                  accessibilityRole="button"
-                  accessibilityLabel={`${t('common.export','Export')} ${item.title} CSV`}
-                  style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-                >
-                  <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>CSV</Text>
-                </A11yPressable>
-              </GapView>
+              <EventActionsBar 
+                event={item} 
+                palette={palette}
+                showEditDelete={item.id.startsWith('evt-')}
+                onEdit={() => {
+                  // TODO: Implement edit functionality
+                  Alert.alert('Edit Event', 'Edit functionality coming soon!');
+                }}
+                onDelete={async () => {
+                  // Delete from local state
+                  setBaseItems(prev => prev.filter(e => e.id !== item.id));
+                  // Try to delete from Firestore (silent fail is OK)
+                  try {
+                    // TODO: Implement Firestore delete
+                    Alert.alert('✅ Deleted', `"${item.title}" has been deleted.`);
+                  } catch {}
+                }}
+              />
             </View>
           )}
           contentContainerStyle={{ paddingTop: 12 }}
@@ -533,8 +453,8 @@ export default function EventsScreen() {
           }
           ListHeaderComponent={(
             <View style={{ marginBottom: 8 }}>
-              {/* Calendar Subscription Card - Temporarily disabled for debugging */}
-              {/* <CalendarSubscriptionCard /> */}
+              {/* Calendar Subscription Card */}
+              <CalendarSubscriptionCard />
 
               {/* One-time Export Options */}
               <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600' }}>
