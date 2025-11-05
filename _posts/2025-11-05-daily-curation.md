@@ -9,136 +9,88 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-11-05
 
-Curated 27 items from disability, accessibility, and social policy sources.
+Curated 17 items from disability, accessibility, and social policy sources.
 
-## 1. Canadian athletes on outside as Carney government's 1st budget sees no new sports funding
-<img src='https://i.cbc.ca/ais/6ca373c4-cc73-4f3a-acd3-6bafa1979029,1762293466188/full/max/0/default.jpg?im=Crop%2Crect%3D%2820%2C0%2C1139%2C640%29%3BResize%3D%28620%29' alt='Composite photo of Canadian Prime Minister Mark Carney and Canadian Olympic Committee CEO David Shoemaker' width='620' height='349' title='Prime Minister Mark Carney, left, has stated his love and passion for sport, physical activity and recreation in Canada, but didn’t include new funding for sports in his first budget delivered on Tuesday. Canadian Olympic Committee CEO David Shoemaker, right, was hopeful of a $144 million increase. '/><p>Canada’s summer and winter Olympians, along with other athletes, were left on the outside during Tuesday’s budget announcement by the federal government, despite a push in recent months by the Canadian Olympic Committee and national sport organizations for more resources.</p>
-📍 [Source](https://www.cbc.ca/sports/olympics/sports-no-funding-federal-budget-2025-canada-olympians-carney-shoemaker-9.6966806?cmp=rss)
-**Score:** 26.00
+## 1. One of Trudeau’s most important climate policies is on the chopping block. Can Ottawa's Plan B get buy-in?
+<img src='https://i.cbc.ca/ais/1dcfc89a-5c6c-4f5a-a236-68b53d49ec36,1762307861615/full/max/0/default.jpg?im=Crop%2Crect%3D%28181%2C63%2C7226%2C4064%29%3BResize%3D%28620%29' alt='A man in a dark suit shakes hands with a woman in a red dress and jacket as they stand in front of a painting and the Canadian and Alberta flags. ' width='620' height='349' title='Prime Minister Mark Carney is seen with Alberta Premier Danielle Smith at the start of a meeting in Ottawa, Monday, Oct. 6, 2025.  THE CANADIAN PRESS/Adrian Wyld'/><p>Four years after unveiling plans for a limit on all oil and natural gas industry emissions in Canada, the federal government is, in all likelihood, scrapping the cap. It’s the latest move by Prime Minister Mark Carney to put more emphasis on economic growth and less attention on climate action. </p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/carney-scraps-emissions-cap-danielle-smith-alberta-9.6966596?cmp=rss)
+**Score:** 29.00
 
-## 2. Young people are facing a crisis of high unemployment. Here’s how the budget addresses that
-<img src='https://i.cbc.ca/ais/a626863a-09f5-4a46-aed3-5c2a656388d0,1762288654012/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C5500%2C3093%29%3BResize%3D%28620%29' alt='A man speaks at a podium with an audience in front of him.' width='620' height='349' title='Prime Minister Mark Carney addresses students at the University of Ottawa about Canada’s plan to build a stronger economy, in advance of the 2025 Budget, in Ottawa on October 22, 2025.'/><p>Young people are facing high unemployment rates and struggling with a challenging labour market, and the government’s plan to address that includes more funding for summer job and work placement supports. But experts aren't sure that will be enough to alleviate the pressure of a challenging labour market.</p>
-📍 [Source](https://www.cbc.ca/news/business/federal-budget-young-people-youth-jobs-employment-9.6966638?cmp=rss)
-**Score:** 23.50
+## 2. MP Chris d'Entremont says he joined Liberals because of Poilievre's leadership style
+<img src='https://i.cbc.ca/ais/f8d20826-e841-4467-8663-a61909ef5fc3,1762354263578/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C330%2C8127%2C4571%29%3BResize%3D%28620%29' alt='Former deputy speaker Chris D'Entremont rises to remove his name from candidates for speaker of the House of Commons in Ottawa on Monday, May 26, 2025.' width='620' height='349' title='Former deputy speaker Chris D'Entremont rises to remove his name from candidates for speaker of the House of Commons in Ottawa on Monday, May 26, 2025.'/><p>Nova Scotia MP Chris d'Entremont said Wednesday he left the Conservative caucus because he didn't feel represented in leader Pierre Poilievre's party anymore and bristled at his "negative" approach to politics.</p>
+📍 [Source](https://www.cbc.ca/news/politics/chris-dentremont-liberals-poilievre-9.6967559?cmp=rss)
+**Score:** 13.30
 
-## 3. Federal budget charts difficult path out of current crisis — with small margin of error
-<img src='https://i.cbc.ca/ais/51c61590-0c63-4649-86d4-2d06c4e95317,1762308770861/full/max/0/default.jpg?im=Crop%2Crect%3D%2810%2C105%2C6556%2C3687%29%3BResize%3D%28620%29' alt='Two men hold up books' width='620' height='349' title='Prime Minister Mark Carney and Minister of Finance and National Revenue Francois-Philippe Champagne make their way into the House of Commons for the tabling of the federal budget on Parliament Hill in Ottawa, on Tuesday, Nov. 4, 2025.'/><p>The 2025 federal budget plots a path for the Canadian economy to emerge from the current crisis. But it also highlights just how deep a hole the economy is in right now and how small the margin for error is as Canada navigates the perils of a trade war.</p>
-📍 [Source](https://www.cbc.ca/news/business/canada-federal-budget-analysis-peter-armstrong-9.6967179?cmp=rss)
-**Score:** 23.00
-
-## 4. Governments Of Canada and Manitoba Strengthening Justice for Canada's First Responders
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71298)
-**Score:** 17.00
-
-## 5. Calgary's mayor cautiously optimistic about federal budget as more details sought
-Mayor Jeromy Farkas said the budget makes funding for municipalities a priority, but notes Calgarians will judge the budget on 'actions on the ground, not words on paper.'
-📍 [Source](https://globalnews.ca/news/11510456/calgarys-mayor-cautiously-optimistic-about-federal-budget/)
+## 3. Alberta unions promise ‘big and bold’ response — but can they deliver?
+<img src='https://i.cbc.ca/ais/c1542eae-3015-4d72-b133-7dc656f24f14,1762297212413/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C356%2C6567%2C3693%29%3BResize%3D%28620%29' alt='A group of people stand on stage.' width='620' height='349' title='A group of supporters of the Alberta Federation of Labour gathered on stage in Edmonton on Oct. 29. '/><p>On the heels of the Alberta government’s decision to use the Charter's notwithstanding clause to force striking teachers back to work, the provincial labour movement is flirting with a tactic that its leaders say would be “big and bold and unprecedented" — but they’re still not quite ready to flip the switch.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-federation-of-labour-gil-mcgowan-afl-strike-9.6966922?cmp=rss)
 **Score:** 13.50
 
-## 6. Quebec government wants to restart talks with doctors over payment reform
-Legault said Tuesday he wants to restart talks with doctors about the terms of his government's payment reform bill.
-📍 [Source](https://globalnews.ca/news/11511458/quebec-government-restart-talks-doctors/)
-**Score:** 15.00
-
-## 7. Budget promises to introduce framework for Canadian dollar-backed cryptocurrency
-<img src='https://i.cbc.ca/ais/65334243-7b84-4dec-87be-d191a73d63e0,1762291603017/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C6000%2C3375%29%3BResize%3D%28620%29' alt='an image of bitcoin' width='620' height='349' title='Stablecoin cryptocurrencies which are backed by gold or cash are seen as more reliable than cryptocurrencies like Bitcoin which are not. '/><p>The Liberal government is committing to roll out new legislation to ensure some digital currencies are secure and stable enough for consumers and businesses to use.</p>
-📍 [Source](https://www.cbc.ca/news/politics/government-crypto-currency-framework-9.6966615?cmp=rss)
-**Score:** 15.10
-
-## 8. Budget 2025: No commitment on emissions in Canada’s new climate strategy
-The budget also doesn't mention possible incentive measures to encourage Canadians to lower their own emissions, such as reviving a subsidy for electric vehicle purchases.
-📍 [Source](https://globalnews.ca/news/11511148/budget-2025-climate-strategy/)
-**Score:** 14.00
-
-## 9. Indigenous programs face $2.3B in cuts, some new money in Carney’s 1st budget
-<img src='https://i.cbc.ca/ais/1ba8a1a7-0523-4a88-8358-2649f11c2b86,1762291714949/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C758%2C7289%2C4100%29%3BResize%3D%28620%29' alt='Mandy Gull-Masty speaks into a microphone flanked by other ministers with a Canadian flag in the backgroun.' width='620' height='349' title='Minister of Indigenous Services Mandy Gull-Masty speaks during a press conference in Ottawa, on Wednesday, Oct. 29, 2025.'/><p>Indigenous programs face more than $2 billion in budget cuts but are being spared the worst of Ottawa’s proposed government-wide spending reductions in Mark Carney’s first budget as prime minister. In new money, Ottawa promises $2.3 billion over three years for safe water in First Nations.</p>
-📍 [Source](https://www.cbc.ca/news/indigenous/indigenous-budget-2025-9.6966648?cmp=rss)
-**Score:** 16.50
-
-## 10. Manitoba Government Expands Care for Dialysis Patients and Mothers in Norway House Cree Nation
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71297)
-**Score:** 13.00
-
-## 11. Canada's immigration system is lost in the bushes
-📍 [Source](https://rabble.ca/politics/canadian-politics/canadas-immigration-system-is-lost-in-the-bushes/)
-**Score:** 9.50
-
-## 12. Get Ready for Harper-Style Public Service Cuts, Says Analyst
-Budget 2025 proposes cutting 40,000 government jobs.
-📍 [Source](https://thetyee.ca/News/2025/11/05/Get-Ready-Harper-Style-Public-Service-Cuts/)
-**Score:** 12.00
-
-## 13. The Military Wins and Public Programs Lose in Carney’s Budget
-But will the Liberals find enough support to survive a non-confidence vote?
-📍 [Source](https://thetyee.ca/Analysis/2025/11/04/Military-Wins-Public-Programs-Lose-Carney-Budget/)
-**Score:** 12.00
-
-## 14. Budget ushers in 'transformational' era for federal public service
-📍 [Source](https://www.cbc.ca/news/canada/ottawa/federal-budget-public-service-9.6965269?cmp=rss)
-**Score:** 12.00
-
-## 15. Why should you care about the federal deficit?
-<img src='https://i.cbc.ca/ais/6bfefc7d-fa8b-45f4-9b1f-d267608a9891,1762289294864/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Prime Minister Mark Carney, left, is seen next to an image of Conservative Leader Pierre Poilievre in this combination image.' width='620' height='349' title='Prime Minister Mark Carney, left, is seen next to an image of Conservative Leader Pierre Poilievre in this combination image.'/><p>The federal deficit is a common flashpoint in Canadian politics. Is it really such a big deal? And how much should you worry about it?</p>
-📍 [Source](https://www.cbc.ca/player/play/9.6966620?cmp=rss)
-**Score:** 12.00
-
-## 16. Power outages, closures plague Westside Road as burned trees fall on power lines
-'The weekend of October 24th to 27th, the Wilson’s Landing and north area had power outages anywhere from 23 to 35 hours — all within a 54-hour period,' said resident Blanche Beda.
-📍 [Source](https://globalnews.ca/news/11511048/power-outages-closures-plague-westside-road-as-burned-trees-fall-on-power-lines/)
+## 4. Carney calls floor-crossing ex-Conservative MP ‘exceptionally valuable'
+Prime Minister Mark Carney commented the day after a former Conservative MP resigned to join the Liberal Party and said the move was 'exceptionally valuable.'
+📍 [Source](https://globalnews.ca/news/11512179/mark-carney-chris-dentremont-floor-crossing/)
 **Score:** 7.50
 
-## 17. Andrew Rosenfeldt's aunt takes the stand during Day 11 of 2nd-degree murder trial
-Rosenfeldt’s aunt said she heard a loud bang the night Nykera Brown died during the 11th day of his second-degree murder trial at Saskatoon Court of King's Bench Tuesday.
-📍 [Source](https://globalnews.ca/news/11511144/rosenfeldts-aunt-day-11-second-degree-murder-trial/)
-**Score:** 7.50
+## 5. Anglican Diocese of Edmonton questions use of notwithstanding clause on teachers’ strike
+<img src='https://i.cbc.ca/ais/2e8bb74e-58c1-4a71-8ac1-2c96851be17b,1762318362559/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C346%2C6636%2C3732%29%3BResize%3D%28620%29' alt='A crowd of people holding signs at a rally.' width='620' height='349' title='Teachers and supporters take part in a rally on World Teachers' Day in Edmonton on Oct. 5.'/><p>The Anglican Diocese of Edmonton is expressing concerns about the Alberta government's use of the notwithstanding clause to force striking teachers back to work.</p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-teachers-strike-notwithstanding-clause-diocese-9.6967280?cmp=rss)
+**Score:** 10.50
 
-## 18. Canola and food exports: What Budget 2025 proposes as trade war continues
-The Liberal government is promising new supports for canola farmers and other sectors hit by U.S. and international tariffs in the federal budget released Tuesday.
-📍 [Source](https://globalnews.ca/news/11511102/federal-budget-2025-canola-food-supports-tariffs/)
+## 6. Moose set loose in Interior B.C. with the help of a Canadian flag
+<img src='https://i.cbc.ca/ais/e77a90b9-53d4-422c-ae2c-4acd812238ac,1762352413753/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C502%2C969%2C545%29%3BResize%3D%28620%29' alt='Two men stand near a moose.' width='620' height='349' title='RCMP Const. Taylor Sippel and a conservation officer work together to coax a young moose back into the forest using a Canadian flag.'/><p>On a sleepy fall morning in the quiet woods of Interior B.C., a young moose trapped inside a paddock was led to freedom by an animal lover and a Canadian flag.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/moose-back-on-the-loose-9.6967086?cmp=rss)
 **Score:** 9.00
 
-## 19. St. Mary's fish plant destroyed by fire as crews face hurricane-force winds in N.L.
-<img src='https://i.cbc.ca/ais/7d053638-130b-4b13-8e60-d03aa326ae44,1762306583188/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C304%2C2048%2C1152%29%3BResize%3D%28620%29' alt='A fish plant engulfed in flames' width='620' height='349' title='The St. Mary's Bay Inc. fish plant has been destroyed in a fire Tuesday night.'/><p>The fish plant in the Newfoundland community of St. Mary's has burned to the ground as the community faces hurricane force winds and heavy rain, Mayor Steve Ryan told CBC News Tuesday night. </p>
-📍 [Source](https://www.cbc.ca/news/canada/newfoundland-labrador/st-marys-fish-plant-destroyed-9.6967169?cmp=rss)
-**Score:** 8.50
-
-## 20. City of Kelowna hopes for provincial approval to ease restrictions on short-term rentals
-Council also passed a resolution to try and lobby the province to fast-track the process and exemption as a final approval would not be granted until November 2026.
-📍 [Source](https://globalnews.ca/news/11511197/city-of-kelowna-provincial-approval-ease-restrictions-short-term-rentals/)
+## 7. Manitoba Government Accepts All Recommendations From Independent Review of The Planning Amendment Act and The City of Winnipeg Charter Amendment Act (Bill 37)
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71300)
 **Score:** 7.50
 
-## 21. Waves could reach 12 metres high on N.L. south coast as heavy winds, rain persist
-<img src='https://i.cbc.ca/ais/faa2ce34-7944-46e4-a210-f3df11643b24,1762263544423/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C96%2C1024%2C576%29%3BResize%3D%28620%29' alt='view of shoreline with large waves.' width='620' height='349' title='Waves pounded the shores of Trepassey, near the southeastern corner of Newfoundland's Avalon Peninsula, on Sunday morning.'/><p>CBC meteorologist Ashley Brauweiler warns of a storm surge from the Burin Peninsula to the southern Avalon that could bring waves as high as 12 metres breaking along the shore.</p>
-📍 [Source](https://www.cbc.ca/news/canada/newfoundland-labrador/nl-storm-surge-9.6965836?cmp=rss)
-**Score:** 5.80
-
-## 22. UCP brought back corporate donations to parties, then took in $471K in three months
-<img src='https://i.cbc.ca/ais/19f8b2a6-5ee9-42cb-8e45-ef875be98adc,1733620393951/full/max/0/default.jpg?im=Crop%2Crect%3D%28528%2C282%2C4653%2C2617%29%3BResize%3D%28620%29' alt='Alberta Legislature building and dome illuminated with Edmonton skyline in background at nightfall.' width='620' height='349' title='Alberta Legislature evening drone shots.'/><p>Injury lawyers opened their wallets to support the United Conservative Party, while their fight against auto insurance reforms continues.</p>
-📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-corporate-donors-injury-lawyers-ucp-ndp-fundraising-9.6966311?cmp=rss)
+## 8. Manitoba Government Adds 800 Teachers in Two Years
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71299)
 **Score:** 7.50
 
-## 23. Ontario town could soon own former WWII-era POW camp, but cost a concern
-The future of Camp 30, a former prisoner of war camp in Ontario, is up in the air despite an offer for the municipality of Clarington to take on the remaining land and buildings.
-📍 [Source](https://globalnews.ca/news/11509942/camp-30-pow-camp-future-ontario/)
-**Score:** 4.50
+## 9. There's still time to win a Canadian getaway—and support B.C.’s hospitality workers
+Two days left to support BC hospitality workers.
+📍 [Source](https://www.straight.com/news/theres-still-time-to-win-a-canadian-getaway-and-support-bcs-hospitality-workers)
+**Score:** 7.50
 
-## 24. Budget 2025: Ottawa to slash foreign aid spending to pre-pandemic levels
-The budget talks of "leveraging innovative tools, while focusing support for countries that need it the most" and rejigging existing agreements with specific countries.
-📍 [Source](https://globalnews.ca/news/11511224/federal-budget-2025-foreign-aid-cuts/)
-**Score:** 4.00
+## 10. Kelowna, B.C., is the 1st Canadian city recognized by UNESCO for its food and cuisine
+<img src='https://i.cbc.ca/ais/4484f4ce-da18-4213-861c-f6ce3c195dd7,1762286156708/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A winery overlooking a scenic island on a sunny day ' width='620' height='349' title='Vineyard,Overlooking,Green,Bay,Subdivision,Okanagan,Lake,Kelowna,British,Columbia'/><p>The picturesque lakeside city in Okanagan Valley has been designated a “Creative City of Gastronomy ” by the United Nations Educational, Scientific and Cultural Organization (UNESCO).</p>
+📍 [Source](https://www.cbc.ca/radio/asithappens/kelowna-unesco-gastronomy-9.6966400?cmp=rss)
+**Score:** 7.10
 
-## 25. The Beaches make a play for Canadian rock royalty at Doug Mitchell
-The Beaches are making more than just waves.
-📍 [Source](https://www.straight.com/the-beaches-review-vancouver-2025)
-**Score:** 4.50
+## 11. 'Cloud' of tension between Aboriginal title and private property ownership lands in B.C.
+<img src='https://i.cbc.ca/ais/21f6e0a2-6e0f-4b40-ac6f-1d0edfd9f63d,1762294998573/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C72%2C695%2C390%29%3BResize%3D%28620%29' alt='British Columbia's first governor was James Douglas' width='620' height='349' title='In 1859, British Columbia's first governor — James Douglas — promised to exempt Indigenous settlements like Tl'uqtinus from sale or claims from settlers.'/><p>Decades ago one of B.C.'s top judges described tensions between the legal concept of Aboriginal title and the reality of private property ownership as a "cloud." Last week, just as Southin predicted, the "cloud" touched down in Richmond. </p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/cowichan-aboriginal-title-land-ownership-9.6965257?cmp=rss)
+**Score:** 5.00
 
-## 26. Infants Bear the Brunt of RSV Hospitalizations, UBC Study Finds
-Researchers say the province should do more to protect the very small and vulnerable.
-📍 [Source](https://thetyee.ca/News/2025/11/05/Infants-Bear-Brunt-RSV-Hospitalizations/)
-**Score:** 2.00
+## 12. Prince Harry in Toronto this week for several events tied to Remembrance Day
+Prince Harry is set to begin a two-day visit to Toronto to attend events supporting veterans and the military community ahead of Remembrance Day.
+📍 [Source](https://globalnews.ca/news/11512070/prince-harry-in-toronto-events-tied-to-remembrance-day/)
+**Score:** 6.00
 
-## 27. Nova Scotia MP Chris d'Entremont resigns from Conservative caucus to join the Liberals
-<img src='https://i.cbc.ca/ais/0905db69-96e1-4438-9d30-a948a4cda86c,1762294608702/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C330%2C8127%2C4571%29%3BResize%3D%28620%29' alt='Former deputy speaker Chris D'Entremont rises to remove his name from candidates for speaker of the House of Commons in Ottawa on Monday, May 26, 2025.' width='620' height='349' title='Former deputy speaker Chris D'Entremont rises to remove his name from candidates for speaker of the House of Commons in Ottawa on Monday, May 26, 2025.'/><p>Nova Scotia MP Chris d'Entremont resigned from the Conservative caucus Tuesday — and he's joining the Liberals.</p>
-📍 [Source](https://www.cbc.ca/news/politics/conservative-mp-out-of-caucus-chris-dentremont-9.6966836?cmp=rss)
-**Score:** 1.30
+## 13. 'Bring my dad home,' pleads son of Sask. man missing since June 2022
+<img src='https://i.cbc.ca/ais/5406aa9f-4412-4dca-a309-0cc516027fa2,1762286762130/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C25%2C720%2C405%29%3BResize%3D%28620%29' alt='A man named Drew Ballantyne hugs his young son Danny Ballantyne on an outdoor deck.' width='620' height='349' title=''/><p>The family of Drew Ballantyne continues to look for information about what might have happened to him. Ballantyne was last seen in June 2022.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/missing-man-drew-ballantyne-pelican-narrows-9.6966492?cmp=rss)
+**Score:** 5.50
+
+## 14. Winnipeg veterinarian ordered to end practice after surgery error led to cat’s leg being amputated
+<img src='https://i.cbc.ca/ais/5b8210c4-8f7b-401e-b35c-c14e4702ed8c,1762182916814/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C285%2C5472%2C3078%29%3BResize%3D%28620%29' alt='A woman seated on a couch holds a black cat and presses her face against his head.' width='620' height='349' title='Noelle McIvor holds her four-year-old cat Shadow, whose veterinary surgery led her to file a complaint against the veterinarian after the cat’s leg needed to be amputated. '/><p>A Winnipeg pet owner whose cat Shadow needed a hind leg amputated after an error during surgery says she is glad the veterinarian is being ordered to end his practice in 2026.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/winnipeg-veterinarian-wenchao-zheng-practice-misconduct-9.6962681?cmp=rss)
+**Score:** 3.00
+
+## 15. Unheard. Unserved: Misdiagnosed for years, terminal cancer patient says more access could save lives
+The 45-year-old mother of two says the hardest aspect of her vulvar cancer diagnosis has been coming to terms with leaving behind her eight-year-old twins.
+📍 [Source](https://globalnews.ca/news/11508243/unheard-unserved-vulvar-cancer/)
+**Score:** 2.20
+
+## 16. Heart of the City Festival showcases the Downtown Eastside's commitment to building community
+"These are real people, with real feelings.”
+📍 [Source](https://www.straight.com/arts/heart-of-city-festival-showcases-downtown-eastsides-commitment-to-building-community)
+**Score:** 3.00
+
+## 17. N.L.’s southern shore gears up for more stormy weather after ‘devastating’ night
+<img src='https://i.cbc.ca/ais/872efc12-bb38-4af5-bbe6-2e1fd9f6a5eb,1762349677663/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Smoking remains of a building. ' width='620' height='349' title='The fish plant in St. Mary's was destroyed by a fire worsened by high winds Tuesday night. '/><p>St. Mary’s Mayor Steve Ryan describes Tuesday night’s events as “a perfect storm.” The town's fish plant had burned down in the middle of a storm that brought hurricane-force winds. Those weather conditions are expected to continue through Wednesday.</p>
+📍 [Source](https://www.cbc.ca/news/canada/newfoundland-labrador/southern-shore-storm-fish-plant-fire-9.6967395?cmp=rss)
+**Score:** 1.00
 
