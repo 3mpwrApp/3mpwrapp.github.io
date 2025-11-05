@@ -132,16 +132,19 @@ Additional resources:
 
 <div class="audit-info">
   <div class="audit-item">
-    <strong>Last Audit:</strong> October 26, 2025
+    <strong>Last Audit:</strong> November 5, 2025
   </div>
   <div class="audit-item">
     <strong>Testing Method:</strong> Automated (axe-core, pa11y, Lighthouse) + Manual Testing
   </div>
   <div class="audit-item">
-    <strong>Pages Tested:</strong> 15 pages
+    <strong>Pages Tested:</strong> 15+ pages (English & French)
   </div>
   <div class="audit-item violations-zero">
     <strong>Violations Found:</strong> 0
+  </div>
+  <div class="audit-item">
+    <strong><a href="/ACCESSIBILITY-AUDIT-2025-11.md">📄 View Full Audit Report</a></strong>
   </div>
 </div>
 
