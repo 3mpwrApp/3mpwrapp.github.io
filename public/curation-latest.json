@@ -1,78 +1,253 @@
 {
   "date": "2025-11-06",
-  "timestamp": "2025-11-06T15:29:32.430Z",
-  "count": 10,
+  "timestamp": "2025-11-06T21:23:02.078Z",
+  "count": 35,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Supreme Court of Canada dismisses B.C. ostrich farm attempt to save flock",
-      "link": "https://globalnews.ca/news/11513951/ostriches-decision-supreme-court-bc/",
-      "description": "The CFIA has said the application of the avian flu stamping out policy for this farm has been upheld by the Federal Court of Canada and the Federal Court of Appeal.",
-      "score": 26.5,
-      "pubDate": "Thu, 06 Nov 2025 11:49:23 +0000"
+      "title": "Ontario Grade 8 teacher pleads guilty to sex crimes against students",
+      "link": "https://www.cbc.ca/news/canada/toronto/ontario-teacher-pleads-guilty-9.6969331?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/baf7fbbf-af75-4b44-9454-0897a4115717,1762448802313/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Woman in sunglasses, black jacket with poppy leaving a courtroom' width='620' height='349' title='Kelly-Anne Jennings was first charged in August 2024 after police said a male student told his mother about inappropriate physical contact with a teacher on a class trip. '/><p>An Ontario Grade 8 teacher who used Snapchat to send and solicit nude pictures from former students has pleaded guilty to luring and child pornography charges.</p>",
+      "score": 16.5,
+      "pubDate": "Thu, 06 Nov 2025 12:24:57 EST"
     },
     {
-      "title": "Supreme Court to weigh in on Saskatchewan's school pronoun case",
-      "link": "https://globalnews.ca/news/11513948/saskatchewan-school-pronoun-law-supreme-court-decision/",
-      "description": "The Supreme Court of Canada is set to announce whether it will hear appeals in a challenge of Saskatchewan's school pronoun law.",
-      "score": 15.3,
-      "pubDate": "Thu, 06 Nov 2025 11:33:52 +0000"
+      "title": "Manitoba Government Passes Legislation to Respond to Meth Crisis",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71417",
+      "description": "",
+      "score": 17.9,
+      "pubDate": "Wed, 05 Nov 2025 17:58:00 CST"
     },
     {
-      "title": "Here's what each federal department plans to cut under Budget 2025",
-      "link": "https://www.cbc.ca/news/canada/ottawa/here-s-what-each-federal-department-plans-to-cut-under-budget-2025-9.6967661?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/3ac58195-abec-4e9d-8432-c9fd288de310,1762355216834/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C520%2C7969%2C4482%29%3BResize%3D%28620%29' alt='A government building which houses the Canada Revenue Agency in the background with fall foliage in the front.' width='620' height='349' title='The Connaught Building which houses the Canada Revenue Agency (CRA) is pictured as a walker makes their way through Major's Hill Park in Ottawa on Monday, Nov. 3, 2025. '/><p>Tuesday's federal budget  offers a glimpse into how dozens of government departments plan to rein in spending following this summer's comprehensive expenditure review. Here's a department-by-department breakdown.</p>",
-      "score": 15.5,
+      "title": "Peloton recalls 833K bikes — with 44K in Canada — over seat post break risk",
+      "link": "https://globalnews.ca/news/11514081/peloton-recall-seat-posts-canada-united-states/",
+      "description": "Peloton is recalling thousands of bicycle seat posts in Canada and the United States for risk of breaking, which can lead to falls and injury.",
+      "score": 14.3,
+      "pubDate": "Thu, 06 Nov 2025 16:11:25 +0000"
+    },
+    {
+      "title": "The Supreme Court of Canada Wants You to Call 911 if Someone Is Overdosing",
+      "link": "https://thetyee.ca/News/2025/11/06/Supreme-Court-Wants-You-Call-911-Someone-Overdosing/",
+      "description": "Police can’t arrest a person for drug possession if they call for help and stick around, a new ruling finds.",
+      "score": 13.5,
+      "pubDate": "Thu, 06 Nov 2025 08:30:00 +0000"
+    },
+    {
+      "title": "Used car prices are dropping slightly in Canada, but remain high",
+      "link": "https://globalnews.ca/news/11514250/used-car-prices-declining-canada/",
+      "description": "Data shows used car prices are up from last year but slowly declining month to month. Still, consumers may not be eager to make a purchase because of affordability concerns.",
+      "score": 13.1,
+      "pubDate": "Thu, 06 Nov 2025 18:36:14 +0000"
+    },
+    {
+      "title": "‘We’re in an Emergency. We Have Got to Start Talking’",
+      "link": "https://thetyee.ca/News/2025/11/06/Avi-Lewis-Interview/",
+      "description": "Environmentalist and documentarian Avi Lewis is taking another swing at federal politics. This time, he wants to lead the NDP. A Tyee Q&A.",
+      "score": 13.8,
+      "pubDate": "Thu, 06 Nov 2025 08:40:00 +0000"
+    },
+    {
+      "title": "IN PHOTOS | Scenes from Prince Harry's visit in Toronto",
+      "link": "https://www.cbc.ca/news/canada/toronto/in-photos-scenes-from-prince-harry-s-visit-in-toronto-9.6969575?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/8f14e103-8977-4f0e-8918-4fa133251c00,1762455755357/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C25%2C4800%2C2700%29%3BResize%3D%28620%29' alt='A man in a suit crouches next to an elderly veteran who is seated and pointing to a framed picture on the table.' width='620' height='349' title='Prince Harry, right, talks with Second World War veteran Ed Marshall as he meets with some of Canada's oldest veterans, joining them in a creative arts program at Sunnybrook Hospital's veterans centre in Toronto on Thursday.'/><p>Prince Harry, who served in Afghanistan as a member of the British military, is attending several events in Toronto commemorating veterans ahead of Remembrance Day. </p>",
+      "score": 14,
+      "pubDate": "Thu, 06 Nov 2025 14:34:36 EST"
+    },
+    {
+      "title": "Supreme Court will hear appeals of Saskatchewan's school pronoun law",
+      "link": "https://www.cbc.ca/news/canada/saskatchewan/supreme-court-saskatchewan-pronoun-9.6969079?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.6999378,1697579559000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C433%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A youth waves a LGBTQ2+ flag on the steps of the provincial legislature in Regina, Sask. ' width='620' height='349' title='Students across the City of Regina walked out of school on Tuesday and gathered at the provincial legislature to protest the Saskatchewan government's controversial pronoun policy. '/><p>No date has been set for the court to hear the cross appeals from the provincial government and UR Pride on the province's school pronoun law, which prevents children under 16 from changing their names or pronouns at school without parental consent.</p>",
+      "score": 13.8,
+      "pubDate": "Thu, 06 Nov 2025 10:21:23 EST"
+    },
+    {
+      "title": "Alberta health care workers vote 98% for strike",
+      "link": "https://rabble.ca/labour/alberta-health-care-workers-vote-98-for-strike/",
+      "description": "",
+      "score": 13.5,
+      "pubDate": "Thu, 06 Nov 2025 19:30:48 +0000"
+    },
+    {
+      "title": "Manitoba Government Creates Rental Construction Incentive Program",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71437",
+      "description": "",
+      "score": 12,
+      "pubDate": "Thu, 06 Nov 2025 12:03:00 CST"
+    },
+    {
+      "title": "Will Alberta Kill Recall Laws Now That UCP MLAs Are at Risk?",
+      "link": "https://thetyee.ca/Opinion/2025/11/06/Will-Alberta-Kill-Recall-Laws/",
+      "description": "Legislation stripping teachers of their Charter rights has brought new challenges to the Smith government.",
+      "score": 10.1,
+      "pubDate": "Thu, 06 Nov 2025 08:20:00 +0000"
+    },
+    {
+      "title": "Woman's body found in wrecked car at tow yard hours after fatal Ontario crash kills Lyft driver",
+      "link": "https://globalnews.ca/news/11514003/brampton-crash-woman-body-found-wreckage-tow-yard/",
+      "description": "Peel police say the body of a woman was discovered after the fact in the back seat of a wrecked car in the tow yard, and only hours after her family had reported her missing.",
+      "score": 9,
+      "pubDate": "Thu, 06 Nov 2025 15:58:55 +0000"
+    },
+    {
+      "title": "Alberta RCMP officers won't be charged in fatal shooting of 15-year-old boy: police watchdog",
+      "link": "https://www.cbc.ca/news/canada/edmonton/asirt-rcmp-investigation-wetaskiwin-teen-shooting-9.6969723?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/085fb990-a2f8-4fb4-8536-81b7e76e53e7,1762459844423/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C279%2C706%2C397%29%3BResize%3D%28620%29' alt='A young boy smiles as he holds up a framed photo of another man next to his face.' width='620' height='349' title='Hoss Lightning, 15, was shot and killed by RCMP officers in Wetaskiwin, Alta., in August 2024.'/><p>An Alberta Serious Response Incident Team investigation says the officers shot at the teenager up to 17 times as he came toward them in a field, holding his arm up in a backpack so that it appeared he was pointing a gun.</p>",
+      "score": 9,
+      "pubDate": "Thu, 06 Nov 2025 15:24:54 EST"
+    },
+    {
+      "title": "Challenging labour market, lower population growth in store for Ontario amid tariffs",
+      "link": "https://www.cbc.ca/news/canada/toronto/ontario-finance-minister-providing-fall-economic-update-9.6969263?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.7015578,1698870164000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C245%2C4759%2C2676%29%3BResize%3D%28620%29' alt='Fnance minister Peter Bethlenfalvy delivers the provincial budget, at Queen’s Park, in Toronto, on March 23, 2023.' width='620' height='349' title='Fnance minister Peter Bethlenfalvy delivers the provincial budget, at Queen’s Park, in Toronto, on March 23, 2023.'/><p>Ontario's deficit projection is shrinking in its fall fiscal update, but so are the province's expectations for the labour market as U.S. tariffs are expected to continue hitting the economy.</p>",
+      "score": 8.8,
+      "pubDate": "Thu, 06 Nov 2025 12:24:02 EST"
+    },
+    {
+      "title": "Canadian history is dotted with floor-crossers. Voters haven't always been thrilled",
+      "link": "https://www.cbc.ca/news/politics/floor-crossing-history-9.6968216?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/c42ec905-d3ab-4d33-872b-3d079fcc632c,1762380677119/full/max/0/default.jpg?im=Crop%2Crect%3D%2829%2C316%2C4034%2C2269%29%3BResize%3D%28620%29' alt='People applaud a man in a suit as he enters a room' width='620' height='349' title='MP Chris d'Entremont, who crossed the floor from the Conservatives to join the Liberals, is applauded by his new colleagues as he arrives at a meeting of the Liberal Caucus on Parliament Hill in Ottawa, on Wednesday, Nov. 5, 2025. THE CANADIAN PRESS/Justin Tang'/><p></p>",
+      "score": 9,
+      "pubDate": "Wed, 05 Nov 2025 13:51:57 EST"
+    },
+    {
+      "title": "Manitoba Government Accepts All Recommendations From Independent Review of The Planning Amendment Act and The City of Winnipeg Charter Amendment Act (Bill 37)",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71300",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 29 Oct 2025 15:34:00 CDT"
+    },
+    {
+      "title": "Manitoba Government Adds 800 Teachers in Two Years",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71299",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 29 Oct 2025 11:30:00 CDT"
+    },
+    {
+      "title": "Carney government to face crucial confidence votes Thursday, Friday",
+      "link": "https://globalnews.ca/news/11514729/federal-budget-carney-government-first-confidence-votes/",
+      "description": "The House of Commons is set to vote Thursday on a Conservative subamendment to the budget, followed by a Bloc Quebecois amendment vote on Friday.",
+      "score": 7.5,
+      "pubDate": "Thu, 06 Nov 2025 20:14:47 +0000"
+    },
+    {
+      "title": "On Our Radar: Scarlet Fever’s debut LP, Girl with Shank, cuts deep",
+      "link": "https://www.straight.com/music/on-our-radar-scarlet-fevers-debut-lp-girl-with-shank-cuts-deep",
+      "description": "The four-piece Vancouver band has been a regular at shows around town lately.",
+      "score": 5,
+      "pubDate": "2025-11-06T00:32:32-08:00"
+    },
+    {
+      "title": "There's still time to win a Canadian getaway—and support B.C.’s hospitality workers",
+      "link": "https://www.straight.com/news/theres-still-time-to-win-a-canadian-getaway-and-support-bcs-hospitality-workers",
+      "description": "Two days left to support BC hospitality workers.",
+      "score": 7.5,
+      "pubDate": "2025-10-28T20:13:14-07:00"
+    },
+    {
+      "title": "Losing hope, he quit the Nunavik police. Years later, many still feel unsupported by the force",
+      "link": "https://www.cbc.ca/news/canada/montreal/nunavik-police-officers-supported-9.6968448?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/bd668e7e-efce-474b-83e3-ee2f1817047c,1762379789315/full/max/0/default.jpg?im=Crop%2Crect%3D%28204%2C0%2C2152%2C1210%29%3BResize%3D%28620%29' alt='A man standing in front of a town in between mountains' width='620' height='349' title='Johnny Saunders pictured in Salluit, Nunavik. It's the community where 26-year-old Joshua Papigatuk was killed and his twin brother injured in a police-involved shooting that made headlines across the province.'/><p>Johnny Saunders quit his job as a Nunavik police officer 20 years ago. He says the same issues that led to him leave remain unaddressed. Earlier this week, residents held marches across the region to denounce police brutality and an erosion of trust.</p>",
+      "score": 6,
       "pubDate": "Thu, 06 Nov 2025 04:00:00 EST"
     },
     {
-      "title": "The U.S. set to reveal which airports will see flight cuts amid shutdown",
-      "link": "https://globalnews.ca/news/11514007/us-flight-cuts-airports/",
-      "description": "The U.S. Department of Transportation is initiating a 10 per cent reduction in capacity at 40 major U.S. airports, the department said in a statement.",
-      "score": 9.5,
-      "pubDate": "Thu, 06 Nov 2025 14:40:51 +0000"
+      "title": "Recent bear attacks, close encounters prompt calls to bring back Alberta's grizzly hunt",
+      "link": "https://globalnews.ca/news/11514672/grizzly-bears-alberta-population-concern/",
+      "description": "Close calls and grizzly bear sightings among livestock has some wondering whether Alberta should bring back its long-banned grizzly hunt.",
+      "score": 4.5,
+      "pubDate": "Thu, 06 Nov 2025 21:09:48 +0000"
     },
     {
-      "title": "Prince Harry to visit veterans in Toronto today ahead of Remembrance Day",
-      "link": "https://globalnews.ca/news/11513940/prince-harry-to-visit-veterans-in-toronto-today-ahead-of-remembrance-day/",
-      "description": "Prince Harry is set to meet with some of Canada's oldest veterans today as part of his two-day visit to Toronto for events related to Remembrance Day.",
-      "score": 9.5,
-      "pubDate": "Thu, 06 Nov 2025 11:28:11 +0000"
+      "title": "Montana city launches campaign to woo back Canadian visitors: ‘We miss you'",
+      "link": "https://globalnews.ca/news/11514634/montana-discover-kalispell-canadian-welcome-pass/",
+      "description": "The Canadian Welcome Pass includes 15 businesses and a mix deals on lodging, retail, dining and museums in Kalispell, located near the border, about five hours south of Calgary.",
+      "score": 4.5,
+      "pubDate": "Thu, 06 Nov 2025 19:19:24 +0000"
     },
     {
-      "title": "David Common announced as CBC’s new Morning Live host",
-      "link": "https://www.cbc.ca/news/entertainment/david-common-morning-live-9.6968932?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/4bc5c005-16ae-49bc-862d-b03b8c6620f3,1762438280684/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C374%2C3070%2C1726%29%3BResize%3D%28620%29' alt='A man sits on a staircase' width='620' height='349' title='CBC reporter and anchor David Common is taking over as host of CBC Morning Live.'/><p>Veteran reporter and current Metro Morning radio host David Common will replace Heather Hiscox as host of CBC Morning Live, the Crown corporation announced Thursday. The announcement comes on the same day as Hiscox’s final broadcast as host and 20 years after she first took over the position.</p>",
-      "score": 5.5,
-      "pubDate": "Thu, 06 Nov 2025 09:11:49 EST"
-    },
-    {
-      "title": "Hereditary cancer, high cholesterol risk for 100,000 Canadians to be checked in genetic screening project",
-      "link": "https://www.cbc.ca/news/health/cancer-cholesterol-genetics-project-9.6968332?cmp=rss",
+      "title": "Albertans may eventually suffer from petition fatigue",
+      "link": "https://rabble.ca/politics/canadian-politics/albertans-may-eventually-suffer-from-petition-fatigue/",
       "description": "",
       "score": 4.5,
-      "pubDate": "Thu, 06 Nov 2025 05:00:00 EST"
+      "pubDate": "Thu, 06 Nov 2025 19:17:28 +0000"
     },
     {
-      "title": "The budget aims for a permanent School Food Program. But that doesn't mean free lunches for everyone",
-      "link": "https://www.cbc.ca/news/canada/national-school-food-9.6966685?cmp=rss",
+      "title": "30 can't-miss Vancouver concerts for November 2025",
+      "link": "https://www.straight.com/music/30-cant-miss-vancouver-concerts-for-november-2025",
+      "description": "<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href=\"http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up for our free newsletter</a>.<br /></h3>",
+      "score": 4.5,
+      "pubDate": "2025-11-06T08:30:00-08:00"
+    },
+    {
+      "title": "Has Separatism Gone Mainstream in Alberta?",
+      "link": "https://thetyee.ca/Analysis/2025/11/05/Has-Alberta-Separatism-Gone-Mainstream-Common-Ground/",
+      "description": "We spent the summer exploring the question. Here’s what we learned.",
+      "score": 4.5,
+      "pubDate": "Wed, 05 Nov 2025 21:19:00 +0000"
+    },
+    {
+      "title": "Crews in hazmat suits move in on ostriches at B.C. farm after top court dismisses appeal to save flock",
+      "link": "https://www.cbc.ca/news/canada/british-columbia/livestory/bc-ostrich-farm-decision-scoc-9.6968394?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/4e802fa4-d1ad-4749-9022-5d3c0d434e8c,1762456882015/full/max/0/default.jpg?im=Crop%2Crect%3D%28191%2C114%2C739%2C415%29%3BResize%3D%28620%29' alt='Crews in white hazmat suits begin moving towards ostriches at a farm.' width='620' height='349' title='Crews in hazmat suits begin moving towards the ostriches.'/><p></p>",
+      "score": 4.5,
+      "pubDate": "Thu, 06 Nov 2025 08:57:13 EST"
+    },
+    {
+      "title": "'We miss you': Kalispell, Mont., launches campaign to woo back Canadian visitors",
+      "link": "https://www.cbc.ca/news/canada/calgary/kalispell-montana-american-tourism-canada-9.6969652?cmp=rss",
       "description": "",
       "score": 4.5,
-      "pubDate": "Thu, 06 Nov 2025 04:00:00 EST"
+      "pubDate": "Thu, 06 Nov 2025 15:00:59 EST"
     },
     {
-      "title": "Northwestern Ontario bore brunt of province's wildfire season with evacuations, outages and a record blaze",
-      "link": "https://www.cbc.ca/news/canada/thunder-bay/2025-wildfire-season-northwestern-ontario-9.6966432?cmp=rss",
-      "description": "",
+      "title": "New N.S. study finds microplastics in edible portions of lobster tails",
+      "link": "https://www.cbc.ca/news/canada/nova-scotia/new-study-finds-microplastics-in-edible-portions-of-lobster-tails-harvested-off-n-s-9.6967821?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/855ff880-728a-41a2-9dcd-c4832ae716ce,1762361354504/full/max/0/default.jpg?im=Crop%2Crect%3D%2831%2C0%2C3726%2C2095%29%3BResize%3D%28620%29' alt='A lobster is shown on a white background.' width='620' height='349' title='Researchers found microplastics in each of the 16 lobsters they tested from the waters off Nova Scotia.'/><p>Dalhousie University researchers found an average of six to seven microplastic particles per gram of meat.</p>",
+      "score": 3.5,
+      "pubDate": "Thu, 06 Nov 2025 13:03:31 EST"
+    },
+    {
+      "title": "Body of 2nd victim in fatal Brampton, Ont., crash only discovered once car was in police impound lot",
+      "link": "https://www.cbc.ca/news/canada/toronto/brampton-fatal-crash-victim-found-later-9.6969088?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/b5b20678-bc26-48c5-a511-f480394192ea,1762273961050/full/max/0/default.jpg?im=Crop%2Crect%3D%28238%2C28%2C1696%2C954%29%3BResize%3D%28620%29' alt='Two sedans are crumpled at an empty intersection in morning daylight. There are trees next to the street in the background. Three Canadian flags fly on the sidewalk beside the wreck' width='620' height='349' title='Screenshot'/><p>Peel police say that the second victim in a crash involving a youth driver in Brampton Saturday was found hours after the collision, after the two vehicles had already been transported to the police impound yard.</p>",
       "score": 4.5,
-      "pubDate": "Thu, 06 Nov 2025 04:00:00 EST"
+      "pubDate": "Thu, 06 Nov 2025 10:45:08 EST"
     },
     {
-      "title": "Here's how much money you needed to make to be among Nova Scotia's top earners",
-      "link": "https://www.cbc.ca/news/canada/nova-scotia/high-income-nova-scotians-2023-statistics-canada-9.6966187?cmp=rss",
-      "description": "",
+      "title": "Heart of the City Festival showcases the Downtown Eastside's commitment to building community",
+      "link": "https://www.straight.com/arts/heart-of-city-festival-showcases-downtown-eastsides-commitment-to-building-community",
+      "description": "\"These are real people, with real feelings.”",
+      "score": 3,
+      "pubDate": "2025-10-28T14:31:59-07:00"
+    },
+    {
+      "title": "New Brunswick hospital ordered to pay man $5K because staff didn't speak French",
+      "link": "https://globalnews.ca/news/11515045/new-brunswick-hospital-language-rights-french/",
+      "description": "Paul Ouellet brought forward his legal challenge after staff at the Moncton hospital couldn't speak with him in French on numerous occasions in 2020.",
+      "score": 1,
+      "pubDate": "Thu, 06 Nov 2025 20:56:04 +0000"
+    },
+    {
+      "title": "Liberal Nova Scotia MP fined $600 for breaching election financing law",
+      "link": "https://globalnews.ca/news/11514744/liberal-nova-scotia-mp-election-financing-law/",
+      "description": "The elections law violations stem back six years, to a July 2019 candidate nomination contest in Sydney—Victoria that Battiste won.",
       "score": 1.3,
-      "pubDate": "Thu, 06 Nov 2025 05:00:00 EST"
+      "pubDate": "Thu, 06 Nov 2025 19:59:36 +0000"
+    },
+    {
+      "title": "Premier, Gopher join forces for CFL’s Green Riders",
+      "link": "https://globalnews.ca/news/11514461/premier-gopher-join-forces-for-cfls-green-riders/",
+      "description": "Saskatchewan's premier is teaming up with the province's largest, most-huggable rodent to cheer on the Green Riders in the CFL's Western final this weekend.",
+      "score": 1.3,
+      "pubDate": "Thu, 06 Nov 2025 17:40:13 +0000"
+    },
+    {
+      "title": "Asked to Improve Transparency, School Board Keeps Private Meetings",
+      "link": "https://thetyee.ca/News/2025/11/06/Vancouver-School-Board-Keeps-Private-Meetings/",
+      "description": "Updated policies don’t reflect requests to improve access to democratic process, says one Vancouver school trustee.",
+      "score": 1.3,
+      "pubDate": "Thu, 06 Nov 2025 20:41:00 +0000"
     }
   ]
 }
