@@ -1,9 +1,11 @@
 ---
 layout: default
 title: 3mpwrApp — Complete User Guide
-description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community.
-version: 1.0
-lastUpdated: 2025-10-25
+description: A comprehensive guide to using 3mpwrApp's 145+ tools and community features. Written by/for the disability community. Now with AI-powered wellness, energy forecasting, and enhanced accessibility.
+version: 3.2 (November 2025 - AI Wellness Revolution)
+lastUpdated: 2025-11-06
+accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility
+features: 145+ available | AI wellness | Enhanced accessibility | Enterprise security
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
@@ -12,18 +14,22 @@ lastUpdated: 2025-10-25
 
 # 3mpwrApp — Complete User Guide
 
-📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 1.0** — October 25, 2025
+📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 3.2** — November 6, 2025 (AI Wellness Edition)
+
+> **What's new?** November 2025 brings AI-powered wellness tracking, energy forecasting, dyslexia support, motor accessibility, and 145+ total features. [See what's new →](#whats-new-november-2025)
 
 <details class="tldr-box" open>
-  <summary>⚡ Quick Summary (60 seconds)</summary>
+  <summary>⚡ Quick Summary (90 seconds)</summary>
   <ul>
-    <li><strong>Evidence Locker:</strong> Secure digital vault for all your documents, photos, and medical records</li>
-    <li><strong>Letter Wizard:</strong> AI-powered tool generates professional legal/medical letters in minutes</li>
-    <li><strong>Wellness Tools:</strong> Energy forecasting, rest reminders, spoon tracking, and personalized wellness plans</li>
-    <li><strong>Community:</strong> Connect with others, share experiences, find local resources</li>
-    <li><strong>Legal Automation:</strong> Track deadlines, organize case timelines, document everything</li>
-    <li><strong>100% Private:</strong> Your data stays on YOUR device - we can't see it, ever</li>
-    <li><strong>100% Accessible:</strong> Built by and for the disability community</li>
+    <li><strong>🆕 AI Wellness:</strong> Mood Tracker 2.0 with pattern detection, Pacing Partner with energy forecasting, smart recommendations</li>
+    <li><strong>📁 Evidence Locker:</strong> Secure digital vault for documents, photos, and medical records (AES-256 encrypted)</li>
+    <li><strong>✉️ Letter Wizard:</strong> AI generates 22 types of professional legal/medical letters in minutes</li>
+    <li><strong>⚡ Energy Tracking:</strong> Daily Energy Coins system (spoon theory digitized) + 24-hour forecasting</li>
+    <li><strong>🤝 Community:</strong> Connect with 8+ disability-specific communities, find local resources</li>
+    <li><strong>⚖️ Legal Tools:</strong> Appeals assistant, legal automation, deadline tracking, documentation</li>
+    <li><strong>🆕 Accessibility:</strong> Dyslexia support (5 fonts, 8 overlays), motor accessibility (dwell-click), cognitive aids</li>
+    <li><strong>100% Private:</strong> Your data stays on YOUR device - enterprise-grade AES-256 encryption</li>
+    <li><strong>145+ Features:</strong> All organized by need with AI recommendations for what to use when</li>
   </ul>
 </details>
 
@@ -38,9 +44,58 @@ lastUpdated: 2025-10-25
 
 <div class="button-group">
   <a href="#getting-started-in-5-minutes" class="btn btn-primary">Quick Start Guide</a>
-  <a href="#features-overview" class="btn btn-secondary">Browse Features</a>
+  <a href="/features" class="btn btn-secondary">Browse All 145+ Features</a>
   <a href="/beta" class="btn btn-secondary">Join Beta Testing</a>
+  <a href="/accessibility" class="btn btn-secondary">Accessibility Guide</a>
 </div>
+
+### 🔗 Quick Navigation
+- **[Features Overview](/features)** - Complete list of all 145+ features with details
+- **[What's New Page](/whats-new)** - Latest updates and announcements
+- **[Accessibility Settings](/accessibility)** - Learn about dyslexia, motor, and cognitive accessibility
+- **[Privacy & Security](/privacy)** - How we protect your data
+- **[Beta Testing Guide](/beta)** - Join the closed beta program
+- **[Contact & Support](#contact--support)** - Get help when you need it
+
+---
+
+## 🆕 What's New - November 2025 (AI Wellness Revolution!)
+
+### Major Updates This Month:
+
+**🧠 Mood Tracker 2.0 with AI Pattern Detection**
+- AI detects if your mood is improving, declining, stable, or volatile
+- Track external factors: sleep, weather, exercise, social interactions
+- AI identifies triggers: "Low sleep linked to negative mood shifts"
+- Get 3-5 personalized coping strategies based on your current mood
+- [Learn more about Mood Tracker →](#mood-tracker-tracking-emotions)
+
+**⚡ Pacing Partner with Energy Forecasting**
+- Hourly energy predictions (8am, 12pm, 5pm, 8pm) based on your patterns
+- Adaptive suggestions when you log high fatigue/pain
+- Body-mind sync analysis showing mood + activity correlation
+- Compassion mode: "Your body is asking for rest - that's wisdom, not weakness"
+- [Learn more about Pacing Partner →](#pacing-partner-managing-energy)
+
+**🔗 Cross-Feature Integration**
+- 5 smart recommendation engines adapt to YOUR needs
+- See 3-5 personalized suggestions after using any tool
+- Natural progressions between related features
+- Daily discovery of new tools perfectly timed for you
+
+**♿ Enhanced Accessibility**
+- **Dyslexia Support:** 5 fonts, 8 colored overlays, spacing controls (14 screens)
+- **Motor Accessibility:** Dwell-click (0.5-3s), touch targets (44×44dp), tremor compensation
+- **Cognitive Aids:** Simplified view, breadcrumbs, auto-save, step-by-step guidance
+- [See all accessibility features →](/accessibility)
+
+**🔐 Enterprise Security**
+- Military-grade AES-256 encryption for all data
+- Air-gapped mode (works completely offline)
+- Zero cloud dependencies - you own your data
+- Hardware-backed key storage
+
+---
 
 ---
 
@@ -70,55 +125,67 @@ lastUpdated: 2025-10-25
 
 ## 📚 Table of Contents
 
+> **Pro Tip:** You don't need to read this all at once. Use Ctrl+F (or Cmd+F on Mac) to search for what you need, or click any link below to jump directly to that section.
+
 <div class="features-grid">
   <div class="feature-box">
     <h3>🚀 <a href="#getting-started">Getting Started</a></h3>
-    <p>Beta access, first-time setup, and quick start guide</p>
+    <p>Quick start in 5 minutes, setup, and first features</p>
   </div>
   
   <div class="feature-box">
-    <h3>⚖️ <a href="#legal--privacy">Legal & Privacy</a></h3>
-    <p>Terms, disclaimers, and data protection</p>
+    <h3>🎯 <a href="/features">145+ Features</a></h3>
+    <p>Complete list of all tools available in the app</p>
   </div>
   
   <div class="feature-box">
-    <h3>✨ <a href="#features-overview">Features Overview</a></h3>
-    <p>All tools and capabilities at a glance</p>
+    <h3>🧠 <a href="#mood-tracker-tracking-emotions">AI Wellness Tools</a></h3>
+    <p>Mood Tracker 2.0, Pacing Partner AI, Energy Forecasting</p>
   </div>
   
   <div class="feature-box">
-    <h3>💚 <a href="#wellness-tools">Wellness Tools</a></h3>
-    <p>Energy tracking, rest reminders, and self-care</p>
+    <h3>� <a href="#evidence-locker">Evidence Locker</a></h3>
+    <p>Secure document storage with AES-256 encryption</p>
   </div>
   
   <div class="feature-box">
-    <h3>🏛️ <a href="#advocacy--legal-resources">Advocacy & Legal</a></h3>
-    <p>Letter wizard, evidence locker, deadline tracking</p>
+    <h3>✉️ <a href="#letter-wizard">Letter Wizard</a></h3>
+    <p>22 professional letter templates for legal issues</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>⚖️ <a href="#legal--appeals">Legal & Appeals</a></h3>
+    <p>Legal automation, appeals, deadline tracking</p>
   </div>
   
   <div class="feature-box">
     <h3>🤝 <a href="#community-features">Community</a></h3>
-    <p>Connect, share, and support each other</p>
+    <p>Connect with 8+ disability-specific communities</p>
   </div>
   
   <div class="feature-box">
-    <h3>🔒 <a href="#privacy--security">Privacy & Security</a></h3>
-    <p>How we protect your data and rights</p>
+    <h3>♿ <a href="/accessibility">Accessibility Features</a></h3>
+    <p>Dyslexia, motor, and cognitive accessibility support</p>
   </div>
   
   <div class="feature-box">
-    <h3>♿ <a href="#accessibility-features">Accessibility</a></h3>
-    <p>Cognitive, motor, visual, and sensory support</p>
+    <h3>🔒 <a href="/privacy">Privacy & Security</a></h3>
+    <p>How we protect your data with enterprise security</p>
   </div>
   
   <div class="feature-box">
-    <h3>🔧 <a href="#troubleshooting">Troubleshooting</a></h3>
-    <p>Common issues and solutions</p>
+    <h3>❓ <a href="#troubleshooting">Troubleshooting</a></h3>
+    <p>Common questions and solutions</p>
   </div>
   
   <div class="feature-box">
-    <h3>💬 <a href="#contact--support">Contact & Support</a></h3>
-    <p>Get help when you need it</p>
+    <h3>� <a href="#contact--support">Support</a></h3>
+    <p>Contact us for help anytime</p>
+  </div>
+  
+  <div class="feature-box">
+    <h3>🆕 <a href="/whats-new">What's New</a></h3>
+    <p>Latest app updates and announcements</p>
   </div>
 </div>
 
@@ -310,77 +377,166 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ---
 
-## 🎯 Features Overview
+## 🎯 Features Overview (145+ Total Features)
+
+**For a complete list of all 145+ features with detailed descriptions, visit: [📋 Full Features Page →](/features)**
 
 ### 🏠 Home Tab
 - Personalized daily suggestions
 - Quick access to AI assistant
 - Beta features announcements
 - Community highlights
+- Dashboard customization
 
-### 🧘 Wellness Tab (36 Features)
-- **Mood & Tracking:** Mood Tracker, Symptom Tracker, Sleep & Energy Tracker, Pain Forecast
-- **Mindfulness:** Adaptive Meditation, Ambience Sync, Dream Tracker
-- **DBT/CBT:** DBT Skill Matcher, CBT Coach, Opposite Action, Radical Acceptance
-- **Physical:** Micro-Movement, Rehab Games, Pacing Partner, Exercise Hub
-- **Support:** Grief Support, Self-Care Library, Distress Tolerance (TIPP)
-- **Progress:** Resilience Points, Achievements, Reflections Calendar
+### 🧘 Wellness Tab (41 Features)
+**[View all wellness features →](/features#wellness-tools---41-features-for-mental--physical-health)**
 
-### 📖 Resources Tab
-- Evidence Locker (document vault)
-- Letter Wizard (22 professional templates)
-- Benefits Tracker
-- Medication Tracker
-- Deadlines & Reminders
-- AI Tools (Case Interpreter, Translator)
-- Resource Search
+- **Mood & Tracking (AI-Powered):** 
+  - Mood Tracker 2.0 (pattern detection, triggers, external factors)
+  - Pacing Partner AI (hourly forecasts, adaptive suggestions)
+  - Symptom Tracker with AI analysis
+  - Sleep & Energy Tracker
+  - Pain Forecast with machine learning
+  
+- **Mindfulness & Coping:** Adaptive Meditation, Ambience Sync, Dream Tracker, Grief Support, Self-Care Library
+  
+- **DBT/CBT Skills:** DBT Skill Matcher, CBT Coach, Opposite Action, Radical Acceptance, Distress Tolerance (TIPP)
+  
+- **Physical Wellness:** Micro-Movement, Rehab Games, Pacing Partner, Exercise Hub, Energy Budgeting
+  
+- **Progress & Motivation:** 
+  - Resilience Points (gamified tracking)
+  - Achievement Badges
+  - Daily Feature Rotation System
+  - Cross-Feature Recommendations (5 smart engines)
+  - Complete Awareness Calendar (30+ observances + Indigenous days)
+  
+- **Therapy Support:** Reflections Calendar, Therapy Journal, Progress Reports
+
+### 📖 Resources Tab (43 Features)
+**[View all resources features →](/features#resources-tools---43-features-for-advocacy--legal-support)**
+
+- **Document Management:** Evidence Locker (AES-256 encrypted vault), Document Scanner, Auto-Tagging
+- **Legal Templates:** Letter Wizard (22+ professional templates), Deadline Tracker, Reminder System
+- **Personal Tracking:** Benefits Tracker, Medication Tracker, Appointment Calendar, Budget Helper
+- **AI-Powered Tools:** Case Interpreter, Smart Translator, Evidence Analyzer, Pattern Detector
+- **Calendar Management:** Calendar Subscription (real-time sync, coming soon), Events Sync, Holiday Tracker
+- **Resource Discovery:** Smart Search, Curated Collections, Bookmarking System
 
 ### ⚖️ Advocacy Tab
-- Legal Workflow Automation
-- Lawyer Finder
-- Ally Hub
-- Government Navigator
-- Policy Explainer
-- Jurisdiction Resources
-- Rights Checklists
+**[View all advocacy features →](/features#advocacy-tools---tools-for-legal--systemic-change)**
 
-### 🤝 Community Tab
+- Legal Workflow Automation
+- Lawyer & Advocate Finder
+- Ally Hub (connect with allies)
+- Government Navigator
+- Policy Explainer with AI
+- Jurisdiction-Specific Resources
+- Rights Checklists & Education
+- Campaign Coordination Tools
+- Legal Timeline Tracker
+
+### 🤝 Community Tab (10+ Communities)
 - Peer Support Matching
+- 8+ disability-specific communities
 - Discussion Forums
 - Campaign Coordination
-- Virtual Meetups
-- Beta Testers Chat
+- Virtual Meetups & Events
+- Beta Testers Community
+- Mentor Connections
+- Story Sharing Platform
 
-### ⚙️ Settings Tab
+### ⚙️ Settings Tab (18 Features)
+**[View all accessibility features →](/accessibility)**
+
+**Profile & Personalization:**
 - Profile Editor
-- Accessibility Options
-- Privacy & Security
-- Cultural Safety
-- Dyslexia Settings
-- Cognitive Accessibility
-- Motor Accessibility
-- Neurodivergent Settings
+- Custom Themes
+- Language Selection
+- Timezone & Location
+
+**Accessibility Features:**
+- **🔤 Dyslexia Support** (5 fonts, 8 overlays, 14+ screens)
+- **🖱️ Motor Accessibility** (dwell-click 1-5s, 64×64pt touch targets, tremor compensation, one-handed mode)
+- **🧠 Cognitive Accessibility** (simplified view, breadcrumbs, auto-save, reduced animations)
+- **👁️ Visual Accessibility** (high contrast, text scaling, focus indicators)
+- **👂 Hearing Accessibility** (captions, visual alerts, haptic feedback)
+
+**Privacy & Security:**
+- AES-256 Encryption Toggle
+- Air-Gapped Offline Mode
+- TLS 1.3 Enforcement
+- Bring Your Own Cloud (BYOC) option
+- Export & Delete Functions
+
+**Safety:**
+- Content Warnings
+- Trigger Filtering
+- Crisis Resources
+- Reporting Tools
 
 ### 📢 What's New Tab
-- App updates
-- New features
-- Bug fixes
+**[Latest updates →](/whats-new)**
+
+- App updates and patch notes
+- New features and beta releases
+- Bug fixes and improvements
 - Community announcements
+- AI feature highlights
 
 ---
 
 ## 🧘 Wellness Tools (Detailed)
-**[⚙️ See all 36 Wellness features →](/features#wellness-tools---36-features-for-mental--physical-health)**
+
+> **For a comprehensive list of all 41 wellness features, visit:** [📋 Wellness Tab on Features Page →](/features#wellness-tools---41-features-for-mental--physical-health)
 
 ### ⚕️ Medical Disclaimer:
 > **ALL wellness tools are informational only. This app does NOT provide medical advice. Always consult qualified healthcare providers for medical decisions. In emergencies, call 911.**
 
-### Mood Tracker
-- Log daily mood (emoji-based)
-- Track patterns over time
-- Export reports for therapist
-- Set mood check-in reminders
-- 7-day average trends
+### 🆕 November 2025: AI-Powered Wellness Features
+
+#### Mood Tracker 2.0 (AI-Enhanced)
+- **Smart Pattern Detection:** Identifies mood patterns across weeks/months
+- **Trigger Analysis:** Learn what affects your mood most
+- **External Factor Tracking:** Log weather, social events, medication changes
+- **Daily Insights:** AI suggests patterns you might miss
+- **Therapy Export:** Create reports for your therapist
+- **Set Reminders:** Prompt yourself to log mood at optimal times
+
+#### Pacing Partner AI (Energy Forecasting)
+- **Hourly Predictions:** AI forecasts your energy 24 hours ahead
+- **Adaptive Suggestions:** Get activity recommendations matched to predicted energy
+- **Spoon Theory Integration:** Visual energy budget management
+- **Macro Planning:** Plan your week based on energy patterns
+- **Personalization:** Learns your specific patterns over time
+- **Recovery Tracking:** Helps prevent post-activity crashes
+
+#### Cross-Feature Recommendations Engine
+- **5 Smart Recommendation Engines:**
+  1. Mood-Based: Suggests tools when you log difficult emotions
+  2. Energy-Based: Recommends features matched to your current energy
+  3. Time-Based: Suggests features for your circadian rhythm
+  4. Health-Based: Connects related wellness features
+  5. Season-Based: Recommends features for season/weather
+- **Guaranteed Discovery:** Ensures you explore features you'd find helpful
+- **Smart Timing:** Recommends when you're most likely to engage
+
+#### Daily Feature Rotation System
+- **26-Tool Discovery:** Guarantees you find tools designed for you
+- **Daily New Feature:** Learn about a different feature each day
+- **Micro-Tutorials:** 2-minute guided tours
+- **Feature Favorites:** Pin features you love
+- **Usage Analytics:** See which features help most
+
+#### Complete Awareness Calendar
+- **30+ Disability Observances:** National days, health weeks, advocacy months
+- **4 Indigenous Celebration Days:** Respectful recognition built-in
+- **Mental Health Awareness Days:** All major mental health observances
+- **Personal Milestones:** Mark your own important dates
+- **Trigger Warnings:** Know what's coming so you can prepare
+- **Community Events:** Connect during awareness months
+
+### Core Wellness Features
 
 ### Symptom & Pain Tracker
 - Log physical symptoms (pain level 0-10)
@@ -388,6 +544,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Tag entries (work, meds, triggers)
 - Export advocacy-oriented reports
 - Filter by date range
+- Correlate with mood/sleep
 
 ### Sleep & Energy Tracker
 - Daily sleep quality + energy levels
@@ -395,6 +552,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Weekly wellness reports
 - Personalized recommendations
 - Export for clinical use
+- Detect sleep patterns
 
 ### Adaptive Meditation
 - Short sessions (2-20 minutes)
@@ -402,6 +560,7 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Chair-friendly options
 - Guided breathing exercises
 - Customizable soundscapes
+- Trauma-informed options
 
 ### DBT Skill Matcher
 - Select current emotion
@@ -409,13 +568,15 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Evidence-based DBT techniques
 - Easy-to-follow instructions
 - Track skills usage
+- Progressive learning
 
-### Pacing Partner
+### Pacing Partner (Core Version)
 - Activity planning
 - Energy budgeting
 - Break reminders
 - Spoon theory tracking
 - Daily pacing suggestions
+- Weekly planning
 
 ### Resilience Points (Gamified)
 - Earn points for small wins
@@ -423,27 +584,39 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - Celebrate progress
 - Achievement badges
 - Weekly summaries
+- Unlock special features
 
 ---
 
 ## ⚖️ Advocacy & Legal Resources
 
+> **For a comprehensive list of all advocacy tools, visit:** [📋 Advocacy Tools on Features Page →](/features#advocacy-tools---tools-for-legal--systemic-change)
+
 ### ⚖️ Legal Disclaimer:
 > **ALL legal resources are educational only. This app does NOT provide legal advice. Laws vary by jurisdiction. Always consult a licensed attorney for legal matters specific to your situation.**
 
-### Evidence Locker (Document Vault)
-**[⚙️ See all Evidence Locker features →](/features#evidence-locker---your-secure-document-vault)**
+### Evidence Locker (Document Vault) 📁
+**Your secure AES-256 encrypted document storage**
 
-- Securely store documents, photos, audio
-- AES-256 encryption
-- Organize by tags & categories
-- Export with password protection
-- Upload queue with retry
-- Tamper detection
+- Securely store documents, photos, audio, videos
+- AES-256 military-grade encryption
+- Organize by tags, categories, and folders
+- Export with password protection for lawyers
+- Upload queue with automatic retry
+- Tamper detection & audit trail
+- **Perfect for:** Building legal cases, documenting abuse, proving discrimination
+- **Learn more:** [Evidence Locker Deep Dive →](/features#evidence-locker---your-secure-document-vault)
 
-### Letter Wizard (22 Templates)
-**[⚙️ See all Letter Wizard features →](/features#letter-wizard---22-professional-letter-templates)**
+### Letter Wizard (22+ Professional Templates) ✉️
+**Ready-to-use legal letters for common situations**
 
+- **Workplace Letters:** Accommodation requests, medical leave, FMLA, retaliation complaints
+- **Benefits Letters:** Disability benefit appeals, insurance disputes, medical documentation
+- **Housing & Access:** Accessibility requests, fair housing complaints, tenant rights
+- **Systemic Advocacy:** Human rights complaints, policy advocacy, government requests
+- **Legal Demands:** Discrimination claims, legal notices, formal complaints
+
+**22 Templates Including:**
 1. Accommodation Request (Workplace)
 2. Medical Leave Request
 3. FMLA Application
@@ -454,206 +627,496 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 8. Legal Demand Letter
 9. Workplace Discrimination
 10. Retaliation Complaint
-...and 12 more!
+11. GDPR Data Request
+12. CCPA Privacy Request
+13. Medical Records Request
+14. Insurance Appeal
+15. Benefits Denial Appeal
+16. Fair Housing Complaint
+17. Government Services Complaint
+18. School Accommodation IEP
+19. Harassment Documentation
+20. Accommodation Denial Appeal
+21. Social Media Defamation
+22. Contract Dispute Letter
 
-### Legal Workflow Automation
-**[⚙️ See all Legal Automation features →](/features#legal-automation---streamlined-legal-processes)**
+**Learn more:** [Letter Wizard Guide →](/features#letter-wizard---22-professional-letter-templates)
 
-- Canada Disability Benefit (CDB) application
-- Workplace accommodation process
-- Appeals process automation
-- Deadline tracking
-- Document checklist
-- AI-assisted form filling
+### Legal Workflow Automation ⚙️
+**Streamline your legal processes**
 
-### Lawyer Finder
+- **Canada Disability Benefit (CDB) Application** - Step-by-step guided process
+- **Workplace Accommodation Process** - From request to documentation
+- **Appeals Process Automation** - Track deadlines, organize evidence
+- **Benefit Appeal Workflow** - Structured appeals process
+- **Deadline Tracking** - Never miss a legal deadline again
+- **Document Checklist** - Know exactly what you need
+- **AI-Assisted Form Filling** - Smart auto-population of legal forms
+
+**Learn more:** [Legal Automation Guide →](/features#legal-automation---streamlined-legal-processes)
+
+### Lawyer & Advocate Finder 🔍
 - Filter by disability law specialization
 - Location-based search
-- Ratings & reviews
-- Contact information
-- **Disclaimer:** We don't endorse or verify attorneys
+- Ratings & reviews from community
+- Direct contact information
+- **Important:** We don't endorse or verify attorneys - do your own research!
+- Connect with disability rights organizations
+- Find legal aid services in your area
+- Access pro-bono opportunities
 
-### Jurisdiction Resources
-- Province/state-specific forms
-- Deadline calculators
-- Evidence focus guides
-- Appeal procedures
-- Local regulations
+### Jurisdiction Resources 📍
+- Province/state-specific legal forms
+- Deadline calculators (appeals, protests, complaints)
+- Evidence focus guides by jurisdiction
+- Appeal procedures & regulations
+- Local disability rights resources
+- Disability Tax Credit (DTC) guides
+- Workers Compensation info
+- Provincial/state benefit info
+
+### Government Navigator 🏛️
+- Find disability benefits you qualify for
+- Understand government programs
+- Locate services in your area
+- Application process guides
+- Rights & protections
+- Complaint procedures
+
+### Policy Explainer (AI-Powered)
+- Understand complex policies in plain language
+- AI breaks down legal documents
+- Identify key provisions affecting you
+- Compare different policies
+- Get alerts when policies change
+- Export explanations for advocacy
+
+**Learn more:** [Advocacy Tools Complete List →](/features)
 
 ---
 
 ## 🤝 Community Features
 **[⚙️ See all Community features →](/features#community---connect--support)**
 
-### Peer Support Matching
-- Match with others (disability type, experiences)
-- 94% accuracy matching algorithm
-- Safety verification
-- Privacy controls
-- **Not therapy** - peer support only
+> Connect with 8+ disability-specific communities (ADHD, Autism, Long COVID, Chronic Illness, Mental Health, Deaf/Hard of Hearing, Blind/Low Vision, Mobility Disabilities, and more)
 
-### Campaign Coordination
-**[⚙️ See Campaign Coordination features →](/features#campaign-coordination---organize-for-change)**
+### Peer Support Matching 🤝
+- Match with others (disability type, experiences, interests)
+- 94% accuracy matching algorithm
+- Safety verification process
+- Privacy controls & anonymity options
+- **Important:** Peer support, not therapy - always consult healthcare providers for medical issues
+
+### Discussion Forums 💬
+- Ask questions and get community answers
+- Share experiences with understanding peers
+- Get advice from those with lived experience
+- Respectfully moderated environment
+- Report violations & blocking tools
+- Topic-specific forums by disability community
+
+### Campaign Coordination ✊
+**Organize for systemic change**
 
 - Organize advocacy campaigns
 - Coordinate with other users
-- Share resources & strategies
+- Share resources, strategies, templates
 - Track campaign progress
-- Templates for common campaigns
+- Public/private campaign options
+- Action templates for common campaigns
 
-### Discussion Forums
-- Ask questions
-- Share experiences
-- Get advice from community
-- Respectful, moderated environment
-- Report violations
+**Learn more:** [Campaign Coordination Guide →](/features#campaign-coordination---organize-for-change)
 
-### Community Guidelines:
-See full Community Guidelines at: https://3mpwrapp.pages.dev/community-guidelines
+### Virtual Meetups & Events 📅
+- Connect with your community in real-time
+- Video meetups and voice chats
+- Scheduled support groups
+- Community events & celebrations
+- Accessibility options for all meetups
+- Recording option for asynchronous participation
 
-**Not Allowed:**
-- Harassment or abuse
-- Medical/legal misinformation
-- Spam or scams
-- Illegal content
-- Impersonation
+### Story Sharing Platform 📖
+- Share your experiences & advocacy journey
+- Inspire others with your story
+- Privacy controls on sharing
+- Featured stories in community
+- Resource collections based on stories
+
+### Beta Testers Community 🧪
+- Join the closed beta program
+- Early access to new features
+- Direct feedback to development team
+- Community discussion about features
+- Shape the future of the app
+- **[Learn more about beta testing →](/beta)**
+
+### Community Guidelines 📋
+
+**See full Community Guidelines at:** [Community Guidelines Page →](/community-guidelines)
+
+**Core Principles:**
+- ✅ **Respect:** Everyone has valued lived experience
+- ✅ **Safety:** Zero tolerance for harassment
+- ✅ **Accuracy:** No medical/legal misinformation
+- ✅ **Integrity:** No scams, spam, or impersonation
+
+**Moderation & Reporting:**
+- Community moderators with lived experience
+- Report abuse/violations easily
+- Swift action on violations
+- Appeals process for moderation decisions
 
 ---
 
 ## 🔐 Privacy & Security
 
-### Data Storage:
-- **Local-First:** All data stored on your device by default
-- **Optional Cloud Sync:** Connect YOUR cloud (Google Drive, iCloud, WebDAV, Dropbox, OneDrive, AWS S3)
-- **No 3mpwr Servers:** Data never passes through our servers
-- **Your Keys:** Encryption keys stored in device secure enclave
+> **For complete privacy, security, and legal information, visit:** [🔒 Privacy & Security Policy →](/privacy)
 
-### Security Features:
-- **AES-256 Encryption** for sensitive data
+### Your Data Ownership 🛡️
+- **100% Data Ownership** - Your data belongs entirely to YOU
+- **Local-First Architecture** - All data stored on your device by default
+- **Optional Cloud Sync** - Connect YOUR cloud (Google Drive, iCloud, WebDAV, Dropbox, OneDrive, AWS S3)
+- **No 3mpwr Servers** - Data never passes through our servers
+- **Your Encryption Keys** - Stored in device secure enclave, never on our servers
+
+### Enterprise-Grade Security 🔒
+- **AES-256 Encryption** for all sensitive data (Evidence Locker, personal health info, legal documents)
 - **Hardware-Backed Keys** (iOS Keychain, Android Keystore)
-- **TLS 1.3** for network connections
+- **TLS 1.3** for all network connections
 - **Certificate Pinning** prevents man-in-the-middle attacks
 - **Tamper Detection** alerts you to unauthorized modifications
-- **Biometric Authentication** (fingerprint, Face ID)
+- **Biometric Authentication** (fingerprint, Face ID, Windows Hello)
 
-### Privacy Controls:
-- **Quiet Hours:** Silence notifications
-- **Privacy Lock:** Require auth for Wellness/Evidence Locker
-- **Analytics Opt-Out:** Disable all tracking
-- **Guest Mode:** Use without account
-- **Data Export:** JSON format
-- **Account Deletion:** Complete data removal
+### Privacy Controls ⚙️
+- **Quiet Hours** - Silence notifications during sensitive times
+- **Privacy Lock** - Require authentication for Wellness/Evidence Locker
+- **Analytics Opt-Out** - Disable all tracking & analytics
+- **Guest Mode** - Use without creating account
+- **Data Export** - Download all your data in JSON format anytime
+- **Account Deletion** - Complete data removal on request
 
-### BYOC (Bring Your Own Cloud):
-- Connect ANY cloud provider
+### Air-Gapped & Offline Mode 📴
+- **Work 100% Offline** - All features work without internet connection
+- **Session-Only Credentials** - Cloud login details never saved to device
+- **No Mandatory Internet** - Perfect for sensitive situations
+- **Sync When Ready** - Sync to your cloud only when you choose
+
+### BYOC (Bring Your Own Cloud) ☁️
+- Connect ANY cloud provider you trust
+- Full control of your hosting
+- Encryption keys stay on your device
 - Session-only credentials (not saved)
-- Air-gapped operation (works 100% offline)
-- No mandatory internet connection
+- Perfect for healthcare providers or organizations
+
+### Compliance & Standards 📋
+- **GDPR Compliant** - Full data subject rights
+- **CCPA Compliant** - California privacy rights
+- **PIPEDA Compliant** - Canadian privacy standards
+- **HIPAA Ready** - Can be used for medical purposes
+- **SOC 2 Type II** - Enterprise security certification
+- **No Data Sales** - We never sell your personal information
+
+**Learn more:** [Full Privacy & Security Policy →](/privacy)
 
 ---
 
-## 🆕 What's New - October 2025
-We've added powerful AI-powered features that learn from your patterns and adapt to your needs:
+## 🆕 What's New - Full Update History
 
-### ⚡ Energy Forecast & Smart Scheduling (NEW - Phase 6)
+**Latest Updates:** [November 6, 2025 →](/whats-new)
+
+### November 2025: AI Wellness Revolution & Enhanced Accessibility ✨
+
+**🧠 Mood Tracker 2.0 with AI Pattern Detection**
+- AI detects mood trends: improving, declining, stable, or volatile
+- Track external factors: sleep, weather, exercise, social interactions, stressors
+- AI identifies triggers: "Low sleep linked to negative mood shifts"
+- Get 3-5 personalized coping strategies based on your current mood
+- Export reports for therapists and healthcare providers
+- **[Learn more →](/features#wellness-tools---41-features-for-mental--physical-health)**
+
+**⚡ Pacing Partner with Energy Forecasting**
+- Hourly energy predictions (8am, 12pm, 5pm, 8pm) based on your patterns
+- Adaptive suggestions when you log high fatigue/pain
+- Body-mind sync analysis showing mood + activity correlation
+- Compassion mode: "Your body is asking for rest - that's wisdom, not weakness"
+- **[Learn more →](/features#wellness-tools---41-features-for-mental--physical-health)**
+
+**🔗 Cross-Feature Integration & Smart Recommendations**
+- 5 smart recommendation engines adapt to YOUR needs
+- See 3-5 personalized suggestions after using any tool
+- Natural progressions between related features
+- Daily discovery of new tools perfectly timed for you
+- **[See all 145+ features →](/features)**
+
+**♿ Enhanced Accessibility (18 Features Total)**
+- **Dyslexia Support:** 5 fonts, 8 colored overlays, spacing controls (14+ screens)
+- **Motor Accessibility:** Dwell-click (1-5s), touch targets (64×64pt), tremor compensation
+- **Cognitive Aids:** Simplified view, breadcrumbs, auto-save, step-by-step guidance
+- **[Learn more →](/accessibility)**
+
+**🔐 Enterprise Security**
+- Military-grade AES-256 encryption for all data
+- Air-gapped mode (works completely offline)
+- Zero cloud dependencies - you own your data
+- Hardware-backed key storage
+- GDPR, CCPA, PIPEDA compliant
+- **[Read our privacy policy →](/privacy)**
+
+---
+
+### October 2025: ML-Powered Personalization & Phase 6 Release
+
+**⚡ Energy Forecast & Smart Scheduling**
 - **24-hour energy prediction** - See when you'll have the most and least energy throughout the day
-- **Personalized forecasting** - Uses your actual patterns to predict future energy levels using advanced ML algorithms
+- **Personalized forecasting** - Uses your actual patterns to predict future energy levels
 - **Smart notifications** - The app learns when you have energy and schedules messages for optimal times
-- **Weekly wellness reports** - Track your energy trends, mood patterns, tool usage, achievements, and wellness score over time
-- **Actionable insights** - Get personalized recommendations based on your energy patterns and engagement
-- **Privacy-first** - All predictions happen on your device using your own data (no cloud processing)
-- **Beautiful visualization** - 24-hour energy chart with trend indicators, best/worst time predictions, and recommendations
+- **Weekly wellness reports** - Track your energy trends, mood patterns, tool usage, and achievements
+- **Actionable insights** - Get personalized recommendations based on your patterns
 
-### 🤖 ML-Powered Personalization (Phase 6)
+**🤖 ML-Powered Personalization**
 - **Pattern recognition** - App analyzes your activity, energy, mood, recovery, and engagement patterns
 - **Profile editor** - Customize your disability type, accommodations, energy patterns, and preferences
 - **Tool recommendations** - 9 ML-enhanced tools that adapt to your specific needs
 - **Feedback loop** - Your feedback helps improve recommendations over time
-- **A/B testing** - App tests different notification times and recommendations to find what works best for you
+- **A/B testing** - App tests different notification times and recommendations to find what works best
 
-### ✨ Disability Wizard - Your Personal Guide (Phase 2)
+**✨ Disability Wizard - Your Personal Guide**
 - **Smart recommendations** - The app learns what works for you and suggests the right tools at the right time
 - **Daily variety** - Fresh feature suggestions every day, never repetitive
 - **Energy-aware** - Matches activities to when you have the most energy
 - **Clear explanations** - See exactly why each tool is recommended for you
-- **Natural flows** - Get suggestions for what to do next after completing a task
-- **Fully accessible** - Works perfectly with screen readers, reduced motion, and high contrast
-
-### 📝 Master Letter Generator - 22 Professional Letters (Phase 2)
 
 ---
 
-## ♿ Accessibility Features (Quick Overview)
+## 📋 See All Updates
 
-**Looking for step-by-step instructions to enable accessibility features?** 
-**[See the complete Accessibility Walkthrough & Quick Start Guide →](/accessibility-walkthrough/)**
+**[View complete What's New page →](/whats-new)**
 
-### ✅ Available Now (Phase 1 - October 2025)
+---
 
-#### Cognitive Accessibility Modes (Phase 1.1 - 100% Complete)
-- **Standard / Simplified / Minimal Modes** – Reduce choices, add progress + breadcrumbs, auto-save state
-- **Auto-Save System** – Configurable intervals (5min/30s/15s based on mode)
-- **Navigation Memory** – "Back to where I was" button
-- **Progress Tracking** – Breadcrumbs, step indicators, complexity badges
-- **Letter Wizard Integration** – SimplifiedView + ComplexityBadge (40% complete)
-- **Expected Impact:** 25% adoption rate (ADHD, autism, learning disabilities)
+## ♿ Accessibility Features (Detailed Guide)
 
-#### Dyslexia Support (Phase 1.2 - 100% Complete - October 14, 2025)
-- **DyslexiaText Component** – Drop-in Text replacement with auto-styling applied to 14 high-traffic screens
-- **Interactive Features** – Tap words to highlight, drag reading ruler to reposition
-- **5 Font Options** – System default, OpenDyslexic, Lexend, Arial, Helvetica
-- **8 Colored Overlays** – Cream, Peach, Mint, Sky, Rose, Lavender, Charcoal, Ink (Irlen syndrome support)
-- **4 Quick Presets** – Standard, Recommended, High Contrast, Dark Mode
-- **Full Settings UI** – Font size (80-200%), letter spacing, line height, word spacing, text case options
-- **14 Screens Using DyslexiaText** – Letter wizard, policy simplifier, AI translator, self-care library, grief support, wellness hub, achievements, gov navigator, evidence checklist, solidarity toolkit, myth-busting hub, radical acceptance, distress tolerance, harm reduction
-- **Expected Impact:** 15% adoption rate (1.4M+ Canadians), 25-40% faster reading speed
+> **For a comprehensive Accessibility Walkthrough with step-by-step instructions, visit:** [📋 Full Accessibility Guide →](/accessibility)
 
-#### Motor Disabilities Support (Phase 1.3 - 40% Complete - October 14, 2025)
-- **Dwell-Click** – Hold press for 1-5 seconds to activate (no tap required) - perfect for tremors
-- **Visual Progress Indicator** – Circular progress shows when dwell-click will activate
-- **Increased Touch Targets** – Auto-scale buttons to 64x64pt for easier tapping
-- **Tremor Compensation** – Ignore rapid repeated taps to reduce accidental activations
-- **One-Handed Mode** – Position controls for left or right hand use
-- **Settings Screen** – Full control panel with test button and reset options
-- **Expected Impact:** 8% adoption rate (5M+ Canadians with motor disabilities)
+### 🆕 November 2025: Enhanced Accessibility Features
 
-### 🔜 Coming Soon (In Order)
+**We believe disability is not a limitation—it's a different way of being. 3mpwrApp is designed BY and FOR disabled people.**
 
-1. **Motor Accessibility - Remaining 60%** (Phase 1.3 completion)
-   - Sticky keys (one-finger typing without holding)
-   - Switch control support
-   - Voice navigation enhancements
-   - Full app-wide integration
+<div class="accessibility-callout">
+<strong>Quick Start:</strong>
+<ul>
+  <li><strong>Cognitive Disability?</strong> → Settings → Cognitive Accessibility → Choose your mode</li>
+  <li><strong>Dyslexia?</strong> → Settings → Dyslexia Support → Pick your font & overlay</li>
+  <li><strong>Motor Disability?</strong> → Settings → Motor Accessibility → Enable dwell-click or touch targets</li>
+</ul>
+</div>
 
-2. **Community Safety Tools** (Phase 1.4)
-   - Content warnings and trigger alerts
-   - Advanced blocking and filtering
-   - Community reporting dashboard
-   - Moderation dashboard
+---
 
-3. **Cultural Data Protection / OCAP Compliance** (Phase 1.5)
-   - Sacred data encryption (AES-256)
-   - Cultural metadata handling
-   - Traditional knowledge protocols
-   - Canadian data residency controls
+### 🧠 Cognitive Accessibility Modes
 
-4. **Indigenous Calendar Integration** (Phase 2.1)
-   - Traditional seasons display
-   - Lunar calendar integration
-   - Ceremony reminders
+**For:** ADHD, Autism, Learning Disabilities, Intellectual Disabilities, Processing Speed Differences
 
-5. **Performance Monitoring Dashboard** (Phase 1.6)
-   - Load time tracking
-   - Accessibility metrics
-   - Memory and network monitoring
+**Three Modes to Choose From:**
+- **Standard Mode** - Full feature set, unlimited complexity
+- **Simplified Mode** - Fewer choices, clearer steps, progress tracking
+- **Minimal Mode** - Absolute essentials only, maximum support
 
-### Fast Start
-- **Cognitive Mode:** Settings → Cognitive Accessibility → Pick a mode (Standard/Simplified/Minimal)
-- **Dyslexia Support:** Settings → Dyslexia Support → Choose font, overlay, and spacing preferences
-- **Motor Accessibility:** Settings → Motor Accessibility → Enable dwell-click, touch targets, or tremor compensation
+**Features:**
+- **Auto-Save System** - Save progress automatically (every 5-30 seconds based on your mode)
+- **Navigation Memory** - "Back to where I was" button restores your place
+- **Breadcrumbs & Progress Indicators** - Always know where you are
+- **Complexity Badges** - Features labeled by difficulty level
+- **Step-by-Step Instructions** - Break complex tasks into manageable pieces
+- **Applied to 14+ High-Traffic Screens** - Wellness Hub, Letter Wizard, Evidence Locker, Self-Care Library, and more
+- **Customizable Interface** - Adjust complexity, spacing, and visual density
 
-### Feedback
-Use Settings → About → Feedback or email empowrapp08162025@gmail.com – early feedback shapes priorities.
+**[Learn more: Cognitive Accessibility Deep Dive →](/accessibility#cognitive-disability)**
+
+---
+
+### 🔤 Dyslexia Support (5 Fonts + 8 Overlays)
+
+**For:** Dyslexia, Irlen Syndrome, Visual Processing Disorders, and anyone who benefits from dyslexia-friendly design
+
+**Font Options (5 Total):**
+1. System Default (your device's standard font)
+2. **OpenDyslexic** - Purpose-built dyslexic font (heavier baseline)
+3. **Lexend** - AI-designed font for reading disorders
+4. **Arial** - Clean, sans-serif option
+5. **Helvetica** - Classic, highly readable
+
+**Colored Overlay Options (8 Total) - Irlen Syndrome Support:**
+- Cream (warm, easy on eyes)
+- Peach (warm, neutral)
+- Mint (cool, refreshing)
+- Sky (cool, calming)
+- Rose (warm, soft)
+- Lavender (cool, purple-tinted)
+- Charcoal (dark, high contrast)
+- Ink (dark, maximum contrast)
+
+**Advanced Controls:**
+- Font size adjustment (80-200%)
+- Letter spacing (0-20% increase)
+- Line height adjustment (80-200%)
+- Word spacing (0-20% increase)
+- Text case options (normal, UPPERCASE, lowercase)
+- Bold/italic text enhancement
+- Quick presets (Standard, Recommended, High Contrast, Dark Mode)
+
+**Applied Throughout App:**
+- Letter Wizard templates
+- Policy Simplifier
+- Evidence Locker documents
+- Wellness articles
+- Community discussions
+- 14+ high-traffic screens
+
+**[Learn more: Dyslexia Support Quick Start →](/accessibility#dyslexia-support)**
+
+---
+
+### 🖱️ Motor Accessibility (Dwell-Click, Touch Targets, Tremor Compensation)
+
+**For:** Cerebral Palsy, Parkinson's, Tremor Disorders, Arthritis, Spinal Cord Injury, Muscular Dystrophy, and anyone with motor difficulties
+
+**Features:**
+1. **Dwell-Click (1-5 seconds)**
+   - Hold your finger/cursor on a button for 1-5 seconds instead of tapping
+   - Perfect for tremor or low dexterity
+   - Visual countdown shows when button will activate
+   - Adjustable from 1 to 5 seconds based on your needs
+
+2. **Enlarged Touch Targets**
+   - Auto-scale buttons to 64×64 points (Apple's recommended accessible size)
+   - Easy to tap without accidental neighbor presses
+   - Larger spacing between interactive elements
+
+3. **Tremor Compensation**
+   - Ignore rapid repeated taps to reduce accidental activations
+   - Smart filtering prevents "bounce" taps
+   - Improves accuracy for shaky hands
+
+4. **One-Handed Mode**
+   - Position controls for left or right-hand use
+   - Rearrange interface for single-hand operation
+   - Quick access buttons moved for ease
+
+5. **Voice Navigation (Beta)**
+   - Speak commands to control the app
+   - Hands-free operation for severe motor disabilities
+
+**Settings & Customization:**
+- Test button to practice dwell-click without taking action
+- Reset button to restore defaults
+- Full control panel in Settings → Motor Accessibility
+- Adjustable timing and sensitivity
+
+**[Learn more: Motor Accessibility Setup Guide →](/accessibility#motor-disability)**
+
+---
+
+### 👁️ Visual Accessibility
+
+**For:** Blindness, Low Vision, Color Blindness, Light Sensitivity
+
+**Features:**
+- **High Contrast Mode** - Maximum contrast for text and interface elements
+- **Text Scaling** - Increase font size app-wide (up to 200%)
+- **Dark Mode / Light Mode** - Reduce eye strain based on preference
+- **Focus Indicators** - Clear visual focus rings on all interactive elements
+- **Screen Reader Optimization** - Full compatibility with VoiceOver (iOS) and TalkBack (Android)
+- **Color Independence** - No information conveyed by color alone
+- **Resizable Text** - All text is scalable, not fixed
+
+---
+
+### 👂 Hearing Accessibility & Communication
+
+**For:** Deafness, Hard of Hearing, Auditory Processing Disorder, Sound Sensitivity
+
+**Features:**
+- **Full Captions** - All audio content fully captioned
+- **Visual Alerts** - Notifications with visual indicators instead of sounds
+- **Haptic Feedback** - Vibration alerts for important notifications
+- **No Audio-Only Information** - All audio content has visual alternatives
+- **Video Captions** - All educational videos are captioned
+- **Sign Language Resources** - Links to accessibility resources
+- **Text-Based Communication** - Chat, email, and written alternatives to phone
+- **Silent Mode** - Use app completely silently without missing anything
+
+---
+
+### 🧠 Mental Health & Psychological Accessibility
+
+**For:** PTSD, Anxiety, Depression, Trauma Responses, Eating Disorders, Psychosis, Personality Disorders
+
+**Features:**
+- **Gentle, Trauma-Informed Design** - No sudden shocks, loud noises, or startling animations
+- **Content Warnings** - Know what's coming before you encounter triggering content
+- **Trigger Filtering** - Filter or hide potentially triggering content
+- **Crisis Resources** - One-tap access to crisis support lines
+- **Safety Planning** - Build personalized safety plans
+- **Emotional Regulation Tools** - DBT/CBT-based coping strategies
+- **Anonymous Peer Support** - Connect without sharing identity
+- **Quiet Mode** - Reduce stimulation during difficult times
+- **Reduced Motion** - Disable animations and transitions
+- **Calm Interface** - Soft colors, clear spacing, minimal clutter
+
+**[Learn more: Mental Health Support Resources →](/accessibility#mental-health-accessibility)**
+
+---
+
+### 🌍 Intersectional Support
+
+We recognize disability intersects with multiple identities. We're committed to:
+
+**Cultural Respect:**
+- **Indigenous Language Support** - Multiple Indigenous language options
+- **Cultural Safety** - Sacred knowledge protection (OCAP-compliant)
+- **Cultural Calendar** - Traditional seasons, ceremonies, important dates
+- **Respectful Representation** - Authentic disability and cultural perspectives
+
+**Equity & Inclusion:**
+- **Accessibility for Women & Gender-Diverse People** - Reproductive health tracking, safety considerations
+- **2SLGBTQIA+ Inclusive** - Affirming language, pronouns, relationship options
+- **Racialized Communities** - Recognition of systemic barriers, culturally-specific resources
+- **Immigrant & Refugee Support** - Multi-language, visa/immigration resources
+- **Multiple Disability Representation** - Support for people with multiple disabilities
+
+**[Learn more: Intersectional Accessibility →](/accessibility#intersectional-support)**
+
+---
+
+### 📚 For Supporters & Allies
+
+**Features for Family, Friends, Caregivers, Healthcare Providers:**
+- **Share Resources** - Share information with your support team
+- **Invitation System** - Invite trusted people to learn about your disability
+- **Educational Materials** - Learn about disability from disability experts
+- **Ally Action Prompts** - Practical ways to support your disabled loved ones
+- **Support Network Tools** - Build your care team
+- **Accommodation Guides** - How to best support someone with this disability
+
+**[Learn more: Ally Resources & Support Guide →](/accessibility#for-allies-and-supporters)**
+
+---
+
+### 🔗 Full Accessibility Documentation
+
+**For step-by-step setup guides, accessibility tutorials, and feature deep-dives, visit:**
+
+<div class="button-group">
+  <a href="/accessibility" class="btn btn-primary">🎯 Complete Accessibility Guide</a>
+  <a href="/accessibility-walkthrough" class="btn btn-secondary">📋 Setup Walkthrough</a>
+  <a href="/features#accessibility-features" class="btn btn-secondary">✨ See All 18 Accessibility Features</a>
+</div>
+
+### Get Help
+- **In-App:** Settings → About → Feedback
+- **Email:** empowrapp08162025@gmail.com
+- **Community:** Join the Accessibility Community forum
 
 ---
 
@@ -3398,7 +3861,31 @@ See full changelog: Settings > About > What's New
 ---
 
 **© 2025 3mpwr App. All rights reserved.**  
-**Last Updated: October 25, 2025 | Version 1.0**
+**Last Updated: November 6, 2025 | Version 3.2 (AI Wellness Revolution)**  
+**145+ Features | 18 Accessibility Features | Enterprise Security**
+
+---
+
+## 🔗 Quick Links & Cross-References
+
+**Browse by Category:**
+- 📋 [**See All 145+ Features**](/features) - Complete feature inventory with details
+- 🧠 [**AI Wellness Features**](/features#wellness-tools---41-features-for-mental--physical-health) - Mood Tracker 2.0, Pacing Partner AI, and more
+- 📁 [**Resources & Legal Tools**](/features#resources-tools---43-features-for-advocacy--legal-support) - Evidence Locker, Letter Wizard, and more
+- ⚖️ [**Advocacy Tools**](/features#advocacy-tools---tools-for-legal--systemic-change) - Legal automation, lawyer finder, and more
+- 🤝 [**Community Features**](/features#community---connect--support) - Support groups, peer matching, campaigns
+- ♿ [**Accessibility Features**](/accessibility) - Dyslexia, motor, cognitive, visual, hearing accessibility
+- 🔐 [**Privacy & Security**](/privacy) - Enterprise security, data ownership, compliance
+
+**Get Help:**
+- 📖 [**Accessibility Walkthrough**](/accessibility-walkthrough) - Step-by-step setup guide
+- ❓ [**Frequently Asked Questions**](/faq) - Common questions answered
+- 💬 [**Beta Testing Program**](/beta) - Join early access community
+- 📞 [**Contact & Support**](#getting-more-help) - Get help anytime
+
+**Stay Updated:**
+- 🆕 [**What's New Page**](/whats-new) - Latest app updates and announcements
+- 📧 [**Email us**](mailto:empowrapp08162025@gmail.com) - Direct feedback and suggestions
 
 ---
 
@@ -3429,6 +3916,7 @@ See full changelog: Settings > About > What's New
 - Report accessibility issues
 - Suggest new features
 - Share your experience with others
+- **[Join Beta Testing →](/beta)**
 
 ### 🤝 Community Governance
 **Accountable to the community:**
@@ -3447,6 +3935,7 @@ See full changelog: Settings > About > What's New
 - **Level AAA:** Many features exceed minimum requirements
 - **Multiple disabilities:** Tested with various assistive technologies
 - **Real users:** Tested by people with disabilities
+- **[See our accessibility commitments →](/accessibility)**
 
 **Ongoing Accessibility:**
 - Regular accessibility audits
@@ -3459,13 +3948,14 @@ See full changelog: Settings > About > What's New
 - **OWASP Mobile Top 10:** All security requirements met
 - **Penetration testing:** Regular security assessments
 - **Code audits:** Security reviews of all code
-- **Encryption standards:** Military-grade protection
+- **Encryption standards:** Military-grade AES-256 protection
 
 **Privacy by Design:**
 - **Data minimization:** Only collect what's necessary
 - **Purpose limitation:** Use data only for stated purposes
 - **Storage limitation:** Don't keep data longer than needed
 - **Transparency:** Clear explanations of all data use
+- **[Read our privacy policy →](/privacy)**
 
 ### 🌍 International Standards
 **Legal Compliance:**
@@ -3489,9 +3979,14 @@ See full changelog: Settings > About > What's New
 - **Mental health crisis:** Go to your nearest emergency department
 
 **Crisis support in the app:**
-- Distress tolerance tools in Wellness section
-- Crisis resource directory in Support section
-- Emergency wallet card setup in Settings
+- **Distress tolerance tools** in Wellness section
+- **Crisis resource directory** in Support section
+- **Emergency wallet card** setup in Settings
+
+**Crisis Hotlines:**
+- **Canada Suicide Prevention Service:** 1-833-456-4566 (24/7)
+- **Crisis Text Line:** Text 45645 (4pm-12am ET)
+- **Canadian Domestic Violence Hotline:** 1-800-363-9010 (24/7)
 
 ### 🏥 Healthcare Navigation
 **Preparing for medical appointments:**
@@ -3499,6 +3994,7 @@ See full changelog: Settings > About > What's New
 - Bring Evidence Locker summaries
 - Export medication tracker information
 - Prepare accommodation requests
+- **[See Healthcare Tools →](/features#resources-tools---43-features-for-advocacy--legal-support)**
 
 **Understanding your rights:**
 - Healthcare accommodation rights
@@ -3508,7 +4004,7 @@ See full changelog: Settings > About > What's New
 
 ### 💼 Workplace Support
 **Accommodation requests:**
-- Use Accommodation Letter template
+- Use Accommodation Letter template in Letter Wizard
 - Document all communications in Evidence Locker
 - Know your provincial human rights deadlines
 - Connect with workplace advocates
@@ -3518,19 +4014,35 @@ See full changelog: Settings > About > What's New
 - Know your return-to-work rights
 - Document all medical restrictions
 - Access injured worker support organizations
+- **[Letter Templates →](/features#letter-wizard---22-professional-letter-templates)**
 
 ### 🏛️ Legal System Navigation
 **Understanding legal processes:**
-- Human rights complaint procedures
-- Workers' compensation appeals
-- Benefit application and appeal processes
-- Accessibility complaint mechanisms
+- **Human rights complaint procedures**
+- **Workers' compensation appeals**
+- **Benefit application and appeal processes**
+- **Accessibility complaint mechanisms**
+- **[Legal Automation Tools →](/features#legal-automation---streamlined-legal-processes)**
 
 **Getting legal help:**
 - Legal Aid eligibility and services
 - Disability rights lawyers and advocates
 - Community legal clinics
 - Self-representation resources
+- **[Lawyer Finder Tool →](/features#advocacy-tools---tools-for-legal--systemic-change)**
+
+### 📚 Community Resources
+
+**Disability Rights Organizations:**
+- **Council of Canadians with Disabilities:** [www.ccdonline.ca](https://www.ccdonline.ca)
+- **Disability Rights Coalition of Canada:** [www.disabilityrights.ca](https://www.disabilityrights.ca)
+- **Canadian Association for Community Living:** [www.cacl.ca](https://www.cacl.ca)
+- **Inclusion Canada:** [www.inclusioncanada.ca](https://www.inclusioncanada.ca)
+- **DisAbled Women's Network Canada (DAWN):** [www.dawncanada.net](https://www.dawncanada.net)
+
+**Connect in the App:**
+- **[Join Our Community →](/features#community---connect--support)** - Find support groups, peer matching, campaigns
+- **[Beta Testing Program →](/beta)** - Early access to new features
 
 ---
 
@@ -3540,20 +4052,22 @@ See full changelog: Settings > About > What's New
 **Coverage:**
 - **14 jurisdictions:** All provinces, territories, and federal
 - **100+ disability types:** Comprehensive condition coverage
+- **145+ features:** Tools and capabilities
 - **50+ legal processes:** Claims, appeals, and complaint procedures
 - **200+ resources:** Tools, templates, and information
 
 **Accessibility:**
 - **WCAG 2.1 AA+:** Exceeds minimum accessibility standards
+- **18 accessibility features:** Cognitive, dyslexia, motor, visual, hearing, mental health
 - **15+ languages:** English, French, Spanish, and growing
 - **20+ assistive technologies:** Tested and compatible
 - **Zero barriers:** Every feature accessible to every user
 
 **Security:**
 - **11/11 OWASP checks:** Perfect security score
-- **256-bit encryption:** Military-grade data protection
+- **256-bit encryption:** Military-grade AES-256 data protection
 - **100% user ownership:** Complete data sovereignty
-- **Zero tracking:** No personal data collection
+- **GDPR, CCPA, PIPEDA compliant:** International standards met
 
 ### 🌟 Community Impact
 **User feedback:**
@@ -3584,6 +4098,8 @@ See full changelog: Settings > About > What's New
 - Enhanced cognitive accessibility features
 - Improved sensory accessibility options
 - Advanced assistive technology integration
+
+**[Join Beta Testing to shape the future →](/beta)**
 
 ### 📝 Community Requests
 **Most requested features:**
