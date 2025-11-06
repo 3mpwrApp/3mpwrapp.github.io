@@ -422,6 +422,7 @@ Follow 3mpwr on social media to stay connected and be part of the community:
 
 <ul aria-label="Social links" class="socials-list">
   <li><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} Facebook</a> – Follow us for updates and community news</li>
+  <li><a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} 3mpwr App Hub</a> – Join our Facebook community group</li>
   <li><a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='x' -%} X (Twitter)</a> – Join the conversation</li>
   <li><a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='instagram' -%} Instagram</a> – See our latest posts and stories</li>
   <li><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='youtube' -%} YouTube</a> – Watch videos and live sessions</li>
