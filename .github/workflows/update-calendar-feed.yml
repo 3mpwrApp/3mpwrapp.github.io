@@ -1,0 +1,48 @@
+name: Update Calendar Feed
+
+on:
+  schedule:
+    # Run daily at 3 AM UTC (11 PM EST / 8 PM PST)
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/generate-calendar-feed.mjs'
+      - '.github/workflows/update-calendar-feed.yml'
+
+jobs:
+  update-calendar:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Setup Firebase service account
+        run: |
+          echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' > firebase/serviceAccount.json
+          
+      - name: Generate calendar feed
+        run: node scripts/generate-calendar-feed.mjs
+        
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/events.ics
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update calendar feed [skip ci]" && git push)
+          
+      - name: Cleanup service account
+        if: always()
+        run: rm -f firebase/serviceAccount.json
