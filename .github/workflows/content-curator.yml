@@ -48,7 +48,7 @@ jobs:
   daily_curation:
     name: Daily Content Curation
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 75  # Increased to accommodate 45-minute deployment wait
     if: github.event.inputs.mode != 'weekly'
     permissions:
       contents: write
@@ -99,23 +99,6 @@ jobs:
             echo "⚠️ No curation output (may be normal if no quality content found)"
           fi
 
-      - name: Post to social media
-        if: success()
-        env:
-          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
-          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
-          MASTO_VISIBILITY: 'public'
-          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
-          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
-          BLUESKY_PDS: 'https://bsky.social'
-          X_CLIENT_ID: ${{ secrets.X_CLIENT_ID }}
-          X_CLIENT_SECRET: ${{ secrets.X_CLIENT_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-        run: |
-          echo "📤 Posting to social media..."
-          node scripts/social-post.js || echo "⚠️ Social posting failed"
-
       - name: Build search index
         continue-on-error: true
         run: |
@@ -144,6 +127,29 @@ jobs:
           fi
           
           git push origin main || echo "⚠️ No changes to push"
+
+      - name: Wait for deployment
+        run: |
+          echo "⏳ Waiting 45 minutes for Cloudflare Pages to build and deploy..."
+          echo "This ensures the curation blog posts are live before posting to social media"
+          sleep 2700  # 45 minutes = 2700 seconds
+
+      - name: Post to social media
+        if: success()
+        env:
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_VISIBILITY: 'public'
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_PDS: 'https://bsky.social'
+          X_CLIENT_ID: ${{ secrets.X_CLIENT_ID }}
+          X_CLIENT_SECRET: ${{ secrets.X_CLIENT_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: |
+          echo "📤 Posting to social media..."
+          node scripts/social-post.js || echo "⚠️ Social posting failed"
 
       - name: Create summary
         if: always()
