@@ -15,7 +15,6 @@
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   padding: 2rem;
   border-radius: 12px;
-  text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 2px solid transparent;
@@ -45,6 +44,7 @@
 .funding-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .funding-card h4 {
@@ -52,6 +52,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #2c3e50;
+  text-align: center;
 }
 
 .funding-card p {
@@ -59,6 +60,7 @@
   font-size: 1rem;
   color: #34495e;
   line-height: 1.6;
+  text-align: left;
 }
 
 .mission-statement {
@@ -98,6 +100,7 @@
 .difference-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .difference-card h4 {
@@ -105,6 +108,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #2c3e50;
+  text-align: left;
 }
 
 .difference-card p {
@@ -112,6 +116,7 @@
   font-size: 1rem;
   color: #34495e;
   line-height: 1.6;
+  text-align: left;
 }
 
 /* Mission Box */
@@ -173,7 +178,6 @@
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
-  text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -186,6 +190,7 @@
 .privacy-feature .feature-icon {
   font-size: 2.5rem;
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .privacy-feature h4 {
@@ -193,6 +198,7 @@
   font-size: 1.1rem;
   font-weight: 700;
   color: #6a1b9a;
+  text-align: center;
 }
 
 .privacy-feature p {
@@ -200,6 +206,7 @@
   font-size: 0.95rem;
   color: #34495e;
   line-height: 1.5;
+  text-align: left;
 }
 
 /* Disclaimers Grid */
@@ -213,7 +220,6 @@
 .disclaimer-card {
   padding: 1.5rem;
   border-radius: 12px;
-  text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 2px solid;
@@ -242,6 +248,7 @@
 .disclaimer-icon {
   font-size: 3rem;
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .disclaimer-card h4 {
@@ -249,6 +256,7 @@
   font-size: 1.15rem;
   font-weight: 700;
   color: #2c3e50;
+  text-align: center;
 }
 
 .disclaimer-card p {
@@ -256,6 +264,7 @@
   font-size: 0.95rem;
   color: #34495e;
   font-weight: 500;
+  text-align: center;
 }
 
 /* Dark Mode Support */
