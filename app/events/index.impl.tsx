@@ -21,6 +21,7 @@ import SearchBar from "../../components/SearchBar";
 import SettingsLink from "../../components/SettingsLink";
 import SkeletonRow from "../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
+import { useAuth } from "../../context/AuthContext";
 import { generateDisabilityObservances } from "../../data/disability-observances";
 import { events as localEvents } from "../../data/events";
 import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
@@ -95,6 +96,7 @@ export default function EventsScreen() {
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
+  const { user } = useAuth();
 
   const reload = React.useCallback(async () => {
     try {
@@ -199,7 +201,12 @@ export default function EventsScreen() {
     title: string; description: string; date: string; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean;
   }) => {
     const id = `evt-${Date.now()}`;
-    const newEvt = { id, ...data } as any;
+    const newEvt = { 
+      id, 
+      ...data,
+      createdBy: user?.uid || 'anonymous',
+      createdAt: Date.now()
+    } as any;
     setBaseItems(prev => [newEvt, ...prev]);
     try { 
       await fsAddEvent(newEvt);

@@ -158,6 +158,7 @@ function ScreenInner() {
               target: data.target || undefined,
               goalCount: data.goalCount || undefined,
               contactEmail: data.contactEmail || undefined,
+              createdBy: user?.uid || 'anonymous',
               createdAt: Date.now(),
             });
           }}

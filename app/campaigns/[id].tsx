@@ -1,16 +1,16 @@
 import { Stack, router, useLocalSearchParams } from "expo-router";
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
-    ActivityIndicator,
-    Alert,
-    Modal,
-    Pressable,
-    ScrollView,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    View
+  ActivityIndicator,
+  Alert,
+  Modal,
+  Pressable,
+  ScrollView,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  View
 } from "react-native";
 
 import A11yPressable from "../../components/A11yPressable";
@@ -22,8 +22,8 @@ import { campaigns } from "../../data/campaigns";
 import { useTranslation } from "../../i18n";
 import { fsDeleteCampaign, fsGetCampaign, fsJoinCampaign, fsLeaveCampaign, fsUpdateCampaign } from "../../services/firestore";
 import {
-    CampaignsLocalProvider,
-    useCampaignsLocal,
+  CampaignsLocalProvider,
+  useCampaignsLocal,
 } from "../../store/campaignsLocal";
 import { useFavorites } from "../../store/favorites";
 import { type Palette } from "../../theme/colors";
@@ -49,6 +49,13 @@ function CampaignDetailInner() {
   const { isJoined, join, leave } = useCampaignsLocal();
   const { user, isAdmin } = useAuth();
   const { t } = useTranslation();
+  
+  // Check if user is creator or admin
+  const canEdit = useMemo(() => {
+    if (isAdmin) return true;
+    if (!campaign || !user) return false;
+    return campaign.createdBy === user.uid;
+  }, [isAdmin, campaign, user]);
 
   // Load campaign from Firestore or local data
   useEffect(() => {
@@ -183,8 +190,8 @@ function CampaignDetailInner() {
               <Text style={[styles.text, { marginTop: 8, fontWeight: '600' }]}>🎯 Goal: {campaign.goal}</Text>
             )}
 
-            {/* Admin Actions */}
-            {isAdmin && (
+            {/* Edit/Delete Actions - for creators and admins */}
+            {canEdit && (
               <GapView gap={8} style={{ marginTop: 12, marginBottom: 12 }}>
                 <A11yPressable
                   style={({ pressed }) => [

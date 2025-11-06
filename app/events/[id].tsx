@@ -43,11 +43,18 @@ export default function EventDetail() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const router = useRouter();
-  const { isAdmin } = useAuth();
+  const { isAdmin, user } = useAuth();
   const [loading, setLoading] = React.useState(true);
   const [event, setEvent] = React.useState<any>(null);
   const [editMode, setEditMode] = React.useState(false);
   const [editData, setEditData] = React.useState<any>({});
+  
+  // Check if user is creator or admin
+  const canEdit = React.useMemo(() => {
+    if (isAdmin) return true;
+    if (!event || !user) return false;
+    return event.createdBy === user.uid;
+  }, [isAdmin, event, user]);
 
   // Load event from Firestore or local data
   React.useEffect(() => {
@@ -308,7 +315,7 @@ export default function EventDetail() {
             </GapView>
 
             {/* Admin Actions */}
-            {isAdmin && (
+            {canEdit && (
               <GapView gap={8} style={{ marginTop: 12, marginBottom: 12 }}>
                 <A11yPressable
                   style={({ pressed }) => [

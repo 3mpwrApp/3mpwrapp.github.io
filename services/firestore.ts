@@ -70,6 +70,7 @@ export async function fsAddCampaign(c: {
   target?: string;
   goalCount?: number;
   contactEmail?: string;
+  createdBy?: string;
 }) {
   const m = await ensure();
   const db = await getDB();
@@ -151,13 +152,15 @@ export async function fsAddEvent(e: {
   captions?: boolean;
   stepFree?: boolean;
   sensorySpace?: boolean;
+  createdBy?: string;
+  createdAt?: number;
 }) {
   const m = await ensure();
   const db = await getDB();
   if (!m || !db) return false;
   try {
     await withRetry(() =>
-      m.setDoc(m.doc(db, "events", e.id), { ...e, createdAt: Date.now() } as any, { merge: true })
+      m.setDoc(m.doc(db, "events", e.id), { ...e, createdAt: e.createdAt ?? Date.now() } as any, { merge: true })
     );
     return true;
   } catch {

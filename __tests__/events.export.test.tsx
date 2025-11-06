@@ -42,6 +42,15 @@ jest.mock('../store/counts', () => ({ useCounts: () => ({ counts: {}, setCount: 
 // Mock network hook
 jest.mock('../store/network', () => ({ useNetwork: () => ({ offline: false, setOffline: jest.fn() }) }));
 jest.mock('../store/refresh', () => ({ useRefresh: () => ({ tick: 0, refreshAll: jest.fn() }) }));
+// Mock auth hook to avoid provider wiring
+jest.mock('../context/AuthContext', () => ({ 
+  useAuth: () => ({ 
+    user: { uid: 'test-user-123', email: 'test@example.com' }, 
+    isAdmin: false,
+    loading: false 
+  }),
+  AuthProvider: ({ children }: any) => children
+}));
 // Mock settings hook used inside Card but preserve provider for TestProviders
 jest.mock('../store/settings', () => {
   const real = jest.requireActual('../store/settings');

@@ -45,14 +45,20 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           // Clear session expired flag when user is authenticated
           if (firebaseUser) {
             setSessionExpired(false);
+            
+            // Grant absolute admin access to empowrapp08162025@gmail.com
+            const superAdminEmail = 'empowrapp08162025@gmail.com';
+            const isSuperAdmin = firebaseUser.email === superAdminEmail;
+            
             try {
               const res = await getIdTokenResult(firebaseUser, true);
-              setIsAdmin(Boolean((res.claims as any)?.admin));
+              setIsAdmin(isSuperAdmin || Boolean((res.claims as any)?.admin));
             } catch (error) {
               logger.warn('Failed to refresh claims', {
                 error: error instanceof Error ? error.message : 'Unknown',
               });
-              setIsAdmin(false);
+              // Still grant admin if super admin email, even if claims fail
+              setIsAdmin(isSuperAdmin);
 
               // Check if this is a real auth error (401/403) vs network error
               if (error instanceof Error) {
