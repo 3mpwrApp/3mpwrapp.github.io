@@ -64,6 +64,7 @@ import { SafeProviderWrapper } from "../components/SafeProviderWrapper";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
 import Header from "../components/ThemedHeader";
+import UpdateSplashScreen from "../components/UpdateSplashScreen";
 import { channels } from "../data/community";
 import { setSessionSeed } from "../services/session";
 import { CommunityProvider, useCommunity } from "../store/community";
@@ -206,8 +207,9 @@ export default function RootLayout() {
             <BookmarksProvider>
             <ProfileLocalProvider>
               <PrivacyProvider>
-                {/* Ã°Å¸â€Â¹ Firebase Auth Provider wraps the app */}
+                {/* 🔹 Firebase Auth Provider wraps the app */}
                 <AuthProvider>
+                  <UpdateSplashScreen />
                   <FavoritesProvider>
                     <CountsProvider>
                       <NetworkProvider>

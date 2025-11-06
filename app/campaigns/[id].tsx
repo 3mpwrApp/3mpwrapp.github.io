@@ -146,12 +146,13 @@ function CampaignDetailInner() {
 
   const shareToSocials = async () => {
     if (!campaign) return;
-    const message = `📢 ${campaign.title}\n\n${campaign.summary || ''}\n\n🎯 ${campaign.goal || 'Join us!'}\n\nShared from 3mpwr App`;
+    const message = `📢 ${campaign.title}\n\n${campaign.summary || ''}\n\n🎯 ${campaign.goal || 'Join us!'}\n\n✨ Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/${id}`;
     
     try {
       await Share.share({
         message,
         title: campaign.title,
+        url: `https://3mpwrapp.pages.dev/campaigns/${id}`,
       });
       try { trackEvent("campaign_share", { id: campaign.id }); } catch {}
     } catch (error) {
