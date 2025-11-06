@@ -325,7 +325,7 @@ export default function EventsScreen() {
       <FlatList
         data={filtered}
         keyExtractor={(item) => item.id}
-        contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 20 }}
+        contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 20, paddingTop: 8 }}
         ListHeaderComponent={(
           <>
             <View style={styles.calHeader}>

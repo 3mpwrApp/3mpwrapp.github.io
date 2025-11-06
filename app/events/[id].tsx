@@ -154,7 +154,7 @@ export default function EventDetail() {
 
   const shareToSocials = async () => {
     if (!event) return;
-    const message = `📅 ${event.title}\n\n${event.description || ''}\n\n📍 ${event.isVirtual ? 'Virtual Event' : (event.location || 'TBD')}\n🗓️ ${event.date}\n\nShared from 3mpwr App`;
+    const message = `📅 ${event.title}\n\n${event.description || ''}\n\n📍 ${event.isVirtual ? 'Virtual Event' : (event.location || 'TBD')}\n🗓️ ${event.date}\n\n✨ Powered by 3mpwr App\n🔗 https://3mpwrapp.pages.dev/events/`;
     
     try {
       await Share.share({
