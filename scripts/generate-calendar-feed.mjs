@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * Generate ICS calendar feed from all events (community + observances)
+ * Generate ICS calendar feed from all events (community + observances + Firestore)
  * Output: public/events.ics for hosting on website
  * 
  * Run: node scripts/generate-calendar-feed.mjs
  */
 
-import { mkdirSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -14,11 +14,81 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const rootDir = join(__dirname, '..');
 
-// Import event data (simplified versions)
-const events = [
-  // Sample community events - add more from data/events.ts
+// Firebase Admin SDK setup
+let admin = null;
+let db = null;
+
+async function initializeFirebase() {
+  try {
+    // Dynamic import for firebase-admin
+    const firebaseAdmin = await import('firebase-admin');
+    admin = firebaseAdmin.default || firebaseAdmin;
+    
+    // Find service account
+    let saPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+    if (!saPath) {
+      const fallback = join(rootDir, 'firebase', 'serviceAccount.json');
+      if (existsSync(fallback)) saPath = fallback;
+    }
+    
+    if (!saPath || !existsSync(saPath)) {
+      console.warn('⚠️  Service account not found. Skipping Firestore events.');
+      console.warn('   Set GOOGLE_APPLICATION_CREDENTIALS or add firebase/serviceAccount.json');
+      return false;
+    }
+    
+    // Initialize Firebase Admin
+    if (!admin.apps?.length) {
+      const { readFileSync } = await import('fs');
+      const serviceAccount = JSON.parse(readFileSync(saPath, 'utf8'));
+      admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount)
+      });
+    }
+    
+    db = admin.firestore();
+    return true;
+  } catch (error) {
+    console.warn('⚠️  Firebase Admin initialization failed:', error.message);
+    console.warn('   Continuing without Firestore events...');
+    return false;
+  }
+}
+
+// Fetch all events from Firestore
+async function fetchFirestoreEvents() {
+  if (!db) return [];
+  
+  try {
+    const snapshot = await db.collection('events').get();
+    const events = [];
+    
+    snapshot.forEach(doc => {
+      const data = doc.data();
+      events.push({
+        id: doc.id,
+        title: data.title || 'Untitled Event',
+        date: data.date || data.startDate || new Date().toISOString(),
+        description: data.description || '',
+        location: data.location || '',
+        isVirtual: data.isVirtual || false,
+        createdBy: data.createdBy,
+        createdAt: data.createdAt,
+      });
+    });
+    
+    console.log(`📦 Fetched ${events.length} events from Firestore`);
+    return events;
+  } catch (error) {
+    console.warn('⚠️  Error fetching Firestore events:', error.message);
+    return [];
+  }
+}
+
+// Sample static events (fallback if Firestore is unavailable)
+const staticEvents = [
   {
-    id: 'evt-1',
+    id: 'evt-sample-1',
     title: '3mpwr Community Meetup',
     date: '2025-11-15T18:00:00',
     description: 'Monthly community gathering for peer support and networking',
@@ -237,7 +307,7 @@ PRODID:-//3mpwr App//Events Calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:3mpwr App Events
-X-WR-CALDESC:Community events, disability awareness days, and health observances
+X-WR-CALDESC:Community events, user-created events, disability awareness days, and health observances
 X-WR-TIMEZONE:America/Toronto
 REFRESH-INTERVAL;VALUE=DURATION:PT24H
 X-PUBLISHED-TTL:PT24H`;
@@ -253,12 +323,17 @@ X-PUBLISHED-TTL:PT24H`;
 async function main() {
   console.log('🗓️  Generating calendar feed...');
   
+  // Initialize Firebase and fetch Firestore events
+  const firebaseInitialized = await initializeFirebase();
+  const firestoreEvents = firebaseInitialized ? await fetchFirestoreEvents() : [];
+  
   const currentYear = new Date().getFullYear();
   const nextYear = currentYear + 1;
   
-  // Gather all events
+  // Gather all events: static + Firestore + observances + holidays + health awareness
   const allEvents = [
-    ...events,
+    ...staticEvents,
+    ...firestoreEvents,
     ...generateDisabilityObservances(currentYear),
     ...generateDisabilityObservances(nextYear),
     ...generateCanadianHolidays(currentYear),
@@ -268,6 +343,8 @@ async function main() {
   ];
   
   console.log(`📅 Total events: ${allEvents.length}`);
+  console.log(`   - Static events: ${staticEvents.length}`);
+  console.log(`   - Firestore events: ${firestoreEvents.length}`);
   console.log(`   - Current year (${currentYear}): ${allEvents.filter(e => e.date.startsWith(String(currentYear))).length}`);
   console.log(`   - Next year (${nextYear}): ${allEvents.filter(e => e.date.startsWith(String(nextYear))).length}`);
   
@@ -291,8 +368,18 @@ async function main() {
   console.log('');
   console.log('📤 Next steps:');
   console.log('   1. Host this file on your website at: https://3mpwrapp.pages.dev/events.ics');
-  console.log('   2. Or update EXPO_PUBLIC_CALENDAR_FEED_URL to point to the hosted location');
-  console.log('   3. Run this script regularly (e.g., daily via GitHub Actions) to keep feed updated');
+  console.log('   2. Calendar includes: user-created events, health observances, disability awareness, holidays');
+  console.log('   3. Run this script regularly (e.g., daily via GitHub Actions) to keep feed updated with new user events');
+  
+  // Close Firebase connection if initialized
+  if (admin && db) {
+    try {
+      await admin.app().delete();
+      console.log('🔌 Firebase connection closed');
+    } catch (error) {
+      // Ignore cleanup errors
+    }
+  }
 }
 
 main().catch(err => {
