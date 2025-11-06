@@ -6,19 +6,22 @@ compatibility_date = "2024-01-01"
 workers_dev = true
 
 # Environment variables (set via wrangler secret put or dashboard)
-# [vars]
-# EXAMPLE_VAR = "value"
+[vars]
+# Firebase credentials - set via: wrangler secret put FIREBASE_SERVICE_ACCOUNT
+# Firebase database URL
+# FIREBASE_DATABASE_URL = "https://your-project.firebaseio.com"
+
+# KV namespaces for caching Firestore results
+[[kv_namespaces]]
+binding = "CALENDAR_CACHE"
+id = "calendar_cache_prod"
+preview_id = "calendar_cache_dev"
 
 # For production deployment, set your custom domain:
 # routes = [
 #   { pattern = "api.3mpwrapp.com/*", zone_name = "3mpwrapp.com" }
 # ]
 
-# KV namespaces (if needed for caching)
-# [[kv_namespaces]]
-# binding = "CALENDAR_CACHE"
-# id = "your_kv_namespace_id"
-
 # Cron triggers for cache warming (optional)
 # [triggers]
-# crons = ["0 0 * * *"]  # Daily at midnight UTC
+# crons = ["0 */6 * * *"]  # Every 6 hours UTC
