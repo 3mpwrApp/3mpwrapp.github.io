@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta name="description" content="{{ page.description | default: site.description }}">
   
-  <!-- Security Headers (GitHub Pages fallback - prefer server-side headers) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://gc.zgo.at https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://challenges.cloudflare.com https://cloudflareinsights.com; frame-src https://docs.google.com https://challenges.cloudflare.com; base-uri 'self'; form-action 'self' https://duckduckgo.com https://docs.google.com https://formspree.io; upgrade-insecure-requests">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <!-- 
+    Security Headers: These should be set via server-side headers file (_headers for Netlify/Vercel, .htaccess for Apache, etc.)
+    CSP meta tag is included above as the only valid http-equiv for security headers.
+    X-Content-Type-Options, X-Frame-Options, and Referrer-Policy must be set as HTTP response headers, not meta tags.
+  -->
   
   <!-- Resource Hints for Performance (limit to 3 most critical) -->
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -60,13 +60,13 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <a class="skip-link" href="#primary-nav">Skip to navigation</a>
   <a class="skip-link" href="#site-footer">Skip to footer</a>
-  <header role="banner">
+  <header>
     <!-- Brand: clicking this takes you home -->
     <div class="brand header-bar">
       <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
         <picture>
           <source type="image/webp" srcset="{{ '/assets/empwrapp-logo.webp' | relative_url }}">
-          <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="" width="28" height="28" aria-hidden="true" loading="eager" />
+          <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="" width="28" height="28" aria-hidden="true" loading="eager">
         </picture>
         <span>{{ site.title }}</span>
       </a>
@@ -243,11 +243,11 @@
     </ol>
   </nav>
 
-  <main id="main-content" role="main" tabindex="-1">
+  <main id="main-content" tabindex="-1">
     {{ content }}
   </main>
 
-  <footer id="site-footer" role="contentinfo">
+  <footer id="site-footer">
     <div class="footer-grid">
       <!-- About Column -->
       <div class="footer-column">
@@ -535,7 +535,7 @@
           src="https://docs.google.com/forms/d/e/1FAIpQLSfuItjmtWlUW3L8irmSe8QN129_GJDLAF4f5n-QHPcj_FFoyg/viewform?embedded=true"
           class="modal-iframe"
           loading="lazy"
-        >Loading…</iframe>
+        ></iframe>
       </div>
       <div class="modal-footer">
         <label style="display:flex;align-items:center;gap:0.5rem;">

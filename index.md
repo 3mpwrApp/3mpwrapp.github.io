@@ -211,23 +211,23 @@ We're building a safe space to connect, share experiences, and advocate for real
 <span class="energy-cost" data-energy="3" aria-label="Energy cost: medium">🔋🔋🔋 Energy: Medium</span>
 <button class="email-section-btn" data-section="features" aria-label="Email this section to yourself">📧 Email this section</button>
 
-<ul class="features-grid" role="list" aria-label="Key features">
-  <li role="listitem">
+<ul class="features-grid" aria-label="Key features">
+  <li>
     <h3>Community Support</h3>
     <p>Connect with others, share stories, and build solidarity in province-specific spaces.</p>
     <p><small><a href="{{ '/user-guide#community' | relative_url }}">📖 Learn more in User Guide →</a></small></p>
   </li>
-  <li role="listitem">
+  <li>
     <h3>Advocacy & Campaigns</h3>
     <p>Access campaign resources and tools to help drive change in policies and workplaces.</p>
     <p><small><a href="{{ '/user-guide#advocacy-tools' | relative_url }}">📖 Learn more in User Guide →</a></small></p>
   </li>
-  <li role="listitem">
+  <li>
     <h3>Educational Resources</h3>
     <p>Learn your rights, access guides and templates, and stay informed about important issues.</p>
     <p><small><a href="{{ '/user-guide#resources' | relative_url }}">📖 Learn more in User Guide →</a></small></p>
   </li>
-  <li role="listitem">
+  <li>
     <h3>Podcasts & Updates</h3>
     <p>Listen to stories, insights, and conversations from the community.</p>
     <p><small><a href="{{ '/user-guide#podcasts' | relative_url }}">📖 Learn more in User Guide →</a></small></p>
@@ -240,8 +240,8 @@ We're building a safe space to connect, share experiences, and advocate for real
 
 <p>Mobile apps are in progress. Store availability is coming soon.</p>
 
-<ul class="store-badges" role="list" aria-label="App store availability">
-  <li role="listitem">
+<ul class="store-badges" aria-label="App store availability">
+  <li>
     <figure class="store-badge">
       <img src="{{ '/assets/images/app-store-coming-soon.svg' | relative_url }}"
         alt="App Store — coming soon"
@@ -251,7 +251,7 @@ We're building a safe space to connect, share experiences, and advocate for real
       <figcaption class="sr-only">App Store — coming soon</figcaption>
     </figure>
   </li>
-  <li role="listitem">
+  <li>
     <figure class="store-badge">
       <img src="{{ '/assets/images/google-play-coming-soon.svg' | relative_url }}"
         alt="Google Play — coming soon"
@@ -315,7 +315,7 @@ Ready to join the movement? Here's how you can get started:
 
   {% assign daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
   {% if daily and daily.size > 0 %}
-    <ul class="highlight-banner__list" role="list" aria-label="Latest curated items">
+    <ul class="highlight-banner__list" aria-label="Latest curated items">
       {% for post in daily limit:3 %}
       <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -346,11 +346,11 @@ We're committed to transparency and protecting your rights:
 {% if site.posts.size > 0 %}
 <section aria-labelledby="latest-posts">
   <h2 id="latest-posts">Latest from the blog</h2>
-  <ul class="post-list" role="list">
+  <ul class="post-list">
     {% assign shown = 0 %}
     {% for post in site.posts %}
       {% unless post.tags contains 'highlights' %}
-        <li role="listitem">
+        <li>
           <h3 style="margin-bottom: 0.25rem;">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </h3>
@@ -390,54 +390,8 @@ We're committed to transparency and protecting your rights:
     <a class="weekly-all" href="{{ '/blog' | relative_url }}">All posts →</a>
   </div>
 </div>
-
-<style>
-.weekly-swiper { margin: 1.5rem 0; }
-.weekly-track { display: grid; grid-auto-flow: column; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory;}
-.weekly-card { 
-  min-width: 280px; 
-  max-width: 420px; 
-  padding: 1rem; 
-  border: 1px solid var(--border-color, #ddd); 
-  border-radius: 8px; 
-  scroll-snap-align: start; 
-  background: var(--card-bg, #fff);
-}
-.weekly-card__title { 
-  margin: 0 0 .25rem; 
-  font-size: 1.1rem; 
-}
-.weekly-card__title a {
-  color: var(--link-color, #007bff);
-  text-decoration: none;
-}
-.weekly-card__title a:hover {
-  text-decoration: underline;
-}
-.weekly-card__meta { 
-  margin: 0 0 .5rem; 
-  color: var(--text-secondary, #666); 
-  font-size: .9rem; 
-}
-.weekly-card__excerpt {
-  color: var(--text-color, #222);
-}
-.weekly-controls { display: flex; align-items: center; gap: .5rem; margin-top: .5rem; }
-.weekly-btn { 
-  padding: .25rem .5rem;
-  background: var(--button-bg, #007bff);
-  color: var(--button-text, #fff);
-  border: 1px solid var(--border-color, #ddd);
-  border-radius: 4px;
-  cursor: pointer;
-}
-.weekly-btn:hover {
-  background: var(--button-hover-bg, #0056b3);
-}
-.weekly-all {
-  color: var(--link-color, #007bff);
-  text-decoration: none;
-}
+<!-- Note: CSS styles moved to external stylesheets per W3C HTML5 spec - style elements must be in head, not in main content area -->
+<!-- The .weekly-* and related styles are now in assets/css/homepage-animations.css -->
 .weekly-all:hover {
   text-decoration: underline;
 }
@@ -466,12 +420,12 @@ We're committed to transparency and protecting your rights:
 
 Follow 3mpwr on social media to stay connected and be part of the community:
 
-<ul role="list" aria-label="Social links" class="socials-list">
-  <li role="listitem"><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} Facebook</a> – Follow us for updates and community news</li>
-  <li role="listitem"><a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='x' -%} X (Twitter)</a> – Join the conversation</li>
-  <li role="listitem"><a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='instagram' -%} Instagram</a> – See our latest posts and stories</li>
-  <li role="listitem"><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='youtube' -%} YouTube</a> – Watch videos and live sessions</li>
-  <li role="listitem"><a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='tiktok' -%} TikTok</a> – Short clips and updates</li>
+<ul aria-label="Social links" class="socials-list">
+  <li><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} Facebook</a> – Follow us for updates and community news</li>
+  <li><a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='x' -%} X (Twitter)</a> – Join the conversation</li>
+  <li><a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='instagram' -%} Instagram</a> – See our latest posts and stories</li>
+  <li><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='youtube' -%} YouTube</a> – Watch videos and live sessions</li>
+  <li><a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='tiktok' -%} TikTok</a> – Short clips and updates</li>
 </ul>
 
 ---

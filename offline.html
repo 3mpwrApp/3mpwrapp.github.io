@@ -33,7 +33,7 @@ description: You're currently offline. 3mpwrApp will work again when you reconne
   </div>
 
   <div style="margin-top: 3rem;">
-    <button onclick="location.reload()" style="background: #007bff; color: white; border: none; padding: 1rem 2rem; font-size: 1.1rem; border-radius: 8px; cursor: pointer;">
+    <button id="retry-button" style="background: #007bff; color: white; border: none; padding: 1rem 2rem; font-size: 1.1rem; border-radius: 8px; cursor: pointer;">
       Try Again
     </button>
   </div>
@@ -44,28 +44,46 @@ description: You're currently offline. 3mpwrApp will work again when you reconne
 </div>
 
 <script>
-  // Auto-refresh when connection restored
+  // Manual retry button
+  document.getElementById('retry-button').addEventListener('click', function() {
+    location.reload();
+  });
+
+  // Auto-refresh when connection restored - with user notification
   window.addEventListener('online', function() {
     console.log('Connection restored! Reloading...');
+    var notification = document.createElement('div');
+    notification.setAttribute('role', 'status');
+    notification.setAttribute('aria-live', 'polite');
+    notification.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 1rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 9999;';
+    notification.textContent = 'Connection restored! Refreshing...';
+    document.body.appendChild(notification);
+    
     setTimeout(function() {
       location.reload();
-    }, 1000);
+    }, 1500);
   });
 
   // Check connection status
   function updateOnlineStatus() {
     if (navigator.onLine) {
-      document.body.innerHTML += '<div style="position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 1rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Connection restored! Refreshing...</div>';
-      setTimeout(function() { location.reload(); }, 1500);
+      var notification = document.createElement('div');
+      notification.setAttribute('role', 'status');
+      notification.setAttribute('aria-live', 'polite');
+      notification.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 1rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 9999;';
+      notification.textContent = 'Connection restored! Refreshing...';
+      document.body.appendChild(notification);
+      
+      setTimeout(function() { 
+        location.reload(); 
+      }, 1500);
     }
   }
 
-  window.addEventListener('online', updateOnlineStatus);
-  
-  // Periodic connectivity check
+  // Periodic connectivity check every 5 seconds (not too aggressive)
   setInterval(function() {
-    if (navigator.onLine) {
+    if (navigator.onLine && !document.querySelector('[role="status"]')) {
       updateOnlineStatus();
     }
-  }, 3000);
+  }, 5000);
 </script>
