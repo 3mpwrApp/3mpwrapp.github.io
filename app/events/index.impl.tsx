@@ -1,4 +1,5 @@
-import { Link, useFocusEffect } from "expo-router";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Link, useFocusEffect, useRouter } from "expo-router";
 import React from "react";
 import {
   Alert,
@@ -52,6 +53,7 @@ export default function EventsScreen() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const { t } = useTranslation();
+  const router = useRouter?.() || null;
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount(t('nav.events','Events'));
   useFocusOnRefOnMount(titleRef);
@@ -71,6 +73,21 @@ export default function EventsScreen() {
       ...generateHealthAwarenessEvents(y),
     ];
   });
+
+  // Load locally created events from storage on mount
+  React.useEffect(() => {
+    (async () => {
+      try {
+        const cached = await AsyncStorage.getItem('events:local:v1');
+        if (cached) {
+          const localCreatedEvents = JSON.parse(cached);
+          setBaseItems(prev => [...localCreatedEvents, ...prev]);
+        }
+      } catch (err) {
+        console.warn('[Events] Failed to load cached events:', err);
+      }
+    })();
+  }, []);
   const { includeProvincialHolidays, province } = useSettings();
 
   type FilterMode = "all" | "community" | "observances";
@@ -207,7 +224,21 @@ export default function EventsScreen() {
       createdBy: user?.uid || 'anonymous',
       createdAt: Date.now()
     } as any;
+    
+    // Add to UI immediately
     setBaseItems(prev => [newEvt, ...prev]);
+    
+    // Save to local storage for persistence
+    try {
+      const cached = await AsyncStorage.getItem('events:local:v1');
+      const localEvents = cached ? JSON.parse(cached) : [];
+      const updated = [newEvt, ...localEvents];
+      await AsyncStorage.setItem('events:local:v1', JSON.stringify(updated));
+    } catch (err) {
+      console.warn('[Events] Failed to cache event:', err);
+    }
+    
+    // Try to sync to Firestore
     try { 
       await fsAddEvent(newEvt);
       Alert.alert(
@@ -215,16 +246,16 @@ export default function EventsScreen() {
         t('eventsFeature.created','Event created successfully!'),
         [{ text: t('common.ok','OK') }]
       );
-      setShowCreate(false);
       trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id });
     } catch (err) { 
       console.error('[Events] Failed to save event to Firestore:', err);
-      // Event is still in local state even if Firestore save fails
       Alert.alert(
         t('common.warning','Warning'),
-        'Event created locally but could not sync to cloud. It will be available on this device only.',
+        'Event created and saved locally but could not sync to cloud. It will be available on this device.',
         [{ text: t('common.ok','OK') }]
       );
+    } finally {
+      setShowCreate(false);
     }
   };
 
@@ -403,7 +434,7 @@ export default function EventsScreen() {
             </View>
 
             {/* Add spacing after calendar matrix */}
-            <View style={{ marginTop: 24, marginBottom: 16 }} />
+            <View style={{ height: 32 }} />
 
             {/* Calendar Subscription Card - Auto-sync feature with error boundary */}
             <ErrorBoundary>
@@ -505,17 +536,37 @@ export default function EventsScreen() {
               palette={palette}
               showEditDelete={item.id.startsWith('evt-')}
               onEdit={() => {
-                // TODO: Implement edit functionality
-                Alert.alert('Edit Event', 'Edit functionality coming soon!');
+                // Navigate to event detail page for editing
+                if (router) {
+                  router.push({ pathname: "/events/[id]", params: { id: item.id } });
+                }
               }}
               onDelete={async () => {
                 // Delete from local state
                 setBaseItems(prev => prev.filter(e => e.id !== item.id));
-                // Try to delete from Firestore (silent fail is OK)
+                
+                // Remove from local storage
                 try {
-                  // TODO: Implement Firestore delete
+                  const cached = await AsyncStorage.getItem('events:local:v1');
+                  if (cached) {
+                    const localEvents = JSON.parse(cached);
+                    const updated = localEvents.filter((e: any) => e.id !== item.id);
+                    await AsyncStorage.setItem('events:local:v1', JSON.stringify(updated));
+                  }
+                } catch (err) {
+                  console.warn('[Events] Failed to update cache:', err);
+                }
+                
+                // Try to delete from Firestore
+                try {
+                  const { fsDeleteEvent } = await import('../../services/firestore');
+                  await fsDeleteEvent(item.id);
                   Alert.alert('✅ Deleted', `"${item.title}" has been deleted.`);
-                } catch {}
+                  trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id });
+                } catch (err) {
+                  console.warn('[Events] Failed to delete from Firestore, but removed locally:', err);
+                  Alert.alert('✅ Deleted Locally', `"${item.title}" has been removed. Cloud sync may be unavailable.`);
+                }
               }}
             />
           </View>

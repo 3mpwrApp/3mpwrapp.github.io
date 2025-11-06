@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Linking from "expo-linking";
 import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import React from 'react';
@@ -66,7 +67,19 @@ export default function EventDetail() {
         if (fsEvent) {
           setEvent(fsEvent);
         } else {
-          // Fall back to local events
+          // Try local AsyncStorage cache for user-created events
+          const cached = await AsyncStorage.getItem('events:local:v1');
+          if (cached) {
+            const localCreated = JSON.parse(cached);
+            const cachedEvent = localCreated.find((e: any) => e.id === id);
+            if (cachedEvent) {
+              setEvent(cachedEvent);
+              setLoading(false);
+              return;
+            }
+          }
+          
+          // Fall back to static local events data
           const localEvent = events.find((e) => e.id === id);
           setEvent(localEvent || null);
         }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Alert, Platform, Share, StyleSheet, Text, View } from 'react-native';
 
 import { ANALYTICS_EVENTS, trackEvent } from '../services/analyticsClient';
@@ -21,6 +22,31 @@ try {
  */
 export default function CalendarSubscriptionCard() {
   const palette = useAppPalette();
+  const [lastSync, setLastSync] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    // Get last sync time
+    (async () => {
+      try {
+        const AsyncStorage = await import('@react-native-async-storage/async-storage').then(m => m.default);
+        const lastSyncTime = await AsyncStorage.getItem('events:firestore:lastSync');
+        if (lastSyncTime) {
+          const time = new Date(parseInt(lastSyncTime, 10));
+          const now = new Date();
+          const diffMs = now.getTime() - time.getTime();
+          const diffMins = Math.floor(diffMs / 60000);
+          
+          if (diffMins < 1) {
+            setLastSync('Just now');
+          } else if (diffMins < 60) {
+            setLastSync(`${diffMins} min ago`);
+          } else {
+            setLastSync(time.toLocaleTimeString());
+          }
+        }
+      } catch {}
+    })();
+  }, []);
 
   // Safety check for palette
   if (!palette || !palette.surface || !palette.primary || !palette.text) {
@@ -102,7 +128,7 @@ export default function CalendarSubscriptionCard() {
         Never miss disability awareness days, health observances, or community events. Subscribe once and your calendar stays up-to-date automatically!
       </Text>
       
-      <View style={[styles.features, { borderTopColor: palette.muted }]}>
+      <View style={styles.features}>
         <Text style={[styles.feature, { color: palette.text }]}>
           ✓ Automatic updates - no manual imports
         </Text>
@@ -112,6 +138,11 @@ export default function CalendarSubscriptionCard() {
         <Text style={[styles.feature, { color: palette.text }]}>
           ✓ Privacy-first - no tracking
         </Text>
+        {lastSync && (
+          <Text style={[styles.feature, { color: palette.text, fontSize: 12, opacity: 0.7, marginTop: 4 }]}>
+            Last synced: {lastSync}
+          </Text>
+        )}
       </View>
       
       <A11yPressable
