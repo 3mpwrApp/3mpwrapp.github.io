@@ -104,7 +104,15 @@ export default function UpdateSplashScreen() {
       statusBarTranslucent={true}
     >
       <View style={[styles.container, { backgroundColor: palette.background }]}>
-        <View style={[styles.content, { backgroundColor: palette.surface }]}>
+        <View
+          style={[
+            styles.content,
+            {
+              backgroundColor: palette.surface,
+              shadowColor: palette.text,
+            },
+          ]}
+        >
           {/* App Logo/Title */}
           <Text style={[styles.title, { color: palette.text }]}>
             3mpwr App
@@ -166,7 +174,6 @@ const styles = StyleSheet.create({
     padding: 32,
     borderRadius: 16,
     alignItems: 'center',
-    shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.2,
     shadowRadius: 8,
