@@ -17,6 +17,75 @@ permalink: /accessibility/
   <p class="hero-text">3mpwrApp is committed to inclusive design. We aim to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA, and we adopt selected AAA practices where feasible.</p>
 </div>
 
+---
+
+## 📚 Table of Contents
+
+**Jump to any section below:**
+
+<div class="toc-grid">
+  <div class="toc-item">
+    <a href="#our-commitment">
+      <span class="toc-icon">💙</span>
+      <span class="toc-text">Our Commitment</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#accessibility-goals">
+      <span class="toc-icon">🎯</span>
+      <span class="toc-text">Goals</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#cognitive-disability">
+      <span class="toc-icon">🧠</span>
+      <span class="toc-text">Cognitive</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#dyslexia-support">
+      <span class="toc-icon">🔤</span>
+      <span class="toc-text">Dyslexia</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#motor-disability">
+      <span class="toc-icon">🖱️</span>
+      <span class="toc-text">Motor</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#visual-accessibility">
+      <span class="toc-icon">👁️</span>
+      <span class="toc-text">Visual</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#hearing-accessibility">
+      <span class="toc-icon">👂</span>
+      <span class="toc-text">Hearing</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#mental-health-accessibility">
+      <span class="toc-icon">💭</span>
+      <span class="toc-text">Mental Health</span>
+    </a>
+  </div>
+</div>
+
+<div class="related-pages">
+  <strong>📖 Related Pages:</strong>
+  <ul>
+    <li><a href="/user-guide#accessibility-features">User Guide - Accessibility Section</a></li>
+    <li><a href="/features#accessibility-features">Features - Accessibility Tools</a></li>
+    <li><a href="/accessibility-settings/">Accessibility Settings</a></li>
+    <li><a href="/accessibility-walkthrough/">Setup Walkthrough</a></li>
+  </ul>
+</div>
+
+---
+
 <div class="quick-summary">
   <h2>Quick Summary</h2>
   <ul>

@@ -18,6 +18,75 @@ description: Our commitment to your privacy and 100% user data ownership.
 **Last updated: October 25, 2025**  
 **Version: 3.0**
 
+---
+
+## 📚 Table of Contents
+
+**Jump to any section below:**
+
+<div class="toc-grid">
+  <div class="toc-item">
+    <a href="#100-user-data-ownership-guarantee">
+      <span class="toc-icon">🏠</span>
+      <span class="toc-text">Data Ownership</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#information-we-collect">
+      <span class="toc-icon">📊</span>
+      <span class="toc-text">Data Collection</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#how-we-use-information">
+      <span class="toc-icon">🔄</span>
+      <span class="toc-text">Data Usage</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#data-security">
+      <span class="toc-icon">🔐</span>
+      <span class="toc-text">Security</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#your-rights">
+      <span class="toc-icon">⚖️</span>
+      <span class="toc-text">Your Rights</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#retention--deletion">
+      <span class="toc-icon">🗑️</span>
+      <span class="toc-text">Retention</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#third-parties">
+      <span class="toc-icon">👥</span>
+      <span class="toc-text">Third Parties</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#international">
+      <span class="toc-icon">🌍</span>
+      <span class="toc-text">International</span>
+    </a>
+  </div>
+</div>
+
+<div class="related-pages">
+  <strong>📖 Related Pages:</strong>
+  <ul>
+    <li><a href="/privacy-controls/">Privacy Controls</a> - Customize your privacy settings</li>
+    <li><a href="/user-guide#privacy--security">User Guide - Privacy Section</a></li>
+    <li><a href="/features">All Features</a></li>
+    <li><a href="/contact/">Contact Us</a></li>
+  </ul>
+</div>
+
+---
+
 <!-- TL;DR Summary -->
 <details class="tldr-box" open>
   <summary><strong>⚡ Quick Summary (30 seconds)</strong></summary>
@@ -468,7 +537,99 @@ This policy reflects our actual technical implementation. You can verify our pri
 
 ---
 
-<!-- Alternative Formats -->
+## 🔗 Related Pages & Next Steps
+
+**These pages work together with this privacy policy:**
+
+### Understand Your Features & Data
+- **[Features →](/features)** - See all tools and what data they use
+  - Includes privacy-focused feature descriptions
+  - Links to privacy sections for each feature
+  - Explains data handling for each tool
+
+- **[User Guide →](/user-guide)** - How to use features with privacy in mind
+  - Includes privacy settings tutorial
+  - Explains data ownership rights
+  - Shows how to export/delete data
+  - Links to this privacy policy from security sections
+
+### Configure Your Privacy
+- **[Privacy Controls →](/privacy-controls/)** - Customize your privacy settings
+  - Choose your privacy mode (default, BYOC, strict BYOC)
+  - Control what data you share
+  - Enable/disable optional features
+  - Manage cloud sync settings
+
+- **[Accessibility Guide →](/accessibility)** - Accessibility with privacy protection
+  - Dyslexia, motor, and cognitive accessibility
+  - All features work 100% offline
+  - Privacy-protected data never leaves your device
+
+### Learn About Your Rights
+- **[Data Ownership →](/data-ownership/)** - 100% user data sovereignty
+  - Your data belongs to you
+  - How to export your data
+  - How to delete your data
+  - Your rights explanation
+
+### Getting Help
+- **[Contact Us →](/contact/)** - Privacy questions or concerns
+  - Contact our privacy team
+  - Request your data
+  - Report privacy concerns
+  - Feedback and suggestions
+
+### Stay Informed
+- **[What's New →](/whats-new)** - Latest updates including security improvements
+  - See recent privacy/security enhancements
+  - Learn about new privacy features
+  - Read security announcements
+
+### Join Our Community
+- **[Beta Testing Guide →](/beta)** - Help test privacy features
+  - Test privacy controls
+  - Report privacy issues
+  - Provide security feedback
+
+---
+
+## Privacy Policy Quick Reference
+
+**Privacy Guarantee:**
+- ✅ 100% user data ownership
+- ✅ Local-first by default
+- ✅ Optional cloud sync (to YOUR cloud only)
+- ✅ Military-grade AES-256 encryption
+- ✅ Zero tracking, no analytics
+- ✅ Export/delete anytime
+
+**Your Rights:**
+- ✅ Access your data anytime
+- ✅ Export your data in JSON format
+- ✅ Delete your data completely
+- ✅ Request data from us (subject access)
+- ✅ Correct or update your data
+- ✅ Object to processing
+
+**Security:**
+- ✅ Hardware-backed key storage
+- ✅ TLS 1.3 network encryption
+- ✅ Tamper detection
+- ✅ Regular security audits
+- ✅ Incident response procedures
+
+**Legal Compliance:**
+- ✅ GDPR compliant (EU data)
+- ✅ CCPA compliant (US data)
+- ✅ PIPEDA compliant (Canadian data)
+- ✅ Canadian accessibility laws
+- ✅ International privacy standards
+
+---
+
+**💡 Tip:** Each of these pages links back to this policy, so you can always understand how your data is protected across the entire platform!
+
+---
 <div class="alternative-formats" role="complementary">
   <p><strong>📱 Need this in a different format?</strong></p>
   <p>

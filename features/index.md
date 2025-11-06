@@ -17,6 +17,64 @@ description: Explore 3mpwrApp's comprehensive 133+ features designed to empower 
 
 Welcome to 3mpwrApp - your complete toolkit for disability advocacy, community connection, and system navigation. With **145 features available in beta** and 35 more coming soon, every tool is designed to empower you while protecting your privacy.
 
+---
+
+## 📚 Table of Contents
+
+**Quick Navigation** — Use these links to jump directly to the section you need:
+
+<div class="toc-grid">
+  <div class="toc-item">
+    <a href="#wellness-tools---41-features-for-mental--physical-health">
+      <span class="toc-icon">🧘</span>
+      <span class="toc-text">Wellness Tools (41)</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#resources-tools---43-features-for-advocacy--legal-support">
+      <span class="toc-icon">📖</span>
+      <span class="toc-text">Resources (43)</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#advocacy-tools---tools-for-legal--systemic-change">
+      <span class="toc-icon">⚖️</span>
+      <span class="toc-text">Advocacy Tools</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#community---connect--support">
+      <span class="toc-icon">🤝</span>
+      <span class="toc-text">Community</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#accessibility-features">
+      <span class="toc-icon">♿</span>
+      <span class="toc-text">Accessibility (18)</span>
+    </a>
+  </div>
+  <div class="toc-item">
+    <a href="#coming-soon-features">
+      <span class="toc-icon">🚀</span>
+      <span class="toc-text">Coming Soon</span>
+    </a>
+  </div>
+</div>
+
+<div class="related-pages">
+  <strong>📖 Related Pages:</strong>
+  <ul>
+    <li><a href="/user-guide">User Guide</a> - Step-by-step tutorials for all features</li>
+    <li><a href="/accessibility">Accessibility Guide</a> - Detailed accessibility settings</li>
+    <li><a href="/privacy">Privacy & Security</a> - How we protect your data</li>
+    <li><a href="/beta">Beta Testing Guide</a> - Join our beta program</li>
+    <li><a href="/whats-new">What's New</a> - Latest updates and announcements</li>
+  </ul>
+</div>
+
+---
+
 ### 🆕 November 2025 Updates
 - ✅ **AI-Powered Wellness:** Mood Tracker 2.0 with pattern detection, Pacing Partner with forecasting
 - ✅ **5 New Features:** Daily Feature Rotation, Cross-Feature Recommendations, Complete Awareness Calendar with Indigenous days
@@ -902,7 +960,72 @@ All AI processing happens on-device for privacy.
 
 ---
 
-**🎉 Thank you for being part of 3mpwrApp beta! Your feedback will help us create the best possible empowerment app for the disability community.**
+## 🔗 Related Pages & Next Steps
+
+**These pages work together with this features list:**
+
+### Learn How to Use Features
+- **[User Guide →](/user-guide)** - Step-by-step tutorials for all 145+ features
+  - Includes setup instructions, first-week checklist, and accessibility tips
+  - Features detailed guides for wellness, advocacy, resources, community, and accessibility
+  - Cross-references back to this page for feature details
+
+### Accessibility & Inclusivity
+- **[Accessibility Guide →](/accessibility)** - Detailed accessibility features and settings
+  - Learn about dyslexia support, motor accessibility, cognitive aids
+  - Setup instructions for all accessibility features
+  - Includes links back to feature descriptions
+
+### Privacy, Security & Legal
+- **[Privacy Policy →](/privacy)** - How we protect your data
+  - 100% user data ownership guarantee
+  - Enterprise security features (AES-256 encryption, air-gapped mode)
+  - Data ownership and privacy modes explained
+  - Links to all privacy-related features
+
+### Stay Updated
+- **[What's New →](/whats-new)** - Latest app updates and announcements
+  - November 2025 AI wellness features
+  - Enhanced accessibility features
+  - New features and improvements
+  - Links to feature details for each update
+
+### Join Our Community
+- **[Beta Testing Guide →](/beta)** - Help shape the app's future
+  - Testing procedures and priorities
+  - How to report issues
+  - Beta timeline and phases
+  - Links to beta testing priorities in user guide
+
+### Start Your Journey
+- **[Home Page →](/)** - Get oriented
+- **[Contact Us →](/contact/)** - Get help or provide feedback
+
+---
+
+## Recommended Reading Order
+
+**New to 3mpwrApp?**
+1. Start here: [Home →](/home) - Get oriented
+2. Explore: [Features →](/features) (this page) - See all tools
+3. Learn: [User Guide →](/user-guide) - Step-by-step tutorials
+4. Understand: [Privacy →](/privacy) - How your data is protected
+
+**Want to focus on accessibility?**
+1. Start: [Accessibility Guide →](/accessibility) - See all options
+2. Setup: [User Guide Accessibility Section →](/user-guide#accessibility-features) - Enable features
+3. Learn more: [Features - Accessibility →](/features#accessibility-features) - Feature details
+
+**Ready to test?**
+1. Learn: [Beta Testing Guide →](/beta) - Understand the program
+2. Setup: [User Guide First-Time Setup →](/user-guide#first-time-setup-9-step-acceptance) - Get started
+3. Test: Use the [Beta Priorities →](/user-guide#beta-testing-priorities-%F0%9F%A7%AA) checklist
+
+---
+
+**💡 Tip:** Each of these pages links to the others, so you can easily navigate between documentation while you learn and explore!
+
+---
 
 **Remember**: 3mpwrApp is built with your privacy and security as top priorities. All features are designed to empower you while protecting your sensitive information.
 

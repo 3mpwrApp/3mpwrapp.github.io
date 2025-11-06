@@ -200,9 +200,12 @@ features: 145+ available | AI wellness | Enhanced accessibility | Enterprise sec
 <div class="info-box-light">
   <p style="margin: 0 0 0.5rem;"><strong>3mpwrApp is currently in Phase 1 - Closed Beta Testing.</strong></p>
   <p style="margin: 0;">Installation instructions and access details will be sent directly to beta testers via email and messaging.</p>
+  <p style="margin: 0.5rem 0 0;"><strong>📖 Full beta information:</strong> See the <a href="/beta">Beta Testing Guide</a> for complete procedures, reporting issues, and testing priorities.</p>
 </div>
 
-**Not a beta tester yet?** [Sign up to join the beta program](/beta)
+**Not a beta tester yet?** [Sign up to join the beta program →](/beta)
+
+**Already testing?** [Go to Beta Testing Guide for procedures →](/beta)
 
 ### First-Time Setup (9-Step Acceptance)
 
@@ -3853,6 +3856,89 @@ See full changelog: Settings > About > What's New
 - **Canadian Association for Community Living:** [www.cacl.ca](https://www.cacl.ca)
 - **Inclusion Canada:** [www.inclusioncanada.ca](https://www.inclusioncanada.ca)
 - **DisAbled Women's Network Canada (DAWN):** [www.dawncanada.net](https://www.dawncanada.net)
+
+---
+
+## 🔗 Complete Site Navigation & Interlinking
+
+**This user guide is one part of a comprehensive documentation system.** All pages are interconnected for easy navigation:
+
+### Core Documentation Pages
+- **[🏠 Home →](/)** - Main landing page, getting started
+- **[📖 User Guide →](/user-guide)** (YOU ARE HERE) - Step-by-step tutorials for all features
+- **[✨ Features →](/features)** - Complete inventory of 145+ features with descriptions
+- **[♿ Accessibility Guide →](/accessibility)** - Detailed accessibility features and setup
+- **[🔒 Privacy Policy →](/privacy)** - How we protect your data (100% user ownership)
+- **[🆕 What's New →](/whats-new)** - Latest app updates and announcements
+
+### Specialized Guides
+- **[🧪 Beta Testing Guide →](/beta)** - For beta testers: procedures, testing priorities, reporting issues
+  - Includes [First-Time Setup](/user-guide#first-time-setup-9-step-acceptance) reference
+  - Includes [Beta Priorities checklist](/user-guide#beta-testing-priorities-%F0%9F%A7%AA) reference
+  
+- **[⚙️ Accessibility Settings →](/accessibility-settings/)** - Configure your accessibility preferences
+- **[🚶 Accessibility Walkthrough →](/accessibility-walkthrough/)** - Step-by-step setup for accessibility features
+- **[🛡️ Privacy Controls →](/privacy-controls/)** - Manage your privacy settings and data
+
+### Support & Community
+- **[💬 Community →](/community)** - Connect with 8+ disability communities
+- **[📞 Contact Us →](/contact/)** - Get help, provide feedback, report issues
+- **[🔗 Roadmap →](/roadmap/)** - See planned features and improvements
+- **[❓ FAQ →](/faq/)** - Common questions and quick answers
+
+---
+
+## 📖 How These Pages Work Together
+
+### For New Users:
+1. **Start here:** [User Guide - Getting Started](/user-guide#getting-started-in-5-minutes) (this page)
+2. **Explore:** [Features →](/features) to see all 145+ tools available
+3. **Understand Privacy:** [Privacy Policy →](/privacy) - 100% your data ownership
+4. **Join Community:** [Community →](/community) to connect with others
+
+### For Feature Details:
+1. **Quick Overview:** [Features page →](/features) shows all 145+ features
+2. **Step-by-Step:** [User Guide →](/user-guide) provides detailed tutorials for each feature
+3. **Accessibility:** [Accessibility Guide →](/accessibility) shows how to use features accessibly
+4. **Privacy:** [Privacy Policy →](/privacy) explains data handling for each tool
+
+### For Accessibility:
+1. **Learn:** [Accessibility Guide →](/accessibility) - All accessibility options explained
+2. **Setup:** [Accessibility Settings →](/accessibility-settings/) - Configure your needs
+3. **Tutorial:** [Accessibility Walkthrough →](/accessibility-walkthrough/) - Step-by-step guide
+4. **Advanced:** [User Guide Accessibility Section →](/user-guide#accessibility-features) - Deep dive
+
+### For Testing:
+1. **Setup:** [User Guide - First-Time Setup →](/user-guide#first-time-setup-9-step-acceptance)
+2. **Learn:** [User Guide - First Week Checklist →](/user-guide#first-week-checklist) 
+3. **Testing:** [Beta Guide - Testing Instructions →](/beta#step-by-step-testing-instructions)
+4. **Report:** [Beta Guide - Reporting Issues →](/beta#reporting-issues--triage-process)
+
+### For Privacy/Security:
+1. **Overview:** [Privacy Policy →](/privacy) - Complete privacy practices
+2. **Configure:** [Privacy Controls →](/privacy-controls/) - Customize your settings
+3. **Data:** [Data Ownership →](/data-ownership/) - Your rights explained
+4. **Questions:** [Privacy FAQ](/faq/#privacy-security) or [Contact →](/contact/)
+
+---
+
+## 🎯 Find What You Need Quickly
+
+**I want to...** → Go to:
+- ✅ Learn the basics → [Getting Started](/user-guide#getting-started-in-5-minutes)
+- ✅ See all tools available → [Features](/features)
+- ✅ Learn how to use a specific feature → Use Ctrl+F to search in [User Guide](/user-guide)
+- ✅ Configure accessibility → [Accessibility Settings](/accessibility-settings/)
+- ✅ Understand privacy → [Privacy Policy](/privacy)
+- ✅ Join beta testing → [Beta Guide](/beta)
+- ✅ Connect with others → [Community](/community)
+- ✅ Report an issue → [Contact Us](/contact/) or use in-app Settings > About > Contact Support
+- ✅ See what's new → [What's New](/whats-new)
+- ✅ Find answer to a question → [FAQ](/faq/)
+
+---
+
+**💡 Tip:** You can navigate between all these pages using the links throughout each document. Everything is interconnected!
 
 ---
 
