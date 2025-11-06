@@ -20,6 +20,11 @@ const https = require('https');
 
 // Load analytics module
 const CuratorAnalytics = require('./curator-analytics');
+// Load site configuration for centralized URL management
+const siteConfig = require('./site-config');
+
+// Blog URL constant - all social media posts link here
+const BLOG_URL = `${siteConfig.url}/blog/`;
 
 class SocialPoster {
   constructor() {
@@ -156,8 +161,7 @@ class SocialPoster {
       post += '\n';
     });
 
-    post += `\n🔗 Visit: https://3mpwrapp.pages.dev/\n`;
-    post += `📖 Full User Guide: https://3mpwrapp.pages.dev/user-guide/\n`;
+    post += `\n🔗 Read more: ${BLOG_URL}\n`;
     post += `\n#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
 
     return post;
@@ -180,7 +184,7 @@ class SocialPoster {
       post += `${idx + 1}. ${title}\n`;
     });
 
-    post += `\nhttps://3mpwrapp.pages.dev/\n`;
+    post += `\n${BLOG_URL}\n`;
     post += `#Accessibility #DisabilityBenefits`;
 
     // Safety check: truncate if still too long
@@ -206,7 +210,7 @@ class SocialPoster {
     });
 
     post += `\n+ ${content.count - 2} more\n\n`;
-    post += `🔗 Benefits navigator & news: https://3mpwrapp.pages.dev/\n\n`;
+    post += `🔗 Read more: ${BLOG_URL}\n\n`;
     post += `#Accessibility #DisabilityBenefits #News #Canada`;
 
     return post;
@@ -412,9 +416,8 @@ class SocialPoster {
 
     // Final post (CTA)
     const finalPost = `✨ That's ${topItems.length}/${content.count} curated stories!\n\n` +
-                     `Visit 3mpwrApp for all stories, resources & benefits navigator:\n` +
-                     `🔗 https://3mpwrapp.pages.dev/\n` +
-                     `📖 User Guide: https://3mpwrapp.pages.dev/user-guide/\n\n` +
+                     `Visit 3mpwrApp blog for all stories:\n` +
+                     `🔗 ${BLOG_URL}\n\n` +
                      `#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
     posts.push(finalPost);
 
