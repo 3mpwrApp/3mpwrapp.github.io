@@ -1,6 +1,7 @@
 name = "3mpwrapp-calendar"
 main = "worker.js"
-compatibility_date = "2024-01-01"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
 
 # Workers configuration
 workers_dev = true
@@ -14,8 +15,8 @@ workers_dev = true
 # KV namespaces for caching Firestore results
 [[kv_namespaces]]
 binding = "CALENDAR_CACHE"
-id = "calendar_cache_prod"
-preview_id = "calendar_cache_dev"
+id = "f4026c4d54c1498eac1b920c9ef1bb3e"
+preview_id = "e7fd90cff077437c95d540966607eca2"
 
 # For production deployment, set your custom domain:
 # routes = [

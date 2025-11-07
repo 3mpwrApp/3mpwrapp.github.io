@@ -21,6 +21,7 @@ import { events } from "../../data/events";
 import { useTranslation } from "../../i18n";
 import { isScheduled, removeReminder, scheduleForEvent } from "../../services/eventReminders";
 import { fsDeleteEvent, fsGetEvent, fsUpdateEvent } from "../../services/firestore";
+import { deleteEventFromProduction, isFirestoreSyncAvailable, updateEventInProduction } from "../../services/firestoreEventSync";
 import { useSettings } from "../../store/settings";
 import { useAppPalette } from "../../theme/usePalette";
 import { logError } from '../../utils/errorLogger';
@@ -120,11 +121,41 @@ export default function EventDetail() {
 
   const handleSaveEdit = async () => {
     try {
-      const success = await fsUpdateEvent(id, editData);
-      if (success) {
+      // First update in old Firestore collection (for backward compatibility)
+      const fsSuccess = await fsUpdateEvent(id, editData);
+      
+      // Also sync to events_production collection if it's a user-created event
+      let prodSuccess = false;
+      if (event?.id?.startsWith('evt-') && user?.uid) {
+        const isSyncAvailable = await isFirestoreSyncAvailable();
+        if (isSyncAvailable) {
+          prodSuccess = await updateEventInProduction(id, {
+            ...editData,
+            date: new Date(editData.date),
+          }, user.uid);
+        }
+      }
+      
+      if (fsSuccess) {
         setEvent({ ...event, ...editData });
         setEditMode(false);
-        Alert.alert(t('common.success', 'Success'), t('eventsFeature.edit.saved', 'Event updated successfully'));
+        
+        if (prodSuccess) {
+          Alert.alert(
+            t('common.success', 'Success'),
+            t('eventsFeature.edit.saved', 'Event updated successfully and synced to website')
+          );
+        } else if (event?.id?.startsWith('evt-')) {
+          Alert.alert(
+            t('common.success', 'Success'),
+            t('eventsFeature.edit.saved', 'Event updated. Website sync may be unavailable.')
+          );
+        } else {
+          Alert.alert(
+            t('common.success', 'Success'),
+            t('eventsFeature.edit.saved', 'Event updated successfully')
+          );
+        }
       } else {
         Alert.alert(t('common.error', 'Error'), t('eventsFeature.edit.failed', 'Failed to update event'));
       }
@@ -145,11 +176,26 @@ export default function EventDetail() {
           style: 'destructive',
           onPress: async () => {
             try {
-              const success = await fsDeleteEvent(id);
-              if (success) {
+              // Delete from old Firestore collection
+              const fsSuccess = await fsDeleteEvent(id);
+              
+              // Also delete from events_production if it's a user event
+              let prodSuccess = false;
+              if (event?.id?.startsWith('evt-')) {
+                prodSuccess = await deleteEventFromProduction(id);
+              }
+              
+              if (fsSuccess) {
+                let message = t('eventsFeature.delete.success', 'Event deleted');
+                if (prodSuccess) {
+                  message = 'Event deleted from all platforms';
+                } else if (event?.id?.startsWith('evt-')) {
+                  message = 'Event deleted. Website sync may be unavailable.';
+                }
+                
                 Alert.alert(
                   t('common.success', 'Success'),
-                  t('eventsFeature.delete.success', 'Event deleted'),
+                  message,
                   [{ text: t('common.ok', 'OK'), onPress: () => router.back() }]
                 );
               } else {

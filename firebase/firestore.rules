@@ -175,6 +175,35 @@ service cloud.firestore {
       allow create: if isSignedIn();
     }
 
+    // Events (production and preview) - public read; signed-in write with validation
+    // Production collection: events_production
+    match /events_production/{docId} {
+      allow read: if true;
+      allow create: if isSignedIn() &&
+        request.resource.data.title is string &&
+        request.resource.data.date is timestamp &&
+        request.resource.data.status == 'published' &&
+        request.resource.data.createdBy == request.auth.uid;
+      allow update: if isSignedIn() &&
+        (request.auth.uid == resource.data.createdBy || isAdmin());
+      allow delete: if isSignedIn() &&
+        (request.auth.uid == resource.data.createdBy || isAdmin());
+    }
+
+    // Preview collection: events_preview
+    match /events_preview/{docId} {
+      allow read: if true;
+      allow create: if isSignedIn() &&
+        request.resource.data.title is string &&
+        request.resource.data.date is timestamp &&
+        request.resource.data.status == 'published' &&
+        request.resource.data.createdBy == request.auth.uid;
+      allow update: if isSignedIn() &&
+        (request.auth.uid == resource.data.createdBy || isAdmin());
+      allow delete: if isSignedIn() &&
+        (request.auth.uid == resource.data.createdBy || isAdmin());
+    }
+
     // FAQs (public read; admin write)
     match /faqs/{docId} {
       allow read: if true;

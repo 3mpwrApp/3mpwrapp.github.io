@@ -1,107 +1,260 @@
 /**
  * Cloudflare Worker for 3mpwrApp Events Calendar Feed
- * Provides real-time auto-updating calendar subscription via webcal://
- * Integrates with Firestore for live event data
+ * Uses Firestore REST API + WebCrypto for JWT authentication
+ * No Admin SDK dependency - fully compatible with Cloudflare Workers
  */
 
-import { cert, initializeApp } from 'firebase-admin/app';
-import { getFirestore } from 'firebase-admin/firestore';
+const PROJECT_ID = 'empowrapp';
+const DATABASE_ID = '(default)';
 
-// Initialize Firebase Admin SDK with credentials from environment
-let db = null;
-
-function initializeFirebase(env) {
-  if (db) return db;
-  
+// Generate JWT token using WebCrypto
+async function generateFirebaseToken(serviceAccount) {
   try {
-    const serviceAccount = JSON.parse(env.FIREBASE_SERVICE_ACCOUNT || '{}');
-    
-    if (Object.keys(serviceAccount).length === 0) {
-      console.warn('No Firebase credentials found, falling back to sample data');
+    if (!serviceAccount.private_key || !serviceAccount.client_email) {
+      console.error('[JWT] Missing private_key or client_email');
       return null;
     }
 
-    const app = initializeApp({
-      credential: cert(serviceAccount),
-      databaseURL: env.FIREBASE_DATABASE_URL,
-    });
+    const now = Math.floor(Date.now() / 1000);
+    const exp = now + 3600; // 1 hour expiry
 
-    db = getFirestore(app);
-    return db;
+    // Create JWT header and payload
+    const header = { alg: 'RS256', typ: 'JWT' };
+    const payload = {
+      iss: serviceAccount.client_email,
+      scope: 'https://www.googleapis.com/auth/cloud-platform',
+      aud: 'https://oauth2.googleapis.com/token',
+      exp,
+      iat: now,
+    };
+
+    // Base64 encode header and payload
+    const headerEncoded = btoa(JSON.stringify(header));
+    const payloadEncoded = btoa(JSON.stringify(payload));
+    const signatureInput = `${headerEncoded}.${payloadEncoded}`;
+
+    // Import private key
+    const keyData = serviceAccount.private_key
+      .replace(/-----BEGIN PRIVATE KEY-----/g, '')
+      .replace(/-----END PRIVATE KEY-----/g, '')
+      .replace(/\s/g, '');
+    const binaryString = atob(keyData);
+    const bytes = new Uint8Array(binaryString.length);
+    for (let i = 0; i < binaryString.length; i++) {
+      bytes[i] = binaryString.charCodeAt(i);
+    }
+
+    const cryptoKey = await crypto.subtle.importKey(
+      'pkcs8',
+      bytes.buffer,
+      { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+      false,
+      ['sign']
+    );
+
+    // Sign the JWT
+    const signatureBuffer = await crypto.subtle.sign(
+      'RSASSA-PKCS1-v1_5',
+      cryptoKey,
+      new TextEncoder().encode(signatureInput)
+    );
+
+    const signatureArray = Array.from(new Uint8Array(signatureBuffer));
+    const signatureEncoded = btoa(String.fromCharCode.apply(null, signatureArray))
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=/g, '');
+
+    return `${signatureInput}.${signatureEncoded}`;
   } catch (error) {
-    console.error('Firebase initialization failed:', error);
+    console.error('[JWT] Generation failed:', error.message);
     return null;
   }
 }
 
-async function fetchEventsFromFirestore(db, filters = {}) {
-  if (!db) return [];
-
+// Get access token from JWT
+async function getAccessToken(serviceAccount) {
   try {
-    let query = db.collection('events');
+    const jwt = await generateFirebaseToken(serviceAccount);
+    if (!jwt) return null;
 
-    // Apply date range filter
-    if (filters.startDate) {
-      query = query.where('date', '>=', new Date(filters.startDate));
+    const response = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+        assertion: jwt,
+      }),
+    });
+
+    if (!response.ok) {
+      const error = await response.json();
+      console.error('[Token] Request failed:', error.error_description);
+      return null;
     }
-    if (filters.endDate) {
-      query = query.where('date', '<=', new Date(filters.endDate));
+
+    const data = await response.json();
+    return data.access_token;
+  } catch (error) {
+    console.error('[Token] Error:', error.message);
+    return null;
+  }
+}
+
+// Fetch events from Firestore REST API
+async function fetchEventsFromFirestore(serviceAccount, collectionName = 'events_production', filters = {}) {
+  try {
+    const accessToken = await getAccessToken(serviceAccount);
+    if (!accessToken) {
+      console.error('[Firestore] No access token');
+      return [];
     }
 
-    // Apply category filter
-    if (filters.category) {
-      query = query.where('category', '==', filters.category);
+    const url = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/${DATABASE_ID}/documents/${collectionName}`;
+
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: { 'Authorization': `Bearer ${accessToken}` },
+    });
+
+    if (!response.ok) {
+      console.error(`[Firestore] Query failed: ${response.status}`);
+      return [];
     }
 
-    // Apply status filter (published only)
-    query = query.where('status', '==', 'published');
-
-    // Sort by date
-    query = query.orderBy('date', 'asc');
-
-    // Apply limit
-    query = query.limit(filters.limit || 500);
-
-    const snapshot = await query.get();
+    const data = await response.json();
     const events = [];
 
-    snapshot.forEach((doc) => {
-      const data = doc.data();
-      events.push({
-        id: doc.id,
-        title: data.title || '',
-        description: data.description || '',
-        date: data.date?.toDate?.() || new Date(data.date),
-        endDate: data.endDate?.toDate?.() || null,
-        location: data.location || '',
-        category: data.category || 'community',
-        isVirtual: data.isVirtual || false,
-        url: data.url || '',
-        organizer: data.organizer || '3mpwrApp',
-        imageUrl: data.imageUrl || '',
-        attendeeCount: data.attendeeCount || 0,
-        tags: data.tags || [],
-        createdAt: data.createdAt?.toDate?.() || new Date(),
-      });
-    });
+    if (data.documents) {
+      for (const doc of data.documents) {
+        const fields = doc.fields;
+        if (!fields) continue;
+
+        // Parse Firestore field values
+        const getString = (val) => val?.stringValue || '';
+        const getBoolean = (val) => val?.booleanValue || false;
+        const getNumber = (val) => val?.integerValue ? parseInt(val.integerValue) : (val?.doubleValue || 0);
+        const getArray = (val) => (val?.arrayValue?.values || []).map(v => v.stringValue || '');
+        const getTimestamp = (val) => {
+          if (!val?.timestampValue) return new Date();
+          return new Date(val.timestampValue);
+        };
+
+        const event = {
+          id: doc.name.split('/').pop(),
+          title: getString(fields.title),
+          description: getString(fields.description),
+          date: getTimestamp(fields.date),
+          endDate: getTimestamp(fields.endDate),
+          location: getString(fields.location),
+          category: getString(fields.category),
+          isVirtual: getBoolean(fields.isVirtual),
+          url: getString(fields.url),
+          organizer: getString(fields.organizer),
+          imageUrl: getString(fields.imageUrl),
+          attendeeCount: getNumber(fields.attendeeCount),
+          tags: getArray(fields.tags),
+          status: getString(fields.status),
+        };
+
+        // Apply filters
+        if (filters.category && event.category !== filters.category) continue;
+        if (filters.status && event.status !== filters.status) continue;
+        if (event.status !== 'published') continue;
+
+        events.push(event);
+      }
+    }
+
+    // Sort by date
+    events.sort((a, b) => new Date(a.date) - new Date(b.date));
 
     return events;
   } catch (error) {
-    console.error('Error fetching events from Firestore:', error);
+    console.error('[Firestore] Fetch error:', error.message);
     return [];
   }
 }
 
-async function getCachedOrFresh(cache, key, fetchFn, ttlSeconds = 3600) {
+/**
+ * Generate ICS calendar format with multiple events
+ */
+function buildICS(events, options = {}) {
+  const dt = (iso) => {
+    if (!iso) return '';
+    return new Date(iso).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+  };
+
+  const lines = [];
+
+  lines.push('BEGIN:VCALENDAR');
+  lines.push('VERSION:2.0');
+  lines.push('PRODID:-//3mpwr//Calendar 1.0//EN');
+  lines.push('CALSCALE:GREGORIAN');
+  lines.push('METHOD:PUBLISH');
+
+  if (options.subscribable) {
+    lines.push(`X-WR-CALNAME:${escapeICS(options.calendarName || '3mpwrApp Events')}`);
+    lines.push(`X-WR-CALDESC:${escapeICS('Community events, disability observances, and awareness days')}`);
+    lines.push(`X-WR-TIMEZONE:${options.timezone || 'America/Toronto'}`);
+    if (options.refreshInterval) {
+      lines.push(`X-PUBLISHED-TTL:PT${options.refreshInterval}M`);
+    }
+  }
+
+  const now = dt(new Date().toISOString());
+  events.forEach((ev) => {
+    const eventDate = new Date(ev.date);
+    const endDateObj = ev.endDate ? new Date(ev.endDate) : new Date(eventDate.getTime() + 60 * 60000);
+
+    const start = dt(eventDate.toISOString());
+    const end = dt(endDateObj.toISOString());
+
+    lines.push('BEGIN:VEVENT');
+    lines.push(`UID:${ev.id}@3mpwrapp.pages.dev`);
+    lines.push(`DTSTAMP:${now}`);
+    lines.push(`DTSTART:${start}`);
+    lines.push(`DTEND:${end}`);
+    lines.push(`SUMMARY:${escapeICS(ev.title)}`);
+    if (ev.description) lines.push(`DESCRIPTION:${escapeICS(ev.description)}`);
+    if (ev.location && !ev.isVirtual) lines.push(`LOCATION:${escapeICS(ev.location)}`);
+    if (ev.url) lines.push(`URL:${ev.url}`);
+    lines.push(`ORGANIZER;CN=${escapeICS(ev.organizer || '3mpwrApp')}:MAILTO:empowrapp08162025@gmail.com`);
+    if (ev.category) lines.push(`CATEGORIES:${ev.category}`);
+    lines.push('STATUS:CONFIRMED');
+    lines.push('SEQUENCE:0');
+    lines.push('END:VEVENT');
+  });
+
+  lines.push('END:VCALENDAR');
+  return lines.join('\r\n');
+}
+
+/**
+ * Escape special characters in ICS format
+ */
+function escapeICS(text) {
+  if (!text) return '';
+  return text
+    .replace(/\\/g, '\\\\')
+    .replace(/,/g, '\\,')
+    .replace(/;/g, '\\;')
+    .replace(/\n/g, '\\n');
+}
+
+/**
+ * Get from cache or fetch fresh data
+ */
+async function getCachedOrFresh(cache, key, fetchFn, ttlSeconds = 300) {
   // Try to get from KV cache first
   if (cache) {
-    const cached = await cache.get(key);
-    if (cached) {
-      try {
+    try {
+      const cached = await cache.get(key);
+      if (cached) {
         return JSON.parse(cached);
-      } catch (e) {
-        // Cache was corrupted, fetch fresh
       }
+    } catch (e) {
+      console.warn('[Cache] Read failed:', e.message);
     }
   }
 
@@ -109,13 +262,11 @@ async function getCachedOrFresh(cache, key, fetchFn, ttlSeconds = 3600) {
   const fresh = await fetchFn();
 
   // Store in cache
-  if (cache) {
+  if (cache && fresh && fresh.length > 0) {
     try {
-      await cache.put(key, JSON.stringify(fresh), {
-        expirationTtl: ttlSeconds,
-      });
+      await cache.put(key, JSON.stringify(fresh), { expirationTtl: ttlSeconds });
     } catch (e) {
-      console.warn('Cache storage failed:', e);
+      console.warn('[Cache] Write failed:', e.message);
     }
   }
 
@@ -125,7 +276,7 @@ async function getCachedOrFresh(cache, key, fetchFn, ttlSeconds = 3600) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    
+
     // CORS headers
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
@@ -138,10 +289,20 @@ export default {
       return new Response(null, { headers: corsHeaders });
     }
 
-    // Initialize Firebase
-    const firestore = initializeFirebase(env);
+    // Parse service account from secret
+    let serviceAccount = null;
+    try {
+      const rawSecret = env.FIREBASE_SERVICE_ACCOUNT;
+      if (rawSecret) {
+        serviceAccount = typeof rawSecret === 'string' ? JSON.parse(rawSecret) : rawSecret;
+      }
+    } catch (e) {
+      console.error('[Init] Failed to parse service account:', e.message);
+    }
 
-    // Get KV cache namespace
+    // Get parameters
+    const environment = url.searchParams.get('env') || 'production';
+    const collectionName = environment === 'preview' ? 'events_preview' : 'events_production';
     const cache = env.CALENDAR_CACHE;
 
     // Route: GET /events.ics - Calendar subscription feed
@@ -149,8 +310,6 @@ export default {
       try {
         const year = parseInt(url.searchParams.get('year')) || new Date().getFullYear();
         const month = url.searchParams.get('month');
-        const includeObservances = url.searchParams.get('observances') !== 'false';
-        const includeHolidays = url.searchParams.get('holidays') !== 'false';
 
         // Build date range
         const startDate = new Date(year, month ? parseInt(month) - 1 : 0, 1);
@@ -159,23 +318,34 @@ export default {
         // Fetch events from Firestore with caching
         const events = await getCachedOrFresh(
           cache,
-          `events:ics:${year}:${month || 'all'}`,
+          `events:ics:${year}:${month || 'all'}:${environment}`,
           async () => {
-            const firestoreEvents = await fetchEventsFromFirestore(firestore, {
-              startDate: startDate.toISOString(),
-              endDate: endDate.toISOString(),
+            return await fetchEventsFromFirestore(serviceAccount, collectionName, {
+              status: 'published',
             });
-            return firestoreEvents;
           },
           3600 // 1 hour cache
         );
 
-        // Generate ICS
-        const ics = buildICS(events, {
-          calendarName: '3mpwrApp Events',
-          refreshInterval: 60,
-          timezone: 'America/Toronto',
+        // Filter by year/month if specified
+        let filtered = events;
+        if (month && year) {
+          filtered = events.filter((ev) => {
+            const d = new Date(ev.date);
+            return d.getFullYear() === year && d.getMonth() + 1 === month;
+          });
+        } else if (year) {
+          filtered = events.filter((ev) => {
+            const d = new Date(ev.date);
+            return d.getFullYear() === year;
+          });
+        }
+
+        const ics = buildICS(filtered, {
           subscribable: true,
+          calendarName: '3mpwrApp Events',
+          timezone: 'America/Toronto',
+          refreshInterval: 60,
         });
 
         return new Response(ics, {
@@ -183,13 +353,13 @@ export default {
             'Content-Type': 'text/calendar; charset=utf-8',
             'Content-Disposition': 'inline; filename="3mpwrapp-events.ics"',
             'Cache-Control': 'public, max-age=3600',
-            'X-Events-Count': String(events.length),
+            'X-Events-Count': String(filtered.length),
             ...corsHeaders,
           },
         });
       } catch (error) {
-        console.error('Error in /events.ics:', error);
-        return new Response('Error generating calendar feed', { 
+        console.error('[/events.ics] Error:', error.message);
+        return new Response('Error generating calendar feed', {
           status: 500,
           headers: corsHeaders,
         });
@@ -205,16 +375,14 @@ export default {
         const sortBy = url.searchParams.get('sort') || 'date';
         const sortDir = url.searchParams.get('dir') || 'asc';
 
-        // Fetch events from Firestore with caching
         const events = await getCachedOrFresh(
           cache,
-          `events:json:${category || 'all'}:${limit}`,
+          `events:json:${category || 'all'}:${environment}`,
           async () => {
-            const firestoreEvents = await fetchEventsFromFirestore(firestore, {
+            return await fetchEventsFromFirestore(serviceAccount, collectionName, {
               category: category || undefined,
-              limit: limit * 2, // Fetch more for potential filtering
+              status: 'published',
             });
-            return firestoreEvents;
           },
           300 // 5 minute cache
         );
@@ -248,8 +416,8 @@ export default {
           },
           metadata: {
             generatedAt: new Date().toISOString(),
-            cacheHint: 'Results cached for 5 minutes',
-            source: 'Firestore',
+            source: 'Firestore REST API',
+            environment,
           },
         };
 
@@ -262,10 +430,10 @@ export default {
           },
         });
       } catch (error) {
-        console.error('Error in /api/events:', error);
-        return new Response(JSON.stringify({ 
+        console.error('[/api/events] Error:', error.message);
+        return new Response(JSON.stringify({
           error: 'Failed to load events',
-          message: error.message 
+          message: error.message,
         }), {
           status: 500,
           headers: {
@@ -281,55 +449,37 @@ export default {
       try {
         const eventId = url.pathname.split('/').pop();
 
-        if (!firestore) {
-          throw new Error('Firestore not initialized');
-        }
+        const allEvents = await getCachedOrFresh(
+          cache,
+          `events:all:${environment}`,
+          async () => {
+            return await fetchEventsFromFirestore(serviceAccount, collectionName, {
+              status: 'published',
+            });
+          },
+          300
+        );
 
-        const doc = await firestore.collection('events').doc(eventId).get();
+        const event = allEvents.find((e) => e.id === eventId);
 
-        if (!doc.exists) {
+        if (!event) {
           return new Response(JSON.stringify({ error: 'Event not found' }), {
             status: 404,
-            headers: {
-              'Content-Type': 'application/json',
-              ...corsHeaders,
-            },
+            headers: { 'Content-Type': 'application/json', ...corsHeaders },
           });
         }
-
-        const data = doc.data();
-        const event = {
-          id: doc.id,
-          title: data.title || '',
-          description: data.description || '',
-          date: data.date?.toDate?.() || new Date(data.date),
-          endDate: data.endDate?.toDate?.() || null,
-          location: data.location || '',
-          category: data.category || 'community',
-          isVirtual: data.isVirtual || false,
-          url: data.url || '',
-          organizer: data.organizer || '3mpwrApp',
-          imageUrl: data.imageUrl || '',
-          attendeeCount: data.attendeeCount || 0,
-          tags: data.tags || [],
-          createdAt: data.createdAt?.toDate?.() || new Date(),
-        };
 
         return new Response(JSON.stringify(event), {
           headers: {
             'Content-Type': 'application/json',
-            'Cache-Control': 'public, max-age=300',
             ...corsHeaders,
           },
         });
       } catch (error) {
-        console.error('Error fetching event:', error);
-        return new Response(JSON.stringify({ error: 'Failed to fetch event' }), {
+        console.error('[/api/events/:id] Error:', error.message);
+        return new Response(JSON.stringify({ error: error.message }), {
           status: 500,
-          headers: {
-            'Content-Type': 'application/json',
-            ...corsHeaders,
-          },
+          headers: { 'Content-Type': 'application/json', ...corsHeaders },
         });
       }
     }
@@ -340,7 +490,9 @@ export default {
         ok: true,
         service: '3mpwrApp Calendar Worker',
         timestamp: new Date().toISOString(),
-        firebaseConnected: !!firestore,
+        environment,
+        implementation: 'Firestore REST API + WebCrypto JWT',
+        firebaseConnected: !!serviceAccount,
         cacheAvailable: !!cache,
       };
 
@@ -356,7 +508,7 @@ export default {
     return new Response(
       JSON.stringify({
         service: '3mpwrApp Calendar Worker',
-        version: '2.0',
+        version: '2.0-rest-api',
         endpoints: {
           'GET /events.ics': 'Calendar subscription feed (iCalendar format)',
           'GET /api/events': 'JSON events list with filtering and pagination',
@@ -364,9 +516,10 @@ export default {
           'GET /health': 'Health check status',
         },
         usage: {
-          '/events.ics?year=2025&month=12': 'Get December 2025 events',
-          '/api/events?category=community&limit=10&page=1': 'Get paginated events',
-          '/api/events?sort=date&dir=desc': 'Get events sorted by date descending',
+          '/events.ics?year=2025&month=6': 'Get June 2025 events',
+          '/events.ics?env=preview': 'Get events from preview collection',
+          '/api/events?category=holiday&limit=10': 'Get holidays (paginated)',
+          '/api/events?sort=date&dir=asc': 'Get events sorted by date',
         },
       }, null, 2),
       {
@@ -379,70 +532,3 @@ export default {
     );
   },
 };
-
-/**
- * Generate ICS calendar format with multiple events
- */
-function buildICS(events, options = {}) {
-  const dt = (iso) => iso.replace(/[-:]/g, '').split('.')[0] + 'Z';
-  const lines = [];
-  
-  lines.push('BEGIN:VCALENDAR');
-  lines.push('VERSION:2.0');
-  lines.push('PRODID:-//3mpwr//Calendar 1.0//EN');
-  lines.push('CALSCALE:GREGORIAN');
-  lines.push('METHOD:PUBLISH');
-  
-  if (options.subscribable) {
-    lines.push(`X-WR-CALNAME:${escapeICS(options.calendarName || '3mpwrApp Events')}`);
-    lines.push(`X-WR-CALDESC:${escapeICS('Community events, disability observances, and awareness days - Powered by 3mpwrApp (https://3mpwrapp.pages.dev/events/)')}`);
-    lines.push(`X-WR-TIMEZONE:${options.timezone || 'America/Toronto'}`);
-    if (options.refreshInterval) {
-      lines.push(`X-PUBLISHED-TTL:PT${options.refreshInterval}M`);
-      lines.push(`REFRESH-INTERVAL;VALUE=DURATION:PT${options.refreshInterval}M`);
-    }
-  }
-  
-  const now = dt(new Date().toISOString());
-  events.forEach((ev) => {
-    const eventDate = ev.date instanceof Date ? ev.date : new Date(ev.date);
-    const endDateObj = ev.endDate 
-      ? (ev.endDate instanceof Date ? ev.endDate : new Date(ev.endDate))
-      : new Date(eventDate.getTime() + 60 * 60000); // Default 1 hour
-    
-    const start = dt(eventDate.toISOString());
-    const end = dt(endDateObj.toISOString());
-    
-    lines.push('BEGIN:VEVENT');
-    const uid = options.subscribable 
-      ? `${ev.id}@3mpwrapp.pages.dev`
-      : `${Date.now()}_${Math.random().toString(36).slice(2)}@3mpwr`;
-    lines.push(`UID:${uid}`);
-    lines.push(`DTSTAMP:${now}`);
-    lines.push(`DTSTART:${start}`);
-    lines.push(`DTEND:${end}`);
-    lines.push(`SUMMARY:${escapeICS(ev.title)}`);
-    if (ev.description) lines.push(`DESCRIPTION:${escapeICS(ev.description)}`);
-    if (ev.location && !ev.isVirtual) lines.push(`LOCATION:${escapeICS(ev.location)}`);
-    if (ev.url) lines.push(`URL:${ev.url}`);
-    lines.push(`ORGANIZER;CN=${escapeICS(ev.organizer || '3mpwrApp')}:MAILTO:empowrapp08162025@gmail.com`);
-    if (ev.category) lines.push(`CATEGORIES:${ev.category}`);
-    lines.push('STATUS:CONFIRMED');
-    lines.push('SEQUENCE:0');
-    lines.push('END:VEVENT');
-  });
-  
-  lines.push('END:VCALENDAR');
-  return lines.join('\r\n');
-}
-
-/**
- * Escape special characters in ICS format
- */
-function escapeICS(s) {
-  return s
-    .replace(/\\/g, '\\\\')
-    .replace(/\n/g, '\\n')
-    .replace(/,/g, '\\,')
-    .replace(/;/g, '\\;');
-}

@@ -39,7 +39,7 @@ import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
 import { ANALYTICS_EVENTS, trackEvent } from "../../services/analyticsClient";
 import { fetchEvents } from "../../services/events";
-import { fsAddEvent } from "../../services/firestore";
+import { deleteEventFromProduction, isFirestoreSyncAvailable, syncEventToProduction } from "../../services/firestoreEventSync";
 import { useCounts } from "../../store/counts";
 import { useNetwork } from "../../store/network";
 import { useRefresh } from "../../store/refresh";
@@ -238,20 +238,59 @@ export default function EventsScreen() {
       console.warn('[Events] Failed to cache event:', err);
     }
     
-    // Try to sync to Firestore
-    try { 
-      await fsAddEvent(newEvt);
-      Alert.alert(
-        t('common.success','Success'),
-        t('eventsFeature.created','Event created successfully!'),
-        [{ text: t('common.ok','OK') }]
-      );
-      trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id });
-    } catch (err) { 
-      console.error('[Events] Failed to save event to Firestore:', err);
+    // Sync to Firestore events_production collection for real-time sync
+    try {
+      // Check if sync is available
+      const isSyncAvailable = await isFirestoreSyncAvailable();
+      
+      if (isSyncAvailable && user?.uid) {
+        // Sync to production collection (goes to Worker API and website)
+        const syncSuccess = await syncEventToProduction({
+          id: newEvt.id,
+          title: newEvt.title,
+          description: newEvt.description,
+          date: new Date(newEvt.date),
+          location: newEvt.location,
+          isVirtual: newEvt.isVirtual,
+          asl: newEvt.asl,
+          captions: newEvt.captions,
+          stepFree: newEvt.stepFree,
+          sensorySpace: newEvt.sensorySpace,
+          createdBy: user.uid,
+          createdAt: newEvt.createdAt,
+          status: 'published',
+        }, user.uid);
+        
+        if (syncSuccess) {
+          Alert.alert(
+            t('common.success','Success'),
+            t('eventsFeature.created','Event created successfully! It\'s now live on the website.'),
+            [{ text: t('common.ok','OK') }]
+          );
+          trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id, synced: true });
+        } else {
+          // Sync failed but event is local
+          Alert.alert(
+            t('common.warning','Warning'),
+            'Event created locally. Cloud sync is currently unavailable, but your event is saved on this device.',
+            [{ text: t('common.ok','OK') }]
+          );
+          trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id, synced: false });
+        }
+      } else {
+        // No user or Firestore unavailable
+        Alert.alert(
+          t('common.warning','Warning'),
+          'Event created and saved locally but could not sync to cloud. Sign in to sync events.',
+          [{ text: t('common.ok','OK') }]
+        );
+        trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id, synced: false });
+      }
+    } catch (err) {
+      console.error('[Events] Failed to sync event:', err);
       Alert.alert(
         t('common.warning','Warning'),
-        'Event created and saved locally but could not sync to cloud. It will be available on this device.',
+        'Event created but sync failed. Your event is saved locally.',
         [{ text: t('common.ok','OK') }]
       );
     } finally {
@@ -557,15 +596,19 @@ export default function EventsScreen() {
                   console.warn('[Events] Failed to update cache:', err);
                 }
                 
-                // Try to delete from Firestore
+                // Try to delete from Firestore production collection (syncs to website)
                 try {
-                  const { fsDeleteEvent } = await import('../../services/firestore');
-                  await fsDeleteEvent(item.id);
-                  Alert.alert('✅ Deleted', `"${item.title}" has been deleted.`);
-                  trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id });
+                  const deleteSuccess = await deleteEventFromProduction(item.id);
+                  if (deleteSuccess) {
+                    Alert.alert('✅ Deleted', `"${item.title}" has been deleted from all platforms.`);
+                  } else {
+                    Alert.alert('✅ Deleted Locally', `"${item.title}" has been removed from this device. Cloud sync may be unavailable.`);
+                  }
+                  trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: deleteSuccess });
                 } catch (err) {
                   console.warn('[Events] Failed to delete from Firestore, but removed locally:', err);
                   Alert.alert('✅ Deleted Locally', `"${item.title}" has been removed. Cloud sync may be unavailable.`);
+                  trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false });
                 }
               }}
             />
