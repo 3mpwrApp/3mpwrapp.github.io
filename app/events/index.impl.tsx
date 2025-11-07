@@ -232,6 +232,7 @@ export default function EventsScreen() {
   }, []);
 
   const [showCreate, setShowCreate] = React.useState(false);
+  const [syncing, setSyncing] = React.useState(false);
   const handleCreate = async (data: {
     title: string; description: string; date: string; time?: string; duration?: number; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean; energyLevel?: string; requiresRSVP?: boolean; rsvpDetails?: string;
   }) => {
@@ -381,8 +382,10 @@ export default function EventsScreen() {
 
         {/* Sync Local Events to Website */}
         <TouchableOpacity
-          style={{ padding: 12, backgroundColor: palette.primary, borderRadius: 8, marginBottom: 12, borderWidth: 2, borderColor: palette.primary }}
+          style={{ padding: 12, backgroundColor: syncing ? palette.muted : palette.primary, borderRadius: 8, marginBottom: 12, borderWidth: 2, borderColor: syncing ? palette.muted : palette.primary }}
           onPress={async () => {
+            if (syncing) return; // Prevent double-tap
+            
             if (!user?.uid) {
               Alert.alert(
                 'Sign In Required',
@@ -393,26 +396,24 @@ export default function EventsScreen() {
             }
 
             try {
+              setSyncing(true);
+              
               // Get all local events
               const data = await AsyncStorage.getItem('events:local:v1');
               if (!data) {
                 Alert.alert('No Events', 'No local events found to sync.');
+                setSyncing(false);
                 return;
               }
               
               const localEvents = JSON.parse(data);
               if (localEvents.length === 0) {
                 Alert.alert('No Events', 'No local events found to sync.');
+                setSyncing(false);
                 return;
               }
 
-              // Show progress
-              Alert.alert(
-                '⏳ Syncing...',
-                `Found ${localEvents.length} event(s). Syncing to 3mpwr website...`,
-                [],
-                { cancelable: false }
-              );
+              console.log(`[Events] Starting sync of ${localEvents.length} events...`);
 
               // Check if Firestore sync is available
               const isSyncAvailable = await isFirestoreSyncAvailable();
@@ -422,6 +423,7 @@ export default function EventsScreen() {
                   'Cloud sync is currently unavailable. Please try again later.',
                   [{ text: 'OK' }]
                 );
+                setSyncing(false);
                 return;
               }
 
@@ -431,6 +433,7 @@ export default function EventsScreen() {
 
               for (const evt of localEvents) {
                 try {
+                  console.log(`[Events] Syncing event: ${evt.id} - ${evt.title}`);
                   const syncSuccess = await syncEventToProduction({
                     id: evt.id,
                     title: evt.title,
@@ -455,8 +458,10 @@ export default function EventsScreen() {
 
                   if (syncSuccess) {
                     successCount++;
+                    console.log(`[Events] ✓ Synced: ${evt.id}`);
                   } else {
                     failCount++;
+                    console.warn(`[Events] ✗ Failed: ${evt.id}`);
                   }
                 } catch (err) {
                   console.error('[Events] Failed to sync event:', evt.id, err);
@@ -465,6 +470,7 @@ export default function EventsScreen() {
               }
 
               // Show results
+              setSyncing(false);
               if (successCount === localEvents.length) {
                 Alert.alert(
                   '✅ Sync Complete!',
@@ -491,6 +497,7 @@ export default function EventsScreen() {
 
             } catch (err) {
               console.error('[Events] Bulk sync failed:', err);
+              setSyncing(false);
               Alert.alert(
                 'Error',
                 'Failed to sync events. Please try again.',
@@ -498,9 +505,10 @@ export default function EventsScreen() {
               );
             }
           }}
+          disabled={syncing}
         >
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: palette.onPrimary, textAlign: 'center' }}>
-            🌐 Sync Events to 3mpwr Website
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: syncing ? palette.text : palette.onPrimary, textAlign: 'center' }}>
+            {syncing ? '⏳ Syncing Events...' : '🌐 Sync Events to 3mpwr Website'}
           </Text>
         </TouchableOpacity>
 
