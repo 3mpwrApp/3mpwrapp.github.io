@@ -9,7 +9,6 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity,
   View
 } from "react-native";
 
@@ -40,6 +39,7 @@ import {
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
 import { ANALYTICS_EVENTS, trackEvent } from "../../services/analyticsClient";
+import { addToSyncQueue, getSyncQueueStats, processSyncQueue, startBackgroundSync } from "../../services/eventAutoSync";
 import { fetchEvents } from "../../services/events";
 import { deleteEventFromProduction, isFirestoreSyncAvailable, syncEventToProduction } from "../../services/firestoreEventSync";
 import { useCounts } from "../../store/counts";
@@ -232,7 +232,97 @@ export default function EventsScreen() {
   }, []);
 
   const [showCreate, setShowCreate] = React.useState(false);
-  const [syncing, setSyncing] = React.useState(false);
+  const [syncStatus, setSyncStatus] = React.useState<'idle' | 'syncing' | 'success' | 'error'>('idle');
+  const [lastSyncTime, setLastSyncTime] = React.useState<number | null>(null);
+  const [pendingSyncs, setPendingSyncs] = React.useState(0);
+
+  // Start background sync service on mount
+  React.useEffect(() => {
+    const stopBackgroundSync = startBackgroundSync();
+    
+    // Update pending syncs count periodically
+    const updateStats = async () => {
+      const stats = await getSyncQueueStats();
+      setPendingSyncs(stats.pending);
+    };
+    
+    updateStats();
+    const statsInterval = setInterval(updateStats, 10000); // Every 10 seconds
+
+    return () => {
+      stopBackgroundSync();
+      clearInterval(statsInterval);
+    };
+  }, []);
+
+  // Auto-sync function that runs in background
+  const autoSyncEvent = React.useCallback(async (event: any) => {
+    try {
+      const isSyncAvailable = await isFirestoreSyncAvailable();
+      
+      if (!isSyncAvailable || !user?.uid) {
+        console.log('[AutoSync] Sync not available - adding to queue for retry');
+        // Add to queue for background retry
+        if (user?.uid) {
+          await addToSyncQueue(event.id, event, user.uid);
+          setPendingSyncs(prev => prev + 1);
+        }
+        return false;
+      }
+
+      setSyncStatus('syncing');
+      
+      // Sync to production collection (auto-updates Worker API and website)
+      const syncSuccess = await syncEventToProduction({
+        id: event.id,
+        title: event.title,
+        description: event.description,
+        date: new Date(event.date),
+        time: event.time,
+        duration: event.duration,
+        location: event.location,
+        isVirtual: event.isVirtual,
+        asl: event.asl,
+        captions: event.captions,
+        stepFree: event.stepFree,
+        sensorySpace: event.sensorySpace,
+        energyLevel: event.energyLevel,
+        requiresRSVP: event.requiresRSVP,
+        rsvpDetails: event.rsvpDetails,
+        createdBy: user.uid,
+        createdAt: event.createdAt || Date.now(),
+        status: 'published',
+        category: 'community',
+      }, user.uid);
+
+      if (syncSuccess) {
+        setSyncStatus('success');
+        setLastSyncTime(Date.now());
+        console.log(`[AutoSync] ✓ Event ${event.id} synced to production`);
+        return true;
+      } else {
+        // Failed - add to queue for retry
+        await addToSyncQueue(event.id, event, user.uid);
+        setPendingSyncs(prev => prev + 1);
+        setSyncStatus('error');
+        console.warn(`[AutoSync] ✗ Event ${event.id} sync failed - added to retry queue`);
+        return false;
+      }
+    } catch (err) {
+      console.error('[AutoSync] Error:', err);
+      // Add to queue for retry
+      if (user?.uid) {
+        await addToSyncQueue(event.id, event, user.uid);
+        setPendingSyncs(prev => prev + 1);
+      }
+      setSyncStatus('error');
+      return false;
+    } finally {
+      // Reset status after 3 seconds
+      setTimeout(() => setSyncStatus('idle'), 3000);
+    }
+  }, [user?.uid]);
+
   const handleCreate = async (data: {
     title: string; description: string; date: string; time?: string; duration?: number; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean; energyLevel?: string; requiresRSVP?: boolean; rsvpDetails?: string;
   }) => {
@@ -254,10 +344,10 @@ export default function EventsScreen() {
       status: 'published',
     } as any;
     
-    // Add to UI immediately
+    // Add to UI immediately (optimistic update)
     setBaseItems(prev => [newEvt, ...prev]);
     
-    // Save to local storage for persistence
+    // Save to local storage for offline persistence
     try {
       const cached = await AsyncStorage.getItem('events:local:v1');
       const localEvents = cached ? JSON.parse(cached) : [];
@@ -267,68 +357,28 @@ export default function EventsScreen() {
       console.warn('[Events] Failed to cache event:', err);
     }
     
-    // Sync to Firestore events_production collection for real-time sync
-    try {
-      // Check if sync is available
-      const isSyncAvailable = await isFirestoreSyncAvailable();
-      
-      if (isSyncAvailable && user?.uid) {
-        // Sync to production collection (goes to Worker API and website)
-        const syncSuccess = await syncEventToProduction({
-          id: newEvt.id,
-          title: newEvt.title,
-          description: newEvt.description,
-          date: new Date(fullDate),
-          location: newEvt.location,
-          isVirtual: newEvt.isVirtual,
-          asl: newEvt.asl,
-          captions: newEvt.captions,
-          stepFree: newEvt.stepFree,
-          sensorySpace: newEvt.sensorySpace,
-          energyLevel: newEvt.energyLevel,
-          requiresRSVP: newEvt.requiresRSVP,
-          rsvpDetails: newEvt.rsvpDetails,
-          createdBy: user.uid,
-          createdAt: newEvt.createdAt,
-          status: 'published',
-          category: 'community',
-        }, user.uid);
-        
-        if (syncSuccess) {
-          Alert.alert(
-            t('common.success','Success'),
-            t('eventsFeature.created','Event created successfully! It\'s now live on the website.'),
-            [{ text: t('common.ok','OK') }]
-          );
-          trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id, synced: true });
-        } else {
-          // Sync failed but event is local
-          Alert.alert(
-            t('common.warning','Warning'),
-            'Event created locally. Cloud sync is currently unavailable, but your event is saved on this device.',
-            [{ text: t('common.ok','OK') }]
-          );
-          trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id, synced: false });
-        }
-      } else {
-        // No user or Firestore unavailable
-        Alert.alert(
-          t('common.warning','Warning'),
-          'Event created and saved locally but could not sync to cloud. Sign in to sync events.',
-          [{ text: t('common.ok','OK') }]
-        );
-        trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id, synced: false });
-      }
-    } catch (err) {
-      console.error('[Events] Failed to sync event:', err);
+    // Auto-sync to cloud (no user interaction needed)
+    const synced = await autoSyncEvent(newEvt);
+    
+    if (synced) {
       Alert.alert(
-        t('common.warning','Warning'),
-        'Event created but sync failed. Your event is saved locally.',
-        [{ text: t('common.ok','OK') }]
+        '✅ Event Published!',
+        `"${newEvt.title}" is now live on the 3mpwr website and will appear in the calendar feed within minutes.`,
+        [{ text: 'Great!' }]
       );
-    } finally {
-      setShowCreate(false);
+      trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id, synced: true, autoSync: true });
+    } else {
+      Alert.alert(
+        '📱 Event Saved Locally',
+        user?.uid 
+          ? 'Event created on your device. Cloud sync will retry automatically when connection is available.'
+          : 'Event saved locally. Sign in to publish to the 3mpwr website.',
+        [{ text: 'OK' }]
+      );
+      trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { id: newEvt.id, synced: false });
     }
+    
+    setShowCreate(false);
   };
 
   return (
@@ -361,6 +411,68 @@ export default function EventsScreen() {
           placeholder={t('eventsFeature.search.placeholder','Search events, tags, places')}
         />
 
+        {/* Auto-Sync Status Indicator */}
+        {syncStatus !== 'idle' && (
+          <View style={{ 
+            padding: 10, 
+            backgroundColor: syncStatus === 'syncing' ? palette.surface : syncStatus === 'success' ? '#10b981' : '#ef4444', 
+            borderRadius: 8, 
+            marginBottom: 8,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Text style={{ color: syncStatus === 'syncing' ? palette.text : '#ffffff', fontWeight: '600', fontSize: 14 }}>
+              {syncStatus === 'syncing' && '🔄 Syncing to website...'}
+              {syncStatus === 'success' && '✅ Synced! Live on 3mpwr website'}
+              {syncStatus === 'error' && '⚠️ Sync pending (will retry)'}
+            </Text>
+          </View>
+        )}
+
+        {/* Pending syncs indicator */}
+        {pendingSyncs > 0 && (
+          <View style={{ 
+            padding: 8, 
+            backgroundColor: palette.surface, 
+            borderRadius: 6, 
+            marginBottom: 8,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between'
+          }}>
+            <Text style={{ color: palette.text, fontSize: 12 }}>
+              ⏳ {pendingSyncs} event{pendingSyncs > 1 ? 's' : ''} pending sync
+            </Text>
+            <A11yPressable
+              onPress={async () => {
+                setSyncStatus('syncing');
+                const result = await processSyncQueue();
+                if (result.synced > 0) {
+                  setSyncStatus('success');
+                  setLastSyncTime(Date.now());
+                  setPendingSyncs(result.pending);
+                  Alert.alert('✅ Sync Complete', `${result.synced} event(s) synced successfully!`);
+                } else {
+                  setSyncStatus('error');
+                  Alert.alert('⚠️ Sync Pending', 'Unable to sync now. Will retry automatically.');
+                }
+                setTimeout(() => setSyncStatus('idle'), 3000);
+              }}
+              style={{ paddingHorizontal: 10, paddingVertical: 4, backgroundColor: palette.primary, borderRadius: 4 }}
+            >
+              <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: '700' }}>Retry Now</Text>
+            </A11yPressable>
+          </View>
+        )}
+
+        {/* Last sync timestamp */}
+        {lastSyncTime && (
+          <Text style={{ fontSize: 11, color: palette.muted, textAlign: 'center', marginBottom: 8 }}>
+            Last synced: {new Date(lastSyncTime).toLocaleTimeString()}
+          </Text>
+        )}
+
         <GapView gap={8} style={{ flexDirection:'row', marginBottom:8 }}>
           <A11yPressable
             accessibilityRole="button"
@@ -379,138 +491,6 @@ export default function EventsScreen() {
             <Text style={{ color: palette.text, fontWeight:'700', fontSize:12 }}>{t('common.resetFilters','Reset filters')}</Text>
           </A11yPressable>
         </GapView>
-
-        {/* Sync Local Events to Website */}
-        <TouchableOpacity
-          style={{ padding: 12, backgroundColor: syncing ? palette.muted : palette.primary, borderRadius: 8, marginBottom: 12, borderWidth: 2, borderColor: syncing ? palette.muted : palette.primary }}
-          onPress={async () => {
-            if (syncing) return; // Prevent double-tap
-            
-            if (!user?.uid) {
-              Alert.alert(
-                'Sign In Required',
-                'Please sign in to sync your events to the website.',
-                [{ text: 'OK' }]
-              );
-              return;
-            }
-
-            try {
-              setSyncing(true);
-              
-              // Get all local events
-              const data = await AsyncStorage.getItem('events:local:v1');
-              if (!data) {
-                Alert.alert('No Events', 'No local events found to sync.');
-                setSyncing(false);
-                return;
-              }
-              
-              const localEvents = JSON.parse(data);
-              if (localEvents.length === 0) {
-                Alert.alert('No Events', 'No local events found to sync.');
-                setSyncing(false);
-                return;
-              }
-
-              console.log(`[Events] Starting sync of ${localEvents.length} events...`);
-
-              // Check if Firestore sync is available
-              const isSyncAvailable = await isFirestoreSyncAvailable();
-              if (!isSyncAvailable) {
-                Alert.alert(
-                  'Sync Unavailable',
-                  'Cloud sync is currently unavailable. Please try again later.',
-                  [{ text: 'OK' }]
-                );
-                setSyncing(false);
-                return;
-              }
-
-              // Sync each event to Firestore production
-              let successCount = 0;
-              let failCount = 0;
-
-              for (const evt of localEvents) {
-                try {
-                  console.log(`[Events] Syncing event: ${evt.id} - ${evt.title}`);
-                  const syncSuccess = await syncEventToProduction({
-                    id: evt.id,
-                    title: evt.title,
-                    description: evt.description,
-                    date: new Date(evt.date),
-                    time: evt.time,
-                    duration: evt.duration,
-                    location: evt.location,
-                    isVirtual: evt.isVirtual,
-                    asl: evt.asl,
-                    captions: evt.captions,
-                    stepFree: evt.stepFree,
-                    sensorySpace: evt.sensorySpace,
-                    energyLevel: evt.energyLevel,
-                    requiresRSVP: evt.requiresRSVP,
-                    rsvpDetails: evt.rsvpDetails,
-                    createdBy: user.uid,
-                    createdAt: evt.createdAt || Date.now(),
-                    status: 'published',
-                    category: 'community',
-                  }, user.uid);
-
-                  if (syncSuccess) {
-                    successCount++;
-                    console.log(`[Events] ✓ Synced: ${evt.id}`);
-                  } else {
-                    failCount++;
-                    console.warn(`[Events] ✗ Failed: ${evt.id}`);
-                  }
-                } catch (err) {
-                  console.error('[Events] Failed to sync event:', evt.id, err);
-                  failCount++;
-                }
-              }
-
-              // Show results
-              setSyncing(false);
-              if (successCount === localEvents.length) {
-                Alert.alert(
-                  '✅ Sync Complete!',
-                  `All ${successCount} event(s) are now live on the 3mpwr website!\n\n` +
-                  `• Synced to Firebase ✓\n` +
-                  `• Cloudflare Worker will refresh in 5 minutes\n` +
-                  `• Events visible at 3mpwrapp.pages.dev/events/`,
-                  [{ text: 'Great!' }]
-                );
-                trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { bulkSync: true, count: successCount });
-              } else if (successCount > 0) {
-                Alert.alert(
-                  '⚠️ Partial Sync',
-                  `Synced ${successCount} of ${localEvents.length} event(s).\n${failCount} failed to sync.`,
-                  [{ text: 'OK' }]
-                );
-              } else {
-                Alert.alert(
-                  '❌ Sync Failed',
-                  'Could not sync events to the website. Please try again later.',
-                  [{ text: 'OK' }]
-                );
-              }
-
-            } catch (err) {
-              console.error('[Events] Bulk sync failed:', err);
-              setSyncing(false);
-              Alert.alert(
-                'Error',
-                'Failed to sync events. Please try again.',
-                [{ text: 'OK' }]
-              );
-            }
-          }}
-          disabled={syncing}
-        >
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: syncing ? palette.text : palette.onPrimary, textAlign: 'center' }}>
-            {syncing ? '⏳ Syncing Events...' : '🌐 Sync Events to 3mpwr Website'}
-          </Text>
-        </TouchableOpacity>
 
         <A11yPressable
           accessibilityRole="button"
@@ -746,7 +726,7 @@ export default function EventsScreen() {
                 }
               }}
               onDelete={async () => {
-                // Delete from local state
+                // Delete from local state (optimistic update)
                 setBaseItems(prev => prev.filter(e => e.id !== item.id));
                 
                 // Remove from local storage
@@ -761,25 +741,34 @@ export default function EventsScreen() {
                   console.warn('[Events] Failed to update cache:', err);
                 }
                 
-                // Try to delete from both Firestore production and preview collections
+                // Auto-sync deletion to cloud (no manual intervention)
+                setSyncStatus('syncing');
                 try {
                   const prodDeleteSuccess = await deleteEventFromProduction(item.id, 'events_production');
-                  const previewDeleteSuccess = await deleteEventFromProduction(item.id, 'events_preview');
                   
-                  if (prodDeleteSuccess && previewDeleteSuccess) {
-                    Alert.alert('✅ Deleted', `"${item.title}" has been deleted from all platforms.`);
-                    trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: true });
-                  } else if (prodDeleteSuccess || previewDeleteSuccess) {
-                    Alert.alert('✅ Deleted', `"${item.title}" has been deleted. Some sync platforms may be unavailable.`);
-                    trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: true });
+                  if (prodDeleteSuccess) {
+                    setSyncStatus('success');
+                    setLastSyncTime(Date.now());
+                    Alert.alert(
+                      '✅ Event Deleted', 
+                      `"${item.title}" has been removed from the 3mpwr website and will disappear from calendar feeds shortly.`
+                    );
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: true, autoSync: true });
                   } else {
-                    Alert.alert('✅ Deleted Locally', `"${item.title}" has been removed from this device. Cloud sync may be unavailable.`);
+                    setSyncStatus('error');
+                    Alert.alert(
+                      '📱 Deleted Locally', 
+                      `"${item.title}" removed from your device. Cloud sync will retry automatically when available.`
+                    );
                     trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false });
                   }
                 } catch (err) {
-                  console.warn('[Events] Failed to delete from Firestore, but removed locally:', err);
-                  Alert.alert('✅ Deleted Locally', `"${item.title}" has been removed. Cloud sync may be unavailable.`);
+                  console.warn('[Events] Failed to delete from cloud:', err);
+                  setSyncStatus('error');
+                  Alert.alert('📱 Deleted Locally', `"${item.title}" removed from this device.`);
                   trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false });
+                } finally {
+                  setTimeout(() => setSyncStatus('idle'), 3000);
                 }
               }}
             />

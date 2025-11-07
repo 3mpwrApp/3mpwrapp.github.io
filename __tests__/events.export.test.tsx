@@ -34,6 +34,20 @@ jest.mock('../components/ContrastToggle', () => () => null);
 // Silence network
 jest.mock('../services/events', () => ({ fetchEvents: async () => [] }));
 jest.mock('../services/firestore', () => ({ fsAddEvent: async () => true }));
+jest.mock('../services/firestoreEventSync', () => ({ 
+  syncEventToProduction: async () => true, 
+  deleteEventFromProduction: async () => true,
+  isFirestoreSyncAvailable: async () => true
+}));
+jest.mock('../services/eventAutoSync', () => ({ 
+  addToSyncQueue: async () => {},
+  removeFromSyncQueue: async () => {},
+  getSyncQueue: async () => [],
+  getSyncQueueStats: async () => ({ total: 0, pending: 0, failed: 0, oldestPending: null }),
+  processSyncQueue: async () => ({ synced: 0, failed: 0, pending: 0 }),
+  startBackgroundSync: () => () => {},
+  clearSyncQueue: async () => {}
+}));
 
 // Silence analytics native
 jest.mock('../services/analytics', () => ({ logEvent: () => {} }));
@@ -67,13 +81,13 @@ describe('Events export actions', () => {
     fireEvent.press(toggle);
     
     // Fill out the form
-    const title = screen.getByPlaceholderText(/Title/i);
+    const title = screen.getByPlaceholderText(/Event Name/i);
     const desc = screen.getByPlaceholderText(/Description/i);
-    const date = screen.getByPlaceholderText(/Date/i);
+    const date = screen.getByPlaceholderText(/Date.*YYYY-MM-DD/i);
     const add = screen.getByText(/Add Event/i);
     fireEvent.change(title as any, { target: { value: 'Test Event' } });
     fireEvent.change(desc as any, { target: { value: 'Test Description' } });
-    fireEvent.change(date as any, { target: { value: '2025-10-01 18:00' } });
+    fireEvent.change(date as any, { target: { value: '2025-10-01' } });
     
     // @ts-ignore
     fireEvent.press(add);
