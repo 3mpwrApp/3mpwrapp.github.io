@@ -41,11 +41,12 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
   <ul>
+    <li><strong>Real-Time Sync:</strong> Events calendar is now LIVE with automatic updates!</li>
     <li><strong>Auto-Sync Calendar:</strong> Subscribe to our ICS feed for automatic event updates (131+ events!)</li>
-    <li><strong>User Events:</strong> Events created in the 3mpwrApp automatically appear in your calendar</li>
+    <li><strong>User Events:</strong> Events created in the 3mpwrApp automatically appear on this site within 5 minutes</li>
     <li><strong>Built-In Events:</strong> Disability awareness days, health observances, Canadian & provincial holidays included</li>
     <li><strong>All Accessible:</strong> Every event includes accessibility details, virtual options, and energy costs</li>
-    <li><strong>Daily Updates:</strong> Calendar feed refreshes daily at 3 AM UTC with new community events</li>
+    <li><strong>Fast Updates:</strong> Website refreshes every 5 minutes, calendar feed updates hourly</li>
     <li><strong>Universal Compatibility:</strong> Works with iPhone, Android, Mac, Windows, all calendar apps</li>
   </ul>
 </details>
@@ -103,11 +104,13 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 </section>
 
 <script>
-  // Fetch and display events from app
+  // Fetch and display events from app (real-time sync via Cloudflare Worker)
   async function loadEvents() {
     try {
-      const response = await fetch('https://3mpwrapp.pages.dev/api/events.json');
-      const events = await response.json();
+      // Fetch from Cloudflare Worker API endpoint (production environment)
+      const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production');
+      const data = await response.json();
+      const events = data.events || [];
       
       const container = document.getElementById('events-list');
       
@@ -202,91 +205,335 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
 <div class="success-box" style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-radius: 12px; border: 2px solid #10b981;">
-  <h3 style="margin-top: 0;">⚙️ Calendar Sync Setup In Progress</h3>
-  <p style="font-size: 1.1rem; margin: 1rem 0;"><strong>Real-time calendar integration coming soon!</strong></p>
-  <p>We're currently working on our real-time calendar synchronization system that will include:</p>
+  <h3 style="margin-top: 0;">✅ Real-Time Calendar Sync is Live!</h3>
+  <p style="font-size: 1.1rem; margin: 1rem 0;"><strong>Subscribe now to get automatic event updates!</strong></p>
+  <p>Our real-time calendar synchronization system is now active and includes:</p>
   <ul style="text-align: left; margin: 1rem auto; max-width: 600px;">
-    <li>✅ User-created events from the 3mpwrApp</li>
+    <li>✅ User-created events from the 3mpwrApp (synced within 5 minutes)</li>
     <li>✅ Disability awareness days (International Day of Persons with Disabilities, etc.)</li>
     <li>✅ Health observances (Mental Health Week, Chronic Pain Awareness Month, etc.)</li>
     <li>✅ Canadian holidays</li>
     <li>✅ Provincial holidays (based on your settings)</li>
   </ul>
-  <p style="margin-top: 1.5rem; padding: 1rem; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; border-radius: 4px;">
-    <strong>📍 Coming Soon:</strong> Calendar feed URL will be available here. Check back soon for the setup instructions!
+  <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; border: 2px solid #10b981;">
+    <p style="margin: 0 0 0.5rem; font-weight: bold; color: #065f46;">📅 Calendar Feed URL (ICS Format):</p>
+    <div style="background: #f0fdf4; padding: 1rem; border-radius: 6px; border: 1px solid #86efac; margin: 0.5rem 0; font-family: monospace; word-break: break-all; font-size: 0.9rem; color: #065f46;">
+      https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production
+    </div>
+    <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #065f46;">
+      <strong>💡 Tip:</strong> Copy this URL and paste it into your calendar app (instructions below)
+    </p>
+  </div>
+  <p style="margin-top: 1rem; font-style: italic;">📅 <strong>Updates automatically every 5 minutes</strong> to include new events from the community!</p>
+</div>
+
+### 📱 How to Subscribe
+
+<div style="margin: 1rem 0; padding: 1.5rem; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-radius: 12px; border: 2px solid #3b82f6;">
+  <h4 style="margin-top: 0; color: #1e40af;">✅ Subscribe in 3 Easy Steps!</h4>
+  <p>Choose your platform below and follow the step-by-step instructions:</p>
+</div>
+
+#### 📱 iPhone / iPad (iOS)
+
+<details style="margin: 1rem 0; padding: 1rem; background: #f0f9ff; border-radius: 8px; border: 1px solid #3b82f6;">
+  <summary style="cursor: pointer; font-weight: bold; color: #1e40af; font-size: 1.05rem;">Tap to see iOS Calendar instructions</summary>
+  <ol style="text-align: left; margin: 1rem 0; line-height: 1.8;">
+    <li>Open the <strong>Settings</strong> app on your iPhone or iPad</li>
+    <li>Scroll down and tap <strong>Calendar</strong></li>
+    <li>Tap <strong>Accounts</strong></li>
+    <li>Tap <strong>Add Account</strong></li>
+    <li>Tap <strong>Other</strong> at the bottom</li>
+    <li>Tap <strong>Add Subscribed Calendar</strong></li>
+    <li>Paste this URL: <code style="background: #e0f2fe; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem;">https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production</code></li>
+    <li>Tap <strong>Next</strong></li>
+    <li>Tap <strong>Save</strong></li>
+  </ol>
+  <p style="margin-top: 1rem; padding: 0.75rem; background: #dbeafe; border-radius: 6px; border-left: 4px solid #3b82f6;">
+    ✅ <strong>Done!</strong> Events will now appear in your Calendar app and update automatically.
   </p>
-  <p style="margin-top: 1rem; font-style: italic;">📅 <strong>Updates will be automatic daily</strong> to include new events from the community!</p>
-</div>
+</details>
 
-### 📱 How to Subscribe (Coming Soon)
+#### 🤖 Android (Google Calendar)
 
-<div style="margin: 1rem 0; padding: 1.5rem; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 12px; border: 2px solid #f59e0b;">
-  <h4 style="margin-top: 0; color: #92400e;">⏳ Setup Instructions Coming Soon</h4>
-  <p>We're finalizing the real-time calendar synchronization system. Once it's ready, you'll be able to subscribe using the calendar feed URL in these easy steps:</p>
-  <ul style="text-align: left; margin: 1.5rem auto; max-width: 600px;">
-    <li>📱 iPhone / iPad (iOS) - Apple Calendar subscription</li>
-    <li>🤖 Android - Google Calendar subscription</li>
-    <li>🖥️ macOS - Mac Calendar subscription</li>
-    <li>💻 Windows - Outlook calendar subscription</li>
-    <li>🌐 Web - Google Calendar / Outlook Web</li>
-  </ul>
-  <p style="margin-top: 1rem;"><strong>📍 Check back soon for detailed step-by-step guides!</strong></p>
-</div>
+<details style="margin: 1rem 0; padding: 1rem; background: #f0fdf4; border-radius: 8px; border: 1px solid #10b981;">
+  <summary style="cursor: pointer; font-weight: bold; color: #065f46; font-size: 1.05rem;">Tap to see Android/Google Calendar instructions</summary>
+  <ol style="text-align: left; margin: 1rem 0; line-height: 1.8;">
+    <li>Open <strong>Google Calendar</strong> on your computer (calendar.google.com) - <em>Note: Must use desktop, not mobile app</em></li>
+    <li>On the left side, look for <strong>"Other calendars"</strong></li>
+    <li>Click the <strong>+ (plus sign)</strong> next to "Other calendars"</li>
+    <li>Click <strong>"From URL"</strong></li>
+    <li>Paste this URL: <code style="background: #d1fae5; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem;">https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production</code></li>
+    <li>Click <strong>"Add calendar"</strong></li>
+  </ol>
+  <p style="margin-top: 1rem; padding: 0.75rem; background: #d1fae5; border-radius: 6px; border-left: 4px solid #10b981;">
+    ✅ <strong>Done!</strong> Events will sync to your Android phone automatically within a few hours.
+  </p>
+</details>
 
-### ✅ How to Verify It's Working (When Available)
+#### 🍎 macOS (Mac Calendar)
+
+<details style="margin: 1rem 0; padding: 1rem; background: #fef3c7; border-radius: 8px; border: 1px solid #f59e0b;">
+  <summary style="cursor: pointer; font-weight: bold; color: #92400e; font-size: 1.05rem;">Click to see macOS Calendar instructions</summary>
+  <ol style="text-align: left; margin: 1rem 0; line-height: 1.8;">
+    <li>Open the <strong>Calendar</strong> app on your Mac</li>
+    <li>Click <strong>File</strong> in the menu bar</li>
+    <li>Click <strong>New Calendar Subscription...</strong></li>
+    <li>Paste this URL: <code style="background: #fef3c7; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem;">https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production</code></li>
+    <li>Click <strong>Subscribe</strong></li>
+    <li>Choose a name: <strong>3mpwrApp Events</strong></li>
+    <li>Set auto-refresh to: <strong>Every hour</strong> (or your preference)</li>
+    <li>Click <strong>OK</strong></li>
+  </ol>
+  <p style="margin-top: 1rem; padding: 0.75rem; background: #fef3c7; border-radius: 6px; border-left: 4px solid #f59e0b;">
+    ✅ <strong>Done!</strong> Events will now appear in Calendar and update automatically.
+  </p>
+</details>
+
+#### 💻 Windows (Outlook)
+
+<details style="margin: 1rem 0; padding: 1rem; background: #e0e7ff; border-radius: 8px; border: 1px solid #6366f1;">
+  <summary style="cursor: pointer; font-weight: bold; color: #3730a3; font-size: 1.05rem;">Click to see Outlook instructions</summary>
+  <ol style="text-align: left; margin: 1rem 0; line-height: 1.8;">
+    <li>Open <strong>Outlook</strong> on your computer</li>
+    <li>Click the <strong>Calendar</strong> icon at the bottom left</li>
+    <li>Right-click <strong>"My Calendars"</strong></li>
+    <li>Click <strong>"Add Calendar"</strong></li>
+    <li>Click <strong>"Subscribe from web"</strong></li>
+    <li>Paste this URL: <code style="background: #e0e7ff; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem;">https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production</code></li>
+    <li>Enter a name: <strong>3mpwrApp Events</strong></li>
+    <li>Click <strong>Import</strong></li>
+  </ol>
+  <p style="margin-top: 1rem; padding: 0.75rem; background: #e0e7ff; border-radius: 6px; border-left: 4px solid #6366f1;">
+    ✅ <strong>Done!</strong> Events will sync to your Outlook calendar automatically.
+  </p>
+</details>
+
+#### 🌐 Web (Google Calendar / Outlook Web)
+
+<details style="margin: 1rem 0; padding: 1rem; background: #fce7f3; border-radius: 8px; border: 1px solid #ec4899;">
+  <summary style="cursor: pointer; font-weight: bold; color: #9f1239; font-size: 1.05rem;">Click to see web calendar instructions</summary>
+  <p><strong>For Google Calendar Web:</strong></p>
+  <ol style="text-align: left; margin: 1rem 0; line-height: 1.8;">
+    <li>Go to <a href="https://calendar.google.com" target="_blank">calendar.google.com</a></li>
+    <li>Look for <strong>"Other calendars"</strong> on the left</li>
+    <li>Click the <strong>+ (plus sign)</strong></li>
+    <li>Click <strong>"From URL"</strong></li>
+    <li>Paste: <code style="background: #fce7f3; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem;">https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production</code></li>
+    <li>Click <strong>"Add calendar"</strong></li>
+  </ol>
+  <p><strong>For Outlook Web:</strong></p>
+  <ol style="text-align: left; margin: 1rem 0; line-height: 1.8;">
+    <li>Go to <a href="https://outlook.live.com/calendar" target="_blank">outlook.live.com/calendar</a></li>
+    <li>Click <strong>"Add calendar"</strong></li>
+    <li>Click <strong>"Subscribe from web"</strong></li>
+    <li>Paste the URL above</li>
+    <li>Name it <strong>3mpwrApp Events</strong></li>
+    <li>Click <strong>"Import"</strong></li>
+  </ol>
+</details>
+
+### ✅ How to Verify It's Working
 
 <div style="margin: 1rem 0; padding: 1.5rem; background: rgba(34, 197, 94, 0.1); border-left: 4px solid #22c55e; border-radius: 8px;">
-  <p>Once subscribed, look for these indicators:</p>
+  <p><strong>Once subscribed, look for these indicators:</strong></p>
   <ul style="text-align: left;">
-    <li>✅ Calendar shows "3mpwrApp Events" as a calendar name</li>
-    <li>✅ Events appear in your calendar app with full details</li>
-    <li>✅ Your calendar auto-updates daily with new events</li>
-    <li>✅ You receive notifications based on your preferences</li>
+    <li>✅ Calendar shows "3mpwrApp Events" or similar name in your calendar list</li>
+    <li>✅ Events appear in your calendar app with full details (dates, locations, accessibility info)</li>
+    <li>✅ Your calendar auto-updates every few hours with new events</li>
+    <li>✅ You receive notifications based on your calendar app's notification settings</li>
+    <li>✅ Events display with accessibility badges (ASL, captions, wheelchair access, etc.)</li>
   </ul>
+  <p style="margin-top: 1rem; padding: 0.75rem; background: #d1fae5; border-radius: 6px;">
+    <strong>💡 Quick Test:</strong> Open your calendar app and look for upcoming events. You should see disability awareness days, holidays, and any community events that have been created in the app.
+  </p>
 </div>
 
-### 🔧 Troubleshooting (When Available)
-          <li><strong>Auto-refresh:</strong> Every day (recommended)</li>
+### 🔧 Troubleshooting
+
+<details class="accordion-item" style="margin: 1rem 0; padding: 1rem; border: 2px solid #fee2e2; border-radius: 8px; background: #fef2f2;">
+  <summary style="cursor: pointer; font-weight: bold; font-size: 1.1rem; list-style: none;">
+    <span style="display: inline-block; margin-right: 0.5rem;">❌</span> Events not showing up in my calendar
+  </summary>
+  <div style="margin-top: 1rem; padding-left: 1.5rem;">
+    <p><strong>This is usually due to calendar app refresh delays. Here's what to check:</strong></p>
+    <ol style="text-align: left;">
+      <li><strong>Check if subscription was added correctly:</strong>
+        <ul>
+          <li>Look for "3mpwrApp Events" in your calendar list</li>
+          <li>Make sure it's enabled/visible (check the checkbox next to it)</li>
         </ul>
+      </li>
+      <li><strong>Verify the URL was pasted correctly:</strong>
+        <ul>
+          <li>URL should be: <code>https://your-worker.workers.dev/events.ics?env=production</code></li>
+          <li>No extra spaces or characters</li>
+        </ul>
+      </li>
+      <li><strong>Force a manual refresh:</strong>
+        <ul>
+          <li><strong>iOS:</strong> Settings → Calendar → Accounts → Subscribed Calendars → 3mpwrApp Events → Refresh</li>
+          <li><strong>macOS:</strong> Calendar → View → Refresh All</li>
+          <li><strong>Google Calendar:</strong> Wait up to 24 hours, then check again</li>
+          <li><strong>Outlook:</strong> Right-click calendar → Update</li>
+        </ul>
+      </li>
+      <li><strong>Check device settings:</strong>
+        <ul>
+          <li>Ensure internet connection is active</li>
+          <li>Check that calendar sync is enabled</li>
+          <li>Make sure device date/time is correct</li>
+        </ul>
+      </li>
+      <li><strong>Wait for sync cycle:</strong>
+        <ul>
+          <li>New events appear on website within 5 minutes</li>
+          <li>Calendar apps may take 1-24 hours to sync</li>
+        </ul>
+      </li>
+    </ol>
+    <p style="margin-top: 1rem; padding: 0.75rem; background: #dbeafe; border-radius: 6px; border-left: 4px solid #3b82f6;">
+      <strong>💡 Quick test:</strong> Visit <a href="https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production" target="_blank">the ICS feed URL</a> in your browser. If you see calendar data, the feed is working. The issue is with your calendar app's sync.
+    </p>
+  </div>
+</details>
 
+<details class="accordion-item" style="margin: 1rem 0; padding: 1rem; border: 2px solid #fee2e2; border-radius: 8px; background: #fef2f2;">
+  <summary style="cursor: pointer; font-weight: bold; font-size: 1.1rem; list-style: none;">
+    <span style="display: inline-block; margin-right: 0.5rem;">⏰</span> Events not updating / New events don't appear
+  </summary>
+  <div style="margin-top: 1rem; padding-left: 1.5rem;">
+    <p><strong>Understanding update delays:</strong></p>
+    <ol style="text-align: left;">
+      <li><strong>When an event is created in the app:</strong>
+        <ul>
+          <li>Saved to Firestore instantly</li>
+          <li>Appears on website within 5 minutes</li>
+          <li>Calendar feed updates within 1 hour (cached for performance)</li>
+        </ul>
+      </li>
+      <li><strong>Your calendar app's refresh rate:</strong>
+        <ul>
+          <li>iOS/macOS: Usually within a few hours</li>
+          <li>Google Calendar: Up to 24 hours after feed updates</li>
+          <li>Outlook: Hourly to daily depending on settings</li>
+          <li>Total delay: Up to 24-48 hours from event creation to calendar app display</li>
+        </ul>
+      </li>
+    </ol>
+    <p style="margin-top: 1rem; padding: 0.75rem; background: #d1fae5; border-radius: 6px; border-left: 4px solid #10b981;">
+      <strong>💡 For immediate updates:</strong> Check the website at <a href="/events/">3mpwrapp.pages.dev/events</a> which updates every 5 minutes!
+    </p>
+  </div>
+</details>
 
-<div style="margin: 1rem 0; padding: 1.5rem; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; border-radius: 8px;">
-  <p><strong>� Calendar feed URL coming soon!</strong> We're setting up real-time synchronization. Check back soon for the complete subscription guide.</p>
+<details class="accordion-item" style="margin: 1rem 0; padding: 1rem; border: 2px solid #fee2e2; border-radius: 8px; background: #fef2f2;">
+  <summary style="cursor: pointer; font-weight: bold; font-size: 1.1rem; list-style: none;">
+    <span style="display: inline-block; margin-right: 0.5rem;">🕐</span> Events showing wrong time or timezone
+  </summary>
+  <div style="margin-top: 1rem; padding-left: 1.5rem;">
+    <p><strong>Timezone handling:</strong></p>
+    <ul style="text-align: left;">
+      <li>All events in the ICS feed are stored in UTC (Coordinated Universal Time)</li>
+      <li>Your calendar app should automatically convert them to your local timezone</li>
+      <li>If times look wrong:
+        <ul>
+          <li>Check your device's timezone settings</li>
+          <li>Make sure "Set time automatically" is enabled</li>
+          <li>Verify your location settings are correct</li>
+        </ul>
+      </li>
+      <li>If you travel to a different timezone:
+        <ul>
+          <li>Events should automatically adjust to the new timezone</li>
+          <li>Force a calendar refresh if they don't</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</details>
+
+<details class="accordion-item" style="margin: 1rem 0; padding: 1rem; border: 2px solid #fee2e2; border-radius: 8px; background: #fef2f2;">
+  <summary style="cursor: pointer; font-weight: bold; font-size: 1.1rem; list-style: none;">
+    <span style="display: inline-block; margin-right: 0.5rem;">🗑️</span> How to unsubscribe from the calendar
+  </summary>
+  <div style="margin-top: 1rem; padding-left: 1.5rem;">
+    <p><strong>To remove the calendar subscription:</strong></p>
+    <p><strong>iOS/macOS:</strong></p>
+    <ol style="text-align: left;">
+      <li>Open Calendar app</li>
+      <li>Tap/click "Calendars"</li>
+      <li>Find "3mpwrApp Events"</li>
+      <li>Tap/click the info (ℹ️) button</li>
+      <li>Tap/click "Delete Calendar" or "Unsubscribe"</li>
+      <li>Confirm</li>
+    </ol>
+    <p style="margin-top: 1rem;"><strong>Google Calendar:</strong></p>
+    <ol style="text-align: left;">
+      <li>Go to Settings</li>
+      <li>Find "3mpwrApp Events" in the calendar list</li>
+      <li>Click the three dots (⋮)</li>
+      <li>Select "Remove calendar"</li>
+      <li>Confirm</li>
+    </ol>
+    <p style="margin-top: 1rem;"><strong>Outlook:</strong></p>
+    <ol style="text-align: left;">
+      <li>Right-click on "3mpwrApp Events" in the calendar list</li>
+      <li>Select "Delete Calendar"</li>
+      <li>Confirm</li>
+    </ol>
+  </div>
+</details>
+
+<div class="info-box" style="margin: 2rem 0;">
+  <p><strong>🆘 Still having issues?</strong></p>
+  <p>Contact us at <a href="mailto:empowrapp08162025@gmail.com?subject=Calendar%20Subscription%20Help">empowrapp08162025@gmail.com</a> with:</p>
+  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+    <li>Your device/platform (iPhone, Android, Mac, Windows, etc.)</li>
+    <li>Calendar app you're using (Apple Calendar, Google Calendar, Outlook, etc.)</li>
+    <li>Screenshot of any error messages</li>
+    <li>What you've already tried</li>
+  </ul>
+  <p style="margin-top: 1rem;">We'll help you get it working!</p>
 </div>
 
 ---
 
-## 🔄 How Event Auto-Sync Will Work
+## 🔄 How Event Auto-Sync Works
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-**Once the calendar feed is ready, it will automatically include community events:**
+**Real-time calendar synchronization is now live! Here's how it works:**
 
 **For Event Organizers:**
 1. 📱 Create event in the 3mpwrApp
 2. ✅ Add all accessibility details (wheelchair access, ASL, quiet room, etc.)
-3. 🌐 Toggle "Make Public" to list it here
-4. 💾 Event is saved to Firestore database
-5. 📅 Your event appears in the real-time calendar feed
+3. 🌐 Toggle "Make Public" to list it publicly
+4. 💾 Event is saved to Firestore database (`events_production` collection)
+5. 📅 Your event appears on this website within **5 minutes**
+6. 📲 Subscribed calendars update within a few hours (up to 24 hours for Google Calendar)
 
 **For Event Attendees:**
-- 👀 Browse all public events on this website
+- 👀 Browse all public events on this website (updates every 5 minutes)
 - 📅 Subscribe to ICS feed for automatic calendar sync
-- 📲 Get updates when new events are added
+- 📲 Get automatic updates when new events are added
 - ♿ See all accessibility info before attending
 - 🎟️ RSVP directly from calendar or website
 - 🌍 Events automatically convert to your local timezone
 
 **Technical Details (For Calendar Nerds):**
 - 📡 **Format:** Standard iCalendar (.ics) format
-- 📦 **Size:** ~48 KB (131+ events)
-- ⏱️ **Updates:** Daily via real-time synchronization
+- 📦 **Data Source:** Firestore collections (`events_production` for live, `events_preview` for testing)
+- ⏱️ **Website Updates:** Every 5 minutes from Firestore via Cloudflare Worker API
+- ⏱️ **Calendar Feed:** Updates hourly (cached via Cloudflare KV for performance)
 - 🔗 **Compatible with:** Google Calendar, Apple Calendar, Outlook, Thunderbird, and all standard calendar apps
 - 🔒 **Privacy:** Only events marked "public" appear in feed
 - 🌍 **Timezones:** All events stored in UTC, automatically converted by your calendar app
-- 🔄 **Automation:** Real-time sync from Firestore to calendar feed
-- 🎯 **Reliability:** Hosted on Cloudflare Pages with global CDN for fast, reliable access worldwide
+- 🔄 **Automation:** Real-time sync: App → Firestore → Cloudflare Worker → Your Calendar
+- 🎯 **Reliability:** Hosted on Cloudflare Workers with global CDN for fast, reliable access worldwide
 - 📊 **Content:** User-created events + disability awareness days + health observances + Canadian holidays + provincial holidays
+- 🚀 **Performance:** Cloudflare KV cache ensures sub-100ms response times globally
+- 🔐 **Security:** CORS enabled for website access, service account authentication for Firestore
 
 ---
 
@@ -585,28 +832,47 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 
 ---
 
-## ❓ Calendar Subscription Support (Coming Soon)
+## ❓ Need Help with Calendar Subscription?
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-<div style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 12px; border: 2px solid #f59e0b;">
-  <h4 style="margin-top: 0; color: #92400e;">📖 Detailed Troubleshooting Coming Soon</h4>
-  <p>Once the calendar feed is available, we'll provide comprehensive support including:</p>
+<div style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-radius: 12px; border: 2px solid #10b981;">
+  <h4 style="margin-top: 0; color: #065f46;">📖 Comprehensive Support Available</h4>
+  <p>We've provided detailed troubleshooting above. If you're still having issues:</p>
   <ul style="text-align: left; margin: 1.5rem auto; max-width: 600px;">
-    <li>✅ Step-by-step setup guides for each calendar app</li>
-    <li>✅ Troubleshooting for common sync issues</li>
-    <li>✅ How to verify events are appearing correctly</li>
-    <li>✅ How to update notification preferences</li>
-    <li>✅ Detailed information about the update cycle</li>
+    <li>✅ Check the troubleshooting section above for common issues</li>
+    <li>✅ Verify your calendar feed URL is correct</li>
+    <li>✅ Force a manual refresh in your calendar app</li>
+    <li>✅ Check that the calendar is enabled/visible</li>
+    <li>✅ Visit the website directly for instant updates (refreshes every 5 minutes)</li>
   </ul>
-  <p style="margin-top: 1rem;"><strong>📍 Check back soon!</strong> In the meantime, feel free to <a href="#contact">contact us</a> if you have questions.</p>
+  <p style="margin-top: 1rem;"><strong>� Still stuck?</strong> <a href="mailto:empowrapp08162025@gmail.com?subject=Calendar%20Subscription%20Help">Contact us</a> and we'll help you troubleshoot!</p>
 </div>
-      </li>
-      <li><strong>Calendar feed update schedule:</strong>
-        <ul>
-          <li>The ICS file regenerates daily at 3 AM UTC (11 PM EST / 8 PM PST)</li>
-          <li>This means new events appear in subscribed calendars the next day</li>
-        </ul>
+
+---
+
+## 📊 Calendar Feed Stats
+
+<div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #0ea5e9; border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+    <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+      <p style="margin: 0; font-size: 2rem; font-weight: bold; color: #0369a1;">5min</p>
+      <p style="margin: 0.25rem 0 0; color: #075985; font-weight: 600;">Website Update Time</p>
+    </div>
+    <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+      <p style="margin: 0; font-size: 2rem; font-weight: bold; color: #0369a1;">1hr</p>
+      <p style="margin: 0.25rem 0 0; color: #075985; font-weight: 600;">Calendar Feed Refresh</p>
+    </div>
+    <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+      <p style="margin: 0; font-size: 2rem; font-weight: bold; color: #0369a1;">131+</p>
+      <p style="margin: 0.25rem 0 0; color: #075985; font-weight: 600;">Built-In Events</p>
+    </div>
+    <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+      <p style="margin: 0; font-size: 2rem; font-weight: bold; color: #0369a1;">∞</p>
+      <p style="margin: 0.25rem 0 0; color: #075985; font-weight: 600;">Community Events</p>
+    </div>
+  </div>
+</div>
       </li>
       <li><strong>Your calendar app's refresh rate:</strong>
         <ul>
@@ -698,13 +964,13 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 3px solid #0ea5e9; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-  <h3 style="margin-top: 0; text-align: center; color: #0369a1;">📱 Coming Soon!</h3>
+  <h3 style="margin-top: 0; text-align: center; color: #0369a1;">� Real-Time Calendar Sync is Live!</h3>
   
   <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-    <p style="margin: 0 0 0.5rem; font-weight: bold; color: #0369a1;">⚙️ Real-Time Calendar Sync In Setup</p>
-    <p style="font-size: 1rem; margin: 0; background: #f0f9ff; padding: 0.75rem; border-radius: 6px; border: 1px solid #bae6fd;">
-      We're working on a real-time synchronization system. Calendar feed URL will be available soon!
-    </p>
+    <p style="margin: 0 0 0.5rem; font-weight: bold; color: #0369a1;">🔗 Calendar Feed URL:</p>
+    <div style="font-size: 0.85rem; margin: 0; background: #f0f9ff; padding: 0.75rem; border-radius: 6px; border: 1px solid #bae6fd; font-family: monospace; word-break: break-all;">
+      https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production
+    </div>
   </div>
   
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
@@ -714,7 +980,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     </div>
     <div style="background: white; padding: 1rem; border-radius: 8px;">
       <p style="margin: 0; font-weight: bold; color: #0369a1;">🔄 Update Frequency:</p>
-      <p style="margin: 0.25rem 0 0; font-size: 1.5rem; font-weight: bold; color: #0c4a6e;">Daily</p>
+      <p style="margin: 0.25rem 0 0; font-size: 1.5rem; font-weight: bold; color: #0c4a6e;">Every 5 min</p>
     </div>
   </div>
   
@@ -726,7 +992,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       <li>Health observances</li>
       <li>Canadian holidays</li>
       <li>Provincial holidays</li>
-      <li>Auto-updates daily</li>
+      <li>Auto-updates hourly</li>
     </ul>
   </div>
   
@@ -742,7 +1008,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     <p style="margin: 0; font-weight: bold;">💡 Pro Tips:</p>
     <ul style="margin: 0.5rem 0 0; text-align: left;">
       <li>Subscribe once, stay updated forever</li>
-      <li>New events appear automatically (within 24-48 hours)</li>
+      <li>New events appear automatically (within 1-24 hours)</li>
       <li>Website updates faster (every 5 minutes)</li>
       <li>All events include full accessibility info</li>
       <li>Free forever - no account needed to subscribe</li>
