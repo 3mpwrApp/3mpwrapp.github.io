@@ -14,13 +14,13 @@ The Events tab now features **fully automated, real-time synchronization** from 
 
 ### ✅ 1. Automatic Event Sync on Create
 - **Before:** Users had to manually press "Sync Events to Website" button
-- **Now:** Events automatically sync to Firestore `events_production` collection immediately upon creation
+- **Now:** Events automatically sync to Firestore `events_production` **and** `events_preview` collections immediately upon creation
 - **User Experience:** "✅ Event Published! [Event] is now live on the 3mpwr website"
-- **Fallback:** If sync fails, event is queued for automatic retry
+- **Fallback:** If sync fails or is partial, event is queued for automatic retry
 
 ### ✅ 2. Automatic Event Sync on Delete
 - **Before:** Manual sync required after deletion
-- **Now:** Deletions instantly propagate to Firestore and website
+- **Now:** Deletions instantly propagate to **both** Firestore collections and website
 - **User Experience:** "✅ Event Deleted - [Event] has been removed from the 3mpwr website"
 - **Safety:** Local deletion happens immediately (optimistic update), cloud sync follows
 
@@ -58,8 +58,9 @@ User Creates Event
        ↓
 2️⃣ Save to AsyncStorage (persistent)
        ↓
-3️⃣ Auto-Sync to Firestore
+3️⃣ Auto-Sync to Firestore (both collections)
        ├─ ✅ Success → Show green banner
+       ├─ ⚠️ Partial → Add to retry queue
        └─ ❌ Failed → Add to retry queue
               ↓
 4️⃣ Background Service (every 60s)
@@ -68,7 +69,7 @@ User Creates Event
        └─ Remove successful syncs
               ↓
 5️⃣ Cloudflare Worker (every 5 min)
-       ├─ Fetch from Firestore
+       ├─ Fetch from Firestore production
        ├─ Cache in KV store
        └─ Serve to website
               ↓
@@ -278,7 +279,7 @@ export async function processSyncQueue() {
 │                     3mpwr Mobile App                          │
 │                                                               │
 │  1. User creates event → Local state + AsyncStorage          │
-│  2. Auto-sync to Firestore events_production                 │
+│  2. Auto-sync to Firestore events_production + preview       │
 │  3. If failed → Add to retry queue                           │
 │  4. Background service processes queue every 60s             │
 └──────────────────┬───────────────────────────────────────────┘
@@ -287,7 +288,7 @@ export async function processSyncQueue() {
 ┌──────────────────────────────────────────────────────────────┐
 │                    Firebase Firestore                         │
 │                                                               │
-│  Collection: events_production                                │
+│  Collections: events_production + events_preview             │
 │  - Real-time updates                                         │
 │  - Authenticated writes                                      │
 │  - Indexed by date, status, category                         │

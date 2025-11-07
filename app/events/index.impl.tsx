@@ -272,8 +272,8 @@ export default function EventsScreen() {
 
       setSyncStatus('syncing');
       
-      // Sync to production collection (auto-updates Worker API and website)
-      const syncSuccess = await syncEventToProduction({
+      // Prepare event payload
+      const eventPayload = {
         id: event.id,
         title: event.title,
         description: event.description,
@@ -293,13 +293,26 @@ export default function EventsScreen() {
         createdAt: event.createdAt || Date.now(),
         status: 'published',
         category: 'community',
-      }, user.uid);
+      };
+
+      // Sync to both production and preview collections
+      const productionSuccess = await syncEventToProduction(eventPayload, user.uid, 'events_production');
+      const previewSuccess = await syncEventToProduction(eventPayload, user.uid, 'events_preview');
+      
+      const syncSuccess = productionSuccess && previewSuccess;
 
       if (syncSuccess) {
         setSyncStatus('success');
         setLastSyncTime(Date.now());
-        console.log(`[AutoSync] ✓ Event ${event.id} synced to production`);
+        console.log(`[AutoSync] ✓ Event ${event.id} synced to both collections`);
         return true;
+      } else if (productionSuccess || previewSuccess) {
+        // Partial success - add to queue for retry
+        await addToSyncQueue(event.id, event, user.uid);
+        setPendingSyncs(prev => prev + 1);
+        setSyncStatus('error');
+        console.warn(`[AutoSync] ⚠ Partial sync (prod: ${productionSuccess}, preview: ${previewSuccess}) - added to retry queue`);
+        return false;
       } else {
         // Failed - add to queue for retry
         await addToSyncQueue(event.id, event, user.uid);
@@ -744,9 +757,13 @@ export default function EventsScreen() {
                 // Auto-sync deletion to cloud (no manual intervention)
                 setSyncStatus('syncing');
                 try {
+                  // Delete from both production and preview collections
                   const prodDeleteSuccess = await deleteEventFromProduction(item.id, 'events_production');
+                  const previewDeleteSuccess = await deleteEventFromProduction(item.id, 'events_preview');
                   
-                  if (prodDeleteSuccess) {
+                  const deleteSuccess = prodDeleteSuccess && previewDeleteSuccess;
+                  
+                  if (deleteSuccess) {
                     setSyncStatus('success');
                     setLastSyncTime(Date.now());
                     Alert.alert(
@@ -754,6 +771,13 @@ export default function EventsScreen() {
                       `"${item.title}" has been removed from the 3mpwr website and will disappear from calendar feeds shortly.`
                     );
                     trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: true, autoSync: true });
+                  } else if (prodDeleteSuccess || previewDeleteSuccess) {
+                    setSyncStatus('error');
+                    Alert.alert(
+                      '⚠️ Partially Deleted', 
+                      `"${item.title}" removed from your device and partially synced. Cloud sync will retry automatically.`
+                    );
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false, partial: true });
                   } else {
                     setSyncStatus('error');
                     Alert.alert(

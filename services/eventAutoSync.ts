@@ -132,35 +132,47 @@ export async function processSyncQueue(): Promise<{ synced: number; failed: numb
       try {
         logger.log('[AutoSync] Attempting sync:', item.eventId, `(attempt ${item.attempts + 1}/${MAX_RETRY_ATTEMPTS})`);
         
-        const success = await syncEventToProduction(
-          {
-            id: item.eventData.id,
-            title: item.eventData.title,
-            description: item.eventData.description,
-            date: new Date(item.eventData.date),
-            time: item.eventData.time,
-            duration: item.eventData.duration,
-            location: item.eventData.location,
-            isVirtual: item.eventData.isVirtual,
-            asl: item.eventData.asl,
-            captions: item.eventData.captions,
-            stepFree: item.eventData.stepFree,
-            sensorySpace: item.eventData.sensorySpace,
-            energyLevel: item.eventData.energyLevel,
-            requiresRSVP: item.eventData.requiresRSVP,
-            rsvpDetails: item.eventData.rsvpDetails,
-            createdBy: item.userId,
-            createdAt: item.eventData.createdAt || Date.now(),
-            status: 'published',
-            category: 'community',
-          },
-          item.userId
-        );
+        const eventPayload = {
+          id: item.eventData.id,
+          title: item.eventData.title,
+          description: item.eventData.description,
+          date: new Date(item.eventData.date),
+          time: item.eventData.time,
+          duration: item.eventData.duration,
+          location: item.eventData.location,
+          isVirtual: item.eventData.isVirtual,
+          asl: item.eventData.asl,
+          captions: item.eventData.captions,
+          stepFree: item.eventData.stepFree,
+          sensorySpace: item.eventData.sensorySpace,
+          energyLevel: item.eventData.energyLevel,
+          requiresRSVP: item.eventData.requiresRSVP,
+          rsvpDetails: item.eventData.rsvpDetails,
+          createdBy: item.userId,
+          createdAt: item.eventData.createdAt || Date.now(),
+          status: 'published',
+          category: 'community',
+        };
+
+        // Sync to both production and preview collections
+        const productionSuccess = await syncEventToProduction(eventPayload, item.userId, 'events_production');
+        const previewSuccess = await syncEventToProduction(eventPayload, item.userId, 'events_preview');
+        
+        const success = productionSuccess && previewSuccess;
 
         if (success) {
           syncedCount++;
-          logger.log('[AutoSync] ✓ Synced:', item.eventId);
+          logger.log('[AutoSync] ✓ Synced to both collections:', item.eventId);
           // Don't add to updated queue (successfully synced)
+        } else if (productionSuccess || previewSuccess) {
+          // Partial success - retry to sync to both
+          logger.warn('[AutoSync] ⚠ Partial sync (prod:', productionSuccess, 'preview:', previewSuccess, '):', item.eventId);
+          updatedQueue.push({
+            ...item,
+            attempts: item.attempts + 1,
+            lastAttempt: Date.now(),
+          });
+          failedCount++;
         } else {
           // Retry later
           updatedQueue.push({
