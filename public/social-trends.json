@@ -1,98 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-07T00:53:00.786Z",
+  "lastUpdated": "2025-11-07T06:17:37.958Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 1585,
+      "totalPosts": 1610,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-07T00:52:51.599Z"
+      "lastSeen": "2025-11-07T06:17:29.561Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 1600,
+      "totalPosts": 1625,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-07T00:52:53.939Z"
+      "lastSeen": "2025-11-07T06:17:31.600Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 1588,
+      "totalPosts": 1613,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-07T00:52:55.867Z"
+      "lastSeen": "2025-11-07T06:17:33.457Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 1597,
+      "totalPosts": 1621,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-11-07T00:52:57.832Z"
+      "lastSeen": "2025-11-07T06:17:35.377Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 1600,
+      "totalPosts": 1625,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-07T00:52:59.783Z"
+      "lastSeen": "2025-11-07T06:17:36.954Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "LEGO Party! from @smgstudio.bsky.social letting you filter which minigames to include in the playlist based on accessibility barriers\n#gamedev #accessibility",
-      "author": "ianhamilton.bsky.social",
-      "engagement": 27,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Where's the #AltText on images for blind and low vision readers? @benfineman.bsky.social \n\nDigital inclusion requires attention to #accessibility\n\nHT @manningkrull.bsky.social \nmanningkrull.com/digital-phil...",
-      "author": "jennykaynz.bsky.social",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I made two CSS themes. Nebula I and II are simple, minimalist, and classless themes that look like Gemtext from the Project Gemini web protocol. \n\nThere's a blue and red theme.\n\nRepo: codeberg.org/travis-jeans...\n\n#opensource #accessibility #a11y #smallweb #geminiprotocol #indieweb #webdev #codeberg",
-      "author": "futurehorizondesign.net.au",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Join Games for Blind Gamers 5 in February 2026! Our vibrant community aids developers in crafting accessible games through meticulous planning and in-depth research. Dive into this game jam and tackle the exciting challenge! Participate now: itch.io/jam/games-fo... #A11y #IndieDev",
-      "author": "ericbomb.bsky.social",
-      "engagement": 16,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "“You don’t look sick.” — okay, and you don’t look like someone I asked for medical advice. 😉💅\n\n#DisabledAndProud #InvisibleNotImaginary #ChronicPainCommunity #DisabilityRights #NormalizeRest #SpoonieLife #RadicalCompassion 💜✨",
-      "author": "adulitingishard.bsky.social",
-      "engagement": 20,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "#Intro | #Promosky\n\n👋 I'm Meg | 34 | she/her/y'all\n \nI'm into:\n#mindfulness 🧘‍♀️\n#kindness 😊 \n#hope 🤲\n#Puns 🥸\n#crochet 🧶\n#moss ⛰️\n#hiking 🥾\n#minimalism 📦\n#Appalachia 🏞\n#books 📚\n#fungi 🍄‍🟫\n#AltText🆒️\n#CozyEra 🧦\n#Photography 📷\n#MigrainePrevention 🧠\n#DisabilityRights ♿️\n#Travel 🛩\n#Inclusion 🟢\n#Empathy 🥰",
-      "author": "light-life.bsky.social",
-      "engagement": 41,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "The police killing of Sonya Massey shows how disability, race, and gender converge in deadly encounters—and why we must reimagine crisis response around care, not control.\nRead our new blog: “When a Call for Help Becomes Lethal” at nlawcrdj.medium.com/when-a-call-...\n\n#DisabilityJustice #SonyaMassey",
       "author": "crdjustice.bsky.social",
@@ -338,20 +284,74 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Action alert: Tell the U.S. Dept. of Education to restore special education positions and support full IDEA funding. Quick one-click email to add your voice today.\nsosarizona.org/restore-ed/\n\n#Arizona #SpecialEducation #IDEA #PublicEd #DisabilityRights #SaveOurSchools",
+      "author": "azadvocacyhub.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "“You don’t look sick.” — okay, and you don’t look like someone I asked for medical advice. 😉💅\n\n#DisabledAndProud #InvisibleNotImaginary #ChronicPainCommunity #DisabilityRights #NormalizeRest #SpoonieLife #RadicalCompassion 💜✨",
+      "author": "adulitingishard.bsky.social",
+      "engagement": 20,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "The police killing of Sonya Massey shows how disability, race, and gender converge in deadly encounters—and why we must reimagine crisis response around care, not control.\nRead our new blog: “When a Call for Help Becomes Lethal” at nlawcrdj.medium.com/when-a-call-...\n\n#DisabilityJustice #SonyaMassey",
+      "author": "crdjustice.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Still fighting to stay afloat. Rent short $80 for Oct + $600 for Nov.\nODSP doesn’t cover the basics — poverty by design.\nIf you can help:\n📧e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPPoverty #DisabilityJustice #MutualAid #MutualAidRequest #MutualAidBoost",
+      "author": "cycletherapyham.bsky.social",
+      "engagement": 23,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "\"You must earn a living\" is such a dystopian phrase. \n\nEARN a LIVING? \n\nHow about you earn DEEZ NUTS? 🤾‍♀️\n\nWhich of course stands for Disability, Equity, Equity, Zoom(classes), Notting (Hill, the 1999 classic), Unity, Teamwork, and Social (responsibility) 🙏\n\n#DisabilityJustice #Disability",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "#aria \ncompleting practical-accessibility.today  by @sarasoueidan.com  \nfantastic course on #a11y",
+      "author": "wonday.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 44
+      "count": 45
     },
     {
       "keyword": "accessibility",
-      "count": 35
+      "count": 36
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 26
     },
     {
       "keyword": "cripthevote",
@@ -414,12 +414,12 @@
       "count": 7
     },
     {
-      "keyword": "disabilityjustice mutualaid",
+      "keyword": "inclusion",
       "count": 6
     },
     {
-      "keyword": "disabled people",
-      "count": 5
+      "keyword": "disabilityjustice mutualaid",
+      "count": 6
     }
   ]
 }
