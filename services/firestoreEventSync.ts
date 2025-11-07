@@ -38,12 +38,16 @@ export interface FirestoreSyncEvent {
   title: string;
   description: string;
   date: Date | string;
+  time?: string;
+  duration?: string;
   location?: string;
   isVirtual?: boolean;
   asl?: boolean;
   captions?: boolean;
   stepFree?: boolean;
   sensorySpace?: boolean;
+  energyLevel?: 'low' | 'medium' | 'high';
+  rsvpRequired?: string;
   tags?: string[];
   organizer?: string;
   imageUrl?: string;
@@ -77,12 +81,16 @@ export async function syncEventToProduction(event: FirestoreSyncEvent, uid: stri
       title: event.title,
       description: event.description,
       date: event.date instanceof Date ? m.Timestamp.fromDate(event.date) : m.Timestamp.fromDate(new Date(event.date)),
+      time: event.time || '',
+      duration: event.duration || '',
       location: event.location || '',
       isVirtual: event.isVirtual || false,
       asl: event.asl || false,
       captions: event.captions || false,
       stepFree: event.stepFree || false,
       sensorySpace: event.sensorySpace || false,
+      energyLevel: event.energyLevel || 'medium',
+      rsvpRequired: event.rsvpRequired || '',
       tags: event.tags || [],
       organizer: event.organizer || '3mpwrApp',
       imageUrl: event.imageUrl || '',
