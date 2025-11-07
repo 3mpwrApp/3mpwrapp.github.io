@@ -124,15 +124,58 @@ export default function EventDetail() {
       // First update in old Firestore collection (for backward compatibility)
       const fsSuccess = await fsUpdateEvent(id, editData);
       
-      // Also sync to events_production collection if it's a user-created event
+      // Also sync to both production and preview collections
       let prodSuccess = false;
-      if (event?.id?.startsWith('evt-') && user?.uid) {
+      let previewSuccess = false;
+      
+      if (user?.uid) {
         const isSyncAvailable = await isFirestoreSyncAvailable();
         if (isSyncAvailable) {
-          prodSuccess = await updateEventInProduction(id, {
-            ...editData,
-            date: new Date(editData.date),
-          }, user.uid);
+          try {
+            // Update production collection
+            prodSuccess = await updateEventInProduction(id, {
+              title: editData.title,
+              description: editData.description,
+              date: editData.date ? new Date(editData.date) : undefined,
+              location: editData.location,
+              isVirtual: editData.isVirtual,
+              asl: editData.asl,
+              captions: editData.captions,
+              stepFree: editData.stepFree,
+              sensorySpace: editData.sensorySpace,
+            }, user.uid, 'events_production');
+            
+            // Also update preview collection
+            previewSuccess = await updateEventInProduction(id, {
+              title: editData.title,
+              description: editData.description,
+              date: editData.date ? new Date(editData.date) : undefined,
+              location: editData.location,
+              isVirtual: editData.isVirtual,
+              asl: editData.asl,
+              captions: editData.captions,
+              stepFree: editData.stepFree,
+              sensorySpace: editData.sensorySpace,
+            }, user.uid, 'events_preview');
+          } catch (syncError) {
+            console.warn('Firestore sync error during update:', syncError);
+          }
+        }
+      }
+      
+      // Update local AsyncStorage cache if this is a locally-created event
+      if (id?.startsWith('evt-')) {
+        try {
+          const cached = await AsyncStorage.getItem('events:local:v1');
+          if (cached) {
+            const localEvents = JSON.parse(cached);
+            const updatedLocal = localEvents.map((e: any) =>
+              e.id === id ? { ...e, ...editData } : e
+            );
+            await AsyncStorage.setItem('events:local:v1', JSON.stringify(updatedLocal));
+          }
+        } catch (err) {
+          console.warn('Failed to update local cache:', err);
         }
       }
       
@@ -140,15 +183,15 @@ export default function EventDetail() {
         setEvent({ ...event, ...editData });
         setEditMode(false);
         
-        if (prodSuccess) {
+        if (prodSuccess && previewSuccess) {
           Alert.alert(
             t('common.success', 'Success'),
             t('eventsFeature.edit.saved', 'Event updated successfully and synced to website')
           );
-        } else if (event?.id?.startsWith('evt-')) {
+        } else if (prodSuccess || previewSuccess) {
           Alert.alert(
             t('common.success', 'Success'),
-            t('eventsFeature.edit.saved', 'Event updated. Website sync may be unavailable.')
+            'Event updated. Website sync may be partially unavailable.'
           );
         } else {
           Alert.alert(
@@ -179,18 +222,25 @@ export default function EventDetail() {
               // Delete from old Firestore collection
               const fsSuccess = await fsDeleteEvent(id);
               
-              // Also delete from events_production if it's a user event
+              // Also delete from both events_production and events_preview
               let prodSuccess = false;
-              if (event?.id?.startsWith('evt-')) {
-                prodSuccess = await deleteEventFromProduction(id);
+              let previewSuccess = false;
+              
+              if (user?.uid) {
+                try {
+                  prodSuccess = await deleteEventFromProduction(id, 'events_production');
+                  previewSuccess = await deleteEventFromProduction(id, 'events_preview');
+                } catch (syncError) {
+                  console.warn('Firestore sync error during delete:', syncError);
+                }
               }
               
               if (fsSuccess) {
                 let message = t('eventsFeature.delete.success', 'Event deleted');
-                if (prodSuccess) {
+                if (prodSuccess && previewSuccess) {
                   message = 'Event deleted from all platforms';
-                } else if (event?.id?.startsWith('evt-')) {
-                  message = 'Event deleted. Website sync may be unavailable.';
+                } else if (prodSuccess || previewSuccess) {
+                  message = 'Event deleted. Some sync platforms may be unavailable.';
                 }
                 
                 Alert.alert(
