@@ -48,7 +48,8 @@ export function DebugExtractEvents() {
       
     } catch (error) {
       console.error('Failed to extract events:', error);
-      Alert.alert('Error', 'Failed to extract events: ' + error.message);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      Alert.alert('Error', 'Failed to extract events: ' + errorMessage);
     }
   };
   
