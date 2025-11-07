@@ -5,6 +5,7 @@ import {
   Alert,
   FlatList,
   RefreshControl,
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
@@ -120,7 +121,23 @@ export default function EventsScreen() {
       setError(null);
       setLoading(true);
       const data = await fetchEvents();
-      setBaseItems(data);
+      
+      // Merge with locally created events (those with evt- prefix)
+      let mergedData = [...data];
+      try {
+        const cached = await AsyncStorage.getItem('events:local:v1');
+        if (cached) {
+          const localEvents = JSON.parse(cached);
+          // Add local events that aren't already in the data
+          const existingIds = new Set(data.map(e => e.id));
+          const newLocalEvents = localEvents.filter((e: any) => !existingIds.has(e.id));
+          mergedData = [...newLocalEvents, ...data];
+        }
+      } catch (err) {
+        console.warn('[Events] Failed to merge cached events:', err);
+      }
+      
+      setBaseItems(mergedData);
       setOffline(false);
     } catch {
       setError("Failed to load events");
@@ -596,15 +613,21 @@ export default function EventsScreen() {
                   console.warn('[Events] Failed to update cache:', err);
                 }
                 
-                // Try to delete from Firestore production collection (syncs to website)
+                // Try to delete from both Firestore production and preview collections
                 try {
-                  const deleteSuccess = await deleteEventFromProduction(item.id);
-                  if (deleteSuccess) {
+                  const prodDeleteSuccess = await deleteEventFromProduction(item.id, 'events_production');
+                  const previewDeleteSuccess = await deleteEventFromProduction(item.id, 'events_preview');
+                  
+                  if (prodDeleteSuccess && previewDeleteSuccess) {
                     Alert.alert('✅ Deleted', `"${item.title}" has been deleted from all platforms.`);
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: true });
+                  } else if (prodDeleteSuccess || previewDeleteSuccess) {
+                    Alert.alert('✅ Deleted', `"${item.title}" has been deleted. Some sync platforms may be unavailable.`);
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: true });
                   } else {
                     Alert.alert('✅ Deleted Locally', `"${item.title}" has been removed from this device. Cloud sync may be unavailable.`);
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false });
                   }
-                  trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: deleteSuccess });
                 } catch (err) {
                   console.warn('[Events] Failed to delete from Firestore, but removed locally:', err);
                   Alert.alert('✅ Deleted Locally', `"${item.title}" has been removed. Cloud sync may be unavailable.`);
@@ -705,44 +728,46 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
   const valid = title.trim().length>2 && description.trim().length>4 && date.trim().length>3;
   const fieldStyle = { borderWidth:1, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:8, color: palette.text, marginBottom:6 };
   return (
-    <View style={{ marginBottom:12, alignSelf:'stretch' }}>
-      <TextInput placeholder={t('eventsFeature.form.titlePlaceholder','Title')} placeholderTextColor={palette.muted} value={title} onChangeText={setTitle} style={fieldStyle} />
-      <TextInput placeholder={t('eventsFeature.form.descriptionPlaceholder','Description')} placeholderTextColor={palette.muted} value={description} onChangeText={setDescription} style={[fieldStyle,{ minHeight:60 }]} multiline={true} />
-      <TextInput placeholder={t('eventsFeature.form.datePlaceholder','Date (YYYY-MM-DD HH:MM)')} placeholderTextColor={palette.muted} value={date} onChangeText={setDate} style={fieldStyle} />
-      <TextInput placeholder={t('eventsFeature.form.locationPlaceholder','Location (optional)')} placeholderTextColor={palette.muted} value={location} onChangeText={setLocation} style={fieldStyle} />
-      <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom:8 }}>
-        <ToggleChip label={t('eventsFeature.chips.virtual','Virtual')} active={isVirtual} onToggle={()=>setIsVirtual(v=>!v)} palette={palette} />
-        <ToggleChip label={t('eventsFeature.chips.asl','ASL')} active={asl} onToggle={()=>setAsl(v=>!v)} palette={palette} />
-        <ToggleChip label={t('eventsFeature.chips.captions','Captions')} active={captions} onToggle={()=>setCaptions(v=>!v)} palette={palette} />
-        <ToggleChip label={t('eventsFeature.chips.stepFree','Step-free')} active={stepFree} onToggle={()=>setStepFree(v=>!v)} palette={palette} />
-        <ToggleChip label={t('eventsFeature.chips.sensory','Sensory')} active={sensorySpace} onToggle={()=>setSensory(v=>!v)} palette={palette} />
-      </GapView>
-      <A11yPressable
-        accessibilityRole="button"
-        accessibilityLabel={t('eventsFeature.createToggleOpen','Create Event')}
-        onPress={() => { 
-          if(!valid) {
-            Alert.alert(
-              t('eventsFeature.form.incomplete','Incomplete Form'),
-              t('eventsFeature.form.incompleteMsg','Please fill in title (3+ chars), description (5+ chars), and date fields.')
-            );
-            return;
-          }
-          onCreate({ title: title.trim(), description: description.trim(), date: date.trim(), location: location.trim()||undefined, isVirtual, asl, captions, stepFree, sensorySpace }); 
-          setTitle(''); 
-          setDescription(''); 
-          setDate(''); 
-          setLocation(''); 
-          setIsVirtual(false); 
-          setAsl(false); 
-          setCaptions(false); 
-          setStepFree(false); 
-          setSensory(false);
-        }}
-        style={{ backgroundColor: valid ? palette.primary : palette.muted, paddingVertical:10, borderRadius:8, alignItems:'center', minHeight: 44 }}
-      >
-        <Text style={{ color: valid ? palette.onPrimary : palette.text, fontWeight:'700' }}>{t('eventsFeature.form.add','Add Event')}</Text>
-      </A11yPressable>
+    <View style={{ marginBottom:12, alignSelf:'stretch', maxHeight: 500 }}>
+      <ScrollView scrollEnabled={true} nestedScrollEnabled={true}>
+        <TextInput placeholder={t('eventsFeature.form.titlePlaceholder','Title')} placeholderTextColor={palette.muted} value={title} onChangeText={setTitle} style={fieldStyle} />
+        <TextInput placeholder={t('eventsFeature.form.descriptionPlaceholder','Description')} placeholderTextColor={palette.muted} value={description} onChangeText={setDescription} style={[fieldStyle,{ minHeight:60 }]} multiline={true} />
+        <TextInput placeholder={t('eventsFeature.form.datePlaceholder','Date (YYYY-MM-DD HH:MM)')} placeholderTextColor={palette.muted} value={date} onChangeText={setDate} style={fieldStyle} />
+        <TextInput placeholder={t('eventsFeature.form.locationPlaceholder','Location (optional)')} placeholderTextColor={palette.muted} value={location} onChangeText={setLocation} style={fieldStyle} />
+        <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom:8 }}>
+          <ToggleChip label={t('eventsFeature.chips.virtual','Virtual')} active={isVirtual} onToggle={()=>setIsVirtual(v=>!v)} palette={palette} />
+          <ToggleChip label={t('eventsFeature.chips.asl','ASL')} active={asl} onToggle={()=>setAsl(v=>!v)} palette={palette} />
+          <ToggleChip label={t('eventsFeature.chips.captions','Captions')} active={captions} onToggle={()=>setCaptions(v=>!v)} palette={palette} />
+          <ToggleChip label={t('eventsFeature.chips.stepFree','Step-free')} active={stepFree} onToggle={()=>setStepFree(v=>!v)} palette={palette} />
+          <ToggleChip label={t('eventsFeature.chips.sensory','Sensory')} active={sensorySpace} onToggle={()=>setSensory(v=>!v)} palette={palette} />
+        </GapView>
+        <A11yPressable
+          accessibilityRole="button"
+          accessibilityLabel={t('eventsFeature.createToggleOpen','Create Event')}
+          onPress={() => { 
+            if(!valid) {
+              Alert.alert(
+                t('eventsFeature.form.incomplete','Incomplete Form'),
+                t('eventsFeature.form.incompleteMsg','Please fill in title (3+ chars), description (5+ chars), and date fields.')
+              );
+              return;
+            }
+            onCreate({ title: title.trim(), description: description.trim(), date: date.trim(), location: location.trim()||undefined, isVirtual, asl, captions, stepFree, sensorySpace }); 
+            setTitle(''); 
+            setDescription(''); 
+            setDate(''); 
+            setLocation(''); 
+            setIsVirtual(false); 
+            setAsl(false); 
+            setCaptions(false); 
+            setStepFree(false); 
+            setSensory(false);
+          }}
+          style={{ backgroundColor: valid ? palette.primary : palette.muted, paddingVertical:10, borderRadius:8, alignItems:'center', minHeight: 44, marginBottom: 8 }}
+        >
+          <Text style={{ color: valid ? palette.onPrimary : palette.text, fontWeight:'700' }}>{t('eventsFeature.form.add','Add Event')}</Text>
+        </A11yPressable>
+      </ScrollView>
     </View>
   );
 }
