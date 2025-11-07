@@ -47,8 +47,10 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
       tokenEndpoint: 'https://oauth2.googleapis.com/token',
     };
     
+    // For Expo Go, use the proxy redirect URI
+    // For standalone builds, use the native scheme
     const redirectUri = AuthSession.makeRedirectUri({ 
-      useProxy: Platform.select({ web: false, default: true }),
+      useProxy: true, // Always use proxy for Expo Go compatibility
       scheme: 'empowrapp'
     });
     
