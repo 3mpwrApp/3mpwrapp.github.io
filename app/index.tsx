@@ -71,6 +71,7 @@ export default function Index() {
   // Handle redirect using useEffect to avoid middleware issues
   useEffect(() => {
     if (loading) {
+      logger.log('[Index] Still loading auth state...');
       return; // Still loading, wait
     }
     
@@ -83,8 +84,8 @@ export default function Index() {
     const inAuthFlow = (segments as string[]).includes('auth');
     const inTabsFlow = (segments as string[]).includes('tabs');
     
-    logger.log('Index navigation check', { 
-      user: !!user, 
+    logger.log('[Index] Navigation check', { 
+      hasUser: !!user, 
       inAuthFlow, 
       inTabsFlow,
       segments: segments.join('/'),
@@ -94,9 +95,9 @@ export default function Index() {
     const shouldBeInAuth = !user;
     const shouldBeInTabs = !!user;
     
-    // If user is authenticated but in auth flow, navigate to tabs
+    // If user is authenticated but in auth flow, navigate to tabs (HOME)
     if (shouldBeInTabs && inAuthFlow) {
-      logger.log('User logged in - navigating to tabs');
+      logger.log('[Index] ✅ User logged in - navigating to home/(tabs)');
       hasNavigated.current = true;
       router.replace('/(tabs)');
       return;
@@ -104,7 +105,7 @@ export default function Index() {
     
     // If user is not authenticated but in tabs flow, navigate to login
     if (shouldBeInAuth && inTabsFlow) {
-      logger.log('No user in tabs - navigating to login');
+      logger.log('[Index] ❌ No user in tabs - navigating to login');
       hasNavigated.current = true;
       router.replace('/(auth)/login');
       return;
@@ -113,11 +114,11 @@ export default function Index() {
     // Initial navigation when not in any flow yet
     if (!inAuthFlow && !inTabsFlow) {
       if (!user) {
-        logger.log('Initial - no user, navigating to login');
+        logger.log('[Index] 🔄 Initial - no user, navigating to login');
         hasNavigated.current = true;
         router.replace('/(auth)/login');
       } else {
-        logger.log('Initial - user exists, navigating to tabs');
+        logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
         hasNavigated.current = true;
         router.replace('/(tabs)');
       }

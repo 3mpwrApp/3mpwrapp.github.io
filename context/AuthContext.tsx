@@ -30,14 +30,25 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     // Handle strict BYOC mode where auth is null
     if (!auth) {
+      logger.log('[AuthContext] Strict BYOC mode - auth is null');
       setLoading(false);
       return;
     }
+
+    logger.log('[AuthContext] Setting up auth state listener');
 
     const unsubscribe = onAuthStateChanged(
       auth,
       async (firebaseUser) => {
         try {
+          logger.log('[AuthContext] Auth state changed', { 
+            hasUser: !!firebaseUser, 
+            isAnonymous: firebaseUser?.isAnonymous,
+            uid: firebaseUser?.uid,
+            email: firebaseUser?.email,
+            provider: firebaseUser?.providerData?.[0]?.providerId
+          });
+          
           setUser(firebaseUser);
           setIsGuest(!!firebaseUser?.isAnonymous);
           setLoading(false);
@@ -53,8 +64,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             try {
               const res = await getIdTokenResult(firebaseUser, true);
               setIsAdmin(isSuperAdmin || Boolean((res.claims as any)?.admin));
+              logger.log('[AuthContext] Claims refreshed', { isAdmin: isSuperAdmin || Boolean((res.claims as any)?.admin) });
             } catch (error) {
-              logger.warn('Failed to refresh claims', {
+              logger.warn('[AuthContext] Failed to refresh claims', {
                 error: error instanceof Error ? error.message : 'Unknown',
               });
               // Still grant admin if super admin email, even if claims fail
@@ -63,17 +75,18 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               // Check if this is a real auth error (401/403) vs network error
               if (error instanceof Error) {
                 if (error.message.includes('401') || error.message.includes('403')) {
-                  logger.log('Session expired - real auth error');
+                  logger.log('[AuthContext] Session expired - real auth error');
                   setSessionExpired(true);
                 }
               }
             }
           } else {
+            logger.log('[AuthContext] No user - signed out');
             setIsAdmin(false);
             setSessionExpired(false);
           }
         } catch (error) {
-          logger.error('Auth state change error', {
+          logger.error('[AuthContext] Auth state change error', {
             error: error instanceof Error ? error.message : 'Unknown',
           });
           setLoading(false);
@@ -81,7 +94,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       },
       (error) => {
         // Handle auth listener errors
-        logger.error('Auth listener error', {
+        logger.error('[AuthContext] Auth listener error', {
           code: (error as any)?.code,
           message: error instanceof Error ? error.message : 'Unknown',
         });
@@ -89,7 +102,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         // Only set sessionExpired for real authentication errors
         if ((error as any)?.code === 'auth/invalid-token' || (error as any)?.code === 'auth/credential-expired') {
           setSessionExpired(true);
-          logger.log('Session expired - detected from auth listener');
+          logger.log('[AuthContext] Session expired - detected from auth listener');
         }
 
         setLoading(false);

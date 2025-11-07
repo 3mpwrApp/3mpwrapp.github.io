@@ -12,12 +12,25 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
       return false;
     }
     
-    // Dynamically import to avoid bundling when not configured
-    const clientId = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID;
+    // For Expo, we need to use the Web Client ID (not Android client ID)
+    // Expo's OAuth flow uses web-based authentication even on mobile
+    const webClientId = process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
+    const androidClientId = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID;
+    
+    // Prefer Web Client ID for Expo projects, fallback to Android ID
+    const clientId = webClientId || androidClientId;
+    
     if (!clientId) {
-      Alert.alert('Not configured', 'Google Sign-In is not configured for this build.');
+      Alert.alert('Not configured', 'Google Sign-In is not configured for this build. Please check your .env file.');
       return false;
     }
+    
+    console.log('Google Sign-In config:', { 
+      platform: Platform.OS,
+      usingWebClientId: !!webClientId,
+      clientIdPrefix: clientId.substring(0, 20) + '...'
+    });
+    
     let WebBrowser: any; let AuthSession: any;
     try { WebBrowser = require('expo-web-browser'); } catch {}
     try { AuthSession = require('expo-auth-session'); } catch {}
@@ -26,21 +39,36 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
       return false;
     }
     WebBrowser.maybeCompleteAuthSession?.();
+    
     const discovery = {
       authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
       tokenEndpoint: 'https://oauth2.googleapis.com/token',
     };
+    
+    const redirectUri = AuthSession.makeRedirectUri({ 
+      useProxy: Platform.select({ web: false, default: true }),
+      scheme: 'empowrapp'
+    });
+    
+    console.log('OAuth redirect URI:', redirectUri);
+    
     const request = new AuthSession.AuthRequest({
       clientId,
       responseType: AuthSession.ResponseType.IdToken,
       scopes: ['openid', 'profile', 'email'],
-      redirectUri: AuthSession.makeRedirectUri({ useProxy: Platform.select({ web: false, default: true }) }),
+      redirectUri,
     });
     
     const result = await request.promptAsync(discovery as any);
     
+    console.log('Google Sign-In result:', { type: result.type });
+    
     // Check if user completed the flow
     if (result.type !== 'success') {
+      if (result.type === 'error') {
+        console.error('Google Sign-In error:', result.error);
+        Alert.alert('Sign-In Error', result.error?.message || 'An error occurred during sign-in');
+      }
       return false; // User cancelled or error occurred
     }
     
@@ -52,9 +80,26 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
     const { GoogleAuthProvider, signInWithCredential } = await import('firebase/auth');
     const credential: AuthCredential = GoogleAuthProvider.credential(result.params.id_token);
     await signInWithCredential(auth, credential);
+    console.log('Google Sign-In successful!');
     return true;
   } catch (e: any) {
-    Alert.alert('Google Sign-In failed', e?.message || 'Could not sign in with Google');
+    console.error('Google Sign-In exception:', e);
+    const errorMessage = e?.message || 'Could not sign in with Google';
+    
+    // Provide more helpful error messages
+    if (errorMessage.includes('prohibited') || errorMessage.includes('not enabled')) {
+      Alert.alert(
+        'Sign-In Not Enabled',
+        'Google Sign-In is not enabled in Firebase Console. Please enable it in Authentication → Sign-in method → Google.'
+      );
+    } else if (errorMessage.includes('invalid_client')) {
+      Alert.alert(
+        'Configuration Error',
+        'The Google Sign-In client ID is invalid. Make sure you are using the Web Client ID from Firebase Console in your .env file.'
+      );
+    } else {
+      Alert.alert('Google Sign-In failed', errorMessage);
+    }
     return false;
   }
 }
