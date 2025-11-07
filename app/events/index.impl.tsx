@@ -2,15 +2,15 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Link, useFocusEffect, useRouter } from "expo-router";
 import React from "react";
 import {
-    Alert,
-    FlatList,
-    RefreshControl,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View
+  Alert,
+  FlatList,
+  RefreshControl,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
@@ -29,13 +29,13 @@ import { generateDisabilityObservances } from "../../data/disability-observances
 import { events as localEvents } from "../../data/events";
 import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
 import {
-    generateCanadianHolidays,
-    generateProvincialHolidays,
+  generateCanadianHolidays,
+  generateProvincialHolidays,
 } from "../../data/holidays-ca";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
@@ -233,14 +233,24 @@ export default function EventsScreen() {
 
   const [showCreate, setShowCreate] = React.useState(false);
   const handleCreate = async (data: {
-    title: string; description: string; date: string; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean;
+    title: string; description: string; date: string; time?: string; duration?: number; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean; energyLevel?: string; requiresRSVP?: boolean; rsvpDetails?: string;
   }) => {
     const id = `evt-${Date.now()}`;
+    
+    // Combine date and time if time is provided
+    let fullDate = data.date;
+    if (data.time) {
+      fullDate = `${data.date}T${data.time}:00.000Z`;
+    }
+    
     const newEvt = { 
       id, 
       ...data,
+      date: fullDate, // Use combined date/time
       createdBy: user?.uid || 'anonymous',
-      createdAt: Date.now()
+      createdAt: Date.now(),
+      category: 'community',
+      status: 'published',
     } as any;
     
     // Add to UI immediately
@@ -267,16 +277,20 @@ export default function EventsScreen() {
           id: newEvt.id,
           title: newEvt.title,
           description: newEvt.description,
-          date: new Date(newEvt.date),
+          date: new Date(fullDate),
           location: newEvt.location,
           isVirtual: newEvt.isVirtual,
           asl: newEvt.asl,
           captions: newEvt.captions,
           stepFree: newEvt.stepFree,
           sensorySpace: newEvt.sensorySpace,
+          energyLevel: newEvt.energyLevel,
+          requiresRSVP: newEvt.requiresRSVP,
+          rsvpDetails: newEvt.rsvpDetails,
           createdBy: user.uid,
           createdAt: newEvt.createdAt,
           status: 'published',
+          category: 'community',
         }, user.uid);
         
         if (syncSuccess) {
@@ -761,33 +775,63 @@ function createStyles(
   });
 }
 
-function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; description: string; date: string; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean; }) => void; palette: any; }) {
+function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; description: string; date: string; time?: string; duration?: number; location?: string; isVirtual?: boolean; asl?: boolean; captions?: boolean; stepFree?: boolean; sensorySpace?: boolean; energyLevel?: string; requiresRSVP?: boolean; rsvpDetails?: string; }) => void; palette: any; }) {
   const { t } = useTranslation();
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [date, setDate] = React.useState("");
+  const [time, setTime] = React.useState("");
+  const [duration, setDuration] = React.useState("");
   const [location, setLocation] = React.useState("");
   const [isVirtual, setIsVirtual] = React.useState(false);
   const [asl, setAsl] = React.useState(false);
   const [captions, setCaptions] = React.useState(false);
   const [stepFree, setStepFree] = React.useState(false);
   const [sensorySpace, setSensory] = React.useState(false);
+  const [energyLevel, setEnergyLevel] = React.useState<string>('medium'); // low, medium, high
+  const [requiresRSVP, setRequiresRSVP] = React.useState(false);
+  const [rsvpDetails, setRsvpDetails] = React.useState("");
   const valid = title.trim().length>2 && description.trim().length>4 && date.trim().length>3;
   const fieldStyle = { borderWidth:1, borderColor: palette.muted, borderRadius:8, paddingHorizontal:10, paddingVertical:8, color: palette.text, marginBottom:6 };
   return (
     <View style={{ marginBottom:12, alignSelf:'stretch', maxHeight: 500 }}>
       <ScrollView scrollEnabled={true} nestedScrollEnabled={true}>
-        <TextInput placeholder={t('eventsFeature.form.titlePlaceholder','Title')} placeholderTextColor={palette.muted} value={title} onChangeText={setTitle} style={fieldStyle} />
+        <TextInput placeholder={t('eventsFeature.form.titlePlaceholder','Event Name')} placeholderTextColor={palette.muted} value={title} onChangeText={setTitle} style={fieldStyle} />
         <TextInput placeholder={t('eventsFeature.form.descriptionPlaceholder','Description')} placeholderTextColor={palette.muted} value={description} onChangeText={setDescription} style={[fieldStyle,{ minHeight:60 }]} multiline={true} />
-        <TextInput placeholder={t('eventsFeature.form.datePlaceholder','Date (YYYY-MM-DD HH:MM)')} placeholderTextColor={palette.muted} value={date} onChangeText={setDate} style={fieldStyle} />
-        <TextInput placeholder={t('eventsFeature.form.locationPlaceholder','Location (optional)')} placeholderTextColor={palette.muted} value={location} onChangeText={setLocation} style={fieldStyle} />
+        <TextInput placeholder={t('eventsFeature.form.datePlaceholder','Date (YYYY-MM-DD)')} placeholderTextColor={palette.muted} value={date} onChangeText={setDate} style={fieldStyle} />
+        <TextInput placeholder={t('eventsFeature.form.timePlaceholder','Time (HH:MM)')} placeholderTextColor={palette.muted} value={time} onChangeText={setTime} style={fieldStyle} />
+        <TextInput placeholder={t('eventsFeature.form.durationPlaceholder','Duration (minutes)')} placeholderTextColor={palette.muted} value={duration} onChangeText={setDuration} style={fieldStyle} keyboardType="numeric" />
+        <TextInput placeholder={t('eventsFeature.form.locationPlaceholder','Location (physical/virtual address)')} placeholderTextColor={palette.muted} value={location} onChangeText={setLocation} style={fieldStyle} />
+        
+        <Text style={{ color: palette.text, fontSize: 12, fontWeight: '600', marginTop: 8, marginBottom: 4 }}>Accessibility Features:</Text>
         <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom:8 }}>
           <ToggleChip label={t('eventsFeature.chips.virtual','Virtual')} active={isVirtual} onToggle={()=>setIsVirtual(v=>!v)} palette={palette} />
           <ToggleChip label={t('eventsFeature.chips.asl','ASL')} active={asl} onToggle={()=>setAsl(v=>!v)} palette={palette} />
           <ToggleChip label={t('eventsFeature.chips.captions','Captions')} active={captions} onToggle={()=>setCaptions(v=>!v)} palette={palette} />
           <ToggleChip label={t('eventsFeature.chips.stepFree','Step-free')} active={stepFree} onToggle={()=>setStepFree(v=>!v)} palette={palette} />
-          <ToggleChip label={t('eventsFeature.chips.sensory','Sensory')} active={sensorySpace} onToggle={()=>setSensory(v=>!v)} palette={palette} />
+          <ToggleChip label={t('eventsFeature.chips.sensory','Sensory Space')} active={sensorySpace} onToggle={()=>setSensory(v=>!v)} palette={palette} />
         </GapView>
+        
+        <Text style={{ color: palette.text, fontSize: 12, fontWeight: '600', marginTop: 8, marginBottom: 4 }}>Energy Cost Level:</Text>
+        <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom:8 }}>
+          <ToggleChip label="Low" active={energyLevel==='low'} onToggle={()=>setEnergyLevel('low')} palette={palette} />
+          <ToggleChip label="Medium" active={energyLevel==='medium'} onToggle={()=>setEnergyLevel('medium')} palette={palette} />
+          <ToggleChip label="High" active={energyLevel==='high'} onToggle={()=>setEnergyLevel('high')} palette={palette} />
+        </GapView>
+        
+        <Text style={{ color: palette.text, fontSize: 12, fontWeight: '600', marginTop: 8, marginBottom: 4 }}>RSVP/Registration:</Text>
+        <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginBottom:8 }}>
+          <ToggleChip label="Requires RSVP" active={requiresRSVP} onToggle={()=>setRequiresRSVP(v=>!v)} palette={palette} />
+        </GapView>
+        {requiresRSVP && (
+          <TextInput 
+            placeholder={t('eventsFeature.form.rsvpPlaceholder','RSVP link or email (optional)')} 
+            placeholderTextColor={palette.muted} 
+            value={rsvpDetails} 
+            onChangeText={setRsvpDetails} 
+            style={fieldStyle} 
+          />
+        )}
         <A11yPressable
           accessibilityRole="button"
           accessibilityLabel={t('eventsFeature.createToggleOpen','Create Event')}
@@ -799,16 +843,36 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
               );
               return;
             }
-            onCreate({ title: title.trim(), description: description.trim(), date: date.trim(), location: location.trim()||undefined, isVirtual, asl, captions, stepFree, sensorySpace }); 
+            onCreate({ 
+              title: title.trim(), 
+              description: description.trim(), 
+              date: date.trim(), 
+              time: time.trim() || undefined,
+              duration: duration ? parseInt(duration, 10) : undefined,
+              location: location.trim() || undefined, 
+              isVirtual, 
+              asl, 
+              captions, 
+              stepFree, 
+              sensorySpace,
+              energyLevel,
+              requiresRSVP,
+              rsvpDetails: requiresRSVP ? rsvpDetails.trim() : undefined
+            }); 
             setTitle(''); 
             setDescription(''); 
             setDate(''); 
+            setTime('');
+            setDuration('');
             setLocation(''); 
             setIsVirtual(false); 
             setAsl(false); 
             setCaptions(false); 
             setStepFree(false); 
             setSensory(false);
+            setEnergyLevel('medium');
+            setRequiresRSVP(false);
+            setRsvpDetails('');
           }}
           style={{ backgroundColor: valid ? palette.primary : palette.muted, paddingVertical:10, borderRadius:8, alignItems:'center', minHeight: 44, marginBottom: 8 }}
         >
