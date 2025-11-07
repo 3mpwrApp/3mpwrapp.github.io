@@ -47,7 +47,9 @@ export interface FirestoreSyncEvent {
   stepFree?: boolean;
   sensorySpace?: boolean;
   energyLevel?: 'low' | 'medium' | 'high';
-  rsvpRequired?: string;
+  requiresRSVP?: boolean;
+  rsvpDetails?: string;
+  category?: string;
   tags?: string[];
   organizer?: string;
   imageUrl?: string;
@@ -90,7 +92,8 @@ export async function syncEventToProduction(event: FirestoreSyncEvent, uid: stri
       stepFree: event.stepFree || false,
       sensorySpace: event.sensorySpace || false,
       energyLevel: event.energyLevel || 'medium',
-      rsvpRequired: event.rsvpRequired || '',
+      requiresRSVP: event.requiresRSVP || false,
+      rsvpDetails: event.rsvpDetails || '',
       tags: event.tags || [],
       organizer: event.organizer || '3mpwrApp',
       imageUrl: event.imageUrl || '',
