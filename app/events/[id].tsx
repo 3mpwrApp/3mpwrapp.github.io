@@ -121,8 +121,14 @@ export default function EventDetail() {
 
   const handleSaveEdit = async () => {
     try {
+      const isLocalEvent = id?.startsWith('evt-');
+      
       // First update in old Firestore collection (for backward compatibility)
-      const fsSuccess = await fsUpdateEvent(id, editData);
+      // Skip old collection for locally-created events (they don't exist there)
+      let fsSuccess = true;
+      if (!isLocalEvent) {
+        fsSuccess = await fsUpdateEvent(id, editData);
+      }
       
       // Also sync to both production and preview collections
       let prodSuccess = false;
@@ -164,7 +170,7 @@ export default function EventDetail() {
       }
       
       // Update local AsyncStorage cache if this is a locally-created event
-      if (id?.startsWith('evt-')) {
+      if (isLocalEvent) {
         try {
           const cached = await AsyncStorage.getItem('events:local:v1');
           if (cached) {
@@ -173,9 +179,12 @@ export default function EventDetail() {
               e.id === id ? { ...e, ...editData } : e
             );
             await AsyncStorage.setItem('events:local:v1', JSON.stringify(updatedLocal));
+            // For local events, AsyncStorage update success counts as fsSuccess
+            fsSuccess = true;
           }
         } catch (err) {
           console.warn('Failed to update local cache:', err);
+          fsSuccess = false;
         }
       }
       

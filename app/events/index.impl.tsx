@@ -691,8 +691,8 @@ function createStyles(
       marginBottom: 2,
     },
     calendarContainer: {
-      maxHeight: 160, // Constrain calendar to ~5 weeks height (32px * 5 + margins)
-      marginBottom: 8,
+      maxHeight: 220, // Increased to accommodate 6-week months (32px * 6 + margins)
+      marginBottom: 20, // Increased spacing before subscription card
     },
     weekHdr: {
       width: 32,
