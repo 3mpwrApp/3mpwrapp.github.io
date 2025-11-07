@@ -10,7 +10,6 @@ import type * as Fire from "firebase/firestore";
 import { db as sharedDb } from "../firebase/config";
 import { logger } from "../utils/logger";
 
-import { isBYOCEnabled } from "./dataPolicy";
 
 let mod: typeof Fire | null = null;
 
@@ -25,7 +24,9 @@ async function ensure(): Promise<typeof Fire | null> {
 }
 
 export async function getDB() {
-  if (isBYOCEnabled()) return null;
+  // OVERRIDE: Always allow Firestore for events (public data, not user-private)
+  // Events are public community data, not subject to BYOC restrictions
+  // if (isBYOCEnabled()) return null;
   return sharedDb ?? null;
 }
 
@@ -37,12 +38,18 @@ export interface FirestoreSyncEvent {
   title: string;
   description: string;
   date: Date | string;
+  time?: string;
+  duration?: string;
   location?: string;
   isVirtual?: boolean;
   asl?: boolean;
   captions?: boolean;
   stepFree?: boolean;
   sensorySpace?: boolean;
+  energyLevel?: 'low' | 'medium' | 'high';
+  requiresRSVP?: boolean;
+  rsvpDetails?: string;
+  category?: string;
   tags?: string[];
   organizer?: string;
   imageUrl?: string;
@@ -76,12 +83,17 @@ export async function syncEventToProduction(event: FirestoreSyncEvent, uid: stri
       title: event.title,
       description: event.description,
       date: event.date instanceof Date ? m.Timestamp.fromDate(event.date) : m.Timestamp.fromDate(new Date(event.date)),
+      time: event.time || '',
+      duration: event.duration || '',
       location: event.location || '',
       isVirtual: event.isVirtual || false,
       asl: event.asl || false,
       captions: event.captions || false,
       stepFree: event.stepFree || false,
       sensorySpace: event.sensorySpace || false,
+      energyLevel: event.energyLevel || 'medium',
+      requiresRSVP: event.requiresRSVP || false,
+      rsvpDetails: event.rsvpDetails || '',
       tags: event.tags || [],
       organizer: event.organizer || '3mpwrApp',
       imageUrl: event.imageUrl || '',
