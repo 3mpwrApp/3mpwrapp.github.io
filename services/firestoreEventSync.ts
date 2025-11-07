@@ -112,11 +112,11 @@ export async function syncEventToProduction(event: FirestoreSyncEvent, uid: stri
  * Update event in events_production or events_preview collection
  * @param id Event ID
  * @param updates Partial event data to update
- * @param uid User ID (must match creator or be admin)
+ * @param _uid User ID (must match creator or be admin - validated by Firestore rules)
  * @param collection Which collection to update ('events_production' or 'events_preview')
  * @returns True if successful
  */
-export async function updateEventInProduction(id: string, updates: Partial<FirestoreSyncEvent>, uid: string, collection: 'events_production' | 'events_preview' = 'events_production'): Promise<boolean> {
+export async function updateEventInProduction(id: string, updates: Partial<FirestoreSyncEvent>, _uid: string, collection: 'events_production' | 'events_preview' = 'events_production'): Promise<boolean> {
   const m = await ensure();
   const db = await getDB();
   if (!m || !db) {
