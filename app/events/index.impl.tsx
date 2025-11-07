@@ -2,14 +2,15 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Link, useFocusEffect, useRouter } from "expo-router";
 import React from "react";
 import {
-  Alert,
-  FlatList,
-  RefreshControl,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View
+    Alert,
+    FlatList,
+    RefreshControl,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
@@ -28,13 +29,13 @@ import { generateDisabilityObservances } from "../../data/disability-observances
 import { events as localEvents } from "../../data/events";
 import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
 import {
-  generateCanadianHolidays,
-  generateProvincialHolidays,
+    generateCanadianHolidays,
+    generateProvincialHolidays,
 } from "../../data/holidays-ca";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
@@ -364,9 +365,55 @@ export default function EventsScreen() {
           </A11yPressable>
         </GapView>
 
+        {/* DEBUG: Extract events from AsyncStorage */}
+        <TouchableOpacity
+          style={{ padding: 12, backgroundColor: palette.error || palette.primary, borderRadius: 8, marginBottom: 12 }}
+          onPress={async () => {
+            try {
+              const data = await AsyncStorage.getItem('events:local:v1');
+              if (!data) {
+                Alert.alert('No Events', 'No local events found in AsyncStorage');
+                return;
+              }
+              const events = JSON.parse(data);
+              // eslint-disable-next-line no-console
+              console.log('============================================');
+              // eslint-disable-next-line no-console
+              console.log('YOUR 3 TBDIWSG EVENTS FROM ASYNCSTORAGE:');
+              // eslint-disable-next-line no-console
+              console.log('============================================');
+              // eslint-disable-next-line no-console
+              console.log(JSON.stringify(events, null, 2));
+              // eslint-disable-next-line no-console
+              console.log('============================================');
+              // eslint-disable-next-line no-console
+              console.log(`Total events: ${events.length}`);
+              
+              const summary = events.map((e: any, i: number) => 
+                `Event ${i + 1}: ${e.title}\nDate: ${e.date}\nLocation: ${e.location || 'N/A'}\nCreatedBy: ${e.createdBy || 'N/A'}`
+              ).join('\n\n');
+              
+              Alert.alert(
+                `Found ${events.length} Events in AsyncStorage`,
+                summary + '\n\n📋 Full details logged to console!',
+                [
+                  { text: 'OK' }
+                ]
+              );
+            } catch (err) {
+              console.error('Failed to extract events:', err);
+              Alert.alert('Error', 'Failed to extract events');
+            }
+          }}
+        >
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: palette.onPrimary, textAlign: 'center' }}>
+            🔍 DEBUG: Extract My 3 Events from AsyncStorage
+          </Text>
+        </TouchableOpacity>
+
         <A11yPressable
           accessibilityRole="button"
-          accessibilityLabel={showCreate ? t('a11y.toggleCreateEventFormClose') : t('a11y.toggleCreateEventFormOpen')}
+          accessibilityLabel={showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}
           onPress={() => setShowCreate(v => !v)}
           style={{ alignSelf:'flex-start', marginBottom: 8, paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.primary }}
         >
