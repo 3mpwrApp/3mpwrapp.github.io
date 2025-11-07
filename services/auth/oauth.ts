@@ -54,7 +54,12 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
       scheme: 'empowrapp'
     });
     
+    logger.log('[OAuth] ====== GOOGLE SIGN-IN DEBUG ======');
+    logger.log('[OAuth] Client ID:', clientId);
     logger.log('[OAuth] Redirect URI:', redirectUri);
+    logger.log('[OAuth] Expected: https://auth.expo.io/@3mpwrapp/empowrapp');
+    logger.log('[OAuth] Match:', redirectUri === 'https://auth.expo.io/@3mpwrapp/empowrapp');
+    logger.log('[OAuth] =====================================');
     
     const request = new AuthSession.AuthRequest({
       clientId,
@@ -65,13 +70,28 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
     
     const result = await request.promptAsync(discovery as any);
     
-    logger.log('[OAuth] Google Sign-In result:', { type: result.type });
+    logger.log('[OAuth] ====== GOOGLE RESPONSE ======');
+    logger.log('[OAuth] Result type:', result.type);
+    if (result.type === 'error') {
+      logger.error('[OAuth] Error code:', result.error?.code);
+      logger.error('[OAuth] Error message:', result.error?.message);
+      logger.error('[OAuth] Full error:', JSON.stringify(result.error, null, 2));
+    } else if (result.type === 'success') {
+      logger.log('[OAuth] Success! Got params:', Object.keys(result.params || {}));
+    }
+    logger.log('[OAuth] ==================================');
     
     // Check if user completed the flow
     if (result.type !== 'success') {
       if (result.type === 'error') {
         logger.error('[OAuth] Google Sign-In error:', result.error);
-        Alert.alert('Sign-In Error', result.error?.message || 'An error occurred during sign-in');
+        
+        // Show detailed error to help debug
+        const errorDetails = result.error?.message || result.error?.code || 'Unknown error';
+        Alert.alert(
+          'Sign-In Error', 
+          `${errorDetails}\n\nRedirect URI: ${redirectUri}\n\nMake sure this exact URI is added to Google Cloud Console.`
+        );
       }
       return false; // User cancelled or error occurred
     }
