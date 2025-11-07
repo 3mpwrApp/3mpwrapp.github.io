@@ -3,6 +3,7 @@ import { Alert, Platform } from 'react-native';
 
 // internal modules
 import { auth } from '../../firebase/config';
+import { logger } from '../../utils/logger';
 
 export async function signInWithGoogleAsync(): Promise<boolean> {
   try {
@@ -25,7 +26,8 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
       return false;
     }
     
-    console.log('Google Sign-In config:', { 
+    // Log configuration for debugging
+    logger.log('[OAuth] Google Sign-In config', { 
       platform: Platform.OS,
       usingWebClientId: !!webClientId,
       clientIdPrefix: clientId.substring(0, 20) + '...'
@@ -50,7 +52,7 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
       scheme: 'empowrapp'
     });
     
-    console.log('OAuth redirect URI:', redirectUri);
+    logger.log('[OAuth] Redirect URI:', redirectUri);
     
     const request = new AuthSession.AuthRequest({
       clientId,
@@ -61,12 +63,12 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
     
     const result = await request.promptAsync(discovery as any);
     
-    console.log('Google Sign-In result:', { type: result.type });
+    logger.log('[OAuth] Google Sign-In result:', { type: result.type });
     
     // Check if user completed the flow
     if (result.type !== 'success') {
       if (result.type === 'error') {
-        console.error('Google Sign-In error:', result.error);
+        logger.error('[OAuth] Google Sign-In error:', result.error);
         Alert.alert('Sign-In Error', result.error?.message || 'An error occurred during sign-in');
       }
       return false; // User cancelled or error occurred
@@ -80,10 +82,10 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
     const { GoogleAuthProvider, signInWithCredential } = await import('firebase/auth');
     const credential: AuthCredential = GoogleAuthProvider.credential(result.params.id_token);
     await signInWithCredential(auth, credential);
-    console.log('Google Sign-In successful!');
+    logger.log('[OAuth] Google Sign-In successful!');
     return true;
   } catch (e: any) {
-    console.error('Google Sign-In exception:', e);
+    logger.error('[OAuth] Google Sign-In exception:', e);
     const errorMessage = e?.message || 'Could not sign in with Google';
     
     // Provide more helpful error messages
