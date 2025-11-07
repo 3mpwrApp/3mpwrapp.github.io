@@ -379,49 +379,128 @@ export default function EventsScreen() {
           </A11yPressable>
         </GapView>
 
-        {/* DEBUG: Extract events from AsyncStorage */}
+        {/* Sync Local Events to Website */}
         <TouchableOpacity
-          style={{ padding: 12, backgroundColor: palette.error || palette.primary, borderRadius: 8, marginBottom: 12 }}
+          style={{ padding: 12, backgroundColor: palette.primary, borderRadius: 8, marginBottom: 12, borderWidth: 2, borderColor: palette.primary }}
           onPress={async () => {
+            if (!user?.uid) {
+              Alert.alert(
+                'Sign In Required',
+                'Please sign in to sync your events to the website.',
+                [{ text: 'OK' }]
+              );
+              return;
+            }
+
             try {
+              // Get all local events
               const data = await AsyncStorage.getItem('events:local:v1');
               if (!data) {
-                Alert.alert('No Events', 'No local events found in AsyncStorage');
+                Alert.alert('No Events', 'No local events found to sync.');
                 return;
               }
-              const events = JSON.parse(data);
-              // eslint-disable-next-line no-console
-              console.log('============================================');
-              // eslint-disable-next-line no-console
-              console.log('YOUR 3 TBDIWSG EVENTS FROM ASYNCSTORAGE:');
-              // eslint-disable-next-line no-console
-              console.log('============================================');
-              // eslint-disable-next-line no-console
-              console.log(JSON.stringify(events, null, 2));
-              // eslint-disable-next-line no-console
-              console.log('============================================');
-              // eslint-disable-next-line no-console
-              console.log(`Total events: ${events.length}`);
               
-              const summary = events.map((e: any, i: number) => 
-                `Event ${i + 1}: ${e.title}\nDate: ${e.date}\nLocation: ${e.location || 'N/A'}\nCreatedBy: ${e.createdBy || 'N/A'}`
-              ).join('\n\n');
-              
+              const localEvents = JSON.parse(data);
+              if (localEvents.length === 0) {
+                Alert.alert('No Events', 'No local events found to sync.');
+                return;
+              }
+
+              // Show progress
               Alert.alert(
-                `Found ${events.length} Events in AsyncStorage`,
-                summary + '\n\n📋 Full details logged to console!',
-                [
-                  { text: 'OK' }
-                ]
+                '⏳ Syncing...',
+                `Found ${localEvents.length} event(s). Syncing to 3mpwr website...`,
+                [],
+                { cancelable: false }
               );
+
+              // Check if Firestore sync is available
+              const isSyncAvailable = await isFirestoreSyncAvailable();
+              if (!isSyncAvailable) {
+                Alert.alert(
+                  'Sync Unavailable',
+                  'Cloud sync is currently unavailable. Please try again later.',
+                  [{ text: 'OK' }]
+                );
+                return;
+              }
+
+              // Sync each event to Firestore production
+              let successCount = 0;
+              let failCount = 0;
+
+              for (const evt of localEvents) {
+                try {
+                  const syncSuccess = await syncEventToProduction({
+                    id: evt.id,
+                    title: evt.title,
+                    description: evt.description,
+                    date: new Date(evt.date),
+                    time: evt.time,
+                    duration: evt.duration,
+                    location: evt.location,
+                    isVirtual: evt.isVirtual,
+                    asl: evt.asl,
+                    captions: evt.captions,
+                    stepFree: evt.stepFree,
+                    sensorySpace: evt.sensorySpace,
+                    energyLevel: evt.energyLevel,
+                    requiresRSVP: evt.requiresRSVP,
+                    rsvpDetails: evt.rsvpDetails,
+                    createdBy: user.uid,
+                    createdAt: evt.createdAt || Date.now(),
+                    status: 'published',
+                    category: 'community',
+                  }, user.uid);
+
+                  if (syncSuccess) {
+                    successCount++;
+                  } else {
+                    failCount++;
+                  }
+                } catch (err) {
+                  console.error('[Events] Failed to sync event:', evt.id, err);
+                  failCount++;
+                }
+              }
+
+              // Show results
+              if (successCount === localEvents.length) {
+                Alert.alert(
+                  '✅ Sync Complete!',
+                  `All ${successCount} event(s) are now live on the 3mpwr website!\n\n` +
+                  `• Synced to Firebase ✓\n` +
+                  `• Cloudflare Worker will refresh in 5 minutes\n` +
+                  `• Events visible at 3mpwrapp.pages.dev/events/`,
+                  [{ text: 'Great!' }]
+                );
+                trackEvent(ANALYTICS_EVENTS.EVENTS_CREATE, { bulkSync: true, count: successCount });
+              } else if (successCount > 0) {
+                Alert.alert(
+                  '⚠️ Partial Sync',
+                  `Synced ${successCount} of ${localEvents.length} event(s).\n${failCount} failed to sync.`,
+                  [{ text: 'OK' }]
+                );
+              } else {
+                Alert.alert(
+                  '❌ Sync Failed',
+                  'Could not sync events to the website. Please try again later.',
+                  [{ text: 'OK' }]
+                );
+              }
+
             } catch (err) {
-              console.error('Failed to extract events:', err);
-              Alert.alert('Error', 'Failed to extract events');
+              console.error('[Events] Bulk sync failed:', err);
+              Alert.alert(
+                'Error',
+                'Failed to sync events. Please try again.',
+                [{ text: 'OK' }]
+              );
             }
           }}
         >
           <Text style={{ fontSize: 16, fontWeight: 'bold', color: palette.onPrimary, textAlign: 'center' }}>
-            🔍 DEBUG: Extract My 3 Events from AsyncStorage
+            🌐 Sync Events to 3mpwr Website
           </Text>
         </TouchableOpacity>
 
