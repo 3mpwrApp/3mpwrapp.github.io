@@ -1,0 +1,17 @@
+{
+  "name": "empowrapp-campaigns-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for syncing 3mpwr App campaigns to website",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "keywords": ["cloudflare", "worker", "campaigns", "sync"],
+  "author": "3mpwrApp",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
