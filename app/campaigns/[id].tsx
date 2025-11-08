@@ -1,16 +1,16 @@
 import { Stack, router, useLocalSearchParams } from "expo-router";
 import { useEffect, useMemo, useState } from 'react';
 import {
-  ActivityIndicator,
-  Alert,
-  Modal,
-  Pressable,
-  ScrollView,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  View
+    ActivityIndicator,
+    Alert,
+    Modal,
+    Pressable,
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    View
 } from "react-native";
 
 import A11yPressable from "../../components/A11yPressable";
@@ -22,8 +22,8 @@ import { campaigns } from "../../data/campaigns";
 import { useTranslation } from "../../i18n";
 import { fsDeleteCampaign, fsGetCampaign, fsJoinCampaign, fsLeaveCampaign, fsUpdateCampaign } from "../../services/firestore";
 import {
-  CampaignsLocalProvider,
-  useCampaignsLocal,
+    CampaignsLocalProvider,
+    useCampaignsLocal,
 } from "../../store/campaignsLocal";
 import { useFavorites } from "../../store/favorites";
 import { type Palette } from "../../theme/colors";
@@ -146,13 +146,13 @@ function CampaignDetailInner() {
 
   const shareToSocials = async () => {
     if (!campaign) return;
-    const message = `📢 ${campaign.title}\n\n${campaign.summary || ''}\n\n🎯 ${campaign.goal || 'Join us!'}\n\n✨ Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/${id}`;
+    const message = `📢 ${campaign.title}\n\n${campaign.summary || ''}\n\n🎯 ${campaign.goal || 'Join us!'}\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/`;
     
     try {
       await Share.share({
         message,
         title: campaign.title,
-        url: `https://3mpwrapp.pages.dev/campaigns/${id}`,
+        url: `https://3mpwrapp.pages.dev/campaigns/`,
       });
       try { trackEvent("campaign_share", { id: campaign.id }); } catch {}
     } catch (error) {

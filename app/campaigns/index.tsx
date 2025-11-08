@@ -259,7 +259,7 @@ function ScreenInner() {
                   onPress={async () => {
                     try {
                       await Share.share({
-                        message: `📣 ${item.title}\n\n${item.summary}\n\nJoin this campaign: https://3mpwrapp.pages.dev/campaigns/${item.id}`,
+                        message: `📣 ${item.title}\n\n${item.summary}\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/`,
                         title: item.title,
                       });
                     } catch {}
