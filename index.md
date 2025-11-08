@@ -147,6 +147,216 @@ We're building a safe space to connect, share experiences, and advocate for real
 
 ---
 
+<!-- Daily Events Banner -->
+<div id="daily-events-banner" class="gradient-banner" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <div id="events-banner-content" style="min-height: 100px;">
+    <p style="margin: 0; font-size: 1.2rem; opacity: 0.9;">⏳ Loading today's events...</p>
+  </div>
+</div>
+
+<script>
+/**
+ * ========================================
+ * DAILY EVENTS BANNER - HOMEPAGE
+ * ========================================
+ * Shows today's events, or next upcoming if none today
+ * Updates automatically daily
+ * ========================================
+ */
+
+async function loadDailyEvents() {
+  try {
+    const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production');
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    
+    const data = await response.json();
+    let events = data.events || [];
+    
+    // Filter out test events
+    events = events.filter(event => {
+      if (event.id === 'Yk1p4IJ66gGxkI0F8mCc' || event.id === 'bYfSpZdmLv2o5Pfijv4V') {
+        return false;
+      }
+      return true;
+    });
+    
+    // Get today's date (start and end of day in local timezone)
+    const now = new Date();
+    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
+    const todayEnd = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+    
+    // Filter events for today
+    let todayEvents = events.filter(event => {
+      const eventDate = new Date(event.date);
+      return eventDate >= todayStart && eventDate <= todayEnd;
+    });
+    
+    // If no events today, find next upcoming event(s)
+    let isToday = true;
+    if (todayEvents.length === 0) {
+      isToday = false;
+      // Get future events only
+      const futureEvents = events.filter(event => new Date(event.date) > todayEnd);
+      
+      if (futureEvents.length === 0) {
+        displayNoEvents();
+        return;
+      }
+      
+      // Sort by date
+      futureEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+      
+      // Get the date of the next event
+      const nextEventDate = new Date(futureEvents[0].date);
+      const nextDayStart = new Date(nextEventDate.getFullYear(), nextEventDate.getMonth(), nextEventDate.getDate(), 0, 0, 0);
+      const nextDayEnd = new Date(nextEventDate.getFullYear(), nextEventDate.getMonth(), nextEventDate.getDate(), 23, 59, 59);
+      
+      // Get all events on that day
+      todayEvents = futureEvents.filter(event => {
+        const eventDate = new Date(event.date);
+        return eventDate >= nextDayStart && eventDate <= nextDayEnd;
+      });
+    }
+    
+    displayEvents(todayEvents, isToday);
+    
+  } catch (error) {
+    console.error('❌ Failed to load daily events:', error);
+    displayError();
+  }
+}
+
+function displayEvents(events, isToday) {
+  const container = document.getElementById('events-banner-content');
+  const eventDate = new Date(events[0].date);
+  const dateStr = isToday ? 'TODAY' : eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+  
+  const eventCount = events.length;
+  const countText = eventCount === 1 ? '1 Event' : `${eventCount} Events`;
+  
+  let html = `
+    <h2 style="margin: 0 0 1rem; font-size: 2rem; color: white;">
+      🔥 ${dateStr}: ${countText}
+    </h2>
+  `;
+  
+  // Display all events for the day
+  events.forEach(event => {
+    const eventTime = new Date(event.date).toLocaleTimeString('en-US', { 
+      hour: 'numeric', 
+      minute: '2-digit',
+      hour12: true 
+    });
+    
+    // Determine energy cost
+    let energyIndicator = '';
+    if (event.isVirtual) {
+      energyIndicator = '🔋🔋'; // Virtual = Light
+    } else if (event.energyCost) {
+      // Use actual energy cost if provided
+      const costMap = {
+        'Very Light': '🔋',
+        'Light': '🔋🔋',
+        'Medium': '🔋🔋🔋',
+        'High': '🔋🔋🔋🔋',
+        'Very High': '🔋🔋🔋🔋🔋'
+      };
+      energyIndicator = costMap[event.energyCost] || '🔋🔋🔋';
+    } else {
+      energyIndicator = '🔋🔋🔋'; // Default to Medium for in-person
+    }
+    
+    // Build accessibility badges
+    let badges = [];
+    if (event.isVirtual) badges.push('🌐 Virtual');
+    if (event.location && !event.isVirtual) badges.push(`📍 ${event.location}`);
+    if (event.asl) badges.push('🤟 ASL');
+    if (event.captions) badges.push('📝 Captions');
+    if (event.stepFree) badges.push('♿ Accessible');
+    
+    const badgeStr = badges.slice(0, 3).join(' • '); // Show first 3 badges
+    
+    html += `
+      <a href="/events/" style="text-decoration: none; color: inherit; display: block;">
+        <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; backdrop-filter: blur(10px); text-align: left; cursor: pointer; transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.2)'">
+          <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 1rem;">
+            <div style="flex: 1; min-width: 200px;">
+              <p style="margin: 0 0 0.5rem; font-size: 1.3rem; font-weight: bold;">
+                ${eventTime} - ${event.title}
+              </p>
+              <p style="margin: 0 0 0.5rem; font-size: 0.95rem; opacity: 0.95;">
+                ${event.description.substring(0, 120)}${event.description.length > 120 ? '...' : ''}
+              </p>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">
+                ${badgeStr}
+              </p>
+            </div>
+            <div style="text-align: right;">
+              <p style="margin: 0 0 0.5rem; font-size: 1.2rem;" title="Energy Cost">
+                ${energyIndicator}
+              </p>
+              ${event.rsvpLink ? `<span onclick="event.preventDefault(); event.stopPropagation(); window.open('${event.rsvpLink}', '_blank');" style="display: inline-block; margin-top: 0.5rem; padding: 8px 16px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem; cursor: pointer;">📝 RSVP</span>` : ''}
+            </div>
+          </div>
+        </div>
+      </a>
+    `;
+  });
+  
+  html += `
+    <div style="margin-top: 1.5rem;">
+      <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+        📅 View Full Calendar
+      </a>
+    </div>
+  `;
+  
+  container.innerHTML = html;
+}
+
+function displayNoEvents() {
+  const container = document.getElementById('events-banner-content');
+  container.innerHTML = `
+    <h2 style="margin: 0 0 1rem; font-size: 2rem; color: white;">
+      📅 No Upcoming Events
+    </h2>
+    <p style="margin: 0 0 1.5rem; font-size: 1.1rem; opacity: 0.95;">
+      Check back soon! Community members can create events anytime.
+    </p>
+    <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+      📅 Go to Events Calendar
+    </a>
+  `;
+}
+
+function displayError() {
+  const container = document.getElementById('events-banner-content');
+  container.innerHTML = `
+    <h2 style="margin: 0 0 1rem; font-size: 1.5rem; color: white;">
+      ⚠️ Unable to Load Events
+    </h2>
+    <p style="margin: 0 0 1.5rem; font-size: 1rem; opacity: 0.95;">
+      Connection issue. Please visit the events page directly.
+    </p>
+    <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+      📅 View Events Calendar
+    </a>
+  `;
+}
+
+// Load on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadDailyEvents);
+} else {
+  loadDailyEvents();
+}
+</script>
+
+---
+
 ## <span aria-hidden="true">✨</span> Built Different—By Design
 
 <div class="gradient-banner-pink">
