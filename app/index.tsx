@@ -1,6 +1,6 @@
 import * as Linking from 'expo-linking';
 import { useRouter, useSegments } from 'expo-router';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { ActivityIndicator, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
@@ -13,7 +13,6 @@ export default function Index() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const segments = useSegments();
-  const hasNavigated = useRef(false);
 
   // Store the deep link path for resuming after login
   useEffect(() => {
@@ -84,7 +83,6 @@ export default function Index() {
       inAuthFlow, 
       inTabsFlow,
       segments: segments.join('/'),
-      hasNavigated: hasNavigated.current,
     });
     
     // Determine where user should be based on auth state
@@ -93,44 +91,29 @@ export default function Index() {
     
     // If user is authenticated but in auth flow, navigate to tabs (HOME)
     if (shouldBeInTabs && inAuthFlow) {
-      if (!hasNavigated.current) {
-        logger.log('[Index] ✅ User logged in - navigating to home/(tabs)');
-        hasNavigated.current = true;
-        router.replace('/(tabs)');
-      }
+      logger.log('[Index] ✅ User logged in - navigating to home/(tabs)');
+      router.replace('/(tabs)');
       return;
     }
     
     // If user is not authenticated but in tabs flow, navigate to login
     if (shouldBeInAuth && inTabsFlow) {
-      if (!hasNavigated.current) {
-        logger.log('[Index] ❌ No user in tabs - navigating to login');
-        hasNavigated.current = true;
-        router.replace('/(auth)/signin' as any);
-      }
+      logger.log('[Index] ❌ No user in tabs - navigating to login');
+      router.replace('/(auth)/signin' as any);
       return;
     }
     
     // Initial navigation when not in any flow yet
     if (!inAuthFlow && !inTabsFlow) {
-      if (!hasNavigated.current) {
-        if (!user) {
-          logger.log('[Index] 🔄 Initial - no user, navigating to login');
-          hasNavigated.current = true;
-          router.replace('/(auth)/signin' as any);
-        } else {
-          logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
-          hasNavigated.current = true;
-          router.replace('/(tabs)');
-        }
+      if (!user) {
+        logger.log('[Index] 🔄 Initial - no user, navigating to login');
+        router.replace('/(auth)/signin' as any);
+      } else {
+        logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
+        router.replace('/(tabs)');
       }
     }
   }, [loading, user, segments, router]); // React to loading, user, segments, and router changes
-  
-  // Reset navigation flag when user changes
-  useEffect(() => {
-    hasNavigated.current = false;
-  }, [user]);
 
   // Show loading state while auth initializes or during redirect
   return (
