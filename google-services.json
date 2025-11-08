@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:733708119893:android:fdfb57d1be572fb3ee89dc",
+        "mobilesdk_app_id": "1:733708119893:android:90e91bb436a1d891ee89dc",
         "android_client_info": {
           "package_name": "com.app3mpwr.app3mpwr"
         }
@@ -15,19 +15,27 @@
       "oauth_client": [
         {
           "client_id": "733708119893-vagikeh1bu36n9boma32ic2lbfvbff08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app3mpwr.app3mpwr",
+            "certificate_hash": "79c8fc7f5953bfb6734cd7890acef43e3598a769"
+          }
+        },
+        {
+          "client_id": "733708119893-so14q85mmnrtt5ulnan3qjs2o7ll73vs.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBv4rtD3it2yoIIFpxckCEXC9haKIbVjA8"
+          "current_key": "AIzaSyAtl3dJ6Fnx-GrjhgQV04BhrnnkgtiOVB0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "733708119893-vagikeh1bu36n9boma32ic2lbfvbff08.apps.googleusercontent.com",
+              "client_id": "733708119893-so14q85mmnrtt5ulnan3qjs2o7ll73vs.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
