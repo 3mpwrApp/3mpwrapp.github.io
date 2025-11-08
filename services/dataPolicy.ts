@@ -25,16 +25,11 @@ export function isBYOCEnabled(): boolean {
 
 /**
  * Check if Firestore should be enabled for the current user.
- * In hybrid/strict BYOC mode, only the admin user gets Firestore access.
- * Regular users always use BYOC. In default mode, everyone gets Firestore.
+ * ONLY empowrapp08162025@gmail.com gets Firestore access in ALL modes.
+ * All other users use BYOC storage regardless of mode.
  */
 export function isFirestoreEnabledForUser(userEmail?: string | null): boolean {
-  // In default mode, Firestore is enabled for everyone
-  if (mode === 'default') {
-    return true;
-  }
-  
-  // In BYOC modes, only admin has Firestore access
+  // Only admin gets Firestore in ALL modes
   const ADMIN_EMAIL = 'empowrapp08162025@gmail.com';
   return userEmail === ADMIN_EMAIL;
 }
@@ -42,14 +37,10 @@ export function isFirestoreEnabledForUser(userEmail?: string | null): boolean {
 /**
  * Check if BYOC mode should be active for the current user.
  * Returns true if user should use BYOC storage instead of Firestore.
+ * Everyone except admin uses BYOC in ALL modes.
  */
 export function isBYOCEnabledForUser(userEmail?: string | null): boolean {
-  // In default mode, nobody uses BYOC
-  if (mode === 'default') {
-    return false;
-  }
-  
-  // In BYOC modes, everyone except admin uses BYOC
+  // Everyone except admin uses BYOC in ALL modes
   const ADMIN_EMAIL = 'empowrapp08162025@gmail.com';
   return userEmail !== ADMIN_EMAIL;
 }
