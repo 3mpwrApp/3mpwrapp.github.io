@@ -97,6 +97,9 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     <span id="events-sync-status">⏳ Checking for events...</span> | 
     Last updated: <span id="events-last-update">Never</span>
   </p>
+  <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #047857; font-style: italic;">
+    📅 Showing all events (including past events for reference)
+  </p>
 </div>
 
 <section id="events">
@@ -142,19 +145,29 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       }
       
       const data = await response.json();
-      const events = data.events || [];
+      let events = data.events || [];
       
-      console.log(`✅ Loaded ${events.length} events from API`);
-      console.log('📊 Events data:', events);
+      console.log(`✅ Loaded ${events.length} total events from API`);
+      
+      // Filter out test/sample events (Community Accessibility Workshop)
+      events = events.filter(event => {
+        // Remove the sample workshop events
+        if (event.id === 'Yk1p4IJ66gGxkI0F8mCc' || event.id === 'bYfSpZdmLv2o5Pfijv4V') {
+          return false;
+        }
+        return true;
+      });
+      
+      console.log(`📅 ${events.length} events (sample events filtered out)`);
+      console.log('📊 Events data:', events.slice(0, 5)); // Log first 5 for debugging
       
       const container = document.getElementById('events-list');
       
       // Update sync status - success
-      const syncStatus = document.getElementById('events-sync-status');
       if (syncStatus) {
         syncStatus.textContent = events.length > 0 
-          ? `✅ ${events.length} upcoming event${events.length !== 1 ? 's' : ''}`
-          : '📭 No upcoming events';
+          ? `✅ ${events.length} event${events.length !== 1 ? 's' : ''} (including past events for reference)`
+          : '📭 No events available';
       }
       
       // Update last update time
@@ -169,23 +182,24 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       
       if (events.length === 0) {
         container.innerHTML = `
-          <div class="warning-box">
-            <h3 style="margin-top: 0;">📅 November 2025 Events</h3>
-            <p style="font-size: 1.05rem;"><strong>Expected observances for November 2025:</strong></p>
+          <div class="info-box" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 4px solid #f59e0b;">
+            <h3 style="margin-top: 0;">📅 No Upcoming Events Right Now</h3>
+            <p style="font-size: 1.05rem;"><strong>The calendar is ready for community events!</strong></p>
+            <p>Here's what you can do:</p>
             <ul style="text-align: left; max-width: 700px; margin: 1rem auto;">
-              <li>🎖️ <strong>November 11</strong> - Remembrance Day (Canadian holiday)</li>
-              <li>🧠 <strong>All of November</strong> - National Epilepsy Awareness Month</li>
-              <li>💙 <strong>November 14</strong> - World Diabetes Day</li>
-              <li>👥 <strong>User-created events</strong> - Will appear when created in app</li>
+              <li>📲 <strong>Create an event</strong> in the 3mpwrApp - it will appear here within 5 minutes</li>
+              <li>� <strong>Subscribe to the calendar feed</strong> below to get notified when new events are added</li>
+              <li>� <strong>Check back soon</strong> - community members can create events anytime</li>
             </ul>
-            <div style="margin: 1.5rem 0; padding: 1rem; background: #fef3c7; border-radius: 8px;">
-              <p style="margin: 0; color: #92400e;"><strong>⚙️ Setup Required:</strong></p>
+            <div style="margin: 1.5rem 0; padding: 1rem; background: rgba(255, 255, 255, 0.8); border-radius: 8px;">
+              <p style="margin: 0; color: #92400e;"><strong>✅ Connection Status:</strong></p>
               <p style="margin: 0.5rem 0 0; color: #78350f;">
-                These observance events need to be added to the Firestore <code>events_production</code> collection. 
-                The Cloudflare Worker will then automatically serve them via the API.
+                ✅ API is working correctly<br>
+                📭 No events available<br>
+                ⏰ Last checked: ${new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })}
               </p>
             </div>
-            <p style="margin-top: 1rem;"><strong>🎯 Want to see these events?</strong> They need to be added to Firestore first!</p>
+            <p style="margin-top: 1rem;"><em>This page auto-refreshes every 5 minutes to show new events.</em></p>
           </div>
         `;
         return;
