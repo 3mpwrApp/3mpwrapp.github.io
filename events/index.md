@@ -243,6 +243,8 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
             
             <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
               <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'twitter')" title="Share on Twitter/X" style="padding: 8px 12px; background: #1DA1F2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">𝕏 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'bluesky')" title="Share on Bluesky" style="padding: 8px 12px; background: #0085ff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">🦋 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'mastodon')" title="Share on Mastodon" style="padding: 8px 12px; background: #6364FF; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">🐘 Share</button>
               <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'facebook')" title="Share on Facebook" style="padding: 8px 12px; background: #4267B2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">📘 Share</button>
               <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'linkedin')" title="Share on LinkedIn" style="padding: 8px 12px; background: #0077B5; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">💼 Share</button>
               <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'email')" title="Share via Email" style="padding: 8px 12px; background: #6B7280; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">📧 Email</button>
@@ -334,6 +336,17 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
         break;
+      case 'mastodon':
+        // Mastodon share - user needs to input their instance
+        const mastodonInstance = prompt('Enter your Mastodon instance (e.g., mastodon.social):', 'mastodon.social');
+        if (mastodonInstance) {
+          shareUrl = `https://${mastodonInstance}/share?text=${encodedText}`;
+        }
+        break;
+      case 'bluesky':
+        // Bluesky share
+        shareUrl = `https://bsky.app/intent/compose?text=${encodedText}`;
+        break;
       case 'email':
         const emailSubject = encodeURIComponent(`Event: ${title}`);
         const emailBody = encodeURIComponent(`${title}\n${date}\n\n${description}\n\nView all events: ${eventUrl}\n\nPowered by 3mpwr App - Community events calendar for disability rights and worker justice.`);
@@ -363,11 +376,13 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       const choice = prompt(
         'Share Events Calendar:\n\n' +
         '1 - Twitter/X\n' +
-        '2 - Facebook\n' +
-        '3 - LinkedIn\n' +
-        '4 - Email\n' +
-        '5 - Copy Link\n\n' +
-        'Enter your choice (1-5):'
+        '2 - Bluesky\n' +
+        '3 - Mastodon\n' +
+        '4 - Facebook\n' +
+        '5 - LinkedIn\n' +
+        '6 - Email\n' +
+        '7 - Copy Link\n\n' +
+        'Enter your choice (1-7):'
       );
       
       const encodedText = encodeURIComponent(shareText);
@@ -378,17 +393,26 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
           window.open(`https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`, '_blank');
           break;
         case '2':
-          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`, '_blank');
+          window.open(`https://bsky.app/intent/compose?text=${encodedText}`, '_blank');
           break;
         case '3':
-          window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, '_blank');
+          const mastodonInstance = prompt('Enter your Mastodon instance (e.g., mastodon.social):', 'mastodon.social');
+          if (mastodonInstance) {
+            window.open(`https://${mastodonInstance}/share?text=${encodedText}`, '_blank');
+          }
           break;
         case '4':
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`, '_blank');
+          break;
+        case '5':
+          window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, '_blank');
+          break;
+        case '6':
           const emailSubject = encodeURIComponent('3mpwr App Events Calendar');
           const emailBody = encodeURIComponent(`${shareText}\n\n${pageUrl}`);
           window.location.href = `mailto:?subject=${emailSubject}&body=${emailBody}`;
           break;
-        case '5':
+        case '7':
           navigator.clipboard.writeText(pageUrl).then(() => {
             alert('Link copied to clipboard! ✅');
           });
