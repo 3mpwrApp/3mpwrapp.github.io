@@ -27,7 +27,37 @@ Where:
 - **owner**: `3mpwrapp` (from app.json)
 - **slug**: `empowrapp` (from app.json)
 
-### Step 2: Add Redirect URI to Google Cloud Console
+### Step 2: Add SHA-1 Fingerprint (Required for Android)
+
+⚠️ **IMPORTANT:** Firebase requires the SHA-1 release fingerprint for Android apps to enable Google Sign-In.
+
+#### Get SHA-1 Fingerprint from EAS:
+
+```powershell
+# Get the SHA-1 fingerprint for your Android keystore
+eas credentials -p android
+
+# Or generate it manually from your keystore file
+keytool -list -v -keystore @3mpwrapp__empowrapp.jks -alias <your_alias>
+```
+
+#### Add to Firebase Console:
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Select your project: **empowrapp**
+3. Click **Project Settings** (gear icon)
+4. Scroll to **Your apps** section
+5. Find your Android app
+6. Click **Add fingerprint**
+7. Paste your SHA-1 fingerprint
+8. Click **Save**
+
+**Note:** You need to add SHA-1 fingerprints for:
+- ✅ **Development build** (debug keystore)
+- ✅ **Release build** (production keystore)
+- ✅ **Google Play upload key** (if using Play App Signing)
+
+### Step 3: Add Redirect URI to Google Cloud Console
 
 1. **Go to Google Cloud Console**:
    - https://console.cloud.google.com/
@@ -48,7 +78,7 @@ Where:
    - Add: `https://auth.expo.io/@3mpwrapp/empowrapp`
    - Click **Save**
 
-### Step 3: Also Add to Firebase Console (If Different)
+### Step 4: Also Add to Firebase Console (If Different)
 
 1. **Go to Firebase Console**:
    - https://console.firebase.google.com/
@@ -63,9 +93,9 @@ Where:
    - Add: `auth.expo.io`
    - Click **Add**
 
-### Step 4: Test the Fix
+### Step 5: Test the Fix
 
-After adding the redirect URI:
+After adding the SHA-1 fingerprint and redirect URI:
 
 ```powershell
 # Clear cache and restart
@@ -137,6 +167,8 @@ Then add `empowrapp://` to Google Cloud Console authorized redirect URIs.
 
 ## Quick Fix Checklist
 
+- [ ] **Get SHA-1 fingerprint** from your Android keystore (`eas credentials -p android`)
+- [ ] **Add SHA-1 to Firebase Console** → Project Settings → Your apps → Add fingerprint
 - [ ] Go to Google Cloud Console → APIs & Services → Credentials
 - [ ] Find your Web Client ID OAuth 2.0 Client
 - [ ] Add redirect URI: `https://auth.expo.io/@3mpwrapp/empowrapp`

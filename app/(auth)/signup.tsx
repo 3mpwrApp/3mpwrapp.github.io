@@ -107,6 +107,18 @@ export default function RegisterScreen() {
       >
         <Text style={styles.buttonText}>{working ? t('common.working', 'Working...') : t('auth.createAccount', 'Create Account')}</Text>
       </A11yPressable>
+      
+      <A11yPressable
+        onPress={() => router.replace('/(auth)/signin' as any)}
+        accessibilityRole="button"
+        accessibilityLabel={t("auth.backToLogin", "Back to Sign In")}
+        style={{ alignItems: 'center', marginTop: 12, marginBottom: 4 }}
+      >
+        <Text style={[styles.linkText, { color: palette.primary }]}>
+          {t("auth.alreadyHaveAccount", "Already have an account? Sign in")}
+        </Text>
+      </A11yPressable>
+      
       <View style={{ height: 10 }} />
       <OAuthButtons styles={styles} tLabel={(k: string, d: string)=> t(k as any, d)} />
     </View>
@@ -128,6 +140,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     error: { color: palette.error || 'red', marginBottom: 10 },
     button: { backgroundColor: palette.primary, paddingVertical: 14, borderRadius: 10, alignItems: 'center' },
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
+    linkText: { fontSize: 14, textDecorationLine: 'underline' },
   });
 }
 

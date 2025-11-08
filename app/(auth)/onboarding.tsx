@@ -143,7 +143,7 @@ export default function OnboardingScreen() {
   const proceedToLogin = () => {
     // Save preferences to AsyncStorage/Context (implementation would go here)
     announceForAccessibility('Onboarding complete. Proceeding to login.');
-    router.push('/(auth)/login' as Href);
+    router.push('/(auth)/signin' as Href);
   };
 
   const handleRoleSelect = (role: UserRole) => {
@@ -859,7 +859,7 @@ export default function OnboardingScreen() {
           </A11yPressable>
 
           <A11yPressable
-            onPress={() => router.push('/(auth)/register' as Href)}
+            onPress={() => router.push('/(auth)/signup' as Href)}
             accessibilityRole="button"
             style={[styles.buttonSecondary, { borderColor: colors.primary }]}
           >

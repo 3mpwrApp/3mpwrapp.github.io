@@ -291,7 +291,7 @@ export default function EventsScreen() {
         rsvpDetails: event.rsvpDetails,
         createdBy: user.uid,
         createdAt: event.createdAt || Date.now(),
-        status: 'published',
+        status: 'published' as const,
         category: 'community',
       };
 

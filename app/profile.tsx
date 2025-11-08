@@ -209,7 +209,7 @@ export default function Profile() {
         <>
           <Pressable
             style={[styles.cta, styles.primary]}
-            onPress={() => router.push("/(auth)/login" as Href)}
+            onPress={() => router.push("/(auth)/signin" as Href)}
             accessibilityRole="button"
             accessibilityLabel={t("header.signIn")}
           >

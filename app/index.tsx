@@ -27,7 +27,7 @@ export default function Index() {
         if (!user && !loading) {
           // Save the deep link for later
           const encodedPath = encodeURIComponent(path);
-          router.replace(`/(auth)/login?redirect=${encodedPath}` as any);
+          router.replace(`/(auth)/signin?redirect=${encodedPath}` as any);
         } else if (user) {
           // User is authenticated, navigate to the deep linked path
           if (path && path !== '') {
@@ -42,7 +42,7 @@ export default function Index() {
         if (user) {
           router.replace('/(tabs)');
         } else {
-          router.replace('/(auth)/login');
+          router.replace('/(auth)/signin' as any);
         }
       }
     };
@@ -107,7 +107,7 @@ export default function Index() {
     if (shouldBeInAuth && inTabsFlow) {
       logger.log('[Index] ❌ No user in tabs - navigating to login');
       hasNavigated.current = true;
-      router.replace('/(auth)/login');
+      router.replace('/(auth)/signin' as any);
       return;
     }
     
@@ -116,7 +116,7 @@ export default function Index() {
       if (!user) {
         logger.log('[Index] 🔄 Initial - no user, navigating to login');
         hasNavigated.current = true;
-        router.replace('/(auth)/login');
+        router.replace('/(auth)/signin' as any);
       } else {
         logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
         hasNavigated.current = true;

@@ -150,7 +150,7 @@ export async function processSyncQueue(): Promise<{ synced: number; failed: numb
           rsvpDetails: item.eventData.rsvpDetails,
           createdBy: item.userId,
           createdAt: item.eventData.createdAt || Date.now(),
-          status: 'published',
+          status: 'published' as const,
           category: 'community',
         };
 

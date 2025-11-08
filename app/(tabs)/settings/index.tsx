@@ -258,7 +258,7 @@ export default function SettingsScreen() {
           {isGuest && (
             <View style={{ marginBottom:16 }}>
               <Text style={[styles.description, { marginBottom:8 }]}>{t('settings.account.guestNotice','You are browsing as a guest. Create an account to sync data across devices and enable full features.')}</Text>
-              <Link href={'/(auth)/register' as any} asChild={true}>
+              <Link href={'/(auth)/signup' as any} asChild={true}>
                 <A11yPressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button' accessibilityLabel={t('settings.account.createAccount','Create Account')} hitSlop={HIT_SLOP_8}>
                   <Ionicons name='person-add' size={20} color={palette.primary} />
                   <Text style={styles.linkText}>{t('settings.account.createAccount','Create Account')}</Text>

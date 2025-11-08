@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { Alert, StyleSheet, Text, TextInput, View } from "react-native";
@@ -11,6 +12,7 @@ import { useAppPalette } from "../../theme/usePalette";
 import { logger } from "../../utils/logger";
 
 export default function LoginScreen() {
+  const router = useRouter();
   const { t } = useTranslation();
   const palette = useAppPalette();
   const styles = React.useMemo(() => createStyles(palette), [palette]);
@@ -137,6 +139,19 @@ export default function LoginScreen() {
       </A11yPressable>
       
       <View style={{ height: 10 }} />
+      
+      <A11yPressable
+        onPress={() => router.push('/(auth)/signup' as any)}
+        accessibilityRole="button"
+        accessibilityLabel={t("auth.createAccount", "Create Account")}
+        style={{ alignItems: 'center', marginTop: 8 }}
+      >
+        <Text style={[styles.linkText, { color: palette.primary }]}>
+          {t("auth.dontHaveAccount", "Don't have an account? Sign up")}
+        </Text>
+      </A11yPressable>
+      
+      <View style={{ height: 16 }} />
       <OAuthButtons styles={styles} tLabel={(k: string, d: string)=> t(k as any, d)} />
     </View>
   );
@@ -157,6 +172,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     error: { color: palette.error || 'red', marginBottom: 10 },
     button: { backgroundColor: palette.primary, paddingVertical: 14, borderRadius: 10, alignItems: 'center', marginTop: 4 },
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
+    linkText: { fontSize: 14, textDecorationLine: 'underline' },
   });
 }
 

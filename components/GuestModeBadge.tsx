@@ -35,12 +35,12 @@ export default function GuestModeBadge() {
 
   const handleSignIn = async () => {
     await AccessibilityInfo.announceForAccessibility?.('Navigating to login screen');
-    router.push('/(auth)/login' as any);
+    router.push('/(auth)/signin' as any);
   };
 
   const handleCreateAccount = async () => {
     await AccessibilityInfo.announceForAccessibility?.('Navigating to registration screen');
-    router.push('/(auth)/register' as any);
+    router.push('/(auth)/signup' as any);
   };
 
   return (

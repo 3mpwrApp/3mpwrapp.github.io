@@ -3,12 +3,12 @@ import * as Linking from "expo-linking";
 import { router, usePathname, type Href } from "expo-router";
 import React from "react";
 import {
-  Image,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
+    Image,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -345,7 +345,7 @@ const ThemedHeader = React.memo(() => {
         ) : (
           <Pressable
             onPress={() =>
-              router.push("/(auth)/login" as Href)
+              router.push("/(auth)/signin" as Href)
             }
             accessibilityRole="button"
             accessibilityLabel={t("header.signIn")}
