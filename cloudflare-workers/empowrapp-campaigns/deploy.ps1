@@ -122,4 +122,4 @@ Write-Host ""
 # Return to original directory
 Set-Location ..\..
 
-Write-Host "Done! 🚀" -ForegroundColor Green
+Write-Host "Done!" -ForegroundColor Green

@@ -5,7 +5,7 @@ compatibility_date = "2024-01-01"
 # KV Namespace for storing campaigns
 [[kv_namespaces]]
 binding = "CAMPAIGNS_KV"
-id = "YOUR_KV_NAMESPACE_ID"  # Replace this after creating the KV namespace
+id = "735bf388954b4dbeb6f8b5d357b1e5ed"
 
 # Workers.dev subdomain
 workers_dev = true
