@@ -459,8 +459,22 @@ async function main(){
     if(!fs.existsSync(postsDir)) fs.mkdirSync(postsDir,{recursive:true});
     const file=path.join(postsDir,`${todayISO}-daily-curation.md`);
     if(!fs.existsSync(file)){
-      const out=['---','layout: post',`title: Daily Highlights (${todayISO})`,`date: ${todayISO} 09:00:00 +0000`,'tags: [community, highlights]','categories: [community]','---','', 'A quick round-up of community stories, mutual aid, and calls-to-action:',''];
-      for (const it of ranked){ out.push(`- [${it.title||'Post'}](${it.link}) — ${it.description||''}`); }
+      const out=['---','layout: post',`title: "Daily News Highlights - ${todayISO}"`,`date: ${todayISO} 09:00:00 +0000`,'tags: [highlights]','categories: [curation, news]',`excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."`,'---','',`# Daily News Highlights - ${todayISO}`,'',`Curated ${ranked.length} items from disability, accessibility, and social policy sources across Canada.`,''];
+      
+      // Add top stories with better formatting
+      ranked.forEach((it,idx)=>{
+        out.push(`## ${idx+1}. ${it.title||'Story'}`);
+        if(it.description) out.push(it.description);
+        out.push(`📍 [Read Full Story](${it.link})`);
+        out.push(`**Score:** ${it.score} | **Type:** ${it.contentType||'News'}`);
+        out.push('');
+      });
+      
+      out.push('---');
+      out.push('');
+      out.push('📰 **Stay Informed**: [Subscribe to updates](https://3mpwrapp.pages.dev/newsletter/)');
+      out.push('');
+      out.push('🌐 **Explore More**: [Visit 3mpwrApp Blog](https://3mpwrapp.pages.dev/blog/)');
       out.push('');
       fs.writeFileSync(file,out.join('\n'),'utf8');
       console.log('Wrote daily draft', file);

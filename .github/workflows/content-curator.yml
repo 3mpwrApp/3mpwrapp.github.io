@@ -130,9 +130,37 @@ jobs:
 
       - name: Wait for deployment
         run: |
-          echo "⏳ Waiting 45 minutes for Cloudflare Pages to build and deploy..."
-          echo "This ensures the curation blog posts are live before posting to social media"
+          echo "⏳ Waiting for Cloudflare Pages to build and deploy..."
+          echo "Starting 45-minute wait at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+          
+          # Wait 45 minutes for deployment
           sleep 2700  # 45 minutes = 2700 seconds
+          
+          echo "✅ Wait complete at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+          echo "Verifying blog is accessible..."
+          
+          # Try to fetch blog page (with retries)
+          MAX_RETRIES=5
+          RETRY_COUNT=0
+          SUCCESS=false
+          
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$SUCCESS" = "false" ]; do
+            if curl -sSf -o /dev/null https://3mpwrapp.pages.dev/blog/; then
+              echo "✅ Blog is live and accessible!"
+              SUCCESS=true
+            else
+              RETRY_COUNT=$((RETRY_COUNT + 1))
+              echo "⚠️  Blog not accessible yet (attempt $RETRY_COUNT/$MAX_RETRIES)"
+              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                echo "Waiting 60 seconds before retry..."
+                sleep 60
+              fi
+            fi
+          done
+          
+          if [ "$SUCCESS" = "false" ]; then
+            echo "❌ WARNING: Blog may not be accessible. Continuing anyway..."
+          fi
 
       - name: Post to social media
         if: success()

@@ -148,21 +148,24 @@ class SocialPoster {
     const timeCtx = this.getTimeContext();
     const feature = this.getFeatureHighlight();
     
-    let post = `${timeCtx.greeting} 📰 ${content.date}\n\n`;
-    post += `3mpwrApp ${timeCtx.context} ${content.count} curated stories on disability, accessibility & social policy.\n\n`;
-    post += `💡 ${feature}\n\n`;
+    // Get today's date for blog link
+    const today = new Date().toISOString().split('T')[0];
+    
+    let post = `${timeCtx.greeting} 📰 Daily News Highlights\n\n`;
+    post += `${content.count} curated stories on disability rights, accessibility & workers' compensation from across Canada.\n\n`;
+    post += `💡 3mpwrApp Feature: ${feature}\n\n`;
     post += `Today's Top Stories:\n\n`;
 
     topItems.forEach((item, idx) => {
       post += `${idx + 1}. ${item.title}\n`;
       if (item.link) {
-        post += `${item.link}\n`;
+        post += `   ${item.link}\n`;
       }
       post += '\n';
     });
 
-    post += `\n🔗 Read more: ${BLOG_URL}\n`;
-    post += `\n#Accessibility #DisabilityRights #DisabilityBenefits #News #Canada`;
+    post += `\n� Read all ${content.count} stories: ${BLOG_URL}#curated-daily\n`;
+    post += `\n#DisabilityRights #Accessibility #WorkersComp #News #Canada`;
 
     return post;
   }
@@ -175,8 +178,8 @@ class SocialPoster {
     const timeCtx = this.getTimeContext();
     
     // Build post with strict character limit (300 max)
-    let post = `${timeCtx.greeting} 📰\n\n`;
-    post += `${content.count} stories on disability, accessibility & benefits.\n\n`;
+    let post = `${timeCtx.greeting} 📰 Daily News\n\n`;
+    post += `${content.count} disability rights & accessibility stories from Canada.\n\n`;
 
     topItems.forEach((item, idx) => {
       // Truncate title to ~60 chars
@@ -184,8 +187,8 @@ class SocialPoster {
       post += `${idx + 1}. ${title}\n`;
     });
 
-    post += `\n${BLOG_URL}\n`;
-    post += `#Accessibility #DisabilityBenefits`;
+    post += `\n📰 ${BLOG_URL}#curated-daily\n`;
+    post += `#DisabilityRights #Accessibility`;
 
     // Safety check: truncate if still too long
     if (post.length > 300) {
@@ -202,16 +205,16 @@ class SocialPoster {
     const topItems = content.items.slice(0, 2);
     const timeCtx = this.getTimeContext();
     
-    let post = `${timeCtx.greeting} 📰 3mpwrApp News\n\n`;
-    post += `${content.count} stories curated on disability benefits & accessibility!\n\n`;
+    let post = `${timeCtx.greeting} 📰 Daily News Highlights\n\n`;
+    post += `${content.count} stories on disability rights & accessibility!\n\n`;
 
     topItems.forEach((item) => {
       post += `• ${item.title}\n`;
     });
 
-    post += `\n+ ${content.count - 2} more\n\n`;
-    post += `🔗 Read more: ${BLOG_URL}\n\n`;
-    post += `#Accessibility #DisabilityBenefits #News #Canada`;
+    post += `\n+ ${content.count - 2} more stories\n\n`;
+    post += `� Read all: ${BLOG_URL}#curated-daily\n\n`;
+    post += `#DisabilityRights #Accessibility #WorkersComp #Canada`;
 
     return post;
   }

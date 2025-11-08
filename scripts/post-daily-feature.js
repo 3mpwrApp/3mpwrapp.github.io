@@ -103,7 +103,8 @@ class FeaturePoster {
 
       const postData = {
         status: content.longPost,
-        visibility: 'public'
+        visibility: 'public',
+        language: 'en'
       };
 
       const response = await this.httpsRequest(options, postData);

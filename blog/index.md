@@ -9,22 +9,31 @@ description: News, updates, and stories from the 3mpwr community.
 
 # 3mpwr App Blog
 
-Welcome to our blog! Stay informed with daily curated news, feature articles, community updates, and weekly recaps.
+Welcome to our blog! Stay informed with daily news highlights, feature spotlights, weekly recaps, and community updates.
 
 <div class="blog-navigation">
-  <a href="#curated-daily">📰 Daily Highlights</a> |
-  <a href="#feature-articles">📝 Feature Articles</a> |
-  <a href="#weekly-recaps">📊 Weekly Recaps</a> |
-  <a href="#blog-posts">💬 Blog Posts</a>
+  <a href="#curated-daily">📰 Daily News Highlights</a> |
+  <a href="#feature-articles">✨ Feature Spotlights</a> |
+  <a href="#weekly-recaps">📅 Weekly Recaps</a> |
+  <a href="#blog-posts">💬 Community Updates</a>
 </div>
 
 <p style="margin-top: 1rem;"><strong>Subscribe:</strong> <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a> | <a href="{{ '/newsletter' | relative_url }}">Newsletter</a></p>
 
+<div style="background: var(--card-bg, #f0f8ff); border: 2px solid var(--link-color, #007bff); border-radius: 8px; padding: 1rem; margin: 1.5rem 0;">
+  <h3 style="margin-top: 0;">📱 Follow Us on Social Media</h3>
+  <p>Get daily news and updates delivered to your feed!</p>
+  <ul style="margin-bottom: 0;">
+    <li><strong>Mastodon:</strong> <a href="https://mastodon.social/@3mpwrapp" target="_blank" rel="noopener">@3mpwrapp@mastodon.social</a> - Daily posts at 9 AM UTC</li>
+    <li><strong>Bluesky:</strong> <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener">@3mpwrapp.bsky.social</a> - Daily posts at 9 AM UTC</li>
+  </ul>
+</div>
+
 ---
 
-## <span id="curated-daily">📰 Daily Curated Highlights</span>
+## <span id="curated-daily">📰 Daily News Highlights</span>
 
-<p class="section-description">Fresh news stories carefully curated from 50+ trusted sources across Canada. Updated every morning at 9 AM UTC with the most relevant stories on disability rights, accessibility, workers' compensation, and social policy.</p>
+<p class="section-description">Fresh news carefully curated from 50+ trusted sources across Canada. Updated every morning at 9 AM UTC with the most relevant stories on disability rights, accessibility, workers' compensation, and social policy changes that affect you.</p>
 
 {% assign daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
 {% if daily and daily.size > 0 %}
@@ -50,9 +59,9 @@ Welcome to our blog! Stay informed with daily curated news, feature articles, co
 
 ---
 
-## <span id="feature-articles">📝 Feature Articles</span>
+## <span id="feature-articles">✨ Feature Spotlights</span>
 
-<p class="section-description">In-depth spotlights on 3mpwrApp features - Evidence Locker, Letter Wizard, Disability Wizard, Legal Workflow Automation, and more. Learn how each tool empowers you to advocate for your rights, navigate systems, and connect with community.</p>
+<p class="section-description">In-depth spotlights on 3mpwrApp tools and features. Learn how Evidence Locker, Letter Generator, Disability Wizard, Legal Workflow Automation, and more can help you advocate for your rights, navigate systems, and connect with your community.</p>
 
 {% assign feature_articles = site.posts | where_exp: 'p', "p.tags contains 'feature'" %}
 {% if feature_articles and feature_articles.size > 0 %}
@@ -75,9 +84,9 @@ Welcome to our blog! Stay informed with daily curated news, feature articles, co
 
 ---
 
-## <span id="weekly-recaps">📊 Weekly Recaps</span>
+## <span id="weekly-recaps">� Weekly Recaps</span>
 
-<p class="section-description">Every Friday, we compile the week's most important stories, updates, and community highlights into one comprehensive recap. Perfect for catching up on what you might have missed!</p>
+<p class="section-description">Every Monday, we compile the week's most important updates, new features, improvements, and fixes into one easy-to-read recap. Perfect for staying up-to-date on what's changed!</p>
 
 {% assign weekly_recaps = site.posts | where_exp: 'p', "p.tags contains 'weekly'" %}
 {% if weekly_recaps and weekly_recaps.size > 0 %}
@@ -100,9 +109,9 @@ Welcome to our blog! Stay informed with daily curated news, feature articles, co
 
 ---
 
-## <span id="blog-posts">💬 Community Blog Posts</span>
+## <span id="blog-posts">💬 Community Updates</span>
 
-<p class="section-description">Updates, announcements, and stories from the 3mpwr community. Hear about new features, community achievements, and important updates directly from our team.</p>
+<p class="section-description">Announcements, stories, and updates from the 3mpwr community. Learn about new features, community achievements, and important information directly from our team.</p>
 
 {% assign regular_posts = site.posts | where_exp: 'p', "p.tags contains 'highlights' or p.tags contains 'weekly' or p.tags contains 'feature'" | size %}
 {% assign all_posts_count = site.posts | size %}

@@ -212,10 +212,14 @@ function getLatestCurationHeadline() {
           const title = match[1];
           const url = match[2];
           
+          // Link to the blog's curated daily section
+          const blogLink = 'https://3mpwrapp.pages.dev/blog/#curated-daily';
+          
           return {
             title: title,
             url: url,
-            text: `📰 Today's top curated news:\n\n${title}\n\n${url}`,
+            blogLink: blogLink,
+            text: `📰 Daily News Highlights - ${today}\n\nTop story: ${title}\n\nSource: ${url}\n\n📰 Read all today's stories: ${blogLink}\n\n#DisabilityRights #Accessibility #WorkersComp #Canada`,
           };
         }
       }
@@ -233,11 +237,11 @@ function getLatestCurationHeadline() {
  */
 function generateAppPromotionStatus() {
   const promotions = [
-    "🚀 3mpwr App Features: Access 50+ free tools to expand your presence and reach more people globally! 🌍 #CommunityEmpowerment #FreeTools",
-    "✨ 3mpwr App: Empower your community with our suite of free resources. Explore today! 💪 #DigitalTools #Community",
-    "🎯 3mpwr App: Your gateway to free tools for community growth. Simple. Powerful. Free. Start now! 🔥 #Empowerment",
-    "🌟 3mpwr App: Combining free tools with accessibility features to empower every community member. 💚 #A11y #Accessibility",
-    "📱 3mpwr App: From content curation to community engagement - all free, all accessible. Learn more! 🎓 #OpenSource",
+    "🚀 3mpwr App: Access 50+ free tools to expand your presence & reach across Canada! Disability rights, benefits navigator, legal workflow automation & more. #DisabilityRights #Accessibility",
+    "✨ 3mpwr App: Free tools for injured workers & persons with disabilities. Evidence Locker, Letter Generator, Disability Wizard & more! Learn more: https://3mpwrapp.pages.dev/features/ #DisabilityJustice",
+    "🎯 3mpwr App: Navigate disability benefits, workers compensation, and accessibility systems with confidence. All tools free & accessible. #WorkersComp #DisabilityBenefits #Canada",
+    "🌟 3mpwr App: Combining accessibility features with practical tools for disability advocacy. WCAG 2.2 AA+ compliant, culturally inclusive. https://3mpwrapp.pages.dev/ #A11y #Accessibility",
+    "📱 3mpwr App: Evidence Locker, Letter Generator, Wellness Hub, Campaign Coordination & more - all free, all accessible. https://3mpwrapp.pages.dev/features/ #DisabilityCommunity #Tools",
   ];
 
   return promotions[Math.floor(Math.random() * promotions.length)];

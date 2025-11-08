@@ -198,19 +198,17 @@ function formatBlueskyContent(items) {
   }
 
   const today = getToday();
+  const blogLink = 'https://3mpwrapp.pages.dev/blog/#curated-daily';
   
   // Bluesky has 300 char limit, be concise
-  let content = `📰 Daily Curated News - ${today}\n\n`;
+  let content = `📰 Daily News - ${today}\n\n`;
   
   // Add top item (most important for character limit)
   const topItem = items[0];
-  content += `🟢 ${topItem.title}\n${topItem.url}`;
+  const titleTruncated = topItem.title.length > 100 ? topItem.title.substring(0, 97) + '...' : topItem.title;
+  content += `🟢 ${titleTruncated}\n\n`;
 
-  if (items.length > 1) {
-    content += `\n\n(${items.length} items curated today)`;
-  }
-
-  content += `\n\n#news #curation #accessibility`;
+  content += `📰 All stories: ${blogLink}`;
 
   return content;
 }
@@ -221,10 +219,11 @@ function formatBlueskyContent(items) {
 function formatBlueskyThread(items) {
   const posts = [];
   const today = getToday();
+  const blogLink = 'https://3mpwrapp.pages.dev/blog/#curated-daily';
 
   // First post - intro
-  let firstPost = `📰 Daily Curated News - ${today}\n\n`;
-  firstPost += `${items.length} quality items from 50+ sources today:`;
+  let firstPost = `📰 Daily News Highlights - ${today}\n\n`;
+  firstPost += `${items.length} quality stories from Canada on disability rights, accessibility & workers' compensation:`;
   posts.push(firstPost);
 
   // Individual item posts (max 3 to avoid spam)
@@ -238,7 +237,7 @@ function formatBlueskyThread(items) {
   });
 
   // Final post - link to website
-  let finalPost = `🔗 Read more stories & resources:\nhttps://3mpwrapp.pages.dev/\n📖 User Guide: https://3mpwrapp.pages.dev/user-guide/\n\n#news #curation #accessibility #disability #workers`;
+  let finalPost = `🔗 Read all ${items.length} stories:\n${blogLink}\n\n📖 User Guide: https://3mpwrapp.pages.dev/user-guide/\n\n#DisabilityRights #Accessibility #WorkersComp #Canada`;
   posts.push(finalPost);
 
   return posts;
