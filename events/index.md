@@ -91,8 +91,12 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
-<div class="info-box">
-  <p><strong>🔄 Auto-Synced:</strong> Events created in the 3mpwrApp automatically appear below. Updates every 5 minutes.</p>
+<div class="info-box" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-left: 4px solid #10b981;">
+  <p style="margin: 0;"><strong>🔄 Real-Time Auto-Sync:</strong> Events created in the 3mpwrApp automatically appear below. Updates every 5 minutes.</p>
+  <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #065f46;">
+    <span id="events-sync-status">⏳ Checking for events...</span> | 
+    Last updated: <span id="events-last-update">Never</span>
+  </p>
 </div>
 
 <section id="events">
@@ -104,22 +108,84 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 </section>
 
 <script>
+  /**
+   * ========================================
+   * EVENTS REAL-TIME AUTO-SYNC
+   * ========================================
+   * 
+   * Fetches events from Cloudflare Worker API:
+   * https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production
+   * 
+   * Data Flow:
+   * 1. User creates event in 3mpwrApp (React Native)
+   * 2. Event saved to Firestore (events_production collection)
+   * 3. Cloudflare Worker reads from Firestore
+   * 4. Website fetches from Worker API every 5 minutes
+   * 5. Events display automatically below
+   * ========================================
+   */
+  
   // Fetch and display events from app (real-time sync via Cloudflare Worker)
   async function loadEvents() {
     try {
+      console.log('🔄 Fetching events from Cloudflare Worker API...');
+      
+      // Update sync status
+      const syncStatus = document.getElementById('events-sync-status');
+      if (syncStatus) syncStatus.textContent = '🔄 Syncing...';
+      
       // Fetch from Cloudflare Worker API endpoint (production environment)
       const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
       const data = await response.json();
       const events = data.events || [];
       
+      console.log(`✅ Loaded ${events.length} events from API`);
+      console.log('📊 Events data:', events);
+      
       const container = document.getElementById('events-list');
+      
+      // Update sync status - success
+      const syncStatus = document.getElementById('events-sync-status');
+      if (syncStatus) {
+        syncStatus.textContent = events.length > 0 
+          ? `✅ ${events.length} upcoming event${events.length !== 1 ? 's' : ''}`
+          : '📭 No upcoming events';
+      }
+      
+      // Update last update time
+      const lastUpdate = document.getElementById('events-last-update');
+      if (lastUpdate) {
+        lastUpdate.textContent = new Date().toLocaleTimeString('en-US', {
+          hour: 'numeric',
+          minute: '2-digit',
+          hour12: true
+        });
+      }
       
       if (events.length === 0) {
         container.innerHTML = `
           <div class="warning-box">
-            <h3 style="margin-top: 0;">📅 No Events Yet</h3>
-            <p>No upcoming events at this time. Check back soon, or create one in the app!</p>
-            <p style="margin-top: 1rem;"><strong>Be the first to organize an event!</strong></p>
+            <h3 style="margin-top: 0;">📅 November 2025 Events</h3>
+            <p style="font-size: 1.05rem;"><strong>Expected observances for November 2025:</strong></p>
+            <ul style="text-align: left; max-width: 700px; margin: 1rem auto;">
+              <li>🎖️ <strong>November 11</strong> - Remembrance Day (Canadian holiday)</li>
+              <li>🧠 <strong>All of November</strong> - National Epilepsy Awareness Month</li>
+              <li>💙 <strong>November 14</strong> - World Diabetes Day</li>
+              <li>👥 <strong>User-created events</strong> - Will appear when created in app</li>
+            </ul>
+            <div style="margin: 1.5rem 0; padding: 1rem; background: #fef3c7; border-radius: 8px;">
+              <p style="margin: 0; color: #92400e;"><strong>⚙️ Setup Required:</strong></p>
+              <p style="margin: 0.5rem 0 0; color: #78350f;">
+                These observance events need to be added to the Firestore <code>events_production</code> collection. 
+                The Cloudflare Worker will then automatically serve them via the API.
+              </p>
+            </div>
+            <p style="margin-top: 1rem;"><strong>🎯 Want to see these events?</strong> They need to be added to Firestore first!</p>
           </div>
         `;
         return;
@@ -157,17 +223,29 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       `).join('');
       
     } catch (error) {
-      console.error('Failed to load events:', error);
+      console.error('❌ Failed to load events:', error);
+      
+      // Update sync status - error
+      const syncStatus = document.getElementById('events-sync-status');
+      if (syncStatus) syncStatus.textContent = '⚠️ Connection issue';
+      
       document.getElementById('events-list').innerHTML = `
         <div class="warning-box">
           <h3 style="margin-top: 0;">⚠️ Connection Issue</h3>
+          <p><strong>Error:</strong> ${error.message}</p>
           <p>Unable to load events from the app right now. This could mean:</p>
           <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
             <li>No events have been created yet</li>
+            <li>Cloudflare Worker is not responding</li>
             <li>Temporary network issue</li>
-            <li>Please refresh the page</li>
+            <li>CORS or API configuration issue</li>
           </ul>
-          <p style="margin-top: 1rem;">Please check back later or <a href="/contact/">contact us</a> if the problem persists.</p>
+          <p style="margin-top: 1rem;">
+            <strong>🔍 Debug Info:</strong><br>
+            API Endpoint: <code style="background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 0.9em;">https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production</code><br>
+            Check browser console (F12) for detailed error messages.
+          </p>
+          <p>Please <a href="/contact/">contact us</a> if the problem persists.</p>
         </div>
       `;
     }

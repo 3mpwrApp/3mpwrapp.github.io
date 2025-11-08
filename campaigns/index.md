@@ -73,8 +73,12 @@ permalink: /campaigns/
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-<div class="info-box">
-  <p><strong>🔄 Auto-Synced:</strong> Campaigns created in the 3mpwrApp automatically appear below. Updates every 5 minutes.</p>
+<div class="info-box" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-left: 4px solid #10b981;">
+  <p style="margin: 0;"><strong>🔄 Real-Time Auto-Sync:</strong> Campaigns created in the 3mpwrApp automatically appear below. Updates every 5 minutes.</p>
+  <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #065f46;">
+    <span id="sync-status">⏳ Checking for campaigns...</span> | 
+    Last updated: <span id="last-update">Never</span>
+  </p>
 </div>
 
 <section id="campaigns">
@@ -86,37 +90,56 @@ permalink: /campaigns/
 </section>
 
 <script>
-  // Fetch and display campaigns from app
-  async function loadCampaigns() {
-    try {
-      const response = await fetch('https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns');
-      const data = await response.json();
-      const campaigns = data.campaigns || [];
-      
-      const container = document.getElementById('campaigns-list');
-      
-      if (!campaigns || campaigns.length === 0) {
-        container.innerHTML = `
-          <div class="warning-box">
-            <h3 style="margin-top: 0;">🚀 Campaigns Coming Soon!</h3>
-            <p style="font-size: 1.1rem;"><strong>No active campaigns yet - but when our app launches, this space will come alive with community-created campaigns!</strong></p>
-            <p>Community members will be able to:</p>
-            <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
-              <li>🎯 Create campaigns directly in the app</li>
-              <li>📱 Set campaigns as public to appear here automatically</li>
-              <li>📊 Track petition signatures and participation</li>
-              <li>📣 Organize rallies and events</li>
-              <li>🤝 Connect with other advocates</li>
-              <li>💪 Amplify grassroots movements</li>
-            </ul>
-            <p style="margin-top: 1.5rem;"><em>Stay tuned - powerful organizing tools are on the way!</em></p>
-          </div>
-        `;
-        return;
-      }
-      
-      // Display campaigns
-      container.innerHTML = campaigns.map(campaign => `
+  /**
+   * ========================================
+   * CAMPAIGNS REAL-TIME AUTO-SYNC
+   * ========================================
+   * 
+   * Fetches campaigns from Cloudflare Worker API:
+   * https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns
+   * 
+   * Data Flow:
+   * 1. User creates campaign in 3mpwrApp (React Native)
+   * 2. Campaign saved to Firestore (campaigns_production collection)
+   * 3. Cloudflare Worker reads from Firestore
+   * 4. Website fetches from Worker API every 5 minutes
+   * 5. Campaigns display automatically below
+   * 
+   * Related:
+   * - Events API: https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events
+   * - Events Page: https://3mpwrapp.pages.dev/events/
+   * ========================================
+   */
+
+  /**
+   * Display campaigns on the page
+   * @param {Array} campaigns - Array of campaign objects from API
+   */
+  function displayCampaigns(campaigns) {
+    const container = document.getElementById('campaigns-list');
+    
+    if (!campaigns || campaigns.length === 0) {
+      container.innerHTML = `
+        <div class="warning-box">
+          <h3 style="margin-top: 0;">🚀 Campaigns Coming Soon!</h3>
+          <p style="font-size: 1.1rem;"><strong>No active campaigns yet - but when our app launches, this space will come alive with community-created campaigns!</strong></p>
+          <p>Community members will be able to:</p>
+          <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+            <li>🎯 Create campaigns directly in the app</li>
+            <li>📱 Set campaigns as public to appear here automatically</li>
+            <li>📊 Track petition signatures and participation</li>
+            <li>📣 Organize rallies and events</li>
+            <li>🤝 Connect with other advocates</li>
+            <li>💪 Amplify grassroots movements</li>
+          </ul>
+          <p style="margin-top: 1.5rem;"><em>Stay tuned - powerful organizing tools are on the way!</em></p>
+        </div>
+      `;
+      return;
+    }
+    
+    // Display campaigns
+    container.innerHTML = campaigns.map(campaign => `
         <article class="campaign-card" style="border: 2px solid #dbeafe; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
           <h3 style="margin-top: 0; color: #1e40af; font-size: 1.5rem;">
             ${campaign.icon || '📣'} ${campaign.title}
@@ -172,9 +195,57 @@ permalink: /campaigns/
           </div>
         </article>
       `).join('');
+  }
+
+  /**
+   * Fetch and display campaigns from Cloudflare Worker API
+   * Updates automatically every 5 minutes
+   */
+  async function loadCampaigns() {
+    try {
+      console.log('🔄 Fetching campaigns from Cloudflare Worker API...');
+      
+      // Update sync status
+      const syncStatus = document.getElementById('sync-status');
+      if (syncStatus) syncStatus.textContent = '🔄 Syncing...';
+      
+      const response = await fetch('https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
+      const data = await response.json();
+      const campaigns = data.campaigns || [];
+      
+      console.log(`✅ Loaded ${campaigns.length} campaigns`);
+      
+      displayCampaigns(campaigns);
+      
+      // Update sync status - success
+      if (syncStatus) {
+        syncStatus.textContent = campaigns.length > 0 
+          ? `✅ ${campaigns.length} active campaign${campaigns.length !== 1 ? 's' : ''}`
+          : '📭 No active campaigns yet';
+      }
+      
+      // Update last update time
+      const lastUpdate = document.getElementById('last-update');
+      if (lastUpdate) {
+        lastUpdate.textContent = new Date().toLocaleTimeString('en-US', {
+          hour: 'numeric',
+          minute: '2-digit',
+          hour12: true
+        });
+      }
       
     } catch (error) {
-      console.error('Failed to load campaigns:', error);
+      console.error('❌ Failed to load campaigns:', error);
+      
+      // Update sync status - error
+      const syncStatus = document.getElementById('sync-status');
+      if (syncStatus) syncStatus.textContent = '⚠️ Connection issue';
+      
       document.getElementById('campaigns-list').innerHTML = `
         <div class="warning-box">
           <h3 style="margin-top: 0;">⚠️ Connection Issue</h3>
