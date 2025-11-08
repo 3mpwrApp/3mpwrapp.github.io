@@ -31,7 +31,6 @@ jobs:
             https://3mpwrapp.pages.dev/features
             https://3mpwrapp.pages.dev/user-guide
             https://3mpwrapp.pages.dev/blog
-            https://3mpwrapp.pages.dev/beta
           configPath: './.lighthouserc.json'
           uploadArtifacts: true
           temporaryPublicStorage: true
