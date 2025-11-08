@@ -24,10 +24,11 @@ import A11yPressable from "../../../components/A11yPressable";
 import AdminGuard from "../../../components/AdminGuard";
 import GapView from "../../../components/GapView";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
+import { useAuth } from "../../../context/AuthContext";
 import { db } from "../../../firebase/config";
 import { MAX_FONT_SCALE } from "../../../hooks/useA11y";
 import { computeActivityStats, logActivity, subscribeToActivityFeed } from "../../../services/activity";
-import { isBYOCEnabled } from "../../../services/dataPolicy";
+import { isFirestoreEnabledForUser } from "../../../services/dataPolicy";
 import { useAppPalette } from "../../../theme/usePalette";
 
 import * as AdminLazy from "./_lazy";
@@ -39,7 +40,8 @@ export const options = { href: null };
 export default function AdminPanel() {
   const palette = useAppPalette();
   const s = styles(palette);
-  const byocMode = isBYOCEnabled();
+  const { user } = useAuth();
+  const firestoreEnabled = isFirestoreEnabledForUser(user?.email);
 
   // const params = useLocalSearchParams<{ tab?: ReviewKind }>();
 
@@ -83,7 +85,7 @@ export default function AdminPanel() {
   // Admin audit subscription moved inside AuditPanel component
 
   React.useEffect(() => {
-    if (!db || byocMode) return; // Skip in BYOC mode - no Firestore access
+    if (!db || !firestoreEnabled) return; // Skip if Firestore not enabled for this user
     (async () => {
       try {
         const usersCol = collection(db, "users");
@@ -103,7 +105,7 @@ export default function AdminPanel() {
         setCounts({ users: uc, campaigns: cc, resources: rc });
       } catch {}
     })();
-  }, [byocMode]);
+  }, [firestoreEnabled]);
 
   const loadFlags = React.useCallback(async () => {
     try {
@@ -142,235 +144,286 @@ export default function AdminPanel() {
   return (
     <AdminGuard>
       <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
-        <Text accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-          Admin Panel
-        </Text>
-        <Text style={s.text}>Use this area for admin-only tools and metrics.</Text>
-        <Text style={s.text}>To grant admin: set Firebase custom claim admin=true for your UID.</Text>
+        {/* Header */}
+        <View style={s.headerCard}>
+          <Text accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            🛠️ Admin Panel
+          </Text>
+          <Text style={s.subtitle}>Manage users, content, and system configuration</Text>
+          {user?.email && (
+            <View style={s.adminBadge}>
+              <Text style={s.adminBadgeText}>👤 {user.email}</Text>
+              <Text style={s.adminBadgeLabel}>Administrator</Text>
+            </View>
+          )}
+        </View>
 
-        {byocMode && (
-          <View style={{ marginTop: 12, padding: 12, backgroundColor: palette.warning || palette.primary, borderRadius: 8 }}>
-            <Text style={{ color: palette.onPrimary, fontWeight: '700', marginBottom: 4 }}>⚠️ BYOC Mode Active</Text>
-            <Text style={{ color: palette.onPrimary, fontSize: 13 }}>
-              Admin features requiring Firestore are disabled in Hybrid/Strict BYOC mode. 
-              Only activity logs and broadcast tools are available. Switch to default mode for full admin access.
+        {!firestoreEnabled ? (
+          <View style={s.warningCard}>
+            <Text style={s.warningTitle}>⚠️ Limited Access</Text>
+            <Text style={s.warningText}>
+              Firestore features are not available. Only activity logs and broadcast tools accessible.
+              {user?.email !== 'empowrapp08162025@gmail.com' && ' (Admin-only features require authorized account)'}
             </Text>
           </View>
-        )}
-
-        {!byocMode && (
-          <View style={{ marginTop: 8 }}>
-            <Text style={s.text}>Counts — Users: {counts.users ?? "-"} | Campaigns: {counts.campaigns ?? "-"} | Resources: {counts.resources ?? "-"}</Text>
+        ) : (
+          <View style={s.successCard}>
+            <Text style={s.successTitle}>✅ Full Admin Access</Text>
+            <Text style={s.successText}>Firestore enabled • All admin features available</Text>
           </View>
         )}
 
-        <React.Suspense fallback={<View style={s.card}><Text style={s.cardTitle}>Admin Audit</Text><Text style={s.text}>Loading…</Text></View>}>
+        {firestoreEnabled && (
+          <View style={s.statsCard}>
+            <Text style={s.cardTitle}>📊 System Overview</Text>
+            <GapView style={{ flexDirection:'row', flexWrap:'wrap', marginTop:8 }} gap={12}>
+              <StatBox title="Users" value={counts.users ?? "-"} palette={palette} />
+              <StatBox title="Campaigns" value={counts.campaigns ?? "-"} palette={palette} />
+              <StatBox title="Resources" value={counts.resources ?? "-"} palette={palette} />
+            </GapView>
+          </View>
+        )}
+
+        <React.Suspense fallback={<LoadingCard title="Admin Audit" />}>
           <AdminLazy.AuditPanel />
         </React.Suspense>
 
         {/* Activity Metrics */}
-        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Activity Metrics</Text>
-        <Text style={s.text}>Events (last 24h / total): {activityStats.since24h} / {activityStats.total}</Text>
-        <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={6}>
-          {Object.entries(activityStats.byType).slice(0,12).map(([k,v])=> (
-            <View key={k} style={{ backgroundColor: palette.surface, paddingHorizontal:8, paddingVertical:4, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
-              <Text style={{ color: palette.text, fontSize:12 }}>{k}: {v}</Text>
-            </View>
-          ))}
-        </GapView>
+        <View style={s.card}>
+          <Text style={s.cardTitle}>📈 Activity Metrics</Text>
+          <View style={{ marginTop:8, marginBottom:12 }}>
+            <Text style={s.statLabel}>Recent Activity (24h / Total)</Text>
+            <Text style={s.statValue}>{activityStats.since24h} / {activityStats.total} events</Text>
+          </View>
+          <Text style={[s.text, { marginBottom:8, fontWeight:'600' }]}>By Type:</Text>
+          <GapView style={{ flexDirection:'row', flexWrap:'wrap' }} gap={6}>
+            {Object.entries(activityStats.byType).slice(0,12).map(([k,v])=> (
+              <View key={k} style={s.badge}>
+                <Text style={s.badgeText}>{k}: {v}</Text>
+              </View>
+            ))}
+          </GapView>
+        </View>
 
         {/* Broadcast Tool */}
-        <Text style={[s.text, { marginTop: 16, fontWeight: '700' }]}>Broadcast Announcement</Text>
-        <TextInput
-          value={broadcastTitle}
-          onChangeText={setBroadcastTitle}
-          placeholder="Title"
-          style={{ borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
-        />
-        <TextInput
-          value={broadcastBody}
-          onChangeText={setBroadcastBody}
-          placeholder="Body (optional)"
-          multiline={true}
-          style={{ borderWidth: StyleSheet.hairlineWidth, minHeight:70, borderColor: palette.muted, color: palette.text, padding:8, borderRadius:6, marginBottom:6 }}
-        />
-        <GapView style={{ flexDirection:'row' }} gap={8}>
-          <A11yPressable
-            accessibilityRole="button"
-            accessibilityLabel="Send broadcast announcement"
-            disabled={!broadcastTitle.trim()}
-            onPress={async ()=> {
-              try {
-                await logActivity({ type:'broadcast', payload:{ title: broadcastTitle.trim(), body: broadcastBody.trim()||undefined, importance:'info' }, summaryKey:'broadcast.generic' });
-                setBroadcastTitle(''); setBroadcastBody(''); Alert.alert('Broadcast sent');
-              } catch { Alert.alert('Failed','Could not send broadcast'); }
-            }}
-            style={{ paddingHorizontal: 14, paddingVertical:10, backgroundColor: palette.primary, borderRadius:6, opacity: broadcastTitle.trim()?1:0.6 }}
-          >
-            <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>Send</Text>
-          </A11yPressable>
-          <A11yPressable
-            accessibilityRole="button"
-            accessibilityLabel="Clear broadcast form"
-            onPress={()=> { setBroadcastTitle(''); setBroadcastBody(''); }}
-            style={{ paddingHorizontal: 14, paddingVertical:10, backgroundColor: palette.surface, borderRadius:6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-          >
-            <Text style={{ color: palette.text, fontWeight:'700' }}>Clear</Text>
-          </A11yPressable>
-        </GapView>
+        <View style={s.card}>
+          <Text style={s.cardTitle}>📢 Broadcast Announcement</Text>
+          <Text style={[s.text, { marginBottom:12 }]}>Send system-wide notifications to all users</Text>
+          <TextInput
+            value={broadcastTitle}
+            onChangeText={setBroadcastTitle}
+            placeholder="Announcement title"
+            placeholderTextColor={palette.text + '66'}
+            style={s.input}
+          />
+          <TextInput
+            value={broadcastBody}
+            onChangeText={setBroadcastBody}
+            placeholder="Message body (optional)"
+            placeholderTextColor={palette.text + '66'}
+            multiline={true}
+            style={[s.input, { minHeight:70, textAlignVertical:'top' }]}
+          />
+          <GapView style={{ flexDirection:'row' }} gap={8}>
+            <A11yPressable
+              accessibilityRole="button"
+              accessibilityLabel="Send broadcast announcement"
+              disabled={!broadcastTitle.trim()}
+              onPress={async ()=> {
+                try {
+                  await logActivity({ type:'broadcast', payload:{ title: broadcastTitle.trim(), body: broadcastBody.trim()||undefined, importance:'info' }, summaryKey:'broadcast.generic' });
+                  setBroadcastTitle(''); setBroadcastBody(''); Alert.alert('✅ Success', 'Broadcast sent to all users');
+                } catch { Alert.alert('❌ Error','Could not send broadcast'); }
+              }}
+              style={[s.primaryButton, { opacity: broadcastTitle.trim()?1:0.5 }]}
+            >
+              <Text style={s.primaryButtonText}>Send Broadcast</Text>
+            </A11yPressable>
+            <A11yPressable
+              accessibilityRole="button"
+              accessibilityLabel="Clear broadcast form"
+              onPress={()=> { setBroadcastTitle(''); setBroadcastBody(''); }}
+              style={s.secondaryButton}
+            >
+              <Text style={s.secondaryButtonText}>Clear</Text>
+            </A11yPressable>
+          </GapView>
+        </View>
 
-        <React.Suspense fallback={<Text style={[s.text, { marginTop: 16 }]}>Loading FAQs…</Text>}>
+        <React.Suspense fallback={<LoadingCard title="FAQ Editor" />}>
           <AdminLazy.FaqEditor />
         </React.Suspense>
 
-        {!byocMode && (
+        {firestoreEnabled && (
           <>
             {/* User Lookup */}
-            <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>User Lookup</Text>
-        <GapView style={{ flexDirection: "row", alignItems: "center" }} gap={8}>
-          <TextInput
-            value={email}
-            onChangeText={setEmail}
-            placeholder="name at example dot com"
-            style={{ flex: 1, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding: 8, borderRadius: 6 }}
-            autoCapitalize="none"
-            keyboardType="email-address"
-          />
-          <A11yPressable
-            onPress={async () => {
-              try {
-                const col = collection(db, "users");
-                const q = query(col, where("email", "==", email.trim()), limit(1));
-                const snap = await getDocs(q);
-                setResult(snap.docs[0] ? { id: snap.docs[0].id, ...(snap.docs[0].data() as any) } : null);
-                if (!snap.docs[0]) Alert.alert("Not found", "No user with that email.");
-              } catch (e: any) {
-                Alert.alert("Lookup failed", e?.message || "Error");
-              }
-            }}
-            hitSlop={HIT_SLOP_8}
-            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.primary, borderRadius: 6 }}
-          >
-            <Text style={{ color: palette.onPrimary, fontWeight: "700" }}>Search</Text>
-          </A11yPressable>
-        </GapView>
-        {!!result && (
-          <View style={{ marginTop: 10, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 10 }}>
-            <Text style={s.text}>UID: {result.id}</Text>
-            <Text style={s.text}>Email: {result.email || "-"}</Text>
-            <Text style={s.text}>Name: {result.displayName || "-"}</Text>
-            <GapView style={{ flexDirection: "row", marginTop: 8 }} gap={8}>
-              <A11yPressable
-                onPress={async () => {
-                  try {
-                    await updateDoc(doc(db, "users", result.id), { banned: !(result.banned === true) });
-                    setResult({ ...result, banned: !(result.banned === true) });
-                  } catch (e: any) { Alert.alert("Update failed", e?.message || "Error"); }
-                }}
-                hitSlop={HIT_SLOP_8}
-                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
-              >
-                <Text style={{ color: palette.text, fontWeight: "700" }}>{result.banned ? "Unban" : "Ban"}</Text>
-              </A11yPressable>
-              <A11yPressable
-                onPress={async () => {
-                  try {
-                    await updateDoc(doc(db, "users", result.id), { verified: !(result.verified === true) });
-                    setResult({ ...result, verified: !(result.verified === true) });
-                  } catch (e: any) { Alert.alert("Update failed", e?.message || "Error"); }
-                }}
-                hitSlop={HIT_SLOP_8}
-                style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}
-              >
-                <Text style={{ color: palette.text, fontWeight: "700" }}>{result.verified ? "Unverify" : "Verify"}</Text>
-              </A11yPressable>
-            </GapView>
-          </View>
-        )}
+            <View style={s.card}>
+              <Text style={s.cardTitle}>🔍 User Lookup</Text>
+              <Text style={[s.text, { marginBottom:12 }]}>Search for users by email address</Text>
+              <GapView style={{ flexDirection: "row", alignItems: "center" }} gap={8}>
+                <TextInput
+                  value={email}
+                  onChangeText={setEmail}
+                  placeholder="user@example.com"
+                  placeholderTextColor={palette.text + '66'}
+                  style={[s.input, { flex: 1, marginBottom:0 }]}
+                  autoCapitalize="none"
+                  keyboardType="email-address"
+                />
+                <A11yPressable
+                  onPress={async () => {
+                    try {
+                      const col = collection(db, "users");
+                      const q = query(col, where("email", "==", email.trim()), limit(1));
+                      const snap = await getDocs(q);
+                      setResult(snap.docs[0] ? { id: snap.docs[0].id, ...(snap.docs[0].data() as any) } : null);
+                      if (!snap.docs[0]) Alert.alert("Not found", "No user with that email.");
+                    } catch (e: any) {
+                      Alert.alert("Search failed", e?.message || "Error");
+                    }
+                  }}
+                  hitSlop={HIT_SLOP_8}
+                  style={s.primaryButton}
+                >
+                  <Text style={s.primaryButtonText}>Search</Text>
+                </A11yPressable>
+              </GapView>
+              {!!result && (
+                <View style={s.resultCard}>
+                  <Text style={[s.text, { fontWeight:'600', marginBottom:6 }]}>User Details:</Text>
+                  <Text style={s.text}>UID: {result.id}</Text>
+                  <Text style={s.text}>Email: {result.email || "-"}</Text>
+                  <Text style={s.text}>Name: {result.displayName || "-"}</Text>
+                  <Text style={s.text}>Status: {result.banned ? '🚫 Banned' : result.verified ? '✅ Verified' : '⏳ Unverified'}</Text>
+                  <GapView style={{ flexDirection: "row", marginTop: 12 }} gap={8}>
+                    <A11yPressable
+                      onPress={async () => {
+                        try {
+                          await updateDoc(doc(db, "users", result.id), { banned: !(result.banned === true) });
+                          setResult({ ...result, banned: !(result.banned === true) });
+                          Alert.alert('✅ Success', result.banned ? 'User unbanned' : 'User banned');
+                        } catch (e: any) { Alert.alert("Update failed", e?.message || "Error"); }
+                      }}
+                      hitSlop={HIT_SLOP_8}
+                      style={s.secondaryButton}
+                    >
+                      <Text style={s.secondaryButtonText}>{result.banned ? "Unban User" : "Ban User"}</Text>
+                    </A11yPressable>
+                    <A11yPressable
+                      onPress={async () => {
+                        try {
+                          await updateDoc(doc(db, "users", result.id), { verified: !(result.verified === true) });
+                          setResult({ ...result, verified: !(result.verified === true) });
+                          Alert.alert('✅ Success', result.verified ? 'User unverified' : 'User verified');
+                        } catch (e: any) { Alert.alert("Update failed", e?.message || "Error"); }
+                      }}
+                      hitSlop={HIT_SLOP_8}
+                      style={s.secondaryButton}
+                    >
+                      <Text style={s.secondaryButtonText}>{result.verified ? "Unverify" : "Verify User"}</Text>
+                    </A11yPressable>
+                  </GapView>
+                </View>
+              )}
+            </View>
 
         {/* Users list */}
-        <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>Users</Text>
-        <GapView style={{ flexDirection: "row", flexWrap: "wrap" }} gap={8}>
-          <A11yPressable
-            onPress={async () => {
-              try {
-                const col = collection(db, "users");
-                const q = cursor ? query(col, limit(20), startAfter(cursor)) : query(col, limit(20));
-                const snap = await getDocs(q);
-                setUsers(snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) })));
-                setCursor(snap.docs[snap.docs.length - 1] || null);
-              } catch (e: any) { Alert.alert("Load failed", e?.message || "Error"); }
-            }}
-            hitSlop={HIT_SLOP_8}
-            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.primary, borderRadius: 6 }}
-          >
-            <Text style={{ color: palette.onPrimary, fontWeight: "700" }}>Load / Next</Text>
-          </A11yPressable>
-          <A11yPressable
-            onPress={() => { setCursor(null); setUsers([]); }}
-            hitSlop={HIT_SLOP_8}
-            style={{ paddingVertical: 10, paddingHorizontal: 14, backgroundColor: palette.surface, borderRadius: 6, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-          >
-            <Text style={{ color: palette.text, fontWeight: "700" }}>Reset</Text>
-          </A11yPressable>
-        </GapView>
-        {sortedUsers.map((u) => (
-          <View key={u.id} style={{ marginBottom: 6 }}>
-            <Text style={s.text}>{u.email || u.id} - {u.displayName || '-'}</Text>
-          </View>
-        ))}
+        <View style={s.card}>
+          <Text style={s.cardTitle}>👥 User Management</Text>
+          <Text style={[s.text, { marginBottom:12 }]}>Browse all registered users</Text>
+          <GapView style={{ flexDirection: "row", flexWrap: "wrap" }} gap={8}>
+            <A11yPressable
+              onPress={async () => {
+                try {
+                  const col = collection(db, "users");
+                  const q = cursor ? query(col, limit(20), startAfter(cursor)) : query(col, limit(20));
+                  const snap = await getDocs(q);
+                  setUsers(snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) })));
+                  setCursor(snap.docs[snap.docs.length - 1] || null);
+                } catch (e: any) { Alert.alert("Load failed", e?.message || "Error"); }
+              }}
+              hitSlop={HIT_SLOP_8}
+              style={s.primaryButton}
+            >
+              <Text style={s.primaryButtonText}>Load / Next 20</Text>
+            </A11yPressable>
+            <A11yPressable
+              onPress={() => { setCursor(null); setUsers([]); }}
+              hitSlop={HIT_SLOP_8}
+              style={s.secondaryButton}
+            >
+              <Text style={s.secondaryButtonText}>Reset</Text>
+            </A11yPressable>
+          </GapView>
+          {sortedUsers.length > 0 && (
+            <View style={{ marginTop:12 }}>
+              {sortedUsers.map((u) => (
+                <View key={u.id} style={s.userRow}>
+                  <Text style={s.text}>{u.email || u.id}</Text>
+                  <Text style={[s.text, { fontSize:12, opacity:0.7 }]}>{u.displayName || 'No name'}</Text>
+                </View>
+              ))}
+            </View>
+          )}
+        </View>
 
         {/* Moderation Flags */}
-        <Text style={[s.text, { marginTop: 16, fontWeight: "700" }]}>Moderation Flags</Text>
-        {flags.length === 0 ? (
-          <Text style={s.text}>No flags.</Text>
-        ) : (
-          <>
-            <GapView style={{ flexDirection: 'row', marginBottom: 8, flexWrap: 'wrap' }} gap={8}>
-              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSelectedFlags(Object.fromEntries(flags.map((f: any) => [f.id, true])))} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Select all</Text></A11yPressable>
-              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSelectedFlags({})} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Clear</Text></A11yPressable>
-              <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(Object.keys(selectedFlags).filter(id=>selectedFlags[id]).map(id=> resolveFlag(id))); setSelectedFlags({}); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Resolve selected</Text></A11yPressable>
-              <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const sel = flags.filter((f: any)=> selectedFlags[f.id]); for (const f of sel) { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } } const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map((f: any)=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags(); } catch {} }} style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}><Text style={{ color: palette.text, fontWeight:'700' }}>Delete items</Text></A11yPressable>
-            </GapView>
-            {flags.map((f: any) => (
-              <View key={f.id} style={{ marginBottom: 6 }}>
-                <GapView style={{ flexDirection:'row', alignItems:'center' }} gap={8}>
-                  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setSelectedFlags(prev=> ({ ...prev, [f.id]: !prev[f.id] }))} style={{ width: 18, height: 18, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 4, alignItems:'center', justifyContent:'center', backgroundColor: selectedFlags[f.id]? palette.primary: 'transparent' }}>
-                    {selectedFlags[f.id] ? <View style={{ width: 10, height: 10, backgroundColor: palette.onPrimary, borderRadius: 2 }} /> : null}
-                  </A11yPressable>
-                  <Text style={s.text}>[{f.type}] {f.targetId} - {f.reason}</Text>
-                </GapView>
-                <View style={{ marginLeft: 26 }}>
-                  {f.type === 'mutual' ? (
-                    <FlagPreviewMutual targetId={f.targetId} />
-                  ) : f.type === 'rating' ? (
-                    <FlagPreviewRating targetId={f.targetId} />
-                  ) : null}
+        <View style={s.card}>
+          <Text style={s.cardTitle}>🚩 Moderation Flags</Text>
+          <Text style={[s.text, { marginBottom:12 }]}>Review user-reported content</Text>
+          {flags.length === 0 ? (
+            <Text style={[s.text, { fontStyle:'italic', opacity:0.7 }]}>No active flags</Text>
+          ) : (
+            <>
+              <GapView style={{ flexDirection: 'row', marginBottom: 12, flexWrap: 'wrap' }} gap={8}>
+                <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSelectedFlags(Object.fromEntries(flags.map((f: any) => [f.id, true])))} style={s.secondaryButton}><Text style={s.secondaryButtonText}>Select All</Text></A11yPressable>
+                <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSelectedFlags({})} style={s.secondaryButton}><Text style={s.secondaryButtonText}>Clear Selection</Text></A11yPressable>
+                <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(Object.keys(selectedFlags).filter(id=>selectedFlags[id]).map(id=> resolveFlag(id))); setSelectedFlags({}); loadFlags(); Alert.alert('✅ Success','Selected flags resolved'); } catch {} }} style={s.primaryButton}><Text style={s.primaryButtonText}>Resolve Selected</Text></A11yPressable>
+                <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const sel = flags.filter((f: any)=> selectedFlags[f.id]); for (const f of sel) { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } } const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map((f: any)=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags(); Alert.alert('✅ Success','Items deleted'); } catch {} }} style={[s.primaryButton, { backgroundColor: palette.error || '#dc2626' }]}><Text style={s.primaryButtonText}>Delete Items</Text></A11yPressable>
+              </GapView>
+              {flags.map((f: any) => (
+                <View key={f.id} style={s.flagCard}>
+                  <GapView style={{ flexDirection:'row', alignItems:'center', marginBottom:8 }} gap={8}>
+                    <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> setSelectedFlags(prev=> ({ ...prev, [f.id]: !prev[f.id] }))} style={s.checkbox}>
+                      {selectedFlags[f.id] ? <View style={s.checkboxChecked} /> : null}
+                    </A11yPressable>
+                    <View style={{ flex:1 }}>
+                      <Text style={[s.text, { fontWeight:'600' }]}>{f.type.toUpperCase()} • ID: {f.targetId.slice(0,8)}...</Text>
+                      <Text style={s.text}>Reason: {f.reason}</Text>
+                    </View>
+                  </GapView>
+                  <View style={{ marginLeft: 26, marginBottom:8 }}>
+                    {f.type === 'mutual' ? (
+                      <FlagPreviewMutual targetId={f.targetId} />
+                    ) : f.type === 'rating' ? (
+                      <FlagPreviewRating targetId={f.targetId} />
+                    ) : null}
+                  </View>
+                  <GapView style={{ flexDirection: 'row', marginLeft:26 }} gap={8}>
+                    <A11yPressable
+                      accessibilityLabel={`Resolve flag ${f.id}`}
+                      hitSlop={HIT_SLOP_8}
+                      onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); Alert.alert('✅ Done','Flag resolved'); loadFlags(); } catch {} }}
+                      style={s.secondaryButton}>
+                      <Text style={s.secondaryButtonText}>Resolve</Text>
+                    </A11yPressable>
+                    <A11yPressable
+                      accessibilityLabel="Delete flagged item"
+                      hitSlop={HIT_SLOP_8}
+                      onPress={async()=>{ try { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); Alert.alert('✅ Done','Item deleted'); loadFlags(); } catch {} }}
+                      style={[s.secondaryButton, { borderColor: palette.error || '#dc2626' }]}>
+                      <Text style={[s.secondaryButtonText, { color: palette.error || '#dc2626' }]}>Delete Item</Text>
+                    </A11yPressable>
+                  </GapView>
                 </View>
-                <GapView style={{ flexDirection: 'row' }} gap={8}>
-                  <A11yPressable
-                    accessibilityLabel={`Resolve flag ${f.id}`}
-                    hitSlop={HIT_SLOP_8}
-                    onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); Alert.alert('Done','Flag resolved'); loadFlags(); } catch {} }}
-                    style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
-                    <Text style={{ color: palette.text, fontWeight: '700' }}>Resolve</Text>
-                  </A11yPressable>
-                  <A11yPressable
-                    accessibilityLabel="Delete flagged item"
-                    hitSlop={HIT_SLOP_8}
-                    onPress={async()=>{ try { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); Alert.alert('Done','Item deleted'); loadFlags(); } catch {} }}
-                    style={{ paddingHorizontal: 10, paddingVertical: 8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 }}>
-                    <Text style={{ color: palette.text, fontWeight: '700' }}>Delete Item</Text>
-                  </A11yPressable>
-                </GapView>
-              </View>
-            ))}
-          </>
-        )}
+              ))}
+            </>
+          )}
+        </View>
         </>
         )}
 
-        <React.Suspense fallback={<Text style={[s.text, { marginTop: 16 }]}>Loading content review…</Text>}>
+        <React.Suspense fallback={<LoadingCard title="Content Review" />}>
           <AdminLazy.ContentReview />
         </React.Suspense>
       </ScrollView>
@@ -392,7 +445,9 @@ function FlagPreviewMutual({ targetId }: { targetId: string }) {
   }, [targetId]);
   if (!p) return null;
   return (
-    <Text style={{ color: palette.text, opacity: 0.8 }}>post: {p.type} • {p.city || '-'} - {p.description}</Text>
+    <Text style={{ color: palette.text, opacity: 0.7, fontSize:13 }}>
+      Post: {p.type} • {p.city || '-'} - {p.description}
+    </Text>
   );
 }
 
@@ -410,16 +465,259 @@ function FlagPreviewRating({ targetId }: { targetId: string }) {
   }, [targetId]);
   if (!r) return null;
   return (
-    <Text style={{ color: palette.text, opacity: 0.8 }}>rating: {r.target} • {r.score}★ - {r.comment || '-'}</Text>
+    <Text style={{ color: palette.text, opacity: 0.7, fontSize:13 }}>
+      Rating: {r.target} • {r.score}★ - {r.comment || '-'}
+    </Text>
+  );
+}
+
+function StatBox({ title, value, palette }: { title: string; value: number | string; palette: ReturnType<typeof useAppPalette> }) {
+  return (
+    <View style={{ 
+      flex:1, 
+      minWidth:100, 
+      backgroundColor: palette.surface, 
+      padding:12, 
+      borderRadius:8, 
+      borderWidth: StyleSheet.hairlineWidth, 
+      borderColor: palette.muted,
+      alignItems:'center'
+    }}>
+      <Text style={{ color: palette.text, fontSize:24, fontWeight:'700', marginBottom:4 }}>{value}</Text>
+      <Text style={{ color: palette.text, opacity:0.7, fontSize:12 }}>{title}</Text>
+    </View>
+  );
+}
+
+function LoadingCard({ title }: { title: string }) {
+  const palette = useAppPalette();
+  return (
+    <View style={{ 
+      backgroundColor: palette.card, 
+      borderWidth: StyleSheet.hairlineWidth, 
+      borderColor: palette.muted, 
+      borderRadius: 12, 
+      padding: 16, 
+      marginTop: 16 
+    }}>
+      <Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>{title}</Text>
+      <Text style={{ color: palette.text, opacity:0.7 }}>Loading…</Text>
+    </View>
   );
 }
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
-    container: { flex: 1, backgroundColor: palette.background },
-    title: { fontSize: 22, fontWeight: "700", color: palette.text, marginBottom: 8 },
-    text: { color: palette.text, opacity: 0.95, marginBottom: 6 },
-    card: { backgroundColor: palette.card, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginTop: 10 },
-    cardTitle: { color: palette.text, fontWeight: '700', marginBottom: 6 },
+    container: { 
+      flex: 1, 
+      backgroundColor: palette.background 
+    },
+    headerCard: {
+      backgroundColor: palette.card,
+      borderRadius: 12,
+      padding: 20,
+      marginBottom: 16,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+    },
+    title: { 
+      fontSize: 28, 
+      fontWeight: "800", 
+      color: palette.text, 
+      marginBottom: 6,
+      letterSpacing: -0.5,
+    },
+    subtitle: {
+      fontSize: 15,
+      color: palette.text,
+      opacity: 0.7,
+      marginBottom: 12,
+    },
+    adminBadge: {
+      backgroundColor: palette.primary + '15',
+      paddingHorizontal: 12,
+      paddingVertical: 8,
+      borderRadius: 8,
+      borderWidth: 1,
+      borderColor: palette.primary + '40',
+      marginTop: 8,
+    },
+    adminBadgeText: {
+      color: palette.primary,
+      fontWeight: '600',
+      fontSize: 14,
+    },
+    adminBadgeLabel: {
+      color: palette.primary,
+      fontSize: 11,
+      opacity: 0.8,
+      marginTop: 2,
+    },
+    warningCard: {
+      backgroundColor: palette.warning || palette.primary,
+      borderRadius: 12,
+      padding: 16,
+      marginBottom: 16,
+    },
+    warningTitle: {
+      color: palette.onPrimary,
+      fontWeight: '700',
+      fontSize: 16,
+      marginBottom: 6,
+    },
+    warningText: {
+      color: palette.onPrimary,
+      fontSize: 14,
+      lineHeight: 20,
+      opacity: 0.95,
+    },
+    successCard: {
+      backgroundColor: '#10b981',
+      borderRadius: 12,
+      padding: 16,
+      marginBottom: 16,
+    },
+    successTitle: {
+      color: '#ffffff',
+      fontWeight: '700',
+      fontSize: 16,
+      marginBottom: 6,
+    },
+    successText: {
+      color: '#ffffff',
+      fontSize: 14,
+      opacity: 0.95,
+    },
+    statsCard: {
+      backgroundColor: palette.card,
+      borderRadius: 12,
+      padding: 16,
+      marginBottom: 16,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+    },
+    card: {
+      backgroundColor: palette.card,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      borderRadius: 12,
+      padding: 16,
+      marginTop: 16,
+    },
+    cardTitle: {
+      color: palette.text,
+      fontWeight: '700',
+      fontSize: 18,
+      marginBottom: 8,
+    },
+    text: {
+      color: palette.text,
+      opacity: 0.9,
+      fontSize: 14,
+      lineHeight: 20,
+    },
+    statLabel: {
+      color: palette.text,
+      opacity: 0.7,
+      fontSize: 12,
+      fontWeight: '600',
+      textTransform: 'uppercase',
+      letterSpacing: 0.5,
+    },
+    statValue: {
+      color: palette.text,
+      fontSize: 20,
+      fontWeight: '700',
+      marginTop: 4,
+    },
+    badge: {
+      backgroundColor: palette.surface,
+      paddingHorizontal: 10,
+      paddingVertical: 6,
+      borderRadius: 6,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+    },
+    badgeText: {
+      color: palette.text,
+      fontSize: 12,
+      fontWeight: '500',
+    },
+    input: {
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      color: palette.text,
+      padding: 12,
+      borderRadius: 8,
+      marginBottom: 12,
+      fontSize: 14,
+      backgroundColor: palette.surface,
+    },
+    primaryButton: {
+      paddingHorizontal: 16,
+      paddingVertical: 12,
+      backgroundColor: palette.primary,
+      borderRadius: 8,
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: 44,
+    },
+    primaryButtonText: {
+      color: palette.onPrimary,
+      fontWeight: '700',
+      fontSize: 14,
+    },
+    secondaryButton: {
+      paddingHorizontal: 16,
+      paddingVertical: 12,
+      backgroundColor: palette.surface,
+      borderRadius: 8,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: 44,
+    },
+    secondaryButtonText: {
+      color: palette.text,
+      fontWeight: '700',
+      fontSize: 14,
+    },
+    resultCard: {
+      marginTop: 12,
+      padding: 12,
+      backgroundColor: palette.surface,
+      borderRadius: 8,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+    },
+    userRow: {
+      paddingVertical: 8,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderBottomColor: palette.muted,
+    },
+    flagCard: {
+      marginBottom: 12,
+      padding: 12,
+      backgroundColor: palette.surface,
+      borderRadius: 8,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: palette.muted,
+    },
+    checkbox: {
+      width: 20,
+      height: 20,
+      borderWidth: 2,
+      borderColor: palette.muted,
+      borderRadius: 4,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    checkboxChecked: {
+      width: 12,
+      height: 12,
+      backgroundColor: palette.primary,
+      borderRadius: 2,
+    },
   });
 }

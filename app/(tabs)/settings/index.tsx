@@ -352,7 +352,7 @@ export default function SettingsScreen() {
           </A11yPressable>
         </Section>
         <Section title='Terms & Policies' styles={styles}><TermsSection /></Section>
-    {user && <Section title='Admin' styles={styles}><AdminSection /></Section>}
+        <DeveloperSection styles={styles} />
       </View>
     </ResponsiveScreenWrapper>
   );
@@ -439,26 +439,6 @@ function TermsSection() {
       <Button title='Delete My Data' onPress={openDeleteData} />
       <View style={{ height:8 }} />
       <Button title='Require re-acceptance' onPress={reset} />
-    </View>
-  );
-}
-
-function AdminSection() {
-  const { isAdmin, refreshClaims } = useAuth();
-  const palette = useAppPalette();
-  return (
-    <View>
-      <Text style={{ color:palette.text, opacity:0.9, marginBottom:6 }}>Status: {isAdmin? 'Admin':'Standard user'}</Text>
-      <Button title='Refresh admin status' onPress={refreshClaims} />
-      {isAdmin && (
-        <View style={{ marginTop:8 }}>
-          <Link href={'/(tabs)/admin' as any} asChild={true}>
-            <A11yPressable accessibilityRole='link' accessibilityLabel='Open Admin Panel' hitSlop={HIT_SLOP_8} style={{ paddingVertical:4 }}>
-              <Text style={{ color:palette.primary, fontWeight:'700' }}>Open Admin Panel</Text>
-            </A11yPressable>
-          </Link>
-        </View>
-      )}
     </View>
   );
 }
