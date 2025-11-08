@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3mpwrApp Events Calendar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      color: white;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    .filters {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filters label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .filters select {
+      padding: 8px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .filters select:hover {
+      border-color: #667eea;
+    }
+
+    .filters select:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .event-count {
+      margin-left: auto;
+      font-weight: 600;
+      color: #667eea;
+    }
+
+    #events-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .event-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .event-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    }
+
+    .event-card h3 {
+      color: #333;
+      margin-bottom: 12px;
+      font-size: 1.4em;
+      line-height: 1.3;
+    }
+
+    .event-date {
+      color: #667eea;
+      font-weight: 600;
+      font-size: 1.05em;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .event-date::before {
+      content: '📅';
+    }
+
+    .event-description {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .event-location {
+      color: #666;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .event-location::before {
+      content: '📍';
+    }
+
+    .event-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      background: #e0f2fe;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: 500;
+      color: #0369a1;
+    }
+
+    .badge.virtual {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .badge.accessibility {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .badge.community {
+      background: #f3e8ff;
+      color: #6b21a8;
+    }
+
+    .badge.awareness {
+      background: #ffe4e6;
+      color: #be123c;
+    }
+
+    .badge.holiday {
+      background: #dbeafe;
+      color: #1e3a8a;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 60px 20px;
+      background: white;
+      border-radius: 12px;
+      color: #666;
+      font-size: 1.2em;
+    }
+
+    .error {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fee;
+      border-radius: 12px;
+      color: #c33;
+      font-size: 1.1em;
+    }
+
+    .no-events {
+      text-align: center;
+      padding: 60px 20px;
+      background: white;
+      border-radius: 12px;
+      color: #666;
+      font-size: 1.2em;
+    }
+
+    .subscribe-section {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 40px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .subscribe-section h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .subscribe-section p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .subscribe-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #667eea;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .subscribe-button:hover {
+      background: #5568d3;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      margin-top: 60px;
+      padding: 20px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      #events-list {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      .filters {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .event-count {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🗓️ 3mpwrApp Events Calendar</h1>
+      <p>Community events, awareness days, holidays & more</p>
+    </header>
+
+    <div class="filters">
+      <label for="category-filter">Filter by:</label>
+      <select id="category-filter">
+        <option value="all">All Events</option>
+        <option value="community">Community Events</option>
+        <option value="awareness">Awareness Days</option>
+        <option value="holiday">Holidays</option>
+        <option value="health">Health Observances</option>
+        <option value="disability">Disability Awareness</option>
+      </select>
+
+      <label for="sort-order">Sort by:</label>
+      <select id="sort-order">
+        <option value="date-asc">Date (Upcoming First)</option>
+        <option value="date-desc">Date (Latest First)</option>
+        <option value="title">Title (A-Z)</option>
+      </select>
+
+      <span class="event-count" id="event-count">Loading...</span>
+    </div>
+
+    <div id="events-list">
+      <div class="loading">Loading events...</div>
+    </div>
+
+    <div class="subscribe-section">
+      <h2>📱 Subscribe to Calendar</h2>
+      <p>Add all events to your calendar app (Google Calendar, Outlook, Apple Calendar)</p>
+      <div class="subscribe-buttons">
+        <a href="https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics" class="subscribe-button" download>
+          📥 Download .ics File
+        </a>
+        <a href="webcal://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics" class="subscribe-button">
+          🔗 Subscribe in Calendar App
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 3mpwrApp | Empowering Communities Through Accessibility</p>
+      <p style="margin-top: 10px; font-size: 0.9em;">
+        <a href="https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events" style="color: white; text-decoration: underline;">API Endpoint</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    let allEvents = [];
+    let filteredEvents = [];
+
+    // Fetch events from Cloudflare Worker API
+    async function loadEvents() {
+      try {
+        const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?limit=1000');
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        allEvents = data.events || [];
+        
+        // If Worker API fails, fall back to static JSON
+        if (allEvents.length === 0) {
+          const fallbackResponse = await fetch('/api/events.json');
+          allEvents = await fallbackResponse.json();
+        }
+        
+        applyFilters();
+        
+      } catch (error) {
+        console.error('Failed to load events:', error);
+        document.getElementById('events-list').innerHTML = `
+          <div class="error">
+            Unable to load events. Please try again later.<br>
+            <small>Error: ${error.message}</small>
+          </div>
+        `;
+      }
+    }
+
+    // Apply filters and sort
+    function applyFilters() {
+      const categoryFilter = document.getElementById('category-filter').value;
+      const sortOrder = document.getElementById('sort-order').value;
+
+      // Filter by category
+      filteredEvents = allEvents.filter(event => {
+        if (categoryFilter === 'all') return true;
+        
+        // Check event type/category
+        if (event.type && event.type.toLowerCase() === categoryFilter) return true;
+        if (event.category && event.category.toLowerCase() === categoryFilter) return true;
+        
+        // Check tags
+        if (event.tags && event.tags.some(tag => tag.toLowerCase() === categoryFilter)) return true;
+        
+        return false;
+      });
+
+      // Sort events
+      filteredEvents.sort((a, b) => {
+        switch (sortOrder) {
+          case 'date-asc':
+            return new Date(a.startDate || a.date) - new Date(b.startDate || b.date);
+          case 'date-desc':
+            return new Date(b.startDate || b.date) - new Date(a.startDate || a.date);
+          case 'title':
+            return (a.title || '').localeCompare(b.title || '');
+          default:
+            return 0;
+        }
+      });
+
+      renderEvents();
+    }
+
+    // Render events to the page
+    function renderEvents() {
+      const container = document.getElementById('events-list');
+      const countElement = document.getElementById('event-count');
+
+      countElement.textContent = `${filteredEvents.length} event${filteredEvents.length !== 1 ? 's' : ''}`;
+
+      if (filteredEvents.length === 0) {
+        container.innerHTML = '<div class="no-events">No events found matching your filters.</div>';
+        return;
+      }
+
+      container.innerHTML = filteredEvents.map(event => {
+        const eventDate = new Date(event.startDate || event.date);
+        const endDate = event.endDate ? new Date(event.endDate) : null;
+        const dateString = formatDate(eventDate, endDate);
+        
+        const location = event.location || (event.isVirtual ? 'Virtual Event' : '');
+        const badges = getBadges(event);
+
+        return `
+          <article class="event-card">
+            <h3>${escapeHtml(event.title)}</h3>
+            <div class="event-date">${dateString}</div>
+            ${event.description ? `<p class="event-description">${escapeHtml(event.description)}</p>` : ''}
+            ${location ? `<div class="event-location">${escapeHtml(location)}</div>` : ''}
+            ${badges.length > 0 ? `<div class="event-badges">${badges.join('')}</div>` : ''}
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Format date nicely
+    function formatDate(startDate, endDate) {
+      const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+
+      const startStr = startDate.toLocaleDateString('en-US', options);
+      
+      if (endDate && endDate.getTime() !== startDate.getTime()) {
+        const endStr = endDate.toLocaleDateString('en-US', options);
+        return `${startStr} - ${endStr}`;
+      }
+
+      return startStr;
+    }
+
+    // Get badges for event
+    function getBadges(event) {
+      const badges = [];
+
+      // Virtual badge
+      if (event.isVirtual) {
+        badges.push('<span class="badge virtual">🌐 Virtual</span>');
+      }
+
+      // Accessibility badges
+      if (event.asl || event.signLanguage) {
+        badges.push('<span class="badge accessibility">🤟 ASL</span>');
+      }
+      if (event.captions || event.closedCaptions) {
+        badges.push('<span class="badge accessibility">📝 Captions</span>');
+      }
+      if (event.stepFree || event.wheelchairAccessible) {
+        badges.push('<span class="badge accessibility">♿ Accessible</span>');
+      }
+      if (event.sensorySpace || event.sensoryFriendly) {
+        badges.push('<span class="badge accessibility">🎧 Sensory-Friendly</span>');
+      }
+
+      // Category badges
+      const category = event.type || event.category;
+      if (category) {
+        const categoryClass = category.toLowerCase().replace(/\s+/g, '-');
+        badges.push(`<span class="badge ${categoryClass}">${escapeHtml(category)}</span>`);
+      }
+
+      return badges;
+    }
+
+    // Escape HTML to prevent XSS
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // Event listeners
+    document.getElementById('category-filter').addEventListener('change', applyFilters);
+    document.getElementById('sort-order').addEventListener('change', applyFilters);
+
+    // Load events when page loads
+    document.addEventListener('DOMContentLoaded', loadEvents);
+
+    // Auto-refresh every 5 minutes
+    setInterval(loadEvents, 5 * 60 * 1000);
+  </script>
+</body>
+</html>
