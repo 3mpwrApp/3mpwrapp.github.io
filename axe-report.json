@@ -1,7 +1,135 @@
 [
   {
     "url": "https://3mpwrapp.pages.dev/?no-modal=1",
-    "violations": []
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#374151",
+                  "bgColor": "#293b51",
+                  "contrastRatio": 1.1,
+                  "fontSize": "10.8pt (14.4px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"page-progress-container\" role=\"progressbar\" aria-label=\"Page reading progress\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\">",
+                    "target": [
+                      ".page-progress-container"
+                    ]
+                  },
+                  {
+                    "html": "<button class=\"toolbar-toggle\" aria-expanded=\"false\" aria-controls=\"toolbar-content\" id=\"toolbarToggle\">",
+                    "target": [
+                      "#toolbarToggle"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 1.1 (foreground color: #374151, background color: #293b51, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<span class=\"page-progress-text\" id=\"pageProgressText\">0% through page</span>",
+            "target": [
+              "#pageProgressText"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.1 (foreground color: #374151, background color: #293b51, font size: 10.8pt (14.4px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#111111",
+                  "bgColor": "#23262f",
+                  "contrastRatio": 1.24,
+                  "fontSize": "13.2pt (17.6px)",
+                  "fontWeight": "bold",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"page-feedback\" role=\"complementary\">",
+                    "target": [
+                      ".page-feedback"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 1.24 (foreground color: #111111, background color: #23262f, font size: 13.2pt (17.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<strong>💬 Was this page helpful?</strong>",
+            "target": [
+              ".page-feedback > p:nth-child(1) > strong"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.24 (foreground color: #111111, background color: #23262f, font size: 13.2pt (17.6px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#212529",
+                  "bgColor": "#23262f",
+                  "contrastRatio": 1.02,
+                  "fontSize": "7.5pt (10px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"page-feedback\" role=\"complementary\">",
+                    "target": [
+                      ".page-feedback"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 1.02 (foreground color: #212529, background color: #23262f, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<small>Last updated: October 29, 2025 | Next review: December 2025</small>",
+            "target": [
+              ".page-meta > small"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #212529, background color: #23262f, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
   },
   {
     "url": "https://3mpwrapp.pages.dev/about?no-modal=1",

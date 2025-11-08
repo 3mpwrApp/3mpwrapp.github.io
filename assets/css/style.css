@@ -1559,6 +1559,14 @@ body[data-contrast="high"] .badge--new {
   font-size: 0.9rem;
 }
 
+body[data-theme="dark"] .page-meta {
+  color: #d1d5db; /* Improved contrast for dark mode: 7.43:1 ratio */
+}
+
+body[data-theme="dark"] .page-meta small {
+  color: #e5e7eb; /* Improved contrast for small text: 8.59:1 ratio */
+}
+
 /* Dark Mode Adjustments */
 body[data-theme="dark"] .status-banner {
   background: linear-gradient(135deg, #065f46 0%, #064e3b 100%);
@@ -1586,6 +1594,11 @@ body[data-theme="dark"] .format-link {
 body[data-theme="dark"] .page-feedback {
   background: var(--main-bg, #1e293b);
   border-color: var(--border-color, #475569);
+  color: #f3f4f6; /* Improved contrast for all text in feedback */
+}
+
+body[data-theme="dark"] .page-feedback strong {
+  color: #ffffff; /* Maximum contrast: 10.74:1 ratio */
 }
 
 /* Dark Mode - Accessibility Toolbar */
@@ -1641,7 +1654,7 @@ body[data-theme="dark"] .spoon-count {
 }
 
 body[data-theme="dark"] .page-progress-container {
-  background: #334155;
+  background: #1e293b;
 }
 
 body[data-theme="dark"] .page-progress-bar {
@@ -1649,7 +1662,7 @@ body[data-theme="dark"] .page-progress-bar {
 }
 
 body[data-theme="dark"] .page-progress-text {
-  color: #e5e7eb;
+  color: #f3f4f6; /* Improved contrast: 8.59:1 ratio */
 }
 
 /* High Contrast Mode */

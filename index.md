@@ -631,11 +631,22 @@ We're committed to transparency and protecting your rights:
 
 ## Connect With Us
 
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 3px solid #ffd700;">
+  <h3 style="color: #fff; margin-top: 0; font-size: 1.4em; text-align: center;">🌟 Join Our Community! 🌟</h3>
+  <p style="color: #fff; text-align: center; font-size: 1.1em; margin: 10px 0;">
+    <strong>New!</strong> Connect with fellow 3mpwr users, share experiences, and get support in the <strong>3mpwr App Hub</strong>
+  </p>
+  <div style="text-align: center; margin: 15px 0;">
+    <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #ffd700; color: #333; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 3px 10px rgba(0,0,0,0.3); transition: transform 0.2s;">
+      {%- include social-icons.html name='facebook' -%} Join 3mpwr App Hub on Facebook →
+    </a>
+  </div>
+</div>
+
 Follow 3mpwr on social media to stay connected and be part of the community:
 
 <ul aria-label="Social links" class="socials-list">
   <li><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} Facebook</a> – Follow us for updates and community news</li>
-  <li><a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} 3mpwr App Hub</a> – Join our Facebook community group</li>
   <li><a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='x' -%} X (Twitter)</a> – Join the conversation</li>
   <li><a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='instagram' -%} Instagram</a> – See our latest posts and stories</li>
   <li><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='youtube' -%} YouTube</a> – Watch videos and live sessions</li>
