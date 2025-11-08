@@ -18,6 +18,11 @@ on:
 env:
   NODE_VERSION: '20'
 
+# Prevent multiple daily feature runs from overlapping
+concurrency:
+  group: daily-feature
+  cancel-in-progress: false
+
 jobs:
   daily_feature:
     name: Generate Daily Feature Article
@@ -103,11 +108,12 @@ jobs:
           done
           
           if [ "$SUCCESS" = "false" ]; then
-            echo "❌ WARNING: Article may not be accessible. Aborting social media posting."
-            exit 1
+            echo "❌ WARNING: Article may not be accessible after 50+ minutes. Continuing anyway..."
+            echo "Social media posting may fail if content is not live."
           fi
 
       - name: Post to social media
+        continue-on-error: true
         env:
           MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
           MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}

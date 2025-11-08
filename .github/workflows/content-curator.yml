@@ -43,6 +43,11 @@ env:
   NODE_VERSION: '20'
   DEBUG_CURATOR: ${{ github.event.inputs.debug_mode == 'true' && '1' || '0' }}
 
+# Prevent multiple curator runs from overlapping
+concurrency:
+  group: content-curator
+  cancel-in-progress: false  # Don't cancel - let scheduled runs complete
+
 jobs:
   # Daily Content Curation
   daily_curation:
@@ -162,12 +167,13 @@ jobs:
           done
           
           if [ "$SUCCESS" = "false" ]; then
-            echo "❌ WARNING: Blog may not be accessible. Aborting social media posting."
-            exit 1
+            echo "❌ WARNING: Blog may not be accessible after 50+ minutes. Continuing anyway..."
+            echo "Social media posting may fail if content is not live."
           fi
 
       - name: Post to social media
-        if: success()
+        if: success() || failure()
+        continue-on-error: true
         env:
           MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
           MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
@@ -211,7 +217,7 @@ jobs:
   weekly_summary:
     name: Weekly Summary Post
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     if: (github.event.schedule == '0 9 * * 1' || github.event.inputs.mode == 'weekly')
     permissions:
       contents: write

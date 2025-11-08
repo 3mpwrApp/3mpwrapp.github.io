@@ -11,7 +11,7 @@ on:
 
 # Cancel previous Link Checker runs for the same ref to avoid overlap
 concurrency:
-  group: link-checker
+  group: link-checker-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

@@ -11,7 +11,7 @@ on:
 
 # Cancel previous Lighthouse runs for the same ref to avoid overlap
 concurrency:
-  group: lighthouse
+  group: lighthouse-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

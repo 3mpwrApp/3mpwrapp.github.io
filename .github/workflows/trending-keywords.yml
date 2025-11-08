@@ -19,11 +19,16 @@ on:
 env:
   NODE_VERSION: '20'
 
+# Prevent overlapping trend updates
+concurrency:
+  group: trending-keywords
+  cancel-in-progress: true
+
 jobs:
   update_trends:
     name: Update Trending Keywords
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       contents: write
     

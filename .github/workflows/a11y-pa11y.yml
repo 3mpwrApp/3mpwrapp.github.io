@@ -12,7 +12,7 @@ permissions:
 
 # Ensure only one pa11y run at a time; cancel previous in-progress runs
 concurrency:
-  group: pa11y
+  group: pa11y-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

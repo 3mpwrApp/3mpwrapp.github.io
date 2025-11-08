@@ -18,11 +18,16 @@ on:
 env:
   NODE_VERSION: '20'
 
+# Prevent overlapping weekly updates
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
+
 jobs:
   weekly_update:
     name: Generate Weekly Update
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       contents: write
     
