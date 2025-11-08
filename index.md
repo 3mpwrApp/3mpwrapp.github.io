@@ -502,17 +502,15 @@ Ready to join the movement? Here's how you can get started:
 ## Curated Daily Highlights
 
 <section class="highlight-banner" role="region" aria-labelledby="latest-curated">
-  {% assign latest_curated = site.posts | where_exp: 'p', "p.tags contains 'highlights'" | first %}
+  {% comment %}Filter posts to show only TODAY's content{% endcomment %}
+  {% assign today = 'now' | date: '%Y-%m-%d' %}
+  {% assign all_daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
+  {% assign daily_today = all_daily | where_exp: 'p', "p.date | date: '%Y-%m-%d' == today" %}
+  {% assign latest_curated = daily_today | first %}
   <h3 id="latest-curated">
     Daily highlights from across Canada
-    {% if latest_curated and latest_curated.date %}
-      {% assign now = 'now' | date: '%s' | plus: 0 %}
-      {% assign posted = latest_curated.date | date: '%s' | plus: 0 %}
-      {% assign age = now | minus: posted %}
-      {% assign one_day = 24 | times: 60 | times: 60 %}
-      {% if age < one_day %}
-        <span class="badge badge--new" aria-label="New update in the last 24 hours">New!</span>
-      {% endif %}
+    {% if latest_curated %}
+      <span class="badge badge--new" aria-label="Updated today">Today!</span>
     {% endif %}
   </h3>
   <p class="highlight-banner__desc">A quick, accessible round-up of community stories, resources, and calls-to-action updated every day.</p>
@@ -523,10 +521,9 @@ Ready to join the movement? Here's how you can get started:
     <span id="curated-daily-desc" class="sr-only">This link takes you to the curated daily feed section on our blog.</span>
   </div>
 
-  {% assign daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
-  {% if daily and daily.size > 0 %}
-    <ul class="highlight-banner__list" aria-label="Latest curated items">
-      {% for post in daily limit:3 %}
+  {% if daily_today and daily_today.size > 0 %}
+    <ul class="highlight-banner__list" aria-label="Today's curated items">
+      {% for post in daily_today limit:3 %}
       <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <small> — {{ post.date | date: "%B %-d, %Y" }}</small>
@@ -535,7 +532,7 @@ Ready to join the movement? Here's how you can get started:
     </ul>
     <p style="margin:0.25rem 0 0;"><a href="{{ '/blog/#curated-daily' | relative_url }}">See all daily highlights →</a></p>
   {% else %}
-    <p class="highlight-banner__desc" style="margin:0;">No highlights yet today. Check back soon.</p>
+    <p class="highlight-banner__desc" style="margin:0;">No highlights yet today. Check back soon - new content posted daily at 9 AM UTC!</p>
   {% endif %}
 </section>
 ---

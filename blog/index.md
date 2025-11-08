@@ -63,7 +63,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 <p class="section-description">In-depth spotlights on 3mpwrApp tools and features. Learn how Evidence Locker, Letter Generator, Disability Wizard, Legal Workflow Automation, and more can help you advocate for your rights, navigate systems, and connect with your community.</p>
 
-{% assign feature_articles = site.posts | where_exp: 'p', "p.tags contains 'feature'" %}
+{% assign feature_articles = site.posts | where_exp: 'p', "p.tags contains 'features' or p.tags contains 'spotlight'" %}
 {% if feature_articles and feature_articles.size > 0 %}
 <div class="posts-grid">
   {% for post in feature_articles limit:6 %}
@@ -113,12 +113,12 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 <p class="section-description">Announcements, stories, and updates from the 3mpwr community. Learn about new features, community achievements, and important information directly from our team.</p>
 
-{% assign regular_posts = site.posts | where_exp: 'p', "p.tags contains 'highlights' or p.tags contains 'weekly' or p.tags contains 'feature'" | size %}
+{% assign regular_posts = site.posts | where_exp: 'p', "p.tags contains 'highlights' or p.tags contains 'weekly' or p.tags contains 'features' or p.tags contains 'spotlight'" | size %}
 {% assign all_posts_count = site.posts | size %}
 {% if all_posts_count > regular_posts %}
 <div class="posts-list">
   {% for post in site.posts %}
-    {% unless post.tags contains 'highlights' or post.tags contains 'weekly' or post.tags contains 'feature' %}
+    {% unless post.tags contains 'highlights' or post.tags contains 'weekly' or post.tags contains 'features' or post.tags contains 'spotlight' %}
     <article class="post-item">
       <h3 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <p class="post-item__date">📅 {{ post.date | date: "%B %-d, %Y" }}</p>

@@ -72,20 +72,29 @@ jobs:
           sleep 2700  # 45 minutes = 2700 seconds
           
           echo "✅ Wait complete at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-          echo "Verifying blog is accessible..."
+          echo "Verifying article is accessible..."
           
-          # Try to fetch blog page (with retries)
+          # Get the article URL from the generated JSON
+          if [ -f "public/daily-feature-social.json" ]; then
+            ARTICLE_URL=$(jq -r '.url' public/daily-feature-social.json)
+            echo "Checking URL: $ARTICLE_URL"
+          else
+            echo "⚠️  No social JSON found, checking blog page instead"
+            ARTICLE_URL="https://3mpwrapp.pages.dev/blog/"
+          fi
+          
+          # Try to fetch article page (with retries)
           MAX_RETRIES=5
           RETRY_COUNT=0
           SUCCESS=false
           
           while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$SUCCESS" = "false" ]; do
-            if curl -sSf -o /dev/null https://3mpwrapp.pages.dev/blog/; then
-              echo "✅ Blog is live and accessible!"
+            if curl -sSf -o /dev/null "$ARTICLE_URL"; then
+              echo "✅ Article is live and accessible!"
               SUCCESS=true
             else
               RETRY_COUNT=$((RETRY_COUNT + 1))
-              echo "⚠️  Blog not accessible yet (attempt $RETRY_COUNT/$MAX_RETRIES)"
+              echo "⚠️  Article not accessible yet (attempt $RETRY_COUNT/$MAX_RETRIES)"
               if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
                 echo "Waiting 60 seconds before retry..."
                 sleep 60
@@ -94,7 +103,8 @@ jobs:
           done
           
           if [ "$SUCCESS" = "false" ]; then
-            echo "❌ WARNING: Blog may not be accessible. Continuing anyway..."
+            echo "❌ WARNING: Article may not be accessible. Aborting social media posting."
+            exit 1
           fi
 
       - name: Post to social media
