@@ -505,7 +505,13 @@ Ready to join the movement? Here's how you can get started:
   {% comment %}Filter posts to show only TODAY's content{% endcomment %}
   {% assign today = 'now' | date: '%Y-%m-%d' %}
   {% assign all_daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
-  {% assign daily_today = all_daily | where_exp: 'p', "p.date | date: '%Y-%m-%d' == today" %}
+  {% assign daily_today = '' | split: '' %}
+  {% for post in all_daily %}
+    {% assign post_date = post.date | date: '%Y-%m-%d' %}
+    {% if post_date == today %}
+      {% assign daily_today = daily_today | push: post %}
+    {% endif %}
+  {% endfor %}
   {% assign latest_curated = daily_today | first %}
   <h3 id="latest-curated">
     Daily highlights from across Canada
