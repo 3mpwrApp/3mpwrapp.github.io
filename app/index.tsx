@@ -75,11 +75,6 @@ export default function Index() {
       return; // Still loading, wait
     }
     
-    // Prevent multiple navigation attempts
-    if (hasNavigated.current) {
-      return;
-    }
-    
     // Auth is done loading - check where we are
     const inAuthFlow = (segments as string[]).includes('auth');
     const inTabsFlow = (segments as string[]).includes('tabs');
@@ -89,6 +84,7 @@ export default function Index() {
       inAuthFlow, 
       inTabsFlow,
       segments: segments.join('/'),
+      hasNavigated: hasNavigated.current,
     });
     
     // Determine where user should be based on auth state
@@ -97,33 +93,39 @@ export default function Index() {
     
     // If user is authenticated but in auth flow, navigate to tabs (HOME)
     if (shouldBeInTabs && inAuthFlow) {
-      logger.log('[Index] ✅ User logged in - navigating to home/(tabs)');
-      hasNavigated.current = true;
-      router.replace('/(tabs)');
+      if (!hasNavigated.current) {
+        logger.log('[Index] ✅ User logged in - navigating to home/(tabs)');
+        hasNavigated.current = true;
+        router.replace('/(tabs)');
+      }
       return;
     }
     
     // If user is not authenticated but in tabs flow, navigate to login
     if (shouldBeInAuth && inTabsFlow) {
-      logger.log('[Index] ❌ No user in tabs - navigating to login');
-      hasNavigated.current = true;
-      router.replace('/(auth)/signin' as any);
+      if (!hasNavigated.current) {
+        logger.log('[Index] ❌ No user in tabs - navigating to login');
+        hasNavigated.current = true;
+        router.replace('/(auth)/signin' as any);
+      }
       return;
     }
     
     // Initial navigation when not in any flow yet
     if (!inAuthFlow && !inTabsFlow) {
-      if (!user) {
-        logger.log('[Index] 🔄 Initial - no user, navigating to login');
-        hasNavigated.current = true;
-        router.replace('/(auth)/signin' as any);
-      } else {
-        logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
-        hasNavigated.current = true;
-        router.replace('/(tabs)');
+      if (!hasNavigated.current) {
+        if (!user) {
+          logger.log('[Index] 🔄 Initial - no user, navigating to login');
+          hasNavigated.current = true;
+          router.replace('/(auth)/signin' as any);
+        } else {
+          logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
+          hasNavigated.current = true;
+          router.replace('/(tabs)');
+        }
       }
     }
-  }, [loading, user]); // Only react to loading and user changes, not segments
+  }, [loading, user, segments, router]); // React to loading, user, segments, and router changes
   
   // Reset navigation flag when user changes
   useEffect(() => {
