@@ -214,44 +214,77 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       // Sort events by date (soonest first)
       events.sort((a, b) => new Date(a.date) - new Date(b.date));
       
-      // Display events
-      container.innerHTML = events.map(event => `
-        <article class="event-card" style="border: 2px solid #e0f2fe; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="margin-top: 0; color: #0066cc; font-size: 1.5rem;">${event.title}</h3>
+      // Check if event is happening soon (within next 7 days)
+      const now = new Date();
+      const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+      
+      // Display events with enhanced styling
+      container.innerHTML = events.map((event, index) => {
+        const eventDate = new Date(event.date);
+        const isHappeningSoon = eventDate >= now && eventDate <= sevenDaysFromNow;
+        const isPast = eventDate < now;
+        
+        // Determine gradient and border color based on status
+        let gradientStyle, borderStyle, urgencyBadge;
+        if (isPast) {
+          gradientStyle = 'background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);';
+          borderStyle = 'border: 3px solid #d1d5db;';
+          urgencyBadge = '';
+        } else if (isHappeningSoon) {
+          gradientStyle = 'background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);';
+          borderStyle = 'border: 3px solid #f59e0b;';
+          urgencyBadge = `<div style="position: absolute; top: -12px; right: 20px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);">🔥 HAPPENING SOON</div>`;
+        } else {
+          gradientStyle = 'background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);';
+          borderStyle = 'border: 3px solid #0ea5e9;';
+          urgencyBadge = '';
+        }
+        
+        return `
+        <article class="event-card" style="${borderStyle} border-radius: 16px; padding: 2.5rem; margin-bottom: 2.5rem; ${gradientStyle} box-shadow: 0 8px 24px rgba(0,0,0,0.15); position: relative; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'">
           
-          <p class="event-date" style="color: #333; font-weight: bold; font-size: 1.1rem; margin: 0.5rem 0;">
-            📅 ${formatDate(event.date)}
+          ${urgencyBadge}
+          
+          <!-- Decorative corner accent -->
+          <div style="position: absolute; top: 0; left: 0; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%); border-radius: 0 0 100% 0;"></div>
+          
+          <h3 style="margin-top: 0; color: #1e293b; font-size: 2rem; font-weight: 800; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            ${event.title}
+          </h3>
+          
+          <p class="event-date" style="color: #0f172a; font-weight: 700; font-size: 1.3rem; margin: 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 1.5rem;">📅</span> ${formatDate(event.date)}
           </p>
           
-          <p class="event-description" style="color: #555; margin: 1rem 0;">
+          <p class="event-description" style="color: #334155; margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.7;">
             ${event.description}
           </p>
           
-          ${event.location ? `<p class="event-location" style="color: #555; margin: 0.5rem 0;">� <strong>Location:</strong> ${event.location}</p>` : ''}
+          ${event.location ? `<p class="event-location" style="color: #475569; margin: 1rem 0; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.3rem;">📍</span> <strong>Location:</strong> ${event.location}</p>` : ''}
           
-          <div class="event-badges" style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-            ${event.isVirtual ? `<span class="badge" style="display: inline-block; padding: 6px 12px; background: #dbeafe; border-radius: 6px; font-size: 0.9em; font-weight: 600;">🌐 Virtual</span>` : ''}
-            ${event.asl ? `<span class="badge" style="display: inline-block; padding: 6px 12px; background: #fef3c7; border-radius: 6px; font-size: 0.9em; font-weight: 600;">🤟 ASL</span>` : ''}
-            ${event.captions ? `<span class="badge" style="display: inline-block; padding: 6px 12px; background: #e0e7ff; border-radius: 6px; font-size: 0.9em; font-weight: 600;">📝 Captions</span>` : ''}
-            ${event.stepFree ? `<span class="badge" style="display: inline-block; padding: 6px 12px; background: #d1fae5; border-radius: 6px; font-size: 0.9em; font-weight: 600;">♿ Accessible</span>` : ''}
-            ${event.sensorySpace ? `<span class="badge" style="display: inline-block; padding: 6px 12px; background: #fce7f3; border-radius: 6px; font-size: 0.9em; font-weight: 600;">🎧 Sensory-Friendly</span>` : ''}
-            ${event.energyCost ? `<span class="badge" style="display: inline-block; padding: 6px 12px; background: #fff7ed; border-radius: 6px; font-size: 0.9em; font-weight: 600;">🔋 Energy: ${event.energyCost}</span>` : ''}
+          <div class="event-badges" style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 0.75rem;">
+            ${event.isVirtual ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 2px solid #3b82f6; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);">🌐 Virtual</span>` : ''}
+            ${event.asl ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px solid #f59e0b; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);">🤟 ASL</span>` : ''}
+            ${event.captions ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); border: 2px solid #6366f1; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);">📝 Captions</span>` : ''}
+            ${event.stepFree ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 2px solid #10b981; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);">♿ Accessible</span>` : ''}
+            ${event.sensorySpace ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); border: 2px solid #ec4899; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(236, 72, 153, 0.3);">🎧 Sensory-Friendly</span>` : ''}
+            ${event.energyCost ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border: 2px solid #f97316; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);">🔋 Energy: ${event.energyCost}</span>` : ''}
           </div>
           
-          <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-            ${event.rsvpLink ? `<a href="${event.rsvpLink}" class="btn btn-primary" style="display: inline-block; padding: 10px 20px; background: #0066cc; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">📝 RSVP Now</a>` : ''}
+          <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            ${event.rsvpLink ? `<a href="${event.rsvpLink}" class="btn btn-primary" style="display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0, 102, 204, 0.5)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.4)'">📝 RSVP Now</a>` : ''}
             
-            <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'twitter')" title="Share on Twitter/X" style="padding: 8px 12px; background: #1DA1F2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">𝕏 Share</button>
-              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'bluesky')" title="Share on Bluesky" style="padding: 8px 12px; background: #0085ff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">🦋 Share</button>
-              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'mastodon')" title="Share on Mastodon" style="padding: 8px 12px; background: #6364FF; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">🐘 Share</button>
-              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'facebook')" title="Share on Facebook" style="padding: 8px 12px; background: #4267B2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">📘 Share</button>
-              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'linkedin')" title="Share on LinkedIn" style="padding: 8px 12px; background: #0077B5; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">💼 Share</button>
-              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'email')" title="Share via Email" style="padding: 8px 12px; background: #6B7280; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">📧 Email</button>
+            <div class="share-buttons" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'twitter')" title="Share on Twitter/X" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">𝕏 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'bluesky')" title="Share on Bluesky" style="padding: 10px 16px; background: #0085ff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 133, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🦋 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'mastodon')" title="Share on Mastodon" style="padding: 10px 16px; background: #6364FF; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 100, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🐘 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'facebook')" title="Share on Facebook" style="padding: 10px 16px; background: #4267B2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(66, 103, 178, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📘 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'linkedin')" title="Share on LinkedIn" style="padding: 10px 16px; background: #0077B5; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">💼 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'email')" title="Share via Email" style="padding: 10px 16px; background: #6B7280; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📧 Email</button>
             </div>
           </div>
         </article>
-      `).join('');
+      `}).join('');
       
     } catch (error) {
       console.error('❌ Failed to load events:', error);
