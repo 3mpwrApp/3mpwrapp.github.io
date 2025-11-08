@@ -102,6 +102,12 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   </p>
 </div>
 
+<div style="margin: 1rem 0; text-align: center;">
+  <button onclick="shareAllEvents()" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+    📢 Share Events Calendar
+  </button>
+</div>
+
 <section id="events">
   <div id="events-list" style="margin: 2rem 0;">
     <div style="text-align: center; padding: 2rem;">
@@ -232,7 +238,16 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
             ${event.energyCost ? `<span class="badge" style="display: inline-block; padding: 6px 12px; background: #fff7ed; border-radius: 6px; font-size: 0.9em; font-weight: 600;">🔋 Energy: ${event.energyCost}</span>` : ''}
           </div>
           
-          ${event.rsvpLink ? `<a href="${event.rsvpLink}" class="btn btn-primary" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background: #0066cc; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">📝 RSVP Now</a>` : ''}
+          <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+            ${event.rsvpLink ? `<a href="${event.rsvpLink}" class="btn btn-primary" style="display: inline-block; padding: 10px 20px; background: #0066cc; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">📝 RSVP Now</a>` : ''}
+            
+            <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'twitter')" title="Share on Twitter/X" style="padding: 8px 12px; background: #1DA1F2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">𝕏 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'facebook')" title="Share on Facebook" style="padding: 8px 12px; background: #4267B2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">📘 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'linkedin')" title="Share on LinkedIn" style="padding: 8px 12px; background: #0077B5; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">💼 Share</button>
+              <button onclick="shareEvent('${encodeURIComponent(event.title)}', '${encodeURIComponent(event.description.substring(0, 200))}', '${formatDate(event.date)}', 'email')" title="Share via Email" style="padding: 8px 12px; background: #6B7280; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">📧 Email</button>
+            </div>
+          </div>
         </article>
       `).join('');
       
@@ -288,6 +303,99 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   
   // Auto-refresh every 5 minutes
   setInterval(loadEvents, 5 * 60 * 1000);
+  
+  /**
+   * ========================================
+   * SOCIAL SHARING FUNCTIONS
+   * ========================================
+   */
+  
+  // Share individual event
+  function shareEvent(title, description, date, platform) {
+    // Decode the encoded parameters
+    title = decodeURIComponent(title);
+    description = decodeURIComponent(description);
+    
+    // Create share text with "Powered by 3mpwr App"
+    const eventUrl = 'https://3mpwrapp.pages.dev/events/';
+    const shareText = `${title}\n${date}\n\n${description}\n\nPowered by 3mpwr App: ${eventUrl}`;
+    const encodedText = encodeURIComponent(shareText);
+    const encodedUrl = encodeURIComponent(eventUrl);
+    
+    let shareUrl;
+    
+    switch(platform) {
+      case 'twitter':
+        shareUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
+        break;
+      case 'facebook':
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`;
+        break;
+      case 'linkedin':
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+        break;
+      case 'email':
+        const emailSubject = encodeURIComponent(`Event: ${title}`);
+        const emailBody = encodeURIComponent(`${title}\n${date}\n\n${description}\n\nView all events: ${eventUrl}\n\nPowered by 3mpwr App - Community events calendar for disability rights and worker justice.`);
+        shareUrl = `mailto:?subject=${emailSubject}&body=${emailBody}`;
+        break;
+    }
+    
+    if (shareUrl) {
+      window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+  }
+  
+  // Share all events page
+  function shareAllEvents() {
+    const pageUrl = 'https://3mpwrapp.pages.dev/events/';
+    const shareText = '📅 Check out the 3mpwr App Events Calendar!\n\nDisability rights, worker justice, and community events - all fully accessible.\n\n✅ Real-time sync\n✅ Subscribe to calendar feed\n✅ 130+ events including awareness days & holidays\n\nPowered by 3mpwr App';
+    
+    // Try native Web Share API first (mobile-friendly)
+    if (navigator.share) {
+      navigator.share({
+        title: '3mpwr App Events Calendar',
+        text: shareText,
+        url: pageUrl
+      }).catch(err => console.log('Share cancelled or failed:', err));
+    } else {
+      // Fallback: show share options
+      const choice = prompt(
+        'Share Events Calendar:\n\n' +
+        '1 - Twitter/X\n' +
+        '2 - Facebook\n' +
+        '3 - LinkedIn\n' +
+        '4 - Email\n' +
+        '5 - Copy Link\n\n' +
+        'Enter your choice (1-5):'
+      );
+      
+      const encodedText = encodeURIComponent(shareText);
+      const encodedUrl = encodeURIComponent(pageUrl);
+      
+      switch(choice) {
+        case '1':
+          window.open(`https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`, '_blank');
+          break;
+        case '2':
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`, '_blank');
+          break;
+        case '3':
+          window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, '_blank');
+          break;
+        case '4':
+          const emailSubject = encodeURIComponent('3mpwr App Events Calendar');
+          const emailBody = encodeURIComponent(`${shareText}\n\n${pageUrl}`);
+          window.location.href = `mailto:?subject=${emailSubject}&body=${emailBody}`;
+          break;
+        case '5':
+          navigator.clipboard.writeText(pageUrl).then(() => {
+            alert('Link copied to clipboard! ✅');
+          });
+          break;
+      }
+    }
+  }
 </script>
 
 ---
