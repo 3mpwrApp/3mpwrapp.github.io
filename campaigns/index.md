@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Campaigns & Events
-description: "Join community-driven campaigns and events for disability rights, worker justice, and social change across Canada. Grassroots organizing, advocacy tools, and collective action for systemic transformation."
+title: Campaigns
+description: "Join community-driven campaigns for disability rights, worker justice, and social change across Canada. Grassroots organizing, advocacy tools, and collective action for systemic transformation."
 image: /assets/empwrapp-logo.png
 image_alt: "3mpwrApp Campaigns - Community organizing and disability rights advocacy"
 permalink: /campaigns/
@@ -11,7 +11,7 @@ permalink: /campaigns/
 
 {%- include status-banner.html -%}
 
-# 📣 Campaigns & Events
+# 📣 Campaigns
 
 📖 **3 minute read** | 🔋🔋 **Energy: Light**
 
@@ -89,12 +89,13 @@ permalink: /campaigns/
   // Fetch and display campaigns from app
   async function loadCampaigns() {
     try {
-      const response = await fetch('https://3mpwrapp.pages.dev/api/campaigns.json');
-      const campaigns = await response.json();
+      const response = await fetch('https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns');
+      const data = await response.json();
+      const campaigns = data.campaigns || [];
       
       const container = document.getElementById('campaigns-list');
       
-      if (campaigns.length === 0) {
+      if (!campaigns || campaigns.length === 0) {
         container.innerHTML = `
           <div class="warning-box">
             <h3 style="margin-top: 0;">🚀 Campaigns Coming Soon!</h3>
