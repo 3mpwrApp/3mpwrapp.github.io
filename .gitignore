@@ -91,3 +91,9 @@ $RECYCLE.BIN/
 coverage/
 .nyc_output/
 test-results/
+
+# Accessibility audit reports (can be large)
+accessibility-audit-*.json
+accessibility-audit-*.html
+accessibility-reports-*/
+*.report.html
