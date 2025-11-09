@@ -627,12 +627,21 @@ We're committed to transparency and protecting your rights:
 ## <span aria-hidden="true">📅</span> Weekly updates <span class="badge badge--new" aria-label="Automatically updated">Auto-updated</span>
 
 {% assign weeklies = site.posts | where_exp: 'p', "p.tags contains 'weekly'" %}
-{% if weeklies and weeklies.size > 0 %}
-<p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Showing the most recent weekly updates – automatically stays current with new posts</p>
+{% assign today = 'now' | date: '%s' %}
+{% assign one_week_ago = today | minus: 604800 %}
+{% assign this_week_posts = '' | split: '' %}
+{% for p in weeklies %}
+  {% assign post_date = p.date | date: '%s' %}
+  {% if post_date >= one_week_ago %}
+    {% assign this_week_posts = this_week_posts | push: p %}
+  {% endif %}
+{% endfor %}
+{% if this_week_posts and this_week_posts.size > 0 %}
+<p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Showing weekly updates from the past 7 days – automatically filtered to current week</p>
 <div class="weekly-swiper" role="region" aria-labelledby="weekly-title">
   <h3 id="weekly-title" class="sr-only">Weekly update posts</h3>
   <div class="weekly-track" data-weekly-track>
-    {% for p in weeklies limit:3 %}
+    {% for p in this_week_posts limit:3 %}
     <article class="weekly-card">
       <h3 class="weekly-card__title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
       <p class="weekly-card__meta">{{ p.date | date: "%B %-d, %Y" }}</p>
@@ -668,7 +677,7 @@ We're committed to transparency and protecting your rights:
 })();
 </script>
 {% else %}
-<p>Weekly updates will appear here once available. New weekly posts are automatically displayed when published.</p>
+<p>No weekly updates in the past 7 days. Check back soon or <a href="{{ '/blog' | relative_url }}">view all posts →</a></p>
 {% endif %}
 
 ## Connect With Us
