@@ -88,6 +88,63 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 
 ---
 
+<!-- Community Events Submission Banner -->
+<div class="gradient-banner" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 2.5rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
+  <h2 style="margin: 0 0 1rem; color: white; font-size: 2rem; text-align: center;">
+    📢 Got a Local, Provincial, or Federal Event?
+  </h2>
+  <p style="font-size: 1.2rem; margin: 0 0 1.5rem; text-align: center; font-weight: 600;">
+    Tag us on social media and we'll share it on the app + website!
+  </p>
+  
+  <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 10px; margin: 1.5rem 0; backdrop-filter: blur(10px);">
+    <p style="margin: 0 0 1rem; font-size: 1.1rem; text-align: center;">
+      <strong>🤝 Let's Build Community Together</strong>
+    </p>
+    <p style="margin: 0 0 1.5rem; font-size: 1rem; line-height: 1.7; text-align: center;">
+      Whether it's a disability rights rally, workers' justice gathering, accessibility workshop, or mutual aid event — we want to help spread the word! Tag us on any platform below and we'll post your event to the 3mpwr App, where it will automatically appear on this website.
+    </p>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center; margin: 1.5rem 0;">
+      <a href="https://x.com/3mpwrApp0816" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #1DA1F2; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+        <span style="font-size: 1.3rem;">𝕏</span> @3mpwrApp0816
+      </a>
+      
+      <a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #4267B2; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+        <span style="font-size: 1.3rem;">📘</span> @3mpowrapp
+      </a>
+      
+      <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+        <span style="font-size: 1.3rem;">📸</span> @3mpowrapp
+      </a>
+      
+      <a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #000000; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+        <span style="font-size: 1.3rem;">🎵</span> @3mpwrapp
+      </a>
+      
+      <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #6364FF; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+        <span style="font-size: 1.3rem;">🐘</span> @3mpwrApp@mastodon.social
+      </a>
+    </div>
+    
+    <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255,255,255,0.2); border-radius: 8px; border-left: 4px solid white;">
+      <p style="margin: 0 0 0.5rem; font-size: 1.05rem;"><strong>✨ How It Works:</strong></p>
+      <ol style="text-align: left; max-width: 600px; margin: 0.5rem auto 0; line-height: 1.8;">
+        <li>Tag us in your post with event details (date, time, location, accessibility info)</li>
+        <li>We'll add it to the 3mpwr App within 24 hours</li>
+        <li>Your event automatically appears here on the website</li>
+        <li>The community stays in the loop! 🎉</li>
+      </ol>
+    </div>
+  </div>
+  
+  <p style="margin: 1.5rem 0 0; font-size: 1rem; text-align: center; opacity: 0.95;">
+    <strong>Together we're stronger.</strong> Let's bring awareness, build connections, and come together as a collective. 💪✊
+  </p>
+</div>
+
+---
+
 ## 📆 Upcoming Events (Live from App)
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
