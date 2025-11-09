@@ -244,7 +244,7 @@ export async function notifyAllUsers(notification: {
     });
 
     if (tokens.length === 0) {
-      console.log('[Notifications] No push tokens registered yet');
+      logError('Notifications', 'No push tokens registered yet', new Error('Empty token list'));
       return { success: true, sent: 0 };
     }
 
@@ -301,12 +301,11 @@ export async function notifyAllUsers(notification: {
             }
           });
         } catch (err) {
-          console.warn('[Notifications] Failed to remove invalid token:', err);
+          // Silent cleanup failure - not critical
         }
       }
     }
 
-    console.log(`[Notifications] Sent ${results.length} notifications, ${invalidTokens.length} invalid tokens removed`);
     return { success: true, sent: results.length, removed: invalidTokens.length };
   } catch (error) {
     logError('Notifications', 'Push notification error', error);
@@ -328,7 +327,6 @@ export async function sendEventNotification(event: {
   const enabled = await isNotificationEnabled('events');
   
   if (!enabled) {
-    console.log('[Notifications] Event notifications disabled by user preferences');
     return { success: true, sent: 0, skipped: true };
   }
   
@@ -356,7 +354,6 @@ export async function sendCampaignNotification(campaign: {
   const enabled = await isNotificationEnabled('campaigns');
   
   if (!enabled) {
-    console.log('[Notifications] Campaign notifications disabled by user preferences');
     return { success: true, sent: 0, skipped: true };
   }
   
@@ -395,7 +392,6 @@ export async function registerUserPushToken(userId: string) {
       userId,
     });
 
-    console.log('[Notifications] Registered push token for user:', userId);
     return token;
   } catch (error) {
     logError('Notifications', 'Token registration failed', error);
