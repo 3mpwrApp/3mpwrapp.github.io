@@ -57,7 +57,47 @@ permalink: /community-spotlight/
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
-<div class="success-box" style="text-align: center;">
+### 🌟 Mitchell Tremblay (@ODSPoverty)
+
+<div class="info-box-bordered" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-left: 4px solid #3b82f6;">
+  <h4 style="margin-top: 0; color: #1e40af;">🇨🇦 Canadian Disability Advocate</h4>
+  
+  <p><strong>Mitchell Tremblay</strong> is a passionate Canadian disability rights advocate fighting for economic justice and dignity for people living with disabilities.</p>
+  
+  <p><strong>🎯 Advocacy Focus:</strong></p>
+  <ul>
+    <li>ODSP (Ontario Disability Support Program) reform and adequacy</li>
+    <li>Disability rights and economic justice</li>
+    <li>Raising awareness about poverty among disabled Canadians</li>
+    <li>Community organizing and grassroots activism</li>
+  </ul>
+  
+  <p><strong>💪 Impact:</strong></p>
+  <ul>
+    <li>📱 Active social media advocate sharing lived experiences</li>
+    <li>📣 Speaking out about the realities of living on disability benefits</li>
+    <li>🤝 Connecting and supporting other disabled Canadians</li>
+    <li>💬 Amplifying voices of those in poverty</li>
+  </ul>
+  
+  <p><strong>💬 In Their Words:</strong></p>
+  <blockquote style="border-left: 3px solid #3b82f6; padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #1e40af;">
+    "Fighting for disability rights and economic justice for all Canadians living with disabilities."
+  </blockquote>
+  
+  <p><strong>🔗 Connect with Mitchell:</strong></p>
+  <p>
+    <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="color: #2563eb; font-weight: 600; text-decoration: underline;">
+      🌐 linktr.ee/odspoor
+    </a>
+  </p>
+  
+  <p style="margin-top: 1.5rem;"><em>🌟 Thank you Mitchell for your tireless advocacy and for inspiring others to speak up for disability rights!</em></p>
+</div>
+
+---
+
+## 💪 More Community Profiles Coming Soon
   <h3 style="margin-top: 0;">🌟 Community Profiles Coming Soon!</h3>
   <p style="font-size: 1.1rem; margin-bottom: 1rem;"><strong>This space is reserved for YOU and your fellow advocates!</strong></p>
   <p>We'll be featuring:</p>
