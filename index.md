@@ -147,35 +147,6 @@ We're building a safe space to connect, share experiences, and advocate for real
 
 ---
 
-<!-- Community Spotlight Banner -->
-<div class="highlight-banner" style="background: #f8f9fa !important; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; color: #1f2937 !important;">
-  <h2 style="margin: 0 0 0.5rem; color: #1e40af !important; font-size: 1.6rem;">
-    <span aria-hidden="true">🌟</span> Featured Community Spotlight
-    <span class="badge badge--new">New!</span>
-  </h2>
-  <div style="display: grid; gap: 1rem; margin-top: 1rem;">
-    <div>
-      <h3 style="margin: 0 0 0.5rem; color: #1e40af !important; font-size: 1.3rem;">Mitchell Tremblay (@ODSPoverty)</h3>
-      <p style="margin: 0 0 0.75rem; color: #1f2937 !important; font-size: 1.05rem;">
-        🇨🇦 <strong style="color: #1f2937 !important;">Canadian Disability Advocate</strong> fighting for economic justice and dignity for people living with disabilities.
-      </p>
-      <p style="margin: 0 0 0.75rem; color: #1f2937 !important;">
-        <strong style="color: #1f2937 !important;">Fighting for:</strong> ODSP reform, disability rights, and raising awareness about poverty among disabled Canadians.
-      </p>
-      <div class="highlight-banner__actions" style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-        <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" class="highlight-banner__button" style="background: #3b82f6 !important; color: white !important; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid #3b82f6;">
-          <span aria-hidden="true">🔗</span> Connect with Mitchell
-        </a>
-        <a href="/community-spotlight/" class="highlight-banner__button" style="background: white !important; color: #3b82f6 !important; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid #3b82f6;">
-          <span aria-hidden="true">🌟</span> View All Community Members
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
 <!-- Daily Events Banner - Auto-Updates with Happening Now/Soon Events -->
 <div id="daily-events-banner" class="gradient-banner" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
   <h2 style="margin: 0 0 1rem; color: white; font-size: 1.8rem;">
@@ -395,6 +366,35 @@ if (document.readyState === 'loading') {
   loadDailyEvents();
 }
 </script>
+
+---
+
+<!-- Community Spotlight Banner -->
+<div class="highlight-banner" style="background: #f8f9fa !important; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; color: #1f2937 !important;">
+  <h2 style="margin: 0 0 0.5rem; color: #1e40af !important; font-size: 1.6rem;">
+    <span aria-hidden="true">🌟</span> Featured Community Spotlight
+    <span class="badge badge--new">New!</span>
+  </h2>
+  <div style="display: grid; gap: 1rem; margin-top: 1rem;">
+    <div>
+      <h3 style="margin: 0 0 0.5rem; color: #1e40af !important; font-size: 1.3rem;">Mitchell Tremblay (@ODSPoverty)</h3>
+      <p style="margin: 0 0 0.75rem; color: #1f2937 !important; font-size: 1.05rem;">
+        🇨🇦 <strong style="color: #1f2937 !important;">Canadian Disability Advocate</strong> fighting for economic justice and dignity for people living with disabilities.
+      </p>
+      <p style="margin: 0 0 0.75rem; color: #1f2937 !important;">
+        <strong style="color: #1f2937 !important;">Fighting for:</strong> ODSP reform, disability rights, and raising awareness about poverty among disabled Canadians.
+      </p>
+      <div class="highlight-banner__actions" style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+        <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" class="highlight-banner__button" style="background: #3b82f6 !important; color: white !important; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid #3b82f6;">
+          <span aria-hidden="true">🔗</span> Connect with Mitchell
+        </a>
+        <a href="/community-spotlight/" class="highlight-banner__button" style="background: white !important; color: #3b82f6 !important; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid #3b82f6;">
+          <span aria-hidden="true">🌟</span> View All Community Members
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 
