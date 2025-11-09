@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import {
     ActivityIndicator,
     Alert,
+    Linking,
     Modal,
     Pressable,
     ScrollView,
@@ -189,6 +190,168 @@ function CampaignDetailInner() {
             )}
             {campaign.goal && (
               <Text style={[styles.text, { marginTop: 8, fontWeight: '600' }]}>🎯 Goal: {campaign.goal}</Text>
+            )}
+
+            {/* Enhanced Features for Every Canadian Counts */}
+            {campaign.petitionUrl && (
+              <GapView gap={12} style={{ marginTop: 16, marginBottom: 16 }}>
+                {/* Progress Bar */}
+                {campaign.goalCount && (
+                  <View style={styles.progressCard}>
+                    <Text style={styles.progressLabel}>
+                      {campaign.membersCount?.toLocaleString() || 0} of {campaign.goalCount.toLocaleString()} signatures
+                    </Text>
+                    <View style={styles.progressBarContainer}>
+                      <View
+                        style={[
+                          styles.progressBarFill,
+                          {
+                            width: `${Math.min(
+                              ((campaign.membersCount || 0) / campaign.goalCount) * 100,
+                              100
+                            )}%`,
+                          },
+                        ]}
+                      />
+                    </View>
+                    <Text style={styles.progressPercentage}>
+                      {Math.min(
+                        ((campaign.membersCount || 0) / campaign.goalCount) * 100,
+                        100
+                      ).toFixed(1)}% Complete
+                    </Text>
+                  </View>
+                )}
+
+                {/* Primary Actions */}
+                <A11yPressable
+                  style={({ pressed }) => [
+                    styles.primaryAction,
+                    pressed && { opacity: 0.8 },
+                  ]}
+                  onPress={() => Linking.openURL(campaign.petitionUrl)}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Sign petition ${campaign.petitionId || ''}`}
+                  hitSlop={HIT_SLOP_8}
+                >
+                  <Text style={styles.buttonText}>📝 Sign Petition {campaign.petitionId || ''}</Text>
+                </A11yPressable>
+
+                {campaign.websiteUrl && (
+                  <A11yPressable
+                    style={({ pressed }) => [
+                      styles.secondaryAction,
+                      pressed && { opacity: 0.8 },
+                    ]}
+                    onPress={() => Linking.openURL(campaign.websiteUrl)}
+                    accessibilityRole="button"
+                    accessibilityLabel="Visit campaign website"
+                    hitSlop={HIT_SLOP_8}
+                  >
+                    <Text style={styles.secondaryActionText}>🌐 Visit Website</Text>
+                  </A11yPressable>
+                )}
+
+                {/* Legislation Cards */}
+                {campaign.legislation && campaign.legislation.length > 0 && (
+                  <View style={{ marginTop: 8 }}>
+                    <Text style={[styles.text, { fontWeight: '700', fontSize: 18 * factor }]}>
+                      Related Legislation
+                    </Text>
+                    {campaign.legislation.map((law: any, index: number) => (
+                      <View key={index} style={styles.legislationCard}>
+                        <View style={styles.legislationHeader}>
+                          <Text style={styles.legislationName}>{law.name}</Text>
+                          <View
+                            style={[
+                              styles.statusBadge,
+                              law.status === 'Passed' || law.status === 'In Force'
+                                ? styles.statusActive
+                                : styles.statusPending,
+                            ]}
+                          >
+                            <Text style={styles.statusText}>{law.status}</Text>
+                          </View>
+                        </View>
+                        <Text style={styles.legislationFull}>{law.fullName}</Text>
+                        <Text style={styles.legislationDesc}>{law.description}</Text>
+                      </View>
+                    ))}
+                  </View>
+                )}
+
+                {/* International Model */}
+                {campaign.internationalModel && (
+                  <View style={styles.modelCard}>
+                    <Text style={[styles.text, { fontWeight: '700', fontSize: 18 * factor, marginBottom: 8 }]}>
+                      International Model: {campaign.internationalModel.country}
+                    </Text>
+                    <Text style={styles.modelName}>{campaign.internationalModel.name}</Text>
+                    <Text style={styles.modelYear}>Launched: {campaign.internationalModel.launchYear}</Text>
+                    <Text style={styles.modelDesc}>{campaign.internationalModel.description}</Text>
+                    <A11yPressable
+                      onPress={() => Linking.openURL(campaign.internationalModel.url)}
+                      style={styles.linkButton}
+                      hitSlop={HIT_SLOP_8}
+                    >
+                      <Text style={styles.linkText}>Learn More →</Text>
+                    </A11yPressable>
+                  </View>
+                )}
+
+                {/* Share Section */}
+                {campaign.shareTemplates && (
+                  <View>
+                    <Text style={[styles.text, { fontWeight: '700', fontSize: 18 * factor, marginBottom: 8 }]}>
+                      Share This Campaign
+                    </Text>
+                    <View style={styles.shareRow}>
+                      <A11yPressable
+                        onPress={() => {
+                          const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                            campaign.shareTemplates.twitter
+                          )}`;
+                          Linking.openURL(url);
+                        }}
+                        style={[styles.shareButton, { backgroundColor: '#1DA1F2' }]}
+                        hitSlop={HIT_SLOP_8}
+                      >
+                        <Text style={styles.shareButtonText}>𝕏</Text>
+                      </A11yPressable>
+
+                      <A11yPressable
+                        onPress={async () => {
+                          try {
+                            await Share.share({
+                              message: campaign.shareTemplates.facebook,
+                              url: campaign.petitionUrl,
+                            });
+                          } catch (error) {
+                            Alert.alert('Error', 'Could not share');
+                          }
+                        }}
+                        style={[styles.shareButton, { backgroundColor: '#4267B2' }]}
+                        hitSlop={HIT_SLOP_8}
+                      >
+                        <Text style={styles.shareButtonText}>f</Text>
+                      </A11yPressable>
+
+                      <A11yPressable
+                        onPress={() => {
+                          const mailto = `mailto:?subject=${encodeURIComponent(
+                            campaign.shareTemplates.email.subject
+                          )}&body=${encodeURIComponent(campaign.shareTemplates.email.body)}`;
+                          Linking.openURL(mailto);
+                        }}
+                        style={[styles.shareButton, { backgroundColor: palette.primary }]}
+                        hitSlop={HIT_SLOP_8}
+                      >
+                        <Text style={styles.shareButtonText}>✉</Text>
+                      </A11yPressable>
+                    </View>
+                  </View>
+                )}
+              </GapView>
             )}
 
             {/* Edit/Delete Actions - for creators and admins */}
@@ -445,6 +608,156 @@ function createStyles(palette: Palette, factor: number) {
       paddingHorizontal: 12,
     },
     linkText: { color: palette.primary, fontWeight: "700", fontSize: 16 },
+    // Enhanced Campaign Styles
+    progressCard: {
+      backgroundColor: palette.card,
+      padding: 16,
+      borderRadius: 12,
+      borderWidth: 1,
+      borderColor: palette.border,
+      marginBottom: 12,
+    },
+    progressLabel: {
+      fontSize: Math.round(14 * factor),
+      color: palette.text,
+      fontWeight: '600',
+      marginBottom: 8,
+    },
+    progressBarContainer: {
+      height: 12,
+      backgroundColor: palette.muted,
+      borderRadius: 6,
+      overflow: 'hidden',
+      marginBottom: 8,
+    },
+    progressBarFill: {
+      height: '100%',
+      backgroundColor: palette.success || palette.primary,
+      borderRadius: 6,
+    },
+    progressPercentage: {
+      fontSize: Math.round(12 * factor),
+      color: palette.textSecondary,
+      textAlign: 'right',
+    },
+    primaryAction: {
+      backgroundColor: palette.primary,
+      paddingVertical: 14,
+      paddingHorizontal: 20,
+      borderRadius: 10,
+      alignItems: 'center',
+    },
+    secondaryAction: {
+      backgroundColor: palette.card,
+      paddingVertical: 14,
+      paddingHorizontal: 20,
+      borderRadius: 10,
+      alignItems: 'center',
+      borderWidth: 2,
+      borderColor: palette.primary,
+    },
+    secondaryActionText: {
+      color: palette.primary,
+      fontSize: Math.round(16 * factor),
+      fontWeight: '700',
+    },
+    legislationCard: {
+      backgroundColor: palette.card,
+      padding: 14,
+      borderRadius: 10,
+      marginTop: 8,
+      marginBottom: 8,
+      borderWidth: 1,
+      borderColor: palette.border,
+    },
+    legislationHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginBottom: 6,
+    },
+    legislationName: {
+      fontSize: Math.round(15 * factor),
+      fontWeight: '700',
+      color: palette.text,
+      flex: 1,
+    },
+    statusBadge: {
+      paddingHorizontal: 8,
+      paddingVertical: 4,
+      borderRadius: 6,
+      marginLeft: 8,
+    },
+    statusActive: {
+      backgroundColor: palette.success || '#22c55e',
+    },
+    statusPending: {
+      backgroundColor: palette.warning || '#f59e0b',
+    },
+    statusText: {
+      color: '#fff',
+      fontSize: Math.round(11 * factor),
+      fontWeight: '700',
+      textTransform: 'uppercase',
+    },
+    legislationFull: {
+      fontSize: Math.round(13 * factor),
+      color: palette.textSecondary,
+      fontStyle: 'italic',
+      marginBottom: 6,
+    },
+    legislationDesc: {
+      fontSize: Math.round(14 * factor),
+      color: palette.text,
+      lineHeight: Math.round(20 * factor),
+    },
+    modelCard: {
+      backgroundColor: palette.card,
+      padding: 14,
+      borderRadius: 10,
+      marginTop: 8,
+      borderWidth: 1,
+      borderColor: palette.border,
+    },
+    modelName: {
+      fontSize: Math.round(17 * factor),
+      fontWeight: '700',
+      color: palette.text,
+      marginBottom: 4,
+    },
+    modelYear: {
+      fontSize: Math.round(13 * factor),
+      color: palette.textSecondary,
+      marginBottom: 10,
+    },
+    modelDesc: {
+      fontSize: Math.round(14 * factor),
+      color: palette.text,
+      lineHeight: Math.round(20 * factor),
+      marginBottom: 10,
+    },
+    linkButton: {
+      alignSelf: 'flex-start',
+      paddingVertical: 4,
+    },
+    shareRow: {
+      flexDirection: 'row',
+      gap: 12,
+      flexWrap: 'wrap',
+      marginTop: 8,
+    },
+    shareButton: {
+      width: 60,
+      height: 60,
+      borderRadius: 30,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    shareButtonText: {
+      color: '#fff',
+      fontSize: Math.round(24 * factor),
+      fontWeight: '600',
+    },
     modalContainer: {
       flex: 1,
       padding: 20,

@@ -2,6 +2,7 @@ import { Link } from "expo-router";
 import React from "react";
 import {
   Alert,
+  Linking,
   Pressable,
   RefreshControl,
   SectionList,
@@ -13,6 +14,7 @@ import {
   View,
 } from "react-native";
 
+import RepTracker from "../../components/RepTracker";
 import ResponsiveScreenWrapper from "../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../components/SearchBar";
 import SkeletonRow from "../../components/SkeletonRow";
@@ -60,6 +62,7 @@ function ScreenInner() {
   const [items, setItems] = React.useState(localCampaigns);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+  const [showRepTracker, setShowRepTracker] = React.useState(false);
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
@@ -133,6 +136,26 @@ function ScreenInner() {
   return (
     <ResponsiveScreenWrapper>
       <View style={[styles.container, { flex: 1 }]}>
+        {showRepTracker ? (
+          <View style={{ flex: 1 }}>
+            <Pressable
+              onPress={() => setShowRepTracker(false)}
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 12,
+                backgroundColor: palette.surface,
+                borderBottomWidth: 1,
+                borderBottomColor: palette.muted,
+              }}
+            >
+              <Text style={{ color: palette.primary, fontSize: 16, fontWeight: '600' }}>
+                ← Back to Campaigns
+              </Text>
+            </Pressable>
+            <RepTracker />
+          </View>
+        ) : (
+          <>
         <View style={styles.headerCard}>
           <Text
             ref={titleRef}
@@ -158,6 +181,21 @@ function ScreenInner() {
               <Text style={styles.statLabel}>Created</Text>
             </View>
           </View>
+          <Pressable
+            onPress={() => setShowRepTracker(true)}
+            style={{
+              marginTop: 16,
+              backgroundColor: palette.primary,
+              paddingVertical: 12,
+              paddingHorizontal: 16,
+              borderRadius: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Text style={{ color: palette.onPrimary, fontSize: 16, fontWeight: '700' }}>
+              🗳️ Rep Tracker
+            </Text>
+          </Pressable>
         </View>
 
         <CreateCampaignBox
@@ -232,34 +270,98 @@ function ScreenInner() {
               >
                 <Pressable style={styles.cardContent}>
                   <View style={styles.cardHeader}>
-                    <Text style={styles.cardTitle} numberOfLines={2}>
-                      {item.title}
-                      {(item as any).kind === 'petition' && ' 📝'}
-                    </Text>
+                    <View style={{ flex: 1 }}>
+                      {/* Featured badge for important campaigns */}
+                      {(item as any).petitionId && (
+                        <View style={styles.featuredBadge}>
+                          <Text style={styles.featuredBadgeText}>⭐ FEATURED PETITION</Text>
+                        </View>
+                      )}
+                      <Text style={styles.cardTitle} numberOfLines={2}>
+                        {item.title}
+                        {(item as any).petitionId && ' 📝'}
+                      </Text>
+                      {(item as any).target && (
+                        <Text style={styles.targetText}>
+                          → {(item as any).target}
+                        </Text>
+                      )}
+                    </View>
                     {isJoined(item.id) && (
                       <View style={styles.joinedBadge}>
                         <Text style={styles.joinedBadgeText}>✓ Joined</Text>
                       </View>
                     )}
                   </View>
+                  
                   <Text style={styles.cardSummary} numberOfLines={3}>
                     {item.summary}
                   </Text>
-                  {item.membersCount && (
+                  
+                  {/* Progress Bar for campaigns with goals */}
+                  {item.goalCount && item.goalCount > 0 && (
+                    <View style={styles.progressContainer}>
+                      <View style={styles.progressBarWrapper}>
+                        <View
+                          style={[
+                            styles.progressBar,
+                            {
+                              width: `${Math.min(
+                                ((item.membersCount || 0) / item.goalCount) * 100,
+                                100
+                              )}%`,
+                              backgroundColor: 
+                                ((item.membersCount || 0) / item.goalCount) >= 0.75
+                                  ? palette.success || '#22c55e'
+                                  : ((item.membersCount || 0) / item.goalCount) >= 0.5
+                                  ? palette.warning || '#f59e0b'
+                                  : palette.primary,
+                            },
+                          ]}
+                        />
+                      </View>
+                      <View style={styles.progressTextRow}>
+                        <Text style={styles.progressText}>
+                          {(item.membersCount || 0).toLocaleString()} / {item.goalCount.toLocaleString()}
+                          {(item as any).petitionId ? ' signatures' : ' supporters'}
+                        </Text>
+                        <Text style={[styles.progressText, { fontWeight: '700', color: palette.primary }]}>
+                          {Math.round(((item.membersCount || 0) / item.goalCount) * 100)}%
+                        </Text>
+                      </View>
+                    </View>
+                  )}
+                  
+                  {!item.goalCount && item.membersCount && (
                     <View style={styles.cardFooter}>
                       <Text style={styles.supportersText}>
-                        👥 {item.membersCount} supporters
+                        👥 {item.membersCount.toLocaleString()} supporters
                       </Text>
                     </View>
                   )}
                 </Pressable>
               </Link>
               <View style={styles.actionRow}>
+                {/* Quick action for petitions - Sign Now */}
+                {(item as any).petitionUrl && (
+                  <Pressable
+                    onPress={() => {
+                      Linking.openURL((item as any).petitionUrl);
+                    }}
+                    accessibilityRole="button"
+                    accessibilityLabel={`Sign petition ${(item as any).petitionId || ''}`}
+                    style={[styles.actionButton, styles.signPetitionButton]}
+                  >
+                    <Text style={styles.actionButtonText}>📝 Sign Now</Text>
+                  </Pressable>
+                )}
                 <Pressable
                   onPress={async () => {
                     try {
+                      const shareMessage = (item as any).shareTemplates?.twitter || 
+                        `📣 ${item.title}\n\n${item.summary}\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/`;
                       await Share.share({
-                        message: `📣 ${item.title}\n\n${item.summary}\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/`,
+                        message: shareMessage,
                         title: item.title,
                       });
                     } catch {}
@@ -268,7 +370,7 @@ function ScreenInner() {
                   accessibilityLabel={t('a11y.shareCampaign').replace('{{title}}', item.title)}
                   style={[styles.actionButton, styles.shareButton]}
                 >
-                  <Text style={styles.actionButtonText}>📤 Share</Text>
+                  <Text style={styles.actionButtonText}>📤</Text>
                 </Pressable>
                 <Pressable
                   onPress={async () => {
@@ -345,6 +447,8 @@ function ScreenInner() {
             <RefreshControl refreshing={loading} onRefresh={reload} />
           }
         />
+        </>
+        )}
       </View>
     </ResponsiveScreenWrapper>
   );
@@ -431,6 +535,27 @@ function createStyles(palette: Palette) {
       marginRight: 8,
       lineHeight: 24,
     },
+    targetText: {
+      fontSize: 12,
+      color: palette.textSecondary,
+      fontWeight: '600',
+      marginTop: 4,
+      fontStyle: 'italic',
+    },
+    featuredBadge: {
+      backgroundColor: palette.warning || '#f59e0b',
+      paddingHorizontal: 8,
+      paddingVertical: 4,
+      borderRadius: 6,
+      alignSelf: 'flex-start',
+      marginBottom: 8,
+    },
+    featuredBadgeText: {
+      color: '#fff',
+      fontSize: 10,
+      fontWeight: '800',
+      letterSpacing: 0.5,
+    },
     joinedBadge: {
       backgroundColor: palette.primary,
       paddingHorizontal: 8,
@@ -449,6 +574,32 @@ function createStyles(palette: Palette) {
       lineHeight: 20,
       marginBottom: 8,
     },
+    progressContainer: {
+      marginTop: 8,
+      marginBottom: 8,
+    },
+    progressBarWrapper: {
+      height: 8,
+      backgroundColor: palette.muted,
+      borderRadius: 4,
+      overflow: 'hidden',
+      marginBottom: 6,
+    },
+    progressBar: {
+      height: '100%',
+      borderRadius: 4,
+    },
+    progressTextRow: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+    progressText: {
+      fontSize: 12,
+      color: palette.text,
+      fontWeight: '600',
+      opacity: 0.8,
+    },
     cardFooter: {
       marginTop: 4,
     },
@@ -465,19 +616,26 @@ function createStyles(palette: Palette) {
       backgroundColor: palette.background,
       borderTopWidth: StyleSheet.hairlineWidth,
       borderTopColor: palette.muted,
+      flexWrap: 'wrap',
     },
     actionButton: {
       flex: 1,
+      minWidth: 80,
       paddingVertical: 10,
       paddingHorizontal: 12,
       borderRadius: 8,
       alignItems: 'center',
       justifyContent: 'center',
     },
+    signPetitionButton: {
+      backgroundColor: palette.primary,
+      flex: 2,
+    },
     shareButton: {
       backgroundColor: palette.surface,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
+      flex: 0.8,
     },
     joinButton: {
       backgroundColor: palette.primary,

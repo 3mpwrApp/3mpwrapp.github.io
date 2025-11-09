@@ -1,23 +1,24 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Link, useFocusEffect, useRouter } from "expo-router";
+import { useFocusEffect, useRouter } from "expo-router";
 import React from "react";
 import {
-  Alert,
-  FlatList,
-  RefreshControl,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View
+    Alert,
+    FlatList,
+    RefreshControl,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View
 } from "react-native";
 
 import A11yPressable from '../../components/A11yPressable';
 import CalendarSubscriptionCard from '../../components/CalendarSubscriptionCard';
-import Card from "../../components/Card";
 import ContrastToggle from "../../components/ContrastToggle";
 import ErrorBoundary from '../../components/ErrorBoundary';
 import EventActionsBar from '../../components/EventActionsBar';
+import EventDetailCard from '../../components/EventDetailCard';
+import EventFilters, { type EventFilterOptions } from '../../components/EventFilters';
 import { GapView } from "../../components/GapView";
 import SearchBar from "../../components/SearchBar";
 import SettingsLink from "../../components/SettingsLink";
@@ -28,13 +29,13 @@ import { generateDisabilityObservances } from "../../data/disability-observances
 import { events as localEvents } from "../../data/events";
 import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
 import {
-  generateCanadianHolidays,
-  generateProvincialHolidays,
+    generateCanadianHolidays,
+    generateProvincialHolidays,
 } from "../../data/holidays-ca";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
@@ -67,6 +68,8 @@ export default function EventsScreen() {
   });
   const [selectedDay, setSelectedDay] = React.useState<string | null>(null);
   const [query, setQuery] = React.useState("");
+  const [showFilters, setShowFilters] = React.useState(false);
+  const [activeFilters, setActiveFilters] = React.useState<EventFilterOptions>({});
   const [systemItems, setSystemItems] = React.useState(() => {
     const y = new Date().getFullYear();
     return [
@@ -201,23 +204,62 @@ export default function EventsScreen() {
   const eventsByDay = React.useMemo(() => mapEventsByDay(items), [items]);
   const filtered = React.useMemo(
     () => {
-      const base = selectedDay
+      let base = selectedDay
         ? items.filter((e) => toDayKey(e.date) === selectedDay)
         : items;
+      
+      // Apply text search
       const q = query.trim().toLowerCase();
-      if (!q) return base;
-      return base.filter((e: any) => {
-        const place = e.isVirtual ? 'virtual' : (e.location || '');
-        const tag = e.id.startsWith('holiday-') ? 'holiday' : e.id.startsWith('prov-') ? 'provincial' : e.id.startsWith('obs-') ? 'observance' : '';
-        return (
-          e.title.toLowerCase().includes(q) ||
-          (e.description || '').toLowerCase().includes(q) ||
-          place.toLowerCase().includes(q) ||
-          tag.includes(q)
+      if (q) {
+        base = base.filter((e: any) => {
+          const place = e.isVirtual ? 'virtual' : (e.location || '');
+          const tag = e.id.startsWith('holiday-') ? 'holiday' : e.id.startsWith('prov-') ? 'provincial' : e.id.startsWith('obs-') ? 'observance' : '';
+          return (
+            e.title.toLowerCase().includes(q) ||
+            (e.description || '').toLowerCase().includes(q) ||
+            place.toLowerCase().includes(q) ||
+            tag.includes(q)
+          );
+        });
+      }
+      
+      // Apply accessibility filters
+      if (activeFilters.wheelchairAccessible) {
+        base = base.filter((e: any) => e.wheelchairAccessible === true);
+      }
+      if (activeFilters.quietRoom) {
+        base = base.filter((e: any) => e.quietRoom === true);
+      }
+      if (activeFilters.parkingAccessible) {
+        base = base.filter((e: any) => e.parkingAccessible === true);
+      }
+      if (activeFilters.assistiveListening) {
+        base = base.filter((e: any) => e.assistiveListening === true);
+      }
+      if (activeFilters.braille) {
+        base = base.filter((e: any) => e.braille === true);
+      }
+      if (activeFilters.serviceAnimalsWelcome) {
+        base = base.filter((e: any) => e.serviceAnimalsWelcome === true);
+      }
+      
+      // Apply energy cost filter
+      if (activeFilters.energyCost && activeFilters.energyCost.length > 0) {
+        base = base.filter((e: any) => 
+          e.energyCost && activeFilters.energyCost?.includes(e.energyCost)
         );
-      });
+      }
+      
+      // Apply location type filter
+      if (activeFilters.locationType === 'virtual') {
+        base = base.filter((e: any) => e.isVirtual === true || e.virtualLink);
+      } else if (activeFilters.locationType === 'in-person') {
+        base = base.filter((e: any) => !e.isVirtual && !e.virtualLink && e.location);
+      }
+      
+      return base;
     },
-    [items, selectedDay, query],
+    [items, selectedDay, query, activeFilters],
   );
 
   const selectToday = React.useCallback(() => {
@@ -422,6 +464,36 @@ export default function EventsScreen() {
           value={query}
           onChangeText={setQuery}
           placeholder={t('eventsFeature.search.placeholder','Search events, tags, places')}
+        />
+
+        {/* Filter Button */}
+        <A11yPressable
+          onPress={() => setShowFilters(true)}
+          style={styles.filterButton}
+          hitSlop={HIT_SLOP_8}
+          accessibilityRole="button"
+          accessibilityLabel="Open event filters"
+        >
+          <Text style={styles.filterButtonText}>
+            🔍 Filters
+            {Object.keys(activeFilters).filter(k => 
+              k !== 'searchQuery' && activeFilters[k as keyof EventFilterOptions]
+            ).length > 0 && (
+              <Text style={styles.filterBadge}>
+                {' '}• {Object.keys(activeFilters).filter(k => 
+                  k !== 'searchQuery' && activeFilters[k as keyof EventFilterOptions]
+                ).length}
+              </Text>
+            )}
+          </Text>
+        </A11yPressable>
+
+        {/* Filter Modal */}
+        <EventFilters
+          visible={showFilters}
+          filters={activeFilters}
+          onApply={setActiveFilters}
+          onClose={() => setShowFilters(false)}
         />
 
         {/* Auto-Sync Status Indicator */}
@@ -701,33 +773,14 @@ export default function EventsScreen() {
         )}
         renderItem={({ item }) => (
           <View style={{ marginBottom:12 }}>
-            <Link
-              href={{ pathname: "/(tabs)/events/[id]", params: { id: item.id } } as any}
-              asChild={true}
-              accessibilityRole="link"
-              accessibilityLabel={`${t('home.guide.open','Open')} ${item.title}`}
-            >
-              <Card
-                title={item.title}
-                subtitle={formatMeta(item.date, item.isVirtual, item.location)}
-                left={(() => {
-                  const label = item.id.startsWith("holiday-")
-                    ? t('eventsFeature.tags.holiday','Holiday')
-                    : item.id.startsWith("prov-")
-                      ? t('eventsFeature.tags.provincial','Provincial')
-                      : item.id.startsWith("obs-")
-                        ? t('eventsFeature.tags.observance','Observance')
-                        : null;
-                  if (!label) return null;
-                  return (
-                    <View style={{ backgroundColor: palette.primary, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 }}>
-                      <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: "700" }}>{label}</Text>
-                    </View>
-                  );
-                })()}
-                testID={`event-${item.id}`}
-              />
-            </Link>
+            <EventDetailCard 
+              event={item}
+              onPress={() => {
+                if (router) {
+                  router.push({ pathname: "/events/[id]", params: { id: item.id } } as any);
+                }
+              }}
+            />
             <EventActionsBar 
               event={item} 
               palette={palette}
@@ -831,6 +884,26 @@ function createStyles(
       borderRadius: 6,
       minHeight: 44,
       minWidth: 44,
+    },
+    filterButton: {
+      backgroundColor: palette.surface,
+      borderWidth: 1,
+      borderColor: palette.border,
+      paddingVertical: 10,
+      paddingHorizontal: 16,
+      borderRadius: 8,
+      marginTop: 8,
+      marginBottom: 8,
+      alignItems: 'center',
+    },
+    filterButtonText: {
+      color: palette.text,
+      fontSize: Math.round(15 * factor),
+      fontWeight: '600',
+    },
+    filterBadge: {
+      color: palette.primary,
+      fontWeight: '700',
     },
     calHeader: {
       marginTop: 6,

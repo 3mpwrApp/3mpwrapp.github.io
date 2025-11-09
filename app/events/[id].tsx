@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Linking from "expo-linking";
 import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import React from 'react';
-import { ActivityIndicator, Alert, Modal, Platform, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, Alert, Modal, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Lazy load Calendar to avoid crashes if expo-calendar is not available
 let Calendar: any = null;
@@ -19,7 +19,9 @@ import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { useAuth } from "../../context/AuthContext";
 import { events } from "../../data/events";
 import { useTranslation } from "../../i18n";
+import { syncEventToCalendar } from "../../services/calendarSync";
 import { isScheduled, removeReminder, scheduleForEvent } from "../../services/eventReminders";
+import { cancelRSVP, hasRSVPed, isEventFull, rsvpToEvent } from "../../services/eventRSVP";
 import { fsDeleteEvent, fsGetEvent, fsUpdateEvent } from "../../services/firestore";
 import { deleteEventFromProduction, isFirestoreSyncAvailable, updateEventInProduction } from "../../services/firestoreEventSync";
 import { useSettings } from "../../store/settings";
@@ -97,12 +99,18 @@ export default function EventDetail() {
 
   const { eventReminders } = useSettings();
   const [scheduled, setScheduled] = React.useState(false);
+  const [rsvped, setRsvped] = React.useState(false);
+  const [isFull, setIsFull] = React.useState(false);
   const { t } = useTranslation();
 
   React.useEffect(() => {
     if (!event?.id) return;
     isScheduled(event.id).then(setScheduled).catch(()=>{});
-  }, [event?.id]);
+    hasRSVPed(event.id).then(setRsvped).catch(()=>{});
+    if (event.capacity) {
+      isEventFull(event).then(setIsFull).catch(()=>{});
+    }
+  }, [event?.id, event?.capacity]);
 
   const handleEdit = () => {
     setEditData({
@@ -287,76 +295,20 @@ export default function EventDetail() {
   const addToCalendar = async () => {
     if (!event) return;
     
-    // Check if Calendar module is available
-    if (!Calendar) {
-      Alert.alert(
-        t('common.permission', 'Permission Required'),
-        'Calendar functionality is not available in this environment. Please try using the subscription calendar feature from the Events tab instead.'
-      );
-      return;
-    }
-    
     try {
-      // Request calendar permissions
-      const { status } = await Calendar.requestCalendarPermissionsAsync();
-      if (status !== 'granted') {
+      // Try using the enhanced calendar sync service
+      const result = await syncEventToCalendar(event);
+      
+      if (result.success) {
         Alert.alert(
-          t('common.permission', 'Permission Required'),
-          t('eventsFeature.calendar.permissionDenied', 'Calendar permission is required to add events. Please enable it in your device settings.')
+          '✓ Added to Calendar',
+          `"${event.title}" has been added to your 3mpwr Events calendar with full accessibility details and reminders.`
         );
         return;
       }
-
-      // Get default calendar or create one
-      let calendarId: string | undefined;
-      const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
       
-      // Try to find default calendar
-      const defaultCalendar = calendars.find((cal: any) => cal.allowsModifications && cal.source.name !== 'Holidays');
-      
-      if (defaultCalendar) {
-        calendarId = defaultCalendar.id;
-      } else {
-        // Create a new calendar if no suitable one exists
-        const defaultCalendarSource = Platform.OS === 'ios'
-          ? await Calendar.getDefaultCalendarAsync()
-          : { isLocalAccount: true, name: '3mpwr Events' };
-
-        calendarId = await Calendar.createCalendarAsync({
-          title: '3mpwr Events',
-          color: palette.primary,
-          entityType: Calendar.EntityTypes.EVENT,
-          sourceId: Platform.OS === 'ios' 
-            ? (defaultCalendarSource as any).source.id 
-            : undefined,
-          source: Platform.OS === 'android'
-            ? defaultCalendarSource as any
-            : undefined,
-          name: '3mpwr Events',
-          ownerAccount: '3mpwr',
-          accessLevel: Calendar.CalendarAccessLevel.OWNER,
-        });
-      }
-
-      // Parse event date
-      const startDate = new Date(event.date);
-      const endDate = new Date(startDate.getTime() + 60 * 60 * 1000); // 1 hour duration
-
-      // Create the event
-      await Calendar.createEventAsync(calendarId, {
-        title: event.title,
-        startDate,
-        endDate,
-        location: event.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event.location ?? ''),
-        notes: event.description ?? '',
-        timeZone: 'America/New_York', // You can make this dynamic based on user location
-        alarms: [{ relativeOffset: -60 }], // Reminder 1 hour before
-      });
-
-      Alert.alert(
-        t('common.success', 'Success'),
-        t('eventsFeature.calendar.added', 'Event added to your calendar!')
-      );
+      // If sync failed, fall back to Google Calendar web link
+      throw new Error(result.error || 'Calendar sync failed');
     } catch (error) {
       logError('EventDetail', 'Failed to add to calendar', error);
       
@@ -365,13 +317,27 @@ export default function EventDetail() {
         const start = new Date(event.date);
         const toCalTime = (d: Date) =>
           `${d.getUTCFullYear()}${String(d.getUTCMonth() + 1).padStart(2, "0")}${String(d.getUTCDate()).padStart(2, "0")}T${String(d.getUTCHours()).padStart(2, "0")}${String(d.getUTCMinutes()).padStart(2, "0")}00Z`;
-        const end = new Date(start.getTime() + 60 * 60 * 1000);
+        const end = event.endDate ? new Date(event.endDate) : new Date(start.getTime() + 60 * 60 * 1000);
         const dates = `${toCalTime(start)}/${toCalTime(end)}`;
+        
+        // Build description with accessibility info
+        let description = event.description || '';
+        if (event.energyCost) {
+          description += `\\n\\nEnergy Level: ${event.energyCost}`;
+        }
+        if (event.wheelchairAccessible || event.asl || event.captions) {
+          const features = [];
+          if (event.wheelchairAccessible) features.push('Wheelchair accessible');
+          if (event.asl) features.push('ASL');
+          if (event.captions) features.push('Captions');
+          description += `\\n\\nAccessibility: ${features.join(', ')}`;
+        }
+        
         const params = new URLSearchParams({
           action: "TEMPLATE",
           text: event.title,
-          details: event.description ?? "",
-          location: event.isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (event.location ?? ""),
+          details: description,
+          location: event.isVirtual ? (event.virtualLink || 'Virtual Event') : (event.location ?? ""),
           dates,
         });
         const url = `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -379,19 +345,17 @@ export default function EventDetail() {
         if (supported) {
           await Linking.openURL(url);
         } else {
-          throw new Error('Cannot open calendar');
+          Alert.alert(
+            t('common.error', 'Error'),
+            'Unable to open calendar. Please add the event manually.'
+          );
         }
-      } catch {
-        // Last resort: share ICS file
-        await Share.share({
-          message: createICS(
-            event.title,
-            event.date,
-            event.description,
-            event.location,
-          ),
-          title: t('eventsFeature.shareTitle','Event'),
-        });
+      } catch (fallbackError) {
+        logError('EventDetail', 'Fallback calendar link failed', fallbackError);
+        Alert.alert(
+          t('common.error', 'Error'),
+          t('eventsFeature.calendar.failed', 'Failed to add event to calendar')
+        );
       }
     }
   };
@@ -501,6 +465,96 @@ export default function EventDetail() {
             >
               <Text style={styles.buttonText}>{scheduled ? t('eventsFeature.reminders.remove','Remove Reminder') : t('eventsFeature.reminders.add','Add Reminder')}</Text>
             </A11yPressable>
+            
+            {/* RSVP Button */}
+            {event.registrationRequired && (
+              <>
+                <View style={{ height: 8 }} />
+                <A11yPressable
+                  style={({ pressed }) => [
+                    styles.button,
+                    { backgroundColor: rsvped ? palette.warning || palette.primary : palette.primary },
+                    isFull && !rsvped && { backgroundColor: palette.muted },
+                    pressed && { opacity: 0.8 },
+                  ]}
+                  onPress={async () => {
+                    if (!event) return;
+                    
+                    if (isFull && !rsvped) {
+                      Alert.alert('Event Full', 'This event has reached maximum capacity.');
+                      return;
+                    }
+
+                    if (event.registrationDeadline) {
+                      const deadline = new Date(event.registrationDeadline);
+                      if (new Date() > deadline) {
+                        Alert.alert('Registration Closed', 'The registration deadline has passed.');
+                        return;
+                      }
+                    }
+
+                    if (rsvped) {
+                      // Cancel RSVP
+                      Alert.alert(
+                        'Cancel RSVP',
+                        'Are you sure you want to cancel your registration?',
+                        [
+                          { text: 'No', style: 'cancel' },
+                          {
+                            text: 'Yes, Cancel',
+                            style: 'destructive',
+                            onPress: async () => {
+                              const result = await cancelRSVP(event.id, user?.uid);
+                              if (result.success) {
+                                setRsvped(false);
+                                setIsFull(false);
+                                Alert.alert('RSVP Cancelled', 'Your registration has been cancelled.');
+                              } else {
+                                Alert.alert('Error', result.error || 'Failed to cancel RSVP');
+                              }
+                            },
+                          },
+                        ]
+                      );
+                    } else {
+                      // RSVP to event
+                      const result = await rsvpToEvent(
+                        event, 
+                        user?.uid, 
+                        user?.displayName || undefined, 
+                        user?.email || undefined
+                      );
+                      if (result.success) {
+                        setRsvped(true);
+                        Alert.alert(
+                          '✓ RSVP Confirmed!',
+                          `You're registered for "${event.title}". ${
+                            event.capacity && event.attendeeCount !== undefined
+                              ? `${event.attendeeCount + 1} / ${event.capacity} spots filled.`
+                              : ''
+                          }`
+                        );
+                        // Check if now full
+                        if (event.capacity && event.attendeeCount !== undefined && event.attendeeCount + 1 >= event.capacity) {
+                          setIsFull(true);
+                        }
+                      } else {
+                        Alert.alert('Error', result.error || 'Failed to RSVP');
+                      }
+                    }
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={rsvped ? 'Cancel RSVP' : 'RSVP to event'}
+                  hitSlop={HIT_SLOP_8}
+                  disabled={isFull && !rsvped}
+                >
+                  <Text style={styles.buttonText}>
+                    {isFull && !rsvped ? '🚫 Event Full' : rsvped ? '✓ Registered - Tap to Cancel' : '📝 RSVP'}
+                  </Text>
+                </A11yPressable>
+              </>
+            )}
+            
             <View style={{ height: 8 }} />
             <A11yPressable
               style={({ pressed }) => [
