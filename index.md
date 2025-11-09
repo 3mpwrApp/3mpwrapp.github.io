@@ -150,12 +150,12 @@ We're building a safe space to connect, share experiences, and advocate for real
 <!-- Daily Events Banner - Auto-Updates with Happening Now/Soon Events -->
 <div id="daily-events-banner" class="gradient-banner" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
   <h2 style="margin: 0 0 1rem; color: white; font-size: 1.8rem;">
-    <span aria-hidden="true">🔥</span> Happening Now/Soon
+    <span aria-hidden="true">🔥</span> This Week's Events
     <span class="badge badge--new" style="background: rgba(255,255,255,0.3); color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Automatically updated">Auto-updated</span>
   </h2>
-  <p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Events from the community calendar – automatically synced from 3mpwr App</p>
+  <p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Events in the next 7 days – automatically synced from 3mpwr App</p>
   <div id="events-banner-content" style="min-height: 100px;">
-    <p style="margin: 0; font-size: 1.2rem; opacity: 0.9;">⏳ Loading today's events...</p>
+    <p style="margin: 0; font-size: 1.2rem; opacity: 0.9;">⏳ Loading upcoming events...</p>
   </div>
 </div>
 
@@ -164,7 +164,7 @@ We're building a safe space to connect, share experiences, and advocate for real
  * ========================================
  * DAILY EVENTS BANNER - HOMEPAGE
  * ========================================
- * Shows today's "happening now/soon" events, or next upcoming if none today
+ * Shows events happening in the next 7 days
  * Updates automatically from events calendar API
  * Syncs every 5 minutes with app events
  * ========================================
@@ -189,45 +189,27 @@ async function loadDailyEvents() {
       return true;
     });
     
-    // Get today's date (start and end of day in local timezone)
+    // Get today's date and next 7 days
     const now = new Date();
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
-    const todayEnd = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+    const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
     
-    // Filter events for today
-    let todayEvents = events.filter(event => {
+    // Filter events for the next 7 days (including today)
+    let upcomingEvents = events.filter(event => {
       const eventDate = new Date(event.date);
-      return eventDate >= todayStart && eventDate <= todayEnd;
+      return eventDate >= todayStart && eventDate <= sevenDaysFromNow;
     });
     
-    // If no events today, find next upcoming event(s)
-    let isToday = true;
-    if (todayEvents.length === 0) {
-      isToday = false;
-      // Get future events only
-      const futureEvents = events.filter(event => new Date(event.date) > todayEnd);
-      
-      if (futureEvents.length === 0) {
-        displayNoEvents();
-        return;
-      }
-      
-      // Sort by date
-      futureEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
-      
-      // Get the date of the next event
-      const nextEventDate = new Date(futureEvents[0].date);
-      const nextDayStart = new Date(nextEventDate.getFullYear(), nextEventDate.getMonth(), nextEventDate.getDate(), 0, 0, 0);
-      const nextDayEnd = new Date(nextEventDate.getFullYear(), nextEventDate.getMonth(), nextEventDate.getDate(), 23, 59, 59);
-      
-      // Get all events on that day
-      todayEvents = futureEvents.filter(event => {
-        const eventDate = new Date(event.date);
-        return eventDate >= nextDayStart && eventDate <= nextDayEnd;
-      });
+    // If no events in next 7 days, show "no events"
+    if (upcomingEvents.length === 0) {
+      displayNoEvents();
+      return;
     }
     
-    displayEvents(todayEvents, isToday);
+    // Sort by date (earliest first)
+    upcomingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    displayEvents(upcomingEvents);
     
   } catch (error) {
     console.error('❌ Failed to load daily events:', error);
@@ -235,23 +217,47 @@ async function loadDailyEvents() {
   }
 }
 
-function displayEvents(events, isToday) {
+function displayEvents(events) {
   const container = document.getElementById('events-banner-content');
-  const eventDate = new Date(events[0].date);
-  const dateStr = isToday ? 'TODAY' : eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
   
   const eventCount = events.length;
   const countText = eventCount === 1 ? '1 Event' : `${eventCount} Events`;
   
+  // Determine the timeframe text
+  const now = new Date();
+  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
+  const todayEnd = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+  
+  const firstEventDate = new Date(events[0].date);
+  const isToday = firstEventDate >= todayStart && firstEventDate <= todayEnd;
+  
+  const timeframeText = isToday ? 'THIS WEEK' : 'UPCOMING WEEK';
+  
   let html = `
     <h2 style="margin: 0 0 1rem; font-size: 2rem; color: white;">
-      🔥 ${dateStr}: ${countText}
+      🔥 ${timeframeText}: ${countText}
     </h2>
   `;
   
-  // Display all events for the day
+  // Display all events (grouped by day)
+  let currentDay = null;
+  
   events.forEach(event => {
-    const eventTime = new Date(event.date).toLocaleTimeString('en-US', { 
+    const eventDate = new Date(event.date);
+    const dayKey = eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    
+    // Add day header if this is a new day
+    if (dayKey !== currentDay) {
+      currentDay = dayKey;
+      const isEventToday = eventDate >= todayStart && eventDate <= todayEnd;
+      html += `
+        <h3 style="margin: 1.5rem 0 0.5rem; font-size: 1.3rem; color: white; opacity: 0.95;">
+          ${isEventToday ? '📅 TODAY' : `📅 ${dayKey}`}
+        </h3>
+      `;
+    }
+    
+    const eventTime = eventDate.toLocaleTimeString('en-US', { 
       hour: 'numeric', 
       minute: '2-digit',
       hour12: true 
@@ -327,10 +333,10 @@ function displayNoEvents() {
   const container = document.getElementById('events-banner-content');
   container.innerHTML = `
     <h2 style="margin: 0 0 1rem; font-size: 2rem; color: white;">
-      📅 No Upcoming Events
+      📅 No Events This Week
     </h2>
     <p style="margin: 0 0 1.5rem; font-size: 1.1rem; opacity: 0.95;">
-      Check back soon! Community members can create events anytime.
+      No events in the next 7 days. Check back soon!
     </p>
     <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
       📅 Go to Events Calendar
