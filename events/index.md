@@ -17,24 +17,24 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 📖 **2 minute read** | 🔋 **Energy: Very Light**
 
 <div class="gradient-banner" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-  <h2 style="margin: 0 0 1rem; font-size: 2rem; color: white;">📅 Real-Time Auto-Sync Coming Soon!</h2>
-  <p style="font-size: 1.3rem; margin: 0 0 1.5rem; font-weight: 600;">We're setting up seamless calendar integration</p>
+  <h2 style="margin: 0 0 1rem; font-size: 2rem; color: white;">📅 Real-Time Auto-Sync is LIVE! ✅</h2>
+  <p style="font-size: 1.3rem; margin: 0 0 1.5rem; font-weight: 600;">Seamless calendar integration is now active</p>
   <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px; margin: 1rem auto; max-width: 600px; backdrop-filter: blur(10px);">
-    <p style="margin: 0 0 1rem; font-size: 1rem;">⚙️ <strong>Coming Soon:</strong></p>
+    <p style="margin: 0 0 1rem; font-size: 1rem;">✅ <strong>Now Live:</strong></p>
     <p style="font-size: 0.95rem; margin: 0; line-height: 1.6; opacity: 0.95;">
-      We're currently working on our real-time calendar synchronization system to provide seamless integration with your calendar app. This will allow automatic updates of all community events directly to your calendar without any manual steps.
+      Our real-time calendar synchronization system is active! Events created in the 3mpwrApp automatically appear below within 5 minutes. Subscribe to the calendar feed below for automatic updates to your calendar app.
     </p>
     <p style="margin: 1rem 0 0; font-size: 0.9rem; opacity: 0.85;">
-      📍 Check back soon for the calendar feed link and setup instructions
+      📍 Scroll down for calendar subscription instructions
     </p>
   </div>
   <p style="margin: 1rem 0 0; font-size: 1rem; opacity: 0.95;">
     ✅ Disability awareness days | ✅ Health observances | ✅ Canadian holidays<br>
-    ✅ Community events | ✅ Coming: Auto-updates daily | ✅ Works with all calendar apps
+    ✅ Community events | ✅ Auto-updates every 5 minutes | ✅ Works with all calendar apps
   </p>
   <div style="margin-top: 1.5rem;">
     <a href="#subscribe-to-auto-updating-calendar" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: transform 0.2s;">
-      � Learn More About Events ↓
+      📲 Subscribe to Calendar ↓
     </a>
   </div>
 </div>
@@ -98,9 +98,6 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     <span id="events-sync-status">⏳ Checking for events...</span> | 
     Last updated: <span id="events-last-update">Never</span>
   </p>
-  <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #047857; font-style: italic;">
-    📅 Showing all events (including past events for reference)
-  </p>
 </div>
 
 <div style="margin: 1rem 0; text-align: center;">
@@ -109,11 +106,18 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   </button>
 </div>
 
-<section id="events">
-  <div id="events-list" style="margin: 2rem 0;">
+<section id="upcoming-events">
+  <div id="upcoming-events-list" style="margin: 2rem 0;">
     <div style="text-align: center; padding: 2rem;">
       <p style="font-size: 1.2rem;">⏳ Loading events...</p>
     </div>
+  </div>
+</section>
+
+<section id="past-events" style="display: none; margin-top: 4rem;">
+  <h2 style="margin: 2rem 0 1rem;">📚 Event Archive</h2>
+  <p style="margin: 0 0 1.5rem; color: #6b7280;">Past events for your reference</p>
+  <div id="past-events-list" style="margin: 2rem 0;">
   </div>
 </section>
 
@@ -134,6 +138,79 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
    * 5. Events display automatically below
    * ========================================
    */
+  
+  // Render a single event card with appropriate styling
+  function renderEventCard(event, now) {
+    const eventDate = new Date(event.date);
+    const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+    const isHappeningSoon = eventDate >= now && eventDate <= sevenDaysFromNow;
+    const isPast = eventDate < now;
+    
+    // Pre-calculate formatted date
+    const formattedDate = formatDate(event.date);
+    
+    // Determine gradient and border color based on status
+    let gradientStyle, borderStyle, urgencyBadge;
+    if (isPast) {
+      gradientStyle = 'background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);';
+      borderStyle = 'border: 3px solid #d1d5db;';
+      urgencyBadge = '';
+    } else if (isHappeningSoon) {
+      gradientStyle = 'background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);';
+      borderStyle = 'border: 3px solid #f59e0b;';
+      urgencyBadge = `<div style="position: absolute; top: -12px; right: 20px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);">🔥 HAPPENING SOON</div>`;
+    } else {
+      gradientStyle = 'background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);';
+      borderStyle = 'border: 3px solid #0ea5e9;';
+      urgencyBadge = '';
+    }
+    
+    return `
+      <article class="event-card" style="${borderStyle} border-radius: 16px; padding: 2.5rem; margin-bottom: 2.5rem; ${gradientStyle} box-shadow: 0 8px 24px rgba(0,0,0,0.15); position: relative; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'">
+        
+        ${urgencyBadge}
+        
+        <!-- Decorative corner accent -->
+        <div style="position: absolute; top: 0; left: 0; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%); border-radius: 0 0 100% 0;"></div>
+        
+        <h3 style="margin-top: 0; color: #1e293b; font-size: 2rem; font-weight: 800; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+          ${event.title}
+        </h3>
+        
+        <p class="event-date" style="color: #0f172a; font-weight: 700; font-size: 1.3rem; margin: 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.5rem;">📅</span> ${formattedDate}
+        </p>
+        
+        <p class="event-description" style="color: #334155; margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.7;">
+          ${event.description}
+        </p>
+        
+        ${event.location ? `<p class="event-location" style="color: #475569; margin: 1rem 0; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.3rem;">📍</span> <strong>Location:</strong> ${event.location}</p>` : ''}
+        
+        <div class="event-badges" style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          ${event.isVirtual ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 2px solid #3b82f6; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);">🌐 Virtual</span>` : ''}
+          ${event.asl ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px solid #f59e0b; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);">🤟 ASL</span>` : ''}
+          ${event.captions ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); border: 2px solid #6366f1; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);">📝 Captions</span>` : ''}
+          ${event.stepFree ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 2px solid #10b981; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);">♿ Accessible</span>` : ''}
+          ${event.sensorySpace ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); border: 2px solid #ec4899; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(236, 72, 153, 0.3);">🎧 Sensory-Friendly</span>` : ''}
+          ${event.energyCost ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border: 2px solid #f97316; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);">🔋 Energy: ${event.energyCost}</span>` : ''}
+        </div>
+        
+        <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+          ${event.rsvpLink ? `<a href="${event.rsvpLink}" class="btn btn-primary" style="display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0, 102, 204, 0.5)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.4)'">📝 RSVP Now</a>` : ''}
+          
+          <div class="share-buttons" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'twitter')" title="Share on Twitter/X" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">𝕏 Share</button>
+            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'bluesky')" title="Share on Bluesky" style="padding: 10px 16px; background: #0085ff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 133, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🦋 Share</button>
+            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'mastodon')" title="Share on Mastodon" style="padding: 10px 16px; background: #6364FF; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 100, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🐘 Share</button>
+            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'facebook')" title="Share on Facebook" style="padding: 10px 16px; background: #4267B2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(66, 103, 178, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📘 Share</button>
+            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'linkedin')" title="Share on LinkedIn" style="padding: 10px 16px; background: #0077B5; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">💼 Share</button>
+            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'email')" title="Share via Email" style="padding: 10px 16px; background: #6B7280; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📧 Email</button>
+          </div>
+        </div>
+      </article>
+    `;
+  }
   
   // Fetch and display events from app (real-time sync via Cloudflare Worker)
   async function loadEvents() {
@@ -168,14 +245,9 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       console.log(`📅 ${events.length} events (sample events filtered out)`);
       console.log('📊 Events data:', events.slice(0, 5)); // Log first 5 for debugging
       
-      const container = document.getElementById('events-list');
-      
-      // Update sync status - success
-      if (syncStatus) {
-        syncStatus.textContent = events.length > 0 
-          ? `✅ ${events.length} event${events.length !== 1 ? 's' : ''} (including past events for reference)`
-          : '📭 No events available';
-      }
+      const upcomingContainer = document.getElementById('upcoming-events-list');
+      const pastContainer = document.getElementById('past-events-list');
+      const pastSection = document.getElementById('past-events');
       
       // Update last update time
       const lastUpdate = document.getElementById('events-last-update');
@@ -188,15 +260,15 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       }
       
       if (events.length === 0) {
-        container.innerHTML = `
+        upcomingContainer.innerHTML = `
           <div class="info-box" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 4px solid #f59e0b;">
-            <h3 style="margin-top: 0;">📅 No Upcoming Events Right Now</h3>
+            <h3 style="margin-top: 0;">📅 No Events Right Now</h3>
             <p style="font-size: 1.05rem;"><strong>The calendar is ready for community events!</strong></p>
             <p>Here's what you can do:</p>
             <ul style="text-align: left; max-width: 700px; margin: 1rem auto;">
               <li>📲 <strong>Create an event</strong> in the 3mpwrApp - it will appear here within 5 minutes</li>
-              <li>� <strong>Subscribe to the calendar feed</strong> below to get notified when new events are added</li>
-              <li>� <strong>Check back soon</strong> - community members can create events anytime</li>
+              <li>📅 <strong>Subscribe to the calendar feed</strong> below to get notified when new events are added</li>
+              <li>🔄 <strong>Check back soon</strong> - community members can create events anytime</li>
             </ul>
             <div style="margin: 1.5rem 0; padding: 1rem; background: rgba(255, 255, 255, 0.8); border-radius: 8px;">
               <p style="margin: 0; color: #92400e;"><strong>✅ Connection Status:</strong></p>
@@ -209,86 +281,46 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
             <p style="margin-top: 1rem;"><em>This page auto-refreshes every 5 minutes to show new events.</em></p>
           </div>
         `;
+        if (syncStatus) syncStatus.textContent = '📭 No events available';
+        pastSection.style.display = 'none';
         return;
       }
       
-      // Sort events by date (soonest first)
+      // Sort events by date
       events.sort((a, b) => new Date(a.date) - new Date(b.date));
       
-      // Check if event is happening soon (within next 7 days)
+      // Separate upcoming/current and past events
       const now = new Date();
-      const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+      const upcomingEvents = events.filter(event => new Date(event.date) >= now);
+      const pastEvents = events.filter(event => new Date(event.date) < now);
       
-      // Display events with enhanced styling
-      container.innerHTML = events.map((event, index) => {
-        const eventDate = new Date(event.date);
-        const isHappeningSoon = eventDate >= now && eventDate <= sevenDaysFromNow;
-        const isPast = eventDate < now;
-        
-        // Pre-calculate formatted date to avoid function calls in template
-        const formattedDate = formatDate(event.date);
-        
-        // Determine gradient and border color based on status
-        let gradientStyle, borderStyle, urgencyBadge;
-        if (isPast) {
-          gradientStyle = 'background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);';
-          borderStyle = 'border: 3px solid #d1d5db;';
-          urgencyBadge = '';
-        } else if (isHappeningSoon) {
-          gradientStyle = 'background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);';
-          borderStyle = 'border: 3px solid #f59e0b;';
-          urgencyBadge = `<div style="position: absolute; top: -12px; right: 20px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);">🔥 HAPPENING SOON</div>`;
-        } else {
-          gradientStyle = 'background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);';
-          borderStyle = 'border: 3px solid #0ea5e9;';
-          urgencyBadge = '';
-        }
-        
-        return `
-        <article class="event-card" style="${borderStyle} border-radius: 16px; padding: 2.5rem; margin-bottom: 2.5rem; ${gradientStyle} box-shadow: 0 8px 24px rgba(0,0,0,0.15); position: relative; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'">
-          
-          ${urgencyBadge}
-          
-          <!-- Decorative corner accent -->
-          <div style="position: absolute; top: 0; left: 0; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%); border-radius: 0 0 100% 0;"></div>
-          
-          <h3 style="margin-top: 0; color: #1e293b; font-size: 2rem; font-weight: 800; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            ${event.title}
-          </h3>
-          
-          <p class="event-date" style="color: #0f172a; font-weight: 700; font-size: 1.3rem; margin: 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
-            <span style="font-size: 1.5rem;">📅</span> ${formattedDate}
-          </p>
-          
-          <p class="event-description" style="color: #334155; margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.7;">
-            ${event.description}
-          </p>
-          
-          ${event.location ? `<p class="event-location" style="color: #475569; margin: 1rem 0; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.3rem;">📍</span> <strong>Location:</strong> ${event.location}</p>` : ''}
-          
-          <div class="event-badges" style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 0.75rem;">
-            ${event.isVirtual ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 2px solid #3b82f6; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);">🌐 Virtual</span>` : ''}
-            ${event.asl ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px solid #f59e0b; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);">🤟 ASL</span>` : ''}
-            ${event.captions ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); border: 2px solid #6366f1; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);">📝 Captions</span>` : ''}
-            ${event.stepFree ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 2px solid #10b981; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);">♿ Accessible</span>` : ''}
-            ${event.sensorySpace ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); border: 2px solid #ec4899; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(236, 72, 153, 0.3);">🎧 Sensory-Friendly</span>` : ''}
-            ${event.energyCost ? `<span class="badge" style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border: 2px solid #f97316; border-radius: 8px; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);">🔋 Energy: ${event.energyCost}</span>` : ''}
+      console.log(`📅 ${upcomingEvents.length} upcoming/current, ${pastEvents.length} past events`);
+      
+      // Update sync status
+      if (syncStatus) {
+        syncStatus.textContent = `✅ ${upcomingEvents.length} upcoming event${upcomingEvents.length !== 1 ? 's' : ''}${pastEvents.length > 0 ? `, ${pastEvents.length} archived` : ''}`;
+      }
+      
+      // Display upcoming events
+      if (upcomingEvents.length > 0) {
+        upcomingContainer.innerHTML = upcomingEvents.map((event) => renderEventCard(event, now)).join('');
+      } else {
+        upcomingContainer.innerHTML = `
+          <div class="info-box" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-left: 4px solid #0ea5e9;">
+            <h3 style="margin-top: 0;">📅 No Upcoming Events</h3>
+            <p>All current events are in the past. Check the archive below or create a new event in the 3mpwrApp!</p>
           </div>
-          
-          <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-            ${event.rsvpLink ? `<a href="${event.rsvpLink}" class="btn btn-primary" style="display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0, 102, 204, 0.5)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.4)'">📝 RSVP Now</a>` : ''}
-            
-            <div class="share-buttons" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-              <button onclick="shareEvent(\`${event.title}\`, \`${event.description.substring(0, 200)}\`, \`${formattedDate}\`, 'twitter')" title="Share on Twitter/X" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">𝕏 Share</button>
-              <button onclick="shareEvent(\`${event.title}\`, \`${event.description.substring(0, 200)}\`, \`${formattedDate}\`, 'bluesky')" title="Share on Bluesky" style="padding: 10px 16px; background: #0085ff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 133, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🦋 Share</button>
-              <button onclick="shareEvent(\`${event.title}\`, \`${event.description.substring(0, 200)}\`, \`${formattedDate}\`, 'mastodon')" title="Share on Mastodon" style="padding: 10px 16px; background: #6364FF; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 100, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🐘 Share</button>
-              <button onclick="shareEvent(\`${event.title}\`, \`${event.description.substring(0, 200)}\`, \`${formattedDate}\`, 'facebook')" title="Share on Facebook" style="padding: 10px 16px; background: #4267B2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(66, 103, 178, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📘 Share</button>
-              <button onclick="shareEvent(\`${event.title}\`, \`${event.description.substring(0, 200)}\`, \`${formattedDate}\`, 'linkedin')" title="Share on LinkedIn" style="padding: 10px 16px; background: #0077B5; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">💼 Share</button>
-              <button onclick="shareEvent(\`${event.title}\`, \`${event.description.substring(0, 200)}\`, \`${formattedDate}\`, 'email')" title="Share via Email" style="padding: 10px 16px; background: #6B7280; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📧 Email</button>
-            </div>
-          </div>
-        </article>
-      `}).join('');
+        `;
+      }
+      
+      // Display past events in archive section
+      if (pastEvents.length > 0) {
+        pastSection.style.display = 'block';
+        // Reverse to show most recent past events first
+        pastContainer.innerHTML = pastEvents.reverse().map((event) => renderEventCard(event, now)).join('');
+      } else {
+        pastSection.style.display = 'none';
+      }
       
     } catch (error) {
       console.error('❌ Failed to load events:', error);
@@ -297,7 +329,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       const syncStatus = document.getElementById('events-sync-status');
       if (syncStatus) syncStatus.textContent = '⚠️ Connection issue';
       
-      document.getElementById('events-list').innerHTML = `
+      document.getElementById('upcoming-events-list').innerHTML = `
         <div class="warning-box">
           <h3 style="margin-top: 0;">⚠️ Connection Issue</h3>
           <p><strong>Error:</strong> ${error.message}</p>
@@ -316,6 +348,9 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
           <p>Please <a href="/contact/">contact us</a> if the problem persists.</p>
         </div>
       `;
+      
+      // Hide archive section on error
+      document.getElementById('past-events').style.display = 'none';
     }
   }
   
