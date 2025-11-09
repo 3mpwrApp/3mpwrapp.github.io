@@ -658,6 +658,10 @@ We're committed to transparency and protecting your rights:
 
 Follow 3mpwr on social media to stay connected and be part of the community:
 
+<p style="margin: 0.5rem 0 1rem; font-size: 1.05rem; color: #4b5563;">
+  <strong>Use <span style="background: #f3f4f6; padding: 3px 8px; border-radius: 4px; font-family: monospace; color: #1f2937;">#3mpwrApp</span> to join the conversation!</strong>
+</p>
+
 <ul aria-label="Social links" class="socials-list">
   <li><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='facebook' -%} Facebook</a> – Follow us for updates and community news</li>
   <li><a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='x' -%} X (Twitter)</a> – Join the conversation</li>

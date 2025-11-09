@@ -661,7 +661,15 @@ Please fill out the form below and we'll get back to you within 24 hours:
 ## Other Ways to Reach Us
 
 ### Social Media
+
+Connect with us and use **#3mpwrApp** to join the conversation!
+
 - **GitHub:** [@3mpowrApp](https://github.com/3mpowrApp)
+- **X (Twitter):** [@3mpwrApp0816](https://x.com/3mpwrApp0816)
+- **Facebook:** [@3mpowrapp](https://www.facebook.com/3mpowrapp/)
+- **Instagram:** [@3mpowrapp](https://www.instagram.com/3mpowrapp/)
+- **TikTok:** [@3mpwrapp](https://www.tiktok.com/@3mpwrapp)
+- **Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)
 
 ### Accessibility
 If you have accessibility issues viewing or using this form, please email us directly at [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) and we'll assist you promptly.

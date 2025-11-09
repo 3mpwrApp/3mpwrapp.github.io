@@ -479,8 +479,8 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     // Build the event URL (could be enhanced with event ID for deep linking)
     const eventUrl = 'https://3mpwrapp.pages.dev/events/';
     
-    // Create share text with proper formatting
-    const shareText = `${cleanTitle}\n${cleanDate}\n\n${cleanDescription}\n\nPowered by 3mpwr App: ${eventUrl}`;
+    // Create share text with proper formatting (includes #3mpwrApp hashtag)
+    const shareText = `${cleanTitle}\n${cleanDate}\n\n${cleanDescription}\n\n#3mpwrApp\n\nPowered by 3mpwr App: ${eventUrl}`;
     
     // Encode for URLs
     const encodedText = encodeURIComponent(shareText);
@@ -492,7 +492,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     try {
       switch(platform) {
         case 'twitter':
-          // Twitter has 280 char limit, so trim if needed
+          // Twitter has 280 char limit, so trim if needed (keep hashtag)
           const twitterText = shareText.length > 260 ? shareText.substring(0, 257) + '...' : shareText;
           shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`;
           break;
@@ -597,7 +597,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   // Share all events page
   function shareAllEvents() {
     const pageUrl = 'https://3mpwrapp.pages.dev/events/';
-    const shareText = '📅 Check out the 3mpwr App Events Calendar!\n\nDisability rights, worker justice, and community events - all fully accessible.\n\n✅ Real-time sync\n✅ Subscribe to calendar feed\n✅ Community-driven events\n\nPowered by 3mpwr App';
+    const shareText = '📅 Check out the 3mpwr App Events Calendar!\n\nDisability rights, worker justice, and community events - all fully accessible.\n\n✅ Real-time sync\n✅ Subscribe to calendar feed\n✅ Community-driven events\n\n#3mpwrApp\n\nPowered by 3mpwr App';
     
     // Try native Web Share API first (mobile-friendly)
     if (navigator.share) {
