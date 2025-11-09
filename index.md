@@ -148,25 +148,25 @@ We're building a safe space to connect, share experiences, and advocate for real
 ---
 
 <!-- Community Spotlight Banner -->
-<div class="highlight-banner" style="background: #f8f9fa; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
-  <h2 style="margin: 0 0 0.5rem; color: #1e40af; font-size: 1.6rem;">
+<div class="highlight-banner" style="background: #f8f9fa !important; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; color: #1f2937 !important;">
+  <h2 style="margin: 0 0 0.5rem; color: #1e40af !important; font-size: 1.6rem;">
     <span aria-hidden="true">🌟</span> Featured Community Spotlight
     <span class="badge badge--new">New!</span>
   </h2>
   <div style="display: grid; gap: 1rem; margin-top: 1rem;">
     <div>
-      <h3 style="margin: 0 0 0.5rem; color: #1e40af; font-size: 1.3rem;">Mitchell Tremblay (@ODSPoverty)</h3>
-      <p style="margin: 0 0 0.75rem; color: #1f2937; font-size: 1.05rem;">
-        🇨🇦 <strong>Canadian Disability Advocate</strong> fighting for economic justice and dignity for people living with disabilities.
+      <h3 style="margin: 0 0 0.5rem; color: #1e40af !important; font-size: 1.3rem;">Mitchell Tremblay (@ODSPoverty)</h3>
+      <p style="margin: 0 0 0.75rem; color: #1f2937 !important; font-size: 1.05rem;">
+        🇨🇦 <strong style="color: #1f2937 !important;">Canadian Disability Advocate</strong> fighting for economic justice and dignity for people living with disabilities.
       </p>
-      <p style="margin: 0 0 0.75rem; color: #1f2937;">
-        <strong>Fighting for:</strong> ODSP reform, disability rights, and raising awareness about poverty among disabled Canadians.
+      <p style="margin: 0 0 0.75rem; color: #1f2937 !important;">
+        <strong style="color: #1f2937 !important;">Fighting for:</strong> ODSP reform, disability rights, and raising awareness about poverty among disabled Canadians.
       </p>
       <div class="highlight-banner__actions" style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-        <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" class="highlight-banner__button" style="background: #3b82f6; color: white; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid #3b82f6;">
+        <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" class="highlight-banner__button" style="background: #3b82f6 !important; color: white !important; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid #3b82f6;">
           <span aria-hidden="true">🔗</span> Connect with Mitchell
         </a>
-        <a href="/community-spotlight/" class="highlight-banner__button" style="background: white; color: #3b82f6; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid #3b82f6;">
+        <a href="/community-spotlight/" class="highlight-banner__button" style="background: white !important; color: #3b82f6 !important; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid #3b82f6;">
           <span aria-hidden="true">🌟</span> View All Community Members
         </a>
       </div>
@@ -400,41 +400,41 @@ if (document.readyState === 'loading') {
 
 ## <span aria-hidden="true">✨</span> Built Different—By Design
 
-<div class="gradient-banner-pink" style="color: white;">
-  <h3 style="margin: 0 0 1rem; font-size: 1.3rem; color: white;"><span aria-hidden="true">🎯</span> Thoughtfully Designed for Real Lives</h3>
-  <p style="margin: 0 0 1rem; font-size: 1.05rem; color: white;">
+<div class="gradient-banner-pink" style="color: white !important;">
+  <h3 style="margin: 0 0 1rem; font-size: 1.3rem; color: white !important;"><span aria-hidden="true">🎯</span> Thoughtfully Designed for Real Lives</h3>
+  <p style="margin: 0 0 1rem; font-size: 1.05rem; color: white !important;">
     3mpwrApp isn't just accessible—it's **thoughtfully built** with features you won't find anywhere else:
   </p>
   
-  <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; color: white;">
-    <li style="padding-left: 1.5rem; position: relative; color: white;">
+  <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; color: white !important;">
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
       <span style="position: absolute; left: 0;" aria-hidden="true">🧠</span>
-      <strong style="color: white;">Adaptive cognitive support</strong> that responds to how you're feeling right now
+      <strong style="color: white !important;">Adaptive cognitive support</strong> that responds to how you're feeling right now
     </li>
-    <li style="padding-left: 1.5rem; position: relative; color: white;">
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
       <span style="position: absolute; left: 0;" aria-hidden="true">💙</span>
-      <strong style="color: white;">Wellness-first features</strong> designed with your wellbeing in mind
+      <strong style="color: white !important;">Wellness-first features</strong> designed with your wellbeing in mind
     </li>
-    <li style="padding-left: 1.5rem; position: relative; color: white;">
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
       <span style="position: absolute; left: 0;" aria-hidden="true">⏰</span>
-      <strong style="color: white;">Smart check-ins</strong> that respect your time and energy
+      <strong style="color: white !important;">Smart check-ins</strong> that respect your time and energy
     </li>
-    <li style="padding-left: 1.5rem; position: relative; color: white;">
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
       <span style="position: absolute; left: 0;" aria-hidden="true">🎯</span>
-      <strong style="color: white;">Hidden helpers</strong> that appear when you need support most
+      <strong style="color: white !important;">Hidden helpers</strong> that appear when you need support most
     </li>
-    <li style="padding-left: 1.5rem; position: relative; color: white;">
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
       <span style="position: absolute; left: 0;" aria-hidden="true">🌟</span>
-      <strong style="color: white;">Progress celebrations</strong> for every step forward, big or small
+      <strong style="color: white !important;">Progress celebrations</strong> for every step forward, big or small
     </li>
-    <li style="padding-left: 1.5rem; position: relative; color: white;">
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
       <span style="position: absolute; left: 0;" aria-hidden="true">🎮</span>
-      <strong style="color: white;">Thoughtful surprises</strong> that make using the app a positive experience
+      <strong style="color: white !important;">Thoughtful surprises</strong> that make using the app a positive experience
     </li>
   </ul>
   
-  <p style="margin: 1rem 0 0; font-size: 0.95rem; font-style: italic; color: white;">
-    <span aria-hidden="true">💡</span> <strong style="color: white;">Note:</strong> The more you use 3mpwrApp, the more helpful features you'll discover—all designed to support you.
+  <p style="margin: 1rem 0 0; font-size: 0.95rem; font-style: italic; color: white !important;">
+    <span aria-hidden="true">💡</span> <strong style="color: white !important;">Note:</strong> The more you use 3mpwrApp, the more helpful features you'll discover—all designed to support you.
   </p>
 </div>
 
@@ -526,11 +526,11 @@ if (document.readyState === 'loading') {
 
 Ready to join the movement? Here's how you can get started:
 
-<div class="gradient-banner" style="color: white;">
-  <h3 style="margin: 0 0 0.5rem; color: white;"><span aria-hidden="true">🚀</span> Phase 1 Beta Testing - Now Accepting Signups!</h3>
-  <p style="margin: 0 0 1rem; font-size: 1rem; color: white;">Be among the first testers to shape the future of disability advocacy technology.</p>
-  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: #ffffff; color: #5568d3; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
-  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: white;"><a href="{{ '/app-waitlist' | relative_url }}" style="color: white; text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="{{ '/beta-guide' | relative_url }}" style="color: white; text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
+<div class="gradient-banner" style="color: white !important;">
+  <h3 style="margin: 0 0 0.5rem; color: white !important;"><span aria-hidden="true">🚀</span> Phase 1 Beta Testing - Now Accepting Signups!</h3>
+  <p style="margin: 0 0 1rem; font-size: 1rem; color: white !important;">Be among the first testers to shape the future of disability advocacy technology.</p>
+  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: #ffffff !important; color: #5568d3 !important; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
+  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: white !important;"><a href="{{ '/app-waitlist' | relative_url }}" style="color: white !important; text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="{{ '/beta-guide' | relative_url }}" style="color: white !important; text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
 </div>
 
 - <a href="{{ '/user-guide' | relative_url }}"><strong><span aria-hidden="true">📖</span> Read Our Complete User Guide</strong></a> – **NEW Phase 2!** Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more ([Download PDF](/assets/downloads/3mpwrapp-user-guide-full.pdf))
@@ -554,15 +554,15 @@ Ready to join the movement? Here's how you can get started:
     {% endif %}
   {% endfor %}
   {% assign latest_curated = daily_today | first %}
-  <h3 id="latest-curated" style="color: #1f2937;">
+  <h3 id="latest-curated" style="color: #1f2937 !important;">
     <span aria-hidden="true">🎯</span> Daily highlights from across Canada
     {% if latest_curated %}
       <span class="badge badge--new" aria-label="Updated today">✅ {{ today | date: "%B %-d, %Y" }}</span>
     {% endif %}
   </h3>
-  <p class="highlight-banner__desc" style="color: #1f2937;">A quick, accessible round-up of community stories, resources, and calls-to-action <strong>updated automatically every day</strong>.</p>
+  <p class="highlight-banner__desc" style="color: #1f2937 !important;">A quick, accessible round-up of community stories, resources, and calls-to-action <strong style="color: #1f2937 !important;">updated automatically every day</strong>.</p>
   <div class="highlight-banner__actions">
-    <a class="highlight-banner__button" href="{{ '/blog/#curated-daily' | relative_url }}" aria-describedby="curated-daily-desc" style="color: #1f2937;">
+    <a class="highlight-banner__button" href="{{ '/blog/#curated-daily' | relative_url }}" aria-describedby="curated-daily-desc" style="color: #1f2937 !important;">
       Check out today's curated feed →
     </a>
     <span id="curated-daily-desc" class="sr-only">This link takes you to the curated daily feed section on our blog.</span>
@@ -708,10 +708,10 @@ Questions? <a href="{{ '/contact' | relative_url }}">Contact us</a> — we're he
 ---
 
 <!-- Community Counter -->
-<div class="community-stats-box" style="color: #1f2937;">
-  <p style="margin: 0; font-size: 1.1rem; color: #1f2937;"><strong style="color: #1f2937;"><span aria-hidden="true">💚</span> Join Our Growing Community</strong></p>
-  <p style="margin: 0.5rem 0 0; color: #1f2937;">
-    Currently launching Phase 1 closed beta - <a href="{{ '/beta' | relative_url }}" style="color: #0645ad;">sign up to be among the first testers</a>
+<div class="community-stats-box" style="color: #1f2937 !important;">
+  <p style="margin: 0; font-size: 1.1rem; color: #1f2937 !important;"><strong style="color: #1f2937 !important;"><span aria-hidden="true">💚</span> Join Our Growing Community</strong></p>
+  <p style="margin: 0.5rem 0 0; color: #1f2937 !important;">
+    Currently launching Phase 1 closed beta - <a href="{{ '/beta' | relative_url }}" style="color: #0645ad !important;">sign up to be among the first testers</a>
   </p>
 </div>
 

@@ -59,40 +59,40 @@ permalink: /community-spotlight/
 
 ### 🌟 Mitchell Tremblay (@ODSPoverty)
 
-<div class="info-box-bordered" style="background: #f0f9ff; border: 2px solid #3b82f6; border-left: 4px solid #3b82f6; color: #1f2937;">
-  <h4 style="margin-top: 0; color: #1e40af;">🇨🇦 Canadian Disability Advocate</h4>
+<div class="info-box-bordered" style="background: #f0f9ff !important; border: 2px solid #3b82f6; border-left: 4px solid #3b82f6; color: #1f2937 !important;">
+  <h4 style="margin-top: 0; color: #1e40af !important;">🇨🇦 Canadian Disability Advocate</h4>
   
-  <p style="color: #1f2937;"><strong>Mitchell Tremblay</strong> is a passionate Canadian disability rights advocate fighting for economic justice and dignity for people living with disabilities.</p>
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">Mitchell Tremblay</strong> is a passionate Canadian disability rights advocate fighting for economic justice and dignity for people living with disabilities.</p>
   
-  <p style="color: #1f2937;"><strong>🎯 Advocacy Focus:</strong></p>
-  <ul style="color: #1f2937;">
-    <li>ODSP (Ontario Disability Support Program) reform and adequacy</li>
-    <li>Disability rights and economic justice</li>
-    <li>Raising awareness about poverty among disabled Canadians</li>
-    <li>Community organizing and grassroots activism</li>
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🎯 Advocacy Focus:</strong></p>
+  <ul style="color: #1f2937 !important;">
+    <li style="color: #1f2937 !important;">ODSP (Ontario Disability Support Program) reform and adequacy</li>
+    <li style="color: #1f2937 !important;">Disability rights and economic justice</li>
+    <li style="color: #1f2937 !important;">Raising awareness about poverty among disabled Canadians</li>
+    <li style="color: #1f2937 !important;">Community organizing and grassroots activism</li>
   </ul>
   
-  <p style="color: #1f2937;"><strong>💪 Impact:</strong></p>
-  <ul style="color: #1f2937;">
-    <li>📱 Active social media advocate sharing lived experiences</li>
-    <li>📣 Speaking out about the realities of living on disability benefits</li>
-    <li>🤝 Connecting and supporting other disabled Canadians</li>
-    <li>💬 Amplifying voices of those in poverty</li>
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💪 Impact:</strong></p>
+  <ul style="color: #1f2937 !important;">
+    <li style="color: #1f2937 !important;">📱 Active social media advocate sharing lived experiences</li>
+    <li style="color: #1f2937 !important;">📣 Speaking out about the realities of living on disability benefits</li>
+    <li style="color: #1f2937 !important;">🤝 Connecting and supporting other disabled Canadians</li>
+    <li style="color: #1f2937 !important;">💬 Amplifying voices of those in poverty</li>
   </ul>
   
-  <p style="color: #1f2937;"><strong>💬 In Their Words:</strong></p>
-  <blockquote style="border-left: 3px solid #3b82f6; padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #1e40af; background: #dbeafe; padding: 1rem; border-radius: 4px;">
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💬 In Their Words:</strong></p>
+  <blockquote style="border-left: 3px solid #3b82f6; padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #1e40af !important; background: #dbeafe !important; padding: 1rem; border-radius: 4px;">
     "Fighting for disability rights and economic justice for all Canadians living with disabilities."
   </blockquote>
   
-  <p style="color: #1f2937;"><strong>🔗 Connect with Mitchell:</strong></p>
-  <p style="color: #1f2937;">
-    <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="color: #0645ad; font-weight: 600; text-decoration: underline;">
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🔗 Connect with Mitchell:</strong></p>
+  <p style="color: #1f2937 !important;">
+    <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
       🌐 linktr.ee/odspoor
     </a>
   </p>
   
-  <p style="margin-top: 1.5rem; color: #1f2937;"><em>🌟 Thank you Mitchell for your tireless advocacy and for inspiring others to speak up for disability rights!</em></p>
+  <p style="margin-top: 1.5rem; color: #1f2937 !important;"><em style="color: #1f2937 !important;">🌟 Thank you Mitchell for your tireless advocacy and for inspiring others to speak up for disability rights!</em></p>
 </div>
 
 ---
@@ -179,25 +179,25 @@ permalink: /community-spotlight/
 
 ## 📝 Submit Your Story {#submit-your-story}
 
-<div class="info-box-bordered" style="background: #f8f9fa; border: 2px solid #3b82f6; color: #1f2937;">
-  <h3 style="margin-top: 0; color: #1e40af;">🌟 Want to Be Featured?</h3>
+<div class="info-box-bordered" style="background: #f8f9fa !important; border: 2px solid #3b82f6; color: #1f2937 !important;">
+  <h3 style="margin-top: 0; color: #1e40af !important;">🌟 Want to Be Featured?</h3>
   
-  <p style="color: #1f2937;"><strong>We want to hear about YOUR activism!</strong></p>
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">We want to hear about YOUR activism!</strong></p>
   
-  <p style="color: #1f2937;"><strong>Tell us about:</strong></p>
-  <ul style="color: #1f2937;">
-    <li>📱 Your social media advocacy work</li>
-    <li>📣 Rallies or events you've organized</li>
-    <li>🤝 Peer support you've provided</li>
-    <li>📝 Content you've created</li>
-    <li>💙 Behind-the-scenes contributions</li>
-    <li>🎤 Public speaking or media work</li>
-    <li>💼 Workplace or union organizing</li>
-    <li>🎓 Educational efforts</li>
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">Tell us about:</strong></p>
+  <ul style="color: #1f2937 !important;">
+    <li style="color: #1f2937 !important;">📱 Your social media advocacy work</li>
+    <li style="color: #1f2937 !important;">📣 Rallies or events you've organized</li>
+    <li style="color: #1f2937 !important;">🤝 Peer support you've provided</li>
+    <li style="color: #1f2937 !important;">📝 Content you've created</li>
+    <li style="color: #1f2937 !important;">💙 Behind-the-scenes contributions</li>
+    <li style="color: #1f2937 !important;">🎤 Public speaking or media work</li>
+    <li style="color: #1f2937 !important;">💼 Workplace or union organizing</li>
+    <li style="color: #1f2937 !important;">🎓 Educational efforts</li>
   </ul>
   
-  <p style="color: #1f2937;"><strong>What to include:</strong></p>
-  <ul style="color: #1f2937;">
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">What to include:</strong></p>
+  <ul style="color: #1f2937 !important;">
     <li>📖 Your name and pronouns (if comfortable sharing)</li>
     <li>📍 Your location (city/province is fine)</li>
     <li>🎯 Your advocacy focus areas</li>
