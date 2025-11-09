@@ -244,6 +244,8 @@ description: Empowering Canada's disability and injured worker community with 10
   <a href="/legal/disclaimers/" class="resource-link">Read all disclaimers →</a>
 </div>
 
+{%- include social-share.html title="About 3mpwrApp - Mission, Values & Community" description="Learn about our mission to empower injured workers and persons with disabilities" -%}
+
 <script src="{{ '/assets/js/page-enhancements.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/about.js' | relative_url }}" defer></script>
 

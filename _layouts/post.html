@@ -75,6 +75,14 @@ Post layout with enhanced SEO structured data (BlogPosting schema)
     {{ content }}
   </div>
 
+  {%- comment -%} Social sharing for blog posts {%- endcomment -%}
+  <div class="post-share" style="margin: 2rem 0; padding-top: 2rem; border-top: 2px solid #e5e7eb;">
+    {%- include social-share.html 
+      title=page.title 
+      description=page.excerpt 
+    -%}
+  </div>
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}

@@ -52,6 +52,8 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   </ul>
 </details>
 
+{%- include social-share.html title="3mpwrApp Events Calendar - Community Gatherings" description="Subscribe to accessible events for disability rights and worker justice" compact="true" -%}
+
 <div class="info-box" style="margin: 1.5rem 0;">
   <p><strong>🔗 Related:</strong> Looking for ongoing campaigns? Visit <a href="/campaigns/">Campaigns</a> to see active advocacy efforts for disability rights and worker justice. Events are one-time or recurring gatherings, while campaigns are sustained organizing efforts.</p>
 </div>

@@ -26,6 +26,8 @@ permalink: /campaigns/
   </ul>
 </details>
 
+{%- include social-share.html title="Join 3mpwrApp Campaigns - Community-Driven Advocacy" description="Grassroots organizing for disability rights and worker justice" -%}
+
 <div class="gradient-banner" role="region" aria-labelledby="campaigns-intro-heading">
   <h2 id="campaigns-intro-heading" class="sr-only">Who can organize campaigns</h2>
   <h3 style="margin: 0 0 0.5rem;">💪 Power to the People: ALL People</h3>
@@ -237,15 +239,12 @@ permalink: /campaigns/
               💪 Join Campaign
             </button>
             
-            ${campaign.shareLink ? `
-              <button 
-                onclick="shareCampaign('${campaign.shareLink}', '${campaign.title}')" 
-                class="btn btn-secondary"
-                style="padding: 10px 20px; background: #6b7280; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 1rem;"
-              >
-                📢 Share
-              </button>
-            ` : ''}
+            <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'twitter')" style="padding: 8px 14px; background: #1DA1F2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;" title="Share on X/Twitter">𝕏 Share</button>
+              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'facebook')" style="padding: 8px 14px; background: #4267B2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;" title="Share on Facebook">📘 Share</button>
+              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'linkedin')" style="padding: 8px 14px; background: #0077B5; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;" title="Share on LinkedIn">💼 Share</button>
+              <button onclick="copyCampaignDetails('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', '${campaign.shareLink || ''}')" style="padding: 8px 14px; background: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;" title="Copy details">📋 Copy</button>
+            </div>
           </div>
         </article>
       `).join('');
@@ -342,7 +341,53 @@ permalink: /campaigns/
     }, 2000);
   }
   
-  // Handle campaign share
+  // Share campaign to specific social platform with #3mpwrApp hashtag
+  function shareCampaignToSocial(title, description, platform) {
+    const campaignUrl = 'https://3mpwrapp.pages.dev/campaigns/';
+    const hashtag = '3mpwrApp';
+    const shareText = `${title}\n\n${description}\n\nJoin the campaign on 3mpwr App! #${hashtag}`;
+    
+    const encodedText = encodeURIComponent(shareText);
+    const encodedUrl = encodeURIComponent(campaignUrl);
+    const encodedTitle = encodeURIComponent(title);
+    
+    let shareUrl;
+    
+    switch (platform) {
+      case 'twitter':
+        shareUrl = `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`;
+        break;
+      case 'facebook':
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}&hashtag=%23${hashtag}`;
+        break;
+      case 'linkedin':
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+        break;
+      default:
+        return;
+    }
+    
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+  
+  // Copy campaign details with #3mpwrApp hashtag
+  function copyCampaignDetails(title, description, shareLink) {
+    const campaignUrl = shareLink || 'https://3mpwrapp.pages.dev/campaigns/';
+    const copyText = `${title}\n\n${description}\n\nJoin the campaign: ${campaignUrl}\n\n#3mpwrApp\n\nPowered by 3mpwr App | https://3mpwrapp.pages.dev`;
+    
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(copyText).then(() => {
+        alert('✅ Campaign details copied with #3mpwrApp! Share it with your network.');
+      }).catch(err => {
+        console.error('Copy failed:', err);
+        prompt('Copy this text to share:', copyText);
+      });
+    } else {
+      prompt('Copy this text to share:', copyText);
+    }
+  }
+  
+  // Handle campaign share (legacy fallback)
   function shareCampaign(shareLink, campaignTitle) {
     const shareText = `Join this campaign on 3mpwrApp! ${campaignTitle} #3mpwrApp`;
     

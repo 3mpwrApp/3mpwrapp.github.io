@@ -394,6 +394,8 @@ if (document.readyState === 'loading') {
       </div>
     </div>
   </div>
+  
+  {%- include social-share.html title="Meet Mitchell Tremblay - Community Spotlight" description="Canadian disability advocate fighting for ODSP reform and economic justice" compact="true" -%}
 </div>
 
 ---
@@ -455,6 +457,8 @@ if (document.readyState === 'loading') {
 - <strong>Learn</strong> about resources, rights, and support available to you
 - <strong>Grow</strong> through peer support and shared experiences
 
+{%- include social-share.html title="3mpwrApp - Community-Powered Support Platform" description="A free platform for injured workers and persons with disabilities in Canada" -%}
+
 ---
 
 ## Features
@@ -484,6 +488,8 @@ if (document.readyState === 'loading') {
     <p><small><a href="{{ '/user-guide#podcasts' | relative_url }}">📖 Learn more in User Guide →</a></small></p>
   </li>
 </ul>
+
+{%- include social-share.html title="3mpwrApp Features - Community, Advocacy & More" compact="true" -%}
 
 ---
 
@@ -537,6 +543,8 @@ Ready to join the movement? Here's how you can get started:
 - <a href="{{ '/features' | relative_url }}">Explore All Features</a> – Detailed step-by-step guides for every feature
 - <a href="{{ '/newsletter' | relative_url }}">Subscribe to Our Newsletter</a> – Stay updated with the latest news and resources
 - <a href="{{ '/blog' | relative_url }}">Explore Our Blog</a> – Read stories, updates, and important information
+
+{%- include social-share.html title="Join 3mpwrApp Beta Testing - Shape the Future" description="Be among the first to test disability advocacy technology" -%}
 
 ---
 
@@ -707,6 +715,8 @@ Follow 3mpwr on social media to stay connected and be part of the community:
   <li><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='youtube' -%} YouTube</a> – Watch videos and live sessions</li>
   <li><a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='tiktok' -%} TikTok</a> – Short clips and updates</li>
 </ul>
+
+{%- include social-share.html title="Connect with 3mpwrApp Community" description="Join injured workers and persons with disabilities across Canada" compact="true" -%}
 
 ---
 
