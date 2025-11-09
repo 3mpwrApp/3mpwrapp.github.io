@@ -149,10 +149,10 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     // Pre-calculate formatted date
     const formattedDate = formatDate(event.date);
     
-    // Safely encode event data for JavaScript (escape quotes, newlines, etc.)
-    const safeTitle = event.title.replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/\n/g, ' ').replace(/\r/g, '');
-    const safeDescription = event.description.substring(0, 200).replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/\n/g, ' ').replace(/\r/g, '');
-    const safeDate = formattedDate.replace(/'/g, "\\'").replace(/"/g, '\\"');
+    // Safely encode event data for HTML data attributes (use HTML entities)
+    const safeTitle = event.title.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, ' ').replace(/\r/g, '');
+    const safeDescription = event.description.substring(0, 200).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, ' ').replace(/\r/g, '');
+    const safeDate = formattedDate.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     
     // Determine gradient and border color based on status
     let gradientStyle, borderStyle, urgencyBadge;
@@ -205,13 +205,13 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
           ${event.rsvpLink ? `<a href="${event.rsvpLink}" class="btn btn-primary" style="display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0, 102, 204, 0.5)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.4)'">📝 RSVP Now</a>` : ''}
           
           <div class="share-buttons" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'twitter')" title="Share on Twitter/X" aria-label="Share ${event.title} on Twitter/X" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">𝕏 Share</button>
-            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'bluesky')" title="Share on Bluesky" aria-label="Share ${event.title} on Bluesky" style="padding: 10px 16px; background: #0085ff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 133, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🦋 Share</button>
-            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'mastodon')" title="Share on Mastodon" aria-label="Share ${event.title} on Mastodon" style="padding: 10px 16px; background: #6364FF; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 100, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🐘 Share</button>
-            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'facebook')" title="Share on Facebook" aria-label="Share ${event.title} on Facebook" style="padding: 10px 16px; background: #4267B2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(66, 103, 178, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📘 Share</button>
-            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'linkedin')" title="Share on LinkedIn" aria-label="Share ${event.title} on LinkedIn" style="padding: 10px 16px; background: #0077B5; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">💼 Share</button>
-            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'email')" title="Share via Email" aria-label="Share ${event.title} via Email" style="padding: 10px 16px; background: #6B7280; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📧 Email</button>
-            <button onclick="copyEventLink('${safeTitle}', '${safeDescription}', '${safeDate}')" title="Copy event details to clipboard" aria-label="Copy ${event.title} details" style="padding: 10px 16px; background: #10b981; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📋 Copy</button>
+            <button class="share-btn" data-event-title="${safeTitle}" data-event-description="${safeDescription}" data-event-date="${safeDate}" data-platform="twitter" title="Share on Twitter/X" aria-label="Share ${event.title} on Twitter/X" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">𝕏 Share</button>
+            <button class="share-btn" data-event-title="${safeTitle}" data-event-description="${safeDescription}" data-event-date="${safeDate}" data-platform="bluesky" title="Share on Bluesky" aria-label="Share ${event.title} on Bluesky" style="padding: 10px 16px; background: #0085ff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 133, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🦋 Share</button>
+            <button class="share-btn" data-event-title="${safeTitle}" data-event-description="${safeDescription}" data-event-date="${safeDate}" data-platform="mastodon" title="Share on Mastodon" aria-label="Share ${event.title} on Mastodon" style="padding: 10px 16px; background: #6364FF; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 100, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🐘 Share</button>
+            <button class="share-btn" data-event-title="${safeTitle}" data-event-description="${safeDescription}" data-event-date="${safeDate}" data-platform="facebook" title="Share on Facebook" aria-label="Share ${event.title} on Facebook" style="padding: 10px 16px; background: #4267B2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(66, 103, 178, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📘 Share</button>
+            <button class="share-btn" data-event-title="${safeTitle}" data-event-description="${safeDescription}" data-event-date="${safeDate}" data-platform="linkedin" title="Share on LinkedIn" aria-label="Share ${event.title} on LinkedIn" style="padding: 10px 16px; background: #0077B5; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">💼 Share</button>
+            <button class="share-btn" data-event-title="${safeTitle}" data-event-description="${safeDescription}" data-event-date="${safeDate}" data-platform="email" title="Share via Email" aria-label="Share ${event.title} via Email" style="padding: 10px 16px; background: #6B7280; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📧 Email</button>
+            <button class="copy-btn" data-event-title="${safeTitle}" data-event-description="${safeDescription}" data-event-date="${safeDate}" title="Copy event details to clipboard" aria-label="Copy ${event.title} details" style="padding: 10px 16px; background: #10b981; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📋 Copy</button>
           </div>
         </div>
       </article>
@@ -392,10 +392,10 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   
   // Share individual event to various social platforms
   function shareEvent(title, description, date, platform) {
-    // Clean up any escaped characters that might have been double-escaped
-    const cleanTitle = title.replace(/\\'/g, "'").replace(/\\"/g, '"');
-    const cleanDescription = description.replace(/\\'/g, "'").replace(/\\"/g, '"');
-    const cleanDate = date.replace(/\\'/g, "'").replace(/\\"/g, '"');
+    // Text is already decoded from HTML entities, ready to use
+    const cleanTitle = title;
+    const cleanDescription = description;
+    const cleanDate = date;
     
     // Build the event URL (could be enhanced with event ID for deep linking)
     const eventUrl = 'https://3mpwrapp.pages.dev/events/';
@@ -489,10 +489,10 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   
   // Copy event details to clipboard
   function copyEventLink(title, description, date) {
-    // Clean up any escaped characters
-    const cleanTitle = title.replace(/\\'/g, "'").replace(/\\"/g, '"');
-    const cleanDescription = description.replace(/\\'/g, "'").replace(/\\"/g, '"');
-    const cleanDate = date.replace(/\\'/g, "'").replace(/\\"/g, '"');
+    // Text is already decoded from HTML entities, ready to use
+    const cleanTitle = title;
+    const cleanDescription = description;
+    const cleanDate = date;
     
     const eventUrl = 'https://3mpwrapp.pages.dev/events/';
     const shareText = `${cleanTitle}\n${cleanDate}\n\n${cleanDescription}\n\nView all events: ${eventUrl}\n\nPowered by 3mpwr App`;
@@ -603,6 +603,54 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     }
   }
 
+</script>
+
+<script>
+  /**
+   * ========================================
+   * EVENT DELEGATION FOR SHARE BUTTONS
+   * ========================================
+   * Handle share button clicks using event delegation
+   * since buttons are dynamically generated
+   */
+  
+  document.addEventListener('click', function(e) {
+    // Handle share buttons
+    if (e.target.classList.contains('share-btn')) {
+      e.preventDefault();
+      const button = e.target;
+      
+      // Decode HTML entities back to normal text
+      const title = decodeHTMLEntities(button.dataset.eventTitle);
+      const description = decodeHTMLEntities(button.dataset.eventDescription);
+      const date = decodeHTMLEntities(button.dataset.eventDate);
+      const platform = button.dataset.platform;
+      
+      console.log('Share button clicked:', { title, platform });
+      shareEvent(title, description, date, platform);
+    }
+    
+    // Handle copy buttons
+    if (e.target.classList.contains('copy-btn')) {
+      e.preventDefault();
+      const button = e.target;
+      
+      // Decode HTML entities back to normal text
+      const title = decodeHTMLEntities(button.dataset.eventTitle);
+      const description = decodeHTMLEntities(button.dataset.eventDescription);
+      const date = decodeHTMLEntities(button.dataset.eventDate);
+      
+      console.log('Copy button clicked:', { title });
+      copyEventLink(title, description, date);
+    }
+  });
+  
+  // Helper function to decode HTML entities
+  function decodeHTMLEntities(text) {
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = text;
+    return textarea.value;
+  }
 </script>
 
 ---
