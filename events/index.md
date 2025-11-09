@@ -149,6 +149,11 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     // Pre-calculate formatted date
     const formattedDate = formatDate(event.date);
     
+    // Safely encode event data for JavaScript (escape quotes, newlines, etc.)
+    const safeTitle = event.title.replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/\n/g, ' ').replace(/\r/g, '');
+    const safeDescription = event.description.substring(0, 200).replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/\n/g, ' ').replace(/\r/g, '');
+    const safeDate = formattedDate.replace(/'/g, "\\'").replace(/"/g, '\\"');
+    
     // Determine gradient and border color based on status
     let gradientStyle, borderStyle, urgencyBadge;
     if (isPast) {
@@ -200,12 +205,13 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
           ${event.rsvpLink ? `<a href="${event.rsvpLink}" class="btn btn-primary" style="display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0, 102, 204, 0.5)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.4)'">📝 RSVP Now</a>` : ''}
           
           <div class="share-buttons" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'twitter')" title="Share on Twitter/X" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">𝕏 Share</button>
-            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'bluesky')" title="Share on Bluesky" style="padding: 10px 16px; background: #0085ff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 133, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🦋 Share</button>
-            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'mastodon')" title="Share on Mastodon" style="padding: 10px 16px; background: #6364FF; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 100, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🐘 Share</button>
-            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'facebook')" title="Share on Facebook" style="padding: 10px 16px; background: #4267B2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(66, 103, 178, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📘 Share</button>
-            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'linkedin')" title="Share on LinkedIn" style="padding: 10px 16px; background: #0077B5; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">💼 Share</button>
-            <button onclick="shareEvent('${event.title.replace(/'/g, "\\'")}', '${event.description.substring(0, 200).replace(/'/g, "\\'")}', '${formattedDate}', 'email')" title="Share via Email" style="padding: 10px 16px; background: #6B7280; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📧 Email</button>
+            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'twitter')" title="Share on Twitter/X" aria-label="Share ${event.title} on Twitter/X" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">𝕏 Share</button>
+            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'bluesky')" title="Share on Bluesky" aria-label="Share ${event.title} on Bluesky" style="padding: 10px 16px; background: #0085ff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 133, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🦋 Share</button>
+            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'mastodon')" title="Share on Mastodon" aria-label="Share ${event.title} on Mastodon" style="padding: 10px 16px; background: #6364FF; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(99, 100, 255, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">🐘 Share</button>
+            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'facebook')" title="Share on Facebook" aria-label="Share ${event.title} on Facebook" style="padding: 10px 16px; background: #4267B2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(66, 103, 178, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📘 Share</button>
+            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'linkedin')" title="Share on LinkedIn" aria-label="Share ${event.title} on LinkedIn" style="padding: 10px 16px; background: #0077B5; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">💼 Share</button>
+            <button onclick="shareEvent('${safeTitle}', '${safeDescription}', '${safeDate}', 'email')" title="Share via Email" aria-label="Share ${event.title} via Email" style="padding: 10px 16px; background: #6B7280; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📧 Email</button>
+            <button onclick="copyEventLink('${safeTitle}', '${safeDescription}', '${safeDate}')" title="Copy event details to clipboard" aria-label="Copy ${event.title} details" style="padding: 10px 16px; background: #10b981; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3); transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📋 Copy</button>
           </div>
         </div>
       </article>
@@ -384,54 +390,135 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
    * ========================================
    */
   
-  // Share individual event
+  // Share individual event to various social platforms
   function shareEvent(title, description, date, platform) {
-    // Parameters are now passed directly (not encoded)
-    // Create share text with "Powered by 3mpwr App"
+    // Clean up any escaped characters that might have been double-escaped
+    const cleanTitle = title.replace(/\\'/g, "'").replace(/\\"/g, '"');
+    const cleanDescription = description.replace(/\\'/g, "'").replace(/\\"/g, '"');
+    const cleanDate = date.replace(/\\'/g, "'").replace(/\\"/g, '"');
+    
+    // Build the event URL (could be enhanced with event ID for deep linking)
     const eventUrl = 'https://3mpwrapp.pages.dev/events/';
-    const shareText = `${title}\n${date}\n\n${description}\n\nPowered by 3mpwr App: ${eventUrl}`;
+    
+    // Create share text with proper formatting
+    const shareText = `${cleanTitle}\n${cleanDate}\n\n${cleanDescription}\n\nPowered by 3mpwr App: ${eventUrl}`;
+    
+    // Encode for URLs
     const encodedText = encodeURIComponent(shareText);
     const encodedUrl = encodeURIComponent(eventUrl);
+    const encodedTitle = encodeURIComponent(cleanTitle);
     
     let shareUrl;
     
-    switch(platform) {
-      case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
-        break;
-      case 'facebook':
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`;
-        break;
-      case 'linkedin':
-        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
-        break;
-      case 'mastodon':
-        // Mastodon share - user needs to input their instance
-        const mastodonInstance = prompt('Enter your Mastodon instance (e.g., mastodon.social):', 'mastodon.social');
-        if (mastodonInstance) {
-          shareUrl = `https://${mastodonInstance}/share?text=${encodedText}`;
+    try {
+      switch(platform) {
+        case 'twitter':
+          // Twitter has 280 char limit, so trim if needed
+          const twitterText = shareText.length > 260 ? shareText.substring(0, 257) + '...' : shareText;
+          shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`;
+          break;
+          
+        case 'facebook':
+          // Facebook sharer
+          shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`;
+          break;
+          
+        case 'linkedin':
+          // LinkedIn sharing
+          shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+          break;
+          
+        case 'mastodon':
+          // Mastodon share - user needs to input their instance
+          const mastodonInstance = prompt('Enter your Mastodon instance (e.g., mastodon.social):', 'mastodon.social');
+          if (mastodonInstance) {
+            shareUrl = `https://${mastodonInstance}/share?text=${encodedText}`;
+          } else {
+            console.log('Mastodon share cancelled - no instance provided');
+            return; // User cancelled
+          }
+          break;
+          
+        case 'bluesky':
+          // Bluesky share (300 char limit)
+          const blueskyText = shareText.length > 280 ? shareText.substring(0, 277) + '...' : shareText;
+          shareUrl = `https://bsky.app/intent/compose?text=${encodeURIComponent(blueskyText)}`;
+          break;
+          
+        case 'email':
+          // Email with proper formatting
+          const emailSubject = encodeURIComponent(`Event: ${cleanTitle}`);
+          const emailBody = encodeURIComponent(
+            `${cleanTitle}\n${cleanDate}\n\n${cleanDescription}\n\n` +
+            `View all events: ${eventUrl}\n\n` +
+            `Powered by 3mpwr App - Community events calendar for disability rights and worker justice.`
+          );
+          shareUrl = `mailto:?subject=${emailSubject}&body=${emailBody}`;
+          break;
+          
+        default:
+          console.error('Unknown sharing platform:', platform);
+          alert('Unknown sharing platform. Please try another option.');
+          return;
+      }
+      
+      // Open share URL
+      if (shareUrl) {
+        if (platform === 'email') {
+          // Email uses window.location instead of window.open
+          window.location.href = shareUrl;
+        } else {
+          // Open in new window for social platforms
+          const width = 600;
+          const height = 500;
+          const left = (window.screen.width - width) / 2;
+          const top = (window.screen.height - height) / 2;
+          window.open(
+            shareUrl, 
+            '_blank', 
+            `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
+          );
         }
-        break;
-      case 'bluesky':
-        // Bluesky share
-        shareUrl = `https://bsky.app/intent/compose?text=${encodedText}`;
-        break;
-      case 'email':
-        const emailSubject = encodeURIComponent(`Event: ${title}`);
-        const emailBody = encodeURIComponent(`${title}\n${date}\n\n${description}\n\nView all events: ${eventUrl}\n\nPowered by 3mpwr App - Community events calendar for disability rights and worker justice.`);
-        shareUrl = `mailto:?subject=${emailSubject}&body=${emailBody}`;
-        break;
+        console.log(`✅ Shared event "${cleanTitle}" to ${platform}`);
+      }
+    } catch (error) {
+      console.error('Error sharing event:', error);
+      alert(`Sorry, there was an error sharing to ${platform}. Please try again or use a different platform.`);
     }
+  }
+  
+  // Copy event details to clipboard
+  function copyEventLink(title, description, date) {
+    // Clean up any escaped characters
+    const cleanTitle = title.replace(/\\'/g, "'").replace(/\\"/g, '"');
+    const cleanDescription = description.replace(/\\'/g, "'").replace(/\\"/g, '"');
+    const cleanDate = date.replace(/\\'/g, "'").replace(/\\"/g, '"');
     
-    if (shareUrl) {
-      window.open(shareUrl, '_blank', 'width=600,height=400');
+    const eventUrl = 'https://3mpwrapp.pages.dev/events/';
+    const shareText = `${cleanTitle}\n${cleanDate}\n\n${cleanDescription}\n\nView all events: ${eventUrl}\n\nPowered by 3mpwr App`;
+    
+    // Try to copy to clipboard
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(shareText)
+        .then(() => {
+          alert('✅ Event details copied to clipboard!\n\nYou can now paste it anywhere to share.');
+          console.log('✅ Copied event details to clipboard');
+        })
+        .catch(err => {
+          console.error('Failed to copy to clipboard:', err);
+          // Fallback: show the text in a prompt for manual copy
+          prompt('Copy this text to share the event:', shareText);
+        });
+    } else {
+      // Fallback for older browsers
+      prompt('Copy this text to share the event:', shareText);
     }
   }
   
   // Share all events page
   function shareAllEvents() {
     const pageUrl = 'https://3mpwrapp.pages.dev/events/';
-    const shareText = '📅 Check out the 3mpwr App Events Calendar!\n\nDisability rights, worker justice, and community events - all fully accessible.\n\n✅ Real-time sync\n✅ Subscribe to calendar feed\n✅ 130+ events including awareness days & holidays\n\nPowered by 3mpwr App';
+    const shareText = '📅 Check out the 3mpwr App Events Calendar!\n\nDisability rights, worker justice, and community events - all fully accessible.\n\n✅ Real-time sync\n✅ Subscribe to calendar feed\n✅ Community-driven events\n\nPowered by 3mpwr App';
     
     // Try native Web Share API first (mobile-friendly)
     if (navigator.share) {
@@ -439,11 +526,18 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
         title: '3mpwr App Events Calendar',
         text: shareText,
         url: pageUrl
-      }).catch(err => console.log('Share cancelled or failed:', err));
+      })
+      .then(() => console.log('✅ Successfully shared events page'))
+      .catch(err => {
+        if (err.name !== 'AbortError') {
+          console.error('Share failed:', err);
+        }
+      });
     } else {
-      // Fallback: show share options
+      // Fallback: show share options dialog
       const choice = prompt(
-        'Share Events Calendar:\n\n' +
+        '📅 Share Events Calendar\n\n' +
+        'Choose a platform:\n\n' +
         '1 - Twitter/X\n' +
         '2 - Bluesky\n' +
         '3 - Mastodon\n' +
@@ -454,41 +548,61 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
         'Enter your choice (1-7):'
       );
       
+      if (!choice) {
+        console.log('Share cancelled');
+        return;
+      }
+      
       const encodedText = encodeURIComponent(shareText);
       const encodedUrl = encodeURIComponent(pageUrl);
       
-      switch(choice) {
-        case '1':
-          window.open(`https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`, '_blank');
-          break;
-        case '2':
-          window.open(`https://bsky.app/intent/compose?text=${encodedText}`, '_blank');
-          break;
-        case '3':
-          const mastodonInstance = prompt('Enter your Mastodon instance (e.g., mastodon.social):', 'mastodon.social');
-          if (mastodonInstance) {
-            window.open(`https://${mastodonInstance}/share?text=${encodedText}`, '_blank');
-          }
-          break;
-        case '4':
-          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`, '_blank');
-          break;
-        case '5':
-          window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, '_blank');
-          break;
-        case '6':
-          const emailSubject = encodeURIComponent('3mpwr App Events Calendar');
-          const emailBody = encodeURIComponent(`${shareText}\n\n${pageUrl}`);
-          window.location.href = `mailto:?subject=${emailSubject}&body=${emailBody}`;
-          break;
-        case '7':
-          navigator.clipboard.writeText(pageUrl).then(() => {
-            alert('Link copied to clipboard! ✅');
-          });
-          break;
+      try {
+        switch(choice.trim()) {
+          case '1':
+            window.open(`https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`, '_blank', 'width=600,height=500');
+            break;
+          case '2':
+            window.open(`https://bsky.app/intent/compose?text=${encodedText}`, '_blank', 'width=600,height=500');
+            break;
+          case '3':
+            const mastodonInstance = prompt('Enter your Mastodon instance (e.g., mastodon.social):', 'mastodon.social');
+            if (mastodonInstance) {
+              window.open(`https://${mastodonInstance}/share?text=${encodedText}`, '_blank', 'width=600,height=500');
+            }
+            break;
+          case '4':
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`, '_blank', 'width=600,height=500');
+            break;
+          case '5':
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, '_blank', 'width=600,height=500');
+            break;
+          case '6':
+            const emailSubject = encodeURIComponent('3mpwr App Events Calendar');
+            const emailBody = encodeURIComponent(`${shareText}\n\n${pageUrl}`);
+            window.location.href = `mailto:?subject=${emailSubject}&body=${emailBody}`;
+            break;
+          case '7':
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(pageUrl).then(() => {
+                alert('✅ Link copied to clipboard!\n\nYou can now paste it anywhere to share.');
+              }).catch(err => {
+                console.error('Copy failed:', err);
+                prompt('Copy this link:', pageUrl);
+              });
+            } else {
+              prompt('Copy this link:', pageUrl);
+            }
+            break;
+          default:
+            alert('Invalid choice. Please select a number from 1-7.');
+        }
+      } catch (error) {
+        console.error('Error sharing:', error);
+        alert('Sorry, there was an error sharing. Please try again.');
       }
     }
   }
+
 </script>
 
 ---
