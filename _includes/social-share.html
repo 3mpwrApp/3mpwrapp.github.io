@@ -1,11 +1,13 @@
 {% comment %}
   Social Share Component
-  Usage: {% include social-share.html 
-            title="Page Title" 
-            url="https://3mpwrapp.github.io/page" 
-            description="Optional description"
-            compact="true" (optional - for inline sharing)
-         %}
+  Usage: 
+    {% include social-share.html title="Page Title" url="https://3mpwrapp.github.io/page" description="Optional description" %}
+    
+  Parameters:
+    - title: Page title (optional, defaults to page.title)
+    - url: Share URL (optional, defaults to current page URL)
+    - description: Description text (optional, defaults to page.description)
+    - compact: Set to "true" for inline/compact display (optional)
 {% endcomment %}
 
 {% assign share_title = include.title | default: page.title | default: site.title %}
