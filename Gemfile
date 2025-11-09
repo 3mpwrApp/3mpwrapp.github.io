@@ -11,6 +11,7 @@ gem "bigdecimal"
 gem "logger"
 gem "csv"
 gem "base64"
+gem "rake" # Required for google-protobuf compilation
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
