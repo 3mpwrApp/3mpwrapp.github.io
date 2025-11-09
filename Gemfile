@@ -6,6 +6,9 @@ gem "minima", "~> 2.5"
 # Pin sass-embedded to working version to avoid build failures
 gem "sass-embedded", "~> 1.69.5"
 
+# Required for Ruby 3.4.0 compatibility
+gem "bigdecimal"
+
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag", "~> 2.8"

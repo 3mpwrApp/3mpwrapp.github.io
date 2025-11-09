@@ -1,0 +1,116 @@
+[
+  {
+    "url": "http://localhost:4000/",
+    "pageInfo": "/",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:50:46.648Z"
+  },
+  {
+    "url": "http://localhost:4000/about",
+    "pageInfo": "/about",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/about\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/about\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:50:49.471Z"
+  },
+  {
+    "url": "http://localhost:4000/accessibility",
+    "pageInfo": "/accessibility",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/accessibility\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/accessibility\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:50:52.144Z"
+  },
+  {
+    "url": "http://localhost:4000/accessibility-settings",
+    "pageInfo": "/accessibility-settings",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/accessibility-settings\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/accessibility-settings\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:50:54.779Z"
+  },
+  {
+    "url": "http://localhost:4000/contact",
+    "pageInfo": "/contact",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/contact\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/contact\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:50:57.362Z"
+  },
+  {
+    "url": "http://localhost:4000/crisis-resources",
+    "pageInfo": "/crisis-resources",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/crisis-resources\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/crisis-resources\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:00.054Z"
+  },
+  {
+    "url": "http://localhost:4000/faq",
+    "pageInfo": "/faq",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/faq\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/faq\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:02.726Z"
+  },
+  {
+    "url": "http://localhost:4000/feedback",
+    "pageInfo": "/feedback",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/feedback\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/feedback\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:05.413Z"
+  },
+  {
+    "url": "http://localhost:4000/privacy",
+    "pageInfo": "/privacy",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/privacy\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/privacy\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:08.028Z"
+  },
+  {
+    "url": "http://localhost:4000/terms",
+    "pageInfo": "/terms",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/terms\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/terms\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:10.709Z"
+  },
+  {
+    "url": "http://localhost:4000/resources",
+    "pageInfo": "/resources",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/resources\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/resources\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:13.342Z"
+  },
+  {
+    "url": "http://localhost:4000/delete-data",
+    "pageInfo": "/delete-data",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/delete-data\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/delete-data\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:15.944Z"
+  },
+  {
+    "url": "http://localhost:4000/events",
+    "pageInfo": "/events",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/events\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/events\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:18.564Z"
+  },
+  {
+    "url": "http://localhost:4000/app-waitlist",
+    "pageInfo": "/app-waitlist",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/app-waitlist\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/app-waitlist\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:21.217Z"
+  },
+  {
+    "url": "http://localhost:4000/newsletter",
+    "pageInfo": "/newsletter",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/newsletter\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/newsletter\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:23.905Z"
+  },
+  {
+    "url": "http://localhost:4000/search",
+    "pageInfo": "/search",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/search\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/search\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:26.481Z"
+  },
+  {
+    "url": "http://localhost:4000/roadmap",
+    "pageInfo": "/roadmap",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/roadmap\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/roadmap\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:29.097Z"
+  },
+  {
+    "url": "http://localhost:4000/security",
+    "pageInfo": "/security",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/security\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/security\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:31.746Z"
+  },
+  {
+    "url": "http://localhost:4000/status",
+    "pageInfo": "/status",
+    "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4000/status\nCall log:\n\u001b[2m  - navigating to \"http://localhost:4000/status\", waiting until \"networkidle\"\u001b[22m\n",
+    "timestamp": "2025-11-09T00:51:34.289Z"
+  }
+]

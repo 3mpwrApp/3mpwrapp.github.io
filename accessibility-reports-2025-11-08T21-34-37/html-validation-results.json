@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://3mpwrapp.github.io/",
+    "error": "Command failed: html-validator --url=\"https://3mpwrapp.github.io/\" --format=json",
+    "timestamp": "2025-11-08T21:45:00.062Z"
+  },
+  {
+    "url": "https://3mpwrapp.github.io/about",
+    "error": "Command failed: html-validator --url=\"https://3mpwrapp.github.io/about\" --format=json",
+    "timestamp": "2025-11-08T21:45:01.411Z"
+  },
+  {
+    "url": "https://3mpwrapp.github.io/accessibility",
+    "error": "Command failed: html-validator --url=\"https://3mpwrapp.github.io/accessibility\" --format=json",
+    "timestamp": "2025-11-08T21:45:02.846Z"
+  },
+  {
+    "url": "https://3mpwrapp.github.io/contact",
+    "error": "Command failed: html-validator --url=\"https://3mpwrapp.github.io/contact\" --format=json",
+    "timestamp": "2025-11-08T21:45:03.977Z"
+  },
+  {
+    "url": "https://3mpwrapp.github.io/privacy",
+    "error": "Command failed: html-validator --url=\"https://3mpwrapp.github.io/privacy\" --format=json",
+    "timestamp": "2025-11-08T21:45:05.128Z"
+  }
+]
