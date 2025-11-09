@@ -74,7 +74,13 @@
       transition: width 0.1s ease;
     `;
 
-    document.body.appendChild(progressBar);
+    // Add to header if it exists, otherwise body
+    const header = document.querySelector('header');
+    if (header) {
+      header.appendChild(progressBar);
+    } else {
+      document.body.appendChild(progressBar);
+    }
 
     // Update progress on scroll
     function updateProgress() {

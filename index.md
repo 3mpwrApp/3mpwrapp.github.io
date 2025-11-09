@@ -454,7 +454,7 @@ if (document.readyState === 'loading') {
   <li>
     <figure class="store-badge">
       <img src="{{ '/assets/images/app-store-coming-soon.svg' | relative_url }}"
-        alt="App Store — coming soon"
+        alt=""
         loading="lazy"
         decoding="async"
       >
@@ -464,7 +464,7 @@ if (document.readyState === 'loading') {
   <li>
     <figure class="store-badge">
       <img src="{{ '/assets/images/google-play-coming-soon.svg' | relative_url }}"
-        alt="Google Play — coming soon"
+        alt=""
         loading="lazy"
         decoding="async"
       >

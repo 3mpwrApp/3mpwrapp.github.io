@@ -1094,7 +1094,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
 <div style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-radius: 12px; border: 2px solid #10b981;">
-  <h4 style="margin-top: 0; color: #065f46;">📖 Comprehensive Support Available</h4>
+  <h3 style="margin-top: 0; color: #065f46;">📖 Comprehensive Support Available</h3>
   <p>We've provided detailed troubleshooting above. If you're still having issues:</p>
   <ul style="text-align: left; margin: 1.5rem auto; max-width: 600px;">
     <li>✅ Check the troubleshooting section above for common issues</li>

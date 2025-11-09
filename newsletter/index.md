@@ -21,7 +21,7 @@ Stay informed about product updates, early access, and beta invites. We'll only 
 
 ## Subscribe Now
 
-<div class="newsletter-embed">
+<div class="newsletter-embed" role="region" aria-label="Newsletter subscription form">
   <iframe
     id="newsletter-form"
     title="3mpwr App newsletter signup"

@@ -180,37 +180,37 @@ This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and prote
 <div class="implementation-cards">
 
 <div class="implementation-card">
-  <h5>Three Privacy Modes</h5>
+  <h4>Three Privacy Modes</h4>
   <p>Default (easy), Hybrid BYOC (easy login + your cloud), or Strict BYOC (maximum privacy)</p>
 </div>
 
 <div class="implementation-card">
-  <h5>Hybrid BYOC</h5>
+  <h4>Hybrid BYOC</h4>
   <p>Firebase handles login only, ALL your data goes to YOUR cloud (we never see it)</p>
 </div>
 
 <div class="implementation-card">
-  <h5>Strict BYOC</h5>
+  <h4>Strict BYOC</h4>
   <p>Complete air-gap - Firebase completely disabled, connect ANY cloud provider you want</p>
 </div>
 
 <div class="implementation-card">
-  <h5>Session-Only Credentials</h5>
+  <h4>Session-Only Credentials</h4>
   <p>Your storage credentials are never saved by the app (in BYOC modes)</p>
 </div>
 
 <div class="implementation-card">
-  <h5>Hardware Security</h5>
+  <h4>Hardware Security</h4>
   <p>Encryption keys stored in your device's secure enclave</p>
 </div>
 
 <div class="implementation-card">
-  <h5>Network Protection</h5>
+  <h4>Network Protection</h4>
   <p>Secure encrypted connections for all network traffic</p>
 </div>
 
 <div class="implementation-card">
-  <h5>Air-Gapped Operation</h5>
+  <h4>Air-Gapped Operation</h4>
   <p>Works 100% offline with no mandatory internet connections</p>
 </div>
 
@@ -630,7 +630,7 @@ This policy reflects our actual technical implementation. You can verify our pri
 **💡 Tip:** Each of these pages links back to this policy, so you can always understand how your data is protected across the entire platform!
 
 ---
-<div class="alternative-formats" role="complementary">
+<div class="alternative-formats" role="complementary" aria-label="Alternative format options">
   <p><strong>📱 Need this in a different format?</strong></p>
   <p>
         <!-- PDF download removed - generate if needed -->

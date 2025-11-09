@@ -211,19 +211,19 @@ description: Empowering Canada's disability and injured worker community with 10
 <div class="disclaimers-grid">
   <div class="disclaimer-card warning">
     <div class="disclaimer-icon" aria-hidden="true">❌</div>
-    <h4>NOT Medical Advice</h4>
+    <h3>NOT Medical Advice</h3>
     <p>Always consult healthcare professionals</p>
   </div>
   
   <div class="disclaimer-card warning">
     <div class="disclaimer-icon" aria-hidden="true">❌</div>
-    <h4>NOT Legal Advice</h4>
+    <h3>NOT Legal Advice</h3>
     <p>Always consult licensed attorneys</p>
   </div>
   
   <div class="disclaimer-card warning">
     <div class="disclaimer-icon" aria-hidden="true">❌</div>
-    <h4>NOT Financial Advice</h4>
+    <h3>NOT Financial Advice</h3>
     <p>Always consult financial advisors</p>
   </div>
   
