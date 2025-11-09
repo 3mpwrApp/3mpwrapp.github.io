@@ -93,8 +93,11 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   <h2 style="margin: 0 0 1rem; color: white; font-size: 2rem; text-align: center;">
     📢 Got a Local, Provincial, or Federal Event?
   </h2>
-  <p style="font-size: 1.2rem; margin: 0 0 1.5rem; text-align: center; font-weight: 600;">
-    Tag us on social media and we'll share it on the app + website!
+  <p style="font-size: 1.2rem; margin: 0 0 0.5rem; text-align: center; font-weight: 600;">
+    Tag us on social media with <span style="background: rgba(255,255,255,0.25); padding: 4px 12px; border-radius: 6px; font-family: monospace; font-size: 1.1rem;">#3mpwrApp</span> and we'll share it!
+  </p>
+  <p style="font-size: 1rem; margin: 0 0 1.5rem; text-align: center; opacity: 0.95;">
+    Your event will appear on the app + website
   </p>
   
   <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 10px; margin: 1.5rem 0; backdrop-filter: blur(10px);">
@@ -102,7 +105,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       <strong>🤝 Let's Build Community Together</strong>
     </p>
     <p style="margin: 0 0 1.5rem; font-size: 1rem; line-height: 1.7; text-align: center;">
-      Whether it's a disability rights rally, workers' justice gathering, accessibility workshop, or mutual aid event — we want to help spread the word! Tag us on any platform below and we'll post your event to the 3mpwr App, where it will automatically appear on this website.
+      Whether it's a disability rights rally, workers' justice gathering, accessibility workshop, or mutual aid event — we want to help spread the word! Tag us with <strong>#3mpwrApp</strong> on any platform below and we'll post your event to the 3mpwr App, where it will automatically appear on this website.
     </p>
     
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center; margin: 1.5rem 0;">
@@ -130,7 +133,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255,255,255,0.2); border-radius: 8px; border-left: 4px solid white;">
       <p style="margin: 0 0 0.5rem; font-size: 1.05rem;"><strong>✨ How It Works:</strong></p>
       <ol style="text-align: left; max-width: 600px; margin: 0.5rem auto 0; line-height: 1.8;">
-        <li>Tag us in your post with event details (date, time, location, accessibility info)</li>
+        <li>Tag us in your post with <strong>#3mpwrApp</strong> and event details (date, time, location, accessibility info)</li>
         <li>We'll add it to the 3mpwr App within 24 hours</li>
         <li>Your event automatically appears here on the website</li>
         <li>The community stays in the loop! 🎉</li>
