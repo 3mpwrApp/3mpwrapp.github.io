@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Crisis Resources - Get Help Now
-description: Immediate crisis support resources for persons with disabilities across Canada - 24/7 helplines, safety planning, and emergency assistance.
-permalink: /crisis-resources/
+title: Crisis Resources - Get Help Now (Backup)
+description: Backup version of crisis resources page
+permalink: /crisis-resources-backup/
+published: false
 ---
 
 

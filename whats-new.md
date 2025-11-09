@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "What's New"
-description: "Discover the latest updates, features, and improvements to 3mpwrApp. Stay informed about new releases, bug fixes, and community-driven enhancements. Updated weekly with transparency and detail."
+title: "What's New - Old Version"
+description: "Old version of What's New page"
 image: /assets/empwrapp-logo.png
 image_alt: "3mpwrApp What's New - Latest updates and features"
-permalink: /whats-new/
+permalink: /whats-new-old/
+published: false
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">

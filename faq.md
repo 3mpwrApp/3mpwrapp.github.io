@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Frequently Asked Questions (FAQ)
-description: Common questions about 3mpwrApp - privacy, features, accessibility, beta testing, and more.
-permalink: /faq/
+title: Frequently Asked Questions (FAQ) - Old Version
+description: Old version of FAQ page
+permalink: /faq-old/
+published: false
 ---
 
 {%- include status-banner.html -%}
