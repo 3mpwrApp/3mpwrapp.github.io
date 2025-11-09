@@ -148,7 +148,7 @@ We're building a safe space to connect, share experiences, and advocate for real
 ---
 
 <!-- Community Spotlight Banner -->
-<div class="highlight-banner" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+<div class="highlight-banner" style="background: #f8f9fa; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
   <h2 style="margin: 0 0 0.5rem; color: #1e40af; font-size: 1.6rem;">
     <span aria-hidden="true">🌟</span> Featured Community Spotlight
     <span class="badge badge--new">New!</span>
@@ -156,10 +156,10 @@ We're building a safe space to connect, share experiences, and advocate for real
   <div style="display: grid; gap: 1rem; margin-top: 1rem;">
     <div>
       <h3 style="margin: 0 0 0.5rem; color: #1e40af; font-size: 1.3rem;">Mitchell Tremblay (@ODSPoverty)</h3>
-      <p style="margin: 0 0 0.75rem; color: #0b2545; font-size: 1.05rem;">
+      <p style="margin: 0 0 0.75rem; color: #1f2937; font-size: 1.05rem;">
         🇨🇦 <strong>Canadian Disability Advocate</strong> fighting for economic justice and dignity for people living with disabilities.
       </p>
-      <p style="margin: 0 0 0.75rem; color: #0b2545;">
+      <p style="margin: 0 0 0.75rem; color: #1f2937;">
         <strong>Fighting for:</strong> ODSP reform, disability rights, and raising awareness about poverty among disabled Canadians.
       </p>
       <div class="highlight-banner__actions" style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">

@@ -59,40 +59,40 @@ permalink: /community-spotlight/
 
 ### 🌟 Mitchell Tremblay (@ODSPoverty)
 
-<div class="info-box-bordered" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-left: 4px solid #3b82f6;">
+<div class="info-box-bordered" style="background: #f0f9ff; border: 2px solid #3b82f6; border-left: 4px solid #3b82f6; color: #1f2937;">
   <h4 style="margin-top: 0; color: #1e40af;">🇨🇦 Canadian Disability Advocate</h4>
   
-  <p><strong>Mitchell Tremblay</strong> is a passionate Canadian disability rights advocate fighting for economic justice and dignity for people living with disabilities.</p>
+  <p style="color: #1f2937;"><strong>Mitchell Tremblay</strong> is a passionate Canadian disability rights advocate fighting for economic justice and dignity for people living with disabilities.</p>
   
-  <p><strong>🎯 Advocacy Focus:</strong></p>
-  <ul>
+  <p style="color: #1f2937;"><strong>🎯 Advocacy Focus:</strong></p>
+  <ul style="color: #1f2937;">
     <li>ODSP (Ontario Disability Support Program) reform and adequacy</li>
     <li>Disability rights and economic justice</li>
     <li>Raising awareness about poverty among disabled Canadians</li>
     <li>Community organizing and grassroots activism</li>
   </ul>
   
-  <p><strong>💪 Impact:</strong></p>
-  <ul>
+  <p style="color: #1f2937;"><strong>💪 Impact:</strong></p>
+  <ul style="color: #1f2937;">
     <li>📱 Active social media advocate sharing lived experiences</li>
     <li>📣 Speaking out about the realities of living on disability benefits</li>
     <li>🤝 Connecting and supporting other disabled Canadians</li>
     <li>💬 Amplifying voices of those in poverty</li>
   </ul>
   
-  <p><strong>💬 In Their Words:</strong></p>
-  <blockquote style="border-left: 3px solid #3b82f6; padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #1e40af;">
+  <p style="color: #1f2937;"><strong>💬 In Their Words:</strong></p>
+  <blockquote style="border-left: 3px solid #3b82f6; padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #1e40af; background: #dbeafe; padding: 1rem; border-radius: 4px;">
     "Fighting for disability rights and economic justice for all Canadians living with disabilities."
   </blockquote>
   
-  <p><strong>🔗 Connect with Mitchell:</strong></p>
-  <p>
-    <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="color: #2563eb; font-weight: 600; text-decoration: underline;">
+  <p style="color: #1f2937;"><strong>🔗 Connect with Mitchell:</strong></p>
+  <p style="color: #1f2937;">
+    <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="color: #0645ad; font-weight: 600; text-decoration: underline;">
       🌐 linktr.ee/odspoor
     </a>
   </p>
   
-  <p style="margin-top: 1.5rem;"><em>🌟 Thank you Mitchell for your tireless advocacy and for inspiring others to speak up for disability rights!</em></p>
+  <p style="margin-top: 1.5rem; color: #1f2937;"><em>🌟 Thank you Mitchell for your tireless advocacy and for inspiring others to speak up for disability rights!</em></p>
 </div>
 
 ---
@@ -179,13 +179,13 @@ permalink: /community-spotlight/
 
 ## 📝 Submit Your Story {#submit-your-story}
 
-<div class="info-box-bordered">
-  <h3 style="margin-top: 0;">🌟 Want to Be Featured?</h3>
+<div class="info-box-bordered" style="background: #f8f9fa; border: 2px solid #3b82f6; color: #1f2937;">
+  <h3 style="margin-top: 0; color: #1e40af;">🌟 Want to Be Featured?</h3>
   
-  <p><strong>We want to hear about YOUR activism!</strong></p>
+  <p style="color: #1f2937;"><strong>We want to hear about YOUR activism!</strong></p>
   
-  <p><strong>Tell us about:</strong></p>
-  <ul>
+  <p style="color: #1f2937;"><strong>Tell us about:</strong></p>
+  <ul style="color: #1f2937;">
     <li>📱 Your social media advocacy work</li>
     <li>📣 Rallies or events you've organized</li>
     <li>🤝 Peer support you've provided</li>
@@ -196,8 +196,8 @@ permalink: /community-spotlight/
     <li>🎓 Educational efforts</li>
   </ul>
   
-  <p><strong>What to include:</strong></p>
-  <ul>
+  <p style="color: #1f2937;"><strong>What to include:</strong></p>
+  <ul style="color: #1f2937;">
     <li>📖 Your name and pronouns (if comfortable sharing)</li>
     <li>📍 Your location (city/province is fine)</li>
     <li>🎯 Your advocacy focus areas</li>
@@ -207,11 +207,11 @@ permalink: /community-spotlight/
     <li>💬 A quote about why you do this work</li>
   </ul>
   
-  <p style="color: #000;"><strong>Submit your story:</strong></p>
-  <p style="color: #000;">📧 Email: <a href="mailto:empowrapp08162025@gmail.com" style="color: #0066cc;">empowrapp08162025@gmail.com</a></p>
-  <p style="color: #000;">📝 Subject line: "Community Spotlight Submission"</p>
+  <p style="color: #1f2937;"><strong>Submit your story:</strong></p>
+  <p style="color: #1f2937;">📧 Email: <a href="mailto:empowrapp08162025@gmail.com" style="color: #0645ad; text-decoration: underline;">empowrapp08162025@gmail.com</a></p>
+  <p style="color: #1f2937;">📝 Subject line: "Community Spotlight Submission"</p>
   
-  <p style="color: #000;"><em>We feature new advocates monthly. Your story inspires others!</em></p>
+  <p style="color: #1f2937;"><em>We feature new advocates monthly. Your story inspires others!</em></p>
 </div>
 
 ---
@@ -333,13 +333,6 @@ Nominate them for Community Spotlight:
 📝 Visit our [Connect page](/connect/)
 
 ---
-
-<div class="crisis-resources" role="alert">
-  <p><strong>🆘 Need immediate help?</strong></p>
-  <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
-</div>
-
-
 
 {%- include page-feedback.html -%}
 
