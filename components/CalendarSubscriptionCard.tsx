@@ -55,9 +55,10 @@ export default function CalendarSubscriptionCard() {
   }
 
   const handleSubscribe = async () => {
-    // Updated URL to use website's public directory
-    // The calendar feed should be generated via scripts/generate-calendar-feed.mjs and hosted at this location
-    const subscriptionUrl = process.env.EXPO_PUBLIC_CALENDAR_FEED_URL || 'https://3mpwrapp.pages.dev/events.ics';
+    // Use Cloudflare Worker ICS endpoint for real-time auto-updating feed
+    // This pulls from Firestore events_production collection automatically
+    // No manual regeneration needed - updates as events are added/edited/deleted
+    const subscriptionUrl = process.env.EXPO_PUBLIC_CALENDAR_FEED_URL || 'https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics';
     
     try {
       // Copy to clipboard if available

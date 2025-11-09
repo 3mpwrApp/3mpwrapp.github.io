@@ -5,7 +5,7 @@
 
 import { logger } from '../utils/logger';
 
-const CAMPAIGN_SYNC_ENDPOINT = 'https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns';
+const CAMPAIGN_SYNC_ENDPOINT = 'https://3mpwrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns';
 
 export type CampaignSyncData = {
   id: string;
