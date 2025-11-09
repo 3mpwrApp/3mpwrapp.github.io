@@ -74,7 +74,7 @@ permalink: /campaigns/
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
 <div class="info-box" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-left: 4px solid #10b981;">
-  <p style="margin: 0;"><strong>🔄 Real-Time Auto-Sync:</strong> Campaigns created in the 3mpwrApp automatically appear below. Updates every 5 minutes.</p>
+  <p style="margin: 0;"><strong>🔄 Real-Time Auto-Sync:</strong> Campaigns created in the 3mpwrApp automatically appear below. Updates every 30 seconds.</p>
   <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #065f46;">
     <span id="sync-status">⏳ Checking for campaigns...</span> | 
     Last updated: <span id="last-update">Never</span>
@@ -95,15 +95,18 @@ permalink: /campaigns/
    * CAMPAIGNS REAL-TIME AUTO-SYNC
    * ========================================
    * 
-   * Fetches campaigns from Cloudflare Worker API:
-   * https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns
+   * Fetches campaigns directly from Firestore REST API:
+   * https://firestore.googleapis.com/v1/projects/empowrapp/databases/(default)/documents/campaigns_production
    * 
    * Data Flow:
    * 1. User creates campaign in 3mpwrApp (React Native)
    * 2. Campaign saved to Firestore (campaigns_production collection)
-   * 3. Cloudflare Worker reads from Firestore
-   * 4. Website fetches from Worker API every 5 minutes
-   * 5. Campaigns display automatically below
+   * 3. Website fetches directly from Firestore REST API every 30 seconds
+   * 4. Campaigns display automatically below
+   * 
+   * Requirements:
+   * - Firestore security rules must allow public read access to campaigns_production
+   * - Deploy rules: firebase deploy --only firestore:rules
    * 
    * Related:
    * - Events API: https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events
@@ -112,8 +115,59 @@ permalink: /campaigns/
    */
 
   /**
+   * Parse Firestore field value from document
+   * Firestore REST API returns fields in format: { stringValue: "...", integerValue: "...", etc }
+   */
+  function parseFirestoreValue(field) {
+    if (!field) return null;
+    
+    // Handle different Firestore value types
+    if (field.stringValue !== undefined) return field.stringValue;
+    if (field.integerValue !== undefined) return parseInt(field.integerValue);
+    if (field.doubleValue !== undefined) return parseFloat(field.doubleValue);
+    if (field.booleanValue !== undefined) return field.booleanValue;
+    if (field.timestampValue !== undefined) return new Date(field.timestampValue);
+    if (field.arrayValue && field.arrayValue.values) {
+      return field.arrayValue.values.map(v => parseFirestoreValue(v));
+    }
+    if (field.mapValue && field.mapValue.fields) {
+      const obj = {};
+      for (const [key, value] of Object.entries(field.mapValue.fields)) {
+        obj[key] = parseFirestoreValue(value);
+      }
+      return obj;
+    }
+    if (field.nullValue !== undefined) return null;
+    
+    return null;
+  }
+
+  /**
+   * Convert Firestore document to campaign object
+   */
+  function parseCampaignDocument(doc) {
+    if (!doc || !doc.fields) return null;
+    
+    const fields = doc.fields;
+    const campaign = {};
+    
+    // Extract document ID from name path
+    if (doc.name) {
+      const nameParts = doc.name.split('/');
+      campaign.id = nameParts[nameParts.length - 1];
+    }
+    
+    // Parse all fields
+    for (const [key, value] of Object.entries(fields)) {
+      campaign[key] = parseFirestoreValue(value);
+    }
+    
+    return campaign;
+  }
+
+  /**
    * Display campaigns on the page
-   * @param {Array} campaigns - Array of campaign objects from API
+   * @param {Array} campaigns - Array of campaign objects from Firestore
    */
   function displayCampaigns(campaigns) {
     const container = document.getElementById('campaigns-list');
@@ -198,27 +252,36 @@ permalink: /campaigns/
   }
 
   /**
-   * Fetch and display campaigns from Cloudflare Worker API
-   * Updates automatically every 5 minutes
+   * Fetch and display campaigns from Firestore REST API
+   * Updates automatically every 30 seconds
    */
   async function loadCampaigns() {
     try {
-      console.log('🔄 Fetching campaigns from Cloudflare Worker API...');
+      console.log('🔄 Fetching campaigns from Firestore...');
       
       // Update sync status
       const syncStatus = document.getElementById('sync-status');
       if (syncStatus) syncStatus.textContent = '🔄 Syncing...';
       
-      const response = await fetch('https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns');
+      // Fetch from Firestore REST API
+      const firestoreUrl = 'https://firestore.googleapis.com/v1/projects/empowrapp/databases/(default)/documents/campaigns_production';
+      const response = await fetch(firestoreUrl);
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       
       const data = await response.json();
-      const campaigns = data.campaigns || [];
       
-      console.log(`✅ Loaded ${campaigns.length} campaigns`);
+      // Parse Firestore documents
+      let campaigns = [];
+      if (data.documents && Array.isArray(data.documents)) {
+        campaigns = data.documents
+          .map(doc => parseCampaignDocument(doc))
+          .filter(campaign => campaign && campaign.id); // Filter out invalid documents
+      }
+      
+      console.log(`✅ Loaded ${campaigns.length} campaigns from Firestore`);
       
       displayCampaigns(campaigns);
       
@@ -249,13 +312,15 @@ permalink: /campaigns/
       document.getElementById('campaigns-list').innerHTML = `
         <div class="warning-box">
           <h3 style="margin-top: 0;">⚠️ Connection Issue</h3>
-          <p>Unable to load campaigns from the app right now. This could mean:</p>
+          <p>Unable to load campaigns from Firestore right now. This could mean:</p>
           <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
             <li>No campaigns have been created yet</li>
+            <li>Firestore security rules need to be deployed (see setup instructions)</li>
             <li>Temporary network issue</li>
             <li>Please refresh the page</li>
           </ul>
           <p style="margin-top: 1rem;">Please check back later or <a href="/contact/">contact us</a> if the problem persists.</p>
+          <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;"><strong>Setup Required:</strong> Ensure Firestore rules allow public read access to campaigns_production collection and run: <code>firebase deploy --only firestore:rules</code></p>
         </div>
       `;
     }
@@ -279,18 +344,21 @@ permalink: /campaigns/
   
   // Handle campaign share
   function shareCampaign(shareLink, campaignTitle) {
+    const shareText = `Join this campaign on 3mpwrApp! ${campaignTitle} #3mpwrApp`;
+    
     if (navigator.share) {
       navigator.share({
         title: campaignTitle,
-        text: 'Join this campaign on 3mpwrApp!',
+        text: shareText,
         url: shareLink
       }).catch(err => console.log('Share cancelled'));
     } else {
-      // Fallback: copy to clipboard
-      navigator.clipboard.writeText(shareLink).then(() => {
-        alert('Campaign link copied to clipboard! Share it with your network.');
+      // Fallback: copy to clipboard with hashtag
+      const fullText = `${shareText}\n${shareLink}`;
+      navigator.clipboard.writeText(fullText).then(() => {
+        alert('Campaign link copied to clipboard with #3mpwrApp hashtag! Share it with your network.');
       }).catch(() => {
-        prompt('Copy this link to share:', shareLink);
+        prompt('Copy this text to share:', fullText);
       });
     }
   }
@@ -302,8 +370,8 @@ permalink: /campaigns/
     loadCampaigns();
   }
   
-  // Auto-refresh every 5 minutes
-  setInterval(loadCampaigns, 5 * 60 * 1000);
+  // Auto-refresh every 30 seconds
+  setInterval(loadCampaigns, 30 * 1000);
 </script>
 
 <div class="info-box" style="margin: 2rem 0;">
