@@ -314,8 +314,13 @@ main {
 .footer-social a {
   display: inline-flex;
   align-items: center;
-  gap: 0;
+  gap: 0.4rem;
   font-size: 1.25rem;
+}
+
+.footer-social .social-label {
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .footer-bottom p {

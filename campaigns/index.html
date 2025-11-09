@@ -440,7 +440,7 @@
 
   <script>
     // Configuration
-    const FIRESTORE_URL = 'https://firestore.googleapis.com/v1/projects/empowrapp/databases/(default)/documents/campaigns_production';
+    const CAMPAIGNS_API_URL = 'https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns';
     const AUTO_REFRESH_INTERVAL = 30 * 1000; // 30 seconds
     const CACHE_KEY = '3mpwr_campaigns_cache';
     const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
@@ -467,14 +467,20 @@
         }
 
         // Fetch fresh data
-        const response = await fetch(FIRESTORE_URL);
+        const response = await fetch(CAMPAIGNS_API_URL);
         
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
         
         const data = await response.json();
-        const campaigns = parseCampaigns(data);
+        
+        // Check if API returned success
+        if (!data.success) {
+          throw new Error(data.error || 'API returned unsuccessful response');
+        }
+        
+        const campaigns = data.campaigns || [];
         
         // Update cache
         localStorage.setItem(CACHE_KEY, JSON.stringify({
@@ -499,43 +505,6 @@
           updateSyncStatus('Cached (offline)');
         }
       }
-    }
-
-    /**
-     * Parse Firestore response into campaign objects
-     */
-    function parseCampaigns(data) {
-      const campaigns = [];
-
-      if (data.documents) {
-        for (const doc of data.documents) {
-          const fields = doc.fields;
-          if (!fields) continue;
-
-          const campaign = {
-            id: doc.name.split('/').pop(),
-            title: fields.title?.stringValue || '',
-            summary: fields.summary?.stringValue || '',
-            target: fields.target?.stringValue || '',
-            goalCount: parseInt(fields.goalCount?.integerValue || fields.goalCount?.doubleValue || 0),
-            membersCount: parseInt(fields.membersCount?.integerValue || fields.membersCount?.doubleValue || 0),
-            contactEmail: fields.contactEmail?.stringValue || '',
-            petitionId: fields.petitionId?.stringValue || '',
-            createdBy: fields.createdBy?.stringValue || '',
-            createdAt: fields.createdAt?.timestampValue ? 
-              new Date(fields.createdAt.timestampValue).getTime() : 
-              parseInt(fields.createdAt?.integerValue || Date.now()),
-            updatedAt: fields.updatedAt?.timestampValue ? 
-              new Date(fields.updatedAt.timestampValue).getTime() : 
-              parseInt(fields.updatedAt?.integerValue || 0),
-          };
-
-          campaigns.push(campaign);
-        }
-      }
-
-      // Sort by newest first
-      return campaigns.sort((a, b) => b.createdAt - a.createdAt);
     }
 
     /**
@@ -702,7 +671,7 @@
       });
 
       // Log for debugging
-      console.log('[Campaigns] Fetching from:', FIRESTORE_URL);
+      console.log('[Campaigns] Fetching from:', CAMPAIGNS_API_URL);
       console.log('[Campaigns] Auto-refresh:', AUTO_REFRESH_INTERVAL / 1000, 'seconds');
     });
 
