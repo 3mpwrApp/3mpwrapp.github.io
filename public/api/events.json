@@ -38,27 +38,6 @@
         "status":  "published"
     },
     {
-        "id":  "J3x25vvZjj7RhWiedREb",
-        "title":  "World Braille Day",
-        "description":  "Awareness of Braille and accessibility for blind and visually impaired",
-        "date":  "2025-01-04T00:00:00.000Z",
-        "endDate":  "2025-01-04T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  false,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "disability",
-                     "accessibility",
-                     "blindness",
-                     "vision"
-                 ],
-        "status":  "published"
-    },
-    {
         "id":  "OVgwKohcDzNpXgO4SYtt",
         "title":  "Family Day",
         "description":  "Observed in most Canadian provinces (3rd Monday in February)",
@@ -218,25 +197,6 @@
         "status":  "published"
     },
     {
-        "id":  "bIxvdlzySPIUUcdyAfvG",
-        "title":  "World Autism Awareness Day",
-        "description":  "Awareness and acceptance of autism",
-        "date":  "2025-04-02T00:00:00.000Z",
-        "endDate":  "2025-04-02T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  false,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "autism",
-                     "neurodiversity"
-                 ],
-        "status":  "published"
-    },
-    {
         "id":  "9yJ9t3yDbklIPLqzzCS6",
         "title":  "Good Friday",
         "description":  "Federal holiday",
@@ -271,27 +231,6 @@
         "tags":  [
                      "workers",
                      "memorial"
-                 ],
-        "status":  "published"
-    },
-    {
-        "id":  "hCfPCjZK5qX1z8uJIHrQ",
-        "title":  "National Day of Mourning",
-        "description":  "Remembering workers killed, injured, or made ill at work - April 28",
-        "date":  "2025-04-28T00:00:00.000Z",
-        "endDate":  "2025-04-28T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  false,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "workers",
-                     "memorial",
-                     "workplace safety",
-                     "labour"
                  ],
         "status":  "published"
     },
@@ -417,25 +356,6 @@
         "status":  "published"
     },
     {
-        "id":  "ynDLUsIZK1r0Pb5yM6fA",
-        "title":  "Global Accessibility Awareness Day",
-        "description":  "Digital accessibility and inclusion awareness",
-        "date":  "2025-05-15T00:00:00.000Z",
-        "endDate":  "2025-05-15T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  true,
-        "url":  "https://www.globalaccessibilityawarenessday.org",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "digital",
-                     "accessibility"
-                 ],
-        "status":  "published"
-    },
-    {
         "id":  "hUpK3BfDx873Bn3eRvk3",
         "title":  "Victoria Day",
         "description":  "Federal holiday - Monday preceding May 25",
@@ -491,25 +411,6 @@
                      "deafblind",
                      "deaf",
                      "accessibility"
-                 ],
-        "status":  "published"
-    },
-    {
-        "id":  "g9lnq206MjulBYYgSJfp",
-        "title":  "Injured Workers Day",
-        "description":  "Solidarity with injured and ill workers",
-        "date":  "2025-06-01T00:00:00.000Z",
-        "endDate":  "2025-06-01T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  false,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "workers",
-                     "solidarity"
                  ],
         "status":  "published"
     },
@@ -592,26 +493,6 @@
         "status":  "published"
     },
     {
-        "id":  "jljz6zB7jJUjFXYL6icv",
-        "title":  "International Day of Sign Languages",
-        "description":  "Recognition of deaf culture and sign language",
-        "date":  "2025-09-23T00:00:00.000Z",
-        "endDate":  "2025-09-23T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  true,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "deaf",
-                     "sign language",
-                     "culture"
-                 ],
-        "status":  "published"
-    },
-    {
         "id":  "AlsQT4eBNTpi1VB3GAdw",
         "title":  "Disability Employment Awareness Month",
         "description":  "October: Employment and workplace inclusion for people with disabilities",
@@ -628,25 +509,6 @@
                      "employment",
                      "disability",
                      "inclusion"
-                 ],
-        "status":  "published"
-    },
-    {
-        "id":  "Ql6oaqI84aOe96wvkvNs",
-        "title":  "Disability Employment Awareness Month",
-        "description":  "NDEAM in Canada (October)",
-        "date":  "2025-10-01T00:00:00.000Z",
-        "endDate":  "2025-10-31T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  true,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "employment",
-                     "disability"
                  ],
         "status":  "published"
     },
@@ -752,25 +614,6 @@
         "status":  "published"
     },
     {
-        "id":  "cReI7aTnDsBmFgiPiK69",
-        "title":  "International Day of Persons with Disabilities",
-        "description":  "Promoting rights and well-being of persons with disabilities",
-        "date":  "2025-12-03T00:00:00.000Z",
-        "endDate":  "2025-12-03T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  false,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "disability",
-                     "rights"
-                 ],
-        "status":  "published"
-    },
-    {
         "id":  "Yk1p4IJ66gGxkI0F8mCc",
         "title":  "Community Accessibility Workshop",
         "description":  "Workshop on accessibility rights and resources. ASL interpretation and closed captions provided.",
@@ -788,26 +631,6 @@
                      "workshop",
                      "community",
                      "education"
-                 ],
-        "status":  "published"
-    },
-    {
-        "id":  "bYfSpZdmLv2o5Pfijv4V",
-        "title":  "Community Accessibility Workshop",
-        "description":  "Join us for a workshop on accessibility rights and resources. ASL interpretation and closed captions provided.",
-        "date":  "2025-12-15T23:00:00.000Z",
-        "endDate":  "2025-12-16T00:30:00.000Z",
-        "location":  "Community Centre - 123 Main St, Toronto, ON",
-        "category":  "community",
-        "isVirtual":  false,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "accessibility",
-                     "workshop",
-                     "community"
                  ],
         "status":  "published"
     },
