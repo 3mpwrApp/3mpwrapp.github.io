@@ -348,58 +348,6 @@
 
   {%- if jekyll.environment == "production" -%}
 
-  <script>
-    // Mobile menu toggle accessibility
-    (function(){
-      var toggle = document.querySelector('.menu-toggle');
-      var nav = document.getElementById('primary-nav');
-      if (!toggle || !nav) return;
-      function setOpen(open){
-        nav.classList.toggle('is-open', !!open);
-        toggle.setAttribute('aria-expanded', !!open);
-        if (open) {
-          // Move focus to first nav link
-          var first = nav.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
-          if (first && first.focus) first.focus();
-        } else {
-          // Return focus to toggle
-          if (toggle && toggle.focus) toggle.focus();
-        }
-      }
-      toggle.addEventListener('click', function(){
-        var open = nav.classList.contains('is-open');
-        setOpen(!open);
-      });
-      // Close on ESC when open
-      document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && nav.classList.contains('is-open')) setOpen(false);
-      });
-      // Focus trap within nav when open
-      document.addEventListener('keydown', function(e){
-        if (!nav.classList.contains('is-open') || e.key !== 'Tab') return;
-        var focusables = nav.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
-        focusables = Array.prototype.filter.call(focusables, function(el){ return el.offsetParent !== null; });
-        if (focusables.length === 0) return;
-        var first = focusables[0];
-        var last = focusables[focusables.length - 1];
-        var active = document.activeElement;
-        if (e.shiftKey && (active === first || !nav.contains(active))) {
-          e.preventDefault();
-          last.focus();
-        } else if (!e.shiftKey && (active === last || !nav.contains(active))) {
-          e.preventDefault();
-          first.focus();
-        }
-      });
-      // Close on click outside
-      document.addEventListener('click', function(e){
-        if (!nav.classList.contains('is-open')) return;
-        var within = nav.contains(e.target) || toggle.contains(e.target);
-        if (!within) setOpen(false);
-      });
-    })();
-  </script>
-
   <!-- Cookie consent banner -->
   <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" hidden>
     <div>
