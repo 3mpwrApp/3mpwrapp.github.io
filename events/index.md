@@ -248,7 +248,18 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
         return true;
       });
       
-      console.log(`📅 ${events.length} events (sample events filtered out)`);
+      // Deduplicate events by ID (in case API returns duplicates)
+      const seenIds = new Set();
+      events = events.filter(event => {
+        if (seenIds.has(event.id)) {
+          console.log(`⚠️ Skipping duplicate event: ${event.title} (${event.id})`);
+          return false;
+        }
+        seenIds.add(event.id);
+        return true;
+      });
+      
+      console.log(`📅 ${events.length} events (duplicates and samples removed)`);
       console.log('📊 Events data:', events.slice(0, 5)); // Log first 5 for debugging
       
       const upcomingContainer = document.getElementById('upcoming-events-list');
