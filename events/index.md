@@ -249,8 +249,16 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       });
       
       // Deduplicate events by ID (in case API returns duplicates)
+      // Only deduplicate if events have IDs
       const seenIds = new Set();
       events = events.filter(event => {
+        // If no ID, keep the event (can't deduplicate without ID)
+        if (!event.id) {
+          console.log(`⚠️ Event without ID: ${event.title}`);
+          return true;
+        }
+        
+        // Check for duplicate ID
         if (seenIds.has(event.id)) {
           console.log(`⚠️ Skipping duplicate event: ${event.title} (${event.id})`);
           return false;
@@ -259,7 +267,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
         return true;
       });
       
-      console.log(`📅 ${events.length} events (duplicates and samples removed)`);
+      console.log(`📅 ${events.length} events after filtering (duplicates and samples removed)`);
       console.log('📊 Events data:', events.slice(0, 5)); // Log first 5 for debugging
       
       const upcomingContainer = document.getElementById('upcoming-events-list');
