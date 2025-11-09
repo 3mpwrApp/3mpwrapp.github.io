@@ -243,6 +243,29 @@ function escapeICS(text) {
 }
 
 /**
+ * Remove obvious duplicates from events array.
+ * Dedupe key: normalized title + start date (YYYY-MM-DD) + normalized location
+ * Keeps the first occurrence (events are sorted by date earlier)
+ */
+function dedupeEvents(events) {
+  if (!Array.isArray(events) || events.length === 0) return events;
+  const seen = new Set();
+  const out = [];
+
+  for (const ev of events) {
+    const title = (ev.title || '').toString().trim().toLowerCase().replace(/\s+/g, ' ');
+    const date = ev.date ? new Date(ev.date).toISOString().slice(0, 10) : '';
+    const location = (ev.location || '') .toString().trim().toLowerCase();
+    const key = `${title}|${date}|${location}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(ev);
+  }
+
+  return out;
+}
+
+/**
  * Get from cache or fetch fresh data
  */
 async function getCachedOrFresh(cache, key, fetchFn, ttlSeconds = 300) {
@@ -316,7 +339,7 @@ export default {
         const endDate = new Date(year, month ? parseInt(month) : 12, 0);
 
         // Fetch events from Firestore with caching
-        const events = await getCachedOrFresh(
+        let events = await getCachedOrFresh(
           cache,
           `events:ics:${year}:${month || 'all'}:${environment}`,
           async () => {
@@ -326,6 +349,9 @@ export default {
           },
           3600 // 1 hour cache
         );
+
+        // Dedupe obvious duplicates (same title + date + location)
+        events = dedupeEvents(events || []);
 
         // Filter by year/month if specified
         let filtered = events;
@@ -387,8 +413,11 @@ export default {
           300 // 5 minute cache
         );
 
+        // Dedupe obvious duplicates before sorting/pagination
+        const dedupedEvents = dedupeEvents(events || []);
+
         // Apply sorting
-        const sorted = events.sort((a, b) => {
+  const sorted = dedupedEvents.sort((a, b) => {
           let aVal = a[sortBy];
           let bVal = b[sortBy];
 
@@ -460,7 +489,10 @@ export default {
           300
         );
 
-        const event = allEvents.find((e) => e.id === eventId);
+        // Dedupe here as well
+        const dedupedAll = dedupeEvents(allEvents || []);
+
+        const event = dedupedAll.find((e) => e.id === eventId);
 
         if (!event) {
           return new Response(JSON.stringify({ error: 'Event not found' }), {
