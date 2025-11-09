@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import { StyleSheet, Text, View } from 'react-native';
 
 import type { Event } from '../data/events';

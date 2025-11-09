@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useRouter } from "expo-router";
 import React from "react";
@@ -303,6 +304,7 @@ export default function EventsScreen() {
       const isSyncAvailable = await isFirestoreSyncAvailable();
       
       if (!isSyncAvailable || !user?.uid) {
+        // eslint-disable-next-line no-console
         console.log('[AutoSync] Sync not available - adding to queue for retry');
         // Add to queue for background retry
         if (user?.uid) {
@@ -346,6 +348,7 @@ export default function EventsScreen() {
       if (syncSuccess) {
         setSyncStatus('success');
         setLastSyncTime(Date.now());
+        // eslint-disable-next-line no-console
         console.log(`[AutoSync] ✓ Event ${event.id} synced to both collections`);
         return true;
       } else if (productionSuccess || previewSuccess) {

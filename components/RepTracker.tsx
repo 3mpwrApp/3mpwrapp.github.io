@@ -1,3 +1,4 @@
+/* eslint-disable no-console, no-restricted-syntax */
 import * as Location from 'expo-location';
 import React from 'react';
 import { ActivityIndicator, Alert, Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';

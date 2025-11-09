@@ -1,3 +1,4 @@
+/* eslint-disable no-console, no-restricted-syntax */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 

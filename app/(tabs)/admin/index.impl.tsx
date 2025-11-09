@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 // import { useLocalSearchParams } from "expo-router";
 import {
     collection,

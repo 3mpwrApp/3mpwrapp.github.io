@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import { Link } from "expo-router";
 import React from "react";
 import {

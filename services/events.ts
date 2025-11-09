@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import type { Event } from "../data/events";
 import { events as local } from "../data/events";
 

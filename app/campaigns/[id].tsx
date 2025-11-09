@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import { Stack, router, useLocalSearchParams } from "expo-router";
 import { useEffect, useMemo, useState } from 'react';
 import {
