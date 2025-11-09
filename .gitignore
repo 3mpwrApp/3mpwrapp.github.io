@@ -7,7 +7,7 @@ _site/
 # Ruby dependencies
 vendor/
 .bundle/
-Gemfile.lock
+# Gemfile.lock - now tracked for deployment consistency
 
 # System files
 .DS_Store
