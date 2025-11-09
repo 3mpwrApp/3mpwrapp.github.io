@@ -147,8 +147,13 @@ We're building a safe space to connect, share experiences, and advocate for real
 
 ---
 
-<!-- Daily Events Banner -->
+<!-- Daily Events Banner - Auto-Updates with Happening Now/Soon Events -->
 <div id="daily-events-banner" class="gradient-banner" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <h2 style="margin: 0 0 1rem; color: white; font-size: 1.8rem;">
+    <span aria-hidden="true">🔥</span> Happening Now/Soon
+    <span class="badge badge--new" style="background: rgba(255,255,255,0.3); color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Automatically updated">Auto-updated</span>
+  </h2>
+  <p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Events from the community calendar – automatically synced from 3mpwr App</p>
   <div id="events-banner-content" style="min-height: 100px;">
     <p style="margin: 0; font-size: 1.2rem; opacity: 0.9;">⏳ Loading today's events...</p>
   </div>
@@ -159,8 +164,9 @@ We're building a safe space to connect, share experiences, and advocate for real
  * ========================================
  * DAILY EVENTS BANNER - HOMEPAGE
  * ========================================
- * Shows today's events, or next upcoming if none today
- * Updates automatically daily
+ * Shows today's "happening now/soon" events, or next upcoming if none today
+ * Updates automatically from events calendar API
+ * Syncs every 5 minutes with app events
  * ========================================
  */
 
@@ -514,12 +520,12 @@ Ready to join the movement? Here's how you can get started:
   {% endfor %}
   {% assign latest_curated = daily_today | first %}
   <h3 id="latest-curated">
-    Daily highlights from across Canada
+    <span aria-hidden="true">🎯</span> Daily highlights from across Canada
     {% if latest_curated %}
-      <span class="badge badge--new" aria-label="Updated today">Today!</span>
+      <span class="badge badge--new" aria-label="Updated today">✅ {{ today | date: "%B %-d, %Y" }}</span>
     {% endif %}
   </h3>
-  <p class="highlight-banner__desc">A quick, accessible round-up of community stories, resources, and calls-to-action updated every day.</p>
+  <p class="highlight-banner__desc">A quick, accessible round-up of community stories, resources, and calls-to-action <strong>updated automatically every day</strong>.</p>
   <div class="highlight-banner__actions">
     <a class="highlight-banner__button" href="{{ '/blog/#curated-daily' | relative_url }}" aria-describedby="curated-daily-desc">
       Check out today’s curated feed →
@@ -538,7 +544,7 @@ Ready to join the movement? Here's how you can get started:
     </ul>
     <p style="margin:0.25rem 0 0;"><a href="{{ '/blog/#curated-daily' | relative_url }}">See all daily highlights →</a></p>
   {% else %}
-    <p class="highlight-banner__desc" style="margin:0;">No highlights yet today. Check back soon - new content posted daily at 9 AM UTC!</p>
+    <p class="highlight-banner__desc" style="margin:0;"><strong>📅 Today is {{ today | date: "%B %-d, %Y" }}</strong> – No highlights yet today. Check back soon - new content posted daily at 9 AM UTC!</p>
   {% endif %}
 </section>
 ---
@@ -558,7 +564,8 @@ We're committed to transparency and protecting your rights:
 
 {% if site.posts.size > 0 %}
 <section aria-labelledby="latest-posts">
-  <h2 id="latest-posts">Latest from the blog</h2>
+  <h2 id="latest-posts"><span aria-hidden="true">📰</span> Latest from the blog <span class="badge badge--new" aria-label="Automatically updated">Auto-updated</span></h2>
+  <p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Showing the 3 most recent blog posts (excluding daily highlights) – automatically stays current</p>
   <ul class="post-list">
     {% assign shown = 0 %}
     {% for post in site.posts %}
@@ -582,14 +589,15 @@ We're committed to transparency and protecting your rights:
 ---
 {% endif %}
 
-## Weekly updates
+## <span aria-hidden="true">📅</span> Weekly updates <span class="badge badge--new" aria-label="Automatically updated">Auto-updated</span>
 
 {% assign weeklies = site.posts | where_exp: 'p', "p.tags contains 'weekly'" %}
 {% if weeklies and weeklies.size > 0 %}
+<p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Showing the most recent weekly updates – automatically stays current with new posts</p>
 <div class="weekly-swiper" role="region" aria-labelledby="weekly-title">
-  <h2 id="weekly-title">Weekly updates</h2>
+  <h3 id="weekly-title" class="sr-only">Weekly update posts</h3>
   <div class="weekly-track" data-weekly-track>
-    {% for p in weeklies limit:2 %}
+    {% for p in weeklies limit:3 %}
     <article class="weekly-card">
       <h3 class="weekly-card__title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
       <p class="weekly-card__meta">{{ p.date | date: "%B %-d, %Y" }}</p>
@@ -625,8 +633,7 @@ We're committed to transparency and protecting your rights:
 })();
 </script>
 {% else %}
-<h2>Weekly updates</h2>
-<p>Weekly updates will appear here once available.</p>
+<p>Weekly updates will appear here once available. New weekly posts are automatically displayed when published.</p>
 {% endif %}
 
 ## Connect With Us
