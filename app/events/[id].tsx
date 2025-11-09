@@ -5,9 +5,9 @@ import React from 'react';
 import { ActivityIndicator, Alert, Modal, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Lazy load Calendar to avoid crashes if expo-calendar is not available
-let Calendar: any = null;
+let _Calendar: any = null;
 try {
-  Calendar = require('expo-calendar');
+  _Calendar = require('expo-calendar');
 } catch (err) {
   console.warn('[EventDetail] expo-calendar not available:', err);
 }
@@ -28,7 +28,7 @@ import { useSettings } from "../../store/settings";
 import { useAppPalette } from "../../theme/usePalette";
 import { logError } from '../../utils/errorLogger';
 
-function createICS(
+function _createICS(
   title: string,
   start: string,
   description?: string,

@@ -326,7 +326,7 @@ function CampaignDetailInner() {
                               message: campaign.shareTemplates.facebook,
                               url: campaign.petitionUrl,
                             });
-                          } catch (error) {
+                          } catch {
                             Alert.alert('Error', 'Could not share');
                           }
                         }}

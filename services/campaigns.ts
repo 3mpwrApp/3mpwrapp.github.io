@@ -45,7 +45,7 @@ export async function fetchCampaignById(id: string): Promise<Campaign | null> {
     });
     
     return response;
-  } catch (error) {
+  } catch {
     // Fallback to local data on error
     return local.find((c) => c.id === id) || null;
   }
