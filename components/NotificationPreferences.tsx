@@ -1,8 +1,13 @@
 import React from "react";
-import { Alert, StyleSheet, Text, View } from "react-native";
+import { Alert, StyleSheet, Switch, Text, View } from "react-native";
 
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTranslation } from "../i18n";
+import {
+    getNotificationPreferences,
+    setNotificationPreferences,
+    type NotificationPreferences as PushPrefsType,
+} from "../services/notificationPreferences";
 import { sendTestLocal, setupAsync } from "../services/notifications";
 import { useSettings } from "../store/settings";
 import { useTextScale } from "../theme/typography";
@@ -36,12 +41,39 @@ export default function NotificationPreferences() {
     setQuietHoursEnd,
   } = useSettings();
 
+  // Push notification preferences state
+  const [pushPrefs, setPushPrefs] = React.useState<PushPrefsType>({
+    events: true,
+    campaigns: true,
+    reminders: true,
+    rsvpConfirmations: true,
+    capacityAlerts: true,
+    cancellations: true,
+  });
+
   React.useEffect(() => {
     // Setup notifications when component mounts
     if (notificationsEnabled) {
       setupAsync();
     }
+    // Load push preferences
+    loadPushPreferences();
   }, [notificationsEnabled]);
+
+  const loadPushPreferences = async () => {
+    try {
+      const stored = await getNotificationPreferences();
+      setPushPrefs(stored);
+    } catch (error) {
+      console.warn('[NotificationPreferences] Failed to load push prefs:', error);
+    }
+  };
+
+  const updatePushPref = async (key: keyof PushPrefsType, value: boolean) => {
+    const updated = { ...pushPrefs, [key]: value };
+    setPushPrefs(updated);
+    await setNotificationPreferences({ [key]: value });
+  };
 
   const handleNotificationsToggle = async (enabled: boolean) => {
     if (enabled) {
@@ -203,6 +235,110 @@ export default function NotificationPreferences() {
             icon="calendar"
             testID="event-reminders-toggle"
           />
+
+          <View style={styles.divider} />
+
+          <Text style={styles.sectionTitle} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            Push Notification Types
+          </Text>
+
+          <View style={styles.pushPrefsContainer}>
+            <View style={styles.prefRow}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.prefLabel}>New Events</Text>
+                <Text style={styles.prefDescription}>
+                  Get notified when new events are created
+                </Text>
+              </View>
+              <Switch
+                value={pushPrefs.events}
+                onValueChange={(val) => updatePushPref('events', val)}
+                trackColor={{ false: palette.muted, true: palette.primary }}
+                thumbColor={pushPrefs.events ? palette.onPrimary : palette.surface}
+                testID="push-events-toggle"
+              />
+            </View>
+
+            <View style={styles.prefRow}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.prefLabel}>New Campaigns</Text>
+                <Text style={styles.prefDescription}>
+                  Get notified when new campaigns are launched
+                </Text>
+              </View>
+              <Switch
+                value={pushPrefs.campaigns}
+                onValueChange={(val) => updatePushPref('campaigns', val)}
+                trackColor={{ false: palette.muted, true: palette.primary }}
+                thumbColor={pushPrefs.campaigns ? palette.onPrimary : palette.surface}
+                testID="push-campaigns-toggle"
+              />
+            </View>
+
+            <View style={styles.prefRow}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.prefLabel}>Event Reminders</Text>
+                <Text style={styles.prefDescription}>
+                  Reminders 24hr and 1hr before events you've RSVP'd to
+                </Text>
+              </View>
+              <Switch
+                value={pushPrefs.reminders}
+                onValueChange={(val) => updatePushPref('reminders', val)}
+                trackColor={{ false: palette.muted, true: palette.primary }}
+                thumbColor={pushPrefs.reminders ? palette.onPrimary : palette.surface}
+                testID="push-reminders-toggle"
+              />
+            </View>
+
+            <View style={styles.prefRow}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.prefLabel}>RSVP Confirmations</Text>
+                <Text style={styles.prefDescription}>
+                  Confirmation when you successfully RSVP to an event
+                </Text>
+              </View>
+              <Switch
+                value={pushPrefs.rsvpConfirmations}
+                onValueChange={(val) => updatePushPref('rsvpConfirmations', val)}
+                trackColor={{ false: palette.muted, true: palette.primary }}
+                thumbColor={pushPrefs.rsvpConfirmations ? palette.onPrimary : palette.surface}
+                testID="push-rsvp-toggle"
+              />
+            </View>
+
+            <View style={styles.prefRow}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.prefLabel}>Capacity Alerts</Text>
+                <Text style={styles.prefDescription}>
+                  Alert when events you're interested in are filling up
+                </Text>
+              </View>
+              <Switch
+                value={pushPrefs.capacityAlerts}
+                onValueChange={(val) => updatePushPref('capacityAlerts', val)}
+                trackColor={{ false: palette.muted, true: palette.primary }}
+                thumbColor={pushPrefs.capacityAlerts ? palette.onPrimary : palette.surface}
+                testID="push-capacity-toggle"
+              />
+            </View>
+
+            <View style={[styles.prefRow, styles.lastPrefRow]}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.prefLabel}>Event Cancellations</Text>
+                <Text style={styles.prefDescription}>
+                  Important alerts when events are cancelled
+                </Text>
+              </View>
+              <Switch
+                value={pushPrefs.cancellations}
+                onValueChange={(val) => updatePushPref('cancellations', val)}
+                trackColor={{ false: palette.muted, true: palette.primary }}
+                thumbColor={pushPrefs.cancellations ? palette.onPrimary : palette.surface}
+                testID="push-cancellations-toggle"
+              />
+            </View>
+          </View>
         </>
       )}
 
@@ -295,6 +431,34 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       fontSize: Math.round(12 * factor),
       color: palette.text,
       opacity: 0.7,
+      lineHeight: Math.round(16 * factor),
+    },
+    pushPrefsContainer: {
+      backgroundColor: palette.card,
+      borderRadius: 8,
+      padding: 12,
+      marginBottom: 12,
+    },
+    prefRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingVertical: 12,
+      borderBottomWidth: 1,
+      borderBottomColor: palette.border,
+    },
+    lastPrefRow: {
+      borderBottomWidth: 0,
+    },
+    prefLabel: {
+      fontSize: Math.round(15 * factor),
+      fontWeight: '600',
+      color: palette.text,
+      marginBottom: 4,
+    },
+    prefDescription: {
+      fontSize: Math.round(12 * factor),
+      color: palette.muted,
       lineHeight: Math.round(16 * factor),
     },
   });

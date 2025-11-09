@@ -57,6 +57,16 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           if (firebaseUser) {
             setSessionExpired(false);
             
+            // Register push notification token for non-anonymous users
+            if (!firebaseUser.isAnonymous) {
+              try {
+                const { registerUserPushToken } = await import('../services/notifications');
+                await registerUserPushToken(firebaseUser.uid);
+              } catch (notifErr) {
+                logger.warn('[AuthContext] Failed to register push token', { error: notifErr });
+              }
+            }
+            
             // Grant absolute admin access to empowrapp08162025@gmail.com
             const superAdminEmail = 'empowrapp08162025@gmail.com';
             const isSuperAdmin = firebaseUser.email === superAdminEmail;

@@ -228,25 +228,86 @@ export async function notifyAllUsers(notification: {
   badge?: number;
 }) {
   try {
-    // In production, you would:
-    // 1. Get all user push tokens from Firestore
-    // 2. Send to Expo Push API
-    // 3. Handle receipts
+    // Fetch all user tokens from Firestore
+    const { collection, getDocs } = await import('firebase/firestore');
+    const { getDB } = await import('./firestore');
     
-    // For now, send to a test token or use Firebase Cloud Functions
-    const message = {
-      to: 'all', // In reality, this would be an array of ExponentPushToken[...]
+    const db = await getDB();
+    const tokensSnapshot = await getDocs(collection(db, 'userTokens'));
+    
+    const tokens: string[] = [];
+    tokensSnapshot.forEach((doc) => {
+      const data = doc.data();
+      if (data.token && data.token.startsWith('ExponentPushToken[')) {
+        tokens.push(data.token);
+      }
+    });
+
+    if (tokens.length === 0) {
+      console.log('[Notifications] No push tokens registered yet');
+      return { success: true, sent: 0 };
+    }
+
+    // Prepare messages for Expo Push API
+    const messages = tokens.map(token => ({
+      to: token,
       sound: notification.sound || 'default',
       title: notification.title,
       body: notification.body,
       data: notification.data || {},
       badge: notification.badge,
-    };
+    }));
 
-    // TODO: Implement actual push sending via your backend
-    // This requires storing user push tokens in Firestore
+    // Send to Expo Push API in batches of 100
+    const BATCH_SIZE = 100;
+    const results = [];
+    
+    for (let i = 0; i < messages.length; i += BATCH_SIZE) {
+      const batch = messages.slice(i, i + BATCH_SIZE);
+      
+      const response = await fetch('https://exp.host/--/api/v2/push/send', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(batch),
+      });
 
-    return { success: true, message };
+      const result = await response.json();
+      results.push(...(result.data || []));
+    }
+
+    // Handle errors and remove invalid tokens
+    const invalidTokens: string[] = [];
+    results.forEach((item, idx) => {
+      if (item.status === 'error') {
+        if (item.details?.error === 'DeviceNotRegistered') {
+          invalidTokens.push(tokens[idx]);
+        }
+        console.warn('[Notifications] Push error:', item.message);
+      }
+    });
+
+    // Remove invalid tokens from Firestore
+    if (invalidTokens.length > 0) {
+      const { doc, deleteDoc } = await import('firebase/firestore');
+      for (const token of invalidTokens) {
+        try {
+          // Find doc with this token
+          tokensSnapshot.forEach(async (snapshot) => {
+            if (snapshot.data().token === token) {
+              await deleteDoc(doc(db, 'userTokens', snapshot.id));
+            }
+          });
+        } catch (err) {
+          console.warn('[Notifications] Failed to remove invalid token:', err);
+        }
+      }
+    }
+
+    console.log(`[Notifications] Sent ${results.length} notifications, ${invalidTokens.length} invalid tokens removed`);
+    return { success: true, sent: results.length, removed: invalidTokens.length };
   } catch (error) {
     logError('Notifications', 'Push notification error', error);
     return { success: false, error };
@@ -262,6 +323,15 @@ export async function sendEventNotification(event: {
   date: string;
   location?: string;
 }) {
+  // Check if event notifications are enabled
+  const { isNotificationEnabled } = await import('./notificationPreferences');
+  const enabled = await isNotificationEnabled('events');
+  
+  if (!enabled) {
+    console.log('[Notifications] Event notifications disabled by user preferences');
+    return { success: true, sent: 0, skipped: true };
+  }
+  
   return notifyAllUsers({
     title: '📅 New Event Added!',
     body: `${event.title} - ${event.date}`,
@@ -281,6 +351,15 @@ export async function sendCampaignNotification(campaign: {
   title: string;
   summary?: string;
 }) {
+  // Check if campaign notifications are enabled
+  const { isNotificationEnabled } = await import('./notificationPreferences');
+  const enabled = await isNotificationEnabled('campaigns');
+  
+  if (!enabled) {
+    console.log('[Notifications] Campaign notifications disabled by user preferences');
+    return { success: true, sent: 0, skipped: true };
+  }
+  
   return notifyAllUsers({
     title: '📢 New Campaign!',
     body: campaign.summary || campaign.title,
@@ -296,7 +375,7 @@ export async function sendCampaignNotification(campaign: {
  * Store user's push token in Firestore for later use
  * Call this after user logs in
  */
-export async function registerUserPushToken(_userId: string) {
+export async function registerUserPushToken(userId: string) {
   const token = await getExpoPushToken();
   if (!token) {
     // No token available in current environment
@@ -305,13 +384,18 @@ export async function registerUserPushToken(_userId: string) {
 
   try {
     // Store token in Firestore
-    // TODO: Import Firestore and save token
-    // await setDoc(doc(db, 'userTokens', userId), {
-    //   token,
-    //   platform: Platform.OS,
-    //   updatedAt: new Date().toISOString(),
-    // });
+    const { doc, setDoc } = await import('firebase/firestore');
+    const { getDB } = await import('./firestore');
     
+    const db = await getDB();
+    await setDoc(doc(db, 'userTokens', userId), {
+      token,
+      platform: Platform.OS,
+      updatedAt: Date.now(),
+      userId,
+    });
+
+    console.log('[Notifications] Registered push token for user:', userId);
     return token;
   } catch (error) {
     logError('Notifications', 'Token registration failed', error);

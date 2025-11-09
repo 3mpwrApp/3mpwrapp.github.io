@@ -415,6 +415,16 @@ export default function EventsScreen() {
     // Auto-sync to cloud (no user interaction needed)
     const synced = await autoSyncEvent(newEvt);
     
+    // Send push notification to all users about new event
+    if (synced) {
+      try {
+        const { sendEventNotification } = await import('../../services/notifications');
+        await sendEventNotification(newEvt);
+      } catch (notifErr) {
+        console.warn('[Events] Failed to send push notification:', notifErr);
+      }
+    }
+    
     if (synced) {
       Alert.alert(
         '✅ Event Published!',
