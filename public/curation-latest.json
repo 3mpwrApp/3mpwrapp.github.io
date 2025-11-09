@@ -1,120 +1,106 @@
 {
   "date": "2025-11-09",
-  "timestamp": "2025-11-09T09:19:03.299Z",
-  "count": 16,
+  "timestamp": "2025-11-09T15:22:37.123Z",
+  "count": 14,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Old caves yield new secrets from Canadians who went over the top at Vimy Ridge",
-      "link": "https://www.cbc.ca/news/canada/canada-vimy-ridge-artwork-caves-canadigm-group-9.6950255?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/16039e54-a46d-44f2-9f2e-08a32ad0d245,1761754608867/full/max/0/default.jpg?im=Crop%2Crect%3D%2812%2C0%2C3495%2C1965%29%3BResize%3D%28620%29' alt='A man stands beside a woman using a handheld laser scanner on a chalk cave carving below Vimy Ridge' width='620' height='349' title='Dan Mansfield of Canadigm Group (left) shows Elizabeth Whitten how the new handheld 3-D scanner works. The new technology can pick up colour and texture, giving researchers unprecedented detail of the cave art. '/><p>A hidden archive of what for many were last thoughts and tributes to Canada is emerging from the soft chalk tunnels beneath the Vimy Ridge battlefield more than a century after they were created.</p>",
+      "title": "Manitoba Government's Connected Approach Supporting Primary Care, Faster Discharges: CIHI Report",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71279",
+      "description": "",
+      "score": 24,
+      "pubDate": "Thu, 23 Oct 2025 16:50:00 CDT"
+    },
+    {
+      "title": "Freeland exploring Canadian business opportunities to help rebuild Ukraine",
+      "link": "https://globalnews.ca/news/11518558/chrystia-freeland-ukraine-rebuild-canadian-businesses/",
+      "description": "The Privy Council Office said Freeland will advise the government on Ukraine's economic reconstruction and the effort to bring home thousands of abducted Ukrainian children.",
       "score": 15,
-      "pubDate": "Sun, 09 Nov 2025 04:00:00 EST"
+      "pubDate": "Sun, 09 Nov 2025 15:01:08 +0000"
     },
     {
-      "title": "Canada could face ‘worst kind’ of flu season as experts warn evolving strain may be mismatch for vaccine",
-      "link": "https://www.cbc.ca/news/health/canada-flu-season-warnings-9.6970982?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/666351a2-5547-4369-8921-3da2c59d5564,1762534263404/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C80%2C904%2C508%29%3BResize%3D%28620%29' alt='A colourized transmission electron microscope image of the influenza A H3N2 virus from the U.S. Centers for Disease Control and Prevention.' width='620' height='349' title='A colourized transmission electron microscope image of the influenza A H3N2 virus from the U.S. Centers for Disease Control and Prevention.'/><p>With flu cases now rising in Canada, medical experts are bracing for a difficult influenza season linked to the global spread of an evolving H3N2 strain that could be a mismatch for this year’s vaccine.</p>",
-      "score": 10.5,
-      "pubDate": "Sun, 09 Nov 2025 04:00:00 EST"
+      "title": "What is Canada's role at COP30 climate summit? What to know",
+      "link": "https://globalnews.ca/news/11518544/cop30-canada-role/",
+      "description": "Federal officials say Canada will continue to play a bridge-builder role to help countries reach a consensus on some of the summit's key issues.",
+      "score": 12.5,
+      "pubDate": "Sun, 09 Nov 2025 14:31:38 +0000"
     },
     {
-      "title": "What’s in the federal budget for you? Your questions answered",
-      "link": "https://www.cbc.ca/news/politics/your-budget-questions-answered-9.6971678?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/4c4ac7ee-7d96-4760-ab34-b3f07c8cc0fe,1762552929045/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C263%2C5052%2C2841%29%3BResize%3D%28620%29' alt='Finance and National Revenue Minister Francois-Philippe Champagne shakes hands with Prime Minister Mark Carney.' width='620' height='349' title='Finance and National Revenue Minister Francois-Philippe Champagne shakes hands with Prime Minister Mark Carney after delivering the federal budget and budget speech in the House of Commons on Parliament Hill in Ottawa, Tuesday, November 4, 2025. '/><p>Many Canadians wrote to us asking what they should be looking for in the new federal budget. CBC News’ Catherine Cullen and J.P. Tasker are here to help break down what is – and isn’t – in the budget.</p>",
-      "score": 12,
-      "pubDate": "Sun, 09 Nov 2025 04:00:00 EST"
+      "title": "World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year",
+      "link": "https://www.straight.com/food/world-culinary-awards-names-baan-lao-best-restaurant-in-canada-for-second-straight-year",
+      "description": "The Richmond restaurant took home the honours once again.",
+      "score": 9.5,
+      "pubDate": "2025-10-23T15:47:58-07:00"
     },
     {
-      "title": "Manitoba Government Honours Indigenous Veterans and Supports First-Annual Powwow",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71460",
+      "title": "Manitoba Government Opens New Permanent Rest Stop on Provincial Trunk Highway 6",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71281",
       "description": "",
       "score": 10.5,
-      "pubDate": "Sat, 08 Nov 2025 09:00:00 CST"
+      "pubDate": "Fri, 24 Oct 2025 13:53:00 CDT"
     },
     {
-      "title": "After fuel spill in B.C. lake, early tests show no contamination above drinking water guidelines",
-      "link": "https://www.cbc.ca/news/canada/british-columbia/kamloops-lake-water-tests-fuel-spill-train-9.6972362?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/4dbdd684-422d-4b75-903c-8718070cd2f9,1762627451633/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C859%2C3848%2C2164%29%3BResize%3D%28620%29' alt='Cleanup efforts underway after a train derailment. ' width='620' height='349' title='Multiple cars of a Canadian Pacific Kansas City train derailed on Nov. 1, just before 7 p.m., approximately 20km west of Kamloops. '/><p>B.C. officials say that preliminary tests show no contamination above drinking water guidelines after 80,000 litres of fuel was spilled into Kamloops Lake following a train derailment.</p>",
-      "score": 10,
-      "pubDate": "Sat, 08 Nov 2025 13:38:15 EST"
+      "title": "How former Vancouver Canadians performed for the Blue Jays in the World Series",
+      "link": "https://www.straight.com/city-culture/how-former-vancouver-canadians-performed-for-blue-jays-in-world-series",
+      "description": "Toronto lost in heartbreaking fashion on Saturday night.",
+      "score": 8.5,
+      "pubDate": "2025-11-02T00:19:45-07:00"
     },
     {
-      "title": "Canadians honour Indigenous veterans with ceremonies across the country",
-      "link": "https://globalnews.ca/news/11517882/indigenous-veterans-day-ceremonies-across-canada/",
-      "description": "Canadians marked Indigenous Veterans Day with ceremonies countrywide, honouring First Nations, Inuit and Métis service members and calling for continued reconciliation.",
+      "title": "Manitoba Government Opens Downtown Resource Corner at Millennium Library",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71280",
+      "description": "",
+      "score": 8.5,
+      "pubDate": "Fri, 24 Oct 2025 11:43:00 CDT"
+    },
+    {
+      "title": "Manitoba Supports Families with New Parenting Website",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71278",
+      "description": "",
+      "score": 8.5,
+      "pubDate": "Wed, 22 Oct 2025 12:30:00 CDT"
+    },
+    {
+      "title": "Manitoba Protects Indigenous Languages with New Teaching Degree Programs",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71237",
+      "description": "",
       "score": 9,
-      "pubDate": "Sat, 08 Nov 2025 23:22:31 +0000"
+      "pubDate": "Mon, 20 Oct 2025 11:12:00 CDT"
     },
     {
-      "title": "How the woman who wasn't allowed to play built a future for Canadian hockey",
-      "link": "https://www.cbc.ca/news/canada/montreal/hockey-hall-of-fame-daniele-sauvageau-induction-builder-9.6971174?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/ad9e18e4-5822-4281-9131-f638cbb52859,1762547794393/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1%2C2524%2C1419%29%3BResize%3D%28620%29' alt='Danièle Sauvageau, the GM of the Montreal Victoire, is the first woman inducted into the Hockey Hall of Fame as a Builder' width='620' height='349' title='Danièle Sauvageau's career in hockey spans four decades. But, until she was hired as Montreal Victoire general manager, it was never her full-time job.'/><p>Danièle Sauvageau, the girl who grew up in Deux-Montanges, Que., and wasn’t allowed to play on an organized hockey team because she wasn’t a boy, is now the first woman 'Builder' inducted into the Hockey Hall of Fame.</p>",
+      "title": "Photos: Matt Maltese caresses the keys at the Vogue Theatre",
+      "link": "https://www.straight.com/music/photos-matt-maltese-caresses-keys-at-vogue-theatre",
+      "description": "A multi-hyphenate British-Canadian singer-songwriter.",
       "score": 9,
-      "pubDate": "Sat, 08 Nov 2025 04:00:00 EST"
+      "pubDate": "2025-10-20T16:00:00-07:00"
     },
     {
-      "title": "Accessibility is coming to playgrounds in Regina",
-      "link": "https://globalnews.ca/news/11518182/accessibility-playgrounds-regina/",
-      "description": "Sarah Turnbull isn't just a city councillor, but also a mother, and she's looking to make a change when it comes to accessible parks in Regina.",
-      "score": 4.5,
-      "pubDate": "Sun, 09 Nov 2025 08:49:34 +0000"
+      "title": "Manitoba Grants Support Newcomers, Low-Income Manitobans Through Endowment Fund",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71257",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Tue, 21 Oct 2025 11:00:00 CDT"
     },
     {
-      "title": "More Montreal transit staff to strike, but walkout not expected to disrupt service",
-      "link": "https://globalnews.ca/news/11518155/mtl-transit-strike/",
-      "description": "A third union at Montreal’s transit network will hold a one-day strike Nov. 19, joining other groups in disputes over subcontracting, job security, and stalled negotiations.",
-      "score": 4.5,
-      "pubDate": "Sat, 08 Nov 2025 23:37:15 +0000"
+      "title": "Manitoba Government Acts to Protect Democracy and Fundamental Freedoms",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71199",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Thu, 16 Oct 2025 13:42:00 CDT"
     },
     {
-      "title": "Canadian travellers to Europe face new border measures as security ramps up",
-      "link": "https://globalnews.ca/news/11517876/cda-eu-travel/",
-      "description": "Canadians heading to Europe will soon need new travel clearance as EU officials roll out biometric checks and a €20 ETIAS pass next year.",
-      "score": 4.5,
-      "pubDate": "Sat, 08 Nov 2025 15:04:38 +0000"
+      "title": "You Nearly Missed: Ada Lea promises to inspire at LanaLou's in Vancouver",
+      "link": "https://www.straight.com/music/you-nearly-missed-ada-lea-promises-to-inspire-at-lanalous-in-vancouver",
+      "description": "\"Because anyone can, you can also do it.\"",
+      "score": 5,
+      "pubDate": "2025-10-23T14:25:06-07:00"
     },
     {
-      "title": "Advocates concerned temporary immigration cuts don't address systemic issues",
-      "link": "https://www.cbc.ca/news/politics/impacts-federal-government-carney-temporary-immigration-9.6971297?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/2561a297-8877-487e-b6bd-e5b480dae7a4,1762668624495/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C322%2C7972%2C4484%29%3BResize%3D%28620%29' alt='A man stands in the House of Commons.' width='620' height='349' title='Prime Minister Mark Carney rises during Question Period on Parliament Hill in Ottawa, Thursday, Nov. 6, 2025. THE CANADIAN PRESS/Adrian Wyld'/><p></p>",
-      "score": 4.5,
-      "pubDate": "Sun, 09 Nov 2025 04:00:00 EST"
-    },
-    {
-      "title": "Vancouver Rise advance to inaugural Northern Super League final after shootout win over Rapid",
-      "link": "https://www.cbc.ca/sports/soccer/nsl-playoffs-vancouver-ottawa-2nd-leg-november-8-9.6972240?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/992accc9-247f-41f5-949a-f9620acc5437,1762646170987/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C371%2C3582%2C2014%29%3BResize%3D%28620%29' alt='Soccer players representing the Vancouver Rise celebrate a goal.' width='620' height='349' title='Vancouver Rise's Samantha Chang (8), centre right, jumps in celebration of her teammate Holly Ward's goal against the Ottawa Rapid during second half Northern Super League semifinal soccer action in Ottawa, on Saturday, Nov. 8, 2025. THE CANADIAN PRESS/Spencer Colby'/><p>The Vancouver Rise are heading to the inaugural Northern Super League final after defeating the Ottawa Rapid in a shootout Saturday.</p>",
-      "score": 4.5,
-      "pubDate": "Sat, 08 Nov 2025 09:08:41 EST"
-    },
-    {
-      "title": "How one North Vancouver school is redefining education for neurodiverse learners in B.C.",
-      "link": "https://www.straight.com/education/how-one-north-vancouver-school-is-redefining-education-for-neurodiverse-learners-in-bc",
-      "description": "“Our students learn through doing.”",
-      "score": 2.6,
-      "pubDate": "2025-10-31T09:49:53-07:00"
-    },
-    {
-      "title": "Nield thrilled to help gambling Riders beat Lions",
-      "link": "https://globalnews.ca/news/11518398/nield-thrilled-to-help-gambling-riders-beat-lions/",
-      "description": "Touchdown Tommy Nield is going to the Grey Cup again -- and this time he's taking the Saskatchewan Roughriders with him.",
-      "score": 1.5,
-      "pubDate": "Sun, 09 Nov 2025 05:37:28 +0000"
-    },
-    {
-      "title": "Roughriders off to Grey Cup after beating Lions",
-      "link": "https://globalnews.ca/news/11518266/roughriders-off-to-grey-cup-after-beating-lions/",
-      "description": "Tommy Nield's three-yard touchdown reception with 11 seconds left in the fourth quarter lifted the Saskatchewan Roughriders to a 24-21 victory over the B.C. Lions in the West Division final Saturday, sending the Riders to the Grey Cup.",
-      "score": 1.5,
-      "pubDate": "Sun, 09 Nov 2025 02:44:44 +0000"
-    },
-    {
-      "title": "Riders score late TD to down Lions, punch ticket to Grey Cup",
-      "link": "https://www.cbc.ca/news/canada/saskatchewan/cfl-riders-lions-west-final-2025-9.6972525?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/e577e4c1-000f-406d-be1c-b679f0950dc7,1762656759166/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C123%2C4530%2C2548%29%3BResize%3D%28620%29' alt='A man in a green jersey receives the football from another man in a green jersey' width='620' height='349' title='Saskatchewan Roughriders quarterback Trevor Harris (7) hands off the football to running back A.J. Ouellette (45) during the first half of the CFL Western Final in Regina on Nov. 8, 2025. '/><p>The Saskatchewan defence forced back-to-back two-and-out possessions to give their offence an opportunity to win the game.</p>",
-      "score": 1.5,
-      "pubDate": "Sat, 08 Nov 2025 21:55:04 EST"
+      "title": "ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December!",
+      "link": "https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december",
+      "description": "\"We're there to bring joy, connect people, and engage with our audience.\"",
+      "score": 5,
+      "pubDate": "2025-10-22T10:25:20-07:00"
     }
   ]
 }

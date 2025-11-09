@@ -1,14 +1,32 @@
 {
   "version": "1.0.0",
   "generated": "2025-11-09",
-  "totalDocuments": 104,
+  "totalDocuments": 105,
   "documents": [
+    {
+      "id": "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "source": "blog",
+      "title": "Feature Spotlight: Dyslexia Support Mode",
+      "excerpt": "Feature Spotlight: Dyslexia Support Mode Category: Accessibility Comprehensive dyslexia support with 5 specialized fonts, 8 color overlays, and spacing controls --- What Is Dyslexia Support Mode? Dysl",
+      "content": "Feature Spotlight: Dyslexia Support Mode Category: Accessibility Comprehensive dyslexia support with 5 specialized fonts, 8 color overlays, and spacing controls --- What Is Dyslexia Support Mode? Dyslexia Support Mode is designed to comprehensive dyslexia support with 5 specialized fonts, 8 color overlays, and spacing controls. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- Key Highlights - 5 dyslexia-friendly fonts (OpenDyslexic, Lexend, etc.) - 8 color overlay options to reduce visual stress - Adjustable letter spacing, line height, and word spacing - Line focus mode highlighting current line - Reading ruler for tracking lines - Simplified layout options --- How It Works Here are real examples of how you can use Dyslexia Support Mode: 1. Choose OpenDyslexic font for easier reading 2. Apply blue overlay to reduce eye strain 3. Increase letter spacing for better letter distinction 4. Use reading ruler to stay focused on current line 5. Enable line focus mode for complex documents --- Why Dyslexia Support Mode Matters - Read comfortably without fatigue - Reduce errors from letter confusion - Customize display to your specific needs - Access all features without barriers --- Getting Started Ready to try Dyslexia Support Mode? Here's how to get started: 1. Download the app - Available on iOS and Android (coming soon) 2. Complete setup - Takes just 5 minutes 3. Find the feature - Look for \"Dyslexia Support Mode\" in your app 4. Follow the guide - In-app tutorials walk you through each step --- Learn More For complete information about Dyslexia Support Mode and all other features: - 📖 Read the Complete User Guide - ✨ Explore All Features - 🧪 Join Beta Testing - 📬 Subscribe to Updates --- About 3mpwrApp 3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core. All features are: - ✅ Fully accessible (WCAG 2.2 AA+) - 🔒 Privacy-first (local-first architecture) - 🇨🇦 Canadian-focused (all provinces/territories) - 🌍 Culturally inclusive (Indigenous languages supported)",
+      "date": "2025-11-09 09:00:00 +0000",
+      "tags": [
+        "features",
+        "spotlight",
+        "accessibility"
+      ],
+      "categories": [
+        "features"
+      ],
+      "url": "/2025-11-09-feature-spotlight-dyslexia-support-mode",
+      "filesize": 2315
+    },
     {
       "id": "blog/2025-11-09-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2025-11-09",
-      "excerpt": "Daily News Curation - 2025-11-09 Curated 16 items from disability, accessibility, and social policy sources. 1. Old caves yield new secrets from Canadians who went over the top at Vimy Ridge A hidden ",
-      "content": "Daily News Curation - 2025-11-09 Curated 16 items from disability, accessibility, and social policy sources. 1. Old caves yield new secrets from Canadians who went over the top at Vimy Ridge A hidden archive of what for many were last thoughts and tributes to Canada is emerging from the soft chalk tunnels beneath the Vimy Ridge battlefield more than a century after they were created. 📍 Source Score: 15.00 2. Canada could face ‘worst kind’ of flu season as experts warn evolving strain may be mismatch for vaccine With flu cases now rising in Canada, medical experts are bracing for a difficult influenza season linked to the global spread of an evolving H3N2 strain that could be a mismatch for this year’s vaccine. 📍 Source Score: 10.50 3. What’s in the federal budget for you? Your questions answered Many Canadians wrote to us asking what they should be looking for in the new federal budget. CBC News’ Catherine Cullen and J.P. Tasker are here to help break down what is – and isn’t – in the budget. 📍 Source Score: 12.00 4. Manitoba Government Honours Indigenous Veterans and Supports First-Annual Powwow 📍 Source Score: 10.50 5. After fuel spill in B.C. lake, early tests show no contamination above drinking water guidelines B.C. officials say that preliminary tests show no contamination above drinking water guidelines after 80,000 litres of fuel was spilled into Kamloops Lake following a train derailment. 📍 Source Score: 10.00 6. Canadians honour Indigenous veterans with ceremonies across the country Canadians marked Indigenous Veterans Day with ceremonies countrywide, honouring First Nations, Inuit and Métis service members and calling for continued reconciliation. 📍 Source Score: 9.00 7. How the woman who wasn't allowed to play built a future for Canadian hockey Danièle Sauvageau, the girl who grew up in Deux-Montanges, Que., and wasn’t allowed to play on an organized hockey team because she wasn’t a boy, is now the first woman 'Builder' inducted into the Hockey Hall of Fame. 📍 Source Score: 9.00 8. Accessibility is coming to playgrounds in Regina Sarah Turnbull isn't just a city councillor, but also a mother, and she's looking to make a change when it comes to accessible parks in Regina. 📍 Source Score: 4.50 9. More Montreal transit staff to strike, but walkout not expected to disrupt service A third union at Montreal’s transit network will hold a one-day strike Nov. 19, joining other groups in disputes over subcontracting, job security, and stalled negotiations. 📍 Source Score: 4.50 10. Canadian travellers to Europe face new border measures as security ramps up Canadians heading to Europe will soon need new travel clearance as EU officials roll out biometric checks and a €20 ETIAS pass next year. 📍 Source Score: 4.50 11. Advocates concerned temporary immigration cuts don't address systemic issues 📍 Source Score: 4.50 12. Vancouver Rise advance to inaugural Northern Super League final after shootout win over Rapid The Vancouver Rise are heading to the inaugural Northern Super League final after defeating the Ottawa Rapid in a shootout Saturday. 📍 Source Score: 4.50 13. How one North Vancouver school is redefining education for neurodiverse learners in B.C. “Our students learn through doing.” 📍 Source Score: 2.60 14. Nield thrilled to help gambling Riders beat Lions Touchdown Tommy Nield is going to the Grey Cup again -- and this time he's taking the Saskatchewan Roughriders with him. 📍 Source Score: 1.50 15. Roughriders off to Grey Cup after beating Lions Tommy Nield's three-yard touchdown reception with 11 seconds left in the fourth quarter lifted the Saskatchewan Roughriders to a 24-21 victory over the B.C. Lions in the West Division final Saturday, sending the Riders to the Grey Cup. 📍 Source Score: 1.50 16. Riders score late TD to down Lions, punch ticket to Grey Cup The Saskatchewan defence forced back-to-back two-and-out possessions to give their offence an opportunity to win the game. 📍 Source Score: 1.50",
+      "excerpt": "Daily News Curation - 2025-11-09 Curated 14 items from disability, accessibility, and social policy sources. 1. Manitoba Government's Connected Approach Supporting Primary Care, Faster Discharges: CIH",
+      "content": "Daily News Curation - 2025-11-09 Curated 14 items from disability, accessibility, and social policy sources. 1. Manitoba Government's Connected Approach Supporting Primary Care, Faster Discharges: CIHI Report 📍 Source Score: 24.00 2. Freeland exploring Canadian business opportunities to help rebuild Ukraine The Privy Council Office said Freeland will advise the government on Ukraine's economic reconstruction and the effort to bring home thousands of abducted Ukrainian children. 📍 Source Score: 15.00 3. What is Canada's role at COP30 climate summit? What to know Federal officials say Canada will continue to play a bridge-builder role to help countries reach a consensus on some of the summit's key issues. 📍 Source Score: 12.50 4. World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year The Richmond restaurant took home the honours once again. 📍 Source Score: 9.50 5. Manitoba Government Opens New Permanent Rest Stop on Provincial Trunk Highway 6 📍 Source Score: 10.50 6. How former Vancouver Canadians performed for the Blue Jays in the World Series Toronto lost in heartbreaking fashion on Saturday night. 📍 Source Score: 8.50 7. Manitoba Government Opens Downtown Resource Corner at Millennium Library 📍 Source Score: 8.50 8. Manitoba Supports Families with New Parenting Website 📍 Source Score: 8.50 9. Manitoba Protects Indigenous Languages with New Teaching Degree Programs 📍 Source Score: 9.00 10. Photos: Matt Maltese caresses the keys at the Vogue Theatre A multi-hyphenate British-Canadian singer-songwriter. 📍 Source Score: 9.00 11. Manitoba Grants Support Newcomers, Low-Income Manitobans Through Endowment Fund 📍 Source Score: 7.50 12. Manitoba Government Acts to Protect Democracy and Fundamental Freedoms 📍 Source Score: 7.50 13. You Nearly Missed: Ada Lea promises to inspire at LanaLou's in Vancouver \"Because anyone can, you can also do it.\" 📍 Source Score: 5.00 14. ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December! \"We're there to bring joy, connect people, and engage with our audience.\" 📍 Source Score: 5.00",
       "date": "2025-11-09",
       "tags": [
         "highlights"
@@ -18,7 +36,7 @@
         "news"
       ],
       "url": "/2025-11-09-daily-curation",
-      "filesize": 3996
+      "filesize": 2133
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -408,13 +426,13 @@
       "id": "curation/2025-11-09-curated.md",
       "source": "curation",
       "title": "2025-11-09-curated.md",
-      "excerpt": "Daily News Curation - 2025-11-09 Curated 16 items from disability, accessibility, and social policy sources. 1. Old caves yield new secrets from Canadians who went over the top at Vimy Ridge A hidden ",
-      "content": "Daily News Curation - 2025-11-09 Curated 16 items from disability, accessibility, and social policy sources. 1. Old caves yield new secrets from Canadians who went over the top at Vimy Ridge A hidden archive of what for many were last thoughts and tributes to Canada is emerging from the soft chalk tunnels beneath the Vimy Ridge battlefield more than a century after they were created. 📍 Source Score: 15.00 2. Canada could face ‘worst kind’ of flu season as experts warn evolving strain may be mismatch for vaccine With flu cases now rising in Canada, medical experts are bracing for a difficult influenza season linked to the global spread of an evolving H3N2 strain that could be a mismatch for this year’s vaccine. 📍 Source Score: 10.50 3. What’s in the federal budget for you? Your questions answered Many Canadians wrote to us asking what they should be looking for in the new federal budget. CBC News’ Catherine Cullen and J.P. Tasker are here to help break down what is – and isn’t – in the budget. 📍 Source Score: 12.00 4. Manitoba Government Honours Indigenous Veterans and Supports First-Annual Powwow 📍 Source Score: 10.50 5. After fuel spill in B.C. lake, early tests show no contamination above drinking water guidelines B.C. officials say that preliminary tests show no contamination above drinking water guidelines after 80,000 litres of fuel was spilled into Kamloops Lake following a train derailment. 📍 Source Score: 10.00 6. Canadians honour Indigenous veterans with ceremonies across the country Canadians marked Indigenous Veterans Day with ceremonies countrywide, honouring First Nations, Inuit and Métis service members and calling for continued reconciliation. 📍 Source Score: 9.00 7. How the woman who wasn't allowed to play built a future for Canadian hockey Danièle Sauvageau, the girl who grew up in Deux-Montanges, Que., and wasn’t allowed to play on an organized hockey team because she wasn’t a boy, is now the first woman 'Builder' inducted into the Hockey Hall of Fame. 📍 Source Score: 9.00 8. Accessibility is coming to playgrounds in Regina Sarah Turnbull isn't just a city councillor, but also a mother, and she's looking to make a change when it comes to accessible parks in Regina. 📍 Source Score: 4.50 9. More Montreal transit staff to strike, but walkout not expected to disrupt service A third union at Montreal’s transit network will hold a one-day strike Nov. 19, joining other groups in disputes over subcontracting, job security, and stalled negotiations. 📍 Source Score: 4.50 10. Canadian travellers to Europe face new border measures as security ramps up Canadians heading to Europe will soon need new travel clearance as EU officials roll out biometric checks and a €20 ETIAS pass next year. 📍 Source Score: 4.50 11. Advocates concerned temporary immigration cuts don't address systemic issues 📍 Source Score: 4.50 12. Vancouver Rise advance to inaugural Northern Super League final after shootout win over Rapid The Vancouver Rise are heading to the inaugural Northern Super League final after defeating the Ottawa Rapid in a shootout Saturday. 📍 Source Score: 4.50 13. How one North Vancouver school is redefining education for neurodiverse learners in B.C. “Our students learn through doing.” 📍 Source Score: 2.60 14. Nield thrilled to help gambling Riders beat Lions Touchdown Tommy Nield is going to the Grey Cup again -- and this time he's taking the Saskatchewan Roughriders with him. 📍 Source Score: 1.50 15. Roughriders off to Grey Cup after beating Lions Tommy Nield's three-yard touchdown reception with 11 seconds left in the fourth quarter lifted the Saskatchewan Roughriders to a 24-21 victory over the B.C. Lions in the West Division final Saturday, sending the Riders to the Grey Cup. 📍 Source Score: 1.50 16. Riders score late TD to down Lions, punch ticket to Grey Cup The Saskatchewan defence forced back-to-back two-and-out possessions to give their offence an opportunity to win the game. 📍 Source Score: 1.50",
+      "excerpt": "Daily News Curation - 2025-11-09 Curated 14 items from disability, accessibility, and social policy sources. 1. Manitoba Government's Connected Approach Supporting Primary Care, Faster Discharges: CIH",
+      "content": "Daily News Curation - 2025-11-09 Curated 14 items from disability, accessibility, and social policy sources. 1. Manitoba Government's Connected Approach Supporting Primary Care, Faster Discharges: CIHI Report 📍 Source Score: 24.00 2. Freeland exploring Canadian business opportunities to help rebuild Ukraine The Privy Council Office said Freeland will advise the government on Ukraine's economic reconstruction and the effort to bring home thousands of abducted Ukrainian children. 📍 Source Score: 15.00 3. What is Canada's role at COP30 climate summit? What to know Federal officials say Canada will continue to play a bridge-builder role to help countries reach a consensus on some of the summit's key issues. 📍 Source Score: 12.50 4. World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year The Richmond restaurant took home the honours once again. 📍 Source Score: 9.50 5. Manitoba Government Opens New Permanent Rest Stop on Provincial Trunk Highway 6 📍 Source Score: 10.50 6. How former Vancouver Canadians performed for the Blue Jays in the World Series Toronto lost in heartbreaking fashion on Saturday night. 📍 Source Score: 8.50 7. Manitoba Government Opens Downtown Resource Corner at Millennium Library 📍 Source Score: 8.50 8. Manitoba Supports Families with New Parenting Website 📍 Source Score: 8.50 9. Manitoba Protects Indigenous Languages with New Teaching Degree Programs 📍 Source Score: 9.00 10. Photos: Matt Maltese caresses the keys at the Vogue Theatre A multi-hyphenate British-Canadian singer-songwriter. 📍 Source Score: 9.00 11. Manitoba Grants Support Newcomers, Low-Income Manitobans Through Endowment Fund 📍 Source Score: 7.50 12. Manitoba Government Acts to Protect Democracy and Fundamental Freedoms 📍 Source Score: 7.50 13. You Nearly Missed: Ada Lea promises to inspire at LanaLou's in Vancouver \"Because anyone can, you can also do it.\" 📍 Source Score: 5.00 14. ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December! \"We're there to bring joy, connect people, and engage with our audience.\" 📍 Source Score: 5.00",
       "date": "2025-11-09",
       "tags": [],
       "categories": [],
       "url": "/2025-11-09-curated",
-      "filesize": 3996
+      "filesize": 2133
     },
     {
       "id": "curation/README.md",
@@ -1584,6 +1602,66 @@
       "blog/2025-10-18-daily-curation.md",
       "blog/2025-10-17-comprehensive-daily-digest.md"
     ],
+    "feature": [
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "spotlight:": [
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
+    ],
+    "dyslexia": [
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md"
+    ],
+    "support": [
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
+    ],
+    "mode": [
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md"
+    ],
     "daily": [
       "blog/2025-11-09-daily-curation.md",
       "blog/2025-11-08-daily-curation.md",
@@ -1791,49 +1869,6 @@
     "readme.md": [
       "curation/README.md"
     ],
-    "feature": [
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "spotlight:": [
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
-    ],
     "3mpwrapp": [
       "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
     ],
@@ -1876,10 +1911,6 @@
     ],
     "2025-11-06": [
       "blog/2025-11-06-daily-curation.md"
-    ],
-    "dyslexia": [
-      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md"
     ],
     "support,": [
       "whatsnew/2025-11-06-app-updates-accessibility-security.md"
@@ -1924,11 +1955,6 @@
       "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
       "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
       "whatsnew/2025-10-02-seo-schema-i18n.md"
-    ],
-    "support": [
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
     ],
     "2025-11-05": [
       "blog/2025-11-05-daily-curation.md"
@@ -2061,9 +2087,6 @@
     ],
     "2025-10-30": [
       "blog/2025-10-30-daily-curation.md"
-    ],
-    "mode": [
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md"
     ],
     "2025-10-29": [
       "blog/2025-10-29-daily-curation.md"
@@ -2501,6 +2524,46 @@
     ]
   },
   "tagIndex": {
+    "features": [
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
+    ],
+    "spotlight": [
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
+    ],
+    "accessibility": [
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
+    ],
     "highlights": [
       "blog/2025-11-09-daily-curation.md",
       "blog/2025-11-08-daily-curation.md",
@@ -2526,38 +2589,6 @@
       "blog/2025-10-17-comprehensive-daily-digest.md",
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
-    ],
-    "features": [
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
-    ],
-    "spotlight": [
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
     ],
     "beta-program": [
       "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
@@ -2597,11 +2628,6 @@
     ],
     "phase-6:-ml-powered": [
       "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md"
-    ],
-    "accessibility": [
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
     ],
     "pain-management": [
       "blog/2025-10-28-pain-flare-mode-deep-dive.md"
@@ -2705,6 +2731,30 @@
     ]
   },
   "categoryIndex": {
+    "features": [
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-27-app-vs-website-comparison.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
     "curation": [
       "blog/2025-11-09-daily-curation.md",
       "blog/2025-11-08-daily-curation.md",
@@ -2756,29 +2806,6 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
-    ],
-    "features": [
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-27-app-vs-website-comparison.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
     "updates": [
       "blog/2025-11-03-weekly-update-week-45.md",
