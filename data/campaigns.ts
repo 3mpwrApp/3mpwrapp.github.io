@@ -56,8 +56,8 @@ All provided through a publicly funded national disability insurance plan, simil
       { id: 5, text: 'Attend a local advocacy event', completed: false },
     ],
     shareTemplates: {
-      twitter: 'Every Canadian with a disability deserves access to housing, support, and care. Sign petition e-6746 for a national disability insurance plan! #EveryCanadianCounts #DisabilityRights',
-      facebook: 'I just signed a petition calling for a publicly funded national disability insurance plan in Canada - similar to Australia\'s successful NDIS model. Those with long-term or chronic disabilities deserve access to housing, professionals, caregivers, programs, and technologies. Sign petition e-6746 and share! #EveryCanadianCounts',
+      twitter: 'Every Canadian with a disability deserves access to housing, support, and care. Sign petition e-6746 for a national disability insurance plan! #EveryCanadianCounts #DisabilityRights\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/',
+      facebook: 'I just signed a petition calling for a publicly funded national disability insurance plan in Canada - similar to Australia\'s successful NDIS model. Those with long-term or chronic disabilities deserve access to housing, professionals, caregivers, programs, and technologies. Sign petition e-6746 and share! #EveryCanadianCounts\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/',
       email: {
         subject: 'Support Every Canadian Counts - National Disability Insurance',
         body: `Hi,
@@ -71,6 +71,9 @@ Similar to Australia's successful National Disability Insurance Scheme (NDIS), t
 Please sign and share: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746
 
 Learn more: https://everycanadiancounts.com
+
+🔗 Powered by 3mpwr App
+🌐 https://3mpwrapp.pages.dev/campaigns/
 
 Thank you!`,
       },

@@ -88,6 +88,9 @@ export function generateEnhancedICS(event: Event): string {
     }
   }
   
+  // Add powered by footer
+  description += '\\n\\n✨ Powered by 3mpwr App\\n🔗 https://3mpwrapp.pages.dev/events/';
+  
   // Location
   const location = event.isVirtual 
     ? (event.virtualLink || 'Virtual Event') 

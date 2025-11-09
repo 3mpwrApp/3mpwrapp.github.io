@@ -49,6 +49,19 @@ import { logger } from "../../utils/logger";
  
 const { trackEvent } = require("../../services/analyticsClient");
 
+/**
+ * Format sync time as relative time (e.g., "2 minutes ago")
+ */
+function formatSyncTime(date: Date): string {
+  const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+  
+  if (seconds < 60) return 'just now';
+  if (seconds < 120) return '1 minute ago';
+  if (seconds < 3600) return `${Math.floor(seconds / 60)} minutes ago`;
+  if (seconds < 7200) return '1 hour ago';
+  return `${Math.floor(seconds / 3600)} hours ago`;
+}
+
 function ScreenInner() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
@@ -63,6 +76,7 @@ function ScreenInner() {
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [showRepTracker, setShowRepTracker] = React.useState(false);
+  const [lastSyncTime, setLastSyncTime] = React.useState<Date | null>(null);
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
@@ -78,6 +92,7 @@ function ScreenInner() {
       const data = await fetchCampaigns();
       setItems(data);
       setOffline(false);
+      setLastSyncTime(new Date());
     } catch {
       setError("Failed to load campaigns");
       setOffline(true);
@@ -90,6 +105,15 @@ function ScreenInner() {
   React.useEffect(() => {
     reload();
   }, [reload, tick]);
+
+  // Real-time sync: Poll API every 5 minutes
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      reload();
+    }, 5 * 60 * 1000); // 5 minutes
+
+    return () => clearInterval(interval);
+  }, [reload]);
 
   React.useEffect(() => {
     setCount("campaigns", items.length);
@@ -167,6 +191,24 @@ function ScreenInner() {
             📣 Campaigns
           </Text>
           <Text style={styles.subtitle}>Browse, create, and join campaigns for disability justice and workers' rights.</Text>
+          
+          {/* Real-time sync status */}
+          <View style={styles.syncStatus}>
+            <Text style={styles.syncText}>
+              {loading ? '🔄 Syncing...' : lastSyncTime 
+                ? `✅ Synced with https://3mpwrapp.pages.dev/campaigns/ - ${formatSyncTime(lastSyncTime)}`
+                : '🔄 Connecting to API...'}
+            </Text>
+            <Pressable
+              onPress={reload}
+              style={styles.syncButton}
+              accessibilityLabel="Refresh campaigns"
+              accessibilityRole="button"
+            >
+              <Text style={styles.syncButtonText}>↻ Refresh</Text>
+            </Pressable>
+          </View>
+
           <View style={styles.statsRow}>
             <View style={styles.statBox}>
               <Text style={styles.statNumber}>{joinedCount}</Text>
@@ -485,6 +527,35 @@ function createStyles(palette: Palette) {
       opacity: 0.85,
       marginBottom: 12,
       lineHeight: 21,
+    },
+    syncStatus: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      backgroundColor: palette.background,
+      padding: 10,
+      borderRadius: 8,
+      marginBottom: 12,
+      borderWidth: 1,
+      borderColor: palette.muted,
+    },
+    syncText: {
+      fontSize: 12,
+      color: palette.textSecondary,
+      flex: 1,
+      marginRight: 8,
+      lineHeight: 16,
+    },
+    syncButton: {
+      backgroundColor: palette.primary,
+      paddingHorizontal: 12,
+      paddingVertical: 6,
+      borderRadius: 6,
+    },
+    syncButtonText: {
+      color: palette.onPrimary,
+      fontSize: 12,
+      fontWeight: '600',
     },
     statsRow: {
       flexDirection: 'row',

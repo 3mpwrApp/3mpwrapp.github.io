@@ -101,68 +101,6 @@ async function getAccessToken(serviceAccount) {
   }
 }
 
-// Fetch campaigns from Firestore REST API
-async function fetchCampaignsFromFirestore(serviceAccount, collectionName = 'campaigns_production', filters = {}) {
-  try {
-    const accessToken = await getAccessToken(serviceAccount);
-    if (!accessToken) {
-      console.error('[Firestore] No access token');
-      return [];
-    }
-
-    const url = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/${DATABASE_ID}/documents/${collectionName}`;
-
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: { 'Authorization': `Bearer ${accessToken}` },
-    });
-
-    if (!response.ok) {
-      console.error(`[Firestore] Query failed: ${response.status}`);
-      return [];
-    }
-
-    const data = await response.json();
-    const campaigns = [];
-
-    if (data.documents) {
-      for (const doc of data.documents) {
-        const fields = doc.fields;
-        if (!fields) continue;
-
-        // Parse Firestore field values
-        const getString = (val) => val?.stringValue || '';
-        const getNumber = (val) => val?.integerValue ? parseInt(val.integerValue) : (val?.doubleValue || 0);
-        const getTimestamp = (val) => {
-          if (!val?.timestampValue) return Date.now();
-          return new Date(val.timestampValue).getTime();
-        };
-
-        const campaign = {
-          id: doc.name.split('/').pop(),
-          title: getString(fields.title),
-          summary: getString(fields.summary),
-          target: getString(fields.target),
-          goalCount: getNumber(fields.goalCount),
-          membersCount: getNumber(fields.membersCount),
-          contactEmail: getString(fields.contactEmail),
-          createdAt: getTimestamp(fields.createdAt),
-        };
-
-        campaigns.push(campaign);
-      }
-    }
-
-    // Sort by createdAt descending (newest first)
-    campaigns.sort((a, b) => b.createdAt - a.createdAt);
-
-    return campaigns;
-  } catch (error) {
-    console.error('[Firestore] Campaigns fetch error:', error.message);
-    return [];
-  }
-}
-
 // Fetch events from Firestore REST API
 async function fetchEventsFromFirestore(serviceAccount, collectionName = 'events_production', filters = {}) {
   try {
@@ -578,110 +516,11 @@ export default {
       }
     }
 
-    // Route: GET /api/campaigns - JSON campaigns list
-    if (url.pathname === '/api/campaigns' && request.method === 'GET') {
-      try {
-        const limit = parseInt(url.searchParams.get('limit')) || 50;
-        const page = parseInt(url.searchParams.get('page')) || 1;
-
-        const campaignsCollection = environment === 'preview' ? 'campaigns_preview' : 'campaigns_production';
-
-        const campaigns = await getCachedOrFresh(
-          cache,
-          `campaigns:json:all:${environment}`,
-          async () => {
-            return await fetchCampaignsFromFirestore(serviceAccount, campaignsCollection);
-          },
-          300 // 5 minute cache
-        );
-
-        // Apply pagination
-        const start = (page - 1) * limit;
-        const paginated = (campaigns || []).slice(start, start + limit);
-
-        const response = {
-          campaigns: paginated,
-          pagination: {
-            page,
-            limit,
-            total: campaigns?.length || 0,
-            pages: Math.ceil((campaigns?.length || 0) / limit),
-          },
-          metadata: {
-            generatedAt: new Date().toISOString(),
-            source: 'Firestore REST API',
-            environment,
-          },
-        };
-
-        return new Response(JSON.stringify(response), {
-          headers: {
-            'Content-Type': 'application/json',
-            'Cache-Control': 'public, max-age=300',
-            'X-Campaigns-Count': String(campaigns?.length || 0),
-            ...corsHeaders,
-          },
-        });
-      } catch (error) {
-        console.error('[/api/campaigns] Error:', error.message);
-        return new Response(JSON.stringify({
-          error: 'Failed to load campaigns',
-          message: error.message,
-        }), {
-          status: 500,
-          headers: {
-            'Content-Type': 'application/json',
-            ...corsHeaders,
-          },
-        });
-      }
-    }
-
-    // Route: GET /api/campaigns/:id - Single campaign detail
-    if (url.pathname.match(/^\/api\/campaigns\/[^/]+$/) && request.method === 'GET') {
-      try {
-        const campaignId = url.pathname.split('/').pop();
-        const campaignsCollection = environment === 'preview' ? 'campaigns_preview' : 'campaigns_production';
-
-        const allCampaigns = await getCachedOrFresh(
-          cache,
-          `campaigns:all:${environment}`,
-          async () => {
-            return await fetchCampaignsFromFirestore(serviceAccount, campaignsCollection);
-          },
-          300
-        );
-
-        const campaign = (allCampaigns || []).find((c) => c.id === campaignId);
-
-        if (!campaign) {
-          return new Response(JSON.stringify({ error: 'Campaign not found' }), {
-            status: 404,
-            headers: { 'Content-Type': 'application/json', ...corsHeaders },
-          });
-        }
-
-        return new Response(JSON.stringify(campaign), {
-          headers: {
-            'Content-Type': 'application/json',
-            'Cache-Control': 'public, max-age=300',
-            ...corsHeaders,
-          },
-        });
-      } catch (error) {
-        console.error('[/api/campaigns/:id] Error:', error.message);
-        return new Response(JSON.stringify({ error: error.message }), {
-          status: 500,
-          headers: { 'Content-Type': 'application/json', ...corsHeaders },
-        });
-      }
-    }
-
     // Route: GET /health - Health check
     if (url.pathname === '/health') {
       const health = {
         ok: true,
-        service: '3mpwrApp Calendar Worker',
+        service: '3mpwrApp Events Worker',
         timestamp: new Date().toISOString(),
         environment,
         implementation: 'Firestore REST API + WebCrypto JWT',
@@ -700,14 +539,12 @@ export default {
     // Default route
     return new Response(
       JSON.stringify({
-        service: '3mpwrApp Calendar Worker',
+        service: '3mpwrApp Events Worker',
         version: '2.0-rest-api',
         endpoints: {
           'GET /events.ics': 'Calendar subscription feed (iCalendar format)',
           'GET /api/events': 'JSON events list with filtering and pagination',
           'GET /api/events/:id': 'Single event details',
-          'GET /api/campaigns': 'JSON campaigns list with pagination',
-          'GET /api/campaigns/:id': 'Single campaign details',
           'GET /health': 'Health check status',
         },
         usage: {
@@ -715,8 +552,6 @@ export default {
           '/events.ics?env=preview': 'Get events from preview collection',
           '/api/events?category=holiday&limit=10': 'Get holidays (paginated)',
           '/api/events?sort=date&dir=asc': 'Get events sorted by date',
-          '/api/campaigns?limit=20&page=1': 'Get campaigns (paginated)',
-          '/api/campaigns?env=preview': 'Get campaigns from preview collection',
         },
       }, null, 2),
       {

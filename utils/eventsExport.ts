@@ -16,8 +16,8 @@ export function makeICS(evt: SimpleEvent) {
   
   // Add 3mpwrApp branding to description
   const brandedDescription = evt.description 
-    ? `${evt.description}\n\nPowered by 3mpwrApp\nhttps://3mpwrapp.pages.dev/`
-    : 'Powered by 3mpwrApp\nhttps://3mpwrapp.pages.dev/';
+    ? `${evt.description}\n\nPowered by 3mpwrApp\nhttps://3mpwrapp.pages.dev/events/`
+    : 'Powered by 3mpwrApp\nhttps://3mpwrapp.pages.dev/events/';
   
   return (
     'BEGIN:VCALENDAR\n' +
@@ -33,7 +33,7 @@ export function makeICS(evt: SimpleEvent) {
     `SUMMARY:${evt.title}\n` +
     `DESCRIPTION:${brandedDescription}\n` +
     `LOCATION:${loc}\n` +
-    `URL:https://3mpwrapp.pages.dev/\n` +
+    `URL:https://3mpwrapp.pages.dev/events/\n` +
     `ORGANIZER;CN=3mpwrApp:MAILTO:empowrapp08162025@gmail.com\n` +
     'STATUS:CONFIRMED\n' +
     'SEQUENCE:0\n' +
