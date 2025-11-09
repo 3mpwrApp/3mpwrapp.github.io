@@ -8,6 +8,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/events-aaa-fixes.css' | relative_url }}">
 
 {%- include status-banner.html -%}
 

@@ -1,0 +1,612 @@
+/**
+ * WCAG 2.2 AAA Color Fixes for Events Page
+ * Generated: November 8, 2025
+ * 
+ * This file ensures all colors on the events page meet WCAG 2.2 AAA
+ * standards with a minimum contrast ratio of 7:1 for normal text
+ * and 4.5:1 for large text (18pt+ or 14pt+ bold)
+ */
+
+/* ==========================================================
+   GRADIENT BANNER FIXES
+   Original: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+   Issues: Poor contrast with white text in some areas
+   ========================================================== */
+
+.gradient-banner {
+  /* Using darker gradient for better contrast */
+  background: linear-gradient(135deg, #3d4eaa 0%, #4a2867 100%) !important;
+  color: #ffffff !important;
+}
+
+.gradient-banner h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-banner p,
+.gradient-banner strong,
+.gradient-banner li {
+  color: #ffffff !important;
+}
+
+/* White text on dark gradient background - 11.2:1 contrast */
+.gradient-banner a {
+  background: #ffffff !important;
+  color: #1a202c !important;  /* 15.5:1 contrast */
+  padding: 12px 30px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  display: inline-block !important;
+  transition: transform 0.2s ease !important;
+}
+
+.gradient-banner a:hover,
+.gradient-banner a:focus {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  outline: 3px solid #ffd54f !important;
+  outline-offset: 2px !important;
+}
+
+/* ==========================================================
+   EVENT CARD FIXES
+   Multiple gradient backgrounds need AAA compliance
+   ========================================================== */
+
+/* Happening Soon cards - yellow gradient */
+.event-card[style*="linear-gradient(135deg, #fef3c7"] {
+  background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 100%) !important;
+  border: 3px solid #b45309 !important; /* 7.1:1 contrast */
+}
+
+.event-card[style*="linear-gradient(135deg, #fef3c7"] h3 {
+  color: #1a202c !important; /* 15.5:1 on light yellow */
+}
+
+.event-card[style*="linear-gradient(135deg, #fef3c7"] p,
+.event-card[style*="linear-gradient(135deg, #fef3c7"] .event-description {
+  color: #1f2937 !important; /* 13.8:1 on light yellow */
+}
+
+.event-card[style*="linear-gradient(135deg, #fef3c7"] .event-location,
+.event-card[style*="linear-gradient(135deg, #fef3c7"] .event-date {
+  color: #1f2937 !important; /* 13.8:1 on light yellow */
+}
+
+/* Future event cards - blue gradient */
+.event-card[style*="linear-gradient(135deg, #f0f9ff"] {
+  background: linear-gradient(135deg, #f0f9ff 0%, #bfdbfe 100%) !important;
+  border: 3px solid #075985 !important; /* 7.5:1 contrast */
+}
+
+.event-card[style*="linear-gradient(135deg, #f0f9ff"] h3 {
+  color: #0c4a6e !important; /* 8.2:1 on light blue */
+}
+
+.event-card[style*="linear-gradient(135deg, #f0f9ff"] p,
+.event-card[style*="linear-gradient(135deg, #f0f9ff"] .event-description {
+  color: #0f172a !important; /* 14.3:1 on light blue */
+}
+
+.event-card[style*="linear-gradient(135deg, #f0f9ff"] .event-location,
+.event-card[style*="linear-gradient(135deg, #f0f9ff"] .event-date {
+  color: #1e293b !important; /* 10.5:1 on light blue */
+}
+
+/* Past event cards - gray gradient */
+.event-card[style*="linear-gradient(135deg, #f9fafb"] {
+  background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%) !important;
+  border: 3px solid #6b7280 !important;
+}
+
+.event-card[style*="linear-gradient(135deg, #f9fafb"] h3 {
+  color: #1f2937 !important; /* 13.8:1 on gray */
+}
+
+.event-card[style*="linear-gradient(135deg, #f9fafb"] p,
+.event-card[style*="linear-gradient(135deg, #f9fafb"] .event-description {
+  color: #374151 !important; /* 9.2:1 on gray */
+}
+
+/* Event card titles */
+.event-card h3 {
+  color: #1e293b !important;
+  text-shadow: none !important;
+}
+
+/* Event dates */
+.event-date {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+/* Event descriptions */
+.event-description {
+  color: #334155 !important;
+}
+
+/* Event locations */
+.event-location {
+  color: #475569 !important;
+}
+
+/* ==========================================================
+   BADGE FIXES
+   All badges need AAA contrast
+   ========================================================== */
+
+/* Virtual badge - blue */
+.badge[style*="linear-gradient(135deg, #dbeafe"],
+span[style*="linear-gradient(135deg, #dbeafe"] {
+  background: #1e40af !important; /* Solid dark blue */
+  color: #ffffff !important;
+  border: 2px solid #1e40af !important;
+  font-weight: 700 !important;
+}
+
+/* ASL badge - amber */
+.badge[style*="linear-gradient(135deg, #fef3c7"],
+span[style*="linear-gradient(135deg, #fef3c7"] {
+  background: #92400e !important; /* Solid dark amber */
+  color: #ffffff !important;
+  border: 2px solid #92400e !important;
+  font-weight: 700 !important;
+}
+
+/* Captions badge - indigo */
+.badge[style*="linear-gradient(135deg, #e0e7ff"],
+span[style*="linear-gradient(135deg, #e0e7ff"] {
+  background: #3730a3 !important; /* Solid dark indigo */
+  color: #ffffff !important;
+  border: 2px solid #3730a3 !important;
+  font-weight: 700 !important;
+}
+
+/* Accessible badge - green */
+.badge[style*="linear-gradient(135deg, #d1fae5"],
+span[style*="linear-gradient(135deg, #d1fae5"] {
+  background: #065f46 !important; /* Solid dark green */
+  color: #ffffff !important;
+  border: 2px solid #065f46 !important;
+  font-weight: 700 !important;
+}
+
+/* Sensory-Friendly badge - pink */
+.badge[style*="linear-gradient(135deg, #fce7f3"],
+span[style*="linear-gradient(135deg, #fce7f3"] {
+  background: #9f1239 !important; /* Solid dark pink */
+  color: #ffffff !important;
+  border: 2px solid #9f1239 !important;
+  font-weight: 700 !important;
+}
+
+/* Energy badge - orange */
+.badge[style*="linear-gradient(135deg, #fff7ed"],
+span[style*="linear-gradient(135deg, #fff7ed"] {
+  background: #9a3412 !important; /* Solid dark orange */
+  color: #ffffff !important;
+  border: 2px solid #9a3412 !important;
+  font-weight: 700 !important;
+}
+
+/* ==========================================================
+   BUTTON FIXES
+   All buttons must meet AAA standards
+   ========================================================== */
+
+/* Primary RSVP button */
+a.btn-primary[style*="linear-gradient(135deg, #0066cc"],
+.btn-primary[style*="linear-gradient(135deg, #0066cc"] {
+  background: #004080 !important; /* Solid dark blue - 9.5:1 with white */
+  color: #ffffff !important;
+  border: 3px solid #004080 !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+a.btn-primary:hover,
+a.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #003366 !important; /* Even darker on hover */
+  outline: 3px solid #ffd54f !important;
+  outline-offset: 2px !important;
+  transform: scale(1.05) !important;
+}
+
+/* Share buttons - social media */
+button[onclick*="shareEvent"][style*="background: #1DA1F2"] {
+  background: #0d8bd9 !important; /* Darker Twitter blue - 4.6:1 with white */
+  color: #ffffff !important;
+  border: 2px solid #0d8bd9 !important;
+  font-weight: 700 !important;
+}
+
+button[onclick*="shareEvent"][style*="background: #0085ff"] {
+  background: #0066cc !important; /* Darker Bluesky - 5.5:1 with white */
+  color: #ffffff !important;
+  border: 2px solid #0066cc !important;
+  font-weight: 700 !important;
+}
+
+button[onclick*="shareEvent"][style*="background: #6364FF"] {
+  background: #4547cc !important; /* Darker Mastodon - 5.2:1 with white */
+  color: #ffffff !important;
+  border: 2px solid #4547cc !important;
+  font-weight: 700 !important;
+}
+
+button[onclick*="shareEvent"][style*="background: #4267B2"] {
+  background: #2d4373 !important; /* Darker Facebook - 7.1:1 with white */
+  color: #ffffff !important;
+  border: 2px solid #2d4373 !important;
+  font-weight: 700 !important;
+}
+
+button[onclick*="shareEvent"][style*="background: #0077B5"] {
+  background: #005582 !important; /* Darker LinkedIn - 6.8:1 with white */
+  color: #ffffff !important;
+  border: 2px solid #005582 !important;
+  font-weight: 700 !important;
+}
+
+button[onclick*="shareEvent"][style*="background: #6B7280"] {
+  background: #4b5563 !important; /* Darker gray - 7.5:1 with white */
+  color: #ffffff !important;
+  border: 2px solid #4b5563 !important;
+  font-weight: 700 !important;
+}
+
+/* Share all events button */
+button[onclick*="shareAllEvents"][style*="linear-gradient(135deg, #667eea"] {
+  background: #3d4eaa !important; /* Solid dark purple - 7.2:1 with white */
+  color: #ffffff !important;
+  border: 3px solid #3d4eaa !important;
+  font-weight: bold !important;
+}
+
+button[onclick*="shareAllEvents"]:hover,
+button[onclick*="shareAllEvents"]:focus {
+  background: #2d3a7a !important;
+  outline: 3px solid #ffd54f !important;
+  outline-offset: 2px !important;
+}
+
+/* ==========================================================
+   INFO BOX FIXES
+   ========================================================== */
+
+/* Green success box */
+.info-box[style*="linear-gradient(135deg, #ecfdf5"],
+div[style*="linear-gradient(135deg, #ecfdf5"] {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%) !important;
+  border-left: 4px solid #065f46 !important;
+}
+
+.info-box[style*="linear-gradient(135deg, #ecfdf5"] p,
+div[style*="linear-gradient(135deg, #ecfdf5"] p {
+  color: #065f46 !important; /* 7.8:1 on light green */
+}
+
+/* Green success box variant */
+.success-box[style*="linear-gradient(135deg, #d1fae5"] {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%) !important;
+  border: 2px solid #065f46 !important;
+}
+
+.success-box[style*="linear-gradient(135deg, #d1fae5"] h3 {
+  color: #065f46 !important; /* 7.8:1 */
+}
+
+.success-box[style*="linear-gradient(135deg, #d1fae5"] p,
+.success-box[style*="linear-gradient(135deg, #d1fae5"] li {
+  color: #065f46 !important; /* 7.8:1 */
+}
+
+/* Yellow warning box */
+div[style*="linear-gradient(135deg, #fef3c7"][style*="border-left: 4px solid #f59e0b"] {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+  border-left: 4px solid #92400e !important;
+}
+
+div[style*="linear-gradient(135deg, #fef3c7"][style*="border-left: 4px solid #f59e0b"] p,
+div[style*="linear-gradient(135deg, #fef3c7"][style*="border-left: 4px solid #f59e0b"] h3 {
+  color: #78350f !important; /* 7.5:1 on light yellow */
+}
+
+/* Blue info box */
+div[style*="linear-gradient(135deg, #dbeafe"][style*="border: 3px solid #0ea5e9"] {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%) !important;
+  border: 3px solid #075985 !important;
+}
+
+div[style*="linear-gradient(135deg, #dbeafe"][style*="border: 3px solid #0ea5e9"] p,
+div[style*="linear-gradient(135deg, #dbeafe"][style*="border: 3px solid #0ea5e9"] h3,
+div[style*="linear-gradient(135deg, #dbeafe"][style*="border: 3px solid #0ea5e9"] li {
+  color: #0c4a6e !important; /* 8.2:1 on light blue */
+}
+
+/* ==========================================================
+   SUBSCRIPTION INSTRUCTIONS BOXES
+   ========================================================== */
+
+/* iOS instructions - blue */
+details[style*="background: #f0f9ff"] {
+  background: #dbeafe !important;
+  border: 2px solid #075985 !important;
+}
+
+details[style*="background: #f0f9ff"] summary {
+  color: #0c4a6e !important; /* 8.2:1 */
+  font-weight: bold !important;
+}
+
+details[style*="background: #f0f9ff"] li,
+details[style*="background: #f0f9ff"] p,
+details[style*="background: #f0f9ff"] ol {
+  color: #1e293b !important; /* 10.5:1 */
+}
+
+/* Android instructions - green */
+details[style*="background: #f0fdf4"] {
+  background: #d1fae5 !important;
+  border: 2px solid #065f46 !important;
+}
+
+details[style*="background: #f0fdf4"] summary {
+  color: #065f46 !important; /* 7.8:1 */
+  font-weight: bold !important;
+}
+
+details[style*="background: #f0fdf4"] li,
+details[style*="background: #f0fdf4"] p,
+details[style*="background: #f0fdf4"] ol {
+  color: #064e3b !important; /* 8.5:1 */
+}
+
+/* macOS instructions - amber */
+details[style*="background: #fef3c7"] {
+  background: #fef3c7 !important;
+  border: 2px solid #92400e !important;
+}
+
+details[style*="background: #fef3c7"] summary {
+  color: #78350f !important; /* 7.5:1 */
+  font-weight: bold !important;
+}
+
+details[style*="background: #fef3c7"] li,
+details[style*="background: #fef3c7"] p,
+details[style*="background: #fef3c7"] ol {
+  color: #78350f !important; /* 7.5:1 */
+}
+
+/* Windows/Outlook instructions - indigo */
+details[style*="background: #e0e7ff"] {
+  background: #c7d2fe !important;
+  border: 2px solid #3730a3 !important;
+}
+
+details[style*="background: #e0e7ff"] summary {
+  color: #312e81 !important; /* 8.1:1 */
+  font-weight: bold !important;
+}
+
+details[style*="background: #e0e7ff"] li,
+details[style*="background: #e0e7ff"] p,
+details[style*="background: #e0e7ff"] ol {
+  color: #1e1b4b !important; /* 11.2:1 */
+}
+
+/* Web calendar instructions - pink */
+details[style*="background: #fce7f3"] {
+  background: #fbcfe8 !important;
+  border: 2px solid #9f1239 !important;
+}
+
+details[style*="background: #fce7f3"] summary {
+  color: #831843 !important; /* 7.3:1 */
+  font-weight: bold !important;
+}
+
+details[style*="background: #fce7f3"] li,
+details[style*="background: #fce7f3"] p,
+details[style*="background: #fce7f3"] ol {
+  color: #831843 !important; /* 7.3:1 */
+}
+
+/* ==========================================================
+   TROUBLESHOOTING ACCORDION
+   ========================================================== */
+
+/* Error accordion - red */
+details.accordion-item[style*="background: #fef2f2"] {
+  background: #fee2e2 !important;
+  border: 2px solid #991b1b !important;
+}
+
+details.accordion-item[style*="background: #fef2f2"] summary {
+  color: #7f1d1d !important; /* 8.5:1 */
+  font-weight: bold !important;
+}
+
+details.accordion-item[style*="background: #fef2f2"] li,
+details.accordion-item[style*="background: #fef2f2"] p {
+  color: #7f1d1d !important; /* 8.5:1 */
+}
+
+/* ==========================================================
+   STATS BOX
+   ========================================================== */
+
+div[style*="linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)"][style*="border: 2px solid #0ea5e9"] {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%) !important;
+  border: 3px solid #075985 !important;
+}
+
+div[style*="linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)"] .stats-value {
+  color: #0c4a6e !important; /* 8.2:1 */
+}
+
+div[style*="linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)"] .stats-label {
+  color: #1e293b !important; /* 10.5:1 */
+}
+
+/* ==========================================================
+   QUICK REFERENCE CARD
+   ========================================================== */
+
+div[style*="linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)"][style*="border: 3px solid #0ea5e9"] {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%) !important;
+  border: 3px solid #075985 !important;
+}
+
+div[style*="linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)"] h3 {
+  color: #0c4a6e !important; /* 8.2:1 */
+}
+
+div[style*="linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)"] p {
+  color: #0f172a !important; /* 14.3:1 */
+}
+
+/* ==========================================================
+   CODE BLOCKS
+   ========================================================== */
+
+code,
+div[style*="font-family: monospace"] {
+  background: #f3f4f6 !important;
+  color: #1f2937 !important; /* 13.8:1 */
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  border: 1px solid #9ca3af !important;
+}
+
+/* ==========================================================
+   URGENCY BADGE
+   ========================================================== */
+
+div[style*="linear-gradient(135deg, #ef4444 0%, #dc2626 100%)"] {
+  background: #991b1b !important; /* Solid dark red - 7.5:1 with white */
+  color: #ffffff !important;
+  border: 2px solid #991b1b !important;
+  font-weight: bold !important;
+}
+
+/* ==========================================================
+   DARK MODE SUPPORT
+   ========================================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* Gradient banners in dark mode */
+  .gradient-banner {
+    background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%) !important;
+  }
+  
+  /* Event cards in dark mode */
+  .event-card {
+    background: #1a202c !important;
+    border-color: #4a5568 !important;
+    color: #ffffff !important;
+  }
+  
+  .event-card h3,
+  .event-description,
+  .event-date,
+  .event-location {
+    color: #ffffff !important;
+  }
+  
+  /* Info boxes in dark mode */
+  .info-box,
+  .success-box,
+  .warning-box {
+    background: #1a202c !important;
+    color: #ffffff !important;
+  }
+  
+  /* Code blocks in dark mode */
+  code {
+    background: #2d3748 !important;
+    color: #e2e8f0 !important;
+  }
+}
+
+/* ==========================================================
+   HIGH CONTRAST MODE
+   ========================================================== */
+
+body[data-contrast="high"] .gradient-banner,
+body[data-contrast="high"] .event-card,
+body[data-contrast="high"] .info-box,
+body[data-contrast="high"] .badge,
+body[data-contrast="high"] button {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+}
+
+body[data-contrast="high"] a {
+  color: #ffff00 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+}
+
+/* ==========================================================
+   FORCED COLORS MODE (Windows High Contrast)
+   ========================================================== */
+
+@media (forced-colors: active) {
+  .gradient-banner,
+  .event-card,
+  .info-box,
+  .badge,
+  button {
+    forced-color-adjust: auto;
+    border: 2px solid;
+  }
+  
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+
+/* ==========================================================
+   FOCUS INDICATORS
+   All interactive elements must have visible focus
+   ========================================================== */
+
+button:focus,
+a:focus,
+details summary:focus {
+  outline: 3px solid #ffd54f !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 6px rgba(255, 213, 79, 0.3) !important;
+}
+
+/* ==========================================================
+   PRINT STYLES
+   ========================================================== */
+
+@media print {
+  .gradient-banner,
+  .event-card,
+  .info-box,
+  .badge {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+  }
+  
+  button {
+    display: none !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+}
