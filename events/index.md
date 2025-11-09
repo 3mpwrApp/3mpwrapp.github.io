@@ -209,6 +209,16 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     // Pre-calculate formatted date
     const formattedDate = formatDate(event.date);
     
+    // Clean description - remove "Powered by" text if it exists (for display only)
+    let displayDescription = event.description;
+    // Remove various formats of "Powered by" footer that might be in the data
+    displayDescription = displayDescription
+      .replace(/\n*Powered by 3mpwr App:?\s*https?:\/\/[^\s]+/gi, '')
+      .replace(/\n*Powered by 3mpwrApp:?\s*https?:\/\/[^\s]+/gi, '')
+      .replace(/\n*Powered by 3mpwr App\.?\s*$/gi, '')
+      .replace(/\n*Powered by 3mpwrApp\.?\s*$/gi, '')
+      .trim();
+    
     // Safely encode event data for HTML data attributes (use HTML entities)
     const safeTitle = event.title.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, ' ').replace(/\r/g, '');
     const safeDescription = event.description.substring(0, 200).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, ' ').replace(/\r/g, '');
@@ -247,7 +257,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
         </p>
         
         <p class="event-description" style="color: #334155; margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.7;">
-          ${event.description}
+          ${displayDescription}
         </p>
         
         ${event.location ? `<p class="event-location" style="color: #475569; margin: 1rem 0; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.3rem;">📍</span> <strong>Location:</strong> ${event.location}</p>` : ''}
