@@ -300,7 +300,7 @@ export async function notifyAllUsers(notification: {
               await deleteDoc(doc(db, 'userTokens', snapshot.id));
             }
           });
-        } catch (err) {
+        } catch {
           // Silent cleanup failure - not critical
         }
       }
