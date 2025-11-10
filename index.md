@@ -386,6 +386,17 @@ if (document.readyState === 'loading') {
       <strong style="color: white;">Sign and share petition e-6746 to Parliament of Canada.</strong>
     </p>
     
+    <p style="margin: 0 0 1.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.9);">
+      👤 <strong style="color: white;">Organized by:</strong> Every Canadian Counts 
+      <a href="https://everycanadiancounts.com" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         style="color: #a7f3d0; text-decoration: underline; font-weight: 600; margin-left: 0.25rem;"
+         title="Visit Every Canadian Counts website">
+        🔗 everycanadiancounts.com
+      </a>
+    </p>
+    
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; background: rgba(0,0,0,0.25); padding: 1.5rem; border-radius: 8px; border: 2px solid rgba(255,255,255,0.2);">
       <div>
         <p style="margin: 0; font-size: 0.9rem; color: #d1fae5; font-weight: 600;">Current Signatures</p>
