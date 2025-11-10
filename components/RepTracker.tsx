@@ -48,10 +48,15 @@ export default function RepTracker() {
           'Permission Denied',
           'Location permission is required to find your representatives. Please enable it in your device settings.'
         );
+        setLoading(false);
         return;
       }
 
-      const loc = await Location.getCurrentPositionAsync();
+      const loc = await Location.getCurrentPositionAsync({
+        accuracy: Location.Accuracy.Balanced,
+        timeInterval: 10000,
+        distanceInterval: 0,
+      });
       setLocation({
         latitude: loc.coords.latitude,
         longitude: loc.coords.longitude,

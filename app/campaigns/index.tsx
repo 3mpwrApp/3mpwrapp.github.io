@@ -2,19 +2,20 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-    Alert,
-    Linking,
-    Pressable,
-    RefreshControl,
-    SectionList,
-    Share,
-    StyleSheet,
-    Text,
-    TextInput,
-    useColorScheme,
-    View,
+  Alert,
+  Linking,
+  Pressable,
+  RefreshControl,
+  SectionList,
+  Share,
+  StyleSheet,
+  Text,
+  TextInput,
+  useColorScheme,
+  View,
 } from "react-native";
 
+import { CampaignsErrorBoundary } from "../../components/CampaignsErrorBoundary";
 import RepTracker from "../../components/RepTracker";
 import ResponsiveScreenWrapper from "../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../components/SearchBar";
@@ -22,9 +23,9 @@ import SkeletonRow from "../../components/SkeletonRow";
 import { useAuth } from "../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../data/campaigns";
 import {
-    MAX_FONT_SCALE,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
@@ -33,14 +34,14 @@ import { trackEvent } from "../../services/analyticsClient";
 import { fetchCampaigns } from "../../services/campaigns";
 import { syncCampaignToWebsite } from "../../services/campaignSync";
 import {
-    fsAddCampaign,
-    fsIncrementCampaignMembers,
-    fsJoinCampaign,
-    fsLeaveCampaign,
+  fsAddCampaign,
+  fsIncrementCampaignMembers,
+  fsJoinCampaign,
+  fsLeaveCampaign,
 } from "../../services/firestore";
 import {
-    CampaignsLocalProvider,
-    useCampaignsLocal,
+  CampaignsLocalProvider,
+  useCampaignsLocal,
 } from "../../store/campaignsLocal";
 import { useCounts } from "../../store/counts";
 import { useNetwork } from "../../store/network";
@@ -89,26 +90,38 @@ function ScreenInner() {
       setError(null);
       setLoading(true);
       const data = await fetchCampaigns();
-      setItems(data);
+      setItems(data || []); // Ensure data is always an array
       setOffline(false);
       setLastSyncTime(new Date());
-    } catch {
+    } catch (err) {
+      logger.error('[Campaigns] Failed to reload campaigns:', err);
       setError("Failed to load campaigns");
       setOffline(true);
+      // Don't crash - use existing items or empty array
+      if (!items || items.length === 0) {
+        setItems(localCampaigns);
+      }
     } finally {
       setLoading(false);
     }
-  }, [setOffline]);
+  }, [setOffline, items]);
 
   const { tick } = useRefresh();
   React.useEffect(() => {
-    reload();
+    reload().catch((err) => {
+      logger.error('[Campaigns] Error in initial load:', err);
+      // Fallback to local campaigns
+      setItems(localCampaigns);
+      setLoading(false);
+    });
   }, [reload, tick]);
 
   // Real-time sync: Poll API every 5 minutes
   React.useEffect(() => {
     const interval = setInterval(() => {
-      reload();
+      reload().catch((err) => {
+        logger.error('[Campaigns] Error in background sync:', err);
+      });
     }, 5 * 60 * 1000); // 5 minutes
 
     return () => clearInterval(interval);
@@ -241,35 +254,40 @@ function ScreenInner() {
 
         <CreateCampaignBox
           onCreate={async (data) => {
-            const c = createCampaign(data.title, data.summary);
-            try { trackEvent("campaign_create", { id: c.id }); } catch {}
-            const campaignData = {
-              id: c.id,
-              title: data.title,
-              summary: data.summary,
-              target: data.target || undefined,
-              goalCount: data.goalCount || undefined,
-              contactEmail: data.contactEmail || undefined,
-              createdBy: user?.uid || 'anonymous',
-              createdAt: Date.now(),
-            };
-            // Add to Firestore
-            await fsAddCampaign(campaignData);
-            // Sync to website (fire and forget, don't block UI)
-            syncCampaignToWebsite({
-              ...campaignData,
-              membersCount: 0,
-            }).catch((error) => {
-              logger.error('[Campaigns] Failed to sync to website:', error);
-            });
-            // Send push notification to all users about new campaign
             try {
-              const { sendCampaignNotification } = await import('../../services/notifications');
-              await sendCampaignNotification(campaignData);
-            } catch (notifErr) {
-              console.warn('[Campaigns] Failed to send push notification:', notifErr);
+              const c = createCampaign(data.title, data.summary);
+              try { trackEvent("campaign_create", { id: c.id }); } catch {}
+              const campaignData = {
+                id: c.id,
+                title: data.title,
+                summary: data.summary,
+                target: data.target || undefined,
+                goalCount: data.goalCount || undefined,
+                contactEmail: data.contactEmail || undefined,
+                createdBy: user?.uid || 'anonymous',
+                createdAt: Date.now(),
+              };
+              // Add to Firestore
+              await fsAddCampaign(campaignData);
+              // Sync to website (fire and forget, don't block UI)
+              syncCampaignToWebsite({
+                ...campaignData,
+                membersCount: 0,
+              }).catch((error) => {
+                logger.error('[Campaigns] Failed to sync to website:', error);
+              });
+              // Send push notification to all users about new campaign
+              try {
+                const { sendCampaignNotification } = await import('../../services/notifications');
+                await sendCampaignNotification(campaignData);
+              } catch (notifErr) {
+                console.warn('[Campaigns] Failed to send push notification:', notifErr);
+              }
+              Alert.alert('Campaign Created!', 'Your campaign has been created and will be synced to the website shortly.');
+            } catch (createErr) {
+              logger.error('[Campaigns] Failed to create campaign:', createErr);
+              Alert.alert('Creation Failed', 'Could not create campaign. Please try again later.');
             }
-            Alert.alert('Campaign Created!', 'Your campaign has been created and will be synced to the website shortly.');
           }}
           palette={palette}
         />
@@ -422,32 +440,37 @@ function ScreenInner() {
                 </Pressable>
                 <Pressable
                   onPress={async () => {
-                    const now = Date.now();
-                    if (inFlightRef.current[item.id] && now - inFlightRef.current[item.id] < 1200) return;
-                    inFlightRef.current[item.id] = now;
-                    const joined = isJoined(item.id);
-                    if (joined) {
-                      leave(item.id);
-                      const uid = user?.uid || 'anonymous';
-                      const ok = await fsLeaveCampaign(item.id, uid);
-                      if (!ok) {
-                        join(item.id);
-                        Alert.alert('Leave Failed', 'Could not leave campaign (offline?)');
-                      } else {
-                        Alert.alert('Left Campaign', 'You have left this campaign.');
-                        logActivity({ type: 'feature.use', payload: { feature: 'campaign.leave', id: item.id } });
-                      }
-                    } else {
-                      join(item.id);
-                      const uid = user?.uid || 'anonymous';
-                      const ok = await fsJoinCampaign(item.id, uid);
-                      if (!ok) {
+                    try {
+                      const now = Date.now();
+                      if (inFlightRef.current[item.id] && now - inFlightRef.current[item.id] < 1200) return;
+                      inFlightRef.current[item.id] = now;
+                      const joined = isJoined(item.id);
+                      if (joined) {
                         leave(item.id);
-                        Alert.alert('Join Failed', 'Could not join campaign (offline?)');
+                        const uid = user?.uid || 'anonymous';
+                        const ok = await fsLeaveCampaign(item.id, uid);
+                        if (!ok) {
+                          join(item.id);
+                          Alert.alert('Leave Failed', 'Could not leave campaign (offline?)');
+                        } else {
+                          Alert.alert('Left Campaign', 'You have left this campaign.');
+                          logActivity({ type: 'feature.use', payload: { feature: 'campaign.leave', id: item.id } });
+                        }
                       } else {
-                        Alert.alert('Joined Campaign', 'You are now supporting this campaign.');
-                        logActivity({ type: 'feature.use', payload: { feature: 'campaign.join', id: item.id } });
+                        join(item.id);
+                        const uid = user?.uid || 'anonymous';
+                        const ok = await fsJoinCampaign(item.id, uid);
+                        if (!ok) {
+                          leave(item.id);
+                          Alert.alert('Join Failed', 'Could not join campaign (offline?)');
+                        } else {
+                          Alert.alert('Joined Campaign', 'You are now supporting this campaign.');
+                          logActivity({ type: 'feature.use', payload: { feature: 'campaign.join', id: item.id } });
+                        }
                       }
+                    } catch (err) {
+                      logger.error('[Campaigns] Join/leave error:', err);
+                      Alert.alert('Error', 'An unexpected error occurred. Please try again.');
                     }
                   }}
                   accessibilityRole="button"
@@ -504,9 +527,11 @@ function ScreenInner() {
 
 export default function CampaignsScreen() {
   return (
-    <CampaignsLocalProvider>
-      <ScreenInner />
-    </CampaignsLocalProvider>
+    <CampaignsErrorBoundary>
+      <CampaignsLocalProvider>
+        <ScreenInner />
+      </CampaignsLocalProvider>
+    </CampaignsErrorBoundary>
   );
 }
 
