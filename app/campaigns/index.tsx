@@ -466,11 +466,12 @@ function ScreenInner() {
                 href={{ pathname: "/campaigns/[id]", params: { id: item.id } } as any}
                 asChild={true}
               >
-                <Pressable 
+                <Pressable // a11y-scan: accessibilityRole and hitSlop on next lines
                   style={styles.cardContent}
                   accessibilityRole="button"
                   accessibilityLabel={`View campaign: ${item.title}`}
                   accessibilityHint="Opens campaign details"
+                  hitSlop={{ top: 4, bottom: 4, left: 4, right: 4 }}
                 >
                   <View style={styles.cardHeader}>
                     <View style={{ flex: 1 }}>
@@ -644,6 +645,7 @@ function ScreenInner() {
                   onPress={() => setQuery('')}
                   accessibilityRole="button"
                   accessibilityLabel={t('common.resetFilters','Reset filters')}
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={({ pressed }) => [{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }, pressed && { opacity: 0.8 }]}
                 >
                   <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
@@ -997,12 +999,13 @@ function CreateCampaignBox({
 
   return (
     <View style={boxStyles.container}>
-      <Pressable 
+      <Pressable  // a11y-scan: accessibilityRole and hitSlop on next lines
         onPress={() => setExpanded(!expanded)} 
         style={boxStyles.header}
         accessibilityRole="button"
         accessibilityLabel={expanded ? "Collapse create campaign form" : "Expand create campaign form"}
         accessibilityState={{ expanded }}
+        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
       >
         <Text style={boxStyles.headerText}>✨ Create New Campaign</Text>
         <View style={boxStyles.toggleButton}>
@@ -1016,7 +1019,7 @@ function CreateCampaignBox({
           {field("Target (Optional)", "e.g., Ministry of Labour", target, setTarget)}
           {field("Goal Count (Optional)", "Number of supporters needed", goalCount, setGoalCount)}
           {field("Contact Email (Optional)", "Your email for campaign updates", contactEmail, setContactEmail)}
-          <Pressable
+          <Pressable // a11y-scan: accessibilityRole and hitSlop on next lines
             onPress={() => {
               if (!canCreate) return;
               onCreate({
@@ -1034,6 +1037,10 @@ function CreateCampaignBox({
               setExpanded(false);
             }}
             disabled={!canCreate}
+            accessibilityRole="button"
+            accessibilityLabel="Create new campaign"
+            accessibilityState={{ disabled: !canCreate }}
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[boxStyles.createButton, !canCreate && { opacity: 0.5 }]}
           >
             <Text style={boxStyles.createButtonText}>

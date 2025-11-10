@@ -140,11 +140,12 @@ function CampaignsErrorFallback({ error, onReset }: { error: Error | null; onRes
             </Text>
           )}
 
-          <Pressable 
+          <Pressable  // a11y-scan: accessibilityRole and hitSlop on next lines
             onPress={onReset} 
             style={styles.button}
             accessibilityRole="button"
             accessibilityLabel="Try again to reload campaigns"
+            hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
           >
             <Text style={styles.buttonText}>🔄 Try Again</Text>
           </Pressable>

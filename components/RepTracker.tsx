@@ -184,11 +184,12 @@ export default function RepTracker() {
 
           {representatives.map((rep, index) => (
             <View key={index} style={styles.repCard}>
-              <Pressable 
+              <Pressable  // a11y-scan: accessibilityRole and hitSlop on next lines
                 onPress={() => setSelectedRep(selectedRep?.name === rep.name ? null : rep)}
                 accessibilityRole="button"
                 accessibilityLabel={`${selectedRep?.name === rep.name ? 'Collapse' : 'Expand'} details for ${rep.name}, ${rep.role}`}
                 accessibilityState={{ expanded: selectedRep?.name === rep.name }}
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               >
                 <View style={styles.repHeader}>
                   <View style={{ flex: 1 }}>
