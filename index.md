@@ -133,6 +133,14 @@ description: A community-powered hub for injured workers and persons with disabi
   <span class="page-progress-text" id="pageProgressText">0% through page</span>
 </div>
 
+<!-- Hero Section with Logo -->
+<div style="text-align: center; margin: 2rem 0;">
+  <picture>
+    <source type="image/webp" srcset="{{ '/assets/empwrapp-logo.webp' | relative_url }}">
+    <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp - Community-powered support" width="120" height="120" loading="eager" style="margin-bottom: 1rem;">
+  </picture>
+</div>
+
 # You're Not Alone. Your Voice Matters.
 
 <span aria-hidden="true">📖</span> **3 minute read** <span aria-hidden="true">🔋🔋</span> **Energy: Light**

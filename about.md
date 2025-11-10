@@ -9,6 +9,14 @@ description: Empowering Canada's disability and injured worker community with 10
 
 {%- include status-banner.html -%}
 
+<!-- About Page Hero with Logo -->
+<div style="text-align: center; margin: 2rem 0;">
+  <picture>
+    <source type="image/webp" srcset="{{ '/assets/empwrapp-logo.webp' | relative_url }}">
+    <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp - Empowering Canada's disability and injured worker community" width="100" height="100" loading="eager" style="margin-bottom: 1rem;">
+  </picture>
+</div>
+
 # Empowering Canada's Disability & Injured Worker Community
 
 📖 **5 minute read** 🔋🔋 **Energy: Light**
