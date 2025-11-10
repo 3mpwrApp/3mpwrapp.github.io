@@ -25,6 +25,7 @@ let sentryModule: any = null;
 let sentryLoadAttempted = false;
 
 class Logger {
+  [x: string]: any;
   private isDevelopment: boolean;
   
   constructor() {
