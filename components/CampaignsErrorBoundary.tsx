@@ -29,6 +29,13 @@ export class CampaignsErrorBoundary extends React.Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    // Log detailed error information
+    console.error('=== CAMPAIGNS ERROR BOUNDARY ===');
+    console.error('Error:', error);
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
+    console.error('Component stack:', errorInfo.componentStack);
+    console.error('================================');
     logger.error('[CampaignsErrorBoundary] Caught error:', error, errorInfo);
     this.setState({ error, errorInfo });
   }
@@ -131,13 +138,17 @@ function CampaignsErrorFallback({ error, onReset }: { error: Error | null; onRes
           <Text style={styles.icon}>⚠️</Text>
           <Text style={styles.title}>Campaigns Tab Error</Text>
           <Text style={styles.message}>
-            The campaigns tab encountered an unexpected error. This may be due to a network issue, corrupted data, or a temporary glitch.
+            The campaigns tab encountered an unexpected error. Please check the console for details.
           </Text>
           
           {error && (
-            <Text style={styles.errorText} numberOfLines={5}>
-              {error.toString()}
-            </Text>
+            <ScrollView style={{ maxHeight: 200, marginBottom: 20 }}>
+              <Text style={styles.errorText}>
+                {error.message || error.toString()}
+                {'\n\n'}
+                {error.stack}
+              </Text>
+            </ScrollView>
           )}
 
           <Pressable  // a11y-scan: accessibilityRole and hitSlop on next lines

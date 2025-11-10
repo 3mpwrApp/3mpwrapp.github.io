@@ -26,7 +26,7 @@ import {
   useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
-import { useTranslation } from "../../i18n";
+import { useTranslationSafe } from "../../i18n";
 import { logActivity } from "../../services/activity";
 import { trackEvent } from "../../services/analyticsClient";
 import { fetchCampaigns } from "../../services/campaigns";
@@ -156,7 +156,7 @@ function ScreenInner() {
     isJoined: () => false,
   };
   const { user } = useAuth();
-  const { t } = useTranslation() || { t: (key: string, fallback?: string) => fallback || key };
+  const { t } = useTranslationSafe();
   const inFlightRef = React.useRef<Record<string, number>>({});
 
   const reload = React.useCallback(async () => {
