@@ -12,7 +12,7 @@ export const campaigns: Campaign[] = [
     target: 'Parliament of Canada',
     goalCount: 100000,
     membersCount: 460, // Real signature count as of November 9, 2025
-    contactEmail: 'contact@everycanadiancounts.com',
+    contactEmail: 'info@everycanadiancounts.com',
     createdAt: 1731196800000, // Fixed timestamp - November 9, 2025
     // Extended fields for this specific campaign
     petitionId: 'e-6746',
