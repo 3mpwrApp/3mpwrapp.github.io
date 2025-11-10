@@ -75,8 +75,8 @@ permalink: /campaigns/
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-<div class="info-box" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border-left: 4px solid #10b981;">
-  <p style="margin: 0;"><strong>🔄 Real-Time Auto-Sync:</strong> Campaigns created in the 3mpwrApp automatically appear below. Updates every 30 seconds.</p>
+<div class="info-box" style="background: #d1fae5; border-left: 4px solid #047857; color: #1a1a1a;">
+  <p style="margin: 0; color: #1a1a1a;"><strong>🔄 Real-Time Auto-Sync:</strong> Campaigns created in the 3mpwrApp automatically appear below. Updates every 30 seconds.</p>
   <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #065f46;">
     <span id="sync-status">⏳ Checking for campaigns...</span> | 
     Last updated: <span id="last-update">Never</span>
@@ -417,25 +417,8 @@ permalink: /campaigns/
   <p><strong>💡 Want to create a campaign?</strong> Sign up for Phase 1 and start organizing today! <a href="/beta/">Sign up now →</a></p>
 </div>
 
----
-
-## 📅 Upcoming Events
-
-<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
-
-<div class="warning-box">
-  <h3 style="margin-top: 0;">📆 Events Auto-Sync</h3>
-  <p style="font-size: 1.1rem;"><strong>This section will automatically populate with community events!</strong></p>
-  <p>Once the app is live, any event created in-app and marked as "public" will instantly appear here, complete with:</p>
-  <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
-    <li>📍 Location and virtual attendance options</li>
-    <li>♿ Full accessibility details (wheelchair access, ASL, quiet rooms, etc.)</li>
-    <li>🔋 Energy cost indicators</li>
-    <li>📱 Easy registration and RSVP</li>
-    <li>📅 Automatic calendar sync</li>
-    <li>🔔 Event reminders and updates</li>
-  </ul>
-  <p style="margin-top: 1.5rem;"><em>Community-organized, automatically synced, fully accessible.</em></p>
+<div class="info-box" style="margin: 2rem 0;">
+  <p><strong>📅 Looking for Events?</strong> Check out our <a href="/events/">Events Calendar</a> for upcoming community events, rallies, and gatherings. Subscribe to the ICS feed for automatic updates!</p>
 </div>
 
 ---
