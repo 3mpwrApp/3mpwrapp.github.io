@@ -78,15 +78,15 @@ permalink: /campaigns/
 <div class="info-box" style="background: #d1fae5; border-left: 4px solid #047857; color: #1a1a1a;">
   <p style="margin: 0; color: #1a1a1a;"><strong>🔄 Real-Time Auto-Sync:</strong> Campaigns created in the 3mpwrApp automatically appear below. Updates every 30 seconds.</p>
   <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #065f46;">
-    <span id="sync-status">⏳ Checking for campaigns...</span> | 
-    Last updated: <span id="last-update">Never</span>
+    <span id="sync-status" style="color: #065f46;">⏳ Checking for campaigns...</span> | 
+    Last updated: <span id="last-update" style="color: #065f46;">Never</span>
   </p>
 </div>
 
-<section id="campaigns">
+<section id="campaigns" style="background: transparent; color: #1a1a1a;">
   <div id="campaigns-list" style="margin: 2rem 0;">
-    <div style="text-align: center; padding: 2rem;">
-      <p style="font-size: 1.2rem;">⏳ Loading campaigns...</p>
+    <div style="text-align: center; padding: 2rem; background: transparent;">
+      <p style="font-size: 1.2rem; color: #1a1a1a;">⏳ Loading campaigns...</p>
     </div>
   </div>
 </section>
