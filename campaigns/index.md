@@ -84,6 +84,45 @@ permalink: /campaigns/
 </div>
 
 <section id="campaigns" style="background: transparent !important; color: #000000 !important;">
+  
+  <article class="campaign-card" style="border: 3px solid #0066cc; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: #f8f9fa !important; box-shadow: 0 2px 8px rgba(0,0,0,0.15); color: #000000 !important;">
+    <h3 style="margin-top: 0; color: #003d7a !important; font-size: 1.5rem; font-weight: 700;">
+      📣 Every Canadian Counts
+    </h3>
+    
+    <p style="color: #000000 !important; margin: 1rem 0; font-size: 1.05rem; line-height: 1.6; font-weight: 500;">Support a publicly funded national disability insurance plan for Canadians with long-term or chronic disabilities. Sign and share petition e-6746.</p>
+    
+    <p style="color: #000000 !important; font-size: 0.95rem; margin: 0.5rem 0; font-weight: 600;">
+      👤 <strong style="color: #000000 !important;">Organized by:</strong> 
+      <span style="color: #000000 !important;">Every Canadian Counts</span>
+      <a href="https://everycanadiancounts.com" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         style="color: #0052a3 !important; text-decoration: underline; font-weight: 600; margin-left: 0.5rem;"
+         title="Visit Every Canadian Counts website">
+        🔗 everycanadiancounts.com
+      </a>
+    </p>
+    
+    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a href="https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-6746" 
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-primary"
+         style="padding: 12px 24px; background: #0052a3 !important; color: #ffffff !important; border: 3px solid #003d7a; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; min-height: 48px; text-decoration: none; display: inline-block;"
+      >
+        💪 Sign Petition
+      </a>
+      
+      <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button onclick="shareCampaignToSocial('Every Canadian Counts', 'Support a publicly funded national disability insurance plan for Canadians with long-term or chronic disabilities. Sign petition e-6746.', 'twitter')" style="padding: 10px 16px; background: #0d47a1 !important; color: #ffffff !important; border: 3px solid #002171; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on X/Twitter" aria-label="Share on X/Twitter">𝕏 Share</button>
+        <button onclick="shareCampaignToSocial('Every Canadian Counts', 'Support a publicly funded national disability insurance plan for Canadians with long-term or chronic disabilities. Sign petition e-6746.', 'facebook')" style="padding: 10px 16px; background: #1565c0 !important; color: #ffffff !important; border: 3px solid #003c8f; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on Facebook" aria-label="Share on Facebook">📘 Share</button>
+        <button onclick="shareCampaignToSocial('Every Canadian Counts', 'Support a publicly funded national disability insurance plan for Canadians with long-term or chronic disabilities. Sign petition e-6746.', 'linkedin')" style="padding: 10px 16px; background: #005a9e !important; color: #ffffff !important; border: 3px solid #003d6b; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on LinkedIn" aria-label="Share on LinkedIn">💼 Share</button>
+        <button onclick="copyCampaignDetails('Every Canadian Counts', 'Support a publicly funded national disability insurance plan for Canadians with long-term or chronic disabilities. Sign petition e-6746.', 'https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-6746')" style="padding: 10px 16px; background: #047857 !important; color: #ffffff !important; border: 3px solid #065f46; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Copy details" aria-label="Copy campaign details">📋 Copy</button>
+      </div>
+    </div>
+  </article>
+
   <div id="campaigns-list" style="margin: 2rem 0; color: #000000 !important;">
     <div style="text-align: center; padding: 2rem; background: transparent !important;">
       <p style="font-size: 1.2rem; color: #000000 !important; font-weight: 600;">⏳ Loading campaigns...</p>
