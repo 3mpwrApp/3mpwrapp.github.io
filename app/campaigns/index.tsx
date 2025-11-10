@@ -145,8 +145,24 @@ function ScreenInner() {
   const [showRepTracker, setShowRepTracker] = React.useState(false);
   const [lastSyncTime, setLastSyncTime] = React.useState<Date | null>(null);
 
-  const { setCount } = useCounts();
-  const { setOffline } = useNetwork();
+  // Safe hooks with fallbacks - wrap in try-catch to handle missing providers
+  let setCount = (_key: any, _value: number) => {};
+  let setOffline = (_value: boolean) => {};
+  
+  try {
+    const counts = useCounts();
+    setCount = counts.setCount;
+  } catch (err) {
+    console.warn('[Campaigns] useCounts not available:', err);
+  }
+  
+  try {
+    const network = useNetwork();
+    setOffline = network.setOffline;
+  } catch (err) {
+    console.warn('[Campaigns] useNetwork not available:', err);
+  }
+  
   const campaignsContext = useCampaignsLocal();
   const { state: local, createCampaign, join, leave, isJoined } = campaignsContext || {
     state: { myCampaigns: [], joined: {} },
@@ -200,7 +216,15 @@ function ScreenInner() {
     }
   }, [setOffline, items, safeLocalCampaigns]);
 
-  const { tick } = useRefresh();
+  // Safe useRefresh with fallback
+  let tick = 0;
+  try {
+    const refresh = useRefresh();
+    tick = refresh.tick;
+  } catch (err) {
+    console.warn('[Campaigns] useRefresh not available:', err);
+  }
+  
   React.useEffect(() => {
     // Don't reload if already initialized and this is just a tab switch
     if (isInitializedRef.current) {
