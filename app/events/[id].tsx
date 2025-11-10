@@ -5,6 +5,7 @@ import React from 'react';
 import { ActivityIndicator, Alert, Modal, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
 // Lazy load Calendar to avoid crashes if expo-calendar is not available
+// @ts-ignore - Reserved for future calendar export feature
 let _Calendar: any = null;
 try {
   _Calendar = require('expo-calendar');
@@ -28,6 +29,7 @@ import { useSettings } from "../../store/settings";
 import { useAppPalette } from "../../theme/usePalette";
 import { logError } from '../../utils/errorLogger';
 
+// @ts-ignore - Reserved for future ICS export feature
 function _createICS(
   title: string,
   start: string,

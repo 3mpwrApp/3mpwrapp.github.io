@@ -171,6 +171,7 @@ export default function EventsScreen() {
   // One-time post-load announcement
   usePostLoadAnnounce({ loading, count: items.length, ns: 'eventsFeature', emptyKey: 'eventsFeature.empty' });
 
+  // @ts-ignore - Reserved for future event meta formatting feature
   const _formatMeta = (date: string, isVirtual?: boolean, location?: string) => {
     const place = isVirtual ? t('eventsFeature.chips.virtual','Virtual') : (location ?? t('eventsFeature.tbd','TBD'));
     return `${date} • ${place}`;
