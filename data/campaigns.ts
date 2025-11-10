@@ -13,7 +13,7 @@ export const campaigns: Campaign[] = [
     goalCount: 100000,
     membersCount: 460, // Real signature count as of November 9, 2025
     contactEmail: 'contact@everycanadiancounts.com',
-    createdAt: Date.now(),
+    createdAt: 1731196800000, // Fixed timestamp - November 9, 2025
     // Extended fields for this specific campaign
     petitionId: 'e-6746',
     petitionUrl: 'https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746',

@@ -2,8 +2,23 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-// Direct import - lazy loading not supported in React Native
-import CampaignsScreenComponent from '../campaigns/index';
+// Import with try-catch protection
+let CampaignsScreenComponent: React.ComponentType<any>;
+try {
+  CampaignsScreenComponent = require('../campaigns/index').default;
+} catch (error) {
+  console.error('[CampaignsTab] Failed to import campaigns screen:', error);
+  // Fallback component
+  CampaignsScreenComponent = () => (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 }}>
+      <Text style={{ fontSize: 48, marginBottom: 16 }}>⚠️</Text>
+      <Text style={{ fontSize: 24, fontWeight: '700', marginBottom: 12 }}>Import Error</Text>
+      <Text style={{ fontSize: 14, textAlign: 'center' }}>
+        Failed to load campaigns module. Please restart the app.
+      </Text>
+    </View>
+  );
+}
 
 class CampaignsTabErrorBoundary extends React.Component<
   { children: React.ReactNode },
