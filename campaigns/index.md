@@ -75,18 +75,18 @@ permalink: /campaigns/
 
 <span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
 
-<div class="info-box" style="background: #d1fae5; border-left: 4px solid #047857; color: #1a1a1a;">
-  <p style="margin: 0; color: #1a1a1a;"><strong>🔄 Real-Time Auto-Sync:</strong> Campaigns created in the 3mpwrApp automatically appear below. Updates every 30 seconds.</p>
-  <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #065f46;">
-    <span id="sync-status" style="color: #065f46;">⏳ Checking for campaigns...</span> | 
-    Last updated: <span id="last-update" style="color: #065f46;">Never</span>
+<div class="info-box" style="background: #d1fae5 !important; border-left: 4px solid #047857; color: #000000 !important; padding: 1rem;">
+  <p style="margin: 0; color: #000000 !important;"><strong style="color: #000000 !important;">🔄 Real-Time Auto-Sync:</strong> <span style="color: #000000 !important;">Campaigns created in the 3mpwrApp automatically appear below. Updates every 30 seconds.</span></p>
+  <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #000000 !important;">
+    <span id="sync-status" style="color: #000000 !important; font-weight: 600;">⏳ Checking for campaigns...</span> | 
+    Last updated: <span id="last-update" style="color: #000000 !important; font-weight: 600;">Never</span>
   </p>
 </div>
 
-<section id="campaigns" style="background: transparent; color: #1a1a1a;">
-  <div id="campaigns-list" style="margin: 2rem 0;">
-    <div style="text-align: center; padding: 2rem; background: transparent;">
-      <p style="font-size: 1.2rem; color: #1a1a1a;">⏳ Loading campaigns...</p>
+<section id="campaigns" style="background: transparent !important; color: #000000 !important;">
+  <div id="campaigns-list" style="margin: 2rem 0; color: #000000 !important;">
+    <div style="text-align: center; padding: 2rem; background: transparent !important;">
+      <p style="font-size: 1.2rem; color: #000000 !important; font-weight: 600;">⏳ Loading campaigns...</p>
     </div>
   </div>
 </section>
@@ -174,19 +174,19 @@ permalink: /campaigns/
     
     if (!campaigns || campaigns.length === 0) {
       container.innerHTML = `
-        <div class="warning-box">
-          <h3 style="margin-top: 0;">🚀 Campaigns Coming Soon!</h3>
-          <p style="font-size: 1.1rem;"><strong>No active campaigns yet - but when our app launches, this space will come alive with community-created campaigns!</strong></p>
-          <p>Community members will be able to:</p>
-          <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
-            <li>🎯 Create campaigns directly in the app</li>
-            <li>📱 Set campaigns as public to appear here automatically</li>
-            <li>📊 Track petition signatures and participation</li>
-            <li>📣 Organize rallies and events</li>
-            <li>🤝 Connect with other advocates</li>
-            <li>💪 Amplify grassroots movements</li>
+        <div class="warning-box" style="color: #000000 !important;">
+          <h3 style="margin-top: 0; color: #000000 !important;">🚀 Campaigns Coming Soon!</h3>
+          <p style="font-size: 1.1rem; color: #000000 !important;"><strong style="color: #000000 !important;">No active campaigns yet - but when our app launches, this space will come alive with community-created campaigns!</strong></p>
+          <p style="color: #000000 !important;">Community members will be able to:</p>
+          <ul style="text-align: left; max-width: 600px; margin: 1rem auto; color: #000000 !important;">
+            <li style="color: #000000 !important;">🎯 Create campaigns directly in the app</li>
+            <li style="color: #000000 !important;">📱 Set campaigns as public to appear here automatically</li>
+            <li style="color: #000000 !important;">📊 Track petition signatures and participation</li>
+            <li style="color: #000000 !important;">📣 Organize rallies and events</li>
+            <li style="color: #000000 !important;">🤝 Connect with other advocates</li>
+            <li style="color: #000000 !important;">💪 Amplify grassroots movements</li>
           </ul>
-          <p style="margin-top: 1.5rem;"><em>Stay tuned - powerful organizing tools are on the way!</em></p>
+          <p style="margin-top: 1.5rem; color: #000000 !important;"><em style="color: #000000 !important;">Stay tuned - powerful organizing tools are on the way!</em></p>
         </div>
       `;
       return;
@@ -194,21 +194,21 @@ permalink: /campaigns/
     
     // Display campaigns
     container.innerHTML = campaigns.map(campaign => `
-        <article class="campaign-card" style="border: 3px solid #0066cc; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: #f8f9fa; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-          <h3 style="margin-top: 0; color: #003d7a; font-size: 1.5rem; font-weight: 700;">
+        <article class="campaign-card" style="border: 3px solid #0066cc; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: #f8f9fa !important; box-shadow: 0 2px 8px rgba(0,0,0,0.15); color: #000000 !important;">
+          <h3 style="margin-top: 0; color: #003d7a !important; font-size: 1.5rem; font-weight: 700;">
             ${campaign.icon || '📣'} ${campaign.title}
           </h3>
           
-          ${campaign.summary ? `<p style="color: #1a1a1a; margin: 1rem 0; font-size: 1.05rem; line-height: 1.6;">${campaign.summary}</p>` : ''}
+          ${campaign.summary ? `<p style="color: #000000 !important; margin: 1rem 0; font-size: 1.05rem; line-height: 1.6; font-weight: 500;">${campaign.summary}</p>` : ''}
           
           ${campaign.goal ? `
             <div style="margin: 1rem 0;">
-              <p style="margin: 0.5rem 0; color: #1a1a1a; font-weight: 600;">
-                🎯 <strong>Goal:</strong> ${campaign.goal}
+              <p style="margin: 0.5rem 0; color: #000000 !important; font-weight: 700;">
+                🎯 <strong style="color: #000000 !important;">Goal:</strong> ${campaign.goal}
               </p>
               ${campaign.progress ? `
-                <div style="background: #d1d5db; border-radius: 8px; height: 28px; overflow: hidden; margin: 0.5rem 0; border: 2px solid #1a1a1a;">
-                  <div style="background: #047857; height: 100%; width: ${campaign.progress}%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: bold; font-size: 0.9rem;">
+                <div style="background: #d1d5db; border-radius: 8px; height: 28px; overflow: hidden; margin: 0.5rem 0; border: 2px solid #000000;">
+                  <div style="background: #047857; height: 100%; width: ${campaign.progress}%; display: flex; align-items: center; justify-content: center; color: #ffffff !important; font-weight: bold; font-size: 0.9rem;">
                     ${campaign.progress}%
                   </div>
                 </div>
@@ -216,12 +216,12 @@ permalink: /campaigns/
             </div>
           ` : ''}
           
-          ${campaign.organizer ? `<p style="color: #1a1a1a; font-size: 0.95rem; margin: 0.5rem 0;">👤 <strong>Organized by:</strong> ${campaign.organizer}</p>` : ''}
+          ${campaign.organizer ? `<p style="color: #000000 !important; font-size: 0.95rem; margin: 0.5rem 0; font-weight: 600;">👤 <strong style="color: #000000 !important;">Organized by:</strong> ${campaign.organizer}</p>` : ''}
           
           ${campaign.tags && campaign.tags.length > 0 ? `
             <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
               ${campaign.tags.map(tag => `
-                <span style="display: inline-block; padding: 6px 12px; background: #fde047; color: #1a1a1a; border: 2px solid #1a1a1a; border-radius: 6px; font-size: 0.9em; font-weight: 700;">
+                <span style="display: inline-block; padding: 6px 12px; background: #fde047 !important; color: #000000 !important; border: 2px solid #000000; border-radius: 6px; font-size: 0.9em; font-weight: 700;">
                   ${tag}
                 </span>
               `).join('')}
@@ -232,16 +232,16 @@ permalink: /campaigns/
             <button 
               onclick="joinCampaign('${campaign.id}', '${campaign.title}')" 
               class="btn btn-primary"
-              style="padding: 12px 24px; background: #0052a3; color: #ffffff; border: 3px solid #003d7a; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; min-height: 48px;"
+              style="padding: 12px 24px; background: #0052a3 !important; color: #ffffff !important; border: 3px solid #003d7a; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; min-height: 48px;"
             >
               💪 Join Campaign
             </button>
             
             <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'twitter')" style="padding: 10px 16px; background: #0d47a1; color: #ffffff; border: 3px solid #002171; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on X/Twitter" aria-label="Share on X/Twitter">𝕏 Share</button>
-              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'facebook')" style="padding: 10px 16px; background: #1565c0; color: #ffffff; border: 3px solid #003c8f; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on Facebook" aria-label="Share on Facebook">📘 Share</button>
-              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'linkedin')" style="padding: 10px 16px; background: #005a9e; color: #ffffff; border: 3px solid #003d6b; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on LinkedIn" aria-label="Share on LinkedIn">💼 Share</button>
-              <button onclick="copyCampaignDetails('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', '${campaign.shareLink || ''}')" style="padding: 10px 16px; background: #047857; color: #ffffff; border: 3px solid #065f46; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Copy details" aria-label="Copy campaign details">📋 Copy</button>
+              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'twitter')" style="padding: 10px 16px; background: #0d47a1 !important; color: #ffffff !important; border: 3px solid #002171; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on X/Twitter" aria-label="Share on X/Twitter">𝕏 Share</button>
+              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'facebook')" style="padding: 10px 16px; background: #1565c0 !important; color: #ffffff !important; border: 3px solid #003c8f; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on Facebook" aria-label="Share on Facebook">📘 Share</button>
+              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'linkedin')" style="padding: 10px 16px; background: #005a9e !important; color: #ffffff !important; border: 3px solid #003d6b; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on LinkedIn" aria-label="Share on LinkedIn">💼 Share</button>
+              <button onclick="copyCampaignDetails('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', '${campaign.shareLink || ''}')" style="padding: 10px 16px; background: #047857 !important; color: #ffffff !important; border: 3px solid #065f46; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Copy details" aria-label="Copy campaign details">📋 Copy</button>
             </div>
           </div>
         </article>
@@ -305,15 +305,15 @@ permalink: /campaigns/
       if (syncStatus) syncStatus.textContent = '⚠️ Connection issue';
       
       document.getElementById('campaigns-list').innerHTML = `
-        <div class="warning-box">
-          <h3 style="margin-top: 0;">⚠️ Connection Issue</h3>
-          <p>Unable to load campaigns right now. This could mean:</p>
-          <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
-            <li>No campaigns have been created yet</li>
-            <li>Temporary network issue</li>
-            <li>Please refresh the page</li>
+        <div class="warning-box" style="color: #000000 !important;">
+          <h3 style="margin-top: 0; color: #000000 !important;">⚠️ Connection Issue</h3>
+          <p style="color: #000000 !important;">Unable to load campaigns right now. This could mean:</p>
+          <ul style="text-align: left; max-width: 600px; margin: 1rem auto; color: #000000 !important;">
+            <li style="color: #000000 !important;">No campaigns have been created yet</li>
+            <li style="color: #000000 !important;">Temporary network issue</li>
+            <li style="color: #000000 !important;">Please refresh the page</li>
           </ul>
-          <p style="margin-top: 1rem;">Please check back later or <a href="/contact/">contact us</a> if the problem persists.</p>
+          <p style="margin-top: 1rem; color: #000000 !important;">Please check back later or <a href="/contact/" style="color: #0052a3 !important; font-weight: 700; text-decoration: underline;">contact us</a> if the problem persists.</p>
         </div>
       `;
     }
