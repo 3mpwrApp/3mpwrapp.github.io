@@ -429,7 +429,12 @@ function ScreenInner() {
                 href={{ pathname: "/campaigns/[id]", params: { id: item.id } } as any}
                 asChild={true}
               >
-                <Pressable style={styles.cardContent}>
+                <Pressable 
+                  style={styles.cardContent}
+                  accessibilityRole="button"
+                  accessibilityLabel={`View campaign: ${item.title}`}
+                  accessibilityHint="Opens campaign details"
+                >
                   <View style={styles.cardHeader}>
                     <View style={{ flex: 1 }}>
                       {/* Featured badge for important campaigns */}
@@ -955,7 +960,13 @@ function CreateCampaignBox({
 
   return (
     <View style={boxStyles.container}>
-      <Pressable onPress={() => setExpanded(!expanded)} style={boxStyles.header}>
+      <Pressable 
+        onPress={() => setExpanded(!expanded)} 
+        style={boxStyles.header}
+        accessibilityRole="button"
+        accessibilityLabel={expanded ? "Collapse create campaign form" : "Expand create campaign form"}
+        accessibilityState={{ expanded }}
+      >
         <Text style={boxStyles.headerText}>✨ Create New Campaign</Text>
         <View style={boxStyles.toggleButton}>
           <Text style={boxStyles.toggleText}>{expanded ? '−' : '+'}</Text>

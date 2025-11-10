@@ -140,7 +140,12 @@ function CampaignsErrorFallback({ error, onReset }: { error: Error | null; onRes
             </Text>
           )}
 
-          <Pressable onPress={onReset} style={styles.button}>
+          <Pressable 
+            onPress={onReset} 
+            style={styles.button}
+            accessibilityRole="button"
+            accessibilityLabel="Try again to reload campaigns"
+          >
             <Text style={styles.buttonText}>🔄 Try Again</Text>
           </Pressable>
 

@@ -184,7 +184,12 @@ export default function RepTracker() {
 
           {representatives.map((rep, index) => (
             <View key={index} style={styles.repCard}>
-              <Pressable onPress={() => setSelectedRep(selectedRep?.name === rep.name ? null : rep)}>
+              <Pressable 
+                onPress={() => setSelectedRep(selectedRep?.name === rep.name ? null : rep)}
+                accessibilityRole="button"
+                accessibilityLabel={`${selectedRep?.name === rep.name ? 'Collapse' : 'Expand'} details for ${rep.name}, ${rep.role}`}
+                accessibilityState={{ expanded: selectedRep?.name === rep.name }}
+              >
                 <View style={styles.repHeader}>
                   <View style={{ flex: 1 }}>
                     <Text style={styles.repName}>{rep.name}</Text>
