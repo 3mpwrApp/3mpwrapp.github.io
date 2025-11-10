@@ -161,16 +161,20 @@ function ScreenInner() {
   
   try {
     const counts = useCounts();
-    setCount = counts.setCount;
+    if (counts && typeof counts.setCount === 'function') {
+      setCount = counts.setCount;
+    }
   } catch (err) {
-    console.warn('[Campaigns] useCounts not available:', err);
+    console.error('[Campaigns] useCounts not available:', err);
   }
   
   try {
     const network = useNetwork();
-    setOffline = network.setOffline;
+    if (network && typeof network.setOffline === 'function') {
+      setOffline = network.setOffline;
+    }
   } catch (err) {
-    console.warn('[Campaigns] useNetwork not available:', err);
+    console.error('[Campaigns] useNetwork not available:', err);
   }
   
   const campaignsContext = useCampaignsLocal();
@@ -207,7 +211,9 @@ function ScreenInner() {
       // Critical: Ensure data is always an array
       const validData = Array.isArray(data) ? data : [];
       setItems(validData);
-      setOffline(false);
+      if (typeof setOffline === 'function') {
+        setOffline(false);
+      }
       setLastSyncTime(new Date());
       
       isInitializedRef.current = true;
@@ -216,7 +222,9 @@ function ScreenInner() {
       
       logger.error('[Campaigns] Failed to reload campaigns:', err);
       setError("Failed to load campaigns");
-      setOffline(true);
+      if (typeof setOffline === 'function') {
+        setOffline(true);
+      }
       // Don't crash - use existing items or fallback to local campaigns
       if (!items || !Array.isArray(items) || items.length === 0) {
         setItems(safeLocalCampaigns);
@@ -279,7 +287,13 @@ function ScreenInner() {
   }, [reload]);
 
   React.useEffect(() => {
-    setCount("campaigns", items.length);
+    try {
+      if (typeof setCount === 'function') {
+        setCount("campaigns", items.length);
+      }
+    } catch (err) {
+      console.error('[Campaigns] setCount failed:', err);
+    }
   }, [items, setCount]);
 
   // One-time polite announcement of loaded count
