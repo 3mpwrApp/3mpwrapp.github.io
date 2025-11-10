@@ -119,8 +119,18 @@ function ScreenInner() {
   const styles = createStyles(palette);
 
   const titleRef = React.useRef<Text>(null);
-  useAnnounceOnMount("Campaigns");
-  useFocusOnRefOnMount(titleRef);
+  
+  try {
+    useAnnounceOnMount("Campaigns");
+  } catch (err) {
+    console.error('[Campaigns] useAnnounceOnMount failed:', err);
+  }
+  
+  try {
+    useFocusOnRefOnMount(titleRef);
+  } catch (err) {
+    console.error('[Campaigns] useFocusOnRefOnMount failed:', err);
+  }
 
   // Track if component is mounted to prevent state updates after unmount
   const isMountedRef = React.useRef(true);
@@ -273,7 +283,11 @@ function ScreenInner() {
   }, [items, setCount]);
 
   // One-time polite announcement of loaded count
-  usePostLoadAnnounce({ loading, count: items.length, ns: 'campaigns' });
+  try {
+    usePostLoadAnnounce({ loading, count: items.length, ns: 'campaigns' });
+  } catch (err) {
+    console.error('[Campaigns] usePostLoadAnnounce failed:', err);
+  }
 
   // Safe wrapper for isJoined to prevent crashes
   const safeIsJoined = React.useCallback((id: any) => {
