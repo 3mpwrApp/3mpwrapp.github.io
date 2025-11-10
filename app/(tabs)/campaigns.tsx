@@ -69,6 +69,13 @@ class CampaignsTabErrorBoundary extends React.Component<
 
 export default function CampaignsTab() {
   const palette = useAppPalette();
+  const [isReady, setIsReady] = React.useState(false);
+  
+  // Delay rendering to ensure proper initialization
+  React.useEffect(() => {
+    const timer = setTimeout(() => setIsReady(true), 50);
+    return () => clearTimeout(timer);
+  }, []);
   
   // If import failed, show error immediately
   if (!CampaignsScreenComponent) {
@@ -113,6 +120,16 @@ export default function CampaignsTab() {
             Try Again
           </Text>
         </Pressable>
+      </View>
+    );
+  }
+  
+  // Show loading state briefly to prevent race conditions
+  if (!isReady) {
+    return (
+      <View style={createStyles(palette).loadingContainer}>
+        <Text style={{ fontSize: 48, marginBottom: 16 }}>📣</Text>
+        <Text style={{ fontSize: 16, color: palette.text, opacity: 0.7 }}>Loading Campaigns...</Text>
       </View>
     );
   }

@@ -114,6 +114,17 @@ function ScreenInner() {
   useAnnounceOnMount("Campaigns");
   useFocusOnRefOnMount(titleRef);
 
+  // Track if component is mounted to prevent state updates after unmount
+  const isMountedRef = React.useRef(true);
+  const isInitializedRef = React.useRef(false);
+
+  React.useEffect(() => {
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+    };
+  }, []);
+
   // Ensure initial state is always a valid array
   const safeLocalCampaigns = React.useMemo(() => {
     return Array.isArray(localCampaigns) ? localCampaigns : [];
@@ -134,16 +145,34 @@ function ScreenInner() {
   const inFlightRef = React.useRef<Record<string, number>>({});
 
   const reload = React.useCallback(async () => {
+    // Don't reload if component is unmounted
+    if (!isMountedRef.current) {
+      logger.warn('[Campaigns] Skipping reload - component unmounted');
+      return;
+    }
+
     try {
-      setError(null);
-      setLoading(true);
+      if (isMountedRef.current) setError(null);
+      if (isMountedRef.current) setLoading(true);
+      
       const data = await fetchCampaigns();
+      
+      // Only update state if still mounted
+      if (!isMountedRef.current) {
+        logger.warn('[Campaigns] Skipping state update - component unmounted during fetch');
+        return;
+      }
+      
       // Critical: Ensure data is always an array
       const validData = Array.isArray(data) ? data : [];
       setItems(validData);
       setOffline(false);
       setLastSyncTime(new Date());
+      
+      isInitializedRef.current = true;
     } catch (err) {
+      if (!isMountedRef.current) return;
+      
       logger.error('[Campaigns] Failed to reload campaigns:', err);
       setError("Failed to load campaigns");
       setOffline(true);
@@ -152,20 +181,28 @@ function ScreenInner() {
         setItems(safeLocalCampaigns);
       }
     } finally {
-      setLoading(false);
+      if (isMountedRef.current) setLoading(false);
     }
-  }, [setOffline, items]);
+  }, [setOffline, items, safeLocalCampaigns]);
 
   const { tick } = useRefresh();
   React.useEffect(() => {
+    // Don't reload if already initialized and this is just a tab switch
+    if (isInitializedRef.current) {
+      logger.info('[Campaigns] Skipping reload - already initialized');
+      return;
+    }
+
     // Protect against multiple simultaneous loads
     let cancelled = false;
     
     const doLoad = async () => {
+      if (cancelled || !isMountedRef.current) return;
+      
       try {
         await reload();
       } catch (err) {
-        if (!cancelled) {
+        if (!cancelled && isMountedRef.current) {
           logger.error('[Campaigns] Error in initial load:', err);
           // Fallback to local campaigns with safety check
           setItems(safeLocalCampaigns);
@@ -179,7 +216,7 @@ function ScreenInner() {
     return () => {
       cancelled = true;
     };
-  }, [tick]); // Removed reload from deps to prevent infinite loop
+  }, [tick, reload, safeLocalCampaigns]); // Added dependencies back but with initialization guard
 
   // Real-time sync: Poll API every 5 minutes
   React.useEffect(() => {
