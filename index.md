@@ -370,34 +370,34 @@ if (document.readyState === 'loading') {
 ---
 
 <!-- Featured Campaign Banner -->
-<div class="gradient-banner" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+<div class="gradient-banner" style="background: linear-gradient(135deg, #047857 0%, #065f46 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
   <h2 style="margin: 0 0 1rem; color: white; font-size: 1.8rem;">
     <span aria-hidden="true">📣</span> Featured Campaign
-    <span class="badge badge--new" style="background: rgba(255,255,255,0.3); color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Active now">Active</span>
+    <span class="badge badge--new" style="background: rgba(0,0,0,0.3); color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Active now">Active</span>
   </h2>
   
-  <div style="background: rgba(255,255,255,0.2); padding: 2rem; border-radius: 8px; margin: 1rem 0; backdrop-filter: blur(10px); text-align: left;">
-    <h3 style="margin: 0 0 1rem; color: white; font-size: 1.6rem;">
+  <div style="background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 8px; margin: 1rem 0; text-align: left; color: white;">
+    <h3 style="margin: 0 0 1rem; color: white; font-size: 1.6rem; font-weight: bold;">
       🇨🇦 Every Canadian Counts
     </h3>
     
-    <p style="margin: 0 0 1rem; font-size: 1.1rem; opacity: 0.95; line-height: 1.6;">
+    <p style="margin: 0 0 1rem; font-size: 1.1rem; line-height: 1.6; color: white;">
       Support a publicly funded national disability insurance plan for Canadians with long-term or chronic disabilities. 
-      <strong>Sign and share petition e-6746 to Parliament of Canada.</strong>
+      <strong style="color: white;">Sign and share petition e-6746 to Parliament of Canada.</strong>
     </p>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 8px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; background: rgba(0,0,0,0.25); padding: 1.5rem; border-radius: 8px; border: 2px solid rgba(255,255,255,0.2);">
       <div>
-        <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Current Signatures</p>
-        <p style="margin: 0.25rem 0 0; font-size: 1.8rem; font-weight: bold;">460+</p>
+        <p style="margin: 0; font-size: 0.9rem; color: #d1fae5; font-weight: 600;">Current Signatures</p>
+        <p style="margin: 0.25rem 0 0; font-size: 1.8rem; font-weight: bold; color: white;">460+</p>
       </div>
       <div>
-        <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Goal</p>
-        <p style="margin: 0.25rem 0 0; font-size: 1.8rem; font-weight: bold;">100,000</p>
+        <p style="margin: 0; font-size: 0.9rem; color: #d1fae5; font-weight: 600;">Goal</p>
+        <p style="margin: 0.25rem 0 0; font-size: 1.8rem; font-weight: bold; color: white;">100,000</p>
       </div>
       <div>
-        <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Target</p>
-        <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: bold;">Parliament 🇨🇦</p>
+        <p style="margin: 0; font-size: 0.9rem; color: #d1fae5; font-weight: 600;">Target</p>
+        <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: bold; color: white;">Parliament 🇨🇦</p>
       </div>
     </div>
     
@@ -405,37 +405,37 @@ if (document.readyState === 'loading') {
       <a href="https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-block; background: white; color: #10b981; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: transform 0.2s;" 
-         onmouseover="this.style.transform='translateY(-2px)'" 
-         onmouseout="this.style.transform='translateY(0)'">
+         style="display: inline-block; background: white; color: #065f46; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s;" 
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.4)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.3)'">
         ✍️ Sign Petition e-6746
       </a>
       
       <a href="/campaigns/" 
-         style="display: inline-block; background: rgba(255,255,255,0.3); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s;" 
-         onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(255,255,255,0.4)'" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.3)'">
+         style="display: inline-block; background: rgba(0,0,0,0.3); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s, background 0.2s;" 
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(0,0,0,0.4)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(0,0,0,0.3)'">
         📣 View All Campaigns
       </a>
       
       <a href="https://everycanadiancounts.com" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-block; background: rgba(255,255,255,0.3); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s;" 
-         onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(255,255,255,0.4)'" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.3)'">
+         style="display: inline-block; background: rgba(0,0,0,0.3); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s, background 0.2s;" 
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(0,0,0,0.4)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(0,0,0,0.3)'">
         🌐 Learn More
       </a>
     </div>
     
     <!-- Social Share Integration -->
-    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.3);">
-      <p style="margin: 0 0 0.75rem; font-size: 0.95rem; opacity: 0.9;">Share this campaign:</p>
+    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid rgba(255,255,255,0.3);">
+      <p style="margin: 0 0 0.75rem; font-size: 0.95rem; color: white; font-weight: 600;">Share this campaign:</p>
       <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
-        <button onclick="shareCampaignHome('twitter')" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600;" title="Share on X/Twitter">𝕏 Share</button>
-        <button onclick="shareCampaignHome('facebook')" style="padding: 10px 16px; background: #4267B2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600;" title="Share on Facebook">📘 Share</button>
-        <button onclick="shareCampaignHome('linkedin')" style="padding: 10px 16px; background: #0077B5; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600;" title="Share on LinkedIn">💼 Share</button>
-        <button onclick="copyCampaignHome()" style="padding: 10px 16px; background: rgba(255,255,255,0.3); color: white; border: 2px solid white; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600;" title="Copy details">📋 Copy</button>
+        <button onclick="shareCampaignHome('twitter')" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" title="Share on X/Twitter">𝕏 Share</button>
+        <button onclick="shareCampaignHome('facebook')" style="padding: 10px 16px; background: #1877F2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" title="Share on Facebook">📘 Share</button>
+        <button onclick="shareCampaignHome('linkedin')" style="padding: 10px 16px; background: #0A66C2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" title="Share on LinkedIn">💼 Share</button>
+        <button onclick="copyCampaignHome()" style="padding: 10px 16px; background: rgba(0,0,0,0.4); color: white; border: 2px solid white; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" title="Copy details">📋 Copy</button>
       </div>
     </div>
   </div>

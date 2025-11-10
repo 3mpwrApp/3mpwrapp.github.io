@@ -194,21 +194,21 @@ permalink: /campaigns/
     
     // Display campaigns
     container.innerHTML = campaigns.map(campaign => `
-        <article class="campaign-card" style="border: 2px solid #dbeafe; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <h3 style="margin-top: 0; color: #1e40af; font-size: 1.5rem;">
+        <article class="campaign-card" style="border: 3px solid #0066cc; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: #f8f9fa; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+          <h3 style="margin-top: 0; color: #003d7a; font-size: 1.5rem; font-weight: 700;">
             ${campaign.icon || '📣'} ${campaign.title}
           </h3>
           
-          ${campaign.summary ? `<p style="color: #555; margin: 1rem 0; font-size: 1.05rem;">${campaign.summary}</p>` : ''}
+          ${campaign.summary ? `<p style="color: #1a1a1a; margin: 1rem 0; font-size: 1.05rem; line-height: 1.6;">${campaign.summary}</p>` : ''}
           
           ${campaign.goal ? `
             <div style="margin: 1rem 0;">
-              <p style="margin: 0.5rem 0; color: #333; font-weight: 600;">
+              <p style="margin: 0.5rem 0; color: #1a1a1a; font-weight: 600;">
                 🎯 <strong>Goal:</strong> ${campaign.goal}
               </p>
               ${campaign.progress ? `
-                <div style="background: #e5e7eb; border-radius: 8px; height: 24px; overflow: hidden; margin: 0.5rem 0;">
-                  <div style="background: linear-gradient(90deg, #10b981 0%, #059669 100%); height: 100%; width: ${campaign.progress}%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.85rem;">
+                <div style="background: #d1d5db; border-radius: 8px; height: 28px; overflow: hidden; margin: 0.5rem 0; border: 2px solid #1a1a1a;">
+                  <div style="background: #047857; height: 100%; width: ${campaign.progress}%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: bold; font-size: 0.9rem;">
                     ${campaign.progress}%
                   </div>
                 </div>
@@ -216,12 +216,12 @@ permalink: /campaigns/
             </div>
           ` : ''}
           
-          ${campaign.organizer ? `<p style="color: #666; font-size: 0.95rem; margin: 0.5rem 0;">👤 <strong>Organized by:</strong> ${campaign.organizer}</p>` : ''}
+          ${campaign.organizer ? `<p style="color: #1a1a1a; font-size: 0.95rem; margin: 0.5rem 0;">👤 <strong>Organized by:</strong> ${campaign.organizer}</p>` : ''}
           
           ${campaign.tags && campaign.tags.length > 0 ? `
             <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
               ${campaign.tags.map(tag => `
-                <span style="display: inline-block; padding: 4px 10px; background: #fef3c7; border-radius: 6px; font-size: 0.85em; font-weight: 600;">
+                <span style="display: inline-block; padding: 6px 12px; background: #fde047; color: #1a1a1a; border: 2px solid #1a1a1a; border-radius: 6px; font-size: 0.9em; font-weight: 700;">
                   ${tag}
                 </span>
               `).join('')}
@@ -232,16 +232,16 @@ permalink: /campaigns/
             <button 
               onclick="joinCampaign('${campaign.id}', '${campaign.title}')" 
               class="btn btn-primary"
-              style="padding: 10px 20px; background: #0066cc; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 1rem;"
+              style="padding: 12px 24px; background: #0052a3; color: #ffffff; border: 3px solid #003d7a; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; min-height: 48px;"
             >
               💪 Join Campaign
             </button>
             
             <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'twitter')" style="padding: 8px 14px; background: #1DA1F2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;" title="Share on X/Twitter">𝕏 Share</button>
-              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'facebook')" style="padding: 8px 14px; background: #4267B2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;" title="Share on Facebook">📘 Share</button>
-              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'linkedin')" style="padding: 8px 14px; background: #0077B5; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;" title="Share on LinkedIn">💼 Share</button>
-              <button onclick="copyCampaignDetails('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', '${campaign.shareLink || ''}')" style="padding: 8px 14px; background: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600;" title="Copy details">📋 Copy</button>
+              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'twitter')" style="padding: 10px 16px; background: #0d47a1; color: #ffffff; border: 3px solid #002171; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on X/Twitter" aria-label="Share on X/Twitter">𝕏 Share</button>
+              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'facebook')" style="padding: 10px 16px; background: #1565c0; color: #ffffff; border: 3px solid #003c8f; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on Facebook" aria-label="Share on Facebook">📘 Share</button>
+              <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'linkedin')" style="padding: 10px 16px; background: #005a9e; color: #ffffff; border: 3px solid #003d6b; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on LinkedIn" aria-label="Share on LinkedIn">💼 Share</button>
+              <button onclick="copyCampaignDetails('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', '${campaign.shareLink || ''}')" style="padding: 10px 16px; background: #047857; color: #ffffff; border: 3px solid #065f46; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Copy details" aria-label="Copy campaign details">📋 Copy</button>
             </div>
           </div>
         </article>
