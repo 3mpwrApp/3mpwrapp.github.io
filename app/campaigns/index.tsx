@@ -53,27 +53,29 @@ import { logger } from "../../utils/logger";
  */
 function RepTrackerSafe() {
   const [hasError, setHasError] = React.useState(false);
+  const scheme = useColorScheme();
+  const palette = scheme === "dark" ? colors.dark : colors.light;
   
   if (hasError) {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: palette.background }}>
         <Text style={{ fontSize: 48, marginBottom: 16 }}>⚠️</Text>
-        <Text style={{ fontSize: 18, fontWeight: '700', marginBottom: 12 }}>
+        <Text style={{ fontSize: 18, fontWeight: '700', marginBottom: 12, color: palette.text }}>
           Rep Tracker Unavailable
         </Text>
-        <Text style={{ fontSize: 14, textAlign: 'center', marginBottom: 16 }}>
+        <Text style={{ fontSize: 14, textAlign: 'center', marginBottom: 16, color: palette.textSecondary }}>
           The Rep Tracker feature is temporarily unavailable. This may be due to location permissions or a temporary issue.
         </Text>
         <Pressable
           onPress={() => setHasError(false)}
           style={{
-            backgroundColor: '#007AFF',
+            backgroundColor: palette.primary,
             paddingVertical: 12,
             paddingHorizontal: 24,
             borderRadius: 8,
           }}
         >
-          <Text style={{ color: '#fff', fontSize: 16, fontWeight: '600' }}>
+          <Text style={{ color: palette.onPrimary, fontSize: 16, fontWeight: '600' }}>
             Try Again
           </Text>
         </Pressable>
@@ -471,9 +473,9 @@ function ScreenInner() {
                               )}%`,
                               backgroundColor: 
                                 ((item.membersCount || 0) / item.goalCount) >= 0.75
-                                  ? palette.success || '#22c55e'
+                                  ? palette.success
                                   : ((item.membersCount || 0) / item.goalCount) >= 0.5
-                                  ? palette.warning || '#f59e0b'
+                                  ? palette.warning
                                   : palette.primary,
                             },
                           ]}
@@ -739,7 +741,7 @@ function createStyles(palette: Palette) {
       fontStyle: 'italic',
     },
     featuredBadge: {
-      backgroundColor: palette.warning || '#f59e0b',
+      backgroundColor: palette.warning,
       paddingHorizontal: 8,
       paddingVertical: 4,
       borderRadius: 6,
@@ -747,7 +749,7 @@ function createStyles(palette: Palette) {
       marginBottom: 8,
     },
     featuredBadgeText: {
-      color: '#fff',
+      color: palette.onPrimary,
       fontSize: 10,
       fontWeight: '800',
       letterSpacing: 0.5,
