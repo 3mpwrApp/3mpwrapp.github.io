@@ -2,8 +2,8 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-// Lazy load to prevent module evaluation crashes
-const CampaignsScreen = React.lazy(() => import('../campaigns/index'));
+// Direct import - lazy loading not supported in React Native
+import CampaignsScreenComponent from '../campaigns/index';
 
 class CampaignsTabErrorBoundary extends React.Component<
   { children: React.ReactNode },
@@ -51,15 +51,7 @@ class CampaignsTabErrorBoundary extends React.Component<
 export default function CampaignsTab() {
   return (
     <CampaignsTabErrorBoundary>
-      <React.Suspense
-        fallback={
-          <View style={styles.loadingContainer}>
-            <Text>Loading Campaigns...</Text>
-          </View>
-        }
-      >
-        <CampaignsScreen />
-      </React.Suspense>
+      <CampaignsScreenComponent />
     </CampaignsTabErrorBoundary>
   );
 }
