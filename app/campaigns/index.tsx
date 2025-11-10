@@ -579,7 +579,7 @@ function ScreenInner() {
                     } catch {}
                   }}
                   accessibilityRole="button"
-                  accessibilityLabel={t('a11y.shareCampaign').replace('{{title}}', item.title)}
+                  accessibilityLabel={(t('a11y.shareCampaign') || 'Share campaign {{title}}').replace('{{title}}', item.title)}
                   style={[styles.actionButton, styles.shareButton]}
                 >
                   <Text style={styles.actionButtonText}>📤</Text>
@@ -620,7 +620,11 @@ function ScreenInner() {
                     }
                   }}
                   accessibilityRole="button"
-                  accessibilityLabel={isJoined(item.id) ? t('a11y.leaveCampaign').replace('{{title}}', item.title) : t('a11y.joinCampaign').replace('{{title}}', item.title)}
+                  accessibilityLabel={
+                    isJoined(item.id) 
+                      ? (t('a11y.leaveCampaign') || 'Leave campaign {{title}}').replace('{{title}}', item.title)
+                      : (t('a11y.joinCampaign') || 'Join campaign {{title}}').replace('{{title}}', item.title)
+                  }
                   style={[
                     styles.actionButton,
                     isJoined(item.id) ? styles.joinedButton : styles.joinButton,
@@ -636,7 +640,7 @@ function ScreenInner() {
                     try { await fsIncrementCampaignMembers(item.id, 1); } catch {}
                   }}
                   accessibilityRole="button"
-                  accessibilityLabel={t('a11y.supportCampaign')}
+                  accessibilityLabel={t('a11y.supportCampaign') || 'Support this campaign'}
                   style={[styles.actionButton, styles.supportButton]}
                 >
                   <Text style={styles.actionButtonText}>👍 +1</Text>
